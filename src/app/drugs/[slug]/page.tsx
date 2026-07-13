@@ -6,7 +6,8 @@ import { Footer } from "@/components/kyp/sections/footer";
 import { EmergencySection } from "@/components/kyp/sections/emergency-section";
 import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 import { StickyLearningNav, LearningProgress } from "@/components/kyp/ui/sticky-learning-nav";
-import { PatientModeToggle } from "@/components/kyp/ui/patient-mode-toggle";
+import { DifficultyToggle } from "@/components/kyp/ui/difficulty-toggle";
+import { PatientModeVisibility } from "@/components/kyp/ui/patient-mode-visibility";
 
 import {
   DrugHero,
@@ -26,7 +27,7 @@ import {
   DrugExamPearls,
   DrugMemoryTricks,
   DrugHighYieldSummary,
-  DrugClinicalCase,
+  DrugClinicalCases,
   DrugComparisonTables,
   DrugRelatedDrugs,
   DrugFAQ,
@@ -43,35 +44,26 @@ import { getDrugBySlug, getAllDrugSlugs } from "@/lib/kyp/data";
 import type { NavItem } from "@/lib/kyp/use-scroll-spy";
 
 /**
- * Canonical Drug Page — Sertraline (Phase 4 reference template, polished).
+ * KYP Canonical Drug Template v1.0
  *
- * This is a Server Component. All sections consume the structured `Drug`
- * object from the data layer — no medical content is hardcoded in JSX.
+ * This is the frozen reference architecture. Every psychiatric medication
+ * page uses exactly this structure.
  *
- * The 23 sections below appear in the order defined by the KYP product spec.
- * Every future drug page will reuse this exact sequence.
- *
- * New in Sprint 3 polish:
- *   - Knowledge Graph moved to position 4 (was 15)
- *   - Brain mapping split into 3 sections (regions, neurotransmitters, pathways)
- *   - Learning Objectives added at position 3
- *   - Memory Tricks + High-Yield Summary added near the end
- *   - Clinical Case (real, not placeholder) at position 19
- *   - Comparison Tables at position 20
- *   - Categorised references at position 23
- *   - Sticky Learning Navigator (desktop left rail + mobile sheet)
- *   - Patient Mode toggle (Medical / Patient vocabulary)
- *   - Visual mechanism flow, monitoring checklist, side-effect receptor map
+ * Sprint 4 additions:
+ *   - Learning Path breadcrumb (Psychiatry → Antidepressants → SSRIs → X)
+ *   - Difficulty levels (Patient / Medical Student / Resident / Clinician)
+ *   - Estimated read time + yield rating + audience badges in hero
+ *   - Manual section completion (persisted per-drug to localStorage)
+ *   - Progressive disclosure via PatientModeVisibility wrapper
+ *   - Clinical Cases (plural — supports multiple cases per drug)
  */
 
 type Slug = string;
 
-/** Pre-render every drug page at build time. */
 export function generateStaticParams(): { slug: Slug }[] {
   return getAllDrugSlugs().map((slug) => ({ slug }));
 }
 
-/** Per-drug metadata for SEO + social sharing. */
 export async function generateMetadata({
   params,
 }: {
@@ -116,7 +108,6 @@ export async function generateMetadata({
   };
 }
 
-/** Section list for the sticky learning navigator. */
 function getNavItems(): NavItem[] {
   return [
     { id: "top", label: "Hero", group: "Start here" },
@@ -137,7 +128,7 @@ function getNavItems(): NavItem[] {
     { id: "clinical-pearls", label: "Clinical Pearls", group: "Learning" },
     { id: "exam-pearls", label: "Exam Pearls", group: "Learning" },
     { id: "memory-tricks", label: "Memory Tricks", group: "Learning" },
-    { id: "clinical-case", label: "Clinical Case", group: "Learning" },
+    { id: "clinical-case", label: "Clinical Cases", group: "Learning" },
     { id: "comparison", label: "Comparison", group: "Learning" },
     { id: "related-drugs", label: "Related Drugs", group: "Learning" },
     { id: "high-yield-summary", label: "High-Yield Summary", group: "Learning" },
@@ -163,13 +154,13 @@ export default async function DrugPage({ params }: PageProps) {
     <div className="flex min-h-screen flex-col">
       <Navbar />
 
-      {/* Patient Mode toggle — fixed top-right, below navbar */}
+      {/* Difficulty toggle — fixed top-right, below navbar (replaces PatientModeToggle) */}
       <div className="fixed right-4 top-20 z-30 hidden sm:block">
-        <PatientModeToggle />
+        <DifficultyToggle />
       </div>
 
       {/* Sticky learning navigator — desktop left rail + mobile sheet */}
-      <StickyLearningNav items={navItems} />
+      <StickyLearningNav items={navItems} drugSlug={drug.slug} />
 
       <main className="flex-1">
         {/* 1. Hero */}
@@ -178,23 +169,25 @@ export default async function DrugPage({ params }: PageProps) {
         {/* 2. Quick Facts */}
         <DrugQuickFacts drug={drug} />
 
-        {/* 3. Learning Objectives (NEW) */}
+        {/* 3. Learning Objectives */}
         <DrugLearningObjectives drug={drug} />
 
-        {/* 4. Knowledge Graph (MOVED from 15 → 4) */}
+        {/* 4. Knowledge Graph (centerpiece) */}
         <DrugKnowledgeGraph drug={drug} />
 
-        {/* 5. Mechanism of Action (with visual flow) */}
+        {/* 5. Mechanism of Action */}
         <DrugMechanismOfAction drug={drug} />
 
-        {/* 6. Brain Regions (split from Brain Mapping) */}
+        {/* 6. Brain Regions */}
         <DrugBrainRegions drug={drug} />
 
-        {/* 7. Neurotransmitters (split from Brain Mapping) */}
+        {/* 7. Neurotransmitters */}
         <DrugNeurotransmitters drug={drug} />
 
-        {/* 8. Neural Pathways (split from Brain Mapping) */}
-        <DrugNeuralPathways drug={drug} />
+        {/* 8. Neural Pathways — hidden in Patient mode */}
+        <PatientModeVisibility sectionId="neural-pathways">
+          <DrugNeuralPathways drug={drug} />
+        </PatientModeVisibility>
 
         {/* 9. Timeline of Effects */}
         <Section id="timeline" className="bg-muted/20">
@@ -214,10 +207,10 @@ export default async function DrugPage({ params }: PageProps) {
         {/* 10. Clinical Uses */}
         <DrugClinicalUses drug={drug} />
 
-        {/* 11. Side Effects (with receptor map) */}
+        {/* 11. Side Effects */}
         <DrugSideEffects drug={drug} />
 
-        {/* 12. Monitoring (with interactive checklist) */}
+        {/* 12. Monitoring */}
         <DrugMonitoring drug={drug} />
 
         {/* 13. Contraindications & Warnings */}
@@ -229,41 +222,57 @@ export default async function DrugPage({ params }: PageProps) {
         {/* 15. Patient Education */}
         <DrugPatientEducation drug={drug} />
 
-        {/* 16. Clinical Pearls */}
-        <DrugClinicalPearls drug={drug} />
+        {/* 16. Clinical Pearls — hidden in Patient mode */}
+        <PatientModeVisibility sectionId="clinical-pearls">
+          <DrugClinicalPearls drug={drug} />
+        </PatientModeVisibility>
 
-        {/* 17. Exam Pearls */}
-        <DrugExamPearls drug={drug} />
+        {/* 17. Exam Pearls — hidden in Patient mode */}
+        <PatientModeVisibility sectionId="exam-pearls">
+          <DrugExamPearls drug={drug} />
+        </PatientModeVisibility>
 
-        {/* 18. Memory Tricks (NEW) */}
-        <DrugMemoryTricks drug={drug} />
+        {/* 18. Memory Tricks — hidden in Patient mode */}
+        <PatientModeVisibility sectionId="memory-tricks">
+          <DrugMemoryTricks drug={drug} />
+        </PatientModeVisibility>
 
-        {/* 19. Clinical Case (NEW — real, not placeholder) */}
-        <DrugClinicalCase drug={drug} />
+        {/* 19. Clinical Cases — hidden in Patient mode */}
+        <PatientModeVisibility sectionId="clinical-case">
+          <DrugClinicalCases drug={drug} />
+        </PatientModeVisibility>
 
-        {/* 20. Comparison Tables (NEW) */}
-        <DrugComparisonTables drug={drug} />
+        {/* 20. Comparison Tables — hidden in Patient mode */}
+        <PatientModeVisibility sectionId="comparison">
+          <DrugComparisonTables drug={drug} />
+        </PatientModeVisibility>
 
-        {/* 21. Related Drugs (with educational comparisons) */}
-        <DrugRelatedDrugs drug={drug} />
+        {/* 21. Related Drugs — hidden in Patient mode */}
+        <PatientModeVisibility sectionId="related-drugs">
+          <DrugRelatedDrugs drug={drug} />
+        </PatientModeVisibility>
 
-        {/* 22. High-Yield Summary (NEW) */}
-        <DrugHighYieldSummary drug={drug} />
+        {/* 22. High-Yield Summary — hidden in Patient mode */}
+        <PatientModeVisibility sectionId="high-yield-summary">
+          <DrugHighYieldSummary drug={drug} />
+        </PatientModeVisibility>
 
         {/* 23. FAQ */}
         <DrugFAQ drug={drug} />
 
-        {/* 24. References (categorised) */}
-        <DrugReferences drug={drug} />
+        {/* 24. References — hidden in Patient mode */}
+        <PatientModeVisibility sectionId="references">
+          <DrugReferences drug={drug} />
+        </PatientModeVisibility>
 
-        {/* Learning progress — at the end, Duolingo-style */}
+        {/* Learning progress — end of page */}
         <Section spacing="tight">
           <Container width="narrow">
-            <LearningProgress items={navItems} />
+            <LearningProgress items={navItems} drugSlug={drug.slug} />
           </Container>
         </Section>
 
-        {/* Emergency (always present on every KYP page) */}
+        {/* Emergency (always present) */}
         <EmergencySection />
       </main>
       <Footer />

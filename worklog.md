@@ -287,3 +287,54 @@ Stage Summary:
 - Sticky learning navigator (desktop left rail + mobile bottom sheet) with scrollspy + progress tracking
 - Learning progress widget ("You've completed X of Y sections")
 - Architecture remains fully reusable — adding a new drug still requires only 2 file changes (data file + registry entry)
+
+---
+Task ID: sprint-4-architectural-pass-and-migration
+Agent: Main agent (Super Z)
+Task: Sprint 4 — Final architectural pass + first batch of drug migration. Implement: Learning Path breadcrumb, 4-level Difficulty system (Patient/Student/Resident/Clinician), manual section completion, estimated read time + yield badges, progressive disclosure (hide exam-only sections in Patient mode), Clinical Cases (plural schema), then migrate Fluoxetine, Escitalopram, Paroxetine using the frozen v1.0 template.
+
+Work Log:
+- Extended Drug schema in types.ts with:
+  * learningPath: string[] (breadcrumb hierarchy)
+  * estimatedReadTime: string (e.g. "18 min read")
+  * yieldRating: "low" | "medium" | "high"
+  * primaryAudience: DifficultyLevel
+  * clinicalCase → clinicalCases: ClinicalCase[] (plural, supports multiple cases per drug)
+  * DifficultyLevel type: "patient" | "medical" | "resident" | "clinician"
+  * difficultyLevels array with labels + descriptions
+  * DisclosureTier type + disclosureTiers array (4 tiers: core/advanced/clinical/exam)
+  * hiddenInPatientMode array (8 sections hidden from patients)
+- Updated sertraline.ts to match new schema (added learningPath, estimatedReadTime, yieldRating, primaryAudience; changed clinicalCase → clinicalCases array)
+- Built 5 new components:
+  * learning-path.tsx — breadcrumb showing Psychiatry → Antidepressants → SSRIs → DrugName
+  * difficulty-toggle.tsx — 4-level segmented control (Patient/Student/Resident/Clinician) with Zustand store + localStorage persistence
+  * patient-mode-visibility.tsx — wrapper that hides sections in Patient mode based on hiddenInPatientMode list
+  * sticky-learning-nav.tsx (refactored) — now supports manual completion (persisted per-drug to localStorage), fixed infinite re-render bug with stable EMPTY_ARRAY reference
+  * drug-clinical-case.tsx (refactored) — now handles multiple cases with tab selector
+- Updated drug-hero.tsx — added LearningPath breadcrumb, read time badge, yield rating badge, primary audience badge
+- Refactored page.tsx — wrapped 8 sections in PatientModeVisibility (neural-pathways, clinical-pearls, exam-pearls, memory-tricks, clinical-case, comparison, related-drugs, high-yield-summary, references), replaced PatientModeToggle with DifficultyToggle, passed drugSlug to StickyLearningNav + LearningProgress
+- Fixed infinite re-render in useStickyNav (Zustand selector returning new [] reference each render → stable EMPTY_ARRAY constant)
+- Dispatched 3 subagents in parallel to write drug data files:
+  * fluoxetine.ts (1,042 lines) — 8 indications, 5 contraindications, 9 common + 8 serious side effects, 10 interactions, 13-row comparison table, bulimia nervosa case, 6 mnemonics (incl. FLU-O-X-E-T-I-N-E)
+  * escitalopram.ts (950 lines) — 7 indications, 5 contraindications (incl. QTc), 9 common + 8 serious side effects (incl. QTc prolongation), 10 interactions, 11-row comparison table, geriatric polypharmacy case, 6 mnemonics (incl. ESC = S-enantiomer, Cleanest, QTc)
+  * paroxetine.ts (1,024 lines) — 9 indications, 6 contraindications (incl. pregnancy D, tamoxifen), 9 common + 8 serious side effects (incl. discontinuation syndrome), 10 interactions, 12-row comparison table, breast cancer survivor hot flushes case, 6 mnemonics (incl. PAR = Problems Always)
+- Updated drugs/index.ts registry to include all 4 drugs
+- Updated sertraline.ts relatedDrugs to add slug: "fluoxetine", slug: "escitalopram", slug: "paroxetine" for cross-linking
+- Lint: 0 errors, 0 warnings
+- Agent Browser verification:
+  * All 4 drug pages (/drugs/sertraline, /drugs/fluoxetine, /drugs/escitalopram, /drugs/paroxetine) load HTTP 200
+  * All show: H1 with drug name, LearningPath breadcrumb, sticky nav, difficulty toggle, clinical case, comparison table, memory tricks, high-yield summary
+  * Cross-links work: clicking Fluoxetine from Sertraline's Related Drugs navigates to /drugs/fluoxetine
+  * Patient mode hides 8 sections (verified: exam-pearls, memory-tricks, high-yield-summary, references, clinical-case, comparison, neural-pathways, clinical-pearls all hidden)
+  * Patient mode keeps visible: hero, quick-facts, mechanism, side-effects, monitoring, patient-education, faq
+  * Manual completion works: clicking a section's checkbox updates the 1/24 counter and persists to localStorage
+  * Difficulty toggle persists across page navigation (localStorage)
+  * Universal search finds all 4 drugs (tested: sertraline, fluoxetine, escitalopram, paroxetine all return results with correct drug as top hit)
+- Screenshots saved: kyp-sprint4-sertraline-hero.png, kyp-sprint4-fluoxetine-hero.png, kyp-sprint4-escitalopram-hero.png, kyp-sprint4-paroxetine-hero.png
+
+Stage Summary:
+- KYP Canonical Drug Template v1.0 is FROZEN
+- 4 drugs migrated (Sertraline, Fluoxetine, Escitalopram, Paroxetine) = 4/12 of Phase 1
+- 3,922 lines of structured medical content across 4 drug data files
+- 8 remaining drugs for Phase 1: Citalopram, Fluvoxamine, Venlafaxine, Duloxetine, Bupropion, Mirtazapine, Amitriptyline, Clomipramine
+- Architecture is fully reusable — each new drug = 1 data file + 1 line in registry
