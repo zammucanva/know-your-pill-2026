@@ -206,8 +206,12 @@ export interface DrugInteraction {
 }
 
 export interface DrugPregnancyInfo {
-  /** Former FDA pregnancy category (A/B/C/D/X) — kept for legacy reference */
+  /** Former FDA pregnancy category (A/B/C/D/X) — DEPRECATED, kept for legacy reference only. Do not center clinical decisions on this. */
   legacyCategory?: string;
+  /** Contemporary evidence-based assessment (replaces the deprecated letter category) */
+  evidenceBasedSummary?: string;
+  /** Indian practice note for pregnancy */
+  indianPracticeNote?: string;
   /** Plain-language summary */
   summary: string;
   /** Lactation-specific note */
@@ -378,6 +382,151 @@ export interface PatientModeContent {
   interactions: string;
 }
 
+/* ============================================================
+   India-first extensions (Phase 0)
+   ------------------------------------------------------------
+   KYP is an India-first, evidence-first medical education platform.
+   These fields add Indian clinical practice context without
+   compromising international scientific accuracy.
+
+   Principle: When international and Indian guidance differ,
+   both are presented clearly and labeled by source. No invented
+   "Indian clinical practice" when no formal guideline exists.
+   ============================================================ */
+
+/** Indian prescription schedule categories per CDSCO. */
+export type PrescriptionSchedule =
+  | "Schedule H"
+  | "Schedule H1"
+  | "Schedule X"
+  | "OTC"
+  | "Prescription Only";
+
+/** Indian brand name entry — sourced from CDSCO/CIMS/MIMS. */
+export interface IndianBrand {
+  /** Brand name as sold in India, e.g. "Serta" */
+  name: string;
+  /** Manufacturer (optional) */
+  manufacturer?: string;
+  /** Common strengths available, e.g. "25mg, 50mg, 100mg" */
+  strengths?: string;
+  /** Note — e.g. "among the most commonly prescribed in India" */
+  note?: string;
+}
+
+/** Cost category — relative to Indian generic market. */
+export type CostCategory = "low" | "moderate" | "high";
+
+/** Availability in Indian healthcare settings. */
+export interface IndianAvailability {
+  /** Available in government hospitals? */
+  governmentHospitals: boolean;
+  /** Available in private pharmacies? */
+  privatePharmacies: boolean;
+  /** Urban availability */
+  urban: boolean;
+  /** Rural availability */
+  rural: boolean;
+  /** Additional notes */
+  note?: string;
+}
+
+/** Indian clinical practice information. */
+export interface IndianPracticeInfo {
+  /** Prescription schedule (Schedule H, H1, X, OTC) */
+  prescriptionStatus: PrescriptionSchedule;
+  /** Common Indian brand names (3-8, sourced from CDSCO/CIMS/MIMS) */
+  brands: IndianBrand[];
+  /** Typical dose ranges used in Indian practice */
+  typicalDoses: string;
+  /** Common prescribing scenarios in India */
+  prescribingScenarios: string[];
+  /** Availability across Indian healthcare settings */
+  availability: IndianAvailability;
+  /** Cost category relative to Indian market */
+  costCategory: CostCategory;
+  /** Cost note — always includes "Cost varies by manufacturer and region" */
+  costNote: string;
+  /** Indian monitoring approach — how monitoring is commonly done in Indian practice */
+  monitoring: string;
+  /** India-specific patient counselling points */
+  patientCounselling: string[];
+}
+
+/** NMC CBME competency mapping. */
+export interface CBMEMapping {
+  /** Subject, e.g. "Pharmacology" or "Psychiatry" */
+  subject: string;
+  /** MBBS year, e.g. "Second Professional" or "Final Professional" */
+  mbbsYear: string;
+  /** Relevant NMC competency codes — must be actual codes from the CBME curriculum */
+  competencyCodes: string[];
+  /** Human-readable competency descriptions matching the codes */
+  competencyDescriptions: string[];
+  /** Integration subjects, e.g. ["Psychiatry", "General Medicine"] */
+  integrationSubjects: string[];
+  /** Topic-level description */
+  topic: string;
+}
+
+/** Exam-focused content structured by Indian examination.
+ *  Replaces the flat examPearls array with structured, exam-specific content.
+ */
+export interface ExamLens {
+  /** MBBS level — viva, practical, long answer */
+  mbbs: {
+    viva: string[];
+    practical: string[];
+    longAnswer: string[];
+  };
+  /** NEET PG — high yield + previous year question concepts */
+  neetPg: {
+    highYield: string[];
+    pyqConcepts: string[];
+  };
+  /** INICET — clinical reasoning, mechanism-based questions */
+  inicet: {
+    clinicalReasoning: string[];
+  };
+  /** FMGE — frequently tested facts for foreign medical graduates */
+  fmge: {
+    frequentlyTested: string[];
+  };
+  /** Psychiatry Residency — advanced clinical pearls */
+  psychiatryResidency: {
+    advancedPearls: string[];
+  };
+}
+
+/** Side-by-side international vs Indian guideline comparison. */
+export interface GuidelineComparison {
+  /** Topic, e.g. "First-line treatment" or "Pregnancy category" */
+  topic: string;
+  /** International source, e.g. "FDA", "APA", "NICE" */
+  internationalSource: string;
+  /** International recommendation */
+  internationalRecommendation: string;
+  /** Indian source — e.g. "IPS" or null if no dedicated Indian guideline exists */
+  indianSource: string | null;
+  /** Indian recommendation — or honest note that no dedicated guideline exists */
+  indianRecommendation: string;
+}
+
+/** Indian reference source. */
+export interface IndianReference {
+  /** Source name, e.g. "KD Tripathi Essentials of Medical Pharmacology" */
+  source: string;
+  /** Type */
+  type: "textbook" | "guideline" | "curriculum" | "regulatory";
+  /** Section or chapter */
+  section?: string;
+  /** Optional URL */
+  url?: string;
+}
+
+/** Section difficulty tag — shown as a coloured dot next to section headings. */
+export type SectionDifficulty = "mbbs" | "pg" | "resident";
+
 export interface Drug {
   /* ---- Identity ---- */
   slug: string;
@@ -440,7 +589,10 @@ export interface Drug {
   patientExplanation: string;
   patientEducationPoints: string[];
   clinicalPearls: string[];
-  examPearls: string[];
+  /** @deprecated Use examLens instead — kept for backward compat during Phase 1 migration */
+  examPearls?: string[];
+  /** Structured exam content by Indian examination (replaces examPearls) */
+  examLens?: ExamLens;
   /** Mnemonics and memory tricks for exam preparation */
   memoryTricks: MemoryTrick[];
   /** One-page revision summary */
@@ -469,6 +621,19 @@ export interface Drug {
 
   /* ---- Patient mode (simplified content for patient audience) ---- */
   patientMode: PatientModeContent;
+
+  /* ---- India-first extensions (Phase 0) ---- */
+  /** Indian clinical practice: brands, doses, availability, cost, counselling */
+  indianPractice?: IndianPracticeInfo;
+  /** NMC CBME competency mapping */
+  cbmeMapping?: CBMEMapping;
+  /** Structured exam content by Indian examination */
+  /** International vs Indian guideline side-by-side comparisons */
+  guidelineComparisons?: GuidelineComparison[];
+  /** Indian reference sources (KD Tripathi, IPS, NMC CBME, etc.) */
+  indianReferences?: IndianReference[];
+  /** Per-section difficulty mapping for progressive disclosure */
+  sectionDifficulty?: Record<string, SectionDifficulty>;
 
   /* ---- Metadata ---- */
   /** ISO date string — last clinical review */

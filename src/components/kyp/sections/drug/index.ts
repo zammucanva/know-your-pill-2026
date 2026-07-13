@@ -26,3 +26,7 @@ export * from "./drug-faq";
 export * from "./drug-knowledge-graph";
 export * from "./drug-references";
 export * from "./drug-prev-next";
+export * from "./drug-indian-practice";
+export * from "./drug-exam-lens";
+export * from "./drug-cbme-mapping";
+export * from "./drug-guideline-comparison";

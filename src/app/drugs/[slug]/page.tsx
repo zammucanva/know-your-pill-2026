@@ -13,6 +13,7 @@ import {
   DrugHero,
   DrugQuickFacts,
   DrugLearningObjectives,
+  DrugCBMEMapping,
   DrugClinicalUses,
   DrugMechanismOfAction,
   DrugBrainRegions,
@@ -21,10 +22,11 @@ import {
   DrugSideEffects,
   DrugMonitoring,
   DrugContraindications,
+  DrugGuidelineComparison,
   DrugInteractions,
   DrugPatientEducation,
   DrugClinicalPearls,
-  DrugExamPearls,
+  DrugExamLens,
   DrugMemoryTricks,
   DrugHighYieldSummary,
   DrugClinicalCases,
@@ -32,6 +34,7 @@ import {
   DrugRelatedDrugs,
   DrugFAQ,
   DrugKnowledgeGraph,
+  DrugIndianPractice,
   DrugReferences,
   DrugPrevNext,
 } from "@/components/kyp/sections/drug";
@@ -174,6 +177,9 @@ export default async function DrugPage({ params }: PageProps) {
         {/* 3. Learning Objectives */}
         <DrugLearningObjectives drug={drug} />
 
+        {/* 3b. NMC CBME Mapping (India-first) */}
+        <DrugCBMEMapping drug={drug} />
+
         {/* 4. Knowledge Graph (centerpiece) */}
         <DrugKnowledgeGraph drug={drug} />
 
@@ -218,20 +224,28 @@ export default async function DrugPage({ params }: PageProps) {
         {/* 13. Contraindications & Warnings */}
         <DrugContraindications drug={drug} />
 
+        {/* 13b. Guideline Comparison (India-first) — hidden in Patient mode */}
+        <PatientModeVisibility sectionId="guideline-comparison">
+          <DrugGuidelineComparison drug={drug} />
+        </PatientModeVisibility>
+
         {/* 14. Drug Interactions */}
         <DrugInteractions drug={drug} />
 
         {/* 15. Patient Education */}
         <DrugPatientEducation drug={drug} />
 
+        {/* 15b. Indian Clinical Practice (India-first) */}
+        <DrugIndianPractice drug={drug} />
+
         {/* 16. Clinical Pearls — hidden in Patient mode */}
         <PatientModeVisibility sectionId="clinical-pearls">
           <DrugClinicalPearls drug={drug} />
         </PatientModeVisibility>
 
-        {/* 17. Exam Pearls — hidden in Patient mode */}
-        <PatientModeVisibility sectionId="exam-pearls">
-          <DrugExamPearls drug={drug} />
+        {/* 17. Exam Lens — hidden in Patient mode */}
+        <PatientModeVisibility sectionId="exam-lens">
+          <DrugExamLens drug={drug} />
         </PatientModeVisibility>
 
         {/* 18. Memory Tricks — hidden in Patient mode */}
