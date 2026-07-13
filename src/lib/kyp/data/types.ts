@@ -270,6 +270,114 @@ export interface DrugMechanism {
   excretion: string;
 }
 
+/* ============================================================
+   Visual learning structures (added in Sprint 3 polish)
+   ============================================================ */
+
+/** A single flow node in a visual mechanism diagram. */
+export interface MechanismFlowNode {
+  id: string;
+  label: string;
+  /** Short subtitle / role description */
+  sublabel?: string;
+  /** Visual variant — controls colour */
+  variant: "input" | "process" | "target" | "output" | "inhibit";
+}
+
+/** A directed edge between two flow nodes. */
+export interface MechanismFlowEdge {
+  from: string;
+  to: string;
+  label?: string;
+  /** "inhibit" renders a T-bar instead of an arrow */
+  type?: "stimulate" | "inhibit";
+}
+
+/** Complete visual flow definition for the mechanism section. */
+export interface MechanismFlow {
+  nodes: MechanismFlowNode[];
+  edges: MechanismFlowEdge[];
+  /** Optional caption rendered below the diagram */
+  caption?: string;
+}
+
+/** A real clinical case (not a placeholder). */
+export interface ClinicalCase {
+  title: string;
+  /** One-line presentation summary */
+  presentation: string;
+  /** Patient demographics + presenting complaint */
+  history: string;
+  /** Examination findings */
+  examination: string;
+  /** Working diagnosis + differential */
+  diagnosis: string;
+  /** Why this drug was chosen */
+  rationale: string;
+  /** What was prescribed + titration */
+  management: string;
+  /** Follow-up + outcome */
+  outcome: string;
+  /** 2-3 teaching points the case illustrates */
+  teachingPoints: string[];
+}
+
+/** Comparison row in a drug-vs-drug comparison table. */
+export interface DrugComparisonRow {
+  /** Attribute name — e.g. "Half-life", "Onset", "Sexual dysfunction" */
+  attribute: string;
+  /** Value for the primary drug (the page subject) */
+  primaryValue: string;
+  /** Values for each comparison drug, keyed by drug name */
+  comparisons: { drug: string; value: string }[];
+}
+
+/** A complete comparison table. */
+export interface DrugComparisonTable {
+  title: string;
+  /** The primary drug this table centres on (usually the page subject) */
+  primaryDrug: string;
+  rows: DrugComparisonRow[];
+  /** Educational summary — "When to choose which" */
+  takeaway: string;
+}
+
+/** A memory trick / mnemonic for exam preparation. */
+export interface MemoryTrick {
+  title: string;
+  /** The mnemonic or trick itself */
+  trick: string;
+  /** What it helps you remember */
+  remembers: string;
+}
+
+/** Categorised references — grouped by source type. */
+export interface CategorisedReferences {
+  guidelines: DrugReference[];
+  textbooks: DrugReference[];
+  trials: DrugReference[];
+  reviews: DrugReference[];
+  patientResources: DrugReference[];
+}
+
+/** Patient-mode content — simplified language for the same data. */
+export interface PatientModeContent {
+  /** Patient-friendly tagline (shown in hero when patient mode is on) */
+  tagline: string;
+  /** Patient-friendly summary */
+  summary: string;
+  /** Patient-friendly mechanism explanation */
+  mechanism: string;
+  /** Patient-friendly side effects overview */
+  sideEffects: string;
+  /** Patient-friendly monitoring overview */
+  monitoring: string;
+  /** Patient-friendly contraindications overview */
+  contraindications: string;
+  /** Patient-friendly interactions overview */
+  interactions: string;
+}
+
 export interface Drug {
   /* ---- Identity ---- */
   slug: string;
@@ -285,8 +393,13 @@ export interface Drug {
   tagline: string;
   summary: string;
 
+  /* ---- Learning objectives (NEW) ---- */
+  learningObjectives: string[];
+
   /* ---- Mechanism ---- */
   mechanism: DrugMechanism;
+  /** Visual flow diagram for the mechanism section (NEW) */
+  mechanismFlow: MechanismFlow;
 
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: string[];
@@ -317,6 +430,16 @@ export interface Drug {
   patientEducationPoints: string[];
   clinicalPearls: string[];
   examPearls: string[];
+  /** Mnemonics and memory tricks for exam preparation (NEW) */
+  memoryTricks: MemoryTrick[];
+  /** One-page revision summary (NEW) */
+  highYieldSummary: string[];
+
+  /* ---- Clinical case (NEW) ---- */
+  clinicalCase: ClinicalCase;
+
+  /* ---- Comparison tables (NEW) ---- */
+  comparisonTables: DrugComparisonTable[];
 
   /* ---- Timeline ---- */
   timeline: TimelineEvent[];
@@ -325,12 +448,16 @@ export interface Drug {
   faqs: FAQItem[];
 
   /* ---- References & related ---- */
-  references: DrugReference[];
+  /** Categorised references (NEW — replaces flat references array) */
+  references: CategorisedReferences;
   relatedDrugs: DrugRelatedDrug[];
   relatedConditions: DrugRelatedCondition[];
 
   /* ---- Knowledge graph ---- */
   knowledgeGraph: KnowledgeGraphNode[];
+
+  /* ---- Patient mode (NEW) ---- */
+  patientMode: PatientModeContent;
 
   /* ---- Metadata ---- */
   /** ISO date string — last clinical review */

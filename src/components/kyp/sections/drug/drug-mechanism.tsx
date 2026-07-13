@@ -4,6 +4,7 @@ import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { Callout } from "@/components/kyp/ui/callout";
 import { Badge } from "@/components/kyp/ui/badge";
 import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
+import { MechanismFlow } from "@/components/kyp/ui/mechanism-flow";
 import type { Drug } from "@/lib/kyp/data";
 
 /**
@@ -46,9 +47,19 @@ export function DrugMechanismOfAction({ drug }: DrugMechanismOfActionProps) {
           </Callout>
         </div>
 
-        {/* Mechanism steps */}
+        {/* Visual flow diagram (NEW — replaces text-only steps as primary visual) */}
         <div className="mt-10">
-          <h3 className="text-h3">Step-by-step mechanism</h3>
+          <h3 className="text-h3">Visual mechanism flow</h3>
+          <p className="mt-2 text-body text-muted-foreground">
+            Each node below represents a key step in the drug's action — from acute molecular target
+            to chronic clinical effect. Follow the chain top to bottom.
+          </p>
+          <MechanismFlow flow={drug.mechanismFlow} />
+        </div>
+
+        {/* Step-by-step mechanism (text version — kept for depth) */}
+        <div className="mt-12">
+          <h3 className="text-h3">Step-by-step explanation</h3>
           <p className="mt-2 text-body text-muted-foreground">
             Understanding the delay between acute pharmacology (hours) and clinical effect (weeks)
             is the single most important concept in SSRI pharmacology.

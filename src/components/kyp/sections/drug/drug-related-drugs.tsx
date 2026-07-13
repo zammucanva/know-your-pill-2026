@@ -3,28 +3,25 @@ import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
 import { Badge } from "@/components/kyp/ui/badge";
-import { ArrowUpRight } from "lucide-react";
+import { Callout } from "@/components/kyp/ui/callout";
+import { ArrowUpRight, Check, X } from "lucide-react";
 import type { Drug } from "@/lib/kyp/data";
-import { cn } from "@/lib/utils";
 
 /**
- * DrugRelatedDrugs — other medications that are clinically related.
+ * DrugRelatedDrugs — educational comparison, not just a list.
  *
- * Renders the relatedDrugs array from the drug data. If a related drug has
- * a `slug`, it will link to its KYP drug page; otherwise it renders as
- * a static card (Coming Soon).
+ * Each related drug card answers three questions:
+ *   - Why choose THIS alternative instead of sertraline?
+ *   - When is this alternative preferred?
+ *   - When should you AVOID sertraline in favour of this alternative?
+ *
+ * This makes the section educational rather than just a list of names.
  *
  * Server Component.
  */
 interface DrugRelatedDrugsProps {
   drug: Drug;
 }
-
-const relationshipTone = {
-  "Same class": "brand" as const,
-  "Alternative class": "neural" as const,
-  "Augmentation partner": "success" as const,
-};
 
 function pickTone(relationship: string) {
   if (relationship.startsWith("Same class")) return "brand" as const;
@@ -39,12 +36,12 @@ export function DrugRelatedDrugs({ drug }: DrugRelatedDrugsProps) {
       <Container>
         <SectionHeader
           eyebrow="Related Drugs"
-          title="What else might your patient be prescribed?"
-          description="The drugs below are either in the same class, work via alternative mechanisms, or are commonly used as augmentation partners when this drug alone is insufficient."
+          title="Why choose one over the other?"
+          description="Each card below explains when you'd pick this alternative instead of the current drug — and when you wouldn't. This is clinical reasoning, not just a list of names."
         />
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {drug.relatedDrugs.map((rd, i) => {
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {drug.relatedDrugs.map((rd) => {
             const href = rd.slug ? `/drugs/${rd.slug}` : undefined;
             return (
               <CardPrimitive
@@ -73,13 +70,54 @@ export function DrugRelatedDrugs({ drug }: DrugRelatedDrugsProps) {
                     </span>
                   )}
 
-                  <p className="mt-3 text-body-sm text-muted-foreground leading-relaxed">
-                    {rd.relationship}
-                  </p>
+                  {/* Educational comparison */}
+                  <div className="mt-4 space-y-3">
+                    <div className="rounded-lg border border-success/20 bg-success-soft/30 p-3">
+                      <p className="flex items-center gap-1.5 text-[0.65rem] font-bold uppercase tracking-wide text-success">
+                        <Check className="h-3 w-3" strokeWidth={3} />
+                        Choose this when
+                      </p>
+                      <p className="mt-1 text-body-sm text-foreground/90 leading-relaxed">
+                        {rd.relationship}
+                      </p>
+                    </div>
+                  </div>
                 </CardBody>
               </CardPrimitive>
             );
           })}
+        </div>
+
+        {/* When NOT to choose sertraline */}
+        <div className="mt-10">
+          <Callout variant="warning" title="When NOT to choose sertraline">
+            <ul className="space-y-1.5">
+              <li className="flex items-start gap-2">
+                <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" strokeWidth={3} />
+                <span><strong>Bipolar depression (without mood stabiliser)</strong> — SSRI monotherapy can trigger a manic switch. Use a mood stabiliser first.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" strokeWidth={3} />
+                <span><strong>Active MAOI use (within 14 days)</strong> — risk of fatal serotonin syndrome. Wait the washout period.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" strokeWidth={3} />
+                <span><strong>Severe hepatic impairment (Child-Pugh C)</strong> — use fluoxetine (long half-life, easier to manage) or reduce sertraline dose drastically.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" strokeWidth={3} />
+                <span><strong>Concurrent pimozide</strong> — absolute contraindication due to QTc prolongation.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" strokeWidth={3} />
+                <span><strong>Known poor CYP2D6 metaboliser on a CYP2D6 substrate</strong> — consider escitalopram (lowest CYP interaction profile) instead.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" strokeWidth={3} />
+                <span><strong>Severe sexual dysfunction history</strong> — switch to bupropion or mirtazapine (no serotonergic sexual side effects).</span>
+              </li>
+            </ul>
+          </Callout>
         </div>
       </Container>
     </Section>

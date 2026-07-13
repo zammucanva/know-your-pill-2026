@@ -3,15 +3,17 @@ import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
 import { Badge } from "@/components/kyp/ui/badge";
+import { MonitoringChecklist } from "@/components/kyp/ui/monitoring-checklist";
 import type { Drug } from "@/lib/kyp/data";
 
 /**
  * DrugMonitoring — what to check, when, and why.
  *
- * Renders as a structured card grid (not a traditional table) to stay
- * consistent with the KYP design language and remain responsive.
+ * Uses the interactive <MonitoringChecklist /> for the primary monitoring
+ * parameters (tick-box learning), then renders dose adjustments and
+ * pregnancy/lactation as static cards below.
  *
- * Server Component.
+ * Server Component (the checklist is a client child).
  */
 interface DrugMonitoringProps {
   drug: Drug;
@@ -24,26 +26,12 @@ export function DrugMonitoring({ drug }: DrugMonitoringProps) {
         <SectionHeader
           eyebrow="Monitoring"
           title="What should be checked — and when?"
-          description="The monitoring schedule below balances clinical safety with practicality. The single most important monitoring parameter is mood and suicidality — especially during the first month of therapy."
+          description="The monitoring schedule below balances clinical safety with practicality. The single most important monitoring parameter is mood and suicidality — especially during the first month of therapy. Tick off each parameter as you review it."
         />
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {drug.monitoring.map((m, i) => (
-            <CardPrimitive key={m.parameter} variant="flat" interactive={false} showArrow={false}>
-              <CardBody>
-                <div className="flex items-start justify-between gap-2">
-                  <span className="font-mono text-xs font-semibold text-muted-foreground">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <Badge variant="brand" size="sm">{m.frequency}</Badge>
-                </div>
-                <h3 className="mt-2 text-h4 leading-tight">{m.parameter}</h3>
-                <p className="mt-2 text-body-sm text-muted-foreground leading-relaxed">
-                  {m.rationale}
-                </p>
-              </CardBody>
-            </CardPrimitive>
-          ))}
+        {/* Interactive checklist */}
+        <div className="mt-10">
+          <MonitoringChecklist parameters={drug.monitoring} />
         </div>
 
         {/* Dose adjustments */}
