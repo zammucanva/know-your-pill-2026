@@ -1,0 +1,331 @@
+[
+  {
+    "file": "alcohol.html",
+    "title": "Alcohol Use Disorders | KNOW YOUR PILL",
+    "heading": "Alcohol Use Disorders",
+    "description": "Understanding alcohol dependence, intoxication, withdrawal, neuropsychiatric complications, detoxification, and recovery through neuroscience-focused education.",
+    "sections": [
+      "Alcohol Overview",
+      "Jellinek Classification",
+      "Cloninger Classification (Type I & II Alcoholism)",
+      "CAGE Questionnaire",
+      "Body Fluid Alcohol Levels (BAC)",
+      "Acute Alcohol Intoxication",
+      "Alcohol Withdrawal Syndrome",
+      "Neuropsychiatric Complications",
+      "Treatment & Detoxification",
+      "Disulfiram Mechanism",
+      "Anti-Craving Agents",
+      "Psychosocial Rehabilitation & Recovery",
+      "Emergency Quick Help"
+    ],
+    "category": "CNS Depressant",
+    "has_emergency_section": true,
+    "examples": ["Disulfiram", "Anti-craving agents (naltrexone, acamprosate)"]
+  },
+  {
+    "file": "amphetamine.html",
+    "title": "Amphetamine Use Disorder | KNOW YOUR PILL",
+    "heading": "Amphetamine Use Disorder",
+    "description": "Explore dopamine and norepinephrine dysregulation, stimulant neurobiology, methamphetamine potency, MDMA/ecstasy, binge patterns, psychosis, and recovery through immersive neuroscience education.",
+    "sections": [
+      "Understanding Amphetamine",
+      "Neurobiology of Amphetamines",
+      "Acute Amphetamine Intoxication",
+      "Amphetamine Withdrawal (Crash Phase)",
+      "Amphetamine Complications",
+      "Treatment & Recovery",
+      "Emergency Quick Help"
+    ],
+    "category": "CNS Stimulant",
+    "has_emergency_section": true,
+    "examples": ["Amphetamine", "Methamphetamine", "MDMA (Ecstasy)"]
+  },
+  {
+    "file": "antibiotics.html",
+    "title": "Antibiotics | KNOW YOUR PILL",
+    "heading": "Antibiotics",
+    "description": "Learn about infection treatments, antibiotics, and antimicrobial medications through clear explanations and visual guides. Marked as 'Content Coming Soon' with subcategory previews.",
+    "sections": [
+      "Important: Antibiotic Resistance (info banner)",
+      "Medication Subcategories (Penicillins, Cephalosporins, Macrolides, Fluoroquinolones)",
+      "Common Medications"
+    ],
+    "category": "Antibiotic / Antimicrobial",
+    "has_emergency_section": false,
+    "examples": ["Amoxicillin", "Amoxicillin-Clavulanate", "Azithromycin"]
+  },
+  {
+    "file": "barbiturate.html",
+    "title": "Barbiturate Use Disorder | KNOW YOUR PILL",
+    "heading": "Barbiturate Use Disorder",
+    "description": "Explore GABA enhancement, respiratory depression, severe withdrawal, seizure risk, fatal overdose potential, and the dangerous discontinuation syndrome through immersive neuroscience education.",
+    "sections": [
+      "Understanding Barbiturates",
+      "Barbiturate Neurobiology (GABA-A Receptor Modulation)",
+      "Barbiturate Intoxication",
+      "Barbiturate Withdrawal",
+      "Treatment & Recovery",
+      "Emergency Quick Help"
+    ],
+    "category": "CNS Depressant (Sedative-Hypnotic)",
+    "has_emergency_section": true,
+    "examples": ["Phenobarbital", "Pentobarbital", "Secobarbital", "Amobarbital"]
+  },
+  {
+    "file": "benzodiazepines.html",
+    "title": "Benzodiazepines Use Disorder | KNOW YOUR PILL",
+    "heading": "Benzodiazepines & Sedative-Hypnotic Use Disorder",
+    "description": "Understanding benzodiazepine dependence, GABA receptor mechanisms, withdrawal syndrome, and safe tapering protocols through neuroscience-focused education.",
+    "sections": [
+      "Neurobiology of Benzodiazepines (GABA-A Receptor Complex)",
+      "Acute Benzodiazepine Intoxication",
+      "Benzodiazepine Withdrawal Syndrome",
+      "Complications of Chronic Use",
+      "Treatment & Management (Tapering Protocol)",
+      "Emergency Quick Help"
+    ],
+    "category": "CNS Depressant (Sedative-Hypnotic)",
+    "has_emergency_section": true,
+    "examples": ["Benzodiazepines (general class)"]
+  },
+  {
+    "file": "cannabis.html",
+    "title": "Cannabis Use Disorder | KNOW YOUR PILL",
+    "heading": "Cannabis Use Disorder",
+    "description": "Explore cannabinoids, altered perception, CB1 receptor pathways, intoxication, psychosis risk, withdrawal, and recovery neuroscience through immersive psychiatry education.",
+    "sections": [
+      "Understanding Cannabis",
+      "Cannabis Preparations",
+      "Cannabinoid Neurobiology",
+      "Acute Cannabis Intoxication",
+      "Perceptual Disturbances",
+      "Cannabis Complications",
+      "Amotivational Syndrome",
+      "Cannabis Psychosis",
+      "Cannabis Withdrawal",
+      "Treatment & Recovery",
+      "Emergency Quick Help"
+    ],
+    "category": "Cannabinoid",
+    "has_emergency_section": true,
+    "examples": ["Cannabis sativa", "Delta-9-THC", "Marijuana", "Hashish"]
+  },
+  {
+    "file": "cocaine.html",
+    "title": "Cocaine Use Disorder | KNOW YOUR PILL",
+    "heading": "Cocaine Use Disorder",
+    "description": "Explore dopamine dysregulation, stimulant neurobiology, intoxication, withdrawal, psychosis, craving, and recovery through immersive neuroscience education.",
+    "sections": [
+      "Understanding Cocaine",
+      "Mechanism of Action",
+      "Forms & Administration",
+      "Acute Cocaine Intoxication",
+      "Cocaine Withdrawal",
+      "Cocaine Complications",
+      "Cocaine Psychosis",
+      "Overdose Emergency",
+      "Treatment & Recovery",
+      "Emergency Quick Help"
+    ],
+    "category": "CNS Stimulant",
+    "has_emergency_section": true,
+    "examples": ["Cocaine", "Crack cocaine (free-base)", "Speedball (cocaine + opioids)"]
+  },
+  {
+    "file": "inhalants.html",
+    "title": "Inhalants Use Disorder | KNOW YOUR PILL",
+    "heading": "Inhalants & Volatile Solvent Use Disorder",
+    "description": "Understanding inhalant neurotoxicity, white matter damage, sudden sniffing death syndrome, and the devastating effects of volatile substances on the brain.",
+    "sections": [
+      "Neurotoxicity of Inhalants (Severe Neurotoxicity Warning)",
+      "Acute Inhalant Intoxication",
+      "Complications of Chronic Use (incl. Sudden Sniffing Death Syndrome)",
+      "Treatment & Rehabilitation",
+      "Emergency Quick Help"
+    ],
+    "category": "Inhalant / Volatile Solvent",
+    "has_emergency_section": true,
+    "examples": ["Toluene", "Benzene", "Xylene", "Acetone", "Nitrous oxide"]
+  },
+  {
+    "file": "lsd.html",
+    "title": "LSD Use Disorder | KNOW YOUR PILL",
+    "heading": "LSD Use Disorder",
+    "description": "Explore serotonin receptor activation, perceptual distortions, depersonalization, derealisation, synaesthesia, visual hallucinations, bad trips, flashbacks, and recovery through immersive psychedelic neuroscience education.",
+    "sections": [
+      "Understanding LSD (Hofmann / 5-HT2A)",
+      "LSD Neurobiology (Default Mode Network, Cross-Modal Processing)",
+      "LSD Intoxication (The 'Trip')",
+      "LSD Complications (HPPD / Flashbacks)",
+      "Treatment & Recovery (Bad Trip Management)",
+      "Emergency Quick Help"
+    ],
+    "category": "Hallucinogen (Psychedelic)",
+    "has_emergency_section": true,
+    "examples": ["LSD (Lysergic acid diethylamide)"]
+  },
+  {
+    "file": "nicotine.html",
+    "title": "Nicotine Use Disorder | KNOW YOUR PILL",
+    "heading": "Nicotine Use Disorder",
+    "description": "Understand nicotine's powerful effects on the brain's acetylcholine and dopamine systems, the craving cycle, withdrawal, and evidence-based cessation strategies.",
+    "sections": [
+      "Neurobiology of Nicotine (Acetylcholine Receptors, Craving Cycle)",
+      "Acute Effects of Nicotine",
+      "Nicotine Withdrawal",
+      "Health Complications (Respiratory, Cardiovascular, Brain, Oral)",
+      "Treatment & Smoking Cessation (NRT, Prescription Medications)",
+      "When to Seek Help",
+      "The Brain Heals (Recovery Timeline)"
+    ],
+    "category": "Stimulant (Nicotinic agonist)",
+    "has_emergency_section": true,
+    "examples": ["Nicotine", "Nicotine Replacement Therapy (NRT)", "Prescription cessation medications"]
+  },
+  {
+    "file": "opioids.html",
+    "title": "Opioid Use Disorders | KNOW YOUR PILL",
+    "heading": "Opioid Use Disorders",
+    "description": "Explore dependence, withdrawal, respiratory depression, reward pathways, overdose emergencies, and recovery neuroscience through immersive psychiatry education.",
+    "sections": [
+      "Understanding Opioids",
+      "Opioid Classification",
+      "Opioid Neurobiology (Heroin Neuropharmacology)",
+      "Acute Opioid Intoxication",
+      "Opioid Withdrawal Syndrome",
+      "Opioid Complications",
+      "Overdose Emergency",
+      "Treatment & Detoxification",
+      "Maintenance Therapy (Opioid Agonist Therapy)",
+      "Naloxone Mechanism",
+      "Methadone & Buprenorphine",
+      "Psychosocial Rehabilitation & Recovery",
+      "Emergency Quick Help"
+    ],
+    "category": "Opioid (Narcotic Analgesic)",
+    "has_emergency_section": true,
+    "examples": ["Heroin", "Morphine", "Methadone", "Buprenorphine", "Naloxone"]
+  },
+  {
+    "file": "pcp.html",
+    "title": "Phencyclidine (PCP) Use Disorder | KNOW YOUR PILL",
+    "heading": "Phencyclidine (PCP) Use Disorder",
+    "description": "Explore NMDA receptor antagonism, dissociative anesthesia, psychosis, violence risk, and emergency psychiatric care through immersive neuroscience education.",
+    "sections": [
+      "Understanding Phencyclidine",
+      "NMDA Receptor Antagonism",
+      "Acute PCP Intoxication",
+      "PCP Withdrawal (No Defined Withdrawal)",
+      "Complications of PCP Use",
+      "Treatment Approaches",
+      "Emergency Warning Signs"
+    ],
+    "category": "Dissociative Anesthetic (NMDA Antagonist)",
+    "has_emergency_section": true,
+    "examples": ["Phencyclidine (PCP)"]
+  },
+  {
+    "file": "psychiatric.html",
+    "title": "Psychiatric Medications | KNOW YOUR PILL",
+    "heading": "Psychiatric Medications",
+    "description": "Explore antidepressants, antipsychotics, mood stabilizers, and anxiety medications through simplified neuroscience explanations and visual guides.",
+    "sections": [
+      "Medication Subcategories (Antidepressants, Antipsychotics, Mood Stabilizers, Anxiolytics)",
+      "Common Medications"
+    ],
+    "category": "Medication Category Hub — Psychiatric",
+    "has_emergency_section": false,
+    "examples": ["Sertraline", "Fluoxetine", "Escitalopram", "Olanzapine", "Risperidone", "Lithium"]
+  },
+  {
+    "file": "pain-management.html",
+    "title": "Pain Management | KNOW YOUR PILL",
+    "heading": "Pain Management",
+    "description": "Understanding pain relievers, anti-inflammatory medications, and chronic pain treatments through clear explanations and visual guides. Marked as 'Content Coming Soon'.",
+    "sections": [
+      "Medication Subcategories (Non-Opioid Analgesics, NSAIDs, Opioid Analgesics, Neuropathic Pain Medications)",
+      "Common Medications"
+    ],
+    "category": "Medication Category Hub — Pain Management",
+    "has_emergency_section": false,
+    "examples": ["Ibuprofen", "Naproxen", "Acetaminophen"]
+  },
+  {
+    "file": "medicine.html",
+    "title": "Sertraline | KNOW YOUR PILL",
+    "heading": "Sertraline",
+    "description": "A premium visual guide to how sertraline, an SSRI antidepressant, can increase serotonin signalling between neurons over time. Functions as the demo module for an individual medication page.",
+    "sections": [
+      "Core medication snapshot (Quick Facts)",
+      "Serotonin signalling at the synapse (Mechanism Animation)",
+      "Progress usually builds gradually",
+      "Common effects to monitor",
+      "Know when to slow down and get help",
+      "Common patient questions"
+    ],
+    "category": "SSRI Antidepressant",
+    "has_emergency_section": false,
+    "examples": ["Sertraline"]
+  },
+  {
+    "file": "withdrawal-state.html",
+    "title": "Withdrawal State | KNOW YOUR PILL",
+    "heading": "Withdrawal State",
+    "description": "Understand how the brain and body react when substance use is reduced or stopped — exploring neuroadaptation, rebound activity, and the path to stabilization through visual neuroscience.",
+    "sections": [
+      "What is Withdrawal?",
+      "Medical Definition & Characteristics",
+      "Brain & Neurotransmitter Effects (Rebound Activity, Dopamine Deficiency, GABA/Glutamate Imbalance)",
+      "Common Signs & Symptoms (Physical, Psychological, Behavioral, Neurological)",
+      "Emergency Warning Signs (Severe Withdrawal Syndromes)",
+      "Common Substance Examples",
+      "Timeline of Effects",
+      "Recovery & Support"
+    ],
+    "category": "Clinical Pattern — Withdrawal State (ICD-10)",
+    "has_emergency_section": true,
+    "examples": ["Alcohol", "Opioid", "Benzodiazepine", "Cannabis", "Stimulant"]
+  },
+  {
+    "file": "acute-intoxication.html",
+    "title": "Acute Intoxication | KNOW YOUR PILL",
+    "heading": "Acute Intoxication",
+    "description": "Understand how substances temporarily alter brain function, producing immediate changes in consciousness, behavior, and physiological responses through visual neuroscience explanations.",
+    "sections": [
+      "What is Acute Intoxication?",
+      "Medical Definition & Characteristics",
+      "Brain & Neurotransmitter Effects (Dopamine, GABA, Glutamate)",
+      "Common Signs & Symptoms (Physical, Psychological, Behavioral, Neurological)",
+      "Emergency Warning Signs (Overdose Concerns)",
+      "Common Substance Examples",
+      "Timeline of Effects",
+      "Recovery & Support",
+      "Explore & Learn",
+      "The Intoxicated Brain"
+    ],
+    "category": "Clinical Pattern — Acute Intoxication (ICD-10)",
+    "has_emergency_section": true,
+    "examples": ["Alcohol", "Cannabis", "Opioid", "Benzodiazepine", "Stimulant"]
+  },
+  {
+    "file": "substance-use.html",
+    "title": "Psychoactive Substance Use Disorders | KNOW YOUR PILL",
+    "heading": "Psychoactive Substance Use Disorders",
+    "description": "Explore how psychoactive substances affect the brain, behavior, dependency, withdrawal, and recovery through simplified neuroscience education. Acts as the hub page for all substance-specific drug pages.",
+    "sections": [
+      "Your Learning Pathway",
+      "The 4 Clinical Patterns (Acute Intoxication, Withdrawal State, Dependence Syndrome, Harmful Use)",
+      "Substance Categories (10 drug cards linking to individual pages)",
+      "Clinical Student Mode / Diagnostic Classification (ICD-10)",
+      "Etiological Factors in Substance Use Disorders (Bio/Psycho/Social)",
+      "Brain Mechanisms (Dopamine Reward Pathway, Addiction Cycle, Tolerance, Withdrawal)",
+      "Emergency Risks (Overdose, Respiratory Depression, Serotonin Syndrome, Delirium Tremens)",
+      "Recovery & Support",
+      "Advanced Psychiatry Modules"
+    ],
+    "category": "Hub — Psychoactive Substance Use Disorders (ICD-10)",
+    "has_emergency_section": true,
+    "examples": ["Alcohol", "Opioids", "Cannabis", "Cocaine", "Amphetamines", "Hallucinogens (LSD)", "Sedatives (Benzodiazepines)", "Inhalants", "Nicotine", "PCP"]
+  }
+]
