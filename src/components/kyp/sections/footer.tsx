@@ -1,6 +1,7 @@
 "use client";
 
 import { Pill, Github, Mail } from "lucide-react";
+import { Container } from "@/components/kyp/ui/container";
 
 const footerLinks = [
   {
@@ -36,6 +37,8 @@ const footerLinks = [
       { label: "Categories", href: "#categories" },
       { label: "Medication Library", href: "#library" },
       { label: "Substance Use", href: "#substances" },
+      { label: "Knowledge Graph", href: "#knowledge-graph" },
+      { label: "Brain Atlas", href: "#brain-atlas" },
       { label: "NeuroArcade", href: "#neuroarcade" },
       { label: "Emergency", href: "#emergency" },
     ],
@@ -45,7 +48,7 @@ const footerLinks = [
 export function Footer() {
   return (
     <footer className="mt-auto border-t border-border/70 bg-card/40">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <Container className="py-12">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_2.5fr]">
           {/* Brand column */}
           <div>
@@ -60,7 +63,7 @@ export function Footer() {
                 </small>
               </div>
             </div>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-4 max-w-sm text-body-sm text-muted-foreground leading-relaxed">
               A premium neuroscience-inspired psychiatric medication and substance education
               platform — combining MBBS-level learning, neuroscience visualisation, interactive
               medical education, and patient-friendly healthcare awareness.
@@ -90,15 +93,13 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
             {footerLinks.map((col) => (
               <div key={col.title}>
-                <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-                  {col.title}
-                </h3>
+                <h3 className="text-overline text-muted-foreground">{col.title}</h3>
                 <ul className="mt-3 space-y-2">
                   {col.links.map((link) => (
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-sm text-foreground/80 transition-colors hover:text-brand"
+                        className="text-body-sm text-foreground/80 transition-colors hover:text-brand"
                       >
                         {link.label}
                       </a>
@@ -112,7 +113,7 @@ export function Footer() {
 
         {/* Disclaimer */}
         <div className="mt-10 rounded-xl border border-border/70 bg-muted/30 p-4">
-          <p className="text-xs leading-relaxed text-muted-foreground">
+          <p className="text-caption text-muted-foreground leading-relaxed">
             <strong className="text-foreground">Disclaimer:</strong> This website is for
             educational support only. It does not replace a doctor, pharmacist, emergency service,
             or local medical guideline. Always consult a qualified healthcare professional before
@@ -122,14 +123,14 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-8 flex flex-col items-start justify-between gap-3 border-t border-border/70 pt-6 sm:flex-row sm:items-center">
-          <p className="text-xs text-muted-foreground">
+          <p className="text-caption text-muted-foreground">
             © 2026 Know Your Pill · Designed &amp; built by Zamaan Ali Shamji
           </p>
-          <p className="text-xs text-muted-foreground">
+          <p className="text-caption text-muted-foreground">
             Built with Next.js · Tailwind CSS · shadcn/ui
           </p>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }
