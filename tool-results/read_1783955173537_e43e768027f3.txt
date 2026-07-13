@@ -1,0 +1,2002 @@
+     1→<!DOCTYPE html>
+     2→<html lang="en">
+     3→<head>
+     4→  <meta charset="UTF-8">
+     5→  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     6→  <title>Alcohol Use Disorders | KNOW YOUR PILL</title>
+     7→  <link rel="stylesheet" href="style.css">
+     8→  <link rel="stylesheet" href="substance-use-advanced.css">
+     9→  <link rel="preconnect" href="https://fonts.googleapis.com">
+    10→  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    11→  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    12→  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    13→  <style>
+    14→    /* ============================================
+    15→         ALCOHOL PAGE SPECIFIC STYLES
+    16→         Neuroscience-inspired premium design
+    17→         ============================================ */
+    18→    
+    19→    :root {
+    20→      --alcohol-primary: #0f9d91;
+    21→      --alcohol-accent: #d94c4c;
+    22→      --alcohol-glow: rgba(15, 157, 145, 0.3);
+    23→    }
+    24→
+    25→    /* Hero Section - Alcohol Specific */
+    26→    .alcohol-hero {
+    27→      background:
+    28→        radial-gradient(circle at 14% 18%, rgba(15, 157, 145, 0.15), transparent 35%),
+    29→        radial-gradient(circle at 78% 20%, rgba(217, 76, 76, 0.12), transparent 30%),
+    30→        radial-gradient(circle at 50% 80%, rgba(37, 99, 235, 0.08), transparent 34%),
+    31→        linear-gradient(135deg, rgba(255, 255, 255, 0.58), rgba(245, 249, 255, 0.34));
+    32→    }
+    33→
+    34→    [data-theme="dark"] .alcohol-hero {
+    35→      background:
+    36→        radial-gradient(circle at 14% 18%, rgba(15, 157, 145, 0.1), transparent 35%),
+    37→        radial-gradient(circle at 78% 20%, rgba(217, 76, 76, 0.08), transparent 30%),
+    38→        radial-gradient(circle at 50% 80%, rgba(37, 99, 235, 0.05), transparent 34%),
+    39→        linear-gradient(135deg, rgba(7, 17, 31, 0.8), rgba(16, 23, 42, 0.6));
+    40→    }
+    41→
+    42→    .alcohol-hero-visual {
+    43→      position: relative;
+    44→      width: 100%;
+    45→      height: 100%;
+    46→      display: flex;
+    47→      align-items: center;
+    48→      justify-content: center;
+    49→    }
+    50→
+    51→    .alcohol-brain-container {
+    52→      position: relative;
+    53→      width: 320px;
+    54→      height: 320px;
+    55→      display: flex;
+    56→      align-items: center;
+    57→      justify-content: center;
+    58→    }
+    59→
+    60→    .alcohol-brain-svg {
+    61→      width: 100%;
+    62→      height: 100%;
+    63→      filter: drop-shadow(0 20px 40px rgba(15, 157, 145, 0.3));
+    64→    }
+    65→
+    66→    .alcohol-neural-particles {
+    67→      position: absolute;
+    68→      inset: -50px;
+    69→      pointer-events: none;
+    70→    }
+    71→
+    72→    .neural-particle {
+    73→      position: absolute;
+    74→      width: 6px;
+    75→      height: 6px;
+    76→      border-radius: 50%;
+    77→      background: var(--alcohol-primary);
+    78→      opacity: 0.6;
+    79→      animation: particleFloat 4s ease-in-out infinite;
+    80→    }
+    81→
+    82→    .neural-particle:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+    83→    .neural-particle:nth-child(2) { top: 30%; right: 15%; animation-delay: -1s; }
+    84→    .neural-particle:nth-child(3) { bottom: 20%; left: 25%; animation-delay: -2s; }
+    85→    .neural-particle:nth-child(4) { bottom: 35%; right: 20%; animation-delay: -0.5s; }
+    86→    .neural-particle:nth-child(5) { top: 50%; left: 10%; animation-delay: -1.5s; }
+    87→    .neural-particle:nth-child(6) { top: 15%; right: 30%; animation-delay: -2.5s; }
+    88→
+    89→    @keyframes particleFloat {
+    90→      0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
+    91→      50% { transform: translateY(-15px) scale(1.2); opacity: 0.9; }
+    92→    }
+    93→
+    94→    /* CAGE Questionnaire - Interactive OSCE */
+    95→    .cage-section {
+    96→      padding: 48px 0;
+    97→    }
+    98→
+    99→    .cage-container {
+   100→      display: grid;
+   101→      grid-template-columns: repeat(4, 1fr);
+   102→      gap: 16px;
+   103→      margin-top: 24px;
+   104→    }
+   105→
+   106→    .cage-card {
+   107→      position: relative;
+   108→      padding: 24px;
+   109→      border: 1px solid rgba(182, 200, 210, 0.6);
+   110→      border-radius: 16px;
+   111→      background: linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(246, 250, 255, 0.4));
+   112→      backdrop-filter: blur(18px);
+   113→      box-shadow: 0 12px 40px rgba(35, 48, 68, 0.08);
+   114→      cursor: pointer;
+   115→      transition: all 300ms ease;
+   116→      overflow: hidden;
+   117→    }
+   118→
+   119→    .cage-card::before {
+   120→      content: "";
+   121→      position: absolute;
+   122→      inset: 0;
+   123→      border-radius: inherit;
+   124→      background: linear-gradient(135deg, rgba(15, 157, 145, 0.1), rgba(217, 76, 76, 0.08));
+   125→      opacity: 0;
+   126→      transition: opacity 300ms ease;
+   127→    }
+   128→
+   129→    .cage-card:hover::before {
+   130→      opacity: 1;
+   131→    }
+   132→
+   133→    .cage-card:hover {
+   134→      transform: translateY(-4px);
+   135→      border-color: rgba(15, 157, 145, 0.4);
+   136→      box-shadow: 0 20px 60px rgba(15, 157, 145, 0.15);
+   137→    }
+   138→
+   139→    .cage-card.is-active {
+   140→      border-color: rgba(15, 157, 145, 0.6);
+   141→      box-shadow: 0 24px 64px rgba(15, 157, 145, 0.2);
+   142→    }
+   143→
+   144→    .cage-letter {
+   145→      font-size: 3.5rem;
+   146→      font-weight: 950;
+   147→      background: linear-gradient(135deg, var(--alcohol-primary), var(--blue));
+   148→      -webkit-background-clip: text;
+   149→      background-clip: text;
+   150→      color: transparent;
+   151→      line-height: 1;
+   152→      margin-bottom: 8px;
+   153→    }
+   154→
+   155→    .cage-word {
+   156→      font-size: 1.1rem;
+   157→      font-weight: 800;
+   158→      color: var(--ink);
+   159→      margin-bottom: 12px;
+   160→    }
+   161→
+   162→    .cage-question {
+   163→      font-size: 0.92rem;
+   164→      color: var(--muted);
+   165→      line-height: 1.5;
+   166→      max-height: 0;
+   167→      overflow: hidden;
+   168→      opacity: 0;
+   169→      transition: all 300ms ease;
+   170→    }
+   171→
+   172→    .cage-card.is-active .cage-question {
+   173→      max-height: 120px;
+   174→      opacity: 1;
+   175→      margin-top: 12px;
+   176→    }
+   177→
+   178→    .cage-meaning {
+   179→      font-size: 0.82rem;
+   180→      color: var(--muted);
+   181→      line-height: 1.5;
+   182→      max-height: 0;
+   183→      overflow: hidden;
+   184→      opacity: 0;
+   185→      transition: all 300ms ease 50ms;
+   186→      padding-top: 8px;
+   187→      border-top: 1px solid rgba(182, 200, 210, 0.3);
+   188→      margin-top: 12px;
+   189→    }
+   190→
+   191→    .cage-card.is-active .cage-meaning {
+   192→      max-height: 100px;
+   193→      opacity: 1;
+   194→    }
+   195→
+   196→    .cage-score-info {
+   197→      margin-top: 24px;
+   198→      padding: 16px 24px;
+   199→      border: 1px solid rgba(217, 76, 76, 0.2);
+   200→      border-radius: 12px;
+   201→      background: rgba(255, 241, 242, 0.6);
+   202→      backdrop-filter: blur(12px);
+   203→    }
+   204→
+   205→    .cage-score-info strong {
+   206→      color: var(--coral);
+   207→    }
+   208→
+   209→    /* BAC Severity Scale */
+   210→    .bac-section {
+   211→      padding: 48px 0;
+   212→    }
+   213→
+   214→    .bac-scale-container {
+   215→      margin-top: 24px;
+   216→      position: relative;
+   217→    }
+   218→
+   219→    .bac-scale {
+   220→      display: flex;
+   221→      flex-direction: column;
+   222→      gap: 0;
+   223→      border-radius: 16px;
+   224→      overflow: hidden;
+   225→      box-shadow: 0 20px 60px rgba(35, 48, 68, 0.12);
+   226→    }
+   227→
+   228→    .bac-level {
+   229→      display: grid;
+   230→      grid-template-columns: 140px 1fr 200px;
+   231→      align-items: center;
+   232→      padding: 16px 24px;
+   233→      gap: 16px;
+   234→      transition: all 200ms ease;
+   235→      position: relative;
+   236→    }
+   237→
+   238→    .bac-level:hover {
+   239→      padding-left: 32px;
+   240→    }
+   241→
+   242→    .bac-level::after {
+   243→      content: "";
+   244→      position: absolute;
+   245→      left: 0;
+   246→      top: 0;
+   247→      bottom: 0;
+   248→      width: 4px;
+   249→    }
+   250→
+   251→    .bac-level-1 { background: rgba(34, 211, 238, 0.08); }
+   252→    .bac-level-1::after { background: linear-gradient(180deg, #22d3ee, #0f9d91); }
+   253→
+   254→    .bac-level-2 { background: rgba(249, 115, 22, 0.08); }
+   255→    .bac-level-2::after { background: linear-gradient(180deg, #f97316, #fbbf24); }
+   256→
+   257→    .bac-level-3 { background: rgba(236, 72, 153, 0.08); }
+   258→    .bac-level-3::after { background: linear-gradient(180deg, #ec4899, #d94c4c); }
+   259→
+   260→    .bac-level-4 { background: rgba(217, 76, 76, 0.1); }
+   261→    .bac-level-4::after { background: linear-gradient(180deg, #d94c4c, #b91c1c); }
+   262→
+   263→    .bac-level-5 { background: rgba(139, 92, 246, 0.1); }
+   264→    .bac-level-5::after { background: linear-gradient(180deg, #8b5cf6, #6d28d9); }
+   265→
+   266→    .bac-level-6 { background: rgba(0, 0, 0, 0.08); }
+   267→    .bac-level-6::after { background: linear-gradient(180deg, #1f2937, #000); }
+   268→
+   269→    [data-theme="dark"] .bac-level-1 { background: rgba(34, 211, 238, 0.05); }
+   270→    [data-theme="dark"] .bac-level-2 { background: rgba(249, 115, 22, 0.05); }
+   271→    [data-theme="dark"] .bac-level-3 { background: rgba(236, 72, 153, 0.05); }
+   272→    [data-theme="dark"] .bac-level-4 { background: rgba(217, 76, 76, 0.06); }
+   273→    [data-theme="dark"] .bac-level-5 { background: rgba(139, 92, 246, 0.06); }
+   274→    [data-theme="dark"] .bac-level-6 { background: rgba(0, 0, 0, 0.15); }
+   275→
+   276→    .bac-range {
+   277→      font-size: 0.85rem;
+   278→      font-weight: 900;
+   279→      color: var(--ink);
+   280→      white-space: nowrap;
+   281→    }
+   282→
+   283→    .bac-severity-bar {
+   284→      height: 8px;
+   285→      border-radius: 4px;
+   286→      background: rgba(0, 0, 0, 0.08);
+   287→      overflow: hidden;
+   288→    }
+   289→
+   290→    [data-theme="dark"] .bac-severity-bar {
+   291→      background: rgba(255, 255, 255, 0.1);
+   292→    }
+   293→
+   294→    .bac-severity-fill {
+   295→      height: 100%;
+   296→      border-radius: inherit;
+   297→      animation: severityPulse 3s ease-in-out infinite;
+   298→    }
+   299→
+   300→    .bac-level-1 .bac-severity-fill { background: linear-gradient(90deg, #22d3ee, #0f9d91); width: 15%; }
+   301→    .bac-level-2 .bac-severity-fill { background: linear-gradient(90deg, #f97316, #fbbf24); width: 35%; }
+   302→    .bac-level-3 .bac-severity-fill { background: linear-gradient(90deg, #ec4899, #d94c4c); width: 55%; }
+   303→    .bac-level-4 .bac-severity-fill { background: linear-gradient(90deg, #d94c4c, #b91c1c); width: 72%; }
+   304→    .bac-level-5 .bac-severity-fill { background: linear-gradient(90deg, #8b5cf6, #6d28d9); width: 88%; }
+   305→    .bac-level-6 .bac-severity-fill { background: linear-gradient(90deg, #1f2937, #000); width: 100%; }
+   306→
+   307→    @keyframes severityPulse {
+   308→      0%, 100% { opacity: 0.8; }
+   309→      50% { opacity: 1; }
+   310→    }
+   311→
+   312→    .bac-symptoms {
+   313→      font-size: 0.88rem;
+   314→      color: var(--muted);
+   315→      font-weight: 700;
+   316→    }
+   317→
+   318→    /* Jellinek Classification Cards */
+   319→    .jellinek-grid {
+   320→      display: grid;
+   321→      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   322→      gap: 16px;
+   323→      margin-top: 24px;
+   324→    }
+   325→
+   326→    .jellinek-card {
+   327→      padding: 24px;
+   328→      border: 1px solid rgba(182, 200, 210, 0.5);
+   329→      border-radius: 16px;
+   330→      background: linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(246, 250, 255, 0.4));
+   331→      backdrop-filter: blur(18px);
+   332→      box-shadow: 0 12px 40px rgba(35, 48, 68, 0.08);
+   333→      transition: all 300ms ease;
+   334→      cursor: pointer;
+   335→    }
+   336→
+   337→    .jellinek-card:hover {
+   338→      transform: translateY(-4px);
+   339→      border-color: rgba(15, 157, 145, 0.4);
+   340→      box-shadow: 0 20px 60px rgba(15, 157, 145, 0.15);
+   341→    }
+   342→
+   343→    .jellinek-type {
+   344→      font-size: 2.5rem;
+   345→      font-weight: 950;
+   346→      background: linear-gradient(135deg, var(--alcohol-primary), var(--blue));
+   347→      -webkit-background-clip: text;
+   348→      background-clip: text;
+   349→      color: transparent;
+   350→      line-height: 1;
+   351→      margin-bottom: 8px;
+   352→    }
+   353→
+   354→    .jellinek-name {
+   355→      font-size: 1rem;
+   356→      font-weight: 800;
+   357→      color: var(--ink);
+   358→      margin-bottom: 12px;
+   359→    }
+   360→
+   361→    .jellinek-desc {
+   362→      font-size: 0.9rem;
+   363→      color: var(--muted);
+   364→      line-height: 1.6;
+   365→    }
+   366→
+   367→    .jellinek-features {
+   368→      margin-top: 12px;
+   369→      padding-top: 12px;
+   370→      border-top: 1px solid rgba(182, 200, 210, 0.3);
+   371→    }
+   372→
+   373→    .jellinek-feature {
+   374→      display: flex;
+   375→      align-items: center;
+   376→      gap: 8px;
+   377→      font-size: 0.82rem;
+   378→      color: var(--muted);
+   379→      margin-bottom: 6px;
+   380→    }
+   381→
+   382→    .jellinek-feature::before {
+   383→      content: "";
+   384→      width: 6px;
+   385→      height: 6px;
+   386→      border-radius: 50%;
+   387→      background: var(--alcohol-primary);
+   388→      flex-shrink: 0;
+   389→    }
+   390→
+   391→    /* Cloninger Comparison */
+   392→    .cloninger-comparison {
+   393→      display: grid;
+   394→      grid-template-columns: 1fr 1fr;
+   395→      gap: 24px;
+   396→      margin-top: 24px;
+   397→    }
+   398→
+   399→    .cloninger-type-card {
+   400→      padding: 28px;
+   401→      border: 1px solid rgba(182, 200, 210, 0.5);
+   402→      border-radius: 20px;
+   403→      background: linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(246, 250, 255, 0.4));
+   404→      backdrop-filter: blur(18px);
+   405→      box-shadow: 0 16px 48px rgba(35, 48, 68, 0.1);
+   406→      position: relative;
+   407→      overflow: hidden;
+   408→    }
+   409→
+   410→    .cloninger-type-card::before {
+   411→      content: "";
+   412→      position: absolute;
+   413→      top: 0;
+   414→      left: 0;
+   415→      right: 0;
+   416→      height: 4px;
+   417→    }
+   418→
+   419→    .cloninger-type-1::before {
+   420→      background: linear-gradient(90deg, var(--teal), var(--cyan));
+   421→    }
+   422→
+   423→    .cloninger-type-2::before {
+   424→      background: linear-gradient(90deg, var(--violet), var(--pink));
+   425→    }
+   426→
+   427→    .cloninger-type-number {
+   428→      font-size: 3rem;
+   429→      font-weight: 950;
+   430→      opacity: 0.15;
+   431→      position: absolute;
+   432→      top: 12px;
+   433→      right: 20px;
+   434→      line-height: 1;
+   435→    }
+   436→
+   437→    .cloninger-type-1 .cloninger-type-number { color: var(--teal); }
+   438→    .cloninger-type-2 .cloninger-type-number { color: var(--violet); }
+   439→
+   440→    .cloninger-title {
+   441→      font-size: 1.3rem;
+   442→      font-weight: 900;
+   443→      color: var(--ink);
+   444→      margin-bottom: 16px;
+   445→    }
+   446→
+   447→    .cloninger-features {
+   448→      list-style: none;
+   449→      margin: 0;
+   450→      padding: 0;
+   451→    }
+   452→
+   453→    .cloninger-features li {
+   454→      display: flex;
+   455→      align-items: flex-start;
+   456→      gap: 10px;
+   457→      padding: 8px 0;
+   458→      font-size: 0.92rem;
+   459→      color: var(--muted);
+   460→      line-height: 1.5;
+   461→      border-bottom: 1px solid rgba(182, 200, 210, 0.2);
+   462→    }
+   463→
+   464→    .cloninger-features li:last-child {
+   465→      border-bottom: none;
+   466→    }
+   467→
+   468→    .cloninger-check {
+   469→      color: var(--teal);
+   470→      font-weight: 900;
+   471→      flex-shrink: 0;
+   472→    }
+   473→
+   474→    /* Withdrawal Timeline */
+   475→    .withdrawal-timeline {
+   476→      position: relative;
+   477→      margin-top: 32px;
+   478→      padding-left: 40px;
+   479→    }
+   480→
+   481→    .withdrawal-timeline::before {
+   482→      content: "";
+   483→      position: absolute;
+   484→      left: 12px;
+   485→      top: 0;
+   486→      bottom: 0;
+   487→      width: 2px;
+   488→      background: linear-gradient(180deg, var(--teal), var(--orange), var(--coral));
+   489→      border-radius: 2px;
+   490→    }
+   491→
+   492→    .timeline-event {
+   493→      position: relative;
+   494→      padding: 16px 24px;
+   495→      margin-bottom: 16px;
+   496→      border: 1px solid rgba(182, 200, 210, 0.4);
+   497→      border-radius: 12px;
+   498→      background: linear-gradient(145deg, rgba(255, 255, 255, 0.6), rgba(246, 250, 255, 0.3));
+   499→      backdrop-filter: blur(12px);
+   500→      transition: all 300ms ease;
+   501→    }
+   502→
+   503→    .timeline-event:hover {
+   504→      transform: translateX(8px);
+   505→      border-color: rgba(15, 157, 145, 0.4);
+   506→      box-shadow: 0 12px 40px rgba(15, 157, 145, 0.12);
+   507→    }
+   508→
+   509→    .timeline-event::before {
+   510→      content: "";
+   511→      position: absolute;
+   512→      left: -32px;
+   513→      top: 24px;
+   514→      width: 12px;
+   515→      height: 12px;
+   516→      border-radius: 50%;
+   517→      background: var(--teal);
+   518→      border: 3px solid var(--surface);
+   519→      box-shadow: 0 0 12px rgba(15, 157, 145, 0.4);
+   520→    }
+   521→
+   522→    .timeline-time {
+   523→      font-size: 0.78rem;
+   524→      font-weight: 900;
+   525→      text-transform: uppercase;
+   526→      letter-spacing: 1px;
+   527→      color: var(--alcohol-primary);
+   528→      margin-bottom: 6px;
+   529→    }
+   530→
+   531→    .timeline-title {
+   532→      font-size: 1.05rem;
+   533→      font-weight: 800;
+   534→      color: var(--ink);
+   535→      margin-bottom: 8px;
+   536→    }
+   537→
+   538→    .timeline-desc {
+   539→      font-size: 0.88rem;
+   540→      color: var(--muted);
+   541→      line-height: 1.5;
+   542→    }
+   543→
+   544→    /* Neuropsychiatric Cards */
+   545→    .neuro-complications-grid {
+   546→      display: grid;
+   547→      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   548→      gap: 16px;
+   549→      margin-top: 24px;
+   550→    }
+   551→
+   552→    .neuro-complication-card {
+   553→      padding: 24px;
+   554→      border: 1px solid rgba(182, 200, 210, 0.5);
+   555→      border-radius: 16px;
+   556→      background: linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(246, 250, 255, 0.4));
+   557→      backdrop-filter: blur(18px);
+   558→      box-shadow: 0 12px 40px rgba(35, 48, 68, 0.08);
+   559→      transition: all 300ms ease;
+   560→    }
+   561→
+   562→    .neuro-complication-card:hover {
+   563→      transform: translateY(-4px);
+   564→      border-color: rgba(217, 76, 76, 0.4);
+   565→      box-shadow: 0 20px 60px rgba(217, 76, 76, 0.12);
+   566→    }
+   567→
+   568→    .neuro-complication-card.danger {
+   569→      border-color: rgba(217, 76, 76, 0.3);
+   570→    }
+   571→
+   572→    .complication-icon {
+   573→      width: 48px;
+   574→      height: 48px;
+   575→      border-radius: 12px;
+   576→      display: flex;
+   577→      align-items: center;
+   578→      justify-content: center;
+   579→      margin-bottom: 16px;
+   580→      font-size: 1.5rem;
+   581→    }
+   582→
+   583→    .complication-icon.brain {
+   584→      background: linear-gradient(135deg, rgba(15, 157, 145, 0.15), rgba(37, 99, 235, 0.1));
+   585→      border: 1px solid rgba(15, 157, 145, 0.2);
+   586→    }
+   587→
+   588→    .complication-icon.warning {
+   589→      background: linear-gradient(135deg, rgba(249, 115, 22, 0.15), rgba(236, 72, 153, 0.1));
+   590→      border: 1px solid rgba(249, 115, 22, 0.2);
+   591→    }
+   592→
+   593→    .complication-icon.danger {
+   594→      background: linear-gradient(135deg, rgba(217, 76, 76, 0.15), rgba(139, 92, 246, 0.1));
+   595→      border: 1px solid rgba(217, 76, 76, 0.2);
+   596→    }
+   597→
+   598→    .complication-title {
+   599→      font-size: 1.1rem;
+   600→      font-weight: 900;
+   601→      color: var(--ink);
+   602→      margin-bottom: 8px;
+   603→    }
+   604→
+   605→    .complication-desc {
+   606→      font-size: 0.88rem;
+   607→      color: var(--muted);
+   608→      line-height: 1.6;
+   609→      margin-bottom: 12px;
+   610→    }
+   611→
+   612→    .complication-cause {
+   613→      font-size: 0.78rem;
+   614→      font-weight: 700;
+   615→      text-transform: uppercase;
+   616→      letter-spacing: 0.5px;
+   617→      color: var(--alcohol-primary);
+   618→      padding: 6px 12px;
+   619→      background: rgba(15, 157, 145, 0.08);
+   620→      border-radius: 6px;
+   621→      display: inline-block;
+   622→    }
+   623→
+   624→    /* Medication Cards */
+   625→    .medication-grid {
+   626→      display: grid;
+   627→      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+   628→      gap: 16px;
+   629→      margin-top: 24px;
+   630→    }
+   631→
+   632→    .medication-card {
+   633→      padding: 20px;
+   634→      border: 1px solid rgba(182, 200, 210, 0.5);
+   635→      border-radius: 14px;
+   636→      background: linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(246, 250, 255, 0.4));
+   637→      backdrop-filter: blur(18px);
+   638→      box-shadow: 0 8px 32px rgba(35, 48, 68, 0.06);
+   639→      transition: all 300ms ease;
+   640→    }
+   641→
+   642→    .medication-card:hover {
+   643→      transform: translateY(-3px);
+   644→      border-color: rgba(15, 157, 145, 0.4);
+   645→      box-shadow: 0 16px 48px rgba(15, 157, 145, 0.12);
+   646→    }
+   647→
+   648→    .med-name {
+   649→      font-size: 1.05rem;
+   650→      font-weight: 900;
+   651→      color: var(--ink);
+   652→      margin-bottom: 4px;
+   653→    }
+   654→
+   655→    .med-class {
+   656→      font-size: 0.75rem;
+   657→      font-weight: 700;
+   658→      text-transform: uppercase;
+   659→      letter-spacing: 0.5px;
+   660→      color: var(--alcohol-primary);
+   661→      margin-bottom: 12px;
+   662→    }
+   663→
+   664→    .med-mechanism {
+   665→      font-size: 0.85rem;
+   666→      color: var(--muted);
+   667→      line-height: 1.5;
+   668→    }
+   669→
+   670→    /* Disulfiram Mechanism */
+   671→    .mechanism-flow {
+   672→      position: relative;
+   673→      margin-top: 24px;
+   674→      padding: 32px;
+   675→      border: 1px solid rgba(182, 200, 210, 0.4);
+   676→      border-radius: 20px;
+   677→      background: linear-gradient(145deg, rgba(255, 255, 255, 0.5), rgba(246, 250, 255, 0.3));
+   678→      backdrop-filter: blur(18px);
+   679→      overflow: hidden;
+   680→    }
+   681→
+   682→    .mechanism-flow::before {
+   683→      content: "";
+   684→      position: absolute;
+   685→      inset: 0;
+   686→      background:
+   687→        radial-gradient(circle at 20% 50%, rgba(15, 157, 145, 0.08), transparent 30%),
+   688→        radial-gradient(circle at 80% 50%, rgba(217, 76, 76, 0.06), transparent 30%);
+   689→      pointer-events: none;
+   690→    }
+   691→
+   692→    .mechanism-steps {
+   693→      display: flex;
+   694→      align-items: center;
+   695→      justify-content: space-between;
+   696→      gap: 16px;
+   697→      position: relative;
+   698→      z-index: 1;
+   699→    }
+   700→
+   701→    .mechanism-step {
+   702→      flex: 1;
+   703→      padding: 20px;
+   704→      border-radius: 14px;
+   705→      background: rgba(255, 255, 255, 0.6);
+   706→      border: 1px solid rgba(182, 200, 210, 0.4);
+   707→      text-align: center;
+   708→      transition: all 300ms ease;
+   709→    }
+   710→
+   711→    .mechanism-step:hover {
+   712→      transform: translateY(-4px);
+   713→      box-shadow: 0 12px 36px rgba(15, 157, 145, 0.15);
+   714→    }
+   715→
+   716→    .mechanism-step-number {
+   717→      width: 32px;
+   718→      height: 32px;
+   719→      border-radius: 50%;
+   720→      background: linear-gradient(135deg, var(--alcohol-primary), var(--blue));
+   721→      color: white;
+   722→      font-size: 0.85rem;
+   723→      font-weight: 900;
+   724→      display: flex;
+   725→      align-items: center;
+   726→      justify-content: center;
+   727→      margin: 0 auto 12px;
+   728→    }
+   729→
+   730→    .mechanism-step-title {
+   731→      font-size: 0.92rem;
+   732→      font-weight: 800;
+   733→      color: var(--ink);
+   734→      margin-bottom: 6px;
+   735→    }
+   736→
+   737→    .mechanism-step-desc {
+   738→      font-size: 0.8rem;
+   739→      color: var(--muted);
+   740→      line-height: 1.5;
+   741→    }
+   742→
+   743→    .mechanism-arrow {
+   744→      font-size: 1.5rem;
+   745→      color: var(--alcohol-primary);
+   746→      opacity: 0.5;
+   747→      flex-shrink: 0;
+   748→    }
+   749→
+   750→    /* Treatment Steps */
+   751→    .treatment-steps {
+   752→      display: grid;
+   753→      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   754→      gap: 16px;
+   755→      margin-top: 24px;
+   756→    }
+   757→
+   758→    .treatment-step {
+   759→      padding: 20px;
+   760→      border: 1px solid rgba(182, 200, 210, 0.4);
+   761→      border-radius: 14px;
+   762→      background: linear-gradient(145deg, rgba(255, 255, 255, 0.6), rgba(246, 250, 255, 0.3));
+   763→      backdrop-filter: blur(12px);
+   764→      transition: all 300ms ease;
+   765→      text-align: center;
+   766→    }
+   767→
+   768→    .treatment-step:hover {
+   769→      transform: translateY(-3px);
+   770→      border-color: rgba(15, 157, 145, 0.4);
+   771→      box-shadow: 0 12px 36px rgba(15, 157, 145, 0.1);
+   772→    }
+   773→
+   774→    .treatment-step-number {
+   775→      font-size: 2rem;
+   776→      font-weight: 950;
+   777→      background: linear-gradient(135deg, var(--alcohol-primary), var(--blue));
+   778→      -webkit-background-clip: text;
+   779→      background-clip: text;
+   780→      color: transparent;
+   781→      line-height: 1;
+   782→      margin-bottom: 8px;
+   783→    }
+   784→
+   785→    .treatment-step-title {
+   786→      font-size: 0.95rem;
+   787→      font-weight: 800;
+   788→      color: var(--ink);
+   789→      margin-bottom: 6px;
+   790→    }
+   791→
+   792→    .treatment-step-desc {
+   793→      font-size: 0.82rem;
+   794→      color: var(--muted);
+   795→      line-height: 1.5;
+   796→    }
+   797→
+   798→    /* Emergency Panel */
+   799→    .alcohol-emergency-panel {
+   800→      margin-top: 32px;
+   801→      padding: 28px;
+   802→      border: 1px solid rgba(217, 76, 76, 0.3);
+   803→      border-radius: 20px;
+   804→      background: linear-gradient(145deg, rgba(255, 241, 242, 0.7), rgba(255, 228, 230, 0.4));
+   805→      backdrop-filter: blur(18px);
+   806→      position: relative;
+   807→      overflow: hidden;
+   808→    }
+   809→
+   810→    .alcohol-emergency-panel::before {
+   811→      content: "";
+   812→      position: absolute;
+   813→      top: 0;
+   814→      left: 0;
+   815→      right: 0;
+   816→      height: 4px;
+   817→      background: linear-gradient(90deg, var(--coral), var(--pink), var(--cyan));
+   818→      animation: borderFlow 3s linear infinite;
+   819→    }
+   820→
+   821→    .emergency-panel-title {
+   822→      display: flex;
+   823→      align-items: center;
+   824→      gap: 12px;
+   825→      margin-bottom: 16px;
+   826→    }
+   827→
+   828→    .emergency-pulse {
+   829→      width: 16px;
+   830→      height: 16px;
+   831→      border-radius: 50%;
+   832→      background: var(--coral);
+   833→      animation: emergencyPulse 2s ease-out infinite;
+   834→    }
+   835→
+   836→    .emergency-panel-title h3 {
+   837→      font-size: 1.2rem;
+   838→      font-weight: 900;
+   839→      color: var(--coral);
+   840→      margin: 0;
+   841→    }
+   842→
+   843→    .emergency-signs-grid {
+   844→      display: grid;
+   845→      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   846→      gap: 12px;
+   847→      margin-top: 16px;
+   848→    }
+   849→
+   850→    .emergency-sign {
+   851→      display: flex;
+   852→      align-items: center;
+   853→      gap: 10px;
+   854→      padding: 12px 16px;
+   855→      border-radius: 10px;
+   856→      background: rgba(255, 255, 255, 0.5);
+   857→      border: 1px solid rgba(217, 76, 76, 0.15);
+   858→      font-size: 0.88rem;
+   859→      font-weight: 700;
+   860→      color: var(--ink);
+   861→    }
+   862→
+   863→    .emergency-sign-icon {
+   864→      color: var(--coral);
+   865→      font-size: 1.2rem;
+   866→    }
+   867→
+   868→    .emergency-contacts {
+   869→      display: flex;
+   870→      gap: 12px;
+   871→      margin-top: 20px;
+   872→      flex-wrap: wrap;
+   873→    }
+   874→
+   875→    .emergency-contact-btn {
+   876→      min-height: 48px;
+   877→      padding: 0 24px;
+   878→      border: 1px solid rgba(255, 255, 255, 0.5);
+   879→      border-radius: 12px;
+   880→      background: linear-gradient(135deg, #d94c4c, var(--pink) 54%, var(--cyan));
+   881→      background-size: 180% 100%;
+   882→      color: white;
+   883→      font-weight: 800;
+   884→      font-size: 0.95rem;
+   885→      text-decoration: none;
+   886→      display: inline-flex;
+   887→      align-items: center;
+   888→      gap: 8px;
+   889→      box-shadow: 0 12px 32px rgba(217, 76, 76, 0.2);
+   890→      transition: all 250ms ease;
+   891→    }
+   892→
+   893→    .emergency-contact-btn:hover {
+   894→      transform: translateY(-2px);
+   895→      background-position: 100% 0;
+   896→      box-shadow: 0 18px 42px rgba(217, 76, 76, 0.28);
+   897→    }
+   898→
+   899→    /* Recovery Section */
+   900→    .recovery-grid {
+   901→      display: grid;
+   902→      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   903→      gap: 16px;
+   904→      margin-top: 24px;
+   905→    }
+   906→
+   907→    .recovery-card {
+   908→      padding: 24px;
+   909→      border: 1px solid rgba(182, 200, 210, 0.4);
+   910→      border-radius: 16px;
+   911→      background: linear-gradient(145deg, rgba(255, 255, 255, 0.6), rgba(240, 253, 255, 0.4));
+   912→      backdrop-filter: blur(18px);
+   913→      box-shadow: 0 12px 40px rgba(35, 48, 68, 0.06);
+   914→      transition: all 300ms ease;
+   915→    }
+   916→
+   917→    .recovery-card:hover {
+   918→      transform: translateY(-4px);
+   919→      border-color: rgba(15, 157, 145, 0.4);
+   920→      box-shadow: 0 20px 60px rgba(15, 157, 145, 0.12);
+   921→    }
+   922→
+   923→    .recovery-icon {
+   924→      width: 48px;
+   925→      height: 48px;
+   926→      border-radius: 12px;
+   927→      background: linear-gradient(135deg, rgba(15, 157, 145, 0.15), rgba(34, 211, 238, 0.1));
+   928→      border: 1px solid rgba(15, 157, 145, 0.2);
+   929→      display: flex;
+   930→      align-items: center;
+   931→      justify-content: center;
+   932→      margin-bottom: 16px;
+   933→      font-size: 1.3rem;
+   934→    }
+   935→
+   936→    .recovery-title {
+   937→      font-size: 1.05rem;
+   938→      font-weight: 900;
+   939→      color: var(--ink);
+   940→      margin-bottom: 8px;
+   941→    }
+   942→
+   943→    .recovery-desc {
+   944→      font-size: 0.88rem;
+   945→      color: var(--muted);
+   946→      line-height: 1.6;
+   947→    }
+   948→
+   949→    /* Responsive */
+   950→    @media (max-width: 900px) {
+   951→      .cage-container {
+   952→        grid-template-columns: repeat(2, 1fr);
+   953→      }
+   954→
+   955→      .cloninger-comparison {
+   956→        grid-template-columns: 1fr;
+   957→      }
+   958→
+   959→      .mechanism-steps {
+   960→        flex-direction: column;
+   961→      }
+   962→
+   963→      .mechanism-arrow {
+   964→        transform: rotate(90deg);
+   965→      }
+   966→
+   967→      .bac-level {
+   968→        grid-template-columns: 1fr;
+   969→        gap: 8px;
+   970→      }
+   971→
+   972→      .bac-range {
+   973→        font-size: 0.95rem;
+   974→      }
+   975→    }
+   976→
+   977→    @media (max-width: 600px) {
+   978→      .cage-container {
+   979→        grid-template-columns: 1fr;
+   980→      }
+   981→
+   982→      .jellinek-grid {
+   983→        grid-template-columns: 1fr;
+   984→      }
+   985→
+   986→      .neuro-complications-grid {
+   987→        grid-template-columns: 1fr;
+   988→      }
+   989→
+   990→      .treatment-steps {
+   991→        grid-template-columns: 1fr;
+   992→      }
+   993→
+   994→      .emergency-signs-grid {
+   995→        grid-template-columns: 1fr;
+   996→      }
+   997→    }
+   998→  </style>
+   999→</head>
+  1000→<body>
+  1001→  <!-- ============================================
+  1002→       PROGRESS BAR - Sticky Learning Indicator
+  1003→       ============================================ -->
+  1004→  <div class="learning-progress-bar" id="learningProgressBar" role="navigation" aria-label="Learning progress tracker">
+  1005→    <div class="progress-ambient" aria-hidden="true">
+  1006→      <span></span>
+  1007→      <span></span>
+  1008→      <span></span>
+  1009→    </div>
+  1010→    <div class="progress-status">
+  1011→      <span class="progress-kicker">Currently Learning</span>
+  1012→      <span class="progress-label" id="progressLabel">Alcohol Overview</span>
+  1013→    </div>
+  1014→    <div class="progress-track" aria-label="Segmented learning pathway">
+  1015→      <div class="progress-fill" id="progressFill"></div>
+  1016→      <div class="progress-nodes" id="progressNodes">
+  1017→        <a class="progress-node is-active" href="#alcohol-overview" data-progress-section="alcohol-overview" aria-label="Alcohol Overview">
+  1018→          <span class="progress-node-dot"></span>
+  1019→          <span class="progress-node-label">Overview</span>
+  1020→        </a>
+  1021→        <a class="progress-node" href="#classification" data-progress-section="classification" aria-label="Classification">
+  1022→          <span class="progress-node-dot"></span>
+  1023→          <span class="progress-node-label">Types</span>
+  1024→        </a>
+  1025→        <a class="progress-node" href="#cage" data-progress-section="cage" aria-label="CAGE Questionnaire">
+  1026→          <span class="progress-node-dot"></span>
+  1027→          <span class="progress-node-label">CAGE</span>
+  1028→        </a>
+  1029→        <a class="progress-node" href="#intoxication" data-progress-section="intoxication" aria-label="Acute Intoxication">
+  1030→          <span class="progress-node-dot"></span>
+  1031→          <span class="progress-node-label">Intox</span>
+  1032→        </a>
+  1033→        <a class="progress-node" href="#withdrawal" data-progress-section="withdrawal" aria-label="Withdrawal">
+  1034→          <span class="progress-node-dot"></span>
+  1035→          <span class="progress-node-label">Withdraw</span>
+  1036→        </a>
+  1037→        <a class="progress-node" href="#treatment" data-progress-section="treatment" aria-label="Treatment">
+  1038→          <span class="progress-node-dot"></span>
+  1039→          <span class="progress-node-label">Treatment</span>
+  1040→        </a>
+  1041→        <a class="progress-node" href="#recovery" data-progress-section="recovery" aria-label="Recovery">
+  1042→          <span class="progress-node-dot"></span>
+  1043→          <span class="progress-node-label">Recovery</span>
+  1044→        </a>
+  1045→      </div>
+  1046→    </div>
+  1047→    <div class="progress-info">
+  1048→      <span class="progress-percentage" id="progressPercentage">0%</span>
+  1049→      <span class="progress-unit">complete</span>
+  1050→    </div>
+  1051→  </div>
+  1052→
+  1053→  <!-- Ambient depth layer -->
+  1054→  <div class="ambient-depth">
+  1055→    <div class="blob blob-cyan"></div>
+  1056→    <div class="blob blob-pink"></div>
+  1057→    <div class="blob blob-amber"></div>
+  1058→    <div class="float-pill pill-one"></div>
+  1059→    <div class="float-pill pill-two"></div>
+  1060→    <div class="float-capsule"></div>
+  1061→    <div class="molecule molecule-one"></div>
+  1062→    <div class="molecule molecule-two"></div>
+  1063→  </div>
+  1064→
+  1065→  <!-- Premium floating navigation -->
+  1066→  <nav class="topbar" role="navigation" aria-label="Main navigation">
+  1067→    <a href="index.html" class="brand">
+  1068→      <div class="brand-mark"></div>
+  1069→      <div class="brand-copy">
+  1070→        <strong>KNOW YOUR PILL</strong>
+  1071→        <small>Neuroscience Education</small>
+  1072→      </div>
+  1073→    </a>
+  1074→
+  1075→    <div class="site-nav" id="siteNav">
+  1076→      <a href="index.html">Home</a>
+  1077→      <a href="index.html#categories">Categories</a>
+  1078→      <a href="index.html#medication-library">Med Library</a>
+  1079→      <a href="substance-use.html" class="active">Substance Use</a>
+  1080→      <a href="index.html#neuro-game">Neuro Arcade</a>
+  1081→      <a href="index.html#emergency" class="emergency-link">Emergency</a>
+  1082→    </div>
+  1083→
+  1084→    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+  1085→      <div class="theme-thumb"></div>
+  1086→      <div class="theme-icon theme-sun"></div>
+  1087→      <div class="theme-icon theme-moon"></div>
+  1088→    </button>
+  1089→
+  1090→    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+  1091→      <span></span>
+  1092→      <span></span>
+  1093→      <span></span>
+  1094→    </button>
+  1095→  </nav>
+  1096→
+  1097→  <main>
+  1098→    <!-- ============================================
+  1099→         HERO SECTION - Alcohol Use Disorders
+  1100→         ============================================ -->
+  1101→    <section class="hero alcohol-hero reveal-section">
+  1102→      <div class="hero-copy">
+  1103→        <span class="eyebrow psychiatry-eyebrow">
+  1104→          <span class="pulse-dot"></span>
+  1105→          Clinical Neuroscience
+  1106→        </span>
+  1107→        <h1>Alcohol Use Disorders</h1>
+  1108→        <p class="lede">Understanding alcohol dependence, intoxication, withdrawal, neuropsychiatric complications, detoxification, and recovery through neuroscience-focused education.</p>
+  1109→        <div class="hero-cta-group">
+  1110→          <a href="#alcohol-overview" class="cta-button primary">Begin Learning</a>
+  1111→          <a href="index.html#emergency" class="cta-button emergency">Emergency Help</a>
+  1112→        </div>
+  1113→      </div>
+  1114→
+  1115→      <div class="molecule-panel">
+  1116→        <img src="assets/molecules/ETHANOL.png" alt="Ethanol chemical structure" class="molecule-img" loading="lazy" decoding="async" />
+  1117→      </div>
+  1118→    </section>
+  1119→
+  1120→    <!-- ============================================
+  1121→         NEURAL LEARNING SEARCH
+  1122→         ============================================ -->
+  1123→    <section class="neural-search-section reveal-section" id="neural-learning-search" aria-labelledby="neuralSearchTitle">
+  1124→      <div class="neural-search-console">
+  1125→        <div class="neural-search-ambient" aria-hidden="true">
+  1126→          <span></span>
+  1127→          <span></span>
+  1128→          <span></span>
+  1129→        </div>
+  1130→        <div class="neural-search-header">
+  1131→          <span class="section-eyebrow">Neural Search Console</span>
+  1132→          <h2 id="neuralSearchTitle">Find a Concept Fast</h2>
+  1133→          <p>Search intoxication, withdrawal, seizures, GABA, dopamine, delirium tremens, Korsakoff, Wernicke, detoxification, medications...</p>
+  1134→        </div>
+  1135→
+  1136→        <div class="neural-search-bar">
+  1137→          <span class="neural-search-icon" aria-hidden="true"></span>
+  1138→          <input
+  1139→            id="neuralLearningSearch"
+  1140→            class="neural-search-input"
+  1141→            type="search"
+  1142→            placeholder="Search dopamine, withdrawal, seizures, GABA..."
+  1143→            autocomplete="off"
+  1144→            aria-describedby="neuralSearchStatus"
+  1145→          >
+  1146→          <button class="neural-search-clear" id="neuralSearchClear" type="button" aria-label="Clear neuroscience search">Clear</button>
+  1147→        </div>
+  1148→
+  1149→        <div class="neural-quick-tags" aria-label="Quick neuroscience search tags">
+  1150→          <button type="button" data-search-tag="intoxication">Intoxication</button>
+  1151→          <button type="button" data-search-tag="withdrawal">Withdrawal</button>
+  1152→          <button type="button" data-search-tag="GABA">GABA</button>
+  1153→          <button type="button" data-search-tag="dopamine">Dopamine</button>
+  1154→          <button type="button" data-search-tag="delirium tremens">Delirium Tremens</button>
+  1155→          <button type="button" data-search-tag="Wernicke">Wernicke</button>
+  1156→          <button type="button" data-search-tag="detoxification">Detoxification</button>
+  1157→        </div>
+  1158→
+  1159→        <p class="neural-search-status" id="neuralSearchStatus" aria-live="polite">Ready to scan the learning system.</p>
+  1160→      </div>
+  1161→    </section>
+  1162→
+  1163→    <!-- ============================================
+  1164→         ALCOHOL OVERVIEW
+  1165→         ============================================ -->
+  1166→    <section class="reveal-section" id="alcohol-overview">
+  1167→      <div class="section-heading premium-heading">
+  1168→        <span class="section-eyebrow">Educational Foundation</span>
+  1169→        <h2>Alcohol Overview</h2>
+  1170→        <p class="section-subtitle">Understanding alcohol dependence, neuroadaptation, and the neuroscience behind addictive patterns.</p>
+  1171→        <div class="neural-divider">
+  1172→          <div class="neural-dot"></div>
+  1173→          <div class="neural-line"></div>
+  1174→          <div class="neural-dot"></div>
+  1175→          <div class="neural-line"></div>
+  1176→          <div class="neural-dot"></div>
+  1177→        </div>
+  1178→      </div>
+  1179→
+  1180→      <div class="pattern-cards-grid">
+  1181→        <!-- Overview Card -->
+  1182→        <div class="pattern-card" data-pattern="overview">
+  1183→          <div class="pattern-card-glow"></div>
+  1184→          <div class="pattern-card-inner">
+  1185→            <div class="pattern-header">
+  1186→              <div class="pattern-number">01</div>
+  1187→              <div class="pattern-icon intoxication-icon">
+  1188→                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  1189→                  <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" fill="none"/>
+  1190→                  <path d="M16 20 L24 24 L32 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  1191→                  <circle cx="18" cy="18" r="2" fill="currentColor" opacity="0.6"/>
+  1192→                  <circle cx="30" cy="18" r="2" fill="currentColor" opacity="0.6"/>
+  1193→                </svg>
+  1194→              </div>
+  1195→              <div class="pattern-title-group">
+  1196→                <h3>Alcohol Dependence</h3>
+  1197→                <p class="pattern-tagline">Previously called alcoholism</p>
+  1198→              </div>
+  1199→            </div>
+  1200→
+  1201→            <div class="pattern-summary">
+  1202→              <p>Alcohol dependence is a cluster of physiological, behavioral, and cognitive phenomena in which the use of alcohol takes on a much higher priority for a given individual than other behaviors that once had greater value. It involves a strong inner drive to consume alcohol, impaired control over its use, and continued drinking despite clear evidence of harmful consequences.</p>
+  1203→            </div>
+  1204→
+  1205→            <div class="pattern-expanded-content">
+  1206→              <div class="neuro-section">
+  1207→                <div class="neuro-section-header">
+  1208→                  <span class="neuro-tag">Neuroscience</span>
+  1209→                  <h4>Brain Mechanisms</h4>
+  1210→                </div>
+  1211→                <div class="neuro-section-body">
+  1212→                  <div class="mechanism-grid">
+  1213→                    <div class="mechanism-card">
+  1214→                      <div class="mechanism-icon">🧬</div>
+  1215→                      <h5>GABA Enhancement</h5>
+  1216→                      <p>Alcohol enhances GABA-A receptor activity, producing calming, anxiolytic, and sedative effects. Chronic use leads to receptor downregulation.</p>
+  1217→                    </div>
+  1218→                    <div class="mechanism-card">
+  1219→                      <div class="mechanism-icon">⚡</div>
+  1220→                      <h5>Glutamate Suppression</h5>
+  1221→                      <p>Alcohol inhibits NMDA glutamate receptors, reducing excitatory signaling. This contributes to cognitive impairment and memory blackouts.</p>
+  1222→                    </div>
+  1223→                    <div class="mechanism-card">
+  1224→                      <div class="mechanism-icon">🎯</div>
+  1225→                      <h5>Dopamine Reward</h5>
+  1226→                      <p>Alcohol triggers dopamine release in the nucleus accumbens, reinforcing drinking behavior and creating powerful reward associations.</p>
+  1227→                    </div>
+  1228→                  </div>
+  1229→                </div>
+  1230→              </div>
+  1231→
+  1232→              <div class="neuro-section">
+  1233→                <div class="neuro-section-header">
+  1234→                  <span class="neuro-tag">Key Concepts</span>
+  1235→                  <h4>Tolerance & Withdrawal</h4>
+  1236→                </div>
+  1237→                <div class="neuro-section-body">
+  1238→                  <ul class="neuro-list">
+  1239→                    <li><strong>Tolerance</strong> — Need for increased amounts of alcohol to achieve the same effect due to neuroadaptation</li>
+  1240→                    <li><strong>Withdrawal</strong> — Physiological and psychological symptoms that occur when alcohol use is reduced or stopped</li>
+  1241→                    <li><strong>Neuroadaptation</strong> — The brain's compensatory changes in response to chronic alcohol exposure</li>
+  1242→                    <li><strong>Compulsive Drinking</strong> — Loss of control over alcohol intake despite negative consequences</li>
+  1243→                  </ul>
+  1244→                </div>
+  1245→              </div>
+  1246→            </div>
+  1247→
+  1248→            <button class="pattern-expand-btn" aria-expanded="false">
+  1249→              <span class="expand-text">Explore Neuroscience</span>
+  1250→              <svg class="expand-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  1251→                <path d="M6 9l6 6 6-6"/>
+  1252→              </svg>
+  1253→            </button>
+  1254→          </div>
+  1255→        </div>
+  1256→      </div>
+  1257→    </section>
+  1258→
+  1259→    <!-- ============================================
+  1260→         CLASSIFICATION OF ALCOHOLISM (Jellinek)
+  1261→         ============================================ -->
+  1262→    <section class="reveal-section" id="classification">
+  1263→      <div class="section-heading premium-heading">
+  1264→        <span class="section-eyebrow">Clinical Classification</span>
+  1265→        <h2>Jellinek Classification</h2>
+  1266→        <p class="section-subtitle">Five species of alcoholism based on pattern of drinking rather than severity.</p>
+  1267→        <div class="neural-divider">
+  1268→          <div class="neural-dot"></div>
+  1269→          <div class="neural-line"></div>
+  1270→          <div class="neural-dot"></div>
+  1271→          <div class="neural-line"></div>
+  1272→          <div class="neural-dot"></div>
+  1273→        </div>
+  1274→      </div>
+  1275→
+  1276→      <div class="jellinek-grid">
+  1277→        <!-- Alpha -->
+  1278→        <div class="jellinek-card">
+  1279→          <div class="jellinek-type">α</div>
+  1280→          <div class="jellinek-name">Alpha Alcoholism</div>
+  1281→          <div class="jellinek-desc">Drinking to relieve emotional or physical pain. No loss of control. Able to abstain when needed.</div>
+  1282→          <div class="jellinek-features">
+  1283→            <div class="jellinek-feature">Emotional relief drinking</div>
+  1284→            <div class="jellinek-feature">No loss of control</div>
+  1285→            <div class="jellinek-feature">Able to abstain</div>
+  1286→            <div class="jellinek-feature">No physical dependence</div>
+  1287→          </div>
+  1288→        </div>
+  1289→
+  1290→        <!-- Beta -->
+  1291→        <div class="jellinek-card">
+  1292→          <div class="jellinek-type">β</div>
+  1293→          <div class="jellinek-name">Beta Alcoholism</div>
+  1294→          <div class="jellinek-desc">Excessive drinking with physical complications but no dependence. Common in social drinkers.</div>
+  1295→          <div class="jellinek-features">
+  1296→            <div class="jellinek-feature">Excessive drinking</div>
+  1297→            <div class="jellinek-feature">Physical complications</div>
+  1298→            <div class="jellinek-feature">No dependence</div>
+  1299→            <div class="jellinek-feature">Social drinking pattern</div>
+  1300→          </div>
+  1301→        </div>
+  1302→
+  1303→        <!-- Gamma -->
+  1304→        <div class="jellinek-card">
+  1305→          <div class="jellinek-type">γ</div>
+  1306→          <div class="jellinek-name">Gamma Alcoholism</div>
+  1307→          <div class="jellinek-desc">Progressive course with tolerance, withdrawal, and psychological dependence. Inability to control drinking.</div>
+  1308→          <div class="jellinek-features">
+  1309→            <div class="jellinek-feature">Progressive course</div>
+  1310→            <div class="jellinek-feature">Tolerance develops</div>
+  1311→            <div class="jellinek-feature">Withdrawal symptoms</div>
+  1312→            <div class="jellinek-feature">Loss of control</div>
+  1313→          </div>
+  1314→        </div>
+  1315→
+  1316→        <!-- Delta -->
+  1317→        <div class="jellinek-card">
+  1318→          <div class="jellinek-type">δ</div>
+  1319→          <div class="jellinek-name">Delta Alcoholism</div>
+  1320→          <div class="jellinek-desc">Inability to abstain but can control quantity. Tolerance and withdrawal present. Minimal social disruption.</div>
+  1321→          <div class="jellinek-features">
+  1322→            <div class="jellinek-feature">Inability to abstain</div>
+  1323→            <div class="jellinek-feature">Controlled quantity</div>
+  1324→            <div class="jellinek-feature">Tolerance present</div>
+  1325→            <div class="jellinek-feature">Minimal social issues</div>
+  1326→          </div>
+  1327→        </div>
+  1328→
+  1329→        <!-- Epsilon -->
+  1330→        <div class="jellinek-card">
+  1331→          <div class="jellinek-type">ε</div>
+  1332→          <div class="jellinek-name">Epsilon Alcoholism</div>
+  1333→          <div class="jellinek-desc">Dipsomania — periodic binge drinking with complete loss of control during episodes.</div>
+  1334→          <div class="jellinek-features">
+  1335→            <div class="jellinek-feature">Periodic binge drinking</div>
+  1336→            <div class="jellinek-feature">Complete loss of control</div>
+  1337→            <div class="jellinek-feature">Sober intervals</div>
+  1338→            <div class="jellinek-feature">Compulsive episodes</div>
+  1339→          </div>
+  1340→        </div>
+  1341→      </div>
+  1342→    </section>
+  1343→
+  1344→    <!-- ============================================
+  1345→         CLONINGER CLASSIFICATION
+  1346→         ============================================ -->
+  1347→    <section class="reveal-section" id="cloninger">
+  1348→      <div class="section-heading premium-heading">
+  1349→        <span class="section-eyebrow">Genetic Classification</span>
+  1350→        <h2>Cloninger Classification</h2>
+  1351→        <p class="section-subtitle">Type I vs Type II alcoholism based on genetic and environmental factors.</p>
+  1352→        <div class="neural-divider">
+  1353→          <div class="neural-dot"></div>
+  1354→          <div class="neural-line"></div>
+  1355→          <div class="neural-dot"></div>
+  1356→          <div class="neural-line"></div>
+  1357→          <div class="neural-dot"></div>
+  1358→        </div>
+  1359→      </div>
+  1360→
+  1361→      <div class="cloninger-comparison">
+  1362→        <div class="cloninger-type-card cloninger-type-1">
+  1363→          <span class="cloninger-type-number">I</span>
+  1364→          <h3 class="cloninger-title">Type I Alcoholism</h3>
+  1365→          <ul class="cloninger-features">
+  1366→            <li><span class="cloninger-check">✓</span> Both sexes affected</li>
+  1367→            <li><span class="cloninger-check">✓</span> Onset after 25 years</li>
+  1368→            <li><span class="cloninger-check">✓</span> Environmental influence important</li>
+  1369→            <li><span class="cloninger-check">✓</span> Guilt and fear present</li>
+  1370→            <li><span class="cloninger-check">✓</span> Loss of control present</li>
+  1371→            <li><span class="cloninger-check">✓</span> Mild course</li>
+  1372→          </ul>
+  1373→        </div>
+  1374→
+  1375→        <div class="cloninger-type-card cloninger-type-2">
+  1376→          <span class="cloninger-type-number">II</span>
+  1377→          <h3 class="cloninger-title">Type II Alcoholism</h3>
+  1378→          <ul class="cloninger-features">
+  1379→            <li><span class="cloninger-check">✓</span> Mostly males affected</li>
+  1380→            <li><span class="cloninger-check">✓</span> Onset before 25 years</li>
+  1381→            <li><span class="cloninger-check">✓</span> Strong hereditary factors</li>
+  1382→            <li><span class="cloninger-check">✓</span> Aggressive and impulsive</li>
+  1383→            <li><span class="cloninger-check">✓</span> Novelty-seeking behavior</li>
+  1384→            <li><span class="cloninger-check">✓</span> Spontaneous alcohol seeking</li>
+  1385→          </ul>
+  1386→        </div>
+  1387→      </div>
+  1388→    </section>
+  1389→
+  1390→    <!-- ============================================
+  1391→         CAGE QUESTIONNAIRE - Interactive OSCE
+  1392→         ============================================ -->
+  1393→    <section class="cage-section reveal-section" id="cage">
+  1394→      <div class="section-heading premium-heading">
+  1395→        <span class="section-eyebrow">Clinical Assessment Tool</span>
+  1396→        <h2>CAGE Questionnaire</h2>
+  1397→        <p class="section-subtitle">Interactive OSCE screening tool for alcohol use disorders. Click each card to reveal the clinical question.</p>
+  1398→        <div class="neural-divider">
+  1399→          <div class="neural-dot"></div>
+  1400→          <div class="neural-line"></div>
+  1401→          <div class="neural-dot"></div>
+  1402→          <div class="neural-line"></div>
+  1403→          <div class="neural-dot"></div>
+  1404→        </div>
+  1405→      </div>
+  1406→
+  1407→      <div class="cage-container">
+  1408→        <div class="cage-card" data-cage="C" tabindex="0" role="button" aria-label="C - Cut down">
+  1409→          <div class="cage-letter">C</div>
+  1410→          <div class="cage-word">Cut Down</div>
+  1411→          <div class="cage-question">"Have you ever felt you should cut down on your drinking?"</div>
+  1412→          <div class="cage-meaning">Assesses recognition of drinking problem and desire to reduce consumption.</div>
+  1413→        </div>
+  1414→
+  1415→        <div class="cage-card" data-cage="A" tabindex="0" role="button" aria-label="A - Annoyed">
+  1416→          <div class="cage-letter">A</div>
+  1417→          <div class="cage-word">Annoyed</div>
+  1418→          <div class="cage-question">"Have people annoyed you by criticizing your drinking?"</div>
+  1419→          <div class="cage-meaning">Evaluates defensive reactions to concerns about alcohol use.</div>
+  1420→        </div>
+  1421→
+  1422→        <div class="cage-card" data-cage="G" tabindex="0" role="button" aria-label="G - Guilty">
+  1423→          <div class="cage-letter">G</div>
+  1424→          <div class="cage-word">Guilty</div>
+  1425→          <div class="cage-question">"Have you ever felt bad or guilty about your drinking?"</div>
+  1426→          <div class="cage-meaning">Measures emotional distress and regret associated with drinking behavior.</div>
+  1427→        </div>
+  1428→
+  1429→        <div class="cage-card" data-cage="E" tabindex="0" role="button" aria-label="E - Eye-opener">
+  1430→          <div class="cage-letter">E</div>
+  1431→          <div class="cage-word">Eye-Opener</div>
+  1432→          <div class="cage-question">"Have you ever had a drink first thing in the morning to steady your nerves or get rid of a hangover?"</div>
+  1433→          <div class="cage-meaning">Indicates physical dependence and withdrawal symptom management.</div>
+  1434→        </div>
+  1435→      </div>
+  1436→
+  1437→      <div class="cage-score-info">
+  1438→        <strong>Scoring:</strong> A score of 2 or more suggests problem drinking and warrants further assessment. Each "yes" answer scores 1 point.
+  1439→      </div>
+  1440→    </section>
+  1441→
+  1442→    <!-- ============================================
+  1443→         BODY FLUID ALCOHOL LEVELS (BAC Scale)
+  1444→         ============================================ -->
+  1445→    <section class="bac-section reveal-section" id="bac-levels">
+  1446→      <div class="section-heading premium-heading">
+  1447→        <span class="section-eyebrow">Blood Alcohol Concentration</span>
+  1448→        <h2>Body Fluid Alcohol Levels</h2>
+  1449→        <p class="section-subtitle">Visual BAC severity scale showing the relationship between blood alcohol levels and clinical effects.</p>
+  1450→        <div class="neural-divider">
+  1451→          <div class="neural-dot"></div>
+  1452→          <div class="neural-line"></div>
+  1453→          <div class="neural-dot"></div>
+  1454→          <div class="neural-line"></div>
+  1455→          <div class="neural-dot"></div>
+  1456→        </div>
+  1457→      </div>
+  1458→
+  1459→      <div class="bac-scale-container">
+  1460→        <div class="bac-scale">
+  1461→          <div class="bac-level bac-level-1">
+  1462→            <span class="bac-range">25-100 mg%</span>
+  1463→            <div class="bac-severity-bar">
+  1464→              <div class="bac-severity-fill"></div>
+  1465→            </div>
+  1466→            <span class="bac-symptoms">Excitement, mild euphoria</span>
+  1467→          </div>
+  1468→
+  1469→          <div class="bac-level bac-level-2">
+  1470→            <span class="bac-range">100-200 mg%</span>
+  1471→            <div class="bac-severity-bar">
+  1472→              <div class="bac-severity-fill"></div>
+  1473→            </div>
+  1474→            <span class="bac-symptoms">Slurred speech, incoordination</span>
+  1475→          </div>
+  1476→
+  1477→          <div class="bac-level bac-level-3">
+  1478→            <span class="bac-range">200-300 mg%</span>
+  1479→            <div class="bac-severity-bar">
+  1480→              <div class="bac-severity-fill"></div>
+  1481→            </div>
+  1482→            <span class="bac-symptoms">Dangerous intoxication</span>
+  1483→          </div>
+  1484→
+  1485→          <div class="bac-level bac-level-4">
+  1486→            <span class="bac-range">300-350 mg%</span>
+  1487→            <div class="bac-severity-bar">
+  1488→              <div class="bac-severity-fill"></div>
+  1489→            </div>
+  1490→            <span class="bac-symptoms">Hypothermia, dysarthria</span>
+  1491→          </div>
+  1492→
+  1493→          <div class="bac-level bac-level-5">
+  1494→            <span class="bac-range">350-400 mg%</span>
+  1495→            <div class="bac-severity-bar">
+  1496→              <div class="bac-severity-fill"></div>
+  1497→            </div>
+  1498→            <span class="bac-symptoms">Coma, respiratory depression</span>
+  1499→          </div>
+  1500→
+  1501→          <div class="bac-level bac-level-6">
+  1502→            <span class="bac-range">>400 mg%</span>
+  1503→            <div class="bac-severity-bar">
+  1504→              <div class="bac-severity-fill"></div>
+  1505→            </div>
+  1506→            <span class="bac-symptoms">Death may occur</span>
+  1507→          </div>
+  1508→        </div>
+  1509→      </div>
+  1510→    </section>
+  1511→
+  1512→    <!-- ============================================
+  1513→         ACUTE INTOXICATION
+  1514→         ============================================ -->
+  1515→    <section class="reveal-section" id="intoxication">
+  1516→      <div class="section-heading premium-heading">
+  1517→        <span class="section-eyebrow">Acute Effects</span>
+  1518→        <h2>Acute Alcohol Intoxication</h2>
+  1519→        <p class="section-subtitle">Immediate effects of alcohol on the central nervous system, cognition, and motor function.</p>
+  1520→        <div class="neural-divider">
+  1521→          <div class="neural-dot"></div>
+  1522→          <div class="neural-line"></div>
+  1523→          <div class="neural-dot"></div>
+  1524→          <div class="neural-line"></div>
+  1525→          <div class="neural-dot"></div>
+  1526→        </div>
+  1527→      </div>
+  1528→
+  1529→      <div class="pattern-cards-grid">
+  1530→        <div class="pattern-card" data-pattern="intox">
+  1531→          <div class="pattern-card-glow"></div>
+  1532→          <div class="pattern-card-inner">
+  1533→            <div class="pattern-header">
+  1534→              <div class="pattern-number">01</div>
+  1535→              <div class="pattern-icon intoxication-icon">
+  1536→                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  1537→                  <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" fill="none"/>
+  1538→                  <path d="M16 20 L24 24 L32 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  1539→                  <circle cx="18" cy="18" r="2" fill="currentColor" opacity="0.6"/>
+  1540→                  <circle cx="30" cy="18" r="2" fill="currentColor" opacity="0.6"/>
+  1541→                </svg>
+  1542→              </div>
+  1543→              <div class="pattern-title-group">
+  1544→                <h3>Clinical Features</h3>
+  1545→                <p class="pattern-tagline">Signs and symptoms of intoxication</p>
+  1546→              </div>
+  1547→            </div>
+  1548→
+  1549→            <div class="pattern-summary">
+  1550→              <p>Acute alcohol intoxication produces a spectrum of effects depending on blood alcohol concentration. Initial effects include euphoria and disinhibition, progressing to impaired judgment, motor incoordination, and at high doses, life-threatening respiratory depression.</p>
+  1551→            </div>
+  1552→
+  1553→            <div class="pattern-expanded-content">
+  1554→              <div class="neuro-section">
+  1555→                <div class="neuro-section-header">
+  1556→                  <span class="neuro-tag">Clinical Features</span>
+  1557→                  <h4>Signs & Symptoms</h4>
+  1558→                </div>
+  1559→                <div class="neuro-section-body">
+  1560→                  <div class="symptom-columns">
+  1561→                    <div class="symptom-column">
+  1562→                      <h5>CNS Depression</h5>
+  1563→                      <ul class="symptom-list">
+  1564→                        <li>Impaired judgment</li>
+  1565→                        <li>Dysarthria (slurred speech)</li>
+  1566→                        <li>Ataxia (unsteady gait)</li>
+  1567→                        <li>Incoordination</li>
+  1568→                        <li>Drowsiness</li>
+  1569→                      </ul>
+  1570→                    </div>
+  1571→                    <div class="symptom-column">
+  1572→                      <h5>Severe Effects</h5>
+  1573→                      <ul class="symptom-list">
+  1574→                        <li>Blackouts (anterograde amnesia)</li>
+  1575→                        <li>Respiratory depression</li>
+  1576→                        <li>Hypothermia</li>
+  1577→                        <li>Coma</li>
+  1578→                        <li>Pathological intoxication</li>
+  1579→                      </ul>
+  1580→                    </div>
+  1581→                  </div>
+  1582→                </div>
+  1583→              </div>
+  1584→
+  1585→              <div class="neuro-section">
+  1586→                <div class="neuro-section-header">
+  1587→                  <span class="neuro-tag">Neuroscience</span>
+  1588→                  <h4>Neurotransmitter Effects</h4>
+  1589→                </div>
+  1590→                <div class="neuro-section-body">
+  1591→                  <div class="mechanism-grid">
+  1592→                    <div class="mechanism-card">
+  1593→                      <div class="mechanism-icon">🧬</div>
+  1594→                      <h5>GABA Enhancement</h5>
+  1595→                      <p>Alcohol potentiates GABA-A receptors, increasing inhibitory signaling and producing sedative effects.</p>
+  1596→                    </div>
+  1597→                    <div class="mechanism-card">
+  1598→                      <div class="mechanism-icon">⚡</div>
+  1599→                      <h5>Glutamate Suppression</h5>
+  1600→                      <p>Alcohol inhibits NMDA receptors, reducing excitatory neurotransmission and impairing memory formation.</p>
+  1601→                    </div>
+  1602→                    <div class="mechanism-card">
+  1603→                      <div class="mechanism-icon">🎯</div>
+  1604→                      <h5>Dopamine Release</h5>
+  1605→                      <p>Alcohol triggers dopamine release in the reward pathway, creating feelings of pleasure and reinforcement.</p>
+  1606→                    </div>
+  1607→                  </div>
+  1608→                </div>
+  1609→              </div>
+  1610→
+  1611→              <div class="neuro-section emergency-section">
+  1612→                <div class="neuro-section-header">
+  1613→                  <span class="neuro-tag emergency-tag">Emergency</span>
+  1614→                  <h4>When to Seek Help</h4>
+  1615→                </div>
+  1616→                <div class="neuro-section-body">
+  1617→                  <div class="emergency-indicators">
+  1618→                    <div class="emergency-item">
+  1619→                      <span class="emergency-icon">⚠️</span>
+  1620→                      <span>Unconsciousness or inability to wake</span>
+  1621→                    </div>
+  1622→                    <div class="emergency-item">
+  1623→                      <span class="emergency-icon">⚠️</span>
+  1624→                      <span>Slow or irregular breathing</span>
+  1625→                    </div>
+  1626→                    <div class="emergency-item">
+  1627→                      <span class="emergency-icon">⚠️</span>
+  1628→                      <span>Cold, clammy, or bluish skin</span>
+  1629→                    </div>
+  1630→                    <div class="emergency-item">
+  1631→                      <span class="emergency-icon">⚠️</span>
+  1632→                      <span>Seizures or confusion</span>
+  1633→                    </div>
+  1634→                  </div>
+  1635→                </div>
+  1636→              </div>
+  1637→            </div>
+  1638→
+  1639→            <button class="pattern-expand-btn" aria-expanded="false">
+  1640→              <span class="expand-text">Explore Neuroscience</span>
+  1641→              <svg class="expand-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  1642→                <path d="M6 9l6 6 6-6"/>
+  1643→              </svg>
+  1644→            </button>
+  1645→          </div>
+  1646→        </div>
+  1647→      </div>
+  1648→    </section>
+  1649→
+  1650→    <!-- ============================================
+  1651→         WITHDRAWAL SYNDROME
+  1652→         ============================================ -->
+  1653→    <section class="reveal-section" id="withdrawal">
+  1654→      <div class="section-heading premium-heading">
+  1655→        <span class="section-eyebrow">Discontinuation Syndrome</span>
+  1656→        <h2>Alcohol Withdrawal Syndrome</h2>
+  1657→        <p class="section-subtitle">Timeline and symptoms of alcohol withdrawal, from early tremors to life-threatening delirium tremens.</p>
+  1658→        <div class="neural-divider">
+  1659→          <div class="neural-dot"></div>
+  1660→          <div class="neural-line"></div>
+  1661→          <div class="neural-dot"></div>
+  1662→          <div class="neural-line"></div>
+  1663→          <div class="neural-dot"></div>
+  1664→        </div>
+  1665→      </div>
+  1666→
+  1667→      <!-- Withdrawal Timeline -->
+  1668→      <div class="withdrawal-timeline">
+  1669→        <div class="timeline-event">
+  1670→          <span class="timeline-time">6-12 hours</span>
+  1671→          <h4 class="timeline-title">Early Withdrawal</h4>
+  1672→          <p class="timeline-desc">Tremors, nausea, vomiting, anxiety, sweating, headache, palpitations. Autonomic hyperactivity begins as GABA suppression lifts and glutamate rebounds.</p>
+  1673→        </div>
+  1674→
+  1675→        <div class="timeline-event">
+  1676→          <span class="timeline-time">12-48 hours</span>
+  1677→          <h4 class="timeline-title">Alcoholic Hallucinosis</h4>
+  1678→          <p class="timeline-desc">Auditory, visual, or tactile hallucinations occur in clear consciousness. Patient maintains insight that hallucinations are not real.</p>
+  1679→        </div>
+  1680→
+  1681→        <div class="timeline-event">
+  1682→          <span class="timeline-time">12-48 hours</span>
+  1683→          <h4 class="timeline-title">Alcoholic Seizures</h4>
+  1684→          <p class="timeline-desc">Generalized tonic-clonic seizures. Usually brief and self-limiting. Result from glutamate rebound and GABA withdrawal causing neuronal hyperexcitability.</p>
+  1685→        </div>
+  1686→
+  1687→        <div class="timeline-event danger">
+  1688→          <span class="timeline-time">48-96 hours</span>
+  1689→          <h4 class="timeline-title">Delirium Tremens</h4>
+  1690→          <p class="timeline-desc">Medical emergency. Confusion, autonomic instability, vivid hallucinations, fever, hypertension. Mortality rate 1-5% without treatment.</p>
+  1691→        </div>
+  1692→      </div>
+  1693→
+  1694→      <!-- Expandable Withdrawal Details -->
+  1695→      <div class="pattern-cards-grid" style="margin-top: 32px;">
+  1696→        <div class="pattern-card" data-pattern="withdrawal-detail">
+  1697→          <div class="pattern-card-glow"></div>
+  1698→          <div class="pattern-card-inner">
+  1699→            <div class="pattern-header">
+  1700→              <div class="pattern-number">02</div>
+  1701→              <div class="pattern-icon withdrawal-icon">
+  1702→                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  1703→                  <path d="M24 8 L24 40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  1704→                  <path d="M14 18 L24 8 L34 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  1705→                  <circle cx="24" cy="32" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+  1706→                </svg>
+  1707→              </div>
+  1708→              <div class="pattern-title-group">
+  1709→                <h3>Withdrawal Mechanisms</h3>
+  1710→                <p class="pattern-tagline">Neurobiology of withdrawal</p>
+  1711→              </div>
+  1712→            </div>
+  1713→
+  1714→            <div class="pattern-summary">
+  1715→              <p>Alcohol withdrawal occurs when the brain and body have adapted to chronic alcohol exposure. When alcohol is removed, the nervous system becomes overactive, producing symptoms opposite to alcohol's depressant effects.</p>
+  1716→            </div>
+  1717→
+  1718→            <div class="pattern-expanded-content">
+  1719→              <div class="neuro-section">
+  1720→                <div class="neuro-section-header">
+  1721→                  <span class="neuro-tag">Neuroscience</span>
+  1722→                  <h4>GABA & Glutamate Rebound</h4>
+  1723→                </div>
+  1724→                <div class="neuro-section-body">
+  1725→                  <div class="mechanism-grid">
+  1726→                    <div class="mechanism-card">
+  1727→                      <div class="mechanism-icon">🔄</div>
+  1728→                      <h5>GABA Downregulation</h5>
+  1729→                      <p>Chronic alcohol use causes GABA-A receptors to become less sensitive. When alcohol is removed, reduced GABA activity leads to anxiety and hyperexcitability.</p>
+  1730→                    </div>
+  1731→                    <div class="mechanism-card">
+  1732→                      <div class="mechanism-icon">🔥</div>
+  1733→                      <h5>Glutamate Rebound</h5>
+  1734→                      <p>NMDA receptors become upregulated during chronic use. Without alcohol's inhibitory effect, excessive glutamate signaling causes seizures and neuronal damage.</p>
+  1735→                    </div>
+  1736→                    <div class="mechanism-card">
+  1737→                      <div class="mechanism-icon">😰</div>
+  1738→                      <h5>Autonomic Storm</h5>
+  1739→                      <p>The sympathetic nervous system becomes overactive, causing tachycardia, hypertension, sweating, and tremors.</p>
+  1740→                    </div>
+  1741→                  </div>
+  1742→                </div>
+  1743→              </div>
+  1744→
+  1745→              <div class="neuro-section emergency-section">
+  1746→                <div class="neuro-section-header">
+  1747→                  <span class="neuro-tag emergency-tag">Medical Emergency</span>
+  1748→                  <h4>Delirium Tremens</h4>
+  1749→                </div>
+  1750→                <div class="neuro-section-body">
+  1751→                  <p class="emergency-note"><strong>Delirium tremens is a life-threatening emergency.</strong> Features include severe confusion, agitation, fever, hypertension, and vivid hallucinations. Requires immediate ICU care with benzodiazepines and supportive measures.</p>
+  1752→                </div>
+  1753→              </div>
+  1754→            </div>
+  1755→
+  1756→            <button class="pattern-expand-btn" aria-expanded="false">
+  1757→              <span class="expand-text">Explore Neuroscience</span>
+  1758→              <svg class="expand-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  1759→                <path d="M6 9l6 6 6-6"/>
+  1760→              </svg>
+  1761→            </button>
+  1762→          </div>
+  1763→        </div>
+  1764→      </div>
+  1765→    </section>
+  1766→
+  1767→    <!-- ============================================
+  1768→         NEUROPSYCHIATRIC COMPLICATIONS
+  1769→         ============================================ -->
+  1770→    <section class="reveal-section" id="complications">
+  1771→      <div class="section-heading premium-heading">
+  1772→        <span class="section-eyebrow">Brain Complications</span>
+  1773→        <h2>Neuropsychiatric Complications</h2>
+  1774→        <p class="section-subtitle">Alcohol-induced brain disorders including Wernicke encephalopathy, Korsakoff syndrome, and alcoholic dementia.</p>
+  1775→        <div class="neural-divider">
+  1776→          <div class="neural-dot"></div>
+  1777→          <div class="neural-line"></div>
+  1778→          <div class="neural-dot"></div>
+  1779→          <div class="neural-line"></div>
+  1780→          <div class="neural-dot"></div>
+  1781→        </div>
+  1782→      </div>
+  1783→
+  1784→      <div class="neuro-complications-grid">
+  1785→        <div class="neuro-complication-card danger">
+  1786→          <div class="complication-icon danger">🧠</div>
+  1787→          <h4 class="complication-title">Wernicke Encephalopathy</h4>
+  1788→          <p class="complication-desc">Acute neurological emergency characterized by confusion, ataxia, and ophthalmoplegia. Caused by thiamine (B1) deficiency affecting the mammillary bodies and thalamus.</p>
+  1789→          <span class="complication-cause">Thiamine Deficiency</span>
+  1790→        </div>
+  1791→
+  1792→        <div class="neuro-complication-card danger">
+  1793→          <div class="complication-icon danger">💭</div>
+  1794→          <h4 class="complication-title">Korsakoff Syndrome</h4>
+  1795→          <p class="complication-desc">Chronic memory disorder with severe anterograde and retrograde amnesia, confabulation, and apathy. Often follows untreated Wernicke encephalopathy.</p>
+  1796→          <span class="complication-cause">Thiamine Deficiency</span>
+  1797→        </div>
+  1798→
+  1799→        <div class="neuro-complication-card">
+  1800→          <div class="complication-icon brain">🧓</div>
+  1801→          <h4 class="complication-title">Alcoholic Dementia</h4>
+  1802→          <p class="complication-desc">Progressive cognitive decline affecting memory, executive function, and visuospatial abilities. Results from direct neurotoxic effects of alcohol.</p>
+  1803→          <span class="complication-cause">Neurotoxicity</span>
+  1804→        </div>
+  1805→
+  1806→        <div class="neuro-complication-card">
+  1807→          <div class="complication-icon brain">🦶</div>
+  1808→          <h4 class="complication-title">Cerebellar Degeneration</h4>
+  1809→          <p class="complication-desc">Damage to the cerebellum causing gait ataxia, leg incoordination, and balance problems. The anterior vermis is most commonly affected.</p>
+  1810→          <span class="complication-cause">Neurodegeneration</span>
+  1811→        </div>
+  1812→
+  1813→        <div class="neuro-complication-card">
+  1814→          <div class="complication-icon warning">🔌</div>
+  1815→          <h4 class="complication-title">Peripheral Neuropathy</h4>
+  1816→          <p class="complication-desc">Damage to peripheral nerves causing numbness, tingling, burning pain, and weakness in the extremities. "Stocking-glove" distribution.</p>
+  1817→          <span class="complication-cause">Nutritional Deficiency</span>
+  1818→        </div>
+  1819→
+  1820→        <div class="neuro-complication-card danger">
+  1821→          <div class="complication-icon danger">⚡</div>
+  1822→          <h4 class="complication-title">Central Pontine Myelinolysis</h4>
+  1823→          <p class="complication-desc">Demyelination of the pons, often from rapid correction of hyponatremia in alcoholics. Causes quadriplegia, dysarthria, and dysphagia.</p>
+  1824→          <span class="complication-cause">Osmotic Demyelination</span>
+  1825→        </div>
+  1826→      </div>
+  1827→    </section>
+  1828→
+  1829→    <!-- ============================================
+  1830→         TREATMENT & DETOXIFICATION
+  1831→         ============================================ -->
+  1832→    <section class="reveal-section" id="treatment">
+  1833→      <div class="section-heading premium-heading">
+  1834→        <span class="section-eyebrow">Clinical Management</span>
+  1835→        <h2>Treatment & Detoxification</h2>
+  1836→        <p class="section-subtitle">Step-by-step approach to alcohol detoxification, withdrawal management, and stabilization.</p>
+  1837→        <div class="neural-divider">
+  1838→          <div class="neural-dot"></div>
+  1839→          <div class="neural-line"></div>
+  1840→          <div class="neural-dot"></div>
+  1841→          <div class="neural-line"></div>
+  1842→          <div class="neural-dot"></div>
+  1843→        </div>
+  1844→      </div>
+  1845→
+  1846→      <div class="treatment-steps">
+  1847→        <div class="treatment-step">
+  1848→          <span class="treatment-step-number">01</span>
+  1849→          <h4 class="treatment-step-title">Assessment</h4>
+  1850→          <p class="treatment-step-desc">Comprehensive evaluation of drinking history, withdrawal risk, and medical complications.</p>
+  1851→        </div>
+  1852→
+  1853→        <div class="treatment-step">
+  1854→          <span class="treatment-step-number">02</span>
+  1855→          <h4 class="treatment-step-title">Psychiatric Evaluation</h4>
+  1856→          <p class="treatment-step-desc">Assessment of co-occurring mental health conditions and suicide risk.</p>
+  1857→        </div>
+  1858→
+  1859→        <div class="treatment-step">
+  1860→          <span class="treatment-step-number">03</span>
+  1861→          <h4 class="treatment-step-title">Hydration</h4>
+  1862→          <p class="treatment-step-desc">IV or oral rehydration to correct fluid and electrolyte imbalances.</p>
+  1863→        </div>
+  1864→
+  1865→        <div class="treatment-step">
+  1866→          <span class="treatment-step-number">04</span>
+  1867→          <h4 class="treatment-step-title">Thiamine</h4>
+  1868→          <p class="treatment-step-desc">Parenteral thiamine before glucose to prevent Wernicke encephalopathy.</p>
+  1869→        </div>
+  1870→
+  1871→        <div class="treatment-step">
+  1872→          <span class="treatment-step-number">05</span>
+  1873→          <h4 class="treatment-step-title">Benzodiazepines</h4>
+  1874→          <p class="treatment-step-desc">Symptom-triggered or fixed-dose regimen to prevent seizures and delirium.</p>
+  1875→        </div>
+  1876→
+  1877→        <div class="treatment-step">
+  1878→          <span class="treatment-step-number">06</span>
+  1879→          <h4 class="treatment-step-title">Monitoring</h4>
+  1880→          <p class="treatment-step-desc">Regular vital signs and CIWA-Ar scoring for withdrawal severity.</p>
+  1881→        </div>
+  1882→      </div>
+  1883→
+  1884→      <div class="pattern-cards-grid" style="margin-top: 32px;">
+  1885→        <div class="pattern-card" data-pattern="detox">
+  1886→          <div class="pattern-card-glow"></div>
+  1887→          <div class="pattern-card-inner">
+  1888→            <div class="pattern-header">
+  1889→              <div class="pattern-number">01</div>
+  1890→              <div class="pattern-icon intoxication-icon">
+  1891→                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  1892→                  <rect x="14" y="8" width="20" height="32" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
+  1893→                  <path d="M20 16 L28 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  1894→                  <path d="M20 24 L28 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  1895→                  <path d="M20 32 L28 32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  1896→                </svg>
+  1897→              </div>
+  1898→              <div class="pattern-title-group">
+  1899→                <h3>Detoxification Protocol</h3>
+  1900→                <p class="pattern-tagline">Medical management of withdrawal</p>
+  1901→              </div>
+  1902→            </div>
+  1903→
+  1904→            <div class="pattern-summary">
+  1905→              <p>Alcohol detoxification should always be medically supervised due to the risk of life-threatening withdrawal symptoms. The goal is safe management of withdrawal, prevention of complications, and preparation for ongoing treatment.</p>
+  1906→            </div>
+  1907→
+  1908→            <div class="pattern-expanded-content">
+  1909→              <div class="neuro-section">
+  1910→                <div class="neuro-section-header">
+  1911→                  <span class="neuro-tag">Key Principles</span>
+  1912→                  <h4>Safe Detoxification</h4>
+  1913→                </div>
+  1914→                <div class="neuro-section-body">
+  1915→                  <ul class="neuro-list">
+  1916→                    <li><strong>Abrupt withdrawal risks</strong> — Can trigger seizures and delirium tremens; never stop suddenly after chronic heavy use</li>
+  1917→                    <li><strong>Delirium tremens prevention</strong> — Benzodiazepines are the cornerstone of prevention and treatment</li>
+  1918→                    <li><strong>Symptom stabilization</strong> — CIWA-Ar protocol guides medication dosing based on withdrawal severity</li>
+  1919→                    <li><strong>Nutritional support</strong> — Thiamine, folate, and multivitamins address common deficiencies</li>
+  1920→                  </ul>
+  1921→                </div>
+  1922→              </div>
+  1923→
+  1924→              <div class="neuro-section emergency-section">
+  1925→                <div class="neuro-section-header">
+  1926→                  <span class="neuro-tag emergency-tag">Critical</span>
+  1927→                  <h4>Thiamine Before Glucose</h4>
+  1928→                </div>
+  1929→                <div class="neuro-section-body">
+  1930→                  <p class="emergency-note"><strong>Always administer thiamine before giving glucose</strong> to alcohol-dependent patients. Giving glucose first can precipitate or worsen Wernicke encephalopathy in thiamine-deficient patients.</p>
+  1931→                </div>
+  1932→              </div>
+  1933→            </div>
+  1934→
+  1935→            <button class="pattern-expand-btn" aria-expanded="false">
+  1936→              <span class="expand-text">Explore Protocol</span>
+  1937→              <svg class="expand-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  1938→                <path d="M6 9l6 6 6-6"/>
+  1939→              </svg>
+  1940→            </button>
+  1941→          </div>
+  1942→        </div>
+  1943→      </div>
+  1944→    </section>
+  1945→
+  1946→    <!-- ============================================
+  1947→         DISULFIRAM MECHANISM
+  1948→         ============================================ -->
+  1949→    <section class="reveal-section" id="disulfiram">
+  1950→      <div class="section-heading premium-heading">
+  1951→        <span class="section-eyebrow">Aversion Therapy</span>
+  1952→        <h2>Disulfiram Mechanism</h2>
+  1953→        <p class="section-subtitle">How disulfiram creates an aversive reaction to alcohol through enzyme inhibition.</p>
+  1954→        <div class="neural-divider">
+  1955→          <div class="neural-dot"></div>
+  1956→          <div class="neural-line"></div>
+  1957→          <div class="neural-dot"></div>
+  1958→          <div class="neural-line"></div>
+  1959→          <div class="neural-dot"></div>
+  1960→        </div>
+  1961→      </div>
+  1962→
+  1963→      <div class="mechanism-flow">
+  1964→        <div class="mechanism-steps">
+  1965→          <div class="mechanism-step">
+  1966→            <div class="mechanism-step-number">1</div>
+  1967→            <h4 class="mechanism-step-title">Alcohol Ingestion</h4>
+  1968→            <p class="mechanism-step-desc">Patient consumes alcohol while on disulfiram therapy.</p>
+  1969→          </div>
+  1970→
+  1971→          <div class="mechanism-arrow">→</div>
+  1972→
+  1973→          <div class="mechanism-step">
+  1974→            <div class="mechanism-step-number">2</div>
+  1975→            <h4 class="mechanism-step-title">Alcohol → Acetaldehyde</h4>
+  1976→            <p class="mechanism-step-desc">Alcohol dehydrogenase converts ethanol to acetaldehyde normally.</p>
+  1977→          </div>
+  1978→
+  1979→          <div class="mechanism-arrow">→</div>
+  1980→
+  1981→          <div class="mechanism-step">
+  1982→            <div class="mechanism-step-number">3</div>
+  1983→            <h4 class="mechanism-step-title">ALDH Blocked</h4>
+  1984→            <p class="mechanism-step-desc">Disulfiram inhibits aldehyde dehydrogenase enzyme.</p>
+  1985→          </div>
+  1986→
+  1987→          <div class="mechanism-arrow">→</div>
+  1988→
+  1989→          <div class="mechanism-step">
+  1990→            <div class="mechanism-step-number">4</div>
+  1991→            <h4 class="mechanism-step-title">Acetaldehyde Buildup</h4>
+  1992→            <p class="mechanism-step-desc">Toxic acetaldehyde accumulates in the bloodstream.</p>
+  1993→          </div>
+  1994→
+  1995→          <div class="mechanism-arrow">→</div>
+  1996→
+  1997→          <div class="mechanism-step">
+  1998→            <div class="mechanism-step-number">5</div>
+  1999→            <h4 class="mechanism-step-title">Disulfiram Reaction</h4>
+  2000→            <p class="mechanism-step-desc">Flushing, tachycardia, nausea, vomiting, anxiety.</p>
+
+[showing lines 1-2000 of 2537; use offset=2001 with limit to continue reading]

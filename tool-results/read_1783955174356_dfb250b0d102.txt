@@ -1,0 +1,238 @@
+     1→<!DOCTYPE html>
+     2→<html lang="en">
+     3→<head>
+     4→  <meta charset="UTF-8">
+     5→  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     6→  <title>Amphetamine Use Disorder | KNOW YOUR PILL</title>
+     7→  <link rel="stylesheet" href="style.css">
+     8→  <link rel="stylesheet" href="substance-use-advanced.css">
+     9→  <link rel="preconnect" href="https://fonts.googleapis.com">
+    10→  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    11→  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    12→  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    13→  <style>
+    14→    :root {
+    15→      --amphetamine-primary: #3b82f6;
+    16→      --amphetamine-accent: #8b5cf6;
+    17→      --amphetamine-glow: rgba(59, 130, 246, 0.3);
+    18→    }
+    19→    .amphetamine-hero {
+    20→      background:
+    21→        radial-gradient(circle at 14% 18%, rgba(59, 130, 246, 0.15), transparent 35%),
+    22→        radial-gradient(circle at 78% 20%, rgba(139, 92, 246, 0.12), transparent 30%),
+    23→        radial-gradient(circle at 50% 80%, rgba(236, 72, 153, 0.08), transparent 34%),
+    24→        linear-gradient(135deg, rgba(255, 255, 255, 0.58), rgba(245, 249, 255, 0.34));
+    25→    }
+    26→    [data-theme="dark"] .amphetamine-hero {
+    27→      background:
+    28→        radial-gradient(circle at 14% 18%, rgba(59, 130, 246, 0.1), transparent 35%),
+    29→        radial-gradient(circle at 78% 20%, rgba(139, 92, 246, 0.08), transparent 30%),
+    30→        radial-gradient(circle at 50% 80%, rgba(236, 72, 153, 0.05), transparent 34%),
+    31→        linear-gradient(135deg, rgba(7, 17, 31, 0.8), rgba(16, 23, 42, 0.6));
+    32→    }
+    33→    .amphetamine-hero-visual { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+    34→    .amphetamine-brain-container { position: relative; width: 320px; height: 320px; display: flex; align-items: center; justify-content: center; }
+    35→    .amphetamine-brain-svg { width: 100%; height: 100%; filter: drop-shadow(0 20px 40px rgba(59, 130, 246, 0.3)); }
+    36→    .amphetamine-neural-particles { position: absolute; inset: -50px; pointer-events: none; }
+    37→    .neural-particle { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: var(--amphetamine-primary); opacity: 0.6; animation: particleFloat 2.5s ease-in-out infinite; }
+    38→    .neural-particle:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+    39→    .neural-particle:nth-child(2) { top: 30%; right: 15%; animation-delay: -0.6s; }
+    40→    .neural-particle:nth-child(3) { bottom: 20%; left: 25%; animation-delay: -1.2s; }
+    41→    .neural-particle:nth-child(4) { bottom: 35%; right: 20%; animation-delay: -0.3s; }
+    42→    .neural-particle:nth-child(5) { top: 50%; left: 10%; animation-delay: -0.9s; }
+    43→    .neural-particle:nth-child(6) { top: 15%; right: 30%; animation-delay: -1.8s; }
+    44→    @keyframes particleFloat { 0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; } 50% { transform: translateY(-25px) scale(1.4); opacity: 0.9; } }
+    45→    .stimulant-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 24px; }
+    46→    .stimulant-card { padding: 24px; border: 1px solid rgba(182, 200, 210, 0.5); border-radius: 16px; background: linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgba(246, 250, 255, 0.4)); backdrop-filter: blur(18px); box-shadow: 0 12px 40px rgba(35, 48, 68, 0.08); transition: all 300ms ease; position: relative; overflow: hidden; }
+    47→    .stimulant-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    48→    .stimulant-card.da::before { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+    49→    .stimulant-card.ne::before { background: linear-gradient(90deg, #f97316, #fb923c); }
+    50→    .stimulant-card.mdma::before { background: linear-gradient(90deg, #ec4899, #f472b6); }
+    51→    .stimulant-card.behavior::before { background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
+    52→    .stimulant-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15); }
+    53→    .stimulant-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 1.5rem; }
+    54→    .stimulant-card.da .stimulant-icon { background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(96, 165, 250, 0.1)); border: 1px solid rgba(59, 130, 246, 0.2); }
+    55→    .stimulant-card.ne .stimulant-icon { background: linear-gradient(135deg, rgba(249, 115, 22, 0.15), rgba(251, 146, 60, 0.1)); border: 1px solid rgba(249, 115, 22, 0.2); }
+    56→    .stimulant-card.mdma .stimulant-icon { background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(244, 114, 182, 0.1)); border: 1px solid rgba(236, 72, 153, 0.2); }
+    57→    .stimulant-card.behavior .stimulant-icon { background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(167, 139, 250, 0.1)); border: 1px solid rgba(139, 92, 246, 0.2); }
+    58→    .stimulant-title { font-size: 1.05rem; font-weight: 900; color: var(--ink); margin-bottom: 8px; }
+    59→    .stimulant-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+    60→    .amphetamine-emergency-panel { margin-top: 32px; padding: 28px; border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 20px; background: linear-gradient(145deg, rgba(255, 241, 242, 0.7), rgba(255, 228, 230, 0.4)); backdrop-filter: blur(18px); position: relative; overflow: hidden; }
+    61→    .amphetamine-emergency-panel::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #ef4444, #3b82f6, #8b5cf6); animation: borderFlow 3s linear infinite; }
+    62→    .emergency-panel-title { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+    63→    .emergency-pulse { width: 16px; height: 16px; border-radius: 50%; background: #ef4444; animation: emergencyPulse 2s ease-out infinite; }
+    64→    .emergency-panel-title h3 { font-size: 1.2rem; font-weight: 900; color: #ef4444; margin: 0; }
+    65→    .emergency-signs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 16px; }
+    66→    .emergency-sign { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 10px; background: rgba(255, 255, 255, 0.5); border: 1px solid rgba(239, 68, 68, 0.15); font-size: 0.88rem; font-weight: 700; color: var(--ink); }
+    67→    .emergency-sign-icon { color: #ef4444; font-size: 1.2rem; }
+    68→    .emergency-contacts { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+    69→    .emergency-contact-btn { min-height: 48px; padding: 0 24px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 12px; background: linear-gradient(135deg, #d94c4c, var(--pink) 54%, var(--cyan)); background-size: 180% 100%; color: white; font-weight: 800; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 12px 32px rgba(217, 76, 76, 0.2); transition: all 250ms ease; }
+    70→    .emergency-contact-btn:hover { transform: translateY(-2px); background-position: 100% 0; box-shadow: 0 18px 42px rgba(217, 76, 76, 0.28); }
+    71→    .recovery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 24px; }
+    72→    .recovery-card { padding: 24px; border: 1px solid rgba(182, 200, 210, 0.4); border-radius: 16px; background: linear-gradient(145deg, rgba(255, 255, 255, 0.6), rgba(240, 253, 255, 0.4)); backdrop-filter: blur(18px); box-shadow: 0 12px 40px rgba(35, 48, 68, 0.06); transition: all 300ms ease; }
+    73→    .recovery-card:hover { transform: translateY(-4px); border-color: rgba(59, 130, 246, 0.4); box-shadow: 0 20px 60px rgba(59, 130, 246, 0.12); }
+    74→    .recovery-icon { width: 48px; height: 48px; border-radius: 12px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(96, 165, 250, 0.1)); border: 1px solid rgba(59, 130, 246, 0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 1.3rem; }
+    75→    .recovery-title { font-size: 1.05rem; font-weight: 900; color: var(--ink); margin-bottom: 8px; }
+    76→    .recovery-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+    77→    @media (max-width: 600px) { .stimulant-grid, .emergency-signs-grid, .recovery-grid { grid-template-columns: 1fr; } }
+    78→  </style>
+    79→</head>
+    80→<body>
+    81→  <div class="learning-progress-bar" id="learningProgressBar" role="navigation" aria-label="Learning progress tracker">
+    82→    <div class="progress-ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+    83→    <div class="progress-status"><span class="progress-kicker">Currently Learning</span><span class="progress-label" id="progressLabel">Understanding Amphetamine</span></div>
+    84→    <div class="progress-track" aria-label="Segmented learning pathway">
+    85→      <div class="progress-fill" id="progressFill"></div>
+    86→      <div class="progress-nodes" id="progressNodes">
+    87→        <a class="progress-node is-active" href="#amphetamine-overview" data-progress-section="amphetamine-overview" aria-label="Overview"><span class="progress-node-dot"></span><span class="progress-node-label">Overview</span></a>
+    88→        <a class="progress-node" href="#neurobiology" data-progress-section="neurobiology" aria-label="Neurobiology"><span class="progress-node-dot"></span><span class="progress-node-label">Brain</span></a>
+    89→        <a class="progress-node" href="#intoxication" data-progress-section="intoxication" aria-label="Intoxication"><span class="progress-node-dot"></span><span class="progress-node-label">Effects</span></a>
+    90→        <a class="progress-node" href="#withdrawal" data-progress-section="withdrawal" aria-label="Withdrawal"><span class="progress-node-dot"></span><span class="progress-node-label">Withdraw</span></a>
+    91→        <a class="progress-node" href="#complications" data-progress-section="complications" aria-label="Complications"><span class="progress-node-dot"></span><span class="progress-node-label">Risks</span></a>
+    92→        <a class="progress-node" href="#treatment" data-progress-section="treatment" aria-label="Treatment"><span class="progress-node-dot"></span><span class="progress-node-label">Treatment</span></a>
+    93→      </div>
+    94→    </div>
+    95→    <div class="progress-info"><span class="progress-percentage" id="progressPercentage">0%</span><span class="progress-unit">complete</span></div>
+    96→  </div>
+    97→  <div class="ambient-depth"><div class="blob blob-cyan"></div><div class="blob blob-pink"></div><div class="blob blob-amber"></div><div class="float-pill pill-one"></div><div class="float-pill pill-two"></div><div class="float-capsule"></div><div class="molecule molecule-one"></div><div class="molecule molecule-two"></div></div>
+    98→  <nav class="topbar" role="navigation" aria-label="Main navigation">
+    99→    <a href="index.html" class="brand"><div class="brand-mark"></div><div class="brand-copy"><strong>KNOW YOUR PILL</strong><small>Neuroscience Education</small></div></a>
+   100→    <div class="site-nav" id="siteNav"><a href="index.html">Home</a><a href="index.html#categories">Categories</a><a href="index.html#medication-library">Med Library</a><a href="substance-use.html" class="active">Substance Use</a><a href="index.html#neuro-game">Neuro Arcade</a><a href="index.html#emergency" class="emergency-link">Emergency</a></div>
+   101→    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false"><div class="theme-thumb"></div><div class="theme-icon theme-sun"></div><div class="theme-icon theme-moon"></div></button>
+   102→    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+   103→  </nav>
+   104→  <main>
+   105→    <section class="hero amphetamine-hero reveal-section">
+   106→      <div class="hero-copy">
+   107→        <span class="eyebrow psychiatry-eyebrow"><span class="pulse-dot"></span>Clinical Neuroscience</span>
+   108→        <h1>Amphetamine Use Disorder</h1>
+   109→        <p class="lede">Explore dopamine and norepinephrine dysregulation, stimulant neurobiology, methamphetamine potency, MDMA/ecstasy, binge patterns, psychosis, and recovery through immersive neuroscience education.</p>
+   110→        <div class="hero-cta-group"><a href="#amphetamine-overview" class="cta-button primary">Begin Learning</a><a href="index.html#emergency" class="cta-button emergency">Emergency Help</a></div>
+   111→      </div>
+   112→      <div class="molecule-panel">
+   113→        <img src="assets/molecules/AMPHETAMINE.png" alt="Amphetamine chemical structure" class="molecule-img" loading="lazy" decoding="async" />
+   114→      </div>
+   115→    </section>
+   116→    <section class="neural-search-section reveal-section" id="neural-learning-search" aria-labelledby="neuralSearchTitle">
+   117→      <div class="neural-search-console">
+   118→        <div class="neural-search-ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+   119→        <div class="neural-search-header"><span class="section-eyebrow">Neural Search Console</span><h2 id="neuralSearchTitle">Find a Concept Fast</h2><p>Search dopamine, methamphetamine, MDMA, psychosis, hyperthermia, stereotypy, crash...</p></div>
+   120→        <div class="neural-search-bar"><span class="neural-search-icon" aria-hidden="true"></span><input id="neuralLearningSearch" class="neural-search-input" type="search" placeholder="Search dopamine, methamphetamine, MDMA, psychosis..." autocomplete="off" aria-describedby="neuralSearchStatus"><button class="neural-search-clear" id="neuralSearchClear" type="button" aria-label="Clear neuroscience search">Clear</button></div>
+   121→        <div class="neural-quick-tags" aria-label="Quick neuroscience search tags"><button type="button" data-search-tag="dopamine">Dopamine</button><button type="button" data-search-tag="methamphetamine">Methamphetamine</button><button type="button" data-search-tag="MDMA">MDMA</button><button type="button" data-search-tag="psychosis">Psychosis</button><button type="button" data-search-tag="hyperthermia">Hyperthermia</button><button type="button" data-search-tag="stereotypy">Stereotypy</button></div>
+   122→        <p class="neural-search-status" id="neuralSearchStatus" aria-live="polite">Ready to scan the learning system.</p>
+   123→      </div>
+   124→    </section>
+   125→    <section class="reveal-section" id="amphetamine-overview">
+   126→      <div class="section-heading premium-heading"><span class="section-eyebrow">Educational Foundation</span><h2>Understanding Amphetamine</h2><p class="section-subtitle">Powerful CNS stimulants that increase dopamine and norepinephrine release, producing euphoria, increased energy, and strong psychological dependence.</p><div class="neural-divider"><div class="neural-dot"></div><div class="neural-line"></div><div class="neural-dot"></div><div class="neural-line"></div><div class="neural-dot"></div></div></div>
+   127→      <div class="pattern-cards-grid">
+   128→        <div class="pattern-card" data-pattern="overview">
+   129→          <div class="pattern-card-glow"></div><div class="pattern-card-inner">
+   130→            <div class="pattern-header"><div class="pattern-number">01</div><div class="pattern-icon intoxication-icon"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" fill="none"/><path d="M16 24 L24 20 L32 24 L24 28 Z" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="24" cy="24" r="3" fill="currentColor" opacity="0.6"/></svg></div><div class="pattern-title-group"><h3>Amphetamine & Methamphetamine</h3><p class="pattern-tagline">From prescription stimulants to illicit use</p></div></div>
+   131→            <div class="pattern-summary"><p>Amphetamines are powerful CNS stimulants that increase the release of dopamine and norepinephrine. Methamphetamine is more potent and has greater CNS penetration. MDMA (ecstasy) has additional serotonin-releasing properties. Binge patterns ("runs") involve continuous use over days, leading to severe depletion of neurotransmitters.</p></div>
+   132→            <div class="pattern-expanded-content">
+   133→              <div class="neuro-section"><div class="neuro-section-header"><span class="neuro-tag">Chemistry</span><h4>Amphetamine Variants</h4></div><div class="neuro-section-body"><ul class="neuro-list"><li><strong>Amphetamine</strong> — Increases dopamine and norepinephrine release</li><li><strong>Methamphetamine</strong> — More potent, greater CNS penetration, longer duration</li><li><strong>MDMA (Ecstasy)</strong> — Also releases serotonin; produces empathy and sensory enhancement</li><li><strong>Urinary acidification</strong> — Increases amphetamine excretion; relevant in overdose management</li></ul></div></div>
+   134→              <div class="neuro-section"><div class="neuro-section-header"><span class="neuro-tag">Dependence</span><h4>Patterns of Use</h4></div><div class="neuro-section-body"><ul class="neuro-list"><li><strong>Binge patterns</strong> — "Runs" of continuous use over days without sleep</li><li><strong>Strong psychological dependence</strong> — Intense cravings and compulsive drug-seeking</li><li><strong>Rapid tolerance</strong> — Requires increasing doses for same effect</li><li><strong>Crash phase</strong> — Severe depression, exhaustion, and hypersomnia after cessation</li></ul></div></div>
+   135→            </div>
+   136→            <button class="pattern-expand-btn" aria-expanded="false"><span class="expand-text">Explore Neuroscience</span><svg class="expand-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+   137→          </div>
+   138→        </div>
+   139→      </div>
+   140→    </section>
+   141→    <section class="reveal-section" id="neurobiology">
+   142→      <div class="section-heading premium-heading"><span class="section-eyebrow">Brain Mechanisms</span><h2>Neurobiology of Amphetamines</h2><p class="section-subtitle">How amphetamines reverse neurotransmitter transporters, causing massive release of dopamine, norepinephrine, and serotonin.</p><div class="neural-divider"><div class="neural-dot"></div><div class="neural-line"></div><div class="neural-dot"></div><div class="neural-line"></div><div class="neural-dot"></div></div></div>
+   143→      <div class="stimulant-grid">
+   144→        <div class="stimulant-card da"><div class="stimulant-icon">🧬</div><h4 class="stimulant-title">Dopamine Release</h4><p class="stimulant-desc">Amphetamines enter dopamine neurons via DAT and reverse the transporter, causing massive dopamine release into the synapse. This produces intense euphoria and reinforces drug-seeking behavior.</p></div>
+   145→        <div class="stimulant-card ne"><div class="stimulant-icon">⚡</div><h4 class="stimulant-title">Norepinephrine Release</h4><p class="stimulant-desc">Reverses norepinephrine transporters (NET), causing sympathetic activation — tachycardia, hypertension, sweating, hyperthermia, and increased alertness.</p></div>
+   146→        <div class="stimulant-card mdma"><div class="stimulant-icon">🔮</div><h4 class="stimulant-title">MDMA / Serotonin</h4><p class="stimulant-desc">MDMA (ecstasy) also releases serotonin via SERT reversal, producing emotional warmth, empathy, and sensory enhancement. Post-use serotonin depletion causes depression.</p></div>
+   147→        <div class="stimulant-card behavior"><div class="stimulant-icon">🎯</div><h4 class="stimulant-title">Stereotyped Behavior</h4><p class="stimulant-desc">Repetitive, purposeless behaviors (picking, sorting, disassembling) are characteristic of chronic amphetamine use, reflecting dopamine overstimulation in the basal ganglia.</p></div>
+   148→      </div>
+   149→    </section>
+   150→    <section class="reveal-section" id="intoxication">
+   151→      <div class="section-heading premium-heading"><span class="section-eyebrow">Acute Effects</span><h2>Acute Amphetamine Intoxication</h2><p class="section-subtitle">The immediate stimulant effects on the cardiovascular system, CNS, and behavior.</p><div class="neural-divider"><div class="neural-dot"></div><div class="neural-line"></div><div class="neural-dot"></div><div class="neural-line"></div><div class="neural-dot"></div></div></div>
+   152→      <div class="pattern-cards-grid">
+   153→        <div class="pattern-card" data-pattern="intox">
+   154→          <div class="pattern-card-glow"></div><div class="pattern-card-inner">
+   155→            <div class="pattern-header"><div class="pattern-number">01</div><div class="pattern-icon intoxication-icon"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2" fill="none"/><path d="M16 20 L24 24 L32 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="18" r="2" fill="currentColor" opacity="0.6"/><circle cx="30" cy="18" r="2" fill="currentColor" opacity="0.6"/></svg></div><div class="pattern-title-group"><h3>Clinical Features</h3><p class="pattern-tagline">Signs and symptoms of amphetamine intoxication</p></div></div>
+   156→            <div class="pattern-summary"><p>Amphetamine intoxication produces intense euphoria, increased energy, decreased appetite, and sympathetic activation. Effects begin within minutes when smoked or injected. High doses can cause paranoia, hallucinations, and life-threatening hyperthermia.</p></div>
+   157→            <div class="pattern-expanded-content">
+   158→              <div class="neuro-section"><div class="neuro-section-header"><span class="neuro-tag">Clinical Features</span><h4>Signs & Symptoms</h4></div><div class="neuro-section-body"><div class="symptom-columns"><div class="symptom-column"><h5>Early Intoxication</h5><ul class="symptom-list"><li>Euphoria and confidence</li><li>Increased energy and alertness</li><li>Decreased appetite</li><li>Tachycardia and hypertension</li><li>Dilated pupils</li><li>Increased talkativeness</li></ul></div><div class="symptom-column"><h5>High Dose / Toxic</h5><ul class="symptom-list"><li>Paranoia and persecutory delusions</li><li>Tactile hallucinations</li><li>Stereotyped behaviors</li><li>Hyperthermia</li><li>Seizures</li><li>Cardiovascular collapse</li></ul></div></div></div></div>
+   159→              <div class="neuro-section emergency-section"><div class="neuro-section-header"><span class="neuro-tag emergency-tag">Danger</span><h4>Hyperthermia & Seizures</h4></div><div class="neuro-section-body"><p class="emergency-note">Severe amphetamine intoxication can cause life-threatening hyperthermia (temperature >40°C/104°F) due to increased muscle activity and impaired heat dissipation. Seizures may occur. Both require immediate emergency care.</p></div></div>
+   160→            </div>
+   161→            <button class="pattern-expand-btn" aria-expanded="false"><span class="expand-text">Explore Neuroscience</span><svg class="expand-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+   162→          </div>
+   163→        </div>
+   164→      </div>
+   165→    </section>
+   166→    <section class="reveal-section" id="withdrawal">
+   167→      <div class="section-heading premium-heading"><span class="section-eyebrow">Discontinuation Syndrome</span><h2>Amphetamine Withdrawal</h2><p class="section-subtitle">The crash phase and subsequent withdrawal following cessation of chronic amphetamine use.</p><div class="neural-divider"><div class="neural-dot"></div><div class="neural-line"></div><div class="neural-dot"></div><div class="neural-line"></div><div class="neural-dot"></div></div></div>
+   168→      <div class="withdrawal-phases">
+   169→        <div class="withdrawal-phase crash"><span class="phase-label">Phase 1</span><h4 class="phase-title">Crash Phase</h4><p class="phase-desc">Immediate aftermath of cessation, lasting hours to days. Characterized by severe depression and exhaustion as dopamine and norepinephrine stores are depleted.</p><ul class="phase-symptoms"><li>Severe depression</li><li>Fatigue and exhaustion</li><li>Intense craving</li><li>Hypersomnia</li><li>Increased appetite</li></ul></div>
+   170→        <div class="withdrawal-phase withdrawal"><span class="phase-label">Phase 2</span><h4 class="phase-title">Withdrawal Phase</h4><p class="phase-desc">Lasts weeks to months. Characterized by anhedonia, depression, and continued craving as the brain's reward system recalibrates.</p><ul class="phase-symptoms"><li>Depression and dysphoria</li><li>Anhedonia</li><li>Persistent craving</li><li>Poor concentration</li><li>Anxiety and irritability</li></ul></div>
+   171→        <div class="withdrawal-phase extinction"><span class="phase-label">Phase 3</span><h4 class="phase-title">Extinction Phase</h4><p class="phase-desc">Protracted period of vulnerability. Craving may be triggered by environmental cues, leading to high relapse risk.</p><ul class="phase-symptoms"><li>Episodic craving</li><li>Cue-triggered urges</li><li>Relapse vulnerability</li><li>Gradual recovery</li></ul></div>
+   172→      </div>
+   173→    </section>
+   174→    <section class="reveal-section" id="complications">
+   175→      <div class="section-heading premium-heading"><span class="section-eyebrow">Medical & Psychiatric Impact</span><h2>Amphetamine Complications</h2><p class="section-subtitle">Severe medical and psychiatric complications of chronic amphetamine use.</p><div class="neural-divider"><div class="neural-dot"></div><div class="neural-line"></div><div class="neural-dot"></div><div class="neural-line"></div><div class="neural-dot"></div></div></div>
+   176→      <div class="cocaine-complications-grid">
+   177→        <div class="cocaine-complication-card danger"><div class="coc-complication-icon cardiac">❤️</div><h4 class="coc-complication-title">Cardiovascular Complications</h4><p class="coc-complication-desc">Life-threatening cardiac and vascular effects.</p><ul class="coc-complication-list"><li>Hypertensive crisis</li><li>Arrhythmias</li><li>Myocardial infarction</li><li>Cardiomyopathy</li><li>Stroke</li></ul></div>
+   178→        <div class="cocaine-complication-card"><div class="coc-complication-icon neuro">🧠</div><h4 class="coc-complication-title">Neurological Complications</h4><p class="coc-complication-desc">CNS effects of chronic stimulant use.</p><ul class="coc-complication-list"><li>Amphetamine psychosis</li><li>Seizures</li><li>Cognitive impairment</li><li>Memory deficits</li><li>Movement disorders</li></ul></div>
+   179→        <div class="cocaine-complication-card"><div class="coc-complication-icon physical">🫁</div><h4 class="coc-complication-title">Physical Complications</h4><p class="coc-complication-desc">Systemic effects of chronic amphetamine use.</p><ul class="coc-complication-list"><li>Severe weight loss</li><li>Dental decay ("meth mouth")</li><li>Skin picking lesions</li><li>Hyperthermia</li><li>Renal failure</li></ul></div>
+   180→      </div>
+   181→    </section>
+   182→    <section class="reveal-section" id="treatment">
+   183→      <div class="section-heading premium-heading"><span class="section-eyebrow">Clinical Management</span><h2>Treatment & Recovery</h2><p class="section-subtitle">Management of amphetamine intoxication, withdrawal, and long-term recovery.</p><div class="neural-divider"><div class="neural-dot"></div><div class="neural-line"></div><div class="neural-dot"></div><div class="neural-line"></div><div class="neural-dot"></div></div></div>
+   184→      <div class="pattern-cards-grid" style="margin-bottom: 24px;">
+   185→        <div class="pattern-card" data-pattern="medications">
+   186→          <div class="pattern-card-glow"></div><div class="pattern-card-inner">
+   187→            <div class="pattern-header"><div class="pattern-number">01</div><div class="pattern-icon intoxication-icon"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 8 L24 40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M14 18 L24 8 L34 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="32" r="4" stroke="currentColor" stroke-width="2" fill="none"/></svg></div><div class="pattern-title-group"><h3>Acute Management</h3><p class="pattern-tagline">Emergency and withdrawal treatment</p></div></div>
+   188→            <div class="pattern-summary"><p>Amphetamine overdose is managed with supportive care, benzodiazepines for agitation, and active cooling for hyperthermia. Urine acidification increases amphetamine excretion. Antipsychotics may be needed for amphetamine psychosis.</p></div>
+   189→            <div class="pattern-expanded-content">
+   190→              <div class="neuro-section"><div class="neuro-section-header"><span class="neuro-tag">Treatment</span><h4>Management Strategies</h4></div><div class="neuro-section-body"><ul class="neuro-list"><li><strong>Acidification of urine</strong> — Ammonium chloride or ascorbic acid increases amphetamine excretion</li><li><strong>Antipsychotics</strong> — For amphetamine psychosis with paranoia and hallucinations</li><li><strong>Benzodiazepines</strong> — For agitation, seizures, and hyperthermia</li><li><strong>Active cooling</strong> — For life-threatening hyperthermia</li><li><strong>Supportive care</strong> — IV fluids, cardiac monitoring, seizure precautions</li></ul></div></div>
+   191→            </div>
+   192→            <button class="pattern-expand-btn" aria-expanded="false"><span class="expand-text">Explore Treatment</span><svg class="expand-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+   193→          </div>
+   194→        </div>
+   195→      </div>
+   196→      <div class="recovery-grid">
+   197→        <div class="recovery-card"><div class="recovery-icon">🛡️</div><h4 class="recovery-title">Relapse Prevention</h4><p class="recovery-desc">Identifying triggers, developing coping strategies, and creating emergency plans for managing intense cravings and high-risk situations.</p></div>
+   198→        <div class="recovery-card"><div class="recovery-icon">💬</div><h4 class="recovery-title">Psychotherapy</h4><p class="recovery-desc">CBT for coping skills, contingency management for reinforcement, and addressing co-occurring psychiatric conditions.</p></div>
+   199→        <div class="recovery-card"><div class="recovery-icon">🧠</div><h4 class="recovery-title">Neuroplasticity Recovery</h4><p class="recovery-desc">The brain's dopamine system gradually recovers with sustained abstinence. Cognitive function improves and natural rewards become pleasurable again.</p></div>
+   200→        <div class="recovery-card"><div class="recovery-icon">🤝</div><h4 class="recovery-title">Support Groups</h4><p class="recovery-desc">12-step programs like Narcotics Anonymous and Crystal Meth Anonymous provide peer support and structure for long-term recovery.</p></div>
+   201→      </div>
+   202→    </section>
+   203→    <section class="reveal-section" id="emergency-help">
+   204→      <div class="section-heading premium-heading"><span class="section-eyebrow">Critical Care</span><h2>Emergency Quick Help</h2><p class="section-subtitle">When amphetamine use leads to life-threatening complications requiring immediate intervention.</p><div class="neural-divider"><div class="neural-dot"></div><div class="neural-line"></div><div class="neural-dot"></div><div class="neural-line"></div><div class="neural-dot"></div></div></div>
+   205→      <div class="amphetamine-emergency-panel">
+   206→        <div class="emergency-panel-title"><div class="emergency-pulse"></div><h3>Seek Immediate Medical Help</h3></div>
+   207→        <p>Amphetamine overdose can cause seizures, stroke, heart attack, and life-threatening hyperthermia. If you or someone else experiences these warning signs, call for emergency help immediately.</p>
+   208→        <div class="emergency-signs-grid"><div class="emergency-sign"><span class="emergency-sign-icon">⚠️</span><span>Chest pain or palpitations</span></div><div class="emergency-sign"><span class="emergency-sign-icon">⚠️</span><span>Seizures or convulsions</span></div><div class="emergency-sign"><span class="emergency-sign-icon">⚠️</span><span>Severe hyperthermia</span></div><div class="emergency-sign"><span class="emergency-sign-icon">⚠️</span><span>Severe paranoia or psychosis</span></div><div class="emergency-sign"><span class="emergency-sign-icon">⚠️</span><span>Severe headache or confusion</span></div><div class="emergency-sign"><span class="emergency-sign-icon">⚠️</span><span>Loss of consciousness</span></div></div>
+   209→        <div class="emergency-contacts"><a href="tel:112" class="emergency-contact-btn">📞 Call 112</a><a href="tel:14416" class="emergency-contact-btn">📞 Tele-MANAS 14416</a></div>
+   210→      </div>
+   211→    </section>
+   212→  </main>
+   213→  <footer><p>Educational support only. This website does not replace a doctor, pharmacist, emergency service, or local medical guideline.</p></footer>
+   214→  <script>
+   215→    const themeToggle = document.getElementById('themeToggle'); const html = document.documentElement; const savedTheme = localStorage.getItem('kyp-theme') || 'light'; html.dataset.theme = savedTheme;
+   216→    themeToggle.addEventListener('click', () => { const currentTheme = html.dataset.theme; const newTheme = currentTheme === 'light' ? 'dark' : 'light'; html.dataset.theme = newTheme; localStorage.setItem('kyp-theme', newTheme); });
+   217→    const menuToggle = document.getElementById('menuToggle'); const siteNav = document.getElementById('siteNav');
+   218→    menuToggle.addEventListener('click', () => { menuToggle.classList.toggle('is-open'); siteNav.classList.toggle('is-open'); menuToggle.setAttribute('aria-expanded', menuToggle.classList.contains('is-open')); });
+   219→    const patternCards = document.querySelectorAll('.pattern-card');
+   220→    patternCards.forEach(card => { const expandBtn = card.querySelector('.pattern-expand-btn'); if (expandBtn) { expandBtn.addEventListener('click', () => { expandBtn.setAttribute('aria-expanded', expandBtn.getAttribute('aria-expanded') !== 'true'); card.classList.toggle('is-expanded'); }); } });
+   221→    const progressNodes = document.querySelectorAll('.progress-node'); const progressFill = document.getElementById('progressFill'); const progressPercentage = document.getElementById('progressPercentage'); const progressLabel = document.getElementById('progressLabel');
+   222→    const sections = [{id:'amphetamine-overview',label:'Overview'},{id:'neurobiology',label:'Neurobiology'},{id:'intoxication',label:'Intoxication'},{id:'withdrawal',label:'Withdrawal'},{id:'complications',label:'Complications'},{id:'treatment',label:'Treatment'}];
+   223→    function updateProgress() { let activeSection = 0; sections.forEach((section, index) => { const element = document.getElementById(section.id); if (element) { const rect = element.getBoundingClientRect(); if (rect.top < 200) activeSection = index; } });
+   224→      progressNodes.forEach((node, index) => { node.classList.toggle('is-active', index <= activeSection); }); const progress = ((activeSection + 1) / sections.length) * 100; progressFill.style.width = `${progress}%`; progressPercentage.textContent = `${Math.round(progress)}%`; progressLabel.textContent = sections[activeSection].label; }
+   225→    window.addEventListener('scroll', updateProgress); updateProgress();
+   226→    const searchInput = document.getElementById('neuralLearningSearch'); const searchClear = document.getElementById('neuralSearchClear'); const searchStatus = document.getElementById('neuralSearchStatus'); const quickTags = document.querySelectorAll('.neural-quick-tags button');
+   227→    searchInput.addEventListener('input', (e) => { const query = e.target.value.toLowerCase().trim(); if (query.length > 0) { searchStatus.textContent = `Scanning for "${query}"...`; highlightSearchResults(query); } else { searchStatus.textContent = 'Ready to scan the learning system.'; clearHighlights(); } });
+   228→    searchClear.addEventListener('click', () => { searchInput.value = ''; searchStatus.textContent = 'Ready to scan the learning system.'; clearHighlights(); searchInput.focus(); });
+   229→    quickTags.forEach(tag => { tag.addEventListener('click', () => { searchInput.value = tag.dataset.searchTag; searchInput.dispatchEvent(new Event('input')); }); });
+   230→    function highlightSearchResults(query) { clearHighlights(); const allText = document.querySelectorAll('h2, h3, h4, p, li'); let matchCount = 0;
+   231→      allText.forEach(el => { if (el.textContent.toLowerCase().includes(query)) { el.style.outline = '2px solid rgba(59, 130, 246, 0.5)'; el.style.outlineOffset = '2px'; el.style.borderRadius = '4px'; matchCount++; if (matchCount === 1) el.scrollIntoView({ behavior: 'smooth', block: 'center' }); } });
+   232→      searchStatus.textContent = matchCount > 0 ? `Found ${matchCount} match${matchCount > 1 ? 'es' : ''} for "${query}".` : `No matches found for "${query}".`; }
+   233→    function clearHighlights() { document.querySelectorAll('[style*="outline"]').forEach(el => { el.style.outline = ''; el.style.outlineOffset = ''; el.style.borderRadius = ''; }); }
+   234→    const revealSections = document.querySelectorAll('.reveal-section'); const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active-reveal'); }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+   235→    revealSections.forEach(section => revealObserver.observe(section)); document.body.classList.add('js-enabled');
+   236→  </script>
+   237→</body>
+   238→</html>
