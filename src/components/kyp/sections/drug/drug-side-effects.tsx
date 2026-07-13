@@ -4,6 +4,7 @@ import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
 import { Badge } from "@/components/kyp/ui/badge";
 import { Callout } from "@/components/kyp/ui/callout";
+import { SideEffectReceptorMap } from "@/components/kyp/ui/side-effect-receptor-map";
 import { sideEffects } from "@/lib/kyp/data";
 import type { Drug, DrugSideEffectEntry } from "@/lib/kyp/data";
 import { cn } from "@/lib/utils";
@@ -112,6 +113,14 @@ export function DrugSideEffects({ drug }: DrugSideEffectsProps) {
             </Callout>
           </div>
         )}
+
+        {/* Visual receptor map — at a glance */}
+        <div className="mt-12">
+          <SideEffectReceptorMap
+            sideEffects={drug.seriousSideEffects}
+            title="Serious side effects → receptor map (at a glance)"
+          />
+        </div>
       </Container>
     </Section>
   );

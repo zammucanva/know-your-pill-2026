@@ -202,3 +202,88 @@ Stage Summary:
 - All internal links resolve (in-page anchors + cross-references to other sections)
 - WCAG AA maintained: semantic HTML, keyboard-navigable accordions, ARIA states, descriptive headings
 - Performance: 17 of 18 components are Server Components; only DrugKnowledgeGraph is client (uses framer-motion); generateStaticParams pre-renders all drug pages at build time
+
+---
+Task ID: sprint-3-canonical-polish
+Agent: Main agent (Super Z)
+Task: Sprint 3 — Final polish of the canonical drug page architecture based on user review. Implement: sticky learning nav, Knowledge Graph as centerpiece, visual learning components, categorised references, real clinical case, educational drug comparisons, Patient Mode toggle, learning progress tracker, and 4 new reusable sections (Learning Objectives, High-Yield Summary, Comparison Table, Memory Tricks).
+
+Work Log:
+- Extended Drug schema in types.ts with 7 new interfaces and 7 new fields on Drug:
+  * MechanismFlowNode, MechanismFlowEdge, MechanismFlow (visual mechanism diagram)
+  * ClinicalCase (real patient case with history/exam/diagnosis/management/outcome/teaching points)
+  * DrugComparisonRow, DrugComparisonTable (head-to-head drug comparisons)
+  * MemoryTrick (mnemonics for exam prep)
+  * CategorisedReferences (5 categories: guidelines, textbooks, trials, reviews, patientResources)
+  * PatientModeContent (patient-friendly versions of key sections)
+  * Drug.learningObjectives, mechanismFlow, memoryTricks, highYieldSummary, clinicalCase, comparisonTables, patientMode
+- Updated Sertraline data file with all new content:
+  * 6 learning objectives
+  * 9-node visual mechanism flow with labelled edges (presynaptic → serotonin → SERT → sertraline blocks → ↑cleft → autoreceptor → desensitised → PFC → BDNF)
+  * 6 memory tricks (FINISH mnemonic, Serotonin Syndrome triad MAN, NMS vs SS, Pregnancy Safe, MOP PPS for 6 indications, Black Box <25)
+  * 12-point high-yield summary (one-page revision)
+  * Full real clinical case (Priya, 28yo F, first-episode MDD) with 8 fields + 5 teaching points
+  * 9-row comparison table (Sertraline vs Fluoxetine vs Escitalopram vs Paroxetine) covering half-life, onset, sexual dysfunction, weight, sedation, discontinuation, pregnancy, CYP, unique indication + takeaway
+  * Categorised references: 3 guidelines (NICE, APA, WHO mhGAP) + 3 textbooks (Katzung, Goodman & Gilman, Kaplan & Sadock) + 2 trials (Cipriani Lancet 2018, TADS) + 3 reviews (MIMS, FDA label) + 3 patient resources (RCPsych, Tele-MANAS, NIMH)
+  * 7-field patientMode content (tagline, summary, mechanism, sideEffects, monitoring, contraindications, interactions) — plain-language versions of each section
+  * Updated knowledge graph hrefs to point to new split brain sections
+- Built Patient Mode store (Zustand + persist middleware) at src/lib/kyp/patient-mode-store.ts
+- Built PatientModeToggle component — segmented control with Medical/Patient buttons, aria-pressed states
+- Built usePatientModeContent hook for components to read mode-aware content
+- Built useScrollSpy hook — IntersectionObserver-based scrollspy with completed-sections tracking + reading progress %
+- Built StickyLearningNav component (300+ lines):
+  * Desktop: fixed left rail (lg+) with glass card containing progress bar + section list grouped by category (Start here / Foundations / Clinical / Learning)
+  * Mobile: floating pill button at bottom-left with circular progress ring, opens bottom sheet with full nav
+  * Scrollspy highlights active section, marks completed sections with green checkmarks (Duolingo-style)
+  * Smooth-scroll on click
+- Built LearningProgress widget — standalone "You've completed X of Y sections" banner
+- Built 5 new section components:
+  * drug-learning-objectives.tsx — "After reading this page you should be able to:" with checkmark list
+  * drug-high-yield-summary.tsx — elevated card with 12 numbered revision points + Download/Print buttons
+  * drug-memory-tricks.tsx — grid of mnemonic cards with highlighted trick text + what it remembers
+  * drug-clinical-case.tsx — real patient case with 6 structured sections (history, exam, diagnosis, rationale, management, outcome) + teaching points panel
+  * drug-comparison-tables.tsx — semantic <table> with primary drug highlighted, responsive horizontal scroll, takeaway callout
+- Built 3 visual learning components:
+  * mechanism-flow.tsx — visual flow diagram with colour-coded nodes (input/process/target/output/inhibit) and labelled edges (stimulate=↓, inhibit=⊣), framer-motion staggered entrance
+  * monitoring-checklist.tsx — interactive checkboxes with progress counter, strikes through completed items, success-state styling
+  * side-effect-receptor-map.tsx — visual map linking side effects to receptors with pulsing 5-HT nodes, severity + frequency badges
+- Refactored drug-related-drugs.tsx — now shows "Choose this when" educational comparison per drug + "When NOT to choose sertraline" callout with 6 specific scenarios
+- Refactored drug-references.tsx — categorised into 5 groups (Guidelines, Textbooks, Trials, Reviews, Patient Resources) each with icon, description, count badge
+- Split drug-brain-mapping.tsx into 3 separate sections:
+  * drug-brain-regions.tsx — BrainCard grid (1 of 3)
+  * drug-neurotransmitters.tsx — neurotransmitter chips + receptor cards + σ1 receptor callout (2 of 3)
+  * drug-neural-pathways.tsx — PathwayCard grid + educational explainer when no direct pathway involvement (3 of 3)
+- Removed old drug-brain-mapping.tsx and drug-related-cases.tsx (replaced)
+- Reordered page.tsx to new 23-section sequence:
+  1. Hero, 2. Quick Facts, 3. Learning Objectives (NEW), 4. Knowledge Graph (MOVED from 15), 5. Mechanism (with visual flow), 6. Brain Regions (SPLIT), 7. Neurotransmitters (SPLIT), 8. Neural Pathways (SPLIT), 9. Timeline, 10. Clinical Uses, 11. Side Effects (with receptor map), 12. Monitoring (with checklist), 13. Contraindications, 14. Interactions, 15. Patient Education, 16. Clinical Pearls, 17. Exam Pearls, 18. Memory Tricks (NEW), 19. Clinical Case (NEW), 20. Comparison Tables (NEW), 21. Related Drugs (with educational comparisons), 22. High-Yield Summary (NEW), 23. FAQ, 24. References (categorised)
+  + LearningProgress widget at the end
+  + StickyLearningNav (desktop left rail + mobile sheet)
+  + PatientModeToggle (fixed top-right)
+- Lint: 0 errors, 0 warnings
+- Agent Browser verification:
+  * /drugs/sertraline loads HTTP 200, no console errors, no runtime errors
+  * All 24 sections render (verified by H2 list + section ID check)
+  * Sticky nav: present on desktop, scrollspy works, click-to-scroll works
+  * Patient Mode toggle: switches aria-pressed state correctly
+  * Monitoring checklist: 6 items, click toggles success state
+  * Side effect receptor map: 7 serious side effects with receptor nodes
+  * Mechanism flow: visual diagram with 3 sub-headings renders
+  * Universal search still finds Sertraline (10 results)
+  * Screenshots saved: kyp-sprint3-hero.png, kyp-sprint3-mechanism-flow.png, kyp-sprint3-knowledge-graph.png, kyp-sprint3-clinical-case.png, kyp-sprint3-comparison.png, kyp-sprint3-full-light.png
+
+Stage Summary:
+- 7 new schema interfaces, 7 new Drug fields
+- 5 new UI primitives (mechanism-flow, monitoring-checklist, side-effect-receptor-map, sticky-learning-nav, patient-mode-toggle)
+- 7 new drug section components (learning-objectives, high-yield-summary, memory-tricks, clinical-case, comparison-tables, brain-regions, neurotransmitters, neural-pathways) + 2 refactored (related-drugs, references)
+- 23-section page sequence (was 16) — Knowledge Graph centerpiece at position 4
+- Real clinical case (Priya, 28yo F) — not a placeholder
+- 9-row comparison table (Sertraline vs 3 alternatives)
+- 6 mnemonics with highlighted trick text
+- Interactive monitoring checklist
+- Visual mechanism flow with 9 colour-coded nodes
+- Side effect → receptor map
+- Categorised references (5 groups, 14 sources total)
+- Patient Mode toggle (Medical ↔ Patient) with 7 patient-friendly content fields
+- Sticky learning navigator (desktop left rail + mobile bottom sheet) with scrollspy + progress tracking
+- Learning progress widget ("You've completed X of Y sections")
+- Architecture remains fully reusable — adding a new drug still requires only 2 file changes (data file + registry entry)
