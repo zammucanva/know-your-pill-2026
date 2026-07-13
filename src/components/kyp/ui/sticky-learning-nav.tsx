@@ -160,40 +160,27 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
 
   return (
     <>
-      {/* Desktop: sticky left rail */}
-      <aside className="hidden lg:block fixed left-4 top-24 z-30 w-56 xl:w-60">
-        <div className="kyp-glass rounded-2xl p-3 shadow-[var(--shadow-soft)]">
-          <div className="px-2 pb-2 pt-1">
-            <div className="flex items-center justify-between text-[0.7rem] font-semibold uppercase tracking-wide text-muted-foreground">
-              <span>Progress</span>
-              <span>{completedCount}/{totalCount}</span>
-            </div>
-            <div className="mt-1.5 h-1 w-full overflow-hidden rounded-full bg-muted">
-              <div
-                className="h-full rounded-full bg-gradient-to-r from-brand to-neural transition-all duration-300"
-                style={{ width: `${(completedCount / totalCount) * 100}%` }}
-              />
-            </div>
-            {remainingCount > 0 && completedCount > 0 ? (
-              <p className="mt-1.5 text-[0.7rem] text-muted-foreground">
-                {remainingCount} section{remainingCount > 1 ? "s" : ""} remaining
-              </p>
-            ) : completedCount === totalCount ? (
-              <p className="mt-1.5 text-[0.7rem] font-semibold text-success">
-                ✓ All sections complete
-              </p>
-            ) : (
-              <p className="mt-1.5 text-[0.7rem] text-muted-foreground">
-                Click ✓ to mark complete
-              </p>
-            )}
+      {/* Desktop: sticky left rail — VS Code Explorer style (narrow, subtle) */}
+      <aside className="hidden lg:block fixed left-0 top-16 z-30 w-48 xl:w-52 border-r border-border/40 bg-card/40 backdrop-blur-sm">
+        <div className="px-3 py-3">
+          {/* Progress header — compact */}
+          <div className="flex items-center justify-between text-[0.65rem] font-medium uppercase tracking-wide text-muted-foreground/80">
+            <span>Progress</span>
+            <span className="tabular-nums">{completedCount}/{totalCount}</span>
+          </div>
+          <div className="mt-1 h-0.5 w-full overflow-hidden rounded-full bg-muted">
+            <div
+              className="h-full rounded-full bg-brand transition-all duration-300"
+              style={{ width: `${(completedCount / totalCount) * 100}%` }}
+            />
           </div>
 
-          <nav className="kyp-scroll mt-1 max-h-[60vh] overflow-y-auto pr-1">
+          {/* Section list — VS Code file-tree feel */}
+          <nav className="kyp-scroll mt-3 max-h-[calc(100vh-12rem)] overflow-y-auto">
             {groups.map(([groupName, groupItems]) => (
-              <div key={groupName} className="mb-2">
+              <div key={groupName} className="mb-1.5">
                 {groups.length > 1 && (
-                  <p className="px-3 py-1 text-[0.6rem] font-bold uppercase tracking-[0.14em] text-muted-foreground/70">
+                  <p className="px-2 py-0.5 text-[0.58rem] font-semibold uppercase tracking-[0.12em] text-muted-foreground/60">
                     {groupName}
                   </p>
                 )}
@@ -201,30 +188,30 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
                   const isActive = activeId === item.id;
                   const isCompleted = completedIds.has(item.id);
                   return (
-                    <div key={item.id} className="group flex items-center gap-1">
+                    <div key={item.id} className="group flex items-center gap-0.5">
                       <button
                         type="button"
                         onClick={() => scrollToSection(item.id)}
                         className={cn(
-                          "flex flex-1 items-center gap-2 rounded-md px-3 py-1.5 text-xs font-medium transition-colors text-left",
+                          "flex flex-1 items-center gap-1.5 rounded px-2 py-1 text-[0.72rem] font-normal leading-tight transition-colors text-left truncate",
                           isActive
-                            ? "bg-brand-soft/60 text-brand-ink"
+                            ? "bg-brand/10 text-brand-ink font-medium"
                             : isCompleted
-                              ? "text-foreground/70 hover:bg-accent/50"
-                              : "text-muted-foreground hover:bg-accent/40 hover:text-foreground"
+                              ? "text-foreground/50 hover:bg-accent/40"
+                              : "text-muted-foreground hover:bg-accent/30 hover:text-foreground"
                         )}
                       >
                         <span className="truncate">{item.label}</span>
                       </button>
-                      {/* Manual completion checkbox */}
+                      {/* Manual completion checkbox — minimal */}
                       <button
                         type="button"
                         onClick={() => toggleComplete(item.id)}
                         aria-label={isCompleted ? `Mark ${item.label} as not complete` : `Mark ${item.label} as complete`}
                         className={cn(
-                          "flex h-5 w-5 shrink-0 items-center justify-center rounded-full border transition-colors",
+                          "flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full border transition-colors opacity-0 group-hover:opacity-100",
                           isCompleted
-                            ? "border-success bg-success text-white"
+                            ? "border-success bg-success text-white opacity-100"
                             : "border-border text-transparent hover:border-brand"
                         )}
                       >

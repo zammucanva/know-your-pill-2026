@@ -1,119 +1,210 @@
 "use client";
 
+import * as React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Network } from "lucide-react";
+import { ArrowRight, Network, MousePointerClick } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { Badge } from "@/components/kyp/ui/badge";
 import type { Drug, KnowledgeGraphNode } from "@/lib/kyp/data";
+import { cn } from "@/lib/utils";
 
 /**
- * DrugKnowledgeGraph — the canonical "everything connects" panel.
+ * DrugKnowledgeGraph — KYP's signature interactive feature.
  *
- * Phase 5 (Knowledge Graph) will turn this into a fully interactive
- * graph visualisation. For now it renders as a vertical chain that
- * surfaces every relationship this drug has — every node is clickable.
+ * Renders the drug's relationships as an interactive node grid.
+ * Hover any node to:
+ *   1. Highlight the node
+ *   2. Show its relationship path
+ *   3. Display an explanation tooltip
+ *   4. Reveal the click destination
  *
- * Each node links to its destination (either another section on this
- * page, another KYP page, or an external anchor).
+ * Every node is clickable — navigating to its destination.
  *
- * This is the single most differentiated feature of KYP — no other
- * psychopharmacology platform surfaces these connections visually.
- *
- * Client Component — uses framer-motion for the staggered entrance.
+ * Client Component — uses React state for hover + framer-motion for entrance.
  */
 
 interface DrugKnowledgeGraphProps {
   drug: Drug;
 }
 
-const nodeTypeVariant = {
-  drug: "brand" as const,
-  class: "brand" as const,
-  neurotransmitter: "neural" as const,
-  "brain-region": "neural" as const,
-  pathway: "brand" as const,
-  condition: "success" as const,
-  "side-effect": "warning" as const,
-  "clinical-case": "outline" as const,
-  "patient-guide": "outline" as const,
-};
-
-const nodeTypeLabel = {
-  drug: "Drug",
-  class: "Class",
-  neurotransmitter: "Neurotransmitter",
-  "brain-region": "Brain Region",
-  pathway: "Pathway",
-  condition: "Condition",
-  "side-effect": "Side Effect",
-  "clinical-case": "Case",
-  "patient-guide": "Guide",
+const nodeTypeConfig = {
+  drug: { variant: "brand" as const, label: "Drug", color: "text-brand", bg: "bg-brand-soft/60", border: "border-brand/30" },
+  class: { variant: "brand" as const, label: "Class", color: "text-brand", bg: "bg-brand-soft/60", border: "border-brand/30" },
+  neurotransmitter: { variant: "neural" as const, label: "Neurotransmitter", color: "text-neural", bg: "bg-neural-soft/60", border: "border-neural/30" },
+  "brain-region": { variant: "neural" as const, label: "Brain Region", color: "text-neural", bg: "bg-neural-soft/60", border: "border-neural/30" },
+  pathway: { variant: "brand" as const, label: "Pathway", color: "text-brand", bg: "bg-brand-soft/60", border: "border-brand/30" },
+  condition: { variant: "success" as const, label: "Condition", color: "text-success", bg: "bg-success-soft/60", border: "border-success/30" },
+  "side-effect": { variant: "warning" as const, label: "Side Effect", color: "text-warning", bg: "bg-warning-soft/60", border: "border-warning/30" },
+  "clinical-case": { variant: "outline" as const, label: "Case", color: "text-foreground", bg: "bg-muted/40", border: "border-border/70" },
+  "patient-guide": { variant: "outline" as const, label: "Guide", color: "text-foreground", bg: "bg-muted/40", border: "border-border/70" },
 };
 
 export function DrugKnowledgeGraph({ drug }: DrugKnowledgeGraphProps) {
+  const [hoveredIdx, setHoveredIdx] = React.useState<number | null>(null);
+  const nodes = drug.knowledgeGraph;
+
   return (
     <Section id="knowledge-graph" className="bg-muted/20">
       <Container>
         <SectionHeader
           eyebrow="Knowledge Graph"
           title="Everything this drug touches."
-          description="Open any node below to traverse the web of neuroscience around this drug — the class it belongs to, the neurotransmitter it modulates, the brain regions it acts on, the conditions it treats, and the side effects it can cause. This is what makes KYP different from a Wikipedia article."
+          description="Hover any node to see its relationship. Click to navigate. This is KYP's signature feature — no other psychopharmacology platform surfaces these connections."
           tone="neural"
           align="center"
         />
 
-        {/* Vertical chain */}
-        <div className="mx-auto mt-12 max-w-2xl">
-          {drug.knowledgeGraph.map((node, i) => (
-            <KnowledgeGraphNodeRow key={`${node.type}-${node.label}`} node={node} index={i} />
-          ))}
+        {/* Hint */}
+        <div className="mt-6 flex justify-center">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-card/60 px-3 py-1 text-xs text-muted-foreground">
+            <MousePointerClick className="h-3 w-3" />
+            Hover to highlight · Click to navigate
+          </span>
         </div>
 
-        {/* Footer note */}
-        <div className="mx-auto mt-12 max-w-2xl text-center">
-          <p className="text-caption text-muted-foreground">
-            {drug.knowledgeGraph.length} relationships indexed · Phase 5 will turn this list into a
-            fully interactive graph visualisation.
-          </p>
+        {/* Interactive node grid */}
+        <div className="mx-auto mt-10 max-w-3xl">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5">
+            {nodes.map((node, i) => (
+              <KnowledgeGraphNode
+                key={`${node.type}-${node.label}`}
+                node={node}
+                index={i}
+                isHovered={hoveredIdx === i}
+                onHover={(idx) => setHoveredIdx(idx)}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Hover detail panel — appears below the grid */}
+        <div className="mx-auto mt-8 max-w-2xl min-h-[80px]">
+          {hoveredIdx !== null ? (
+            <HoverDetail node={nodes[hoveredIdx]} />
+          ) : (
+            <div className="rounded-xl border border-dashed border-border/60 bg-card/40 p-4 text-center">
+              <p className="text-sm text-muted-foreground">
+                <Network className="inline h-4 w-4 mr-1.5 -mt-0.5" />
+                {nodes.length} relationships indexed — hover any node above to see how it connects to {drug.genericName}.
+              </p>
+            </div>
+          )}
         </div>
       </Container>
     </Section>
   );
 }
 
-function KnowledgeGraphNodeRow({ node, index }: { node: KnowledgeGraphNode; index: number }) {
+function KnowledgeGraphNode({
+  node,
+  index,
+  isHovered,
+  onHover,
+}: {
+  node: KnowledgeGraphNode;
+  index: number;
+  isHovered: boolean;
+  onHover: (idx: number | null) => void;
+}) {
+  const config = nodeTypeConfig[node.type];
+
+  return (
+    <motion.a
+      href={node.href}
+      onMouseEnter={() => onHover(index)}
+      onMouseLeave={() => onHover(null)}
+      onFocus={() => onHover(index)}
+      onBlur={() => onHover(null)}
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true, margin: "-20px" }}
+      transition={{ duration: 0.25, delay: Math.min(index * 0.03, 0.3) }}
+      className={cn(
+        "group relative flex flex-col items-start gap-1.5 rounded-lg border p-3 transition-all duration-150",
+        isHovered
+          ? cn(config.border, config.bg, "shadow-[var(--shadow-lift)] scale-[1.03] z-10")
+          : "border-border/60 bg-card hover:border-brand/30"
+      )}
+    >
+      {/* Type label — tiny, top-right */}
+      <span className={cn(
+        "absolute right-2 top-2 text-[0.55rem] font-semibold uppercase tracking-wide",
+        isHovered ? config.color : "text-muted-foreground/50"
+      )}>
+        {config.label}
+      </span>
+
+      {/* Node label */}
+      <p className={cn(
+        "text-xs font-medium leading-tight pr-12",
+        isHovered ? "text-foreground" : "text-foreground/80"
+      )}>
+        {node.label}
+      </p>
+
+      {/* Note — only on hover */}
+      {node.note && isHovered && (
+        <p className="text-[0.65rem] text-muted-foreground leading-snug mt-0.5">
+          {node.note}
+        </p>
+      )}
+
+      {/* Arrow indicator — appears on hover */}
+      {isHovered && (
+        <ArrowRight className="absolute bottom-2 right-2 h-3 w-3 text-brand" />
+      )}
+    </motion.a>
+  );
+}
+
+function HoverDetail({ node }: { node: KnowledgeGraphNode }) {
+  const config = nodeTypeConfig[node.type];
+
+  const relationshipDescriptions: Record<string, string> = {
+    drug: "The drug you're currently reading about.",
+    class: "The pharmacological class this drug belongs to.",
+    neurotransmitter: "The chemical messenger this drug modulates in the brain.",
+    "brain-region": "A brain region where this drug has clinically significant effects.",
+    pathway: "A neural circuit relevant to this drug's mechanism.",
+    condition: "A clinical condition this drug is used to treat.",
+    "side-effect": "A side effect this drug can cause — know the warning signs.",
+    "clinical-case": "A real patient case illustrating this drug in practice.",
+    "patient-guide": "Plain-language guidance for patients taking this drug.",
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 8 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-30px" }}
-      transition={{ duration: 0.3, delay: Math.min(index * 0.05, 0.4) }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.2 }}
+      className={cn("rounded-xl border p-4", config.border, config.bg)}
     >
-      <a
-        href={node.href}
-        className="group flex items-center gap-3 rounded-xl border border-border/70 bg-card p-3 shadow-[var(--shadow-soft)] transition-all hover:border-brand/40 hover:shadow-[var(--shadow-lift)]"
-      >
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-neural-soft/60 text-neural">
+      <div className="flex items-start gap-3">
+        <span className={cn("flex h-9 w-9 shrink-0 items-center justify-center rounded-lg", config.bg, config.color)}>
           <Network className="h-4 w-4" />
         </span>
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-baseline gap-2">
-            <p className="text-body-sm font-medium text-foreground">{node.label}</p>
-            <Badge variant={nodeTypeVariant[node.type]} size="sm">
-              {nodeTypeLabel[node.type]}
-            </Badge>
+            <p className="text-sm font-semibold text-foreground">{node.label}</p>
+            <Badge variant={config.variant} size="sm">{config.label}</Badge>
           </div>
           {node.note && (
-            <p className="mt-0.5 text-caption text-muted-foreground">{node.note}</p>
+            <p className="mt-1 text-xs text-foreground/70">{node.note}</p>
           )}
+          <p className="mt-1.5 text-xs text-muted-foreground">
+            {relationshipDescriptions[node.type]}
+          </p>
         </div>
-        <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5" />
-      </a>
-
-      {/* Connector line to next node */}
-      <div className="ml-7 my-1 h-3 w-px bg-border" aria-hidden />
+        <a
+          href={node.href}
+          className="shrink-0 inline-flex items-center gap-1 rounded-lg border border-border/70 bg-card px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+        >
+          Open
+          <ArrowRight className="h-3 w-3" />
+        </a>
+      </div>
     </motion.div>
   );
 }

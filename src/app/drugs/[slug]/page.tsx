@@ -33,6 +33,7 @@ import {
   DrugFAQ,
   DrugKnowledgeGraph,
   DrugReferences,
+  DrugPrevNext,
 } from "@/components/kyp/sections/drug";
 
 import { Timeline } from "@/components/kyp/ui/timeline";
@@ -162,7 +163,8 @@ export default async function DrugPage({ params }: PageProps) {
       {/* Sticky learning navigator — desktop left rail + mobile sheet */}
       <StickyLearningNav items={navItems} drugSlug={drug.slug} />
 
-      <main className="flex-1">
+      {/* Main content — offset on desktop to accommodate sticky left rail */}
+      <main className="flex-1 lg:pl-52 xl:pl-56">
         {/* 1. Hero */}
         <DrugHero drug={drug} />
 
@@ -264,6 +266,9 @@ export default async function DrugPage({ params }: PageProps) {
         <PatientModeVisibility sectionId="references">
           <DrugReferences drug={drug} />
         </PatientModeVisibility>
+
+        {/* Prev/next drug navigation */}
+        <DrugPrevNext currentSlug={drug.slug} />
 
         {/* Learning progress — end of page */}
         <Section spacing="tight">
