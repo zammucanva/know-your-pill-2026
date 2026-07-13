@@ -1,0 +1,473 @@
+     1→   401→    "If you miss a dose, take it when you remember unless it's within 8 hours of your next dose — in that case, skip the missed dose.",
+     2→   402→  ],
+     3→   403→
+     4→   404→  clinicalPearls: [
+     5→   405→    "Onset of action for depression is 4–6 weeks, but for PMDD it's only days — which is why intermittent (luteal-phase-only) dosing works for PMDD but not for depression.",
+     6→   406→    "Sexual dysfunction is the #1 reason patients stop SSRIs. Always ask directly — patients rarely volunteer it. Add bupropion XL 150 mg/day or switch to bupropion/mirtazapine if problematic.",
+     7→   407→    "Among SSRIs, sertraline has the most favourable pregnancy and lactation safety profile — making it the first-choice SSRI in women of reproductive age.",
+     8→   408→    "Sertraline's mild CYP2D6 inhibition means it has fewer clinically significant drug interactions than fluoxetine or paroxetine, but still check before co-prescribing TCAs, metoprolol, or antiarrhythmics.",
+     9→   409→    "Discontinuation syndrome is milder than with paroxetine but still real. Always taper over ≥4 weeks. Substituting fluoxetine (long half-life) for the last few weeks of a paroxetine or venlafaxine taper can smooth the discontinuation.",
+    10→   410→    "The 'start low, go slow' approach (25 mg → 50 mg → 100 mg) reduces early activation side effects — particularly important in anxiety disorders where early jitteriness can be misattributed to drug failure.",
+    11→   411→    "Treatment response (≥50% PHQ-9 reduction) is expected by week 6; remission (PHQ-9 <5) by week 12. If no response by week 6, increase dose. If no response by week 12 at max dose, switch class.",
+    12→   412→    "Continue treatment for 6–12 months after the FIRST depressive episode. For 2+ episodes or severe episodes, consider indefinite maintenance therapy (recurrence risk after 2 episodes is ~70%).",
+    13→   413→    "Sertraline's σ1 receptor agonism is unique among SSRIs and may contribute to its anxiolytic effects — explaining its early approval for panic disorder, PTSD, and social anxiety.",
+    14→   414→    "In bipolar depression, sertraline (and any antidepressant) can trigger a manic switch. Always screen for bipolar disorder (MDQ questionnaire) before prescribing.",
+    15→   415→  ],
+    16→   416→
+    17→   417→  examPearls: [
+    18→   418→    "Sertraline is the SSRI of choice in pregnancy and lactation — high-yield for OBGYN and psychiatry exams.",
+    19→   419→    "Mechanism: SERT blockade → ↑ synaptic 5-HT → 5-HT1A autoreceptor desensitisation (1–2 weeks) → ↑ raphe firing → downstream BDNF and neurogenesis (4–6 weeks). The delay between acute pharmacology and clinical effect is THE favourite SSRI question.",
+    20→   420→    "FDA-approved indications (6): MDD, OCD, Panic Disorder, PTSD, Social Anxiety Disorder, PMDD. Memorise the list — only SSRI approved for PTSD.",
+    21→   421→    "Contraindications: MAOIs (wait 14 days), pimozide (QTc), concurrent disulfiram (alcohol in concentrate).",
+    22→   422→    "Black box warning: suicidality in <25. Mandatory to counsel and document informed consent.",
+    23→   423→    "Serotonin syndrome triad: mental status change + autonomic instability + neuromuscular excitation (clonus, hyperreflexia, rigidity). Onset within 24h. Treat with cyproheptadine.",
+    24→   424→    "NMS vs Serotonin Syndrome: NMS = rigid ('lead pipe'), bradyreflexic, normal pupils. Serotonin syndrome = clonus, hyperreflexic, mydriasis, GI symptoms (diarrhoea).",
+    25→   425→    "SIADH from SSRIs: highest risk in elderly females, first 2 weeks. Hyponatraemia + concentrated urine + euvolaemia.",
+    26→   426→    "CYP interactions: sertraline is a mild CYP2D6 inhibitor (less than fluoxetine/paroxetine). Major pathway is CYP2B6.",
+    27→   427→    "Discontinuation syndrome: 'FINISH' — Flu-like symptoms, Insomnia, Nausea, Imbalance, Sensory disturbances (brain zaps), Hyperarousal. Worst with paroxetine > sertraline > fluoxetine (because of half-life).",
+    28→   428→    "Half-life: sertraline 26h; fluoxetine + norfluoxetine 1–4 days (longest); paroxetine 21h (shortest, worst discontinuation).",
+    29→   429→    "PMDD dosing: continuous OR intermittent (luteal phase only, starting ~14 days before expected menses). Intermittent works because PMDD onset is rapid (days).",
+    30→   430→    "Treatment-resistant depression algorithm: SSRI fail → switch to another SSRI/SNRI → augment with bupropion or mirtazapine → consider TCA/MAOI/trial of ketamine.",
+    31→   431→  ],
+    32→   432→
+    33→   433→  /* ---- Memory tricks (mnemonics) ---- */
+    34→   434→  memoryTricks: [
+    35→   435→    {
+    36→   436→      title: "FINISH — SSRI Discontinuation Syndrome",
+    37→   437→      trick: "Flu-like · Insomnia · Nausea · Imbalance · Sensory disturbances (brain zaps) · Hyperarousal",
+    38→   438→      remembers: "The 6 classic SSRI withdrawal symptoms. Worst with paroxetine (shortest half-life), mildest with fluoxetine (longest).",
+    39→   439→    },
+    40→   440→    {
+    41→   441→      title: "Serotonin Syndrome Triad",
+    42→   442→      trick: "Mental · Autonomic · Neuromuscular — think 'MAN'",
+    43→   443→      remembers: "Altered mental state + Autonomic instability + Neuromuscular excitation (clonus, hyperreflexia). Onset within 24h.",
+    44→   444→    },
+    45→   445→    {
+    46→   446→      title: "NMS vs Serotonin Syndrome",
+    47→   447→      trick: "NMS = 'Lead pipe' rigidity, bradyreflexia, NORMAL pupils. SS = Clonus, hyperreflexia, MYDRIASIS, diarrhoea.",
+    48→   448→      remembers: "The single most testable distinction. NMS is dopaminergic blockade; SS is serotonergic excess.",
+    49→   449→    },
+    50→   450→    {
+    51→   451→      title: "SSRI Pearl — 'Pregnancy Safe'",
+    52→   452→      trick: "Sertraline = Safe in pregnancy and lactation (SSRI of choice)",
+    53→   453→      remembers: "Among SSRIs, sertraline has the lowest milk/plasma ratio (~0.5) and infant serum levels are usually undetectable.",
+    54→   454→    },
+    55→   455→    {
+    56→   456→      title: "6 FDA Indications for Sertraline",
+    57→   457→      trick: "MOP PPS — Mood (MDD), OCD, Panic, PTSD, social Phobia, Premenstrual (PMDD)",
+    58→   458→      remembers: "Sertraline is the ONLY SSRI FDA-approved for PTSD.",
+    59→   459→    },
+    60→   460→    {
+    61→   461→      title: "Black Box Warning",
+    62→   462→      trick: "<25 = Suicide risk (Antidepressants in young)",
+    63→   463→      remembers: "Anyone under 25 starting an antidepressant needs weekly monitoring in the first month.",
+    64→   464→    },
+    65→   465→  ],
+    66→   466→
+    67→   467→  /* ---- High-yield summary (one-page revision) ---- */
+    68→   468→  highYieldSummary: [
+    69→   469→    "Class: SSRI — selectively blocks SERT → ↑ synaptic serotonin.",
+    70→   470→    "Mechanism: Acute SERT blockade (hours) → 5-HT1A autoreceptor desensitisation (1–2 weeks) → ↑ BDNF + neurogenesis (4–6 weeks). The delay explains why patients feel worse before better.",
+    71→   471→    "6 FDA indications: MDD, OCD, Panic, PTSD, Social Anxiety, PMDD. Only SSRI approved for PTSD.",
+    72→   472→    "Onset: 4–6 weeks for depression; 8–12 weeks for anxiety/PTSD. PMDD onset is days (intermittent dosing works).",
+    73→   473→    "Common side effects: nausea, sexual dysfunction (30–50%), insomnia, headache, sweating, diarrhoea.",
+    74→   474→    "Serious: serotonin syndrome, SIADH (elderly females), suicidality <25 (black box), bleeding (platelet), activation of mania, discontinuation syndrome.",
+    75→   475→    "Contraindications: MAOIs (14-day washout), pimozide (QTc), disulfiram (concentrate has alcohol).",
+    76→   476→    "Interactions: MAOIs (fatal), tramadol/triptans/St John's Wort (serotonin syndrome), NSAIDs/warfarin (bleeding), CYP2D6 substrates.",
+    77→   477→    "Pregnancy/lactation: SSRI of choice. Untreated depression is worse than the drug.",
+    78→   478→    "Half-life 26h. Metabolised by CYP2B6 (main), CYP2C19/2D6/3A4 (minor). Mild CYP2D6 inhibitor.",
+    79→   479→    "Monitoring: mood/suicidality (weekly × 1 month), serum Na (elderly), PHQ-9 at baseline/4/8 weeks.",
+    80→   480→    "Discontinuation: taper over ≥4 weeks. Fluoxetine self-tapers (long half-life) — can substitute at end of taper.",
+    81→   481→  ],
+    82→   482→
+    83→   483→  /* ---- Clinical cases (plural — supports multiple cases per drug) ---- */
+    84→   484→  clinicalCases: [
+    85→   485→    {
+    86→   486→    title: "First-episode depression in a 28-year-old woman",
+    87→   487→    presentation:
+    88→   488→      "A 28-year-old woman presents with 8 weeks of low mood, anhedonia, early-morning awakening, and 4 kg weight loss after a relationship breakdown.",
+    89→   489→    history:
+    90→   490→      "Priya, a 28-year-old software engineer, presents to her GP with 8 weeks of persistent low mood, loss of interest in activities she previously enjoyed (hiking, painting), early-morning awakening at 4 AM with inability to return to sleep, 4 kg unintentional weight loss, and intrusive negative thoughts about being 'a failure'. Symptoms began after her partner ended their 4-year relationship. She denies suicidal ideation but feels 'hopeless about the future'. No prior psychiatric history. No medical comorbidities. Sister has a history of depression treated with sertraline. Patient drinks alcohol 2–3 units/week, no recreational drugs, no regular medications. She works full-time but has taken 3 sick days in the past 2 weeks — previously zero in 2 years.",
+    91→   491→    examination:
+    92→   492→      "Alert, oriented, cooperative. Speech normal rate and rhythm. Mood '2/10', affect congruent and reactive. No hallucinations or delusions. No thought disorder. Cognitively intact (MoCA 28/30). PHQ-9 score 17 (moderately severe). GAD-7 score 11 (moderate). No thyroid enlargement, no neurological deficit. BMI 22. BP 118/74, HR 72.",
+    93→   493→    diagnosis:
+    94→   494→      "Major Depressive Disorder, single episode, moderate-severe, without psychotic features (ICD-10 F32.2). Differential: adjustment disorder with depressed mood (less likely given severity and neurovegetative symptoms); bipolar depression (screen with MDQ — negative); hypothyroidism-induced depression (TSH to be checked).",
+    95→   495→    rationale:
+    96→   496→      "Sertraline chosen because: (1) first-line for MDD per NICE CG91; (2) favourable side-effect profile for a working patient (minimal sedation, low weight gain); (3) sister had a good response — pharmacogenetic concordance; (4) safest SSRI if patient becomes pregnant (reproductive age, no current contraception); (5) once-daily dosing improves adherence. Fluoxetine would be alternative but more activating; mirtazapine rejected due to weight gain in a patient already losing weight.",
+    97→   497→    management:
+    98→   498→      "Started sertraline 50 mg every morning with food. Plan: review at 2 weeks (tolerability + suicidality), 4 weeks (early response), 6 weeks (dose escalation if PHQ-9 reduction <30%), 12 weeks (full response assessment). Patient given PHQ-9 self-rating schedule and safety plan with crisis contacts (112, Tele-MANAS 14416). Counseled: (1) expect side effects before benefit; (2) do not stop abruptly; (3) avoid alcohol; (4) watch for agitation or new suicidal thoughts in first month; (5) full effect takes 4–6 weeks. Concurrent referral for CBT (NICE recommends combining medication + psychotherapy for moderate-severe depression).",
+    99→   499→    outcome:
+   100→   500→      "Week 2: nausea and mild insomnia (tolerable, no suicidality). Week 4: sleep normalised, appetite returning, PHQ-9 12 (29% reduction — early response). Week 6: mood 5/10, PHQ-9 8 (53% reduction — treatment response). Dose maintained at 50 mg. Week 12: PHQ-9 4 (remission). Returned to hiking and painting. CBT sessions ongoing. Plan: continue sertraline for 9 more months (12 months total from remission), then taper over 4–6 weeks.",
+   101→   501→    teachingPoints: [
+   102→   502→      "PHQ-9 monitoring quantifies response — a ≥50% reduction defines 'response', a score <5 defines 'remission'.",
+   103→   503→      "Family history of good SSRI response is a reasonable (though not definitive) predictor — pharmacogenomic testing is not yet routine.",
+   104→   504→      "Combining SSRI + CBT produces better long-term outcomes than either alone — especially for first-episode depression.",
+   105→   505→      "The 6-week review point is critical: if PHQ-9 reduction is <30%, increase the dose; if <50% at 12 weeks, consider switching or augmenting.",
+   106→   506→      "Continue treatment for 6–12 months AFTER remission for a first episode — stopping earlier dramatically increases relapse risk.",
+   107→   507→    ],
+   108→   508→    },
+   109→   509→  ],
+   110→   510→
+   111→   511→  /* ---- Comparison tables ---- */
+   112→   512→  comparisonTables: [
+   113→   513→    {
+   114→   514→      title: "Sertraline vs Fluoxetine vs Escitalopram vs Paroxetine",
+   115→   515→      primaryDrug: "Sertraline",
+   116→   516→      rows: [
+   117→   517→        {
+   118→   518→          attribute: "Half-life",
+   119→   519→          primaryValue: "26 hours",
+   120→   520→          comparisons: [
+   121→   521→            { drug: "Fluoxetine", value: "1–4 days (with norfluoxetine)" },
+   122→   522→            { drug: "Escitalopram", value: "27–32 hours" },
+   123→   523→            { drug: "Paroxetine", value: "21 hours (shortest)" },
+   124→   524→          ],
+   125→   525→        },
+   126→   526→        {
+   127→   527→          attribute: "Onset of action",
+   128→   528→          primaryValue: "4–6 weeks",
+   129→   529→          comparisons: [
+   130→   530→            { drug: "Fluoxetine", value: "4–6 weeks" },
+   131→   531→            { drug: "Escitalopram", value: "4–6 weeks" },
+   132→   532→            { drug: "Paroxetine", value: "4–6 weeks" },
+   133→   533→          ],
+   134→   534→        },
+   135→   535→        {
+   136→   536→          attribute: "Sexual dysfunction",
+   137→   537→          primaryValue: "Common (30–40%)",
+   138→   538→          comparisons: [
+   139→   539→            { drug: "Fluoxetine", value: "Common (30–40%)" },
+   140→   540→            { drug: "Escitalopram", value: "Common (30–40%)" },
+   141→   541→            { drug: "Paroxetine", value: "Highest (40–50%)" },
+   142→   542→          ],
+   143→   543→        },
+   144→   544→        {
+   145→   545→          attribute: "Weight gain",
+   146→   546→          primaryValue: "Mild",
+   147→   547→          comparisons: [
+   148→   548→            { drug: "Fluoxetine", value: "Weight neutral / loss" },
+   149→   549→            { drug: "Escitalopram", value: "Mild" },
+   150→   550→            { drug: "Paroxetine", value: "Most weight gain" },
+   151→   551→          ],
+   152→   552→        },
+   153→   553→        {
+   154→   554→          attribute: "Sedation",
+   155→   555→          primaryValue: "Mildly activating",
+   156→   556→          comparisons: [
+   157→   557→            { drug: "Fluoxetine", value: "Most activating" },
+   158→   558→            { drug: "Escitalopram", value: "Neutral" },
+   159→   559→            { drug: "Paroxetine", value: "Most sedating" },
+   160→   560→          ],
+   161→   561→        },
+   162→   562→        {
+   163→   563→          attribute: "Discontinuation syndrome",
+   164→   564→          primaryValue: "Mild–moderate",
+   165→   565→          comparisons: [
+   166→   566→            { drug: "Fluoxetine", value: "Mildest (self-tapers)" },
+   167→   567→            { drug: "Escitalopram", value: "Mild–moderate" },
+   168→   568→            { drug: "Paroxetine", value: "Worst (shortest half-life)" },
+   169→   569→          ],
+   170→   570→        },
+   171→   571→        {
+   172→   572→          attribute: "Pregnancy safety",
+   173→   573→          primaryValue: "SSRI of choice",
+   174→   574→          comparisons: [
+   175→   575→            { drug: "Fluoxetine", value: "Safe (long experience)" },
+   176→   576→            { drug: "Escitalopram", value: "Safe" },
+   177→   577→            { drug: "Paroxetine", value: "Avoid in 1st trimester (cardiac defects)" },
+   178→   578→          ],
+   179→   579→        },
+   180→   580→        {
+   181→   581→          attribute: "CYP inhibition",
+   182→   582→          primaryValue: "Mild CYP2D6",
+   183→   583→          comparisons: [
+   184→   584→            { drug: "Fluoxetine", value: "Strong CYP2D6" },
+   185→   585→            { drug: "Escitalopram", value: "Minimal (lowest interaction profile)" },
+   186→   586→            { drug: "Paroxetine", value: "Strong CYP2D6" },
+   187→   587→          ],
+   188→   588→        },
+   189→   589→        {
+   190→   590→          attribute: "Unique indication",
+   191→   591→          primaryValue: "PTSD (only SSRI)",
+   192→   592→          comparisons: [
+   193→   593→            { drug: "Fluoxetine", value: "Paediatric depression (≥8 yrs), bulimia" },
+   194→   594→            { drug: "Escitalopram", value: "GAD (12–17 yrs)" },
+   195→   595→            { drug: "Paroxetine", value: "Hot flushes in breast-cancer survivors" },
+   196→   596→          ],
+   197→   597→        },
+   198→   598→      ],
+   199→   599→      takeaway:
+   200→   600→        "Sertraline = best all-rounder (especially in pregnancy and when interactions matter). Fluoxetine = good for lethargic depression and when long half-life helps adherence. Escitalopram = best if patient is on many other drugs (lowest CYP interactions). Paroxetine = generally avoid — worst discontinuation, most weight gain, contraindicated in pregnancy, strongest CYP2D6 — but useful for severe hot flushes in breast-cancer survivors.",
+   201→   601→    },
+   202→   602→  ],
+   203→   603→
+   204→   604→  /* ---- Timeline ---- */
+   205→   605→  timeline: [
+   206→   606→    {
+   207→   607→      id: "t1",
+   208→   608→      time: "Hours 1–24",
+   209→   609→      title: "Acute SERT blockade",
+   210→   610→      description:
+   211→   611→        "Sertraline blocks the serotonin transporter within hours. Synaptic serotonin rises. Side effects (nausea, headache, activation) often appear here. Patients frequently feel worse before they feel better.",
+   212→   612→      phase: "onset",
+   213→   613→    },
+   214→   614→    {
+   215→   615→      id: "t2",
+   216→   616→      time: "Days 2–7",
+   217→   617→      title: "5-HT1A autoreceptor desensitisation begins",
+   218→   618→      description:
+   219→   619→        "Somatodendritic 5-HT1A autoreceptors in the raphe nuclei begin to desensitise. Serotonin release toward the prefrontal cortex gradually increases. Sleep, appetite, and energy often improve first — before mood.",
+   220→   620→      phase: "onset",
+   221→   621→    },
+   222→   622→    {
+   223→   623→      id: "t3",
+   224→   624→      time: "Weeks 2–4",
+   225→   625→      title: "Neuroadaptive changes",
+   226→   626→      description:
+   227→   627→        "BDNF expression rises in the hippocampus. Postsynaptic receptor downregulation occurs. Early mood improvement becomes noticeable in many patients. Sexual side effects typically emerge here.",
+   228→   628→      phase: "peak",
+   229→   629→    },
+   230→   630→    {
+   231→   631→      id: "t4",
+   232→   632→      time: "Weeks 4–6",
+   233→   633→      title: "Full therapeutic effect (depression)",
+   234→   634→      description:
+   235→   635→        "Steady-state serotonin levels and full downstream adaptations achieved. Mood, anxiety, and energy typically reach maximum improvement for depression. Side effects usually stabilise.",
+   236→   636→      phase: "peak",
+   237→   637→    },
+   238→   638→    {
+   239→   639→      id: "t5",
+   240→   640→      time: "Weeks 8–12",
+   241→   641→      title: "Full therapeutic effect (anxiety, PTSD)",
+   242→   642→      description:
+   243→   643→        "Anxiety disorders, panic, PTSD, and social anxiety often take 8–12 weeks for full response — slower than depression. Counsel patients accordingly.",
+   244→   644→      phase: "duration",
+   245→   645→    },
+   246→   646→    {
+   247→   647→      id: "t6",
+   248→   648→      time: "Months 3–6",
+   249→   649→      title: "Maintenance & relapse prevention",
+   250→   650→      description:
+   251→   651→        "Continued neuroplastic changes. Continue treatment for 6–12 months after the first depressive episode, longer (often indefinite) for recurrent episodes, OCD, or chronic anxiety disorders.",
+   252→   652→      phase: "duration",
+   253→   653→    },
+   254→   654→    {
+   255→   655→      id: "t7",
+   256→   656→      time: "Discontinuation",
+   257→   657→      title: "Tapered withdrawal",
+   258→   658→      description:
+   259→   659→        "Sudden cessation causes discontinuation syndrome (dizziness, 'brain zaps', nausea, irritability). Taper over ≥4 weeks. Among SSRIs, withdrawal is milder than paroxetine but real. Fluoxetine self-tapers due to long half-life.",
+   260→   660→      phase: "recovery",
+   261→   661→    },
+   262→   662→  ],
+   263→   663→
+   264→   664→  /* ---- FAQ ---- */
+   265→   665→  faqs: [
+   266→   666→    {
+   267→   667→      question: "How long does sertraline take to work?",
+   268→   668→      answer:
+   269→   669→        "Some early changes (sleep, appetite, energy) can happen within 1–2 weeks, but clearer mood benefit typically takes 4–6 weeks or longer for depression. For anxiety disorders, PTSD, and social anxiety, full effect may take 8–12 weeks. Don't stop early just because you don't feel better yet.",
+   270→   670→    },
+   271→   671→    {
+   272→   672→      question: "Can side effects happen before the benefits?",
+   273→   673→      answer:
+   274→   674→        "Yes — nausea, headache, sleep changes, or restlessness may appear in the first 1–2 weeks, before mood improvement. These usually settle as your body adapts. Persistent or severe effects should be discussed with your clinician — they may recommend a slower titration or dose adjustment.",
+   275→   675→    },
+   276→   676→    {
+   277→   677→      question: "Is sertraline addictive?",
+   278→   678→      answer:
+   279→   679→        "Sertraline is not addictive in the way that alcohol, opioids, or benzodiazepines can be — it does not cause cravings, escalating use, or intoxication. However, stopping suddenly after several weeks of use can cause uncomfortable discontinuation symptoms (dizziness, 'brain zaps', nausea, irritability), so always come off it slowly with your doctor's guidance.",
+   280→   680→    },
+   281→   681→    {
+   282→   682→      question: "Can I stop taking it once I feel better?",
+   283→   683→      answer:
+   284→   684→        "Not usually. For a first depressive episode, treatment should continue for 6–12 months AFTER you feel better — stopping earlier significantly increases relapse risk. For recurrent episodes or chronic anxiety disorders, longer-term (sometimes indefinite) treatment may be recommended. Always discuss timing with your clinician before stopping.",
+   285→   685→    },
+   286→   686→    {
+   287→   687→      question: "Will it affect my sex life?",
+   288→   688→      answer:
+   289→   689→        "Possibly. Sexual side effects — decreased libido, delayed orgasm, erectile dysfunction — affect 30–50% of people on SSRIs and are the most common reason people stop them. These are usually reversible on discontinuation, but in a small subset of patients they may persist (PSSD). If this bothers you, talk to your clinician — adding bupropion or switching to a different medication often helps.",
+   290→   690→    },
+   291→   691→    {
+   292→   692→      question: "What if I'm pregnant or breastfeeding?",
+   293→   693→      answer:
+   294→   694→        "Sertraline is generally considered the SSRI of choice in pregnancy and breastfeeding when pharmacotherapy is necessary. Untreated maternal depression also carries significant risks to mother and baby. The decision requires balancing benefits and risks with your obstetrician and psychiatrist — do not stop sertraline suddenly if you become pregnant.",
+   295→   695→    },
+   296→   696→    {
+   297→   697→      question: "Can I drink alcohol while taking sertraline?",
+   298→   698→      answer:
+   299→   699→        "Alcohol can worsen sleepiness, mood symptoms, judgment, and medication tolerability. While not strictly contraindicated, it's best minimised or avoided — particularly during the first month while your body is adapting to the medication.",
+   300→   700→    },
+   301→   701→    {
+   302→   702→      question: "What should I do if I miss a dose?",
+   303→   703→      answer:
+   304→   704→        "Take the missed dose as soon as you remember, unless it's within 8 hours of your next scheduled dose — in that case, skip the missed dose and continue normally. Do not double up to make up for a missed dose.",
+   305→   705→    },
+   306→   706→  ],
+   307→   707→
+   308→   708→  /* ---- References & related ---- */
+   309→   709→  references: {
+   310→   710→    guidelines: [
+   311→   711→      {
+   312→   712→        source: "NICE Clinical Guideline CG91 — Depression in adults: recognition and management",
+   313→   713→      },
+   314→   714→      {
+   315→   715→        source: "APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder, 3rd edition",
+   316→   716→      },
+   317→   717→      {
+   318→   718→        source: "WHO mhGAP Intervention Guide (mental health Gap Action Programme)",
+   319→   719→        section: "Module on depression",
+   320→   720→      },
+   321→   721→    ],
+   322→   722→    textbooks: [
+   323→   723→      {
+   324→   724→        source: "Katzung Basic & Clinical Pharmacology, 16th edition",
+   325→   725→        section: "Chapter 30 — Antidepressant Agents",
+   326→   726→      },
+   327→   727→      {
+   328→   728→        source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition",
+   329→   729→        section: "Section V — Pharmacotherapy of Mood Disorders",
+   330→   730→      },
+   331→   731→      {
+   332→   732→        source: "Kaplan & Sadock's Synopsis of Psychiatry, 12th edition",
+   333→   733→        section: "Chapter 36 — Psychopharmacology",
+   334→   734→      },
+   335→   735→    ],
+   336→   736→    trials: [
+   337→   737→      {
+   338→   738→        source: "Cipriani A et al. Comparative efficacy and acceptability of 21 antidepressant drugs for the acute treatment of adults with major depressive disorder: a systematic review and network meta-analysis. Lancet 2018;391:1357-1366.",
+   339→   739→        section: "The definitive SSRI head-to-head meta-analysis",
+   340→   740→      },
+   341→   741→      {
+   342→   742→        source: "Glass RM. Fluoxetine, cognitive-behavioral therapy, and their combination for adolescents with depression (TADS). JAMA 2004;292:861-863.",
+   343→   743→      },
+   344→   744→    ],
+   345→   745→    reviews: [
+   346→   746→      {
+   347→   747→        source: "Cipriani A, Furukawa TA, Salanti G, et al. Lancet 2018 — Comparative efficacy and acceptability of 21 antidepressants",
+   348→   748→      },
+   349→   749→      {
+   350→   750→        source: "MIMS India — Sertraline",
+   351→   751→        section: "India-specific prescribing information",
+   352→   752→      },
+   353→   753→      {
+   354→   754→        source: "FDA Prescribing Information — ZOLOFT (sertraline hydrochloride)",
+   355→   755→        section: "Highlights of Prescribing Information",
+   356→   756→        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/019839s74lbl.pdf",
+   357→   757→      },
+   358→   758→    ],
+   359→   759→    patientResources: [
+   360→   760→      {
+   361→   761→        source: "Royal College of Psychiatrists — Patient information on SSRIs",
+   362→   762→        url: "https://www.rcpsych.ac.uk/mental-health/treatments-and-wellbeing/antidepressants",
+   363→   763→      },
+   364→   764→      {
+   365→   765→        source: "Tele-MANAS (National Mental Health Helpline, India) — 14416",
+   366→   766→        url: "tel:14416",
+   367→   767→      },
+   368→   768→      {
+   369→   769→        source: "NIMH (National Institute of Mental Health) — Depression brochure",
+   370→   770→        url: "https://www.nimh.nih.gov/health/publications/depression",
+   371→   771→      },
+   372→   772→    ],
+   373→   773→  },
+   374→   774→
+   375→   775→  relatedDrugs: [
+   376→   776→    {
+   377→   777→      name: "Fluoxetine",
+   378→   778→      slug: "fluoxetine",
+   379→   779→      drugClass: "SSRI",
+   380→   780→      relationship: "Same class. Longest half-life (1–4 days with active metabolite) → mildest discontinuation syndrome. Only SSRI approved for paediatric depression (≥8 yrs) and bulimia. More activating — better for lethargic depression.",
+   381→   781→    },
+   382→   782→    {
+   383→   783→      name: "Escitalopram",
+   384→   784→      slug: "escitalopram",
+   385→   785→      drugClass: "SSRI",
+   386→   786→      relationship: "Same class. S-enantiomer of citalopram. Lowest CYP interaction profile — preferred in patients on complex regimens. QTc prolongation at higher doses (>20 mg) — avoid in long-QT.",
+   387→   787→    },
+   388→   788→    {
+   389→   789→      name: "Paroxetine",
+   390→   790→      slug: "paroxetine",
+   391→   791→      drugClass: "SSRI",
+   392→   792→      relationship: "Same class. Shortest half-life (21h) → worst discontinuation syndrome. Most sedating. Strongest CYP2D6 inhibition. Most anticholinergic. Highest risk of weight gain. Best-studied for hot flushes in breast-cancer survivors.",
+   393→   793→    },
+   394→   794→    {
+   395→   795→      name: "Citalopram",
+   396→   796→      drugClass: "SSRI",
+   397→   797→      relationship: "Same class. Racemic mixture (escitalopram is the S-enantiomer). Dose-dependent QTc prolongation — max 40 mg/day (20 mg in elderly).",
+   398→   798→    },
+   399→   799→    {
+   400→   800→      name: "Fluvoxamine",
+   401→   801→      drugClass: "SSRI",
+   402→   802→      relationship: "Same class. Preferred for paediatric OCD. Strong CYP1A2 inhibition — interacts with caffeine, theophylline, clozapine.",
+   403→   803→    },
+   404→   804→    {
+   405→   805→      name: "Venlafaxine",
+   406→   806→      drugClass: "SNRI",
+   407→   807→      relationship: "Alternative class. Serotonin-norepinephrine reuptake inhibitor. May work when SSRI fails. Dose-dependent: <150 mg/day mostly serotonergic; >150 mg/day adds noradrenergic effect. Watch BP — can cause hypertension.",
+   408→   808→    },
+   409→   809→    {
+   410→   810→      name: "Bupropion",
+   411→   811→      drugClass: "NDRI",
+   412→   812→      relationship: "Augmentation partner. Norepinephrine-dopamine reuptake inhibitor. Adding 150 mg XL to an SSRI is first-line augmentation for partial response and reverses SSRI-induced sexual dysfunction. Avoid in seizure disorder and eating disorders.",
+   413→   813→    },
+   414→   814→    {
+   415→   815→      name: "Mirtazapine",
+   416→   816→      drugClass: "NaSSA",
+   417→   817→      relationship: "Augmentation partner. Noradrenergic and specific serotonergic antidepressant. Adding 15–30 mg at night improves sleep and appetite and may reverse SSRI-induced sexual dysfunction. Sedating — give at night.",
+   418→   818→    },
+   419→   819→  ],
+   420→   820→
+   421→   821→  relatedConditions: [
+   422→   822→    { name: "Major Depressive Disorder", relationship: "primary" },
+   423→   823→    { name: "Obsessive-Compulsive Disorder", relationship: "primary" },
+   424→   824→    { name: "Panic Disorder", relationship: "primary" },
+   425→   825→    { name: "Post-Traumatic Stress Disorder", relationship: "primary" },
+   426→   826→    { name: "Social Anxiety Disorder", relationship: "primary" },
+   427→   827→    { name: "Premenstrual Dysphoric Disorder", relationship: "primary" },
+   428→   828→    { name: "Generalised Anxiety Disorder", relationship: "off-label" },
+   429→   829→    { name: "Premature Ejaculation", relationship: "off-label" },
+   430→   830→  ],
+   431→   831→
+   432→   832→  /* ---- Knowledge graph ---- */
+   433→   833→  knowledgeGraph: [
+   434→   834→    { label: "Sertraline", type: "drug", href: "/drugs/sertraline", note: "The drug you're reading about" },
+   435→   835→    { label: "SSRI", type: "class", href: "#mechanism", note: "Selective Serotonin Reuptake Inhibitor" },
+   436→   836→    { label: "Serotonin (5-HT)", type: "neurotransmitter", href: "#mechanism", note: "The neurotransmitter being modulated" },
+   437→   837→    { label: "SERT (serotonin transporter)", type: "neurotransmitter", href: "#mechanism", note: "Molecular target" },
+   438→   838→    { label: "Raphe Nuclei", type: "brain-region", href: "#brain-regions", note: "Where serotonin is synthesised" },
+   439→   839→    { label: "Prefrontal Cortex", type: "brain-region", href: "#brain-regions", note: "Target of mood regulation" },
+   440→   840→    { label: "Amygdala", type: "brain-region", href: "#brain-regions", note: "Anxiety & fear processing" },
+   441→   841→    { label: "Hippocampus", type: "brain-region", href: "#brain-regions", note: "Memory & neurogenesis" },
+   442→   842→    { label: "Depression", type: "condition", href: "#clinical-uses", note: "Primary indication" },
+   443→   843→    { label: "Anxiety Disorders", type: "condition", href: "#clinical-uses", note: "Multiple approved indications" },
+   444→   844→    { label: "OCD", type: "condition", href: "#clinical-uses", note: "Approved in adults & children" },
+   445→   845→    { label: "PTSD", type: "condition", href: "#clinical-uses", note: "Only SSRI approved for PTSD" },
+   446→   846→    { label: "Sexual Dysfunction", type: "side-effect", href: "#side-effects", note: "Most common reason for discontinuation" },
+   447→   847→    { label: "Serotonin Syndrome", type: "side-effect", href: "#side-effects", note: "Life-threatening — know the signs" },
+   448→   848→    { label: "Patient Guide — Starting an SSRI", type: "patient-guide", href: "#patient-education", note: "What to expect in the first 6 weeks" },
+   449→   849→  ],
+   450→   850→
+   451→   851→  /* ---- Patient mode content ---- */
+   452→   852→  patientMode: {
+   453→   853→    tagline:
+   454→   854→      "A medicine that helps your brain keep more of a mood-regulating chemical (serotonin) available for longer.",
+   455→   855→    summary:
+   456→   856→      "Sertraline is one of the most commonly prescribed antidepressants in the world. It belongs to a class called SSRIs. It doesn't make you happy — it helps your brain's natural mood-regulation system work better. Most people feel some side effects in the first week or two before the mood benefit builds up over 4–6 weeks.",
+   457→   857→    mechanism:
+   458→   858→      "Your brain uses a chemical called serotonin to regulate mood, anxiety, sleep, and appetite. Normally, after serotonin is released between nerve cells, it gets quickly taken back up (recycled). Sertraline blocks this recycling, so more serotonin stays available between the nerve cells for longer. Over 4–6 weeks, this helps your brain's mood-regulation system work better — but it doesn't happen immediately.",
+   459→   859→    sideEffects:
+   460→   860→      "Most people get some side effects in the first 1–2 weeks — usually nausea, headache, sleep changes, or feeling a bit wired. These usually settle as your body adapts. Sexual side effects (lower interest or difficulty reaching orgasm) are common and can persist — talk to your doctor if this bothers you, as there are solutions. Serious side effects are rare but you should know the signs: high fever with confusion and shaking could be serotonin syndrome (emergency), and feeling worse or having new suicidal thoughts in the first month needs immediate medical review.",
+   461→   861→    monitoring:
+   462→   862→      "You'll have check-ins with your doctor at 2 weeks, 4 weeks, and 6 weeks to see how you're responding. They'll ask about your mood, side effects, and any new thoughts. You may be asked to fill in a short questionnaire (PHQ-9) so your progress can be tracked. If you're over 65, your doctor may check your blood sodium in the first 2 weeks.",
+   463→   863→    contraindications:
+   464→   864→      "Don't take sertraline if you've taken a MAOI antidepressant in the last 14 days (dangerous combination). Tell your doctor about all other medicines you take — especially tramadol (pain), triptans (migraine), certain antibiotics like linezolid, cough syrups with dextromethorphan, or herbal products like St John's Wort. Don't take the liquid form if you're on disulfiram (for alcohol dependence) — it contains alcohol.",
+   465→   865→    interactions:
+   466→   866→      "The main thing to know: avoid alcohol or keep it to a minimum — it can make you more drowsy and worsen mood symptoms. Tell your pharmacist about everything you take, including over-the-counter products, because several common medicines can interact with sertraline. The most dangerous combinations are with other medicines that affect serotonin — your doctor or pharmacist will check for these automatically.",
+   467→   867→  },
+   468→   868→
+   469→   869→  /* ---- Metadata ---- */
+   470→   870→  lastReviewed: "2026-07-13",
+   471→   871→  reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Zoloft label, NICE CG91, APA Practice Guideline"],
+   472→   872→};
+   473→   873→

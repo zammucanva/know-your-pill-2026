@@ -426,3 +426,40 @@ PRODUCTION READINESS SCORE: 92/100
 - Visual Polish: 90/100 (radii standardised, shadows consistent, but some cards still slightly oversized)
 
 VERDICT: Template is production-ready. Migration of remaining 8 drugs can proceed.
+
+---
+Task ID: phase-1-complete-psychiatric-core
+Agent: Main agent (Super Z)
+Task: Phase 1 (Psychiatric Core Library) — Migrate remaining 8 psychiatric medications in 2 batches of 4, with clinically unique content per drug. Template is frozen as KYP Canonical Drug Template v1.0 — no component or architecture changes.
+
+BATCH A (4 drugs):
+- Citalopram (977 lines) — racemic SSRI; QTc dose-dependent prolongation; 40mg cap (20mg elderly); R-enantiomer hERG blockade; 2011 FDA label change; NOT paediatric-approved; omeprazole CYP2C19 interaction
+- Fluvoxamine (1039 lines) — OCD-only FDA indication in US; most potent CYP1A2 inhibitor among SSRIs; tizanidine CONTRAINDICATED; clozapine → reduce to 1/3; caffeine limit 1-2 cups/day; σ1 agonist; most sedating after paroxetine; COVID-19 research
+- Venlafaxine (1036 lines) — SNRI; dose-dependent mechanism (75mg=SERT, 150-225mg=SERT+NET, >300mg=+DAT); HYPERTENSION monitoring signature; WORST discontinuation of any antidepressant (5h half-life + dual withdrawal); ODV/desvenlafaxine active metabolite
+- Duloxetine (1000 lines) — SNRI; BALANCED from dose 1 (not dose-dependent like venlafaxine); 5 FDA indications (MDD, GAD, diabetic neuropathy, fibromyalgia, chronic MSK pain — MOST of any antidepressant); HEPATOTOXICITY signature; less hypertension than venlafaxine; CYP1A2 interaction (AVOID with fluvoxamine)
+
+BATCH B (4 drugs):
+- Bupropion (1052 lines) — NDRI (blocks NET + DAT, NOT SERT); NO sexual dysfunction (signature advantage); weight LOSS; seizures (contraindicated in eating disorders/seizure disorder); smoking cessation (nicotinic ACh antagonist); CYP2D6 inhibitor; morning dosing; no discontinuation syndrome
+- Mirtazapine (1000 lines) — NaSSA (α2 antagonist, NOT reuptake blocker); sedation + weight gain (H1); NO sexual dysfunction (5-HT2C); antiemetic (5-HT3 like ondansetron); INVERSE dose-sedation (15mg MORE sedating than 30mg); rapid onset (days); agranulocytosis; California Rocket Fuel (venlafaxine + mirtazapine)
+- Amitriptyline (1121 lines) — TCA "dirty drug" (SERT+NET+α1+H1+M1+Na+ channels); LETHAL in overdose (#1 antidepressant overdose killer); QRS widening; anticholinergic toxidrome ("blind/mad/red/hot/dry/full"); nortriptyline active metabolite with therapeutic window 50-150 ng/mL; now used MORE for neuropathic pain/migraine than depression; Beers criteria elderly
+- Clomipramine (1148 lines) — TCA; MOST serotonergic TCA (SERT >> NET); ONLY TCA effective for OCD (other TCAs don't work for OCD — key exam fact); desmethylclomipramine metabolite is noradrenergic (becomes SNRI over time); MORE seizure risk than amitriptyline; MORE sexual dysfunction; off-label premature ejaculation; fluvoxamine AVOID (CYP1A2)
+
+VERIFICATION:
+- All 12 drug pages return HTTP 200
+- Lint: 0 errors, 0 warnings
+- Universal search finds all 12 drugs as top results
+- Prev/Next navigation works across all 12 (clomipramine = last, only Previous)
+- Patient Mode hides 8 exam-only sections on all drugs, keeps patient-relevant sections visible
+- Mobile rendering verified at 390×844
+- Each drug has clinically unique content verified (QTc, CYP1A2, dose-dependent SNRI, hepatotoxicity, NDRI/no-sexual, NaSSA/inverse-dose, TCA/overdose, OCD-only)
+- Cross-links between drugs work via Related Drugs section
+- 12,323 total lines of structured medical content across 12 drug files
+
+PHASE 1 COMPLETE. 12 psychiatric medications covering 5 drug classes:
+- SSRIs (6): sertraline, fluoxetine, escitalopram, paroxetine, citalopram, fluvoxamine
+- SNRIs (2): venlafaxine, duloxetine
+- NDRI (1): bupropion
+- NaSSA (1): mirtazapine
+- TCAs (2): amitriptyline, clomipramine
+
+Ready for Phase 2 — Knowledge Layer (Brain Atlas, Neurotransmitter Atlas, Side Effect Library, Disease Hub, Drug Comparison Engine, Clinical Decision Engine, Mechanism Animations).
