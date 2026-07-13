@@ -25,3 +25,4 @@ export * from "./drug-related-drugs";
 export * from "./drug-faq";
 export * from "./drug-knowledge-graph";
 export * from "./drug-references";
+export * from "./drug-prev-next";

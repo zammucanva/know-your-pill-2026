@@ -511,3 +511,19 @@
   33%      { transform: translate(20px, -16px) scale(1.05); }
   66%      { transform: translate(-12px, 18px) scale(0.97); }
 }
+
+/* ============================================================
+   Reduced motion — respect user preference
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .kyp-float, .kyp-drift, .kyp-pulse-dot::before {
+    animation: none !important;
+  }
+}
