@@ -524,6 +524,85 @@ export interface IndianReference {
   url?: string;
 }
 
+/* ============================================================
+   India Layer extensions (platform-wide)
+   ============================================================ */
+
+/** Evidence hierarchy — separates global evidence from Indian practice. */
+export interface EvidenceHierarchy {
+  /** International guidelines (FDA, APA, NICE, etc.) */
+  international: {
+    source: string;
+    recommendation: string;
+  }[];
+  /** Indian guidelines (IPS, NMC, etc.) — or honest note if none exist */
+  indian: {
+    source: string | null;
+    recommendation: string;
+  }[];
+  /** Indian clinical practice — how it's actually done in India */
+  indianClinicalPractice: string;
+}
+
+/** Where this drug is commonly encountered in Indian healthcare. */
+export interface IndianEncounterContext {
+  governmentHospitals: string;
+  privateHospitals: string;
+  medicalColleges: string;
+  primaryCare: string;
+  psychiatryOPD: string;
+}
+
+/** Indian prescription workflow — before / during / follow-up / refer. */
+export interface PrescriptionWorkflow {
+  beforePrescribing: string[];
+  duringTreatment: string[];
+  followUp: string[];
+  whenToRefer: string[];
+}
+
+/** Exam frequency — star rating per Indian examination. */
+export interface ExamFrequency {
+  /** 1-5 stars indicating how frequently this drug is tested */
+  neetPg: 1 | 2 | 3 | 4 | 5;
+  inicet: 1 | 2 | 3 | 4 | 5;
+  mbbsViva: 1 | 2 | 3 | 4 | 5;
+  fmge: 1 | 2 | 3 | 4 | 5;
+}
+
+/** PYQ metadata — concept-level, no copyrighted content. */
+export interface PYQMetadata {
+  exam: "NEET PG" | "INICET" | "FMGE" | "AIIMS" | "JIPMER";
+  year: number;
+  /** Concept tested — not the actual question */
+  concept: string;
+  /** Topic area */
+  topic: string;
+}
+
+/** Indian comparison context — how drugs compare in specific Indian scenarios. */
+export interface IndianComparisonContext {
+  /** Scenario, e.g. "Government setup", "Private psychiatry", "Pregnancy" */
+  scenario: string;
+  /** Which drug is preferred and why */
+  recommendation: string;
+  /** Alternative if first-choice is unsuitable */
+  alternative?: string;
+}
+
+/** Jan Aushadhi availability. */
+export interface JanAushadhiInfo {
+  available: boolean;
+  /** Note about strengths or availability */
+  note?: string;
+}
+
+/** Restructured evidence sources — International vs Indian. */
+export interface EvidenceSources {
+  international: DrugReference[];
+  indian: IndianReference[];
+}
+
 /** Section difficulty tag — shown as a coloured dot next to section headings. */
 export type SectionDifficulty = "mbbs" | "pg" | "resident";
 
@@ -634,6 +713,24 @@ export interface Drug {
   indianReferences?: IndianReference[];
   /** Per-section difficulty mapping for progressive disclosure */
   sectionDifficulty?: Record<string, SectionDifficulty>;
+
+  /* ---- India Layer extensions (platform-wide) ---- */
+  /** Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
+  evidenceHierarchy?: EvidenceHierarchy;
+  /** Where this drug is commonly encountered in Indian healthcare */
+  indianEncounterContext?: IndianEncounterContext;
+  /** Indian prescription workflow: before / during / follow-up / refer */
+  prescriptionWorkflow?: PrescriptionWorkflow;
+  /** Exam frequency star ratings per Indian examination */
+  examFrequency?: ExamFrequency;
+  /** Previous year question metadata (concept-level, no copyrighted content) */
+  pyqMetadata?: PYQMetadata[];
+  /** Indian comparison contexts (govt setup, private, pregnancy, etc.) */
+  indianComparisonContexts?: IndianComparisonContext[];
+  /** Jan Aushadhi availability */
+  janAushadhi?: JanAushadhiInfo;
+  /** Restructured evidence sources (International vs Indian) */
+  evidenceSources?: EvidenceSources;
 
   /* ---- Metadata ---- */
   /** ISO date string — last clinical review */
