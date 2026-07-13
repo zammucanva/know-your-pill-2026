@@ -20,6 +20,8 @@ export const searchIndex: SearchableItem[] = [
     // Build a single high-quality search entry per medication,
     // with comprehensive keywords covering brand names, drug class,
     // indications, neurotransmitters, and common synonyms.
+    // India-first: Indian brand names are included as keywords so
+    // searching "Serta" or "Nexito" finds the right generic drug.
     const keywords = [
       d.genericName,
       ...d.brandNames,
@@ -33,6 +35,8 @@ export const searchIndex: SearchableItem[] = [
       ...(d.drugClass === "ssri"
         ? ["SSRI", "Selective Serotonin Reuptake Inhibitor", "antidepressant"]
         : []),
+      // India-first: add Indian brand names as searchable keywords
+      ...(d.indianPractice?.brands?.map((b) => b.name) ?? []),
     ];
     return [{
       id: `medication-${d.slug}`,
