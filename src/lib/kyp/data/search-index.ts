@@ -4,6 +4,7 @@ import { drugClassList } from "./classes";
 import { brainRegions } from "./brain";
 import { pathways } from "./brain";
 import { sideEffects } from "./side-effects";
+import { drugs } from "./drugs/index";
 
 /**
  * Universal search index — single source of truth for the Spotlight search.
@@ -14,7 +15,36 @@ import { sideEffects } from "./side-effects";
  * feels magical even before we ship a real fuzzy matcher.
  */
 export const searchIndex: SearchableItem[] = [
-  // Substances
+  // Medications (canonical drug pages — Phase 4)
+  ...drugs.flatMap((d) => {
+    // Build a single high-quality search entry per medication,
+    // with comprehensive keywords covering brand names, drug class,
+    // indications, neurotransmitters, and common synonyms.
+    const keywords = [
+      d.genericName,
+      ...d.brandNames,
+      d.drugClassLabel,
+      d.drugClassFullName,
+      ...d.indications.map((i) => i.name),
+      ...d.neurotransmitters,
+      ...d.receptors,
+      ...d.relatedConditions.map((c) => c.name),
+      // Common abbreviations / synonyms for SSRIs
+      ...(d.drugClass === "ssri"
+        ? ["SSRI", "Selective Serotonin Reuptake Inhibitor", "antidepressant"]
+        : []),
+    ];
+    return [{
+      id: `medication-${d.slug}`,
+      title: d.genericName,
+      type: "drug" as const,
+      description: d.tagline,
+      href: `/drugs/${d.slug}`,
+      keywords,
+    }];
+  }),
+
+  // Substances (legacy HTML pages — to be migrated)
   ...substances.map((s) => ({
     id: `substance-${s.id}`,
     title: s.name,

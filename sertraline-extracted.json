@@ -1,0 +1,363 @@
+{
+  "_meta": {
+    "source_files": [
+      "/home/z/my-project/PROJECT-KYP/medicine.html",
+      "/home/z/my-project/PROJECT-KYP/sertraline.css",
+      "/home/z/my-project/PROJECT-KYP/sertraline.js"
+    ],
+    "platform": "KNOW YOUR PILL (KYP)",
+    "page_title": "Sertraline | KNOW YOUR PILL",
+    "page_module_badge": "SSRI demo module",
+    "disclaimer": "Educational support only. Page does not replace advice from a qualified clinician.",
+    "extraction_note": "Source page is patient-friendly and does NOT contain full pharmacology (MAOIs, pimozide, pregnancy category, dose adjustments, black-box specifics, exam pearls, references). Such fields are left null rather than fabricated. Sister SSRI profiles (fluoxetine, escitalopram) are present in sertraline.js and listed under related_drugs."
+  },
+
+  "generic_name": "Sertraline",
+
+  "brand_names": {
+    "zoloft": {
+      "alias_in_code": true,
+      "note": "Listed in sertraline.js `aliases` map (zoloft -> sertraline) for URL ?med=zoloft routing. Not rendered as visible text on the page."
+    }
+  },
+
+  "drug_class": {
+    "label": "SSRI",
+    "full_name": "Selective serotonin reuptake inhibitor",
+    "short_description": "SSRI antidepressant — selective serotonin reuptake inhibitor used in mood and anxiety care.",
+    "hero_target": "SERT"
+  },
+
+  "mechanism_of_action": {
+    "title": "Serotonin signalling at the synapse",
+    "summary": "Sertraline blocks the serotonin transporter (SERT), leaving more serotonin available in the synaptic gap.",
+    "subtitle_context": "A premium visual guide to how sertraline, an SSRI antidepressant, can increase serotonin signalling between neurons over time.",
+    "molecular_target": "SERT (serotonin transporter)",
+    "effect": "Increased serotonin availability in the synaptic cleft -> enhanced serotonergic signalling",
+    "autoreceptor_desensitization_5HT1A": null,
+    "downstream_adaptation": null,
+    "pharmacokinetics": null,
+    "half_life": null,
+    "active_metabolite": null
+  },
+
+  "clinical_indications": {
+    "summary_short": "Depression, anxiety, OCD",
+    "full_phrase": "Prescribed based on symptoms, diagnosis, response, and clinician judgment.",
+    "broad_category": "mood and anxiety care",
+    "specific_indications_listed_on_page": [
+      "Depression",
+      "Anxiety",
+      "OCD (obsessive-compulsive disorder)"
+    ],
+    "indications_not_mentioned_on_page": [
+      "PTSD",
+      "Panic disorder",
+      "Social anxiety disorder",
+      "Premenstrual dysphoric disorder (PMDD)"
+    ]
+  },
+
+  "common_side_effects": {
+    "summary_short": "Nausea, headache, insomnia",
+    "note": "Many early effects are temporary, but persistent symptoms need medical review.",
+    "items": [
+      { "effect": "Nausea", "severity": "Mild to moderate", "badge": "Common" },
+      { "effect": "Headache", "severity": "Mild", "badge": "Temporary" },
+      { "effect": "Insomnia", "severity": "Mild to moderate", "badge": "Common" },
+      { "effect": "Dry mouth", "severity": "Mild", "badge": "Temporary" },
+      { "effect": "Dizziness", "severity": "Mild to moderate", "badge": "Monitor" }
+    ],
+    "effects_not_listed_on_page": [
+      "Sexual dysfunction",
+      "Sweating",
+      "Diarrhoea / GI upset",
+      "Fatigue / somnolence"
+    ]
+  },
+
+  "serious_side_effects": {
+    "serotonin_syndrome": {
+      "present": true,
+      "description": "Urgent symptoms may include fever, confusion, sweating, agitation, tremor, or muscle rigidity."
+    },
+    "overdose_warning": {
+      "present": true,
+      "description": "Seek emergency help for overdose concerns, severe drowsiness, seizure, fainting, or dangerous behavior."
+    },
+    "siadh_hyponatraemia": null,
+    "suicidal_ideation_under_25": null,
+    "bleeding_risk": null,
+    "activation_of_mania_hypomania": null,
+    "seizures": "Mentioned only within overdose context ('seizure')."
+  },
+
+  "contraindications": {
+    "maoi_coadministration": null,
+    "pimozide": null,
+    "known_hypersensitivity": null,
+    "notes": "Page does not enumerate formal contraindications. Only an alcohol-interaction warning is given."
+  },
+
+  "black_box_warnings": {
+    "present": null,
+    "suicidality_under_25": null,
+    "details": "Page does not include a boxed/black-box warning section."
+  },
+
+  "drug_interactions": {
+    "alcohol": {
+      "present": true,
+      "description": "Alcohol can worsen sleepiness, mood symptoms, judgment, and medication tolerability."
+    },
+    "maois": null,
+    "tramadol": null,
+    "triptans": null,
+    "linezolid": null,
+    "warfarin": null,
+    "nsaids_aspirin": null,
+    "st_johns_wort": null,
+    "other_serotonergic_agents": "Hinted generically inside the serotonin-syndrome warning context but no specific drugs named."
+  },
+
+  "pregnancy_and_lactation": {
+    "category": null,
+    "pregnancy_note": null,
+    "lactation_note": null,
+    "notes": "Page does not address pregnancy/lactation."
+  },
+
+  "renal_and_hepatic_dose_adjustments": {
+    "renal": null,
+    "hepatic": null,
+    "notes": "Page does not address dose adjustments."
+  },
+
+  "monitoring_parameters": {
+    "formal_labs": null,
+    "clinical_review_at_week_6": "Doctors may review response, dose, side effects, and next steps at the Week 6 clinical review point.",
+    "discontinuation_monitoring": "Withdrawal-like symptoms or symptom return can occur if stopped without guidance.",
+    "notes": "No serum sodium / LFT / ECG monitoring listed."
+  },
+
+  "onset_of_action_timeline": {
+    "typical_onset_summary": "Several weeks (page icon: '4-6').",
+    "onset_note": "Some early shifts may happen sooner, while mood benefit often builds gradually.",
+    "stages": [
+      {
+        "phase": "First days",
+        "title": "Body adapts",
+        "description": "Side effects can appear before clear mood improvement."
+      },
+      {
+        "phase": "Week 2",
+        "title": "Early shifts",
+        "description": "Sleep, appetite, energy, or anxiety may begin to change."
+      },
+      {
+        "phase": "Week 4",
+        "title": "Noticeable benefit",
+        "description": "Some people start to feel steadier emotional regulation."
+      },
+      {
+        "phase": "Week 6",
+        "title": "Clinical review",
+        "description": "Doctors may review response, dose, side effects, and next steps."
+      }
+    ]
+  },
+
+  "patient_education_points": [
+    "Some early changes can happen within 1 to 2 weeks, but clearer mood benefit often takes 4 to 6 weeks or longer.",
+    "Nausea, headache, sleep change, or restlessness may appear before mood benefit. Persistent or severe effects should be discussed with a clinician.",
+    "Sertraline is not considered addictive in the way alcohol, opioids, or benzodiazepines can be, but stopping suddenly can still cause uncomfortable discontinuation symptoms.",
+    "Do not stop suddenly without medical guidance. A clinician may recommend a gradual taper depending on dose, duration, and symptoms.",
+    "Alcohol can worsen sleepiness, mood symptoms, judgment, and medication tolerability.",
+    "Seek emergency help for overdose concerns, severe drowsiness, seizure, fainting, or dangerous behavior.",
+    "Recognise serotonin syndrome urgency signs: fever, confusion, sweating, agitation, tremor, or muscle rigidity."
+  ],
+
+  "clinical_pearls": {
+    "present": false,
+    "notes": "Page is patient-oriented; no MBBS/NEET-PG high-yield pearls are written."
+  },
+
+  "exam_pearls": {
+    "present": false,
+    "notes": "Page is patient-oriented; no exam-specific facts are written."
+  },
+
+  "references": {
+    "present": false,
+    "list": [],
+    "notes": "No Katzung / Goodman & Gilman / Lippincott / FDA label references cited on the page."
+  },
+
+  "related_drugs": {
+    "sister_ssri_profiles_in_same_js_module": [
+      {
+        "name": "Fluoxetine",
+        "brand_alias": "Prozac",
+        "classLabel": "SSRI",
+        "target": "SERT",
+        "onset_icon": "2-6",
+        "mechanism_title": "Long-acting serotonin reuptake inhibition",
+        "mechanism_text": "Fluoxetine blocks serotonin reuptake through SERT, helping serotonin remain available for receptor signalling in the synapse.",
+        "distinguishing_note_in_code": "Profile highlights long-lasting active metabolite and longer dwell-time vs other SSRIs."
+      },
+      {
+        "name": "Escitalopram",
+        "brand_alias": "Lexapro",
+        "classLabel": "SSRI",
+        "target": "SERT",
+        "onset_icon": "2-6",
+        "mechanism_title": "Selective serotonin transporter blockade",
+        "mechanism_text": "Escitalopram selectively blocks SERT, reducing serotonin reuptake so signalling can continue longer in the synaptic gap."
+      }
+    ],
+    "other_ssris_not_present_on_page": ["Paroxetine", "Citalopram", "Fluvoxamine"],
+    "notes": "sertraline.js defines three SSRI demo profiles (sertraline, fluoxetine, escitalopram) plus a brand alias map (zoloft, prozac, lexapro)."
+  },
+
+  "related_conditions": {
+    "listed": ["Depression", "Anxiety", "OCD"],
+    "not_listed_but_indicated_for_sertraline_clinically": ["PTSD", "Panic disorder", "Social anxiety disorder", "PMDD"],
+    "notes": "Only mood/anxiety/OCD appear on page."
+  },
+
+  "faq_items": [
+    {
+      "question": "How long does sertraline take to work?",
+      "answer": "Some early changes can happen within 1 to 2 weeks, but clearer mood benefit often takes 4 to 6 weeks or longer.",
+      "default_open": true
+    },
+    {
+      "question": "Can side effects happen first?",
+      "answer": "Yes. Nausea, headache, sleep change, or restlessness may appear before mood benefit. Persistent or severe effects should be discussed with a clinician.",
+      "default_open": false
+    },
+    {
+      "question": "Is it addictive?",
+      "answer": "Sertraline is not considered addictive in the way alcohol, opioids, or benzodiazepines can be, but stopping suddenly can still cause uncomfortable discontinuation symptoms.",
+      "default_open": false
+    },
+    {
+      "question": "Can I stop suddenly?",
+      "answer": "Do not stop suddenly without medical guidance. A clinician may recommend a gradual taper depending on dose, duration, and symptoms.",
+      "default_open": false
+    }
+  ],
+
+  "safety_warnings_rendered_on_page": [
+    {
+      "title": "Alcohol interactions",
+      "description": "Alcohol can worsen sleepiness, mood symptoms, judgment, and medication tolerability."
+    },
+    {
+      "title": "Serotonin syndrome",
+      "description": "Urgent symptoms may include fever, confusion, sweating, agitation, tremor, or muscle rigidity."
+    },
+    {
+      "title": "Overdose warning",
+      "description": "Seek emergency help for overdose concerns, severe drowsiness, seizure, fainting, or dangerous behavior."
+    },
+    {
+      "title": "Stopping suddenly",
+      "description": "Stopping without guidance can cause withdrawal-like symptoms or symptom return."
+    }
+  ],
+
+  "animation_steps_and_mechanism_sequence": {
+    "animation_section_id": "mechanism",
+    "animation_title": "Serotonin signalling at the synapse",
+    "animation_subtitle": "Sertraline blocks the serotonin transporter, leaving more serotonin available in the synaptic gap.",
+    "toolbar_label": "Animated synapse model (HTML, CSS, vanilla JavaScript)",
+    "replay_button_id": "replayAnimation",
+    "stage_id": "synapseStage",
+    "visual_components": [
+      {
+        "component": "Sending neuron (neuron-left)",
+        "role": "Presynaptic neuron releasing serotonin; contains neuron-body and axon."
+      },
+      {
+        "component": "Synapse gap",
+        "role": "Synaptic cleft containing serotonin particles, the SERT transporter, and stage labels."
+      },
+      {
+        "component": "Receiving neuron (neuron-right)",
+        "role": "Postsynaptic neuron with dendrite, four receptors (receptor-a..d), and neuron-body."
+      },
+      {
+        "component": "Serotonin particles (particle-one .. particle-six)",
+        "role": "Six serotonin molecules animated across the cleft via the `serotoninFlow` keyframes.",
+        "animation": "serotoninFlow 3.6s ease-in-out infinite"
+      },
+      {
+        "component": "SERT transporter (blocked)",
+        "role": "Serotonin transporter shown as blocked (crossed-out indicator `.transporter i`) — visually conveys reuptake inhibition.",
+        "marker": "Rose/red box labelled 'SERT' with a diagonal crossed bar"
+      },
+      {
+        "component": "Postsynaptic receptors (receptor-a..d)",
+        "role": "Four receptors on the receiving neuron that glow to indicate active serotonin signalling.",
+        "animation": "receptorGlow 2.4s ease-in-out infinite"
+      }
+    ],
+    "stage_labels": [
+      "Serotonin particles (label-serotonin)",
+      "Blocked transporter (label-blocked)",
+      "Glowing receptors (label-receptor)"
+    ],
+    "keyframes_described_in_css": {
+      "serotoninFlow": {
+        "duration": "3.6s",
+        "easing": "ease-in-out",
+        "iteration": "infinite",
+        "description": "Serotonin particles drift left->right across the cleft, scaling up at ~45% then settling toward the postsynaptic side."
+      },
+      "receptorGlow": {
+        "duration": "2.4s",
+        "easing": "ease-in-out",
+        "iteration": "infinite",
+        "description": "Postsynaptic receptors pulse/scale and intensify their cyan glow to depict receptor activation."
+      },
+      "miniSignal": {
+        "duration_note": "Used by hero mini-synapse (5 particles).",
+        "description": "Small serotonin signals travel left->right in the hero preview card."
+      },
+      "pulseCore": "Hero signal-core scale/rotate pulse.",
+      "scanSpin": "Hero scan-ring continuous 360deg rotation.",
+      "floatParticle": "Background field particles floating.",
+      "gradientShift": "Background gradient drift.",
+      "labelGlow": "Stage labels gentle vertical bob.",
+      "navEnter": "Navigation entry animation."
+    },
+    "mechanism_sequence_intended": [
+      "1. Serotonin is released from the sending (presynaptic) neuron into the synaptic gap.",
+      "2. Serotonin particles flow across the cleft toward postsynaptic receptors.",
+      "3. The SERT transporter (which would normally reuptake serotonin back into the presynaptic neuron) is BLOCKED by sertraline.",
+      "4. With reuptake blocked, more serotonin remains in the synaptic gap.",
+      "5. Postsynaptic receptors receive stronger/prolonged serotonergic signalling (depicted by the glowing receptors).",
+      "6. Over weeks, downstream adaptive changes produce the clinical mood/anxiety benefit seen in the timeline section."
+    ],
+    "interaction_affordance": "Replay Animation button temporarily toggles `.is-replaying` on #synapseStage (clears animation-name) to restart the cycle."
+  },
+
+  "page_structure_sections": [
+    { "id": "top",        "role": "page anchor / top" },
+    { "id": "siteNavbar", "role": "header / navigation" },
+    { "id": "facts",      "role": "Quick facts fact-grid (4 cards)" },
+    { "id": "mechanism",  "role": "Mechanism animation section" },
+    { "id": "timeline",   "role": "Timeline of effects (4 cards)" },
+    { "id": "side-effects", "role": "Common side effects grid (5 cards)" },
+    { "id": "safety",     "role": "Safety warnings (4 cards)" },
+    { "id": "faq",        "role": "FAQ accordion (4 items)" }
+  ],
+
+  "quick_facts_grid": [
+    { "icon": "Rx",  "label": "Drug class",            "value": "SSRI antidepressant",        "text": "Selective serotonin reuptake inhibitor used in mood and anxiety care." },
+    { "icon": "Use", "label": "Common uses",           "value": "Depression, anxiety, OCD",   "text": "Prescribed based on symptoms, diagnosis, response, and clinician judgment." },
+    { "icon": "4-6", "label": "Typical onset",         "value": "Several weeks",              "text": "Some early shifts may happen sooner, while mood benefit often builds gradually." },
+    { "icon": "SE",  "label": "Common side effects",   "value": "Nausea, headache, insomnia", "text": "Many early effects are temporary, but persistent symptoms need medical review." }
+  ]
+}

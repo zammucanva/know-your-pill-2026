@@ -15,3 +15,4 @@ export * from "./brain";
 export * from "./side-effects";
 export * from "./platform";
 export * from "./search-index";
+export * from "./drugs/index";

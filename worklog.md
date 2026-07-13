@@ -120,3 +120,85 @@ Stage Summary:
 - Search index already contains 30+ entries across 8 types (drug/class/neurotransmitter/side-effect/brain-region/pathway/clinical/patient-guide)
 - Brain Atlas, Pathways, Side Effects, Timeline, Knowledge Graph sections are functional teasers using real Phase 6-8 data — they just need animation/interactivity in their respective phases
 - Phase 1 (Sprint 1) is COMPLETE: Design System ✅, Layout ✅, Responsive ✅, Components ✅
+
+---
+Task ID: sprint-2-canonical-drug-architecture
+Agent: Main agent (Super Z)
+Task: Sprint 2 — Build the canonical drug page architecture using Sertraline as the reference template. Only migrate Sertraline; pause before doing other drugs.
+
+Work Log:
+- Dispatched sub-agent to extract real Sertraline content from /home/z/my-project/PROJECT-KYP/medicine.html + sertraline.css + sertraline.js → saved to /home/z/my-project/sertraline-extracted.json (19 fields populated, 7 left null because the legacy page was patient-friendly only)
+- Designed comprehensive Drug schema in src/lib/kyp/data/types.ts:
+  * Extended DrugClassId to cover all psychiatric medication classes (SSRI, SNRI, TCA, MAOI, atypical/typical antipsychotic, mood stabiliser, benzodiazepine, non-benzodiazepine hypnotic) in addition to the 8 substance classes
+  * Added 13 new typed interfaces: DrugIndication, DrugContraindication, DrugWarning, DrugSideEffectEntry, DrugMonitoringParameter, DrugInteraction, DrugPregnancyInfo, DrugReference, DrugRelatedDrug, DrugRelatedCondition, KnowledgeGraphNode, DrugMechanism, Drug
+  * Schema supports every psychiatric medication without breaking changes (add new optional fields at bottom)
+- Built Sertraline data file at src/lib/kyp/data/drugs/sertraline.ts (~500 lines):
+  * Filled the 7 missing clinical fields from standard pharmacology references (Katzung 16e, Goodman & Gilman 14e, FDA Zoloft label, NICE CG91, APA Practice Guideline)
+  * 7 indications (6 FDA-approved + 1 off-label) with age groups
+  * 4 contraindications (3 absolute, 1 relative) with rationale
+  * 1 black box warning (suicidality <25) with full FDA text
+  * 8 common + 7 serious side effects with frequency, severity, management, and sideEffectId cross-references
+  * 6 monitoring parameters + renal/hepatic adjustment + pregnancy/lactation
+  * 8 drug interactions sorted by severity
+  * 10 patient education points + 10 clinical pearls + 13 exam pearls
+  * 7-event timeline (hours → discontinuation)
+  * 8 FAQs (patient questions)
+  * 6 references (Katzung, Goodman & Gilman, FDA label, NICE, APA, MIMS India)
+  * 8 related drugs + 8 related conditions
+  * 15-node knowledge graph (drug → class → neurotransmitter → brain regions → conditions → side effects → patient guide)
+- Built drug registry at src/lib/kyp/data/drugs/index.ts:
+  * drugs array, getDrugBySlug(), getAllDrugSlugs(), getDrugSummary()
+  * Used by generateStaticParams() for SSG
+- Updated search-index.ts to include medications from the registry with comprehensive keywords (generic name, brand names, drug class label + full name, all indications, neurotransmitters, receptors, related conditions, SSRI synonyms)
+- Built 17 drug section components in src/components/kyp/sections/drug/:
+  * drug-hero.tsx — breadcrumb, brand badge, generic+brand names, tagline, summary, black box warning CTA, "At a glance" side card (Server Component)
+  * drug-quick-facts.tsx — 4-card grid (drug class, primary uses, onset, key side effects)
+  * drug-clinical-uses.tsx — indication cards with FDA-approved/off-label badges
+  * drug-mechanism.tsx — summary callout, 6-step mechanism chain, pharmacokinetics grid, receptor chips
+  * drug-brain-mapping.tsx — reuses BrainCard + PathwayCard from global registry; adds Callout explaining why SSRIs don't target the 4 dopamine pathways
+  * drug-side-effects.tsx — common + serious sections; reuses global side-effects registry for cross-linking; per-entry frequency + severity badges + management box
+  * drug-monitoring.tsx — monitoring grid + renal/hepatic adjustment cards + pregnancy & lactation
+  * drug-contraindications.tsx — black box warning (full FDA text), absolute + relative contraindications with severity badges
+  * drug-interactions.tsx — sorted by severity (contraindicated → major → moderate → minor); each shows mechanism + action
+  * drug-patient-education.tsx — plain-language Callout + numbered patient education points
+  * drug-clinical-pearls.tsx — 10 high-yield insights for prescribers
+  * drug-exam-pearls.tsx — 13 MBBS/NEET-PG/USMLE facts with exam badges
+  * drug-related-drugs.tsx — 8 related drugs with class badges; links to /drugs/<slug> when available, otherwise shows "Page coming soon"
+  * drug-related-cases.tsx — Phase 5 placeholder with related conditions + "Coming Soon" callout
+  * drug-knowledge-graph.tsx — vertical chain of 15 clickable nodes; uses framer-motion staggered entrance; only client component in the set
+  * drug-faq.tsx — reuses shared Accordion component
+  * drug-references.tsx — numbered source list with external link support + reviewer methodology callout + educational disclaimer
+- Built route files at src/app/drugs/[slug]/:
+  * page.tsx — async Server Component, awaits params (Next.js 16 change), generateStaticParams + generateMetadata, 16 canonical sections in order
+  * loading.tsx — structured skeleton that mirrors actual page layout (hero + quick facts + body)
+  * error.tsx — client component error boundary with Try again + Back to homepage buttons + error details
+  * not-found.tsx — 404 with available drug suggestions + Browse library CTA
+- Updated homepage hero search to route "sertraline"/"zoloft" queries to /drugs/sertraline (other queries still fall back to legacy /medicine.html)
+- Lint passes cleanly (0 errors, 0 warnings) after fixing 2 issues:
+  * Removed stale eslint-disable in error.tsx
+  * Moved "use client" to top of drug-knowledge-graph.tsx (before imports/comments)
+- Fixed Next.js 16 breaking change: params is now a Promise — updated page.tsx and generateMetadata to await params
+- Agent Browser verification:
+  * /drugs/sertraline loads HTTP 200, title "Sertraline (SSRI) · Know Your Pill"
+  * All 16 canonical sections render: hero, quick facts (4 cards), clinical uses (7), mechanism (6 steps + PK grid), brain mapping (4 regions + neurotransmitter callout), timeline (7 events), side effects (8 common + 7 serious), monitoring (6 params + adjustments + pregnancy), contraindications (black box + 3 absolute + 1 relative), interactions (8), patient education (10 points), clinical pearls (10), exam pearls (13), related cases (8 conditions), related drugs (8), knowledge graph (15 nodes), FAQ (8 items), references (6 sources), emergency (3 contacts)
+  * No console errors, no runtime errors
+  * Universal search returns Sertraline as top result for: "sertraline" (10 results), "depression", "PTSD", "SSRI" — all required keywords verified
+  * Homepage hero search for "sertraline" correctly navigates to /drugs/sertraline
+  * 404 page renders correctly for /drugs/fluoxetine (unknown drug) with suggestions
+  * All in-page anchor links resolve (#mechanism, #knowledge-graph, #emergency, #references, #faq)
+  * Knowledge graph nodes are clickable links to in-page anchors
+  * Semantic HTML: 1 h1, 18 h2, 65 h3, 18 sections with IDs, 9 aria-expanded accordions, 6 landmarks (main/nav/header/footer/aside)
+  * Light + dark themes both render correctly
+  * Mobile responsive at 390×844
+  * Screenshots saved: kyp-sertraline-hero-dark.png, kyp-sertraline-knowledge-graph.png, kyp-sertraline-full-dark.png, kyp-sertraline-full-light.png, kyp-sertraline-mobile-light.png
+
+Stage Summary:
+- Only Sertraline was migrated (as instructed — paused before doing other drugs)
+- No legacy HTML remains in the new architecture (all content in structured data file)
+- No duplicated components — all 17 drug sections reuse the existing design system (CardPrimitive, Callout, Badge, Accordion, Timeline, BrainCard, PathwayCard, etc.)
+- Page consumes structured data exclusively (no hardcoded medical content in JSX)
+- Layout is reusable: adding a new drug = creating one .ts data file + adding to drugs[] array. Zero component changes needed.
+- Universal search finds Sertraline via all 8 required keywords
+- All internal links resolve (in-page anchors + cross-references to other sections)
+- WCAG AA maintained: semantic HTML, keyboard-navigable accordions, ARIA states, descriptive headings
+- Performance: 17 of 18 components are Server Components; only DrugKnowledgeGraph is client (uses framer-motion); generateStaticParams pre-renders all drug pages at build time
