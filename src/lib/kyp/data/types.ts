@@ -389,16 +389,27 @@ export interface Drug {
   /** Full name — e.g. "Selective Serotonin Reuptake Inhibitor" */
   drugClassFullName: string;
 
+  /* ---- Learning path (NEW — breadcrumb) ---- */
+  /** Hierarchical breadcrumb from broad to specific, e.g. ["Psychiatry", "Antidepressants", "SSRIs", "Sertraline"] */
+  learningPath: string[];
+
   /* ---- Hero / summary ---- */
   tagline: string;
   summary: string;
 
-  /* ---- Learning objectives (NEW) ---- */
+  /** Estimated reading time (NEW) — e.g. "18 min read" */
+  estimatedReadTime: string;
+  /** Yield rating (NEW) — how exam-relevant this drug is */
+  yieldRating: "low" | "medium" | "high";
+  /** Difficulty level this drug is most relevant for (NEW) */
+  primaryAudience: DifficultyLevel;
+
+  /* ---- Learning objectives ---- */
   learningObjectives: string[];
 
   /* ---- Mechanism ---- */
   mechanism: DrugMechanism;
-  /** Visual flow diagram for the mechanism section (NEW) */
+  /** Visual flow diagram for the mechanism section */
   mechanismFlow: MechanismFlow;
 
   /* ---- Neuroscience mapping ---- */
@@ -430,15 +441,15 @@ export interface Drug {
   patientEducationPoints: string[];
   clinicalPearls: string[];
   examPearls: string[];
-  /** Mnemonics and memory tricks for exam preparation (NEW) */
+  /** Mnemonics and memory tricks for exam preparation */
   memoryTricks: MemoryTrick[];
-  /** One-page revision summary (NEW) */
+  /** One-page revision summary */
   highYieldSummary: string[];
 
-  /* ---- Clinical case (NEW) ---- */
-  clinicalCase: ClinicalCase;
+  /* ---- Clinical cases (plural — supports multiple: adult, paediatric, geriatric, pregnancy, emergency, psychiatry) ---- */
+  clinicalCases: ClinicalCase[];
 
-  /* ---- Comparison tables (NEW) ---- */
+  /* ---- Comparison tables ---- */
   comparisonTables: DrugComparisonTable[];
 
   /* ---- Timeline ---- */
@@ -448,7 +459,7 @@ export interface Drug {
   faqs: FAQItem[];
 
   /* ---- References & related ---- */
-  /** Categorised references (NEW — replaces flat references array) */
+  /** Categorised references */
   references: CategorisedReferences;
   relatedDrugs: DrugRelatedDrug[];
   relatedConditions: DrugRelatedCondition[];
@@ -456,7 +467,7 @@ export interface Drug {
   /* ---- Knowledge graph ---- */
   knowledgeGraph: KnowledgeGraphNode[];
 
-  /* ---- Patient mode (NEW) ---- */
+  /* ---- Patient mode (simplified content for patient audience) ---- */
   patientMode: PatientModeContent;
 
   /* ---- Metadata ---- */
@@ -465,3 +476,89 @@ export interface Drug {
   /** Optional list of reviewers / sources consulted */
   reviewers?: string[];
 }
+
+/* ============================================================
+   Difficulty levels + progressive disclosure (Sprint 4)
+   ============================================================ */
+
+export type DifficultyLevel = "patient" | "medical" | "resident" | "clinician";
+
+export interface DifficultyMeta {
+  id: DifficultyLevel;
+  label: string;
+  description: string;
+}
+
+export const difficultyLevels: DifficultyMeta[] = [
+  { id: "patient", label: "Patient", description: "Plain language. No jargon. What you need to know to take your medicine safely." },
+  { id: "medical", label: "Medical Student", description: "Full clinical detail. MBBS / NEET-PG level. Mechanism, pearls, exam facts." },
+  { id: "resident", label: "Resident", description: "Postgraduate level. Deeper reasoning, case selection, troubleshooting." },
+  { id: "clinician", label: "Clinician", description: "Practising psychiatrist. Latest evidence, interactions, edge cases." },
+];
+
+/**
+ * Progressive disclosure tiers.
+ * Each tier is a collapsible group of sections. The Patient difficulty level
+ * shows only Core Learning + selected Clinical Practice sections.
+ */
+export type DisclosureTier = "core" | "advanced" | "clinical" | "exam";
+
+export interface DisclosureTierMeta {
+  id: DisclosureTier;
+  label: string;
+  description: string;
+  /** Section IDs that belong to this tier */
+  sectionIds: string[];
+  /** Whether this tier is visible in Patient mode */
+  visibleInPatientMode: boolean;
+}
+
+/**
+ * The canonical 4-tier progressive disclosure structure.
+ * Used by every drug page. Section IDs match the IDs in page.tsx.
+ */
+export const disclosureTiers: DisclosureTierMeta[] = [
+  {
+    id: "core",
+    label: "Core Learning",
+    description: "Start here — the essential mental model.",
+    sectionIds: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline"],
+    visibleInPatientMode: true,
+  },
+  {
+    id: "advanced",
+    label: "Advanced Learning",
+    description: "Deeper neuroscience & clinical context.",
+    sectionIds: ["neural-pathways", "clinical-uses", "side-effects", "monitoring"],
+    visibleInPatientMode: true, // side effects + monitoring + clinical uses are patient-relevant
+  },
+  {
+    id: "clinical",
+    label: "Clinical Practice",
+    description: "Prescribing, contraindications, cases, comparisons.",
+    sectionIds: ["contraindications", "interactions", "patient-education", "clinical-pearls", "clinical-case", "comparison", "related-drugs"],
+    visibleInPatientMode: true, // patient education + contraindications are patient-relevant
+  },
+  {
+    id: "exam",
+    label: "Exam Revision",
+    description: "High-yield facts, mnemonics, one-page summary.",
+    sectionIds: ["exam-pearls", "memory-tricks", "high-yield-summary", "faq", "references"],
+    visibleInPatientMode: false, // hidden from patients
+  },
+];
+
+/**
+ * Sections hidden in Patient mode (regardless of tier).
+ * These are too technical for patients and would cause cognitive overload.
+ */
+export const hiddenInPatientMode: string[] = [
+  "neural-pathways",      // too technical
+  "clinical-pearls",      // prescriber-focused
+  "clinical-case",        // clinical reasoning
+  "comparison",           // drug selection reasoning
+  "exam-pearls",          // exam-only
+  "memory-tricks",        // exam-only
+  "high-yield-summary",   // exam-only
+  "references",           // academic
+];

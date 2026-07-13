@@ -1,7 +1,8 @@
 import * as React from "react";
-import { Pill, AlertTriangle, Clock, ShieldCheck } from "lucide-react";
+import { Pill, AlertTriangle, Clock, ShieldCheck, Star, Zap } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Badge } from "@/components/kyp/ui/badge";
+import { LearningPath } from "@/components/kyp/ui/learning-path";
 import { drugClasses } from "@/lib/kyp/data";
 import type { Drug } from "@/lib/kyp/data";
 import { cn } from "@/lib/utils";
@@ -10,18 +11,26 @@ import { cn } from "@/lib/utils";
  * DrugHero — the canonical hero for every drug page.
  *
  * Server Component — no client interactivity needed.
- * Renders: brand mark, drug class badge, generic + brand names,
- * tagline, summary, key meta (last reviewed, drug class).
+ * Renders: learning path breadcrumb, brand mark, drug class badge,
+ * generic + brand names, tagline, summary, read time + difficulty +
+ * yield badges, key meta (last reviewed, drug class).
  */
 interface DrugHeroProps {
   drug: Drug;
 }
 
+const yieldBadgeVariant = {
+  low: { variant: "outline" as const, label: "Low Yield" },
+  medium: { variant: "warning" as const, label: "Medium Yield" },
+  high: { variant: "neural" as const, label: "★ High Yield" },
+};
+
 export function DrugHero({ drug }: DrugHeroProps) {
   const drugClass = drugClasses[drug.drugClass];
+  const ybv = yieldBadgeVariant[drug.yieldRating];
 
   return (
-    <section className="relative overflow-hidden pt-28 pb-12 sm:pt-32 sm:pb-16">
+    <section id="top" className="relative overflow-hidden pt-28 pb-12 sm:pt-32 sm:pb-16">
       {/* Ambient decoration */}
       <div className="pointer-events-none absolute inset-0 kyp-grid-bg opacity-50" aria-hidden />
       <div className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-brand/20 blur-3xl kyp-drift" aria-hidden />
@@ -32,20 +41,10 @@ export function DrugHero({ drug }: DrugHeroProps) {
       />
 
       <Container className="relative">
-        {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="mb-6">
-          <ol className="flex items-center gap-1.5 text-caption text-muted-foreground">
-            <li>
-              <a href="/" className="hover:text-brand">Home</a>
-            </li>
-            <li aria-hidden>/</li>
-            <li>
-              <a href="/#library" className="hover:text-brand">Medications</a>
-            </li>
-            <li aria-hidden>/</li>
-            <li className="font-medium text-foreground">{drug.genericName}</li>
-          </ol>
-        </nav>
+        {/* Learning path breadcrumb (NEW) */}
+        <div className="mb-6">
+          <LearningPath path={drug.learningPath} />
+        </div>
 
         <div className="grid items-start gap-10 lg:grid-cols-[1.5fr_1fr]">
           {/* Main copy */}
@@ -57,6 +56,25 @@ export function DrugHero({ drug }: DrugHeroProps) {
               </Badge>
               <span className="text-caption text-muted-foreground">
                 {drug.drugClassFullName}
+              </span>
+            </div>
+
+            {/* Read time + difficulty + yield badges (NEW) */}
+            <div className="mt-3 flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-card/60 px-2.5 py-1 text-xs font-medium text-muted-foreground">
+                <Clock className="h-3 w-3" />
+                {drug.estimatedReadTime}
+              </span>
+              <Badge variant={ybv.variant} size="sm">
+                {drug.yieldRating === "high" && <Star className="h-2.5 w-2.5" />}
+                {ybv.label}
+              </Badge>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-card/60 px-2.5 py-1 text-xs font-medium text-muted-foreground">
+                <Zap className="h-3 w-3" />
+                {drug.primaryAudience === "patient" ? "Patient level" :
+                 drug.primaryAudience === "medical" ? "MBBS / NEET-PG" :
+                 drug.primaryAudience === "resident" ? "Resident level" :
+                 "Clinician level"}
               </span>
             </div>
 

@@ -1,5 +1,8 @@
 import type { Drug } from "../types";
 import { sertraline } from "./sertraline";
+import { fluoxetine } from "./fluoxetine";
+import { escitalopram } from "./escitalopram";
+import { paroxetine } from "./paroxetine";
 
 /**
  * Drug registry.
@@ -11,7 +14,7 @@ import { sertraline } from "./sertraline";
  * The route /app/drugs/[slug]/page.tsx reads from this registry.
  */
 
-export const drugs: Drug[] = [sertraline];
+export const drugs: Drug[] = [sertraline, fluoxetine, escitalopram, paroxetine];
 
 /** Slug → Drug lookup. Returns undefined if not found. */
 export function getDrugBySlug(slug: string): Drug | undefined {

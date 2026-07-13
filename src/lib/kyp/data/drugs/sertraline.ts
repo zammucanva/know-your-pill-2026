@@ -24,10 +24,16 @@ export const sertraline: Drug = {
   drugClassLabel: "SSRI",
   drugClassFullName: "Selective Serotonin Reuptake Inhibitor",
 
+  /* ---- Learning path (breadcrumb) ---- */
+  learningPath: ["Psychiatry", "Antidepressants", "SSRIs", "Sertraline"],
+
   /* ---- Hero / summary ---- */
   tagline: "A selective serotonin reuptake inhibitor used across mood, anxiety, and obsessive-compulsive disorders.",
   summary:
     "Sertraline blocks the serotonin transporter (SERT) at the presynaptic membrane, increasing serotonin availability in the synaptic cleft. Over 2–6 weeks, downstream neuroadaptive changes — including 5-HT1A autoreceptor desensitisation and increased BDNF expression in the hippocampus — produce the clinical antidepressant and anxiolytic effects. It is the most widely prescribed SSRI in the United States and is FDA-approved for six distinct indications across paediatric and adult populations.",
+  estimatedReadTime: "18 min read",
+  yieldRating: "high",
+  primaryAudience: "medical",
 
   /* ---- Learning objectives ---- */
   learningObjectives: [
@@ -474,8 +480,9 @@ export const sertraline: Drug = {
     "Discontinuation: taper over ≥4 weeks. Fluoxetine self-tapers (long half-life) — can substitute at end of taper.",
   ],
 
-  /* ---- Clinical case (real, not placeholder) ---- */
-  clinicalCase: {
+  /* ---- Clinical cases (plural — supports multiple cases per drug) ---- */
+  clinicalCases: [
+    {
     title: "First-episode depression in a 28-year-old woman",
     presentation:
       "A 28-year-old woman presents with 8 weeks of low mood, anhedonia, early-morning awakening, and 4 kg weight loss after a relationship breakdown.",
@@ -498,7 +505,8 @@ export const sertraline: Drug = {
       "The 6-week review point is critical: if PHQ-9 reduction is <30%, increase the dose; if <50% at 12 weeks, consider switching or augmenting.",
       "Continue treatment for 6–12 months AFTER remission for a first episode — stopping earlier dramatically increases relapse risk.",
     ],
-  },
+    },
+  ],
 
   /* ---- Comparison tables ---- */
   comparisonTables: [
@@ -767,16 +775,19 @@ export const sertraline: Drug = {
   relatedDrugs: [
     {
       name: "Fluoxetine",
+      slug: "fluoxetine",
       drugClass: "SSRI",
       relationship: "Same class. Longest half-life (1–4 days with active metabolite) → mildest discontinuation syndrome. Only SSRI approved for paediatric depression (≥8 yrs) and bulimia. More activating — better for lethargic depression.",
     },
     {
       name: "Escitalopram",
+      slug: "escitalopram",
       drugClass: "SSRI",
       relationship: "Same class. S-enantiomer of citalopram. Lowest CYP interaction profile — preferred in patients on complex regimens. QTc prolongation at higher doses (>20 mg) — avoid in long-QT.",
     },
     {
       name: "Paroxetine",
+      slug: "paroxetine",
       drugClass: "SSRI",
       relationship: "Same class. Shortest half-life (21h) → worst discontinuation syndrome. Most sedating. Strongest CYP2D6 inhibition. Most anticholinergic. Highest risk of weight gain. Best-studied for hot flushes in breast-cancer survivors.",
     },
