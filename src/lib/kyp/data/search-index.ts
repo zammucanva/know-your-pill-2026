@@ -37,6 +37,12 @@ export const searchIndex: SearchableItem[] = [
         : []),
       // India-first: add Indian brand names as searchable keywords
       ...(d.indianPractice?.brands?.map((b) => b.name) ?? []),
+      // India Layer: add CBME competency codes as searchable keywords
+      // so searching "PH7.3" finds the right drug
+      ...(d.cbmeMapping?.competencyCodes ?? []),
+      // India Layer: add exam tags as searchable keywords
+      // so searching "NEET PG SSRI" surfaces relevant drugs
+      ...(d.examFrequency ? ["NEET PG", "INICET", "FMGE", "MBBS"] : []),
     ];
     return [{
       id: `medication-${d.slug}`,

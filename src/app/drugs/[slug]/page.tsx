@@ -27,6 +27,8 @@ import {
   DrugPatientEducation,
   DrugClinicalPearls,
   DrugExamLens,
+  DrugExamFrequency,
+  DrugPYQ,
   DrugMemoryTricks,
   DrugHighYieldSummary,
   DrugClinicalCases,
@@ -35,6 +37,10 @@ import {
   DrugFAQ,
   DrugKnowledgeGraph,
   DrugIndianPractice,
+  DrugEvidenceHierarchy,
+  DrugEncounterContext,
+  DrugPrescriptionWorkflow,
+  DrugIndianComparison,
   DrugReferences,
   DrugPrevNext,
 } from "@/components/kyp/sections/drug";
@@ -229,6 +235,11 @@ export default async function DrugPage({ params }: PageProps) {
           <DrugGuidelineComparison drug={drug} />
         </PatientModeVisibility>
 
+        {/* 13c. Evidence Hierarchy (India Layer) — hidden in Patient mode */}
+        <PatientModeVisibility sectionId="evidence-hierarchy">
+          <DrugEvidenceHierarchy drug={drug} />
+        </PatientModeVisibility>
+
         {/* 14. Drug Interactions */}
         <DrugInteractions drug={drug} />
 
@@ -238,6 +249,16 @@ export default async function DrugPage({ params }: PageProps) {
         {/* 15b. Indian Clinical Practice (India-first) */}
         <DrugIndianPractice drug={drug} />
 
+        {/* 15c. Indian Hospital Encounter (India Layer) */}
+        <PatientModeVisibility sectionId="encounter-context">
+          <DrugEncounterContext drug={drug} />
+        </PatientModeVisibility>
+
+        {/* 15d. Prescription Workflow (India Layer) */}
+        <PatientModeVisibility sectionId="prescription-workflow">
+          <DrugPrescriptionWorkflow drug={drug} />
+        </PatientModeVisibility>
+
         {/* 16. Clinical Pearls — hidden in Patient mode */}
         <PatientModeVisibility sectionId="clinical-pearls">
           <DrugClinicalPearls drug={drug} />
@@ -245,7 +266,14 @@ export default async function DrugPage({ params }: PageProps) {
 
         {/* 17. Exam Lens — hidden in Patient mode */}
         <PatientModeVisibility sectionId="exam-lens">
-          <DrugExamLens drug={drug} />
+          <div>
+            <DrugExamLens drug={drug} />
+            {/* Exam Frequency + PYQ (India Layer) */}
+            <div className="mt-4">
+              <DrugExamFrequency drug={drug} />
+              <DrugPYQ drug={drug} />
+            </div>
+          </div>
         </PatientModeVisibility>
 
         {/* 18. Memory Tricks — hidden in Patient mode */}
@@ -261,6 +289,11 @@ export default async function DrugPage({ params }: PageProps) {
         {/* 20. Comparison Tables — hidden in Patient mode */}
         <PatientModeVisibility sectionId="comparison">
           <DrugComparisonTables drug={drug} />
+        </PatientModeVisibility>
+
+        {/* 20b. Indian Comparison (India Layer) — hidden in Patient mode */}
+        <PatientModeVisibility sectionId="indian-comparison">
+          <DrugIndianComparison drug={drug} />
         </PatientModeVisibility>
 
         {/* 21. Related Drugs — hidden in Patient mode */}

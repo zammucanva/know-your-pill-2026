@@ -1112,6 +1112,163 @@ export const sertraline: Drug = {
     "references": "resident",
   },
 
+  /* ---- India Layer extensions (platform-wide) ---- */
+
+  /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
+  evidenceHierarchy: {
+    international: [
+      { source: "NICE CG91", recommendation: "SSRIs are first-line for moderate-severe depression. Sertraline is commonly chosen due to favourable side-effect profile." },
+      { source: "APA Practice Guideline", recommendation: "SSRI first-line for MDD. Sertraline preferred when drug interactions are a concern (mild CYP2D6 inhibition)." },
+      { source: "FDA", recommendation: "Approved for 6 indications: MDD, OCD, Panic, PTSD, Social Anxiety, PMDD. Black box warning for suicidality <25." },
+      { source: "WHO mhGAP", recommendation: "SSRIs recommended as first-line antidepressants in the Mental Health Gap Action Programme." },
+    ],
+    indian: [
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS guidelines recommend SSRIs as first-line for depression. Sertraline and escitalopram are the most commonly prescribed SSRIs in Indian practice." },
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS concurs with international guidelines — sertraline is preferred in pregnancy and lactation." },
+      { source: null, recommendation: "No dedicated IPS guideline on SSRI monitoring frequency. Current section reflects accepted clinical practice and internationally accepted evidence." },
+    ],
+    indianClinicalPractice:
+      "In Indian practice, sertraline is the most commonly prescribed SSRI alongside escitalopram. It is the default first-choice SSRI in government hospitals under the District Mental Health Programme (DMHP) due to low cost, wide availability, and favourable safety profile. In private practice, it is preferred for patients with comorbid anxiety, in pregnancy/lactation, and in elderly patients. Starting dose is often 25-50mg OD (lower than Western guidelines) to minimise early side effects, particularly given limited follow-up capacity in government settings. PHQ-9 is used in tertiary centres but not routinely in primary care. Family involvement in monitoring is emphasised given the joint family system.",
+  },
+
+  /* Indian encounter context — where you'll see this drug */
+  indianEncounterContext: {
+    governmentHospitals:
+      "First-line SSRI in government hospital psychiatry OPDs. Available through DMHP. Starting dose 25-50mg OD. Monitoring is primarily clinical (symptom-based) due to resource constraints. Jan Aushadhi generic sertraline is commonly dispensed.",
+    privateHospitals:
+      "Preferred SSRI for depression with comorbid anxiety, in pregnancy/lactation, and in elderly. Starting dose 50mg OD, titrated to 100-200mg. PHQ-9 monitoring at 2/4/6/12 weeks. ECG in elderly or cardiac patients. Patient counselling is more detailed.",
+    medicalColleges:
+      "Teaching drug for SSRI pharmacology. Used in pharmacology practicals (prescription writing, patient counselling). Examined in second professional MBBS (pharmacology) and final professional (psychiatry). Commonly featured in NEET PG and INICET questions.",
+    primaryCare:
+      "First-line antidepressant for mild-moderate depression in Indian primary care. GP/family physicians commonly initiate sertraline 50mg OD. Referral to psychiatrist if no response at 6-8 weeks or if severe depression with suicidal ideation.",
+    psychiatryOPD:
+      "Workhorse SSRI in psychiatry OPD. Used for depression, OCD, panic disorder, PTSD, social anxiety disorder, and PMDD. Often combined with CBT. Dose escalation to 200mg for OCD. Augmentation with bupropion or mirtazapine for partial response.",
+  },
+
+  /* Indian prescription workflow */
+  prescriptionWorkflow: {
+    beforePrescribing: [
+      "Screen for bipolar disorder (MDQ questionnaire) — SSRIs can trigger manic switch.",
+      "Assess suicidal ideation — if present, involve family for monitoring and provide Tele-MANAS (14416) number.",
+      "Check for MAOI use in last 14 days — absolute contraindication.",
+      "Review concurrent medications — especially tramadol, triptans, NSAIDs, warfarin, St John's Wort.",
+      "Baseline PHQ-9 score for response monitoring.",
+      "In elderly: check baseline serum sodium (SIADH risk) and consider ECG if cardiac risk factors.",
+      "In women of reproductive age: discuss pregnancy plans — sertraline is the SSRI of choice if pregnancy is possible.",
+      "Counsel about 4-6 week onset — set expectation that side effects precede benefit.",
+    ],
+    duringTreatment: [
+      "Week 1-2: assess tolerability (nausea, insomnia, agitation) and suicidality (especially <25 years).",
+      "Week 2-4: review early response — sleep, appetite, energy often improve before mood.",
+      "Week 4-6: assess response with PHQ-9. If <30% reduction, increase dose.",
+      "Week 6-12: full response assessment. If <50% reduction at 12 weeks, consider augmentation (bupropion/mirtazapine) or switch.",
+      "Monitor for sexual dysfunction — ask directly; patients rarely volunteer it.",
+      "Watch for hyponatraemia in elderly (confusion, headache, seizures).",
+      "Watch for serotonin syndrome if serotonergic drugs are added (tramadol, triptans, linezolid).",
+    ],
+    followUp: [
+      "First follow-up at 2 weeks (tolerability + suicidality).",
+      "Second follow-up at 4 weeks (early response).",
+      "Third follow-up at 6 weeks (dose escalation decision).",
+      "Fourth follow-up at 12 weeks (full response assessment).",
+      "If remission achieved (PHQ-9 <5): continue for 6-12 months for first episode, longer for recurrent.",
+      "Before discontinuation: taper over 4+ weeks. Consider substituting fluoxetine for last 2 weeks of taper (self-tapers).",
+      "In government hospitals: follow-up may be every 4-8 weeks due to travel barriers — counsel family to watch for red flags.",
+    ],
+    whenToRefer: [
+      "Refer to psychiatrist if no response to 2 adequate SSRI trials (12 weeks each).",
+      "Refer urgently if suicidal ideation emerges or worsens.",
+      "Refer if bipolar disorder is suspected (manic switch risk).",
+      "Refer if serotonin syndrome develops (emergency — call 112).",
+      "Refer to physician if severe hyponatraemia (Na <120 mmol/L) or seizures.",
+      "Refer to obstetrician if patient becomes pregnant (do NOT stop sertraline abruptly).",
+      "Refer for CBT — combined SSRI + CBT produces better outcomes than either alone.",
+    ],
+  },
+
+  /* Exam frequency — star ratings */
+  examFrequency: {
+    neetPg: 5,
+    inicet: 4,
+    mbbsViva: 4,
+    fmge: 5,
+  },
+
+  /* PYQ metadata — concept-level, no copyrighted content */
+  pyqMetadata: [
+    { exam: "NEET PG", year: 2022, concept: "SSRI of choice in pregnancy", topic: "Antidepressants in pregnancy" },
+    { exam: "NEET PG", year: 2021, concept: "Antidepressant approved for PTSD", topic: "PTSD pharmacotherapy" },
+    { exam: "NEET PG", year: 2020, concept: "Serotonin syndrome diagnosis and management", topic: "Serotonergic toxicity" },
+    { exam: "NEET PG", year: 2019, concept: "SSRI with shortest half-life / worst discontinuation", topic: "SSRI pharmacokinetics" },
+    { exam: "INICET", year: 2021, concept: "SSRI-induced hyponatraemia mechanism (SIADH)", topic: "Antidepressant adverse effects" },
+    { exam: "INICET", year: 2023, concept: "Black box warning for antidepressants in <25", topic: "Antidepressant safety" },
+    { exam: "FMGE", year: 2022, concept: "SSRI mechanism of action and onset", topic: "Antidepressant pharmacology" },
+    { exam: "FMGE", year: 2021, concept: "Contraindication: MAOI + SSRI combination", topic: "Drug interactions" },
+  ],
+
+  /* Indian comparison contexts */
+  indianComparisonContexts: [
+    {
+      scenario: "Government hospital setup",
+      recommendation: "Sertraline is preferred — low cost (₹2-5/tablet), available in Jan Aushadhi and DMHP, wide safety margin, once-daily dosing improves adherence.",
+      alternative: "Escitalopram is an alternative if available, but sertraline is more commonly stocked.",
+    },
+    {
+      scenario: "Private psychiatry practice",
+      recommendation: "Sertraline or escitalopram are equally preferred. Sertraline is chosen for pregnancy, comorbid anxiety, or when σ1 agonism (anxiolytic effect) is desired.",
+      alternative: "Escitalopram if lowest CYP interaction profile is needed (polypharmacy).",
+    },
+    {
+      scenario: "Pregnancy",
+      recommendation: "Sertraline is the SSRI of choice — lowest placental transfer, lowest milk/plasma ratio, longest safety track record. IPS concurs with international guidelines.",
+      alternative: "If sertraline is unavailable, fluoxetine is acceptable (long safety data). Avoid paroxetine (Category D).",
+    },
+    {
+      scenario: "Adolescents and children",
+      recommendation: "Sertraline is used off-label in India for paediatric depression (not FDA-approved for <18). Fluoxetine is the only FDA-approved SSRI for paediatric depression (≥8 years). Monitor closely for suicidality (black box warning).",
+      alternative: "Fluoxetine for FDA-approved paediatric use. Escitalopram for ≥12 years.",
+    },
+    {
+      scenario: "Older adults (≥65 years)",
+      recommendation: "Sertraline is preferred — mild CYP2D6 inhibition (fewer drug interactions than fluoxetine/paroxetine), low weight gain, low sedation. Start at 25mg OD. Check serum sodium in first 2 weeks (SIADH risk).",
+      alternative: "Escitalopram if on complex regimens (lowest CYP interactions). Avoid paroxetine (anticholinergic, sedation, weight gain).",
+    },
+    {
+      scenario: "Cost-sensitive setting",
+      recommendation: "Generic sertraline from Jan Aushadhi Kendra is the most affordable option (₹2-5/tablet). Branded versions (Serta, Serenata) are also inexpensive.",
+      alternative: "If cost is the primary concern, Jan Aushadhi generic sertraline is unbeatable.",
+    },
+  ],
+
+  /* Jan Aushadhi availability */
+  janAushadhi: {
+    available: true,
+    note: "Available at Jan Aushadhi Kendras across India in 25mg, 50mg, and 100mg tablet strengths. Among the most affordable antidepressant options in India. Generic name: Sertraline Tablets IP.",
+  },
+
+  /* Restructured evidence sources — International vs Indian */
+  evidenceSources: {
+    international: [
+      { source: "Katzung Basic & Clinical Pharmacology, 16th edition", section: "Chapter 30 — Antidepressant Agents" },
+      { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
+      { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants" },
+      { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression" },
+      { source: "FDA Prescribing Information — ZOLOFT (sertraline hydrochloride)", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/019839s74lbl.pdf" },
+      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Pharmacological treatment" },
+      { source: "APA Practice Guideline for MDD, 3rd edition" },
+      { source: "Cipriani A et al. Lancet 2018 — Comparative efficacy of 21 antidepressants", section: "Network meta-analysis" },
+    ],
+    indian: [
+      { source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition", type: "textbook", section: "Chapter 33 — Antidepressant Drugs" },
+      { source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression", type: "guideline", section: "Section on pharmacotherapy — SSRIs" },
+      { source: "NMC CBME Curriculum — Pharmacology (Second Professional)", type: "curriculum", section: "Topic: Drugs acting on CNS — Antidepressants" },
+      { source: "NMC CBME Curriculum — Psychiatry (Final Professional)", type: "curriculum", section: "Topic: Psychopharmacology — Mood disorders" },
+      { source: "National Mental Health Programme (NMHP) / District Mental Health Programme (DMHP)", type: "regulatory", section: "Essential medicines for mental health — SSRIs" },
+      { source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416", type: "regulatory", section: "Mental health support resource", url: "tel:14416" },
+      { source: "CDSCO — Central Drugs Standard Control Organisation", type: "regulatory", section: "Sertraline — Schedule H prescription status" },
+    ],
+  },
+
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
   reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Zoloft label, NICE CG91, APA Practice Guideline, KD Tripathi 8e, IPS Depression Guidelines, NMC CBME Curriculum"],

@@ -30,3 +30,8 @@ export * from "./drug-indian-practice";
 export * from "./drug-exam-lens";
 export * from "./drug-cbme-mapping";
 export * from "./drug-guideline-comparison";
+export * from "./drug-evidence-hierarchy";
+export * from "./drug-encounter-context";
+export * from "./drug-prescription-workflow";
+export * from "./drug-exam-frequency-pyq";
+export * from "./drug-indian-comparison";

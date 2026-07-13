@@ -4,6 +4,7 @@ import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
 import { Badge } from "@/components/kyp/ui/badge";
+import { JanAushadhiBadge } from "@/components/kyp/sections/drug/drug-indian-comparison";
 import type { Drug } from "@/lib/kyp/data";
 import { cn } from "@/lib/utils";
 
@@ -120,6 +121,9 @@ export function DrugIndianPractice({ drug }: DrugIndianPracticeProps) {
                   <p className="mt-1 text-muted-foreground leading-relaxed">{ip.costNote}</p>
                 </div>
               </div>
+
+              {/* Jan Aushadhi availability (India Layer) */}
+              <JanAushadhiBadge drug={drug} />
             </CardBody>
           </CardPrimitive>
         </div>
