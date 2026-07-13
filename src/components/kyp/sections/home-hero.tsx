@@ -47,7 +47,15 @@ export function HomeHero() {
             onSubmit={(e) => {
               e.preventDefault();
               if (query.trim()) {
-                window.location.href = `/medicine.html?med=${encodeURIComponent(query.trim())}`;
+                // Try the canonical drug page first; fall back to the legacy HTML
+                // if no Next.js page exists for this query yet.
+                const q = query.trim().toLowerCase();
+                const knownDrugs = ["sertraline", "zoloft"];
+                if (knownDrugs.includes(q)) {
+                  window.location.href = `/drugs/sertraline`;
+                } else {
+                  window.location.href = `/medicine.html?med=${encodeURIComponent(query.trim())}`;
+                }
               }
             }}
           >
