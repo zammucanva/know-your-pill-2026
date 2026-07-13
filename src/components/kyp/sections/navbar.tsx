@@ -5,12 +5,14 @@ import Link from "next/link";
 import { useTheme } from "next-themes";
 import { Menu, Moon, Sun, Pill, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "#categories", label: "Categories" },
   { href: "#library", label: "Med Library" },
   { href: "#substances", label: "Substance Use" },
+  { href: "#knowledge-graph", label: "Knowledge Graph" },
   { href: "#neuroarcade", label: "NeuroArcade" },
 ];
 
@@ -32,7 +34,7 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+        "fixed inset-x-0 top-0 z-50 transition-all duration-[var(--duration-base)] ease-[var(--ease-out-soft)]",
         scrolled
           ? "border-b border-border/70 bg-background/80 backdrop-blur-xl backdrop-saturate-150"
           : "bg-transparent"
@@ -41,7 +43,7 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Brand */}
         <Link href="#top" className="group flex items-center gap-2.5">
-          <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-neural text-primary-foreground shadow-sm">
+          <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-neural text-primary-foreground shadow-[var(--shadow-soft)]">
             <Pill className="h-4.5 w-4.5 rotate-45" strokeWidth={2.5} />
             <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-emergency kyp-pulse-dot" />
           </span>
@@ -61,7 +63,7 @@ export function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent/50 hover:text-foreground"
+              className="rounded-md px-3 py-2 text-body-sm font-medium text-muted-foreground transition-colors hover:bg-accent/50 hover:text-foreground"
             >
               {l.label}
             </a>
@@ -70,6 +72,8 @@ export function Navbar() {
 
         {/* Right cluster */}
         <div className="flex items-center gap-2">
+          <FloatingSearch variant="button" className="hidden sm:flex" />
+
           <a
             href="#emergency"
             className="hidden items-center gap-1.5 rounded-full border border-emergency/30 bg-emergency-soft/60 px-3 py-1.5 text-xs font-semibold text-emergency transition-colors hover:bg-emergency/10 sm:flex"
@@ -118,7 +122,7 @@ export function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent/60 hover:text-foreground"
+                className="rounded-md px-3 py-2.5 text-body-sm font-medium text-muted-foreground transition-colors hover:bg-accent/60 hover:text-foreground"
               >
                 {l.label}
               </a>
@@ -126,7 +130,7 @@ export function Navbar() {
             <a
               href="#emergency"
               onClick={() => setOpen(false)}
-              className="mt-2 flex items-center justify-center gap-2 rounded-md bg-emergency px-3 py-2.5 text-sm font-semibold text-white"
+              className="mt-2 flex items-center justify-center gap-2 rounded-md bg-emergency px-3 py-2.5 text-body-sm font-semibold text-white"
             >
               <Phone className="h-4 w-4" strokeWidth={2.5} />
               Emergency Help
