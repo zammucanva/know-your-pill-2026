@@ -41,3 +41,9 @@ export * from "./drug-common-mistakes";
 export * from "./drug-ward-pearls";
 export * from "./drug-family-navigator";
 export * from "./drug-learning-time-badge";
+// Merged modules (visual simplification pass)
+export * from "./hero-info-strip";
+export * from "./evidence-and-indian-practice";
+export * from "./indian-clinical-module";
+export * from "./learning-module";
+export * from "./drug-navigation-module";
