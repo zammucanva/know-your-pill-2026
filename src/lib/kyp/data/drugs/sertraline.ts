@@ -1504,6 +1504,177 @@ export const sertraline: Drug = {
     revision: "8 min",
   },
 
+  /* ---- Educational UX Layer ---- */
+
+  /* Inline micro-quizzes — one after each major learning milestone */
+  microQuizzes: [
+    {
+      id: "quiz-mechanism",
+      question: "Which transporter does Sertraline inhibit?",
+      options: ["DAT (dopamine transporter)", "NET (norepinephrine transporter)", "SERT (serotonin transporter)", "GABA transporter"],
+      correctIndex: 2,
+      explanation: "Sertraline selectively blocks SERT (serotonin transporter), increasing serotonin in the synaptic cleft. This is what makes it an SSRI — Selective Serotonin Reuptake Inhibitor. The 'selective' refers to its much greater affinity for SERT vs NET or DAT.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "quiz-onset",
+      question: "Why does Sertraline take 4-6 weeks to work when SERT blockade occurs within hours?",
+      options: [
+        "The drug needs to accumulate to therapeutic levels",
+        "5-HT1A autoreceptors initially brake serotonin firing, and need 1-2 weeks to desensitise",
+        "The blood-brain barrier delays drug entry",
+        "Serotonin synthesis takes weeks to increase",
+      ],
+      correctIndex: 1,
+      explanation: "Acute SERT blockade raises synaptic serotonin within hours, but 5-HT1A somatodendritic autoreceptors in the raphe nuclei detect this and inhibit further firing. Over 1-2 weeks, these autoreceptors desensitise — removing the brake. Downstream neuroadaptive changes (BDNF, neurogenesis) take 4-6 weeks. This delay is THE most tested SSRI concept.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "quiz-side-effects",
+      question: "What is the most common reason patients stop taking SSRIs?",
+      options: ["Nausea", "Sexual dysfunction", "Weight gain", "Insomnia"],
+      correctIndex: 1,
+      explanation: "Sexual dysfunction (decreased libido, delayed orgasm, anorgasmia) affects 30-50% of patients and is the #1 reason for SSRI discontinuation. Patients rarely volunteer this — always ask directly. Solutions: dose reduction, add bupropion, or switch to bupropion/mirtazapine.",
+      afterSectionId: "side-effects",
+    },
+    {
+      id: "quiz-monitoring",
+      question: "A 72-year-old woman on sertraline for 2 weeks presents with confusion and headache. What is the most likely cause?",
+      options: ["Serotonin syndrome", "SIADH (hyponatraemia)", "Alzheimer's disease", "Urinary tract infection"],
+      correctIndex: 1,
+      explanation: "SSRIs cause SIADH in ~0.5-1% of patients, with highest risk in elderly females in the first 2 weeks. Check serum sodium — if <125 mmol/L, fluid restrict and consider discontinuing. This is why sodium should be checked at baseline in elderly patients starting SSRIs.",
+      afterSectionId: "monitoring",
+    },
+    {
+      id: "quiz-contraindications",
+      question: "How long must you wait after stopping an MAOI before starting Sertraline?",
+      options: ["24 hours", "3 days", "7 days", "14 days"],
+      correctIndex: 3,
+      explanation: "14 days. MAOIs inhibit serotonin breakdown. Combining with SERT blockade causes massive serotonergic excess → potentially fatal serotonin syndrome. The 14-day washout is absolute and non-negotiable. This is the most tested drug interaction in psychopharmacology.",
+      afterSectionId: "contraindications",
+    },
+    {
+      id: "quiz-pregnancy",
+      question: "Which SSRI is the drug of choice in pregnancy and lactation?",
+      options: ["Paroxetine", "Fluoxetine", "Sertraline", "Citalopram"],
+      correctIndex: 2,
+      explanation: "Sertraline is the SSRI of choice in pregnancy — lowest placental transfer, lowest milk/plasma ratio (~0.5), infant serum levels usually undetectable. IPS concurs with international guidelines. Avoid paroxetine (Category D — cardiac defects). Never stop sertraline abruptly if a patient becomes pregnant.",
+      afterSectionId: "evidence-practice",
+    },
+  ],
+
+  /* End-of-page active recall questions */
+  activeRecallQuestions: [
+    {
+      question: "Explain the mechanism of action of sertraline. Why does the clinical effect take 4-6 weeks when SERT blockade is immediate?",
+      answer: "Sertraline blocks SERT → ↑ synaptic 5-HT (hours). But 5-HT1A autoreceptors in the raphe nuclei initially brake firing. Over 1-2 weeks, autoreceptors desensitise → ↑ serotonergic throughput to PFC. Downstream BDNF/neurogenesis (4-6 weeks) correlates with clinical effect, not acute 5-HT levels.",
+      topic: "Mechanism",
+    },
+    {
+      question: "Name the 6 FDA-approved indications for sertraline. Which one is unique among SSRIs?",
+      answer: "MDD, OCD, Panic Disorder, PTSD, Social Anxiety Disorder, PMDD (mnemonic: MOP PPS). Sertraline is the ONLY SSRI FDA-approved for PTSD.",
+      topic: "Indications",
+    },
+    {
+      question: "A patient on sertraline develops agitation, clonus, hyperreflexia, and fever. What is the diagnosis and how do you manage it?",
+      answer: "Serotonin syndrome. Triad: mental status change + autonomic instability + neuromuscular excitation (clonus, hyperreflexia). Management: discontinue sertraline, supportive care (cooling, benzodiazepines), cyproheptadine (5-HT2A antagonist) in severe cases. Distinguish from NMS (rigidity, bradyreflexia).",
+      topic: "Side Effects",
+    },
+    {
+      question: "Which SSRI is preferred in pregnancy, and why? What about lactation?",
+      answer: "Sertraline — lowest placental transfer, lowest milk/plasma ratio (~0.5), infant serum levels usually undetectable. IPS concurs. In lactation, sertraline is also preferred — minimal transfer into breast milk, no adverse effects on infant development demonstrated. Avoid paroxetine (Category D).",
+      topic: "Pregnancy & Lactation",
+    },
+    {
+      question: "What is the black box warning for sertraline? How do you counsel a patient about it?",
+      answer: "Increased suicidality in patients <25 years. Counsel: 'In the first month, you may feel worse before you feel better. Watch for new or worsening agitation, irritability, or suicidal thoughts. If these occur, contact me immediately or call Tele-MANAS at 14416.' Weekly monitoring in the first month. Document informed consent.",
+      topic: "Safety",
+    },
+    {
+      question: "How do you manage SSRI discontinuation syndrome? Which SSRI has the worst discontinuation?",
+      answer: "Taper over 4+ weeks. Symptoms: FINISH (Flu-like, Insomnia, Nausea, Imbalance, Sensory/brain zaps, Hyperarousal). Worst: paroxetine (shortest half-life 21h). Mildest: fluoxetine (longest half-life 1-4 days, self-tapers). Can substitute fluoxetine for the last 2 weeks of a paroxetine/sertraline taper to smooth discontinuation.",
+      topic: "Discontinuation",
+    },
+  ],
+
+  /* Guided learning paths — each mode shows a curated subset of sections */
+  learningPaths: [
+    {
+      mode: "patient",
+      label: "Patient",
+      estimatedTime: "5 min",
+      description: "Plain language. What you need to know to take your medicine safely.",
+      visibleSections: ["top", "quick-facts", "patient-education", "faq", "emergency"],
+    },
+    {
+      mode: "mbbs",
+      label: "MBBS Student",
+      estimatedTime: "20 min",
+      description: "Foundations, mechanism, clinical uses, side effects, and MBBS exam content.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+    },
+    {
+      mode: "neetPg",
+      label: "NEET PG / INICET",
+      estimatedTime: "35 min",
+      description: "Full clinical detail with exam-specific content, PYQs, and drug comparisons.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+    },
+    {
+      mode: "resident",
+      label: "Resident / Clinician",
+      estimatedTime: "45 min",
+      description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+    },
+  ],
+
+  /* Lesson grouping — sections organised into learning units */
+  lessonGroups: [
+    {
+      number: 1,
+      title: "Foundations",
+      description: "What is this drug? Why does it matter?",
+      sectionIds: ["top", "quick-facts", "learning-objectives", "knowledge-graph"],
+      checkpoint: "You now know what Sertraline is, its 6 FDA indications, and how it connects to the broader neuroscience of depression.",
+    },
+    {
+      number: 2,
+      title: "Mechanism & Neuroscience",
+      description: "How does it work? Where does it act in the brain?",
+      sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
+      checkpoint: "You understand the mechanism — from acute SERT blockade to chronic 5-HT1A desensitisation to BDNF-mediated neurogenesis. The 4-6 week delay now makes sense.",
+    },
+    {
+      number: 3,
+      title: "Clinical Practice",
+      description: "When do you use it? What goes wrong?",
+      sectionIds: ["clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education"],
+      checkpoint: "You can now prescribe sertraline safely — you know the indications, the side effects to watch for, the contraindications, and how to monitor response.",
+    },
+    {
+      number: 4,
+      title: "Indian Context",
+      description: "How is it actually used in Indian hospitals?",
+      sectionIds: ["indian-clinical", "decision-path", "common-mistakes"],
+      checkpoint: "You know the Indian brands, the government hospital workflow, the common mistakes interns make, and when NOT to choose sertraline.",
+    },
+    {
+      number: 5,
+      title: "Exam Revision",
+      description: "High-yield facts, clinical cases, and drug comparisons.",
+      sectionIds: ["learning-module", "clinical-case", "drug-navigation", "high-yield-summary"],
+      checkpoint: "You've reviewed the exam-specific content, worked through a clinical case, compared sertraline with alternatives, and have a one-page revision summary.",
+    },
+    {
+      number: 6,
+      title: "Active Recall",
+      description: "Can you answer these without looking?",
+      sectionIds: ["active-recall", "faq", "references"],
+      checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Sertraline.",
+    },
+  ],
+
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
   reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Zoloft label, NICE CG91, APA Practice Guideline, KD Tripathi 8e, IPS Depression Guidelines, NMC CBME Curriculum"],
