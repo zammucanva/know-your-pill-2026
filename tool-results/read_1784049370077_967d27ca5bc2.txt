@@ -1,0 +1,1019 @@
+     1→/**
+     2→ * Shared types used across the KYP data layer.
+     3→ * Every component consumes these — never duplicate a type inline.
+     4→ */
+     5→
+     6→import type { LucideIcon } from "lucide-react";
+     7→
+     8→/**
+     9→ * Drug class identifiers.
+    10→ *
+    11→ * The first 8 (`depressant`..`ssri`) describe substances of abuse and
+    12→ * major medication classes — they have stable accent colors defined in
+    13→ * `classes.ts` and CSS variables in `globals.css`.
+    14→ *
+    15→ * The remaining IDs cover other medication classes that don't need a
+    16→ * distinct accent color (they fall back to the brand teal).
+    17→ */
+    18→export type DrugClassId =
+    19→  // Substances of abuse (with accent colors)
+    20→  | "depressant"
+    21→  | "stimulant"
+    22→  | "hallucinogen"
+    23→  | "opioid"
+    24→  | "cannabinoid"
+    25→  | "dissociative"
+    26→  | "inhalant"
+    27→  // Medication classes
+    28→  | "ssri"
+    29→  | "snri"
+    30→  | "tca"
+    31→  | "maoi"
+    32→  | "atypical-antipsychotic"
+    33→  | "typical-antipsychotic"
+    34→  | "mood-stabiliser"
+    35→  | "benzodiazepine"
+    36→  | "non-benzodiazepine-hypnotic";
+    37→
+    38→export interface DrugClass {
+    39→  id: DrugClassId;
+    40→  name: string;
+    41→  shortName: string;
+    42→  description: string;
+    43→  neurotransmitter: string;
+    44→  /** CSS var name without the leading `--`. Resolves to a color. */
+    45→  accentVar: string;
+    46→  /** Tailwind text color class for the accent (e.g. "text-[var(--class-depressant)]") */
+    47→  accentClass: string;
+    48→}
+    49→
+    50→export interface Substance {
+    51→  id: string;
+    52→  name: string;
+    53→  slug: string;
+    54→  drugClass: DrugClassId;
+    55→  description: string;
+    56→  neurotransmitter: string;
+    57→  href: string;
+    58→}
+    59→
+    60→export interface MedicationClass {
+    61→  id: string;
+    62→  number: string;
+    63→  title: string;
+    64→  description: string;
+    65→  href: string;
+    66→  chips: string[];
+    67→  featured?: boolean;
+    68→  comingSoon?: boolean;
+    69→  icon: LucideIcon;
+    70→}
+    71→
+    72→export interface Category {
+    73→  id: string;
+    74→  index: string;
+    75→  title: string;
+    76→  description: string;
+    77→  icon: LucideIcon;
+    78→  accent: string;
+    79→}
+    80→
+    81→export interface BrainRegion {
+    82→  id: string;
+    83→  name: string;
+    84→  functions: string[];
+    85→  disorders: string[];
+    86→  affectedDrugs: string[];
+    87→  neurotransmitter: string;
+    88→}
+    89→
+    90→export interface Pathway {
+    91→  id: string;
+    92→  name: string;
+    93→  origin: string;
+    94→  termination: string;
+    95→  neurotransmitter: string;
+    96→  function: string;
+    97→  relatedDrugs: string[];
+    98→  clinicalRelevance: string;
+    99→}
+   100→
+   101→export interface SideEffect {
+   102→  id: string;
+   103→  name: string;
+   104→  description: string;
+   105→  receptor: string;
+   106→  pathway: string;
+   107→  drugs: string[];
+   108→  management: string;
+   109→}
+   110→
+   111→export interface TimelineEvent {
+   112→  id: string;
+   113→  time: string;
+   114→  title: string;
+   115→  description: string;
+   116→  phase: "onset" | "peak" | "duration" | "recovery";
+   117→}
+   118→
+   119→export interface Stat {
+   120→  label: string;
+   121→  value: string;
+   122→  description: string;
+   123→}
+   124→
+   125→export interface EmergencyContact {
+   126→  label: string;
+   127→  number: string;
+   128→  description: string;
+   129→  href: string;
+   130→}
+   131→
+   132→export interface FAQItem {
+   133→  question: string;
+   134→  answer: string;
+   135→}
+   136→
+   137→export interface SearchableItem {
+   138→  id: string;
+   139→  title: string;
+   140→  type: "drug" | "class" | "neurotransmitter" | "side-effect" | "brain-region" | "pathway" | "clinical" | "patient-guide";
+   141→  description: string;
+   142→  href: string;
+   143→  keywords: string[];
+   144→}
+   145→
+   146→/* ============================================================
+   147→   Canonical Drug Schema
+   148→   ------------------------------------------------------------
+   149→   The typed model every drug page consumes. Designed to support
+   150→   every psychiatric medication without breaking changes.
+   151→
+   152→   Add new optional fields at the bottom; never remove or rename
+   153→   existing fields once a drug depends on them.
+   154→   ============================================================ */
+   155→
+   156→export interface DrugIndication {
+   157→  /** Condition name, e.g. "Major Depressive Disorder" */
+   158→  name: string;
+   159→  /** FDA-approved vs off-label */
+   160→  status: "fda-approved" | "off-label" | "guideline";
+   161→  /** Patient-friendly description */
+   162→  description: string;
+   163→  /** Typical age group if restricted (e.g. "≥6 years") */
+   164→  ageGroup?: string;
+   165→}
+   166→
+   167→export interface DrugContraindication {
+   168→  name: string;
+   169→  /** Absolute = never combine; Relative = use with caution */
+   170→  severity: "absolute" | "relative";
+   171→  rationale: string;
+   172→}
+   173→
+   174→export interface DrugWarning {
+   175→  title: string;
+   176→  /** Boxed warning text — quoted/paraphrased from FDA label */
+   177→  text: string;
+   178→}
+   179→
+   180→export interface DrugSideEffectEntry {
+   181→  name: string;
+   182→  /** Approximate incidence band — kept as string so we never lie with false precision */
+   183→  frequency: "very-common" | "common" | "uncommon" | "rare" | "unknown";
+   184→  severity: "mild" | "moderate" | "severe" | "life-threatening";
+   185→  description: string;
+   186→  /** Step-by-step management, if applicable */
+   187→  management?: string;
+   188→  /** Reference to a side effect in the global side-effects registry */
+   189→  sideEffectId?: string;
+   190→}
+   191→
+   192→export interface DrugMonitoringParameter {
+   193→  parameter: string;
+   194→  /** When to check — e.g. "Baseline, then every 6 months" */
+   195→  frequency: string;
+   196→  rationale: string;
+   197→}
+   198→
+   199→export interface DrugInteraction {
+   200→  /** The interacting drug or drug class */
+   201→  drug: string;
+   202→  severity: "contraindicated" | "major" | "moderate" | "minor";
+   203→  mechanism: string;
+   204→  /** What to do — e.g. "Avoid combination", "Monitor INR" */
+   205→  action: string;
+   206→}
+   207→
+   208→export interface DrugPregnancyInfo {
+   209→  /** Former FDA pregnancy category (A/B/C/D/X) — DEPRECATED, kept for legacy reference only. Do not center clinical decisions on this. */
+   210→  legacyCategory?: string;
+   211→  /** Contemporary evidence-based assessment (replaces the deprecated letter category) */
+   212→  evidenceBasedSummary?: string;
+   213→  /** Indian practice note for pregnancy */
+   214→  indianPracticeNote?: string;
+   215→  /** Plain-language summary */
+   216→  summary: string;
+   217→  /** Lactation-specific note */
+   218→  lactation: string;
+   219→}
+   220→
+   221→export interface DrugReference {
+   222→  /** Source name, e.g. "Katzung Basic & Clinical Pharmacology 16e" */
+   223→  source: string;
+   224→  /** Section or chapter */
+   225→  section?: string;
+   226→  /** Optional URL */
+   227→  url?: string;
+   228→}
+   229→
+   230→export interface DrugRelatedDrug {
+   231→  name: string;
+   232→  /** Slug if a KYP page exists, otherwise null */
+   233→  slug?: string;
+   234→  drugClass: string;
+   235→  /** Why this drug is related — e.g. "Same class (SSRI)" or "Alternative for hepatic impairment" */
+   236→  relationship: string;
+   237→}
+   238→
+   239→export interface DrugRelatedCondition {
+   240→  name: string;
+   241→  /** How this drug fits the condition — primary treatment, alternative, etc. */
+   242→  relationship: "primary" | "alternative" | "adjunct" | "off-label";
+   243→  /** Optional KYP page or external href */
+   244→  href?: string;
+   245→}
+   246→
+   247→export interface KnowledgeGraphNode {
+   248→  label: string;
+   249→  type: "drug" | "class" | "neurotransmitter" | "brain-region" | "pathway" | "condition" | "side-effect" | "clinical-case" | "patient-guide";
+   250→  /** Clickable destination — KYP page or in-page anchor */
+   251→  href: string;
+   252→  /** Optional short note shown under the node */
+   253→  note?: string;
+   254→}
+   255→
+   256→export interface DrugMechanism {
+   257→  /** One-sentence summary for hero / cards */
+   258→  summary: string;
+   259→  /** The molecular target — e.g. "SERT (serotonin transporter)" */
+   260→  molecularTarget: string;
+   261→  /** Net physiological effect */
+   262→  effect: string;
+   263→  /** Ordered steps of the mechanism (used by the mechanism section) */
+   264→  steps: string[];
+   265→  /** Pharmacokinetics summary */
+   266→  pharmacokinetics: string;
+   267→  /** Half-life (with units) */
+   268→  halfLife: string;
+   269→  /** Active metabolite name + note, if any */
+   270→  activeMetabolite?: string;
+   271→  /** Hepatic enzyme metabolism — e.g. "CYP2D6, CYP2B6" */
+   272→  metabolism: string;
+   273→  /** Excretion route */
+   274→  excretion: string;
+   275→}
+   276→
+   277→/* ============================================================
+   278→   Visual learning structures (added in Sprint 3 polish)
+   279→   ============================================================ */
+   280→
+   281→/** A single flow node in a visual mechanism diagram. */
+   282→export interface MechanismFlowNode {
+   283→  id: string;
+   284→  label: string;
+   285→  /** Short subtitle / role description */
+   286→  sublabel?: string;
+   287→  /** Visual variant — controls colour */
+   288→  variant: "input" | "process" | "target" | "output" | "inhibit";
+   289→}
+   290→
+   291→/** A directed edge between two flow nodes. */
+   292→export interface MechanismFlowEdge {
+   293→  from: string;
+   294→  to: string;
+   295→  label?: string;
+   296→  /** "inhibit" renders a T-bar instead of an arrow */
+   297→  type?: "stimulate" | "inhibit";
+   298→}
+   299→
+   300→/** Complete visual flow definition for the mechanism section. */
+   301→export interface MechanismFlow {
+   302→  nodes: MechanismFlowNode[];
+   303→  edges: MechanismFlowEdge[];
+   304→  /** Optional caption rendered below the diagram */
+   305→  caption?: string;
+   306→}
+   307→
+   308→/** A real clinical case (not a placeholder). */
+   309→export interface ClinicalCase {
+   310→  title: string;
+   311→  /** One-line presentation summary */
+   312→  presentation: string;
+   313→  /** Patient demographics + presenting complaint */
+   314→  history: string;
+   315→  /** Examination findings */
+   316→  examination: string;
+   317→  /** Working diagnosis + differential */
+   318→  diagnosis: string;
+   319→  /** Why this drug was chosen */
+   320→  rationale: string;
+   321→  /** What was prescribed + titration */
+   322→  management: string;
+   323→  /** Follow-up + outcome */
+   324→  outcome: string;
+   325→  /** 2-3 teaching points the case illustrates */
+   326→  teachingPoints: string[];
+   327→}
+   328→
+   329→/** Comparison row in a drug-vs-drug comparison table. */
+   330→export interface DrugComparisonRow {
+   331→  /** Attribute name — e.g. "Half-life", "Onset", "Sexual dysfunction" */
+   332→  attribute: string;
+   333→  /** Value for the primary drug (the page subject) */
+   334→  primaryValue: string;
+   335→  /** Values for each comparison drug, keyed by drug name */
+   336→  comparisons: { drug: string; value: string }[];
+   337→}
+   338→
+   339→/** A complete comparison table. */
+   340→export interface DrugComparisonTable {
+   341→  title: string;
+   342→  /** The primary drug this table centres on (usually the page subject) */
+   343→  primaryDrug: string;
+   344→  rows: DrugComparisonRow[];
+   345→  /** Educational summary — "When to choose which" */
+   346→  takeaway: string;
+   347→}
+   348→
+   349→/** A memory trick / mnemonic for exam preparation. */
+   350→export interface MemoryTrick {
+   351→  title: string;
+   352→  /** The mnemonic or trick itself */
+   353→  trick: string;
+   354→  /** What it helps you remember */
+   355→  remembers: string;
+   356→}
+   357→
+   358→/** Categorised references — grouped by source type. */
+   359→export interface CategorisedReferences {
+   360→  guidelines: DrugReference[];
+   361→  textbooks: DrugReference[];
+   362→  trials: DrugReference[];
+   363→  reviews: DrugReference[];
+   364→  patientResources: DrugReference[];
+   365→}
+   366→
+   367→/** Patient-mode content — simplified language for the same data. */
+   368→export interface PatientModeContent {
+   369→  /** Patient-friendly tagline (shown in hero when patient mode is on) */
+   370→  tagline: string;
+   371→  /** Patient-friendly summary */
+   372→  summary: string;
+   373→  /** Patient-friendly mechanism explanation */
+   374→  mechanism: string;
+   375→  /** Patient-friendly side effects overview */
+   376→  sideEffects: string;
+   377→  /** Patient-friendly monitoring overview */
+   378→  monitoring: string;
+   379→  /** Patient-friendly contraindications overview */
+   380→  contraindications: string;
+   381→  /** Patient-friendly interactions overview */
+   382→  interactions: string;
+   383→}
+   384→
+   385→/* ============================================================
+   386→   India-first extensions (Phase 0)
+   387→   ------------------------------------------------------------
+   388→   KYP is an India-first, evidence-first medical education platform.
+   389→   These fields add Indian clinical practice context without
+   390→   compromising international scientific accuracy.
+   391→
+   392→   Principle: When international and Indian guidance differ,
+   393→   both are presented clearly and labeled by source. No invented
+   394→   "Indian clinical practice" when no formal guideline exists.
+   395→   ============================================================ */
+   396→
+   397→/** Indian prescription schedule categories per CDSCO. */
+   398→export type PrescriptionSchedule =
+   399→  | "Schedule H"
+   400→  | "Schedule H1"
+   401→  | "Schedule X"
+   402→  | "OTC"
+   403→  | "Prescription Only";
+   404→
+   405→/** Indian brand name entry — sourced from CDSCO/CIMS/MIMS. */
+   406→export interface IndianBrand {
+   407→  /** Brand name as sold in India, e.g. "Serta" */
+   408→  name: string;
+   409→  /** Manufacturer (optional) */
+   410→  manufacturer?: string;
+   411→  /** Common strengths available, e.g. "25mg, 50mg, 100mg" */
+   412→  strengths?: string;
+   413→  /** Note — e.g. "among the most commonly prescribed in India" */
+   414→  note?: string;
+   415→}
+   416→
+   417→/** Cost category — relative to Indian generic market. */
+   418→export type CostCategory = "low" | "moderate" | "high";
+   419→
+   420→/** Availability in Indian healthcare settings. */
+   421→export interface IndianAvailability {
+   422→  /** Available in government hospitals? */
+   423→  governmentHospitals: boolean;
+   424→  /** Available in private pharmacies? */
+   425→  privatePharmacies: boolean;
+   426→  /** Urban availability */
+   427→  urban: boolean;
+   428→  /** Rural availability */
+   429→  rural: boolean;
+   430→  /** Additional notes */
+   431→  note?: string;
+   432→}
+   433→
+   434→/** Indian clinical practice information. */
+   435→export interface IndianPracticeInfo {
+   436→  /** Prescription schedule (Schedule H, H1, X, OTC) */
+   437→  prescriptionStatus: PrescriptionSchedule;
+   438→  /** Common Indian brand names (3-8, sourced from CDSCO/CIMS/MIMS) */
+   439→  brands: IndianBrand[];
+   440→  /** Typical dose ranges used in Indian practice */
+   441→  typicalDoses: string;
+   442→  /** Common prescribing scenarios in India */
+   443→  prescribingScenarios: string[];
+   444→  /** Availability across Indian healthcare settings */
+   445→  availability: IndianAvailability;
+   446→  /** Cost category relative to Indian market */
+   447→  costCategory: CostCategory;
+   448→  /** Cost note — always includes "Cost varies by manufacturer and region" */
+   449→  costNote: string;
+   450→  /** Indian monitoring approach — how monitoring is commonly done in Indian practice */
+   451→  monitoring: string;
+   452→  /** India-specific patient counselling points */
+   453→  patientCounselling: string[];
+   454→}
+   455→
+   456→/** NMC CBME competency mapping. */
+   457→export interface CBMEMapping {
+   458→  /** Subject, e.g. "Pharmacology" or "Psychiatry" */
+   459→  subject: string;
+   460→  /** MBBS year, e.g. "Second Professional" or "Final Professional" */
+   461→  mbbsYear: string;
+   462→  /** Relevant NMC competency codes — must be actual codes from the CBME curriculum */
+   463→  competencyCodes: string[];
+   464→  /** Human-readable competency descriptions matching the codes */
+   465→  competencyDescriptions: string[];
+   466→  /** Integration subjects, e.g. ["Psychiatry", "General Medicine"] */
+   467→  integrationSubjects: string[];
+   468→  /** Topic-level description */
+   469→  topic: string;
+   470→}
+   471→
+   472→/** Exam-focused content structured by Indian examination.
+   473→ *  Replaces the flat examPearls array with structured, exam-specific content.
+   474→ */
+   475→export interface ExamLens {
+   476→  /** MBBS level — viva, practical, long answer */
+   477→  mbbs: {
+   478→    viva: string[];
+   479→    practical: string[];
+   480→    longAnswer: string[];
+   481→  };
+   482→  /** NEET PG — high yield + previous year question concepts */
+   483→  neetPg: {
+   484→    highYield: string[];
+   485→    pyqConcepts: string[];
+   486→  };
+   487→  /** INICET — clinical reasoning, mechanism-based questions */
+   488→  inicet: {
+   489→    clinicalReasoning: string[];
+   490→  };
+   491→  /** FMGE — frequently tested facts for foreign medical graduates */
+   492→  fmge: {
+   493→    frequentlyTested: string[];
+   494→  };
+   495→  /** Psychiatry Residency — advanced clinical pearls */
+   496→  psychiatryResidency: {
+   497→    advancedPearls: string[];
+   498→  };
+   499→}
+   500→
+   501→/** Side-by-side international vs Indian guideline comparison. */
+   502→export interface GuidelineComparison {
+   503→  /** Topic, e.g. "First-line treatment" or "Pregnancy category" */
+   504→  topic: string;
+   505→  /** International source, e.g. "FDA", "APA", "NICE" */
+   506→  internationalSource: string;
+   507→  /** International recommendation */
+   508→  internationalRecommendation: string;
+   509→  /** Indian source — e.g. "IPS" or null if no dedicated Indian guideline exists */
+   510→  indianSource: string | null;
+   511→  /** Indian recommendation — or honest note that no dedicated guideline exists */
+   512→  indianRecommendation: string;
+   513→}
+   514→
+   515→/** Indian reference source. */
+   516→export interface IndianReference {
+   517→  /** Source name, e.g. "KD Tripathi Essentials of Medical Pharmacology" */
+   518→  source: string;
+   519→  /** Type */
+   520→  type: "textbook" | "guideline" | "curriculum" | "regulatory";
+   521→  /** Section or chapter */
+   522→  section?: string;
+   523→  /** Optional URL */
+   524→  url?: string;
+   525→}
+   526→
+   527→/* ============================================================
+   528→   India Layer extensions (platform-wide)
+   529→   ============================================================ */
+   530→
+   531→/** Evidence hierarchy — separates global evidence from Indian practice. */
+   532→export interface EvidenceHierarchy {
+   533→  /** International guidelines (FDA, APA, NICE, etc.) */
+   534→  international: {
+   535→    source: string;
+   536→    recommendation: string;
+   537→  }[];
+   538→  /** Indian guidelines (IPS, NMC, etc.) — or honest note if none exist */
+   539→  indian: {
+   540→    source: string | null;
+   541→    recommendation: string;
+   542→  }[];
+   543→  /** Indian clinical practice — how it's actually done in India */
+   544→  indianClinicalPractice: string;
+   545→}
+   546→
+   547→/** Where this drug is commonly encountered in Indian healthcare. */
+   548→export interface IndianEncounterContext {
+   549→  governmentHospitals: string;
+   550→  privateHospitals: string;
+   551→  medicalColleges: string;
+   552→  primaryCare: string;
+   553→  psychiatryOPD: string;
+   554→}
+   555→
+   556→/** Indian prescription workflow — before / during / follow-up / refer. */
+   557→export interface PrescriptionWorkflow {
+   558→  beforePrescribing: string[];
+   559→  duringTreatment: string[];
+   560→  followUp: string[];
+   561→  whenToRefer: string[];
+   562→}
+   563→
+   564→/** Exam frequency — star rating per Indian examination. */
+   565→export interface ExamFrequency {
+   566→  /** 1-5 stars indicating how frequently this drug is tested */
+   567→  neetPg: 1 | 2 | 3 | 4 | 5;
+   568→  inicet: 1 | 2 | 3 | 4 | 5;
+   569→  mbbsViva: 1 | 2 | 3 | 4 | 5;
+   570→  fmge: 1 | 2 | 3 | 4 | 5;
+   571→}
+   572→
+   573→/** PYQ metadata — concept-level, no copyrighted content. */
+   574→export interface PYQMetadata {
+   575→  exam: "NEET PG" | "INICET" | "FMGE" | "AIIMS" | "JIPMER";
+   576→  year: number;
+   577→  /** Concept tested — not the actual question */
+   578→  concept: string;
+   579→  /** Topic area */
+   580→  topic: string;
+   581→}
+   582→
+   583→/** Indian comparison context — how drugs compare in specific Indian scenarios. */
+   584→export interface IndianComparisonContext {
+   585→  /** Scenario, e.g. "Government setup", "Private psychiatry", "Pregnancy" */
+   586→  scenario: string;
+   587→  /** Which drug is preferred and why */
+   588→  recommendation: string;
+   589→  /** Alternative if first-choice is unsuitable */
+   590→  alternative?: string;
+   591→}
+   592→
+   593→/** Jan Aushadhi availability. */
+   594→export interface JanAushadhiInfo {
+   595→  available: boolean;
+   596→  /** Note about strengths or availability */
+   597→  note?: string;
+   598→}
+   599→
+   600→/** Restructured evidence sources — International vs Indian. */
+   601→export interface EvidenceSources {
+   602→  international: DrugReference[];
+   603→  indian: IndianReference[];
+   604→}
+   605→
+   606→/* ============================================================
+   607→   Final Architecture Pass — canonical template v2.0 extensions
+   608→   ============================================================ */
+   609→
+   610→/** Clinical decision path — algorithm-style decision tree. */
+   611→export interface DecisionPathNode {
+   612→  id: string;
+   613→  /** Question or decision point, e.g. "Patient has depression" */
+   614→  question: string;
+   615→  /** Branches from this node */
+   616→  branches?: {
+   617→    /** Label for the branch, e.g. "Mild", "Moderate", "Severe" */
+   618→    label: string;
+   619→    /** Next node ID */
+   620→    next: string;
+   621→  }[];
+   622→  /** If this is a terminal node, the recommendation */
+   623→  recommendation?: string;
+   624→  /** If this is a terminal node, the reasoning */
+   625→  reasoning?: string;
+   626→}
+   627→
+   628→export interface ClinicalDecisionPath {
+   629→  /** Title, e.g. "When to choose Sertraline for depression" */
+   630→  title: string;
+   631→  /** The decision tree nodes */
+   632→  nodes: DecisionPathNode[];
+   633→  /** Starting node ID */
+   634→  startNodeId: string;
+   635→}
+   636→
+   637→/** Educational prescription template (India). */
+   638→export interface EducationalPrescription {
+   639→  /** Clinical scenario, e.g. "Typical OPD initiation for first-episode depression" */
+   640→  scenario: string;
+   641→  /** The prescription lines (Rx format) */
+   642→  lines: string[];
+   643→  /** Follow-up instructions */
+   644→  followUp: string[];
+   645→  /** Disclaimer — always "Educational example only. Not a substitute for clinical judgment." */
+   646→  disclaimer: string;
+   647→}
+   648→
+   649→/** Common mistake entry. */
+   650→export interface CommonMistake {
+   651→  /** The mistake, e.g. "Stopping after 2 weeks" */
+   652→  mistake: string;
+   653→  /** Why it's wrong */
+   654→  why: string;
+   655→  /** What to do instead */
+   656→  correction: string;
+   657→}
+   658→
+   659→/** "When NOT to use" entry — red card with alternative. */
+   660→export interface WhenNotToUseEntry {
+   661→  /** Scenario, e.g. "Bipolar depression without mood stabiliser" */
+   662→  scenario: string;
+   663→  /** Why to avoid */
+   664→  reason: string;
+   665→  /** What to use instead */
+   666→  alternative: string;
+   667→}
+   668→
+   669→/** Indian ward pearls — hierarchical teaching pearls. */
+   670→export interface WardPearls {
+   671→  /** What your psychiatry professor may ask */
+   672→  professorMayAsk: string[];
+   673→  /** What the resident expects you to know */
+   674→  residentExpects: string[];
+   675→  /** What consultants commonly do */
+   676→  consultantsDo: string[];
+   677→  /** What interns commonly miss */
+   678→  internsMiss: string[];
+   679→}
+   680→
+   681→/** Refined high-yield level (replaces simple yieldRating for display). */
+   682→export type HighYieldLevel = "extreme" | "high" | "moderate" | "background" | "rare";
+   683→
+   684→/** Drug family navigation member. */
+   685→export interface DrugFamilyMember {
+   686→  name: string;
+   687→  slug?: string;
+   688→  /** How this drug relates to the current drug, e.g. "Same class (SSRI)" */
+   689→  relationship: string;
+   690→  /** Key distinguishing feature, e.g. "Longest half-life" */
+   691→  distinguishing: string;
+   692→}
+   693→
+   694→export interface DrugFamilyNav {
+   695→  /** Family name, e.g. "SSRIs" */
+   696→  familyName: string;
+   697→  /** All members of the family */
+   698→  members: DrugFamilyMember[];
+   699→}
+   700→
+   701→/** Learning time breakdown. */
+   702→export interface LearningTimeBreakdown {
+   703→  /** Skim reading time, e.g. "18 min" */
+   704→  read: string;
+   705→  /** Deep study time, e.g. "45 min" */
+   706→  study: string;
+   707→  /** Quick revision time, e.g. "8 min" */
+   708→  revision: string;
+   709→}
+   710→
+   711→/* ============================================================
+   712→   Educational UX Layer — learning experience extensions
+   713→   ============================================================ */
+   714→
+   715→/** Inline micro-quiz — multiple choice with reveal explanation. */
+   716→export interface MicroQuiz {
+   717→  /** Unique ID */
+   718→  id: string;
+   719→  /** The question */
+   720→  question: string;
+   721→  /** 4 answer options */
+   722→  options: string[];
+   723→  /** Index of the correct option (0-based) */
+   724→  correctIndex: number;
+   725→  /** Explanation revealed after answering */
+   726→  explanation: string;
+   727→  /** Section ID this quiz appears after */
+   728→  afterSectionId: string;
+   729→}
+   730→
+   731→/** Active recall question — end-of-page retrieval practice. */
+   732→export interface ActiveRecallQuestion {
+   733→  /** The question */
+   734→  question: string;
+   735→  /** The model answer */
+   736→  answer: string;
+   737→  /** Topic area */
+   738→  topic: string;
+   739→}
+   740→
+   741→/** Guided learning mode — curated section visibility + time estimate. */
+   742→export type GuidedLearningMode = "patient" | "mbbs" | "neetPg" | "resident";
+   743→
+   744→export interface LearningPath {
+   745→  mode: GuidedLearningMode;
+   746→  /** Display label, e.g. "MBBS Student" */
+   747→  label: string;
+   748→  /** Estimated time, e.g. "20 min" */
+   749→  estimatedTime: string;
+   750→  /** Description of what this mode covers */
+   751→  description: string;
+   752→  /** Section IDs visible in this mode */
+   753→  visibleSections: string[];
+   754→}
+   755→
+   756→/** Lesson grouping — sections organised into learning units. */
+   757→export interface LessonGroup {
+   758→  /** Lesson number, e.g. 1 */
+   759→  number: number;
+   760→  /** Lesson title, e.g. "Foundations" */
+   761→  title: string;
+   762→  /** Brief description */
+   763→  description: string;
+   764→  /** Section IDs in this lesson (in order) */
+   765→  sectionIds: string[];
+   766→  /** Checkpoint text shown after completing this lesson */
+   767→  checkpoint: string;
+   768→}
+   769→
+   770→/** Section difficulty tag — shown as a coloured dot next to section headings. */
+   771→export type SectionDifficulty = "mbbs" | "pg" | "resident";
+   772→
+   773→export interface Drug {
+   774→  /* ---- Identity ---- */
+   775→  slug: string;
+   776→  genericName: string;
+   777→  brandNames: string[];
+   778→  drugClass: DrugClassId;
+   779→  /** Short label shown in cards & badges — e.g. "SSRI" */
+   780→  drugClassLabel: string;
+   781→  /** Full name — e.g. "Selective Serotonin Reuptake Inhibitor" */
+   782→  drugClassFullName: string;
+   783→
+   784→  /* ---- Learning path (NEW — breadcrumb) ---- */
+   785→  /** Hierarchical breadcrumb from broad to specific, e.g. ["Psychiatry", "Antidepressants", "SSRIs", "Sertraline"] */
+   786→  learningPath: string[];
+   787→
+   788→  /* ---- Hero / summary ---- */
+   789→  tagline: string;
+   790→  summary: string;
+   791→
+   792→  /** Estimated reading time (NEW) — e.g. "18 min read" */
+   793→  estimatedReadTime: string;
+   794→  /** Yield rating (NEW) — how exam-relevant this drug is */
+   795→  yieldRating: "low" | "medium" | "high";
+   796→  /** Difficulty level this drug is most relevant for (NEW) */
+   797→  primaryAudience: DifficultyLevel;
+   798→
+   799→  /* ---- Learning objectives ---- */
+   800→  learningObjectives: string[];
+   801→
+   802→  /* ---- Mechanism ---- */
+   803→  mechanism: DrugMechanism;
+   804→  /** Visual flow diagram for the mechanism section */
+   805→  mechanismFlow: MechanismFlow;
+   806→
+   807→  /* ---- Neuroscience mapping ---- */
+   808→  neurotransmitters: string[];
+   809→  receptors: string[];
+   810→  /** Brain region IDs from the global brainRegions registry */
+   811→  brainRegionIds: string[];
+   812→  /** Pathway IDs from the global pathways registry */
+   813→  pathwayIds: string[];
+   814→
+   815→  /* ---- Clinical ---- */
+   816→  indications: DrugIndication[];
+   817→  contraindications: DrugContraindication[];
+   818→  blackBoxWarnings: DrugWarning[];
+   819→
+   820→  /* ---- Side effects ---- */
+   821→  commonSideEffects: DrugSideEffectEntry[];
+   822→  seriousSideEffects: DrugSideEffectEntry[];
+   823→
+   824→  /* ---- Safety / monitoring ---- */
+   825→  monitoring: DrugMonitoringParameter[];
+   826→  interactions: DrugInteraction[];
+   827→  pregnancy: DrugPregnancyInfo;
+   828→  renalAdjustment: string;
+   829→  hepaticAdjustment: string;
+   830→
+   831→  /* ---- Education ---- */
+   832→  patientExplanation: string;
+   833→  patientEducationPoints: string[];
+   834→  clinicalPearls: string[];
+   835→  /** @deprecated Use examLens instead — kept for backward compat during Phase 1 migration */
+   836→  examPearls?: string[];
+   837→  /** Structured exam content by Indian examination (replaces examPearls) */
+   838→  examLens?: ExamLens;
+   839→  /** Mnemonics and memory tricks for exam preparation */
+   840→  memoryTricks: MemoryTrick[];
+   841→  /** One-page revision summary */
+   842→  highYieldSummary: string[];
+   843→
+   844→  /* ---- Clinical cases (plural — supports multiple: adult, paediatric, geriatric, pregnancy, emergency, psychiatry) ---- */
+   845→  clinicalCases: ClinicalCase[];
+   846→
+   847→  /* ---- Comparison tables ---- */
+   848→  comparisonTables: DrugComparisonTable[];
+   849→
+   850→  /* ---- Timeline ---- */
+   851→  timeline: TimelineEvent[];
+   852→
+   853→  /* ---- FAQ ---- */
+   854→  faqs: FAQItem[];
+   855→
+   856→  /* ---- References & related ---- */
+   857→  /** Categorised references */
+   858→  references: CategorisedReferences;
+   859→  relatedDrugs: DrugRelatedDrug[];
+   860→  relatedConditions: DrugRelatedCondition[];
+   861→
+   862→  /* ---- Knowledge graph ---- */
+   863→  knowledgeGraph: KnowledgeGraphNode[];
+   864→
+   865→  /* ---- Patient mode (simplified content for patient audience) ---- */
+   866→  patientMode: PatientModeContent;
+   867→
+   868→  /* ---- India-first extensions (Phase 0) ---- */
+   869→  /** Indian clinical practice: brands, doses, availability, cost, counselling */
+   870→  indianPractice?: IndianPracticeInfo;
+   871→  /** NMC CBME competency mapping */
+   872→  cbmeMapping?: CBMEMapping;
+   873→  /** Structured exam content by Indian examination */
+   874→  /** International vs Indian guideline side-by-side comparisons */
+   875→  guidelineComparisons?: GuidelineComparison[];
+   876→  /** Indian reference sources (KD Tripathi, IPS, NMC CBME, etc.) */
+   877→  indianReferences?: IndianReference[];
+   878→  /** Per-section difficulty mapping for progressive disclosure */
+   879→  sectionDifficulty?: Record<string, SectionDifficulty>;
+   880→
+   881→  /* ---- India Layer extensions (platform-wide) ---- */
+   882→  /** Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
+   883→  evidenceHierarchy?: EvidenceHierarchy;
+   884→  /** Where this drug is commonly encountered in Indian healthcare */
+   885→  indianEncounterContext?: IndianEncounterContext;
+   886→  /** Indian prescription workflow: before / during / follow-up / refer */
+   887→  prescriptionWorkflow?: PrescriptionWorkflow;
+   888→  /** Exam frequency star ratings per Indian examination */
+   889→  examFrequency?: ExamFrequency;
+   890→  /** Previous year question metadata (concept-level, no copyrighted content) */
+   891→  pyqMetadata?: PYQMetadata[];
+   892→  /** Indian comparison contexts (govt setup, private, pregnancy, etc.) */
+   893→  indianComparisonContexts?: IndianComparisonContext[];
+   894→  /** Jan Aushadhi availability */
+   895→  janAushadhi?: JanAushadhiInfo;
+   896→  /** Restructured evidence sources (International vs Indian) */
+   897→  evidenceSources?: EvidenceSources;
+   898→
+   899→  /* ---- Final Architecture Pass — canonical template v2.0 ---- */
+   900→  /** Clinical decision path — algorithm-style decision tree */
+   901→  clinicalDecisionPath?: ClinicalDecisionPath;
+   902→  /** Educational prescription template (India) */
+   903→  educationalPrescription?: EducationalPrescription;
+   904→  /** Common mistakes — what NOT to do */
+   905→  commonMistakes?: CommonMistake[];
+   906→  /** When NOT to use — red card with alternatives */
+   907→  whenNotToUse?: WhenNotToUseEntry[];
+   908→  /** Indian ward pearls — hierarchical teaching */
+   909→  wardPearls?: WardPearls;
+   910→  /** Refined high-yield level (5-tier) */
+   911→  highYieldLevel?: HighYieldLevel;
+   912→  /** Drug family navigation */
+   913→  drugFamilyNav?: DrugFamilyNav;
+   914→  /** Learning time breakdown (read / study / revision) */
+   915→  learningTimeBreakdown?: LearningTimeBreakdown;
+   916→
+   917→  /* ---- Educational UX Layer ---- */
+   918→  /** Inline micro-quizzes placed after specific sections */
+   919→  microQuizzes?: MicroQuiz[];
+   920→  /** End-of-page active recall questions */
+   921→  activeRecallQuestions?: ActiveRecallQuestion[];
+   922→  /** Guided learning paths (Patient / MBBS / NEET PG / Resident) */
+   923→  learningPaths?: LearningPath[];
+   924→  /** Lesson grouping — sections organised into learning units */
+   925→  lessonGroups?: LessonGroup[];
+   926→
+   927→  /* ---- Metadata ---- */
+   928→  /** ISO date string — last clinical review */
+   929→  lastReviewed: string;
+   930→  /** Optional list of reviewers / sources consulted */
+   931→  reviewers?: string[];
+   932→}
+   933→
+   934→/* ============================================================
+   935→   Difficulty levels + progressive disclosure (Sprint 4)
+   936→   ============================================================ */
+   937→
+   938→export type DifficultyLevel = "patient" | "medical" | "resident" | "clinician";
+   939→
+   940→export interface DifficultyMeta {
+   941→  id: DifficultyLevel;
+   942→  label: string;
+   943→  description: string;
+   944→}
+   945→
+   946→export const difficultyLevels: DifficultyMeta[] = [
+   947→  { id: "patient", label: "Patient", description: "Plain language. No jargon. What you need to know to take your medicine safely." },
+   948→  { id: "medical", label: "Medical Student", description: "Full clinical detail. MBBS / NEET-PG level. Mechanism, pearls, exam facts." },
+   949→  { id: "resident", label: "Resident", description: "Postgraduate level. Deeper reasoning, case selection, troubleshooting." },
+   950→  { id: "clinician", label: "Clinician", description: "Practising psychiatrist. Latest evidence, interactions, edge cases." },
+   951→];
+   952→
+   953→/**
+   954→ * Progressive disclosure tiers.
+   955→ * Each tier is a collapsible group of sections. The Patient difficulty level
+   956→ * shows only Core Learning + selected Clinical Practice sections.
+   957→ */
+   958→export type DisclosureTier = "core" | "advanced" | "clinical" | "exam";
+   959→
+   960→export interface DisclosureTierMeta {
+   961→  id: DisclosureTier;
+   962→  label: string;
+   963→  description: string;
+   964→  /** Section IDs that belong to this tier */
+   965→  sectionIds: string[];
+   966→  /** Whether this tier is visible in Patient mode */
+   967→  visibleInPatientMode: boolean;
+   968→}
+   969→
+   970→/**
+   971→ * The canonical 4-tier progressive disclosure structure.
+   972→ * Used by every drug page. Section IDs match the IDs in page.tsx.
+   973→ */
+   974→export const disclosureTiers: DisclosureTierMeta[] = [
+   975→  {
+   976→    id: "core",
+   977→    label: "Core Learning",
+   978→    description: "Start here — the essential mental model.",
+   979→    sectionIds: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline"],
+   980→    visibleInPatientMode: true,
+   981→  },
+   982→  {
+   983→    id: "advanced",
+   984→    label: "Advanced Learning",
+   985→    description: "Deeper neuroscience & clinical context.",
+   986→    sectionIds: ["neural-pathways", "clinical-uses", "side-effects", "monitoring"],
+   987→    visibleInPatientMode: true, // side effects + monitoring + clinical uses are patient-relevant
+   988→  },
+   989→  {
+   990→    id: "clinical",
+   991→    label: "Clinical Practice",
+   992→    description: "Prescribing, contraindications, cases, comparisons.",
+   993→    sectionIds: ["contraindications", "interactions", "patient-education", "clinical-pearls", "clinical-case", "comparison", "related-drugs"],
+   994→    visibleInPatientMode: true, // patient education + contraindications are patient-relevant
+   995→  },
+   996→  {
+   997→    id: "exam",
+   998→    label: "Exam Revision",
+   999→    description: "High-yield facts, mnemonics, one-page summary.",
+  1000→    sectionIds: ["exam-pearls", "memory-tricks", "high-yield-summary", "faq", "references"],
+  1001→    visibleInPatientMode: false, // hidden from patients
+  1002→  },
+  1003→];
+  1004→
+  1005→/**
+  1006→ * Sections hidden in Patient mode (regardless of tier).
+  1007→ * These are too technical for patients and would cause cognitive overload.
+  1008→ */
+  1009→export const hiddenInPatientMode: string[] = [
+  1010→  "neural-pathways",      // too technical
+  1011→  "clinical-pearls",      // prescriber-focused
+  1012→  "clinical-case",        // clinical reasoning
+  1013→  "comparison",           // drug selection reasoning
+  1014→  "exam-pearls",          // exam-only
+  1015→  "memory-tricks",        // exam-only
+  1016→  "high-yield-summary",   // exam-only
+  1017→  "references",           // academic
+  1018→];
+  1019→
