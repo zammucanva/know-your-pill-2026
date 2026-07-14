@@ -1269,6 +1269,241 @@ export const sertraline: Drug = {
     ],
   },
 
+  /* ---- Final Architecture Pass — canonical template v2.0 ---- */
+
+  /* Clinical decision path — algorithm-style decision tree */
+  clinicalDecisionPath: {
+    title: "When to choose Sertraline for depression",
+    startNodeId: "start",
+    nodes: [
+      {
+        id: "start",
+        question: "Patient presents with depression",
+        branches: [
+          { label: "Mild", next: "mild" },
+          { label: "Moderate", next: "moderate" },
+          { label: "Severe", next: "severe" },
+        ],
+      },
+      {
+        id: "mild",
+        question: "Mild depression (PHQ-9 5-9)",
+        recommendation: "Psychotherapy first (CBT). Consider sertraline if functional impairment or patient preference.",
+        reasoning: "NICE recommends psychotherapy alone for mild depression. Medication is offered if functional impairment persists after 2-4 weeks of psychotherapy.",
+      },
+      {
+        id: "moderate",
+        question: "Moderate depression (PHQ-9 10-14)",
+        recommendation: "Sertraline 50mg OD + CBT. First-line per NICE CG91 and IPS guidelines.",
+        reasoning: "SSRI + CBT is first-line for moderate depression. Sertraline is preferred for favourable side-effect profile, pregnancy safety, and low cost in India.",
+      },
+      {
+        id: "severe",
+        question: "Severe depression (PHQ-9 15-27)",
+        recommendation: "Sertraline 50mg OD (titrate to 100-200mg) + CBT. Consider psychiatry referral.",
+        reasoning: "Severe depression requires pharmacotherapy. Sertraline is first-line. If psychotic features → add antipsychotic. If suicidal → urgent psychiatric referral.",
+        branches: [
+          { label: "With suicidal ideation", next: "suicidal" },
+          { label: "With psychotic features", next: "psychotic" },
+          { label: "Without complications", next: "start-sertraline" },
+        ],
+      },
+      {
+        id: "suicidal",
+        question: "Severe depression with suicidal ideation",
+        recommendation: "Urgent psychiatry referral. Do NOT send home alone. Consider admission. Sertraline can be started but monitor weekly (black box warning <25).",
+        reasoning: "Suicidal ideation in severe depression is a psychiatric emergency. Tele-MANAS 14416 for crisis support. 112 for emergency.",
+      },
+      {
+        id: "psychotic",
+        question: "Severe depression with psychotic features",
+        recommendation: "Psychiatry referral. Add antipsychotic (olanzapine or aripiprazole) to SSRI. Consider ECT if catatonic or severely suicidal.",
+        reasoning: "Psychotic depression requires combination therapy (antidepressant + antipsychotic) or ECT. SSRI alone is insufficient.",
+      },
+      {
+        id: "start-sertraline",
+        question: "Why choose Sertraline?",
+        recommendation: "Sertraline is preferred when: pregnancy possible, comorbid anxiety, elderly, on multiple medications (mild CYP2D6), or cost matters (Jan Aushadhi available).",
+        reasoning: "Sertraline is the SSRI of choice in pregnancy/lactation, has σ1 agonism (anxiolytic), mild CYP2D6 inhibition (fewer interactions), and is the most affordable SSRI in India.",
+        branches: [
+          { label: "When NOT to choose", next: "avoid" },
+        ],
+      },
+      {
+        id: "avoid",
+        question: "When NOT to choose Sertraline",
+        recommendation: "Avoid: bipolar depression without mood stabiliser, active MAOI use (14 days), pimozide, severe hepatic impairment. Consider fluoxetine (bipolar), wait 14 days (MAOI), switch to escitalopram (hepatic).",
+        reasoning: "SSRIs can trigger manic switch in bipolar. MAOI + SSRI = fatal serotonin syndrome. Pimozide + sertraline = QTc. Severe hepatic impairment = reduce dose drastically.",
+      },
+    ],
+  },
+
+  /* Educational prescription template (India) */
+  educationalPrescription: {
+    scenario: "Typical Indian OPD initiation for first-episode moderate depression in an adult",
+    lines: [
+      "Rx",
+      "Tab Sertraline 25 mg",
+      "1 tab OD morning after food × 5 days",
+      "",
+      "Then increase to:",
+      "Tab Sertraline 50 mg",
+      "1 tab OD morning after food",
+      "",
+      "Advice: Take in morning with food. Do not stop suddenly.",
+      "Avoid alcohol. Report if feeling worse or new suicidal thoughts.",
+    ],
+    followUp: [
+      "Review after 2 weeks — tolerability, suicidality, side effects",
+      "Review after 4 weeks — early response (sleep, appetite, energy)",
+      "Review after 6 weeks — PHQ-9; if <30% reduction, increase to 100mg",
+      "Review after 12 weeks — full response assessment",
+      "If remission (PHQ-9 <5): continue 6-12 months, then taper over 4+ weeks",
+    ],
+    disclaimer: "Educational example only. Not a substitute for clinical judgment. Always verify dosing against current prescribing information and individualise for each patient.",
+  },
+
+  /* Common mistakes */
+  commonMistakes: [
+    {
+      mistake: "Stopping after 2 weeks because 'it's not working'",
+      why: "SSRIs take 4-6 weeks for full antidepressant effect. Stopping at 2 weeks means stopping before the drug has had a chance to work.",
+      correction: "Counsel at initiation: 'Side effects come first (week 1-2), mood benefit comes later (week 4-6). Don't stop early.'",
+    },
+    {
+      mistake: "Abrupt discontinuation",
+      why: "Sudden cessation causes discontinuation syndrome — dizziness, brain zaps, nausea, irritability. Can start within 24 hours of missed dose.",
+      correction: "Always taper over 4+ weeks. If severe, substitute fluoxetine (long half-life) for last 2 weeks of taper.",
+    },
+    {
+      mistake: "Combining with MAOIs or not waiting the 14-day washout",
+      why: "MAOI + SSRI = potentially fatal serotonin syndrome. The 14-day washout is non-negotiable.",
+      correction: "Always ask about MAOI use before starting. Wait at least 14 days after stopping an MAOI before starting sertraline, and vice versa.",
+    },
+    {
+      mistake: "Ignoring bipolar history",
+      why: "SSRIs can trigger a manic switch in undiagnosed bipolar disorder. This is a dangerous and preventable complication.",
+      correction: "Screen for bipolar disorder (MDQ questionnaire) before starting any antidepressant. If bipolar confirmed, use mood stabiliser first.",
+    },
+    {
+      mistake: "Under-dosing and not titrating",
+      why: "Starting at 50mg and never titrating means the patient may never reach therapeutic dose. OCD often requires 150-200mg.",
+      correction: "Start at 50mg (25mg in anxious/elderly), titrate by 50mg every 2-4 weeks. Target: 100-200mg for depression, up to 200mg for OCD.",
+    },
+    {
+      mistake: "Not asking about sexual dysfunction",
+      why: "Sexual dysfunction affects 30-50% of patients on SSRIs and is the #1 reason for non-adherence. Patients rarely volunteer it.",
+      correction: "Ask directly at every follow-up: 'Any changes in sexual interest or function?' If present, consider dose reduction, adding bupropion, or switching.",
+    },
+    {
+      mistake: "Not monitoring sodium in elderly",
+      why: "SSRIs cause SIADH in ~0.5-1% of patients. Risk is highest in elderly females in the first 2 weeks. Can cause seizures if severe.",
+      correction: "Check serum sodium at baseline in elderly. Recheck within 2 weeks if symptomatic (confusion, headache, lethargy).",
+    },
+    {
+      mistake: "Not warning about NSAID bleeding risk",
+      why: "SSRIs deplete platelet serotonin → impaired clotting. Combined with NSAIDs → 6× increased risk of upper GI bleed.",
+      correction: "Counsel: use paracetamol instead of ibuprofen/diclofenac. If NSAIDs are necessary, add PPI for gastroprotection.",
+    },
+  ],
+
+  /* When NOT to use — red card */
+  whenNotToUse: [
+    {
+      scenario: "Bipolar depression without mood stabiliser",
+      reason: "SSRI monotherapy can trigger a manic switch — potentially dangerous.",
+      alternative: "Mood stabiliser first (lithium, valproate, lamotrigine). SSRI only if mood stabiliser alone is insufficient.",
+    },
+    {
+      scenario: "Active MAOI use (within 14 days)",
+      reason: "Fatal serotonin syndrome. The 14-day washout is absolute.",
+      alternative: "Wait 14 days after stopping MAOI before starting sertraline.",
+    },
+    {
+      scenario: "Concurrent pimozide",
+      reason: "Sertraline inhibits CYP2D6 → raises pimozide levels → QTc prolongation → torsades de pointes.",
+      alternative: "Discontinue pimozide or use a different antidepressant without CYP2D6 inhibition.",
+    },
+    {
+      scenario: "Severe hepatic impairment (Child-Pugh C)",
+      reason: "Reduced metabolism → accumulation → toxicity.",
+      alternative: "Reduce dose by 75% (start 12.5mg every other day) or use escitalopram (slightly safer hepatic profile).",
+    },
+    {
+      scenario: "Known poor CYP2D6 metaboliser on critical CYP2D6 substrate",
+      reason: "Sertraline's mild CYP2D6 inhibition may still raise levels of co-prescribed CYP2D6 substrates (TCAs, metoprolol, antiarrhythmics).",
+      alternative: "Escitalopram (lowest CYP interaction profile) or fluvoxamine (CYP1A2, not 2D6).",
+    },
+    {
+      scenario: "Patient is <25 and actively suicidal without monitoring",
+      reason: "Black box warning — antidepressants increase suicidality in patients <25. Requires weekly monitoring.",
+      alternative: "If monitoring is not possible, consider CBT alone or refer to psychiatry for supervised initiation.",
+    },
+  ],
+
+  /* Indian ward pearls */
+  wardPearls: {
+    professorMayAsk: [
+      "What is the mechanism of action of sertraline? Why does it take 4-6 weeks to work? (SERT blockade is immediate; clinical effect correlates with 5-HT1A autoreceptor desensitisation and downstream BDNF/neurogenesis)",
+      "Which SSRI is preferred in pregnancy and why? (Sertraline — lowest milk/plasma ratio, undetectable infant levels)",
+      "Name the 6 FDA-approved indications for sertraline. (MDD, OCD, Panic, PTSD, Social Anxiety, PMDD — mnemonic: MOP PPS)",
+      "What is the black box warning? What age group? How do you counsel? (<25 years, suicidality, weekly monitoring first month)",
+      "What is serotonin syndrome? How do you distinguish it from NMS? (SS = clonus + hyperreflexia + mydriasis; NMS = rigidity + bradyreflexia)",
+      "What is the role of σ1 receptor agonism in sertraline? (Unique among SSRIs — contributes to anxiolytic effect)",
+    ],
+    residentExpects: [
+      "Know the starting dose and titration schedule (50mg → 100mg → 200mg; 25mg start in anxious/elderly)",
+      "Know when to increase dose vs switch (PHQ-9 <30% reduction at 6 weeks → increase; <50% at 12 weeks → switch/augment)",
+      "Know augmentation strategies (bupropion XL 150mg, mirtazapine 15mg)",
+      "Know discontinuation syndrome management (taper 4+ weeks; fluoxetine substitution for last 2 weeks)",
+      "Know the CYP interactions (mild CYP2D6 inhibition; check for TCA, metoprolol, antiarrhythmic co-prescription)",
+      "Know when to refer to psychiatry (no response to 2 SSRI trials, bipolar suspicion, psychotic features, suicidality)",
+    ],
+    consultantsDo: [
+      "Use PHQ-9 at every visit for objective monitoring",
+      "Screen for bipolar disorder (MDQ) before starting any antidepressant",
+      "Combine SSRI + CBT for moderate-severe depression (better outcomes than either alone)",
+      "Ask about sexual dysfunction at every follow-up (patients rarely volunteer)",
+      "Continue treatment for 6-12 months after remission for first episode; longer for recurrent",
+      "Use sertraline as default SSRI in pregnancy and lactation",
+      "Consider cost — Jan Aushadhi generic sertraline is ₹2-5/tablet",
+    ],
+    internsMiss: [
+      "Forgetting to check for MAOI use before starting (always ask!)",
+      "Not counselling about 4-6 week onset — patient stops early",
+      "Not warning about NSAID bleeding risk — patient takes ibuprofen for headache",
+      "Not asking about sexual dysfunction — patient stops silently",
+      "Not checking sodium in elderly — presents with confusion 2 weeks later",
+      "Not screening for bipolar disorder — patient has manic switch",
+      "Not involving family in monitoring (critical in Indian joint family system)",
+      "Stopping abruptly when patient feels better — discontinuation syndrome",
+      "Not providing Tele-MANAS number (14416) for crisis support",
+    ],
+  },
+
+  /* Refined high-yield level */
+  highYieldLevel: "extreme",
+
+  /* Drug family navigation */
+  drugFamilyNav: {
+    familyName: "SSRIs (Selective Serotonin Reuptake Inhibitors)",
+    members: [
+      { name: "Sertraline", slug: "sertraline", relationship: "Current drug", distinguishing: "SSRI of choice in pregnancy; σ1 agonism; 6 FDA indications" },
+      { name: "Fluoxetine", slug: "fluoxetine", relationship: "Same class (SSRI)", distinguishing: "Longest half-life; only SSRI for bulimia; paediatric ≥8yr" },
+      { name: "Escitalopram", slug: "escitalopram", relationship: "Same class (SSRI)", distinguishing: "S-enantiomer of citalopram; lowest CYP interactions; QTc watch" },
+      { name: "Paroxetine", slug: "paroxetine", relationship: "Same class (SSRI)", distinguishing: "Shortest half-life (worst discontinuation); Category D; tamoxifen interaction" },
+      { name: "Citalopram", slug: "citalopram", relationship: "Same class (SSRI)", distinguishing: "Racemic parent of escitalopram; QTc dose-dependent; 40mg cap" },
+      { name: "Fluvoxamine", slug: "fluvoxamine", relationship: "Same class (SSRI)", distinguishing: "OCD-only FDA indication; CYP1A2 inhibitor; tizanidine contraindicated" },
+    ],
+  },
+
+  /* Learning time breakdown */
+  learningTimeBreakdown: {
+    read: "18 min",
+    study: "45 min",
+    revision: "8 min",
+  },
+
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
   reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Zoloft label, NICE CG91, APA Practice Guideline, KD Tripathi 8e, IPS Depression Guidelines, NMC CBME Curriculum"],
