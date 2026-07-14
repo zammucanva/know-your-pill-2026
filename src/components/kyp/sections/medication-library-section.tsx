@@ -13,29 +13,29 @@ export function MedicationLibrarySection() {
       {/* Existing subtle neural background gradient */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-soft/40 via-transparent to-transparent" />
 
-      {/* Background artwork — editorial watermark, NOT a hero banner */}
+      {/* Background artwork — spans the ENTIRE section behind all content */}
       <div
         className="pointer-events-none absolute select-none"
         style={{
-          right: "-5%",
-          bottom: "-10%",
-          width: "70%",
-          height: "auto",
+          right: "-8%",
+          top: "5%",
+          width: "75%",
+          height: "90%",
           zIndex: 0,
-          opacity: 0.18,
+          opacity: 0.15,
           filter: "brightness(0.9) contrast(0.9) saturate(0.9)",
           maskImage:
-            "radial-gradient(ellipse 80% 70% at 70% 60%, black 10%, transparent 75%)",
+            "radial-gradient(ellipse 75% 80% at 65% 50%, black 5%, transparent 70%)",
           WebkitMaskImage:
-            "radial-gradient(ellipse 80% 70% at 70% 60%, black 10%, transparent 75%)",
+            "radial-gradient(ellipse 75% 80% at 65% 50%, black 5%, transparent 70%)",
         }}
       >
-        <div className="relative aspect-square w-full">
+        <div className="relative h-full w-full">
           <Image
             src="/artwork/med-library.png"
             alt=""
             fill
-            sizes="(max-width: 768px) 50vw, 70vw"
+            sizes="(max-width: 768px) 50vw, 75vw"
             className="object-contain"
             priority={false}
             role="presentation"
@@ -43,12 +43,12 @@ export function MedicationLibrarySection() {
         </div>
       </div>
 
-      {/* Gradient overlay — ensures text readability over artwork */}
+      {/* Gradient overlay — left side solid for text readability, fades right */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "linear-gradient(to right, var(--background) 20%, transparent 60%, transparent 100%)",
+            "linear-gradient(to right, var(--background) 25%, transparent 55%, transparent 100%)",
           zIndex: 1,
         }}
       />
