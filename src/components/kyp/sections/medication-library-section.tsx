@@ -18,15 +18,15 @@ export function MedicationLibrarySection() {
           description="Browse medications by class and understand how different treatments affect the brain and body through simplified explanations and visual guidance."
         />
 
-        {/* Custom artwork banner */}
-        <div className="mt-8 mb-10 overflow-hidden rounded-xl">
-          <div className="relative aspect-[16/5] w-full">
+        {/* Custom artwork — contained, not cropped, with soft background */}
+        <div className="mt-8 mb-10 flex justify-center">
+          <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-2xl bg-gradient-to-br from-brand-soft/30 to-neural-soft/20">
             <Image
               src="/artwork/med-library.png"
               alt="Medication Library — visual guide to psychiatric medications, drug classes, and neuroscience education"
               fill
-              sizes="(max-width: 768px) 100vw, 80rem"
-              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 28rem"
+              className="object-contain p-4"
               priority={false}
             />
           </div>
