@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 /**
  * ClinicalCard — a substance-specific clinical module card.
  * Uses the substance's drug class accent color for the icon and neurotransmitter label.
- * Displays custom artwork when available.
+ * Displays custom artwork when available, with a consistent fallback for cards without artwork.
  *
  * Used by: SubstanceUse section grid.
  */
@@ -32,9 +32,9 @@ export function ClinicalCard({ substance, index = 0, className }: ClinicalCardPr
       className={cn("h-full", className)}
     >
       <CardPrimitive href={substance.href} variant="flat" interactive className="h-full overflow-hidden">
-        {/* Custom artwork — replaces generic icon when available */}
-        {substance.artwork ? (
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl">
+        {/* Image area — consistent aspect ratio for ALL cards */}
+        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl">
+          {substance.artwork ? (
             <Image
               src={substance.artwork}
               alt={substance.artworkAlt ?? `${substance.name} molecule artwork`}
@@ -43,22 +43,22 @@ export function ClinicalCard({ substance, index = 0, className }: ClinicalCardPr
               className="object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
             />
-          </div>
-        ) : (
-          <CardBody className="flex h-full flex-col">
-            <div className="flex items-start justify-between">
+          ) : (
+            /* Fallback — coloured gradient with drug class dot, same aspect ratio */
+            <div className={cn("flex h-full w-full items-center justify-center bg-gradient-to-br from-muted/40 to-muted/10")}>
               <span
                 className={cn(
-                  "flex h-10 w-10 items-center justify-center rounded-xl border border-border/70 bg-background/60",
+                  "flex h-12 w-12 items-center justify-center rounded-xl border border-border/40 bg-background/60",
                   drugClass.accentClass
                 )}
               >
-                <span className="h-2.5 w-2.5 rounded-full bg-current" />
+                <span className="h-3 w-3 rounded-full bg-current" />
               </span>
             </div>
-          </CardBody>
-        )}
+          )}
+        </div>
 
+        {/* Content — same for all cards */}
         <CardBody className="flex h-full flex-col">
           <div className="mt-4">
             <p className="text-overline text-muted-foreground">{drugClass.name}</p>
