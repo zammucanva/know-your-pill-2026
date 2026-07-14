@@ -603,6 +603,111 @@ export interface EvidenceSources {
   indian: IndianReference[];
 }
 
+/* ============================================================
+   Final Architecture Pass — canonical template v2.0 extensions
+   ============================================================ */
+
+/** Clinical decision path — algorithm-style decision tree. */
+export interface DecisionPathNode {
+  id: string;
+  /** Question or decision point, e.g. "Patient has depression" */
+  question: string;
+  /** Branches from this node */
+  branches?: {
+    /** Label for the branch, e.g. "Mild", "Moderate", "Severe" */
+    label: string;
+    /** Next node ID */
+    next: string;
+  }[];
+  /** If this is a terminal node, the recommendation */
+  recommendation?: string;
+  /** If this is a terminal node, the reasoning */
+  reasoning?: string;
+}
+
+export interface ClinicalDecisionPath {
+  /** Title, e.g. "When to choose Sertraline for depression" */
+  title: string;
+  /** The decision tree nodes */
+  nodes: DecisionPathNode[];
+  /** Starting node ID */
+  startNodeId: string;
+}
+
+/** Educational prescription template (India). */
+export interface EducationalPrescription {
+  /** Clinical scenario, e.g. "Typical OPD initiation for first-episode depression" */
+  scenario: string;
+  /** The prescription lines (Rx format) */
+  lines: string[];
+  /** Follow-up instructions */
+  followUp: string[];
+  /** Disclaimer — always "Educational example only. Not a substitute for clinical judgment." */
+  disclaimer: string;
+}
+
+/** Common mistake entry. */
+export interface CommonMistake {
+  /** The mistake, e.g. "Stopping after 2 weeks" */
+  mistake: string;
+  /** Why it's wrong */
+  why: string;
+  /** What to do instead */
+  correction: string;
+}
+
+/** "When NOT to use" entry — red card with alternative. */
+export interface WhenNotToUseEntry {
+  /** Scenario, e.g. "Bipolar depression without mood stabiliser" */
+  scenario: string;
+  /** Why to avoid */
+  reason: string;
+  /** What to use instead */
+  alternative: string;
+}
+
+/** Indian ward pearls — hierarchical teaching pearls. */
+export interface WardPearls {
+  /** What your psychiatry professor may ask */
+  professorMayAsk: string[];
+  /** What the resident expects you to know */
+  residentExpects: string[];
+  /** What consultants commonly do */
+  consultantsDo: string[];
+  /** What interns commonly miss */
+  internsMiss: string[];
+}
+
+/** Refined high-yield level (replaces simple yieldRating for display). */
+export type HighYieldLevel = "extreme" | "high" | "moderate" | "background" | "rare";
+
+/** Drug family navigation member. */
+export interface DrugFamilyMember {
+  name: string;
+  slug?: string;
+  /** How this drug relates to the current drug, e.g. "Same class (SSRI)" */
+  relationship: string;
+  /** Key distinguishing feature, e.g. "Longest half-life" */
+  distinguishing: string;
+}
+
+export interface DrugFamilyNav {
+  /** Family name, e.g. "SSRIs" */
+  familyName: string;
+  /** All members of the family */
+  members: DrugFamilyMember[];
+}
+
+/** Learning time breakdown. */
+export interface LearningTimeBreakdown {
+  /** Skim reading time, e.g. "18 min" */
+  read: string;
+  /** Deep study time, e.g. "45 min" */
+  study: string;
+  /** Quick revision time, e.g. "8 min" */
+  revision: string;
+}
+
 /** Section difficulty tag — shown as a coloured dot next to section headings. */
 export type SectionDifficulty = "mbbs" | "pg" | "resident";
 
@@ -731,6 +836,24 @@ export interface Drug {
   janAushadhi?: JanAushadhiInfo;
   /** Restructured evidence sources (International vs Indian) */
   evidenceSources?: EvidenceSources;
+
+  /* ---- Final Architecture Pass — canonical template v2.0 ---- */
+  /** Clinical decision path — algorithm-style decision tree */
+  clinicalDecisionPath?: ClinicalDecisionPath;
+  /** Educational prescription template (India) */
+  educationalPrescription?: EducationalPrescription;
+  /** Common mistakes — what NOT to do */
+  commonMistakes?: CommonMistake[];
+  /** When NOT to use — red card with alternatives */
+  whenNotToUse?: WhenNotToUseEntry[];
+  /** Indian ward pearls — hierarchical teaching */
+  wardPearls?: WardPearls;
+  /** Refined high-yield level (5-tier) */
+  highYieldLevel?: HighYieldLevel;
+  /** Drug family navigation */
+  drugFamilyNav?: DrugFamilyNav;
+  /** Learning time breakdown (read / study / revision) */
+  learningTimeBreakdown?: LearningTimeBreakdown;
 
   /* ---- Metadata ---- */
   /** ISO date string — last clinical review */

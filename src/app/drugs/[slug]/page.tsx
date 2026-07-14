@@ -12,6 +12,7 @@ import { PatientModeVisibility } from "@/components/kyp/ui/patient-mode-visibili
 import {
   DrugHero,
   DrugQuickFacts,
+  DrugLearningTimeBadge,
   DrugLearningObjectives,
   DrugCBMEMapping,
   DrugClinicalUses,
@@ -23,24 +24,29 @@ import {
   DrugMonitoring,
   DrugContraindications,
   DrugGuidelineComparison,
+  DrugEvidenceHierarchy,
   DrugInteractions,
   DrugPatientEducation,
+  DrugIndianPractice,
+  DrugEncounterContext,
+  DrugPrescriptionWorkflow,
+  DrugClinicalDecisionPath,
+  DrugEducationalPrescription,
+  DrugCommonMistakes,
   DrugClinicalPearls,
   DrugExamLens,
   DrugExamFrequency,
   DrugPYQ,
   DrugMemoryTricks,
+  DrugWardPearls,
   DrugHighYieldSummary,
   DrugClinicalCases,
   DrugComparisonTables,
+  DrugIndianComparison,
+  DrugFamilyNavigator,
   DrugRelatedDrugs,
   DrugFAQ,
   DrugKnowledgeGraph,
-  DrugIndianPractice,
-  DrugEvidenceHierarchy,
-  DrugEncounterContext,
-  DrugPrescriptionWorkflow,
-  DrugIndianComparison,
   DrugReferences,
   DrugPrevNext,
 } from "@/components/kyp/sections/drug";
@@ -180,6 +186,13 @@ export default async function DrugPage({ params }: PageProps) {
         {/* 2. Quick Facts */}
         <DrugQuickFacts drug={drug} />
 
+        {/* 2b. Learning Time + High Yield Badge (v2.0) */}
+        <Section spacing="tight">
+          <Container>
+            <DrugLearningTimeBadge drug={drug} />
+          </Container>
+        </Section>
+
         {/* 3. Learning Objectives */}
         <DrugLearningObjectives drug={drug} />
 
@@ -259,6 +272,21 @@ export default async function DrugPage({ params }: PageProps) {
           <DrugPrescriptionWorkflow drug={drug} />
         </PatientModeVisibility>
 
+        {/* 15e. Clinical Decision Path (v2.0) — hidden in Patient mode */}
+        <PatientModeVisibility sectionId="decision-path">
+          <DrugClinicalDecisionPath drug={drug} />
+        </PatientModeVisibility>
+
+        {/* 15f. Educational Prescription (v2.0) — hidden in Patient mode */}
+        <PatientModeVisibility sectionId="educational-prescription">
+          <DrugEducationalPrescription drug={drug} />
+        </PatientModeVisibility>
+
+        {/* 15g. Common Mistakes + When NOT to Use (v2.0) — hidden in Patient mode */}
+        <PatientModeVisibility sectionId="common-mistakes">
+          <DrugCommonMistakes drug={drug} />
+        </PatientModeVisibility>
+
         {/* 16. Clinical Pearls — hidden in Patient mode */}
         <PatientModeVisibility sectionId="clinical-pearls">
           <DrugClinicalPearls drug={drug} />
@@ -281,6 +309,11 @@ export default async function DrugPage({ params }: PageProps) {
           <DrugMemoryTricks drug={drug} />
         </PatientModeVisibility>
 
+        {/* 18b. Indian Ward Pearls (v2.0) — hidden in Patient mode */}
+        <PatientModeVisibility sectionId="ward-pearls">
+          <DrugWardPearls drug={drug} />
+        </PatientModeVisibility>
+
         {/* 19. Clinical Cases — hidden in Patient mode */}
         <PatientModeVisibility sectionId="clinical-case">
           <DrugClinicalCases drug={drug} />
@@ -300,6 +333,9 @@ export default async function DrugPage({ params }: PageProps) {
         <PatientModeVisibility sectionId="related-drugs">
           <DrugRelatedDrugs drug={drug} />
         </PatientModeVisibility>
+
+        {/* 21b. Drug Family Navigator (v2.0) */}
+        <DrugFamilyNavigator drug={drug} />
 
         {/* 22. High-Yield Summary — hidden in Patient mode */}
         <PatientModeVisibility sectionId="high-yield-summary">
