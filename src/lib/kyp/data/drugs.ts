@@ -14,6 +14,8 @@ export const substances: Substance[] = [
       "Enhances GABA inhibition and releases dopamine — leading to slurred speech, loss of coordination, and severe physical withdrawal.",
     neurotransmitter: "GABA · Dopamine · Glutamate",
     href: "/alcohol.html",
+    artwork: "/artwork/ethanol.png",
+    artworkAlt: "Ethanol molecule — alcohol's psychoactive component, illustrating its chemical structure and CNS depressant mechanism",
   },
   {
     id: "cannabis",
@@ -34,6 +36,8 @@ export const substances: Substance[] = [
       "Bind to μ-opioid receptors — producing profound analgesia, euphoria, respiratory depression, and high dependence risk.",
     neurotransmitter: "Endorphin · Dopamine",
     href: "/opioids.html",
+    artwork: "/artwork/morphine.png",
+    artworkAlt: "Morphine molecule — the prototypical opioid, illustrating its binding to μ-opioid receptors and analgesic mechanism",
   },
   {
     id: "cocaine",
@@ -44,6 +48,8 @@ export const substances: Substance[] = [
       "Blocks dopamine, serotonin, and norepinephrine reuptake — producing intense euphoria, tachycardia, and severe crash.",
     neurotransmitter: "Dopamine · Norepinephrine",
     href: "/cocaine.html",
+    artwork: "/artwork/cocaine.png",
+    artworkAlt: "Cocaine molecule — illustrating its blockade of monoamine transporters and dopaminergic reward pathway activation",
   },
   {
     id: "nicotine",
@@ -54,6 +60,8 @@ export const substances: Substance[] = [
       "Activates nicotinic acetylcholine receptors — triggering dopamine release in reward pathways and rapid dependence.",
     neurotransmitter: "Acetylcholine · Dopamine",
     href: "/nicotine.html",
+    artwork: "/artwork/nicotine.png",
+    artworkAlt: "Nicotine molecule — illustrating its action on nicotinic acetylcholine receptors and dopaminergic reward activation",
   },
   {
     id: "amphetamine",
@@ -64,6 +72,8 @@ export const substances: Substance[] = [
       "Reverses dopamine and norepinephrine transporters — flooding synapses with catecholamines, producing alertness and euphoria.",
     neurotransmitter: "Dopamine · Norepinephrine",
     href: "/amphetamine.html",
+    artwork: "/artwork/amphetamine.png",
+    artworkAlt: "Amphetamine molecule — illustrating its reversal of dopamine and norepinephrine transporters in the synaptic cleft",
   },
   {
     id: "benzodiazepines",
@@ -74,6 +84,8 @@ export const substances: Substance[] = [
       "Positive allosteric modulators of GABA-A receptors — producing anxiolysis, sedation, and dangerous withdrawal seizures.",
     neurotransmitter: "GABA",
     href: "/benzodiazepines.html",
+    artwork: "/artwork/diazepam.png",
+    artworkAlt: "Diazepam molecule — the prototypical benzodiazepine, illustrating its positive allosteric modulation of GABA-A receptors",
   },
   {
     id: "barbiturate",
@@ -104,6 +116,8 @@ export const substances: Substance[] = [
       "5-HT2A receptor partial agonist — producing profound alterations in perception, mood, and sense of self lasting 8-12 hours.",
     neurotransmitter: "Serotonin",
     href: "/lsd.html",
+    artwork: "/artwork/lsd.png",
+    artworkAlt: "Lysergic acid diethylamide molecule — illustrating its partial agonism at 5-HT2A serotonin receptors and hallucinogenic effects",
   },
   {
     id: "pcp",
@@ -114,6 +128,8 @@ export const substances: Substance[] = [
       "NMDA receptor antagonist — producing dissociation, hallucinations, analgesia, and dangerous behavioural effects.",
     neurotransmitter: "Glutamate (NMDA)",
     href: "/pcp.html",
+    artwork: "/artwork/pcp.png",
+    artworkAlt: "Phencyclidine molecule — illustrating its NMDA receptor antagonism and dissociative effects on glutamatergic neurotransmission",
   },
   {
     id: "withdrawal",

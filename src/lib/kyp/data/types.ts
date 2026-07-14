@@ -55,6 +55,10 @@ export interface Substance {
   description: string;
   neurotransmitter: string;
   href: string;
+  /** Custom artwork path (in /public/artwork/), if available */
+  artwork?: string;
+  /** Alt text for the artwork */
+  artworkAlt?: string;
 }
 
 export interface MedicationClass {
