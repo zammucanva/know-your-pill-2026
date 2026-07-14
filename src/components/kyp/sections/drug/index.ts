@@ -47,3 +47,4 @@ export * from "./evidence-and-indian-practice";
 export * from "./indian-clinical-module";
 export * from "./learning-module";
 export * from "./drug-navigation-module";
+export * from "./page-metadata-strip";

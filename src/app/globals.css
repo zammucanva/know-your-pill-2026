@@ -59,7 +59,7 @@
 
   /* Fonts */
   --font-sans: var(--font-geist-sans);
-  --font-serif: var(--font-playfair);
+  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
   --font-mono: var(--font-geist-mono);
 
   /* Radius scale */
@@ -286,6 +286,7 @@
     font-feature-settings: "ss01", "cv01", "cv02";
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
 
   /* Typography scale — use as Tailwind classes via @apply in components */

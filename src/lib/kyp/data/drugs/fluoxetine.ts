@@ -1688,6 +1688,192 @@ export const fluoxetine: Drug = {
     revision: "10 min",
   },
 
+  /* ---- Educational UX Layer ---- */
+
+  /* Inline micro-quizzes — one after each major learning milestone */
+  microQuizzes: [
+    {
+      id: "quiz-mechanism",
+      question: "Which transporter does Fluoxetine inhibit?",
+      options: ["DAT (dopamine transporter)", "NET (norepinephrine transporter)", "SERT (serotonin transporter)", "GABA transporter"],
+      correctIndex: 2,
+      explanation: "Fluoxetine selectively blocks SERT (serotonin transporter), increasing serotonin in the synaptic cleft. This is what makes it an SSRI — Selective Serotonin Reuptake Inhibitor. The 'selective' refers to its much greater affinity for SERT vs NET or DAT. Note: fluoxetine also produces modest NE/DA enhancement via CYP2D6 inhibition of catecholamine metabolism, contributing to its activating profile.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "quiz-timeline",
+      question: "Why is the MAOI washout 5 weeks for fluoxetine but only 14 days for other SSRIs?",
+      options: [
+        "Fluoxetine is metabolised slowly by the liver",
+        "Norfluoxetine (active metabolite) has a half-life of 4–9 days and is detectable in plasma for up to 5 weeks",
+        "Fluoxetine inhibits CYP2D6, slowing MAOI metabolism",
+        "Fluoxetine has high plasma protein binding",
+      ],
+      correctIndex: 1,
+      explanation: "Norfluoxetine, fluoxetine's active metabolite, has a half-life of 4–9 days (up to 16 days in CYP2D6 poor metabolisers) and is detectable in plasma up to 5 weeks after stopping. Starting an MAOI within this window causes fatal serotonin syndrome. The 14-day washout for other SSRIs reflects their much shorter half-lives (21–26 hours). The 5-week washout is the single most tested fluoxetine fact.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "quiz-side-effects",
+      question: "A patient with anxious/agitated depression is started on fluoxetine. At week 1, they report worsening anxiety, jitteriness, and insomnia. What went wrong?",
+      options: [
+        "Allergic reaction — stop immediately",
+        "Wrong dose — should have started at 60mg",
+        "Fluoxetine is the most activating SSRI — should have used sertraline or escitalopram for anxious depression",
+        "Early serotonin syndrome — give cyproheptadine",
+      ],
+      correctIndex: 2,
+      explanation: "Fluoxetine is the most activating SSRI. In anxious/agitated depression, the early activation (week 1–2) worsens anxiety, jitteriness, and insomnia — often leading to early discontinuation. Match SSRI to depression phenotype: retarded/anhedonic (psychomotor slowing, hypersomnia, hyperphagia) → fluoxetine; anxious/agitated → sertraline (σ1 agonism, anxiolytic) or escitalopram (low interaction profile).",
+      afterSectionId: "side-effects",
+    },
+    {
+      id: "quiz-monitoring",
+      question: "A patient on fluoxetine 20mg for 6 weeks has PHQ-9 drop from 18 to 15 (<30% reduction). What is the next step?",
+      options: [
+        "Stop fluoxetine — it's not working",
+        "Increase to 40–60mg OD and reassess at 12 weeks",
+        "Switch immediately to an MAOI",
+        "Add thioridazine for augmentation",
+      ],
+      correctIndex: 1,
+      explanation: "PHQ-9 reduction <30% at 6 weeks → increase dose. Fluoxetine titrates 20mg → 40mg → 60mg (max 80mg). Note: fluoxetine's full response assessment is at 12 weeks (later than other SSRIs) due to slow steady state from norfluoxetine. NEVER add thioridazine or pimozide — fluoxetine's strong CYP2D6 inhibition causes fatal QTc prolongation. NEVER start an MAOI within 5 weeks of fluoxetine.",
+      afterSectionId: "monitoring",
+    },
+    {
+      id: "quiz-contraindications",
+      question: "Which of the following is absolutely contraindicated with fluoxetine due to fatal QTc prolongation?",
+      options: ["Paracetamol", "Thioridazine", "Ibuprofen", "Aspirin"],
+      correctIndex: 1,
+      explanation: "Fluoxetine's strong CYP2D6 inhibition dramatically raises thioridazine (and pimozide) levels → QTc prolongation → torsades de pointes → sudden death. This is an absolute, fatal contraindication. Other absolute contraindications: MAOIs (5-week washout required — longest of any SSRI), pimozide, concurrent thioridazine. Always review co-prescriptions before initiating fluoxetine.",
+      afterSectionId: "contraindications",
+    },
+    {
+      id: "quiz-evidence-practice",
+      question: "For which two indications is fluoxetine the ONLY SSRI with FDA approval?",
+      options: [
+        "Major depressive disorder and generalised anxiety disorder",
+        "Bulimia nervosa and paediatric depression (≥8 years)",
+        "PTSD and social anxiety disorder",
+        "OCD and panic disorder",
+      ],
+      correctIndex: 1,
+      explanation: "Fluoxetine is the only SSRI FDA-approved for bulimia nervosa (60mg OD target — reduces binge-purge frequency independent of antidepressant effect) and paediatric depression ≥8 years (10–20mg child, up to 60mg adolescent). These unique approvals — combined with the longest half-life among SSRIs (mildest discontinuation, 5-week MAOI washout), most activating profile (useful in retarded depression), and strongest CYP2D6 inhibition — define fluoxetine's identity.",
+      afterSectionId: "evidence-practice",
+    },
+  ],
+
+  /* End-of-page active recall questions */
+  activeRecallQuestions: [
+    {
+      question: "Explain the mechanism of action of fluoxetine. Why is its long half-life clinically important?",
+      answer: "Fluoxetine blocks SERT → ↑ synaptic 5-HT (hours). 5-HT1A autoreceptors initially brake firing; over 1–2 weeks they desensitise → ↑ serotonergic throughput → downstream BDNF/neurogenesis over 4–6 weeks (up to 8 weeks for fluoxetine due to slow steady state). The long half-life (parent 1–4 days; norfluoxetine 4–9 days, up to 16 days in CYP2D6 poor metabolisers) has four clinical consequences: (1) mildest discontinuation syndrome of any SSRI; (2) self-tapers — useful as a 'bridge' to taper paroxetine/venlafaxine; (3) 5-week washout required before MAOI (longest of any SSRI); (4) steady state takes 4–8 weeks — full response assessment later than other SSRIs.",
+      topic: "Mechanism & Pharmacokinetics",
+    },
+    {
+      question: "For which indications is fluoxetine the ONLY SSRI with FDA approval? List its full FDA-approved indications.",
+      answer: "Unique to fluoxetine (no other SSRI): (1) Bulimia nervosa — 60mg OD target, reduces binge-purge frequency. (2) Paediatric depression ≥8 years — 10–20mg child, up to 60mg adolescent; only SSRI approved for paediatric MDD. Full FDA-approved list: MDD, OCD (adult & paediatric ≥7 yrs), bulimia nervosa, panic disorder, PMDD. These unique approvals — combined with long half-life and strong CYP2D6 inhibition — define fluoxetine's identity among SSRIs.",
+      topic: "Indications",
+    },
+    {
+      question: "Why is fluoxetine the strongest CYP2D6 inhibitor among SSRIs? List the critical interactions and their consequences.",
+      answer: "Fluoxetine (along with paroxetine) is the strongest CYP2D6 inhibitor among SSRIs. Critical interactions: (1) Thioridazine and pimozide — raised levels → QTc prolongation → torsades de pointes → sudden death (ABSOLUTE contraindication, never combine); (2) TCAs — toxicity from raised levels; (3) Codeine and tramadol — blocks CYP2D6 conversion to active metabolites (morphine, O-desmethyltramadol) → loss of analgesia; also raises serotonin syndrome risk with tramadol; (4) Tamoxifen — blocks CYP2D6 conversion to active endoxifen → reduced anti-cancer efficacy (avoid in breast cancer patients). Always review co-prescriptions before initiating fluoxetine.",
+      topic: "Drug Interactions",
+    },
+    {
+      question: "A patient on fluoxetine develops agitation, clonus, hyperreflexia, and fever. What is the diagnosis and how do you manage it? What is unique about fluoxetine in this scenario?",
+      answer: "Serotonin syndrome. Triad: mental status change + autonomic instability + neuromuscular excitation (clonus, hyperreflexia). Management: discontinue fluoxetine, supportive care (cooling, benzodiazepines for agitation), cyproheptadine (5-HT2A antagonist) in severe cases. Distinguish from NMS (rigidity + bradyreflexia). UNIQUE TO FLUOXETINE: Risk of recurrence persists for 5 WEEKS after stopping due to norfluoxetine accumulation — do NOT start any serotonergic drug (including another SSRI, SNRI, tramadol, triptans, linezolid, methylene blue) in this window. This is the longest washout of any SSRI.",
+      topic: "Side Effects",
+    },
+    {
+      question: "When is fluoxetine preferred over other SSRIs? When should it be avoided?",
+      answer: "PREFERRED: (1) Retarded/anhedonic depression — activating profile suits psychomotor slowing, hypersomnia, hyperphagia; (2) Bulimia nervosa — only FDA-approved SSRI; (3) Paediatric depression ≥8 yrs — only FDA-approved SSRI; (4) Adherence-poor patients — long half-life forgives missed doses; (5) As a 'bridge' to taper shorter-acting SSRIs (paroxetine, venlafaxine) — long half-life self-tapers the patient. AVOIDED: (1) Anxious/agitated depression — too activating (use sertraline or escitalopram); (2) Pregnancy — sertraline preferred (shorter fetal exposure); (3) Lactation — infant norfluoxetine accumulation (sertraline preferred); (4) Elderly — polypharmacy CYP2D6 interactions, weight loss, insomnia, accumulation; (5) Concurrent thioridazine/pimozide (fatal QTc); (6) MAOIs within 5 weeks.",
+      topic: "Clinical Selection",
+    },
+    {
+      question: "How long must you wait after stopping fluoxetine before starting an MAOI? Why is this different from other SSRIs?",
+      answer: "5 WEEKS — the longest washout of any SSRI (others require 14 days). Reason: norfluoxetine, the active metabolite, has a half-life of 4–9 days (up to 16 days in CYP2D6 poor metabolisers) and is detectable in plasma up to 5 weeks after stopping. Starting an MAOI within this window causes fatal serotonin syndrome (MAOIs inhibit serotonin breakdown; combining with SERT blockade causes massive serotonergic excess). The 14-day washout for other SSRIs reflects their much shorter half-lives (21–26 hours). Always document and counsel the patient to inform any future doctor that they have taken fluoxetine in the last 5 weeks.",
+      topic: "Drug Interactions",
+    },
+  ],
+
+  /* Guided learning paths — each mode shows a curated subset of sections */
+  learningPaths: [
+    {
+      mode: "patient",
+      label: "Patient",
+      estimatedTime: "5 min",
+      description: "Plain language. What you need to know to take your medicine safely.",
+      visibleSections: ["top", "quick-facts", "patient-education", "faq", "emergency"],
+    },
+    {
+      mode: "mbbs",
+      label: "MBBS Student",
+      estimatedTime: "20 min",
+      description: "Foundations, mechanism, clinical uses, side effects, and MBBS exam content.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+    },
+    {
+      mode: "neetPg",
+      label: "NEET PG / INICET",
+      estimatedTime: "35 min",
+      description: "Full clinical detail with exam-specific content, PYQs, and drug comparisons.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+    },
+    {
+      mode: "resident",
+      label: "Resident / Clinician",
+      estimatedTime: "45 min",
+      description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+    },
+  ],
+
+  /* Lesson grouping — sections organised into learning units */
+  lessonGroups: [
+    {
+      number: 1,
+      title: "Foundations",
+      description: "What is this drug? Why does it matter?",
+      sectionIds: ["top", "quick-facts", "learning-objectives", "knowledge-graph"],
+      checkpoint: "You now know what Fluoxetine is — its unique FDA approvals (bulimia, paediatric ≥8yr), its long half-life and active metabolite norfluoxetine, and its position among SSRIs as the most activating and strongest CYP2D6 inhibitor.",
+    },
+    {
+      number: 2,
+      title: "Mechanism & Neuroscience",
+      description: "How does it work? Where does it act in the brain?",
+      sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
+      checkpoint: "You understand the mechanism — acute SERT blockade → 5-HT1A autoreceptor desensitisation → BDNF/neurogenesis over 4–6 weeks. The slow steady state (4–8 weeks) and the 5-week MAOI washout now make sense in light of norfluoxetine's 4–9 day half-life.",
+    },
+    {
+      number: 3,
+      title: "Clinical Practice",
+      description: "When do you use it? What goes wrong?",
+      sectionIds: ["clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education"],
+      checkpoint: "You can now prescribe fluoxetine safely — you know the indications (retarded depression, bulimia 60mg, paediatric ≥8yr, adherence-poor), the side effects to watch for (activation in anxious depression, sexual dysfunction, SIADH), the absolute contraindications (thioridazine, pimozide, MAOIs), and the critical CYP2D6 interactions (tramadol, codeine, tamoxifen, TCAs).",
+    },
+    {
+      number: 4,
+      title: "Indian Context",
+      description: "How is it actually used in Indian hospitals?",
+      sectionIds: ["indian-clinical", "decision-path", "common-mistakes"],
+      checkpoint: "You know the Indian brands (Flunil, Prodep, Fludac, Oxatin), the government hospital workflow, the common mistakes interns make (especially 5-week MAOI washout, thioridazine co-prescription, activating effect in anxious patients, CYP2D6 interactions with tramadol/codeine/tamoxifen), and when NOT to choose fluoxetine.",
+    },
+    {
+      number: 5,
+      title: "Exam Revision",
+      description: "High-yield facts, clinical cases, and drug comparisons.",
+      sectionIds: ["learning-module", "clinical-case", "drug-navigation", "high-yield-summary"],
+      checkpoint: "You've reviewed the exam-specific content (5-week MAOI washout, bulimia/paediatric approvals, CYP2D6 interactions, active metabolite norfluoxetine), worked through a clinical case, compared fluoxetine with the other 5 SSRIs, and have a one-page revision summary.",
+    },
+    {
+      number: 6,
+      title: "Active Recall",
+      description: "Can you answer these without looking?",
+      sectionIds: ["active-recall", "faq", "references"],
+      checkpoint: "If you could answer all the active recall questions — especially the 5-week MAOI washout rationale, the unique FDA indications (bulimia & paediatric ≥8yr), and the CYP2D6 interaction list — you have exam-level mastery of Fluoxetine.",
+    },
+  ],
+
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
   reviewers: [

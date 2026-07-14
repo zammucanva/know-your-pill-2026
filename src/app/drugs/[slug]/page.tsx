@@ -43,6 +43,7 @@ import {
   IndianClinicalModule,
   LearningModule,
   DrugNavigationModule,
+  PageMetadataStrip,
 } from "@/components/kyp/sections/drug";
 
 import { Timeline } from "@/components/kyp/ui/timeline";
@@ -353,6 +354,9 @@ export default async function DrugPage({ params }: PageProps) {
         <GuidedLearningVisibility drug={drug} sectionId="references">
           <DrugReferences drug={drug} />
         </GuidedLearningVisibility>
+
+        {/* Page Metadata Strip — professional trust footer */}
+        <PageMetadataStrip drug={drug} />
 
         {/* Checkpoint after Lesson 6 (final) */}
         {hasLessons && lessons[5] && (

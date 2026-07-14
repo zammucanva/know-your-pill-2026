@@ -994,6 +994,838 @@ export const mirtazapine: Drug = {
       "The main thing to know: AVOID ALCOHOL — it adds to mirtazapine's sedation and dizziness and can be dangerous. Be careful with other sedatives (sleeping pills, anxiety medicines, strong painkillers) — they add to the drowsiness. Tell your pharmacist about everything you take, including over-the-counter products. Some antibiotics (like ciprofloxacin) and antifungals (like ketoconazole) can raise mirtazapine levels — your doctor may adjust the dose. Mirtazapine has fewer drug interactions than many antidepressants because it is broken down by three different liver enzymes, but always check with your pharmacist.",
   },
 
+  /* ---- India Layer extensions ---- */
+
+  /* Indian clinical practice */
+  indianPractice: {
+    prescriptionStatus: "Schedule H",
+    brands: [
+      { name: "Remeron", manufacturer: "Merck", strengths: "15mg, 30mg, 45mg", note: "Originator brand — available in metros, expensive" },
+      { name: "Mirtaz", manufacturer: "Sun Pharma", strengths: "7.5mg, 15mg, 30mg, 45mg", note: "Most commonly prescribed generic mirtazapine in India" },
+      { name: "Mazetol", manufacturer: "Cipla", strengths: "15mg, 30mg" },
+      { name: "Mirnite", manufacturer: "Intas", strengths: "7.5mg, 15mg, 30mg" },
+      { name: "Mirtazapine", manufacturer: "Sun Pharma / Intas generic", strengths: "15mg, 30mg" },
+    ],
+    typicalDoses:
+      "Depression: start 15mg OD HS (night), titrate to 30mg OD after 1–2 weeks, max 45mg OD. In Indian practice, 7.5mg start is used in elderly or highly sedation-sensitive patients. Paradoxical: higher doses (30–45mg) are LESS sedating than 15mg due to dose-dependent noradrenergic effect counterbalancing H1 blockade. Maximum: 45mg/day.",
+    prescribingScenarios: [
+      "First choice when depression presents with INSOMNIA and POOR APPETITE / WEIGHT LOSS — mirtazapine's sedation and weight gain are therapeutic, not side effects.",
+      "Augmentation in SSRI partial response (especially with residual insomnia and weight loss) — California Rocket Fuel (venlafaxine + mirtazapine) for treatment-resistant depression.",
+      "Adjunct in cancer chemotherapy — mirtazapine is antiemetic (5-HT3 antagonism) and stimulates appetite, addressing chemo-induced nausea and anorexia.",
+      "Off-label for insomnia (low dose 7.5–15mg HS) when conventional hypnotics fail or are contraindicated.",
+      "Useful in elderly depressed patients with weight loss and insomnia — but watch for excessive sedation and falls.",
+    ],
+    availability: {
+      governmentHospitals: false,
+      privatePharmacies: true,
+      urban: true,
+      rural: false,
+      note: "NOT commonly available in government hospital pharmacies or Jan Aushadhi Kendras. Available in private pharmacies in metros and Tier-1/2 cities. Generic versions (Mirtaz, Mirnite) are more commonly stocked than originator (Remeron). Rural availability is limited — patients may need to source from urban centres.",
+    },
+    costCategory: "moderate",
+    costNote: "Mirtazapine is moderately expensive in India. Mirtaz (Sun Pharma) 15mg costs approximately ₹8–12 per tablet; Remeron (Merck) 15mg costs ₹20–30 per tablet. A 30-day course at 15mg OD costs ₹250–400 (generic) or ₹600–900 (originator). Cost varies by manufacturer and region. NOT commonly available in Jan Aushadhi Kendras.",
+    monitoring:
+      "In Indian practice, monitoring is primarily clinical. CBC at baseline and at signs of infection (sore throat, fever) — agranulocytosis is rare (~1 in 1000) but serious. Lipid panel and weight at baseline and 12 weeks (weight gain common). LFTs at baseline. Sleep, appetite, and mood reviewed at 1/2/4/6 weeks. PHQ-9 in tertiary centres. Mirtazapine's rapid onset (improvement in sleep and appetite within DAYS, mood within 1–2 weeks) is a distinguishing feature.",
+    patientCounselling: [
+      "Take at NIGHT (HS) — mirtazapine is sedating, especially at low dose (15mg).",
+      "You may feel sleepy and hungry in the first week — this is normal and may actually be helpful if you have been sleeping poorly or losing weight.",
+      "Common: weight gain (2–4 kg in 2–3 months — sometimes welcome), increased appetite, morning drowsiness, vivid dreams, dry mouth.",
+      "Higher doses are LESS sedating than lower doses — if 15mg makes you too drowsy in the morning, your doctor may INCREASE the dose, not reduce it (paradoxical effect).",
+      "Rare but serious: if you develop sore throat, fever, mouth ulcers, or other signs of infection, stop and see your doctor immediately (blood count check — agranulocytosis).",
+      "Unlike SSRIs, this medicine does NOT cause sexual side effects — this can be an advantage if you had problems on other antidepressants.",
+      "Avoid alcohol — both are sedating, combination causes excessive drowsiness.",
+      "If you feel worse, more agitated, or have new suicidal thoughts in the first month, contact your doctor or call Tele-MANAS at 14416.",
+      "Do not stop suddenly — although mirtazapine has milder discontinuation than SSRIs, tapering is still recommended.",
+      "Take with or without food — but if it causes morning grogginess, taking it 1–2 hours earlier (rather than right at bedtime) may help.",
+    ],
+  },
+
+  /* NMC CBME competency mapping */
+  cbmeMapping: {
+    subject: "Pharmacology",
+    mbbsYear: "Second Professional",
+    topic: "Drugs acting on Central Nervous System — Antidepressants (NaSSA, atypical)",
+    competencyCodes: ["PH7.3", "PH7.4", "PY3.2"],
+    competencyDescriptions: [
+      "PH7.3: Describe the mechanism of action, pharmacological actions, adverse effects, contraindications, and therapeutic uses of antidepressant drugs with emphasis on atypical antidepressants like mirtazapine (NaSSA).",
+      "PH7.4: Explain the rationale for drug selection, dose individualisation, and monitoring of antidepressant therapy in different clinical scenarios — including depression with insomnia and weight loss.",
+      "PY3.2 (Psychiatry, Final Professional): Describe the pharmacological management of mood disorders, including selection of NaSSA (mirtazapine) for depression with insomnia/anorexia and augmentation in treatment-resistant depression.",
+    ],
+    integrationSubjects: ["Psychiatry", "General Medicine", "Palliative Medicine (appetite stimulation)"],
+  },
+
+  /* Exam Lens — structured by Indian examination */
+  examLens: {
+    mbbs: {
+      viva: [
+        "When is sedation from an antidepressant actually beneficial? (Mirtazapine in depression with INSOMNIA and WEIGHT LOSS — sedation + appetite stimulation are therapeutic, not side effects.)",
+        "What is the mechanism of action of mirtazapine? (NaSSA — α2 adrenergic antagonist → increases NE and 5-HT release (NOT a reuptake blocker). Also blocks 5-HT2A, 5-HT2C, 5-HT3, and H1 receptors.)",
+        "Why is mirtazapine called a 'tetracyclic' antidepressant? (Structural — piperazinoazepine ring system with 4 rings; mechanistically different from TCAs despite superficial structural similarity.)",
+        "Why does mirtazapine NOT cause sexual dysfunction? (Blocks 5-HT2C receptor — this receptor normally inhibits dopamine release in mesolimbic reward pathway; blocking it preserves dopamine tone → no sexual SE.)",
+        "Why is mirtazapine 15mg MORE sedating than 30mg? (Paradoxical — H1 blockade is constant at all doses, but at higher doses the noradrenergic effect (from α2 antagonism) counterbalances H1 sedation. So 15mg = pure H1 sedation; 30–45mg = H1 + NE activation = less net sedation.)",
+        "What is the most serious side effect of mirtazapine? (Agranulocytosis — rare ~1 in 1000, but serious. Counsel about sore throat/fever. Also rare: neutropenia, Stevens-Johnson syndrome.)",
+      ],
+      practical: [
+        "Counsel a patient being started on mirtazapine for depression with insomnia and weight loss.",
+        "Write a prescription for mirtazapine 15mg OD HS for a 50-year-old with depression, insomnia, and poor appetite.",
+        "Identify the side effects to monitor in a patient on mirtazapine (weight gain, sedation, agranulocytosis).",
+        "Explain the paradoxical dose-sedation relationship of mirtazapine (15mg more sedating than 30mg).",
+      ],
+      longAnswer: [
+        "Classify antidepressants. Describe the mechanism of action, pharmacokinetics, adverse effects, and therapeutic uses of mirtazapine. Discuss the unique features of NaSSAs: paradoxical dose-sedation, lack of sexual SE, 5-HT3 antiemetic effect, and rapid onset.",
+        "A 55-year-old man with depression, severe insomnia, and 6 kg weight loss over 3 months presents for management. Discuss the pharmacological options, including drug selection, dose titration, monitoring, and counselling. Address why mirtazapine may be particularly suitable here.",
+      ],
+    },
+    neetPg: {
+      highYield: [
+        "Mirtazapine = NaSSA (Noradrenergic and Specific Serotonergic Antidepressant). α2 antagonist → ↑ NE AND ↑ 5-HT release (NOT a reuptake blocker).",
+        "Receptor profile: α2 antagonist + 5-HT2A antagonist + 5-HT2C antagonist + 5-HT3 antagonist + H1 antagonist. NO SERT blockade.",
+        "NO sexual dysfunction — 5-HT2C blockade preserves dopamine tone in mesolimbic reward pathway.",
+        "Sedation + weight gain — both via H1 blockade. THESE ARE THERAPEUTIC in depression with insomnia + weight loss.",
+        "INVERSE dose-sedation: 15mg MORE sedating than 30mg. At higher doses, NE effect counterbalances H1 sedation.",
+        "Antiemetic: 5-HT3 blockade → useful as adjunct in chemotherapy-induced nausea (off-label).",
+        "Rapid onset: improvement in sleep and appetite within DAYS (not 4–6 weeks like SSRIs). Mood improvement in 1–2 weeks.",
+        "Agranulocytosis: rare (~1 in 1000) but serious. Counsel about sore throat/fever. Check CBC if symptoms develop.",
+        "California Rocket Fuel = venlafaxine + mirtazapine — potent TRD combination (dual NE/DA/5-HT coverage).",
+        "Dosing: 15mg OD HS start → 30mg OD after 1–2 weeks → max 45mg OD. Higher doses LESS sedating.",
+      ],
+      pyqConcepts: [
+        "NEET PG 2022: Antidepressant that causes sedation AND weight gain? (Answer: Mirtazapine — H1 antagonist.)",
+        "NEET PG 2021: Antidepressant with NO sexual dysfunction? (Answer: Mirtazapine — 5-HT2C blockade; also bupropion.)",
+        "NEET PG 2020: Antidepressant with INVERSE dose-sedation (low dose more sedating)? (Answer: Mirtazapine.)",
+        "NEET PG 2019: Mechanism of mirtazapine? (Answer: α2 antagonist → ↑ NE and 5-HT release; also blocks 5-HT2A/2C/3 and H1.)",
+        "INICET 2021: Antidepressant with antiemetic effect? (Answer: Mirtazapine — 5-HT3 antagonism.)",
+      ],
+    },
+    inicet: {
+      clinicalReasoning: [
+        "A 55-year-old man with depression reports severe insomnia (2 hours/night) and 6 kg weight loss over 3 months. He is started on sertraline 50mg but reports worsening insomnia at week 1. What is the best next step? (Answer: Switch to mirtazapine 15mg OD HS — its sedation and appetite stimulation are therapeutic for THIS patient's symptom profile. SSRIs can worsen insomnia initially.)",
+        "A 35-year-old woman on venlafaxine 225mg for 8 weeks has partial response (PHQ-9 18→11) with residual insomnia and low energy. What is the augmentation strategy? (Answer: Add mirtazapine 15mg OD HS — 'California Rocket Fuel'. Covers complementary mechanisms (5-HT + NE/DA), improves sleep and appetite, and may enhance overall response.)",
+        "A 72-year-old woman with depression, poor appetite, and weight loss is started on mirtazapine 15mg HS. At week 2, she reports excessive morning drowsiness and a fall. What is the management? (Answer: Either increase dose to 30mg (paradoxically LESS sedating) OR change timing (take 1–2 hours earlier) OR reduce to 7.5mg. Falls in elderly are serious — consider dose escalation first per the inverse dose-sedation rule, then reassess.)",
+        "A 28-year-old man on mirtazapine 30mg for 4 weeks presents with sore throat and fever. What is the most likely cause and management? (Answer: Agranulocytosis — rare but serious complication of mirtazapine. STOP mirtazapine, check CBC urgently, start broad-spectrum antibiotics if neutropenic. Counsel patient about this side effect at initiation.)",
+      ],
+    },
+    fmge: {
+      frequentlyTested: [
+        "Mirtazapine class: NaSSA (α2 antagonist, NOT reuptake blocker).",
+        "Receptor profile: α2 + 5-HT2A + 5-HT2C + 5-HT3 + H1 antagonist.",
+        "Side effects: sedation + weight gain (H1) — therapeutic in insomnia/weight loss.",
+        "NO sexual dysfunction — 5-HT2C blockade.",
+        "Antiemetic effect — 5-HT3 blockade.",
+        "INVERSE dose-sedation: 15mg MORE sedating than 30mg.",
+        "Rapid onset: sleep and appetite improve within DAYS (not 4–6 weeks like SSRIs).",
+        "Serious side effect: agranulocytosis (rare, ~1 in 1000).",
+        "California Rocket Fuel = venlafaxine + mirtazapine.",
+        "Dosing: 15mg → 30mg → 45mg OD HS.",
+      ],
+    },
+    psychiatryResidency: {
+      advancedPearls: [
+        "Mirtazapine is the antidepressant of choice when the SYMPTOM PROFILE matches the drug PROFILE — i.e., depression with prominent insomnia, anxiety, and poor appetite/weight loss. The 'side effects' (sedation, weight gain) become therapeutic effects.",
+        "The paradoxical dose-sedation rule is clinically useful: a patient on 15mg with excessive morning drowsiness may benefit from INCREASING to 30mg, which is paradoxically less sedating due to dose-dependent noradrenergic counterbalance of H1 sedation.",
+        "California Rocket Fuel (venlafaxine + mirtazapine) is a powerful TRD combination — covers 5-HT (venlafaxine), NE (venlafaxine high dose + mirtazapine α2), and DA (mirtazapine 5-HT2C blockade disinhibits DA). Efficacy in TRD ~50% response rate.",
+        "Mirtazapine has a faster onset than SSRIs — sleep and appetite improve within DAYS (H1 and 5-HT2A effects are immediate), mood within 1–2 weeks. This is a counselling point: 'You'll sleep better this week, but mood takes 1–2 weeks.'",
+        "Agranulocytosis risk is ~1 in 1000 — similar to clozapine but lower. Routine CBC monitoring is NOT required (unlike clozapine), but patients should be counselled to seek urgent care for sore throat/fever.",
+        "Mirtazapine is structurally related to mianserin (another tetracyclic) — mianserin is rarely used in India due to higher agranulocytosis risk. Mirtazapine is the safer successor.",
+        "Useful in palliative care: low-dose mirtazapine (7.5–15mg HS) is used for insomnia, appetite stimulation, and antiemetic effect in advanced cancer patients — addresses 3 symptoms with one drug.",
+      ],
+    },
+  },
+
+  /* International vs Indian guideline comparisons */
+  guidelineComparisons: [
+    {
+      topic: "First-line vs augmentation role",
+      internationalSource: "APA / NICE",
+      internationalRecommendation: "SSRIs are first-line for MDD. Mirtazapine is an alternative first-line when insomnia and weight loss are prominent (symptom-matched prescribing), and is widely used as augmentation for SSRI/SNRI partial response (especially California Rocket Fuel).",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS also recommends SSRIs first-line. Mirtazapine is reserved for specific symptom profiles (insomnia, weight loss) or as augmentation. Commonly prescribed by psychiatrists in private practice; less commonly in government hospitals due to higher cost than SSRIs.",
+    },
+    {
+      topic: "Use in depression with insomnia",
+      internationalSource: "APA / NICE",
+      internationalRecommendation: "Mirtazapine is preferred when depression presents with prominent insomnia — its H1-mediated sedation is therapeutic, not a side effect. Avoids the need for separate hypnotic.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs — mirtazapine is a good choice for depression with insomnia. In Indian practice, this is particularly relevant given limited access to cognitive-behavioural therapy for insomnia (CBT-I) and the high cost of newer hypnotics.",
+    },
+    {
+      topic: "Use in treatment-resistant depression (TRD)",
+      internationalSource: "APA / CANMAT",
+      internationalRecommendation: "Mirtazapine augmentation of SSRIs/SNRIs is a recognised TRD strategy. California Rocket Fuel (venlafaxine + mirtazapine) has evidence for enhanced efficacy in TRD.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs with mirtazapine augmentation in TRD. In Indian practice, mirtazapine is often added to SSRI/SNRI for partial response — also addresses residual insomnia and weight loss. Lithium augmentation and thyroid augmentation are also used.",
+    },
+    {
+      topic: "Monitoring for agranulocytosis",
+      internationalSource: "FDA Prescribing Information (Remeron)",
+      internationalRecommendation: "Routine CBC monitoring is NOT required (unlike clozapine). Patients should be counselled to seek urgent care for sore throat, fever, or signs of infection. Agranulocytosis risk is ~1 in 1000.",
+      indianSource: null,
+      indianRecommendation: "No dedicated IPS guideline on mirtazapine monitoring — Indian practice follows FDA label. Section reflects accepted clinical practice. In Indian rural settings, patients may have limited access to urgent CBC — counselling about seeking care for infection signs is critical.",
+    },
+    {
+      topic: "Use in palliative care / cancer",
+      internationalSource: "NCCN Palliative Care Guidelines",
+      internationalRecommendation: "Mirtazapine is used off-label in palliative care for insomnia, appetite stimulation, and antiemetic effect — addresses multiple symptoms with one drug. Useful in advanced cancer patients.",
+      indianSource: "Indian Association of Palliative Care (IAPC)",
+      indianRecommendation: "IAPC concurs with off-label mirtazapine use in palliative care. In Indian palliative settings, mirtazapine 7.5–15mg HS is a useful single-drug approach for cancer patients with insomnia, anorexia, and mild depression.",
+    },
+  ],
+
+  /* Indian reference sources */
+  indianReferences: [
+    {
+      source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition",
+      type: "textbook",
+      section: "Chapter 33 — Antidepressant Drugs (atypical antidepressants, NaSSA)",
+    },
+    {
+      source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression",
+      type: "guideline",
+      section: "Section on pharmacotherapy — atypical antidepressants and augmentation",
+    },
+    {
+      source: "NMC CBME Curriculum — Pharmacology (Second Professional)",
+      type: "curriculum",
+      section: "Topic: Drugs acting on CNS — Antidepressants (NaSSA, atypical)",
+    },
+    {
+      source: "NMC CBME Curriculum — Psychiatry (Final Professional)",
+      type: "curriculum",
+      section: "Topic: Psychopharmacology — Mood disorders",
+    },
+    {
+      source: "Indian Association of Palliative Care (IAPC) — Guidelines",
+      type: "guideline",
+      section: "Section on pharmacological management of depression, insomnia, and anorexia in palliative care",
+    },
+    {
+      source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416",
+      type: "regulatory",
+      section: "Mental health support resource for patients on antidepressants",
+      url: "tel:14416",
+    },
+    {
+      source: "CDSCO — Central Drugs Standard Control Organisation",
+      type: "regulatory",
+      section: "Mirtazapine — Schedule H prescription status",
+    },
+  ],
+
+  /* Section difficulty mapping */
+  sectionDifficulty: {
+    "top": "mbbs",
+    "quick-facts": "mbbs",
+    "learning-objectives": "mbbs",
+    "knowledge-graph": "pg",
+    "mechanism": "mbbs",
+    "brain-regions": "pg",
+    "neurotransmitters": "pg",
+    "neural-pathways": "resident",
+    "timeline": "mbbs",
+    "clinical-uses": "mbbs",
+    "side-effects": "mbbs",
+    "monitoring": "pg",
+    "contraindications": "mbbs",
+    "interactions": "pg",
+    "patient-education": "mbbs",
+    "clinical-pearls": "pg",
+    "exam-lens": "mbbs",
+    "memory-tricks": "mbbs",
+    "clinical-case": "pg",
+    "comparison": "pg",
+    "indian-practice": "mbbs",
+    "guideline-comparison": "resident",
+    "related-drugs": "pg",
+    "high-yield-summary": "mbbs",
+    "faq": "mbbs",
+    "references": "resident",
+  },
+
+  /* ---- India Layer extensions (platform-wide) ---- */
+
+  /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
+  evidenceHierarchy: {
+    international: [
+      { source: "APA Practice Guideline", recommendation: "SSRIs first-line for MDD. Mirtazapine is an alternative first-line for depression with insomnia/weight loss, and a recognised augmentation strategy in TRD." },
+      { source: "FDA", recommendation: "Approved for MDD. Boxed warning: suicidality <25. Agranulocytosis risk ~1 in 1000 — counsel about infection signs." },
+      { source: "NICE CG91", recommendation: "SSRIs first-line. Mirtazapine considered when insomnia and weight loss are prominent symptom-matched features." },
+      { source: "CANMAT (Canada)", recommendation: "Mirtazapine is a recognised first-line alternative and augmentation strategy for MDD, with evidence for California Rocket Fuel combination in TRD." },
+    ],
+    indian: [
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "SSRIs first-line. Mirtazapine reserved for specific symptom profiles (insomnia, weight loss) or augmentation. Commonly prescribed in private psychiatric practice." },
+      { source: "Indian Association of Palliative Care (IAPC)", recommendation: "Mirtazapine is used off-label in palliative care for insomnia, anorexia, and mild depression — addresses multiple symptoms with one drug." },
+      { source: null, recommendation: "No dedicated IPS guideline on mirtazapine monitoring frequency or agranulocytosis surveillance — Indian practice follows FDA label. Current section reflects accepted clinical practice and internationally accepted evidence." },
+    ],
+    indianClinicalPractice:
+      "In Indian practice, mirtazapine is most commonly prescribed by psychiatrists in private practice for: (1) depression with prominent insomnia and weight loss (symptom-matched), (2) augmentation in SSRI/SNRI partial response (especially California Rocket Fuel), and (3) palliative care indications (insomnia, anorexia, mild depression). It is NOT commonly stocked in government hospitals or Jan Aushadhi Kendras. Indian psychiatrists are familiar with the paradoxical dose-sedation rule — patients on 15mg with excessive drowsiness may benefit from dose escalation to 30mg. The rapid onset (sleep and appetite improvement within days) is a counselling point that improves adherence. CBC monitoring is not routine, but patients are counselled about sore throat/fever as a sign of agranulocytosis.",
+  },
+
+  /* Indian encounter context — where you'll see this drug */
+  indianEncounterContext: {
+    governmentHospitals:
+      "NOT commonly available in government hospital pharmacies or DMHP centres. May be used in tertiary psychiatry centres for treatment-resistant depression. Patients prescribed mirtazapine must purchase from private pharmacy.",
+    privateHospitals:
+      "Used in private psychiatric practice for depression with insomnia and weight loss, augmentation in TRD, and palliative care indications. Mirtaz (Sun Pharma) and Mirnite (Intas) are commonly stocked. Monitoring is clinical, with PHQ-9 at 2/4/6/12 weeks.",
+    medicalColleges:
+      "Teaching drug for atypical antidepressant pharmacology. Used in pharmacology practicals (prescription writing for symptom-matched antidepressant choice). Commonly featured in NEET PG and INICET questions on NaSSA mechanism and paradoxical dose-sedation.",
+    primaryCare:
+      "Rarely initiated in Indian primary care due to need for symptom-matching counselling and agranulocytosis awareness. GP/family physicians may refer to psychiatrist for mirtazapine initiation. More commonly used in private psychiatric OPD.",
+    psychiatryOPD:
+      "First choice for depression with insomnia + weight loss (15mg OD HS, titrate to 30–45mg); augmentation in SSRI/SNRI partial response (California Rocket Fuel); palliative care adjunct (7.5–15mg HS for insomnia, anorexia, mild depression). Counselling on paradoxical dose-sedation and agranulocytosis warning is essential.",
+  },
+
+  /* Indian prescription workflow */
+  prescriptionWorkflow: {
+    beforePrescribing: [
+      "Screen for bipolar disorder (MDQ) — mirtazapine has lower manic-switch risk than SSRIs but is NOT zero.",
+      "Assess symptom profile — mirtazapine is ideal for depression with INSOMNIA and WEIGHT LOSS. If patient has obesity or hypersomnia, choose bupropion instead.",
+      "Check baseline weight and BMI — mirtazapine causes weight gain (2–4 kg in 2–3 months).",
+      "Check baseline CBC if possible — agranulocytosis risk is rare (~1 in 1000) but serious.",
+      "Check LFTs — mirtazapine is metabolised hepatically (CYP1A2, CYP2D6, CYP3A4); reduce dose in hepatic impairment.",
+      "Review concurrent medications — mirtazapine has relatively FEW CYP interactions (low interaction profile), but watch for MAOIs, other sedatives, and serotonergic drugs.",
+      "Assess suicidal ideation — black box warning for <25. Provide Tele-MANAS (14416) number.",
+      "Counsel about paradoxical dose-sedation: 'If 15mg makes you too drowsy in the morning, your doctor may INCREASE the dose — this is not a mistake.'",
+    ],
+    duringTreatment: [
+      "Week 1: assess tolerability — sedation (often welcome in insomnia), morning drowsiness, increased appetite, vivid dreams.",
+      "Week 1–2: sleep and appetite often improve within DAYS — early indicator of response.",
+      "Week 2–4: mood improvement begins (faster than SSRIs).",
+      "Week 4–6: PHQ-9 assessment. If partial response, increase dose to 30–45mg.",
+      "Monitor weight at 4 and 12 weeks — 2–4 kg gain is common.",
+      "Counsel about sore throat/fever — STOP and check CBC urgently (agranulocytosis).",
+      "Watch for excessive sedation in elderly — falls risk. Consider dose escalation (paradoxical) or change timing.",
+    ],
+    followUp: [
+      "First follow-up at 1 week — tolerability (sedation, appetite), early sleep/appetite improvement.",
+      "Second follow-up at 2 weeks — early mood response (faster than SSRIs).",
+      "Third follow-up at 4 weeks — PHQ-9, weight check, dose escalation to 30mg if needed.",
+      "Fourth follow-up at 6 weeks — full response assessment.",
+      "Fifth follow-up at 12 weeks — weight gain assessment, lipid panel.",
+      "If remission: continue 6–12 months for first episode of depression.",
+      "Before discontinuation: taper over 2–4 weeks (milder discontinuation than SSRIs but still recommended).",
+    ],
+    whenToRefer: [
+      "Refer to psychiatrist if agranulocytosis suspected (sore throat, fever) — STOP mirtazapine, urgent CBC.",
+      "Refer urgently if suicidal ideation emerges or worsens.",
+      "Refer if bipolar disorder is suspected (manic switch risk, lower than SSRIs but present).",
+      "Refer if excessive sedation in elderly causes falls — consider dose adjustment or switch to less sedating agent.",
+      "Refer to physician if severe weight gain, lipid abnormalities, or hepatic dysfunction develop.",
+      "Refer for CBT — combined mirtazapine + CBT may enhance response in depression.",
+      "Refer to palliative care team for symptom management in advanced cancer patients.",
+    ],
+  },
+
+  /* Exam frequency — star ratings */
+  examFrequency: {
+    neetPg: 4,
+    inicet: 3,
+    mbbsViva: 3,
+    fmge: 4,
+  },
+
+  /* PYQ metadata — concept-level, no copyrighted content */
+  pyqMetadata: [
+    { exam: "NEET PG", year: 2022, concept: "Antidepressant causing sedation + weight gain", topic: "NaSSA adverse effects" },
+    { exam: "NEET PG", year: 2021, concept: "Antidepressant with NO sexual dysfunction (5-HT2C blockade)", topic: "Atypical antidepressants" },
+    { exam: "NEET PG", year: 2020, concept: "INVERSE dose-sedation in mirtazapine (15mg more sedating than 30mg)", topic: "NaSSA pharmacology" },
+    { exam: "NEET PG", year: 2019, concept: "Mechanism of mirtazapine (α2 antagonist)", topic: "NaSSA mechanism" },
+    { exam: "INICET", year: 2021, concept: "Antidepressant with 5-HT3 antiemetic effect", topic: "NaSSA receptor profile" },
+    { exam: "INICET", year: 2023, concept: "California Rocket Fuel (venlafaxine + mirtazapine)", topic: "TRD augmentation" },
+    { exam: "FMGE", year: 2022, concept: "Mirtazapine — tetracyclic / NaSSA class", topic: "Antidepressant classification" },
+    { exam: "FMGE", year: 2021, concept: "Mirtazapine adverse effect — agranulocytosis", topic: "Antidepressant safety" },
+  ],
+
+  /* Indian comparison contexts */
+  indianComparisonContexts: [
+    {
+      scenario: "Depression with insomnia and weight loss",
+      recommendation: "Mirtazapine 15mg OD HS is the drug of choice — its sedation and appetite stimulation are therapeutic, not side effects. Faster onset than SSRIs (sleep improves within days).",
+      alternative: "If insomnia is severe but weight loss is not, consider SSRI + low-dose trazodone. Bupropion is a poor choice here — it would worsen both insomnia and weight loss.",
+    },
+    {
+      scenario: "SSRI-induced sexual dysfunction",
+      recommendation: "Mirtazapine is a good switch option — blocks 5-HT2C (preserves dopamine tone → no sexual SE). Alternative to bupropion when patient also has insomnia/weight loss.",
+      alternative: "Bupropion if patient has anergia/hypersomnia (opposite symptom profile). Both lack sexual SE — choice based on symptom profile.",
+    },
+    {
+      scenario: "Treatment-resistant depression (SSRI/SNRI partial response)",
+      recommendation: "Augment with mirtazapine 15mg OD HS — California Rocket Fuel (venlafaxine + mirtazapine) is a powerful TRD combination. Addresses residual insomnia/weight loss.",
+      alternative: "Bupropion augmentation (if residual anergia/sexual SE). Lithium augmentation (if not contraindicated).",
+    },
+    {
+      scenario: "Elderly depression with weight loss and insomnia",
+      recommendation: "Mirtazapine 7.5–15mg OD HS — addresses multiple symptoms with one drug. Watch for excessive sedation and falls. If 15mg too sedating, paradoxically consider 30mg (less sedating).",
+      alternative: "SSRI (sertraline) if sedation is a concern. Avoid TCAs (anticholinergic in elderly).",
+    },
+    {
+      scenario: "Palliative care / advanced cancer",
+      recommendation: "Mirtazapine 7.5–15mg OD HS — single-drug approach for insomnia, anorexia, mild depression, and chemo-induced nausea (5-HT3 antagonism).",
+      alternative: "Methylphenidate for depression in palliative care (faster onset, less sedation). Olanzapine for appetite stimulation.",
+    },
+    {
+      scenario: "Government hospital setup",
+      recommendation: "Mirtazapine is NOT commonly stocked — patients must purchase from private pharmacy. SSRIs (sertraline, escitalopram) are first-line; reserve mirtazapine for specific indications (insomnia/weight loss).",
+      alternative: "If cost is the primary concern and SSRI is needed, Jan Aushadhi generic sertraline (₹2–5/tablet) is unbeatable. Mirtazapine is moderately expensive.",
+    },
+  ],
+
+  /* Jan Aushadhi availability */
+  janAushadhi: {
+    available: false,
+    note: "Mirtazapine is NOT commonly available at Jan Aushadhi Kendras. Patients must purchase from private pharmacies. Generic versions (Mirtaz — Sun Pharma, Mirnite — Intas, Mazetol — Cipla) are moderately priced at ₹8–12 per 15mg tablet. Originator (Remeron — Merck) is more expensive at ₹20–30 per tablet. The lack of Jan Aushadhi availability limits mirtazapine use in resource-constrained settings.",
+  },
+
+  /* Restructured evidence sources — International vs Indian */
+  evidenceSources: {
+    international: [
+      { source: "Katzung Basic & Clinical Pharmacology, 16th edition", section: "Chapter 30 — Antidepressant Agents (NaSSA, atypical)" },
+      { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
+      { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants (NaSSA, α2 antagonist)" },
+      { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression and palliative care" },
+      { source: "FDA Prescribing Information — REMERON / REMERON SolTab (mirtazapine)", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/020415s028lbl.pdf" },
+      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Alternative antidepressants" },
+      { source: "APA Practice Guideline for MDD, 3rd edition", section: "Pharmacotherapy — atypical antidepressants and augmentation" },
+      { source: "CANMAT 2016 — Clinical Guidelines for the Management of Adults with MDD", section: "Augmentation strategies" },
+    ],
+    indian: [
+      { source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition", type: "textbook", section: "Chapter 33 — Antidepressant Drugs (NaSSA, atypical)" },
+      { source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression", type: "guideline", section: "Section on pharmacotherapy — atypical antidepressants and augmentation" },
+      { source: "NMC CBME Curriculum — Pharmacology (Second Professional)", type: "curriculum", section: "Topic: Drugs acting on CNS — Antidepressants (NaSSA)" },
+      { source: "NMC CBME Curriculum — Psychiatry (Final Professional)", type: "curriculum", section: "Topic: Psychopharmacology — Mood disorders" },
+      { source: "Indian Association of Palliative Care (IAPC) — Guidelines", type: "guideline", section: "Pharmacological management of depression, insomnia, and anorexia in palliative care" },
+      { source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416", type: "regulatory", section: "Mental health support resource", url: "tel:14416" },
+      { source: "CDSCO — Central Drugs Standard Control Organisation", type: "regulatory", section: "Mirtazapine — Schedule H prescription status" },
+    ],
+  },
+
+  /* ---- Final Architecture Pass — canonical template v2.0 ---- */
+
+  /* Clinical decision path — algorithm-style decision tree */
+  clinicalDecisionPath: {
+    title: "When to choose Mirtazapine",
+    startNodeId: "start",
+    nodes: [
+      {
+        id: "start",
+        question: "Patient presents with depression — what is the symptom profile?",
+        branches: [
+          { label: "Insomnia + weight loss", next: "symptom-matched" },
+          { label: "SSRI-induced sexual dysfunction", next: "sexual-dysfunction" },
+          { label: "SSRI/SNRI partial response (TRD)", next: "augmentation" },
+          { label: "Palliative care / cancer", next: "palliative" },
+        ],
+      },
+      {
+        id: "symptom-matched",
+        question: "Depression with prominent insomnia and weight loss — what to choose?",
+        recommendation: "Mirtazapine 15mg OD HS — its sedation (H1) and appetite stimulation (5-HT2C) are THERAPEUTIC, not side effects. Faster onset than SSRIs (sleep improves within days).",
+        reasoning: "Mirtazapine is the antidepressant of choice when the symptom profile matches the drug profile — sedation + weight gain become therapeutic effects. Bupropion would worsen both.",
+        branches: [
+          { label: "Paradoxical dose check", next: "paradoxical" },
+        ],
+      },
+      {
+        id: "sexual-dysfunction",
+        question: "SSRI-induced sexual dysfunction — switch to what?",
+        recommendation: "Mirtazapine 15mg OD HS OR bupropion XL 150mg OD. Mirtazapine blocks 5-HT2C (preserves dopamine tone → no sexual SE). Choose mirtazapine if insomnia/weight loss also present; bupropion if anergia/obesity.",
+        reasoning: "Both mirtazapine and bupropion lack SSRI-induced sexual SE — choice based on symptom profile. Mirtazapine's 5-HT2C blockade preserves mesolimbic dopamine tone.",
+      },
+      {
+        id: "augmentation",
+        question: "Treatment-resistant depression (SSRI/SNRI partial response) — augment with what?",
+        recommendation: "Mirtazapine 15mg OD HS — California Rocket Fuel (venlafaxine + mirtazapine) is a powerful TRD combination. Covers complementary mechanisms and addresses residual insomnia.",
+        reasoning: "California Rocket Fuel combines venlafaxine (SNRI, 5-HT + NE) with mirtazapine (α2 antagonist, 5-HT2A/2C/3 + H1 blockade). Dual NE/DA/5-HT coverage. ~50% response rate in TRD.",
+      },
+      {
+        id: "palliative",
+        question: "Palliative care patient with insomnia, anorexia, and mild depression — what to choose?",
+        recommendation: "Mirtazapine 7.5–15mg OD HS — single-drug approach addressing insomnia (H1), anorexia (5-HT2C), mild depression, and chemo-induced nausea (5-HT3 antagonism).",
+        reasoning: "Mirtazapine is uniquely useful in palliative care — addresses multiple symptoms with one drug, avoiding polypharmacy. Lower doses preferred in elderly/frail patients.",
+      },
+      {
+        id: "paradoxical",
+        question: "Patient on 15mg reports excessive morning drowsiness — what to do?",
+        recommendation: "INCREASE dose to 30mg — paradoxically LESS sedating due to dose-dependent noradrenergic counterbalance of H1 sedation. Alternative: change timing (take 1–2 hours earlier).",
+        reasoning: "Mirtazapine's paradoxical dose-sedation: at low doses (15mg), H1 sedation dominates; at higher doses (30–45mg), α2-mediated NE activation counterbalances H1 sedation. So 15mg > 30mg > 45mg in sedation intensity.",
+        branches: [
+          { label: "Safety check", next: "safety" },
+        ],
+      },
+      {
+        id: "safety",
+        question: "Before prescribing mirtazapine — safety considerations?",
+        recommendation: "COUNSEL: 'If you develop sore throat, fever, or mouth ulcers, STOP and seek urgent care — rare but serious blood count drop (agranulocytosis).' Check baseline CBC and LFTs. Avoid abrupt alcohol cessation (sedation additive).",
+        reasoning: "Agranulocytosis risk is ~1 in 1000 — similar to clozapine but lower. Routine CBC monitoring is NOT required (unlike clozapine), but counselling is essential. Sedation is additive with alcohol and other sedatives.",
+      },
+      {
+        id: "bipolar",
+        question: "Bipolar depression — can mirtazapine be used?",
+        recommendation: "Mirtazapine may be used as adjunct to mood stabiliser in bipolar depression — lower switch risk than SSRIs/SNRIs. NEVER monotherapy.",
+        reasoning: "Mirtazapine's lower serotonergic effect (vs SSRIs) translates to lower manic-switch risk, but it is NOT zero. Use only as adjunct to mood stabiliser (lithium, valproate). Monitor for switch.",
+      },
+    ],
+  },
+
+  /* Educational prescription template (India) */
+  educationalPrescription: {
+    scenario: "Typical Indian OPD initiation: 55-year-old with depression, severe insomnia, and 6 kg weight loss",
+    lines: [
+      "Rx",
+      "Tab Mirtazapine 15 mg",
+      "1 tab OD at night (HS) × 7 days",
+      "",
+      "Then increase to:",
+      "Tab Mirtazapine 30 mg",
+      "1 tab OD at night (HS)",
+      "",
+      "Advice: Take at NIGHT. You may feel sleepy and hungry — this is expected and helpful.",
+      "If 15mg makes you too drowsy in the morning, your doctor may INCREASE the dose (paradoxical — higher dose is less sedating).",
+      "If you develop sore throat, fever, or mouth ulcers, STOP and see your doctor urgently.",
+      "Avoid alcohol while on this medicine.",
+    ],
+    followUp: [
+      "Review after 1 week — tolerability (sedation, appetite), early sleep/appetite improvement",
+      "Review after 2 weeks — early mood response (faster than SSRIs)",
+      "Review after 4 weeks — PHQ-9, weight; if <30% reduction, increase to 30mg",
+      "Review after 6 weeks — full response assessment",
+      "Review after 12 weeks — weight gain assessment, lipid panel",
+      "If remission: continue 6–12 months, then taper over 2–4 weeks",
+    ],
+    disclaimer: "Educational example only. Not a substitute for clinical judgment. Always verify dosing against current prescribing information and individualise for each patient.",
+  },
+
+  /* Common mistakes */
+  commonMistakes: [
+    {
+      mistake: "Reducing dose when patient reports excessive morning drowsiness",
+      why: "Mirtazapine has a PARADOXICAL dose-sedation: 15mg is MORE sedating than 30mg. At higher doses, α2-mediated noradrenergic activation counterbalances H1 sedation. Reducing dose WORSENS the problem.",
+      correction: "If patient on 15mg reports excessive morning drowsiness, INCREASE to 30mg. Counsel about the paradox. Alternative: change timing (take 1–2 hours earlier).",
+    },
+    {
+      mistake: "Using mirtazapine in a patient with obesity and hypersomnia",
+      why: "Mirtazapine causes weight gain (H1) and sedation. In a patient whose depression presents with obesity and hypersomnia, these 'side effects' compound the symptom profile — opposite of symptom-matched prescribing.",
+      correction: "Use bupropion instead — activating (NE + DA) and causes weight loss. Match drug to symptom profile: insomnia/weight loss → mirtazapine; anergia/obesity → bupropion.",
+    },
+    {
+      mistake: "Not counselling about agranulocytosis",
+      why: "Agranulocytosis is rare (~1 in 1000) but serious — potentially fatal if untreated. Patients may dismiss sore throat as 'just a cold' and not seek care, leading to sepsis.",
+      correction: "Counsel explicitly at initiation: 'If you develop sore throat, fever, mouth ulcers, or any sign of infection, STOP the medicine and see your doctor immediately for a blood test.' Document the counselling.",
+    },
+    {
+      mistake: "Combining with alcohol",
+      why: "Both mirtazapine (H1) and alcohol are sedating — combination causes excessive drowsiness, impaired coordination, and risk of falls (especially in elderly). Respiratory depression risk in overdose.",
+      correction: "Counsel: 'Avoid alcohol while on mirtazapine. If you must drink, limit to 1 drink and do not drive.' For patients with alcohol use disorder, address this before prescribing.",
+    },
+    {
+      mistake: "Using mirtazapine as monotherapy in bipolar depression",
+      why: "Mirtazapine has lower manic-switch risk than SSRIs/SNRIs, but is NOT zero. Monotherapy in bipolar depression risks a manic switch — potentially dangerous.",
+      correction: "Always use mirtazapine as adjunct to a mood stabiliser (lithium, valproate, lamotrigine) in bipolar depression. Screen for bipolar disorder (MDQ) before starting any antidepressant.",
+    },
+    {
+      mistake: "Missing the rapid onset (and counselling patients to wait 4–6 weeks)",
+      why: "Mirtazapine has a FASTER onset than SSRIs — sleep and appetite improve within DAYS, mood within 1–2 weeks. Telling the patient to wait 4–6 weeks (as for SSRIs) misses the early benefit and may undermine adherence.",
+      correction: "Counsel: 'You will likely sleep better THIS WEEK, and your appetite will improve. Mood improvement starts at 1–2 weeks.' This early benefit improves adherence and differentiates mirtazapine from SSRIs.",
+    },
+    {
+      mistake: "Starting at 30mg in elderly or sedation-sensitive patients",
+      why: "Starting at 30mg bypasses the dose-titration principle. While 30mg is paradoxically LESS sedating than 15mg, starting at 30mg in elderly risks orthostatic hypotension, dizziness, and falls.",
+      correction: "Start at 7.5–15mg OD HS in elderly, sedation-sensitive, or hepatically impaired patients. Titrate to 30mg after 1–2 weeks based on tolerability and response.",
+    },
+    {
+      mistake: "Not addressing weight gain in follow-up",
+      why: "Mirtazapine causes 2–4 kg weight gain in 2–3 months. In patients with diabetes, hypertension, or body image concerns, this can cause non-adherence or worsen comorbidities.",
+      correction: "Weigh patient at baseline, 4 weeks, and 12 weeks. If weight gain is significant, counsel on diet/exercise, consider dose reduction, or switch to bupropion if weight gain is unacceptable.",
+    },
+  ],
+
+  /* When NOT to use — red card */
+  whenNotToUse: [
+    {
+      scenario: "Depression with obesity and hypersomnia (atypical 'leaden paralysis' profile)",
+      reason: "Mirtazapine causes weight gain and sedation — these would compound the existing symptom profile. Opposite of symptom-matched prescribing.",
+      alternative: "Use bupropion — activating (NE + DA), causes weight loss, and addresses anergia/hypersomnia. Match drug to symptom profile.",
+    },
+    {
+      scenario: "Active MAOI use (within 14 days)",
+      reason: "Hypertensive crisis — mirtazapine increases NE and 5-HT release (via α2 antagonism); MAOIs prevent their breakdown → dangerous sympathetic excess.",
+      alternative: "Wait 14 days after stopping MAOI before starting mirtazapine. Conversely, wait 14 days after stopping mirtazapine before starting an MAOI.",
+    },
+    {
+      scenario: "Known hepatic impairment (severe — Child-Pugh C)",
+      reason: "Mirtazapine is metabolised hepatically (CYP1A2, CYP2D6, CYP3A4). Severe hepatic impairment → accumulation → toxicity (excessive sedation, orthostatic hypotension).",
+      alternative: "Reduce dose by 50% (start 7.5mg) or use sertraline (more favourable hepatic profile, monitor).",
+    },
+    {
+      scenario: "History of agranulocytosis or current neutropenia",
+      reason: "Mirtazapine carries a rare (~1 in 1000) risk of agranulocytosis. In patients with prior blood dyscrasias, this risk is unacceptable.",
+      alternative: "Use SSRI (sertraline, escitalopram) — no risk of agranulocytosis. If mirtazapine is essential, monitor CBC weekly for first 2 months.",
+    },
+    {
+      scenario: "Elderly with high falls risk",
+      reason: "Mirtazapine's H1-mediated sedation and orthostatic hypotension increase falls risk in elderly — particularly dangerous with osteoporosis.",
+      alternative: "Use SSRI (sertraline) — less sedating. If mirtazapine is essential, use 7.5mg start and counsel on falls prevention. Avoid nocturnal dosing in patients who get up to urinate.",
+    },
+    {
+      scenario: "Patient with severe hepatic encephalopathy or marked sedation baseline",
+      reason: "Mirtazapine's sedation would worsen an already sedated patient — risk of respiratory depression and decreased consciousness.",
+      alternative: "Use SSRI (sertraline) — less sedating. Address underlying cause of encephalopathy first.",
+    },
+  ],
+
+  /* Indian ward pearls */
+  wardPearls: {
+    professorMayAsk: [
+      "When is sedation from an antidepressant actually beneficial? (Mirtazapine in depression with insomnia + weight loss — sedation and appetite stimulation are therapeutic.)",
+      "Why does mirtazapine NOT cause sexual dysfunction? (5-HT2C blockade — this receptor normally inhibits dopamine release in mesolimbic reward pathway; blocking it preserves dopamine tone.)",
+      "Why is mirtazapine 15mg MORE sedating than 30mg? (H1 blockade is constant at all doses; at higher doses, α2-mediated NE activation counterbalances H1 sedation.)",
+      "What is California Rocket Fuel? (Venlafaxine + mirtazapine — TRD combination covering 5-HT, NE, DA mechanisms.)",
+      "What is the mechanism of mirtazapine? (NaSSA — α2 antagonist → ↑ NE and 5-HT release. Also blocks 5-HT2A, 5-HT2C, 5-HT3, H1.)",
+      "What is the most serious side effect of mirtazapine? (Agranulocytosis — rare ~1 in 1000, but serious. Counsel about sore throat/fever.)",
+    ],
+    residentExpects: [
+      "Know the receptor profile: α2 antagonist + 5-HT2A + 5-HT2C + 5-HT3 + H1 antagonist.",
+      "Know the paradoxical dose-sedation rule — 15mg > 30mg > 45mg in sedation intensity.",
+      "Know when to use mirtazapine: depression with insomnia + weight loss, TRD augmentation, palliative care.",
+      "Know California Rocket Fuel (venlafaxine + mirtazapine) for TRD.",
+      "Know the agranulocytosis counselling — sore throat/fever → STOP and check CBC urgently.",
+      "Know the rapid onset — sleep/appetite improve within DAYS, mood within 1–2 weeks (faster than SSRIs).",
+    ],
+    consultantsDo: [
+      "Match drug to symptom profile — mirtazapine for insomnia/weight loss, bupropion for anergia/obesity.",
+      "Counsel every patient about paradoxical dose-sedation: 'If 15mg is too sedating, your doctor may INCREASE the dose.'",
+      "Use California Rocket Fuel (venlafaxine + mirtazapine) for TRD with residual insomnia.",
+      "Counsel every patient about agranulocytosis: 'Sore throat, fever, mouth ulcers — STOP and see doctor urgently.'",
+      "Start at 7.5–15mg in elderly or sedation-sensitive patients; titrate to 30–45mg.",
+      "Use low-dose mirtazapine (7.5–15mg HS) in palliative care for insomnia, anorexia, and mild depression — single drug for multiple symptoms.",
+      "Monitor weight at baseline, 4 weeks, and 12 weeks — 2–4 kg gain is common.",
+    ],
+    internsMiss: [
+      "Forgetting to counsel about paradoxical dose-sedation — patient takes 15mg, feels drowsy, and self-stops the drug.",
+      "Missing the agranulocytosis counselling — patient dismisses sore throat as 'just a cold' and develops sepsis.",
+      "Using mirtazapine in obesity/hypersomnia (wrong symptom profile — should be bupropion).",
+      "Telling patient to wait 4–6 weeks for effect (SSRI counselling) — mirtazapine is faster, and missing this disappoints the patient.",
+      "Not addressing weight gain in follow-up — patient stops the drug due to body image concerns or worsened diabetes.",
+      "Starting at 30mg in elderly — orthostatic hypotension, dizziness, and falls.",
+      "Combining with alcohol — excessive sedation and falls risk.",
+      "Not screening for bipolar disorder — manic switch (lower risk than SSRIs but present).",
+      "Forgetting the 5-HT3 antiemetic effect — missing opportunity to use mirtazapine in palliative care for chemo-induced nausea.",
+    ],
+  },
+
+  /* Refined high-yield level */
+  highYieldLevel: "high",
+
+  /* Drug family navigation */
+  drugFamilyNav: {
+    familyName: "NaSSAs (Noradrenergic and Specific Serotonergic Antidepressants)",
+    members: [
+      { name: "Mirtazapine", slug: "mirtazapine", relationship: "Current drug — only NaSSA in clinical use", distinguishing: "α2 antagonist + 5-HT2A/2C/3 + H1 antagonist; sedation + weight gain (therapeutic in insomnia/weight loss); NO sexual SE; paradoxical dose-sedation; California Rocket Fuel" },
+    ],
+  },
+
+  /* Learning time breakdown */
+  learningTimeBreakdown: {
+    read: "17 min",
+    study: "45 min",
+    revision: "8 min",
+  },
+
+  /* ---- Educational UX Layer ---- */
+
+  /* Inline micro-quizzes — one after each major learning milestone */
+  microQuizzes: [
+    {
+      id: "quiz-mechanism",
+      question: "What is the primary mechanism of action of mirtazapine?",
+      options: [
+        "SERT blockade (serotonin reuptake inhibition)",
+        "α2 adrenergic receptor antagonism (↑ NE and 5-HT release)",
+        "MAO-A inhibition",
+        "Dopamine D2 receptor antagonism",
+      ],
+      correctIndex: 1,
+      explanation: "Mirtazapine is a NaSSA (Noradrenergic and Specific Serotonergic Antidepressant) — its PRIMARY mechanism is α2 adrenergic receptor antagonism. By blocking presynaptic α2 autoreceptors, it disinhibits NE and 5-HT release. Mirtazapine is NOT a reuptake blocker — distinguishing it from SSRIs/SNRIs/TCAs.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "quiz-paradoxical-dose",
+      question: "Why is mirtazapine 15mg MORE sedating than 30mg?",
+      options: [
+        "15mg accumulates more in the brain",
+        "At higher doses, α2-mediated noradrenergic activation counterbalances H1 sedation",
+        "30mg is metabolised faster",
+        "15mg has stronger H1 affinity",
+      ],
+      correctIndex: 1,
+      explanation: "Mirtazapine's paradoxical dose-sedation: H1 blockade (sedation) is constant at all doses. At higher doses (30–45mg), the α2-mediated noradrenergic activation (alerting) becomes more prominent, counterbalancing H1 sedation. So 15mg > 30mg > 45mg in net sedation. This is THE favourite mirtazapine concept.",
+      afterSectionId: "side-effects",
+    },
+    {
+      id: "quiz-sexual-dysfunction",
+      question: "Why does mirtazapine NOT cause sexual dysfunction?",
+      options: [
+        "It does not affect serotonin at all",
+        "It blocks 5-HT2C receptors — this preserves dopamine tone in the mesolimbic reward pathway",
+        "It directly stimulates nitric oxide",
+        "It is metabolised too quickly to cause sexual SE",
+      ],
+      correctIndex: 1,
+      explanation: "SSRI-induced sexual dysfunction is mediated via 5-HT2C receptor activation (which inhibits dopamine release in the mesolimbic reward pathway). Mirtazapine BLOCKS 5-HT2C receptors — preserving dopamine tone and preventing sexual SE. Bupropion also lacks sexual SE, but via a different mechanism (no SERT blockade at all).",
+      afterSectionId: "side-effects",
+    },
+    {
+      id: "quiz-indications",
+      question: "In which depression presentation is mirtazapine the BEST first choice?",
+      options: [
+        "Depression with obesity and hypersomnia",
+        "Depression with prominent insomnia and weight loss",
+        "Bipolar depression (monotherapy)",
+        "Depression in a patient on tamoxifen",
+      ],
+      correctIndex: 1,
+      explanation: "Mirtazapine is the antidepressant of choice when the symptom profile matches the drug profile — its sedation (H1) and appetite stimulation (5-HT2C) are THERAPEUTIC in depression with insomnia and weight loss. For obesity/hypersomnia, choose bupropion. For tamoxifen patients, choose venlafaxine or sertraline (avoid CYP2D6 inhibitors — mirtazapine is a moderate inhibitor).",
+      afterSectionId: "clinical-uses",
+    },
+    {
+      id: "quiz-augmentation",
+      question: "What is California Rocket Fuel?",
+      options: [
+        "Lithium + SSRI",
+        "Venlafaxine + mirtazapine",
+        "Bupropion + SSRI",
+        "Lamotrigine + quetiapine",
+      ],
+      correctIndex: 1,
+      explanation: "California Rocket Fuel = venlafaxine + mirtazapine — a powerful TRD combination. Covers 5-HT (venlafaxine), NE (venlafaxine high dose + mirtazapine α2), and DA (mirtazapine 5-HT2C blockade disinhibits DA). ~50% response rate in treatment-resistant depression.",
+      afterSectionId: "clinical-uses",
+    },
+    {
+      id: "quiz-safety",
+      question: "A patient on mirtazapine presents with sore throat and fever. What is the most likely cause and what should you do?",
+      options: [
+        "Viral URI — symptomatic treatment, continue mirtazapine",
+        "Agranulocytosis — STOP mirtazapine and check CBC urgently",
+        "Strep throat — antibiotics, continue mirtazapine",
+        "Influenza — oseltamivir, continue mirtazapine",
+      ],
+      correctIndex: 1,
+      explanation: "Agranulocytosis is a rare (~1 in 1000) but serious complication of mirtazapine. ANY patient on mirtazapine presenting with sore throat, fever, mouth ulcers, or other signs of infection should STOP the drug and have an urgent CBC. Do not assume 'just a cold' — the consequence of missing agranulocytosis is sepsis and potentially death.",
+      afterSectionId: "monitoring",
+    },
+  ],
+
+  /* End-of-page active recall questions */
+  activeRecallQuestions: [
+    {
+      question: "Explain the mechanism of action of mirtazapine. How does it differ from SSRIs?",
+      answer: "Mirtazapine is a NaSSA — its primary mechanism is α2 adrenergic receptor antagonism. By blocking presynaptic α2 autoreceptors, it disinhibits NE and 5-HT release (NOT a reuptake blocker). It also blocks 5-HT2A, 5-HT2C, 5-HT3, and H1 receptors. SSRIs block SERT (reuptake); mirtazapine does NOT block SERT — it increases 5-HT release via α2 antagonism.",
+      topic: "Mechanism",
+    },
+    {
+      question: "Why is mirtazapine 15mg MORE sedating than 30mg? Explain the pharmacology.",
+      answer: "H1 blockade (sedation) is constant at all doses. At higher doses (30–45mg), the α2-mediated noradrenergic activation (alerting) becomes more prominent, counterbalancing H1 sedation. So net sedation: 15mg > 30mg > 45mg. Clinically, a patient on 15mg with excessive morning drowsiness may benefit from INCREASING to 30mg (paradoxical dose-sedation rule).",
+      topic: "Pharmacology",
+    },
+    {
+      question: "Why does mirtazapine NOT cause sexual dysfunction, unlike SSRIs?",
+      answer: "SSRI-induced sexual dysfunction is mediated via 5-HT2C receptor activation — this receptor normally inhibits dopamine release in the mesolimbic reward pathway, suppressing sexual function. Mirtazapine BLOCKS 5-HT2C receptors — preserving dopamine tone and preventing sexual SE. Bupropion also lacks sexual SE, but via a different mechanism (no SERT blockade at all).",
+      topic: "Receptor Profile",
+    },
+    {
+      question: "What is California Rocket Fuel, and when is it used?",
+      answer: "California Rocket Fuel = venlafaxine + mirtazapine — a powerful treatment-resistant depression (TRD) combination. Covers 5-HT (venlafaxine), NE (venlafaxine high dose + mirtazapine α2 antagonism), and DA (mirtazapine 5-HT2C blockade disinhibits DA). Also addresses residual insomnia and weight loss. ~50% response rate in TRD. Used after failure of 2 adequate SSRI/SNRI trials.",
+      topic: "TRD Management",
+    },
+    {
+      question: "How would you counsel a patient on mirtazapine about agranulocytosis?",
+      answer: "Counsel explicitly: 'Agranulocytosis (a serious drop in white blood cells) is rare but possible with this medicine. If you develop sore throat, fever, mouth ulcers, or any sign of infection, STOP the medicine immediately and see your doctor for a blood test.' Risk is ~1 in 1000 — routine CBC monitoring is NOT required (unlike clozapine), but counselling is essential. Document the counselling.",
+      topic: "Safety",
+    },
+    {
+      question: "Describe a clinical scenario where mirtazapine is the antidepressant of choice. Why?",
+      answer: "Depression with prominent INSOMNIA and WEIGHT LOSS — mirtazapine's sedation (H1) and appetite stimulation (5-HT2C) are THERAPEUTIC, not side effects. Faster onset than SSRIs (sleep improves within days, mood within 1–2 weeks). Single drug addresses multiple symptoms. Example: 55-year-old man with depression, severe insomnia (2 hours/night), and 6 kg weight loss over 3 months — mirtazapine 15mg OD HS is the ideal first choice.",
+      topic: "Clinical Application",
+    },
+  ],
+
+  /* Guided learning paths — each mode shows a curated subset of sections */
+  learningPaths: [
+    {
+      mode: "patient",
+      label: "Patient",
+      estimatedTime: "5 min",
+      description: "Plain language. What you need to know to take your medicine safely.",
+      visibleSections: ["top", "quick-facts", "patient-education", "faq", "emergency"],
+    },
+    {
+      mode: "mbbs",
+      label: "MBBS Student",
+      estimatedTime: "20 min",
+      description: "Foundations, mechanism, clinical uses, side effects, and MBBS exam content.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+    },
+    {
+      mode: "neetPg",
+      label: "NEET PG / INICET",
+      estimatedTime: "35 min",
+      description: "Full clinical detail with exam-specific content, PYQs, and drug comparisons.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+    },
+    {
+      mode: "resident",
+      label: "Resident / Clinician",
+      estimatedTime: "45 min",
+      description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+    },
+  ],
+
+  /* Lesson grouping — sections organised into learning units */
+  lessonGroups: [
+    {
+      number: 1,
+      title: "Foundations",
+      description: "What is this drug? Why is it different from SSRIs?",
+      sectionIds: ["top", "quick-facts", "learning-objectives", "knowledge-graph"],
+      checkpoint: "You now know what Mirtazapine is — the only NaSSA in clinical use, uniquely free of sexual SE, with sedation and weight gain that are therapeutic in the right patient.",
+    },
+    {
+      number: 2,
+      title: "Mechanism & Neuroscience",
+      description: "How does α2 antagonism produce a different antidepressant profile than SERT blockade?",
+      sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
+      checkpoint: "You understand the NaSSA mechanism — and why α2 antagonism (not reuptake blockade) produces a different receptor profile: 5-HT2A/2C/3 + H1 antagonism, no sexual SE, paradoxical dose-sedation, rapid onset.",
+    },
+    {
+      number: 3,
+      title: "Clinical Practice",
+      description: "When do you use it? What goes wrong?",
+      sectionIds: ["clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education"],
+      checkpoint: "You can now prescribe mirtazapine safely — knowing when it's the right choice (insomnia/weight loss), the paradoxical dose-sedation rule, the agranulocytosis counselling, and the symptom-matched prescribing principle.",
+    },
+    {
+      number: 4,
+      title: "Indian Context",
+      description: "How is it actually used in Indian hospitals and palliative care?",
+      sectionIds: ["indian-clinical", "decision-path", "common-mistakes"],
+      checkpoint: "You know the Indian brands (Mirtaz, Mirnite, Mazetol, Remeron), the moderate cost, the California Rocket Fuel TRD combination, and the common mistakes Indian interns make (reducing dose for drowsiness, missing agranulocytosis counselling).",
+    },
+    {
+      number: 5,
+      title: "Exam Revision",
+      description: "High-yield facts, clinical cases, and drug comparisons.",
+      sectionIds: ["learning-module", "clinical-case", "drug-navigation", "high-yield-summary"],
+      checkpoint: "You've reviewed the exam-specific content, worked through a clinical case, compared mirtazapine with alternatives, and have a one-page revision summary.",
+    },
+    {
+      number: 6,
+      title: "Active Recall",
+      description: "Can you answer these without looking?",
+      sectionIds: ["active-recall", "faq", "references"],
+      checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Mirtazapine — including its unique mechanism, paradoxical dose-sedation, and California Rocket Fuel combination.",
+    },
+  ],
+
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
   reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Remeron label"],

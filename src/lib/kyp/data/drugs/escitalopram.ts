@@ -944,6 +944,827 @@ export const escitalopram: Drug = {
       "The main thing to know: escitalopram has fewer interactions with other medicines than most other antidepressants — that's one of its main advantages. Still, tell your pharmacist about everything you take, including over-the-counter products. Avoid alcohol or keep it to a minimum. Some medicines (like omeprazole, used for reflux) can raise escitalopram levels — your doctor may switch you to a different reflux medicine or lower your escitalopram dose. The most dangerous combinations are with other medicines that affect serotonin — your doctor or pharmacist will check for these automatically.",
   },
 
+  /* ---- India-first extensions ---- */
+
+  /* Indian clinical practice */
+  indianPractice: {
+    prescriptionStatus: "Schedule H",
+    brands: [
+      { name: "Nexito", manufacturer: "Lupin", strengths: "5mg, 10mg, 20mg", note: "Among the most commonly prescribed escitalopram brands in India" },
+      { name: "Stalopam", manufacturer: "Sun Pharma", strengths: "5mg, 10mg, 20mg" },
+      { name: "Cipralex", manufacturer: "Lundbeck", strengths: "5mg, 10mg, 20mg", note: "Originator brand — more expensive" },
+      { name: "Feliz-S", manufacturer: "Intas", strengths: "5mg, 10mg, 20mg" },
+      { name: "Szetalo", manufacturer: "Sun Pharma", strengths: "5mg, 10mg, 20mg" },
+    ],
+    typicalDoses:
+      "Depression (adults): start 10mg OD, can increase to 20mg OD after 1 week. Adolescents ≥12 years: start 10mg OD (max 20mg). GAD: 10mg OD (titrate to 20mg). Elderly (>60 years) and CYP2C19 poor metabolisers: max 10mg OD. In Indian government hospitals, starting dose is often 5–10mg OD to minimise early side effects. Maximum: 20mg/day in adults; 10mg/day in elderly and CYP2C19 poor metabolisers.",
+    prescribingScenarios: [
+      "Preferred SSRI in elderly patients (>60 years) due to lowest CYP interaction profile and favourable tolerability.",
+      "First-line SSRI for patients on complex polypharmacy regimens (cardiac, GI, neurological medications) due to minimal CYP interactions.",
+      "Used for adolescents ≥12 years with major depression — one of only two SSRIs FDA-approved for paediatric depression (along with fluoxetine for ≥8 years).",
+      "Commonly prescribed in Indian private practice for depression with comorbid anxiety — broad-spectrum SSRI with clean profile.",
+      "Preferred when QTc monitoring is feasible and the lowest-interaction SSRI is desired (e.g., cardiac patients on amiodarone, azole antifungals, macrolides).",
+    ],
+    availability: {
+      governmentHospitals: true,
+      privatePharmacies: true,
+      urban: true,
+      rural: true,
+      note: "Widely available across India. Escitalopram is included in many state government essential medicines lists and is dispensed through District Mental Health Programme (DMHP) centres. Generic escitalopram is commonly stocked in Jan Aushadhi Kendras.",
+    },
+    costCategory: "low",
+    costNote: "Generic escitalopram is inexpensive in India (approximately ₹3–6 per 10mg tablet). Branded versions (Nexito, Stalopam, Feliz-S) cost ₹4–10 per tablet. The originator brand Cipralex (Lundbeck) is more expensive. Jan Aushadhi generic escitalopram is the most affordable option.",
+    monitoring:
+      "In Indian government hospitals, monitoring is primarily clinical (symptom-based) due to resource constraints. PHQ-9 is used in tertiary centres and DMHP clinics. Serum sodium monitoring in elderly is recommended but practice varies. ECG for QTc is recommended at baseline and after dose escalation in patients >60 years, those with cardiac risk factors, or those on other QTc-prolonging drugs — but is not uniformly done in resource-limited settings. Follow-up schedule: 2 weeks (tolerability), 4 weeks (early response), 6 weeks (dose escalation decision), 12 weeks (full response assessment). In private practice, monitoring aligns more closely with international guidelines including baseline ECG in elderly.",
+    patientCounselling: [
+      "Take once daily, morning or evening, with or without food. Most people prefer morning, but if it makes you sleepy take at night.",
+      "It may take 4–6 weeks to feel the full benefit — don't stop early just because you don't feel better yet.",
+      "Do NOT stop suddenly — your doctor will help you reduce the dose gradually over several weeks.",
+      "Generic versions (Nexito, Stalopam, Feliz-S, Szetalo) are equally effective — you don't need to pay more for the originator brand Cipralex if cost is a concern. Jan Aushadhi generic escitalopram is a good affordable option.",
+      "Avoid alcohol — it can worsen your mood symptoms and increase drowsiness.",
+      "If you feel worse, more agitated, or have new suicidal thoughts in the first month, contact your doctor immediately or call Tele-MANAS at 14416.",
+      "Common side effects in the first 1–2 weeks (nausea, headache, sleep changes) usually settle on their own. If they persist or are severe, tell your doctor.",
+      "Sexual side effects (reduced interest, difficulty reaching orgasm) are common and can be embarrassing to discuss — but your doctor can help. Don't stop the medicine without discussing alternatives.",
+      "If you're over 60 or have heart problems, your doctor will keep your dose at 10mg/day or below and may check an ECG — this is because high doses can rarely affect heart rhythm.",
+      "Tell your doctor about all medicines you take — especially omeprazole (for reflux), tramadol (pain), and antibiotics like erythromycin. Even though escitalopram has fewer interactions than most antidepressants, some combinations still matter.",
+      "Follow-up visits at 2 weeks, 4 weeks, and 6 weeks are important — please attend even if you're feeling better.",
+      "If you miss a dose, take it when you remember unless it's close to your next dose — then skip the missed dose. Do not double up.",
+    ],
+  },
+
+  /* NMC CBME competency mapping */
+  cbmeMapping: {
+    subject: "Pharmacology",
+    mbbsYear: "Second Professional",
+    topic: "Drugs acting on Central Nervous System — Antidepressants (SSRIs)",
+    competencyCodes: ["PH7.3", "PH7.4", "PY3.2"],
+    competencyDescriptions: [
+      "PH7.3: Describe the mechanism of action, pharmacological actions, adverse effects, contraindications, and therapeutic uses of antidepressant drugs with emphasis on SSRIs.",
+      "PH7.4: Explain the rationale for drug selection, dose individualisation, and monitoring of antidepressant therapy in different clinical scenarios.",
+      "PY3.2 (Psychiatry, Final Professional): Describe the pharmacological management of mood disorders, including first-line SSRI selection, augmentation strategies, and monitoring.",
+    ],
+    integrationSubjects: ["Psychiatry", "General Medicine", "Community Medicine"],
+  },
+
+  /* Exam Lens — structured by Indian examination */
+  examLens: {
+    mbbs: {
+      viva: [
+        "What is the mechanism of action of escitalopram? (S-enantiomer of citalopram; high-affinity, high-selectivity SERT blockade → ↑ synaptic 5-HT → 5-HT1A autoreceptor desensitisation over 1–2 weeks → ↑ serotonergic throughput → downstream BDNF/neurogenesis over 4–6 weeks)",
+        "Why is escitalopram called the 'most selective' SSRI? (Highest SERT binding affinity relative to NET, DAT, and other receptors — lowest off-target binding → cleanest side-effect profile among SSRIs.)",
+        "What is the QTc precaution with escitalopram? (Dose-dependent QTc prolongation. FDA maximum: 20mg/day adults, 10mg/day in elderly >60 and CYP2C19 poor metabolisers. Caution with other QTc-prolonging drugs.)",
+        "Why is the maximum dose lower in elderly? (Reduced clearance, higher baseline QTc, polypharmacy with other QTc-prolonging drugs. FDA caps at 10mg/day for >60 years.)",
+        "What is the relationship between citalopram and escitalopram? (Escitalopram is the S-enantiomer of racemic citalopram. The R-enantiomer in citalopram actually antagonises the active S-enantiomer's effect — so escitalopram is more potent at half the mg dose.)",
+        "What is the black box warning for escitalopram? (Increased suicidality in patients <25 years — monitor weekly in the first month. Same as all SSRIs.)",
+      ],
+      practical: [
+        "Counsel an elderly patient starting escitalopram for depression — address onset delay, side effects, the 10mg/day dose cap, and ECG monitoring.",
+        "Write a prescription for escitalopram for a 65-year-old with first-episode depression (dose: 5mg OD for 5 days, then 10mg OD, morning).",
+        "Identify the contraindications of escitalopram from a clinical scenario (e.g., patient with congenital long-QT, or on pimozide).",
+        "Explain the monitoring schedule for an elderly patient on escitalopram (2/4/6/12 weeks, PHQ-9, sodium, ECG at baseline and after dose escalation).",
+      ],
+      longAnswer: [
+        "Classify antidepressants. Describe the mechanism of action, pharmacokinetics, adverse effects, and therapeutic uses of SSRIs with special reference to escitalopram. Discuss the rationale for choosing escitalopram in elderly patients, in polypharmacy, and in patients with cardiac comorbidities.",
+        "A 68-year-old man with hypertension, type 2 diabetes, and recent MI presents with moderate depression. He is on aspirin, atorvastatin, metoprolol, and omeprazole. Discuss the pharmacological management, including SSRI selection, dose, monitoring, and drug interactions. Address the QTc precaution.",
+      ],
+    },
+    neetPg: {
+      highYield: [
+        "Escitalopram = S-enantiomer of citalopram. R-enantiomer in citalopram antagonises the S-enantiomer — so escitalopram at half the mg dose is more potent and better tolerated.",
+        "Escitalopram = most selective SSRI (highest SERT affinity relative to NET/DAT/other receptors) → cleanest side-effect profile.",
+        "Escitalopram = lowest CYP interaction profile among SSRIs (minimal CYP2D6 inhibition, mostly CYP2C19/3A4 metabolism) → drug of choice in elderly and polypharmacy.",
+        "QTc precaution: dose-dependent QTc prolongation. FDA max 20mg/day adults; 10mg/day in elderly >60 and CYP2C19 poor metabolisers. FDA added this warning in 2011/2012 (originally for citalopram, then extended).",
+        "Mechanism: SERT blockade (hours) → 5-HT1A autoreceptor desensitisation (1–2 weeks) → BDNF/neurogenesis (4–6 weeks). Same delayed onset as all SSRIs.",
+        "FDA-approved indications: MDD in adults and adolescents ≥12 years, GAD in adults. One of only two SSRIs for paediatric depression (with fluoxetine ≥8 years).",
+        "CYP2C19 poor metabolisers (≈3–5% of Caucasians, lower in Indians): reduce max dose by 50% (max 10mg/day). Omeprazole (CYP2C19 inhibitor) raises escitalopram levels — switch to pantoprazole or famotidine if long-term.",
+        "Half-life: 27–32 hours. Once-daily dosing. Withdrawal symptoms less severe than paroxetine but more than fluoxetine.",
+        "Black box: suicidality <25 years. Weekly monitoring in first month.",
+        "Metabolism: CYP2C19 (primary), CYP3A4 and CYP2D6 (minor). S-demethylcitalopram and S-didemethylcitalopram are weakly active metabolites.",
+      ],
+      pyqConcepts: [
+        "NEET PG 2022: Which SSRI is preferred in an elderly patient on multiple medications? (Answer: Escitalopram — lowest CYP interaction profile.)",
+        "NEET PG 2021: Escitalopram is the S-enantiomer of which drug? (Answer: Citalopram. The R-enantiomer antagonises the active S-enantiomer.)",
+        "NEET PG 2020: Maximum dose of escitalopram in elderly (>60 years)? (Answer: 10mg/day — FDA cap due to QTc prolongation risk.)",
+        "NEET PG 2019: A patient on escitalopram develops QTc prolongation. Which co-prescribed drug is the most likely culprit? (Answer: Omeprazole, a CYP2C19 inhibitor, raises escitalopram levels → dose-dependent QTc.)",
+        "INICET 2021: Which SSRI has the lowest CYP drug interaction profile? (Answer: Escitalopram — minimal CYP2D6 inhibition, mostly CYP2C19/3A4.)",
+      ],
+    },
+    inicet: {
+      clinicalReasoning: [
+        "A 68-year-old man with hypertension, T2DM, and recent MI presents with moderate depression. He is on aspirin, atorvastatin, metoprolol, and omeprazole. Which SSRI do you choose and at what dose? (Answer: Escitalopram — lowest CYP interaction profile, minimal CYP2D6 inhibition so no effect on metoprolol levels, low bleeding risk compared to sertraline. Start 5mg OD × 5 days, then 10mg OD. Baseline ECG and repeat after dose escalation. Switch omeprazole to pantoprazole to avoid CYP2C19 inhibition raising escitalopram levels.)",
+        "A 35-year-old woman with depression is started on escitalopram 10mg. At 6 weeks, PHQ-9 has dropped from 16 to 11. What are the next steps? (Answer: Partial response. Options: escalate to 20mg OD, augment with bupropion XL 150mg, or add CBT if not already. Assess adherence and sleep. Reassess at 12 weeks — if <50% reduction, switch or augment.)",
+        "A 14-year-old girl presents with moderate depression, declining school performance, and passive suicidal ideation. What is the pharmacological management? (Answer: Escitalopram is FDA-approved for paediatric depression ≥12 years. Start 10mg OD, can increase to 20mg after 3 weeks. Weekly monitoring in first month (black box warning). Combined with CBT. Involve family for monitoring. Tele-MANAS 14416 for crisis support. Fluoxetine is the alternative (FDA-approved ≥8 years).)",
+        "A 72-year-old woman on escitalopram 10mg for 2 weeks presents with confusion, headache, and a seizure. Serum Na is 122 mmol/L. What is the diagnosis and management? (Answer: SSRI-induced SIADH. Stop escitalopram, fluid restrict, consider hypertonic saline if severe. Once resolved, restart at lower dose or switch to alternative. Check Na at baseline in elderly starting SSRIs.)",
+      ],
+    },
+    fmge: {
+      frequentlyTested: [
+        "Escitalopram mechanism: SERT blockade → ↑ serotonin in synaptic cleft.",
+        "Onset of action: 4–6 weeks (not immediate — key FMGE concept).",
+        "Escitalopram = S-enantiomer of citalopram.",
+        "QTc prolongation at high doses — max 20mg/day adults, 10mg/day elderly.",
+        "Lowest CYP interaction profile among SSRIs.",
+        "Serotonin syndrome: clonus + hyperreflexia + fever + agitation. Treatment: cyproheptadine.",
+        "Contraindication: MAOIs (14-day washout), congenital long-QT, pimozide.",
+        "FDA-approved for paediatric depression ≥12 years.",
+        "CYP2C19 poor metabolisers: reduce max dose by 50%.",
+        "SIADH: hyponatraemia from SSRIs, especially in elderly.",
+      ],
+    },
+    psychiatryResidency: {
+      advancedPearls: [
+        "Escitalopram's allosteric SERT binding site is unique — it binds the primary orthosteric site (high affinity) AND an allosteric site that slows dissociation, prolonging SERT occupancy. This may contribute to its potency and clean profile at low doses.",
+        "The 'allosteric' mechanism is why escitalopram at half the mg dose of citalopram produces equivalent or superior SERT occupancy — the R-enantiomer in citalopram actually antagonises SERT binding of the S-enantiomer.",
+        "QTc prolongation with escitalopram is dose-dependent and modest (~5–10ms at 20mg, ~15ms at 30mg in studies). The FDA cap is conservative — torsades is extremely rare in patients with normal baseline QTc and no other risk factors. However, the risk becomes clinically meaningful with concurrent QTc-prolonging drugs (antiarrhythmics, antipsychotics, macrolides, fluoroquinolones, methadone).",
+        "Treatment-resistant depression algorithm after escitalopram failure: (1) optimise dose to 20mg (10mg in elderly), (2) confirm adherence + address substance use, (3) augment with bupropion XL or mirtazapine, (4) consider switch to SNRI or TCA, (5) consider ketamine/esketamine for severe TRD, (6) rTMS or ECT for severe/catatonic features.",
+        "PHQ-9 monitoring: ≥50% reduction = response. <5 = remission. If <30% reduction at 6 weeks → increase dose (within age caps). If <50% at 12 weeks → switch or augment. Continue for 6–12 months after remission for first episode; longer for recurrent.",
+        "In bipolar depression, escitalopram (and any antidepressant) can trigger a manic switch. Always screen for bipolar disorder (MDQ questionnaire) before initiating. If bipolar confirmed, use mood stabiliser first; antidepressant only if mood stabiliser alone is insufficient.",
+        "When switching from escitalopram to another antidepressant: cross-taper is generally safe (escitalopram's clean profile makes this easier than with paroxetine/fluoxetine). Allow 7-day washout before starting an MAOI.",
+      ],
+    },
+  },
+
+  /* International vs Indian guideline comparisons */
+  guidelineComparisons: [
+    {
+      topic: "First-line SSRI for depression in elderly",
+      internationalSource: "NICE CG91 / APA Practice Guideline",
+      internationalRecommendation: "SSRIs are first-line for moderate-severe depression. In elderly, an SSRI with low CYP interaction profile and favourable tolerability is preferred — escitalopram and sertraline are commonly chosen.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS guidelines recommend SSRIs as first-line for depression. Escitalopram is widely preferred in elderly Indian patients due to lowest CYP interaction profile, favourable tolerability, and once-daily dosing. Dose cap of 10mg/day in >60 years is observed.",
+    },
+    {
+      topic: "QTc prolongation and dose caps",
+      internationalSource: "FDA Drug Safety Communication (2011/2012)",
+      internationalRecommendation: "Dose-dependent QTc prolongation with citalopram/escitalopram. Maximum 20mg/day in adults; 10mg/day in patients >60 years, those with hepatic impairment, or CYP2C19 poor metabolisers. Avoid in congenital long-QT and with other QTc-prolonging drugs.",
+      indianSource: "Indian Psychiatric Society (IPS) / CDSCO",
+      indianRecommendation: "IPS acknowledges the FDA QTc warning and recommends adhering to the dose caps (20mg/day adults; 10mg/day elderly). In Indian practice, ECG monitoring is recommended at baseline in elderly, in patients with cardiac disease, and when combining with other QTc-prolonging drugs. CDSCO Schedule H status requires prescription.",
+    },
+    {
+      topic: "Use in adolescents (≥12 years)",
+      internationalSource: "FDA",
+      internationalRecommendation: "Escitalopram is FDA-approved for major depressive disorder in adolescents ≥12 years. Black box warning for suicidality in <25 years. Weekly monitoring in first month.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs with the FDA approval for escitalopram in paediatric depression ≥12 years. In Indian practice, escitalopram is one of only two SSRIs commonly used in adolescents (with fluoxetine ≥8 years). Close monitoring for suicidality is mandatory; family involvement is critical given the joint family system.",
+    },
+    {
+      topic: "Use in pregnancy",
+      internationalSource: "FDA / APA",
+      internationalRecommendation: "Escitalopram is generally considered safe in pregnancy when needed (former Category C). Sertraline is preferred as first-line in pregnancy due to lowest placental transfer, but escitalopram is acceptable. Small risk of persistent pulmonary hypertension of the newborn (PPHN). Third-trimester use associated with neonatal adaptation syndrome.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs with international guidelines — sertraline is preferred as first-choice in pregnancy, with escitalopram as an alternative when sertraline is not tolerated or has been previously effective. In Indian practice, the decision must also consider the risks of untreated depression (poor antenatal care, poor nutrition, suicidality). Never stop abruptly if a patient becomes pregnant — risk of relapse plus discontinuation syndrome.",
+    },
+    {
+      topic: "CYP2C19 poor metabolisers",
+      internationalSource: "FDA / CPIC Guideline",
+      internationalRecommendation: "CYP2C19 poor metabolisers (loss-of-function homozygotes) have ~2× higher escitalopram exposure. Reduce max dose by 50% (max 10mg/day). Consider alternative SSRI (e.g., fluoxetine which is partly CYP2D6-metabolised) if dose reduction is inadequate.",
+      indianSource: null,
+      indianRecommendation: "No dedicated IPS guideline on CYP2C19 pharmacogenomics — not routinely tested in India due to cost. Clinical practice: reduce max dose to 10mg/day in elderly, those with hepatic impairment, or those on strong CYP2C19 inhibitors (omeprazole, fluconazole, fluvoxamine). Switch omeprazole to pantoprazole in patients on long-term escitalopram.",
+    },
+  ],
+
+  /* Indian reference sources */
+  indianReferences: [
+    {
+      source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition",
+      type: "textbook",
+      section: "Chapter 33 — Antidepressant Drugs",
+    },
+    {
+      source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression",
+      type: "guideline",
+      section: "Section on pharmacotherapy — SSRIs",
+    },
+    {
+      source: "NMC CBME Curriculum — Pharmacology (Second Professional)",
+      type: "curriculum",
+      section: "Topic: Drugs acting on CNS — Antidepressants",
+    },
+    {
+      source: "NMC CBME Curriculum — Psychiatry (Final Professional)",
+      type: "curriculum",
+      section: "Topic: Psychopharmacology — Mood disorders",
+    },
+    {
+      source: "National Mental Health Programme (NMHP) / District Mental Health Programme (DMHP)",
+      type: "regulatory",
+      section: "Essential medicines for mental health — SSRIs included",
+    },
+    {
+      source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416",
+      type: "regulatory",
+      section: "Mental health support resource for patients on antidepressants",
+      url: "tel:14416",
+    },
+    {
+      source: "CDSCO — Central Drugs Standard Control Organisation",
+      type: "regulatory",
+      section: "Escitalopram — Schedule H prescription status",
+    },
+  ],
+
+  /* Section difficulty mapping */
+  sectionDifficulty: {
+    "top": "mbbs",
+    "quick-facts": "mbbs",
+    "learning-objectives": "mbbs",
+    "knowledge-graph": "pg",
+    "mechanism": "mbbs",
+    "brain-regions": "pg",
+    "neurotransmitters": "pg",
+    "neural-pathways": "resident",
+    "timeline": "mbbs",
+    "clinical-uses": "mbbs",
+    "side-effects": "mbbs",
+    "monitoring": "pg",
+    "contraindications": "mbbs",
+    "interactions": "pg",
+    "patient-education": "mbbs",
+    "clinical-pearls": "pg",
+    "exam-lens": "mbbs",
+    "memory-tricks": "mbbs",
+    "clinical-case": "pg",
+    "comparison": "pg",
+    "indian-practice": "mbbs",
+    "guideline-comparison": "resident",
+    "related-drugs": "pg",
+    "high-yield-summary": "mbbs",
+    "faq": "mbbs",
+    "references": "resident",
+  },
+
+  /* ---- India Layer extensions (platform-wide) ---- */
+
+  /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
+  evidenceHierarchy: {
+    international: [
+      { source: "NICE CG91", recommendation: "SSRIs are first-line for moderate-severe depression. Escitalopram is commonly chosen in elderly and in patients on complex regimens due to lowest CYP interaction profile." },
+      { source: "APA Practice Guideline", recommendation: "SSRI first-line for MDD. Escitalopram preferred when drug interactions are a concern (minimal CYP2D6 inhibition) and in elderly." },
+      { source: "FDA", recommendation: "Approved for MDD in adults and adolescents ≥12 years, and GAD in adults. QTc dose-dependent — max 20mg/day adults, 10mg/day in elderly >60 and CYP2C19 poor metabolisers." },
+      { source: "WHO mhGAP", recommendation: "SSRIs recommended as first-line antidepressants in the Mental Health Gap Action Programme." },
+    ],
+    indian: [
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS guidelines recommend SSRIs as first-line for depression. Escitalopram is widely preferred in elderly Indian patients and in those on complex polypharmacy." },
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS acknowledges the FDA QTc warning and recommends adhering to the dose caps (20mg/day adults; 10mg/day elderly). ECG monitoring recommended at baseline in elderly and cardiac patients." },
+      { source: null, recommendation: "No dedicated IPS guideline on CYP2C19 pharmacogenomics — not routinely tested in India. Clinical practice: reduce max dose to 10mg/day in elderly, hepatic impairment, or strong CYP2C19 inhibitor co-prescription." },
+    ],
+    indianClinicalPractice:
+      "In Indian practice, escitalopram is one of the most commonly prescribed SSRIs alongside sertraline. It is the preferred SSRI in elderly patients (>60 years) due to its lowest CYP interaction profile, favourable tolerability, and minimal CYP2D6 inhibition (allowing safe co-prescription with metoprolol, tamoxifen, TCAs). In private practice, it is the default choice for patients on complex polypharmacy (cardiac, GI, neurological medications). Starting dose is often 5–10mg OD (lower than Western guidelines) to minimise early side effects. PHQ-9 is used in tertiary centres but not routinely in primary care. The 10mg/day dose cap in elderly is generally observed; ECG monitoring is variable in government settings due to resource constraints. Family involvement in monitoring is emphasised given the joint family system. Jan Aushadhi generic escitalopram is widely available and affordable.",
+  },
+
+  /* Indian encounter context — where you'll see this drug */
+  indianEncounterContext: {
+    governmentHospitals:
+      "Available through DMHP, though sertraline is more commonly dispensed due to lower cost. Starting dose 5–10mg OD. Monitoring is primarily clinical (symptom-based) due to resource constraints. ECG in elderly is recommended but practice varies. Jan Aushadhi generic escitalopram is commonly dispensed where available.",
+    privateHospitals:
+      "Preferred SSRI for elderly patients, those on complex polypharmacy, and those with comorbid anxiety. Starting dose 10mg OD (5mg in anxious/elderly). PHQ-9 monitoring at 2/4/6/12 weeks. Baseline ECG in elderly or cardiac patients, repeated after dose escalation. Patient counselling is more detailed.",
+    medicalColleges:
+      "Teaching drug for SSRI pharmacology, with emphasis on stereoisomerism (S-enantiomer concept), QTc dose-dependency, and CYP2C19 pharmacogenomics. Used in pharmacology practicals (prescription writing, patient counselling). Examined in second professional MBBS (pharmacology) and final professional (psychiatry). Commonly featured in NEET PG and INICET questions on SSRI selection in elderly and polypharmacy.",
+    primaryCare:
+      "First-line antidepressant for mild-moderate depression in adults and elderly. GP/family physicians commonly initiate escitalopram 10mg OD (5mg in elderly). Referral to psychiatrist if no response at 6–8 weeks or if severe depression with suicidal ideation. Caution with omeprazole — common co-prescription in elderly that raises escitalopram levels.",
+    psychiatryOPD:
+      "Workhorse SSRI in psychiatry OPD for depression, GAD, and panic disorder. Often chosen for elderly and polypharmacy patients. Dose escalation to 20mg (10mg in elderly) for partial response. Augmentation with bupropion or mirtazapine for partial response. Often combined with CBT. Used in adolescents ≥12 years for depression.",
+  },
+
+  /* Indian prescription workflow */
+  prescriptionWorkflow: {
+    beforePrescribing: [
+      "Screen for bipolar disorder (MDQ questionnaire) — SSRIs can trigger manic switch.",
+      "Assess suicidal ideation — if present, involve family for monitoring and provide Tele-MANAS (14416) number.",
+      "Check for MAOI use in last 14 days — absolute contraindication.",
+      "Review concurrent medications — especially tramadol, triptans, NSAIDs, warfarin, St John's Wort, and QTc-prolonging drugs (antiarrhythmics, antipsychotics, macrolides, fluoroquinolones, methadone).",
+      "Check for omeprazole use — if long-term, switch to pantoprazole (minimal CYP2C19 inhibition) or famotidine to avoid raising escitalopram levels.",
+      "Baseline PHQ-9 score for response monitoring.",
+      "In elderly: check baseline serum sodium (SIADH risk), serum potassium and magnesium, and ECG for QTc (especially if cardiac risk factors or other QTc-prolonging drugs).",
+      "Counsel about 4–6 week onset — set expectation that side effects precede benefit. Also counsel about the 20mg/day (10mg/day in elderly) dose cap.",
+    ],
+    duringTreatment: [
+      "Week 1–2: assess tolerability (nausea, insomnia, agitation) and suicidality (especially <25 years).",
+      "Week 2–4: review early response — sleep, appetite, energy often improve before mood.",
+      "Week 4–6: assess response with PHQ-9. If <30% reduction, increase dose (within age-appropriate caps).",
+      "Week 6–12: full response assessment. If <50% reduction at 12 weeks, consider augmentation (bupropion/mirtazapine) or switch.",
+      "Monitor for sexual dysfunction — ask directly; patients rarely volunteer it.",
+      "Watch for hyponatraemia in elderly (confusion, headache, seizures).",
+      "Watch for QTc prolongation if dose escalation or addition of other QTc-prolonging drugs — repeat ECG.",
+    ],
+    followUp: [
+      "First follow-up at 2 weeks (tolerability + suicidality).",
+      "Second follow-up at 4 weeks (early response).",
+      "Third follow-up at 6 weeks (dose escalation decision — within age-appropriate caps).",
+      "Fourth follow-up at 12 weeks (full response assessment).",
+      "If remission achieved (PHQ-9 <5): continue for 6–12 months for first episode, longer for recurrent.",
+      "Before discontinuation: taper over 4+ weeks. Consider substituting fluoxetine for last 2 weeks of taper (self-tapers).",
+      "In government hospitals: follow-up may be every 4–8 weeks due to travel barriers — counsel family to watch for red flags.",
+    ],
+    whenToRefer: [
+      "Refer to psychiatrist if no response to 2 adequate SSRI trials (12 weeks each).",
+      "Refer urgently if suicidal ideation emerges or worsens.",
+      "Refer if bipolar disorder is suspected (manic switch risk).",
+      "Refer if serotonin syndrome develops (emergency — call 112).",
+      "Refer to physician/cardiologist if QTc >450ms (men) or >470ms (women), or if it increases by >30ms from baseline — review concomitant medications.",
+      "Refer to obstetrician if patient becomes pregnant (do NOT stop escitalopram abruptly — switch to sertraline if first trimester and naive to SSRIs).",
+      "Refer for CBT — combined SSRI + CBT produces better outcomes than either alone.",
+    ],
+  },
+
+  /* Exam frequency — star ratings */
+  examFrequency: {
+    neetPg: 5,
+    inicet: 4,
+    mbbsViva: 3,
+    fmge: 4,
+  },
+
+  /* PYQ metadata — concept-level, no copyrighted content */
+  pyqMetadata: [
+    { exam: "NEET PG", year: 2022, concept: "SSRI preferred in elderly on multiple medications", topic: "Antidepressant selection" },
+    { exam: "NEET PG", year: 2021, concept: "Escitalopram as S-enantiomer of citalopram", topic: "Antidepressant pharmacology" },
+    { exam: "NEET PG", year: 2020, concept: "Maximum dose of escitalopram in elderly (>60 years)", topic: "Antidepressant safety" },
+    { exam: "NEET PG", year: 2019, concept: "CYP2C19 inhibitor raising escitalopram levels (omeprazole)", topic: "Drug interactions" },
+    { exam: "INICET", year: 2021, concept: "SSRI with lowest CYP drug interaction profile", topic: "Antidepressant pharmacology" },
+    { exam: "INICET", year: 2023, concept: "SSRI FDA-approved for paediatric depression (≥12 years)", topic: "Paediatric psychopharmacology" },
+    { exam: "FMGE", year: 2022, concept: "Escitalopram mechanism of action and QTc precaution", topic: "Antidepressant pharmacology" },
+    { exam: "FMGE", year: 2021, concept: "Contraindication: congenital long-QT and concurrent pimozide", topic: "Drug contraindications" },
+  ],
+
+  /* Indian comparison contexts */
+  indianComparisonContexts: [
+    {
+      scenario: "Government hospital setup",
+      recommendation: "Sertraline is preferred as first-line due to lower cost and wider DMHP availability. Escitalopram is used when sertraline is contraindicated or not tolerated, or in elderly with polypharmacy.",
+      alternative: "If escitalopram is unavailable, sertraline is the default. Citalopram (racemic) is generally avoided due to higher QTc risk at equivalent doses.",
+    },
+    {
+      scenario: "Private psychiatry practice",
+      recommendation: "Escitalopram is the preferred SSRI in elderly, in polypharmacy (cardiac, GI medications), and in patients with comorbid anxiety where clean side-effect profile is desired. Often the first choice in urban private practice for patients >50 years.",
+      alternative: "Sertraline for pregnancy, OCD, or PTSD. Fluoxetine for bulimia or where long half-life is desired (adherence, self-tapering).",
+    },
+    {
+      scenario: "Pregnancy",
+      recommendation: "Sertraline is the SSRI of choice in pregnancy — lowest placental transfer, lowest milk/plasma ratio. Escitalopram is an acceptable alternative when sertraline is not tolerated or has been previously effective. IPS concurs with international guidelines.",
+      alternative: "If sertraline is unavailable, escitalopram is acceptable. Avoid paroxetine (Category D — cardiac defects). Never stop abruptly if patient becomes pregnant.",
+    },
+    {
+      scenario: "Adolescents and children",
+      recommendation: "Escitalopram is FDA-approved for paediatric depression ≥12 years. One of only two SSRIs for paediatric depression (with fluoxetine ≥8 years). Monitor closely for suicidality (black box warning). Family involvement is critical in Indian practice.",
+      alternative: "Fluoxetine for younger children (≥8 years) or for FDA-approved paediatric OCD. Sertraline is used off-label for paediatric OCD.",
+    },
+    {
+      scenario: "Older adults (≥65 years)",
+      recommendation: "Escitalopram is the preferred SSRI in elderly — lowest CYP interaction profile, minimal CYP2D6 inhibition (safe with metoprolol, tamoxifen), low weight gain, low sedation. Start at 5mg OD, titrate to max 10mg OD. Check serum sodium in first 2 weeks (SIADH risk). Baseline ECG for QTc.",
+      alternative: "Sertraline if cost is a concern or for cardiac patients needing σ1 agonism. Avoid paroxetine (anticholinergic, sedation, weight gain, worst discontinuation). Avoid citalopram at >20mg in elderly (higher QTc risk than escitalopram at equivalent dose).",
+    },
+    {
+      scenario: "Cost-sensitive setting",
+      recommendation: "Generic escitalopram from Jan Aushadhi Kendra is affordable (₹3–6 per 10mg tablet). Branded versions (Nexito, Stalopam, Feliz-S) are also inexpensive. If cost is the primary concern, sertraline is marginally cheaper and more widely stocked in government hospitals.",
+      alternative: "Jan Aushadhi generic escitalopram or sertraline are the most affordable options. Citalopram (racemic) is sometimes cheaper but carries higher QTc risk — avoid in elderly.",
+    },
+  ],
+
+  /* Jan Aushadhi availability */
+  janAushadhi: {
+    available: true,
+    note: "Available at Jan Aushadhi Kendras across India in 5mg, 10mg, and 20mg tablet strengths. Among the more affordable SSRI options in India. Generic name: Escitalopram Tablets IP.",
+  },
+
+  /* Restructured evidence sources — International vs Indian */
+  evidenceSources: {
+    international: [
+      { source: "Katzung Basic & Clinical Pharmacology, 16th edition", section: "Chapter 30 — Antidepressant Agents" },
+      { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
+      { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants" },
+      { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression" },
+      { source: "FDA Prescribing Information — LEXAPRO (escitalopram oxalate)", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/021323s047lbl.pdf" },
+      { source: "FDA Drug Safety Communication: abnormal heart rhythms associated with high doses of citalopram/escitalopram (2011/2012)", section: "Dose-dependent QTc prolongation — dose caps established" },
+      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Pharmacological treatment" },
+      { source: "APA Practice Guideline for MDD, 3rd edition" },
+    ],
+    indian: [
+      { source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition", type: "textbook", section: "Chapter 33 — Antidepressant Drugs" },
+      { source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression", type: "guideline", section: "Section on pharmacotherapy — SSRIs" },
+      { source: "NMC CBME Curriculum — Pharmacology (Second Professional)", type: "curriculum", section: "Topic: Drugs acting on CNS — Antidepressants" },
+      { source: "NMC CBME Curriculum — Psychiatry (Final Professional)", type: "curriculum", section: "Topic: Psychopharmacology — Mood disorders" },
+      { source: "National Mental Health Programme (NMHP) / District Mental Health Programme (DMHP)", type: "regulatory", section: "Essential medicines for mental health — SSRIs" },
+      { source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416", type: "regulatory", section: "Mental health support resource", url: "tel:14416" },
+      { source: "CDSCO — Central Drugs Standard Control Organisation", type: "regulatory", section: "Escitalopram — Schedule H prescription status" },
+    ],
+  },
+
+  /* ---- Final Architecture Pass — canonical template v2.0 ---- */
+
+  /* Clinical decision path — algorithm-style decision tree */
+  clinicalDecisionPath: {
+    title: "When to choose Escitalopram for depression",
+    startNodeId: "start",
+    nodes: [
+      {
+        id: "start",
+        question: "Patient presents with depression",
+        branches: [
+          { label: "Mild", next: "mild" },
+          { label: "Moderate", next: "moderate" },
+          { label: "Severe", next: "severe" },
+        ],
+      },
+      {
+        id: "mild",
+        question: "Mild depression (PHQ-9 5–9)",
+        recommendation: "Psychotherapy first (CBT). Consider escitalopram if functional impairment or patient preference, especially in elderly where SSRI choice is preferred over watchful waiting.",
+        reasoning: "NICE recommends psychotherapy alone for mild depression. In elderly, the threshold for pharmacotherapy is lower due to higher risk of progression and lower tolerance of prolonged distress.",
+      },
+      {
+        id: "moderate",
+        question: "Moderate depression (PHQ-9 10–14)",
+        recommendation: "Escitalopram 10mg OD (5mg in anxious/elderly) + CBT. First-line per NICE CG91 and IPS guidelines, particularly preferred in elderly and polypharmacy.",
+        reasoning: "SSRI + CBT is first-line for moderate depression. Escitalopram is preferred in elderly (>60) and in patients on complex regimens due to lowest CYP interaction profile.",
+        branches: [
+          { label: "Why choose Escitalopram?", next: "start-escitalopram" },
+        ],
+      },
+      {
+        id: "severe",
+        question: "Severe depression (PHQ-9 15–27)",
+        recommendation: "Escitalopram 10mg OD (titrate to 20mg in adults; max 10mg in elderly) + CBT. Consider psychiatry referral.",
+        reasoning: "Severe depression requires pharmacotherapy. Escitalopram is first-line. If psychotic features → add antipsychotic. If suicidal → urgent psychiatric referral.",
+        branches: [
+          { label: "With suicidal ideation", next: "suicidal" },
+          { label: "With psychotic features", next: "psychotic" },
+          { label: "Without complications", next: "start-escitalopram" },
+        ],
+      },
+      {
+        id: "start-escitalopram",
+        question: "Why choose Escitalopram?",
+        recommendation: "Escitalopram is preferred when: elderly patient (>60 years) — lowest CYP interaction profile; complex polypharmacy — minimal CYP2D6 inhibition (safe with metoprolol, tamoxifen); adolescent ≥12 years with depression — FDA-approved; patient with comorbid GAD — broad-spectrum coverage. Dose cap 10mg/day in >60 years (QTc precaution); 20mg/day in adults.",
+        reasoning: "Escitalopram is the S-enantiomer of citalopram — the most selective SSRI with the lowest CYP interaction profile. In elderly and polypharmacy, it avoids the CYP2D6 interactions that complicate sertraline, paroxetine, and fluoxetine. QTc dose cap is conservative and clinically manageable with baseline ECG.",
+        branches: [
+          { label: "When NOT to choose", next: "avoid" },
+        ],
+      },
+      {
+        id: "suicidal",
+        question: "Severe depression with suicidal ideation",
+        recommendation: "Urgent psychiatry referral. Do NOT send home alone. Consider admission. Escitalopram can be started but monitor weekly (black box warning <25).",
+        reasoning: "Suicidal ideation in severe depression is a psychiatric emergency. Tele-MANAS 14416 for crisis support. 112 for emergency.",
+      },
+      {
+        id: "psychotic",
+        question: "Severe depression with psychotic features",
+        recommendation: "Psychiatry referral. Add antipsychotic (olanzapine or aripiprazole) to SSRI. Consider ECT if catatonic or severely suicidal.",
+        reasoning: "Psychotic depression requires combination therapy (antidepressant + antipsychotic) or ECT. SSRI alone is insufficient.",
+      },
+      {
+        id: "avoid",
+        question: "When NOT to choose Escitalopram",
+        recommendation: "Avoid: congenital long-QT, concurrent QTc-prolonging drugs (pimozide, antiarrhythmics, methadone), CYP2C19 poor metabolisers at high dose (max 10mg), bipolar depression without mood stabiliser, active MAOI (14 days).",
+        reasoning: "QTc risk is dose-dependent and amplified by other QTc-prolonging drugs. CYP2C19 poor metabolisers have ~2× higher exposure — reduce max dose. SSRIs can trigger manic switch in bipolar. MAOI + SSRI = fatal serotonin syndrome.",
+      },
+    ],
+  },
+
+  /* Educational prescription template (India) */
+  educationalPrescription: {
+    scenario: "Typical Indian OPD initiation for first-episode moderate depression in a 35-year-old adult",
+    lines: [
+      "Rx",
+      "Tab Escitalopram 5 mg",
+      "1 tab OD morning after food × 5 days",
+      "",
+      "Then increase to:",
+      "Tab Escitalopram 10 mg",
+      "1 tab OD morning after food",
+      "",
+      "Advice: Take once daily in morning with food. Do not stop suddenly.",
+      "Avoid alcohol. Report if feeling worse or new suicidal thoughts.",
+      "Maximum dose 20mg/day (10mg/day if >60 years).",
+    ],
+    followUp: [
+      "Review after 2 weeks — tolerability, suicidality, side effects",
+      "Review after 4 weeks — early response (sleep, appetite, energy)",
+      "Review after 6 weeks — PHQ-9; if <30% reduction, increase to 20mg (within age caps)",
+      "Review after 12 weeks — full response assessment",
+      "If remission (PHQ-9 <5): continue 6–12 months, then taper over 4+ weeks",
+    ],
+    disclaimer: "Educational example only. Not a substitute for clinical judgment. Always verify dosing against current prescribing information and individualise for each patient.",
+  },
+
+  /* Common mistakes */
+  commonMistakes: [
+    {
+      mistake: "Prescribing >20mg/day in adults or >10mg/day in elderly",
+      why: "Escitalopram causes dose-dependent QTc prolongation. The FDA caps (20mg/day adults; 10mg/day in >60 years and CYP2C19 poor metabolisers) were established after post-marketing reports of torsades de pointes. Exceeding these caps is a preventable safety error.",
+      correction: "Always check age before prescribing. In patients >60 years, maximum is 10mg/day. In adults, titrate to 20mg max. If inadequate response at max dose, augment (bupropion, mirtazapine) or switch — do NOT exceed the cap.",
+    },
+    {
+      mistake: "Not recognising QTc risk in patients on other QTc-prolonging drugs",
+      why: "Escitalopram's QTc effect is amplified by concurrent QTc-prolonging drugs: antiarrhythmics (amiodarone, sotalol, quinidine), antipsychotics (haloperidol, ziprasidone), antibiotics (macrolides, fluoroquinolones), methadone, ondansetron. The combination can cause torsades de pointes.",
+      correction: "Review all medications before prescribing. If QTc-prolonging drugs are unavoidable, use a non-QTc SSRI (sertraline at low doses), check baseline ECG, and monitor. Avoid escitalopram in patients with baseline QTc >450ms (men) or >470ms (women).",
+    },
+    {
+      mistake: "Missing CYP2C19 drug interactions",
+      why: "Escitalopram is primarily metabolised by CYP2C19. Strong CYP2C19 inhibitors (omeprazole, esomeprazole, fluconazole, fluvoxamine, ticlopidine) raise escitalopram levels → dose-dependent QTc risk. Omeprazole is extremely common in elderly Indian patients.",
+      correction: "Always ask about reflux medications. If long-term PPI is needed, switch omeprazole to pantoprazole (minimal CYP2C19 inhibition) or famotidine. If CYP2C19 inhibitor cannot be avoided, reduce escitalopram max dose by 50%.",
+    },
+    {
+      mistake: "Stopping after 2 weeks because 'it's not working'",
+      why: "SSRIs take 4–6 weeks for full antidepressant effect. Stopping at 2 weeks means stopping before the drug has had a chance to work.",
+      correction: "Counsel at initiation: 'Side effects come first (week 1–2), mood benefit comes later (week 4–6). Don't stop early.'",
+    },
+    {
+      mistake: "Abrupt discontinuation",
+      why: "Sudden cessation causes discontinuation syndrome — dizziness, brain zaps, nausea, irritability. Can start within 24 hours of missed dose. Less severe than paroxetine but more than fluoxetine.",
+      correction: "Always taper over 4+ weeks. If severe, substitute fluoxetine (long half-life) for last 2 weeks of taper.",
+    },
+    {
+      mistake: "Not asking about sexual dysfunction",
+      why: "Sexual dysfunction affects 30–50% of patients on SSRIs and is the #1 reason for non-adherence. Patients rarely volunteer it. Although less than paroxetine, escitalopram still causes significant sexual dysfunction.",
+      correction: "Ask directly at every follow-up: 'Any changes in sexual interest or function?' If present, consider dose reduction, adding bupropion, or switching.",
+    },
+    {
+      mistake: "Not monitoring sodium in elderly",
+      why: "SSRIs cause SIADH in ~0.5–1% of patients. Risk is highest in elderly females in the first 2 weeks. Can cause seizures if severe.",
+      correction: "Check serum sodium at baseline in elderly. Recheck within 2 weeks if symptomatic (confusion, headache, lethargy).",
+    },
+    {
+      mistake: "Ignoring bipolar history",
+      why: "SSRIs can trigger a manic switch in undiagnosed bipolar disorder. This is a dangerous and preventable complication. Escitalopram is not immune.",
+      correction: "Screen for bipolar disorder (MDQ questionnaire) before starting any antidepressant. If bipolar confirmed, use mood stabiliser first.",
+    },
+  ],
+
+  /* When NOT to use — red card */
+  whenNotToUse: [
+    {
+      scenario: "Congenital long-QT syndrome",
+      reason: "Escitalopram causes dose-dependent QTc prolongation. In patients with congenital long-QT, the baseline risk of torsades is already high — any further prolongation is unacceptable.",
+      alternative: "Use a non-QTc SSRI under cardiology supervision, or non-pharmacological treatment (CBT, rTMS). If SSRI is essential, consider sertraline at low dose with intensive ECG monitoring.",
+    },
+    {
+      scenario: "Concurrent QTc-prolonging drugs that cannot be stopped",
+      reason: "Combining escitalopram with antiarrhythmics (amiodarone, sotalol, quinidine), antipsychotics (haloperidol, ziprasidone), methadone, or certain antibiotics (macrolides, fluoroquinolones) amplifies QTc risk → torsades de pointes.",
+      alternative: "Switch to sertraline (lowest QTc effect at clinical doses), or use non-pharmacological treatment. If combination is unavoidable, baseline ECG, daily ECG during initiation, and cardiology consultation are essential.",
+    },
+    {
+      scenario: "CYP2C19 poor metabolisers requiring high dose",
+      reason: "CYP2C19 poor metabolisers (loss-of-function homozygotes) have ~2× higher escitalopram exposure. Max dose is 10mg/day — if a patient needs more, escitalopram is the wrong drug.",
+      alternative: "Switch to fluoxetine (partly CYP2D6-metabolised) or sertraline (mostly CYP2B6). If CYP2C19 status is unknown but patient is on a strong inhibitor (omeprazole, fluconazole), treat as poor metaboliser.",
+    },
+    {
+      scenario: "Active MAOI use (within 14 days)",
+      reason: "Fatal serotonin syndrome. The 14-day washout is absolute.",
+      alternative: "Wait 14 days after stopping MAOI before starting escitalopram. Allow 7 days after stopping escitalopram before starting an MAOI.",
+    },
+    {
+      scenario: "Bipolar depression without mood stabiliser",
+      reason: "SSRI monotherapy can trigger a manic switch — potentially dangerous. Escitalopram is not immune to this risk.",
+      alternative: "Mood stabiliser first (lithium, valproate, lamotrigine). SSRI only if mood stabiliser alone is insufficient.",
+    },
+    {
+      scenario: "Known hypersensitivity to escitalopram or citalopram",
+      reason: "Cross-reactivity between citalopram and escitalopram is expected. Anaphylaxis, angioedema, or severe rash contraindicates re-exposure.",
+      alternative: "Use a structurally different SSRI (sertraline, fluoxetine, paroxetine, fluvoxamine) or non-SSRI antidepressant.",
+    },
+  ],
+
+  /* Indian ward pearls */
+  wardPearls: {
+    professorMayAsk: [
+      "What is the mechanism of action of escitalopram? Why is it called the 'most selective' SSRI? (S-enantiomer of citalopram with high-affinity, high-selectivity SERT blockade; allosteric binding site; lowest off-target receptor binding among SSRIs)",
+      "What is the relationship between citalopram and escitalopram? (Escitalopram is the S-enantiomer; the R-enantiomer in racemic citalopram antagonises SERT binding of the S-enantiomer, so escitalopram at half the mg dose is more potent and better tolerated.)",
+      "What is the QTc precaution with escitalopram? What is the maximum dose in adults vs elderly? (Dose-dependent QTc prolongation. Max 20mg/day adults, 10mg/day in >60 years and CYP2C19 poor metabolisers. FDA warning 2011/2012.)",
+      "Which SSRI is preferred in an elderly patient on multiple medications, and why? (Escitalopram — lowest CYP interaction profile, minimal CYP2D6 inhibition, safe with metoprolol/tamoxifen.)",
+      "Which SSRI is FDA-approved for paediatric depression ≥12 years? (Escitalopram. Fluoxetine is approved for ≥8 years.)",
+      "Which common Indian co-prescription raises escitalopram levels? (Omeprazole — CYP2C19 inhibitor. Switch to pantoprazole.)",
+    ],
+    residentExpects: [
+      "Know the starting dose and titration schedule (10mg → 20mg in adults; 5mg → 10mg in elderly/anxious)",
+      "Know the dose caps (20mg/day adults; 10mg/day in >60 years and CYP2C19 poor metabolisers)",
+      "Know when to increase dose vs switch (PHQ-9 <30% reduction at 6 weeks → increase within age caps; <50% at 12 weeks → switch/augment)",
+      "Know augmentation strategies (bupropion XL 150mg, mirtazapine 15mg)",
+      "Know discontinuation syndrome management (taper 4+ weeks; fluoxetine substitution for last 2 weeks)",
+      "Know when to refer to psychiatry (no response to 2 SSRI trials, bipolar suspicion, psychotic features, suicidality, QTc >450ms men or >470ms women)",
+    ],
+    consultantsDo: [
+      "Use PHQ-9 at every visit for objective monitoring",
+      "Screen for bipolar disorder (MDQ) before starting any antidepressant",
+      "Combine SSRI + CBT for moderate-severe depression (better outcomes than either alone)",
+      "Ask about sexual dysfunction at every follow-up (patients rarely volunteer)",
+      "Continue treatment for 6–12 months after remission for first episode; longer for recurrent",
+      "Use escitalopram as default SSRI in elderly and polypharmacy",
+      "Always review concurrent medications for QTc-prolonging drugs and CYP2C19 inhibitors before prescribing",
+    ],
+    internsMiss: [
+      "Prescribing 20mg/day to an elderly patient — should be 10mg/day max",
+      "Missing the omeprazole interaction — extremely common in elderly Indian patients",
+      "Not counselling about 4–6 week onset — patient stops early",
+      "Not warning about QTc risk in patients on multiple medications",
+      "Not asking about sexual dysfunction — patient stops silently",
+      "Not checking sodium in elderly — presents with confusion 2 weeks later",
+      "Not screening for bipolar disorder — patient has manic switch",
+      "Not involving family in monitoring (critical in Indian joint family system)",
+      "Not providing Tele-MANAS number (14416) for crisis support",
+    ],
+  },
+
+  /* Refined high-yield level */
+  highYieldLevel: "extreme",
+
+  /* Drug family navigation */
+  drugFamilyNav: {
+    familyName: "SSRIs (Selective Serotonin Reuptake Inhibitors)",
+    members: [
+      { name: "Sertraline", slug: "sertraline", relationship: "Same class (SSRI)", distinguishing: "SSRI of choice in pregnancy; σ1 agonism; 6 FDA indications" },
+      { name: "Fluoxetine", slug: "fluoxetine", relationship: "Same class (SSRI)", distinguishing: "Longest half-life; only SSRI for bulimia; paediatric ≥8yr" },
+      { name: "Escitalopram", slug: "escitalopram", relationship: "Current drug", distinguishing: "S-enantiomer of citalopram; lowest CYP interactions; QTc watch" },
+      { name: "Paroxetine", slug: "paroxetine", relationship: "Same class (SSRI)", distinguishing: "Shortest half-life (worst discontinuation); Category D; tamoxifen interaction" },
+      { name: "Citalopram", slug: "citalopram", relationship: "Same class (SSRI)", distinguishing: "Racemic parent of escitalopram; QTc dose-dependent; 40mg cap" },
+      { name: "Fluvoxamine", slug: "fluvoxamine", relationship: "Same class (SSRI)", distinguishing: "OCD-only FDA indication; CYP1A2 inhibitor; tizanidine contraindicated" },
+    ],
+  },
+
+  /* Learning time breakdown */
+  learningTimeBreakdown: {
+    read: "17 min",
+    study: "45 min",
+    revision: "8 min",
+  },
+
+  /* ---- Educational UX Layer ---- */
+
+  /* Inline micro-quizzes — one after each major learning milestone */
+  microQuizzes: [
+    {
+      id: "quiz-mechanism",
+      question: "Escitalopram is the S-enantiomer of which antidepressant?",
+      options: ["Fluoxetine", "Citalopram", "Sertraline", "Paroxetine"],
+      correctIndex: 1,
+      explanation: "Escitalopram is the S-enantiomer of racemic citalopram. The R-enantiomer in citalopram actually antagonises SERT binding of the S-enantiomer, so escitalopram at half the mg dose is more potent and better tolerated.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "quiz-onset",
+      question: "Why does escitalopram take 4–6 weeks to work when SERT blockade occurs within hours?",
+      options: [
+        "The drug needs to accumulate to therapeutic levels",
+        "5-HT1A autoreceptors initially brake serotonin firing, and need 1–2 weeks to desensitise",
+        "The blood-brain barrier delays drug entry",
+        "Serotonin synthesis takes weeks to increase",
+      ],
+      correctIndex: 1,
+      explanation: "Acute SERT blockade raises synaptic serotonin within hours, but 5-HT1A somatodendritic autoreceptors in the raphe nuclei detect this and inhibit further firing. Over 1–2 weeks, these autoreceptors desensitise — removing the brake. Downstream neuroadaptive changes (BDNF, neurogenesis) take 4–6 weeks. This delay is THE most tested SSRI concept.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "quiz-side-effects",
+      question: "What is the maximum dose of escitalopram in an adult, and what is the safety reason for this cap?",
+      options: [
+        "10mg/day — risk of hepatotoxicity",
+        "20mg/day — dose-dependent QTc prolongation",
+        "40mg/day — risk of serotonin syndrome",
+        "60mg/day — risk of seizure",
+      ],
+      correctIndex: 1,
+      explanation: "20mg/day in adults; 10mg/day in patients >60 years and CYP2C19 poor metabolisers. The FDA established these caps in 2011/2012 after post-marketing reports of dose-dependent QTc prolongation and torsades de pointes. The QTc effect is amplified by other QTc-prolonging drugs.",
+      afterSectionId: "side-effects",
+    },
+    {
+      id: "quiz-monitoring",
+      question: "A 72-year-old woman on escitalopram 10mg for 2 weeks presents with confusion and headache. Serum Na is 122 mmol/L. What is the most likely cause?",
+      options: ["Serotonin syndrome", "SIADH (hyponatraemia)", "Alzheimer's disease", "Urinary tract infection"],
+      correctIndex: 1,
+      explanation: "SSRIs cause SIADH in ~0.5–1% of patients, with highest risk in elderly females in the first 2 weeks. Check serum sodium — if <125 mmol/L, fluid restrict and consider discontinuing. This is why sodium should be checked at baseline in elderly patients starting SSRIs.",
+      afterSectionId: "monitoring",
+    },
+    {
+      id: "quiz-contraindications",
+      question: "A 65-year-old patient is on amiodarone for atrial fibrillation. Which SSRI is best avoided?",
+      options: ["Sertraline", "Escitalopram", "Fluoxetine", "Paroxetine"],
+      correctIndex: 1,
+      explanation: "Escitalopram causes dose-dependent QTc prolongation. Amiodarone also prolongs QTc. The combination amplifies torsades de pointes risk. Sertraline (lowest QTc effect at clinical doses) is preferred in patients on amiodarone, with baseline ECG and monitoring.",
+      afterSectionId: "contraindications",
+    },
+    {
+      id: "quiz-pregnancy",
+      question: "Which common co-prescription in Indian elderly patients raises escitalopram levels via CYP2C19 inhibition?",
+      options: ["Aspirin", "Metformin", "Omeprazole", "Atorvastatin"],
+      correctIndex: 2,
+      explanation: "Omeprazole is a strong CYP2C19 inhibitor. Escitalopram is primarily metabolised by CYP2C19 — co-prescription raises levels → dose-dependent QTc risk. Switch to pantoprazole (minimal CYP2C19 inhibition) or famotidine in patients on long-term escitalopram. This is an extremely common interaction in Indian elderly.",
+      afterSectionId: "evidence-practice",
+    },
+  ],
+
+  /* End-of-page active recall questions */
+  activeRecallQuestions: [
+    {
+      question: "When is Escitalopram preferred over other SSRIs? List 4 scenarios.",
+      answer: "Escitalopram is preferred when: (1) elderly patient (>60 years) — lowest CYP interaction profile and favourable tolerability; (2) complex polypharmacy — minimal CYP2D6 inhibition (safe with metoprolol, tamoxifen); (3) adolescent ≥12 years with depression — FDA-approved; (4) patient with comorbid GAD — broad-spectrum coverage with clean side-effect profile. The S-enantiomer of citalopram is more potent and better tolerated than the racemic parent.",
+      topic: "Drug Selection",
+    },
+    {
+      question: "What is the QTc precaution with escitalopram? What are the maximum doses in adults vs elderly, and why?",
+      answer: "Dose-dependent QTc prolongation → risk of torsades de pointes. FDA caps established 2011/2012: max 20mg/day in adults; 10mg/day in patients >60 years, hepatic impairment, or CYP2C19 poor metabolisers. The QTc effect (~5–10ms at 20mg) is modest in isolation but amplified by other QTc-prolonging drugs (antiarrhythmics, antipsychotics, macrolides, methadone). Avoid in congenital long-QT.",
+      topic: "Safety",
+    },
+    {
+      question: "Explain the relationship between citalopram and escitalopram. Why does escitalopram at half the mg dose produce equivalent or superior SERT occupancy?",
+      answer: "Escitalopram is the S-enantiomer of racemic citalopram. The R-enantiomer in citalopram is not inert — it antagonises SERT binding of the active S-enantiomer via allosteric interaction. Removing the R-enantiomer (as in escitalopram) eliminates this antagonism, so escitalopram at half the mg dose achieves equivalent or superior SERT occupancy with better tolerability.",
+      topic: "Pharmacology",
+    },
+    {
+      question: "A patient on escitalopram develops agitation, clonus, hyperreflexia, and fever. What is the diagnosis and how do you manage it?",
+      answer: "Serotonin syndrome. Triad: mental status change + autonomic instability + neuromuscular excitation (clonus, hyperreflexia). Management: discontinue escitalopram, supportive care (cooling, benzodiazepines), cyproheptadine (5-HT2A antagonist) in severe cases. Distinguish from NMS (rigidity, bradyreflexia).",
+      topic: "Side Effects",
+    },
+    {
+      question: "Which common Indian co-prescription raises escitalopram levels? How do you manage it?",
+      answer: "Omeprazole — a strong CYP2C19 inhibitor. Escitalopram is primarily metabolised by CYP2C19, so co-prescription raises levels → dose-dependent QTc risk. Management: switch omeprazole to pantoprazole (minimal CYP2C19 inhibition) or famotidine. If PPI cannot be changed, reduce escitalopram max dose by 50% (max 10mg/day in adults, 5mg/day in elderly).",
+      topic: "Drug Interactions",
+    },
+    {
+      question: "How do you manage SSRI discontinuation syndrome? Where does escitalopram sit relative to other SSRIs?",
+      answer: "Taper over 4+ weeks. Symptoms: FINISH (Flu-like, Insomnia, Nausea, Imbalance, Sensory/brain zaps, Hyperarousal). Worst: paroxetine (shortest half-life 21h). Mildest: fluoxetine (longest half-life 1–4 days, self-tapers). Escitalopram (half-life 27–32h) is intermediate — moderate discontinuation risk. Can substitute fluoxetine for the last 2 weeks of an escitalopram taper to smooth discontinuation.",
+      topic: "Discontinuation",
+    },
+  ],
+
+  /* Guided learning paths — each mode shows a curated subset of sections */
+  learningPaths: [
+    {
+      mode: "patient",
+      label: "Patient",
+      estimatedTime: "5 min",
+      description: "Plain language. What you need to know to take your medicine safely.",
+      visibleSections: ["top", "quick-facts", "patient-education", "faq", "emergency"],
+    },
+    {
+      mode: "mbbs",
+      label: "MBBS Student",
+      estimatedTime: "20 min",
+      description: "Foundations, mechanism, clinical uses, side effects, and MBBS exam content.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+    },
+    {
+      mode: "neetPg",
+      label: "NEET PG / INICET",
+      estimatedTime: "35 min",
+      description: "Full clinical detail with exam-specific content, PYQs, and drug comparisons.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+    },
+    {
+      mode: "resident",
+      label: "Resident / Clinician",
+      estimatedTime: "45 min",
+      description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+    },
+  ],
+
+  /* Lesson grouping — sections organised into learning units */
+  lessonGroups: [
+    {
+      number: 1,
+      title: "Foundations",
+      description: "What is this drug? Why does it matter?",
+      sectionIds: ["top", "quick-facts", "learning-objectives", "knowledge-graph"],
+      checkpoint: "You now know what Escitalopram is — the S-enantiomer of citalopram, the most selective SSRI with the lowest CYP interaction profile, and a dose-dependent QTc precaution.",
+    },
+    {
+      number: 2,
+      title: "Mechanism & Neuroscience",
+      description: "How does it work? Where does it act in the brain?",
+      sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
+      checkpoint: "You understand the mechanism — from acute SERT blockade to chronic 5-HT1A desensitisation to BDNF-mediated neurogenesis. The 4–6 week delay now makes sense, and you know why the S-enantiomer is more potent than the racemic parent.",
+    },
+    {
+      number: 3,
+      title: "Clinical Practice",
+      description: "When do you use it? What goes wrong?",
+      sectionIds: ["clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education"],
+      checkpoint: "You can now prescribe escitalopram safely — you know the indications (including paediatric ≥12 years and GAD), the QTc dose caps, the contraindications, and how to monitor response.",
+    },
+    {
+      number: 4,
+      title: "Indian Context",
+      description: "How is it actually used in Indian hospitals?",
+      sectionIds: ["indian-clinical", "decision-path", "common-mistakes"],
+      checkpoint: "You know the Indian brands (Nexito, Stalopam, Feliz-S), the government hospital workflow, the common mistakes interns make (especially the omeprazole interaction), and when NOT to choose escitalopram.",
+    },
+    {
+      number: 5,
+      title: "Exam Revision",
+      description: "High-yield facts, clinical cases, and drug comparisons.",
+      sectionIds: ["learning-module", "clinical-case", "drug-navigation", "high-yield-summary"],
+      checkpoint: "You've reviewed the exam-specific content, worked through a clinical case, compared escitalopram with the other 5 SSRIs, and have a one-page revision summary.",
+    },
+    {
+      number: 6,
+      title: "Active Recall",
+      description: "Can you answer these without looking?",
+      sectionIds: ["active-recall", "faq", "references"],
+      checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Escitalopram.",
+    },
+  ],
+
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
   reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Lexapro label, FDA Drug Safety Communication on citalopram/escitalopram QTc (2011/2012), NICE CG91, APA Practice Guideline"],

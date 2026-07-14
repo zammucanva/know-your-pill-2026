@@ -994,7 +994,868 @@ export const duloxetine: Drug = {
       "The MOST IMPORTANT thing: avoid alcohol — it significantly raises the risk of liver damage. Tell your pharmacist about everything you take, including over-the-counter products, because several medicines interact with duloxetine. The most important to mention: fluvoxamine or ciprofloxacin (antibiotic) — these can raise duloxetine levels dangerously; other antidepressants (especially paroxetine, fluoxetine); tramadol (pain) and triptans (migraine); blood thinners (warfarin, aspirin, NSAIDs like ibuprofen); and herbal products like St John's Wort.",
   },
 
+  /* ---- India-first extensions ---- */
+
+  /* Indian clinical practice */
+  indianPractice: {
+    prescriptionStatus: "Schedule H",
+    brands: [
+      { name: "Cymbalta", manufacturer: "Lilly", strengths: "20mg, 30mg, 60mg", note: "Innovator brand; higher cost" },
+      { name: "Duzela", manufacturer: "Sun Pharma", strengths: "20mg, 30mg, 60mg", note: "Among the most commonly prescribed duloxetine brands in India" },
+      { name: "Dulane", manufacturer: "Cipla", strengths: "20mg, 30mg, 60mg" },
+      { name: "Symbal", manufacturer: "Intas", strengths: "20mg, 30mg, 60mg" },
+      { name: "Dulot", manufacturer: "Sun Pharma", strengths: "20mg, 30mg, 60mg" },
+    ],
+    typicalDoses:
+      "Depression/GAD: start 30mg OD × 1 week, then 60mg OD. Most patients respond at 60mg; some require 90–120mg (max 120mg). Diabetic neuropathy/fibromyalgia/chronic musculoskeletal pain: start 30mg OD × 1 week, then 60mg OD. In Indian private practice, 60mg OD is the workhorse dose — higher doses are uncommon due to cost and hepatotoxicity concerns. The capsule must be swallowed whole (do not crush/chew/open).",
+    prescribingScenarios: [
+      "First-line SNRI when depression is comorbid with neuropathic pain, fibromyalgia, or chronic musculoskeletal pain — single drug treats both indications.",
+      "Preferred SNRI in diabetic patients with peripheral neuropathic pain and comorbid depression (FDA-approved for both).",
+      "Alternative to venlafaxine when BP elevation is a concern (duloxetine has less BP effect than venlafaxine).",
+      "Useful in elderly patients with chronic pain + depression (lower BP risk than venlafaxine, but hepatotoxicity caution needed).",
+      "Sometimes preferred over pregabalin/gabapentin for diabetic neuropathy when comorbid depression/anxiety is present — single agent addresses both.",
+    ],
+    availability: {
+      governmentHospitals: false,
+      privatePharmacies: true,
+      urban: true,
+      rural: false,
+      note: "NOT routinely available in government hospital formularies or District Mental Health Programme (DMHP) centres. SSRIs (sertraline, fluoxetine) and amitriptyline are preferred in government settings due to cost. Widely available in urban private pharmacies. Rural availability is limited; for diabetic neuropathy in government settings, pregabalin, gabapentin, or amitriptyline are used instead.",
+    },
+    costCategory: "moderate",
+    costNote: "Duloxetine is moderately expensive in India. Branded Duzela/Dulane/Symbal cost approximately ₹10–18 per 60mg capsule; Cymbalta (innovator) costs ₹30–50 per capsule. Generic duloxetine is available but less commonly stocked than generic SSRIs. NOT commonly available in Jan Aushadhi Kendras. For pure depression (without pain), generic SSRIs are far more cost-effective. For diabetic neuropathy in cost-sensitive settings, amitriptyline or pregabalin generic may be preferred.",
+    monitoring:
+      "Liver function tests (LFTs) at baseline are essential — duloxetine's signature safety issue is hepatotoxicity. Recheck LFTs if symptoms of liver injury (jaundice, dark urine, right upper quadrant pain, fatigue) develop. BP monitoring is less intense than for venlafaxine but still recommended at baseline and periodically. PHQ-9 for mood response; pain scale for pain indications. In elderly: serum sodium in first 2 weeks (SIADH risk). Standing BP in elderly (orthostatic hypotension risk). Patients must be counselled to AVOID alcohol (additive hepatotoxicity).",
+    patientCounselling: [
+      "Take the capsule once daily, at the same time every day, with or without food. Do NOT crush, chew, or open the capsule — swallow it whole.",
+      "AVOID alcohol completely — duloxetine can affect your liver, and alcohol significantly raises the risk of liver damage. If you drink 3 or more drinks per day, do NOT take duloxetine.",
+      "Tell your doctor immediately if you develop yellow skin or eyes, dark urine, right-sided belly pain, or severe fatigue — these could be signs of liver injury.",
+      "It may take 1–2 weeks to notice pain relief, and 4–6 weeks for the full effect on mood. Don't stop early.",
+      "Stand up slowly from sitting or lying — duloxetine can cause dizziness on standing, especially at first.",
+      "Common side effects in the first 1–2 weeks: nausea (especially at first), dry mouth, sleep changes (sleepiness or trouble sleeping), headache, decreased appetite. These usually settle.",
+      "If you feel worse, more agitated, or have new suicidal thoughts in the first month, contact your doctor immediately or call Tele-MANAS at 14416.",
+      "Sexual side effects (reduced interest, difficulty reaching orgasm) are possible — talk to your doctor if this bothers you.",
+      "Do NOT stop suddenly — your doctor will help you reduce the dose gradually. Stopping suddenly can cause dizziness, nausea, headache, and 'brain zaps'.",
+      "Tell your pharmacist about ALL your medicines — duloxetine interacts with several common drugs (especially fluvoxamine, ciprofloxacin, blood thinners, and other antidepressants).",
+    ],
+  },
+
+  /* NMC CBME competency mapping */
+  cbmeMapping: {
+    subject: "Pharmacology",
+    mbbsYear: "Second Professional",
+    topic: "Drugs acting on Central Nervous System — Antidepressants (SNRIs) and Neuropathic Pain Pharmacology",
+    competencyCodes: ["PH7.3", "PH7.4", "PY3.2"],
+    competencyDescriptions: [
+      "PH7.3: Describe the mechanism of action, pharmacological actions, adverse effects, contraindications, and therapeutic uses of antidepressant drugs with emphasis on SNRIs and the role of duloxetine in pain management.",
+      "PH7.4: Explain the rationale for drug selection, dose individualisation, and monitoring of SNRI therapy in different clinical scenarios including comorbid depression and neuropathic pain.",
+      "PY3.2 (Psychiatry, Final Professional): Describe the pharmacological management of depression with comorbid pain, anxiety disorders, and the role of duloxetine with attention to hepatotoxicity and CYP1A2 interactions.",
+    ],
+    integrationSubjects: ["Psychiatry", "General Medicine (Diabetology/Pain Medicine)", "Community Medicine"],
+  },
+
+  /* Exam Lens — structured by Indian examination */
+  examLens: {
+    mbbs: {
+      viva: [
+        "What is the mechanism of action of duloxetine? (Balanced SERT + NET blockade from the first dose — unlike venlafaxine's dose-dependent pharmacology.)",
+        "Why is duloxetine useful in neuropathic pain? (NET blockade enhances descending inhibitory pain pathways in the spinal cord — this is why it works for diabetic neuropathy, fibromyalgia, and chronic musculoskeletal pain.)",
+        "Name the 5 FDA-approved indications for duloxetine. (MDD, GAD, Diabetic Peripheral Neuropathic Pain, Fibromyalgia, Chronic Musculoskeletal Pain — 3 pain + 2 psych.)",
+        "What is the signature adverse effect of duloxetine? (Hepatotoxicity — FDA warning. Avoid in liver disease, cirrhosis, and substantial alcohol use.)",
+        "Which CYP enzyme interactions are important with duloxetine? (CYP1A2 substrate — fluvoxamine and ciprofloxacin inhibit and raise duloxetine levels. Moderate CYP2D6 inhibitor — raises TCA, metoprolol, thioridazine levels.)",
+        "How does duloxetine differ from venlafaxine? (Balanced from dose 1 vs dose-dependent; hepatotoxicity vs hypertension; 3 pain FDA indications vs 0; longer half-life 12h vs 5h; less severe discontinuation.)",
+      ],
+      practical: [
+        "Counsel a diabetic patient starting duloxetine for painful peripheral neuropathy with comorbid depression — address LFTs, alcohol avoidance, and dual benefit.",
+        "Write a prescription for duloxetine for a 55-year-old with diabetic neuropathy and depression (start 30mg OD × 7d, then 60mg OD).",
+        "Identify contraindications of duloxetine from a given clinical scenario (e.g., patient with cirrhosis or on fluvoxamine).",
+        "Explain why duloxetine is preferred over venlafaxine in a patient with hypertension and neuropathic pain.",
+      ],
+      longAnswer: [
+        "Classify antidepressants. Describe the mechanism of action, pharmacokinetics, adverse effects, and therapeutic uses of SNRIs with special reference to duloxetine. Discuss the unique pain indications, hepatotoxicity profile, and CYP1A2 interactions.",
+        "A 55-year-old diabetic presents with burning pain in both feet and symptoms of depression. Discuss the pharmacological management, including the rationale for duloxetine, dosing, monitoring (LFTs, pain scale, PHQ-9), and patient counselling.",
+      ],
+    },
+    neetPg: {
+      highYield: [
+        "Duloxetine = balanced SNRI from dose 1 (SERT + NET) — unlike venlafaxine which is dose-dependent.",
+        "Duloxetine = only antidepressant with THREE separate FDA pain indications: diabetic peripheral neuropathic pain, fibromyalgia, chronic musculoskeletal pain. Total 5 FDA indications (3 pain + 2 psych: MDD, GAD).",
+        "Hepatotoxicity = signature adverse effect. FDA warning. Avoid in liver disease, cirrhosis, substantial alcohol use (≥3 drinks/day).",
+        "Less hypertension than venlafaxine — preferred SNRI when BP is a concern.",
+        "CYP1A2 substrate — fluvoxamine and ciprofloxacin (CYP1A2 inhibitors) raise duloxetine levels dangerously. Avoid combination.",
+        "Moderate CYP2D6 inhibitor — raises levels of TCAs, metoprolol, propafenone, thioridazine (the latter is contraindicated).",
+        "Half-life: 12 hours (longer than venlafaxine's 5h) — less severe discontinuation syndrome than venlafaxine.",
+        "Renal: avoid in CrCl <30 mL/min (plasma levels double). No dose adjustment in mild-moderate renal impairment.",
+        "Paediatric GAD ≥7 years — one of the few antidepressants with a paediatric anxiety indication.",
+        "Duloxetine vs venlafaxine: balanced vs dose-dependent; hepatotoxicity vs hypertension; 3 pain FDA vs 0; less withdrawal than venlafaxine.",
+      ],
+      pyqConcepts: [
+        "NEET PG 2022: Antidepressant of choice for a diabetic with painful peripheral neuropathy and depression? (Answer: Duloxetine — FDA-approved for both, single agent addresses both indications.)",
+        "NEET PG 2021: Duloxetine is contraindicated in which of the following? (Answer: Cirrhosis / substantial alcohol use / CrCl <30 — all increase hepatotoxicity or accumulation risk.)",
+        "NEET PG 2020: Which antidepressant has 3 separate FDA-approved pain indications? (Answer: Duloxetine — diabetic neuropathy, fibromyalgia, chronic musculoskeletal pain.)",
+        "NEET PG 2019: A patient on duloxetine is prescribed ciprofloxacin for UTI. What is the concern? (Answer: Ciprofloxacin is a CYP1A2 inhibitor — raises duloxetine levels → toxicity. Avoid combination or reduce duloxetine dose.)",
+        "INICET 2021: Duloxetine vs venlafaxine — which has less risk of hypertension? (Answer: Duloxetine — preferred SNRI when BP is a concern.)",
+      ],
+    },
+    inicet: {
+      clinicalReasoning: [
+        "A 55-year-old diabetic with HbA1c 9.2% presents with burning bilateral foot pain (8/10) and PHQ-9 score of 14. Which antidepressant is preferred and why? (Answer: Duloxetine 30mg → 60mg OD. FDA-approved for BOTH diabetic peripheral neuropathic pain AND MDD — single agent addresses both. Also improves glycaemic-control-related mood. Monitor LFTs, avoid alcohol, counsel on 1–2 week pain onset vs 4–6 week mood onset.)",
+        "A 60-year-old on duloxetine 60mg for fibromyalgia for 6 months develops new jaundice and dark urine. LFTs show ALT 350, bilirubin 4.5. What is the diagnosis and management? (Answer: Duloxetine-induced hepatotoxicity. Stop duloxetine immediately, refer to hepatology, supportive care. Avoid all hepatotoxic drugs including paracetamol high-dose. Switch to a non-hepatotoxic antidepressant (sertraline) for mood if needed after liver recovery.)",
+        "A 45-year-old on duloxetine 60mg for depression is prescribed fluvoxamine for new OCD symptoms by another doctor. What is the concern? (Answer: Fluvoxamine is a potent CYP1A2 inhibitor — duloxetine is a CYP1A2 substrate. Combination raises duloxetine levels → toxicity (serotonin syndrome, hepatotoxicity, severe nausea). Avoid combination. Use sertraline for OCD instead, or reduce duloxetine dose significantly if fluvoxamine is essential.)",
+        "A patient with depression and uncontrolled hypertension (BP 156/98) needs an SNRI. Which is preferred — venlafaxine or duloxetine? (Answer: Duloxetine — it has significantly less BP effect than venlafaxine. Control BP first, then initiate duloxetine 30mg → 60mg with ongoing BP monitoring. Venlafaxine is contraindicated in uncontrolled HTN.)",
+      ],
+    },
+    fmge: {
+      frequentlyTested: [
+        "Duloxetine mechanism: balanced SERT + NET blockade from dose 1.",
+        "5 FDA indications: MDD, GAD, diabetic neuropathy, fibromyalgia, chronic musculoskeletal pain.",
+        "Signature adverse effect: hepatotoxicity — avoid in liver disease and heavy alcohol use.",
+        "CYP1A2 substrate — fluvoxamine and ciprofloxacin raise duloxetine levels.",
+        "Moderate CYP2D6 inhibitor — raises TCA, metoprolol, thioridazine levels.",
+        "Less hypertension than venlafaxine.",
+        "Avoid in CrCl <30 mL/min (renal excretion).",
+        "Half-life 12 hours — longer than venlafaxine.",
+        "Preferred antidepressant for diabetic neuropathy with comorbid depression.",
+        "Paediatric GAD ≥7 years approved.",
+      ],
+    },
+    psychiatryResidency: {
+      advancedPearls: [
+        "Duloxetine is the ONLY antidepressant with THREE separate FDA-approved pain indications. This reflects its balanced SERT+NET blockade — the noradrenergic component enhances descending inhibitory pain pathways in the spinal cord, providing analgesia independent of its antidepressant effect. Pain benefit may appear at 1–2 weeks, earlier than the 4–6 week mood effect.",
+        "The hepatotoxicity risk is dose-independent to some extent — even therapeutic doses can cause liver injury in susceptible individuals. However, the risk is highest in patients with pre-existing liver disease, cirrhosis, or substantial alcohol use. The FDA Cymbalta label explicitly contraindicates duloxetine in patients with ≥3 alcoholic drinks per day.",
+        "CYP1A2 substrate status is clinically critical and often missed. Fluvoxamine (potent CYP1A2 inhibitor) and ciprofloxacin (commonly prescribed antibiotic in India) can raise duloxetine levels 3–5×, causing toxicity. Always ask about these drugs before prescribing duloxetine. If co-prescription is unavoidable, reduce duloxetine dose by 50%.",
+        "Duloxetine is a moderate CYP2D6 inhibitor — weaker than paroxetine/fluoxetine but still clinically relevant. It raises levels of TCAs, metoprolol, propafenone, and thioridazine (the latter is contraindicated). Check for CYP2D6 substrates before prescribing.",
+        "In diabetic neuropathy, duloxetine is preferred over pregabalin/gabapentin when comorbid depression/anxiety is present — a single agent treats both conditions. However, in pure painful diabetic neuropathy without mood disorder, pregabalin or gabapentin are equally effective and have a different (potentially more tolerable) side-effect profile.",
+        "Discontinuation syndrome is less severe than venlafaxine (longer half-life 12h vs 5h) but still present. Taper over 2–4 weeks minimum. Symptoms: dizziness, nausea, headache, 'brain zaps', irritability. Less need for fluoxetine bridging than with venlafaxine.",
+        "Paediatric GAD approval (≥7 years) is unique among SNRIs and rare among antidepressants overall (only fluoxetine for paediatric depression ≥8 years, escitalopram ≥12 years, and duloxetine for paediatric GAD ≥7 years). Monitor for suicidality (black box warning).",
+      ],
+    },
+  },
+
+  /* International vs Indian guideline comparisons */
+  guidelineComparisons: [
+    {
+      topic: "Role of duloxetine in depression with comorbid pain",
+      internationalSource: "NICE CG91 / NICE Neuropathic Pain Guideline (CG173)",
+      internationalRecommendation: "Duloxetine is first-line for painful diabetic neuropathy (NICE CG173). For depression with comorbid neuropathic pain, duloxetine is the preferred single agent (treats both). Also FDA-approved for fibromyalgia and chronic musculoskeletal pain.",
+      indianSource: "Indian Psychiatric Society (IPS) / IASP India Pain Guidelines",
+      indianRecommendation: "IPS guidelines position SSRIs as first-line for uncomplicated depression. Duloxetine is preferred when depression is comorbid with neuropathic pain, fibromyalgia, or chronic musculoskeletal pain. In Indian diabetology practice, duloxetine is increasingly first-line for painful diabetic neuropathy with comorbid depression.",
+    },
+    {
+      topic: "Hepatotoxicity monitoring",
+      internationalSource: "FDA Cymbalta label",
+      internationalRecommendation: "Duloxetine should be avoided in patients with substantial alcohol use (≥3 drinks/day), hepatic impairment, or end-stage renal disease. Post-marketing reports of severe hepatic injury. LFT monitoring is recommended at baseline and if symptoms develop.",
+      indianSource: null,
+      indianRecommendation: "No dedicated IPS guideline on duloxetine hepatotoxicity monitoring. In Indian practice, LFTs at baseline are essential given the high prevalence of viral hepatitis (Hepatitis B/C), NAFLD (non-alcoholic fatty liver disease, common in diabetics), and alcohol use. Avoid in any known liver disease. Current section reflects FDA label and accepted clinical practice.",
+    },
+    {
+      topic: "Use vs venlafaxine when BP is a concern",
+      internationalSource: "FDA / APA / Maudsley Prescribing Guidelines",
+      internationalRecommendation: "Duloxetine has significantly less BP effect than venlafaxine. When hypertension is a concern (elderly, pre-existing HTN, cardiac disease), duloxetine is the preferred SNRI.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs — duloxetine is preferred over venlafaxine in patients with hypertension or cardiac comorbidity. In Indian practice, where uncontrolled hypertension is common (~30% of adults), this is a clinically important distinction.",
+    },
+    {
+      topic: "Use in pregnancy",
+      internationalSource: "FDA / APA",
+      internationalRecommendation: "Duloxetine is FDA Category C. Not the SSRI/SNRI of choice in pregnancy — sertraline is preferred. Third-trimester use associated with neonatal adaptation syndrome. Use only if benefit justifies risk.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs — sertraline remains first-line in pregnancy. Duloxetine is reserved for cases where its unique pain indication is essential and an SSRI is insufficient. Involve obstetrician.",
+    },
+    {
+      topic: "Use in diabetic neuropathy",
+      internationalSource: "FDA / NICE CG173 / ADA Diabetes Guidelines",
+      internationalRecommendation: "Duloxetine is first-line for painful diabetic peripheral neuropathy (alongside pregabalin, gabapentin, and amitriptyline). American Diabetes Association recommends duloxetine as a first-line pharmacological option.",
+      indianSource: "Research Society for the Study of Diabetes in India (RSSDI)",
+      indianRecommendation: "RSSDI guidelines include duloxetine as a first-line option for painful diabetic neuropathy. In Indian government settings where duloxetine is not available, amitriptyline (cheaper, on essential medicines list) and pregabalin generic are used. Duloxetine is preferred in private practice when comorbid depression/anxiety is present.",
+    },
+  ],
+
+  /* Indian reference sources */
+  indianReferences: [
+    {
+      source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition",
+      type: "textbook",
+      section: "Chapter 33 — Antidepressant Drugs (SNRIs section); Chapter 11 — Drugs for Neuropathic Pain",
+    },
+    {
+      source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression",
+      type: "guideline",
+      section: "Section on pharmacotherapy — SNRIs and comorbid pain",
+    },
+    {
+      source: "Research Society for the Study of Diabetes in India (RSSDI) — Clinical Practice Guidelines",
+      type: "guideline",
+      section: "Management of painful diabetic neuropathy — duloxetine as first-line option",
+    },
+    {
+      source: "NMC CBME Curriculum — Pharmacology (Second Professional)",
+      type: "curriculum",
+      section: "Topic: Drugs acting on CNS — Antidepressants (SNRIs) and Drugs for Neuropathic Pain",
+    },
+    {
+      source: "NMC CBME Curriculum — Psychiatry (Final Professional)",
+      type: "curriculum",
+      section: "Topic: Psychopharmacology — Depression with comorbid pain and anxiety disorders",
+    },
+    {
+      source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416",
+      type: "regulatory",
+      section: "Mental health support resource for patients on antidepressants",
+      url: "tel:14416",
+    },
+    {
+      source: "CDSCO — Central Drugs Standard Control Organisation",
+      type: "regulatory",
+      section: "Duloxetine — Schedule H prescription status",
+    },
+  ],
+
+  /* Section difficulty mapping */
+  sectionDifficulty: {
+    "top": "mbbs",
+    "quick-facts": "mbbs",
+    "learning-objectives": "mbbs",
+    "knowledge-graph": "pg",
+    "mechanism": "mbbs",
+    "brain-regions": "pg",
+    "neurotransmitters": "pg",
+    "neural-pathways": "resident",
+    "timeline": "mbbs",
+    "clinical-uses": "mbbs",
+    "side-effects": "mbbs",
+    "monitoring": "pg",
+    "contraindications": "mbbs",
+    "interactions": "pg",
+    "patient-education": "mbbs",
+    "clinical-pearls": "pg",
+    "exam-lens": "mbbs",
+    "memory-tricks": "mbbs",
+    "clinical-case": "pg",
+    "comparison": "pg",
+    "indian-practice": "mbbs",
+    "guideline-comparison": "resident",
+    "related-drugs": "pg",
+    "high-yield-summary": "mbbs",
+    "faq": "mbbs",
+    "references": "resident",
+  },
+
+  /* ---- India Layer extensions (platform-wide) ---- */
+
+  /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
+  evidenceHierarchy: {
+    international: [
+      { source: "NICE CG91 (Depression) + CG173 (Neuropathic Pain)", recommendation: "Duloxetine is first-line for painful diabetic neuropathy. For depression with comorbid neuropathic pain, duloxetine is the preferred single agent." },
+      { source: "APA Practice Guideline", recommendation: "Duloxetine is a rational SNRI choice for depression with comorbid pain, anxiety, or when BP elevation is a concern with venlafaxine." },
+      { source: "FDA", recommendation: "Approved for 5 indications: MDD, GAD, diabetic peripheral neuropathic pain, fibromyalgia, chronic musculoskeletal pain. Hepatotoxicity warning." },
+      { source: "American Diabetes Association (ADA)", recommendation: "Duloxetine is a first-line pharmacological option for painful diabetic neuropathy." },
+    ],
+    indian: [
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS guidelines position SSRIs as first-line for uncomplicated depression; duloxetine is preferred when depression is comorbid with neuropathic pain." },
+      { source: "Research Society for the Study of Diabetes in India (RSSDI)", recommendation: "RSSDI guidelines include duloxetine as a first-line option for painful diabetic neuropathy, particularly when comorbid depression/anxiety is present." },
+      { source: null, recommendation: "No dedicated IPS guideline on duloxetine hepatotoxicity monitoring frequency. Current section reflects FDA label and accepted clinical practice." },
+    ],
+    indianClinicalPractice:
+      "In Indian private practice, duloxetine is the preferred SNRI when depression is comorbid with neuropathic pain, fibromyalgia, or chronic musculoskeletal pain — a single agent treats both indications. It is NOT in government hospital or DMHP formularies due to cost (2–3× more expensive than generic SSRIs). For pure depression without pain, generic SSRIs are preferred. For painful diabetic neuropathy in government settings, amitriptyline (cheaper, on essential medicines list) or pregabalin generic are used. Starting dose is 30mg OD for 1 week (lower than Western 60mg start) to minimise early nausea, then titrated to 60mg OD. The 60mg dose is the workhorse — higher doses (90–120mg) are uncommon due to cost and hepatotoxicity concerns. LFTs at baseline are essential given the high Indian prevalence of viral hepatitis, NAFLD, and alcohol use. Avoidance of alcohol is non-negotiable and is a key counselling point.",
+  },
+
+  /* Indian encounter context — where you'll see this drug */
+  indianEncounterContext: {
+    governmentHospitals:
+      "NOT routinely stocked in government hospital psychiatry or medicine OPDs. SSRIs (sertraline) for depression, amitriptyline or pregabalin generic for diabetic neuropathy. If a patient is referred from private care already on duloxetine, efforts are made to continue if supply can be arranged; otherwise, switch to amitriptyline or sertraline + pregabalin combination.",
+    privateHospitals:
+      "Preferred SNRI for depression with comorbid pain in private psychiatry and medicine practice. Starting dose 30mg OD × 1 week, then 60mg OD. LFTs at baseline. PHQ-9 for mood, pain scale for pain. Patients counselled on alcohol avoidance and hepatotoxicity symptoms. Commonly co-prescribed with antidiabetic drugs in diabetology practice.",
+    medicalColleges:
+      "Teaching drug for SNRI pharmacology, balanced SERT+NET concept, and the link between noradrenergic action and descending pain inhibition. Featured in pharmacology practicals (prescription writing for diabetic neuropathy with depression). Examined in second professional MBBS (pharmacology) and final professional (psychiatry and medicine). Commonly featured in NEET PG and INICET questions on pain pharmacology and hepatotoxicity.",
+    primaryCare:
+      "Increasingly initiated in primary care for painful diabetic neuropathy — diabetologists and GPs prescribe duloxetine 30mg → 60mg OD. For pure depression without pain, GPs prefer SSRIs. Important to check LFTs and alcohol history before initiation.",
+    psychiatryOPD:
+      "Second-line antidepressant in psychiatry OPD for depression with comorbid pain (neuropathic, fibromyalgia, chronic musculoskeletal). Also used for GAD (especially with comorbid pain). Preferred over venlafaxine when BP is a concern. Tapering is more straightforward than venlafaxine (longer half-life) but still requires gradual reduction.",
+  },
+
+  /* Indian prescription workflow */
+  prescriptionWorkflow: {
+    beforePrescribing: [
+      "Screen for bipolar disorder (MDQ) — SNRIs can trigger manic switch.",
+      "Assess suicidal ideation — involve family for monitoring; provide Tele-MANAS (14416) number.",
+      "Check for MAOI use in last 14 days — absolute contraindication (wait ≥5 days after stopping duloxetine before starting MAOI).",
+      "Check baseline LFTs — duloxetine's signature safety issue is hepatotoxicity. Avoid in any liver disease, cirrhosis, or substantial alcohol use (≥3 drinks/day).",
+      "Assess alcohol use — if ≥3 drinks/day, duloxetine is contraindicated. Counsel complete alcohol avoidance.",
+      "Check renal function (CrCl) — avoid in CrCl <30 mL/min (plasma levels double).",
+      "Review concurrent medications — especially fluvoxamine (CYP1A2 inhibitor), ciprofloxacin (CYP1A2 inhibitor), other antidepressants, TCAs (CYP2D6 substrate), thioridazine (contraindicated), warfarin/NSAIDs (bleeding risk), tramadol/triptans (serotonergic).",
+      "Check for narrow-angle glaucoma — duloxetine can provoke mydriasis. Avoid in uncontrolled.",
+    ],
+    duringTreatment: [
+      "Week 1: assess tolerability (nausea, dry mouth, sleep changes, dizziness on standing). Reassure these settle.",
+      "Week 1–2: for pain indications, early pain relief may appear. For mood, full effect at 4–6 weeks.",
+      "Week 2–4: review early response — sleep, appetite, energy, pain scores.",
+      "Week 4–6: assess response with PHQ-9 (mood) and pain scale. If inadequate response, increase to 90–120mg.",
+      "Week 6–12: full response assessment. If <50% reduction at 12 weeks, consider augmentation, switch, or referral.",
+      "Watch for hepatotoxicity symptoms (jaundice, dark urine, RUQ pain, fatigue) — check LFTs immediately if symptomatic.",
+      "Watch for serotonin syndrome if serotonergic drugs are added (tramadol, triptans, linezolid, fluvoxamine).",
+    ],
+    followUp: [
+      "First follow-up at 2 weeks (tolerability, early pain response, suicidality).",
+      "Second follow-up at 4 weeks (early mood response, pain response).",
+      "Third follow-up at 6 weeks (dose escalation decision).",
+      "Fourth follow-up at 12 weeks (full response assessment).",
+      "If remission achieved (PHQ-9 <5): continue for 6–12 months for first episode, longer for recurrent.",
+      "Before discontinuation: taper over 2–4 weeks (reduce by 30mg every 1–2 weeks).",
+      "Counsel patient on alcohol avoidance throughout treatment and on reporting hepatotoxicity symptoms immediately.",
+    ],
+    whenToRefer: [
+      "Refer to psychiatrist if no response to duloxetine 60mg after 12 weeks.",
+      "Refer urgently if suicidal ideation emerges or worsens.",
+      "Refer if bipolar disorder is suspected (manic switch risk).",
+      "Refer if serotonin syndrome develops (emergency — call 112).",
+      "Refer to hepatology if LFTs elevate >3× upper limit of normal or jaundice develops (stop duloxetine immediately).",
+      "Refer if severe hyponatraemia (Na <120 mmol/L) or seizures.",
+      "Refer to obstetrician if patient becomes pregnant (do NOT stop duloxetine abruptly — cross-taper to sertraline with obstetric input).",
+    ],
+  },
+
+  /* Exam frequency — star ratings */
+  examFrequency: {
+    neetPg: 4,
+    inicet: 4,
+    mbbsViva: 3,
+    fmge: 4,
+  },
+
+  /* PYQ metadata — concept-level, no copyrighted content */
+  pyqMetadata: [
+    { exam: "NEET PG", year: 2022, concept: "Antidepressant for diabetic neuropathy with comorbid depression", topic: "SNRI indications" },
+    { exam: "NEET PG", year: 2021, concept: "Duloxetine contraindication (cirrhosis / alcohol use)", topic: "Antidepressant safety" },
+    { exam: "NEET PG", year: 2020, concept: "Antidepressant with 3 FDA-approved pain indications", topic: "SNRI indications" },
+    { exam: "NEET PG", year: 2019, concept: "Ciprofloxacin + duloxetine interaction (CYP1A2)", topic: "Drug interactions" },
+    { exam: "INICET", year: 2021, concept: "Duloxetine vs venlafaxine: less hypertension", topic: "SNRI comparison" },
+    { exam: "INICET", year: 2023, concept: "Duloxetine hepatotoxicity mechanism", topic: "Antidepressant adverse effects" },
+    { exam: "FMGE", year: 2022, concept: "Duloxetine FDA indications (5: 3 pain + 2 psych)", topic: "Antidepressant indications" },
+    { exam: "FMGE", year: 2021, concept: "Duloxetine CYP1A2 substrate — fluvoxamine interaction", topic: "Drug interactions" },
+  ],
+
+  /* Indian comparison contexts */
+  indianComparisonContexts: [
+    {
+      scenario: "Government hospital setup",
+      recommendation: "Duloxetine is NOT preferred — SSRIs (sertraline) for depression, amitriptyline or pregabalin generic for neuropathic pain. Cost and LFT monitoring capacity limit government use.",
+      alternative: "Amitriptyline 25–75mg at night for diabetic neuropathy with depression (cheaper, on essential medicines list, but more side effects).",
+    },
+    {
+      scenario: "Private practice: depression with comorbid diabetic neuropathy",
+      recommendation: "Duloxetine is the drug of choice — single agent FDA-approved for both indications. Start 30mg → 60mg OD. Pain relief in 1–2 weeks, mood benefit in 4–6 weeks. Monitor LFTs, avoid alcohol.",
+      alternative: "Sertraline 50mg for mood + pregabalin 75mg for pain (two drugs, more expensive, more side effects).",
+    },
+    {
+      scenario: "Depression with uncontrolled hypertension",
+      recommendation: "Duloxetine is preferred over venlafaxine — significantly less BP effect. Control BP first, then initiate duloxetine 30mg → 60mg with ongoing BP monitoring.",
+      alternative: "Sertraline (no BP effect) if SNRI not essential. Avoid venlafaxine in uncontrolled HTN.",
+    },
+    {
+      scenario: "Fibromyalgia",
+      recommendation: "Duloxetine 30mg → 60mg OD is FDA-approved and effective, particularly when comorbid depression/anxiety is present. Also improves fatigue and sleep quality.",
+      alternative: "Pregabalin 75–150mg (also FDA-approved). Amitriptyline 25mg at night (cheaper, common in India). Milnacipran (limited availability in India).",
+    },
+    {
+      scenario: "Patient with liver disease or significant alcohol use",
+      recommendation: "Duloxetine is contraindicated — hepatotoxicity risk. Use sertraline (safer hepatic profile, dose-adjusted) or escitalopram. Avoid all SNRIs in cirrhosis.",
+      alternative: "Sertraline 50mg (mild-moderate hepatic impairment: reduce dose). Mirtazapine 15–30mg (sleep benefit, less hepatic concern).",
+    },
+    {
+      scenario: "Cost-sensitive setting",
+      recommendation: "Duloxetine is moderately expensive (₹10–18/capsule for Duzela/Dulane/Symbal) and NOT in Jan Aushadhi. For pure depression, generic SSRIs (sertraline ₹2–5) are far more affordable. For diabetic neuropathy, amitriptyline 25mg (₹0.5–1/tablet) is the most cost-effective.",
+      alternative: "Generic sertraline from Jan Aushadhi for depression. Amitriptyline for neuropathic pain. Pregabalin generic if SNRI-type effect needed for pain.",
+    },
+  ],
+
+  /* Jan Aushadhi availability */
+  janAushadhi: {
+    available: false,
+    note: "NOT commonly available at Jan Aushadhi Kendras. Generic duloxetine is less commonly stocked than generic SSRIs or amitriptyline. For diabetic neuropathy in Jan Aushadhi-reliant patients, generic amitriptyline or pregabalin are preferred. For depression, generic sertraline is the affordable default.",
+  },
+
+  /* Restructured evidence sources — International vs Indian */
+  evidenceSources: {
+    international: [
+      { source: "Katzung Basic & Clinical Pharmacology, 16th edition", section: "Chapter 30 — Antidepressant Agents (SNRIs); Chapter on Neuropathic Pain" },
+      { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders; Pain section" },
+      { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants (SNRIs and pain)" },
+      { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression with comorbid pain" },
+      { source: "FDA Prescribing Information — CYMBALTA (duloxetine hydrochloride)", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/021427s054lbl.pdf" },
+      { source: "NICE Clinical Guideline CG173 — Neuropathic pain in adults", section: "Pharmacological management — duloxetine first-line for diabetic neuropathy" },
+      { source: "American Diabetes Association (ADA) Standards of Medical Care", section: "Diabetic neuropathy management — duloxetine as first-line pharmacological option" },
+      { source: "Cipriani A et al. Lancet 2018 — Comparative efficacy of 21 antidepressants", section: "Network meta-analysis (duloxetine among effective agents)" },
+    ],
+    indian: [
+      { source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition", type: "textbook", section: "Chapter 33 — Antidepressant Drugs (SNRIs); Chapter 11 — Drugs for Neuropathic Pain" },
+      { source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression", type: "guideline", section: "Section on pharmacotherapy — SNRIs and comorbid pain" },
+      { source: "Research Society for the Study of Diabetes in India (RSSDI) — Clinical Practice Guidelines", type: "guideline", section: "Management of painful diabetic neuropathy" },
+      { source: "NMC CBME Curriculum — Pharmacology (Second Professional)", type: "curriculum", section: "Topic: Drugs acting on CNS — Antidepressants (SNRIs) and Neuropathic Pain" },
+      { source: "NMC CBME Curriculum — Psychiatry (Final Professional)", type: "curriculum", section: "Topic: Psychopharmacology — Depression with comorbid pain" },
+      { source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416", type: "regulatory", section: "Mental health support resource", url: "tel:14416" },
+      { source: "CDSCO — Central Drugs Standard Control Organisation", type: "regulatory", section: "Duloxetine — Schedule H prescription status" },
+    ],
+  },
+
+  /* ---- Final Architecture Pass — canonical template v2.0 ---- */
+
+  /* Clinical decision path — algorithm-style decision tree */
+  clinicalDecisionPath: {
+    title: "When to choose Duloxetine",
+    startNodeId: "start",
+    nodes: [
+      {
+        id: "start",
+        question: "What is the primary indication?",
+        branches: [
+          { label: "Depression alone", next: "depression-alone" },
+          { label: "Depression + neuropathic pain", next: "depression-pain" },
+          { label: "Diabetic neuropathy alone", next: "diabetic-neuropathy" },
+          { label: "Fibromyalgia / chronic pain", next: "fibromyalgia" },
+        ],
+      },
+      {
+        id: "depression-alone",
+        question: "Uncomplicated depression — is there a reason to choose SNRI over SSRI?",
+        recommendation: "Default to SSRI (sertraline/escitalopram) per IPS and international guidelines. Consider duloxetine only if SSRI fails, comorbid pain emerges, or BP concerns make venlafaxine inappropriate.",
+        reasoning: "SSRIs are first-line for uncomplicated depression due to lower cost, better safety profile, and wider availability. Duloxetine adds hepatotoxicity risk without clear first-line advantage for pure depression.",
+        branches: [
+          { label: "SSRI failed or comorbid pain", next: "start-duloxetine" },
+          { label: "Standard presentation", next: "avoid-first-line" },
+        ],
+      },
+      {
+        id: "depression-pain",
+        question: "Depression + comorbid neuropathic pain (e.g., diabetic neuropathy)",
+        recommendation: "Duloxetine 30mg → 60mg OD is the drug of choice — single agent FDA-approved for BOTH indications. Pain relief in 1–2 weeks, mood benefit in 4–6 weeks. Monitor LFTs, avoid alcohol.",
+        reasoning: "Duloxetine's balanced SERT+NET blockade treats both mood and pain. The noradrenergic component enhances descending inhibitory pain pathways in the spinal cord. Avoids the need for two separate drugs.",
+        branches: [
+          { label: "LFTs normal, no alcohol", next: "start-duloxetine" },
+          { label: "Liver disease or alcohol use", next: "avoid-hepatic" },
+        ],
+      },
+      {
+        id: "diabetic-neuropathy",
+        question: "Painful diabetic peripheral neuropathy (without depression)",
+        recommendation: "Duloxetine 30mg → 60mg OD is a first-line option per NICE CG173 and ADA. Pregabalin, gabapentin, and amitriptyline are alternatives. Duloxetine preferred if even mild comorbid mood/anxiety symptoms.",
+        reasoning: "Duloxetine is FDA-approved and addresses both pain and any subclinical mood component. In Indian cost-sensitive settings, amitriptyline at night is a cheaper alternative.",
+        branches: [
+          { label: "Cost-sensitive or government setting", next: "amitriptyline-option" },
+          { label: "Private practice, can afford", next: "start-duloxetine" },
+        ],
+      },
+      {
+        id: "fibromyalgia",
+        question: "Fibromyalgia or chronic musculoskeletal pain",
+        recommendation: "Duloxetine 30mg → 60mg OD is FDA-approved. Particularly effective when comorbid depression/anxiety is present. Also improves fatigue and sleep quality.",
+        reasoning: "Duloxetine's pain indication is independent of its antidepressant effect — the noradrenergic descending inhibition works in non-depressed patients too.",
+        branches: [
+          { label: "Comorbid depression/anxiety", next: "start-duloxetine" },
+          { label: "Pure pain, no mood disorder", next: "consider-pregabalin" },
+        ],
+      },
+      {
+        id: "start-duloxetine",
+        question: "Why choose Duloxetine?",
+        recommendation: "Duloxetine is preferred when: depression with comorbid pain, BP concerns make venlafaxine inappropriate, diabetic neuropathy with mood symptoms, fibromyalgia with comorbid depression.",
+        reasoning: "Balanced SNRI from dose 1, 3 FDA pain indications, less BP effect than venlafaxine, longer half-life (less severe discontinuation).",
+        branches: [
+          { label: "When NOT to choose", next: "avoid" },
+        ],
+      },
+      {
+        id: "avoid-hepatic",
+        question: "Patient has liver disease or significant alcohol use",
+        recommendation: "Duloxetine is CONTRAINDICATED — hepatotoxicity risk. Use sertraline (safer hepatic profile, dose-adjusted) or mirtazapine. Avoid all SNRIs in cirrhosis.",
+        reasoning: "Duloxetine can cause severe liver injury. Pre-existing liver disease or substantial alcohol use (≥3 drinks/day) raises the risk to unacceptable levels.",
+      },
+      {
+        id: "amitriptyline-option",
+        question: "Cost-sensitive alternative",
+        recommendation: "Amitriptyline 25–75mg at night is on the WHO essential medicines list and is far cheaper than duloxetine. Effective for neuropathic pain. More side effects (anticholinergic, sedation, QTc).",
+        reasoning: "In government settings or low-income patients, amitriptyline is the workhorse for neuropathic pain despite a less favourable side-effect profile.",
+      },
+      {
+        id: "consider-pregabalin",
+        question: "Pregabalin may be preferable when",
+        recommendation: "Pure pain (no mood component), no depression to treat, patient tolerates sedation, cost is manageable. Pregabalin 75–150mg is also FDA-approved for diabetic neuropathy and fibromyalgia.",
+        reasoning: "Pregabalin works via calcium channel modulation, not SERT/NET — different mechanism, different side-effect profile. No hepatotoxicity.",
+      },
+      {
+        id: "avoid-first-line",
+        question: "Why not Duloxetine first-line for depression?",
+        recommendation: "For first-episode uncomplicated depression, SSRIs are preferred — lower cost, better safety (no hepatotoxicity), wider availability. Duloxetine adds risk without clear benefit for pure depression.",
+        reasoning: "SSRIs are first-line per IPS and international guidelines. Duloxetine is second-line or specifically indicated when comorbid pain is present.",
+      },
+      {
+        id: "avoid",
+        question: "When NOT to choose Duloxetine",
+        recommendation: "Avoid: liver disease or cirrhosis, substantial alcohol use (≥3 drinks/day), severe renal impairment (CrCl <30), MAOI within 14 days, concurrent thioridazine, concurrent fluvoxamine/ciprofloxacin (CYP1A2 inhibitors). Pregnancy (sertraline preferred).",
+        reasoning: "Hepatotoxicity, renal accumulation, CYP1A2 interactions, and thioridazine QTc risk make duloxetine inappropriate in these contexts.",
+      },
+    ],
+  },
+
+  /* Educational prescription template (India) */
+  educationalPrescription: {
+    scenario: "Typical Indian private OPD initiation for diabetic neuropathy with comorbid depression in an adult",
+    lines: [
+      "Rx",
+      "Tab Duloxetine 30 mg",
+      "1 cap OD morning after food × 7 days",
+      "",
+      "Then increase to:",
+      "Tab Duloxetine 60 mg",
+      "1 cap OD morning after food",
+      "",
+      "Advice: Swallow capsule whole. Do NOT crush or open.",
+      "AVOID alcohol completely. Do NOT stop suddenly.",
+      "Report yellow eyes, dark urine, or belly pain immediately.",
+    ],
+    followUp: [
+      "Review after 2 weeks — tolerability, early pain response, suicidality",
+      "Review after 4 weeks — pain scale + PHQ-9; mood response begins",
+      "Review after 6 weeks — if inadequate, increase to 90mg",
+      "Review after 12 weeks — full response assessment",
+      "If remission (PHQ-9 <5) and pain controlled: continue 6–12 months",
+      "Taper: reduce by 30mg every 1–2 weeks over 2–4 weeks",
+      "LFTs at baseline; recheck if symptoms of liver injury develop",
+    ],
+    disclaimer: "Educational example only. Not a substitute for clinical judgment. Always verify dosing against current prescribing information and individualise for each patient.",
+  },
+
+  /* Common mistakes */
+  commonMistakes: [
+    {
+      mistake: "Not checking LFTs at baseline",
+      why: "Duloxetine's signature safety issue is hepatotoxicity. Baseline LFTs are essential — particularly in India where viral hepatitis, NAFLD (common in diabetics), and alcohol use are prevalent. Starting duloxetine without baseline LFTs risks missing pre-existing liver disease.",
+      correction: "Check LFTs at baseline for every patient. Avoid duloxetine entirely in any known liver disease, cirrhosis, or substantial alcohol use (≥3 drinks/day). Recheck LFTs immediately if symptoms of liver injury develop (jaundice, dark urine, RUQ pain, fatigue).",
+    },
+    {
+      mistake: "Not counselling on alcohol avoidance",
+      why: "Alcohol significantly raises duloxetine's hepatotoxicity risk. The FDA Cymbalta label explicitly contraindicates use in patients with ≥3 alcoholic drinks per day. Patients may not disclose alcohol use unless asked directly.",
+      correction: "Ask about alcohol use explicitly at baseline. Counsel: 'AVOID alcohol completely while on duloxetine. If you drink 3 or more drinks per day, this medicine is not safe for you.' Document the counselling.",
+    },
+    {
+      mistake: "Combining with fluvoxamine or ciprofloxacin (CYP1A2 inhibitors)",
+      why: "Duloxetine is a CYP1A2 substrate. Fluvoxamine (potent CYP1A2 inhibitor) and ciprofloxacin (commonly prescribed antibiotic in India) raise duloxetine levels 3–5×, causing toxicity (serotonin syndrome, severe nausea, hepatotoxicity).",
+      correction: "Always ask about fluvoxamine and ciprofloxacin before prescribing duloxetine. If co-prescription is unavoidable, reduce duloxetine dose by 50% and monitor closely. For UTIs in patients on duloxetine, choose a non-CYP1A2-inhibiting antibiotic (nitrofurantoin, cotrimoxazole).",
+    },
+    {
+      mistake: "Missing the thioridazine contraindication",
+      why: "Duloxetine is a moderate CYP2D6 inhibitor and raises thioridazine plasma levels → QTc prolongation → torsades de pointes. The combination is absolutely contraindicated.",
+      correction: "Always check for thioridazine use before prescribing duloxetine. If patient is on thioridazine, choose a different antidepressant without CYP2D6 inhibition (escitalopram).",
+    },
+    {
+      mistake: "Starting at 60mg instead of 30mg",
+      why: "Duloxetine's early nausea, dizziness, and activation are dose-dependent at initiation. Starting at 60mg (especially in SSRI-naive or anxious patients) causes tolerability failures.",
+      correction: "Start at 30mg OD for 1 week, then increase to 60mg. This is particularly important in Indian practice where patients may be SSRI-naive and sensitive to activation.",
+    },
+    {
+      mistake: "Using in patients with severe renal impairment (CrCl <30)",
+      why: "Duloxetine metabolites are renally excreted. In severe renal impairment (CrCl <30 mL/min), plasma Cmax and AUC roughly double, raising toxicity risk.",
+      correction: "Check renal function before prescribing. Avoid duloxetine entirely in CrCl <30 mL/min (dialysis patients). No dose adjustment needed in mild-moderate renal impairment.",
+    },
+    {
+      mistake: "Not recognising the dual benefit for pain + depression",
+      why: "Prescribing an SSRI for mood AND a separate drug (pregabalin, gabapentin) for neuropathic pain when duloxetine alone could treat both is polypharmacy — more expensive, more side effects, lower adherence.",
+      correction: "When depression is comorbid with neuropathic pain (especially diabetic neuropathy, fibromyalgia), duloxetine 60mg OD is the drug of choice — single agent, FDA-approved for both. Avoid unnecessary polypharmacy.",
+    },
+    {
+      mistake: "Abrupt discontinuation",
+      why: "Although duloxetine's discontinuation syndrome is less severe than venlafaxine (longer half-life 12h vs 5h), it still occurs. Symptoms: dizziness, nausea, headache, 'brain zaps', irritability.",
+      correction: "Taper over 2–4 weeks minimum — reduce by 30mg every 1–2 weeks. Less need for fluoxetine bridging than with venlafaxine, but the principle of gradual tapering remains.",
+    },
+  ],
+
+  /* When NOT to use — red card */
+  whenNotToUse: [
+    {
+      scenario: "Liver disease (Child-Pugh B or C) or cirrhosis",
+      reason: "Duloxetine can cause severe liver injury. Pre-existing liver disease raises the risk to unacceptable levels. Avoid completely.",
+      alternative: "Sertraline (safer hepatic profile, dose-adjusted) or mirtazapine. Avoid all SNRIs in cirrhosis.",
+    },
+    {
+      scenario: "Substantial alcohol use (≥3 drinks/day)",
+      reason: "FDA Cymbalta label explicitly contraindicates use in patients with ≥3 alcoholic drinks per day due to additive hepatotoxicity risk. Post-marketing reports of severe hepatic injury are over-represented in heavy drinkers.",
+      alternative: "Sertraline or mirtazapine. Counsel on alcohol cessation first; reconsider duloxetine only after sustained abstinence.",
+    },
+    {
+      scenario: "Severe renal impairment (CrCl <30 mL/min)",
+      reason: "Renal excretion of duloxetine metabolites is substantial. Plasma levels rise significantly (Cmax and AUC roughly double) in severe renal impairment.",
+      alternative: "Avoid duloxetine entirely. Use sertraline (no renal adjustment needed for mild-severe impairment).",
+    },
+    {
+      scenario: "Concurrent fluvoxamine or ciprofloxacin (CYP1A2 inhibitors)",
+      reason: "Duloxetine is a CYP1A2 substrate. These drugs raise duloxetine levels 3–5×, causing toxicity — serotonin syndrome, severe nausea, hepatotoxicity.",
+      alternative: "Switch antibiotic (nitrofurantoin, cotrimoxazole for UTI) or switch antidepressant (sertraline, not a CYP1A2 substrate). If combination unavoidable, reduce duloxetine dose by 50%.",
+    },
+    {
+      scenario: "Concurrent thioridazine",
+      reason: "Duloxetine is a moderate CYP2D6 inhibitor → raises thioridazine plasma levels → QTc prolongation → torsades de pointes. Combination contraindicated.",
+      alternative: "Switch antipsychotic or switch antidepressant (escitalopram, no CYP2D6 inhibition).",
+    },
+    {
+      scenario: "Active MAOI use (within 14 days)",
+      reason: "Fatal serotonin syndrome. Wait at least 14 days after stopping an MAOI before starting duloxetine; wait at least 5 days after stopping duloxetine before starting an MAOI (shorter than for SSRIs due to duloxetine's 12h half-life).",
+      alternative: "Wait the required washout period.",
+    },
+  ],
+
+  /* Indian ward pearls */
+  wardPearls: {
+    professorMayAsk: [
+      "Why is duloxetine useful in neuropathic pain? (NET blockade enhances descending inhibitory pain pathways in the spinal cord — provides analgesia independent of antidepressant effect. Pain benefit may appear at 1–2 weeks, earlier than mood.)",
+      "Name the 5 FDA-approved indications for duloxetine. (MDD, GAD — 2 psych; diabetic peripheral neuropathic pain, fibromyalgia, chronic musculoskeletal pain — 3 pain. Only antidepressant with 3 separate FDA pain indications.)",
+      "What is the signature adverse effect of duloxetine? (Hepatotoxicity — FDA warning. Avoid in liver disease, cirrhosis, substantial alcohol use ≥3 drinks/day.)",
+      "How does duloxetine differ from venlafaxine? (Balanced SERT+NET from dose 1 vs dose-dependent; hepatotoxicity vs hypertension; 3 pain FDA vs 0; longer half-life 12h vs 5h; less severe discontinuation.)",
+      "Which CYP interactions are important with duloxetine? (CYP1A2 substrate — fluvoxamine, ciprofloxacin raise levels. Moderate CYP2D6 inhibitor — raises TCA, metoprolol, thioridazine levels.)",
+      "Why is duloxetine preferred over venlafaxine in a patient with uncontrolled hypertension? (Duloxetine has significantly less BP effect than venlafaxine — preferred SNRI when HTN is a concern.)",
+    ],
+    residentExpects: [
+      "Know the starting dose and titration (30mg OD × 1 week → 60mg OD; max 120mg).",
+      "Know the LFT monitoring requirement (baseline + if symptomatic).",
+      "Know the absolute contraindications (liver disease, ≥3 drinks/day alcohol, CrCl <30, MAOI, thioridazine).",
+      "Know the CYP1A2 interactions (fluvoxamine, ciprofloxacin — avoid or reduce dose).",
+      "Know when duloxetine is preferred over venlafaxine (comorbid pain, BP concerns, less severe withdrawal needed).",
+      "Know the pain vs mood onset difference (pain 1–2 weeks, mood 4–6 weeks).",
+    ],
+    consultantsDo: [
+      "Check LFTs at baseline for every patient on duloxetine",
+      "Ask about alcohol use explicitly and counsel complete avoidance",
+      "Screen for bipolar disorder (MDQ) before starting any antidepressant",
+      "Use duloxetine as first-line for depression + diabetic neuropathy / fibromyalgia / chronic pain (single agent for both)",
+      "Check for CYP1A2 inhibitor co-prescription (fluvoxamine, ciprofloxacin) before initiation",
+      "Choose duloxetine over venlafaxine when BP is a concern",
+      "Use PHQ-9 + pain scale at every visit for objective dual monitoring",
+    ],
+    internsMiss: [
+      "Forgetting to check LFTs at baseline (signature safety monitoring!)",
+      "Not asking about alcohol use explicitly (patient doesn't disclose unless asked)",
+      "Not counselling on alcohol avoidance (patient continues drinking, develops hepatotoxicity)",
+      "Missing the ciprofloxacin interaction (commonly prescribed antibiotic in India)",
+      "Starting at 60mg instead of 30mg (causes intolerability)",
+      "Not checking renal function (CrCl <30 is contraindication)",
+      "Prescribing SSRI + pregabalin separately when duloxetine alone would treat both",
+      "Not recognising hepatotoxicity symptoms (jaundice, dark urine, RUQ pain, fatigue) as drug-related",
+      "Stopping abruptly instead of tapering (discontinuation syndrome)",
+    ],
+  },
+
+  /* Refined high-yield level */
+  highYieldLevel: "high",
+
+  /* Drug family navigation */
+  drugFamilyNav: {
+    familyName: "SNRIs (Serotonin-Norepinephrine Reuptake Inhibitors)",
+    members: [
+      { name: "Duloxetine", slug: "duloxetine", relationship: "Current drug", distinguishing: "Balanced SNRI from dose 1; 3 FDA pain indications; hepatotoxicity; CYP1A2 interaction" },
+      { name: "Venlafaxine", slug: "venlafaxine", relationship: "Same class (SNRI)", distinguishing: "Dose-dependent SNRI; worst discontinuation; BP monitoring; active metabolite ODV = desvenlafaxine" },
+      { name: "Desvenlafaxine", slug: "desvenlafaxine", relationship: "Same class (SNRI) — active metabolite of venlafaxine", distinguishing: "ODV marketed directly; no CYP2D6 dependence; cleaner PK" },
+      { name: "Milnacipran", slug: "milnacipran", relationship: "Same class (SNRI)", distinguishing: "Balanced SERT+NET (1:3 ratio); FDA-approved for fibromyalgia; not widely available in India" },
+    ],
+  },
+
+  /* Learning time breakdown */
+  learningTimeBreakdown: {
+    read: "18 min",
+    study: "45 min",
+    revision: "8 min",
+  },
+
+  /* ---- Educational UX Layer ---- */
+
+  /* Inline micro-quizzes — one after each major learning milestone */
+  microQuizzes: [
+    {
+      id: "quiz-mechanism",
+      question: "How does duloxetine's receptor binding differ from venlafaxine's?",
+      options: [
+        "Duloxetine is SERT-only; venlafaxine is SERT+NET",
+        "Duloxetine has balanced SERT+NET from dose 1; venlafaxine is dose-dependent",
+        "Duloxetine is NET-only; venlafaxine is SERT+NET",
+        "Both are dose-dependent but at different thresholds",
+      ],
+      correctIndex: 1,
+      explanation: "Duloxetine has balanced SERT + NET blockade from the very first dose — no dose-dependent titration is needed to 'unlock' the NET effect. Venlafaxine, in contrast, requires titration above 150 mg/day for clinically meaningful NET blockade. This is the key pharmacological distinction between the two SNRIs.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "quiz-pain",
+      question: "Why is duloxetine useful in neuropathic pain while SSRIs are not?",
+      options: [
+        "Duloxetine blocks pain receptors directly",
+        "Duloxetine's NET blockade enhances descending inhibitory pain pathways in the spinal cord",
+        "Duloxetine reduces inflammation in nerves",
+        "SSRIs actually work for pain too, but less marketed",
+      ],
+      correctIndex: 1,
+      explanation: "The noradrenergic component (NET blockade) enhances descending inhibitory pain pathways in the spinal cord — serotonin and norepinephrine together suppress incoming pain signals. SSRIs (which only block SERT) lack this noradrenergic effect and are largely ineffective for neuropathic pain. This is why duloxetine is FDA-approved for 3 pain conditions while no SSRI has any pain indication.",
+      afterSectionId: "clinical-uses",
+    },
+    {
+      id: "quiz-hepatotoxicity",
+      question: "Which of the following is an ABSOLUTE contraindication to duloxetine?",
+      options: [
+        "Hypertension",
+        "Diabetes mellitus",
+        "Substantial alcohol use (≥3 drinks/day)",
+        "Asthma",
+      ],
+      correctIndex: 2,
+      explanation: "Substantial alcohol use (≥3 alcoholic drinks per day) is an absolute contraindication per the FDA Cymbalta label — additive hepatotoxicity risk. Post-marketing reports of severe hepatic injury are over-represented in heavy drinkers. Duloxetine is also contraindicated in liver disease/cirrhosis and CrCl <30 mL/min. Hypertension is NOT a contraindication (duloxetine has less BP effect than venlafaxine).",
+      afterSectionId: "contraindications",
+    },
+    {
+      id: "quiz-cyp1a2",
+      question: "A patient on duloxetine 60mg is prescribed ciprofloxacin for a UTI. What is the concern?",
+      options: [
+        "Ciprofloxacin reduces duloxetine levels — therapeutic failure",
+        "Ciprofloxacin is a CYP1A2 inhibitor — raises duloxetine levels → toxicity",
+        "Ciprofloxacin causes serotonin syndrome directly",
+        "No interaction — both drugs are safe together",
+      ],
+      correctIndex: 1,
+      explanation: "Duloxetine is a CYP1A2 substrate. Ciprofloxacin (and fluvoxamine) are potent CYP1A2 inhibitors — they raise duloxetine plasma levels 3–5×, causing toxicity (serotonin syndrome, severe nausea, hepatotoxicity). Either switch the antibiotic (nitrofurantoin, cotrimoxazole for UTI) or reduce duloxetine dose by 50% and monitor closely. This interaction is commonly missed in Indian practice where ciprofloxacin is widely prescribed.",
+      afterSectionId: "interactions",
+    },
+    {
+      id: "quiz-indications",
+      question: "Duloxetine is the ONLY antidepressant with how many separate FDA-approved pain indications?",
+      options: ["1", "2", "3", "5"],
+      correctIndex: 2,
+      explanation: "3 separate FDA-approved pain indications: diabetic peripheral neuropathic pain, fibromyalgia, and chronic musculoskeletal pain (chronic low back pain, osteoarthritis). Combined with 2 psychiatric indications (MDD, GAD), duloxetine has 5 total FDA indications — 3 pain + 2 psych. No other antidepressant has more than 1 pain indication.",
+      afterSectionId: "clinical-uses",
+    },
+    {
+      id: "quiz-vs-venlafaxine",
+      question: "When is duloxetine preferred over venlafaxine?",
+      options: [
+        "When the patient has uncontrolled hypertension",
+        "When comorbid neuropathic pain is present",
+        "When less severe discontinuation is desired",
+        "All of the above",
+      ],
+      correctIndex: 3,
+      explanation: "All of the above. Duloxetine is preferred over venlafaxine when: (1) BP is a concern (duloxetine has less BP effect), (2) comorbid neuropathic pain is present (duloxetine is FDA-approved for 3 pain conditions), (3) less severe discontinuation is desired (duloxetine's longer half-life 12h vs venlafaxine's 5h means milder withdrawal). Venlafaxine is preferred when tamoxifen co-administration is needed (weak CYP2D6 inhibition) or in TRD escalation to high dose for the weak DAT effect.",
+      afterSectionId: "evidence-practice",
+    },
+  ],
+
+  /* End-of-page active recall questions */
+  activeRecallQuestions: [
+    {
+      question: "Why is duloxetine useful in neuropathic pain while SSRIs are not?",
+      answer: "Duloxetine's NET blockade enhances descending inhibitory pain pathways in the spinal cord — serotonin and norepinephrine together suppress incoming pain signals. SSRIs (which only block SERT) lack this noradrenergic effect and are largely ineffective for neuropathic pain. Duloxetine is FDA-approved for 3 pain conditions (diabetic peripheral neuropathic pain, fibromyalgia, chronic musculoskeletal pain); no SSRI has any pain indication. Pain benefit may appear at 1–2 weeks, earlier than the 4–6 week mood effect.",
+      topic: "Mechanism & Pain",
+    },
+    {
+      question: "Name the 5 FDA-approved indications for duloxetine. Which is unique among antidepressants?",
+      answer: "5 indications: MDD, GAD (2 psychiatric) + diabetic peripheral neuropathic pain, fibromyalgia, chronic musculoskeletal pain (3 pain). Duloxetine is the ONLY antidepressant with 3 separate FDA-approved pain indications. This reflects its balanced SERT+NET blockade from dose 1 (unlike venlafaxine which requires dose titration for NET effect).",
+      topic: "Indications",
+    },
+    {
+      question: "What is the signature adverse effect of duloxetine, and how do you monitor for it?",
+      answer: "Hepatotoxicity — FDA warning. Check LFTs at baseline (essential in India given high prevalence of viral hepatitis, NAFLD, and alcohol use). Recheck LFTs immediately if symptoms develop: jaundice, dark urine, right upper quadrant pain, severe fatigue. Avoid duloxetine entirely in liver disease, cirrhosis, or substantial alcohol use (≥3 drinks/day). If LFTs elevate >3× upper limit of normal, stop duloxetine and refer to hepatology.",
+      topic: "Safety",
+    },
+    {
+      question: "Which CYP enzyme interactions are clinically important with duloxetine?",
+      answer: "Two key interactions: (1) Duloxetine is a CYP1A2 SUBSTRATE — fluvoxamine and ciprofloxacin (CYP1A2 inhibitors) raise duloxetine levels 3–5×, causing toxicity. Avoid combination or reduce duloxetine dose by 50%. (2) Duloxetine is a moderate CYP2D6 INHIBITOR — raises levels of TCAs, metoprolol, propafenone, and thioridazine (the latter is absolutely contraindicated due to QTc prolongation). Always check for these drugs before prescribing duloxetine.",
+      topic: "Drug Interactions",
+    },
+    {
+      question: "How does duloxetine differ from venlafaxine? When is each preferred?",
+      answer: "Key differences: (1) Duloxetine = balanced SERT+NET from dose 1; venlafaxine = dose-dependent (SERT at 75mg, +NET at 150–225mg, +DAT >300mg). (2) Duloxetine = hepatotoxicity risk; venlafaxine = hypertension risk. (3) Duloxetine = 3 FDA pain indications; venlafaxine = 0. (4) Duloxetine half-life 12h (less severe discontinuation); venlafaxine half-life 5h (worst discontinuation of any antidepressant). Duloxetine preferred for: comorbid pain, BP concerns, simpler tapering. Venlafaxine preferred for: tamoxifen co-administration (weak CYP2D6), TRD escalation to high dose for DAT effect.",
+      topic: "Drug Comparison",
+    },
+    {
+      question: "A diabetic patient on duloxetine 60mg for neuropathy + depression is prescribed ciprofloxacin for a UTI by another doctor. What do you do?",
+      answer: "Recognise the CYP1A2 interaction — ciprofloxacin inhibits duloxetine metabolism and raises levels 3–5×, risking toxicity (serotonin syndrome, hepatotoxicity, severe nausea). Management: (1) switch antibiotic to nitrofurantoin or cotrimoxazole (not CYP1A2 inhibitors), OR (2) if ciprofloxacin is essential, reduce duloxetine dose by 50% (to 30mg) during antibiotic course and monitor closely. Counsel patient to report nausea, agitation, or jaundice immediately. Document the interaction check.",
+      topic: "Clinical Reasoning",
+    },
+  ],
+
+  /* Guided learning paths — each mode shows a curated subset of sections */
+  learningPaths: [
+    {
+      mode: "patient",
+      label: "Patient",
+      estimatedTime: "5 min",
+      description: "Plain language. What you need to know to take your medicine safely.",
+      visibleSections: ["top", "quick-facts", "patient-education", "faq", "emergency"],
+    },
+    {
+      mode: "mbbs",
+      label: "MBBS Student",
+      estimatedTime: "20 min",
+      description: "Foundations, balanced SNRI mechanism, clinical uses, hepatotoxicity, and MBBS exam content.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+    },
+    {
+      mode: "neetPg",
+      label: "NEET PG / INICET",
+      estimatedTime: "38 min",
+      description: "Full clinical detail with exam-specific content, PYQs, pain indications, and SNRI comparisons.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+    },
+    {
+      mode: "resident",
+      label: "Resident / Clinician",
+      estimatedTime: "45 min",
+      description: "Everything — advanced reasoning, ward pearls, pain pharmacology, guideline comparison, full evidence.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+    },
+  ],
+
+  /* Lesson grouping — sections organised into learning units */
+  lessonGroups: [
+    {
+      number: 1,
+      title: "Foundations",
+      description: "What is this drug? Why does it matter as the 'pain SNRI'?",
+      sectionIds: ["top", "quick-facts", "learning-objectives", "knowledge-graph"],
+      checkpoint: "You now know what Duloxetine is, its 5 FDA indications (3 pain + 2 psych), and how it differs from SSRIs and venlafaxine.",
+    },
+    {
+      number: 2,
+      title: "Balanced SNRI Mechanism & Pain Pathways",
+      description: "How does balanced SERT+NET differ from dose-dependent? Why does it work for pain?",
+      sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
+      checkpoint: "You understand the balanced SNRI mechanism from dose 1, the descending inhibitory pain pathway concept, and why duloxetine is FDA-approved for 3 pain conditions while no SSRI has any.",
+    },
+    {
+      number: 3,
+      title: "Clinical Practice & Signature Safety",
+      description: "When do you use it? What about hepatotoxicity and CYP1A2 interactions?",
+      sectionIds: ["clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education"],
+      checkpoint: "You can now prescribe duloxetine safely — you know the LFT monitoring, alcohol avoidance, CYP1A2 interactions (fluvoxamine, ciprofloxacin), and when it's preferred over venlafaxine.",
+    },
+    {
+      number: 4,
+      title: "Indian Context",
+      description: "How is it used in Indian private vs government settings?",
+      sectionIds: ["indian-clinical", "decision-path", "common-mistakes"],
+      checkpoint: "You know the Indian brands (Cymbalta, Duzela, Dulane, Symbal), the Schedule H status, the moderate cost, why it's NOT in government formularies or Jan Aushadhi, and why amitriptyline is the government alternative for diabetic neuropathy.",
+    },
+    {
+      number: 5,
+      title: "Exam Revision",
+      description: "High-yield facts, clinical cases, and SNRI drug comparisons.",
+      sectionIds: ["learning-module", "clinical-case", "drug-navigation", "high-yield-summary"],
+      checkpoint: "You've reviewed the exam-specific content, worked through a clinical case, compared duloxetine with venlafaxine and desvenlafaxine, and have a one-page revision summary.",
+    },
+    {
+      number: 6,
+      title: "Active Recall",
+      description: "Can you answer these without looking?",
+      sectionIds: ["active-recall", "faq", "references"],
+      checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Duloxetine.",
+    },
+  ],
+
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
-  reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Cymbalta label"],
+  reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Cymbalta label, NICE CG91, NICE CG173 (Neuropathic Pain), APA Practice Guideline, ADA Standards of Care, KD Tripathi 8e, IPS Depression Guidelines, RSSDI Diabetes Guidelines, NMC CBME Curriculum"],
 };
