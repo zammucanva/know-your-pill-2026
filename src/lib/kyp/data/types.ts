@@ -708,6 +708,65 @@ export interface LearningTimeBreakdown {
   revision: string;
 }
 
+/* ============================================================
+   Educational UX Layer — learning experience extensions
+   ============================================================ */
+
+/** Inline micro-quiz — multiple choice with reveal explanation. */
+export interface MicroQuiz {
+  /** Unique ID */
+  id: string;
+  /** The question */
+  question: string;
+  /** 4 answer options */
+  options: string[];
+  /** Index of the correct option (0-based) */
+  correctIndex: number;
+  /** Explanation revealed after answering */
+  explanation: string;
+  /** Section ID this quiz appears after */
+  afterSectionId: string;
+}
+
+/** Active recall question — end-of-page retrieval practice. */
+export interface ActiveRecallQuestion {
+  /** The question */
+  question: string;
+  /** The model answer */
+  answer: string;
+  /** Topic area */
+  topic: string;
+}
+
+/** Guided learning mode — curated section visibility + time estimate. */
+export type GuidedLearningMode = "patient" | "mbbs" | "neetPg" | "resident";
+
+export interface LearningPath {
+  mode: GuidedLearningMode;
+  /** Display label, e.g. "MBBS Student" */
+  label: string;
+  /** Estimated time, e.g. "20 min" */
+  estimatedTime: string;
+  /** Description of what this mode covers */
+  description: string;
+  /** Section IDs visible in this mode */
+  visibleSections: string[];
+}
+
+/** Lesson grouping — sections organised into learning units. */
+export interface LessonGroup {
+  /** Lesson number, e.g. 1 */
+  number: number;
+  /** Lesson title, e.g. "Foundations" */
+  title: string;
+  /** Brief description */
+  description: string;
+  /** Section IDs in this lesson (in order) */
+  sectionIds: string[];
+  /** Checkpoint text shown after completing this lesson */
+  checkpoint: string;
+}
+
 /** Section difficulty tag — shown as a coloured dot next to section headings. */
 export type SectionDifficulty = "mbbs" | "pg" | "resident";
 
@@ -854,6 +913,16 @@ export interface Drug {
   drugFamilyNav?: DrugFamilyNav;
   /** Learning time breakdown (read / study / revision) */
   learningTimeBreakdown?: LearningTimeBreakdown;
+
+  /* ---- Educational UX Layer ---- */
+  /** Inline micro-quizzes placed after specific sections */
+  microQuizzes?: MicroQuiz[];
+  /** End-of-page active recall questions */
+  activeRecallQuestions?: ActiveRecallQuestion[];
+  /** Guided learning paths (Patient / MBBS / NEET PG / Resident) */
+  learningPaths?: LearningPath[];
+  /** Lesson grouping — sections organised into learning units */
+  lessonGroups?: LessonGroup[];
 
   /* ---- Metadata ---- */
   /** ISO date string — last clinical review */

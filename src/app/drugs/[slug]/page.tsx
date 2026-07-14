@@ -6,10 +6,13 @@ import { Footer } from "@/components/kyp/sections/footer";
 import { EmergencySection } from "@/components/kyp/sections/emergency-section";
 import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 import { StickyLearningNav, LearningProgress } from "@/components/kyp/ui/sticky-learning-nav";
-import { DifficultyToggle } from "@/components/kyp/ui/difficulty-toggle";
-import { PatientModeVisibility } from "@/components/kyp/ui/patient-mode-visibility";
+import { GuidedLearningToggle } from "@/components/kyp/ui/guided-learning-toggle";
+import { GuidedLearningVisibility } from "@/components/kyp/ui/guided-learning-visibility";
+import { MicroQuiz } from "@/components/kyp/ui/micro-quiz";
+import { Checkpoint } from "@/components/kyp/ui/checkpoint";
+import { ActiveRecallSection } from "@/components/kyp/ui/active-recall";
+import { LessonProgress } from "@/components/kyp/ui/lesson-progress";
 
-// Individual section components (unchanged)
 import {
   DrugHero,
   DrugQuickFacts,
@@ -34,7 +37,6 @@ import {
   DrugPrevNext,
 } from "@/components/kyp/sections/drug";
 
-// Merged modules (visual simplification pass)
 import {
   HeroInfoStrip,
   EvidenceAndIndianPractice,
@@ -52,18 +54,16 @@ import { getDrugBySlug, getAllDrugSlugs } from "@/lib/kyp/data";
 import type { NavItem } from "@/lib/kyp/use-scroll-spy";
 
 /**
- * KYP Canonical Drug Template v2.0 — Visual Simplification Pass
+ * KYP Canonical Drug Template v2.0 — Educational UX Pass
  *
- * 35+ separate sections merged into ~18 unified modules.
- * 40% visual clutter reduction, 100% content preservation.
+ * The page is now organised as a COURSE, not a documentation page:
+ *   - Guided Learning Mode (Patient 5min / MBBS 20min / NEET PG 35min / Resident 45min)
+ *   - Lesson Progress indicator (sticky horizontal strip)
+ *   - Sections grouped into lessons with checkpoints between them
+ *   - Inline micro-quizzes after key learning milestones
+ *   - End-of-page Active Recall section (retrieval practice)
  *
- * Merges:
- *   - Learning Time + High Yield + CBME → HeroInfoStrip
- *   - Guideline Comparison + Evidence Hierarchy → EvidenceAndIndianPractice
- *   - Indian Practice + Encounter + Workflow + Educational Rx → IndianClinicalModule
- *   - Clinical Pearls + Exam Lens + Memory Tricks + Ward Pearls → LearningModule
- *   - Drug Family + Comparison + Indian Comparison + Related Drugs → DrugNavigationModule
- *   - Common Mistakes simplified (no nested cards)
+ * The same content is preserved — the UX layer changes HOW it's experienced.
  */
 
 type Slug = string;
@@ -85,11 +85,7 @@ export async function generateMetadata({
   return {
     title,
     description: drug.tagline,
-    keywords: [
-      drug.genericName, ...drug.brandNames, drug.drugClassLabel,
-      drug.drugClassFullName, ...drug.indications.map((i) => i.name),
-      "pharmacology", "Know Your Pill",
-    ],
+    keywords: [drug.genericName, ...drug.brandNames, drug.drugClassLabel, "pharmacology", "Know Your Pill"],
     authors: [{ name: "Zamaan Ali Shamji" }],
     openGraph: { title, description: drug.tagline, type: "article", siteName: "Know Your Pill" },
   };
@@ -97,31 +93,32 @@ export async function generateMetadata({
 
 function getNavItems(): NavItem[] {
   return [
-    { id: "top", label: "Hero", group: "Start" },
-    { id: "quick-facts", label: "Quick Facts", group: "Start" },
-    { id: "learning-objectives", label: "Objectives", group: "Start" },
-    { id: "knowledge-graph", label: "Knowledge Graph", group: "Foundations" },
-    { id: "mechanism", label: "Mechanism", group: "Foundations" },
-    { id: "brain-regions", label: "Brain Regions", group: "Foundations" },
-    { id: "neurotransmitters", label: "Neurotransmitters", group: "Foundations" },
-    { id: "neural-pathways", label: "Pathways", group: "Foundations" },
-    { id: "timeline", label: "Timeline", group: "Foundations" },
-    { id: "clinical-uses", label: "Clinical Uses", group: "Clinical" },
-    { id: "side-effects", label: "Side Effects", group: "Clinical" },
-    { id: "monitoring", label: "Monitoring", group: "Clinical" },
-    { id: "contraindications", label: "Contraindications", group: "Clinical" },
-    { id: "evidence-practice", label: "Evidence & Practice", group: "Clinical" },
-    { id: "interactions", label: "Interactions", group: "Clinical" },
-    { id: "patient-education", label: "Patient Guide", group: "Clinical" },
-    { id: "indian-clinical", label: "Indian Practice", group: "India" },
-    { id: "decision-path", label: "Decision Path", group: "India" },
-    { id: "common-mistakes", label: "Mistakes", group: "India" },
-    { id: "learning-module", label: "Learning & Exam", group: "Learning" },
-    { id: "clinical-case", label: "Clinical Case", group: "Learning" },
-    { id: "drug-navigation", label: "Drug Navigation", group: "Learning" },
-    { id: "high-yield-summary", label: "High-Yield Summary", group: "Learning" },
-    { id: "faq", label: "FAQ", group: "Learning" },
-    { id: "references", label: "References", group: "Learning" },
+    { id: "top", label: "Overview", group: "Lesson 1" },
+    { id: "quick-facts", label: "Quick Facts", group: "Lesson 1" },
+    { id: "learning-objectives", label: "Objectives", group: "Lesson 1" },
+    { id: "knowledge-graph", label: "Knowledge Graph", group: "Lesson 1" },
+    { id: "mechanism", label: "Mechanism", group: "Lesson 2" },
+    { id: "brain-regions", label: "Brain", group: "Lesson 2" },
+    { id: "neurotransmitters", label: "Neurotransmitters", group: "Lesson 2" },
+    { id: "neural-pathways", label: "Pathways", group: "Lesson 2" },
+    { id: "timeline", label: "Timeline", group: "Lesson 2" },
+    { id: "clinical-uses", label: "Clinical Uses", group: "Lesson 3" },
+    { id: "side-effects", label: "Side Effects", group: "Lesson 3" },
+    { id: "monitoring", label: "Monitoring", group: "Lesson 3" },
+    { id: "contraindications", label: "Contraindications", group: "Lesson 3" },
+    { id: "evidence-practice", label: "Evidence", group: "Lesson 3" },
+    { id: "interactions", label: "Interactions", group: "Lesson 3" },
+    { id: "patient-education", label: "Patient Guide", group: "Lesson 3" },
+    { id: "indian-clinical", label: "Indian Practice", group: "Lesson 4" },
+    { id: "decision-path", label: "Decision Path", group: "Lesson 4" },
+    { id: "common-mistakes", label: "Mistakes", group: "Lesson 4" },
+    { id: "learning-module", label: "Exam Content", group: "Lesson 5" },
+    { id: "clinical-case", label: "Clinical Case", group: "Lesson 5" },
+    { id: "drug-navigation", label: "Drug Navigation", group: "Lesson 5" },
+    { id: "high-yield-summary", label: "High-Yield", group: "Lesson 5" },
+    { id: "active-recall", label: "Active Recall", group: "Lesson 6" },
+    { id: "faq", label: "FAQ", group: "Lesson 6" },
+    { id: "references", label: "References", group: "Lesson 6" },
   ];
 }
 
@@ -135,124 +132,248 @@ export default async function DrugPage({ params }: PageProps) {
   if (!drug) notFound();
 
   const navItems = getNavItems();
+  const lessons = drug.lessonGroups ?? [];
+  const quizzes = drug.microQuizzes ?? [];
+  const hasLessons = lessons.length > 0;
+
+  // Helper: find quiz that should appear after a given section
+  const quizAfter = (sectionId: string) => quizzes.find((q) => q.afterSectionId === sectionId);
+  // Helper: find lesson by section ID
+  const lessonForSection = (sectionId: string) => lessons.find((l) => l.sectionIds.includes(sectionId));
+  // Helper: find checkpoint for a lesson (the last section of each lesson gets a checkpoint)
+  const isLastInSection = (sectionId: string) => {
+    for (const lesson of lessons) {
+      if (lesson.sectionIds[lesson.sectionIds.length - 1] === sectionId) {
+        return lesson;
+      }
+    }
+    return null;
+  };
 
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
       <div className="fixed right-4 top-20 z-30 hidden sm:block">
-        <DifficultyToggle />
+        <GuidedLearningToggle />
       </div>
       <StickyLearningNav items={navItems} drugSlug={drug.slug} />
 
       <main className="flex-1 lg:pl-52 xl:pl-56">
-        {/* 1. Hero */}
-        <DrugHero drug={drug} />
+        {/* Lesson Progress indicator — sticky horizontal strip */}
+        {hasLessons && (
+          <div className="sticky top-16 z-20">
+            <LessonProgress lessons={lessons} />
+          </div>
+        )}
 
-        {/* 2. Quick Facts + Learning Time + CBME (merged into compact strip) */}
-        <DrugQuickFacts drug={drug} />
-        <HeroInfoStrip drug={drug} />
+        {/* ===== LESSON 1: Foundations ===== */}
+        <GuidedLearningVisibility drug={drug} sectionId="top">
+          <DrugHero drug={drug} />
+        </GuidedLearningVisibility>
 
-        {/* 3. Learning Objectives */}
-        <DrugLearningObjectives drug={drug} />
+        <GuidedLearningVisibility drug={drug} sectionId="quick-facts">
+          <DrugQuickFacts drug={drug} />
+          <HeroInfoStrip drug={drug} />
+        </GuidedLearningVisibility>
 
-        {/* 4. Knowledge Graph */}
-        <DrugKnowledgeGraph drug={drug} />
+        <GuidedLearningVisibility drug={drug} sectionId="learning-objectives">
+          <DrugLearningObjectives drug={drug} />
+        </GuidedLearningVisibility>
 
-        {/* 5. Mechanism */}
-        <DrugMechanismOfAction drug={drug} />
+        <GuidedLearningVisibility drug={drug} sectionId="knowledge-graph">
+          <DrugKnowledgeGraph drug={drug} />
+        </GuidedLearningVisibility>
 
-        {/* 6-8. Brain Regions + Neurotransmitters + Pathways */}
-        <DrugBrainRegions drug={drug} />
-        <DrugNeurotransmitters drug={drug} />
-        <PatientModeVisibility sectionId="neural-pathways">
-          <DrugNeuralPathways drug={drug} />
-        </PatientModeVisibility>
-
-        {/* 9. Timeline */}
-        <Section id="timeline" className="bg-muted/20">
-          <Container width="narrow">
-            <SectionHeader
-              eyebrow="Timeline of Effects"
-              title="What happens, hour by hour, week by week."
-              align="center"
+        {/* Checkpoint after Lesson 1 */}
+        {hasLessons && lessons[0] && (
+          <Container>
+            <Checkpoint
+              lessonNumber={1}
+              lessonTitle={lessons[0].title}
+              message={lessons[0].checkpoint}
+              nextLessonTitle={lessons[1]?.title}
             />
-            <div className="mt-10">
-              <Timeline events={drug.timeline} />
-            </div>
           </Container>
-        </Section>
+        )}
 
-        {/* 10-12. Clinical Uses + Side Effects + Monitoring */}
-        <DrugClinicalUses drug={drug} />
-        <DrugSideEffects drug={drug} />
-        <DrugMonitoring drug={drug} />
+        {/* ===== LESSON 2: Mechanism & Neuroscience ===== */}
+        <GuidedLearningVisibility drug={drug} sectionId="mechanism">
+          <DrugMechanismOfAction drug={drug} />
+          {quizAfter("mechanism") && <Container><MicroQuiz quiz={quizAfter("mechanism")!} /></Container>}
+        </GuidedLearningVisibility>
 
-        {/* 13. Contraindications */}
-        <DrugContraindications drug={drug} />
+        <GuidedLearningVisibility drug={drug} sectionId="brain-regions">
+          <DrugBrainRegions drug={drug} />
+        </GuidedLearningVisibility>
 
-        {/* 14. Evidence & Indian Practice (MERGED: Guideline Comparison + Evidence Hierarchy) */}
-        <PatientModeVisibility sectionId="evidence-practice">
+        <GuidedLearningVisibility drug={drug} sectionId="neurotransmitters">
+          <DrugNeurotransmitters drug={drug} />
+        </GuidedLearningVisibility>
+
+        <GuidedLearningVisibility drug={drug} sectionId="neural-pathways">
+          <DrugNeuralPathways drug={drug} />
+        </GuidedLearningVisibility>
+
+        <GuidedLearningVisibility drug={drug} sectionId="timeline">
+          <Section id="timeline" className="bg-muted/20">
+            <Container width="narrow">
+              <SectionHeader
+                eyebrow="Timeline of Effects"
+                title="What happens, hour by hour, week by week."
+                align="center"
+              />
+              <div className="mt-10">
+                <Timeline events={drug.timeline} />
+              </div>
+            </Container>
+          </Section>
+          {quizAfter("timeline") && <Container><MicroQuiz quiz={quizAfter("timeline")!} /></Container>}
+        </GuidedLearningVisibility>
+
+        {/* Checkpoint after Lesson 2 */}
+        {hasLessons && lessons[1] && (
+          <Container>
+            <Checkpoint
+              lessonNumber={2}
+              lessonTitle={lessons[1].title}
+              message={lessons[1].checkpoint}
+              nextLessonTitle={lessons[2]?.title}
+            />
+          </Container>
+        )}
+
+        {/* ===== LESSON 3: Clinical Practice ===== */}
+        <GuidedLearningVisibility drug={drug} sectionId="clinical-uses">
+          <DrugClinicalUses drug={drug} />
+        </GuidedLearningVisibility>
+
+        <GuidedLearningVisibility drug={drug} sectionId="side-effects">
+          <DrugSideEffects drug={drug} />
+          {quizAfter("side-effects") && <Container><MicroQuiz quiz={quizAfter("side-effects")!} /></Container>}
+        </GuidedLearningVisibility>
+
+        <GuidedLearningVisibility drug={drug} sectionId="monitoring">
+          <DrugMonitoring drug={drug} />
+          {quizAfter("monitoring") && <Container><MicroQuiz quiz={quizAfter("monitoring")!} /></Container>}
+        </GuidedLearningVisibility>
+
+        <GuidedLearningVisibility drug={drug} sectionId="contraindications">
+          <DrugContraindications drug={drug} />
+          {quizAfter("contraindications") && <Container><MicroQuiz quiz={quizAfter("contraindications")!} /></Container>}
+        </GuidedLearningVisibility>
+
+        <GuidedLearningVisibility drug={drug} sectionId="evidence-practice">
           <EvidenceAndIndianPractice drug={drug} />
-        </PatientModeVisibility>
+          {quizAfter("evidence-practice") && <Container><MicroQuiz quiz={quizAfter("evidence-practice")!} /></Container>}
+        </GuidedLearningVisibility>
 
-        {/* 15. Drug Interactions */}
-        <DrugInteractions drug={drug} />
+        <GuidedLearningVisibility drug={drug} sectionId="interactions">
+          <DrugInteractions drug={drug} />
+        </GuidedLearningVisibility>
 
-        {/* 16. Patient Education */}
-        <DrugPatientEducation drug={drug} />
+        <GuidedLearningVisibility drug={drug} sectionId="patient-education">
+          <DrugPatientEducation drug={drug} />
+        </GuidedLearningVisibility>
 
-        {/* 17. Indian Clinical Module (MERGED: Indian Practice + Encounter + Workflow + Educational Rx) */}
-        <IndianClinicalModule drug={drug} />
+        {/* Checkpoint after Lesson 3 */}
+        {hasLessons && lessons[2] && (
+          <Container>
+            <Checkpoint
+              lessonNumber={3}
+              lessonTitle={lessons[2].title}
+              message={lessons[2].checkpoint}
+              nextLessonTitle={lessons[3]?.title}
+            />
+          </Container>
+        )}
 
-        {/* 18. Clinical Decision Path */}
-        <PatientModeVisibility sectionId="decision-path">
+        {/* ===== LESSON 4: Indian Context ===== */}
+        <GuidedLearningVisibility drug={drug} sectionId="indian-clinical">
+          <IndianClinicalModule drug={drug} />
+        </GuidedLearningVisibility>
+
+        <GuidedLearningVisibility drug={drug} sectionId="decision-path">
           <DrugClinicalDecisionPath drug={drug} />
-        </PatientModeVisibility>
+        </GuidedLearningVisibility>
 
-        {/* 19. Common Mistakes (simplified — no nested cards) */}
-        <PatientModeVisibility sectionId="common-mistakes">
+        <GuidedLearningVisibility drug={drug} sectionId="common-mistakes">
           <DrugCommonMistakes drug={drug} />
-        </PatientModeVisibility>
+        </GuidedLearningVisibility>
 
-        {/* 20. Learning Module (MERGED: Clinical Pearls + Exam Lens + Memory Tricks + Ward Pearls) */}
-        <PatientModeVisibility sectionId="learning-module">
+        {/* Checkpoint after Lesson 4 */}
+        {hasLessons && lessons[3] && (
+          <Container>
+            <Checkpoint
+              lessonNumber={4}
+              lessonTitle={lessons[3].title}
+              message={lessons[3].checkpoint}
+              nextLessonTitle={lessons[4]?.title}
+            />
+          </Container>
+        )}
+
+        {/* ===== LESSON 5: Exam Revision ===== */}
+        <GuidedLearningVisibility drug={drug} sectionId="learning-module">
           <LearningModule drug={drug} />
-        </PatientModeVisibility>
+        </GuidedLearningVisibility>
 
-        {/* 21. Clinical Cases */}
-        <PatientModeVisibility sectionId="clinical-case">
+        <GuidedLearningVisibility drug={drug} sectionId="clinical-case">
           <DrugClinicalCases drug={drug} />
-        </PatientModeVisibility>
+        </GuidedLearningVisibility>
 
-        {/* 22. Drug Navigation Module (MERGED: Drug Family + Comparison + Indian Comparison + Related Drugs) */}
-        <PatientModeVisibility sectionId="drug-navigation">
+        <GuidedLearningVisibility drug={drug} sectionId="drug-navigation">
           <DrugNavigationModule drug={drug} />
-        </PatientModeVisibility>
+        </GuidedLearningVisibility>
 
-        {/* 23. High-Yield Summary */}
-        <PatientModeVisibility sectionId="high-yield-summary">
+        <GuidedLearningVisibility drug={drug} sectionId="high-yield-summary">
           <DrugHighYieldSummary drug={drug} />
-        </PatientModeVisibility>
+        </GuidedLearningVisibility>
 
-        {/* 24. FAQ */}
-        <DrugFAQ drug={drug} />
+        {/* Checkpoint after Lesson 5 */}
+        {hasLessons && lessons[4] && (
+          <Container>
+            <Checkpoint
+              lessonNumber={5}
+              lessonTitle={lessons[4].title}
+              message={lessons[4].checkpoint}
+              nextLessonTitle={lessons[5]?.title}
+            />
+          </Container>
+        )}
 
-        {/* 25. References (Evidence Sources) */}
-        <PatientModeVisibility sectionId="references">
+        {/* ===== LESSON 6: Active Recall ===== */}
+        <GuidedLearningVisibility drug={drug} sectionId="active-recall">
+          <ActiveRecallSection drug={drug} />
+        </GuidedLearningVisibility>
+
+        <GuidedLearningVisibility drug={drug} sectionId="faq">
+          <DrugFAQ drug={drug} />
+        </GuidedLearningVisibility>
+
+        <GuidedLearningVisibility drug={drug} sectionId="references">
           <DrugReferences drug={drug} />
-        </PatientModeVisibility>
+        </GuidedLearningVisibility>
 
-        {/* 26. Prev/Next */}
+        {/* Checkpoint after Lesson 6 (final) */}
+        {hasLessons && lessons[5] && (
+          <Container>
+            <Checkpoint
+              lessonNumber={6}
+              lessonTitle={lessons[5].title}
+              message={lessons[5].checkpoint}
+            />
+          </Container>
+        )}
+
+        {/* Prev/Next + Progress + Emergency */}
         <DrugPrevNext currentSlug={drug.slug} />
 
-        {/* 27. Learning Progress */}
         <Section spacing="tight">
           <Container width="narrow">
             <LearningProgress items={navItems} drugSlug={drug.slug} />
           </Container>
         </Section>
 
-        {/* 28. Emergency */}
         <EmergencySection />
       </main>
       <Footer />

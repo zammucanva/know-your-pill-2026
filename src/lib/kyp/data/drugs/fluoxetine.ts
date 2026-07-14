@@ -1034,9 +1034,663 @@ export const fluoxetine: Drug = {
       "The main thing to know: fluoxetine affects how your body processes several common medicines. Always tell your pharmacist about everything you take, including over-the-counter products. The most important interactions are: (1) MAOI antidepressants (wait 5 weeks); (2) thioridazine and pimozide (never combine); (3) tramadol and codeine (fluoxetine can block pain relief and raise serotonin syndrome risk); (4) NSAIDs like ibuprofen (raises bleeding risk); (5) warfarin (raises bleeding risk — monitor INR). Avoid alcohol or keep it to a minimum — it can make you more drowsy and worsen mood symptoms.",
   },
 
+  /* ---- India-first extensions ---- */
+
+  /* Indian clinical practice */
+  indianPractice: {
+    prescriptionStatus: "Schedule H",
+    brands: [
+      { name: "Flunil", manufacturer: "Sun Pharma", strengths: "10mg, 20mg, 40mg, 60mg", note: "Among the most commonly prescribed fluoxetine brands in India" },
+      { name: "Prodep", manufacturer: "Sun Pharma", strengths: "10mg, 20mg, 40mg" },
+      { name: "Fludac", manufacturer: "Cipla", strengths: "10mg, 20mg, 40mg, 60mg" },
+      { name: "Oxatin", manufacturer: "Lupin", strengths: "10mg, 20mg, 40mg" },
+      { name: "Flutab", manufacturer: "Alternative (generic)", strengths: "10mg, 20mg", note: "Lower-cost generic alternative available in many states" },
+    ],
+    typicalDoses:
+      "Depression (adult): start 20mg OD morning, titrate to 40–60mg OD after 3–4 weeks. Depression (paediatric ≥8 yrs): start 10–20mg OD, max 20mg (child) / 60mg (adolescent). OCD (adult): 20–60mg OD; OCD (paediatric ≥7 yrs): start 10mg OD, titrate to 20–60mg. Bulimia nervosa: 60mg OD (target). Panic disorder: start 10mg OD (lower than depression due to activating effect), titrate to 20–60mg. PMDD: 20mg continuous or luteal-phase only. In Indian government hospitals, starting dose is usually 20mg OD (10mg in anxious or paediatric patients) due to limited follow-up capacity. Maximum: 80mg/day.",
+    prescribingScenarios: [
+      "Used in Indian psychiatry OPDs for depression, OCD, panic disorder, and bulimia nervosa — particularly when long half-life is advantageous (adherence-poor patients, intermittent dosing).",
+      "Only SSRI FDA-approved for paediatric depression (≥8 yrs) — preferred in child/adolescent psychiatry clinics in India.",
+      "Preferred SSRI for bulimia nervosa — only SSRI with FDA approval for this indication; used in eating disorder clinics.",
+      "Used as a 'bridge' to taper patients off shorter-acting SSRIs (paroxetine, venlafaxine) due to self-tapering property.",
+      "Avoided as first-line in anxious/agitated depression in Indian practice due to its activating profile — sertraline or escitalopram often preferred.",
+      "Less preferred than sertraline in pregnancy in Indian practice (longer fetal exposure due to long half-life; sertraline has lower placental transfer).",
+    ],
+    availability: {
+      governmentHospitals: true,
+      privatePharmacies: true,
+      urban: true,
+      rural: true,
+      note: "Widely available across India. Less commonly stocked than sertraline in some government hospitals under DMHP, but available in most tertiary psychiatry OPDs. Generic fluoxetine is commonly stocked in Jan Aushadhi Kendras. Rural availability is generally good as fluoxetine has been off-patent for decades.",
+    },
+    costCategory: "low",
+    costNote: "Generic fluoxetine is among the cheapest antidepressants in India (approximately ₹2–4 per 20mg tablet). Branded versions (Flunil, Prodep, Fludac) cost ₹3–6 per tablet. Cost varies by manufacturer and region. Jan Aushadhi generic fluoxetine is the most affordable option.",
+    monitoring:
+      "In Indian government hospitals, monitoring is primarily clinical (symptom-based) due to resource constraints. PHQ-9 is used in tertiary centres and DMHP clinics. Special attention to CYP2D6-mediated interactions is required — fluoxetine is the strongest CYP2D6 inhibitor among SSRIs. Serum sodium monitoring in elderly is recommended. ECG if co-prescribed with drugs that prolong QTc (avoid thioridazine, pimozide). Follow-up schedule: 2 weeks (tolerability and activation), 4 weeks (early response), 8 weeks (steady-state effect — note: longer than other SSRIs due to slow steady state), 12 weeks (full response assessment). In private practice, monitoring aligns more closely with international guidelines.",
+    patientCounselling: [
+      "Take in the morning after food to reduce nausea and avoid insomnia — fluoxetine is the most 'stimulating' SSRI.",
+      "It may take 4–6 weeks to feel the full benefit — don't stop early just because you don't feel better yet. Because fluoxetine takes longer to reach steady state, the full effect may take up to 8 weeks.",
+      "Fluoxetine is the easiest SSRI to stop — missed doses are rarely a problem because the medicine stays in your body for over a week. BUT you must wait at least 5 WEEKS after stopping before starting certain other antidepressants called MAOIs.",
+      "If you feel more anxious, jittery, or have trouble sleeping in the first 1–2 weeks, this is common — fluoxetine is more 'activating' than other SSRIs. It usually settles. If it doesn't, tell your doctor.",
+      "Generic versions (Flunil, Prodep, Fludac, Oxatin) are equally effective — you don't need to pay more for expensive brands if cost is a concern. Jan Aushadhi generic fluoxetine is a good affordable option.",
+      "Avoid alcohol — it can worsen your mood symptoms and increase drowsiness.",
+      "If you feel worse, more agitated, or have new suicidal thoughts in the first month, contact your doctor immediately or call Tele-MANAS at 14416.",
+      "Tell your doctor about ALL other medicines you take — fluoxetine affects how your body processes several common drugs (especially tramadol, codeine, and certain heart medicines). Never combine with thioridazine or pimozide.",
+      "Sexual side effects (reduced interest, difficulty reaching orgasm) are common and can be embarrassing to discuss — but your doctor can help. Don't stop the medicine without discussing alternatives.",
+      "If you stop fluoxetine suddenly, you may not notice much — but never restart an MAOI antidepressant within 5 weeks of stopping fluoxetine. Tell any new doctor that you have taken fluoxetine recently.",
+    ],
+  },
+
+  /* NMC CBME competency mapping */
+  cbmeMapping: {
+    subject: "Pharmacology",
+    mbbsYear: "Second Professional",
+    topic: "Drugs acting on Central Nervous System — Antidepressants (SSRIs)",
+    competencyCodes: ["PH7.3", "PH7.4", "PY3.2"],
+    competencyDescriptions: [
+      "PH7.3: Describe the mechanism of action, pharmacological actions, adverse effects, contraindications, and therapeutic uses of antidepressant drugs with emphasis on SSRIs.",
+      "PH7.4: Explain the rationale for drug selection, dose individualisation, and monitoring of antidepressant therapy in different clinical scenarios.",
+      "PY3.2 (Psychiatry, Final Professional): Describe the pharmacological management of mood disorders, including first-line SSRI selection, augmentation strategies, and monitoring.",
+    ],
+    integrationSubjects: ["Psychiatry", "General Medicine", "Community Medicine", "Paediatrics"],
+  },
+
+  /* Exam Lens — structured by Indian examination */
+  examLens: {
+    mbbs: {
+      viva: [
+        "What is the mechanism of action of fluoxetine? (SERT blockade → ↑ synaptic 5-HT → 5-HT1A autoreceptor desensitisation over 1–2 weeks → ↑ serotonergic throughput → downstream BDNF/neurogenesis over 4–6 weeks)",
+        "Why is fluoxetine's half-life clinically important? (Parent 1–4 days; active metabolite norfluoxetine 4–9 days. Result: mildest discontinuation syndrome of any SSRI, but 5-week washout required before MAOI — longer than any other SSRI.)",
+        "Name the unique FDA-approved indications of fluoxetine. (Bulimia nervosa — only SSRI approved. Paediatric depression ≥8 yrs — only SSRI approved. Also: MDD, OCD ≥7 yrs, Panic Disorder, PMDD.)",
+        "What is the black box warning for fluoxetine? (Increased suicidality in patients <25 years — monitor weekly in the first month. Particularly relevant for fluoxetine because it is the only SSRI approved for paediatric depression.)",
+        "Why is fluoxetine the most activating SSRI? (Relative NE/DA enhancement through CYP2D6 inhibition of catecholamine metabolism and direct norepinephrine effects — useful in retarded depression, problematic in anxious/agitated depression.)",
+        "What is serotonin syndrome? Name the triad. (Mental status change + autonomic instability + neuromuscular excitation — clonus, hyperreflexia. Onset within 24h. Treat with cyproheptadine. Note: with fluoxetine, risk persists for 5 weeks after stopping due to norfluoxetine.)",
+      ],
+      practical: [
+        "Counsel a patient starting fluoxetine for depression — address onset delay, activating side effects, 5-week MAOI washout, and follow-up.",
+        "Write a prescription for fluoxetine for a 30-year-old with first-episode depression (dose: 20mg OD, morning, with food).",
+        "Identify the contraindications of fluoxetine from a given clinical scenario (e.g., patient on MAOI or thioridazine).",
+        "Explain the monitoring schedule for a patient on fluoxetine (2/4/8/12 weeks, PHQ-9, suicidality <25, CYP2D6 interactions).",
+      ],
+      longAnswer: [
+        "Classify antidepressants. Describe the mechanism of action, pharmacokinetics (with emphasis on fluoxetine's long half-life and active metabolite), adverse effects, and therapeutic uses of SSRIs with special reference to fluoxetine. Discuss the rationale for SSRI selection in specific populations (paediatric, hepatic impairment, adherence-poor).",
+        "A 30-year-old woman presents with moderate depression. She has a history of poor medication adherence. Discuss the pharmacological management, including drug selection, dose titration, monitoring, and patient counselling. Address the unique role of fluoxetine in adherence-poor patients and the implications of its long half-life.",
+      ],
+    },
+    neetPg: {
+      highYield: [
+        "Fluoxetine = only SSRI FDA-approved for bulimia nervosa (60mg OD target dose).",
+        "Fluoxetine = only SSRI FDA-approved for paediatric depression (≥8 yrs).",
+        "Fluoxetine = STRONGEST CYP2D6 inhibitor among SSRIs (along with paroxetine). Major interactions: thioridazine (QTc), pimozide (QTc), TCAs, codeine/tramadol (blocks analgesia), tamoxifen (blocks activation).",
+        "Half-life: fluoxetine 1–4 days + norfluoxetine 4–9 days = effective half-life ~1 week. Steady state 4–8 weeks. Mildest discontinuation syndrome of any SSRI.",
+        "5-week washout after fluoxetine before MAOI — LONGEST of any SSRI (others 14 days). The favourite MAOI washout question.",
+        "Fluoxetine is the most activating SSRI — useful in retarded/psychomotor-slowed depression, problematic in anxious/agitated depression (use sertraline/escitalopram instead).",
+        "Black box: suicidality <25 years. Weekly monitoring in first month. Particularly relevant for fluoxetine given paediatric approval.",
+        "Norfluoxetine = active metabolite, equally potent SERT inhibitor, half-life 4–9 days (up to 16 days in CYP2D6 poor metabolisers).",
+        "Use as 'bridge' to taper off paroxetine/venlafaxine — long half-life self-tapers the patient.",
+        "Serotonin syndrome triad: Mental + Autonomic + Neuromuscular (clonus, hyperreflexia). With fluoxetine, risk persists for 5 weeks after stopping due to norfluoxetine accumulation.",
+      ],
+      pyqConcepts: [
+        "NEET PG 2022: Which SSRI is approved for paediatric depression (≥8 years)? (Answer: Fluoxetine — only SSRI FDA-approved for paediatric MDD.)",
+        "NEET PG 2021: Which antidepressant is FDA-approved for bulimia nervosa? (Answer: Fluoxetine 60mg OD — only SSRI with this indication.)",
+        "NEET PG 2020: A patient on fluoxetine wants to switch to an MAOI. What is the required washout period? (Answer: 5 weeks — longer than any other SSRI due to norfluoxetine's 4–9 day half-life.)",
+        "NEET PG 2019: Which SSRI is the strongest CYP2D6 inhibitor? (Answer: Fluoxetine and paroxetine — both strong. Sertraline and escitalopram are weak.)",
+        "INICET 2021: A patient on fluoxetine develops restlessness, confusion, fever, clonus. Diagnosis and management? (Answer: Serotonin syndrome. Stop fluoxetine, supportive care, cyproheptadine, benzodiazepines. Note long washout needed.)",
+      ],
+    },
+    inicet: {
+      clinicalReasoning: [
+        "A 32-year-old man with retarded depression (low energy, hypersomnia, psychomotor slowing) is to start an SSRI. Which SSRI and why? (Answer: Fluoxetine — its activating profile suits retarded/anhedonic depression. Start 20mg OD morning. Watch for anxiety/jitteriness in week 1.)",
+        "A 28-year-old woman with bulimia nervosa (binge-purge, BMI 22) presents for pharmacotherapy. What is the drug of choice and dose? (Answer: Fluoxetine 60mg OD — only SSRI FDA-approved for bulimia. May start 20mg and titrate to 60mg over 2–4 weeks for tolerability. Combine with CBT.)",
+        "A 9-year-old boy with moderate depression and family history of MDD is to be started on pharmacotherapy. What is the appropriate drug and dose? (Answer: Fluoxetine — only SSRI FDA-approved for paediatric depression ≥8 yrs. Start 10mg OD, max 20mg in children. Combine with CBT. Black box warning — monitor weekly for suicidality.)",
+        "A patient on paroxetine 30mg wishes to discontinue due to sexual side effects. How would you manage the taper? (Answer: Taper paroxetine slowly over 4+ weeks. Consider substituting fluoxetine 20mg for the last 2 weeks of taper — long half-life of norfluoxetine self-tapers the patient and reduces discontinuation syndrome.)",
+        "A 45-year-old man on fluoxetine 40mg for depression presents with new prescription for tramadol 50mg for back pain. What do you do? (Answer: Do NOT co-prescribe. Fluoxetine inhibits CYP2D6, blocking conversion of tramadol to active O-desmethyltramadol → loss of analgesia AND raises serotonin syndrome risk. Switch to paracetamol or non-serotonergic opioid like morphine.)",
+      ],
+    },
+    fmge: {
+      frequentlyTested: [
+        "Fluoxetine mechanism: SERT blockade → ↑ serotonin in synaptic cleft.",
+        "Onset of action: 4–6 weeks (up to 8 weeks for fluoxetine due to slow steady state).",
+        "Active metabolite: norfluoxetine (half-life 4–9 days) — extends therapeutic effect, causes long washout.",
+        "Washout before MAOI: 5 weeks (longest of any SSRI).",
+        "Only SSRI approved for bulimia nervosa.",
+        "Only SSRI approved for paediatric depression (≥8 years).",
+        "Black box warning: suicidal thoughts in patients under 25.",
+        "Most activating SSRI — useful in retarded depression, problematic in anxious depression.",
+        "Strongest CYP2D6 inhibitor among SSRIs (with paroxetine) — multiple drug interactions.",
+        "Mildest discontinuation syndrome among SSRIs (due to long half-life).",
+      ],
+    },
+    psychiatryResidency: {
+      advancedPearls: [
+        "Fluoxetine's activating profile makes it the SSRI of choice for retarded/anhedonic depression (psychomotor slowing, hypersomnia, hyperphagia) — but a poor choice for anxious/agitated depression where sertraline or escitalopram are preferred. Matching drug to depression subtype improves outcomes.",
+        "Fluoxetine's long half-life is a double-edged sword: it minimises discontinuation syndrome and forgiving adherence, BUT requires a 5-week washout before MAOIs and means side effects / interactions (e.g., serotonin syndrome) persist for weeks after stopping.",
+        "CYP2D6 inhibition by fluoxetine is clinically critical: (1) blocks conversion of codeine/tramadol to active metabolites — loss of analgesia; (2) raises TCA levels — toxicity risk; (3) raises thioridazine/pimozide — QTc prolongation; (4) blocks activation of tamoxifen — reduced efficacy in breast cancer. Avoid co-prescription where possible.",
+        "Use as a 'bridge' for tapering shorter-acting SSRIs: substitute fluoxetine 20mg for the last 1–2 weeks of paroxetine/venlafaxine taper. Norfluoxetine's long half-life self-tapers the patient, minimising discontinuation syndrome. After 2–4 weeks, stop fluoxetine.",
+        "Paediatric depression: fluoxetine is the only FDA-approved SSRI for ≥8 years. Dose: 10–20mg (child), up to 60mg (adolescent). Combination with CBT is recommended. Black box warning — weekly monitoring first month. Stronger evidence base than escitalopram (≥12 yrs) for this age group.",
+        "Bulimia nervosa: fluoxetine 60mg OD is the only FDA-approved pharmacotherapy. Reduces binge-purge frequency independent of antidepressant effect (likely via 5-HT modulation of satiety). CBT is first-line; fluoxetine is adjunctive or for patients refusing CBT.",
+        "PMDD: fluoxetine (marketed as Sarafem in the US) at 20mg continuous or luteal-phase only (start 14 days before menses, stop at menses onset). Luteal-phase dosing reduces total drug exposure and side effects. Indian patients often prefer continuous dosing for simplicity.",
+      ],
+    },
+  },
+
+  /* International vs Indian guideline comparisons */
+  guidelineComparisons: [
+    {
+      topic: "First-line SSRI for depression",
+      internationalSource: "NICE CG91 / APA Practice Guideline",
+      internationalRecommendation: "SSRIs are first-line for moderate-severe depression. No single SSRI preferred — selection based on patient profile, comorbidities, interactions, and prior response.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS guidelines also recommend SSRIs as first-line for depression. Sertraline and escitalopram are the most commonly prescribed first-line SSRIs in Indian practice. Fluoxetine is used selectively — preferred for retarded depression, bulimia, paediatric depression, and adherence-poor patients; avoided in anxious/agitated depression.",
+    },
+    {
+      topic: "Use in pregnancy",
+      internationalSource: "FDA / APA",
+      internationalRecommendation: "Sertraline is the SSRI of choice in pregnancy when pharmacotherapy is necessary. Former FDA Category C. Fluoxetine has the longest safety track record (since 1987) but its long half-life means longer fetal exposure. Third-trimester use associated with neonatal adaptation syndrome.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs with international guidelines — sertraline is preferred in pregnancy, not fluoxetine. In Indian practice, fluoxetine is generally avoided as first-line in pregnancy due to longer fetal exposure and the availability of sertraline as a safer alternative. If a patient on fluoxetine becomes pregnant, weigh risks/benefits — do NOT stop abruptly (relapse risk + discontinuation).",
+    },
+    {
+      topic: "Monitoring during treatment",
+      internationalSource: "NICE / APA",
+      internationalRecommendation: "Weekly contact in first month, then every 2–4 weeks until stable. PHQ-9 at baseline, 4, 8, 12 weeks. Serum sodium in elderly. ECG if cardiac risk factors. Note: fluoxetine's slow steady state (4–8 weeks) means full response assessment at 12 weeks (later than other SSRIs).",
+      indianSource: null,
+      indianRecommendation: "No dedicated IPS guideline on SSRI monitoring frequency. In Indian government hospitals, monitoring is primarily clinical due to resource constraints. PHQ-9 is used in tertiary centres and DMHP clinics. Special attention to CYP2D6 interactions is required given widespread co-prescription of tramadol/codeine/TCAs in India. Current section reflects accepted clinical practice and internationally accepted evidence.",
+    },
+    {
+      topic: "Suicidality monitoring (<25 years)",
+      internationalSource: "FDA Black Box Warning",
+      internationalRecommendation: "Antidepressants increased risk of suicidal thinking in patients <25. Weekly monitoring in first month. Document informed consent. Particularly relevant for fluoxetine — the only SSRI approved for paediatric depression.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS acknowledges the FDA black box warning and recommends close monitoring of young patients (<25) during the first month. In Indian practice, family involvement in monitoring is particularly important given the joint family system. Tele-MANAS (14416) should be provided as a crisis resource. For paediatric prescriptions (≥8 yrs), direct psychiatric supervision is recommended.",
+    },
+    {
+      topic: "Use in lactation",
+      internationalSource: "AAP / LactMed",
+      internationalRecommendation: "Sertraline is the SSRI of choice in breastfeeding. Fluoxetine is generally NOT preferred in lactation due to long half-life and accumulation in infant serum (norfluoxetine detected in breastfed infants). Use only if other SSRIs have failed and benefits outweigh risks.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs — sertraline is preferred in lactation, not fluoxetine. In Indian practice where breastfeeding is strongly culturally valued, fluoxetine's accumulation in infant serum (norfluoxetine detected) is a significant concern. If a patient on fluoxetine wishes to breastfeed, consider switching to sertraline. If fluoxetine must be used, counsel mother to watch for infant irritability, poor sleep, or feeding issues.",
+    },
+  ],
+
+  /* Indian reference sources */
+  indianReferences: [
+    {
+      source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition",
+      type: "textbook",
+      section: "Chapter 33 — Antidepressant Drugs",
+    },
+    {
+      source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression",
+      type: "guideline",
+      section: "Section on pharmacotherapy — SSRIs",
+    },
+    {
+      source: "NMC CBME Curriculum — Pharmacology (Second Professional)",
+      type: "curriculum",
+      section: "Topic: Drugs acting on CNS — Antidepressants",
+    },
+    {
+      source: "NMC CBME Curriculum — Psychiatry (Final Professional)",
+      type: "curriculum",
+      section: "Topic: Psychopharmacology — Mood disorders",
+    },
+    {
+      source: "National Mental Health Programme (NMHP) / District Mental Health Programme (DMHP)",
+      type: "regulatory",
+      section: "Essential medicines for mental health — SSRIs included",
+    },
+    {
+      source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416",
+      type: "regulatory",
+      section: "Mental health support resource for patients on antidepressants",
+      url: "tel:14416",
+    },
+  ],
+
+  /* Section difficulty mapping */
+  sectionDifficulty: {
+    "top": "mbbs",
+    "quick-facts": "mbbs",
+    "learning-objectives": "mbbs",
+    "knowledge-graph": "pg",
+    "mechanism": "mbbs",
+    "brain-regions": "pg",
+    "neurotransmitters": "pg",
+    "neural-pathways": "resident",
+    "timeline": "mbbs",
+    "clinical-uses": "mbbs",
+    "side-effects": "mbbs",
+    "monitoring": "pg",
+    "contraindications": "mbbs",
+    "interactions": "pg",
+    "patient-education": "mbbs",
+    "clinical-pearls": "pg",
+    "exam-lens": "mbbs",
+    "memory-tricks": "mbbs",
+    "clinical-case": "pg",
+    "comparison": "pg",
+    "indian-practice": "mbbs",
+    "guideline-comparison": "resident",
+    "related-drugs": "pg",
+    "high-yield-summary": "mbbs",
+    "faq": "mbbs",
+    "references": "resident",
+  },
+
+  /* ---- India Layer extensions (platform-wide) ---- */
+
+  /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
+  evidenceHierarchy: {
+    international: [
+      { source: "NICE CG91", recommendation: "SSRIs are first-line for moderate-severe depression. No single SSRI preferred — selection based on patient profile." },
+      { source: "APA Practice Guideline", recommendation: "SSRI first-line for MDD. Fluoxetine selected for retarded depression, bulimia, paediatric depression, or adherence-poor patients." },
+      { source: "FDA", recommendation: "Approved for 5 indications: MDD, OCD, Bulimia, Panic Disorder, PMDD. Paediatric depression ≥8 yrs (unique). Black box warning for suicidality <25." },
+      { source: "WHO mhGAP", recommendation: "SSRIs recommended as first-line antidepressants in the Mental Health Gap Action Programme." },
+    ],
+    indian: [
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS guidelines recommend SSRIs as first-line for depression. Sertraline and escitalopram are most commonly prescribed first-line; fluoxetine used selectively for retarded depression, bulimia, paediatric depression, and adherence-poor patients." },
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS concurs with international guidelines — sertraline (not fluoxetine) is preferred in pregnancy and lactation due to fluoxetine's long half-life and infant accumulation." },
+      { source: null, recommendation: "No dedicated IPS guideline on fluoxetine monitoring frequency. Current section reflects accepted clinical practice and internationally accepted evidence." },
+    ],
+    indianClinicalPractice:
+      "In Indian practice, fluoxetine is used selectively rather than as a default first-line SSRI (sertraline and escitalopram dominate first-line). Fluoxetine is preferred for retarded/anhedonic depression (activating profile), bulimia nervosa (only approved SSRI), paediatric depression ≥8 yrs (only approved SSRI), and adherence-poor patients (long half-life forgives missed doses). It is avoided in anxious/agitated depression (too activating), pregnancy (longer fetal exposure than sertraline), and lactation (infant norfluoxetine accumulation). Indian government hospitals stock generic fluoxetine at low cost (₹2–4/tablet). Special attention to CYP2D6 interactions is required given widespread tramadol/codeine/TCA co-prescription in India. Family involvement in monitoring is emphasised given the joint family system.",
+  },
+
+  /* Indian encounter context — where you'll see this drug */
+  indianEncounterContext: {
+    governmentHospitals:
+      "Available through DMHP and tertiary psychiatry OPDs. Starting dose 20mg OD (10mg in anxious/paediatric). Monitoring is primarily clinical (symptom-based) due to resource constraints. Jan Aushadhi generic fluoxetine is commonly dispensed. Less commonly used as first-line than sertraline in government settings.",
+    privateHospitals:
+      "Selected for retarded/anhedonic depression, bulimia, paediatric depression, or adherence-poor patients. Starting dose 20mg OD, titrate to 40–60mg. PHQ-9 monitoring at 2/4/8/12 weeks (note later full-response assessment than other SSRIs). ECG if co-prescribed with QTc-prolonging drugs (avoid thioridazine, pimozide). Patient counselling emphasises 5-week MAOI washout.",
+    medicalColleges:
+      "Teaching drug for SSRI pharmacology — particularly useful for illustrating active metabolites (norfluoxetine), CYP2D6 inhibition, and pharmacokinetic/pharmacodynamic half-life differences. Used in pharmacology practicals (prescription writing, patient counselling). Examined in second professional MBBS (pharmacology) and final professional (psychiatry). Commonly featured in NEET PG and INICET questions — especially the 5-week MAOI washout and bulimia/paediatric indications.",
+    primaryCare:
+      "Used for moderate depression in primary care, particularly when patient has poor adherence or missed-dose concerns. GP/family physicians initiate fluoxetine 20mg OD. Caution with co-prescription of tramadol/codeine (CYP2D6 inhibition). Referral to psychiatrist if no response at 8–12 weeks, if suicidal ideation, or if paediatric (≥8 yrs — requires psychiatric supervision).",
+    psychiatryOPD:
+      "Workhorse SSRI in psychiatry OPD for specific indications: bulimia nervosa (60mg OD), paediatric depression ≥8 yrs (10–20mg), retarded depression (20–60mg), and as a 'bridge' for tapering shorter-acting SSRIs. Often combined with CBT. Augmentation with bupropion or mirtazapine for partial response. Strong CYP2D6 inhibition requires careful medication review.",
+  },
+
+  /* Indian prescription workflow */
+  prescriptionWorkflow: {
+    beforePrescribing: [
+      "Screen for bipolar disorder (MDQ questionnaire) — SSRIs can trigger manic switch. Fluoxetine's long half-life prolongs the risk window if manic switch occurs.",
+      "Assess suicidal ideation — if present, involve family for monitoring and provide Tele-MANAS (14416) number. Particularly relevant for fluoxetine given paediatric approval.",
+      "Check for MAOI use in last 14 days before starting fluoxetine — absolute contraindication. AND warn patient that after stopping fluoxetine, 5 weeks (not 14 days) must elapse before any MAOI.",
+      "Review concurrent medications — fluoxetine is the STRONGEST CYP2D6 inhibitor among SSRIs. Critical interactions: thioridazine, pimozide (never combine), tramadol/codeine (loss of analgesia), TCAs (toxicity), tamoxifen (reduced efficacy), warfarin (INR monitoring).",
+      "Baseline PHQ-9 score for response monitoring.",
+      "In elderly: check baseline serum sodium (SIADH risk) and consider ECG if cardiac risk factors.",
+      "In women of reproductive age: discuss pregnancy plans — sertraline (not fluoxetine) is preferred if pregnancy is possible. If on fluoxetine and becomes pregnant, do NOT stop abruptly.",
+      "Counsel about 4–6 week onset (up to 8 weeks for fluoxetine) — set expectation that side effects precede benefit. Note activating effect in first 1–2 weeks.",
+    ],
+    duringTreatment: [
+      "Week 1–2: assess tolerability (nausea, insomnia, anxiety, jitteriness — common due to activating profile) and suicidality (especially <25 years).",
+      "Week 2–4: review early response — sleep, appetite, energy often improve before mood. Note: fluoxetine's activating profile can worsen anxiety in this period — consider temporary dose reduction or short-term benzodiazepine.",
+      "Week 4–8: assess response with PHQ-9. If <30% reduction, increase dose. Note: full response may take up to 12 weeks due to slow steady state.",
+      "Week 8–12: full response assessment. If <50% reduction at 12 weeks, consider augmentation (bupropion/mirtazapine) or switch.",
+      "Monitor for sexual dysfunction — ask directly; patients rarely volunteer it.",
+      "Watch for hyponatraemia in elderly (confusion, headache, seizures).",
+      "Watch for serotonin syndrome if serotonergic drugs are added (tramadol, triptans, linezolid) — risk persists for 5 weeks after stopping fluoxetine due to norfluoxetine.",
+    ],
+    followUp: [
+      "First follow-up at 2 weeks (tolerability + suicidality + activation).",
+      "Second follow-up at 4 weeks (early response).",
+      "Third follow-up at 8 weeks (steady-state effect — later than other SSRIs).",
+      "Fourth follow-up at 12 weeks (full response assessment).",
+      "If remission achieved (PHQ-9 <5): continue for 6–12 months for first episode, longer for recurrent.",
+      "Before discontinuation: fluoxetine's long half-life means tapering is rarely problematic — usually can stop without taper. BUT warn patient: 5-week washout before any MAOI antidepressant.",
+      "In government hospitals: follow-up may be every 4–8 weeks due to travel barriers — counsel family to watch for red flags.",
+    ],
+    whenToRefer: [
+      "Refer to psychiatrist if no response to 2 adequate SSRI trials (12 weeks each).",
+      "Refer urgently if suicidal ideation emerges or worsens — particularly in patients <25 (black box warning).",
+      "Refer if bipolar disorder is suspected (manic switch risk — fluoxetine's long half-life prolongs the risk window).",
+      "Refer if serotonin syndrome develops (emergency — call 112). Note: serotonin syndrome risk persists for 5 weeks after stopping fluoxetine.",
+      "Refer to physician if severe hyponatraemia (Na <120 mmol/L) or seizures.",
+      "Refer to obstetrician if patient becomes pregnant — consider switching to sertraline (do NOT stop fluoxetine abruptly).",
+      "Refer for CBT — combined SSRI + CBT produces better outcomes than either alone. Essential for bulimia and paediatric depression.",
+    ],
+  },
+
+  /* Exam frequency — star ratings */
+  examFrequency: {
+    neetPg: 5,
+    inicet: 4,
+    mbbsViva: 4,
+    fmge: 5,
+  },
+
+  /* PYQ metadata — concept-level, no copyrighted content */
+  pyqMetadata: [
+    { exam: "NEET PG", year: 2022, concept: "SSRI approved for paediatric depression (≥8 yrs)", topic: "Paediatric psychopharmacology" },
+    { exam: "NEET PG", year: 2021, concept: "Antidepressant approved for bulimia nervosa", topic: "Eating disorder pharmacotherapy" },
+    { exam: "NEET PG", year: 2020, concept: "5-week washout after fluoxetine before MAOI", topic: "Antidepressant interactions" },
+    { exam: "NEET PG", year: 2019, concept: "SSRI with strongest CYP2D6 inhibition", topic: "Antidepressant pharmacokinetics" },
+    { exam: "INICET", year: 2021, concept: "Serotonin syndrome from fluoxetine — long washout", topic: "Serotonergic toxicity" },
+    { exam: "INICET", year: 2023, concept: "Norfluoxetine — active metabolite and clinical implications", topic: "Antidepressant pharmacokinetics" },
+    { exam: "FMGE", year: 2022, concept: "Fluoxetine mechanism and active metabolite", topic: "Antidepressant pharmacology" },
+    { exam: "FMGE", year: 2021, concept: "Fluoxetine-thioridazine interaction (QTc)", topic: "Drug interactions" },
+  ],
+
+  /* Indian comparison contexts */
+  indianComparisonContexts: [
+    {
+      scenario: "Government hospital setup",
+      recommendation: "Fluoxetine is available but less commonly used as first-line than sertraline in government hospitals. Useful for retarded depression, bulimia, or adherence-poor patients. Low cost (₹2–4/tablet), available in Jan Aushadhi and DMHP, once-daily dosing.",
+      alternative: "Sertraline is more commonly stocked and preferred first-line. Escitalopram is another alternative.",
+    },
+    {
+      scenario: "Private psychiatry practice",
+      recommendation: "Fluoxetine is selected selectively — for retarded/anhedonic depression, bulimia, paediatric depression, or adherence-poor patients. Its activating profile suits low-energy depression but worsens anxious/agitated depression.",
+      alternative: "Sertraline or escitalopram are preferred for anxious depression. Mirtazapine for severe insomnia/weight loss.",
+    },
+    {
+      scenario: "Pregnancy",
+      recommendation: "Fluoxetine is NOT the SSRI of choice in pregnancy — sertraline is preferred due to lower placental transfer and shorter fetal exposure. Fluoxetine's long half-life (norfluoxetine 4–9 days) means prolonged fetal exposure. If patient becomes pregnant on fluoxetine, weigh risks/benefits — do NOT stop abruptly.",
+      alternative: "Sertraline is the SSRI of choice. Avoid paroxetine (Category D).",
+    },
+    {
+      scenario: "Adolescents and children",
+      recommendation: "Fluoxetine is the ONLY SSRI FDA-approved for paediatric depression (≥8 years). First-line for paediatric MDD in Indian child/adolescent psychiatry clinics. Dose: 10–20mg (child), up to 60mg (adolescent). Combine with CBT. Black box warning — weekly monitoring first month.",
+      alternative: "Escitalopram for ≥12 years (also approved). Sertraline off-label. Always combine with CBT.",
+    },
+    {
+      scenario: "Older adults (≥65 years)",
+      recommendation: "Fluoxetine is generally AVOIDED in elderly due to: (1) strong CYP2D6 inhibition → polypharmacy interactions; (2) activating profile → insomnia, agitation; (3) long half-life → accumulation in frail elderly; (4) weight loss (concern in cachectic elderly). Sertraline or escitalopram are preferred.",
+      alternative: "Sertraline (mild CYP2D6) or escitalopram (lowest CYP interactions). Mirtazapine if insomnia/weight loss present.",
+    },
+    {
+      scenario: "Cost-sensitive setting",
+      recommendation: "Generic fluoxetine from Jan Aushadhi Kendra is among the cheapest antidepressant options in India (₹2–4/tablet). Branded versions (Flunil, Prodep, Fludac) are also inexpensive. Particularly cost-effective for adherence-poor patients due to long half-life (fewer missed-dose consequences).",
+      alternative: "If cost is the primary concern, Jan Aushadhi generic fluoxetine or sertraline are both excellent options.",
+    },
+  ],
+
+  /* Jan Aushadhi availability */
+  janAushadhi: {
+    available: true,
+    note: "Available at Jan Aushadhi Kendras across India in 10mg, 20mg, and 40mg tablet strengths. Among the most affordable antidepressant options in India (₹2–4 per 20mg tablet). Generic name: Fluoxetine Tablets IP / Fluoxetine Capsules IP.",
+  },
+
+  /* Restructured evidence sources — International vs Indian */
+  evidenceSources: {
+    international: [
+      { source: "Katzung Basic & Clinical Pharmacology, 16th edition", section: "Chapter 30 — Antidepressant Agents" },
+      { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
+      { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants" },
+      { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression" },
+      { source: "FDA Prescribing Information — PROZAC (fluoxetine hydrochloride)", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/018936s108lbl.pdf" },
+      { source: "FDA Prescribing Information — SARAFEM (fluoxetine, PMDD)", section: "Highlights of Prescribing Information" },
+      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Pharmacological treatment" },
+      { source: "APA Practice Guideline for MDD, 3rd edition" },
+      { source: "Cipriani A et al. Lancet 2018 — Comparative efficacy of 21 antidepressants", section: "Network meta-analysis" },
+    ],
+    indian: [
+      { source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition", type: "textbook", section: "Chapter 33 — Antidepressant Drugs" },
+      { source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression", type: "guideline", section: "Section on pharmacotherapy — SSRIs" },
+      { source: "NMC CBME Curriculum — Pharmacology (Second Professional)", type: "curriculum", section: "Topic: Drugs acting on CNS — Antidepressants" },
+      { source: "NMC CBME Curriculum — Psychiatry (Final Professional)", type: "curriculum", section: "Topic: Psychopharmacology — Mood disorders" },
+      { source: "National Mental Health Programme (NMHP) / District Mental Health Programme (DMHP)", type: "regulatory", section: "Essential medicines for mental health — SSRIs" },
+      { source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416", type: "regulatory", section: "Mental health support resource", url: "tel:14416" },
+      { source: "CDSCO — Central Drugs Standard Control Organisation", type: "regulatory", section: "Fluoxetine — Schedule H prescription status" },
+    ],
+  },
+
+  /* ---- Final Architecture Pass — canonical template v2.0 ---- */
+
+  /* Clinical decision path — algorithm-style decision tree */
+  clinicalDecisionPath: {
+    title: "When to choose Fluoxetine for depression",
+    startNodeId: "start",
+    nodes: [
+      {
+        id: "start",
+        question: "Patient presents with depression",
+        branches: [
+          { label: "Mild", next: "mild" },
+          { label: "Moderate", next: "moderate" },
+          { label: "Severe", next: "severe" },
+        ],
+      },
+      {
+        id: "mild",
+        question: "Mild depression (PHQ-9 5–9)",
+        recommendation: "Psychotherapy first (CBT). Consider SSRI if functional impairment or patient preference. If SSRI needed, sertraline is preferred — fluoxetine's activating profile may worsen anxiety in mild depression.",
+        reasoning: "NICE recommends psychotherapy alone for mild depression. If medication is needed, fluoxetine's activating profile makes it less suitable for anxious-predominant mild depression.",
+      },
+      {
+        id: "moderate",
+        question: "Moderate depression (PHQ-9 10–14)",
+        recommendation: "SSRI + CBT. First-line per NICE CG91 and IPS guidelines. Choose fluoxetine if retarded/anhedonic phenotype (psychomotor slowing, hypersomnia, hyperphagia).",
+        reasoning: "SSRI + CBT is first-line for moderate depression. Fluoxetine's activating profile suits retarded depression; sertraline or escitalopram suit anxious depression.",
+        branches: [
+          { label: "Retarded phenotype", next: "why-fluoxetine" },
+          { label: "Anxious/agitated phenotype", next: "avoid-anxious" },
+        ],
+      },
+      {
+        id: "severe",
+        question: "Severe depression (PHQ-9 15–27)",
+        recommendation: "SSRI + CBT. Psychiatry referral. Fluoxetine 20mg OD (titrate to 40–60mg). If psychotic features → add antipsychotic. If suicidal → urgent psychiatric referral.",
+        reasoning: "Severe depression requires pharmacotherapy. Fluoxetine can be first-line if retarded phenotype. If psychotic features → add antipsychotic. If suicidal → urgent psychiatric referral.",
+        branches: [
+          { label: "With suicidal ideation", next: "suicidal" },
+          { label: "With psychotic features", next: "psychotic" },
+          { label: "Bulimia comorbid", next: "bulimia" },
+        ],
+      },
+      {
+        id: "suicidal",
+        question: "Severe depression with suicidal ideation",
+        recommendation: "Urgent psychiatry referral. Do NOT send home alone. Consider admission. Fluoxetine can be started but monitor weekly (black box warning <25). Tele-MANAS 14416 for crisis support.",
+        reasoning: "Suicidal ideation in severe depression is a psychiatric emergency. Fluoxetine's activating effect may transiently worsen agitation before mood benefit — close monitoring essential.",
+      },
+      {
+        id: "psychotic",
+        question: "Severe depression with psychotic features",
+        recommendation: "Psychiatry referral. Add antipsychotic (olanzapine or aripiprazole) to SSRI. Consider ECT if catatonic or severely suicidal.",
+        reasoning: "Psychotic depression requires combination therapy (antidepressant + antipsychotic) or ECT. SSRI alone is insufficient. Avoid thioridazine/pimozide with fluoxetine (CYP2D6 + QTc).",
+      },
+      {
+        id: "bulimia",
+        question: "Depression with comorbid bulimia nervosa",
+        recommendation: "Fluoxetine 60mg OD is the only FDA-approved SSRI for bulimia. Combine with CBT (first-line). Reduces binge-purge frequency independent of antidepressant effect.",
+        reasoning: "Fluoxetine's unique FDA approval for bulimia makes it the drug of choice when depression coexists with bulimia nervosa.",
+      },
+      {
+        id: "why-fluoxetine",
+        question: "Why choose Fluoxetine?",
+        recommendation: "Fluoxetine is preferred when: retarded/anhedonic depression (activating), bulimia (only approved SSRI), paediatric depression ≥8 yrs (only approved SSRI), adherence-poor patients (long half-life forgives missed doses), or as a 'bridge' to taper shorter-acting SSRIs.",
+        reasoning: "Fluoxetine's long half-life (norfluoxetine 4–9 days) minimises discontinuation syndrome, its activating profile suits retarded depression, and it has unique FDA approvals for bulimia and paediatric depression.",
+        branches: [
+          { label: "When NOT to choose", next: "avoid" },
+        ],
+      },
+      {
+        id: "avoid-anxious",
+        question: "Anxious/agitated depression — when NOT to use fluoxetine",
+        recommendation: "Avoid fluoxetine in anxious/agitated depression — its activating profile can worsen anxiety, jitteriness, and insomnia in the first 1–2 weeks. Use sertraline or escitalopram instead.",
+        reasoning: "Fluoxetine is the most activating SSRI. In anxious/agitated depression, the early activation can worsen symptoms and reduce adherence. Sertraline (σ1 agonism, anxiolytic) or escitalopram (low interaction profile) are preferred.",
+      },
+      {
+        id: "avoid",
+        question: "When NOT to choose Fluoxetine",
+        recommendation: "Avoid: concurrent thioridazine/pimozide (CYP2D6 + QTc), MAOIs (5-week washout), severe hepatic impairment, anxious/agitated depression, pregnancy (sertraline preferred), lactation (infant norfluoxetine accumulation). Consider alternatives per scenario.",
+        reasoning: "Fluoxetine's strong CYP2D6 inhibition causes fatal interactions with thioridazine/pimozide. MAOI + fluoxetine = fatal serotonin syndrome (5-week washout needed). Long half-life problematic in pregnancy/lactation. Activating profile worsens anxious depression.",
+      },
+    ],
+  },
+
+  /* Educational prescription template (India) */
+  educationalPrescription: {
+    scenario: "Typical Indian OPD initiation for first-episode moderate depression (retarded phenotype) in an adult",
+    lines: [
+      "Rx",
+      "Tab Fluoxetine 20 mg",
+      "1 tab OD morning after food",
+      "",
+      "Advice: Take in morning with food (avoid insomnia).",
+      "Full benefit may take 4–6 weeks (sometimes up to 8 weeks).",
+      "If feeling more anxious/jittery in week 1–2, this is common — usually settles.",
+      "Do NOT stop suddenly — but if you must, it's easier to stop than other SSRIs.",
+      "After stopping, wait 5 WEEKS before any MAOI antidepressant.",
+      "Avoid alcohol. Report if feeling worse or new suicidal thoughts.",
+      "Call Tele-MANAS 14416 if in crisis.",
+    ],
+    followUp: [
+      "Review after 2 weeks — tolerability, suicidality, activation/jitteriness",
+      "Review after 4 weeks — early response (sleep, appetite, energy)",
+      "Review after 8 weeks — steady-state response (later than other SSRIs)",
+      "Review after 12 weeks — full response assessment with PHQ-9",
+      "If remission (PHQ-9 <5): continue 6–12 months, then stop (taper rarely needed due to long half-life)",
+    ],
+    disclaimer: "Educational example only. Not a substitute for clinical judgment. Always verify dosing against current prescribing information and individualise for each patient.",
+  },
+
+  /* Common mistakes */
+  commonMistakes: [
+    {
+      mistake: "Not waiting 5 weeks after fluoxetine before starting an MAOI",
+      why: "Fluoxetine's active metabolite norfluoxetine (half-life 4–9 days) persists for weeks after stopping. Starting an MAOI within 5 weeks of fluoxetine can cause fatal serotonin syndrome — this is the LONGEST washout of any SSRI (others require 14 days).",
+      correction: "ALWAYS wait at least 5 weeks after stopping fluoxetine before initiating an MAOI. Document this in the patient's chart. Counsel the patient to inform any future doctor that they have taken fluoxetine recently.",
+    },
+    {
+      mistake: "Combining fluoxetine with thioridazine or pimozide",
+      why: "Fluoxetine is the strongest CYP2D6 inhibitor among SSRIs. It dramatically raises levels of thioridazine and pimozide → QTc prolongation → torsades de pointes → sudden death. This is a fatal combination.",
+      correction: "Never co-prescribe fluoxetine with thioridazine or pimozide. Use a non-CYP2D6-inhibiting SSRI (sertraline, escitalopram) if these antipsychotics are required.",
+    },
+    {
+      mistake: "Using fluoxetine as first-line in anxious/agitated depression",
+      why: "Fluoxetine is the most activating SSRI. In anxious/agitated depression, the early activation can worsen anxiety, jitteriness, and insomnia — leading to early discontinuation and reduced adherence.",
+      correction: "Match SSRI to depression phenotype. Retarded/anhedonic depression (psychomotor slowing, hypersomnia, hyperphagia) → fluoxetine. Anxious/agitated depression → sertraline or escitalopram.",
+    },
+    {
+      mistake: "Overlooking CYP2D6 interactions with tramadol and codeine",
+      why: "Fluoxetine's strong CYP2D6 inhibition blocks conversion of tramadol and codeine to their active metabolites (O-desmethyltramadol, morphine) — loss of analgesia. Also raises serotonin syndrome risk with tramadol.",
+      correction: "Avoid co-prescription. Use paracetamol or non-serotonergic opioids (morphine, fentanyl) for pain. If tramadol/codeine essential, switch to non-CYP2D6-inhibiting SSRI.",
+    },
+    {
+      mistake: "Confusing paediatric and adult dosing",
+      why: "Fluoxetine is the only SSRI FDA-approved for paediatric depression (≥8 yrs), but paediatric doses are LOWER than adult. Child (8–12 yrs): start 10mg, max 20mg. Adolescent (≥13 yrs): start 10mg, max 60mg. Adult: start 20mg, max 80mg.",
+      correction: "Always check age-appropriate dosing. Start 10–20mg in children and titrate slowly. Combine with CBT. Monitor weekly for suicidality (black box warning).",
+    },
+    {
+      mistake: "Stopping after 2 weeks because 'it's not working'",
+      why: "Fluoxetine takes 4–6 weeks (sometimes up to 8 weeks due to slow steady state) for full antidepressant effect. Stopping at 2 weeks means stopping before the drug has had a chance to work.",
+      correction: "Counsel at initiation: 'Side effects come first (week 1–2), mood benefit comes later (week 4–8). Don't stop early.' For fluoxetine, full response assessment is at 12 weeks (later than other SSRIs).",
+    },
+    {
+      mistake: "Abrupt discontinuation without counselling about MAOI washout",
+      why: "Fluoxetine's long half-life means discontinuation syndrome is rare. BUT patients may think they can 'start any new antidepressant tomorrow' — they cannot start an MAOI for 5 weeks.",
+      correction: "Counsel: 'Fluoxetine stays in your body for weeks. If a doctor wants to start an MAOI antidepressant, tell them you have taken fluoxetine in the last 5 weeks — they must wait.'",
+    },
+    {
+      mistake: "Not asking about sexual dysfunction",
+      why: "Sexual dysfunction affects 30–50% of patients on SSRIs and is the #1 reason for non-adherence. Patients rarely volunteer it.",
+      correction: "Ask directly at every follow-up: 'Any changes in sexual interest or function?' If present, consider dose reduction, adding bupropion, or switching to a less-impacting agent.",
+    },
+  ],
+
+  /* When NOT to use — red card */
+  whenNotToUse: [
+    {
+      scenario: "Concurrent thioridazine",
+      reason: "Fluoxetine is a strong CYP2D6 inhibitor → raises thioridazine levels dramatically → QTc prolongation → torsades de pointes → sudden death. Absolutely contraindicated.",
+      alternative: "Use a non-CYP2D6-inhibiting SSRI (sertraline, escitalopram) if thioridazine is essential, or use a different antipsychotic.",
+    },
+    {
+      scenario: "Concurrent MAOIs (within 14 days before or 5 weeks after fluoxetine)",
+      reason: "Fatal serotonin syndrome. The 5-week washout after fluoxetine (longest of any SSRI) is non-negotiable due to norfluoxetine's 4–9 day half-life.",
+      alternative: "Wait 14 days after stopping an MAOI before starting fluoxetine. Wait 5 WEEKS after stopping fluoxetine before starting an MAOI.",
+    },
+    {
+      scenario: "Severe hepatic impairment (Child-Pugh C)",
+      reason: "Fluoxetine is hepatically metabolised (CYP2D6). Severe impairment → accumulation of fluoxetine and norfluoxetine → toxicity. Long half-life compounds the problem.",
+      alternative: "Reduce dose drastically (start 10mg alternate days) or use escitalopram (slightly safer hepatic profile). Avoid in severe hepatic failure if possible.",
+    },
+    {
+      scenario: "Anxious/agitated depression (initial presentation)",
+      reason: "Fluoxetine is the most activating SSRI. In anxious/agitated depression, early activation worsens anxiety, jitteriness, and insomnia — leading to early discontinuation.",
+      alternative: "Sertraline (σ1 agonism, anxiolytic) or escitalopram (low interaction profile) are preferred for anxious depression.",
+    },
+    {
+      scenario: "Pregnancy (when sertraline is available)",
+      reason: "Fluoxetine is NOT first choice in pregnancy — sertraline is preferred due to lower placental transfer and shorter fetal exposure. Fluoxetine's long half-life (norfluoxetine 4–9 days) means prolonged fetal exposure. Third-trimester use associated with neonatal adaptation syndrome.",
+      alternative: "Sertraline is the SSRI of choice in pregnancy. Avoid paroxetine (Category D). If on fluoxetine and patient becomes pregnant, weigh risks/benefits — do NOT stop abruptly.",
+    },
+    {
+      scenario: "Lactation (when alternatives available)",
+      reason: "Fluoxetine's long half-life means norfluoxetine accumulates in infant serum (detectable in breastfed infants) — risk of infant irritability, poor sleep, feeding issues.",
+      alternative: "Sertraline is the SSRI of choice in lactation (lowest milk/plasma ratio, undetectable infant levels). If fluoxetine must be used, counsel mother to watch for infant irritability or feeding issues.",
+    },
+  ],
+
+  /* Indian ward pearls */
+  wardPearls: {
+    professorMayAsk: [
+      "What is the mechanism of action of fluoxetine? Why does it take 4–6 weeks (up to 8) to work? (SERT blockade is immediate; clinical effect correlates with 5-HT1A autoreceptor desensitisation and downstream BDNF/neurogenesis. Slow steady state due to norfluoxetine.)",
+      "Why is the MAOI washout 5 weeks for fluoxetine but only 14 days for other SSRIs? (Norfluoxetine half-life 4–9 days; detectable in plasma up to 5 weeks.)",
+      "Which SSRI is approved for bulimia nervosa? (Fluoxetine 60mg OD — only SSRI.)",
+      "Which SSRI is approved for paediatric depression? (Fluoxetine ≥8 years — only SSRI.)",
+      "Why is fluoxetine the strongest CYP2D6 inhibitor and what are the clinical consequences? (Thioridazine/pimozide QTc, TCA toxicity, codeine/tramadol loss of analgesia, tamoxifen reduced efficacy.)",
+      "Why is fluoxetine the most activating SSRI? When is this useful and when is it problematic? (Useful in retarded depression; problematic in anxious/agitated depression.)",
+    ],
+    residentExpects: [
+      "Know the starting dose and titration schedule (20mg → 40mg → 60mg; 10mg start in anxious/paediatric; 60mg target for bulimia)",
+      "Know when to choose fluoxetine vs other SSRIs (retarded depression, bulimia, paediatric, adherence-poor, 'bridge' taper)",
+      "Know the 5-week MAOI washout (longest of any SSRI)",
+      "Know the CYP2D6 interactions and NEVER co-prescribe thioridazine/pimozide",
+      "Know the 'bridge' technique for tapering shorter-acting SSRIs (substitute fluoxetine 20mg for last 1–2 weeks of paroxetine/venlafaxine taper)",
+      "Know paediatric dosing (10–20mg child, up to 60mg adolescent)",
+    ],
+    consultantsDo: [
+      "Use PHQ-9 at every visit for objective monitoring — note 12-week full-response assessment (later than other SSRIs)",
+      "Screen for bipolar disorder (MDQ) before starting any antidepressant — fluoxetine's long half-life prolongs risk window if manic switch occurs",
+      "Match SSRI to depression phenotype — retarded → fluoxetine; anxious → sertraline/escitalopram",
+      "Use fluoxetine as 'bridge' for tapering shorter-acting SSRIs (paroxetine, venlafaxine)",
+      "Avoid fluoxetine in pregnancy — sertraline is first choice",
+      "Combine SSRI + CBT for moderate-severe depression (better outcomes than either alone)",
+      "Consider cost — Jan Aushadhi generic fluoxetine is ₹2–4/tablet",
+    ],
+    internsMiss: [
+      "Forgetting the 5-week MAOI washout (it's 14 days for other SSRIs — but 5 weeks for fluoxetine!)",
+      "Not counselling about the activating effect in anxious patients (fluoxetine worsens anxiety in week 1–2)",
+      "Co-prescribing fluoxetine with tramadol/codeine (loss of analgesia + serotonin syndrome risk)",
+      "Co-prescribing fluoxetine with thioridazine/pimozide (fatal QTc prolongation)",
+      "Not asking about sexual dysfunction (patients rarely volunteer it)",
+      "Not checking sodium in elderly (SIADH risk)",
+      "Not screening for bipolar disorder (manic switch risk — prolonged by long half-life)",
+      "Not involving family in monitoring (critical in Indian joint family system)",
+      "Not providing Tele-MANAS number (14416) for crisis support",
+    ],
+  },
+
+  /* Refined high-yield level */
+  highYieldLevel: "extreme",
+
+  /* Drug family navigation */
+  drugFamilyNav: {
+    familyName: "SSRIs (Selective Serotonin Reuptake Inhibitors)",
+    members: [
+      { name: "Fluoxetine", slug: "fluoxetine", relationship: "Current drug", distinguishing: "Longest half-life (norfluoxetine 4–9 days); 5-week MAOI washout; only SSRI for bulimia & paediatric depression ≥8yr; strongest CYP2D6 inhibitor" },
+      { name: "Sertraline", slug: "sertraline", relationship: "Same class (SSRI)", distinguishing: "SSRI of choice in pregnancy; σ1 agonism; 6 FDA indications; mild CYP2D6" },
+      { name: "Escitalopram", slug: "escitalopram", relationship: "Same class (SSRI)", distinguishing: "S-enantiomer of citalopram; lowest CYP interactions; QTc watch" },
+      { name: "Paroxetine", slug: "paroxetine", relationship: "Same class (SSRI)", distinguishing: "Shortest half-life (worst discontinuation); Category D; tamoxifen interaction; strong CYP2D6 like fluoxetine" },
+      { name: "Citalopram", slug: "citalopram", relationship: "Same class (SSRI)", distinguishing: "Racemic parent of escitalopram; QTc dose-dependent; 40mg cap" },
+      { name: "Fluvoxamine", slug: "fluvoxamine", relationship: "Same class (SSRI)", distinguishing: "OCD-only FDA indication; CYP1A2 inhibitor; tizanidine contraindicated" },
+    ],
+  },
+
+  /* Learning time breakdown */
+  learningTimeBreakdown: {
+    read: "20 min",
+    study: "50 min",
+    revision: "10 min",
+  },
+
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
   reviewers: [
-    "Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Prozac & Sarafem labels, NICE CG91 & NG69, APA Practice Guideline",
+    "Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Prozac & Sarafem labels, NICE CG91 & NG69, APA Practice Guideline, KD Tripathi 8e, IPS Depression Guidelines, NMC CBME Curriculum",
   ],
 };
