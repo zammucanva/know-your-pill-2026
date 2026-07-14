@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { CardPrimitive, CardBody, CardFooter } from "@/components/kyp/ui/card-primitive";
 import { drugClasses } from "@/lib/kyp/data";
 import type { Substance } from "@/lib/kyp/data";
@@ -9,6 +10,7 @@ import { cn } from "@/lib/utils";
 /**
  * ClinicalCard — a substance-specific clinical module card.
  * Uses the substance's drug class accent color for the icon and neurotransmitter label.
+ * Displays custom artwork when available.
  *
  * Used by: SubstanceUse section grid.
  */
@@ -29,19 +31,35 @@ export function ClinicalCard({ substance, index = 0, className }: ClinicalCardPr
       transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.4) }}
       className={cn("h-full", className)}
     >
-      <CardPrimitive href={substance.href} variant="flat" interactive className="h-full">
-        <CardBody className="flex h-full flex-col">
-          <div className="flex items-start justify-between">
-            <span
-              className={cn(
-                "flex h-10 w-10 items-center justify-center rounded-xl border border-border/70 bg-background/60",
-                drugClass.accentClass
-              )}
-            >
-              <span className="h-2.5 w-2.5 rounded-full bg-current" />
-            </span>
+      <CardPrimitive href={substance.href} variant="flat" interactive className="h-full overflow-hidden">
+        {/* Custom artwork — replaces generic icon when available */}
+        {substance.artwork ? (
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl">
+            <Image
+              src={substance.artwork}
+              alt={substance.artworkAlt ?? `${substance.name} molecule artwork`}
+              fill
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
           </div>
+        ) : (
+          <CardBody className="flex h-full flex-col">
+            <div className="flex items-start justify-between">
+              <span
+                className={cn(
+                  "flex h-10 w-10 items-center justify-center rounded-xl border border-border/70 bg-background/60",
+                  drugClass.accentClass
+                )}
+              >
+                <span className="h-2.5 w-2.5 rounded-full bg-current" />
+              </span>
+            </div>
+          </CardBody>
+        )}
 
+        <CardBody className="flex h-full flex-col">
           <div className="mt-4">
             <p className="text-overline text-muted-foreground">{drugClass.name}</p>
             <h3 className="mt-1 text-h3 leading-tight">{substance.name}</h3>

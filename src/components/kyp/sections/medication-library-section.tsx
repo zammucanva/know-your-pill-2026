@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
@@ -16,7 +17,22 @@ export function MedicationLibrarySection() {
           title="Explore Medications"
           description="Browse medications by class and understand how different treatments affect the brain and body through simplified explanations and visual guidance."
         />
-        <div className="mt-10 grid gap-5 sm:grid-cols-2">
+
+        {/* Custom artwork banner */}
+        <div className="mt-8 mb-10 overflow-hidden rounded-xl">
+          <div className="relative aspect-[16/5] w-full">
+            <Image
+              src="/artwork/med-library.png"
+              alt="Medication Library — visual guide to psychiatric medications, drug classes, and neuroscience education"
+              fill
+              sizes="(max-width: 768px) 100vw, 80rem"
+              className="object-cover"
+              priority={false}
+            />
+          </div>
+        </div>
+
+        <div className="grid gap-5 sm:grid-cols-2">
           {medicationClasses.map((med, i) => (
             <MedicationCard key={med.id} med={med} index={i} />
           ))}
