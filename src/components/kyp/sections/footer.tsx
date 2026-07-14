@@ -1,6 +1,7 @@
 "use client";
 
-import { Pill, Github, Mail } from "lucide-react";
+import Image from "next/image";
+import { Github, Mail } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 
 const footerLinks = [
@@ -53,8 +54,14 @@ export function Footer() {
           {/* Brand column */}
           <div>
             <div className="flex items-center gap-2.5">
-              <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-neural text-primary-foreground">
-                <Pill className="h-4.5 w-4.5 rotate-45" strokeWidth={2.5} />
+              <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-xl">
+                <Image
+                  src="/logo-navy-128.png"
+                  alt="Know Your Pill logo"
+                  fill
+                  sizes="36px"
+                  className="object-contain"
+                />
               </span>
               <div className="flex flex-col leading-none">
                 <strong className="font-serif text-base font-semibold">Know Your Pill</strong>
