@@ -57,7 +57,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      style={{ "--font-playfair": playfair.style.fontFamily } as React.CSSProperties}
+    >
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} font-sans antialiased`}
       >

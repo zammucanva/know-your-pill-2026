@@ -1016,6 +1016,838 @@ export const paroxetine: Drug = {
       "The most dangerous combinations are: (1) tamoxifen — NEVER combine (paroxetine stops tamoxifen working); (2) other medicines that affect serotonin — your doctor or pharmacist will check for these automatically; (3) MAOI antidepressants — wait 14 days between the two. Paroxetine also blocks a liver enzyme called CYP2D6, which affects many other medicines (some painkillers like codeine and tramadol, heart medicines like metoprolol, and other psychiatric medicines). Always tell your pharmacist you are on paroxetine before starting any new medicine, including over-the-counter products. Avoid alcohol — it can make you more drowsy and worsen mood symptoms.",
   },
 
+  /* ---- India-first extensions ---- */
+
+  /* Indian clinical practice */
+  indianPractice: {
+    prescriptionStatus: "Schedule H",
+    brands: [
+      { name: "Paxil", manufacturer: "GSK", strengths: "10mg, 20mg, 30mg, 40mg", note: "Originator brand — among the most recognised paroxetine brands in India" },
+      { name: "Pexep", manufacturer: "Sun Pharma", strengths: "10mg, 20mg, 30mg, 40mg; CR 12.5mg, 25mg" },
+      { name: "Paxidep", manufacturer: "Intas", strengths: "10mg, 20mg, 30mg, 40mg; CR 12.5mg, 25mg" },
+      { name: "Paroxet", manufacturer: "Cipla", strengths: "10mg, 20mg, 30mg, 40mg" },
+    ],
+    typicalDoses:
+      "Depression: start 20mg OD, titrate by 10mg every 1-2 weeks to 20-50mg OD (morning OR night — sedating, many Indian psychiatrists give at night). OCD: 20-60mg OD. Panic/Social Anxiety/PTSD: start 10mg OD (lower start to avoid early activation), titrate to 20-50mg OD. GAD: 20-50mg OD. PMDD: 12.5-25mg CR (luteal or continuous). Vasomotor symptoms: 7.5mg CR (Brisdelle-equivalent — off-label in India). In Indian government hospitals, starting dose is often 10mg OD to minimise early side effects given limited follow-up capacity. Maximum: 50mg/day (60mg for OCD). Controlled-release (CR) formulation preferred when available — smoother profile, milder discontinuation.",
+    prescribingScenarios: [
+      "Generally NOT first-line SSRI in Indian primary care — sertraline and escitalopram are preferred. Paroxetine is reserved for specific niches.",
+      "Used in Indian psychiatry OPDs for severe anxiety disorders where sedation is therapeutically useful (e.g., panic disorder with severe anticipatory anxiety, severe social anxiety).",
+      "Niche use in breast-cancer survivors with vasomotor symptoms (hot flushes) who cannot take HRT — paroxetine 7.5mg CR. CAUTION: only if not on tamoxifen.",
+      "Occasionally used off-label for premature ejaculation in Indian urology/psychiatry practice — 20mg OD or 4-6 hours before intercourse.",
+      "AVOIDED in pregnant women in Indian practice (Category D) — switch to sertraline if pregnancy is planned or detected.",
+    ],
+    availability: {
+      governmentHospitals: true,
+      privatePharmacies: true,
+      urban: true,
+      rural: true,
+      note: "Available across India but less commonly stocked than sertraline/escitalopram in government hospitals under DMHP. Branded paroxetine (Paxil, Pexep, Paxidep, Paroxet) is widely available in private pharmacies. Generic paroxetine is occasionally stocked in Jan Aushadhi Kendras but availability is variable — sertraline is preferred for cost-sensitive settings.",
+    },
+    costCategory: "moderate",
+    costNote: "Paroxetine is moderately priced in India. Branded versions (Paxil, Pexep, Paxidep, Paroxet) cost approximately ₹5-12 per 20mg tablet — more expensive than generic sertraline (₹2-5/tablet). Controlled-release (CR) formulations cost ₹8-15 per tablet. Cost varies by manufacturer and region. Less commonly available at Jan Aushadhi Kendras compared to sertraline. 🟡 Moderate cost.",
+    monitoring:
+      "In Indian government hospitals, monitoring is primarily clinical (symptom-based) due to resource constraints. PHQ-9 is used in tertiary centres and DMHP clinics. CRITICAL additional monitoring for paroxetine vs other SSRIs: (1) pregnancy test before initiation in women of reproductive age + reliable contraception throughout; (2) serum sodium in elderly in first 2 weeks (highest SIADH risk among SSRIs); (3) weight at baseline, 4 weeks, 12 weeks (most weight gain of any SSRI); (4) blood pressure if on tamoxifen history or combination with NSAIDs/anticoagulants (bleeding); (5) liver function if hepatic impairment. Follow-up schedule: 2 weeks (tolerability), 4 weeks (early response), 6 weeks (dose escalation decision), 12 weeks (full response assessment). In private practice, monitoring aligns more closely with international guidelines.",
+    patientCounselling: [
+      "Take at NIGHT with food — paroxetine is the most sedating SSRI and taking it at night helps with sleep and reduces daytime drowsiness.",
+      "It may take 4-6 weeks to feel the full benefit — don't stop early just because you don't feel better yet.",
+      "DO NOT STOP ABRUPTLY — paroxetine has the WORST discontinuation syndrome of any SSRI because of its short half-life. Even missing 1-2 doses can trigger withdrawal (dizziness, 'brain zaps', nausea, irritability) within 24-48 hours. Your doctor will taper the dose slowly over weeks to months.",
+      "If you are a woman who could become pregnant, use reliable contraception throughout treatment. Paroxetine can harm a developing baby (especially in the first 3 months — risk of heart defects). Tell your doctor immediately if you become pregnant — do NOT stop on your own (the doctor will switch you to a safer medicine).",
+      "NEVER combine with tamoxifen (breast cancer medicine) — paroxetine stops tamoxifen from working. Tell every doctor you see that you are on paroxetine.",
+      "Avoid alcohol — it can worsen your mood symptoms and increase drowsiness (paroxetine is already sedating).",
+      "If you feel worse, more agitated, or have new suicidal thoughts in the first month, contact your doctor immediately or call Tele-MANAS at 14416.",
+      "Common side effects in the first 1-2 weeks (nausea, sleepiness, dry mouth, headache) usually settle. Compared to other SSRIs, paroxetine is MORE likely to cause weight gain, sleepiness, dry mouth, constipation, and sexual side effects (up to half of patients).",
+      "Sexual side effects (reduced interest, difficulty reaching orgasm) are very common with paroxetine — sometimes the highest among SSRIs. If they bother you, your doctor can help. Don't stop the medicine without discussing alternatives.",
+      "Follow-up visits at 2 weeks, 4 weeks, and 6 weeks are important — please attend even if you're feeling better. Do NOT stop on your own between visits.",
+    ],
+  },
+
+  /* NMC CBME competency mapping */
+  cbmeMapping: {
+    subject: "Pharmacology",
+    mbbsYear: "Second Professional",
+    topic: "Drugs acting on Central Nervous System — Antidepressants (SSRIs)",
+    competencyCodes: ["PH7.3", "PH7.4", "PY3.2"],
+    competencyDescriptions: [
+      "PH7.3: Describe the mechanism of action, pharmacological actions, adverse effects, contraindications, and therapeutic uses of antidepressant drugs with emphasis on SSRIs — including paroxetine's unique muscarinic M1 antagonism, CYP2D6 inhibition, and pregnancy Category D status.",
+      "PH7.4: Explain the rationale for drug selection, dose individualisation, and monitoring of antidepressant therapy in different clinical scenarios — including why paroxetine is generally avoided as first-line and reserved for specific niches (vasomotor symptoms, premature ejaculation).",
+      "PY3.2 (Psychiatry, Final Professional): Describe the pharmacological management of mood disorders, including SSRI selection (avoiding paroxetine in pregnancy, with tamoxifen, in elderly with cognitive impairment), augmentation strategies, and discontinuation syndrome management.",
+    ],
+    integrationSubjects: ["Psychiatry", "General Medicine", "Obstetrics & Gynaecology", "Oncology"],
+  },
+
+  /* Exam Lens — structured by Indian examination */
+  examLens: {
+    mbbs: {
+      viva: [
+        "What is the mechanism of action of paroxetine? (SERT blockade → ↑ synaptic 5-HT → 5-HT1A autoreceptor desensitisation over 1-2 weeks → ↑ serotonergic throughput → downstream BDNF/neurogenesis over 4-6 weeks. UNIQUE: paroxetine is also a muscarinic M1 antagonist — explains anticholinergic & sedating profile.)",
+        "Why is paroxetine generally avoided as first-line SSRI? (Shortest half-life = worst discontinuation syndrome; Category D in pregnancy; strongest CYP2D6 inhibitor = tamoxifen interaction; most sedating/weight gain/anticholinergic among SSRIs.)",
+        "Which SSRI is preferred in pregnancy, and which is CONTRAINDICATED? (Preferred: sertraline. CONTRAINDICATED: paroxetine — Category D, 1st-trimester cardiac septal defects.)",
+        "What is the paroxetine-tamoxifen interaction and why is it an absolute contraindication? (Paroxetine is a strong CYP2D6 inhibitor. Tamoxifen needs CYP2D6 to be converted to endoxifen (its active metabolite). Paroxetine blocks this conversion → tamoxifen becomes ineffective → breast cancer recurrence.)",
+        "What is the FDA pregnancy category of paroxetine? (Category D — positive evidence of human fetal risk. 1st-trimester cardiac septal defects (ASD, VSD). Avoid; if patient becomes pregnant, switch to sertraline.)",
+        "Which SSRI has the shortest half-life and worst discontinuation syndrome? (Paroxetine — half-life ~21 hours, no active metabolite. Discontinuation syndrome is worst of any SSRI. Mnemonic: FINISH — Flu-like, Insomnia, Nausea, Imbalance, Sensory/brain zaps, Hyperarousal.)",
+      ],
+      practical: [
+        "Counsel a patient starting paroxetine for panic disorder — address onset delay, night dosing for sedation, discontinuation syndrome, pregnancy/contraception, and follow-up.",
+        "Write a prescription for paroxetine for a 30-year-old with panic disorder (dose: 10mg OD at night with food, titrate to 20-40mg). Include a contraception note if female of reproductive age.",
+        "Identify the contraindications of paroxetine from a given clinical scenario (e.g., patient on tamoxifen for breast cancer, or pregnant patient, or patient on MAOI).",
+        "Explain the monitoring schedule for a patient on paroxetine (2/4/6/12 weeks, PHQ-9, pregnancy test, weight, sodium in elderly, suicidality <25).",
+      ],
+      longAnswer: [
+        "Classify antidepressants. Describe the mechanism of action, pharmacokinetics, adverse effects, and therapeutic uses of SSRIs with special reference to paroxetine. Discuss why paroxetine is generally avoided as first-line SSRI — covering pregnancy Category D, CYP2D6 inhibition (tamoxifen interaction), short half-life (discontinuation), anticholinergic/weight-gain profile, and its niche use for vasomotor symptoms and premature ejaculation.",
+        "A 32-year-old woman with panic disorder is on paroxetine 20mg OD. She is now 6 weeks pregnant and wants to know if she can continue. Discuss the pharmacological management — addressing the risks of paroxetine in pregnancy (Category D, cardiac defects), the risks of untreated maternal illness, switching strategies (paroxetine → sertraline), and the role of psychological therapies. Also address how to manage the discontinuation syndrome during the switch.",
+      ],
+    },
+    neetPg: {
+      highYield: [
+        "Paroxetine = SSRI with SHORTEST half-life (~21h) and WORST discontinuation syndrome. Never stop abruptly — taper over weeks to months.",
+        "Paroxetine = Pregnancy Category D — 1st-trimester cardiac septal defects (ASD, VSD). AVOID; switch to sertraline if pregnancy detected.",
+        "Paroxetine = STRONGEST CYP2D6 inhibitor among SSRIs. ABSOLUTE CONTRAINDICATION with tamoxifen (blocks conversion to endoxifen → breast cancer recurrence).",
+        "Paroxetine = ONLY non-hormonal FDA-approved drug for vasomotor symptoms of menopause (Brisdelle 7.5mg). Niche use in breast-cancer survivors who can't take HRT — but ONLY if not on tamoxifen.",
+        "Paroxetine = MOST sedating, MOST weight gain, MOST anticholinergic (muscarinic M1 antagonist — UNIQUE among SSRIs) of any SSRI. Avoid in elderly with cognitive impairment.",
+        "Mechanism: SERT blockade (hours) → 5-HT1A autoreceptor desensitisation (1-2 weeks) → BDNF/neurogenesis (4-6 weeks). PLUS unique muscarinic M1 antagonism.",
+        "Half-life ~21h, no active metabolite → worst discontinuation. Mnemonic: FINISH — Flu-like, Insomnia, Nausea, Imbalance, Sensory (brain zaps), Hyperarousal.",
+        "Discontinuation ranking (worst to mildest): Paroxetine > Venlafaxine > Sertraline > Escitalopram > Fluoxetine. Fluoxetine can be substituted at end of paroxetine taper to smooth discontinuation.",
+        "FDA indications: MDD, OCD, Panic Disorder, Social Anxiety Disorder, GAD, PTSD, PMDD, Vasomotor Symptoms (8 total — most of any SSRI).",
+        "Off-label use: premature ejaculation (20mg OD or PRN before intercourse). Mechanism: sexual side effect exploited therapeutically.",
+      ],
+      pyqConcepts: [
+        "NEET PG 2019: Which SSRI has the shortest half-life and worst discontinuation syndrome? (Answer: Paroxetine — 21h. Fluoxetine is longest at 1-4 days.)",
+        "NEET PG 2020: A patient on SSRI presents with agitation, clonus, hyperreflexia, and fever. Diagnosis? (Answer: Serotonin syndrome. Treat with cyproheptadine.)",
+        "NEET PG 2021: A breast-cancer survivor on tamoxifen develops depression. Which SSRI is CONTRAINDICATED? (Answer: Paroxetine — strong CYP2D6 inhibitor, blocks tamoxifen → endoxifen conversion. Use sertraline or venlafaxine instead.)",
+        "NEET PG 2022: A pregnant woman is on paroxetine for depression. What is the fetal risk? (Answer: Category D — 1st-trimester cardiac septal defects (ASD, VSD). Switch to sertraline.)",
+        "INICET 2021: Which SSRI is most likely to cause SIADH in an elderly female? (Answer: All SSRIs can, but paroxetine and fluoxetine have the highest risk — paroxetine due to anticholinergic + serotonergic effects.)",
+      ],
+    },
+    inicet: {
+      clinicalReasoning: [
+        "A 32-year-old woman with panic disorder on paroxetine 20mg OD calls you — she just found out she is 6 weeks pregnant. What is your management? (Answer: Do NOT stop abruptly (discontinuation syndrome). Switch to sertraline 50mg OD over a cross-taper of 1-2 weeks. Paroxetine is Category D — 1st-trimester cardiac septal defects. Sertraline is the SSRI of choice in pregnancy. Counsel about fetal cardiac ultrasound at 18-20 weeks. Involve obstetrician.)",
+        "A 55-year-old breast-cancer survivor on tamoxifen for 2 years presents with moderate depression. She was started on paroxetine 20mg by her GP 3 weeks ago. What is your action? (Answer: STOP paroxetine immediately — absolute contraindication. Paroxetine is a strong CYP2D6 inhibitor, blocks tamoxifen → endoxifen conversion, increasing breast cancer recurrence risk. Switch to sertraline (minimal CYP2D6 effect) or venlafaxine (preferred in breast cancer). Counsel GP about the interaction. Reassess depression severity.)",
+        "A 28-year-old man on paroxetine 40mg OD for 6 months feels better and stops the medication abruptly. Three days later, he presents with dizziness, 'electric shocks' in his head, nausea, irritability, and insomnia. What is the diagnosis and management? (Answer: SSRI discontinuation syndrome. Worst with paroxetine due to short half-life (21h) and no active metabolite. Management: restart paroxetine at previous dose, then taper slowly over 4-8 weeks. Alternatively, substitute fluoxetine 20mg for the last 2 weeks of taper (long half-life self-tapers). Counsel: never stop paroxetine abruptly.)",
+        "A 68-year-old man with mild cognitive impairment and depression is being considered for an SSRI. The intern suggests paroxetine. Why do you overrule this? (Answer: Paroxetine is the WORST SSRI choice in elderly — anticholinergic (muscarinic M1 antagonist) worsens cognition and urinary hesitancy; highest SIADH risk; highest fall risk due to sedation; short half-life causes discontinuation with missed doses (common in elderly). Use sertraline or escitalopram instead — minimal CYP interactions, low anticholinergic, low weight gain.)",
+      ],
+    },
+    fmge: {
+      frequentlyTested: [
+        "Paroxetine mechanism: SERT blockade + muscarinic M1 antagonism (UNIQUE among SSRIs).",
+        "Pregnancy Category D — 1st-trimester cardiac septal defects (ASD, VSD). AVOID in pregnancy.",
+        "Shortest half-life of any SSRI (~21h) → WORST discontinuation syndrome. Never stop abruptly.",
+        "Strongest CYP2D6 inhibitor among SSRIs → ABSOLUTE CONTRAINDICATION with tamoxifen.",
+        "Most sedating, most weight gain, most anticholinergic of any SSRI. Avoid in elderly with cognitive impairment.",
+        "Only non-hormonal FDA-approved drug for vasomotor symptoms (hot flushes) — Brisdelle 7.5mg.",
+        "Onset of action: 4-6 weeks (same as all SSRIs).",
+        "Most common side effect: sexual dysfunction (40-50% — highest among SSRIs, exploited for premature ejaculation).",
+        "Black box warning: suicidal thoughts in patients under 25.",
+        "Serotonin syndrome: clonus + hyperreflexia + fever + agitation. Treatment: cyproheptadine.",
+      ],
+    },
+    psychiatryResidency: {
+      advancedPearls: [
+        "Paroxetine is the most potent SERT binder in vitro among SSRIs — but this does NOT translate to superior clinical efficacy. The Cipriani 2018 Lancet network meta-analysis found paroxetine effective but with higher dropout for side effects than sertraline/escitalopram. It is generally reserved for specific niches (vasomotor symptoms, premature ejaculation) or when sedation is therapeutically useful.",
+        "Pregnancy: paroxetine is the ONLY SSRI with FDA Category D. Two large studies (GlaxoSmithKline 2005, BMJ 2015) confirmed a 1.5-2× increased risk of 1st-trimester cardiac septal defects (ASD, VSD). Absolute risk is small (~1% vs 0.7% baseline), but paroxetine is avoided in pregnancy. If a patient on paroxetine becomes pregnant: do NOT stop abruptly (discontinuation); cross-taper to sertraline over 1-2 weeks; schedule fetal echocardiogram at 18-20 weeks.",
+        "Tamoxifen interaction: paroxetine is a strong CYP2D6 inhibitor. Tamoxifen is a prodrug that requires CYP2D6 to be converted to endoxifen (its active metabolite). Co-prescription reduces endoxifen levels by 50-75%, effectively rendering tamoxifen ineffective. This is an ABSOLUTE CONTRAINDICATION. Among antidepressants: AVOID paroxetine, fluoxetine, bupropion (strong CYP2D6 inhibitors). PREFERRED in tamoxifen patients: sertraline (mild), escitalopram (minimal), venlafaxine (minimal), mirtazapine (none).",
+        "Discontinuation syndrome: paroxetine has the WORST discontinuation of any SSRI due to (1) shortest half-life (21h), (2) no active metabolite. Symptoms start within 24-48h of missed doses. Management: restart paroxetine at previous dose, then taper over 4-8 weeks (slower than other SSRIs). For the last 2 weeks of taper, substitute fluoxetine 20mg (long half-life, self-tapers). Patient counselling is critical — many patients experience discontinuation even with slow tapers.",
+        "Pharmacokinetics: paroxetine is metabolised by CYP2D6 (and is itself a strong CYP2D6 inhibitor — autoinhibition causes non-linear kinetics). Half-life ~21h. Poor CYP2D6 metabolisers (5-10% of Indians) have 2-10× higher levels — start at half the dose. No active metabolite (unlike fluoxetine → norfluoxetine).",
+        "Off-label uses: (1) Premature ejaculation — 20mg OD or 4-6h before intercourse; exploits the high sexual-dysfunction side effect. (2) Vasomotor symptoms of menopause — Brisdelle 7.5mg CR is the only non-hormonal FDA-approved treatment. Mechanism unclear but may involve serotonergic modulation of the hypothalamic thermoregulatory centre. (3) Refractory anger/irritability in personality disorders.",
+        "Bipolar depression: paroxetine (and any SSRI) can trigger a manic switch. Always screen for bipolar disorder (MDQ questionnaire) before initiating. If bipolar confirmed, use mood stabiliser first; SSRI only if mood stabiliser alone is insufficient. Among SSRIs, paroxetine and fluoxetine have similar manic-switch risk; bupropion may have lower risk.",
+      ],
+    },
+  },
+
+  /* International vs Indian guideline comparisons */
+  guidelineComparisons: [
+    {
+      topic: "First-line SSRI for depression",
+      internationalSource: "NICE CG91 / APA Practice Guideline",
+      internationalRecommendation: "SSRIs are first-line for moderate-severe depression. Paroxetine is effective but NOT preferred as first-line due to discontinuation syndrome, weight gain, sedation, and drug interactions. Sertraline or escitalopram are usually chosen first.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS guidelines also recommend SSRIs as first-line for depression. Paroxetine is generally NOT the first choice — sertraline and escitalopram are preferred in Indian practice. Paroxetine is reserved for specific niches (severe anxiety with sedation desired, vasomotor symptoms, premature ejaculation).",
+    },
+    {
+      topic: "Use in pregnancy (CRITICAL)",
+      internationalSource: "FDA / APA / ACOG",
+      internationalRecommendation: "Paroxetine is the ONLY SSRI with FDA Category D — positive evidence of human fetal risk. 1st-trimester cardiac septal defects (ASD, VSD). AVOID in pregnancy. If a patient on paroxetine becomes pregnant, switch to sertraline. Third-trimester: all SSRIs carry neonatal adaptation syndrome risk.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs with international guidelines — AVOID paroxetine in pregnancy, especially in the 1st trimester. In Indian practice, all women of reproductive age on paroxetine should use reliable contraception. If pregnancy is detected: do NOT stop abruptly (discontinuation); cross-taper to sertraline over 1-2 weeks; involve obstetrician; schedule fetal echocardiogram at 18-20 weeks.",
+    },
+    {
+      topic: "Tamoxifen co-prescription (CRITICAL)",
+      internationalSource: "FDA / ASCO Clinical Practice Guideline",
+      internationalRecommendation: "Paroxetine is ABSOLUTELY CONTRAINDICATED in patients on tamoxifen. Paroxetine is a strong CYP2D6 inhibitor; tamoxifen requires CYP2D6 to be converted to endoxifen (its active metabolite). Co-prescription increases breast cancer recurrence risk. Use sertraline, escitalopram, venlafaxine, or mirtazapine instead.",
+      indianSource: "Indian Psychiatric Society (IPS) / Indian oncology practice",
+      indianRecommendation: "IPS concurs — paroxetine is contraindicated with tamoxifen. In Indian oncology-psychiatry liaison practice, this interaction is increasingly recognised. Use venlafaxine (preferred — minimal CYP2D6 effect and also treats hot flushes) or sertraline. Educate the patient to inform every doctor of her tamoxifen status before any antidepressant is prescribed.",
+    },
+    {
+      topic: "Monitoring during treatment",
+      internationalSource: "NICE / APA / FDA",
+      internationalRecommendation: "Weekly contact in first month, then every 2-4 weeks until stable. PHQ-9 at baseline, 4, 8, 12 weeks. For paroxetine specifically: pregnancy test before initiation + reliable contraception; weight at baseline/4/12 weeks; serum sodium in elderly in first 2 weeks; blood pressure if co-prescribed NSAIDs/anticoagulants.",
+      indianSource: null,
+      indianRecommendation: "No dedicated IPS guideline on paroxetine monitoring. In Indian government hospitals, monitoring is primarily clinical due to resource constraints. PHQ-9 is used in tertiary centres and DMHP clinics. The pregnancy test and contraception counselling are CRITICAL in Indian practice given the high rate of unplanned pregnancies. Family involvement in monitoring is emphasised given the joint family system.",
+    },
+    {
+      topic: "Use in lactation",
+      internationalSource: "AAP / LactMed",
+      internationalRecommendation: "Paroxetine is actually considered RELATIVELY SAFE in breastfeeding — milk/plasma ratio is low (~0.6-1.0), infant serum levels usually undetectable, no adverse effects on infant development demonstrated. However, in Indian practice, sertraline is still preferred due to overall safety profile.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS notes that while paroxetine is relatively safe in lactation (low infant serum levels), sertraline remains the SSRI of choice in breastfeeding mothers in Indian practice. The decision is individualised — paroxetine is acceptable if the mother is already stable on it and breastfeeding is strongly desired. Counsel mother to watch for infant irritability, sedation, or feeding issues.",
+    },
+  ],
+
+  /* Indian reference sources */
+  indianReferences: [
+    {
+      source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition",
+      type: "textbook",
+      section: "Chapter 33 — Antidepressant Drugs (Paroxetine subsection)",
+    },
+    {
+      source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression",
+      type: "guideline",
+      section: "Section on pharmacotherapy — SSRIs (with paroxetine-specific cautions on pregnancy and tamoxifen)",
+    },
+    {
+      source: "NMC CBME Curriculum — Pharmacology (Second Professional)",
+      type: "curriculum",
+      section: "Topic: Drugs acting on CNS — Antidepressants (PH7.3, PH7.4)",
+    },
+    {
+      source: "NMC CBME Curriculum — Psychiatry (Final Professional)",
+      type: "curriculum",
+      section: "Topic: Psychopharmacology — Mood disorders (PY3.2)",
+    },
+    {
+      source: "National Mental Health Programme (NMHP) / District Mental Health Programme (DMHP)",
+      type: "regulatory",
+      section: "Essential medicines for mental health — SSRIs (paroxetine less commonly stocked than sertraline)",
+    },
+    {
+      source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416",
+      type: "regulatory",
+      section: "Mental health support resource for patients on antidepressants",
+      url: "tel:14416",
+    },
+    {
+      source: "CDSCO — Central Drugs Standard Control Organisation",
+      type: "regulatory",
+      section: "Paroxetine — Schedule H prescription status; pregnancy Category D labelling requirements",
+    },
+  ],
+
+  /* Section difficulty mapping */
+  sectionDifficulty: {
+    "top": "mbbs",
+    "quick-facts": "mbbs",
+    "learning-objectives": "mbbs",
+    "knowledge-graph": "pg",
+    "mechanism": "mbbs",
+    "brain-regions": "pg",
+    "neurotransmitters": "pg",
+    "neural-pathways": "resident",
+    "timeline": "mbbs",
+    "clinical-uses": "mbbs",
+    "side-effects": "mbbs",
+    "monitoring": "pg",
+    "contraindications": "mbbs",
+    "interactions": "pg",
+    "patient-education": "mbbs",
+    "clinical-pearls": "pg",
+    "exam-lens": "mbbs",
+    "memory-tricks": "mbbs",
+    "clinical-case": "pg",
+    "comparison": "pg",
+    "indian-practice": "mbbs",
+    "guideline-comparison": "resident",
+    "related-drugs": "pg",
+    "high-yield-summary": "mbbs",
+    "faq": "mbbs",
+    "references": "resident",
+  },
+
+  /* ---- India Layer extensions (platform-wide) ---- */
+
+  /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
+  evidenceHierarchy: {
+    international: [
+      { source: "NICE CG91", recommendation: "SSRIs are first-line for moderate-severe depression. Paroxetine is effective but not preferred first-line due to discontinuation syndrome, weight gain, sedation, and drug interactions." },
+      { source: "APA Practice Guideline", recommendation: "SSRI first-line for MDD. Paroxetine generally avoided when drug interactions are a concern (strong CYP2D6 inhibitor) or in pregnancy (Category D)." },
+      { source: "FDA", recommendation: "Approved for 8 indications: MDD, OCD, Panic, Social Anxiety, GAD, PTSD, PMDD, Vasomotor Symptoms. Pregnancy Category D. Black box warning for suicidality <25." },
+      { source: "ACOG Committee Opinion 753", recommendation: "Paroxetine should be avoided in pregnancy due to 1st-trimester cardiac defect risk. Switch to sertraline if pregnancy is planned or detected." },
+      { source: "ASCO Clinical Practice Guideline", recommendation: "Paroxetine is contraindicated in patients on tamoxifen — strong CYP2D6 inhibition reduces endoxifen formation. Use venlafaxine, sertraline, or escitalopram instead." },
+      { source: "WHO mhGAP", recommendation: "SSRIs recommended as first-line antidepressants in the Mental Health Gap Action Programme — paroxetine less preferred due to discontinuation and interaction profile." },
+      { source: "Cipriani A et al. Lancet 2018", recommendation: "Network meta-analysis of 21 antidepressants — paroxetine is effective but has higher dropout for side effects than sertraline/escitalopram." },
+      { source: "Maudsley Prescribing Guidelines, 14th edition", recommendation: "Paroxetine has the worst discontinuation syndrome of any SSRI; avoid in elderly (anticholinergic); absolute contraindication with tamoxifen." },
+    ],
+    indian: [
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS guidelines recommend SSRIs as first-line for depression. Paroxetine is generally NOT the first choice — sertraline and escitalopram are preferred in Indian practice." },
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS concurs with international guidelines — AVOID paroxetine in pregnancy (Category D, 1st-trimester cardiac defects) and with tamoxifen (CYP2D6 inhibition)." },
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS recommends that all women of reproductive age on paroxetine use reliable contraception, and that patients on paroxetine are educated about the discontinuation syndrome (worst of any SSRI)." },
+      { source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition", recommendation: "Standard Indian pharmacology textbook — describes paroxetine's unique muscarinic M1 antagonism, strong CYP2D6 inhibition, and Category D pregnancy status." },
+      { source: "NMC CBME Curriculum", recommendation: "Paroxetine included in PH7.3/PH7.4 competencies with emphasis on its unique adverse-effect profile and contraindications." },
+      { source: "Indian oncology practice", recommendation: "Paroxetine-tamoxifen interaction increasingly recognised in Indian oncology-psychiatry liaison practice — venlafaxine preferred in breast-cancer survivors." },
+      { source: null, recommendation: "No dedicated IPS guideline on paroxetine monitoring frequency. Current section reflects accepted clinical practice and internationally accepted evidence." },
+    ],
+    indianClinicalPractice:
+      "In Indian practice, paroxetine is NOT a first-line SSRI — sertraline and escitalopram are preferred due to better tolerability, lower cost, and fewer drug interactions. Paroxetine is reserved for specific niches: (1) severe anxiety with desired sedation, (2) vasomotor symptoms in breast-cancer survivors (NOT on tamoxifen), (3) premature ejaculation, (4) refractory OCD. Indian brands include Paxil (GSK), Pexep (Sun Pharma), Paxidep (Intas), and Paroxet (Cipla). Cost is moderate (₹5-12 per 20mg tablet — more expensive than generic sertraline). Starting dose in Indian government hospitals is often 10mg OD (lower than Western guidelines) to minimise early side effects. CRITICAL: pregnancy test and contraception in women of reproductive age; AVOID in tamoxifen patients; taper very slowly (over weeks-months, not weeks). Family involvement in monitoring is emphasised given the joint family system.",
+  },
+
+  /* Indian encounter context — where you'll see this drug */
+  indianEncounterContext: {
+    governmentHospitals:
+      "NOT commonly used as first-line SSRI in government hospital psychiatry OPDs. Available through DMHP but less commonly stocked than sertraline. When used, starting dose 10mg OD. Monitoring is primarily clinical (symptom-based) due to resource constraints. Reserved for specific niches (severe anxiety, vasomotor symptoms, premature ejaculation).",
+    privateHospitals:
+      "Used as second-line SSRI in private psychiatry practice. Preferred in patients where sedation is therapeutically useful (severe panic disorder with anticipatory anxiety, severe social anxiety). Starting dose 10-20mg OD at night. PHQ-9 monitoring at 2/4/6/12 weeks. CRITICAL: pregnancy test in women of reproductive age + reliable contraception. Avoid in elderly with cognitive impairment (anticholinergic). Patient counselling is more detailed — especially about discontinuation syndrome and pregnancy.",
+    medicalColleges:
+      "Teaching drug for SSRI pharmacology — emphasised as the SSRI with the most 'caveats' (Category D, tamoxifen interaction, worst discontinuation, anticholinergic). Used in pharmacology practicals (prescription writing, patient counselling, recognising discontinuation syndrome). Examined in second professional MBBS (pharmacology) and final professional (psychiatry). Commonly featured in NEET PG and INICET questions — high-yield because of its distinctive contraindications.",
+    primaryCare:
+      "Generally NOT initiated in Indian primary care due to interaction profile and pregnancy/tamoxifen risks. GPs are educated to prefer sertraline or escitalopram. If a primary-care patient is on paroxetine (e.g., started by psychiatrist), the GP should know: (1) never stop abruptly, (2) contraception in women of reproductive age, (3) never combine with tamoxifen, (4) watch for discontinuation symptoms if doses are missed.",
+    psychiatryOPD:
+      "Reserved SSRI in psychiatry OPD for specific niches: (1) severe anxiety disorders where sedation is therapeutic, (2) vasomotor symptoms in breast-cancer survivors (NOT on tamoxifen) — 7.5mg CR, (3) premature ejaculation — 20mg OD or PRN, (4) refractory OCD at higher doses (40-60mg). When used, careful patient selection and counselling are critical. Often combined with CBT for anxiety disorders. Dose escalation to 50-60mg for OCD. Taper over weeks-months (not weeks) when discontinuing.",
+  },
+
+  /* Indian prescription workflow */
+  prescriptionWorkflow: {
+    beforePrescribing: [
+      "Screen for bipolar disorder (MDQ questionnaire) — SSRIs can trigger manic switch.",
+      "Assess suicidal ideation — if present, involve family for monitoring and provide Tele-MANAS (14416) number.",
+      "Check for MAOI use in last 14 days — absolute contraindication.",
+      "Review concurrent medications — CRITICAL: tamoxifen (absolute contraindication), tramadol, triptans, NSAIDs, warfarin, codeine (paroxetine blocks CYP2D6 → codeine ineffective), TCAs, antiarrhythmics, St John's Wort.",
+      "In women of reproductive age: pregnancy test + reliable contraception counselling. Paroxetine is Category D — AVOID if pregnancy is possible.",
+      "In elderly: check baseline serum sodium (SIADH risk — highest with paroxetine among SSRIs), cognitive assessment (avoid if cognitive impairment due to anticholinergic effect), fall risk assessment (sedation).",
+      "Baseline PHQ-9 score for response monitoring. Baseline weight and BMI (paroxetine has most weight gain of any SSRI).",
+      "Counsel about 4-6 week onset AND the worst-in-class discontinuation syndrome — set expectation that stopping will require a slow taper over weeks-months.",
+    ],
+    duringTreatment: [
+      "Week 1-2: assess tolerability (sedation, dry mouth, nausea, sexual dysfunction) and suicidality (especially <25 years).",
+      "Week 2-4: review early response — sleep, appetite, energy often improve before mood (sedation can be therapeutic for anxiety).",
+      "Week 4-6: assess response with PHQ-9. If <30% reduction, increase dose by 10mg.",
+      "Week 6-12: full response assessment. If <50% reduction at 12 weeks, consider augmentation (bupropion XL — but also CYP2D6 inhibitor, caution; or mirtazapine) or switch to sertraline.",
+      "Monitor for sexual dysfunction — ask directly; paroxetine has the highest rate among SSRIs (40-50%).",
+      "Watch for hyponatraemia in elderly (confusion, headache, seizures) — paroxetine has highest SIADH risk.",
+      "If female of reproductive age: confirm contraception at every visit. If pregnancy is suspected, switch to sertraline immediately (cross-taper over 1-2 weeks).",
+    ],
+    followUp: [
+      "First follow-up at 2 weeks (tolerability + suicidality + pregnancy check + contraception).",
+      "Second follow-up at 4 weeks (early response + weight check).",
+      "Third follow-up at 6 weeks (dose escalation decision + side-effect review).",
+      "Fourth follow-up at 12 weeks (full response assessment).",
+      "If remission achieved (PHQ-9 <5): continue for 6-12 months for first episode, longer for recurrent. Plan discontinuation well in advance — taper will be SLOW (over 4-8 weeks minimum, sometimes months).",
+      "Before discontinuation: plan a SLOW taper (paroxetine has worst discontinuation syndrome of any SSRI). Reduce by 10mg every 1-2 weeks. For the last 2 weeks, consider substituting fluoxetine 20mg (long half-life, self-tapers).",
+      "In government hospitals: follow-up may be every 4-8 weeks due to travel barriers — counsel family to watch for red flags (suicidality, missed doses leading to discontinuation, pregnancy).",
+    ],
+    whenToRefer: [
+      "Refer to psychiatrist if no response to 2 adequate SSRI trials (12 weeks each) — paroxetine is rarely the first SSRI tried.",
+      "Refer urgently if suicidal ideation emerges or worsens.",
+      "Refer if bipolar disorder is suspected (manic switch risk).",
+      "Refer if serotonin syndrome develops (emergency — call 112).",
+      "Refer to obstetrician IMMEDIATELY if patient becomes pregnant — switch to sertraline via cross-taper, schedule fetal echocardiogram at 18-20 weeks.",
+      "Refer to oncologist if breast-cancer patient is inadvertently co-prescribed paroxetine with tamoxifen — STOP paroxetine, switch to venlafaxine or sertraline.",
+      "Refer for CBT — combined SSRI + CBT produces better outcomes than either alone, especially for anxiety disorders (the main indication for paroxetine).",
+    ],
+  },
+
+  /* Exam frequency — star ratings */
+  examFrequency: {
+    neetPg: 5,
+    inicet: 4,
+    mbbsViva: 4,
+    fmge: 5,
+  },
+
+  /* PYQ metadata — concept-level, no copyrighted content */
+  pyqMetadata: [
+    { exam: "NEET PG", year: 2019, concept: "SSRI with shortest half-life / worst discontinuation", topic: "SSRI pharmacokinetics" },
+    { exam: "NEET PG", year: 2020, concept: "Serotonin syndrome diagnosis and management", topic: "Serotonergic toxicity" },
+    { exam: "NEET PG", year: 2021, concept: "Paroxetine-tamoxifen absolute contraindication", topic: "Drug interactions in oncology" },
+    { exam: "NEET PG", year: 2022, concept: "Paroxetine Category D in pregnancy — cardiac defects", topic: "Antidepressants in pregnancy" },
+    { exam: "INICET", year: 2021, concept: "SSRI-induced hyponatraemia (SIADH) — highest with paroxetine", topic: "Antidepressant adverse effects" },
+    { exam: "INICET", year: 2022, concept: "Antidepressant choice in breast-cancer survivor on tamoxifen", topic: "Psychiatry-oncology liaison" },
+    { exam: "FMGE", year: 2022, concept: "Paroxetine mechanism: SERT blockade + muscarinic M1 antagonism", topic: "Antidepressant pharmacology" },
+    { exam: "FMGE", year: 2021, concept: "Non-hormonal drug for vasomotor symptoms — paroxetine 7.5mg", topic: "Menopause management" },
+  ],
+
+  /* Indian comparison contexts */
+  indianComparisonContexts: [
+    {
+      scenario: "Government hospital setup",
+      recommendation: "Sertraline or escitalopram preferred — paroxetine is NOT a first-line choice. Paroxetine is more expensive, has a worse discontinuation profile, and requires careful monitoring (pregnancy, tamoxifen). Reserved for specific psychiatric OPD indications.",
+      alternative: "Sertraline (Jan Aushadhi available, ₹2-5/tablet) or escitalopram (low CYP interactions).",
+    },
+    {
+      scenario: "Private psychiatry practice",
+      recommendation: "Paroxetine used as second-line SSRI — preferred in severe anxiety disorders where sedation is therapeutically useful, in refractory OCD, or for vasomotor symptoms in breast-cancer survivors (NOT on tamoxifen). Starting dose 10-20mg at night.",
+      alternative: "Sertraline or escitalopram as first-line. Venlafaxine for treatment-resistant depression or if SNRI profile desired.",
+    },
+    {
+      scenario: "Pregnancy (CRITICAL)",
+      recommendation: "Paroxetine is CONTRAINDICATED (Category D — 1st-trimester cardiac septal defects). If a patient on paroxetine becomes pregnant: do NOT stop abruptly (discontinuation); cross-taper to sertraline over 1-2 weeks. IPS concurs with international guidelines.",
+      alternative: "Sertraline is the SSRI of choice in pregnancy. If sertraline unavailable, fluoxetine is acceptable. NEVER use paroxetine.",
+    },
+    {
+      scenario: "Breast-cancer survivor on tamoxifen (CRITICAL)",
+      recommendation: "Paroxetine is ABSOLUTELY CONTRAINDICATED — strong CYP2D6 inhibition blocks tamoxifen → endoxifen conversion. Use venlafaxine (preferred — also treats hot flushes), sertraline, or escitalopram instead.",
+      alternative: "Venlafaxine is the antidepressant of choice in breast-cancer survivors — minimal CYP2D6 effect AND treats vasomotor symptoms. Sertraline or escitalopram if SSRI specifically needed.",
+    },
+    {
+      scenario: "Elderly (≥65 years)",
+      recommendation: "AVOID paroxetine in elderly, especially with cognitive impairment. Reasons: (1) anticholinergic (muscarinic M1 antagonist) worsens cognition and urinary hesitancy, (2) highest SIADH risk, (3) highest fall risk due to sedation, (4) short half-life causes discontinuation with missed doses (common in elderly).",
+      alternative: "Sertraline (preferred — mild CYP2D6, low anticholinergic) or escitalopram (lowest CYP interactions, low anticholinergic). Start at 25mg (sertraline) or 5mg (escitalopram) — half the adult dose.",
+    },
+    {
+      scenario: "Cost-sensitive setting",
+      recommendation: "Paroxetine is moderately priced (₹5-12/tablet) — more expensive than generic sertraline. Less commonly available at Jan Aushadhi Kendras. NOT the best choice if cost is the primary concern.",
+      alternative: "Generic sertraline from Jan Aushadhi Kendra (₹2-5/tablet) is the most affordable SSRI. If paroxetine is specifically needed, generic Paroxet (Cipla) is the most affordable brand.",
+    },
+  ],
+
+  /* Jan Aushadhi availability */
+  janAushadhi: {
+    available: false,
+    note: "Not commonly available at Jan Aushadhi Kendras. Sertraline and escitalopram are the preferred SSRIs in Jan Aushadhi (low-cost, fewer contraindications). If paroxetine is specifically needed, branded generic versions (Paroxet by Cipla, Pexep by Sun Pharma) are the most affordable options in private pharmacies.",
+  },
+
+  /* Restructured evidence sources — International vs Indian */
+  evidenceSources: {
+    international: [
+      { source: "Katzung Basic & Clinical Pharmacology, 16th edition", section: "Chapter 30 — Antidepressant Agents (Paroxetine subsection)" },
+      { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
+      { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants (paroxetine: muscarinic M1 antagonist, strong CYP2D6 inhibitor)" },
+      { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression (paroxetine discontinuation, tamoxifen interaction, elderly cautions)" },
+      { source: "FDA Prescribing Information — PAXIL (paroxetine hydrochloride), PAXIL CR, and BRISDELLE 7.5 mg", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/020936s062lbl.pdf" },
+      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Pharmacological treatment" },
+      { source: "APA Practice Guideline for MDD, 3rd edition" },
+      { source: "Cipriani A et al. Lancet 2018 — Comparative efficacy of 21 antidepressants", section: "Network meta-analysis (paroxetine effective but higher dropout for side effects)" },
+    ],
+    indian: [
+      { source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition", type: "textbook", section: "Chapter 33 — Antidepressant Drugs (Paroxetine subsection)" },
+      { source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression", type: "guideline", section: "Section on pharmacotherapy — SSRIs (paroxetine-specific cautions)" },
+      { source: "NMC CBME Curriculum — Pharmacology (Second Professional)", type: "curriculum", section: "Topic: Drugs acting on CNS — Antidepressants (PH7.3, PH7.4)" },
+      { source: "NMC CBME Curriculum — Psychiatry (Final Professional)", type: "curriculum", section: "Topic: Psychopharmacology — Mood disorders (PY3.2)" },
+      { source: "National Mental Health Programme (NMHP) / District Mental Health Programme (DMHP)", type: "regulatory", section: "Essential medicines for mental health — paroxetine less commonly stocked than sertraline" },
+      { source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416", type: "regulatory", section: "Mental health support resource", url: "tel:14416" },
+      { source: "CDSCO — Central Drugs Standard Control Organisation", type: "regulatory", section: "Paroxetine — Schedule H prescription status; pregnancy Category D labelling requirements" },
+    ],
+  },
+
+  /* ---- Final Architecture Pass — canonical template v2.0 ---- */
+
+  /* Clinical decision path — algorithm-style decision tree */
+  clinicalDecisionPath: {
+    title: "When to choose (or avoid) Paroxetine",
+    startNodeId: "start",
+    nodes: [
+      {
+        id: "start",
+        question: "Patient presents with a condition paroxetine is approved for (depression, OCD, panic, social anxiety, GAD, PTSD, PMDD, vasomotor symptoms)",
+        branches: [
+          { label: "Pregnant or could become pregnant", next: "pregnancy" },
+          { label: "On tamoxifen", next: "tamoxifen" },
+          { label: "Elderly with cognitive impairment", next: "elderly" },
+          { label: "None of the above — considering SSRI", next: "ssri-selection" },
+        ],
+      },
+      {
+        id: "pregnancy",
+        question: "Pregnant or could become pregnant",
+        recommendation: "DO NOT use paroxetine. Category D — 1st-trimester cardiac septal defects (ASD, VSD). Use sertraline instead (SSRI of choice in pregnancy). If patient is already on paroxetine and becomes pregnant, do NOT stop abruptly — cross-taper to sertraline over 1-2 weeks.",
+        reasoning: "Paroxetine is the ONLY SSRI with FDA Category D. Two large studies confirmed 1.5-2× increased risk of 1st-trimester cardiac septal defects. IPS concurs with avoiding paroxetine in pregnancy.",
+      },
+      {
+        id: "tamoxifen",
+        question: "Patient is on tamoxifen for breast cancer",
+        recommendation: "DO NOT use paroxetine. ABSOLUTE CONTRAINDICATION — paroxetine is a strong CYP2D6 inhibitor; tamoxifen requires CYP2D6 to be converted to endoxifen (active metabolite). Co-prescription increases breast cancer recurrence. Use venlafaxine (preferred — also treats hot flushes), sertraline, or escitalopram instead.",
+        reasoning: "ASCO Clinical Practice Guideline explicitly contraindicates paroxetine with tamoxifen. Venlafaxine is the antidepressant of choice in breast-cancer survivors.",
+      },
+      {
+        id: "elderly",
+        question: "Elderly patient (≥65 years) with cognitive impairment or fall risk",
+        recommendation: "DO NOT use paroxetine. Reasons: (1) anticholinergic (muscarinic M1 antagonist) worsens cognition and urinary hesitancy, (2) highest SIADH risk, (3) highest fall risk due to sedation, (4) short half-life causes discontinuation with missed doses. Use sertraline or escitalopram instead.",
+        reasoning: "Paroxetine is on the Beers Criteria list of potentially inappropriate medications in elderly. Sertraline and escitalopram are preferred in elderly due to minimal anticholinergic and CYP interaction profiles.",
+      },
+      {
+        id: "ssri-selection",
+        question: "Considering an SSRI — when does paroxetine have a niche?",
+        recommendation: "Paroxetine is NOT first-line. Consider paroxetine for: (1) severe anxiety where sedation is therapeutic, (2) vasomotor symptoms (hot flushes) in breast-cancer survivors NOT on tamoxifen — 7.5mg CR (Brisdelle), (3) premature ejaculation — 20mg OD or PRN, (4) refractory OCD at higher doses. Otherwise, sertraline or escitalopram preferred.",
+        reasoning: "Cipriani 2018 Lancet meta-analysis: paroxetine effective but with higher dropout for side effects than sertraline/escitalopram. Paroxetine is reserved for specific niches.",
+        branches: [
+          { label: "Niche use selected — proceed", next: "start-paroxetine" },
+          { label: "No niche — use another SSRI", next: "avoid" },
+        ],
+      },
+      {
+        id: "start-paroxetine",
+        question: "Starting paroxetine",
+        recommendation: "Start 10mg OD at night (with food) for depression/anxiety, 20mg OD for OCD. Titrate by 10mg every 1-2 weeks. Maximum 50mg/day (60mg for OCD). Counsel: NEVER stop abruptly, use reliable contraception (if female of reproductive age), avoid tamoxifen.",
+        reasoning: "Lower starting dose than Western guidelines to minimise early side effects (sedation, nausea). Night dosing exploits sedation for sleep benefit. CR formulation preferred when available — smoother profile, milder discontinuation.",
+        branches: [
+          { label: "Need to discontinue later", next: "discontinuation" },
+        ],
+      },
+      {
+        id: "discontinuation",
+        question: "Discontinuing paroxetine",
+        recommendation: "Plan a SLOW taper — reduce by 10mg every 1-2 weeks (over 4-8 weeks minimum, sometimes months). For the last 2 weeks, consider substituting fluoxetine 20mg (long half-life, self-tapers). Counsel patient about discontinuation symptoms (FINISH — Flu-like, Insomnia, Nausea, Imbalance, Sensory/brain zaps, Hyperarousal) — even with slow tapers, some patients experience them.",
+        reasoning: "Paroxetine has the WORST discontinuation syndrome of any SSRI — short half-life (21h) + no active metabolite. Symptoms can start within 24-48h of missed doses. Fluoxetine substitution is a recognised strategy to smooth discontinuation.",
+      },
+      {
+        id: "avoid",
+        question: "When NOT to choose Paroxetine",
+        recommendation: "Avoid: pregnancy (Category D), tamoxifen use, elderly with cognitive impairment, MAOI within 14 days, pimozide/thioridazine, known CYP2D6 poor metaboliser on critical CYP2D6 substrate, eating disorders (weight gain), patients likely to miss doses (discontinuation risk).",
+        reasoning: "Paroxetine has more contraindications and cautions than any other SSRI. The cumulative risk-benefit profile favours sertraline or escitalopram as first-line in most clinical scenarios.",
+      },
+    ],
+  },
+
+  /* Educational prescription template (India) */
+  educationalPrescription: {
+    scenario: "Typical Indian OPD initiation for severe panic disorder with anticipatory anxiety in a non-pregnant adult female on reliable contraception",
+    lines: [
+      "Rx",
+      "Tab Paroxetine 10 mg",
+      "1 tab OD at night after food × 7 days",
+      "",
+      "Then increase to:",
+      "Tab Paroxetine 20 mg",
+      "1 tab OD at night after food",
+      "",
+      "Advice: Take at night with food. DO NOT STOP ABRUPTLY — paroxetine has the worst discontinuation syndrome of any SSRI.",
+      "Use reliable contraception throughout treatment. Avoid alcohol. Avoid tamoxifen.",
+      "Report if feeling worse or new suicidal thoughts. Call Tele-MANAS at 14416 if in crisis.",
+      "",
+      "Follow-up: 2 weeks, 4 weeks, 6 weeks, 12 weeks",
+    ],
+    followUp: [
+      "Review after 2 weeks — tolerability (sedation, dry mouth, sexual dysfunction), suicidality, pregnancy check, contraception adherence",
+      "Review after 4 weeks — early response (sleep, anxiety levels), weight check",
+      "Review after 6 weeks — PHQ-9; if <30% reduction, increase to 30mg",
+      "Review after 12 weeks — full response assessment; if <50% reduction, consider augmentation or switch to sertraline",
+      "If remission (PHQ-9 <5): continue 6-12 months, then plan a SLOW taper (reduce by 10mg every 1-2 weeks over 4-8 weeks minimum)",
+      "For the last 2 weeks of taper: consider substituting fluoxetine 20mg (long half-life, self-tapers)",
+      "If pregnancy is planned or detected: switch to sertraline via cross-taper over 1-2 weeks (do NOT stop abruptly)",
+    ],
+    disclaimer: "Educational example only. Not a substitute for clinical judgment. Always verify dosing against current prescribing information and individualise for each patient. CRITICAL: contraindicated in pregnancy (Category D) and with tamoxifen.",
+  },
+
+  /* Common mistakes */
+  commonMistakes: [
+    {
+      mistake: "Not recognising paroxetine as Pregnancy Category D",
+      why: "Paroxetine is the ONLY SSRI with FDA Category D — 1st-trimester cardiac septal defects (ASD, VSD). Prescribing to a pregnant woman or a woman of reproductive age without reliable contraception is a serious error.",
+      correction: "Always do a pregnancy test before starting paroxetine in women of reproductive age, and counsel about reliable contraception. If pregnancy is detected, switch to sertraline (cross-taper, do not stop abruptly). Schedule fetal echocardiogram at 18-20 weeks.",
+    },
+    {
+      mistake: "Abrupt discontinuation of paroxetine (WORST of any SSRI)",
+      why: "Paroxetine has the shortest half-life of any SSRI (~21h) and no active metabolite. Even missing 1-2 doses can trigger withdrawal (dizziness, 'brain zaps', nausea, irritability) within 24-48h. Abrupt cessation causes severe discontinuation syndrome.",
+      correction: "Always taper SLOWLY — reduce by 10mg every 1-2 weeks over 4-8 weeks minimum. For the last 2 weeks, consider substituting fluoxetine 20mg (long half-life, self-tapers). Counsel patient: never stop abruptly, never miss doses, carry a spare dose when travelling.",
+    },
+    {
+      mistake: "Missing the paroxetine-tamoxifen interaction",
+      why: "Paroxetine is a strong CYP2D6 inhibitor; tamoxifen requires CYP2D6 to be converted to endoxifen (its active metabolite). Co-prescription reduces endoxifen levels by 50-75%, effectively rendering tamoxifen ineffective and increasing breast cancer recurrence risk. This is an ABSOLUTE CONTRAINDICATION.",
+      correction: "Always ask about tamoxifen use before prescribing paroxetine. In breast-cancer survivors, use venlafaxine (preferred — minimal CYP2D6 and treats hot flushes), sertraline, or escitalopram. Educate the patient to inform every doctor of her tamoxifen status.",
+    },
+    {
+      mistake: "Using paroxetine in elderly with cognitive impairment",
+      why: "Paroxetine is on the Beers Criteria list of potentially inappropriate medications in elderly. The anticholinergic (muscarinic M1 antagonist) effect worsens cognition, causes urinary hesitancy, and increases fall risk. Highest SIADH risk among SSRIs. Short half-life causes discontinuation with missed doses (common in elderly).",
+      correction: "AVOID paroxetine in elderly, especially with cognitive impairment. Use sertraline or escitalopram instead — minimal anticholinergic and CYP interaction profiles, low weight gain, low sedation.",
+    },
+    {
+      mistake: "Not warning about weight gain",
+      why: "Paroxetine causes the MOST weight gain of any SSRI — typically 3-7kg over 6-12 months. This is often under-recognised and leads to non-adherence or metabolic complications.",
+      correction: "Weigh patient at baseline, 4 weeks, 12 weeks. Counsel about diet and exercise. If weight gain is significant, consider switching to sertraline (low weight gain) or bupropion (weight-neutral, but also CYP2D6 inhibitor — caution).",
+    },
+    {
+      mistake: "Not asking about sexual dysfunction",
+      why: "Paroxetine has the HIGHEST rate of sexual dysfunction among SSRIs (40-50%) — decreased libido, delayed orgasm, anorgasmia. It is the #1 reason for non-adherence. Patients rarely volunteer it.",
+      correction: "Ask directly at every follow-up: 'Any changes in sexual interest or function?' If present, consider dose reduction, adding bupropion XL (reverses SSRI-induced sexual dysfunction — but caution with CYP2D6), switching to sertraline/escitalopram (lower rates), or using mirtazapine. Off-label, paroxetine's sexual side effect is exploited for premature ejaculation.",
+    },
+    {
+      mistake: "Not checking sodium in elderly",
+      why: "Paroxetine has the highest SIADH risk among SSRIs. Risk is highest in elderly females in the first 2 weeks. Can cause confusion, seizures, and death if severe (Na <120 mmol/L).",
+      correction: "Check serum sodium at baseline in elderly. Recheck within 2 weeks if symptomatic (confusion, headache, lethargy, seizures). Counsel family to watch for these symptoms.",
+    },
+    {
+      mistake: "Combining with MAOIs or not waiting the 14-day washout",
+      why: "MAOI + paroxetine (any SSRI) = potentially fatal serotonin syndrome. The 14-day washout is non-negotiable. With paroxetine's short half-life, the washout before starting an MAOI can be slightly shorter (5-7 days), but the washout after an MAOI before starting paroxetine is the full 14 days.",
+      correction: "Always ask about MAOI use before starting paroxetine. Wait at least 14 days after stopping an MAOI before starting paroxetine. When switching from paroxetine to an MAOI, wait at least 5-7 days (some guidelines say 14 days for safety).",
+    },
+  ],
+
+  /* When NOT to use — red card */
+  whenNotToUse: [
+    {
+      scenario: "Pregnancy (Category D) — 1st trimester especially",
+      reason: "Paroxetine is the ONLY SSRI with FDA Category D — positive evidence of human fetal risk. 1.5-2× increased risk of 1st-trimester cardiac septal defects (ASD, VSD). Also neonatal adaptation syndrome in 3rd trimester.",
+      alternative: "Sertraline is the SSRI of choice in pregnancy (lowest placental transfer). If sertraline unavailable, fluoxetine is acceptable. If patient is already on paroxetine and becomes pregnant, cross-taper to sertraline over 1-2 weeks (do NOT stop abruptly).",
+    },
+    {
+      scenario: "Concurrent tamoxifen use",
+      reason: "ABSOLUTE CONTRAINDICATION. Paroxetine is a strong CYP2D6 inhibitor; tamoxifen requires CYP2D6 to be converted to endoxifen (active metabolite). Co-prescription reduces endoxifen levels by 50-75%, increasing breast cancer recurrence risk.",
+      alternative: "Venlafaxine (preferred — minimal CYP2D6 effect AND treats vasomotor symptoms), sertraline (mild CYP2D6), or escitalopram (minimal CYP interactions). Avoid paroxetine, fluoxetine, and bupropion (all strong CYP2D6 inhibitors).",
+    },
+    {
+      scenario: "Active MAOI use (within 14 days)",
+      reason: "Fatal serotonin syndrome. The 14-day washout after an MAOI is absolute and non-negotiable.",
+      alternative: "Wait 14 days after stopping an MAOI before starting paroxetine. When switching from paroxetine to an MAOI, wait at least 5-7 days (some guidelines say 14 days for safety).",
+    },
+    {
+      scenario: "Elderly with cognitive impairment or fall risk",
+      reason: "Paroxetine is on the Beers Criteria list of potentially inappropriate medications in elderly. Anticholinergic (muscarinic M1) worsens cognition and urinary hesitancy; sedation increases fall risk; highest SIADH risk; short half-life causes discontinuation with missed doses.",
+      alternative: "Sertraline or escitalopram — minimal anticholinergic and CYP interaction profiles. Start at half the adult dose (sertraline 25mg, escitalopram 5mg).",
+    },
+    {
+      scenario: "Eating disorders (anorexia or bulimia nervosa)",
+      reason: "Paroxetine causes the most weight gain of any SSRI — undesirable in patients with eating disorders. Also, bupropion (an alternative) is contraindicated in eating disorders due to seizure risk. Paroxetine may also trigger binge episodes in susceptible patients.",
+      alternative: "Fluoxetine is FDA-approved for bulimia nervosa (and is weight-neutral). Sertraline or escitalopram are reasonable alternatives. Avoid paroxetine, mirtazapine (weight gain), and bupropion (seizure risk).",
+    },
+    {
+      scenario: "Known CYP2D6 poor metaboliser on critical CYP2D6 substrate",
+      reason: "Paroxetine is itself metabolised by CYP2D6 AND is a strong CYP2D6 inhibitor. In poor metabolisers (5-10% of Indians), paroxetine levels are 2-10× higher. Additionally, paroxetine raises levels of co-prescribed CYP2D6 substrates (TCAs, metoprolol, antiarrhythmics, codeine).",
+      alternative: "Escitalopram (lowest CYP interaction profile), sertraline (CYP2B6 primary), or venlafaxine (CYP2D6 but minimal inhibition). If paroxetine is essential, start at half the dose and titrate slowly.",
+    },
+  ],
+
+  /* Indian ward pearls */
+  wardPearls: {
+    professorMayAsk: [
+      "Why is paroxetine generally avoided as first-line SSRI? (Shortest half-life → worst discontinuation; Category D in pregnancy; strongest CYP2D6 inhibitor → tamoxifen interaction; most sedating/weight gain/anticholinergic among SSRIs.)",
+      "What is the FDA pregnancy category of paroxetine and what is the fetal risk? (Category D — 1st-trimester cardiac septal defects (ASD, VSD). Only SSRI with Category D. Switch to sertraline if pregnancy detected.)",
+      "Explain the paroxetine-tamoxifen interaction. Why is it an absolute contraindication? (Paroxetine is a strong CYP2D6 inhibitor. Tamoxifen needs CYP2D6 to be converted to endoxifen (active metabolite). Co-prescription → tamoxifen ineffective → breast cancer recurrence.)",
+      "Which SSRI has the shortest half-life and worst discontinuation syndrome? How do you manage it? (Paroxetine — 21h. Taper slowly over 4-8 weeks. Substitute fluoxetine 20mg for the last 2 weeks of taper (long half-life, self-tapers).)",
+      "What is unique about paroxetine's receptor pharmacology among SSRIs? (Muscarinic M1 antagonist — explains anticholinergic & sedating profile, dry mouth, constipation, cognitive impairment in elderly. UNIQUE among SSRIs.)",
+      "What is the niche use of paroxetine 7.5mg CR (Brisdelle)? (Vasomotor symptoms of menopause — the only non-hormonal FDA-approved drug for hot flushes. Useful in breast-cancer survivors who can't take HRT — but ONLY if not on tamoxifen.)",
+    ],
+    residentExpects: [
+      "Know the starting dose and titration (10mg OD → 20mg → 40mg; lower start of 10mg for panic/anxiety to avoid early activation; max 50mg/day, 60mg for OCD).",
+      "Know the absolute contraindications (pregnancy Category D, tamoxifen, MAOIs, pimozide/thioridazine) and relative contraindications (elderly with cognitive impairment, eating disorders).",
+      "Know the discontinuation syndrome management (SLOW taper over 4-8 weeks minimum; fluoxetine substitution for last 2 weeks; counsel about FINISH symptoms).",
+      "Know the CYP2D6 interactions (tamoxifen, TCAs, metoprolol, codeine (paroxetine blocks conversion to morphine → codeine ineffective), antiarrhythmics).",
+      "Know when to switch from paroxetine to sertraline (pregnancy detected, elderly with cognitive decline, treatment-resistant depression, intolerable side effects).",
+      "Know when to refer to psychiatry (no response to 2 SSRI trials, bipolar suspicion, psychotic features, suicidality, pregnancy in a patient on paroxetine).",
+    ],
+    consultantsDo: [
+      "Use PHQ-9 at every visit for objective monitoring.",
+      "Screen for bipolar disorder (MDQ) before starting any antidepressant — paroxetine has similar manic-switch risk to other SSRIs.",
+      "Reserve paroxetine for specific niches — severe anxiety with desired sedation, vasomotor symptoms (NOT on tamoxifen), premature ejaculation, refractory OCD.",
+      "Always do a pregnancy test in women of reproductive age before starting paroxetine, and counsel about reliable contraception.",
+      "Always ask about tamoxifen use before prescribing paroxetine — if yes, use venlafaxine instead.",
+      "Plan discontinuation WELL in advance — paroxetine requires the slowest taper of any SSRI (4-8 weeks minimum, sometimes months).",
+      "Consider cost — generic paroxetine (Paroxet by Cipla) is the most affordable option if paroxetine is specifically needed.",
+    ],
+    internsMiss: [
+      "Forgetting to do a pregnancy test before starting paroxetine (Category D — critical!).",
+      "Not asking about tamoxifen use before prescribing (absolute contraindication — breast cancer recurrence risk).",
+      "Counselling the patient to 'just stop' paroxetine when they feel better (worst discontinuation syndrome of any SSRI — must taper slowly).",
+      "Using paroxetine as first-line SSRI in elderly with cognitive impairment (anticholinergic worsens cognition, on Beers Criteria).",
+      "Not asking about sexual dysfunction (highest rate among SSRIs — 40-50%).",
+      "Not checking sodium in elderly (highest SIADH risk among SSRIs).",
+      "Not warning about weight gain (most weight gain of any SSRI — 3-7kg over 6-12 months).",
+      "Not screening for bipolar disorder (manic switch risk — same as all SSRIs).",
+      "Not providing Tele-MANAS number (14416) for crisis support.",
+    ],
+  },
+
+  /* Refined high-yield level */
+  highYieldLevel: "extreme",
+
+  /* Drug family navigation */
+  drugFamilyNav: {
+    familyName: "SSRIs (Selective Serotonin Reuptake Inhibitors)",
+    members: [
+      { name: "Paroxetine", slug: "paroxetine", relationship: "Current drug", distinguishing: "Shortest half-life (worst discontinuation); Category D; tamoxifen contraindication; muscarinic M1 antagonist; vasomotor niche" },
+      { name: "Sertraline", slug: "sertraline", relationship: "Same class (SSRI)", distinguishing: "SSRI of choice in pregnancy; σ1 agonism; 6 FDA indications; mild CYP2D6" },
+      { name: "Fluoxetine", slug: "fluoxetine", relationship: "Same class (SSRI)", distinguishing: "Longest half-life (mildest discontinuation); only SSRI for bulimia; paediatric ≥8yr; also strong CYP2D6 inhibitor (avoid with tamoxifen)" },
+      { name: "Escitalopram", slug: "escitalopram", relationship: "Same class (SSRI)", distinguishing: "S-enantiomer of citalopram; lowest CYP interactions (safe with tamoxifen); QTc watch at >20mg" },
+      { name: "Citalopram", slug: "citalopram", relationship: "Same class (SSRI)", distinguishing: "Racemic parent of escitalopram; minimal CYP2D6 (reasonable in tamoxifen); QTc dose-dependent; max 40mg/day (20mg in elderly)" },
+      { name: "Fluvoxamine", slug: "fluvoxamine", relationship: "Same class (SSRI)", distinguishing: "OCD-only FDA indication; CYP1A2 inhibitor (not 2D6 — safe with tamoxifen); tizanidine contraindicated" },
+    ],
+  },
+
+  /* Learning time breakdown */
+  learningTimeBreakdown: {
+    read: "19 min",
+    study: "50 min",
+    revision: "10 min",
+  },
+
+  /* ---- Educational UX Layer ---- */
+
+  /* Inline micro-quizzes — one after each major learning milestone */
+  microQuizzes: [
+    {
+      id: "quiz-mechanism",
+      question: "Paroxetine has a UNIQUE receptor pharmacology among SSRIs. What is it?",
+      options: ["σ1 receptor agonist", "Muscarinic M1 antagonist", "5-HT2C antagonist", "Alpha-1 antagonist"],
+      correctIndex: 1,
+      explanation: "Paroxetine is the only SSRI that is a muscarinic M1 antagonist. This explains its unique adverse-effect profile among SSRIs: dry mouth, constipation, sedation, urinary hesitancy, and cognitive impairment in elderly (which is why paroxetine is on the Beers Criteria list). The M1 antagonism also contributes to its sedating profile (paroxetine is the most sedating SSRI).",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "quiz-onset",
+      question: "Why does Paroxetine have the WORST discontinuation syndrome of any SSRI?",
+      options: [
+        "It accumulates in tissues and is released slowly",
+        "Shortest half-life (21h) and no active metabolite",
+        "It produces a withdrawal rebound of depression",
+        "It causes irreversible changes to serotonin receptors",
+      ],
+      correctIndex: 1,
+      explanation: "Paroxetine has the shortest half-life of any SSRI (~21 hours) and no active metabolite (unlike fluoxetine → norfluoxetine). This means blood levels drop rapidly between doses, and even missing 1-2 doses can trigger withdrawal (dizziness, 'brain zaps', nausea, irritability) within 24-48 hours. Discontinuation ranking (worst to mildest): Paroxetine > Venlafaxine > Sertraline > Escitalopram > Fluoxetine. Management: SLOW taper over 4-8 weeks; substitute fluoxetine 20mg for the last 2 weeks (long half-life, self-tapers).",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "quiz-side-effects",
+      question: "Which side effect is HIGHEST with paroxetine compared to other SSRIs?",
+      options: ["Nausea", "Sexual dysfunction", "Insomnia", "Diarrhoea"],
+      correctIndex: 1,
+      explanation: "Paroxetine has the HIGHEST rate of sexual dysfunction among SSRIs (40-50%) — decreased libido, delayed orgasm, anorgasmia. It also has the most weight gain, most sedation, and most anticholinergic effects of any SSRI. Off-label, this sexual side effect is exploited therapeutically for premature ejaculation (20mg OD or PRN before intercourse).",
+      afterSectionId: "side-effects",
+    },
+    {
+      id: "quiz-pregnancy",
+      question: "Paroxetine is the ONLY SSRI with FDA pregnancy Category D. What is the fetal risk?",
+      options: ["Neural tube defects", "1st-trimester cardiac septal defects (ASD, VSD)", "Cleft palate", "Limb reduction defects"],
+      correctIndex: 1,
+      explanation: "Paroxetine is the ONLY SSRI with FDA Category D — 1.5-2× increased risk of 1st-trimester cardiac septal defects (atrial septal defect, ventricular septal defect). Absolute risk is small (~1% vs 0.7% baseline), but paroxetine is avoided in pregnancy. If a patient on paroxetine becomes pregnant: do NOT stop abruptly (discontinuation); cross-taper to sertraline over 1-2 weeks; schedule fetal echocardiogram at 18-20 weeks. IPS concurs with international guidelines.",
+      afterSectionId: "contraindications",
+    },
+    {
+      id: "quiz-interactions",
+      question: "Why is paroxetine ABSOLUTELY CONTRAINDICATED with tamoxifen?",
+      options: [
+        "Paroxetine increases tamoxifen toxicity",
+        "Paroxetine inhibits CYP2D6, blocking conversion of tamoxifen to endoxifen (its active metabolite)",
+        "Paroxetine reduces absorption of tamoxifen",
+        "Paroxetine increases the risk of breast cancer directly",
+      ],
+      correctIndex: 1,
+      explanation: "Paroxetine is a strong CYP2D6 inhibitor. Tamoxifen is a prodrug that requires CYP2D6 to be converted to endoxifen (its active metabolite). Co-prescription reduces endoxifen levels by 50-75%, effectively rendering tamoxifen ineffective and increasing breast cancer recurrence risk. This is an ABSOLUTE CONTRAINDICATION per ASCO guidelines. Among antidepressants to AVOID with tamoxifen: paroxetine, fluoxetine, bupropion (all strong CYP2D6 inhibitors). PREFERRED: venlafaxine (also treats hot flushes), sertraline, escitalopram.",
+      afterSectionId: "interactions",
+    },
+    {
+      id: "quiz-niche",
+      question: "What is the unique niche use of paroxetine 7.5mg CR (Brisdelle)?",
+      options: [
+        "Paediatric depression",
+        "Bipolar depression",
+        "Vasomotor symptoms (hot flushes) of menopause",
+        "Schizophrenia negative symptoms",
+      ],
+      correctIndex: 2,
+      explanation: "Paroxetine 7.5mg CR (Brisdelle) is the ONLY non-hormonal FDA-approved drug for vasomotor symptoms (hot flushes) of menopause. This is a niche use — particularly useful in breast-cancer survivors who cannot take hormone replacement therapy (HRT). CRITICAL CAUTION: only use if the patient is NOT on tamoxifen (paroxetine is contraindicated with tamoxifen). If on tamoxifen, use venlafaxine instead (also effective for hot flushes, minimal CYP2D6 effect).",
+      afterSectionId: "evidence-practice",
+    },
+  ],
+
+  /* End-of-page active recall questions */
+  activeRecallQuestions: [
+    {
+      question: "Why is paroxetine generally avoided as first-line SSRI? List the key reasons.",
+      answer: "Paroxetine is generally avoided as first-line SSRI because: (1) Shortest half-life (~21h) → WORST discontinuation syndrome of any SSRI — even missing 1-2 doses can trigger withdrawal. (2) Pregnancy Category D — the ONLY SSRI with this category, due to 1st-trimester cardiac septal defects. (3) Strongest CYP2D6 inhibitor among SSRIs → ABSOLUTE CONTRAINDICATION with tamoxifen. (4) Most sedating, most weight gain (3-7kg), most anticholinergic (muscarinic M1 antagonist — UNIQUE among SSRIs) of any SSRI. (5) On Beers Criteria for potentially inappropriate medications in elderly. Paroxetine is reserved for specific niches: severe anxiety with desired sedation, vasomotor symptoms in non-tamoxifen breast-cancer survivors, premature ejaculation, refractory OCD.",
+      topic: "Drug Selection",
+    },
+    {
+      question: "A 32-year-old woman with panic disorder on paroxetine 20mg OD calls you — she is 6 weeks pregnant. What is your management?",
+      answer: "Do NOT stop paroxetine abruptly (severe discontinuation syndrome). Cross-taper to sertraline over 1-2 weeks (e.g., reduce paroxetine to 10mg and start sertraline 25mg, then stop paroxetine and increase sertraline to 50mg). Paroxetine is Pregnancy Category D — 1st-trimester cardiac septal defects (ASD, VSD). Sertraline is the SSRI of choice in pregnancy. Schedule fetal echocardiogram at 18-20 weeks. Involve obstetrician. Counsel: untreated maternal depression also carries risks (preterm birth, low birth weight, poor bonding, suicidality) — so treat, but with sertraline.",
+      topic: "Pregnancy",
+    },
+    {
+      question: "A breast-cancer survivor on tamoxifen presents with depression. The GP started paroxetine 3 weeks ago. What is your action?",
+      answer: "STOP paroxetine immediately — ABSOLUTE CONTRAINDICATION. Paroxetine is a strong CYP2D6 inhibitor; tamoxifen requires CYP2D6 to be converted to endoxifen (active metabolite). Co-prescription reduces endoxifen by 50-75%, increasing breast cancer recurrence risk. Switch to venlafaxine (PREFERRED — minimal CYP2D6 effect AND treats hot flushes if present), sertraline, or escitalopram. Counsel patient to inform every doctor of her tamoxifen status before any antidepressant is prescribed. Reassess depression severity. Consider CBT addition.",
+      topic: "Drug Interactions",
+    },
+    {
+      question: "Explain paroxetine's unique receptor pharmacology among SSRIs and the clinical consequences.",
+      answer: "Paroxetine is the ONLY SSRI that is a muscarinic M1 antagonist. This explains its unique adverse-effect profile: (1) Anticholinergic effects — dry mouth, constipation, urinary hesitancy, blurred vision, cognitive impairment (especially in elderly — paroxetine is on Beers Criteria list). (2) Sedation — paroxetine is the MOST sedating SSRI (give at night). (3) Weight gain — most weight gain of any SSRI (3-7kg over 6-12 months). The M1 antagonism also explains why paroxetine is uniquely problematic in elderly with cognitive impairment, unlike other SSRIs (sertraline, escitalopram) which have minimal anticholinergic activity.",
+      topic: "Pharmacology",
+    },
+    {
+      question: "How do you manage SSRI discontinuation syndrome, particularly with paroxetine (the worst SSRI for this)?",
+      answer: "Paroxetine has the WORST discontinuation syndrome of any SSRI due to shortest half-life (21h) and no active metabolite. Symptoms (FINISH — Flu-like, Insomnia, Nausea, Imbalance, Sensory/brain zaps, Hyperarousal) can start within 24-48h of missed doses. Management: (1) Restart paroxetine at previous dose if severe. (2) TAPER SLOWLY — reduce by 10mg every 1-2 weeks over 4-8 weeks minimum (sometimes months). (3) For the last 2 weeks of taper, substitute fluoxetine 20mg (long half-life of norfluoxetine, self-tapers). (4) Counsel patient: never stop abruptly, never miss doses, carry a spare dose when travelling. (5) Discontinuation ranking (worst to mildest): Paroxetine > Venlafaxine > Sertraline > Escitalopram > Fluoxetine.",
+      topic: "Discontinuation",
+    },
+    {
+      question: "What are the niche indications where paroxetine is actually useful?",
+      answer: "Despite being generally avoided as first-line, paroxetine has specific niches: (1) Severe anxiety disorders (panic disorder with severe anticipatory anxiety, severe social anxiety) where the sedating profile is therapeutically useful — give at night. (2) Vasomotor symptoms (hot flushes) of menopause — paroxetine 7.5mg CR (Brisdelle) is the ONLY non-hormonal FDA-approved drug. Particularly useful in breast-cancer survivors who can't take HRT — CRITICAL: only if NOT on tamoxifen. (3) Premature ejaculation — 20mg OD or PRN 4-6h before intercourse; exploits the high sexual-dysfunction side effect therapeutically. (4) Refractory OCD at higher doses (40-60mg) when other SSRIs have failed. (5) Off-label for refractory anger/irritability in personality disorders.",
+      topic: "Indications",
+    },
+  ],
+
+  /* Guided learning paths — each mode shows a curated subset of sections */
+  learningPaths: [
+    {
+      mode: "patient",
+      label: "Patient",
+      estimatedTime: "6 min",
+      description: "Plain language. What you need to know to take your medicine safely — especially the warnings.",
+      visibleSections: ["top", "quick-facts", "patient-education", "faq", "emergency"],
+    },
+    {
+      mode: "mbbs",
+      label: "MBBS Student",
+      estimatedTime: "22 min",
+      description: "Foundations, mechanism, clinical uses, side effects, and MBBS exam content. Pay attention to paroxetine's unique contraindications.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+    },
+    {
+      mode: "neetPg",
+      label: "NEET PG / INICET",
+      estimatedTime: "40 min",
+      description: "Full clinical detail with exam-specific content, PYQs, and drug comparisons. Paroxetine is HIGH-YIELD due to its distinctive contraindications.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+    },
+    {
+      mode: "resident",
+      label: "Resident / Clinician",
+      estimatedTime: "55 min",
+      description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence. Especially the niche uses and discontinuation management.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+    },
+  ],
+
+  /* Lesson grouping — sections organised into learning units */
+  lessonGroups: [
+    {
+      number: 1,
+      title: "Foundations",
+      description: "What is this drug? Why does it have so many caveats?",
+      sectionIds: ["top", "quick-facts", "learning-objectives", "knowledge-graph"],
+      checkpoint: "You now know what Paroxetine is, its 8 FDA indications, and the key reasons it is generally avoided as first-line SSRI — Category D, tamoxifen interaction, worst discontinuation, anticholinergic/weight-gain profile.",
+    },
+    {
+      number: 2,
+      title: "Mechanism & Neuroscience",
+      description: "How does it work? What makes paroxetine pharmacologically unique among SSRIs?",
+      sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
+      checkpoint: "You understand paroxetine's mechanism — SERT blockade PLUS muscarinic M1 antagonism (UNIQUE among SSRIs), and why the short half-life (21h) causes the worst discontinuation syndrome of any SSRI.",
+    },
+    {
+      number: 3,
+      title: "Clinical Practice",
+      description: "When (rarely) do you use it? What goes wrong?",
+      sectionIds: ["clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education"],
+      checkpoint: "You can now identify paroxetine's niche uses (severe anxiety, vasomotor symptoms, premature ejaculation, refractory OCD) and its critical contraindications (pregnancy Category D, tamoxifen, MAOIs, elderly with cognitive impairment).",
+    },
+    {
+      number: 4,
+      title: "Indian Context",
+      description: "How is paroxetine used (and avoided) in Indian hospitals?",
+      sectionIds: ["indian-clinical", "decision-path", "common-mistakes"],
+      checkpoint: "You know the Indian brands (Paxil, Pexep, Paxidep, Paroxet), the pregnancy and tamoxifen protocols, the discontinuation management, and the common mistakes interns make with paroxetine.",
+    },
+    {
+      number: 5,
+      title: "Exam Revision",
+      description: "High-yield facts, clinical cases, and drug comparisons.",
+      sectionIds: ["learning-module", "clinical-case", "drug-navigation", "high-yield-summary"],
+      checkpoint: "You've reviewed the exam-specific content (paroxetine is HIGH-YIELD due to its distinctive contraindications), worked through a clinical case, compared paroxetine with other SSRIs, and have a one-page revision summary.",
+    },
+    {
+      number: 6,
+      title: "Active Recall",
+      description: "Can you answer these without looking?",
+      sectionIds: ["active-recall", "faq", "references"],
+      checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Paroxetine — including why it is generally avoided, its critical contraindications, and its niche uses.",
+    },
+  ],
+
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
   reviewers: [

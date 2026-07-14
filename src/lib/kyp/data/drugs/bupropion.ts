@@ -1046,6 +1046,823 @@ export const bupropion: Drug = {
       "Bupropion strongly slows down one of your liver's enzyme systems (CYP2D6), which processes many other medicines. This means levels of those medicines can rise while you are on bupropion — examples include metoprolol and other beta-blockers, certain antidepressants (paroxetine, fluoxetine, TCAs), antipsychotics (risperidone, haloperidol, aripiprazole), some heart-rhythm medicines (propafenone, flecainide), tramadol, and tamoxifen (used for breast cancer). Always tell your pharmacist about everything you take. Do NOT drink heavily while on bupropion — sudden alcohol cessation combined with bupropion can cause seizures. If you are using bupropion to quit smoking and combining it with nicotine patches or gum, your doctor will check your blood pressure.",
   },
 
+  /* ---- India Layer extensions ---- */
+
+  /* Indian clinical practice */
+  indianPractice: {
+    prescriptionStatus: "Schedule H",
+    brands: [
+      { name: "Wellbutrin", manufacturer: "GSK", strengths: "150mg, 300mg XL", note: "Originator brand — available in metros and Tier-1 cities, expensive" },
+      { name: "Bupron", manufacturer: "Sun Pharma", strengths: "150mg SR, 150mg XL, 300mg XL", note: "Most commonly prescribed generic bupropion in India" },
+      { name: "Zyban", manufacturer: "GSK", strengths: "150mg SR", note: "Indicated specifically for smoking cessation — same molecule, different brand positioning" },
+      { name: "Bupropion", manufacturer: "Intas", strengths: "150mg SR, 150mg XL" },
+      { name: "Wellbutrin XL", manufacturer: "GSK", strengths: "150mg, 300mg" },
+    ],
+    typicalDoses:
+      "Depression: start 150mg XL OD morning, may increase to 300mg XL OD after 4 days; max 450mg/day (in divided SR doses). Smoking cessation: 150mg SR OD for 3 days, then 150mg SR BD for 7–12 weeks. In Indian practice, SR formulation is more commonly used than XL due to cost; dosing is conservative (150mg → 300mg). Maximum: 450mg/day.",
+    prescribingScenarios: [
+      "First choice when SSRI-induced sexual dysfunction or weight gain is the limiting side effect — switch to bupropion or augment SSRI with bupropion.",
+      "Smoking cessation in motivated patients (Zyban 150mg SR BD), often combined with nicotine replacement therapy.",
+      "Depression with prominent anergia, hypersomnia, and psychomotor retardation (atypical depression) — preferred over SSRIs.",
+      "Adjunct to mood stabiliser in bipolar depression (off-label — controversial, used by some Indian psychiatrists; risk of manic switch is lower than SSRIs but still present).",
+      "Adult ADHD off-label when stimulants are contraindicated or unavailable.",
+    ],
+    availability: {
+      governmentHospitals: false,
+      privatePharmacies: true,
+      urban: true,
+      rural: false,
+      note: "Not commonly available in government hospitals or Jan Aushadhi Kendras. Available in private pharmacies in metros and Tier-1/2 cities. Often NOT stocked in rural pharmacies — patients may need to source from urban centres. Generic versions (Bupron) are more widely available than originator (Wellbutrin).",
+    },
+    costCategory: "moderate",
+    costNote: "Bupropion is moderately expensive in India compared with SSRIs. Bupron (Sun Pharma) 150mg SR costs approximately ₹12–18 per tablet; Wellbutrin XL 150mg costs ₹25–40 per tablet. A 30-day course at 150mg OD costs ₹400–600 (generic) or ₹800–1200 (originator). Cost varies by manufacturer and region. NOT commonly available in Jan Aushadhi Kendras.",
+    monitoring:
+      "In Indian practice, monitoring is primarily clinical. BP at baseline and 4 weeks (bupropion can raise BP, especially with nicotine replacement). No routine blood tests needed. For smoking cessation, follow-up at 1 week (tolerability), 4 weeks (quit status), 8 weeks (relapse prevention). For depression, follow-up at 2/4/6/12 weeks as for any antidepressant. Seizure risk: counsel patient about maximum dose and to avoid abrupt discontinuation of alcohol/benzodiazepines. PHQ-9 in tertiary centres.",
+    patientCounselling: [
+      "Take in the MORNING — bupropion is activating and can cause insomnia if taken late in the day.",
+      "The biggest advantage of this medicine over other antidepressants: it does NOT cause sexual side effects and may even help you lose 1–2 kg.",
+      "Do NOT exceed the prescribed dose — too much bupropion can cause seizures (fits).",
+      "Tell your doctor if you have ever had a seizure, an eating disorder (anorexia/bulimia), or are withdrawing from alcohol — these make seizures more likely and bupropion may not be safe.",
+      "If you are also using it to quit smoking, you may continue to smoke for the first 1–2 weeks and set a 'quit date' around day 8–14.",
+      "Avoid abrupt alcohol cessation while on bupropion — sudden alcohol withdrawal + bupropion increases seizure risk.",
+      "Common side effects in week 1: trouble sleeping, headache, dry mouth, mild anxiety or jitteriness — these usually settle.",
+      "Bupropion affects how your body handles many other medicines — tell your pharmacist about everything you take, especially beta-blockers (metoprolol), antidepressants, antipsychotics, or tamoxifen.",
+      "If you feel worse, more agitated, or have new suicidal thoughts in the first month, contact your doctor or call Tele-MANAS at 14416.",
+      "Unlike SSRIs, bupropion does NOT cause 'brain zap' withdrawal — but still take it regularly and don't stop abruptly.",
+    ],
+  },
+
+  /* NMC CBME competency mapping */
+  cbmeMapping: {
+    subject: "Pharmacology",
+    mbbsYear: "Second Professional",
+    topic: "Drugs acting on Central Nervous System — Antidepressants (NDRI, atypical)",
+    competencyCodes: ["PH7.3", "PH7.4", "PY3.2"],
+    competencyDescriptions: [
+      "PH7.3: Describe the mechanism of action, pharmacological actions, adverse effects, contraindications, and therapeutic uses of antidepressant drugs with emphasis on atypical antidepressants like bupropion (NDRI).",
+      "PH7.4: Explain the rationale for drug selection, dose individualisation, and monitoring of antidepressant therapy in different clinical scenarios — including smoking cessation and SSRI-induced sexual dysfunction.",
+      "PY3.2 (Psychiatry, Final Professional): Describe the pharmacological management of mood disorders, including selection of NDRI (bupropion) for atypical depression, augmentation, and smoking cessation.",
+    ],
+    integrationSubjects: ["Psychiatry", "General Medicine", "Community Medicine (tobacco cessation)"],
+  },
+
+  /* Exam Lens — structured by Indian examination */
+  examLens: {
+    mbbs: {
+      viva: [
+        "Why does bupropion cause less sexual dysfunction than SSRIs? (NDRI — blocks NET + DAT, NOT SERT. No serotonergic effect on 5-HT2C / 5-HT1A receptors, which mediate SSRI sexual SE.)",
+        "What is the mechanism of action of bupropion? (Inhibits NET and DAT → ↑ NE and DA in PFC → energy, motivation, attention. Also non-competitive antagonist at nicotinic ACh receptors — basis of smoking-cessation action.)",
+        "What is the most important contraindication of bupropion? (Seizure disorder and eating disorders — bupropion lowers seizure threshold; highest seizure risk of any modern antidepressant.)",
+        "Why is bupropion used for smoking cessation? (Non-competitive antagonism of α3β4 and α4β2 nicotinic ACh receptors → blocks nicotine reward → reduces craving and withdrawal.)",
+        "Which CYP enzyme does bupropion inhibit? (CYP2D6 — strong inhibitor, despite being metabolised by CYP2B6. Important interactions: metoprolol, TCAs, antipsychotics, tamoxifen, propafenone, flecainide.)",
+        "Why is bupropion dosed in the morning? (Activating — increases NE and DA → can cause insomnia if taken late.)",
+      ],
+      practical: [
+        "Counsel a patient being switched from sertraline to bupropion because of sexual dysfunction.",
+        "Write a prescription for bupropion XL 150mg for a 30-year-old with atypical depression.",
+        "Write a smoking-cessation prescription for Zyban (bupropion SR 150mg — 1 OD × 3 days, then 1 BD × 7–12 weeks).",
+        "Identify contraindications of bupropion from a given clinical scenario (patient with epilepsy, eating disorder, alcohol withdrawal).",
+      ],
+      longAnswer: [
+        "Classify antidepressants. Describe the mechanism of action, pharmacokinetics, adverse effects, and therapeutic uses of bupropion. Discuss why it is uniquely free of sexual side effects and weight gain, and explain its role in smoking cessation.",
+        "A 35-year-old man with depression reports sexual dysfunction and weight gain on sertraline. Discuss the pharmacological management, including switch vs augmentation strategies, drug selection, monitoring, and counselling. Address bupropion's contraindications (seizure disorder, eating disorder, alcohol withdrawal, MAOI).",
+      ],
+    },
+    neetPg: {
+      highYield: [
+        "Bupropion = NDRI (blocks NET + DAT, NOT SERT). NO sexual dysfunction, NO weight gain (causes weight LOSS), NO discontinuation syndrome, NO sedation (activating).",
+        "Highest seizure risk of any modern antidepressant — contraindicated in seizure disorder, eating disorders (anorexia/bulimia), alcohol withdrawal, CNS tumour.",
+        "Smoking cessation: Zyban (bupropion SR) — nicotinic ACh receptor (α3β4, α4β2) non-competitive antagonist. Start 1 week before quit date.",
+        "CYP2D6 inhibitor (STRONG) — despite being metabolised by CYP2B6. Raises levels of TCAs, metoprolol, antipsychotics, tamoxifen (reduces activation of prodrug → less effective), propafenone, flecainide.",
+        "Metabolism: CYP2B6 to hydroxybupropion (active metabolite). Genetic polymorphism in CYP2B6 (CYP2B6*6) → reduced metabolism.",
+        "Dosing: XL 150mg OD morning → 300mg OD after 4 days. Max 450mg/day. SR formulation: BD dosing (8 hours apart).",
+        "FDA indications: MDD, seasonal affective disorder (SAD prevention), smoking cessation (Zyban), adjunct in bipolar depression (off-label).",
+        "Two signature 'negatives' that distinguish bupropion: NO serotonin → NO sexual SE; NO SERT → NO discontinuation syndrome.",
+        "Off-label uses: adult ADHD, SSRI-induced sexual dysfunction (augmentation), cocaine use disorder (investigational), neuropathic pain.",
+        "Pregnancy: Former FDA Category C. Some recent data suggesting VSD/cardiac defects — avoid in 1st trimester if alternatives exist. Use only if benefit justifies risk.",
+      ],
+      pyqConcepts: [
+        "NEET PG 2022: Antidepressant that does NOT cause sexual dysfunction? (Answer: Bupropion — NDRI, no SERT blockade.)",
+        "NEET PG 2021: Antidepressant contraindicated in eating disorders and seizure disorder? (Answer: Bupropion — lowers seizure threshold.)",
+        "NEET PG 2020: Drug used for smoking cessation that is also an antidepressant? (Answer: Bupropion — nicotinic ACh antagonist.)",
+        "NEET PG 2019: Antidepressant that causes weight LOSS? (Answer: Bupropion — activating, no serotonergic weight-gain effect.)",
+        "INICET 2021: Antidepressant that is a strong CYP2D6 inhibitor despite being a CYP2B6 substrate? (Answer: Bupropion.)",
+      ],
+    },
+    inicet: {
+      clinicalReasoning: [
+        "A 32-year-old woman on sertraline 100mg for 6 months reports partial response with anorgasmia and 4 kg weight gain. What is the next step? (Answer: Augment with bupropion XL 150mg OD — addresses both sexual dysfunction AND partial response. Alternative: switch to bupropion. Counsel on seizure risk and morning dosing.)",
+        "A 40-year-old man with depression wants to quit smoking (20 cigarettes/day). He has no seizure/eating disorder history. Which antidepressant would you choose? (Answer: Bupropion SR 150mg OD × 3 days, then BD for 7–12 weeks — dual benefit for depression and smoking cessation. Set quit date 1–2 weeks into therapy.)",
+        "A 25-year-old woman with a history of bulimia nervosa presents with depression. Which antidepressants are contraindicated? (Answer: Bupropion is ABSOLUTELY contraindicated — bulimia (purging → electrolyte disturbance → low seizure threshold) + bupropion's own seizure-lowering effect = unacceptably high risk. Use SSRI (fluoxetine is FDA-approved for bulimia) instead.)",
+        "A 50-year-old patient on tamoxifen for breast cancer develops depression. The oncologist asks about antidepressant choice. Why is bupropion a poor choice despite no sexual SE? (Answer: Tamoxifen is a prodrug activated by CYP2D6. Bupropion inhibits CYP2D6 → reduces tamoxifen activation → potential cancer recurrence. Use venlafaxine or sertraline — weak CYP2D6 inhibitors.)",
+      ],
+    },
+    fmge: {
+      frequentlyTested: [
+        "Bupropion mechanism: blocks NET + DAT (NDRI). No SERT effect.",
+        "Unique advantage: NO sexual dysfunction, NO weight gain, NO discontinuation syndrome.",
+        "Contraindications: seizure disorder, eating disorder, alcohol withdrawal, MAOI.",
+        "Used for smoking cessation (Zyban) — nicotinic ACh receptor antagonist.",
+        "Side effect: seizures (dose-dependent, highest among antidepressants).",
+        "CYP2D6 inhibitor — drug interactions with TCAs, metoprolol, antipsychotics.",
+        "Activating — morning dosing, can cause insomnia.",
+        "Active metabolite: hydroxybupropion (via CYP2B6).",
+        "Max dose: 450mg/day (divided).",
+        "Off-label: adult ADHD, SSRI-induced sexual dysfunction augmentation.",
+      ],
+    },
+    psychiatryResidency: {
+      advancedPearls: [
+        "Bupropion is the antidepressant of choice when sexual dysfunction is the deal-breaker — both as monotherapy (switch from SSRI) and as augmentation (add to SSRI for partial response + sexual SE). Dose for augmentation: 150mg XL OD.",
+        "Although bupropion has a lower manic-switch risk than SSRIs/SNRIs, it is NOT zero — use only as adjunct to mood stabiliser in bipolar depression, never monotherapy. The 2006 APA guideline is cautious.",
+        "Seizure risk is dose-dependent and formulation-dependent: immediate-release > SR > XL. SR and XL have been engineered to reduce peak plasma levels. Risk at 450mg/day: ~0.4%. Risk at >600mg/day: >10% (contraindicated).",
+        "Bupropion is structurally related to amphetamines (aminoketone class) but has minimal abuse potential — favoured by US Air Force for pilots with depression precisely because it doesn't impair cognition.",
+        "Hydroxybupropion (active metabolite via CYP2B6) has ~50% of parent activity and similar half-life. CYP2B6 polymorphism (CYP2B6*6) reduces metabolism — relevant in South Indian populations (allele frequency ~5–10%).",
+        "Smoking cessation protocol: start bupropion SR 150mg OD 1 week before target quit date. Continue for 7–12 weeks. Can combine with NRT (monitor BP). Quit rates ~30% at 6 months (vs 17% placebo).",
+        "California Rocket Fuel is venlafaxine + mirtazapine — a TRD combination. Bupropion + SSRI is sometimes called 'Welly-Pax' or 'Welly-Lu' — different mechanism (DA/NE + 5-HT) and useful when SSRI alone fails or causes sexual SE.",
+      ],
+    },
+  },
+
+  /* International vs Indian guideline comparisons */
+  guidelineComparisons: [
+    {
+      topic: "First-line vs augmentation role",
+      internationalSource: "APA / NICE",
+      internationalRecommendation: "SSRIs are first-line for MDD. Bupropion is an alternative first-line for atypical depression or when sexual dysfunction is a concern, and is widely used as augmentation for SSRI partial response or SSRI-induced sexual dysfunction.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS also recommends SSRIs first-line. Bupropion is reserved as second-line / augmentation, used more often in private psychiatric practice than in government hospitals due to higher cost and lower availability. IPS concurs with using bupropion to manage SSRI-induced sexual dysfunction.",
+    },
+    {
+      topic: "Smoking cessation",
+      internationalSource: "US Public Health Service / FDA",
+      internationalRecommendation: "Bupropion SR (Zyban) is FDA-approved and recommended as first-line pharmacotherapy for tobacco dependence, along with varenicline and nicotine replacement therapy (NRT). Start 1 week before quit date, continue 7–12 weeks.",
+      indianSource: "Indian Public Health Standards / NTCP",
+      indianRecommendation: "India's National Tobacco Control Programme (NTCP) emphasises behavioural counselling and NRT as first-line; bupropion is available but less commonly used due to cost. In Indian psychiatric practice, bupropion is used for motivated quit attempts, often combined with NRT. WHO mhGAP recommends bupropion or NRT for tobacco dependence in resource-limited settings.",
+    },
+    {
+      topic: "Contraindications (seizure, eating disorder)",
+      internationalSource: "FDA Prescribing Information (Wellbutrin)",
+      internationalRecommendation: "Bupropion is absolutely contraindicated in seizure disorder, current/prior bulimia or anorexia nervosa, abrupt alcohol or sedative withdrawal, and MAOI use within 14 days. Also contraindicated in patients undergoing abrupt discontinuation of alcohol, benzodiazepines, or barbiturates.",
+      indianSource: null,
+      indianRecommendation: "No dedicated IPS guideline on bupropion contraindications — Indian practice follows FDA label. Section reflects accepted clinical practice and internationally accepted evidence. Eating disorders are particularly important in Indian young women, and the seizure risk is amplified by purging-induced electrolyte disturbance.",
+    },
+    {
+      topic: "Use in bipolar depression",
+      internationalSource: "APA / CANMAT (Canada)",
+      internationalRecommendation: "Bupropion may be used as adjunct to mood stabiliser in bipolar depression — lower switch risk than SSRIs/SNRIs. NEVER as monotherapy. Use with first-generation mood stabiliser (lithium/valproate) covering the manic pole.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs — bupropion is a reasonable adjunct in bipolar depression when a mood stabiliser is in place. Quetiapine, lurasidone, or olanzapine-fluoxetine combination are also first-line options per international guidelines. Monitor for switch (especially in Bipolar I).",
+    },
+    {
+      topic: "Use in pregnancy",
+      internationalSource: "FDA / ACOG",
+      internationalRecommendation: "Former FDA Category C. Recent cohort data suggest possible association with ventricular and atrial septal defects. Avoid in 1st trimester if alternatives exist. Sertraline is preferred in pregnancy.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs — avoid bupropion in pregnancy, especially 1st trimester. Use sertraline if SSRI is indicated. If bupropion is essential (e.g., smoking cessation in pregnancy), involve obstetrician and counsel about small absolute increase in cardiac defect risk.",
+    },
+  ],
+
+  /* Indian reference sources */
+  indianReferences: [
+    {
+      source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition",
+      type: "textbook",
+      section: "Chapter 33 — Antidepressant Drugs (Atypical antidepressants section)",
+    },
+    {
+      source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression",
+      type: "guideline",
+      section: "Section on pharmacotherapy — atypical antidepressants and augmentation",
+    },
+    {
+      source: "NMC CBME Curriculum — Pharmacology (Second Professional)",
+      type: "curriculum",
+      section: "Topic: Drugs acting on CNS — Antidepressants (NDRI, atypical)",
+    },
+    {
+      source: "NMC CBME Curriculum — Psychiatry (Final Professional)",
+      type: "curriculum",
+      section: "Topic: Psychopharmacology — Mood disorders and substance use (tobacco)",
+    },
+    {
+      source: "National Tobacco Control Programme (NTCP), Ministry of Health & Family Welfare",
+      type: "regulatory",
+      section: "Guidelines for tobacco dependence treatment — pharmacotherapy options",
+    },
+    {
+      source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416",
+      type: "regulatory",
+      section: "Mental health support resource for patients on antidepressants",
+      url: "tel:14416",
+    },
+    {
+      source: "CDSCO — Central Drugs Standard Control Organisation",
+      type: "regulatory",
+      section: "Bupropion — Schedule H prescription status",
+    },
+  ],
+
+  /* Section difficulty mapping */
+  sectionDifficulty: {
+    "top": "mbbs",
+    "quick-facts": "mbbs",
+    "learning-objectives": "mbbs",
+    "knowledge-graph": "pg",
+    "mechanism": "mbbs",
+    "brain-regions": "pg",
+    "neurotransmitters": "pg",
+    "neural-pathways": "resident",
+    "timeline": "mbbs",
+    "clinical-uses": "mbbs",
+    "side-effects": "mbbs",
+    "monitoring": "pg",
+    "contraindications": "mbbs",
+    "interactions": "pg",
+    "patient-education": "mbbs",
+    "clinical-pearls": "pg",
+    "exam-lens": "mbbs",
+    "memory-tricks": "mbbs",
+    "clinical-case": "pg",
+    "comparison": "pg",
+    "indian-practice": "mbbs",
+    "guideline-comparison": "resident",
+    "related-drugs": "pg",
+    "high-yield-summary": "mbbs",
+    "faq": "mbbs",
+    "references": "resident",
+  },
+
+  /* ---- India Layer extensions (platform-wide) ---- */
+
+  /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
+  evidenceHierarchy: {
+    international: [
+      { source: "APA Practice Guideline", recommendation: "SSRIs first-line for MDD. Bupropion is an alternative first-line for atypical depression or when SSRI sexual SE / weight gain is a concern." },
+      { source: "FDA", recommendation: "Approved for MDD, seasonal affective disorder prevention, and smoking cessation (Zyban). Boxed warning: suicidality <25." },
+      { source: "NICE CG91", recommendation: "SSRIs first-line. Bupropion not commonly used as first-line in UK NHS but is an alternative when sexual dysfunction limits SSRI use." },
+      { source: "US Public Health Service", recommendation: "Bupropion SR is first-line pharmacotherapy for tobacco dependence, alongside varenicline and NRT." },
+    ],
+    indian: [
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "SSRIs first-line. Bupropion reserved as second-line / augmentation, often used for SSRI-induced sexual dysfunction." },
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS concurs with international guidelines on bupropion's role in bipolar depression as adjunct to mood stabiliser." },
+      { source: null, recommendation: "No dedicated IPS guideline on bupropion for smoking cessation. National Tobacco Control Programme emphasises behavioural counselling and NRT as first-line; bupropion is available but less commonly used due to cost. Current section reflects accepted clinical practice." },
+    ],
+    indianClinicalPractice:
+      "In Indian practice, bupropion is most commonly prescribed by psychiatrists in private practice for: (1) SSRI-induced sexual dysfunction (augmentation or switch), (2) smoking cessation in motivated patients, and (3) atypical depression (anergia, hypersomnia, hyperphagia). It is NOT commonly stocked in government hospitals or Jan Aushadhi Kendras, limiting its use in resource-constrained settings. The SR formulation (Bupron) is more commonly used than XL due to cost. Indian psychiatrists are familiar with the CYP2D6 inhibition profile — care is taken with concurrent tamoxifen, metoprolol, antipsychotics, and TCAs. Smoking cessation prescribing is often paired with nicotine replacement therapy (NRT) and brief behavioural counselling.",
+  },
+
+  /* Indian encounter context — where you'll see this drug */
+  indianEncounterContext: {
+    governmentHospitals:
+      "NOT commonly available in government hospital pharmacies or DMHP centres — patients may be prescribed bupropion by a psychiatrist but must purchase from private pharmacy. Used in tertiary psychiatry centres for treatment-resistant depression and smoking cessation clinics.",
+    privateHospitals:
+      "Used in private psychiatric practice for SSRI-induced sexual dysfunction, smoking cessation, and atypical depression. Bupron (Sun Pharma) and Wellbutrin XL (GSK) are commonly stocked. Monitoring includes BP at baseline and 4 weeks, clinical review at 2/4/6/12 weeks.",
+    medicalColleges:
+      "Teaching drug for atypical antidepressant pharmacology. Used in pharmacology practicals (prescription writing for smoking cessation). Commonly featured in NEET PG and INICET questions on antidepressant classification and 'no sexual SE' differentiator.",
+    primaryCare:
+      "Rarely initiated in Indian primary care due to seizure-risk counselling requirements and CYP2D6 interaction profile. GP/family physicians may refer to psychiatrist for bupropion initiation. Smoking cessation in primary care more commonly uses NRT alone.",
+    psychiatryOPD:
+      "Used for SSRI augmentation (150mg XL OD) when partial response or sexual dysfunction; smoking cessation (Zyban 150mg SR BD); atypical depression (300mg XL OD); bipolar depression adjunct (off-label). Often combined with mood stabiliser in bipolar depression. Counselling on seizure risk and morning dosing is mandatory.",
+  },
+
+  /* Indian prescription workflow */
+  prescriptionWorkflow: {
+    beforePrescribing: [
+      "Screen for bipolar disorder (MDQ) — bupropion has lower switch risk than SSRIs but is NOT zero.",
+      "Ask about seizure history (epilepsy, head injury, CNS tumour) — ABSOLUTE contraindication.",
+      "Ask about eating disorder history (anorexia/bulimia, current or past) — ABSOLUTE contraindication.",
+      "Ask about alcohol use — abrupt alcohol cessation + bupropion = high seizure risk. Counsel: do not stop alcohol suddenly while starting bupropion.",
+      "Check for MAOI use in last 14 days — absolute contraindication.",
+      "Review concurrent medications — bupropion inhibits CYP2D6 → raises levels of metoprolol, TCAs, antipsychotics, tamoxifen, propafenone, flecainide. Dose-adjust as needed.",
+      "For smoking cessation: set a 'quit date' 1–2 weeks into therapy. Assess motivation and plan behavioural support.",
+      "Counsel about morning dosing (activating — insomnia risk) and to NOT exceed prescribed dose (seizure risk).",
+    ],
+    duringTreatment: [
+      "Week 1: assess tolerability (insomnia, headache, dry mouth, anxiety/jitteriness) — usually mild and self-limited.",
+      "Week 2: BP check (especially if combined with NRT for smoking cessation).",
+      "Week 4: assess early response — energy, motivation, concentration often improve before mood.",
+      "Week 6: PHQ-9 / quit-rate assessment (smoking). If <30% reduction, increase dose to 300mg XL OD.",
+      "Week 12: full response assessment. If partial response, consider augmentation with SSRI or mirtazapine.",
+      "Monitor for activation/agitation in young adults (<25) — black box warning for suicidality.",
+      "Watch for hypersensitivity reactions (rash, fever, swelling) — rare but stop and seek urgent care.",
+    ],
+    followUp: [
+      "First follow-up at 1–2 weeks (tolerability, insomnia, jitteriness, suicidality in <25).",
+      "Second follow-up at 4 weeks (early response, BP).",
+      "Third follow-up at 6 weeks (PHQ-9 / quit rate; dose escalation decision).",
+      "Fourth follow-up at 12 weeks (full response assessment).",
+      "If remission achieved: continue for 6–12 months for first episode of depression.",
+      "For smoking cessation: continue bupropion SR for 7–12 weeks; reassess quit status at 8 weeks and 6 months.",
+      "Before discontinuation: taper over 2–4 weeks (lower risk than SSRIs but still recommended).",
+    ],
+    whenToRefer: [
+      "Refer to psychiatrist if seizure occurs (STOP bupropion immediately, switch to alternative).",
+      "Refer urgently if suicidal ideation emerges or worsens.",
+      "Refer if bipolar disorder is suspected (manic switch risk).",
+      "Refer to oncologist before starting bupropion in any patient on tamoxifen (CYP2D6 inhibition reduces tamoxifen efficacy).",
+      "Refer to smoking cessation counsellor for behavioural support alongside bupropion.",
+      "Refer to physician if severe hypertension develops.",
+      "Refer if pregnancy is planned or discovered (bupropion avoided in 1st trimester if alternatives exist).",
+    ],
+  },
+
+  /* Exam frequency — star ratings */
+  examFrequency: {
+    neetPg: 5,
+    inicet: 4,
+    mbbsViva: 4,
+    fmge: 5,
+  },
+
+  /* PYQ metadata — concept-level, no copyrighted content */
+  pyqMetadata: [
+    { exam: "NEET PG", year: 2022, concept: "Antidepressant with NO sexual dysfunction", topic: "Atypical antidepressants" },
+    { exam: "NEET PG", year: 2021, concept: "Contraindications: seizure disorder + eating disorder", topic: "Bupropion safety" },
+    { exam: "NEET PG", year: 2020, concept: "Antidepressant used for smoking cessation", topic: "Tobacco dependence pharmacotherapy" },
+    { exam: "NEET PG", year: 2019, concept: "Antidepressant causing weight loss", topic: "Antidepressant adverse effects" },
+    { exam: "INICET", year: 2021, concept: "CYP2D6 inhibitor among antidepressants (bupropion)", topic: "Drug interactions" },
+    { exam: "INICET", year: 2023, concept: "Bupropion mechanism — NDRI (NET + DAT, not SERT)", topic: "Antidepressant pharmacology" },
+    { exam: "FMGE", year: 2022, concept: "Bupropion — nicotinic ACh antagonist", topic: "Smoking cessation" },
+    { exam: "FMGE", year: 2021, concept: "Antidepressant with highest seizure risk", topic: "Antidepressant safety" },
+  ],
+
+  /* Indian comparison contexts */
+  indianComparisonContexts: [
+    {
+      scenario: "SSRI-induced sexual dysfunction",
+      recommendation: "Bupropion is the drug of choice — switch to bupropion XL OR augment SSRI with bupropion XL 150mg OD. Bupropion's lack of SERT blockade means no sexual SE; some evidence suggests it may actively improve sexual function.",
+      alternative: "Mirtazapine also lacks sexual SE but is sedating and causes weight gain — choose based on patient profile (insomnia/weight loss → mirtazapine; anergia/obesity → bupropion).",
+    },
+    {
+      scenario: "Smoking cessation",
+      recommendation: "Bupropion SR (Zyban) is FDA-approved and effective (quit rate ~30% at 6 months). Can combine with NRT for higher quit rates. Start 1 week before quit date, continue 7–12 weeks.",
+      alternative: "Varenicline (Champix) has slightly higher quit rates but historically carried neuropsychiatric warning (now removed). NRT alone is the cheapest option in Indian government settings.",
+    },
+    {
+      scenario: "Atypical depression (anergia, hypersomnia, hyperphagia)",
+      recommendation: "Bupropion is preferred — activating (NE + DA) addresses anergia; weight LOSS addresses hyperphagia; does not worsen hypersomnia if dosed in morning.",
+      alternative: "SSRIs are also effective but may cause further sexual dysfunction and weight gain, compounding atypical depression features.",
+    },
+    {
+      scenario: "Government hospital setup",
+      recommendation: "Bupropion is NOT commonly stocked — patients prescribed bupropion must purchase from private pharmacy. Use SSRIs (sertraline, escitalopram) as first-line; reserve bupropion for specific indications (sexual dysfunction, smoking cessation).",
+      alternative: "If cost is the primary concern and SSRI is needed, Jan Aushadhi generic sertraline (₹2–5/tablet) is unbeatable.",
+    },
+    {
+      scenario: "Bipolar depression (adjunct to mood stabiliser)",
+      recommendation: "Bupropion is preferred over SSRIs as adjunct to lithium/valproate — lower manic switch risk. Use 150–300mg XL OD. Never monotherapy.",
+      alternative: "Quetiapine, lurasidone, or olanzapine-fluoxetine combination are evidence-based options for bipolar depression.",
+    },
+    {
+      scenario: "Pregnancy",
+      recommendation: "Avoid bupropion, especially in 1st trimester — possible association with ventricular septal defects. Use sertraline if SSRI is needed (preferred SSRI in pregnancy).",
+      alternative: "For smoking cessation in pregnancy, behavioural therapy first; NRT (with obstetrician input) is preferred over bupropion.",
+    },
+  ],
+
+  /* Jan Aushadhi availability */
+  janAushadhi: {
+    available: false,
+    note: "Bupropion is NOT commonly available at Jan Aushadhi Kendras. Patients must purchase from private pharmacies. Generic versions (Bupron — Sun Pharma, Bupropion — Intas) are moderately priced at ₹12–18 per 150mg SR tablet. Originator (Wellbutrin XL — GSK) is more expensive at ₹25–40 per tablet. The lack of Jan Aushadhi availability limits bupropion use in resource-constrained settings.",
+  },
+
+  /* Restructured evidence sources — International vs Indian */
+  evidenceSources: {
+    international: [
+      { source: "Katzung Basic & Clinical Pharmacology, 16th edition", section: "Chapter 30 — Antidepressant Agents (NDRI / atypical)" },
+      { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
+      { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants (NDRIs)" },
+      { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression and smoking cessation" },
+      { source: "FDA Prescribing Information — WELLBUTRIN / WELLBUTRIN SR / WELLBUTRIN XL / ZYBAN", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/018644s037lbl.pdf" },
+      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Alternative antidepressants" },
+      { source: "APA Practice Guideline for MDD, 3rd edition", section: "Pharmacotherapy — atypical antidepressants" },
+      { source: "US Public Health Service Guideline — Treating Tobacco Use and Dependence", section: "Pharmacotherapy — bupropion SR" },
+    ],
+    indian: [
+      { source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition", type: "textbook", section: "Chapter 33 — Antidepressant Drugs (atypical)" },
+      { source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression", type: "guideline", section: "Section on pharmacotherapy — atypical antidepressants" },
+      { source: "NMC CBME Curriculum — Pharmacology (Second Professional)", type: "curriculum", section: "Topic: Drugs acting on CNS — Antidepressants (NDRI)" },
+      { source: "NMC CBME Curriculum — Psychiatry (Final Professional)", type: "curriculum", section: "Topic: Psychopharmacology — Mood disorders and substance use" },
+      { source: "National Tobacco Control Programme (NTCP), MoHFW", type: "regulatory", section: "Guidelines for tobacco dependence treatment" },
+      { source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416", type: "regulatory", section: "Mental health support resource", url: "tel:14416" },
+      { source: "CDSCO — Central Drugs Standard Control Organisation", type: "regulatory", section: "Bupropion — Schedule H prescription status" },
+    ],
+  },
+
+  /* ---- Final Architecture Pass — canonical template v2.0 ---- */
+
+  /* Clinical decision path — algorithm-style decision tree */
+  clinicalDecisionPath: {
+    title: "When to choose Bupropion",
+    startNodeId: "start",
+    nodes: [
+      {
+        id: "start",
+        question: "Patient presents with depression OR tobacco use disorder",
+        branches: [
+          { label: "Depression", next: "depression" },
+          { label: "Smoking cessation", next: "smoking" },
+        ],
+      },
+      {
+        id: "depression",
+        question: "Patient has depression — what is the clinical scenario?",
+        branches: [
+          { label: "SSRI-induced sexual dysfunction", next: "sexual-dysfunction" },
+          { label: "Atypical depression (anergia, hypersomnia)", next: "atypical" },
+          { label: "Treatment-resistant (SSRI partial response)", next: "augmentation" },
+          { label: "Bipolar depression (on mood stabiliser)", next: "bipolar" },
+        ],
+      },
+      {
+        id: "sexual-dysfunction",
+        question: "Patient has sexual dysfunction on SSRI — what to do?",
+        recommendation: "Switch to bupropion XL 150mg OD (titrate to 300mg) OR augment SSRI with bupropion XL 150mg OD. Bupropion's lack of SERT blockade eliminates sexual SE.",
+        reasoning: "Bupropion is the antidepressant of choice for SSRI-induced sexual dysfunction — both as switch and as augmentation. Counsel on seizure risk and morning dosing.",
+      },
+      {
+        id: "atypical",
+        question: "Atypical depression with anergia/hypersomnia/hyperphagia — what to choose?",
+        recommendation: "Bupropion XL 150mg OD (titrate to 300mg) — activating (NE + DA) addresses anergia; weight LOSS addresses hyperphagia; morning dosing avoids worsening hypersomnia.",
+        reasoning: "Bupropion is preferred for atypical depression because its noradrenergic/dopaminergic activation matches the symptom profile. SSRIs are also effective but may worsen weight gain and sexual dysfunction.",
+      },
+      {
+        id: "augmentation",
+        question: "Partial response to SSRI — augment or switch?",
+        recommendation: "Augment SSRI with bupropion XL 150mg OD — covers complementary mechanisms (5-HT + NE/DA), addresses residual sexual SE, and is well-tolerated.",
+        reasoning: "Bupropion augmentation of SSRI is a common strategy in treatment-resistant depression. Some patients benefit from full switch to bupropion if SSRI adverse effects are problematic.",
+      },
+      {
+        id: "bipolar",
+        question: "Bipolar depression — on mood stabiliser — augment with what?",
+        recommendation: "Bupropion XL 150mg OD as adjunct to lithium/valproate — lower manic switch risk than SSRIs. NEVER monotherapy.",
+        reasoning: "Bupropion has lower switch risk than SSRIs/SNRIs, making it a reasonable adjunct in bipolar depression. Always ensure mood stabiliser is in place. Monitor for switch (especially Bipolar I).",
+        branches: [
+          { label: "Contraindication check", next: "contraindications" },
+        ],
+      },
+      {
+        id: "smoking",
+        question: "Patient wants to quit smoking — bupropion candidate?",
+        recommendation: "Bupropion SR 150mg OD × 3 days, then 150mg BD for 7–12 weeks. Set quit date 1–2 weeks into therapy. Can combine with NRT (monitor BP).",
+        reasoning: "Bupropion SR (Zyban) is FDA-approved for smoking cessation — non-competitive antagonist at α3β4 and α4β2 nicotinic ACh receptors, blocking nicotine reward. Quit rates ~30% at 6 months vs 17% placebo.",
+        branches: [
+          { label: "Contraindication check", next: "contraindications" },
+        ],
+      },
+      {
+        id: "contraindications",
+        question: "Before prescribing bupropion — contraindications to exclude?",
+        recommendation: "ABSOLUTE: seizure disorder, eating disorder (anorexia/bulimia, current/past), abrupt alcohol/sedative withdrawal, MAOI within 14 days, severe hepatic cirrhosis. RELATIVE: pregnancy (especially 1st trimester), severe hypertension, concurrent tamoxifen.",
+        reasoning: "Bupropion lowers seizure threshold — highest seizure risk of any modern antidepressant. Eating disorders + purging cause electrolyte disturbance, amplifying seizure risk. Tamoxifen is CYP2D6-activated; bupropion inhibits CYP2D6, reducing tamoxifen efficacy. Avoid in 1st trimester pregnancy due to possible cardiac defect association.",
+      },
+    ],
+  },
+
+  /* Educational prescription template (India) */
+  educationalPrescription: {
+    scenario: "Typical Indian OPD initiation: 32-year-old with SSRI-induced sexual dysfunction on sertraline, switching to bupropion",
+    lines: [
+      "Rx",
+      "Tab Bupropion XL 150 mg",
+      "1 tab OD morning × 7 days",
+      "",
+      "Then increase to:",
+      "Tab Bupropion XL 300 mg",
+      "1 tab OD morning",
+      "",
+      "Advice: Take in MORNING with food. Do NOT exceed prescribed dose (seizure risk).",
+      "Avoid abrupt alcohol cessation while on this medicine.",
+      "If on tamoxifen, metoprolol, or any other long-term medicine, inform your doctor BEFORE starting.",
+    ],
+    followUp: [
+      "Review after 1 week — tolerability (insomnia, headache, jitteriness)",
+      "Review after 4 weeks — BP, early response (energy, motivation)",
+      "Review after 6 weeks — PHQ-9; if <30% reduction, increase to 300mg XL",
+      "Review after 12 weeks — full response assessment",
+      "If remission: continue 6–12 months, then taper over 2–4 weeks",
+    ],
+    disclaimer: "Educational example only. Not a substitute for clinical judgment. Always verify dosing against current prescribing information and individualise for each patient.",
+  },
+
+  /* Common mistakes */
+  commonMistakes: [
+    {
+      mistake: "Prescribing bupropion in a patient with past bulimia nervosa (currently 'recovered')",
+      why: "Bupropion is ABSOLUTELY contraindicated in any history of eating disorder — even 'recovered'. Bulimia carries a lifelong risk of purging behaviour with electrolyte disturbance, amplifying bupropion's seizure-lowering effect. This is a fatal mistake.",
+      correction: "Always ask about eating disorder history (past AND present) before prescribing. If history exists, use SSRI (fluoxetine is FDA-approved for bulimia). Document the screening.",
+    },
+    {
+      mistake: "Dosing bupropion at night",
+      why: "Bupropion is activating (NE + DA) — night dosing causes insomnia, leading patients to stop the drug or combine with sedatives.",
+      correction: "Always dose in the MORNING. For SR (twice-daily) formulation, second dose should be at least 8 hours before bedtime (e.g., 8am and 4pm).",
+    },
+    {
+      mistake: "Combining bupropion with abrupt alcohol cessation",
+      why: "Sudden alcohol withdrawal lowers seizure threshold. Combined with bupropion's own seizure-lowering effect, the risk of generalised tonic-clonic seizure is dramatically increased.",
+      correction: "Counsel: 'Do not stop alcohol suddenly while starting bupropion. If you plan to stop drinking, do so under medical supervision with a withdrawal protocol that does not include bupropion.'",
+    },
+    {
+      mistake: "Missing the tamoxifen interaction",
+      why: "Tamoxifen is a prodrug activated by CYP2D6. Bupropion strongly inhibits CYP2D6 → reduces tamoxifen activation → potentially reduces breast cancer protection. This is a life-threatening interaction.",
+      correction: "Always ask women (and rare men) about tamoxifen use before starting bupropion. If tamoxifen is being used, choose venlafaxine or sertraline (weak CYP2D6 inhibitors) for depression.",
+    },
+    {
+      mistake: "Exceeding maximum dose (450mg/day)",
+      why: "Bupropion has a steep dose-seizure curve. Above 450mg/day, seizure risk rises sharply (above 600mg/day, risk >10%). Patients may self-escalate if they feel 'more energy' is needed.",
+      correction: "Maximum 450mg/day (divided SR) or 300mg XL OD. Counsel explicitly: 'Do not take extra tablets — too much bupropion causes seizures.' Document the counselling.",
+    },
+    {
+      mistake: "Using bupropion as monotherapy in bipolar depression",
+      why: "Bupropion has lower manic-switch risk than SSRIs/SNRIs, but is NOT zero. Monotherapy in bipolar depression risks a manic switch — potentially dangerous.",
+      correction: "Always use bupropion as adjunct to a mood stabiliser (lithium, valproate, lamotrigine) in bipolar depression. Screen for bipolar disorder (MDQ) before starting any antidepressant.",
+    },
+    {
+      mistake: "Ignoring CYP2D6 interactions with beta-blockers and antiarrhythmics",
+      why: "Bupropion strongly inhibits CYP2D6 → raises levels of metoprolol, propafenone, flecainide. Metoprolol accumulation causes bradycardia and hypotension. Propafenone/flecainide → arrhythmia risk.",
+      correction: "If patient is on metoprolol, reduce dose by ~50% when starting bupropion. Monitor BP and heart rate. For antiarrhythmics, involve cardiologist before adding bupropion.",
+    },
+    {
+      mistake: "Not setting a quit date for smoking cessation prescribing",
+      why: "Bupropion for smoking cessation works by building receptor antagonism BEFORE the quit attempt. Without a planned quit date, patients continue smoking indefinitely on bupropion, wasting treatment and reducing quit rates.",
+      correction: "Set a target quit date 1–2 weeks into bupropion therapy. Counsel: 'Take bupropion for 1 week while continuing to smoke, then stop smoking on your quit date. Continue bupropion for 7–12 weeks after.'",
+    },
+  ],
+
+  /* When NOT to use — red card */
+  whenNotToUse: [
+    {
+      scenario: "Seizure disorder (epilepsy) or any history of seizures",
+      reason: "Bupropion lowers seizure threshold — highest seizure risk of any modern antidepressant (~0.4% at 450mg/day, >10% at >600mg/day). Even well-controlled epilepsy is an absolute contraindication.",
+      alternative: "Use SSRI (sertraline, escitalopram) — no seizure-threshold effect. Mirtazapine is also safe. For smoking cessation, use varenicline or NRT.",
+    },
+    {
+      scenario: "Current or past eating disorder (anorexia nervosa, bulimia nervosa)",
+      reason: "Eating disorders carry a lifelong risk of purging behaviour with electrolyte disturbance (hypokalaemia, hyponatraemia), which lowers seizure threshold. Combined with bupropion's own effect, seizure risk is unacceptably high.",
+      alternative: "Use SSRI (fluoxetine is FDA-approved for bulimia). For depression in eating disorder patients, sertraline or escitalopram are reasonable.",
+    },
+    {
+      scenario: "Abrupt alcohol or sedative withdrawal",
+      reason: "Alcohol/benzodiazepine/barbiturate withdrawal itself causes seizures (kindling effect). Adding bupropion amplifies the risk dramatically.",
+      alternative: "Manage withdrawal with benzodiazepine protocol (chlordiazepoxide, lorazepam). Treat depression AFTER withdrawal is complete (≥2 weeks alcohol-free).",
+    },
+    {
+      scenario: "Active MAOI use (within 14 days)",
+      reason: "Hypertensive crisis — bupropion increases NE and DA, and MAOIs prevent their breakdown → dangerous sympathetic excess.",
+      alternative: "Wait 14 days after stopping MAOI before starting bupropion. Conversely, wait 14 days after stopping bupropion before starting an MAOI.",
+    },
+    {
+      scenario: "Patient on tamoxifen (breast cancer treatment)",
+      reason: "Tamoxifen is a prodrug activated by CYP2D6. Bupropion strongly inhibits CYP2D6 → reduces tamoxifen activation → potentially reduces breast cancer protection. Life-threatening interaction.",
+      alternative: "Use venlafaxine (weakest CYP2D6 inhibitor among antidepressants) or sertraline (mild inhibitor). Avoid paroxetine and fluoxetine too (strong CYP2D6 inhibitors).",
+    },
+    {
+      scenario: "First trimester pregnancy (especially with cardiac defect risk)",
+      reason: "Cohort data suggest possible association with ventricular and atrial septal defects. Absolute risk is small but sertraline is safer.",
+      alternative: "Use sertraline (SSRI of choice in pregnancy). For smoking cessation in pregnancy, use behavioural therapy + NRT (with obstetric input).",
+    },
+  ],
+
+  /* Indian ward pearls */
+  wardPearls: {
+    professorMayAsk: [
+      "Why does bupropion cause less sexual dysfunction than SSRIs? (NDRI — blocks NET + DAT, NOT SERT. No serotonergic effect on 5-HT2C / 5-HT1A receptors.)",
+      "Why is bupropion contraindicated in eating disorders? (Bulimia/anorexia → purging → electrolyte disturbance → low seizure threshold + bupropion's own seizure-lowering = unacceptably high risk.)",
+      "Mechanism of bupropion's smoking-cessation effect? (Non-competitive antagonist at α3β4 and α4β2 nicotinic ACh receptors → blocks nicotine reward → reduces craving.)",
+      "Why is bupropion a CYP2D6 inhibitor despite being a CYP2B6 substrate? (Bupropion and its metabolite hydroxybupropion both inhibit CYP2D6 — mechanism not fully understood but clinically important.)",
+      "Which antidepressant has the highest seizure risk? (Bupropion — dose-dependent, ~0.4% at 450mg/day.)",
+      "What is the maximum daily dose of bupropion, and why? (450mg/day — steep dose-seizure curve above this. SR formulation is divided, XL is OD.)",
+    ],
+    residentExpects: [
+      "Know the absolute contraindications (seizure, eating disorder, alcohol withdrawal, MAOI) and screen for them BEFORE prescribing.",
+      "Know the CYP2D6 interactions — tamoxifen, metoprolol, TCAs, antipsychotics, propafenone, flecainide.",
+      "Know the dosing: XL 150mg OD → 300mg OD (depression); SR 150mg OD × 3 days then BD × 7–12 weeks (smoking cessation). Max 450mg/day.",
+      "Know how to manage SSRI-induced sexual dysfunction — augment with bupropion 150mg XL OR switch to bupropion.",
+      "Know that bupropion is activating — morning dosing, can cause insomnia, jitteriness in week 1.",
+      "Know that bupropion has lower manic-switch risk than SSRIs but is NOT zero — adjunct only in bipolar depression, never monotherapy.",
+    ],
+    consultantsDo: [
+      "Use bupropion XL 150mg OD as first-line augmentation for SSRI partial response with sexual SE.",
+      "Screen every patient for seizure history, eating disorder history, and alcohol use before prescribing bupropion.",
+      "Set a clear quit date when prescribing bupropion SR for smoking cessation — typically day 8–14 of therapy.",
+      "Check tamoxifen status in every woman of breast cancer age before prescribing bupropion.",
+      "Use SR formulation BD (8 hours apart) when cost is a concern (SR is cheaper than XL in India).",
+      "Combine bupropion with NRT for higher smoking cessation quit rates — but monitor BP closely.",
+      "Counsel: morning dosing, do not exceed prescribed dose (seizure risk), avoid abrupt alcohol cessation.",
+    ],
+    internsMiss: [
+      "Forgetting to ask about eating disorder history (especially in young women — bulimia is underdiagnosed).",
+      "Missing the tamoxifen interaction in breast cancer patients (potentially life-threatening).",
+      "Prescribing bupropion at night → patient develops insomnia → stops the drug or adds sedatives.",
+      "Not counselling about seizure risk and maximum dose — patient self-escalates 'for more energy'.",
+      "Not setting a quit date for smoking cessation — patient continues smoking indefinitely on bupropion.",
+      "Combining bupropion with abrupt alcohol cessation → seizure.",
+      "Missing MAOI history — patient may be on tranylcypromide or phenelzine (rare but used in India).",
+      "Not dose-adjusting metoprolol when adding bupropion → bradycardia and hypotension.",
+      "Not warning young adults (<25) about activation/agitation and suicidality in week 1 (black box warning).",
+    ],
+  },
+
+  /* Refined high-yield level */
+  highYieldLevel: "extreme",
+
+  /* Drug family navigation */
+  drugFamilyNav: {
+    familyName: "NDRIs (Norepinephrine-Dopamine Reuptake Inhibitors)",
+    members: [
+      { name: "Bupropion", slug: "bupropion", relationship: "Current drug — only NDRI in clinical use", distinguishing: "NDRI + nicotinic ACh antagonist; no sexual SE, weight loss, seizures; smoking cessation (Zyban)" },
+    ],
+  },
+
+  /* Learning time breakdown */
+  learningTimeBreakdown: {
+    read: "18 min",
+    study: "45 min",
+    revision: "8 min",
+  },
+
+  /* ---- Educational UX Layer ---- */
+
+  /* Inline micro-quizzes — one after each major learning milestone */
+  microQuizzes: [
+    {
+      id: "quiz-mechanism",
+      question: "Which transporters does Bupropion block?",
+      options: ["SERT only", "NET and DAT (not SERT)", "SERT and NET", "DAT only"],
+      correctIndex: 1,
+      explanation: "Bupropion is an NDRI (Norepinephrine-Dopamine Reuptake Inhibitor) — it blocks NET and DAT but NOT SERT. This is why it has no sexual side effects, no weight gain, and no discontinuation syndrome (all serotonergic phenomena).",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "quiz-sexual-dysfunction",
+      question: "Why does bupropion cause less sexual dysfunction than SSRIs?",
+      options: [
+        "It is metabolised faster",
+        "It does NOT block SERT — sexual SE of SSRIs are mediated via 5-HT2C receptor activation",
+        "It blocks dopamine, which enhances sexual function",
+        "It directly stimulates nitric oxide release",
+      ],
+      correctIndex: 1,
+      explanation: "SSRI-induced sexual dysfunction is mediated via serotonergic activation of 5-HT2C receptors (inhibits dopamine release in mesolimbic pathway) and 5-HT1A. Bupropion does NOT block SERT, so does not raise synaptic serotonin, and thus does not trigger these sexual SE pathways. This is THE favourite bupropion question.",
+      afterSectionId: "side-effects",
+    },
+    {
+      id: "quiz-contraindications",
+      question: "Which of the following is an ABSOLUTE contraindication to bupropion?",
+      options: ["Hypertension", "Asthma", "Past bulimia nervosa (in remission)", "Diabetes mellitus"],
+      correctIndex: 2,
+      explanation: "Past OR present eating disorder (anorexia/bulimia) is an absolute contraindication — even in 'remission'. Eating disorders carry lifelong risk of purging with electrolyte disturbance, which amplifies bupropion's seizure-lowering effect. Other absolute contraindications: seizure disorder, alcohol withdrawal, MAOI within 14 days.",
+      afterSectionId: "contraindications",
+    },
+    {
+      id: "quiz-smoking-cessation",
+      question: "How does bupropion help with smoking cessation?",
+      options: [
+        "It is a nicotine receptor agonist",
+        "It blocks nicotinic ACh receptors (α3β4, α4β2) — non-competitive antagonist",
+        "It reduces nicotine metabolism",
+        "It causes nausea when combined with nicotine",
+      ],
+      correctIndex: 1,
+      explanation: "Bupropion is a non-competitive antagonist at α3β4 and α4β2 nicotinic acetylcholine receptors. By blocking these receptors in the mesolimbic reward pathway, it reduces the rewarding effect of nicotine → reduces craving and withdrawal. Marketed as Zyban for this indication. Start 1 week before quit date.",
+      afterSectionId: "clinical-uses",
+    },
+    {
+      id: "quiz-interactions",
+      question: "Which CYP enzyme does bupropion STRONGLY inhibit?",
+      options: ["CYP3A4", "CYP1A2", "CYP2D6", "CYP2C19"],
+      correctIndex: 2,
+      explanation: "Bupropion is a STRONG CYP2D6 inhibitor — despite being metabolised itself by CYP2B6. This causes clinically important interactions: metoprolol (bradycardia), TCAs (toxicity), antipsychotics (EPS), tamoxifen (reduced activation → reduced efficacy), propafenone, flecainide (arrhythmia). Always review concurrent medications.",
+      afterSectionId: "interactions",
+    },
+    {
+      id: "quiz-dosing",
+      question: "Why is bupropion dosed in the MORNING?",
+      options: [
+        "It is absorbed only in the morning",
+        "It is activating (raises NE and DA) — evening dosing causes insomnia",
+        "It interacts with breakfast food",
+        "It is excreted faster at night",
+      ],
+      correctIndex: 1,
+      explanation: "Bupropion raises norepinephrine and dopamine — both activating neurotransmitters. Evening dosing causes insomnia. For SR (twice-daily) formulation, the second dose should be at least 8 hours before bedtime (e.g., 8am and 4pm). XL is once-daily in the morning.",
+      afterSectionId: "monitoring",
+    },
+  ],
+
+  /* End-of-page active recall questions */
+  activeRecallQuestions: [
+    {
+      question: "Explain why bupropion causes less sexual dysfunction than SSRIs. What is the molecular mechanism?",
+      answer: "Bupropion is an NDRI — blocks NET and DAT, NOT SERT. SSRI-induced sexual dysfunction is mediated via serotonergic activation of 5-HT2C receptors (which inhibit dopamine release in the mesolimbic reward pathway) and 5-HT1A. Because bupropion does not raise synaptic serotonin, it does not trigger these pathways. Some evidence suggests bupropion may actively improve sexual function via dopaminergic mechanisms.",
+      topic: "Mechanism",
+    },
+    {
+      question: "Name the four ABSOLUTE contraindications to bupropion and explain why each matters.",
+      answer: "(1) Seizure disorder — bupropion lowers seizure threshold (highest among antidepressants, ~0.4% at 450mg/day). (2) Eating disorder (anorexia/bulimia, current or past) — purging causes electrolyte disturbance, amplifying seizure risk. (3) Abrupt alcohol or sedative withdrawal — withdrawal itself causes seizures; combined with bupropion, risk is unacceptable. (4) MAOI within 14 days — hypertensive crisis (bupropion raises NE; MAOIs prevent NE breakdown).",
+      topic: "Contraindications",
+    },
+    {
+      question: "Describe the mechanism and prescribing protocol for bupropion in smoking cessation.",
+      answer: "Mechanism: non-competitive antagonist at α3β4 and α4β2 nicotinic ACh receptors in the mesolimbic reward pathway → blocks nicotine reward → reduces craving. Protocol: Bupropion SR 150mg OD for 3 days, then 150mg BD (8 hours apart) for 7–12 weeks. Set a quit date 1–2 weeks into therapy. Continue smoking during the first week of bupropion, then stop on the quit date. Can combine with NRT (monitor BP). Quit rates ~30% at 6 months vs 17% placebo.",
+      topic: "Smoking Cessation",
+    },
+    {
+      question: "Why is bupropion a poor choice for a patient on tamoxifen? What would you use instead?",
+      answer: "Tamoxifen is a prodrug activated by CYP2D6. Bupropion is a STRONG CYP2D6 inhibitor → reduces tamoxifen activation → potentially reduces breast cancer protection. This is a life-threatening interaction. Use venlafaxine instead (weakest CYP2D6 inhibitor among antidepressants), or sertraline (mild inhibitor). AVOID paroxetine and fluoxetine (also strong CYP2D6 inhibitors).",
+      topic: "Drug Interactions",
+    },
+    {
+      question: "How would you manage a 32-year-old woman on sertraline 100mg who reports anorgasmia and 4 kg weight gain?",
+      answer: "Two options: (1) AUGMENT — add bupropion XL 150mg OD (addresses both sexual SE and partial response). (2) SWITCH — stop sertraline (taper over 1–2 weeks), start bupropion XL 150mg OD, titrate to 300mg. Counsel on seizure risk (no eating disorder, no alcohol withdrawal), morning dosing, and CYP2D6 interactions. Monitor at 2/4/6/12 weeks. Bupropion is preferred over mirtazapine here because she has weight gain (mirtazapine worsens this).",
+      topic: "Clinical Management",
+    },
+    {
+      question: "Why does bupropion NOT cause discontinuation syndrome, unlike SSRIs?",
+      answer: "Discontinuation syndrome ('brain zaps', dizziness, nausea, flu-like symptoms) is mediated by sudden withdrawal of serotonergic tone — typically with short-half-life SSRIs (paroxetine). Bupropion does NOT block SERT, so there is no serotonergic withdrawal. However, abrupt cessation may still cause mild irritability or low mood — taper over 2–4 weeks is still recommended.",
+      topic: "Pharmacology",
+    },
+  ],
+
+  /* Guided learning paths — each mode shows a curated subset of sections */
+  learningPaths: [
+    {
+      mode: "patient",
+      label: "Patient",
+      estimatedTime: "5 min",
+      description: "Plain language. What you need to know to take your medicine safely.",
+      visibleSections: ["top", "quick-facts", "patient-education", "faq", "emergency"],
+    },
+    {
+      mode: "mbbs",
+      label: "MBBS Student",
+      estimatedTime: "20 min",
+      description: "Foundations, mechanism, clinical uses, side effects, and MBBS exam content.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+    },
+    {
+      mode: "neetPg",
+      label: "NEET PG / INICET",
+      estimatedTime: "35 min",
+      description: "Full clinical detail with exam-specific content, PYQs, and drug comparisons.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+    },
+    {
+      mode: "resident",
+      label: "Resident / Clinician",
+      estimatedTime: "45 min",
+      description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+    },
+  ],
+
+  /* Lesson grouping — sections organised into learning units */
+  lessonGroups: [
+    {
+      number: 1,
+      title: "Foundations",
+      description: "What is this drug? Why is it different from SSRIs?",
+      sectionIds: ["top", "quick-facts", "learning-objectives", "knowledge-graph"],
+      checkpoint: "You now know what Bupropion is — the only NDRI in clinical use, uniquely free of sexual SE, weight gain, and discontinuation syndrome.",
+    },
+    {
+      number: 2,
+      title: "Mechanism & Neuroscience",
+      description: "How does blocking NET + DAT (instead of SERT) produce a different antidepressant profile?",
+      sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
+      checkpoint: "You understand the NDRI mechanism — and why lack of SERT blockade means no sexual SE, no weight gain, no discontinuation, but ADDS seizure risk.",
+    },
+    {
+      number: 3,
+      title: "Clinical Practice",
+      description: "When do you use it? What goes wrong?",
+      sectionIds: ["clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education"],
+      checkpoint: "You can now prescribe bupropion safely — knowing the contraindications (seizure, eating disorder, alcohol withdrawal, MAOI, tamoxifen), CYP2D6 interactions, and morning dosing.",
+    },
+    {
+      number: 4,
+      title: "Indian Context",
+      description: "How is it actually used in Indian hospitals and for smoking cessation?",
+      sectionIds: ["indian-clinical", "decision-path", "common-mistakes"],
+      checkpoint: "You know the Indian brands (Bupron, Wellbutrin, Zyban), the moderate cost, and the common mistakes Indian interns make (missed eating disorder history, night dosing, tamoxifen interaction).",
+    },
+    {
+      number: 5,
+      title: "Exam Revision",
+      description: "High-yield facts, clinical cases, and drug comparisons.",
+      sectionIds: ["learning-module", "clinical-case", "drug-navigation", "high-yield-summary"],
+      checkpoint: "You've reviewed the exam-specific content, worked through a clinical case, compared bupropion with alternatives, and have a one-page revision summary.",
+    },
+    {
+      number: 6,
+      title: "Active Recall",
+      description: "Can you answer these without looking?",
+      sectionIds: ["active-recall", "faq", "references"],
+      checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Bupropion — including its unique advantages, contraindications, and the 'no sexual SE' differentiator.",
+    },
+  ],
+
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
   reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Wellbutrin label"],
