@@ -22,8 +22,8 @@ export function MedicationLibrarySection() {
           width: "75%",
           height: "90%",
           zIndex: 0,
-          opacity: 0.15,
-          filter: "brightness(0.9) contrast(0.9) saturate(0.9)",
+          opacity: 0.35,
+          filter: "brightness(1) contrast(0.95) saturate(1.1)",
           maskImage:
             "radial-gradient(ellipse 75% 80% at 65% 50%, black 5%, transparent 70%)",
           WebkitMaskImage:
