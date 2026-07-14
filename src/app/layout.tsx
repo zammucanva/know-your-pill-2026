@@ -37,6 +37,10 @@ export const metadata: Metadata = {
     "medication safety",
   ],
   authors: [{ name: "Zamaan Ali Shamji" }],
+  icons: {
+    icon: "/favicon.png",
+    apple: "/logo-navy-512.png",
+  },
   openGraph: {
     title: "Know Your Pill — Medication Education Made Visual",
     description:

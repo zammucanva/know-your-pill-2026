@@ -2,8 +2,9 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useTheme } from "next-themes";
-import { Menu, Moon, Sun, Pill, X, Phone } from "lucide-react";
+import { Menu, Moon, Sun, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 import { cn } from "@/lib/utils";
@@ -43,9 +44,15 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Brand */}
         <Link href="#top" className="group flex items-center gap-2.5">
-          <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-neural text-primary-foreground shadow-[var(--shadow-soft)]">
-            <Pill className="h-4.5 w-4.5 rotate-45" strokeWidth={2.5} />
-            <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-emergency kyp-pulse-dot" />
+          <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-xl">
+            <Image
+              src="/logo-navy-128.png"
+              alt="Know Your Pill logo"
+              fill
+              sizes="36px"
+              className="object-contain"
+              priority
+            />
           </span>
           <span className="flex flex-col leading-none">
             <strong className="font-serif text-[1.05rem] font-semibold tracking-tight">
