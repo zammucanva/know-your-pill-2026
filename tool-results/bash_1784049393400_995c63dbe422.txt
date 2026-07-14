@@ -1,3 +1,103 @@
+    "Do not stop suddenly without medical guidance. Your clinician will recommend a gradual taper over several weeks depending on your dose, duration, and symptoms.",
+    "Alcohol can worsen sleepiness, mood symptoms, judgment, and medication tolerability. Best avoided or minimised.",
+    "Tell your doctor about all other medications — especially tramadol, triptans, certain antibiotics (linezolid), cough syrups containing dextromethorphan, or herbal products like St John's Wort.",
+    "Watch for warning signs in the first month: new or worsening agitation, irritability, anxiety, or suicidal thoughts — particularly if you're under 25. Contact your clinician immediately.",
+    "Seek emergency help for signs of serotonin syndrome: high fever, confusion, sweating, agitation, tremor, muscle rigidity or twitching, fast heartbeat.",
+    "If you miss a dose, take it when you remember unless it's within 8 hours of your next dose — in that case, skip the missed dose.",
+  ],
+
+  clinicalPearls: [
+    "Onset of action for depression is 4–6 weeks, but for PMDD it's only days — which is why intermittent (luteal-phase-only) dosing works for PMDD but not for depression.",
+    "Sexual dysfunction is the #1 reason patients stop SSRIs. Always ask directly — patients rarely volunteer it. Add bupropion XL 150 mg/day or switch to bupropion/mirtazapine if problematic.",
+    "Among SSRIs, sertraline has the most favourable pregnancy and lactation safety profile — making it the first-choice SSRI in women of reproductive age.",
+    "Sertraline's mild CYP2D6 inhibition means it has fewer clinically significant drug interactions than fluoxetine or paroxetine, but still check before co-prescribing TCAs, metoprolol, or antiarrhythmics.",
+    "Discontinuation syndrome is milder than with paroxetine but still real. Always taper over ≥4 weeks. Substituting fluoxetine (long half-life) for the last few weeks of a paroxetine or venlafaxine taper can smooth the discontinuation.",
+    "The 'start low, go slow' approach (25 mg → 50 mg → 100 mg) reduces early activation side effects — particularly important in anxiety disorders where early jitteriness can be misattributed to drug failure.",
+    "Treatment response (≥50% PHQ-9 reduction) is expected by week 6; remission (PHQ-9 <5) by week 12. If no response by week 6, increase dose. If no response by week 12 at max dose, switch class.",
+    "Continue treatment for 6–12 months after the FIRST depressive episode. For 2+ episodes or severe episodes, consider indefinite maintenance therapy (recurrence risk after 2 episodes is ~70%).",
+    "Sertraline's σ1 receptor agonism is unique among SSRIs and may contribute to its anxiolytic effects — explaining its early approval for panic disorder, PTSD, and social anxiety.",
+    "In bipolar depression, sertraline (and any antidepressant) can trigger a manic switch. Always screen for bipolar disorder (MDQ questionnaire) before prescribing.",
+  ],
+
+  examPearls: [
+    "Sertraline is the SSRI of choice in pregnancy and lactation — high-yield for OBGYN and psychiatry exams.",
+    "Mechanism: SERT blockade → ↑ synaptic 5-HT → 5-HT1A autoreceptor desensitisation (1–2 weeks) → ↑ raphe firing → downstream BDNF and neurogenesis (4–6 weeks). The delay between acute pharmacology and clinical effect is THE favourite SSRI question.",
+    "FDA-approved indications (6): MDD, OCD, Panic Disorder, PTSD, Social Anxiety Disorder, PMDD. Memorise the list — only SSRI approved for PTSD.",
+    "Contraindications: MAOIs (wait 14 days), pimozide (QTc), concurrent disulfiram (alcohol in concentrate).",
+    "Black box warning: suicidality in <25. Mandatory to counsel and document informed consent.",
+    "Serotonin syndrome triad: mental status change + autonomic instability + neuromuscular excitation (clonus, hyperreflexia, rigidity). Onset within 24h. Treat with cyproheptadine.",
+    "NMS vs Serotonin Syndrome: NMS = rigid ('lead pipe'), bradyreflexic, normal pupils. Serotonin syndrome = clonus, hyperreflexic, mydriasis, GI symptoms (diarrhoea).",
+    "SIADH from SSRIs: highest risk in elderly females, first 2 weeks. Hyponatraemia + concentrated urine + euvolaemia.",
+    "CYP interactions: sertraline is a mild CYP2D6 inhibitor (less than fluoxetine/paroxetine). Major pathway is CYP2B6.",
+    "Discontinuation syndrome: 'FINISH' — Flu-like symptoms, Insomnia, Nausea, Imbalance, Sensory disturbances (brain zaps), Hyperarousal. Worst with paroxetine > sertraline > fluoxetine (because of half-life).",
+    "Half-life: sertraline 26h; fluoxetine + norfluoxetine 1–4 days (longest); paroxetine 21h (shortest, worst discontinuation).",
+    "PMDD dosing: continuous OR intermittent (luteal phase only, starting ~14 days before expected menses). Intermittent works because PMDD onset is rapid (days).",
+    "Treatment-resistant depression algorithm: SSRI fail → switch to another SSRI/SNRI → augment with bupropion or mirtazapine → consider TCA/MAOI/trial of ketamine.",
+  ],
+
+  /* ---- Memory tricks (mnemonics) ---- */
+  memoryTricks: [
+    {
+      title: "FINISH — SSRI Discontinuation Syndrome",
+      trick: "Flu-like · Insomnia · Nausea · Imbalance · Sensory disturbances (brain zaps) · Hyperarousal",
+      remembers: "The 6 classic SSRI withdrawal symptoms. Worst with paroxetine (shortest half-life), mildest with fluoxetine (longest).",
+    },
+    {
+      title: "Serotonin Syndrome Triad",
+      trick: "Mental · Autonomic · Neuromuscular — think 'MAN'",
+      remembers: "Altered mental state + Autonomic instability + Neuromuscular excitation (clonus, hyperreflexia). Onset within 24h.",
+    },
+    {
+      title: "NMS vs Serotonin Syndrome",
+      trick: "NMS = 'Lead pipe' rigidity, bradyreflexia, NORMAL pupils. SS = Clonus, hyperreflexia, MYDRIASIS, diarrhoea.",
+      remembers: "The single most testable distinction. NMS is dopaminergic blockade; SS is serotonergic excess.",
+    },
+    {
+      title: "SSRI Pearl — 'Pregnancy Safe'",
+      trick: "Sertraline = Safe in pregnancy and lactation (SSRI of choice)",
+      remembers: "Among SSRIs, sertraline has the lowest milk/plasma ratio (~0.5) and infant serum levels are usually undetectable.",
+    },
+    {
+      title: "6 FDA Indications for Sertraline",
+      trick: "MOP PPS — Mood (MDD), OCD, Panic, PTSD, social Phobia, Premenstrual (PMDD)",
+      remembers: "Sertraline is the ONLY SSRI FDA-approved for PTSD.",
+    },
+    {
+      title: "Black Box Warning",
+      trick: "<25 = Suicide risk (Antidepressants in young)",
+      remembers: "Anyone under 25 starting an antidepressant needs weekly monitoring in the first month.",
+    },
+  ],
+
+  /* ---- High-yield summary (one-page revision) ---- */
+  highYieldSummary: [
+    "Class: SSRI — selectively blocks SERT → ↑ synaptic serotonin.",
+    "Mechanism: Acute SERT blockade (hours) → 5-HT1A autoreceptor desensitisation (1–2 weeks) → ↑ BDNF + neurogenesis (4–6 weeks). The delay explains why patients feel worse before better.",
+    "6 FDA indications: MDD, OCD, Panic, PTSD, Social Anxiety, PMDD. Only SSRI approved for PTSD.",
+    "Onset: 4–6 weeks for depression; 8–12 weeks for anxiety/PTSD. PMDD onset is days (intermittent dosing works).",
+    "Common side effects: nausea, sexual dysfunction (30–50%), insomnia, headache, sweating, diarrhoea.",
+    "Serious: serotonin syndrome, SIADH (elderly females), suicidality <25 (black box), bleeding (platelet), activation of mania, discontinuation syndrome.",
+    "Contraindications: MAOIs (14-day washout), pimozide (QTc), disulfiram (concentrate has alcohol).",
+    "Interactions: MAOIs (fatal), tramadol/triptans/St John's Wort (serotonin syndrome), NSAIDs/warfarin (bleeding), CYP2D6 substrates.",
+    "Pregnancy/lactation: SSRI of choice. Untreated depression is worse than the drug.",
+    "Half-life 26h. Metabolised by CYP2B6 (main), CYP2C19/2D6/3A4 (minor). Mild CYP2D6 inhibitor.",
+    "Monitoring: mood/suicidality (weekly × 1 month), serum Na (elderly), PHQ-9 at baseline/4/8 weeks.",
+    "Discontinuation: taper over ≥4 weeks. Fluoxetine self-tapers (long half-life) — can substitute at end of taper.",
+  ],
+
+  /* ---- Clinical cases (plural — supports multiple cases per drug) ---- */
+  clinicalCases: [
+    {
+    title: "First-episode depression in a 28-year-old woman",
+    presentation:
+      "A 28-year-old woman presents with 8 weeks of low mood, anhedonia, early-morning awakening, and 4 kg weight loss after a relationship breakdown.",
+    history:
+      "Priya, a 28-year-old software engineer, presents to her GP with 8 weeks of persistent low mood, loss of interest in activities she previously enjoyed (hiking, painting), early-morning awakening at 4 AM with inability to return to sleep, 4 kg unintentional weight loss, and intrusive negative thoughts about being 'a failure'. Symptoms began after her partner ended their 4-year relationship. She denies suicidal ideation but feels 'hopeless about the future'. No prior psychiatric history. No medical comorbidities. Sister has a history of depression treated with sertraline. Patient drinks alcohol 2–3 units/week, no recreational drugs, no regular medications. She works full-time but has taken 3 sick days in the past 2 weeks — previously zero in 2 years.",
+    examination:
+      "Alert, oriented, cooperative. Speech normal rate and rhythm. Mood '2/10', affect congruent and reactive. No hallucinations or delusions. No thought disorder. Cognitively intact (MoCA 28/30). PHQ-9 score 17 (moderately severe). GAD-7 score 11 (moderate). No thyroid enlargement, no neurological deficit. BMI 22. BP 118/74, HR 72.",
+    diagnosis:
+      "Major Depressive Disorder, single episode, moderate-severe, without psychotic features (ICD-10 F32.2). Differential: adjustment disorder with depressed mood (less likely given severity and neurovegetative symptoms); bipolar depression (screen with MDQ — negative); hypothyroidism-induced depression (TSH to be checked).",
+    rationale:
       "Sertraline chosen because: (1) first-line for MDD per NICE CG91; (2) favourable side-effect profile for a working patient (minimal sedation, low weight gain); (3) sister had a good response — pharmacogenetic concordance; (4) safest SSRI if patient becomes pregnant (reproductive age, no current contraception); (5) once-daily dosing improves adherence. Fluoxetine would be alternative but more activating; mirtazapine rejected due to weight gain in a patient already losing weight.",
     management:
       "Started sertraline 50 mg every morning with food. Plan: review at 2 weeks (tolerability + suicidality), 4 weeks (early response), 6 weeks (dose escalation if PHQ-9 reduction <30%), 12 weeks (full response assessment). Patient given PHQ-9 self-rating schedule and safety plan with crisis contacts (112, Tele-MANAS 14416). Counseled: (1) expect side effects before benefit; (2) do not stop abruptly; (3) avoid alcohol; (4) watch for agitation or new suicidal thoughts in first month; (5) full effect takes 4–6 weeks. Concurrent referral for CBT (NICE recommends combining medication + psychotherapy for moderate-severe depression).",
@@ -399,103 +499,3 @@
       rural: true,
       note: "Widely available across India. Included in the essential medicines list of many state governments. Available through District Mental Health Programme (DMHP) centres. Generic sertraline is commonly stocked in Jan Aushadhi Kendras.",
     },
-    costCategory: "low",
-    costNote: "Generic sertraline is inexpensive in India (approximately ₹2–5 per 50mg tablet). Branded versions (Serta, Serenata) cost ₹3–8 per tablet. Cost varies by manufacturer and region. Jan Aushadhi generic versions are the most affordable.",
-    monitoring:
-      "In Indian government hospitals, monitoring is primarily clinical (symptom-based) due to resource constraints. PHQ-9 is used in tertiary centres and DMHP clinics. Serum sodium monitoring in elderly is recommended but practice varies. ECG is not routinely done unless cardiac risk factors exist. Follow-up schedule: 2 weeks (tolerability), 4 weeks (early response), 6 weeks (dose escalation decision), 12 weeks (full response assessment). In private practice, monitoring aligns more closely with international guidelines.",
-    patientCounselling: [
-      "Take in the morning with food to reduce nausea.",
-      "It may take 4–6 weeks to feel the full benefit — don't stop early just because you don't feel better yet.",
-      "Do NOT stop suddenly — your doctor will help you reduce the dose gradually over several weeks.",
-      "Generic versions (Serta, Serenata, Zosert) are equally effective — you don't need to pay more for expensive brands if cost is a concern. Jan Aushadhi generic sertraline is a good affordable option.",
-      "Avoid alcohol — it can worsen your mood symptoms and increase drowsiness.",
-      "If you feel worse, more agitated, or have new suicidal thoughts in the first month, contact your doctor immediately or call Tele-MANAS at 14416.",
-      "Common side effects in the first 1–2 weeks (nausea, headache, sleep changes) usually settle on their own. If they persist or are severe, tell your doctor.",
-      "Sexual side effects (reduced interest, difficulty reaching orgasm) are common and can be embarrassing to discuss — but your doctor can help. Don't stop the medicine without discussing alternatives.",
-      "Follow-up visits at 2 weeks, 4 weeks, and 6 weeks are important — please attend even if you're feeling better.",
-      "If you miss a dose, take it when you remember unless it's close to your next dose — then skip the missed dose. Do not double up.",
-    ],
-  },
-
-  /* NMC CBME competency mapping */
-  cbmeMapping: {
-    subject: "Pharmacology",
-    mbbsYear: "Second Professional",
-    topic: "Drugs acting on Central Nervous System — Antidepressants (SSRIs)",
-    competencyCodes: ["PH7.3", "PH7.4", "PY3.2"],
-    competencyDescriptions: [
-      "PH7.3: Describe the mechanism of action, pharmacological actions, adverse effects, contraindications, and therapeutic uses of antidepressant drugs with emphasis on SSRIs.",
-      "PH7.4: Explain the rationale for drug selection, dose individualisation, and monitoring of antidepressant therapy in different clinical scenarios.",
-      "PY3.2 (Psychiatry, Final Professional): Describe the pharmacological management of mood disorders, including first-line SSRI selection, augmentation strategies, and monitoring.",
-    ],
-    integrationSubjects: ["Psychiatry", "General Medicine", "Community Medicine"],
-  },
-
-  /* Exam Lens — structured by Indian examination */
-  examLens: {
-    mbbs: {
-      viva: [
-        "What is the mechanism of action of sertraline? (SERT blockade → ↑ synaptic 5-HT → 5-HT1A autoreceptor desensitisation over 1–2 weeks → ↑ serotonergic throughput → downstream BDNF/neurogenesis over 4–6 weeks)",
-        "Why does sertraline take 4–6 weeks to work when SERT blockade occurs within hours? (Acute blockade raises synaptic 5-HT, but 5-HT1A autoreceptors initially brake firing. Clinical effect correlates with autoreceptor desensitisation and downstream neuroadaptive changes, not acute 5-HT levels.)",
-        "Name 5 FDA-approved indications for sertraline. (MDD, OCD, Panic Disorder, PTSD, Social Anxiety Disorder, PMDD — 6 total. Sertraline is the only SSRI approved for PTSD.)",
-        "What is the black box warning for sertraline? (Increased suicidality in patients <25 years — monitor weekly in the first month.)",
-        "Which SSRI is preferred in pregnancy and why? (Sertraline — lowest milk/plasma ratio, undetectable infant serum levels, longest safety track record.)",
-        "What is serotonin syndrome? Name the triad. (Mental status change + autonomic instability + neuromuscular excitation — clonus, hyperreflexia. Onset within 24h. Treat with cyproheptadine.)",
-      ],
-      practical: [
-        "Counsel a patient starting sertraline for depression — address onset delay, side effects, adherence, and follow-up.",
-        "Write a prescription for sertraline for a 30-year-old with first-episode depression (dose: 50mg OD, morning, with food).",
-        "Identify the contraindications of sertraline from a given clinical scenario (e.g., patient on MAOI).",
-        "Explain the monitoring schedule for a patient on sertraline (2/4/6/12 weeks, PHQ-9, suicidality <25).",
-      ],
-      longAnswer: [
-        "Classify antidepressants. Describe the mechanism of action, pharmacokinetics, adverse effects, and therapeutic uses of SSRIs with special reference to sertraline. Discuss the rationale for SSRI selection in specific populations (pregnancy, elderly, hepatic impairment).",
-        "A 28-year-old woman presents with first-episode moderate depression. Discuss the pharmacological management, including drug selection, dose titration, monitoring, and patient counselling. Address the black box warning and how you would counsel the patient about it.",
-      ],
-    },
-    neetPg: {
-      highYield: [
-        "Sertraline = SSRI of choice in pregnancy and lactation (milk/plasma ratio ~0.5, infant levels usually undetectable).",
-        "Sertraline = only SSRI FDA-approved for PTSD.",
-        "Mechanism: SERT blockade (hours) → 5-HT1A autoreceptor desensitisation (1–2 weeks) → BDNF/neurogenesis (4–6 weeks). The delay is THE favourite SSRI question.",
-        "6 FDA indications: MDD, OCD, Panic, PTSD, Social Anxiety, PMDD. Mnemonic: MOP PPS.",
-        "σ1 receptor agonism — unique among SSRIs, contributes to anxiolytic effect (relevant to approval for panic, PTSD, social anxiety).",
-        "Black box: suicidality <25 years. Weekly monitoring in first month.",
-        "Metabolism: CYP2B6 (primary), CYP2C19/2D6/3A4 (minor). Mild CYP2D6 inhibitor (less than fluoxetine/paroxetine).",
-        "Half-life: 26 hours. Active metabolite N-desmethylsertraline (half-life ~62h) — contributes to mild discontinuation vs paroxetine.",
-        "Discontinuation syndrome: FINISH — Flu-like, Insomnia, Nausea, Imbalance, Sensory (brain zaps), Hyperarousal. Worst: paroxetine > sertraline > fluoxetine.",
-        "Serotonin syndrome triad: Mental + Autonomic + Neuromuscular (clonus, hyperreflexia). NMS = rigidity + bradyreflexia. SS = clonus + hyperreflexia.",
-      ],
-      pyqConcepts: [
-        "NEET PG 2022: A 24-year-old pregnant woman requires SSRI for depression. Which SSRI is preferred? (Answer: Sertraline — lowest placental transfer and milk/plasma ratio.)",
-        "NEET PG 2021: Which antidepressant is FDA-approved for PTSD? (Answer: Sertraline — only SSRI approved for PTSD.)",
-        "NEET PG 2020: A patient on SSRI presents with agitation, clonus, hyperreflexia, and fever. Diagnosis? (Answer: Serotonin syndrome. Treatment: discontinue SSRI, cyproheptadine, benzodiazepines, cooling.)",
-        "NEET PG 2019: Which SSRI has the shortest half-life and worst discontinuation syndrome? (Answer: Paroxetine — 21h. Sertraline is 26h, fluoxetine is 1–4 days.)",
-        "INICET 2021: A patient on sertraline develops hyponatraemia (Na 124). What is the mechanism? (Answer: SIADH — SSRIs increase ADH secretion. Risk highest in elderly females, first 2 weeks.)",
-      ],
-    },
-    inicet: {
-      clinicalReasoning: [
-        "A 28-year-old woman with depression is started on sertraline 50mg. At week 1, she reports worsening anxiety, insomnia, and jitteriness. She wants to stop. How do you counsel her? (Answer: This is common early activation — explain that side effects precede benefit, the anxiety will settle in 1–2 weeks, and the mood benefit starts at 4–6 weeks. Consider temporary dose reduction to 25mg or adding short-term benzodiazepine. Do NOT stop abruptly — counsel on adherence.)",
-        "A 35-year-old man on sertraline 100mg for 8 weeks reports partial response (PHQ-9 dropped from 18 to 10). What are the next steps? (Answer: Options include dose escalation to 150–200mg, augmentation with bupropion XL 150mg, or switch to another agent. CBT should be added if not already. Assess adherence and sleep.)",
-        "A 22-year-old college student is prescribed sertraline for depression. Two weeks later, his family reports increased agitation and new suicidal thoughts. What is the mechanism and management? (Answer: Activation syndrome — common in young adults in the first 1–2 weeks. Black box warning. Management: assess suicidality directly, involve family for monitoring, consider dose reduction or switch to fluoxetine (less activating), add CBT, safety planning. Do not stop without supervision.)",
-        "A 32-year-old woman on sertraline 50mg for depression presents with pregnancy. She wants to stop the medication. How do you counsel her? (Answer: Sertraline is the SSRI of choice in pregnancy. Untreated depression carries significant risks (preterm birth, low birth weight, poor bonding, suicidality). Stopping abruptly risks relapse AND discontinuation syndrome. Counsel: continue sertraline, monitor closely, involve obstetrician. Third-trimester: watch for neonatal adaptation syndrome.)",
-      ],
-    },
-    fmge: {
-      frequentlyTested: [
-        "Sertraline mechanism: SERT blockade → ↑ serotonin in synaptic cleft.",
-        "Onset of action: 4–6 weeks (not immediate — key FMGE concept).",
-        "Most common side effect: sexual dysfunction (30–50%).",
-        "Black box warning: suicidal thoughts in patients under 25.",
-        "Serotonin syndrome: clonus + hyperreflexia + fever + agitation. Treatment: cyproheptadine.",
-        "Contraindication: MAOIs (14-day washout required).",
-        "Sertraline is the SSRI of choice in pregnancy.",
-        "Discontinuation syndrome: dizziness, brain zaps, nausea. Worst with paroxetine.",
-        "Drug interaction: NSAIDs increase bleeding risk (platelet serotonin depletion).",
-        "SIADH: hyponatraemia from SSRIs, especially in elderly.",
-      ],
-    },
-    psychiatryResidency: {
-      advancedPearls: [
-        "σ1 receptor agonism is unique to sertraline among SSRIs and may explain its particular efficacy in anxiety spectrum disorders (panic, PTSD, social anxiety). Other SSRIs lack this property.",

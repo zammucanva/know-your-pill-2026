@@ -1,0 +1,501 @@
+    },
+    costCategory: "low",
+    costNote: "Generic sertraline is inexpensive in India (approximately ₹2–5 per 50mg tablet). Branded versions (Serta, Serenata) cost ₹3–8 per tablet. Cost varies by manufacturer and region. Jan Aushadhi generic versions are the most affordable.",
+    monitoring:
+      "In Indian government hospitals, monitoring is primarily clinical (symptom-based) due to resource constraints. PHQ-9 is used in tertiary centres and DMHP clinics. Serum sodium monitoring in elderly is recommended but practice varies. ECG is not routinely done unless cardiac risk factors exist. Follow-up schedule: 2 weeks (tolerability), 4 weeks (early response), 6 weeks (dose escalation decision), 12 weeks (full response assessment). In private practice, monitoring aligns more closely with international guidelines.",
+    patientCounselling: [
+      "Take in the morning with food to reduce nausea.",
+      "It may take 4–6 weeks to feel the full benefit — don't stop early just because you don't feel better yet.",
+      "Do NOT stop suddenly — your doctor will help you reduce the dose gradually over several weeks.",
+      "Generic versions (Serta, Serenata, Zosert) are equally effective — you don't need to pay more for expensive brands if cost is a concern. Jan Aushadhi generic sertraline is a good affordable option.",
+      "Avoid alcohol — it can worsen your mood symptoms and increase drowsiness.",
+      "If you feel worse, more agitated, or have new suicidal thoughts in the first month, contact your doctor immediately or call Tele-MANAS at 14416.",
+      "Common side effects in the first 1–2 weeks (nausea, headache, sleep changes) usually settle on their own. If they persist or are severe, tell your doctor.",
+      "Sexual side effects (reduced interest, difficulty reaching orgasm) are common and can be embarrassing to discuss — but your doctor can help. Don't stop the medicine without discussing alternatives.",
+      "Follow-up visits at 2 weeks, 4 weeks, and 6 weeks are important — please attend even if you're feeling better.",
+      "If you miss a dose, take it when you remember unless it's close to your next dose — then skip the missed dose. Do not double up.",
+    ],
+  },
+
+  /* NMC CBME competency mapping */
+  cbmeMapping: {
+    subject: "Pharmacology",
+    mbbsYear: "Second Professional",
+    topic: "Drugs acting on Central Nervous System — Antidepressants (SSRIs)",
+    competencyCodes: ["PH7.3", "PH7.4", "PY3.2"],
+    competencyDescriptions: [
+      "PH7.3: Describe the mechanism of action, pharmacological actions, adverse effects, contraindications, and therapeutic uses of antidepressant drugs with emphasis on SSRIs.",
+      "PH7.4: Explain the rationale for drug selection, dose individualisation, and monitoring of antidepressant therapy in different clinical scenarios.",
+      "PY3.2 (Psychiatry, Final Professional): Describe the pharmacological management of mood disorders, including first-line SSRI selection, augmentation strategies, and monitoring.",
+    ],
+    integrationSubjects: ["Psychiatry", "General Medicine", "Community Medicine"],
+  },
+
+  /* Exam Lens — structured by Indian examination */
+  examLens: {
+    mbbs: {
+      viva: [
+        "What is the mechanism of action of sertraline? (SERT blockade → ↑ synaptic 5-HT → 5-HT1A autoreceptor desensitisation over 1–2 weeks → ↑ serotonergic throughput → downstream BDNF/neurogenesis over 4–6 weeks)",
+        "Why does sertraline take 4–6 weeks to work when SERT blockade occurs within hours? (Acute blockade raises synaptic 5-HT, but 5-HT1A autoreceptors initially brake firing. Clinical effect correlates with autoreceptor desensitisation and downstream neuroadaptive changes, not acute 5-HT levels.)",
+        "Name 5 FDA-approved indications for sertraline. (MDD, OCD, Panic Disorder, PTSD, Social Anxiety Disorder, PMDD — 6 total. Sertraline is the only SSRI approved for PTSD.)",
+        "What is the black box warning for sertraline? (Increased suicidality in patients <25 years — monitor weekly in the first month.)",
+        "Which SSRI is preferred in pregnancy and why? (Sertraline — lowest milk/plasma ratio, undetectable infant serum levels, longest safety track record.)",
+        "What is serotonin syndrome? Name the triad. (Mental status change + autonomic instability + neuromuscular excitation — clonus, hyperreflexia. Onset within 24h. Treat with cyproheptadine.)",
+      ],
+      practical: [
+        "Counsel a patient starting sertraline for depression — address onset delay, side effects, adherence, and follow-up.",
+        "Write a prescription for sertraline for a 30-year-old with first-episode depression (dose: 50mg OD, morning, with food).",
+        "Identify the contraindications of sertraline from a given clinical scenario (e.g., patient on MAOI).",
+        "Explain the monitoring schedule for a patient on sertraline (2/4/6/12 weeks, PHQ-9, suicidality <25).",
+      ],
+      longAnswer: [
+        "Classify antidepressants. Describe the mechanism of action, pharmacokinetics, adverse effects, and therapeutic uses of SSRIs with special reference to sertraline. Discuss the rationale for SSRI selection in specific populations (pregnancy, elderly, hepatic impairment).",
+        "A 28-year-old woman presents with first-episode moderate depression. Discuss the pharmacological management, including drug selection, dose titration, monitoring, and patient counselling. Address the black box warning and how you would counsel the patient about it.",
+      ],
+    },
+    neetPg: {
+      highYield: [
+        "Sertraline = SSRI of choice in pregnancy and lactation (milk/plasma ratio ~0.5, infant levels usually undetectable).",
+        "Sertraline = only SSRI FDA-approved for PTSD.",
+        "Mechanism: SERT blockade (hours) → 5-HT1A autoreceptor desensitisation (1–2 weeks) → BDNF/neurogenesis (4–6 weeks). The delay is THE favourite SSRI question.",
+        "6 FDA indications: MDD, OCD, Panic, PTSD, Social Anxiety, PMDD. Mnemonic: MOP PPS.",
+        "σ1 receptor agonism — unique among SSRIs, contributes to anxiolytic effect (relevant to approval for panic, PTSD, social anxiety).",
+        "Black box: suicidality <25 years. Weekly monitoring in first month.",
+        "Metabolism: CYP2B6 (primary), CYP2C19/2D6/3A4 (minor). Mild CYP2D6 inhibitor (less than fluoxetine/paroxetine).",
+        "Half-life: 26 hours. Active metabolite N-desmethylsertraline (half-life ~62h) — contributes to mild discontinuation vs paroxetine.",
+        "Discontinuation syndrome: FINISH — Flu-like, Insomnia, Nausea, Imbalance, Sensory (brain zaps), Hyperarousal. Worst: paroxetine > sertraline > fluoxetine.",
+        "Serotonin syndrome triad: Mental + Autonomic + Neuromuscular (clonus, hyperreflexia). NMS = rigidity + bradyreflexia. SS = clonus + hyperreflexia.",
+      ],
+      pyqConcepts: [
+        "NEET PG 2022: A 24-year-old pregnant woman requires SSRI for depression. Which SSRI is preferred? (Answer: Sertraline — lowest placental transfer and milk/plasma ratio.)",
+        "NEET PG 2021: Which antidepressant is FDA-approved for PTSD? (Answer: Sertraline — only SSRI approved for PTSD.)",
+        "NEET PG 2020: A patient on SSRI presents with agitation, clonus, hyperreflexia, and fever. Diagnosis? (Answer: Serotonin syndrome. Treatment: discontinue SSRI, cyproheptadine, benzodiazepines, cooling.)",
+        "NEET PG 2019: Which SSRI has the shortest half-life and worst discontinuation syndrome? (Answer: Paroxetine — 21h. Sertraline is 26h, fluoxetine is 1–4 days.)",
+        "INICET 2021: A patient on sertraline develops hyponatraemia (Na 124). What is the mechanism? (Answer: SIADH — SSRIs increase ADH secretion. Risk highest in elderly females, first 2 weeks.)",
+      ],
+    },
+    inicet: {
+      clinicalReasoning: [
+        "A 28-year-old woman with depression is started on sertraline 50mg. At week 1, she reports worsening anxiety, insomnia, and jitteriness. She wants to stop. How do you counsel her? (Answer: This is common early activation — explain that side effects precede benefit, the anxiety will settle in 1–2 weeks, and the mood benefit starts at 4–6 weeks. Consider temporary dose reduction to 25mg or adding short-term benzodiazepine. Do NOT stop abruptly — counsel on adherence.)",
+        "A 35-year-old man on sertraline 100mg for 8 weeks reports partial response (PHQ-9 dropped from 18 to 10). What are the next steps? (Answer: Options include dose escalation to 150–200mg, augmentation with bupropion XL 150mg, or switch to another agent. CBT should be added if not already. Assess adherence and sleep.)",
+        "A 22-year-old college student is prescribed sertraline for depression. Two weeks later, his family reports increased agitation and new suicidal thoughts. What is the mechanism and management? (Answer: Activation syndrome — common in young adults in the first 1–2 weeks. Black box warning. Management: assess suicidality directly, involve family for monitoring, consider dose reduction or switch to fluoxetine (less activating), add CBT, safety planning. Do not stop without supervision.)",
+        "A 32-year-old woman on sertraline 50mg for depression presents with pregnancy. She wants to stop the medication. How do you counsel her? (Answer: Sertraline is the SSRI of choice in pregnancy. Untreated depression carries significant risks (preterm birth, low birth weight, poor bonding, suicidality). Stopping abruptly risks relapse AND discontinuation syndrome. Counsel: continue sertraline, monitor closely, involve obstetrician. Third-trimester: watch for neonatal adaptation syndrome.)",
+      ],
+    },
+    fmge: {
+      frequentlyTested: [
+        "Sertraline mechanism: SERT blockade → ↑ serotonin in synaptic cleft.",
+        "Onset of action: 4–6 weeks (not immediate — key FMGE concept).",
+        "Most common side effect: sexual dysfunction (30–50%).",
+        "Black box warning: suicidal thoughts in patients under 25.",
+        "Serotonin syndrome: clonus + hyperreflexia + fever + agitation. Treatment: cyproheptadine.",
+        "Contraindication: MAOIs (14-day washout required).",
+        "Sertraline is the SSRI of choice in pregnancy.",
+        "Discontinuation syndrome: dizziness, brain zaps, nausea. Worst with paroxetine.",
+        "Drug interaction: NSAIDs increase bleeding risk (platelet serotonin depletion).",
+        "SIADH: hyponatraemia from SSRIs, especially in elderly.",
+      ],
+    },
+    psychiatryResidency: {
+      advancedPearls: [
+        "σ1 receptor agonism is unique to sertraline among SSRIs and may explain its particular efficacy in anxiety spectrum disorders (panic, PTSD, social anxiety). Other SSRIs lack this property.",
+        "Among SSRIs, sertraline has the most favourable pregnancy/lactation profile — but the decision to treat in pregnancy must always weigh untreated maternal depression risks (preterm birth, low birth weight, poor bonding, suicidality) against medication risks. Never stop abruptly if a patient becomes pregnant.",
+        "Treatment-resistant depression algorithm after sertraline failure: (1) optimise dose to 200mg, (2) confirm adherence + address substance use, (3) augment with bupropion XL or mirtazapine, (4) consider switch to SNRI or TCA, (5) consider ketamine/esketamine for severe TRD, (6) rTMS or ECT for severe/catatonic features.",
+        "PHQ-9 monitoring: ≥50% reduction = response. <5 = remission. If <30% reduction at 6 weeks → increase dose. If <50% at 12 weeks → switch or augment. Continue for 6–12 months after remission for first episode; longer for recurrent.",
+        "Discontinuation syndrome management: if severe, restart at previous dose and taper more slowly (over 4–8 weeks). Fluoxetine can be substituted for shorter half-life SSRIs at end of taper (self-tapers due to long half-life of norfluoxetine).",
+        "CYP2B6 is the primary metaboliser (not CYP2D6 as commonly assumed) — this reduces the impact of CYP2D6 polymorphisms on sertraline levels, making it a good choice for patients on multiple CYP2D6 substrates.",
+        "In bipolar depression, sertraline (and any antidepressant) can trigger a manic switch. Always screen for bipolar disorder (MDQ questionnaire) before initiating. If bipolar confirmed, use mood stabiliser first; antidepressant only if mood stabiliser alone is insufficient.",
+      ],
+    },
+  },
+
+  /* International vs Indian guideline comparisons */
+  guidelineComparisons: [
+    {
+      topic: "First-line SSRI for depression",
+      internationalSource: "NICE CG91 / APA Practice Guideline",
+      internationalRecommendation: "SSRIs are first-line for moderate-severe depression. Sertraline is commonly chosen due to favourable side-effect profile and drug interaction profile.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS guidelines also recommend SSRIs as first-line for depression. Sertraline and escitalopram are the most commonly prescribed SSRIs in Indian practice. No specific IPS preference between individual SSRIs — selection is based on patient profile (pregnancy, elderly, comorbidities, cost).",
+    },
+    {
+      topic: "Use in pregnancy",
+      internationalSource: "FDA / APA",
+      internationalRecommendation: "Sertraline is the SSRI of choice in pregnancy when pharmacotherapy is necessary. Former FDA Category C. Risk of persistent pulmonary hypertension of the newborn (PPHN) is small. Third-trimester use associated with neonatal adaptation syndrome.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs with international guidelines — sertraline is preferred in pregnancy. In Indian practice, the decision to treat must also consider the risks of untreated depression (poor antenatal care, poor nutrition, suicidality) which may be higher in low-resource settings. Always involve obstetrician.",
+    },
+    {
+      topic: "Monitoring during treatment",
+      internationalSource: "NICE / APA",
+      internationalRecommendation: "Weekly contact in first month, then every 2–4 weeks until stable. PHQ-9 at baseline, 4, 8, 12 weeks. Serum sodium in elderly. ECG if cardiac risk factors.",
+      indianSource: null,
+      indianRecommendation: "No dedicated IPS guideline on SSRI monitoring frequency. In Indian government hospitals, monitoring is primarily clinical due to resource constraints. PHQ-9 is used in tertiary centres and DMHP clinics. Follow-up schedule is often 2, 4, 6 weeks but may be longer in rural settings due to travel barriers. Current section reflects accepted clinical practice and internationally accepted evidence.",
+    },
+    {
+      topic: "Suicidality monitoring (<25 years)",
+      internationalSource: "FDA Black Box Warning",
+      internationalRecommendation: "Antidepressants increased risk of suicidal thinking in patients <25. Weekly monitoring in first month. Document informed consent.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS acknowledges the FDA black box warning and recommends close monitoring of young patients (<25) during the first month. In Indian practice, family involvement in monitoring is particularly important given the joint family system. Tele-MANAS (14416) should be provided as a crisis resource.",
+    },
+    {
+      topic: "Use in lactation",
+      internationalSource: "AAP / LactMed",
+      internationalRecommendation: "Sertraline is the SSRI of choice in breastfeeding. Milk/plasma ratio ~0.5. Infant serum levels usually undetectable. Safe for breastfeeding.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs — sertraline is preferred in lactation. In Indian practice, breastfeeding is strongly culturally valued, and the ability to continue breastfeeding while on sertraline improves adherence. Counsel mother to watch for infant irritability or feeding issues during initiation.",
+    },
+  ],
+
+  /* Indian reference sources */
+  indianReferences: [
+    {
+      source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition",
+      type: "textbook",
+      section: "Chapter 33 — Antidepressant Drugs",
+    },
+    {
+      source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression",
+      type: "guideline",
+      section: "Section on pharmacotherapy — SSRIs",
+    },
+    {
+      source: "NMC CBME Curriculum — Pharmacology (Second Professional)",
+      type: "curriculum",
+      section: "Topic: Drugs acting on CNS — Antidepressants",
+    },
+    {
+      source: "NMC CBME Curriculum — Psychiatry (Final Professional)",
+      type: "curriculum",
+      section: "Topic: Psychopharmacology — Mood disorders",
+    },
+    {
+      source: "National Mental Health Programme (NMHP) / District Mental Health Programme (DMHP)",
+      type: "regulatory",
+      section: "Essential medicines for mental health — SSRIs included",
+    },
+    {
+      source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416",
+      type: "regulatory",
+      section: "Mental health support resource for patients on antidepressants",
+      url: "tel:14416",
+    },
+  ],
+
+  /* Section difficulty mapping */
+  sectionDifficulty: {
+    "top": "mbbs",
+    "quick-facts": "mbbs",
+    "learning-objectives": "mbbs",
+    "knowledge-graph": "pg",
+    "mechanism": "mbbs",
+    "brain-regions": "pg",
+    "neurotransmitters": "pg",
+    "neural-pathways": "resident",
+    "timeline": "mbbs",
+    "clinical-uses": "mbbs",
+    "side-effects": "mbbs",
+    "monitoring": "pg",
+    "contraindications": "mbbs",
+    "interactions": "pg",
+    "patient-education": "mbbs",
+    "clinical-pearls": "pg",
+    "exam-lens": "mbbs",
+    "memory-tricks": "mbbs",
+    "clinical-case": "pg",
+    "comparison": "pg",
+    "indian-practice": "mbbs",
+    "guideline-comparison": "resident",
+    "related-drugs": "pg",
+    "high-yield-summary": "mbbs",
+    "faq": "mbbs",
+    "references": "resident",
+  },
+
+  /* ---- India Layer extensions (platform-wide) ---- */
+
+  /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
+  evidenceHierarchy: {
+    international: [
+      { source: "NICE CG91", recommendation: "SSRIs are first-line for moderate-severe depression. Sertraline is commonly chosen due to favourable side-effect profile." },
+      { source: "APA Practice Guideline", recommendation: "SSRI first-line for MDD. Sertraline preferred when drug interactions are a concern (mild CYP2D6 inhibition)." },
+      { source: "FDA", recommendation: "Approved for 6 indications: MDD, OCD, Panic, PTSD, Social Anxiety, PMDD. Black box warning for suicidality <25." },
+      { source: "WHO mhGAP", recommendation: "SSRIs recommended as first-line antidepressants in the Mental Health Gap Action Programme." },
+    ],
+    indian: [
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS guidelines recommend SSRIs as first-line for depression. Sertraline and escitalopram are the most commonly prescribed SSRIs in Indian practice." },
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS concurs with international guidelines — sertraline is preferred in pregnancy and lactation." },
+      { source: null, recommendation: "No dedicated IPS guideline on SSRI monitoring frequency. Current section reflects accepted clinical practice and internationally accepted evidence." },
+    ],
+    indianClinicalPractice:
+      "In Indian practice, sertraline is the most commonly prescribed SSRI alongside escitalopram. It is the default first-choice SSRI in government hospitals under the District Mental Health Programme (DMHP) due to low cost, wide availability, and favourable safety profile. In private practice, it is preferred for patients with comorbid anxiety, in pregnancy/lactation, and in elderly patients. Starting dose is often 25-50mg OD (lower than Western guidelines) to minimise early side effects, particularly given limited follow-up capacity in government settings. PHQ-9 is used in tertiary centres but not routinely in primary care. Family involvement in monitoring is emphasised given the joint family system.",
+  },
+
+  /* Indian encounter context — where you'll see this drug */
+  indianEncounterContext: {
+    governmentHospitals:
+      "First-line SSRI in government hospital psychiatry OPDs. Available through DMHP. Starting dose 25-50mg OD. Monitoring is primarily clinical (symptom-based) due to resource constraints. Jan Aushadhi generic sertraline is commonly dispensed.",
+    privateHospitals:
+      "Preferred SSRI for depression with comorbid anxiety, in pregnancy/lactation, and in elderly. Starting dose 50mg OD, titrated to 100-200mg. PHQ-9 monitoring at 2/4/6/12 weeks. ECG in elderly or cardiac patients. Patient counselling is more detailed.",
+    medicalColleges:
+      "Teaching drug for SSRI pharmacology. Used in pharmacology practicals (prescription writing, patient counselling). Examined in second professional MBBS (pharmacology) and final professional (psychiatry). Commonly featured in NEET PG and INICET questions.",
+    primaryCare:
+      "First-line antidepressant for mild-moderate depression in Indian primary care. GP/family physicians commonly initiate sertraline 50mg OD. Referral to psychiatrist if no response at 6-8 weeks or if severe depression with suicidal ideation.",
+    psychiatryOPD:
+      "Workhorse SSRI in psychiatry OPD. Used for depression, OCD, panic disorder, PTSD, social anxiety disorder, and PMDD. Often combined with CBT. Dose escalation to 200mg for OCD. Augmentation with bupropion or mirtazapine for partial response.",
+  },
+
+  /* Indian prescription workflow */
+  prescriptionWorkflow: {
+    beforePrescribing: [
+      "Screen for bipolar disorder (MDQ questionnaire) — SSRIs can trigger manic switch.",
+      "Assess suicidal ideation — if present, involve family for monitoring and provide Tele-MANAS (14416) number.",
+      "Check for MAOI use in last 14 days — absolute contraindication.",
+      "Review concurrent medications — especially tramadol, triptans, NSAIDs, warfarin, St John's Wort.",
+      "Baseline PHQ-9 score for response monitoring.",
+      "In elderly: check baseline serum sodium (SIADH risk) and consider ECG if cardiac risk factors.",
+      "In women of reproductive age: discuss pregnancy plans — sertraline is the SSRI of choice if pregnancy is possible.",
+      "Counsel about 4-6 week onset — set expectation that side effects precede benefit.",
+    ],
+    duringTreatment: [
+      "Week 1-2: assess tolerability (nausea, insomnia, agitation) and suicidality (especially <25 years).",
+      "Week 2-4: review early response — sleep, appetite, energy often improve before mood.",
+      "Week 4-6: assess response with PHQ-9. If <30% reduction, increase dose.",
+      "Week 6-12: full response assessment. If <50% reduction at 12 weeks, consider augmentation (bupropion/mirtazapine) or switch.",
+      "Monitor for sexual dysfunction — ask directly; patients rarely volunteer it.",
+      "Watch for hyponatraemia in elderly (confusion, headache, seizures).",
+      "Watch for serotonin syndrome if serotonergic drugs are added (tramadol, triptans, linezolid).",
+    ],
+    followUp: [
+      "First follow-up at 2 weeks (tolerability + suicidality).",
+      "Second follow-up at 4 weeks (early response).",
+      "Third follow-up at 6 weeks (dose escalation decision).",
+      "Fourth follow-up at 12 weeks (full response assessment).",
+      "If remission achieved (PHQ-9 <5): continue for 6-12 months for first episode, longer for recurrent.",
+      "Before discontinuation: taper over 4+ weeks. Consider substituting fluoxetine for last 2 weeks of taper (self-tapers).",
+      "In government hospitals: follow-up may be every 4-8 weeks due to travel barriers — counsel family to watch for red flags.",
+    ],
+    whenToRefer: [
+      "Refer to psychiatrist if no response to 2 adequate SSRI trials (12 weeks each).",
+      "Refer urgently if suicidal ideation emerges or worsens.",
+      "Refer if bipolar disorder is suspected (manic switch risk).",
+      "Refer if serotonin syndrome develops (emergency — call 112).",
+      "Refer to physician if severe hyponatraemia (Na <120 mmol/L) or seizures.",
+      "Refer to obstetrician if patient becomes pregnant (do NOT stop sertraline abruptly).",
+      "Refer for CBT — combined SSRI + CBT produces better outcomes than either alone.",
+    ],
+  },
+
+  /* Exam frequency — star ratings */
+  examFrequency: {
+    neetPg: 5,
+    inicet: 4,
+    mbbsViva: 4,
+    fmge: 5,
+  },
+
+  /* PYQ metadata — concept-level, no copyrighted content */
+  pyqMetadata: [
+    { exam: "NEET PG", year: 2022, concept: "SSRI of choice in pregnancy", topic: "Antidepressants in pregnancy" },
+    { exam: "NEET PG", year: 2021, concept: "Antidepressant approved for PTSD", topic: "PTSD pharmacotherapy" },
+    { exam: "NEET PG", year: 2020, concept: "Serotonin syndrome diagnosis and management", topic: "Serotonergic toxicity" },
+    { exam: "NEET PG", year: 2019, concept: "SSRI with shortest half-life / worst discontinuation", topic: "SSRI pharmacokinetics" },
+    { exam: "INICET", year: 2021, concept: "SSRI-induced hyponatraemia mechanism (SIADH)", topic: "Antidepressant adverse effects" },
+    { exam: "INICET", year: 2023, concept: "Black box warning for antidepressants in <25", topic: "Antidepressant safety" },
+    { exam: "FMGE", year: 2022, concept: "SSRI mechanism of action and onset", topic: "Antidepressant pharmacology" },
+    { exam: "FMGE", year: 2021, concept: "Contraindication: MAOI + SSRI combination", topic: "Drug interactions" },
+  ],
+
+  /* Indian comparison contexts */
+  indianComparisonContexts: [
+    {
+      scenario: "Government hospital setup",
+      recommendation: "Sertraline is preferred — low cost (₹2-5/tablet), available in Jan Aushadhi and DMHP, wide safety margin, once-daily dosing improves adherence.",
+      alternative: "Escitalopram is an alternative if available, but sertraline is more commonly stocked.",
+    },
+    {
+      scenario: "Private psychiatry practice",
+      recommendation: "Sertraline or escitalopram are equally preferred. Sertraline is chosen for pregnancy, comorbid anxiety, or when σ1 agonism (anxiolytic effect) is desired.",
+      alternative: "Escitalopram if lowest CYP interaction profile is needed (polypharmacy).",
+    },
+    {
+      scenario: "Pregnancy",
+      recommendation: "Sertraline is the SSRI of choice — lowest placental transfer, lowest milk/plasma ratio, longest safety track record. IPS concurs with international guidelines.",
+      alternative: "If sertraline is unavailable, fluoxetine is acceptable (long safety data). Avoid paroxetine (Category D).",
+    },
+    {
+      scenario: "Adolescents and children",
+      recommendation: "Sertraline is used off-label in India for paediatric depression (not FDA-approved for <18). Fluoxetine is the only FDA-approved SSRI for paediatric depression (≥8 years). Monitor closely for suicidality (black box warning).",
+      alternative: "Fluoxetine for FDA-approved paediatric use. Escitalopram for ≥12 years.",
+    },
+    {
+      scenario: "Older adults (≥65 years)",
+      recommendation: "Sertraline is preferred — mild CYP2D6 inhibition (fewer drug interactions than fluoxetine/paroxetine), low weight gain, low sedation. Start at 25mg OD. Check serum sodium in first 2 weeks (SIADH risk).",
+      alternative: "Escitalopram if on complex regimens (lowest CYP interactions). Avoid paroxetine (anticholinergic, sedation, weight gain).",
+    },
+    {
+      scenario: "Cost-sensitive setting",
+      recommendation: "Generic sertraline from Jan Aushadhi Kendra is the most affordable option (₹2-5/tablet). Branded versions (Serta, Serenata) are also inexpensive.",
+      alternative: "If cost is the primary concern, Jan Aushadhi generic sertraline is unbeatable.",
+    },
+  ],
+
+  /* Jan Aushadhi availability */
+  janAushadhi: {
+    available: true,
+    note: "Available at Jan Aushadhi Kendras across India in 25mg, 50mg, and 100mg tablet strengths. Among the most affordable antidepressant options in India. Generic name: Sertraline Tablets IP.",
+  },
+
+  /* Restructured evidence sources — International vs Indian */
+  evidenceSources: {
+    international: [
+      { source: "Katzung Basic & Clinical Pharmacology, 16th edition", section: "Chapter 30 — Antidepressant Agents" },
+      { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
+      { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants" },
+      { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression" },
+      { source: "FDA Prescribing Information — ZOLOFT (sertraline hydrochloride)", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/019839s74lbl.pdf" },
+      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Pharmacological treatment" },
+      { source: "APA Practice Guideline for MDD, 3rd edition" },
+      { source: "Cipriani A et al. Lancet 2018 — Comparative efficacy of 21 antidepressants", section: "Network meta-analysis" },
+    ],
+    indian: [
+      { source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition", type: "textbook", section: "Chapter 33 — Antidepressant Drugs" },
+      { source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression", type: "guideline", section: "Section on pharmacotherapy — SSRIs" },
+      { source: "NMC CBME Curriculum — Pharmacology (Second Professional)", type: "curriculum", section: "Topic: Drugs acting on CNS — Antidepressants" },
+      { source: "NMC CBME Curriculum — Psychiatry (Final Professional)", type: "curriculum", section: "Topic: Psychopharmacology — Mood disorders" },
+      { source: "National Mental Health Programme (NMHP) / District Mental Health Programme (DMHP)", type: "regulatory", section: "Essential medicines for mental health — SSRIs" },
+      { source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416", type: "regulatory", section: "Mental health support resource", url: "tel:14416" },
+      { source: "CDSCO — Central Drugs Standard Control Organisation", type: "regulatory", section: "Sertraline — Schedule H prescription status" },
+    ],
+  },
+
+  /* ---- Final Architecture Pass — canonical template v2.0 ---- */
+
+  /* Clinical decision path — algorithm-style decision tree */
+  clinicalDecisionPath: {
+    title: "When to choose Sertraline for depression",
+    startNodeId: "start",
+    nodes: [
+      {
+        id: "start",
+        question: "Patient presents with depression",
+        branches: [
+          { label: "Mild", next: "mild" },
+          { label: "Moderate", next: "moderate" },
+          { label: "Severe", next: "severe" },
+        ],
+      },
+      {
+        id: "mild",
+        question: "Mild depression (PHQ-9 5-9)",
+        recommendation: "Psychotherapy first (CBT). Consider sertraline if functional impairment or patient preference.",
+        reasoning: "NICE recommends psychotherapy alone for mild depression. Medication is offered if functional impairment persists after 2-4 weeks of psychotherapy.",
+      },
+      {
+        id: "moderate",
+        question: "Moderate depression (PHQ-9 10-14)",
+        recommendation: "Sertraline 50mg OD + CBT. First-line per NICE CG91 and IPS guidelines.",
+        reasoning: "SSRI + CBT is first-line for moderate depression. Sertraline is preferred for favourable side-effect profile, pregnancy safety, and low cost in India.",
+      },
+      {
+        id: "severe",
+        question: "Severe depression (PHQ-9 15-27)",
+        recommendation: "Sertraline 50mg OD (titrate to 100-200mg) + CBT. Consider psychiatry referral.",
+        reasoning: "Severe depression requires pharmacotherapy. Sertraline is first-line. If psychotic features → add antipsychotic. If suicidal → urgent psychiatric referral.",
+        branches: [
+          { label: "With suicidal ideation", next: "suicidal" },
+          { label: "With psychotic features", next: "psychotic" },
+          { label: "Without complications", next: "start-sertraline" },
+        ],
+      },
+      {
+        id: "suicidal",
+        question: "Severe depression with suicidal ideation",
+        recommendation: "Urgent psychiatry referral. Do NOT send home alone. Consider admission. Sertraline can be started but monitor weekly (black box warning <25).",
+        reasoning: "Suicidal ideation in severe depression is a psychiatric emergency. Tele-MANAS 14416 for crisis support. 112 for emergency.",
+      },
+      {
+        id: "psychotic",
+        question: "Severe depression with psychotic features",
+        recommendation: "Psychiatry referral. Add antipsychotic (olanzapine or aripiprazole) to SSRI. Consider ECT if catatonic or severely suicidal.",
+        reasoning: "Psychotic depression requires combination therapy (antidepressant + antipsychotic) or ECT. SSRI alone is insufficient.",
+      },
+      {
+        id: "start-sertraline",
+        question: "Why choose Sertraline?",
+        recommendation: "Sertraline is preferred when: pregnancy possible, comorbid anxiety, elderly, on multiple medications (mild CYP2D6), or cost matters (Jan Aushadhi available).",
+        reasoning: "Sertraline is the SSRI of choice in pregnancy/lactation, has σ1 agonism (anxiolytic), mild CYP2D6 inhibition (fewer interactions), and is the most affordable SSRI in India.",
+        branches: [
+          { label: "When NOT to choose", next: "avoid" },
+        ],
+      },
+      {
+        id: "avoid",
+        question: "When NOT to choose Sertraline",
+        recommendation: "Avoid: bipolar depression without mood stabiliser, active MAOI use (14 days), pimozide, severe hepatic impairment. Consider fluoxetine (bipolar), wait 14 days (MAOI), switch to escitalopram (hepatic).",
+        reasoning: "SSRIs can trigger manic switch in bipolar. MAOI + SSRI = fatal serotonin syndrome. Pimozide + sertraline = QTc. Severe hepatic impairment = reduce dose drastically.",
+      },
+    ],
+  },
+
+  /* Educational prescription template (India) */
+  educationalPrescription: {
+    scenario: "Typical Indian OPD initiation for first-episode moderate depression in an adult",
+    lines: [
+      "Rx",
+      "Tab Sertraline 25 mg",
+      "1 tab OD morning after food × 5 days",
+      "",
+      "Then increase to:",
+      "Tab Sertraline 50 mg",
+      "1 tab OD morning after food",
+      "",
+      "Advice: Take in morning with food. Do not stop suddenly.",
+      "Avoid alcohol. Report if feeling worse or new suicidal thoughts.",
+    ],
+    followUp: [
+      "Review after 2 weeks — tolerability, suicidality, side effects",
+      "Review after 4 weeks — early response (sleep, appetite, energy)",
+      "Review after 6 weeks — PHQ-9; if <30% reduction, increase to 100mg",
+      "Review after 12 weeks — full response assessment",
+      "If remission (PHQ-9 <5): continue 6-12 months, then taper over 4+ weeks",
+    ],
+    disclaimer: "Educational example only. Not a substitute for clinical judgment. Always verify dosing against current prescribing information and individualise for each patient.",
+  },
+
+  /* Common mistakes */
+  commonMistakes: [
+    {
+      mistake: "Stopping after 2 weeks because 'it's not working'",
+      why: "SSRIs take 4-6 weeks for full antidepressant effect. Stopping at 2 weeks means stopping before the drug has had a chance to work.",
+      correction: "Counsel at initiation: 'Side effects come first (week 1-2), mood benefit comes later (week 4-6). Don't stop early.'",
+    },
+    {
+      mistake: "Abrupt discontinuation",
+      why: "Sudden cessation causes discontinuation syndrome — dizziness, brain zaps, nausea, irritability. Can start within 24 hours of missed dose.",
+      correction: "Always taper over 4+ weeks. If severe, substitute fluoxetine (long half-life) for last 2 weeks of taper.",
+    },
+    {
+      mistake: "Combining with MAOIs or not waiting the 14-day washout",
+      why: "MAOI + SSRI = potentially fatal serotonin syndrome. The 14-day washout is non-negotiable.",
+      correction: "Always ask about MAOI use before starting. Wait at least 14 days after stopping an MAOI before starting sertraline, and vice versa.",
+    },
+    {
+      mistake: "Ignoring bipolar history",
+      why: "SSRIs can trigger a manic switch in undiagnosed bipolar disorder. This is a dangerous and preventable complication.",
+      correction: "Screen for bipolar disorder (MDQ questionnaire) before starting any antidepressant. If bipolar confirmed, use mood stabiliser first.",
+    },
+    {
+      mistake: "Under-dosing and not titrating",
+      why: "Starting at 50mg and never titrating means the patient may never reach therapeutic dose. OCD often requires 150-200mg.",
+      correction: "Start at 50mg (25mg in anxious/elderly), titrate by 50mg every 2-4 weeks. Target: 100-200mg for depression, up to 200mg for OCD.",
+    },
+    {
+      mistake: "Not asking about sexual dysfunction",
+      why: "Sexual dysfunction affects 30-50% of patients on SSRIs and is the #1 reason for non-adherence. Patients rarely volunteer it.",
+      correction: "Ask directly at every follow-up: 'Any changes in sexual interest or function?' If present, consider dose reduction, adding bupropion, or switching.",
+    },
+    {
+      mistake: "Not monitoring sodium in elderly",
+      why: "SSRIs cause SIADH in ~0.5-1% of patients. Risk is highest in elderly females in the first 2 weeks. Can cause seizures if severe.",
