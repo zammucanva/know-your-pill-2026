@@ -1115,6 +1115,819 @@ export const amitriptyline: Drug = {
       "Amitriptyline interacts with MANY medicines — tell your doctor and pharmacist about everything you take, including over-the-counter products and herbal remedies. The most dangerous combinations are with other antidepressants (especially fluoxetine and paroxetine, which raise amitriptyline levels), MAOIs (must never be combined), tramadol (pain), triptans (migraine), St John's Wort, certain antibiotics (macrolides, fluoroquinolones), medicines for bladder or stomach (anticholinergics), and even some cold remedies containing pseudoephedrine or phenylephrine. Alcohol adds to the drowsiness and increases heart stress — best avoided.",
   },
 
+  /* ---- India-first extensions ---- */
+  indianPractice: {
+    prescriptionStatus: "Schedule H",
+    brands: [
+      { name: "Tryptomer", manufacturer: "Sun Pharma", strengths: "10mg, 25mg, 50mg, 75mg", note: "Among the most commonly prescribed amitriptyline brands in India" },
+      { name: "Amitone", manufacturer: "Cipla", strengths: "10mg, 25mg, 75mg" },
+      { name: "Elavil", manufacturer: "Ranbaxy", strengths: "10mg, 25mg, 50mg, 75mg" },
+      { name: "Sarotena", manufacturer: "Intas", strengths: "10mg, 25mg, 50mg, 75mg" },
+      { name: "Tryptomer SR", manufacturer: "Sun Pharma", strengths: "25mg, 50mg sustained release" },
+    ],
+    typicalDoses:
+      "Depression: start 25-50mg nocte, titrate by 25-50mg every 3-7 days to 75-150mg nocte (max 200mg/day). Neuropathic pain / migraine prophylaxis / fibromyalgia: 10-75mg nocte (start LOW at 10mg, titrate slowly). In Indian government hospitals, lower starting doses (10-25mg nocte) are used to minimise anticholinergic and orthostatic side effects, especially in older adults. Maximum: 200mg/day for depression; chronic pain rarely exceeds 75mg/day.",
+    prescribingScenarios: [
+      "Now prescribed MORE for neuropathic pain (diabetic neuropathy, post-herpetic neuralgia) and migraine prophylaxis than for depression in Indian primary care.",
+      "Used as a low-dose (10-25mg nocte) sleep aid in Indian general practice — though this is a non-recommended use that the Beers criteria cautions against in elderly.",
+      "Available through District Mental Health Programme (DMHP) for depression where SSRIs are unavailable or unaffordable — but SSRIs are preferred first-line.",
+      "Used in pain clinics for fibromyalgia and chronic tension-type headache at low dose (10-25mg).",
+      "Used in tertiary psychiatry OPD for severe melancholic depression when SSRI trial has failed — but supervised due to overdose lethality.",
+    ],
+    availability: {
+      governmentHospitals: true,
+      privatePharmacies: true,
+      urban: true,
+      rural: true,
+      note: "Widely available across India. Cheap generic amitriptyline is stocked in most pharmacies including rural ones. Available through DMHP centres in many states. Jan Aushadhi 10mg and 25mg tablets are widely stocked.",
+    },
+    costCategory: "low",
+    costNote: "Generic amitriptyline is one of the cheapest antidepressants in India (approximately ₹0.5-2 per 25mg tablet). Branded versions (Tryptomer, Amitone, Sarotena) cost ₹1-3 per tablet. Jan Aushadhi generic is the most affordable. Cost varies by manufacturer and region.",
+    monitoring:
+      "In Indian government hospitals, monitoring is primarily clinical — symptom-based assessment, BP lying/standing, heart rate. ECG is recommended before starting in patients >50 years or with cardiac history, and after dose escalation, but is often not done in resource-limited settings due to access barriers. Serum nortriptyline (active metabolite) levels are used in tertiary centres for refractory depression — therapeutic window 50-150 ng/mL. PHQ-9 used in tertiary centres. Follow-up: 1 week (tolerability), 2 weeks (side effects + early response), 4 weeks (response), 6-8 weeks (full response). In private practice, ECG and serum levels are more commonly used.",
+    patientCounselling: [
+      "Take at night — it makes you sleepy so this helps with sleep and reduces daytime drowsiness.",
+      "NEVER take more than the prescribed number of tablets — amitriptyline is dangerous in overdose and can affect your heart. If you ever feel like taking extra, call Tele-MANAS at 14416 immediately.",
+      "It may take 4-6 weeks to feel the full benefit on mood; for nerve pain or migraine prevention, benefit may start sooner (1-2 weeks) at the lower doses used.",
+      "Common side effects in the first 1-2 weeks — dry mouth, morning drowsiness, constipation, dizziness when standing up — usually settle as your body adjusts. Suck sugarless sweets for dry mouth, stand up slowly, increase fibre and fluids for constipation.",
+      "Do NOT stop suddenly — your doctor will help you reduce the dose gradually.",
+      "Avoid alcohol — it adds to the drowsiness and increases the risk of falls and heart rhythm problems.",
+      "Tell your doctor about ALL your other medicines — amitriptyline interacts with many drugs including other antidepressants, fluoxetine/paroxetine (raise amitriptyline levels), tramadol, and even some cough/cold remedies.",
+      "If you have any heart problems, palpitations, fainting, or feel like you might pass out — tell your doctor immediately. An ECG may be needed.",
+      "If you feel worse, more agitated, or have new suicidal thoughts, contact your doctor immediately or call Tele-MANAS at 14416. The tablets will be dispensed in limited supply for safety reasons.",
+      "If you are pregnant, planning pregnancy, or breastfeeding — tell your doctor before starting. Amitriptyline is generally avoided in older adults (≥65) due to side effects; ask your doctor if a different medicine would be better.",
+    ],
+  },
+
+  /* NMC CBME competency mapping */
+  cbmeMapping: {
+    subject: "Pharmacology",
+    mbbsYear: "Second Professional",
+    topic: "Drugs acting on Central Nervous System — Antidepressants (Tricyclics) and Chronic Pain",
+    competencyCodes: ["PH7.3", "PH7.4", "PY3.2"],
+    competencyDescriptions: [
+      "PH7.3: Describe the mechanism of action, pharmacological actions, adverse effects, contraindications, and therapeutic uses of tricyclic antidepressants (TCAs) with emphasis on amitriptyline.",
+      "PH7.4: Explain the rationale for TCA dose individualisation, therapeutic drug monitoring (nortriptyline 50-150 ng/mL), ECG monitoring, and overdose management (sodium bicarbonate for QRS widening).",
+      "PY3.2 (Psychiatry, Final Professional): Describe the place of TCAs in modern psychiatric practice — second-line after SSRIs, role in melancholic depression, neuropathic pain, migraine prophylaxis, and overdose lethality.",
+    ],
+    integrationSubjects: ["Psychiatry", "General Medicine", "Emergency Medicine", "Community Medicine"],
+  },
+
+  /* Exam Lens — structured by Indian examination */
+  examLens: {
+    mbbs: {
+      viva: [
+        "What is the mechanism of action of amitriptyline? (TCA — blocks SERT + NET, plus α1, H1, M1 muscarinic, and Na+ channels — that's why it's called a 'dirty drug' with many side effects.)",
+        "Why is amitriptyline the #1 antidepressant overdose killer? (Na+ channel blockade → QRS widening → ventricular arrhythmias; plus anticholinergic toxidrome, hypotension from α1 blockade, seizures from GABA antagonism.)",
+        "What is the active metabolite of amitriptyline, and what is its therapeutic window? (Nortriptyline — therapeutic window 50-150 ng/mL. Levels used to guide dosing in refractory depression.)",
+        "Name 5 receptor/channel targets of amitriptyline that explain its side effects. (SERT → therapeutic; NET → therapeutic + tremor/tachycardia; α1 → orthostatic hypotension; H1 → sedation/weight gain; M1 → dry mouth/constipation/urinary retention/blurred vision; Na+ channel → QRS widening/arrhythmia.)",
+        "What is the Beers criteria caution for amitriptyline in elderly? (Avoid in ≥65 years — strong anticholinergic, sedation, orthostatic hypotension → falls, confusion. Use SSRIs instead.)",
+        "How do you treat amitriptyline overdose? (Supportive + IV sodium bicarbonate for QRS >100ms or ventricular arrhythmia; benzodiazepines for seizures; avoid Class Ia/Ic antiarrhythmics; ICU monitoring.)",
+      ],
+      practical: [
+        "Counsel a patient starting amitriptyline for diabetic neuropathy — address onset, side effects, overdose safety, and follow-up.",
+        "Write a prescription for amitriptyline 25mg nocte for a 45-year-old with neuropathic pain.",
+        "Identify the contraindications of amitriptyline from a clinical scenario (e.g., recent MI, narrow-angle glaucoma, elderly).",
+        "Explain the monitoring schedule for a patient on amitriptyline 75mg for depression (ECG, BP, nortriptyline level).",
+      ],
+      longAnswer: [
+        "Classify antidepressants. Describe the mechanism of action, pharmacokinetics, adverse effects, and therapeutic uses of tricyclic antidepressants with special reference to amitriptyline. Discuss the management of TCA overdose.",
+        "A 55-year-old man with diabetic neuropathy is started on amitriptyline 25mg nocte. Discuss the pharmacological rationale, dose titration, monitoring, and patient counselling. Address the safety concerns in overdose.",
+      ],
+    },
+    neetPg: {
+      highYield: [
+        "Amitriptyline = 'dirty drug' — blocks SERT + NET + α1 + H1 + M1 + Na+ channels. Every target explains a side effect.",
+        "TCA overdose = #1 antidepressant overdose killer. ECG shows QRS widening (>100ms = severe, >160ms = life-threatening). Treat with IV sodium bicarbonate.",
+        "Anticholinergic toxidrome: dry as a bone, red as a beet, hot as a hare, blind as a bat, mad as a hatter. Treat with physostigmine if severe (rarely needed).",
+        "Active metabolite nortriptyline — therapeutic window 50-150 ng/mL. Only TCA with established therapeutic drug monitoring.",
+        "Beers criteria: avoid amitriptyline in ≥65 years (anticholinergic, sedation, orthostatic hypotension → falls).",
+        "Now used MORE for neuropathic pain (10-75mg) and migraine prophylaxis than for depression — at much lower doses than the 75-150mg used for depression.",
+        "CYP2D6 metabolism — fluoxetine and paroxetine (CYP2D6 inhibitors) raise TCA levels → risk of toxicity. Fluvoxamine (CYP1A2) also raises clomipramine levels.",
+        "Lethal dose: as little as 10-15 mg/kg in adults; even smaller in children. Limited dispense quantities are essential in suicidal patients.",
+        "Orthostatic hypotension (α1 blockade) is the most common reason elderly patients stop the drug — and a major fall risk.",
+        "QTc prolongation + Na+ channel blockade = torsades risk. Avoid combining with other QTc-prolonging drugs (macrolides, fluoroquinolones, antiarrhythmics).",
+      ],
+      pyqConcepts: [
+        "NEET PG 2022: A patient on amitriptyline presents with QRS widening on ECG. What is the antidote? (Answer: IV sodium bicarbonate — alkalinises plasma and provides sodium load to overcome Na+ channel blockade.)",
+        "NEET PG 2021: Which antidepressant is most lethal in overdose? (Answer: TCAs, especially amitriptyline — Na+ channel blockade causes fatal arrhythmias.)",
+        "NEET PG 2020: Which TCA has a defined therapeutic window? (Answer: Nortriptyline — 50-150 ng/mL. Below 50 = subtherapeutic, above 150 = toxicity.)",
+        "NEET PG 2019: A 70-year-old on amitriptyline for insomnia develops confusion and falls. What is the most likely cause? (Answer: Beers criteria — amitriptyline's anticholinergic burden and orthostatic hypotension in elderly.)",
+        "INICET 2021: A patient with depression is on fluoxetine 40mg and is switched to amitriptyline. What is the risk? (Answer: Fluoxetine inhibits CYP2D6 → raises amitriptyline levels → TCA toxicity. Need washout and dose adjustment.)",
+      ],
+    },
+    inicet: {
+      clinicalReasoning: [
+        "A 30-year-old woman with depression is brought to the ER unconscious. Empty amitriptyline bottle found. ECG shows QRS 140ms. What is the immediate management? (Answer: ABC, IV access, IV sodium bicarbonate bolus to target QRS <100ms, IV fluids, benzodiazepine if seizures, ICU admission, avoid Class Ia/Ic antiarrhythmics. Continuous cardiac monitoring.)",
+        "A 65-year-old man with diabetic neuropathy is on amitriptyline 50mg nocte. He reports dizziness on standing and a recent fall. BP 140/80 supine, 110/70 standing. What is the mechanism and management? (Answer: α1 blockade causing orthostatic hypotension — common in elderly. Reduce dose, change to SNRI (duloxetine) or gabapentinoid, advise stand-up slowly, increase fluids.)",
+        "A 50-year-old woman with depression has failed SSRI trial. You want to start amitriptyline. What baseline investigations and counselling? (Answer: ECG (QTc, QRS), BP lying/standing, serum sodium, review current meds (no MAOI within 14 days, no fluoxetine/paroxetine), counsel on sedation, dry mouth, orthostatic hypotension, overdose danger, 4-6 week onset. Dispense limited supply.)",
+        "A 28-year-old with depression is on amitriptyline 100mg nocte. Nortriptyline level comes back at 180 ng/mL. He complains of dry mouth, constipation, and tremor. What is the interpretation and management? (Answer: Nortriptyline level above therapeutic window (50-150) — toxicity. Reduce dose, recheck level in 1-2 weeks, target 50-150 ng/mL. Address CYP2D6 inhibitors if any.)",
+      ],
+    },
+    fmge: {
+      frequentlyTested: [
+        "Amitriptyline mechanism: blocks SERT + NET + α1 + H1 + M1 + Na+ channels.",
+        "Most common side effects: anticholinergic (dry mouth, constipation, urinary retention), sedation, orthostatic hypotension, weight gain.",
+        "TCA overdose: QRS widening, ventricular arrhythmias, seizures, anticholinergic toxidrome — IV sodium bicarbonate is the antidote.",
+        "Beers criteria: avoid in elderly (≥65) due to anticholinergic burden and fall risk.",
+        "Active metabolite nortriptyline — therapeutic window 50-150 ng/mL.",
+        "Contraindications: recent MI, heart block, arrhythmias, narrow-angle glaucoma, MAOI within 14 days.",
+        "Use in neuropathic pain and migraine prophylaxis at low dose (10-75mg).",
+        "CYP2D6 inhibitors (fluoxetine, paroxetine) raise TCA levels — risk of toxicity.",
+        "Orthostatic hypotension (α1 blockade) is the most common cardiovascular side effect.",
+        "Onset of action: 4-6 weeks for depression; 1-2 weeks for neuropathic pain at low dose.",
+      ],
+    },
+    psychiatryResidency: {
+      advancedPearls: [
+        "TCA selection in modern practice: clomipramine for OCD (only TCA that works), amitriptyline for melancholic depression with insomnia + weight loss (sedation + weight gain can be therapeutic), doxepin for depression with severe insomnia, nortriptyline when therapeutic drug monitoring is needed.",
+        "Nortriptyline therapeutic window 50-150 ng/mL — below 50 → non-response; above 150 → toxicity. Use level monitoring to optimise dose, especially in non-responders, elderly, or those on CYP2D6 inhibitors. Levels drawn at steady state (5 half-lives, ~5 days).",
+        "TCA overdose is the leading cause of antidepressant-related death. Lethal dose: 10-15 mg/kg. Always prescribe limited supplies (1-2 weeks) for patients with any suicidality. SSRIs are markedly safer in overdose — a key reason they replaced TCAs as first-line.",
+        "ECG changes in TCA overdose: sinus tachycardia (anticholinergic + NE reuptake), PR prolongation, QRS widening (Na+ channel blockade — marker of severity), QTc prolongation. QRS >100ms = serious; >160ms = high risk of ventricular arrhythmia.",
+        "TCA + SSRI switching: stop SSRI, wait appropriate washout (5 half-lives), then start TCA at LOW dose and titrate slowly. Fluoxetine needs 5-week washout due to norfluoxetine. Avoid simultaneous use — CYP2D6 inhibition + additive serotonergic effect.",
+        "For neuropathic pain, amitriptyline 10-25mg nocte is first-line per NICE CG173 — combined with pregabalin/gabapentin for synergistic effect (SNRI like duloxetine is alternative). Effect on pain is independent of antidepressant effect — works in non-depressed patients too.",
+        "Beers criteria 2023: amitriptyline listed as 'Avoid' in ≥65 years due to anticholinergic, sedating, and orthostatic properties. If a TCA is essential in elderly, nortriptyline is preferred (less anticholinergic, less orthostatic) — but SSRIs/SNRIs are preferred first.",
+      ],
+    },
+  },
+
+  /* International vs Indian guideline comparisons */
+  guidelineComparisons: [
+    {
+      topic: "Place in depression treatment",
+      internationalSource: "NICE CG91 / APA Practice Guideline",
+      internationalRecommendation: "SSRIs are first-line. TCAs including amitriptyline are reserved for severe/melancholic depression, treatment-resistant cases, or when sedation/weight gain is therapeutically useful.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs — SSRIs first-line. TCAs are second-line for severe depression with melancholic features, insomnia, or weight loss. Amitriptyline still used in resource-limited settings due to low cost, but overdose risk favours SSRIs.",
+    },
+    {
+      topic: "Use in neuropathic pain",
+      internationalSource: "NICE CG173 (Neuropathic pain in adults)",
+      internationalRecommendation: "Amitriptyline is one of 4 first-line options (with duloxetine, gabapentin, pregabalin) for neuropathic pain (excluding trigeminal neuralgia). Start at 10mg nocte, titrate to effect, max 75mg/day.",
+      indianSource: null,
+      indianRecommendation: "No dedicated IPS guideline on neuropathic pain pharmacotherapy. Indian practice follows NICE — amitriptyline 10-25mg nocte is widely used in primary care for diabetic neuropathy, post-herpetic neuralgia. Lower doses than for depression. Current section reflects accepted clinical practice and internationally accepted evidence.",
+    },
+    {
+      topic: "Use in elderly (≥65 years)",
+      internationalSource: "AGS Beers Criteria 2023",
+      internationalRecommendation: "Amitriptyline listed as 'Avoid' in older adults due to strong anticholinergic properties, sedation, and orthostatic hypotension — fall and cognitive risk.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS acknowledges Beers criteria. In Indian practice, low-dose amitriptyline (10-25mg) is still sometimes used in elderly for neuropathic pain or sleep, but this should be discouraged. SSRIs (sertraline, escitalopram) or pregabalin/gabapentin are preferred.",
+    },
+    {
+      topic: "Use in migraine prophylaxis",
+      internationalSource: "AAN / AHS Guidelines",
+      internationalRecommendation: "Amitriptyline 10-75mg nocte is recommended for migraine prophylaxis — Level A evidence (alongside propranolol, topiramate, valproate). Particularly useful when migraine coexists with insomnia or tension-type headache.",
+      indianSource: "Indian Headache Society",
+      indianRecommendation: "Indian Headache Society guidelines include amitriptyline as a first-line prophylactic agent. Dose 10-50mg nocte. Useful in Indian practice due to low cost. Often combined with propranolol if single-agent inadequate.",
+    },
+    {
+      topic: "Overdose safety and prescribing practice",
+      internationalSource: "FDA / NICE",
+      internationalRecommendation: "TCAs carry significant overdose risk. Prescribe limited supplies (1-2 weeks) in patients with suicidality. SSRIs preferred when overdose risk exists.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs — limit dispense quantity for at-risk patients. In India, loose tablet dispensing from pharmacies without strict prescription control is a barrier; advocate for blister packs and limited supply. Tele-MANAS 14416 for crisis support.",
+    },
+  ],
+
+  /* Indian reference sources */
+  indianReferences: [
+    {
+      source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition",
+      type: "textbook",
+      section: "Chapter 33 — Antidepressant Drugs (TCAs section)",
+    },
+    {
+      source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression",
+      type: "guideline",
+      section: "Section on pharmacotherapy — TCAs as second-line",
+    },
+    {
+      source: "NMC CBME Curriculum — Pharmacology (Second Professional)",
+      type: "curriculum",
+      section: "Topic: Drugs acting on CNS — Antidepressants (TCAs)",
+    },
+    {
+      source: "NMC CBME Curriculum — Psychiatry (Final Professional)",
+      type: "curriculum",
+      section: "Topic: Psychopharmacology — TCAs and overdose management",
+    },
+    {
+      source: "National Mental Health Programme (NMHP) / District Mental Health Programme (DMHP)",
+      type: "regulatory",
+      section: "Essential medicines — amitriptyline included in DMHP drug kit",
+    },
+    {
+      source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416",
+      type: "regulatory",
+      section: "Crisis support for patients at overdose risk",
+      url: "tel:14416",
+    },
+    {
+      source: "CDSCO — Central Drugs Standard Control Organisation",
+      type: "regulatory",
+      section: "Amitriptyline — Schedule H prescription status",
+    },
+  ],
+
+  /* Section difficulty mapping */
+  sectionDifficulty: {
+    "top": "mbbs",
+    "quick-facts": "mbbs",
+    "learning-objectives": "mbbs",
+    "knowledge-graph": "pg",
+    "mechanism": "mbbs",
+    "brain-regions": "pg",
+    "neurotransmitters": "pg",
+    "neural-pathways": "resident",
+    "timeline": "mbbs",
+    "clinical-uses": "mbbs",
+    "side-effects": "mbbs",
+    "monitoring": "pg",
+    "contraindications": "mbbs",
+    "interactions": "pg",
+    "patient-education": "mbbs",
+    "clinical-pearls": "pg",
+    "exam-lens": "mbbs",
+    "memory-tricks": "mbbs",
+    "clinical-case": "pg",
+    "comparison": "pg",
+    "indian-practice": "mbbs",
+    "guideline-comparison": "resident",
+    "related-drugs": "pg",
+    "high-yield-summary": "mbbs",
+    "faq": "mbbs",
+    "references": "resident",
+  },
+
+  /* ---- India Layer extensions (platform-wide) ---- */
+
+  /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
+  evidenceHierarchy: {
+    international: [
+      { source: "NICE CG91", recommendation: "SSRIs first-line; TCAs (including amitriptyline) reserved for severe or treatment-resistant depression." },
+      { source: "NICE CG173", recommendation: "Amitriptyline is a first-line option for neuropathic pain (excluding trigeminal neuralgia) at 10-75mg nocte." },
+      { source: "AGS Beers Criteria 2023", recommendation: "Avoid amitriptyline in ≥65 years due to anticholinergic burden, sedation, orthostatic hypotension." },
+      { source: "AAN/AHS Migraine Guidelines", recommendation: "Amitriptyline 10-75mg nocte is Level A prophylactic for migraine (especially with insomnia)." },
+    ],
+    indian: [
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS concurs SSRIs first-line; amitriptyline second-line for severe/melancholic depression." },
+      { source: "Indian Headache Society", recommendation: "Amitriptyline 10-50mg nocte is first-line migraine prophylaxis — particularly useful due to low cost." },
+      { source: null, recommendation: "No dedicated IPS guideline on neuropathic pain. Indian practice follows NICE CG173 with amitriptyline 10-25mg nocte first-line." },
+    ],
+    indianClinicalPractice:
+      "In Indian practice, amitriptyline is now prescribed MORE for neuropathic pain (diabetic neuropathy, post-herpetic neuralgia) and migraine prophylaxis than for depression. In government hospitals under DMHP, it remains a low-cost second-line antidepressant where SSRIs are unaffordable. Low doses (10-25mg nocte) for pain are widely used by general physicians and GPs. In rural India, the very low cost (₹0.5-2 per tablet) makes it attractive, but overdose lethality is a major concern given easy availability and loose-tablet dispensing. Family physicians often prescribe 10-25mg nocte as a 'sleep aid' — a use that the Beers criteria cautions against in elderly. PHQ-9 and ECG monitoring are limited in primary care due to resource constraints; nortriptyline levels are used only in tertiary centres.",
+  },
+
+  /* Indian encounter context — where you'll see this drug */
+  indianEncounterContext: {
+    governmentHospitals:
+      "Available in DMHP drug kit for depression when SSRIs are unavailable. Monitoring is clinical (BP, HR) — ECG often not done due to access barriers. Lower starting doses (10-25mg nocte) used. Limited supply dispensed for safety.",
+    privateHospitals:
+      "Used for neuropathic pain, migraine prophylaxis, and as second-line antidepressant for severe melancholic depression. ECG at baseline and after dose escalation. Nortriptyline levels in tertiary centres. PHQ-9 monitoring at 2/4/6 weeks.",
+    medicalColleges:
+      "Teaching drug for TCA pharmacology, anticholinergic toxidrome, and overdose management. Common OSCE scenario — TCA overdose ECG interpretation and sodium bicarbonate therapy. Featured in pharmacology practicals (prescription writing, patient counselling). Examined heavily in MBBS, NEET PG, INICET, FMGE.",
+    primaryCare:
+      "Widely prescribed in Indian general practice for neuropathic pain, migraine prophylaxis, and insomnia (low-dose, off-label). GPs often start 10-25mg nocte. Referral to psychiatrist if depression is severe or suicidal ideation present.",
+    psychiatryOPD:
+      "Second-line antidepressant in psychiatry OPD for SSRI-non-responsive melancholic depression. Dose 50-150mg nocte. ECG monitoring. Nortriptyline levels for refractory cases. Limited dispense quantity for at-risk patients.",
+  },
+
+  /* Indian prescription workflow */
+  prescriptionWorkflow: {
+    beforePrescribing: [
+      "Screen for bipolar disorder (MDQ) — TCAs can trigger manic switch (more than SSRIs).",
+      "Assess suicidal ideation — if present, choose SSRI instead, prescribe limited supply (1-2 weeks), involve family, give Tele-MANAS (14416) number.",
+      "ECG at baseline — check QTc, QRS duration, PR interval. Essential in patients >50 years or with cardiac history.",
+      "Check BP lying and standing — orthostatic hypotension is common, especially in elderly.",
+      "Review concurrent medications — fluoxetine, paroxetine (CYP2D6 inhibitors), MAOIs (14-day washout), QTc-prolonging drugs (macrolides, fluoroquinolones).",
+      "In elderly (≥65): consider Beers criteria — generally avoid amitriptyline. If essential, use nortriptyline at low dose.",
+      "Check for narrow-angle glaucoma, urinary retention, benign prostatic hyperplasia, recent MI, heart block — contraindications.",
+      "Counsel about 4-6 week onset for depression; 1-2 weeks for pain at low doses. Set expectation that side effects precede benefit.",
+    ],
+    duringTreatment: [
+      "Week 1: assess tolerability — sedation, dry mouth, orthostatic dizziness, constipation. Reduce dose if severe.",
+      "Week 2-4: review early response — sleep improves first, then appetite, then mood. Check orthostatic vitals.",
+      "Week 4-6: assess response. If inadequate, titrate dose upward (depression 75-150mg). For pain, often 25-75mg sufficient.",
+      "Recheck ECG after major dose increases (above 100mg/day) and in elderly.",
+      "Check nortriptyline level at steady state (after 5+ days at constant dose) if non-responder or suspected toxicity — target 50-150 ng/mL.",
+      "Watch for urinary retention (especially elderly men with BPH), acute angle-closure glaucoma, paralytic ileus.",
+      "Monitor for overdose warning signs — ask about suicidal ideation at every visit; involve family in monitoring.",
+    ],
+    followUp: [
+      "First follow-up at 1 week (tolerability + side effects).",
+      "Second follow-up at 2-4 weeks (early response + titration).",
+      "Third follow-up at 6-8 weeks (full response assessment).",
+      "ECG at each significant dose change and every 6-12 months on stable therapy.",
+      "If remission achieved: continue for 6-12 months for first episode, longer for recurrent.",
+      "Before discontinuation: taper over 4+ weeks (anticholinergic rebound, withdrawal symptoms).",
+      "In government hospitals: follow-up may be every 4-8 weeks — counsel family to watch for overdose risk and report mood changes immediately.",
+    ],
+    whenToRefer: [
+      "Refer to psychiatrist if depression is severe, treatment-resistant, or suicidal ideation emerges.",
+      "Refer urgently to emergency if TCA overdose suspected — call 112. QRS widening = sodium bicarbonate.",
+      "Refer to cardiologist if ECG shows QRS >100ms, QTc >470ms (men) / >480ms (women), or new arrhythmia.",
+      "Refer to ophthalmology if acute angle-closure glaucoma develops (eye pain, blurred vision, mid-dilated pupil).",
+      "Refer to urology if urinary retention develops (especially elderly men with BPH).",
+      "Refer to pain specialist or neurologist for refractory neuropathic pain — may need combination therapy or interventional options.",
+      "Refer for CBT or other psychotherapy for depression — combined better than TCA alone.",
+    ],
+  },
+
+  /* Exam frequency — star ratings */
+  examFrequency: {
+    neetPg: 5,
+    inicet: 4,
+    mbbsViva: 5,
+    fmge: 5,
+  },
+
+  /* PYQ metadata — concept-level, no copyrighted content */
+  pyqMetadata: [
+    { exam: "NEET PG", year: 2022, concept: "TCA overdose — QRS widening and antidote", topic: "Antidepressant toxicity" },
+    { exam: "NEET PG", year: 2021, concept: "Most lethal antidepressant in overdose", topic: "Antidepressant safety" },
+    { exam: "NEET PG", year: 2020, concept: "Nortriptyline therapeutic window", topic: "TCA therapeutic drug monitoring" },
+    { exam: "NEET PG", year: 2019, concept: "Beers criteria — avoid amitriptyline in elderly", topic: "Geriatric pharmacology" },
+    { exam: "INICET", year: 2021, concept: "Fluoxetine + TCA interaction (CYP2D6)", topic: "Drug interactions" },
+    { exam: "INICET", year: 2023, concept: "Anticholinergic toxidrome management", topic: "Toxicology" },
+    { exam: "FMGE", year: 2022, concept: "Amitriptyline mechanism — 'dirty drug' receptors", topic: "TCA pharmacology" },
+    { exam: "FMGE", year: 2021, concept: "Amitriptyline for neuropathic pain — dose", topic: "Pain management" },
+  ],
+
+  /* Indian comparison contexts */
+  indianComparisonContexts: [
+    {
+      scenario: "Government hospital setup",
+      recommendation: "Amitriptyline remains in the DMHP drug kit as a low-cost antidepressant (₹0.5-2/tablet) when SSRIs are unavailable. However, SSRIs are preferred first-line due to overdose safety. For neuropathic pain, amitriptyline 10-25mg nocte is first-line.",
+      alternative: "Sertraline or escitalopram for depression (safer in overdose). Gabapentin or pregabalin for neuropathic pain.",
+    },
+    {
+      scenario: "Private psychiatry practice",
+      recommendation: "Amitriptyline is second-line for severe melancholic depression with insomnia and weight loss — sedation and weight gain can be therapeutic. Dose 50-150mg nocte. ECG monitoring essential.",
+      alternative: "Mirtazapine for depression with insomnia/weight loss (safer in overdose). Venlafaxine if TCA contraindicated.",
+    },
+    {
+      scenario: "Neuropathic pain",
+      recommendation: "Amitriptyline 10-25mg nocte is first-line for diabetic neuropathy and post-herpetic neuralgia per NICE CG173. Cheap and effective. Titrate to 75mg if needed.",
+      alternative: "Duloxetine 30-60mg (preferred in painful diabetic neuropathy), pregabalin/gabapentin if TCA contraindicated.",
+    },
+    {
+      scenario: "Migraine prophylaxis",
+      recommendation: "Amitriptyline 10-50mg nocte is first-line per Indian Headache Society — particularly useful when migraine coexists with insomnia or tension-type headache. Low cost.",
+      alternative: "Propranolol 40-80mg BD, topiramate 50-100mg, flunarizine 5-10mg nocte.",
+    },
+    {
+      scenario: "Elderly (≥65 years)",
+      recommendation: "Generally AVOID amitriptyline per Beers criteria — anticholinergic burden, sedation, orthostatic hypotension → falls, cognitive impairment. If TCA essential, use nortriptyline at low dose.",
+      alternative: "Sertraline or escitalopram for depression. Gabapentinoid or duloxetine for neuropathic pain.",
+    },
+    {
+      scenario: "Patient with suicidal ideation",
+      recommendation: "AVOID amitriptyline — overdose lethality is too high. Use SSRI (sertraline) instead. If TCA is unavoidable, dispense only 1-2 weeks supply, involve family for monitoring.",
+      alternative: "Sertraline (lowest overdose risk among antidepressants). ECT for severe suicidal depression.",
+    },
+  ],
+
+  /* Jan Aushadhi availability */
+  janAushadhi: {
+    available: true,
+    note: "Available at Jan Aushadhi Kendras across India in 10mg and 25mg tablet strengths. Among the most affordable antidepressants in India. Generic name: Amitriptyline Hydrochloride Tablets IP.",
+  },
+
+  /* Restructured evidence sources — International vs Indian */
+  evidenceSources: {
+    international: [
+      { source: "Katzung Basic & Clinical Pharmacology, 16th edition", section: "Chapter 30 — Antidepressant Agents (TCAs section)" },
+      { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
+      { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants (TCAs)" },
+      { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression and TCAs" },
+      { source: "FDA Prescribing Information — Amitriptyline Hydrochloride", section: "Highlights of Prescribing Information" },
+      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Pharmacological treatment — TCAs as second-line" },
+      { source: "NICE Clinical Guideline CG173 — Neuropathic pain in adults", section: "Amitriptyline as first-line option" },
+      { source: "AGS Beers Criteria 2023", section: "Amitriptyline listed as 'Avoid' in ≥65 years" },
+    ],
+    indian: [
+      { source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition", type: "textbook", section: "Chapter 33 — Antidepressant Drugs (TCAs)" },
+      { source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression", type: "guideline", section: "Section on pharmacotherapy — TCAs as second-line" },
+      { source: "NMC CBME Curriculum — Pharmacology (Second Professional)", type: "curriculum", section: "Topic: Drugs acting on CNS — Antidepressants (TCAs)" },
+      { source: "NMC CBME Curriculum — Psychiatry (Final Professional)", type: "curriculum", section: "Topic: Psychopharmacology — TCAs and overdose" },
+      { source: "National Mental Health Programme (NMHP) / District Mental Health Programme (DMHP)", type: "regulatory", section: "Essential medicines — amitriptyline in DMHP drug kit" },
+      { source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416", type: "regulatory", section: "Crisis support for overdose risk", url: "tel:14416" },
+      { source: "CDSCO — Central Drugs Standard Control Organisation", type: "regulatory", section: "Amitriptyline — Schedule H prescription status" },
+    ],
+  },
+
+  /* ---- Final Architecture Pass — canonical template v2.0 ---- */
+
+  /* Clinical decision path — algorithm-style decision tree */
+  clinicalDecisionPath: {
+    title: "When to choose Amitriptyline",
+    startNodeId: "start",
+    nodes: [
+      {
+        id: "start",
+        question: "What is the indication?",
+        branches: [
+          { label: "Depression", next: "depression" },
+          { label: "Neuropathic pain", next: "pain" },
+          { label: "Migraine prophylaxis", next: "migraine" },
+          { label: "Insomnia (off-label)", next: "insomnia" },
+        ],
+      },
+      {
+        id: "depression",
+        question: "Depression — what is the clinical picture?",
+        recommendation: "Use amitriptyline only as second-line after SSRI failure, particularly for melancholic depression with insomnia and weight loss. Dose 50-150mg nocte.",
+        reasoning: "Amitriptyline's sedation and weight-gain effects can be therapeutically useful in melancholic depression. However, SSRIs are first-line due to overdose safety. Limited dispense quantity for suicidal risk.",
+        branches: [
+          { label: "With suicidal ideation", next: "avoid-suicidal" },
+          { label: "Elderly (≥65)", next: "avoid-elderly" },
+          { label: "Suitable candidate", next: "start-depression" },
+        ],
+      },
+      {
+        id: "pain",
+        question: "Neuropathic pain (diabetic neuropathy, post-herpetic neuralgia)",
+        recommendation: "Amitriptyline 10-25mg nocte, titrate to 75mg. First-line per NICE CG173.",
+        reasoning: "TCAs work in neuropathic pain via NET blockade (descending inhibition) independent of antidepressant effect. Lower doses than for depression. Often combined with pregabalin/gabapentin for synergy.",
+      },
+      {
+        id: "migraine",
+        question: "Migraine prophylaxis",
+        recommendation: "Amitriptyline 10-50mg nocte. First-line per Indian Headache Society — especially useful with coexisting insomnia or tension-type headache.",
+        reasoning: "Mechanism likely involves descending serotonergic modulation and prevention of cortical spreading depression. Low dose effective. Cheap and widely available.",
+      },
+      {
+        id: "insomnia",
+        question: "Off-label insomnia use",
+        recommendation: "Generally AVOID in elderly (Beers). In younger adults, 10-25mg nocte short-term may help insomnia with comorbid depression or chronic pain. Not a first-line hypnotic.",
+        reasoning: "H1-mediated sedation. Better alternatives exist (melatonin, CBT-I, z-drugs short-term). Beers criteria cautions against TCA for sleep in elderly.",
+      },
+      {
+        id: "avoid-suicidal",
+        question: "Patient has suicidal ideation",
+        recommendation: "AVOID amitriptyline. Use SSRI (sertraline). If TCA essential, dispense only 1-2 weeks supply, involve family for monitoring, provide Tele-MANAS (14416) number.",
+        reasoning: "Amitriptyline is the #1 antidepressant overdose killer. Even 10-15mg/kg can be fatal due to Na+ channel blockade → QRS widening → ventricular arrhythmia. Overdose safety is the dominant consideration.",
+      },
+      {
+        id: "avoid-elderly",
+        question: "Patient is ≥65 years",
+        recommendation: "AVOID per Beers criteria — anticholinergic, sedation, orthostatic hypotension → falls, cognitive impairment. Use SSRI (sertraline/escitalopram) for depression, gabapentinoid/duloxetine for pain.",
+        reasoning: "Beers 2023 explicitly lists amitriptyline as 'Avoid' in elderly. If a TCA is absolutely essential, nortriptyline is preferred (less anticholinergic, less orthostatic).",
+      },
+      {
+        id: "start-depression",
+        question: "Starting amitriptyline for depression",
+        recommendation: "ECG at baseline. Start 25-50mg nocte, titrate by 25-50mg every 3-7 days to 75-150mg nocte (max 200mg). Recheck ECG after dose increases. Counsel on sedation, orthostatic, anticholinergic side effects. 4-6 week onset.",
+        reasoning: "Start nocte to leverage sedation. Titrate slowly to minimise anticholinergic and orthostatic effects. ECG monitoring due to Na+ channel blockade. Dispense limited supply if any suicidality risk.",
+      },
+    ],
+  },
+
+  /* Educational prescription template (India) */
+  educationalPrescription: {
+    scenario: "Typical Indian OPD initiation for diabetic neuropathy in a 50-year-old adult",
+    lines: [
+      "Rx",
+      "Tab Amitriptyline 10 mg",
+      "1 tab OD at night × 5 days",
+      "",
+      "Then increase to:",
+      "Tab Amitriptyline 25 mg",
+      "1 tab OD at night",
+      "",
+      "Advice: Take at bedtime. Do not stop suddenly.",
+      "Avoid alcohol. Stand up slowly from sitting/lying.",
+      "Report if palpitations, fainting, or urinary difficulty.",
+    ],
+    followUp: [
+      "Review after 1 week — tolerability (sedation, dry mouth, orthostatic dizziness)",
+      "Review after 4 weeks — pain response (often partial by 2 weeks, full by 4-6)",
+      "Review after 6-8 weeks — titrate to 50-75mg if response inadequate",
+      "Check BP lying and standing at each visit",
+      "ECG if dose increased above 75mg/day or in patients >50 with cardiac history",
+      "If remission of pain: continue 3-6 months then taper over 2-4 weeks",
+      "If suicidal ideation emerges: switch to duloxetine or pregabalin, stop amitriptyline",
+    ],
+    disclaimer: "Educational example only. Not a substitute for clinical judgment. Always verify dosing against current prescribing information and individualise for each patient.",
+  },
+
+  /* Common mistakes */
+  commonMistakes: [
+    {
+      mistake: "Not recognising TCA overdose lethality",
+      why: "Amitriptyline is the #1 antidepressant overdose killer. 10-15mg/kg can be fatal — even one week's supply (e.g., 25mg × 28 tablets = 700mg) can kill an adult.",
+      correction: "Always assess suicidality before prescribing. If any risk, choose an SSRI (sertraline) instead. If TCA essential, dispense only 1-2 weeks supply, involve family for monitoring, provide Tele-MANAS (14416).",
+    },
+    {
+      mistake: "Not checking ECG before and during treatment",
+      why: "Amitriptyline causes Na+ channel blockade → QRS widening, QTc prolongation, ventricular arrhythmia. ECG at baseline and after dose escalation is essential, especially in patients >50 or with cardiac history.",
+      correction: "ECG at baseline. Recheck after dose increases above 100mg/day. Avoid combining with other QTc-prolonging drugs (macrolides, fluoroquinolones, antiarrhythmics).",
+    },
+    {
+      mistake: "Not recognising anticholinergic toxidrome",
+      why: "Anticholinergic toxicity presents as: dry as a bone, red as a beet, hot as a hare, blind as a bat, mad as a hatter. Can be misdiagnosed as delirium, sepsis, or heat stroke.",
+      correction: "Recognise the pattern — mydriasis, dry mucous membranes, ileus, urinary retention, hyperthermia, confusion. Mild: supportive. Severe: physostigmine (rarely needed).",
+    },
+    {
+      mistake: "Using amitriptyline in elderly (Beers criteria violation)",
+      why: "Beers 2023 explicitly lists amitriptyline as 'Avoid' in ≥65 years due to anticholinergic burden, sedation, orthostatic hypotension → falls, cognitive impairment, urinary retention.",
+      correction: "Use SSRI (sertraline/escitalopram) for depression, gabapentinoid or duloxetine for neuropathic pain. If TCA essential, use nortriptyline at low dose.",
+    },
+    {
+      mistake: "Not monitoring nortriptyline levels in non-responders",
+      why: "Nortriptyline has a defined therapeutic window (50-150 ng/mL). Below 50 → subtherapeutic; above 150 → toxicity. Without level monitoring, non-response may be due to subtherapeutic levels.",
+      correction: "Draw nortriptyline level at steady state (5+ days at constant dose) in non-responders. Adjust dose to target 50-150 ng/mL. Especially important in elderly, CYP2D6 inhibitor co-prescription, or non-adherence suspicion.",
+    },
+    {
+      mistake: "Combining with SSRIs (especially fluoxetine, paroxetine)",
+      why: "Fluoxetine and paroxetine are potent CYP2D6 inhibitors → raise TCA levels 2-5 fold → toxicity. Also additive serotonergic effect → serotonin syndrome.",
+      correction: "Stop SSRI, wait appropriate washout (5 half-lives; 5 weeks for fluoxetine due to norfluoxetine), then start TCA at low dose. Monitor levels closely. Avoid simultaneous use.",
+    },
+    {
+      mistake: "Not warning about orthostatic hypotension in the elderly",
+      why: "α1 blockade causes orthostatic hypotension — major fall risk in elderly, especially at night when getting up to urinate.",
+      correction: "Counsel: stand up slowly, especially from bed. Take at night. Consider dose reduction or switch. Check BP lying and standing at each visit.",
+    },
+    {
+      mistake: "Not counselling on overdose danger",
+      why: "Patients may not realise that taking 'a few extra tablets' can be fatal. Carers may stockpile old tablets. Easy availability in India without strict prescription control increases risk.",
+      correction: "Counsel explicitly: 'Never take more than prescribed — even a small overdose can stop your heart.' Dispose of unused tablets. Limit dispense quantity. Family to monitor supply.",
+    },
+  ],
+
+  /* When NOT to use — red card */
+  whenNotToUse: [
+    {
+      scenario: "Recent myocardial infarction (within 6 weeks)",
+      reason: "Na+ channel blockade + anticholinergic tachycardia increases cardiac workload and arrhythmia risk in vulnerable post-MI myocardium.",
+      alternative: "SSRI (sertraline — safest post-MI per SADHART trial). Wait 6+ months post-MI before considering TCA.",
+    },
+    {
+      scenario: "Arrhythmias, heart block, or prolonged QTc",
+      reason: "Amitriptyline prolongs QTc and causes Na+ channel blockade → torsades risk, ventricular arrhythmia, complete heart block.",
+      alternative: "SSRI with lowest QTc effect (sertraline, escitalopram). Avoid TCAs entirely.",
+    },
+    {
+      scenario: "Narrow-angle glaucoma",
+      reason: "M1 muscarinic blockade → pupillary dilation → blockage of aqueous humour outflow → acute angle closure → blindness.",
+      alternative: "SSRI (sertraline/escitalopram). Ensure ophthalmology review before any antidepressant in glaucoma patients.",
+    },
+    {
+      scenario: "Elderly (≥65 years) — Beers criteria",
+      reason: "Strong anticholinergic burden, sedation, orthostatic hypotension → cognitive impairment, falls, urinary retention, delirium.",
+      alternative: "SSRI (sertraline/escitalopram) for depression, gabapentinoid or duloxetine for pain, non-pharmacological for sleep.",
+    },
+    {
+      scenario: "Suicidal patients at overdose risk",
+      reason: "Amitriptyline is the #1 antidepressant overdose killer. Lethal dose is small (10-15mg/kg). One month's supply can be fatal.",
+      alternative: "SSRI (sertraline — safest in overdose). ECT for severe suicidal depression. If TCA unavoidable, dispense 1-2 weeks only with family monitoring.",
+    },
+    {
+      scenario: "Eating disorders with electrolyte disturbance",
+      reason: "Bulimia/anorexia patients have hypokalaemia, hypomagnesaemia, prolonged QTc — amitriptyline further prolongs QTc → torsades risk. Also overdose risk in this population.",
+      alternative: "SSRI (fluoxetine — FDA-approved for bulimia). Avoid TCAs entirely. ECT for severe cases.",
+    },
+  ],
+
+  /* Indian ward pearls */
+  wardPearls: {
+    professorMayAsk: [
+      "What is the mechanism of action of amitriptyline? Why is it called a 'dirty drug'? (Blocks SERT + NET + α1 + H1 + M1 + Na+ channels — each target explains a side effect.)",
+      "Why is amitriptyline the #1 antidepressant overdose killer? (Na+ channel blockade → QRS widening → ventricular arrhythmia. Plus anticholinergic toxidrome, hypotension, seizures.)",
+      "What is the antidote for TCA overdose? (IV sodium bicarbonate — alkalinises plasma (pH 7.45-7.55) and provides Na+ load to overcome channel blockade. QRS >100ms or ventricular arrhythmia = indication.)",
+      "What is the active metabolite and its therapeutic window? (Nortriptyline — 50-150 ng/mL. Below 50 = subtherapeutic, above 150 = toxicity.)",
+      "Why is amitriptyline in the Beers criteria for elderly? (Strong anticholinergic, sedating, orthostatic hypotension → falls, cognitive impairment, urinary retention.)",
+      "Why is amitriptyline now used more for pain than depression? (At low doses, NET blockade activates descending inhibitory pathways — analgesic effect independent of antidepressant action. Safer at low doses than high depression doses.)",
+    ],
+    residentExpects: [
+      "Know the dose for depression (50-150mg nocte) vs pain (10-75mg nocte) — different dose ranges for different indications.",
+      "Know when to check nortriptyline levels (non-responder, toxicity suspicion, elderly, CYP2D6 inhibitor co-prescription).",
+      "Know the ECG changes in TCA overdose (sinus tachycardia, PR prolongation, QRS widening, QTc prolongation).",
+      "Know the overdose management algorithm (ABC, IV sodium bicarbonate for QRS >100ms, benzodiazepine for seizures, ICU, avoid Class Ia/Ic antiarrhythmics).",
+      "Know the CYP2D6 interactions (fluoxetine, paroxetine raise TCA levels 2-5 fold).",
+      "Know when to choose SSRI over TCA (first-line, overdose risk, elderly, cardiac history).",
+    ],
+    consultantsDo: [
+      "Always check ECG before prescribing amitriptyline in patients >50 or with cardiac history.",
+      "Limit dispense quantity to 1-2 weeks for patients with any suicidality risk.",
+      "Check nortriptyline level at steady state in non-responders — target 50-150 ng/mL.",
+      "Use low-dose (10-25mg nocte) for neuropathic pain rather than depression doses.",
+      "Avoid amitriptyline in elderly per Beers criteria — use SSRI or gabapentinoid instead.",
+      "Combine with pregabalin/gabapentin for synergistic effect in refractory neuropathic pain.",
+      "Counsel patient explicitly on overdose danger — 'Never take more than prescribed — even a small overdose can stop your heart.'",
+    ],
+    internsMiss: [
+      "Not checking ECG before starting amitriptyline in >50-year-olds.",
+      "Prescribing full month's supply to a patient with depression — overdose risk.",
+      "Not asking about suicidal ideation before prescribing a lethal-in-overdose drug.",
+      "Using depression doses (75-150mg) for neuropathic pain — should be 10-75mg.",
+      "Combining with fluoxetine or paroxetine without washout — TCA toxicity.",
+      "Not counselling on orthostatic hypotension — elderly fall and fracture.",
+      "Missing anticholinergic toxidrome in elderly patient on multiple anticholinergic drugs.",
+      "Not warning about narrow-angle glaucoma and urinary retention (especially BPH).",
+      "Not providing Tele-MANAS (14416) number for crisis support.",
+    ],
+  },
+
+  /* Refined high-yield level */
+  highYieldLevel: "extreme",
+
+  /* Drug family navigation */
+  drugFamilyNav: {
+    familyName: "TCAs (Tricyclic Antidepressants)",
+    members: [
+      { name: "Amitriptyline", slug: "amitriptyline", relationship: "Current drug", distinguishing: "Most prescribed TCA in India; #1 antidepressant overdose killer; nortriptyline metabolite" },
+      { name: "Clomipramine", slug: "clomipramine", relationship: "Same class (TCA)", distinguishing: "Most serotonergic TCA; ONLY TCA effective for OCD; highest seizure risk" },
+      { name: "Imipramine", slug: "imipramine", relationship: "Same class (TCA)", distinguishing: "First TCA (1950s); prototypical; desipramine active metabolite" },
+      { name: "Nortriptyline", slug: "nortriptyline", relationship: "Same class (TCA, secondary amine)", distinguishing: "Active metabolite of amitriptyline; therapeutic window 50-150 ng/mL; less sedating" },
+      { name: "Doxepin", slug: "doxepin", relationship: "Same class (TCA)", distinguishing: "Highly H1-selective at low dose (≤6mg) for insomnia; topical for pruritus" },
+    ],
+  },
+
+  /* Learning time breakdown */
+  learningTimeBreakdown: {
+    read: "20 min",
+    study: "50 min",
+    revision: "10 min",
+  },
+
+  /* ---- Educational UX Layer ---- */
+
+  /* Inline micro-quizzes — one after each major learning milestone */
+  microQuizzes: [
+    {
+      id: "quiz-mechanism",
+      question: "Which of the following is NOT a receptor/channel target of amitriptyline?",
+      options: ["SERT (serotonin transporter)", "NET (norepinephrine transporter)", "D2 (dopamine receptor)", "H1 (histamine receptor)"],
+      correctIndex: 2,
+      explanation: "Amitriptyline is a 'dirty drug' that blocks SERT, NET, α1, H1, M1 muscarinic, and Na+ channels — but NOT D2 dopamine receptors. D2 blockade is the hallmark of antipsychotics, not TCAs. Each amitriptyline target explains a side effect: SERT/NET = therapeutic + GI/sexual, α1 = orthostatic hypotension, H1 = sedation/weight gain, M1 = anticholinergic, Na+ = QRS widening.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "quiz-overdose",
+      question: "A patient on amitriptyline presents unconscious. ECG shows QRS 140ms. What is the most important immediate treatment?",
+      options: ["IV fluids only", "IV sodium bicarbonate", "IV amiodarone", "Haemodialysis"],
+      correctIndex: 1,
+      explanation: "IV sodium bicarbonate is the antidote for TCA overdose with QRS widening (>100ms). It alkalinises plasma (target pH 7.45-7.55) and provides a sodium load to overcome Na+ channel blockade. Avoid Class Ia (quinidine, procainamide) and Class Ic (flecainide) antiarrhythmics — they worsen Na+ channel blockade.",
+      afterSectionId: "side-effects",
+    },
+    {
+      id: "quiz-metabolite",
+      question: "What is the active metabolite of amitriptyline, and what is its therapeutic window?",
+      options: ["Desipramine, 100-300 ng/mL", "Nortriptyline, 50-150 ng/mL", "Desmethylclomipramine, 75-200 ng/mL", "10-hydroxynortriptyline, 50-100 ng/mL"],
+      correctIndex: 1,
+      explanation: "Nortriptyline is the active metabolite of amitriptyline (via CYP2D6 demethylation). It is itself prescribed as a TCA and is the ONLY TCA with a well-established therapeutic window: 50-150 ng/mL. Below 50 = subtherapeutic, above 150 = toxicity. Levels guide dosing in non-responders.",
+      afterSectionId: "monitoring",
+    },
+    {
+      id: "quiz-elderly",
+      question: "Why is amitriptyline listed in the Beers criteria as 'Avoid' in patients ≥65 years?",
+      options: [
+        "It causes hepatotoxicity in elderly",
+        "It is less effective in elderly",
+        "Strong anticholinergic, sedating, orthostatic properties → falls, cognitive impairment",
+        "It interacts with all elderly medications",
+      ],
+      correctIndex: 2,
+      explanation: "Beers criteria lists amitriptyline as 'Avoid' in ≥65 years because of its strong anticholinergic burden (delirium, urinary retention, constipation), sedation (falls), and α1-mediated orthostatic hypotension (falls, fractures). SSRIs (sertraline, escitalopram) are preferred for depression in elderly.",
+      afterSectionId: "contraindications",
+    },
+    {
+      id: "quiz-pain",
+      question: "What dose of amitriptyline is typically used for diabetic neuropathy?",
+      options: ["10-25mg nocte (max 75mg)", "75-150mg nocte", "150-300mg/day in divided doses", "1-2mg/kg/day"],
+      correctIndex: 0,
+      explanation: "For neuropathic pain, amitriptyline is used at MUCH lower doses than for depression: 10-25mg nocte starting, titrate to max 75mg. The analgesic effect (NET blockade → descending inhibition) occurs at lower doses than the antidepressant effect. Onset for pain is 1-2 weeks (faster than 4-6 weeks for depression).",
+      afterSectionId: "clinical-uses",
+    },
+    {
+      id: "quiz-interaction",
+      question: "A patient on fluoxetine 40mg is switched to amitriptyline. What is the risk?",
+      options: [
+        "No risk — fluoxetine and TCAs can be combined safely",
+        "Fluoxetine inhibits CYP2D6 → raises amitriptyline levels → TCA toxicity",
+        "Fluoxetine reduces amitriptyline absorption",
+        "Fluoxetine shortens amitriptyline half-life",
+      ],
+      correctIndex: 1,
+      explanation: "Fluoxetine (and paroxetine) are potent CYP2D6 inhibitors — they raise TCA levels 2-5 fold, causing toxicity (QRS widening, anticholinergic toxidrome). Additionally, both are serotonergic → serotonin syndrome risk. When switching from fluoxetine to a TCA, wait at least 5 weeks (long half-life of norfluoxetine), then start TCA at low dose with level monitoring.",
+      afterSectionId: "interactions",
+    },
+  ],
+
+  /* End-of-page active recall questions */
+  activeRecallQuestions: [
+    {
+      question: "Amitriptyline is called a 'dirty drug'. Name all its pharmacological targets and the side effect each causes.",
+      answer: "SERT (therapeutic antidepressant + GI/sexual side effects), NET (therapeutic + tremor/tachycardia), α1 (orthostatic hypotension), H1 (sedation, weight gain), M1 muscarinic (dry mouth, constipation, urinary retention, blurred vision, tachycardia), Na+ channel (QRS widening, ventricular arrhythmia — basis for overdose lethality).",
+      topic: "Mechanism",
+    },
+    {
+      question: "A patient on amitriptyline 100mg nocte is brought unconscious. ECG: QRS 130ms. What is the diagnosis, mechanism, and immediate management?",
+      answer: "Diagnosis: TCA overdose with cardiotoxicity. Mechanism: Na+ channel blockade → slow depolarisation → QRS widening → ventricular arrhythmia. Management: ABC, IV access, IV sodium bicarbonate bolus (1-2 mEq/kg) to target QRS <100ms and plasma pH 7.45-7.55, IV fluids, benzodiazepine if seizures, ICU admission, continuous cardiac monitoring. Avoid Class Ia/Ic antiarrhythmics.",
+      topic: "Overdose",
+    },
+    {
+      question: "What is the active metabolite of amitriptyline? What is its therapeutic window, and when should levels be checked?",
+      answer: "Nortriptyline (via CYP2D6 demethylation). Therapeutic window: 50-150 ng/mL. Below 50 = subtherapeutic, above 150 = toxicity. Check levels at steady state (5+ days at constant dose) in: non-responders, suspected toxicity, elderly, CYP2D6 inhibitor co-prescription, suspected non-adherence.",
+      topic: "Therapeutic Drug Monitoring",
+    },
+    {
+      question: "Why is amitriptyline now used more for neuropathic pain than for depression? What doses are used?",
+      answer: "At low doses (10-75mg nocte), amitriptyline's NET blockade activates descending noradrenergic inhibitory pathways from locus coeruleus to dorsal horn — analgesic effect independent of antidepressant action. Onset for pain is 1-2 weeks (faster than 4-6 weeks for depression). First-line per NICE CG173 for neuropathic pain (alongside duloxetine, gabapentin, pregabalin).",
+      topic: "Clinical Use",
+    },
+    {
+      question: "Why is amitriptyline in the Beers criteria for elderly (≥65)? What are the alternatives?",
+      answer: "Beers 2023 lists amitriptyline as 'Avoid' in ≥65 years due to: (1) strong anticholinergic burden → delirium, cognitive impairment, urinary retention (especially with BPH), constipation; (2) H1-mediated sedation → falls; (3) α1-mediated orthostatic hypotension → falls and fractures. Alternatives: SSRIs (sertraline, escitalopram) for depression, gabapentinoids (gabapentin, pregabalin) or SNRIs (duloxetine) for neuropathic pain, non-pharmacological approaches for insomnia.",
+      topic: "Geriatric Pharmacology",
+    },
+    {
+      question: "Why is amitriptyline the #1 antidepressant overdose killer? What makes it so lethal?",
+      answer: "Multiple factors: (1) Na+ channel blockade → QRS widening → ventricular arrhythmia (the dominant lethal mechanism); (2) Anticholinergic toxidrome → hyperthermia, delirium, ileus; (3) α1 blockade → refractory hypotension; (4) GABA antagonism → seizures; (5) Small lethal dose: 10-15mg/kg (one week's supply at 100mg = 700mg can be fatal). Treatment: IV sodium bicarbonate for QRS >100ms, benzodiazepine for seizures, ICU, avoid Class Ia/Ic antiarrhythmics.",
+      topic: "Safety",
+    },
+  ],
+
+  /* Guided learning paths — each mode shows a curated subset of sections */
+  learningPaths: [
+    {
+      mode: "patient",
+      label: "Patient",
+      estimatedTime: "5 min",
+      description: "Plain language. What you need to know to take your medicine safely.",
+      visibleSections: ["top", "quick-facts", "patient-education", "faq", "emergency"],
+    },
+    {
+      mode: "mbbs",
+      label: "MBBS Student",
+      estimatedTime: "20 min",
+      description: "Foundations, mechanism, clinical uses, side effects, and MBBS exam content.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+    },
+    {
+      mode: "neetPg",
+      label: "NEET PG / INICET",
+      estimatedTime: "35 min",
+      description: "Full clinical detail with exam-specific content, PYQs, and drug comparisons.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+    },
+    {
+      mode: "resident",
+      label: "Resident / Clinician",
+      estimatedTime: "45 min",
+      description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+    },
+  ],
+
+  /* Lesson grouping — sections organised into learning units */
+  lessonGroups: [
+    {
+      number: 1,
+      title: "Foundations",
+      description: "What is this drug? Why does it matter?",
+      sectionIds: ["top", "quick-facts", "learning-objectives", "knowledge-graph"],
+      checkpoint: "You now know what Amitriptyline is, why it's called a 'dirty drug', and why it's still used despite its side effects.",
+    },
+    {
+      number: 2,
+      title: "Mechanism & Neuroscience",
+      description: "How does it work? Where does it act in the brain?",
+      sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
+      checkpoint: "You understand the mechanism — SERT + NET (therapeutic) plus α1, H1, M1, Na+ channel (side effects). You understand why nortriptyline is the active metabolite with a therapeutic window.",
+    },
+    {
+      number: 3,
+      title: "Clinical Practice",
+      description: "When do you use it? What goes wrong?",
+      sectionIds: ["clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education"],
+      checkpoint: "You can now prescribe amitriptyline safely — for depression, neuropathic pain, or migraine — knowing the side effects, contraindications, ECG monitoring, and overdose danger.",
+    },
+    {
+      number: 4,
+      title: "Indian Context",
+      description: "How is it actually used in Indian hospitals?",
+      sectionIds: ["indian-clinical", "decision-path", "common-mistakes"],
+      checkpoint: "You know the Indian brands (Tryptomer, Amitone, Sarotena), the DMHP workflow, the overdose safety concerns in Indian practice, and when NOT to choose amitriptyline.",
+    },
+    {
+      number: 5,
+      title: "Exam Revision",
+      description: "High-yield facts, clinical cases, and drug comparisons.",
+      sectionIds: ["learning-module", "clinical-case", "drug-navigation", "high-yield-summary"],
+      checkpoint: "You've reviewed the exam-specific content, worked through a clinical case, compared amitriptyline with other TCAs, and have a one-page revision summary.",
+    },
+    {
+      number: 6,
+      title: "Active Recall",
+      description: "Can you answer these without looking?",
+      sectionIds: ["active-recall", "faq", "references"],
+      checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Amitriptyline.",
+    },
+  ],
+
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
   reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Amitriptyline label"],

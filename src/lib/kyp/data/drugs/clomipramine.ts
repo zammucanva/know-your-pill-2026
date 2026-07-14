@@ -1142,6 +1142,834 @@ export const clomipramine: Drug = {
       "Clomipramine interacts with MANY medicines — tell your doctor and pharmacist about everything you take, including over-the-counter products and herbal remedies. The most dangerous combinations are with other antidepressants (especially fluvoxamine, fluoxetine, and paroxetine — these can raise clomipramine to dangerous levels and cause serotonin syndrome), MAOIs (must never be combined), tramadol (pain), triptans (migraine), St John's Wort, certain antibiotics (especially ciprofloxacin and macrolides), medicines for bladder or stomach (anticholinergics), and even some cold remedies containing pseudoephedrine or phenylephrine. Alcohol adds to the drowsiness and increases heart stress — best avoided. If you're planning to see a dentist, tell them you're on clomipramine — even local anaesthetic with epinephrine can be hazardous.",
   },
 
+  /* ---- India-first extensions ---- */
+  indianPractice: {
+    prescriptionStatus: "Schedule H",
+    brands: [
+      { name: "Anafranil", manufacturer: "Novartis", strengths: "10mg, 25mg, 50mg, 75mg", note: "Originator brand; among the most prescribed clomipramine brands in India" },
+      { name: "Clofranil", manufacturer: "Sun Pharma", strengths: "10mg, 25mg, 50mg, 75mg" },
+      { name: "Clonil", manufacturer: "Intas", strengths: "10mg, 25mg, 50mg, 75mg" },
+      { name: "Clopram", manufacturer: "Cipla", strengths: "10mg, 25mg, 50mg, 75mg" },
+      { name: "Oxamine", manufacturer: "Torrent", strengths: "25mg, 50mg, 75mg" },
+    ],
+    typicalDoses:
+      "OCD (primary indication): start 25mg OD, titrate by 25mg every 3-5 days to 100-150mg/day in divided doses; max 250mg/day. Depression (second-line): 75-150mg/day in divided doses. Cataplexy (narcolepsy): 25-75mg OD. Premature ejaculation (off-label): 25-50mg OD or PRN 4-6 hours before intercourse. In Indian government hospitals, dose escalation is slower (every 5-7 days) and the maximum OCD dose is often capped at 200mg/day due to seizure risk and monitoring constraints. Maximum: 250mg/day for OCD.",
+    prescribingScenarios: [
+      "Drug of choice for OCD when SSRI (fluoxetine/fluvoxamine/sertraline) trial has failed or in patients who cannot afford high-dose SSRIs — clomipramine is often cheaper than high-dose SSRI therapy.",
+      "Used in tertiary psychiatry OPDs for treatment-resistant OCD after 2 SSRI trials. Often combined with CBT (Exposure and Response Prevention).",
+      "Used off-label for premature ejaculation in Indian urology and general practice (25-50mg PRN or daily) — though SSRIs (dapoxetine) are now preferred first-line.",
+      "Used in neurology for cataplexy associated with narcolepsy (25-75mg OD).",
+      "Rarely used as second-line antidepressant in severe melancholic depression when other TCAs/amitriptyline not tolerated — but generally reserved for OCD due to side-effect burden.",
+    ],
+    availability: {
+      governmentHospitals: true,
+      privatePharmacies: true,
+      urban: true,
+      rural: false,
+      note: "Available in most urban private pharmacies and tertiary hospital pharmacies. Less commonly stocked in rural primary care settings compared to amitriptyline. NOT commonly available in Jan Aushadhi Kendras. Available through DMHP in some states for OCD/ depression but not consistently stocked.",
+    },
+    costCategory: "moderate",
+    costNote: "Clomipramine is moderately priced in India — branded versions (Anafranil, Clofranil, Clonil, Clopram) cost approximately ₹3-8 per 25mg tablet; the 75mg tablet costs ₹8-15. Cost varies by manufacturer and region. Higher than amitriptyline (₹0.5-2) but cheaper than high-dose SSRI therapy for OCD.",
+    monitoring:
+      "In Indian government hospitals, monitoring is primarily clinical — symptom-based assessment (Y-BOCS for OCD), BP, HR, weight. ECG is recommended before starting in patients >50 years, with cardiac history, or at higher OCD doses (>150mg/day), and after dose escalation. Serum clomipramine + desmethylclomipramine levels are used in tertiary centres for refractory OCD (target total 150-300 ng/mL). Seizure history is critical — clomipramine lowers seizure threshold more than other TCAs. Y-BOCS at baseline, 4, 8, 12 weeks. Follow-up: weekly during titration, then every 2-4 weeks. In private practice, ECG and serum levels are more commonly used.",
+    patientCounselling: [
+      "Take with food to reduce stomach upset. Often divided into 2 doses/day for OCD (morning and night), with the larger dose at night to leverage sedation.",
+      "NEVER take more than the prescribed number of tablets — clomipramine is dangerous in overdose and can affect your heart or cause a seizure. If you ever feel like taking extra, call Tele-MANAS at 14416 immediately.",
+      "For OCD, it may take 8-12 WEEKS (longer than for depression) to feel the full benefit — don't stop early just because you don't feel better yet. Some improvement may start at 4-6 weeks.",
+      "Common side effects in the first 1-2 weeks — dry mouth, drowsiness, constipation, dizziness when standing up, sweating, blurred vision, weight gain — usually settle as your body adjusts. Suck sugarless sweets for dry mouth, stand up slowly, increase fibre and fluids for constipation.",
+      "Sexual side effects (reduced interest, delayed orgasm, difficulty with erection) are MORE common with clomipramine than with other medicines in its class — talk to your doctor if this is bothersome. Don't stop the medicine suddenly.",
+      "Do NOT stop suddenly — your doctor will help you reduce the dose gradually over several weeks.",
+      "Avoid alcohol — it adds to the drowsiness and increases the risk of seizures and heart rhythm problems.",
+      "Tell your doctor about ALL your other medicines — clomipramine interacts with many drugs. AVOID fluvoxamine (raises clomipramine to dangerous levels), fluoxetine, paroxetine, MAOIs, tramadol, and even some antibiotics like ciprofloxacin.",
+      "If you have any heart problems, palpitations, fainting, twitching, jerking, or seizure-like activity — tell your doctor immediately. An ECG may be needed.",
+      "If you feel worse, more agitated, or have new suicidal thoughts, contact your doctor immediately or call Tele-MANAS at 14416. The tablets will be dispensed in limited supply for safety reasons.",
+    ],
+  },
+
+  /* NMC CBME competency mapping */
+  cbmeMapping: {
+    subject: "Pharmacology",
+    mbbsYear: "Second Professional",
+    topic: "Drugs acting on Central Nervous System — Antidepressants (Tricyclics) and Obsessive-Compulsive Disorder",
+    competencyCodes: ["PH7.3", "PH7.4", "PY3.2"],
+    competencyDescriptions: [
+      "PH7.3: Describe the mechanism of action, pharmacological actions, adverse effects, contraindications, and therapeutic uses of tricyclic antidepressants (TCAs) with emphasis on clomipramine as the ONLY TCA effective for OCD.",
+      "PH7.4: Explain the rationale for clomipramine dose individualisation in OCD (8-12 week onset, max 250mg/day), ECG and seizure-threshold monitoring, and avoidance of CYP1A2 inhibitors (fluvoxamine).",
+      "PY3.2 (Psychiatry, Final Professional): Describe the place of clomipramine in OCD management — second-line after SSRI failure, mechanism (most serotonergic TCA), desmethylclomipramine active metabolite (noradrenergic shift), and key interactions.",
+    ],
+    integrationSubjects: ["Psychiatry", "General Medicine", "Neurology", "Urology"],
+  },
+
+  /* Exam Lens — structured by Indian examination */
+  examLens: {
+    mbbs: {
+      viva: [
+        "What is the mechanism of action of clomipramine? (TCA — most serotonergic of all TCAs. Blocks SERT strongly + NET (weaker) + α1, H1, M1, Na+ channels. The strong serotonergic effect explains why it's the only TCA that works for OCD.)",
+        "Why is clomipramine the ONLY TCA effective for OCD? (OCD responds specifically to STRONG serotonergic drugs. Clomipramine is the most serotonergic TCA (highest SERT affinity among TCAs). Other TCAs (amitriptyline, imipramine) don't work for OCD because their serotonergic effect is too weak — they're more noradrenergic.)",
+        "What is the active metabolite of clomipramine? (Desmethylclomipramine — noradrenergic, shifts the drug's profile from SSRI-like to SNRI-like over weeks. Contributes to side effects and efficacy.)",
+        "Why does clomipramine cause MORE seizures than amitriptyline? (Dose-dependent lowering of seizure threshold — at OCD doses (100-250mg), seizure risk is ~0.7% vs ~0.1% for depression doses. Avoid in patients with epilepsy.)",
+        "Which SSRI must be AVOIDED with clomipramine, and why? (Fluvoxamine — potent CYP1A2 inhibitor. Clomipramine is metabolised by CYP1A2, so fluvoxamine raises clomipramine levels 2-4 fold → toxicity (seizures, cardiotoxicity).",
+        "What is the role of clomipramine in premature ejaculation? (Off-label — 25-50mg PRN 4-6 hours before intercourse, or daily. SSRIs (dapoxetine) are now preferred first-line. Mechanism: serotonergic delay of ejaculation.)",
+      ],
+      practical: [
+        "Counsel a patient starting clomipramine for OCD — address 8-12 week onset, side effects, fluvoxamine avoidance, overdose safety.",
+        "Write a prescription for clomipramine 25mg OD for a 30-year-old with OCD, titrating to 100-150mg/day.",
+        "Identify the contraindications of clomipramine from a clinical scenario (e.g., seizure disorder, MAOI, narrow-angle glaucoma).",
+        "Explain the monitoring schedule for a patient on clomipramine 150mg for OCD (Y-BOCS, ECG, seizure history).",
+      ],
+      longAnswer: [
+        "Classify antidepressants. Describe the mechanism of action, pharmacokinetics, adverse effects, and therapeutic uses of tricyclic antidepressants with special reference to clomipramine. Discuss why it is the only TCA effective for OCD and its role in management.",
+        "A 28-year-old man with severe OCD has failed two SSRI trials. Discuss the pharmacological management with clomipramine — dose titration, monitoring, drug interactions (especially fluvoxamine), and patient counselling.",
+      ],
+    },
+    neetPg: {
+      highYield: [
+        "Clomipramine = MOST serotonergic TCA — only TCA effective for OCD. Key exam fact: other TCAs (amitriptyline, imipramine) DO NOT work for OCD.",
+        "Active metabolite desmethylclomipramine — noradrenergic, shifts drug profile from SSRI-like to SNRI-like over weeks of treatment.",
+        "Fluvoxamine MUST BE AVOIDED with clomipramine — fluvoxamine is a potent CYP1A2 inhibitor that raises clomipramine levels 2-4 fold → seizures, cardiotoxicity.",
+        "MORE seizure risk than amitriptyline — dose-dependent seizure threshold lowering. Risk ~0.7% at OCD doses (>150mg). Avoid in epilepsy.",
+        "MORE sexual dysfunction than other TCAs — strong serotonergic effect causes delayed orgasm/anorgasmia. Used off-label for premature ejaculation (25-50mg PRN).",
+        "OCD onset is 8-12 weeks (longer than 4-6 weeks for depression). Y-BOCS monitoring at baseline, 4, 8, 12 weeks.",
+        "Metabolised by CYP1A2 (primarily) and CYP2D6, CYP3A4, CYP2C19. CYP1A2 inhibitors (fluvoxamine, ciprofloxacin) raise levels → toxicity.",
+        "Like all TCAs: lethal in overdose (Na+ channel blockade → QRS widening → ventricular arrhythmia). Antidote: IV sodium bicarbonate.",
+        "Side effects: anticholinergic (M1), sedation/weight gain (H1), orthostatic hypotension (α1), sexual dysfunction (SERT), sweating (unknown mechanism — common with clomipramine).",
+        "Dose for OCD: start 25mg OD, titrate to 100-150mg/day in divided doses, max 250mg/day. Higher doses than for depression.",
+      ],
+      pyqConcepts: [
+        "NEET PG 2022: Which TCA is most effective for OCD? (Answer: Clomipramine — the only TCA that works for OCD, due to strongest SERT affinity.)",
+        "NEET PG 2021: A patient with OCD on clomipramine is given fluvoxamine. What is the risk? (Answer: Fluvoxamine inhibits CYP1A2 → raises clomipramine levels 2-4 fold → seizures, cardiotoxicity. AVOID combination.)",
+        "NEET PG 2020: Which antidepressant has the highest seizure risk at therapeutic doses? (Answer: Clomipramine — dose-dependent seizure threshold lowering, especially at OCD doses >150mg.)",
+        "NEET PG 2019: Active metabolite of clomipramine? (Answer: Desmethylclomipramine — noradrenergic, shifts drug from SSRI-like to SNRI-like profile.)",
+        "INICET 2021: A patient with premature ejaculation is prescribed clomipramine. What is the mechanism? (Answer: Strong serotonergic effect delays ejaculation. Off-label use; SSRIs like dapoxetine are now first-line.)",
+      ],
+    },
+    inicet: {
+      clinicalReasoning: [
+        "A 28-year-old man with severe OCD has failed fluoxetine 60mg (12 weeks) and fluvoxamine 300mg (12 weeks). What is the next pharmacological step? (Answer: Switch to clomipramine — start 25mg OD, titrate to 150-250mg/day over 2-3 weeks. Y-BOCS at baseline, 4, 8, 12 weeks. ECG before starting. Must wait 1 week after stopping fluvoxamine before starting clomipramine (CYP1A2 interaction). Combine with Exposure and Response Prevention (ERP) therapy for best outcomes.)",
+        "A 35-year-old woman on clomipramine 200mg for OCD develops new-onset generalised tonic-clonic seizure. What is the mechanism and management? (Answer: Clomipramine lowers seizure threshold in a dose-dependent manner. Risk ~0.7% at doses >150mg. Management: stop clomipramine, refer to neurology for seizure workup (rule out structural cause), switch to SSRI (fluoxetine) or augment with antipsychotic (aripiprazole) for OCD. Avoid clomipramine in patients with epilepsy.)",
+        "A 32-year-old man with OCD is on fluvoxamine 300mg. He requests to switch to clomipramine due to lack of response. How do you manage the transition? (Answer: MUST wait at least 1 week after stopping fluvoxamine before starting clomipramine — fluvoxamine is a potent CYP1A2 inhibitor that would raise clomipramine to toxic levels (seizures, cardiotoxicity). Start clomipramine at low dose (25mg OD) and titrate slowly. Monitor ECG and Y-BOCS.)",
+        "A 25-year-old man with premature ejaculation requests pharmacological treatment. What are the options and the role of clomipramine? (Answer: First-line: dapoxetine (on-demand SSRI, licensed for PE in India). Alternatives: off-label daily SSRI (sertraline, paroxetine), or off-label clomipramine 25-50mg PRN 4-6 hours before intercourse. Clomipramine works by serotonergic delay of ejaculation but has more side effects than dapoxetine. Behavioural techniques (squeeze, stop-start) should be combined.)",
+      ],
+    },
+    fmge: {
+      frequentlyTested: [
+        "Clomipramine is the ONLY TCA effective for OCD (most serotonergic TCA).",
+        "Active metabolite: desmethylclomipramine (noradrenergic, SNRI shift).",
+        "Fluvoxamine AVOID with clomipramine — CYP1A2 inhibition raises clomipramine levels → toxicity.",
+        "Clomipramine has HIGHER seizure risk than other TCAs — avoid in epilepsy.",
+        "OCD onset: 8-12 weeks (longer than 4-6 weeks for depression).",
+        "Side effects: anticholinergic, sedation, sweating, sexual dysfunction (delayed orgasm).",
+        "Lethal in overdose — QRS widening, IV sodium bicarbonate is the antidote.",
+        "Off-label use: premature ejaculation (25-50mg PRN).",
+        "Dose: OCD start 25mg OD, titrate to 100-250mg/day.",
+        "Contraindications: seizure disorder, MAOIs, narrow-angle glaucoma, recent MI.",
+      ],
+    },
+    psychiatryResidency: {
+      advancedPearls: [
+        "Clomipramine is the only TCA that works for OCD because OCD requires STRONG serotonergic effect — clomipramine has the highest SERT affinity among TCAs (~5x amitriptyline). Other TCAs are too noradrenergic. SSRIs work for OCD by the same mechanism, but clomipramine is uniquely effective among TCAs.",
+        "OCD treatment algorithm: (1) SSRI at high dose (fluoxetine 60mg, fluvoxamine 300mg, sertraline 200mg) for 12 weeks; (2) Switch to clomipramine if SSRI failure; (3) Augment with low-dose antipsychotic (aripiprazole 5-10mg, risperidone 1-2mg) if partial response; (4) Combine with Exposure and Response Prevention (ERP) therapy throughout. Clomipramine is the most effective single agent but side-effect profile limits use.",
+        "Desmethylclomipramine (active metabolite) is noradrenergic — over 4-8 weeks of treatment, the parent clomipramine (serotonergic) concentration falls and desmethylclomipramine (noradrenergic) rises. The drug effectively transitions from SSRI-like to SNRI-like. This explains why side-effect profile changes over time and why some patients develop tremor/tachycardia later in treatment.",
+        "CYP1A2 metabolism is the key interaction point — fluvoxamine (potent CYP1A2 inhibitor) raises clomipramine levels 2-4 fold. Ciprofloxacin and other fluoroquinolones also inhibit CYP1A2. Always ask about these drugs before prescribing clomipramine. If patient is on fluvoxamine, wait at least 1 week before starting clomipramine.",
+        "Clomipramine causes MORE sexual dysfunction than other TCAs (and even SSRIs) because of its strong serotonergic effect — delayed orgasm/anorgasmia affects ~30-50% of patients. This is exploited therapeutically in premature ejaculation (off-label). Always ask about sexual function at every follow-up.",
+        "Seizure risk with clomipramine is dose-dependent: <100mg/day = 0.1%, 100-200mg = 0.5%, 200-250mg = 0.7%, >250mg = >1%. Avoid in patients with epilepsy, history of seizures, or with other seizure-threshold-lowering drugs (bupropion, antipsychotics). For OCD patients requiring >200mg, consider EEG and anticonvulsant prophylaxis in high-risk patients.",
+        "Sweating is a peculiar and common side effect of clomipramine (and other serotonergic TCAs) — up to 30% of patients. Mechanism likely involves serotonergic effect on hypothalamic thermoregulation. Difficult to manage — dose reduction, alpha-2 agonists (clonidine), or switch to SSRI.",
+      ],
+    },
+  },
+
+  /* International vs Indian guideline comparisons */
+  guidelineComparisons: [
+    {
+      topic: "Place in OCD treatment",
+      internationalSource: "APA Practice Guideline for OCD",
+      internationalRecommendation: "SSRIs (fluoxetine, fluvoxamine, sertraline, paroxetine) are first-line for OCD due to favourable side-effect profile. Clomipramine is second-line after 2 SSRI failures — the ONLY TCA effective for OCD.",
+      indianSource: "Indian Psychiatric Society (IPS) — OCD Guidelines",
+      indianRecommendation: "IPS concurs — SSRIs first-line, clomipramine second-line. In Indian practice, clomipramine is often chosen when high-dose SSRIs are unaffordable (clomipramine at 100-150mg is cheaper than fluoxetine 60mg or sertraline 200mg). Combine with Exposure and Response Prevention (ERP) therapy.",
+    },
+    {
+      topic: "Use in OCD dosing",
+      internationalSource: "FDA / APA",
+      internationalRecommendation: "Start 25mg OD, titrate to 100-250mg/day in divided doses. OCD requires higher doses than depression (75-150mg). Onset 8-12 weeks (longer than 4-6 weeks for depression). Y-BOCS monitoring.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs with dosing. In Indian government hospitals, titration is slower (every 5-7 days) and max dose often capped at 200mg/day due to seizure risk and monitoring constraints. Y-BOCS used in tertiary centres.",
+    },
+    {
+      topic: "Use in epilepsy / seizure disorders",
+      internationalSource: "APA / FDA",
+      internationalRecommendation: "Clomipramine is contraindicated in seizure disorders — it lowers seizure threshold more than other TCAs, especially at OCD doses (>150mg). Risk ~0.7% at 200-250mg/day.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs — clomipramine avoided in patients with epilepsy. For OCD in epilepsy patients, use high-dose SSRI (fluoxetine) + ERP. If clomipramine is essential, ensure anticonvulsant cover and EEG monitoring.",
+    },
+    {
+      topic: "Drug interactions (CYP1A2)",
+      internationalSource: "FDA Prescribing Information",
+      internationalRecommendation: "Clomipramine is metabolised primarily by CYP1A2. Fluvoxamine (potent CYP1A2 inhibitor) is contraindicated — raises clomipramine levels 2-4 fold → seizures, cardiotoxicity. Ciprofloxacin and other fluoroquinolones also interact.",
+      indianSource: "Indian Psychiatric Society (IPS)",
+      indianRecommendation: "IPS concurs — AVOID fluvoxamine-clomipramine combination. In Indian practice, where fluvoxamine is sometimes prescribed for OCD, careful history before starting clomipramine is essential. Wait at least 1 week after stopping fluvoxamine before starting clomipramine.",
+    },
+    {
+      topic: "Use in premature ejaculation",
+      internationalSource: "AUA / EAU Guidelines",
+      internationalRecommendation: "Dapoxetine (on-demand SSRI) is the only licensed pharmacological treatment for PE. Off-label daily SSRIs (sertraline, paroxetine) and off-label clomipramine (25-50mg PRN) are alternatives. Behavioural techniques first-line.",
+      indianSource: null,
+      indianRecommendation: "No dedicated Indian guideline on PE. Indian practice: dapoxetine is first-line (licensed, on-demand, fewer side effects). Clomipramine 25-50mg PRN used off-label in urology practice. Daily SSRI (sertraline) as alternative. Behavioural techniques (squeeze, stop-start) should be combined. Current section reflects accepted clinical practice and internationally accepted evidence.",
+    },
+  ],
+
+  /* Indian reference sources */
+  indianReferences: [
+    {
+      source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition",
+      type: "textbook",
+      section: "Chapter 33 — Antidepressant Drugs (TCAs section, clomipramine for OCD)",
+    },
+    {
+      source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Obsessive-Compulsive Disorder",
+      type: "guideline",
+      section: "Section on pharmacotherapy — clomipramine as second-line after SSRI",
+    },
+    {
+      source: "NMC CBME Curriculum — Pharmacology (Second Professional)",
+      type: "curriculum",
+      section: "Topic: Drugs acting on CNS — Antidepressants (TCAs, clomipramine)",
+    },
+    {
+      source: "NMC CBME Curriculum — Psychiatry (Final Professional)",
+      type: "curriculum",
+      section: "Topic: Psychopharmacology — OCD management and clomipramine",
+    },
+    {
+      source: "National Mental Health Programme (NMHP) / District Mental Health Programme (DMHP)",
+      type: "regulatory",
+      section: "Essential medicines for mental health — clomipramine for OCD in tertiary care",
+    },
+    {
+      source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416",
+      type: "regulatory",
+      section: "Crisis support for patients on clomipramine with suicidal ideation",
+      url: "tel:14416",
+    },
+    {
+      source: "CDSCO — Central Drugs Standard Control Organisation",
+      type: "regulatory",
+      section: "Clomipramine — Schedule H prescription status",
+    },
+  ],
+
+  /* Section difficulty mapping */
+  sectionDifficulty: {
+    "top": "mbbs",
+    "quick-facts": "mbbs",
+    "learning-objectives": "mbbs",
+    "knowledge-graph": "pg",
+    "mechanism": "mbbs",
+    "brain-regions": "pg",
+    "neurotransmitters": "pg",
+    "neural-pathways": "resident",
+    "timeline": "mbbs",
+    "clinical-uses": "mbbs",
+    "side-effects": "mbbs",
+    "monitoring": "pg",
+    "contraindications": "mbbs",
+    "interactions": "pg",
+    "patient-education": "mbbs",
+    "clinical-pearls": "pg",
+    "exam-lens": "mbbs",
+    "memory-tricks": "mbbs",
+    "clinical-case": "pg",
+    "comparison": "pg",
+    "indian-practice": "mbbs",
+    "guideline-comparison": "resident",
+    "related-drugs": "pg",
+    "high-yield-summary": "mbbs",
+    "faq": "mbbs",
+    "references": "resident",
+  },
+
+  /* ---- India Layer extensions (platform-wide) ---- */
+
+  /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
+  evidenceHierarchy: {
+    international: [
+      { source: "APA Practice Guideline for OCD", recommendation: "SSRIs first-line; clomipramine second-line after 2 SSRI failures. The only TCA effective for OCD." },
+      { source: "FDA Prescribing Information (Anafranil)", recommendation: "Approved for OCD. Start 25mg, titrate to 100-250mg/day. Onset 8-12 weeks. Black box: suicidality <25." },
+      { source: "NICE CG31 (OCD)", recommendation: "SSRIs first-line (higher doses than depression). Clomipramine if SSRI failure or intolerance. Combine with CBT (ERP)." },
+      { source: "Cochrane Review (OCD pharmacotherapy)", recommendation: "Clomipramine is the most effective single agent for OCD but side-effect profile favours SSRIs as first-line." },
+    ],
+    indian: [
+      { source: "Indian Psychiatric Society (IPS) — OCD Guidelines", recommendation: "SSRIs first-line, clomipramine second-line after 2 SSRI failures. In Indian practice, clomipramine often chosen for cost reasons (cheaper than high-dose SSRIs)." },
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS concurs clomipramine contraindicated in epilepsy and with fluvoxamine (CYP1A2 interaction)." },
+      { source: null, recommendation: "No dedicated Indian guideline on premature ejaculation pharmacotherapy. Indian practice follows international — dapoxetine first-line, clomipramine off-label alternative." },
+    ],
+    indianClinicalPractice:
+      "In Indian practice, clomipramine is the drug of choice for OCD when SSRI trials have failed or when high-dose SSRIs are unaffordable (clomipramine 100-150mg is often cheaper than fluoxetine 60mg or sertraline 200mg). Available in urban private pharmacies and tertiary hospital pharmacies, but less commonly stocked in rural primary care. Not on Jan Aushadhi list — so cost can be a barrier for low-income patients. Often combined with Exposure and Response Prevention (ERP) therapy in tertiary centres. Used off-label for premature ejaculation in urology practice (25-50mg PRN), though dapoxetine is now preferred first-line. ECG and Y-BOCS monitoring in tertiary centres only; primary care monitoring is clinical.",
+  },
+
+  /* Indian encounter context — where you'll see this drug */
+  indianEncounterContext: {
+    governmentHospitals:
+      "Available in tertiary hospital pharmacies for OCD after SSRI failure. Monitoring is clinical (Y-BOCS, BP, HR) — ECG often not done due to access barriers. Slower titration (every 5-7 days) and max dose often capped at 200mg/day due to seizure risk.",
+    privateHospitals:
+      "Used in private psychiatry for OCD after SSRI failure. ECG at baseline and after dose escalation above 150mg. Serum clomipramine + desmethylclomipramine levels in some centres. Y-BOCS monitoring at baseline, 4, 8, 12 weeks.",
+    medicalColleges:
+      "Teaching drug for TCA pharmacology and OCD management. Common OSCE scenario — OCD treatment algorithm and clomipramine fluvoxamine interaction. Featured in pharmacology practicals (prescription writing, patient counselling). Examined in MBBS, NEET PG, INICET, FMGE.",
+    primaryCare:
+      "Not commonly initiated in primary care due to side-effect profile and seizure risk. GPs refer OCD patients to psychiatry for clomipramine initiation. Off-label use for premature ejaculation in urology practice (25-50mg PRN).",
+    psychiatryOPD:
+      "Drug of choice for treatment-resistant OCD after 2 SSRI trials. Dose 100-250mg/day in divided doses. Y-BOCS monitoring. ECG and seizure history essential. Combined with ERP therapy for best outcomes. Off-label use for premature ejaculation and cataplexy.",
+  },
+
+  /* Indian prescription workflow */
+  prescriptionWorkflow: {
+    beforePrescribing: [
+      "Screen for bipolar disorder (MDQ) — TCAs can trigger manic switch (more than SSRIs).",
+      "Assess suicidal ideation — if present, choose SSRI instead, prescribe limited supply (1-2 weeks), involve family, give Tele-MANAS (14416) number.",
+      "ECG at baseline — check QTc, QRS duration, PR interval. Essential in patients >50 years, with cardiac history, or planned doses >150mg/day.",
+      "Check seizure history — clomipramine lowers seizure threshold MORE than other TCAs. Avoid in epilepsy; if essential, ensure anticonvulsant cover.",
+      "Review concurrent medications — AVOID fluvoxamine (CYP1A2 inhibitor, raises clomipramine 2-4 fold), fluoxetine/paroxetine (CYP2D6), ciprofloxacin (CYP1A2), MAOIs (14-day washout), QTc-prolonging drugs.",
+      "Baseline Y-BOCS score for OCD response monitoring.",
+      "Check for narrow-angle glaucoma, urinary retention, benign prostatic hyperplasia, recent MI, heart block — contraindications.",
+      "Counsel about 8-12 week onset for OCD (longer than 4-6 weeks for depression). Set expectation that side effects precede benefit.",
+    ],
+    duringTreatment: [
+      "Week 1-2: assess tolerability — sedation, dry mouth, orthostatic dizziness, constipation, sweating. Reduce dose if severe.",
+      "Week 2-4: titrate dose upward. OCD requires higher doses than depression — target 100-150mg/day in divided doses.",
+      "Week 4-8: partial response often starts. Y-BOCS at week 4 and 8. If <25% reduction at 8 weeks, increase dose.",
+      "Week 8-12: full response assessment. If <35% reduction in Y-BOCS, consider dose increase to 250mg, augmentation with antipsychotic, or switch.",
+      "Recheck ECG after dose increases above 150mg/day.",
+      "Watch for sexual dysfunction (delayed orgasm, anorgasmia) — ask directly; patients rarely volunteer.",
+      "Watch for seizures — dose-dependent risk. If seizure occurs, stop clomipramine and refer to neurology.",
+    ],
+    followUp: [
+      "Weekly during titration phase (first 2-4 weeks).",
+      "Y-BOCS at baseline, 4, 8, 12 weeks. ≥25-35% reduction = response.",
+      "ECG at each significant dose change (>150mg) and every 6-12 months on stable therapy.",
+      "If remission achieved (Y-BOCS <8): continue for 1-2 years (longer than depression).",
+      "Before discontinuation: taper over 4+ weeks (anticholinergic rebound, withdrawal symptoms).",
+      "Monitor for sexual dysfunction at every visit — major reason for non-adherence.",
+      "In government hospitals: follow-up may be every 4-8 weeks — counsel family to watch for seizures and overdose risk.",
+    ],
+    whenToRefer: [
+      "Refer to psychiatrist if OCD is severe, treatment-resistant (2 SSRI failures), or comorbid with depression or anxiety.",
+      "Refer urgently to emergency if TCA overdose suspected — call 112. QRS widening = sodium bicarbonate.",
+      "Refer to neurology if new-onset seizure occurs on clomipramine — workup for structural cause.",
+      "Refer to cardiologist if ECG shows QRS >100ms, QTc >470ms (men) / >480ms (women), or new arrhythmia.",
+      "Refer to urology if severe urinary retention (especially elderly men with BPH).",
+      "Refer for CBT (Exposure and Response Prevention) for OCD — combined better than clomipramine alone.",
+      "Refer for behavioural techniques (squeeze, stop-start) for premature ejaculation before pharmacological treatment.",
+    ],
+  },
+
+  /* Exam frequency — star ratings */
+  examFrequency: {
+    neetPg: 4,
+    inicet: 4,
+    mbbsViva: 4,
+    fmge: 4,
+  },
+
+  /* PYQ metadata — concept-level, no copyrighted content */
+  pyqMetadata: [
+    { exam: "NEET PG", year: 2022, concept: "Only TCA effective for OCD", topic: "OCD pharmacotherapy" },
+    { exam: "NEET PG", year: 2021, concept: "Clomipramine + fluvoxamine interaction (CYP1A2)", topic: "Drug interactions" },
+    { exam: "NEET PG", year: 2020, concept: "Antidepressant with highest seizure risk", topic: "TCA adverse effects" },
+    { exam: "NEET PG", year: 2019, concept: "Active metabolite desmethylclomipramine (noradrenergic)", topic: "TCA pharmacokinetics" },
+    { exam: "INICET", year: 2021, concept: "Clomipramine for premature ejaculation — mechanism", topic: "Sexual medicine" },
+    { exam: "INICET", year: 2023, concept: "OCD treatment algorithm — clomipramine second-line", topic: "OCD management" },
+    { exam: "FMGE", year: 2022, concept: "Clomipramine mechanism — most serotonergic TCA", topic: "TCA pharmacology" },
+    { exam: "FMGE", year: 2021, concept: "Clomipramine onset of action for OCD (8-12 weeks)", topic: "Antidepressant onset" },
+  ],
+
+  /* Indian comparison contexts */
+  indianComparisonContexts: [
+    {
+      scenario: "Government hospital setup",
+      recommendation: "Clomipramine available in tertiary hospital pharmacies for OCD after SSRI failure. Often chosen over high-dose SSRIs for cost reasons (clomipramine 100-150mg cheaper than fluoxetine 60mg or sertraline 200mg). Slower titration and max 200mg/day due to monitoring constraints.",
+      alternative: "Fluoxetine 60mg or sertraline 200mg if available and affordable — safer side-effect profile.",
+    },
+    {
+      scenario: "Private psychiatry practice",
+      recommendation: "Clomipramine is second-line for OCD after 2 SSRI trials. Dose 100-250mg/day in divided doses. ECG and Y-BOCS monitoring. Combined with ERP therapy.",
+      alternative: "Augmentation with low-dose antipsychotic (aripiprazole 5-10mg, risperidone 1-2mg) if partial SSRI response.",
+    },
+    {
+      scenario: "Patient on fluvoxamine",
+      recommendation: "AVOID clomipramine — fluvoxamine is a potent CYP1A2 inhibitor that raises clomipramine 2-4 fold → seizures, cardiotoxicity. Wait at least 1 week after stopping fluvoxamine before starting clomipramine.",
+      alternative: "If SSRI failure on fluvoxamine, switch to sertraline 200mg or fluoxetine 60mg before considering clomipramine. Or augment with antipsychotic.",
+    },
+    {
+      scenario: "Premature ejaculation (off-label)",
+      recommendation: "Clomipramine 25-50mg PRN 4-6 hours before intercourse is off-label option. Daily SSRI (sertraline, paroxetine) as alternative. Behavioural techniques first-line.",
+      alternative: "Dapoxetine 30-60mg PRN (licensed, on-demand SSRI — first-line per international guidelines).",
+    },
+    {
+      scenario: "Elderly (≥65 years) with OCD",
+      recommendation: "Generally AVOID clomipramine in elderly — high anticholinergic burden, sedation, orthostatic hypotension, seizure risk. Beers criteria. Use high-dose SSRI (sertraline 200mg, fluoxetine 60mg).",
+      alternative: "Sertraline or escitalopram (high dose for OCD). ERP therapy alone if medication contraindicated.",
+    },
+    {
+      scenario: "Patient with epilepsy and OCD",
+      recommendation: "AVOID clomipramine — it lowers seizure threshold more than other TCAs. Use high-dose SSRI (fluoxetine, sertraline). If SSRI fails, augment with antipsychotic (aripiprazole) rather than switch to clomipramine.",
+      alternative: "Fluoxetine 60mg for OCD. ERP therapy. If pharmacology fails, consider neurosurgery (anterior cingulotomy) in refractory cases.",
+    },
+  ],
+
+  /* Jan Aushadhi availability */
+  janAushadhi: {
+    available: false,
+    note: "NOT commonly available at Jan Aushadhi Kendras in India. Clomipramine is a moderate-cost drug and not on the Jan Aushadhi essential list. Patients needing clomipramine for OCD must purchase from private pharmacies (branded versions: Anafranil, Clofranil, Clonil, Clopram). Cost can be a barrier for low-income patients.",
+  },
+
+  /* Restructured evidence sources — International vs Indian */
+  evidenceSources: {
+    international: [
+      { source: "Katzung Basic & Clinical Pharmacology, 16th edition", section: "Chapter 30 — Antidepressant Agents (TCAs section, clomipramine)" },
+      { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders (TCAs)" },
+      { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants (clomipramine for OCD)" },
+      { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on OCD and clomipramine" },
+      { source: "FDA Prescribing Information — ANAFRANIL (clomipramine hydrochloride)", section: "Highlights of Prescribing Information" },
+      { source: "APA Practice Guideline for the Treatment of Patients with OCD", section: "Pharmacological treatment — clomipramine second-line" },
+      { source: "NICE Clinical Guideline CG31 — Obsessive-Compulsive Disorder", section: "Pharmacological treatment" },
+      { source: "Cochrane Review — Pharmacological interventions for OCD", section: "Clomipramine efficacy and safety" },
+    ],
+    indian: [
+      { source: "KD Tripathi — Essentials of Medical Pharmacology, 8th edition", type: "textbook", section: "Chapter 33 — Antidepressant Drugs (TCAs, clomipramine for OCD)" },
+      { source: "Indian Psychiatric Society — Clinical Practice Guidelines for Management of OCD", type: "guideline", section: "Section on pharmacotherapy — clomipramine second-line" },
+      { source: "NMC CBME Curriculum — Pharmacology (Second Professional)", type: "curriculum", section: "Topic: Drugs acting on CNS — Antidepressants (TCAs, clomipramine)" },
+      { source: "NMC CBME Curriculum — Psychiatry (Final Professional)", type: "curriculum", section: "Topic: Psychopharmacology — OCD and clomipramine" },
+      { source: "National Mental Health Programme (NMHP) / District Mental Health Programme (DMHP)", type: "regulatory", section: "Essential medicines — clomipramine for OCD in tertiary care" },
+      { source: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416", type: "regulatory", section: "Crisis support for patients on clomipramine", url: "tel:14416" },
+      { source: "CDSCO — Central Drugs Standard Control Organisation", type: "regulatory", section: "Clomipramine — Schedule H prescription status" },
+    ],
+  },
+
+  /* ---- Final Architecture Pass — canonical template v2.0 ---- */
+
+  /* Clinical decision path — algorithm-style decision tree */
+  clinicalDecisionPath: {
+    title: "When to choose Clomipramine for OCD",
+    startNodeId: "start",
+    nodes: [
+      {
+        id: "start",
+        question: "Patient presents with OCD",
+        branches: [
+          { label: "First presentation", next: "first-line" },
+          { label: "Failed 1 SSRI", next: "second-ssri" },
+          { label: "Failed 2 SSRIs", next: "clomipramine" },
+          { label: "Severe/treatment-resistant", next: "augment" },
+        ],
+      },
+      {
+        id: "first-line",
+        question: "First presentation of OCD",
+        recommendation: "Start high-dose SSRI (fluoxetine 20-60mg, sertraline 50-200mg, fluvoxamine 50-300mg, paroxetine 20-60mg) + ERP therapy. Clomipramine NOT first-line.",
+        reasoning: "SSRIs are first-line for OCD per APA and IPS guidelines. Better tolerated than clomipramine. Onset 8-12 weeks. Clomipramine reserved for SSRI failure due to side-effect profile.",
+      },
+      {
+        id: "second-ssri",
+        question: "Failed 1 adequate SSRI trial (12 weeks, max tolerated dose)",
+        recommendation: "Switch to a different SSRI (e.g., fluoxetine → sertraline). Combine with ERP. Reassess adherence and comorbidities.",
+        reasoning: "Switching SSRI class is preferred over clomipramine due to better tolerability. 50% of patients respond to second SSRI. Ensure 12-week adequate trial before declaring failure.",
+      },
+      {
+        id: "clomipramine",
+        question: "Failed 2 adequate SSRI trials — clomipramine indicated",
+        recommendation: "Clomipramine 25mg OD, titrate by 25mg every 3-5 days to 150-250mg/day in divided doses. ECG at baseline. Y-BOCS at baseline, 4, 8, 12 weeks. Onset 8-12 weeks.",
+        reasoning: "Clomipramine is the ONLY TCA effective for OCD (most serotonergic TCA). More effective than SSRIs but worse side-effect profile. Combine with ERP. Check ECG, seizure history, and drug interactions (AVOID fluvoxamine) before starting.",
+        branches: [
+          { label: "With seizure history", next: "avoid-seizure" },
+          { label: "On fluvoxamine", next: "avoid-fluvoxamine" },
+          { label: "Suitable candidate", next: "start-clomipramine" },
+        ],
+      },
+      {
+        id: "augment",
+        question: "Severe or treatment-resistant OCD",
+        recommendation: "Augmentation strategies: (1) Clomipramine + SSRI (cautious, monitor levels), (2) SSRI + low-dose antipsychotic (aripiprazole 5-10mg, risperidone 1-2mg), (3) Add glutamate modulator (memantine, NAC). Consider neurosurgery (DBS, cingulotomy) in refractory.",
+        reasoning: "Treatment-resistant OCD (failed 2+ SSRI and clomipramine trials) requires augmentation or interventional approaches. Antipsychotic augmentation has best evidence. Combine with intensive ERP.",
+      },
+      {
+        id: "avoid-seizure",
+        question: "Patient has seizure disorder",
+        recommendation: "AVOID clomipramine — it lowers seizure threshold more than other TCAs. Use high-dose SSRI (fluoxetine 60mg) + ERP. Augment with antipsychotic if SSRI fails.",
+        reasoning: "Clomipramine seizure risk is dose-dependent (~0.7% at >200mg). Epilepsy patients at much higher risk. If clomipramine is essential, ensure anticonvulsant cover and EEG monitoring.",
+      },
+      {
+        id: "avoid-fluvoxamine",
+        question: "Patient is currently on fluvoxamine",
+        recommendation: "AVOID combination. Wait at least 1 week after stopping fluvoxamine before starting clomipramine. Switch to a non-CYP1A2-inhibiting SSRI (sertraline) if needed during transition.",
+        reasoning: "Fluvoxamine is a potent CYP1A2 inhibitor — raises clomipramine levels 2-4 fold → seizures, cardiotoxicity. Ciprofloxacin and other fluoroquinolones also interact. The 1-week washout is essential.",
+      },
+      {
+        id: "start-clomipramine",
+        question: "Starting clomipramine for OCD",
+        recommendation: "ECG at baseline. Start 25mg OD, titrate by 25mg every 3-5 days to 150-250mg/day in divided doses. Y-BOCS at baseline, 4, 8, 12 weeks. Counsel on 8-12 week onset, side effects, fluvoxamine avoidance, overdose danger.",
+        reasoning: "Slow titration minimises anticholinergic and orthostatic effects. OCD requires higher doses than depression (75-150mg). Onset 8-12 weeks. Combine with ERP for best outcomes. Dispense limited supply if any suicidality risk.",
+      },
+    ],
+  },
+
+  /* Educational prescription template (India) */
+  educationalPrescription: {
+    scenario: "Typical Indian OPD initiation for OCD in a 28-year-old adult after SSRI failure",
+    lines: [
+      "Rx",
+      "Tab Clomipramine 25 mg",
+      "1 tab OD at night × 5 days",
+      "",
+      "Then increase to:",
+      "Tab Clomipramine 25 mg",
+      "1 tab BD (morning + night) × 7 days",
+      "",
+      "Then increase to:",
+      "Tab Clomipramine 50 mg",
+      "1 tab BD (morning + night)",
+      "",
+      "Advice: Take with food. Do not stop suddenly.",
+      "Avoid alcohol. Stand up slowly from sitting/lying.",
+      "Report if palpitations, fainting, twitching, or seizures.",
+      "AVOID fluvoxamine. Inform all doctors you are on clomipramine.",
+    ],
+    followUp: [
+      "Review after 1 week — tolerability (sedation, dry mouth, orthostatic dizziness)",
+      "Review after 4 weeks — titrate to 100-150mg/day in divided doses",
+      "Y-BOCS at baseline, 4, 8, 12 weeks — assess response",
+      "Review after 8-12 weeks — full OCD response assessment",
+      "ECG at baseline and after dose increases above 150mg/day",
+      "If remission (Y-BOCS <8): continue 1-2 years, then consider taper over 4+ weeks",
+      "If suicidal ideation emerges: limited supply + family monitoring + Tele-MANAS (14416)",
+    ],
+    disclaimer: "Educational example only. Not a substitute for clinical judgment. Always verify dosing against current prescribing information and individualise for each patient.",
+  },
+
+  /* Common mistakes */
+  commonMistakes: [
+    {
+      mistake: "Not recognising clomipramine is the ONLY TCA effective for OCD",
+      why: "Other TCAs (amitriptyline, imipramine, doxepin) DO NOT work for OCD because their serotonergic effect is too weak. Clomipramine is uniquely effective among TCAs due to its strong SERT affinity. Prescribing amitriptyline for OCD is a common error.",
+      correction: "If using a TCA for OCD, it must be clomipramine. Other TCAs are ineffective. First-line is high-dose SSRI; clomipramine is second-line after SSRI failure.",
+    },
+    {
+      mistake: "Combining clomipramine with fluvoxamine",
+      why: "Fluvoxamine is a potent CYP1A2 inhibitor — raises clomipramine levels 2-4 fold → seizures, cardiotoxicity. This is a dangerous and avoidable interaction.",
+      correction: "NEVER combine. Wait at least 1 week after stopping fluvoxamine before starting clomipramine. Always ask about fluvoxamine before prescribing clomipramine. Document the washout period.",
+    },
+    {
+      mistake: "Not recognising seizure risk at higher OCD doses",
+      why: "Clomipramine lowers seizure threshold MORE than other TCAs. Risk: <100mg = 0.1%, 100-200mg = 0.5%, 200-250mg = 0.7%, >250mg = >1%. OCD doses (100-250mg) put patients at significant risk, especially with history of seizures or other seizure-threshold-lowering drugs.",
+      correction: "Check seizure history before prescribing. Avoid in epilepsy. For doses >200mg, consider EEG and anticonvulsant prophylaxis in high-risk patients. If seizure occurs, stop clomipramine immediately.",
+    },
+    {
+      mistake: "Not asking about sexual dysfunction",
+      why: "Clomipramine causes MORE sexual dysfunction than other TCAs (and even SSRIs) — delayed orgasm/anorgasmia affects 30-50% of patients. This is the #1 reason for non-adherence. Patients rarely volunteer it.",
+      correction: "Ask directly at every follow-up: 'Any changes in sexual interest or function?' If present, consider dose reduction, adding bupropion, or switching to another OCD treatment. The serotonergic effect is exploited therapeutically in premature ejaculation.",
+    },
+    {
+      mistake: "Not waiting 8-12 weeks for OCD response",
+      why: "OCD onset is 8-12 weeks (longer than 4-6 weeks for depression). Stopping at 4-6 weeks means stopping before the drug has had a chance to work. Patients and clinicians may declare 'failure' prematurely.",
+      correction: "Counsel at initiation: 'OCD takes 8-12 weeks to respond — don't stop early.' Use Y-BOCS at baseline, 4, 8, 12 weeks to track response objectively. Continue for at least 12 weeks at max tolerated dose before declaring failure.",
+    },
+    {
+      mistake: "Using depression doses for OCD",
+      why: "OCD requires HIGHER doses than depression — 100-250mg/day vs 75-150mg/day. Under-dosing is a common cause of treatment failure.",
+      correction: "For OCD, titrate to 150-250mg/day (max 250mg). For depression, 75-150mg/day is sufficient. Always use Y-BOCS to guide dose escalation.",
+    },
+    {
+      mistake: "Not checking ECG before and during treatment",
+      why: "Like all TCAs, clomipramine causes Na+ channel blockade → QRS widening, QTc prolongation, ventricular arrhythmia. ECG at baseline and after dose escalation is essential, especially at OCD doses >150mg/day.",
+      correction: "ECG at baseline. Recheck after dose increases above 150mg/day. Avoid combining with other QTc-prolonging drugs (macrolides, fluoroquinolones, antiarrhythmics).",
+    },
+    {
+      mistake: "Not counselling on overdose danger",
+      why: "Like all TCAs, clomipramine is lethal in overdose (Na+ channel blockade → QRS widening → ventricular arrhythmia). Patients with OCD may have comorbid depression with suicidal ideation. Easy availability in India increases risk.",
+      correction: "Counsel explicitly: 'Never take more than prescribed — even a small overdose can stop your heart or cause a seizure.' Dispose of unused tablets. Limit dispense quantity. Family to monitor supply. Provide Tele-MANAS (14416).",
+    },
+  ],
+
+  /* When NOT to use — red card */
+  whenNotToUse: [
+    {
+      scenario: "Seizure disorder or history of seizures",
+      reason: "Clomipramine lowers seizure threshold more than other TCAs — dose-dependent risk (~0.7% at >200mg). Epilepsy patients at much higher risk of seizure breakthrough.",
+      alternative: "High-dose SSRI (fluoxetine 60mg, sertraline 200mg) + ERP. Augmentation with antipsychotic (aripiprazole) if SSRI fails.",
+    },
+    {
+      scenario: "Current MAOI use (within 14 days)",
+      reason: "Fatal serotonin syndrome. The 14-day washout is absolute. Clomipramine is strongly serotonergic — combination is particularly dangerous.",
+      alternative: "Wait 14 days after stopping MAOI before starting clomipramine. Or use SSRI with appropriate washout.",
+    },
+    {
+      scenario: "Narrow-angle glaucoma",
+      reason: "M1 muscarinic blockade → pupillary dilation → blockage of aqueous humour outflow → acute angle closure → blindness. Clomipramine has strong anticholinergic effect.",
+      alternative: "SSRI (sertraline/escitalopram). Ensure ophthalmology review before any antidepressant in glaucoma patients.",
+    },
+    {
+      scenario: "Concurrent SSRI (especially fluvoxamine)",
+      reason: "Fluvoxamine is a potent CYP1A2 inhibitor — raises clomipramine 2-4 fold → seizures, cardiotoxicity. Other SSRIs (fluoxetine, paroxetine) inhibit CYP2D6 and raise TCA levels. All combinations also risk serotonin syndrome.",
+      alternative: "Stop SSRI with appropriate washout (1 week for fluvoxamine; 5 weeks for fluoxetine). Then start clomipramine at low dose with monitoring.",
+    },
+    {
+      scenario: "Pregnancy",
+      reason: "TCAs cross placenta. Neonatal adaptation syndrome reported. Limited safety data for clomipramine specifically. Clomipramine also raises seizure risk in pregnancy (eclampsia risk).",
+      alternative: "SSRI (sertraline — preferred in pregnancy). If TCA essential, use nortriptyline (most data). Avoid clomipramine in pregnancy and lactation.",
+    },
+    {
+      scenario: "Suicidal patients at overdose risk",
+      reason: "Like all TCAs, clomipramine is lethal in overdose — Na+ channel blockade → QRS widening → ventricular arrhythmia. Patients with OCD often have comorbid depression with suicidality.",
+      alternative: "SSRI (sertraline — safest in overdose). ERP therapy alone. If TCA unavoidable, dispense 1-2 weeks only with family monitoring.",
+    },
+  ],
+
+  /* Indian ward pearls */
+  wardPearls: {
+    professorMayAsk: [
+      "Why is clomipramine the only TCA effective for OCD? (Most serotonergic TCA — highest SERT affinity among TCAs. OCD requires strong serotonergic effect. Other TCAs are too noradrenergic.)",
+      "Which SSRI must be AVOIDED with clomipramine? (Fluvoxamine — potent CYP1A2 inhibitor, raises clomipramine 2-4 fold → seizures, cardiotoxicity.)",
+      "What is the active metabolite of clomipramine? (Desmethylclomipramine — noradrenergic, shifts drug profile from SSRI-like to SNRI-like over weeks.)",
+      "Why does clomipramine cause more seizures than amitriptyline? (Dose-dependent seizure threshold lowering — risk ~0.7% at >200mg vs <0.1% for amitriptyline.)",
+      "What is the onset of action for OCD with clomipramine? (8-12 weeks — longer than 4-6 weeks for depression. Use Y-BOCS to track response.)",
+      "What is the role of clomipramine in premature ejaculation? (Off-label — 25-50mg PRN 4-6 hours before intercourse. Serotonergic delay of ejaculation. SSRIs (dapoxetine) are now first-line.)",
+    ],
+    residentExpects: [
+      "Know the OCD treatment algorithm — SSRI first-line (2 trials), clomipramine second-line, antipsychotic augmentation third-line.",
+      "Know the dose for OCD (100-250mg/day in divided doses, max 250mg) vs depression (75-150mg/day).",
+      "Know the CYP1A2 interactions — fluvoxamine, ciprofloxacin raise clomipramine levels.",
+      "Know the Y-BOCS monitoring schedule — baseline, 4, 8, 12 weeks. ≥25-35% reduction = response.",
+      "Know the seizure risk and contraindications — avoid in epilepsy, combine with ERP therapy.",
+      "Know the sexual side-effect profile — higher than other TCAs and SSRIs; ask directly at every visit.",
+    ],
+    consultantsDo: [
+      "Always check ECG before prescribing clomipramine, especially at OCD doses (>150mg/day).",
+      "Always ask about fluvoxamine use before prescribing clomipramine — wait 1 week washout.",
+      "Limit dispense quantity to 1-2 weeks for patients with any suicidality risk.",
+      "Use Y-BOCS at baseline, 4, 8, 12 weeks for objective OCD monitoring.",
+      "Combine clomipramine with ERP therapy — better outcomes than drug alone.",
+      "Always ask about sexual dysfunction at every follow-up — patients rarely volunteer it.",
+      "Check seizure history and avoid clomipramine in epilepsy — use high-dose SSRI instead.",
+    ],
+    internsMiss: [
+      "Prescribing amitriptyline for OCD — only clomipramine works for OCD among TCAs.",
+      "Combining fluvoxamine with clomipramine — dangerous CYP1A2 interaction.",
+      "Not waiting 8-12 weeks for OCD response — declaring 'failure' prematurely.",
+      "Using depression doses (75-150mg) for OCD — should be 100-250mg.",
+      "Not checking ECG before starting clomipramine at higher OCD doses.",
+      "Not asking about sexual dysfunction — patient stops silently.",
+      "Not checking seizure history — patient has seizure on clomipramine.",
+      "Not counselling on overdose danger — TCA overdose is lethal.",
+      "Not providing Tele-MANAS (14416) number for crisis support.",
+    ],
+  },
+
+  /* Refined high-yield level */
+  highYieldLevel: "high",
+
+  /* Drug family navigation */
+  drugFamilyNav: {
+    familyName: "TCAs (Tricyclic Antidepressants)",
+    members: [
+      { name: "Amitriptyline", slug: "amitriptyline", relationship: "Same class (TCA)", distinguishing: "Most prescribed TCA in India; #1 antidepressant overdose killer; nortriptyline metabolite" },
+      { name: "Clomipramine", slug: "clomipramine", relationship: "Current drug", distinguishing: "Most serotonergic TCA; ONLY TCA effective for OCD; highest seizure risk" },
+      { name: "Imipramine", slug: "imipramine", relationship: "Same class (TCA)", distinguishing: "First TCA (1950s); prototypical; desipramine active metabolite" },
+      { name: "Nortriptyline", slug: "nortriptyline", relationship: "Same class (TCA, secondary amine)", distinguishing: "Active metabolite of amitriptyline; therapeutic window 50-150 ng/mL; less sedating" },
+      { name: "Doxepin", slug: "doxepin", relationship: "Same class (TCA)", distinguishing: "Highly H1-selective at low dose (≤6mg) for insomnia; topical for pruritus" },
+    ],
+  },
+
+  /* Learning time breakdown */
+  learningTimeBreakdown: {
+    read: "19 min",
+    study: "50 min",
+    revision: "10 min",
+  },
+
+  /* ---- Educational UX Layer ---- */
+
+  /* Inline micro-quizzes — one after each major learning milestone */
+  microQuizzes: [
+    {
+      id: "quiz-mechanism",
+      question: "Why is clomipramine the only TCA effective for OCD?",
+      options: [
+        "It is the only TCA that crosses the blood-brain barrier",
+        "It is the most serotonergic TCA — highest SERT affinity among TCAs",
+        "It is the only TCA that is also an SSRI",
+        "It is the only TCA approved by the FDA",
+      ],
+      correctIndex: 1,
+      explanation: "Clomipramine is the MOST serotonergic TCA (highest SERT affinity among TCAs, ~5x amitriptyline). OCD responds specifically to STRONG serotonergic drugs. Other TCAs (amitriptyline, imipramine, doxepin) are too noradrenergic and do NOT work for OCD. This is THE key clomipramine fact for exams.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "quiz-interaction",
+      question: "Which SSRI MUST be avoided when prescribing clomipramine?",
+      options: ["Sertraline", "Fluoxetine", "Fluvoxamine", "Paroxetine"],
+      correctIndex: 2,
+      explanation: "Fluvoxamine is a potent CYP1A2 inhibitor — it raises clomipramine levels 2-4 fold, causing seizures, cardiotoxicity, and serotonin syndrome. Wait at least 1 week after stopping fluvoxamine before starting clomipramine. This is one of the most dangerous drug interactions in psychopharmacology.",
+      afterSectionId: "interactions",
+    },
+    {
+      id: "quiz-metabolite",
+      question: "What is the active metabolite of clomipramine, and how does it affect the drug's profile over time?",
+      options: [
+        "Nortriptyline — shifts to more serotonergic",
+        "Desmethylclomipramine — shifts from SSRI-like to SNRI-like (noradrenergic)",
+        "Desipramine — purely noradrenergic, no clinical effect",
+        "10-hydroxyclomipramine — inactive",
+      ],
+      correctIndex: 1,
+      explanation: "Desmethylclomipramine is the active metabolite of clomipramine (via CYP1A2 demethylation). It is noradrenergic (NET > SERT), so over 4-8 weeks of treatment, the parent clomipramine (serotonergic) falls and desmethylclomipramine (noradrenergic) rises — effectively transitioning the drug from SSRI-like to SNRI-like. This explains why side-effect profile changes over time.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "quiz-seizure",
+      question: "A patient on clomipramine 200mg for OCD develops a generalised tonic-clonic seizure. What is the most likely mechanism?",
+      options: [
+        "Serotonin syndrome",
+        "Hyponatraemia (SIADH)",
+        "Clomipramine lowers seizure threshold in a dose-dependent manner",
+        "Allergic reaction",
+      ],
+      correctIndex: 2,
+      explanation: "Clomipramine lowers seizure threshold MORE than other TCAs — dose-dependent risk: <100mg = 0.1%, 100-200mg = 0.5%, 200-250mg = 0.7%, >250mg = >1%. OCD doses (100-250mg) put patients at significant risk. Management: stop clomipramine, switch to SSRI (fluoxetine), refer to neurology for seizure workup. Avoid in epilepsy.",
+      afterSectionId: "side-effects",
+    },
+    {
+      id: "quiz-onset",
+      question: "How long does it take for clomipramine to show full effect in OCD?",
+      options: ["1-2 weeks", "4-6 weeks", "8-12 weeks", "16-20 weeks"],
+      correctIndex: 2,
+      explanation: "OCD onset with clomipramine is 8-12 WEEKS — longer than the 4-6 weeks for depression. This is because OCD requires deeper serotonergic neuroadaptation. Always counsel patients about the longer onset and use Y-BOCS at baseline, 4, 8, 12 weeks to track response objectively. Don't declare failure before 12 weeks at max tolerated dose.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "quiz-pe",
+      question: "A 25-year-old man with premature ejaculation requests pharmacological treatment. What is the role of clomipramine?",
+      options: [
+        "First-line treatment for PE",
+        "Off-label alternative — 25-50mg PRN before intercourse",
+        "Contraindicated in PE",
+        "Used only after surgery fails",
+      ],
+      correctIndex: 1,
+      explanation: "Clomipramine is an OFF-LABEL alternative for premature ejaculation — 25-50mg PRN 4-6 hours before intercourse, or daily. The strong serotonergic effect delays ejaculation. However, dapoxetine (on-demand SSRI, licensed for PE in India) is now FIRST-LINE. Behavioural techniques (squeeze, stop-start) should be combined with pharmacological treatment.",
+      afterSectionId: "clinical-uses",
+    },
+  ],
+
+  /* End-of-page active recall questions */
+  activeRecallQuestions: [
+    {
+      question: "Why is clomipramine the only TCA effective for OCD? Explain the pharmacological basis.",
+      answer: "Clomipramine is the MOST serotonergic TCA — highest SERT affinity among all TCAs (~5x amitriptyline). OCD responds specifically to STRONG serotonergic drugs. Other TCAs (amitriptyline, imipramine, doxepin) are too noradrenergic — their serotonergic effect is insufficient for OCD. SSRIs work for OCD by the same mechanism. Clomipramine is uniquely effective among TCAs.",
+      topic: "Mechanism",
+    },
+    {
+      question: "A patient with OCD on fluvoxamine 300mg wants to switch to clomipramine. How do you manage the transition?",
+      answer: "MUST wait at least 1 week after stopping fluvoxamine before starting clomipramine — fluvoxamine is a potent CYP1A2 inhibitor that raises clomipramine 2-4 fold → seizures, cardiotoxicity, serotonin syndrome. Start clomipramine at low dose (25mg OD) and titrate slowly. Monitor ECG and Y-BOCS. Document the washout period. This is one of the most dangerous drug interactions in psychopharmacology.",
+      topic: "Drug Interactions",
+    },
+    {
+      question: "What is the active metabolite of clomipramine? How does it affect the drug's clinical profile over time?",
+      answer: "Desmethylclomipramine (via CYP1A2 demethylation). It is noradrenergic (NET > SERT), so over 4-8 weeks of treatment, the parent clomipramine (serotonergic) falls and desmethylclomipramine (noradrenergic) rises — effectively transitioning the drug from SSRI-like to SNRI-like. This explains: (1) side-effect profile changes over time; (2) some patients develop tremor/tachycardia later in treatment; (3) clinical effect may evolve over weeks.",
+      topic: "Pharmacokinetics",
+    },
+    {
+      question: "A patient on clomipramine 200mg for OCD develops a generalised tonic-clonic seizure. What is the mechanism, risk factors, and management?",
+      answer: "Mechanism: clomipramine lowers seizure threshold in a dose-dependent manner (more than other TCAs). Risk: <100mg = 0.1%, 100-200mg = 0.5%, 200-250mg = 0.7%, >250mg = >1%. Risk factors: dose >200mg, history of seizures, head injury, alcohol withdrawal, other seizure-threshold-lowering drugs (bupropion, antipsychotics). Management: stop clomipramine, switch to high-dose SSRI (fluoxetine), refer to neurology for seizure workup (rule out structural cause), consider anticonvulsant if treatment-resistant OCD requires continued TCA.",
+      topic: "Adverse Effects",
+    },
+    {
+      question: "Why does clomipramine cause more sexual dysfunction than other TCAs? How is this side effect exploited therapeutically?",
+      answer: "Clomipramine's strong serotonergic effect (highest SERT affinity among TCAs) causes significant sexual dysfunction — delayed orgasm/anorgasmia affects 30-50% of patients. This is MORE than other TCAs (less serotonergic) and even SSRIs. The mechanism is serotonergic inhibition of the ejaculatory reflex. This side effect is exploited therapeutically in premature ejaculation — clomipramine 25-50mg PRN 4-6 hours before intercourse is an off-label option. However, dapoxetine (on-demand SSRI, licensed for PE in India) is now first-line.",
+      topic: "Clinical Pharmacology",
+    },
+    {
+      question: "Outline the OCD treatment algorithm. Where does clomipramine fit in?",
+      answer: "OCD treatment algorithm: (1) First-line: high-dose SSRI (fluoxetine 20-60mg, sertraline 50-200mg, fluvoxamine 50-300mg, paroxetine 20-60mg) for 12 weeks + ERP therapy; (2) If 1st SSRI fails: switch to a different SSRI for 12 weeks; (3) If 2nd SSRI fails: switch to clomipramine (start 25mg, titrate to 150-250mg/day) — the ONLY TCA effective for OCD; (4) If clomipramine fails or partial response: augment with low-dose antipsychotic (aripiprazole 5-10mg, risperidone 1-2mg); (5) Refractory: consider glutamate modulators (memantine, NAC), neurosurgery (DBS, anterior cingulotomy). Combine with ERP throughout.",
+      topic: "Clinical Algorithm",
+    },
+  ],
+
+  /* Guided learning paths — each mode shows a curated subset of sections */
+  learningPaths: [
+    {
+      mode: "patient",
+      label: "Patient",
+      estimatedTime: "5 min",
+      description: "Plain language. What you need to know to take your medicine safely.",
+      visibleSections: ["top", "quick-facts", "patient-education", "faq", "emergency"],
+    },
+    {
+      mode: "mbbs",
+      label: "MBBS Student",
+      estimatedTime: "20 min",
+      description: "Foundations, mechanism, clinical uses, side effects, and MBBS exam content.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+    },
+    {
+      mode: "neetPg",
+      label: "NEET PG / INICET",
+      estimatedTime: "35 min",
+      description: "Full clinical detail with exam-specific content, PYQs, and drug comparisons.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+    },
+    {
+      mode: "resident",
+      label: "Resident / Clinician",
+      estimatedTime: "45 min",
+      description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence.",
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+    },
+  ],
+
+  /* Lesson grouping — sections organised into learning units */
+  lessonGroups: [
+    {
+      number: 1,
+      title: "Foundations",
+      description: "What is this drug? Why does it matter?",
+      sectionIds: ["top", "quick-facts", "learning-objectives", "knowledge-graph"],
+      checkpoint: "You now know what Clomipramine is, why it's the only TCA effective for OCD, and why it remains important in modern practice.",
+    },
+    {
+      number: 2,
+      title: "Mechanism & Neuroscience",
+      description: "How does it work? Where does it act in the brain?",
+      sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
+      checkpoint: "You understand the mechanism — strong SERT blockade (most serotonergic TCA), desmethylclomipramine active metabolite (noradrenergic shift), and why 8-12 weeks are needed for OCD response.",
+    },
+    {
+      number: 3,
+      title: "Clinical Practice",
+      description: "When do you use it? What goes wrong?",
+      sectionIds: ["clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education"],
+      checkpoint: "You can now prescribe clomipramine safely for OCD — knowing the higher doses needed, the 8-12 week onset, the fluvoxamine interaction, the seizure risk, and the overdose danger.",
+    },
+    {
+      number: 4,
+      title: "Indian Context",
+      description: "How is it actually used in Indian hospitals?",
+      sectionIds: ["indian-clinical", "decision-path", "common-mistakes"],
+      checkpoint: "You know the Indian brands (Anafranil, Clofranil, Clonil, Clopram), the cost considerations vs high-dose SSRIs, the fluvoxamine interaction warning, and when NOT to choose clomipramine.",
+    },
+    {
+      number: 5,
+      title: "Exam Revision",
+      description: "High-yield facts, clinical cases, and drug comparisons.",
+      sectionIds: ["learning-module", "clinical-case", "drug-navigation", "high-yield-summary"],
+      checkpoint: "You've reviewed the exam-specific content, worked through a clinical case, compared clomipramine with other TCAs, and have a one-page revision summary.",
+    },
+    {
+      number: 6,
+      title: "Active Recall",
+      description: "Can you answer these without looking?",
+      sectionIds: ["active-recall", "faq", "references"],
+      checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Clomipramine.",
+    },
+  ],
+
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
   reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Anafranil label"],
