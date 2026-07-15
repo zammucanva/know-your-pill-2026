@@ -26,6 +26,8 @@ export const substances: Substance[] = [
       "Activates CB1 receptors in the brain — altering perception, mood, memory, and appetite through endocannabinoid modulation.",
     neurotransmitter: "Anandamide · Dopamine",
     href: "/cannabis.html",
+    artwork: "/artwork/cannabis.png",
+    artworkAlt: "THC molecule — tetrahydrocannabinol, the psychoactive component of cannabis, illustrating its action on CB1 cannabinoid receptors",
   },
   {
     id: "opioids",
@@ -96,6 +98,8 @@ export const substances: Substance[] = [
       "Direct GABA-A agonists with narrow therapeutic index — historical anaesthetics with high overdose and dependence risk.",
     neurotransmitter: "GABA",
     href: "/barbiturate.html",
+    artwork: "/artwork/barbiturate.png",
+    artworkAlt: "Phenobarbital molecule — the prototypical barbiturate, illustrating its direct GABA-A receptor agonism and CNS depression",
   },
   {
     id: "inhalants",
@@ -106,6 +110,8 @@ export const substances: Substance[] = [
       "Lipophilic solvents that rapidly cross the blood-brain barrier — producing brief intoxication and severe neurotoxicity.",
     neurotransmitter: "GABA · NMDA",
     href: "/inhalants.html",
+    artwork: "/artwork/inhalants.png",
+    artworkAlt: "Toluene molecule — a common inhalant solvent, illustrating its lipophilic crossing of the blood-brain barrier and neurotoxic effects",
   },
   {
     id: "lsd",
@@ -140,5 +146,7 @@ export const substances: Substance[] = [
       "Recognise the neuroscience and clinical presentation of substance withdrawal states — symptoms, timelines, and management.",
     neurotransmitter: "Multi-system",
     href: "/withdrawal-state.html",
+    artwork: "/artwork/withdrawal.png",
+    artworkAlt: "Neurotransmitter imbalance diagram — illustrating the GABA decrease and glutamate increase during substance withdrawal",
   },
 ];
