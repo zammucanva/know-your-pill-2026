@@ -162,16 +162,18 @@ export default function WelcomePage() {
   return (
     <div className="flex min-h-screen">
       {/* Left side — brain artwork (desktop only) */}
-      <div className="relative hidden lg:block lg:w-1/2">
-        <Image
-          src="/artwork/hero-brain.png"
-          alt="Anatomical visualization of the brain with cerebral arteries, neural activity, and integrated medications"
-          fill
-          sizes="50vw"
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background/40" />
+      <div className="relative hidden lg:flex lg:w-1/2 items-center justify-center bg-muted/10">
+        <div className="relative h-full w-full p-8">
+          <Image
+            src="/artwork/hero-brain.png"
+            alt="Anatomical visualization of the brain with cerebral arteries, neural activity, and integrated medications"
+            fill
+            sizes="50vw"
+            className="object-contain"
+            priority
+          />
+        </div>
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent to-background/30" />
       </div>
 
       {/* Right side — onboarding form */}
