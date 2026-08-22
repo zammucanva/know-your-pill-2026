@@ -1,8 +1,7 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
-import { Search, ArrowRight, Sparkles } from "lucide-react";
+import { Search, ArrowRight, Sparkles, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { HeroSection } from "@/components/kyp/ui/hero-section";
@@ -103,19 +102,45 @@ export function HomeHero() {
 
 function BrainGraphic() {
   return (
-    <div className="relative w-full max-w-lg mx-auto">
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
-        <Image
-          src="/artwork/hero-brain.png"
-          alt="Anatomical visualization of the brain with cerebral arteries, neural activity, and integrated medications — representing KYP's visual medicine approach"
-          fill
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-cover"
-          priority
-        />
-        {/* Subtle gradient overlay to blend with page */}
-        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-background/30" />
+    <div className="relative aspect-square w-full max-w-md mx-auto">
+      {/* Outer glow ring */}
+      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-brand/30 via-neural/20 to-emergency/15 blur-2xl" />
+
+      {/* Rotating ring */}
+      <div
+        className="absolute inset-6 rounded-full border border-dashed border-brand/30"
+        style={{ animation: "kyp-spin 24s linear infinite" }}
+      />
+
+      {/* Inner card */}
+      <div className="absolute inset-12 rounded-full bg-card/80 backdrop-blur-xl border border-brand/20 shadow-[var(--shadow-lift)] flex items-center justify-center">
+        <div className="text-center">
+          <Brain className="mx-auto h-20 w-20 text-brand" strokeWidth={1.2} />
+          <p className="mt-3 text-h3">Neuroscience Visualised</p>
+          <p className="mt-1 text-caption text-muted-foreground">Mechanism · Pathways · Receptors</p>
+        </div>
       </div>
+
+      {/* Floating neurotransmitter nodes */}
+      {[
+        { top: "8%", left: "50%", label: "Serotonin", color: "bg-brand" },
+        { top: "30%", left: "10%", label: "Dopamine", color: "bg-neural" },
+        { top: "70%", left: "5%", label: "GABA", color: "bg-emergency" },
+        { top: "85%", left: "45%", label: "Glutamate", color: "bg-amber-500" },
+        { top: "70%", left: "85%", label: "Norepinephrine", color: "bg-cyan-500" },
+        { top: "30%", left: "88%", label: "Acetylcholine", color: "bg-emerald-500" },
+      ].map((node, i) => (
+        <div
+          key={node.label}
+          className="absolute kyp-float"
+          style={{ top: node.top, left: node.left, animationDelay: `${i * 0.8}s` }}
+        >
+          <div className="flex items-center gap-1.5 rounded-full border border-border/80 bg-card/90 backdrop-blur px-2.5 py-1 shadow-[var(--shadow-soft)]">
+            <span className={`h-1.5 w-1.5 rounded-full ${node.color}`} />
+            <span className="text-[0.7rem] font-medium">{node.label}</span>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

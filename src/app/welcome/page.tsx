@@ -160,14 +160,29 @@ export default function WelcomePage() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-background px-4 py-12">
-      <div className="w-full max-w-md">
-        {/* Logo */}
-        <div className="mb-8 flex justify-center">
-          <div className="relative h-12 w-12">
-            <Image src="/logo-navy-128.png" alt="Know Your Pill" fill className="object-contain" priority />
+    <div className="flex min-h-screen">
+      {/* Left side — brain artwork (desktop only) */}
+      <div className="relative hidden lg:block lg:w-1/2">
+        <Image
+          src="/artwork/hero-brain.png"
+          alt="Anatomical visualization of the brain with cerebral arteries, neural activity, and integrated medications"
+          fill
+          sizes="50vw"
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-background/40" />
+      </div>
+
+      {/* Right side — onboarding form */}
+      <div className="flex w-full flex-col items-center justify-center bg-background px-4 py-12 lg:w-1/2">
+        <div className="w-full max-w-md">
+          {/* Logo */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative h-12 w-12">
+              <Image src="/logo-navy-128.png" alt="Know Your Pill" fill className="object-contain" priority />
+            </div>
           </div>
-        </div>
 
         {/* STEP: WELCOME */}
         {step === "welcome" && (
@@ -465,6 +480,7 @@ export default function WelcomePage() {
             </Button>
           </div>
         )}
+        </div>
       </div>
     </div>
   );
