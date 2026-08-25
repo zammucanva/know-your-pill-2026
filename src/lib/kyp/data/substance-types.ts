@@ -13,14 +13,19 @@ import type { DrugClassId } from "./types";
 export interface SubstanceClassification {
   title: string;
   description: string;
-  types?: { name: string; features: string[] }[];
+  types?: {
+    symbol?: string;
+    name: string;
+    description?: string;
+    features: string[];
+  }[];
 }
 
 /** Screening tool (e.g., CAGE). */
 export interface SubstanceScreeningTool {
   name: string;
   description: string;
-  questions: string[];
+  questions: { text: string; meaning: string }[];
   scoring: string;
 }
 
@@ -50,10 +55,29 @@ export interface WithdrawalPhase {
   symptoms: string;
 }
 
+/** Withdrawal emergency callout (e.g., DT emergency). */
+export interface WithdrawalEmergencyCallout {
+  title: string;
+  description: string;
+}
+
 /** Complication entry. */
 export interface ComplicationEntry {
   name: string;
   description: string;
+}
+
+/** Mechanism flow step (e.g., Disulfiram 5-step flow). */
+export interface MechanismFlowStep {
+  step: string;
+  title: string;
+  description: string;
+}
+
+/** Reaction symptom group (e.g., Disulfiram-Ethanol Reaction common/severe). */
+export interface ReactionSymptomGroup {
+  category: string;
+  symptoms: string[];
 }
 
 /** Treatment option. */
@@ -62,6 +86,12 @@ export interface TreatmentOption {
   description: string;
   mechanism?: string;
   notes?: string;
+  /** Ordered mechanism flow (Disulfiram ingestion → reaction). */
+  mechanismFlow?: MechanismFlowStep[];
+  /** Additional mechanism bullets beyond the primary description. */
+  mechanismNotes?: string[];
+  /** Symptom groups for reactions (e.g., Disulfiram-Ethanol Reaction). */
+  reactionSymptoms?: ReactionSymptomGroup[];
 }
 
 /** Detoxification step. */
@@ -73,7 +103,6 @@ export interface DetoxStep {
 /** Emergency info. */
 export interface SubstanceEmergency {
   warningSigns: string[];
-  immediateActions: string[];
   contacts: { label: string; number: string }[];
 }
 
@@ -128,6 +157,8 @@ export interface SubstancePage {
     summary: string;
     clinicalFeatures: ClinicalFeature[];
     mechanisms?: string[];
+    /** "When to Seek Help" emergency sub-panel. */
+    whenToSeekHelp?: string[];
   };
 
   /* ---- Withdrawal ---- */
@@ -135,6 +166,8 @@ export interface SubstancePage {
     summary: string;
     phases: WithdrawalPhase[];
     mechanisms?: string[];
+    /** Emergency callout (e.g., DT "life-threatening emergency"). */
+    emergencyCallout?: WithdrawalEmergencyCallout;
   };
 
   /* ---- Complications ---- */

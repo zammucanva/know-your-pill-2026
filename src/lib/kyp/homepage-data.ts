@@ -154,7 +154,7 @@ export const substances: Substance[] = [
     description:
       "Enhances GABA inhibition and releases dopamine — leading to slurred speech, loss of coordination, and severe physical withdrawal.",
     icon: Wine,
-    href: "/alcohol.html",
+    href: "/substances/alcohol",
     accent: "text-rose-500",
     neurotransmitter: "GABA · Dopamine · Glutamate",
   },
