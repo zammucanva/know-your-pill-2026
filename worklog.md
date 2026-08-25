@@ -495,3 +495,43 @@ Stage Summary:
 - No file outside Alcohol migration scope modified (except two 1-line href updates in confirmed-orphan legacy files).
 - Final status: PHASE 2 ALCOHOL MIGRATION: CORRECTED — PENDING FINAL REVIEW.
 - STOP. Awaiting explicit approval before proceeding to batch migration of remaining 10 substances.
+
+---
+Task ID: phase-2-substance-migration-template
+Agent: Main agent (Super Z)
+Task: Create a final reusable migration specification based on the corrected Alcohol implementation. Document the canonical schema, route architecture, source-fidelity rules, and special handling for the three incomplete sources (amphetamine, LSD, barbiturate). Do not modify any application source files. Create the template document only.
+
+Work Log:
+- Re-read the corrected Alcohol reference implementation: src/lib/kyp/data/substance-types.ts (full schema with all optional fields), src/lib/kyp/data/substances/alcohol.ts (restored content), src/app/substances/[slug]/page.tsx (canonical route rendering).
+- Inspected the three incomplete source files:
+  - kyp-neon/amphetamine.html (237 lines) — partial source; HTML structure present but most content rendered via inline CSS/JS; thin expandable content.
+  - kyp-neon/lsd.html (95 lines) — thin source; minified but substantive content for hero/overview/neurobiology/intoxication/complications/treatment/emergency; no withdrawal section (LSD is not physically addictive).
+  - kyp-neon/barbiturate.html (43 lines, minified) — previously classified as "CSS stub" in the Phase 2 audit, but inspection confirms the file actually contains substantive HTML body content (overview with 4 barbiturate types, neurobiology with 4 mechanism cards, intoxication with moderate/severe symptom columns + narrow therapeutic index warning, withdrawal with 3 timeline events, treatment with 5 management strategies + 4 recovery cards, emergency with 6 warning signs). The "stub" classification was inaccurate.
+- Created download/PHASE_2_SUBSTANCE_MIGRATION_TEMPLATE.md covering all 15 required sections:
+  1. Canonical Substance schema (full TypeScript reproduction)
+  2. Required common fields (9 fields every substance must populate)
+  3. Optional substance-specific fields (with explicit "do not assume universality" warnings for CAGE, BAC, Jellinek, Disulfiram)
+  4. Canonical /substances/[slug] route architecture (file structure, required exports, Next.js patterns, page shell, section rendering rules)
+  5. Canonical minimalist UI components to reuse (required imports, component contracts for SectionHeader/Callout/Badge/Section/Container, forbidden imports)
+  6. Source HTML → Substance schema mapping (per-source-section mapping table)
+  7. Source-fidelity rules (verbatim preservation, no content loss, no content addition, no content substitution, file header attestation)
+  8. Rules for preserving substance-specific sections (what counts as substance-specific, preservation rules, schema extension rules)
+  9. Rules for handling content that does not fit the schema (no schema home, decorative content, interactive content, structural ambiguity)
+  10. Rules prohibiting invented medical content (15 absolute prohibitions, permissible minor formatting changes, permissible structural reorganisation, when in doubt)
+  11. Medical-review flag handling (what is a flag, when to raise, when NOT to raise, flag format, what never to do)
+  12. Asset reuse rules (molecule images, alt text, other assets, Next.js Image component)
+  13. Homepage/card linking rules (drugs.ts substances array, footer, orphan files, required verification)
+  14. Validation checklist (TypeScript, ESLint, build, route status codes, rendered content verification, isolation verification, neon CSS/JS verification, homepage link verification, tests)
+  15. Completion-report requirements (required sections, verdict options, worklog entry)
+  16. Incomplete source files — special handling (Amphetamine partial, LSD thin, Barbiturate corrected classification)
+- Added Appendix A (reference implementation file inventory), Appendix B (migration priority order), Appendix C (forbidden actions quick reference).
+- Did not modify any application source files.
+
+Stage Summary:
+- Created download/PHASE_2_SUBSTANCE_MIGRATION_TEMPLATE.md (frozen specification).
+- Documented all 15 required sections plus 3 appendices.
+- Explicitly documented that CAGE, BAC, Jellinek, Disulfiram, Alcohol withdrawal timings, and Alcohol emergency guidance are Alcohol-specific and must not be copied into other substances.
+- Documented the three incomplete sources separately with per-source migration approach and explicit "do not invent" rules.
+- Corrected the prior audit's inaccurate "barbiturate is a CSS stub" classification — the file is minified but contains substantive HTML body content.
+- No application source files modified.
+- Final status: PHASE 2 SUBSTANCE MIGRATION TEMPLATE: COMPLETE — READY FOR BATCH MIGRATION.
