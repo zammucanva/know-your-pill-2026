@@ -17,7 +17,7 @@ const footerLinks = [
   {
     title: "Substance Use",
     links: [
-      { label: "Alcohol", href: "/alcohol.html" },
+      { label: "Alcohol", href: "/substances/alcohol" },
       { label: "Opioids", href: "/opioids.html" },
       { label: "Cannabis", href: "/cannabis.html" },
       { label: "Cocaine", href: "/cocaine.html" },
