@@ -535,3 +535,48 @@ Stage Summary:
 - Corrected the prior audit's inaccurate "barbiturate is a CSS stub" classification — the file is minified but contains substantive HTML body content.
 - No application source files modified.
 - Final status: PHASE 2 SUBSTANCE MIGRATION TEMPLATE: COMPLETE — READY FOR BATCH MIGRATION.
+
+---
+Task ID: phase-2-opioids-migration
+Agent: Main agent (Super Z)
+Task: Phase 2 Opioids Migration — migrate opioids from kyp-neon/opioids.html to /substances/opioids. Use corrected Alcohol as architectural reference only. Do not migrate any other substance. Source of truth is the original neon opioid HTML.
+
+Work Log:
+- Inspected kyp-neon/opioids.html (2,381 lines, 16 substantive content sections): hero, search, overview, classification, neurobiology (incl. Heroin Neuropharmacology deep-dive), intoxication (incl. Overdose Triad), withdrawal (4 phases + clinical course), complications, overdose emergency (panel + Why Overdose Kills mechanism), treatment (6 steps + detox protocol), maintenance therapy (Opioid Agonist Therapy pattern-card), naloxone mechanism (5-step flow + Naloxone Rescue pattern-card + dosing), methadone & buprenorphine (4 medication cards), psychosocial, recovery, emergency.
+- Re-read PHASE_2_SUBSTANCE_MIGRATION_TEMPLATE.md (canonical spec).
+- Verified opioid asset exists: /artwork/morphine.png (reused — no new asset created).
+- Found 4 opioid link locations: drugs.ts (active), sections/footer.tsx (active), homepage-data.ts (orphan), kyp/footer.tsx (orphan).
+- Extended src/lib/kyp/data/substance-types.ts with 7 opioid-specific optional schema fields:
+  - OverdoseEmergency interface (top-level overdoseEmergency field)
+  - MaintenanceTherapy interface (treatment.maintenance field)
+  - NaloxoneInfo interface (top-level naloxoneInfo field)
+  - treatment.maintenanceMedications (TreatmentOption[])
+  - intoxication.emergencyCallout (WithdrawalEmergencyCallout — reuses existing interface)
+  - withdrawal.clinicalCourse (string[])
+  - neurobiology.deepDive (object with cardTitle, cardTagline, summary, mechanismNotes[], dangerCallout?)
+  All fields optional, all backward-compatible with Alcohol rendering.
+- Created src/lib/kyp/data/substances/opioids.ts with all source content transcribed verbatim: hero tagline+summary, overview (4 key concepts + 3 receptor mechanism cards), classification (3 cards with 5/6/5 items), neurobiology (4 mechanism cards + Heroin Neuropharmacology deepDive with 4 mechanism notes + "Why Heroin is So Addictive" danger callout), intoxication (10 clinical features + 3 respiratory suppression mechanisms + Overdose Triad emergency callout), withdrawal (4 phases with source timings 6-12h/12-24h/3-5d/7-10d + 4 mechanisms + 4 clinical course bullets), complications (3 cards with 6/7/6 items), overdoseEmergency (panel + 6 warning signs + Why Overdose Kills mechanism with 4 notes + 5-step emergency action), treatment (6 detox steps + protocol with 5 key points + maintenance therapy with 6 benefits + naltrexone alternative + 5 complementary therapies + 4 maintenance medications), naloxoneInfo (5-step mechanism flow + 5 pharmacology notes + dosing callout with source dose values), psychosocial (6 cards), recovery (6 cards), emergency (6 warning signs + 2 contacts).
+- Registered opioids in src/lib/kyp/data/substances/index.ts.
+- Updated src/app/substances/[slug]/page.tsx to render new fields: intoxication.emergencyCallout (danger Callout), withdrawal.clinicalCourse (info Callout with Activity icons), neurobiology.deepDive (bordered card with mechanism notes + danger Callout), overdoseEmergency (full Section with emergency-styled panel + warning sign grid + contacts + "Why Overdose Kills" mechanism card + emergency action Callout), treatment.maintenance (Section with pattern-card rendering + benefits + alternatives + complementary therapies + maintenanceMedications grid), naloxoneInfo (Section with 5-step mechanism flow + Naloxone Rescue card + pharmacology notes + dosing Callout). Also removed hardcoded "Alcohol-related" emergency paragraph (now substance-neutral "If you observe any of these warning signs...").
+- Updated 4 opioid link locations: drugs.ts href → /substances/opioids, sections/footer.tsx link → /substances/opioids, homepage-data.ts (orphan) href → /substances/opioids, kyp/footer.tsx (orphan) link → /substances/opioids.
+- Validation: npx tsc --noEmit reports 0 errors in migration files (26 pre-existing errors elsewhere unchanged). npm run lint reports 0 errors in src/ (5 pre-existing in kyp-neon/ unchanged). npm run build succeeds in 14.9s, 24 static pages, /substances/opioids SSG-prerendered.
+- Route verification: /substances/opioids HTTP 200, /substances/alcohol HTTP 200, / HTTP 200, /drugs/sertraline HTTP 200, /diseases/major-depressive-disorder HTTP 200, /substances/invalid-slug HTTP 404, /opioids.html HTTP 404.
+- Rendered content verification: fetched /substances/opioids HTML and grepped for each source section — all 16 sections confirmed present (hero tagline, 3 classification categories, 4 neurobiology cards + Heroin deepDive, Overdose Triad, 4 withdrawal phases with source timings, clinical course, 3 complications, overdose emergency panel + Why Overdose Kills + 5-step emergency action, 6 detox steps, maintenance therapy with 6 benefits + naltrexone alternative, 4 maintenance medications, 5-step naloxone flow + 5 pharmacology notes + dosing, 6 psychosocial cards, 6 recovery cards, 6 emergency warning signs + 2 contacts).
+- Absence checks: 0 occurrences of Alcohol-specific content (CAGE, BAC/mg%, Jellinek, Disulfiram, Delirium Tremens, Alcohol tagline) on opioids page. 0 neon CSS/JS references.
+- Isolation verification: git diff --name-only HEAD confirms 0 drug data files modified, 0 disease files modified, 0 existing clinical JSON modified, 0 Phase 1D files modified, kyp-neon/opioids.html not modified, alcohol.ts not modified, globals.css not modified, layout.tsx not modified.
+- Created download/PHASE_2_OPIOIDS_MIGRATION_COMPLETION_REPORT.md with full source-fidelity audit, schema extension documentation, 8 medical-review flags, and validation results.
+
+Stage Summary:
+- All 16 source sections preserved verbatim.
+- 7 opioid-specific schema extensions added (all optional, all backward-compatible with Alcohol).
+- 0 Alcohol-specific content copied into Opioids.
+- 0 medical claims invented, removed, or substituted.
+- 8 medical-review flags raised for source content warranting clinical verification (naloxone dosing, methadone half-life, heroin potency ratios, Naloxone Challenge test, DT mortality in opioid context, "rarely life-threatening" characterisation).
+- TypeScript: 0 migration errors (26 pre-existing elsewhere unchanged).
+- ESLint: 0 errors in src/.
+- Build: succeeds, /substances/opioids SSG-prerendered.
+- All routes return correct HTTP status codes.
+- No clinical JSON, drug data, disease data, or Phase 1D files modified.
+- No other substance migrated.
+- Final status: PHASE 2 OPIOIDS MIGRATION: COMPLETE — PENDING REVIEW.
+- STOP. Awaiting explicit approval before proceeding to next substance (Cocaine).

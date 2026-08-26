@@ -229,6 +229,38 @@ export default async function SubstancePage({ params }: PageProps) {
                   </div>
                 </div>
               )}
+
+              {substance.neurobiology.deepDive && (
+                <div className="mt-6 rounded-lg border border-border/50 p-5">
+                  <div className="flex items-baseline justify-between gap-2">
+                    <h3 className="text-h3">{substance.neurobiology.deepDive.cardTitle}</h3>
+                    <span className="text-xs text-muted-foreground">{substance.neurobiology.deepDive.cardTagline}</span>
+                  </div>
+                  <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{substance.neurobiology.deepDive.summary}</p>
+
+                  {substance.neurobiology.deepDive.mechanismNotes.length > 0 && (
+                    <div className="mt-4">
+                      <p className="text-overline text-muted-foreground">Mechanism</p>
+                      <ul className="mt-1.5 space-y-1">
+                        {substance.neurobiology.deepDive.mechanismNotes.map((n, i) => (
+                          <li key={i} className="flex items-start gap-1.5 text-xs text-foreground/80">
+                            <Activity className="mt-0.5 h-3 w-3 shrink-0 text-neural" />
+                            {n}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {substance.neurobiology.deepDive.dangerCallout && (
+                    <div className="mt-4">
+                      <Callout variant="danger" title={substance.neurobiology.deepDive.dangerCallout.title}>
+                        <p className="text-xs text-foreground/80">{substance.neurobiology.deepDive.dangerCallout.description}</p>
+                      </Callout>
+                    </div>
+                  )}
+                </div>
+              )}
             </Container>
           </Section>
         )}
@@ -279,6 +311,14 @@ export default async function SubstancePage({ params }: PageProps) {
                   </Callout>
                 </div>
               )}
+
+              {substance.intoxication.emergencyCallout && (
+                <div className="mt-4">
+                  <Callout variant="danger" title={substance.intoxication.emergencyCallout.title}>
+                    <p className="text-xs text-foreground/80 mt-1">{substance.intoxication.emergencyCallout.description}</p>
+                  </Callout>
+                </div>
+              )}
             </Container>
           </Section>
         )}
@@ -319,6 +359,21 @@ export default async function SubstancePage({ params }: PageProps) {
                   </Callout>
                 </div>
               )}
+
+              {substance.withdrawal.clinicalCourse && substance.withdrawal.clinicalCourse.length > 0 && (
+                <div className="mt-4">
+                  <Callout variant="info" title="Clinical Course">
+                    <ul className="mt-2 space-y-1">
+                      {substance.withdrawal.clinicalCourse.map((c, i) => (
+                        <li key={i} className="flex items-start gap-1.5 text-xs text-foreground/80">
+                          <Activity className="mt-0.5 h-3 w-3 shrink-0 text-neural" />
+                          {c}
+                        </li>
+                      ))}
+                    </ul>
+                  </Callout>
+                </div>
+              )}
             </Container>
           </Section>
         )}
@@ -336,6 +391,74 @@ export default async function SubstancePage({ params }: PageProps) {
                   </div>
                 ))}
               </div>
+            </Container>
+          </Section>
+        )}
+
+        {/* ===== OVERDOSE EMERGENCY (opioid-specific) ===== */}
+        {substance.overdoseEmergency && (
+          <Section id="overdose" className="bg-muted/20">
+            <Container>
+              <SectionHeader eyebrow={substance.overdoseEmergency.eyebrow} title={substance.overdoseEmergency.title} tone="emergency" />
+              <p className="mt-4 text-sm text-foreground/80">{substance.overdoseEmergency.subtitle}</p>
+
+              <div className="mt-6 rounded-lg border border-emergency/30 bg-emergency-soft/30 p-5">
+                <div className="flex items-center gap-2">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emergency opacity-60" />
+                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emergency" />
+                  </span>
+                  <h3 className="text-h3 text-emergency">{substance.overdoseEmergency.panelTitle}</h3>
+                </div>
+                <p className="mt-2 text-sm text-foreground/80">{substance.overdoseEmergency.panelDescription}</p>
+
+                <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                  {substance.overdoseEmergency.warningSigns.map((w, i) => (
+                    <div key={i} className="flex items-start gap-1.5 rounded-md border border-emergency/20 bg-background/60 p-2.5">
+                      <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" />
+                      <span className="text-xs text-foreground/80">{w}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-4 flex gap-3">
+                  {substance.emergency?.contacts.map((c, i) => (
+                    <a
+                      key={`od-contact-${i}`}
+                      href={`tel:${c.number}`}
+                      className="flex items-center justify-between rounded-lg border border-emergency/40 bg-emergency-soft/50 px-4 py-2.5 text-sm font-semibold text-emergency transition-colors hover:bg-emergency-soft/70"
+                    >
+                      <span>{c.label}</span>
+                      <span className="font-mono">{c.number}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {substance.overdoseEmergency.mechanism && (
+                <div className="mt-6 rounded-lg border border-border/50 p-5">
+                  <h3 className="text-h3">Why Overdose Kills</h3>
+                  <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{substance.overdoseEmergency.mechanism.summary}</p>
+
+                  <div className="mt-4">
+                    <p className="text-overline text-muted-foreground">Mechanism</p>
+                    <ul className="mt-1.5 space-y-1">
+                      {substance.overdoseEmergency.mechanism.notes.map((n, i) => (
+                        <li key={i} className="flex items-start gap-1.5 text-xs text-foreground/80">
+                          <Activity className="mt-0.5 h-3 w-3 shrink-0 text-neural" />
+                          {n}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mt-4">
+                    <Callout variant="danger" title="Emergency Action — What to Do">
+                      <p className="text-xs text-foreground/80">{substance.overdoseEmergency.mechanism.emergencyAction}</p>
+                    </Callout>
+                  </div>
+                </div>
+              )}
             </Container>
           </Section>
         )}
@@ -497,12 +620,135 @@ export default async function SubstancePage({ params }: PageProps) {
           </Section>
         )}
 
+        {/* ===== MAINTENANCE THERAPY (opioid-specific) ===== */}
+        {substance.treatment?.maintenance && (
+          <Section id="maintenance">
+            <Container>
+              <SectionHeader eyebrow={substance.treatment.maintenance.eyebrow} title={substance.treatment.maintenance.title} tone="brand" />
+              <p className="mt-4 text-sm text-foreground/90">{substance.treatment.maintenance.subtitle}</p>
+
+              <div className="mt-6 rounded-lg border border-border/50 p-5">
+                <div className="flex items-baseline justify-between gap-2">
+                  <h3 className="text-h3">{substance.treatment.maintenance.cardTitle}</h3>
+                  <span className="text-xs text-muted-foreground">{substance.treatment.maintenance.cardTagline}</span>
+                </div>
+                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{substance.treatment.maintenance.summary}</p>
+
+                <div className="mt-4">
+                  <p className="text-overline text-muted-foreground">Benefits</p>
+                  <ul className="mt-1.5 space-y-1">
+                    {substance.treatment.maintenance.benefits.map((b, i) => (
+                      <li key={i} className="flex items-start gap-1.5 text-xs text-foreground/80">
+                        <Activity className="mt-0.5 h-3 w-3 shrink-0 text-neural" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {substance.treatment.maintenance.alternatives && (
+                  <div className="mt-4">
+                    <p className="text-overline text-muted-foreground">{substance.treatment.maintenance.alternatives.title}</p>
+                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{substance.treatment.maintenance.alternatives.description}</p>
+                  </div>
+                )}
+
+                {substance.treatment.maintenance.complementaryTherapies.length > 0 && (
+                  <div className="mt-4">
+                    <p className="text-overline text-muted-foreground">Psychosocial</p>
+                    <ul className="mt-1.5 space-y-1">
+                      {substance.treatment.maintenance.complementaryTherapies.map((t, i) => (
+                        <li key={i} className="flex items-start gap-1.5 text-xs text-foreground/80">
+                          <span className="mt-1 h-1 w-1 shrink-0 rounded-full bg-brand" />
+                          {t}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+
+              {substance.treatment.maintenanceMedications && substance.treatment.maintenanceMedications.length > 0 && (
+                <div className="mt-6">
+                  <h3 className="text-h3 mb-3">Maintenance Medications</h3>
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    {substance.treatment.maintenanceMedications.map((med, i) => (
+                      <div key={`maint-med-${i}`} className="rounded-lg border border-border/50 p-4">
+                        <div className="flex items-baseline justify-between gap-2">
+                          <p className="text-sm font-semibold text-foreground">{med.name}</p>
+                          {med.mechanism && (
+                            <span className="shrink-0 rounded-full border border-brand/30 bg-brand-soft/40 px-2 py-0.5 text-[0.65rem] font-medium text-brand">{med.mechanism}</span>
+                          )}
+                        </div>
+                        <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{med.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </Container>
+          </Section>
+        )}
+
+        {/* ===== NALOXONE MECHANISM (opioid-specific) ===== */}
+        {substance.naloxoneInfo && (
+          <Section id="naloxone" className="bg-muted/20">
+            <Container>
+              <SectionHeader eyebrow={substance.naloxoneInfo.eyebrow} title={substance.naloxoneInfo.title} tone="emergency" />
+              <p className="mt-4 text-sm text-foreground/90">{substance.naloxoneInfo.subtitle}</p>
+
+              {/* 5-step mechanism flow */}
+              <div className="mt-6">
+                <p className="text-overline text-muted-foreground">Mechanism Flow</p>
+                <ol className="mt-2 grid gap-2 sm:grid-cols-5">
+                  {substance.naloxoneInfo.mechanismFlow.map((s, i) => (
+                    <li key={i} className="rounded-lg border border-border/50 bg-background/60 p-3">
+                      <div className="flex items-center gap-2">
+                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand text-primary-foreground font-mono text-xs font-bold">{s.step}</span>
+                        <p className="text-xs font-semibold text-foreground">{s.title}</p>
+                      </div>
+                      <p className="mt-1.5 text-[0.7rem] text-muted-foreground leading-relaxed">{s.description}</p>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              {/* Naloxone rescue pattern-card */}
+              <div className="mt-6 rounded-lg border border-border/50 p-5">
+                <div className="flex items-baseline justify-between gap-2">
+                  <h3 className="text-h3">{substance.naloxoneInfo.cardTitle}</h3>
+                  <span className="text-xs text-muted-foreground">{substance.naloxoneInfo.cardTagline}</span>
+                </div>
+                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{substance.naloxoneInfo.summary}</p>
+
+                <div className="mt-4">
+                  <p className="text-overline text-muted-foreground">Pharmacology</p>
+                  <ul className="mt-1.5 space-y-1">
+                    {substance.naloxoneInfo.pharmacologyNotes.map((n, i) => (
+                      <li key={i} className="flex items-start gap-1.5 text-xs text-foreground/80">
+                        <Activity className="mt-0.5 h-3 w-3 shrink-0 text-neural" />
+                        {n}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-4">
+                  <Callout variant="danger" title="Dosing & Administration">
+                    <p className="text-xs text-foreground/80">{substance.naloxoneInfo.dosingAndAdministration}</p>
+                  </Callout>
+                </div>
+              </div>
+            </Container>
+          </Section>
+        )}
+
         {/* ===== EMERGENCY ===== */}
         {substance.emergency && (
           <Section id="emergency" className="bg-muted/20">
             <Container>
               <SectionHeader eyebrow="Emergency" title="Emergency Quick Help" tone="emergency" />
-              <p className="mt-4 text-sm text-foreground/80">Alcohol-related emergencies can be life-threatening. If you observe any of these warning signs, call for emergency medical assistance immediately.</p>
+              <p className="mt-4 text-sm text-foreground/80">If you observe any of these warning signs, call for emergency medical assistance immediately.</p>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 <div>
                   <p className="text-overline text-emergency">Warning Signs</p>

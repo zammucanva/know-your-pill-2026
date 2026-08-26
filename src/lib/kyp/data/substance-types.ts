@@ -112,6 +112,73 @@ export interface RecoveryInfo {
   description: string;
 }
 
+/** Overdose emergency panel (opioid-specific — distinct from page-level emergency). */
+export interface OverdoseEmergency {
+  /** Section eyebrow / kicker (e.g. "Life-Threatening Emergency"). */
+  eyebrow: string;
+  /** Section title (e.g. "Overdose Emergency"). */
+  title: string;
+  /** Section subtitle / description. */
+  subtitle: string;
+  /** Panel title (e.g. "Opioid Overdose — Act Fast"). */
+  panelTitle: string;
+  /** Panel intro paragraph. */
+  panelDescription: string;
+  /** Warning sign grid items. */
+  warningSigns: string[];
+  /** "Why overdose kills" pattern-card content. */
+  mechanism?: {
+    summary: string;
+    notes: string[];
+    /** Emergency action callout (e.g. "What to Do" 5-step list). */
+    emergencyAction: string;
+  };
+}
+
+/** Maintenance therapy pattern-card content (opioid-specific). */
+export interface MaintenanceTherapy {
+  /** Section eyebrow. */
+  eyebrow: string;
+  /** Section title. */
+  title: string;
+  /** Section subtitle. */
+  subtitle: string;
+  /** Pattern-card title (e.g. "Opioid Agonist Therapy"). */
+  cardTitle: string;
+  /** Pattern-card tagline. */
+  cardTagline: string;
+  /** Pattern-card summary paragraph. */
+  summary: string;
+  /** Benefits list (e.g. methadone benefits). */
+  benefits: string[];
+  /** Alternatives section (e.g. naltrexone antagonist description). */
+  alternatives?: { title: string; description: string };
+  /** Complementary psychosocial therapies list. */
+  complementaryTherapies: string[];
+}
+
+/** Naloxone mechanism section (opioid-specific). */
+export interface NaloxoneInfo {
+  /** Section eyebrow. */
+  eyebrow: string;
+  /** Section title. */
+  title: string;
+  /** Section subtitle. */
+  subtitle: string;
+  /** 5-step mechanism flow. */
+  mechanismFlow: MechanismFlowStep[];
+  /** Pattern-card title (e.g. "Naloxone Rescue"). */
+  cardTitle: string;
+  /** Pattern-card tagline. */
+  cardTagline: string;
+  /** Pattern-card summary paragraph. */
+  summary: string;
+  /** Pharmacology notes (e.g. receptor displacement bullets). */
+  pharmacologyNotes: string[];
+  /** Dosing & administration callout text (source verbatim, including dose values). */
+  dosingAndAdministration: string;
+}
+
 /** The canonical Substance page interface. */
 export interface SubstancePage {
   /* ---- Identity ---- */
@@ -135,7 +202,7 @@ export interface SubstancePage {
     mechanisms?: SubstanceMechanism[];
   };
 
-  /* ---- Classification (optional — alcohol-specific) ---- */
+  /* ---- Classification (optional — substance-specific) ---- */
   classifications?: SubstanceClassification[];
 
   /* ---- Screening tools (optional — alcohol-specific) ---- */
@@ -150,6 +217,16 @@ export interface SubstancePage {
     mechanisms: SubstanceMechanism[];
     brainRegions?: string[];
     neurotransmitters?: string[];
+    /** Substance-specific deep-dive pattern-card (e.g. Heroin Neuropharmacology). */
+    deepDive?: {
+      cardTitle: string;
+      cardTagline: string;
+      summary: string;
+      /** Mechanism bullets (e.g. BBB penetration bullets). */
+      mechanismNotes: string[];
+      /** Emergency/danger callout (e.g. "Why Heroin is So Addictive"). */
+      dangerCallout?: { title: string; description: string };
+    };
   };
 
   /* ---- Intoxication ---- */
@@ -159,6 +236,8 @@ export interface SubstancePage {
     mechanisms?: string[];
     /** "When to Seek Help" emergency sub-panel. */
     whenToSeekHelp?: string[];
+    /** Emergency callout inside intoxication section (e.g. overdose triad). */
+    emergencyCallout?: WithdrawalEmergencyCallout;
   };
 
   /* ---- Withdrawal ---- */
@@ -168,10 +247,15 @@ export interface SubstancePage {
     mechanisms?: string[];
     /** Emergency callout (e.g., DT "life-threatening emergency"). */
     emergencyCallout?: WithdrawalEmergencyCallout;
+    /** Additional clinical-course notes (e.g. opioid onset/peak/duration/PAWS). */
+    clinicalCourse?: string[];
   };
 
   /* ---- Complications ---- */
   complications?: ComplicationEntry[];
+
+  /* ---- Overdose emergency (optional — opioid-specific) ---- */
+  overdoseEmergency?: OverdoseEmergency;
 
   /* ---- Treatment ---- */
   treatment?: {
@@ -181,7 +265,14 @@ export interface SubstancePage {
     medications?: TreatmentOption[];
     psychosocial?: TreatmentOption[];
     recovery?: RecoveryInfo[];
+    /** Maintenance therapy section (opioid-specific). */
+    maintenance?: MaintenanceTherapy;
+    /** Maintenance medications grid (e.g. Methadone, Buprenorphine, Clonidine, Naltrexone). */
+    maintenanceMedications?: TreatmentOption[];
   };
+
+  /* ---- Naloxone mechanism section (optional — opioid-specific) ---- */
+  naloxoneInfo?: NaloxoneInfo;
 
   /* ---- Emergency ---- */
   emergency?: SubstanceEmergency;
