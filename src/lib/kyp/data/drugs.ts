@@ -37,7 +37,7 @@ export const substances: Substance[] = [
     description:
       "Bind to μ-opioid receptors — producing profound analgesia, euphoria, respiratory depression, and high dependence risk.",
     neurotransmitter: "Endorphin · Dopamine",
-    href: "/opioids.html",
+    href: "/substances/opioids",
     artwork: "/artwork/morphine.png",
     artworkAlt: "Morphine molecule — the prototypical opioid, illustrating its binding to μ-opioid receptors and analgesic mechanism",
   },
