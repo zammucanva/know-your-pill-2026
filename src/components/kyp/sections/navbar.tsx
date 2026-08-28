@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { Menu, Moon, Sun, X, Phone, LogIn, LogOut, User as UserIcon } from "lucide-react";
@@ -19,6 +20,7 @@ const navLinks = [
 type SessionUser = { id: string; name: string; email: string; role: string } | null;
 
 export function Navbar() {
+  const router = useRouter();
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
   const { theme, setTheme } = useTheme();
@@ -45,7 +47,7 @@ export function Navbar() {
   const handleLogout = async () => {
     await fetch("/api/auth/session", { method: "DELETE" });
     setUser(null);
-    window.location.href = "/welcome";
+    router.push("/welcome");
   };
 
   return (

@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 import { cva, type VariantProps } from "class-variance-authority";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -65,14 +66,27 @@ export const CardPrimitive = React.forwardRef<HTMLDivElement, CardPrimitiveProps
     );
 
     if (href) {
+      // Use next/link so basePath is automatically prepended
+      // for anchor links (#...), keep plain <a> since they're in-page
+      if (href.startsWith("#")) {
+        return (
+          <a
+            ref={ref as React.Ref<HTMLAnchorElement>}
+            href={href}
+            className={cn(cardVariants({ variant, interactive: true }), className)}
+          >
+            {content}
+          </a>
+        );
+      }
       return (
-        <a
+        <Link
           ref={ref as React.Ref<HTMLAnchorElement>}
           href={href}
           className={cn(cardVariants({ variant, interactive: true }), className)}
         >
           {content}
-        </a>
+        </Link>
       );
     }
 

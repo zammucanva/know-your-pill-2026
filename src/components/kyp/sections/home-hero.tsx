@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useRouter } from "next/navigation";
 import { Search, ArrowRight, Sparkles, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,6 +12,7 @@ import { cn } from "@/lib/utils";
 const popularSearches = ["Sertraline", "Fluoxetine", "Escitalopram", "Olanzapine"];
 
 export function HomeHero() {
+  const router = useRouter();
   const [query, setQuery] = React.useState("");
 
   return (
@@ -50,11 +52,11 @@ export function HomeHero() {
                 const q = query.trim().toLowerCase();
                 const knownDrugs = ["sertraline", "zoloft", "fluoxetine", "escitalopram", "paroxetine", "citalopram", "fluvoxamine", "venlafaxine", "duloxetine", "bupropion", "mirtazapine", "amitriptyline", "clomipramine"];
                 if (knownDrugs.includes(q)) {
-                  window.location.href = `/drugs/${q}`;
+                  router.push(`/drugs/${q}`);
                 } else if (q === "alcohol" || q === "opioids" || q === "cannabis") {
-                  window.location.href = `/substances/${q}`;
+                  router.push(`/substances/${q}`);
                 } else if (q === "depression" || q === "mdd" || q.includes("depressive")) {
-                  window.location.href = `/diseases/major-depressive-disorder`;
+                  router.push(`/diseases/major-depressive-disorder`);
                 } else {
                   // Trigger universal search via keyboard event
                   window.dispatchEvent(new KeyboardEvent("keydown", { key: "k", metaKey: true }));
