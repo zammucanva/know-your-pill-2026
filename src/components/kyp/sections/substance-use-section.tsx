@@ -19,21 +19,23 @@ export function SubstanceUseSection() {
   }, [active]);
 
   return (
-    <Section id="substances" className="bg-muted/15 relative overflow-hidden">
-      {/* Subtle organic shape — cooler, calmer */}
+    <Section id="substances" className="bg-muted/20 relative overflow-hidden">
+      {/* Cool organic shape */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <div
-          className="absolute left-[10%] top-[20%] h-[40vh] w-[40vh] rounded-full opacity-[0.06] blur-[100px]"
+          className="absolute left-[5%] top-[15%] h-[35vh] w-[35vh] rounded-full opacity-[0.05] blur-[100px]"
           style={{ background: "radial-gradient(circle, oklch(0.62 0.16 280), transparent 70%)" }}
         />
       </div>
 
       <Container className="relative">
-        {/* Editorial heading */}
         <Reveal>
           <div className="mb-12">
-            <p className="text-overline text-neural mb-3">Substance Use Education</p>
-            <h2 className="font-serif text-h1 font-semibold tracking-tight text-foreground max-w-3xl">
+            <p className="text-overline text-neural mb-4">Substance Use Education</p>
+            <h2
+              className="font-serif font-semibold tracking-[-0.03em] text-foreground leading-[1.05] max-w-3xl"
+              style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)" }}
+            >
               How psychoactive substances alter the brain
             </h2>
             <p className="mt-4 text-body text-muted-foreground max-w-2xl leading-relaxed">
@@ -42,19 +44,19 @@ export function SubstanceUseSection() {
           </div>
         </Reveal>
 
-        {/* Filter pills */}
-        <Reveal delay={0.1}>
-          <div className="flex items-center gap-2 overflow-x-auto kyp-scroll pb-2 mb-8">
+        {/* Filter — minimal text buttons */}
+        <Reveal delay={0.08}>
+          <div className="flex items-center gap-4 overflow-x-auto kyp-scroll pb-2 mb-6">
             {drugClassFilters.map((f) => (
               <button
                 key={f.id}
                 type="button"
                 onClick={() => setActive(f.id)}
                 className={cn(
-                  "shrink-0 rounded-full px-4 py-1.5 text-xs font-medium transition-all duration-200",
+                  "shrink-0 text-xs font-medium transition-colors pb-1 border-b-2",
                   active === f.id
-                    ? "bg-foreground text-background"
-                    : "text-muted-foreground hover:text-foreground"
+                    ? "text-foreground border-brand"
+                    : "text-muted-foreground/50 border-transparent hover:text-foreground/70"
                 )}
               >
                 {f.label}
@@ -63,29 +65,29 @@ export function SubstanceUseSection() {
           </div>
         </Reveal>
 
-        {/* Editorial substance index — not cards */}
-        <div className="divide-y divide-border/20">
+        {/* Editorial substance index — numbered, no cards */}
+        <div>
           {filtered.map((sub, i) => {
             const dc = drugClasses[sub.drugClass];
             return (
               <Reveal key={sub.id} delay={Math.min(i * 0.04, 0.2)}>
                 <Link
                   href={sub.href}
-                  className="group flex items-start gap-4 sm:gap-6 py-6 transition-all duration-300"
+                  className="group flex items-center gap-4 sm:gap-6 py-5 border-b border-border/15 transition-all duration-300 hover:pl-2"
                 >
                   {/* Number */}
-                  <span className="font-mono text-xs text-muted-foreground/40 tabular-nums hidden sm:block w-6 pt-1">
+                  <span className="font-serif text-2xl sm:text-3xl font-bold text-muted-foreground/15 tabular-nums shrink-0 w-10">
                     {String(i + 1).padStart(2, '0')}
                   </span>
 
-                  {/* Molecule image — small, editorial */}
+                  {/* Molecule image — small, floating */}
                   {sub.artwork && (
-                    <div className="relative h-14 w-14 sm:h-16 sm:w-16 shrink-0 overflow-hidden rounded-lg">
+                    <div className="relative h-10 w-10 sm:h-12 sm:w-12 shrink-0">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={sub.artwork}
                         alt={sub.artworkAlt ?? `${sub.name} molecule`}
-                        className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110"
+                        className="h-full w-full object-contain opacity-60 transition-all duration-300 group-hover:opacity-100 group-hover:scale-110"
                         loading="lazy"
                       />
                     </div>
@@ -93,29 +95,28 @@ export function SubstanceUseSection() {
 
                   {/* Content */}
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-baseline gap-3">
-                      <h3 className="font-serif text-lg sm:text-xl font-semibold text-foreground tracking-tight">
+                    <div className="flex items-baseline gap-2 sm:gap-3">
+                      <h3 className="font-serif text-lg sm:text-xl font-semibold text-foreground">
                         {sub.name}
                       </h3>
-                      <span className={cn("text-[0.65rem] uppercase tracking-wide", dc?.accentClass)}>
+                      <span className={cn("text-[0.6rem] uppercase tracking-wide hidden sm:inline", dc?.accentClass)}>
                         {dc?.name}
                       </span>
                     </div>
-                    <p className="mt-1 text-body-sm text-muted-foreground leading-relaxed max-w-xl">
+                    <p className="mt-0.5 text-body-sm text-muted-foreground/70 leading-relaxed max-w-xl line-clamp-1">
                       {sub.description}
-                    </p>
-                    <p className="mt-1.5 text-[0.65rem] text-muted-foreground/50 font-medium">
-                      {sub.neurotransmitter}
                     </p>
                   </div>
 
+                  {/* Neurotransmitter — micro text */}
+                  <span className="text-[0.6rem] text-muted-foreground/40 hidden sm:block shrink-0">
+                    {sub.neurotransmitter}
+                  </span>
+
                   {/* Arrow */}
                   <svg
-                    className="h-4 w-4 shrink-0 text-muted-foreground/20 transition-all duration-300 group-hover:text-brand group-hover:translate-x-1 mt-2"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
+                    className="h-4 w-4 shrink-0 text-muted-foreground/20 transition-all duration-300 group-hover:text-brand group-hover:translate-x-1"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
@@ -125,7 +126,6 @@ export function SubstanceUseSection() {
           })}
         </div>
 
-        {/* Development note */}
         <Reveal delay={0.2}>
           <div className="mt-10">
             <Callout variant="info" title="Also in development">

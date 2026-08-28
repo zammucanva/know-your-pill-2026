@@ -10,15 +10,18 @@ export function FaqSection() {
   return (
     <Section id="faq">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-          {/* Left: heading */}
+        <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
+          {/* Left: sticky heading */}
           <Reveal>
-            <div className="lg:sticky lg:top-24">
-              <p className="text-overline text-brand mb-3">Frequently Asked Questions</p>
-              <h2 className="font-serif text-h1 font-semibold tracking-tight text-foreground">
-                Questions before you start
+            <div className="lg:sticky lg:top-24 lg:self-start">
+              <p className="text-overline text-brand mb-4">Frequently Asked</p>
+              <h2
+                className="font-serif font-semibold tracking-[-0.03em] text-foreground leading-[1.05]"
+                style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
+              >
+                Questions
               </h2>
-              <p className="mt-4 text-body-sm text-muted-foreground leading-relaxed max-w-sm">
+              <p className="mt-4 text-body-sm text-muted-foreground max-w-xs leading-relaxed">
                 Everything you need to know before diving into the KYP library.
               </p>
             </div>

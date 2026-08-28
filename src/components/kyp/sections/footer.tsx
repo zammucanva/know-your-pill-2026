@@ -1,8 +1,7 @@
 "use client";
 
-
-import Link from "next/link";
 import { imgPath } from "@/lib/kyp/image-path";
+import Link from "next/link";
 import { Github, Mail } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Reveal } from "@/components/kyp/ui/reveal";
@@ -47,25 +46,26 @@ const footerLinks = [
 
 export function Footer() {
   return (
-    <footer className="mt-auto relative overflow-hidden border-t border-border/30">
+    <footer className="mt-auto relative overflow-hidden border-t border-border/20">
       {/* Very subtle end-of-page organic shape */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <div
-          className="absolute left-1/2 -translate-x-1/2 -bottom-[30%] h-[40vh] w-[80vh] rounded-full opacity-[0.04] blur-[120px]"
+          className="absolute left-1/2 -translate-x-1/2 -bottom-[30%] h-[40vh] w-[80vh] rounded-full opacity-[0.03] blur-[120px]"
           style={{ background: "radial-gradient(circle, oklch(0.55 0.11 195), transparent 70%)" }}
         />
       </div>
 
       <Container className="relative py-20">
         <Reveal>
-          {/* Large KYP typography */}
-          <div className="mb-16">
-            <p className="font-serif text-5xl sm:text-7xl font-bold text-muted-foreground/10 tracking-tight leading-none">
-              Know Your Pill
-            </p>
-          </div>
+          {/* Massive closing typography */}
+          <p
+            className="font-serif font-bold text-muted-foreground/[0.06] tracking-[-0.04em] leading-none mb-16 select-none"
+            style={{ fontSize: "clamp(3rem, 12vw, 8rem)" }}
+          >
+            Know Your Pill
+          </p>
 
-          {/* Links — minimal, single row */}
+          {/* Links — minimal grid */}
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 mb-12">
             {footerLinks.map((col) => (
               <div key={col.title}>
@@ -76,14 +76,14 @@ export function Footer() {
                       {link.href.startsWith("#") ? (
                         <a
                           href={link.href}
-                          className="text-body-sm text-foreground/60 transition-colors hover:text-brand"
+                          className="text-body-sm text-foreground/50 transition-colors hover:text-brand"
                         >
                           {link.label}
                         </a>
                       ) : (
                         <Link
                           href={link.href}
-                          className="text-body-sm text-foreground/60 transition-colors hover:text-brand"
+                          className="text-body-sm text-foreground/50 transition-colors hover:text-brand"
                         >
                           {link.label}
                         </Link>
@@ -96,10 +96,11 @@ export function Footer() {
           </div>
 
           {/* Bottom — minimal */}
-          <div className="flex flex-col gap-6 border-t border-border/20 pt-8">
+          <div className="flex flex-col gap-6 border-t border-border/15 pt-8">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <span className="relative h-8 w-8 shrink-0 overflow-hidden rounded-lg">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={imgPath("/logo-navy-128.png")}
                     alt="Know Your Pill logo"
@@ -130,8 +131,7 @@ export function Footer() {
               </p>
             </div>
 
-            {/* Disclaimer — inline, not boxed */}
-            <p className="text-caption text-muted-foreground/60 leading-relaxed max-w-3xl">
+            <p className="text-caption text-muted-foreground/50 leading-relaxed max-w-3xl">
               <strong className="text-muted-foreground">Disclaimer:</strong> This website is for educational support only. It does not replace a doctor, pharmacist, emergency service, or local medical guideline. Always consult a qualified healthcare professional before making decisions about medication or substance use.
             </p>
           </div>
