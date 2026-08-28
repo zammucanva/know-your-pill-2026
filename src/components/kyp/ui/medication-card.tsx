@@ -67,7 +67,7 @@ export function MedicationCard({ med, index = 0, className }: MedicationCardProp
                     <Badge variant="default" size="sm">Coming Soon</Badge>
                   )}
                 </div>
-                <h3 className="mt-1 text-h3 leading-tight">{med.title}</h3>
+                <h3 className="mt-1 font-serif text-h3 leading-tight">{med.title}</h3>
               </div>
             </div>
           </div>

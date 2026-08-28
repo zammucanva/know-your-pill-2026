@@ -7,13 +7,6 @@ import { drugClasses } from "@/lib/kyp/data";
 import type { Substance } from "@/lib/kyp/data";
 import { cn } from "@/lib/utils";
 
-/**
- * ClinicalCard — a substance-specific clinical module card.
- * Uses the substance's drug class accent color for the icon and neurotransmitter label.
- * Displays custom artwork when available, with a consistent fallback for cards without artwork.
- *
- * Used by: SubstanceUse section grid.
- */
 interface ClinicalCardProps {
   substance: Substance;
   index?: number;
@@ -31,8 +24,8 @@ export function ClinicalCard({ substance, index = 0, className }: ClinicalCardPr
       transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.4) }}
       className={cn("h-full", className)}
     >
-      <CardPrimitive href={substance.href} variant="flat" interactive className="h-full overflow-hidden">
-        {/* Image area — consistent aspect ratio for ALL cards */}
+      <CardPrimitive href={substance.href} variant="flat" interactive className={cn("h-full overflow-hidden border-l-4", drugClass.accentClass)}>
+        {/* Image area */}
         <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-xl">
           {substance.artwork ? (
             <Image
@@ -44,25 +37,26 @@ export function ClinicalCard({ substance, index = 0, className }: ClinicalCardPr
               loading="lazy"
             />
           ) : (
-            /* Fallback — coloured gradient with drug class dot, same aspect ratio */
             <div className={cn("flex h-full w-full items-center justify-center bg-gradient-to-br from-muted/40 to-muted/10")}>
-              <span
-                className={cn(
-                  "flex h-12 w-12 items-center justify-center rounded-xl border border-border/40 bg-background/60",
-                  drugClass.accentClass
-                )}
-              >
+              <span className={cn("flex h-12 w-12 items-center justify-center rounded-xl border border-border/40 bg-background/60", drugClass.accentClass)}>
                 <span className="h-3 w-3 rounded-full bg-current" />
               </span>
             </div>
           )}
+          {/* Neurotransmitter overlay — slides in on hover */}
+          <div className="absolute inset-x-0 bottom-0 translate-y-full bg-gradient-to-t from-background/95 to-transparent px-4 pb-3 pt-8 transition-transform duration-300 ease-out group-hover:translate-y-0">
+            <p className="text-[0.65rem] uppercase tracking-wide text-muted-foreground">Neurotransmitter</p>
+            <p className={cn("text-xs font-semibold", drugClass.accentClass)}>
+              {substance.neurotransmitter}
+            </p>
+          </div>
         </div>
 
-        {/* Content — same for all cards */}
+        {/* Content */}
         <CardBody className="flex h-full flex-col">
           <div className="mt-4">
             <p className="text-overline text-muted-foreground">{drugClass.name}</p>
-            <h3 className="mt-1 text-h3 leading-tight">{substance.name}</h3>
+            <h3 className="mt-1 font-serif text-h3 leading-tight">{substance.name}</h3>
           </div>
 
           <p className="mt-2 flex-1 text-body-sm text-muted-foreground leading-relaxed line-clamp-3">
