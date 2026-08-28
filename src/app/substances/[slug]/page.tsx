@@ -747,36 +747,87 @@ export default async function SubstancePage({ params }: PageProps) {
         {substance.emergency && (
           <Section id="emergency" className="bg-muted/20">
             <Container>
-              <SectionHeader eyebrow="Emergency" title="Emergency Quick Help" tone="emergency" />
-              <p className="mt-4 text-sm text-foreground/80">If you observe any of these warning signs, call for emergency medical assistance immediately.</p>
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                <div>
-                  <p className="text-overline text-emergency">Warning Signs</p>
-                  <ul className="mt-2 space-y-1">
-                    {substance.emergency.warningSigns.map((w, i) => (
-                      <li key={i} className="flex items-start gap-1.5 text-sm text-foreground/80">
-                        <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" />
-                        {w}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <p className="text-overline text-brand">Emergency Contacts</p>
-                  <div className="mt-2 space-y-2">
-                    {substance.emergency.contacts.map((c, i) => (
-                      <a
-                        key={i}
-                        href={`tel:${c.number}`}
-                        className="flex items-center justify-between rounded-lg border border-emergency/30 bg-emergency-soft/40 px-4 py-3 text-sm font-semibold text-emergency transition-colors hover:bg-emergency-soft/60"
-                      >
-                        <span>{c.label}</span>
-                        <span className="font-mono">{c.number}</span>
-                      </a>
-                    ))}
+              <SectionHeader
+                eyebrow={substance.emergency.eyebrow || "Emergency"}
+                title="Emergency Quick Help"
+                tone="emergency"
+                description={substance.emergency.subtitle}
+              />
+
+              {substance.emergency.panelTitle && (
+                <div className="mt-6 rounded-lg border border-emergency/30 bg-emergency-soft/30 p-5">
+                  <div className="flex items-center gap-2">
+                    <span className="relative flex h-2.5 w-2.5">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emergency opacity-60" />
+                      <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emergency" />
+                    </span>
+                    <h3 className="text-h3 text-emergency">{substance.emergency.panelTitle}</h3>
+                  </div>
+                  {substance.emergency.panelDescription && (
+                    <p className="mt-2 text-sm text-foreground/80">{substance.emergency.panelDescription}</p>
+                  )}
+
+                  <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                    <div>
+                      <p className="text-overline text-emergency">Warning Signs</p>
+                      <ul className="mt-2 space-y-1">
+                        {substance.emergency.warningSigns.map((w, i) => (
+                          <li key={i} className="flex items-start gap-1.5 text-sm text-foreground/80">
+                            <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" />
+                            {w}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <p className="text-overline text-brand">Emergency Contacts</p>
+                      <div className="mt-2 space-y-2">
+                        {substance.emergency.contacts.map((c, i) => (
+                          <a
+                            key={i}
+                            href={`tel:${c.number}`}
+                            className="flex items-center justify-between rounded-lg border border-emergency/30 bg-emergency-soft/40 px-4 py-3 text-sm font-semibold text-emergency transition-colors hover:bg-emergency-soft/60"
+                          >
+                            <span>{c.label}</span>
+                            <span className="font-mono">{c.number}</span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
+
+              {!substance.emergency.panelTitle && (
+                <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <p className="text-overline text-emergency">Warning Signs</p>
+                    <ul className="mt-2 space-y-1">
+                      {substance.emergency.warningSigns.map((w, i) => (
+                        <li key={i} className="flex items-start gap-1.5 text-sm text-foreground/80">
+                          <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" />
+                          {w}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="text-overline text-brand">Emergency Contacts</p>
+                    <div className="mt-2 space-y-2">
+                      {substance.emergency.contacts.map((c, i) => (
+                        <a
+                          key={i}
+                          href={`tel:${c.number}`}
+                          className="flex items-center justify-between rounded-lg border border-emergency/30 bg-emergency-soft/40 px-4 py-3 text-sm font-semibold text-emergency transition-colors hover:bg-emergency-soft/60"
+                        >
+                          <span>{c.label}</span>
+                          <span className="font-mono">{c.number}</span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
             </Container>
           </Section>
         )}
