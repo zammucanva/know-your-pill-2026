@@ -10,10 +10,9 @@ import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "#categories", label: "Categories" },
-  { href: "#library", label: "Med Library" },
+  { href: "#library", label: "Medications" },
   { href: "#substances", label: "Substance Use" },
-  { href: "#knowledge-graph", label: "Knowledge Graph" },
+  { href: "#timeline", label: "Timeline" },
   { href: "#neuroarcade", label: "NeuroArcade" },
 ];
 
