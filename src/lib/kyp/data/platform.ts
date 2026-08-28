@@ -3,23 +3,23 @@ import type { Stat, EmergencyContact, FAQItem, TimelineEvent } from "./types";
 export const stats: Stat[] = [
   {
     label: "Drug pages",
-    value: "12+",
-    description: "Substance-specific deep dives with neuroscience breakdowns",
+    value: "12",
+    description: "Structured psychiatric medication profiles with mechanism, side effects, and clinical cases",
   },
   {
-    label: "Medication classes",
-    value: "4",
-    description: "Psychiatric, pain, antibiotics, and substance use modules",
+    label: "Substance modules",
+    value: "3",
+    description: "Alcohol, opioids, and cannabis with full withdrawal timelines and emergency guidance",
   },
   {
-    label: "Emergency contacts",
-    value: "24/7",
-    description: "Tele-MANAS mental health helpline and emergency services",
+    label: "Side effects mapped",
+    value: "6",
+    description: "High-yield adverse drug reactions linked to receptors, pathways, and management steps",
   },
   {
-    label: "Audience",
-    value: "Dual",
-    description: "Built for both patients and MBBS / NEET-PG students",
+    label: "Brain regions indexed",
+    value: "6",
+    description: "Each with its neurotransmitters, related disorders, and associated drugs",
   },
 ];
 
@@ -53,27 +53,27 @@ export const faqs: FAQItem[] = [
   {
     question: "Who is this platform designed for?",
     answer:
-      "KYP serves a dual audience: patients and caregivers who want to understand their prescriptions, and MBBS / NEET-PG students who need depth on mechanism of action, side effects, and clinical pearls. A future Patient Mode toggle will adapt vocabulary to each audience.",
+      "Two audiences. Patients and caregivers who want plain-language explanations of what a medication does, what side effects to watch for, and when to call their doctor. And medical students preparing for exams, who need mechanism of action, receptor pharmacology, and clinical pearls at a depth textbooks don\'t always make memorable. A role-selection step during signup lets you tell us which lens you want.",
   },
   {
     question: "How accurate is the medical content?",
     answer:
-      "Content is compiled from standard pharmacology references (Katzung, Goodman & Gilman), ICD-10 clinical patterns, and Indian national health guidelines. However, drug information evolves — always cross-reference with current prescribing information and clinical guidelines.",
+      "Content is compiled from standard pharmacology references (Katzung 16e, Goodman & Gilman 14e, Stahl\'s Essential Psychopharmacology 5e), DSM-5 diagnostic criteria, ICD-10 clinical patterns, and Indian national health guidelines (NICE CG91, APA Practice Guidelines, Tele-MANAS 14416). No formal peer-review process exists yet. Drug information evolves and guidelines change, so always cross-reference with the latest prescribing information and local protocols before clinical decision-making.",
   },
   {
     question: "Does KYP cover medications beyond psychiatry?",
     answer:
-      "The platform launched with psychiatric medications and substance use education. Pain management, antibiotics, and other drug classes are being added incrementally — these are tagged with a 'Coming Soon' badge on the medication library.",
+      "Not yet. The platform currently covers 12 psychiatric medications across five drug classes (SSRIs, SNRIs, NDRIs, NaSSAs, TCAs), three substance-use modules (alcohol, opioids, cannabis), and one disease page (major depressive disorder). Pain management, antibiotics, and other drug classes are planned but not yet built.",
   },
   {
     question: "What is NeuroArcade?",
     answer:
-      "NeuroArcade is KYP's interactive learning layer — mini-games that reinforce psychopharmacology through active recall. Built for MBBS students preparing for exams and curious patients who want to actually remember what their medication does.",
+      "NeuroArcade is an interactive learning layer with mini-games that reinforce psychopharmacology through active recall. It is currently in development. The goal is to let students trace neurotransmitter pathways, chain correct answers across mechanism and side-effect rounds, and get instant one-line explainers after each question.",
   },
   {
     question: "Can I contribute or request a drug page?",
     answer:
-      "Yes. The repository is on GitHub — open an issue with the drug name and a brief rationale. Priority goes to commonly prescribed psychiatric medications and substances with significant public-health impact in India.",
+      "Yes. The repository is open on GitHub. Open an issue with the drug name and a brief rationale. Priority goes to commonly prescribed psychiatric medications and substances with significant public-health impact in India.",
   },
 ];
 

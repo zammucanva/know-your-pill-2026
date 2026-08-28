@@ -21,9 +21,9 @@ export function TimelineSection() {
     <Section id="timeline" className="bg-muted/20">
       <Container width="narrow">
         <SectionHeader
-          eyebrow="Drug Timeline · Component Demo"
-          title="What happens, hour by hour, week by week."
-          description="Every drug page (Phase 4) will include a timeline showing onset, peak, duration, and recovery. Here's the SSRI timeline as an example — built from the same <Timeline /> component every drug will use."
+          eyebrow="Drug Timeline"
+          title="What happens, hour by hour, week by week"
+          description="Every drug page includes a timeline showing onset, peak, duration, and recovery. Here is the SSRI timeline as an example, built from the same component every drug page uses."
           align="center"
         />
 
