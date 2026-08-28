@@ -29,14 +29,32 @@
 | Anchor | Section |
 |---|---|
 | `#top` | Hero |
-| `#categories` | Browse by category |
-| `#library` | Medication library |
+| `#library` | Medication library (includes clinical subcategory chips) |
 | `#substances` | Substance use education |
 | `#timeline` | Drug timeline demo |
 | `#neuroarcade` | NeuroArcade |
 | `#roadmap` | In development (roadmap) |
 | `#faq` | FAQ |
 | `#emergency` | Emergency contacts |
+
+## Category Hierarchy
+
+The homepage has ONE primary category system (Medication Library) with clinical subcategories nested within:
+
+**Top-level categories (Medication Library section):**
+1. Psychiatric Medications (12 drug pages, featured)
+2. Pain Management (coming soon)
+3. Antibiotics (planned)
+4. Substance Use Disorders (3 substance pages, featured)
+
+**Clinical subcategories (nested within Psychiatric Medications as filter chips):**
+- Mood & Depression (maps to SSRIs)
+- Psychosis & Thought Disorders (maps to antipsychotics)
+- Emotional Stability (maps to mood stabilisers)
+- Anxiety & Calmness (maps to anxiolytics)
+- Sleep & Recovery (maps to sleep aids)
+
+These clinical subcategories are NOT separate top-level sections. They are alternative browse paths within psychiatric pharmacology.
 
 ## Unmigrated Substances
 

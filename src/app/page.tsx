@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/kyp/sections/navbar";
 import { HomeHero } from "@/components/kyp/sections/home-hero";
 import { StatsSection } from "@/components/kyp/sections/stats-section";
-import { CategoriesSection } from "@/components/kyp/sections/categories-section";
 import { MedicationLibrarySection } from "@/components/kyp/sections/medication-library-section";
 import { SubstanceUseSection } from "@/components/kyp/sections/substance-use-section";
 import { TimelineSection } from "@/components/kyp/sections/timeline-section";
@@ -19,7 +18,6 @@ export default function Home() {
       <main className="flex-1">
         <HomeHero />
         <StatsSection />
-        <CategoriesSection />
         <MedicationLibrarySection />
         <SubstanceUseSection />
         <TimelineSection />
