@@ -160,6 +160,19 @@ export default async function DrugPage({ params }: PageProps) {
       <StickyLearningNav items={navItems} drugSlug={drug.slug} />
 
       <main className="flex-1 lg:pl-52 xl:pl-56">
+        {/* ===== BREADCRUMB ===== */}
+        <div className="border-b border-border/40 bg-muted/20">
+          <Container>
+            <nav className="flex items-center gap-2 py-2 text-xs text-muted-foreground" aria-label="Breadcrumb">
+              <a href="/" className="hover:text-brand">Home</a>
+              <span aria-hidden>/</span>
+              <a href="/#library" className="hover:text-brand">Medications</a>
+              <span aria-hidden>/</span>
+              <span className="font-medium text-foreground">{drug.genericName}</span>
+            </nav>
+          </Container>
+        </div>
+
         {/* Lesson Progress indicator — sticky horizontal strip */}
         {hasLessons && (
           <div className="sticky top-16 z-20">
