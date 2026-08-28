@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { HeroSection } from "@/components/kyp/ui/hero-section";
 import { Badge } from "@/components/kyp/ui/badge";
+import { cn } from "@/lib/utils";
 
 const popularSearches = ["Sertraline", "Fluoxetine", "Escitalopram", "Olanzapine"];
 
@@ -103,6 +104,17 @@ export function HomeHero() {
 }
 
 function BrainGraphic() {
+  const [hovered, setHovered] = React.useState<string | null>(null);
+
+  const nodes = [
+    { top: "8%", left: "50%", label: "Serotonin", color: "bg-brand", target: "#library" },
+    { top: "30%", left: "10%", label: "Dopamine", color: "bg-neural", target: "#library" },
+    { top: "70%", left: "5%", label: "GABA", color: "bg-emergency", target: "#substances" },
+    { top: "85%", left: "45%", label: "Glutamate", color: "bg-amber-500", target: "#substances" },
+    { top: "70%", left: "85%", label: "Norepinephrine", color: "bg-cyan-500", target: "#library" },
+    { top: "30%", left: "88%", label: "Acetylcholine", color: "bg-emerald-500", target: "#substances" },
+  ];
+
   return (
     <div className="relative aspect-square w-full max-w-md mx-auto">
       {/* Outer glow ring */}
@@ -123,24 +135,31 @@ function BrainGraphic() {
         </div>
       </div>
 
-      {/* Floating neurotransmitter nodes */}
-      {[
-        { top: "8%", left: "50%", label: "Serotonin", color: "bg-brand" },
-        { top: "30%", left: "10%", label: "Dopamine", color: "bg-neural" },
-        { top: "70%", left: "5%", label: "GABA", color: "bg-emergency" },
-        { top: "85%", left: "45%", label: "Glutamate", color: "bg-amber-500" },
-        { top: "70%", left: "85%", label: "Norepinephrine", color: "bg-cyan-500" },
-        { top: "30%", left: "88%", label: "Acetylcholine", color: "bg-emerald-500" },
-      ].map((node, i) => (
+      {/* Floating neurotransmitter nodes — hoverable + clickable */}
+      {nodes.map((node, i) => (
         <div
           key={node.label}
           className="absolute kyp-float"
           style={{ top: node.top, left: node.left, animationDelay: `${i * 0.8}s` }}
         >
-          <div className="flex items-center gap-1.5 rounded-full border border-border/80 bg-card/90 backdrop-blur px-2.5 py-1 shadow-[var(--shadow-soft)]">
+          <button
+            type="button"
+            onMouseEnter={() => setHovered(node.label)}
+            onMouseLeave={() => setHovered(null)}
+            onClick={() => {
+              document.querySelector(node.target)?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className={cn(
+              "flex items-center gap-1.5 rounded-full border bg-card/90 backdrop-blur px-2.5 py-1 shadow-[var(--shadow-soft)] transition-all duration-200",
+              hovered === node.label
+                ? "border-brand scale-110 shadow-[var(--shadow-glow)] cursor-pointer"
+                : "border-border/80 hover:border-brand/40"
+            )}
+            aria-label={`Explore ${node.label} related content`}
+          >
             <span className={`h-1.5 w-1.5 rounded-full ${node.color}`} />
             <span className="text-[0.7rem] font-medium">{node.label}</span>
-          </div>
+          </button>
         </div>
       ))}
     </div>
