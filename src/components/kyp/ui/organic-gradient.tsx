@@ -68,9 +68,8 @@ export function OrganicGradient({
       setParallax({ x, y });
     };
 
-    const el = ref.current;
-    el?.addEventListener("mousemove", handleMove);
-    return () => el?.removeEventListener("mousemove", handleMove);
+    window.addEventListener("mousemove", handleMove);
+    return () => window.removeEventListener("mousemove", handleMove);
   }, [responsive]);
 
   return (

@@ -18,7 +18,9 @@ export function useMagnetic(strength: number = 0.3) {
   const reduceMotion = React.useRef(false);
 
   React.useEffect(() => {
-    reduceMotion.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion.current === false) {
+      reduceMotion.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    }
   }, []);
 
   const handleMouseMove = React.useCallback(
