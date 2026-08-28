@@ -141,7 +141,7 @@ export interface FAQItem {
 export interface SearchableItem {
   id: string;
   title: string;
-  type: "drug" | "class" | "neurotransmitter" | "side-effect" | "brain-region" | "pathway" | "clinical" | "patient-guide";
+  type: "drug" | "substance" | "disease" | "class" | "neurotransmitter" | "side-effect" | "brain-region" | "pathway" | "clinical" | "patient-guide";
   description: string;
   href: string;
   keywords: string[];
