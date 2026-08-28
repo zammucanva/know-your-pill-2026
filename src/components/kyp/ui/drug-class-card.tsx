@@ -54,17 +54,19 @@ export function DrugClassCard({ category, index = 0, href = "#library", classNam
             {category.description}
           </p>
 
-          {/* Hover preview: show first 2 drug names from chips on hover */}
-          <div className="relative mt-3 flex flex-wrap gap-1.5 opacity-0 max-h-0 overflow-hidden transition-all duration-300 group-hover:opacity-100 group-hover:max-h-20">
-            {category.chips.slice(0, 3).map((chip) => (
-              <span
-                key={chip}
-                className="rounded-full border border-border/50 bg-background/60 px-2 py-0.5 text-[0.65rem] font-medium text-muted-foreground"
-              >
-                {chip}
-              </span>
-            ))}
-          </div>
+          {/* Hover preview: show drug names from category if available */}
+          {category.chips && category.chips.length > 0 && (
+            <div className="relative mt-3 flex flex-wrap gap-1.5 opacity-0 max-h-0 overflow-hidden transition-all duration-300 group-hover:opacity-100 group-hover:max-h-20">
+              {category.chips.slice(0, 3).map((chip) => (
+                <span
+                  key={chip}
+                  className="rounded-full border border-border/50 bg-background/60 px-2 py-0.5 text-[0.65rem] font-medium text-muted-foreground"
+                >
+                  {chip}
+                </span>
+              ))}
+            </div>
+          )}
 
           <span className="relative mt-3 inline-flex items-center gap-1 text-xs font-semibold text-brand opacity-0 transition-opacity duration-200 group-hover:opacity-100">
             Explore
