@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+
+// Mark as static for GitHub Pages export (API routes are not functional in static export)
+export const dynamic = "force-static";
 import { db } from "@/lib/db";
 import bcrypt from "bcryptjs";
 import { cookies } from "next/headers";
