@@ -1,6 +1,7 @@
 "use client";
+import { imgPath } from "@/lib/kyp/image-path";
 
-import Image from "next/image";
+
 import { Gamepad2, Brain, Trophy, Zap, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/kyp/ui/container";
@@ -46,13 +47,10 @@ export function NeuroArcadeSection() {
           {/* Left: visual */}
           <Reveal className="order-2 lg:order-1">
             <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-              <Image
-                src="/artwork/neuro-arcade.png"
+              <img
+                src={imgPath("/artwork/neuro-arcade.png")}
                 alt="NeuroArcade — gamified neuroscience learning platform with interactive psychopharmacology challenges"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-                loading="lazy"
+                className="h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-background/60 via-transparent to-transparent" />
             </div>

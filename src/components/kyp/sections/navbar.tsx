@@ -3,11 +3,12 @@
 import * as React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+
 import { useTheme } from "next-themes";
 import { Menu, Moon, Sun, X, Phone, LogIn, LogOut, User as UserIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FloatingSearch } from "@/components/kyp/ui/floating-search";
+import { imgPath } from "@/lib/kyp/image-path";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -63,13 +64,10 @@ export function Navbar() {
         {/* Brand */}
         <Link href="#top" className="group flex items-center gap-2.5">
           <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-xl">
-            <Image
-              src="/logo-navy-128.png"
+            <img
+              src={imgPath("/logo-navy-128.png")}
               alt="Know Your Pill logo"
-              fill
-              sizes="36px"
-              className="object-contain"
-              priority
+              className="h-full w-full object-contain"
             />
           </span>
           <span className="flex flex-col leading-none">

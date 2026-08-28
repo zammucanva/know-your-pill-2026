@@ -3,21 +3,19 @@ import type { NextConfig } from "next";
 // When building for GitHub Pages (static export), set GITHUB_PAGES=1
 // This switches from standalone server mode to static HTML export
 const isGithubPages = process.env.GITHUB_PAGES === "1";
+const repoName = "know-your-pill-2026";
 
 const nextConfig: NextConfig = {
   output: isGithubPages ? "export" : "standalone",
-  // GitHub Pages serves at https://username.github.io/repo-name/
-  // basePath must match the repo name
-  basePath: isGithubPages ? "/know-your-pill-2026" : "",
-  assetPrefix: isGithubPages ? "/know-your-pill-2026/" : undefined,
-  // Static export can't optimize images server-side
+  basePath: isGithubPages ? `/${repoName}` : "",
+  assetPrefix: isGithubPages ? `/${repoName}/` : undefined,
   images: isGithubPages ? { unoptimized: true } : undefined,
-  // Don't trailing slash — keeps anchor links working
   trailingSlash: false,
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  typescript: { ignoreBuildErrors: true },
   reactStrictMode: false,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isGithubPages ? `/${repoName}` : "",
+  },
   // Redirect legacy .html routes to canonical clean URLs
   // (only works in standalone mode, not static export — GitHub Pages
   // handles 404s via the _not-found page which now shows useful links)

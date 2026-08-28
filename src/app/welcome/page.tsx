@@ -1,7 +1,8 @@
 "use client";
 
+import { imgPath } from "@/lib/kyp/image-path";
 import * as React from "react";
-import Image from "next/image";
+
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -121,14 +122,10 @@ export default function WelcomePage() {
       {/* Brain artwork as full-page background */}
       <div className="pointer-events-none absolute inset-0">
         <div className="relative h-full w-full">
-          <Image
-            src="/artwork/hero-brain.png"
+          <img
+            src={imgPath("/artwork/hero-brain.png")}
             alt=""
-            fill
-            sizes="100vw"
-            className="object-cover opacity-20"
-            priority
-            role="presentation"
+            className="h-full w-full object-cover opacity-20"
           />
         </div>
         {/* Dark overlay for text readability */}
@@ -141,7 +138,6 @@ export default function WelcomePage() {
           {/* Logo */}
           <div className="mb-8 flex justify-center">
             <div className="relative h-12 w-12">
-              <Image src="/logo-navy-128.png" alt="Know Your Pill" fill className="object-contain" priority />
             </div>
           </div>
 

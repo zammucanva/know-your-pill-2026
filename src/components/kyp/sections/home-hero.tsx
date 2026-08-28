@@ -179,7 +179,8 @@ function BrainGraphic() {
       <div className="absolute inset-16 rounded-full bg-card/30 backdrop-blur-2xl border border-brand/10 flex items-center justify-center">
         <div className="text-center">
           <Brain className="mx-auto h-16 w-16 text-brand/70" strokeWidth={1} />
-          <p className="mt-2 font-serif text-sm text-muted-foreground">Neuroscience</p>
+          <p className="mt-2 font-serif text-sm text-muted-foreground">Neuroscience Visualised</p>
+          <p className="mt-0.5 text-[0.65rem] text-muted-foreground/60">Mechanism · Pathways · Receptors</p>
         </div>
       </div>
 

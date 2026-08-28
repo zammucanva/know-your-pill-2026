@@ -1,7 +1,8 @@
 "use client";
 
-import Image from "next/image";
+
 import Link from "next/link";
+import { imgPath } from "@/lib/kyp/image-path";
 import { Github, Mail } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Reveal } from "@/components/kyp/ui/reveal";
@@ -99,12 +100,10 @@ export function Footer() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <span className="relative h-8 w-8 shrink-0 overflow-hidden rounded-lg">
-                  <Image
-                    src="/logo-navy-128.png"
+                  <img
+                    src={imgPath("/logo-navy-128.png")}
                     alt="Know Your Pill logo"
-                    fill
-                    sizes="32px"
-                    className="object-contain"
+                    className="h-full w-full object-contain"
                   />
                 </span>
                 <div className="flex items-center gap-2">
