@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Github, Mail } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 
@@ -101,12 +102,21 @@ export function Footer() {
                 <ul className="mt-3 space-y-2">
                   {col.links.map((link) => (
                     <li key={link.label}>
-                      <a
-                        href={link.href}
-                        className="text-body-sm text-foreground/80 transition-colors hover:text-brand"
-                      >
-                        {link.label}
-                      </a>
+                      {link.href.startsWith("#") ? (
+                        <a
+                          href={link.href}
+                          className="text-body-sm text-foreground/80 transition-colors hover:text-brand"
+                        >
+                          {link.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="text-body-sm text-foreground/80 transition-colors hover:text-brand"
+                        >
+                          {link.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>

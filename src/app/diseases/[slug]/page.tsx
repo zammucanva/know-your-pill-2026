@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import type { Metadata } from "next";
 
 import { Navbar } from "@/components/kyp/sections/navbar";
@@ -75,9 +76,9 @@ export default async function DiseasePage({ params }: PageProps) {
         <div className="border-b border-border/40 bg-muted/20">
           <Container>
             <nav className="flex items-center gap-2 py-2 text-xs text-muted-foreground" aria-label="Breadcrumb">
-              <a href="/" className="hover:text-brand">Home</a>
+              <Link href="/" className="hover:text-brand">Home</Link>
               <span aria-hidden>/</span>
-              <a href="/#categories" className="hover:text-brand">Diseases</a>
+              <Link href="/#categories" className="hover:text-brand">Diseases</Link>
               <span aria-hidden>/</span>
               <span className="font-medium text-foreground">{disease.name}</span>
             </nav>
