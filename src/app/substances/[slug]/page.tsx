@@ -205,6 +205,25 @@ export default async function SubstancePage({ params }: PageProps) {
           </Section>
         )}
 
+        {/* ===== PREPARATIONS (cannabis-specific) ===== */}
+        {substance.preparations && substance.preparations.length > 0 && (
+          <Section id="preparations">
+            <Container>
+              <SectionHeader eyebrow="Substance Forms" title="Cannabis Preparations" tone="brand" />
+              <p className="mt-4 text-sm text-foreground/80">Different forms of cannabis with varying THC content and potency.</p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                {substance.preparations.map((p, i) => (
+                  <div key={i} className="rounded-lg border border-border/50 p-4">
+                    <p className="text-sm font-semibold text-foreground">{p.name}</p>
+                    <span className="mt-1 inline-block rounded-full border border-brand/30 bg-brand-soft/40 px-2 py-0.5 text-[0.65rem] font-medium text-brand">{p.thc}</span>
+                    <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{p.description}</p>
+                  </div>
+                ))}
+              </div>
+            </Container>
+          </Section>
+        )}
+
         {/* ===== NEUROBIOLOGY ===== */}
         {substance.neurobiology && (
           <Section id="neurobiology">
@@ -323,6 +342,27 @@ export default async function SubstancePage({ params }: PageProps) {
           </Section>
         )}
 
+        {/* ===== PERCEPTUAL DISTURBANCES (cannabis-specific) ===== */}
+        {substance.perceptualDisturbances && substance.perceptualDisturbances.length > 0 && (
+          <Section id="perceptual" className="bg-muted/20">
+            <Container>
+              <SectionHeader eyebrow="Sensory Alterations" title="Perceptual Disturbances" tone="neural" />
+              <p className="mt-4 text-sm text-foreground/80">How cannabis alters sensory perception, producing derealisation, depersonalization, and synaesthesia.</p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {substance.perceptualDisturbances.map((p, i) => (
+                  <div key={i} className="rounded-lg border border-border/50 p-4">
+                    <p className="text-sm font-semibold text-foreground">{p.title}</p>
+                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{p.description}</p>
+                    {p.example && (
+                      <p className="mt-2 text-xs italic text-foreground/70 border-l-2 border-brand/40 pl-2">{p.example}</p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </Container>
+          </Section>
+        )}
+
         {/* ===== WITHDRAWAL ===== */}
         {substance.withdrawal && (
           <Section id="withdrawal">
@@ -390,6 +430,83 @@ export default async function SubstancePage({ params }: PageProps) {
                     <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{c.description}</p>
                   </div>
                 ))}
+              </div>
+            </Container>
+          </Section>
+        )}
+
+        {/* ===== AMOTIVATIONAL SYNDROME (cannabis-specific) ===== */}
+        {substance.amotivationalSyndrome && (
+          <Section id="amotivation">
+            <Container>
+              <SectionHeader
+                eyebrow={substance.amotivationalSyndrome.eyebrow}
+                title={substance.amotivationalSyndrome.title}
+                tone="neural"
+                description={substance.amotivationalSyndrome.subtitle}
+              />
+              <div className="mt-6 rounded-lg border border-border/50 p-5">
+                <h3 className="text-h3">{substance.amotivationalSyndrome.cardTitle}</h3>
+                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{substance.amotivationalSyndrome.cardDescription}</p>
+                <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                  {substance.amotivationalSyndrome.symptoms.map((s, i) => (
+                    <div key={i} className="rounded-md border border-border/40 bg-muted/20 p-3">
+                      <p className="text-sm font-semibold text-foreground">{s.name}</p>
+                      <p className="mt-1 text-xs text-muted-foreground">{s.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Container>
+          </Section>
+        )}
+
+        {/* ===== CANNABIS PSYCHOSIS (cannabis-specific) ===== */}
+        {substance.cannabisPsychosis && (
+          <Section id="psychosis" className="bg-muted/20">
+            <Container>
+              <SectionHeader
+                eyebrow={substance.cannabisPsychosis.eyebrow}
+                title={substance.cannabisPsychosis.title}
+                tone="emergency"
+                description={substance.cannabisPsychosis.subtitle}
+              />
+              <div className="mt-6 rounded-lg border border-border/50 p-5">
+                <div className="flex items-baseline justify-between gap-2">
+                  <h3 className="text-h3">{substance.cannabisPsychosis.cardTitle}</h3>
+                  <span className="text-xs text-muted-foreground">{substance.cannabisPsychosis.cardTagline}</span>
+                </div>
+                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{substance.cannabisPsychosis.summary}</p>
+
+                <div className="mt-4">
+                  <p className="text-overline text-muted-foreground">Clinical Features</p>
+                  <ul className="mt-1.5 space-y-1">
+                    {substance.cannabisPsychosis.clinicalFeatures.map((f, i) => (
+                      <li key={i} className="flex items-start gap-1.5 text-xs text-foreground/80">
+                        <AlertTriangle className="mt-0.5 h-3 w-3 shrink-0 text-emergency" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-4">
+                  <p className="text-overline text-muted-foreground">Risk Factors</p>
+                  <ul className="mt-1.5 space-y-1">
+                    {substance.cannabisPsychosis.riskFactors.map((r, i) => (
+                      <li key={i} className="flex items-start gap-1.5 text-xs text-foreground/80">
+                        <Activity className="mt-0.5 h-3 w-3 shrink-0 text-neural" />
+                        {r}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-4">
+                  <Callout variant="warning" title="Prognosis">
+                    <p className="text-xs text-foreground/80">{substance.cannabisPsychosis.prognosis}</p>
+                  </Callout>
+                </div>
               </div>
             </Container>
           </Section>
