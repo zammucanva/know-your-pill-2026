@@ -46,103 +46,94 @@ const footerLinks = [
 
 export function Footer() {
   return (
-    <footer className="mt-auto border-t border-border/50 bg-card/20">
-      <Container className="py-16">
+    <footer className="mt-auto relative overflow-hidden border-t border-border/30">
+      {/* Very subtle end-of-page organic shape */}
+      <div className="pointer-events-none absolute inset-0" aria-hidden>
+        <div
+          className="absolute left-1/2 -translate-x-1/2 -bottom-[30%] h-[40vh] w-[80vh] rounded-full opacity-[0.04] blur-[120px]"
+          style={{ background: "radial-gradient(circle, oklch(0.55 0.11 195), transparent 70%)" }}
+        />
+      </div>
+
+      <Container className="relative py-20">
         <Reveal>
-          <div className="grid gap-12 lg:grid-cols-[1.2fr_2.8fr]">
-            {/* Brand column */}
-            <div>
-              <div className="flex items-center gap-2.5">
-                <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-xl">
+          {/* Large KYP typography */}
+          <div className="mb-16">
+            <p className="font-serif text-5xl sm:text-7xl font-bold text-muted-foreground/10 tracking-tight leading-none">
+              Know Your Pill
+            </p>
+          </div>
+
+          {/* Links — minimal, single row */}
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 mb-12">
+            {footerLinks.map((col) => (
+              <div key={col.title}>
+                <h3 className="text-overline text-muted-foreground mb-4">{col.title}</h3>
+                <ul className="space-y-2">
+                  {col.links.map((link) => (
+                    <li key={link.label}>
+                      {link.href.startsWith("#") ? (
+                        <a
+                          href={link.href}
+                          className="text-body-sm text-foreground/60 transition-colors hover:text-brand"
+                        >
+                          {link.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="text-body-sm text-foreground/60 transition-colors hover:text-brand"
+                        >
+                          {link.label}
+                        </Link>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom — minimal */}
+          <div className="flex flex-col gap-6 border-t border-border/20 pt-8">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <span className="relative h-8 w-8 shrink-0 overflow-hidden rounded-lg">
                   <Image
                     src="/logo-navy-128.png"
                     alt="Know Your Pill logo"
                     fill
-                    sizes="36px"
+                    sizes="32px"
                     className="object-contain"
                   />
                 </span>
-                <div className="flex flex-col leading-none">
-                  <strong className="font-serif text-base font-semibold">Know Your Pill</strong>
-                  <small className="text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground">
-                    Medication Education · Visual
-                  </small>
+                <div className="flex items-center gap-2">
+                  <a
+                    href="https://github.com/zammucanva/know-your-pill-2026"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub repository"
+                    className="flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-brand"
+                  >
+                    <Github className="h-4 w-4" />
+                  </a>
+                  <a
+                    href="mailto:zammucanva@gmail.com"
+                    aria-label="Email contact"
+                    className="flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-brand"
+                  >
+                    <Mail className="h-4 w-4" />
+                  </a>
                 </div>
               </div>
-              <p className="mt-5 max-w-sm text-body-sm text-muted-foreground leading-relaxed">
-                A medication reference that explains how drugs work in the brain, what side effects
-                to watch for, and when to seek help. Written for patients, caregivers, and medical
-                students. Not a substitute for professional medical advice.
+              <p className="text-caption text-muted-foreground">
+                © 2026 Know Your Pill · Zamaan Ali Shamji
               </p>
-
-              <div className="mt-6 flex items-center gap-2">
-                <a
-                  href="https://github.com/zammucanva/know-your-pill-2026"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub repository"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-border/50 bg-background/40 text-muted-foreground transition-all duration-200 hover:border-brand/40 hover:text-brand"
-                >
-                  <Github className="h-4 w-4" />
-                </a>
-                <a
-                  href="mailto:zammucanva@gmail.com"
-                  aria-label="Email contact"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-border/50 bg-background/40 text-muted-foreground transition-all duration-200 hover:border-brand/40 hover:text-brand"
-                >
-                  <Mail className="h-4 w-4" />
-                </a>
-              </div>
             </div>
 
-            {/* Link columns */}
-            <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
-              {footerLinks.map((col) => (
-                <div key={col.title}>
-                  <h3 className="text-overline text-muted-foreground">{col.title}</h3>
-                  <ul className="mt-4 space-y-2.5">
-                    {col.links.map((link) => (
-                      <li key={link.label}>
-                        {link.href.startsWith("#") ? (
-                          <a
-                            href={link.href}
-                            className="text-body-sm text-foreground/70 transition-colors hover:text-brand"
-                          >
-                            {link.label}
-                          </a>
-                        ) : (
-                          <Link
-                            href={link.href}
-                            className="text-body-sm text-foreground/70 transition-colors hover:text-brand"
-                          >
-                            {link.label}
-                          </Link>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Disclaimer */}
-          <div className="mt-12 rounded-xl border border-border/40 bg-muted/20 p-5">
-            <p className="text-caption text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">Disclaimer:</strong> This website is for
-              educational support only. It does not replace a doctor, pharmacist, emergency service,
-              or local medical guideline. Always consult a qualified healthcare professional before
-              making decisions about medication or substance use.
-            </p>
-          </div>
-
-          {/* Bottom bar */}
-          <div className="mt-8 flex flex-col items-start justify-between gap-3 border-t border-border/40 pt-6 sm:flex-row sm:items-center">
-            <p className="text-caption text-muted-foreground">
-              © 2026 Know Your Pill · Designed &amp; built by Zamaan Ali Shamji
-            </p>
-            <p className="text-caption text-muted-foreground">
-              Built with Next.js · Tailwind CSS · shadcn/ui
+            {/* Disclaimer — inline, not boxed */}
+            <p className="text-caption text-muted-foreground/60 leading-relaxed max-w-3xl">
+              <strong className="text-muted-foreground">Disclaimer:</strong> This website is for educational support only. It does not replace a doctor, pharmacist, emergency service, or local medical guideline. Always consult a qualified healthcare professional before making decisions about medication or substance use.
             </p>
           </div>
         </Reveal>
