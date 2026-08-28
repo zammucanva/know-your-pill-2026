@@ -431,7 +431,7 @@
     );
     filter: blur(8px);
     opacity: 0.45;
-    animation: kyp-spin 6s linear infinite;
+    /* Static glow — no rotation */
   }
 
   /* Pulse dot (emergency indicator) */
@@ -450,7 +450,10 @@
 
   /* Float (used by hero brain nodes) */
   .kyp-float { animation: kyp-float 8s ease-in-out infinite; }
-  .kyp-drift { animation: kyp-drift 22s ease-in-out infinite; }
+  .kyp-drift {
+    /* Static — no continuous animation. Gradient blobs should not compete with content. */
+    animation: none;
+  }
 
   /* Custom scrollbar */
   .kyp-scroll {
