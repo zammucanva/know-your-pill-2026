@@ -19,7 +19,7 @@ const footerLinks = [
     links: [
       { label: "Alcohol", href: "/substances/alcohol" },
       { label: "Opioids", href: "/substances/opioids" },
-      { label: "Cannabis", href: "/cannabis.html" },
+      { label: "Cannabis", href: "/substances/cannabis" },
       { label: "Cocaine", href: "/cocaine.html" },
       { label: "Nicotine", href: "/nicotine.html" },
     ],

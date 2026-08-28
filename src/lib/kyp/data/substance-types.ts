@@ -187,6 +187,60 @@ export interface NaloxoneInfo {
   dosingAndAdministration: string;
 }
 
+/** Cannabis preparation entry (cannabis-specific). */
+export interface CannabisPreparation {
+  name: string;
+  /** THC content label (e.g. "THC: 10-20%"). */
+  thc: string;
+  description: string;
+}
+
+/** Perceptual disturbance entry (cannabis-specific). */
+export interface PerceptualDisturbance {
+  title: string;
+  description: string;
+  /** Source example quote (e.g. "I felt like I was watching myself from across the room."). */
+  example?: string;
+}
+
+/** Amotivational syndrome section (cannabis-specific). */
+export interface AmotivationalSyndrome {
+  /** Section eyebrow. */
+  eyebrow: string;
+  /** Section title. */
+  title: string;
+  /** Section subtitle. */
+  subtitle: string;
+  /** Inner card title (e.g. "The Neuroscience of Lost Drive"). */
+  cardTitle: string;
+  /** Inner card description paragraph. */
+  cardDescription: string;
+  /** Symptom sub-cards (e.g. Apathy, Lethargy, Loss of Ambition, Reduced Drive). */
+  symptoms: { name: string; description: string }[];
+}
+
+/** Cannabis psychosis section (cannabis-specific). */
+export interface CannabisPsychosis {
+  /** Section eyebrow. */
+  eyebrow: string;
+  /** Section title. */
+  title: string;
+  /** Section subtitle. */
+  subtitle: string;
+  /** Pattern-card title (e.g. "Hemp Insanity"). */
+  cardTitle: string;
+  /** Pattern-card tagline. */
+  cardTagline: string;
+  /** Pattern-card summary paragraph. */
+  summary: string;
+  /** Clinical features bullets. */
+  clinicalFeatures: string[];
+  /** Risk factors bullets. */
+  riskFactors: string[];
+  /** Prognosis callout text. */
+  prognosis: string;
+}
+
 /** The canonical Substance page interface. */
 export interface SubstancePage {
   /* ---- Identity ---- */
@@ -264,6 +318,18 @@ export interface SubstancePage {
 
   /* ---- Overdose emergency (optional — opioid-specific) ---- */
   overdoseEmergency?: OverdoseEmergency;
+
+  /* ---- Cannabis preparations (optional — cannabis-specific) ---- */
+  preparations?: CannabisPreparation[];
+
+  /* ---- Perceptual disturbances (optional — cannabis-specific) ---- */
+  perceptualDisturbances?: PerceptualDisturbance[];
+
+  /* ---- Amotivational syndrome (optional — cannabis-specific) ---- */
+  amotivationalSyndrome?: AmotivationalSyndrome;
+
+  /* ---- Cannabis psychosis (optional — cannabis-specific) ---- */
+  cannabisPsychosis?: CannabisPsychosis;
 
   /* ---- Treatment ---- */
   treatment?: {

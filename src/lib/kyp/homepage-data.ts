@@ -165,7 +165,7 @@ export const substances: Substance[] = [
     description:
       "Activates CB1 receptors in the brain — altering perception, mood, memory, and appetite through endocannabinoid modulation.",
     icon: Leaf,
-    href: "/cannabis.html",
+    href: "/substances/cannabis",
     accent: "text-emerald-500",
     neurotransmitter: "Anandamide · Dopamine",
   },
