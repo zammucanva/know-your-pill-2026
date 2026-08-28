@@ -23,8 +23,8 @@ export function SubstanceUseSection() {
       <Container>
         <SectionHeader
           eyebrow="Substance Use Education"
-          title="Psychoactive Substances, Visualised"
-          description="Twelve deep-dive modules covering how each substance alters brain chemistry — from receptor-level mechanisms to withdrawal, complications, and emergency warning signs."
+          title="How psychoactive substances alter the brain"
+          description="Each module covers receptor pharmacology, intoxication features, withdrawal timelines, complications, and emergency guidance. Three modules are fully built; the rest are being migrated."
           tone="neural"
           align="between"
           action={
@@ -55,18 +55,10 @@ export function SubstanceUseSection() {
         </div>
 
         <div className="mt-10">
-          <Callout variant="info" title="Clinical modules (ICD-10 aligned)">
-            <div className="flex flex-wrap gap-x-4 gap-y-1">
-              <a href="/acute-intoxication.html" className="text-brand underline-offset-4 hover:underline">
-                Acute Intoxication →
-              </a>
-              <a href="/withdrawal-state.html" className="text-brand underline-offset-4 hover:underline">
-                Withdrawal State →
-              </a>
-              <a href="/substance-use.html" className="text-brand underline-offset-4 hover:underline">
-                Substance Use Hub →
-              </a>
-            </div>
+          <Callout variant="info" title="Also in development">
+            <p className="text-xs text-muted-foreground">
+              ICD-10 clinical pattern pages for acute intoxication and withdrawal states are planned. They will cover diagnosis, symptom timelines, and management across all substance classes.
+            </p>
           </Callout>
         </div>
       </Container>

@@ -57,8 +57,8 @@ export function MedicationLibrarySection() {
       <Container className="relative" style={{ zIndex: 2 }}>
         <SectionHeader
           eyebrow="Medication Library"
-          title="Explore Medications"
-          description="Browse medications by class and understand how different treatments affect the brain and body through simplified explanations and visual guidance."
+          title="Twelve psychiatric medications, structured the same way"
+          description="Each drug page covers mechanism of action, receptor pharmacology, clinical indications, side effects with management, monitoring parameters, drug interactions, patient education, and a real clinical case."
         />
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2">

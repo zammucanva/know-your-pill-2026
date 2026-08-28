@@ -28,7 +28,7 @@ export function HomeHero() {
           <span className="kyp-text-gradient">before fear fills the gap.</span>
         </>
       }
-      lede="Visual medicine guides with mechanism animations, timelines, side-effect clarity, and safety direction — helping patients, caregivers, and MBBS students understand their pills with confidence."
+      lede="Guides that walk you through how a medication works in the brain, what side effects to expect, when it starts working, and what to do in an emergency. Built for patients, caregivers, and medical students."
       visual={<BrainGraphic />}
     >
       {/* AI search card */}
@@ -36,25 +36,27 @@ export function HomeHero() {
         <div className="kyp-glass rounded-2xl p-5 shadow-[var(--shadow-glow)]">
           <div className="flex items-center gap-2 text-overline text-brand-ink">
             <Sparkles className="h-3.5 w-3.5" />
-            AI-Powered Medicine Search
+            Search a medication
           </div>
           <p className="mt-2 text-body-sm text-muted-foreground">
-            Search a medication, then explore how it works in the brain, what to expect, and how to
-            stay safe.
+            Type a drug name to see its mechanism, side effects, timeline, and safety guidance.
           </p>
           <form
             className="mt-4 flex gap-2"
             onSubmit={(e) => {
               e.preventDefault();
               if (query.trim()) {
-                // Try the canonical drug page first; fall back to the legacy HTML
-                // if no Next.js page exists for this query yet.
                 const q = query.trim().toLowerCase();
-                const knownDrugs = ["sertraline", "zoloft"];
+                const knownDrugs = ["sertraline", "zoloft", "fluoxetine", "escitalopram", "paroxetine", "citalopram", "fluvoxamine", "venlafaxine", "duloxetine", "bupropion", "mirtazapine", "amitriptyline", "clomipramine"];
                 if (knownDrugs.includes(q)) {
-                  window.location.href = `/drugs/sertraline`;
+                  window.location.href = `/drugs/${q}`;
+                } else if (q === "alcohol" || q === "opioids" || q === "cannabis") {
+                  window.location.href = `/substances/${q}`;
+                } else if (q === "depression" || q === "mdd" || q.includes("depressive")) {
+                  window.location.href = `/diseases/major-depressive-disorder`;
                 } else {
-                  window.location.href = `/medicine.html?med=${encodeURIComponent(query.trim())}`;
+                  // Trigger universal search via keyboard event
+                  window.dispatchEvent(new KeyboardEvent("keydown", { key: "k", metaKey: true }));
                 }
               }
             }}

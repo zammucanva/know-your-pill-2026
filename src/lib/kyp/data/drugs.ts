@@ -11,7 +11,7 @@ export const substances: Substance[] = [
     slug: "alcohol",
     drugClass: "depressant",
     description:
-      "Enhances GABA inhibition and releases dopamine — leading to slurred speech, loss of coordination, and severe physical withdrawal.",
+      "Potentiates GABA-A receptors and triggers dopamine release in the reward pathway. Chronic use downregulates GABA, making abrupt cessation dangerous.",
     neurotransmitter: "GABA · Dopamine · Glutamate",
     href: "/substances/alcohol",
     artwork: "/artwork/ethanol.png",
@@ -23,7 +23,7 @@ export const substances: Substance[] = [
     slug: "cannabis",
     drugClass: "cannabinoid",
     description:
-      "Activates CB1 receptors in the brain — altering perception, mood, memory, and appetite through endocannabinoid modulation.",
+      "THC binds CB1 receptors throughout the brain, altering perception, mood, and memory. CBD modulates this effect but is non-psychoactive.",
     neurotransmitter: "Anandamide · Dopamine",
     href: "/substances/cannabis",
     artwork: "/artwork/cannabis.png",
@@ -35,7 +35,7 @@ export const substances: Substance[] = [
     slug: "opioids",
     drugClass: "opioid",
     description:
-      "Bind to μ-opioid receptors — producing profound analgesia, euphoria, respiratory depression, and high dependence risk.",
+      "Mu-opioid receptor agonism produces analgesia and euphoria. The same receptor drives respiratory depression, which is what makes overdose lethal.",
     neurotransmitter: "Endorphin · Dopamine",
     href: "/substances/opioids",
     artwork: "/artwork/morphine.png",
@@ -47,7 +47,7 @@ export const substances: Substance[] = [
     slug: "cocaine",
     drugClass: "stimulant",
     description:
-      "Blocks dopamine, serotonin, and norepinephrine reuptake — producing intense euphoria, tachycardia, and severe crash.",
+      "Cocaine blocks reuptake of dopamine, norepinephrine, and serotonin. The resulting synaptic flood produces intense euphoria followed by a severe crash.",
     neurotransmitter: "Dopamine · Norepinephrine",
     href: "/cocaine.html",
     artwork: "/artwork/cocaine.png",
@@ -59,7 +59,7 @@ export const substances: Substance[] = [
     slug: "nicotine",
     drugClass: "stimulant",
     description:
-      "Activates nicotinic acetylcholine receptors — triggering dopamine release in reward pathways and rapid dependence.",
+      "Nicotinic acetylcholine receptor activation in the VTA releases dopamine within seconds of inhalation. Dependence develops rapidly.",
     neurotransmitter: "Acetylcholine · Dopamine",
     href: "/nicotine.html",
     artwork: "/artwork/nicotine.png",
@@ -71,7 +71,7 @@ export const substances: Substance[] = [
     slug: "amphetamine",
     drugClass: "stimulant",
     description:
-      "Reverses dopamine and norepinephrine transporters — flooding synapses with catecholamines, producing alertness and euphoria.",
+      "Amphetamines reverse the dopamine and norepinephrine transporters, effectively pumping catecholamines into the synapse rather than clearing it.",
     neurotransmitter: "Dopamine · Norepinephrine",
     href: "/amphetamine.html",
     artwork: "/artwork/amphetamine.png",
@@ -83,7 +83,7 @@ export const substances: Substance[] = [
     slug: "benzodiazepines",
     drugClass: "depressant",
     description:
-      "Positive allosteric modulators of GABA-A receptors — producing anxiolysis, sedation, and dangerous withdrawal seizures.",
+      "These drugs are positive allosteric modulators at GABA-A receptors. They produce anxiolysis and sedation; abrupt withdrawal can cause seizures.",
     neurotransmitter: "GABA",
     href: "/benzodiazepines.html",
     artwork: "/artwork/diazepam.png",
@@ -95,7 +95,7 @@ export const substances: Substance[] = [
     slug: "barbiturate",
     drugClass: "depressant",
     description:
-      "Direct GABA-A agonists with narrow therapeutic index — historical anaesthetics with high overdose and dependence risk.",
+      "Barbiturates directly agonise GABA-A receptors and have a notoriously narrow therapeutic index. Once common as anaesthetics, they carry high overdose risk.",
     neurotransmitter: "GABA",
     href: "/barbiturate.html",
     artwork: "/artwork/barbiturate.png",
@@ -107,7 +107,7 @@ export const substances: Substance[] = [
     slug: "inhalants",
     drugClass: "inhalant",
     description:
-      "Lipophilic solvents that rapidly cross the blood-brain barrier — producing brief intoxication and severe neurotoxicity.",
+      "These lipophilic solvents cross the blood-brain barrier within seconds. Intoxication is brief; chronic use causes irreversible neurotoxicity.",
     neurotransmitter: "GABA · NMDA",
     href: "/inhalants.html",
     artwork: "/artwork/inhalants.png",
@@ -119,7 +119,7 @@ export const substances: Substance[] = [
     slug: "lsd",
     drugClass: "hallucinogen",
     description:
-      "5-HT2A receptor partial agonist — producing profound alterations in perception, mood, and sense of self lasting 8-12 hours.",
+      "LSD is a partial agonist at 5-HT2A serotonin receptors. A single dose can alter perception, mood, and sense of self for 8 to 12 hours.",
     neurotransmitter: "Serotonin",
     href: "/lsd.html",
     artwork: "/artwork/lsd.png",
@@ -131,7 +131,7 @@ export const substances: Substance[] = [
     slug: "pcp",
     drugClass: "dissociative",
     description:
-      "NMDA receptor antagonist — producing dissociation, hallucinations, analgesia, and dangerous behavioural effects.",
+      "PCP blocks NMDA glutamate receptors, producing dissociation, analgesia, and unpredictable behaviour. It was abandoned as an anaesthetic for this reason.",
     neurotransmitter: "Glutamate (NMDA)",
     href: "/pcp.html",
     artwork: "/artwork/pcp.png",
@@ -143,7 +143,7 @@ export const substances: Substance[] = [
     slug: "withdrawal-state",
     drugClass: "depressant",
     description:
-      "Recognise the neuroscience and clinical presentation of substance withdrawal states — symptoms, timelines, and management.",
+      "Cessation of chronic substance use produces a rebound syndrome driven by receptor downregulation and neurotransmitter imbalance. Timelines and severity vary by substance.",
     neurotransmitter: "Multi-system",
     href: "/withdrawal-state.html",
     artwork: "/artwork/withdrawal.png",

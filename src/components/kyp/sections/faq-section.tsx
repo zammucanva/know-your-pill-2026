@@ -12,7 +12,7 @@ export function FaqSection() {
       <Container width="narrow">
         <SectionHeader
           eyebrow="Frequently Asked Questions"
-          title="Quick answers, before you dive in."
+          title="Questions before you start"
           align="center"
         />
         <div className="mt-10">

@@ -13,7 +13,7 @@ const features = [
   {
     icon: Brain,
     title: "Neural Tracker",
-    description: "Trace a neurotransmitter from synthesis to receptor binding — against the clock.",
+    description: "Trace a neurotransmitter from synthesis to receptor binding against the clock.",
   },
   {
     icon: Trophy,
@@ -23,7 +23,7 @@ const features = [
   {
     icon: Zap,
     title: "Instant Feedback",
-    description: "Every answer comes with a one-line neuroscience explainer.",
+    description: "Every answer comes with a one-line neuroscience explanation.",
   },
 ];
 
@@ -62,9 +62,7 @@ export function NeuroArcadeSection() {
                   <span className="kyp-text-gradient">playing it.</span>
                 </h2>
                 <p className="mt-4 text-body-lg text-muted-foreground">
-                  A growing suite of mini-games that turn psychopharmacology into a hands-on
-                  experience — built for MBBS students preparing for exams and curious patients who
-                  want to actually remember what their medication does.
+                  Mini-games that turn psychopharmacology into active recall. Built for students who need to remember receptor pathways under exam pressure, and for patients curious enough to want more than a leaflet.
                 </p>
 
                 <div className="mt-6 grid gap-3">

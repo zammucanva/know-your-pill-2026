@@ -4,11 +4,9 @@ import { StatsSection } from "@/components/kyp/sections/stats-section";
 import { CategoriesSection } from "@/components/kyp/sections/categories-section";
 import { MedicationLibrarySection } from "@/components/kyp/sections/medication-library-section";
 import { SubstanceUseSection } from "@/components/kyp/sections/substance-use-section";
-import { KnowledgeGraphSection } from "@/components/kyp/sections/knowledge-graph-section";
-import { BrainAtlasSection } from "@/components/kyp/sections/brain-atlas-section";
-import { SideEffectsSection } from "@/components/kyp/sections/side-effects-section";
 import { TimelineSection } from "@/components/kyp/sections/timeline-section";
 import { NeuroArcadeSection } from "@/components/kyp/sections/neuroarcade-section";
+import { RoadmapSection } from "@/components/kyp/sections/roadmap-section";
 import { FaqSection } from "@/components/kyp/sections/faq-section";
 import { EmergencySection } from "@/components/kyp/sections/emergency-section";
 import { Footer } from "@/components/kyp/sections/footer";
@@ -24,11 +22,9 @@ export default function Home() {
         <CategoriesSection />
         <MedicationLibrarySection />
         <SubstanceUseSection />
-        <KnowledgeGraphSection />
-        <BrainAtlasSection />
-        <SideEffectsSection />
         <TimelineSection />
         <NeuroArcadeSection />
+        <RoadmapSection />
         <FaqSection />
         <EmergencySection />
       </main>

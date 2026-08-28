@@ -12,8 +12,8 @@ export function CategoriesSection() {
       <Container>
         <SectionHeader
           eyebrow="Browse by category"
-          title="Explore Brain Pathways & Treatments"
-          description="Each category maps a clinical area to its underlying neurotransmitter system — pick a pathway to start learning."
+          title="Clinical areas and the neurotransmitter systems behind them"
+          description="Each category connects a clinical area to its underlying receptor pharmacology. Pick one to start learning."
           align="between"
         />
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
