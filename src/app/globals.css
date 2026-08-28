@@ -292,23 +292,23 @@
   /* Typography scale — use as Tailwind classes via @apply in components */
   .text-display {
     font-family: var(--font-serif);
-    font-size: clamp(2.5rem, 5vw, 3.75rem);
-    line-height: 1.05;
-    letter-spacing: -0.025em;
+    font-size: clamp(2.75rem, 6.5vw, 5rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
     font-weight: 600;
   }
   .text-h1 {
     font-family: var(--font-serif);
-    font-size: clamp(2rem, 3.5vw, 2.75rem);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
     font-weight: 600;
   }
   .text-h2 {
     font-family: var(--font-serif);
-    font-size: clamp(1.625rem, 2.5vw, 2rem);
-    line-height: 1.15;
-    letter-spacing: -0.015em;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
     font-weight: 600;
   }
   .text-h3 {
