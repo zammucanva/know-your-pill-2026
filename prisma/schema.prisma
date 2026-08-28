@@ -15,7 +15,7 @@ model User {
   email         String    @unique
   passwordHash  String
   emailVerified Boolean   @default(false)
-  role          String    @default("mbbs_student") // patient | mbbs_student | exam_aspirant | psychiatry_resident | healthcare_professional
+  role          String    @default("student") // patient | student | medical_resident | medical_student | psychiatrist (legacy: mbbs_student | exam_aspirant | psychiatry_resident | healthcare_professional)
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 }

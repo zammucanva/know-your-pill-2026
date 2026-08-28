@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import { Menu, Moon, Sun, X, Phone } from "lucide-react";
+import { Menu, Moon, Sun, X, Phone, LogIn, LogOut, User as UserIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 import { cn } from "@/lib/utils";
@@ -17,11 +17,14 @@ const navLinks = [
   { href: "#neuroarcade", label: "NeuroArcade" },
 ];
 
+type SessionUser = { id: string; name: string; email: string; role: string } | null;
+
 export function Navbar() {
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
+  const [user, setUser] = React.useState<SessionUser>(null);
 
   React.useEffect(() => setMounted(true), []);
 
@@ -31,6 +34,20 @@ export function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Check session on mount
+  React.useEffect(() => {
+    fetch("/api/auth/session")
+      .then(r => r.json())
+      .then(data => { if (data.user) setUser(data.user); })
+      .catch(() => {});
+  }, []);
+
+  const handleLogout = async () => {
+    await fetch("/api/auth/session", { method: "DELETE" });
+    setUser(null);
+    window.location.href = "/welcome";
+  };
 
   return (
     <header
@@ -89,6 +106,32 @@ export function Navbar() {
             Emergency
           </a>
 
+          {/* Auth button */}
+          {user ? (
+            <div className="hidden items-center gap-2 sm:flex">
+              <span className="flex items-center gap-1.5 rounded-full border border-border/60 bg-muted/40 px-3 py-1.5 text-xs font-medium text-foreground">
+                <UserIcon className="h-3 w-3 text-brand" />
+                {user.name}
+              </span>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={handleLogout}
+                aria-label="Log out"
+                className="h-9 w-9 rounded-full"
+              >
+                <LogOut className="h-4 w-4" />
+              </Button>
+            </div>
+          ) : (
+            <Link href="/welcome" className="hidden sm:block">
+              <Button variant="ghost" size="sm" className="gap-1.5 rounded-full">
+                <LogIn className="h-3.5 w-3.5" />
+                Log in
+              </Button>
+            </Link>
+          )}
+
           <Button
             variant="ghost"
             size="icon"
@@ -142,6 +185,33 @@ export function Navbar() {
               <Phone className="h-4 w-4" strokeWidth={2.5} />
               Emergency Help
             </a>
+            {/* Auth link in mobile menu */}
+            <div className="mt-2 border-t border-border/50 pt-3">
+              {user ? (
+                <>
+                  <div className="flex items-center gap-2 px-3 py-2 text-xs text-muted-foreground">
+                    <UserIcon className="h-3 w-3 text-brand" />
+                    Signed in as {user.name}
+                  </div>
+                  <button
+                    onClick={() => { setOpen(false); handleLogout(); }}
+                    className="flex w-full items-center gap-2 rounded-md px-3 py-2.5 text-body-sm font-medium text-muted-foreground hover:bg-accent/60 hover:text-foreground"
+                  >
+                    <LogOut className="h-4 w-4" />
+                    Log out
+                  </button>
+                </>
+              ) : (
+                <Link
+                  href="/welcome"
+                  onClick={() => setOpen(false)}
+                  className="flex w-full items-center gap-2 rounded-md bg-brand px-3 py-2.5 text-body-sm font-semibold text-primary-foreground"
+                >
+                  <LogIn className="h-4 w-4" />
+                  Log in / Sign up
+                </Link>
+              )}
+            </div>
           </nav>
         </div>
       )}
