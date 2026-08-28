@@ -25,7 +25,14 @@ import type { SubstancePage } from "../substance-types";
  *  12. Methadone & Buprenorphine (#medications) — 4 medication cards
  *  13. Psychosocial Rehabilitation (#psychosocial) — 6 recovery cards
  *  14. Recovery Support (#recovery) — 6 recovery cards
- *  15. Emergency Quick Help (#emergency-help) — 6 warning signs + 2 contacts
+ *  15. Emergency Quick Help (#emergency-help) — panel title + panel intro + 6 warning signs + 2 contacts
+ *
+ * Note: The `brainRegions` and `neurotransmitters` arrays were removed during the
+ * source-fidelity correction pass. They were editorial derivations (names extracted
+ * from mechanism card descriptions and presented as badge lists) rather than direct
+ * source content. The source does not present brain regions or neurotransmitters as
+ * standalone lists — they appear only within mechanism card descriptions, which are
+ * preserved verbatim in `neurobiology.mechanisms[]`.
  */
 export const opioids: SubstancePage = {
   slug: "opioids",
@@ -122,8 +129,6 @@ export const opioids: SubstancePage = {
         description: "Opioids activate the mesolimbic dopamine system. They inhibit GABA interneurons in the VTA, disinhibiting dopamine neurons and causing dopamine release in the nucleus accumbens — producing intense euphoria and reinforcement.",
       },
     ],
-    brainRegions: ["Brainstem", "Nucleus Accumbens", "Spinal Cord", "Hypothalamus", "Limbic System", "VTA"],
-    neurotransmitters: ["Endorphins", "Dopamine", "GABA"],
     deepDive: {
       cardTitle: "Heroin Neuropharmacology",
       cardTagline: "Why heroin is more potent than morphine",
@@ -342,6 +347,10 @@ export const opioids: SubstancePage = {
   },
 
   emergency: {
+    eyebrow: "Critical Care",
+    subtitle: "Recognize opioid overdose and know when to seek immediate medical care.",
+    panelTitle: "Opioid Overdose — Act Immediately",
+    panelDescription: "Opioid overdose is a life-threatening emergency. Every minute without oxygen causes brain damage. If you suspect overdose, act fast — call for help and administer naloxone if available.",
     warningSigns: [
       "Unconscious / unresponsive",
       "Respiratory arrest",

@@ -102,6 +102,14 @@ export interface DetoxStep {
 
 /** Emergency info. */
 export interface SubstanceEmergency {
+  /** Section eyebrow (e.g. "Critical Care"). */
+  eyebrow?: string;
+  /** Section subtitle (e.g. "Recognize opioid overdose and know when to seek immediate medical care."). */
+  subtitle?: string;
+  /** Panel title inside the emergency section (e.g. "Opioid Overdose — Act Immediately"). */
+  panelTitle?: string;
+  /** Panel intro paragraph inside the emergency section. */
+  panelDescription?: string;
   warningSigns: string[];
   contacts: { label: string; number: string }[];
 }
