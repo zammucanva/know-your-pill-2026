@@ -97,7 +97,7 @@ export const medicationClasses: MedicationClass[] = [
     description:
       "Explore antidepressants, antipsychotics, mood stabilisers, and anxiety medications through simplified neuroscience explanations.",
     icon: Brain,
-    href: "/psychiatric.html",
+    href: "#library",
     chips: ["Sertraline", "Fluoxetine", "Escitalopram", "Olanzapine", "Risperidone", "Lithium"],
     featured: true,
   },
@@ -108,7 +108,7 @@ export const medicationClasses: MedicationClass[] = [
     description:
       "Non-opioid analgesics, NSAIDs, opioid analgesics, and neuropathic pain agents — how they block pain signals.",
     icon: Pill,
-    href: "/pain-management.html",
+    href: "#library",
     chips: ["Paracetamol", "Ibuprofen", "Morphine", "Gabapentin"],
     comingSoon: true,
   },
@@ -119,7 +119,7 @@ export const medicationClasses: MedicationClass[] = [
     description:
       "Bacterial cell wall synthesis inhibitors, protein synthesis blockers, and DNA replication disruptors explained visually.",
     icon: Beaker,
-    href: "/antibiotics.html",
+    href: "#library",
     chips: ["Amoxicillin", "Azithromycin", "Ciprofloxacin"],
   },
   {
@@ -129,7 +129,7 @@ export const medicationClasses: MedicationClass[] = [
     description:
       "Understand how psychoactive substances alter brain chemistry, the neuroscience of addiction, withdrawal, and recovery.",
     icon: FlaskConical,
-    href: "/substance-use.html",
+    href: "#substances",
     chips: ["Alcohol", "Cannabis", "Opioids", "Cocaine", "Nicotine"],
     featured: true,
   },
@@ -187,7 +187,7 @@ export const substances: Substance[] = [
     description:
       "Blocks dopamine, serotonin, and norepinephrine reuptake — producing intense euphoria, tachycardia, and severe crash.",
     icon: Zap,
-    href: "/cocaine.html",
+    href: "#substances",
     accent: "text-amber-500",
     neurotransmitter: "Dopamine · Norepinephrine",
   },
@@ -198,7 +198,7 @@ export const substances: Substance[] = [
     description:
       "Activates nicotinic acetylcholine receptors — triggering dopamine release in reward pathways and rapid dependence.",
     icon: Cigarette,
-    href: "/nicotine.html",
+    href: "#substances",
     accent: "text-orange-500",
     neurotransmitter: "Acetylcholine · Dopamine",
   },
@@ -209,7 +209,7 @@ export const substances: Substance[] = [
     description:
       "Reverses dopamine and norepinephrine transporters — flooding synapses with catecholamines, producing alertness and euphoria.",
     icon: Zap,
-    href: "/amphetamine.html",
+    href: "#substances",
     accent: "text-yellow-500",
     neurotransmitter: "Dopamine · Norepinephrine",
   },
@@ -220,7 +220,7 @@ export const substances: Substance[] = [
     description:
       "Positive allosteric modulators of GABA-A receptors — producing anxiolysis, sedation, and dangerous withdrawal seizures.",
     icon: PillBottle,
-    href: "/benzodiazepines.html",
+    href: "#substances",
     accent: "text-sky-500",
     neurotransmitter: "GABA",
   },
@@ -231,7 +231,7 @@ export const substances: Substance[] = [
     description:
       "Direct GABA-A agonists with narrow therapeutic index — historical anaesthetics with high overdose and dependence risk.",
     icon: PillBottle,
-    href: "/barbiturate.html",
+    href: "#substances",
     accent: "text-indigo-500",
     neurotransmitter: "GABA",
   },
@@ -242,7 +242,7 @@ export const substances: Substance[] = [
     description:
       "Lipophilic solvents that rapidly cross the blood-brain barrier — producing brief intoxication and severe neurotoxicity.",
     icon: Wind,
-    href: "/inhalants.html",
+    href: "#substances",
     accent: "text-cyan-500",
     neurotransmitter: "GABA · NMDA",
   },
@@ -253,7 +253,7 @@ export const substances: Substance[] = [
     description:
       "5-HT2A receptor partial agonist — producing profound alterations in perception, mood, and sense of self lasting 8-12 hours.",
     icon: Sparkles,
-    href: "/lsd.html",
+    href: "#substances",
     accent: "text-fuchsia-500",
     neurotransmitter: "Serotonin",
   },
@@ -264,7 +264,7 @@ export const substances: Substance[] = [
     description:
       "NMDA receptor antagonist — producing dissociation, hallucinations, analgesia, and dangerous behavioural effects.",
     icon: Skull,
-    href: "/pcp.html",
+    href: "#substances",
     accent: "text-purple-500",
     neurotransmitter: "Glutamate (NMDA)",
   },
@@ -275,7 +275,7 @@ export const substances: Substance[] = [
     description:
       "Recognise the neuroscience and clinical presentation of substance withdrawal states — symptoms, timelines, and management.",
     icon: Activity,
-    href: "/withdrawal-state.html",
+    href: "#substances",
     accent: "text-teal-500",
     neurotransmitter: "Multi-system",
   },

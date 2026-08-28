@@ -6,10 +6,10 @@ const footerLinks = [
   {
     title: "Medications",
     links: [
-      { label: "Psychiatric", href: "/psychiatric.html" },
-      { label: "Pain Management", href: "/pain-management.html" },
-      { label: "Antibiotics", href: "/antibiotics.html" },
-      { label: "Sertraline Demo", href: "/medicine.html?med=sertraline" },
+      { label: "Sertraline", href: "/drugs/sertraline" },
+      { label: "Fluoxetine", href: "/drugs/fluoxetine" },
+      { label: "Escitalopram", href: "/drugs/escitalopram" },
+      { label: "Bupropion", href: "/drugs/bupropion" },
     ],
   },
   {
@@ -18,16 +18,14 @@ const footerLinks = [
       { label: "Alcohol", href: "/substances/alcohol" },
       { label: "Opioids", href: "/substances/opioids" },
       { label: "Cannabis", href: "/substances/cannabis" },
-      { label: "Cocaine", href: "/cocaine.html" },
-      { label: "Nicotine", href: "/nicotine.html" },
     ],
   },
   {
-    title: "Clinical Patterns",
+    title: "Clinical",
     links: [
-      { label: "Acute Intoxication", href: "/acute-intoxication.html" },
-      { label: "Withdrawal State", href: "/withdrawal-state.html" },
-      { label: "Substance Use Hub", href: "/substance-use.html" },
+      { label: "Major Depressive Disorder", href: "/diseases/major-depressive-disorder" },
+      { label: "Emergency Help", href: "#emergency" },
+      { label: "FAQ", href: "#faq" },
     ],
   },
   {
@@ -37,6 +35,7 @@ const footerLinks = [
       { label: "Medication Library", href: "#library" },
       { label: "Substance Use", href: "#substances" },
       { label: "NeuroArcade", href: "#neuroarcade" },
+      { label: "Roadmap", href: "#roadmap" },
       { label: "Emergency", href: "#emergency" },
     ],
   },
@@ -50,7 +49,7 @@ export function Footer() {
           {/* Brand column */}
           <div>
             <div className="flex items-center gap-2.5">
-              <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-neural text-primary-foreground">
+              <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-neural text-primary-foreground">
                 <Pill className="h-4.5 w-4.5 rotate-45" strokeWidth={2.5} />
               </span>
               <div className="flex flex-col leading-none">
@@ -60,15 +59,15 @@ export function Footer() {
                 </small>
               </div>
             </div>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              A premium neuroscience-inspired psychiatric medication and substance education
-              platform — combining MBBS-level learning, neuroscience visualisation, interactive
-              medical education, and patient-friendly healthcare awareness.
+            <p className="mt-4 max-w-sm text-body-sm text-muted-foreground leading-relaxed">
+              A medication reference that explains how drugs work in the brain, what side effects
+              to watch for, and when to seek help. Written for patients, caregivers, and medical
+              students. Not a substitute for professional medical advice.
             </p>
 
             <div className="mt-5 flex items-center gap-2">
               <a
-                href="https://github.com/zammucanva/PROJECT-KYP"
+                href="https://github.com/zammucanva/know-your-pill-2026"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub repository"
@@ -77,7 +76,7 @@ export function Footer() {
                 <Github className="h-4 w-4" />
               </a>
               <a
-                href="mailto:hello@knowyourpill.example"
+                href="mailto:zammucanva@gmail.com"
                 aria-label="Email contact"
                 className="flex h-9 w-9 items-center justify-center rounded-lg border border-border/70 bg-background/60 text-muted-foreground transition-colors hover:border-brand/40 hover:text-brand"
               >
