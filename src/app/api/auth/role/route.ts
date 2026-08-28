@@ -8,6 +8,11 @@ export async function POST(req: NextRequest) {
 
     const validRoles = [
       "patient",
+      "student",
+      "medical_resident",
+      "medical_student",
+      "psychiatrist",
+      // Legacy roles (for backward compatibility with existing accounts)
       "mbbs_student",
       "exam_aspirant",
       "psychiatry_resident",

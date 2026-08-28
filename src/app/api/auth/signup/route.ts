@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
         name,
         email,
         passwordHash,
-        role: "mbbs_student", // default, updated during role selection
+        role: "student", // default — user selects their actual role in onboarding
       },
     });
 
