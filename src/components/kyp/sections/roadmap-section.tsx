@@ -3,10 +3,8 @@
 import { Network, Brain, Route, Activity } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
-import { SectionHeader } from "@/components/kyp/ui/section-header";
-import { Badge } from "@/components/kyp/ui/badge";
-import { OrganicGradient } from "@/components/kyp/ui/organic-gradient";
-import { Reveal, RevealGroup } from "@/components/kyp/ui/reveal";
+import { Reveal } from "@/components/kyp/ui/reveal";
+import { cn } from "@/lib/utils";
 
 const roadmapItems = [
   {
@@ -41,55 +39,64 @@ const roadmapItems = [
 
 export function RoadmapSection() {
   return (
-    <Section id="roadmap" className="bg-muted/20 relative overflow-hidden">
-      <OrganicGradient variant="neuro" />
-
-      <Container className="relative">
+    <Section id="roadmap" className="bg-muted/15">
+      <Container>
         <Reveal>
-          <SectionHeader
-            eyebrow="In Development"
-            title="What is being built next"
-            description="These features use real data from the KYP library but are not yet interactive. The information below is accurate; the visualisation layer is still being built."
-            tone="neural"
-            align="center"
-          />
+          <div className="mb-16">
+            <p className="text-overline text-neural mb-3">In Development</p>
+            <h2 className="font-serif text-h1 font-semibold tracking-tight text-foreground max-w-2xl">
+              What is being built next
+            </h2>
+            <p className="mt-4 text-body text-muted-foreground max-w-xl leading-relaxed">
+              These features use real data from the KYP library but are not yet interactive. The information below is accurate; the visualisation layer is still being built.
+            </p>
+          </div>
         </Reveal>
 
-        <RevealGroup className="mt-12 grid gap-4 lg:grid-cols-2">
+        {/* Vertical numbered index */}
+        <div className="divide-y divide-border/20">
           {roadmapItems.map((item, i) => {
             const Icon = item.icon;
             return (
               <Reveal key={item.title} delay={i * 0.08}>
-                <div className="h-full rounded-xl border border-border/40 bg-card/40 backdrop-blur-sm p-6 transition-all duration-300 hover:border-brand/30 hover:shadow-[var(--shadow-soft)]">
-                  <div className="flex items-start gap-4">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-soft/40 text-brand">
-                      <Icon className="h-4.5 w-4.5" strokeWidth={1.8} />
-                    </span>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2">
-                        <h3 className="font-serif text-base font-semibold text-foreground">{item.title}</h3>
-                        <Badge variant="outline" size="sm">Preview</Badge>
-                      </div>
-                      <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                        {item.description}
-                      </p>
-                      <div className="mt-4 flex flex-wrap gap-1.5">
-                        {item.preview.map((tag) => (
-                          <span
-                            key={tag}
-                            className="rounded-full border border-border/30 bg-background/40 px-2 py-0.5 text-[0.65rem] text-muted-foreground"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
+                <div className="group flex items-start gap-6 py-10 transition-all duration-300">
+                  {/* Large number */}
+                  <span className="font-serif text-4xl sm:text-5xl font-bold text-muted-foreground/15 tabular-nums leading-none shrink-0 w-16">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+
+                  {/* Content */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-neural-soft/30 text-neural">
+                        <Icon className="h-4 w-4" strokeWidth={1.8} />
+                      </span>
+                      <h3 className="font-serif text-xl sm:text-2xl font-semibold text-foreground tracking-tight">
+                        {item.title}
+                      </h3>
+                      <span className="text-[0.6rem] font-semibold uppercase tracking-wide text-muted-foreground/60 border border-border/30 px-2 py-0.5 rounded-full">
+                        Preview
+                      </span>
+                    </div>
+                    <p className="text-body-sm text-muted-foreground leading-relaxed max-w-2xl">
+                      {item.description}
+                    </p>
+                    <div className="mt-4 flex flex-wrap gap-1.5">
+                      {item.preview.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-[0.65rem] text-muted-foreground/50 font-medium"
+                        >
+                          {tag}{item.preview.indexOf(tag) < item.preview.length - 1 ? " · " : ""}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
               </Reveal>
             );
           })}
-        </RevealGroup>
+        </div>
       </Container>
     </Section>
   );
