@@ -15,6 +15,8 @@ import {
   Stethoscope,
   BookOpen,
   ArrowRight,
+  FlaskConical,
+  HeartPulse,
 } from "lucide-react";
 import {
   Dialog,
@@ -30,8 +32,16 @@ import { cn } from "@/lib/utils";
 /**
  * SearchModal — Spotlight-style universal search.
  *
- * Searches across: drugs, drug classes, neurotransmitters, side effects,
- * brain regions, pathways, clinical patterns, patient guides.
+ * Searches across: medications, substances, diseases, drug classes,
+ * neurotransmitters, side effects, brain regions, pathways, patient guides.
+ *
+ * Ranking:
+ *   1. Exact title match
+ *   2. Title starts-with match
+ *   3. Title includes match
+ *   4. Keyword exact match
+ *   5. Keyword includes match
+ *   6. Description includes match
  *
  * Keyboard:
  *   ⌘K / Ctrl+K → open
@@ -46,6 +56,8 @@ interface SearchModalProps {
 
 const typeIcon: Record<SearchableItem["type"], React.ElementType> = {
   drug: Pill,
+  substance: FlaskConical,
+  disease: HeartPulse,
   class: Layers,
   neurotransmitter: Zap,
   "side-effect": Activity,
@@ -56,7 +68,9 @@ const typeIcon: Record<SearchableItem["type"], React.ElementType> = {
 };
 
 const typeColor: Record<SearchableItem["type"], string> = {
-  drug: "text-[var(--class-opioid)]",
+  drug: "text-brand",
+  substance: "text-[var(--class-opioid)]",
+  disease: "text-emergency",
   class: "text-brand",
   neurotransmitter: "text-neural",
   "side-effect": "text-warning",
@@ -66,6 +80,28 @@ const typeColor: Record<SearchableItem["type"], string> = {
   "patient-guide": "text-success",
 };
 
+/** Rank a search result. Lower = better. 0 = no match. */
+function rankResult(item: SearchableItem, q: string): number {
+  const title = item.title.toLowerCase();
+  const keywords = item.keywords.map((k) => k.toLowerCase());
+
+  // 1. Exact title match
+  if (title === q) return 1;
+  // 2. Title starts with query
+  if (title.startsWith(q)) return 2;
+  // 3. Title includes query
+  if (title.includes(q)) return 3;
+  // 4. Exact keyword match
+  if (keywords.some((k) => k === q)) return 4;
+  // 5. Keyword starts with query
+  if (keywords.some((k) => k.startsWith(q))) return 5;
+  // 6. Keyword includes query
+  if (keywords.some((k) => k.includes(q))) return 6;
+  // 7. Description includes query
+  if (item.description.toLowerCase().includes(q)) return 7;
+  return 0;
+}
+
 export function SearchModal({ open, onOpenChange }: SearchModalProps) {
   const router = useRouter();
   const [query, setQuery] = React.useState("");
@@ -73,7 +109,7 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
   const inputRef = React.useRef<HTMLInputElement>(null);
   const listRef = React.useRef<HTMLDivElement>(null);
 
-  // Filter results (simple substring match — Phase 3 can swap in fuzzy search later)
+  // Filter + rank results
   const results = React.useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) {
@@ -81,13 +117,11 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
       return searchIndex.slice(0, 8);
     }
     return searchIndex
-      .filter((item) => {
-        const haystack = [item.title, item.description, ...item.keywords]
-          .join(" ")
-          .toLowerCase();
-        return haystack.includes(q);
-      })
-      .slice(0, 12);
+      .map((item) => ({ item, rank: rankResult(item, q) }))
+      .filter((r) => r.rank > 0)
+      .sort((a, b) => a.rank - b.rank)
+      .slice(0, 12)
+      .map((r) => r.item);
   }, [query]);
 
   // Reset active index when results change
@@ -115,8 +149,8 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
       // In-page anchor
       document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth" });
     } else if (item.href.startsWith("/")) {
-      // Internal route — could be Next.js route or static HTML
-      window.location.href = item.href;
+      // Internal route — use Next.js router for client-side navigation
+      router.push(item.href);
     }
   };
 
@@ -140,7 +174,7 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
         <DialogHeader className="sr-only">
           <DialogTitle>Universal search</DialogTitle>
           <DialogDescription>
-            Search across drugs, classes, neurotransmitters, side effects, brain regions, pathways, and patient guides.
+            Search across medications, substances, diseases, drug classes, neurotransmitters, side effects, brain regions, pathways, and patient guides.
           </DialogDescription>
         </DialogHeader>
 
@@ -153,8 +187,9 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={onKeyDown}
             type="text"
-            placeholder="Search drugs, neurotransmitters, side effects, brain regions…"
+            placeholder="Search medications, substances, diseases, neurotransmitters…"
             className="h-14 flex-1 bg-transparent text-base outline-none placeholder:text-muted-foreground"
+            aria-label="Search KYP"
           />
           <button
             type="button"
@@ -175,7 +210,7 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
             <div className="px-4 py-12 text-center">
               <p className="text-sm font-medium text-foreground">No results for &ldquo;{query}&rdquo;</p>
               <p className="mt-1 text-xs text-muted-foreground">
-                Try a drug name, neurotransmitter, or symptom.
+                Try a medication name, substance, disease, or neurotransmitter.
               </p>
             </div>
           ) : (
