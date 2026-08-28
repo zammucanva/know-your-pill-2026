@@ -4,7 +4,6 @@ import { Network, Brain, Route, Activity } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
-import { cn } from "@/lib/utils";
 
 const roadmapItems = [
   {
@@ -43,8 +42,11 @@ export function RoadmapSection() {
       <Container>
         <Reveal>
           <div className="mb-16">
-            <p className="text-overline text-neural mb-3">In Development</p>
-            <h2 className="font-serif text-h1 font-semibold tracking-tight text-foreground max-w-2xl">
+            <p className="text-overline text-neural mb-4">In Development</p>
+            <h2
+              className="font-serif font-semibold tracking-[-0.03em] text-foreground max-w-2xl"
+              style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)" }}
+            >
               What is being built next
             </h2>
             <p className="mt-4 text-body text-muted-foreground max-w-xl leading-relaxed">
@@ -53,41 +55,39 @@ export function RoadmapSection() {
           </div>
         </Reveal>
 
-        {/* Vertical numbered index */}
-        <div className="divide-y divide-border/20">
+        {/* Numbered vertical index — no cards */}
+        <div>
           {roadmapItems.map((item, i) => {
             const Icon = item.icon;
             return (
               <Reveal key={item.title} delay={i * 0.08}>
-                <div className="group flex items-start gap-6 py-10 transition-all duration-300">
+                <div className="group flex items-start gap-6 py-10 border-b border-border/15 last:border-0">
                   {/* Large number */}
-                  <span className="font-serif text-4xl sm:text-5xl font-bold text-muted-foreground/15 tabular-nums leading-none shrink-0 w-16">
+                  <span
+                    className="font-serif font-bold text-muted-foreground/10 tabular-nums leading-none shrink-0"
+                    style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)" }}
+                  >
                     {String(i + 1).padStart(2, '0')}
                   </span>
 
                   {/* Content */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-neural-soft/30 text-neural">
-                        <Icon className="h-4 w-4" strokeWidth={1.8} />
-                      </span>
-                      <h3 className="font-serif text-xl sm:text-2xl font-semibold text-foreground tracking-tight">
+                      <Icon className="h-4 w-4 text-neural/50" strokeWidth={1.5} />
+                      <h3 className="font-serif text-lg sm:text-xl font-semibold text-foreground">
                         {item.title}
                       </h3>
-                      <span className="text-[0.6rem] font-semibold uppercase tracking-wide text-muted-foreground/60 border border-border/30 px-2 py-0.5 rounded-full">
+                      <span className="text-[0.6rem] uppercase tracking-wide text-muted-foreground/40 border border-border/20 px-1.5 py-0.5 rounded">
                         Preview
                       </span>
                     </div>
                     <p className="text-body-sm text-muted-foreground leading-relaxed max-w-2xl">
                       {item.description}
                     </p>
-                    <div className="mt-4 flex flex-wrap gap-1.5">
-                      {item.preview.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-[0.65rem] text-muted-foreground/50 font-medium"
-                        >
-                          {tag}{item.preview.indexOf(tag) < item.preview.length - 1 ? " · " : ""}
+                    <div className="mt-3 flex flex-wrap gap-x-2">
+                      {item.preview.map((tag, ti) => (
+                        <span key={tag} className="text-[0.65rem] text-muted-foreground/40 font-medium">
+                          {tag}{ti < item.preview.length - 1 ? " ·" : ""}
                         </span>
                       ))}
                     </div>

@@ -7,36 +7,22 @@ import { stats } from "@/lib/kyp/data";
 
 export function StatsSection() {
   return (
-    <Section spacing="tight" className="border-y border-border/30">
+    <Section spacing="tight">
       <Container>
         <Reveal>
-          <div className="grid grid-cols-2 lg:grid-cols-4">
+          <p className="text-center text-sm text-muted-foreground leading-relaxed">
             {stats.map((s, i) => (
-              <div
-                key={s.label}
-                className={cn(
-                  "px-6 py-8 text-center",
-                  i < stats.length - 1 && "border-r border-border/20",
-                  i >= 2 && "border-t lg:border-t-0 border-border/20",
-                  i === 1 && "border-t lg:border-t-0 border-border/20"
-                )}
-              >
-                <p className="font-serif text-3xl sm:text-4xl font-bold text-foreground tabular-nums tracking-tight">
-                  {s.value}
-                </p>
-                <p className="mt-1 text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-brand">
-                  {s.label}
-                </p>
-                <p className="mt-1.5 text-[0.7rem] text-muted-foreground leading-snug max-w-[180px] mx-auto">
-                  {s.description}
-                </p>
-              </div>
+              <React.Fragment key={s.label}>
+                <span className="font-serif text-lg font-bold text-foreground">{s.value}</span>{" "}
+                <span className="text-brand font-medium">{s.label}</span>
+                {i < stats.length - 1 && <span className="text-muted-foreground/30 mx-2">·</span>}
+              </React.Fragment>
             ))}
-          </div>
+          </p>
         </Reveal>
       </Container>
     </Section>
   );
 }
 
-import { cn } from "@/lib/utils";
+import * as React from "react";
