@@ -140,7 +140,7 @@ function BrainGraphic() {
       {/* Rotating ring */}
       <div
         className="absolute inset-6 rounded-full border border-dashed border-brand/30"
-        style={{ animation: "kyp-spin 24s linear infinite" }}
+        
       />
 
       {/* Inner card */}

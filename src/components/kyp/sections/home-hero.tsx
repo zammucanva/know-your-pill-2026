@@ -120,10 +120,9 @@ function BrainGraphic() {
       {/* Outer glow ring */}
       <div className="absolute inset-0 rounded-full bg-gradient-to-br from-brand/30 via-neural/20 to-emergency/15 blur-2xl" />
 
-      {/* Rotating ring */}
+      {/* Static decorative ring (was rotating — too distracting) */}
       <div
         className="absolute inset-6 rounded-full border border-dashed border-brand/30"
-        style={{ animation: "kyp-spin 24s linear infinite" }}
       />
 
       {/* Inner card */}
