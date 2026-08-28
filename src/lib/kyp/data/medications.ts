@@ -57,7 +57,7 @@ export const medicationClasses: MedicationClass[] = [
     description:
       "Explore antidepressants, antipsychotics, mood stabilisers, and anxiety medications through simplified neuroscience explanations.",
     icon: Brain,
-    href: "/psychiatric.html",
+    href: "#library",
     chips: ["Sertraline", "Fluoxetine", "Escitalopram", "Olanzapine", "Risperidone", "Lithium"],
     featured: true,
   },
@@ -68,7 +68,7 @@ export const medicationClasses: MedicationClass[] = [
     description:
       "Non-opioid analgesics, NSAIDs, opioid analgesics, and neuropathic pain agents — how they block pain signals.",
     icon: Pill,
-    href: "/pain-management.html",
+    href: "#library",
     chips: ["Paracetamol", "Ibuprofen", "Morphine", "Gabapentin"],
     comingSoon: true,
   },
@@ -79,7 +79,7 @@ export const medicationClasses: MedicationClass[] = [
     description:
       "Bacterial cell wall synthesis inhibitors, protein synthesis blockers, and DNA replication disruptors explained visually.",
     icon: Beaker,
-    href: "/antibiotics.html",
+    href: "#library",
     chips: ["Amoxicillin", "Azithromycin", "Ciprofloxacin"],
   },
   {
@@ -89,7 +89,7 @@ export const medicationClasses: MedicationClass[] = [
     description:
       "Understand how psychoactive substances alter brain chemistry, the neuroscience of addiction, withdrawal, and recovery.",
     icon: FlaskConical,
-    href: "/substance-use.html",
+    href: "#substances",
     chips: ["Alcohol", "Cannabis", "Opioids", "Cocaine", "Nicotine"],
     featured: true,
   },

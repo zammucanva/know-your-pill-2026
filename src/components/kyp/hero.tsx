@@ -68,7 +68,7 @@ export function Hero() {
                   onSubmit={(e) => {
                     e.preventDefault();
                     if (query.trim()) {
-                      window.location.href = `/medicine.html?med=${encodeURIComponent(query.trim())}`;
+                      window.location.href = '/drugs/sertraline';
                     }
                   }}
                 >

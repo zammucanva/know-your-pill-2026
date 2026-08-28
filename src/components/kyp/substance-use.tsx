@@ -82,11 +82,11 @@ export function SubstanceUse() {
         <div className="mt-10 rounded-2xl border border-border/70 bg-muted/30 p-5 text-center">
           <p className="text-sm text-muted-foreground">
             <span className="font-semibold text-foreground">Clinical modules:</span>{" "}
-            <a href="/acute-intoxication.html" className="text-brand underline-offset-4 hover:underline">
+            <a href="#substances" className="text-brand underline-offset-4 hover:underline">
               Acute Intoxication
             </a>{" "}
             ·{" "}
-            <a href="/withdrawal-state.html" className="text-brand underline-offset-4 hover:underline">
+            <a href="#substances" className="text-brand underline-offset-4 hover:underline">
               Withdrawal State
             </a>{" "}
             — ICD-10 aligned neuroscience explainers

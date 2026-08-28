@@ -49,7 +49,7 @@ export const substances: Substance[] = [
     description:
       "Cocaine blocks reuptake of dopamine, norepinephrine, and serotonin. The resulting synaptic flood produces intense euphoria followed by a severe crash.",
     neurotransmitter: "Dopamine · Norepinephrine",
-    href: "/cocaine.html",
+    href: "#substances",
     artwork: "/artwork/cocaine.png",
     artworkAlt: "Cocaine molecule — illustrating its blockade of monoamine transporters and dopaminergic reward pathway activation",
   },
@@ -61,7 +61,7 @@ export const substances: Substance[] = [
     description:
       "Nicotinic acetylcholine receptor activation in the VTA releases dopamine within seconds of inhalation. Dependence develops rapidly.",
     neurotransmitter: "Acetylcholine · Dopamine",
-    href: "/nicotine.html",
+    href: "#substances",
     artwork: "/artwork/nicotine.png",
     artworkAlt: "Nicotine molecule — illustrating its action on nicotinic acetylcholine receptors and dopaminergic reward activation",
   },
@@ -73,7 +73,7 @@ export const substances: Substance[] = [
     description:
       "Amphetamines reverse the dopamine and norepinephrine transporters, effectively pumping catecholamines into the synapse rather than clearing it.",
     neurotransmitter: "Dopamine · Norepinephrine",
-    href: "/amphetamine.html",
+    href: "#substances",
     artwork: "/artwork/amphetamine.png",
     artworkAlt: "Amphetamine molecule — illustrating its reversal of dopamine and norepinephrine transporters in the synaptic cleft",
   },
@@ -85,7 +85,7 @@ export const substances: Substance[] = [
     description:
       "These drugs are positive allosteric modulators at GABA-A receptors. They produce anxiolysis and sedation; abrupt withdrawal can cause seizures.",
     neurotransmitter: "GABA",
-    href: "/benzodiazepines.html",
+    href: "#substances",
     artwork: "/artwork/diazepam.png",
     artworkAlt: "Diazepam molecule — the prototypical benzodiazepine, illustrating its positive allosteric modulation of GABA-A receptors",
   },
@@ -97,7 +97,7 @@ export const substances: Substance[] = [
     description:
       "Barbiturates directly agonise GABA-A receptors and have a notoriously narrow therapeutic index. Once common as anaesthetics, they carry high overdose risk.",
     neurotransmitter: "GABA",
-    href: "/barbiturate.html",
+    href: "#substances",
     artwork: "/artwork/barbiturate.png",
     artworkAlt: "Phenobarbital molecule — the prototypical barbiturate, illustrating its direct GABA-A receptor agonism and CNS depression",
   },
@@ -109,7 +109,7 @@ export const substances: Substance[] = [
     description:
       "These lipophilic solvents cross the blood-brain barrier within seconds. Intoxication is brief; chronic use causes irreversible neurotoxicity.",
     neurotransmitter: "GABA · NMDA",
-    href: "/inhalants.html",
+    href: "#substances",
     artwork: "/artwork/inhalants.png",
     artworkAlt: "Toluene molecule — a common inhalant solvent, illustrating its lipophilic crossing of the blood-brain barrier and neurotoxic effects",
   },
@@ -121,7 +121,7 @@ export const substances: Substance[] = [
     description:
       "LSD is a partial agonist at 5-HT2A serotonin receptors. A single dose can alter perception, mood, and sense of self for 8 to 12 hours.",
     neurotransmitter: "Serotonin",
-    href: "/lsd.html",
+    href: "#substances",
     artwork: "/artwork/lsd.png",
     artworkAlt: "Lysergic acid diethylamide molecule — illustrating its partial agonism at 5-HT2A serotonin receptors and hallucinogenic effects",
   },
@@ -133,7 +133,7 @@ export const substances: Substance[] = [
     description:
       "PCP blocks NMDA glutamate receptors, producing dissociation, analgesia, and unpredictable behaviour. It was abandoned as an anaesthetic for this reason.",
     neurotransmitter: "Glutamate (NMDA)",
-    href: "/pcp.html",
+    href: "#substances",
     artwork: "/artwork/pcp.png",
     artworkAlt: "Phencyclidine molecule — illustrating its NMDA receptor antagonism and dissociative effects on glutamatergic neurotransmission",
   },
@@ -145,7 +145,7 @@ export const substances: Substance[] = [
     description:
       "Cessation of chronic substance use produces a rebound syndrome driven by receptor downregulation and neurotransmitter imbalance. Timelines and severity vary by substance.",
     neurotransmitter: "Multi-system",
-    href: "/withdrawal-state.html",
+    href: "#substances",
     artwork: "/artwork/withdrawal.png",
     artworkAlt: "Neurotransmitter imbalance diagram — illustrating the GABA decrease and glutamate increase during substance withdrawal",
   },
