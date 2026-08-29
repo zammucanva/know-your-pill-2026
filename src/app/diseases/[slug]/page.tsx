@@ -22,6 +22,7 @@ import { LearningPath } from "@/components/kyp/ui/learning-path";
 
 import { getDiseaseBySlug, getAllDiseaseSlugs } from "@/lib/kyp/data/diseases";
 import type { Disease } from "@/lib/kyp/data/disease-types";
+import { PageTracker } from "@/components/kyp/ui/page-tracker";
 
 import { Pill, HeartPulse, Brain, Activity, ClipboardCheck, Stethoscope, AlertTriangle, BookOpen, FileText, Globe, MapPin } from "lucide-react";
 
@@ -70,6 +71,12 @@ export default async function DiseasePage({ params }: PageProps) {
       <div className="fixed right-4 top-20 z-30 hidden sm:block">
         <GuidedLearningToggle />
       </div>
+      <PageTracker
+        type="disease"
+        slug={disease.slug}
+        title={disease.name}
+        variant="floating"
+      />
 
       <main className="flex-1 lg:pl-52 xl:pl-56">
         {/* ===== BREADCRUMB ===== */}

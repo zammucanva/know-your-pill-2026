@@ -51,6 +51,7 @@ import { Timeline } from "@/components/kyp/ui/timeline";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
+import { PageTracker } from "@/components/kyp/ui/page-tracker";
 
 import { getDrugBySlug, getAllDrugSlugs } from "@/lib/kyp/data";
 import type { NavItem } from "@/lib/kyp/use-scroll-spy";
@@ -159,6 +160,14 @@ export default async function DrugPage({ params }: PageProps) {
         <GuidedLearningToggle />
       </div>
       <StickyLearningNav items={navItems} drugSlug={drug.slug} />
+
+      {/* Progress tracking + bookmark button (invisible, fire-and-forget) */}
+      <PageTracker
+        type="drug"
+        slug={drug.slug}
+        title={drug.genericName}
+        variant="floating"
+      />
 
       <main className="flex-1 lg:pl-52 xl:pl-56">
         {/* ===== BREADCRUMB ===== */}

@@ -27,7 +27,9 @@ import {
 } from "@/components/ui/dialog";
 import { searchIndex, searchTypeLabels } from "@/lib/kyp/data";
 import type { SearchableItem } from "@/lib/kyp/data";
+import { useSearchHistory } from "@/lib/hooks/use-search-history";
 import { cn } from "@/lib/utils";
+import { Clock, Trash2 } from "lucide-react";
 
 /**
  * SearchModal — Spotlight-style universal search.
@@ -108,6 +110,7 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
   const [activeIndex, setActiveIndex] = React.useState(0);
   const inputRef = React.useRef<HTMLInputElement>(null);
   const listRef = React.useRef<HTMLDivElement>(null);
+  const { history, recordSearch, clearHistory } = useSearchHistory(5);
 
   // Filter + rank results
   const results = React.useMemo(() => {
@@ -145,6 +148,14 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
 
   const go = (item: SearchableItem) => {
     onOpenChange(false);
+    // Record search history with the clicked result
+    if (query.trim()) {
+      recordSearch(query.trim(), {
+        type: item.type,
+        slug: item.id,
+        title: item.title,
+      });
+    }
     if (item.href.startsWith("#")) {
       // In-page anchor
       document.querySelector(item.href)?.scrollIntoView({ behavior: "smooth" });
@@ -152,6 +163,21 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
       // Internal route — use Next.js router for client-side navigation
       router.push(item.href);
     }
+  };
+
+  // Navigate to a recent search entry
+  const goToHistory = (entry: { query: string; resultType?: string | null; resultSlug?: string | null; resultTitle?: string | null }) => {
+    if (entry.resultSlug && entry.resultType) {
+      // Find the matching search index item to get its href
+      const item = searchIndex.find((s) => s.id === entry.resultSlug);
+      if (item) {
+        go(item);
+        return;
+      }
+    }
+    // Otherwise just fill the search box with the query
+    setQuery(entry.query);
+    inputRef.current?.focus();
   };
 
   const onKeyDown = (e: React.KeyboardEvent) => {
@@ -215,6 +241,43 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
             </div>
           ) : (
             <>
+              {/* Recent searches — shown when query is empty and user has history */}
+              {!query && history.length > 0 && (
+                <div className="mb-2">
+                  <div className="flex items-center justify-between px-3 py-2">
+                    <p className="text-overline text-muted-foreground flex items-center gap-1.5">
+                      <Clock className="h-3 w-3" />
+                      Recent
+                    </p>
+                    <button
+                      type="button"
+                      onClick={clearHistory}
+                      className="flex items-center gap-1 text-[0.65rem] text-muted-foreground/50 hover:text-muted-foreground"
+                    >
+                      <Trash2 className="h-2.5 w-2.5" />
+                      Clear
+                    </button>
+                  </div>
+                  {history.map((entry, idx) => (
+                    <button
+                      key={entry.id}
+                      type="button"
+                      onClick={() => goToHistory(entry)}
+                      className="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-sm text-foreground transition-colors hover:bg-accent/60"
+                    >
+                      <Clock className="h-3 w-3 shrink-0 text-muted-foreground/40" />
+                      <span className="truncate">{entry.query}</span>
+                      {entry.resultTitle && (
+                        <span className="ml-auto truncate text-[0.65rem] text-muted-foreground/50">
+                          → {entry.resultTitle}
+                        </span>
+                      )}
+                    </button>
+                  ))}
+                  <div className="mx-3 my-2 border-t border-border/40" />
+                </div>
+              )}
+
               {!query && (
                 <p className="px-3 py-2 text-overline text-muted-foreground">
                   Suggested searches

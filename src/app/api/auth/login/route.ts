@@ -17,7 +17,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const user = await db.user.findUnique({ where: { email } });
+    // Normalize email to lowercase for lookup
+    const normalizedEmail = email.toLowerCase().trim();
+
+    const user = await db.user.findUnique({ where: { email: normalizedEmail } });
     if (!user) {
       return NextResponse.json(
         { error: "No account found with this email" },

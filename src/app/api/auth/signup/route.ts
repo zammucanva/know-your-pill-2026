@@ -27,8 +27,20 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { error: "Please enter a valid email address" },
+        { status: 400 }
+      );
+    }
+
+    // Normalize email to lowercase
+    const normalizedEmail = email.toLowerCase().trim();
+
     // Check if user already exists
-    const existing = await db.user.findUnique({ where: { email } });
+    const existing = await db.user.findUnique({ where: { email: normalizedEmail } });
     if (existing) {
       return NextResponse.json(
         { error: "An account with this email already exists" },
@@ -43,7 +55,7 @@ export async function POST(req: NextRequest) {
     const user = await db.user.create({
       data: {
         name,
-        email,
+        email: normalizedEmail,
         passwordHash,
         role: "student", // default — user selects their actual role in onboarding
       },

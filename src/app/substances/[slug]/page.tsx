@@ -16,6 +16,7 @@ import { Callout } from "@/components/kyp/ui/callout";
 import { getSubstancePage, getAllSubstanceSlugs } from "@/lib/kyp/data/substances";
 import { drugClasses } from "@/lib/kyp/data";
 import { AlertTriangle, Activity, HeartPulse } from "lucide-react";
+import { PageTracker } from "@/components/kyp/ui/page-tracker";
 
 type Slug = string;
 
@@ -55,6 +56,12 @@ export default async function SubstancePage({ params }: PageProps) {
     <div className="flex min-h-screen flex-col">
       <Navbar />
       <FloatingSearch variant="floating" />
+      <PageTracker
+        type="substance"
+        slug={substance.slug}
+        title={substance.name}
+        variant="floating"
+      />
       <main className="flex-1 pt-16">
         {/* ===== BREADCRUMB ===== */}
         <div className="border-b border-border/40 bg-muted/20">
