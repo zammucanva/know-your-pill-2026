@@ -347,7 +347,7 @@
     text-transform: uppercase;
   }
 
-  /* Ambient background — light mode */
+  /* Ambient background — light mode: one intentional teal anchor, not three generic blobs */
   body::before {
     content: "";
     position: fixed;
@@ -355,15 +355,11 @@
     z-index: -1;
     pointer-events: none;
     background:
-      radial-gradient(circle at 12% 8%, oklch(0.55 0.11 195 / 0.08), transparent 28%),
-      radial-gradient(circle at 88% 12%, oklch(0.62 0.16 280 / 0.06), transparent 26%),
-      radial-gradient(circle at 78% 92%, oklch(0.6 0.22 25 / 0.05), transparent 28%);
+      radial-gradient(ellipse 80% 50% at 50% 0%, oklch(0.55 0.11 195 / 0.04), transparent 60%);
   }
   .dark body::before {
     background:
-      radial-gradient(circle at 12% 8%, oklch(0.72 0.13 190 / 0.18), transparent 30%),
-      radial-gradient(circle at 88% 12%, oklch(0.72 0.18 280 / 0.14), transparent 28%),
-      radial-gradient(circle at 76% 88%, oklch(0.7 0.22 25 / 0.08), transparent 30%);
+      radial-gradient(ellipse 80% 50% at 50% 0%, oklch(0.72 0.13 190 / 0.10), transparent 60%);
   }
 }
 
@@ -469,7 +465,7 @@
 
   /* Text gradient (brand → neural) */
   .kyp-text-gradient {
-    background: linear-gradient(120deg, var(--brand-ink), var(--brand), var(--neural));
+    background: linear-gradient(105deg, oklch(0.45 0.12 195), oklch(0.50 0.14 230), oklch(0.55 0.16 280));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
