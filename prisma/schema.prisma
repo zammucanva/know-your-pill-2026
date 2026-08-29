@@ -1,4 +1,5 @@
-// KYP Prisma Schema — User authentication & onboarding
+// KYP Prisma Schema — User authentication, onboarding, progress tracking,
+// bookmarks, and search history.
 
 generator client {
   provider = "prisma-client-js"
@@ -18,4 +19,62 @@ model User {
   role          String    @default("student") // patient | student | medical_resident | medical_student | psychiatrist (legacy: mbbs_student | exam_aspirant | psychiatry_resident | healthcare_professional)
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
+
+  progress      Progress[]
+  bookmarks     Bookmark[]
+  searchHistory SearchHistory[]
+}
+
+/// Tracks when a user last visited a drug, substance, or disease page.
+/// Each (userId, slug, type) combination is unique — revisiting a page
+/// updates lastVisitedAt rather than creating a new row.
+model Progress {
+  id            String   @id @default(cuid())
+  userId        String
+  /// "drug" | "substance" | "disease"
+  type          String
+  /// URL slug, e.g. "sertraline", "alcohol", "major-depressive-disorder"
+  slug          String
+  /// Human-readable title for display without joining to content data
+  title         String
+  lastVisitedAt DateTime @default(now())
+  /// How many times the user has visited this page (incremented on each visit)
+  visitCount    Int      @default(1)
+
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, type, slug])
+  @@index([userId, lastVisitedAt])
+}
+
+/// User-saved bookmarks for drugs, substances, diseases, or any content page.
+model Bookmark {
+  id        String   @id @default(cuid())
+  userId    String
+  type      String
+  slug      String
+  title     String
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, type, slug])
+  @@index([userId, createdAt])
+}
+
+/// Recent search queries for autocomplete / "recent searches" display.
+/// Auto-trimmed to ~50 entries per user (oldest deleted when limit exceeded).
+model SearchHistory {
+  id        String   @id @default(cuid())
+  userId    String
+  query     String
+  /// What the user clicked on after searching (optional — null if they didn't click)
+  resultType String?
+  resultSlug String?
+  resultTitle String?
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
 }

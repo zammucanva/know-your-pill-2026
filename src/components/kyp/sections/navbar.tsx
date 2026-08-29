@@ -108,10 +108,13 @@ export function Navbar() {
           {/* Auth button */}
           {user ? (
             <div className="hidden items-center gap-2 sm:flex">
-              <span className="flex items-center gap-1.5 rounded-full border border-border/60 bg-muted/40 px-3 py-1.5 text-xs font-medium text-foreground">
+              <Link
+                href="/dashboard"
+                className="flex items-center gap-1.5 rounded-full border border-border/60 bg-muted/40 px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+              >
                 <UserIcon className="h-3 w-3 text-brand" />
                 {user.name}
-              </span>
+              </Link>
               <Button
                 variant="ghost"
                 size="icon"
@@ -192,6 +195,14 @@ export function Navbar() {
                     <UserIcon className="h-3 w-3 text-brand" />
                     Signed in as {user.name}
                   </div>
+                  <Link
+                    href="/dashboard"
+                    onClick={() => setOpen(false)}
+                    className="flex w-full items-center gap-2 rounded-md px-3 py-2.5 text-body-sm font-medium text-foreground hover:bg-accent/60"
+                  >
+                    <UserIcon className="h-4 w-4" />
+                    My Dashboard
+                  </Link>
                   <button
                     onClick={() => { setOpen(false); handleLogout(); }}
                     className="flex w-full items-center gap-2 rounded-md px-3 py-2.5 text-body-sm font-medium text-muted-foreground hover:bg-accent/60 hover:text-foreground"
