@@ -484,7 +484,7 @@ export default function WelcomePage() {
                   {roles.find((r) => r.id === selectedRole)?.label || "Your role"}
                 </Badge>
               )}
-              <Button onClick={() => router.push("/")} className="mt-8 w-full rounded-xl" size="lg">
+              <Button onClick={() => router.push("/enter")} className="mt-8 w-full rounded-xl" size="lg">
                 Enter KYP <ArrowRight className="ml-1.5 h-4 w-4" />
               </Button>
             </div>
