@@ -1,0 +1,11 @@
+f7d4c6ace13d23db7b7feec0916510ef  src/components/kyp/sections/home-hero.tsx
+a9b8f164e854a2540d4c6aa7560f8916  src/components/kyp/sections/stats-section.tsx
+b78063e75008c80bd2099c92a278fac9  src/components/kyp/sections/medication-library-section.tsx
+7cb611e754ad4a76e95128db476412b3  src/components/kyp/sections/substance-use-section.tsx
+e6c42130dd4c93a48037885dc79667a1  src/components/kyp/sections/timeline-section.tsx
+52e55d09f6290ef9057cf5e0b443085b  src/components/kyp/sections/neuroarcade-section.tsx
+05866fe0948244df2c46c6ba84a3efa5  src/components/kyp/sections/roadmap-section.tsx
+340ed854e42f29a5689f245910967da0  src/components/kyp/sections/faq-section.tsx
+1cc7634b7eac7eba8a48c5bfa4751f9e  src/components/kyp/sections/emergency-section.tsx
+e003796e162ec892963030bebdb5db3d  src/components/kyp/sections/footer.tsx
+b0da6e0c0892f234803307f07433a21c  src/components/kyp/sections/navbar.tsx
