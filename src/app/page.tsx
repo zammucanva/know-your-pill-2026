@@ -1,32 +1,12 @@
 import { Navbar } from "@/components/kyp/sections/navbar";
-import { HomeHero } from "@/components/kyp/sections/home-hero";
-import { StatsSection } from "@/components/kyp/sections/stats-section";
-import { MedicationLibrarySection } from "@/components/kyp/sections/medication-library-section";
-import { SubstanceUseSection } from "@/components/kyp/sections/substance-use-section";
-import { TimelineSection } from "@/components/kyp/sections/timeline-section";
-import { NeuroArcadeSection } from "@/components/kyp/sections/neuroarcade-section";
-import { RoadmapSection } from "@/components/kyp/sections/roadmap-section";
-import { FaqSection } from "@/components/kyp/sections/faq-section";
-import { EmergencySection } from "@/components/kyp/sections/emergency-section";
-import { Footer } from "@/components/kyp/sections/footer";
+import { HomeContent } from "@/components/kyp/home-content";
 import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
-      <main className="flex-1">
-        <HomeHero />
-        <StatsSection />
-        <MedicationLibrarySection />
-        <SubstanceUseSection />
-        <TimelineSection />
-        <NeuroArcadeSection />
-        <RoadmapSection />
-        <FaqSection />
-        <EmergencySection />
-      </main>
-      <Footer />
+      <HomeContent />
       <FloatingSearch variant="floating" />
     </div>
   );
