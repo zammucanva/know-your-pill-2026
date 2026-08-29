@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
-// Mark as static for GitHub Pages export (API routes are not functional in static export)
-export const dynamic = "force-static";
+// This route must be dynamic — it reads/writes cookies.
+export const dynamic = "force-dynamic";
 import { cookies } from "next/headers";
 
 export async function GET() {
