@@ -1,0 +1,987 @@
+     1→import { notFound } from "next/navigation";
+     2→import Link from "next/link";
+     3→import type { Metadata } from "next";
+     4→import Image from "next/image";
+     5→
+     6→import { Navbar } from "@/components/kyp/sections/navbar";
+     7→import { Footer } from "@/components/kyp/sections/footer";
+     8→import { EmergencySection } from "@/components/kyp/sections/emergency-section";
+     9→import { FloatingSearch } from "@/components/kyp/ui/floating-search";
+    10→import { Container } from "@/components/kyp/ui/container";
+    11→import { Section } from "@/components/kyp/ui/section";
+    12→import { SectionHeader } from "@/components/kyp/ui/section-header";
+    13→import { Badge } from "@/components/kyp/ui/badge";
+    14→import { Callout } from "@/components/kyp/ui/callout";
+    15→
+    16→import { getSubstancePage, getAllSubstanceSlugs } from "@/lib/kyp/data/substances";
+    17→import { drugClasses } from "@/lib/kyp/data";
+    18→import { AlertTriangle, Activity, HeartPulse } from "lucide-react";
+    19→import { PageTracker } from "@/components/kyp/ui/page-tracker";
+    20→
+    21→type Slug = string;
+    22→
+    23→export function generateStaticParams(): { slug: Slug }[] {
+    24→  return getAllSubstanceSlugs().map((slug) => ({ slug }));
+    25→}
+    26→
+    27→export async function generateMetadata({
+    28→  params,
+    29→}: {
+    30→  params: Promise<{ slug: Slug }>;
+    31→}): Promise<Metadata> {
+    32→  const { slug } = await params;
+    33→  const substance = getSubstancePage(slug);
+    34→  if (!substance) return { title: "Substance not found · Know Your Pill" };
+    35→
+    36→  return {
+    37→    title: `${substance.disorderName} · Know Your Pill`,
+    38→    description: substance.tagline,
+    39→    authors: [{ name: "Zamaan Ali Shamji" }],
+    40→    openGraph: { title: substance.disorderName, description: substance.tagline, type: "article" },
+    41→  };
+    42→}
+    43→
+    44→interface PageProps {
+    45→  params: Promise<{ slug: Slug }>;
+    46→}
+    47→
+    48→export default async function SubstancePage({ params }: PageProps) {
+    49→  const { slug } = await params;
+    50→  const substance = getSubstancePage(slug);
+    51→  if (!substance) notFound();
+    52→
+    53→  const drugClass = drugClasses[substance.drugClass];
+    54→
+    55→  return (
+    56→    <div className="flex min-h-screen flex-col">
+    57→      <Navbar />
+    58→      <FloatingSearch variant="floating" />
+    59→      <PageTracker
+    60→        type="substance"
+    61→        slug={substance.slug}
+    62→        title={substance.name}
+    63→        variant="floating"
+    64→      />
+    65→      <main className="flex-1 pt-16">
+    66→        {/* ===== BREADCRUMB ===== */}
+    67→        <div className="border-b border-border/40 bg-muted/20">
+    68→          <Container>
+    69→            <nav className="flex items-center gap-2 py-2 text-xs text-muted-foreground" aria-label="Breadcrumb">
+    70→              <Link href="/" className="hover:text-brand">Home</Link>
+    71→              <span aria-hidden>/</span>
+    72→              <Link href="/#substances" className="hover:text-brand">Substance Use</Link>
+    73→              <span aria-hidden>/</span>
+    74→              <span className="font-medium text-foreground">{substance.name}</span>
+    75→            </nav>
+    76→          </Container>
+    77→        </div>
+    78→
+    79→        {/* ===== HERO ===== */}
+    80→        <section id="top" className="relative overflow-hidden pt-12 pb-8">
+    81→          <div className="pointer-events-none absolute inset-0 kyp-grid-bg opacity-30" aria-hidden />
+    82→          <Container className="relative">
+    83→            <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+    84→              <Badge variant="brand" size="sm">{drugClass?.name}</Badge>
+    85→              <span>{substance.neurotransmitter}</span>
+    86→            </div>
+    87→            <h1 className="mt-3 text-display text-foreground">{substance.disorderName}</h1>
+    88→            <p className="mt-3 max-w-2xl text-base text-foreground/80 leading-relaxed">{substance.tagline}</p>
+    89→            <p className="mt-2 max-w-2xl text-sm text-muted-foreground leading-relaxed">{substance.summary}</p>
+    90→            {substance.artwork && (
+    91→              <div className="mt-6 flex justify-center">
+    92→                <div className="relative h-40 w-40">
+    93→                  <Image src={substance.artwork} alt={substance.artworkAlt || substance.name} fill className="object-contain" sizes="160px" />
+    94→                </div>
+    95→              </div>
+    96→            )}
+    97→          </Container>
+    98→        </section>
+    99→
+   100→        {/* ===== OVERVIEW ===== */}
+   101→        {substance.overview && (
+   102→          <Section id="overview">
+   103→            <Container>
+   104→              <SectionHeader eyebrow="Overview" title={substance.overview.title} tone="brand" />
+   105→              <p className="mt-4 text-sm text-muted-foreground">{substance.overview.description}</p>
+   106→
+   107→              {substance.overview.keyConcepts && (
+   108→                <div className="mt-4 flex flex-wrap gap-2">
+   109→                  {substance.overview.keyConcepts.map((c) => (
+   110→                    <Badge key={c} variant="outline" size="md">{c}</Badge>
+   111→                  ))}
+   112→                </div>
+   113→              )}
+   114→
+   115→              {substance.overview.mechanisms && (
+   116→                <div className="mt-6 grid gap-3 sm:grid-cols-3">
+   117→                  {substance.overview.mechanisms.map((m, i) => (
+   118→                    <div key={i} className="rounded-lg border border-border/50 p-4">
+   119→                      <p className="text-sm font-semibold text-foreground">{m.title}</p>
+   120→                      <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{m.description}</p>
+   121→                    </div>
+   122→                  ))}
+   123→                </div>
+   124→              )}
+   125→            </Container>
+   126→          </Section>
+   127→        )}
+   128→
+   129→        {/* ===== CLASSIFICATION ===== */}
+   130→        {substance.classifications && substance.classifications.length > 0 && (
+   131→          <Section id="classification" className="bg-muted/20">
+   132→            <Container>
+   133→              <SectionHeader eyebrow="Classification" title="Classification Systems" tone="brand" />
+   134→              <div className="mt-8 space-y-6">
+   135→                {substance.classifications.map((cls, i) => (
+   136→                  <div key={i}>
+   137→                    <h3 className="text-h3">{cls.title}</h3>
+   138→                    <p className="mt-1 text-sm text-muted-foreground">{cls.description}</p>
+   139→                    {cls.types && (
+   140→                      <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+   141→                        {cls.types.map((type, j) => (
+   142→                          <div key={j} className="rounded-lg border border-border/50 p-4">
+   143→                            <div className="flex items-baseline gap-2">
+   144→                              {type.symbol && (
+   145→                                <span className="font-serif text-2xl text-brand">{type.symbol}</span>
+   146→                              )}
+   147→                              <p className="text-sm font-semibold text-foreground">{type.name}</p>
+   148→                            </div>
+   149→                            {type.description && (
+   150→                              <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">{type.description}</p>
+   151→                            )}
+   152→                            <ul className="mt-2 space-y-1">
+   153→                              {type.features.map((f, k) => (
+   154→                                <li key={k} className="flex items-start gap-1.5 text-xs text-muted-foreground">
+   155→                                  <span className="mt-1 h-1 w-1 shrink-0 rounded-full bg-brand" />
+   156→                                  {f}
+   157→                                </li>
+   158→                              ))}
+   159→                            </ul>
+   160→                          </div>
+   161→                        ))}
+   162→                      </div>
+   163→                    )}
+   164→                  </div>
+   165→                ))}
+   166→              </div>
+   167→            </Container>
+   168→          </Section>
+   169→        )}
+   170→
+   171→        {/* ===== SCREENING TOOLS ===== */}
+   172→        {substance.screeningTools && substance.screeningTools.length > 0 && (
+   173→          <Section id="screening">
+   174→            <Container>
+   175→              <SectionHeader eyebrow="Screening" title="Screening Tools" tone="brand" />
+   176→              <div className="mt-8 space-y-4">
+   177→                {substance.screeningTools.map((tool, i) => (
+   178→                  <div key={i} className="rounded-lg border border-border/50 p-4">
+   179→                    <h3 className="text-h3">{tool.name}</h3>
+   180→                    <p className="mt-1 text-sm text-muted-foreground">{tool.description}</p>
+   181→                    <div className="mt-4 space-y-2">
+   182→                      {tool.questions.map((q, j) => (
+   183→                        <div key={`q-${i}-${j}`} className="rounded-md border border-border/40 bg-muted/20 p-3">
+   184→                          <div className="flex items-baseline gap-2">
+   185→                            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand text-primary-foreground font-mono text-xs font-bold">{j + 1}</span>
+   186→                            <p className="text-sm font-medium text-foreground">{q.text}</p>
+   187→                          </div>
+   188→                          <p className="mt-1.5 pl-8 text-xs italic text-muted-foreground">{q.meaning}</p>
+   189→                        </div>
+   190→                      ))}
+   191→                    </div>
+   192→                    <p className="mt-3 text-xs font-medium text-brand">{tool.scoring}</p>
+   193→                  </div>
+   194→                ))}
+   195→              </div>
+   196→            </Container>
+   197→          </Section>
+   198→        )}
+   199→
+   200→        {/* ===== SEVERITY SCALE ===== */}
+   201→        {substance.severityScale && substance.severityScale.length > 0 && (
+   202→          <Section id="severity" className="bg-muted/20">
+   203→            <Container>
+   204→              <SectionHeader eyebrow="Severity Scale" title="Blood Alcohol Concentration" tone="brand" />
+   205→              <div className="mt-8 overflow-x-auto kyp-scroll">
+   206→                <table className="w-full border-collapse text-sm">
+   207→                  <thead>
+   208→                    <tr className="border-b border-border/70">
+   209→                      <th className="py-2 pr-3 text-left text-overline text-muted-foreground">Level</th>
+   210→                      <th className="py-2 px-3 text-left text-overline text-muted-foreground">BAC</th>
+   211→                      <th className="py-2 px-3 text-left text-overline text-muted-foreground">Effects</th>
+   212→                    </tr>
+   213→                  </thead>
+   214→                  <tbody>
+   215→                    {substance.severityScale.map((row, i) => (
+   216→                      <tr key={i} className="border-b border-border/40">
+   217→                        <td className="py-2 pr-3 text-xs font-semibold">{row.level}</td>
+   218→                        <td className="py-2 px-3 font-mono text-xs">{row.value || "—"}</td>
+   219→                        <td className="py-2 px-3 text-xs text-muted-foreground">{row.effects}</td>
+   220→                      </tr>
+   221→                    ))}
+   222→                  </tbody>
+   223→                </table>
+   224→              </div>
+   225→            </Container>
+   226→          </Section>
+   227→        )}
+   228→
+   229→        {/* ===== PREPARATIONS (cannabis-specific) ===== */}
+   230→        {substance.preparations && substance.preparations.length > 0 && (
+   231→          <Section id="preparations">
+   232→            <Container>
+   233→              <SectionHeader eyebrow="Substance Forms" title="Cannabis Preparations" tone="brand" />
+   234→              <p className="mt-4 text-sm text-foreground/80">Different forms of cannabis with varying THC content and potency.</p>
+   235→              <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+   236→                {substance.preparations.map((p, i) => (
+   237→                  <div key={i} className="rounded-lg border border-border/50 p-4">
+   238→                    <p className="text-sm font-semibold text-foreground">{p.name}</p>
+   239→                    <span className="mt-1 inline-block rounded-full border border-brand/30 bg-brand-soft/40 px-2 py-0.5 text-[0.65rem] font-medium text-brand">{p.thc}</span>
+   240→                    <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{p.description}</p>
+   241→                  </div>
+   242→                ))}
+   243→              </div>
+   244→            </Container>
+   245→          </Section>
+   246→        )}
+   247→
+   248→        {/* ===== NEUROBIOLOGY ===== */}
+   249→        {substance.neurobiology && (
+   250→          <Section id="neurobiology">
+   251→            <Container>
+   252→              <SectionHeader eyebrow="Neurobiology" title="How It Works in the Brain" tone="neural" />
+   253→              <p className="mt-4 text-sm text-foreground/90">{substance.neurobiology.summary}</p>
+   254→              <div className="mt-6 grid gap-3 sm:grid-cols-3">
+   255→                {substance.neurobiology.mechanisms.map((m, i) => (
+   256→                  <div key={i} className="rounded-lg border border-border/50 p-4">
+   257→                    <p className="text-sm font-semibold text-foreground">{m.title}</p>
+   258→                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{m.description}</p>
+   259→                  </div>
+   260→                ))}
+   261→              </div>
+   262→              {substance.neurobiology.brainRegions && (
+   263→                <div className="mt-4">
+   264→                  <p className="text-overline text-muted-foreground">Brain Regions</p>
+   265→                  <div className="mt-2 flex flex-wrap gap-1.5">
+   266→                    {substance.neurobiology.brainRegions.map((r) => (
+   267→                      <Badge key={r} variant="neural" size="sm">{r}</Badge>
+   268→                    ))}
+   269→                  </div>
+   270→                </div>
+   271→              )}
+   272→
+   273→              {substance.neurobiology.deepDive && (
+   274→                <div className="mt-6 rounded-lg border border-border/50 p-5">
+   275→                  <div className="flex items-baseline justify-between gap-2">
+   276→                    <h3 className="text-h3">{substance.neurobiology.deepDive.cardTitle}</h3>
+   277→                    <span className="text-xs text-muted-foreground">{substance.neurobiology.deepDive.cardTagline}</span>
+   278→                  </div>
+   279→                  <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{substance.neurobiology.deepDive.summary}</p>
+   280→
+   281→                  {substance.neurobiology.deepDive.mechanismNotes.length > 0 && (
+   282→                    <div className="mt-4">
+   283→                      <p className="text-overline text-muted-foreground">Mechanism</p>
+   284→                      <ul className="mt-1.5 space-y-1">
+   285→                        {substance.neurobiology.deepDive.mechanismNotes.map((n, i) => (
+   286→                          <li key={i} className="flex items-start gap-1.5 text-xs text-foreground/80">
+   287→                            <Activity className="mt-0.5 h-3 w-3 shrink-0 text-neural" />
+   288→                            {n}
+   289→                          </li>
+   290→                        ))}
+   291→                      </ul>
+   292→                    </div>
+   293→                  )}
+   294→
+   295→                  {substance.neurobiology.deepDive.dangerCallout && (
+   296→                    <div className="mt-4">
+   297→                      <Callout variant="danger" title={substance.neurobiology.deepDive.dangerCallout.title}>
+   298→                        <p className="text-xs text-foreground/80">{substance.neurobiology.deepDive.dangerCallout.description}</p>
+   299→                      </Callout>
+   300→                    </div>
+   301→                  )}
+   302→                </div>
+   303→              )}
+   304→            </Container>
+   305→          </Section>
+   306→        )}
+   307→
+   308→        {/* ===== INTOXICATION ===== */}
+   309→        {substance.intoxication && (
+   310→          <Section id="intoxication" className="bg-muted/20">
+   311→            <Container>
+   312→              <SectionHeader eyebrow="Intoxication" title="Acute Intoxication" tone="emergency" />
+   313→              <p className="mt-4 text-sm text-foreground/90">{substance.intoxication.summary}</p>
+   314→              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+   315→                <div>
+   316→                  <p className="text-overline text-muted-foreground">Clinical Features</p>
+   317→                  <ul className="mt-2 space-y-1">
+   318→                    {substance.intoxication.clinicalFeatures.map((f, i) => (
+   319→                      <li key={i} className="flex items-start gap-1.5 text-sm text-foreground/80">
+   320→                        <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-warning" />
+   321→                        {f.symptom}
+   322→                      </li>
+   323→                    ))}
+   324→                  </ul>
+   325→                </div>
+   326→                {substance.intoxication.mechanisms && (
+   327→                  <div>
+   328→                    <p className="text-overline text-muted-foreground">Mechanisms</p>
+   329→                    <ul className="mt-2 space-y-2">
+   330→                      {substance.intoxication.mechanisms.map((m, i) => (
+   331→                        <li key={i} className="text-xs text-muted-foreground leading-relaxed">
+   332→                          {m}
+   333→                        </li>
+   334→                      ))}
+   335→                    </ul>
+   336→                  </div>
+   337→                )}
+   338→              </div>
+   339→
+   340→              {substance.intoxication.whenToSeekHelp && substance.intoxication.whenToSeekHelp.length > 0 && (
+   341→                <div className="mt-6">
+   342→                  <Callout variant="warning" title="When to Seek Help">
+   343→                    <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">
+   344→                      {substance.intoxication.whenToSeekHelp.map((w, i) => (
+   345→                        <li key={i} className="flex items-start gap-1.5 text-xs text-foreground/80">
+   346→                          <AlertTriangle className="mt-0.5 h-3 w-3 shrink-0 text-emergency" />
+   347→                          {w}
+   348→                        </li>
+   349→                      ))}
+   350→                    </ul>
+   351→                  </Callout>
+   352→                </div>
+   353→              )}
+   354→
+   355→              {substance.intoxication.emergencyCallout && (
+   356→                <div className="mt-4">
+   357→                  <Callout variant="danger" title={substance.intoxication.emergencyCallout.title}>
+   358→                    <p className="text-xs text-foreground/80 mt-1">{substance.intoxication.emergencyCallout.description}</p>
+   359→                  </Callout>
+   360→                </div>
+   361→              )}
+   362→            </Container>
+   363→          </Section>
+   364→        )}
+   365→
+   366→        {/* ===== PERCEPTUAL DISTURBANCES (cannabis-specific) ===== */}
+   367→        {substance.perceptualDisturbances && substance.perceptualDisturbances.length > 0 && (
+   368→          <Section id="perceptual" className="bg-muted/20">
+   369→            <Container>
+   370→              <SectionHeader eyebrow="Sensory Alterations" title="Perceptual Disturbances" tone="neural" />
+   371→              <p className="mt-4 text-sm text-foreground/80">How cannabis alters sensory perception, producing derealisation, depersonalization, and synaesthesia.</p>
+   372→              <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+   373→                {substance.perceptualDisturbances.map((p, i) => (
+   374→                  <div key={i} className="rounded-lg border border-border/50 p-4">
+   375→                    <p className="text-sm font-semibold text-foreground">{p.title}</p>
+   376→                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{p.description}</p>
+   377→                    {p.example && (
+   378→                      <p className="mt-2 text-xs italic text-foreground/70 border-l-2 border-brand/40 pl-2">{p.example}</p>
+   379→                    )}
+   380→                  </div>
+   381→                ))}
+   382→              </div>
+   383→            </Container>
+   384→          </Section>
+   385→        )}
+   386→
+   387→        {/* ===== WITHDRAWAL ===== */}
+   388→        {substance.withdrawal && (
+   389→          <Section id="withdrawal">
+   390→            <Container>
+   391→              <SectionHeader eyebrow="Withdrawal" title="Withdrawal Syndrome" tone="emergency" />
+   392→              <p className="mt-4 text-sm text-foreground/90">{substance.withdrawal.summary}</p>
+   393→              <div className="mt-6 space-y-3">
+   394→                {substance.withdrawal.phases.map((phase, i) => (
+   395→                  <div key={i} className="rounded-lg border border-border/50 p-4">
+   396→                    <div className="flex items-baseline justify-between gap-2">
+   397→                      <p className="text-sm font-semibold text-foreground">{phase.phase}</p>
+   398→                      {phase.timing && <span className="font-mono text-xs text-brand">{phase.timing}</span>}
+   399→                    </div>
+   400→                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{phase.symptoms}</p>
+   401→                  </div>
+   402→                ))}
+   403→              </div>
+   404→              {substance.withdrawal.mechanisms && (
+   405→                <div className="mt-6">
+   406→                  <Callout variant="warning" title="Withdrawal Mechanisms">
+   407→                    <ul className="space-y-1.5 mt-2">
+   408→                      {substance.withdrawal.mechanisms.map((m, i) => (
+   409→                        <li key={i} className="text-xs text-foreground/80">{m}</li>
+   410→                      ))}
+   411→                    </ul>
+   412→                  </Callout>
+   413→                </div>
+   414→              )}
+   415→
+   416→              {substance.withdrawal.emergencyCallout && (
+   417→                <div className="mt-4">
+   418→                  <Callout variant="danger" title={substance.withdrawal.emergencyCallout.title}>
+   419→                    <p className="text-xs text-foreground/80 mt-1">{substance.withdrawal.emergencyCallout.description}</p>
+   420→                  </Callout>
+   421→                </div>
+   422→              )}
+   423→
+   424→              {substance.withdrawal.clinicalCourse && substance.withdrawal.clinicalCourse.length > 0 && (
+   425→                <div className="mt-4">
+   426→                  <Callout variant="info" title="Clinical Course">
+   427→                    <ul className="mt-2 space-y-1">
+   428→                      {substance.withdrawal.clinicalCourse.map((c, i) => (
+   429→                        <li key={i} className="flex items-start gap-1.5 text-xs text-foreground/80">
+   430→                          <Activity className="mt-0.5 h-3 w-3 shrink-0 text-neural" />
+   431→                          {c}
+   432→                        </li>
+   433→                      ))}
+   434→                    </ul>
+   435→                  </Callout>
+   436→                </div>
+   437→              )}
+   438→            </Container>
+   439→          </Section>
+   440→        )}
+   441→
+   442→        {/* ===== COMPLICATIONS ===== */}
+   443→        {substance.complications && substance.complications.length > 0 && (
+   444→          <Section id="complications" className="bg-muted/20">
+   445→            <Container>
+   446→              <SectionHeader eyebrow="Complications" title="Neuropsychiatric Complications" tone="emergency" />
+   447→              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+   448→                {substance.complications.map((c, i) => (
+   449→                  <div key={i} className="rounded-lg border border-border/50 p-4">
+   450→                    <p className="text-sm font-semibold text-foreground">{c.name}</p>
+   451→                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{c.description}</p>
+   452→                  </div>
+   453→                ))}
+   454→              </div>
+   455→            </Container>
+   456→          </Section>
+   457→        )}
+   458→
+   459→        {/* ===== AMOTIVATIONAL SYNDROME (cannabis-specific) ===== */}
+   460→        {substance.amotivationalSyndrome && (
+   461→          <Section id="amotivation">
+   462→            <Container>
+   463→              <SectionHeader
+   464→                eyebrow={substance.amotivationalSyndrome.eyebrow}
+   465→                title={substance.amotivationalSyndrome.title}
+   466→                tone="neural"
+   467→                description={substance.amotivationalSyndrome.subtitle}
+   468→              />
+   469→              <div className="mt-6 rounded-lg border border-border/50 p-5">
+   470→                <h3 className="text-h3">{substance.amotivationalSyndrome.cardTitle}</h3>
+   471→                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{substance.amotivationalSyndrome.cardDescription}</p>
+   472→                <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+   473→                  {substance.amotivationalSyndrome.symptoms.map((s, i) => (
+   474→                    <div key={i} className="rounded-md border border-border/40 bg-muted/20 p-3">
+   475→                      <p className="text-sm font-semibold text-foreground">{s.name}</p>
+   476→                      <p className="mt-1 text-xs text-muted-foreground">{s.description}</p>
+   477→                    </div>
+   478→                  ))}
+   479→                </div>
+   480→              </div>
+   481→            </Container>
+   482→          </Section>
+   483→        )}
+   484→
+   485→        {/* ===== CANNABIS PSYCHOSIS (cannabis-specific) ===== */}
+   486→        {substance.cannabisPsychosis && (
+   487→          <Section id="psychosis" className="bg-muted/20">
+   488→            <Container>
+   489→              <SectionHeader
+   490→                eyebrow={substance.cannabisPsychosis.eyebrow}
+   491→                title={substance.cannabisPsychosis.title}
+   492→                tone="emergency"
+   493→                description={substance.cannabisPsychosis.subtitle}
+   494→              />
+   495→              <div className="mt-6 rounded-lg border border-border/50 p-5">
+   496→                <div className="flex items-baseline justify-between gap-2">
+   497→                  <h3 className="text-h3">{substance.cannabisPsychosis.cardTitle}</h3>
+   498→                  <span className="text-xs text-muted-foreground">{substance.cannabisPsychosis.cardTagline}</span>
+   499→                </div>
+   500→                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{substance.cannabisPsychosis.summary}</p>
+   501→
+   502→                <div className="mt-4">
+   503→                  <p className="text-overline text-muted-foreground">Clinical Features</p>
+   504→                  <ul className="mt-1.5 space-y-1">
+   505→                    {substance.cannabisPsychosis.clinicalFeatures.map((f, i) => (
+   506→                      <li key={i} className="flex items-start gap-1.5 text-xs text-foreground/80">
+   507→                        <AlertTriangle className="mt-0.5 h-3 w-3 shrink-0 text-emergency" />
+   508→                        {f}
+   509→                      </li>
+   510→                    ))}
+   511→                  </ul>
+   512→                </div>
+   513→
+   514→                <div className="mt-4">
+   515→                  <p className="text-overline text-muted-foreground">Risk Factors</p>
+   516→                  <ul className="mt-1.5 space-y-1">
+   517→                    {substance.cannabisPsychosis.riskFactors.map((r, i) => (
+   518→                      <li key={i} className="flex items-start gap-1.5 text-xs text-foreground/80">
+   519→                        <Activity className="mt-0.5 h-3 w-3 shrink-0 text-neural" />
+   520→                        {r}
+   521→                      </li>
+   522→                    ))}
+   523→                  </ul>
+   524→                </div>
+   525→
+   526→                <div className="mt-4">
+   527→                  <Callout variant="warning" title="Prognosis">
+   528→                    <p className="text-xs text-foreground/80">{substance.cannabisPsychosis.prognosis}</p>
+   529→                  </Callout>
+   530→                </div>
+   531→              </div>
+   532→            </Container>
+   533→          </Section>
+   534→        )}
+   535→
+   536→        {/* ===== OVERDOSE EMERGENCY (opioid-specific) ===== */}
+   537→        {substance.overdoseEmergency && (
+   538→          <Section id="overdose" className="bg-muted/20">
+   539→            <Container>
+   540→              <SectionHeader eyebrow={substance.overdoseEmergency.eyebrow} title={substance.overdoseEmergency.title} tone="emergency" />
+   541→              <p className="mt-4 text-sm text-foreground/80">{substance.overdoseEmergency.subtitle}</p>
+   542→
+   543→              <div className="mt-6 rounded-lg border border-emergency/30 bg-emergency-soft/30 p-5">
+   544→                <div className="flex items-center gap-2">
+   545→                  <span className="relative flex h-2.5 w-2.5">
+   546→                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emergency opacity-60" />
+   547→                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emergency" />
+   548→                  </span>
+   549→                  <h3 className="text-h3 text-emergency">{substance.overdoseEmergency.panelTitle}</h3>
+   550→                </div>
+   551→                <p className="mt-2 text-sm text-foreground/80">{substance.overdoseEmergency.panelDescription}</p>
+   552→
+   553→                <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+   554→                  {substance.overdoseEmergency.warningSigns.map((w, i) => (
+   555→                    <div key={i} className="flex items-start gap-1.5 rounded-md border border-emergency/20 bg-background/60 p-2.5">
+   556→                      <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" />
+   557→                      <span className="text-xs text-foreground/80">{w}</span>
+   558→                    </div>
+   559→                  ))}
+   560→                </div>
+   561→
+   562→                <div className="mt-4 flex gap-3">
+   563→                  {substance.emergency?.contacts.map((c, i) => (
+   564→                    <a
+   565→                      key={`od-contact-${i}`}
+   566→                      href={`tel:${c.number}`}
+   567→                      className="flex items-center justify-between rounded-lg border border-emergency/40 bg-emergency-soft/50 px-4 py-2.5 text-sm font-semibold text-emergency transition-colors hover:bg-emergency-soft/70"
+   568→                    >
+   569→                      <span>{c.label}</span>
+   570→                      <span className="font-mono">{c.number}</span>
+   571→                    </a>
+   572→                  ))}
+   573→                </div>
+   574→              </div>
+   575→
+   576→              {substance.overdoseEmergency.mechanism && (
+   577→                <div className="mt-6 rounded-lg border border-border/50 p-5">
+   578→                  <h3 className="text-h3">Why Overdose Kills</h3>
+   579→                  <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{substance.overdoseEmergency.mechanism.summary}</p>
+   580→
+   581→                  <div className="mt-4">
+   582→                    <p className="text-overline text-muted-foreground">Mechanism</p>
+   583→                    <ul className="mt-1.5 space-y-1">
+   584→                      {substance.overdoseEmergency.mechanism.notes.map((n, i) => (
+   585→                        <li key={i} className="flex items-start gap-1.5 text-xs text-foreground/80">
+   586→                          <Activity className="mt-0.5 h-3 w-3 shrink-0 text-neural" />
+   587→                          {n}
+   588→                        </li>
+   589→                      ))}
+   590→                    </ul>
+   591→                  </div>
+   592→
+   593→                  <div className="mt-4">
+   594→                    <Callout variant="danger" title="Emergency Action — What to Do">
+   595→                      <p className="text-xs text-foreground/80">{substance.overdoseEmergency.mechanism.emergencyAction}</p>
+   596→                    </Callout>
+   597→                  </div>
+   598→                </div>
+   599→              )}
+   600→            </Container>
+   601→          </Section>
+   602→        )}
+   603→
+   604→        {/* ===== TREATMENT ===== */}
+   605→        {substance.treatment && (
+   606→          <Section id="treatment">
+   607→            <Container>
+   608→              <SectionHeader eyebrow="Treatment" title="Treatment & Detoxification" tone="brand" />
+   609→              <p className="mt-4 text-sm text-foreground/90">{substance.treatment.summary}</p>
+   610→
+   611→              {/* Detox steps */}
+   612→              {substance.treatment.detoxificationSteps && (
+   613→                <div className="mt-6">
+   614→                  <h3 className="text-h3 mb-3">Detoxification Steps</h3>
+   615→                  <div className="grid gap-2 sm:grid-cols-2">
+   616→                    {substance.treatment.detoxificationSteps.map((step, i) => (
+   617→                      <div key={i} className="flex items-start gap-2.5 rounded-lg border border-border/40 p-3">
+   618→                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand text-primary-foreground font-mono text-xs font-bold">{i + 1}</span>
+   619→                        <div>
+   620→                          <p className="text-sm font-medium text-foreground">{step.title}</p>
+   621→                          <p className="text-xs text-muted-foreground">{step.description}</p>
+   622→                        </div>
+   623→                      </div>
+   624→                    ))}
+   625→                  </div>
+   626→                </div>
+   627→              )}
+   628→
+   629→              {/* Detox protocol */}
+   630→              {substance.treatment.detoxificationProtocol && (
+   631→                <div className="mt-6">
+   632→                  <Callout variant="info" title={substance.treatment.detoxificationProtocol.title}>
+   633→                    <p className="text-xs text-foreground/80">{substance.treatment.detoxificationProtocol.description}</p>
+   634→                    {substance.treatment.detoxificationProtocol.keyPoints && (
+   635→                      <ul className="mt-2 space-y-1">
+   636→                        {substance.treatment.detoxificationProtocol.keyPoints.map((kp, i) => (
+   637→                          <li key={i} className="flex items-start gap-1.5 text-xs text-muted-foreground">
+   638→                            <AlertTriangle className="mt-0.5 h-3 w-3 shrink-0 text-warning" />
+   639→                            {kp}
+   640→                          </li>
+   641→                        ))}
+   642→                      </ul>
+   643→                    )}
+   644→                  </Callout>
+   645→                </div>
+   646→              )}
+   647→
+   648→              {/* Medications */}
+   649→              {substance.treatment.medications && (
+   650→                <div className="mt-6">
+   651→                  <h3 className="text-h3 mb-3">Medications</h3>
+   652→                  <div className="grid gap-3 sm:grid-cols-2">
+   653→                    {substance.treatment.medications.map((med, i) => (
+   654→                      <div key={i} className="rounded-lg border border-border/50 p-4">
+   655→                        <div className="flex items-baseline justify-between gap-2">
+   656→                          <p className="text-sm font-semibold text-foreground">{med.name}</p>
+   657→                          {med.mechanism && (
+   658→                            <span className="shrink-0 rounded-full border border-brand/30 bg-brand-soft/40 px-2 py-0.5 text-[0.65rem] font-medium text-brand">{med.mechanism}</span>
+   659→                          )}
+   660→                        </div>
+   661→                        <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{med.description}</p>
+   662→
+   663→                        {med.mechanismFlow && med.mechanismFlow.length > 0 && (
+   664→                          <div className="mt-3">
+   665→                            <p className="text-overline text-muted-foreground">Mechanism Flow</p>
+   666→                            <ol className="mt-1.5 space-y-1">
+   667→                              {med.mechanismFlow.map((s, k) => (
+   668→                                <li key={k} className="flex items-start gap-2 text-xs text-foreground/80">
+   669→                                  <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand/15 font-mono text-[0.6rem] font-bold text-brand">{s.step}</span>
+   670→                                  <span>
+   671→                                    <strong className="font-medium text-foreground">{s.title}</strong>
+   672→                                    <span className="text-muted-foreground"> — {s.description}</span>
+   673→                                  </span>
+   674→                                </li>
+   675→                              ))}
+   676→                            </ol>
+   677→                          </div>
+   678→                        )}
+   679→
+   680→                        {med.mechanismNotes && med.mechanismNotes.length > 0 && (
+   681→                          <div className="mt-3">
+   682→                            <p className="text-overline text-muted-foreground">Mechanism Notes</p>
+   683→                            <ul className="mt-1.5 space-y-1">
+   684→                              {med.mechanismNotes.map((n, k) => (
+   685→                                <li key={k} className="flex items-start gap-1.5 text-xs text-muted-foreground">
+   686→                                  <Activity className="mt-0.5 h-3 w-3 shrink-0 text-neural" />
+   687→                                  {n}
+   688→                                </li>
+   689→                              ))}
+   690→                            </ul>
+   691→                          </div>
+   692→                        )}
+   693→
+   694→                        {med.reactionSymptoms && med.reactionSymptoms.length > 0 && (
+   695→                          <div className="mt-3">
+   696→                            <p className="text-overline text-muted-foreground">Reaction Symptoms</p>
+   697→                            <div className="mt-1.5 grid gap-2 sm:grid-cols-2">
+   698→                              {med.reactionSymptoms.map((grp, k) => (
+   699→                                <div key={k} className="rounded-md border border-border/40 bg-muted/20 p-2">
+   700→                                  <p className="text-xs font-medium text-foreground">{grp.category}</p>
+   701→                                  <ul className="mt-1 space-y-0.5">
+   702→                                    {grp.symptoms.map((sym, l) => (
+   703→                                      <li key={l} className="flex items-start gap-1 text-xs text-muted-foreground">
+   704→                                        <HeartPulse className="mt-0.5 h-2.5 w-2.5 shrink-0 text-emergency" />
+   705→                                        {sym}
+   706→                                      </li>
+   707→                                    ))}
+   708→                                  </ul>
+   709→                                </div>
+   710→                              ))}
+   711→                            </div>
+   712→                          </div>
+   713→                        )}
+   714→
+   715→                        {med.notes && (
+   716→                          <div className="mt-3">
+   717→                            <Callout variant="danger" title="Contraindications">
+   718→                              <p className="text-xs text-foreground/80">{med.notes}</p>
+   719→                            </Callout>
+   720→                          </div>
+   721→                        )}
+   722→                      </div>
+   723→                    ))}
+   724→                  </div>
+   725→                </div>
+   726→              )}
+   727→
+   728→              {/* Psychosocial */}
+   729→              {substance.treatment.psychosocial && (
+   730→                <div className="mt-6">
+   731→                  <h3 className="text-h3 mb-3">Psychosocial Rehabilitation</h3>
+   732→                  <div className="grid gap-3 sm:grid-cols-2">
+   733→                    {substance.treatment.psychosocial.map((p, i) => (
+   734→                      <div key={i} className="rounded-lg border border-border/50 p-4">
+   735→                        <p className="text-sm font-semibold text-foreground">{p.name}</p>
+   736→                        <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{p.description}</p>
+   737→                      </div>
+   738→                    ))}
+   739→                  </div>
+   740→                </div>
+   741→              )}
+   742→
+   743→              {/* Recovery */}
+   744→              {substance.treatment.recovery && (
+   745→                <div className="mt-6">
+   746→                  <h3 className="text-h3 mb-3">Recovery & Support</h3>
+   747→                  <div className="grid gap-3 sm:grid-cols-2">
+   748→                    {substance.treatment.recovery.map((r, i) => (
+   749→                      <div key={i} className="rounded-lg border border-border/50 p-4">
+   750→                        <p className="text-sm font-semibold text-foreground">{r.title}</p>
+   751→                        <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{r.description}</p>
+   752→                      </div>
+   753→                    ))}
+   754→                  </div>
+   755→                </div>
+   756→              )}
+   757→            </Container>
+   758→          </Section>
+   759→        )}
+   760→
+   761→        {/* ===== MAINTENANCE THERAPY (opioid-specific) ===== */}
+   762→        {substance.treatment?.maintenance && (
+   763→          <Section id="maintenance">
+   764→            <Container>
+   765→              <SectionHeader eyebrow={substance.treatment.maintenance.eyebrow} title={substance.treatment.maintenance.title} tone="brand" />
+   766→              <p className="mt-4 text-sm text-foreground/90">{substance.treatment.maintenance.subtitle}</p>
+   767→
+   768→              <div className="mt-6 rounded-lg border border-border/50 p-5">
+   769→                <div className="flex items-baseline justify-between gap-2">
+   770→                  <h3 className="text-h3">{substance.treatment.maintenance.cardTitle}</h3>
+   771→                  <span className="text-xs text-muted-foreground">{substance.treatment.maintenance.cardTagline}</span>
+   772→                </div>
+   773→                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{substance.treatment.maintenance.summary}</p>
+   774→
+   775→                <div className="mt-4">
+   776→                  <p className="text-overline text-muted-foreground">Benefits</p>
+   777→                  <ul className="mt-1.5 space-y-1">
+   778→                    {substance.treatment.maintenance.benefits.map((b, i) => (
+   779→                      <li key={i} className="flex items-start gap-1.5 text-xs text-foreground/80">
+   780→                        <Activity className="mt-0.5 h-3 w-3 shrink-0 text-neural" />
+   781→                        {b}
+   782→                      </li>
+   783→                    ))}
+   784→                  </ul>
+   785→                </div>
+   786→
+   787→                {substance.treatment.maintenance.alternatives && (
+   788→                  <div className="mt-4">
+   789→                    <p className="text-overline text-muted-foreground">{substance.treatment.maintenance.alternatives.title}</p>
+   790→                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{substance.treatment.maintenance.alternatives.description}</p>
+   791→                  </div>
+   792→                )}
+   793→
+   794→                {substance.treatment.maintenance.complementaryTherapies.length > 0 && (
+   795→                  <div className="mt-4">
+   796→                    <p className="text-overline text-muted-foreground">Psychosocial</p>
+   797→                    <ul className="mt-1.5 space-y-1">
+   798→                      {substance.treatment.maintenance.complementaryTherapies.map((t, i) => (
+   799→                        <li key={i} className="flex items-start gap-1.5 text-xs text-foreground/80">
+   800→                          <span className="mt-1 h-1 w-1 shrink-0 rounded-full bg-brand" />
+   801→                          {t}
+   802→                        </li>
+   803→                      ))}
+   804→                    </ul>
+   805→                  </div>
+   806→                )}
+   807→              </div>
+   808→
+   809→              {substance.treatment.maintenanceMedications && substance.treatment.maintenanceMedications.length > 0 && (
+   810→                <div className="mt-6">
+   811→                  <h3 className="text-h3 mb-3">Maintenance Medications</h3>
+   812→                  <div className="grid gap-3 sm:grid-cols-2">
+   813→                    {substance.treatment.maintenanceMedications.map((med, i) => (
+   814→                      <div key={`maint-med-${i}`} className="rounded-lg border border-border/50 p-4">
+   815→                        <div className="flex items-baseline justify-between gap-2">
+   816→                          <p className="text-sm font-semibold text-foreground">{med.name}</p>
+   817→                          {med.mechanism && (
+   818→                            <span className="shrink-0 rounded-full border border-brand/30 bg-brand-soft/40 px-2 py-0.5 text-[0.65rem] font-medium text-brand">{med.mechanism}</span>
+   819→                          )}
+   820→                        </div>
+   821→                        <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{med.description}</p>
+   822→                      </div>
+   823→                    ))}
+   824→                  </div>
+   825→                </div>
+   826→              )}
+   827→            </Container>
+   828→          </Section>
+   829→        )}
+   830→
+   831→        {/* ===== NALOXONE MECHANISM (opioid-specific) ===== */}
+   832→        {substance.naloxoneInfo && (
+   833→          <Section id="naloxone" className="bg-muted/20">
+   834→            <Container>
+   835→              <SectionHeader eyebrow={substance.naloxoneInfo.eyebrow} title={substance.naloxoneInfo.title} tone="emergency" />
+   836→              <p className="mt-4 text-sm text-foreground/90">{substance.naloxoneInfo.subtitle}</p>
+   837→
+   838→              {/* 5-step mechanism flow */}
+   839→              <div className="mt-6">
+   840→                <p className="text-overline text-muted-foreground">Mechanism Flow</p>
+   841→                <ol className="mt-2 grid gap-2 sm:grid-cols-5">
+   842→                  {substance.naloxoneInfo.mechanismFlow.map((s, i) => (
+   843→                    <li key={i} className="rounded-lg border border-border/50 bg-background/60 p-3">
+   844→                      <div className="flex items-center gap-2">
+   845→                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand text-primary-foreground font-mono text-xs font-bold">{s.step}</span>
+   846→                        <p className="text-xs font-semibold text-foreground">{s.title}</p>
+   847→                      </div>
+   848→                      <p className="mt-1.5 text-[0.7rem] text-muted-foreground leading-relaxed">{s.description}</p>
+   849→                    </li>
+   850→                  ))}
+   851→                </ol>
+   852→              </div>
+   853→
+   854→              {/* Naloxone rescue pattern-card */}
+   855→              <div className="mt-6 rounded-lg border border-border/50 p-5">
+   856→                <div className="flex items-baseline justify-between gap-2">
+   857→                  <h3 className="text-h3">{substance.naloxoneInfo.cardTitle}</h3>
+   858→                  <span className="text-xs text-muted-foreground">{substance.naloxoneInfo.cardTagline}</span>
+   859→                </div>
+   860→                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{substance.naloxoneInfo.summary}</p>
+   861→
+   862→                <div className="mt-4">
+   863→                  <p className="text-overline text-muted-foreground">Pharmacology</p>
+   864→                  <ul className="mt-1.5 space-y-1">
+   865→                    {substance.naloxoneInfo.pharmacologyNotes.map((n, i) => (
+   866→                      <li key={i} className="flex items-start gap-1.5 text-xs text-foreground/80">
+   867→                        <Activity className="mt-0.5 h-3 w-3 shrink-0 text-neural" />
+   868→                        {n}
+   869→                      </li>
+   870→                    ))}
+   871→                  </ul>
+   872→                </div>
+   873→
+   874→                <div className="mt-4">
+   875→                  <Callout variant="danger" title="Dosing & Administration">
+   876→                    <p className="text-xs text-foreground/80">{substance.naloxoneInfo.dosingAndAdministration}</p>
+   877→                  </Callout>
+   878→                </div>
+   879→              </div>
+   880→            </Container>
+   881→          </Section>
+   882→        )}
+   883→
+   884→        {/* ===== EMERGENCY ===== */}
+   885→        {substance.emergency && (
+   886→          <Section id="emergency" className="bg-muted/20">
+   887→            <Container>
+   888→              <SectionHeader
+   889→                eyebrow={substance.emergency.eyebrow || "Emergency"}
+   890→                title="Emergency Quick Help"
+   891→                tone="emergency"
+   892→                description={substance.emergency.subtitle}
+   893→              />
+   894→
+   895→              {substance.emergency.panelTitle && (
+   896→                <div className="mt-6 rounded-lg border border-emergency/30 bg-emergency-soft/30 p-5">
+   897→                  <div className="flex items-center gap-2">
+   898→                    <span className="relative flex h-2.5 w-2.5">
+   899→                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emergency opacity-60" />
+   900→                      <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emergency" />
+   901→                    </span>
+   902→                    <h3 className="text-h3 text-emergency">{substance.emergency.panelTitle}</h3>
+   903→                  </div>
+   904→                  {substance.emergency.panelDescription && (
+   905→                    <p className="mt-2 text-sm text-foreground/80">{substance.emergency.panelDescription}</p>
+   906→                  )}
+   907→
+   908→                  <div className="mt-4 grid gap-4 sm:grid-cols-2">
+   909→                    <div>
+   910→                      <p className="text-overline text-emergency">Warning Signs</p>
+   911→                      <ul className="mt-2 space-y-1">
+   912→                        {substance.emergency.warningSigns.map((w, i) => (
+   913→                          <li key={i} className="flex items-start gap-1.5 text-sm text-foreground/80">
+   914→                            <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" />
+   915→                            {w}
+   916→                          </li>
+   917→                        ))}
+   918→                      </ul>
+   919→                    </div>
+   920→                    <div>
+   921→                      <p className="text-overline text-brand">Emergency Contacts</p>
+   922→                      <div className="mt-2 space-y-2">
+   923→                        {substance.emergency.contacts.map((c, i) => (
+   924→                          <a
+   925→                            key={i}
+   926→                            href={`tel:${c.number}`}
+   927→                            className="flex items-center justify-between rounded-lg border border-emergency/30 bg-emergency-soft/40 px-4 py-3 text-sm font-semibold text-emergency transition-colors hover:bg-emergency-soft/60"
+   928→                          >
+   929→                            <span>{c.label}</span>
+   930→                            <span className="font-mono">{c.number}</span>
+   931→                          </a>
+   932→                        ))}
+   933→                      </div>
+   934→                    </div>
+   935→                  </div>
+   936→                </div>
+   937→              )}
+   938→
+   939→              {!substance.emergency.panelTitle && (
+   940→                <div className="mt-6 grid gap-4 sm:grid-cols-2">
+   941→                  <div>
+   942→                    <p className="text-overline text-emergency">Warning Signs</p>
+   943→                    <ul className="mt-2 space-y-1">
+   944→                      {substance.emergency.warningSigns.map((w, i) => (
+   945→                        <li key={i} className="flex items-start gap-1.5 text-sm text-foreground/80">
+   946→                          <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" />
+   947→                          {w}
+   948→                        </li>
+   949→                      ))}
+   950→                    </ul>
+   951→                  </div>
+   952→                  <div>
+   953→                    <p className="text-overline text-brand">Emergency Contacts</p>
+   954→                    <div className="mt-2 space-y-2">
+   955→                      {substance.emergency.contacts.map((c, i) => (
+   956→                        <a
+   957→                          key={i}
+   958→                          href={`tel:${c.number}`}
+   959→                          className="flex items-center justify-between rounded-lg border border-emergency/30 bg-emergency-soft/40 px-4 py-3 text-sm font-semibold text-emergency transition-colors hover:bg-emergency-soft/60"
+   960→                        >
+   961→                          <span>{c.label}</span>
+   962→                          <span className="font-mono">{c.number}</span>
+   963→                        </a>
+   964→                      ))}
+   965→                    </div>
+   966→                  </div>
+   967→                </div>
+   968→              )}
+   969→            </Container>
+   970→          </Section>
+   971→        )}
+   972→
+   973→        {/* ===== METADATA ===== */}
+   974→        <Section spacing="tight">
+   975→          <Container className="text-center">
+   976→            <p className="text-xs text-muted-foreground">
+   977→              Last reviewed: {new Date(substance.lastReviewed).toLocaleDateString("en-GB", { month: "long", year: "numeric" })}
+   978→              {" · "}Source: {substance.source}
+   979→            </p>
+   980→          </Container>
+   981→        </Section>
+   982→      </main>
+   983→      <Footer />
+   984→    </div>
+   985→  );
+   986→}
+   987→

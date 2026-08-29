@@ -1,0 +1,574 @@
+     1→import { notFound } from "next/navigation";
+     2→import Link from "next/link";
+     3→import type { Metadata } from "next";
+     4→
+     5→import { Navbar } from "@/components/kyp/sections/navbar";
+     6→import { Footer } from "@/components/kyp/sections/footer";
+     7→import { EmergencySection } from "@/components/kyp/sections/emergency-section";
+     8→import { FloatingSearch } from "@/components/kyp/ui/floating-search";
+     9→import { GuidedLearningToggle } from "@/components/kyp/ui/guided-learning-toggle";
+    10→import { GuidedLearningVisibility } from "@/components/kyp/ui/guided-learning-visibility";
+    11→import { MicroQuiz } from "@/components/kyp/ui/micro-quiz";
+    12→import { Checkpoint } from "@/components/kyp/ui/checkpoint";
+    13→import { ActiveRecallSection } from "@/components/kyp/ui/active-recall";
+    14→import { LessonProgress } from "@/components/kyp/ui/lesson-progress";
+    15→import { Container } from "@/components/kyp/ui/container";
+    16→import { Section } from "@/components/kyp/ui/section";
+    17→import { SectionHeader } from "@/components/kyp/ui/section-header";
+    18→import { Badge } from "@/components/kyp/ui/badge";
+    19→import { Callout } from "@/components/kyp/ui/callout";
+    20→import { Timeline } from "@/components/kyp/ui/timeline";
+    21→import { LearningPath } from "@/components/kyp/ui/learning-path";
+    22→
+    23→import { getDiseaseBySlug, getAllDiseaseSlugs } from "@/lib/kyp/data/diseases";
+    24→import type { Disease } from "@/lib/kyp/data/disease-types";
+    25→import { PageTracker } from "@/components/kyp/ui/page-tracker";
+    26→
+    27→import { Pill, HeartPulse, Brain, Activity, ClipboardCheck, Stethoscope, AlertTriangle, BookOpen, FileText, Globe, MapPin } from "lucide-react";
+    28→
+    29→type Slug = string;
+    30→
+    31→export function generateStaticParams(): { slug: Slug }[] {
+    32→  return getAllDiseaseSlugs().map((slug) => ({ slug }));
+    33→}
+    34→
+    35→export async function generateMetadata({
+    36→  params,
+    37→}: {
+    38→  params: Promise<{ slug: Slug }>;
+    39→}): Promise<Metadata> {
+    40→  const { slug } = await params;
+    41→  const disease = getDiseaseBySlug(slug);
+    42→  if (!disease) return { title: "Disease not found · Know Your Pill" };
+    43→
+    44→  const title = `${disease.name} (${disease.shortName}) · Know Your Pill`;
+    45→  return {
+    46→    title,
+    47→    description: disease.tagline,
+    48→    keywords: [disease.name, disease.shortName, "psychiatry", "Know Your Pill"],
+    49→    authors: [{ name: "Zamaan Ali Shamji" }],
+    50→    openGraph: { title, description: disease.tagline, type: "article", siteName: "Know Your Pill" },
+    51→  };
+    52→}
+    53→
+    54→interface PageProps {
+    55→  params: Promise<{ slug: Slug }>;
+    56→}
+    57→
+    58→export default async function DiseasePage({ params }: PageProps) {
+    59→  const { slug } = await params;
+    60→  const disease = getDiseaseBySlug(slug);
+    61→  if (!disease) notFound();
+    62→
+    63→  const lessons = disease.lessonGroups ?? [];
+    64→  const quizzes = disease.microQuizzes ?? [];
+    65→  const hasLessons = lessons.length > 0;
+    66→  const quizAfter = (sectionId: string) => quizzes.find((q) => q.afterSectionId === sectionId);
+    67→
+    68→  return (
+    69→    <div className="flex min-h-screen flex-col">
+    70→      <Navbar />
+    71→      <div className="fixed right-4 top-20 z-30 hidden sm:block">
+    72→        <GuidedLearningToggle />
+    73→      </div>
+    74→      <PageTracker
+    75→        type="disease"
+    76→        slug={disease.slug}
+    77→        title={disease.name}
+    78→        variant="floating"
+    79→      />
+    80→
+    81→      <main className="flex-1 lg:pl-52 xl:pl-56">
+    82→        {/* ===== BREADCRUMB ===== */}
+    83→        <div className="border-b border-border/40 bg-muted/20">
+    84→          <Container>
+    85→            <nav className="flex items-center gap-2 py-2 text-xs text-muted-foreground" aria-label="Breadcrumb">
+    86→              <Link href="/" className="hover:text-brand">Home</Link>
+    87→              <span aria-hidden>/</span>
+    88→              <Link href="/#categories" className="hover:text-brand">Diseases</Link>
+    89→              <span aria-hidden>/</span>
+    90→              <span className="font-medium text-foreground">{disease.name}</span>
+    91→            </nav>
+    92→          </Container>
+    93→        </div>
+    94→
+    95→        {/* Lesson Progress */}
+    96→        {hasLessons && (
+    97→          <div className="sticky top-16 z-20">
+    98→            <LessonProgress lessons={lessons} />
+    99→          </div>
+   100→        )}
+   101→
+   102→        {/* ===== HERO ===== */}
+   103→        <section id="top" className="relative overflow-hidden pt-24 pb-8 sm:pt-28 sm:pb-12">
+   104→          <div className="pointer-events-none absolute inset-0 kyp-grid-bg opacity-30" aria-hidden />
+   105→          <Container className="relative">
+   106→            <div className="mb-4">
+   107→              <LearningPath path={disease.learningPath} />
+   108→            </div>
+   109→            <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+   110→              <Badge variant="brand" size="sm">{disease.category}</Badge>
+   111→              <span className="text-muted-foreground/70">{disease.shortName}</span>
+   112→              <span className="text-muted-foreground/40">·</span>
+   113→              <span>{disease.estimatedReadTime}</span>
+   114→              {disease.highYieldLevel === "extreme" && (
+   115→                <span className="text-neural font-medium">★ High Yield</span>
+   116→              )}
+   117→            </div>
+   118→            <h1 className="mt-3 text-display text-foreground leading-[1.05]">{disease.name}</h1>
+   119→            <p className="mt-4 max-w-2xl text-base text-foreground/80 leading-relaxed">{disease.tagline}</p>
+   120→            <p className="mt-3 max-w-2xl text-sm text-muted-foreground leading-relaxed">{disease.summary}</p>
+   121→          </Container>
+   122→        </section>
+   123→
+   124→        {/* ===== LEARNING OBJECTIVES ===== */}
+   125→        <Section id="learning-objectives" spacing="tight">
+   126→          <Container>
+   127→            <div className="rounded-xl border border-brand/20 bg-brand-soft/10 p-6">
+   128→              <p className="text-overline text-brand">Learning Objectives</p>
+   129→              <h2 className="mt-2 text-h2">After reading this page you should be able to:</h2>
+   130→              <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+   131→                {disease.learningObjectives.map((obj, i) => (
+   132→                  <li key={i} className="flex items-start gap-2.5">
+   133→                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand/15 text-brand">
+   134→                      <Pill className="h-3 w-3" />
+   135→                    </span>
+   136→                    <span className="text-sm text-foreground/90">{obj}</span>
+   137→                  </li>
+   138→                ))}
+   139→              </ul>
+   140→            </div>
+   141→          </Container>
+   142→        </Section>
+   143→
+   144→        {/* ===== KNOWLEDGE GRAPH ===== */}
+   145→        <GuidedLearningVisibility drug={disease as any} sectionId="knowledge-graph">
+   146→          <Section id="knowledge-graph" className="bg-muted/20">
+   147→            <Container>
+   148→              <SectionHeader
+   149→                eyebrow="Knowledge Graph"
+   150→                title="Everything this disease touches."
+   151→                description="How does this disease connect to drugs, brain regions, neurotransmitters, and clinical concepts?"
+   152→                tone="neural"
+   153→                align="center"
+   154→              />
+   155→              <div className="mx-auto mt-8 max-w-3xl">
+   156→                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5">
+   157→                  {disease.knowledgeGraph.map((node, i) => (
+   158→                    <div key={i} className="rounded-lg border border-border/60 bg-card p-3 hover:border-brand/30 transition-colors">
+   159→                      <p className="text-xs font-medium text-foreground">{node.label}</p>
+   160→                      {node.note && <p className="mt-0.5 text-[0.65rem] text-muted-foreground">{node.note}</p>}
+   161→                    </div>
+   162→                  ))}
+   163→                </div>
+   164→              </div>
+   165→            </Container>
+   166→          </Section>
+   167→        </GuidedLearningVisibility>
+   168→
+   169→        {/* ===== EPIDEMIOLOGY ===== */}
+   170→        <Section id="epidemiology">
+   171→          <Container>
+   172→            <SectionHeader eyebrow="Epidemiology" title="How common is it?" tone="brand" />
+   173→            <div className="mt-8 grid gap-6 sm:grid-cols-2">
+   174→              <div>
+   175→                <div className="flex items-center gap-1.5 mb-2">
+   176→                  <Globe className="h-3.5 w-3.5 text-brand" />
+   177→                  <h3 className="text-sm font-semibold text-brand">Global</h3>
+   178→                </div>
+   179→                <p className="text-sm text-foreground/90 leading-relaxed">{disease.epidemiology.globalPrevalence}</p>
+   180→                {disease.epidemiology.lifetimeRisk && (
+   181→                  <p className="mt-1 text-sm text-muted-foreground">Lifetime risk: {disease.epidemiology.lifetimeRisk}</p>
+   182→                )}
+   183→                {disease.epidemiology.genderRatio && (
+   184→                  <p className="text-sm text-muted-foreground">Gender ratio: {disease.epidemiology.genderRatio}</p>
+   185→                )}
+   186→              </div>
+   187→              <div>
+   188→                <div className="flex items-center gap-1.5 mb-2">
+   189→                  <MapPin className="h-3.5 w-3.5 text-brand" />
+   190→                  <h3 className="text-sm font-semibold text-brand">India</h3>
+   191→                </div>
+   192→                <p className="text-sm text-foreground/90 leading-relaxed">{disease.epidemiology.indianPrevalence}</p>
+   193→                {disease.epidemiology.indianNotes && (
+   194→                  <p className="mt-1 text-sm text-muted-foreground">{disease.epidemiology.indianNotes}</p>
+   195→                )}
+   196→              </div>
+   197→            </div>
+   198→            {disease.epidemiology.ageOfOnset && (
+   199→              <p className="mt-3 text-sm text-muted-foreground">Typical age of onset: {disease.epidemiology.ageOfOnset}</p>
+   200→            )}
+   201→          </Container>
+   202→        </Section>
+   203→
+   204→        {/* ===== ETIOLOGY ===== */}
+   205→        <Section id="etiology" className="bg-muted/20">
+   206→          <Container>
+   207→            <SectionHeader eyebrow="Etiology & Risk Factors" title="Why does it happen?" tone="brand" />
+   208→            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+   209→              {disease.etiology.map((factor, i) => (
+   210→                <div key={i}>
+   211→                  <p className="text-overline text-muted-foreground mb-1">{factor.category}</p>
+   212→                  <p className="text-sm font-medium text-foreground">{factor.factor}</p>
+   213→                  <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{factor.details}</p>
+   214→                </div>
+   215→              ))}
+   216→            </div>
+   217→          </Container>
+   218→        </Section>
+   219→
+   220→        {/* ===== PATHOPHYSIOLOGY ===== */}
+   221→        <Section id="pathophysiology">
+   222→          <Container>
+   223→            <SectionHeader eyebrow="Pathophysiology" title="What's happening in the brain?" tone="neural" />
+   224→            <div className="mt-8">
+   225→              <Callout variant="info" title="Summary">{disease.pathophysiology.summary}</Callout>
+   226→              <p className="mt-4 text-sm text-foreground/90 leading-relaxed">{disease.pathophysiology.details}</p>
+   227→              <div className="mt-6 grid gap-4 sm:grid-cols-3">
+   228→                <div>
+   229→                  <p className="text-overline text-muted-foreground mb-1.5">Neurotransmitters</p>
+   230→                  <div className="flex flex-wrap gap-1.5">
+   231→                    {disease.pathophysiology.neurotransmitters.map((nt) => (
+   232→                      <Badge key={nt} variant="neural" size="sm">{nt}</Badge>
+   233→                    ))}
+   234→                  </div>
+   235→                </div>
+   236→                <div>
+   237→                  <p className="text-overline text-muted-foreground mb-1.5">Brain Regions</p>
+   238→                  <div className="flex flex-wrap gap-1.5">
+   239→                    {disease.pathophysiology.brainRegions.map((br) => (
+   240→                      <Badge key={br} variant="brand" size="sm">{br}</Badge>
+   241→                    ))}
+   242→                  </div>
+   243→                </div>
+   244→                <div>
+   245→                  <p className="text-overline text-muted-foreground mb-1.5">Pathways</p>
+   246→                  <div className="flex flex-wrap gap-1.5">
+   247→                    {disease.pathophysiology.pathways.map((p) => (
+   248→                      <Badge key={p} variant="outline" size="sm">{p}</Badge>
+   249→                    ))}
+   250→                  </div>
+   251→                </div>
+   252→              </div>
+   253→            </div>
+   254→          </Container>
+   255→        </Section>
+   256→
+   257→        {/* ===== SYMPTOMS ===== */}
+   258→        <Section id="symptoms" className="bg-muted/20">
+   259→          <Container>
+   260→            <SectionHeader eyebrow="Symptoms" title="What does it look like?" tone="brand" />
+   261→            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+   262→              {disease.symptomClusters.map((cluster, i) => (
+   263→                <div key={i}>
+   264→                  <p className="text-overline text-muted-foreground mb-2">{cluster.category}</p>
+   265→                  <ul className="space-y-1">
+   266→                    {cluster.symptoms.map((symptom, j) => (
+   267→                      <li key={j} className="flex items-start gap-1.5 text-sm text-foreground/80">
+   268→                        <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand" />
+   269→                        {symptom}
+   270→                      </li>
+   271→                    ))}
+   272→                  </ul>
+   273→                </div>
+   274→              ))}
+   275→            </div>
+   276→          </Container>
+   277→        </Section>
+   278→
+   279→        {/* ===== DIAGNOSIS ===== */}
+   280→        <Section id="diagnosis">
+   281→          <Container>
+   282→            <SectionHeader eyebrow="Diagnosis" title="How is it diagnosed?" tone="brand" />
+   283→
+   284→            {/* Diagnostic criteria */}
+   285→            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+   286→              {disease.diagnosticCriteria.map((criteria, i) => (
+   287→                <div key={i} className="rounded-lg border border-border/60 p-4">
+   288→                  <div className="flex items-center gap-1.5 mb-2">
+   289→                    <ClipboardCheck className="h-3.5 w-3.5 text-brand" />
+   290→                    <span className="text-sm font-semibold text-brand">{criteria.system}</span>
+   291→                    {criteria.code && <Badge variant="outline" size="sm">{criteria.code}</Badge>}
+   292→                  </div>
+   293→                  <ul className="space-y-1">
+   294→                    {criteria.criteria.map((c, j) => (
+   295→                      <li key={j} className="flex items-start gap-1.5 text-xs text-foreground/80">
+   296→                        <span className="mt-1 h-1 w-1 shrink-0 rounded-full bg-brand" />
+   297→                        {c}
+   298→                      </li>
+   299→                    ))}
+   300→                  </ul>
+   301→                  {criteria.duration && (
+   302→                    <p className="mt-2 text-xs text-muted-foreground">Duration: {criteria.duration}</p>
+   303→                  )}
+   304→                  {criteria.indianNote && (
+   305→                    <p className="mt-1 text-xs text-brand">🇮🇳 {criteria.indianNote}</p>
+   306→                  )}
+   307→                </div>
+   308→              ))}
+   309→            </div>
+   310→
+   311→            {/* Severity scales */}
+   312→            {disease.severityScales.length > 0 && (
+   313→              <div className="mt-8">
+   314→                <h3 className="text-h3 mb-4">Severity Scales</h3>
+   315→                <div className="grid gap-4 sm:grid-cols-2">
+   316→                  {disease.severityScales.map((scale, i) => (
+   317→                    <div key={i} className="rounded-lg border border-border/60 p-4">
+   318→                      <p className="text-sm font-semibold text-foreground">{scale.name}</p>
+   319→                      <p className="text-xs text-muted-foreground">{scale.fullName}</p>
+   320→                      <p className="mt-1 text-xs text-muted-foreground">{scale.measures}</p>
+   321→                      <div className="mt-3 space-y-1">
+   322→                        {scale.ranges.map((range, j) => (
+   323→                          <div key={j} className="flex items-center gap-2 text-xs">
+   324→                            <span className="font-mono font-medium text-foreground tabular-nums">{range.min}-{range.max}</span>
+   325→                            <span className="text-muted-foreground">{range.severity}</span>
+   326→                            <span className="text-brand ml-auto">{range.action}</span>
+   327→                          </div>
+   328→                        ))}
+   329→                      </div>
+   330→                      {scale.indianNote && (
+   331→                        <p className="mt-2 text-xs text-brand">🇮🇳 {scale.indianNote}</p>
+   332→                      )}
+   333→                    </div>
+   334→                  ))}
+   335→                </div>
+   336→              </div>
+   337→            )}
+   338→
+   339→            {/* Differential diagnosis */}
+   340→            {disease.differentialDiagnosis.length > 0 && (
+   341→              <div className="mt-8">
+   342→                <h3 className="text-h3 mb-4">Differential Diagnosis</h3>
+   343→                <div className="space-y-2">
+   344→                  {disease.differentialDiagnosis.map((ddx, i) => (
+   345→                    <div key={i} className="flex items-start gap-3 rounded-lg border border-border/40 p-3">
+   346→                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-muted font-mono text-xs font-semibold">{i + 1}</span>
+   347→                      <div>
+   348→                        <p className="text-sm font-medium text-foreground">{ddx.condition}</p>
+   349→                        <p className="mt-0.5 text-xs text-muted-foreground">{ddx.distinguishingFeatures}</p>
+   350→                        <p className="mt-0.5 text-xs text-brand">Key: {ddx.keyDifferentiator}</p>
+   351→                      </div>
+   352→                    </div>
+   353→                  ))}
+   354→                </div>
+   355→              </div>
+   356→            )}
+   357→          </Container>
+   358→        </Section>
+   359→
+   360→        {/* ===== MANAGEMENT ===== */}
+   361→        <Section id="management" className="bg-muted/20">
+   362→          <Container>
+   363→            <SectionHeader eyebrow="Management" title="How is it treated?" tone="brand" />
+   364→            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+   365→              {disease.management.map((option, i) => (
+   366→                <div key={i} className="rounded-lg border border-border/40 p-4">
+   367→                  <div className="flex items-center gap-1.5 mb-1">
+   368→                    <Badge variant="outline" size="sm">{option.category}</Badge>
+   369→                    <span className="text-sm font-semibold text-foreground">{option.name}</span>
+   370→                  </div>
+   371→                  <p className="text-xs text-muted-foreground">{option.description}</p>
+   372→                  <p className="mt-1 text-xs text-brand">When: {option.whenToUse}</p>
+   373→                  {option.indianContext && (
+   374→                    <p className="mt-1 text-xs text-brand">🇮🇳 {option.indianContext}</p>
+   375→                  )}
+   376→                </div>
+   377→              ))}
+   378→            </div>
+   379→
+   380→            {/* Drug links */}
+   381→            {disease.drugs.length > 0 && (
+   382→              <div className="mt-8">
+   383→                <h3 className="text-h3 mb-4">Pharmacotherapy — Drugs for {disease.name}</h3>
+   384→                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+   385→                  {disease.drugs.map((drug, i) => {
+   386→                    const content = (
+   387→                      <>
+   388→                        <div className="flex items-start justify-between gap-2">
+   389→                          <div>
+   390→                            <Badge variant="brand" size="sm">{drug.role}</Badge>
+   391→                            <p className="mt-1 text-sm font-medium text-foreground">{drug.name}</p>
+   392→                          </div>
+   393→                        </div>
+   394→                        <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">{drug.rationale}</p>
+   395→                      </>
+   396→                    );
+   397→                    if (drug.slug) {
+   398→                      return (
+   399→                        <a key={i} href={`/drugs/${drug.slug}`} className="rounded-lg border border-border/40 p-3 transition-colors hover:border-brand/40 hover:bg-brand-soft/10">
+   400→                          {content}
+   401→                        </a>
+   402→                      );
+   403→                    }
+   404→                    return <div key={i} className="rounded-lg border border-border/40 p-3">{content}</div>;
+   405→                  })}
+   406→                </div>
+   407→              </div>
+   408→            )}
+   409→          </Container>
+   410→        </Section>
+   411→
+   412→        {/* ===== INDIAN PRACTICE ===== */}
+   413→        <GuidedLearningVisibility drug={disease as any} sectionId="indian-practice">
+   414→          <Section id="indian-practice">
+   415→            <Container>
+   416→              <SectionHeader
+   417→                eyebrow="🇮🇳 Indian Practice"
+   418→                title="How is it managed in India?"
+   419→                tone="brand"
+   420→              />
+   421→              <div className="mt-8 grid gap-6 sm:grid-cols-2">
+   422→                <div className="space-y-4">
+   423→                  <div>
+   424→                    <p className="text-overline text-muted-foreground mb-1">Indian Guidelines</p>
+   425→                    <p className="text-sm text-foreground/90">{disease.indianPractice.indianGuidelines}</p>
+   426→                  </div>
+   427→                  <div>
+   428→                    <p className="text-overline text-muted-foreground mb-1">Government Hospitals</p>
+   429→                    <p className="text-sm text-foreground/90">{disease.indianPractice.governmentHospitals}</p>
+   430→                  </div>
+   431→                  <div>
+   432→                    <p className="text-overline text-muted-foreground mb-1">Private Practice</p>
+   433→                    <p className="text-sm text-foreground/90">{disease.indianPractice.privatePractice}</p>
+   434→                  </div>
+   435→                </div>
+   436→                <div className="space-y-4">
+   437→                  <div>
+   438→                    <p className="text-overline text-muted-foreground mb-1">Primary Care</p>
+   439→                    <p className="text-sm text-foreground/90">{disease.indianPractice.primaryCare}</p>
+   440→                  </div>
+   441→                  <div>
+   442→                    <p className="text-overline text-muted-foreground mb-1">Cost Considerations</p>
+   443→                    <p className="text-sm text-foreground/90">{disease.indianPractice.costConsiderations}</p>
+   444→                  </div>
+   445→                  <div>
+   446→                    <p className="text-overline text-muted-foreground mb-2">Patient Counselling</p>
+   447→                    <ul className="space-y-1">
+   448→                      {disease.indianPractice.patientCounselling.map((c, i) => (
+   449→                        <li key={i} className="flex items-start gap-1.5 text-sm text-foreground/80">
+   450→                          <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand" />
+   451→                          {c}
+   452→                        </li>
+   453→                      ))}
+   454→                    </ul>
+   455→                  </div>
+   456→                </div>
+   457→              </div>
+   458→            </Container>
+   459→          </Section>
+   460→        </GuidedLearningVisibility>
+   461→
+   462→        {/* ===== CLINICAL CASES ===== */}
+   463→        <GuidedLearningVisibility drug={disease as any} sectionId="clinical-case">
+   464→          <Section id="clinical-case" className="bg-muted/20">
+   465→            <Container>
+   466→              <SectionHeader eyebrow="Clinical Case" title="See it in practice." tone="brand" />
+   467→              <div className="mt-8">
+   468→                {disease.clinicalCases.map((case_, i) => (
+   469→                  <div key={i} className="rounded-xl border border-brand/20 p-6">
+   470→                    <Badge variant="brand" size="sm">Real case · de-identified</Badge>
+   471→                    <h3 className="mt-2 text-h3">{case_.title}</h3>
+   472→                    <div className="mt-4 grid gap-4 sm:grid-cols-2">
+   473→                      {[
+   474→                        { label: "Presentation", text: case_.presentation },
+   475→                        { label: "History", text: case_.history },
+   476→                        { label: "Examination", text: case_.examination },
+   477→                        { label: "Diagnosis", text: case_.diagnosis },
+   478→                        { label: "Management", text: case_.management },
+   479→                        { label: "Outcome", text: case_.outcome },
+   480→                      ].map((field, j) => (
+   481→                        <div key={j}>
+   482→                          <p className="text-overline text-muted-foreground">{field.label}</p>
+   483→                          <p className="mt-1 text-sm text-foreground/90">{field.text}</p>
+   484→                        </div>
+   485→                      ))}
+   486→                    </div>
+   487→                    <div className="mt-4 border-t border-border/40 pt-4">
+   488→                      <p className="text-overline text-brand mb-2">Teaching Points</p>
+   489→                      <ul className="space-y-1">
+   490→                        {case_.teachingPoints.map((tp, j) => (
+   491→                          <li key={j} className="flex items-start gap-2 text-sm">
+   492→                            <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand text-primary-foreground font-mono text-[0.65rem] font-bold">{j + 1}</span>
+   493→                            <span className="text-foreground/90">{tp}</span>
+   494→                          </li>
+   495→                        ))}
+   496→                      </ul>
+   497→                    </div>
+   498→                  </div>
+   499→                ))}
+   500→              </div>
+   501→            </Container>
+   502→          </Section>
+   503→        </GuidedLearningVisibility>
+   504→
+   505→        {/* ===== ACTIVE RECALL ===== */}
+   506→        <GuidedLearningVisibility drug={disease as any} sectionId="active-recall">
+   507→          <ActiveRecallSection drug={disease as any} />
+   508→        </GuidedLearningVisibility>
+   509→
+   510→        {/* ===== FAQ ===== */}
+   511→        <Section id="faq">
+   512→          <Container width="narrow">
+   513→            <SectionHeader eyebrow="FAQ" title="Common questions." align="center" />
+   514→            <div className="mt-8 space-y-3">
+   515→              {disease.faqs.map((faq, i) => (
+   516→                <div key={i} className="border-b border-border/50 pb-3">
+   517→                  <p className="text-sm font-semibold text-foreground">{faq.question}</p>
+   518→                  <p className="mt-1 text-sm text-muted-foreground">{faq.answer}</p>
+   519→                </div>
+   520→              ))}
+   521→            </div>
+   522→          </Container>
+   523→        </Section>
+   524→
+   525→        {/* ===== EVIDENCE SOURCES ===== */}
+   526→        {disease.evidenceSources && (
+   527→          <Section id="references">
+   528→            <Container width="narrow">
+   529→              <SectionHeader eyebrow="Evidence Sources" title="Where does this content come from?" />
+   530→              <div className="mt-8 space-y-6">
+   531→                <div>
+   532→                  <div className="flex items-center gap-2 mb-3">
+   533→                    <Globe className="h-4 w-4 text-brand" />
+   534→                    <h3 className="text-sm font-semibold text-brand">International</h3>
+   535→                    <Badge variant="outline" size="sm">{disease.evidenceSources.international.length}</Badge>
+   536→                  </div>
+   537→                  <ul className="space-y-1.5">
+   538→                    {disease.evidenceSources.international.map((ref, i) => (
+   539→                      <li key={i} className="text-sm text-foreground/90">
+   540→                        <span className="font-medium">{ref.source}</span>
+   541→                        {ref.section && <span className="text-muted-foreground"> — {ref.section}</span>}
+   542→                      </li>
+   543→                    ))}
+   544→                  </ul>
+   545→                </div>
+   546→                <div>
+   547→                  <div className="flex items-center gap-2 mb-3">
+   548→                    <MapPin className="h-4 w-4 text-brand" />
+   549→                    <h3 className="text-sm font-semibold text-brand">Indian</h3>
+   550→                    <Badge variant="brand" size="sm">{disease.evidenceSources.indian.length}</Badge>
+   551→                  </div>
+   552→                  <ul className="space-y-1.5">
+   553→                    {disease.evidenceSources.indian.map((ref, i) => (
+   554→                      <li key={i} className="text-sm text-foreground/90">
+   555→                        <span className="font-medium">{ref.source}</span>
+   556→                        {ref.section && <span className="text-muted-foreground"> — {ref.section}</span>}
+   557→                      </li>
+   558→                    ))}
+   559→                  </ul>
+   560→                </div>
+   561→              </div>
+   562→            </Container>
+   563→          </Section>
+   564→        )}
+   565→
+   566→        {/* ===== EMERGENCY ===== */}
+   567→        <EmergencySection />
+   568→      </main>
+   569→      <Footer />
+   570→      <FloatingSearch variant="floating" />
+   571→    </div>
+   572→  );
+   573→}
+   574→
