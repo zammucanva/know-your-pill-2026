@@ -4,7 +4,6 @@ import * as React from "react";
 import { useRouter } from "next/navigation";
 import { Search, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/kyp/ui/badge";
 import { Reveal } from "@/components/kyp/ui/reveal";
 import { useMagnetic } from "@/lib/hooks/use-magnetic";
 import { cn } from "@/lib/utils";
@@ -18,19 +17,17 @@ export function HomeHero() {
 
   return (
     <section id="top" className="relative min-h-[100svh] overflow-hidden flex flex-col justify-end pb-16 sm:pb-20">
-      {/* Organic shapes — positioned for depth, barely visible */}
+      {/* Organic shapes — two overlapping synaptic forms, not three generic blobs */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
+        {/* Primary: teal, upper right — the dominant neurotransmitter color */}
         <div
-          className="absolute -right-[5%] -top-[5%] h-[60vh] w-[60vh] rounded-full opacity-[0.10] blur-[120px]"
-          style={{ background: "radial-gradient(circle, oklch(0.55 0.11 195), transparent 70%)" }}
+          className="absolute right-[0%] top-[5%] h-[55vh] w-[55vh] rounded-full opacity-[0.08] blur-[100px]"
+          style={{ background: "radial-gradient(circle, oklch(0.55 0.11 195), transparent 65%)" }}
         />
+        {/* Secondary: warm violet, lower left — overlapping, suggesting synaptic crosstalk */}
         <div
-          className="absolute -left-[10%] top-[35%] h-[45vh] w-[45vh] rounded-full opacity-[0.07] blur-[100px]"
-          style={{ background: "radial-gradient(circle, oklch(0.62 0.16 280), transparent 70%)" }}
-        />
-        <div
-          className="absolute right-[15%] bottom-[8%] h-[30vh] w-[30vh] rounded-full opacity-[0.04] blur-[80px]"
-          style={{ background: "radial-gradient(circle, oklch(0.6 0.22 25), transparent 70%)" }}
+          className="absolute left-[5%] bottom-[15%] h-[40vh] w-[40vh] rounded-full opacity-[0.06] blur-[90px]"
+          style={{ background: "radial-gradient(circle, oklch(0.58 0.15 290), transparent 65%)" }}
         />
       </div>
 
@@ -116,9 +113,12 @@ export function HomeHero() {
         </Reveal>
 
         <Reveal delay={0.32}>
-          <div className="mt-12 flex flex-wrap gap-3">
-            {["Mechanisms", "Clinical", "Side Effects", "Safety"].map((chip) => (
-              <Badge key={chip} variant="outline" size="md">{chip}</Badge>
+          <div className="mt-12 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs uppercase tracking-[0.12em] text-muted-foreground/50">
+            {["Mechanisms", "Clinical", "Side Effects", "Safety"].map((chip, i) => (
+              <span key={chip} className="flex items-center gap-4">
+                {chip}
+                {i < 3 && <span className="text-muted-foreground/20">/</span>}
+              </span>
             ))}
           </div>
         </Reveal>
@@ -165,9 +165,12 @@ function NeuroNodes() {
         ))}
       </svg>
 
-      {/* Center dot */}
+      {/* Center anchor — a small labeled nucleus, not just a dot */}
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="h-2 w-2 rounded-full bg-brand/30" />
+        <div className="flex flex-col items-center gap-1">
+          <div className="h-3 w-3 rounded-full bg-brand/40 ring-4 ring-brand/10" />
+          <span className="text-[0.55rem] uppercase tracking-wider text-muted-foreground/40">Synapse</span>
+        </div>
       </div>
 
       {/* Nodes */}

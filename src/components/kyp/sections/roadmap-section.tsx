@@ -77,8 +77,8 @@ export function RoadmapSection() {
                       <h3 className="font-serif text-lg sm:text-xl font-semibold text-foreground">
                         {item.title}
                       </h3>
-                      <span className="text-[0.6rem] uppercase tracking-wide text-muted-foreground/40 border border-border/20 px-1.5 py-0.5 rounded">
-                        Preview
+                      <span className="text-[0.6rem] uppercase tracking-[0.12em] text-muted-foreground/40">
+                        · Preview
                       </span>
                     </div>
                     <p className="text-body-sm text-muted-foreground leading-relaxed max-w-2xl">
