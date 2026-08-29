@@ -35,11 +35,11 @@ const footerLinks = [
   {
     title: "Platform",
     links: [
-      { label: "Medications", href: "#library" },
-      { label: "Substance Use", href: "#substances" },
-      { label: "NeuroArcade", href: "#neuroarcade" },
-      { label: "Roadmap", href: "#roadmap" },
-      { label: "Emergency", href: "#emergency" },
+      { label: "Learn", href: "/learn" },
+      { label: "Practice MCQs", href: "/quiz" },
+      { label: "Medications", href: "/#library" },
+      { label: "Substance Use", href: "/#substances" },
+      { label: "Emergency", href: "/#emergency" },
     ],
   },
 ];

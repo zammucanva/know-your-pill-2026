@@ -283,47 +283,59 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
                   Suggested searches
                 </p>
               )}
-              {results.map((item, idx) => {
-                const Icon = typeIcon[item.type];
-                return (
-                  <button
-                    key={item.id}
-                    type="button"
-                    data-idx={idx}
-                    onMouseEnter={() => setActiveIndex(idx)}
-                    onClick={() => go(item)}
-                    className={cn(
-                      "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left transition-colors",
-                      idx === activeIndex ? "bg-accent" : "hover:bg-accent/60"
-                    )}
-                  >
-                    <span
+
+              {query ? (
+                /* Grouped results — by content type */
+                <GroupedResults
+                  results={results}
+                  activeIndex={activeIndex}
+                  setActiveIndex={setActiveIndex}
+                  onGo={go}
+                />
+              ) : (
+                /* Flat list for empty-query suggestions */
+                results.map((item, idx) => {
+                  const Icon = typeIcon[item.type];
+                  return (
+                    <button
+                      key={item.id}
+                      type="button"
+                      data-idx={idx}
+                      onMouseEnter={() => setActiveIndex(idx)}
+                      onClick={() => go(item)}
                       className={cn(
-                        "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-border/70 bg-background/60",
-                        typeColor[item.type]
+                        "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left transition-colors",
+                        idx === activeIndex ? "bg-accent" : "hover:bg-accent/60"
                       )}
                     >
-                      <Icon className="h-4 w-4" strokeWidth={2} />
-                    </span>
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-center gap-2">
-                        <p className="truncate text-sm font-medium text-foreground">
-                          {item.title}
+                      <span
+                        className={cn(
+                          "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-border/70 bg-background/60",
+                          typeColor[item.type]
+                        )}
+                      >
+                        <Icon className="h-4 w-4" strokeWidth={2} />
+                      </span>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2">
+                          <p className="truncate text-sm font-medium text-foreground">
+                            {item.title}
+                          </p>
+                          <span className="shrink-0 rounded-full bg-muted px-1.5 py-0.5 text-[0.6rem] font-medium uppercase tracking-wide text-muted-foreground">
+                            {searchTypeLabels[item.type]}
+                          </span>
+                        </div>
+                        <p className="mt-0.5 truncate text-xs text-muted-foreground">
+                          {item.description}
                         </p>
-                        <span className="shrink-0 rounded-full bg-muted px-1.5 py-0.5 text-[0.6rem] font-medium uppercase tracking-wide text-muted-foreground">
-                          {searchTypeLabels[item.type]}
-                        </span>
                       </div>
-                      <p className="mt-0.5 truncate text-xs text-muted-foreground">
-                        {item.description}
-                      </p>
-                    </div>
-                    {idx === activeIndex && (
-                      <CornerDownLeft className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
-                    )}
-                  </button>
-                );
-              })}
+                      {idx === activeIndex && (
+                        <CornerDownLeft className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
+                      )}
+                    </button>
+                  );
+                })
+              )}
             </>
           )}
         </div>
@@ -352,5 +364,101 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
         </div>
       </DialogContent>
     </Dialog>
+  );
+}
+
+/**
+ * GroupedResults — renders search results grouped by content type.
+ *
+ * Groups appear in order of relevance: Medications, Diseases, Substances,
+ * Neuroscience (brain-region, pathway, neurotransmitter), Side Effects,
+ * Classes, Clinical, Patient Guides.
+ *
+ * Within each group, results stay in their ranked order. Keyboard
+ * navigation still works — the flat `activeIndex` maps to the position
+ * in the full `results` array.
+ */
+function GroupedResults({
+  results,
+  activeIndex,
+  setActiveIndex,
+  onGo,
+}: {
+  results: SearchableItem[];
+  activeIndex: number;
+  setActiveIndex: (fn: (i: number) => number) => void;
+  onGo: (item: SearchableItem) => void;
+}) {
+  // Define group order and which types belong to each group
+  const groups: { label: string; types: SearchableItem["type"][] }[] = [
+    { label: "Medications", types: ["drug"] },
+    { label: "Diseases", types: ["disease"] },
+    { label: "Substances", types: ["substance"] },
+    { label: "Neuroscience", types: ["brain-region", "pathway", "neurotransmitter"] },
+    { label: "Side Effects", types: ["side-effect"] },
+    { label: "Drug Classes", types: ["class"] },
+    { label: "Clinical & Guides", types: ["clinical", "patient-guide"] },
+  ];
+
+  let runningIndex = 0;
+
+  return (
+    <>
+      {groups.map((group) => {
+        const groupItems = results.filter((item) => group.types.includes(item.type));
+        if (groupItems.length === 0) return null;
+
+        // Calculate the starting index for this group in the flat results array
+        const groupStartIndex = results
+          .filter((_, i) => i < results.findIndex((r) => group.types.includes(r.type)))
+          .length;
+
+        return (
+          <div key={group.label} className="mb-1">
+            <p className="px-3 py-1.5 text-overline text-muted-foreground/70">
+              {group.label}
+              <span className="ml-2 text-[0.6rem] opacity-60">{groupItems.length}</span>
+            </p>
+            {groupItems.map((item, gi) => {
+              const flatIdx = results.indexOf(item);
+              const Icon = typeIcon[item.type];
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  data-idx={flatIdx}
+                  onMouseEnter={() => setActiveIndex(() => flatIdx)}
+                  onClick={() => onGo(item)}
+                  className={cn(
+                    "flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left transition-colors",
+                    flatIdx === activeIndex ? "bg-accent" : "hover:bg-accent/60"
+                  )}
+                >
+                  <span
+                    className={cn(
+                      "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-border/70 bg-background/60",
+                      typeColor[item.type]
+                    )}
+                  >
+                    <Icon className="h-3.5 w-3.5" strokeWidth={2} />
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate text-sm font-medium text-foreground">
+                      {item.title}
+                    </p>
+                    <p className="mt-0.5 truncate text-xs text-muted-foreground">
+                      {item.description}
+                    </p>
+                  </div>
+                  {flatIdx === activeIndex && (
+                    <CornerDownLeft className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        );
+      })}
+    </>
   );
 }
