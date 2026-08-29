@@ -128,18 +128,21 @@ export function DrugHero({ drug }: DrugHeroProps) {
             {/* Pharmacology */}
             <div>
               <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground/60">Pharmacology</p>
-              <dl className="mt-2 space-y-1.5 text-xs">
+              <dl className="mt-2 space-y-2 text-xs">
                 <div className="flex items-baseline justify-between gap-2">
-                  <dt className="text-muted-foreground">Target</dt>
+                  <dt className="text-muted-foreground shrink-0">Target</dt>
                   <dd className="text-right font-medium text-foreground">{drug.mechanism.molecularTarget}</dd>
                 </div>
                 <div className="flex items-baseline justify-between gap-2">
-                  <dt className="text-muted-foreground">Half-life</dt>
-                  <dd className="font-medium text-foreground">{drug.mechanism.halfLife}</dd>
+                  <dt className="text-muted-foreground shrink-0">Half-life</dt>
+                  <dd className="text-right font-medium text-foreground">{drug.mechanism.halfLife}</dd>
                 </div>
-                <div className="flex items-baseline justify-between gap-2">
+                {/* Metabolism is often a long paragraph — stack label above value */}
+                <div>
                   <dt className="text-muted-foreground">Metabolism</dt>
-                  <dd className="text-right font-medium text-foreground">{drug.mechanism.metabolism}</dd>
+                  <dd className="mt-1 font-medium text-foreground leading-relaxed text-left">
+                    {drug.mechanism.metabolism}
+                  </dd>
                 </div>
               </dl>
             </div>
