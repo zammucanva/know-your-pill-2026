@@ -1,8 +1,11 @@
 import { NextResponse } from "next/server";
 
-// Mark as static for GitHub Pages export (API routes are not functional in static export)
-export const dynamic = "force-static";
+// Simple health-check endpoint.
+export const dynamic = "force-dynamic";
 
 export async function GET() {
-  return NextResponse.json({ message: "Hello, world!" });
+  return NextResponse.json({
+    message: "KYP API is running",
+    timestamp: new Date().toISOString(),
+  });
 }
