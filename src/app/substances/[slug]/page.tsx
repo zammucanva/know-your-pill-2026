@@ -17,6 +17,7 @@ import { getSubstancePage, getAllSubstanceSlugs } from "@/lib/kyp/data/substance
 import { drugClasses } from "@/lib/kyp/data";
 import { AlertTriangle, Activity, HeartPulse } from "lucide-react";
 import { PageTracker } from "@/components/kyp/ui/page-tracker";
+import { TestUnderstandingCTA } from "@/components/kyp/ui/test-understanding-cta";
 
 type Slug = string;
 
@@ -67,7 +68,7 @@ export default async function SubstancePage({ params }: PageProps) {
         <div className="border-b border-border/40 bg-muted/20">
           <Container>
             <nav className="flex items-center gap-2 py-2 text-xs text-muted-foreground" aria-label="Breadcrumb">
-              <Link href="/" className="hover:text-brand">Home</Link>
+              <Link href="/learn" className="hover:text-brand">Learn</Link>
               <span aria-hidden>/</span>
               <Link href="/#substances" className="hover:text-brand">Substance Use</Link>
               <span aria-hidden>/</span>
@@ -979,6 +980,8 @@ export default async function SubstancePage({ params }: PageProps) {
             </p>
           </Container>
         </Section>
+
+        <TestUnderstandingCTA topic={substance.name} />
       </main>
       <Footer />
     </div>

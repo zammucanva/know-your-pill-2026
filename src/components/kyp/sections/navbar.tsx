@@ -12,10 +12,10 @@ import { imgPath } from "@/lib/kyp/image-path";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "#library", label: "Medications" },
-  { href: "#substances", label: "Substance Use" },
-  { href: "#timeline", label: "Timeline" },
-  { href: "#neuroarcade", label: "NeuroArcade" },
+  { href: "/learn", label: "Learn" },
+  { href: "/#library", label: "Medications" },
+  { href: "/#substances", label: "Substances" },
+  { href: "/quiz", label: "Practice" },
 ];
 
 type SessionUser = { id: string; name: string; email: string; role: string } | null;
@@ -82,15 +82,19 @@ export function Navbar() {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-1 lg:flex">
-          {navLinks.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="rounded-md px-3 py-2 text-body-sm font-medium text-muted-foreground transition-colors hover:bg-accent/50 hover:text-foreground"
-            >
-              {l.label}
-            </a>
-          ))}
+          {navLinks.map((l) => {
+            const isRoute = l.href.startsWith("/") && !l.href.startsWith("/#");
+            const className = "rounded-md px-3 py-2 text-body-sm font-medium text-muted-foreground transition-colors hover:bg-accent/50 hover:text-foreground";
+            return isRoute ? (
+              <Link key={l.href} href={l.href} className={className}>
+                {l.label}
+              </Link>
+            ) : (
+              <a key={l.href} href={l.href} className={className}>
+                {l.label}
+              </a>
+            );
+          })}
         </nav>
 
         {/* Right cluster */}
@@ -169,16 +173,19 @@ export function Navbar() {
       {open && (
         <div className="border-t border-border/70 bg-background/95 backdrop-blur-xl lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
-            {navLinks.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-2.5 text-body-sm font-medium text-muted-foreground transition-colors hover:bg-accent/60 hover:text-foreground"
-              >
-                {l.label}
-              </a>
-            ))}
+            {navLinks.map((l) => {
+              const isRoute = l.href.startsWith("/") && !l.href.startsWith("/#");
+              const className = "rounded-md px-3 py-2.5 text-body-sm font-medium text-muted-foreground transition-colors hover:bg-accent/60 hover:text-foreground";
+              return isRoute ? (
+                <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className={className}>
+                  {l.label}
+                </Link>
+              ) : (
+                <a key={l.href} href={l.href} onClick={() => setOpen(false)} className={className}>
+                  {l.label}
+                </a>
+              );
+            })}
             <a
               href="#emergency"
               onClick={() => setOpen(false)}

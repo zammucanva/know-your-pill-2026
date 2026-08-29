@@ -23,6 +23,7 @@ import { LearningPath } from "@/components/kyp/ui/learning-path";
 import { getDiseaseBySlug, getAllDiseaseSlugs } from "@/lib/kyp/data/diseases";
 import type { Disease } from "@/lib/kyp/data/disease-types";
 import { PageTracker } from "@/components/kyp/ui/page-tracker";
+import { TestUnderstandingCTA } from "@/components/kyp/ui/test-understanding-cta";
 
 import { Pill, HeartPulse, Brain, Activity, ClipboardCheck, Stethoscope, AlertTriangle, BookOpen, FileText, Globe, MapPin } from "lucide-react";
 
@@ -83,7 +84,7 @@ export default async function DiseasePage({ params }: PageProps) {
         <div className="border-b border-border/40 bg-muted/20">
           <Container>
             <nav className="flex items-center gap-2 py-2 text-xs text-muted-foreground" aria-label="Breadcrumb">
-              <Link href="/" className="hover:text-brand">Home</Link>
+              <Link href="/learn" className="hover:text-brand">Learn</Link>
               <span aria-hidden>/</span>
               <Link href="/#categories" className="hover:text-brand">Diseases</Link>
               <span aria-hidden>/</span>
@@ -201,6 +202,12 @@ export default async function DiseasePage({ params }: PageProps) {
           </Container>
         </Section>
 
+        {quizAfter("epidemiology") && (
+          <Container>
+            <MicroQuiz quiz={quizAfter("epidemiology")!} />
+          </Container>
+        )}
+
         {/* ===== ETIOLOGY ===== */}
         <Section id="etiology" className="bg-muted/20">
           <Container>
@@ -253,6 +260,12 @@ export default async function DiseasePage({ params }: PageProps) {
             </div>
           </Container>
         </Section>
+
+        {quizAfter("pathophysiology") && (
+          <Container>
+            <MicroQuiz quiz={quizAfter("pathophysiology")!} />
+          </Container>
+        )}
 
         {/* ===== SYMPTOMS ===== */}
         <Section id="symptoms" className="bg-muted/20">
@@ -357,6 +370,12 @@ export default async function DiseasePage({ params }: PageProps) {
           </Container>
         </Section>
 
+        {quizAfter("diagnostic-criteria") && (
+          <Container>
+            <MicroQuiz quiz={quizAfter("diagnostic-criteria")!} />
+          </Container>
+        )}
+
         {/* ===== MANAGEMENT ===== */}
         <Section id="management" className="bg-muted/20">
           <Container>
@@ -409,6 +428,12 @@ export default async function DiseasePage({ params }: PageProps) {
           </Container>
         </Section>
 
+        {quizAfter("management") && (
+          <Container>
+            <MicroQuiz quiz={quizAfter("management")!} />
+          </Container>
+        )}
+
         {/* ===== INDIAN PRACTICE ===== */}
         <GuidedLearningVisibility drug={disease as any} sectionId="indian-practice">
           <Section id="indian-practice">
@@ -459,6 +484,12 @@ export default async function DiseasePage({ params }: PageProps) {
           </Section>
         </GuidedLearningVisibility>
 
+        {quizAfter("indian-practice") && (
+          <Container>
+            <MicroQuiz quiz={quizAfter("indian-practice")!} />
+          </Container>
+        )}
+
         {/* ===== CLINICAL CASES ===== */}
         <GuidedLearningVisibility drug={disease as any} sectionId="clinical-case">
           <Section id="clinical-case" className="bg-muted/20">
@@ -501,6 +532,12 @@ export default async function DiseasePage({ params }: PageProps) {
             </Container>
           </Section>
         </GuidedLearningVisibility>
+
+        {quizAfter("clinical-case") && (
+          <Container>
+            <MicroQuiz quiz={quizAfter("clinical-case")!} />
+          </Container>
+        )}
 
         {/* ===== ACTIVE RECALL ===== */}
         <GuidedLearningVisibility drug={disease as any} sectionId="active-recall">
@@ -562,6 +599,8 @@ export default async function DiseasePage({ params }: PageProps) {
             </Container>
           </Section>
         )}
+
+        <TestUnderstandingCTA topic={disease.name} />
 
         {/* ===== EMERGENCY ===== */}
         <EmergencySection />
