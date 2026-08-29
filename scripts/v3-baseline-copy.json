@@ -1,0 +1,43 @@
+{
+  "home-hero.tsx": [
+    "before fear fills the gap.",
+    "Popular:",
+    "Synapse",
+    "Search a medication — sertraline, fluoxetine…",
+    "Search medications"
+  ],
+  "stats-section.tsx": [],
+  "medication-library-section.tsx": [
+    "Medication Library",
+    "01 — Primary",
+    "Soon"
+  ],
+  "substance-use-section.tsx": [
+    "Substance Use Education",
+    "Also in development"
+  ],
+  "timeline-section.tsx": [
+    "Drug Timeline",
+    "Clinical pearl"
+  ],
+  "neuroarcade-section.tsx": [
+    "playing it."
+  ],
+  "roadmap-section.tsx": [
+    "In Development"
+  ],
+  "faq-section.tsx": [
+    "Frequently Asked"
+  ],
+  "emergency-section.tsx": [],
+  "footer.tsx": [
+    "Disclaimer:",
+    "GitHub repository",
+    "Email contact"
+  ],
+  "navbar.tsx": [
+    "Log out",
+    "Toggle theme",
+    "Open menu"
+  ]
+}
