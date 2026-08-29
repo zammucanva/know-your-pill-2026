@@ -52,6 +52,7 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { PageTracker } from "@/components/kyp/ui/page-tracker";
+import { TestUnderstandingCTA } from "@/components/kyp/ui/test-understanding-cta";
 
 import { getDrugBySlug, getAllDrugSlugs } from "@/lib/kyp/data";
 import type { NavItem } from "@/lib/kyp/use-scroll-spy";
@@ -174,7 +175,7 @@ export default async function DrugPage({ params }: PageProps) {
         <div className="border-b border-border/40 bg-muted/20">
           <Container>
             <nav className="flex items-center gap-2 py-2 text-xs text-muted-foreground" aria-label="Breadcrumb">
-              <Link href="/" className="hover:text-brand">Home</Link>
+              <Link href="/learn" className="hover:text-brand">Learn</Link>
               <span aria-hidden>/</span>
               <Link href="/#library" className="hover:text-brand">Medications</Link>
               <span aria-hidden>/</span>
@@ -400,6 +401,8 @@ export default async function DrugPage({ params }: PageProps) {
             <LearningProgress items={navItems} drugSlug={drug.slug} />
           </Container>
         </Section>
+
+        <TestUnderstandingCTA topic={drug.genericName} />
 
         <EmergencySection />
       </main>
