@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// Mark as static for GitHub Pages export (API routes are not functional in static export)
-export const dynamic = "force-static";
+// This route must be dynamic — it reads/writes cookies and queries the database.
+// Setting force-static breaks cookie modification (the route becomes a build-time
+// artifact with no runtime). In GitHub Pages (static export) mode these routes
+// are simply not included in the build, which is the correct behavior there.
+export const dynamic = "force-dynamic";
 import { db } from "@/lib/db";
 import bcrypt from "bcryptjs";
 import { cookies } from "next/headers";
