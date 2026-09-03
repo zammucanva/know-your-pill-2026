@@ -58,7 +58,7 @@ export function DrugKnowledgeGraph({ drug }: DrugKnowledgeGraphProps) {
 
         {/* Hint */}
         <div className="mt-6 flex justify-center">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-card/60 px-3 py-1 text-xs text-muted-foreground">
+          <span className="inline-flex items-center gap-1.5 rounded-md border border-border/70 bg-card/60 px-3 py-1 text-xs text-muted-foreground">
             <MousePointerClick className="h-3 w-3" />
             Hover to highlight · Click to navigate
           </span>
@@ -124,7 +124,7 @@ function KnowledgeGraphNode({
       className={cn(
         "group relative flex flex-col items-start gap-1.5 rounded-lg border p-3 transition-all duration-150",
         isHovered
-          ? cn(config.border, config.bg, "shadow-[var(--shadow-lift)] scale-[1.03] z-10")
+          ? cn(config.border, config.bg, "shadow-[var(--shadow-card)] scale-[1.03] z-10")
           : "border-border/60 bg-card hover:border-brand/30"
       )}
     >

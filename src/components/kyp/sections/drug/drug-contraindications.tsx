@@ -83,7 +83,7 @@ function BlackBoxWarning({ warning }: { warning: DrugWarning }) {
       <div className="p-6 sm:p-8 pl-8 sm:pl-10">
         <div className="flex items-center gap-2">
           <span className="flex h-2.5 w-2.5">
-            <span className="absolute inline-flex h-full w-full rounded-full bg-emergency opacity-75 kyp-pulse-dot" />
+            <span className="absolute inline-flex h-full w-full rounded-md bg-emergency opacity-75" />
             <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emergency" />
           </span>
           <p className="text-overline text-emergency">Black Box Warning · FDA</p>

@@ -57,7 +57,7 @@ export function SideEffectReceptorMap({
             {/* Receptor node (left) */}
             <div className="flex items-center gap-2">
               <span className="relative flex h-3 w-3">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-neural opacity-50 kyp-pulse-dot" />
+                <span className="absolute inline-flex h-full w-full rounded-md bg-neural opacity-50" />
                 <span className="relative inline-flex h-3 w-3 rounded-full bg-neural" />
               </span>
               <span className="text-xs font-mono font-semibold text-neural">5-HT</span>
@@ -72,13 +72,13 @@ export function SideEffectReceptorMap({
             {/* Badges */}
             <span
               className={cn(
-                "rounded-full border px-2 py-0.5 text-[0.6rem] font-semibold uppercase",
+                "rounded-md border px-2 py-0.5 text-[0.6rem] font-semibold uppercase",
                 severityColor[se.severity]
               )}
             >
               {se.severity.replace("-", " ")}
             </span>
-            <span className="rounded-full bg-muted px-2 py-0.5 text-[0.6rem] font-medium text-muted-foreground">
+            <span className="rounded-md bg-muted px-2 py-0.5 text-[0.6rem] font-medium text-muted-foreground">
               {frequencyLabel[se.frequency]}
             </span>
           </motion.div>

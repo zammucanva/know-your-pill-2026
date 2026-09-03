@@ -57,7 +57,7 @@ export function DrugClinicalCases({ drug }: DrugClinicalCasesProps) {
                 type="button"
                 onClick={() => setActiveIdx(i)}
                 className={cn(
-                  "rounded-full border px-3 py-1.5 text-xs font-medium transition-colors",
+                  "rounded-md border px-3 py-1.5 text-xs font-medium transition-colors",
                   i === activeIdx
                     ? "border-brand bg-brand text-primary-foreground"
                     : "border-border/80 bg-card text-muted-foreground hover:border-brand/40 hover:text-foreground"

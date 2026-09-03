@@ -51,7 +51,7 @@ export function TestUnderstandingCTA({ topic, variant = "default" }: TestUnderst
             <div>
               <p className="text-overline text-brand mb-2">Practice</p>
               <h2
-                className="font-serif font-semibold tracking-tight text-foreground"
+                className="font-sans font-semibold tracking-tight text-foreground"
                 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)" }}
               >
                 {heading}

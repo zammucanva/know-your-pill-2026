@@ -41,7 +41,7 @@ export function SubstanceUse() {
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neural">
               Substance Use Education
             </p>
-            <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h2 className="mt-2 font-sans text-3xl font-semibold tracking-tight sm:text-4xl">
               Psychoactive Substances, Visualised
             </h2>
             <p className="mt-4 text-base text-muted-foreground">
@@ -59,7 +59,7 @@ export function SubstanceUse() {
                 type="button"
                 onClick={() => setActive(f.id)}
                 className={cn(
-                  "shrink-0 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors",
+                  "shrink-0 rounded-md border px-3 py-1.5 text-xs font-medium transition-colors",
                   active === f.id
                     ? "border-brand bg-brand text-primary-foreground"
                     : "border-border/80 bg-card text-muted-foreground hover:border-brand/40 hover:text-foreground"
@@ -127,7 +127,7 @@ function SubstanceCard({ sub, index }: { sub: Substance; index: number }) {
         <span className="text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
           {sub.drugClass}
         </span>
-        <h3 className="mt-1 font-serif text-lg font-semibold leading-tight">{sub.name}</h3>
+        <h3 className="mt-1 font-sans text-lg font-semibold leading-tight">{sub.name}</h3>
       </div>
 
       <p className="mt-2 text-sm leading-relaxed text-muted-foreground line-clamp-3">

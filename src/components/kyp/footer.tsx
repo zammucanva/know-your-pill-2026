@@ -53,7 +53,7 @@ export function Footer() {
                 <Pill className="h-4.5 w-4.5 rotate-45" strokeWidth={2.5} />
               </span>
               <div className="flex flex-col leading-none">
-                <strong className="font-serif text-base font-semibold">Know Your Pill</strong>
+                <strong className="font-sans text-base font-semibold">Know Your Pill</strong>
                 <small className="text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground">
                   Medication Education · Visual
                 </small>

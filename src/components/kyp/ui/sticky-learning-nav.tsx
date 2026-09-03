@@ -161,16 +161,16 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
   return (
     <>
       {/* Desktop: sticky left rail — VS Code Explorer style (narrow, subtle) */}
-      <aside className="hidden lg:block fixed left-0 top-16 z-30 w-48 xl:w-52 border-r border-border/40 bg-card/40 backdrop-blur-sm">
+      <aside className="hidden lg:block fixed left-0 top-16 z-30 w-48 xl:w-52 border-r border-border/40 bg-card/95">
         <div className="px-3 py-3">
           {/* Progress header — compact */}
           <div className="flex items-center justify-between text-[0.65rem] font-medium uppercase tracking-wide text-muted-foreground/80">
             <span>Progress</span>
             <span className="tabular-nums">{completedCount}/{totalCount}</span>
           </div>
-          <div className="mt-1 h-0.5 w-full overflow-hidden rounded-full bg-muted">
+          <div className="mt-1 h-0.5 w-full overflow-hidden rounded-md bg-muted">
             <div
-              className="h-full rounded-full bg-brand transition-all duration-300"
+              className="h-full rounded-md bg-brand transition-all duration-300"
               style={{ width: `${(completedCount / totalCount) * 100}%` }}
             />
           </div>
@@ -230,7 +230,7 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
       <button
         type="button"
         onClick={() => setMobileOpen(true)}
-        className="lg:hidden fixed bottom-20 left-4 z-40 flex items-center gap-2 rounded-full border border-border/70 bg-card/90 backdrop-blur-xl px-4 py-2.5 shadow-[var(--shadow-lift)]"
+        className="lg:hidden fixed bottom-20 left-4 z-40 flex items-center gap-2 rounded-md border border-border/70 bg-card/95 px-4 py-2.5 shadow-[var(--shadow-card)]"
         aria-label="Open section navigator"
       >
         <div className="relative h-5 w-5">
@@ -250,20 +250,20 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
       {/* Mobile sheet */}
       {mobileOpen && (
         <div className="lg:hidden fixed inset-0 z-50 flex items-end">
-          <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
+          <div className="absolute inset-0 bg-background/60" onClick={() => setMobileOpen(false)} />
           <div className="relative w-full rounded-t-3xl border-t border-border bg-card p-4 pb-6 max-h-[70vh] overflow-y-auto kyp-scroll">
-            <div className="mx-auto mb-3 h-1 w-10 rounded-full bg-border" />
+            <div className="mx-auto mb-3 h-1 w-10 rounded-md bg-border" />
             <div className="flex items-center justify-between mb-3">
               <div>
                 <p className="text-overline text-muted-foreground">Section Navigator</p>
-                <p className="font-serif text-lg font-semibold">{completedCount} of {totalCount} completed</p>
+                <p className="font-sans text-lg font-semibold">{completedCount} of {totalCount} completed</p>
               </div>
               <Button variant="ghost" size="icon" onClick={() => setMobileOpen(false)} aria-label="Close">
                 <X className="h-4 w-4" />
               </Button>
             </div>
-            <div className="h-1 w-full overflow-hidden rounded-full bg-muted mb-4">
-              <div className="h-full rounded-full bg-gradient-to-r from-brand to-neural" style={{ width: `${(completedCount / totalCount) * 100}%` }} />
+            <div className="h-1 w-full overflow-hidden rounded-md bg-muted mb-4">
+              <div className="h-full rounded-md bg-gradient-to-r from-brand to-neural" style={{ width: `${(completedCount / totalCount) * 100}%` }} />
             </div>
             <nav className="grid gap-1">
               {items.map((item) => {

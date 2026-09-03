@@ -16,14 +16,12 @@ export function EmergencyBanner() {
           className="relative overflow-hidden rounded-3xl border border-emergency/30 bg-gradient-to-br from-emergency-soft/60 via-card to-card p-8 sm:p-10"
         >
           {/* Decorative pulse */}
-          <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-emergency/15 blur-3xl" />
-
-          <div className="relative grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+<div className="relative grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:items-center">
             {/* Left: copy */}
             <div>
               <div className="flex items-center gap-2">
                 <span className="relative flex h-2.5 w-2.5">
-                  <span className="absolute inline-flex h-full w-full rounded-full bg-emergency opacity-75 kyp-pulse-dot" />
+                  <span className="absolute inline-flex h-full w-full rounded-md bg-emergency opacity-75" />
                   <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emergency" />
                 </span>
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emergency">
@@ -31,7 +29,7 @@ export function EmergencyBanner() {
                 </p>
               </div>
 
-              <h2 className="mt-4 font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
+              <h2 className="mt-4 font-sans text-3xl font-semibold tracking-tight sm:text-4xl">
                 In a crisis right now?
               </h2>
               <p className="mt-3 max-w-lg text-base text-muted-foreground">
@@ -60,7 +58,7 @@ export function EmergencyBanner() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className="group flex items-center justify-between gap-4 rounded-2xl border border-emergency/20 bg-card p-4 transition-all hover:border-emergency/40 hover:shadow-md hover:shadow-emergency/5"
+                  className="group flex items-center justify-between gap-4 rounded-2xl border border-emergency/20 bg-card p-4 transition-all hover:border-emergency/40 hover:shadow-md hover:shadow-card/5"
                 >
                   <div className="flex items-center gap-3">
                     <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-emergency/10 text-emergency">

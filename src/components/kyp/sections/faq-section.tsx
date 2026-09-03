@@ -16,7 +16,7 @@ export function FaqSection() {
             <div className="lg:sticky lg:top-24 lg:self-start">
               <p className="text-overline text-brand mb-4">Frequently Asked</p>
               <h2
-                className="font-serif font-semibold tracking-[-0.03em] text-foreground leading-[1.05]"
+                className="font-sans font-semibold tracking-[-0.03em] text-foreground leading-[1.05]"
                 style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
               >
                 Questions

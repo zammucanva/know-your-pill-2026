@@ -5,18 +5,18 @@ import { motion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 /**
- * Reveal — premium scroll-triggered reveal animation.
+ * Reveal — restrained scroll-into-view reveal (audit §23 motion contract).
  *
  * opacity: 0 → 1
- * translateY: 24px → 0
- * scale: 0.97 → 1
- * Duration: 550ms, ease-out
+ * translateY: 12px → 0
+ * Duration: 300ms, ease-out
  *
+ * NO scale (audit rule 12 — scale-on-scroll is the #1 Framer Motion tell).
+ * NO stagger (audit rule 14 — lists appear as units, not slideshows).
  * Respects prefers-reduced-motion (content appears instantly).
  *
  * Usage:
  * <Reveal>content</Reveal>
- * <Reveal delay={0.1}>staggered child</Reveal>
  * <Reveal as="section">wrapping element</Reveal>
  */
 interface RevealProps {
@@ -26,19 +26,18 @@ interface RevealProps {
   duration?: number;
   as?: "div" | "section" | "article" | "li" | "span";
   y?: number;
+  /** @deprecated scale is banned by the motion contract; prop kept for API compat, ignored */
   scale?: number;
 }
 
 const revealVariants: Variants = {
   hidden: {
     opacity: 0,
-    y: 24,
-    scale: 0.97,
+    y: 12,
   },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
   },
 };
 
@@ -46,16 +45,15 @@ export function Reveal({
   children,
   className,
   delay = 0,
-  duration = 0.55,
+  duration = 0.3,
   as = "div",
-  y = 24,
-  scale = 0.97,
+  y = 12,
 }: RevealProps) {
   const MotionTag = motion[as] as typeof motion.div;
 
   const customVariants: Variants = {
-    hidden: { opacity: 0, y, scale },
-    visible: { opacity: 1, y: 0, scale: 1 },
+    hidden: { opacity: 0, y },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
@@ -67,7 +65,7 @@ export function Reveal({
       transition={{
         duration,
         delay,
-        ease: [0.22, 1, 0.36, 1], // premium ease-out
+        ease: [0.22, 1, 0.36, 1], // ease-out
       }}
       className={cn(className)}
     >
@@ -77,41 +75,19 @@ export function Reveal({
 }
 
 /**
- * RevealGroup — wrapper that staggers children.
- * Each direct <Reveal> child gets an incremental delay.
- *
- * Usage:
- * <RevealGroup stagger={0.08}>
- *   <Reveal>item 1</Reveal>
- *   <Reveal>item 2</Reveal>
- *   <Reveal>item 3</Reveal>
- * </RevealGroup>
+ * RevealGroup — plain wrapper (audit rule 14: no staggered children).
+ * Kept for API compatibility with existing call-sites; children render as a
+ * unit. The `stagger` prop is accepted but intentionally ignored.
  */
 interface RevealGroupProps {
   children: React.ReactNode;
   className?: string;
+  /** @deprecated stagger is banned by the motion contract; ignored */
   stagger?: number;
 }
 
-export function RevealGroup({ children, className, stagger = 0.08 }: RevealGroupProps) {
-  return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-40px" }}
-      variants={{
-        hidden: {},
-        visible: {
-          transition: {
-            staggerChildren: stagger,
-          },
-        },
-      }}
-      className={cn(className)}
-    >
-      {children}
-    </motion.div>
-  );
+export function RevealGroup({ children, className }: RevealGroupProps) {
+  return <div className={cn(className)}>{children}</div>;
 }
 
 export { revealVariants };

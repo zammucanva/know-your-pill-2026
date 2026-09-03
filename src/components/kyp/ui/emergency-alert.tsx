@@ -34,15 +34,13 @@ export function EmergencyAlert({
       className={cn("border-emergency/30 bg-gradient-to-br from-emergency-soft/60 via-card to-card", className)}
     >
       {/* Decorative pulse */}
-      <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-emergency/15 blur-3xl" />
-
-      <CardBody className="relative p-8 sm:p-10">
+<CardBody className="relative p-8 sm:p-10">
         <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:items-center">
           {/* Left: copy */}
           <div>
             <div className="flex items-center gap-2">
               <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-emergency opacity-75 kyp-pulse-dot" />
+                <span className="absolute inline-flex h-full w-full rounded-md bg-emergency opacity-75" />
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emergency" />
               </span>
               <p className="text-overline text-emergency">Emergency · Available 24/7</p>
@@ -73,7 +71,7 @@ export function EmergencyAlert({
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="group flex items-center justify-between gap-4 rounded-2xl border border-emergency/20 bg-card p-4 transition-all hover:border-emergency/40 hover:shadow-[var(--shadow-emergency)]"
+                className="group flex items-center justify-between gap-4 rounded-2xl border border-emergency/20 bg-card p-4 transition-all hover:border-emergency/40 hover:shadow-[var(--shadow-card)]"
               >
                 <div className="flex items-center gap-3">
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-emergency/10 text-emergency">

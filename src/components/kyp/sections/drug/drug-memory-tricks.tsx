@@ -40,7 +40,7 @@ export function DrugMemoryTricks({ drug }: DrugMemoryTricksProps) {
                 <h3 className="mt-4 text-h4 leading-tight">{trick.title}</h3>
 
                 <div className="mt-3 rounded-lg border border-neural/20 bg-neural-soft/30 p-3">
-                  <p className="font-serif text-base font-semibold text-brand-ink leading-snug">
+                  <p className="font-sans text-base font-semibold text-brand-ink leading-snug">
                     {trick.trick}
                   </p>
                 </div>

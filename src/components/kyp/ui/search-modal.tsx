@@ -321,7 +321,7 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
                           <p className="truncate text-sm font-medium text-foreground">
                             {item.title}
                           </p>
-                          <span className="shrink-0 rounded-full bg-muted px-1.5 py-0.5 text-[0.6rem] font-medium uppercase tracking-wide text-muted-foreground">
+                          <span className="shrink-0 rounded-md bg-muted px-1.5 py-0.5 text-[0.6rem] font-medium uppercase tracking-wide text-muted-foreground">
                             {searchTypeLabels[item.type]}
                           </span>
                         </div>

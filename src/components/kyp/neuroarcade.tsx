@@ -29,19 +29,16 @@ export function NeuroArcade() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-3xl border border-neural/20 bg-gradient-to-br from-card via-card to-neural-soft/40 p-8 sm:p-12">
           {/* Decorative grid */}
-          <div className="pointer-events-none absolute inset-0 kyp-grid-bg opacity-40" />
-          <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-neural/20 blur-3xl kyp-drift" />
-
-          <div className="relative grid items-center gap-10 lg:grid-cols-[1fr_1.1fr]">
+<div className="relative grid items-center gap-10 lg:grid-cols-[1fr_1.1fr]">
             {/* Left: copy */}
             <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-neural/30 bg-neural-soft/60 px-3 py-1 text-xs font-medium text-neural">
+              <span className="inline-flex items-center gap-2 rounded-md border border-neural/30 bg-neural-soft/60 px-3 py-1 text-xs font-medium text-neural">
                 <Gamepad2 className="h-3 w-3" />
                 NeuroArcade
               </span>
-              <h2 className="mt-4 font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
+              <h2 className="mt-4 font-sans text-3xl font-semibold tracking-tight sm:text-4xl">
                 Learn neuroscience by{" "}
-                <span className="kyp-text-gradient">playing it.</span>
+                <span className="">playing it.</span>
               </h2>
               <p className="mt-4 text-base text-muted-foreground">
                 A growing suite of mini-games that turn psychopharmacology into a hands-on

@@ -13,7 +13,7 @@ export function Categories() {
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
               Browse by category
             </p>
-            <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h2 className="mt-2 font-sans text-3xl font-semibold tracking-tight sm:text-4xl">
               Explore Brain Pathways & Treatments
             </h2>
           </div>
@@ -40,14 +40,7 @@ export function Categories() {
                 )}
               >
                 {/* Gradient backdrop */}
-                <div
-                  className={cn(
-                    "pointer-events-none absolute inset-0 bg-gradient-to-br opacity-60",
-                    cat.accent
-                  )}
-                />
-
-                <div className="relative flex items-start justify-between">
+<div className="relative flex items-start justify-between">
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-background/70 backdrop-blur border border-border/70 text-brand-ink">
                     <Icon className="h-5 w-5" strokeWidth={2} />
                   </span>
@@ -56,7 +49,7 @@ export function Categories() {
                   </span>
                 </div>
 
-                <h3 className="relative mt-4 font-serif text-lg font-semibold leading-tight">
+                <h3 className="relative mt-4 font-sans text-lg font-semibold leading-tight">
                   {cat.title}
                 </h3>
                 <p className="relative mt-2 text-sm leading-relaxed text-muted-foreground">

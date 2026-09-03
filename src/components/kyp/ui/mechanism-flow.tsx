@@ -134,7 +134,7 @@ export function MechanismFlow({ flow }: MechanismFlowProps) {
                 >
                   <span className={cn("mt-0.5 h-3 w-3 shrink-0 rounded-full", style.dot)} />
                   <div className="min-w-0 flex-1">
-                    <p className={cn("font-serif text-base font-semibold leading-tight", style.text)}>
+                    <p className={cn("font-sans text-base font-semibold leading-tight", style.text)}>
                       {node.label}
                     </p>
                     {node.sublabel && (
@@ -172,7 +172,7 @@ export function MechanismFlow({ flow }: MechanismFlowProps) {
                     {edge.label && (
                       <span
                         className={cn(
-                          "rounded-full px-2 py-0.5 text-[0.65rem] font-medium",
+                          "rounded-md px-2 py-0.5 text-[0.65rem] font-medium",
                           isInhibit
                             ? "bg-emergency-soft/60 text-emergency"
                             : "bg-muted text-muted-foreground"

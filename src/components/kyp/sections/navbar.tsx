@@ -56,7 +56,7 @@ export function Navbar() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-[var(--duration-base)] ease-[var(--ease-out-soft)]",
         scrolled
-          ? "border-b border-border/70 bg-background/80 backdrop-blur-xl backdrop-saturate-150"
+          ? "border-b border-border/70 bg-background/95"
           : "bg-transparent"
       )}
     >
@@ -71,7 +71,7 @@ export function Navbar() {
             />
           </span>
           <span className="flex flex-col leading-none">
-            <strong className="font-serif text-[1.05rem] font-semibold tracking-tight">
+            <strong className="font-sans text-[1.05rem] font-semibold tracking-tight">
               Know Your Pill
             </strong>
             <small className="text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground">
@@ -103,7 +103,7 @@ export function Navbar() {
 
           <a
             href="#emergency"
-            className="hidden items-center gap-1.5 rounded-full border border-emergency/30 bg-emergency-soft/60 px-3 py-1.5 text-xs font-semibold text-emergency transition-colors hover:bg-emergency/10 sm:flex"
+            className="hidden items-center gap-1.5 rounded-md border border-emergency/30 bg-emergency-soft/60 px-3 py-1.5 text-xs font-semibold text-emergency transition-colors hover:bg-emergency/10 sm:flex"
           >
             <Phone className="h-3 w-3" strokeWidth={2.5} />
             Emergency
@@ -114,7 +114,7 @@ export function Navbar() {
             <div className="hidden items-center gap-2 sm:flex">
               <Link
                 href="/dashboard"
-                className="flex items-center gap-1.5 rounded-full border border-border/60 bg-muted/40 px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                className="flex items-center gap-1.5 rounded-md border border-border/60 bg-muted/40 px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
               >
                 <UserIcon className="h-3 w-3 text-brand" />
                 {user.name}
@@ -131,7 +131,7 @@ export function Navbar() {
             </div>
           ) : (
             <Link href="/welcome" className="hidden sm:block">
-              <Button variant="ghost" size="sm" className="gap-1.5 rounded-full">
+              <Button variant="ghost" size="sm" className="gap-1.5 rounded-md">
                 <LogIn className="h-3.5 w-3.5" />
                 Log in
               </Button>
@@ -171,7 +171,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-border/70 bg-background/95 backdrop-blur-xl lg:hidden">
+        <div className="border-t border-border/70 bg-background lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
             {navLinks.map((l) => {
               const isRoute = l.href.startsWith("/") && !l.href.startsWith("/#");

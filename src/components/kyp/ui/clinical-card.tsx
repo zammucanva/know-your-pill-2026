@@ -56,7 +56,7 @@ export function ClinicalCard({ substance, index = 0, className }: ClinicalCardPr
         <CardBody className="flex h-full flex-col">
           <div className="mt-4">
             <p className="text-overline text-muted-foreground">{drugClass.name}</p>
-            <h3 className="mt-1 font-serif text-h3 leading-tight">{substance.name}</h3>
+            <h3 className="mt-1 font-sans text-h3 leading-tight">{substance.name}</h3>
           </div>
 
           <p className="mt-2 flex-1 text-body-sm text-muted-foreground leading-relaxed line-clamp-3">

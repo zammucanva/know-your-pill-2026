@@ -42,20 +42,7 @@ export function HeroSection({
       {...props}
     >
       {/* Ambient decoration */}
-      <div className="pointer-events-none absolute inset-0 kyp-grid-bg opacity-60" aria-hidden />
-      <div className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-brand/20 blur-3xl kyp-drift" aria-hidden />
-      <div
-        className="pointer-events-none absolute -right-24 top-32 h-80 w-80 rounded-full bg-neural/20 blur-3xl kyp-drift"
-        style={{ animationDelay: "-7s" }}
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute bottom-0 left-1/2 h-64 w-[36rem] -translate-x-1/2 rounded-full bg-emergency/10 blur-3xl kyp-drift"
-        style={{ animationDelay: "-14s" }}
-        aria-hidden
-      />
-
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div
           className={cn(
             "grid items-center gap-12",
@@ -70,7 +57,7 @@ export function HeroSection({
             className={cn("relative", variant === "centered" && "mx-auto")}
           >
             {eyebrow && (
-              <span className="inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand-soft/60 px-3 py-1 text-xs font-medium text-brand-ink">
+              <span className="inline-flex items-center gap-2 rounded-md border border-brand/30 bg-brand-soft/60 px-3 py-1 text-xs font-medium text-brand-ink">
                 {eyebrow}
               </span>
             )}

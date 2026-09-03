@@ -43,10 +43,10 @@ export function Navbar() {
         <Link href="#top" className="group flex items-center gap-2.5">
           <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-neural text-primary-foreground shadow-sm">
             <Pill className="h-4.5 w-4.5 rotate-45" strokeWidth={2.5} />
-            <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-emergency kyp-pulse-dot" />
+            <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-emergency" />
           </span>
           <span className="flex flex-col leading-none">
-            <strong className="font-serif text-[1.05rem] font-semibold tracking-tight">
+            <strong className="font-sans text-[1.05rem] font-semibold tracking-tight">
               Know Your Pill
             </strong>
             <small className="text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground">
@@ -72,7 +72,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <a
             href="#emergency"
-            className="hidden items-center gap-1.5 rounded-full border border-emergency/30 bg-emergency-soft/60 px-3 py-1.5 text-xs font-semibold text-emergency transition-colors hover:bg-emergency/10 sm:flex"
+            className="hidden items-center gap-1.5 rounded-md border border-emergency/30 bg-emergency-soft/60 px-3 py-1.5 text-xs font-semibold text-emergency transition-colors hover:bg-emergency/10 sm:flex"
           >
             <Phone className="h-3 w-3" strokeWidth={2.5} />
             Emergency

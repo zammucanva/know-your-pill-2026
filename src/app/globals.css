@@ -62,20 +62,19 @@
   --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
   --font-mono: var(--font-geist-mono);
 
-  /* Radius scale */
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 10px);
-  --radius-3xl: calc(var(--radius) + 18px);
+  /* Radius scale — TWO values only (audit rule 10): 4px chips, 8px surfaces.
+     The top of the scale is deliberately flat so legacy rounded-xl/2xl/3xl
+     call-sites all render as 8px without touching every component. */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 8px;
+  --radius-xl: 8px;
+  --radius-2xl: 8px;
+  --radius-3xl: 8px;
 
-  /* Custom shadows */
-  --shadow-soft: 0 1px 2px var(--shadow-color), 0 2px 8px -2px var(--shadow-color);
-  --shadow-lift: 0 4px 12px -2px var(--shadow-color), 0 8px 24px -8px var(--shadow-color);
-  --shadow-glow: 0 0 0 1px color-mix(in oklch, var(--brand) 20%, transparent),
-                 0 8px 32px -8px color-mix(in oklch, var(--brand) 35%, transparent);
-  --shadow-emergency: 0 4px 16px -4px color-mix(in oklch, var(--emergency) 40%, transparent);
+  /* Shadows — ONE token (audit rule 9). Used rarely: modals, dropdowns,
+     hover-elevated interactive cards. Content sections use hairline borders. */
+  --shadow-card: 0 1px 3px var(--shadow-color);
 
   /* Motion */
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
@@ -112,7 +111,8 @@
    Theme values — Light
    ============================================================ */
 :root {
-  --radius: 0.875rem;
+  /* Base radius = 8px (the single surface radius; see @theme scale above) */
+  --radius: 0.5rem;
 
   /* Surfaces */
   --background: oklch(0.99 0.005 220);
@@ -289,7 +289,9 @@
     overflow-x: hidden;
   }
 
-  /* Typography scale — use as Tailwind classes via @apply in components */
+  /* Typography scale — display is the ONLY serif role (audit rule 2):
+     Playfair for the hero wordmark and one signature moment per page.
+     h1–h3 are Geist Sans 600 — the highest-leverage anti-vibe-code change. */
   .text-display {
     font-family: var(--font-serif);
     font-size: clamp(2.75rem, 6.5vw, 5rem);
@@ -298,21 +300,21 @@
     font-weight: 600;
   }
   .text-h1 {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: clamp(2.25rem, 4.5vw, 3.25rem);
     line-height: 1.08;
     letter-spacing: -0.025em;
     font-weight: 600;
   }
   .text-h2 {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: clamp(1.75rem, 3vw, 2.25rem);
     line-height: 1.12;
     letter-spacing: -0.02em;
     font-weight: 600;
   }
   .text-h3 {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: 1.375rem;
     line-height: 1.25;
     letter-spacing: -0.01em;
@@ -377,79 +379,11 @@
   @media (min-width: 640px) { .kyp-container { padding-inline: 1.5rem; } }
   @media (min-width: 1024px) { .kyp-container { padding-inline: 2rem; } }
 
-  /* Glass card — used by navbar, hero search, modal overlays */
-  .kyp-glass {
-    background: color-mix(in oklch, var(--card) 78%, transparent);
-    backdrop-filter: blur(16px) saturate(140%);
-    -webkit-backdrop-filter: blur(16px) saturate(140%);
-    border: 1px solid color-mix(in oklch, var(--brand) 14%, var(--border));
-  }
-
-  /* Subtle grid texture for hero / section backgrounds */
-  .kyp-grid-bg {
-    background-image:
-      linear-gradient(to right, color-mix(in oklch, var(--brand) 6%, transparent) 1px, transparent 1px),
-      linear-gradient(to bottom, color-mix(in oklch, var(--brand) 6%, transparent) 1px, transparent 1px);
-    background-size: 56px 56px;
-    background-position: -1px -1px;
-    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
-    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
-  }
-
-  /* Soft section divider */
-  .kyp-divider {
-    height: 1px;
-    background: linear-gradient(
-      to right,
-      transparent,
-      color-mix(in oklch, var(--brand) 25%, var(--border)),
-      transparent
-    );
-  }
-
-  /* Animated gradient border for hero CTA */
-  .kyp-hero-glow {
-    position: relative;
-    isolation: isolate;
-  }
-  .kyp-hero-glow::before {
-    content: "";
-    position: absolute;
-    inset: -2px;
-    z-index: -1;
-    border-radius: inherit;
-    background: conic-gradient(
-      from 180deg at 50% 50%,
-      oklch(0.55 0.11 195),
-      oklch(0.62 0.16 280),
-      oklch(0.6 0.22 25),
-      oklch(0.55 0.11 195)
-    );
-    filter: blur(8px);
-    opacity: 0.45;
-    /* Static glow — no rotation */
-  }
-
-  /* Pulse dot (emergency indicator) */
-  .kyp-pulse-dot {
-    position: relative;
-  }
-  .kyp-pulse-dot::before {
-    content: "";
-    position: absolute;
-    inset: -4px;
-    border-radius: 9999px;
-    background: var(--emergency);
-    opacity: 0.5;
-    animation: kyp-pulse 1.8s ease-out infinite;
-  }
-
-  /* Float (used by hero brain nodes) */
-  .kyp-float { animation: kyp-float 8s ease-in-out infinite; }
-  .kyp-drift {
-    /* Static — no continuous animation. Gradient blobs should not compete with content. */
-    animation: none;
-  }
+  /* NOTE: the following utilities were intentionally DELETED (audit §22/§24,
+     rule 25 — a utility implementing a banned pattern is itself a violation):
+     kyp-glass, kyp-grid-bg, kyp-hero-glow, kyp-pulse-dot, kyp-float,
+     kyp-drift, kyp-text-gradient, kyp-divider.
+     Keeping this note so no one re-adds them without reading the audit. */
 
   /* Custom scrollbar */
   .kyp-scroll {
@@ -461,14 +395,6 @@
   .kyp-scroll::-webkit-scrollbar-thumb {
     background: color-mix(in oklch, var(--brand) 40%, transparent);
     border-radius: 9999px;
-  }
-
-  /* Text gradient (brand → neural) */
-  .kyp-text-gradient {
-    background: linear-gradient(105deg, oklch(0.45 0.12 195), oklch(0.50 0.14 230), oklch(0.55 0.16 280));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
   }
 
   /* Focus ring helper */
@@ -497,20 +423,7 @@
    Keyframes
    ============================================================ */
 @keyframes kyp-spin { to { transform: rotate(360deg); } }
-@keyframes kyp-pulse {
-  0%   { transform: scale(0.9); opacity: 0.6; }
-  70%  { transform: scale(1.8); opacity: 0; }
-  100% { transform: scale(1.8); opacity: 0; }
-}
-@keyframes kyp-float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50%      { transform: translateY(-12px) rotate(2deg); }
-}
-@keyframes kyp-drift {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33%      { transform: translate(20px, -16px) scale(1.05); }
-  66%      { transform: translate(-12px, 18px) scale(0.97); }
-}
+/* kyp-float / kyp-drift / kyp-pulse keyframes deleted with their utilities. */
 
 /* ============================================================
    Reduced motion — respect user preference
@@ -521,9 +434,5 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-
-  .kyp-float, .kyp-drift, .kyp-pulse-dot::before {
-    animation: none !important;
   }
 }

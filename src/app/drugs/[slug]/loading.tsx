@@ -15,7 +15,7 @@ export default function Loading() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Faux navbar */}
-      <div className="fixed inset-x-0 top-0 z-50 border-b border-border/70 bg-background/80 backdrop-blur-xl">
+      <div className="fixed inset-x-0 top-0 z-50 border-b border-border/70 bg-background/95">
         <Container className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2.5">
             <Skeleton className="h-9 w-9 rounded-xl" />

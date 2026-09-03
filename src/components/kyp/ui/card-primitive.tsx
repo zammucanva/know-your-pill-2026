@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
  *
  * Variants:
  *   - flat      : plain border, no shadow (default)
- *   - elevated  : shadow-soft always on
+ *   - elevated  : shadow-card always on
  *   - featured  : brand-tinted border + decorative glow
  *   - outline   : transparent background, border only
  *
@@ -28,12 +28,12 @@ const cardVariants = cva(
     variants: {
       variant: {
         flat: "border-border/70",
-        elevated: "border-border/70 shadow-[var(--shadow-soft)]",
-        featured: "border-brand/30 shadow-[var(--shadow-glow)]",
+        elevated: "border-border/70 shadow-[var(--shadow-card)]",
+        featured: "border-brand/30 shadow-[var(--shadow-card)]",
         outline: "border-border bg-transparent",
       },
       interactive: {
-        true: "hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-[var(--shadow-lift)] cursor-pointer",
+        true: "hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-[var(--shadow-card)] cursor-pointer",
         false: "",
       },
     },

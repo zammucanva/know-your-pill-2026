@@ -36,7 +36,7 @@ export function LessonProgress({ lessons }: LessonProgressProps) {
   }, [activeId, lessons]);
 
   return (
-    <div className="border-b border-border/40 bg-card/30 backdrop-blur-sm">
+    <div className="border-b border-border/40 bg-card/95">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-2 py-2 overflow-x-auto kyp-scroll">
           {lessons.map((lesson) => {
@@ -58,7 +58,7 @@ export function LessonProgress({ lessons }: LessonProgressProps) {
                     el?.scrollIntoView({ behavior: "smooth", block: "start" });
                   }}
                   className={cn(
-                    "flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium transition-colors",
+                    "flex shrink-0 items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-medium transition-colors",
                     isCurrent && "bg-brand-soft/40 text-brand-ink",
                     isPast && "text-brand/60",
                     !isCurrent && !isPast && "text-muted-foreground"

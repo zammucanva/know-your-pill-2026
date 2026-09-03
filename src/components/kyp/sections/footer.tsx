@@ -49,17 +49,13 @@ export function Footer() {
     <footer className="mt-auto relative overflow-hidden border-t border-border/20">
       {/* Very subtle end-of-page organic shape */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <div
-          className="absolute left-1/2 -translate-x-1/2 -bottom-[30%] h-[40vh] w-[80vh] rounded-full opacity-[0.03] blur-[120px]"
-          style={{ background: "radial-gradient(circle, oklch(0.55 0.11 195), transparent 70%)" }}
-        />
       </div>
 
       <Container className="relative py-20">
         <Reveal>
           {/* Massive closing typography */}
           <p
-            className="font-serif font-bold text-muted-foreground/[0.06] tracking-[-0.04em] leading-none mb-16 select-none"
+            className="font-sans font-bold text-muted-foreground/[0.06] tracking-[-0.04em] leading-none mb-16 select-none"
             style={{ fontSize: "clamp(3rem, 12vw, 8rem)" }}
           >
             Know Your Pill

@@ -9,14 +9,12 @@ export function MedicationLibrary() {
   return (
     <section id="library" className="relative py-20 sm:py-24">
       {/* Soft backdrop */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-soft/40 via-transparent to-transparent" />
-
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
             Medication Library
           </p>
-          <h2 className="mt-2 font-serif text-3xl font-semibold tracking-tight sm:text-4xl">
+          <h2 className="mt-2 font-sans text-3xl font-semibold tracking-tight sm:text-4xl">
             Explore Medications
           </h2>
           <p className="mt-4 text-base text-muted-foreground">
@@ -44,11 +42,6 @@ export function MedicationLibrary() {
                   "hover:-translate-y-0.5"
                 )}
               >
-                {/* Decorative glow on featured cards */}
-                {med.featured && (
-                  <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-brand/10 blur-2xl" />
-                )}
-
                 <div className="relative flex items-start justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <span
@@ -67,18 +60,18 @@ export function MedicationLibrary() {
                           {med.number}
                         </span>
                         {med.featured && (
-                          <span className="inline-flex items-center gap-1 rounded-full bg-brand-soft/60 px-2 py-0.5 text-[0.65rem] font-semibold text-brand-ink">
+                          <span className="inline-flex items-center gap-1 rounded-md bg-brand-soft/60 px-2 py-0.5 text-[0.65rem] font-semibold text-brand-ink">
                             <Sparkles className="h-2.5 w-2.5" />
                             Featured
                           </span>
                         )}
                         {med.comingSoon && (
-                          <span className="rounded-full bg-muted px-2 py-0.5 text-[0.65rem] font-semibold text-muted-foreground">
+                          <span className="rounded-md bg-muted px-2 py-0.5 text-[0.65rem] font-semibold text-muted-foreground">
                             Coming Soon
                           </span>
                         )}
                       </div>
-                      <h3 className="mt-1 font-serif text-xl font-semibold leading-tight">
+                      <h3 className="mt-1 font-sans text-xl font-semibold leading-tight">
                         {med.title}
                       </h3>
                     </div>
@@ -97,7 +90,7 @@ export function MedicationLibrary() {
                   {med.chips.map((chip) => (
                     <span
                       key={chip}
-                      className="rounded-full border border-border/70 bg-background/60 px-2.5 py-1 text-xs font-medium text-foreground/80"
+                      className="rounded-md border border-border/70 bg-background/60 px-2.5 py-1 text-xs font-medium text-foreground/80"
                     >
                       {chip}
                     </span>

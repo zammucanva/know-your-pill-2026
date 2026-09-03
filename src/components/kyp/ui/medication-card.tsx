@@ -34,11 +34,6 @@ export function MedicationCard({ med, index = 0, className }: MedicationCardProp
         interactive
         className="h-full"
       >
-        {/* Decorative glow on featured cards */}
-        {med.featured && (
-          <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-brand/10 blur-2xl" />
-        )}
-
         <CardBody className="relative">
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-center gap-3">
@@ -67,7 +62,7 @@ export function MedicationCard({ med, index = 0, className }: MedicationCardProp
                     <Badge variant="default" size="sm">Coming Soon</Badge>
                   )}
                 </div>
-                <h3 className="mt-1 font-serif text-h3 leading-tight">{med.title}</h3>
+                <h3 className="mt-1 font-sans text-h3 leading-tight">{med.title}</h3>
               </div>
             </div>
           </div>
@@ -80,7 +75,7 @@ export function MedicationCard({ med, index = 0, className }: MedicationCardProp
             {med.chips.map((chip) => (
               <span
                 key={chip}
-                className="rounded-full border border-border/70 bg-background/60 px-2.5 py-1 text-xs font-medium text-foreground/80"
+                className="rounded-md border border-border/70 bg-background/60 px-2.5 py-1 text-xs font-medium text-foreground/80"
               >
                 {chip}
               </span>

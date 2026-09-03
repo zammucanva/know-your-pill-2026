@@ -15,7 +15,7 @@ const statVariants = cva(
       variant: {
         default: "border-border/70",
         brand: "border-brand/20 bg-brand-soft/30",
-        elevated: "border-border/70 shadow-[var(--shadow-soft)]",
+        elevated: "border-border/70 shadow-[var(--shadow-card)]",
       },
       align: {
         left: "text-left",
@@ -45,7 +45,7 @@ export function Stat({
 }: StatProps) {
   return (
     <div className={cn(statVariants({ variant, align }), className)} {...props}>
-      <p className="font-serif text-3xl font-semibold tracking-tight text-brand-ink sm:text-4xl">
+      <p className="font-sans text-3xl font-semibold tracking-tight text-brand-ink sm:text-4xl">
         {value}
       </p>
       <p className="mt-1 text-sm font-semibold">{label}</p>

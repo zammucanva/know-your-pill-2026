@@ -17,7 +17,7 @@ export function MedicationLibrarySection() {
           <div className="mb-20">
             <p className="text-overline text-brand mb-4">Medication Library</p>
             <h2
-              className="font-serif font-semibold tracking-[-0.03em] text-foreground leading-[1.05] max-w-4xl"
+              className="font-sans font-semibold tracking-[-0.03em] text-foreground leading-[1.05] max-w-4xl"
               style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
             >
               Twelve psychiatric medications, structured the same way
@@ -38,7 +38,7 @@ export function MedicationLibrarySection() {
               <div>
                 <p className="font-mono text-xs text-muted-foreground/40 mb-2">01 — Primary</p>
                 <h3
-                  className="font-serif font-semibold tracking-tight text-foreground"
+                  className="font-sans font-semibold tracking-tight text-foreground"
                   style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)" }}
                 >
                   {medicationClasses[0].title}
@@ -72,7 +72,7 @@ export function MedicationLibrarySection() {
                 </span>
                 <div className="flex-1">
                   <div className="flex items-center gap-3">
-                    <h4 className="font-serif text-lg font-semibold text-foreground">
+                    <h4 className="font-sans text-lg font-semibold text-foreground">
                       {med.title}
                     </h4>
                     {med.comingSoon && (

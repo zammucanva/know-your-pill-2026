@@ -138,7 +138,7 @@ export default function QuizPage() {
               <Reveal>
                 <p className="text-overline text-brand mb-6">Practice</p>
                 <h1
-                  className="font-serif font-semibold tracking-[-0.03em] text-foreground leading-[0.95]"
+                  className="font-sans font-semibold tracking-[-0.03em] text-foreground leading-[0.95]"
                   style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)" }}
                 >
                   Test your understanding
@@ -152,17 +152,17 @@ export default function QuizPage() {
               <Reveal delay={0.1}>
                 <div className="mt-10 grid grid-cols-2 gap-px border border-border/40 sm:grid-cols-3">
                   <div className="p-4">
-                    <p className="font-serif text-2xl font-bold text-foreground">{allQuestions.length}</p>
+                    <p className="font-sans text-2xl font-bold text-foreground">{allQuestions.length}</p>
                     <p className="text-xs text-muted-foreground mt-1">Total questions</p>
                   </div>
                   <div className="p-4 border-l border-border/40">
-                    <p className="font-serif text-2xl font-bold text-foreground">
+                    <p className="font-sans text-2xl font-bold text-foreground">
                       {allQuestions.filter(q => q.sourceType === "drug").length}
                     </p>
                     <p className="text-xs text-muted-foreground mt-1">From medications</p>
                   </div>
                   <div className="p-4 border-l border-border/40 sm:col-span-1 col-span-2">
-                    <p className="font-serif text-2xl font-bold text-foreground">
+                    <p className="font-sans text-2xl font-bold text-foreground">
                       {allQuestions.filter(q => q.sourceType === "disease").length}
                     </p>
                     <p className="text-xs text-muted-foreground mt-1">From diseases</p>
@@ -245,7 +245,7 @@ export default function QuizPage() {
               <Reveal>
                 <p className="text-overline text-brand mb-6">Your result</p>
                 <h1
-                  className="font-serif font-semibold tracking-[-0.03em] text-foreground"
+                  className="font-sans font-semibold tracking-[-0.03em] text-foreground"
                   style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)" }}
                 >
                   {correctCount} / {results.length}
@@ -336,9 +336,9 @@ export default function QuizPage() {
                   {results.filter(r => r.correct).length} correct so far
                 </p>
               </div>
-              <div className="h-1 w-full rounded-full bg-muted">
+              <div className="h-1 w-full rounded-md bg-muted">
                 <div
-                  className="h-full rounded-full bg-brand transition-all duration-300"
+                  className="h-full rounded-md bg-brand transition-all duration-300"
                   style={{ width: `${((currentIndex + 1) / filteredQuestions.length) * 100}%` }}
                 />
               </div>
@@ -363,7 +363,7 @@ export default function QuizPage() {
 
             {/* Question */}
             <h1
-              className="font-serif font-semibold tracking-tight text-foreground leading-tight"
+              className="font-sans font-semibold tracking-tight text-foreground leading-tight"
               style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)" }}
             >
               {currentQuestion.question}

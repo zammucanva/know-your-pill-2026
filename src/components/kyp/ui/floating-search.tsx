@@ -42,7 +42,7 @@ export function FloatingSearch({ variant = "floating", className }: FloatingSear
           onClick={() => setOpen(true)}
           aria-label="Open universal search"
           className={cn(
-            "fixed bottom-6 right-6 z-40 flex items-center gap-2.5 rounded-full border border-border/80 bg-card/90 backdrop-blur-xl pl-4 pr-2 py-2 shadow-[var(--shadow-lift)] transition-all hover:border-brand/40 hover:shadow-[var(--shadow-glow)]",
+            "fixed bottom-6 right-6 z-40 flex items-center gap-2.5 rounded-md border border-border/80 bg-card/95 pl-4 pr-2 py-2 shadow-[var(--shadow-card)] transition-all hover:border-brand/40 hover:shadow-[var(--shadow-card)]",
             "group",
             className
           )}
@@ -59,7 +59,7 @@ export function FloatingSearch({ variant = "floating", className }: FloatingSear
           onClick={() => setOpen(true)}
           aria-label="Open universal search"
           className={cn(
-            "flex items-center gap-2 rounded-full border border-border/80 bg-card/80 backdrop-blur px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-brand/40 hover:text-foreground",
+            "flex items-center gap-2 rounded-md border border-border/80 bg-card px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-brand/40 hover:text-foreground",
             className
           )}
         >

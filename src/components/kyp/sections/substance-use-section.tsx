@@ -22,10 +22,6 @@ export function SubstanceUseSection() {
     <Section id="substances" className="bg-muted/20 relative overflow-hidden">
       {/* Cool organic shape */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <div
-          className="absolute left-[5%] top-[15%] h-[35vh] w-[35vh] rounded-full opacity-[0.05] blur-[100px]"
-          style={{ background: "radial-gradient(circle, oklch(0.62 0.16 280), transparent 70%)" }}
-        />
       </div>
 
       <Container className="relative">
@@ -33,7 +29,7 @@ export function SubstanceUseSection() {
           <div className="mb-12">
             <p className="text-overline text-neural mb-4">Substance Use Education</p>
             <h2
-              className="font-serif font-semibold tracking-[-0.03em] text-foreground leading-[1.05] max-w-3xl"
+              className="font-sans font-semibold tracking-[-0.03em] text-foreground leading-[1.05] max-w-3xl"
               style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)" }}
             >
               How psychoactive substances alter the brain
@@ -76,7 +72,7 @@ export function SubstanceUseSection() {
                   className="group flex items-center gap-4 sm:gap-6 py-5 border-b border-border/15 transition-all duration-300 hover:pl-2"
                 >
                   {/* Number */}
-                  <span className="font-serif text-2xl sm:text-3xl font-bold text-muted-foreground/15 tabular-nums shrink-0 w-10">
+                  <span className="font-sans text-2xl sm:text-3xl font-bold text-muted-foreground/15 tabular-nums shrink-0 w-10">
                     {String(i + 1).padStart(2, '0')}
                   </span>
 
@@ -96,7 +92,7 @@ export function SubstanceUseSection() {
                   {/* Content */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-baseline gap-2 sm:gap-3">
-                      <h3 className="font-serif text-lg sm:text-xl font-semibold text-foreground">
+                      <h3 className="font-sans text-lg sm:text-xl font-semibold text-foreground">
                         {sub.name}
                       </h3>
                       <span className={cn("text-[0.6rem] uppercase tracking-wide hidden sm:inline", dc?.accentClass)}>

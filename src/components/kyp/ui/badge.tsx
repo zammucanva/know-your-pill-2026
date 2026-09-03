@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
  *   - outline  : bordered, transparent background
  */
 const badgeVariants = cva(
-  "inline-flex items-center gap-1 rounded-full font-medium transition-colors kyp-focus-ring",
+  "inline-flex items-center gap-1 rounded-md font-medium transition-colors kyp-focus-ring",
   {
     variants: {
       variant: {
