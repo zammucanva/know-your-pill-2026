@@ -46,7 +46,7 @@ function PrevNextCard({ drug, direction }: { drug: Drug; direction: "prev" | "ne
     <Link
       href={`/drugs/${drug.slug}`}
       className={cn(
-        "group flex items-center gap-3 rounded-xl border border-border/70 bg-card p-4 transition-all hover:border-brand/40 hover:shadow-[var(--shadow-soft)]",
+        "group flex items-center gap-3 rounded-xl border border-border/70 bg-card p-4 transition-all hover:border-brand/40 hover:shadow-[var(--shadow-card)]",
         isNext && "sm:flex-row-reverse sm:text-right"
       )}
     >

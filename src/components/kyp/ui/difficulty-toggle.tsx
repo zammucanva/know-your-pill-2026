@@ -56,7 +56,7 @@ export function DifficultyToggle({ className }: DifficultyToggleProps) {
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-0.5 rounded-full border border-border/70 bg-card/80 p-0.5 backdrop-blur",
+        "inline-flex items-center gap-0.5 rounded-md border border-border/70 bg-card p-0.5",
         className
       )}
       role="group"
@@ -72,7 +72,7 @@ export function DifficultyToggle({ className }: DifficultyToggleProps) {
             aria-pressed={isActive}
             title={label}
             className={cn(
-              "inline-flex items-center gap-1.5 rounded-full px-2.5 py-1.5 text-xs font-semibold transition-colors",
+              "inline-flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-xs font-semibold transition-colors",
               isActive
                 ? "bg-brand text-primary-foreground"
                 : "text-muted-foreground hover:text-foreground"

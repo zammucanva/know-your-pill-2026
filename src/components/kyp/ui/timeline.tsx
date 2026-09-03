@@ -62,7 +62,7 @@ export function Timeline({ events, className }: TimelineProps) {
               </span>
               <span
                 className={cn(
-                  "rounded-full px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wide text-background",
+                  "rounded-md px-2 py-0.5 text-[0.6rem] font-semibold uppercase tracking-wide text-background",
                   phaseColor[event.phase]
                 )}
               >

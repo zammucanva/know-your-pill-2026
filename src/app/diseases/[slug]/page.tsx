@@ -102,8 +102,7 @@ export default async function DiseasePage({ params }: PageProps) {
 
         {/* ===== HERO ===== */}
         <section id="top" className="relative overflow-hidden pt-24 pb-8 sm:pt-28 sm:pb-12">
-          <div className="pointer-events-none absolute inset-0 kyp-grid-bg opacity-30" aria-hidden />
-          <Container className="relative">
+<Container className="relative">
             <div className="mb-4">
               <LearningPath path={disease.learningPath} />
             </div>

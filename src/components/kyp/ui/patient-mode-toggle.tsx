@@ -23,7 +23,7 @@ export function PatientModeToggle({ className }: PatientModeToggleProps) {
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-0.5 rounded-full border border-border/70 bg-card/80 p-0.5 backdrop-blur",
+        "inline-flex items-center gap-0.5 rounded-md border border-border/70 bg-card p-0.5",
         className
       )}
       role="group"
@@ -34,7 +34,7 @@ export function PatientModeToggle({ className }: PatientModeToggleProps) {
         onClick={() => setMode("medical")}
         aria-pressed={mode === "medical"}
         className={cn(
-          "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors",
+          "inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-semibold transition-colors",
           mode === "medical"
             ? "bg-brand text-primary-foreground"
             : "text-muted-foreground hover:text-foreground"
@@ -48,7 +48,7 @@ export function PatientModeToggle({ className }: PatientModeToggleProps) {
         onClick={() => setMode("patient")}
         aria-pressed={mode === "patient"}
         className={cn(
-          "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors",
+          "inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-semibold transition-colors",
           mode === "patient"
             ? "bg-brand text-primary-foreground"
             : "text-muted-foreground hover:text-foreground"

@@ -37,7 +37,7 @@ export function DrugNeurotransmitters({ drug }: DrugNeurotransmittersProps) {
             {drug.neurotransmitters.map((nt) => (
               <span
                 key={nt}
-                className="inline-flex items-center gap-2 rounded-full border border-neural/30 bg-neural-soft/40 px-4 py-2 text-body-sm font-semibold text-neural"
+                className="inline-flex items-center gap-2 rounded-md border border-neural/30 bg-neural-soft/40 px-4 py-2 text-body-sm font-semibold text-neural"
               >
                 <Zap className="h-3.5 w-3.5" />
                 {nt}
@@ -63,7 +63,7 @@ export function DrugNeurotransmitters({ drug }: DrugNeurotransmittersProps) {
                     </span>
                     <Badge variant="neural" size="sm">Receptor</Badge>
                   </div>
-                  <p className="mt-2 font-serif text-base font-semibold text-foreground leading-tight">
+                  <p className="mt-2 font-sans text-base font-semibold text-foreground leading-tight">
                     {r}
                   </p>
                 </CardBody>

@@ -17,7 +17,7 @@ export function TimelineSection() {
           <div className="text-center mb-16">
             <p className="text-overline text-brand mb-4">Drug Timeline</p>
             <h2
-              className="font-serif font-semibold tracking-[-0.03em] text-foreground"
+              className="font-sans font-semibold tracking-[-0.03em] text-foreground"
               style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)" }}
             >
               What happens, hour by hour, week by week

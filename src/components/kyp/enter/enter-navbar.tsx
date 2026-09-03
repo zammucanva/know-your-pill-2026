@@ -137,7 +137,7 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
             <a
               href="#emergency"
               tabIndex={active ? 0 : -1}
-              className="hidden items-center gap-1.5 rounded-full border border-emergency/30 bg-emergency-soft/60 px-3 py-1.5 text-xs font-semibold text-emergency transition-colors hover:bg-emergency/10 sm:flex"
+              className="hidden items-center gap-1.5 rounded-md border border-emergency/30 bg-emergency-soft/60 px-3 py-1.5 text-xs font-semibold text-emergency transition-colors hover:bg-emergency/10 sm:flex"
             >
               <Phone className="h-3 w-3" strokeWidth={2.5} />
               Emergency
@@ -146,7 +146,7 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
             {/* Auth button */}
             {user ? (
               <div className="hidden items-center gap-2 sm:flex">
-                <span className="flex items-center gap-1.5 rounded-full border border-border/60 bg-muted/40 px-3 py-1.5 text-xs font-medium text-foreground">
+                <span className="flex items-center gap-1.5 rounded-md border border-border/60 bg-muted/40 px-3 py-1.5 text-xs font-medium text-foreground">
                   <UserIcon className="h-3 w-3 text-brand" />
                   {user.name}
                 </span>
@@ -167,7 +167,7 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
                 className="hidden sm:block"
                 tabIndex={active ? 0 : -1}
               >
-                <Button variant="ghost" size="sm" className="gap-1.5 rounded-full">
+                <Button variant="ghost" size="sm" className="gap-1.5 rounded-md">
                   <LogIn className="h-3.5 w-3.5" />
                   Log in
                 </Button>

@@ -24,15 +24,7 @@ export function DrugHero({ drug }: DrugHeroProps) {
   return (
     <section id="top" className="relative overflow-hidden pt-24 pb-8 sm:pt-28 sm:pb-12">
       {/* Ambient decoration — subtle, not dominant */}
-      <div className="pointer-events-none absolute inset-0 kyp-grid-bg opacity-30" aria-hidden />
-      <div className="pointer-events-none absolute -left-24 top-10 h-64 w-64 rounded-full bg-brand/15 blur-3xl kyp-drift" aria-hidden />
-      <div
-        className="pointer-events-none absolute -right-24 top-24 h-72 w-72 rounded-full bg-neural/15 blur-3xl kyp-drift"
-        style={{ animationDelay: "-7s" }}
-        aria-hidden
-      />
-
-      <Container className="relative">
+<Container className="relative">
         {/* Learning path breadcrumb */}
         <div className="mb-4">
           <LearningPath path={drug.learningPath} />
@@ -101,7 +93,7 @@ export function DrugHero({ drug }: DrugHeroProps) {
           </div>
 
           {/* Side card — clinical identity, grouped for scannability */}
-          <aside className="rounded-xl border border-border/70 bg-card p-4 shadow-[var(--shadow-soft)]">
+          <aside className="rounded-xl border border-border/70 bg-card p-4 shadow-[var(--shadow-card)]">
             {/* Identity */}
             <div>
               <p className="text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground/60">Identity</p>

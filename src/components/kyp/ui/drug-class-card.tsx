@@ -37,11 +37,9 @@ export function DrugClassCard({ category, index = 0, href = "#library", classNam
     >
       <CardPrimitive href={href} variant="flat" interactive className={cn("h-full border-l-4", accent.border)}>
         {/* Subtle tinted backdrop */}
-        <div className={cn("pointer-events-none absolute inset-0 opacity-50", accent.bg)} />
-
-        <CardBody className="relative">
+<CardBody className="relative">
           <div className="flex items-start justify-between">
-            <span className={cn("flex h-11 w-11 items-center justify-center rounded-xl border border-border/70 bg-background/70 backdrop-blur", accent.icon)}>
+            <span className={cn("flex h-11 w-11 items-center justify-center rounded-xl border border-border/70 bg-background", accent.icon)}>
               <Icon className="h-5 w-5" strokeWidth={2} />
             </span>
             <span className="font-mono text-xs font-semibold text-muted-foreground">
@@ -49,7 +47,7 @@ export function DrugClassCard({ category, index = 0, href = "#library", classNam
             </span>
           </div>
 
-          <h3 className="relative mt-4 font-serif text-h3 leading-tight">{category.title}</h3>
+          <h3 className="relative mt-4 font-sans text-h3 leading-tight">{category.title}</h3>
           <p className="relative mt-2 text-body-sm text-muted-foreground leading-relaxed">
             {category.description}
           </p>
@@ -60,7 +58,7 @@ export function DrugClassCard({ category, index = 0, href = "#library", classNam
               {category.chips.slice(0, 3).map((chip) => (
                 <span
                   key={chip}
-                  className="rounded-full border border-border/50 bg-background/60 px-2 py-0.5 text-[0.65rem] font-medium text-muted-foreground"
+                  className="rounded-md border border-border/50 bg-background/60 px-2 py-0.5 text-[0.65rem] font-medium text-muted-foreground"
                 >
                   {chip}
                 </span>

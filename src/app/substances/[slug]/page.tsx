@@ -79,8 +79,7 @@ export default async function SubstancePage({ params }: PageProps) {
 
         {/* ===== HERO ===== */}
         <section id="top" className="relative overflow-hidden pt-12 pb-8">
-          <div className="pointer-events-none absolute inset-0 kyp-grid-bg opacity-30" aria-hidden />
-          <Container className="relative">
+<Container className="relative">
             <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
               <Badge variant="brand" size="sm">{drugClass?.name}</Badge>
               <span>{substance.neurotransmitter}</span>
@@ -143,7 +142,7 @@ export default async function SubstancePage({ params }: PageProps) {
                           <div key={j} className="rounded-lg border border-border/50 p-4">
                             <div className="flex items-baseline gap-2">
                               {type.symbol && (
-                                <span className="font-serif text-2xl text-brand">{type.symbol}</span>
+                                <span className="font-sans text-2xl text-brand">{type.symbol}</span>
                               )}
                               <p className="text-sm font-semibold text-foreground">{type.name}</p>
                             </div>
@@ -237,7 +236,7 @@ export default async function SubstancePage({ params }: PageProps) {
                 {substance.preparations.map((p, i) => (
                   <div key={i} className="rounded-lg border border-border/50 p-4">
                     <p className="text-sm font-semibold text-foreground">{p.name}</p>
-                    <span className="mt-1 inline-block rounded-full border border-brand/30 bg-brand-soft/40 px-2 py-0.5 text-[0.65rem] font-medium text-brand">{p.thc}</span>
+                    <span className="mt-1 inline-block rounded-md border border-brand/30 bg-brand-soft/40 px-2 py-0.5 text-[0.65rem] font-medium text-brand">{p.thc}</span>
                     <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{p.description}</p>
                   </div>
                 ))}
@@ -544,7 +543,7 @@ export default async function SubstancePage({ params }: PageProps) {
               <div className="mt-6 rounded-lg border border-emergency/30 bg-emergency-soft/30 p-5">
                 <div className="flex items-center gap-2">
                   <span className="relative flex h-2.5 w-2.5">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emergency opacity-60" />
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-md bg-emergency opacity-60" />
                     <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emergency" />
                   </span>
                   <h3 className="text-h3 text-emergency">{substance.overdoseEmergency.panelTitle}</h3>
@@ -656,7 +655,7 @@ export default async function SubstancePage({ params }: PageProps) {
                         <div className="flex items-baseline justify-between gap-2">
                           <p className="text-sm font-semibold text-foreground">{med.name}</p>
                           {med.mechanism && (
-                            <span className="shrink-0 rounded-full border border-brand/30 bg-brand-soft/40 px-2 py-0.5 text-[0.65rem] font-medium text-brand">{med.mechanism}</span>
+                            <span className="shrink-0 rounded-md border border-brand/30 bg-brand-soft/40 px-2 py-0.5 text-[0.65rem] font-medium text-brand">{med.mechanism}</span>
                           )}
                         </div>
                         <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{med.description}</p>
@@ -816,7 +815,7 @@ export default async function SubstancePage({ params }: PageProps) {
                         <div className="flex items-baseline justify-between gap-2">
                           <p className="text-sm font-semibold text-foreground">{med.name}</p>
                           {med.mechanism && (
-                            <span className="shrink-0 rounded-full border border-brand/30 bg-brand-soft/40 px-2 py-0.5 text-[0.65rem] font-medium text-brand">{med.mechanism}</span>
+                            <span className="shrink-0 rounded-md border border-brand/30 bg-brand-soft/40 px-2 py-0.5 text-[0.65rem] font-medium text-brand">{med.mechanism}</span>
                           )}
                         </div>
                         <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{med.description}</p>
@@ -897,7 +896,7 @@ export default async function SubstancePage({ params }: PageProps) {
                 <div className="mt-6 rounded-lg border border-emergency/30 bg-emergency-soft/30 p-5">
                   <div className="flex items-center gap-2">
                     <span className="relative flex h-2.5 w-2.5">
-                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emergency opacity-60" />
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-md bg-emergency opacity-60" />
                       <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emergency" />
                     </span>
                     <h3 className="text-h3 text-emergency">{substance.emergency.panelTitle}</h3>

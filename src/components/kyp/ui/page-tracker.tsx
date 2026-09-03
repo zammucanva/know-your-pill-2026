@@ -41,7 +41,7 @@ export function PageTracker({ type, slug, title, variant = "inline" }: PageTrack
           "fixed bottom-6 left-6 z-40 flex h-11 w-11 items-center justify-center rounded-full border transition-all",
           bookmarked
             ? "border-brand bg-brand text-primary-foreground"
-            : "border-border bg-card/90 backdrop-blur text-muted-foreground hover:border-brand/40 hover:text-brand",
+            : "border-border bg-card/95 text-muted-foreground hover:border-brand/40 hover:text-brand",
           loading && "opacity-50"
         )}
       >
@@ -62,7 +62,7 @@ export function PageTracker({ type, slug, title, variant = "inline" }: PageTrack
       aria-label={bookmarked ? "Remove bookmark" : "Add bookmark"}
       aria-pressed={bookmarked}
       className={cn(
-        "inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-all",
+        "inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-xs font-medium transition-all",
         bookmarked
           ? "border-brand bg-brand-soft/40 text-brand"
           : "border-border text-muted-foreground hover:border-brand/30 hover:text-foreground",

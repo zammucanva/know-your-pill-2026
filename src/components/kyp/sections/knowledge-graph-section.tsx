@@ -52,7 +52,7 @@ export function KnowledgeGraphSection() {
               transition={{ duration: 0.3, delay: i * 0.08 }}
               className="relative"
             >
-              <div className="flex items-center gap-3 rounded-xl border border-border/70 bg-card p-3 shadow-[var(--shadow-soft)]">
+              <div className="flex items-center gap-3 rounded-xl border border-border/70 bg-card p-3 shadow-[var(--shadow-card)]">
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-soft/60 text-brand">
                   <Network className="h-4 w-4" />
                 </span>

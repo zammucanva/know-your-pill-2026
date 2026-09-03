@@ -129,7 +129,7 @@ export function LearningModule({ drug }: LearningModuleProps) {
                     <h4 className="text-sm font-semibold text-foreground">{trick.title}</h4>
                   </div>
                   <div className="rounded-md bg-neural-soft/20 p-2.5">
-                    <p className="font-serif text-sm font-semibold text-brand-ink leading-snug">
+                    <p className="font-sans text-sm font-semibold text-brand-ink leading-snug">
                       {trick.trick}
                     </p>
                   </div>

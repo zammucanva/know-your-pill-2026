@@ -33,7 +33,7 @@ export function Accordion({ items, className, ...props }: AccordionProps) {
           value={item.id}
           className="border-b border-border/70 last:border-b-0"
         >
-          <AccordionTriggerPrimitive className="py-5 text-left font-serif text-lg font-semibold hover:no-underline hover:text-brand">
+          <AccordionTriggerPrimitive className="py-5 text-left font-sans text-lg font-semibold hover:no-underline hover:text-brand">
             {item.question}
           </AccordionTriggerPrimitive>
           <AccordionContentPrimitive className="pb-5 text-muted-foreground leading-relaxed">

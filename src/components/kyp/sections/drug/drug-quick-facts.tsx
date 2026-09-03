@@ -53,7 +53,7 @@ export function DrugQuickFacts({ drug }: DrugQuickFactsProps) {
             <CardPrimitive key={f.label} variant="flat" interactive={false} showArrow={false}>
               <CardBody>
                 <p className="text-overline text-muted-foreground">{f.label}</p>
-                <p className="mt-1.5 font-serif text-lg font-semibold leading-tight text-foreground">
+                <p className="mt-1.5 font-sans text-lg font-semibold leading-tight text-foreground">
                   {f.value}
                 </p>
                 <p className="mt-2 text-caption text-muted-foreground leading-relaxed">

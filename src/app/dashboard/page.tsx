@@ -144,7 +144,7 @@ export default function DashboardPage() {
             <div className="mb-12">
               <p className="text-overline text-brand mb-3">Your Dashboard</p>
               <h1
-                className="font-serif font-semibold tracking-tight text-foreground"
+                className="font-sans font-semibold tracking-tight text-foreground"
                 style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
               >
                 Welcome back, {user?.name?.split(" ")[0] || "there"}.
@@ -157,21 +157,21 @@ export default function DashboardPage() {
             {/* Stats row */}
             <div className="mb-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
               <div className="rounded-lg border border-border/60 p-4">
-                <p className="text-2xl font-serif font-bold text-foreground">{progress.length}</p>
+                <p className="text-2xl font-sans font-bold text-foreground">{progress.length}</p>
                 <p className="text-xs text-muted-foreground mt-1">Pages visited</p>
               </div>
               <div className="rounded-lg border border-border/60 p-4">
-                <p className="text-2xl font-serif font-bold text-foreground">{bookmarks.length}</p>
+                <p className="text-2xl font-sans font-bold text-foreground">{bookmarks.length}</p>
                 <p className="text-xs text-muted-foreground mt-1">Bookmarks</p>
               </div>
               <div className="rounded-lg border border-border/60 p-4">
-                <p className="text-2xl font-serif font-bold text-foreground">
+                <p className="text-2xl font-sans font-bold text-foreground">
                   {progress.filter((p) => p.type === "drug").length}
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">Medications read</p>
               </div>
               <div className="rounded-lg border border-border/60 p-4">
-                <p className="text-2xl font-serif font-bold text-foreground">
+                <p className="text-2xl font-sans font-bold text-foreground">
                   {progress.filter((p) => p.type === "substance").length}
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">Substances read</p>
@@ -183,7 +183,7 @@ export default function DashboardPage() {
               {/* Bookmarks */}
               <div>
                 <div className="mb-4 flex items-center justify-between">
-                  <h2 className="font-serif text-xl font-semibold text-foreground flex items-center gap-2">
+                  <h2 className="font-sans text-xl font-semibold text-foreground flex items-center gap-2">
                     <Bookmark className="h-4 w-4 text-brand" />
                     Bookmarks
                   </h2>
@@ -238,7 +238,7 @@ export default function DashboardPage() {
               {/* Recent Progress */}
               <div>
                 <div className="mb-4 flex items-center justify-between">
-                  <h2 className="font-serif text-xl font-semibold text-foreground flex items-center gap-2">
+                  <h2 className="font-sans text-xl font-semibold text-foreground flex items-center gap-2">
                     <Clock className="h-4 w-4 text-brand" />
                     Recently Visited
                   </h2>
@@ -292,22 +292,22 @@ export default function DashboardPage() {
 
             {/* Quick links */}
             <div className="mt-16 border-t border-border/30 pt-8">
-              <h2 className="font-serif text-xl font-semibold text-foreground mb-4">
+              <h2 className="font-sans text-xl font-semibold text-foreground mb-4">
                 Continue Learning
               </h2>
               <div className="flex flex-wrap gap-3">
                 <Link href="/#library">
-                  <Button variant="outline" size="sm" className="rounded-full">
+                  <Button variant="outline" size="sm" className="rounded-md">
                     Browse Medications
                   </Button>
                 </Link>
                 <Link href="/#substances">
-                  <Button variant="outline" size="sm" className="rounded-full">
+                  <Button variant="outline" size="sm" className="rounded-md">
                     Browse Substances
                   </Button>
                 </Link>
                 <Link href="/#neuroarcade">
-                  <Button variant="outline" size="sm" className="rounded-full">
+                  <Button variant="outline" size="sm" className="rounded-md">
                     NeuroArcade
                   </Button>
                 </Link>

@@ -5,31 +5,16 @@ import { useRouter } from "next/navigation";
 import { Search, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/kyp/ui/reveal";
-import { useMagnetic } from "@/lib/hooks/use-magnetic";
-import { cn } from "@/lib/utils";
 
 const popularSearches = ["Sertraline", "Fluoxetine", "Escitalopram", "Olanzapine"];
 
 export function HomeHero() {
   const router = useRouter();
   const [query, setQuery] = React.useState("");
-  const magnetic = useMagnetic(0.25);
 
   return (
     <section id="top" className="relative min-h-[100svh] overflow-hidden flex flex-col justify-end pb-16 sm:pb-20">
-      {/* Organic shapes — two overlapping synaptic forms, not three generic blobs */}
-      <div className="pointer-events-none absolute inset-0" aria-hidden>
-        {/* Primary: teal, upper right — the dominant neurotransmitter color */}
-        <div
-          className="absolute right-[0%] top-[5%] h-[55vh] w-[55vh] rounded-full opacity-[0.08] blur-[100px]"
-          style={{ background: "radial-gradient(circle, oklch(0.55 0.11 195), transparent 65%)" }}
-        />
-        {/* Secondary: warm violet, lower left — overlapping, suggesting synaptic crosstalk */}
-        <div
-          className="absolute left-[5%] bottom-[15%] h-[40vh] w-[40vh] rounded-full opacity-[0.06] blur-[90px]"
-          style={{ background: "radial-gradient(circle, oklch(0.58 0.15 290), transparent 65%)" }}
-        />
-      </div>
+      {/* No decorative orbs — the hero's job is orientation (audit §19). */}
 
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -46,7 +31,7 @@ export function HomeHero() {
             style={{ fontSize: "clamp(2.75rem, 8vw, 6rem)" }}
           >
             Know what your pill does{" "}
-            <span className="kyp-text-gradient">before fear fills the gap.</span>
+            <span className="text-brand">before fear fills the gap.</span>
           </h1>
         </Reveal>
 
@@ -82,19 +67,10 @@ export function HomeHero() {
                 className="flex-1 bg-transparent text-body-sm text-foreground placeholder:text-muted-foreground/60 outline-none"
                 aria-label="Search medications"
               />
-              <div
-                ref={magnetic.ref as React.RefObject<HTMLDivElement>}
-                {...magnetic.handlers}
-                style={{
-                  transform: `translate(${magnetic.offset.x}px, ${magnetic.offset.y}px)`,
-                  transition: "transform 0.3s cubic-bezier(0.22, 1, 0.36, 1)",
-                }}
-              >
-                <Button type="submit" size="sm" className="rounded-lg px-4">
-                  View
-                  <ArrowRight className="ml-1 h-3.5 w-3.5" />
-                </Button>
-              </div>
+              <Button type="submit" size="sm" className="rounded-lg px-4">
+                View
+                <ArrowRight className="ml-1 h-3.5 w-3.5" />
+              </Button>
             </form>
             <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1">
               <span className="text-xs text-muted-foreground/50">Popular:</span>
@@ -123,84 +99,6 @@ export function HomeHero() {
           </div>
         </Reveal>
       </div>
-
-      {/* Floating neurotransmitter nodes — desktop only, positioned to break grid */}
-      <div className="hidden lg:block pointer-events-none absolute right-[8%] top-[25%] z-0">
-        <NeuroNodes />
-      </div>
     </section>
-  );
-}
-
-function NeuroNodes() {
-  const [hovered, setHovered] = React.useState<string | null>(null);
-
-  const nodes = [
-    { x: 0, y: 0, label: "Serotonin", color: "oklch(0.55 0.11 195)", target: "#library" },
-    { x: -80, y: -60, label: "Dopamine", color: "oklch(0.62 0.16 280)", target: "#library" },
-    { x: 60, y: -100, label: "GABA", color: "oklch(0.6 0.22 25)", target: "#substances" },
-    { x: 100, y: 40, label: "Glutamate", color: "oklch(0.7 0.18 60)", target: "#substances" },
-    { x: -40, y: 80, label: "Norepinephrine", color: "oklch(0.62 0.13 220)", target: "#library" },
-    { x: -120, y: 20, label: "Acetylcholine", color: "oklch(0.62 0.13 155)", target: "#substances" },
-  ];
-
-  return (
-    <div className="relative h-[300px] w-[300px]">
-      {/* Connecting lines */}
-      <svg className="absolute inset-0 h-full w-full" viewBox="-150 -150 300 300" aria-hidden>
-        {nodes.map((node, i) => (
-          <line
-            key={node.label}
-            x1="0"
-            y1="0"
-            x2={node.x}
-            y2={node.y}
-            stroke="currentColor"
-            strokeWidth="0.5"
-            className={cn(
-              "transition-opacity duration-300",
-              hovered === null || hovered === node.label ? "opacity-20" : "opacity-5"
-            )}
-          />
-        ))}
-      </svg>
-
-      {/* Center anchor — a small labeled nucleus, not just a dot */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="flex flex-col items-center gap-1">
-          <div className="h-3 w-3 rounded-full bg-brand/40 ring-4 ring-brand/10" />
-          <span className="text-[0.55rem] uppercase tracking-wider text-muted-foreground/40">Synapse</span>
-        </div>
-      </div>
-
-      {/* Nodes */}
-      {nodes.map((node) => (
-        <button
-          key={node.label}
-          type="button"
-          onMouseEnter={() => setHovered(node.label)}
-          onMouseLeave={() => setHovered(null)}
-          onClick={() => document.querySelector(node.target)?.scrollIntoView({ behavior: "smooth" })}
-          className={cn(
-            "absolute flex items-center gap-1.5 rounded-full bg-card/70 backdrop-blur px-2 py-0.5 transition-all duration-200 pointer-events-auto",
-            hovered === node.label ? "scale-110 shadow-[var(--shadow-soft)]" : "scale-100"
-          )}
-          style={{
-            left: `calc(50% + ${node.x}px)`,
-            top: `calc(50% + ${node.y}px)`,
-            transform: "translate(-50%, -50%)",
-          }}
-          aria-label={`Explore ${node.label} related content`}
-        >
-          <span className="h-1.5 w-1.5 rounded-full" style={{ background: node.color }} />
-          <span className={cn(
-            "text-[0.65rem] font-medium transition-colors",
-            hovered === node.label ? "text-foreground" : "text-muted-foreground"
-          )}>
-            {node.label}
-          </span>
-        </button>
-      ))}
-    </div>
   );
 }

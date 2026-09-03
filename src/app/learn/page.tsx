@@ -52,7 +52,7 @@ export default function LearnPage() {
             <Reveal>
               <p className="text-overline text-brand mb-6">Learning Hub</p>
               <h1
-                className="font-serif font-semibold tracking-[-0.03em] text-foreground leading-[0.95]"
+                className="font-sans font-semibold tracking-[-0.03em] text-foreground leading-[0.95]"
                 style={{ fontSize: "clamp(3rem, 8vw, 6rem)" }}
               >
                 Learn
@@ -86,10 +86,10 @@ export default function LearnPage() {
             {/* Real stats — one inline line, no cards */}
             <Reveal delay={0.2}>
               <p className="mt-12 text-sm text-muted-foreground">
-                <span className="font-serif text-lg font-bold text-foreground">{drugCount}</span> medications ·{" "}
-                <span className="font-serif text-lg font-bold text-foreground">{diseaseCount}</span> disease module ·{" "}
-                <span className="font-serif text-lg font-bold text-foreground">{substanceCount}</span> substances ·{" "}
-                <span className="font-serif text-lg font-bold text-foreground">{totalMcqs}</span> practice questions
+                <span className="font-sans text-lg font-bold text-foreground">{drugCount}</span> medications ·{" "}
+                <span className="font-sans text-lg font-bold text-foreground">{diseaseCount}</span> disease module ·{" "}
+                <span className="font-sans text-lg font-bold text-foreground">{substanceCount}</span> substances ·{" "}
+                <span className="font-sans text-lg font-bold text-foreground">{totalMcqs}</span> practice questions
               </p>
             </Reveal>
           </Container>
@@ -101,7 +101,7 @@ export default function LearnPage() {
             <Reveal>
               <p className="text-overline text-muted-foreground mb-3">Section 01</p>
               <h2
-                className="font-serif font-semibold tracking-[-0.02em] text-foreground mb-16"
+                className="font-sans font-semibold tracking-[-0.02em] text-foreground mb-16"
                 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)" }}
               >
                 What do you want to learn?
@@ -121,7 +121,7 @@ export default function LearnPage() {
                       <span className="font-mono text-xs text-muted-foreground/50">01 — Primary Pathway</span>
                     </div>
                     <h3
-                      className="font-serif font-semibold tracking-tight text-foreground"
+                      className="font-sans font-semibold tracking-tight text-foreground"
                       style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
                     >
                       Medications
@@ -155,7 +155,7 @@ export default function LearnPage() {
                     <span className="font-mono text-xs text-muted-foreground/50">02</span>
                   </div>
                   <h3
-                    className="font-serif font-semibold tracking-tight text-foreground"
+                    className="font-sans font-semibold tracking-tight text-foreground"
                     style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)" }}
                   >
                     Diseases
@@ -180,7 +180,7 @@ export default function LearnPage() {
                     <span className="font-mono text-xs text-muted-foreground/50">03</span>
                   </div>
                   <h3
-                    className="font-serif font-semibold tracking-tight text-foreground"
+                    className="font-sans font-semibold tracking-tight text-foreground"
                     style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)" }}
                   >
                     Substances
@@ -206,7 +206,7 @@ export default function LearnPage() {
                     <Brain className="h-4 w-4 text-neural" strokeWidth={1.5} />
                     <span className="font-mono text-xs text-muted-foreground/50">04</span>
                   </div>
-                  <h3 className="font-serif text-lg font-semibold text-foreground">
+                  <h3 className="font-sans text-lg font-semibold text-foreground">
                     Brain &amp; Neuroscience
                   </h3>
                   <p className="mt-1.5 text-body-sm text-muted-foreground leading-relaxed">
@@ -227,7 +227,7 @@ export default function LearnPage() {
                     <Activity className="h-4 w-4 text-warning" strokeWidth={1.5} />
                     <span className="font-mono text-xs text-muted-foreground/50">05</span>
                   </div>
-                  <h3 className="font-serif text-lg font-semibold text-foreground">
+                  <h3 className="font-sans text-lg font-semibold text-foreground">
                     Side Effects
                   </h3>
                   <p className="mt-1.5 text-body-sm text-muted-foreground leading-relaxed">
@@ -248,7 +248,7 @@ export default function LearnPage() {
             <Reveal>
               <p className="text-overline text-muted-foreground mb-3">Section 02</p>
               <h2
-                className="font-serif font-semibold tracking-[-0.02em] text-foreground mb-4"
+                className="font-sans font-semibold tracking-[-0.02em] text-foreground mb-4"
                 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)" }}
               >
                 Test your knowledge
@@ -261,7 +261,7 @@ export default function LearnPage() {
             <Reveal delay={0.1}>
               <Link
                 href="/quiz"
-                className="group inline-flex items-center gap-3 rounded-lg border border-border bg-card px-6 py-4 text-base font-semibold text-foreground transition-all hover:border-brand/40 hover:shadow-[var(--shadow-soft)]"
+                className="group inline-flex items-center gap-3 rounded-lg border border-border bg-card px-6 py-4 text-base font-semibold text-foreground transition-all hover:border-brand/40 hover:shadow-[var(--shadow-card)]"
               >
                 <Zap className="h-5 w-5 text-brand" />
                 Start Practice
@@ -280,7 +280,7 @@ export default function LearnPage() {
             <Reveal>
               <p className="text-overline text-muted-foreground mb-3">Section 03</p>
               <h2
-                className="font-serif font-semibold tracking-[-0.02em] text-foreground mb-12"
+                className="font-sans font-semibold tracking-[-0.02em] text-foreground mb-12"
                 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)" }}
               >
                 Explore
@@ -303,7 +303,7 @@ export default function LearnPage() {
                     >
                       <Icon className="h-4 w-4 shrink-0 text-muted-foreground/40" strokeWidth={1.5} />
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-serif text-lg font-semibold text-foreground">
+                        <h3 className="font-sans text-lg font-semibold text-foreground">
                           {item.label}
                         </h3>
                         <p className="mt-0.5 text-body-sm text-muted-foreground/70">
@@ -360,7 +360,7 @@ function ContinueLearningSection() {
         <Reveal>
           <p className="text-overline text-muted-foreground mb-3">Section 04</p>
           <h2
-            className="font-serif font-semibold tracking-[-0.02em] text-foreground mb-12"
+            className="font-sans font-semibold tracking-[-0.02em] text-foreground mb-12"
             style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)" }}
           >
             {progress.length > 0 ? "Continue learning" : "Recommended starting points"}
@@ -381,7 +381,7 @@ function ContinueLearningSection() {
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-serif text-base font-semibold text-foreground">
+                    <h3 className="font-sans text-base font-semibold text-foreground">
                       {p.title}
                     </h3>
                     <p className="text-xs text-muted-foreground/50 mt-0.5">
@@ -410,7 +410,7 @@ function ContinueLearningSection() {
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-serif text-base font-semibold text-foreground">
+                    <h3 className="font-sans text-base font-semibold text-foreground">
                       {item.label}
                     </h3>
                     <p className="text-xs text-muted-foreground/50 mt-0.5">

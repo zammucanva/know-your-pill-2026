@@ -55,7 +55,7 @@ export function Checkpoint({ lessonNumber, lessonTitle, message, nextLessonTitle
         <button
           type="button"
           onClick={() => setDismissed(true)}
-          className="shrink-0 inline-flex items-center gap-1 rounded-full border border-brand/30 bg-card px-3 py-1.5 text-xs font-medium text-brand transition-colors hover:bg-brand hover:text-primary-foreground"
+          className="shrink-0 inline-flex items-center gap-1 rounded-md border border-brand/30 bg-card px-3 py-1.5 text-xs font-medium text-brand transition-colors hover:bg-brand hover:text-primary-foreground"
         >
           Continue to {nextLessonTitle}
           <ChevronRight className="h-3 w-3" />

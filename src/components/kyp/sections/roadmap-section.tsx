@@ -44,7 +44,7 @@ export function RoadmapSection() {
           <div className="mb-16">
             <p className="text-overline text-neural mb-4">In Development</p>
             <h2
-              className="font-serif font-semibold tracking-[-0.03em] text-foreground max-w-2xl"
+              className="font-sans font-semibold tracking-[-0.03em] text-foreground max-w-2xl"
               style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)" }}
             >
               What is being built next
@@ -64,7 +64,7 @@ export function RoadmapSection() {
                 <div className="group flex items-start gap-6 py-10 border-b border-border/15 last:border-0">
                   {/* Large number */}
                   <span
-                    className="font-serif font-bold text-muted-foreground/10 tabular-nums leading-none shrink-0"
+                    className="font-sans font-bold text-muted-foreground/10 tabular-nums leading-none shrink-0"
                     style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)" }}
                   >
                     {String(i + 1).padStart(2, '0')}
@@ -74,7 +74,7 @@ export function RoadmapSection() {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-3 mb-3">
                       <Icon className="h-4 w-4 text-neural/50" strokeWidth={1.5} />
-                      <h3 className="font-serif text-lg sm:text-xl font-semibold text-foreground">
+                      <h3 className="font-sans text-lg sm:text-xl font-semibold text-foreground">
                         {item.title}
                       </h3>
                       <span className="text-[0.6rem] uppercase tracking-[0.12em] text-muted-foreground/40">

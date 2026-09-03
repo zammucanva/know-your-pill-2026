@@ -17,7 +17,7 @@ export function Stats() {
               transition={{ duration: 0.4, delay: i * 0.06 }}
               className="rounded-2xl border border-border/70 bg-card p-5 text-center sm:text-left"
             >
-              <p className="font-serif text-3xl font-semibold tracking-tight text-brand-ink sm:text-4xl">
+              <p className="font-sans text-3xl font-semibold tracking-tight text-brand-ink sm:text-4xl">
                 {s.value}
               </p>
               <p className="mt-1 text-sm font-semibold">{s.label}</p>

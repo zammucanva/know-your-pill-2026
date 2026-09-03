@@ -13,7 +13,7 @@ export function StatsSection() {
           <p className="text-center text-sm text-muted-foreground leading-relaxed">
             {stats.map((s, i) => (
               <React.Fragment key={s.label}>
-                <span className="font-serif text-lg font-bold text-foreground">{s.value}</span>{" "}
+                <span className="font-sans text-lg font-bold text-foreground">{s.value}</span>{" "}
                 <span className="text-brand font-medium">{s.label}</span>
                 {i < stats.length - 1 && <span className="text-muted-foreground/30 mx-2">·</span>}
               </React.Fragment>

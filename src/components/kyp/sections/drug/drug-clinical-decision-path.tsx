@@ -138,7 +138,7 @@ export function DrugClinicalDecisionPath({ drug }: DrugClinicalDecisionPathProps
                           key={branch.next}
                           type="button"
                           onClick={() => handleBranch(branch.next)}
-                          className="inline-flex items-center gap-1.5 rounded-full border border-brand/30 bg-card px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-brand hover:bg-brand-soft/30"
+                          className="inline-flex items-center gap-1.5 rounded-md border border-brand/30 bg-card px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-brand hover:bg-brand-soft/30"
                         >
                           {branch.label}
                           <ChevronRight className="h-3 w-3" />

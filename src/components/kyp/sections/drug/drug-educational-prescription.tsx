@@ -38,7 +38,7 @@ export function DrugEducationalPrescription({ drug }: DrugEducationalPrescriptio
             <div className="border-b border-border/70 p-5 sm:p-6">
               <div className="flex items-center gap-2">
                 <FileText className="h-5 w-5 text-brand" />
-                <p className="font-serif text-lg font-semibold text-foreground">Rx</p>
+                <p className="font-sans text-lg font-semibold text-foreground">Rx</p>
               </div>
             </div>
 

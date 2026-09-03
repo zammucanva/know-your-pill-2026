@@ -79,7 +79,7 @@ export function MonitoringChecklist({ parameters }: MonitoringChecklistProps) {
                     <p className={cn("font-semibold", isChecked && "text-muted-foreground line-through")}>
                       {p.parameter}
                     </p>
-                    <span className="rounded-full bg-brand-soft/60 px-2 py-0.5 text-[0.65rem] font-medium text-brand-ink">
+                    <span className="rounded-md bg-brand-soft/60 px-2 py-0.5 text-[0.65rem] font-medium text-brand-ink">
                       {p.frequency}
                     </span>
                   </div>

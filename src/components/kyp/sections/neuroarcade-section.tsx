@@ -31,14 +31,6 @@ export function NeuroArcadeSection() {
     <Section id="neuroarcade" className="relative overflow-hidden bg-foreground text-background">
       {/* Subtle neural shapes on dark */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <div
-          className="absolute right-[10%] top-[10%] h-[45vh] w-[45vh] rounded-full opacity-[0.12] blur-[100px]"
-          style={{ background: "radial-gradient(circle, oklch(0.62 0.16 280), transparent 70%)" }}
-        />
-        <div
-          className="absolute left-[5%] bottom-[10%] h-[30vh] w-[30vh] rounded-full opacity-[0.08] blur-[80px]"
-          style={{ background: "radial-gradient(circle, oklch(0.55 0.11 195), transparent 70%)" }}
-        />
       </div>
 
       <Container className="relative py-20 lg:py-28">
@@ -65,7 +57,7 @@ export function NeuroArcadeSection() {
                 NeuroArcade
               </Badge>
               <h2
-                className="font-serif font-semibold tracking-[-0.03em] leading-[1.05]"
+                className="font-sans font-semibold tracking-[-0.03em] leading-[1.05]"
                 style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
               >
                 Learn neuroscience by{" "}

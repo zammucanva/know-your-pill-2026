@@ -163,7 +163,7 @@ export default function WelcomePage() {
           {/* STEP: WELCOME */}
           {step === "welcome" && (
             <div className="text-center">
-              <h1 className="font-serif text-3xl font-semibold tracking-tight text-foreground">
+              <h1 className="font-sans text-3xl font-semibold tracking-tight text-foreground">
                 Welcome to KYP Medicine
               </h1>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
@@ -191,7 +191,7 @@ export default function WelcomePage() {
                 <ArrowLeft className="h-3 w-3" /> Back
               </button>
               <div>
-                <h2 className="font-serif text-2xl font-semibold tracking-tight">Create your account</h2>
+                <h2 className="font-sans text-2xl font-semibold tracking-tight">Create your account</h2>
                 <p className="text-sm text-muted-foreground">Start learning medicine visually.</p>
               </div>
               <div className="space-y-3">
@@ -317,7 +317,7 @@ export default function WelcomePage() {
                 <ArrowLeft className="h-3 w-3" /> Back
               </button>
               <div>
-                <h2 className="font-serif text-2xl font-semibold tracking-tight">Welcome back</h2>
+                <h2 className="font-sans text-2xl font-semibold tracking-tight">Welcome back</h2>
                 <p className="text-sm text-muted-foreground">Log in to continue learning.</p>
               </div>
               <div className="space-y-3">
@@ -380,7 +380,7 @@ export default function WelcomePage() {
               <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-soft/60 text-brand">
                 <Mail className="h-5 w-5" />
               </div>
-              <h2 className="font-serif text-2xl font-semibold tracking-tight">Verify your email</h2>
+              <h2 className="font-sans text-2xl font-semibold tracking-tight">Verify your email</h2>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                 Email verification helps secure your account and enables progress tracking across devices. You can verify later — KYP is ready for you now.
               </p>
@@ -394,7 +394,7 @@ export default function WelcomePage() {
           {/* STEP: ROLE */}
           {step === "role" && (
             <div>
-              <h2 className="font-serif text-2xl font-semibold tracking-tight text-center">
+              <h2 className="font-sans text-2xl font-semibold tracking-tight text-center">
                 Tell us about yourself
               </h2>
               <p className="mt-2 text-center text-sm text-muted-foreground">
@@ -475,7 +475,7 @@ export default function WelcomePage() {
               <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-success-soft/60 text-success">
                 <Check className="h-6 w-6" strokeWidth={3} />
               </div>
-              <h2 className="font-serif text-2xl font-semibold tracking-tight">You&apos;re ready.</h2>
+              <h2 className="font-sans text-2xl font-semibold tracking-tight">You&apos;re ready.</h2>
               <p className="mt-2 text-sm text-muted-foreground">
                 Welcome{userData?.name ? `, ${userData.name}` : ""}. KYP is ready for you.
               </p>

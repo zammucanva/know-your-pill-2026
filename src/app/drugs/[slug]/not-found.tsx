@@ -64,7 +64,7 @@ export default function DrugNotFound() {
                     <Link
                       key={d.slug}
                       href={`/drugs/${d.slug}`}
-                      className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-card px-4 py-2 text-body-sm font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                      className="inline-flex items-center gap-2 rounded-md border border-border/80 bg-card px-4 py-2 text-body-sm font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                     >
                       <Badge variant="brand" size="sm">{d.drugClassLabel}</Badge>
                       {d.genericName}
