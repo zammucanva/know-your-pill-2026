@@ -580,3 +580,26 @@ Stage Summary:
 - No other substance migrated.
 - Final status: PHASE 2 OPIOIDS MIGRATION: COMPLETE — PENDING REVIEW.
 - STOP. Awaiting explicit approval before proceeding to next substance (Cocaine).
+
+---
+Task ID: p0-visual-cleanup
+Agent: Main agent (Super Z)
+Task: P0 visual cleanup per KYP-INDEPENDENT-ARCHITECTURE-AUDIT.md §25 (tickets P0-1 through P0-6) — strip the vibe-coded decorative layer. Branch: design/kyp-visual-p0. No clinical/medical content touched.
+
+Work Log:
+- Cloned repo fresh into sandbox; recorded baseline: 41 pre-existing tsc errors (12 scripts/ + 29 src/), eslint 5 errors (all kyp-neon, pre-existing), build green. Created feature branch design/kyp-visual-p0. Fresh clone has NO post-commit hook — commits are local-only.
+- globals.css token surgery: radius scale flattened to 4px/8px (legacy rounded-xl/2xl/3xl render 8px automatically), 4 shadow tokens collapsed to one --shadow-card, text-h1/h2/h3 serif→sans (Geist 600), 8 banned utilities + keyframes deleted (kyp-glass/grid-bg/hero-glow/pulse-dot/float/drift/text-gradient/divider).
+- HomeHero rewritten: 2 blur orbs, NeuroNodes widget, useMagnetic, gradient text removed; h1 serif kept as the display moment.
+- 18 blur-blob JSX elements deleted across 15 files (incl. 2 on emergency surfaces — rule 19 violation now zero); 9 empty no-op overlay divs removed.
+- Glass→opaque sweep on active navigation-adjacent surfaces: navbar (sections + enter + drug loading), lesson-progress, sticky-learning-nav, floating-search, page-tracker, 3 mode toggles, drug-class-card. Zero backdrop-blur remains in active code.
+- Reveal component: scale stripped, 550ms→300ms, y 24→12, no stagger; RevealGroup renders plain div (API compat kept). Deleted organic-gradient.tsx + use-magnetic.ts (verified 0 importers first).
+- Context-aware rounded-full→rounded-md sweep (69 files, 191 lines): circular dots/icon buttons/theme toggle/avatar kept; shadcn primitives fully reverted (radio/slider/switch/avatar/carousel/drawer/progress/scroll-area) after the sweep hit them.
+- Fixed 2 regressions from the sweep (dangling {med.featured && ()} wrappers in medication-card.tsx + medication-library.tsx) → tsc back to exactly 41 (zero new).
+- Validation: tsc 41 (= baseline), eslint 0 errors, bun run build succeeds (all routes, substances SSG intact), dev server routes 200, agent-browser + VLM visual verification (no blobs, sans headings, small radii, layouts intact on scroll, no console errors).
+- Committed locally on design/kyp-visual-p0 (6011eab): 68 files, +234/−690. NOT pushed — awaiting token + explicit approval.
+
+Stage Summary:
+- P0 COMPLETE: palette/radius/shadow/typography/utilities/motion all conform to the audit's design system. Net −456 lines.
+- Clinical isolation verified: 0 drug/disease/substance data files, 0 MCQs, 0 kyp-neon files modified. Emergency content untouched (only decoration removed around it).
+- Next: P1 (IA — 3-route nav, /library, homepage portal re-compose) on a new branch; then P2 learning-loop in parallel.
+- To deploy: needs GitHub token (for push) + user approval phrase.
