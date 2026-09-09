@@ -24,6 +24,7 @@ model User {
   bookmarks     Bookmark[]
   searchHistory SearchHistory[]
   sessions      Session[]
+  passwordResets PasswordResetToken[]
 }
 
 /// Server-side session records for the hardened authentication system.
@@ -44,6 +45,30 @@ model Session {
   user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId, expiresAt])
+}
+
+/// Single-use password reset tokens.
+/// The database stores ONLY the SHA-256 hash of the raw token — raw tokens
+/// exist solely in the delivery channel (email provider or verified operator
+/// process) and are never persisted, never logged, and never returned by the
+/// API in responses. Tokens expire quickly (default 30 minutes), are strictly
+/// single-use (usedAt), and requesting a new token invalidates all previous
+/// outstanding tokens for the account.
+model PasswordResetToken {
+  id        String    @id @default(cuid())
+  /// SHA-256 hex of the raw reset token (never the raw token itself)
+  tokenHash String    @unique
+  userId    String
+  createdAt DateTime  @default(now())
+  expiresAt DateTime
+  /// Set when the token is consumed — a used token can never reset again
+  usedAt    DateTime?
+  /// SHA-256 hex of the requesting client source (audit dimension only;
+  /// raw IP addresses are never stored)
+  sourceHash String?
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
 }
 
 /// Login attempt counters backing the login rate limiter / temporary lockout.

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   ArrowRight, Bookmark, Clock, Trash2, BookOpen, Activity, HeartPulse,
+  KeyRound, Loader2, ShieldCheck,
 } from "lucide-react";
 import { Navbar } from "@/components/kyp/sections/navbar";
 import { Footer } from "@/components/kyp/sections/footer";
@@ -12,6 +13,8 @@ import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
 
 /**
@@ -118,6 +121,52 @@ export default function DashboardPage() {
   const clearProgress = async () => {
     await fetch("/api/progress", { method: "DELETE" });
     setProgress([]);
+  };
+
+  // ── Account security: change password ──
+  const [showSecurity, setShowSecurity] = React.useState(false);
+  const [currentPassword, setCurrentPassword] = React.useState("");
+  const [newPassword, setNewPassword] = React.useState("");
+  const [confirmPassword, setConfirmPassword] = React.useState("");
+  const [securityError, setSecurityError] = React.useState("");
+  const [securityMessage, setSecurityMessage] = React.useState("");
+  const [securityBusy, setSecurityBusy] = React.useState(false);
+
+  const changePassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (securityBusy) return;
+    setSecurityError("");
+    setSecurityMessage("");
+    if (newPassword !== confirmPassword) {
+      setSecurityError("New passwords do not match");
+      return;
+    }
+    setSecurityBusy(true);
+    try {
+      const res = await fetch("/api/auth/password/change", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ currentPassword, newPassword }),
+      });
+      const data = (await res.json().catch(() => ({}))) as {
+        message?: string;
+        error?: string;
+      };
+      if (!res.ok) {
+        setSecurityError(data.error || "Failed to change password. Please try again.");
+        return;
+      }
+      setSecurityMessage(
+        data.message || "Password updated. Other devices have been logged out."
+      );
+      setCurrentPassword("");
+      setNewPassword("");
+      setConfirmPassword("");
+    } catch {
+      setSecurityError("Network error — please try again.");
+    } finally {
+      setSecurityBusy(false);
+    }
   };
 
   if (loading) {
@@ -288,6 +337,111 @@ export default function DashboardPage() {
                   </div>
                 )}
               </div>
+            </div>
+
+            {/* Account security */}
+            <div className="mt-16 border-t border-border/30 pt-8">
+              <button
+                type="button"
+                onClick={() => {
+                  setShowSecurity((v) => !v);
+                  setSecurityError("");
+                  setSecurityMessage("");
+                }}
+                className="flex w-full items-center justify-between text-left"
+                aria-expanded={showSecurity}
+              >
+                <h2 className="font-serif text-xl font-semibold text-foreground flex items-center gap-2">
+                  <ShieldCheck className="h-4 w-4 text-brand" />
+                  Account security
+                </h2>
+                <span className="text-xs text-muted-foreground">
+                  {showSecurity ? "Hide" : "Change password"}
+                </span>
+              </button>
+              {showSecurity && (
+                <form onSubmit={changePassword} className="mt-4 max-w-md space-y-4">
+                  <div>
+                    <Label htmlFor="current-password" className="text-xs">
+                      Current password
+                    </Label>
+                    <Input
+                      id="current-password"
+                      type="password"
+                      value={currentPassword}
+                      onChange={(e) => setCurrentPassword(e.target.value)}
+                      required
+                      autoComplete="current-password"
+                      className="mt-1 h-11 rounded-xl"
+                    />
+                  </div>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div>
+                      <Label htmlFor="new-password" className="text-xs">
+                        New password
+                      </Label>
+                      <Input
+                        id="new-password"
+                        type="password"
+                        value={newPassword}
+                        onChange={(e) => setNewPassword(e.target.value)}
+                        required
+                        minLength={6}
+                        autoComplete="new-password"
+                        placeholder="At least 6 characters"
+                        className="mt-1 h-11 rounded-xl"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="confirm-new-password" className="text-xs">
+                        Confirm new password
+                      </Label>
+                      <Input
+                        id="confirm-new-password"
+                        type="password"
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
+                        required
+                        minLength={6}
+                        autoComplete="new-password"
+                        className="mt-1 h-11 rounded-xl"
+                      />
+                    </div>
+                  </div>
+                  {securityError && (
+                    <p
+                      className="rounded-lg border border-emergency/30 bg-emergency-soft/20 px-3 py-2 text-xs text-emergency"
+                      role="alert"
+                    >
+                      {securityError}
+                    </p>
+                  )}
+                  {securityMessage && (
+                    <p
+                      className="rounded-lg border border-brand/30 bg-brand-soft/20 px-3 py-2 text-xs text-brand"
+                      role="status"
+                    >
+                      {securityMessage}
+                    </p>
+                  )}
+                  <Button
+                    type="submit"
+                    disabled={securityBusy || newPassword.length < 6 || confirmPassword.length < 6 || currentPassword.length === 0}
+                    className="rounded-xl"
+                  >
+                    {securityBusy ? (
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                    ) : (
+                      <>
+                        <KeyRound className="mr-1 h-4 w-4" /> Update password
+                      </>
+                    )}
+                  </Button>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Updating your password signs out all other devices.
+                  </p>
+                </form>
+              )}
             </div>
 
             {/* Quick links */}

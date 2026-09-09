@@ -31,6 +31,7 @@ bun scripts/osv-audit.ts                      # dependency advisories
 | Build (standalone) | PASS | `bun run build` |
 | Build (static export) | PASS | `bun run build:export-clean` |
 | Auth security | 34/34 | `tests/auth.test.ts` |
+| Password reset / change | 25/25 | `tests/password-reset.test.ts` |
 | IDOR / authorization | 10/10 | `tests/idor.test.ts` |
 | Security suite | 64/64 | `tests/security.test.ts` |
 | Smoke routes | 25/25 | `tests/smoke.test.ts` |
@@ -42,7 +43,7 @@ bun scripts/osv-audit.ts                      # dependency advisories
 | OSV (direct runtime) | 0 advisories | `scripts/osv-audit.ts` |
 | OSV (direct dev/build) | 0 advisories | `scripts/osv-audit.ts` |
 
-Total: **258 automated checks, all passing.**
+Total: **283 automated checks, all passing.**
 
 ## Authentication security model
 
@@ -66,6 +67,43 @@ Total: **258 automated checks, all passing.**
 - **Fail-closed secret handling**: with `SESSION_SECRET` missing or shorter
   than 32 characters, authentication endpoints return HTTP 500 rather than
   degrading to unsigned sessions.
+
+## Password reset / change security model
+
+- **Token design**: 256-bit random single-use reset tokens (`base64url(32
+  bytes)`); the database stores ONLY the SHA-256 hash — raw tokens are never
+  persisted, logged, or returned by any API. Tokens expire after 30 minutes.
+- **Single-use, race-safe**: consuming a token is one atomic conditional
+  update (`usedAt` flips only from null); a token can never complete two
+  resets, even concurrently. Unknown, used, and expired tokens return the
+  identical generic 400 error.
+- **Request flow** (`POST /api/auth/password/forgot`): byte-identical 200
+  responses for known and unknown emails (anti-enumeration); rate-limited
+  through the same DB-backed lockout machinery under a `reset:` namespace
+  (reset spam cannot lock the account's LOGIN counters); a new request
+  silently invalidates all previous outstanding tokens for the account.
+- **Completion flow** (`POST /api/auth/password/reset`): password policy
+  matches signup (min 6) plus a 128-character maximum; token guessing is
+  throttled per source (the shared source dimension accumulates — brute
+  force locks the source without affecting other users); a successful reset
+  revokes ALL of the user's server-side sessions and mints NO new session
+  (fresh login required).
+- **Authenticated change** (`POST /api/auth/password/change`): verifies the
+  CURRENT password before accepting a change (a stolen cookie cannot rotate
+  the victim's password); wrong current-password attempts are rate-limited
+  per user+source; on success ALL sessions are revoked and a brand-new
+  session is minted for the current client only — every other device is
+  logged out.
+- **Token delivery** (the one external dependency): no email provider is
+  configured in this repository, so raw tokens are delivered either (a) via
+  a production email provider once configured, or (b) via the verified
+  operator process — `scripts/create-password-reset.ts` (identity verified
+  out-of-band, token printed once to the operator's terminal, delivered via
+  a trusted channel, consumed at `/reset`).
+- **UI**: `/reset` consumes tokens (prefilled from `?token=…`); the dashboard
+  exposes an authenticated change-password form; the login page's "Forgot
+  password?" link routes to `/reset`. All forms follow the approved design
+  language with labeled inputs, `role="alert"` errors, and keyboard access.
 
 ## Static export hardening
 

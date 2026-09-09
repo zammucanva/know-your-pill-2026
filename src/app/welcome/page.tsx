@@ -3,6 +3,7 @@
 import { imgPath } from "@/lib/kyp/image-path";
 import * as React from "react";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -365,7 +366,7 @@ export default function WelcomePage() {
                 {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : "Log in"}
               </Button>
               <p className="text-center text-xs text-muted-foreground">
-                <button type="button" className="font-medium text-brand hover:underline">Forgot password?</button>
+                <Link href="/reset" className="font-medium text-brand hover:underline">Forgot password?</Link>
               </p>
               <p className="text-center text-xs text-muted-foreground">
                 Don&apos;t have an account?{" "}

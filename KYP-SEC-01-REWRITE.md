@@ -103,12 +103,16 @@ git push --force-with-lease origin \
 
 ## Follow-up operations (all separate, none performed here)
 
-1. Production database migration for the new `Session` and `LoginAttempt`
-   tables (see KYP-SECURITY-VERIFICATION.md).
+1. Production database migration for the new `Session`, `LoginAttempt`, and
+   `PasswordResetToken` tables (see KYP-SECURITY-VERIFICATION.md).
 2. `SESSION_SECRET` configuration in the production environment (>= 32
    random bytes; never committed, printed, or exposed client-side).
 3. Application deployment.
-4. Password-reset coordination for the five real accounts whose historical
-   bcrypt hashes were present in the exposed database artifact (no emails
-   or hashes are recorded in this document).
+4. Password-reset coordination for the accounts whose historical bcrypt
+   hashes were present in the exposed database artifact (no emails or hashes
+   are recorded in this document). The full reset/change workflow now exists:
+   `POST /api/auth/password/forgot|reset|change`, the `/reset` page, the
+   dashboard change-password form, and the verified operator script
+   `scripts/create-password-reset.ts` (email delivery remains a separate
+   external dependency).
 5. GitHub Support garbage-collection request if required.
