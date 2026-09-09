@@ -72,6 +72,12 @@ import type { NavItem } from "@/lib/kyp/use-scroll-spy";
 
 type Slug = string;
 
+// All valid slugs come from generateStaticParams at build time. Unknown
+// slugs are rejected by the router itself with a true 404 — without this,
+// the loading.tsx streaming boundary would flush a 200 shell before
+// notFound() resolves, returning the not-found UI with the wrong status.
+export const dynamicParams = false;
+
 export function generateStaticParams(): { slug: Slug }[] {
   return getAllDrugSlugs().map((slug) => ({ slug }));
 }

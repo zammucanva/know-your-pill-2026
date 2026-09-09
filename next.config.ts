@@ -10,18 +10,50 @@ const nextConfig: NextConfig = {
   basePath: isGithubPages ? `/${repoName}` : "",
   assetPrefix: isGithubPages ? `/${repoName}/` : undefined,
   images: isGithubPages ? { unoptimized: true } : undefined,
-  trailingSlash: false,
-  typescript: { ignoreBuildErrors: true },
+  trailingSlash: isGithubPages ? true : false,
+  // Static export mode: only .tsx/.jsx files are treated as pages, so
+  // route.ts API handlers are excluded from the export build. Standalone
+  // mode keeps the default extensions so all 9 API routes are built.
+  ...(isGithubPages ? { pageExtensions: ["tsx", "jsx"] } : {}),
+  // Fail the build on TypeScript errors — never suppress them.
+  typescript: { ignoreBuildErrors: false },
   reactStrictMode: false,
+  // Never advertise the framework via the X-Powered-By response header.
+  poweredByHeader: false,
   env: {
     NEXT_PUBLIC_BASE_PATH: isGithubPages ? `/${repoName}` : "",
   },
-  // Redirect legacy .html routes to canonical clean URLs
-  // (only works in standalone mode, not static export — GitHub Pages
-  // handles 404s via the _not-found page which now shows useful links)
+  // Security headers (server modes only — GitHub Pages serves static files
+  // and applies its own response headers).
   ...(isGithubPages
     ? {}
     : {
+        async headers() {
+          return [
+            {
+              source: "/:path*",
+              headers: [
+                { key: "X-Content-Type-Options", value: "nosniff" },
+                { key: "X-Frame-Options", value: "DENY" },
+                {
+                  key: "Referrer-Policy",
+                  value: "strict-origin-when-cross-origin",
+                },
+                {
+                  key: "Permissions-Policy",
+                  value: "camera=(), microphone=(), geolocation=(), payment=()",
+                },
+                {
+                  key: "X-DNS-Prefetch-Control",
+                  value: "off",
+                },
+              ],
+            },
+          ];
+        },
+        // Redirect legacy .html routes to canonical clean URLs
+        // (only works in standalone mode, not static export — GitHub Pages
+        // handles 404s via the _not-found page which now shows useful links)
         redirects: () => [
           { source: "/psychiatric.html", destination: "/#library", permanent: true },
           { source: "/pain-management.html", destination: "/#library", permanent: true },
