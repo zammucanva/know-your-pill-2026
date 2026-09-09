@@ -37,7 +37,7 @@ async function main() {
       fs.writeFileSync(path, buffer);
       console.log(`  OK saved ${path} (${buffer.length} bytes)`);
     } catch (err) {
-      console.error(`  FAILED ${mol.name}: ${err.message}`);
+      console.error(`  FAILED ${mol.name}: ${(err as Error).message}`);
     }
   }
   console.log('Done!');

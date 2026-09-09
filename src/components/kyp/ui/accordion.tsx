@@ -20,7 +20,7 @@ export interface AccordionItem {
   answer: React.ReactNode;
 }
 
-interface AccordionProps extends React.ComponentProps<typeof AccordionPrimitive> {
+type AccordionProps = React.ComponentProps<typeof AccordionPrimitive> & {
   items: AccordionItem[];
 }
 

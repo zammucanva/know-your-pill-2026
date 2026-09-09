@@ -46,7 +46,6 @@ export function NeuroArcadeSection() {
           {/* Left: visual */}
           <Reveal className="order-2 lg:order-1">
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={imgPath("/artwork/neuro-arcade.png")}
                 alt="NeuroArcade — gamified neuroscience learning platform with interactive psychopharmacology challenges"

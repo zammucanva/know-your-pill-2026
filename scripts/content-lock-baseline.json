@@ -1,0 +1,42 @@
+{
+  "files": {
+    "src/lib/kyp/data/medications.ts": "d2e07f6660240db559c3561572e21ae23719f25766a513cf2507b84443d6a389",
+    "src/lib/kyp/data/drugs.ts": "aa5c6bb3d6100679a2a0ca541cd129637035a3b11b071765d2c0c8872092c12d",
+    "src/lib/kyp/data/classes.ts": "3e49f364491049a012b02b06b260ee0473e477488cb2a94d1c6bb452dd080480",
+    "src/lib/kyp/data/side-effects.ts": "f0c5f213adf84a5c49fd5422d85379ecb9665640b3b54291a66eb3c20a1560c3",
+    "src/lib/kyp/data/brain.ts": "57cd43ef385311aa581fa938039c63d1722b517cd174656bb665d67549ec48fc",
+    "src/lib/kyp/data/search-index.ts": "aef14f94988f214f3ba927e597a48bac8cbcd6b2fd2df30407c5453af4a49472",
+    "src/lib/kyp/data/disease-types.ts": "16b41aeeb206b4b24a70d151d103f0d4c4b3196305da9a97865362d7fe7be4f3",
+    "src/lib/kyp/data/substance-types.ts": "1b55dfa8a002777e142fc2cd732f107a11dffb205bec4fac72ddcbb913115caf",
+    "src/lib/kyp/data/types.ts": "c4da8287f836fe971915d6324863ee8126a37ca3be55ff1fcdb8df5cba73237f",
+    "src/lib/kyp/data/platform.ts": "d0d49ffb27a20f412954d8be6e67ef6a8c277428b789900cfd81d0e4b425ba57",
+    "src/lib/kyp/data/index.ts": "43df7079265ee6bce7397acb94ccbc9025e7837126de5a87ae43a4dd38d8db51",
+    "src/lib/kyp/data/neurotransmitter-artwork.json": "590fdf059028a8bd01ab21e4f7584a2aba15fac6b850e427abe74a6471a1ef58",
+    "src/lib/kyp/data/drugs/amitriptyline.ts": "57046fd153f96153753ce620eb1af4fbce48c1a3fc2d83bab5fba27ab37502ab",
+    "src/lib/kyp/data/drugs/bupropion.ts": "496939f5ec652fa916a91cd1821863a7565295ac0bbeabe502e5fe573304d603",
+    "src/lib/kyp/data/drugs/citalopram.ts": "c70c37e65f70307e8e741761164eaf458ff6e581f0328a304452c5e0e2850937",
+    "src/lib/kyp/data/drugs/clomipramine.ts": "4e758dbe0ab1d9ed220baf2f8e03cdaa4b5605e43393c4e1a80aace9471c970c",
+    "src/lib/kyp/data/drugs/duloxetine.ts": "bc8982588fd2c8b5e1f0bde4deb844b1bb7c6a3a40c2ddb3bb4132cd37519cff",
+    "src/lib/kyp/data/drugs/escitalopram.ts": "2091808293d654c1706f5a10f993748bd4ef52d90cff66e7d8cf3c1911eadccb",
+    "src/lib/kyp/data/drugs/fluoxetine.ts": "44ce7b78637d6c6803ec5b28e8a8b4cf5f59dd4eee96786af2a3c1f23e686018",
+    "src/lib/kyp/data/drugs/fluvoxamine.ts": "43a87b3709fe6730e7679a80370bc250f4525b628aced0531df9cbebe6eb3d64",
+    "src/lib/kyp/data/drugs/mirtazapine.ts": "f9f161ca2e6894c74aaf0e3646fba56f64e0cdb297c7f59b688b8762793873c2",
+    "src/lib/kyp/data/drugs/paroxetine.ts": "369a216eac085d7eff4decbde21808bda07a1e6adbe2b685bfdccf364cef0777",
+    "src/lib/kyp/data/drugs/sertraline.ts": "5c625a3ea1311d1ddb60c9ecf753c9b03e78bd1dba2199fd4766b0b7ef917a34",
+    "src/lib/kyp/data/drugs/venlafaxine.ts": "183adb3cc06a44b7545fd76dac26ea5f5e3273ce62bc96c8e20f3a3675670ac3",
+    "src/lib/kyp/data/drugs/index.ts": "fadc64f26d65b6ab928aaa5b17842059d47e3e13a4d5c4f3008418a3e699fa88",
+    "src/lib/kyp/data/diseases/index.ts": "1a29b24419c75d90b1e344648aec43c465004b62e4c4c4364e37acc303a3f946",
+    "src/lib/kyp/data/diseases/major-depressive-disorder.ts": "68e5a11e19716049d7d62d361a176b37fc92b6a0c37ebea210a3ca776085b5dc",
+    "src/lib/kyp/data/substances/index.ts": "cdfd51ca227dc0dad3d4fd043f3bd5472404f1cf17173bbe37e258dd15162ccd",
+    "src/lib/kyp/data/substances/alcohol.ts": "d79ca5d31ebafc695572ace64178386889a213d784be6fff7561ec2c045bf271",
+    "src/lib/kyp/data/substances/cannabis.ts": "1d18534cce203d462bd14c60d8fb8e623ddb4d0412228c501e0804a16add1a11",
+    "src/lib/kyp/data/substances/opioids.ts": "b3bf956c5ede725168e615e6cfacff593332b60c5582fca6f542766bca5d1593"
+  },
+  "counts": {
+    "medications": 12,
+    "diseases": 1,
+    "substances": 3,
+    "mcqs": 78,
+    "searchEntries": 46
+  }
+}

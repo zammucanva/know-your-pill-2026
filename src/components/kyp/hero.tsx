@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Search, ArrowRight, Sparkles, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,6 +11,7 @@ const popularSearches = ["Sertraline", "Fluoxetine", "Escitalopram", "Olanzapine
 
 export function Hero() {
   const [query, setQuery] = React.useState("");
+  const router = useRouter();
 
   return (
     <section id="top" className="relative overflow-hidden pt-28 pb-20 sm:pt-32 sm:pb-28">
@@ -68,7 +70,7 @@ export function Hero() {
                   onSubmit={(e) => {
                     e.preventDefault();
                     if (query.trim()) {
-                      window.location.href = '/drugs/sertraline';
+                      router.push('/drugs/sertraline');
                     }
                   }}
                 >

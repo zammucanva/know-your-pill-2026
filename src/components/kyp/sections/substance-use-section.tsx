@@ -83,7 +83,6 @@ export function SubstanceUseSection() {
                   {/* Molecule image — small, floating */}
                   {sub.artwork && (
                     <div className="relative h-10 w-10 sm:h-12 sm:w-12 shrink-0">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={sub.artwork}
                         alt={sub.artworkAlt ?? `${sub.name} molecule`}

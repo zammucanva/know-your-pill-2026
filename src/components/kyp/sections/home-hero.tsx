@@ -13,7 +13,7 @@ const popularSearches = ["Sertraline", "Fluoxetine", "Escitalopram", "Olanzapine
 export function HomeHero() {
   const router = useRouter();
   const [query, setQuery] = React.useState("");
-  const magnetic = useMagnetic(0.25);
+  const { ref: magneticRef, handlers: magneticHandlers, offset: magneticOffset } = useMagnetic(0.25);
 
   return (
     <section id="top" className="relative min-h-[100svh] overflow-hidden flex flex-col justify-end pb-16 sm:pb-20">
@@ -83,10 +83,10 @@ export function HomeHero() {
                 aria-label="Search medications"
               />
               <div
-                ref={magnetic.ref as React.RefObject<HTMLDivElement>}
-                {...magnetic.handlers}
+                ref={magneticRef as React.RefObject<HTMLDivElement>}
+                {...magneticHandlers}
                 style={{
-                  transform: `translate(${magnetic.offset.x}px, ${magnetic.offset.y}px)`,
+                  transform: `translate(${magneticOffset.x}px, ${magneticOffset.y}px)`,
                   transition: "transform 0.3s cubic-bezier(0.22, 1, 0.36, 1)",
                 }}
               >

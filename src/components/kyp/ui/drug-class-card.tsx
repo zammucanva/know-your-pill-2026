@@ -55,9 +55,10 @@ export function DrugClassCard({ category, index = 0, href = "#library", classNam
           </p>
 
           {/* Hover preview: show drug names from category if available */}
-          {category.chips && category.chips.length > 0 && (
+          {(category as Category & { chips?: string[] }).chips &&
+            (category as Category & { chips?: string[] }).chips!.length > 0 && (
             <div className="relative mt-3 flex flex-wrap gap-1.5 opacity-0 max-h-0 overflow-hidden transition-all duration-300 group-hover:opacity-100 group-hover:max-h-20">
-              {category.chips.slice(0, 3).map((chip) => (
+              {(category as Category & { chips?: string[] }).chips!.slice(0, 3).map((chip) => (
                 <span
                   key={chip}
                   className="rounded-full border border-border/50 bg-background/60 px-2 py-0.5 text-[0.65rem] font-medium text-muted-foreground"

@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
  *   - split   : two-column with content + visual side
  *   - centered: single column, centered
  */
-interface HeroSectionProps extends React.HTMLAttributes<HTMLElement> {
+interface HeroSectionProps extends Omit<React.HTMLAttributes<HTMLElement>, "title"> {
   eyebrow?: React.ReactNode;
   title: React.ReactNode;
   lede?: React.ReactNode;

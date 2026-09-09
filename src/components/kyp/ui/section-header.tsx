@@ -31,20 +31,23 @@ const sectionHeaderVariants = cva("flex flex-col gap-3", {
 });
 
 export interface SectionHeaderProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, "title">,
     VariantProps<typeof sectionHeaderVariants> {
   eyebrow?: string;
   title: React.ReactNode;
   description?: React.ReactNode;
   action?: React.ReactNode;
   /** Tone of the eyebrow text — defaults to brand teal */
-  tone?: "brand" | "neural" | "emergency";
+  tone?: "brand" | "neural" | "emergency" | "success";
 }
 
 const toneClass = {
   brand: "text-brand",
   neural: "text-neural",
   emergency: "text-emergency",
+  // "success" intentionally maps to no extra class so it renders exactly as
+  // it did before it was formally typed (unknown tones produced no class).
+  success: "",
 };
 
 export function SectionHeader({

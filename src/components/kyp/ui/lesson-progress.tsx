@@ -25,7 +25,7 @@ export function LessonProgress({ lessons }: LessonProgressProps) {
     [lessons]
   );
 
-  const activeId = useScrollSpy(allSectionIds, 200);
+  const { activeId } = useScrollSpy(allSectionIds, 200);
 
   // Determine which lesson the active section belongs to
   const activeLesson = React.useMemo(() => {

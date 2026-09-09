@@ -5,7 +5,7 @@ import type { DrugClass, DrugClassId } from "./types";
  * Each class has a stable accent color (CSS variable) so any component
  * can render the right hue without hardcoding hex values.
  */
-export const drugClasses: Record<DrugClassId, DrugClass> = {
+export const drugClasses: Partial<Record<DrugClassId, DrugClass>> = {
   depressant: {
     id: "depressant",
     name: "CNS Depressant",

@@ -31,7 +31,7 @@ export function DrugNavigationModule({ drug }: DrugNavigationModuleProps) {
 
   const hasFamily = Boolean(drug.drugFamilyNav);
   const hasComparison = drug.comparisonTables?.length > 0;
-  const hasIndian = drug.indianComparisonContexts?.length > 0;
+  const hasIndian = (drug.indianComparisonContexts?.length ?? 0) > 0;
   const hasRelated = drug.relatedDrugs?.length > 0;
 
   const tabs = [

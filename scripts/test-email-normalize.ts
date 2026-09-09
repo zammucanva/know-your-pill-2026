@@ -28,3 +28,7 @@ async function test() {
   console.log(`   Login status: ${r.status} (should be 200 — case-insensitive)`);
 }
 test().catch(console.error);
+
+// Module isolation — prevents top-level declaration collisions with
+// other legacy scripts in the same TypeScript program.
+export {};

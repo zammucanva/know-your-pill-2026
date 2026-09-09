@@ -81,3 +81,7 @@ async function test() {
 }
 
 test().catch(e => { console.error(e); process.exit(1); });
+
+// Module isolation — prevents top-level declaration collisions with
+// other legacy scripts in the same TypeScript program.
+export {};

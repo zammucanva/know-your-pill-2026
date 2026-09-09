@@ -51,14 +51,17 @@ export function OrganicGradient({
 }: OrganicGradientProps) {
   const ref = React.useRef<HTMLDivElement>(null);
   const [parallax, setParallax] = React.useState({ x: 0, y: 0 });
-  const reduceMotion = React.useRef(false);
+  // Reduced-motion preference is stored in state (not a ref) so the render
+  // below never reads a ref value — behavior is identical to the previous
+  // ref-based implementation.
+  const [reduceMotion, setReduceMotion] = React.useState(false);
 
   React.useEffect(() => {
-    reduceMotion.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setReduceMotion(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   }, []);
 
   React.useEffect(() => {
-    if (!responsive || reduceMotion.current) return;
+    if (!responsive || reduceMotion) return;
 
     const handleMove = (e: MouseEvent) => {
       if (!ref.current) return;
@@ -70,7 +73,7 @@ export function OrganicGradient({
 
     window.addEventListener("mousemove", handleMove);
     return () => window.removeEventListener("mousemove", handleMove);
-  }, [responsive]);
+  }, [responsive, reduceMotion]);
 
   return (
     <div
@@ -82,7 +85,7 @@ export function OrganicGradient({
         className
       )}
       style={
-        responsive && !reduceMotion.current
+        responsive && !reduceMotion
           ? { transform: `translate(${parallax.x}px, ${parallax.y}px)` }
           : undefined
       }

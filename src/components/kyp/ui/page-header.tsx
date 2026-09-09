@@ -26,7 +26,7 @@ const pageHeaderVariants = cva("flex flex-col gap-3", {
 });
 
 export interface PageHeaderProps
-  extends React.HTMLAttributes<HTMLDivElement>,
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, "title">,
     VariantProps<typeof pageHeaderVariants> {
   eyebrow?: string;
   title: React.ReactNode;

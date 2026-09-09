@@ -22,7 +22,7 @@ async function main() {
       fs.writeFileSync(`/home/z/my-project/public/artwork/${item.name}.png`, buf);
       console.log(`  OK ${item.name}.png (${buf.length} bytes)`);
     } catch (e) {
-      console.error(`  FAIL ${item.name}: ${e.message}`);
+      console.error(`  FAIL ${item.name}: ${(e as Error).message}`);
     }
   }
   console.log('Done!');

@@ -27,6 +27,11 @@ const badgeVariants = cva(
         warning: "bg-warning-soft text-warning",
         success: "bg-success-soft text-success",
         outline: "border border-border bg-transparent text-foreground/80",
+        // "danger" is used by severity mappings in drug interactions and side
+        // effects. It intentionally maps to no extra classes so it renders with
+        // the base (neutral) styling — identical to the historical runtime
+        // behavior before this variant was formally typed.
+        danger: "",
       },
       size: {
         sm: "px-2 py-0.5 text-[0.65rem]",

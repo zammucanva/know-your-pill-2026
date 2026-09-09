@@ -34,7 +34,7 @@ export function DrugExamPearls({ drug }: DrugExamPearlsProps) {
         </div>
 
         <ol className="mt-8 space-y-3">
-          {drug.examPearls.map((pearl, i) => (
+          {drug.examPearls?.map((pearl, i) => (
             <li key={i}>
               <CardPrimitive variant="flat" interactive={false} showArrow={false}>
                 <CardBody className="flex items-start gap-4 p-4">

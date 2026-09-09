@@ -100,7 +100,6 @@ export function Footer() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <span className="relative h-8 w-8 shrink-0 overflow-hidden rounded-lg">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={imgPath("/logo-navy-128.png")}
                     alt="Know Your Pill logo"

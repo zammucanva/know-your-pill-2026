@@ -98,7 +98,11 @@ export function SubstanceUse() {
 }
 
 function SubstanceCard({ sub, index }: { sub: Substance; index: number }) {
-  const Icon = sub.icon;
+  // `icon` and `accent` are not part of the Substance interface and are not
+  // present in the current substance data — model them as optional so the
+  // legacy component type-checks without changing its runtime behavior.
+  const ext = sub as Substance & { icon?: React.ComponentType<{ className?: string; strokeWidth?: number }>; accent?: string };
+  const Icon = ext.icon;
   return (
     <motion.a
       href={sub.href}
@@ -112,10 +116,10 @@ function SubstanceCard({ sub, index }: { sub: Substance; index: number }) {
         <span
           className={cn(
             "flex h-10 w-10 items-center justify-center rounded-xl border border-border/70 bg-background/60",
-            sub.accent
+            ext.accent
           )}
         >
-          <Icon className="h-5 w-5" strokeWidth={2} />
+          {Icon ? <Icon className="h-5 w-5" strokeWidth={2} /> : null}
         </span>
         <ArrowUpRight
           className="h-4 w-4 text-muted-foreground transition-all group-hover:text-brand group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -138,7 +142,7 @@ function SubstanceCard({ sub, index }: { sub: Substance; index: number }) {
         <p className="text-[0.7rem] uppercase tracking-wide text-muted-foreground">
           Neurotransmitter
         </p>
-        <p className={cn("mt-0.5 text-xs font-medium", sub.accent)}>{sub.neurotransmitter}</p>
+        <p className={cn("mt-0.5 text-xs font-medium", ext.accent)}>{sub.neurotransmitter}</p>
       </div>
     </motion.a>
   );
