@@ -74,9 +74,6 @@ export function Navbar() {
             <strong className="font-serif text-[1.05rem] font-semibold tracking-tight">
               Know Your Pill
             </strong>
-            <small className="text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground">
-              Medication Education · Visual
-            </small>
           </span>
         </Link>
 

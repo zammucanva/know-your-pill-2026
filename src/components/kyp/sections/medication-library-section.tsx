@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
-import { medicationClasses, categories } from "@/lib/kyp/data";
+import { medicationClasses, categories, drugs } from "@/lib/kyp/data";
 import { cn } from "@/lib/utils";
 
 export function MedicationLibrarySection() {
@@ -46,10 +46,11 @@ export function MedicationLibrarySection() {
                 <p className="mt-3 text-body-sm text-muted-foreground max-w-xl leading-relaxed">
                   {medicationClasses[0].description}
                 </p>
+                {/* Derived from the canonical drug registry — never a second list */}
                 <div className="mt-4 flex flex-wrap gap-x-3 gap-y-1">
-                  {medicationClasses[0].chips.map((chip) => (
-                    <span key={chip} className="text-xs text-foreground/40 font-medium">
-                      {chip}
+                  {drugs.slice(0, 6).map((d) => (
+                    <span key={d.slug} className="text-xs text-foreground/40 font-medium">
+                      {d.genericName}
                     </span>
                   ))}
                 </div>
