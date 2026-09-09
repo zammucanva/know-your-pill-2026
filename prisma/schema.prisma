@@ -23,6 +23,57 @@ model User {
   progress      Progress[]
   bookmarks     Bookmark[]
   searchHistory SearchHistory[]
+  sessions      Session[]
+}
+
+/// Server-side session records for the hardened authentication system.
+/// The browser cookie holds ONLY an opaque signed token. This table stores
+/// the SHA-256 hash of that token — raw tokens are never persisted.
+/// Sessions support expiry, revocation, and fixation resistance (every
+/// login issues a brand-new random token).
+model Session {
+  id         String    @id @default(cuid())
+  /// SHA-256 hex digest of the full signed cookie token
+  tokenHash  String    @unique
+  userId     String
+  createdAt  DateTime  @default(now())
+  expiresAt  DateTime
+  /// Set on logout — the token is rejected even if still time-valid
+  revokedAt  DateTime?
+  lastUsedAt DateTime?
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, expiresAt])
+}
+
+/// Login attempt counters backing the login rate limiter / temporary lockout.
+/// Rows are keyed by (identifierHash, sourceHash):
+///   - account dimension: (sha256(email), "*")
+///   - account+source:     (sha256(email), sha256(source))
+///   - source dimension:   ("*", sha256(source))
+/// Raw emails and IP addresses are NEVER stored — only SHA-256 hashes.
+/// Lockouts are temporary with bounded escalation and automatic expiry;
+/// there is no permanent lock.
+model LoginAttempt {
+  id              String    @id @default(cuid())
+  /// SHA-256 hex of the normalized login identifier ("*" = any account)
+  identifierHash  String
+  /// SHA-256 hex of the client source ("*" = any source)
+  sourceHash      String
+  failureCount    Int       @default(0)
+  windowStart     DateTime  @default(now())
+  lastFailureAt   DateTime  @default(now())
+  /// While set and in the future, logins for this dimension are blocked
+  lockoutUntil    DateTime?
+  /// Bounded escalation level — each consecutive lockout doubles the next
+  /// duration, capped at maxLockoutMs
+  escalationLevel Int       @default(0)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@unique([identifierHash, sourceHash])
+  @@index([identifierHash, lastFailureAt])
+  @@index([sourceHash, lastFailureAt])
 }
 
 /// Tracks when a user last visited a drug, substance, or disease page.

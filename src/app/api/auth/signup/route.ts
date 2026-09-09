@@ -7,13 +7,51 @@ import { NextRequest, NextResponse } from "next/server";
 export const dynamic = "force-dynamic";
 import { db } from "@/lib/db";
 import bcrypt from "bcryptjs";
-import { cookies } from "next/headers";
+import { createSessionForUser, setSessionCookie } from "@/lib/session";
+import { isSessionSecretConfigured } from "@/lib/session-secret";
+
+/**
+ * POST /api/auth/signup
+ *
+ * Hardened signup flow:
+ *   1. validate name/email/password shape
+ *   2. hash password (bcrypt cost 12)
+ *   3. create the user
+ *   4. mint a FRESH random server-side session immediately (fixation
+ *      resistance — no pre-authentication token is ever carried over)
+ *
+ * Fails closed with HTTP 500 when SESSION_SECRET is not configured.
+ */
+
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(req: NextRequest) {
-  try {
-    const { name, email, password } = await req.json();
+  if (!isSessionSecretConfigured()) {
+    return NextResponse.json(
+      { error: "Authentication is temporarily unavailable" },
+      { status: 500 }
+    );
+  }
 
-    if (!name || !email || !password) {
+  try {
+    let body: unknown;
+    try {
+      body = await req.json();
+    } catch {
+      return NextResponse.json(
+        { error: "Invalid request body" },
+        { status: 400 }
+      );
+    }
+
+    const { name, email, password } = (body ?? {}) as {
+      name?: unknown;
+      email?: unknown;
+      password?: unknown;
+    };
+
+    if (typeof name !== "string" || typeof email !== "string" || typeof password !== "string" ||
+        name.length === 0 || email.length === 0 || password.length === 0) {
       return NextResponse.json(
         { error: "Name, email, and password are required" },
         { status: 400 }
@@ -28,8 +66,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    if (!EMAIL_REGEX.test(email)) {
       return NextResponse.json(
         { error: "Please enter a valid email address" },
         { status: 400 }
@@ -61,18 +98,9 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    // Set a simple session cookie (not JWT, but secure enough for v1)
-    const sessionToken = Buffer.from(
-      JSON.stringify({ id: user.id, email: user.email, name: user.name, role: user.role })
-    ).toString("base64");
-
-    (await cookies()).set("kyp-session", sessionToken, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      maxAge: 60 * 60 * 24 * 30, // 30 days
-      path: "/",
-    });
+    // Fresh server-side session (opaque signed token, hash persisted)
+    const session = await createSessionForUser(user.id);
+    await setSessionCookie(session.token, session.expiresAt);
 
     return NextResponse.json({
       id: user.id,
@@ -82,7 +110,7 @@ export async function POST(req: NextRequest) {
       emailVerified: user.emailVerified,
     });
   } catch (error) {
-    console.error("Signup error:", error);
+    console.error("Signup error:", (error as Error)?.name ?? "UnknownError");
     return NextResponse.json(
       { error: "Failed to create account. Please try again." },
       { status: 500 }

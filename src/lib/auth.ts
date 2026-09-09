@@ -1,65 +1,33 @@
-import { cookies } from "next/headers";
-import { db } from "@/lib/db";
+import "server-only";
+
+import { resolveSessionFromCookie } from "@/lib/session";
 
 /**
  * getSessionUser — shared helper for API routes.
  *
- * Reads the kyp-session cookie, validates it, and returns the user record
- * from the database (so we always have fresh data, not stale cookie data).
+ * Resolves the authenticated user from the SERVER-SIDE session:
+ *   cookie token -> HMAC validation -> hash lookup -> revocation check ->
+ *   expiry check -> fresh user record from the database.
+ *
+ * The cookie contains only an opaque signed token — no user id, email,
+ * name, role, or any other authorization data. The user is always resolved
+ * from the database, so role changes and deletions take effect on the next
+ * request without re-issuing cookies.
  *
  * Returns null if:
- * - no cookie present
- * - cookie is malformed
- * - user no longer exists in DB (e.g. deleted)
+ *   - no cookie present
+ *   - cookie malformed / signature invalid (tampered, spliced, or legacy
+ *     unsigned base64-JSON cookies from the pre-hardening implementation)
+ *   - session unknown to the database
+ *   - session revoked (e.g. logged out elsewhere)
+ *   - session expired
+ *   - user no longer exists in the database
  *
- * Usage:
- *   const user = await getSessionUser();
- *   if (!user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+ * Throws only when SESSION_SECRET is not configured (fail-closed) — route
+ * handlers translate that into HTTP 500.
  */
 export async function getSessionUser() {
-  const sessionCookie = (await cookies()).get("kyp-session");
-  if (!sessionCookie) return null;
-
-  try {
-    const session = JSON.parse(
-      Buffer.from(sessionCookie.value, "base64").toString()
-    );
-
-    // Fetch the user from DB to ensure they still exist and get fresh data
-    const user = await db.user.findUnique({
-      where: { id: session.id },
-      select: {
-        id: true,
-        name: true,
-        email: true,
-        role: true,
-        emailVerified: true,
-      },
-    });
-
-    return user;
-  } catch {
-    return null;
-  }
-}
-
-/**
- * Refresh the session cookie with updated user data.
- * Call this after updating user fields (e.g. role change).
- */
-export async function refreshSessionCookie(userId: string) {
-  const user = await db.user.findUnique({
-    where: { id: userId },
-    select: { id: true, email: true, name: true, role: true },
-  });
-  if (!user) return;
-
-  const sessionToken = Buffer.from(JSON.stringify(user)).toString("base64");
-  (await cookies()).set("kyp-session", sessionToken, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    maxAge: 60 * 60 * 24 * 30, // 30 days
-    path: "/",
-  });
+  const resolved = await resolveSessionFromCookie();
+  if (!resolved) return null;
+  return resolved.user;
 }

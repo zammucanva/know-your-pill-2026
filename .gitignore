@@ -52,3 +52,10 @@ prompt
 server.log
 # Skills directory
 /skills/
+# Local runtime database + secrets — never commit (SEC-01)
+db/custom.db
+db/*.db
+db/test*.db
+
+# SEC-01 recovery artifacts — never commit, never push
+sec01-recovery/
