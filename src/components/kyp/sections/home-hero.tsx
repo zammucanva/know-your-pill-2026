@@ -20,6 +20,9 @@ const brandAliases: Record<string, string> = { zoloft: "sertraline" };
 
 const popularSearches = drugs.slice(0, 4).map((d) => d.genericName);
 
+/** Hero overline — duplicated into data-text for the CSS-only shine overlay. */
+const HERO_OVERLINE = "Medication education made visual";
+
 export function HomeHero() {
   const router = useRouter();
   const [query, setQuery] = React.useState("");
@@ -53,7 +56,9 @@ export function HomeHero() {
             <Reveal>
               <div className="flex items-center gap-2 text-overline text-brand-ink mb-5">
                 <Sparkles className="h-3 w-3" />
-                Medication education made visual
+                <span className="kyp-shine" data-text={HERO_OVERLINE}>
+                  {HERO_OVERLINE}
+                </span>
               </div>
             </Reveal>
 

@@ -471,6 +471,36 @@
     color: transparent;
   }
 
+  /* Subtle editorial shine — one slow light band sweeps across the text
+     every 4 seconds. The base text stays fully readable (the overlay only
+     lightens glyphs where the band passes). The band color derives from
+     --brand so it stays legible in both light and dark mode. Pure CSS —
+     no JS, no layout shift (the overlay is absolutely positioned).
+     Disabled under prefers-reduced-motion (see below). */
+  .kyp-shine {
+    position: relative;
+    display: inline-block;
+  }
+  .kyp-shine::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    color: transparent;
+    background-image: linear-gradient(
+      105deg,
+      transparent 46%,
+      color-mix(in oklch, var(--brand) 45%, white) 50%,
+      transparent 54%
+    );
+    background-size: 250% 100%;
+    background-repeat: no-repeat;
+    background-position: 0% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: kyp-shine-sweep 4s ease-in-out infinite;
+    pointer-events: none;
+  }
+
   /* Focus ring helper */
   .kyp-focus-ring:focus-visible {
     outline: 2px solid var(--ring);
@@ -511,6 +541,14 @@
   33%      { transform: translate(20px, -16px) scale(1.05); }
   66%      { transform: translate(-12px, 18px) scale(0.97); }
 }
+/* Shine sweep — background-position 0%→100% moves the gradient band
+   (centered in a 250%-wide background) from right of the text to left
+   of the text. Holds at both ends keep the cycle calm: ~1.2s rest,
+   ~1.8s sweep, ~1s rest. */
+@keyframes kyp-shine-sweep {
+  0%, 30%   { background-position: 0% 0; }
+  75%, 100% { background-position: 100% 0; }
+}
 
 /* ============================================================
    Reduced motion — respect user preference
@@ -525,5 +563,12 @@
 
   .kyp-float, .kyp-drift, .kyp-pulse-dot::before {
     animation: none !important;
+  }
+
+  .kyp-shine::after {
+    animation: none !important;
+    /* Without the sweep the band sits parked off-text; also remove the
+       overlay entirely so reduced-motion users see plain static text. */
+    background-image: none;
   }
 }
