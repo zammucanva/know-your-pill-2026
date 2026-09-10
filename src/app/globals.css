@@ -572,3 +572,42 @@
     background-image: none;
   }
 }
+
+/* ============================================================
+   Content protection — selection deterrent (COSMETIC ONLY)
+   ------------------------------------------------------------
+   ⚠️ Deterrent, not security: trivially bypassed via dev tools,
+   "Save page as…", curl, or reader mode. Never rely on it — real
+   protection is copyright (see /legal/terms). See the JS guard in
+   src/lib/contentProtection.ts and keep the exclusion lists in sync.
+
+   body text is unselectable; everything users legitimately need to
+   copy stays selectable: form fields, code/reference blocks, links,
+   quiz answer options (buttons/labels), and .selectable opt-outs.
+   ============================================================ */
+body {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+input,
+textarea,
+select,
+option,
+[contenteditable="true"],
+[contenteditable=""],
+code,
+pre,
+kbd,
+samp,
+a,
+button,
+label,
+summary,
+.selectable,
+.selectable *,
+[data-context-menu-allowed],
+[data-context-menu-allowed] * {
+  user-select: text;
+  -webkit-user-select: text;
+}

@@ -40,6 +40,7 @@ const footerLinks = [
       { label: "Medications", href: "/#library" },
       { label: "Substance Use", href: "/#substances" },
       { label: "Emergency", href: "/#emergency" },
+      { label: "Terms & Copyright", href: "/legal/terms" },
     ],
   },
 ];
@@ -126,9 +127,30 @@ export function Footer() {
                 </div>
               </div>
               <p className="text-caption text-muted-foreground">
-                © 2026 Know Your Pill · Zamaan Ali Shamji
+                © 2026 Know Your Pill · Zamaan Ali Shamji ·{" "}
+                <Link
+                  href="/legal/terms"
+                  className="underline decoration-border underline-offset-2 transition-colors hover:text-brand hover:decoration-brand"
+                >
+                  Terms &amp; Copyright
+                </Link>
               </p>
             </div>
+
+            <p className="text-caption text-muted-foreground/50 leading-relaxed max-w-3xl">
+              <strong className="text-muted-foreground">Copyright:</strong>{" "}
+              © 2026 Zamaan Ali Shamji. All content on this site — including
+              drug pages, disease modules, and educational text — is protected
+              by copyright and may not be reproduced, republished, or
+              redistributed without written permission. See{" "}
+              <Link
+                href="/legal/terms"
+                className="underline decoration-border underline-offset-2 transition-colors hover:text-brand hover:decoration-brand"
+              >
+                Terms &amp; Copyright
+              </Link>{" "}
+              for permitted use.
+            </p>
 
             <p className="text-caption text-muted-foreground/50 leading-relaxed max-w-3xl">
               <strong className="text-muted-foreground">Disclaimer:</strong> This website is for educational support only. It does not replace a doctor, pharmacist, emergency service, or local medical guideline. Always consult a qualified healthcare professional before making decisions about medication or substance use.

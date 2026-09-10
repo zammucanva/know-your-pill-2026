@@ -1,7 +1,23 @@
+# robots.txt — Know Your Pill (know-your-pill-2026)
+#
+# Know Your Pill is a public medical-education resource: it WANTS to be
+# found via normal search. Search-engine and social-card crawlers are
+# fully allowed below. Only bulk AI-training / archival scrapers are
+# disallowed, per the copyright terms at /legal/terms.
+#
+# None of the disallowed user-agents are search-engine indexers, so none
+# of these rules affect Google/Bing search visibility (Google-Extended
+# only governs Gemini AI training — Google Search uses Googlebot, which
+# is explicitly allowed).
+
+# ── Search & social indexing: ALLOWED ────────────────────────────────
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
 Allow: /
 
 User-agent: Twitterbot
@@ -10,5 +26,36 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+# ── AI-training & bulk scrapers: DISALLOWED ──────────────────────────
+# OpenAI (training + user-initiated browsing fetcher)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+# Common Crawl
+User-agent: CCBot
+Disallow: /
+
+# Anthropic (training + browsing fetcher)
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# ByteDance
+User-agent: Bytespider
+Disallow: /
+
+# Google Gemini AI-training corpus (does NOT affect Google Search)
+User-agent: Google-Extended
+Disallow: /
+
+# ── Everything else (unknown crawlers, future tools): ALLOWED ────────
 User-agent: *
 Allow: /

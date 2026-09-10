@@ -3,6 +3,8 @@ import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/kyp/theme-provider";
+import { ContentProtection } from "@/lib/contentProtection";
+import { imgPath } from "@/lib/kyp/image-path";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +39,16 @@ export const metadata: Metadata = {
     "medication safety",
   ],
   authors: [{ name: "Zamaan Ali Shamji" }],
+  // Copyright attribution — rendered as <meta name="copyright"> on every page.
+  other: {
+    copyright:
+      "© 2026 Zamaan Ali Shamji. All content on this site — including drug pages, disease modules, and educational text — is protected by copyright and may not be reproduced, republished, or redistributed without written permission. Terms: /legal/terms",
+    // Lightweight provenance watermark (Task 4): invisible meta tag, zero
+    // impact on users, SEO, or screen readers — but survives in the HTML
+    // source of every exported page so copied HTML retains attribution.
+    rights:
+      "© 2026 Zamaan Ali Shamji · Know Your Pill · Source: https://github.com/zammucanva/know-your-pill-2026 · Unauthorized reproduction prohibited.",
+  },
   icons: {
     icon: "/favicon.png",
     apple: "/logo-navy-512.png",
@@ -69,6 +81,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} font-sans antialiased`}
       >
+        {/* rel="license" — points crawlers and tools at the reuse terms
+            page. Rendered once here in the root layout; React hoists it
+            into <head> on every page. imgPath() makes the href
+            basePath-aware for the GitHub Pages static export. */}
+        <link rel="license" href={imgPath("/legal/terms")} />
+
+        {/* Content-protection deterrent (cosmetic only — see module docs) */}
+        <ContentProtection />
+
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

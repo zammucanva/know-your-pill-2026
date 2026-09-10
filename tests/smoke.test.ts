@@ -1,6 +1,6 @@
 /**
- * KYP Smoke Test Suite — 25 route checks.
- * 22 valid routes must return 200; 3 invalid routes must return 404.
+ * KYP Smoke Test Suite — 26 route checks.
+ * 23 valid routes must return 200; 3 invalid routes must return 404.
  */
 
 import { beforeAll, describe, expect, test } from "bun:test";
@@ -50,6 +50,10 @@ describe("smoke — valid routes return 200", () => {
   });
   test("/study (study mode hub) returns 200", async () => {
     const res = await fetch(`${BASE_URL}/study`);
+    expect(res.status).toBe(200);
+  });
+  test("/legal/terms (copyright & reuse terms) returns 200", async () => {
+    const res = await fetch(`${BASE_URL}/legal/terms`);
     expect(res.status).toBe(200);
   });
   test("/dashboard returns 200", async () => {
