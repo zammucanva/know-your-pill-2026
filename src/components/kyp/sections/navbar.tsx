@@ -79,34 +79,32 @@ export function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop nav */}
+        {/* Desktop nav — all links through Next Link so hrefs get the
+            GitHub Pages basePath. Plain <a href="/#…"> would resolve to
+            the root domain and break anchor navigation on Pages. */}
         <nav className="hidden items-center gap-0.5 lg:flex xl:gap-1">
-          {navLinks.map((l) => {
-            const isRoute = l.href.startsWith("/") && !l.href.startsWith("/#");
-            const className = "rounded-md px-2.5 py-2 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-accent/50 hover:text-foreground xl:px-3 xl:text-sm";
-            return isRoute ? (
-              <Link key={l.href} href={l.href} className={className}>
-                {l.label}
-              </Link>
-            ) : (
-              <a key={l.href} href={l.href} className={className}>
-                {l.label}
-              </a>
-            );
-          })}
+          {navLinks.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="rounded-md px-2.5 py-2 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-accent/50 hover:text-foreground xl:px-3 xl:text-sm"
+            >
+              {l.label}
+            </Link>
+          ))}
         </nav>
 
         {/* Right cluster */}
         <div className="flex items-center gap-2">
           <FloatingSearch variant="button" className="hidden xl:flex" />
 
-          <a
-            href="#emergency"
+          <Link
+            href="/#emergency"
             className="hidden items-center gap-1.5 rounded-full border border-emergency/30 bg-emergency-soft/60 px-2.5 py-1.5 text-[11px] font-semibold text-emergency transition-colors hover:bg-emergency/10 sm:flex xl:px-3 xl:text-xs"
           >
             <Phone className="h-3 w-3" strokeWidth={2.5} />
             Emergency
-          </a>
+          </Link>
 
           {/* Auth button */}
           {user ? (
@@ -172,27 +170,24 @@ export function Navbar() {
       {open && (
         <div className="border-t border-border/70 bg-background/95 backdrop-blur-xl lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
-            {navLinks.map((l) => {
-              const isRoute = l.href.startsWith("/") && !l.href.startsWith("/#");
-              const className = "rounded-md px-3 py-2.5 text-body-sm font-medium text-muted-foreground transition-colors hover:bg-accent/60 hover:text-foreground";
-              return isRoute ? (
-                <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className={className}>
-                  {l.label}
-                </Link>
-              ) : (
-                <a key={l.href} href={l.href} onClick={() => setOpen(false)} className={className}>
-                  {l.label}
-                </a>
-              );
-            })}
-            <a
-              href="#emergency"
+            {navLinks.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className="rounded-md px-3 py-2.5 text-body-sm font-medium text-muted-foreground transition-colors hover:bg-accent/60 hover:text-foreground"
+              >
+                {l.label}
+              </Link>
+            ))}
+            <Link
+              href="/#emergency"
               onClick={() => setOpen(false)}
               className="mt-2 flex items-center justify-center gap-2 rounded-md bg-emergency px-3 py-2.5 text-body-sm font-semibold text-white"
             >
               <Phone className="h-4 w-4" strokeWidth={2.5} />
               Emergency Help
-            </a>
+            </Link>
             {/* Auth link in mobile menu */}
             <div className="mt-2 border-t border-border/50 pt-3">
               {user ? (
