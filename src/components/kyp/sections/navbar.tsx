@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "/learn", label: "Learn" },
-  { href: "/#library", label: "Medications" },
+  { href: "/drugs", label: "Medication Library" },
   { href: "/#substances", label: "Substances" },
   { href: "/quiz", label: "Practice" },
 ];
@@ -78,10 +78,10 @@ export function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-0.5 lg:flex xl:gap-1">
           {navLinks.map((l) => {
             const isRoute = l.href.startsWith("/") && !l.href.startsWith("/#");
-            const className = "rounded-md px-3 py-2 text-body-sm font-medium text-muted-foreground transition-colors hover:bg-accent/50 hover:text-foreground";
+            const className = "rounded-md px-2.5 py-2 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-accent/50 hover:text-foreground xl:px-3 xl:text-sm";
             return isRoute ? (
               <Link key={l.href} href={l.href} className={className}>
                 {l.label}
@@ -96,11 +96,11 @@ export function Navbar() {
 
         {/* Right cluster */}
         <div className="flex items-center gap-2">
-          <FloatingSearch variant="button" className="hidden sm:flex" />
+          <FloatingSearch variant="button" className="hidden xl:flex" />
 
           <a
             href="#emergency"
-            className="hidden items-center gap-1.5 rounded-full border border-emergency/30 bg-emergency-soft/60 px-3 py-1.5 text-xs font-semibold text-emergency transition-colors hover:bg-emergency/10 sm:flex"
+            className="hidden items-center gap-1.5 rounded-full border border-emergency/30 bg-emergency-soft/60 px-2.5 py-1.5 text-[11px] font-semibold text-emergency transition-colors hover:bg-emergency/10 sm:flex lg:px-2.5 xl:px-3 xl:text-xs"
           >
             <Phone className="h-3 w-3" strokeWidth={2.5} />
             Emergency
