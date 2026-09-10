@@ -17,6 +17,7 @@ const navLinks = [
   { href: "/#substances", label: "Substances" },
   { href: "/quiz", label: "Practice" },
   { href: "/medicine", label: "Medicine" },
+  { href: "/study", label: "Study Mode" },
 ];
 
 type SessionUser = { id: string; name: string; email: string; role: string } | null;
@@ -101,7 +102,7 @@ export function Navbar() {
 
           <a
             href="#emergency"
-            className="hidden items-center gap-1.5 rounded-full border border-emergency/30 bg-emergency-soft/60 px-2.5 py-1.5 text-[11px] font-semibold text-emergency transition-colors hover:bg-emergency/10 sm:flex lg:px-2.5 xl:px-3 xl:text-xs"
+            className="hidden items-center gap-1.5 rounded-full border border-emergency/30 bg-emergency-soft/60 px-2.5 py-1.5 text-[11px] font-semibold text-emergency transition-colors hover:bg-emergency/10 sm:flex xl:px-3 xl:text-xs"
           >
             <Phone className="h-3 w-3" strokeWidth={2.5} />
             Emergency

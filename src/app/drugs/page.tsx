@@ -48,14 +48,17 @@ export const metadata: Metadata = {
 /** Class groups derived from the registry's natural order. */
 const classGroups = Array.from(new Set(drugs.map((d) => d.drugClassLabel)));
 
+/** Registry position (1-based) — used for the global 01–12 numbering.
+ *  Groups and rows both follow registry order, so this matches the visual order. */
+const drugNumber = (slug: string): number =>
+  drugs.findIndex((d) => d.slug === slug) + 1;
+
 const totalQuestions = drugs.reduce(
   (sum, d) => sum + (d.microQuizzes?.length || 0),
   0
 );
 
 export default function MedicationLibraryPage() {
-  let rowIndex = 0;
-
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
@@ -149,7 +152,6 @@ export default function MedicationLibraryPage() {
 
                 <div className="space-y-px">
                   {group.map((drug) => {
-                    rowIndex += 1;
                     const questionCount = drug.microQuizzes?.length || 0;
                     return (
                       <Reveal key={drug.slug}>
@@ -158,7 +160,7 @@ export default function MedicationLibraryPage() {
                           className="group flex items-start gap-6 border-b border-border/15 py-5 transition-all last:border-0 hover:pl-2 sm:items-center"
                         >
                           <span className="w-8 shrink-0 pt-1 font-mono text-xs text-muted-foreground/30 sm:pt-0">
-                            {String(rowIndex).padStart(2, "0")}
+                            {String(drugNumber(drug.slug)).padStart(2, "0")}
                           </span>
                           <div className="min-w-0 flex-1">
                             <h3 className="font-serif text-lg font-semibold text-foreground">
