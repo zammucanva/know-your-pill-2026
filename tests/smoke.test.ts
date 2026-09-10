@@ -44,6 +44,10 @@ describe("smoke — valid routes return 200", () => {
     const res = await fetch(`${BASE_URL}/drugs`);
     expect(res.status).toBe(200);
   });
+  test("/medicine (information hub) returns 200", async () => {
+    const res = await fetch(`${BASE_URL}/medicine`);
+    expect(res.status).toBe(200);
+  });
   test("/dashboard returns 200", async () => {
     const res = await fetch(`${BASE_URL}/dashboard`);
     expect(res.status).toBe(200);

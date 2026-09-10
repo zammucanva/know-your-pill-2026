@@ -16,6 +16,7 @@ const navLinks = [
   { href: "/drugs", label: "Medication Library" },
   { href: "/#substances", label: "Substances" },
   { href: "/quiz", label: "Practice" },
+  { href: "/medicine", label: "Medicine" },
 ];
 
 type SessionUser = { id: string; name: string; email: string; role: string } | null;
