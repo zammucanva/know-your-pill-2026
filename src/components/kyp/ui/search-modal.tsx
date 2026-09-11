@@ -373,9 +373,14 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
 /**
  * GroupedResults — renders search results grouped by content type.
  *
- * Groups appear in order of relevance: Medications, Diseases, Substances,
- * Neuroscience (brain-region, pathway, neurotransmitter), Side Effects,
- * Classes, Clinical, Patient Guides.
+ * Groups appear in order of relevance: Medications, Collections,
+ * Diseases, Substances, Neuroscience (brain-region, pathway,
+ * neurotransmitter), Side Effects, Classes, Clinical, Patient Guides.
+ *
+ * Collections are the derived taxonomy browse destinations (Psychiatry,
+ * Antidepressants, SSRIs, SNRIs, NDRIs, NaSSAs, TCAs) — listed right
+ * after Medications so direct medication matches stay primary while
+ * taxonomy browsing is always discoverable.
  *
  * Within each group, results stay in their ranked order. Keyboard
  * navigation still works — the flat `activeIndex` maps to the position
@@ -395,6 +400,7 @@ function GroupedResults({
   // Define group order and which types belong to each group
   const groups: { label: string; types: SearchableItem["type"][] }[] = [
     { label: "Medications", types: ["drug"] },
+    { label: "Collections", types: ["collection"] },
     { label: "Diseases", types: ["disease"] },
     { label: "Substances", types: ["substance"] },
     { label: "Neuroscience", types: ["brain-region", "pathway", "neurotransmitter"] },
