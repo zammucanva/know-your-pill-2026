@@ -8,7 +8,13 @@ import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
-import { drugs } from "@/lib/kyp/data";
+import {
+  drugs,
+  drugTaxonomy,
+  drugClassIdFromLabel,
+  taxonomyCategoryMedicationCount,
+  taxonomyFamilyMedicationCount,
+} from "@/lib/kyp/data";
 
 /**
  * /drugs — Medication Library index.
@@ -17,9 +23,17 @@ import { drugs } from "@/lib/kyp/data";
  * medications, derived entirely from the canonical drug registry
  * (src/lib/kyp/data/drugs/index.ts) — never a second medication array.
  *
- * Class groups are computed from the registry's own drugClassLabel
- * order (SSRI → SNRI → NDRI → NaSSA → TCA), so a registry change
- * re-flows this page automatically.
+ * Two browse structures, both derived from the registry:
+ *   1. The Psychiatry taxonomy section (#psychiatry → #antidepressants)
+ *      exposes the canonical learningPath hierarchy as navigable
+ *      collection links: Psychiatry → Antidepressants → class pages
+ *      (/drugs/class/[classId]).
+ *   2. Class groups below list every medication, computed from the
+ *      registry's own drugClassLabel order (SSRI → SNRI → NDRI →
+ *      NaSSA → TCA). Each group heading links to its class collection
+ *      page, so the taxonomy is navigable forward and backward.
+ *
+ * A registry change re-flows this page automatically.
  */
 
 export const metadata: Metadata = {
@@ -117,10 +131,85 @@ export default function MedicationLibraryPage() {
           </Container>
         </Section>
 
+        {/* ===== PSYCHIATRY TAXONOMY — the navigable hierarchy ===== */}
+        {drugTaxonomy.map((category) => (
+          <Section
+            key={category.name}
+            id="psychiatry"
+            spacing="relaxed"
+            className="border-t border-border/30"
+          >
+            <Container>
+              <Reveal>
+                <p className="text-overline text-brand mb-2">
+                  {category.name} · {taxonomyCategoryMedicationCount(category)}{" "}
+                  medications
+                </p>
+              </Reveal>
+
+              {category.families.map((family) => (
+                <div key={family.name} id="antidepressants" className="scroll-mt-24">
+                  <Reveal>
+                    <h2
+                      className="font-serif font-semibold tracking-[-0.02em] text-foreground"
+                      style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)" }}
+                    >
+                      {family.name}
+                    </h2>
+                    <p className="mt-3 max-w-2xl text-body-sm text-muted-foreground leading-relaxed">
+                      {family.classes.length} classes ·{" "}
+                      {taxonomyFamilyMedicationCount(family)} medication guides.
+                      Browse by class, then open any guide — every medication
+                      follows the same structure.
+                    </p>
+                  </Reveal>
+
+                  {/* Class rows — forward navigation into /drugs/class/[classId] */}
+                  <div className="mt-10 space-y-px">
+                    {family.classes.map((cls) => (
+                      <Reveal key={cls.id}>
+                        <Link
+                          href={`/drugs/class/${cls.id}`}
+                          className="group flex items-start gap-6 border-b border-border/15 py-5 transition-all last:border-0 hover:pl-2 sm:items-center"
+                        >
+                          <span className="w-16 shrink-0 pt-1 font-mono text-xs text-muted-foreground/40 sm:pt-0">
+                            {cls.classLabel}
+                          </span>
+                          <div className="min-w-0 flex-1">
+                            <h3 className="font-serif text-lg font-semibold text-foreground">
+                              {cls.label}
+                            </h3>
+                            <p className="mt-1 text-body-sm text-muted-foreground/70 leading-relaxed">
+                              {cls.fullName}
+                            </p>
+                            <p className="mt-1.5 text-xs text-muted-foreground/50">
+                              {cls.medications.map((m) => m.genericName).join(" · ")}
+                            </p>
+                          </div>
+                          <div className="hidden shrink-0 flex-col items-end gap-1 text-xs text-muted-foreground/60 sm:flex">
+                            <span>
+                              {cls.medications.length}{" "}
+                              {cls.medications.length === 1
+                                ? "medication"
+                                : "medications"}
+                            </span>
+                          </div>
+                          <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-muted-foreground/20 transition-all group-hover:text-brand group-hover:translate-x-1 sm:mt-0" />
+                        </Link>
+                      </Reveal>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </Container>
+          </Section>
+        ))}
+
         {/* ===== CLASS-GROUPED MEDICATION LIST ===== */}
         {classGroups.map((classLabel, gi) => {
           const group = drugs.filter((d) => d.drugClassLabel === classLabel);
           const fullName = group[0]?.drugClassFullName ?? classLabel;
+          const classId = drugClassIdFromLabel(classLabel);
 
           return (
             <Section
@@ -140,11 +229,19 @@ export default function MedicationLibraryPage() {
                         {classLabel} · {group.length}{" "}
                         {group.length === 1 ? "medication" : "medications"}
                       </p>
+                      {/* Category label is clickable — forward navigation to
+                          the class collection page (/drugs/class/[classId]). */}
                       <h2
                         className="font-serif font-semibold tracking-[-0.02em] text-foreground"
                         style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)" }}
                       >
-                        {fullName}
+                        <Link
+                          href={`/drugs/class/${classId}`}
+                          className="group inline-flex items-baseline gap-2 underline-offset-4 transition-colors hover:text-brand hover:underline"
+                        >
+                          {fullName}
+                          <ArrowRight className="h-4 w-4 text-muted-foreground/30 transition-colors group-hover:text-brand" aria-hidden />
+                        </Link>
                       </h2>
                     </div>
                   </div>

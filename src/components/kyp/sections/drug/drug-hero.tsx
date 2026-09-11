@@ -3,7 +3,7 @@ import { Pill, AlertTriangle, Clock, ShieldCheck, Star } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Badge } from "@/components/kyp/ui/badge";
 import { LearningPath } from "@/components/kyp/ui/learning-path";
-import { drugClasses } from "@/lib/kyp/data";
+import { drugClasses, learningPathLinks } from "@/lib/kyp/data";
 import type { Drug } from "@/lib/kyp/data";
 import { cn } from "@/lib/utils";
 
@@ -33,9 +33,12 @@ export function DrugHero({ drug }: DrugHeroProps) {
       />
 
       <Container className="relative">
-        {/* Learning path breadcrumb */}
+        {/* Learning path breadcrumb — every segment links to the
+            collection that browses it (Psychiatry → /drugs/#psychiatry,
+            Antidepressants → /drugs/#antidepressants, NDRIs →
+            /drugs/class/ndri); the final segment is the current page. */}
         <div className="mb-4">
-          <LearningPath path={drug.learningPath} />
+          <LearningPath path={drug.learningPath} links={learningPathLinks(drug)} />
         </div>
 
         <div className="grid items-start gap-8 lg:grid-cols-[1.5fr_1fr]">

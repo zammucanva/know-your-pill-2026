@@ -7,6 +7,14 @@ import { sideEffects } from "./side-effects";
 import { drugs } from "./drugs/index";
 import { diseases } from "./diseases";
 import { substancePages } from "./substances";
+import {
+  drugTaxonomy,
+  drugTaxonomyClasses,
+  taxonomyCategoryMedicationCount,
+  taxonomyFamilyMedicationCount,
+  DRUG_TAXONOMY_CATEGORY_HREF,
+  DRUG_TAXONOMY_FAMILY_HREF,
+} from "./drug-taxonomy";
 
 /**
  * Universal search index — single source of truth for the Spotlight search.
@@ -21,6 +29,58 @@ import { substancePages } from "./substances";
  * return 404 and would produce broken search results).
  */
 export const searchIndex: SearchableItem[] = [
+  // ─── Collections — derived Psychiatry taxonomy browsing ───────────
+  // Derived from the canonical drug registry via ./drug-taxonomy.ts so
+  // search discovers "Psychiatry", "Antidepressants", and every class
+  // (SSRIs, SNRIs, NDRIs, NaSSAs, TCAs) WITHOUT a second search system.
+  ...drugTaxonomy.map((category) => ({
+    id: `collection-${category.name.toLowerCase()}`,
+    title: category.name,
+    type: "collection" as const,
+    description: `The ${category.name} medication collection — ${taxonomyCategoryMedicationCount(category)} medication guides across ${drugTaxonomyClasses.length} classes.`,
+    href: DRUG_TAXONOMY_CATEGORY_HREF,
+    keywords: [
+      category.name,
+      category.name.toLowerCase(),
+      "psychiatric",
+      "medication library",
+      "browse",
+      "collection",
+      "classes",
+      ...drugTaxonomyClasses.map((c) => c.label),
+    ],
+  })),
+  ...drugTaxonomy.flatMap((category) =>
+    category.families.map((family) => ({
+      id: `collection-${family.name.toLowerCase()}`,
+      title: family.name,
+      type: "collection" as const,
+      description: `${family.classes.length} classes · ${taxonomyFamilyMedicationCount(family)} medication guides — ${family.classes.map((c) => c.label).join(", ")}.`,
+      href: DRUG_TAXONOMY_FAMILY_HREF,
+      keywords: [
+        family.name,
+        family.name.toLowerCase(),
+        ...family.classes.flatMap((c) => [c.label, c.classLabel, c.fullName]),
+        ...family.classes.flatMap((c) => c.medications.map((m) => m.genericName)),
+      ],
+    }))
+  ),
+  ...drugTaxonomyClasses.map((c) => ({
+    id: `collection-class-${c.id}`,
+    title: c.label,
+    type: "collection" as const,
+    description: `${c.fullName} — ${c.medications.length} medication ${c.medications.length === 1 ? "guide" : "guides"}: ${c.medications.map((m) => m.genericName).join(", ")}.`,
+    href: `/drugs/class/${c.id}`,
+    keywords: [
+      c.label,
+      c.classLabel,
+      c.fullName,
+      c.fullNamePlural,
+      ...c.medications.map((m) => m.genericName),
+      ...c.medications.flatMap((m) => m.brandNames.slice(0, 2)),
+    ],
+  })),
+
   // ─── Medications (canonical drug pages) ───────────────────────────
   ...drugs.flatMap((d) => {
     const keywords = [
@@ -198,6 +258,7 @@ export const searchTypeLabels: Record<SearchableItem["type"], string> = {
   substance: "Substance",
   disease: "Disease",
   class: "Drug Class",
+  collection: "Collection",
   neurotransmitter: "Neurotransmitter",
   "side-effect": "Side Effect",
   "brain-region": "Brain Region",

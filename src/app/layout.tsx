@@ -50,8 +50,11 @@ export const metadata: Metadata = {
       "© 2026 Zamaan Ali Shamji · Know Your Pill · Source: https://github.com/zammucanva/know-your-pill-2026 · Unauthorized reproduction prohibited.",
   },
   icons: {
-    icon: "/favicon.png",
-    apple: "/logo-navy-512.png",
+    // Prefixed with the GitHub Pages basePath — Next does not prefix
+    // metadata icon hrefs automatically, and a root-absolute "/favicon.png"
+    // would resolve to the domain root and 404 on Pages.
+    icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/favicon.png`,
+    apple: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo-navy-512.png`,
   },
   openGraph: {
     title: "Know Your Pill — Medication Education Made Visual",

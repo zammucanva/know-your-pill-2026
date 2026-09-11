@@ -1,13 +1,15 @@
 /**
  * KYP Content Lock — medical content integrity verification.
  *
- * Locks the 31 medical data files under src/lib/kyp/data/ by SHA-256 of the
+ * Locks the 32 medical data files under src/lib/kyp/data/ by SHA-256 of the
  * raw file bytes, and verifies the canonical content counts:
  *   - 12 medications
  *   - 1 disease
  *   - 3 substances
  *   - 78 MCQs (microQuizzes + activeRecallQuestions across all medications)
- *   - 46 search index entries
+ *   - 53 search index entries (46 original + 7 derived taxonomy
+ *     collection entries: Psychiatry, Antidepressants, SSRIs, SNRIs,
+ *     NDRIs, NaSSAs, TCAs — navigation metadata only, no medical claims)
  *
  * Usage:
  *   bun scripts/content-lock.ts --init     (re)write the baseline file
@@ -21,16 +23,17 @@ import { createHash } from "crypto";
 import { readFileSync, writeFileSync, existsSync } from "fs";
 import { resolve, dirname } from "path";
 
-// ─── Locked medical content files (31) ───────────────────────────────────────
+// ─── Locked medical content files (32) ───────────────────────────────────────
 const DATA_DIR = "src/lib/kyp/data";
 const LOCKED_FILES: string[] = [
-  // data root (12)
+  // data root (13)
   `${DATA_DIR}/medications.ts`,
   `${DATA_DIR}/drugs.ts`,
   `${DATA_DIR}/classes.ts`,
   `${DATA_DIR}/side-effects.ts`,
   `${DATA_DIR}/brain.ts`,
   `${DATA_DIR}/search-index.ts`,
+  `${DATA_DIR}/drug-taxonomy.ts`,
   `${DATA_DIR}/disease-types.ts`,
   `${DATA_DIR}/substance-types.ts`,
   `${DATA_DIR}/types.ts`,
@@ -69,7 +72,7 @@ const EXPECTED_COUNTS = {
   diseases: 1,
   substances: 3,
   mcqs: 78,
-  searchEntries: 46,
+  searchEntries: 53,
 };
 
 const BASELINE_PATH = resolve(

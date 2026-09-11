@@ -415,9 +415,9 @@ export default async function DiseasePage({ params }: PageProps) {
                     );
                     if (drug.slug) {
                       return (
-                        <a key={i} href={`/drugs/${drug.slug}`} className="rounded-lg border border-border/40 p-3 transition-colors hover:border-brand/40 hover:bg-brand-soft/10">
+                        <Link key={i} href={`/drugs/${drug.slug}`} className="rounded-lg border border-border/40 p-3 transition-colors hover:border-brand/40 hover:bg-brand-soft/10">
                           {content}
-                        </a>
+                        </Link>
                       );
                     }
                     return <div key={i} className="rounded-lg border border-border/40 p-3">{content}</div>;

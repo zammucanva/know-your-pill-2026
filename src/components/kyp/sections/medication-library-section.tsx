@@ -28,10 +28,13 @@ export function MedicationLibrarySection() {
           </div>
         </Reveal>
 
-        {/* Featured: Psychiatric Medications — massive block */}
+        {/* Featured: Psychiatric Medications — massive block.
+            Links to the Medication Library (/drugs) rather than a
+            self-referencing anchor, so the homepage carries a real entry
+            point into the Psychiatry taxonomy and every medication guide. */}
         <Reveal delay={0.08}>
           <Link
-            href={medicationClasses[0].href}
+            href="/drugs"
             className="group block mb-16"
           >
             <div className="flex items-end justify-between gap-6 border-b border-border/30 pb-8">

@@ -5,6 +5,7 @@
 | Content type | URL pattern | Example |
 |---|---|---|
 | Medication (drug page) | `/drugs/{slug}` | `/drugs/sertraline` |
+| Medication class collection | `/drugs/class/{classId}` | `/drugs/class/ndri` |
 | Substance (substance page) | `/substances/{slug}` | `/substances/alcohol` |
 | Disease | `/diseases/{slug}` | `/diseases/major-depressive-disorder` |
 | Homepage section | `/{section-id}` | `/#library`, `/#substances`, `/#emergency` |
@@ -14,6 +15,11 @@
 
 ### Medications (12)
 `/drugs/sertraline`, `/drugs/fluoxetine`, `/drugs/escitalopram`, `/drugs/paroxetine`, `/drugs/citalopram`, `/drugs/fluvoxamine`, `/drugs/venlafaxine`, `/drugs/duloxetine`, `/drugs/bupropion`, `/drugs/mirtazapine`, `/drugs/amitriptyline`, `/drugs/clomipramine`
+
+### Medication class collections (5)
+`/drugs/class/ssri`, `/drugs/class/snri`, `/drugs/class/ndri`, `/drugs/class/nassa`, `/drugs/class/tca`
+
+Derived from the canonical drug registry via `src/lib/kyp/data/drug-taxonomy.ts` (never a second medication array). Unknown class ids 404.
 
 ### Substances (3 migrated)
 `/substances/alcohol`, `/substances/opioids`, `/substances/cannabis`
@@ -42,10 +48,27 @@
 The homepage has ONE primary category system (Medication Library) with clinical subcategories nested within:
 
 **Top-level categories (Medication Library section):**
-1. Psychiatric Medications (12 drug pages, featured)
+1. Psychiatric Medications (12 drug pages, featured — links to `/drugs`)
 2. Pain Management (coming soon)
 3. Antibiotics (planned)
 4. Substance Use Disorders (3 substance pages, featured)
+
+**Medication taxonomy (derived from each drug's canonical `learningPath`, browsable on `/drugs` and `/drugs/class/{classId}`):**
+
+```
+Medication Library (/drugs)
+└── Psychiatry (#psychiatry)
+    └── Antidepressants (#antidepressants)
+        ├── SSRIs  (/drugs/class/ssri)  — 6 medications
+        ├── SNRIs  (/drugs/class/snri)  — 2 medications
+        ├── NDRIs  (/drugs/class/ndri)  — 1 medication (bupropion)
+        ├── NaSSAs (/drugs/class/nassa) — 1 medication (mirtazapine)
+        └── TCAs   (/drugs/class/tca)   — 2 medications
+```
+
+- The taxonomy is DERIVED from the canonical drug registry (`src/lib/kyp/data/drug-taxonomy.ts`) — no second medication array.
+- Drug-page breadcrumbs (Psychiatry → Antidepressants → class → medication) link every segment to the collection that browses it.
+- Search discovers the collections via `collection` entries in the search index (Psychiatry, Antidepressants, SSRIs, SNRIs, NDRIs, NaSSAs, TCAs).
 
 **Clinical subcategories (nested within Psychiatric Medications as filter chips):**
 - Mood & Depression (maps to SSRIs)

@@ -8,6 +8,7 @@ import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { Badge } from "@/components/kyp/ui/badge";
 import type { Drug, KnowledgeGraphNode } from "@/lib/kyp/data";
+import { linkPath } from "@/lib/kyp/image-path";
 import { cn } from "@/lib/utils";
 
 /**
@@ -112,7 +113,7 @@ function KnowledgeGraphNode({
 
   return (
     <motion.a
-      href={node.href}
+      href={linkPath(node.href)}
       onMouseEnter={() => onHover(index)}
       onMouseLeave={() => onHover(null)}
       onFocus={() => onHover(index)}

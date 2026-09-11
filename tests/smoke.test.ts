@@ -1,6 +1,6 @@
 /**
- * KYP Smoke Test Suite — 26 route checks.
- * 23 valid routes must return 200; 3 invalid routes must return 404.
+ * KYP Smoke Test Suite — 32 route checks.
+ * 28 valid routes must return 200; 4 invalid routes must return 404.
  */
 
 import { beforeAll, describe, expect, test } from "bun:test";
@@ -22,6 +22,8 @@ const DRUGS = [
 ];
 
 const SUBSTANCES = ["alcohol", "opioids", "cannabis"];
+
+const DRUG_CLASSES = ["ssri", "snri", "ndri", "nassa", "tca"];
 
 beforeAll(async () => {
   await ensureServer();
@@ -74,6 +76,12 @@ describe("smoke — valid routes return 200", () => {
       expect(res.status).toBe(200);
     });
   }
+  for (const classId of DRUG_CLASSES) {
+    test(`/drugs/class/${classId} (taxonomy collection) returns 200`, async () => {
+      const res = await fetch(`${BASE_URL}/drugs/class/${classId}`);
+      expect(res.status).toBe(200);
+    });
+  }
   test("/diseases/major-depressive-disorder returns 200", async () => {
     const res = await fetch(`${BASE_URL}/diseases/major-depressive-disorder`);
     expect(res.status).toBe(200);
@@ -89,6 +97,10 @@ describe("smoke — valid routes return 200", () => {
 describe("smoke — invalid routes return 404", () => {
   test("unknown drug slug returns 404", async () => {
     const res = await fetch(`${BASE_URL}/drugs/nonexistent-drug-xyz`);
+    expect(res.status).toBe(404);
+  });
+  test("unknown drug class id returns 404", async () => {
+    const res = await fetch(`${BASE_URL}/drugs/class/nonexistent-class-xyz`);
     expect(res.status).toBe(404);
   });
   test("unknown disease slug returns 404", async () => {

@@ -5,6 +5,7 @@ import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
 import { Badge } from "@/components/kyp/ui/badge";
 import { Callout } from "@/components/kyp/ui/callout";
 import { SideEffectReceptorMap } from "@/components/kyp/ui/side-effect-receptor-map";
+import Link from "next/link";
 import { sideEffects } from "@/lib/kyp/data";
 import type { Drug, DrugSideEffectEntry } from "@/lib/kyp/data";
 import { cn } from "@/lib/utils";
@@ -100,12 +101,12 @@ export function DrugSideEffects({ drug }: DrugSideEffectsProps) {
                   if (!libraryEntry) return null;
                   return (
                     <span key={se.sideEffectId}>
-                      <a
-                        href={`/#side-effects`}
+                      <Link
+                        href="/#side-effects"
                         className="text-brand underline-offset-4 hover:underline"
                       >
                         {libraryEntry.name}
-                      </a>
+                      </Link>
                       {i < arr.length - 1 ? ", " : "."}
                     </span>
                   );

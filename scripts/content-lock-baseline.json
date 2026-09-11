@@ -5,12 +5,13 @@
     "src/lib/kyp/data/classes.ts": "3e49f364491049a012b02b06b260ee0473e477488cb2a94d1c6bb452dd080480",
     "src/lib/kyp/data/side-effects.ts": "f0c5f213adf84a5c49fd5422d85379ecb9665640b3b54291a66eb3c20a1560c3",
     "src/lib/kyp/data/brain.ts": "57cd43ef385311aa581fa938039c63d1722b517cd174656bb665d67549ec48fc",
-    "src/lib/kyp/data/search-index.ts": "aef14f94988f214f3ba927e597a48bac8cbcd6b2fd2df30407c5453af4a49472",
+    "src/lib/kyp/data/search-index.ts": "7be10a1e3b62607c1e0ad9bae32a6348f3d9d902f0dbe8fd630466d14c349792",
+    "src/lib/kyp/data/drug-taxonomy.ts": "022322b36fab1bb87c63da8455051c9e9b24c659dfce2983ce62ec4152c1bc27",
     "src/lib/kyp/data/disease-types.ts": "16b41aeeb206b4b24a70d151d103f0d4c4b3196305da9a97865362d7fe7be4f3",
     "src/lib/kyp/data/substance-types.ts": "1b55dfa8a002777e142fc2cd732f107a11dffb205bec4fac72ddcbb913115caf",
-    "src/lib/kyp/data/types.ts": "c4da8287f836fe971915d6324863ee8126a37ca3be55ff1fcdb8df5cba73237f",
+    "src/lib/kyp/data/types.ts": "3768e931e833caee03e39af5fb08f62c7278638361a9336e42321645c4bfb2d6",
     "src/lib/kyp/data/platform.ts": "d0d49ffb27a20f412954d8be6e67ef6a8c277428b789900cfd81d0e4b425ba57",
-    "src/lib/kyp/data/index.ts": "43df7079265ee6bce7397acb94ccbc9025e7837126de5a87ae43a4dd38d8db51",
+    "src/lib/kyp/data/index.ts": "3f65f35f76f019e7b285b8ba43718e2b2247079a848480bec01a9e83111de9d7",
     "src/lib/kyp/data/neurotransmitter-artwork.json": "590fdf059028a8bd01ab21e4f7584a2aba15fac6b850e427abe74a6471a1ef58",
     "src/lib/kyp/data/drugs/amitriptyline.ts": "57046fd153f96153753ce620eb1af4fbce48c1a3fc2d83bab5fba27ab37502ab",
     "src/lib/kyp/data/drugs/bupropion.ts": "496939f5ec652fa916a91cd1821863a7565295ac0bbeabe502e5fe573304d603",
@@ -37,6 +38,6 @@
     "diseases": 1,
     "substances": 3,
     "mcqs": 78,
-    "searchEntries": 46
+    "searchEntries": 53
   }
 }

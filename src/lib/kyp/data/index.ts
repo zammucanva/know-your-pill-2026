@@ -16,6 +16,7 @@ export * from "./side-effects";
 export * from "./platform";
 export * from "./search-index";
 export * from "./drugs/index";
+export * from "./drug-taxonomy";
 export * from "./diseases/index";
 export * from "./disease-types";
 export * from "./substances/index";
