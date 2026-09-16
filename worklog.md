@@ -580,3 +580,57 @@ Stage Summary:
 - No other substance migrated.
 - Final status: PHASE 2 OPIOIDS MIGRATION: COMPLETE — PENDING REVIEW.
 - STOP. Awaiting explicit approval before proceeding to next substance (Cocaine).
+
+---
+Task ID: patient-language-audit
+Agent: Main agent (Super Z)
+Task: KYP Patient Mode Language System — Phase 1 audit of the existing Patient Mode architecture before any rewrite.
+
+Work Log:
+- Baseline: branch main, HEAD 559dacb (consolidation commit), origin/main c3c7f2d. Unrelated user working-tree changes present (download/*.png, learn/page.tsx, learn-banner.tsx, test-understanding-cta.tsx, tool-results, deleted upload/*). They will be preserved exactly and never staged.
+- Baseline validation: bun test = 324 pass / 0 fail. Content-lock + medical-data-snapshot verified green via test suite beforeAll.
+- AUDIT FINDINGS (current Patient Mode):
+  1. The ACTIVE patient experience is the Guided Learning "patient" mode (kyp-guided-learning-mode store, default neetPg). It controls SECTION VISIBILITY ONLY (visibleSections: top, quick-facts, patient-education, faq, emergency).
+  2. The older PatientMode system (kyp-learning-mode store, PatientModeToggle, PatientModeVisibility, usePatientModeContent hook, drug.patientMode field) is DEAD CODE except one consumer: medicine hub prefers drug.patientMode?.tagline.
+  3. In patient mode, DrugHero renders CLINICAL language (e.g. sertraline summary mentions "SERT at the presynaptic membrane... 5-HT1A autoreceptor desensitisation and increased BDNF expression in the hippocampus") plus an exam-oriented identity card (molecular target SERT (SLC6A4), hepatic CYP metabolism, half-life).
+  4. HeroInfoStrip (renders in patient mode) shows exam metadata: read/study/revision time, high-yield stars, CBME MBBS year.
+  5. DrugQuickFacts (patient-visible) uses clinical framing ("6 total indications (6 FDA-approved)", "Full antidepressant effect").
+  6. DrugPatientEducation renders drug.patientExplanation + 10 numbered points — good plain language, but unstructured (one callout + flat list; no What-is-it-used-for / How-it-works / Missed-dose / Urgent-help headings).
+  7. drug.patientMode (tagline/summary/mechanism/sideEffects/monitoring/contraindications/interactions — all already patient-grade plain language, present for all 12 drugs) is NEVER rendered on drug pages.
+  8. FAQ content (patient-visible) is already patient-oriented across all 12 drugs.
+  9. Sticky nav + mobile sheet show ALL 26 sections in patient mode (links to hidden sections; "Progress 3/26" impossible for patients). LearningProgress widget counts all 26.
+  10. All 6 lesson Checkpoints render in patient mode with exam-oriented messages and "Continue" links to sections hidden in patient mode.
+  11. LessonProgress sticky strip shows 6 lessons incl. "Exam Revision" in patient mode.
+- INTEGRITY ARCHITECTURE: scripts/content-lock.ts locks SHA-256 of all 32 data files (test asserts 32/32); scripts/medical-data-snapshot.ts hashes imported data VALUES (test asserts UNCHANGED). patientExplanation / patientEducationPoints / patientMode / faqs all live INSIDE the 12 locked drug files.
+- ARCHITECTURE DECISION: patient language layer goes in NEW files under src/lib/kyp/patient/ (slug-associated with canonical drugs, importing canonical data where it can be reused verbatim). All 32 locked files stay byte-identical; content-lock + snapshot + all 324 tests remain green; patient wording becomes a first-class presentation layer. The dead patientMode field stays untouched (locked); it is reused by import, not duplicated.
+
+Stage Summary:
+- Audit complete; no code changes yet.
+- Plan: (1) patient language standard as code (labels + terminology), (2) PatientGuide type (13-section structure per spec §4, optional fields where source lacks support), (3) 12 guide files deriving from canonical data, (4) mode-aware components (hero copy, quick facts, patient guide section, patient-hidden wrapper, nav filtering), (5) validation matrix + readability analysis + authoring doc, (6) one commit.
+
+---
+Task ID: patient-language-layer
+Agent: Main agent (Super Z)
+Task: KYP Patient Mode Language System — implement the patient language layer and wire it into the drug pages (spec sections 2-14, 21, 25).
+
+Work Log:
+- Created src/lib/kyp/patient/types.ts — PatientGuide interface implementing the 13-section patient structure (what is it / used for / how it works [two-layer] / when notice / common SE / important SE / tell your doctor / interactions / missed dose / stopping / monitoring / urgent help / key reminders + reviewFlags for MEDICAL REVIEW REQUIRED items).
+- Created src/lib/kyp/patient/labels.ts — the language standard as code: PATIENT_GUIDE_SECTIONS approved labels, IN_SIMPLE_TERMS_LABEL / MEDICAL_DETAIL_LABEL, PATIENT_HERO_LABELS, curated PATIENT_TERMINOLOGY map (14 contextual entries — SSRI/SNRI/NDRI/NaSSA/TCA/serotonin/norepinephrine/dopamine/adverse effects/contraindication/discontinuation syndrome/therapeutic response/half-life) + findTerminology helper. NOT a blind replacement dictionary.
+- Created 12 patient guides in src/lib/kyp/patient/drugs/ (sertraline, fluoxetine, escitalopram, paroxetine, citalopram, fluvoxamine, venlafaxine, duloxetine, bupropion, mirtazapine, amitriptyline, clomipramine). Each guide: (a) REUSES canonical patient-grade strings verbatim via import (patientMode.tagline/summary/mechanism/sideEffects/monitoring/interactions, patientExplanation, mechanism.summary for the medical-detail layer) — single source of truth; (b) adds plain-language rephrasing of canonical indications, side-effect data, FAQs, education points, and timelines. No new medical facts; drug-specific content preserved (QTc for citalopram/escitalopram, tamoxifen+pregnancy for paroxetine, caffeine for fluvoxamine, BP+withdrawal for venlafaxine, liver for duloxetine, seizures for bupropion, agranulocytosis+inverse-dose for mirtazapine, overdose for TCAs, OCD-only for clomipramine, etc.).
+- Created src/lib/kyp/patient/index.ts — registry with build-time validation: every guide slug must match a canonical drug; no canonical drug may lack a guide (12 = 12 enforced).
+- Created UI components:
+  * src/components/kyp/ui/patient-hidden.tsx (PatientHidden / PatientOnly client wrappers)
+  * src/components/kyp/ui/patient-mode-switch.tsx (patient/medical variant switch, both passed as server-rendered children)
+  * src/components/kyp/sections/drug/patient-hero.tsx (HeroCopy + HeroIdentityCard — client, patient variant renders plain language, medical variant preserves the exact previous clinical markup)
+  * src/components/kyp/sections/drug/patient-quick-facts.tsx (patient variant with per-drug timing; medical variant identical to previous DrugQuickFacts output)
+  * src/components/kyp/sections/drug/patient-guide-section.tsx (server component — 13-section structured guide; native <details> for the Medical detail layer = progressive disclosure with zero client JS)
+- Modified (presentation only):
+  * drug-hero.tsx — now a server shell using HeroCopy + HeroIdentityCard with optional patientGuide prop.
+  * drug-quick-facts.tsx — server shell using PatientQuickFacts.
+  * page.tsx — passes patientGuide; wraps HeroInfoStrip (exam metadata), LessonProgress strip, and all 6 Checkpoints in PatientHidden; patient-education section uses PatientModeSwitch: PatientGuideSection in patient mode, canonical DrugPatientEducation otherwise.
+  * sticky-learning-nav.tsx — StickyLearningNav + mobile sheet + LearningProgress filter to PATIENT_VISIBLE_SECTIONS in patient mode (4 patient-reachable sections); useStickyNav gains syncItems param so course completion still evaluates against the FULL outline (progress-store semantics unchanged).
+- Untouched: all 32 locked medical data files; progress layer (kyp:progress:v1); quiz/practice; user's working-tree files (learn/page.tsx, learn-banner.tsx, test-understanding-cta.tsx).
+
+Stage Summary:
+- VALIDATION: npx tsc --noEmit = 0 errors; npm run lint = 0 errors; bun test = 324 pass / 0 fail; content-lock = 32/32 file hashes PASS + counts MATCH; medical-data-snapshot = MEDICAL DATA UNCHANGED; next build = success (34/34 pages incl. all 12 drug pages SSG); GITHUB_PAGES=1 export build = success.
+- Medical content integrity proven at BOTH the file-byte level (content lock) and the data-value level (snapshot) — only new presentation-layer files + component wiring changed.

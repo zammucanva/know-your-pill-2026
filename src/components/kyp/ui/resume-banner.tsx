@@ -5,6 +5,8 @@ import { ArrowRight, BookOpen, CheckCircle2 } from "lucide-react";
 import type { NavItem } from "@/lib/kyp/use-scroll-spy";
 import { useCourseProgress } from "@/lib/kyp/progress/use-local-progress";
 import { coursePercentComplete } from "@/lib/kyp/progress/progress-store";
+import { useGuidedLearning } from "@/components/kyp/ui/guided-learning-toggle";
+import { PATIENT_VISIBLE_SECTIONS } from "@/lib/kyp/patient/labels";
 
 /**
  * ResumeBanner — the "continue where you left off" affordance on a
@@ -32,21 +34,37 @@ interface ResumeBannerProps {
 export function ResumeBanner({ drugSlug, items }: ResumeBannerProps) {
   const course = useCourseProgress(drugSlug);
   const [navigated, setNavigated] = React.useState(false);
+  const mode = useGuidedLearning((s) => s.mode);
 
-  const total = items.length;
-  const completed = course?.completedSections.length ?? 0;
+  // Patient mode: only patient-reachable sections count toward the
+  // banner (a patient cannot re-open a hidden exam section, so the
+  // banner falls back to the next unread patient section instead).
+  const visibleItems = React.useMemo(
+    () =>
+      mode === "patient"
+        ? items.filter((i) => (PATIENT_VISIBLE_SECTIONS as readonly string[]).includes(i.id))
+        : items,
+    [items, mode]
+  );
+
+  const total = visibleItems.length;
+  const completed = visibleItems.filter(
+    (i) => course?.completedSections.includes(i.id)
+  ).length;
   const percent = course ? coursePercentComplete(course, total) : 0;
   const isComplete = Boolean(course?.completedAt);
 
   // Where the learner was — the saved section if it still exists in
   // the outline, else the first uncompleted section.
   const resumeItem = React.useMemo(() => {
-    if (!course || isComplete || items.length === 0) return null;
-    const current = items.find((i) => i.id === course.currentSectionId);
+    if (!course || isComplete || visibleItems.length === 0) return null;
+    const current = visibleItems.find((i) => i.id === course.currentSectionId);
     if (current) return current;
-    const nextUp = items.find((i) => !course.completedSections.includes(i.id));
+    const nextUp = visibleItems.find(
+      (i) => !course.completedSections.includes(i.id)
+    );
     return nextUp ?? null;
-  }, [course, isComplete, items]);
+  }, [course, isComplete, visibleItems]);
 
   if (!course || course.visitCount < 2) return null;
   if (navigated) return null;
@@ -57,7 +75,8 @@ export function ResumeBanner({ drugSlug, items }: ResumeBannerProps) {
         <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-2 sm:px-6 lg:px-8">
           <CheckCircle2 className="h-4 w-4 shrink-0 text-success" strokeWidth={2} />
           <p className="min-w-0 flex-1 truncate text-xs text-foreground/80">
-            You have completed this course — {total} of {total} sections. Review any section below.
+            You have completed this {mode === "patient" ? "guide" : "course"} — {total} of {total}{" "}
+            {total === 1 ? "section" : "sections"}. Review any {mode === "patient" ? "part of it" : "section"} below.
           </p>
         </div>
       </div>
@@ -108,7 +127,7 @@ export function ResumeBanner({ drugSlug, items }: ResumeBannerProps) {
 
       {/* Screen-reader summary of overall completion */}
       <p className="sr-only" aria-live="polite">
-        {percent} percent of this course complete.
+        {percent} percent of this {mode === "patient" ? "guide" : "course"} complete.
       </p>
     </div>
   );

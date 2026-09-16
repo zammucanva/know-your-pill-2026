@@ -10,6 +10,8 @@ import {
   unmarkSectionComplete,
   syncCourseCompletion,
 } from "@/lib/kyp/progress/progress-store";
+import { useGuidedLearning } from "@/components/kyp/ui/guided-learning-toggle";
+import { PATIENT_VISIBLE_SECTIONS } from "@/lib/kyp/patient/labels";
 
 /* ============================================================
    Section completion now lives in the single versioned local
@@ -72,8 +74,13 @@ export interface NavItem {
  * useStickyNav — combines scrollspy + persisted section completion
  * + reading progress. Completion is shared with every other
  * progress surface (Study Mode, resume banner, completion stamps).
+ *
+ * `syncItems` lets the caller keep the FULL section outline for course
+ * completion while displaying a filtered list (e.g. Patient mode shows
+ * only the patient-reachable sections, but completion still evaluates
+ * against the complete course outline).
  */
-export function useStickyNav(items: NavItem[], drugSlug: string) {
+export function useStickyNav(items: NavItem[], drugSlug: string, syncItems?: NavItem[]) {
   const activeId = useScrollSpy(items.map((i) => i.id));
   const progress = useReadingProgress();
   const data = useLocalProgress();
@@ -82,7 +89,10 @@ export function useStickyNav(items: NavItem[], drugSlug: string) {
     () => new Set(data?.courses[drugSlug]?.completedSections ?? []),
     [data, drugSlug]
   );
-  const outlineIds = React.useMemo(() => items.map((i) => i.id), [items]);
+  const outlineIds = React.useMemo(
+    () => (syncItems ?? items).map((i) => i.id),
+    [items, syncItems]
+  );
   const completedCount = completedSet.size;
   const totalCount = items.length;
   const remainingCount = totalCount - completedCount;
@@ -126,19 +136,35 @@ interface StickyLearningNavProps {
 }
 
 export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
+  const mode = useGuidedLearning((s) => s.mode);
+
+  // Patient mode: only the sections the patient can actually reach.
+  // The full outline is still passed to useStickyNav as `syncItems` so
+  // course-completion stamps keep evaluating against the whole course.
+  const displayItems = React.useMemo(
+    () =>
+      mode === "patient"
+        ? items.filter((i) => (PATIENT_VISIBLE_SECTIONS as readonly string[]).includes(i.id))
+        : items,
+    [items, mode]
+  );
+
   const { activeId, completedIds, progress, completedCount, totalCount, remainingCount, toggleComplete } =
-    useStickyNav(items, drugSlug);
+    useStickyNav(displayItems, drugSlug, items);
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const groups = React.useMemo(() => {
     const map = new Map<string, NavItem[]>();
-    for (const item of items) {
-      const g = item.group ?? "Sections";
+    for (const item of displayItems) {
+      // Patient mode: drop the exam-course lesson grouping ("Lesson 1"
+      // etc. refers to the full course structure patients cannot see) —
+      // a single unlabelled group renders instead.
+      const g = mode === "patient" ? "Sections" : item.group ?? "Sections";
       if (!map.has(g)) map.set(g, []);
       map.get(g)!.push(item);
     }
     return Array.from(map.entries());
-  }, [items]);
+  }, [displayItems, mode]);
 
   return (
     <>
@@ -248,7 +274,7 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
               <div className="h-full rounded-full bg-gradient-to-r from-brand to-neural" style={{ width: `${(completedCount / totalCount) * 100}%` }} />
             </div>
             <nav className="grid gap-1">
-              {items.map((item) => {
+              {displayItems.map((item) => {
                 const isActive = activeId === item.id;
                 const isCompleted = completedIds.has(item.id);
                 return (
@@ -288,9 +314,19 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
 
 /**
  * Standalone progress widget — end-of-page Duolingo-style summary.
+ * Patient mode counts only the patient-reachable sections, but course
+ * completion still evaluates against the full outline (syncItems).
  */
 export function LearningProgress({ items, drugSlug }: StickyLearningNavProps) {
-  const { completedCount, totalCount, remainingCount } = useStickyNav(items, drugSlug);
+  const mode = useGuidedLearning((s) => s.mode);
+  const displayItems = React.useMemo(
+    () =>
+      mode === "patient"
+        ? items.filter((i) => (PATIENT_VISIBLE_SECTIONS as readonly string[]).includes(i.id))
+        : items,
+    [items, mode]
+  );
+  const { completedCount, totalCount, remainingCount } = useStickyNav(displayItems, drugSlug, items);
   if (completedCount === 0) return null;
   return (
     <div className="flex items-center gap-3 rounded-xl border border-brand/20 bg-brand-soft/40 p-3">

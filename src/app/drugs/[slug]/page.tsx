@@ -55,6 +55,10 @@ import { PageTracker } from "@/components/kyp/ui/page-tracker";
 import { TestUnderstandingCTA } from "@/components/kyp/ui/test-understanding-cta";
 import { SectionReadTracker } from "@/components/kyp/ui/section-read-tracker";
 import { ResumeBanner } from "@/components/kyp/ui/resume-banner";
+import { PatientHidden } from "@/components/kyp/ui/patient-hidden";
+import { PatientModeSwitch } from "@/components/kyp/ui/patient-mode-switch";
+import { PatientGuideSection } from "@/components/kyp/sections/drug/patient-guide-section";
+import { getPatientGuide } from "@/lib/kyp/patient";
 
 import { getDrugBySlug, getAllDrugSlugs } from "@/lib/kyp/data";
 import type { NavItem } from "@/lib/kyp/use-scroll-spy";
@@ -143,6 +147,11 @@ export default async function DrugPage({ params }: PageProps) {
   const drug = getDrugBySlug(slug);
   if (!drug) notFound();
 
+  // Patient language layer — the plain-language presentation for this
+  // medication (Patient guided-learning mode). Undefined only if a drug
+  // has no guide, in which case medical content is shown in every mode.
+  const patientGuide = getPatientGuide(drug.slug);
+
   const navItems = getNavItems();
   const lessons = drug.lessonGroups ?? [];
   const quizzes = drug.microQuizzes ?? [];
@@ -225,21 +234,27 @@ export default async function DrugPage({ params }: PageProps) {
             return visits with saved progress — hydration-safe) */}
         <ResumeBanner drugSlug={drug.slug} items={navItems} />
 
-        {/* Lesson Progress indicator — sticky horizontal strip */}
+        {/* Lesson Progress indicator — sticky horizontal strip
+            (hidden in Patient mode; patients follow the guide, not
+            the exam course structure) */}
         {hasLessons && (
           <div className="sticky top-16 z-20">
-            <LessonProgress lessons={lessons} />
+            <PatientHidden>
+              <LessonProgress lessons={lessons} />
+            </PatientHidden>
           </div>
         )}
 
         {/* ===== LESSON 1: Foundations ===== */}
         <GuidedLearningVisibility drug={drug} sectionId="top">
-          <DrugHero drug={drug} />
+          <DrugHero drug={drug} patientGuide={patientGuide} />
         </GuidedLearningVisibility>
 
         <GuidedLearningVisibility drug={drug} sectionId="quick-facts">
-          <DrugQuickFacts drug={drug} />
-          <HeroInfoStrip drug={drug} />
+          <DrugQuickFacts drug={drug} patientGuide={patientGuide} />
+          <PatientHidden>
+            <HeroInfoStrip drug={drug} />
+          </PatientHidden>
         </GuidedLearningVisibility>
 
         <GuidedLearningVisibility drug={drug} sectionId="learning-objectives">
@@ -250,15 +265,18 @@ export default async function DrugPage({ params }: PageProps) {
           <DrugKnowledgeGraph drug={drug} />
         </GuidedLearningVisibility>
 
-        {/* Checkpoint after Lesson 1 */}
+        {/* Checkpoint after Lesson 1 (hidden in Patient mode — the
+            messages reference exam content that is not visible there) */}
         {hasLessons && lessons[0] && (
           <Container>
-            <Checkpoint
-              lessonNumber={1}
-              lessonTitle={lessons[0].title}
-              message={lessons[0].checkpoint}
-              nextLessonTitle={lessons[1]?.title}
-            />
+            <PatientHidden>
+              <Checkpoint
+                lessonNumber={1}
+                lessonTitle={lessons[0].title}
+                message={lessons[0].checkpoint}
+                nextLessonTitle={lessons[1]?.title}
+              />
+            </PatientHidden>
           </Container>
         )}
 
@@ -296,15 +314,17 @@ export default async function DrugPage({ params }: PageProps) {
           {quizAfter("timeline") && <Container><MicroQuiz courseSlug={drug.slug} courseQuizCount={renderedQuizCount} quiz={quizAfter("timeline")!} /></Container>}
         </GuidedLearningVisibility>
 
-        {/* Checkpoint after Lesson 2 */}
+        {/* Checkpoint after Lesson 2 (hidden in Patient mode) */}
         {hasLessons && lessons[1] && (
           <Container>
-            <Checkpoint
-              lessonNumber={2}
-              lessonTitle={lessons[1].title}
-              message={lessons[1].checkpoint}
-              nextLessonTitle={lessons[2]?.title}
-            />
+            <PatientHidden>
+              <Checkpoint
+                lessonNumber={2}
+                lessonTitle={lessons[1].title}
+                message={lessons[1].checkpoint}
+                nextLessonTitle={lessons[2]?.title}
+              />
+            </PatientHidden>
           </Container>
         )}
 
@@ -338,18 +358,32 @@ export default async function DrugPage({ params }: PageProps) {
         </GuidedLearningVisibility>
 
         <GuidedLearningVisibility drug={drug} sectionId="patient-education">
-          <DrugPatientEducation drug={drug} />
+          {/* Patient mode gets the structured plain-language guide;
+              every other mode keeps the canonical patient-education
+              section (pharmacist-style counselling points). */}
+          <PatientModeSwitch
+            patient={
+              patientGuide ? (
+                <PatientGuideSection drug={drug} guide={patientGuide} />
+              ) : (
+                <DrugPatientEducation drug={drug} />
+              )
+            }
+            medical={<DrugPatientEducation drug={drug} />}
+          />
         </GuidedLearningVisibility>
 
-        {/* Checkpoint after Lesson 3 */}
+        {/* Checkpoint after Lesson 3 (hidden in Patient mode) */}
         {hasLessons && lessons[2] && (
           <Container>
-            <Checkpoint
-              lessonNumber={3}
-              lessonTitle={lessons[2].title}
-              message={lessons[2].checkpoint}
-              nextLessonTitle={lessons[3]?.title}
-            />
+            <PatientHidden>
+              <Checkpoint
+                lessonNumber={3}
+                lessonTitle={lessons[2].title}
+                message={lessons[2].checkpoint}
+                nextLessonTitle={lessons[3]?.title}
+              />
+            </PatientHidden>
           </Container>
         )}
 
@@ -366,15 +400,17 @@ export default async function DrugPage({ params }: PageProps) {
           <DrugCommonMistakes drug={drug} />
         </GuidedLearningVisibility>
 
-        {/* Checkpoint after Lesson 4 */}
+        {/* Checkpoint after Lesson 4 (hidden in Patient mode) */}
         {hasLessons && lessons[3] && (
           <Container>
-            <Checkpoint
-              lessonNumber={4}
-              lessonTitle={lessons[3].title}
-              message={lessons[3].checkpoint}
-              nextLessonTitle={lessons[4]?.title}
-            />
+            <PatientHidden>
+              <Checkpoint
+                lessonNumber={4}
+                lessonTitle={lessons[3].title}
+                message={lessons[3].checkpoint}
+                nextLessonTitle={lessons[4]?.title}
+              />
+            </PatientHidden>
           </Container>
         )}
 
@@ -395,15 +431,17 @@ export default async function DrugPage({ params }: PageProps) {
           <DrugHighYieldSummary drug={drug} />
         </GuidedLearningVisibility>
 
-        {/* Checkpoint after Lesson 5 */}
+        {/* Checkpoint after Lesson 5 (hidden in Patient mode) */}
         {hasLessons && lessons[4] && (
           <Container>
-            <Checkpoint
-              lessonNumber={5}
-              lessonTitle={lessons[4].title}
-              message={lessons[4].checkpoint}
-              nextLessonTitle={lessons[5]?.title}
-            />
+            <PatientHidden>
+              <Checkpoint
+                lessonNumber={5}
+                lessonTitle={lessons[4].title}
+                message={lessons[4].checkpoint}
+                nextLessonTitle={lessons[5]?.title}
+              />
+            </PatientHidden>
           </Container>
         )}
 
@@ -423,14 +461,16 @@ export default async function DrugPage({ params }: PageProps) {
         {/* Page Metadata Strip — professional trust footer */}
         <PageMetadataStrip drug={drug} />
 
-        {/* Checkpoint after Lesson 6 (final) */}
+        {/* Checkpoint after Lesson 6 (final — hidden in Patient mode) */}
         {hasLessons && lessons[5] && (
           <Container>
-            <Checkpoint
-              lessonNumber={6}
-              lessonTitle={lessons[5].title}
-              message={lessons[5].checkpoint}
-            />
+            <PatientHidden>
+              <Checkpoint
+                lessonNumber={6}
+                lessonTitle={lessons[5].title}
+                message={lessons[5].checkpoint}
+              />
+            </PatientHidden>
           </Container>
         )}
 
