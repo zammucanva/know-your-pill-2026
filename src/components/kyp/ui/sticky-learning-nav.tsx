@@ -1,48 +1,23 @@
 "use client";
 
 import * as React from "react";
-import { create } from "zustand";
-import { persist } from "zustand/middleware";
 import { Check, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
+import {
+  markSectionComplete,
+  unmarkSectionComplete,
+  syncCourseCompletion,
+} from "@/lib/kyp/progress/progress-store";
 
 /* ============================================================
-   Manual completion store — persists per-drug to localStorage.
-   Keyed by drug slug so progress is tracked per page.
+   Section completion now lives in the single versioned local
+   progress store (kyp:progress:v1) — see lib/kyp/progress.
+   The old zustand kyp-section-completion key is migrated into
+   that store on first read, so nothing the learner previously
+   ticked manually is lost.
    ============================================================ */
-interface CompletionState {
-  /** Map of drugSlug → Set of section IDs marked complete */
-  completed: Record<string, string[]>;
-  toggleComplete: (drugSlug: string, sectionId: string) => void;
-  isComplete: (drugSlug: string, sectionId: string) => boolean;
-  resetDrug: (drugSlug: string) => void;
-}
-
-const useCompletionStore = create<CompletionState>()(
-  persist(
-    (set, get) => ({
-      completed: {},
-      toggleComplete: (drugSlug, sectionId) =>
-        set((s) => {
-          const current = s.completed[drugSlug] ?? [];
-          const next = current.includes(sectionId)
-            ? current.filter((id) => id !== sectionId)
-            : [...current, sectionId];
-          return { completed: { ...s.completed, [drugSlug]: next } };
-        }),
-      isComplete: (drugSlug, sectionId) =>
-        (get().completed[drugSlug] ?? []).includes(sectionId),
-      resetDrug: (drugSlug) =>
-        set((s) => {
-          const next = { ...s.completed };
-          delete next[drugSlug];
-          return { completed: next };
-        }),
-    }),
-    { name: "kyp-section-completion", version: 1 }
-  )
-);
 
 /* ============================================================
    Scrollspy hook (unchanged from before)
@@ -94,29 +69,36 @@ export interface NavItem {
 }
 
 /**
- * useStickyNav — combines scrollspy + manual completion + reading progress.
- * Manual completion is persisted per-drug.
+ * useStickyNav — combines scrollspy + persisted section completion
+ * + reading progress. Completion is shared with every other
+ * progress surface (Study Mode, resume banner, completion stamps).
  */
-// Stable empty array reference — avoids infinite re-renders with Zustand
-// when the selector falls back to `[]`.
-const EMPTY_ARRAY: string[] = [];
-
 export function useStickyNav(items: NavItem[], drugSlug: string) {
   const activeId = useScrollSpy(items.map((i) => i.id));
   const progress = useReadingProgress();
-  // Select with a stable fallback — Zustand uses Object.is to compare,
-  // so returning the same EMPTY_ARRAY reference prevents infinite loops.
-  const completedArr = useCompletionStore((s) => s.completed[drugSlug] ?? EMPTY_ARRAY);
-  const toggleComplete = useCompletionStore((s) => s.toggleComplete);
+  const data = useLocalProgress();
 
-  const completedSet = React.useMemo(() => new Set(completedArr), [completedArr]);
+  const completedSet = React.useMemo(
+    () => new Set(data?.courses[drugSlug]?.completedSections ?? []),
+    [data, drugSlug]
+  );
+  const outlineIds = React.useMemo(() => items.map((i) => i.id), [items]);
   const completedCount = completedSet.size;
   const totalCount = items.length;
   const remainingCount = totalCount - completedCount;
 
   const handleToggle = React.useCallback(
-    (sectionId: string) => toggleComplete(drugSlug, sectionId),
-    [drugSlug, toggleComplete]
+    (sectionId: string) => {
+      if (completedSet.has(sectionId)) {
+        unmarkSectionComplete(drugSlug, sectionId);
+      } else {
+        markSectionComplete(drugSlug, sectionId);
+      }
+      // Manual ticks can complete the outline — re-evaluate the
+      // course completion stamp against the real outline.
+      syncCourseCompletion(drugSlug, outlineIds);
+    },
+    [drugSlug, outlineIds, completedSet]
   );
 
   return {

@@ -14,6 +14,8 @@ import { Reveal } from "@/components/kyp/ui/reveal";
 import { cn } from "@/lib/utils";
 import { drugs, diseases } from "@/lib/kyp/data";
 import type { MicroQuiz } from "@/lib/kyp/data";
+import { recordPracticeAttempt } from "@/lib/kyp/progress/progress-store";
+import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
 
 /**
  * /quiz — aggregate MCQ practice page.
@@ -80,6 +82,9 @@ export default function QuizPage() {
   const [selectedAnswer, setSelectedAnswer] = React.useState<number | null>(null);
   const [answered, setAnswered] = React.useState<boolean>(false);
   const [results, setResults] = React.useState<{ correct: boolean; question: QuizQuestion }[]>([]);
+  // Persisted practice history — null before hydration, so the
+  // intro renders identically on server and client.
+  const practice = useLocalProgress()?.practice ?? null;
 
   const filteredQuestions = React.useMemo(() => {
     if (filter === "all") return allQuestions;
@@ -125,6 +130,15 @@ export default function QuizPage() {
     setAnswered(false);
     setResults([]);
   };
+
+  // Persist the completed practice run to the local progress layer
+  // (attempts / latest / best — aggregate scores only, no answers).
+  React.useEffect(() => {
+    if (phase === "result" && results.length > 0) {
+      const correct = results.filter((r) => r.correct).length;
+      recordPracticeAttempt(correct, results.length);
+    }
+  }, [phase, results]);
 
   // ===== INTRO PHASE =====
   if (phase === "intro") {
@@ -219,9 +233,36 @@ export default function QuizPage() {
 
               <Reveal delay={0.28}>
                 <p className="mt-8 text-xs text-muted-foreground/60 max-w-md">
-                  Questions are drawn from the inline quizzes embedded in KYP medication and disease pages. No sign-up required — your answers are not stored.
+                  Questions are drawn from the inline quizzes embedded in KYP
+                  medication and disease pages. No sign-up required — practice
+                  scores are kept on this device only, never uploaded.
                 </p>
               </Reveal>
+
+              {/* Persisted practice history (real data only) */}
+              {practice && practice.attempts > 0 && (
+                <Reveal delay={0.34}>
+                  <p className="mt-4 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+                    <span className="tabular-nums">
+                      {practice.attempts} completed {practice.attempts === 1 ? "run" : "runs"} on this device
+                    </span>
+                    {practice.bestScore !== null && (
+                      <>
+                        <span aria-hidden>·</span>
+                        <span className="font-medium text-foreground/80 tabular-nums">
+                          Best {practice.bestScore}%
+                        </span>
+                      </>
+                    )}
+                    {practice.latestScore !== null && practice.bestScore !== practice.latestScore && (
+                      <>
+                        <span aria-hidden>·</span>
+                        <span className="tabular-nums">Last {practice.latestScore}%</span>
+                      </>
+                    )}
+                  </p>
+                </Reveal>
+              )}
             </Container>
           </Section>
         </main>

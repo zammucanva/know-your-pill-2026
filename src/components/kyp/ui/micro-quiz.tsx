@@ -4,6 +4,7 @@ import * as React from "react";
 import { Check, X, Lightbulb, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { MicroQuiz as MicroQuizType } from "@/lib/kyp/data";
+import { recordMicroQuizAnswer } from "@/lib/kyp/progress/progress-store";
 
 /**
  * MicroQuiz — inline multiple-choice quiz with reveal explanation.
@@ -12,12 +13,22 @@ import type { MicroQuiz as MicroQuizType } from "@/lib/kyp/data";
  * The user selects an answer, then sees if they're correct + an explanation.
  *
  * Client Component — uses useState for selected answer.
+ *
+ * Progress: when mounted inside a medication course
+ * (courseSlug provided), each answer is recorded to the local
+ * learning-progress store — attempt counts and best scores
+ * persist across sessions on static hosting. Question content
+ * is untouched.
  */
 interface MicroQuizProps {
   quiz: MicroQuizType;
+  /** Course slug the quiz belongs to (records local progress). */
+  courseSlug?: string;
+  /** How many micro-quizzes render in this course (score normalisation). */
+  courseQuizCount?: number;
 }
 
-export function MicroQuiz({ quiz }: MicroQuizProps) {
+export function MicroQuiz({ quiz, courseSlug, courseQuizCount = 0 }: MicroQuizProps) {
   const [selectedIdx, setSelectedIdx] = React.useState<number | null>(null);
   const [showExplanation, setShowExplanation] = React.useState(false);
 
@@ -25,6 +36,14 @@ export function MicroQuiz({ quiz }: MicroQuizProps) {
     if (selectedIdx !== null) return; // Don't allow re-answering
     setSelectedIdx(idx);
     setShowExplanation(true);
+    if (courseSlug) {
+      recordMicroQuizAnswer(
+        courseSlug,
+        quiz.id,
+        idx === quiz.correctIndex,
+        courseQuizCount
+      );
+    }
   };
 
   const isCorrect = selectedIdx === quiz.correctIndex;

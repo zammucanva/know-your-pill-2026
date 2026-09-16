@@ -177,12 +177,12 @@ export default function StudyPage() {
                 {
                   icon: RefreshCw,
                   title: "Review and continue",
-                  body: "Your visited courses are remembered. Study Mode shows where you left off and takes you straight back into the course — continue studying is built on your real history, never invented progress.",
+                  body: "Your visited courses are remembered. Study Mode shows exactly where you left off — completed sections, current lesson, and quiz bests — and takes you straight back into the course at the section you stopped reading.",
                 },
                 {
                   icon: LineChart,
                   title: "Track progress",
-                  body: "Sign in and every course you study is recorded to your dashboard — recent pages, bookmarks, and search history stay with you across sessions.",
+                  body: "Course position, completed sections, and quiz best scores are saved on this device — progress survives closing the browser, with no account required. Sign-in sync can arrive later without changing how you study.",
                 },
               ].map((step, i) => (
                 <Reveal key={step.title} delay={i * 0.05}>

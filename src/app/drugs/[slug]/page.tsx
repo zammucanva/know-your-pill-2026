@@ -53,6 +53,8 @@ import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { PageTracker } from "@/components/kyp/ui/page-tracker";
 import { TestUnderstandingCTA } from "@/components/kyp/ui/test-understanding-cta";
+import { SectionReadTracker } from "@/components/kyp/ui/section-read-tracker";
+import { ResumeBanner } from "@/components/kyp/ui/resume-banner";
 
 import { getDrugBySlug, getAllDrugSlugs } from "@/lib/kyp/data";
 import type { NavItem } from "@/lib/kyp/use-scroll-spy";
@@ -146,6 +148,21 @@ export default async function DrugPage({ params }: PageProps) {
   const quizzes = drug.microQuizzes ?? [];
   const hasLessons = lessons.length > 0;
 
+  // Quizzes that actually render in this course template — only these
+  // can ever be answered in-course, so only these count towards a
+  // full quiz pass (best score never inflates from unreachable data).
+  const QUIZ_RENDER_SECTIONS = new Set([
+    "mechanism",
+    "timeline",
+    "side-effects",
+    "monitoring",
+    "contraindications",
+    "evidence-practice",
+  ]);
+  const renderedQuizCount = quizzes.filter((q) =>
+    QUIZ_RENDER_SECTIONS.has(q.afterSectionId)
+  ).length;
+
   // Helper: find quiz that should appear after a given section
   const quizAfter = (sectionId: string) => quizzes.find((q) => q.afterSectionId === sectionId);
   // Helper: find lesson by section ID
@@ -176,6 +193,15 @@ export default async function DrugPage({ params }: PageProps) {
         variant="floating"
       />
 
+      {/* Local learning-memory layer: records the visit, tracks
+          genuinely-read sections, persists current position and
+          evaluates course completion. Invisible. */}
+      <SectionReadTracker
+        drugSlug={drug.slug}
+        title={drug.genericName}
+        items={navItems}
+      />
+
       <main className="flex-1 lg:pl-52 xl:pl-56">
         {/* ===== BREADCRUMB ===== */}
         <div className="border-b border-border/40 bg-muted/20">
@@ -189,6 +215,10 @@ export default async function DrugPage({ params }: PageProps) {
             </nav>
           </Container>
         </div>
+
+        {/* Continue-where-you-left-off affordance (renders only on
+            return visits with saved progress — hydration-safe) */}
+        <ResumeBanner drugSlug={drug.slug} items={navItems} />
 
         {/* Lesson Progress indicator — sticky horizontal strip */}
         {hasLessons && (
@@ -230,7 +260,7 @@ export default async function DrugPage({ params }: PageProps) {
         {/* ===== LESSON 2: Mechanism & Neuroscience ===== */}
         <GuidedLearningVisibility drug={drug} sectionId="mechanism">
           <DrugMechanismOfAction drug={drug} />
-          {quizAfter("mechanism") && <Container><MicroQuiz quiz={quizAfter("mechanism")!} /></Container>}
+          {quizAfter("mechanism") && <Container><MicroQuiz courseSlug={drug.slug} courseQuizCount={renderedQuizCount} quiz={quizAfter("mechanism")!} /></Container>}
         </GuidedLearningVisibility>
 
         <GuidedLearningVisibility drug={drug} sectionId="brain-regions">
@@ -258,7 +288,7 @@ export default async function DrugPage({ params }: PageProps) {
               </div>
             </Container>
           </Section>
-          {quizAfter("timeline") && <Container><MicroQuiz quiz={quizAfter("timeline")!} /></Container>}
+          {quizAfter("timeline") && <Container><MicroQuiz courseSlug={drug.slug} courseQuizCount={renderedQuizCount} quiz={quizAfter("timeline")!} /></Container>}
         </GuidedLearningVisibility>
 
         {/* Checkpoint after Lesson 2 */}
@@ -280,22 +310,22 @@ export default async function DrugPage({ params }: PageProps) {
 
         <GuidedLearningVisibility drug={drug} sectionId="side-effects">
           <DrugSideEffects drug={drug} />
-          {quizAfter("side-effects") && <Container><MicroQuiz quiz={quizAfter("side-effects")!} /></Container>}
+          {quizAfter("side-effects") && <Container><MicroQuiz courseSlug={drug.slug} courseQuizCount={renderedQuizCount} quiz={quizAfter("side-effects")!} /></Container>}
         </GuidedLearningVisibility>
 
         <GuidedLearningVisibility drug={drug} sectionId="monitoring">
           <DrugMonitoring drug={drug} />
-          {quizAfter("monitoring") && <Container><MicroQuiz quiz={quizAfter("monitoring")!} /></Container>}
+          {quizAfter("monitoring") && <Container><MicroQuiz courseSlug={drug.slug} courseQuizCount={renderedQuizCount} quiz={quizAfter("monitoring")!} /></Container>}
         </GuidedLearningVisibility>
 
         <GuidedLearningVisibility drug={drug} sectionId="contraindications">
           <DrugContraindications drug={drug} />
-          {quizAfter("contraindications") && <Container><MicroQuiz quiz={quizAfter("contraindications")!} /></Container>}
+          {quizAfter("contraindications") && <Container><MicroQuiz courseSlug={drug.slug} courseQuizCount={renderedQuizCount} quiz={quizAfter("contraindications")!} /></Container>}
         </GuidedLearningVisibility>
 
         <GuidedLearningVisibility drug={drug} sectionId="evidence-practice">
           <EvidenceAndIndianPractice drug={drug} />
-          {quizAfter("evidence-practice") && <Container><MicroQuiz quiz={quizAfter("evidence-practice")!} /></Container>}
+          {quizAfter("evidence-practice") && <Container><MicroQuiz courseSlug={drug.slug} courseQuizCount={renderedQuizCount} quiz={quizAfter("evidence-practice")!} /></Container>}
         </GuidedLearningVisibility>
 
         <GuidedLearningVisibility drug={drug} sectionId="interactions">
