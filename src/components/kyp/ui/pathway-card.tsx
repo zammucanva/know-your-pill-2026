@@ -24,7 +24,10 @@ export function PathwayCard({ pathway, index = 0, className }: PathwayCardProps)
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.4, delay: Math.min(index * 0.06, 0.3) }}
-      className={cn("h-full", className)}
+      /* min-w-0 — overrides the grid item's intrinsic min-width:auto,
+         letting the card shrink on narrow viewports instead of pushing
+         the document into horizontal overflow. */
+      className={cn("h-full min-w-0", className)}
     >
       <CardPrimitive variant="flat" interactive={false} className="h-full">
         <CardBody>

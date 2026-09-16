@@ -148,6 +148,11 @@ export default async function DrugPage({ params }: PageProps) {
   const quizzes = drug.microQuizzes ?? [];
   const hasLessons = lessons.length > 0;
 
+  // Slugs with an actually-built page — passed to the Drug Navigation
+  // module so family members / related drugs without a page render as
+  // non-clickable "coming soon" items instead of dead links.
+  const builtDrugSlugs = getAllDrugSlugs();
+
   // Quizzes that actually render in this course template — only these
   // can ever be answered in-course, so only these count towards a
   // full quiz pass (best score never inflates from unreachable data).
@@ -383,7 +388,7 @@ export default async function DrugPage({ params }: PageProps) {
         </GuidedLearningVisibility>
 
         <GuidedLearningVisibility drug={drug} sectionId="drug-navigation">
-          <DrugNavigationModule drug={drug} />
+          <DrugNavigationModule drug={drug} builtDrugSlugs={builtDrugSlugs} />
         </GuidedLearningVisibility>
 
         <GuidedLearningVisibility drug={drug} sectionId="high-yield-summary">

@@ -2,7 +2,7 @@
 
 import { imgPath } from "@/lib/kyp/image-path";
 import Link from "next/link";
-import { Github, Mail } from "lucide-react";
+import { ArrowUp, Github, Mail } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Reveal } from "@/components/kyp/ui/reveal";
 
@@ -28,8 +28,11 @@ const footerLinks = [
     title: "Clinical",
     links: [
       { label: "Major Depressive Disorder", href: "/diseases/major-depressive-disorder" },
-      { label: "Emergency Help", href: "#emergency" },
-      { label: "FAQ", href: "#faq" },
+      // Real destinations — the emergency and FAQ sections live on the
+      // homepage; rendering them through next/link prepends the GitHub
+      // Pages basePath, so they work from every page.
+      { label: "Emergency Help", href: "/#emergency" },
+      { label: "FAQ", href: "/#faq" },
     ],
   },
   {
@@ -98,7 +101,7 @@ export function Footer() {
 
           {/* Bottom — minimal */}
           <div className="flex flex-col gap-6 border-t border-border/15 pt-8">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <span className="relative h-8 w-8 shrink-0 overflow-hidden rounded-lg">
                   <img
@@ -126,15 +129,37 @@ export function Footer() {
                   </a>
                 </div>
               </div>
-              <p className="text-caption text-muted-foreground">
-                © 2026 Know Your Pill · Zamaan Ali Shamji ·{" "}
-                <Link
-                  href="/legal/terms"
-                  className="underline decoration-border underline-offset-2 transition-colors hover:text-brand hover:decoration-brand"
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                <p className="text-caption text-muted-foreground">
+                  © 2026 Know Your Pill · Zamaan Ali Shamji ·{" "}
+                  <Link
+                    href="/legal/terms"
+                    className="underline decoration-border underline-offset-2 transition-colors hover:text-brand hover:decoration-brand"
+                  >
+                    Terms &amp; Copyright
+                  </Link>
+                </p>
+                {/* Page-local back-to-top — a real control, not an anchor
+                    to an id that most pages don't have. Smooth scroll
+                    unless the user prefers reduced motion. */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    const reduceMotion = window
+                      .matchMedia("(prefers-reduced-motion: reduce)")
+                      .matches;
+                    window.scrollTo({
+                      top: 0,
+                      behavior: reduceMotion ? "auto" : "smooth",
+                    });
+                  }}
+                  aria-label="Back to top of page"
+                  className="inline-flex h-8 items-center gap-1.5 rounded-lg border border-border/50 px-3 text-caption text-muted-foreground transition-colors hover:border-brand/40 hover:text-brand"
                 >
-                  Terms &amp; Copyright
-                </Link>
-              </p>
+                  <ArrowUp className="h-3.5 w-3.5" aria-hidden />
+                  Back to top
+                </button>
+              </div>
             </div>
 
             <p className="text-caption text-muted-foreground/50 leading-relaxed max-w-3xl">

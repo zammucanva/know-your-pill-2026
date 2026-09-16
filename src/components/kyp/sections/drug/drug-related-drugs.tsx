@@ -5,6 +5,7 @@ import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
 import { Badge } from "@/components/kyp/ui/badge";
 import { Callout } from "@/components/kyp/ui/callout";
 import { ArrowUpRight, Check, X } from "lucide-react";
+import { getDrugBySlug } from "@/lib/kyp/data";
 import type { Drug } from "@/lib/kyp/data";
 
 /**
@@ -42,7 +43,11 @@ export function DrugRelatedDrugs({ drug }: DrugRelatedDrugsProps) {
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {drug.relatedDrugs.map((rd) => {
-            const href = rd.slug ? `/drugs/${rd.slug}` : undefined;
+            // Only link to drugs that actually have a built page —
+            // unbuilt family members render as non-clickable
+            // "coming soon" cards instead of dead 404 links.
+            const href =
+              rd.slug && getDrugBySlug(rd.slug) ? `/drugs/${rd.slug}` : undefined;
             return (
               <CardPrimitive
                 key={rd.name}

@@ -35,10 +35,38 @@ export function LessonProgress({ lessons }: LessonProgressProps) {
     return 1;
   }, [activeId, lessons]);
 
+  // Chip refs — so the active lesson can scroll itself into view inside
+  // the horizontally-scrollable strip (mobile learners can't otherwise
+  // reach later lessons; the active chip can sit off-screen).
+  const chipRefs = React.useRef(new Map<number, HTMLButtonElement>());
+
+  React.useEffect(() => {
+    const chip = chipRefs.current.get(activeLesson);
+    if (!chip) return;
+    // Scroll ONLY the strip's own scrollport — never scrollIntoView().
+    // The document has scroll-behavior: smooth, so a chip.scrollIntoView()
+    // here would fight (and keep restarting) any in-flight page scroll,
+    // e.g. an in-page anchor jump, making anchor navigation crawl.
+    const strip = chip.closest("[data-lesson-strip]") as HTMLElement | null;
+    if (!strip) return;
+    const stripRect = strip.getBoundingClientRect();
+    const chipRect = chip.getBoundingClientRect();
+    const delta =
+      chipRect.left + chipRect.width / 2 -
+      (stripRect.left + stripRect.width / 2);
+    const reduceMotion = window
+      .matchMedia("(prefers-reduced-motion: reduce)")
+      .matches;
+    strip.scrollTo({
+      left: Math.max(0, strip.scrollLeft + delta),
+      behavior: reduceMotion ? "auto" : "smooth",
+    });
+  }, [activeLesson]);
+
   return (
     <div className="border-b border-border/40 bg-card/30 backdrop-blur-sm">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-2 py-2 overflow-x-auto kyp-scroll">
+        <div data-lesson-strip className="flex items-center gap-2 py-2 overflow-x-auto kyp-scroll">
           {lessons.map((lesson) => {
             const isCurrent = lesson.number === activeLesson;
             const isPast = lesson.number < activeLesson;
@@ -52,6 +80,10 @@ export function LessonProgress({ lessons }: LessonProgressProps) {
                   )} />
                 )}
                 <button
+                  ref={(el) => {
+                    if (el) chipRefs.current.set(lesson.number, el);
+                    else chipRefs.current.delete(lesson.number);
+                  }}
                   type="button"
                   onClick={() => {
                     const el = document.getElementById(lesson.sectionIds[0]);

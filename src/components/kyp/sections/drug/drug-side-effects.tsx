@@ -101,8 +101,11 @@ export function DrugSideEffects({ drug }: DrugSideEffectsProps) {
                   if (!libraryEntry) return null;
                   return (
                     <span key={se.sideEffectId}>
+                      {/* Stays inside the current drug page — the
+                          drug course has its own #side-effects
+                          section anchor; the homepage has none. */}
                       <Link
-                        href="/#side-effects"
+                        href="#side-effects"
                         className="text-brand underline-offset-4 hover:underline"
                       >
                         {libraryEntry.name}

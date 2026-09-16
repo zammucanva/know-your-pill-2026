@@ -24,10 +24,25 @@ import { cn } from "@/lib/utils";
  */
 interface DrugNavigationModuleProps {
   drug: Drug;
+  /** Slugs that actually have a built page. Passed from the server
+   *  page (source of truth: the drug registry) so this client module
+   *  never imports the full registry into the browser bundle.
+   *  Family members / related drugs without a built page render as
+   *  non-clickable "Coming soon" items instead of dead 404 links. */
+  builtDrugSlugs?: readonly string[];
 }
 
-export function DrugNavigationModule({ drug }: DrugNavigationModuleProps) {
+export function DrugNavigationModule({ drug, builtDrugSlugs }: DrugNavigationModuleProps) {
   const [tab, setTab] = React.useState<"family" | "comparison" | "indian" | "related">("family");
+
+  const builtSlugSet = React.useMemo(
+    () => new Set(builtDrugSlugs ?? []),
+    [builtDrugSlugs]
+  );
+  const hasBuiltPage = React.useCallback(
+    (slug?: string) => Boolean(slug) && builtSlugSet.has(slug as string),
+    [builtSlugSet]
+  );
 
   const hasFamily = Boolean(drug.drugFamilyNav);
   const hasComparison = drug.comparisonTables?.length > 0;
@@ -78,7 +93,7 @@ export function DrugNavigationModule({ drug }: DrugNavigationModuleProps) {
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {drug.drugFamilyNav.members.map((member) => {
                 const isCurrent = member.name === drug.genericName;
-                const hasPage = Boolean(member.slug);
+                const hasPage = hasBuiltPage(member.slug);
                 const content = (
                   <>
                     <div className="flex items-start justify-between gap-2">
@@ -90,6 +105,9 @@ export function DrugNavigationModule({ drug }: DrugNavigationModuleProps) {
                       {hasPage && !isCurrent && <ArrowRight className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />}
                     </div>
                     <p className="mt-1.5 text-xs text-foreground/80 leading-relaxed">{member.distinguishing}</p>
+                    {!hasPage && !isCurrent && (
+                      <Badge variant="outline" size="sm" className="mt-2">Coming soon</Badge>
+                    )}
                   </>
                 );
                 if (hasPage && !isCurrent) {
@@ -164,7 +182,7 @@ export function DrugNavigationModule({ drug }: DrugNavigationModuleProps) {
           {tab === "related" && hasRelated && (
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {drug.relatedDrugs.map((rd, i) => {
-                const href = rd.slug ? `/drugs/${rd.slug}` : undefined;
+                const href = hasBuiltPage(rd.slug) ? `/drugs/${rd.slug}` : undefined;
                 const content = (
                   <>
                     <div className="flex items-start justify-between gap-2">

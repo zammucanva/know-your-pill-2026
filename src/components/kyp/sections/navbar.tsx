@@ -63,8 +63,10 @@ export function Navbar() {
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Brand */}
-        <Link href="#top" className="group flex items-center gap-2.5">
+        {/* Brand — goes home from every page (next/link prepends the
+            GitHub Pages basePath; on the homepage itself the
+            same-route navigation scrolls back to the top). */}
+        <Link href="/" className="group flex items-center gap-2.5">
           <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-xl">
             <img
               src={imgPath("/logo-navy-128.png")}

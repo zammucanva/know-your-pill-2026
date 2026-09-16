@@ -30,7 +30,7 @@ export function Checkpoint({ lessonNumber, lessonTitle, message, nextLessonTitle
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.4 }}
       className={cn(
-        "my-8 flex items-center gap-4 rounded-lg px-5 py-4",
+        "my-8 flex flex-wrap items-center gap-4 rounded-lg px-5 py-4",
         dismissed ? "bg-muted/20" : "bg-brand-soft/20 border border-brand/20"
       )}
     >
@@ -50,15 +50,17 @@ export function Checkpoint({ lessonNumber, lessonTitle, message, nextLessonTitle
         <p className="mt-0.5 text-sm text-foreground/90 leading-relaxed">{message}</p>
       </div>
 
-      {/* Continue button */}
+      {/* Continue button — wraps within the available width on mobile
+          instead of forcing the row wider than the viewport; flex-wrap
+          on the container lets it drop to its own line when needed. */}
       {nextLessonTitle && !dismissed && (
         <button
           type="button"
           onClick={() => setDismissed(true)}
-          className="shrink-0 inline-flex items-center gap-1 rounded-full border border-brand/30 bg-card px-3 py-1.5 text-xs font-medium text-brand transition-colors hover:bg-brand hover:text-primary-foreground"
+          className="inline-flex min-w-0 max-w-full items-center gap-1 rounded-full border border-brand/30 bg-card px-3 py-1.5 text-left text-xs font-medium text-brand transition-colors hover:bg-brand hover:text-primary-foreground"
         >
-          Continue to {nextLessonTitle}
-          <ChevronRight className="h-3 w-3" />
+          <span className="whitespace-normal">Continue to {nextLessonTitle}</span>
+          <ChevronRight className="h-3 w-3 shrink-0" />
         </button>
       )}
     </motion.div>

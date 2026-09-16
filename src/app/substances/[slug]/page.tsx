@@ -15,6 +15,7 @@ import { Callout } from "@/components/kyp/ui/callout";
 
 import { getSubstancePage, getAllSubstanceSlugs } from "@/lib/kyp/data/substances";
 import { drugClasses } from "@/lib/kyp/data";
+import { imgPath } from "@/lib/kyp/image-path";
 import { AlertTriangle, Activity, HeartPulse } from "lucide-react";
 import { PageTracker } from "@/components/kyp/ui/page-tracker";
 import { TestUnderstandingCTA } from "@/components/kyp/ui/test-understanding-cta";
@@ -88,10 +89,12 @@ export default async function SubstancePage({ params }: PageProps) {
             <h1 className="mt-3 text-display text-foreground">{substance.disorderName}</h1>
             <p className="mt-3 max-w-2xl text-base text-foreground/80 leading-relaxed">{substance.tagline}</p>
             <p className="mt-2 max-w-2xl text-sm text-muted-foreground leading-relaxed">{substance.summary}</p>
+            {/* Hero artwork — routes through imgPath() so the
+                GitHub Pages basePath is prepended. */}
             {substance.artwork && (
               <div className="mt-6 flex justify-center">
                 <div className="relative h-40 w-40">
-                  <Image src={substance.artwork} alt={substance.artworkAlt || substance.name} fill className="object-contain" sizes="160px" />
+                  <Image src={imgPath(substance.artwork)} alt={substance.artworkAlt || substance.name} fill className="object-contain" sizes="160px" />
                 </div>
               </div>
             )}

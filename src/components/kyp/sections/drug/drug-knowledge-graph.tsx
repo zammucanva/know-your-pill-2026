@@ -123,7 +123,7 @@ function KnowledgeGraphNode({
       viewport={{ once: true, margin: "-20px" }}
       transition={{ duration: 0.25, delay: Math.min(index * 0.03, 0.3) }}
       className={cn(
-        "group relative flex flex-col items-start gap-1.5 rounded-lg border p-3 transition-all duration-150",
+        "group relative flex min-w-0 flex-col items-start gap-1.5 rounded-lg border p-3 transition-all duration-150",
         isHovered
           ? cn(config.border, config.bg, "shadow-[var(--shadow-lift)] scale-[1.03] z-10")
           : "border-border/60 bg-card hover:border-brand/30"
@@ -137,9 +137,12 @@ function KnowledgeGraphNode({
         {config.label}
       </span>
 
-      {/* Node label */}
+      {/* Node label — overflow-wrap:anywhere (not break-words) because
+          long single-word labels like "Desmethylclomipramine" must also
+          shrink the intrinsic min-content width; break-words does not,
+          which widens the grid past the viewport. */}
       <p className={cn(
-        "text-xs font-medium leading-tight pr-12",
+        "min-w-0 text-xs font-medium leading-tight pr-12 [overflow-wrap:anywhere]",
         isHovered ? "text-foreground" : "text-foreground/80"
       )}>
         {node.label}
@@ -147,7 +150,7 @@ function KnowledgeGraphNode({
 
       {/* Note — only on hover */}
       {node.note && isHovered && (
-        <p className="text-[0.65rem] text-muted-foreground leading-snug mt-0.5">
+        <p className="min-w-0 text-[0.65rem] text-muted-foreground leading-snug mt-0.5 [overflow-wrap:anywhere]">
           {node.note}
         </p>
       )}

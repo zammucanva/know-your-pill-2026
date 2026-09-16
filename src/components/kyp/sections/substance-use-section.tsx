@@ -8,6 +8,7 @@ import { Callout } from "@/components/kyp/ui/callout";
 import { Reveal } from "@/components/kyp/ui/reveal";
 import { substances, drugClassFilters, drugClasses } from "@/lib/kyp/data";
 import type { DrugClassId } from "@/lib/kyp/data";
+import { imgPath } from "@/lib/kyp/image-path";
 import { cn } from "@/lib/utils";
 
 export function SubstanceUseSection() {
@@ -80,11 +81,14 @@ export function SubstanceUseSection() {
                     {String(i + 1).padStart(2, '0')}
                   </span>
 
-                  {/* Molecule image — small, floating */}
+                  {/* Molecule image — small, floating.
+                      Routes through imgPath() so the GitHub Pages
+                      basePath is prepended (root-relative artwork
+                      paths 404 on the Pages deploy). */}
                   {sub.artwork && (
                     <div className="relative h-10 w-10 sm:h-12 sm:w-12 shrink-0">
                       <img
-                        src={sub.artwork}
+                        src={imgPath(sub.artwork)}
                         alt={sub.artworkAlt ?? `${sub.name} molecule`}
                         className="h-full w-full object-contain opacity-60 transition-all duration-300 group-hover:opacity-100 group-hover:scale-110"
                         loading="lazy"
