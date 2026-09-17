@@ -33,7 +33,10 @@ export default function Loading() {
         </Container>
       </div>
 
-      <main className="flex-1 pt-16">
+      {/* Mirrors the real course page's main element exactly — header
+          band (pt-16) + left course rail reservation (lg:pl-52 xl:pl-56)
+          — so the skeleton never shifts when the page hydrates. */}
+      <main className="flex-1 pt-16 lg:pl-52 xl:pl-56">
         {/* Hero skeleton */}
         <Section spacing="default">
           <Container>
