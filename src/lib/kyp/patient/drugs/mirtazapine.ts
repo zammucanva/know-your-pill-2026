@@ -154,7 +154,7 @@ export const mirtazapinePatientGuide: PatientGuide = {
   keyReminders: [
     "Take it at night — it is sedating, and morning drowsiness usually eases after 1–2 weeks.",
     "Sleep and appetite can improve within days; mood takes 2–4 weeks.",
-    "Fever or sore throat = stop the medicine and get a blood test the same day.",
+    "Fever or sore throat means stop the medicine and get a blood test the same day.",
     "Expect increased appetite and weight gain — helpful if depression caused weight loss, otherwise discuss with your doctor.",
     "It is unlikely to cause the sexual side effects that SSRIs cause.",
     "Avoid alcohol — it adds to the sedation and dizziness.",
