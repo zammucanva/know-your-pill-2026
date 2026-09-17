@@ -216,7 +216,12 @@ export default async function DrugPage({ params }: PageProps) {
         items={navItems}
       />
 
-      <main className="flex-1 lg:pl-52 xl:pl-56">
+      {/* One global header owner: the fixed <Navbar> above. Like every
+          other page (learn/study/quiz/drugs + this route's loading
+          skeleton), main reserves its h-16 band with pt-16 so the
+          breadcrumb starts BELOW the header instead of rendering
+          underneath its transparent state. */}
+      <main className="flex-1 pt-16 lg:pl-52 xl:pl-56">
         {/* ===== BREADCRUMB ===== */}
         <div className="border-b border-border/40 bg-muted/20">
           <Container>

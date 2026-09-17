@@ -79,7 +79,10 @@ export default async function DiseasePage({ params }: PageProps) {
         variant="floating"
       />
 
-      <main className="flex-1 lg:pl-52 xl:pl-56">
+      {/* One global header owner: the fixed <Navbar> above — main
+          reserves its h-16 band with pt-16 (same pattern as every other
+          page and this route's loading skeleton). */}
+      <main className="flex-1 pt-16 lg:pl-52 xl:pl-56">
         {/* ===== BREADCRUMB ===== */}
         <div className="border-b border-border/40 bg-muted/20">
           <Container>
