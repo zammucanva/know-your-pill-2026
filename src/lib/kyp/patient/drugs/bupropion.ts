@@ -55,7 +55,7 @@ export const bupropionPatientGuide: PatientGuide = {
 
   timelineShort: "Energy may lift in 1–2 weeks; full benefit 4–6 weeks",
 
-  usuallyTaken: "In the morning",
+  usuallyTaken: "In the morning — twice-daily (SR) form: second dose by mid-afternoon",
 
   commonSideEffects: {
     intro: bupropion.patientMode.sideEffects,
