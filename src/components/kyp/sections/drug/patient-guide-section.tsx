@@ -131,9 +131,18 @@ export function PatientGuideSection({ drug, guide }: PatientGuideSectionProps) {
               {guide.howItWorks.simple}
             </Callout>
             <details className="group rounded-lg border border-border/70 bg-card">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-body-sm font-medium text-foreground [&::-webkit-details-marker]:hidden">
-                <span>{MEDICAL_DETAIL_LABEL}</span>
-                <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" />
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 text-body-sm font-medium text-foreground transition-colors hover:bg-muted/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden">
+                <span>
+                  {MEDICAL_DETAIL_LABEL}
+                  <span className="font-normal text-muted-foreground">
+                    {" "}
+                    — optional, more technical
+                  </span>
+                </span>
+                <ChevronDown
+                  className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-180"
+                  aria-hidden
+                />
               </summary>
               <div className="border-t border-border/50 px-4 py-3">
                 <p className="text-body-sm text-muted-foreground leading-relaxed">
