@@ -173,6 +173,6 @@ export const sertralinePatientGuide: PatientGuide = {
     "Take it in the morning if it makes you feel more alert; at night if it makes you sleepy. Taking it with food reduces nausea.",
     "It is not addictive, but stopping suddenly can cause uncomfortable withdrawal-like symptoms — always come off it slowly with your doctor's guidance.",
     "Keep alcohol to a minimum or avoid it — it can make you more drowsy and worsen mood symptoms.",
-    "Tell every doctor, dentist, and pharmacist that you take sertraline, including the liquid form note if you are on disulfiram.",
+    "Tell every doctor, dentist, and pharmacist that you take sertraline. If you take the liquid form, tell them before you start disulfiram (a medicine for alcohol dependence) — the liquid contains alcohol.",
   ],
 };

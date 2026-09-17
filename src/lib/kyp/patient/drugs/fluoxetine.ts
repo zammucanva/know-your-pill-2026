@@ -135,7 +135,7 @@ export const fluoxetinePatientGuide: PatientGuide = {
     "Take the missed dose as soon as you remember. Because fluoxetine stays in your body for a long time, a missed dose is less of a problem than with other SSRIs. If it is close to your next dose, skip the missed one — do not double up.",
 
   stopping:
-    "Fluoxetine is usually the easiest SSRI to stop, because it leaves the body so slowly that it effectively tapers itself. Withdrawal symptoms are the mildest of any SSRI. Still, talk to your doctor before stopping — and remember two things: (1) for a first episode of depression, treatment usually continues 6–12 months after you feel better; (2) after your last dose, you must wait at least 5 weeks before starting an MAOI (monoamine oxidase inhibitor) antidepressant, because fluoxetine's breakdown product stays in your body for weeks.",
+    "Fluoxetine is usually the easiest SSRI to stop, because it leaves the body so slowly that it effectively tapers itself. Withdrawal symptoms are the mildest of any SSRI. Still, talk to your doctor before stopping, and remember two things. First, for a first episode of depression, treatment usually continues 6–12 months after you feel better. Second, after your last dose, you must wait at least 5 weeks before starting an MAOI (monoamine oxidase inhibitor) antidepressant, because fluoxetine's breakdown product stays in your body for weeks.",
 
   monitoring: fluoxetine.patientMode.monitoring,
 
