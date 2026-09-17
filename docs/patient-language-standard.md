@@ -188,7 +188,7 @@ concern to the guide's `reviewFlags` array:
 
 ```
 reviewFlags: [
-  "Agora line about X: simplified from '...' — confirm the plain wording preserves the original meaning."
+  "MEDICAL REVIEW REQUIRED — <section>: <what could not be verified against canonical content and why>."
 ]
 ```
 
@@ -196,13 +196,27 @@ Nothing flagged is silently changed. Review flags surface in the
 authoring QA and in the page's data for a qualified medical reviewer.
 When in doubt, flag.
 
+**Claims-verification rule (binding).** Every claim in a guide —
+numbers, rates, dose thresholds, timing, comparisons — must trace to
+canonical content for THAT medication. Watch for comparison drift:
+canonical statements usually compare against *placebo*; do not
+rewrite them as comparisons against *other medicines* unless the
+canonical source says so. If a useful statement has no canonical
+basis (for example, missed-dose instructions for a drug whose
+canonical content has none), either omit it or keep it AND add a
+`MEDICAL REVIEW REQUIRED` flag naming exactly what is unverifiable.
+Prefix every flag with `MEDICAL REVIEW REQUIRED` so unresolved items
+stay grep-able in the codebase.
+
 ## 11. Readability self-check
 
 Before submitting a guide, check:
 
 - No sentence longer than ~25 words without a break
 - No paragraph longer than 4 sentences
-- Every acronym expanded on first use
+- Every acronym expanded on first use — **within the guide itself**,
+  not relying on another guide's introduction (each page is the
+  reader's first page)
 - Every serious condition name kept
 - Every timeline matches the canonical source
 - A patient can answer: What is this? Why am I taking it? How does it
@@ -213,6 +227,11 @@ The quality bar is not "did we replace complicated words" — it is
 "can a patient understand the explanation correctly without medical
 training, while KYP stays medically credible."
 
+Readability scores are evidence, not a target: a score may look
+"hard" simply because the necessary medical vocabulary (medicine
+names, condition names) is present. Never sacrifice meaning for a
+number.
+
 ## 12. Extending to diseases and substances
 
 The same pattern extends: a sibling registry keyed by canonical slug
@@ -221,3 +240,35 @@ structure where the source supports it, the same reuse-first rule.
 Disease and substance sources are currently structurally incomplete for
 patient guides (see the task report) — author those guides only with
 medical review support, and never invent missing content.
+
+## 13. How to validate a new guide
+
+A guide is not done when it is written — it is done when it passes this
+checklist:
+
+1. **Registry integrity** — the build fails loudly if a guide's `slug`
+   does not match a canonical drug or a canonical drug lacks its guide
+   (`src/lib/kyp/patient/index.ts` validates at build time).
+2. **Canonical data untouched** — never edit files under
+   `src/lib/kyp/data/` for language reasons. The content-lock suite
+   must stay green:
+   `bun test tests/content-lock.test.ts` (32/32 locked files
+   unchanged, medical-data snapshot unchanged).
+3. **Static checks** — `bunx tsc --noEmit` and `bun run lint` must
+   pass.
+4. **Full suite** — `bun test tests/` must pass (324+ tests).
+5. **Build** — `bun run build` (standalone) and
+   `bun run build:export` (GitHub Pages) must both succeed.
+6. **Patient-mode browser QA** — open the drug page with localStorage
+   `kyp-guided-learning-mode` set to `{"state":{"mode":"patient"},"version":2}`:
+   - the 13-section guide, FAQ, and Emergency sections render;
+   - the section navigator shows only Overview, Quick Facts, Patient
+     Guide, FAQ;
+   - the "Medical detail" disclosure opens with Enter (keyboard);
+   - no exam-oriented chrome (lesson strip, checkpoints, Clinical
+     Case, High-Yield) is visible;
+   - no horizontal overflow at 375/390/768 px.
+7. **Medical-mode regression** — switch the mode back and confirm the
+   clinical sections render exactly as before.
+8. **Flags** — if any `reviewFlags` were added, list them in the
+   pull-request description so a reviewer can resolve them.
