@@ -102,12 +102,14 @@ export function ResumeBanner({ drugSlug, items }: ResumeBannerProps) {
       aria-label={mode === "patient" ? "Resume guide" : "Resume course"}
       className="border-b border-brand/20 bg-brand-soft/30"
     >
-      {/* sm:pr-32 — reserves the footprint of the fixed GuidedLearning
-          toggle (right-4, collapsed pill ≈ 126px + gap) so the Continue
-          button can never sit underneath it once this strip moved below
-          the header (pt-16 normalization). Below sm the toggle is hidden,
-          so no reservation is needed there. */}
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-3 gap-y-1.5 px-4 py-2 sm:pl-6 sm:pr-32 lg:pl-8">
+      {/* sm:pr-40 — reserves the full footprint of the fixed
+          GuidedLearning toggle (right-4: 16px gap + ≈126px collapsed
+          pill + breathing room) so the Continue button can never sit
+          underneath it. main has no right padding, so the container's
+          right edge is the viewport edge and the reservation is
+          measured from there. Below sm the toggle is hidden, so no
+          reservation is needed there. */}
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-3 gap-y-1.5 px-4 py-2 sm:pl-6 sm:pr-40 lg:pl-8">
         <BookOpen className="h-4 w-4 shrink-0 text-brand" strokeWidth={2} aria-hidden />
         <p className="min-w-0 flex-1 text-xs text-foreground/80">
           <span className="font-semibold text-foreground">

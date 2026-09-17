@@ -65,12 +65,13 @@ export function LessonProgress({ lessons }: LessonProgressProps) {
 
   return (
     <div className="border-b border-border/40 bg-card/30 backdrop-blur-sm">
-      {/* sm:pr-32 — keeps the horizontally-scrollable chip row clear of
-          the fixed GuidedLearning toggle (right-4) on fresh visits when
-          the banner is absent and this strip sits in the toggle's band.
-          The scrollport ends before the toggle's footprint, so even a
-          fully right-scrolled chip never slides underneath it. */}
-      <div className="mx-auto max-w-7xl px-4 sm:pl-6 sm:pr-32 lg:pl-8">
+      {/* sm:pr-40 — keeps the horizontally-scrollable chip row clear
+          of the fixed GuidedLearning toggle (right-4, full footprint
+          ≈ 142px + gap; main has no right padding) on fresh visits
+          when the banner is absent and this strip sits in the toggle's
+          band. The scrollport ends before the toggle's footprint, so
+          even a fully right-scrolled chip never slides underneath it. */}
+      <div className="mx-auto max-w-7xl px-4 sm:pl-6 sm:pr-40 lg:pl-8">
         <div data-lesson-strip className="flex items-center gap-2 py-2 overflow-x-auto kyp-scroll">
           {lessons.map((lesson) => {
             const isCurrent = lesson.number === activeLesson;
