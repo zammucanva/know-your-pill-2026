@@ -69,7 +69,7 @@ export const clomipraminePatientGuide: PatientGuide = {
 
   importantSideEffects: {
     intro:
-      "Clomipramine needs more respect than most medicines. The single most important rule: NEVER take more than the prescribed dose — too much at once can dangerously affect the heart or cause a seizure. Know these warning signs:",
+      "Clomipramine needs more respect than most medicines. The single most important rule: Never take more than the prescribed dose — too much at once can dangerously affect the heart or cause a seizure. Know these warning signs:",
     items: [
       {
         name: "Dangerous heart rhythm changes (especially in overdose)",
@@ -121,7 +121,7 @@ export const clomipraminePatientGuide: PatientGuide = {
   interactions: clomipramine.patientMode.interactions,
 
   missedDose:
-    "Take the missed dose as soon as you remember, unless it is within 8 hours of your next dose — in that case, skip it and continue normally. NEVER take a double dose to make up for a missed one — too much clomipramine at once can affect the heart or cause a seizure. If you have missed several doses, contact your doctor before restarting.",
+    "Take the missed dose as soon as you remember, unless it is within 8 hours of your next dose — in that case, skip it and continue normally. Never take a double dose to make up for a missed one — too much clomipramine at once can affect the heart or cause a seizure. If you have missed several doses, contact your doctor before restarting.",
 
   stopping:
     "Do not stop clomipramine abruptly — your doctor will taper the dose gradually over several weeks. Sudden stopping can cause rebound symptoms (nausea, sweating, headache, insomnia, vivid dreams) and a return of OCD symptoms. OCD treatment usually continues for at least 12 months after a good response — discuss the timing with your doctor, never decide alone.",
@@ -145,7 +145,7 @@ export const clomipraminePatientGuide: PatientGuide = {
   },
 
   keyReminders: [
-    "NEVER take more than the prescribed dose — too much clomipramine at once can be fatal.",
+    "Never take more than the prescribed dose — too much clomipramine at once can be fatal.",
     "OCD takes 8–12 weeks to respond — don't stop early, and expect a higher dose than for depression.",
     "It is the only medicine in its class that works for OCD.",
     "Never combine it with SSRIs (especially fluvoxamine) without specialist guidance.",

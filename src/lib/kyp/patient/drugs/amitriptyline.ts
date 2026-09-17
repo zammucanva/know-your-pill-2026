@@ -75,7 +75,7 @@ export const amitriptylinePatientGuide: PatientGuide = {
 
   importantSideEffects: {
     intro:
-      "Amitriptyline needs more respect than most medicines. The single most important rule: NEVER take more than the prescribed dose — too much at once can dangerously affect the heart's rhythm. Know these warning signs:",
+      "Amitriptyline needs more respect than most medicines. The single most important rule: Never take more than the prescribed dose — too much at once can dangerously affect the heart's rhythm. Know these warning signs:",
     items: [
       {
         name: "Dangerous heart rhythm changes (especially in overdose)",
@@ -118,7 +118,7 @@ export const amitriptylinePatientGuide: PatientGuide = {
   tellYourDoctor: [
     "Any heart condition — a recent heart attack, rhythm problems, or heart block (an ECG is usually done before starting).",
     "Glaucoma, or trouble passing urine or an enlarged prostate.",
-    "All other medicines you take — amitriptyline interacts with MANY, including other antidepressants (especially fluoxetine and paroxetine), tramadol, triptans, certain antibiotics, cold remedies containing pseudoephedrine or phenylephrine, and St John's Wort.",
+    "All other medicines you take — amitriptyline interacts with many, including other antidepressants (especially fluoxetine and paroxetine), tramadol, triptans, certain antibiotics, cold remedies containing pseudoephedrine or phenylephrine, and St John's Wort.",
     "If you are over 65 — doctors usually prefer a different medicine because of falls, confusion, and side effects.",
     "If you have ever had thoughts of harming yourself — this affects the choice of medicine.",
     "If you are pregnant, planning a pregnancy, or breastfeeding.",
@@ -127,7 +127,7 @@ export const amitriptylinePatientGuide: PatientGuide = {
   interactions: amitriptyline.patientMode.interactions,
 
   missedDose:
-    "Take the missed dose as soon as you remember, unless it is within 8 hours of your next dose — in that case, skip it and continue normally. NEVER take a double dose to make up for a missed one — too much amitriptyline at once can affect the heart's rhythm. If you have missed several doses, contact your doctor before restarting.",
+    "Take the missed dose as soon as you remember, unless it is within 8 hours of your next dose — in that case, skip it and continue normally. Never take a double dose to make up for a missed one — too much amitriptyline at once can affect the heart's rhythm. If you have missed several doses, contact your doctor before restarting.",
 
   stopping:
     "Do not stop amitriptyline abruptly — your doctor will taper the dose gradually over several weeks. Sudden stopping can cause rebound symptoms: nausea, sweating, headache, insomnia, and vivid dreams. Never stop on your own, especially not by skipping doses to 'make it last'.",
@@ -151,7 +151,7 @@ export const amitriptylinePatientGuide: PatientGuide = {
   },
 
   keyReminders: [
-    "NEVER take more than the prescribed dose — too much amitriptyline at once can be fatal because of its effect on the heart.",
+    "Never take more than the prescribed dose — too much amitriptyline at once can be fatal because of its effect on the heart.",
     "It is taken at night, at low doses for pain, migraine, or sleep.",
     "Don't drive in the first 1–2 weeks until you know how sleepy it makes you.",
     "Stand up slowly — it can drop your blood pressure when you stand.",

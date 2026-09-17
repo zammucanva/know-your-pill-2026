@@ -71,7 +71,7 @@ export const bupropionPatientGuide: PatientGuide = {
       "Ringing in the ears (tinnitus)",
       "Mild weight loss — usually welcome",
     ],
-    note: "Bupropion does NOT cause the sexual side effects, weight gain, or drowsiness that other antidepressants can. If early jitteriness feels bad, tell your doctor — an SSRI may suit you better.",
+    note: "Bupropion does not cause the sexual side effects, weight gain, or drowsiness that other antidepressants can. If early jitteriness feels bad, tell your doctor — an SSRI may suit you better.",
   },
 
   importantSideEffects: {
@@ -83,7 +83,7 @@ export const bupropionPatientGuide: PatientGuide = {
         whatItMeans:
           "Bupropion lowers the brain's seizure threshold more than other modern antidepressants. At normal doses the risk is rare (about 1 in 1,000), but it rises sharply above the maximum dose — and it is dangerously high in people with epilepsy, eating disorders (anorexia or bulimia), serious head injury, or alcohol withdrawal.",
         whatToDo:
-          "Never exceed the prescribed dose — the maximum is 450 mg a day (XL). Tell your doctor before starting if you have EVER had a seizure, an eating disorder, or drink heavily. If a seizure happens, get emergency help.",
+          "Never exceed the prescribed dose — the maximum is 450 mg a day (XL). Tell your doctor before starting if you have ever had a seizure, an eating disorder, or drink heavily. If a seizure happens, get emergency help.",
       },
       {
         name: "Severe rash or allergic reaction (Stevens-Johnson syndrome)",
@@ -117,7 +117,7 @@ export const bupropionPatientGuide: PatientGuide = {
   },
 
   tellYourDoctor: [
-    "If you have EVER had a seizure, epilepsy, a serious head injury, or an eating disorder (anorexia or bulimia) — bupropion may not be safe for you.",
+    "If you have ever had a seizure, epilepsy, a serious head injury, or an eating disorder (anorexia or bulimia) — bupropion may not be safe for you.",
     "If you drink heavily or are withdrawing from alcohol.",
     "All other medicines you take — bupropion raises the levels of many common drugs (metoprolol and other beta-blockers, certain antidepressants, antipsychotics, some heart-rhythm medicines, tamoxifen); your other doses may need adjusting.",
     "If you have bipolar disorder or psychosis.",

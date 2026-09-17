@@ -109,7 +109,7 @@ export const paroxetinePatientGuide: PatientGuide = {
         whatItMeans:
           "Paroxetine can harm the developing baby, especially in the first three months, and is linked to a higher risk of heart defects.",
         whatToDo:
-          "Use reliable contraception while taking it. If you think you might be pregnant, contact your doctor immediately — but do NOT stop the medicine on your own.",
+          "Use reliable contraception while taking it. If you think you might be pregnant, contact your doctor immediately — but do not stop the medicine on your own.",
       },
       {
         name: "Tamoxifen not working (tamoxifen interaction)",

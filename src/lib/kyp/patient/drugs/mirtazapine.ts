@@ -51,7 +51,7 @@ export const mirtazapinePatientGuide: PatientGuide = {
   },
 
   whenNotice:
-    "Sleep and appetite often improve within DAYS — usually before the mood benefit, which takes 2–4 weeks. If your sleep gets better in the first week but your mood hasn't lifted yet, that is normal — keep taking it.",
+    "Sleep and appetite often improve within days — usually before the mood benefit, which takes 2–4 weeks. If your sleep gets better in the first week but your mood hasn't lifted yet, that is normal — keep taking it.",
 
   timelineShort: "Sleep and appetite in days; mood in 2–4 weeks",
 
@@ -69,7 +69,7 @@ export const mirtazapinePatientGuide: PatientGuide = {
       "Swelling or fluid retention in the feet or ankles",
       "Raised cholesterol and blood fats on long-term use",
     ],
-    note: "Counterintuitive but true: lower doses (7.5–15 mg) are MORE sedating than higher doses (30–45 mg). If you are too drowsy on a low dose, your doctor may increase the dose rather than decrease it.",
+    note: "Counterintuitive but true: lower doses (7.5–15 mg) are more sedating than higher doses (30–45 mg). If you are too drowsy on a low dose, your doctor may increase the dose rather than decrease it.",
   },
 
   importantSideEffects: {
@@ -81,7 +81,7 @@ export const mirtazapinePatientGuide: PatientGuide = {
         whatItMeans:
           "Very rarely (about 1 in 1,000 people), mirtazapine lowers the white blood cells that fight infection — usually in the first 1–3 months. Fever, sore throat, or mouth ulcers can be the first signs.",
         whatToDo:
-          "If you get a fever or sore throat, STOP the medicine and see your doctor the same day for a blood test. It is reversible when caught early — delay is the danger.",
+          "If you get a fever or sore throat, stop the medicine and see your doctor the same day for a blood test. It is reversible when caught early — delay is the danger.",
       },
       {
         name: "Serotonin syndrome",
