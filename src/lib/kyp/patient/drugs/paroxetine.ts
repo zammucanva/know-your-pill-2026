@@ -156,6 +156,10 @@ export const paroxetinePatientGuide: PatientGuide = {
   missedDose:
     "Because paroxetine leaves the body quickly, missing even one or two doses can trigger withdrawal symptoms. Take the missed dose as soon as you remember, unless it is within 8 hours of your next dose — in that case, skip it and continue normally. Do not double up. If you often miss doses, talk to your doctor — a longer-acting antidepressant may suit you better.",
 
+  reviewFlags: [
+    "MEDICAL REVIEW REQUIRED — missedDose: the 8-hour window and the 'a longer-acting antidepressant may suit you better' suggestion are not present in canonical paroxetine content (the 8-hour rule is canonical for several other SSRIs, and fluoxetine substitution is described only for tapers). Verify both elements against the approved source before treating them as verified.",
+  ],
+
   stopping:
     "Never stop paroxetine abruptly. It is the hardest of all SSRIs to stop because its effects wear off quickly between doses. Your doctor will reduce the dose very slowly — for long-term users this is usually over several months, often by no more than 10% every 2–4 weeks. Stopping suddenly can cause severe withdrawal: dizziness, 'brain zaps', nausea, irritability, vivid dreams, and insomnia within a day or two. If symptoms appear, the dose goes back up and then comes down more slowly.",
 

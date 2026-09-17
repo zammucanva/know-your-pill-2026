@@ -133,6 +133,10 @@ export const duloxetinePatientGuide: PatientGuide = {
   missedDose:
     "Take the missed dose as soon as you remember. If it is close to your next dose, skip the missed one — do not double up. Never open or crush a capsule to 'make up' a dose.",
 
+  reviewFlags: [
+    "MEDICAL REVIEW REQUIRED — missedDose: the take-as-soon-as-you-remember / skip-when-close wording is editor-written guidance; canonical duloxetine content contains no missed-dose instructions. Verify the wording against the approved source before treating it as verified.",
+  ],
+
   stopping:
     "Do not stop duloxetine suddenly without medical guidance. Your doctor will taper the dose over at least 2–4 weeks. Stopping suddenly can cause uncomfortable withdrawal-like symptoms — dizziness, 'brain zaps', nausea, and irritability. Withdrawal is less severe than with venlafaxine but still real.",
 

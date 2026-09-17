@@ -128,6 +128,10 @@ export const mirtazapinePatientGuide: PatientGuide = {
   missedDose:
     "Mirtazapine is taken at night. If you forget your night dose and remember the same night, take it. If it is already the next morning, skip the missed dose and take the next one at bedtime as normal — do not double up, and do not take it during the day (it will make you drowsy).",
 
+  reviewFlags: [
+    "MEDICAL REVIEW REQUIRED — missedDose: the night-dose / next-morning-skip wording is editor-written guidance; canonical mirtazapine content contains no missed-dose instructions. Verify the wording against the approved source before treating it as verified.",
+  ],
+
   stopping:
     "Do not stop mirtazapine suddenly without medical guidance — but the good news is its withdrawal is typically milder than with SSRIs (selective serotonin reuptake inhibitors) or SNRIs (serotonin and norepinephrine reuptake inhibitors). A taper over 2–4 weeks is usually enough. For a first episode of depression, treatment usually continues for 6–12 months after you feel better, because stopping earlier raises the risk of the depression coming back.",
 

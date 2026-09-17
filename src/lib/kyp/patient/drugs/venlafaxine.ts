@@ -134,6 +134,10 @@ export const venlafaxinePatientGuide: PatientGuide = {
   missedDose:
     "Because venlafaxine leaves the body within hours, missing even one dose can trigger withdrawal. Take the missed dose as soon as you remember. If it is close to your next dose, contact your doctor or pharmacist for advice rather than doubling up. If you have run out of medicine, call immediately — do not wait through the withdrawal.",
 
+  reviewFlags: [
+    "MEDICAL REVIEW REQUIRED — missedDose: canonical venlafaxine content says never miss a dose and refill at least a week early, but gives no what-to-do-once-missed instructions. The 'contact your doctor or pharmacist for advice rather than doubling up' sentence is editor-written guidance. Verify against the approved source before treating it as verified.",
+  ],
+
   stopping:
     "Never stop venlafaxine suddenly. It has the most severe withdrawal of any antidepressant — symptoms can begin within hours of a missed dose. Your doctor will taper the dose over at least four weeks (longer for high doses), sometimes bridging the final weeks with a small dose of fluoxetine, which leaves the body slowly and smooths the transition. For a first episode of depression, treatment usually continues for 6–12 months after you feel better.",
 
