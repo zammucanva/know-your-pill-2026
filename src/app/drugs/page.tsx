@@ -148,7 +148,7 @@ export default function MedicationLibraryPage() {
               </Reveal>
 
               {category.families.map((family) => (
-                <div key={family.name} id="antidepressants" className="scroll-mt-24">
+                <div key={family.name} id="antidepressants">
                   <Reveal>
                     <h2
                       className="font-serif font-semibold tracking-[-0.02em] text-foreground"
