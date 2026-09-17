@@ -278,10 +278,11 @@
   }
   html {
     scroll-behavior: smooth;
-    /* Offset anchor links so they never hide behind the sticky top stack:
-       fixed global header (h-16 = 4rem) + sticky course lesson strip
-       (~2.5rem incl. border) on medication / disease course pages. */
-    scroll-padding-top: 6.5rem;
+    /* Offset anchor links so they never hide behind the sticky top stack.
+       Measured stuck stack on course pages: fixed header 0–64px +
+       sticky lesson strip 64–105px (h-16 + strip 41px incl. border) →
+       6.75rem (108px) clears it with 3px slack. */
+    scroll-padding-top: 6.75rem;
   }
   body {
     @apply bg-background text-foreground;
