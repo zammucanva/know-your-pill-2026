@@ -67,7 +67,7 @@ export const citalopramPatientGuide: PatientGuide = {
       "Sweating",
       "Loose stools (diarrhoea)",
       "Dizziness",
-      "More chance of cold-like symptoms than with some other antidepressants",
+      "Cold-like symptoms (upper respiratory tract infection) — reported slightly more often than with a placebo in trials",
       "Sexual side effects — lower interest or difficulty reaching orgasm",
     ],
   },

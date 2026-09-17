@@ -85,7 +85,7 @@ export const fluvoxaminePatientGuide: PatientGuide = {
       {
         name: "Dangerous blood-pressure drop with tizanidine",
         whatItMeans:
-          "Tizanidine is a muscle relaxant. Fluvoxamine stops the body from breaking it down, so it builds up and can cause dangerously low blood pressure and excessive sleepiness.",
+          "Tizanidine is a muscle relaxant. Fluvoxamine stops the body from breaking it down, so it builds up and can cause dangerously low blood pressure, a very slow pulse, and fainting.",
         whatToDo:
           "Never take the two together. Make sure every doctor knows you take fluvoxamine before they prescribe anything new.",
       },
