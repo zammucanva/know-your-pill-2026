@@ -99,7 +99,7 @@ export function ResumeBanner({ drugSlug, items }: ResumeBannerProps) {
   return (
     <div
       role="region"
-      aria-label="Resume course"
+      aria-label={mode === "patient" ? "Resume guide" : "Resume course"}
       className="border-b border-brand/20 bg-brand-soft/30"
     >
       <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-3 gap-y-1.5 px-4 py-2 sm:px-6 lg:px-8">
