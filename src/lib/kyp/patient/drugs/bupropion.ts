@@ -34,7 +34,7 @@ export const bupropionPatientGuide: PatientGuide = {
       },
       {
         name: "Sexual side effects from another antidepressant",
-        plain: "Bupropion can be added to an SSRI to reverse the sexual side effects, while keeping the SSRI's benefit.",
+        plain: "Bupropion can be added to an SSRI (selective serotonin reuptake inhibitor) to reverse the sexual side effects, while keeping the SSRI's benefit.",
         status: "off-label",
       },
       {
@@ -131,7 +131,7 @@ export const bupropionPatientGuide: PatientGuide = {
     "Take the missed dose as soon as you remember, unless it is within 4 hours of your next dose — in that case, skip it and continue normally. Do not double up (this raises seizure risk). If it is already late afternoon or evening, skip it and resume the next morning — taking it late can keep you awake.",
 
   stopping:
-    "Bupropion does not cause the 'brain zap' withdrawal that serotonergic antidepressants can — but still talk to your doctor before stopping. They will usually recommend a brief taper over 1–2 weeks, mainly to watch your mood for relapse rather than to prevent withdrawal.",
+    "Bupropion does not cause the 'brain zap' withdrawal that many other antidepressants can — but still talk to your doctor before stopping. They will usually recommend a brief taper over 1–2 weeks, mainly to watch your mood for relapse rather than to prevent withdrawal.",
 
   monitoring: bupropion.patientMode.monitoring,
 

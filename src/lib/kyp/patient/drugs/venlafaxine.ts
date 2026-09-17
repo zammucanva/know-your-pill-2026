@@ -10,7 +10,7 @@ export const venlafaxinePatientGuide: PatientGuide = {
   slug: "venlafaxine",
 
   classInPlainWords:
-    "Venlafaxine is an SNRI (serotonin and norepinephrine reuptake inhibitor) — it affects two brain chemicals instead of one, which is why it can work when an SSRI alone hasn't.",
+    "Venlafaxine is an SNRI (serotonin and norepinephrine reuptake inhibitor) — it affects two brain chemicals instead of one, which is why it can work when an SSRI (selective serotonin reuptake inhibitor) alone hasn't.",
 
   whatIsThis: venlafaxine.patientMode.tagline,
 

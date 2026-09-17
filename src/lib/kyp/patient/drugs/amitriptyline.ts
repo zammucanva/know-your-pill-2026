@@ -82,7 +82,7 @@ export const amitriptylinePatientGuide: PatientGuide = {
         whatItMeans:
           "Amitriptyline can block the heart's electrical conduction. At normal doses this is rare — but even 10 times the prescribed dose can be fatal, which is why doctors prescribe limited supplies.",
         whatToDo:
-          "Never take extra tablets. If palpitations, fainting, or feeling like you might pass out happen, tell your doctor immediately — an ECG will be arranged. If an overdose happens, get emergency help immediately, even if you feel fine at first.",
+          "Never take extra tablets. If you get palpitations (a fast, pounding, or irregular heartbeat), fainting, or feeling like you might pass out, tell your doctor immediately — an ECG (a heart-rhythm tracing) will be arranged. If an overdose happens, get emergency help immediately, even if you feel fine at first.",
       },
       {
         name: "Seizures",
@@ -94,7 +94,7 @@ export const amitriptylinePatientGuide: PatientGuide = {
       {
         name: "Serotonin syndrome",
         whatItMeans:
-          "A rare but serious reaction caused by too much serotonin activity — usually when combined with another medicine that affects serotonin (SSRIs, tramadol, triptans, St John's Wort).",
+          "A rare but serious reaction caused by too much serotonin activity — usually when combined with another medicine that affects serotonin — SSRIs (selective serotonin reuptake inhibitors), tramadol (a strong painkiller), triptans (migraine medicines), or St John's Wort.",
         whatToDo:
           "Get emergency help straight away if you have a high fever with confusion, sweating, shaking, muscle twitching or stiffness, or a fast heartbeat.",
       },

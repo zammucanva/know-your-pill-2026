@@ -87,7 +87,7 @@ export const escitalopramPatientGuide: PatientGuide = {
         whatItMeans:
           "At higher doses, escitalopram can rarely affect the heart's electrical rhythm. In rare cases this can trigger a serious rhythm problem (torsades de pointes). This is why the dose is capped at 20 mg a day for most adults, and 10 mg a day if you are over 60 or take certain other medicines.",
         whatToDo:
-          "Contact your doctor promptly if you feel faint, have palpitations, or a racing or irregular heartbeat. If you have risk factors, your doctor may check an ECG.",
+          "Contact your doctor promptly if you feel faint, have palpitations, or a racing or irregular heartbeat. If you have risk factors, your doctor may check an ECG (a heart-rhythm tracing).",
       },
       {
         name: "Serotonin syndrome",

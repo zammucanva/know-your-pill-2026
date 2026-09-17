@@ -76,7 +76,7 @@ export const clomipraminePatientGuide: PatientGuide = {
         whatItMeans:
           "Clomipramine can block the heart's electrical conduction. At normal doses this is rare — but even 10 times the prescribed dose can be fatal, which is why doctors prescribe limited supplies.",
         whatToDo:
-          "Never take extra tablets. If palpitations, fainting, or feeling like you might pass out happen, tell your doctor immediately — an ECG will be arranged. If an overdose happens, get emergency help immediately, even if you feel fine at first.",
+          "Never take extra tablets. If you get palpitations (a fast, pounding, or irregular heartbeat), fainting, or feeling like you might pass out, tell your doctor immediately — an ECG (a heart-rhythm tracing) will be arranged. If an overdose happens, get emergency help immediately, even if you feel fine at first.",
       },
       {
         name: "Seizures (more than with similar medicines)",
@@ -88,7 +88,7 @@ export const clomipraminePatientGuide: PatientGuide = {
       {
         name: "Serotonin syndrome",
         whatItMeans:
-          "A rare but serious reaction caused by too much serotonin activity — more likely than with similar medicines because clomipramine is the strongest serotonin booster in its class. Combining with SSRIs, tramadol, triptans, or St John's Wort raises the danger.",
+          "A rare but serious reaction caused by too much serotonin activity — more likely than with similar medicines because clomipramine is the strongest serotonin booster in its class. Combining with SSRIs (selective serotonin reuptake inhibitors), tramadol (a strong painkiller), triptans (migraine medicines), or St John's Wort raises the danger.",
         whatToDo:
           "Get emergency help straight away if you have a high fever with confusion, sweating, shaking, muscle twitching or stiffness, or a fast heartbeat.",
       },

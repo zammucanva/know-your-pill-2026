@@ -79,9 +79,9 @@ export const citalopramPatientGuide: PatientGuide = {
       {
         name: "Heart rhythm change (QTc prolongation) and torsades de pointes",
         whatItMeans:
-          "Citalopram can lengthen the heart's electrical recovery time (the QT interval on an ECG). In rare cases this triggers a dangerous irregular heartbeat called torsades de pointes. The risk rises with higher doses — which is why the maximum is 40 mg a day for most adults and 20 mg a day if you are over 60 or take certain other medicines.",
+          "Citalopram can lengthen the heart's electrical recovery time — the QT interval seen on an ECG (a heart-rhythm tracing). In rare cases this triggers a dangerous irregular heartbeat called torsades de pointes. The risk rises with higher doses — which is why the maximum is 40 mg a day for most adults and 20 mg a day if you are over 60 or take certain other medicines.",
         whatToDo:
-          "Get emergency help for palpitations, fainting, or near-fainting. Tell your doctor if you have heart problems, low potassium or magnesium, or take other heart-rhythm medicines.",
+          "Get emergency help for palpitations (a fast, pounding, or irregular heartbeat), fainting, or near-fainting. Tell your doctor if you have heart problems, low potassium or magnesium, or take other heart-rhythm medicines.",
       },
       {
         name: "Serotonin syndrome",
