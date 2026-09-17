@@ -236,7 +236,7 @@ export function HeroIdentityCard({ drug, guide }: HeroIdentityCardProps) {
           </div>
           <div className="flex items-baseline justify-between gap-2">
             <dt className="text-muted-foreground">Type</dt>
-            <dd className="font-medium text-brand">{drug.drugClassLabel}</dd>
+            <dd className="font-medium text-brand-ink">{drug.drugClassLabel}</dd>
           </div>
         </dl>
       </div>
@@ -272,7 +272,7 @@ export function HeroIdentityCard({ drug, guide }: HeroIdentityCardProps) {
 
       <p className="text-xs text-muted-foreground leading-relaxed">
         {PATIENT_HERO_LABELS.plainLanguageNote}{" "}
-        <a href="#patient-education" className="text-brand underline underline-offset-2">
+        <a href="#patient-education" className="text-brand-ink underline underline-offset-2">
           Read the full guide below.
         </a>
       </p>

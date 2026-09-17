@@ -282,7 +282,7 @@ export function PatientGuideSection({ drug, guide }: PatientGuideSectionProps) {
                   key={reminder}
                   className="flex items-start gap-3 rounded-lg border border-border/60 bg-card px-4 py-3"
                 >
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-success/15 font-mono text-xs font-semibold text-success">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-success/15 font-mono text-xs font-semibold text-foreground">
                     {i + 1}
                   </span>
                   <p className="text-body-sm text-foreground/90 leading-relaxed pt-0.5">
