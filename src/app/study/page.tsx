@@ -15,21 +15,23 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
 import { ContinueStudying } from "@/components/kyp/sections/study/continue-studying";
+import { StudyHeroActions } from "@/components/kyp/sections/study/study-hero-actions";
 import { drugs } from "@/lib/kyp/data";
 
 /**
- * /study — Study Mode.
+ * /study — Study Mode: the single unified learning hub.
  *
- * ACTIVE LEARNING, not browsing and not assessment-only:
- *   Study Mode → Study Medications → choose a medication → the
- *   existing medication course page (objectives, checkpoints,
- *   micro-quizzes, active recall) → Practice → Review → Progress.
+ * One learning system, two stages:
+ *   LEARN — build knowledge: Continue Learning, medication courses,
+ *           learning progress (real, from kyp:progress:v1)
+ *   PRACTICE — test knowledge: Quick MCQs, Custom Test, practice history
  *
  * This page is a routing and orientation layer ONLY. It reuses:
  *   - the canonical drug registry (no second medication array)
  *   - the existing medication course pages at /drugs/[slug]
  *   - the existing practice engine at /quiz
- *   - the existing progress plumbing (/api/progress)
+ *   - the existing custom test at /quiz/custom
+ *   - the existing progress plumbing (one store, separate namespaces)
  * It creates no duplicate quiz engine, progress engine, or data.
  *
  * Works entirely without search — every medication is reachable by
@@ -39,7 +41,7 @@ import { drugs } from "@/lib/kyp/data";
 export const metadata: Metadata = {
   title: "Study Mode · Know Your Pill",
   description:
-    "Active learning for the 12 canonical psychiatric medications — choose a medication, work through its course, test yourself, and continue where you left off.",
+    "One learning system — build knowledge with guided medication courses, then test it with MCQs and custom tests. Continue exactly where you left off.",
   keywords: [
     "study mode",
     "active learning",
@@ -96,31 +98,17 @@ export default function StudyPage() {
                 Study Mode
               </h1>
               <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground leading-relaxed">
-                This is active learning, not browsing. Choose a medication and
-                work through it like a course — learning objectives, guided
-                lessons, checkpoints, and active recall — then test yourself
-                and pick up exactly where you left off next time.
+                Learn. Practice. Continue where you left off. Choose a
+                medication and work through it like a course — learning
+                objectives, guided lessons, checkpoints, and active recall —
+                then test yourself and pick up exactly where you left off
+                next time.
               </p>
             </Reveal>
 
-            <Reveal delay={0.12}>
-              <div className="mt-10 flex flex-wrap gap-3">
-                <Link
-                  href="#medications"
-                  className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
-                >
-                  Study Medications
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-                <Link
-                  href="/quiz"
-                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
-                >
-                  Practice MCQs
-                  <Zap className="h-4 w-4" />
-                </Link>
-              </div>
-            </Reveal>
+            {/* Progress-aware CTAs — Continue Learning / Start Learning,
+                driven by the real local progress store. */}
+            <StudyHeroActions />
 
             {/* Real stats — one inline line, no cards */}
             <Reveal delay={0.2}>
@@ -141,6 +129,9 @@ export default function StudyPage() {
             </Reveal>
           </Container>
         </Section>
+
+        {/* ===== CONTINUE LEARNING (real progress only — omitted if none) ===== */}
+        <ContinueStudying />
 
         {/* ===== HOW STUDY MODE WORKS ===== */}
         <Section spacing="relaxed" className="border-t border-border/30">
@@ -206,6 +197,37 @@ export default function StudyPage() {
                 </Reveal>
               ))}
             </div>
+          </Container>
+        </Section>
+
+        {/* ===== LEARN ===== */}
+        <Section id="medications" spacing="relaxed" className="border-t border-border/30">
+          <Container>
+            <Reveal>
+              <div className="flex flex-wrap items-end justify-between gap-6">
+                <div className="max-w-xl">
+                  <p className="text-overline text-brand mb-3">Learn</p>
+                  <h2
+                    className="font-serif font-semibold tracking-[-0.02em] text-foreground"
+                    style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)" }}
+                  >
+                    Study Medications
+                  </h2>
+                  <p className="mt-4 text-body-sm text-muted-foreground leading-relaxed">
+                    Build your medical knowledge through guided medication
+                    courses and structured learning — objectives,
+                    checkpoints, and active recall in every course.
+                  </p>
+                </div>
+                <Link
+                  href="/dashboard"
+                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                >
+                  <LineChart className="h-4 w-4" />
+                  My progress
+                </Link>
+              </div>
+            </Reveal>
           </Container>
         </Section>
 
@@ -285,9 +307,6 @@ export default function StudyPage() {
             </Section>
           );
         })}
-
-        {/* ===== CONTINUE STUDYING (real progress only — omitted if none) ===== */}
-        <ContinueStudying />
 
         {/* ===== PRACTICE / PROGRESS CTA ===== */}
         <Section spacing="relaxed" className="border-t border-border/30">
