@@ -220,8 +220,10 @@ export default function CustomTestPage() {
           <Section spacing="relaxed">
             <Container>
               <Reveal>
-                {/* Breadcrumb */}
+                {/* Breadcrumb — Custom Test lives inside Practice, inside Study Mode */}
                 <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs text-muted-foreground">
+                  <Link href="/study" className="hover:text-brand">Study Mode</Link>
+                  <span aria-hidden>›</span>
                   <Link href="/quiz" className="hover:text-brand">Practice</Link>
                   <span aria-hidden>/</span>
                   <span className="font-medium text-foreground">Custom Test</span>

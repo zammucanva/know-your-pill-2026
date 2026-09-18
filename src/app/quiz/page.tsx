@@ -150,6 +150,17 @@ export default function QuizPage() {
           <Section spacing="relaxed">
             <Container>
               <Reveal>
+                {/* Orientation — Practice lives inside Study Mode */}
+                <nav
+                  aria-label="Breadcrumb"
+                  className="mb-6 flex items-center gap-2 text-xs text-muted-foreground"
+                >
+                  <Link href="/study" className="hover:text-brand">
+                    Study Mode
+                  </Link>
+                  <span aria-hidden>›</span>
+                  <span aria-current="page">Practice</span>
+                </nav>
                 <p className="text-overline text-brand mb-6">Practice</p>
                 <h1
                   className="font-serif font-semibold tracking-[-0.03em] text-foreground leading-[0.95]"
