@@ -21,6 +21,7 @@ import {
   getPoolStats,
   isShuffleSafe,
 } from "@/lib/kyp/custom-test/engine";
+import { deriveRequestedCount } from "@/lib/kyp/custom-test/count";
 import { TEMPLATE_IDS, TEMPLATES } from "@/lib/kyp/custom-test/templates";
 import { createRng, seedFromString } from "@/lib/kyp/custom-test/rng";
 import { drugs } from "@/lib/kyp/data/drugs/index";
@@ -224,5 +225,48 @@ describe("custom test — source grounding anchors", () => {
     const buckets = [0, 0, 0];
     for (let i = 0; i < 300; i++) buckets[rng.int(3)]++;
     expect(buckets.every((b) => b > 50)).toBe(true);
+  });
+});
+
+describe("custom test — requested-count derivation (crash regression)", () => {
+  // Regression for the 51a327a crash: "0"/"-5"/"" typed into the Custom
+  // question-count input used to pass through parseInt unclamped, reach
+  // buildTest, and produce an empty attempt — the Test phase then read
+  // `questions[index].source` on undefined and blanked the page. The
+  // derivation is now clamped to >= 1, and Start Test is disabled whenever
+  // the effective requested count is not a finite number >= 1.
+  test('"0", "-5" and "" never yield an effective count below 1', () => {
+    for (const raw of ["0", "-5", ""]) {
+      const requested = deriveRequestedCount(raw, 20);
+      expect(Number.isFinite(requested)).toBe(true);
+      expect(requested).toBeGreaterThanOrEqual(1);
+    }
+  });
+
+  test("sub-1 custom input is clamped to 1, preserving a usable test", () => {
+    expect(deriveRequestedCount("0", 20)).toBe(1);
+    expect(deriveRequestedCount("-5", 20)).toBe(1);
+    expect(deriveRequestedCount("1", 20)).toBe(1);
+    expect(deriveRequestedCount("12", 20)).toBe(12);
+  });
+
+  test("empty or whitespace input falls back to the selected preset", () => {
+    expect(deriveRequestedCount("", 10)).toBe(10);
+    expect(deriveRequestedCount("", 100)).toBe(100);
+    expect(deriveRequestedCount("   ", 30)).toBe(30);
+  });
+
+  test("unparseable input stays NaN so Start Test stays disabled", () => {
+    expect(Number.isFinite(deriveRequestedCount("abc", 20))).toBe(false);
+  });
+
+  test("end to end: a valid selection plus degenerate input never builds a zero-length attempt", () => {
+    const selection = ["sertraline", "fluoxetine"];
+    expect(getPoolStats(selection).total).toBeGreaterThan(0);
+    for (const raw of ["0", "-5", ""]) {
+      const wanted = deriveRequestedCount(raw, 20);
+      const built = buildTest(selection, wanted, 42);
+      expect(built.questions.length).toBeGreaterThanOrEqual(1);
+    }
   });
 });

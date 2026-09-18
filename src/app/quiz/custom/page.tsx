@@ -23,6 +23,7 @@ import { Reveal } from "@/components/kyp/ui/reveal";
 import { cn } from "@/lib/utils";
 import { drugTaxonomyClasses } from "@/lib/kyp/data/drug-taxonomy";
 import { buildTest, getPoolStats, isShuffleSafe } from "@/lib/kyp/custom-test/engine";
+import { deriveRequestedCount } from "@/lib/kyp/custom-test/count";
 import type { TestQuestion } from "@/lib/kyp/custom-test/types";
 import { recordCustomTestAttempt } from "@/lib/kyp/progress/progress-store";
 
@@ -77,8 +78,9 @@ export default function CustomTestPage() {
   );
 
   const selectedCount = selected.size;
-  const requestedCount =
-    customCount.trim() !== "" ? parseInt(customCount, 10) : count;
+  // Clamped, crash-safe derivation — "0"/negative/unparseable input can
+  // never reach buildTest (see lib/kyp/custom-test/count.ts).
+  const requestedCount = deriveRequestedCount(customCount, count);
 
   /* ── Selection helpers ── */
   const toggleMedication = (slug: string) => {
@@ -423,7 +425,11 @@ export default function CustomTestPage() {
                   <button
                     type="button"
                     onClick={startTest}
-                    disabled={selectedCount === 0 || stats.total === 0}
+                    disabled={
+                      selectedCount === 0 ||
+                      stats.total === 0 ||
+                      !(Number.isFinite(requestedCount) && requestedCount >= 1)
+                    }
                     className="inline-flex items-center gap-2 rounded-lg bg-brand px-6 py-3.5 text-base font-semibold text-primary-foreground transition-colors hover:bg-brand/90 disabled:cursor-not-allowed disabled:opacity-40 kyp-focus-ring"
                   >
                     <Zap className="h-5 w-5" />
