@@ -3,6 +3,7 @@ import Link from "next/link";
 import {
   ArrowRight,
   Zap,
+  ListChecks,
   CheckCircle2,
   RefreshCw,
   LineChart,
@@ -16,6 +17,7 @@ import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
 import { ContinueStudying } from "@/components/kyp/sections/study/continue-studying";
 import { StudyHeroActions } from "@/components/kyp/sections/study/study-hero-actions";
+import { PracticeStatsLine } from "@/components/kyp/sections/study/practice-stats-line";
 import { drugs } from "@/lib/kyp/data";
 
 /**
@@ -308,41 +310,85 @@ export default function StudyPage() {
           );
         })}
 
-        {/* ===== PRACTICE / PROGRESS CTA ===== */}
-        <Section spacing="relaxed" className="border-t border-border/30">
+        {/* ===== PRACTICE ===== */}
+        <Section id="practice" spacing="relaxed" className="border-t border-border/30">
           <Container>
             <Reveal>
-              <div className="flex flex-wrap items-end justify-between gap-6 border-b border-border/40 pb-10">
-                <div className="max-w-xl">
-                  <h2
-                    className="font-serif font-semibold tracking-tight text-foreground"
-                    style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)" }}
-                  >
-                    Finished a course? Close the loop.
-                  </h2>
-                  <p className="mt-3 text-body-sm text-muted-foreground leading-relaxed">
-                    Test what you just learned in the Practice hub, then check
-                    your dashboard to see every course you have studied.
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-3">
+              <p className="text-overline text-muted-foreground mb-3">
+                Practice
+              </p>
+              <h2
+                className="mb-4 font-serif font-semibold tracking-[-0.02em] text-foreground"
+                style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)" }}
+              >
+                Test what you know
+              </h2>
+              <p className="mb-12 max-w-2xl text-body-sm text-muted-foreground leading-relaxed">
+                The second half of Study Mode. Practice is open from the
+                start — no course required — with immediate feedback and
+                explanations on every question.
+              </p>
+            </Reveal>
+
+            <div className="space-y-px">
+              <Reveal>
+                <div className="group flex items-start gap-6 border-b border-border/15 py-5">
+                  <Zap
+                    className="mt-0.5 h-4 w-4 shrink-0 text-brand"
+                    strokeWidth={1.75}
+                    aria-hidden
+                  />
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-serif text-lg font-semibold text-foreground">
+                      Quick MCQs
+                    </h3>
+                    <p className="mt-1 max-w-3xl text-body-sm text-muted-foreground/80 leading-relaxed">
+                      Test yourself with existing question sets — every one
+                      of the {totalQuestions} library questions with
+                      immediate feedback and a one-line explanation for each
+                      answer.
+                    </p>
+                  </div>
                   <Link
                     href="/quiz"
-                    className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
+                    className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
                   >
-                    <Zap className="h-4 w-4" />
-                    Practice MCQs
-                  </Link>
-                  <Link
-                    href="/dashboard"
-                    className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
-                  >
-                    <LineChart className="h-4 w-4" />
-                    My progress
+                    Start Practice
+                    <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
-              </div>
-            </Reveal>
+              </Reveal>
+
+              <Reveal delay={0.05}>
+                <div className="flex items-start gap-6 border-b border-border/15 py-5 last:border-0">
+                  <ListChecks
+                    className="mt-0.5 h-4 w-4 shrink-0 text-brand"
+                    strokeWidth={1.75}
+                    aria-hidden
+                  />
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-serif text-lg font-semibold text-foreground">
+                      Custom Test
+                    </h3>
+                    <p className="mt-1 max-w-3xl text-body-sm text-muted-foreground/80 leading-relaxed">
+                      Build a test from the topics you choose — pick the
+                      medications, pick the length, then review what you got
+                      wrong.
+                    </p>
+                  </div>
+                  <Link
+                    href="/quiz/custom"
+                    className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                  >
+                    Build your own test
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </Reveal>
+            </div>
+
+            {/* Real practice history — omitted when nothing has been run */}
+            <PracticeStatsLine />
           </Container>
         </Section>
       </main>
