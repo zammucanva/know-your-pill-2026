@@ -24,6 +24,7 @@ export * from "./drug-comparison-tables";
 export * from "./drug-related-drugs";
 export * from "./drug-faq";
 export * from "./drug-knowledge-graph";
+export * from "./medical-knowledge-chain";
 export * from "./drug-references";
 export * from "./drug-prev-next";
 export * from "./drug-indian-practice";
