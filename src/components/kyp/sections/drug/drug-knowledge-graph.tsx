@@ -7,6 +7,7 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { Badge } from "@/components/kyp/ui/badge";
+import { MedicalKnowledgeChain } from "@/components/kyp/sections/drug/medical-knowledge-chain";
 import type { Drug, KnowledgeGraphNode } from "@/lib/kyp/data";
 import { linkPath } from "@/lib/kyp/image-path";
 import { cn } from "@/lib/utils";
@@ -92,6 +93,15 @@ export function DrugKnowledgeGraph({ drug }: DrugKnowledgeGraphProps) {
               </p>
             </div>
           )}
+        </div>
+
+        {/* Knowledge chain — the evidence-backed derivation of the same
+            relationships as structured rows (recovered feature). Rendered
+            inside the Knowledge Graph section; derives everything from
+            the canonical knowledge graph, so it can never drift from the
+            data layer. */}
+        <div className="mx-auto mt-2 max-w-3xl">
+          <MedicalKnowledgeChain drugSlug={drug.slug} />
         </div>
       </Container>
     </Section>
