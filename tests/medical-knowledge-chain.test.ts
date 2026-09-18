@@ -291,7 +291,14 @@ describe("knowledge chain — rendered row contract (buildKnowledgeChainRows)", 
         "monitoring",
       ]);
       for (const row of rowsFor(slug)) {
-        expect(row.chips.length).toBeGreaterThan(0);
+        // The mechanism row is the text row (chips empty by design);
+        // every other row renders at least one element.
+        if (row.key === "mechanism") {
+          expect(row.chips).toEqual([]);
+          expect(row.text?.length).toBeGreaterThan(0);
+        } else {
+          expect(row.chips.length).toBeGreaterThan(0);
+        }
       }
     }
   });
@@ -300,36 +307,80 @@ describe("knowledge chain — rendered row contract (buildKnowledgeChainRows)", 
     const bup = rowsFor("bupropion");
     const mc = bup[0];
     expect(mc.chips[0].label).toBe("Bupropion");
+    expect(mc.chips[0].badge?.label).toBe("NDRI");
+    expect(mc.chips[0].subtext).toBe("Norepinephrine-Dopamine Reuptake Inhibitor");
     expect(mc.chips[0].href).toBe("/drugs/bupropion");
     expect(mc.chips[1].label).toBe("NDRI");
+    expect(mc.chips[1].subtext).toBe("Norepinephrine-Dopamine Reuptake Inhibitor");
     expect(mc.chips[1].href).toBe("/drugs/class/ndri");
   });
 
-  test("mechanism row carries the primary target text with gene symbols (QA evidence)", () => {
+  test("bupropion renders the Stimulant substance-class card; sertraline does not (QA evidence)", () => {
+    // bupropion.drugClass === "stimulant" — the drug's own field,
+    // resolved against the canonical classes registry (never invented).
+    const bup = getDrugKnowledgeChain("bupropion")!;
+    expect(bup.substanceClass).not.toBeNull();
+    expect(bup.substanceClass!.name).toBe("Stimulant");
+    expect(bup.substanceClass!.description).toBe(
+      "Increases catecholamine activity — producing alertness, euphoria, tachycardia, and crash."
+    );
+    const mc = rowsFor("bupropion")[0];
+    const stimulant = mc.chips.find((c) => c.label === "Stimulant");
+    expect(stimulant).toBeDefined();
+    expect(stimulant?.subtext).toBe(bup.substanceClass!.description);
+    expect(stimulant?.href).toBeUndefined(); // no destination — registry-only card
+
+    // SSRIs resolve to the registry's SSRI entry but the row DEDUPES it —
+    // the substance-class name matches the class card label, so no third
+    // card renders (QA evidence: sertraline shows exactly two cards).
+    const ser = getDrugKnowledgeChain("sertraline")!;
+    expect(ser.substanceClass?.name).toBe("SSRI");
+    expect(rowsFor("sertraline")[0].chips.length).toBe(2);
+  });
+
+  test("mechanism row is the verbatim primary target text — text only, no action chips (QA evidence)", () => {
     const bup = rowsFor("bupropion");
     const mech = bup.find((r) => r.key === "mechanism")!;
     expect(mech.text).toContain("SLC6A2");
     expect(mech.text).toContain("SLC6A3");
-    // Derived action chips render human labels with machine ids as meta.
-    const reuptake = mech.chips.find((c) => c.meta === "reuptake-inhibition");
-    expect(reuptake?.label).toBe("Reuptake inhibition");
+    expect(mech.chips).toEqual([]);
+    // Mechanism-level actions remain API data (chain.drug.mechanism.actions)
+    // but are never rendered as row elements.
+    expect(getDrugKnowledgeChain("bupropion")!.drug.mechanism.actions).toContain(
+      "reuptake-inhibition"
+    );
   });
 
-  test("molecular-target chips carry kind badges and action meta (QA evidence)", () => {
+  test("molecular-target cards carry full names, kind badges, action-id subtext (QA evidence)", () => {
     const bup = rowsFor("bupropion");
     const targets = bup.find((r) => r.key === "molecular-targets")!;
-    const net = targets.chips.find((c) => c.label === "NET");
-    expect(net?.badge?.label).toBe("Transporter");
-    expect(net?.meta).toContain("Reuptake inhibition");
-    // Nicotinic receptors are Receptors with antagonism meta.
-    const nachr = targets.chips.find((c) => c.label === "α3β4 nAChR");
-    expect(nachr?.badge?.label).toBe("Receptor");
-    expect(nachr?.meta).toContain("Receptor antagonism");
-    // SERT chip carries the negligible-affinity action for bupropion.
-    const sert = targets.chips.find((c) => c.label === "SERT");
-    expect(sert?.meta).toContain("Negligible affinity");
-    // Every chip preserves verbatim evidence in its tooltip title.
+    // QA: "NET (norepinephrine transporter)" + transporter pill +
+    // "reuptake-inhibition" subtext.
+    const net = targets.chips.find((c) => c.label === "NET (norepinephrine transporter)");
+    expect(net).toBeDefined();
+    expect(net?.badge?.label).toBe("transporter");
+    expect(net?.subtext).toBe("reuptake-inhibition");
     expect(net?.title).toContain("norepinephrine transporter");
+    // Nicotinic receptors: kind pill + antagonism subtext; short label
+    // without a redundant parenthetical (name is an abbreviation of the
+    // full name).
+    const nachr = targets.chips.find((c) => c.label.startsWith("α3β4"));
+    expect(nachr?.badge?.label).toBe("receptor");
+    expect(nachr?.subtext).toBe("receptor-antagonism");
+    expect(nachr?.label).not.toContain("(");
+    // Bupropion's SERT is a negligible-affinity edge — graph data, but NOT
+    // a target card (QA evidence: "NO clinically meaningful SERT affinity"
+    // stays in the mechanism text; the card row lists NET, DAT, receptors).
+    const sertCard = targets.chips.find((c) => c.label.startsWith("SERT"));
+    expect(sertCard).toBeUndefined();
+    // Sertraline QA: "SERT (serotonin transporter)" + transporter pill +
+    // "reuptake-inhibition" subtext — a real target, rendered as a card.
+    const serTargets = rowsFor("sertraline").find((r) => r.key === "molecular-targets")!;
+    const serSert = serTargets.chips.find(
+      (c) => c.label === "SERT (serotonin transporter)"
+    );
+    expect(serSert?.badge?.label).toBe("transporter");
+    expect(serSert?.subtext).toBe("reuptake-inhibition");
   });
 
   test("neurotransmitter chips carry abbreviation badges (QA: NE / DA / Ach)", () => {
@@ -341,14 +392,15 @@ describe("knowledge chain — rendered row contract (buildKnowledgeChainRows)", 
     expect(badges).toContain("Ach");
   });
 
-  test("pathway chips render origin → termination (QA: VTA → Nucleus Accumbens)", () => {
+  test("pathway cards render the pathway name with origin → termination subtext (QA evidence)", () => {
     const bup = rowsFor("bupropion");
     const pathways = bup.find((r) => r.key === "neural-pathways")!;
-    expect(
-      pathways.chips.some((c) =>
-        c.label.startsWith("Ventral Tegmental Area (VTA) → Nucleus Accumbens")
-      )
-    ).toBe(true);
+    const mesolimbic = pathways.chips.find((c) => c.label === "Mesolimbic Pathway");
+    expect(mesolimbic).toBeDefined();
+    expect(mesolimbic?.subtext).toBe(
+      "Ventral Tegmental Area (VTA) → Nucleus Accumbens"
+    );
+    expect(mesolimbic?.title).toContain("Reward");
     // SSRIs have no named dopamine pathways — the row disappears
     // entirely for sertraline (data-driven omission).
     expect(rowKeysFor("sertraline")).not.toContain("neural-pathways");

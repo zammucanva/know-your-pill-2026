@@ -28,6 +28,7 @@
 import { drugs } from "../data/drugs/index";
 import { diseases } from "../data/diseases/index";
 import { brainRegions, pathways } from "../data/brain";
+import { drugClasses } from "../data/classes";
 import type {
   Drug,
   BrainRegion,
@@ -351,7 +352,23 @@ export interface DrugKnowledgeChain {
   slug: string;
   genericName: string;
   drug: DrugKnowledgeChainDrug;
-  class: { label: string };
+  class: {
+    label: string;
+    /** Registry full name, e.g. "Norepinephrine-Dopamine Reuptake Inhibitor". */
+    fullName: string;
+  };
+  /**
+   * The drug's own `drugClass` (substance-class registry id) resolved
+   * against the canonical classes registry — present only for drugs the
+   * registry covers (e.g. bupropion → Stimulant). Null when the id has
+   * no registry entry (SSRIs etc. are medication classes, not substance
+   * classes) — never fabricated.
+   */
+  substanceClass: {
+    id: string;
+    name: string;
+    description: string;
+  } | null;
   targets: { id: string; name: string; kind: TargetKind; drugCount: number }[];
   neurotransmitters: { id: string; name: string; abbreviation: string }[];
   brainRegions: KnowledgeChainBrainRegion[];
@@ -427,15 +444,28 @@ function resolveNeurotransmitter(text: string): KnowledgeNeurotransmitter | null
 
 /**
  * Derive the action ids a drug exerts on a target FROM THE EVIDENCE TEXT.
- * Ordering is documented in entities/mechanism-actions.ts — notably
- * "negligible" must outrank "transporter/inhibitor" patterns.
+ *
+ * Two-tier rule (see entities/mechanism-actions.ts for the vocabulary):
+ *   1. PRIMARY evidence (the drug's molecular-target field or the
+ *      target's own receptor string) stating "negligible" qualifies the
+ *      relationship exclusively — the edge is negligible-affinity, full
+ *      stop. Bupropion's SERT entry is the canonical case.
+ *   2. Otherwise actions derive from ALL evidence (primary +
+ *      corroborating summary sentences). Corroborating sentences can
+ *      ADD actions (sertraline's "selectively blocks" earns its SERT
+ *      edge reuptake-inhibition) but can never trigger the negligible
+ *      override — "…with negligible effect on serotonin" in a sentence
+ *      that also names NET must not flip NET.
  */
-function deriveActions(evidence: string[], kind: TargetKind): string[] {
+function deriveActions(evidence: string[], primaryEvidence: string[], kind: TargetKind): string[] {
+  const primary = primaryEvidence.join(" ").toLowerCase();
+  if (primary.includes("negligible")) {
+    return ["negligible-affinity"];
+  }
   const joined = evidence.join(" ").toLowerCase();
   const has = (needle: string) => joined.includes(needle);
   const actions: string[] = [];
 
-  if (has("negligible")) actions.push("negligible-affinity");
   if (has("antagonist") || has("antagonism") || has("antagonis")) {
     actions.push("receptor-antagonism");
   }
@@ -504,6 +534,10 @@ export function getDrugKnowledgeChain(slug: string): DrugKnowledgeChain | null {
 
   /* ── Target edges (receptors + primary molecularTarget, merged) ── */
   const edges = new Map<string, TargetEdge>();
+  // Edge-creating evidence per target — the strings whose head names the
+  // target (primary molecular-target field + the target's own receptor
+  // strings). Corroborating summary sentences land only in edge.evidence.
+  const primaryEvidence = new Map<string, string[]>();
   const unresolvedTargetTexts: string[] = [];
 
   const addTargetEvidence = (text: string, fromPrimary: boolean, targets: KnowledgeTarget[]) => {
@@ -512,6 +546,12 @@ export function getDrugKnowledgeChain(slug: string): DrugKnowledgeChain | null {
       return;
     }
     for (const target of targets) {
+      const list = primaryEvidence.get(target.id);
+      if (list) {
+        if (!list.includes(text)) list.push(text);
+      } else {
+        primaryEvidence.set(target.id, [text]);
+      }
       const existing = edges.get(target.id);
       if (existing) {
         if (!existing.evidence.includes(text)) existing.evidence.push(text);
@@ -567,10 +607,15 @@ export function getDrugKnowledgeChain(slug: string): DrugKnowledgeChain | null {
     }
   }
 
-  // Derive actions per edge from its evidence.
+  // Derive actions per edge from its evidence (two-tier negligible rule
+  // — see deriveActions).
   for (const edge of edges.values()) {
     const target = knowledgeGraph.targets.get(edge.targetId);
-    edge.actions = deriveActions(edge.evidence, target?.kind ?? "receptor");
+    edge.actions = deriveActions(
+      edge.evidence,
+      primaryEvidence.get(edge.targetId) ?? [],
+      target?.kind ?? "receptor"
+    );
   }
 
   // Stable order: transporters first (registry order), then receptors,
@@ -686,7 +731,19 @@ export function getDrugKnowledgeChain(slug: string): DrugKnowledgeChain | null {
       unresolvedTargetTexts,
       unresolvedNeurotransmitterTexts,
     },
-    class: { label: drug.drugClassLabel },
+    class: {
+      label: drug.drugClassLabel,
+      fullName: drug.drugClassFullName,
+    },
+    substanceClass: (() => {
+      const registry = drugClasses[drug.drugClass];
+      if (!registry) return null;
+      return {
+        id: registry.id,
+        name: registry.name,
+        description: registry.description,
+      };
+    })(),
     targets,
     neurotransmitters: nts,
     brainRegions: brainRegionEntities,

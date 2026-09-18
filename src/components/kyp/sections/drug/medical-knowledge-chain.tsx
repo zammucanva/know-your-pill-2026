@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { ArrowRight, Link2 } from "lucide-react";
 import type { DrugKnowledgeChain } from "@/lib/kyp/knowledge";
-import { getMechanismActionLabel, knowledgeGraph } from "@/lib/kyp/knowledge";
+import { knowledgeGraph } from "@/lib/kyp/knowledge";
 import { drugClassIdFromLabel } from "@/lib/kyp/data/drug-taxonomy";
 import { cn } from "@/lib/utils";
 import { getDrugKnowledgeChain } from "@/lib/kyp/knowledge";
@@ -14,10 +14,11 @@ import { getDrugKnowledgeChain } from "@/lib/kyp/knowledge";
  * chain of rows (recovered feature: "Knowledge chain").
  *
  * Every row is DERIVED from the canonical knowledge graph
- * (src/lib/kyp/knowledge) — never hand-authored per drug. Every chip
- * carries its badge (entity kind), its meta (derived action), and a
- * tooltip title preserving the verbatim evidence string, so the UI can
- * never drift from the locked data layer.
+ * (src/lib/kyp/knowledge) — never hand-authored per drug. Entity rows
+ * render as cards (label + kind badge + subtext), simple associations
+ * render as chips; every element carries a tooltip title preserving
+ * the verbatim evidence string, so the UI can never drift from the
+ * locked data layer.
  *
  * buildKnowledgeChainRows(chain) is exported as a PURE function so the
  * test suite can pin the row contract without React.
@@ -29,9 +30,15 @@ import { getDrugKnowledgeChain } from "@/lib/kyp/knowledge";
 
 export interface KnowledgeChainChip {
   label: string;
-  /** Small categorical badge on the chip — e.g. "Transporter". */
+  /** Small categorical badge on the element — e.g. "transporter". */
   badge?: { label: string };
-  /** Inline meta text — e.g. the derived action label. */
+  /**
+   * Subtext rendered beneath the label — present on card-variant
+   * elements (full names, action ids, origin → termination, class
+   * descriptions).
+   */
+  subtext?: string;
+  /** Inline meta text — e.g. a frequency label. */
   meta?: string;
   /** Clickable destination (basePath-aware at render time). */
   href?: string;
@@ -63,6 +70,33 @@ const TIER_LABEL: Record<"common" | "serious", string> = {
   serious: "Serious",
 };
 
+const KIND_LABEL: Record<string, string> = {
+  transporter: "transporter",
+  receptor: "receptor",
+  enzyme: "enzyme",
+  "ion-channel": "ion channel",
+};
+
+/**
+ * Target card label — short name plus its parenthetical full name when
+ * the registry carries a genuine expansion ("SERT (serotonin
+ * transporter)", "NET (norepinephrine transporter)" — recovered QA
+ * evidence format). Full names that restate, extend, or contain the
+ * short name ("5-HT7 receptor", "α3β4 nicotinic acetylcholine
+ * receptor" for name "α3β4 nAChR") render as the short name alone.
+ */
+function targetCardLabel(name: string, fullName: string): string {
+  if (!fullName || fullName === name) return name;
+  const lowerName = name.toLowerCase();
+  const lowerFull = fullName.toLowerCase();
+  if (lowerFull.startsWith(lowerName)) return name;
+  if (lowerFull.includes(lowerName)) return name;
+  const firstToken = lowerName.split(/\s+/)[0];
+  if (firstToken && lowerFull.startsWith(firstToken)) return name;
+  const expansion = fullName.charAt(0).toLowerCase() + fullName.slice(1);
+  return `${name} (${expansion})`;
+}
+
 /**
  * Pure derivation of the rendered rows from a drug knowledge chain.
  * Rows with no chips are omitted — data-driven rendering.
@@ -70,70 +104,79 @@ const TIER_LABEL: Record<"common" | "serious", string> = {
 export function buildKnowledgeChainRows(chain: DrugKnowledgeChain): KnowledgeChainRow[] {
   const rows: KnowledgeChainRow[] = [];
 
-  /* ── MEDICATION · CLASS ── */
+  /* ── MEDICATION · CLASS (cards: drug, class, substance class) ── */
+  const classChips: KnowledgeChainChip[] = [
+    {
+      label: chain.genericName,
+      badge: { label: chain.class.label },
+      subtext: chain.class.fullName,
+      href: `/drugs/${chain.slug}`,
+      kind: "drug",
+      title: `The ${chain.class.label} you are reading about`,
+    },
+    {
+      label: chain.class.label,
+      subtext: chain.class.fullName,
+      href: `/drugs/class/${drugClassIdFromLabel(chain.class.label)}`,
+      kind: "class",
+      title: `Medication class collection — all KYP ${chain.class.label}s`,
+    },
+  ];
+  // The substance-class card renders only when it adds information the
+  // class card does not already carry (QA evidence: bupropion shows the
+  // Stimulant card; sertraline's SSRI registry entry is redundant with
+  // its class card and is omitted). Never fabricated — the entry comes
+  // from the drug's own drugClass field via the canonical registry.
+  if (
+    chain.substanceClass &&
+    chain.substanceClass.name.toLowerCase() !== chain.class.label.toLowerCase() &&
+    chain.substanceClass.name.toLowerCase() !== chain.genericName.toLowerCase()
+  ) {
+    classChips.push({
+      label: chain.substanceClass.name,
+      subtext: chain.substanceClass.description,
+      kind: "class",
+      title: chain.substanceClass.description,
+    });
+  }
   rows.push({
     key: "medication-class",
     label: "Medication · Class",
-    chips: [
-      {
-        label: chain.genericName,
-        badge: { label: "Medication" },
-        href: `/drugs/${chain.slug}`,
-        kind: "drug",
-        title: `The ${chain.class.label} you are reading about`,
-      },
-      {
-        label: chain.class.label,
-        badge: { label: "Class" },
-        href: `/drugs/class/${drugClassIdFromLabel(chain.class.label)}`,
-        kind: "class",
-        title: `Medication class collection — all KYP ${chain.class.label}s`,
-      },
-    ],
+    chips: classChips,
   });
 
-  /* ── MECHANISM (text + derived actions) ── */
-  const mechanismChips: KnowledgeChainChip[] = chain.drug.mechanism.actions.map(
-    (actionId) => ({
-      label: getMechanismActionLabel(actionId) ?? actionId,
-      meta: actionId,
-      kind: "target" as const,
-      title: `Derived action — see the molecular-target evidence below`,
-    })
-  );
+  /* ── MECHANISM (text only — the data's own molecularTarget string) ── */
   rows.push({
     key: "mechanism",
     label: "Mechanism",
     text: chain.drug.mechanism.primaryTargetText,
-    chips: mechanismChips,
+    chips: [],
   });
 
-  /* ── MOLECULAR TARGETS (with kind badges + action meta + evidence) ── */
-  const targetChips: KnowledgeChainChip[] = chain.drug.targetEdges.map((edge) => {
-    const target = knowledgeGraph.targets.get(edge.targetId);
-    const actionLabels = edge.actions
-      .map((id) => getMechanismActionLabel(id) ?? id)
-      .join(" · ");
-    return {
-      label: target?.name ?? edge.targetId,
-      badge: {
-        label:
-          target?.kind === "transporter"
-            ? "Transporter"
-            : target?.kind === "receptor"
-              ? "Receptor"
-              : target?.kind === "enzyme"
-                ? "Enzyme"
-                : target?.kind === "ion-channel"
-                  ? "Ion channel"
-                  : "Target",
-      },
-      meta: actionLabels || undefined,
-      href: "#mechanism",
-      kind: "target" as const,
-      title: edge.evidence.join(" · "),
-    };
-  });
+  /* ── MOLECULAR TARGETS (cards: full name + kind badge + action id) ──
+     Negligible-affinity edges are graph data but NOT target cards —
+     the drug does not act there (bupropion's SERT: "NO clinically
+     meaningful SERT affinity" stays in the mechanism text; the QA
+     evidence's target cards are NET, DAT and the receptors only). */
+  const targetChips: KnowledgeChainChip[] = chain.drug.targetEdges
+    .filter((edge) => !(
+      edge.actions.length === 1 && edge.actions[0] === "negligible-affinity"
+    ))
+    .map((edge) => {
+      const target = knowledgeGraph.targets.get(edge.targetId);
+      return {
+        label: target
+          ? targetCardLabel(target.name, target.fullName)
+          : edge.targetId,
+        badge: {
+          label: target ? (KIND_LABEL[target.kind] ?? "target") : "target",
+        },
+        subtext: edge.actions.length > 0 ? edge.actions[0] : undefined,
+        href: "#mechanism",
+        kind: "target" as const,
+        title: edge.evidence.join(" · "),
+      };
+    });
   for (const unresolved of chain.drug.unresolvedTargetTexts) {
     targetChips.push({
       label: unresolved,
@@ -145,7 +188,7 @@ export function buildKnowledgeChainRows(chain: DrugKnowledgeChain): KnowledgeCha
     rows.push({ key: "molecular-targets", label: "Molecular targets", chips: targetChips });
   }
 
-  /* ── NEUROTRANSMITTERS (abbreviation badges) ── */
+  /* ── NEUROTRANSMITTERS (chips with abbreviation badges) ── */
   if (chain.neurotransmitters.length > 0 || chain.drug.unresolvedNeurotransmitterTexts.length > 0) {
     const ntChips: KnowledgeChainChip[] = chain.neurotransmitters.map((nt) => ({
       label: nt.name,
@@ -179,17 +222,18 @@ export function buildKnowledgeChainRows(chain: DrugKnowledgeChain): KnowledgeCha
     });
   }
 
-  /* ── NEURAL PATHWAYS (origin → termination) ── */
+  /* ── NEURAL PATHWAYS (cards: pathway name + origin → termination) ── */
   if (chain.pathways.length > 0) {
     rows.push({
       key: "neural-pathways",
       label: "Neural pathways",
       chips: chain.pathways.map(({ entity }) => ({
-        label: `${entity.origin} → ${entity.termination}`,
+        label: entity.name,
         badge: { label: entity.neurotransmitter },
+        subtext: `${entity.origin} → ${entity.termination}`,
         href: "#neural-pathways",
         kind: "pathway" as const,
-        title: `${entity.name} — ${entity.function}`,
+        title: entity.function,
       })),
     });
   }
@@ -278,6 +322,11 @@ const chipKindClass: Record<
   monitoring: "border-border/70 bg-card text-foreground/90 hover:border-brand/40",
 };
 
+/** Rows whose elements render as cards (label + subtext) vs chips. */
+function rowUsesCards(row: KnowledgeChainRow): boolean {
+  return row.chips.some((chip) => typeof chip.subtext === "string");
+}
+
 export function MedicalKnowledgeChain({ drugSlug }: MedicalKnowledgeChainProps) {
   const chainData = getDrugKnowledgeChain(drugSlug);
   if (!chainData) return null;
@@ -301,32 +350,103 @@ export function MedicalKnowledgeChain({ drugSlug }: MedicalKnowledgeChainProps) 
 
       {/* Rows */}
       <dl className="mt-6 space-y-5">
-        {builtRows.map((row) => (
-          <div
-            key={row.key}
-            className="grid gap-2 border-t border-border/40 pt-5 first:border-t-0 first:pt-0 sm:grid-cols-[10rem_1fr] sm:gap-6"
-          >
-            <dt className="text-overline text-muted-foreground sm:pt-1.5">
-              {row.label}
-            </dt>
-            <dd className="min-w-0">
-              {row.text && (
-                <p className="mb-3 text-sm leading-relaxed text-foreground/85 [overflow-wrap:anywhere]">
-                  {row.text}
-                </p>
-              )}
-              <ul className="flex flex-wrap gap-2">
-                {row.chips.map((chip, i) => (
-                  <li key={`${row.key}-${i}`}>
-                    <KnowledgeChip chip={chip} />
-                  </li>
-                ))}
-              </ul>
-            </dd>
-          </div>
-        ))}
+        {builtRows.map((row) => {
+          const cards = rowUsesCards(row);
+          return (
+            <div
+              key={row.key}
+              className="grid gap-2 border-t border-border/40 pt-5 first:border-t-0 first:pt-0 sm:grid-cols-[10rem_1fr] sm:gap-6"
+            >
+              <dt className="text-overline text-muted-foreground sm:pt-1.5">
+                {row.label}
+              </dt>
+              <dd className="min-w-0">
+                {row.text && (
+                  <p className="mb-3 text-sm leading-relaxed text-foreground/85 [overflow-wrap:anywhere]">
+                    {row.text}
+                  </p>
+                )}
+                {cards ? (
+                  <ul className="grid gap-2 sm:grid-cols-2">
+                    {row.chips.map((chip, i) => (
+                      <li key={`${row.key}-${i}`} className="min-w-0">
+                        <KnowledgeCard chip={chip} />
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <ul className="flex flex-wrap gap-2">
+                    {row.chips.map((chip, i) => (
+                      <li key={`${row.key}-${i}`}>
+                        <KnowledgeChip chip={chip} />
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </dd>
+            </div>
+          );
+        })}
       </dl>
     </div>
+  );
+}
+
+/**
+ * Card element — label + inline badge on the first line, subtext below
+ * (recovered QA evidence: medication/class, molecular-target and
+ * pathway elements).
+ */
+function KnowledgeCard({ chip }: { chip: KnowledgeChainChip }) {
+  const content = (
+    <>
+      <span className="flex flex-wrap items-center gap-2">
+        <span className="font-medium [overflow-wrap:anywhere]">{chip.label}</span>
+        {chip.badge && (
+          <span className="rounded-full border border-border/60 bg-background/70 px-1.5 py-px text-[0.6rem] font-semibold uppercase tracking-wide text-muted-foreground">
+            {chip.badge.label}
+          </span>
+        )}
+        {chip.href && !chip.href.startsWith("#") && (
+          <ArrowRight className="h-3 w-3 shrink-0 opacity-50" aria-hidden />
+        )}
+      </span>
+      {chip.subtext && (
+        <span className="mt-1 block text-xs leading-relaxed text-muted-foreground [overflow-wrap:anywhere]">
+          {chip.subtext}
+        </span>
+      )}
+    </>
+  );
+
+  const className = cn(
+    "block h-full rounded-xl border px-4 py-3 text-xs leading-snug transition-colors",
+    chipKindClass[chip.kind ?? "target"],
+    chip.href ? "cursor-pointer" : "cursor-default"
+  );
+
+  if (!chip.href) {
+    return (
+      <span className={className} title={chip.title}>
+        {content}
+      </span>
+    );
+  }
+
+  // In-page anchors stay raw <a>; page routes go through next/link so
+  // client-side navigation + basePath both behave like the rest of KYP.
+  if (chip.href.startsWith("#")) {
+    return (
+      <a href={chip.href} className={className} title={chip.title}>
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={chip.href} className={className} title={chip.title}>
+      {content}
+    </Link>
   );
 }
 

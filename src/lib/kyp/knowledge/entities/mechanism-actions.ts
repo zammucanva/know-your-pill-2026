@@ -8,16 +8,20 @@
  * receptor/target strings against this registry so that chips can carry a
  * stable, machine-readable action id plus a human label.
  *
- * Consumption order in the resolver (see graph.ts → deriveAction):
- *   1. negligible-affinity   (must win over reuptake-inhibition — bupropion's
- *                             SERT entry says "serotonin transporter … negligible")
- *   2. receptor-antagonism   ("antagonist", "antagonism", "antagonised")
- *   3. receptor-agonism      ("agonist" — but NOT "antagonist")
- *   4. reuptake-inhibition   ("blockade", "inhibitor", "inhibition", "reuptake"
- *                             — transporters)
- *   5. autoreceptor-desensitisation ("desensitises")
- *   6. enzyme-inhibition     ("inhibitor" — enzymes)
- *   7. ion-channel-blockade  ("blocker", "channel")
+ * Consumption order in the resolver (see graph.ts → deriveActions):
+ *   0. negligible-affinity   (PRIMARY-evidence qualifier — wins
+ *                             exclusively when the target's own
+ *                             edge-creating text says "negligible";
+ *                             corroborating summary sentences never
+ *                             trigger it. Bupropion's SERT entry:
+ *                             "serotonin transporter … negligible")
+ *   1. receptor-antagonism   ("antagonist", "antagonism", "antagonised")
+ *   2. receptor-agonism      ("agonist" — but NOT "antagonist")
+ *   3. reuptake-inhibition   ("blockade", "inhibitor", "inhibition",
+ *                             "reuptake" — transporters)
+ *   4. autoreceptor-desensitisation ("desensitises")
+ *   5. enzyme-inhibition     ("inhibitor" — enzymes)
+ *   6. ion-channel-blockade  ("blocker", "channel")
  * An edge with no derivable action still renders — it simply carries no
  * action meta. No medical claim is ever strengthened or invented here.
  */
