@@ -39,7 +39,7 @@ const footerLinks = [
     title: "Platform",
     links: [
       { label: "Learn", href: "/learn" },
-      { label: "Practice MCQs", href: "/quiz" },
+      { label: "Study Mode", href: "/study" },
       { label: "Medications", href: "/#library" },
       { label: "Substance Use", href: "/#substances" },
       { label: "Emergency", href: "/#emergency" },
