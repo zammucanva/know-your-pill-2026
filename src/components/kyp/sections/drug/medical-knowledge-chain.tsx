@@ -1,21 +1,28 @@
-/**
- * Knowledge chain — row view model (pure).
- *
- * buildKnowledgeChainRows(chain) derives the rendered rows from a
- * DrugKnowledgeChain produced by the canonical knowledge graph
- * (src/lib/kyp/knowledge). Every chip carries its badge (entity kind),
- * its meta (derived action), and a tooltip title preserving the verbatim
- * evidence string, so the UI can never drift from the locked data layer.
- *
- * Pure + deterministic + data-driven: rows with no chips are omitted
- * (empty rows disappear cleanly), missing references never crash, and
- * relationship/action information stays tied to the correct target.
- * The MedicalKnowledgeChain component renders exactly these rows.
- */
+"use client";
 
+import * as React from "react";
+import Link from "next/link";
+import { ArrowRight, Link2 } from "lucide-react";
 import type { DrugKnowledgeChain } from "@/lib/kyp/knowledge";
 import { getMechanismActionLabel, knowledgeGraph } from "@/lib/kyp/knowledge";
 import { drugClassIdFromLabel } from "@/lib/kyp/data/drug-taxonomy";
+import { cn } from "@/lib/utils";
+import { getDrugKnowledgeChain } from "@/lib/kyp/knowledge";
+
+/**
+ * MedicalKnowledgeChain — the drug's pharmacology as an evidence-backed
+ * chain of rows (recovered feature: "Knowledge chain").
+ *
+ * Every row is DERIVED from the canonical knowledge graph
+ * (src/lib/kyp/knowledge) — never hand-authored per drug. Every chip
+ * carries its badge (entity kind), its meta (derived action), and a
+ * tooltip title preserving the verbatim evidence string, so the UI can
+ * never drift from the locked data layer.
+ *
+ * buildKnowledgeChainRows(chain) is exported as a PURE function so the
+ * test suite can pin the row contract without React.
+ */
+
 /* ============================================================
    Row model (pure)
    ============================================================ */
@@ -246,4 +253,130 @@ export function buildKnowledgeChainRows(chain: DrugKnowledgeChain): KnowledgeCha
   }
 
   return rows;
+}
+
+/* ============================================================
+   Component
+   ============================================================ */
+
+interface MedicalKnowledgeChainProps {
+  drugSlug: string;
+}
+
+const chipKindClass: Record<
+  NonNullable<KnowledgeChainChip["kind"]>,
+  string
+> = {
+  drug: "border-brand/30 bg-brand-soft/40 text-brand-ink hover:border-brand/60",
+  class: "border-brand/30 bg-brand-soft/40 text-brand-ink hover:border-brand/60",
+  target: "border-neural/30 bg-neural-soft/40 text-neural hover:border-neural/60",
+  neurotransmitter: "border-neural/30 bg-neural-soft/40 text-neural hover:border-neural/60",
+  region: "border-neural/30 bg-neural-soft/40 text-neural hover:border-neural/60",
+  pathway: "border-brand/30 bg-brand-soft/40 text-brand-ink hover:border-brand/60",
+  condition: "border-success/30 bg-success-soft/40 text-success hover:border-success/60",
+  "side-effect": "border-warning/30 bg-warning-soft/40 text-warning hover:border-warning/60",
+  monitoring: "border-border/70 bg-card text-foreground/90 hover:border-brand/40",
+};
+
+export function MedicalKnowledgeChain({ drugSlug }: MedicalKnowledgeChainProps) {
+  const chainData = getDrugKnowledgeChain(drugSlug);
+  if (!chainData) return null;
+  const builtRows = buildKnowledgeChainRows(chainData);
+
+  return (
+    <div
+      id="knowledge-chain"
+      className="mt-14 rounded-2xl border border-border/60 bg-card/50 p-5 sm:p-8"
+    >
+      {/* Section head — compact, sits inside the Knowledge Graph section */}
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 className="font-serif text-lg font-semibold tracking-tight text-foreground sm:text-xl">
+          Knowledge chain
+        </h3>
+        <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
+          <Link2 className="h-3 w-3" aria-hidden />
+          Derived from the canonical knowledge graph — every link is data-backed.
+        </span>
+      </div>
+
+      {/* Rows */}
+      <dl className="mt-6 space-y-5">
+        {builtRows.map((row) => (
+          <div
+            key={row.key}
+            className="grid gap-2 border-t border-border/40 pt-5 first:border-t-0 first:pt-0 sm:grid-cols-[10rem_1fr] sm:gap-6"
+          >
+            <dt className="text-overline text-muted-foreground sm:pt-1.5">
+              {row.label}
+            </dt>
+            <dd className="min-w-0">
+              {row.text && (
+                <p className="mb-3 text-sm leading-relaxed text-foreground/85 [overflow-wrap:anywhere]">
+                  {row.text}
+                </p>
+              )}
+              <ul className="flex flex-wrap gap-2">
+                {row.chips.map((chip, i) => (
+                  <li key={`${row.key}-${i}`}>
+                    <KnowledgeChip chip={chip} />
+                  </li>
+                ))}
+              </ul>
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  );
+}
+
+function KnowledgeChip({ chip }: { chip: KnowledgeChainChip }) {
+  const content = (
+    <>
+      <span className="font-medium [overflow-wrap:anywhere]">{chip.label}</span>
+      {chip.badge && (
+        <span className="rounded-full border border-border/60 bg-background/70 px-1.5 py-px text-[0.6rem] font-semibold uppercase tracking-wide text-muted-foreground">
+          {chip.badge.label}
+        </span>
+      )}
+      {chip.meta && (
+        <span className="text-[0.65rem] italic text-muted-foreground/80 [overflow-wrap:anywhere]">
+          {chip.meta}
+        </span>
+      )}
+      {chip.href && !chip.href.startsWith("#") && (
+        <ArrowRight className="h-3 w-3 shrink-0 opacity-50" aria-hidden />
+      )}
+    </>
+  );
+
+  const className = cn(
+    "inline-flex max-w-full items-center gap-2 rounded-full border px-3 py-1.5 text-xs leading-snug transition-colors",
+    chipKindClass[chip.kind ?? "target"],
+    chip.href ? "cursor-pointer" : "cursor-default"
+  );
+
+  if (!chip.href) {
+    return (
+      <span className={className} title={chip.title}>
+        {content}
+      </span>
+    );
+  }
+
+  // In-page anchors stay raw <a>; page routes go through next/link so
+  // client-side navigation + basePath both behave like the rest of KYP.
+  if (chip.href.startsWith("#")) {
+    return (
+      <a href={chip.href} className={className} title={chip.title}>
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={chip.href} className={className} title={chip.title}>
+      {content}
+    </Link>
+  );
 }
