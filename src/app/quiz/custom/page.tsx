@@ -68,6 +68,8 @@ export default function CustomTestPage() {
   const [attempt, setAttempt] = React.useState<AttemptState | null>(null);
   const [resetOpen, setResetOpen] = React.useState(false);
   const [reviewAll, setReviewAll] = React.useState(false);
+  /** The Reset trigger — focus returns here when the dialog closes. */
+  const resetTriggerRef = React.useRef<HTMLButtonElement>(null);
 
   const stats = React.useMemo(
     () => getPoolStats([...selected]),
@@ -500,6 +502,7 @@ export default function CustomTestPage() {
                     />
                   </div>
                   <button
+                    ref={resetTriggerRef}
                     type="button"
                     onClick={() => setResetOpen(true)}
                     aria-haspopup="dialog"
@@ -638,6 +641,7 @@ export default function CustomTestPage() {
           <ResetDialog
             onCancel={() => setResetOpen(false)}
             onConfirm={resetTest}
+            triggerRef={resetTriggerRef}
           />
         )}
       </div>
@@ -912,20 +916,45 @@ export default function CustomTestPage() {
 function ResetDialog({
   onCancel,
   onConfirm,
+  triggerRef,
 }: {
   onCancel: () => void;
   onConfirm: () => void;
+  triggerRef: React.RefObject<HTMLButtonElement | null>;
 }) {
   const cancelRef = React.useRef<HTMLButtonElement>(null);
+  const dialogRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
     cancelRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onCancel();
+      if (e.key === "Escape") {
+        onCancel();
+        return;
+      }
+      // Keep keyboard focus inside the modal dialog (aria-modal="true").
+      if (e.key === "Tab") {
+        const focusable =
+          dialogRef.current?.querySelectorAll<HTMLElement>("button") ?? [];
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [onCancel]);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      // Return focus to the Reset trigger when the dialog closes.
+      triggerRef.current?.focus();
+    };
+  }, [onCancel, triggerRef]);
 
   return (
     <div
@@ -933,6 +962,7 @@ function ResetDialog({
       onClick={onCancel}
     >
       <div
+        ref={dialogRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby="reset-dialog-title"
