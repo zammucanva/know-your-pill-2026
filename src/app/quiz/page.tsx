@@ -231,6 +231,26 @@ export default function QuizPage() {
                 </div>
               </Reveal>
 
+              {/* Custom test CTA — same Practice hub, build-your-own flow */}
+              <Reveal delay={0.24}>
+                <div className="mt-8 rounded-xl border border-border/60 bg-card/50 p-5">
+                  <p className="text-sm font-semibold text-foreground">
+                    Want to choose exactly what you test yourself on?
+                  </p>
+                  <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
+                    Build a custom test from any mix of medications — pick the
+                    topics, pick the length, review what you got wrong.
+                  </p>
+                  <Link
+                    href="/quiz/custom"
+                    className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-colors hover:text-brand/80"
+                  >
+                    Build your own test
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                </div>
+              </Reveal>
+
               <Reveal delay={0.28}>
                 <p className="mt-8 text-xs text-muted-foreground/60 max-w-md">
                   Questions are drawn from the inline quizzes embedded in KYP

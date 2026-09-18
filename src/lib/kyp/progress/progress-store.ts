@@ -87,6 +87,24 @@ export interface PracticeStats {
   lastRunQuestions: number | null;
 }
 
+/** Custom Test (/quiz/custom) history — a SEPARATE namespace from
+ *  practice-hub stats by design: course progress, Study Mode, /quiz runs
+ *  and Custom Test runs must never contaminate each other. The Reset
+ *  affordance in the test runner only resets the CURRENT attempt (React
+ *  state) — it never touches any persisted stats. */
+export interface CustomTestStats {
+  /** Completed custom test runs. */
+  attempts: number;
+  /** Latest run score as 0–100 percentage. */
+  latestScore: number | null;
+  /** Best run score as 0–100 percentage. */
+  bestScore: number | null;
+  /** Epoch ms of the last completed run. */
+  lastAttemptAt: number | null;
+  /** Questions in the last completed run. */
+  lastRunQuestions: number | null;
+}
+
 /** A single recent-activity entry (kept small, capped). */
 export interface ActivityEntry {
   /** Epoch ms. */
@@ -110,6 +128,8 @@ export interface KypProgressData {
   recentActivity: ActivityEntry[];
   /** Practice hub (/quiz) aggregate stats. */
   practice: PracticeStats;
+  /** Custom Test (/quiz/custom) aggregate stats — isolated namespace. */
+  customTest: CustomTestStats;
 }
 
 /* ============================================================
@@ -121,6 +141,16 @@ const STORAGE_KEY = "kyp:progress:v1";
 const LEGACY_KEY = "kyp-section-completion";
 /** Cap recent activity so the payload stays small. */
 const ACTIVITY_CAP = 30;
+
+function emptyCustomTestStats(): CustomTestStats {
+  return {
+    attempts: 0,
+    latestScore: null,
+    bestScore: null,
+    lastAttemptAt: null,
+    lastRunQuestions: null,
+  };
+}
 
 function emptyProgress(): KypProgressData {
   return {
@@ -136,6 +166,7 @@ function emptyProgress(): KypProgressData {
       lastAttemptAt: null,
       lastRunQuestions: null,
     },
+    customTest: emptyCustomTestStats(),
   };
 }
 
@@ -229,6 +260,19 @@ function coerceProgress(raw: unknown): KypProgressData {
       lastAttemptAt: typeof p.lastAttemptAt === "number" ? p.lastAttemptAt : null,
       lastRunQuestions:
         typeof p.lastRunQuestions === "number" ? p.lastRunQuestions : null,
+    };
+  }
+
+  // custom test stats (absent in older payloads → defaults)
+  if (r.customTest && typeof r.customTest === "object") {
+    const c = r.customTest as Record<string, unknown>;
+    data.customTest = {
+      attempts: typeof c.attempts === "number" ? c.attempts : 0,
+      latestScore: typeof c.latestScore === "number" ? c.latestScore : null,
+      bestScore: typeof c.bestScore === "number" ? c.bestScore : null,
+      lastAttemptAt: typeof c.lastAttemptAt === "number" ? c.lastAttemptAt : null,
+      lastRunQuestions:
+        typeof c.lastRunQuestions === "number" ? c.lastRunQuestions : null,
     };
   }
 
@@ -529,6 +573,27 @@ export function recordPracticeAttempt(correct: number, totalQuestions: number): 
 }
 
 /**
+ * Record a COMPLETED Custom Test run (/quiz/custom) into its isolated
+ * namespace. Only completed runs are recorded — resetting the current
+ * attempt never writes anything here.
+ */
+export function recordCustomTestAttempt(correct: number, totalQuestions: number): void {
+  update((data) => {
+    data.customTest.attempts += 1;
+    data.customTest.latestScore =
+      totalQuestions > 0 ? Math.round((correct / totalQuestions) * 100) : null;
+    if (
+      data.customTest.latestScore !== null &&
+      (data.customTest.bestScore === null || data.customTest.latestScore > data.customTest.bestScore)
+    ) {
+      data.customTest.bestScore = data.customTest.latestScore;
+    }
+    data.customTest.lastAttemptAt = Date.now();
+    data.customTest.lastRunQuestions = totalQuestions;
+  });
+}
+
+/**
  * Mark a course complete (idempotent) once the caller has verified
  * its outline is satisfied. Kept explicit so completion can never be
  * triggered by page-load side effects.
@@ -602,6 +667,7 @@ export function clearProgress(): void {
       lastAttemptAt: null,
       lastRunQuestions: null,
     };
+    data.customTest = emptyCustomTestStats();
   });
 }
 
