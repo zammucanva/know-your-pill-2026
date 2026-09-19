@@ -36,12 +36,15 @@ import {
   recordCustomTestAttempt,
   recordMistakes,
   resolveMistakes,
+  recordAnswerEvents,
+  recordRunSummary,
   getTestPresets,
   saveTestPreset,
   deleteTestPreset,
   recordPresetLaunch,
   type TestPreset,
   type MistakeRecordInput,
+  type AnswerEventInput,
 } from "@/lib/kyp/progress/progress-store";
 import { verifyDrugHref } from "@/lib/kyp/drug-course-sections";
 
@@ -346,6 +349,32 @@ function CustomTestBuilder() {
     if (recordedRef.current === key) return;
     recordedRef.current = key;
     recordCustomTestAttempt(results.correct.length, attempt.questions.length);
+
+    // Per-topic answer log (NEXT-N9) + Retention Engine input (X1):
+    // correct and incorrect answers alike feed topic accuracy; misses
+    // (re)schedule reviews, correct answers advance existing items.
+    const events: AnswerEventInput[] = results.answered.map((a) => ({
+      identity: a.question.identity,
+      topicSlug: a.question.source.sourceSlug,
+      topicName: a.question.source.sourceName,
+      topicClass: a.question.source.sourceClass,
+      correct: a.correct,
+    }));
+    recordAnswerEvents(events);
+    recordRunSummary({
+      surface: "custom",
+      mode: attempt.retestOf
+        ? "retest"
+        : attempt.allottedMs !== null
+          ? "timed"
+          : "normal",
+      correct: results.correct.length,
+      total: attempt.questions.length,
+      durationMs:
+        attempt.finishedAt !== null
+          ? Math.max(0, attempt.finishedAt - attempt.startedAt)
+          : null,
+    });
 
     const misses: MistakeRecordInput[] = results.incorrect.map(
       ({ question: q, selected }) => ({

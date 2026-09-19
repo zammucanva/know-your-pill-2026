@@ -19,6 +19,7 @@ import { ContinueStudying } from "@/components/kyp/sections/study/continue-study
 import { StudyNextPanel } from "@/components/kyp/sections/study/study-next-panel";
 import { MistakeBookEntry } from "@/components/kyp/sections/study/mistake-book-entry";
 import { PracticeStatsLine } from "@/components/kyp/sections/study/practice-stats-line";
+import { TopicAccuracyChips } from "@/components/kyp/sections/study/topic-accuracy-chips";
 import { drugs } from "@/lib/kyp/data";
 
 /**
@@ -392,6 +393,11 @@ export default function StudyPage() {
             {/* Mistake Book — real rows only (renders nothing before
                 hydration or when nothing needs revisiting). */}
             <MistakeBookEntry />
+
+            {/* Topic accuracy — real chips only (NEXT-N9): percentages
+                above the minimum sample, neutral "not enough data yet"
+                below it, weakest-first. */}
+            <TopicAccuracyChips />
 
             {/* Real practice history — omitted when nothing has been run */}
             <PracticeStatsLine />
