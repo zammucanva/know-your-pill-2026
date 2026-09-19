@@ -5,6 +5,7 @@ import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
 import { Badge } from "@/components/kyp/ui/badge";
 import { Callout } from "@/components/kyp/ui/callout";
 import { SideEffectReceptorMap } from "@/components/kyp/ui/side-effect-receptor-map";
+import { DrugSideEffectCausal } from "@/components/kyp/sections/drug/drug-side-effect-causal";
 import Link from "next/link";
 import { sideEffects } from "@/lib/kyp/data";
 import type { Drug, DrugSideEffectEntry } from "@/lib/kyp/data";
@@ -125,6 +126,11 @@ export function DrugSideEffects({ drug }: DrugSideEffectsProps) {
             title="Serious side effects → receptor map (at a glance)"
           />
         </div>
+
+        {/* Why-this-effect causal chain (NEXT-X7) — readable walk
+            through the data's own target → mechanism → effect → side
+            effect links, with a plain-language patient-mode path. */}
+        <DrugSideEffectCausal drug={drug} />
       </Container>
     </Section>
   );
