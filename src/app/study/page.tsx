@@ -20,6 +20,7 @@ import { StudyNextPanel } from "@/components/kyp/sections/study/study-next-panel
 import { MistakeBookEntry } from "@/components/kyp/sections/study/mistake-book-entry";
 import { PracticeStatsLine } from "@/components/kyp/sections/study/practice-stats-line";
 import { TopicAccuracyChips } from "@/components/kyp/sections/study/topic-accuracy-chips";
+import { RetentionDueEntry } from "@/components/kyp/sections/study/retention-due-entry";
 import { drugs } from "@/lib/kyp/data";
 
 /**
@@ -389,6 +390,10 @@ export default function StudyPage() {
                 </div>
               </Reveal>
             </div>
+
+            {/* Reviews due — the Retention Engine's Practice-section
+                entry (NEXT-X1): renders only when something is due. */}
+            <RetentionDueEntry />
 
             {/* Mistake Book — real rows only (renders nothing before
                 hydration or when nothing needs revisiting). */}
