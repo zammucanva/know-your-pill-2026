@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowRight, Zap } from "lucide-react";
+import { ArrowRight, GitCompare, Zap } from "lucide-react";
 
 import { Navbar } from "@/components/kyp/sections/navbar";
 import { Footer } from "@/components/kyp/sections/footer";
@@ -10,6 +10,7 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
 import { LearningPath } from "@/components/kyp/ui/learning-path";
+import { getPoolStats } from "@/lib/kyp/custom-test/engine";
 import {
   drugs,
   getAllTaxonomyClassIds,
@@ -19,6 +20,7 @@ import {
   DRUG_TAXONOMY_CATEGORY_HREF,
   DRUG_TAXONOMY_FAMILY_HREF,
 } from "@/lib/kyp/data";
+import type { Drug } from "@/lib/kyp/data";
 
 /**
  * /drugs/class/[classId] — medication class collection page.
@@ -79,6 +81,57 @@ export async function generateMetadata({
 const drugNumber = (slug: string): number =>
   drugs.findIndex((d) => d.slug === slug) + 1;
 
+/* ============================================================
+   Class at a glance (NOW-N7a) — a compare-able attribute list
+   built ENTIRELY from existing per-drug data. Aggregation only:
+   every cell is a verbatim value from the locked drug registry —
+   no new medical claims are synthesised here.
+   ============================================================ */
+
+interface AttributeRow {
+  label: string;
+  values: string[];
+}
+
+/** First FDA-approved indication name (fallback: first indication). */
+function primaryUse(drug: Drug): string {
+  const approved = drug.indications.find((i) => i.status === "fda-approved");
+  return (approved ?? drug.indications[0])?.name ?? "—";
+}
+
+function classAttributeRows(medications: Drug[]): AttributeRow[] {
+  return [
+    {
+      label: "Primary target",
+      values: medications.map((m) => m.mechanism.molecularTarget),
+    },
+    {
+      label: "Half-life",
+      values: medications.map((m) => m.mechanism.halfLife),
+    },
+    {
+      label: "Metabolism",
+      values: medications.map((m) => m.mechanism.metabolism),
+    },
+    {
+      label: "Used for",
+      values: medications.map((m) => primaryUse(m)),
+    },
+    {
+      label: "Common side effects",
+      values: medications.map((m) =>
+        m.commonSideEffects.slice(0, 3).map((e) => e.name).join(", ")
+      ),
+    },
+    {
+      label: "Watch (monitoring)",
+      values: medications.map((m) =>
+        m.monitoring.slice(0, 2).map((p) => p.parameter).join(", ")
+      ),
+    },
+  ];
+}
+
 export default async function DrugClassPage({
   params,
 }: {
@@ -96,6 +149,11 @@ export default async function DrugClassPage({
     (sum, m) => sum + (m.microQuizzes?.length || 0),
     0
   );
+  // Real availability for a class test — computed from the same
+  // deterministic engine the Custom Test builder uses (build-time,
+  // server-side; the number shown is the real unique pool size).
+  const classPool = getPoolStats(cls.medications.map((m) => m.slug));
+  const attributeRows = classAttributeRows(cls.medications);
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -150,13 +208,16 @@ export default async function DrugClassPage({
                   All medications
                   <ArrowRight className="h-4 w-4" />
                 </Link>
-                {classQuestionCount > 0 && (
+                {classPool.total > 0 && (
                   <Link
-                    href="/quiz"
-                    className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                    href={`/quiz/custom?class=${cls.id}`}
+                    className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
                   >
-                    Practice MCQs
                     <Zap className="h-4 w-4" />
+                    Test this class
+                    <span className="text-sm font-normal opacity-80">
+                      · {classPool.total} questions
+                    </span>
                   </Link>
                 )}
               </div>
@@ -200,6 +261,107 @@ export default async function DrugClassPage({
                 );
               })}
             </div>
+          </Container>
+        </Section>
+
+        {/* ===== CLASS AT A GLANCE (NOW-N7a) ===== */}
+        <Section
+          id="at-a-glance"
+          spacing="relaxed"
+          className="border-t border-border/30"
+        >
+          <Container>
+            <Reveal>
+              <div className="flex flex-wrap items-end justify-between gap-6">
+                <div className="max-w-xl">
+                  <p className="text-overline text-brand mb-3 flex items-center gap-2">
+                    <GitCompare className="h-3.5 w-3.5" aria-hidden />
+                    Class at a glance
+                  </p>
+                  <h2
+                    className="font-serif font-semibold tracking-[-0.02em] text-foreground"
+                    style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)" }}
+                  >
+                    Compare the {cls.label} side by side
+                  </h2>
+                  <p className="mt-4 text-body-sm text-muted-foreground leading-relaxed">
+                    All {cls.medications.length} {cls.label} members share the
+                    class mechanism — {cls.fullName}. The differences that
+                    matter clinically are below, aggregated from each
+                    medication&apos;s own guide.
+                  </p>
+                </div>
+                {classPool.total > 0 && (
+                  <Link
+                    href={`/quiz/custom?class=${cls.id}`}
+                    className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-brand/40 bg-brand-soft/30 px-5 py-3 text-sm font-semibold text-brand transition-colors hover:border-brand/60"
+                  >
+                    <Zap className="h-4 w-4" />
+                    Test this class · {classPool.total}
+                  </Link>
+                )}
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.08}>
+              <div className="mt-10 overflow-x-auto kyp-scroll rounded-xl border border-border/50">
+                <table className="w-full min-w-[640px] border-collapse text-sm">
+                  <caption className="sr-only">
+                    {cls.label} members compared on mechanism target,
+                    half-life, metabolism, primary use, common side effects
+                    and monitoring
+                  </caption>
+                  <thead>
+                    <tr className="border-b border-border/60">
+                      <th scope="col" className="p-3 text-left text-overline text-muted-foreground">
+                        Attribute
+                      </th>
+                      {cls.medications.map((m) => (
+                        <th
+                          key={m.slug}
+                          scope="col"
+                          className="p-3 text-left"
+                        >
+                          <Link
+                            href={`/drugs/${m.slug}`}
+                            className="text-overline text-brand transition-colors hover:text-brand/80"
+                          >
+                            {m.genericName}
+                          </Link>
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {attributeRows.map((row, ri) => (
+                      <tr
+                        key={row.label}
+                        className={ri % 2 === 1 ? "bg-muted/10" : undefined}
+                      >
+                        <th
+                          scope="row"
+                          className="border-b border-border/30 p-3 text-left text-xs font-semibold text-foreground"
+                        >
+                          {row.label}
+                        </th>
+                        {row.values.map((value, vi) => (
+                          <td
+                            key={vi}
+                            className="border-b border-border/30 p-3 align-top text-xs leading-relaxed text-muted-foreground"
+                          >
+                            {value || "—"}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-3 text-xs text-muted-foreground/60">
+                Aggregated from each medication&apos;s locked data — values are
+                quoted verbatim from their guides, with no new claims.
+              </p>
+            </Reveal>
           </Container>
         </Section>
 

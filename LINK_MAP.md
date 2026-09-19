@@ -27,6 +27,9 @@ Derived from the canonical drug registry via `src/lib/kyp/data/drug-taxonomy.ts`
 ### Diseases (1)
 `/diseases/major-depressive-disorder`
 
+### Study & practice
+`/study` (Study Mode hub), `/study/mistakes` (Mistake Book — questions to revisit, device-local), `/study/review` (spaced review — the Retention Engine's due queue + review session), `/study/analytics` (test history analytics — per-topic/class accuracy, duration trends, mistake persistence), `/quiz` (Quick MCQs — supports `?filter={drug|disease}`), `/quiz/custom` (Custom Test builder — supports `?class={classId}` pre-selection, `?preset={id}` one-tap launch, `?retest=1` Mistake Book handoff, `?weak=1` one-tap Weak-Area Test), `/compare` (side-by-side medication comparison, 2-3 selections)
+
 ### Other
 `/` (homepage), `/welcome` (signup/login)
 

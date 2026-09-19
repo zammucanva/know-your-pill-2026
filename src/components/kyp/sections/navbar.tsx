@@ -11,13 +11,18 @@ import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 import { imgPath } from "@/lib/kyp/image-path";
 import { cn } from "@/lib/utils";
 
+/**
+ * Primary navigation — Study Mode is the SINGLE top-level learning
+ * destination (Learn + Practice live inside it at /study). The former
+ * peer "Practice" entry is intentionally absent: practice is reached
+ * through Study Mode's Practice section, not as a competing navbar item.
+ */
 const navLinks = [
   { href: "/learn", label: "Learn" },
   { href: "/drugs", label: "Medication Library" },
   { href: "/#substances", label: "Substances" },
-  { href: "/quiz", label: "Practice" },
-  { href: "/medicine", label: "Medicine" },
   { href: "/study", label: "Study Mode" },
+  { href: "/medicine", label: "Medicine" },
 ];
 
 type SessionUser = { id: string; name: string; email: string; role: string } | null;

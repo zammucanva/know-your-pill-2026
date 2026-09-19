@@ -18,6 +18,8 @@
  */
 
 import { drugs } from "@/lib/kyp/data/drugs/index";
+import { diseases } from "@/lib/kyp/data/diseases/index";
+import { anchoredDrugHref } from "@/lib/kyp/drug-course-sections";
 import { createRng } from "./rng";
 import { TEMPLATES, TEMPLATE_IDS } from "./templates";
 import type { Rng } from "./rng";
@@ -57,8 +59,12 @@ function authoredQuestions(drugSlugs: Set<string>): PoolQuestion[] {
         source: {
           sourceName: drug.genericName,
           sourceSlug: drug.slug,
+          // NOW-N6: deep-link to the exact anchored section the quiz
+          // follows on the drug page (verified against the course
+          // template) instead of the bare page root.
           sectionLabel: "In-course quiz",
-          sectionHref: `/drugs/${drug.slug}`,
+          sectionHref: anchoredDrugHref(drug.slug, quiz.afterSectionId),
+          sourceClass: drug.drugClassLabel,
         },
         templateId: "authored",
       });
@@ -179,6 +185,23 @@ export interface BuildTestResult {
   available: number;
 }
 
+/** Present one pool question as an attempt question, re-shuffling
+ *  options where (and only where) it is medically safe. */
+function toTestQuestion(q: PoolQuestion, rng: Rng): TestQuestion {
+  if (!isShuffleSafe(q.options)) {
+    return {
+      ...q,
+      attemptOptions: q.options,
+      attemptCorrectIndex: q.correctIndex,
+    };
+  }
+  const order = q.options.map((option, i) => ({ option, i }));
+  rng.shuffle(order);
+  const attemptOptions = order.map((o) => o.option);
+  const attemptCorrectIndex = order.findIndex((o) => o.i === q.correctIndex);
+  return { ...q, attemptOptions, attemptCorrectIndex };
+}
+
 /**
  * Assemble an attempt: unique questions, balanced across templates,
  * question order shuffled, answer choices shuffled where safe.
@@ -197,20 +220,91 @@ export function buildTest(
   const selected = selectBalanced(pool, count, rng);
   rng.shuffle(selected);
 
-  const questions: TestQuestion[] = selected.map((q) => {
-    if (!isShuffleSafe(q.options)) {
-      return {
-        ...q,
-        attemptOptions: q.options,
-        attemptCorrectIndex: q.correctIndex,
-      };
-    }
-    const order = q.options.map((option, i) => ({ option, i }));
-    rng.shuffle(order);
-    const attemptOptions = order.map((o) => o.option);
-    const attemptCorrectIndex = order.findIndex((o) => o.i === q.correctIndex);
-    return { ...q, attemptOptions, attemptCorrectIndex };
-  });
+  const questions: TestQuestion[] = selected.map((q) => toTestQuestion(q, rng));
 
   return { questions, deliveredCount: questions.length, capped, available };
+}
+
+/* ============================================================
+   Retest assembly (NOW-N2)
+   ============================================================ */
+
+/** Source slug encoded at the head of every question identity. */
+function sourceSlugOfIdentity(identity: string): string {
+  return identity.split("|")[0];
+}
+
+/**
+ * Build a retest from an EXACT set of question identities — the
+ * per-test "Retest me on these" action and the Mistake Book's
+ * cross-test retest both route through here.
+ *
+ * The exact questions are regenerated via the existing deterministic
+ * generator: the pool is rebuilt from the identities' source slugs,
+ * filtered to the requested identities, and re-presented with a fresh
+ * seed (option order re-shuffled where safe; question order optionally
+ * shuffled). No new questions can enter a retest, and every question
+ * keeps its canonical medical content.
+ *
+ * Identities that no longer exist in the data layer (content changed
+ * since the attempt) are dropped and reported via `capped` — a retest
+ * NEVER substitutes lookalike questions.
+ */
+export function buildRetest(
+  identities: string[],
+  seed: number,
+  opts: { shuffleOrder?: boolean } = {}
+): BuildTestResult {
+  const wanted = new Set(identities);
+  if (wanted.size === 0) {
+    return { questions: [], deliveredCount: 0, capped: false, available: 0 };
+  }
+  const slugs = [...new Set(identities.map(sourceSlugOfIdentity))];
+  const pool = buildQuestionPool(slugs).filter((q) => wanted.has(q.identity));
+
+  // Disease-authored questions (recorded from /quiz practice) share the
+  // same identity scheme — pull them in so a retest of "the exact set"
+  // never silently drops a question the Mistake Book holds.
+  const stillWanted = new Set(
+    identities.filter((id) => !pool.some((q) => q.identity === id))
+  );
+  if (stillWanted.size > 0) {
+    for (const disease of diseases) {
+      if (!disease.microQuizzes) continue;
+      for (const quiz of disease.microQuizzes) {
+        const identity = `${disease.slug}|mcq:${quiz.id}`;
+        if (!stillWanted.has(identity)) continue;
+        pool.push({
+          identity,
+          question: quiz.question,
+          options: quiz.options,
+          correctIndex: quiz.correctIndex,
+          explanation: quiz.explanation,
+          evidence: quiz.explanation,
+          source: {
+            sourceName: disease.name,
+            sourceSlug: disease.slug,
+            sectionLabel: "In-course quiz",
+            sectionHref: `/diseases/${disease.slug}`,
+            sourceClass: disease.category,
+          },
+          templateId: "authored",
+        });
+      }
+    }
+  }
+
+  const rng = createRng(seed);
+
+  const selected = [...pool];
+  if (opts.shuffleOrder !== false) rng.shuffle(selected);
+
+  const questions: TestQuestion[] = selected.map((q) => toTestQuestion(q, rng));
+
+  return {
+    questions,
+    deliveredCount: questions.length,
+    capped: wanted.size > questions.length,
+    available: questions.length,
+  };
 }
