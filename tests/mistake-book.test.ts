@@ -20,6 +20,7 @@
  */
 
 import { beforeEach, describe, expect, test } from "bun:test";
+import type { MistakeRecordInput } from "@/lib/kyp/progress/progress-store";
 
 /* ── Minimal localStorage shim (Bun has no DOM) ─────────────────── */
 
@@ -79,7 +80,7 @@ const {
   PRESET_CAP,
 } = store as typeof import("@/lib/kyp/progress/progress-store");
 
-function entry(overrides: Partial<store.MistakeRecordInput> = {}): store.MistakeRecordInput {
+function entry(overrides: Partial<MistakeRecordInput> = {}): MistakeRecordInput {
   return {
     identity: "sertraline|mcq:sertraline-quiz-1",
     question: "Which neurotransmitter system does sertraline primarily act on?",
@@ -218,7 +219,7 @@ describe("mistake book — persistence and safety", () => {
   });
 
   test("12. the cap drops the stalest revisits first", () => {
-    const batch: store.MistakeRecordInput[] = [];
+    const batch: MistakeRecordInput[] = [];
     for (let i = 0; i < MISTAKE_CAP + 10; i++) {
       batch.push(entry({ identity: `drug-${i}|mcq:${i}` }));
     }
