@@ -67,6 +67,7 @@ function source(
     sourceSlug: drug.slug,
     sectionLabel,
     sectionHref,
+    sourceClass: drug.drugClassLabel,
   };
 }
 
