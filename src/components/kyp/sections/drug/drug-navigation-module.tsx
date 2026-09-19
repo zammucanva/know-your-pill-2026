@@ -16,9 +16,11 @@ import { cn } from "@/lib/utils";
  *   - Drug Family Navigator (tab 1)
  *   - Comparison Tables (tab 2)
  *   - Indian Comparison (tab 3)
- *   - Related Drugs (tab 4)
  *
- * Replaces 4 separate sections with one tabbed module.
+ * Related Drugs previously lived here as tab 4 — they now render as
+ * their own always-visible section (DrugRelatedDrugs, id=
+ * "related-medications") right after this module (NOW-N5), so the
+ * cross-links are never hidden behind a tab.
  *
  * Client Component — uses useState for active tab.
  */
@@ -33,7 +35,7 @@ interface DrugNavigationModuleProps {
 }
 
 export function DrugNavigationModule({ drug, builtDrugSlugs }: DrugNavigationModuleProps) {
-  const [tab, setTab] = React.useState<"family" | "comparison" | "indian" | "related">("family");
+  const [tab, setTab] = React.useState<"family" | "comparison" | "indian">("family");
 
   const builtSlugSet = React.useMemo(
     () => new Set(builtDrugSlugs ?? []),
@@ -47,13 +49,11 @@ export function DrugNavigationModule({ drug, builtDrugSlugs }: DrugNavigationMod
   const hasFamily = Boolean(drug.drugFamilyNav);
   const hasComparison = drug.comparisonTables?.length > 0;
   const hasIndian = (drug.indianComparisonContexts?.length ?? 0) > 0;
-  const hasRelated = drug.relatedDrugs?.length > 0;
 
   const tabs = [
     { key: "family" as const, label: "Drug Family", visible: hasFamily },
     { key: "comparison" as const, label: "Comparison Table", visible: hasComparison },
     { key: "indian" as const, label: "Indian Scenarios", visible: hasIndian },
-    { key: "related" as const, label: "Related Drugs", visible: hasRelated },
   ].filter((t) => t.visible);
 
   if (tabs.length === 0) return null;
@@ -175,59 +175,6 @@ export function DrugNavigationModule({ drug, builtDrugSlugs }: DrugNavigationMod
                   )}
                 </div>
               ))}
-            </div>
-          )}
-
-          {/* Related Drugs */}
-          {tab === "related" && hasRelated && (
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {drug.relatedDrugs.map((rd, i) => {
-                const href = hasBuiltPage(rd.slug) ? `/drugs/${rd.slug}` : undefined;
-                const content = (
-                  <>
-                    <div className="flex items-start justify-between gap-2">
-                      <div>
-                        <Badge variant="outline" size="sm">{rd.drugClass}</Badge>
-                        <p className="mt-1 text-sm font-medium text-foreground">{rd.name}</p>
-                      </div>
-                      {href && <ArrowRight className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />}
-                    </div>
-                    <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
-                      <span className="font-medium text-success">Choose when:</span> {rd.relationship}
-                    </p>
-                  </>
-                );
-                if (href) {
-                  return (
-                    <Link key={i} href={href} className="rounded-lg border border-border/40 p-3 transition-colors hover:border-brand/40 hover:bg-brand-soft/10">
-                      {content}
-                    </Link>
-                  );
-                }
-                return (
-                  <div key={i} className="rounded-lg border border-border/40 p-3">
-                    {content}
-                    <Badge variant="default" size="sm" className="mt-1">Page coming soon</Badge>
-                  </div>
-                );
-              })}
-
-              {/* When NOT to choose this drug */}
-              {drug.whenNotToUse && drug.whenNotToUse.length > 0 && (
-                <div className="sm:col-span-2 lg:col-span-3 mt-2">
-                  <Callout variant="warning" title={`When NOT to choose ${drug.genericName}`}>
-                    <ul className="space-y-1 mt-2">
-                      {drug.whenNotToUse.map((w, i) => (
-                        <li key={i} className="text-xs">
-                          <strong className="text-foreground">{w.scenario}:</strong>{" "}
-                          <span className="text-muted-foreground">{w.reason}</span>{" "}
-                          <span className="text-success">→ {w.alternative}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </Callout>
-                </div>
-              )}
             </div>
           )}
         </div>
