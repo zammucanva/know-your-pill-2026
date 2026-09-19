@@ -30,7 +30,7 @@ const ALL_SLUGS = drugs.map((d) => d.slug);
 
 describe("custom test — engine pool", () => {
   test("the pool contains exactly 13 deterministic templates", () => {
-    expect(TEMPLATE_IDS.length).toBe(13);
+    expect(TEMPLATE_IDS.length).toBe(16); // 13 original + 3 graph-driven families (X4)
     for (const id of TEMPLATE_IDS) {
       expect(typeof TEMPLATES[id]).toBe("function");
     }
@@ -77,6 +77,8 @@ describe("custom test — engine pool", () => {
     for (const drug of drugs) {
       universe.add(drug.drugClassLabel);
       universe.add(drug.genericName);
+      // X4a mechanism-effect: options are the drugs' net-effect strings.
+      universe.add(drug.mechanism.effect);
       for (const n of drug.neurotransmitters)
         universe.add(n.split(" (")[0].split(" — ")[0].trim());
       for (const i of drug.indications) universe.add(i.name);

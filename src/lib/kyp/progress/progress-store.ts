@@ -32,9 +32,15 @@
  * never marks anything complete.
  */
 
+import {
+  nextIntervalDays,
+  RETENTION_RESET_DAYS,
+} from "@/lib/kyp/retention/schedule";
+
 /* ============================================================
    Types
    ============================================================ */
+
 
 /** Quiz record for a single course (from in-course micro-quizzes). */
 export interface CourseQuizStats {
@@ -190,6 +196,80 @@ export interface TestPreset {
   lastLaunchedAt: number | null;
 }
 
+/* ============================================================
+   Answer log (NEXT-N9 / X2 / X5) — per-topic accuracy input
+   ------------------------------------------------------------
+   One small event per answered question, aggregated per topic
+   (a topic = one medication or disease page). This is the ONLY
+   source of per-topic accuracy: it records correct answers too,
+   which the Mistake Book (wrong-only, by design) never does.
+   ============================================================ */
+
+/** One answered question, recorded at the moment a run completes. */
+export interface AnswerEventInput {
+  /** Question identity — the engine's dedup key. */
+  identity: string;
+  /** Topic slug — the drug or disease page the question belongs to. */
+  topicSlug: string;
+  /** Topic display name (drug generic name or disease name). */
+  topicName: string;
+  /** Class label — the aggregation dimension ("SSRI" / "Diseases"). */
+  topicClass: string;
+  correct: boolean;
+}
+
+/** Aggregated per-topic stats (keyed by topic slug in the store). */
+export interface TopicStats {
+  /** Total answers ever recorded for this topic. */
+  answered: number;
+  /** Total correct answers ever recorded. */
+  correct: number;
+  /** Epoch ms of the most recent answer (0 until answered). */
+  lastSeenAt: number;
+  /** Recent answers, oldest → newest, capped — feeds trends and
+   *  recency-weighted selection without keeping an unbounded log. */
+  recent: Array<{ at: number; correct: boolean; identity: string }>;
+}
+
+/** One completed run summary (quiz / custom test / review session). */
+export interface RunRecord {
+  /** Epoch ms when the run finished. */
+  at: number;
+  /** Which surface the run happened on. */
+  surface: "quiz" | "custom" | "review";
+  /** How the run was configured. */
+  mode: "normal" | "timed" | "exam" | "retest" | "review";
+  correct: number;
+  total: number;
+  /** Wall-clock duration when known (null for /quiz quick runs). */
+  durationMs: number | null;
+}
+
+/* ============================================================
+   Retention Engine state (NEXT-X1) — per-item memory
+   ------------------------------------------------------------
+   Items are created when a question is answered INCORRECTLY (fed
+   from the same stream as the Mistake Book) and updated on every
+   later practice event: correct → interval advances, wrong →
+   resets. The due-today queue is every item whose dueAt has
+   passed. Interval scheduling only — no decay modelling (per the
+   commissioning spec).
+   ============================================================ */
+
+/** One item's memory state, keyed by question identity. */
+export interface RetentionItem {
+  identity: string;
+  /** Topic slug for grouping the due queue. */
+  topicSlug: string;
+  /** Epoch ms when this question is due for review. */
+  dueAt: number;
+  /** Current interval in days. */
+  intervalDays: number;
+  /** Consecutive correct answers since the last miss. */
+  streak: number;
+  updatedAt: number;
+}
+
 /** Root shape stored under kyp:progress:v1. */
 export interface KypProgressData {
   version: 1;
@@ -210,6 +290,14 @@ export interface KypProgressData {
   mistakeBook: Record<string, MistakeEntry>;
   /** Saved Custom Test presets (NOW-N4), newest first, capped. */
   testPresets: TestPreset[];
+  /** Answer log per topic slug (NEXT-N9/X2/X5) — capped recents. */
+  answers: Record<string, TopicStats & { topicName: string; topicClass: string }>;
+  /** Completed run summaries (NEXT-X5), newest first, capped. */
+  runs: RunRecord[];
+  /** Retention Engine memory state (NEXT-X1), by identity, capped. */
+  retention: Record<string, RetentionItem>;
+  /** ISO date (YYYY-MM-DD) the daily plan was dismissed on (X8). */
+  planDismissedOn: string | null;
 }
 
 /* ============================================================
@@ -226,6 +314,12 @@ const ACTIVITY_CAP = 30;
 export const MISTAKE_CAP = 150;
 /** Cap saved test presets — chips stay scannable on mobile. */
 export const PRESET_CAP = 12;
+/** Recent answers kept per topic (trend window for X2/X5). */
+export const TOPIC_RECENT_CAP = 40;
+/** Completed run summaries kept (duration/score trends for X5). */
+export const RUN_CAP = 30;
+/** Retention items kept — least recently updated drop off first. */
+export const RETENTION_CAP = 400;
 
 function emptyCustomTestStats(): CustomTestStats {
   return {
@@ -254,6 +348,10 @@ function emptyProgress(): KypProgressData {
     customTest: emptyCustomTestStats(),
     mistakeBook: {},
     testPresets: [],
+    answers: {},
+    runs: [],
+    retention: {},
+    planDismissedOn: null,
   };
 }
 
@@ -345,6 +443,78 @@ function coerceTestPresets(raw: unknown): TestPreset[] {
     });
   }
   return out.slice(0, PRESET_CAP);
+}
+
+/** Coerce one topic's aggregated stats (NEXT-N9/X2/X5). */
+function coerceTopicStats(raw: unknown): TopicStats & { topicName: string; topicClass: string } | null {
+  if (!raw || typeof raw !== "object") return null;
+  const t = raw as Record<string, unknown>;
+  const recent = Array.isArray(t.recent)
+    ? (t.recent as unknown[])
+        .filter(
+          (r): r is { at: number; correct: boolean; identity: string } =>
+            Boolean(r) &&
+            typeof r === "object" &&
+            typeof (r as { at?: unknown }).at === "number" &&
+            typeof (r as { correct?: unknown }).correct === "boolean" &&
+            typeof (r as { identity?: unknown }).identity === "string"
+        )
+        .slice(-TOPIC_RECENT_CAP)
+    : [];
+  return {
+    answered: typeof t.answered === "number" ? Math.max(0, Math.round(t.answered)) : 0,
+    correct: typeof t.correct === "number" ? Math.max(0, Math.round(t.correct)) : 0,
+    lastSeenAt: typeof t.lastSeenAt === "number" ? t.lastSeenAt : 0,
+    recent,
+    topicName: typeof t.topicName === "string" ? t.topicName : "",
+    topicClass: typeof t.topicClass === "string" ? t.topicClass : "",
+  };
+}
+
+/** Coerce run summaries (NEXT-X5) — invalid entries are dropped. */
+function coerceRuns(raw: unknown): RunRecord[] {
+  if (!Array.isArray(raw)) return [];
+  const out: RunRecord[] = [];
+  for (const r of raw) {
+    if (!r || typeof r !== "object") continue;
+    const t = r as Record<string, unknown>;
+    const surface = t.surface === "quiz" || t.surface === "custom" || t.surface === "review" ? t.surface : "quiz";
+    const mode =
+      t.mode === "timed" || t.mode === "exam" || t.mode === "retest" || t.mode === "review" || t.mode === "normal"
+        ? t.mode
+        : "normal";
+    if (typeof t.at !== "number" || typeof t.correct !== "number" || typeof t.total !== "number") continue;
+    out.push({
+      at: t.at,
+      surface,
+      mode,
+      correct: Math.max(0, Math.round(t.correct)),
+      total: Math.max(0, Math.round(t.total)),
+      durationMs: typeof t.durationMs === "number" ? t.durationMs : null,
+    });
+  }
+  return out.slice(0, RUN_CAP);
+}
+
+/** Coerce retention items (NEXT-X1) — invalid entries are dropped. */
+function coerceRetention(raw: unknown): Record<string, RetentionItem> {
+  const out: Record<string, RetentionItem> = {};
+  if (!raw || typeof raw !== "object") return out;
+  for (const [identity, item] of Object.entries(raw as Record<string, unknown>)) {
+    if (!item || typeof item !== "object") continue;
+    const t = item as Record<string, unknown>;
+    if (typeof t.identity !== "string" || t.identity !== identity) continue;
+    if (typeof t.topicSlug !== "string") continue;
+    out[identity] = {
+      identity,
+      topicSlug: t.topicSlug,
+      dueAt: typeof t.dueAt === "number" ? t.dueAt : Date.now(),
+      intervalDays: typeof t.intervalDays === "number" ? Math.max(1, t.intervalDays) : 1,
+      streak: typeof t.streak === "number" ? Math.max(0, Math.round(t.streak)) : 0,
+      updatedAt: typeof t.updatedAt === "number" ? t.updatedAt : Date.now(),
+    };
+  }
+  return out;
 }
 
 /**
@@ -448,6 +618,23 @@ function coerceProgress(raw: unknown): KypProgressData {
 
   // saved test presets (absent in older payloads → none)
   data.testPresets = coerceTestPresets(r.testPresets);
+
+  // answer log per topic (absent in older payloads → empty)
+  if (r.answers && typeof r.answers === "object") {
+    for (const [slug, stats] of Object.entries(r.answers as Record<string, unknown>)) {
+      const coerced = coerceTopicStats(stats);
+      if (coerced && coerced.topicClass) data.answers[slug] = coerced;
+    }
+  }
+
+  // run summaries (absent in older payloads → none)
+  data.runs = coerceRuns(r.runs);
+
+  // retention items (absent in older payloads → none)
+  data.retention = coerceRetention(r.retention);
+
+  // daily-plan dismissal (absent → null)
+  data.planDismissedOn = typeof r.planDismissedOn === "string" ? r.planDismissedOn : null;
 
   return data;
 }
@@ -931,6 +1118,175 @@ export function recordPresetLaunch(id: string): void {
   });
 }
 
+/* ============================================================
+   Answer Log API (NEXT-N9 / X2 / X5) + Retention updates (X1)
+   ============================================================ */
+
+/**
+ * Record a batch of answered questions from a completed run — the
+ * single tap that feeds per-topic accuracy AND the Retention Engine:
+ *
+ *   - topics: answered/correct counters + the capped recent window
+ *   - retention: a WRONG answer (re)schedules the question for
+ *     review tomorrow; a CORRECT answer advances an existing item's
+ *     interval up the fixed ladder (first-time-correct questions are
+ *     never scheduled — there is no evidence of weakness).
+ */
+export function recordAnswerEvents(events: AnswerEventInput[]): void {
+  if (events.length === 0) return;
+  update((data) => {
+    const now = Date.now();
+    for (const e of events) {
+      if (!e.identity || !e.topicSlug) continue;
+      const topic = data.answers[e.topicSlug] ?? {
+        answered: 0,
+        correct: 0,
+        lastSeenAt: 0,
+        recent: [],
+        topicName: e.topicName || e.topicSlug,
+        topicClass: e.topicClass || "Medications",
+      };
+      topic.answered += 1;
+      if (e.correct) topic.correct += 1;
+      topic.lastSeenAt = now;
+      topic.topicName = e.topicName || topic.topicName;
+      topic.topicClass = e.topicClass || topic.topicClass;
+      topic.recent.push({ at: now, correct: e.correct, identity: e.identity });
+      if (topic.recent.length > TOPIC_RECENT_CAP) {
+        topic.recent.splice(0, topic.recent.length - TOPIC_RECENT_CAP);
+      }
+      data.answers[e.topicSlug] = topic;
+
+      // Retention Engine update (X1) — fed from the same events.
+      const item = data.retention[e.identity];
+      if (!e.correct) {
+        data.retention[e.identity] = {
+          identity: e.identity,
+          topicSlug: e.topicSlug,
+          intervalDays: RETENTION_RESET_DAYS,
+          dueAt: now + RETENTION_RESET_DAYS * 86_400_000,
+          streak: 0,
+          updatedAt: now,
+        };
+      } else if (item) {
+        const intervalDays = nextIntervalDays(item.intervalDays);
+        item.intervalDays = intervalDays;
+        item.streak += 1;
+        item.dueAt = now + intervalDays * 86_400_000;
+        item.updatedAt = now;
+      }
+    }
+
+    // Retention cap — least recently updated items drop off first.
+    const ids = Object.keys(data.retention);
+    if (ids.length > RETENTION_CAP) {
+      ids.sort((a, b) => data.retention[a].updatedAt - data.retention[b].updatedAt);
+      for (const id of ids.slice(0, ids.length - RETENTION_CAP)) {
+        delete data.retention[id];
+      }
+    }
+  });
+}
+
+/**
+ * Record one completed run summary (score + duration trends, X5).
+ * Runs are append-only and capped — the oldest drop off first.
+ */
+export function recordRunSummary(run: Omit<RunRecord, "at">): void {
+  update((data) => {
+    data.runs.unshift({ ...run, at: Date.now() });
+    if (data.runs.length > RUN_CAP) {
+      data.runs.length = RUN_CAP;
+    }
+  });
+}
+
+/* ============================================================
+   Retention Engine API (NEXT-X1) — due queue + export
+   ============================================================ */
+
+/** One due-review row for the review queue UI. */
+export interface RetentionDueEntry {
+  identity: string;
+  topicSlug: string;
+  dueAt: number;
+  intervalDays: number;
+  streak: number;
+  overdueDays: number;
+}
+
+/**
+ * The due-today queue: every retention item whose dueAt has passed,
+ * most overdue first. `limit` caps a single review session.
+ */
+export function getRetentionDueQueue(now = Date.now(), limit = 20): RetentionDueEntry[] {
+  const data = getProgress();
+  return Object.values(data.retention)
+    .filter((item) => item.dueAt <= now)
+    .sort((a, b) => a.dueAt - b.dueAt)
+    .slice(0, limit)
+    .map((item) => ({
+      identity: item.identity,
+      topicSlug: item.topicSlug,
+      dueAt: item.dueAt,
+      intervalDays: item.intervalDays,
+      streak: item.streak,
+      overdueDays: Math.max(0, Math.floor((now - item.dueAt) / 86_400_000)),
+    }));
+}
+
+/** Count of items due right now (cheap version of the queue). */
+export function getRetentionDueCount(now = Date.now()): number {
+  const data = getProgress();
+  let count = 0;
+  for (const item of Object.values(data.retention)) {
+    if (item.dueAt <= now) count += 1;
+  }
+  return count;
+}
+
+/**
+ * The clean export shape for future sync — a plain, versioned,
+ * JSON-serialisable snapshot of the Retention Engine state. No PII,
+ * no credentials — question identities and schedule fields only.
+ */
+export function getRetentionExport(): {
+  kind: "kyp:retention:v1";
+  exportedAt: number;
+  items: RetentionItem[];
+} {
+  const data = getProgress();
+  return {
+    kind: "kyp:retention:v1",
+    exportedAt: Date.now(),
+    items: Object.values(data.retention).sort((a, b) => a.dueAt - b.dueAt),
+  };
+}
+
+/** Manually remove one item from the review schedule (list action). */
+export function clearRetentionItem(identity: string): void {
+  update((data) => {
+    delete data.retention[identity];
+  });
+}
+
+/* ============================================================
+   Daily Plan dismissal (NEXT-X8)
+   ============================================================ */
+
+/** Dismiss the daily plan for the rest of today (local date). */
+export function dismissDailyPlan(): void {
+  update((data) => {
+    data.planDismissedOn = new Date().toISOString().slice(0, 10);
+  });
+}
+
+/** Whether the daily plan is dismissed for today. */
+export function isDailyPlanDismissed(): boolean {
+  const data = getProgress();
+  return data.planDismissedOn === new Date().toISOString().slice(0, 10);
+}
+
 /**
  * Mark a course complete (idempotent) once the caller has verified
  * its outline is satisfied. Kept explicit so completion can never be
@@ -1008,6 +1364,10 @@ export function clearProgress(): void {
     data.customTest = emptyCustomTestStats();
     data.mistakeBook = {};
     data.testPresets = [];
+    data.answers = {};
+    data.runs = [];
+    data.retention = {};
+    data.planDismissedOn = null;
   });
 }
 

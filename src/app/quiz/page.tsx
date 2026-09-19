@@ -18,7 +18,10 @@ import {
   recordPracticeAttempt,
   recordMistakes,
   resolveMistakes,
+  recordAnswerEvents,
+  recordRunSummary,
   type MistakeRecordInput,
+  type AnswerEventInput,
 } from "@/lib/kyp/progress/progress-store";
 import { anchoredDrugHref } from "@/lib/kyp/drug-course-sections";
 import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
@@ -99,6 +102,17 @@ export default function QuizPage() {
   // intro renders identically on server and client.
   const practice = useLocalProgress()?.practice ?? null;
 
+  // ?filter= deep link (NEXT-N9): the topic-accuracy "Diseases" chip
+  // and analytics links pre-filter the practice set. Read once on
+  // mount from window.location — no useSearchParams, so no Suspense
+  // boundary is required for static export.
+  React.useEffect(() => {
+    const param = new URLSearchParams(window.location.search).get("filter");
+    if (param === "drug" || param === "disease") {
+      setFilter(param);
+    }
+  }, []);
+
   const filteredQuestions = React.useMemo(() => {
     if (filter === "all") return allQuestions;
     return allQuestions.filter(q => q.sourceType === filter);
@@ -155,6 +169,30 @@ export default function QuizPage() {
       recordPracticeAttempt(correct, results.length);
 
       const drugClassBySlug = new Map(drugs.map((d) => [d.slug, d.drugClassLabel]));
+
+      // Per-topic answer log (NEXT-N9) + Retention Engine input (X1):
+      // every answered question — correct AND incorrect — feeds topic
+      // accuracy; misses (re)schedule reviews, correct answers advance
+      // existing items up the interval ladder.
+      const events: AnswerEventInput[] = results.map((r) => ({
+        identity: `${r.question.sourceSlug}|mcq:${r.question.id}`,
+        topicSlug: r.question.sourceSlug,
+        topicName: r.question.sourceName,
+        topicClass:
+          r.question.sourceType === "drug"
+            ? (drugClassBySlug.get(r.question.sourceSlug) ?? "Medications")
+            : "Diseases",
+        correct: r.correct,
+      }));
+      recordAnswerEvents(events);
+      recordRunSummary({
+        surface: "quiz",
+        mode: "normal",
+        correct,
+        total: results.length,
+        durationMs: null,
+      });
+
       const misses: MistakeRecordInput[] = results
         .filter((r) => !r.correct)
         .map((r) => ({

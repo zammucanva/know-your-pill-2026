@@ -6,6 +6,7 @@ import {
   ArrowRight,
   BookOpen,
   BookMarked,
+  CalendarClock,
   CheckCircle2,
   Timer,
 } from "lucide-react";
@@ -14,6 +15,7 @@ import { drugs } from "@/lib/kyp/data";
 import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
 import {
   coursePercentComplete,
+  getRetentionDueCount,
   type CourseProgress,
 } from "@/lib/kyp/progress/progress-store";
 
@@ -75,8 +77,16 @@ export function StudyNextPanel() {
     : 0;
   const presets = data?.testPresets ?? [];
 
+  /* Reviews due right now (X1) — a wall-clock property, so it is
+     computed after hydration rather than straight from the snapshot. */
+  const [reviewsDue, setReviewsDue] = React.useState(0);
+  React.useEffect(() => {
+    if (!data) return;
+    setReviewsDue(getRetentionDueCount());
+  }, [data]);
+
   /* ── No inputs at all (or pre-hydration) — genuine start state ── */
-  if (!data || (recent.length === 0 && mistakeCount === 0 && presets.length === 0)) {
+  if (!data || (recent.length === 0 && mistakeCount === 0 && presets.length === 0 && reviewsDue === 0)) {
     const start = drugs[0];
     return (
       <div className="mt-10 flex flex-wrap gap-3">
@@ -150,8 +160,8 @@ export function StudyNextPanel() {
         </div>
       )}
 
-      {/* (2)(3)(4) — the rest of "what's next", sparse and honest */}
-      {(otherUnfinished.length > 0 || mistakeCount > 0 || presets.length > 0) && (
+      {/* (2)(3)(4)(5) — the rest of "what's next", sparse and honest */}
+      {(otherUnfinished.length > 0 || mistakeCount > 0 || presets.length > 0 || reviewsDue > 0) && (
         <div className="mt-3 flex flex-wrap gap-3">
           {/* (2) Unfinished courses — compact, real rows */}
           {otherUnfinished.map((course) => {
@@ -181,6 +191,21 @@ export function StudyNextPanel() {
               Questions to revisit
               <span className="text-xs font-normal opacity-70 tabular-nums">
                 · {mistakeCount}
+              </span>
+            </Link>
+          )}
+
+          {/* (3.5) Reviews due — the Retention Engine's headline
+              “what's due” surface (X1) */}
+          {reviewsDue > 0 && (
+            <Link
+              href="/study/review"
+              className="inline-flex items-center gap-2 rounded-lg border border-brand/40 bg-brand-soft/30 px-4 py-2.5 text-sm font-semibold text-brand transition-colors hover:border-brand/60"
+            >
+              <CalendarClock className="h-4 w-4" aria-hidden />
+              Reviews due
+              <span className="text-xs font-normal opacity-70 tabular-nums">
+                · {reviewsDue}
               </span>
             </Link>
           )}
