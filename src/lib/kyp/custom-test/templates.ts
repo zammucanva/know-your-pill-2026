@@ -426,6 +426,106 @@ export const TEMPLATES: Record<string, TemplateFn> = {
       ],
     };
   },
+  /* 14 ── mechanism-effect (X4a: mechanism → expected effect) ─────
+     Graph edge: molecular target/mechanism → net effect. Options are
+     the documented net-effect strings of other drugs — verbatim. */
+  "mechanism-effect": ({ drug, allDrugs }) => {
+    const correct = drug.mechanism.effect;
+    if (!correct) return { questions: [] };
+    const distractorPool = [
+      ...new Set(
+        allDrugs
+          .filter((d) => d.slug !== drug.slug)
+          .map((d) => d.mechanism.effect)
+          .filter((e) => e && e !== correct)
+      ),
+    ];
+    if (distractorPool.length < 3) return { questions: [] };
+    return {
+      questions: [
+        {
+          question: `Which documented net effect follows from ${drug.genericName}'s mechanism?`,
+          options: [correct, ...distractorPool.slice(0, 3)],
+          correctIndex: 0,
+          explanation: `${drug.genericName}: ${correct}`,
+          evidence: correct,
+          source: source(drug, "Mechanism", "/drugs/" + drug.slug + "#mechanism"),
+          templateId: "mechanism-effect",
+        },
+      ],
+    };
+  },
+
+  /* 15 ── shared-target (X4b: shared target across drugs) ──────────
+     Graph edge: two drugs sharing a transporter named verbatim in
+     both drugs' own molecular-target strings. */
+  "shared-target": ({ drug, allDrugs }) => {
+    // Transporter tokens the drug's own target string names.
+    const TOKENS = ["SERT", "NET", "DAT"] as const;
+    const own = TOKENS.filter((t) => drug.mechanism.molecularTarget.includes(t));
+    if (own.length === 0) return { questions: [] };
+    const questions: Array<Omit<PoolQuestion, "identity">> = [];
+    for (const token of own) {
+      const sharing = allDrugs.filter(
+        (d) => d.slug !== drug.slug && d.mechanism.molecularTarget.includes(token)
+      );
+      if (sharing.length === 0) continue;
+      const nonSharing = [
+        ...new Set(
+          allDrugs
+            .filter(
+              (d) => d.slug !== drug.slug && !d.mechanism.molecularTarget.includes(token)
+            )
+            .map((d) => d.genericName)
+        ),
+      ];
+      if (nonSharing.length < 3) continue;
+      const partner = sharing[0];
+      questions.push({
+        question: `${drug.genericName}'s documented targets include ${token}. Which other medication also lists ${token} among its targets?`,
+        options: [partner.genericName, ...nonSharing.slice(0, 3)],
+        correctIndex: 0,
+        explanation: `${drug.genericName}: ${drug.mechanism.molecularTarget} ${partner.genericName}: ${partner.mechanism.molecularTarget}`,
+        evidence: `Shared target: ${token}`,
+        source: source(drug, "Mechanism", "/drugs/" + drug.slug + "#mechanism"),
+        templateId: "shared-target",
+      });
+    }
+    return { questions };
+  },
+
+  /* 16 ── side-effect-association (X4d: effect ↔ effect across two
+     drugs) — Graph edge: a common side effect listed by BOTH drugs. */
+  "side-effect-association": ({ drug, allDrugs }) => {
+    const questions: Array<Omit<PoolQuestion, "identity">> = [];
+    for (const se of drug.commonSideEffects.slice(0, 6)) {
+      const sharing = allDrugs.filter(
+        (d) => d.slug !== drug.slug && d.commonSideEffects.some((s) => s.name === se.name)
+      );
+      if (sharing.length === 0) continue;
+      const nonSharing = [
+        ...new Set(
+          allDrugs
+            .filter(
+              (d) => d.slug !== drug.slug && !d.commonSideEffects.some((s) => s.name === se.name)
+            )
+            .map((d) => d.genericName)
+        ),
+      ];
+      if (nonSharing.length < 3) continue;
+      const partner = sharing[0];
+      questions.push({
+        question: `Both ${drug.genericName} and which other medication list "${se.name}" as a common side effect?`,
+        options: [partner.genericName, ...nonSharing.slice(0, 3)],
+        correctIndex: 0,
+        explanation: `${se.name} is documented as a common side effect of ${drug.genericName} (${se.description}) and of ${partner.genericName}.`,
+        evidence: `Shared common side effect: ${se.name}`,
+        source: source(drug, "Side effects", "/drugs/" + drug.slug + "#side-effects"),
+        templateId: "side-effect-association",
+      });
+    }
+    return { questions };
+  },
 };
 
 /** Ordered template ids (stable — used for balancing + tests). */
