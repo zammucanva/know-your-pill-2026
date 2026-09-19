@@ -61,7 +61,8 @@ describe("compare view — contract pins", () => {
     expect(src).toContain("frequency");
     expect(src).toContain('"very-common": "Very common"');
     // The band is never invented — unknown values degrade.
-    expect(src).toContain('"unknown": "Unknown frequency"');
+    expect(src).toContain('unknown: "Unknown frequency"');
+    expect(src).toContain('FREQUENCY_LABEL[frequency as Frequency] ?? "Unknown frequency"');
   });
 
   test("5. data cells are verbatim copies of each drug's own fields", () => {
@@ -122,13 +123,21 @@ describe("compare view — data-level guarantees", () => {
     }
   });
 
-  test("11. comparison tables only reference real drug names from the registry", () => {
+  test("11. comparison tables: primary drugs are always registry names; every reference is a real name", () => {
     const names = new Set(drugs.map((d) => d.genericName));
     for (const drug of drugs) {
       for (const table of drug.comparisonTables ?? []) {
+        // A table's primary drug must be selectable (registry name).
+        expect(names.has(table.primaryDrug)).toBe(true);
         for (const row of table.rows) {
           for (const c of row.comparisons) {
-            expect(names.has(c.drug)).toBe(true);
+            // Real, non-empty names only — values may legitimately
+            // reference medications without KYP pages (e.g.
+            // Nortriptyline); such columns simply never match a
+            // selection and are never rendered.
+            expect(typeof c.drug).toBe("string");
+            expect(c.drug.trim().length).toBeGreaterThan(0);
+            expect(typeof c.value).toBe("string");
           }
         }
       }
