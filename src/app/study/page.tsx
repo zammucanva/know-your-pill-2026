@@ -22,6 +22,7 @@ import { MistakeBookEntry } from "@/components/kyp/sections/study/mistake-book-e
 import { PracticeStatsLine } from "@/components/kyp/sections/study/practice-stats-line";
 import { TopicAccuracyChips } from "@/components/kyp/sections/study/topic-accuracy-chips";
 import { RetentionDueEntry } from "@/components/kyp/sections/study/retention-due-entry";
+import { DailyPlan } from "@/components/kyp/sections/study/daily-plan";
 import { drugs } from "@/lib/kyp/data";
 
 /**
@@ -111,6 +112,10 @@ export default function StudyPage() {
                 next time.
               </p>
             </Reveal>
+
+            {/* Today's plan (X8) — fixed, explainable, fully
+                dismissible; renders nothing once dismissed today. */}
+            <DailyPlan />
 
             {/* Study Next — the composed "what should I do next"
                 surface: resume card, unfinished courses, mistakes entry,
