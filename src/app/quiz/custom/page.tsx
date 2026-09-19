@@ -35,6 +35,7 @@ import {
   selectWeakTopics,
   weakAreaDrugSlugs,
 } from "@/lib/kyp/custom-test/weak-area";
+import { breakDownBySection } from "@/lib/kyp/custom-test/exam-breakdown";
 import type { TestQuestion } from "@/lib/kyp/custom-test/types";
 import {
   recordCustomTestAttempt,
@@ -110,6 +111,8 @@ interface AttemptState {
   available: number;
   /** Allotted time in ms when timed mode is on (N3); null = untimed. */
   allottedMs: number | null;
+  /** Exam mode (X6): feedback fully deferred until submission. */
+  exam: boolean;
   /** Retest context (N2); null for normal tests. */
   retestOf: { label: string; previousChosen: Record<string, string> } | null;
   /** Wall-clock finish timestamp, set exactly once on completion. */
@@ -148,6 +151,10 @@ function CustomTestBuilder() {
   const [timed, setTimed] = React.useState(false);
   /** Empty string = auto (1 minute per question). */
   const [timedMinutesInput, setTimedMinutesInput] = React.useState<string>("");
+
+  /* ── Exam mode (X6) — timed + mixed topics + fully deferred
+        feedback; a distinct composition, not a new engine. ── */
+  const [exam, setExam] = React.useState(false);
 
   /* ── Saved presets (N4) ── */
   const [presets, setPresets] = React.useState<TestPreset[] | null>(null);
@@ -240,13 +247,16 @@ function CustomTestBuilder() {
       count?: number;
       timed?: boolean;
       minutes?: number | null;
+      exam?: boolean;
     }
   ) => {
     const slugs = config?.slugs ?? [...selected];
     if (slugs.length === 0) return;
     const wanted =
       config?.count ?? (Number.isFinite(requestedCount) ? requestedCount : 20);
-    const useTimed = config?.timed ?? timed;
+    const useExam = config?.exam ?? exam;
+    // Exam mode composes timed pacing (X6): the countdown is always on.
+    const useTimed = useExam || (config?.timed ?? timed);
     const minutes =
       config?.minutes !== undefined && config?.minutes !== null
         ? config.minutes
@@ -260,6 +270,7 @@ function CustomTestBuilder() {
       capped: built.capped,
       available: built.available,
       allottedMs: useTimed ? Math.max(1, minutes) * 60000 : null,
+      exam: useExam,
       retestOf: null,
       finishedAt: null,
     });
@@ -294,6 +305,7 @@ function CustomTestBuilder() {
       capped: built.capped,
       available: built.available,
       allottedMs: null,
+      exam: false,
       retestOf: { label, previousChosen },
       finishedAt: null,
     });
@@ -399,9 +411,11 @@ function CustomTestBuilder() {
       surface: "custom",
       mode: attempt.retestOf
         ? "retest"
-        : attempt.allottedMs !== null
-          ? "timed"
-          : "normal",
+        : attempt.exam
+          ? "exam"
+          : attempt.allottedMs !== null
+            ? "timed"
+            : "normal",
       correct: results.correct.length,
       total: attempt.questions.length,
       durationMs:
@@ -960,33 +974,72 @@ function CustomTestBuilder() {
                 </div>
               </Reveal>
 
-              {/* Timed mode (N3) — opt-in, off by default */}
+              {/* Exam mode (X6) — timed + mixed topics + fully deferred
+                  feedback, a distinct composition of existing parts */}
+              <Reveal delay={0.16}>
+                <div className="mt-10">
+                  <div className="flex flex-wrap items-center justify-between gap-4 rounded-xl border border-border/60 bg-card/50 px-4 py-4">
+                    <div className="min-w-0">
+                      <label
+                        htmlFor="exam-toggle"
+                        className="flex cursor-pointer items-center gap-3 text-sm font-semibold text-foreground"
+                      >
+                        <input
+                          id="exam-toggle"
+                          type="checkbox"
+                          checked={exam}
+                          onChange={(e) => {
+                            setExam(e.target.checked);
+                            if (e.target.checked) setTimed(true);
+                          }}
+                          disabled={selectedCount === 0}
+                          className="h-4 w-4 rounded border-border accent-[var(--brand)] disabled:opacity-40"
+                        />
+                        <ClipboardList className="h-4 w-4 text-muted-foreground" aria-hidden />
+                        Exam — feedback after submission
+                      </label>
+                      <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
+                        The countdown is on, answers move in one direction,
+                        and no answer is revealed until you submit — then
+                        a per-section breakdown explains the result. Off by
+                        default.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+
+              {/* Timed mode (N3) — opt-in, off by default; included in
+                  exam mode (X6) */}
               <Reveal delay={0.17}>
-                <div className="mt-12">
+                <div className="mt-4">
                   <div className="flex flex-wrap items-center justify-between gap-4 rounded-xl border border-border/60 bg-card/50 px-4 py-4">
                     <div className="min-w-0">
                       <label
                         htmlFor="timed-toggle"
-                        className="flex cursor-pointer items-center gap-3 text-sm font-semibold text-foreground"
+                        className={cn(
+                          "flex items-center gap-3 text-sm font-semibold text-foreground",
+                          exam ? "cursor-default opacity-60" : "cursor-pointer"
+                        )}
                       >
                         <input
                           id="timed-toggle"
                           type="checkbox"
                           checked={timed}
                           onChange={(e) => setTimed(e.target.checked)}
-                          disabled={selectedCount === 0}
+                          disabled={selectedCount === 0 || exam}
                           className="h-4 w-4 rounded border-border accent-[var(--brand)] disabled:opacity-40"
                         />
                         <Timer className="h-4 w-4 text-muted-foreground" aria-hidden />
                         Timed — exam pacing
                       </label>
                       <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
-                        A countdown for the whole test, a pace indicator while
-                        you answer, and your time in the results. Off by
-                        default.
+                        {exam
+                          ? "Included in exam mode — the countdown stays on until you submit."
+                          : "A countdown for the whole test, a pace indicator while you answer, and your time in the results. Off by default."}
                       </p>
                     </div>
-                    {timed && (
+                    {timed && !exam && (
                       <label className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-border bg-background px-3 py-2 text-sm">
                         <span className="text-muted-foreground">Minutes</span>
                         <input
@@ -1104,6 +1157,9 @@ function CustomTestBuilder() {
     const q = attempt.questions[attempt.index];
     const selectedAnswer = attempt.answers[attempt.index];
     const answered = selectedAnswer !== null;
+    // Exam mode (X6): feedback is FULLY withheld until submission —
+    // no correct/wrong styling, no explanation, nothing leaks.
+    const withhold = attempt.exam;
     const isCorrect = answered && selectedAnswer === q.attemptCorrectIndex;
     const progressPct = Math.round(
       ((attempt.index + 1) / attempt.questions.length) * 100
@@ -1241,13 +1297,14 @@ function CustomTestBuilder() {
                 {q.question}
               </h1>
 
-              {/* Options — same interaction model as /quiz */}
+              {/* Options — same interaction model as /quiz; in exam
+                  mode (X6) only a neutral selected state is shown */}
               <div className="mt-10 space-y-3">
                 {q.attemptOptions.map((option, idx) => {
                   const isThisSelected = selectedAnswer === idx;
                   const isThisCorrect = idx === q.attemptCorrectIndex;
-                  const showCorrect = answered && isThisCorrect;
-                  const showWrong = answered && isThisSelected && !isThisCorrect;
+                  const showCorrect = answered && isThisCorrect && !withhold;
+                  const showWrong = answered && isThisSelected && !isThisCorrect && !withhold;
                   return (
                     <button
                       key={idx}
@@ -1259,7 +1316,8 @@ function CustomTestBuilder() {
                         !answered && "hover:border-brand/40 hover:bg-accent/30",
                         showCorrect && "border-success bg-success-soft/30",
                         showWrong && "border-emergency bg-emergency-soft/30",
-                        answered && !showCorrect && !showWrong && "border-border opacity-50"
+                        answered && !showCorrect && !showWrong && withhold && isThisSelected && "border-brand bg-brand-soft/30",
+                        answered && !showCorrect && !showWrong && !(withhold && isThisSelected) && "border-border opacity-50"
                       )}
                     >
                       <span
@@ -1267,13 +1325,16 @@ function CustomTestBuilder() {
                           "flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-xs font-bold",
                           showCorrect && "border-success bg-success text-success-foreground",
                           showWrong && "border-emergency bg-emergency text-emergency-foreground",
-                          !showCorrect && !showWrong && "border-border text-muted-foreground"
+                          answered && withhold && isThisSelected && "border-brand bg-brand text-primary-foreground",
+                          !showCorrect && !showWrong && !(answered && withhold && isThisSelected) && "border-border text-muted-foreground"
                         )}
                       >
                         {showCorrect ? (
                           <Check className="h-3.5 w-3.5" strokeWidth={3} />
                         ) : showWrong ? (
                           <X className="h-3.5 w-3.5" strokeWidth={3} />
+                        ) : answered && withhold && isThisSelected ? (
+                          <Check className="h-3.5 w-3.5" strokeWidth={3} />
                         ) : (
                           String.fromCharCode(65 + idx)
                         )}
@@ -1281,7 +1342,9 @@ function CustomTestBuilder() {
                       <span
                         className={cn(
                           "text-sm [overflow-wrap:anywhere]",
-                          showCorrect ? "font-semibold text-foreground" : "text-foreground"
+                          showCorrect || (answered && withhold && isThisSelected)
+                            ? "font-semibold text-foreground"
+                            : "text-foreground"
                         )}
                       >
                         {option}
@@ -1291,8 +1354,9 @@ function CustomTestBuilder() {
                 })}
               </div>
 
-              {/* Explanation + Next */}
-              {answered && (
+              {/* Explanation + Next — withheld entirely in exam mode
+                  (X6) until submission */}
+              {answered && !withhold && (
                 <Reveal>
                   <div className="mt-8 rounded-lg border border-border/60 bg-muted/30 p-5">
                     <p className="text-overline text-muted-foreground mb-2">
@@ -1321,6 +1385,26 @@ function CustomTestBuilder() {
                     </button>
                   </div>
                 </Reveal>
+              )}
+
+              {/* Exam mode (X6): the only post-answer UI — a neutral
+                  acknowledgement and the way to the next question. */}
+              {answered && withhold && (
+                <div className="mt-8 flex items-center justify-between gap-4">
+                  <p className="text-xs text-muted-foreground" aria-live="polite">
+                    Answer recorded — feedback comes after you submit.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={nextQuestion}
+                    className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90 kyp-focus-ring"
+                  >
+                    {attempt.index + 1 >= attempt.questions.length
+                      ? "Submit exam"
+                      : "Next Question"}
+                    <ArrowRight className="h-4 w-4" />
+                  </button>
+                </div>
               )}
 
               {/* Exit */}
@@ -1471,6 +1555,61 @@ function CustomTestBuilder() {
                   </p>
                 )}
               </Reveal>
+
+              {/* Per-section breakdown (X6) — the exam result is never
+                  just a raw score; every section explains itself. */}
+              {attempt.exam && (
+                <Reveal delay={0.1}>
+                  <div className="mt-10">
+                    <p className="text-overline text-muted-foreground mb-4">
+                      Per-section breakdown
+                    </p>
+                    <div className="overflow-hidden rounded-xl border border-border/60">
+                      <table className="w-full border-collapse text-sm">
+                        <caption className="sr-only">
+                          Exam result broken down by medication class section.
+                        </caption>
+                        <thead>
+                          <tr className="border-b border-border/60 bg-muted/40 text-left text-xs uppercase tracking-wide text-muted-foreground">
+                            <th scope="col" className="px-4 py-2.5 font-semibold">Section</th>
+                            <th scope="col" className="px-4 py-2.5 font-semibold">Correct</th>
+                            <th scope="col" className="px-4 py-2.5 font-semibold">Unanswered</th>
+                            <th scope="col" className="px-4 py-2.5 font-semibold">Section score</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {breakDownBySection(attempt.questions, attempt.answers).map((section) => {
+                            const pct = section.total > 0
+                              ? Math.round((section.correct / section.total) * 100)
+                              : 0;
+                            return (
+                              <tr key={section.label} className="border-b border-border/30 last:border-0">
+                                <th scope="row" className="px-4 py-2.5 text-left font-medium text-foreground">
+                                  {section.label}
+                                </th>
+                                <td className="px-4 py-2.5 tabular-nums text-foreground/80">
+                                  {section.correct} / {section.total}
+                                </td>
+                                <td className="px-4 py-2.5 tabular-nums text-muted-foreground">
+                                  {section.unanswered > 0 ? section.unanswered : "—"}
+                                </td>
+                                <td className="px-4 py-2.5 tabular-nums text-foreground/80">
+                                  {pct}%
+                                </td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                    </div>
+                    <p className="mt-2 text-xs text-muted-foreground/70">
+                      Sections are the medication classes your selection drew
+                      from. Review Incorrect below walks through every question
+                      with its explanation.
+                    </p>
+                  </div>
+                </Reveal>
+              )}
 
               {/* Topics covered */}
               <Reveal delay={0.12}>
