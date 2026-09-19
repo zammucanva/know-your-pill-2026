@@ -7,6 +7,7 @@ import {
   CheckCircle2,
   RefreshCw,
   LineChart,
+  Scale,
 } from "lucide-react";
 
 import { Navbar } from "@/components/kyp/sections/navbar";
@@ -225,6 +226,13 @@ export default function StudyPage() {
                     checkpoints, and active recall in every course.
                   </p>
                 </div>
+                <Link
+                  href="/compare"
+                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                >
+                  <Scale className="h-4 w-4" />
+                  Compare medications
+                </Link>
                 <Link
                   href="/dashboard"
                   className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
