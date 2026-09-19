@@ -181,16 +181,17 @@ describe("daily plan — dismissal + component pins", () => {
 
   test("8. never nagging — no streaks, no guilt language anywhere", () => {
     // Targeted at actual nag/guilt patterns (streak counts, missed-day
-    // calls, pressure) — NOT the factual "questions you missed before"
-    // phrasing shared with the review surfaces, nor the doc comments
-    // that describe this very rule.
+    // calls, pressure). Only CODE lines are checked — doc comments
+    // describing this very rule legitimately mention the words.
     const guilt = /day streak|streak of \d|you missed \d|don'?t forget|shame|guilt|lazy|behind schedule|keep it up|don'?t break/i;
     for (const file of [
       "src/lib/kyp/study/daily-plan.ts",
       "src/components/kyp/sections/study/daily-plan.tsx",
     ]) {
-      const src = read(file);
-      expect(src).not.toMatch(guilt);
+      const codeLines = read(file)
+        .split("\n")
+        .filter((line) => !line.trimStart().startsWith("*") && !line.trimStart().startsWith("//"));
+      expect(codeLines.join("\n")).not.toMatch(guilt);
     }
   });
 
