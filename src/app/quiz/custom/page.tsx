@@ -31,19 +31,29 @@ import {
 } from "@/lib/kyp/custom-test/engine";
 import { deriveRequestedCount } from "@/lib/kyp/custom-test/count";
 import { takeRetestRequest } from "@/lib/kyp/custom-test/retest-handoff";
+import {
+  selectWeakTopics,
+  weakAreaDrugSlugs,
+} from "@/lib/kyp/custom-test/weak-area";
+import { breakDownBySection } from "@/lib/kyp/custom-test/exam-breakdown";
 import type { TestQuestion } from "@/lib/kyp/custom-test/types";
 import {
   recordCustomTestAttempt,
   recordMistakes,
   resolveMistakes,
+  recordAnswerEvents,
+  recordRunSummary,
   getTestPresets,
   saveTestPreset,
   deleteTestPreset,
   recordPresetLaunch,
   type TestPreset,
   type MistakeRecordInput,
+  type AnswerEventInput,
 } from "@/lib/kyp/progress/progress-store";
 import { verifyDrugHref } from "@/lib/kyp/drug-course-sections";
+import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
+import { getProgress, type KypProgressData } from "@/lib/kyp/progress/progress-store";
 
 /**
  * /quiz/custom — Build your own test (recovered feature).
@@ -73,6 +83,23 @@ type Phase = "setup" | "test" | "results" | "review";
 
 const COUNT_OPTIONS = [10, 20, 30, 50, 100];
 
+/** A never-mutated empty snapshot for pre-hydration weak-area maths. */
+const EMPTY_PROGRESS_FOR_WEAK: KypProgressData = {
+  version: 1,
+  courses: {},
+  lastVisitedSlug: null,
+  lastVisitedAt: null,
+  recentActivity: [],
+  practice: { attempts: 0, latestScore: null, bestScore: null, lastAttemptAt: null, lastRunQuestions: null },
+  customTest: { attempts: 0, latestScore: null, bestScore: null, lastAttemptAt: null, lastRunQuestions: null },
+  mistakeBook: {},
+  testPresets: [],
+  answers: {},
+  runs: [],
+  retention: {},
+  planDismissedOn: null,
+};
+
 /** sessionStorage/URL handoff keys are owned by retest-handoff.ts. */
 
 interface AttemptState {
@@ -84,6 +111,8 @@ interface AttemptState {
   available: number;
   /** Allotted time in ms when timed mode is on (N3); null = untimed. */
   allottedMs: number | null;
+  /** Exam mode (X6): feedback fully deferred until submission. */
+  exam: boolean;
   /** Retest context (N2); null for normal tests. */
   retestOf: { label: string; previousChosen: Record<string, string> } | null;
   /** Wall-clock finish timestamp, set exactly once on completion. */
@@ -123,10 +152,25 @@ function CustomTestBuilder() {
   /** Empty string = auto (1 minute per question). */
   const [timedMinutesInput, setTimedMinutesInput] = React.useState<string>("");
 
+  /* ── Exam mode (X6) — timed + mixed topics + fully deferred
+        feedback; a distinct composition, not a new engine. ── */
+  const [exam, setExam] = React.useState(false);
+
   /* ── Saved presets (N4) ── */
   const [presets, setPresets] = React.useState<TestPreset[] | null>(null);
   const [presetName, setPresetName] = React.useState<string>("");
   const [presetNotice, setPresetNotice] = React.useState<string | null>(null);
+
+  /* ── Weak-Area Test (X2) — topics chosen from demonstrated weakness,
+        not manual selection. ── */
+  const progress = useLocalProgress();
+  const weakArea = React.useMemo(
+    () => selectWeakTopics(progress ?? EMPTY_PROGRESS_FOR_WEAK),
+    [progress]
+  );
+  const [weakNotice, setWeakNotice] = React.useState<string | null>(null);
+  /** The reasons banner carried into the test phase. */
+  const [weakReasons, setWeakReasons] = React.useState<string[] | null>(null);
 
   /* ── Attempt state (React state ONLY — Reset clears exactly this) ── */
   const [phase, setPhase] = React.useState<Phase>("setup");
@@ -203,13 +247,16 @@ function CustomTestBuilder() {
       count?: number;
       timed?: boolean;
       minutes?: number | null;
+      exam?: boolean;
     }
   ) => {
     const slugs = config?.slugs ?? [...selected];
     if (slugs.length === 0) return;
     const wanted =
       config?.count ?? (Number.isFinite(requestedCount) ? requestedCount : 20);
-    const useTimed = config?.timed ?? timed;
+    const useExam = config?.exam ?? exam;
+    // Exam mode composes timed pacing (X6): the countdown is always on.
+    const useTimed = useExam || (config?.timed ?? timed);
     const minutes =
       config?.minutes !== undefined && config?.minutes !== null
         ? config.minutes
@@ -223,6 +270,7 @@ function CustomTestBuilder() {
       capped: built.capped,
       available: built.available,
       allottedMs: useTimed ? Math.max(1, minutes) * 60000 : null,
+      exam: useExam,
       retestOf: null,
       finishedAt: null,
     });
@@ -257,6 +305,7 @@ function CustomTestBuilder() {
       capped: built.capped,
       available: built.available,
       allottedMs: null,
+      exam: false,
       retestOf: { label, previousChosen },
       finishedAt: null,
     });
@@ -346,6 +395,34 @@ function CustomTestBuilder() {
     if (recordedRef.current === key) return;
     recordedRef.current = key;
     recordCustomTestAttempt(results.correct.length, attempt.questions.length);
+
+    // Per-topic answer log (NEXT-N9) + Retention Engine input (X1):
+    // correct and incorrect answers alike feed topic accuracy; misses
+    // (re)schedule reviews, correct answers advance existing items.
+    const events: AnswerEventInput[] = results.answered.map((a) => ({
+      identity: a.question.identity,
+      topicSlug: a.question.source.sourceSlug,
+      topicName: a.question.source.sourceName,
+      topicClass: a.question.source.sourceClass,
+      correct: a.correct,
+    }));
+    recordAnswerEvents(events);
+    recordRunSummary({
+      surface: "custom",
+      mode: attempt.retestOf
+        ? "retest"
+        : attempt.exam
+          ? "exam"
+          : attempt.allottedMs !== null
+            ? "timed"
+            : "normal",
+      correct: results.correct.length,
+      total: attempt.questions.length,
+      durationMs:
+        attempt.finishedAt !== null
+          ? Math.max(0, attempt.finishedAt - attempt.startedAt)
+          : null,
+    });
 
     const misses: MistakeRecordInput[] = results.incorrect.map(
       ({ question: q, selected }) => ({
@@ -438,6 +515,23 @@ function CustomTestBuilder() {
     });
   };
 
+  /* ── Weak-Area Test (X2) ── */
+  const startWeakArea = () => {
+    const slugs = weakAreaDrugSlugs(weakArea);
+    if (slugs.length === 0) {
+      setWeakNotice(
+        "Not enough practice history yet — take a few tests first and weak areas will be picked automatically."
+      );
+      return;
+    }
+    setWeakReasons(weakArea.topics.map((t) => `${t.classLabel}: ${t.reason}`));
+    startTest({
+      slugs,
+      count: Number.isFinite(requestedCount) ? requestedCount : 20,
+      timed: false,
+    });
+  };
+
   const handleSavePreset = () => {
     if (selectedCount === 0) return;
     const wanted = Number.isFinite(requestedCount) ? requestedCount : 20;
@@ -492,6 +586,21 @@ function CustomTestBuilder() {
           `${cls.label} pre-selected from the class page — choose a length and start, or adjust the selection.`
         );
       }
+    }
+
+    // X2 — one-tap weak-area entry (the Daily Plan / chips route here).
+    if (searchParams.get("weak")) {
+      const selection = selectWeakTopics(getProgress());
+      const slugs = weakAreaDrugSlugs(selection);
+      if (slugs.length > 0) {
+        setWeakReasons(selection.topics.map((t) => `${t.classLabel}: ${t.reason}`));
+        startTest({ slugs, count: 20, timed: false });
+      } else {
+        setWeakNotice(
+          "Not enough practice history yet — take a few tests first and weak areas will be picked automatically."
+        );
+      }
+      return;
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
@@ -573,6 +682,63 @@ function CustomTestBuilder() {
                     {presetNotice && (
                       <p className="mt-2 text-xs text-muted-foreground" role="status">
                         {presetNotice}
+                      </p>
+                    )}
+                  </div>
+                </Reveal>
+              )}
+
+              {/* Weak-Area Test (X2) — topics selected from demonstrated
+                  weakness, with the numbers that justified the pick */}
+              {progress !== null && (
+                <Reveal delay={0.05}>
+                  <div className="mt-10 rounded-xl border border-border/60 bg-card/50 p-5">
+                    <p className="text-overline text-muted-foreground mb-3">
+                      Weak-Area Test
+                    </p>
+                    {weakArea.topics.length > 0 ? (
+                      <>
+                        <p className="text-sm leading-relaxed text-foreground/90">
+                          Let the test choose for you — it draws from the
+                          classes your practice history shows are weakest.
+                        </p>
+                        <ul className="mt-4 space-y-2">
+                          {weakArea.topics.map((topic) => (
+                            <li
+                              key={topic.classLabel}
+                              className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-border/30 pb-2 last:border-0 last:pb-0"
+                            >
+                              <span className="text-sm font-semibold text-foreground">
+                                {topic.classLabel}
+                              </span>
+                              <span className="text-xs text-muted-foreground tabular-nums">
+                                {topic.reason}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                        <button
+                          type="button"
+                          onClick={startWeakArea}
+                          className="mt-5 inline-flex items-center gap-2 rounded-lg border border-brand/40 bg-brand-soft/30 px-5 py-2.5 text-sm font-semibold text-brand transition-colors hover:border-brand/60 kyp-focus-ring"
+                        >
+                          <Zap className="h-4 w-4" aria-hidden />
+                          Drill my weak areas
+                          <span className="text-xs font-normal opacity-70">
+                            · {weakAreaDrugSlugs(weakArea).length} medications
+                          </span>
+                        </button>
+                      </>
+                    ) : (
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        {weakArea.enoughData
+                          ? "No weak classes right now — your recent accuracy is holding up across everything you have practised."
+                          : "Not enough practice history yet — take a few tests first and weak areas will be picked automatically."}
+                      </p>
+                    )}
+                    {weakNotice && (
+                      <p className="mt-3 text-xs text-muted-foreground" role="status">
+                        {weakNotice}
                       </p>
                     )}
                   </div>
@@ -808,33 +974,72 @@ function CustomTestBuilder() {
                 </div>
               </Reveal>
 
-              {/* Timed mode (N3) — opt-in, off by default */}
+              {/* Exam mode (X6) — timed + mixed topics + fully deferred
+                  feedback, a distinct composition of existing parts */}
+              <Reveal delay={0.16}>
+                <div className="mt-10">
+                  <div className="flex flex-wrap items-center justify-between gap-4 rounded-xl border border-border/60 bg-card/50 px-4 py-4">
+                    <div className="min-w-0">
+                      <label
+                        htmlFor="exam-toggle"
+                        className="flex cursor-pointer items-center gap-3 text-sm font-semibold text-foreground"
+                      >
+                        <input
+                          id="exam-toggle"
+                          type="checkbox"
+                          checked={exam}
+                          onChange={(e) => {
+                            setExam(e.target.checked);
+                            if (e.target.checked) setTimed(true);
+                          }}
+                          disabled={selectedCount === 0}
+                          className="h-4 w-4 rounded border-border accent-[var(--brand)] disabled:opacity-40"
+                        />
+                        <ClipboardList className="h-4 w-4 text-muted-foreground" aria-hidden />
+                        Exam — feedback after submission
+                      </label>
+                      <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
+                        The countdown is on, answers move in one direction,
+                        and no answer is revealed until you submit — then
+                        a per-section breakdown explains the result. Off by
+                        default.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+
+              {/* Timed mode (N3) — opt-in, off by default; included in
+                  exam mode (X6) */}
               <Reveal delay={0.17}>
-                <div className="mt-12">
+                <div className="mt-4">
                   <div className="flex flex-wrap items-center justify-between gap-4 rounded-xl border border-border/60 bg-card/50 px-4 py-4">
                     <div className="min-w-0">
                       <label
                         htmlFor="timed-toggle"
-                        className="flex cursor-pointer items-center gap-3 text-sm font-semibold text-foreground"
+                        className={cn(
+                          "flex items-center gap-3 text-sm font-semibold text-foreground",
+                          exam ? "cursor-default opacity-60" : "cursor-pointer"
+                        )}
                       >
                         <input
                           id="timed-toggle"
                           type="checkbox"
                           checked={timed}
                           onChange={(e) => setTimed(e.target.checked)}
-                          disabled={selectedCount === 0}
+                          disabled={selectedCount === 0 || exam}
                           className="h-4 w-4 rounded border-border accent-[var(--brand)] disabled:opacity-40"
                         />
                         <Timer className="h-4 w-4 text-muted-foreground" aria-hidden />
                         Timed — exam pacing
                       </label>
                       <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
-                        A countdown for the whole test, a pace indicator while
-                        you answer, and your time in the results. Off by
-                        default.
+                        {exam
+                          ? "Included in exam mode — the countdown stays on until you submit."
+                          : "A countdown for the whole test, a pace indicator while you answer, and your time in the results. Off by default."}
                       </p>
                     </div>
-                    {timed && (
+                    {timed && !exam && (
                       <label className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-border bg-background px-3 py-2 text-sm">
                         <span className="text-muted-foreground">Minutes</span>
                         <input
@@ -906,7 +1111,10 @@ function CustomTestBuilder() {
                 <div className="mt-12">
                   <button
                     type="button"
-                    onClick={() => startTest()}
+                    onClick={() => {
+                      setWeakReasons(null);
+                      startTest();
+                    }}
                     disabled={
                       selectedCount === 0 ||
                       stats.total === 0 ||
@@ -949,6 +1157,9 @@ function CustomTestBuilder() {
     const q = attempt.questions[attempt.index];
     const selectedAnswer = attempt.answers[attempt.index];
     const answered = selectedAnswer !== null;
+    // Exam mode (X6): feedback is FULLY withheld until submission —
+    // no correct/wrong styling, no explanation, nothing leaks.
+    const withhold = attempt.exam;
     const isCorrect = answered && selectedAnswer === q.attemptCorrectIndex;
     const progressPct = Math.round(
       ((attempt.index + 1) / attempt.questions.length) * 100
@@ -976,6 +1187,22 @@ function CustomTestBuilder() {
                 >
                   Retest — {attempt.retestOf.label}. The same questions,
                   re-presented in a fresh order.
+                </div>
+              )}
+
+              {/* Weak-Area selection (X2) — the plain-language reasons
+                  that justified what this test drew from. */}
+              {weakReasons && weakReasons.length > 0 && (
+                <div
+                  role="status"
+                  className="mb-6 rounded-lg border border-brand/40 bg-brand-soft/20 p-3 text-xs text-foreground/80"
+                >
+                  Weak-Area Test — drawn from your practice history:
+                  <ul className="mt-1 list-inside list-disc">
+                    {weakReasons.map((reason) => (
+                      <li key={reason}>{reason}</li>
+                    ))}
+                  </ul>
                 </div>
               )}
 
@@ -1070,13 +1297,14 @@ function CustomTestBuilder() {
                 {q.question}
               </h1>
 
-              {/* Options — same interaction model as /quiz */}
+              {/* Options — same interaction model as /quiz; in exam
+                  mode (X6) only a neutral selected state is shown */}
               <div className="mt-10 space-y-3">
                 {q.attemptOptions.map((option, idx) => {
                   const isThisSelected = selectedAnswer === idx;
                   const isThisCorrect = idx === q.attemptCorrectIndex;
-                  const showCorrect = answered && isThisCorrect;
-                  const showWrong = answered && isThisSelected && !isThisCorrect;
+                  const showCorrect = answered && isThisCorrect && !withhold;
+                  const showWrong = answered && isThisSelected && !isThisCorrect && !withhold;
                   return (
                     <button
                       key={idx}
@@ -1088,7 +1316,8 @@ function CustomTestBuilder() {
                         !answered && "hover:border-brand/40 hover:bg-accent/30",
                         showCorrect && "border-success bg-success-soft/30",
                         showWrong && "border-emergency bg-emergency-soft/30",
-                        answered && !showCorrect && !showWrong && "border-border opacity-50"
+                        answered && !showCorrect && !showWrong && withhold && isThisSelected && "border-brand bg-brand-soft/30",
+                        answered && !showCorrect && !showWrong && !(withhold && isThisSelected) && "border-border opacity-50"
                       )}
                     >
                       <span
@@ -1096,13 +1325,16 @@ function CustomTestBuilder() {
                           "flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-xs font-bold",
                           showCorrect && "border-success bg-success text-success-foreground",
                           showWrong && "border-emergency bg-emergency text-emergency-foreground",
-                          !showCorrect && !showWrong && "border-border text-muted-foreground"
+                          answered && withhold && isThisSelected && "border-brand bg-brand text-primary-foreground",
+                          !showCorrect && !showWrong && !(answered && withhold && isThisSelected) && "border-border text-muted-foreground"
                         )}
                       >
                         {showCorrect ? (
                           <Check className="h-3.5 w-3.5" strokeWidth={3} />
                         ) : showWrong ? (
                           <X className="h-3.5 w-3.5" strokeWidth={3} />
+                        ) : answered && withhold && isThisSelected ? (
+                          <Check className="h-3.5 w-3.5" strokeWidth={3} />
                         ) : (
                           String.fromCharCode(65 + idx)
                         )}
@@ -1110,7 +1342,9 @@ function CustomTestBuilder() {
                       <span
                         className={cn(
                           "text-sm [overflow-wrap:anywhere]",
-                          showCorrect ? "font-semibold text-foreground" : "text-foreground"
+                          showCorrect || (answered && withhold && isThisSelected)
+                            ? "font-semibold text-foreground"
+                            : "text-foreground"
                         )}
                       >
                         {option}
@@ -1120,8 +1354,9 @@ function CustomTestBuilder() {
                 })}
               </div>
 
-              {/* Explanation + Next */}
-              {answered && (
+              {/* Explanation + Next — withheld entirely in exam mode
+                  (X6) until submission */}
+              {answered && !withhold && (
                 <Reveal>
                   <div className="mt-8 rounded-lg border border-border/60 bg-muted/30 p-5">
                     <p className="text-overline text-muted-foreground mb-2">
@@ -1150,6 +1385,26 @@ function CustomTestBuilder() {
                     </button>
                   </div>
                 </Reveal>
+              )}
+
+              {/* Exam mode (X6): the only post-answer UI — a neutral
+                  acknowledgement and the way to the next question. */}
+              {answered && withhold && (
+                <div className="mt-8 flex items-center justify-between gap-4">
+                  <p className="text-xs text-muted-foreground" aria-live="polite">
+                    Answer recorded — feedback comes after you submit.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={nextQuestion}
+                    className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90 kyp-focus-ring"
+                  >
+                    {attempt.index + 1 >= attempt.questions.length
+                      ? "Submit exam"
+                      : "Next Question"}
+                    <ArrowRight className="h-4 w-4" />
+                  </button>
+                </div>
               )}
 
               {/* Exit */}
@@ -1300,6 +1555,61 @@ function CustomTestBuilder() {
                   </p>
                 )}
               </Reveal>
+
+              {/* Per-section breakdown (X6) — the exam result is never
+                  just a raw score; every section explains itself. */}
+              {attempt.exam && (
+                <Reveal delay={0.1}>
+                  <div className="mt-10">
+                    <p className="text-overline text-muted-foreground mb-4">
+                      Per-section breakdown
+                    </p>
+                    <div className="overflow-hidden rounded-xl border border-border/60">
+                      <table className="w-full border-collapse text-sm">
+                        <caption className="sr-only">
+                          Exam result broken down by medication class section.
+                        </caption>
+                        <thead>
+                          <tr className="border-b border-border/60 bg-muted/40 text-left text-xs uppercase tracking-wide text-muted-foreground">
+                            <th scope="col" className="px-4 py-2.5 font-semibold">Section</th>
+                            <th scope="col" className="px-4 py-2.5 font-semibold">Correct</th>
+                            <th scope="col" className="px-4 py-2.5 font-semibold">Unanswered</th>
+                            <th scope="col" className="px-4 py-2.5 font-semibold">Section score</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {breakDownBySection(attempt.questions, attempt.answers).map((section) => {
+                            const pct = section.total > 0
+                              ? Math.round((section.correct / section.total) * 100)
+                              : 0;
+                            return (
+                              <tr key={section.label} className="border-b border-border/30 last:border-0">
+                                <th scope="row" className="px-4 py-2.5 text-left font-medium text-foreground">
+                                  {section.label}
+                                </th>
+                                <td className="px-4 py-2.5 tabular-nums text-foreground/80">
+                                  {section.correct} / {section.total}
+                                </td>
+                                <td className="px-4 py-2.5 tabular-nums text-muted-foreground">
+                                  {section.unanswered > 0 ? section.unanswered : "—"}
+                                </td>
+                                <td className="px-4 py-2.5 tabular-nums text-foreground/80">
+                                  {pct}%
+                                </td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                    </div>
+                    <p className="mt-2 text-xs text-muted-foreground/70">
+                      Sections are the medication classes your selection drew
+                      from. Review Incorrect below walks through every question
+                      with its explanation.
+                    </p>
+                  </div>
+                </Reveal>
+              )}
 
               {/* Topics covered */}
               <Reveal delay={0.12}>

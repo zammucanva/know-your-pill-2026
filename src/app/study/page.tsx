@@ -7,6 +7,7 @@ import {
   CheckCircle2,
   RefreshCw,
   LineChart,
+  Scale,
 } from "lucide-react";
 
 import { Navbar } from "@/components/kyp/sections/navbar";
@@ -19,6 +20,9 @@ import { ContinueStudying } from "@/components/kyp/sections/study/continue-study
 import { StudyNextPanel } from "@/components/kyp/sections/study/study-next-panel";
 import { MistakeBookEntry } from "@/components/kyp/sections/study/mistake-book-entry";
 import { PracticeStatsLine } from "@/components/kyp/sections/study/practice-stats-line";
+import { TopicAccuracyChips } from "@/components/kyp/sections/study/topic-accuracy-chips";
+import { RetentionDueEntry } from "@/components/kyp/sections/study/retention-due-entry";
+import { DailyPlan } from "@/components/kyp/sections/study/daily-plan";
 import { drugs } from "@/lib/kyp/data";
 
 /**
@@ -108,6 +112,10 @@ export default function StudyPage() {
                 next time.
               </p>
             </Reveal>
+
+            {/* Today's plan (X8) — fixed, explainable, fully
+                dismissible; renders nothing once dismissed today. */}
+            <DailyPlan />
 
             {/* Study Next — the composed "what should I do next"
                 surface: resume card, unfinished courses, mistakes entry,
@@ -223,6 +231,13 @@ export default function StudyPage() {
                     checkpoints, and active recall in every course.
                   </p>
                 </div>
+                <Link
+                  href="/compare"
+                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                >
+                  <Scale className="h-4 w-4" />
+                  Compare medications
+                </Link>
                 <Link
                   href="/dashboard"
                   className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
@@ -389,9 +404,18 @@ export default function StudyPage() {
               </Reveal>
             </div>
 
+            {/* Reviews due — the Retention Engine's Practice-section
+                entry (NEXT-X1): renders only when something is due. */}
+            <RetentionDueEntry />
+
             {/* Mistake Book — real rows only (renders nothing before
                 hydration or when nothing needs revisiting). */}
             <MistakeBookEntry />
+
+            {/* Topic accuracy — real chips only (NEXT-N9): percentages
+                above the minimum sample, neutral "not enough data yet"
+                below it, weakest-first. */}
+            <TopicAccuracyChips />
 
             {/* Real practice history — omitted when nothing has been run */}
             <PracticeStatsLine />
