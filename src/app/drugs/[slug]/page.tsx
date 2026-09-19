@@ -34,6 +34,7 @@ import {
   DrugHighYieldSummary,
   DrugFAQ,
   DrugKnowledgeGraph,
+  DrugRelatedDrugs,
   DrugReferences,
   DrugPrevNext,
 } from "@/components/kyp/sections/drug";
@@ -61,6 +62,7 @@ import { PatientGuideSection } from "@/components/kyp/sections/drug/patient-guid
 import { getPatientGuide } from "@/lib/kyp/patient";
 
 import { getDrugBySlug, getAllDrugSlugs } from "@/lib/kyp/data";
+import { DRUG_COURSE_NAV_ITEMS } from "@/lib/kyp/drug-course-sections";
 import type { NavItem } from "@/lib/kyp/use-scroll-spy";
 
 /**
@@ -108,34 +110,14 @@ export async function generateMetadata({
 }
 
 function getNavItems(): NavItem[] {
-  return [
-    { id: "top", label: "Overview", group: "Lesson 1" },
-    { id: "quick-facts", label: "Quick Facts", group: "Lesson 1" },
-    { id: "learning-objectives", label: "Objectives", group: "Lesson 1" },
-    { id: "knowledge-graph", label: "Knowledge Graph", group: "Lesson 1" },
-    { id: "mechanism", label: "Mechanism", group: "Lesson 2" },
-    { id: "brain-regions", label: "Brain", group: "Lesson 2" },
-    { id: "neurotransmitters", label: "Neurotransmitters", group: "Lesson 2" },
-    { id: "neural-pathways", label: "Pathways", group: "Lesson 2" },
-    { id: "timeline", label: "Timeline", group: "Lesson 2" },
-    { id: "clinical-uses", label: "Clinical Uses", group: "Lesson 3" },
-    { id: "side-effects", label: "Side Effects", group: "Lesson 3" },
-    { id: "monitoring", label: "Monitoring", group: "Lesson 3" },
-    { id: "contraindications", label: "Contraindications", group: "Lesson 3" },
-    { id: "evidence-practice", label: "Evidence", group: "Lesson 3" },
-    { id: "interactions", label: "Interactions", group: "Lesson 3" },
-    { id: "patient-education", label: "Patient Guide", group: "Lesson 3" },
-    { id: "indian-clinical", label: "Indian Practice", group: "Lesson 4" },
-    { id: "decision-path", label: "Decision Path", group: "Lesson 4" },
-    { id: "common-mistakes", label: "Mistakes", group: "Lesson 4" },
-    { id: "learning-module", label: "Exam Content", group: "Lesson 5" },
-    { id: "clinical-case", label: "Clinical Case", group: "Lesson 5" },
-    { id: "drug-navigation", label: "Drug Navigation", group: "Lesson 5" },
-    { id: "high-yield-summary", label: "High-Yield", group: "Lesson 5" },
-    { id: "active-recall", label: "Active Recall", group: "Lesson 6" },
-    { id: "faq", label: "FAQ", group: "Lesson 6" },
-    { id: "references", label: "References", group: "Lesson 6" },
-  ];
+  // Single source of truth: src/lib/kyp/drug-course-sections.ts —
+  // the same list powers the question-to-knowledge deep-link
+  // verification (NOW-N6), so navigator and deep links can never drift.
+  return DRUG_COURSE_NAV_ITEMS.map(({ id, label, group }) => ({
+    id,
+    label,
+    group,
+  }));
 }
 
 interface PageProps {
@@ -430,6 +412,14 @@ export default async function DrugPage({ params }: PageProps) {
 
         <GuidedLearningVisibility drug={drug} sectionId="drug-navigation">
           <DrugNavigationModule drug={drug} builtDrugSlugs={builtDrugSlugs} />
+        </GuidedLearningVisibility>
+
+        {/* Related Medications cross-links (NOW-N5) — the explicit
+            relationship reasons from the related-drug schema, with
+            graceful "coming soon" degradation for unbuilt pages.
+            Visibility mirrors the Drug Navigation cluster. */}
+        <GuidedLearningVisibility drug={drug} sectionId="drug-navigation">
+          <DrugRelatedDrugs drug={drug} builtDrugSlugs={builtDrugSlugs} />
         </GuidedLearningVisibility>
 
         <GuidedLearningVisibility drug={drug} sectionId="high-yield-summary">

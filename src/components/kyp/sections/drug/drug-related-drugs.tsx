@@ -5,23 +5,31 @@ import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
 import { Badge } from "@/components/kyp/ui/badge";
 import { Callout } from "@/components/kyp/ui/callout";
 import { ArrowUpRight, Check, X } from "lucide-react";
-import { getDrugBySlug } from "@/lib/kyp/data";
 import type { Drug } from "@/lib/kyp/data";
 
 /**
- * DrugRelatedDrugs — educational comparison, not just a list.
+ * DrugRelatedDrugs — Related Medications cross-links (NOW-N5).
  *
- * Each related drug card answers three questions:
- *   - Why choose THIS alternative instead of sertraline?
- *   - When is this alternative preferred?
- *   - When should you AVOID sertraline in favour of this alternative?
+ * Every drug page renders a "Related medications" section from the
+ * EXISTING related-drug schema fields: each card shows the explicit
+ * relationship reason already stored in the data ("Same class",
+ * "Alternative for X", switch partner…) — nothing is invented here.
  *
- * This makes the section educational rather than just a list of names.
+ * Degradation rule (commissioning spec): link targets degrade
+ * gracefully — a related drug whose page is not built yet renders as a
+ * non-clickable "Page coming soon" card, NEVER a dead link. The set
+ * of built slugs is passed from the server page (the registry is the
+ * single source of truth).
+ *
+ * The "when NOT to use" callout is data-driven from drug.whenNotToUse
+ * (scenario / reason / alternative) — no per-drug hardcoding.
  *
  * Server Component.
  */
 interface DrugRelatedDrugsProps {
   drug: Drug;
+  /** Slugs that actually have a built page — from the drug registry. */
+  builtDrugSlugs?: readonly string[];
 }
 
 function pickTone(relationship: string) {
@@ -31,14 +39,16 @@ function pickTone(relationship: string) {
   return "outline" as const;
 }
 
-export function DrugRelatedDrugs({ drug }: DrugRelatedDrugsProps) {
+export function DrugRelatedDrugs({ drug, builtDrugSlugs }: DrugRelatedDrugsProps) {
+  const built = new Set(builtDrugSlugs ?? []);
+
   return (
-    <Section id="related-drugs">
+    <Section id="related-medications">
       <Container>
         <SectionHeader
-          eyebrow="Related Drugs"
+          eyebrow="Related Medications"
           title="Why choose one over the other?"
-          description="Each card below explains when you'd pick this alternative instead of the current drug — and when you wouldn't. This is clinical reasoning, not just a list of names."
+          description="Each card explains when you'd pick this medication instead of the current one — and when you wouldn't. Clinical reasoning, not just a list of names."
         />
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -47,7 +57,7 @@ export function DrugRelatedDrugs({ drug }: DrugRelatedDrugsProps) {
             // unbuilt family members render as non-clickable
             // "coming soon" cards instead of dead 404 links.
             const href =
-              rd.slug && getDrugBySlug(rd.slug) ? `/drugs/${rd.slug}` : undefined;
+              rd.slug && built.has(rd.slug) ? `/drugs/${rd.slug}` : undefined;
             return (
               <CardPrimitive
                 key={rd.name}
@@ -75,7 +85,7 @@ export function DrugRelatedDrugs({ drug }: DrugRelatedDrugsProps) {
                     </span>
                   )}
 
-                  {/* Educational comparison */}
+                  {/* The explicit relationship reason from the data */}
                   <div className="mt-4 space-y-3">
                     <div className="rounded-lg border border-success/20 bg-success-soft/30 p-3">
                       <p className="flex items-center gap-1.5 text-[0.65rem] font-bold uppercase tracking-wide text-success">
@@ -93,37 +103,24 @@ export function DrugRelatedDrugs({ drug }: DrugRelatedDrugsProps) {
           })}
         </div>
 
-        {/* When NOT to choose sertraline */}
-        <div className="mt-10">
-          <Callout variant="warning" title="When NOT to choose sertraline">
-            <ul className="space-y-1.5">
-              <li className="flex items-start gap-2">
-                <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" strokeWidth={3} />
-                <span><strong>Bipolar depression (without mood stabiliser)</strong> — SSRI monotherapy can trigger a manic switch. Use a mood stabiliser first.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" strokeWidth={3} />
-                <span><strong>Active MAOI use (within 14 days)</strong> — risk of fatal serotonin syndrome. Wait the washout period.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" strokeWidth={3} />
-                <span><strong>Severe hepatic impairment (Child-Pugh C)</strong> — use fluoxetine (long half-life, easier to manage) or reduce sertraline dose drastically.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" strokeWidth={3} />
-                <span><strong>Concurrent pimozide</strong> — absolute contraindication due to QTc prolongation.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" strokeWidth={3} />
-                <span><strong>Known poor CYP2D6 metaboliser on a CYP2D6 substrate</strong> — consider escitalopram (lowest CYP interaction profile) instead.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" strokeWidth={3} />
-                <span><strong>Severe sexual dysfunction history</strong> — switch to bupropion or mirtazapine (no serotonergic sexual side effects).</span>
-              </li>
-            </ul>
-          </Callout>
-        </div>
+        {/* When NOT to choose this drug — data-driven red card */}
+        {drug.whenNotToUse && drug.whenNotToUse.length > 0 && (
+          <div className="mt-10">
+            <Callout variant="warning" title={`When NOT to choose ${drug.genericName}`}>
+              <ul className="space-y-1.5">
+                {drug.whenNotToUse.map((w, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" strokeWidth={3} />
+                    <span>
+                      <strong>{w.scenario}</strong> — {w.reason} Use{" "}
+                      <span className="text-success">{w.alternative}</span> instead.
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </Callout>
+          </div>
+        )}
       </Container>
     </Section>
   );

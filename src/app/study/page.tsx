@@ -16,7 +16,8 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
 import { ContinueStudying } from "@/components/kyp/sections/study/continue-studying";
-import { StudyHeroActions } from "@/components/kyp/sections/study/study-hero-actions";
+import { StudyNextPanel } from "@/components/kyp/sections/study/study-next-panel";
+import { MistakeBookEntry } from "@/components/kyp/sections/study/mistake-book-entry";
 import { PracticeStatsLine } from "@/components/kyp/sections/study/practice-stats-line";
 import { drugs } from "@/lib/kyp/data";
 
@@ -108,9 +109,10 @@ export default function StudyPage() {
               </p>
             </Reveal>
 
-            {/* Progress-aware CTAs — Continue Learning / Start Learning,
-                driven by the real local progress store. */}
-            <StudyHeroActions />
+            {/* Study Next — the composed "what should I do next"
+                surface: resume card, unfinished courses, mistakes entry,
+                saved-test quick launch (NOW-N8). */}
+            <StudyNextPanel />
 
             {/* Real stats — one inline line, no cards */}
             <Reveal delay={0.2}>
@@ -386,6 +388,10 @@ export default function StudyPage() {
                 </div>
               </Reveal>
             </div>
+
+            {/* Mistake Book — real rows only (renders nothing before
+                hydration or when nothing needs revisiting). */}
+            <MistakeBookEntry />
 
             {/* Real practice history — omitted when nothing has been run */}
             <PracticeStatsLine />

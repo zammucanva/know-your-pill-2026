@@ -12,6 +12,7 @@
  */
 
 import type { Drug } from "@/lib/kyp/data/types";
+import { anchoredDrugHref } from "@/lib/kyp/drug-course-sections";
 
 /** Source attribution shown in the runner and review screens. */
 export interface QuestionSource {
@@ -20,8 +21,12 @@ export interface QuestionSource {
   sourceSlug: string;
   /** e.g. "Interactions" — the drug-page section the fact lives in. */
   sectionLabel: string;
-  /** The drug-page anchor for the section. */
+  /** The drug-page anchor for the section — verified to exist on the
+   *  course template (NOW-N6) so review links never dead-end. */
   sectionHref: string;
+  /** Class label (e.g. "NaSSA") — the aggregation/filter dimension
+   *  for the Mistake Book (NOW-N1). Always from the registry. */
+  sourceClass: string;
 }
 
 /** A question in the reusable pool (options not yet shuffled). */

@@ -115,6 +115,81 @@ export interface ActivityEntry {
   slug: string;
 }
 
+/* ============================================================
+   Mistake Book (NOW-N1) — cross-test questions to revisit
+   ------------------------------------------------------------
+   A persistent, namespaced record of every question the learner
+   answered incorrectly across /quiz (Quick MCQs) and /quiz/custom
+   (Custom Test) sessions — independent of any single test's
+   Review Incorrect screen. One entry per question identity;
+   re-misses update the entry, a later correct answer resolves it.
+
+   Framing rule: this is a "questions to revisit" list. It stores
+   NO scores, NO streaks, NO shaming language — just the question,
+   what was chosen, and where it is taught.
+   ============================================================ */
+
+/** Attribution for the page/section a mistake is taught on. */
+export interface MistakeSource {
+  /** e.g. "Bupropion" — the page the question came from. */
+  sourceName: string;
+  /** Drug or disease slug. */
+  sourceSlug: string;
+  /** Drug-page question vs disease-page question. */
+  sourceType: "drug" | "disease";
+  /** Class label for filtering — drugClassLabel, or "Diseases". */
+  sourceClass: string;
+  /** e.g. "Side Effects" — the section the fact lives in. */
+  sectionLabel: string;
+  /** Anchored deep link to the teaching section (N6). */
+  sectionHref: string;
+}
+
+/** Input recorded at the moment a question is answered incorrectly. */
+export interface MistakeRecordInput {
+  /** Question identity — the engine's dedup key (`slug|fact|template|variant`
+   *  or `slug|mcq:id`), so the SAME question resolves across surfaces. */
+  identity: string;
+  question: string;
+  /** Options in canonical (pre-shuffle) order. */
+  options: string[];
+  correctIndex: number;
+  explanation: string;
+  source: MistakeSource;
+  /** "authored" or the template id — aggregation dimension. */
+  templateId: string;
+  /** The option text the learner actually chose (text, not index —
+   *  indices shift between shuffled attempts). */
+  chosenOption: string;
+}
+
+/** One persisted entry in the Mistake Book. */
+export interface MistakeEntry extends MistakeRecordInput {
+  /** Times answered incorrectly (any surface). */
+  wrongCount: number;
+  firstWrongAt: number;
+  lastWrongAt: number;
+}
+
+/** Saved Custom Test configuration (NOW-N4). */
+export interface TestPreset {
+  /** Stable id (generated at save time). */
+  id: string;
+  /** User-chosen name. */
+  name: string;
+  /** Selected medication slugs. */
+  drugSlugs: string[];
+  /** Requested question count (clamped to availability at launch). */
+  count: number;
+  /** Timed mode on/off (NOW-N3). */
+  timed: boolean;
+  /** Allotted minutes when timed. */
+  minutes: number | null;
+  createdAt: number;
+  /** Epoch ms of the last one-tap launch (null until first launch). */
+  lastLaunchedAt: number | null;
+}
+
 /** Root shape stored under kyp:progress:v1. */
 export interface KypProgressData {
   version: 1;
@@ -130,6 +205,11 @@ export interface KypProgressData {
   practice: PracticeStats;
   /** Custom Test (/quiz/custom) aggregate stats — isolated namespace. */
   customTest: CustomTestStats;
+  /** Mistake Book — questions to revisit, by identity (isolated
+   *  namespace; never merged into course or run stats). */
+  mistakeBook: Record<string, MistakeEntry>;
+  /** Saved Custom Test presets (NOW-N4), newest first, capped. */
+  testPresets: TestPreset[];
 }
 
 /* ============================================================
@@ -141,6 +221,11 @@ const STORAGE_KEY = "kyp:progress:v1";
 const LEGACY_KEY = "kyp-section-completion";
 /** Cap recent activity so the payload stays small. */
 const ACTIVITY_CAP = 30;
+/** Cap the Mistake Book so localStorage stays small and the list
+ *  stays reviewable — the stalest revisits drop off first. */
+export const MISTAKE_CAP = 150;
+/** Cap saved test presets — chips stay scannable on mobile. */
+export const PRESET_CAP = 12;
 
 function emptyCustomTestStats(): CustomTestStats {
   return {
@@ -167,6 +252,8 @@ function emptyProgress(): KypProgressData {
       lastRunQuestions: null,
     },
     customTest: emptyCustomTestStats(),
+    mistakeBook: {},
+    testPresets: [],
   };
 }
 
@@ -185,6 +272,79 @@ function storageAvailable(): boolean {
   } catch {
     return false;
   }
+}
+
+/** Coerce one unknown value into a valid MistakeEntry, or null. */
+function coerceMistakeEntry(raw: unknown): MistakeEntry | null {
+  if (!raw || typeof raw !== "object") return null;
+  const e = raw as Record<string, unknown>;
+  const source = (e.source && typeof e.source === "object" ? e.source : {}) as Record<string, unknown>;
+  const options = Array.isArray(e.options)
+    ? e.options.filter((o): o is string => typeof o === "string")
+    : [];
+  const correctIndex = typeof e.correctIndex === "number" ? e.correctIndex : -1;
+  if (
+    typeof e.identity !== "string" ||
+    typeof e.question !== "string" ||
+    options.length < 2 ||
+    correctIndex < 0 ||
+    correctIndex >= options.length ||
+    typeof e.chosenOption !== "string"
+  ) {
+    return null;
+  }
+  return {
+    identity: e.identity,
+    question: e.question,
+    options,
+    correctIndex,
+    explanation: typeof e.explanation === "string" ? e.explanation : "",
+    source: {
+      sourceName: typeof source.sourceName === "string" ? source.sourceName : "",
+      sourceSlug: typeof source.sourceSlug === "string" ? source.sourceSlug : "",
+      sourceType: source.sourceType === "disease" ? "disease" : "drug",
+      sourceClass: typeof source.sourceClass === "string" ? source.sourceClass : "",
+      sectionLabel: typeof source.sectionLabel === "string" ? source.sectionLabel : "",
+      sectionHref: typeof source.sectionHref === "string" ? source.sectionHref : "",
+    },
+    templateId: typeof e.templateId === "string" ? e.templateId : "authored",
+    chosenOption: e.chosenOption,
+    wrongCount: typeof e.wrongCount === "number" ? Math.max(1, e.wrongCount) : 1,
+    firstWrongAt: typeof e.firstWrongAt === "number" ? e.firstWrongAt : Date.now(),
+    lastWrongAt: typeof e.lastWrongAt === "number" ? e.lastWrongAt : Date.now(),
+  };
+}
+
+/** Coerce saved test presets (NOW-N4) — invalid entries are dropped. */
+function coerceTestPresets(raw: unknown): TestPreset[] {
+  if (!Array.isArray(raw)) return [];
+  const out: TestPreset[] = [];
+  for (const p of raw) {
+    if (!p || typeof p !== "object") continue;
+    const t = p as Record<string, unknown>;
+    const slugs = Array.isArray(t.drugSlugs)
+      ? t.drugSlugs.filter((s): s is string => typeof s === "string")
+      : [];
+    if (
+      typeof t.id !== "string" ||
+      typeof t.name !== "string" ||
+      slugs.length === 0 ||
+      typeof t.count !== "number"
+    ) {
+      continue;
+    }
+    out.push({
+      id: t.id,
+      name: t.name,
+      drugSlugs: slugs,
+      count: Math.max(1, Math.round(t.count)),
+      timed: t.timed === true,
+      minutes: typeof t.minutes === "number" ? t.minutes : null,
+      createdAt: typeof t.createdAt === "number" ? t.createdAt : Date.now(),
+      lastLaunchedAt: typeof t.lastLaunchedAt === "number" ? t.lastLaunchedAt : null,
+    });
+  }
+  return out.slice(0, PRESET_CAP);
 }
 
 /**
@@ -275,6 +435,19 @@ function coerceProgress(raw: unknown): KypProgressData {
         typeof c.lastRunQuestions === "number" ? c.lastRunQuestions : null,
     };
   }
+
+  // mistake book (absent in older payloads → empty book)
+  if (r.mistakeBook && typeof r.mistakeBook === "object") {
+    for (const [identity, entry] of Object.entries(
+      r.mistakeBook as Record<string, unknown>
+    )) {
+      const coerced = coerceMistakeEntry(entry);
+      if (coerced) data.mistakeBook[identity] = coerced;
+    }
+  }
+
+  // saved test presets (absent in older payloads → none)
+  data.testPresets = coerceTestPresets(r.testPresets);
 
   return data;
 }
@@ -593,6 +766,171 @@ export function recordCustomTestAttempt(correct: number, totalQuestions: number)
   });
 }
 
+/* ============================================================
+   Mistake Book API (NOW-N1)
+   ============================================================ */
+
+/**
+ * Record incorrect answers (batch) from any completed practice or
+ * Custom Test run. One entry per identity: a re-miss increments
+ * wrongCount and refreshes the chosen option; the book never stores
+ * scores or judgments. When the book exceeds MISTAKE_CAP, the
+ * stalest revisits (oldest lastWrongAt) drop off first.
+ */
+export function recordMistakes(inputs: MistakeRecordInput[]): void {
+  if (inputs.length === 0) return;
+  update((data) => {
+    const now = Date.now();
+    for (const input of inputs) {
+      const existing = data.mistakeBook[input.identity];
+      if (existing) {
+        existing.wrongCount += 1;
+        existing.lastWrongAt = now;
+        existing.chosenOption = input.chosenOption;
+        existing.source = input.source; // keep attribution fresh
+      } else {
+        data.mistakeBook[input.identity] = {
+          ...input,
+          wrongCount: 1,
+          firstWrongAt: now,
+          lastWrongAt: now,
+        };
+      }
+    }
+    const ids = Object.keys(data.mistakeBook);
+    if (ids.length > MISTAKE_CAP) {
+      ids.sort(
+        (a, b) => data.mistakeBook[a].lastWrongAt - data.mistakeBook[b].lastWrongAt
+      );
+      for (const id of ids.slice(0, ids.length - MISTAKE_CAP)) {
+        delete data.mistakeBook[id];
+      }
+    }
+  });
+}
+
+/**
+ * Resolve questions answered correctly — the self-healing loop. A
+ * question that was in the book and is later answered correctly (in
+ * a normal run or a retest) leaves the book: it is no longer "to
+ * revisit". Identities that were never in the book are a no-op.
+ */
+export function resolveMistakes(identities: string[]): void {
+  if (identities.length === 0) return;
+  update((data) => {
+    for (const identity of identities) {
+      delete data.mistakeBook[identity];
+    }
+  });
+}
+
+/** Manually clear one entry (the list view's per-question action). */
+export function clearMistake(identity: string): void {
+  update((data) => {
+    delete data.mistakeBook[identity];
+  });
+}
+
+/** Manually clear the whole book (behind a two-step confirm in the UI). */
+export function clearAllMistakes(): void {
+  update((data) => {
+    data.mistakeBook = {};
+  });
+}
+
+/** All entries, newest revisit first. */
+export function getMistakeBookEntries(): MistakeEntry[] {
+  return Object.values(getProgress().mistakeBook).sort(
+    (a, b) => b.lastWrongAt - a.lastWrongAt
+  );
+}
+
+/** Aggregation for filters and honest counts (no scoring). */
+export interface MistakeBookStats {
+  total: number;
+  /** Count per class label (e.g. "SSRI": 4), largest first. */
+  byClass: Array<{ sourceClass: string; count: number }>;
+  /** Count per source page name, largest first. */
+  bySource: Array<{ sourceName: string; count: number }>;
+}
+
+export function getMistakeBookStats(): MistakeBookStats {
+  const entries = Object.values(getProgress().mistakeBook);
+  const byClass = new Map<string, number>();
+  const bySource = new Map<string, number>();
+  for (const entry of entries) {
+    byClass.set(
+      entry.source.sourceClass,
+      (byClass.get(entry.source.sourceClass) ?? 0) + 1
+    );
+    bySource.set(
+      entry.source.sourceName,
+      (bySource.get(entry.source.sourceName) ?? 0) + 1
+    );
+  }
+  const toSorted = (m: Map<string, number>) =>
+    [...m.entries()]
+      .map(([label, count]) => ({ label, count }))
+      .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+  return {
+    total: entries.length,
+    byClass: toSorted(byClass).map((c) => ({ sourceClass: c.label, count: c.count })),
+    bySource: toSorted(bySource).map((s) => ({ sourceName: s.label, count: s.count })),
+  };
+}
+
+/* ============================================================
+   Saved Test Presets API (NOW-N4)
+   ============================================================ */
+
+/** All saved presets, newest first. */
+export function getTestPresets(): TestPreset[] {
+  return [...getProgress().testPresets].sort((a, b) => b.createdAt - a.createdAt);
+}
+
+/**
+ * Save a preset (name + configuration). Newest first, capped at
+ * PRESET_CAP — the oldest preset drops off when the cap is hit.
+ * Returns the saved preset.
+ */
+export function saveTestPreset(input: {
+  name: string;
+  drugSlugs: string[];
+  count: number;
+  timed: boolean;
+  minutes: number | null;
+}): TestPreset {
+  const preset: TestPreset = {
+    id: `preset-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`,
+    name: input.name.trim().slice(0, 40) || "My test",
+    drugSlugs: [...new Set(input.drugSlugs)],
+    count: Math.max(1, Math.round(input.count)),
+    timed: input.timed,
+    minutes: input.timed ? (typeof input.minutes === "number" ? Math.max(1, Math.round(input.minutes)) : null) : null,
+    createdAt: Date.now(),
+    lastLaunchedAt: null,
+  };
+  update((data) => {
+    data.testPresets = [preset, ...data.testPresets].slice(0, PRESET_CAP);
+  });
+  return preset;
+}
+
+/** Delete one preset by id. */
+export function deleteTestPreset(id: string): void {
+  update((data) => {
+    data.testPresets = data.testPresets.filter((p) => p.id !== id);
+  });
+}
+
+/** Record a one-tap launch (keeps lastLaunchedAt honest). */
+export function recordPresetLaunch(id: string): void {
+  update((data) => {
+    const preset = data.testPresets.find((p) => p.id === id);
+    if (preset) preset.lastLaunchedAt = Date.now();
+  });
+}
+
 /**
  * Mark a course complete (idempotent) once the caller has verified
  * its outline is satisfied. Kept explicit so completion can never be
@@ -668,6 +1006,8 @@ export function clearProgress(): void {
       lastRunQuestions: null,
     };
     data.customTest = emptyCustomTestStats();
+    data.mistakeBook = {};
+    data.testPresets = [];
   });
 }
 

@@ -14,8 +14,15 @@ import { Reveal } from "@/components/kyp/ui/reveal";
 import { cn } from "@/lib/utils";
 import { drugs, diseases } from "@/lib/kyp/data";
 import type { MicroQuiz } from "@/lib/kyp/data";
-import { recordPracticeAttempt } from "@/lib/kyp/progress/progress-store";
+import {
+  recordPracticeAttempt,
+  recordMistakes,
+  resolveMistakes,
+  type MistakeRecordInput,
+} from "@/lib/kyp/progress/progress-store";
+import { anchoredDrugHref } from "@/lib/kyp/drug-course-sections";
 import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
+import { BookMarked } from "lucide-react";
 
 /**
  * /quiz — aggregate MCQ practice page.
@@ -51,7 +58,9 @@ function buildAllQuestions(): QuizQuestion[] {
           sourceName: drug.genericName,
           sourceType: "drug",
           sourceSlug: drug.slug,
-          sourceHref: `/drugs/${drug.slug}`,
+          // NOW-N6: deep-link to the exact anchored course section the
+          // quiz follows (falls back to the page root when unknown).
+          sourceHref: anchoredDrugHref(drug.slug, q.afterSectionId),
         });
       }
     }
@@ -81,7 +90,11 @@ export default function QuizPage() {
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const [selectedAnswer, setSelectedAnswer] = React.useState<number | null>(null);
   const [answered, setAnswered] = React.useState<boolean>(false);
-  const [results, setResults] = React.useState<{ correct: boolean; question: QuizQuestion }[]>([]);
+  const [results, setResults] = React.useState<{
+    correct: boolean;
+    question: QuizQuestion;
+    selectedIndex: number;
+  }[]>([]);
   // Persisted practice history — null before hydration, so the
   // intro renders identically on server and client.
   const practice = useLocalProgress()?.practice ?? null;
@@ -109,6 +122,7 @@ export default function QuizPage() {
       setResults(prev => [...prev, {
         correct: idx === currentQuestion.correctIndex,
         question: currentQuestion,
+        selectedIndex: idx,
       }]);
     }
   };
@@ -130,14 +144,45 @@ export default function QuizPage() {
     setAnswered(false);
     setResults([]);
   };
-
   // Persist the completed practice run to the local progress layer
-  // (attempts / latest / best — aggregate scores only, no answers).
+  // (attempts / latest / best — aggregate scores only), and feed the
+  // Mistake Book: incorrect answers become "questions to revisit"
+  // (NOW-N1), correct answers resolve any prior entry for the same
+  // question — the self-healing loop.
   React.useEffect(() => {
     if (phase === "result" && results.length > 0) {
       const correct = results.filter((r) => r.correct).length;
       recordPracticeAttempt(correct, results.length);
+
+      const drugClassBySlug = new Map(drugs.map((d) => [d.slug, d.drugClassLabel]));
+      const misses: MistakeRecordInput[] = results
+        .filter((r) => !r.correct)
+        .map((r) => ({
+          identity: `${r.question.sourceSlug}|mcq:${r.question.id}`,
+          question: r.question.question,
+          options: r.question.options,
+          correctIndex: r.question.correctIndex,
+          explanation: r.question.explanation,
+          source: {
+            sourceName: r.question.sourceName,
+            sourceSlug: r.question.sourceSlug,
+            sourceType: r.question.sourceType,
+            sourceClass:
+              r.question.sourceType === "drug"
+                ? (drugClassBySlug.get(r.question.sourceSlug) ?? "Medications")
+                : "Diseases",
+            sectionLabel: "In-course quiz",
+            sectionHref: r.question.sourceHref,
+          },
+          templateId: "authored",
+          chosenOption: r.question.options[r.selectedIndex] ?? "—",
+        }));
+      recordMistakes(misses);
+      resolveMistakes(
+        results.filter((r) => r.correct).map((r) => `${r.question.sourceSlug}|mcq:${r.question.id}`)
+      );
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, results]);
 
   // ===== INTRO PHASE =====
@@ -370,6 +415,15 @@ export default function QuizPage() {
                     <RotateCcw className="h-4 w-4" />
                     Practice Again
                   </button>
+                  {incorrect.length > 0 && (
+                    <Link
+                      href="/study/mistakes"
+                      className="inline-flex items-center gap-2 rounded-lg border border-brand/40 bg-brand-soft/30 px-5 py-3 text-sm font-semibold text-brand transition-colors hover:border-brand/60"
+                    >
+                      <BookMarked className="h-4 w-4" />
+                      Questions to revisit · {incorrect.length}
+                    </Link>
+                  )}
                   <Link
                     href="/learn"
                     className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"

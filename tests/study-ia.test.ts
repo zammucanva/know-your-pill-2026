@@ -31,7 +31,10 @@ const FOOTER = "src/components/kyp/sections/footer.tsx";
 const STUDY = "src/app/study/page.tsx";
 const QUIZ = "src/app/quiz/page.tsx";
 const CUSTOM = "src/app/quiz/custom/page.tsx";
-const HERO_ACTIONS = "src/components/kyp/sections/study/study-hero-actions.tsx";
+// NOW-N8: StudyHeroActions was superseded by the StudyNextPanel —
+// same honesty contract, now composing resume + unfinished courses +
+// mistakes entry + saved-test quick launch.
+const HERO_ACTIONS = "src/components/kyp/sections/study/study-next-panel.tsx";
 const STATS_LINE = "src/components/kyp/sections/study/practice-stats-line.tsx";
 
 describe("study mode IA — single top-level learning destination", () => {
