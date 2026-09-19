@@ -31,6 +31,10 @@ import {
 } from "@/lib/kyp/custom-test/engine";
 import { deriveRequestedCount } from "@/lib/kyp/custom-test/count";
 import { takeRetestRequest } from "@/lib/kyp/custom-test/retest-handoff";
+import {
+  selectWeakTopics,
+  weakAreaDrugSlugs,
+} from "@/lib/kyp/custom-test/weak-area";
 import type { TestQuestion } from "@/lib/kyp/custom-test/types";
 import {
   recordCustomTestAttempt,
@@ -47,6 +51,8 @@ import {
   type AnswerEventInput,
 } from "@/lib/kyp/progress/progress-store";
 import { verifyDrugHref } from "@/lib/kyp/drug-course-sections";
+import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
+import { getProgress, type KypProgressData } from "@/lib/kyp/progress/progress-store";
 
 /**
  * /quiz/custom — Build your own test (recovered feature).
@@ -75,6 +81,23 @@ import { verifyDrugHref } from "@/lib/kyp/drug-course-sections";
 type Phase = "setup" | "test" | "results" | "review";
 
 const COUNT_OPTIONS = [10, 20, 30, 50, 100];
+
+/** A never-mutated empty snapshot for pre-hydration weak-area maths. */
+const EMPTY_PROGRESS_FOR_WEAK: KypProgressData = {
+  version: 1,
+  courses: {},
+  lastVisitedSlug: null,
+  lastVisitedAt: null,
+  recentActivity: [],
+  practice: { attempts: 0, latestScore: null, bestScore: null, lastAttemptAt: null, lastRunQuestions: null },
+  customTest: { attempts: 0, latestScore: null, bestScore: null, lastAttemptAt: null, lastRunQuestions: null },
+  mistakeBook: {},
+  testPresets: [],
+  answers: {},
+  runs: [],
+  retention: {},
+  planDismissedOn: null,
+};
 
 /** sessionStorage/URL handoff keys are owned by retest-handoff.ts. */
 
@@ -130,6 +153,17 @@ function CustomTestBuilder() {
   const [presets, setPresets] = React.useState<TestPreset[] | null>(null);
   const [presetName, setPresetName] = React.useState<string>("");
   const [presetNotice, setPresetNotice] = React.useState<string | null>(null);
+
+  /* ── Weak-Area Test (X2) — topics chosen from demonstrated weakness,
+        not manual selection. ── */
+  const progress = useLocalProgress();
+  const weakArea = React.useMemo(
+    () => selectWeakTopics(progress ?? EMPTY_PROGRESS_FOR_WEAK),
+    [progress]
+  );
+  const [weakNotice, setWeakNotice] = React.useState<string | null>(null);
+  /** The reasons banner carried into the test phase. */
+  const [weakReasons, setWeakReasons] = React.useState<string[] | null>(null);
 
   /* ── Attempt state (React state ONLY — Reset clears exactly this) ── */
   const [phase, setPhase] = React.useState<Phase>("setup");
@@ -467,6 +501,23 @@ function CustomTestBuilder() {
     });
   };
 
+  /* ── Weak-Area Test (X2) ── */
+  const startWeakArea = () => {
+    const slugs = weakAreaDrugSlugs(weakArea);
+    if (slugs.length === 0) {
+      setWeakNotice(
+        "Not enough practice history yet — take a few tests first and weak areas will be picked automatically."
+      );
+      return;
+    }
+    setWeakReasons(weakArea.topics.map((t) => `${t.classLabel}: ${t.reason}`));
+    startTest({
+      slugs,
+      count: Number.isFinite(requestedCount) ? requestedCount : 20,
+      timed: false,
+    });
+  };
+
   const handleSavePreset = () => {
     if (selectedCount === 0) return;
     const wanted = Number.isFinite(requestedCount) ? requestedCount : 20;
@@ -521,6 +572,21 @@ function CustomTestBuilder() {
           `${cls.label} pre-selected from the class page — choose a length and start, or adjust the selection.`
         );
       }
+    }
+
+    // X2 — one-tap weak-area entry (the Daily Plan / chips route here).
+    if (searchParams.get("weak")) {
+      const selection = selectWeakTopics(getProgress());
+      const slugs = weakAreaDrugSlugs(selection);
+      if (slugs.length > 0) {
+        setWeakReasons(selection.topics.map((t) => `${t.classLabel}: ${t.reason}`));
+        startTest({ slugs, count: 20, timed: false });
+      } else {
+        setWeakNotice(
+          "Not enough practice history yet — take a few tests first and weak areas will be picked automatically."
+        );
+      }
+      return;
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
@@ -602,6 +668,63 @@ function CustomTestBuilder() {
                     {presetNotice && (
                       <p className="mt-2 text-xs text-muted-foreground" role="status">
                         {presetNotice}
+                      </p>
+                    )}
+                  </div>
+                </Reveal>
+              )}
+
+              {/* Weak-Area Test (X2) — topics selected from demonstrated
+                  weakness, with the numbers that justified the pick */}
+              {progress !== null && (
+                <Reveal delay={0.05}>
+                  <div className="mt-10 rounded-xl border border-border/60 bg-card/50 p-5">
+                    <p className="text-overline text-muted-foreground mb-3">
+                      Weak-Area Test
+                    </p>
+                    {weakArea.topics.length > 0 ? (
+                      <>
+                        <p className="text-sm leading-relaxed text-foreground/90">
+                          Let the test choose for you — it draws from the
+                          classes your practice history shows are weakest.
+                        </p>
+                        <ul className="mt-4 space-y-2">
+                          {weakArea.topics.map((topic) => (
+                            <li
+                              key={topic.classLabel}
+                              className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-border/30 pb-2 last:border-0 last:pb-0"
+                            >
+                              <span className="text-sm font-semibold text-foreground">
+                                {topic.classLabel}
+                              </span>
+                              <span className="text-xs text-muted-foreground tabular-nums">
+                                {topic.reason}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                        <button
+                          type="button"
+                          onClick={startWeakArea}
+                          className="mt-5 inline-flex items-center gap-2 rounded-lg border border-brand/40 bg-brand-soft/30 px-5 py-2.5 text-sm font-semibold text-brand transition-colors hover:border-brand/60 kyp-focus-ring"
+                        >
+                          <Zap className="h-4 w-4" aria-hidden />
+                          Drill my weak areas
+                          <span className="text-xs font-normal opacity-70">
+                            · {weakAreaDrugSlugs(weakArea).length} medications
+                          </span>
+                        </button>
+                      </>
+                    ) : (
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        {weakArea.enoughData
+                          ? "No weak classes right now — your recent accuracy is holding up across everything you have practised."
+                          : "Not enough practice history yet — take a few tests first and weak areas will be picked automatically."}
+                      </p>
+                    )}
+                    {weakNotice && (
+                      <p className="mt-3 text-xs text-muted-foreground" role="status">
+                        {weakNotice}
                       </p>
                     )}
                   </div>
@@ -935,7 +1058,10 @@ function CustomTestBuilder() {
                 <div className="mt-12">
                   <button
                     type="button"
-                    onClick={() => startTest()}
+                    onClick={() => {
+                      setWeakReasons(null);
+                      startTest();
+                    }}
                     disabled={
                       selectedCount === 0 ||
                       stats.total === 0 ||
@@ -1005,6 +1131,22 @@ function CustomTestBuilder() {
                 >
                   Retest — {attempt.retestOf.label}. The same questions,
                   re-presented in a fresh order.
+                </div>
+              )}
+
+              {/* Weak-Area selection (X2) — the plain-language reasons
+                  that justified what this test drew from. */}
+              {weakReasons && weakReasons.length > 0 && (
+                <div
+                  role="status"
+                  className="mb-6 rounded-lg border border-brand/40 bg-brand-soft/20 p-3 text-xs text-foreground/80"
+                >
+                  Weak-Area Test — drawn from your practice history:
+                  <ul className="mt-1 list-inside list-disc">
+                    {weakReasons.map((reason) => (
+                      <li key={reason}>{reason}</li>
+                    ))}
+                  </ul>
                 </div>
               )}
 
