@@ -124,3 +124,60 @@ export function recentAccuracy(stats: TopicStats, window = RECENT_WINDOW): {
 export function trendSeries(stats: TopicStats): Array<{ at: number; correct: boolean }> {
   return stats.recent.map((r) => ({ at: r.at, correct: r.correct }));
 }
+
+/**
+ * Mistake persistence per class (X5) — how often the same topic
+ * reappears as wrong: identities missed MORE THAN ONCE (wrongCount ≥
+ * 2 in the Mistake Book) plus the recent wrong-answer rate. Plain
+ * numbers only — no judgement language.
+ */
+export interface TopicPersistence {
+  /** Class label. */
+  key: string;
+  /** Questions missed more than once (repeat misses). */
+  repeatedMisses: number;
+  /** Currently open Mistake Book entries. */
+  openMistakes: number;
+  /** Wrong share of the class's recent answers, 0–100 (null = no data). */
+  recentWrongRate: number | null;
+}
+
+export function mistakePersistence(
+  mistakeBook: Record<string, { source: { sourceClass: string }; wrongCount: number }>,
+  answers: Record<string, TopicStats & { topicClass: string }>,
+  window = RECENT_WINDOW
+): TopicPersistence[] {
+  const repeated = new Map<string, number>();
+  const open = new Map<string, number>();
+  for (const entry of Object.values(mistakeBook)) {
+    const cls = entry.source.sourceClass;
+    open.set(cls, (open.get(cls) ?? 0) + 1);
+    if (entry.wrongCount >= 2) {
+      repeated.set(cls, (repeated.get(cls) ?? 0) + 1);
+    }
+  }
+  const recentByClass = new Map<string, { correct: number; total: number }>();
+  for (const stats of Object.values(answers)) {
+    const bucket = recentByClass.get(stats.topicClass) ?? { correct: 0, total: 0 };
+    for (const r of stats.recent.slice(-window)) {
+      bucket.total += 1;
+      if (r.correct) bucket.correct += 1;
+    }
+    recentByClass.set(stats.topicClass, bucket);
+  }
+  const keys = new Set([...repeated.keys(), ...open.keys(), ...recentByClass.keys()]);
+  return [...keys]
+    .map((key) => {
+      const bucket = recentByClass.get(key);
+      return {
+        key,
+        repeatedMisses: repeated.get(key) ?? 0,
+        openMistakes: open.get(key) ?? 0,
+        recentWrongRate:
+          bucket && bucket.total > 0
+            ? Math.round(((bucket.total - bucket.correct) / bucket.total) * 100)
+            : null,
+      };
+    })
+    .sort((a, b) => b.repeatedMisses - a.repeatedMisses || a.key.localeCompare(b.key));
+}

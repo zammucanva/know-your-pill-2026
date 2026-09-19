@@ -59,9 +59,12 @@ export function TopicAccuracyChips() {
     <div className="mt-10">
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <p className="text-overline text-muted-foreground">Topic accuracy</p>
-        <p className="text-xs text-muted-foreground/60">
-          From your practice history · {MIN_TOPIC_SAMPLE}+ answers per topic
-        </p>
+        <Link
+          href="/study/analytics"
+          className="text-xs text-muted-foreground/70 underline-offset-4 transition-colors hover:text-brand hover:underline"
+        >
+          See full analytics →
+        </Link>
       </div>
       <div className="mt-3 flex flex-wrap gap-2" role="list" aria-label="Per-topic accuracy">
         {withData.map((topic) => (
