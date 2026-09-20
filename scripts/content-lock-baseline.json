@@ -27,7 +27,7 @@
     "src/lib/kyp/data/drugs/venlafaxine.ts": "183adb3cc06a44b7545fd76dac26ea5f5e3273ce62bc96c8e20f3a3675670ac3",
     "src/lib/kyp/data/drugs/index.ts": "fadc64f26d65b6ab928aaa5b17842059d47e3e13a4d5c4f3008418a3e699fa88",
     "src/lib/kyp/data/diseases/index.ts": "1a29b24419c75d90b1e344648aec43c465004b62e4c4c4364e37acc303a3f946",
-    "src/lib/kyp/data/diseases/major-depressive-disorder.ts": "68e5a11e19716049d7d62d361a176b37fc92b6a0c37ebea210a3ca776085b5dc",
+    "src/lib/kyp/data/diseases/major-depressive-disorder.ts": "c42e80d405a763e07a2428cd5771a1afa35436b174a24eedd09096153796cfd2",
     "src/lib/kyp/data/substances/index.ts": "cdfd51ca227dc0dad3d4fd043f3bd5472404f1cf17173bbe37e258dd15162ccd",
     "src/lib/kyp/data/substances/alcohol.ts": "d79ca5d31ebafc695572ace64178386889a213d784be6fff7561ec2c045bf271",
     "src/lib/kyp/data/substances/cannabis.ts": "1d18534cce203d462bd14c60d8fb8e623ddb4d0412228c501e0804a16add1a11",

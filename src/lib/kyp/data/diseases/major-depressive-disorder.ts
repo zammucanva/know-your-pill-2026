@@ -78,7 +78,7 @@ export const majorDepressiveDisorder: Disease = {
     ageOfOnset:
       "Peak onset 20–40 years (median ~26 years globally), but MDD can occur at any age — from preschool children to the very elderly. Late-onset depression (>60 years) is often associated with cerebrovascular disease (vascular depression), cognitive decline, and somatic comorbidity.",
     indianNotes:
-      "The NIMHANS National Mental Health Survey (2015–16) surveyed 12 states and ~34,000 individuals — the largest representative Indian mental-health dataset to date. Key Indian findings: (1) depression prevalence is highest in 40–49 year age band; (2) urban metros have higher prevalence than rural areas — a reversal of the global pattern; (3) the treatment gap is ~85% nationwide, worse in rural and low-income groups; (4) comorbid depression with chronic medical illness (diabetes, TB, HIV, cancer) is the rule rather than the exception; (5) suicide is the leading cause of death in Indians aged 15–39, with depression the single largest attributable risk factor. The NMHP and DMHP aim to bridge this gap; Tele-MANAS (launched 2022) provides free telephonic counselling in 20 languages — dial 14416.",
+      "The NIMHANS National Mental Health Survey (2015–16) surveyed 12 states and ~34,000 individuals — the largest representative Indian mental-health dataset to date. Key Indian findings: (1) depression prevalence is highest in 40–49 year age band; (2) urban metros have higher prevalence than rural areas — a reversal of the global pattern; (3) the treatment gap is ~85% nationwide, worse in rural and low-income groups; (4) comorbid depression with chronic medical illness (diabetes, TB, HIV, cancer) is the rule rather than the exception; (5) suicide is the leading cause of death in Indians aged 15–39, with depression the single largest attributable risk factor. The NMHP and DMHP aim to bridge this gap (see Tele-MANAS, 14416).",
   },
 
   /* ============================================================
@@ -453,7 +453,7 @@ export const majorDepressiveDisorder: Disease = {
         "Block SERT → ↑ synaptic serotonin → 5-HT1A autoreceptor desensitisation (1–2 weeks) → BDNF-mediated neurogenesis (4–6 weeks). Cipriani Lancet 2018 network meta-analysis: SSRIs have the best efficacy/tolerability ratio. Sertraline and escitalopram are first-choice SSRIs.",
       whenToUse: "First-line for moderate-severe MDD (PHQ-9 ≥10). Sertraline preferred in pregnancy/lactation and comorbid anxiety. Escitalopram preferred when drug interactions matter (lowest CYP profile).",
       indianContext:
-        "IPS guidelines: SSRIs first-line. Indian government hospitals dispense sertraline (Serta, Zosert) and escitalopram under DMHP. Jan Aushadhi generic sertraline is ₹2–5 per tablet — among the most affordable antidepressants in India. Start at 25–50 mg OD, titrate to 100–200 mg OD.",
+        "IPS guidelines: SSRIs first-line. Indian government hospitals dispense sertraline (Serta, Zosert) and escitalopram under DMHP. Jan Aushadhi generic sertraline is an affordable option (see Cost Considerations). Start at 25–50 mg OD, titrate to 100–200 mg OD.",
     },
     {
       category: "pharmacotherapy",
@@ -529,7 +529,7 @@ export const majorDepressiveDisorder: Disease = {
       slug: "sertraline",
       role: "First-line SSRI",
       rationale:
-        "SSRI of choice in pregnancy and lactation; 6 FDA indications (MDD, OCD, panic, PTSD, social anxiety, PMDD); only SSRI FDA-approved for PTSD; σ1 agonism (anxiolytic); mild CYP2D6 inhibition (fewer interactions); affordable generic (₹2–5/tablet). Default first-choice SSRI in Indian government and private practice.",
+        "SSRI of choice in pregnancy and lactation; 6 FDA indications (MDD, OCD, panic, PTSD, social anxiety, PMDD); only SSRI FDA-approved for PTSD; σ1 agonism (anxiolytic); mild CYP2D6 inhibition (fewer interactions); affordable generic (see Cost Considerations). Default first-choice SSRI in Indian government and private practice.",
     },
     {
       name: "Escitalopram",
@@ -589,7 +589,7 @@ export const majorDepressiveDisorder: Disease = {
     indianGuidelines:
       "Indian Psychiatric Society (IPS) — Clinical Practice Guidelines for Management of Depression (most recent revision 2023). Core recommendations: (1) SSRIs are first-line pharmacotherapy for MDD; (2) Sertraline and escitalopram are the most commonly prescribed SSRIs in Indian practice; (3) PHQ-9 should be used for diagnosis and monitoring where feasible; (4) Combined pharmacotherapy + psychotherapy is preferred for moderate-severe MDD; (5) Screen for bipolar disorder before initiating antidepressant; (6) ECT for severe/psychotic/catatonic/suicidal depression. IPS guidelines are concordant with international guidelines (NICE CG91, APA) but emphasise Indian realities — cost constraints, family involvement, and limited specialist access. ICD-10 is the official coding system in Indian government hospitals; DSM-5 is used in academic settings.",
     governmentHospitals:
-      "District Mental Health Programme (DMHP) operates in 700+ of India's 770+ districts. Standard government-hospital protocol: (1) Clinical diagnosis using ICD-10 criteria; (2) PHQ-9 for severity where literacy permits; (3) First-line: sertraline 25–50 mg OD (lower starting dose than Western guidelines, to minimise early side effects given limited follow-up); (4) Review at 2/4/6/12 weeks; (5) Augmentation with bupropion or mirtazapine for partial response; (6) Referral to district psychiatry OPD for treatment-resistant cases; (7) ECT available in tertiary centres (district hospital + medical college). Tele-MANAS (14416) provides free 24/7 counselling in 20 languages.",
+      "District Mental Health Programme (DMHP) operates in 700+ of India's 770+ districts. Standard government-hospital protocol: (1) Clinical diagnosis using ICD-10 criteria; (2) PHQ-9 for severity where literacy permits; (3) First-line: sertraline 25–50 mg OD (lower starting dose than Western guidelines, to minimise early side effects given limited follow-up); (4) Review at 2/4/6/12 weeks; (5) Augmentation with bupropion or mirtazapine for partial response; (6) Referral to district psychiatry OPD for treatment-resistant cases; (7) ECT available in tertiary centres (district hospital + medical college). Crisis support: Tele-MANAS (14416).",
     privatePractice:
       "Indian private psychiatry follows international guidelines more closely. Standard protocol: (1) DSM-5 diagnosis; (2) PHQ-9 at baseline, 4, 8, 12 weeks; (3) Wider antidepressant choice — SSRIs (sertraline, escitalopram, fluoxetine, paroxetine), SNRIs (venlafaxine, duloxetine), atypicals (bupropion, mirtazapine); (4) Combined pharmacotherapy + CBT/IPT where available; (5) Augmentation strategies (bupropion, mirtazapine, lithium, T3); (6) rTMS available in major metros; (7) Esketamine for treatment-resistant MDD. Cost: ₹2–25 per tablet for antidepressants; rTMS ₹30,000–60,000 per course; esketamine ₹15,000–25,000 per session. Insurance coverage is expanding under PMJAY (Ayushman Bharat) for severe mental illness.",
     primaryCare:
@@ -649,7 +649,7 @@ export const majorDepressiveDisorder: Disease = {
     indianResources: [
       "Tele-MANAS — National Tele-Mental Health Helpline: 14416 or 1-800-891-4416 (toll-free, 24/7, 20 Indian languages including Hindi, Tamil, Telugu, Kannada, Malayalam, Marathi, Gujarati, Bengali, Punjabi, Odia, Assamese, Urdu). Launched October 2022 by the Government of India. Provides free counselling, assessment, and referral.",
       "NIMHANS (National Institute of Mental Health and Neurosciences), Bengaluru — premier government mental health institute. OPD services available; emergency psychiatry 24/7. Website: nimhans.ac.in",
-      "District Mental Health Programme (DMHP) — free mental health services at district hospitals across India. Available in 700+ of India's 770+ districts.",
+      "District Mental Health Programme (DMHP) — free mental health services at district hospitals across India.",
       "iCall (Indian Council of Mental Health helpline) — 9152987821 (free, Mon–Sat 8 AM–10 PM).",
       "Vandrevala Foundation — 1860-2662-345 or 9999 666 555 (24/7).",
       "Jan Aushadhi Kendras — generic antidepressants (sertraline, escitalopram, fluoxetine, amitriptyline) at ₹2–5 per tablet. Locate at janaushadhi.gov.in",
@@ -743,7 +743,7 @@ export const majorDepressiveDisorder: Disease = {
         "Continue treatment for 6–12 months after remission for first episode.",
         "Sertraline is the SSRI of choice in pregnancy and lactation.",
         "Bipolar depression vs MDD: bipolar has prior manic/hypomanic episode; treat with mood stabiliser first.",
-        "Tele-MANAS helpline: 14416 (free, 24/7, 20 Indian languages).",
+        "Tele-MANAS helpline: 14416.",
       ],
     },
     psychiatryResidency: {
@@ -867,7 +867,7 @@ export const majorDepressiveDisorder: Disease = {
     "Sexual dysfunction is the #1 reason for SSRI discontinuation (30–50%). Ask directly at every follow-up. Add bupropion or switch.",
     "Continue treatment 6–12 months after remission for first episode; 2–3 years for second; indefinite for 3+. Premature discontinuation = relapse.",
     "ECT: severe/psychotic/catatonic/suicidal depression; ~80% response. Permitted under Mental Healthcare Act 2017 with anaesthesia + informed consent; unmodified ECT banned.",
-    "Indian practice: IPS guidelines (SSRIs first-line); ICD-10 coding in government hospitals; DMHP in 700+ districts; Tele-MANAS 14416 (free, 24/7, 20 languages); Jan Aushadhi sertraline ₹2–5/tablet; PMJAY covers severe mental illness.",
+    "Indian practice: IPS guidelines (SSRIs first-line); ICD-10 coding in government hospitals; DMHP; Tele-MANAS 14416; Jan Aushadhi sertraline (affordable generic available); PMJAY covers severe mental illness.",
     "Never stop antidepressant abruptly — taper 4+ weeks. Fluoxetine self-tapers — substitute for last 2 weeks of paroxetine/sertraline taper.",
     "ALWAYS assess suicide risk directly. Tele-MANAS 14416. Involve family in safety planning.",
   ],
@@ -1176,7 +1176,7 @@ export const majorDepressiveDisorder: Disease = {
       "Consider ECT early in severe/psychotic/catatonic/suicidal depression — don't wait for multiple drug failures.",
       "Always involve family in Indian practice — psychoeducation, monitoring, and safety planning.",
       "Provide Tele-MANAS 14416 to every patient and family at first visit.",
-      "Consider cost — Jan Aushadhi generic sertraline ₹2–5/tablet; involves family in adherence support.",
+      "Consider cost — Jan Aushadhi generic sertraline (affordable generic available); involves family in adherence support.",
     ],
     internsMiss: [
       "Forgetting to screen for bipolar (MDQ) before starting an SSRI — leads to manic switch.",
@@ -1200,7 +1200,7 @@ export const majorDepressiveDisorder: Disease = {
   drugFamilyNav: {
     familyName: "Antidepressants used in Major Depressive Disorder",
     members: [
-      { name: "Sertraline", slug: "sertraline", relationship: "First-line SSRI", distinguishing: "SSRI of choice in pregnancy/lactation; 6 FDA indications; σ1 agonism; mild CYP2D6; ₹2–5/tablet Jan Aushadhi" },
+      { name: "Sertraline", slug: "sertraline", relationship: "First-line SSRI", distinguishing: "SSRI of choice in pregnancy/lactation; 6 FDA indications; σ1 agonism; mild CYP2D6; most affordable (Jan Aushadhi generic)" },
       { name: "Escitalopram", slug: "escitalopram", relationship: "First-line SSRI", distinguishing: "S-enantiomer of citalopram; lowest CYP interaction profile; QTc watch at >20 mg" },
       { name: "Fluoxetine", slug: "fluoxetine", relationship: "First-line SSRI (activating)", distinguishing: "Longest half-life (1–4 days); mildest discontinuation; only SSRI for paediatric MDD ≥8 yr" },
       { name: "Venlafaxine", slug: "venlafaxine", relationship: "Second-line SNRI", distinguishing: "Dose-dependent SERT/NET; >150 mg adds noradrenergic; watch BP at high doses" },
@@ -1277,7 +1277,7 @@ export const majorDepressiveDisorder: Disease = {
       question: "What is the toll-free Tele-MANAS mental health helpline number in India?",
       options: ["108", "112", "14416", "1912"],
       correctIndex: 2,
-      explanation: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416 or 1-800-891-4416 (toll-free, 24/7, 20 Indian languages including Hindi, Tamil, Telugu, Kannada, Malayalam, Marathi, Gujarati, Bengali, Punjabi, Odia, Assamese, Urdu). Launched October 2022 by the Government of India. Provides free counselling, assessment, and referral. EVERY patient with MDD should be given this number. 108 is emergency ambulance; 112 is pan-India emergency number; 1912 is electricity.",
+      explanation: "Tele-MANAS (National Tele-Mental Health Helpline) — 14416 or 1-800-891-4416 (toll-free, 24/7; see Indian Resources for the full language list). Provides free counselling, assessment, and referral. EVERY patient with MDD should be given this number. 108 is emergency ambulance; 112 is pan-India emergency number; 1912 is electricity.",
       afterSectionId: "indian-practice",
     },
     {
@@ -1304,7 +1304,7 @@ export const majorDepressiveDisorder: Disease = {
     },
     {
       question: "What is the first-line pharmacotherapy for moderate-severe MDD? Name two first-choice SSRIs and explain why.",
-      answer: "SSRIs are first-line (IPS, NICE CG91, APA). First-choice SSRIs: (1) Sertraline — SSRI of choice in pregnancy/lactation (lowest milk/plasma ratio ~0.5), 6 FDA indications (only SSRI for PTSD), σ1 agonism (anxiolytic), mild CYP2D6 inhibition (fewer interactions), affordable (₹2–5/tablet Jan Aushadhi). (2) Escitalopram — S-enantiomer of citalopram, lowest CYP interaction profile (preferred for polypharmacy patients).",
+      answer: "SSRIs are first-line (IPS, NICE CG91, APA). First-choice SSRIs: (1) Sertraline — SSRI of choice in pregnancy/lactation (lowest milk/plasma ratio ~0.5), 6 FDA indications (only SSRI for PTSD), σ1 agonism (anxiolytic), mild CYP2D6 inhibition (fewer interactions), affordable (Jan Aushadhi generic). (2) Escitalopram — S-enantiomer of citalopram, lowest CYP interaction profile (preferred for polypharmacy patients).",
       topic: "Pharmacotherapy",
     },
     {
@@ -1420,7 +1420,7 @@ export const majorDepressiveDisorder: Disease = {
     { label: "BDNF", type: "neurotransmitter", href: "#pathophysiology", note: "Reduced in depression; restored by all antidepressants" },
     { label: "HPA Axis", type: "pathway", href: "#pathophysiology", note: "Hyperactive — cortisol elevation in ~50% of MDD" },
     { label: "SSRIs", type: "class", href: "#management", note: "First-line pharmacotherapy for MDD" },
-    { label: "Sertraline", type: "drug", href: "/drugs/sertraline", note: "Default first-choice SSRI — safe in pregnancy, σ1 agonism, ₹2–5/tablet" },
+    { label: "Sertraline", type: "drug", href: "/drugs/sertraline", note: "Default first-choice SSRI — safe in pregnancy, σ1 agonism, affordable generic" },
     { label: "CBT (Cognitive Behavioural Therapy)", type: "drug", href: "#management", note: "Most evidence-based psychotherapy for MDD" },
     { label: "PHQ-9", type: "drug", href: "#severity-scales", note: "Self-rated severity scale — diagnosis AND monitoring" },
     { label: "Bipolar Depression", type: "condition", href: "#differential-diagnosis", note: "ALWAYS exclude before starting antidepressant — MDQ screen" },
@@ -1594,7 +1594,7 @@ export const majorDepressiveDisorder: Disease = {
     {
       question: "How do I find free or low-cost mental health care in India?",
       answer:
-        "Several options: (1) Tele-MANAS — 14416 (toll-free, 24/7, 20 Indian languages) — free counselling and referral. (2) District Mental Health Programme (DMHP) — free mental health services at district hospitals across 700+ districts. (3) Jan Aushadhi Kendras — generic antidepressants (sertraline, escitalopram, fluoxetine, amitriptyline) at ₹2–5 per tablet. Locate at janaushadhi.gov.in. (4) NIMHANS Bengaluru — premier government mental health institute; OPD and emergency services. (5) Government medical college hospitals — psychiatry OPDs. (6) PMJAY (Ayushman Bharat) — covers severe mental illness treatment for eligible families (₹5 lakh annual cover). (7) Online platforms: Wysa, ePsyClinic, Tata 1mg (low-cost teleconsultation).",
+        "Several options: (1) Tele-MANAS — 14416 — free counselling and referral (see Indian Resources). (2) District Mental Health Programme (DMHP) — free mental health services at district hospitals. (3) Jan Aushadhi Kendras — generic antidepressants at ₹2–5 per tablet. Locate at janaushadhi.gov.in. (4) NIMHANS Bengaluru — premier government mental health institute; OPD and emergency services. (5) Government medical college hospitals — psychiatry OPDs. (6) PMJAY (Ayushman Bharat) — covers severe mental illness treatment for eligible families (₹5 lakh annual cover). (7) Online platforms: Wysa, ePsyClinic, Tata 1mg (low-cost teleconsultation).",
     },
     {
       question: "What is ECT and when is it used in depression?",
@@ -1671,7 +1671,7 @@ export const majorDepressiveDisorder: Disease = {
       internationalSource: "NICE CG91 / APA / WHO mhGAP",
       internationalRecommendation: "SSRIs are first-line for moderate-severe MDD. Sertraline commonly chosen for favourable side-effect and interaction profile.",
       indianSource: "Indian Psychiatric Society (IPS)",
-      indianRecommendation: "IPS guidelines concur — SSRIs first-line. Sertraline and escitalopram are the most commonly prescribed SSRIs in Indian practice. Selection based on patient profile (pregnancy, elderly, comorbidities, cost). Jan Aushadhi generic sertraline (₹2–5/tablet) is widely accessible.",
+      indianRecommendation: "IPS guidelines concur — SSRIs first-line. Sertraline and escitalopram are the most commonly prescribed SSRIs in Indian practice. Selection based on patient profile (pregnancy, elderly, comorbidities, cost). Jan Aushadhi generic sertraline is affordable and widely accessible.",
     },
     {
       topic: "Diagnosis and severity monitoring",
@@ -1722,7 +1722,7 @@ export const majorDepressiveDisorder: Disease = {
       { source: null, recommendation: "No dedicated IPS guideline on SSRI monitoring frequency — current section reflects accepted clinical practice and internationally accepted evidence." },
     ],
     indianClinicalPractice:
-      "In Indian practice, MDD is the most common diagnosis in psychiatry OPDs. The standard workflow: clinical diagnosis using DSM-5/ICD-10 → PHQ-9 for severity → SSRI (sertraline or escitalopram) first-line → combined with CBT where available → follow-up at 2/4/6/12 weeks. Indian government hospitals under DMHP dispense generic sertraline at ₹2–5/tablet (Jan Aushadhi). ECT is more readily used than in Western settings for severe depression — particularly in government hospitals where it offers rapid, cost-effective response. Family involvement is emphasised given the joint family system. Tele-MANAS (14416, launched 2022) provides free 24/7 counselling in 20 Indian languages. PMJAY (Ayushman Bharat) covers severe mental illness treatment for eligible families. The 85% treatment gap remains the biggest challenge — addressed by scaling up DMHP, training primary care physicians, and tele-mental health.",
+      "In Indian practice, MDD is the most common diagnosis in psychiatry OPDs. The standard workflow: clinical diagnosis using DSM-5/ICD-10 → PHQ-9 for severity → SSRI (sertraline or escitalopram) first-line → combined with CBT where available → follow-up at 2/4/6/12 weeks. Indian government hospitals under DMHP dispense affordable Jan Aushadhi generic sertraline. ECT is more readily used than in Western settings for severe depression — particularly in government hospitals where it offers rapid, cost-effective response. Family involvement is emphasised given the joint family system. Tele-MANAS (14416) provides free 24/7 counselling. PMJAY (Ayushman Bharat) covers severe mental illness treatment for eligible families. The 85% treatment gap remains the biggest challenge — addressed by scaling up DMHP, training primary care physicians, and tele-mental health.",
   },
 
   /* ============================================================
@@ -1730,7 +1730,7 @@ export const majorDepressiveDisorder: Disease = {
      ============================================================ */
   indianEncounterContext: {
     governmentHospitals:
-      "MDD is the most common diagnosis in government hospital psychiatry OPDs under DMHP. Standard protocol: clinical diagnosis (ICD-10), PHQ-9 where literacy permits, sertraline 25–50 mg OD first-line, follow-up at 2/4/6/12 weeks. ECT available in tertiary centres for severe/psychotic/catatonic/suicidal MDD. Jan Aushadhi generic sertraline (₹2–5/tablet) dispensed. Tele-MANAS 14416 provided to every patient. Family involvement emphasised.",
+      "MDD is the most common diagnosis in government hospital psychiatry OPDs under DMHP. Standard protocol: clinical diagnosis (ICD-10), PHQ-9 where literacy permits, sertraline 25–50 mg OD first-line, follow-up at 2/4/6/12 weeks. ECT available in tertiary centres for severe/psychotic/catatonic/suicidal MDD. Jan Aushadhi generic sertraline dispensed. Tele-MANAS 14416 provided to every patient. Family involvement emphasised.",
     privateHospitals:
       "MDD managed with full diagnostic workup (DSM-5, PHQ-9, baseline labs), wider antidepressant choice (SSRIs, SNRIs, atypicals), combined pharmacotherapy + CBT/IPT where available. PHQ-9 monitoring at every visit. Augmentation strategies (bupropion, mirtazapine, lithium) for partial response. rTMS available in major metros. Esketamine for treatment-resistant MDD. Cost: ₹2–25/tablet for antidepressants; rTMS ₹30,000–60,000/course; esketamine ₹15,000–25,000/session.",
     medicalColleges:
