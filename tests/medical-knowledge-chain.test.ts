@@ -35,7 +35,7 @@ import {
 } from "@/lib/kyp/knowledge/entities/mechanism-actions";
 import { drugs } from "@/lib/kyp/data/drugs/index";
 import {
-  buildKnowledgeChainRows,
+  buildKnowledgeChainView,
 } from "@/components/kyp/sections/drug/medical-knowledge-chain";
 
 const ALL_SLUGS = getKnowledgeChainSlugs();
@@ -264,189 +264,275 @@ describe("knowledge graph — recovered QA evidence anchors", () => {
   });
 });
 
-describe("knowledge chain — rendered row contract (buildKnowledgeChainRows)", () => {
-  const rowsFor = (slug: string) =>
-    buildKnowledgeChainRows(getDrugKnowledgeChain(slug)!);
-  const rowKeysFor = (slug: string) => rowsFor(slug).map((r) => r.key);
+describe("knowledge chain — rendered view contract (buildKnowledgeChainView)", () => {
+  const viewFor = (slug: string) =>
+    buildKnowledgeChainView(getDrugKnowledgeChain(slug)!);
 
-  test("every drug renders the documented row order", () => {
-    // The full 9-row order (QA evidence: bupropion desktop render).
-    expect(rowKeysFor("bupropion")).toEqual([
-      "medication-class",
-      "mechanism",
-      "molecular-targets",
-      "neurotransmitters",
-      "brain-regions",
-      "neural-pathways",
-      "conditions",
-      "side-effects",
-      "monitoring",
-    ]);
-    // All 12 drugs carry the 8 universal rows; neural-pathways is
-    // data-driven (only bupropion has named pathway IDs in the data).
+  test("every drug renders the four-stage primary path (medication → class → mechanism → targets)", () => {
     for (const slug of ALL_SLUGS) {
-      const keys = rowKeysFor(slug).filter((k) => k !== "neural-pathways");
-      expect(keys).toEqual([
-        "medication-class",
-        "mechanism",
-        "molecular-targets",
-        "neurotransmitters",
-        "brain-regions",
-        "conditions",
-        "side-effects",
-        "monitoring",
-      ]);
-      for (const row of rowsFor(slug)) {
-        // The mechanism row is the text row (chips empty by design);
-        // every other row renders at least one element.
-        if (row.key === "mechanism") {
-          expect(row.chips).toEqual([]);
-          expect(row.text?.length).toBeGreaterThan(0);
+      const view = viewFor(slug);
+      expect(view.path.length).toBeGreaterThanOrEqual(4);
+      expect(view.path[0].role).toBe("medication");
+      expect(view.path[1].role).toBe("class");
+      expect(view.path[2].role).toBe("mechanism");
+      expect(view.path.slice(3).every((n) => n.role === "target")).toBe(true);
+    }
+  });
+
+  test("path nodes carry data-derived labels: drug name, class label, class full name, class link", () => {
+    for (const slug of ALL_SLUGS) {
+      const drug = drugs.find((d) => d.slug === slug)!;
+      const view = viewFor(slug);
+      expect(view.path[0].label).toBe(drug.genericName);
+      expect(view.path[1].label).toBe(drug.drugClassLabel);
+      expect(view.path[2].label).toBe(drug.drugClassFullName);
+      expect(view.path[1].href).toBe(
+        `/drugs/class/${drug.drugClassLabel.toLowerCase()}`
+      );
+    }
+  });
+
+  test("sertraline: SERT primary target with full name, human action label, kind metadata", () => {
+    const view = viewFor("sertraline");
+    expect(view.path.filter((n) => n.role === "target").map((n) => n.label)).toEqual(["SERT"]);
+    const sert = view.path.find((n) => n.key === "target-sert")!;
+    expect(sert.sublabel).toBe("Serotonin transporter");
+    expect(sert.actionLabel).toBe("Reuptake inhibition");
+    expect(sert.kindLabel).toBe("Transporter");
+    expect(sert.href).toBe("#mechanism");
+    expect(sert.title).toContain("SERT (SLC6A4 — serotonin transporter)");
+    // The verbatim authored molecular-target string is preserved as caption.
+    expect(view.mechanismCaption).toBe("SERT (SLC6A4 — serotonin transporter)");
+  });
+
+  test("bupropion: NET + DAT + nicotinic primary targets; negligible SERT stays in the caption, never the path", () => {
+    const view = viewFor("bupropion");
+    // All four are named in the drug's own primary molecularTarget string.
+    expect(view.path.filter((n) => n.role === "target").map((n) => n.key)).toEqual([
+      "target-net",
+      "target-dat",
+      "target-alpha3beta4-nachr",
+      "target-alpha4beta2-nachr",
+    ]);
+    expect(view.path.some((n) => n.key === "target-sert")).toBe(false);
+    expect(view.additionalTargets.some((r) => r.name === "SERT")).toBe(false);
+    expect(view.mechanismCaption).toContain("NO clinically meaningful SERT affinity");
+    const net = view.path.find((n) => n.key === "target-net")!;
+    expect(net.sublabel).toBe("Norepinephrine transporter");
+    expect(net.actionLabel).toContain("Reuptake inhibition"); // registry labels, never raw ids
+    // The nicotinic antagonism is primary (smoking cessation) — in the path.
+    const nachr = view.path.find((n) => n.key === "target-alpha3beta4-nachr")!;
+    expect(nachr.actionLabel).toBe("Receptor antagonism");
+    expect(nachr.kindLabel).toBe("Receptor");
+  });
+
+  test("mirtazapine: receptor targets in the path, no transporters anywhere", () => {
+    const view = viewFor("mirtazapine");
+    const targets = view.path.filter((n) => n.role === "target");
+    expect(targets.map((t) => t.label).sort()).toEqual(
+      ["5-HT2A", "5-HT2C", "5-HT3", "H1 histamine", "α2-adrenergic"].sort()
+    );
+    expect(targets.every((t) => t.kindLabel === "Receptor")).toBe(true);
+    expect(
+      view.path.some((n) => n.key.startsWith("target-sert") || n.key.startsWith("target-net") || n.key.startsWith("target-dat"))
+    ).toBe(false);
+  });
+
+  test("no target relationship is lost between path, additional targets, and caption", () => {
+    for (const slug of ALL_SLUGS) {
+      const chain = getDrugKnowledgeChain(slug)!;
+      const view = viewFor(slug);
+      const expected = chain.drug.targetEdges
+        .filter((e) => !(e.actions.length === 1 && e.actions[0] === "negligible-affinity"))
+        .map((e) => e.targetId);
+      const rendered = [
+        ...view.path.filter((n) => n.role === "target").map((n) => n.key.replace("target-", "")),
+        ...view.additionalTargets.map((r) => r.key.replace("target-", "")),
+      ];
+      expect([...rendered].sort()).toEqual([...expected].sort());
+      // Every edge's evidence remains accessible via the title tooltip.
+      for (const edge of chain.drug.targetEdges) {
+        const node = view.path.find((n) => n.key === `target-${edge.targetId}`);
+        const row = view.additionalTargets.find((r) => r.key === `target-${edge.targetId}`);
+        if (!node && !row) {
+          // The only edges outside the rendered target set are negligible ones.
+          expect(edge.actions).toEqual(["negligible-affinity"]);
+          expect(view.mechanismCaption.length).toBeGreaterThan(0);
         } else {
-          expect(row.chips.length).toBeGreaterThan(0);
+          expect((node ?? row)!.title).toContain(edge.evidence[0]);
         }
       }
     }
   });
 
-  test("medication-class row links the drug page and the class collection", () => {
-    const bup = rowsFor("bupropion");
-    const mc = bup[0];
-    expect(mc.chips[0].label).toBe("Bupropion");
-    expect(mc.chips[0].badge?.label).toBe("NDRI");
-    expect(mc.chips[0].subtext).toBe("Norepinephrine-Dopamine Reuptake Inhibitor");
-    expect(mc.chips[0].href).toBe("/drugs/bupropion");
-    expect(mc.chips[1].label).toBe("NDRI");
-    expect(mc.chips[1].subtext).toBe("Norepinephrine-Dopamine Reuptake Inhibitor");
-    expect(mc.chips[1].href).toBe("/drugs/class/ndri");
-  });
-
-  test("bupropion renders the Stimulant substance-class card; sertraline does not (QA evidence)", () => {
-    // bupropion.drugClass === "stimulant" — the drug's own field,
-    // resolved against the canonical classes registry (never invented).
-    const bup = getDrugKnowledgeChain("bupropion")!;
-    expect(bup.substanceClass).not.toBeNull();
-    expect(bup.substanceClass!.name).toBe("Stimulant");
-    expect(bup.substanceClass!.description).toBe(
-      "Increases catecholamine activity — producing alertness, euphoria, tachycardia, and crash."
+  test("additional targets carry human action labels with kind as secondary metadata", () => {
+    const ser = viewFor("sertraline");
+    expect(ser.additionalTargets.map((r) => r.name).sort()).toEqual(
+      ["5-HT1A", "5-HT2C", "5-HT7", "σ1"].sort()
     );
-    const mc = rowsFor("bupropion")[0];
-    const stimulant = mc.chips.find((c) => c.label === "Stimulant");
-    expect(stimulant).toBeDefined();
-    expect(stimulant?.subtext).toBe(bup.substanceClass!.description);
-    expect(stimulant?.href).toBeUndefined(); // no destination — registry-only card
-
-    // SSRIs resolve to the registry's SSRI entry but the row DEDUPES it —
-    // the substance-class name matches the class card label, so no third
-    // card renders (QA evidence: sertraline shows exactly two cards).
-    const ser = getDrugKnowledgeChain("sertraline")!;
-    expect(ser.substanceClass?.name).toBe("SSRI");
-    expect(rowsFor("sertraline")[0].chips.length).toBe(2);
-  });
-
-  test("mechanism row is the verbatim primary target text — text only, no action chips (QA evidence)", () => {
-    const bup = rowsFor("bupropion");
-    const mech = bup.find((r) => r.key === "mechanism")!;
-    expect(mech.text).toContain("SLC6A2");
-    expect(mech.text).toContain("SLC6A3");
-    expect(mech.chips).toEqual([]);
-    // Mechanism-level actions remain API data (chain.drug.mechanism.actions)
-    // but are never rendered as row elements.
-    expect(getDrugKnowledgeChain("bupropion")!.drug.mechanism.actions).toContain(
-      "reuptake-inhibition"
+    const h51a = ser.additionalTargets.find((r) => r.name === "5-HT1A")!;
+    expect(h51a.relationship).toBe("Autoreceptor desensitisation");
+    expect(h51a.kindLabel).toBe("Receptor");
+    expect(h51a.title).toContain("desensit");
+    const sigma = ser.additionalTargets.find((r) => r.name === "σ1")!;
+    expect(sigma.relationship).toBe("Receptor agonism");
+    // mirtazapine: α1 and M1 are non-primary additional rows; the M1 full
+    // name genuinely expands "Muscarinic M1" so it renders as descriptor.
+    const mir = viewFor("mirtazapine");
+    expect(mir.additionalTargets.map((r) => r.name).sort()).toEqual(
+      ["α1-adrenergic", "Muscarinic M1"].sort()
     );
+    const m1 = mir.additionalTargets.find((r) => r.name === "Muscarinic M1")!;
+    expect(m1.descriptor).toBe("M1 muscarinic acetylcholine receptor");
+    // The data derives no action for this edge ("very weak — minimal
+    // anticholinergic effect") — the row degrades to identity + kind.
+    expect(m1.relationship).toBeUndefined();
+    expect(m1.kindLabel).toBe("Receptor");
+    // amitriptyline: the off-target receptor rows are additional, not primary.
+    const ami = viewFor("amitriptyline");
+    expect(ami.additionalTargets.map((r) => r.name)).toContain("H1 histamine");
+    expect(ami.additionalTargets.every((r) => r.kindLabel === "Receptor")).toBe(true);
   });
 
-  test("molecular-target cards carry full names, kind badges, action-id subtext (QA evidence)", () => {
-    const bup = rowsFor("bupropion");
-    const targets = bup.find((r) => r.key === "molecular-targets")!;
-    // QA: "NET (norepinephrine transporter)" + transporter pill +
-    // "reuptake-inhibition" subtext.
-    const net = targets.chips.find((c) => c.label === "NET (norepinephrine transporter)");
-    expect(net).toBeDefined();
-    expect(net?.badge?.label).toBe("transporter");
-    expect(net?.subtext).toBe("reuptake-inhibition");
-    expect(net?.title).toContain("norepinephrine transporter");
-    // Nicotinic receptors: kind pill + antagonism subtext; short label
-    // without a redundant parenthetical (name is an abbreviation of the
-    // full name).
-    const nachr = targets.chips.find((c) => c.label.startsWith("α3β4"));
-    expect(nachr?.badge?.label).toBe("receptor");
-    expect(nachr?.subtext).toBe("receptor-antagonism");
-    expect(nachr?.label).not.toContain("(");
-    // Bupropion's SERT is a negligible-affinity edge — graph data, but NOT
-    // a target card (QA evidence: "NO clinically meaningful SERT affinity"
-    // stays in the mechanism text; the card row lists NET, DAT, receptors).
-    const sertCard = targets.chips.find((c) => c.label.startsWith("SERT"));
-    expect(sertCard).toBeUndefined();
-    // Sertraline QA: "SERT (serotonin transporter)" + transporter pill +
-    // "reuptake-inhibition" subtext — a real target, rendered as a card.
-    const serTargets = rowsFor("sertraline").find((r) => r.key === "molecular-targets")!;
-    const serSert = serTargets.chips.find(
-      (c) => c.label === "SERT (serotonin transporter)"
-    );
-    expect(serSert?.badge?.label).toBe("transporter");
-    expect(serSert?.subtext).toBe("reuptake-inhibition");
+  test("every rendered action label is a registry human label (no raw ids leak)", () => {
+    const registryLabels = new Set(mechanismActions.map((a) => a.label));
+    for (const slug of ALL_SLUGS) {
+      const view = viewFor(slug);
+      const labels = [
+        ...view.path.map((n) => n.actionLabel).filter((l): l is string => Boolean(l)),
+        ...view.additionalTargets.map((r) => r.relationship).filter((l): l is string => Boolean(l)),
+      ];
+      for (const label of labels) {
+        for (const part of label.split(" · ")) {
+          expect(registryLabels.has(part)).toBe(true);
+        }
+      }
+    }
   });
 
-  test("neurotransmitter chips carry abbreviation badges (QA: NE / DA / Ach)", () => {
-    const bup = rowsFor("bupropion");
-    const nts = bup.find((r) => r.key === "neurotransmitters")!;
-    const badges = nts.chips.map((c) => c.badge?.label);
-    expect(badges).toContain("NE");
-    expect(badges).toContain("DA");
-    expect(badges).toContain("Ach");
+  test("conditions: acronym-suffixed duplicates merge; every edge is accounted for exactly once", () => {
+    for (const slug of ALL_SLUGS) {
+      const chain = getDrugKnowledgeChain(slug)!;
+      const view = viewFor(slug);
+      // Recompute the expected merge keys from the registry names.
+      const expected = new Set(
+        chain.drug.conditionEdges.map((edge) => {
+          const condition = knowledgeGraph.conditions.get(edge.conditionKey);
+          const name = condition?.name ?? edge.conditionKey;
+          const stripped = name.replace(/\s*\(([A-Z][A-Z0-9]*)\)\s*/g, " ");
+          return stripped
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/^-+|-+$/g, "");
+        })
+      );
+      const rendered = view.conditionGroups.flatMap((g) => g.items.map((i) => i.key));
+      expect(new Set(rendered)).toEqual(expected);
+      expect(new Set(rendered).size).toBe(rendered.length); // no double-render
+    }
   });
 
-  test("pathway cards render the pathway name with origin → termination subtext (QA evidence)", () => {
-    const bup = rowsFor("bupropion");
-    const pathways = bup.find((r) => r.key === "neural-pathways")!;
-    const mesolimbic = pathways.chips.find((c) => c.label === "Mesolimbic Pathway");
-    expect(mesolimbic).toBeDefined();
-    expect(mesolimbic?.subtext).toBe(
-      "Ventral Tegmental Area (VTA) → Nucleus Accumbens"
-    );
-    expect(mesolimbic?.title).toContain("Reward");
-    // SSRIs have no named dopamine pathways — the row disappears
-    // entirely for sertraline (data-driven omission).
-    expect(rowKeysFor("sertraline")).not.toContain("neural-pathways");
+  test("MDD merges its indication duplicate into the page-linked entry with unioned statuses", () => {
+    for (const slug of ALL_SLUGS) {
+      const view = viewFor(slug);
+      const group = view.conditionGroups.find((g) => g.key === "page-linked")!;
+      expect(group).toBeDefined();
+      expect(group.items.length).toBe(1);
+      const mdd = group.items[0];
+      expect(mdd.key).toBe("major-depressive-disorder");
+      expect(mdd.name).toBe("Major Depressive Disorder");
+      expect(mdd.href).toBe("/diseases/major-depressive-disorder");
+      expect(mdd.icd10).toMatch(/^F3/);
+      expect(mdd.title).toContain("ICD-10");
+      // The "(MDD)" indication duplicate merged in — rendered once as the
+      // canonical page-linked entry. (Fluvoxamine additionally keeps its
+      // regional qualifier entry in the off-label group — its own data.)
+      const allNames = view.conditionGroups.flatMap((g) => g.items.map((i) => i.name));
+      expect(allNames.filter((n) => n.startsWith("Major Depressive")).length).toBe(
+        slug === "fluvoxamine" ? 2 : 1
+      );
+    }
+    // sertraline: unioned statuses primary · FDA approved on the page link.
+    const ser = viewFor("sertraline");
+    const serMdd = ser.conditionGroups
+      .find((g) => g.key === "page-linked")!
+      .items.find((i) => i.key === "major-depressive-disorder")!;
+    expect(serMdd.statuses).toContain("primary");
+    expect(serMdd.statuses).toContain("FDA approved");
+    // fluvoxamine: MDD is off-label in the US — the honest status survives
+    // the merge, and the entry still links the dedicated MDD page.
+    const flv = viewFor("fluvoxamine");
+    const flvMdd = flv.conditionGroups
+      .find((g) => g.key === "page-linked")!
+      .items.find((i) => i.key === "major-depressive-disorder")!;
+    expect(flvMdd.statuses).toContain("off-label");
+    expect(flvMdd.href).toBe("/diseases/major-depressive-disorder");
   });
 
-  test("condition chips: MDD links the disease page with ICD in the title", () => {
-    const ser = rowsFor("sertraline");
-    const conditions = ser.find((r) => r.key === "conditions")!;
-    const mdd = conditions.chips.find((c) => c.label === "Major Depressive Disorder");
-    expect(mdd?.href).toBe("/diseases/major-depressive-disorder");
-    expect(mdd?.badge?.label).toBe("KYP page");
-    expect(mdd?.title).toContain("ICD-10");
-    // Non-page conditions fall back to the in-page anchor.
-    const ocd = conditions.chips.find((c) => c.label === "Obsessive-Compulsive Disorder");
-    expect(ocd?.href).toBe("#clinical-uses");
+  test("non-page conditions degrade to plain text grouped by status (no dead links)", () => {
+    const ser = viewFor("sertraline");
+    const nonPage = ser.conditionGroups
+      .filter((g) => g.key !== "page-linked")
+      .flatMap((g) => g.items);
+    expect(nonPage.length).toBeGreaterThan(0);
+    for (const item of nonPage) expect(item.href).toBeUndefined();
+    // sertraline: OCD/Panic/PTSD/Social/PMDD are primary uses; GAD is off-label.
+    const primary = ser.conditionGroups.find((g) => g.key === "primary")!;
+    expect(primary.items.map((i) => i.name)).toContain("Obsessive-Compulsive Disorder");
+    const offLabel = ser.conditionGroups.find((g) => g.key === "off-label")!;
+    expect(offLabel.items.map((i) => i.name)).toContain("Generalised Anxiety Disorder");
+    // amitriptyline: the off-label pain/insomnia cluster groups together.
+    const ami = viewFor("amitriptyline");
+    const amiOff = ami.conditionGroups.find((g) => g.key === "off-label")!;
+    for (const name of ["Diabetic Neuropathy", "Migraine (prophylaxis)", "Insomnia"]) {
+      expect(amiOff.items.map((i) => i.name)).toContain(name);
+    }
   });
 
-  test("side-effect chips carry tier badges and frequency meta", () => {
-    const ser = rowsFor("sertraline");
-    const se = ser.find((r) => r.key === "side-effects")!;
-    const common = se.chips.find((c) => c.badge?.label === "Common");
-    expect(common?.meta).toBe("very common");
-    const serious = se.chips.find((c) => c.badge?.label === "Serious");
-    expect(serious).toBeDefined();
-  });
-
-  test("monitoring chips carry frequency meta and rationale titles", () => {
-    const bup = rowsFor("bupropion");
-    const mon = bup.find((r) => r.key === "monitoring")!;
-    const seizure = mon.chips.find((c) =>
-      c.label.startsWith("Seizure history")
+  test("safety summary carries every side-effect name and monitoring passthrough", () => {
+    for (const slug of ALL_SLUGS) {
+      const chain = getDrugKnowledgeChain(slug)!;
+      const view = viewFor(slug);
+      const rendered = view.safety.sideEffectTiers.flatMap((t) => t.names).sort();
+      expect(rendered).toEqual([...chain.drug.sideEffectEdges.map((e) => e.name)].sort());
+      expect(view.safety.monitoring.map((m) => m.parameter)).toEqual(
+        chain.drug.monitoring.map((m) => m.parameter)
+      );
+    }
+    const bup = viewFor("bupropion");
+    const seizure = bup.safety.monitoring.find((m) =>
+      m.parameter.startsWith("Seizure history")
     );
     expect(seizure).toBeDefined();
-    expect(seizure?.meta).toContain("Baseline");
-    expect(seizure?.title).toContain("seizure");
+    expect(seizure!.frequency).toContain("Baseline");
+    expect(seizure!.rationale).toContain("seizure");
   });
 
-  test("unknown chain never reaches the row builder (component returns null)", () => {
-    // The component guards on getDrugKnowledgeChain() === null before
-    // building rows; the builder itself only ever sees real chains.
+  test("system context: bupropion mesolimbic route and stimulant class; sertraline omits them", () => {
+    const bup = viewFor("bupropion");
+    expect(bup.systemContext.substanceClass?.name).toBe("Stimulant");
+    expect(bup.systemContext.substanceClass?.description).toContain("catecholamine");
+    const meso = bup.systemContext.pathways.find((p) => p.name === "Mesolimbic Pathway");
+    expect(meso?.route).toBe("Ventral Tegmental Area (VTA) → Nucleus Accumbens");
+    expect(meso?.note).toContain("Reward");
+    expect(bup.systemContext.brainRegions.length).toBeGreaterThan(0);
+
+    const ser = viewFor("sertraline");
+    expect(ser.systemContext.substanceClass).toBeUndefined();
+    expect(ser.systemContext.pathways).toEqual([]);
+  });
+
+  test("neurotransmitters surface resolved entities (QA: NE / DA / Ach)", () => {
+    const bup = viewFor("bupropion");
+    const abbrevs = bup.neurotransmitters.resolved.map((n) => n.abbreviation);
+    expect(abbrevs).toContain("NE");
+    expect(abbrevs).toContain("DA");
+    expect(abbrevs).toContain("Ach");
+    const ser = viewFor("sertraline");
+    expect(ser.neurotransmitters.resolved.map((n) => n.abbreviation)).toEqual(["5-HT"]);
+  });
+
+  test("unknown chain never reaches the view builder (component returns null)", () => {
     expect(getDrugKnowledgeChain("does-not-exist")).toBeNull();
   });
 });
