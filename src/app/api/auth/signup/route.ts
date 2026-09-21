@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { logger } from "@/lib/logger";
 
 // This route must be dynamic — it reads/writes cookies and queries the database.
 // Setting force-static breaks cookie modification (the route becomes a build-time
