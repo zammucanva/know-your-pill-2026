@@ -103,7 +103,11 @@ function buildRows(selected: Drug[]): CompareRow[] {
   );
   push(
     "When NOT to use",
-    selected.map((d) => (d.whenNotToUse ?? []).slice(0, 3).join(" · ") || "Data not available")
+    selected.map(
+      (d) =>
+        (d.whenNotToUse ?? []).slice(0, 3).map((w) => w.scenario).join(" · ") ||
+        "Data not available"
+    )
   );
   return rows;
 }

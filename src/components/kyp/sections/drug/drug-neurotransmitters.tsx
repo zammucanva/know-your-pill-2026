@@ -19,7 +19,22 @@ interface DrugNeurotransmittersProps {
   drug: Drug;
 }
 
+/**
+ * σ1 (sigma-1) note — defined ONLY when this drug's own canonical
+ * receptor profile documents σ1 activity. Never a class default:
+ * drugs without σ1 data render no note here, and no generic
+ * replacement claim is invented. The body quotes the drug's own
+ * verbatim receptor entry.
+ */
+export function sigma1ReceptorNote(drug: Drug): string | undefined {
+  const entry = drug.receptors.find((r) => /σ\s*1|sigma[-\s]?1/i.test(r));
+  if (!entry) return undefined;
+  return `${drug.genericName}'s own receptor profile documents σ1 (sigma-1) activity — “${entry}”. The Knowledge Chain section connects this target to ${drug.genericName}'s wider pharmacology.`;
+}
+
 export function DrugNeurotransmitters({ drug }: DrugNeurotransmittersProps) {
+  const sigma1Note = sigma1ReceptorNote(drug);
+
   return (
     <Section id="neurotransmitters" className="bg-muted/20">
       <Container>
@@ -72,13 +87,16 @@ export function DrugNeurotransmitters({ drug }: DrugNeurotransmittersProps) {
           </div>
         </div>
 
-        <div className="mt-8">
-          <Callout variant="tip" title="Why the σ1 receptor matters">
-            Among SSRIs, sertraline has unique affinity for the σ1 (sigma-1) receptor as an agonist.
-            This may explain why sertraline has particular efficacy in anxiety disorders — σ1 agonism
-            is associated with anxiolytic and neuroprotective effects. Other SSRIs lack this property.
-          </Callout>
-        </div>
+        {/* σ1 note — data-gated: only drugs whose own receptor profile
+            documents σ1 activity show this; no default, no other drug's
+            explanation. */}
+        {sigma1Note && (
+          <div className="mt-8">
+            <Callout variant="tip" title="Why the σ1 receptor matters">
+              {sigma1Note}
+            </Callout>
+          </div>
+        )}
       </Container>
     </Section>
   );

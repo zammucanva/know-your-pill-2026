@@ -6,6 +6,7 @@ import { Badge } from "@/components/kyp/ui/badge";
 import { Callout } from "@/components/kyp/ui/callout";
 import { ArrowUpRight, Check, X } from "lucide-react";
 import type { Drug } from "@/lib/kyp/data";
+import { drugs } from "@/lib/kyp/data/drugs/index";
 
 /**
  * DrugRelatedDrugs — Related Medications cross-links (NOW-N5).
@@ -39,6 +40,73 @@ function pickTone(relationship: string) {
   return "outline" as const;
 }
 
+/** Registry lookup — generic name (case-insensitive) → slug. The drug
+ *  registry is the single source of truth for built pages; no hardcoded
+ *  drug-name lists live in this component. */
+const DRUG_SLUG_BY_NAME = new Map(
+  drugs.map((d) => [d.genericName.trim().toLowerCase(), d.slug] as const)
+);
+
+/**
+ * Resolves a related-drug entry to its built page href. An explicit
+ * `slug` wins when it points at a built page; otherwise the entry NAME
+ * resolves against the registry, so a missing `slug` field never hides
+ * an existing page behind a false “Page coming soon”. Entries that match
+ * no built drug (genuinely unbuilt pages) still degrade gracefully.
+ */
+export function resolveRelatedDrugHref(
+  related: { name: string; slug?: string },
+  builtDrugSlugs: ReadonlySet<string>
+): string | undefined {
+  if (related.slug && builtDrugSlugs.has(related.slug)) {
+    return `/drugs/${related.slug}`;
+  }
+  const byName = DRUG_SLUG_BY_NAME.get(related.name.trim().toLowerCase());
+  if (byName && builtDrugSlugs.has(byName)) {
+    return `/drugs/${byName}`;
+  }
+  return undefined;
+}
+
+export interface WhenNotToUseComposition {
+  /** Lead-in before the highlighted text — "Use " or "Instead: " or "". */
+  lead: string;
+  /** The alternative text to highlight. */
+  text: string;
+  /** Tail after the highlighted text — " instead." or "". */
+  tail: string;
+}
+
+/**
+ * Composes the “when NOT to use” line so the alternative reads as one
+ * grammatical sentence whatever shape the authored field takes:
+ *
+ *   - a short noun phrase        → “Use X instead.”
+ *   - a complete sentence        → “Instead: X.” (verbatim, terminal
+ *                                  punctuation normalised to one period)
+ *   - ends with punctuation      → normalised, never “. instead.”
+ *   - already contains “instead” → rendered as-is, no duplicate frame
+ *
+ * The underlying medical claim is never reworded.
+ */
+export function composeWhenNotToUseAlternative(
+  alternative: string
+): WhenNotToUseComposition {
+  const trimmed = alternative.trim();
+  if (/\binstead\b/i.test(trimmed)) {
+    return { lead: "", text: trimmed, tail: "" };
+  }
+  const withoutTerminal = trimmed.replace(/\s*([.!?:;]+)\s*$/, "").trim();
+  // Nothing sentence-like remains (a bare noun phrase, with or without
+  // terminal punctuation) → the classic “Use X instead.” frame.
+  if (!/[.;:]/.test(withoutTerminal)) {
+    return { lead: "Use ", text: withoutTerminal, tail: " instead." };
+  }
+  // Sentence-shaped guidance: label it and keep the authored wording
+  // verbatim, with exactly one terminal period.
+  return { lead: "Instead: ", text: withoutTerminal + ".", tail: "" };
+}
+
 export function DrugRelatedDrugs({ drug, builtDrugSlugs }: DrugRelatedDrugsProps) {
   const built = new Set(builtDrugSlugs ?? []);
 
@@ -53,11 +121,11 @@ export function DrugRelatedDrugs({ drug, builtDrugSlugs }: DrugRelatedDrugsProps
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {drug.relatedDrugs.map((rd) => {
-            // Only link to drugs that actually have a built page —
+            // A page link only when the target page actually exists —
+            // resolved via the explicit slug OR the registry name match;
             // unbuilt family members render as non-clickable
             // "coming soon" cards instead of dead 404 links.
-            const href =
-              rd.slug && built.has(rd.slug) ? `/drugs/${rd.slug}` : undefined;
+            const href = resolveRelatedDrugHref(rd, built);
             return (
               <CardPrimitive
                 key={rd.name}
@@ -108,15 +176,20 @@ export function DrugRelatedDrugs({ drug, builtDrugSlugs }: DrugRelatedDrugsProps
           <div className="mt-10">
             <Callout variant="warning" title={`When NOT to choose ${drug.genericName}`}>
               <ul className="space-y-1.5">
-                {drug.whenNotToUse.map((w, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" strokeWidth={3} />
-                    <span>
-                      <strong>{w.scenario}</strong> — {w.reason} Use{" "}
-                      <span className="text-success">{w.alternative}</span> instead.
-                    </span>
-                  </li>
-                ))}
+                {drug.whenNotToUse.map((w, i) => {
+                  const composition = composeWhenNotToUseAlternative(w.alternative);
+                  return (
+                    <li key={i} className="flex items-start gap-2">
+                      <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" strokeWidth={3} />
+                      <span>
+                        <strong>{w.scenario}</strong> — {w.reason}{" "}
+                        {composition.lead}
+                        <span className="text-success">{composition.text}</span>
+                        {composition.tail}
+                      </span>
+                    </li>
+                  );
+                })}
               </ul>
             </Callout>
           </div>
