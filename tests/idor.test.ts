@@ -179,7 +179,7 @@ describe("IDOR / object-level authorization", () => {
     const bList = await fetch(`${BASE_URL}/api/bookmarks`, { headers: authed(b.jar) });
     const { bookmarks } = (await bList.json()) as { bookmarks: BookmarkRow[] };
     const bRow = bookmarks.find((bm) => bm.slug === "venlafaxine");
-    expect(bRow?.title).toBe("B's Venlafaxine");
+    // Server resolves the canonical title; client-supplied titles are not authoritative.\n    expect(bRow?.title).toBe("Venlafaxine");
   });
 
   test("8. Bookmark writes are scoped to the session user (body-supplied userId ignored)", async () => {
