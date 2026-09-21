@@ -26,7 +26,8 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { searchTypeLabels } from "@/lib/kyp/data";\nimport { searchIndex, searchKyp } from "@/lib/kyp/search";
+import { searchTypeLabels } from "@/lib/kyp/data";
+import { searchIndex, searchKyp } from "@/lib/kyp/search";
 import type { SearchableItem } from "@/lib/kyp/data";
 import { useSearchHistory } from "@/lib/hooks/use-search-history";
 import { cn } from "@/lib/utils";
