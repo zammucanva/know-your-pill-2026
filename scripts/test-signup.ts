@@ -33,7 +33,7 @@ async function test() {
   r = await fetch(`${BASE}/api/auth/role`, {
     method: "POST",
     headers: { "Content-Type": "application/json", Cookie: cookie },
-    body: JSON.stringify({ role: "medical_student" }),
+    body: JSON.stringify({ learnerType: "medical_student" }),
   });
   d = await r.json();
   console.log("Role update:", r.status, JSON.stringify(d));
