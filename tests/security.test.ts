@@ -24,6 +24,7 @@ import {
   ensureServer,
   loginAndGetJar,
   uniqueEmail,
+  testDb,
 } from "./helpers/server";
 
 const SESSION_COOKIE = "kyp-session";
@@ -364,9 +365,12 @@ describe("malformed input handling", () => {
       authed(user.jar)
     );
     expect(res.status).toBe(400);
-    const session = await fetch(`${BASE_URL}/api/auth/session`, { headers: authed(user.jar) });
-    const body = (await session.json()) as { user?: { role?: string; learnerType?: string } };
-    expect(body.user?.role).toBe("user");
+    const saved = await testDb().user.findUnique({
+      where: { id: user.userId },
+      select: { role: true, learnerType: true },
+    });
+    expect(saved?.role).toBe("user");
+    expect(saved?.learnerType).toBe("student");
   });
 
   test("34. bookmark POST rejects unknown content and ignores forged title", async () => {
