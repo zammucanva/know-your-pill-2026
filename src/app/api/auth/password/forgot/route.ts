@@ -8,7 +8,7 @@ import {
   getClientSource,
   recordLoginFailure,
 } from "@/lib/rate-limit";
-import { createPasswordResetToken } from "@/lib/password-reset";
+import { createPasswordResetToken } from "@/lib/password-reset";\nimport { sendPasswordResetEmail } from "@/lib/email";
 
 /**
  * POST /api/auth/password/forgot
@@ -81,10 +81,10 @@ export async function POST(req: NextRequest) {
     // Silent token creation — the response never differs.
     const user = await db.user.findUnique({
       where: { email: normalizedEmail },
-      select: { id: true },
+      select: { id: true, email: true, name: true },
     });
     if (user) {
-      await createPasswordResetToken(user.id, source);
+      const reset = await createPasswordResetToken(user.id, source);\n      try {\n        await sendPasswordResetEmail({ to: user.email, name: user.name, token: reset.raw, expiresAt: reset.expiresAt });\n      } catch (error) {\n        logger.error("Password reset email delivery failed", error);\n      }
     }
 
     return NextResponse.json(GENERIC_RESPONSE);
