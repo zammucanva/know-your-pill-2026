@@ -21,5 +21,4 @@ export * from "./diseases/index";
 export * from "./disease-types";
 export * from "./substances/index";
 export * from "./substance-types";
-
-export * from "./content-registry";
+\nexport * from "./content-registry";\n
