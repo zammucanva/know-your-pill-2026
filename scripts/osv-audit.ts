@@ -119,10 +119,13 @@ function resolveDependencyManifest(fromManifestPath: string, dependencyName: str
 }
 
 function dependencyNames(manifest: PackageManifest): string[] {
+  // Peer dependencies are supplied by the consuming application and are not
+  // transitively owned by this package. Runtime roots must declare their own
+  // required peers explicitly; otherwise we would falsely classify optional
+  // tooling peers such as Prisma's CLI as production runtime.
   return [
     ...Object.keys(manifest.dependencies ?? {}),
     ...Object.keys(manifest.optionalDependencies ?? {}),
-    ...Object.keys(manifest.peerDependencies ?? {}),
   ];
 }
 
