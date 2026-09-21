@@ -152,7 +152,7 @@ async function main() {
   await test("rejects role update without session", async () => {
     const r = await fetch(`${BASE}/api/auth/role`, {
       method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ role: "patient" }),
+      body: JSON.stringify({ learnerType: "patient" }),
     });
     await expectStatus(r, 401, "no session");
   });
