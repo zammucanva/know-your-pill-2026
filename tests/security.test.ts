@@ -360,7 +360,7 @@ describe("malformed input handling", () => {
     const user = await createTestUser("sec", 33);
     const res = await postJson(
       "/api/auth/role",
-      JSON.stringify({ learnerType: "admin" }),
+      JSON.stringify({ role: "admin" }),
       authed(user.jar)
     );
     expect(res.status).toBe(400);
