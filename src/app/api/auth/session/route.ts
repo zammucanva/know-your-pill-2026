@@ -26,7 +26,7 @@ export async function GET() {
       id: resolved.user.id,
       name: resolved.user.name,
       email: resolved.user.email,
-      role: resolved.user.role,
+      learnerType: resolved.user.learnerType,
     },
   });
 }
