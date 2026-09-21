@@ -44,7 +44,7 @@ export function useSearchHistory(limit = 5) {
 
   const recordSearch = React.useCallback(async (
     query: string,
-    result?: { type: string; slug: string; title: string }
+    result?: { type: string; slug: string; title?: string }
   ) => {
     try {
       await fetch("/api/search-history", {
