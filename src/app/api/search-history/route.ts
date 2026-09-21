@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { logger } from "@/lib/logger";\nimport { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { getSessionUser } from "@/lib/auth";
 import { isKypContentType, resolveContent } from "@/lib/kyp/data";
@@ -91,7 +91,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json(entry);
   } catch (error) {
-    console.error("SearchHistory POST error:", (error as Error)?.name ?? "UnknownError");
+    logger.error("SearchHistory POST error:", error);
     return NextResponse.json({ error: "Failed to record search" }, { status: 500 });
   }
 }
@@ -103,7 +103,7 @@ export async function DELETE() {
     await db.searchHistory.deleteMany({ where: { userId: user.id } });
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("SearchHistory DELETE error:", (error as Error)?.name ?? "UnknownError");
+    logger.error("SearchHistory DELETE error:", error);
     return NextResponse.json({ error: "Failed to clear search history" }, { status: 500 });
   }
 }
