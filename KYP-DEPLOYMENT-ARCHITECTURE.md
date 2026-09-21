@@ -92,3 +92,15 @@ For automated tests, `EMAIL_PROVIDER=mock` prevents outbound email.
 Ordinary users may change `learnerType`. They cannot change `role`.
 
 Never use learnerType as a privileged authorization check.
+
+## Dependency security
+
+Keep GitHub's Dependency graph / Dependabot enabled for the repository. Dependabot is configured in `.github/dependabot.yml` for weekly dependency update proposals.
+
+The CI quality job also runs the repository's OSV audit when invoked separately with:
+
+```bash
+bun run osv
+```
+
+The OSV script checks installed direct dependencies; Dependabot/GitHub's dependency graph should be treated as the transitive-dependency layer.
