@@ -1,3 +1,4 @@
+import { logger } from "@/lib/logger";
 import { NextRequest, NextResponse } from "next/server";
 
 // Dynamic route — reads/writes cookies and queries the database.
@@ -31,7 +32,7 @@ import {
  *   - SESSION INVALIDATION: on success ALL of the user's sessions are
  *     revoked, then a brand-new fresh session is minted for the CURRENT
  *     client only — every other device stays logged out.
- *   - Password policy matches signup (minimum 6 characters) plus a maximum
+ *   - Password policy matches signup (minimum 8 characters) plus a maximum
  *     length guard; the new password must differ from the current one.
  *
  * Fails closed when SESSION_SECRET is not configured — session resolution
@@ -67,9 +68,9 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (newPassword.length < 6) {
+    if (newPassword.length < 8) {
       return NextResponse.json(
-        { error: "New password must be at least 6 characters" },
+        { error: "New password must be at least 8 characters" },
         { status: 400 }
       );
     }
@@ -134,7 +135,7 @@ export async function POST(req: NextRequest) {
     });
   } catch (error) {
     // Log the error CLASS only — never credentials or identifiers.
-    console.error("Password change error:", (error as Error)?.name ?? "UnknownError");
+    logger.error("Password change error", error);
     return NextResponse.json(
       { error: "Failed to change password. Please try again." },
       { status: 500 }
