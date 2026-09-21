@@ -445,12 +445,12 @@ describe("knowledge chain — rendered view contract (buildKnowledgeChainView)",
       expect(mdd.icd10).toMatch(/^F3/);
       expect(mdd.title).toContain("ICD-10");
       // The "(MDD)" indication duplicate merged in — rendered once as the
-      // canonical page-linked entry. (Fluvoxamine additionally keeps its
-      // regional qualifier entry in the off-label group — its own data.)
+      // canonical page-linked entry. Since the condition-identity fix on
+      // main, the graph layer itself merges qualifier spellings of one
+      // entity into a single edge with unioned sources, so every drug —
+      // fluvoxamine included — carries exactly ONE Major Depressive entry.
       const allNames = view.conditionGroups.flatMap((g) => g.items.map((i) => i.name));
-      expect(allNames.filter((n) => n.startsWith("Major Depressive")).length).toBe(
-        slug === "fluvoxamine" ? 2 : 1
-      );
+      expect(allNames.filter((n) => n.startsWith("Major Depressive")).length).toBe(1);
     }
     // sertraline: unioned statuses primary · FDA approved on the page link.
     const ser = viewFor("sertraline");
@@ -482,9 +482,12 @@ describe("knowledge chain — rendered view contract (buildKnowledgeChainView)",
     const offLabel = ser.conditionGroups.find((g) => g.key === "off-label")!;
     expect(offLabel.items.map((i) => i.name)).toContain("Generalised Anxiety Disorder");
     // amitriptyline: the off-label pain/insomnia cluster groups together.
+    // ("Migraine prophylaxis" — the canonical plain display name the
+    // condition-identity fix resolves for the "Migraine (prophylaxis)"
+    // spelling; a DISTINCT entity from acute "Migraine".)
     const ami = viewFor("amitriptyline");
     const amiOff = ami.conditionGroups.find((g) => g.key === "off-label")!;
-    for (const name of ["Diabetic Neuropathy", "Migraine (prophylaxis)", "Insomnia"]) {
+    for (const name of ["Diabetic Neuropathy", "Migraine prophylaxis", "Insomnia"]) {
       expect(amiOff.items.map((i) => i.name)).toContain(name);
     }
   });
@@ -538,8 +541,10 @@ describe("knowledge chain — rendered view contract (buildKnowledgeChainView)",
 });
 
 describe("conditions — identity merge + canonical display name", () => {
-  const rowsFor = (slug: string) =>
-    buildKnowledgeChainRows(getDrugKnowledgeChain(slug)!);
+  /** Every rendered condition entry on a drug's Knowledge Chain (V2 view). */
+  const conditionItems = (slug: string) =>
+    buildKnowledgeChainView(getDrugKnowledgeChain(slug)!)
+      .conditionGroups.flatMap((g) => g.items);
 
   /** Every ordering of a small variant array. */
   const permutations = (items: string[]): string[][] => {
@@ -629,27 +634,26 @@ describe("conditions — identity merge + canonical display name", () => {
     expect(mdd?.icd10).toMatch(/^F3/);
   });
 
-  test("drug pages: no condition chip carries another drug's qualifier (the fluvoxamine leak)", () => {
+  test("drug pages: no rendered condition carries another drug's qualifier (the fluvoxamine leak)", () => {
     for (const slug of ALL_SLUGS) {
-      const conditions = rowsFor(slug).find((r) => r.key === "conditions")!;
-      for (const chip of conditions.chips) {
+      for (const item of conditionItems(slug)) {
         // fluvoxamine's paediatric OCD qualifiers must never surface on
-        // any drug's Knowledge Chain — including fluvoxamine's own chip,
+        // any drug's Knowledge Chain — including fluvoxamine's own entry,
         // which shares the canonical registry name.
-        expect(chip.label).not.toMatch(/paediatric/i);
-        expect(chip.label).not.toMatch(/≥8/);
-        expect(chip.label).not.toMatch(/\(adults\)/i);
+        expect(item.name).not.toMatch(/paediatric/i);
+        expect(item.name).not.toMatch(/≥8/);
+        expect(item.name).not.toMatch(/\(adults\)/i);
       }
-      // Drugs that name OCD in any spelling show exactly ONE OCD chip,
+      // Drugs that name OCD in any spelling show exactly ONE OCD entry,
       // carrying the plain canonical name.
       const chain = getDrugKnowledgeChain(slug)!;
       const ocdEdges = chain.drug.conditionEdges.filter(
         (e) => e.conditionKey === "obsessive-compulsive-disorder"
       );
-      const ocdChips = conditions.chips.filter(
-        (c) => c.label === "Obsessive-Compulsive Disorder"
+      const ocdItems = conditionItems(slug).filter(
+        (i) => i.name === "Obsessive-Compulsive Disorder"
       );
-      expect(ocdEdges.length).toBe(ocdChips.length);
+      expect(ocdEdges.length).toBe(ocdItems.length);
       if (ocdEdges.length > 0) {
         expect(ocdEdges.length).toBe(1);
       }
@@ -678,10 +682,9 @@ describe("conditions — identity merge + canonical display name", () => {
     }
   });
 
-  test("drug pages: a qualifier restating a standalone base stays one chip (migraine pair)", () => {
-    const ami = rowsFor("amitriptyline").find((r) => r.key === "conditions")!;
-    const migraine = ami.chips.filter((c) => /migraine/i.test(c.label));
+  test("drug pages: a qualifier restating a standalone base stays one entry (migraine pair)", () => {
+    const migraine = conditionItems("amitriptyline").filter((i) => /migraine/i.test(i.name));
     expect(migraine.length).toBe(1);
-    expect(migraine[0]?.label).toBe("Migraine prophylaxis");
+    expect(migraine[0]?.name).toBe("Migraine prophylaxis");
   });
 });
