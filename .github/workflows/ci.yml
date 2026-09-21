@@ -24,7 +24,6 @@ jobs:
       - run: bun run osv
       - run: bun run typecheck
       - run: bun run lint
-      - run: sha256sum src/lib/kyp/data/disease-types.ts src/lib/kyp/data/substance-types.ts src/lib/kyp/data/types.ts
       - run: bun run test:content-lock
       - run: bun run build
       - run: bun run build:export
