@@ -543,7 +543,7 @@ describe("auth implementation specifics", () => {
     const res = await fetch(`${BASE_URL}/api/auth/role`, {
       method: "POST",
       headers: { "Content-Type": "application/json", ...authed(user.jar) },
-      body: JSON.stringify({ role: "medical_student" }),
+      body: JSON.stringify({ learnerType: "medical_student" }),
     });
     expect(res.status).toBe(200);
     const setCookies = await getSetCookies(res);
