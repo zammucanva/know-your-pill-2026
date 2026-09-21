@@ -33,7 +33,7 @@ import { revokeAllSessionsForUser } from "@/lib/session";
  *     guess gets its own counter, while the shared source dimension
  *     accumulates — brute-forcing tokens from one source locks that source
  *     out without locking out other users.
- *   - Password policy matches signup (minimum 6 characters) plus a maximum
+ *   - Password policy matches signup (minimum 8 characters) plus a maximum
  *     length guard against absurd input.
  */
 
@@ -61,9 +61,9 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (newPassword.length < 6) {
+    if (newPassword.length < 8) {
       return NextResponse.json(
-        { error: "Password must be at least 6 characters" },
+        { error: "Password must be at least 8 characters" },
         { status: 400 }
       );
     }
