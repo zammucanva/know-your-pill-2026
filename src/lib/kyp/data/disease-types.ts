@@ -185,6 +185,11 @@ export interface DiseasePatientEducation {
 
 /** The canonical Disease interface. */
 export interface Disease {
+  /** Clinical content governance metadata. */
+  evidenceLevel?: "guideline" | "systematic-review" | "textbook" | "expert-review";
+  clinicalDisclaimer?: string;
+  emergencyGuidance?: string;
+
   /* ---- Identity ---- */
   slug: string;
   name: string;
