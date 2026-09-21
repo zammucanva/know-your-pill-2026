@@ -15,7 +15,10 @@
     "build:export-clean": "rm -rf out && GITHUB_PAGES=1 next build",
     "test": "bun test tests/",
     "test:content-lock": "bun scripts/content-lock.ts",
-    "osv": "bun scripts/osv-audit.ts"
+    "osv": "bun scripts/osv-audit.ts",
+    "db:prepare": "bun scripts/prepare-database.ts && prisma db push",
+    "typecheck": "tsc --noEmit",
+    "test:security": "bun test tests/security.test.ts tests/privacy.test.ts tests/idor.test.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.11.1",
