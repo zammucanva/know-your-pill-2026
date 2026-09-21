@@ -195,13 +195,7 @@ export interface Disease {
   name: string;
   /** Short name/abbreviation, e.g. "MDD", "GAD", "OCD" */
   shortName: string;
-  /** Category, e.g. "Mood Disorder", "Anxiety Disord
-  /** Clinical content governance metadata. */
-  evidenceLevel?: "guideline" | "systematic-review" | "textbook" | "expert-review";
-  clinicalDisclaimer?: string;
-  emergencyGuidance?: string;
-
-er" */
+  /** Category, e.g. "Mood Disorder", "Anxiety Disorder" */
   category: string;
 
   /* ---- Learning path (breadcrumb) ---- */
