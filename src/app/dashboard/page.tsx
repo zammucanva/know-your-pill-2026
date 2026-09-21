@@ -77,7 +77,7 @@ function timeAgo(iso: string): string {
 export default function DashboardPage() {
   const router = useRouter();
   const [loading, setLoading] = React.useState(true);
-  const [user, setUser] = React.useState<{ name: string; email: string; role: string } | null>(null);
+  const [user, setUser] = React.useState<{ name: string; email: string; learnerType: string } | null>(null);
   const [progress, setProgress] = React.useState<ProgressEntry[]>([]);
   const [bookmarks, setBookmarks] = React.useState<BookmarkEntry[]>([]);
 
