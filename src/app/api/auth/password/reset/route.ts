@@ -10,7 +10,7 @@ import {
   getClientSource,
   recordLoginFailure,
 } from "@/lib/rate-limit";
-import { consumePasswordResetToken } from "@/lib/password-reset";
+import { consumePasswordResetToken, isPasswordResetTokenUsable } from "@/lib/password-reset";
 import { revokeAllSessionsForUser } from "@/lib/session";
 
 /**
@@ -62,18 +62,6 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (newPassword.length < 8) {
-      return NextResponse.json(
-        { error: "Password must be at least 8 characters" },
-        { status: 400 }
-      );
-    }
-    if (newPassword.length > MAX_PASSWORD_LENGTH) {
-      return NextResponse.json(
-        { error: "Password must be at most 128 characters" },
-        { status: 400 }
-      );
-    }
     // Bound token input size so absurd strings cannot abuse hashing/lookup.
     if (token.length > 256) {
       return NextResponse.json({ error: GENERIC_TOKEN_ERROR }, { status: 400 });
@@ -94,9 +82,28 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Check token validity before evaluating password policy so unknown,
+    // used, and expired tokens cannot reveal which password-policy branch ran.
+    if (!(await isPasswordResetTokenUsable(token))) {
+      await recordLoginFailure(guessKey, source);
+      return NextResponse.json({ error: GENERIC_TOKEN_ERROR }, { status: 400 });
+    }
+
+    if (newPassword.length < 8) {
+      return NextResponse.json(
+        { error: "Password must be at least 8 characters" },
+        { status: 400 }
+      );
+    }
+    if (newPassword.length > MAX_PASSWORD_LENGTH) {
+      return NextResponse.json(
+        { error: "Password must be at most 128 characters" },
+        { status: 400 }
+      );
+    }
+
     const userId = await consumePasswordResetToken(token);
     if (!userId) {
-      await recordLoginFailure(guessKey, source);
       return NextResponse.json({ error: GENERIC_TOKEN_ERROR }, { status: 400 });
     }
 
