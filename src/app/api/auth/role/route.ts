@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { logger } from "@/lib/logger";\nimport { NextRequest, NextResponse } from "next/server";
 export const dynamic = "force-dynamic";
 import { db } from "@/lib/db";
 import { getSessionUser } from "@/lib/auth";
@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ learnerType: updated.learnerType });
   } catch (error) {
-    console.error("Learner profile update error:", (error as Error)?.name ?? "UnknownError");
+    logger.error("Learner profile update error:", error);
     return NextResponse.json({ error: "Failed to update learner profile" }, { status: 500 });
   }
 }
