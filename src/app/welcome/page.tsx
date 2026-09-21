@@ -28,7 +28,7 @@ const roles: { id: Role; label: string; description: string; icon: typeof User }
 ];
 
 const passwordRequirements = [
-  { label: "At least 6 characters", test: (pw: string) => pw.length >= 6 },
+  { label: "At least 8 characters", test: (pw: string) => pw.length >= 8 },
   { label: "One letter", test: (pw: string) => /[a-zA-Z]/.test(pw) },
   { label: "One number", test: (pw: string) => /\d/.test(pw) },
 ];
@@ -109,10 +109,16 @@ export default function WelcomePage() {
     if (!selectedRole) return;
     setLoading(true);
     try {
-      await fetch("/api/auth/role", {
-        method: "POST", headers: { "Content-Type": "application/json" },
+      const res = await fetch("/api/auth/role", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ learnerType: selectedRole }),
       });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setError(data.error || "Failed to save learner profile.");
+        return;
+      }
       setStep("done");
     } catch { setError("Failed to save role."); }
     finally { setLoading(false); }
