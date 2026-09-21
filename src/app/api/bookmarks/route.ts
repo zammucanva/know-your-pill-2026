@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { getSessionUser } from "@/lib/auth";
 import { isKypContentType } from "@/lib/kyp/data/content-registry";
+import type { KypContentType } from "@/lib/kyp/data/content-registry";
 import { resolveContent } from "@/lib/kyp/data/content-registry";
 
 export const dynamic = "force-dynamic";
