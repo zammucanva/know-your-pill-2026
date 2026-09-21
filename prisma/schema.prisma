@@ -16,7 +16,10 @@ model User {
   email         String    @unique
   passwordHash  String
   emailVerified Boolean   @default(false)
-  /// Learner-facing profile; safe for the authenticated user to change.\n  learnerType   String    @default("student")\n  /// Server-authoritative authorization role; ordinary users cannot change this.\n  role          String    @default("user")
+  /// Learner-facing profile; safe for the authenticated user to change.
+  learnerType   String    @default("student")
+  /// Server-authoritative authorization role; ordinary users cannot change this.
+  role          String    @default("user")
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 
