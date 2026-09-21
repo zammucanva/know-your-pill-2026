@@ -1,3 +1,4 @@
+import { logger } from "@/lib/logger";
 import { NextRequest, NextResponse } from "next/server";
 
 // This route must be dynamic — it reads/writes cookies and queries the database.
