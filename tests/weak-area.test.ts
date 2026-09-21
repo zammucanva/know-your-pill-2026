@@ -204,7 +204,7 @@ describe("weak-area — builder integration pins", () => {
     readFileSync(join(process.cwd(), rel), "utf8");
 
   test("9. the builder offers the Weak-Area Test with honest empty states", () => {
-    const src = read("src/app/quiz/custom/page.tsx");
+    const src = read("src/app/quiz/custom/custom-test-builder.tsx");
     expect(src).toContain("selectWeakTopics");
     expect(src).toContain("Weak-Area Test");
     expect(src).toContain("Drill my weak areas");
@@ -215,7 +215,7 @@ describe("weak-area — builder integration pins", () => {
   });
 
   test("10. one-tap ?weak= entry exists for the Daily Plan and chips", () => {
-    const src = read("src/app/quiz/custom/page.tsx");
+    const src = read("src/app/quiz/custom/custom-test-builder.tsx");
     expect(src).toContain('get("weak")');
   });
 
