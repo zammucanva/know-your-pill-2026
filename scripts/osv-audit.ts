@@ -1,121 +1,197 @@
 /**
- * KYP OSV dependency audit — queries the OSV API (api.osv.dev) for advisories
- * against the ACTUAL INSTALLED versions of:
- *   1. direct runtime dependencies (package.json "dependencies")
- *   2. direct dev dependencies (package.json "devDependencies")
+ * KYP OSV dependency audit.
  *
- * Reports separately:
- *   - direct runtime advisories (target: 0)
- *   - direct dev/build advisories
- * Transitive advisories are NOT scanned by this script; any transitive
- * dev/build-only exposure is documented separately if relevant.
+ * Queries OSV for the exact versions actually installed in node_modules,
+ * covering BOTH direct and transitive dependencies. This is intentionally
+ * broader than the package.json-only audit: a vulnerable transitive package
+ * is still a supply-chain risk even when it is not a direct dependency.
  *
  * Usage: bun scripts/osv-audit.ts
  */
-
-import { readFileSync, existsSync } from "fs";
-import { resolve, dirname } from "path";
+import { existsSync, readdirSync, readFileSync } from "fs";
+import { dirname, join, resolve } from "path";
 
 const ROOT = resolve(dirname(process.argv[1] ?? "."), "..");
-const pkg = JSON.parse(readFileSync(resolve(ROOT, "package.json"), "utf8"));
+const NODE_MODULES = resolve(ROOT, "node_modules");
+const pkg = JSON.parse(readFileSync(resolve(ROOT, "package.json"), "utf8")) as {
+  dependencies?: Record<string, string>;
+  devDependencies?: Record<string, string>;
+};
 
-interface InstalledVersion {
+interface InstalledPackage {
   name: string;
   version: string;
-  kind: "runtime" | "dev";
+  directKind: "runtime" | "dev" | "transitive";
 }
 
-function installedVersion(name: string): string | null {
-  const manifest = resolve(ROOT, "node_modules", name, "package.json");
-  if (!existsSync(manifest)) return null;
+function readPackageManifest(path: string): { name?: string; version?: string } | null {
   try {
-    return JSON.parse(readFileSync(manifest, "utf8")).version ?? null;
+    return JSON.parse(readFileSync(path, "utf8")) as { name?: string; version?: string };
   } catch {
     return null;
   }
 }
 
-const deps: InstalledVersion[] = [];
-for (const name of Object.keys(pkg.dependencies ?? {})) {
-  const v = installedVersion(name);
-  if (v) deps.push({ name, version: v, kind: "runtime" });
-  else console.warn(`WARN: runtime dep not installed: ${name}`);
-}
-for (const name of Object.keys(pkg.devDependencies ?? {})) {
-  const v = installedVersion(name);
-  if (v) deps.push({ name, version: v, kind: "dev" });
-  else console.warn(`WARN: dev dep not installed: ${name}`);
+function collectFromNodeModules(dir: string, out: Map<string, InstalledPackage>): void {
+  if (!existsSync(dir)) return;
+
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    if (!entry.isDirectory() || entry.name === ".bin") continue;
+
+    if (entry.name.startsWith("@")) {
+      collectScope(join(dir, entry.name), out);
+      continue;
+    }
+
+    const packageDir = join(dir, entry.name);
+    const manifestPath = join(packageDir, "package.json");
+    const manifest = existsSync(manifestPath) ? readPackageManifest(manifestPath) : null;
+
+    if (manifest?.name && manifest.version) {
+      const key = `${manifest.name}@${manifest.version}`;
+      if (!out.has(key)) {
+        out.set(key, {
+          name: manifest.name,
+          version: manifest.version,
+          directKind:
+            Object.prototype.hasOwnProperty.call(pkg.dependencies ?? {}, manifest.name)
+              ? "runtime"
+              : Object.prototype.hasOwnProperty.call(pkg.devDependencies ?? {}, manifest.name)
+                ? "dev"
+                : "transitive",
+        });
+      }
+    }
+
+    const nested = join(packageDir, "node_modules");
+    if (existsSync(nested)) collectFromNodeModules(nested, out);
+  }
 }
 
-console.log(
-  `Auditing ${deps.length} direct dependencies (${deps.filter((d) => d.kind === "runtime").length} runtime, ${deps.filter((d) => d.kind === "dev").length} dev) against OSV...`
-);
+function collectScope(scopeDir: string, out: Map<string, InstalledPackage>): void {
+  if (!existsSync(scopeDir)) return;
+  for (const entry of readdirSync(scopeDir, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const packageDir = join(scopeDir, entry.name);
+    const manifestPath = join(packageDir, "package.json");
+    const manifest = existsSync(manifestPath) ? readPackageManifest(manifestPath) : null;
 
-// OSV querybatch — batches of 100
-async function queryOsv(
-  batch: InstalledVersion[]
-): Promise<Record<string, { id: string; aliases: string[]; }[]>> {
-  const queries = batch.map((d) => ({
-    package: { name: d.name, ecosystem: "npm" },
-    version: d.version,
-  }));
-  const res = await fetch("https://api.osv.dev/v1/querybatch", {
+    if (manifest?.name && manifest.version) {
+      const key = `${manifest.name}@${manifest.version}`;
+      if (!out.has(key)) {
+        out.set(key, {
+          name: manifest.name,
+          version: manifest.version,
+          directKind:
+            Object.prototype.hasOwnProperty.call(pkg.dependencies ?? {}, manifest.name)
+              ? "runtime"
+              : Object.prototype.hasOwnProperty.call(pkg.devDependencies ?? {}, manifest.name)
+                ? "dev"
+                : "transitive",
+        });
+      }
+    }
+
+    const nested = join(packageDir, "node_modules");
+    if (existsSync(nested)) collectFromNodeModules(nested, out);
+  }
+}
+
+interface OsvVuln {
+  id: string;
+  aliases?: string[];
+  severity?: { type: string; score?: string }[];
+}
+
+async function queryOsv(batch: InstalledPackage[]): Promise<Map<string, OsvVuln[]>> {
+  const response = await fetch("https://api.osv.dev/v1/querybatch", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ queries }),
+    body: JSON.stringify({
+      queries: batch.map((item) => ({
+        package: { name: item.name, ecosystem: "npm" },
+        version: item.version,
+      })),
+    }),
   });
-  if (!res.ok) throw new Error(`OSV API error: ${res.status}`);
-  const data = (await res.json()) as {
-    results: { vulns?: { id: string; aliases?: string[] }[] }[];
+
+  if (!response.ok) throw new Error(`OSV API error: ${response.status}`);
+
+  const data = (await response.json()) as {
+    results?: { vulns?: OsvVuln[] }[];
   };
-  const out: Record<string, { id: string; aliases: string[] }[]> = {};
-  batch.forEach((d, i) => {
-    out[`${d.name}@${d.version}`] =
-      data.results[i]?.vulns?.map((v) => ({
-        id: v.id,
-        aliases: v.aliases ?? [],
-      })) ?? [];
+
+  const results = new Map<string, OsvVuln[]>();
+  batch.forEach((item, index) => {
+    results.set(`${item.name}@${item.version}`, data.results?.[index]?.vulns ?? []);
   });
-  return out;
+  return results;
 }
 
 async function main() {
-  const runtime = deps.filter((d) => d.kind === "runtime");
-  const dev = deps.filter((d) => d.kind === "dev");
-  const results: Record<string, { id: string; aliases: string[] }[]> = {};
-  for (const chunk of [runtime, dev]) {
-    for (let i = 0; i < chunk.length; i += 100) {
-      const part = await queryOsv(chunk.slice(i, i + 100));
-      Object.assign(results, part);
+  const installed = new Map<string, InstalledPackage>();
+  collectFromNodeModules(NODE_MODULES, installed);
+
+  const packages = [...installed.values()].sort((a, b) =>
+    `${a.name}@${a.version}`.localeCompare(`${b.name}@${b.version}`)
+  );
+
+  if (packages.length === 0) {
+    throw new Error("node_modules is empty or unavailable; refusing to claim a clean audit");
+  }
+
+  console.log(
+    `Auditing ${packages.length} installed dependency versions ` +
+      `(${packages.filter((p) => p.directKind === "runtime").length} direct runtime, ` +
+      `${packages.filter((p) => p.directKind === "dev").length} direct dev, ` +
+      `${packages.filter((p) => p.directKind === "transitive").length} transitive)...`
+  );
+
+  const results = new Map<string, OsvVuln[]>();
+  for (let i = 0; i < packages.length; i += 100) {
+    const part = await queryOsv(packages.slice(i, i + 100));
+    for (const [key, vulns] of part) results.set(key, vulns);
+  }
+
+  const vulnerable = packages.flatMap((item) => {
+    const key = `${item.name}@${item.version}`;
+    return (results.get(key) ?? []).map((v) => ({
+      key,
+      kind: item.directKind,
+      id: v.id,
+      aliases: v.aliases ?? [],
+    }));
+  });
+
+  const counts = {
+    runtime: vulnerable.filter((v) => v.kind === "runtime").length,
+    dev: vulnerable.filter((v) => v.kind === "dev").length,
+    transitive: vulnerable.filter((v) => v.kind === "transitive").length,
+  };
+
+  console.log("
+── Installed dependency advisories ──");
+  if (vulnerable.length === 0) {
+    console.log("NONE — 0 advisories across all installed direct/transitive packages");
+  } else {
+    for (const item of vulnerable) {
+      const aliases = item.aliases.length ? ` [${item.aliases.join(", ")}]` : "";
+      console.log(`  ${item.kind}: ${item.key} → ${item.id}${aliases}`);
     }
   }
 
-  const runtimeHits: string[] = [];
-  const devHits: string[] = [];
-  for (const [key, vulns] of Object.entries(results)) {
-    if (vulns.length === 0) continue;
-    const ids = vulns.map((v) => v.id).join(", ");
-    const isRuntime = runtime.some(
-      (d) => `${d.name}@${d.version}` === key
-    );
-    (isRuntime ? runtimeHits : devHits).push(`${key}: ${ids}`);
-  }
-
-  console.log("\n── Direct RUNTIME dependency advisories ──");
-  if (runtimeHits.length === 0) console.log("NONE — 0 direct runtime advisories");
-  else for (const h of runtimeHits) console.log(`  ${h}`);
-
-  console.log("\n── Direct DEV/BUILD dependency advisories ──");
-  if (devHits.length === 0) console.log("NONE — 0 direct dev advisories");
-  else for (const h of devHits) console.log(`  ${h}`);
-
   console.log(
-    `\nOSV AUDIT RESULT: ${runtimeHits.length} direct runtime advisories, ${devHits.length} direct dev advisories (transitive not scanned by this script)`
+    `
+OSV AUDIT RESULT: ${counts.runtime} direct runtime, ${counts.dev} direct dev, ${counts.transitive} transitive advisories`
   );
-  process.exit(runtimeHits.length > 0 ? 1 : 0);
+
+  process.exit(vulnerable.length > 0 ? 1 : 0);
 }
 
-main().catch((e) => {
-  console.error("OSV audit failed:", e);
+main().catch((error) => {
+  console.error(
+    "OSV audit failed:",
+    error instanceof Error ? error.name : "UnknownError"
+  );
   process.exit(2);
 });
