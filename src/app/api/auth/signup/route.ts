@@ -94,7 +94,7 @@ export async function POST(req: NextRequest) {
         name,
         email: normalizedEmail,
         passwordHash,
-        learnerType: "student",\n        role: "user",
+        learnerType: "student",\import { logger } from "@/lib/logger";\nn        role: "user",
       },
     });
 
@@ -110,7 +110,7 @@ export async function POST(req: NextRequest) {
       emailVerified: user.emailVerified,
     });
   } catch (error) {
-    console.error("Signup error:", (error as Error)?.name ?? "UnknownError");
+    logger.error("Signup error:", error);
     return NextResponse.json(
       { error: "Failed to create account. Please try again." },
       { status: 500 }
