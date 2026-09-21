@@ -26,7 +26,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { searchIndex, searchTypeLabels } from "@/lib/kyp/data";
+import { searchTypeLabels } from "@/lib/kyp/data";\nimport { searchIndex, searchKyp } from "@/lib/kyp/search";
 import type { SearchableItem } from "@/lib/kyp/data";
 import { useSearchHistory } from "@/lib/hooks/use-search-history";
 import { cn } from "@/lib/utils";
@@ -122,12 +122,7 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
       // Show curated top results when query is empty
       return searchIndex.slice(0, 8);
     }
-    return searchIndex
-      .map((item) => ({ item, rank: rankResult(item, q) }))
-      .filter((r) => r.rank > 0)
-      .sort((a, b) => a.rank - b.rank)
-      .slice(0, 12)
-      .map((r) => r.item);
+    return searchKyp(q, { limit: 12 });
   }, [query]);
 
   // Reset active index when results change
