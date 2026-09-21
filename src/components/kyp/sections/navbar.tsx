@@ -163,7 +163,7 @@ export function Navbar() {
           <Button
             variant="ghost"
             size="icon"
-            className="h-9 w-9 rounded-full lg:hidden"
+            className="h-11 w-11 rounded-full lg:hidden"
             aria-label="Open menu"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
@@ -182,7 +182,7 @@ export function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-2.5 text-body-sm font-medium text-muted-foreground transition-colors hover:bg-accent/60 hover:text-foreground"
+                className="flex min-h-[44px] items-center rounded-md px-3 text-body-sm font-medium text-muted-foreground transition-colors hover:bg-accent/60 hover:text-foreground"
               >
                 {l.label}
               </Link>
@@ -190,7 +190,7 @@ export function Navbar() {
             <Link
               href="/#emergency"
               onClick={() => setOpen(false)}
-              className="mt-2 flex items-center justify-center gap-2 rounded-md bg-emergency px-3 py-2.5 text-body-sm font-semibold text-white"
+              className="mt-2 flex min-h-[44px] items-center justify-center gap-2 rounded-md bg-emergency px-3 text-body-sm font-semibold text-white"
             >
               <Phone className="h-4 w-4" strokeWidth={2.5} />
               Emergency Help
@@ -206,14 +206,14 @@ export function Navbar() {
                   <Link
                     href="/dashboard"
                     onClick={() => setOpen(false)}
-                    className="flex w-full items-center gap-2 rounded-md px-3 py-2.5 text-body-sm font-medium text-foreground hover:bg-accent/60"
+                    className="flex min-h-[44px] w-full items-center gap-2 rounded-md px-3 text-body-sm font-medium text-foreground hover:bg-accent/60"
                   >
                     <UserIcon className="h-4 w-4" />
                     My Dashboard
                   </Link>
                   <button
                     onClick={() => { setOpen(false); handleLogout(); }}
-                    className="flex w-full items-center gap-2 rounded-md px-3 py-2.5 text-body-sm font-medium text-muted-foreground hover:bg-accent/60 hover:text-foreground"
+                    className="flex min-h-[44px] w-full items-center gap-2 rounded-md px-3 text-body-sm font-medium text-muted-foreground hover:bg-accent/60 hover:text-foreground"
                   >
                     <LogOut className="h-4 w-4" />
                     Log out
@@ -223,7 +223,7 @@ export function Navbar() {
                 <Link
                   href="/welcome"
                   onClick={() => setOpen(false)}
-                  className="flex w-full items-center gap-2 rounded-md bg-brand px-3 py-2.5 text-body-sm font-semibold text-primary-foreground"
+                  className="flex min-h-[44px] w-full items-center gap-2 rounded-md bg-brand px-3 text-body-sm font-semibold text-primary-foreground"
                 >
                   <LogIn className="h-4 w-4" />
                   Log in / Sign up
