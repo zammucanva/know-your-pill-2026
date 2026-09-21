@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { logger } from "@/lib/logger";\nimport { NextRequest, NextResponse } from "next/server";
 
 // This route must be dynamic — it reads/writes cookies and queries the database.
 export const dynamic = "force-dynamic";
@@ -119,7 +119,7 @@ export async function POST(req: NextRequest) {
     });
   } catch (error) {
     // Log the error CLASS only — never credentials or user identifiers.
-    console.error("Login error:", (error as Error)?.name ?? "UnknownError");
+    logger.error("Login error:", error);
     return NextResponse.json(
       { error: "Failed to log in. Please try again." },
       { status: 500 }
