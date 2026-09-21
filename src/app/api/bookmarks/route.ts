@@ -1,7 +1,10 @@
-import { logger } from "@/lib/logger";\nimport { NextRequest, NextResponse } from "next/server";
+import { logger } from "@/lib/logger";
+import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { getSessionUser } from "@/lib/auth";
-import { isKypContentType } from "@/lib/kyp/data";\nimport { resolveContent } from "@/lib/kyp/data/content-registry";
+import { isKypContentType } from "@/lib/kyp/data/content-registry";
+import type { KypContentType } from "@/lib/kyp/data/content-registry";
+import { resolveContent } from "@/lib/kyp/data/content-registry";
 
 export const dynamic = "force-dynamic";
 
@@ -54,7 +57,7 @@ export async function DELETE(req: NextRequest) {
     if (id) {
       await db.bookmark.deleteMany({ where: { id, userId: user.id } });
     } else if (type && slug) {
-      const content = resolveContent(type, slug);
+      const content = resolveContent(type as KypContentType, slug);
       if (!content) return NextResponse.json({ error: "Unknown KYP content" }, { status: 404 });
       await db.bookmark.deleteMany({ where: { userId: user.id, type: content.type, slug: content.slug } });
     } else {

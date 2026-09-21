@@ -84,7 +84,18 @@ export async function consumePasswordResetToken(
 ): Promise<string | null> {
   const tokenHash = hashResetToken(raw);
   const now = new Date();
-  // Atomic single-use: only succeeds if the row is still unused and unexpired.
+
+  // Fast explicit validity check avoids relying on SQLite's DateTime comparison
+  // semantics for an already-expired token. The final conditional update below
+  // remains the authoritative race-safe single-use operation.
+  const existing = await db.passwordResetToken.findUnique({
+    where: { tokenHash },
+    select: { userId: true, usedAt: true, expiresAt: true },
+  });
+  if (!existing || existing.usedAt !== null || existing.expiresAt.getTime() <= now.getTime()) {
+    return null;
+  }
+
   const consumed = await db.passwordResetToken.updateMany({
     where: {
       tokenHash,
@@ -94,9 +105,5 @@ export async function consumePasswordResetToken(
     data: { usedAt: now },
   });
   if (consumed.count !== 1) return null;
-  const row = await db.passwordResetToken.findUnique({
-    where: { tokenHash },
-    select: { userId: true },
-  });
-  return row?.userId ?? null;
+  return existing.userId;
 }

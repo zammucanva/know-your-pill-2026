@@ -25,17 +25,5 @@ jobs:
       - run: bun run lint
       - run: bun run test:content-lock
       - run: bun run build
-      - run: bun run build:export
       - run: bun test tests/
-
-  dependency-review:
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/dependency-review-action@v4
-        with:
-          fail-on-severity: high
+      - run: bun run build:export

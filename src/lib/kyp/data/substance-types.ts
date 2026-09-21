@@ -243,11 +243,6 @@ export interface CannabisPsychosis {
 
 /** The canonical Substance page interface. */
 export interface SubstancePage {
-  /** Clinical content governance metadata. */
-  evidenceLevel?: "guideline" | "systematic-review" | "textbook" | "expert-review";
-  clinicalDisclaimer?: string;
-  emergencyGuidance?: string;
-
   /* ---- Identity ---- */
   slug: string;
   name: string;

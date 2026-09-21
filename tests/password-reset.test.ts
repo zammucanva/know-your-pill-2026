@@ -250,7 +250,7 @@ describe("password reset completion", () => {
     const usedToken = await insertResetToken(user.userId);
     await postJson(RESET_URL, {
       token: usedToken.raw,
-      newPassword: "used-13",
+      newPassword: "used-pass-13",
     });
     const used = await postJson(RESET_URL, {
       token: usedToken.raw,

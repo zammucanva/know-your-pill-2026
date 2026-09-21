@@ -1,4 +1,5 @@
-import { logger } from "@/lib/logger";\nimport { NextRequest, NextResponse } from "next/server";
+import { logger } from "@/lib/logger";
+import { NextRequest, NextResponse } from "next/server";
 
 // Dynamic route — database access (and the response must never be cached).
 export const dynamic = "force-dynamic";
@@ -8,7 +9,8 @@ import {
   getClientSource,
   recordLoginFailure,
 } from "@/lib/rate-limit";
-import { createPasswordResetToken } from "@/lib/password-reset";\nimport { sendPasswordResetEmail } from "@/lib/email";
+import { createPasswordResetToken } from "@/lib/password-reset";
+import { sendPasswordResetEmail } from "@/lib/email";
 
 /**
  * POST /api/auth/password/forgot
@@ -84,7 +86,12 @@ export async function POST(req: NextRequest) {
       select: { id: true, email: true, name: true },
     });
     if (user) {
-      const reset = await createPasswordResetToken(user.id, source);\n      try {\n        await sendPasswordResetEmail({ to: user.email, name: user.name, token: reset.raw, expiresAt: reset.expiresAt });\n      } catch (error) {\n        logger.error("Password reset email delivery failed", error);\n      }
+      const reset = await createPasswordResetToken(user.id, source);
+      try {
+        await sendPasswordResetEmail({ to: user.email, name: user.name, token: reset.raw, expiresAt: reset.expiresAt });
+      } catch (error) {
+        logger.error("Password reset email delivery failed", error);
+      }
     }
 
     return NextResponse.json(GENERIC_RESPONSE);

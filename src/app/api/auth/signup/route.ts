@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { logger } from "@/lib/logger";
 
 // This route must be dynamic — it reads/writes cookies and queries the database.
 // Setting force-static breaks cookie modification (the route becomes a build-time
@@ -94,7 +95,8 @@ export async function POST(req: NextRequest) {
         name,
         email: normalizedEmail,
         passwordHash,
-        learnerType: "student",\import { logger } from "@/lib/logger";\nn        role: "user",
+        learnerType: "student",
+        role: "user",
       },
     });
 

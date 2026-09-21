@@ -1,4 +1,5 @@
-import { logger } from "@/lib/logger";\nimport { NextRequest, NextResponse } from "next/server";
+import { logger } from "@/lib/logger";
+import { NextRequest, NextResponse } from "next/server";
 export const dynamic = "force-dynamic";
 import { db } from "@/lib/db";
 import { getSessionUser } from "@/lib/auth";

@@ -70,7 +70,9 @@ export async function ensureServer(): Promise<string> {
       SESSION_SECRET: TEST_SESSION_SECRET,
       PORT: String(TEST_PORT),
       HOSTNAME: "127.0.0.1",
-      NODE_ENV: "production",\n      TRUSTED_PROXY_HEADERS: "1",\n      EMAIL_PROVIDER: "mock",
+      NODE_ENV: "production",
+      TRUSTED_PROXY_HEADERS: "1",
+      EMAIL_PROVIDER: "mock",
     },
     stdio: ["ignore", "pipe", "pipe"],
   });

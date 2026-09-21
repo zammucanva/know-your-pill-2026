@@ -1,6 +1,6 @@
 import "server-only";
 
-import { drugs, getDrugBySlug } from "./drugs";
+import { drugs, getDrugBySlug } from "./drugs/index";
 import { diseases, getDiseaseBySlug } from "./diseases";
 import { substancePages, getSubstancePage } from "./substances";
 

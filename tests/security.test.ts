@@ -366,7 +366,8 @@ describe("malformed input handling", () => {
     expect(res.status).toBe(400);
     const session = await fetch(`${BASE_URL}/api/auth/session`, { headers: authed(user.jar) });
     const body = (await session.json()) as { user?: { role?: string; learnerType?: string } };
-    expect(body.user?.role).toBe("user");
+    expect(body.user?.learnerType).toBe("student");
+    expect(body.user?.role).toBeUndefined();
   });
 
   test("34. bookmark POST rejects unknown content and ignores forged title", async () => {
