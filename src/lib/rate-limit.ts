@@ -4,60 +4,17 @@ import { createHash } from "crypto";
 import type { NextRequest } from "next/server";
 import { db } from "@/lib/db";
 
-/**
- * DB-backed login rate limiting / temporary lockout.
- *
- * Dimensions tracked per failed attempt (LoginAttempt rows):
- *   1. account-wide          (sha256(identifier), "*")
- *   2. account + source pair (sha256(identifier), sha256(source))
- *   3. source-wide           ("*", sha256(source))
- *
- * Properties:
- *   - configurable threshold + time window (RATE_LIMIT_CONFIG)
- *   - temporary lockout with bounded escalation (doubling, capped)
- *   - automatic expiry: windows reset and lockouts lapse with time;
- *     there is NO permanent lock
- *   - successful login resets the account's counters
- *   - enforcement happens BEFORE expensive bcrypt verification
- *   - the client cannot control or reset counters — the source is derived
- *     server-side from request headers, and the identifier is normalized
- *     server-side; neither is accepted from the request body
- *   - account+pair lockouts do not lock out every user globally: the
- *     source-wide threshold is deliberately higher so one attacker cannot
- *     trivially deny service to all users sharing a network address
- *   - no account enumeration: lockout responses are identical whether or
- *     not the identifier corresponds to a real account (all rate-limit
- *     checks run before the user lookup, and failures are recorded for
- *     unknown identifiers too)
- */
-
 export const RATE_LIMIT_CONFIG = {
-  /** failures per window before lockout (account + pair dimensions) */
   maxFailures: 5,
-  /** failures per window before lockout (source dimension, higher by design) */
   sourceMaxFailures: 20,
-  /** sliding-ish failure counting window */
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  /** first lockout duration */
-  baseLockoutMs: 5 * 60 * 1000, // 5 minutes
-  /** escalation cap */
-  maxLockoutMs: 30 * 60 * 1000, // 30 minutes
+  windowMs: 15 * 60 * 1000,
+  baseLockoutMs: 5 * 60 * 1000,
+  maxLockoutMs: 30 * 60 * 1000,
 } as const;
 
-/** "*" sentinel used for the "any" side of each dimension. */
 const ANY = "*";
+const SOURCE_HEADER_CANDIDATES = ["x-forwarded-for", "x-real-ip", "cf-connecting-ip"] as const;
 
-const SOURCE_HEADER_CANDIDATES = [
-  "x-forwarded-for",
-  "x-real-ip",
-  "cf-connecting-ip",
-] as const;
-
-/**
- * Forwarding headers are trusted only when the deployment explicitly opts in.
- * A direct/public deployment must leave TRUSTED_PROXY_HEADERS disabled because
- * clients can otherwise spoof these headers and evade source throttling.
- */
 export function getClientSource(req: NextRequest | Request): string {
   if (process.env.TRUSTED_PROXY_HEADERS !== "1") return "unknown";
   for (const header of SOURCE_HEADER_CANDIDATES) {
@@ -67,4 +24,117 @@ export function getClientSource(req: NextRequest | Request): string {
     if (first) return first;
   }
   return "unknown";
+}
+
+export function hashDimension(value: string): string {
+  return createHash("sha256").update(value, "utf8").digest("hex");
+}
+
+export interface RateLimitDecision {
+  allowed: boolean;
+  retryAfterSeconds: number;
+}
+
+function dimensions(identifier: string, source: string) {
+  const identifierHash = hashDimension(identifier);
+  const sourceHash = hashDimension(source);
+  return [
+    { identifierHash, sourceHash, maxFailures: RATE_LIMIT_CONFIG.maxFailures },
+    { identifierHash, sourceHash: ANY, maxFailures: RATE_LIMIT_CONFIG.maxFailures },
+    { identifierHash: ANY, sourceHash, maxFailures: RATE_LIMIT_CONFIG.sourceMaxFailures },
+  ];
+}
+
+function isWindowStale(windowStart: Date): boolean {
+  return Date.now() - windowStart.getTime() >= RATE_LIMIT_CONFIG.windowMs;
+}
+
+function lockoutDuration(level: number): number {
+  return Math.min(
+    RATE_LIMIT_CONFIG.baseLockoutMs * Math.pow(2, level),
+    RATE_LIMIT_CONFIG.maxLockoutMs
+  );
+}
+
+export async function checkLoginAllowed(identifier: string, source: string): Promise<RateLimitDecision> {
+  let blockedUntil: Date | null = null;
+  for (const key of dimensions(identifier, source)) {
+    const row = await db.loginAttempt.findUnique({
+      where: { identifierHash_sourceHash: { identifierHash: key.identifierHash, sourceHash: key.sourceHash } },
+    });
+    if (row?.lockoutUntil && row.lockoutUntil.getTime() > Date.now()) {
+      if (!blockedUntil || row.lockoutUntil > blockedUntil) blockedUntil = row.lockoutUntil;
+    }
+  }
+  if (!blockedUntil) return { allowed: true, retryAfterSeconds: 0 };
+  return {
+    allowed: false,
+    retryAfterSeconds: Math.max(1, Math.ceil((blockedUntil.getTime() - Date.now()) / 1000)),
+  };
+}
+
+export async function recordLoginFailure(identifier: string, source: string): Promise<void> {
+  const now = new Date();
+  for (const key of dimensions(identifier, source)) {
+    const existing = await db.loginAttempt.findUnique({
+      where: { identifierHash_sourceHash: { identifierHash: key.identifierHash, sourceHash: key.sourceHash } },
+    });
+
+    if (!existing) {
+      await db.loginAttempt.create({
+        data: {
+          identifierHash: key.identifierHash,
+          sourceHash: key.sourceHash,
+          failureCount: 1,
+          windowStart: now,
+          lastFailureAt: now,
+        },
+      });
+      continue;
+    }
+
+    if (isWindowStale(existing.windowStart)) {
+      await db.loginAttempt.update({
+        where: { id: existing.id },
+        data: {
+          failureCount: 1,
+          windowStart: now,
+          lastFailureAt: now,
+          escalationLevel:
+            existing.lockoutUntil && existing.lockoutUntil > now
+              ? existing.escalationLevel
+              : Math.max(0, existing.escalationLevel - 1),
+          lockoutUntil: null,
+        },
+      });
+      continue;
+    }
+
+    const failureCount = existing.failureCount + 1;
+    const data: { failureCount: number; lastFailureAt: Date; lockoutUntil?: Date; escalationLevel?: number } = {
+      failureCount,
+      lastFailureAt: now,
+    };
+
+    if (failureCount >= key.maxFailures) {
+      data.lockoutUntil = new Date(now.getTime() + lockoutDuration(existing.escalationLevel));
+      data.escalationLevel = Math.min(existing.escalationLevel + 1, 10);
+    }
+
+    await db.loginAttempt.update({ where: { id: existing.id }, data });
+  }
+}
+
+export async function recordLoginSuccess(identifier: string, source: string): Promise<void> {
+  const identifierHash = hashDimension(identifier);
+  for (const sourceHash of [hashDimension(source), ANY]) {
+    await db.loginAttempt.updateMany({
+      where: { identifierHash, sourceHash },
+      data: { failureCount: 0, lockoutUntil: null, escalationLevel: 0, windowStart: new Date() },
+    });
+  }
+}
+
+export async function resetRateLimitState(): Promise<void> {
+  await db.loginAttempt.deleteMany({});
 }
