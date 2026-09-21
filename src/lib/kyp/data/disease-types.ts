@@ -101,11 +101,6 @@ export interface ManagementOption {
 
 /** Drug reference within a disease page. */
 export interface DiseaseDrugLink {
-  /** Clinical content governance metadata. */
-  evidenceLevel?: "guideline" | "systematic-review" | "textbook" | "expert-review";
-  clinicalDisclaimer?: string;
-  emergencyGuidance?: string;
-
   /** Drug name */
   name: string;
   /** Slug if a KYP drug page exists */
