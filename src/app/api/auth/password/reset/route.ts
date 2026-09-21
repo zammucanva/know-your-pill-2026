@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { logger } from "@/lib/logger";\nimport { NextRequest, NextResponse } from "next/server";
 
 // Dynamic route — database access (and the response must never be cached).
 export const dynamic = "force-dynamic";
@@ -114,7 +114,7 @@ export async function POST(req: NextRequest) {
     });
   } catch (error) {
     // Log the error CLASS only — never tokens or identifiers.
-    console.error("Password reset error:", (error as Error)?.name ?? "UnknownError");
+    logger.error("Password reset error:", error);
     return NextResponse.json(
       { error: "Failed to reset password. Please try again." },
       { status: 500 }
