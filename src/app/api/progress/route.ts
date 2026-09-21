@@ -60,6 +60,7 @@ export async function DELETE(req: NextRequest) {
     if (id) {
       await db.progress.deleteMany({ where: { id, userId: user.id } });
     } else if (type && slug) {
+      if (!isKypContentType(type)) return NextResponse.json({ error: "Invalid content type" }, { status: 400 });
       const content = resolveContent(type, slug);
       if (!content) return NextResponse.json({ error: "Unknown KYP content" }, { status: 404 });
       await db.progress.deleteMany({ where: { userId: user.id, type: content.type, slug: content.slug } });
