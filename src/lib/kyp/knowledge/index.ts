@@ -14,6 +14,9 @@ export {
   knowledgeTargets,
   knowledgeNeurotransmitters,
   cranialNerves,
+  resolveConditionDisplayName,
+  conditionKeyFromName,
+  isPlainConditionName,
 } from "./graph";
 
 export type {

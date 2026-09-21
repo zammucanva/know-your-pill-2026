@@ -74,9 +74,14 @@ export interface KnowledgeNeurotransmitter {
 }
 
 export interface KnowledgeCondition {
-  /** Slug key — e.g. "major-depressive-disorder". */
+  /** Slug key of the qualifier-free base — e.g. "major-depressive-disorder". */
   key: string;
-  /** Display name as written in the drug data. */
+  /**
+   * Canonical display name shared by every drug page that names this
+   * condition — see `resolveConditionDisplayName`. Qualifier-free plain
+   * spelling preferred; SHORTEST qualified spelling as fallback; disease
+   * page titles are never overwritten.
+   */
   name: string;
   /** True when KYP has a dedicated /diseases/ page for it. */
   hasDiseasePage: boolean;
@@ -195,6 +200,28 @@ export const cranialNerves: CranialNerveNode[] = [
    Derived maps
    ============================================================ */
 
+/**
+ * Strips drug-specific qualifiers from a condition name so that spelling
+ * variants of the SAME clinical entity share one registry key.
+ *
+ *   "Obsessive-Compulsive Disorder (OCD) — adults" → "Obsessive-Compulsive Disorder"
+ *   "Major Depressive Disorder (MDD)"              → "Major Depressive Disorder"
+ *   "Insomnia (low-dose 7.5–15 mg at night)"      → "Insomnia"
+ *
+ * Parenthetical and em-dash-suffix qualifiers describe the DRUG-SIDE
+ * relationship — age groups, "off-label", combination regimens, dose
+ * framing — never the clinical condition itself, so they must not fragment
+ * condition identity. They stay in the locked data layer, where each
+ * drug's own sections (e.g. Clinical Uses) continue to render them.
+ */
+function stripConditionQualifiers(name: string): string {
+  return name
+    .replace(/\([^)]*\)/g, " ")
+    .replace(/\s+—\s+.*$/, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
 function slugifyConditionName(name: string): string {
   return name
     .toLowerCase()
@@ -203,11 +230,104 @@ function slugifyConditionName(name: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+/**
+ * Registry key for a condition name — the identity contract of the
+ * conditions layer: qualifier-stripped base, slugified, with a standalone-
+ * entity reconciliation (see `standaloneConditionKeys`). Exported so the
+ * test suite can recompute the variant groupings and pin the wiring.
+ */
+export function conditionKeyFromName(name: string): string {
+  const strippedKey = slugifyConditionName(stripConditionQualifiers(name));
+  if (!strippedKey) return "";
+  const fullKey = slugifyConditionName(name);
+  // "Migraine (prophylaxis)" carries a qualifier that another source spells
+  // as part of its standalone base name ("Migraine prophylaxis") — when that
+  // standalone entity exists in its own right, key to IT rather than to the
+  // bare base, so the pair stays one chip (the pre-fix behaviour). Pure
+  // drug-side qualifiers ("(OCD)", "(paediatric, ≥8 yrs)") have no standalone
+  // claimant and keep merging into the plain entity.
+  if (fullKey && fullKey !== strippedKey && standaloneConditionKeys.has(fullKey)) {
+    return fullKey;
+  }
+  return strippedKey;
+}
+
+/** True when the name carries no drug-specific qualifier. */
+export function isPlainConditionName(name: string): boolean {
+  return stripConditionQualifiers(name) === name.trim();
+}
+
+/**
+ * Keys of every PLAIN condition name in the whole data layer (diseases,
+ * relatedConditions, indications) — the "standalone entities" a qualified
+ * spelling may be restating. Computed once, before the registries derive.
+ */
+const standaloneConditionKeys = new Set(
+  [
+    ...diseases.map((disease) => disease.name),
+    ...drugs.flatMap((drug) => drug.relatedConditions.map((rel) => rel.name)),
+    ...drugs.flatMap((drug) => drug.indications.map((ind) => ind.name)),
+  ]
+    .filter(isPlainConditionName)
+    .map(slugifyConditionName)
+    .filter(Boolean)
+);
+
+/**
+ * Canonical display-name selection for a merged condition.
+ *
+ * One registry entry is shared by the chips on EVERY drug page that names
+ * the condition, so the display name must be a property of the WHOLE variant
+ * multiset — never of whichever source happened to be processed first or
+ * spelled things out most verbosely:
+ *
+ *   1. Prefer a qualifier-free plain name ("Obsessive-Compulsive Disorder")
+ *      so drug-specific qualifiers — age groups, "off-label", combination
+ *      regimens — never leak onto unrelated drug pages that never declared
+ *      them (e.g. fluvoxamine's "paediatric, ≥8 yrs" must not become
+ *      sertraline's or paroxetine's OCD label).
+ *   2. Fall back to the SHORTEST qualified spelling only when no plain
+ *      variant exists anywhere in the key's sources — the least-qualified
+ *      form minimises collateral if it ever does cross pages.
+ *
+ * Determinism: the result depends only on the variant MULTISET. Ties are
+ * broken by source count, then length, then lexicographic order, so neither
+ * registry iteration order nor which drug is processed first can change the
+ * outcome.
+ */
+export function resolveConditionDisplayName(variants: readonly string[]): string {
+  const counts = new Map<string, number>();
+  for (const variant of variants) {
+    counts.set(variant, (counts.get(variant) ?? 0) + 1);
+  }
+  const unique = [...counts.keys()];
+  if (unique.length === 0) return "";
+
+  const plain = unique.filter(isPlainConditionName);
+  if (plain.length > 0) {
+    plain.sort((a, b) =>
+      (counts.get(b)! - counts.get(a)!) ||
+      (a.length - b.length) ||
+      (a < b ? -1 : a > b ? 1 : 0)
+    );
+    return plain[0];
+  }
+
+  unique.sort((a, b) =>
+    (a.length - b.length) ||
+    (a < b ? -1 : a > b ? 1 : 0)
+  );
+  return unique[0];
+}
+
 interface ConditionAccumulator {
   key: string;
+  /** Disease-page title — set once by the diseases registry, never replaced. */
   name: string;
   hasDiseasePage: boolean;
   icd10?: string;
+  /** Every source spelling seen for this key, with multiplicity. */
+  variants: Map<string, number>;
 }
 
 /**
@@ -218,61 +338,66 @@ interface ConditionAccumulator {
 function buildConditions(): Map<string, KnowledgeCondition> {
   const acc = new Map<string, ConditionAccumulator>();
 
+  const record = (key: string, variant: string): ConditionAccumulator => {
+    let entry = acc.get(key);
+    if (!entry) {
+      entry = {
+        key,
+        name: variant,
+        hasDiseasePage: false,
+        icd10: undefined,
+        variants: new Map(),
+      };
+      acc.set(key, entry);
+    }
+    entry.variants.set(variant, (entry.variants.get(variant) ?? 0) + 1);
+    return entry;
+  };
+
   // Diseases first — they own pages and ICD references (extracted from
   // the structured `diagnosticCriteria` entries where the data carries one).
   for (const disease of diseases) {
     const icdEntry = disease.diagnosticCriteria.find(
       (c) => c.system === "ICD-10" && typeof c.code === "string"
     );
-    acc.set(disease.slug, {
-      key: disease.slug,
-      name: disease.name,
-      hasDiseasePage: true,
-      icd10: icdEntry?.code,
-    });
+    const entry = record(disease.slug, disease.name);
+    entry.name = disease.name;
+    entry.hasDiseasePage = true;
+    entry.icd10 = icdEntry?.code;
   }
 
   // Relationship-declared conditions (richest source: primary/alternative/…).
   for (const drug of drugs) {
     for (const rel of drug.relatedConditions) {
-      const key = slugifyConditionName(rel.name);
+      const key = conditionKeyFromName(rel.name);
       if (!key) continue;
-      const existing = acc.get(key);
-      if (existing) {
-        if (existing.name.length < rel.name.length && !existing.hasDiseasePage) {
-          // Keep the more explicit spelling, never a disease-page title.
-          existing.name = rel.name;
-        }
-      } else {
-        acc.set(key, {
-          key,
-          name: rel.name,
-          hasDiseasePage: false,
-          icd10: undefined,
-        });
-      }
+      record(key, rel.name);
     }
   }
 
   // Indication names — union in (status handled per-drug in the edges).
   for (const drug of drugs) {
     for (const ind of drug.indications) {
-      const key = slugifyConditionName(ind.name);
-      if (!key || acc.has(key)) continue;
-      acc.set(key, {
-        key,
-        name: ind.name,
-        hasDiseasePage: false,
-        icd10: undefined,
-      });
+      const key = conditionKeyFromName(ind.name);
+      if (!key) continue;
+      record(key, ind.name);
     }
   }
 
+  // Resolve canonical display names from the collected variant multisets.
+  // Disease-page titles are NEVER overwritten — the resolver applies only
+  // to non-page entries.
   const out = new Map<string, KnowledgeCondition>();
   for (const value of acc.values()) {
+    const variants: string[] = [];
+    for (const [name, count] of value.variants) {
+      for (let i = 0; i < count; i++) variants.push(name);
+    }
     out.set(value.key, {
       key: value.key,
-      name: value.name,
+      name: value.hasDiseasePage
+        ? value.name
+        : resolveConditionDisplayName(variants),
       hasDiseasePage: value.hasDiseasePage,
       icd10: value.icd10,
     });
@@ -645,7 +770,7 @@ export function getDrugKnowledgeChain(slug: string): DrugKnowledgeChain | null {
   const conditionEdges: ConditionEdge[] = [];
   const conditionIndex = new Map<string, ConditionEdge>();
   const addCondition = (name: string, source: string) => {
-    const key = slugifyConditionName(name);
+    const key = conditionKeyFromName(name);
     if (!key) return;
     const existing = conditionIndex.get(key);
     if (existing) {

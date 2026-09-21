@@ -10,6 +10,10 @@
  *   - cranial nerves stay identity-only (zero drug links — by design)
  *   - condition / side-effect / monitoring edges flow through from the
  *     locked data layer untouched
+ *   - condition identity: qualifier spellings of one entity merge into one
+ *     key, and the shared display name prefers the qualifier-free plain
+ *     form (order-independent; shortest qualified fallback; disease-page
+ *     titles never overwritten; no drug page shows another drug's qualifier)
  *   - dangling references degrade gracefully (unresolved texts surface,
  *     nothing crashes, no edge is fabricated)
  *
@@ -22,6 +26,8 @@ import {
   getKnowledgeChainSlugs,
   knowledgeGraph,
   knowledgeTargets,
+  resolveConditionDisplayName,
+  conditionKeyFromName,
 } from "@/lib/kyp/knowledge";
 import {
   mechanismActions,
@@ -442,5 +448,154 @@ describe("knowledge chain — rendered row contract (buildKnowledgeChainRows)", 
     // The component guards on getDrugKnowledgeChain() === null before
     // building rows; the builder itself only ever sees real chains.
     expect(getDrugKnowledgeChain("does-not-exist")).toBeNull();
+  });
+});
+
+describe("conditions — identity merge + canonical display name", () => {
+  const rowsFor = (slug: string) =>
+    buildKnowledgeChainRows(getDrugKnowledgeChain(slug)!);
+
+  /** Every ordering of a small variant array. */
+  const permutations = (items: string[]): string[][] => {
+    if (items.length <= 1) return [items];
+    const out: string[][] = [];
+    for (let i = 0; i < items.length; i++) {
+      const rest = [...items.slice(0, i), ...items.slice(i + 1)];
+      for (const tail of permutations(rest)) out.push([items[i], ...tail]);
+    }
+    return out;
+  };
+
+  test("key derivation merges qualifier spellings of one entity into one key", () => {
+    for (const name of [
+      "Obsessive-Compulsive Disorder",
+      "Obsessive-Compulsive Disorder (OCD)",
+      "Obsessive-Compulsive Disorder (adults)",
+      "Obsessive-Compulsive Disorder (paediatric, ≥8 yrs)",
+      "Obsessive-Compulsive Disorder (OCD) — adults",
+      "Obsessive-Compulsive Disorder (OCD) — SIGNATURE INDICATION",
+    ]) {
+      expect(conditionKeyFromName(name)).toBe("obsessive-compulsive-disorder");
+    }
+    expect(conditionKeyFromName("Major Depressive Disorder (MDD)")).toBe(
+      "major-depressive-disorder"
+    );
+    // A qualifier restating a standalone base name keys to that entity
+    // ("Migraine (prophylaxis)" ~ "Migraine prophylaxis") so the pair
+    // never renders as two chips.
+    expect(conditionKeyFromName("Migraine (prophylaxis)")).toBe(
+      "migraine-prophylaxis"
+    );
+  });
+
+  test("resolver: a plain variant exists → it wins, whatever the processing order", () => {
+    const variants = [
+      "Obsessive-Compulsive Disorder (paediatric, ≥8 yrs)",
+      "Obsessive-Compulsive Disorder",
+      "Obsessive-Compulsive Disorder (OCD)",
+      "Obsessive-Compulsive Disorder (OCD) — adults",
+    ];
+    const orders = permutations(variants);
+    expect(orders.length).toBe(24);
+    for (const order of orders) {
+      // Registry iteration order and which drug is processed first must
+      // not be able to change the canonical display name.
+      expect(resolveConditionDisplayName(order)).toBe(
+        "Obsessive-Compulsive Disorder"
+      );
+    }
+  });
+
+  test("resolver: plain variants tie-break by source count, then length, then lexicographic", () => {
+    expect(
+      resolveConditionDisplayName([
+        "GAD", // plain, 1 source
+        "Generalised Anxiety Disorder", // plain, 2 sources
+        "Generalised Anxiety Disorder",
+      ])
+    ).toBe("Generalised Anxiety Disorder");
+    expect(resolveConditionDisplayName([])).toBe("");
+  });
+
+  test("resolver: no plain variant anywhere → falls back to the SHORTEST qualified spelling", () => {
+    expect(
+      resolveConditionDisplayName([
+        "Bipolar Depression (adjunct to mood stabiliser)",
+        "Bipolar Depression (adjunct)",
+      ])
+    ).toBe("Bipolar Depression (adjunct)");
+    // A single-variant condition keeps its qualified name verbatim.
+    expect(resolveConditionDisplayName(["Adolescent Depression (≥12 yrs)"])).toBe(
+      "Adolescent Depression (≥12 yrs)"
+    );
+  });
+
+  test("registry: OCD variants across all drugs are one entity with the plain name", () => {
+    const ocd = knowledgeGraph.conditions.get("obsessive-compulsive-disorder");
+    expect(ocd?.name).toBe("Obsessive-Compulsive Disorder");
+    expect(ocd?.hasDiseasePage).toBe(false);
+  });
+
+  test("registry: disease-page titles are never overwritten (MDD)", () => {
+    const mdd = knowledgeGraph.conditions.get("major-depressive-disorder");
+    expect(mdd?.name).toBe("Major Depressive Disorder");
+    expect(mdd?.hasDiseasePage).toBe(true);
+    expect(mdd?.icd10).toMatch(/^F3/);
+  });
+
+  test("drug pages: no condition chip carries another drug's qualifier (the fluvoxamine leak)", () => {
+    for (const slug of ALL_SLUGS) {
+      const conditions = rowsFor(slug).find((r) => r.key === "conditions")!;
+      for (const chip of conditions.chips) {
+        // fluvoxamine's paediatric OCD qualifiers must never surface on
+        // any drug's Knowledge Chain — including fluvoxamine's own chip,
+        // which shares the canonical registry name.
+        expect(chip.label).not.toMatch(/paediatric/i);
+        expect(chip.label).not.toMatch(/≥8/);
+        expect(chip.label).not.toMatch(/\(adults\)/i);
+      }
+      // Drugs that name OCD in any spelling show exactly ONE OCD chip,
+      // carrying the plain canonical name.
+      const chain = getDrugKnowledgeChain(slug)!;
+      const ocdEdges = chain.drug.conditionEdges.filter(
+        (e) => e.conditionKey === "obsessive-compulsive-disorder"
+      );
+      const ocdChips = conditions.chips.filter(
+        (c) => c.label === "Obsessive-Compulsive Disorder"
+      );
+      expect(ocdEdges.length).toBe(ocdChips.length);
+      if (ocdEdges.length > 0) {
+        expect(ocdEdges.length).toBe(1);
+      }
+    }
+  });
+
+  test("full registry contract: every non-page entry is the plain-preferring resolution of its variant multiset", () => {
+    const groups = new Map<string, string[]>();
+    const add = (name: string) => {
+      const key = conditionKeyFromName(name);
+      if (!key) return;
+      const list = groups.get(key) ?? [];
+      list.push(name);
+      groups.set(key, list);
+    };
+    for (const drug of drugs) {
+      for (const rel of drug.relatedConditions) add(rel.name);
+      for (const ind of drug.indications) add(ind.name);
+    }
+    expect(groups.size).toBeGreaterThan(0);
+    for (const [key, variants] of groups) {
+      const entry = knowledgeGraph.conditions.get(key);
+      expect(entry).toBeDefined();
+      if (entry!.hasDiseasePage) continue; // protected disease titles
+      expect(entry!.name).toBe(resolveConditionDisplayName(variants));
+    }
+  });
+
+  test("drug pages: a qualifier restating a standalone base stays one chip (migraine pair)", () => {
+    const ami = rowsFor("amitriptyline").find((r) => r.key === "conditions")!;
+    const migraine = ami.chips.filter((c) => /migraine/i.test(c.label));
+    expect(migraine.length).toBe(1);
+    expect(migraine[0]?.label).toBe("Migraine prophylaxis");
   });
 });
