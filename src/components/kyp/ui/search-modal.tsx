@@ -167,7 +167,15 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
   const goToHistory = (entry: { query: string; resultType?: string | null; resultSlug?: string | null; resultTitle?: string | null }) => {
     if (entry.resultSlug && entry.resultType) {
       // Find the matching search index item to get its href
-      const item = searchIndex.find((s) => s.id === entry.resultSlug);
+      const prefixByType: Record<string, string> = {
+        drug: "medication-",
+        substance: "substance-",
+        disease: "disease-",
+      };
+      const prefix = entry.resultType ? prefixByType[entry.resultType] : undefined;
+      const item = prefix && entry.resultSlug
+        ? searchIndex.find((s) => s.id === `${prefix}${entry.resultSlug}`)
+        : undefined;
       if (item) {
         go(item);
         return;
