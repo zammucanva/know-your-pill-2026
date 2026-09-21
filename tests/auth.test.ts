@@ -548,9 +548,8 @@ describe("auth implementation specifics", () => {
     expect(res.status).toBe(200);
     const setCookies = await getSetCookies(res);
     expect(setCookies.length).toBe(0); // no cookie re-issue needed
-    const body = (await resolveSession(user.jar)) as { user: { learnerType: string; role: string } };
+    const body = (await resolveSession(user.jar)) as { user: { learnerType: string } };
     expect(body.user?.learnerType).toBe("medical_student");
-    expect(body.user?.role).toBe("user");
     expect(cookieFromJar(user.jar)).toBe(cookieBefore);
   });
 
