@@ -1,4 +1,5 @@
-import { logger } from "@/lib/logger";\nimport { NextRequest, NextResponse } from "next/server";
+import { logger } from "@/lib/logger";
+import { NextRequest, NextResponse } from "next/server";
 
 // This route must be dynamic — it reads/writes cookies and queries the database.
 export const dynamic = "force-dynamic";
