@@ -169,8 +169,7 @@ async function main() {
     transitive: vulnerable.filter((v) => v.kind === "transitive").length,
   };
 
-  console.log("
-── Installed dependency advisories ──");
+  console.log("\n── Installed dependency advisories ──");
   if (vulnerable.length === 0) {
     console.log("NONE — 0 advisories across all installed direct/transitive packages");
   } else {
@@ -181,8 +180,7 @@ async function main() {
   }
 
   console.log(
-    `
-OSV AUDIT RESULT: ${counts.runtime} direct runtime, ${counts.dev} direct dev, ${counts.transitive} transitive advisories`
+    `\nOSV AUDIT RESULT: ${counts.runtime} direct runtime, ${counts.dev} direct dev, ${counts.transitive} transitive advisories`
   );
 
   process.exit(vulnerable.length > 0 ? 1 : 0);
