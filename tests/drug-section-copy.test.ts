@@ -24,6 +24,7 @@ import {
   resolveRelatedDrugHref,
   composeWhenNotToUseAlternative,
 } from "@/components/kyp/sections/drug/drug-related-drugs";
+import { primaryUsesSummary } from "@/components/kyp/sections/drug/patient-quick-facts";
 
 /** Word-boundary matcher — "Citalopram" must not match inside
  *  "Escitalopram". */
@@ -205,6 +206,28 @@ describe("bug 3 — 'when NOT to use' composes grammatically", () => {
         // The authored claim itself is preserved verbatim inside the line.
         expect(line).toContain(w.alternative.replace(/\s*([.!?]+)\s*$/, "").trim());
       }
+    }
+  });
+});
+
+describe("condition display — hero primary uses keep distinct indications distinct", () => {
+  test("fluvoxamine's two OCD indications render with their qualifiers, not duplicated", () => {
+    const fluvoxamine = drugs.find((d) => d.slug === "fluvoxamine")!;
+    const summary = primaryUsesSummary(fluvoxamine);
+    expect(summary).toContain("Obsessive-Compulsive Disorder (OCD) — adults");
+    expect(summary).toContain("Obsessive-Compulsive Disorder (OCD) — paediatric");
+    // The pre-fix rendering was "Obsessive-Compulsive Disorder, Obsessive-Compulsive Disorder".
+    expect(summary).not.toBe("Obsessive-Compulsive Disorder, Obsessive-Compulsive Disorder");
+  });
+
+  test("every other drug keeps the short qualifier-free base names (no false qualifiers)", () => {
+    for (const drug of drugs) {
+      if (drug.slug === "fluvoxamine") continue;
+      const summary = primaryUsesSummary(drug);
+      const list = drug.indications
+        .filter((i) => i.status === "fda-approved")
+        .slice(0, 3);
+      expect(summary).toBe(list.map((i) => i.name.split(" (")[0]).join(", "));
     }
   });
 });
