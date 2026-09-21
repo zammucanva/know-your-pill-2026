@@ -356,13 +356,64 @@ describe("malformed input handling", () => {
     expect(res.status).toBe(400);
   });
 
-  test("33. bookmark POST with missing fields returns 400 (authenticated)", async () => {
+  test("33. authenticated users cannot self-promote system role", async () => {
+    const user = await createTestUser("sec", 33);
+    const res = await postJson(
+      "/api/auth/role",
+      JSON.stringify({ learnerType: "admin" }),
+      authed(user.jar)
+    );
+    expect(res.status).toBe(400);
+    const session = await fetch(`${BASE_URL}/api/auth/session`, { headers: authed(user.jar) });
+    const body = (await session.json()) as { user?: { role?: string; learnerType?: string } };
+    expect(body.user?.role).toBe("user");
+  });
+
+  test("34. bookmark POST rejects unknown content and ignores forged title", async () => {
+    const user = await createTestUser("sec", 34);
+    const unknown = await postJson(
+      "/api/bookmarks",
+      JSON.stringify({ type: "drug", slug: "not-a-real-drug", title: "Sertraline" }),
+      authed(user.jar)
+    );
+    expect(unknown.status).toBe(404);
+
+    const valid = await postJson(
+      "/api/bookmarks",
+      JSON.stringify({ type: "drug", slug: "sertraline", title: "FORGED TITLE" }),
+      authed(user.jar)
+    );
+    expect(valid.status).toBe(200);
+    const body = (await valid.json()) as { title: string };
+    expect(body.title).toBe("Sertraline");
+  });
+
+  test("35. progress POST rejects unknown content and derives canonical title", async () => {
+    const user = await createTestUser("sec", 35);
+    const unknown = await postJson(
+      "/api/progress",
+      JSON.stringify({ type: "drug", slug: "not-a-real-drug", title: "Sertraline" }),
+      authed(user.jar)
+    );
+    expect(unknown.status).toBe(404);
+
+    const valid = await postJson(
+      "/api/progress",
+      JSON.stringify({ type: "drug", slug: "sertraline", title: "FORGED TITLE" }),
+      authed(user.jar)
+    );
+    expect(valid.status).toBe(200);
+    const body = (await valid.json()) as { title: string };
+    expect(body.title).toBe("Sertraline");
+  });
+
+  test("36. bookmark POST with missing fields returns 400 (authenticated)", async () => {
     const user = await createTestUser("sec", 33);
     const res = await postJson("/api/bookmarks", JSON.stringify({ type: "drug" }), authed(user.jar));
     expect(res.status).toBe(400);
   });
 
-  test("34. bookmark POST with invalid type returns 400", async () => {
+  test("37. bookmark POST with invalid type returns 400", async () => {
     const user = await createTestUser("sec", 34);
     const res = await postJson(
       "/api/bookmarks",
@@ -372,7 +423,7 @@ describe("malformed input handling", () => {
     expect(res.status).toBe(400);
   });
 
-  test("35. progress POST with invalid type returns 400", async () => {
+  test("38. progress POST with invalid type returns 400", async () => {
     const user = await createTestUser("sec", 35);
     const res = await postJson(
       "/api/progress",
@@ -382,7 +433,7 @@ describe("malformed input handling", () => {
     expect(res.status).toBe(400);
   });
 
-  test("36. search-history POST without query returns 400", async () => {
+  test("39. search-history POST without query returns 400", async () => {
     const user = await createTestUser("sec", 36);
     const res = await postJson("/api/search-history", JSON.stringify({}), authed(user.jar));
     expect(res.status).toBe(400);
