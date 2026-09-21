@@ -94,8 +94,8 @@ export async function POST(req: NextRequest) {
         name,
         email: normalizedEmail,
         passwordHash,
-        learnerType: "student",\import { logger } from "@/lib/logger";
-n        role: "user",
+        learnerType: "student",
+        role: "user",
       },
     });
 
