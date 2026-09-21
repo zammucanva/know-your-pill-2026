@@ -25,7 +25,7 @@ const navLinks = [
   { href: "/medicine", label: "Medicine" },
 ];
 
-type SessionUser = { id: string; name: string; email: string; role: string } | null;
+type SessionUser = { id: string; name: string; email: string; learnerType: string } | null;
 
 export function Navbar() {
   const router = useRouter();

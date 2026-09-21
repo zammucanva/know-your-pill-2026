@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { logger } from "@/lib/logger";\nimport { NextRequest, NextResponse } from "next/server";
 
 // Dynamic route — database access (and the response must never be cached).
 export const dynamic = "force-dynamic";
@@ -33,7 +33,7 @@ import { revokeAllSessionsForUser } from "@/lib/session";
  *     guess gets its own counter, while the shared source dimension
  *     accumulates — brute-forcing tokens from one source locks that source
  *     out without locking out other users.
- *   - Password policy matches signup (minimum 6 characters) plus a maximum
+ *   - Password policy matches signup (minimum 8 characters) plus a maximum
  *     length guard against absurd input.
  */
 
@@ -61,9 +61,9 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (newPassword.length < 6) {
+    if (newPassword.length < 8) {
       return NextResponse.json(
-        { error: "Password must be at least 6 characters" },
+        { error: "Password must be at least 8 characters" },
         { status: 400 }
       );
     }
@@ -114,7 +114,7 @@ export async function POST(req: NextRequest) {
     });
   } catch (error) {
     // Log the error CLASS only — never tokens or identifiers.
-    console.error("Password reset error:", (error as Error)?.name ?? "UnknownError");
+    logger.error("Password reset error:", error);
     return NextResponse.json(
       { error: "Failed to reset password. Please try again." },
       { status: 500 }

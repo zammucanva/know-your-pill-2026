@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { logger } from "@/lib/logger";\nimport { NextRequest, NextResponse } from "next/server";
 
 // Dynamic route — database access (and the response must never be cached).
 export const dynamic = "force-dynamic";
@@ -8,7 +8,7 @@ import {
   getClientSource,
   recordLoginFailure,
 } from "@/lib/rate-limit";
-import { createPasswordResetToken } from "@/lib/password-reset";
+import { createPasswordResetToken } from "@/lib/password-reset";\nimport { sendPasswordResetEmail } from "@/lib/email";
 
 /**
  * POST /api/auth/password/forgot
@@ -81,16 +81,16 @@ export async function POST(req: NextRequest) {
     // Silent token creation — the response never differs.
     const user = await db.user.findUnique({
       where: { email: normalizedEmail },
-      select: { id: true },
+      select: { id: true, email: true, name: true },
     });
     if (user) {
-      await createPasswordResetToken(user.id, source);
+      const reset = await createPasswordResetToken(user.id, source);\n      try {\n        await sendPasswordResetEmail({ to: user.email, name: user.name, token: reset.raw, expiresAt: reset.expiresAt });\n      } catch (error) {\n        logger.error("Password reset email delivery failed", error);\n      }
     }
 
     return NextResponse.json(GENERIC_RESPONSE);
   } catch (error) {
     // Log the error CLASS only — no emails, no tokens, no identifiers.
-    console.error("Password reset request error:", (error as Error)?.name ?? "UnknownError");
+    logger.error("Password reset request error:", error);
     return NextResponse.json(
       { error: "Failed to request password reset. Please try again." },
       { status: 500 }

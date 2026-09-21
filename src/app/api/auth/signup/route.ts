@@ -58,9 +58,9 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (password.length < 6) {
+    if (password.length < 8) {
       return NextResponse.json(
-        { error: "Password must be at least 6 characters" },
+        { error: "Password must be at least 8 characters" },
         { status: 400 }
       );
     }
@@ -94,7 +94,7 @@ export async function POST(req: NextRequest) {
         name,
         email: normalizedEmail,
         passwordHash,
-        role: "student", // default — user selects their actual role in onboarding
+        learnerType: "student",\import { logger } from "@/lib/logger";\nn        role: "user",
       },
     });
 
@@ -106,11 +106,11 @@ export async function POST(req: NextRequest) {
       id: user.id,
       name: user.name,
       email: user.email,
-      role: user.role,
+      learnerType: user.learnerType,
       emailVerified: user.emailVerified,
     });
   } catch (error) {
-    console.error("Signup error:", (error as Error)?.name ?? "UnknownError");
+    logger.error("Signup error:", error);
     return NextResponse.json(
       { error: "Failed to create account. Please try again." },
       { status: 500 }

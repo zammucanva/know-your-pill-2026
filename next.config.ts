@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
   ...(isGithubPages ? { pageExtensions: ["tsx", "jsx"] } : {}),
   // Fail the build on TypeScript errors — never suppress them.
   typescript: { ignoreBuildErrors: false },
-  reactStrictMode: false,
+  reactStrictMode: true,
   // Never advertise the framework via the X-Powered-By response header.
   poweredByHeader: false,
   env: {

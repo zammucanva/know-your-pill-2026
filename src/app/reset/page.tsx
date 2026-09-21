@@ -42,7 +42,7 @@ export default function ResetPasswordPage() {
 
   const canSubmit =
     token.trim().length > 0 &&
-    newPassword.length >= 6 &&
+    newPassword.length >= 8 &&
     newPassword === confirmPassword;
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -148,9 +148,9 @@ export default function ResetPasswordPage() {
                         type={showPassword ? "text" : "password"}
                         value={newPassword}
                         onChange={(e) => setNewPassword(e.target.value)}
-                        placeholder="At least 6 characters"
+                        placeholder="At least 8 characters"
                         required
-                        minLength={6}
+                        minLength={8}
                         autoComplete="new-password"
                         className="h-11 rounded-xl pr-10"
                       />
@@ -176,7 +176,7 @@ export default function ResetPasswordPage() {
                       onChange={(e) => setConfirmPassword(e.target.value)}
                       placeholder="Repeat your new password"
                       required
-                      minLength={6}
+                      minLength={8}
                       autoComplete="new-password"
                       className="mt-1 h-11 rounded-xl"
                     />

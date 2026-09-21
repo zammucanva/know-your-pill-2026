@@ -52,7 +52,7 @@ export default function WelcomePage() {
     fetch("/api/auth/session").then(r => r.json()).then(data => {
       if (data.user) {
         setUserData({ name: data.user.name, email: data.user.email });
-        setStep(data.user.role && data.user.role !== "mbbs_student" ? "done" : "role");
+        setStep(data.user.learnerType && data.user.learnerType !== "mbbs_student" ? "done" : "role");
       }
     }).catch(() => {});
   }, []);
@@ -111,7 +111,7 @@ export default function WelcomePage() {
     try {
       await fetch("/api/auth/role", {
         method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ role: selectedRole }),
+        body: JSON.stringify({ learnerType: selectedRole }),
       });
       setStep("done");
     } catch { setError("Failed to save role."); }
@@ -232,9 +232,9 @@ export default function WelcomePage() {
                       onChange={(e) => setPassword(e.target.value)}
                       onFocus={() => setPasswordFocused(true)}
                       onBlur={() => setPasswordFocused(false)}
-                      placeholder="At least 6 characters"
+                      placeholder="At least 8 characters"
                       required
-                      minLength={6}
+                      minLength={8}
                       autoComplete="new-password"
                       className="h-11 rounded-xl pr-10"
                     />

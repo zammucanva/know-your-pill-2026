@@ -26,7 +26,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { searchIndex, searchTypeLabels } from "@/lib/kyp/data";
+import { searchTypeLabels } from "@/lib/kyp/data";\nimport { searchIndex, searchKyp } from "@/lib/kyp/search";
 import type { SearchableItem } from "@/lib/kyp/data";
 import { useSearchHistory } from "@/lib/hooks/use-search-history";
 import { cn } from "@/lib/utils";
@@ -122,12 +122,7 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
       // Show curated top results when query is empty
       return searchIndex.slice(0, 8);
     }
-    return searchIndex
-      .map((item) => ({ item, rank: rankResult(item, q) }))
-      .filter((r) => r.rank > 0)
-      .sort((a, b) => a.rank - b.rank)
-      .slice(0, 12)
-      .map((r) => r.item);
+    return searchKyp(q, { limit: 12 });
   }, [query]);
 
   // Reset active index when results change
@@ -153,11 +148,11 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
     onOpenChange(false);
     // Record search history with the clicked result
     if (query.trim()) {
-      recordSearch(query.trim(), {
-        type: item.type,
-        slug: item.id,
-        title: item.title,
-      });
+      const isPersistableContent = item.type === "drug" || item.type === "substance" || item.type === "disease";
+      recordSearch(
+        query.trim(),
+        isPersistableContent ? { type: item.type, slug: item.id } : undefined
+      );
     }
     if (item.href.startsWith("#")) {
       // In-page anchor
@@ -172,7 +167,15 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
   const goToHistory = (entry: { query: string; resultType?: string | null; resultSlug?: string | null; resultTitle?: string | null }) => {
     if (entry.resultSlug && entry.resultType) {
       // Find the matching search index item to get its href
-      const item = searchIndex.find((s) => s.id === entry.resultSlug);
+      const prefixByType: Record<string, string> = {
+        drug: "medication-",
+        substance: "substance-",
+        disease: "disease-",
+      };
+      const prefix = entry.resultType ? prefixByType[entry.resultType] : undefined;
+      const item = prefix && entry.resultSlug
+        ? searchIndex.find((s) => s.id === `${prefix}${entry.resultSlug}`)
+        : undefined;
       if (item) {
         go(item);
         return;

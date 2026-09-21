@@ -228,15 +228,15 @@ describe("privacy — API data shapes exclude internal fields", () => {
     expect(body.toLowerCase()).not.toContain("userid");
   });
 
-  test("21. role update response returns only the role value", async () => {
+  test("21. learner profile update response returns only learnerType", async () => {
     const user = await createTestUser("priv", 21);
     const res = await fetch(`${BASE_URL}/api/auth/role`, {
       method: "POST",
       headers: { "Content-Type": "application/json", ...authed(user.jar) },
-      body: JSON.stringify({ role: "patient" }),
+      body: JSON.stringify({ learnerType: "patient" }),
     });
     const body = (await res.json()) as Record<string, unknown>;
-    expect(Object.keys(body)).toEqual(["role"]);
+    expect(Object.keys(body)).toEqual(["learnerType"]);
   });
 
   test("22. 429 rate-limit responses contain no account information", async () => {

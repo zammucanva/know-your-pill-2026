@@ -18,7 +18,7 @@ const navLinks = [
   { href: "#neuroarcade", label: "NeuroArcade" },
 ];
 
-type SessionUser = { id: string; name: string; email: string; role: string } | null;
+type SessionUser = { id: string; name: string; email: string; learnerType: string } | null;
 
 interface EnterNavbarProps {
   /** MotionValue controlling the header's opacity (0 → 1, scroll-linked). */

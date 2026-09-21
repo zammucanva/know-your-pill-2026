@@ -17,7 +17,7 @@ async function test() {
   r = await fetch(`${BASE}/api/auth/role`, {
     method: "POST",
     headers: { "Content-Type": "application/json", Cookie: signupCookie },
-    body: JSON.stringify({ role: "psychiatrist" }),
+    body: JSON.stringify({ learnerType: "psychiatrist" }),
   });
   const roleUpdateCookie = r.headers.get("set-cookie")?.split(";")[0] || "";
   console.log("2. Role update response:", await r.json());
