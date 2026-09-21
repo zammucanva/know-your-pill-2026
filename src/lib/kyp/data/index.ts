@@ -21,4 +21,3 @@ export * from "./diseases/index";
 export * from "./disease-types";
 export * from "./substances/index";
 export * from "./substance-types";
-\nexport * from "./content-registry";\n
