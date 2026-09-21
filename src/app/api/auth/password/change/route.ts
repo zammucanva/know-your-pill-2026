@@ -68,25 +68,6 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (newPassword.length < 8) {
-      return NextResponse.json(
-        { error: "New password must be at least 8 characters" },
-        { status: 400 }
-      );
-    }
-    if (newPassword.length > MAX_PASSWORD_LENGTH) {
-      return NextResponse.json(
-        { error: "New password must be at most 128 characters" },
-        { status: 400 }
-      );
-    }
-    if (newPassword === currentPassword) {
-      return NextResponse.json(
-        { error: "New password must be different from the current password" },
-        { status: 400 }
-      );
-    }
-
     const source = getClientSource(req);
     const limitKey = `change:${session.userId}`;
     const decision = await checkLoginAllowed(limitKey, source);
@@ -115,6 +96,28 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(
         { error: "Current password is incorrect" },
         { status: 401 }
+      );
+    }
+
+    // Only validate the replacement password after proving control of the
+    // current password. This prevents an unauthenticated/wrong-credential
+    // request from learning replacement-password policy details.
+    if (newPassword.length < 8) {
+      return NextResponse.json(
+        { error: "New password must be at least 8 characters" },
+        { status: 400 }
+      );
+    }
+    if (newPassword.length > MAX_PASSWORD_LENGTH) {
+      return NextResponse.json(
+        { error: "New password must be at most 128 characters" },
+        { status: 400 }
+      );
+    }
+    if (newPassword === currentPassword) {
+      return NextResponse.json(
+        { error: "New password must be different from the current password" },
+        { status: 400 }
       );
     }
 
