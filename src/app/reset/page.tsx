@@ -150,7 +150,7 @@ export default function ResetPasswordPage() {
                         onChange={(e) => setNewPassword(e.target.value)}
                         placeholder="At least 6 characters"
                         required
-                        minLength={6}
+                        minLength={8}
                         autoComplete="new-password"
                         className="h-11 rounded-xl pr-10"
                       />
@@ -176,7 +176,7 @@ export default function ResetPasswordPage() {
                       onChange={(e) => setConfirmPassword(e.target.value)}
                       placeholder="Repeat your new password"
                       required
-                      minLength={6}
+                      minLength={8}
                       autoComplete="new-password"
                       className="mt-1 h-11 rounded-xl"
                     />
