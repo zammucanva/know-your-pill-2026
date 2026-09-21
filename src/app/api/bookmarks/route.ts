@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { logger } from "@/lib/logger";\nimport { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { getSessionUser } from "@/lib/auth";
 import { isKypContentType, resolveContent } from "@/lib/kyp/data";
@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
     });
     return NextResponse.json(bookmark);
   } catch (error) {
-    console.error("Bookmark POST error:", (error as Error)?.name ?? "UnknownError");
+    logger.error("Bookmark POST error:", error);
     return NextResponse.json({ error: "Failed to save bookmark" }, { status: 500 });
   }
 }
@@ -62,7 +62,7 @@ export async function DELETE(req: NextRequest) {
     }
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Bookmark DELETE error:", (error as Error)?.name ?? "UnknownError");
+    logger.error("Bookmark DELETE error:", error);
     return NextResponse.json({ error: "Failed to remove bookmark" }, { status: 500 });
   }
 }
