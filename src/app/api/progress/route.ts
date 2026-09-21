@@ -1,7 +1,9 @@
-import { logger } from "@/lib/logger";\nimport { NextRequest, NextResponse } from "next/server";
+import { logger } from "@/lib/logger";
+import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { getSessionUser } from "@/lib/auth";
-import { isKypContentType } from "@/lib/kyp/data";\nimport { resolveContent } from "@/lib/kyp/data/content-registry";
+import { isKypContentType } from "@/lib/kyp/data";
+import { resolveContent } from "@/lib/kyp/data/content-registry";
 
 export const dynamic = "force-dynamic";
 
