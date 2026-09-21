@@ -109,6 +109,14 @@ describe("compare view — contract pins", () => {
   test("9. the Study hub links to /compare", () => {
     expect(read("src/app/study/page.tsx")).toContain('href="/compare"');
   });
+
+  test("12. the 'When NOT to use' row renders scenario labels, never raw objects", () => {
+    // Regression pin: the row builder maps each entry to its scenario
+    // string — joining the entry objects themselves rendered
+    // "[object Object] · [object Object]" on the live page.
+    const src = read(PAGE);
+    expect(src).toContain("(d.whenNotToUse ?? []).slice(0, 3).map((w) => w.scenario)");
+  });
 });
 
 describe("compare view — data-level guarantees", () => {

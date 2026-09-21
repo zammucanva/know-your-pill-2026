@@ -30,7 +30,7 @@ const read = (rel: string): string =>
   readFileSync(join(process.cwd(), rel), "utf8");
 
 const MISTAKES_PAGE = "src/app/study/mistakes/page.tsx";
-const CUSTOM_PAGE = "src/app/quiz/custom/page.tsx";
+const CUSTOM_PAGE = "src/app/quiz/custom/custom-test-builder.tsx"; // the builder moved out of page.tsx (server-rendered shell)
 const QUIZ_PAGE = "src/app/quiz/page.tsx";
 const STUDY_PAGE = "src/app/study/page.tsx";
 const DRUG_PAGE = "src/app/drugs/[slug]/page.tsx";
@@ -112,7 +112,9 @@ describe("NOW quick wins — contract pins", () => {
     // The registry decides which pages exist — never a dead link.
     expect(page).toContain("builtDrugSlugs={builtDrugSlugs}");
     const related = read(RELATED);
-    expect(related).toContain("built.has(rd.slug)");
+    // The registry decides which pages exist — never a dead link (the
+    // resolver checks the explicit slug OR the registry name match).
+    expect(related).toContain("resolveRelatedDrugHref(rd, built)");
     expect(related).toContain("Page coming soon");
     // The when-NOT-to-choose callout is data-driven, not hardcoded
     expect(related).toContain("drug.whenNotToUse");

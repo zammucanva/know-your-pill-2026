@@ -26,7 +26,7 @@ import type { TestQuestion } from "@/lib/kyp/custom-test/types";
 const read = (rel: string): string =>
   readFileSync(join(process.cwd(), rel), "utf8");
 
-const PAGE = "src/app/quiz/custom/page.tsx";
+const PAGE = "src/app/quiz/custom/custom-test-builder.tsx"; // the builder moved out of page.tsx (server-rendered shell)
 
 describe("exam mode — per-section breakdown (pure)", () => {
   const ALL_SLUGS = drugs.map((d) => d.slug);

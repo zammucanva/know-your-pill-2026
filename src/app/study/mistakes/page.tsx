@@ -99,8 +99,44 @@ export default function MistakeBookPage() {
     router.push(staged ? "/quiz/custom?retest=1" : "/quiz/custom");
   };
 
-  /* ── Pre-hydration: render nothing (matches the server markup) ── */
-  if (!data) return null;
+  /* ── Pre-hydration: the structural shell still renders — header,
+      breadcrumb, heading, footer — with a genuine loading state for
+      the on-device data. Never a blank page: the exported HTML carries
+      the route's identity even before hydration. useLocalProgress
+      reports null on the server AND on the first client render, so
+      this branch keeps SSR markup and hydration in agreement. ── */
+  if (!data) {
+    return (
+      <div className="flex min-h-screen flex-col">
+        <Navbar />
+        <FloatingSearch variant="floating" />
+        <main className="flex-1 pt-16">
+          <Section spacing="relaxed">
+            <Container>
+              <Reveal>
+                <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs text-muted-foreground">
+                  <Link href="/study" className="hover:text-brand">Study Mode</Link>
+                  <span aria-hidden>›</span>
+                  <span className="font-medium text-foreground">Mistake Book</span>
+                </nav>
+                <p className="text-overline text-brand mb-4">Mistake Book</p>
+                <h1
+                  className="font-serif font-semibold tracking-[-0.03em] text-foreground leading-[0.95]"
+                  style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)" }}
+                >
+                  Mistake Book
+                </h1>
+                <p role="status" className="mt-6 max-w-xl text-body-lg text-muted-foreground leading-relaxed">
+                  Loading your mistake book…
+                </p>
+              </Reveal>
+            </Container>
+          </Section>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   /* ── GENUINE EMPTY STATE — invites a quiz, no placeholders ── */
   if (entries.length === 0) {

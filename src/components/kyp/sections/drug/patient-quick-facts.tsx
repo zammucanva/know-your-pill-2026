@@ -19,6 +19,30 @@ interface PatientQuickFactsProps {
   guide?: PatientGuide;
 }
 
+/**
+ * The hero's “Primary uses” summary. Short base names by default; the
+ * indication qualifier returns ONLY when another FDA indication in
+ * the list shares the same base, so distinct indications stay distinct
+ * (fluvoxamine's adult vs paediatric OCD) instead of collapsing into
+ * a duplicated label. Authored names are never reworded.
+ */
+export function primaryUsesSummary(drug: Drug): string {
+  const list = drug.indications
+    .filter((i) => i.status === "fda-approved")
+    .slice(0, 3);
+  const counts = new Map<string, number>();
+  for (const ind of list) {
+    const base = ind.name.split(" (")[0];
+    counts.set(base, (counts.get(base) ?? 0) + 1);
+  }
+  return list
+    .map((ind) => {
+      const base = ind.name.split(" (")[0];
+      return (counts.get(base) ?? 0) > 1 ? ind.name : base;
+    })
+    .join(", ");
+}
+
 export function PatientQuickFacts({ drug, guide }: PatientQuickFactsProps) {
   const mode = useGuidedLearning((s) => s.mode);
   const isPatient = mode === "patient" && guide !== undefined;
@@ -33,11 +57,7 @@ export function PatientQuickFacts({ drug, guide }: PatientQuickFactsProps) {
       },
       {
         label: "Primary uses",
-        value: drug.indications
-          .filter((i) => i.status === "fda-approved")
-          .slice(0, 3)
-          .map((i) => i.name.split(" (")[0])
-          .join(", "),
+        value: primaryUsesSummary(drug),
         text: `${drug.indications.length} total indications (${drug.indications.filter((i) => i.status === "fda-approved").length} FDA-approved)`,
       },
       {

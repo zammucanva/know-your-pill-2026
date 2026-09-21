@@ -10,8 +10,9 @@ import type { Drug } from "@/lib/kyp/data";
  * DrugNeuralPathways — section 3 of 3 of the neuroscience mapping.
  *
  * Shows the four major dopamine pathways (mesolimbic, mesocortical,
- * nigrostriatal, tuberoinfundibular) when relevant. For SSRIs that
- * don't directly target these, shows an educational explainer instead.
+ * nigrostriatal, tuberoinfundibular) when relevant. For drugs whose
+ * data maps to none of them, shows a data-derived educational
+ * explainer instead.
  *
  * Server Component.
  */
@@ -19,10 +20,27 @@ interface DrugNeuralPathwaysProps {
   drug: Drug;
 }
 
+/**
+ * Empty-state explainer for drugs whose data maps to none of the four
+ * dopamine pathways this section tracks. Derived from the drug's own
+ * class and neurotransmitter data — names THIS drug, never a
+ * hardcoded one.
+ */
+export function pathwaysEmptyExplainer(drug: Drug): { title: string; body: string } {
+  const systems = drug.neurotransmitters
+    .map((nt) => nt.replace(/\s*\([^)]*\)\s*/g, "").trim())
+    .join(", ");
+  return {
+    title: `Why no dopamine pathways listed for ${drug.genericName}?`,
+    body: `${drug.genericName} is a ${drug.drugClassFullName}. Its effects are carried by the diffuse projection systems of the neurotransmitters it modulates (${systems}) rather than the four discrete dopamine pathways this section tracks (mesolimbic, mesocortical, nigrostriatal, tuberoinfundibular).`,
+  };
+}
+
 export function DrugNeuralPathways({ drug }: DrugNeuralPathwaysProps) {
   const relatedPathways = drug.pathwayIds
     .map((id) => pathways.find((p) => p.id === id))
     .filter((p): p is NonNullable<typeof p> => Boolean(p));
+  const pathwaysExplainer = pathwaysEmptyExplainer(drug);
 
   return (
     <Section id="neural-pathways">
@@ -42,15 +60,11 @@ export function DrugNeuralPathways({ drug }: DrugNeuralPathwaysProps) {
           </div>
         ) : (
           <div className="mt-10">
-            <Callout variant="tip" title="Why no dopamine pathways listed for sertraline?">
-              Sertraline is a selective serotonin reuptake inhibitor — it acts on the diffuse
-              serotonergic projection system that originates in the raphe nuclei and innervates
-              virtually the entire CNS. It does not directly target the four discrete dopamine
-              pathways (mesolimbic, mesocortical, nigrostriatal, tuberoinfundibular), although
-              downstream serotonergic-dopaminergic interactions are clinically important —
-              particularly in the mesolimbic pathway where 5-HT2C stimulation inhibits dopamine
-              release (relevant to SSRI-induced emotional blunting and the mechanism of action of
-              atypical antipsychotics like aripiprazole).
+            <Callout
+              variant="tip"
+              title={pathwaysExplainer.title}
+            >
+              {pathwaysExplainer.body}
             </Callout>
 
             {/* Show all 4 pathways for educational reference */}
