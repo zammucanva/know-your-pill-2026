@@ -38,7 +38,8 @@ export interface ResolvedSession {
     id: string;
     name: string;
     email: string;
-    learnerType: string;\n    role: string;
+    learnerType: string;
+    role: string;
     emailVerified: boolean;
   };
 }
@@ -127,7 +128,8 @@ export async function resolveSessionToken(signed: string): Promise<ResolvedSessi
             id: true,
             name: true,
             email: true,
-            learnerType: true,\n            role: true,
+            learnerType: true,
+            role: true,
             emailVerified: true,
           },
         },
