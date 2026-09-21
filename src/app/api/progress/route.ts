@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { logger } from "@/lib/logger";\nimport { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { getSessionUser } from "@/lib/auth";
 import { isKypContentType, resolveContent } from "@/lib/kyp/data";
@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
     });
     return NextResponse.json(progress);
   } catch (error) {
-    console.error("Progress POST error:", (error as Error)?.name ?? "UnknownError");
+    logger.error("Progress POST error:", error);
     return NextResponse.json({ error: "Failed to record progress" }, { status: 500 });
   }
 }
@@ -67,7 +67,7 @@ export async function DELETE(req: NextRequest) {
     }
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Progress DELETE error:", (error as Error)?.name ?? "UnknownError");
+    logger.error("Progress DELETE error:", error);
     return NextResponse.json({ error: "Failed to clear progress" }, { status: 500 });
   }
 }
