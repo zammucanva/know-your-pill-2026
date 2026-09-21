@@ -101,11 +101,6 @@ export interface ManagementOption {
 
 /** Drug reference within a disease page. */
 export interface DiseaseDrugLink {
-  /** Clinical content governance metadata. */
-  evidenceLevel?: "guideline" | "systematic-review" | "textbook" | "expert-review";
-  clinicalDisclaimer?: string;
-  emergencyGuidance?: string;
-
   /** Drug name */
   name: string;
   /** Slug if a KYP drug page exists */
@@ -195,7 +190,13 @@ export interface Disease {
   name: string;
   /** Short name/abbreviation, e.g. "MDD", "GAD", "OCD" */
   shortName: string;
-  /** Category, e.g. "Mood Disorder", "Anxiety Disorder" */
+  /** Category, e.g. "Mood Disorder", "Anxiety Disord
+  /** Clinical content governance metadata. */
+  evidenceLevel?: "guideline" | "systematic-review" | "textbook" | "expert-review";
+  clinicalDisclaimer?: string;
+  emergencyGuidance?: string;
+
+er" */
   category: string;
 
   /* ---- Learning path (breadcrumb) ---- */
