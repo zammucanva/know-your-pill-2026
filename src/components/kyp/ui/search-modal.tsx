@@ -148,11 +148,11 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
     onOpenChange(false);
     // Record search history with the clicked result
     if (query.trim()) {
-      recordSearch(query.trim(), {
-        type: item.type,
-        slug: item.id,
-        title: item.title,
-      });
+      const isPersistableContent = item.type === "drug" || item.type === "substance" || item.type === "disease";
+      recordSearch(
+        query.trim(),
+        isPersistableContent ? { type: item.type, slug: item.id } : undefined
+      );
     }
     if (item.href.startsWith("#")) {
       // In-page anchor
