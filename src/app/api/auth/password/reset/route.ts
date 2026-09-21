@@ -1,4 +1,5 @@
-import { logger } from "@/lib/logger";\nimport { NextRequest, NextResponse } from "next/server";
+import { logger } from "@/lib/logger";
+import { NextRequest, NextResponse } from "next/server";
 
 // Dynamic route — database access (and the response must never be cached).
 export const dynamic = "force-dynamic";
