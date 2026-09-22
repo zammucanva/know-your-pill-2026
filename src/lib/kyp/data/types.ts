@@ -929,6 +929,12 @@ export interface Drug {
   lessonGroups?: LessonGroup[];
 
   /* ---- Metadata ---- */
+  /** Clinical content governance metadata. */
+  evidenceLevel?: "guideline" | "systematic-review" | "textbook" | "expert-review";
+  /** Public safety disclaimer for educational content. */
+  clinicalDisclaimer?: string;
+  /** Whether this entry contains urgent safety guidance. */
+  emergencyGuidance?: string;
   /** ISO date string — last clinical review */
   lastReviewed: string;
   /** Optional list of reviewers / sources consulted */
