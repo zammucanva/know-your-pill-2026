@@ -11,7 +11,7 @@
  */
 
 import { beforeAll, describe, expect, test } from "bun:test";
-import { createHash, createHmac } from "crypto";
+import { createHash } from "crypto";
 import {
   BASE_URL,
   CookieJar,
@@ -22,22 +22,13 @@ import {
   loginAndGetJar,
   testDb,
   uniqueEmail,
+  uniqueSource,
 } from "./helpers/server";
 
 const SESSION_COOKIE = "kyp-session";
 
 function sha256hex(value: string): string {
   return createHash("sha256").update(value, "utf8").digest("hex");
-}
-
-function b64url(buf: Buffer): string {
-  return buf.toString("base64url");
-}
-
-function hmacFor(raw: string): string {
-  return b64url(
-    createHmac("sha256", TEST_SESSION_SECRET).update(raw, "utf8").digest()
-  );
 }
 
 function cookieFromJar(jar: CookieJar): string {
@@ -195,7 +186,10 @@ describe("auth sessions", () => {
     const email = uniqueEmail("cookieflags");
     const res = await fetch(`${BASE_URL}/api/auth/signup`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "x-forwarded-for": uniqueSource(),
+      },
       body: JSON.stringify({ name: "Flag Check", email, password: "password123" }),
     });
     const setCookies = await getSetCookies(res);
@@ -229,7 +223,10 @@ describe("auth sessions", () => {
     bodies.push(await loginRes.text());
     const signupRes = await fetch(endpoints[2], {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "x-forwarded-for": uniqueSource(),
+      },
       body: JSON.stringify({ name: "S", email: uniqueEmail("secret"), password: "password123" }),
     });
     bodies.push(await signupRes.text());
@@ -246,7 +243,11 @@ describe("auth sessions", () => {
     jar.set(SESSION_COOKIE, "attacker-preset-fixed-value.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
     const res = await fetch(`${BASE_URL}/api/auth/signup`, {
       method: "POST",
-      headers: { "Content-Type": "application/json", Cookie: jar.header() },
+      headers: {
+        "Content-Type": "application/json",
+        Cookie: jar.header(),
+        "x-forwarded-for": uniqueSource(),
+      },
       body: JSON.stringify({ name: "Fixation", email, password: "password123" }),
     });
     expect(res.status).toBe(200);
@@ -333,7 +334,10 @@ describe("login rate limiting", () => {
     // Register the account so a successful login is possible
     const reg = await fetch(`${BASE_URL}/api/auth/signup`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "x-forwarded-for": uniqueSource(),
+      },
       body: JSON.stringify({ name: "RL19", email, password: "password123" }),
     });
     expect(reg.status).toBe(200);
@@ -469,7 +473,10 @@ describe("login rate limiting", () => {
     // Register the account first
     const reg = await fetch(`${BASE_URL}/api/auth/signup`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "x-forwarded-for": uniqueSource(),
+      },
       body: JSON.stringify({ name: "RL26", email, password: "password123" }),
     });
     expect(reg.status).toBe(200);
@@ -575,7 +582,11 @@ describe("auth implementation specifics", () => {
     const email = uniqueEmail("impl32");
     const res = await fetch(`${BASE_URL}/api/auth/signup`, {
       method: "POST",
-      headers: { "Content-Type": "application/json", Cookie: jar.header() },
+      headers: {
+        "Content-Type": "application/json",
+        Cookie: jar.header(),
+        "x-forwarded-for": uniqueSource(),
+      },
       body: JSON.stringify({ name: "Impl32", email, password: "password123" }),
     });
     expect(res.status).toBe(200);

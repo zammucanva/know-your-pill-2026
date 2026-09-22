@@ -10,6 +10,7 @@
 export {
   getDrugKnowledgeChain,
   getKnowledgeChainSlugs,
+  isNegligibleAffinity,
   knowledgeGraph,
   knowledgeTargets,
   knowledgeNeurotransmitters,
@@ -17,6 +18,8 @@ export {
   resolveConditionDisplayName,
   conditionKeyFromName,
   isPlainConditionName,
+  resolvePrimaryTarget,
+  resolvePrimaryTargetFromTexts,
 } from "./graph";
 
 export type {
@@ -32,6 +35,8 @@ export type {
   KnowledgeChainBrainRegion,
   KnowledgeChainPathway,
   DrugKnowledgeChain,
+  PrimaryTargetBasis,
+  PrimaryTargetResolution,
 } from "./graph";
 
 export {

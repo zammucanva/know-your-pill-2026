@@ -15,7 +15,6 @@ import { Section } from "@/components/kyp/ui/section";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { cn } from "@/lib/utils";
 
 /**
  * /dashboard — personal dashboard showing the user's reading progress,
@@ -85,6 +84,15 @@ export default function DashboardPage() {
     async function load() {
       try {
         const sessionRes = await fetch("/api/auth/session");
+        // Static deployments (GitHub Pages) have no API routes — the
+        // session endpoint 404s with an HTML page that would fail
+        // .json() parsing and fall through to a fake empty dashboard.
+        // Treat any non-OK response exactly like "not logged in":
+        // go to /welcome, which offers the login/signup path.
+        if (!sessionRes.ok) {
+          router.push("/welcome");
+          return;
+        }
         const sessionData = await sessionRes.json();
         if (!sessionData.user) {
           router.push("/welcome");
@@ -386,9 +394,9 @@ export default function DashboardPage() {
                         value={newPassword}
                         onChange={(e) => setNewPassword(e.target.value)}
                         required
-                        minLength={6}
+                        minLength={8}
                         autoComplete="new-password"
-                        placeholder="At least 6 characters"
+                        placeholder="At least 8 characters"
                         className="mt-1 h-11 rounded-xl"
                       />
                     </div>
@@ -402,7 +410,7 @@ export default function DashboardPage() {
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                         required
-                        minLength={6}
+                        minLength={8}
                         autoComplete="new-password"
                         className="mt-1 h-11 rounded-xl"
                       />

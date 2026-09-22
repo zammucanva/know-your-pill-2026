@@ -61,13 +61,7 @@ function dropWindow(): void {
 
 /* ── Pure scheduler under test ─────────────────────────────────── */
 
-import {
-  nextIntervalDays,
-  advanceInterval,
-  resetInterval,
-  isDue,
-  RETENTION_INTERVAL_LADDER,
-} from "@/lib/kyp/retention/schedule";
+import { nextIntervalDays, advanceInterval, resetInterval, isDue } from "@/lib/kyp/retention/schedule";
 
 const DAY = 86_400_000;
 

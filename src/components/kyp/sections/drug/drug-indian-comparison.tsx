@@ -3,7 +3,6 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
-import { Badge } from "@/components/kyp/ui/badge";
 import type { Drug } from "@/lib/kyp/data";
 
 /**

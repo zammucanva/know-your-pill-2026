@@ -1,9 +1,11 @@
+import { logger } from "@/lib/logger";
 import { NextRequest, NextResponse } from "next/server";
 
 // Dynamic route — reads/writes cookies and queries the database.
 export const dynamic = "force-dynamic";
 import bcrypt from "bcryptjs";
 import { db } from "@/lib/db";
+import { validatePasswordPolicy } from "@/lib/password-policy";
 import {
   checkLoginAllowed,
   getClientSource,
@@ -31,15 +33,14 @@ import {
  *   - SESSION INVALIDATION: on success ALL of the user's sessions are
  *     revoked, then a brand-new fresh session is minted for the CURRENT
  *     client only — every other device stays logged out.
- *   - Password policy matches signup (minimum 6 characters) plus a maximum
- *     length guard; the new password must differ from the current one.
+ *   - Password policy is the shared 8–128 policy (src/lib/password-policy.ts)
+ *     — identical to signup and reset; plus the new password must differ
+ *     from the current one.
  *
  * Fails closed when SESSION_SECRET is not configured — session resolution
  * (signature validation) cannot succeed without it, so the route always
  * returns 401 before any password work.
  */
-
-const MAX_PASSWORD_LENGTH = 128;
 
 export async function POST(req: NextRequest) {
   const session = await resolveSessionFromCookie();
@@ -63,25 +64,6 @@ export async function POST(req: NextRequest) {
         currentPassword.length === 0 || newPassword.length === 0) {
       return NextResponse.json(
         { error: "Current password and new password are required" },
-        { status: 400 }
-      );
-    }
-
-    if (newPassword.length < 6) {
-      return NextResponse.json(
-        { error: "New password must be at least 6 characters" },
-        { status: 400 }
-      );
-    }
-    if (newPassword.length > MAX_PASSWORD_LENGTH) {
-      return NextResponse.json(
-        { error: "New password must be at most 128 characters" },
-        { status: 400 }
-      );
-    }
-    if (newPassword === currentPassword) {
-      return NextResponse.json(
-        { error: "New password must be different from the current password" },
         { status: 400 }
       );
     }
@@ -117,6 +99,20 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Only validate the replacement password after proving control of the
+    // current password. This prevents an unauthenticated/wrong-credential
+    // request from learning replacement-password policy details.
+    const policy = validatePasswordPolicy(newPassword, { subject: "New password" });
+    if (!policy.ok) {
+      return NextResponse.json({ error: policy.message }, { status: 400 });
+    }
+    if (newPassword === currentPassword) {
+      return NextResponse.json(
+        { error: "New password must be different from the current password" },
+        { status: 400 }
+      );
+    }
+
     const passwordHash = await bcrypt.hash(newPassword, 12);
     await db.user.update({
       where: { id: session.userId },
@@ -134,7 +130,7 @@ export async function POST(req: NextRequest) {
     });
   } catch (error) {
     // Log the error CLASS only — never credentials or identifiers.
-    console.error("Password change error:", (error as Error)?.name ?? "UnknownError");
+    logger.error("Password change error", error);
     return NextResponse.json(
       { error: "Failed to change password. Please try again." },
       { status: 500 }

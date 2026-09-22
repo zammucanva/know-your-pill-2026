@@ -30,7 +30,7 @@ const ALL_SLUGS = drugs.map((d) => d.slug);
 
 describe("custom test — engine pool", () => {
   test("the pool contains exactly 13 deterministic templates", () => {
-    expect(TEMPLATE_IDS.length).toBe(16); // 13 original + 3 graph-driven families (X4)
+    expect(TEMPLATE_IDS.length).toBe(19); // 13 original + 3 graph-driven (X4) + 3 Phase 5 depth families
     for (const id of TEMPLATE_IDS) {
       expect(typeof TEMPLATES[id]).toBe("function");
     }
@@ -86,8 +86,11 @@ describe("custom test — engine pool", () => {
       for (const s of drug.seriousSideEffects) universe.add(s.name);
       for (const m of drug.monitoring) universe.add(m.parameter);
       for (const c of drug.contraindications) universe.add(c.name);
-      for (const i of drug.interactions)
+      for (const i of drug.interactions) {
         universe.add(i.drug.split(" (")[0].split(" — ")[0].trim());
+        // Phase 5 interaction-mechanism: options are mechanism strings.
+        universe.add(i.mechanism);
+      }
       for (const b of drug.blackBoxWarnings) universe.add(b.title);
       const hl = drug.mechanism.halfLife.match(
         /~?\s*\d+(?:[.,]\d+)?\s*(?:[–—-]\s*\d+(?:[.,]\d+)?)?\s*(?:hours?|days?|minutes?)/

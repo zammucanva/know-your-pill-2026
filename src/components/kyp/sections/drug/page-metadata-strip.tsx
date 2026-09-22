@@ -1,6 +1,5 @@
 import { Clock, Calendar, CheckCircle2, Globe, BookMarked } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
-import { Badge } from "@/components/kyp/ui/badge";
 import type { Drug } from "@/lib/kyp/data";
 
 /**

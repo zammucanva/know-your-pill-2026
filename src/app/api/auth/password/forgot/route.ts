@@ -9,7 +9,7 @@ import {
   getClientSource,
   recordLoginFailure,
 } from "@/lib/rate-limit";
-import { createPasswordResetToken } from "@/lib/password-reset";
+import { createPasswordResetToken, invalidatePasswordResetToken } from "@/lib/password-reset";
 import { sendPasswordResetEmail } from "@/lib/email";
 
 /**
@@ -90,6 +90,7 @@ export async function POST(req: NextRequest) {
       try {
         await sendPasswordResetEmail({ to: user.email, name: user.name, token: reset.raw, expiresAt: reset.expiresAt });
       } catch (error) {
+        await invalidatePasswordResetToken(reset.raw);
         logger.error("Password reset email delivery failed", error);
       }
     }

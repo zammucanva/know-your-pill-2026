@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Pill, Building2, Briefcase, GraduationCap, Stethoscope, Brain, ClipboardCheck, Calendar, AlertTriangle, FileText, IndianRupee, CheckCircle2 } from "lucide-react";
+import { Pill, Building2, Briefcase, GraduationCap, Stethoscope, Brain, ClipboardCheck, Calendar, AlertTriangle, FileText, CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";

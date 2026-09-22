@@ -86,28 +86,6 @@ const typeColor: Record<SearchableItem["type"], string> = {
   "patient-guide": "text-success",
 };
 
-/** Rank a search result. Lower = better. 0 = no match. */
-function rankResult(item: SearchableItem, q: string): number {
-  const title = item.title.toLowerCase();
-  const keywords = item.keywords.map((k) => k.toLowerCase());
-
-  // 1. Exact title match
-  if (title === q) return 1;
-  // 2. Title starts with query
-  if (title.startsWith(q)) return 2;
-  // 3. Title includes query
-  if (title.includes(q)) return 3;
-  // 4. Exact keyword match
-  if (keywords.some((k) => k === q)) return 4;
-  // 5. Keyword starts with query
-  if (keywords.some((k) => k.startsWith(q))) return 5;
-  // 6. Keyword includes query
-  if (keywords.some((k) => k.includes(q))) return 6;
-  // 7. Description includes query
-  if (item.description.toLowerCase().includes(q)) return 7;
-  return 0;
-}
-
 export function SearchModal({ open, onOpenChange }: SearchModalProps) {
   const router = useRouter();
   const [query, setQuery] = React.useState("");
@@ -413,18 +391,11 @@ function GroupedResults({
     { label: "Clinical & Guides", types: ["clinical", "patient-guide"] },
   ];
 
-  let runningIndex = 0;
-
   return (
     <>
       {groups.map((group) => {
         const groupItems = results.filter((item) => group.types.includes(item.type));
         if (groupItems.length === 0) return null;
-
-        // Calculate the starting index for this group in the flat results array
-        const groupStartIndex = results
-          .filter((_, i) => i < results.findIndex((r) => group.types.includes(r.type)))
-          .length;
 
         return (
           <div key={group.label} className="mb-1">

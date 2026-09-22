@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { ArrowRight, Columns3, Info } from "lucide-react";
+import { Columns3, Info } from "lucide-react";
 
 import { Navbar } from "@/components/kyp/sections/navbar";
 import { Footer } from "@/components/kyp/sections/footer";
@@ -122,7 +122,6 @@ function buildTableRows(selected: Drug[]): CompareRow[] {
   if (selected.length < MIN_SELECTION) return [];
   const names = new Set(selected.map((d) => d.genericName));
   const covered = new Set(buildRows(selected).map((r) => r.attribute.toLowerCase()));
-  const byName = new Map(selected.map((d) => [d.genericName, d]));
   const rows: CompareRow[] = [];
   const seenAttributes = new Set<string>();
 

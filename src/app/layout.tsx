@@ -1,27 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/kyp/theme-provider";
 import { ContentProtection } from "@/lib/contentProtection";
 import { imgPath } from "@/lib/kyp/image-path";
+import { CONTENT_SECURITY_POLICY } from "@/lib/csp";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Know Your Pill — Medication Education Made Visual",
@@ -79,10 +63,25 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      style={{ "--font-playfair": playfair.style.fontFamily } as React.CSSProperties}
+
     >
+      <head>
+        {/*
+          Content-Security-Policy for the GitHub Pages STATIC EXPORT.
+          Pages cannot set HTTP headers, so the policy rides in a meta tag
+          (rendered only in production builds — `next dev` needs eval-capable
+          script handling for HMR). Server mode ALSO sends the identical
+          policy as a response header via next.config.ts — both import the
+          same constant from src/lib/csp.ts so they can never drift.
+          Meta-CSP ignores frame-ancestors (the header channel enforces it,
+          and X-Frame-Options: DENY remains as defense in depth).
+        */}
+        {process.env.NODE_ENV === "production" ? (
+          <meta httpEquiv="Content-Security-Policy" content={CONTENT_SECURITY_POLICY} />
+        ) : null}
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} font-sans antialiased`}
+        className="font-sans antialiased"
       >
         {/* rel="license" — points crawlers and tools at the reuse terms
             page. Rendered once here in the root layout; React hoists it

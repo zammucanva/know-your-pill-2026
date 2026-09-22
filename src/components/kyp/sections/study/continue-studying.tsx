@@ -224,7 +224,6 @@ export function ContinueStudying() {
           {recent.slice(1).map((course, i) => {
             const outline = COURSE_OUTLINES[course.slug];
             const total = outline?.total ?? 0;
-            const percent = coursePercentComplete(course, total);
             const isComplete = Boolean(course.completedAt);
             return (
               <Reveal key={course.slug} delay={(i + 1) * 0.05}>

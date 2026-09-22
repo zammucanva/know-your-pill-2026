@@ -9,7 +9,6 @@ import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 import { GuidedLearningToggle } from "@/components/kyp/ui/guided-learning-toggle";
 import { GuidedLearningVisibility } from "@/components/kyp/ui/guided-learning-visibility";
 import { MicroQuiz } from "@/components/kyp/ui/micro-quiz";
-import { Checkpoint } from "@/components/kyp/ui/checkpoint";
 import { ActiveRecallSection } from "@/components/kyp/ui/active-recall";
 import { LessonProgress } from "@/components/kyp/ui/lesson-progress";
 import { Container } from "@/components/kyp/ui/container";
@@ -17,15 +16,13 @@ import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { Badge } from "@/components/kyp/ui/badge";
 import { Callout } from "@/components/kyp/ui/callout";
-import { Timeline } from "@/components/kyp/ui/timeline";
 import { LearningPath } from "@/components/kyp/ui/learning-path";
 
 import { getDiseaseBySlug, getAllDiseaseSlugs } from "@/lib/kyp/data/diseases";
-import type { Disease } from "@/lib/kyp/data/disease-types";
 import { PageTracker } from "@/components/kyp/ui/page-tracker";
 import { TestUnderstandingCTA } from "@/components/kyp/ui/test-understanding-cta";
 
-import { Pill, HeartPulse, Brain, Activity, ClipboardCheck, Stethoscope, AlertTriangle, BookOpen, FileText, Globe, MapPin } from "lucide-react";
+import { Pill, ClipboardCheck, Globe, MapPin } from "lucide-react";
 
 type Slug = string;
 

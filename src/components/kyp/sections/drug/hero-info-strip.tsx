@@ -1,6 +1,5 @@
 import { Clock, BookOpen, RefreshCw, Star, BookMarked } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
-import { Badge } from "@/components/kyp/ui/badge";
 import type { Drug, HighYieldLevel } from "@/lib/kyp/data";
 import { cn } from "@/lib/utils";
 

@@ -689,7 +689,6 @@ function migrateLegacy(): void {
     if (!completed || typeof completed !== "object") return;
 
     const data = cache ?? emptyProgress();
-    let changed = false;
     for (const [slug, sections] of Object.entries(completed)) {
       if (!Array.isArray(sections)) continue;
       const existing = data.courses[slug];
@@ -697,7 +696,6 @@ function migrateLegacy(): void {
         for (const s of sections) {
           if (!existing.completedSections.includes(s)) {
             existing.completedSections.push(s);
-            changed = true;
           }
         }
       } else {
@@ -714,7 +712,6 @@ function migrateLegacy(): void {
           quiz: emptyQuizStats(),
           completedAt: null,
         };
-        changed = true;
       }
     }
     // The migrated state becomes the store state, whether or not
@@ -739,6 +736,20 @@ function ensureInitialised(): KypProgressData | null {
     // Migration runs even when the new key does not exist yet —
     // that is exactly the fresh-upgrade case.
     migrateLegacy();
+    // Fresh visitor — no stored payload and no legacy data to migrate.
+    // Without this fallback the client snapshot stays null FOREVER,
+    // which is indistinguishable from "not hydrated yet": every
+    // null-gated consumer (the Mistake Book, Analytics, the Study
+    // hub panels) renders its loading state permanently for
+    // first-time visitors. A real browser context therefore always
+    // sees a valid (possibly empty) progress object after the first
+    // read — the documented memory-only downgrade. The no-window path
+    // keeps returning null so the hydration contract holds
+    // (getServerSnapshot === null; SSR and the first client render
+    // agree).
+    if (!cache && storageAvailable()) {
+      cache = emptyProgress();
+    }
   }
   return cache;
 }

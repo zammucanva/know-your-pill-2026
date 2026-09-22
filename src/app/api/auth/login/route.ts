@@ -39,8 +39,6 @@ const GENERIC_LOGIN_ERROR = "Invalid email or password";
 const DUMMY_BCRYPT_HASH =
   "$2b$12$6Qw/vvDS/r.1h76sjDs0j.i20uFJ.9SnBf4enrV6C48yBCktW2l2a";
 
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
 export async function POST(req: NextRequest) {
   if (!isSessionSecretConfigured()) {
     // Fail closed — authentication cannot operate without the session secret.

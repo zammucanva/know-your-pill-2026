@@ -58,17 +58,7 @@ function dropWindow(): void {
 
 /* ── Module under test (imported AFTER the window shim) ────────── */
 
-import {
-  __resetForTests,
-  PROGRESS_STORAGE_KEY,
-  recordAnswerEvents,
-  recordRunSummary,
-  getProgress,
-  clearProgress,
-  getRetentionDueCount,
-  RETENTION_CAP,
-  type RunRecord,
-} from "@/lib/kyp/progress/progress-store";
+import { __resetForTests, PROGRESS_STORAGE_KEY, recordAnswerEvents, recordRunSummary, getProgress, clearProgress, getRetentionDueCount } from "@/lib/kyp/progress/progress-store";
 import {
   rollupByClass,
   recentAccuracy,

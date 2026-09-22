@@ -1,17 +1,26 @@
+# KYP reverse proxy — SAFE PROXY MODEL
+#
+#   External request → fixed trusted upstream (localhost:3000) → application
+#
+# Security invariants (enforced by tests/caddy-config.test.ts):
+#   1. The upstream is a FIXED, literal address. No request-controlled value
+#      (query parameter, header, path segment) can ever become the
+#      reverse-proxy destination.
+#   2. There is exactly one upstream: the Next.js application server.
+#      This file deliberately contains NO `{query.*}`, `{header.*}`, or
+#      `{path.*}` placeholder inside any reverse_proxy upstream.
+#
+# History: an earlier revision of this file accepted an `XTransformPort`
+# query parameter and proxied to `localhost:{query.XTransformPort}`, letting
+# any public client direct the proxy at an arbitrary localhost port
+# (internal service discovery / SSRF-style proxying). That handler has been
+# removed; no in-repository workflow depends on it (verified by full-tree
+# search for "XTransformPort" — the only occurrences were in this file).
+#
+# Dev/transform workflows that need a different upstream must edit this file
+# to change the fixed address — never accept it from the request.
+
 :81 {
-	@transform_port_query {
-		query XTransformPort=*
-	}
-
-	handle @transform_port_query {
-		reverse_proxy localhost:{query.XTransformPort} {
-			header_up Host {host}
-			header_up X-Forwarded-For {remote_host}
-			header_up X-Forwarded-Proto {scheme}
-			header_up X-Real-IP {remote_host}
-		}
-	}
-
 	handle {
 		reverse_proxy localhost:3000 {
 			header_up Host {host}

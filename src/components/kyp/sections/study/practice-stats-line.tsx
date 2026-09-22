@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { History } from "lucide-react";
 
 import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";

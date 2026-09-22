@@ -25,6 +25,13 @@ import {
 } from "@/lib/kyp/progress/progress-store";
 import { anchoredDrugHref } from "@/lib/kyp/drug-course-sections";
 import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
+import {
+  DIFFICULTY_TIERS,
+  classifyAuthoredQuestion,
+  defaultDifficultyForLearnerType,
+  tierLabel,
+  type DifficultySelection,
+} from "@/lib/kyp/custom-test/difficulty";
 import { BookMarked } from "lucide-react";
 
 /**
@@ -48,6 +55,8 @@ interface QuizQuestion extends MicroQuiz {
   sourceType: "drug" | "disease";
   sourceSlug: string;
   sourceHref: string;
+  /** Reasoning tier — deterministic classification of the stem. */
+  difficulty: ReturnType<typeof classifyAuthoredQuestion>;
 }
 
 // Aggregate all MCQs from drugs + diseases
@@ -64,6 +73,7 @@ function buildAllQuestions(): QuizQuestion[] {
           // NOW-N6: deep-link to the exact anchored course section the
           // quiz follows (falls back to the page root when unknown).
           sourceHref: anchoredDrugHref(drug.slug, q.afterSectionId),
+          difficulty: classifyAuthoredQuestion(q.question),
         });
       }
     }
@@ -77,6 +87,7 @@ function buildAllQuestions(): QuizQuestion[] {
           sourceType: "disease",
           sourceSlug: disease.slug,
           sourceHref: `/diseases/${disease.slug}`,
+          difficulty: classifyAuthoredQuestion(q.question),
         });
       }
     }
@@ -113,10 +124,33 @@ export default function QuizPage() {
     }
   }, []);
 
+  /* ── Reasoning level (Phase 5) — personalisation default from the
+     learner's profile (learnerType via the session endpoint);
+     signed-out visitors keep "all". A filter only: the same
+     reviewed questions, ids, and answer keys. ── */
+  const [difficulty, setDifficulty] = React.useState<DifficultySelection>("all");
+  React.useEffect(() => {
+    let cancelled = false;
+    fetch("/api/auth/session")
+      .then((r) => (r.ok ? r.json() : { user: null }))
+      .then((data: { user?: { learnerType?: string } | null }) => {
+        if (cancelled) return;
+        setDifficulty(defaultDifficultyForLearnerType(data?.user?.learnerType));
+      })
+      .catch(() => {
+        /* Signed-out or static deployment — "all" stands. */
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   const filteredQuestions = React.useMemo(() => {
-    if (filter === "all") return allQuestions;
-    return allQuestions.filter(q => q.sourceType === filter);
-  }, [allQuestions, filter]);
+    let qs = allQuestions;
+    if (filter !== "all") qs = qs.filter((q) => q.sourceType === filter);
+    if (difficulty !== "all") qs = qs.filter((q) => q.difficulty === difficulty);
+    return qs;
+  }, [allQuestions, filter, difficulty]);
 
   const currentQuestion = filteredQuestions[currentIndex];
 
@@ -301,6 +335,47 @@ export default function QuizPage() {
                       >
                         {f.label}
                         <span className="ml-2 text-xs opacity-60">{f.count}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+
+              {/* Reasoning level (Phase 5) — harder reasoning, never
+                  harder vocabulary. Same reviewed questions; a filter. */}
+              <Reveal delay={0.18}>
+                <div className="mt-8">
+                  <p className="text-overline text-muted-foreground mb-4">Reasoning level</p>
+                  <div className="flex flex-wrap gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setDifficulty("all")}
+                      className={cn(
+                        "rounded-lg border px-4 py-2 text-sm font-medium transition-colors",
+                        difficulty === "all"
+                          ? "border-brand bg-brand-soft/40 text-brand"
+                          : "border-border text-muted-foreground hover:border-brand/30 hover:text-foreground"
+                      )}
+                    >
+                      All levels
+                      <span className="ml-2 text-xs opacity-60">{allQuestions.length}</span>
+                    </button>
+                    {DIFFICULTY_TIERS.map((tier) => (
+                      <button
+                        key={tier}
+                        type="button"
+                        onClick={() => setDifficulty(tier)}
+                        className={cn(
+                          "rounded-lg border px-4 py-2 text-sm font-medium transition-colors",
+                          difficulty === tier
+                            ? "border-brand bg-brand-soft/40 text-brand"
+                            : "border-border text-muted-foreground hover:border-brand/30 hover:text-foreground"
+                        )}
+                      >
+                        {tierLabel(tier)}
+                        <span className="ml-2 text-xs opacity-60">
+                          {allQuestions.filter((q) => q.difficulty === tier).length}
+                        </span>
                       </button>
                     ))}
                   </div>

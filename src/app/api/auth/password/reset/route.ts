@@ -5,12 +5,13 @@ import { NextRequest, NextResponse } from "next/server";
 export const dynamic = "force-dynamic";
 import bcrypt from "bcryptjs";
 import { db } from "@/lib/db";
+import { validatePasswordPolicy } from "@/lib/password-policy";
 import {
   checkLoginAllowed,
   getClientSource,
   recordLoginFailure,
 } from "@/lib/rate-limit";
-import { consumePasswordResetToken } from "@/lib/password-reset";
+import { consumePasswordResetToken, isPasswordResetTokenUsable } from "@/lib/password-reset";
 import { revokeAllSessionsForUser } from "@/lib/session";
 
 /**
@@ -34,12 +35,11 @@ import { revokeAllSessionsForUser } from "@/lib/session";
  *     guess gets its own counter, while the shared source dimension
  *     accumulates — brute-forcing tokens from one source locks that source
  *     out without locking out other users.
- *   - Password policy matches signup (minimum 8 characters) plus a maximum
- *     length guard against absurd input.
+ *   - Password policy is the shared 8–128 policy (src/lib/password-policy.ts)
+ *     — identical to signup and change.
  */
 
 const GENERIC_TOKEN_ERROR = "Invalid or expired reset token";
-const MAX_PASSWORD_LENGTH = 128;
 
 export async function POST(req: NextRequest) {
   try {
@@ -62,18 +62,6 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (newPassword.length < 8) {
-      return NextResponse.json(
-        { error: "Password must be at least 8 characters" },
-        { status: 400 }
-      );
-    }
-    if (newPassword.length > MAX_PASSWORD_LENGTH) {
-      return NextResponse.json(
-        { error: "Password must be at most 128 characters" },
-        { status: 400 }
-      );
-    }
     // Bound token input size so absurd strings cannot abuse hashing/lookup.
     if (token.length > 256) {
       return NextResponse.json({ error: GENERIC_TOKEN_ERROR }, { status: 400 });
@@ -94,9 +82,20 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Check token validity before evaluating password policy so unknown,
+    // used, and expired tokens cannot reveal which password-policy branch ran.
+    if (!(await isPasswordResetTokenUsable(token))) {
+      await recordLoginFailure(guessKey, source);
+      return NextResponse.json({ error: GENERIC_TOKEN_ERROR }, { status: 400 });
+    }
+
+    const policy = validatePasswordPolicy(newPassword, { subject: "Password" });
+    if (!policy.ok) {
+      return NextResponse.json({ error: policy.message }, { status: 400 });
+    }
+
     const userId = await consumePasswordResetToken(token);
     if (!userId) {
-      await recordLoginFailure(guessKey, source);
       return NextResponse.json({ error: GENERIC_TOKEN_ERROR }, { status: 400 });
     }
 

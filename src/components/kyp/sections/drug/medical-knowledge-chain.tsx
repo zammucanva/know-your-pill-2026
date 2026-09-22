@@ -3,8 +3,16 @@
 import * as React from "react";
 import Link from "next/link";
 import { Link2, MoveDown, MoveRight } from "lucide-react";
-import type { DrugKnowledgeChain, TargetEdge } from "@/lib/kyp/knowledge";
-import { getDrugKnowledgeChain, knowledgeGraph } from "@/lib/kyp/knowledge";
+import type {
+  DrugKnowledgeChain,
+  PrimaryTargetBasis,
+  TargetEdge,
+} from "@/lib/kyp/knowledge";
+import {
+  getDrugKnowledgeChain,
+  isNegligibleAffinity,
+  knowledgeGraph,
+} from "@/lib/kyp/knowledge";
 import { getMechanismActionLabel } from "@/lib/kyp/knowledge";
 import { drugClassIdFromLabel } from "@/lib/kyp/data/drug-taxonomy";
 import { cn } from "@/lib/utils";
@@ -21,8 +29,10 @@ import { cn } from "@/lib/utils";
  *   LAYER 1  Section header — "Knowledge Chain" + how-to-read line +
  *            a quiet canonical-graph provenance note.
  *   LAYER 2  Primary knowledge path — medication → class → mechanism →
- *            primary molecular target(s), each target carrying its
- *            registry action label (the effect). The verbatim authored
+ *            THE primary target → its effect (registry action
+ *            label). Exactly ONE "Primary target" node, or an
+ *            explicit no-single-primary state — never a fallback, never
+ *            a promoted additional target. The verbatim authored
  *            molecular-target string sits beneath the path as a caption.
  *   LAYER 3  Additional targets — compact relationship rows (name /
  *            action + expansion / kind as metadata), plus the
@@ -45,19 +55,19 @@ export type KnowledgeChainPathRole =
   | "medication"
   | "class"
   | "mechanism"
-  | "target";
+  | "target"
+  | "effect"
+  | "missing-primary";
 
 export interface KnowledgeChainPathNode {
   key: string;
   role: KnowledgeChainPathRole;
-  /** Small overline above the label — e.g. "Medication", "Primary target". */
+  /** Small overline above the label — e.g. "Medication", "Primary target", "Effect". */
   roleLabel: string;
-  /** Strong node name — e.g. "Sertraline", "SSRI", "SERT". */
+  /** Strong node name — e.g. "Sertraline", "SSRI", "SERT", "Reuptake inhibition". */
   label: string;
   /** Secondary line — target full names, class expansions. */
   sublabel?: string;
-  /** Effect line — the registry action label(s) on a target. */
-  actionLabel?: string;
   /** Subtle metadata — target kind, e.g. "Transporter". */
   kindLabel?: string;
   /** Clickable destination (in-page anchors, class collection pages). */
@@ -66,7 +76,8 @@ export interface KnowledgeChainPathNode {
   title?: string;
 }
 
-export interface KnowledgeChainTargetRow {
+/** A row in the ADDITIONAL TARGETS section — never the primary. */
+export interface AdditionalTargetRow {
   key: string;
   name: string;
   /** The drug→target relationship — registry action label(s). */
@@ -76,6 +87,23 @@ export interface KnowledgeChainTargetRow {
   kindLabel: string;
   title: string;
   href?: string;
+}
+
+/**
+ * THE primary target of the Knowledge Chain — a single target or null,
+ * never an array (primary-target contract). Rendered as exactly one
+ * "Primary target" node; when null, the chain renders the explicit
+ * missing-primary state instead.
+ */
+export interface PrimaryTargetView {
+  targetId: string;
+  name: string;
+  fullName?: string;
+  kindLabel?: string;
+  /** Registry action label(s) — the primary effect (effect isolation). */
+  effectLabel?: string;
+  /** Verbatim evidence, preserved for the tooltip. */
+  evidence: string;
 }
 
 export interface KnowledgeChainConditionItem {
@@ -104,10 +132,19 @@ export interface KnowledgeChainView {
   drugName: string;
   /** Layer 2 — the connected primary path. */
   path: KnowledgeChainPathNode[];
+  /**
+   * THE single canonical primary target, or null — never an array,
+   * never inferred from additional targets. Null means the canonical
+   * data defines no single primary target and the chain renders the
+   * explicit missing-primary state.
+   */
+  primaryTarget: PrimaryTargetView | null;
+  /** How the primary resolution was established (audit transparency). */
+  primaryBasis: PrimaryTargetBasis;
   /** The drug's own `mechanism.molecularTarget` string — verbatim. */
   mechanismCaption: string;
-  /** Layer 3 — non-primary targets. */
-  additionalTargets: KnowledgeChainTargetRow[];
+  /** Layer 3 — every target that is not the primary target. */
+  additionalTargets: AdditionalTargetRow[];
   /** Free-text target strings that matched no registry entity. */
   unresolvedTargets: string[];
   neurotransmitters: {
@@ -157,10 +194,12 @@ function targetCardLabel(name: string, fullName: string): string {
   return `${name} (${expansion})`;
 }
 
-/** An edge whose only action is negligible-affinity — the drug does not
- *  act on that target (bupropion's SERT); it is graph data, not a target. */
+/**
+ * An edge whose only action is negligible-affinity — canonical single
+ * definition imported from the graph layer (never re-implemented here).
+ */
 function isNegligible(edge: TargetEdge): boolean {
-  return edge.actions.length === 1 && edge.actions[0] === "negligible-affinity";
+  return isNegligibleAffinity(edge);
 }
 
 /** Registry action ids → the human label list, e.g. "Reuptake inhibition". */
@@ -209,13 +248,28 @@ function conditionMergeKey(name: string): string {
 
 /**
  * Pure derivation of the V2 presentation model from a drug knowledge
- * chain. Empty groups are omitted — data-driven rendering, never padded.
+ * chain — the single canonical Knowledge Chain view builder.
+ *
+ * PRIMARY-TARGET CONTRACT:
+ *   - `primaryTarget` is the chain's ONE primary target (from the
+ *     graph layer's semantic resolution) or null — never an array,
+ *     never a fallback, never an additional-target promotion.
+ *   - The path renders medication → class → mechanism → primary target
+ *     → effect, or the explicit missing-primary state when null.
+ *   - Everything else stays in `additionalTargets` — including targets
+ *     the data demoted (off-target / weak / secondary) — so no
+ *     relationship is ever lost or silently re-ranked.
+ *
+ * Empty groups are omitted — data-driven rendering, never padded.
  */
 export function buildKnowledgeChainView(chain: DrugKnowledgeChain): KnowledgeChainView {
   /* ── Layer 2: the primary path ── */
   const activeEdges = chain.drug.targetEdges.filter((e) => !isNegligible(e));
-  const primaryEdges = activeEdges.filter((e) => e.fromPrimaryTargetField);
-  const pathTargets = primaryEdges.length > 0 ? primaryEdges : activeEdges;
+  const resolution = chain.drug.primaryTarget;
+  const primaryEdge =
+    resolution.primaryTargetId === null
+      ? null
+      : activeEdges.find((e) => e.targetId === resolution.primaryTargetId) ?? null;
 
   const path: KnowledgeChainPathNode[] = [
     {
@@ -241,25 +295,60 @@ export function buildKnowledgeChainView(chain: DrugKnowledgeChain): KnowledgeCha
     },
   ];
 
-  for (const edge of pathTargets) {
-    const target = knowledgeGraph.targets.get(edge.targetId);
+  /* The single primary target node — or the explicit missing state.
+     There is NO fallback: if the canonical data does not single out
+     one primary target, none is rendered as such, ever. */
+  let primaryTarget: PrimaryTargetView | null = null;
+  if (primaryEdge) {
+    const target = knowledgeGraph.targets.get(primaryEdge.targetId);
+    const effectLabel = actionLabels(primaryEdge.actions);
+    primaryTarget = {
+      targetId: primaryEdge.targetId,
+      name: target?.name ?? primaryEdge.targetId,
+      fullName: target?.fullName,
+      kindLabel: target ? KIND_LABEL[target.kind] : undefined,
+      effectLabel,
+      evidence: primaryEdge.evidence.join(" · "),
+    };
     path.push({
-      key: `target-${edge.targetId}`,
+      key: `target-${primaryEdge.targetId}`,
       role: "target",
       roleLabel: "Primary target",
-      label: target?.name ?? edge.targetId,
-      sublabel: target?.fullName,
-      actionLabel: actionLabels(edge.actions),
-      kindLabel: target ? KIND_LABEL[target.kind] : undefined,
+      label: primaryTarget.name,
+      sublabel: primaryTarget.fullName,
+      kindLabel: primaryTarget.kindLabel,
       href: "#mechanism",
-      title: edge.evidence.join(" · "),
+      title: primaryTarget.evidence,
+    });
+    // The primary effect — registry action label(s) of the primary
+    // target relationship ONLY (an additional target's effect can
+    // never occupy this node).
+    if (effectLabel) {
+      path.push({
+        key: `effect-${primaryEdge.targetId}`,
+        role: "effect",
+        roleLabel: "Effect",
+        label: effectLabel,
+        title: primaryTarget.evidence,
+      });
+    }
+  } else {
+    path.push({
+      key: "missing-primary",
+      role: "missing-primary",
+      roleLabel: "Primary target",
+      label: "No single primary target",
+      sublabel:
+        "The canonical data names several co-equal molecular targets rather than one primary — see the full target list below.",
+      title: chain.drug.mechanism.primaryTargetText,
     });
   }
 
-  /* ── Layer 3: additional targets ── */
-  const pathIds = new Set(pathTargets.map((e) => e.targetId));
-  const additionalTargets: KnowledgeChainTargetRow[] = chain.drug.targetEdges
-    .filter((e) => !isNegligible(e) && !pathIds.has(e.targetId))
+  /* ── Layer 3: additional targets — everything that is not the
+     primary target, in stable registry order. Never sliced by array
+     position; never duplicating the primary. ── */
+  const additionalTargets: AdditionalTargetRow[] = activeEdges
+    .filter((e) => e.targetId !== primaryEdge?.targetId)
     .map((edge) => {
       const target = knowledgeGraph.targets.get(edge.targetId);
       const name = target?.name ?? edge.targetId;
@@ -407,6 +496,8 @@ export function buildKnowledgeChainView(chain: DrugKnowledgeChain): KnowledgeCha
   return {
     drugName: chain.genericName,
     path,
+    primaryTarget,
+    primaryBasis: resolution.basis,
     mechanismCaption: chain.drug.mechanism.primaryTargetText,
     additionalTargets,
     unresolvedTargets: [...chain.drug.unresolvedTargetTexts],
@@ -474,7 +565,7 @@ export function MedicalKnowledgeChain({ drugSlug }: MedicalKnowledgeChainProps) 
       <div className="mt-8">
         <ol
           aria-label={`Primary knowledge path for ${view.drugName}`}
-          className="flex flex-col lg:flex-row lg:items-center"
+          className="flex flex-col lg:flex-row lg:flex-wrap lg:items-center"
         >
           {view.path.map((node, i) => (
             <li
@@ -504,7 +595,11 @@ export function MedicalKnowledgeChain({ drugSlug }: MedicalKnowledgeChainProps) 
             id="knowledge-chain-additional-targets"
             className="text-overline text-muted-foreground"
           >
-            {view.path.some((n) => n.role === "target")
+            {/* Label integrity: exactly one heading concept — the targets
+                that are NOT the chain's single primary target. When no
+                single primary exists, the section carries every
+                molecular target under its own honest name. */}
+            {view.primaryTarget
               ? "Additional targets"
               : "Molecular targets"}
           </h4>
@@ -755,6 +850,8 @@ const nodeChrome: Record<
   class: "border-border/70 bg-surface hover:border-brand/50",
   mechanism: "border-border/70 bg-surface",
   target: "border-border/70 bg-surface hover:border-neural/50",
+  effect: "border-neural/40 bg-neural-soft/40",
+  "missing-primary": "border-dashed border-border bg-transparent",
 };
 
 function PathNode({ node }: { node: KnowledgeChainPathNode }) {
@@ -769,14 +866,15 @@ function PathNode({ node }: { node: KnowledgeChainPathNode }) {
           {node.sublabel}
         </span>
       )}
-      {node.actionLabel && (
-        <span className="text-caption font-medium text-brand">{node.actionLabel}</span>
-      )}
     </>
   );
 
   const className = cn(
-    "flex w-full min-w-0 flex-col gap-1 rounded-lg border px-4 py-3 lg:w-auto lg:max-w-[19rem]",
+    // Width floor at lg: every node keeps at least the width an
+    // ordinary canonical label needs ("SSRI", "SERT", "Reuptake
+    // inhibition"), so a crowded path row can never squeeze a card
+    // into character-level wrapping. The row itself wraps instead.
+    "flex w-full min-w-0 flex-col gap-1 rounded-lg border px-4 py-3 lg:w-auto lg:min-w-[7.5rem] lg:max-w-[19rem]",
     nodeChrome[node.role],
     node.href && "kyp-focus-ring transition-colors"
   );

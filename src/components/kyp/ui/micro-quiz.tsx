@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Check, X, Lightbulb, ChevronDown } from "lucide-react";
+import { Check, X, Lightbulb } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { MicroQuiz as MicroQuizType } from "@/lib/kyp/data";
 import { recordMicroQuizAnswer } from "@/lib/kyp/progress/progress-store";

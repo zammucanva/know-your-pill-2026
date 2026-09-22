@@ -2,10 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import {
-  ArrowRight, BookOpen, Activity, HeartPulse, Brain, FlaskConical,
-  Zap, Clock, TrendingUp, Layers,
-} from "lucide-react";
+import { ArrowRight, BookOpen, Activity, HeartPulse, Brain, FlaskConical, Zap, Layers } from "lucide-react";
 import { Navbar } from "@/components/kyp/sections/navbar";
 import { Footer } from "@/components/kyp/sections/footer";
 import { FloatingSearch } from "@/components/kyp/ui/floating-search";
