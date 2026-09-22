@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { CONTENT_SECURITY_POLICY } from "./src/lib/csp";
 
 // When building for GitHub Pages (static export), set GITHUB_PAGES=1
 // This switches from standalone server mode to static HTML export
@@ -24,11 +25,27 @@ const nextConfig: NextConfig = {
     NEXT_PUBLIC_BASE_PATH: isGithubPages ? `/${repoName}` : "",
   },
   // Security headers (server modes only — GitHub Pages serves static files
-  // and applies its own response headers).
+  // and applies its own response headers; the static export carries the
+  // same CSP via a <meta> tag rendered in the root layout).
+  //
+  // The CSP header is emitted only in production: `next dev` requires
+  // eval-capable script handling for HMR/react-refresh that the production
+  // policy deliberately does not grant. Production servers (and the test
+  // harness, which runs the standalone build with NODE_ENV=production)
+  // always emit it.
   ...(isGithubPages
     ? {}
     : {
         async headers() {
+          const productionOnly: { key: string; value: string }[] =
+            process.env.NODE_ENV === "production"
+              ? [
+                  {
+                    key: "Content-Security-Policy",
+                    value: CONTENT_SECURITY_POLICY,
+                  },
+                ]
+              : [];
           return [
             {
               source: "/:path*",
@@ -47,6 +64,7 @@ const nextConfig: NextConfig = {
                   key: "X-DNS-Prefetch-Control",
                   value: "off",
                 },
+                ...productionOnly,
               ],
             },
           ];
