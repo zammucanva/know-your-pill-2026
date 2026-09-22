@@ -22,6 +22,8 @@ import { describe, expect, test } from "bun:test";
 import { execSync } from "child_process";
 import { existsSync, readFileSync, rmSync } from "fs";
 import { resolve } from "path";
+import { Database } from "bun:sqlite";
+import { PrismaClient } from "@prisma/client";
 import { ensureServer, testDb } from "./helpers/server";
 
 const MIGRATIONS_DIR = resolve(process.cwd(), "prisma/migrations");
@@ -130,7 +132,6 @@ describe("legacy db-push database upgrade path (real legacy shape)", () => {
    * asserted after the upgrade.
    */
   function createLegacyFixture(dbPath: string): void {
-    const { Database } = require("bun:sqlite");
     rmSync(dbPath, { force: true });
     const sqlite = new Database(dbPath);
     sqlite.exec(`
@@ -203,7 +204,6 @@ describe("legacy db-push database upgrade path (real legacy shape)", () => {
     const dbPath = resolve(process.cwd(), "db/legacy-fixture.db");
     createLegacyFixture(dbPath);
     const fixtureUrl = `file:${dbPath}`;
-    const { PrismaClient } = require("@prisma/client");
 
     try {
       // ── The documented legacy path, in order ──
