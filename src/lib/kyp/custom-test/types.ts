@@ -12,6 +12,7 @@
  */
 
 import type { Drug } from "@/lib/kyp/data/types";
+import type { DifficultyTier } from "./difficulty";
 
 /** Source attribution shown in the runner and review screens. */
 export interface QuestionSource {
@@ -42,6 +43,13 @@ export interface PoolQuestion {
   source: QuestionSource;
   /** Template id ("authored" for microQuizzes) — for balancing. */
   templateId: string;
+  /**
+   * Reasoning tier (Phase 5) — pure metadata derived from the
+   * template id / question stem. NEVER part of the identity, so
+   * question ids, progress records, and Mistake Book entries stay
+   * valid across tier changes.
+   */
+  difficulty: DifficultyTier;
 }
 
 /** A question inside a running attempt — options shuffled where safe. */

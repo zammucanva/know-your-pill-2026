@@ -20,6 +20,11 @@
 import { drugs } from "@/lib/kyp/data/drugs/index";
 import { diseases } from "@/lib/kyp/data/diseases/index";
 import { anchoredDrugHref } from "@/lib/kyp/drug-course-sections";
+import {
+  filterByDifficulty,
+  resolveQuestionTier,
+  type DifficultySelection,
+} from "./difficulty";
 import { createRng } from "./rng";
 import { TEMPLATES, TEMPLATE_IDS } from "./templates";
 import type { Rng } from "./rng";
@@ -67,6 +72,10 @@ function authoredQuestions(drugSlugs: Set<string>): PoolQuestion[] {
           sourceClass: drug.drugClassLabel,
         },
         templateId: "authored",
+        difficulty: resolveQuestionTier({
+          templateId: "authored",
+          question: quiz.question,
+        }),
       });
     }
   }
@@ -87,11 +96,18 @@ export function buildQuestionPool(drugSlugs: string[]): PoolQuestion[] {
   const pool: PoolQuestion[] = [];
   const seen = new Set<string>();
 
-  const push = (q: Omit<PoolQuestion, "identity">, variant: string) => {
+  const push = (
+    q: Omit<PoolQuestion, "identity" | "difficulty">,
+    variant: string
+  ) => {
     const identity = `${q.source.sourceSlug}|${q.evidence}|${q.templateId}|${variant}`;
     if (seen.has(identity)) return;
     seen.add(identity);
-    pool.push({ ...q, identity });
+    pool.push({
+      ...q,
+      identity,
+      difficulty: resolveQuestionTier(q),
+    });
   };
 
   // Authored MCQs first (highest-value, human-written).
@@ -117,15 +133,22 @@ export interface PoolStats {
   generated: number;
   total: number;
   perTemplate: Record<string, number>;
+  /** Question counts per reasoning tier (Phase 5). */
+  perDifficulty: Record<string, number>;
 }
 
-/** Real availability for the setup screen. */
-export function getPoolStats(drugSlugs: string[]): PoolStats {
-  const pool = buildQuestionPool(drugSlugs);
+/** Real availability for the setup screen — optionally tier-filtered. */
+export function getPoolStats(
+  drugSlugs: string[],
+  difficulty: DifficultySelection = "all"
+): PoolStats {
+  const pool = filterByDifficulty(buildQuestionPool(drugSlugs), difficulty);
   const perTemplate: Record<string, number> = {};
+  const perDifficulty: Record<string, number> = {};
   let authored = 0;
   for (const q of pool) {
     perTemplate[q.templateId] = (perTemplate[q.templateId] ?? 0) + 1;
+    perDifficulty[q.difficulty] = (perDifficulty[q.difficulty] ?? 0) + 1;
     if (q.templateId === "authored") authored++;
   }
   return {
@@ -133,6 +156,7 @@ export function getPoolStats(drugSlugs: string[]): PoolStats {
     generated: pool.length - authored,
     total: pool.length,
     perTemplate,
+    perDifficulty,
   };
 }
 
@@ -205,13 +229,20 @@ function toTestQuestion(q: PoolQuestion, rng: Rng): TestQuestion {
 /**
  * Assemble an attempt: unique questions, balanced across templates,
  * question order shuffled, answer choices shuffled where safe.
+ *
+ * `opts.difficulty` (Phase 5) filters the pool to one reasoning tier
+ * BEFORE selection — "all" (the default) keeps the previous
+ * behaviour exactly. Tier filtering never touches identities, so
+ * attempts and Mistake Book entries remain cross-tier compatible.
  */
 export function buildTest(
   drugSlugs: string[],
   requestedCount: number,
-  seed: number
+  seed: number,
+  opts: { difficulty?: DifficultySelection } = {}
 ): BuildTestResult {
-  const pool = buildQuestionPool(drugSlugs);
+  const difficulty = opts.difficulty ?? "all";
+  const pool = filterByDifficulty(buildQuestionPool(drugSlugs), difficulty);
   const rng = createRng(seed);
   const available = pool.length;
   const capped = requestedCount > available;
@@ -289,6 +320,10 @@ export function buildRetest(
             sourceClass: disease.category,
           },
           templateId: "authored",
+          difficulty: resolveQuestionTier({
+            templateId: "authored",
+            question: quiz.question,
+          }),
         });
       }
     }

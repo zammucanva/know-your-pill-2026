@@ -33,11 +33,16 @@ const byTemplate = (id: string) =>
   buildQuestionPool(ALL_SLUGS).filter((q) => q.templateId === id);
 
 describe("graph templates — presence and determinism", () => {
-  test("1. the three new families are registered (16 templates total)", () => {
+  test("1. the graph families are registered (19 templates total)", () => {
     expect(TEMPLATE_IDS).toContain("mechanism-effect");
     expect(TEMPLATE_IDS).toContain("shared-target");
     expect(TEMPLATE_IDS).toContain("side-effect-association");
-    expect(TEMPLATE_IDS.length).toBe(16);
+    // Phase 5 depth families — reasoning-heavy stamps over the same
+    // locked data (primary-target reuses the Phase 3 semantics).
+    expect(TEMPLATE_IDS).toContain("primary-target");
+    expect(TEMPLATE_IDS).toContain("interaction-mechanism");
+    expect(TEMPLATE_IDS).toContain("class-vs-drug-effect");
+    expect(TEMPLATE_IDS.length).toBe(19);
   });
 
   test("2. every family produces questions from the real data", () => {

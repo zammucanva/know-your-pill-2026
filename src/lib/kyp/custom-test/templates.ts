@@ -16,6 +16,7 @@
 
 import { brainRegions } from "@/lib/kyp/data/brain";
 import type { Drug } from "@/lib/kyp/data/types";
+import { getDrugKnowledgeChain, knowledgeGraph } from "@/lib/kyp/knowledge";
 import type { PoolQuestion, QuestionSource } from "./types";
 
 /* ============================================================
@@ -52,7 +53,13 @@ interface TemplateContext {
 }
 
 export interface TemplateResult {
-  questions: Omit<PoolQuestion, "identity">[];
+  /**
+   * Stamped questions — identity and difficulty are derived at pool
+   * build time (identity from source|fact|template|variant; difficulty
+   * from the template-inherent tier table), so no template ever
+   * stamps its own.
+   */
+  questions: Omit<PoolQuestion, "identity" | "difficulty">[];
 }
 
 type TemplateFn = (ctx: TemplateContext) => TemplateResult;
@@ -464,7 +471,7 @@ export const TEMPLATES: Record<string, TemplateFn> = {
     const TOKENS = ["SERT", "NET", "DAT"] as const;
     const own = TOKENS.filter((t) => drug.mechanism.molecularTarget.includes(t));
     if (own.length === 0) return { questions: [] };
-    const questions: Array<Omit<PoolQuestion, "identity">> = [];
+    const questions: Array<Omit<PoolQuestion, "identity" |"difficulty">> = [];
     for (const token of own) {
       const sharing = allDrugs.filter(
         (d) => d.slug !== drug.slug && d.mechanism.molecularTarget.includes(token)
@@ -497,7 +504,7 @@ export const TEMPLATES: Record<string, TemplateFn> = {
   /* 16 ── side-effect-association (X4d: effect ↔ effect across two
      drugs) — Graph edge: a common side effect listed by BOTH drugs. */
   "side-effect-association": ({ drug, allDrugs }) => {
-    const questions: Array<Omit<PoolQuestion, "identity">> = [];
+    const questions: Array<Omit<PoolQuestion, "identity" |"difficulty">> = [];
     for (const se of drug.commonSideEffects.slice(0, 6)) {
       const sharing = allDrugs.filter(
         (d) => d.slug !== drug.slug && d.commonSideEffects.some((s) => s.name === se.name)
@@ -525,6 +532,112 @@ export const TEMPLATES: Record<string, TemplateFn> = {
       });
     }
     return { questions };
+  },
+
+  /* 17 ── primary-target (Phase 5: mechanism reasoning over the
+     canonical primary-target semantics). Uses the Knowledge Chain's
+     own resolver (Phase 3) — the drug's SINGLE primary molecular
+     target — and asks which other medication resolves to the same
+     primary. Distractors are medications whose primary target
+     differs or is not single: the same semantic neighbourhood. */
+  "primary-target": ({ drug, allDrugs }) => {
+    const own = getDrugKnowledgeChain(drug.slug)?.drug.primaryTarget;
+    if (!own?.primaryTargetId) return { questions: [] };
+    const target = knowledgeGraph.targets.get(own.primaryTargetId);
+    if (!target) return { questions: [] };
+    const sharing = allDrugs.filter((d) => {
+      if (d.slug === drug.slug) return false;
+      return (
+        getDrugKnowledgeChain(d.slug)?.drug.primaryTarget.primaryTargetId ===
+        own.primaryTargetId
+      );
+    });
+    if (sharing.length === 0) return { questions: [] };
+    const nonSharing = [
+      ...new Set(
+        allDrugs
+          .filter((d) => d.slug !== drug.slug)
+          .filter((d) => !sharing.some((s) => s.slug === d.slug))
+          .map((d) => d.genericName)
+      ),
+    ];
+    if (nonSharing.length < 3) return { questions: [] };
+    const partner = sharing[0];
+    return {
+      questions: [
+        {
+          question: `${drug.genericName} acts primarily on ${target.name} (${target.fullName}). Which other medication also has ${target.name} as its single primary molecular target?`,
+          options: [partner.genericName, ...nonSharing.slice(0, 3)],
+          correctIndex: 0,
+          explanation: `Both ${drug.genericName} and ${partner.genericName} resolve to ${target.name} as their single primary molecular target — each documented in the canonical molecular-target statement on their drug pages.`,
+          evidence: `Primary target: ${target.name} (${drug.slug}, ${partner.slug})`,
+          source: source(drug, "Mechanism", "/drugs/" + drug.slug + "#mechanism"),
+          templateId: "primary-target",
+        },
+      ],
+    };
+  },
+
+  /* 18 ── interaction-mechanism (Phase 5: interaction → mechanism).
+     The stem names the interacting drug and asks WHY the combination
+     needs management; options are interaction-mechanism strings from
+     other drugs' data — the same dimension, verbatim. */
+  "interaction-mechanism": ({ drug, allDrugs }) => {
+    const ownMechanisms = new Set(drug.interactions.map((i) => i.mechanism));
+    const distractorPool = [
+      ...new Set(
+        allDrugs
+          .filter((d) => d.slug !== drug.slug)
+          .flatMap((d) => d.interactions.map((i) => i.mechanism))
+          .filter((m) => m.length > 0 && !ownMechanisms.has(m))
+      ),
+    ];
+    if (distractorPool.length < 3) return { questions: [] };
+    return {
+      questions: drug.interactions.slice(0, 4).map((i) => ({
+        question: `Why does the combination of ${stripParens(i.drug)} and ${drug.genericName} need careful management?`,
+        options: [i.mechanism, ...distractorPool.slice(0, 3)],
+        correctIndex: 0,
+        explanation: `${stripParens(i.drug)} (${i.severity}) — ${i.mechanism} ${i.action}`,
+        evidence: `Interaction mechanism: ${i.drug} — ${i.mechanism}`,
+        source: source(drug, "Interactions", "/drugs/" + drug.slug + "#interactions"),
+        templateId: "interaction-mechanism",
+      })),
+    };
+  },
+
+  /* 19 ── class-vs-drug-effect (Phase 5: distinguish a class effect
+     from a drug-specific effect). Correct = a side effect documented
+     for this drug but NOT for any same-class peer in the registry;
+     distractors = this drug's effects that same-class peers share —
+     every option is a real, documented side effect of this drug, so
+     the reasoning is about the class boundary, not recognition. */
+  "class-vs-drug-effect": ({ drug, allDrugs }) => {
+    const sameClass = allDrugs.filter(
+      (d) => d.slug !== drug.slug && d.drugClassLabel === drug.drugClassLabel
+    );
+    if (sameClass.length === 0) return { questions: [] };
+    const classEffectNames = new Set(
+      sameClass.flatMap((d) => d.commonSideEffects.map((s) => s.name))
+    );
+    const specific = drug.commonSideEffects.filter(
+      (se) => !classEffectNames.has(se.name)
+    );
+    const shared = drug.commonSideEffects.filter((se) =>
+      classEffectNames.has(se.name)
+    );
+    if (specific.length === 0 || shared.length < 3) return { questions: [] };
+    return {
+      questions: specific.slice(0, 3).map((se) => ({
+        question: `Which of these side effects is specific to ${drug.genericName} rather than shared across ${drug.drugClassLabel} medications?`,
+        options: [se.name, ...shared.slice(0, 3).map((s) => s.name)],
+        correctIndex: 0,
+        explanation: `${se.name} is documented for ${drug.genericName} but not for the other ${drug.drugClassLabel}s in the KYP library; the other options are shared across the class.`,
+        evidence: `Drug-specific vs class effect: ${se.name}`,
+        source: source(drug, "Side effects", "/drugs/" + drug.slug + "#side-effects"),
+        templateId: "class-vs-drug-effect",
+      })),
+    };
   },
 };
 
