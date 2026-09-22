@@ -117,6 +117,24 @@ describe("KYP local progress store", () => {
     expect(P.getServerSnapshot()).toBeNull();
   });
 
+  test("2b. fresh visitor: the client snapshot resolves to a valid empty object — never stuck loading", () => {
+    // storage cleared + no legacy key (beforeEach) — a first-ever visit.
+    // Before the Phase 4 fix the snapshot stayed null forever after
+    // hydration, so every null-gated consumer (/study/mistakes,
+    // /study/analytics, the Study hub panels) rendered its loading
+    // state permanently for new visitors.
+    const snap = P.getSnapshot();
+    if (snap === null) throw new Error("fresh-visitor snapshot must not be null");
+    expect(snap).toBeDefined();
+    // Referentially stable — useSyncExternalStore compares with Object.is.
+    expect(P.getSnapshot()).toBe(snap);
+    // Valid and empty: the Mistake Book's loading gate resolves to its
+    // genuine "Nothing to revisit yet" state.
+    expect(P.getMistakeBookStats().total).toBe(0);
+    expect(Object.keys(snap.courses)).toHaveLength(0);
+    expect(snap.practice.attempts).toBe(0);
+  });
+
   test("3. subscribe fires on writes and unsubscribes cleanly", () => {
     let fired = 0;
     const off = P.subscribe(() => {
