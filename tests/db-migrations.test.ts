@@ -20,7 +20,7 @@
 
 import { describe, expect, test } from "bun:test";
 import { execSync } from "child_process";
-import { existsSync, readFileSync } from "fs";
+import { existsSync, readFileSync, rmSync } from "fs";
 import { resolve } from "path";
 import { ensureServer, testDb } from "./helpers/server";
 
@@ -119,4 +119,187 @@ describe("legacy data-upgrade helper is idempotent on migrated databases", () =>
     expect(after).toBe(before);
     expect(afterTypes).toEqual(beforeTypes);
   });
+});
+
+describe("legacy db-push database upgrade path (real legacy shape)", () => {
+  /**
+   * Rebuilds the historical `db push` database shape: User (role holding
+   * learner vocabulary, NO learnerType), Progress, Bookmark,
+   * SearchHistory — and NO Session/PasswordResetToken/LoginAttempt tables
+   * or migration history. Data rows are inserted so preservation can be
+   * asserted after the upgrade.
+   */
+  function createLegacyFixture(dbPath: string): void {
+    const { Database } = require("bun:sqlite");
+    rmSync(dbPath, { force: true });
+    const sqlite = new Database(dbPath);
+    sqlite.exec(`
+      CREATE TABLE "User" (
+          "id" TEXT NOT NULL PRIMARY KEY,
+          "name" TEXT NOT NULL,
+          "email" TEXT NOT NULL,
+          "passwordHash" TEXT NOT NULL,
+          "emailVerified" BOOLEAN NOT NULL DEFAULT false,
+          "role" TEXT NOT NULL DEFAULT 'student',
+          "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+          "updatedAt" DATETIME NOT NULL
+      );
+      CREATE TABLE "Progress" (
+          "id" TEXT NOT NULL PRIMARY KEY,
+          "userId" TEXT NOT NULL,
+          "type" TEXT NOT NULL,
+          "slug" TEXT NOT NULL,
+          "title" TEXT NOT NULL,
+          "lastVisitedAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+          "visitCount" INTEGER NOT NULL DEFAULT 1,
+          CONSTRAINT "Progress_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+      );
+      CREATE TABLE "Bookmark" (
+          "id" TEXT NOT NULL PRIMARY KEY,
+          "userId" TEXT NOT NULL,
+          "type" TEXT NOT NULL,
+          "slug" TEXT NOT NULL,
+          "title" TEXT NOT NULL,
+          "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+          CONSTRAINT "Bookmark_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+      );
+      CREATE TABLE "SearchHistory" (
+          "id" TEXT NOT NULL PRIMARY KEY,
+          "userId" TEXT NOT NULL,
+          "query" TEXT NOT NULL,
+          "resultType" TEXT,
+          "resultSlug" TEXT,
+          "resultTitle" TEXT,
+          "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+          CONSTRAINT "SearchHistory_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+      );
+    `);
+    const insert = sqlite.prepare(
+      `INSERT INTO "User" ("id","name","email","passwordHash","role","updatedAt")
+       VALUES (?,?,?,?,?,datetime('now'))`
+    );
+    insert.run("legacy-1", "Legacy One", "legacy1@example.test", "hash1", "mbbs_student");
+    insert.run("legacy-2", "Legacy Two", "legacy2@example.test", "hash2", "medical_student");
+    insert.run("legacy-3", "Legacy Three", "legacy3@example.test", "hash3", "admin");
+    sqlite
+      .prepare(
+        `INSERT INTO "Progress" ("id","userId","type","slug","title") VALUES ('p1','legacy-1','drug','sertraline','Sertraline')`
+      )
+      .run();
+    sqlite
+      .prepare(
+        `INSERT INTO "Bookmark" ("id","userId","type","slug","title") VALUES ('b1','legacy-2','disease','major-depressive-disorder','MDD')`
+      )
+      .run();
+    sqlite
+      .prepare(
+        `INSERT INTO "SearchHistory" ("id","userId","query") VALUES ('s1','legacy-3','ssri')`
+      )
+      .run();
+    sqlite.close();
+  }
+
+  test("7. the documented upgrade path preserves data and completes the schema", async () => {
+    const dbPath = resolve(process.cwd(), "db/legacy-fixture.db");
+    createLegacyFixture(dbPath);
+    const fixtureUrl = `file:${dbPath}`;
+    const { PrismaClient } = require("@prisma/client");
+
+    try {
+      // ── The documented legacy path, in order ──
+      execSync("bun scripts/prepare-database.ts", {
+        cwd: process.cwd(),
+        env: { ...process.env, DATABASE_URL: fixtureUrl },
+        stdio: "pipe",
+      });
+      execSync("bunx prisma migrate resolve --applied 20260922000000_init", {
+        cwd: process.cwd(),
+        env: { ...process.env, DATABASE_URL: fixtureUrl },
+        stdio: "pipe",
+      });
+      execSync("bunx prisma migrate deploy", {
+        cwd: process.cwd(),
+        env: { ...process.env, DATABASE_URL: fixtureUrl },
+        stdio: "pipe",
+      });
+
+      const legacy = new PrismaClient({
+        datasources: { db: { url: fixtureUrl } },
+      });
+      try {
+        // Data preserved — all rows survive the upgrade.
+        expect(await legacy.user.count()).toBe(3);
+        expect(await legacy.progress.count()).toBe(1);
+        expect(await legacy.bookmark.count()).toBe(1);
+        expect(await legacy.searchHistory.count()).toBe(1);
+
+        // Roles normalised to the authorization vocabulary; learner
+        // values preserved in learnerType.
+        const roles = await legacy.user.groupBy({ by: ["role"], _count: { _all: true } });
+        expect(roles).toEqual([{ role: "admin", _count: { _all: 1 } }, { role: "user", _count: { _all: 2 } }]);
+        // learnerType: backfilled from the legacy learner-vocabulary roles;
+        // the admin user keeps the column default ('student') because
+        // "admin" belongs to the authorization vocabulary.
+        const types = (await legacy.user.groupBy({ by: ["learnerType"], _count: { _all: true } })).sort(
+          (a: { learnerType: string }, b: { learnerType: string }) =>
+            a.learnerType.localeCompare(b.learnerType)
+        );
+        expect(types).toEqual([
+          { learnerType: "mbbs_student", _count: { _all: 1 } },
+          { learnerType: "medical_student", _count: { _all: 1 } },
+          { learnerType: "student", _count: { _all: 1 } },
+        ]);
+
+        // Security-era tables exist and serve the current application.
+        const session = await legacy.session.create({
+          data: {
+            tokenHash: "legacy-upgrade-probe",
+            userId: "legacy-1",
+            expiresAt: new Date(Date.now() + 60_000),
+          },
+        });
+        const resolved = await legacy.session.findUnique({
+          where: { tokenHash: "legacy-upgrade-probe" },
+          include: { user: true },
+        });
+        expect(resolved?.user.id).toBe("legacy-1");
+        await legacy.session.delete({ where: { id: session.id } });
+        const attempt = await legacy.loginAttempt.create({
+          data: { identifierHash: "probe-id", sourceHash: "probe-src" },
+        });
+        expect(attempt.failureCount).toBe(0);
+        await legacy.loginAttempt.delete({ where: { id: attempt.id } });
+        await legacy.passwordResetToken.create({
+          data: {
+            tokenHash: "probe-reset",
+            userId: "legacy-1",
+            expiresAt: new Date(Date.now() + 60_000),
+          },
+        });
+        await legacy.passwordResetToken.deleteMany({ where: { tokenHash: "probe-reset" } });
+
+        // Migration history baselined: deploy again is a no-op.
+        const secondDeploy = execSync("bunx prisma migrate deploy", {
+          cwd: process.cwd(),
+          env: { ...process.env, DATABASE_URL: fixtureUrl },
+          stdio: "pipe",
+        }).toString();
+        expect(secondDeploy).toContain("No pending migrations");
+
+        // Re-running the whole path changes no data (idempotence).
+        execSync("bun scripts/prepare-database.ts", {
+          cwd: process.cwd(),
+          env: { ...process.env, DATABASE_URL: fixtureUrl },
+          stdio: "pipe",
+        });
+        expect(await legacy.user.count()).toBe(3);
+        expect(await legacy.progress.count()).toBe(1);
+      } finally {
+        await legacy.$disconnect();
+      }
+    } finally {
+      rmSync(dbPath, { force: true });
+      rmSync(dbPath + "-journal", { force: true });
+    }
+  }, 60000);
 });
