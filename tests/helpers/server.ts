@@ -193,8 +193,14 @@ export async function createTestUser(
     throw new Error(`signup failed (${res.status}): ${await res.text()}`);
   }
   jar.capture(res);
-  const body = (await res.json()) as { id: string };
-  return { jar, userId: body.id, email, name: `${prefix} ${index}`, password };
+  // The signup response deliberately does NOT include the user id
+  // (anti-enumeration: no field may distinguish new vs existing emails).
+  // Tests that need the id resolve it directly from the test database.
+  const created = await testDb().user.findUnique({ where: { email } });
+  if (!created) {
+    throw new Error(`signup claimed success but user ${email} was not created`);
+  }
+  return { jar, userId: created.id, email, name: `${prefix} ${index}`, password };
 }
 
 export async function loginAndGetJar(

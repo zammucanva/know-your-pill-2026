@@ -61,6 +61,28 @@ export function mintSessionToken(): { raw: string; signed: string } {
   return { raw, signed: `${raw}.${sig}` };
 }
 
+/**
+ * ANTI-ENUMERATION DECOY (signup): a token that is byte-for-byte
+ * FORMAT-IDENTICAL to a real session cookie (43 base64url chars, ".",
+ * 43 base64url chars — 256 bits of cryptographic randomness per segment)
+ * but whose second segment is random noise instead of the valid HMAC.
+ *
+ * Purpose: when signup is asked to create an account for an email that
+ * already exists, it must respond EXACTLY as it would for a new account —
+ * same status, same body shape, same Set-Cookie header — so no observer
+ * can learn whether the address is registered. A real signup mints a real
+ * session; the existing-email path issues this decoy, which fails the
+ * server-side HMAC check (verifyTokenSignature) before any database
+ * lookup, so it can never authenticate as anyone.
+ */
+export function mintDecoySessionToken(): string {
+  const raw = b64url(randomBytes(RAW_TOKEN_BYTES));
+  // 32 random bytes -> exactly 43 base64url chars; the slice is a length
+  // guard that keeps this token shape-identical even if constants change.
+  const fakeSig = b64url(randomBytes(RAW_TOKEN_BYTES)).slice(0, HMAC_B64URL_LENGTH);
+  return `${raw}.${fakeSig}`;
+}
+
 export function hashToken(signed: string): string {
   return createHash("sha256").update(signed, "utf8").digest("hex");
 }
