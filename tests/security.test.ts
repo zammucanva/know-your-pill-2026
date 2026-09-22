@@ -24,6 +24,7 @@ import {
   ensureServer,
   loginAndGetJar,
   uniqueEmail,
+  testDb,
 } from "./helpers/server";
 
 const SESSION_COOKIE = "kyp-session";
@@ -360,10 +361,16 @@ describe("malformed input handling", () => {
     const user = await createTestUser("sec", 33);
     const res = await postJson(
       "/api/auth/role",
-      JSON.stringify({ learnerType: "admin" }),
+      JSON.stringify({ role: "admin" }),
       authed(user.jar)
     );
     expect(res.status).toBe(400);
+    const saved = await testDb().user.findUnique({
+      where: { id: user.userId },
+      select: { role: true, learnerType: true },
+    });
+    expect(saved?.role).toBe("user");
+    expect(saved?.learnerType).toBe("student");
     const session = await fetch(`${BASE_URL}/api/auth/session`, { headers: authed(user.jar) });
     const body = (await session.json()) as { user?: { role?: string; learnerType?: string } };
     expect(body.user?.learnerType).toBe("student");

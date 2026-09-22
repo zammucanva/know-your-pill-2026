@@ -97,10 +97,10 @@ Never use learnerType as a privileged authorization check.
 
 Keep GitHub's Dependency graph / Dependabot enabled for the repository. Dependabot is configured in `.github/dependabot.yml` for weekly dependency update proposals.
 
-The OSV script checks installed direct dependencies:
+The CI quality job also runs the repository's OSV audit, which scans every package installed in `node_modules` and classifies findings by production reachability:
 
 ```bash
 bun run osv
 ```
 
-Dependabot/GitHub's dependency graph is the transitive-dependency layer. If Dependency graph is disabled in repository settings, enable it under **Settings → Security & analysis** so GitHub can populate dependency intelligence.
+The OSV script itself distinguishes direct runtime dependencies, build/test tooling, and production-reachable transitive dependencies. Dependabot/GitHub's dependency graph is the complementary transitive-dependency layer. If Dependency graph is disabled in repository settings, enable it under **Settings → Security & analysis** so GitHub can populate dependency intelligence.

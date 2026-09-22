@@ -79,6 +79,21 @@ export async function createPasswordResetToken(
  * returns null otherwise (unknown, already used, or expired — callers MUST
  * respond identically for all three cases).
  */
+export async function isPasswordResetTokenUsable(raw: string): Promise<boolean> {
+  if (!raw) return false;
+  const tokenHash = hashResetToken(raw);
+  const now = new Date();
+  const row = await db.passwordResetToken.findFirst({
+    where: {
+      tokenHash,
+      usedAt: null,
+      expiresAt: { gt: now },
+    },
+    select: { id: true },
+  });
+  return !!row;
+}
+
 export async function consumePasswordResetToken(
   raw: string
 ): Promise<string | null> {
@@ -106,4 +121,14 @@ export async function consumePasswordResetToken(
   });
   if (consumed.count !== 1) return null;
   return existing.userId;
+}
+
+/**
+ * Invalidate a token after a delivery failure. The raw token is immediately
+ * converted to its hash; the raw value is never stored or logged.
+ */
+export async function invalidatePasswordResetToken(raw: string): Promise<void> {
+  await db.passwordResetToken.deleteMany({
+    where: { tokenHash: hashResetToken(raw), usedAt: null },
+  });
 }

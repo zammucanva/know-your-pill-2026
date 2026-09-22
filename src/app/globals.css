@@ -58,9 +58,9 @@
   --color-class-ssri: var(--class-ssri);
 
   /* Fonts */
-  --font-sans: var(--font-geist-sans);
-  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
-  --font-mono: var(--font-geist-mono);
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
   /* Radius scale */
   --radius-sm: calc(var(--radius) - 4px);
