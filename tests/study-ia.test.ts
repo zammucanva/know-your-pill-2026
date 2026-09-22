@@ -50,11 +50,12 @@ describe("study mode IA — single top-level learning destination", () => {
     expect(matches.length).toBe(1);
   });
 
-  test("navLinks are exactly the five unified destinations", () => {
+  test("navLinks are exactly the six destinations (Psychiatry added)", () => {
     const src = read(NAVBAR);
     const hrefs = [...src.matchAll(/href: "([^"]+)"/g)].map((m) => m[1]);
     expect(hrefs).toEqual([
       "/learn",
+      "/psychiatry",
       "/drugs",
       "/#substances",
       "/study",

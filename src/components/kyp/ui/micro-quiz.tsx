@@ -26,11 +26,15 @@ interface MicroQuizProps {
   courseSlug?: string;
   /** How many micro-quizzes render in this course (score normalisation). */
   courseQuizCount?: number;
+  /** Optional answer callback (first answer only) — used by aggregate
+   *  surfaces like the Psychiatry Self-Test for run scoring. */
+  onAnswered?: (correct: boolean) => void;
 }
 
-export function MicroQuiz({ quiz, courseSlug, courseQuizCount = 0 }: MicroQuizProps) {
+export function MicroQuiz({ quiz, courseSlug, courseQuizCount = 0, onAnswered }: MicroQuizProps) {
   const [selectedIdx, setSelectedIdx] = React.useState<number | null>(null);
   const [showExplanation, setShowExplanation] = React.useState(false);
+  const reportedRef = React.useRef(false);
 
   const handleSelect = (idx: number) => {
     if (selectedIdx !== null) return; // Don't allow re-answering
@@ -43,6 +47,10 @@ export function MicroQuiz({ quiz, courseSlug, courseQuizCount = 0 }: MicroQuizPr
         idx === quiz.correctIndex,
         courseQuizCount
       );
+    }
+    if (onAnswered && !reportedRef.current) {
+      reportedRef.current = true;
+      onAnswered(idx === quiz.correctIndex);
     }
   };
 

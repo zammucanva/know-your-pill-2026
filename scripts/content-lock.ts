@@ -7,9 +7,13 @@
  *   - 1 disease
  *   - 3 substances
  *   - 78 MCQs (microQuizzes + activeRecallQuestions across all medications)
- *   - 53 search index entries (46 original + 7 derived taxonomy
+ *   - 164 search index entries (46 original + 7 derived taxonomy
  *     collection entries: Psychiatry, Antidepressants, SSRIs, SNRIs,
- *     NDRIs, NaSSAs, TCAs — navigation metadata only, no medical claims)
+ *     NDRIs, NaSSAs, TCAs — navigation metadata only, no medical claims —
+ *     plus 111 KYP Psychiatry records: hub + library + 109 note entries,
+ *     navigation metadata derived from the canonical notes corpus; the
+ *     original 53 entries are byte-identical/prefix-preserved, verified
+ *     during the psychiatry-library integration)
  *
  * Usage:
  *   bun scripts/content-lock.ts --init     (re)write the baseline file
@@ -72,7 +76,7 @@ const EXPECTED_COUNTS = {
   diseases: 1,
   substances: 3,
   mcqs: 78,
-  searchEntries: 53,
+  searchEntries: 164,
 };
 
 const BASELINE_PATH = resolve(

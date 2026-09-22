@@ -5,11 +5,11 @@
     "src/lib/kyp/data/classes.ts": "3e49f364491049a012b02b06b260ee0473e477488cb2a94d1c6bb452dd080480",
     "src/lib/kyp/data/side-effects.ts": "f0c5f213adf84a5c49fd5422d85379ecb9665640b3b54291a66eb3c20a1560c3",
     "src/lib/kyp/data/brain.ts": "57cd43ef385311aa581fa938039c63d1722b517cd174656bb665d67549ec48fc",
-    "src/lib/kyp/data/search-index.ts": "7be10a1e3b62607c1e0ad9bae32a6348f3d9d902f0dbe8fd630466d14c349792",
+    "src/lib/kyp/data/search-index.ts": "aee5b2faa6d6e16b36338450401a00273bec98cd0b94c747a017d64c55371a6a",
     "src/lib/kyp/data/drug-taxonomy.ts": "022322b36fab1bb87c63da8455051c9e9b24c659dfce2983ce62ec4152c1bc27",
     "src/lib/kyp/data/disease-types.ts": "4df5af0bfbc4d1a4ad5aedc0017ec4f6c91fc242f09ac0a5f4b582a8adc03422",
     "src/lib/kyp/data/substance-types.ts": "44c11c6e8bf444f7739209cc768e0eacc94e65d8f0a1b06283b66cb550fe06e4",
-    "src/lib/kyp/data/types.ts": "5cd356f8cf6beb94c9166124f273af561a525499a90f0b93f74df58742652d9b",
+    "src/lib/kyp/data/types.ts": "416fce0aad3d9e7b8f7e2fb3fa558dac66997f56e6f50ba880874e7a995bbd6f",
     "src/lib/kyp/data/platform.ts": "d0d49ffb27a20f412954d8be6e67ef6a8c277428b789900cfd81d0e4b425ba57",
     "src/lib/kyp/data/index.ts": "3f65f35f76f019e7b285b8ba43718e2b2247079a848480bec01a9e83111de9d7",
     "src/lib/kyp/data/neurotransmitter-artwork.json": "590fdf059028a8bd01ab21e4f7584a2aba15fac6b850e427abe74a6471a1ef58",
@@ -38,6 +38,6 @@
     "diseases": 1,
     "substances": 3,
     "mcqs": 78,
-    "searchEntries": 53
+    "searchEntries": 164
   }
 }
