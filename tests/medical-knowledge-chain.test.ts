@@ -17,6 +17,17 @@
  *   - dangling references degrade gracefully (unresolved texts surface,
  *     nothing crashes, no edge is fabricated)
  *
+ * Phase 3 — Knowledge Chain semantic integrity:
+ *   - THE primary target: exactly one (from the data's own explicit
+ *     statement or undisputed primary-field survivorship) or an explicit
+ *     no-single-primary state — never an array, never inferred, never a
+ *     promoted additional target
+ *   - additional targets stay additional; effects stay isolated to
+ *     their own target relationship
+ *   - resolution is independent of receptor-array order (mandatory)
+ *   - all 12 canonical medications pinned in an audit table
+ *   - Citalopram: ONE Primary Target (SERT); hERG/KCNH2 stays additional
+ *
  * Pure module tests — no server required.
  */
 
@@ -28,7 +39,10 @@ import {
   knowledgeTargets,
   resolveConditionDisplayName,
   conditionKeyFromName,
+  resolvePrimaryTarget,
+  resolvePrimaryTargetFromTexts,
 } from "@/lib/kyp/knowledge";
+import type { PrimaryTargetBasis } from "@/lib/kyp/knowledge";
 import {
   mechanismActions,
   getMechanismActionLabel,
@@ -268,14 +282,25 @@ describe("knowledge chain — rendered view contract (buildKnowledgeChainView)",
   const viewFor = (slug: string) =>
     buildKnowledgeChainView(getDrugKnowledgeChain(slug)!);
 
-  test("every drug renders the four-stage primary path (medication → class → mechanism → targets)", () => {
+  test("every drug renders the primary path with at most ONE primary target node", () => {
     for (const slug of ALL_SLUGS) {
       const view = viewFor(slug);
-      expect(view.path.length).toBeGreaterThanOrEqual(4);
       expect(view.path[0].role).toBe("medication");
       expect(view.path[1].role).toBe("class");
       expect(view.path[2].role).toBe("mechanism");
-      expect(view.path.slice(3).every((n) => n.role === "target")).toBe(true);
+      const targetNodes = view.path.filter((n) => n.role === "target");
+      // 3B/3H: exactly ONE primary target node — never two, never zero+promoted.
+      expect(targetNodes.length).toBeLessThanOrEqual(1);
+      // Exactly one node carries the "Primary target" overline.
+      const primaryLabelled = view.path.filter((n) => n.roleLabel === "Primary target");
+      expect(primaryLabelled.length).toBe(1);
+      if (view.primaryTarget) {
+        expect(targetNodes.length).toBe(1);
+        expect(view.path.some((n) => n.role === "missing-primary")).toBe(false);
+      } else {
+        // Explicit missing-primary state — never a silent fallback.
+        expect(view.path.some((n) => n.role === "missing-primary")).toBe(true);
+      }
     }
   });
 
@@ -292,47 +317,62 @@ describe("knowledge chain — rendered view contract (buildKnowledgeChainView)",
     }
   });
 
-  test("sertraline: SERT primary target with full name, human action label, kind metadata", () => {
+  test("sertraline: SERT primary target with full name, kind metadata, and a separate Effect node", () => {
     const view = viewFor("sertraline");
     expect(view.path.filter((n) => n.role === "target").map((n) => n.label)).toEqual(["SERT"]);
+    // 3E contract — the view model exposes exactly one primary target.
+    expect(view.primaryTarget).not.toBeNull();
+    expect(view.primaryTarget!.targetId).toBe("sert");
+    expect(view.primaryTarget!.name).toBe("SERT");
+    expect(view.primaryTarget!.fullName).toBe("Serotonin transporter");
+    expect(view.primaryTarget!.kindLabel).toBe("Transporter");
+    expect(view.primaryTarget!.effectLabel).toBe("Reuptake inhibition");
     const sert = view.path.find((n) => n.key === "target-sert")!;
     expect(sert.sublabel).toBe("Serotonin transporter");
-    expect(sert.actionLabel).toBe("Reuptake inhibition");
     expect(sert.kindLabel).toBe("Transporter");
     expect(sert.href).toBe("#mechanism");
     expect(sert.title).toContain("SERT (SLC6A4 — serotonin transporter)");
+    // 3N/3G — the primary effect is its own terminal node, tied to the
+    // primary target only.
+    const effect = view.path.find((n) => n.role === "effect")!;
+    expect(effect.label).toBe("Reuptake inhibition");
+    expect(view.path[view.path.length - 1].role).toBe("effect");
     // The verbatim authored molecular-target string is preserved as caption.
     expect(view.mechanismCaption).toBe("SERT (SLC6A4 — serotonin transporter)");
   });
 
-  test("bupropion: NET + DAT + nicotinic primary targets; negligible SERT stays in the caption, never the path", () => {
+  test("bupropion: no single primary target — explicit missing state, co-equal targets stay additional, negligible SERT never renders", () => {
     const view = viewFor("bupropion");
-    // All four are named in the drug's own primary molecularTarget string.
-    expect(view.path.filter((n) => n.role === "target").map((n) => n.key)).toEqual([
+    // The data names NET, DAT and both nAChRs co-equally — no single primary.
+    expect(view.primaryTarget).toBeNull();
+    expect(view.primaryBasis).toBe("no-single-primary");
+    expect(view.path.some((n) => n.role === "target")).toBe(false);
+    const missing = view.path.find((n) => n.role === "missing-primary")!;
+    expect(missing.label).toBe("No single primary target");
+    // No effect node without a primary target (effect isolation).
+    expect(view.path.some((n) => n.role === "effect")).toBe(false);
+    // All four co-equal targets remain visible as additional rows —
+    // never lost, never promoted (registry order).
+    expect(view.additionalTargets.map((r) => r.key)).toEqual([
       "target-net",
       "target-dat",
+      "target-5ht3a",
       "target-alpha3beta4-nachr",
       "target-alpha4beta2-nachr",
     ]);
     expect(view.path.some((n) => n.key === "target-sert")).toBe(false);
     expect(view.additionalTargets.some((r) => r.name === "SERT")).toBe(false);
     expect(view.mechanismCaption).toContain("NO clinically meaningful SERT affinity");
-    const net = view.path.find((n) => n.key === "target-net")!;
-    expect(net.sublabel).toBe("Norepinephrine transporter");
-    expect(net.actionLabel).toContain("Reuptake inhibition"); // registry labels, never raw ids
-    // The nicotinic antagonism is primary (smoking cessation) — in the path.
-    const nachr = view.path.find((n) => n.key === "target-alpha3beta4-nachr")!;
-    expect(nachr.actionLabel).toBe("Receptor antagonism");
-    expect(nachr.kindLabel).toBe("Receptor");
   });
 
-  test("mirtazapine: receptor targets in the path, no transporters anywhere", () => {
+  test("mirtazapine: no single primary target — five co-equal receptors stay additional, no transporters anywhere", () => {
     const view = viewFor("mirtazapine");
-    const targets = view.path.filter((n) => n.role === "target");
-    expect(targets.map((t) => t.label).sort()).toEqual(
-      ["5-HT2A", "5-HT2C", "5-HT3", "H1 histamine", "α2-adrenergic"].sort()
+    expect(view.primaryTarget).toBeNull();
+    expect(view.path.some((n) => n.role === "target")).toBe(false);
+    const names = view.additionalTargets.map((r) => r.name).sort();
+    expect(names).toEqual(
+      ["5-HT2A", "5-HT2C", "5-HT3", "H1 histamine", "α2-adrenergic", "α1-adrenergic", "Muscarinic M1"].sort()
     );
-    expect(targets.every((t) => t.kindLabel === "Receptor")).toBe(true);
     expect(
       view.path.some((n) => n.key.startsWith("target-sert") || n.key.startsWith("target-net") || n.key.startsWith("target-dat"))
     ).toBe(false);
@@ -376,22 +416,24 @@ describe("knowledge chain — rendered view contract (buildKnowledgeChainView)",
     expect(h51a.title).toContain("desensit");
     const sigma = ser.additionalTargets.find((r) => r.name === "σ1")!;
     expect(sigma.relationship).toBe("Receptor agonism");
-    // mirtazapine: α1 and M1 are non-primary additional rows; the M1 full
-    // name genuinely expands "Muscarinic M1" so it renders as descriptor.
+    // mirtazapine (no single primary): α1 and M1 are additional rows like
+    // every other target; the M1 full name genuinely expands
+    // "Muscarinic M1" so it renders as descriptor.
     const mir = viewFor("mirtazapine");
-    expect(mir.additionalTargets.map((r) => r.name).sort()).toEqual(
-      ["α1-adrenergic", "Muscarinic M1"].sort()
-    );
     const m1 = mir.additionalTargets.find((r) => r.name === "Muscarinic M1")!;
     expect(m1.descriptor).toBe("M1 muscarinic acetylcholine receptor");
     // The data derives no action for this edge ("very weak — minimal
     // anticholinergic effect") — the row degrades to identity + kind.
     expect(m1.relationship).toBeUndefined();
     expect(m1.kindLabel).toBe("Receptor");
-    // amitriptyline: the off-target receptor rows are additional, not primary.
+    // amitriptyline (no single primary): SERT and NET stay visible as
+    // additional rows next to the off-target receptors — co-equal per
+    // the data, never promoted, never hidden.
     const ami = viewFor("amitriptyline");
+    expect(ami.primaryTarget).toBeNull();
+    expect(ami.additionalTargets.map((r) => r.name)).toContain("SERT");
+    expect(ami.additionalTargets.map((r) => r.name)).toContain("NET");
     expect(ami.additionalTargets.map((r) => r.name)).toContain("H1 histamine");
-    expect(ami.additionalTargets.every((r) => r.kindLabel === "Receptor")).toBe(true);
   });
 
   test("every rendered action label is a registry human label (no raw ids leak)", () => {
@@ -399,7 +441,7 @@ describe("knowledge chain — rendered view contract (buildKnowledgeChainView)",
     for (const slug of ALL_SLUGS) {
       const view = viewFor(slug);
       const labels = [
-        ...view.path.map((n) => n.actionLabel).filter((l): l is string => Boolean(l)),
+        ...view.path.filter((n) => n.role === "effect").map((n) => n.label),
         ...view.additionalTargets.map((r) => r.relationship).filter((l): l is string => Boolean(l)),
       ];
       for (const label of labels) {
@@ -537,6 +579,260 @@ describe("knowledge chain — rendered view contract (buildKnowledgeChainView)",
 
   test("unknown chain never reaches the view builder (component returns null)", () => {
     expect(getDrugKnowledgeChain("does-not-exist")).toBeNull();
+  });
+});
+
+describe("knowledge chain — primary-target semantic contract (Phase 3)", () => {
+  /**
+   * 3K-A — Single primary + one additional.
+   * Synthetic mirror of the Citalopram shape: primary field names SERT
+   * and hERG; the effect text qualifies hERG as off-target.
+   */
+  test("A. single primary + one additional → primary = SERT, additional = [hERG]", () => {
+    const resolution = resolvePrimaryTargetFromTexts(
+      "SERT (SLC6A4 — serotonin transporter) — via the S-enantiomer; hERG (KCNH2) potassium channel — via the R-enantiomer",
+      "Acute: increased synaptic serotonin. Parallel off-target (R-enantiomer): hERG blockade → delayed ventricular repolarisation.",
+      ["sert", "herg"]
+    );
+    expect(resolution.primaryTargetId).toBe("sert");
+    expect(resolution.basis).toBe("undisputed-primary");
+    expect(resolution.demotedPrimaryFieldTargetIds).toEqual(["herg"]);
+  });
+
+  /** 3K-B — Multiple additional targets (real citalopram data). */
+  test("B. multiple additional targets: primary = SERT; 5-HT1A/5-HT2C/5-HT7/hERG all remain additional", () => {
+    const chain = getDrugKnowledgeChain("citalopram")!;
+    const view = buildKnowledgeChainView(chain);
+    expect(view.primaryTarget!.targetId).toBe("sert");
+    expect(view.additionalTargets.map((r) => r.key)).toEqual([
+      "target-5ht1a",
+      "target-5ht2c",
+      "target-5ht7",
+      "target-herg",
+    ]);
+  });
+
+  /**
+   * 3K-C — Missing primary: NEVER infer targetA as primary.
+   */
+  test("C. missing primary → primaryTarget = null, additional = [targetA, targetB], never inferred", () => {
+    const resolution = resolvePrimaryTargetFromTexts(
+      "Target A (transporter X) and Target B (transporter Y), balanced from dose 1",
+      "Acute: dual action.",
+      ["targetA", "targetB"]
+    );
+    expect(resolution.primaryTargetId).toBeNull();
+    expect(resolution.basis).toBe("no-single-primary");
+    expect(resolution.primaryFieldCandidateIds).toEqual(["targetA", "targetB"]);
+    // The view renders the explicit missing state — not a promoted target.
+    const chain = getDrugKnowledgeChain("duloxetine")!;
+    const view = buildKnowledgeChainView(chain);
+    expect(view.primaryTarget).toBeNull();
+    expect(view.path.some((n) => n.role === "target")).toBe(false);
+    expect(view.path.some((n) => n.role === "missing-primary")).toBe(true);
+  });
+
+  /**
+   * 3K-D — Duplicate identity: the same logical target can never
+   * occupy the primary node AND an additional row.
+   */
+  test("D. duplicate identity → one primary representation, no duplicate secondary representation", () => {
+    for (const slug of ALL_SLUGS) {
+      const view = buildKnowledgeChainView(getDrugKnowledgeChain(slug)!);
+      const primaryId = view.primaryTarget?.targetId;
+      if (primaryId) {
+        expect(view.additionalTargets.some((r) => r.key === `target-${primaryId}`)).toBe(false);
+      }
+      const keys = [
+        ...view.path.filter((n) => n.role === "target").map((n) => n.key),
+        ...view.additionalTargets.map((r) => r.key),
+      ];
+      expect(new Set(keys).size).toBe(keys.length);
+    }
+  });
+
+  /**
+   * 3K-E — Array-order independence (MANDATORY). Shuffling the drug's
+   * receptors array (the source of additional targets) can never change
+   * the primary-target resolution: the resolver reads only the
+   * molecularTarget + effect texts and the primary-field candidate ids.
+   */
+  test("E. array-order independence: shuffled receptors never change the primary target", () => {
+    const permutations = <T,>(items: T[]): T[][] => {
+      if (items.length <= 1) return [items];
+      const out: T[][] = [];
+      for (let i = 0; i < items.length; i++) {
+        for (const rest of permutations([...items.slice(0, i), ...items.slice(i + 1)])) {
+          out.push([items[i], ...rest]);
+        }
+      }
+      return out;
+    };
+
+    for (const slug of ALL_SLUGS) {
+      const drug = drugs.find((d) => d.slug === slug)!;
+      const chain = getDrugKnowledgeChain(slug)!;
+      const baseline = chain.drug.primaryTarget;
+      const candidateIds = chain.drug.targetEdges
+        .filter((e) => e.fromPrimaryTargetField && !(e.actions.length === 1 && e.actions[0] === "negligible-affinity"))
+        .map((e) => e.targetId);
+
+      // Every ordering of the receptor strings (up to 5! = 120 — cheap).
+      const shuffles = permutations(drug.receptors).slice(0, 240);
+      expect(shuffles.length).toBeGreaterThan(0);
+      for (const receptors of shuffles) {
+        const resolution = resolvePrimaryTarget(
+          { ...drug, receptors },
+          candidateIds
+        );
+        expect(resolution).toEqual(baseline);
+      }
+    }
+  });
+
+  /**
+   * 3K-F — Secondary effect isolation: an additional target's effect
+   * (hERG → Ion-channel blockade) can never occupy the primary Effect
+   * node; the primary effect stays the primary target's own action.
+   */
+  test("F. secondary effect isolation: hERG's ion-channel blockade stays secondary; primary effect stays Reuptake inhibition", () => {
+    const view = buildKnowledgeChainView(getDrugKnowledgeChain("citalopram")!);
+    const effectNodes = view.path.filter((n) => n.role === "effect");
+    expect(effectNodes.length).toBe(1);
+    expect(effectNodes[0].label).toBe("Reuptake inhibition");
+    expect(effectNodes[0].label).not.toContain("Ion-channel blockade");
+    const herg = view.additionalTargets.find((r) => r.key === "target-herg")!;
+    expect(herg.name).toBe("hERG / KCNH2");
+    // hERG's own relationship carries its own effect — in the additional list.
+    expect(herg.relationship).toBe("Ion-channel blockade");
+  });
+
+  /**
+   * 3K-G — Rendering contract for the Citalopram regression: exactly
+   * one PRIMARY TARGET node; all additional targets separate; never a
+   * second PRIMARY TARGET.
+   */
+  test("G. citalopram rendering: exactly one PRIMARY TARGET (SERT), hERG never a second primary", () => {
+    const view = buildKnowledgeChainView(getDrugKnowledgeChain("citalopram")!);
+    const roles = view.path.map((n) => n.role);
+    expect(roles).toEqual(["medication", "class", "mechanism", "target", "effect"]);
+    expect(view.path[3].roleLabel).toBe("Primary target");
+    expect(view.path[3].label).toBe("SERT");
+    expect(view.path[3].sublabel).toBe("Serotonin transporter");
+    expect(view.path[4].roleLabel).toBe("Effect");
+    expect(view.path[4].label).toBe("Reuptake inhibition");
+    // The forbidden structure — PRIMARY TARGET → SERT → PRIMARY TARGET → hERG —
+    // is now impossible: only one node can carry the Primary target role.
+    expect(view.path.filter((n) => n.roleLabel === "Primary target").length).toBe(1);
+    expect(view.path.filter((n) => n.role === "target").length).toBe(1);
+    // hERG/KCNH2 renders below, as an additional target row.
+    const herg = view.additionalTargets.find((r) => r.key === "target-herg")!;
+    expect(herg.kindLabel).toBe("Ion channel");
+    expect(herg.title).toContain("R-enantiomer");
+  });
+});
+
+describe("knowledge chain — all 12 canonical medications audit (Phase 3)", () => {
+  /**
+   * 3J — the per-drug primary-target audit, pinned from the verified
+   * resolution of the locked canonical data. Any change to the data's
+   * target statements or to the resolver's semantics breaks this table.
+   *
+   * Drugs with no single primary target are NOT errors — the locked data
+   * names several co-equal targets without ranking them, and the chain
+   * honestly renders the explicit no-single-primary state (flagged for
+   * medical review rather than silently re-ranked).
+   */
+  const AUDIT: Record<
+    string,
+    {
+      primaryTargetId: string | null;
+      basis: PrimaryTargetBasis;
+      candidates: string[];
+      demoted: string[];
+    }
+  > = {
+    sertraline:    { primaryTargetId: "sert", basis: "undisputed-primary", candidates: ["sert"], demoted: [] },
+    fluoxetine:    { primaryTargetId: "sert", basis: "undisputed-primary", candidates: ["sert"], demoted: [] },
+    escitalopram:  { primaryTargetId: "sert", basis: "undisputed-primary", candidates: ["sert"], demoted: [] },
+    paroxetine:    { primaryTargetId: "sert", basis: "undisputed-primary", candidates: ["sert"], demoted: ["m1-muscarinic"] },
+    citalopram:    { primaryTargetId: "sert", basis: "undisputed-primary", candidates: ["sert"], demoted: ["herg"] },
+    clomipramine:  { primaryTargetId: "sert", basis: "explicit-primary-statement", candidates: ["sert"], demoted: ["net", "alpha1-adrenergic", "m1-muscarinic", "cardiac-na-channel"] },
+    fluvoxamine:   { primaryTargetId: null, basis: "no-single-primary", candidates: ["sert", "sigma-1"], demoted: [] },
+    venlafaxine:   { primaryTargetId: null, basis: "no-single-primary", candidates: ["sert", "net"], demoted: ["dat"] },
+    duloxetine:    { primaryTargetId: null, basis: "no-single-primary", candidates: ["sert", "net"], demoted: [] },
+    bupropion:     { primaryTargetId: null, basis: "no-single-primary", candidates: ["net", "dat", "alpha3beta4-nachr", "alpha4beta2-nachr"], demoted: [] },
+    mirtazapine:   { primaryTargetId: null, basis: "no-single-primary", candidates: ["5ht2a", "5ht2c", "5ht3", "alpha2-adrenergic", "h1-histamine"], demoted: [] },
+    amitriptyline: { primaryTargetId: null, basis: "no-single-primary", candidates: ["sert", "net"], demoted: ["alpha1-adrenergic", "m1-muscarinic", "cardiac-na-channel"] },
+  };
+
+  test("every medication resolves to the audited primary-target outcome", () => {
+    expect(ALL_SLUGS.sort()).toEqual(Object.keys(AUDIT).sort());
+    for (const slug of ALL_SLUGS) {
+      const chain = getDrugKnowledgeChain(slug)!;
+      const p = chain.drug.primaryTarget;
+      const expected = AUDIT[slug];
+      if (p.primaryTargetId !== expected.primaryTargetId) {
+        throw new Error(`${slug}: expected primary ${expected.primaryTargetId}, got ${p.primaryTargetId}`);
+      }
+      expect(p.basis).toBe(expected.basis);
+      expect(p.primaryFieldCandidateIds).toEqual(expected.candidates);
+      expect(p.demotedPrimaryFieldTargetIds).toEqual(expected.demoted);
+    }
+  });
+
+  test("for every medication: mechanism connects, primary never comes from a demoted/additional target, no duplication", () => {
+    for (const slug of ALL_SLUGS) {
+      const chain = getDrugKnowledgeChain(slug)!;
+      const view = buildKnowledgeChainView(chain);
+      const p = chain.drug.primaryTarget;
+
+      // 1. exactly one primary target OR explicit missing-primary state.
+      expect(p.primaryTargetId === null || typeof p.primaryTargetId === "string").toBe(true);
+      expect(view.primaryTarget === null || view.primaryTarget.targetId === p.primaryTargetId).toBe(true);
+
+      // 2. mechanism is correctly connected (the mechanism node carries
+      //    the verbatim primary-target statement as its tooltip).
+      const mechanismNode = view.path.find((n) => n.role === "mechanism")!;
+      expect(mechanismNode.title).toBe(chain.drug.mechanism.primaryTargetText);
+
+      // 3. the primary target is never taken from an additional target:
+      //    it is either null or a surviving primary-field candidate.
+      if (p.primaryTargetId !== null) {
+        expect(p.primaryFieldCandidateIds).toContain(p.primaryTargetId);
+        expect(p.demotedPrimaryFieldTargetIds).not.toContain(p.primaryTargetId);
+      }
+
+      // 4. additional targets stay secondary — none renders in the path.
+      const pathTargetIds = view.path.filter((n) => n.role === "target").map((n) => n.key.replace("target-", ""));
+      for (const row of view.additionalTargets) {
+        expect(pathTargetIds).not.toContain(row.key.replace("target-", ""));
+      }
+
+      // 5. no target is duplicated across primary/additional (3K-D
+      //    covers it; re-asserted here per medication).
+      const ids = view.additionalTargets.map((r) => r.key);
+      expect(new Set(ids).size).toBe(ids.length);
+
+      // 6. the primary effect remains primary — the Effect node is the
+      //    primary target's action label only.
+      const effectNodes = view.path.filter((n) => n.role === "effect");
+      if (view.primaryTarget) {
+        expect(effectNodes.map((n) => n.key)).toEqual([`effect-${view.primaryTarget.targetId}`]);
+      } else {
+        expect(effectNodes).toEqual([]);
+      }
+
+      // 7. drug-specific target information remains drug-specific:
+      //    citalopram's hERG edge must exist on citalopram only.
+      if (slug === "citalopram") {
+        const herg = view.additionalTargets.find((r) => r.key === "target-herg")!;
+        expect(herg.title).toContain("R-enantiomer");
+      }
+
+      // 8. never a second PRIMARY TARGET node (label integrity).
+      expect(view.path.filter((n) => n.roleLabel === "Primary target").length).toBe(1);
+    }
   });
 });
 
