@@ -27,6 +27,13 @@ import {
   buildTest,
   getPoolStats,
 } from "@/lib/kyp/custom-test/engine";
+import {
+  DIFFICULTY_TIERS,
+  defaultDifficultyForLearnerType,
+  tierDescription,
+  tierLabel,
+  type DifficultySelection,
+} from "@/lib/kyp/custom-test/difficulty";
 import { deriveRequestedCount } from "@/lib/kyp/custom-test/count";
 import { takeRetestRequest } from "@/lib/kyp/custom-test/retest-handoff";
 import {
@@ -132,6 +139,29 @@ export function CustomTestBuilder() {
     () => new Set(drugTaxonomyClasses.map((c) => c.id).slice(0, 1))
   );
   const [count, setCount] = React.useState<number>(20);
+  /* ── Difficulty (Phase 5) — reasoning tier for this test. Defaults
+     from the learner's personalisation profile (learnerType, fetched
+     read-only from the session); signed-out visitors get "all". The
+     choice is a filter over the SAME question pool — it never
+     invents questions and never changes ids. ── */
+  const [difficulty, setDifficulty] = React.useState<DifficultySelection>("all");
+  const difficultyTouched = React.useRef(false);
+  React.useEffect(() => {
+    if (difficultyTouched.current) return;
+    let cancelled = false;
+    fetch("/api/auth/session")
+      .then((r) => (r.ok ? r.json() : { user: null }))
+      .then((data: { user?: { learnerType?: string } | null }) => {
+        if (cancelled || difficultyTouched.current) return;
+        setDifficulty(defaultDifficultyForLearnerType(data?.user?.learnerType));
+      })
+      .catch(() => {
+        /* Signed-out or static deployment — "all" stands. */
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
   const [customCount, setCustomCount] = React.useState<string>("");
   const [cappedNotice, setCappedNotice] = React.useState<string | null>(null);
   const [classNotice, setClassNotice] = React.useState<string | null>(null);
@@ -170,8 +200,8 @@ export function CustomTestBuilder() {
   const resetTriggerRef = React.useRef<HTMLButtonElement>(null);
 
   const stats = React.useMemo(
-    () => getPoolStats([...selected]),
-    [selected]
+    () => getPoolStats([...selected], difficulty),
+    [selected, difficulty]
   );
 
   const selectedCount = selected.size;
@@ -250,7 +280,9 @@ export function CustomTestBuilder() {
       config?.minutes !== undefined && config?.minutes !== null
         ? config.minutes
         : effectiveTimedMinutes;
-    const built = buildTest(slugs, wanted, Date.now() % 2147483647);
+    const built = buildTest(slugs, wanted, Date.now() % 2147483647, {
+      difficulty,
+    });
     setAttempt({
       questions: built.questions,
       answers: built.questions.map(() => null),
@@ -900,6 +932,67 @@ export function CustomTestBuilder() {
                 </div>
               </Reveal>
 
+              {/* Difficulty (Phase 5) — reasoning tier for this test.
+                  A filter over the same reviewed pool: harder reasoning,
+                  never harder vocabulary, never new medical claims. */}
+              <Reveal delay={0.13}>
+                <div className="mt-12">
+                  <p className="text-overline text-muted-foreground">
+                    Reasoning level
+                  </p>
+                  <div
+                    role="radiogroup"
+                    aria-label="Reasoning level"
+                    className="mt-4 flex flex-wrap items-center gap-2"
+                  >
+                    <button
+                      type="button"
+                      role="radio"
+                      aria-checked={difficulty === "all"}
+                      onClick={() => {
+                        difficultyTouched.current = true;
+                        setDifficulty("all");
+                      }}
+                      className={cn(
+                        "rounded-lg border px-4 py-2 text-sm font-medium transition-colors kyp-focus-ring",
+                        difficulty === "all"
+                          ? "border-brand bg-brand-soft/40 text-brand"
+                          : "border-border text-muted-foreground hover:border-brand/30 hover:text-foreground"
+                      )}
+                    >
+                      All levels
+                    </button>
+                    {DIFFICULTY_TIERS.map((tier) => (
+                      <button
+                        key={tier}
+                        type="button"
+                        role="radio"
+                        aria-checked={difficulty === tier}
+                        title={tierDescription(tier)}
+                        onClick={() => {
+                          difficultyTouched.current = true;
+                          setDifficulty(tier);
+                        }}
+                        className={cn(
+                          "rounded-lg border px-4 py-2 text-sm font-medium transition-colors kyp-focus-ring",
+                          difficulty === tier
+                            ? "border-brand bg-brand-soft/40 text-brand"
+                            : "border-border text-muted-foreground hover:border-brand/30 hover:text-foreground"
+                        )}
+                      >
+                        {tierLabel(tier)}
+                      </button>
+                    ))}
+                  </div>
+                  <p className="mt-3 text-xs text-muted-foreground">
+                    {difficulty === "all"
+                      ? "Foundation, Clinical, and Advanced reasoning — the full pool."
+                      : tierDescription(difficulty) +
+                        ". Level filters only — questions, wording, and answers are unchanged."}
+                  </p>
+                </div>
+              </Reveal>
+
               {/* Question count */}
               <Reveal delay={0.14}>
                 <div className="mt-12">
@@ -956,7 +1049,9 @@ export function CustomTestBuilder() {
                   <p className="mt-3 text-xs text-muted-foreground" aria-live="polite">
                     {selectedCount === 0
                       ? "Select at least one medication to see availability."
-                      : `${stats.total} unique questions available for this selection.`}
+                      : difficulty === "all"
+                        ? `${stats.total} unique questions available for this selection.`
+                        : `${stats.total} ${tierLabel(difficulty)}-level questions available for this selection.`}
                   </p>
                 </div>
               </Reveal>
