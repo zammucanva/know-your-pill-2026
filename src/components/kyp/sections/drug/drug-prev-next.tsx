@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
-import { Badge } from "@/components/kyp/ui/badge";
 import { drugs } from "@/lib/kyp/data";
 import type { Drug } from "@/lib/kyp/data";
 import { cn } from "@/lib/utils";

@@ -11,7 +11,7 @@
  */
 
 import { beforeAll, describe, expect, test } from "bun:test";
-import { createHash, createHmac } from "crypto";
+import { createHash } from "crypto";
 import {
   BASE_URL,
   CookieJar,
@@ -28,16 +28,6 @@ const SESSION_COOKIE = "kyp-session";
 
 function sha256hex(value: string): string {
   return createHash("sha256").update(value, "utf8").digest("hex");
-}
-
-function b64url(buf: Buffer): string {
-  return buf.toString("base64url");
-}
-
-function hmacFor(raw: string): string {
-  return b64url(
-    createHmac("sha256", TEST_SESSION_SECRET).update(raw, "utf8").digest()
-  );
 }
 
 function cookieFromJar(jar: CookieJar): string {

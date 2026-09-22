@@ -1,7 +1,6 @@
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
-import { Callout } from "@/components/kyp/ui/callout";
 import { Badge } from "@/components/kyp/ui/badge";
 import type { Drug, DrugContraindication, DrugWarning } from "@/lib/kyp/data";
 import { cn } from "@/lib/utils";

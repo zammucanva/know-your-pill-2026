@@ -1,6 +1,4 @@
 import { Star, FileQuestion } from "lucide-react";
-import { Container } from "@/components/kyp/ui/container";
-import { Section } from "@/components/kyp/ui/section";
 import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
 import { Badge } from "@/components/kyp/ui/badge";
 import type { Drug, ExamFrequency, PYQMetadata } from "@/lib/kyp/data";

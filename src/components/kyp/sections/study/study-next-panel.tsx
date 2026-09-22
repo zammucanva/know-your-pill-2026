@@ -112,7 +112,6 @@ export function StudyNextPanel() {
   const firstTotal = first ? COURSE_OUTLINES[first.slug]?.total ?? 0 : 0;
   const firstPercent = first ? coursePercentComplete(first, firstTotal) : 0;
   const firstIsComplete = Boolean(first?.completedAt);
-  const firstSectionLabel = first?.currentSectionLabel ?? null;
   const otherUnfinished = unfinished.slice(1, 3);
 
   return (

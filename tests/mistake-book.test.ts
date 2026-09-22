@@ -53,10 +53,6 @@ function installWindow(): void {
   (globalThis as Record<string, unknown>).window = { localStorage: storage };
 }
 
-function dropWindow(): void {
-  delete (globalThis as Record<string, unknown>).window;
-}
-
 /* ── Module under test (imported AFTER the window shim) ────────── */
 
 installWindow();

@@ -551,14 +551,6 @@ function resolveTargetsIn(text: string): TargetMatch[] {
   return out;
 }
 
-/** Best single target for a string — the head (pre-parenthesis) region. */
-function resolveTarget(text: string): KnowledgeTarget | null {
-  const head = text.slice(0, Math.max(text.indexOf("("), 0) || text.length);
-  const inHead = resolveTargetsIn(head);
-  if (inHead.length > 0) return inHead[0].target;
-  return resolveTargetsIn(text)[0]?.target ?? null;
-}
-
 function resolveNeurotransmitter(text: string): KnowledgeNeurotransmitter | null {
   const lower = text.toLowerCase();
   for (const nt of knowledgeNeurotransmitters) {

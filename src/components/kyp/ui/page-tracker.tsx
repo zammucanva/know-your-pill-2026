@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { Bookmark } from "lucide-react";
 import { useProgressTracking } from "@/lib/hooks/use-progress";
 import { useBookmarks } from "@/lib/hooks/use-bookmarks";

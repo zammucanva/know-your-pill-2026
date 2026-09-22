@@ -1,4 +1,4 @@
-import { Pill, IndianRupee, Building2, MapPin, ClipboardCheck, MessageSquare, CheckCircle2 } from "lucide-react";
+import { Pill, Building2, MapPin, ClipboardCheck, MessageSquare, CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
