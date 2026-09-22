@@ -1,4 +1,5 @@
 import type { SearchableItem } from "./types";
+import { psychiatrySearchRecords } from "./psychiatry-search-records.generated";
 import { substances } from "./drugs";
 import { drugClassList } from "./classes";
 import { brainRegions } from "./brain";
@@ -251,6 +252,14 @@ export const searchIndex: SearchableItem[] = [
     href: "/#emergency",
     keywords: ["emergency", "red flag", "overdose", "serotonin syndrome", "crisis", "112", "14416", "naloxone", "suicide"],
   },
+
+  // ─── KYP Psychiatry — the 109-note psychiatry curriculum ─────────────
+  // STATIC generated records (client-safe: this index is imported by
+  // client search UI). Regenerate with:
+  //   bun run scripts/generate-psychiatry-search-records.ts
+  // scripts/validate-oxford-library.py verifies freshness against the
+  // canonical notes. KYP-first records; provenance stays in the notes.
+  ...psychiatrySearchRecords,
 ];
 
 export const searchTypeLabels: Record<SearchableItem["type"], string> = {
@@ -265,4 +274,5 @@ export const searchTypeLabels: Record<SearchableItem["type"], string> = {
   pathway: "Pathway",
   clinical: "Clinical Pattern",
   "patient-guide": "Patient Guide",
+  "psychiatry-note": "Psychiatry",
 };

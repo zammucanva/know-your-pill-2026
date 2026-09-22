@@ -3,7 +3,7 @@
  *
  * Each test hashes one locked medical content file and compares it with the
  * recorded baseline (scripts/content-lock-baseline.json). The canonical
- * content counts (12/1/3/78/53) and the medical data-value snapshot are
+ * content counts (12/1/3/78/164) and the medical data-value snapshot are
  * asserted in beforeAll so any drift fails the whole suite.
  */
 
@@ -31,19 +31,21 @@ const baseline: Baseline = existsSync(BASELINE_PATH)
   : { files: {}, counts: { medications: 0, diseases: 0, substances: 0, mcqs: 0, searchEntries: 0 } };
 
 beforeAll(async () => {
-  // Canonical content counts must remain exactly 12/1/3/78/53.
-  // (53 search entries = 46 original + 7 derived taxonomy collection
-  // entries — Psychiatry, Antidepressants, SSRIs, SNRIs, NDRIs, NaSSAs,
-  // TCAs. Navigation metadata only; no medical data values changed —
-  // provable via scripts/medical-data-snapshot.ts, where the drugs /
-  // diseases / substancePages / categories hashes are byte-identical to
-  // the pre-taxonomy baseline.)
+  // Canonical content counts must remain exactly 12/1/3/78/164.
+  // (164 search entries = 46 original + 7 derived taxonomy collection
+  // entries + 111 KYP Psychiatry records — hub + library + 109 note
+  // entries derived from the canonical note corpus. Navigation metadata
+  // only; no medical data values changed — provable via
+  // scripts/medical-data-snapshot.ts, where the drugs / diseases /
+  // substancePages / categories hashes are byte-identical to the
+  // pre-psychiatry baseline, and the original 53 search entries are
+  // prefix-preserved in the array.)
   expect(baseline.counts).toEqual({
     medications: 12,
     diseases: 1,
     substances: 3,
     mcqs: 78,
-    searchEntries: 53,
+    searchEntries: 164,
   });
 
   // Independent data-value level proof: the imported medical data objects

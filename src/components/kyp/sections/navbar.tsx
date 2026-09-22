@@ -19,6 +19,7 @@ import { cn } from "@/lib/utils";
  */
 const navLinks = [
   { href: "/learn", label: "Learn" },
+  { href: "/psychiatry", label: "Psychiatry" },
   { href: "/drugs", label: "Medication Library" },
   { href: "/#substances", label: "Substances" },
   { href: "/study", label: "Study Mode" },

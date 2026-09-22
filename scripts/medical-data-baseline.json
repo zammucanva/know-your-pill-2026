@@ -3,14 +3,14 @@
     "drugs": 12,
     "diseases": 1,
     "substancePages": 3,
-    "searchIndex": 53,
+    "searchIndex": 164,
     "categories": 5
   },
   "hashes": {
     "drugs": "dc7db3934e254e9671e37b3a101b74bc935442785eb3dfc67094a3446caec194",
     "diseases": "4d94b6eaa3dfaab3c979d1d39aff8e4e95e391d08267a5192549a82329cc5e8c",
     "substancePages": "2386ac39d82628a2904e3749bd18dda7bf5211610fc3654611b86cef2cffa7ab",
-    "searchIndex": "8467a2be7b23d86b24dc6b6ca3cc7eefeb4907795ec83f7d2ab448dea7aa9760",
+    "searchIndex": "b4e4a01262045666dfb9ca785a1b0695cd46f466edcd63c08410b62492fa851e",
     "categories": "e5eae64654d48da8600310c2c92681a14eea539afcdc6ec232b65f0fbbb20012"
   }
 }

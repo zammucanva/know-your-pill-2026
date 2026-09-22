@@ -70,6 +70,7 @@ const typeIcon: Record<SearchableItem["type"], React.ElementType> = {
   pathway: Route,
   clinical: Stethoscope,
   "patient-guide": BookOpen,
+  "psychiatry-note": Brain,
 };
 
 const typeColor: Record<SearchableItem["type"], string> = {
@@ -84,6 +85,7 @@ const typeColor: Record<SearchableItem["type"], string> = {
   pathway: "text-brand",
   clinical: "text-emergency",
   "patient-guide": "text-success",
+  "psychiatry-note": "text-neural",
 };
 
 export function SearchModal({ open, onOpenChange }: SearchModalProps) {
