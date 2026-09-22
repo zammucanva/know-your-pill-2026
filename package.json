@@ -8,7 +8,6 @@
     "build:export": "GITHUB_PAGES=1 next build --webpack",
     "start": "NODE_ENV=production bun .next/standalone/server.js 2>&1 | tee server.log",
     "lint": "eslint .",
-    "db:push": "prisma db push",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:reset": "prisma migrate reset",
@@ -16,9 +15,10 @@
     "test": "bun test tests/",
     "test:content-lock": "bun scripts/content-lock.ts",
     "osv": "bun scripts/osv-audit.ts",
-    "db:prepare": "bun scripts/prepare-database.ts && prisma db push",
+    "db:prepare": "bun scripts/prepare-database.ts && bunx prisma migrate deploy",
     "typecheck": "tsc --noEmit",
-    "test:security": "bun test tests/security.test.ts tests/privacy.test.ts tests/idor.test.ts"
+    "test:security": "bun test tests/security.test.ts tests/privacy.test.ts tests/idor.test.ts",
+    "db:deploy": "bunx prisma migrate deploy"
   },
   "dependencies": {
     "@prisma/client": "^6.11.1",

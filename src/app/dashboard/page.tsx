@@ -394,9 +394,9 @@ export default function DashboardPage() {
                         value={newPassword}
                         onChange={(e) => setNewPassword(e.target.value)}
                         required
-                        minLength={6}
+                        minLength={8}
                         autoComplete="new-password"
-                        placeholder="At least 6 characters"
+                        placeholder="At least 8 characters"
                         className="mt-1 h-11 rounded-xl"
                       />
                     </div>
@@ -410,7 +410,7 @@ export default function DashboardPage() {
                         value={confirmPassword}
                         onChange={(e) => setConfirmPassword(e.target.value)}
                         required
-                        minLength={6}
+                        minLength={8}
                         autoComplete="new-password"
                         className="mt-1 h-11 rounded-xl"
                       />

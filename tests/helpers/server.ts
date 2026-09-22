@@ -31,7 +31,9 @@ process.env.DATABASE_URL = TEST_DB_URL;
 let serverProc: ReturnType<typeof spawn> | null = null;
 let serverReady = false;
 
-/** Recreate the test DB from the Prisma schema (fresh, zero rows). */
+/** Recreate the test DB from the VERSIONED Prisma migrations (fresh, zero
+ * rows). Using `migrate deploy` — never `db push` — means every test run
+ * also proves the production migration path works end-to-end. */
 function resetTestDatabase(): void {
   if (existsSync(TEST_DB_PATH)) {
     rmSync(TEST_DB_PATH);
@@ -39,7 +41,7 @@ function resetTestDatabase(): void {
     rmSync(TEST_DB_PATH + "-wal", { force: true });
     rmSync(TEST_DB_PATH + "-shm", { force: true });
   }
-  execSync(`bunx prisma db push --skip-generate`, {
+  execSync(`bunx prisma migrate deploy`, {
     env: { ...process.env, DATABASE_URL: TEST_DB_URL },
     stdio: "pipe",
   });
@@ -193,8 +195,14 @@ export async function createTestUser(
     throw new Error(`signup failed (${res.status}): ${await res.text()}`);
   }
   jar.capture(res);
-  const body = (await res.json()) as { id: string };
-  return { jar, userId: body.id, email, name: `${prefix} ${index}`, password };
+  // The signup response deliberately does NOT include the user id
+  // (anti-enumeration: no field may distinguish new vs existing emails).
+  // Tests that need the id resolve it directly from the test database.
+  const created = await testDb().user.findUnique({ where: { email } });
+  if (!created) {
+    throw new Error(`signup claimed success but user ${email} was not created`);
+  }
+  return { jar, userId: created.id, email, name: `${prefix} ${index}`, password };
 }
 
 export async function loginAndGetJar(

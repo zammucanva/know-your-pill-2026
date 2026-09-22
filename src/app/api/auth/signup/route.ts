@@ -8,23 +8,76 @@ import { logger } from "@/lib/logger";
 export const dynamic = "force-dynamic";
 import { db } from "@/lib/db";
 import bcrypt from "bcryptjs";
-import { createSessionForUser, setSessionCookie } from "@/lib/session";
+import {
+  createSessionForUser,
+  mintDecoySessionToken,
+  SESSION_TTL_SECONDS,
+  setSessionCookie,
+} from "@/lib/session";
 import { isSessionSecretConfigured } from "@/lib/session-secret";
+import { validatePasswordPolicy } from "@/lib/password-policy";
 
 /**
  * POST /api/auth/signup
  *
- * Hardened signup flow:
- *   1. validate name/email/password shape
- *   2. hash password (bcrypt cost 12)
- *   3. create the user
+ * Hardened, ENUMERATION-RESISTANT signup flow:
+ *   1. validate name/email/password shape (identical 400s for every input)
+ *   2. hash password (bcrypt cost 12) — ALWAYS, on both the new-account and
+ *      existing-account paths, so wall-clock timing cannot distinguish them
+ *   3. create the user (duplicate prevention is the database's unique
+ *      constraint; races surface as P2002 and fall into the uniform path)
  *   4. mint a FRESH random server-side session immediately (fixation
  *      resistance — no pre-authentication token is ever carried over)
+ *
+ * ANTI-ENUMERATION CONTRACT (Security Objective 2):
+ *   The response for an email that is ALREADY REGISTERED is byte-shape
+ *   identical to the response for a brand-new account:
+ *     - same status (200)
+ *     - same JSON keys {name, email, learnerType, emailVerified}
+ *       (echoing only values the requester just submitted, plus constants
+ *       a new signup would receive — no user id, no verification state)
+ *     - same Set-Cookie header shape: a format-identical session cookie.
+ *       For existing emails the cookie value is a decoy token (random
+ *       signature) that fails server-side validation, so no account is
+ *       accessible — but the header is indistinguishable client-side.
+ *   The account is NOT created (no duplicate rows, no session row, no
+ *   login), and no error message distinguishes the two cases.
+ *
+ * Residual channel (documented, inherent to auto-login signup): an attacker
+ * who then attempts an authenticated request can notice the session does
+ * not resolve. Closing that fully requires moving account confirmation to
+ * email verification — a product decision outside this remediation.
  *
  * Fails closed with HTTP 500 when SESSION_SECRET is not configured.
  */
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+/** Prisma unique-constraint violation code (lost the race to create). */
+function isUniqueConstraintViolation(error: unknown): boolean {
+  return (
+    typeof error === "object" &&
+    error !== null &&
+    "code" in error &&
+    (error as { code?: unknown }).code === "P2002"
+  );
+}
+
+/** The exact response every signup attempt receives when the email is
+ * already registered — status, body keys, and Set-Cookie shape are all
+ * identical to a successful new-account signup. */
+async function uniformExistingEmailResponse(name: string, normalizedEmail: string) {
+  await setSessionCookie(
+    mintDecoySessionToken(),
+    new Date(Date.now() + SESSION_TTL_SECONDS * 1000)
+  );
+  return NextResponse.json({
+    name,
+    email: normalizedEmail,
+    learnerType: "student",
+    emailVerified: false,
+  });
+}
 
 export async function POST(req: NextRequest) {
   if (!isSessionSecretConfigured()) {
@@ -59,11 +112,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    if (password.length < 8) {
-      return NextResponse.json(
-        { error: "Password must be at least 8 characters" },
-        { status: 400 }
-      );
+    // Unified password policy (8–128) — shared with change/reset.
+    const policy = validatePasswordPolicy(password, { subject: "Password" });
+    if (!policy.ok) {
+      return NextResponse.json({ error: policy.message }, { status: 400 });
     }
 
     // Validate email format
@@ -77,35 +129,51 @@ export async function POST(req: NextRequest) {
     // Normalize email to lowercase
     const normalizedEmail = email.toLowerCase().trim();
 
-    // Check if user already exists
-    const existing = await db.user.findUnique({ where: { email: normalizedEmail } });
-    if (existing) {
-      return NextResponse.json(
-        { error: "An account with this email already exists" },
-        { status: 409 }
-      );
-    }
-
-    // Hash password
+    // Timing equalisation: hash the password BEFORE the existence check so
+    // both paths perform the same expensive bcrypt work. The hash of the
+    // existing-account path is discarded — it exists only to equalise cost.
     const passwordHash = await bcrypt.hash(password, 12);
 
-    // Create user
-    const user = await db.user.create({
-      data: {
-        name,
-        email: normalizedEmail,
-        passwordHash,
-        learnerType: "student",
-        role: "user",
-      },
-    });
+    const existing = await db.user.findUnique({ where: { email: normalizedEmail } });
+    if (existing) {
+      // EXISTING EMAIL — uniform "success-looking" response. No account is
+      // created, no session row exists; the cookie is a format-identical
+      // decoy that can never authenticate. Body echoes only submitted
+      // values plus the constants a fresh signup would receive.
+      return uniformExistingEmailResponse(name, normalizedEmail);
+    }
+
+    // Create user. A concurrent signup racing on the same email trips the
+    // unique constraint (P2002) — caught here and answered with the SAME
+    // uniform response, so duplicates are impossible and the race leaks
+    // nothing.
+    const user: { id: string; name: string; email: string; learnerType: string; emailVerified: boolean } | null =
+      await db.user
+        .create({
+          data: {
+            name,
+            email: normalizedEmail,
+            passwordHash,
+            learnerType: "student",
+            role: "user",
+          },
+        })
+        .then(
+          (created) => created,
+          (error: unknown) => {
+            if (isUniqueConstraintViolation(error)) return null;
+            throw error;
+          }
+        );
+    if (user === null) {
+      return uniformExistingEmailResponse(name, normalizedEmail);
+    }
 
     // Fresh server-side session (opaque signed token, hash persisted)
     const session = await createSessionForUser(user.id);
     await setSessionCookie(session.token, session.expiresAt);
 
     return NextResponse.json({
-      id: user.id,
       name: user.name,
       email: user.email,
       learnerType: user.learnerType,

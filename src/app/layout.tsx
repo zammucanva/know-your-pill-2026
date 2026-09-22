@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/kyp/theme-provider";
 import { ContentProtection } from "@/lib/contentProtection";
 import { imgPath } from "@/lib/kyp/image-path";
+import { CONTENT_SECURITY_POLICY } from "@/lib/csp";
 
 
 export const metadata: Metadata = {
@@ -64,6 +65,21 @@ export default function RootLayout({
       suppressHydrationWarning
 
     >
+      <head>
+        {/*
+          Content-Security-Policy for the GitHub Pages STATIC EXPORT.
+          Pages cannot set HTTP headers, so the policy rides in a meta tag
+          (rendered only in production builds — `next dev` needs eval-capable
+          script handling for HMR). Server mode ALSO sends the identical
+          policy as a response header via next.config.ts — both import the
+          same constant from src/lib/csp.ts so they can never drift.
+          Meta-CSP ignores frame-ancestors (the header channel enforces it,
+          and X-Frame-Options: DENY remains as defense in depth).
+        */}
+        {process.env.NODE_ENV === "production" ? (
+          <meta httpEquiv="Content-Security-Policy" content={CONTENT_SECURITY_POLICY} />
+        ) : null}
+      </head>
       <body
         className="font-sans antialiased"
       >
