@@ -44,6 +44,56 @@ export const RATE_LIMIT_CONFIG = {
   maxLockoutMs: 30 * 60 * 1000, // 30 minutes
 } as const;
 
+/**
+ * SIGNUP abuse throttling (Security Objective: bcrypt abuse protection).
+ *
+ * Signup runs an expensive bcrypt hash (cost 12) on EVERY well-formed
+ * request — known email or not — as its timing-equalisation measure. That
+ * makes the endpoint a CPU-abuse target: an unauthenticated caller can
+ * make the server burn hash cycles at will. These counters throttle the
+ * attempt itself (not failures), BEFORE the bcrypt work.
+ *
+ * Dimensions tracked per signup attempt (LoginAttempt rows, namespaced
+ * so they never collide with login identifiers — login identifiers are
+ * email addresses, which always contain "@"):
+ *   1. per-source   (SIGNUP_IDENTIFIER_HASH, sha256(source)) — rotating
+ *      the submitted email does NOT reset or grow the budget
+ *   2. global       (SIGNUP_IDENTIFIER_HASH, "*") — bounded backstop so
+ *      many forged forwarding-header "sources" cannot bypass entirely
+ *
+ * Enumeration safety: the counters are keyed on the SOURCE only — never
+ * on the submitted email — and the check runs before any user lookup, so
+ * throttling behaviour is identical for registered and unregistered
+ * addresses. A 429 is never an account-existence signal.
+ *
+ * Unknown-source mode: when TRUSTED_PROXY_HEADERS is unset (direct
+ * exposure), every caller shares the "unknown" source bucket. That is
+ * the same accepted property as login throttling in direct-exposure
+ * mode: abuse from one address can throttle the shared bucket, but the
+ * lockout is time-bounded (max 30 minutes) and never permanent.
+ */
+export const SIGNUP_RATE_LIMIT_CONFIG = {
+  /** well-formed signup attempts per source per window */
+  maxAttemptsPerSource: 10,
+  /** well-formed signup attempts across ALL sources per window (backstop) */
+  maxAttemptsGlobal: 300,
+  /** counting window */
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  /** first lockout duration */
+  baseLockoutMs: 10 * 60 * 1000, // 10 minutes
+  /** escalation cap */
+  maxLockoutMs: 30 * 60 * 1000, // 30 minutes
+} as const;
+
+/**
+ * Identifier namespace for signup throttling rows. Login identifiers are
+ * lowercased email addresses (they always contain "@"), so this literal
+ * can never collide with a login dimension.
+ */
+const SIGNUP_IDENTIFIER = "signup";
+
+export const SIGNUP_IDENTIFIER_HASH = hashDimension(SIGNUP_IDENTIFIER);
+
 /** "*" sentinel used for the "any" side of each dimension. */
 const ANY = "*";
 
@@ -255,4 +305,175 @@ export async function recordLoginSuccess(
 /** Test/ops helper — clear all rate-limit rows (never used by auth routes). */
 export async function resetRateLimitState(): Promise<void> {
   await db.loginAttempt.deleteMany({});
+}
+
+// ─── Signup abuse throttling ────────────────────────────────────────────────
+
+/** Prisma unique-constraint violation code (concurrent counter creation). */
+function isUniqueConstraintViolationCode(error: unknown): boolean {
+  return (
+    typeof error === "object" &&
+    error !== null &&
+    "code" in error &&
+    (error as { code?: unknown }).code === "P2002"
+  );
+}
+
+/** The two counter rows a signup attempt maintains (source-keyed only). */
+function signupDimensions(source: string) {
+  const sourceHash = hashDimension(source);
+  return [
+    {
+      identifierHash: SIGNUP_IDENTIFIER_HASH,
+      sourceHash,
+      maxAttempts: SIGNUP_RATE_LIMIT_CONFIG.maxAttemptsPerSource,
+    },
+    {
+      identifierHash: SIGNUP_IDENTIFIER_HASH,
+      sourceHash: ANY,
+      maxAttempts: SIGNUP_RATE_LIMIT_CONFIG.maxAttemptsGlobal,
+    },
+  ];
+}
+
+function isSignupWindowStale(windowStart: Date): boolean {
+  return Date.now() - windowStart.getTime() >= SIGNUP_RATE_LIMIT_CONFIG.windowMs;
+}
+
+function signupLockoutDuration(level: number): number {
+  const escalated =
+    SIGNUP_RATE_LIMIT_CONFIG.baseLockoutMs * Math.pow(2, level);
+  return Math.min(escalated, SIGNUP_RATE_LIMIT_CONFIG.maxLockoutMs);
+}
+
+/**
+ * Check whether a signup attempt from this source is currently allowed.
+ * Runs BEFORE any bcrypt work and before any user lookup — identical for
+ * registered and unregistered emails, so it leaks nothing.
+ */
+export async function checkSignupAllowed(
+  source: string
+): Promise<RateLimitDecision> {
+  const keys = signupDimensions(source);
+  let blockedUntil: Date | null = null;
+
+  for (const key of keys) {
+    const row = await db.loginAttempt.findUnique({
+      where: {
+        identifierHash_sourceHash: {
+          identifierHash: key.identifierHash,
+          sourceHash: key.sourceHash,
+        },
+      },
+    });
+    if (!row) continue;
+    if (row.lockoutUntil && row.lockoutUntil.getTime() > Date.now()) {
+      if (!blockedUntil || row.lockoutUntil > blockedUntil) {
+        blockedUntil = row.lockoutUntil;
+      }
+    }
+  }
+
+  if (blockedUntil) {
+    const retryAfterSeconds = Math.max(
+      1,
+      Math.ceil((blockedUntil.getTime() - Date.now()) / 1000)
+    );
+    return { allowed: false, retryAfterSeconds };
+  }
+  return { allowed: true, retryAfterSeconds: 0 };
+}
+
+/**
+ * Record a signup attempt that is about to consume the expensive resource
+ * (bcrypt). Called immediately after checkSignupAllowed passes — BEFORE
+ * the bcrypt work — so every costly attempt is counted exactly once, on
+ * both the new-account and the existing-email (uniform response) paths.
+ * Blocked (429) attempts are NOT recorded: they never reach the resource.
+ *
+ * Counting is identical for every email, so the counters themselves are
+ * not an account-existence oracle.
+ */
+export async function recordSignupAttempt(
+  source: string
+): Promise<void> {
+  const now = new Date();
+  const keys = signupDimensions(source);
+
+  for (const key of keys) {
+    let existing = await db.loginAttempt.findUnique({
+      where: {
+        identifierHash_sourceHash: {
+          identifierHash: key.identifierHash,
+          sourceHash: key.sourceHash,
+        },
+      },
+    });
+
+    if (!existing) {
+      try {
+        await db.loginAttempt.create({
+          data: {
+            identifierHash: key.identifierHash,
+            sourceHash: key.sourceHash,
+            failureCount: 1,
+            windowStart: now,
+            lastFailureAt: now,
+          },
+        });
+        continue;
+      } catch (error) {
+        // A concurrent attempt from the same source created the row first.
+        // Fall through to the update path so THIS attempt is still counted
+        // (and so a race never surfaces as a 500 to the user).
+        if (!isUniqueConstraintViolationCode(error)) throw error;
+        existing = await db.loginAttempt.findUnique({
+          where: {
+            identifierHash_sourceHash: {
+              identifierHash: key.identifierHash,
+              sourceHash: key.sourceHash,
+            },
+          },
+        });
+        if (!existing) continue; // row vanished (test reset) — nothing to do
+      }
+    }
+
+    // Window expired? Start a fresh window at 1 attempt.
+    if (isSignupWindowStale(existing.windowStart)) {
+      await db.loginAttempt.update({
+        where: { id: existing.id },
+        data: {
+          failureCount: 1,
+          windowStart: now,
+          lastFailureAt: now,
+          escalationLevel:
+            existing.lockoutUntil && existing.lockoutUntil > now
+              ? existing.escalationLevel
+              : Math.max(0, existing.escalationLevel - 1),
+          lockoutUntil: null,
+        },
+      });
+      continue;
+    }
+
+    const attemptCount = existing.failureCount + 1;
+    const data: {
+      failureCount: number;
+      lastFailureAt: Date;
+      lockoutUntil?: Date;
+      escalationLevel?: number;
+    } = { failureCount: attemptCount, lastFailureAt: now };
+
+    if (attemptCount >= key.maxAttempts) {
+      const level = existing.escalationLevel;
+      data.lockoutUntil = new Date(now.getTime() + signupLockoutDuration(level));
+      data.escalationLevel = Math.min(level + 1, 10);
+    }
+
+    await db.loginAttempt.update({
+      where: { id: existing.id },
+      data,
+    });
+  }
 }

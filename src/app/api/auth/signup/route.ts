@@ -16,6 +16,11 @@ import {
 } from "@/lib/session";
 import { isSessionSecretConfigured } from "@/lib/session-secret";
 import { validatePasswordPolicy } from "@/lib/password-policy";
+import {
+  checkSignupAllowed,
+  getClientSource,
+  recordSignupAttempt,
+} from "@/lib/rate-limit";
 
 /**
  * POST /api/auth/signup
@@ -28,6 +33,12 @@ import { validatePasswordPolicy } from "@/lib/password-policy";
  *      constraint; races surface as P2002 and fall into the uniform path)
  *   4. mint a FRESH random server-side session immediately (fixation
  *      resistance — no pre-authentication token is ever carried over)
+ *
+ * BCRYPT ABUSE PROTECTION: the request source is derived server-side and
+ * throttled BEFORE the bcrypt work (per-source budget + bounded global
+ * backstop). The throttle is keyed on the source ONLY — never on the
+ * submitted email — and runs before any user lookup, so it cannot become
+ * an account-existence oracle.
  *
  * ANTI-ENUMERATION CONTRACT (Security Objective 2):
  *   The response for an email that is ALREADY REGISTERED is byte-shape
@@ -128,6 +139,25 @@ export async function POST(req: NextRequest) {
 
     // Normalize email to lowercase
     const normalizedEmail = email.toLowerCase().trim();
+
+    // ── Abuse control BEFORE the expensive bcrypt work ──
+    // The source is derived server-side (never client-supplied) and the
+    // budget is keyed on the source only, so throttling is identical for
+    // registered and unregistered emails — a 429 is never an account signal.
+    const source = getClientSource(req);
+    const signupDecision = await checkSignupAllowed(source);
+    if (!signupDecision.allowed) {
+      return NextResponse.json(
+        { error: "Too many signup attempts. Please try again later." },
+        {
+          status: 429,
+          headers: { "Retry-After": String(signupDecision.retryAfterSeconds) },
+        }
+      );
+    }
+    // Count this attempt BEFORE burning the hash cycles, on every path
+    // that reaches this point (new account AND existing-email uniform).
+    await recordSignupAttempt(source);
 
     // Timing equalisation: hash the password BEFORE the existence check so
     // both paths perform the same expensive bcrypt work. The hash of the

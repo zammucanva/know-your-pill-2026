@@ -184,7 +184,10 @@ export async function createTestUser(
   const password = "correct-password-123";
   const res = await fetch(`${BASE_URL}/api/auth/signup`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      "x-forwarded-for": uniqueSource(),
+    },
     body: JSON.stringify({
       name: `${prefix} ${index}`,
       email,
@@ -229,4 +232,21 @@ export function authed(jar: CookieJar): { Cookie: string } {
 
 export function uniqueEmail(prefix: string): string {
   return `${prefix}-${Date.now()}-${Math.floor(Math.random() * 1e6)}@test.local`;
+}
+
+/**
+ * A unique client source per simulated user.
+ *
+ * The signup endpoint throttles signup attempts per source BEFORE the
+ * bcrypt work (see src/lib/rate-limit.ts). Real signups come from many
+ * distinct addresses (each person registers from their own device), so
+ * test users that should NOT interfere with each other's throttling
+ * budget register from unique sources — exactly like the real world.
+ * Dedicated abuse tests deliberately reuse ONE source to exercise the
+ * limits themselves.
+ */
+let sourceCounter = 0;
+export function uniqueSource(): string {
+  sourceCounter += 1;
+  return `10.239.${Math.floor(sourceCounter / 250) % 250}.${(sourceCounter % 250) + 1}`;
 }

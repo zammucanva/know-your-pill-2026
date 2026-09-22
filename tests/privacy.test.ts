@@ -8,7 +8,7 @@
 
 import { beforeAll, describe, expect, test } from "bun:test";
 import { readFileSync, existsSync } from "fs";
-import { BASE_URL, SERVER_LOG_PATH, TEST_SESSION_SECRET, authed, createTestUser, ensureServer, loginAndGetJar, testDb, uniqueEmail } from "./helpers/server";
+import { BASE_URL, SERVER_LOG_PATH, TEST_SESSION_SECRET, authed, createTestUser, ensureServer, loginAndGetJar, testDb, uniqueEmail, uniqueSource } from "./helpers/server";
 
 const SESSION_COOKIE = "kyp-session";
 
@@ -28,7 +28,10 @@ describe("privacy — responses never expose credentials", () => {
   test("2. signup response has no passwordHash field", async () => {
     const res = await fetch(`${BASE_URL}/api/auth/signup`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "x-forwarded-for": uniqueSource(),
+      },
       body: JSON.stringify({ name: "Priv2", email: uniqueEmail("priv2"), password: "password123" }),
     });
     const body = await res.text();
@@ -68,12 +71,18 @@ describe("privacy — account enumeration resistance", () => {
     const user = await createTestUser("priv", 6);
     const dupRes = await fetch(`${BASE_URL}/api/auth/signup`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "x-forwarded-for": uniqueSource(),
+      },
       body: JSON.stringify({ name: "Dup", email: user.email, password: "password123" }),
     });
     const freshRes = await fetch(`${BASE_URL}/api/auth/signup`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "x-forwarded-for": uniqueSource(),
+      },
       body: JSON.stringify({ name: "Dup", email: uniqueEmail("priv6fresh"), password: "password123" }),
     });
     expect(dupRes.status).toBe(200);

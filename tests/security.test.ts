@@ -24,6 +24,7 @@ import {
   ensureServer,
   loginAndGetJar,
   uniqueEmail,
+  uniqueSource,
   testDb,
 } from "./helpers/server";
 
@@ -130,7 +131,10 @@ describe("auth/session hardening at HTTP level", () => {
   test("13. session cookie is HttpOnly", async () => {
     const res = await fetch(`${BASE_URL}/api/auth/signup`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "x-forwarded-for": uniqueSource(),
+      },
       body: JSON.stringify({ name: "Hdr13", email: uniqueEmail("sec13"), password: "password123" }),
     });
     const setCookies =
@@ -142,7 +146,10 @@ describe("auth/session hardening at HTTP level", () => {
   test("14. session cookie is SameSite=Lax", async () => {
     const res = await fetch(`${BASE_URL}/api/auth/signup`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "x-forwarded-for": uniqueSource(),
+      },
       body: JSON.stringify({ name: "Hdr14", email: uniqueEmail("sec14"), password: "password123" }),
     });
     const setCookies =
@@ -154,7 +161,10 @@ describe("auth/session hardening at HTTP level", () => {
   test("15. session cookie is scoped to Path=/", async () => {
     const res = await fetch(`${BASE_URL}/api/auth/signup`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "x-forwarded-for": uniqueSource(),
+      },
       body: JSON.stringify({ name: "Hdr15", email: uniqueEmail("sec15"), password: "password123" }),
     });
     const setCookies =
@@ -166,7 +176,10 @@ describe("auth/session hardening at HTTP level", () => {
   test("16. session cookie carries an explicit Max-Age", async () => {
     const res = await fetch(`${BASE_URL}/api/auth/signup`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "x-forwarded-for": uniqueSource(),
+      },
       body: JSON.stringify({ name: "Hdr16", email: uniqueEmail("sec16"), password: "password123" }),
     });
     const setCookies =
@@ -271,7 +284,10 @@ describe("rate limiting integration", () => {
     const email = uniqueEmail("sec24");
     const reg = await fetch(`${BASE_URL}/api/auth/signup`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "x-forwarded-for": uniqueSource(),
+      },
       body: JSON.stringify({ name: "Sec24", email, password: "password123" }),
     });
     expect(reg.status).toBe(200);
@@ -617,7 +633,10 @@ describe("hardening misc", () => {
   test("60. Set-Cookie has no Domain attribute (host-only cookie)", async () => {
     const res = await fetch(`${BASE_URL}/api/auth/signup`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "x-forwarded-for": uniqueSource(),
+      },
       body: JSON.stringify({ name: "Sec60", email: uniqueEmail("sec60"), password: "password123" }),
     });
     const setCookies =
@@ -629,7 +648,10 @@ describe("hardening misc", () => {
   test("61. Secure flag present on production session cookies", async () => {
     const res = await fetch(`${BASE_URL}/api/auth/signup`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "x-forwarded-for": uniqueSource(),
+      },
       body: JSON.stringify({ name: "Sec61", email: uniqueEmail("sec61"), password: "password123" }),
     });
     const setCookies =

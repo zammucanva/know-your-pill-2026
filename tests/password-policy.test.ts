@@ -23,6 +23,7 @@ import {
   loginAndGetJar,
   testDb,
   uniqueEmail,
+  uniqueSource,
 } from "./helpers/server";
 import {
   PASSWORD_MAX_LENGTH,
@@ -123,7 +124,7 @@ describe("signup enforces the unified policy", () => {
       name: "Policy Signup",
       email: uniqueEmail("pw-signup-8"),
       password: EIGHT,
-    });
+    }, { "x-forwarded-for": uniqueSource() });
     expect(res.status).toBe(200);
   });
 

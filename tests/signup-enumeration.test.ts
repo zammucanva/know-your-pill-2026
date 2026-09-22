@@ -29,6 +29,7 @@ import {
   loginAndGetJar,
   testDb,
   uniqueEmail,
+  uniqueSource,
 } from "./helpers/server";
 
 const SESSION_COOKIE = "kyp-session";
@@ -47,7 +48,13 @@ async function postSignup(
   const started = Date.now();
   const res = await fetch(`${BASE_URL}/api/auth/signup`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      // Distinct sources model distinct probing clients; the enumeration
+      // assertions below are per-request and independent of the source.
+      // (Dedicated abuse tests exercise the shared-source throttle.)
+      "x-forwarded-for": uniqueSource(),
+    },
     body: JSON.stringify(body),
   });
   const durationMs = Date.now() - started;
