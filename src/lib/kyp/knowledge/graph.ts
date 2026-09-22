@@ -430,6 +430,249 @@ export interface TargetEdge {
   evidence: string[];
 }
 
+/**
+ * An edge whose only action is negligible-affinity — the drug does not
+ * act on that target (bupropion's SERT); it is graph data, not a
+ * primary-target candidate.
+ *
+ * Single canonical definition (imported by the chain view builder — never
+ * duplicated there).
+ */
+export function isNegligibleAffinity(edge: TargetEdge): boolean {
+  return edge.actions.length === 1 && edge.actions[0] === "negligible-affinity";
+}
+
+/* ============================================================
+   Primary-target semantics (Knowledge Chain integrity)
+   ============================================================ */
+
+/** How the single primary target (or its absence) was established. */
+export type PrimaryTargetBasis =
+  /** The data itself tags exactly one target as THE primary ("— PRIMARY target"). */
+  | "explicit-primary-statement"
+  /** Exactly one primary-field target survives the data's own qualifier language. */
+  | "undisputed-primary"
+  /**
+   * The canonical data names several co-equal (or zero) primary-field
+   * targets and singles none of them out — no single primary target
+   * exists, and none may be inferred. Consumers must render the
+   * explicit missing-primary state, never a promoted additional target.
+   */
+  | "no-single-primary";
+
+/**
+ * Semantic resolution of a drug's PRIMARY molecular target.
+ *
+ * THE CONTRACT (Knowledge Chain integrity):
+ *   primaryTargetId is a single id or null — NEVER an array, never
+ *   inferred from array position, render order, or availability.
+ *
+ * DERIVATION (pure, deterministic, order-independent):
+ *   1. Candidates are the targets the drug's own primary field
+ *      (`mechanism.molecularTarget`) names, minus negligible-affinity
+ *      edges (filtered by the caller before the ids are passed in).
+ *   2. The data layer ranks its own relationships in prose, with a
+ *      qualifier vocabulary it uses consistently across all 12 drugs:
+ *        - LIST qualifiers ("off-target", "weak", …) demote the targets
+ *          named AFTER them in the same clause ("plus off-target α1, H1,
+ *          M1 receptors", "weak DAT … at high doses").
+ *        - TAG qualifiers ("— secondary") demote the target named just
+ *          BEFORE them in the same clause.
+ *        - The TAG promoter ("— PRIMARY target") explicitly singles out
+ *          THE primary target (clomipramine's SERT).
+ *   3. Exactly one surviving candidate  → primary (undisputed).
+ *      Exactly one explicitly promoted    → primary (explicit statement).
+ *      Anything else                     → null (no-single-primary).
+ *
+ * The qualifier corpus is `mechanism.molecularTarget` +
+ * `mechanism.effect` — the two fields that describe the drug→target
+ * relationship itself. Summary sentences, mechanism steps, and
+ * pharmacokinetic fields are deliberately excluded: they contextualise
+ * ("CYP2D6 (primary)", "a secondary-amine metabolite") without
+ * ranking the drug's molecular-target relationships, and including
+ * them would misbind qualifiers.
+ */
+export interface PrimaryTargetResolution {
+  /** The single primary target's registry id, or null — never inferred. */
+  primaryTargetId: string | null;
+  basis: PrimaryTargetBasis;
+  /** Primary-field candidates that survived the qualifier language. */
+  primaryFieldCandidateIds: string[];
+  /** Primary-field targets the data's own qualifiers demoted. */
+  demotedPrimaryFieldTargetIds: string[];
+  /** Targets the data itself explicitly tags as THE primary target. */
+  explicitPrimaryTargetIds: string[];
+}
+
+/**
+ * LIST qualifiers — demote targets named AFTER the qualifier inside the
+ * same clause. Every pattern below occurs verbatim in the locked data
+ * layer's molecularTarget / effect fields (audited across all 12 drugs).
+ */
+const LIST_DEMOTER_PATTERNS: RegExp[] = [
+  /\boff-target\b/,
+  /\bweak\b/,
+  /\bnegligible\b/,
+  /\bno clinically meaningful\b/,
+  /\bessentially inactive\b/,
+];
+
+/** TAG qualifiers — demote the target named just BEFORE them. */
+const TAG_DEMOTER_PATTERNS: RegExp[] = [/\bsecondary\b/];
+
+/**
+ * TAG promoter — the data's explicit "— PRIMARY target" statement
+ * (clomipramine). Matched as the full phrase so unrelated uses of the
+ * word "primary" (e.g. "primary pharmacological action" in the steps)
+ * can never fire it.
+ */
+const TAG_PROMOTER_PATTERNS: RegExp[] = [/\bprimary target\b/];
+
+/**
+ * Split a canonical mechanism text into qualifier clauses — sentences
+ * and semicolon-separated segments. Em-dashes are deliberately NOT
+ * separators: the data binds qualifiers through them ("NET (…) —
+ * secondary"), so splitting there would detach a qualifier from its
+ * target.
+ */
+function splitQualifierClauses(text: string): string[] {
+  return text
+    .split(/(?<=[.!?])\s+|;\s*/)
+    .map((clause) => clause.trim())
+    .filter(Boolean);
+}
+
+interface ClauseQualifierAnalysis {
+  demoted: Set<string>;
+  explicitPrimary: Set<string>;
+}
+
+/**
+ * Apply the qualifier vocabulary to one clause. Pure text analysis —
+ * `resolveTargetsIn` supplies the registry targets with positions.
+ */
+function analyseClause(clause: string): ClauseQualifierAnalysis {
+  const lower = clause.toLowerCase();
+  const analysis: ClauseQualifierAnalysis = {
+    demoted: new Set(),
+    explicitPrimary: new Set(),
+  };
+
+  // LIST demoters: every target named after the qualifier, in this clause.
+  for (const pattern of LIST_DEMOTER_PATTERNS) {
+    for (const match of lower.matchAll(pattern.global ? pattern : new RegExp(pattern.source, pattern.flags + "g"))) {
+      const tail = clause.slice(match.index! + match[0].length);
+      for (const m of resolveTargetsIn(tail)) analysis.demoted.add(m.target.id);
+    }
+  }
+
+  // TAG demoters ("— secondary"): the target named nearest before.
+  for (const pattern of TAG_DEMOTER_PATTERNS) {
+    for (const match of lower.matchAll(new RegExp(pattern.source, pattern.flags + "g"))) {
+      const head = clause.slice(0, match.index!);
+      const before = resolveTargetsIn(head);
+      const nearest = before[before.length - 1];
+      if (nearest) analysis.demoted.add(nearest.target.id);
+    }
+  }
+
+  // TAG promoter ("— PRIMARY target"): the target named nearest before.
+  for (const pattern of TAG_PROMOTER_PATTERNS) {
+    for (const match of lower.matchAll(new RegExp(pattern.source, pattern.flags + "g"))) {
+      const head = clause.slice(0, match.index!);
+      const before = resolveTargetsIn(head);
+      const nearest = before[before.length - 1];
+      if (nearest) analysis.explicitPrimary.add(nearest.target.id);
+    }
+  }
+
+  return analysis;
+}
+
+/**
+ * Resolve THE primary molecular target from the drug's own canonical
+ * mechanism texts — the atomic, purely functional core of the
+ * Knowledge Chain's primary-target contract.
+ *
+ * `primaryFieldTargetIds` must be the ids of the drug's
+ * non-negligible, primary-field (`fromPrimaryTargetField`) target
+ * edges — the chain builder supplies them; synthetic tests may supply
+ * any list. The function reads ONLY the two texts plus that list, so
+ * the resolution is structurally independent of receptor-array order
+ * (the array-order-independence guarantee is testable by construction).
+ */
+export function resolvePrimaryTargetFromTexts(
+  molecularTargetText: string,
+  effectText: string,
+  primaryFieldTargetIds: readonly string[]
+): PrimaryTargetResolution {
+  const demoted = new Set<string>();
+  const explicitPrimary = new Set<string>();
+  for (const clause of [
+    ...splitQualifierClauses(molecularTargetText),
+    ...splitQualifierClauses(effectText),
+  ]) {
+    const analysis = analyseClause(clause);
+    for (const id of analysis.demoted) demoted.add(id);
+    for (const id of analysis.explicitPrimary) explicitPrimary.add(id);
+  }
+
+  const candidateIds = primaryFieldTargetIds.filter((id) => !demoted.has(id));
+  const demotedFieldIds = primaryFieldTargetIds.filter((id) => demoted.has(id));
+
+  // 1. Explicit "— PRIMARY target" statement — only when it unambiguously
+  //    singles out one surviving candidate. Conflicting or demoted
+  //    promotions are ignored (fall through to the undisputed rule).
+  const promotedCandidates = candidateIds.filter((id) => explicitPrimary.has(id));
+  if (promotedCandidates.length === 1 && candidateIds.length === 1) {
+    return {
+      primaryTargetId: promotedCandidates[0],
+      basis: "explicit-primary-statement",
+      primaryFieldCandidateIds: candidateIds,
+      demotedPrimaryFieldTargetIds: demotedFieldIds,
+      explicitPrimaryTargetIds: [...explicitPrimary],
+    };
+  }
+
+  // 2. Exactly one surviving candidate → THE primary target.
+  if (candidateIds.length === 1) {
+    return {
+      primaryTargetId: candidateIds[0],
+      basis: "undisputed-primary",
+      primaryFieldCandidateIds: candidateIds,
+      demotedPrimaryFieldTargetIds: demotedFieldIds,
+      explicitPrimaryTargetIds: [...explicitPrimary],
+    };
+  }
+
+  // 3. Several co-equal candidates (or none) → NO single primary target.
+  //    Never infer, never substitute an additional target.
+  return {
+    primaryTargetId: null,
+    basis: "no-single-primary",
+    primaryFieldCandidateIds: candidateIds,
+    demotedPrimaryFieldTargetIds: demotedFieldIds,
+    explicitPrimaryTargetIds: [...explicitPrimary],
+  };
+}
+
+/**
+ * Resolve a drug's primary target against its real chain edges —
+ * convenience wrapper over `resolvePrimaryTargetFromTexts` for callers
+ * that already hold the `Drug` record (tests use it to prove
+ * receptor-array-order independence on cloned, shuffled data).
+ */
+export function resolvePrimaryTarget(
+  drug: Drug,
+  primaryFieldTargetIds: readonly string[]
+): PrimaryTargetResolution {
+  return resolvePrimaryTargetFromTexts(
+    drug.mechanism.molecularTarget,
+    drug.mechanism.effect,
+    primaryFieldTargetIds
+  );
+}
+
 /** A drug → clinical-condition edge. */
 export interface ConditionEdge {
   conditionKey: string;
@@ -449,6 +692,13 @@ export interface SideEffectEdge {
 /** Drug-level slice of the chain (sciences the rows render from). */
 export interface DrugKnowledgeChainDrug {
   targetEdges: TargetEdge[];
+  /**
+   * The drug's single primary molecular target — semantic resolution
+   * (see PrimaryTargetResolution). `primaryTargetId` is an id or null,
+   * NEVER an array: exactly one primary target or an explicit
+   * no-single-primary state.
+   */
+  primaryTarget: PrimaryTargetResolution;
   conditionEdges: ConditionEdge[];
   sideEffectEdges: SideEffectEdge[];
   monitoring: { parameter: string; frequency: string; rationale: string }[];
@@ -742,6 +992,16 @@ export function getDrugKnowledgeChain(slug: string): DrugKnowledgeChain | null {
     (a, b) => targetOrder.get(a.targetId)! - targetOrder.get(b.targetId)!
   );
 
+  /* ── Primary-target semantic resolution (see resolvePrimaryTargetFromTexts) ── */
+  const primaryFieldTargetIds = targetEdges
+    .filter((edge) => edge.fromPrimaryTargetField && !isNegligibleAffinity(edge))
+    .map((edge) => edge.targetId);
+  const primaryTarget = resolvePrimaryTargetFromTexts(
+    drug.mechanism.molecularTarget,
+    drug.mechanism.effect,
+    primaryFieldTargetIds
+  );
+
   /* ── Neurotransmitters ── */
   const nts: { id: string; name: string; abbreviation: string }[] = [];
   const unresolvedNeurotransmitterTexts: string[] = [];
@@ -834,6 +1094,7 @@ export function getDrugKnowledgeChain(slug: string): DrugKnowledgeChain | null {
     genericName: drug.genericName,
     drug: {
       targetEdges,
+      primaryTarget,
       conditionEdges,
       sideEffectEdges,
       monitoring: drug.monitoring.map((m) => ({
