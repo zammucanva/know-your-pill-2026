@@ -1,0 +1,3 @@
+# Prisma migration lock file — do not edit.
+# Bumped when the datasource provider changes.
+provider = "sqlite"
