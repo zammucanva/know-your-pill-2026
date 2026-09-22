@@ -5,6 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
 export const dynamic = "force-dynamic";
 import bcrypt from "bcryptjs";
 import { db } from "@/lib/db";
+import { validatePasswordPolicy } from "@/lib/password-policy";
 import {
   checkLoginAllowed,
   getClientSource,
@@ -32,15 +33,14 @@ import {
  *   - SESSION INVALIDATION: on success ALL of the user's sessions are
  *     revoked, then a brand-new fresh session is minted for the CURRENT
  *     client only — every other device stays logged out.
- *   - Password policy matches signup (minimum 8 characters) plus a maximum
- *     length guard; the new password must differ from the current one.
+ *   - Password policy is the shared 8–128 policy (src/lib/password-policy.ts)
+ *     — identical to signup and reset; plus the new password must differ
+ *     from the current one.
  *
  * Fails closed when SESSION_SECRET is not configured — session resolution
  * (signature validation) cannot succeed without it, so the route always
  * returns 401 before any password work.
  */
-
-const MAX_PASSWORD_LENGTH = 128;
 
 export async function POST(req: NextRequest) {
   const session = await resolveSessionFromCookie();
@@ -102,17 +102,9 @@ export async function POST(req: NextRequest) {
     // Only validate the replacement password after proving control of the
     // current password. This prevents an unauthenticated/wrong-credential
     // request from learning replacement-password policy details.
-    if (newPassword.length < 8) {
-      return NextResponse.json(
-        { error: "New password must be at least 8 characters" },
-        { status: 400 }
-      );
-    }
-    if (newPassword.length > MAX_PASSWORD_LENGTH) {
-      return NextResponse.json(
-        { error: "New password must be at most 128 characters" },
-        { status: 400 }
-      );
+    const policy = validatePasswordPolicy(newPassword, { subject: "New password" });
+    if (!policy.ok) {
+      return NextResponse.json({ error: policy.message }, { status: 400 });
     }
     if (newPassword === currentPassword) {
       return NextResponse.json(
