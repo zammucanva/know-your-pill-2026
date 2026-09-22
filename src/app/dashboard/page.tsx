@@ -84,6 +84,15 @@ export default function DashboardPage() {
     async function load() {
       try {
         const sessionRes = await fetch("/api/auth/session");
+        // Static deployments (GitHub Pages) have no API routes — the
+        // session endpoint 404s with an HTML page that would fail
+        // .json() parsing and fall through to a fake empty dashboard.
+        // Treat any non-OK response exactly like "not logged in":
+        // go to /welcome, which offers the login/signup path.
+        if (!sessionRes.ok) {
+          router.push("/welcome");
+          return;
+        }
         const sessionData = await sessionRes.json();
         if (!sessionData.user) {
           router.push("/welcome");
