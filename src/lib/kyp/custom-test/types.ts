@@ -12,7 +12,6 @@
  */
 
 import type { Drug } from "@/lib/kyp/data/types";
-import { anchoredDrugHref } from "@/lib/kyp/drug-course-sections";
 
 /** Source attribution shown in the runner and review screens. */
 export interface QuestionSource {

@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
 import { useGuidedLearning } from "@/components/kyp/ui/guided-learning-toggle";
 import type { PatientGuide } from "@/lib/kyp/patient/types";

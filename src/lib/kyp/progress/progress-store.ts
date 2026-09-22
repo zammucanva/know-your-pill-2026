@@ -689,7 +689,6 @@ function migrateLegacy(): void {
     if (!completed || typeof completed !== "object") return;
 
     const data = cache ?? emptyProgress();
-    let changed = false;
     for (const [slug, sections] of Object.entries(completed)) {
       if (!Array.isArray(sections)) continue;
       const existing = data.courses[slug];
@@ -697,7 +696,6 @@ function migrateLegacy(): void {
         for (const s of sections) {
           if (!existing.completedSections.includes(s)) {
             existing.completedSections.push(s);
-            changed = true;
           }
         }
       } else {
@@ -714,7 +712,6 @@ function migrateLegacy(): void {
           quiz: emptyQuizStats(),
           completedAt: null,
         };
-        changed = true;
       }
     }
     // The migrated state becomes the store state, whether or not

@@ -634,3 +634,23 @@ Work Log:
 Stage Summary:
 - VALIDATION: npx tsc --noEmit = 0 errors; npm run lint = 0 errors; bun test = 324 pass / 0 fail; content-lock = 32/32 file hashes PASS + counts MATCH; medical-data-snapshot = MEDICAL DATA UNCHANGED; next build = success (34/34 pages incl. all 12 drug pages SSG); GITHUB_PAGES=1 export build = success.
 - Medical content integrity proven at BOTH the file-byte level (content lock) and the data-value level (snapshot) — only new presentation-layer files + component wiring changed.
+
+---
+Task ID: kyp-phase2-repo-cleanup
+Agent: Main agent (Super Z)
+Task: KYP Phase 2 — proof-based dead code / clutter cleanup (branch codex/kyp-repo-cleanup from fc16102).
+
+Work Log:
+- Forensic inventory built BEFORE any deletion: zero-importer analysis (alias + relative specifier forms from every tracked file), production-entry reachability graph (src/app conventional files + live scripts + configs), precise runtime asset reference scan (src/ only), dependency importer audit, CSS class usage scan with dynamic-construction guard, tsc --noUnusedLocals diagnostic pass (read-only; no compiler config change).
+- Prior chore/dead-code-cleanup branch (a0826c5) verified already merged into main — src/ tree confirmed clean: 0 unreachable modules.
+- DELETED 18 files with recorded proof (zero refs / zero runtime refs / not content-locked): 3 public/downloads theme-backup tarballs (10MB, shipped publicly on Pages), 5 unreferenced images (barbiturate-ai.png, cannabis-ai.png, logo-navy.png, med-library.png, logo-navy-64.png), 2 remediation-v3 baseline artifacts (v3-baseline-copy.json, v3-baseline-checksums.txt), 7 obsolete ad-hoc scripts (5 test-*.ts localhost smoke scripts using 7-char passwords that violate the current min-8 policy, check-users.ts user-email dumper, verify-db.ts role-test checker), tailwind.config.ts (dead config: Tailwind v4 CSS-first via @import "tailwindcss", no @config directive anywhere, content globs pointed at non-existent top-level dirs).
+- DEPENDENCIES: removed vaul (zero imports anywhere) and tailwindcss-animate (only consumer was the dead tailwind.config.ts; v4 uses tw-animate-css). bun.lock regenerated; install also corrected a pre-existing lockfile inconsistency (prisma listed under wrong section).
+- CSS: removed 6 provably-unused custom rules from globals.css (.kyp-container + media queries, .kyp-glass, .kyp-divider, .kyp-hero-glow + ::before, .kyp-float) and 2 orphaned keyframes (kyp-spin, kyp-float) + reduced-motion selector entry. Zero dynamic kyp-${} construction patterns verified first.
+- CODE: removed 53 unused imports and 17 unused local declarations (incl. dead helpers rankResult, resolveTarget, hmacFor, dropWindow, b64url and the vestigial changed flag in progress-store migration) — every initializer verified side-effect-free before removal. Locked files never touched.
+- RETAINED WITH DOCUMENTED REASON: LucideIcon import in locked disease-types.ts and substances import in locked search-index.ts (would change content-lock hashes — flagged for authorized medical-content governance); scripts/medical-data-snapshot.ts unused destructure h (governance script); 9 artwork generator scripts + z-ai-web-dev-sdk (provenance of shipped artwork); create-password-reset.ts (operational utility documented in code comments); .zscripts/* + Caddyfile + mini-services/.gitkeep (sandbox platform infra); eslint.config.mjs rule disables (lint policy — out of Phase 2 scope by rule).
+- VERIFICATION (all 10 gates PASS on codex/kyp-repo-cleanup): install --frozen-lockfile, prisma generate, osv (0 production advisories), typecheck, lint (0 errors / 5 pre-existing warnings), content-lock 32/32 with counts MATCH (12 medications / 1 diseases / 3 substances / 78 MCQs / 53 search entries), build, 549/549 tests (14507 expects, 26 files — identical count to Phase 1), static export, medical-data snapshot UNCHANGED.
+- Export inventory verified: 40 HTML routes, all 12 drug pages + 5 class + 3 substance + 1 disease + full app surface; zero API routes in export; deleted artifacts absent; all internal links resolve (5 checker hits were ?class= query-string false positives).
+- Net diff: 18 deletions + 50 modifications, +18/-1105 lines.
+
+Stage Summary:
+- Phase 2 complete: repository-wide forensic cleanup with per-item dependency/reference proof, medical content byte-identical, all gates green, no test/compiler/lint weakening. Stacked PR against codex/kyp-security-remediation-final (PR #19) so the diff shows ONLY cleanup work.

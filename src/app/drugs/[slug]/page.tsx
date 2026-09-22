@@ -161,17 +161,6 @@ export default async function DrugPage({ params }: PageProps) {
 
   // Helper: find quiz that should appear after a given section
   const quizAfter = (sectionId: string) => quizzes.find((q) => q.afterSectionId === sectionId);
-  // Helper: find lesson by section ID
-  const lessonForSection = (sectionId: string) => lessons.find((l) => l.sectionIds.includes(sectionId));
-  // Helper: find checkpoint for a lesson (the last section of each lesson gets a checkpoint)
-  const isLastInSection = (sectionId: string) => {
-    for (const lesson of lessons) {
-      if (lesson.sectionIds[lesson.sectionIds.length - 1] === sectionId) {
-        return lesson;
-      }
-    }
-    return null;
-  };
 
   return (
     <div className="flex min-h-screen flex-col">

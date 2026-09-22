@@ -6,7 +6,6 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
 import { medicationClasses, categories, drugs } from "@/lib/kyp/data";
-import { cn } from "@/lib/utils";
 
 export function MedicationLibrarySection() {
   return (

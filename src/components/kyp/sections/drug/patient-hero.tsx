@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { Pill, AlertTriangle, Clock, ShieldCheck, Star } from "lucide-react";
 import { Badge } from "@/components/kyp/ui/badge";
 import { useGuidedLearning } from "@/components/kyp/ui/guided-learning-toggle";
@@ -29,7 +28,6 @@ interface HeroCopyProps {
 export function HeroCopy({ drug, guide }: HeroCopyProps) {
   const mode = useGuidedLearning((s) => s.mode);
   const isPatient = mode === "patient" && guide !== undefined;
-  const drugClass = drugClasses[drug.drugClass];
 
   if (!isPatient) {
     // Medical variant — identical to the canonical hero copy.

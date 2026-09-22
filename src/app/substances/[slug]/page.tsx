@@ -5,7 +5,6 @@ import Image from "next/image";
 
 import { Navbar } from "@/components/kyp/sections/navbar";
 import { Footer } from "@/components/kyp/sections/footer";
-import { EmergencySection } from "@/components/kyp/sections/emergency-section";
 import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";

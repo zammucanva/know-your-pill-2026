@@ -5,7 +5,6 @@ import { Globe, MapPin, Stethoscope } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
-import { Callout } from "@/components/kyp/ui/callout";
 import type { Drug } from "@/lib/kyp/data";
 import { cn } from "@/lib/utils";
 

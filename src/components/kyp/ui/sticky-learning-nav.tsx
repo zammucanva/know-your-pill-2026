@@ -149,7 +149,7 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
     [items, mode]
   );
 
-  const { activeId, completedIds, progress, completedCount, totalCount, remainingCount, toggleComplete } =
+  const { activeId, completedIds, completedCount, totalCount, toggleComplete } =
     useStickyNav(displayItems, drugSlug, items);
   const [mobileOpen, setMobileOpen] = React.useState(false);
 

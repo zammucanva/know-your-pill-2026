@@ -3,7 +3,6 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { Callout } from "@/components/kyp/ui/callout";
-import { Badge } from "@/components/kyp/ui/badge";
 import type { Drug, DrugComparisonTable } from "@/lib/kyp/data";
 import { cn } from "@/lib/utils";
 
@@ -44,7 +43,6 @@ export function DrugComparisonTables({ drug }: DrugComparisonTablesProps) {
 }
 
 function ComparisonTable({ table }: { table: DrugComparisonTable }) {
-  const comparisonDrugCount = table.rows[0]?.comparisons.length ?? 0;
   const comparisonDrugs = table.rows[0]?.comparisons.map((c) => c.drug) ?? [];
 
   return (

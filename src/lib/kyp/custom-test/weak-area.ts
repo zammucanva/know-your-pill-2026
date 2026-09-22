@@ -21,12 +21,7 @@
  */
 
 import type { KypProgressData } from "@/lib/kyp/progress/progress-store";
-import {
-  rollupByClass,
-  recentAccuracy,
-  MIN_TOPIC_SAMPLE,
-  RECENT_WINDOW,
-} from "@/lib/kyp/analytics/topic-stats";
+import { rollupByClass, MIN_TOPIC_SAMPLE, RECENT_WINDOW } from "@/lib/kyp/analytics/topic-stats";
 import { drugs } from "@/lib/kyp/data/drugs/index";
 
 /** Overall accuracy below which a class is worth drilling. */

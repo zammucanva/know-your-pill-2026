@@ -145,10 +145,6 @@ export default async function DrugClassPage({
   const categoryName = ancestry?.category.name ?? "Psychiatry";
   const familyName = ancestry?.family.name ?? "Antidepressants";
   const otherClasses = drugTaxonomyClasses.filter((c) => c.id !== cls.id);
-  const classQuestionCount = cls.medications.reduce(
-    (sum, m) => sum + (m.microQuizzes?.length || 0),
-    0
-  );
   // Real availability for a class test — computed from the same
   // deterministic engine the Custom Test builder uses (build-time,
   // server-side; the number shown is the real unique pool size).

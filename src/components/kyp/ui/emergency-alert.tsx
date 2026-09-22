@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import { motion } from "framer-motion";
 import { Phone, AlertTriangle } from "lucide-react";
 import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
