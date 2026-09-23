@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { Lightbulb } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { MdBlock } from "@/lib/oxford/types";
 import { parseInline } from "@/lib/oxford/markdown";
@@ -10,9 +11,97 @@ import { parseInline } from "@/lib/oxford/markdown";
  * design tokens. Bold, italics, links, tables, lists, quotes and
  * sub-headings — exactly the structures the canonical notes use.
  *
+ * The lesson polish adds two dedicated clinical-case treatments on top
+ * of the plain structures (the note text itself is never rewritten):
+ *   - Case openers: `**Case N: title** body` paragraphs and `### Case N:
+ *     title` headings render with a case eyebrow + serif title.
+ *   - Teaching points: `*Teaching points: ...*` paragraphs render as a
+ *     bordered teaching callout.
+ *
  * No external markdown dependency: the corpus format is a fixed,
  * validated subset (see src/lib/oxford/markdown.ts).
  */
+
+/* ─── Case / teaching-point matchers (fixed corpus subset) ─────────── */
+
+/** `**Case 1: the title** rest of the paragraph` → structured opener. */
+function caseIntroMatch(text: string): { label: string; title: string; body: string } | null {
+  const m = text.match(/^\*\*(Case\s+\d+)\s*[::]\s*(.*?)\*\*([\s\S]*)$/);
+  if (!m) return null;
+  return { label: m[1], title: m[2].trim(), body: m[3].trim() };
+}
+
+/** `### Case 1: the title` heading text → structured case heading. */
+function caseHeadingMatch(text: string): { label: string; title: string } | null {
+  const m = text.match(/^(Case\s+\d+)\s*[::]\s*(.*)$/i);
+  if (!m) return null;
+  return { label: m[1], title: m[2].trim() };
+}
+
+/** `*Teaching points: ...*` / `**Teaching points:** ...` → callout body. */
+function teachingPointsMatch(text: string): string | null {
+  const m = text.match(/^[*_]{1,2}\s*Teaching points?\s*[::]\s*/i);
+  if (!m) return null;
+  let rest = text.slice(m[0].length);
+  // The corpus wraps the whole remark in emphasis — strip the closing
+  // marker so the callout can apply its own (non-italic) typography.
+  rest = rest.replace(/[*_]+\s*$/, "");
+  return rest;
+}
+
+/* ─── Clinical case treatments ─────────────────────────────────────── */
+
+function CaseIntro({ label, title, body }: { label: string; title: string; body: string }) {
+  return (
+    <figure className="my-6 rounded-xl border border-brand/25 bg-brand/[0.03] p-5">
+      <figcaption className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
+        <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-brand">
+          {label}
+        </span>
+        {title && (
+          <span className="font-serif text-[17px] font-semibold leading-snug tracking-tight text-foreground">
+            {title}
+          </span>
+        )}
+      </figcaption>
+      {body && (
+        <div className="mt-2 text-[15px] leading-[1.7] text-muted-foreground">
+          <InlineText text={body} />
+        </div>
+      )}
+    </figure>
+  );
+}
+
+function CaseHeading({ label, title }: { label: string; title: string }) {
+  return (
+    <div className="mt-7 flex flex-wrap items-baseline gap-x-2.5 gap-y-1 border-b border-brand/20 pb-2.5">
+      <span className="rounded-md bg-brand/10 px-2 py-0.5 text-[11px] font-bold uppercase tracking-[0.12em] text-brand">
+        {label}
+      </span>
+      {title && (
+        <span className="font-serif text-[17px] font-semibold leading-snug tracking-tight text-foreground">
+          {title}
+        </span>
+      )}
+    </div>
+  );
+}
+
+function TeachingPoints({ text }: { text: string }) {
+  return (
+    <aside className="my-5 rounded-lg border-l-2 border-brand/50 bg-brand/[0.04] px-4 py-3">
+      <p className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.12em] text-brand">
+        <Lightbulb className="h-3.5 w-3.5" aria-hidden /> Teaching points
+      </p>
+      <p className="mt-1.5 text-sm leading-[1.7] text-foreground/80">
+        <InlineText text={text} />
+      </p>
+    </aside>
+  );
+}
+
+/* ─── Inline renderer ──────────────────────────────────────────────── */
 
 export function InlineText({ text, as: Tag = "span" }: { text: string; as?: "span" | "div" }) {
   const segments = React.useMemo(() => parseInline(text), [text]);
@@ -48,22 +137,37 @@ export function InlineText({ text, as: Tag = "span" }: { text: string; as?: "spa
   );
 }
 
+/* ─── Block renderer ───────────────────────────────────────────────── */
+
 export function MarkdownView({ blocks, className }: { blocks: MdBlock[]; className?: string }) {
   return (
-    <div className={cn("space-y-4 text-[15px] leading-relaxed text-muted-foreground", className)}>
+    <div className={cn("space-y-4 text-[15px] leading-[1.7] text-muted-foreground", className)}>
       {blocks.map((block, i) => {
         switch (block.kind) {
-          case "paragraph":
+          case "paragraph": {
+            const caseIntro = caseIntroMatch(block.text);
+            if (caseIntro) {
+              return <CaseIntro key={i} {...caseIntro} />;
+            }
+            const teaching = teachingPointsMatch(block.text);
+            if (teaching !== null) {
+              return <TeachingPoints key={i} text={teaching} />;
+            }
             return (
               <p key={i} className="min-w-0">
                 <InlineText text={block.text} />
               </p>
             );
-          case "heading":
+          }
+          case "heading": {
+            const caseHeading = caseHeadingMatch(block.text);
+            if (caseHeading) {
+              return <CaseHeading key={i} {...caseHeading} />;
+            }
             return block.level === 3 ? (
               <h4
                 key={i}
-                className="pt-2 text-[15px] font-semibold tracking-tight text-foreground"
+                className="pt-2 text-[17px] font-semibold tracking-tight text-foreground"
               >
                 {block.text}
               </h4>
@@ -72,6 +176,7 @@ export function MarkdownView({ blocks, className }: { blocks: MdBlock[]; classNa
                 {block.text}
               </h5>
             );
+          }
           case "list":
             return block.ordered ? (
               <ol key={i} className="ml-4 list-decimal space-y-1.5 marker:text-brand/70">
