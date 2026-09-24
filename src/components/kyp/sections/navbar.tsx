@@ -90,7 +90,7 @@ export function Navbar() {
         {/* Desktop nav — all links through Next Link so hrefs get the
             GitHub Pages basePath. Plain <a href="/#…"> would resolve to
             the root domain and break anchor navigation on Pages. */}
-        <nav className="hidden items-center gap-0.5 lg:flex xl:gap-1">
+        <nav aria-label="Primary" className="hidden items-center gap-0.5 lg:flex xl:gap-1">
           {navLinks.map((l) => (
             <Link
               key={l.href}

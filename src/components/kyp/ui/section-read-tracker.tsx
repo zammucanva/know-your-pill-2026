@@ -48,6 +48,15 @@ interface SectionReadTrackerProps {
   items: NavItem[];
   /** Scrollspy offset — must match the visible navigator (120px). */
   offset?: number;
+  /**
+   * Ids that count toward course completion. Defaults to every item id
+   * (the drug course contract). Lesson systems whose displayed progress
+   * counter tracks a subset of the observed anchors pass that subset
+   * here so "X/N complete" and "course completed" can never disagree:
+   * KYP Psychiatry observes the hero "top" anchor for position/resume
+   * tracking but completes against the 14/7 phase sections only.
+   */
+  completionIds?: string[];
 }
 
 export function SectionReadTracker({
@@ -55,8 +64,13 @@ export function SectionReadTracker({
   title,
   items,
   offset = 120,
+  completionIds,
 }: SectionReadTrackerProps) {
   const outlineIds = React.useMemo(() => items.map((i) => i.id), [items]);
+  const requiredIds = React.useMemo(
+    () => (completionIds ?? outlineIds).filter((id) => outlineIds.includes(id)),
+    [completionIds, outlineIds]
+  );
   const labelsById = React.useMemo(() => {
     const map = new Map<string, string>();
     for (const item of items) map.set(item.id, item.label);
@@ -83,7 +97,7 @@ export function SectionReadTracker({
       const before = getCourseProgress(drugSlug);
       if (!before || !before.completedSections.includes(id)) {
         markSectionComplete(drugSlug, id);
-        syncCourseCompletion(drugSlug, outlineIds);
+        syncCourseCompletion(drugSlug, requiredIds);
       }
     };
 
@@ -154,7 +168,7 @@ export function SectionReadTracker({
       window.removeEventListener("pagehide", flush);
       observer.disconnect();
     };
-  }, [drugSlug, outlineIds, labelsById, offset]);
+  }, [drugSlug, outlineIds, requiredIds, labelsById, offset]);
 
   return null;
 }

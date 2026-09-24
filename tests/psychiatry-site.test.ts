@@ -150,3 +150,24 @@ describe("psychiatry — public source-name audit", () => {
     }
   });
 });
+
+describe("psychiatry — resume-banner parity (finalization §11)", () => {
+  // The drug lessons record currentSectionId "top" on mount because the
+  // hero ("Overview") is the first tracked nav item. Psychiatry lessons
+  // normalised to the same contract: the hero carries id="top" and the
+  // lesson nav starts with the Overview anchor, so a fresh visit saves a
+  // top-level position and the ResumeBanner appears on revisit exactly
+  // like a drug course.
+  test("14. every lesson hero carries the top anchor (all 109)", async () => {
+    const slugs = getAllNoteSlugs();
+    const missing: string[] = [];
+    for (const slug of slugs) {
+      const { status, html } = await get(`/psychiatry/${slug}`);
+      if (status !== 200 || !html.includes('id="top"')) {
+        missing.push(`${slug}:${status}${html.includes('id="top"') ? "" : ":no-top-anchor"}`);
+      }
+    }
+    expect(slugs.length).toBe(109);
+    expect(missing).toEqual([]);
+  }, 120000);
+});
