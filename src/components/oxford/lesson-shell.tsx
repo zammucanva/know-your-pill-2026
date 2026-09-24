@@ -146,7 +146,13 @@ export function LessonShell({
   // stale — this is the same pattern the drug pages' sticky nav uses.
   const progressData = useLocalProgress();
   const courseRecord = progressData?.courses[course] ?? null;
-  const completedIds = courseRecord?.completedSections ?? EMPTY_IDS;
+  // The hero "top" anchor is position-tracking only (ResumeBanner
+  // parity) — it must never count toward the displayed X/N progress, so
+  // the counter stays 14 (disorder) / 7 (concept).
+  const completedIds = React.useMemo(
+    () => (courseRecord?.completedSections ?? EMPTY_IDS).filter((id) => id !== "top"),
+    [courseRecord]
+  );
   const completedCount = completedIds.length;
 
   // Six numbered learning phases (sources stays the quiet disclosure).
@@ -168,8 +174,15 @@ export function LessonShell({
   const totalSections = trackableSections.length;
 
   const navItems = React.useMemo<NavItem[]>(
-    () =>
-      phases.phases
+    () => [
+      // The hero is the first trackable anchor — same contract as the
+      // drug course rail (DRUG_COURSE_NAV_ITEMS starts with
+      // "top"/Overview). Including it here means the read tracker's
+      // observer band pins a position on mount, so a fresh visit records
+      // currentSectionId "top" and the ResumeBanner behaves exactly
+      // like the drug lessons on revisit (brief §11 normalization).
+      { id: "top", label: "Overview" },
+      ...phases.phases
         .filter((p) => p.meta.key !== "practice")
         .flatMap((p) =>
           p.sections.map((s) => ({
@@ -177,6 +190,7 @@ export function LessonShell({
             label: shortTitle(s.title),
           }))
         ),
+    ],
     [phases]
   );
 
@@ -186,7 +200,12 @@ export function LessonShell({
     React.useMemo(() => navItems.map((n) => n.id), [navItems]),
     120
   );
-  const activePhase = activeId ? (activeId.split("-")[0] as LearningPhase) : learningPhases[0]?.meta.key;
+  // While the hero occupies the scrollspy band the lesson is at its
+  // opening — highlight the first phase, exactly as the pre-hero-anchor
+  // default did ("top" is not itself a phase key).
+  const activePhase = activeId && activeId !== "top"
+    ? (activeId.split("-")[0] as LearningPhase)
+    : learningPhases[0]?.meta.key;
 
   const completedSet = React.useMemo(() => new Set(completedIds), [completedIds]);
   const phaseComplete = React.useCallback(
@@ -201,8 +220,14 @@ export function LessonShell({
 
   // Manual section completion — the same drug-workspace affordance the
   // medication course rail offers (manual ticks share the store with
-  // dwell-based tracking and re-evaluate course completion).
-  const outlineIds = React.useMemo(() => navItems.map((n) => n.id), [navItems]);
+  // dwell-based tracking and re-evaluate course completion). Completion
+  // evaluates against the phase sections only (the displayed X/N), so
+  // the hero "top" anchor is tracked for position but never required —
+  // legacy completed courses keep their completedAt.
+  const outlineIds = React.useMemo(
+    () => navItems.filter((n) => n.id !== "top").map((n) => n.id),
+    [navItems]
+  );
   const toggleSection = React.useCallback(
     (sectionId: string) => {
       if (completedSet.has(sectionId)) {
@@ -415,7 +440,7 @@ export function LessonShell({
         </div>
 
         {/* ===== LESSON HERO — efficient, identity card right ===== */}
-        <section aria-labelledby="lesson-title" className="relative overflow-hidden pt-16 pb-8 sm:pt-20 sm:pb-12">
+        <section id="top" aria-labelledby="lesson-title" className="relative overflow-hidden pt-16 pb-8 sm:pt-20 sm:pb-12">
           <div className="pointer-events-none absolute inset-0 kyp-grid-bg opacity-30" aria-hidden />
           <div className="pointer-events-none absolute -left-24 top-10 h-64 w-64 rounded-full bg-brand/10 blur-3xl" aria-hidden />
           <div className="pointer-events-none absolute -right-24 top-24 h-72 w-72 rounded-full bg-neural/10 blur-3xl" aria-hidden />
@@ -494,8 +519,17 @@ export function LessonShell({
         {/* ===== BODY — one coherent workspace with the rail ===== */}
         <div className="py-10 pb-16">
           <Container>
-            {/* Reading progress — existing architecture, honest dwell tracking */}
-            <SectionReadTracker drugSlug={course} title={note.frontmatter.title} items={navItems} offset={120} />
+            {/* Reading progress — existing architecture, honest dwell tracking.
+                completionIds keeps course completion pinned to the phase
+                sections (the displayed X/N) while items includes the hero
+                "top" anchor for position tracking. */}
+            <SectionReadTracker
+              drugSlug={course}
+              title={note.frontmatter.title}
+              items={navItems}
+              offset={120}
+              completionIds={outlineIds}
+            />
 
             {/* Reading measure — controlled, aligned with the hero copy edge */}
             <div className="max-w-[46rem] space-y-12">
