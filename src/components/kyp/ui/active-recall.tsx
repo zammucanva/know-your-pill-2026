@@ -6,7 +6,7 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { Callout } from "@/components/kyp/ui/callout";
-import type { Drug } from "@/lib/kyp/data";
+import type { ActiveRecallQuestion, Drug } from "@/lib/kyp/data";
 
 /**
  * ActiveRecallSection — end-of-page retrieval practice.
@@ -17,15 +17,24 @@ import type { Drug } from "@/lib/kyp/data";
  * This is the single most evidence-based learning technique — retrieval
  * practice produces stronger memory than re-reading.
  *
+ * Two prop shapes (backward compatible):
+ *   - Drug courses: <ActiveRecallSection drug={drug} />
+ *   - Psychiatry courses: <ActiveRecallSection questions={course.activeRecallQuestions} />
+ *
  * Client Component — uses useState per question for reveal toggle.
  */
 interface ActiveRecallSectionProps {
-  drug: Drug;
+  drug?: Drug;
+  /** Direct questions (psychiatry course) — takes precedence over
+   *  the drug prop when provided. */
+  questions?: ActiveRecallQuestion[];
+  /** Subject name for the empty-state hint text. */
+  subject?: string;
 }
 
-export function ActiveRecallSection({ drug }: ActiveRecallSectionProps) {
-  const questions = drug.activeRecallQuestions;
-  if (!questions || questions.length === 0) return null;
+export function ActiveRecallSection({ drug, questions, subject }: ActiveRecallSectionProps) {
+  const qs = questions ?? drug?.activeRecallQuestions ?? [];
+  if (qs.length === 0) return null;
 
   return (
     <Section id="active-recall" className="bg-muted/20">
@@ -39,7 +48,7 @@ export function ActiveRecallSection({ drug }: ActiveRecallSectionProps) {
         />
 
         <div className="mt-10 space-y-3">
-          {questions.map((q, i) => (
+          {qs.map((q, i) => (
             <RecallCard key={i} index={i} question={q.question} answer={q.answer} topic={q.topic} />
           ))}
         </div>
