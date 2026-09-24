@@ -141,8 +141,10 @@ export interface MistakeSource {
   sourceName: string;
   /** Drug or disease slug. */
   sourceSlug: string;
-  /** Drug-page question vs disease-page question. */
-  sourceType: "drug" | "disease";
+  /** Where the question came from: drug page, disease page, or the
+   *  Stahl's Prescriber-Guide bank (still taught on a drug page —
+   *  sourceHref/sectionLabel carry the exact anchor). */
+  sourceType: "drug" | "disease" | "stahl";
   /** Class label for filtering — drugClassLabel, or "Diseases". */
   sourceClass: string;
   /** e.g. "Side Effects" — the section the fact lives in. */
@@ -400,7 +402,12 @@ function coerceMistakeEntry(raw: unknown): MistakeEntry | null {
     source: {
       sourceName: typeof source.sourceName === "string" ? source.sourceName : "",
       sourceSlug: typeof source.sourceSlug === "string" ? source.sourceSlug : "",
-      sourceType: source.sourceType === "disease" ? "disease" : "drug",
+      sourceType:
+        source.sourceType === "disease"
+          ? "disease"
+          : source.sourceType === "stahl"
+            ? "stahl"
+            : "drug",
       sourceClass: typeof source.sourceClass === "string" ? source.sourceClass : "",
       sectionLabel: typeof source.sectionLabel === "string" ? source.sectionLabel : "",
       sectionHref: typeof source.sectionHref === "string" ? source.sectionHref : "",

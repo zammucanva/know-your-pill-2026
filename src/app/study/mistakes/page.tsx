@@ -133,8 +133,10 @@ export default function MistakeBookPage() {
               </Reveal>
               <Reveal delay={0.1}>
                 <div className="mt-10 flex flex-wrap gap-3">
+                  {/* prefetch={false}: engine routes bundle the registry chunk */}
                   <Link
                     href="/quiz"
+                    prefetch={false}
                     className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
                   >
                     <Zap className="h-4 w-4" />
@@ -142,6 +144,7 @@ export default function MistakeBookPage() {
                   </Link>
                   <Link
                     href="/quiz/custom"
+                    prefetch={false}
                     className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                   >
                     <ListChecks className="h-4 w-4" />
@@ -278,6 +281,10 @@ export default function MistakeBookPage() {
               {filtered.map((entry, i) => (
                 <Reveal key={entry.identity} delay={Math.min(i * 0.03, 0.2)}>
                   <article className="rounded-xl border border-border/60 bg-card/50 p-5 sm:p-6">
+                    {/* Context — compact drug label + class only. Source
+                        metadata (bank, section, topic) stays INTERNAL to
+                        the persisted record for attribution and auditing;
+                        it is not repeated per entry. */}
                     <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground/70">
                       <span>From </span>
                       <Link
@@ -286,7 +293,6 @@ export default function MistakeBookPage() {
                       >
                         {entry.source.sourceName}
                       </Link>
-                      <span>· {entry.source.sectionLabel}</span>
                       <span className="rounded-full border border-border/60 px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-muted-foreground">
                         {entry.source.sourceClass || "General"}
                       </span>

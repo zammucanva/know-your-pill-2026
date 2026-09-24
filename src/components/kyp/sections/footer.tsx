@@ -50,7 +50,7 @@ const footerLinks = [
 
 export function Footer() {
   return (
-    <footer className="mt-auto relative overflow-hidden border-t border-border/20">
+    <footer className="mt-auto relative overflow-hidden border-t border-border/20 print:hidden">
       {/* Very subtle end-of-page organic shape */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <div
@@ -162,7 +162,7 @@ export function Footer() {
               </div>
             </div>
 
-            <p className="text-caption text-muted-foreground/50 leading-relaxed max-w-3xl">
+            <p className="text-caption text-muted-foreground/75 leading-relaxed max-w-3xl">
               <strong className="text-muted-foreground">Copyright:</strong>{" "}
               © 2026 Zamaan Ali Shamji. All content on this site — including
               drug pages, disease modules, and educational text — is protected
@@ -177,7 +177,7 @@ export function Footer() {
               for permitted use.
             </p>
 
-            <p className="text-caption text-muted-foreground/50 leading-relaxed max-w-3xl">
+            <p className="text-caption text-muted-foreground/75 leading-relaxed max-w-3xl">
               <strong className="text-muted-foreground">Disclaimer:</strong> This website is for educational support only. It does not replace a doctor, pharmacist, emergency service, or local medical guideline. Always consult a qualified healthcare professional before making decisions about medication or substance use.
             </p>
           </div>

@@ -1701,21 +1701,21 @@ export const escitalopram: Drug = {
       label: "MBBS Student",
       estimatedTime: "20 min",
       description: "Foundations, mechanism, clinical uses, side effects, and MBBS exam content.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
     },
     {
       mode: "neetPg",
       label: "NEET PG / INICET",
       estimatedTime: "35 min",
       description: "Full clinical detail with exam-specific content, PYQs, and drug comparisons.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
     },
     {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
       description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
     },
   ],
 
@@ -1764,6 +1764,186 @@ export const escitalopram: Drug = {
       checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Escitalopram.",
     },
   ],
+
+  /* ---- Prescriber's Guide (Stahl layer) ---- */
+  /** Educational paraphrase of Stahl's Essential Psychopharmacology:
+   *  The Prescriber's Guide, 1st ed. (2005). Facts restated, not reproduced. */
+  prescriberGuide: {
+    sourceEdition: "Stahl's Essential Psychopharmacology: The Prescriber's Guide, 1st ed. (2005)",
+
+    onsetTimeline: [
+      "Therapeutic onset usually delayed 2–4 weeks",
+      "No benefit by 6–8 weeks → dose increase or switch",
+      "May continue working for years to prevent relapse",
+    ],
+    ifItWorks: [
+      "Goal: complete remission plus prevention of future relapses — not a cure; symptoms can recur after stopping",
+      "Continue until symptoms are gone (remission) or clearly reduced (e.g., OCD, PTSD)",
+      "First depressive episode: continue 1 year once well; later episodes and anxiety disorders may need indefinite treatment",
+    ],
+    ifItDoesNotWork: [
+      "Partial response is common — residual insomnia, fatigue, poor concentration",
+      "Some patients are non-responders (treatment-resistant / refractory); some early responders 'poop-out'",
+      "Options: raise dose, switch agent, or add an augmenting drug",
+      "Consider psychotherapy and re-evaluation for another diagnosis or comorbid condition",
+      "Apparent non-response from activation of latent bipolar disorder → stop and switch to a mood stabilizer",
+    ],
+    augmentationCombos: [
+      "Trazodone, especially for insomnia",
+      "Bupropion, mirtazapine, reboxetine, or atomoxetine (caution: antidepressant combos may activate bipolar disorder and suicidal ideation)",
+      "Modafinil for fatigue, sleepiness, and lack of concentration",
+      "Mood stabilizers or atypical antipsychotics for bipolar depression, psychotic depression, treatment-resistant depression or anxiety",
+      "Benzodiazepines; if all else fails for anxiety, gabapentin or tiagabine",
+      "Hypnotics for insomnia; classically lithium, buspirone, or thyroid hormone",
+    ],
+    testsBeforeStarting: [
+      "None required for healthy individuals",
+    ],
+
+    sideEffectLogic: [
+      "Serotonin increases at receptors outside the therapeutic circuits — sleep centers (insomnia), gut (diarrhea)",
+      "Rising serotonin can dampen dopamine release → emotional flattening, cognitive slowing, apathy",
+      "Side effects are immediate and often fade; therapeutic effects are delayed and build over time",
+      "Escitalopram has no known important secondary pharmacology — its side effects are presumably all mediated by serotonin reuptake blockade",
+    ],
+    sideEffectManagement: [
+      "Wait — most early effects fade",
+      "Wait again",
+      "Wait once more",
+      "After a few weeks: switch to another agent or add other drugs",
+    ],
+    sideEffectRescue: [
+      "Often better to try another SSRI or antidepressant monotherapy first",
+      "Trazodone or a hypnotic for insomnia",
+      "Bupropion, sildenafil, vardenafil, or tadalafil for sexual dysfunction",
+      "Bupropion for emotional flattening, cognitive slowing, or apathy",
+      "Mirtazapine for insomnia, agitation, and gastrointestinal effects",
+      "Benzodiazepines for jitteriness and anxiety at initiation, especially in anxious patients",
+    ],
+    weightGain: "Reported but not expected",
+    sedation: "Reported but not expected",
+
+    dosing: [
+      {
+        indication: "Depression & anxiety disorders (adults)",
+        starting: "10 mg/day",
+        titration: "Increase to 20 mg/day if necessary — give an adequate trial of 10 mg first",
+        target: "10–20 mg/day",
+        max: "20 mg/day (some patients need 30–40 mg)",
+        notes: [
+          "10 mg of escitalopram may be comparable in efficacy to 40 mg of citalopram, with fewer side effects",
+          "Once daily, any time of day the patient tolerates best",
+          "Steady state is achieved within 1 week",
+        ],
+      },
+    ],
+    dosageForms: ["Tablets 10 mg", "Tablets 20 mg", "Oral solution 5 mg/5 mL"],
+    dosingTips: [
+      "Give an adequate trial of 10 mg before moving to 20 mg",
+      "Some patients require 30 or 40 mg dosing",
+      "Intolerable anxiety, insomnia, agitation, akathisia or activation on starting or stopping → consider activated bipolar disorder; switch to a mood stabilizer or atypical antipsychotic",
+      "Many side effects are dose- and time-dependent — they spike with each increase, then fade",
+    ],
+    overdose: [
+      "Few reports for escitalopram itself — probably similar to citalopram overdose",
+      "Citalopram overdose: rare fatalities (alone and in combination), vomiting, sedation, heart rhythm disturbances, dizziness, sweating, nausea, tremor; rarely amnesia, confusion, coma, convulsions",
+    ],
+    longTermUse: "Safe",
+    habitForming: "No",
+    howToStop: [
+      "Taper not usually necessary, but is generally prudent to avoid withdrawal reactions",
+      "Many patients tolerate: 50% reduction for 3 days → another 50% for 3 days → stop",
+      "If withdrawal emerges, raise the dose to abort, then withdraw much more slowly",
+    ],
+    pharmacokinetics: [
+      "Mean terminal half-life 27–32 hours; steady state within 1 week",
+      "No significant actions on CYP450 enzymes — among the cleanest SSRIs for interactions",
+      "Fatal serotonin syndrome with MAOIs — do not combine; wait 14 days after stopping an MAOI, and 2 weeks after stopping escitalopram before starting an MAOI",
+      "Tramadol raises seizure risk; sumatriptan (and possibly other triptans) can rarely cause weakness, hyperreflexia, incoordination",
+      "Few known adverse drug interactions overall",
+    ],
+    doNotUse: [
+      "If the patient is taking an MAO inhibitor",
+      "Proven allergy to escitalopram or citalopram",
+    ],
+
+    specialPopulations: [
+      {
+        population: "Renal impairment",
+        guidance: ["Few data available — start with 10 mg/day"],
+      },
+      {
+        population: "Hepatic impairment",
+        guidance: ["Recommended dose 10 mg/day"],
+      },
+      {
+        population: "Cardiac impairment",
+        guidance: [
+          "Not systematically evaluated; preliminary citalopram data suggest escitalopram is also safe",
+          "SSRI treatment after MI or in acute angina may reduce cardiac events and improve survival as well as mood",
+        ],
+      },
+      {
+        population: "Elderly",
+        guidance: ["Recommended dose 10 mg/day"],
+      },
+      {
+        population: "Children & adolescents",
+        guidance: [
+          "Safety and efficacy not established",
+          "Use with caution — watch for bipolar activation and suicidal ideation; counsel parents/guardians",
+        ],
+      },
+      {
+        population: "Pregnancy",
+        guidance: [
+          "Risk Category C — not generally recommended, especially first trimester; continuous treatment may nonetheless be necessary and has not been proven harmful",
+          "At delivery: possible increased maternal bleeding and transient newborn irritability or sedation",
+          "Late third-trimester exposure: neonatal complications reported (respiratory distress, cyanosis, apnea, seizures, feeding difficulty, hypoglycemia, jitteriness)",
+          "Weigh treatment risk against relapse risk — for many, continuing is the better choice",
+        ],
+      },
+      {
+        population: "Breast feeding",
+        guidance: [
+          "Some drug is found in breast milk; trace amounts in nursing infants",
+          "If the infant becomes irritable or sedated, breastfeeding or the drug may need to be stopped",
+          "Postpartum is high-risk for relapse — may need reinstitution late in the third trimester or shortly after delivery",
+        ],
+      },
+    ],
+
+    potentialAdvantages: [
+      "Patients on concomitant medications — few drug interactions (fewer even than citalopram)",
+      "Patients requiring faster onset of action",
+    ],
+    potentialDisadvantages: [
+      "More expensive than citalopram in markets where citalopram is generic",
+    ],
+    primaryTargetSymptoms: [
+      "Depressed mood",
+      "Anxiety",
+      "Panic attacks",
+      "Avoidant behavior",
+      "Re-experiencing",
+      "Hyperarousal",
+      "Sleep disturbance (insomnia and hypersomnia)",
+    ],
+    pearls: [
+      "May be among the best-tolerated antidepressants",
+      "May cause less sexual dysfunction than some other SSRIs",
+      "May be better tolerated than citalopram",
+      "Can cause cognitive and affective 'flattening'",
+      "R-citalopram may interfere with S-citalopram binding at the serotonin transporter — S-citalopram (escitalopram) may be more than twice as potent as racemic citalopram",
+      "10 mg of escitalopram may deliver the efficacy of 40 mg of citalopram — with faster onset and fewer side effects",
+      "Some data suggest remission rates comparable to dual SNRIs, though this is not proven",
+      "The SSRI of choice for augmentation regimens — least interaction at CYP2D6 and 3A4, so fewer pharmacokinetically mediated interactions with augmenting agents",
+      "SSRIs may be less effective in women over 50 not taking estrogen",
+      "SSRIs may help hot flushes in perimenopausal women",
+      "Some postmenopausal depression responds better to escitalopram plus estrogen than to escitalopram alone",
+      "Non-response in the elderly: consider mild cognitive impairment or Alzheimer disease",
+    ],
+  },
 
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",

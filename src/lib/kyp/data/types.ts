@@ -12,8 +12,9 @@ import type { LucideIcon } from "lucide-react";
  * major medication classes — they have stable accent colors defined in
  * `classes.ts` and CSS variables in `globals.css`.
  *
- * The remaining IDs cover other medication classes that don't need a
- * distinct accent color (they fall back to the brand teal).
+ * The remaining IDs cover other medication classes. IDs without an entry
+ * in `classes.ts` fall back to the brand teal accent. Extended in Phase 3
+ * (Stahl Prescriber's Guide integration) to cover every psychotropic class.
  */
 export type DrugClassId =
   // Substances of abuse (with accent colors)
@@ -33,7 +34,28 @@ export type DrugClassId =
   | "typical-antipsychotic"
   | "mood-stabiliser"
   | "benzodiazepine"
-  | "non-benzodiazepine-hypnotic";
+  | "non-benzodiazepine-hypnotic"
+  | "atypical-antidepressant"
+  | "nri"
+  | "melatonergic-agonist"
+  | "medical-food"
+  | "thyroid-agent"
+  | "nmda-antagonist"
+  | "anticonvulsant"
+  | "benzodiazepine-antagonist"
+  | "azapirone"
+  | "antihistamine"
+  | "beta-blocker"
+  | "alpha-blocker"
+  | "alpha2-agonist"
+  | "wake-promoting-agent"
+  | "cholinesterase-inhibitor"
+  | "substance-use-treatment"
+  | "libido-enhancer"
+  | "weight-management"
+  | "narcolepsy-treatment"
+  | "anticholinergic"
+  | "orexin-antagonist";
 
 export interface DrugClass {
   id: DrugClassId;
@@ -774,6 +796,104 @@ export interface LessonGroup {
 /** Section difficulty tag — shown as a coloured dot next to section headings. */
 export type SectionDifficulty = "mbbs" | "pg" | "resident";
 
+/* ============================================================
+   Prescriber's Guide layer — Stahl integration
+   Structured prescriber content distilled from Stahl's Essential
+   Psychopharmacology: The Prescriber's Guide. Facts paraphrased;
+   the data layer is optional so existing drug files stay valid.
+   ============================================================ */
+
+/** One row of the dosing & titration table, per indication. */
+export interface PrescriberDosingRow {
+  /** Indication or population context — e.g. "Depression & OCD" */
+  indication: string;
+  /** Starting dose, e.g. "50 mg/day" */
+  starting: string;
+  /** One-line titration guidance */
+  titration: string;
+  /** Usual target range, e.g. "50–200 mg/day" */
+  target: string;
+  /** Maximum dose */
+  max: string;
+  /** Practical notes — tablet scoring, timing, cost tricks */
+  notes?: string[];
+}
+
+/** Guidance for one special population (renal, hepatic, elderly…). */
+export interface PrescriberSpecialPopulation {
+  /** Population label — e.g. "Renal impairment" */
+  population: string;
+  /** Paraphrased guidance points */
+  guidance: string[];
+}
+
+/**
+ * The Prescriber's Guide data layer — mirrors the five-zone structure
+ * of Stahl's guide: therapeutics, side effects, dosing & use,
+ * special populations, and the art of psychopharmacology.
+ */
+export interface PrescriberGuide {
+  /** Edition the facts were paraphrased from, e.g. "Stahl's Essential Psychopharmacology: The Prescriber's Guide, 1st ed. (2005)" */
+  sourceEdition: string;
+
+  /* ---- Zone 1: Therapeutics ---- */
+  /** How long until it works — onset timeline bullets */
+  onsetTimeline: string[];
+  /** Treatment goals and continuation rules if it works */
+  ifItWorks: string[];
+  /** Options for partial response or non-response */
+  ifItDoesNotWork: string[];
+  /** Best augmenting combos for partial response / treatment resistance */
+  augmentationCombos: string[];
+  /** Baseline tests / workup before starting */
+  testsBeforeStarting: string[];
+
+  /* ---- Zone 2: Side effects (management layer) ---- */
+  /** Why side effects happen — brief mechanistic logic */
+  sideEffectLogic: string[];
+  /** Escalation ladder: wait → reduce dose → switch/add */
+  sideEffectManagement: string[];
+  /** Rescue add-ons that let you keep the drug */
+  sideEffectRescue: string[];
+  /** Weight gain expectation in one line */
+  weightGain: string;
+  /** Sedation expectation in one line */
+  sedation: string;
+
+  /* ---- Zone 3: Dosing & use ---- */
+  /** Structured dosing table per indication */
+  dosing: PrescriberDosingRow[];
+  /** Available dosage forms */
+  dosageForms: string[];
+  /** Practical dosing pearls — timing, titration art, cost tricks */
+  dosingTips: string[];
+  /** Overdose expectations and management */
+  overdose: string[];
+  /** Long-term safety in one line */
+  longTermUse: string;
+  /** Habit-forming potential in one line */
+  habitForming: string;
+  /** How to stop — taper protocol steps */
+  howToStop: string[];
+  /** Key pharmacokinetic facts (half-life, CYP450) */
+  pharmacokinetics: string[];
+  /** Hard stops — absolute contraindications */
+  doNotUse: string[];
+
+  /* ---- Zone 4: Special populations ---- */
+  specialPopulations: PrescriberSpecialPopulation[];
+
+  /* ---- Zone 5: The art of psychopharmacology ---- */
+  /** When this drug shines — patient profiles where it's preferred */
+  potentialAdvantages: string[];
+  /** When to think twice — profiles where it's a poorer fit */
+  potentialDisadvantages: string[];
+  /** Symptoms the drug primarily targets */
+  primaryTargetSymptoms: string[];
+  /** Practice pearls from the guide */
+  pearls: string[];
+}
+
 export interface Drug {
   /* ---- Identity ---- */
   slug: string;
@@ -928,6 +1048,10 @@ export interface Drug {
   /** Lesson grouping — sections organised into learning units */
   lessonGroups?: LessonGroup[];
 
+  /* ---- Prescriber's Guide layer (Stahl integration) ---- */
+  /** Structured prescriber content: dosing, titration, tapering, special populations, art of psychopharmacology */
+  prescriberGuide?: PrescriberGuide;
+
   /* ---- Metadata ---- */
   /** ISO date string — last clinical review */
   lastReviewed: string;
@@ -994,7 +1118,7 @@ export const disclosureTiers: DisclosureTierMeta[] = [
     id: "clinical",
     label: "Clinical Practice",
     description: "Prescribing, contraindications, cases, comparisons.",
-    sectionIds: ["contraindications", "interactions", "patient-education", "clinical-pearls", "clinical-case", "comparison", "related-drugs"],
+    sectionIds: ["contraindications", "prescriber-guide", "interactions", "patient-education", "clinical-pearls", "clinical-case", "comparison", "related-drugs"],
     visibleInPatientMode: true, // patient education + contraindications are patient-relevant
   },
   {
@@ -1012,6 +1136,7 @@ export const disclosureTiers: DisclosureTierMeta[] = [
  */
 export const hiddenInPatientMode: string[] = [
   "neural-pathways",      // too technical
+  "prescriber-guide",     // prescriber-focused dosing/tapering detail
   "clinical-pearls",      // prescriber-focused
   "clinical-case",        // clinical reasoning
   "comparison",           // drug selection reasoning

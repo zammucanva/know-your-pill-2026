@@ -27,7 +27,7 @@ import {
   MIN_TOPIC_SAMPLE,
   RECENT_WINDOW,
 } from "@/lib/kyp/analytics/topic-stats";
-import { drugs } from "@/lib/kyp/data/drugs/index";
+import { CLASS_DRUG_SLUGS } from "@/lib/kyp/study/course-stats-generated";
 
 /** Overall accuracy below which a class is worth drilling. */
 export const WEAK_ACCURACY_THRESHOLD = 75;
@@ -121,9 +121,9 @@ export function selectWeakTopics(
     const recent = classRecent(data, row.slugs);
     const dueCount = due.get(row.key) ?? 0;
     const mistakeCount = mistakes.get(row.key) ?? 0;
-    const drugSlugs = drugs
-      .filter((d) => d.drugClassLabel === row.key)
-      .map((d) => d.slug);
+    // Class membership from the generated registry artifact (keeps the
+    // 143-monograph registry out of this client-side module's bundle).
+    const drugSlugs = CLASS_DRUG_SLUGS[row.key] ?? [];
     if (drugSlugs.length === 0) continue;
 
     // Plain language, number by number — the task's example shape:

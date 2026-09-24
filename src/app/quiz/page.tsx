@@ -12,8 +12,10 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
 import { cn } from "@/lib/utils";
-import { drugs, diseases } from "@/lib/kyp/data";
-import type { MicroQuiz } from "@/lib/kyp/data";
+import { drugs } from "@/lib/kyp/data/drugs/index";
+import { diseases } from "@/lib/kyp/data/diseases/index";
+import type { MicroQuiz } from "@/lib/kyp/data/types";
+import { stahlMcqs } from "@/lib/kyp/stahl-mcqs";
 import {
   recordPracticeAttempt,
   recordMistakes,
@@ -30,14 +32,19 @@ import { BookMarked } from "lucide-react";
 /**
  * /quiz — aggregate MCQ practice page.
  *
- * Pulls every MicroQuiz from the drug + disease data (78 total) and
- * presents them in a clean practice interface. No invented questions —
- * every question here exists in the real data layer.
+ * Pulls every MicroQuiz from the drug + disease data plus the Stahl's
+ * Prescriber-Guide bank (649 total at time of writing) and presents
+ * them in a clean practice interface. No invented questions — every
+ * question here exists in the real data layer.
  *
  * Flow:
- *   1. User sees topic filter + "Start" CTA
+ *   1. User sees topic filter + "Start" CTA (or arrives via a
+ *      ?drug={slug} deep link from a medication page — focused
+ *      practice on that one drug's questions)
  *   2. Questions are presented one at a time
  *   3. User selects an answer → immediate feedback + explanation
+ *      (announced to screen readers via a polite live region and a
+ *      focus move onto the explanation block)
  *   4. At the end: score + "Topics to revisit" list
  *
  * Visual language: restrained, educational, no gamification.
@@ -45,12 +52,17 @@ import { BookMarked } from "lucide-react";
 
 interface QuizQuestion extends MicroQuiz {
   sourceName: string;
-  sourceType: "drug" | "disease";
+  sourceType: "drug" | "disease" | "stahl";
   sourceSlug: string;
   sourceHref: string;
+  /** Stahl's questions only: the exact PrescriberGuide zone the
+   *  evidence lives in (e.g. "Clinical Pearls") — INTERNAL metadata:
+   *  feeds Mistake Book attribution and auditing; never rendered on
+   *  the question screen. */
+  sourceZone?: string;
 }
 
-// Aggregate all MCQs from drugs + diseases
+// Aggregate all MCQs from drugs + diseases + the Stahl's bank
 function buildAllQuestions(): QuizQuestion[] {
   const qs: QuizQuestion[] = [];
   for (const drug of drugs) {
@@ -81,15 +93,39 @@ function buildAllQuestions(): QuizQuestion[] {
       }
     }
   }
+  // Stahl's Prescriber-Guide Clinical MCQ bank (Phase 6) — resolved,
+  // source-grounded questions over the canonical drug data.
+  for (const mcq of stahlMcqs) {
+    qs.push({
+      id: mcq.id,
+      question: mcq.question,
+      options: mcq.options,
+      correctIndex: mcq.correctIndex,
+      explanation: mcq.explanation,
+      afterSectionId: "prescriber-guide",
+      sourceName: mcq.drugName,
+      sourceType: "stahl",
+      sourceSlug: mcq.drugSlug,
+      sourceHref: mcq.sourceHref,
+      sourceZone: mcq.zoneLabel,
+    });
+  }
   return qs;
 }
 
 type Phase = "intro" | "practice" | "result";
+type Filter = "all" | "drug" | "disease" | "stahl";
+
+/** Canonical drug lookup for ?drug= deep-link validation (module-scope, cheap). */
+const drugBySlug = new Map(drugs.map((d) => [d.slug, d]));
 
 export default function QuizPage() {
   const allQuestions = React.useMemo(() => buildAllQuestions(), []);
   const [phase, setPhase] = React.useState<Phase>("intro");
-  const [filter, setFilter] = React.useState<"all" | "drug" | "disease">("all");
+  const [filter, setFilter] = React.useState<Filter>("all");
+  // ?drug={slug} focused practice (learning-chain deep link): when set,
+  // the pool narrows to that medication's micro-quizzes + Stahl MCQs.
+  const [drugFilter, setDrugFilter] = React.useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const [selectedAnswer, setSelectedAnswer] = React.useState<number | null>(null);
   const [answered, setAnswered] = React.useState<boolean>(false);
@@ -102,23 +138,59 @@ export default function QuizPage() {
   // intro renders identically on server and client.
   const practice = useLocalProgress()?.practice ?? null;
 
-  // ?filter= deep link (NEXT-N9): the topic-accuracy "Diseases" chip
-  // and analytics links pre-filter the practice set. Read once on
-  // mount from window.location — no useSearchParams, so no Suspense
-  // boundary is required for static export.
+  // Refs for answer-feedback accessibility: the verdict/explanation is
+  // announced (aria-live) AND focused, so screen-reader and keyboard
+  // users land on the outcome of their answer, not left guessing.
+  const explanationRef = React.useRef<HTMLDivElement>(null);
+  const questionRef = React.useRef<HTMLHeadingElement>(null);
+
+  // ?filter= / ?drug= deep links (NEXT-N9 + learning chain): the
+  // topic-accuracy "Diseases" chip, analytics links and medication-page
+  // "Test your understanding" CTAs pre-filter the practice set. Read
+  // once on mount from window.location — no useSearchParams, so no
+  // Suspense boundary is required for static export.
   React.useEffect(() => {
-    const param = new URLSearchParams(window.location.search).get("filter");
-    if (param === "drug" || param === "disease") {
-      setFilter(param);
+    const params = new URLSearchParams(window.location.search);
+    const filterParam = params.get("filter");
+    if (filterParam === "drug" || filterParam === "disease" || filterParam === "stahl") {
+      setFilter(filterParam);
+    }
+    const drugParam = params.get("drug");
+    if (drugParam && drugBySlug.has(drugParam)) {
+      setDrugFilter(drugParam);
     }
   }, []);
 
+  const focusedDrug = drugFilter ? drugBySlug.get(drugFilter) : undefined;
+
   const filteredQuestions = React.useMemo(() => {
+    // Focused practice takes precedence: the drug's own micro-quizzes
+    // plus its Stahl Prescriber-Guide questions (sourceSlug matches both).
+    if (drugFilter) {
+      return allQuestions.filter(
+        (q) => q.sourceSlug === drugFilter && q.sourceType !== "disease"
+      );
+    }
     if (filter === "all") return allQuestions;
     return allQuestions.filter(q => q.sourceType === filter);
-  }, [allQuestions, filter]);
+  }, [allQuestions, filter, drugFilter]);
 
   const currentQuestion = filteredQuestions[currentIndex];
+
+  // Announce the verdict + move focus onto the explanation block the
+  // moment an answer is locked in; when advancing, land focus on the
+  // next question so keyboard/SR users never drop to <body>.
+  React.useEffect(() => {
+    if (phase === "practice" && answered && explanationRef.current) {
+      explanationRef.current.focus();
+    }
+  }, [answered, currentIndex, phase]);
+
+  React.useEffect(() => {
+    if (phase === "practice" && !answered && questionRef.current) {
+      questionRef.current.focus();
+    }
+  }, [currentIndex, phase]);
 
   const startQuiz = () => {
     setPhase("practice");
@@ -175,11 +247,14 @@ export default function QuizPage() {
       // accuracy; misses (re)schedule reviews, correct answers advance
       // existing items up the interval ladder.
       const events: AnswerEventInput[] = results.map((r) => ({
-        identity: `${r.question.sourceSlug}|mcq:${r.question.id}`,
+        identity:
+          r.question.sourceType === "stahl"
+            ? `${r.question.sourceSlug}|stahl:${r.question.id}`
+            : `${r.question.sourceSlug}|mcq:${r.question.id}`,
         topicSlug: r.question.sourceSlug,
         topicName: r.question.sourceName,
         topicClass:
-          r.question.sourceType === "drug"
+          r.question.sourceType === "drug" || r.question.sourceType === "stahl"
             ? (drugClassBySlug.get(r.question.sourceSlug) ?? "Medications")
             : "Diseases",
         correct: r.correct,
@@ -196,7 +271,10 @@ export default function QuizPage() {
       const misses: MistakeRecordInput[] = results
         .filter((r) => !r.correct)
         .map((r) => ({
-          identity: `${r.question.sourceSlug}|mcq:${r.question.id}`,
+          identity:
+            r.question.sourceType === "stahl"
+              ? `${r.question.sourceSlug}|stahl:${r.question.id}`
+              : `${r.question.sourceSlug}|mcq:${r.question.id}`,
           question: r.question.question,
           options: r.question.options,
           correctIndex: r.question.correctIndex,
@@ -206,10 +284,13 @@ export default function QuizPage() {
             sourceSlug: r.question.sourceSlug,
             sourceType: r.question.sourceType,
             sourceClass:
-              r.question.sourceType === "drug"
+              r.question.sourceType === "drug" || r.question.sourceType === "stahl"
                 ? (drugClassBySlug.get(r.question.sourceSlug) ?? "Medications")
                 : "Diseases",
-            sectionLabel: "In-course quiz",
+            sectionLabel:
+              r.question.sourceType === "stahl"
+                ? `Stahl's Prescriber's Guide${r.question.sourceZone ? ` · ${r.question.sourceZone}` : ""}`
+                : "In-course quiz",
             sectionHref: r.question.sourceHref,
           },
           templateId: "authored",
@@ -217,7 +298,13 @@ export default function QuizPage() {
         }));
       recordMistakes(misses);
       resolveMistakes(
-        results.filter((r) => r.correct).map((r) => `${r.question.sourceSlug}|mcq:${r.question.id}`)
+        results
+          .filter((r) => r.correct)
+          .map((r) =>
+            r.question.sourceType === "stahl"
+              ? `${r.question.sourceSlug}|stahl:${r.question.id}`
+              : `${r.question.sourceSlug}|mcq:${r.question.id}`
+          )
       );
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -252,13 +339,21 @@ export default function QuizPage() {
                   Test your understanding
                 </h1>
                 <p className="mt-6 max-w-xl text-body-lg text-muted-foreground leading-relaxed">
-                  {allQuestions.length} multiple-choice questions drawn from across the KYP medication and disease library. Each question comes with a one-line explanation.
+                  {focusedDrug ? (
+                    <>
+                      Focused practice on <span className="font-medium text-foreground">{focusedDrug.genericName}</span> — {filteredQuestions.length} questions from its medication course and Stahl&apos;s Prescriber-Guide entry. Each question comes with an explanation.
+                    </>
+                  ) : (
+                    <>
+                      {allQuestions.length} multiple-choice questions drawn from across the KYP medication and disease library, including the Stahl&apos;s Prescriber-Guide clinical MCQ bank. Each question comes with an explanation.
+                    </>
+                  )}
                 </p>
               </Reveal>
 
               {/* Real stats */}
               <Reveal delay={0.1}>
-                <div className="mt-10 grid grid-cols-2 gap-px border border-border/40 sm:grid-cols-3">
+                <div className="mt-10 grid grid-cols-2 gap-px border border-border/40 sm:grid-cols-4">
                   <div className="p-4">
                     <p className="font-serif text-2xl font-bold text-foreground">{allQuestions.length}</p>
                     <p className="text-xs text-muted-foreground mt-1">Total questions</p>
@@ -269,29 +364,57 @@ export default function QuizPage() {
                     </p>
                     <p className="text-xs text-muted-foreground mt-1">From medications</p>
                   </div>
-                  <div className="p-4 border-l border-border/40 sm:col-span-1 col-span-2">
+                  <div className="p-4 border-l border-border/40">
                     <p className="font-serif text-2xl font-bold text-foreground">
                       {allQuestions.filter(q => q.sourceType === "disease").length}
                     </p>
                     <p className="text-xs text-muted-foreground mt-1">From diseases</p>
                   </div>
+                  <div className="p-4 border-l border-border/40 col-span-2 sm:col-span-1">
+                    <p className="font-serif text-2xl font-bold text-foreground">
+                      {allQuestions.filter(q => q.sourceType === "stahl").length}
+                    </p>
+                    <p className="text-xs text-muted-foreground mt-1">From Stahl's Prescriber's Guide</p>
+                  </div>
                 </div>
               </Reveal>
 
-              {/* Topic filter */}
+              {/* Topic filter — hidden while a ?drug= focus is active (the
+                  pool is already narrowed to one medication; the banner
+                  above carries the clear action instead). */}
               <Reveal delay={0.16}>
                 <div className="mt-10">
                   <p className="text-overline text-muted-foreground mb-4">Choose what to practice</p>
+                  {focusedDrug ? (
+                    <div className="flex flex-wrap items-center gap-3">
+                      <span
+                        className="inline-flex items-center gap-2 rounded-lg border border-brand/50 bg-brand-soft/40 px-4 py-2 text-sm font-medium text-brand"
+                      >
+                        <BookOpen className="h-4 w-4" />
+                        {focusedDrug.genericName}
+                        <span className="text-xs opacity-70">· {filteredQuestions.length} questions</span>
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => setDrugFilter(null)}
+                        className="rounded-lg border border-border px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:border-brand/30 hover:text-foreground"
+                      >
+                        Practice all topics
+                      </button>
+                    </div>
+                  ) : (
                   <div className="flex flex-wrap gap-2">
                     {([
                       { id: "all", label: "All topics", count: allQuestions.length },
                       { id: "drug", label: "Medications", count: allQuestions.filter(q => q.sourceType === "drug").length },
                       { id: "disease", label: "Diseases", count: allQuestions.filter(q => q.sourceType === "disease").length },
+                      { id: "stahl", label: "Stahl's Prescriber's Guide", count: allQuestions.filter(q => q.sourceType === "stahl").length },
                     ] as const).map(f => (
                       <button
                         key={f.id}
                         type="button"
                         onClick={() => setFilter(f.id)}
+                        aria-pressed={filter === f.id}
                         className={cn(
                           "rounded-lg border px-4 py-2 text-sm font-medium transition-colors",
                           filter === f.id
@@ -304,6 +427,7 @@ export default function QuizPage() {
                       </button>
                     ))}
                   </div>
+                  )}
                 </div>
               </Reveal>
 
@@ -346,7 +470,7 @@ export default function QuizPage() {
               </Reveal>
 
               <Reveal delay={0.28}>
-                <p className="mt-8 text-xs text-muted-foreground/60 max-w-md">
+                <p className="mt-8 text-xs text-muted-foreground/75 max-w-md">
                   Questions are drawn from the inline quizzes embedded in KYP
                   medication and disease pages. No sign-up required — practice
                   scores are kept on this device only, never uploaded.
@@ -417,7 +541,7 @@ export default function QuizPage() {
                     <p className="text-overline text-muted-foreground mb-6">Topics to revisit</p>
                     <div className="space-y-px">
                       {incorrect.map((r, i) => {
-                        const Icon = r.question.sourceType === "drug" ? BookOpen : HeartPulse;
+                        const Icon = r.question.sourceType === "disease" ? HeartPulse : r.question.sourceType === "stahl" ? BookMarked : BookOpen;
                         return (
                           <Link
                             key={i}
@@ -429,8 +553,8 @@ export default function QuizPage() {
                               <p className="text-sm font-medium text-foreground truncate">
                                 {r.question.question}
                               </p>
-                              <p className="text-xs text-muted-foreground/50 mt-0.5">
-                                From {r.question.sourceName} · {r.question.sourceType}
+                              <p className="text-xs text-muted-foreground/75 mt-0.5">
+                                From {r.question.sourceName}
                               </p>
                             </div>
                             <ArrowRight className="h-3.5 w-3.5 shrink-0 text-muted-foreground/20 transition-all group-hover:text-brand group-hover:translate-x-1" />
@@ -490,17 +614,33 @@ export default function QuizPage() {
       <main className="flex-1 pt-16">
         <Section spacing="relaxed">
           <Container width="narrow">
+            {/* Screen-reader verdict announcement — polite live region.
+                Color/icon-only feedback is invisible to assistive tech. */}
+            <p aria-live="polite" className="sr-only">
+              {answered && currentQuestion
+                ? `${isCorrect ? "Correct." : "Not quite."} ${currentQuestion.explanation}`
+                : ""}
+            </p>
+
             {/* Progress bar */}
             <div className="mb-12">
               <div className="flex items-center justify-between mb-3">
                 <p className="text-overline text-muted-foreground">
                   Question {currentIndex + 1} of {filteredQuestions.length}
                 </p>
-                <p className="text-xs text-muted-foreground/50">
+                <p className="text-xs text-muted-foreground/75">
                   {results.filter(r => r.correct).length} correct so far
                 </p>
               </div>
-              <div className="h-1 w-full rounded-full bg-muted">
+              <div
+                role="progressbar"
+                aria-label="Practice progress"
+                aria-valuemin={0}
+                aria-valuemax={filteredQuestions.length}
+                aria-valuenow={currentIndex + 1}
+                aria-valuetext={`Question ${currentIndex + 1} of ${filteredQuestions.length}`}
+                className="h-1 w-full rounded-full bg-muted"
+              >
                 <div
                   className="h-full rounded-full bg-brand transition-all duration-300"
                   style={{ width: `${((currentIndex + 1) / filteredQuestions.length) * 100}%` }}
@@ -508,10 +648,15 @@ export default function QuizPage() {
               </div>
             </div>
 
-            {/* Question source */}
+            {/* Question context — the compact drug/disease label only.
+                Source metadata (bank, zone, topic) stays INTERNAL to
+                the MCQ data: it feeds validation, filtering and Mistake
+                Book attribution, and is not repeated per question. */}
             <div className="mb-6 flex items-center gap-2 text-xs text-muted-foreground/60">
               {currentQuestion.sourceType === "drug" ? (
                 <BookOpen className="h-3.5 w-3.5" />
+              ) : currentQuestion.sourceType === "stahl" ? (
+                <BookMarked className="h-3.5 w-3.5" />
               ) : (
                 <HeartPulse className="h-3.5 w-3.5" />
               )}
@@ -522,12 +667,13 @@ export default function QuizPage() {
               >
                 {currentQuestion.sourceName}
               </Link>
-              <span>· {currentQuestion.sourceType}</span>
             </div>
 
             {/* Question */}
             <h1
-              className="font-serif font-semibold tracking-tight text-foreground leading-tight"
+              ref={questionRef}
+              tabIndex={-1}
+              className="font-serif font-semibold tracking-tight text-foreground leading-tight outline-none"
               style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)" }}
             >
               {currentQuestion.question}
@@ -585,9 +731,18 @@ export default function QuizPage() {
             {/* Explanation + Next */}
             {answered && (
               <Reveal>
-                <div className="mt-8 rounded-lg border border-border/60 bg-muted/30 p-5">
-                  <p className="text-overline text-muted-foreground mb-2">
-                    {isCorrect ? "Correct" : "Not quite"}
+                <div
+                  ref={explanationRef}
+                  tabIndex={-1}
+                  role="status"
+                  className="mt-8 rounded-lg border border-border/60 bg-muted/30 p-5 outline-none focus-visible:ring-2 focus-visible:ring-brand/40"
+                >
+                  <p className="flex items-center gap-1.5 text-overline text-muted-foreground mb-2">
+                    {isCorrect ? (
+                      <><Check className="h-3.5 w-3.5 text-success" aria-hidden /><span className="text-success">Correct</span></>
+                    ) : (
+                      <><X className="h-3.5 w-3.5 text-emergency" aria-hidden /><span className="text-emergency">Not quite</span></>
+                    )}
                   </p>
                   <p className="text-body text-foreground leading-relaxed">
                     {currentQuestion.explanation}
@@ -618,7 +773,7 @@ export default function QuizPage() {
               <button
                 type="button"
                 onClick={restart}
-                className="text-xs text-muted-foreground/50 hover:text-muted-foreground transition-colors"
+                className="text-xs text-muted-foreground/75 hover:text-muted-foreground transition-colors"
               >
                 ← Exit practice
               </button>

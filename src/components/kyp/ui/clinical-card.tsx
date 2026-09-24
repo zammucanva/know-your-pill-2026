@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { CardPrimitive, CardBody, CardFooter } from "@/components/kyp/ui/card-primitive";
-import { drugClasses } from "@/lib/kyp/data";
-import type { Substance } from "@/lib/kyp/data";
+import { drugClasses } from "@/lib/kyp/data/classes";
+import type { Substance } from "@/lib/kyp/data/types";
 import { cn } from "@/lib/utils";
 
 interface ClinicalCardProps {

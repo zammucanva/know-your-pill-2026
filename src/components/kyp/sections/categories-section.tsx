@@ -4,7 +4,7 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { DrugClassCard } from "@/components/kyp/ui/drug-class-card";
-import { categories } from "@/lib/kyp/data";
+import { categories } from "@/lib/kyp/data/medications";
 
 export function CategoriesSection() {
   return (

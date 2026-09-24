@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowRight, GitCompare, Zap } from "lucide-react";
+import { ArrowRight, GitCompare, Grid3X3, Zap } from "lucide-react";
 
 import { Navbar } from "@/components/kyp/sections/navbar";
 import { Footer } from "@/components/kyp/sections/footer";
@@ -208,9 +208,22 @@ export default async function DrugClassPage({
                   All medications
                   <ArrowRight className="h-4 w-4" />
                 </Link>
+                {/* Stahl's Phase 5 — compare this class by concern. The
+                    comparison groups by the canonical DrugClassId of the
+                    class's own members (derived — never hardcoded). */}
+                {/* prefetch={false}: engine routes bundle the registry chunk */}
+                <Link
+                  href={`/compare/classes?class=${cls.medications[0].drugClass}`}
+                  prefetch={false}
+                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                >
+                  <Grid3X3 className="h-4 w-4" />
+                  Compare by concern
+                </Link>
                 {classPool.total > 0 && (
                   <Link
                     href={`/quiz/custom?class=${cls.id}`}
+                    prefetch={false}
                     className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
                   >
                     <Zap className="h-4 w-4" />
@@ -294,6 +307,7 @@ export default async function DrugClassPage({
                 {classPool.total > 0 && (
                   <Link
                     href={`/quiz/custom?class=${cls.id}`}
+                    prefetch={false}
                     className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-brand/40 bg-brand-soft/30 px-5 py-3 text-sm font-semibold text-brand transition-colors hover:border-brand/60"
                   >
                     <Zap className="h-4 w-4" />

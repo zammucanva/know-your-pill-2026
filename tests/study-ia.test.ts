@@ -50,12 +50,13 @@ describe("study mode IA — single top-level learning destination", () => {
     expect(matches.length).toBe(1);
   });
 
-  test("navLinks are exactly the five unified destinations", () => {
+  test("navLinks are exactly the six unified destinations", () => {
     const src = read(NAVBAR);
     const hrefs = [...src.matchAll(/href: "([^"]+)"/g)].map((m) => m[1]);
     expect(hrefs).toEqual([
       "/learn",
       "/drugs",
+      "/interactions",
       "/#substances",
       "/study",
       "/medicine",
@@ -167,8 +168,14 @@ describe("study mode IA — breadcrumbs root at Study Mode", () => {
     expect(read("src/components/kyp/sections/learn-banner.tsx")).toContain(
       'href="/quiz"'
     );
+    // The CTA's href became the `quizHref` prop in the hardening run
+    // (drug pages deep-link /quiz?drug={slug} focused practice) — the
+    // DEFAULT remains the direct /quiz link, which is still pinned here.
     expect(
       read("src/components/kyp/ui/test-understanding-cta.tsx")
-    ).toContain('href="/quiz"');
+    ).toContain('quizHref = "/quiz"');
+    expect(
+      read("src/components/kyp/ui/test-understanding-cta.tsx")
+    ).toContain('href={quizHref}');
   });
 });

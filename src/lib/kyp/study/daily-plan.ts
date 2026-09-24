@@ -20,7 +20,7 @@
 
 import type { KypProgressData } from "@/lib/kyp/progress/progress-store";
 import { selectWeakTopics } from "@/lib/kyp/custom-test/weak-area";
-import { drugs } from "@/lib/kyp/data/drugs/index";
+import { COURSE_STATS, COURSE_COUNT } from "@/lib/kyp/study/course-stats-generated";
 
 /** One numbered step of the plan. */
 export interface DailyPlanStep {
@@ -31,13 +31,9 @@ export interface DailyPlanStep {
   href: string;
 }
 
-/** Course outline sizes, derived from the canonical registry. */
-const COURSE_OUTLINES: Record<string, { total: number }> = Object.fromEntries(
-  drugs.map((d) => [
-    d.slug,
-    { total: new Set((d.lessonGroups ?? []).flatMap((l) => l.sectionIds)).size },
-  ])
-);
+// Course outline sizes — generated artifact (registry-derived, pinned
+// by tests/platform-hardening.test.ts).
+const COURSE_OUTLINES = COURSE_STATS;
 
 export function buildDailyPlan(data: KypProgressData, now = Date.now()): DailyPlanStep[] {
   const steps: DailyPlanStep[] = [];
@@ -86,7 +82,7 @@ export function buildDailyPlan(data: KypProgressData, now = Date.now()): DailyPl
     steps.push({
       id: "start",
       title: "Start a new medication",
-      detail: `${drugs.length} courses in the library, each a structured read.`,
+      detail: `${COURSE_COUNT} courses in the library, each a structured read.`,
       href: "/study#medications",
     });
   }

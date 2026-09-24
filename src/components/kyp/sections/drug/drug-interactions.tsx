@@ -5,6 +5,8 @@ import { Badge } from "@/components/kyp/ui/badge";
 import { Callout } from "@/components/kyp/ui/callout";
 import type { Drug, DrugInteraction } from "@/lib/kyp/data";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 /**
  * DrugInteractions — clinically important drug interactions.
@@ -42,7 +44,7 @@ export function DrugInteractions({ drug }: DrugInteractionsProps) {
         <SectionHeader
           eyebrow="Drug Interactions"
           title="What should not be combined — and why."
-          description="Interactions are sorted by severity. The most dangerous interactions are pharmacokinetic (CYP inhibition) and pharmacodynamic (additive serotonergic effect)."
+          description="Interactions are sorted by severity. The most clinically important are pharmacokinetic interactions (one drug altering the levels of another) and pharmacodynamic interactions (additive effects on the same system)."
         />
 
         <div className="mt-10 space-y-3">
@@ -51,12 +53,26 @@ export function DrugInteractions({ drug }: DrugInteractionsProps) {
           ))}
         </div>
 
+        {/* Learning chain: continue into the pairwise Interaction Checker
+            with this medication preselected — the user picks the second
+            drug and sees every interaction both pages list, verbatim. */}
+        <div className="mt-8">
+          <Link
+            href={`/interactions?drug=${drug.slug}`}
+            prefetch={false}
+            className="group inline-flex items-center gap-2 rounded-lg border border-brand/40 bg-brand-soft/30 px-5 py-3 text-sm font-semibold text-brand transition-colors hover:border-brand/60"
+          >
+            Check {drug.genericName} against other medications
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+          </Link>
+        </div>
+
         <div className="mt-8">
           <Callout variant="warning" title="Practical tip for clinicians">
-            Always ask about over-the-counter products — particularly cough syrups containing
-            dextromethorphan (serotonergic), herbal products like St John's Wort (SSRI), and
-            weight-loss products containing sibutramine. These are commonly missed on standard
-            medication reconciliation and are frequent causes of serotonin syndrome.
+            Always ask about over-the-counter products and herbal supplements during
+            medication reconciliation — cough syrups, herbal products such as St John&apos;s
+            Wort, and weight-loss products are commonly missed on standard reconciliation
+            and can interact meaningfully with psychiatric medications.
           </Callout>
         </div>
       </Container>

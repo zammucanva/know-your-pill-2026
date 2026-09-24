@@ -4,11 +4,11 @@ import * as React from "react";
 import { Pill, AlertTriangle, Clock, ShieldCheck, Star } from "lucide-react";
 import { Badge } from "@/components/kyp/ui/badge";
 import { useGuidedLearning } from "@/components/kyp/ui/guided-learning-toggle";
-import { drugClasses } from "@/lib/kyp/data";
+import { drugClasses } from "@/lib/kyp/data/classes";
 import { cn } from "@/lib/utils";
 import { PATIENT_HERO_LABELS } from "@/lib/kyp/patient/labels";
 import type { PatientGuide } from "@/lib/kyp/patient/types";
-import type { Drug } from "@/lib/kyp/data";
+import type { Drug } from "@/lib/kyp/data/types";
 
 /**
  * Patient-aware hero copy and identity card.

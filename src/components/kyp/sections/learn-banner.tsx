@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { ArrowRight, Zap } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
@@ -13,6 +11,10 @@ import { drugs, diseases } from "@/lib/kyp/data";
  *
  * Purpose: make it impossible to miss that KYP is a learning platform.
  * A first-time visitor should see this within the first viewport of scrolling.
+ *
+ * Server Component (counts only — the registries are consumed at
+ * request/build time; the 143-monograph data layer never reaches the
+ * browser through this component).
  */
 export function LearnBanner() {
   const drugCount = drugs.length;
@@ -45,8 +47,10 @@ export function LearnBanner() {
                   Learn
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
+                {/* prefetch={false}: engine route bundles the registry chunk */}
                 <Link
                   href="/quiz"
+                  prefetch={false}
                   className="group inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                 >
                   <Zap className="h-4 w-4" />

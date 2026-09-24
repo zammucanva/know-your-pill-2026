@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Grid3X3, Phone, ShieldAlert } from "lucide-react";
 
 import { Navbar } from "@/components/kyp/sections/navbar";
 import { Footer } from "@/components/kyp/sections/footer";
@@ -13,7 +13,7 @@ import { drugs } from "@/lib/kyp/data";
 /**
  * /medicine — Medicine information hub.
  *
- * Information-first presentation of the 12 canonical medicines:
+ * Information-first presentation of the canonical medicines:
  * what each medicine is, what it treats, and how it works — in
  * plain language — before any exam- or study-oriented framing.
  *
@@ -25,7 +25,7 @@ import { drugs } from "@/lib/kyp/data";
 export const metadata: Metadata = {
   title: "Medicine · Know Your Pill",
   description:
-    "Plain-language medicine information — what each of the 12 psychiatric medicines is, what it treats, and how it works, with full guides covering side effects, timelines, and safety.",
+    "Plain-language medicine information — what each of the 143 psychiatric medicines is, what it treats, and how it works, with full guides covering side effects, timelines, and safety.",
   keywords: [
     "medicine information",
     "antidepressant guides",
@@ -85,6 +85,60 @@ export default function MedicinePage() {
                 classes · full guides with timelines, side effects, and
                 patient counselling
               </p>
+            </Reveal>
+
+            {/* Interaction Checker — prescription help (Phase 4) */}
+            <Reveal delay={0.2}>
+              {/* prefetch={false}: engine route bundles the registry chunk */}
+              <Link
+                href="/interactions"
+                prefetch={false}
+                className="group mt-6 flex max-w-3xl items-start gap-4 rounded-xl border border-brand/40 bg-brand-soft/20 p-5 transition-colors hover:border-brand/70"
+              >
+                <ShieldAlert
+                  className="mt-1 h-5 w-5 shrink-0 text-brand"
+                  aria-hidden
+                />
+                <span className="min-w-0 flex-1">
+                  <span className="block font-serif text-lg font-semibold text-foreground group-hover:text-brand">
+                    Taking more than one medicine? Check them against each
+                    other
+                  </span>
+                  <span className="mt-1.5 block text-sm leading-relaxed text-muted-foreground">
+                    Pick two to six medicines and see every interaction their
+                    own pages list between them — what it does, why it
+                    happens, and what to do about it.
+                  </span>
+                </span>
+                <ArrowRight className="mt-2 h-4 w-4 shrink-0 text-muted-foreground/40 transition-all group-hover:translate-x-1 group-hover:text-brand" />
+              </Link>
+            </Reveal>
+
+            {/* Class Comparison — choose by concern (Stahl's Phase 5) */}
+            <Reveal delay={0.24}>
+              {/* prefetch={false}: engine route bundles the registry chunk */}
+              <Link
+                href="/compare/classes"
+                prefetch={false}
+                className="group mt-4 flex max-w-3xl items-start gap-4 rounded-xl border border-border/60 bg-card p-5 transition-colors hover:border-brand/50"
+              >
+                <Grid3X3
+                  className="mt-1 h-5 w-5 shrink-0 text-brand"
+                  aria-hidden
+                />
+                <span className="min-w-0 flex-1">
+                  <span className="block font-serif text-lg font-semibold text-foreground group-hover:text-brand">
+                    Weighing options within a class? Compare them by concern
+                  </span>
+                  <span className="mt-1.5 block text-sm leading-relaxed text-muted-foreground">
+                    Choose a medication class and the concerns that matter —
+                    weight, sedation, prolactin, EPS and more — and see how
+                    each medicine&apos;s own documented profile differs. An
+                    educational comparison, never a ranking.
+                  </span>
+                </span>
+                <ArrowRight className="mt-2 h-4 w-4 shrink-0 text-muted-foreground/40 transition-all group-hover:translate-x-1 group-hover:text-brand" />
+              </Link>
             </Reveal>
           </Container>
         </Section>

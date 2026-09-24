@@ -1804,21 +1804,21 @@ export const venlafaxine: Drug = {
       label: "MBBS Student",
       estimatedTime: "22 min",
       description: "Foundations, dose-dependent mechanism, clinical uses, side effects, and MBBS exam content.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
     },
     {
       mode: "neetPg",
       label: "NEET PG / INICET",
       estimatedTime: "40 min",
       description: "Full clinical detail with exam-specific content, PYQs, dose-dependent pharmacology, and drug comparisons.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
     },
     {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "50 min",
       description: "Everything — advanced reasoning, ward pearls, TRD algorithm, guideline comparison, full evidence.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
     },
   ],
 
@@ -1867,6 +1867,208 @@ export const venlafaxine: Drug = {
       checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Venlafaxine.",
     },
   ],
+
+  /* ---- Prescriber's Guide (Stahl layer) ---- */
+  /** Educational paraphrase of Stahl's Essential Psychopharmacology:
+   *  The Prescriber's Guide, 1st ed. (2005). Facts restated, not reproduced. */
+  prescriberGuide: {
+    sourceEdition: "Stahl's Essential Psychopharmacology: The Prescriber's Guide, 1st ed. (2005)",
+
+    onsetTimeline: [
+      "Therapeutic onset usually delayed 2–4 weeks",
+      "No benefit by 6–8 weeks for depression → dose increase or switch",
+      "In generalized anxiety, response and remission may keep improving after 8 weeks and for up to 6 months",
+      "May continue working for years to prevent relapse",
+    ],
+    ifItWorks: [
+      "Goal: complete remission plus prevention of future relapses — not a cure; symptoms can recur after stopping",
+      "Continue until all symptoms are gone (remission), especially in depression and whenever possible in anxiety disorders",
+      "First depressive episode: continue 1 year once well; later episodes and anxiety disorders may need indefinite treatment",
+    ],
+    ifItDoesNotWork: [
+      "Partial response is common — residual insomnia, fatigue, poor concentration",
+      "Some patients are non-responders (treatment-resistant / refractory); some early responders 'poop-out'",
+      "Options: raise dose, switch agent, or add an augmenting drug",
+      "Consider psychotherapy and re-evaluation for another diagnosis or comorbid condition",
+      "Apparent non-response from activation of latent bipolar disorder → stop and switch to a mood stabilizer",
+    ],
+    augmentationCombos: [
+      "Mirtazapine — the 'California rocket fuel' combination — a potentially powerful dual serotonin/norepinephrine boost; watch for bipolar activation and suicidal ideation",
+      "Noradrenergic enhancers: bupropion, reboxetine, nortriptyline, desipramine, maprotiline, atomoxetine",
+      "Modafinil for fatigue, sleepiness, and poor concentration",
+      "Mood stabilizers or atypical antipsychotics for bipolar depression, psychotic or treatment-resistant depression",
+      "Benzodiazepines; if all else fails for anxiety, gabapentin or tiagabine",
+      "Hypnotics or trazodone for insomnia; classically lithium, buspirone, or thyroid hormone",
+    ],
+    testsBeforeStarting: [
+      "Check blood pressure before initiating treatment and regularly during treatment",
+    ],
+
+    sideEffectLogic: [
+      "Serotonin and norepinephrine increases at receptors outside the therapeutic circuits — sleep centers (insomnia), norepinephrine effects on acetylcholine release (constipation, dry mouth)",
+      "Most side effects are immediate but often go away with time",
+      "Most side effects increase with higher doses, at least transiently",
+    ],
+    sideEffectManagement: [
+      "Wait — most early effects fade",
+      "Wait again",
+      "Wait once more",
+      "Lower the dose",
+      "After a few weeks: switch or add other drugs",
+    ],
+    sideEffectRescue: [
+      "Often better to try another antidepressant monotherapy first",
+      "Trazodone or a hypnotic for insomnia",
+      "Bupropion, sildenafil, vardenafil, or tadalafil for sexual dysfunction",
+      "Benzodiazepines for jitteriness and anxiety at initiation, especially in anxious patients",
+      "Mirtazapine for insomnia, agitation, and gastrointestinal effects",
+    ],
+    weightGain: "Reported but not expected — possible weight loss, especially short-term",
+    sedation: "Significant minority — may also be activating in some patients",
+
+    dosing: [
+      {
+        indication: "Depression",
+        starting: "37.5 mg once daily (XR) or 25–50 mg in 2–3 divided doses (IR) for a week",
+        titration: "Increase no faster than 75 mg every 4 days; try 75 mg increments for a few weeks before the next",
+        target: "75–225 mg/day",
+        max: "375 mg/day (up to 600 mg in heroic cases)",
+        notes: [
+          "All doses: potent serotonin reuptake blockade",
+          "75–225 mg/day: predominantly serotonergic in some patients, dual SNRI action in others",
+          "225–375 mg/day: dual serotonin and norepinephrine action in most patients — non-responders at lower doses should try higher doses to get the full dual SNRI benefit",
+          "Very high doses (>375 mg/day): dopamine reuptake blockade as well in some patients",
+          "Do not break or chew XR capsules — it destroys the controlled release",
+        ],
+      },
+      {
+        indication: "Generalized anxiety disorder",
+        starting: "37.5–75 mg/day (XR)",
+        titration: "Titrate as for depression",
+        target: "150–225 mg/day",
+        max: "225 mg/day typical (up to 375 mg)",
+      },
+    ],
+    dosageForms: [
+      "XR capsules 37.5 mg, 75 mg, 150 mg",
+      "Tablets 25 mg, 37.5 mg, 50 mg, 75 mg, 100 mg (all scored)",
+    ],
+    dosingTips: [
+      "Active metabolite O-desmethylvenlafaxine (ODV) is formed by CYP2D6 — 2D6 inhibition reduces ODV formation, but clinical significance is uncertain",
+      "Non-responders who tolerate high doses: consider checking plasma venlafaxine + ODV levels; if low, experts may prudently push above 375 mg/day with close monitoring",
+      "Severe discontinuation problems: taper over months (about 1% dose reduction every 3 days — crush the tablet, suspend in 100 mL of juice, discard 1 mL and drink the rest, then 2 mL a few days later, and so on). Both biological tapering and behavioral desensitization",
+      "Alternative for severe withdrawal: add a long-half-life SSRI (especially fluoxetine), taper venlafaxine slowly while maintaining fluoxetine, then taper the fluoxetine",
+      "Differentiate re-emergence of symptoms (needs treatment back) from true withdrawal symptoms",
+      "Activation and agitation may represent induction of a mixed dysphoric bipolar II state with suicidal ideation — add lithium, a mood stabilizer or an antipsychotic, and/or stop venlafaxine",
+      "Many side effects are dose- and time-dependent — they spike with each increase, then fade",
+    ],
+    overdose: [
+      "Rarely lethal — may cause no symptoms; possible sedation, convulsions, rapid heartbeat",
+    ],
+    longTermUse: "See the doctor regularly to monitor blood pressure, especially at doses above 225 mg/day",
+    habitForming: "No",
+    howToStop: [
+      "Taper to avoid withdrawal effects (dizziness, nausea, stomach cramps, sweating, tingling, dysesthesias)",
+      "Many patients tolerate: 50% reduction for 3 days → another 50% for 3 days → stop",
+      "If withdrawal emerges, raise the dose to abort, then withdraw much more slowly",
+      "Withdrawal effects can be more common or more severe with venlafaxine than with some other antidepressants — the short half-life makes missed doses and stopping noticeable",
+    ],
+    pharmacokinetics: [
+      "Parent half-life 3–7 hours; active metabolite (ODV) half-life 9–13 hours",
+      "Fatal serotonin syndrome with MAOIs — do not combine; wait 14 days after stopping an MAOI, and 2 weeks after stopping venlafaxine before starting an MAOI",
+      "Cimetidine may reduce clearance and raise venlafaxine levels",
+      "Could theoretically blunt codeine analgesia or interact with triptans; tramadol raises seizure risk",
+      "Few known adverse drug interactions overall",
+    ],
+    doNotUse: [
+      "Uncontrolled narrow angle-closure glaucoma",
+      "Taking an MAO inhibitor",
+      "Proven allergy to venlafaxine",
+    ],
+
+    specialPopulations: [
+      {
+        population: "Renal impairment",
+        guidance: [
+          "Lower dose by 25–50%",
+          "Dialysis patients should not receive the next dose until dialysis is completed",
+        ],
+      },
+      {
+        population: "Hepatic impairment",
+        guidance: ["Lower dose by 50%"],
+      },
+      {
+        population: "Cardiac impairment",
+        guidance: [
+          "Use with caution — venlafaxine has a dose-dependent effect on blood pressure",
+        ],
+      },
+      {
+        population: "Elderly",
+        guidance: ["Some patients may tolerate lower doses better"],
+      },
+      {
+        population: "Children & adolescents",
+        guidance: [
+          "Not specifically approved, but preliminary data suggest efficacy in youth with depression, anxiety disorders, and ADHD",
+          "Watch for bipolar activation and suicidal ideation; counsel parents/guardians",
+        ],
+      },
+      {
+        population: "Pregnancy",
+        guidance: [
+          "Risk Category C — not generally recommended, especially first trimester; continuous treatment may nonetheless be necessary and has not been proven harmful",
+          "Late third-trimester exposure: neonatal complications reported (respiratory distress, cyanosis, apnea, seizures, feeding difficulty, hypoglycemia, jitteriness)",
+          "Weigh treatment risk against relapse risk — for many, continuing is the better choice",
+        ],
+      },
+      {
+        population: "Breast feeding",
+        guidance: [
+          "Some drug is found in breast milk; trace amounts in nursing infants",
+          "If the infant becomes irritable or sedated, breastfeeding or the drug may need to be stopped",
+          "Postpartum is high-risk for relapse — may need reinstitution late in the third trimester or shortly after delivery",
+        ],
+      },
+    ],
+
+    potentialAdvantages: [
+      "Patients with retarded depression",
+      "Patients with atypical depression",
+      "Patients with comorbid anxiety",
+      "Possibly higher remission rates on SNRIs than SSRIs in depression",
+      "Depressed patients with somatic symptoms, fatigue, and pain",
+      "Patients who do not respond or remit on SSRIs",
+    ],
+    potentialDisadvantages: [
+      "Patients sensitive to nausea",
+      "Patients with borderline or uncontrolled hypertension",
+    ],
+    primaryTargetSymptoms: [
+      "Depressed mood",
+      "Energy, motivation, and interest",
+      "Sleep disturbance",
+      "Anxiety",
+    ],
+    pearls: [
+      "May be effective in patients who fail SSRIs — one of the preferred treatments for treatment-resistant depression",
+      "May be combined with other antidepressants for treatment-refractory cases",
+      "XR formulation improves tolerability, reduces nausea, and allows once-daily dosing",
+      "May be effective across a broad array of anxiety disorders",
+      "May be effective in adult ADHD",
+      "Not studied in stress urinary incontinence",
+      "Greater potency for serotonin than norepinephrine reuptake blockade — of unclear clinical significance as a differentiator",
+      "In vitro binding studies underestimate in vivo potency — they ignore high active-metabolite concentrations, oral dosing, and low protein binding that raise functional levels at receptors",
+      "Effective dose range is broad: 75–375 mg in many difficult cases, up to 600 mg or more in heroic cases",
+      "Preliminary studies suggest potential efficacy in neuropathic pain and fibromyalgia",
+      "Both efficacy and side effects (especially nausea and blood pressure) are dose-dependent",
+      "Blood pressure increases are rare with the XR formulation up to 225 mg",
+      "More withdrawal reactions reported on discontinuation than with some other antidepressants",
+      "May help hot flushes in perimenopausal women",
+      "May be associated with higher depression remission rates than SSRIs",
+    ],
+  },
 
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",

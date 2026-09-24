@@ -52,9 +52,20 @@ export const patientGuides: Record<string, PatientGuide> = {
 const canonicalDrugsBySlug = new Map<string, Drug>(drugs.map((d) => [d.slug, d]));
 
 /**
- * Build-time integrity assertion: every guide must reference a real
- * canonical drug, and no canonical drug may silently lose its guide.
- * (12 medications → 12 guides.)
+ * Build-time integrity assertion.
+ *
+ *  1. Every guide must reference a real canonical drug (a guide can
+ *     never drift from the registry).
+ *  2. Guides are OPTIONAL per medication: the hand-authored Patient
+ *     Mode layer currently covers the original twelve antidepressants
+ *     and rolls out progressively — the 131 Stahl's medications
+ *     (Phase 3/4) render the canonical patient-facing fields
+ *     (patientMode, patientExplanation, FAQs) until a guide exists.
+ *     The drug page is designed for `patientGuide === undefined`
+ *     (hero/quick-facts degrade to canonical content), so absence is
+ *     a supported state, not an error.
+ *  3. The registry may never contain a slug that is not a canonical
+ *     drug, and the count may never exceed the canonical registry.
  */
 function validateRegistry(): void {
   const guideSlugs = Object.keys(patientGuides).sort();
@@ -69,18 +80,11 @@ function validateRegistry(): void {
     }
   }
 
-  const missing = drugSlugs.filter(
-    (slug) => !patientGuides[slug]
-  );
-  if (missing.length > 0) {
+  if (guideSlugs.length > drugSlugs.length) {
     throw new Error(
-      `[patient] Canonical drugs missing a patient guide: ${missing.join(", ")}. ` +
-        "Every medication must provide the Patient Mode layer."
+      "[patient] Guide registry is larger than the canonical drug registry — " +
+        "impossible state, check for duplicate guide keys."
     );
-  }
-
-  if (guideSlugs.length !== drugSlugs.length) {
-    throw new Error("[patient] Guide registry size does not match the canonical drug count.");
   }
 }
 

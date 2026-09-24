@@ -1,13 +1,18 @@
-"use client";
-
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
 import { medicationClasses, categories, drugs } from "@/lib/kyp/data";
-import { cn } from "@/lib/utils";
 
+/**
+ * MedicationLibrarySection — homepage medication-library entry.
+ *
+ * Server Component (static content + Links only — the canonical drug
+ * registry is consumed at request/build time for the six featured
+ * names and the registry count; nothing from the 143-monograph data
+ * layer ships to the browser through this component).
+ */
 export function MedicationLibrarySection() {
   return (
     <Section id="library" className="relative overflow-hidden bg-muted/10">
@@ -20,7 +25,7 @@ export function MedicationLibrarySection() {
               className="font-serif font-semibold tracking-[-0.03em] text-foreground leading-[1.05] max-w-4xl"
               style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
             >
-              Twelve psychiatric medications, structured the same way
+              {drugs.length} psychiatric medications, structured the same way
             </h2>
             <p className="mt-5 text-body text-muted-foreground max-w-2xl leading-relaxed">
               Each drug page covers mechanism of action, receptor pharmacology, clinical indications, side effects with management, monitoring parameters, drug interactions, patient education, and a real clinical case.

@@ -5,25 +5,35 @@ import { useRouter } from "next/navigation";
 import { Search, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/kyp/ui/reveal";
-import { drugs, substancePages, diseases } from "@/lib/kyp/data";
 import { cn } from "@/lib/utils";
 
-/**
- * Search plumbing is derived from the canonical registries so the homepage can
- * never drift from the shipped content (SEC/data-integrity follow-up).
- * `zoloft` is preserved as a legacy brand alias mapped to its canonical slug.
- */
-const drugSlugs = drugs.map((d) => d.slug);
-const substanceSlugs = substancePages.map((s) => s.slug);
-const diseaseSlugs = diseases.map((d) => d.slug);
-const brandAliases: Record<string, string> = { zoloft: "sertraline" };
+/** Search plumbing is derived from the canonical registries ON THE
+ * SERVER (by the server parent) and passed down as lightweight props —
+ * the homepage hero never imports the 143-monograph data layer into
+ * the client bundle. `zoloft` is preserved as a legacy brand alias
+ * mapped to its canonical slug. */
+interface HomeHeroProps {
+  /** All canonical drug slugs (typeahead resolution). */
+  drugSlugs: string[];
+  /** All substance page slugs. */
+  substanceSlugs: string[];
+  /** All disease page slugs (first is the search fallback). */
+  diseaseSlugs: string[];
+  /** Popular search chips (generic names of the first few drugs). */
+  popularSearches: string[];
+}
 
-const popularSearches = drugs.slice(0, 4).map((d) => d.genericName);
+const brandAliases: Record<string, string> = { zoloft: "sertraline" };
 
 /** Hero overline — duplicated into data-text for the CSS-only shine overlay. */
 const HERO_OVERLINE = "Medication education made visual";
 
-export function HomeHero() {
+export function HomeHero({
+  drugSlugs,
+  substanceSlugs,
+  diseaseSlugs,
+  popularSearches,
+}: HomeHeroProps) {
   const router = useRouter();
   const [query, setQuery] = React.useState("");
 

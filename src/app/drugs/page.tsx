@@ -19,8 +19,9 @@ import {
 /**
  * /drugs — Medication Library index.
  *
- * The primary browse surface for KYP's 12 canonical psychiatric
- * medications, derived entirely from the canonical drug registry
+ * The primary browse surface for KYP's canonical psychiatric
+ * medications (143 — 12 original + 131 from Stahl's Prescriber's
+ * Guide), derived entirely from the canonical drug registry
  * (src/lib/kyp/data/drugs/index.ts) — never a second medication array.
  *
  * Two browse structures, both derived from the registry:
@@ -29,17 +30,20 @@ import {
  *      collection links: Psychiatry → Antidepressants → class pages
  *      (/drugs/class/[classId]).
  *   2. Class groups below list every medication, computed from the
- *      registry's own drugClassLabel order (SSRI → SNRI → NDRI →
- *      NaSSA → TCA). Each group heading links to its class collection
- *      page, so the taxonomy is navigable forward and backward.
+ *      registry's own drugClassLabel order. Each group heading links
+ *      to its class collection page, so the taxonomy is navigable
+ *      forward and backward.
  *
  * A registry change re-flows this page automatically.
  */
 
+/** Class groups derived from the registry's natural order. */
+const classGroups = Array.from(new Set(drugs.map((d) => d.drugClassLabel)));
+
 export const metadata: Metadata = {
   title: "Medication Library · Know Your Pill",
   description:
-    "Twelve psychiatric medications, structured the same way — mechanism, receptors, indications, side effects, monitoring, interactions, and clinical cases. Browse the full KYP medication library.",
+    `${drugs.length} psychiatric medications, structured the same way — mechanism, receptors, indications, side effects, monitoring, interactions, and clinical cases. Browse the full KYP medication library.`,
   keywords: [
     "medication library",
     "psychiatric medications",
@@ -47,22 +51,21 @@ export const metadata: Metadata = {
     "SNRI",
     "TCA",
     "antidepressants",
+    "antipsychotics",
+    "mood stabilisers",
     "pharmacology",
     "Know Your Pill",
   ],
   openGraph: {
     title: "Medication Library · Know Your Pill",
     description:
-      "Twelve psychiatric medications, structured the same way — from mechanism to clinical cases.",
+      `${drugs.length} psychiatric medications, structured the same way — from mechanism to clinical cases.`,
     type: "website",
     siteName: "Know Your Pill",
   },
 };
 
-/** Class groups derived from the registry's natural order. */
-const classGroups = Array.from(new Set(drugs.map((d) => d.drugClassLabel)));
-
-/** Registry position (1-based) — used for the global 01–12 numbering.
+/** Registry position (1-based) — used for the global numbering.
  *  Groups and rows both follow registry order, so this matches the visual order. */
 const drugNumber = (slug: string): number =>
   drugs.findIndex((d) => d.slug === slug) + 1;
@@ -91,18 +94,21 @@ export default function MedicationLibraryPage() {
                 Medication Library
               </h1>
               <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground leading-relaxed">
-                Twelve psychiatric medications, structured the same way. Every
-                guide covers mechanism of action, receptor pharmacology,
-                clinical indications, side effects with management, monitoring
-                parameters, drug interactions, patient education, and a real
-                clinical case.
+                {drugs.length} psychiatric medications, structured the same
+                way. Every guide covers mechanism of action, receptor
+                pharmacology, clinical indications, side effects with
+                management, monitoring parameters, drug interactions, patient
+                education, and a real clinical case.
               </p>
             </Reveal>
 
             <Reveal delay={0.12}>
               <div className="mt-10 flex flex-wrap gap-3">
+                {/* prefetch={false}: /quiz is an engine route whose bundle
+                    ships the 143-drug registry chunk (~1.5MB) — see navbar.tsx */}
                 <Link
                   href="/quiz"
+                  prefetch={false}
                   className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                 >
                   Practice MCQs
@@ -305,8 +311,10 @@ export default function MedicationLibraryPage() {
                     them into one place.
                   </p>
                 </div>
+                {/* prefetch={false}: engine route bundles the registry chunk */}
                 <Link
                   href="/quiz"
+                  prefetch={false}
                   className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
                 >
                   Practice MCQs

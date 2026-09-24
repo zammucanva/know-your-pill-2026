@@ -169,7 +169,7 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
   return (
     <>
       {/* Desktop: sticky left rail — VS Code Explorer style (narrow, subtle) */}
-      <aside className="hidden lg:block fixed left-0 top-16 z-30 w-48 xl:w-52 border-r border-border/40 bg-card/40 backdrop-blur-sm">
+      <aside className="hidden lg:block fixed left-0 top-16 z-30 w-48 xl:w-52 border-r border-border/40 bg-card/40 backdrop-blur-sm print:hidden">
         <div className="px-3 py-3">
           {/* Progress header — compact */}
           <div className="flex items-center justify-between text-[0.65rem] font-medium uppercase tracking-wide text-muted-foreground/80">
@@ -200,8 +200,9 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
                       <button
                         type="button"
                         onClick={() => scrollToSection(item.id)}
+                        aria-current={isActive ? "true" : undefined}
                         className={cn(
-                          "flex flex-1 items-center gap-1.5 rounded px-2 py-1 text-[0.72rem] font-normal leading-tight transition-colors text-left truncate",
+                          "flex flex-1 items-center gap-1.5 rounded px-2 py-1 text-[0.72rem] font-normal leading-tight transition-colors text-left truncate kyp-focus-ring",
                           isActive
                             ? "bg-brand/10 text-brand-ink font-medium"
                             : isCompleted
@@ -211,13 +212,17 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
                       >
                         <span className="truncate">{item.label}</span>
                       </button>
-                      {/* Manual completion checkbox — minimal */}
+                      {/* Manual completion checkbox — minimal. Revealed on
+                          hover AND on keyboard focus (opacity-0 with no
+                          focus-visible escape hatch would make it
+                          unreachable for keyboard users). */}
                       <button
                         type="button"
                         onClick={() => toggleComplete(item.id)}
                         aria-label={isCompleted ? `Mark ${item.label} as not complete` : `Mark ${item.label} as complete`}
+                        aria-pressed={isCompleted}
                         className={cn(
-                          "flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full border transition-colors opacity-0 group-hover:opacity-100",
+                          "flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full border transition-colors opacity-0 group-hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand/50 focus-visible:ring-offset-1",
                           isCompleted
                             ? "border-success bg-success text-white opacity-100"
                             : "border-border text-transparent hover:border-brand"
@@ -238,7 +243,7 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
       <button
         type="button"
         onClick={() => setMobileOpen(true)}
-        className="lg:hidden fixed bottom-20 left-4 z-40 flex items-center gap-2 rounded-full border border-border/70 bg-card/90 backdrop-blur-xl px-4 py-2.5 shadow-[var(--shadow-lift)]"
+        className="lg:hidden fixed bottom-20 left-4 z-40 flex items-center gap-2 rounded-full border border-border/70 bg-card/90 backdrop-blur-xl px-4 py-2.5 shadow-[var(--shadow-lift)] print:hidden"
         aria-label="Open section navigator"
       >
         <div className="relative h-5 w-5">

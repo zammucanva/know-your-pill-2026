@@ -15,6 +15,7 @@
     "build:export-clean": "rm -rf out && GITHUB_PAGES=1 next build",
     "test": "bun test tests/",
     "test:content-lock": "bun scripts/content-lock.ts",
+    "gen:client-data": "bun scripts/gen-client-data.ts",
     "osv": "bun scripts/osv-audit.ts"
   },
   "dependencies": {

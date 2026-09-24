@@ -13,7 +13,7 @@ import {
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
-import { drugs } from "@/lib/kyp/data";
+import { COURSE_STATS, FIRST_COURSE_SLUG } from "@/lib/kyp/study/course-stats-generated";
 import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
 import {
   clearProgress,
@@ -45,13 +45,10 @@ import {
  * stray tap.
  */
 
-/** Course outline sizes, derived from the canonical registry. */
-const COURSE_OUTLINES: Record<string, { total: number }> = Object.fromEntries(
-  drugs.map((d) => [
-    d.slug,
-    { total: new Set((d.lessonGroups ?? []).flatMap((l) => l.sectionIds)).size },
-  ])
-);
+// Course outline sizes — generated artifact (registry-derived, pinned
+// by tests/platform-hardening.test.ts); keeps the 143-monograph
+// registry out of this client chunk.
+const COURSE_OUTLINES = COURSE_STATS;
 
 function timeAgo(ms: number): string {
   const diffMin = Math.floor((Date.now() - ms) / 60000);
@@ -106,7 +103,7 @@ export function ContinueStudying() {
 
   /* ── GENUINE START STATE ─────────────────────────────────────── */
   if (!hasProgress) {
-    const start = drugs[0];
+    const start = { slug: FIRST_COURSE_SLUG };
     return (
       <Section spacing="relaxed" className="border-t border-border/30 bg-muted/10">
         <Container>

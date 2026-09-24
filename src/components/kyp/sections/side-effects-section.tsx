@@ -4,7 +4,7 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { SideEffectCard } from "@/components/kyp/ui/side-effect-card";
-import { sideEffects } from "@/lib/kyp/data";
+import { sideEffects } from "@/lib/kyp/data/side-effects";
 
 /**
  * SideEffectsSection — teaser for Phase 8 (Side Effect Library).

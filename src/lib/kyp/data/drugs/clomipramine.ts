@@ -1906,21 +1906,21 @@ export const clomipramine: Drug = {
       label: "MBBS Student",
       estimatedTime: "20 min",
       description: "Foundations, mechanism, clinical uses, side effects, and MBBS exam content.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
     },
     {
       mode: "neetPg",
       label: "NEET PG / INICET",
       estimatedTime: "35 min",
       description: "Full clinical detail with exam-specific content, PYQs, and drug comparisons.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
     },
     {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
       description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
     },
   ],
 
@@ -1969,6 +1969,214 @@ export const clomipramine: Drug = {
       checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Clomipramine.",
     },
   ],
+
+  /* ---- Prescriber's Guide (Stahl layer) ---- */
+  /** Educational paraphrase of Stahl's Essential Psychopharmacology:
+   *  The Prescriber's Guide, 1st ed. (2005). Facts restated, not reproduced. */
+  prescriberGuide: {
+    sourceEdition: "Stahl's Essential Psychopharmacology: The Prescriber's Guide, 1st ed. (2005)",
+
+    onsetTimeline: [
+      "May work immediately for insomnia or anxiety (sedative effect)",
+      "Depression: onset usually delayed 2–4 weeks",
+      "OCD: onset can be delayed 6–12 weeks — do not give up early",
+      "No benefit by 6–8 weeks for depression, or 12 weeks for OCD → dose increase or switch",
+      "May continue working for years to prevent relapse",
+    ],
+    ifItWorks: [
+      "Depression: aim for complete remission plus relapse prevention — continue 1 year after a first episode; later episodes may be indefinite",
+      "OCD: complete remission is the goal but is less likely than in depression; treatment is often indefinite from the start",
+      "Chronic neuropathic pain: aim to reduce symptoms as much as possible, usually combined with other treatments",
+      "Other anxiety disorders and pain: may also be indefinite, though long-term data are limited",
+    ],
+    ifItDoesNotWork: [
+      "Partial response is common — residual insomnia, fatigue, poor concentration",
+      "Some patients are non-responders (treatment-resistant / refractory)",
+      "Options: raise dose, switch agent, or add an augmenting drug",
+      "Consider psychotherapy — especially behavioral therapy in OCD",
+      "Re-evaluate for another diagnosis or comorbid condition (medical illness, substance use)",
+      "Apparent non-response from activation of latent bipolar disorder → stop and switch to a mood stabilizer",
+    ],
+    augmentationCombos: [
+      "Lithium, buspirone, or thyroid hormone for depression and OCD",
+      "For the expert: cautious addition of fluvoxamine in treatment-resistant OCD (see pearls — favorable pharmacokinetic interaction)",
+      "Atypical antipsychotics for OCD",
+    ],
+    testsBeforeStarting: [
+      "None for healthy individuals — though plasma drug level monitoring is potentially available at specialty laboratories for the expert",
+      "Weigh all patients and determine BMI before starting (TCAs frequently cause weight gain)",
+      "Overweight/obese patients: consider checking fasting glucose (pre-diabetes 100–125 mg/dL; diabetes >126 mg/dL) and lipids; treat or refer (nutrition, activity, smoking cessation)",
+      "Monitor weight and BMI during treatment; >5% weight gain → evaluate for pre-diabetes/diabetes/dyslipidemia or switch antidepressant",
+      "EKG for selected patients (personal/family QTc prolongation history, arrhythmia, recent MI, uncompensated heart failure, QTc-prolonging drugs)",
+      "Patients at risk of electrolyte disturbance (diuretics): baseline and periodic potassium and magnesium",
+    ],
+
+    sideEffectLogic: [
+      "Anticholinergic activity → sedation, dry mouth, constipation, blurred vision",
+      "Antihistamine properties → sedation and weight gain",
+      "Alpha-1 adrenergic blockade → dizziness, sedation, hypotension",
+      "Ion channel blockade → arrhythmias and seizures, especially in overdose",
+    ],
+    sideEffectManagement: [
+      "Wait — many effects fade",
+      "Wait again",
+      "Wait once more",
+      "Lower the dose",
+      "Switch to an SSRI or a newer antidepressant",
+    ],
+    sideEffectRescue: [
+      "Many side effects cannot be improved with an augmenting agent — switching is usually the answer",
+    ],
+    weightGain: "Many patients, can be significant — increases appetite and carbohydrate craving",
+    sedation: "Many patients, can be significant — tolerance to sedation may develop with long-term use",
+
+    dosing: [
+      {
+        indication: "Depression (adults)",
+        starting: "25 mg/day",
+        titration: "Increase over 2 weeks to 100 mg/day",
+        target: "100–200 mg/day",
+        max: "250 mg/day",
+        notes: [
+          "Single daily dose should generally be at bedtime because of sedation",
+          "If split dosing: largest dose at bedtime; if nightmares occur, split doses and avoid a large bedtime dose",
+          "Chronic pain patients may need only lower doses",
+        ],
+      },
+      {
+        indication: "OCD",
+        starting: "25 mg/day",
+        titration: "Titrate over 2 weeks toward the high end of the range",
+        target: "200–250 mg/day",
+        max: "250 mg/day",
+        notes: [
+          "OCD often requires doses at the high end of the range",
+          "Seizure risk increases with dose — 300 mg/day may carry up to a 7/1000 seizure incidence, a generally unacceptable risk",
+        ],
+      },
+    ],
+    dosageForms: ["Capsules 25 mg", "Capsules 50 mg", "Capsules 75 mg"],
+    dosingTips: [
+      "Seizure risk rises steeply above 250 mg/day",
+      "Intolerable anxiety, insomnia, agitation, akathisia or activation on start or stop → consider activated bipolar disorder; switch to a mood stabilizer or atypical antipsychotic",
+      "Activation/agitation after switching or adding antidepressants may represent induction of a mixed dysphoric bipolar II state with suicidal ideation",
+    ],
+    overdose: [
+      "Death may occur — convulsions, cardiac dysrhythmias, severe hypotension, CNS depression, coma, ECG changes",
+    ],
+    longTermUse: "Limited data, but appears efficacious and safe long-term",
+    habitForming: "No",
+    howToStop: [
+      "Taper to avoid withdrawal effects",
+      "Even with gradual reduction, some withdrawal symptoms may appear within the first 2 weeks",
+      "Many patients tolerate: 50% reduction for 3 days → another 50% for 3 days → stop",
+      "If withdrawal emerges, raise the dose to abort, then withdraw much more slowly",
+    ],
+    pharmacokinetics: [
+      "Half-life approximately 17–28 hours",
+      "Substrate of CYP2D6 and CYP1A2",
+      "Parent drug is a potent serotonin reuptake inhibitor; metabolized via CYP1A2 demethylation to desmethyl-clomipramine — a predominantly norepinephrine reuptake inhibitor",
+      "At steady state plasma activity is generally more noradrenergic (higher desmethyl-CMI) than serotonergic (lower parent CMI)",
+      "Fluvoxamine (SSRI + 1A2 inhibitor) blocks this conversion → higher parent CMI levels, a more serotonergic profile",
+      "CYP2D6 inhibitors (fluoxetine, paroxetine, bupropion, duloxetine) raise TCA levels; cimetidine, phenothiazines, haloperidol and methylphenidate can also raise levels",
+      "Anticholinergic combinations can cause paralytic ileus or hyperthermia; tramadol raises seizure risk; may blunt clonidine's hypotensive effect",
+    ],
+    doNotUse: [
+      "Recovering from myocardial infarction",
+      "Taking agents that significantly prolong QTc (pimozide, thioridazine, selected antiarrhythmics, moxifloxacin, sparfloxacin)",
+      "History of QTc prolongation or cardiac arrhythmia, recent acute MI, or uncompensated heart failure",
+      "Taking drugs that inhibit TCA metabolism (CYP2D6 inhibitors) — except by an expert",
+      "Known reduced CYP2D6 function (poor metabolizers) — except by an expert at low doses",
+      "Proven allergy to clomipramine",
+    ],
+
+    specialPopulations: [
+      {
+        population: "Renal impairment",
+        guidance: ["Use with caution"],
+      },
+      {
+        population: "Hepatic impairment",
+        guidance: ["Use with caution"],
+      },
+      {
+        population: "Cardiac impairment",
+        guidance: [
+          "TCAs cause arrhythmias, conduction slowing, orthostatic hypotension, sinus tachycardia and heart failure — especially in the diseased heart; MI and stroke reported",
+          "QTc prolongation is enhanced by bradycardia, hypokalemia and congenital/acquired long QTc — evaluate before administering",
+          "Avoid TCAs in known QTc prolongation, recent acute MI, or uncompensated heart failure",
+          "May worsen heart-rate variability — an independent mortality risk in cardiac populations; SSRIs are more appropriate in cardiac patients",
+          "Risk/benefit may not justify TCAs in cardiac impairment",
+        ],
+      },
+      {
+        population: "Elderly",
+        guidance: [
+          "More sensitive to anticholinergic, cardiovascular, hypotensive and sedative effects",
+          "Dose may need to be lower than the usual adult dose, at least initially",
+        ],
+      },
+      {
+        population: "Children & adolescents",
+        guidance: [
+          "Not recommended under age 10",
+          "Effective for OCD in children; TCAs show lack of efficacy for depression in youth",
+          "Cases of sudden death have occurred in children taking TCAs",
+          "Titrate to a maximum of 100 mg/day or 3 mg/kg/day after 2 weeks, then up to 200 mg/day or 3 mg/kg/day",
+          "Observe for bipolar activation and suicidal ideation; counsel parents/guardians",
+        ],
+      },
+      {
+        population: "Pregnancy",
+        guidance: [
+          "Risk Category C; crosses the placenta",
+          "Adverse effects reported in infants of mothers on TCAs (lethargy, withdrawal symptoms, fetal malformations)",
+          "Weigh treatment risk against the risk of relapse of depression or worsening OCD — for many, continuing is the better choice",
+        ],
+      },
+      {
+        population: "Breast feeding",
+        guidance: [
+          "Drug is present in breast milk",
+          "Recommendation in the guide: either discontinue the drug or bottle feed",
+          "Postpartum is high-risk for depression and OCD worsening — may need reinstitution late in the third trimester or shortly after delivery",
+        ],
+      },
+    ],
+
+    potentialAdvantages: [
+      "Patients with insomnia",
+      "Severe or treatment-resistant depression",
+      "Comorbid OCD and depression",
+      "Patients with cataplexy",
+    ],
+    potentialDisadvantages: [
+      "Pediatric and geriatric patients",
+      "Patients concerned about weight gain",
+      "Cardiac patients",
+      "Patients with seizure disorders",
+    ],
+    primaryTargetSymptoms: [
+      "Depressed mood",
+      "Obsessive thoughts",
+      "Compulsive behaviors",
+    ],
+    pearls: [
+      "The only TCA with proven efficacy in OCD",
+      "Steady-state metabolism story: parent clomipramine (potent serotonin reuptake blocker) is converted to desmethyl-clomipramine (potent norepinephrine reuptake blocker) by CYP1A2",
+      "Expert move in treatment-resistant OCD: adding fluvoxamine blocks that conversion — higher parent-drug levels plus its own serotonergic action powerfully enhance serotonergic activity via both pharmacodynamics and pharmacokinetics",
+      "One of the most favored TCAs for severe depression; TCAs remain useful for severe or treatment-resistant depression but are no longer first-line for depression generally",
+      "TCAs are often first-line for chronic pain",
+      "Unique among TCAs: potentially fatal interaction with MAOIs — serotonin syndrome with high fever, seizures and coma (analogous to SSRI + MAOI), in addition to the hypertensive danger of all MAOI-TCA combos",
+      "A similar serotonin syndrome can occur when clomipramine is combined with SSRIs, presumably due to its potent serotonin reuptake blockade",
+      "TCAs may aggravate psychotic symptoms; avoid alcohol (additive CNS effects)",
+      "Underweight patients may be more susceptible to cardiovascular effects; children, dehydrated patients and cardiac patients are more susceptible to cardiotoxicity",
+      "Warn patients about photosensitivity and blue-green urine",
+      "SSRIs may be more effective in women; TCAs may be more effective in men",
+      "7% of the population (especially Caucasians) carry a reduced-activity CYP2D6 variant — poor metabolizers may need dose reduction; consider phenotypic testing in vulnerable patients",
+      "Extraordinarily severe side effects at normal or low doses → suspect the CYP2D6 poor-metabolizer phenotype; reduce dose or switch",
+    ],
+  },
 
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",

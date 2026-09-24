@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { useDifficulty } from "@/components/kyp/ui/difficulty-toggle";
-import { hiddenInPatientMode } from "@/lib/kyp/data";
+import { hiddenInPatientMode } from "@/lib/kyp/data/types";
 import { cn } from "@/lib/utils";
 
 /**

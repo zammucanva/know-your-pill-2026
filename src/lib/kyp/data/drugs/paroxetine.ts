@@ -1784,21 +1784,21 @@ export const paroxetine: Drug = {
       label: "MBBS Student",
       estimatedTime: "22 min",
       description: "Foundations, mechanism, clinical uses, side effects, and MBBS exam content. Pay attention to paroxetine's unique contraindications.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
     },
     {
       mode: "neetPg",
       label: "NEET PG / INICET",
       estimatedTime: "40 min",
       description: "Full clinical detail with exam-specific content, PYQs, and drug comparisons. Paroxetine is HIGH-YIELD due to its distinctive contraindications.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
     },
     {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "55 min",
       description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence. Especially the niche uses and discontinuation management.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
     },
   ],
 
@@ -1847,6 +1847,231 @@ export const paroxetine: Drug = {
       checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Paroxetine — including why it is generally avoided, its critical contraindications, and its niche uses.",
     },
   ],
+
+  /* ---- Prescriber's Guide (Stahl layer) ---- */
+  /** Educational paraphrase of Stahl's Essential Psychopharmacology:
+   *  The Prescriber's Guide, 1st ed. (2005). Facts restated, not reproduced. */
+  prescriberGuide: {
+    sourceEdition: "Stahl's Essential Psychopharmacology: The Prescriber's Guide, 1st ed. (2005)",
+
+    onsetTimeline: [
+      "Some patients get early relief of insomnia or anxiety after starting",
+      "Therapeutic onset usually delayed 2–4 weeks",
+      "No benefit by 6–8 weeks for depression → dose increase or switch",
+      "In generalized anxiety, response and remission rates may keep improving after 8 weeks and for up to 6 months",
+      "May continue working for years to prevent relapse",
+    ],
+    ifItWorks: [
+      "Goal: complete remission plus prevention of future relapses — not a cure; symptoms can recur after stopping",
+      "Continue until symptoms are gone (remission) or clearly reduced (e.g., OCD, PTSD)",
+      "First depressive episode: continue 1 year once well; later episodes and anxiety disorders may need indefinite treatment",
+    ],
+    ifItDoesNotWork: [
+      "Partial response is common — residual insomnia, fatigue, poor concentration",
+      "Some patients are non-responders (treatment-resistant / refractory); some early responders 'poop-out'",
+      "Options: raise dose, switch agent, or add an augmenting drug",
+      "Consider psychotherapy and re-evaluation for another diagnosis or comorbid condition",
+      "Apparent non-response from activation of latent bipolar disorder → stop and switch to a mood stabilizer",
+    ],
+    augmentationCombos: [
+      "Trazodone, especially for insomnia",
+      "Bupropion, mirtazapine, reboxetine, or cautious low-dose atomoxetine (paroxetine can raise atomoxetine levels)",
+      "Modafinil for fatigue, sleepiness, and poor concentration",
+      "Mood stabilizers or atypical antipsychotics for bipolar depression, psychotic depression, treatment-resistant depression or anxiety",
+      "Benzodiazepines; if all else fails for anxiety, gabapentin or tiagabine",
+      "Hypnotics for insomnia; classically lithium, buspirone, or thyroid hormone",
+    ],
+    testsBeforeStarting: [
+      "None required for healthy individuals",
+    ],
+
+    sideEffectLogic: [
+      "Serotonin increases at receptors outside the therapeutic circuits — sleep centers (insomnia), gut (diarrhea)",
+      "Rising serotonin can dampen dopamine release → emotional flattening, cognitive slowing, apathy",
+      "Side effects are immediate and often fade; therapeutic effects are delayed and build over time",
+      "Paroxetine's weak antimuscarinic properties can cause constipation, dry mouth, and sedation",
+    ],
+    sideEffectManagement: [
+      "Wait — most early effects fade",
+      "Wait again",
+      "Wait once more",
+      "If sedating: take at night to reduce daytime drowsiness",
+      "Reduce the dose to 5–10 mg (12.5 mg CR) until effects abate, then re-titrate to at least 20 mg (25 mg CR)",
+      "After a few weeks: switch or add other drugs",
+    ],
+    sideEffectRescue: [
+      "Often better to try another SSRI or antidepressant monotherapy first",
+      "Trazodone or a hypnotic for insomnia",
+      "Bupropion, sildenafil, vardenafil, or tadalafil for sexual dysfunction",
+      "Bupropion for emotional flattening, cognitive slowing, or apathy",
+      "Mirtazapine for insomnia, agitation, and gastrointestinal effects",
+      "Benzodiazepines for jitteriness and anxiety at initiation, especially in anxious patients",
+    ],
+    weightGain: "Occurs in a significant minority",
+    sedation: "Many patients, can be significant — generally transient",
+
+    dosing: [
+      {
+        indication: "Depression",
+        starting: "20 mg/day (25 mg CR)",
+        titration: "Wait a few weeks before increasing; can raise by 10 mg/day (12.5 mg CR) once weekly",
+        target: "20–50 mg/day (25–62.5 mg CR)",
+        max: "50 mg/day (62.5 mg/day CR)",
+        notes: [
+          "20 mg (25 mg CR) is often sufficient for social anxiety disorder and depression",
+          "Once daily, often at bedtime, but any time tolerated",
+        ],
+      },
+      {
+        indication: "Panic disorder",
+        starting: "10 mg/day (12.5 mg CR) — start low",
+        titration: "Wait a few weeks before increasing; can raise by 10 mg/day (12.5 mg CR) once weekly",
+        target: "20–40 mg/day",
+        max: "60 mg/day (75 mg/day CR)",
+      },
+      {
+        indication: "Social anxiety disorder",
+        starting: "20 mg/day (25 mg CR)",
+        titration: "Can raise by 10 mg/day (12.5 mg CR) once weekly",
+        target: "20–40 mg/day",
+        max: "60 mg/day (75 mg/day CR)",
+      },
+      {
+        indication: "Other anxiety disorders (GAD, PTSD, OCD)",
+        starting: "20 mg/day (25 mg CR)",
+        titration: "Can raise by 10 mg/day (12.5 mg CR) once weekly; difficult cases may need higher dosing",
+        target: "20–50 mg/day",
+        max: "60 mg/day (75 mg/day CR)",
+      },
+    ],
+    dosageForms: [
+      "Tablets 10 mg (scored), 20 mg (scored), 30 mg, 40 mg",
+      "Controlled-release tablets 12.5 mg, 25 mg",
+      "Liquid 10 mg/5 mL (250 mL bottle)",
+    ],
+    dosingTips: [
+      "20 mg tablet is scored — give 10 mg as half a 20 mg tablet to save cost (10 mg and 20 mg cost about the same in many markets)",
+      "Paroxetine inhibits its own metabolism: a 50% oral dose increase can double plasma levels; doubling the dose can raise levels 2–7 fold — dosing is not linear",
+      "Dosing increments are in 50% steps (20, 30, 40; or 25, 37.5, 50 CR), unlike the double/triple increments of other SSRIs",
+      "CR tablets are not scored — chewing or cutting destroys the controlled release",
+      "Liquid formulation is easiest for doses below 10 mg, for very intolerant patients, and for very slow down-titration during discontinuation",
+      "Main advantage of CR: fewer side effects — especially nausea, and perhaps sedation, sexual dysfunction, and withdrawal",
+      "Occasional patients are dosed above 60 mg/day (75 mg CR) — experts only, with caution",
+      "Intolerable anxiety, insomnia, agitation, akathisia or activation on start or stop → consider activated bipolar disorder; switch to a mood stabilizer or atypical antipsychotic",
+    ],
+    overdose: [
+      "Rarely lethal in monotherapy overdose — vomiting, sedation, heart rhythm disturbances, dilated pupils, dry mouth",
+    ],
+    longTermUse: "Safe",
+    habitForming: "No",
+    howToStop: [
+      "Taper to avoid withdrawal effects (dizziness, nausea, stomach cramps, sweating, tingling, dysesthesias)",
+      "Many patients tolerate: 50% reduction for 3 days → another 50% for 3 days → stop",
+      "If withdrawal emerges, raise the dose to abort, then withdraw much more slowly",
+      "Withdrawal is more common and more severe with paroxetine than with some other SSRIs — partly because it inhibits its own metabolism, so levels fall faster once stopped",
+      "Severe discontinuation problems: taper over months (about 1% dose reduction every 3 days — crush the tablet, suspend in 100 mL of juice, discard 1 mL and drink the rest, then 2 mL a few days later, and so on). This is both biological tapering and behavioral desensitization",
+      "Alternative for severe withdrawal: add a long-half-life SSRI (especially fluoxetine), taper paroxetine slowly while maintaining fluoxetine, then taper the fluoxetine",
+      "Differentiate re-emergence of symptoms (needs treatment back) from true withdrawal symptoms",
+    ],
+    pharmacokinetics: [
+      "Half-life approximately 24 hours; inactive metabolites",
+      "Potent CYP2D6 inhibitor; inhibits its own metabolism (nonlinear pharmacokinetics)",
+      "Fatal serotonin syndrome with MAOIs — do not combine; wait 14 days after stopping an MAOI, and 2 weeks after stopping paroxetine before starting an MAOI",
+      "Can raise TCA levels; may displace highly protein-bound drugs (e.g., warfarin)",
+      "Reports of elevated theophylline levels — monitor when co-administered",
+      "May increase anticholinergic effects of procyclidine and other anticholinergic drugs",
+      "Tramadol raises seizure risk; sumatriptan (and possibly other triptans) can rarely cause weakness, hyperreflexia, incoordination",
+      "Via 2D6: may blunt codeine analgesia and raise levels of some beta blockers, atomoxetine, and thioridazine (dangerous arrhythmias)",
+    ],
+    doNotUse: [
+      "If the patient is taking an MAO inhibitor",
+      "If the patient is taking thioridazine",
+      "Proven allergy to paroxetine",
+    ],
+
+    specialPopulations: [
+      {
+        population: "Renal impairment",
+        guidance: ["Lower dose: initial 10 mg/day (12.5 mg CR), maximum 40 mg/day (50 mg CR)"],
+      },
+      {
+        population: "Hepatic impairment",
+        guidance: ["Lower dose: initial 10 mg/day (12.5 mg CR), maximum 40 mg/day (50 mg CR)"],
+      },
+      {
+        population: "Cardiac impairment",
+        guidance: [
+          "Preliminary research suggests paroxetine is safe in cardiac patients",
+          "SSRI treatment after MI or in acute angina may reduce cardiac events and improve survival as well as mood",
+        ],
+      },
+      {
+        population: "Elderly",
+        guidance: ["Lower dose: initial 10 mg/day (12.5 mg CR), maximum 40 mg/day (50 mg CR)"],
+      },
+      {
+        population: "Children & adolescents",
+        guidance: [
+          "Not specifically approved, but preliminary evidence suggests efficacy in youth with OCD, social phobia, and depression",
+          "Watch for bipolar activation and suicidal ideation; counsel parents/guardians",
+        ],
+      },
+      {
+        population: "Pregnancy",
+        guidance: [
+          "Risk Category C — not generally recommended, especially first trimester",
+          "Preliminary research had not shown birth defects, though later labels would strengthen warnings — always check the current label",
+          "Late-pregnancy use may carry higher risk of neonatal complications, including respiratory distress",
+          "At delivery: possible increased maternal bleeding and transient newborn irritability or sedation",
+          "Neonates exposed to SSRIs/SNRIs late in the third trimester: complications reported (respiratory distress, cyanosis, apnea, seizures, feeding difficulty, hypoglycemia, jitteriness)",
+          "Weigh treatment risk against relapse risk — for many, continuing is the better choice",
+        ],
+      },
+      {
+        population: "Breast feeding",
+        guidance: [
+          "Some drug is found in breast milk; trace amounts in nursing infants",
+          "If the infant becomes irritable or sedated, breastfeeding or the drug may need to be stopped",
+          "Postpartum is high-risk for relapse — may need reinstitution late in the third trimester or shortly after delivery",
+        ],
+      },
+    ],
+
+    potentialAdvantages: [
+      "Patients with anxiety disorders and insomnia",
+      "Patients with mixed anxiety/depression",
+    ],
+    potentialDisadvantages: [
+      "Patients with hypersomnia",
+      "Alzheimer/cognitive disorders",
+      "Patients with psychomotor retardation, fatigue, and low energy",
+    ],
+    primaryTargetSymptoms: [
+      "Depressed mood",
+      "Anxiety",
+      "Sleep disturbance, especially insomnia",
+      "Panic attacks",
+      "Avoidant behavior",
+      "Re-experiencing",
+      "Hyperarousal",
+    ],
+    pearls: [
+      "Often a preferred treatment for anxious depression and MDD comorbid with anxiety disorders",
+      "Withdrawal effects may be more likely than with some other SSRIs — especially akathisia, restlessness, GI symptoms, dizziness, tingling, dysesthesias, nausea, stomach cramps",
+      "Inhibits its own metabolism — dosing is not linear",
+      "Mild anticholinergic actions can enhance the rapid onset of anxiolytic and hypnotic efficacy, but also cause mild anticholinergic side effects",
+      "Can cause cognitive and affective 'flattening'",
+      "May be less activating than other SSRIs",
+      "Potent CYP2D6 inhibitor — the most interaction-prone of the common SSRIs via 2D6",
+      "SSRIs may be less effective in women over 50 not taking estrogen; may help hot flushes in perimenopause",
+      "Anecdotal reports of greater weight gain and sexual dysfunction than some other SSRIs — clinical significance unknown",
+      "For sexual dysfunction: augment with bupropion, sildenafil, tadalafil — or switch to a non-SSRI such as bupropion or mirtazapine",
+      "Some postmenopausal depression responds better to paroxetine plus estrogen than to paroxetine alone",
+      "Non-response in the elderly: consider mild cognitive impairment or Alzheimer disease",
+      "CR formulation may enhance tolerability, especially nausea",
+      "Better tolerated than some SSRIs in patients with anxiety and insomnia — can reduce these symptoms early in dosing",
+    ],
+  },
 
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",

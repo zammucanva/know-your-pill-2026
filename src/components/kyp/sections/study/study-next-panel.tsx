@@ -11,7 +11,7 @@ import {
   Timer,
 } from "lucide-react";
 
-import { drugs } from "@/lib/kyp/data";
+import { COURSE_STATS, FIRST_COURSE_SLUG } from "@/lib/kyp/study/course-stats-generated";
 import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
 import {
   coursePercentComplete,
@@ -39,13 +39,10 @@ import {
  * server snapshot is null), then upgrades after hydration.
  */
 
-/** Course outline sizes, derived from the canonical registry. */
-const COURSE_OUTLINES: Record<string, { total: number }> = Object.fromEntries(
-  drugs.map((d) => [
-    d.slug,
-    { total: new Set((d.lessonGroups ?? []).flatMap((l) => l.sectionIds)).size },
-  ])
-);
+// Course outline sizes — generated artifact (registry-derived, pinned
+// by tests/platform-hardening.test.ts); keeps the 143-monograph
+// registry out of this client chunk.
+const COURSE_OUTLINES = COURSE_STATS;
 
 /** The real section anchor to continue at, if the page has it. */
 function continueHref(course: CourseProgress): string {
@@ -87,7 +84,7 @@ export function StudyNextPanel() {
 
   /* ── No inputs at all (or pre-hydration) — genuine start state ── */
   if (!data || (recent.length === 0 && mistakeCount === 0 && presets.length === 0 && reviewsDue === 0)) {
-    const start = drugs[0];
+    const start = { slug: FIRST_COURSE_SLUG };
     return (
       <div className="mt-10 flex flex-wrap gap-3">
         <Link

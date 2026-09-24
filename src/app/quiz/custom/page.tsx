@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import {
   ArrowLeft,
   ArrowRight,
+  BookMarked,
   BookOpen,
   Check,
   ChevronDown,
@@ -24,6 +25,7 @@ import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
 import { cn } from "@/lib/utils";
 import { drugTaxonomyClasses } from "@/lib/kyp/data/drug-taxonomy";
+import { stahlBankStats } from "@/lib/kyp/stahl-mcqs";
 import {
   buildRetest,
   buildTest,
@@ -156,6 +158,10 @@ function CustomTestBuilder() {
         feedback; a distinct composition, not a new engine. ── */
   const [exam, setExam] = React.useState(false);
 
+  /* ── Stahl's Prescriber-Guide bank (Phase 6) — opt-in question
+        source for the selected medications. ── */
+  const [includeStahl, setIncludeStahl] = React.useState(false);
+
   /* ── Saved presets (N4) ── */
   const [presets, setPresets] = React.useState<TestPreset[] | null>(null);
   const [presetName, setPresetName] = React.useState<string>("");
@@ -181,8 +187,8 @@ function CustomTestBuilder() {
   const resetTriggerRef = React.useRef<HTMLButtonElement>(null);
 
   const stats = React.useMemo(
-    () => getPoolStats([...selected]),
-    [selected]
+    () => getPoolStats([...selected], { includeStahl }),
+    [selected, includeStahl]
   );
 
   const selectedCount = selected.size;
@@ -261,7 +267,7 @@ function CustomTestBuilder() {
       config?.minutes !== undefined && config?.minutes !== null
         ? config.minutes
         : effectiveTimedMinutes;
-    const built = buildTest(slugs, wanted, Date.now() % 2147483647);
+    const built = buildTest(slugs, wanted, Date.now() % 2147483647, { includeStahl });
     setAttempt({
       questions: built.questions,
       answers: built.questions.map(() => null),
@@ -434,7 +440,11 @@ function CustomTestBuilder() {
         source: {
           sourceName: q.source.sourceName,
           sourceSlug: q.source.sourceSlug,
-          sourceType: "drug" as const,
+          // Stahl's pool identities are namespaced `{slug}|stahl:{id}` —
+          // keep the bank attribution on the Mistake Book side too.
+          sourceType: (q.identity.includes("|stahl:") ? "stahl" : "drug") as
+            | "drug"
+            | "stahl",
           sourceClass: q.source.sourceClass,
           sectionLabel: q.source.sectionLabel,
           sectionHref: verifyDrugHref(q.source.sectionHref),
@@ -974,6 +984,38 @@ function CustomTestBuilder() {
                 </div>
               </Reveal>
 
+              {/* Stahl's Prescriber-Guide bank (Phase 6) — opt-in
+                  question source for the selected medications */}
+              <Reveal delay={0.155}>
+                <div className="mt-10">
+                  <div className="flex flex-wrap items-center justify-between gap-4 rounded-xl border border-border/60 bg-card/50 px-4 py-4">
+                    <div className="min-w-0">
+                      <label
+                        htmlFor="stahl-toggle"
+                        className="flex cursor-pointer items-center gap-3 text-sm font-semibold text-foreground"
+                      >
+                        <input
+                          id="stahl-toggle"
+                          type="checkbox"
+                          checked={includeStahl}
+                          onChange={(e) => setIncludeStahl(e.target.checked)}
+                          disabled={selectedCount === 0}
+                          className="h-4 w-4 rounded border-border accent-[var(--brand)] disabled:opacity-40"
+                        />
+                        <BookMarked className="h-4 w-4 text-muted-foreground" aria-hidden />
+                        Stahl's Prescriber's Guide — {stahlBankStats().total} clinical MCQs
+                      </label>
+                      <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
+                        Adds the Stahl's Prescriber-Guide clinical MCQ bank for the
+                        medications you selected — source-grounded questions over the
+                        Prescriber's Guide layer, each with its own explanation.
+                        Off by default.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+
               {/* Exam mode (X6) — timed + mixed topics + fully deferred
                   feedback, a distinct composition of existing parts */}
               <Reveal delay={0.16}>
@@ -1275,8 +1317,9 @@ function CustomTestBuilder() {
                 )}
               </div>
 
-              {/* Question source attribution — deep-links to the exact
-                  anchored section (N6) */}
+              {/* Question context — the compact drug label only. Source
+                  metadata (bank, section, topic) stays INTERNAL to the
+                  question data; it is not repeated per question. */}
               <div className="mb-6 flex items-center gap-2 text-xs text-muted-foreground/60">
                 <BookOpen className="h-3.5 w-3.5" aria-hidden />
                 <span>From </span>
@@ -1286,7 +1329,6 @@ function CustomTestBuilder() {
                 >
                   {q.source.sourceName}
                 </Link>
-                <span>· {q.source.sectionLabel}</span>
               </div>
 
               {/* Question */}
@@ -1742,8 +1784,9 @@ function CustomTestBuilder() {
                   return (
                     <Reveal key={rq.identity} delay={Math.min(i * 0.03, 0.2)}>
                       <article className="rounded-xl border border-border/60 bg-card/50 p-5 sm:p-6">
-                        {/* Attribution — deep-links to the exact anchored
-                            teaching section (N6) */}
+                        {/* Context — compact drug label only (source
+                            metadata stays internal); deep-links the exact
+                            anchored teaching section (N6) */}
                         <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground/70">
                           <span>From </span>
                           <Link
@@ -1752,7 +1795,6 @@ function CustomTestBuilder() {
                           >
                             {rq.source.sourceName}
                           </Link>
-                          <span>· {rq.source.sectionLabel}</span>
                           <span
                             className={cn(
                               "rounded-full border px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide",

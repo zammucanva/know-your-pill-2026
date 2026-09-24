@@ -1,15 +1,15 @@
 /**
  * KYP Content Lock — medical content integrity verification.
  *
- * Locks the 32 medical data files under src/lib/kyp/data/ by SHA-256 of the
- * raw file bytes, and verifies the canonical content counts:
- *   - 12 medications
+ * Locks every medical data file under src/lib/kyp/data/ (all drug
+ * monographs are enumerated dynamically) by SHA-256 of the raw file
+ * bytes, and verifies the canonical content counts:
+ *   - 143 medications (12 original + 131 added in Phase 3 from
+ *     Stahl's Essential Psychopharmacology: The Prescriber's Guide,
+ *     6th ed. — facts paraphrased, not reproduced)
  *   - 1 disease
  *   - 3 substances
- *   - 78 MCQs (microQuizzes + activeRecallQuestions across all medications)
- *   - 53 search index entries (46 original + 7 derived taxonomy
- *     collection entries: Psychiatry, Antidepressants, SSRIs, SNRIs,
- *     NDRIs, NaSSAs, TCAs — navigation metadata only, no medical claims)
+ *   - MCQ and search-entry counts as recorded in the baseline
  *
  * Usage:
  *   bun scripts/content-lock.ts --init     (re)write the baseline file
@@ -20,11 +20,18 @@
  */
 
 import { createHash } from "crypto";
-import { readFileSync, writeFileSync, existsSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, readdirSync } from "fs";
 import { resolve, dirname } from "path";
 
-// ─── Locked medical content files (32) ───────────────────────────────────────
+// ─── Locked medical content files ─────────────────────────────────────────────
 const DATA_DIR = "src/lib/kyp/data";
+
+/** All drug monograph files, enumerated dynamically and sorted for determinism. */
+const DRUG_FILES: string[] = readdirSync(resolve(dirname(process.argv[1] ?? "."), "..", DATA_DIR, "drugs"))
+  .filter((f) => f.endsWith(".ts") && f !== "index.ts")
+  .sort()
+  .map((f) => `${DATA_DIR}/drugs/${f}`);
+
 const LOCKED_FILES: string[] = [
   // data root (13)
   `${DATA_DIR}/medications.ts`,
@@ -40,21 +47,8 @@ const LOCKED_FILES: string[] = [
   `${DATA_DIR}/platform.ts`,
   `${DATA_DIR}/index.ts`,
   `${DATA_DIR}/neurotransmitter-artwork.json`,
-  // drugs/ (13)
-  ...[
-    "amitriptyline",
-    "bupropion",
-    "citalopram",
-    "clomipramine",
-    "duloxetine",
-    "escitalopram",
-    "fluoxetine",
-    "fluvoxamine",
-    "mirtazapine",
-    "paroxetine",
-    "sertraline",
-    "venlafaxine",
-  ].map((d) => `${DATA_DIR}/drugs/${d}.ts`),
+  // drugs/ (all monographs, enumerated dynamically + the registry)
+  ...DRUG_FILES,
   `${DATA_DIR}/drugs/index.ts`,
   // diseases/ (2)
   `${DATA_DIR}/diseases/index.ts`,
@@ -67,12 +61,15 @@ const LOCKED_FILES: string[] = [
 ];
 
 // ─── Canonical content counts ───────────────────────────────────────────────
+// Re-locked after the Phase 3 Stahl's Prescriber's Guide integration
+// (143 medications). MCQ and search-entry counts are carried in the
+// baseline alongside these canonical expectations.
 const EXPECTED_COUNTS = {
-  medications: 12,
+  medications: 143,
   diseases: 1,
   substances: 3,
-  mcqs: 78,
-  searchEntries: 53,
+  mcqs: 471,
+  searchEntries: 227,
 };
 
 const BASELINE_PATH = resolve(

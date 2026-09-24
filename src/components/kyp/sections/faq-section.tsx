@@ -4,7 +4,7 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Accordion } from "@/components/kyp/ui/accordion";
 import { Reveal } from "@/components/kyp/ui/reveal";
-import { faqs } from "@/lib/kyp/data";
+import { faqs } from "@/lib/kyp/data/platform";
 
 export function FaqSection() {
   return (

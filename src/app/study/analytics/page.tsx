@@ -18,6 +18,7 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
 import { cn } from "@/lib/utils";
+import { drugClassIdFromLabel } from "@/lib/kyp/data/class-id";
 import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
 import {
   rollupByClass,
@@ -66,6 +67,13 @@ const MODE_LABEL: Record<RunRecord["mode"], string> = {
   retest: " · retest",
   review: "",
 };
+
+/** Where a class row drills through to — same mapping the Study
+ *  Mode accuracy chips use (Custom Test pre-filtered to that class). */
+function classHref(classKey: string): string {
+  if (classKey === "Diseases") return "/quiz?filter=disease";
+  return `/quiz/custom?class=${drugClassIdFromLabel(classKey)}`;
+}
 
 export default function AnalyticsPage() {
   const data = useLocalProgress();
@@ -146,8 +154,10 @@ export default function AnalyticsPage() {
                     practice history, stored on this device only.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
+                    {/* prefetch={false}: engine route bundles the registry chunk */}
                     <Link
                       href="/quiz"
+                      prefetch={false}
                       className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
                     >
                       Start practicing
@@ -179,7 +189,16 @@ export default function AnalyticsPage() {
                           {classes.map((row) => (
                             <tr key={row.key} className="border-b border-border/30 last:border-0">
                               <th scope="row" className="px-4 py-2.5 text-left font-medium text-foreground">
-                                {row.label}
+                                {/* Drill-through: practice this class in Custom Test */}
+                                {/* prefetch={false}: engine route bundles the registry chunk */}
+                                <Link
+                                  href={classHref(row.key)}
+                                  prefetch={false}
+                                  className="group inline-flex items-center gap-1.5 rounded-sm transition-colors hover:text-brand"
+                                >
+                                  {row.label}
+                                  <ArrowRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100" aria-hidden />
+                                </Link>
                               </th>
                               <td className="px-4 py-2.5 tabular-nums text-foreground/80">{row.answered}</td>
                               <td className="px-4 py-2.5 tabular-nums">

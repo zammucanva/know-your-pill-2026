@@ -1,10 +1,8 @@
-"use client";
-
-import * as React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight, BookOpen, Activity, HeartPulse, Brain, FlaskConical,
-  Zap, Clock, TrendingUp, Layers,
+  Zap, Layers,
 } from "lucide-react";
 import { Navbar } from "@/components/kyp/sections/navbar";
 import { Footer } from "@/components/kyp/sections/footer";
@@ -12,6 +10,7 @@ import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
+import { ContinueLearningSection } from "./continue-learning";
 import { drugs, diseases, substancePages, brainRegions, pathways, sideEffects } from "@/lib/kyp/data";
 
 /**
@@ -26,7 +25,33 @@ import { drugs, diseases, substancePages, brainRegions, pathways, sideEffects } 
  *
  * All numbers are real — counted from the actual data arrays.
  * No fabricated content.
+ *
+ * Server Component: the registries are consumed here at request/build
+ * time (counts only). The sole interactive section (Continue Learning —
+ * fetches /api/progress) lives in ./continue-learning.tsx, so the
+ * 143-monograph data layer never ships to the browser from /learn.
  */
+
+export const metadata: Metadata = {
+  title: "Learning Hub · Know Your Pill",
+  description:
+    `The educational home of KYP — structured learning paths across ${drugs.length} medications, diseases, substances, brain regions, and side effects, with entry points into MCQ practice and your continued learning.`,
+  keywords: [
+    "learning hub",
+    "medical learning",
+    "psychopharmacology",
+    "medication courses",
+    "neuroscience education",
+    "Know Your Pill",
+  ],
+  openGraph: {
+    title: "Learning Hub · Know Your Pill",
+    description:
+      `Structured learning paths across the KYP medication library — from mechanisms to neuroscience concepts and practice.`,
+    type: "website",
+    siteName: "Know Your Pill",
+  },
+};
 
 export default function LearnPage() {
   const drugCount = drugs.length;
@@ -35,6 +60,7 @@ export default function LearnPage() {
   const brainCount = brainRegions.length;
   const pathwayCount = pathways.length;
   const sideEffectCount = sideEffects.length;
+  const classGroupCount = new Set(drugs.map((d) => d.drugClassLabel)).size;
 
   // Count total MCQs available across all drugs
   const totalMcqs = drugs.reduce((sum, d) => sum + (d.microQuizzes?.length || 0), 0)
@@ -73,8 +99,10 @@ export default function LearnPage() {
                   Start Learning
                   <ArrowRight className="h-4 w-4" />
                 </Link>
+                {/* prefetch={false}: engine route bundles the registry chunk */}
                 <Link
                   href="/quiz"
+                  prefetch={false}
                   className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                 >
                   Practice MCQs
@@ -134,7 +162,7 @@ export default function LearnPage() {
                       <span>·</span>
                       <span><span className="font-semibold text-foreground">{totalMcqs}</span> MCQs</span>
                       <span>·</span>
-                      <span>SSRIs · SNRIs · NDRIs · NaSSAs · TCAs</span>
+                      <span><span className="font-semibold text-foreground">{classGroupCount}</span> medication classes</span>
                     </div>
                   </div>
                   <ArrowRight className="h-6 w-6 shrink-0 text-muted-foreground/30 transition-all duration-300 group-hover:text-brand group-hover:translate-x-1" />
@@ -259,8 +287,10 @@ export default function LearnPage() {
             </Reveal>
 
             <Reveal delay={0.1}>
+              {/* prefetch={false}: engine route bundles the registry chunk */}
               <Link
                 href="/quiz"
+                prefetch={false}
                 className="group inline-flex items-center gap-3 rounded-lg border border-border bg-card px-6 py-4 text-base font-semibold text-foreground transition-all hover:border-brand/40 hover:shadow-[var(--shadow-soft)]"
               >
                 <Zap className="h-5 w-5 text-brand" />
@@ -328,116 +358,4 @@ export default function LearnPage() {
       <Footer />
     </div>
   );
-}
-
-/**
- * ContinueLearningSection — surfaces real progress data if the user is logged in.
- * If not logged in, shows honest "Recommended starting points" instead of
- * fabricating progress numbers.
- */
-function ContinueLearningSection() {
-  const [progress, setProgress] = React.useState<{ type: string; slug: string; title: string; lastVisitedAt: string }[]>([]);
-  const [loading, setLoading] = React.useState(true);
-
-  React.useEffect(() => {
-    fetch("/api/progress?limit=5")
-      .then(r => r.ok ? r.json() : null)
-      .then(d => { if (d?.progress) setProgress(d.progress); })
-      .catch(() => {})
-      .finally(() => setLoading(false));
-  }, []);
-
-  const hrefForType = (type: string, slug: string) => {
-    if (type === "drug") return `/drugs/${slug}`;
-    if (type === "substance") return `/substances/${slug}`;
-    if (type === "disease") return `/diseases/${slug}`;
-    return "/";
-  };
-
-  return (
-    <Section spacing="relaxed" className="border-t border-border/30 bg-muted/10">
-      <Container>
-        <Reveal>
-          <p className="text-overline text-muted-foreground mb-3">Section 04</p>
-          <h2
-            className="font-serif font-semibold tracking-[-0.02em] text-foreground mb-12"
-            style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)" }}
-          >
-            {progress.length > 0 ? "Continue learning" : "Recommended starting points"}
-          </h2>
-        </Reveal>
-
-        {loading ? (
-          <p className="text-body-sm text-muted-foreground">Loading…</p>
-        ) : progress.length > 0 ? (
-          <div className="space-y-px">
-            {progress.map((p, i) => (
-              <Reveal key={p.slug + p.type} delay={i * 0.05}>
-                <Link
-                  href={hrefForType(p.type, p.slug)}
-                  className="group flex items-center gap-6 py-4 border-b border-border/15 last:border-0 transition-all hover:pl-2"
-                >
-                  <span className="font-mono text-xs text-muted-foreground/30 w-6">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-serif text-base font-semibold text-foreground">
-                      {p.title}
-                    </h3>
-                    <p className="text-xs text-muted-foreground/50 mt-0.5">
-                      {p.type} · {timeAgo(p.lastVisitedAt)}
-                    </p>
-                  </div>
-                  <ArrowRight className="h-3.5 w-3.5 shrink-0 text-muted-foreground/20 transition-all group-hover:text-brand group-hover:translate-x-1" />
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        ) : (
-          /* Honest empty state — no fabricated progress */
-          <div className="space-y-px">
-            {[
-              { label: "Sertraline", description: "The reference SSRI — start here for the full 6-lesson course.", href: "/drugs/sertraline", meta: "Medication" },
-              { label: "Major Depressive Disorder", description: "Understand the clinical condition that SSRIs treat.", href: "/diseases/major-depressive-disorder", meta: "Disease" },
-              { label: "Alcohol", description: "GABA, glutamate, and the neuroscience of withdrawal.", href: "/substances/alcohol", meta: "Substance" },
-            ].map((item, i) => (
-              <Reveal key={item.label} delay={i * 0.05}>
-                <Link
-                  href={item.href}
-                  className="group flex items-center gap-6 py-4 border-b border-border/15 last:border-0 transition-all hover:pl-2"
-                >
-                  <span className="font-mono text-xs text-muted-foreground/30 w-6">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-serif text-base font-semibold text-foreground">
-                      {item.label}
-                    </h3>
-                    <p className="text-xs text-muted-foreground/50 mt-0.5">
-                      {item.meta} · {item.description}
-                    </p>
-                  </div>
-                  <ArrowRight className="h-3.5 w-3.5 shrink-0 text-muted-foreground/20 transition-all group-hover:text-brand group-hover:translate-x-1" />
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        )}
-      </Container>
-    </Section>
-  );
-}
-
-function timeAgo(iso: string): string {
-  const date = new Date(iso);
-  const now = new Date();
-  const diffMs = now.getTime() - date.getTime();
-  const diffMin = Math.floor(diffMs / 60000);
-  const diffHr = Math.floor(diffMin / 60);
-  const diffDay = Math.floor(diffHr / 24);
-  if (diffMin < 1) return "just now";
-  if (diffMin < 60) return `${diffMin}m ago`;
-  if (diffHr < 24) return `${diffHr}h ago`;
-  if (diffDay < 7) return `${diffDay}d ago`;
-  return date.toLocaleDateString();
 }

@@ -1799,21 +1799,21 @@ export const bupropion: Drug = {
       label: "MBBS Student",
       estimatedTime: "20 min",
       description: "Foundations, mechanism, clinical uses, side effects, and MBBS exam content.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
     },
     {
       mode: "neetPg",
       label: "NEET PG / INICET",
       estimatedTime: "35 min",
       description: "Full clinical detail with exam-specific content, PYQs, and drug comparisons.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
     },
     {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
       description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
     },
   ],
 
@@ -1862,6 +1862,228 @@ export const bupropion: Drug = {
       checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Bupropion — including its unique advantages, contraindications, and the 'no sexual SE' differentiator.",
     },
   ],
+
+  /* ---- Prescriber's Guide (Stahl layer) ---- */
+  /** Educational paraphrase of Stahl's Essential Psychopharmacology:
+   *  The Prescriber's Guide, 1st ed. (2005). Facts restated, not reproduced. */
+  prescriberGuide: {
+    sourceEdition: "Stahl's Essential Psychopharmacology: The Prescriber's Guide, 1st ed. (2005)",
+
+    onsetTimeline: [
+      "Therapeutic onset usually delayed 2–4 weeks",
+      "No benefit by 6–8 weeks for depression → dose increase or switch",
+      "May continue working for years to prevent relapse",
+    ],
+    ifItWorks: [
+      "Goal for depression: complete remission plus relapse prevention — not a cure, symptoms can recur after stopping",
+      "Continue until all symptoms are gone, then treat for 1 year after a first episode",
+      "Second and subsequent episodes: treatment may be indefinite",
+      "Nicotine addiction: a single treatment course of 6 weeks",
+    ],
+    ifItDoesNotWork: [
+      "Partial response is common — residual insomnia, fatigue, poor concentration",
+      "Some patients are non-responders (treatment-resistant / refractory); some early responders 'poop-out'",
+      "Options: raise dose, switch agent, or add an augmenting drug",
+      "Consider psychotherapy and re-evaluation for another diagnosis or comorbid condition",
+      "Apparent non-response from activation of latent bipolar disorder — though this may be less frequent with bupropion than with other antidepressants; if it happens, stop and switch to a mood stabilizer",
+    ],
+    augmentationCombos: [
+      "Trazodone for residual insomnia; benzodiazepines for residual anxiety",
+      "Added to SSRIs to reverse SSRI-induced sexual dysfunction and SSRI apathy (caution: antidepressant combos may activate bipolar disorder and suicidal ideation)",
+      "Added to SSRIs to convert partial responders to full responders",
+      "Often used on top of mood stabilizers and/or atypical antipsychotics in bipolar depression",
+      "Mood stabilizers or atypical antipsychotics can be added to bupropion for psychotic or treatment-resistant depression",
+      "Hypnotics for insomnia; mirtazapine, modafinil, or cautious low-dose atomoxetine (bupropion can raise atomoxetine levels) for residual depression symptoms and attention deficit",
+    ],
+    testsBeforeStarting: [
+      "None required for healthy individuals",
+    ],
+
+    sideEffectLogic: [
+      "Norepinephrine and dopamine actions in undesired brain areas → insomnia, tremor, agitation, headache, dizziness",
+      "Peripheral norepinephrine actions → dry mouth, constipation, nausea, anorexia, sweating",
+      "Most side effects are immediate but often go away with time",
+    ],
+    sideEffectManagement: [
+      "Wait — most early effects fade",
+      "Wait again",
+      "Wait once more",
+      "Keep the dose as low as possible",
+      "Take no later than mid-afternoon to avoid insomnia",
+      "Switch to another drug",
+    ],
+    sideEffectRescue: [
+      "Often better to try another antidepressant monotherapy before augmenting around side effects",
+      "Trazodone or a hypnotic for drug-induced insomnia",
+      "Mirtazapine for insomnia, agitation, and gastrointestinal effects",
+      "Benzodiazepines or buspirone for drug-induced anxiety and agitation",
+    ],
+    weightGain: "Reported but not expected",
+    sedation: "Reported but not expected",
+
+    dosing: [
+      {
+        indication: "Depression — immediate release",
+        starting: "75 mg twice daily",
+        titration: "Increase to 100 mg twice daily, then 100 mg three times daily",
+        target: "225–450 mg/day in 3 divided doses",
+        max: "450 mg/day (single dose max 150 mg)",
+      },
+      {
+        indication: "Depression — SR (sustained release)",
+        starting: "100 mg twice daily",
+        titration: "Increase to 150 mg twice daily after at least 3 days; wait 4+ weeks before further increases",
+        target: "200–450 mg/day in 2 divided doses",
+        max: "400 mg/day SR (single dose max 200 mg)",
+      },
+      {
+        indication: "Depression — XL (extended release)",
+        starting: "150 mg once daily in the morning",
+        titration: "Can increase to 300 mg once daily after 4 days",
+        target: "150–450 mg once daily",
+        max: "450 mg once daily",
+        notes: [
+          "XL has replaced immediate release and SR as the preferred formulation",
+          "Do not break or chew SR or XL tablets — it destroys the controlled-release properties",
+        ],
+      },
+      {
+        indication: "Nicotine addiction (SR)",
+        starting: "150 mg once daily",
+        titration: "Increase to 150 mg twice daily after at least 3 days",
+        target: "300 mg/day",
+        max: "300 mg/day",
+        notes: [
+          "Start 1–2 weeks before the planned quit date",
+          "May be combined with nicotine replacement therapy",
+        ],
+      },
+    ],
+    dosageForms: [
+      "Tablets 75 mg, 100 mg (immediate release)",
+      "SR tablets 100 mg, 150 mg, 200 mg",
+      "XL tablets 150 mg, 300 mg",
+    ],
+    dosingTips: [
+      "Dosing above 450 mg/day (400 mg/day SR) increases seizure risk",
+      "Non-responders at 450 mg/day: either stop, or check blood levels of bupropion and its active metabolite 6-hydroxy-bupropion",
+      "If parent + metabolite levels are low despite 450 mg/day, experts may cautiously push beyond the therapeutic range with close monitoring and informed consent about seizure risk",
+      "In bipolar depression, usually used as an augmenting agent to mood stabilizers, lithium, and/or atypical antipsychotics — not as monotherapy",
+      "The more anxious and agitated the patient: lower start, slower titration, and more likely need for trazodone or a benzodiazepine bridge",
+      "Intolerable anxiety, insomnia, agitation, akathisia or activation on start or stop → consider activated bipolar disorder; switch to a mood stabilizer or atypical antipsychotic",
+      "Many side effects are dose- and time-dependent — they spike with each increase, then fade",
+    ],
+    overdose: [
+      "Rarely lethal — seizures, cardiac disturbances, hallucinations, loss of consciousness",
+    ],
+    longTermUse: "For smoking cessation, treatment up to 6 months has been found effective",
+    habitForming: "No",
+    howToStop: [
+      "Tapering is prudent, but there are no well-documented tolerance, dependence, or withdrawal reactions",
+    ],
+    pharmacokinetics: [
+      "Parent half-life 10–14 hours; metabolite half-life 20–27 hours",
+      "Inhibits CYP2D6 — can raise TCA levels, some beta blockers, atomoxetine, and thioridazine (dangerous arrhythmias); may blunt codeine analgesia",
+      "Fatal when combined with MAO inhibitors: do not use with MAOIs or for 14 days after stopping them; wait 2 weeks after stopping bupropion before starting an MAOI",
+      "Tramadol raises seizure risk with any antidepressant",
+    ],
+    doNotUse: [
+      "Zyban combined with any formulation of Wellbutrin (duplicate therapy)",
+      "Any history of seizures",
+      "Current or past anorexia or bulimia (but see pearls — modern expert practice is more nuanced)",
+      "Abrupt discontinuation of alcohol or sedatives",
+      "Recent head injury",
+      "Nervous system tumor",
+      "Taking an MAO inhibitor",
+      "Taking thioridazine",
+      "Proven allergy to bupropion",
+    ],
+
+    specialPopulations: [
+      {
+        population: "Renal impairment",
+        guidance: [
+          "Lower initial dose, perhaps less frequently — drug concentration may be increased",
+          "Monitor closely",
+        ],
+      },
+      {
+        population: "Hepatic impairment",
+        guidance: [
+          "Lower initial dose, perhaps less frequently; monitor closely",
+          "Severe hepatic cirrhosis: bupropion XL at most 150 mg every other day",
+        ],
+      },
+      {
+        population: "Cardiac impairment",
+        guidance: [
+          "Limited data; evidence of a rise in supine blood pressure",
+          "Use with caution",
+        ],
+      },
+      {
+        population: "Elderly",
+        guidance: ["Some patients tolerate lower doses better"],
+      },
+      {
+        population: "Children & adolescents",
+        guidance: [
+          "Safety and efficacy not established; use with caution and watch for bipolar activation and suicidal ideation — counsel parents/guardians",
+          "May be used for ADHD and for smoking cessation in adolescents",
+          "Preliminary research suggests efficacy in comorbid depression + ADHD",
+          "Adolescents may follow adult dosing; children may need lower doses initially (max 300 mg/day)",
+        ],
+      },
+      {
+        population: "Pregnancy",
+        guidance: [
+          "Risk Category B — animal studies show no adverse effects, no controlled human studies",
+          "Pregnant women wishing to stop smoking: try behavioral therapy before pharmacotherapy",
+          "Not generally recommended in pregnancy, especially first trimester; weigh treatment risk against relapse risk — for many, continuing is the better choice",
+        ],
+      },
+      {
+        population: "Breast feeding",
+        guidance: [
+          "Some drug is found in breast milk",
+          "If the infant becomes irritable or sedated, breastfeeding or the drug may need to be stopped",
+          "Postpartum is high-risk for relapse — the drug may need to be reinstituted late in the third trimester or shortly after delivery",
+        ],
+      },
+    ],
+
+    potentialAdvantages: [
+      "Retarded depression",
+      "Atypical depression",
+      "Bipolar depression",
+      "Patients concerned about sexual dysfunction",
+      "Patients concerned about weight gain",
+    ],
+    potentialDisadvantages: [
+      "Patients whose depression already includes weight loss",
+      "Patients who are excessively activated",
+    ],
+    primaryTargetSymptoms: [
+      "Depressed mood",
+      "Sleep disturbance, especially hypersomnia",
+      "Cravings associated with nicotine withdrawal",
+      "Cognitive functioning",
+    ],
+    pearls: [
+      "May be effective when SSRIs have failed, or for SSRI 'poop-out'",
+      "Less likely to produce hypomania than some other antidepressants",
+      "May improve cognitive slowing / pseudodementia",
+      "Reduces hypersomnia and fatigue",
+      "Approved to reduce craving during smoking cessation",
+      "Anecdotal use in attention deficit disorder",
+      "Causes sexual dysfunction only infrequently",
+      "May exacerbate tics",
+      "May not be as effective in anxiety disorders as many other antidepressants",
+      "The eating-disorder prohibition stems from old observations of immediate-release bupropion at very high doses in low-body-weight patients with active anorexia",
+      "Modern practice: normal-BMI patients without seizure risk factors can benefit, especially with prudent XL dosing — expert-administered, closely monitored, with informed risk discussion",
+      "The active enantiomer of the main active metabolite (+6-hydroxy-bupropion) was in development as a novel antidepressant",
+    ],
+  },
 
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",

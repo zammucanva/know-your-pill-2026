@@ -1810,21 +1810,21 @@ export const fluoxetine: Drug = {
       label: "MBBS Student",
       estimatedTime: "20 min",
       description: "Foundations, mechanism, clinical uses, side effects, and MBBS exam content.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
     },
     {
       mode: "neetPg",
       label: "NEET PG / INICET",
       estimatedTime: "35 min",
       description: "Full clinical detail with exam-specific content, PYQs, and drug comparisons.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
     },
     {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
       description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
     },
   ],
 
@@ -1873,6 +1873,215 @@ export const fluoxetine: Drug = {
       checkpoint: "If you could answer all the active recall questions — especially the 5-week MAOI washout rationale, the unique FDA indications (bulimia & paediatric ≥8yr), and the CYP2D6 interaction list — you have exam-level mastery of Fluoxetine.",
     },
   ],
+
+  /* ---- Prescriber's Guide (Stahl layer) ---- */
+  /** Educational paraphrase of Stahl's Essential Psychopharmacology:
+   *  The Prescriber's Guide, 1st ed. (2005). Facts restated, not reproduced. */
+  prescriberGuide: {
+    sourceEdition: "Stahl's Essential Psychopharmacology: The Prescriber's Guide, 1st ed. (2005)",
+
+    onsetTimeline: [
+      "Some patients notice increased energy or activation early after starting",
+      "Therapeutic onset usually delayed 2–4 weeks",
+      "No benefit by 6–8 weeks → dose increase or switch",
+      "May continue working for years to prevent relapse",
+    ],
+    ifItWorks: [
+      "Goal: complete remission plus prevention of future relapses — not a cure; symptoms can recur after stopping",
+      "Continue until symptoms are gone (remission) or clearly reduced (e.g., OCD, PTSD)",
+      "First depressive episode: continue 1 year once well; later episodes, anxiety disorders, and bulimia may need indefinite treatment",
+    ],
+    ifItDoesNotWork: [
+      "Partial response is common — residual insomnia, fatigue, poor concentration",
+      "Some patients are non-responders (treatment-resistant / refractory); some early responders 'poop-out'",
+      "Options: raise dose, switch agent, or add an augmenting drug",
+      "Consider psychotherapy and re-evaluation for another diagnosis or comorbid condition",
+      "Apparent non-response from activation of latent bipolar disorder → stop and switch to a mood stabilizer",
+    ],
+    augmentationCombos: [
+      "Trazodone, especially for insomnia",
+      "Bupropion, mirtazapine, reboxetine, or cautious low-dose atomoxetine (fluoxetine can raise atomoxetine levels)",
+      "Modafinil for fatigue, sleepiness, and lack of concentration",
+      "Mood stabilizers or atypical antipsychotics for bipolar depression, psychotic depression, treatment-resistant depression or anxiety",
+      "Specifically studied with olanzapine (olanzapine-fluoxetine combination) with excellent results in bipolar depression, treatment-resistant unipolar depression, and psychotic depression",
+      "Benzodiazepines; if all else fails for anxiety, gabapentin or tiagabine",
+      "Hypnotics for insomnia; classically lithium, buspirone, or thyroid hormone",
+    ],
+    testsBeforeStarting: [
+      "None required for healthy individuals",
+    ],
+
+    sideEffectLogic: [
+      "Serotonin increases at receptors outside the therapeutic circuits — sleep centers (insomnia), gut (diarrhea)",
+      "Rising serotonin can dampen dopamine release → emotional flattening, cognitive slowing, apathy",
+      "Side effects are immediate and often fade; therapeutic effects are delayed and build over time",
+      "Fluoxetine's unique 5HT2C antagonism could contribute to early agitation, anxiety, and activation",
+    ],
+    sideEffectManagement: [
+      "Wait — most early effects fade",
+      "Wait again",
+      "Wait once more",
+      "If activating: take in the morning to reduce insomnia",
+      "Reduce the dose to 10 mg — stay there if tolerated and effective, or re-increase to 20 mg+ if tolerated but ineffective",
+      "After a few weeks: switch or add other drugs",
+    ],
+    sideEffectRescue: [
+      "Often better to try another SSRI or antidepressant monotherapy first",
+      "Trazodone or a hypnotic for insomnia",
+      "Bupropion, sildenafil, vardenafil, or tadalafil for sexual dysfunction",
+      "Bupropion for emotional flattening, cognitive slowing, or apathy",
+      "Mirtazapine for insomnia, agitation, and gastrointestinal effects",
+      "Benzodiazepines for jitteriness and anxiety at initiation, especially in anxious patients",
+    ],
+    weightGain: "Reported but not expected — possible weight loss, especially short-term",
+    sedation: "Reported but not expected",
+
+    dosing: [
+      {
+        indication: "Depression & OCD (adults)",
+        starting: "20 mg/day in the morning",
+        titration: "Wait a few weeks to assess before increasing; usual range 20–80 mg/day",
+        target: "20–80 mg/day",
+        max: "80 mg/day (occasional patients are dosed above 80 mg)",
+        notes: [
+          "Long half-lives of fluoxetine and its active metabolite mean dose changes take several weeks to be fully reflected in plasma — titration and withdrawal are both slowed",
+          "Once daily, usually mornings, but any time of day tolerated",
+          "Often supplied as capsules that cannot be broken in half",
+          "Weekly 90 mg capsule may enhance compliance for some patients",
+          "Liquid formulation is easiest for doses below 10 mg in very intolerant patients or for very slow up/down titration",
+        ],
+      },
+      {
+        indication: "Bulimia nervosa",
+        starting: "60 mg/day in the morning (some patients start lower and titrate over several days)",
+        titration: "Titrate over several days to 60–80 mg/day",
+        target: "60–80 mg/day",
+        max: "80 mg/day",
+      },
+    ],
+    dosageForms: [
+      "Capsules 10 mg, 20 mg, 40 mg",
+      "Tablets 10 mg",
+      "Liquid 20 mg/5 mL (120 mL bottles)",
+      "Weekly capsule 90 mg",
+    ],
+    dosingTips: [
+      "The more anxious and agitated the patient: lower start, slower titration, and more likely need for trazodone or a benzodiazepine bridge",
+      "Intolerable anxiety, insomnia, agitation, akathisia or activation on start or stop → consider activated bipolar disorder; switch to a mood stabilizer or atypical antipsychotic",
+      "Activation and agitation may represent induction of a mixed dysphoric bipolar II state with suicidal ideation — add lithium, a mood stabilizer or an antipsychotic, and/or stop fluoxetine",
+      "Many side effects are dose- and time-dependent — they spike with each increase, then fade",
+    ],
+    overdose: [
+      "Rarely lethal in monotherapy overdose — respiratory depression especially with alcohol, ataxia, sedation, possible seizures",
+    ],
+    longTermUse: "Safe",
+    habitForming: "No",
+    howToStop: [
+      "Taper rarely necessary — fluoxetine 'tapers itself' after abrupt discontinuation due to the long half-life of the drug and its active metabolite",
+    ],
+    pharmacokinetics: [
+      "Parent half-life 2–3 days; active metabolite (norfluoxetine) half-life ~2 weeks",
+      "Inhibits CYP2D6 and CYP3A4",
+      "Fatal serotonin syndrome with MAOIs — do not combine; wait 14 days after stopping an MAOI, and start MAOIs only 5 weeks after stopping fluoxetine",
+      "Can raise TCA levels; may reduce clearance of diazepam and trazodone (raising their levels)",
+      "Tramadol raises seizure risk; sumatriptan (and possibly other triptans) can rarely cause weakness, hyperreflexia, incoordination",
+      "Via 2D6: may blunt codeine analgesia and raise levels of some beta blockers, atomoxetine, and thioridazine (dangerous arrhythmias)",
+      "Via 3A4: may raise alprazolam, buspirone, triazolam; may raise simvastatin/atorvastatin/lovastatin (rhabdomyolysis risk) and pimozide (QTc prolongation)",
+      "May displace highly protein-bound drugs such as warfarin",
+    ],
+    doNotUse: [
+      "If the patient is taking an MAO inhibitor",
+      "If the patient is taking thioridazine",
+      "If the patient is taking pimozide",
+      "Proven allergy to fluoxetine",
+    ],
+
+    specialPopulations: [
+      {
+        population: "Renal impairment",
+        guidance: ["No dose adjustment", "Not removed by hemodialysis"],
+      },
+      {
+        population: "Hepatic impairment",
+        guidance: ["Lower dose or give less frequently — perhaps by half"],
+      },
+      {
+        population: "Cardiac impairment",
+        guidance: [
+          "Preliminary research suggests fluoxetine is safe in cardiac patients",
+          "SSRI treatment after MI or in acute angina may reduce cardiac events and improve survival as well as mood",
+        ],
+      },
+      {
+        population: "Elderly",
+        guidance: ["Some patients may tolerate lower doses better"],
+      },
+      {
+        population: "Children & adolescents",
+        guidance: [
+          "Approved for OCD and depression in youth",
+          "Adolescents often receive adult doses; children need slightly lower doses",
+          "Children taking fluoxetine may have slower growth — long-term effects unknown",
+          "Watch for bipolar activation and suicidal ideation; counsel parents/guardians",
+        ],
+      },
+      {
+        population: "Pregnancy",
+        guidance: [
+          "Risk Category C — not generally recommended, especially first trimester; continuous treatment may nonetheless be necessary",
+          "Current patient registries of children exposed to fluoxetine in pregnancy do not show adverse consequences",
+          "At delivery: possible increased maternal bleeding and transient newborn irritability or sedation",
+          "Late third-trimester exposure: neonatal complications reported (respiratory distress, cyanosis, apnea, seizures, feeding difficulty, hypoglycemia, jitteriness)",
+          "Weigh treatment risk against relapse risk — for many, continuing is the better choice",
+        ],
+      },
+      {
+        population: "Breast feeding",
+        guidance: [
+          "Some drug is found in breast milk; trace amounts in nursing infants",
+          "If the infant becomes irritable or sedated, breastfeeding or the drug may need to be stopped",
+          "Postpartum is high-risk for relapse — may need reinstitution late in the third trimester or shortly after delivery",
+        ],
+      },
+    ],
+
+    potentialAdvantages: [
+      "Atypical depression (hypersomnia, increased appetite)",
+      "Fatigue and low energy",
+      "Comorbid eating and affective disorders",
+      "Generic is inexpensive where available",
+      "Patients for whom weekly administration is desired",
+      "Children with OCD or depression",
+    ],
+    potentialDisadvantages: [
+      "Patients with anorexia",
+      "Initiating treatment in anxious, agitated patients",
+      "Initiating treatment in severe insomnia",
+    ],
+    primaryTargetSymptoms: [
+      "Depressed mood",
+      "Energy, motivation, and interest",
+      "Anxiety (eventually — can increase anxiety short-term)",
+      "Sleep disturbance (eventually — may cause insomnia short-term)",
+    ],
+    pearls: [
+      "May be a first-line choice for atypical depression (hypersomnia, hyperphagia, low energy, mood reactivity)",
+      "Consider avoiding in agitated insomniacs",
+      "Can cause cognitive and affective 'flattening'",
+      "Not as well tolerated as some other SSRIs for panic and anxiety disorders at initiation unless co-treated with benzodiazepines or trazodone",
+      "Long half-life, with an even longer-lasting active metabolite — the classic self-tapering SSRI",
+      "5HT2C receptor actions may explain its activating properties",
+      "5HT2C actions may partly explain the efficacy of the fluoxetine-olanzapine combination in bipolar and treatment-resistant depression — both agents share this property",
+      "For sexual dysfunction: augment with bupropion, sildenafil, vardenafil, tadalafil — or switch to a non-SSRI such as bupropion or mirtazapine",
+      "Mood disorders can accompany eating disorders (especially in adolescent females) and respond to fluoxetine",
+      "SSRIs may be less effective in women over 50 not taking estrogen",
+      "SSRIs may help hot flushes in perimenopausal women",
+      "Some postmenopausal depression responds better to fluoxetine plus estrogen than to fluoxetine alone",
+      "Non-response in the elderly: consider mild cognitive impairment or Alzheimer disease",
+      "SSRIs may not achieve remission in as many patients as some other classes (e.g., SNRIs)",
+      "A single pill combining fluoxetine with olanzapine is available for bipolar depression, psychotic depression, and treatment-resistant unipolar depression",
+    ],
+  },
 
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",

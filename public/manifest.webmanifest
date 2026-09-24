@@ -1,0 +1,34 @@
+{
+  "name": "Know Your Pill — Medication Education Made Visual",
+  "short_name": "Know Your Pill",
+  "description": "Premium neuroscience-inspired psychiatric medication and substance education platform. Understand how your medicines work in the brain, what to expect, side effects, and how to stay safe.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007677",
+  "icons": [
+    {
+      "src": "logo-navy-64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "logo-navy-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "logo-navy-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "logo-navy-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1864,21 +1864,21 @@ export const amitriptyline: Drug = {
       label: "MBBS Student",
       estimatedTime: "20 min",
       description: "Foundations, mechanism, clinical uses, side effects, and MBBS exam content.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
     },
     {
       mode: "neetPg",
       label: "NEET PG / INICET",
       estimatedTime: "35 min",
       description: "Full clinical detail with exam-specific content, PYQs, and drug comparisons.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
     },
     {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
       description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
     },
   ],
 
@@ -1927,6 +1927,211 @@ export const amitriptyline: Drug = {
       checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Amitriptyline.",
     },
   ],
+
+  /* ---- Prescriber's Guide (Stahl layer) ---- */
+  /** Educational paraphrase of Stahl's Essential Psychopharmacology:
+   *  The Prescriber's Guide, 1st ed. (2005). Facts restated, not reproduced. */
+  prescriberGuide: {
+    sourceEdition: "Stahl's Essential Psychopharmacology: The Prescriber's Guide, 1st ed. (2005)",
+
+    onsetTimeline: [
+      "May work immediately for insomnia and anxiety (sedative effect)",
+      "Antidepressant onset is usually delayed 2–4 weeks",
+      "No benefit for depression by 6–8 weeks → dose increase or switch",
+      "May continue working for years to prevent relapse",
+    ],
+    ifItWorks: [
+      "Depression: aim for complete remission plus relapse prevention",
+      "Chronic pain (neuropathic pain, fibromyalgia, headache, low back and neck pain): aim to reduce symptoms as much as possible, usually combined with other treatments — rarely eliminates them",
+      "Continue depression treatment until remission, then 1 year for a first episode",
+      "Second and later depressive episodes: treatment may be indefinite",
+      "Anxiety and chronic pain use may also be indefinite, though long-term treatment is not well studied in these conditions",
+    ],
+    ifItDoesNotWork: [
+      "Partial response is common — residual insomnia, fatigue, poor concentration",
+      "Some patients are non-responders (treatment-resistant / refractory)",
+      "Options: raise dose, switch agent, or add an augmenting drug",
+      "Consider psychotherapy and re-evaluation for another diagnosis or comorbidity (medical illness, substance use)",
+      "Apparent failure from activation of latent bipolar disorder → stop the antidepressant, switch to a mood stabilizer",
+    ],
+    augmentationCombos: [
+      "For depression: lithium, buspirone, or thyroid hormone",
+      "For chronic pain: gabapentin, tiagabine, other anticonvulsants — even opiates, but only by experts with careful monitoring in difficult cases",
+    ],
+    testsBeforeStarting: [
+      "Weigh every patient and determine BMI before starting — TCAs frequently cause weight gain",
+      "If the patient is already overweight (BMI 25.0–29.9) or obese (BMI ≥30): consider checking fasting glucose (pre-diabetes 100–125 mg/dL; diabetes >126 mg/dL) and lipids, and treat or refer (nutrition, activity, smoking cessation)",
+      "Monitor weight and BMI during treatment; if >5% of initial weight is gained, evaluate for pre-diabetes/diabetes/dyslipidemia or switch antidepressant",
+      "EKG for selected patients — personal/family history of QTc prolongation, arrhythmia, recent MI, uncompensated heart failure, or drugs that prolong QTc",
+      "Patients at risk of electrolyte disturbance (e.g., on diuretics): baseline and periodic serum potassium and magnesium",
+    ],
+
+    sideEffectLogic: [
+      "Anticholinergic activity → sedation, dry mouth, constipation, blurred vision",
+      "Antihistamine properties → sedation and weight gain",
+      "Alpha-1 adrenergic blockade → dizziness, sedation, hypotension",
+      "Ion channel blockade → cardiac arrhythmias and seizures, especially in overdose",
+    ],
+    sideEffectManagement: [
+      "Wait — many effects fade",
+      "Wait again",
+      "Wait once more",
+      "Lower the dose",
+      "Switch to an SSRI or a newer antidepressant",
+    ],
+    sideEffectRescue: [
+      "Many amitriptyline side effects cannot be improved with an augmenting agent — switching is usually the answer",
+    ],
+    weightGain: "Many patients, and it can be significant — increases appetite and carbohydrate craving",
+    sedation: "Many patients, and it can be significant",
+
+    dosing: [
+      {
+        indication: "Depression (adults)",
+        starting: "25 mg/day at bedtime",
+        titration: "Increase by 25 mg every 3–7 days; 75 mg/day in divided doses, then up to 150 mg/day",
+        target: "50–150 mg/day",
+        max: "300 mg/day",
+        notes: [
+          "Single daily dosing should generally be at bedtime because of sedation",
+          "If split dosing: give the largest dose at bedtime",
+          "If nightmares occur, split the dose and avoid a large bedtime dose",
+          "Tolerance to the sedative effect may develop with long-term use",
+        ],
+      },
+      {
+        indication: "Chronic pain / neuropathic pain",
+        starting: "Low dose at bedtime (start low)",
+        titration: "Titrate slowly; pain patients often need only lower doses",
+        target: "Often sub-antidepressant doses",
+        max: "150–300 mg/day (rarely needed for pain)",
+      },
+    ],
+    dosageForms: ["Capsules 25 mg", "Capsules 50 mg", "Capsules 100 mg"],
+    dosingTips: [
+      "Bedtime dosing harnesses the sedation as a therapeutic effect for insomnia",
+      "Chronic pain patients may only require lower doses than depressed patients",
+      "Intolerable anxiety, insomnia, agitation, akathisia or activation on starting or stopping → consider activated bipolar disorder; switch to a mood stabilizer or atypical antipsychotic",
+      "Activation/agitation after switching or adding drugs may represent induction of a mixed dysphoric bipolar II state with suicidal ideation — add lithium/mood stabilizer/antipsychotic and/or stop amitriptyline",
+    ],
+    overdose: [
+      "Death may occur — CNS depression, convulsions, cardiac dysrhythmias, severe hypotension, ECG changes, coma",
+      "The most dangerous of the older antidepressants in overdose due to cardiotoxicity",
+    ],
+    longTermUse: "Safe",
+    habitForming: "No",
+    howToStop: [
+      "Taper to avoid withdrawal effects",
+      "Even with gradual reduction, some withdrawal symptoms may appear within the first 2 weeks",
+      "Many patients tolerate: 50% reduction for 3 days → another 50% for 3 days → stop",
+      "If withdrawal emerges, raise the dose to abort, then withdraw much more slowly",
+    ],
+    pharmacokinetics: [
+      "Plasma half-life 10–28 hours",
+      "Substrate of CYP2D6 and CYP1A2",
+      "Metabolized (via CYP1A2 demethylation) to nortriptyline — an active metabolite that is predominantly a norepinephrine reuptake inhibitor",
+      "Tramadol raises seizure risk with TCAs",
+      "CYP2D6 inhibitors (fluoxetine, paroxetine, bupropion, duloxetine) raise TCA concentrations; fluvoxamine (1A2 inhibitor) slows conversion to nortriptyline and raises amitriptyline levels",
+      "Cimetidine, phenothiazines, haloperidol and methylphenidate can raise TCA levels",
+      "Anticholinergic combinations can cause paralytic ileus or hyperthermia",
+      "May blunt clonidine's hypotensive effect and interact with antihypertensives and sympathomimetics",
+    ],
+    doNotUse: [
+      "Recovering from myocardial infarction",
+      "Taking agents that significantly prolong QTc (pimozide, thioridazine, selected antiarrhythmics, moxifloxacin, sparfloxacin)",
+      "History of QTc prolongation or cardiac arrhythmia, recent acute MI, or uncompensated heart failure",
+      "Taking drugs that inhibit TCA metabolism (CYP2D6 inhibitors) — except by an expert",
+      "Known reduced CYP2D6 function (poor metabolizers) — except by an expert at low doses",
+      "Proven allergy to amitriptyline or nortriptyline",
+    ],
+
+    specialPopulations: [
+      {
+        population: "Renal impairment",
+        guidance: ["Use with caution; may need a lower dose"],
+      },
+      {
+        population: "Hepatic impairment",
+        guidance: ["Use with caution; may need a lower dose"],
+      },
+      {
+        population: "Cardiac impairment",
+        guidance: [
+          "TCAs cause arrhythmias, conduction slowing, orthostatic hypotension, sinus tachycardia and heart failure — especially in the diseased heart; MI and stroke reported",
+          "QTc prolongation is enhanced by bradycardia, hypokalemia, and congenital/acquired long QTc — evaluate before administering",
+          "Avoid TCAs in known QTc prolongation, recent acute MI, and uncompensated heart failure",
+          "May cause sustained heart-rate rise in ischemic heart disease and worsen heart-rate variability (an independent mortality risk) — SSRIs are the more appropriate antidepressants in cardiac patients",
+          "Risk/benefit may not justify TCAs in cardiac impairment",
+        ],
+      },
+      {
+        population: "Elderly",
+        guidance: [
+          "More sensitive to anticholinergic, cardiovascular, hypotensive and sedative effects",
+          "Initial dose 50 mg/day, increase gradually up to 100 mg/day",
+        ],
+      },
+      {
+        population: "Children & adolescents",
+        guidance: [
+          "Not generally recommended under age 12",
+          "Several studies show lack of efficacy of TCAs for depression in youth",
+          "May be used for enuresis or hyperactive/impulsive behaviors",
+          "Cases of sudden death have occurred in children taking TCAs",
+          "Adolescents: initial 50 mg/day, increase gradually up to 100 mg/day",
+          "Observe for activation of bipolar disorder and suicidal ideation; counsel parents/guardians",
+        ],
+      },
+      {
+        population: "Pregnancy",
+        guidance: [
+          "Risk Category C; crosses the placenta",
+          "Adverse effects reported in infants of mothers on TCAs (lethargy, withdrawal symptoms, fetal malformations)",
+          "Weigh treatment risk (first-trimester development, third-trimester delivery) against relapse risk — for many patients continuing is the better choice",
+        ],
+      },
+      {
+        population: "Breast feeding",
+        guidance: [
+          "Drug is present in breast milk",
+          "Recommendation in the guide: either discontinue the drug or bottle feed",
+          "Postpartum is a high-relapse-risk period — the drug may need to be reinstituted late in the third trimester or shortly after childbirth",
+        ],
+      },
+    ],
+
+    potentialAdvantages: [
+      "Patients with insomnia",
+      "Severe or treatment-resistant depression",
+      "A wide variety of chronic pain syndromes",
+    ],
+    potentialDisadvantages: [
+      "Pediatric and geriatric patients",
+      "Patients concerned about weight gain",
+      "Cardiac patients",
+    ],
+    primaryTargetSymptoms: [
+      "Depressed mood",
+      "Anxiety symptoms",
+      "Somatic symptoms",
+      "Chronic pain",
+      "Insomnia",
+    ],
+    pearls: [
+      "Once one of the most widely prescribed antidepressants; now rarely first-line because of its side-effect profile",
+      "One of the most favored TCAs for headache and chronic pain — neuropathic pain, fibromyalgia, migraine, neck and low back pain",
+      "The preference for amitriptyline over other TCAs for pain rests more on art and anecdote than controlled trials — many TCAs may work",
+      "Shown effective in primary insomnia",
+      "TCAs may aggravate psychotic symptoms",
+      "Avoid alcohol — additive CNS effects",
+      "Underweight patients may be more susceptible to cardiovascular effects; children, dehydrated patients and cardiac patients are more susceptible to TCA cardiotoxicity",
+      "Expert-only last resort: a non-clomipramine TCA combined with an MAOI for severe treatment resistance — start both simultaneously at low doses after washout, raise alternately every few days; strict dietary/drug restrictions; weight gain and orthostatic hypotension are the most common combo effects",
+      "Warn patients about photosensitivity and blue-green urine",
+      "SSRIs may be more effective in women; TCAs may be more effective in men",
+      "7% of the population (especially Caucasians) carry a CYP2D6 genetic variant with reduced activity — poor metabolizers may not tolerate normal doses and need dose reduction",
+      "Extraordinarily severe side effects at normal or low doses → suspect the CYP2D6 poor-metabolizer phenotype; reduce dose or switch to a non-2D6 antidepressant",
+    ],
+  },
 
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",

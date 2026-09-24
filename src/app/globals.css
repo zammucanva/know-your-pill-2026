@@ -144,23 +144,29 @@
   --destructive-foreground: oklch(0.99 0.005 220);
   --border: oklch(0.92 0.012 210);
   --input: oklch(0.93 0.01 215);
-  --ring: oklch(0.55 0.11 195);
+  --ring: oklch(0.5 0.11 195);
 
-  /* Brand semantic */
-  --brand: oklch(0.55 0.11 195);
+  /* Brand semantic — light-mode lightness values are WCAG-AA tuned:
+     brand text on background 5.5:1, white on brand 5.5:1, brand on
+     brand-soft (selected pills) 4.5:1. Verified via scripts/contrast-check.py. */
+  --brand: oklch(0.5 0.11 195);
   --brand-soft: oklch(0.93 0.04 195);
   --brand-ink: oklch(0.32 0.08 200);
 
-  --emergency: oklch(0.6 0.22 25);
+  /* Emergency text on background 4.9:1 (was 4.4:1 — under AA). */
+  --emergency: oklch(0.55 0.22 25);
   --emergency-soft: oklch(0.95 0.04 25);
 
   --neural: oklch(0.62 0.16 280);
   --neural-soft: oklch(0.95 0.025 280);
 
-  --warning: oklch(0.7 0.18 60);
+  /* Warning text on background 5.7:1, on warning-soft 4.9:1
+     (was 2.8:1 — the worst contrast failure in the light theme). */
+  --warning: oklch(0.52 0.15 60);
   --warning-soft: oklch(0.95 0.05 70);
 
-  --success: oklch(0.62 0.13 155);
+  /* Success text on background 5.2:1 (was 3.4:1). */
+  --success: oklch(0.52 0.13 155);
   --success-soft: oklch(0.94 0.04 155);
 
   /* Drug class accents */
@@ -613,4 +619,140 @@ summary,
 [data-context-menu-allowed] * {
   user-select: text;
   -webkit-user-select: text;
+}
+
+/* ============================================================
+   PRINT STYLESHEET
+   ------------------------------------------------------------
+   Goal: every learning surface (drug pages, class comparisons,
+   quiz review, study sheets) prints as a readable black-on-white
+   document.
+
+   Rules:
+   - floating chrome is hidden via Tailwind print:hidden classes
+     (navbar, FAB search, sticky rails, toggles, footer, banners);
+   - framer-motion inline opacity/transform is forced visible —
+     below-the-fold <Reveal> content would otherwise print blank;
+   - dark mode is forced to the light palette (ink on paper, not
+     inverted);
+   - sticky elements become static, clipped/scrolling containers
+     expand, cards avoid page-break-inside;
+   - nothing here changes screen rendering — @media print only.
+   ============================================================ */
+@media print {
+  @page {
+    margin: 1.5cm;
+  }
+
+  /* ── Force the light palette in dark mode (ink on paper) ── */
+  .dark {
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.25 0.02 250);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.25 0.02 250);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.25 0.02 250);
+    --primary: oklch(0.5 0.11 195);
+    --primary-foreground: oklch(1 0 0);
+    --secondary: oklch(0.96 0.005 220);
+    --secondary-foreground: oklch(0.25 0.02 250);
+    --muted: oklch(0.96 0.005 220);
+    --muted-foreground: oklch(0.45 0.02 230);
+    --accent: oklch(0.93 0.04 195);
+    --accent-foreground: oklch(0.3 0.08 200);
+    --destructive: oklch(0.55 0.22 25);
+    --destructive-foreground: oklch(0.99 0.005 220);
+    --border: oklch(0.85 0.012 210);
+    --input: oklch(0.85 0.012 210);
+    --ring: oklch(0.5 0.11 195);
+    --brand: oklch(0.5 0.11 195);
+    --brand-soft: oklch(0.93 0.04 195);
+    --brand-ink: oklch(0.32 0.08 200);
+    --emergency: oklch(0.55 0.22 25);
+    --emergency-soft: oklch(0.95 0.04 25);
+    --neural: oklch(0.5 0.16 280);
+    --neural-soft: oklch(0.95 0.025 280);
+    --warning: oklch(0.52 0.15 60);
+    --warning-soft: oklch(0.95 0.05 70);
+    --success: oklch(0.52 0.13 155);
+    --success-soft: oklch(0.94 0.04 155);
+  }
+
+  html, body {
+    background: white !important;
+    color: black;
+    font-size: 11pt;
+  }
+
+  /* ── Force scroll-reveal content visible ──
+     framer-motion writes inline opacity/transform; the attribute
+     selector catches exactly those elements (Tailwind opacity-*
+     classes are unaffected — decorations keep their subtlety). */
+  [style*="opacity"] {
+    opacity: 1 !important;
+  }
+  [style*="transform"] {
+    transform: none !important;
+  }
+
+  /* Decorative gradients/glows — drop the backgrounds, keep layout */
+  .kyp-glass,
+  .kyp-grid-bg,
+  .kyp-hero-glow,
+  .kyp-text-gradient {
+    background: none !important;
+    background-image: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    color: inherit !important;
+  }
+
+  /* ── Sticky → static (headers/rows must not repeat over pages) ── */
+  .sticky {
+    position: static !important;
+  }
+
+  /* ── Expand clipped/scrolled containers ── */
+  .overflow-x-auto,
+  .overflow-y-auto,
+  .overflow-hidden,
+  .kyp-scroll {
+    overflow: visible !important;
+    max-height: none !important;
+  }
+
+  /* ── Sensible page-break behaviour ── */
+  /* Cards, callouts, tables, and quiz blocks stay on one page */
+  .rounded-xl,
+  .rounded-lg,
+  table,
+  tr,
+  figure {
+    break-inside: avoid;
+  }
+  /* Sections may break between, never inside their headers */
+  section,
+  h1, h2, h3, h4 {
+    break-after: avoid;
+  }
+  h1, h2, h3, h4 {
+    break-inside: avoid;
+  }
+
+  /* ── Screen-only utilities that harm paper ── */
+  .backdrop-blur,
+  .backdrop-blur-xl,
+  .backdrop-blur-sm {
+    backdrop-filter: none !important;
+  }
+  .kyp-float,
+  .kyp-drift,
+  .kyp-pulse-dot::before {
+    animation: none !important;
+  }
+
+  /* Links: keep the brand colour, drop hover-only affordances */
+  a {
+    text-decoration: none;
+  }
 }

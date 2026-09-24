@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { ArrowRight, Columns3, Info } from "lucide-react";
+import { ArrowRight, Columns3, Grid3X3, Info } from "lucide-react";
 
 import { Navbar } from "@/components/kyp/sections/navbar";
 import { Footer } from "@/components/kyp/sections/footer";
@@ -11,7 +11,7 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
 import { cn } from "@/lib/utils";
-import { drugs } from "@/lib/kyp/data";
+import { drugs } from "@/lib/kyp/data/drugs/index";
 import { drugTaxonomyClasses } from "@/lib/kyp/data/drug-taxonomy";
 import type { Drug } from "@/lib/kyp/data/types";
 
@@ -215,6 +215,17 @@ export default function ComparePage() {
                 clinical use — ending in a choosing takeaway. Every value is
                 taken verbatim from the medication pages; nothing is invented.
               </p>
+              <p className="mt-4 text-sm text-muted-foreground">
+                Comparing across a whole class instead?{" "}
+                <Link
+                  href="/compare/classes"
+                  className="inline-flex items-center gap-1.5 font-medium text-brand hover:underline"
+                >
+                  <Grid3X3 className="h-3.5 w-3.5" aria-hidden />
+                  Class comparison — choose by concern
+                  <ArrowRight className="h-3 w-3" aria-hidden />
+                </Link>
+              </p>
             </Reveal>
 
             {/* Selection */}
@@ -375,6 +386,15 @@ export default function ComparePage() {
                     reviewed content — values are never merged, averaged or
                     inferred. Empty cells mean the library does not carry that
                     datum for that medication.
+                  </p>
+
+                  {/* Cross-link to the Interaction Checker */}
+                  <p className="mt-4 text-xs text-muted-foreground">
+                    Want to check whether these medications interact instead?{" "}
+                    <Link href="/interactions" className="font-medium text-brand hover:underline">
+                      Check interactions
+                      <ArrowRight className="ml-1 inline h-3 w-3" aria-hidden />
+                    </Link>
                   </p>
                 </div>
               </Reveal>

@@ -2,6 +2,9 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 
+import { JsonLd } from "@/components/kyp/json-ld";
+import { buildDrugStructuredData, drugPageUrl } from "@/lib/kyp/structured-data";
+
 import { Navbar } from "@/components/kyp/sections/navbar";
 import { Footer } from "@/components/kyp/sections/footer";
 import { EmergencySection } from "@/components/kyp/sections/emergency-section";
@@ -26,6 +29,7 @@ import {
   DrugSideEffects,
   DrugMonitoring,
   DrugContraindications,
+  DrugPrescriberGuide,
   DrugInteractions,
   DrugPatientEducation,
   DrugClinicalCases,
@@ -34,6 +38,7 @@ import {
   DrugHighYieldSummary,
   DrugFAQ,
   DrugKnowledgeGraph,
+  MedicalKnowledgeChain,
   DrugRelatedDrugs,
   DrugReferences,
   DrugPrevNext,
@@ -100,12 +105,17 @@ export async function generateMetadata({
   if (!drug) return { title: "Drug not found · Know Your Pill" };
 
   const title = `${drug.genericName} (${drug.drugClassLabel}) · Know Your Pill`;
+  // One canonical URL everywhere: canonical link, Open Graph URL and
+  // the JSON-LD graph all derive from the same absolute drug-page URL
+  // (see src/lib/kyp/site-url.ts), so they can never contradict.
+  const url = drugPageUrl(drug);
   return {
     title,
     description: drug.tagline,
     keywords: [drug.genericName, ...drug.brandNames, drug.drugClassLabel, "pharmacology", "Know Your Pill"],
     authors: [{ name: "Zamaan Ali Shamji" }],
-    openGraph: { title, description: drug.tagline, type: "article", siteName: "Know Your Pill" },
+    alternates: { canonical: url },
+    openGraph: { title, description: drug.tagline, type: "article", siteName: "Know Your Pill", url },
   };
 }
 
@@ -138,6 +148,14 @@ export default async function DrugPage({ params }: PageProps) {
   const lessons = drug.lessonGroups ?? [];
   const quizzes = drug.microQuizzes ?? [];
   const hasLessons = lessons.length > 0;
+
+  // Structured data (Phase 7) — schema.org MedicalWebPage + Drug +
+  // BreadcrumbList, derived from this same canonical record and
+  // server-rendered below. The page title passed in is the exact
+  // generateMetadata title so structured-data name and <title> never
+  // diverge.
+  const pageTitle = `${drug.genericName} (${drug.drugClassLabel}) · Know Your Pill`;
+  const structuredData = buildDrugStructuredData(drug, pageTitle);
 
   // Slugs with an actually-built page — passed to the Drug Navigation
   // module so family members / related drugs without a page render as
@@ -175,8 +193,11 @@ export default async function DrugPage({ params }: PageProps) {
 
   return (
     <div className="flex min-h-screen flex-col">
+      {/* Machine-readable description of this page (schema.org) —
+          invisible to users, rendered server-side for crawlers. */}
+      <JsonLd data={structuredData} />
       <Navbar />
-      <div className="fixed right-4 top-20 z-30 hidden sm:block">
+      <div className="fixed right-4 top-20 z-30 hidden sm:block print:hidden">
         <GuidedLearningToggle />
       </div>
       <StickyLearningNav items={navItems} drugSlug={drug.slug} />
@@ -225,7 +246,7 @@ export default async function DrugPage({ params }: PageProps) {
             (hidden in Patient mode; patients follow the guide, not
             the exam course structure) */}
         {hasLessons && (
-          <div className="sticky top-16 z-20">
+          <div className="sticky top-16 z-20 print:hidden">
             <PatientHidden>
               <LessonProgress lessons={lessons} />
             </PatientHidden>
@@ -249,7 +270,10 @@ export default async function DrugPage({ params }: PageProps) {
         </GuidedLearningVisibility>
 
         <GuidedLearningVisibility drug={drug} sectionId="knowledge-graph">
-          <DrugKnowledgeGraph drug={drug} />
+          <DrugKnowledgeGraph
+            drug={drug}
+            knowledgeChain={<MedicalKnowledgeChain drugSlug={drug.slug} />}
+          />
         </GuidedLearningVisibility>
 
         {/* Checkpoint after Lesson 1 (hidden in Patient mode — the
@@ -333,6 +357,15 @@ export default async function DrugPage({ params }: PageProps) {
         <GuidedLearningVisibility drug={drug} sectionId="contraindications">
           <DrugContraindications drug={drug} />
           {quizAfter("contraindications") && <Container><MicroQuiz courseSlug={drug.slug} courseQuizCount={renderedQuizCount} quiz={quizAfter("contraindications")!} /></Container>}
+        </GuidedLearningVisibility>
+
+        {/* Prescriber's Guide (Stahl layer) — dosing, titration, tapering,
+            special populations, the art of psychopharmacology.
+            Prescriber-focused: hidden in Patient difficulty mode. */}
+        <GuidedLearningVisibility drug={drug} sectionId="prescriber-guide">
+          <PatientHidden>
+            <DrugPrescriberGuide drug={drug} />
+          </PatientHidden>
         </GuidedLearningVisibility>
 
         <GuidedLearningVisibility drug={drug} sectionId="evidence-practice">
@@ -478,7 +511,7 @@ export default async function DrugPage({ params }: PageProps) {
           </Container>
         </Section>
 
-        <TestUnderstandingCTA topic={drug.genericName} />
+        <TestUnderstandingCTA topic={drug.genericName} quizHref={`/quiz?drug=${drug.slug}`} />
 
         <EmergencySection />
       </main>

@@ -5,7 +5,7 @@ import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { BrainCard } from "@/components/kyp/ui/brain-card";
 import { PathwayCard } from "@/components/kyp/ui/pathway-card";
-import { brainRegions, pathways } from "@/lib/kyp/data";
+import { brainRegions, pathways } from "@/lib/kyp/data/brain";
 
 /**
  * BrainAtlasSection — teaser for Phase 6 (Brain Module) + Phase 7 (Pathways).

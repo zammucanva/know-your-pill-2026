@@ -1,11 +1,8 @@
-"use client";
-
-import * as React from "react";
 import Link from "next/link";
 import { ArrowRight, Link2 } from "lucide-react";
 import type { DrugKnowledgeChain } from "@/lib/kyp/knowledge";
 import { knowledgeGraph } from "@/lib/kyp/knowledge";
-import { drugClassIdFromLabel } from "@/lib/kyp/data/drug-taxonomy";
+import { drugClassIdFromLabel } from "@/lib/kyp/data/class-id";
 import { cn } from "@/lib/utils";
 import { getDrugKnowledgeChain } from "@/lib/kyp/knowledge";
 
@@ -22,6 +19,12 @@ import { getDrugKnowledgeChain } from "@/lib/kyp/knowledge";
  *
  * buildKnowledgeChainRows(chain) is exported as a PURE function so the
  * test suite can pin the row contract without React.
+ *
+ * SERVER COMPONENT (no hooks, no event handlers): it derives the chain
+ * from the canonical knowledge graph server-side, so the registry and
+ * the knowledge-graph module never reach the client bundle. The drug
+ * page renders it and passes it INTO the client DrugKnowledgeGraph as
+ * a prop (RSC children pattern).
  */
 
 /* ============================================================

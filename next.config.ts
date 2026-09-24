@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   env: {
     NEXT_PUBLIC_BASE_PATH: isGithubPages ? `/${repoName}` : "",
+    // Phase 7: the export build uses trailingSlash: true (see below), and
+    // Next normalizes canonical/OG metadata URLs to that form. Structured
+    // data (JSON-LD, sitemap) must emit the same form so the URLs never
+    // contradict each other — resolved via absoluteUrl() in
+    // src/lib/kyp/site-url.ts.
+    NEXT_PUBLIC_TRAILING_SLASH: isGithubPages ? "1" : "",
   },
   // Security headers (server modes only — GitHub Pages serves static files
   // and applies its own response headers).

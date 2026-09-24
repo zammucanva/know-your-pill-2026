@@ -20,6 +20,12 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { href: "/learn", label: "Learn" },
   { href: "/drugs", label: "Medication Library" },
+  // prefetch=false: /interactions is a client-side data engine whose
+  // route bundle embeds the 143-drug registry (~1.5MB gzipped). The
+  // default viewport prefetch would download it in the background on
+  // EVERY page; navigating without prefetch only costs the first
+  // click. Browsing routes keep their default prefetch.
+  { href: "/interactions", label: "Interactions", prefetch: false as const },
   { href: "/#substances", label: "Substances" },
   { href: "/study", label: "Study Mode" },
   { href: "/medicine", label: "Medicine" },
@@ -61,7 +67,7 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-[var(--duration-base)] ease-[var(--ease-out-soft)]",
+        "fixed inset-x-0 top-0 z-50 transition-all duration-[var(--duration-base)] ease-[var(--ease-out-soft)] print:hidden",
         scrolled
           ? "border-b border-border/70 bg-background/80 backdrop-blur-xl backdrop-saturate-150"
           : "bg-transparent"
@@ -94,6 +100,7 @@ export function Navbar() {
             <Link
               key={l.href}
               href={l.href}
+              prefetch={"prefetch" in l ? l.prefetch : undefined}
               className="rounded-md px-2.5 py-2 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-accent/50 hover:text-foreground xl:px-3 xl:text-sm"
             >
               {l.label}

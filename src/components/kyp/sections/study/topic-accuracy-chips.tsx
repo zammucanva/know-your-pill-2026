@@ -10,7 +10,7 @@ import {
   MIN_TOPIC_SAMPLE,
   type TopicAccuracy,
 } from "@/lib/kyp/analytics/topic-stats";
-import { drugClassIdFromLabel } from "@/lib/kyp/data/drug-taxonomy";
+import { drugClassIdFromLabel } from "@/lib/kyp/data/class-id";
 
 /**
  * TopicAccuracyChips — per-topic accuracy in the Study Mode hub

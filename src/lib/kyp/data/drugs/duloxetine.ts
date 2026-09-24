@@ -1791,21 +1791,21 @@ export const duloxetine: Drug = {
       label: "MBBS Student",
       estimatedTime: "20 min",
       description: "Foundations, balanced SNRI mechanism, clinical uses, hepatotoxicity, and MBBS exam content.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
     },
     {
       mode: "neetPg",
       label: "NEET PG / INICET",
       estimatedTime: "38 min",
       description: "Full clinical detail with exam-specific content, PYQs, pain indications, and SNRI comparisons.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
     },
     {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
       description: "Everything — advanced reasoning, ward pearls, pain pharmacology, guideline comparison, full evidence.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
     },
   ],
 
@@ -1854,6 +1854,211 @@ export const duloxetine: Drug = {
       checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Duloxetine.",
     },
   ],
+
+  /* ---- Prescriber's Guide (Stahl layer) ---- */
+  /** Educational paraphrase of Stahl's Essential Psychopharmacology:
+   *  The Prescriber's Guide, 1st ed. (2005). Facts restated, not reproduced. */
+  prescriberGuide: {
+    sourceEdition: "Stahl's Essential Psychopharmacology: The Prescriber's Guide, 1st ed. (2005)",
+
+    onsetTimeline: [
+      "Therapeutic onset usually delayed 2–4 weeks",
+      "No benefit by 6–8 weeks for depression → dose increase or switch",
+      "May continue working for years to prevent relapse",
+    ],
+    ifItWorks: [
+      "Depression and anxiety disorders: aim for complete remission plus relapse prevention",
+      "Fibromyalgia and chronic neuropathic pain: aim to reduce symptoms as much as possible, combined with other treatments — rarely eliminates them completely",
+      "Continue depression/anxiety treatment until remission; first depressive episode: 1 year once well; later episodes may be indefinite",
+      "Fibromyalgia and neuropathic pain use may also be indefinite, though long-term data are limited",
+    ],
+    ifItDoesNotWork: [
+      "Partial response is common — residual insomnia, fatigue, poor concentration",
+      "Some patients are non-responders (treatment-resistant / refractory); some early responders 'poop-out'",
+      "Options: raise dose, switch agent, or add an augmenting drug",
+      "Consider psychotherapy and re-evaluation for another diagnosis or comorbidity",
+      "Apparent non-response from activation of latent bipolar disorder → stop and switch to a mood stabilizer",
+    ],
+    augmentationCombos: [
+      "Augmentation experience is limited compared to other antidepressants — follow SSRI/SNRI augmentation practice only if done by experts with careful monitoring",
+      "For fibromyalgia and neuropathic pain (no controlled studies): experts could theoretically add gabapentin, pregabalin, or tiagabine",
+      "Mirtazapine — the 'California rocket fuel' combination — a potentially powerful dual serotonin/norepinephrine boost; watch for bipolar activation and suicidal ideation",
+      "Noradrenergic enhancers: bupropion, reboxetine, nortriptyline, desipramine, maprotiline, atomoxetine",
+      "Modafinil for fatigue, sleepiness, poor concentration",
+      "Mood stabilizers or atypical antipsychotics for bipolar depression, psychotic or treatment-resistant depression",
+      "Benzodiazepines; if all else fails for anxiety, gabapentin or tiagabine",
+      "Hypnotics or trazodone for insomnia; classically lithium, buspirone, or thyroid hormone",
+    ],
+    testsBeforeStarting: [
+      "Check blood pressure before initiating treatment and regularly during treatment",
+    ],
+
+    sideEffectLogic: [
+      "Serotonin and norepinephrine increases at receptors outside the therapeutic circuits — sleep centers (insomnia), norepinephrine effects on acetylcholine release (decreased appetite, raised blood pressure, urinary retention)",
+      "Most side effects are immediate but often go away with time",
+    ],
+    sideEffectManagement: [
+      "Wait — most early effects fade",
+      "Wait again",
+      "Wait once more",
+      "Lower the dose",
+      "After a few weeks: switch or add other drugs",
+    ],
+    sideEffectRescue: [
+      "For urinary hesitancy: give an alpha-1 blocker such as tamsulosin",
+      "Often better to try another antidepressant monotherapy before augmenting around side effects",
+      "Trazodone or a hypnotic for insomnia",
+      "Bupropion, sildenafil, vardenafil, or tadalafil for sexual dysfunction",
+      "Benzodiazepines for jitteriness and anxiety at initiation",
+      "Mirtazapine for insomnia, agitation, and gastrointestinal effects",
+    ],
+    weightGain: "Reported but not expected",
+    sedation: "Significant minority — may also be activating in some patients",
+
+    dosing: [
+      {
+        indication: "Depression",
+        starting: "40 mg/day in 1–2 doses",
+        titration: "Can increase to 60 mg/day if necessary",
+        target: "40–60 mg/day",
+        max: "120 mg/day (limited experience above 60 mg)",
+        notes: [
+          "Studies have not demonstrated increased efficacy beyond 60 mg/day",
+          "Both serotonin and norepinephrine reuptake blockade are present at 40–60 mg/day",
+          "Swallow whole — do not chew, crush, or sprinkle on food (enteric coating)",
+        ],
+      },
+      {
+        indication: "Stress urinary incontinence",
+        starting: "40 mg/day",
+        titration: "Titrate to twice-daily dosing",
+        target: "40 mg twice daily",
+        max: "80 mg/day",
+      },
+      {
+        indication: "Neuropathic pain / fibromyalgia",
+        starting: "Similar to depression dosing",
+        titration: "Clinical experience still evolving",
+        target: "40–60 mg/day",
+        max: "60 mg/day generally",
+      },
+    ],
+    dosageForms: ["Capsules 20 mg", "Capsules 30 mg", "Capsules 60 mg"],
+    dosingTips: [
+      "Dosing for pain may resemble depression dosing, but stress urinary incontinence dosing differs — experience is still evolving",
+      "Powerful pro-noradrenergic actions may occur at doses greater than 60 mg/day",
+      "Evening dosing can delay absorption up to 3 hours and increase clearance by a third compared with morning dosing",
+      "Activation and agitation may represent induction of a mixed dysphoric bipolar II state with suicidal ideation — add lithium, a mood stabilizer or an antipsychotic, and/or stop duloxetine",
+      "Many side effects are dose- and time-dependent — they spike with each increase, then fade",
+    ],
+    overdose: [
+      "No fatalities reported (as of this edition)",
+    ],
+    longTermUse: "Blood pressure should be monitored regularly",
+    habitForming: "No",
+    howToStop: [
+      "Taper to avoid withdrawal effects (dizziness, nausea, vomiting, headache, paresthesias, irritability)",
+      "Many patients tolerate: 50% reduction for 3 days → another 50% for 3 days → stop",
+      "If withdrawal emerges, raise the dose to abort, then withdraw much more slowly",
+    ],
+    pharmacokinetics: [
+      "Elimination half-life approximately 12 hours",
+      "Metabolized mainly by CYP2D6 and CYP1A2; also inhibits both",
+      "Fatal serotonin syndrome with MAOIs — do not combine; wait 14 days after stopping an MAOI; start MAOIs only 5+ days after stopping duloxetine",
+      "CYP1A2 inhibitors (e.g., fluvoxamine) raise duloxetine levels → dose reduction needed",
+      "Cigarette smoking induces CYP1A2 and may reduce duloxetine levels — no dosage change recommended for smokers",
+      "CYP2D6 inhibitors (paroxetine, fluoxetine, quinidine) raise duloxetine levels → dose reduction",
+      "Via 1A2 inhibition: may theoretically reduce clearance of theophylline and clozapine (theophylline co-administration studies showed no significant effect)",
+      "Via 2D6 inhibition: may blunt codeine analgesia and raise levels of some beta blockers, atomoxetine, and thioridazine (dangerous arrhythmias)",
+      "Can raise TCA levels — caution when combining or switching from a TCA",
+    ],
+    doNotUse: [
+      "Uncontrolled narrow angle-closure glaucoma",
+      "Substantial alcohol use",
+      "Taking an MAO inhibitor",
+      "Taking thioridazine",
+      "Proven allergy to duloxetine",
+    ],
+
+    specialPopulations: [
+      {
+        population: "Renal impairment",
+        guidance: [
+          "Dose adjustment generally not necessary for mild impairment",
+          "Not recommended in end-stage renal disease",
+        ],
+      },
+      {
+        population: "Hepatic impairment",
+        guidance: ["Not recommended for use in hepatic impairment"],
+      },
+      {
+        population: "Cardiac impairment",
+        guidance: [
+          "Use with caution",
+          "Duloxetine may raise blood pressure — monitor during treatment",
+        ],
+      },
+      {
+        population: "Elderly",
+        guidance: ["Some patients may tolerate lower doses better"],
+      },
+      {
+        population: "Children & adolescents",
+        guidance: [
+          "Not specifically approved, but can be used by experts",
+          "Observe for activation of bipolar disorder and suicidal ideation; counsel parents/guardians",
+        ],
+      },
+      {
+        population: "Pregnancy",
+        guidance: [
+          "Risk Category C — not generally recommended, especially first trimester; continuous treatment may nonetheless be necessary and has not been proven harmful",
+          "Late third-trimester SSRI/SNRI exposure: neonatal complications reported (respiratory distress, cyanosis, apnea, seizures, feeding difficulty, hypoglycemia, jitteriness) — consistent with toxicity or a discontinuation syndrome",
+          "Weigh treatment risk against relapse risk — for many, continuing is the better choice",
+        ],
+      },
+      {
+        population: "Breast feeding",
+        guidance: [
+          "Unknown whether duloxetine is secreted in human breast milk — all psychotropics are assumed to be",
+          "If the infant becomes irritable or sedated, breastfeeding or the drug may need to be stopped",
+          "Postpartum is high-risk for relapse — may need reinstitution late in the third trimester or shortly after delivery",
+        ],
+      },
+    ],
+
+    potentialAdvantages: [
+      "Patients with the physical symptoms of depression",
+      "Retarded depression",
+      "Atypical depression",
+      "Possibly higher remission rates on SNRIs than SSRIs in depression",
+      "Depressed patients with somatic symptoms, fatigue, and pain",
+      "Patients who do not respond or remit on SSRIs",
+    ],
+    potentialDisadvantages: [
+      "Patients with urologic or prostate disorders (e.g., older men)",
+      "Patients sensitive to nausea",
+    ],
+    primaryTargetSymptoms: [
+      "Depressed mood",
+      "Energy, motivation, and interest",
+      "Sleep disturbance",
+      "Physical symptoms",
+      "Pain",
+    ],
+    pearls: [
+      "Well-documented efficacy for the physical symptoms of depression",
+      "Only somewhat more potent at serotonin than norepinephrine reuptake blockade — unclear clinical significance as a differentiator from other SNRIs",
+      "No head-to-head studies, but may cause less hypertension than venlafaxine XR",
+      "Not well studied in ADHD or anxiety disorders, but may be effective",
+      "Well studied in stress urinary incontinence (approval was expected at the time of this edition)",
+      "Patients may have higher remission rates for depression on SNRIs than on SSRIs",
+      "Add or switch to/from pro-noradrenergic agents (atomoxetine, reboxetine, other SNRIs, mirtazapine, maprotiline, nortriptyline, desipramine, bupropion) with caution",
+      "Add or switch to/from CYP2D6 substrates (atomoxetine, maprotiline, nortriptyline, desipramine) with caution",
+      "Its SNRI mechanism suggests it may work in some patients who fail SSRIs",
+    ],
+  },
 
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",

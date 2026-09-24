@@ -1,10 +1,12 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/kyp/theme-provider";
+import { SkipToContentLink } from "@/components/kyp/ui/skip-to-content";
 import { ContentProtection } from "@/lib/contentProtection";
 import { imgPath } from "@/lib/kyp/image-path";
+import { getSiteUrl } from "@/lib/kyp/site-url";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,6 +26,11 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  // Canonical site origin (Phase 7): resolves relative metadata URLs
+  // (canonical links, OG URLs) across every route. Single source of
+  // truth in src/lib/kyp/site-url.ts — overridable per deployment via
+  // NEXT_PUBLIC_SITE_URL; never localhost.
+  metadataBase: new URL(getSiteUrl()),
   title: "Know Your Pill — Medication Education Made Visual",
   description:
     "Premium neuroscience-inspired psychiatric medication and substance education platform. Understand how your medicines work in the brain, what to expect, side effects, and how to stay safe.",
@@ -56,6 +63,11 @@ export const metadata: Metadata = {
     icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/favicon.png`,
     apple: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo-navy-512.png`,
   },
+  // PWA manifest — icons + theme colour; relative icon paths resolve
+  // against the manifest URL, so the same file serves both the
+  // standalone build (/manifest.webmanifest) and the GitHub Pages
+  // export (/know-your-pill-2026/manifest.webmanifest).
+  manifest: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/manifest.webmanifest`,
   openGraph: {
     title: "Know Your Pill — Medication Education Made Visual",
     description:
@@ -68,6 +80,12 @@ export const metadata: Metadata = {
     title: "Know Your Pill",
     description: "Medication education made visual.",
   },
+};
+
+export const viewport: Viewport = {
+  // PWA/browser chrome colour — the brand teal (light-mode token
+  // value), identical in both themes.
+  themeColor: "#007677",
 };
 
 export default function RootLayout({
@@ -84,6 +102,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} font-sans antialiased`}
       >
+        {/* Skip-to-content — first focusable element on every page,
+            so keyboard users can jump past the fixed navbar to <main>. */}
+        <SkipToContentLink />
+
         {/* rel="license" — points crawlers and tools at the reuse terms
             page. Rendered once here in the root layout; React hoists it
             into <head> on every page. imgPath() makes the href

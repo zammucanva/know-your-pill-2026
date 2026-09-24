@@ -1811,21 +1811,21 @@ export const fluvoxamine: Drug = {
       label: "MBBS Student",
       estimatedTime: "19 min",
       description: "Foundations, mechanism, OCD indication, signature CYP1A2 interactions, and MBBS exam content.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
     },
     {
       mode: "neetPg",
       label: "NEET PG / INICET",
       estimatedTime: "38 min",
       description: "Full clinical detail with exam-specific content, PYQs, and drug comparisons (esp. fluvoxamine's CYP1A2 profile).",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
     },
     {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "44 min",
       description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence on OCD management.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
     },
   ],
 
@@ -1874,6 +1874,196 @@ export const fluvoxamine: Drug = {
       checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Fluvoxamine — including its CYP1A2 interaction profile and its role as a reserved SSRI in Indian practice.",
     },
   ],
+
+  /* ---- Prescriber's Guide (Stahl layer) ---- */
+  /** Educational paraphrase of Stahl's Essential Psychopharmacology:
+   *  The Prescriber's Guide, 1st ed. (2005). Facts restated, not reproduced. */
+  prescriberGuide: {
+    sourceEdition: "Stahl's Essential Psychopharmacology: The Prescriber's Guide, 1st ed. (2005)",
+
+    onsetTimeline: [
+      "Some patients get early relief of insomnia or anxiety after starting (sigma-1 effect)",
+      "Therapeutic onset usually delayed 2–4 weeks",
+      "No benefit by 6–8 weeks → dose increase or switch",
+      "May continue working for years to prevent relapse",
+    ],
+    ifItWorks: [
+      "Goal: complete remission plus prevention of future relapses — not a cure; symptoms can recur after stopping",
+      "Continue until symptoms are gone (remission) or clearly reduced (e.g., OCD)",
+      "First depressive episode: continue 1 year once well; later episodes and anxiety disorders may need indefinite treatment",
+    ],
+    ifItDoesNotWork: [
+      "Partial response is common — residual insomnia, fatigue, poor concentration",
+      "Some patients are non-responders (treatment-resistant / refractory); some early responders 'poop-out'",
+      "Options: raise dose, switch agent, or add an augmenting drug",
+      "Consider psychotherapy and re-evaluation for another diagnosis or comorbid condition",
+      "Apparent non-response from activation of latent bipolar disorder → stop and switch to a mood stabilizer",
+    ],
+    augmentationCombos: [
+      "For the expert: cautious addition of clomipramine for treatment-resistant OCD (see pearls — fluvoxamine alters clomipramine metabolism)",
+      "Trazodone, especially for insomnia",
+      "Bupropion, mirtazapine, reboxetine, or atomoxetine (caution with antidepressant combos — bipolar activation, suicidal ideation)",
+      "Modafinil for fatigue, sleepiness, poor concentration",
+      "Mood stabilizers or atypical antipsychotics for bipolar depression, psychotic depression, treatment-resistant depression or anxiety",
+      "Benzodiazepines; if all else fails for anxiety, gabapentin or tiagabine",
+      "Hypnotics for insomnia; classically lithium, buspirone, or thyroid hormone",
+      "Regional practice: in Europe and Japan, augmentation is more common for depression and anxiety (benzodiazepines, lithium); in the US it is more common for OCD (atypical antipsychotics, buspirone, even clomipramine)",
+    ],
+    testsBeforeStarting: [
+      "None required for healthy individuals",
+    ],
+
+    sideEffectLogic: [
+      "Serotonin increases at receptors outside the therapeutic circuits — sleep centers (insomnia), gut (diarrhea)",
+      "Rising serotonin can dampen dopamine release → emotional flattening, cognitive slowing, apathy",
+      "Side effects are immediate and often fade; therapeutic effects are delayed and build over time",
+      "Fluvoxamine's sigma-1 antagonism may contribute to sedation and fatigue in some patients",
+    ],
+    sideEffectManagement: [
+      "Wait — most early effects fade",
+      "Wait again",
+      "Wait once more",
+      "If sedating: take at night to reduce daytime drowsiness",
+      "Reduce the dose",
+      "After a few weeks: switch or add other drugs",
+    ],
+    sideEffectRescue: [
+      "Often better to try another SSRI or antidepressant monotherapy first",
+      "Trazodone or a hypnotic for insomnia",
+      "Bupropion, sildenafil, vardenafil, or tadalafil for sexual dysfunction",
+      "Bupropion for emotional flattening, cognitive slowing, or apathy",
+      "Mirtazapine for insomnia, agitation, and gastrointestinal effects",
+      "Benzodiazepines for jitteriness and anxiety at initiation, especially in anxious patients",
+    ],
+    weightGain: "Reported but not expected — patients may actually lose weight",
+    sedation: "Many patients, and it can be significant",
+
+    dosing: [
+      {
+        indication: "OCD (adults)",
+        starting: "50 mg/day (usually at bedtime)",
+        titration: "Increase by 50 mg/day every 4–7 days; wait a few weeks between further increases",
+        target: "100–300 mg/day",
+        max: "300 mg/day (some patients take more)",
+        notes: [
+          "Doses below 100 mg/day: single dose at bedtime",
+          "Doses above 100 mg/day: can be divided, larger dose at night, or given as a single bedtime dose",
+          "50 mg and 100 mg tablets are scored — give 25 mg as half a 50 mg, or 50 mg as half a 100 mg, to save cost",
+        ],
+      },
+      {
+        indication: "Depression",
+        starting: "50 mg/day",
+        titration: "Increase by 50 mg/day every 4–7 days as tolerated",
+        target: "100–200 mg/day",
+        max: "300 mg/day",
+      },
+    ],
+    dosageForms: ["Tablets 25 mg", "Tablets 50 mg (scored)", "Tablets 100 mg (scored)"],
+    dosingTips: [
+      "To improve tolerability, dose once daily at night, or split symmetrically or asymmetrically with more at night",
+      "Intolerable anxiety, insomnia, agitation, akathisia or activation on start or stop → consider activated bipolar disorder; switch to a mood stabilizer or atypical antipsychotic",
+      "Activation and agitation may represent induction of a mixed dysphoric bipolar II state with suicidal ideation — add lithium, a mood stabilizer or an antipsychotic, and/or stop fluvoxamine",
+      "Many side effects are dose- and time-dependent — they spike with each increase, then fade",
+    ],
+    overdose: [
+      "Rare fatalities reported, both alone and in combination — sedation, dizziness, vomiting, diarrhea, irregular heartbeat, seizures, coma, breathing difficulty",
+    ],
+    longTermUse: "Safe",
+    habitForming: "No",
+    howToStop: [
+      "Taper to avoid withdrawal effects (dizziness, nausea, stomach cramps, sweating, tingling, dysesthesias)",
+      "Many patients tolerate: 50% reduction for 3 days → another 50% for 3 days → stop",
+      "If withdrawal emerges, raise the dose to abort, then withdraw much more slowly",
+    ],
+    pharmacokinetics: [
+      "Parent half-life 9–28 hours",
+      "Inhibits CYP1A2, CYP3A4, and CYP2C9/2C19 — among the most interaction-prone SSRIs",
+      "Fatal serotonin syndrome with MAOIs — do not combine; wait 14 days after stopping an MAOI, and 2 weeks after stopping fluvoxamine before starting an MAOI",
+      "Via 1A2 inhibition: reduces clearance of theophylline and clozapine — their doses must be lowered; with caffeine or theophylline can cause jitteriness, overstimulation, rarely seizures",
+      "Smokers metabolize fluvoxamine faster — may need higher doses",
+      "Via 3A4 inhibition: reduces clearance of carbamazepine and benzodiazepines (alprazolam, triazolam); may raise simvastatin/atorvastatin/lovastatin (rhabdomyolysis risk) and pimozide (QTc prolongation)",
+      "Can raise TCA levels; may displace highly protein-bound drugs (e.g., warfarin)",
+      "Tramadol raises seizure risk; sumatriptan (and possibly other triptans) can rarely cause weakness, hyperreflexia, incoordination",
+    ],
+    doNotUse: [
+      "If the patient is taking an MAO inhibitor",
+      "If the patient is taking thioridazine or pimozide",
+      "Proven allergy to fluvoxamine",
+    ],
+
+    specialPopulations: [
+      {
+        population: "Renal impairment",
+        guidance: ["No dose adjustment"],
+      },
+      {
+        population: "Hepatic impairment",
+        guidance: ["Lower dose or give less frequently — perhaps by half; titrate more slowly"],
+      },
+      {
+        population: "Cardiac impairment",
+        guidance: [
+          "Preliminary research suggests fluvoxamine is safe in cardiac patients",
+          "SSRI treatment after MI or in acute angina may reduce cardiac events and improve survival as well as mood",
+        ],
+      },
+      {
+        population: "Elderly",
+        guidance: ["May need a lower initial dose and slower titration"],
+      },
+      {
+        population: "Children & adolescents",
+        guidance: [
+          "Approved for OCD ages 8–17: initial 25 mg/day at bedtime, increase by 25 mg/day every 4–7 days, max 200 mg/day; doses above 50 mg/day divided in 2 doses with the larger at bedtime",
+          "Preliminary evidence of efficacy for other anxiety disorders and depression in youth",
+          "Watch for bipolar activation and suicidal ideation; counsel parents/guardians",
+        ],
+      },
+      {
+        population: "Pregnancy",
+        guidance: [
+          "Risk Category C — not generally recommended, especially first trimester; continuous treatment may nonetheless be necessary and has not been proven harmful",
+          "At delivery: possible increased maternal bleeding and transient newborn irritability or sedation",
+          "Late third-trimester exposure: neonatal complications reported (respiratory distress, cyanosis, apnea, seizures, feeding difficulty, hypoglycemia, jitteriness)",
+          "Weigh treatment risk against relapse risk — for many, continuing is the better choice",
+        ],
+      },
+      {
+        population: "Breast feeding",
+        guidance: [
+          "Some drug is found in breast milk; trace amounts in nursing infants",
+          "If the infant becomes irritable or sedated, breastfeeding or the drug may need to be stopped",
+          "Postpartum is high-risk for relapse — may need reinstitution late in the third trimester or shortly after delivery",
+        ],
+      },
+    ],
+
+    potentialAdvantages: [
+      "Patients with mixed anxiety/depression",
+      "Generic is inexpensive where available",
+    ],
+    potentialDisadvantages: [
+      "Patients with irritable bowel or multiple gastrointestinal complaints",
+      "Can require dose titration and twice-daily dosing",
+    ],
+    primaryTargetSymptoms: [
+      "Depressed mood",
+      "Anxiety",
+    ],
+    pearls: [
+      "Often a preferred treatment for anxious depression and MDD comorbid with anxiety disorders",
+      "Some withdrawal effects, especially gastrointestinal",
+      "May have a lower incidence of sexual dysfunction than other SSRIs",
+      "Preliminary research suggests efficacy for obsessive-compulsive symptoms in schizophrenia when combined with antipsychotics",
+      "Not FDA approved for depression, but used widely for depression in many countries",
+      "SSRIs may be less effective in women over 50 not taking estrogen; may help hot flushes in perimenopause",
+      "Sigma-1 receptor actions may explain its sometimes-rapid onset in anxiety disorders and insomnia",
+      "Sigma-1 actions may give advantages in psychotic and delusional depression",
+      "Treatment-resistant OCD expert move: fluvoxamine + clomipramine — fluvoxamine inhibits CYP1A2, blocking clomipramine's conversion to desmethyl-clomipramine and shifting the portfolio toward the more serotonergic parent drug",
+      "May cause photosensitivity",
+    ],
+  },
 
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
