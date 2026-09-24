@@ -83,10 +83,33 @@ describe("psychiatry — routes and identity", () => {
     expect(html).toContain("Psychiatry Self-Test");
   });
 
-  test("4. schizophrenia lesson serves 200 with phases + India layer", async () => {
-    const { status, html } = await get("/psychiatry/schizophrenia");
+  test("4a. migrated pilot lessons render the six-lesson KYP course", async () => {
+    // Learning-system pilots (depressive-disorders, schizophrenia,
+    // neurotransmitters): same URL, new course view — six lessons,
+    // mode system, active recall, references.
+    for (const slug of ["depressive-disorders", "schizophrenia", "neurotransmitters"]) {
+      const { status, html } = await get(`/psychiatry/${slug}`);
+      expect(status).toBe(200);
+      expect(html).toContain("Foundations");
+      expect(html).toContain("Mechanism &amp; Neuroscience");
+      expect(html).toContain("Clinical Practice");
+      expect(html).toContain("Indian Practice");
+      expect(html).toContain("Exam Revision");
+      expect(html).toContain("Active Recall");
+      expect(html).toContain('id="top"');
+    }
+    // The schizophrenia course specifically carries its decision path +
+    // recorded content gaps (antipsychotic lessons do not exist yet).
+    const sz = await get("/psychiatry/schizophrenia");
+    expect(sz.html).toContain("Decision Path");
+    expect(sz.html).toContain("content gaps");
+  });
+
+  test("4b. non-migrated lessons still render the finalized note shell", async () => {
+    // A non-pilot disorder lesson keeps the note-shell contract
+    // (phases + India layer + sources disclosure).
+    const { status, html } = await get("/psychiatry/gad");
     expect(status).toBe(200);
-    expect(html).toContain("Schizophrenia");
     expect(html).toContain("Understand");
     expect(html).toContain("India in Practice");
     expect(html).toContain("Sources &amp; References");
@@ -170,4 +193,72 @@ describe("psychiatry — resume-banner parity (finalization §11)", () => {
     expect(slugs.length).toBe(109);
     expect(missing).toEqual([]);
   }, 120000);
+});
+
+// Learning-system course registry (ESM import — top level so the
+// bun:test runner resolves it before describe bodies execute).
+import { psychiatryCourses, getPsychiatryCourse } from "../src/lib/kyp/data/psychiatry-courses";
+
+describe("psychiatry — learning-system course registry (pilot batch)", () => {
+  // The learning-system brief §33-34 + §38: the course layer is a typed
+  // registry with provenance, status, mode projections and honest
+  // content-gap recording. These tests pin the architecture contract.
+
+  test("15. registry integrity: 3 pilots, note-slug keyed, valid status", () => {
+    expect(psychiatryCourses.length).toBe(3);
+    const noteSlugs = getAllNoteSlugs();
+    for (const course of psychiatryCourses) {
+      expect(noteSlugs).toContain(course.slug); // one URL per topic
+      expect(["DRAFT", "RESEARCHED", "VERIFIED", "PUBLISHED", "NEEDS_REVIEW"]).toContain(course.status);
+      expect(course.status).toBe("PUBLISHED");
+      expect(course.lessonGroups.length).toBe(6); // the six-lesson journey
+      expect(course.lessonGroups.map((l: any) => l.number)).toEqual([1, 2, 3, 4, 5, 6]);
+      expect(course.provenance.length).toBeGreaterThanOrEqual(10);
+      expect(course.evidenceMap.length).toBeGreaterThanOrEqual(10);
+    }
+    expect(getPsychiatryCourse("depressive-disorders")?.kind).toBe("disorder");
+    expect(getPsychiatryCourse("schizophrenia")?.kind).toBe("disorder");
+    expect(getPsychiatryCourse("neurotransmitters")?.kind).toBe("concept");
+  });
+
+  test("16. mode projections: all four modes declared, sections resolve", () => {
+    for (const course of psychiatryCourses) {
+      const modes = course.learningPaths.map((p: any) => p.mode);
+      expect(modes).toEqual(["patient", "mbbs", "neetPg", "resident"]); // the EXISTING modes
+      const lessonSectionIds = new Set(course.lessonGroups.flatMap((l: any) => l.sectionIds));
+      for (const path of course.learningPaths) {
+        for (const sectionId of path.visibleSections) {
+          expect(lessonSectionIds.has(sectionId)).toBe(true); // no orphan visibility
+        }
+      }
+    }
+  });
+
+  test("17. provenance: every evidenceMap claim maps to registered sources", () => {
+    for (const course of psychiatryCourses) {
+      const sourceIds = new Set(course.provenance.map((p: any) => p.id));
+      for (const claim of course.evidenceMap) {
+        expect(claim.sources.length).toBeGreaterThan(0);
+        for (const s of claim.sources) {
+          expect(sourceIds.has(s)).toBe(true); // no fabricated source refs
+        }
+      }
+    }
+  });
+
+  test("18. drug navigation only links existing KYP drug lessons", async () => {
+    const { getAllDrugSlugs } = await import("../src/lib/kyp/data");
+    const built = new Set(getAllDrugSlugs());
+    for (const course of psychiatryCourses) {
+      for (const link of course.drugLinks) {
+        if (link.slug) {
+          expect(built.has(link.slug)).toBe(true); // no invented routes
+        }
+      }
+    }
+    // The schizophrenia course records the antipsychotic gap honestly.
+    const sz = getPsychiatryCourse("schizophrenia")!;
+    expect(sz.drugLinks.length).toBe(0);
+    expect(sz.contentGaps.join(" ")).toContain("Antipsychotics");
+  });
 });
