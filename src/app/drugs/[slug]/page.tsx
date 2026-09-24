@@ -208,7 +208,7 @@ export default async function DrugPage({ params }: PageProps) {
 
         {/* Continue-where-you-left-off affordance (renders only on
             return visits with saved progress — hydration-safe) */}
-        <ResumeBanner drugSlug={drug.slug} items={navItems} />
+        <ResumeBanner courseSlug={drug.slug} items={navItems} />
 
         {/* Lesson Progress indicator — sticky horizontal strip
             (hidden in Patient mode; patients follow the guide, not

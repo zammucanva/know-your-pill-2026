@@ -7,10 +7,11 @@ import { useCourseProgress } from "@/lib/kyp/progress/use-local-progress";
 import { coursePercentComplete } from "@/lib/kyp/progress/progress-store";
 import { useGuidedLearning } from "@/components/kyp/ui/guided-learning-toggle";
 import { PATIENT_VISIBLE_SECTIONS } from "@/lib/kyp/patient/labels";
+import { cn } from "@/lib/utils";
 
 /**
  * ResumeBanner — the "continue where you left off" affordance on a
- * medication course page.
+ * lesson course page (drug courses and KYP Psychiatry lessons share it).
  *
  * Renders NOTHING on the server and before hydration (the course
  * progress hook returns null), so there is never a hydration
@@ -25,26 +26,43 @@ import { PATIENT_VISIBLE_SECTIONS } from "@/lib/kyp/patient/labels";
  *
  * Visual language: clinical, restrained, editorial — one border, one
  * line, no cards, no motion beyond a respect-reduced colour change.
+ *
+ * API (shared abstraction over the drug + psychiatry lesson systems):
+ *   - courseSlug   : the course key in kyp:progress:v1 (drug slug or
+ *                    `psychiatry/<note-slug>`)
+ *   - noun         : what the learner is resuming, for wording. Drug
+ *                    pages omit it (mode-aware "course"/"guide");
+ *                    psychiatry passes "lesson".
+ *   - patientFilter: apply the guided-learning patient-mode section
+ *                    filtering (drug pages only — default true).
  */
 interface ResumeBannerProps {
-  drugSlug: string;
+  courseSlug: string;
   items: NavItem[];
+  /** Wording noun for non-drug lesson systems, e.g. "lesson". */
+  noun?: string;
+  /** Drug pages filter sections by patient mode; psychiatry passes false. */
+  patientFilter?: boolean;
 }
 
-export function ResumeBanner({ drugSlug, items }: ResumeBannerProps) {
-  const course = useCourseProgress(drugSlug);
+export function ResumeBanner({ courseSlug, items, noun, patientFilter = true }: ResumeBannerProps) {
+  const course = useCourseProgress(courseSlug);
   const [navigated, setNavigated] = React.useState(false);
   const mode = useGuidedLearning((s) => s.mode);
+
+  // The thing being resumed, in learner language. Drug pages stay
+  // mode-aware ("course" / "guide"); other lesson systems pass a noun.
+  const thing = noun ?? (mode === "patient" ? "guide" : "course");
 
   // Patient mode: only patient-reachable sections count toward the
   // banner (a patient cannot re-open a hidden exam section, so the
   // banner falls back to the next unread patient section instead).
   const visibleItems = React.useMemo(
     () =>
-      mode === "patient"
+      patientFilter && mode === "patient"
         ? items.filter((i) => (PATIENT_VISIBLE_SECTIONS as readonly string[]).includes(i.id))
         : items,
-    [items, mode]
+    [items, mode, patientFilter]
   );
 
   const total = visibleItems.length;
@@ -75,8 +93,8 @@ export function ResumeBanner({ drugSlug, items }: ResumeBannerProps) {
         <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-2 sm:px-6 lg:px-8">
           <CheckCircle2 className="h-4 w-4 shrink-0 text-success" strokeWidth={2} />
           <p className="min-w-0 flex-1 truncate text-xs text-foreground/80">
-            You have completed this {mode === "patient" ? "guide" : "course"} — {total} of {total}{" "}
-            {total === 1 ? "section" : "sections"}. Review any {mode === "patient" ? "part of it" : "section"} below.
+            You have completed this {thing} — {total} of {total}{" "}
+            {total === 1 ? "section" : "sections"}. Review any part of it below.
           </p>
         </div>
       </div>
@@ -99,17 +117,24 @@ export function ResumeBanner({ drugSlug, items }: ResumeBannerProps) {
   return (
     <div
       role="region"
-      aria-label={mode === "patient" ? "Resume guide" : "Resume course"}
+      aria-label={`Resume ${thing}`}
       className="border-b border-brand/20 bg-brand-soft/30"
     >
       {/* sm:pr-40 — reserves the full footprint of the fixed
           GuidedLearning toggle (right-4: 16px gap + ≈126px collapsed
           pill + breathing room) so the Continue button can never sit
-          underneath it. main has no right padding, so the container's
-          right edge is the viewport edge and the reservation is
-          measured from there. Below sm the toggle is hidden, so no
-          reservation is needed there. */}
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-3 gap-y-1.5 px-4 py-2 sm:pl-6 sm:pr-40 lg:pl-8">
+          underneath it. Lesson systems without the toggle (psychiatry)
+          pass patientFilter={false} and skip the reservation. main has
+          no right padding, so the container's right edge is the
+          viewport edge and the reservation is measured from there.
+          Below sm the toggle is hidden, so no reservation is needed
+          there either way. */}
+      <div
+        className={cn(
+          "mx-auto flex max-w-7xl flex-wrap items-center gap-x-3 gap-y-1.5 px-4 py-2 sm:pl-6 lg:pl-8",
+          patientFilter && "sm:pr-40"
+        )}
+      >
         <BookOpen className="h-4 w-4 shrink-0 text-brand" strokeWidth={2} aria-hidden />
         <p className="min-w-0 flex-1 text-xs text-foreground/80">
           <span className="font-semibold text-foreground">
@@ -134,7 +159,7 @@ export function ResumeBanner({ drugSlug, items }: ResumeBannerProps) {
 
       {/* Screen-reader summary of overall completion */}
       <p className="sr-only" aria-live="polite">
-        {percent} percent of this {mode === "patient" ? "guide" : "course"} complete.
+        {percent} percent of this {thing} complete.
       </p>
     </div>
   );
