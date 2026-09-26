@@ -29,7 +29,7 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
   tagline:
     "The world's most burdensome psychiatric condition — and the most treatable one when recognised early.",
   summary:
-    "Depressive disorders are persistent disorders of mood, energy, cognition and function — not sadness, and not a character flaw. Roughly 322 million people live with depression worldwide (WHO), and in India about 1 in 20 adults is affected at any given time. This course builds the full picture in six lessons: what depression is, what actually happens in the brain, how it is diagnosed and treated, how Indian practice shapes management, how exams test it, and how to make it stick through active recall.",
+    "Depressive disorders are persistent disorders of mood, energy, cognition and function — not sadness, and not a character flaw. Roughly 322 million people live with depression worldwide (WHO), and in India about one adult in 37 is affected at any given time — about one in 20 over a lifetime. This course builds the full picture in six lessons: what depression is, what actually happens in the brain, how it is diagnosed and treated, how Indian practice shapes management, how exams test it, and how to make it stick through active recall.",
   estimatedReadTime: "35 min",
   yieldRating: "high",
   primaryAudience: "medical",
@@ -48,7 +48,7 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
   quickFacts: [
     { label: "Global burden", value: "≈ 322 million", detail: "People living with depression worldwide (WHO fact sheet; GBD 2021 estimates behind it)" },
     { label: "Sex ratio", value: "≈ 1.5 : 1", detail: "Female : male — about 50% higher prevalence in women (WHO)" },
-    { label: "India (any time point)", value: "1 in 20", detail: "NMHS 2015–16: ~2.7% current prevalence of depression; ~10.6% of adults live with any mental disorder" },
+    { label: "India (current)", value: "≈ 1 in 37", detail: "NMHS 2015–16: ~2.7% current prevalence of depression; lifetime ~5.25% (~1 in 20); ~10.6% of adults live with any mental disorder" },
     { label: "Core criteria window", value: "≥ 2 weeks", detail: "DSM-5-TR major depressive episode; ICD-11 depressive episode similarly requires most of the day, nearly every day" },
     { label: "First-line drug class", value: "SSRIs", detail: "NICE NG222 menu of options; IPS CPG — best tolerability-efficacy balance for most patients" },
     { label: "Antidepressant onset", value: "2–4 weeks", detail: "Symptomatic benefit typically begins; full effect often 6–8 weeks — a biology lesson, not treatment failure" },
@@ -75,14 +75,14 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
   /* ---- Lesson 2: Mechanism & Neuroscience ---- */
   mechanism: {
     summary:
-      "No single lesion causes depression. The honest 2026 model is a stress-diathesis convergence: genetic loading and early adversity calibrate stress-response systems (HPP axis, immune, neurotrophic support), and chronic stress then degrades the synaptic machinery of emotion regulation — which is why the treatments that work (drugs, psychotherapy, exercise, sleep repair) all ultimately converge on restoring neuroplasticity rather than on 'topping up' one chemical.",
+      "No single lesion causes depression. The honest 2026 model is a stress-diathesis convergence: genetic loading and early adversity calibrate stress-response systems (HPA axis, immune, neurotrophic support), and chronic stress then degrades the synaptic machinery of emotion regulation — which is why the treatments that work (drugs, psychotherapy, exercise, sleep repair) all ultimately converge on restoring neuroplasticity rather than on 'topping up' one chemical.",
     grade: "supported",
     steps: [
       "Genetic architecture: depression is polygenic — hundreds of loci of small effect (heritability ~35–40%); no single 'depression gene'.",
       "Stress calibration: early adversity and chronic stress drive HPA-axis sensitisation — elevated cortisol, impaired glucocorticoid feedback — measurable in a subset of patients.",
       "Neurotrophic change: stress-driven cortisol and inflammatory signalling reduce BDNF support in hippocampus and prefrontal cortex, with synaptic loss and reduced neurogenesis (animal models; human evidence indirect).",
       "Circuit dysfunction: disconnection between prefrontal 'control' regions and limbic 'mood' regions (amygdala hyperreactivity with diminished top-down regulation; default-mode network rumination loops).",
-      "Monoamine involvement: serotonin and noradrenaline systems modulate all of the above (mood, sleep, appetite, attention) — the drugs act here within hours, but symptom relief waits weeks, because the therapeutic step is downstream: receptor adaptation and plasticity gene expression (CREB → BDNF cascade).",
+      "Monoamine involvement: serotonin and noradrenaline systems modulate all of the above (mood, sleep, appetite, attention) — the drugs act here within hours, but symptom relief waits weeks — the leading account is downstream receptor adaptation and plasticity gene expression (CREB → BDNF cascade), graded proposed in the pathways below.",
       "Inflammatory and metabolic contributions: a subset of patients show raised inflammatory markers (CRP, IL-6) and metabolic dysregulation — linked to fatigue, anhedonia and treatment resistance; a modern, actively researched layer.",
       "Recovery = plasticity restoration: effective treatments (SSRI + therapy + exercise + sleep repair) each promote BDNF-dependent synaptic remodelling — converging mechanisms, divergent entry points.",
     ],
@@ -94,7 +94,7 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
     { id: "raphe-nuclei", name: "Raphe Nuclei", role: "Origin of the serotonin system; where SSRIs act first — but the therapeutic delay reflects downstream receptor adaptation, not the acute 5-HT rise.", grade: "established" },
   ],
   neurotransmitters: [
-    { name: "Serotonin", symbol: "5-HT", role: "Modulates mood, sleep, appetite, impulsivity. The clearest fact: blocking SERT changes these systems within hours — but the simple 'low serotonin = depression' claim is not supported by umbrella-review evidence. Teache the drugs, honestly.", grade: "uncertain", drugConnection: "All SSRIs act on SERT — see Sertraline" },
+    { name: "Serotonin", symbol: "5-HT", role: "Modulates mood, sleep, appetite, impulsivity. The clearest fact: blocking SERT changes these systems within hours — but the simple 'low serotonin = depression' claim is not supported by umbrella-review evidence. Teach the drugs, honestly.", grade: "uncertain", drugConnection: "All SSRIs act on SERT — see Sertraline" },
     { name: "Noradrenaline", symbol: "NE", role: "Energy, drive, attention. Reduced noradrenergic tone maps onto fatigue and anhedonia; SNRIs and mirtazapine engage this system.", grade: "supported", drugConnection: "Venlafaxine/Duloxetine (SNRIs); Bupropion (indirectly via NDRI)" },
     { name: "Dopamine", symbol: "DA", role: "Reward and motivation — the neurochemistry of anhedonia. Bupropion's NDRI mechanism is the drug-side lesson.", grade: "supported", drugConnection: "Bupropion (NDRI)" },
     { name: "GABA / Glutamate", symbol: "GABA / Glu", role: "Excitatory-inhibitory balance and plasticity; the glutamate system is where rapid-acting agents (esketamine) act — proof that monoamines are not the whole story.", grade: "supported" },
@@ -124,7 +124,7 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
         { label: "Clinical response", detail: "2–4 weeks onset; 6–8 weeks full effect" },
       ],
       clinicalManifestation: "Protects patients and prescribers from abandoning treatment at day 7 — the delay is the mechanism working, not failing.",
-      grade: "supported",
+      grade: "proposed",
     },
     {
       id: "inflammation-mood",
@@ -146,7 +146,7 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
     { id: "early-response", time: "Week 2–4", title: "First benefit", description: "Sleep and appetite often improve first; monitor for activation, especially in young adults.", phase: "peak" },
     { id: "full-response", time: "Week 6–8", title: "Response / remission", description: "Target is remission (PHQ-9 < 5), not just improvement; reassess dose and adherence if < 25% better.", phase: "recovery" },
     { id: "continuation", time: "Month 4–9", title: "Continuation phase", description: "Continue antidepressant ≥ 6 months after remission (longer after multiple episodes) — this is where most preventable relapses happen.", phase: "duration" },
-    { id: "maintenance", time: "≥ 2 years", title: "Maintenance (if recurrent)", description: "Third episode or severe/chronic course → long-term maintenance per NICE/IPS; taper slowly when stopping.", phase: "recovery" },
+    { id: "maintenance", time: "≥ 2 years", title: "Maintenance (if recurrent)", description: "Second episode → 2–3 years of continuation; three or more episodes or a severe/chronic course → long-term maintenance (NICE/IPS); taper slowly when stopping.", phase: "recovery" },
   ],
 
   /* ---- Lesson 3: Clinical Practice ---- */
@@ -154,7 +154,7 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
     globalPrevalence:
       "≈ 322 million people (4–5% of the world's adults) live with depression (WHO fact sheet, GBD 2021 estimates); among the leading causes of disability worldwide.",
     indianPrevalence:
-      "NMHS 2015–16: ~2.7% of adults currently depressed (about 1 in 20); ~10.6% of Indian adults live with a diagnosable mental disorder. Common mental disorders cluster in low-income and urban-migrant groups.",
+      "NMHS 2015–16: ~2.7% of adults currently depressed (about 1 in 37; lifetime ~5.25% — about 1 in 20); ~10.6% of Indian adults live with a diagnosable mental disorder. Common mental disorders cluster in low-income and urban-migrant groups.",
     lifetimeRisk: "Lifetime prevalence of major depression: roughly 10–20% in high-income cohorts; Indian data suggest lower treated prevalence but high true burden.",
     genderRatio: "≈ 1.5 : 1 (female : male) — consistent across countries and income settings (WHO).",
     ageOfOnset: "Peak onset in the 20s–40s — the productive years; mean age around the mid-20s to early 30s in most cohorts.",
@@ -174,11 +174,12 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
     { category: "Emotional", symptoms: ["Persistent low mood (most of the day, nearly every day)", "Anhedonia — loss of interest/pleasure", "Hopelessness, worthlessness, excessive guilt", "Irritability (especially adolescents)"] },
     { category: "Cognitive", symptoms: ["Reduced concentration and decisiveness", "Psychomotor slowing or agitation", "Recurrent thoughts of death, suicidal ideation", "Self-critical rumination"] },
     { category: "Somatic", symptoms: ["Sleep disturbance (insomnia or hypersomnia)", "Fatigue or loss of energy", "Appetite/weight change", "Loss of libido", "Unexplained aches (common presenting feature in India)"] },
+    { category: "Patterns that change treatment", symptoms: ["Melancholic — profound anhedonia, early-morning waking, mood worse in the morning, weight loss, disproportionate guilt: responds preferentially to antidepressants and ECT", "Atypical — oversleeping, overeating, leaden paralysis, rejection sensitivity: responds well to medication", "Psychotic — nihilistic or guilt-laden delusions: ECT or antidepressant + antipsychotic, never an SSRI alone", "Peripartum — onset in pregnancy or within weeks of delivery, intrusive harm thoughts: treat actively; sertraline is the usual first choice in breastfeeding", "Anxious distress — tension, restlessness, racing worry: predicts poorer outcomes; treat the anxiety component too"] },
   ],
   diagnosticCriteria: [
     {
       system: "DSM-5-TR",
-      code: "296.x / F32",
+      code: "F32.x (single episode) / F33.x (recurrent)",
       criteria: [
         "≥ 5 symptoms over ≥ 2 weeks, one of which must be depressed mood or anhedonia",
         "Symptoms: weight/appetite change, insomnia/hypersomnia, psychomotor change, fatigue, worthlessness/guilt, poor concentration, recurrent death thoughts",
@@ -231,7 +232,7 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
     { category: "psychotherapy", name: "CBT / IPT / behavioural couples therapy", description: "Structured psychological therapy targeting cognitive distortions (CBT) or interpersonal loss/transition (IPT) — comparable efficacy to antidepressants in mild-moderate episodes, with relapse-protection after termination.", whenToUse: "Mild to moderate (with or without drugs per preference); first choice where available.", indianContext: "IPS CPG endorses CBT/IPT; access concentrated in metros — digital + counsellor-delivered formats are scaling." },
     { category: "pharmacotherapy", name: "SSRI (first-line)", description: "Sertraline, escitalopram, fluoxetine among the best-tolerated; Cipriani 2018 network meta-analysis supports similar efficacy with tolerability differences driving choice.", whenToUse: "Moderate-severe episode, or mild with preference/history; combine with therapy for severe episodes.", indianContext: "Sertraline and fluoxetine widely available, low-cost generics + Jan Aushadhi — see KYP drug lessons." },
     { category: "pharmacotherapy", name: "Alternative / second-line agents", description: "Mirtazapine (insomnia, appetite loss, no sexual dysfunction), bupropion (fatigue/anhedonia, avoids sexual side-effects, avoid in seizures/eating disorder), SNRIs (pain comorbidity), TCAs (cheapest; cardiotoxic in overdose — never first choice where suicide risk is high).", whenToUse: "Non-response, intolerance or symptom-targeted selection.", indianContext: "Amitriptyline remains over-prescribed for its price — reserve when safer options fail." },
-    { category: "brain-stimulation", name: "ECT", description: "The most effective acute treatment for severe depression — indicated for psychotic depression, refusal of food/Fluids, high suicide risk, and treatment resistance.", whenToUse: "Severe life-threatening depression; CATATONIA (with benzodiazepines).", indianContext: "Widely available in Indian medical colleges; MHCA 2017 requires consent and legal safeguards." },
+    { category: "brain-stimulation", name: "ECT", description: "The most effective acute treatment for severe depression — indicated for psychotic depression, refusal of food/fluids, high suicide risk, severe depression in pregnancy when speed of response matters, and treatment resistance.", whenToUse: "Severe life-threatening depression; catatonia (with benzodiazepines).", indianContext: "Widely available in Indian medical colleges; MHCA 2017 requires consent and legal safeguards." },
     { category: "brain-stimulation", name: "rTMS / esketamine", description: "rTMS for non-response where available; intranasal esketamine for treatment-resistant depression under specialist supervision (dissociation/HTN monitoring).", whenToUse: "Treatment-resistant depression at specialist centres.", indianContext: "Limited availability, high cost — tertiary centres only." },
   ],
   safety: {
@@ -293,7 +294,7 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
     programmeContext:
       "National Mental Health Programme (NMHP) since 1982; Tele-MANAS (14416) — 51+ cells across all states, >10 lakh calls handled by 2024 — free, 24×7, multilingual. Mental Healthcare Act 2017: rights-based care, decriminalised suicide attempt (Sec 115 presumes severe stress and mandates care, not prosecution), advance directives, and consent requirements for ECT.",
     costConsiderations:
-      "Sertraline/fluoxetine/escitalopram generics and Jan Aushadhi outlets make SSRIs affordable; amitriptyline is cheaper still but overdose-toxic — a real-world tension when cost drives choice. Psychological therapy access is the bigger constraint: counsellor-delivered behavioural activation and digital CBT formats are the scalable answers.",
+      "Sertraline/fluoxetine/escitalopram generics and Jan Aushadhi outlets make SSRIs affordable; amitriptyline is cheaper still but overdose-toxic — a real-world tension when cost drives choice. Psychological therapy access is the bigger constraint: counsellor-delivered behavioural activation and digital CBT formats are the scalable answers. Insurance note: under MHCA 2017 and IRDAI master circulars, health insurance must cover mental illness at parity with physical illness — check outpatient pharmacy cover, where the actual cost sits.",
     culturalConsiderations:
       "Somatic idiom is the common presentation — ask mood questions directly rather than waiting for them. Stigma delays help-seeking, especially for men and for marriage-related decisions; family involvement is usually an asset if engaged early. Faith and religious healers are often first contact — engage respectfully, screen for harm, and route to care.",
     patientCounselling: [
@@ -323,7 +324,7 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
   },
   commonMistakes: [
     { mistake: "Prescribing an antidepressant without screening for past mania", why: "Unrecognised bipolar depression treated with an SSRI alone risks mood switching and cycle acceleration.", correction: "Two questions, every patient: 'Ever had days of unusual energy, racing thoughts, needing little sleep?'" },
-    { mistake: "Stopping the antidepressant the day the patient feels better", why: "Early discontinuation after remission roughly doubles relapse risk.", correction: "Continue ≥ 6 months (≥ 2 years after a third episode); taper over weeks, never abruptly." },
+    { mistake: "Stopping the antidepressant the day the patient feels better", why: "Early discontinuation after remission roughly doubles relapse risk.", correction: "Continue ≥ 6 months after a first episode (2–3 years after a second; long-term after three or more); taper over weeks, never abruptly." },
     { mistake: "Calling day-7 no-improvement 'treatment failure'", why: "The mechanism needs 2–4 weeks for benefit; early abandonment is the commonest cause of apparent non-response.", correction: "Pre-frame the timeline at prescription; review at 2–4 weeks before judging response." },
     { mistake: "Missing hypothyroidism, anaemia or B12 deficiency", why: "Fatigue-dominant presentations overlap; the conditions are common, cheap to test and fully treatable.", correction: "TSH + CBC (± B12/D) at first-episode diagnosis." },
     { mistake: "Treating the symptom checklist but not the function", why: "Partial response (PHQ-9 10 → 7) still predicts relapse; remission is the target.", correction: "Measure with PHQ-9 each visit; aim < 5; if two adequate trials fail, reassess diagnosis, adherence, comorbidity (including alcohol) before 'treatment-resistant' labels." },
@@ -359,7 +360,7 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
         "1.5 : 1 female preponderance; peak onset 20s–40s.",
         "First-line: SSRIs; TCAs cardiotoxic in overdose (never first-line with suicide risk).",
         "ECT: psychotic depression, catatonia, refusal of food, high suicide risk.",
-        "Continuation ≥ 6 months; maintenance ≥ 2 years after ≥ 3 episodes.",
+        "Continuation: ≥ 6 months (first episode) → 2–3 years (second) → long-term (three or more episodes).",
         "Screen every first episode: TSH, CBC; ask about past mania.",
         "Post-stroke and post-MI depression — common, treatable, worsen outcomes.",
         "Somatic presentation is the Indian primary-care pattern.",
@@ -403,7 +404,7 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
       presentation: "A 34-year-old shopkeeper brought by his wife: 'he has no interest in anything, sleeps badly, lost weight, sits all day.'",
       history: "Six weeks of low mood, early-morning waking, appetite loss, selling stock below cost from loss of interest, guilt about 'failing the family'. No past elevated-energy episodes; father treated for depression; alcohol 1–2 units weekly. TSH and CBC normal.",
       examination: "Psychomotor slowing, downcast affect, thought content: worthlessness and hopelessness; no delusions; insight present; acknowledges passive death thoughts without plan or intent.",
-      diagnosis: "Major depressive disorder, moderate (PHQ-9 = 17), melancholic features (early-morning waking, anhedonia, psychomotor change). Differential: hypothyroidism excluded, substance excluded by history.",
+      diagnosis: "Major depressive disorder, moderately severe (PHQ-9 = 17), melancholic features (early-morning waking, anhedonia, psychomotor change). Differential: hypothyroidism excluded, substance excluded by history.",
       management: "Sertraline 50 mg daily + psychoeducation + four structured counselling visits (behavioural activation principles); safety plan with wife informed; review 2 weeks.",
       outcome: "At week 3 sleep and appetite improved; PHQ-9 11 at week 4 (dose unchanged, education on the timeline); PHQ-9 4 at week 10. Continuation for 9 months agreed; family counselling on early warning signs.",
       teachingPoints: [
@@ -418,7 +419,7 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
       history: "Two weeks of escalating energy, reduced need for sleep, rapid pressurised speech and grandiose beliefs; before that a 3-week period of low mood, crying and inability to feed the baby, treated as 'postpartum blues' with reassurance.",
       examination: "Pressurised speech, flight of ideas, grandiose delusions, poor insight; baby safe with family.",
       diagnosis: "Bipolar I disorder, current episode mania with postpartum onset — the earlier 'blues' was likely the depressive dip before the switch.",
-      management: "Urgent psychiatric referral; admission with the baby where possible (mother-and-baby units / family-ward models); antipsychotic initiation; antidepressant stopped.",
+      management: "Urgent psychiatric referral; admission with the baby where possible (mother-and-baby units / family-ward models); antipsychotic initiation; no antidepressant — none had been started, and antidepressant monotherapy is wrong in mania.",
       outcome: "Symptoms settled over 3 weeks on quetiapine; diagnosis explained to the family; mood-stabiliser planning for future pregnancies.",
       teachingPoints: [
         "Peripartum 'depression' that suddenly brightens into energy is a switch until proven otherwise.",
@@ -440,7 +441,7 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
     "Differential spine: bipolarity (always), thyroid/anaemia/B12 (first episode), substances (always), grief/adjustment (timeline), negative-symptom schizophrenia (positive-symptom history).",
     "Neuroscience honestly graded: plasticity/network accounts supported; 'low serotonin' is a drug-mechanism shorthand, not the disease.",
     "Management ladder: mild → guided self-help + behavioural activation; moderate → therapy OR SSRI (preference); severe → SSRI + therapy ± ECT for psychotic/catatonic/food-refusing.",
-    "Antidepressant rules: SSRI first; 2–4 week onset; ≥ 6 month continuation; taper never stop; amitriptyline cheap but overdose-lethal.",
+    "Antidepressant rules: SSRI first; 2–4 week onset; ≥ 6-month continuation (longer with recurrence — 2–3 years after a second episode, long-term after three or more); taper, never stop; amitriptyline cheap but overdose-lethal.",
     "India layer: NMHS 2.7%/10.6%; DMHP + Tele-MANAS 14416; MHCA 2017 (rights, consent, decriminalised attempt); IPS CPG stepped care.",
     "Safety: suicide risk assessed every encounter; warning signs = intent/plan/means, food refusal, psychosis, postpartum with intrusive thoughts.",
   ],
@@ -455,17 +456,17 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
   activeRecallQuestions: [
     { question: "Recite the DSM-5-TR criteria for a major depressive episode — count, window, and the two mandatory symptoms.", answer: "≥ 5 symptoms for ≥ 2 weeks, most of the day, nearly every day, with distress/impairment; one symptom must be depressed mood or anhedonia; exclusions: substances, medical illness, and any past mania/hypomania.", topic: "Diagnosis" },
     { question: "Why is 'low serotonin causes depression' the wrong sentence to teach, and what is the better one?", answer: "The 2023 Moncrieff umbrella review found no consistent evidence that depression = low serotonin activity; serotonin manipulation explains how our drugs act (SERT blockade within hours) but not the disorder. Better: a stress-diathesis convergence on neuroplasticity and circuits, with monoamine drugs as one effective entry point whose benefits mature over weeks via downstream adaptation.", topic: "Mechanism" },
-    { question: "Walk through the mechanism of the 2–4 week antidepressant delay.", answer: "SERT blockade raises synaptic 5-HT within hours → 5-HT1A autoreceptor desensitisation over days–weeks (removing the brake) → CREB-mediated gene expression → BDNF-driven synaptic remodelling → clinical benefit at 2–4 weeks, full effect 6–8 weeks.", topic: "Mechanism" },
+    { question: "Walk through the mechanism of the 2–4 week antidepressant delay.", answer: "SERT blockade raises synaptic 5-HT within hours → 5-HT1A autoreceptor desensitisation over days–weeks (removing the brake) → CREB-mediated gene expression → BDNF-driven synaptic remodelling → clinical benefit at 2–4 weeks, full effect 6–8 weeks — the leading account of the delay (the clinical timeline itself is established).", topic: "Mechanism" },
     { question: "Give the bipolarity screen and why missing it matters.", answer: "Ask about past periods of elevated/irritable energy with reduced need for sleep, pressurised speech, or reckless spending. Missing past mania leads to SSRI monotherapy in bipolar depression, risking switching and cycle acceleration.", topic: "Differential" },
     { question: "Construct the stepped-care plan by PHQ-9 band.", answer: "5–9 mild: watchful waiting + guided self-help/behavioural activation, re-screen 2–4 weeks. 10–14 moderate: structured therapy OR SSRI (patient preference; combine if function poor). 15–19: SSRI + therapy. ≥ 20: SSRI + therapy, urgent risk assessment, consider referral; ECT for psychotic/catatonic/food-refusing.", topic: "Management" },
-    { question: "How long do you continue an antidepressant after remission, and when do you extend it?", answer: "≥ 6 months after remission for a first episode; ≥ 2 years after a third episode, severe/chronic episodes, or strong risk factors; always taper gradually.", topic: "Management" },
+    { question: "How long do you continue an antidepressant after remission, and when do you extend it?", answer: "≥ 6 months after remission for a first episode; 2–3 years after a second episode; long-term after three or more episodes, severe/chronic courses, or strong risk factors; always taper gradually.", topic: "Management" },
     { question: "Name four red flags in depression that change management the same day.", answer: "Suicidal intent/plan/means; refusing food or fluids; psychotic features (nihilistic guilt); postpartum with intrusive thoughts of harm — plus the subtle one: sudden 'improvement' after hopelessness.", topic: "Safety" },
-    { question: "What did NMHS 2015–16 find for depression in India, and what are the two programme responses an MBBS graduate should know?", answer: "~2.7% current prevalence (~1 in 20); ~10.6% of adults with any mental disorder. Programme responses: DMHP (district-level services) and Tele-MANAS 14416 (national 24×7 multilingual helpline, 51+ cells); plus the MHCA 2017 rights framework including decriminalisation of suicide attempt.", topic: "Indian Practice" },
+    { question: "What did NMHS 2015–16 find for depression in India, and what are the two programme responses an MBBS graduate should know?", answer: "~2.7% current prevalence (~1 in 37; lifetime ~5.25%, ~1 in 20); ~10.6% of adults with any mental disorder. Programme responses: DMHP (district-level services) and Tele-MANAS 14416 (national 24×7 multilingual helpline, 51+ cells); plus the MHCA 2017 rights framework including decriminalisation of suicide attempt.", topic: "Indian Practice" },
   ],
   faqs: [
     { question: "Is depression just sadness?", answer: "No. Sadness is a normal emotion that comes in waves and preserves your sense of self. Depression is a persistent syndrome — mood plus sleep, appetite, energy, concentration and self-worth changes that last weeks and impair function. It also has measurable biology: stress-system, neurotrophic and circuit changes." },
     { question: "Is depression caused by a 'chemical imbalance'?", answer: "That slogan oversimplifies decades of work. The honest version: many systems interact — stress hormones, inflammation, neurotrophins (BDNF), brain circuits — and no single deficiency has been proven. Antidepressants work through one entry point into that biology (serotonin/noradrenaline transport), with the therapeutic effect maturing over weeks as the brain adapts." },
-    { question: "Will I need antidepressants forever?", answer: "Usually not. Standard advice: continue 6–9 months after you feel better for a first episode. Long-term maintenance is reserved for recurrent (≥ 3 episodes), severe or chronic courses — a decision made with your doctor, not assumed." },
+    { question: "Will I need antidepressants forever?", answer: "Usually not. Standard advice: continue 6–9 months after you feel better for a first episode, 2–3 years after a second, and long-term only after three or more episodes, severe or chronic courses — a decision made with your doctor, not assumed." },
     { question: "Are antidepressants addictive?", answer: "No — they do not cause tolerance or craving. Stopping abruptly can cause discontinuation symptoms (dizziness, flu-like feelings, sensory 'zaps'), which is why they are tapered — that is a withdrawal effect of the drug leaving the body, not addiction." },
     { question: "What actually helps besides medicine?", answer: "Behavioural activation (scheduled activity), regular exercise (30 minutes most days), sleep regularity, limiting alcohol, and structured psychotherapy (CBT/IPT) all have real evidence. For mild depression these can be sufficient; for moderate-severe they combine with medicine." },
     { question: "Can I take antidepressants while pregnant or breastfeeding?", answer: "This is individualised — but untreated depression also harms mother and baby. Sertraline is among the best-studied and preferred in pregnancy/breastfeeding. Never stop abruptly on your own; discuss with your doctor (ideally before conception)." },
@@ -551,10 +552,10 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
     { id: "S9", source: "WHO — Suicide fact sheet (727,000 deaths; 2021 estimates)", sourceType: "who", year: "2026 (Aug)", locator: "https://www.who.int/news-room/fact-sheets/detail/suicide", dateReviewed: "2026-09-25" },
     { id: "S10", source: "PIB / MoHFW — Tele-MANAS programme status (51 cells; >10 lakh calls)", sourceType: "government", year: "2024", locator: "https://pib.gov.in/", dateReviewed: "2026-09-25" },
     { id: "S11", source: "Mental Healthcare Act, Government of India", sourceType: "government", year: "2017", dateReviewed: "2026-09-25" },
-    { id: "S12", source: "Jayasankar P et al. — Epidemiology of common mental disorders in India (ICMR-supported)", sourceType: "primary", year: "2022", dateReviewed: "2026-09-25" },
+    { id: "S12", source: "Jayasankar P et al. — Epidemiology of common mental disorders: results from the National Mental Health Survey of India (Indian J Psychiatry 64)", sourceType: "primary", year: "2022", dateReviewed: "2026-09-25" },
     { id: "S13", source: "Kaplan & Sadock's Synopsis of Psychiatry, 12th ed.", sourceType: "textbook", year: "2022", dateReviewed: "2026-09-25" },
     { id: "S14", source: "Stahl's Essential Psychopharmacology, 5th ed.", sourceType: "textbook", year: "2021", dateReviewed: "2026-09-25" },
-    { id: "S15", source: "Howes OD, Kapur S — The dopamine hypothesis of schizophrenia: version III (analogy used for graded hypothesis teaching)", sourceType: "review", year: "2009", dateReviewed: "2026-09-25" },
+    { id: "S15", source: "Patel V et al. — MANAS trial: lay counsellors for common mental disorders in primary care (Lancet 376); Richards DA et al. — COBRA trial of behavioural activation (Lancet 388)", sourceType: "trial", year: "2010/2016", dateReviewed: "2026-09-25" },
   ],
   evidenceMap: [
     { text: "≈ 322 million people live with depression worldwide; ~1.5× more common in women.", grade: "established", sources: ["S1"] },
@@ -564,12 +565,14 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
     { text: "Antidepressants have comparable efficacy with different acceptability profiles; SSRIs among the best-tolerated first-line agents.", grade: "established", sources: ["S7"] },
     { text: "The simple serotonin-deficiency model of depression is not supported by umbrella-review evidence; serotonin manipulation explains drug action, not the disorder.", grade: "established", sources: ["S8"] },
     { text: "The neuroplasticity account (BDNF loss with stress; restored connectivity with treatment) explains episode course and treatment convergence.", grade: "supported", sources: ["S14"], note: "Human evidence largely indirect (imaging, postmortem, treatment-response); animal models strong." },
-    { text: "Antidepressant benefit begins at 2–4 weeks via downstream receptor adaptation and gene-expression change, not the acute amine rise.", grade: "supported", sources: ["S14", "S7"] },
-    { text: "Continuation for ≥ 6 months post-remission; maintenance ≥ 2 years for recurrent illness.", grade: "established", sources: ["S4", "S5"] },
+    { text: "Antidepressant benefit begins at 2–4 weeks (full effect often 6–8 weeks); the acute synaptic amine rise does not itself relieve symptoms.", grade: "established", sources: ["S7", "S14"] },
+    { text: "The delay is best explained by downstream receptor adaptation and gene-expression change (5-HT1A desensitisation → CREB → BDNF → synaptic remodelling) — the leading account, graded proposed in both this course and the Neurotransmitters course.", grade: "proposed", sources: ["S14"] },
+    { text: "Continuation for ≥ 6 months post-remission; 2–3 years after a second episode; long-term after three or more episodes.", grade: "established", sources: ["S4", "S5"] },
     { text: "WHO estimates 727,000 suicide deaths per year (2021 estimates).", grade: "established", sources: ["S9"] },
     { text: "Tele-MANAS: 51+ cells across states, >10 lakh calls by 2024; helpline 14416 free, 24×7, multilingual.", grade: "established", sources: ["S10"] },
     { text: "MHCA 2017 decriminalised suicide attempt (Sec 115: presumption of severe stress; duty to care) and mandates consent-based treatment.", grade: "established", sources: ["S11"] },
     { text: "Inflammatory-metabolic subtype contributes to fatigue/anhedonia and treatment resistance.", grade: "proposed", sources: ["S14", "S8"], note: "Active 2020s research; CRP-stratified trials ongoing." },
     { text: "ECT is the most effective acute treatment for severe depression; indicated for psychotic, catatonic, food-refusing and high-risk presentations.", grade: "established", sources: ["S4", "S5", "S13"] },
+    { text: "Task-shared behavioural activation and problem-solving delivered by trained lay counsellors improves depression outcomes in primary care (MANAS, Goa; HAP) — the evidence base for DMHP counselling and scalable psychological care.", grade: "supported", sources: ["S15"] },
   ],
 };
