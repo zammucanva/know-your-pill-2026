@@ -2,86 +2,121 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Network, MousePointerClick, Zap, Target, Layers, ArrowDown } from "lucide-react";
+import { ArrowRight, Network, MousePointerClick, Layers, ArrowDown, Check, Clock, Star } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
-import { Callout } from "@/components/kyp/ui/callout";
 import { Timeline } from "@/components/kyp/ui/timeline";
 import { Badge } from "@/components/kyp/ui/badge";
+import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
+import { LearningPath } from "@/components/kyp/ui/learning-path";
 import { EvidenceBadge, EvidenceLegend, StepChain } from "./course-ui";
 import { linkPath } from "@/lib/kyp/image-path";
 import type { PsychiatryCourse } from "./course-types";
-import type { KnowledgeGraphNode } from "@/lib/kyp/data";
 import { cn } from "@/lib/utils";
 
 /* ============================================================
    Lesson 1 + Lesson 2 section components for the Psychiatry
-   course layer. Visual language: the KYP psych design tokens
-   (kyp-grid-bg, Georgia display, shared card system) — parity
-   verified at the shell level in the prior release.
+   course layer. Visual language: aligned with the drug lesson
+   oracle (DrugHero ambient grid/orbs + text-display, tight
+   quick-facts strip, CardPrimitive chassis, wide neuroscience
+   rhythm) — content model unchanged.
    ============================================================ */
 
-/** Lesson 1 — hero (id="top"): the anchor the resume system targets. */
+/** Lesson 1 — hero (id="top"): the anchor the resume system targets.
+ *  Mirrors DrugHero: ambient grid, drifting orbs, breadcrumb,
+ *  Badge metadata row, display typography. */
 export function CourseHero({ course }: { course: PsychiatryCourse }) {
   return (
-    <section id="top" className="relative overflow-hidden pt-12 pb-10 sm:pt-16 sm:pb-14">
-      <Container>
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-12">
+    <section id="top" className="relative overflow-hidden pt-24 pb-8 sm:pt-28 sm:pb-12">
+      {/* Ambient decoration — subtle, not dominant */}
+      <div className="pointer-events-none absolute inset-0 kyp-grid-bg opacity-30" aria-hidden />
+      <div className="pointer-events-none absolute -left-24 top-10 h-64 w-64 rounded-full bg-brand/15 blur-3xl kyp-drift" aria-hidden />
+      <div
+        className="pointer-events-none absolute -right-24 top-24 h-72 w-72 rounded-full bg-neural/15 blur-3xl kyp-drift"
+        style={{ animationDelay: "-7s" }}
+        aria-hidden
+      />
+
+      <Container className="relative">
+        {/* Learning path breadcrumb — every segment links to the
+            collection that browses it (Psychiatry → /psychiatry,
+            group → /psychiatry/library/#group-X); the final segment is
+            the current page. */}
+        <div className="mb-4">
+          <LearningPath
+            path={course.learningPath}
+            links={[
+              "/psychiatry",
+              `/psychiatry/library/#group-${course.groupLetter}`,
+              undefined,
+            ]}
+          />
+        </div>
+
+        <div className="grid items-start gap-8 lg:grid-cols-[1.5fr_1fr]">
           <div className="min-w-0">
-            <div className="flex flex-wrap items-center gap-2 text-xs">
-              <span className="rounded-full border border-brand/30 bg-brand-soft/50 px-2.5 py-0.5 font-medium text-brand">
-                KYP Psychiatry · Group {course.groupLetter}
-              </span>
-              <span className="rounded-full border border-border/70 bg-card px-2.5 py-0.5 text-muted-foreground">
+            <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+              <Badge variant="brand" size="sm">
+                <Layers className="h-2.5 w-2.5" />
+                {course.category}
+              </Badge>
+              <span className="text-muted-foreground/70">
                 {course.kind === "disorder" ? "Disorder course" : "Concept course"}
               </span>
-              <span className="rounded-full border border-border/70 bg-card px-2.5 py-0.5 text-muted-foreground">
-                {course.category}
+              <span className="text-muted-foreground/40">·</span>
+              <span className="inline-flex items-center gap-1">
+                <Clock className="h-3 w-3" />
+                {course.estimatedReadTime}
               </span>
+              {course.yieldRating === "high" && (
+                <span className="inline-flex items-center gap-1 text-neural">
+                  <Star className="h-2.5 w-2.5 fill-current" />
+                  High yield
+                </span>
+              )}
             </div>
-            <h1 className="mt-4 font-serif text-4xl leading-tight tracking-tight text-foreground sm:text-5xl">
-              {course.title}
-            </h1>
+
+            <h1 className="mt-3 text-display text-foreground leading-[1.05]">{course.title}</h1>
+
             <p className="mt-3 max-w-2xl font-serif text-lg italic leading-relaxed text-muted-foreground">
               {course.tagline}
             </p>
-            <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-foreground/80">
+            <p className="mt-5 max-w-2xl text-base text-foreground/80 leading-relaxed">
               {course.summary}
             </p>
-            <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-muted-foreground">
-              <span className="inline-flex items-center gap-1">
-                <Layers className="h-3.5 w-3.5 text-brand" />
-                Six lessons · {course.estimatedReadTime}
-              </span>
-              <span className="inline-flex items-center gap-1">
-                <Zap className="h-3.5 w-3.5 text-warning" />
-                {course.yieldRating === "high" ? "High-yield" : course.yieldRating === "medium" ? "Medium-yield" : "Background"}
-              </span>
-              <span className="inline-flex items-center gap-1">
-                <Target className="h-3.5 w-3.5 text-neural" />
-                {course.learningPath.join(" › ")}
-              </span>
-            </div>
           </div>
 
           {/* Objectives — the "what you will be able to do" card (also the
               learning-objectives scroll anchor for the sticky nav) */}
-          <aside id="learning-objectives" className="scroll-mt-28 rounded-xl border border-border/70 bg-card p-5 shadow-[var(--shadow-soft)]">
-            <p className="text-xs font-semibold uppercase tracking-wide text-brand">Learning objectives</p>
-            <ul className="mt-3 space-y-2">
-              {course.learningObjectives.slice(0, 6).map((objective, i) => (
-                <li key={i} className="flex gap-2 text-xs leading-relaxed text-foreground/75">
-                  <span className="mt-1 h-1 w-1 shrink-0 rounded-full bg-brand/60" aria-hidden />
-                  {objective}
-                </li>
-              ))}
-            </ul>
-            {course.learningObjectives.length > 6 && (
-              <p className="mt-2 text-[0.65rem] text-muted-foreground">
-                +{course.learningObjectives.length - 6} more objectives below in the flow
-              </p>
-            )}
+          <aside id="learning-objectives" className="scroll-mt-28">
+            <CardPrimitive
+              variant="flat"
+              interactive={false}
+              showArrow={false}
+              className="border-brand/20 bg-brand-soft/20"
+            >
+              <CardBody className="p-6">
+                <p className="text-overline text-brand">Learning objectives</p>
+                <ul className="mt-4 space-y-2.5">
+                  {course.learningObjectives.slice(0, 6).map((objective, i) => (
+                    <li key={i} className="flex items-start gap-2.5">
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand/15 text-brand">
+                        <Check className="h-3 w-3" strokeWidth={3} />
+                      </span>
+                      <span className="text-body-sm text-foreground/90 leading-relaxed">
+                        {objective}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                {course.learningObjectives.length > 6 && (
+                  <p className="mt-3 text-caption text-muted-foreground">
+                    +{course.learningObjectives.length - 6} more objectives below in the flow
+                  </p>
+                )}
+              </CardBody>
+            </CardPrimitive>
           </aside>
         </div>
       </Container>
@@ -89,35 +124,26 @@ export function CourseHero({ course }: { course: PsychiatryCourse }) {
   );
 }
 
-/** Lesson 1 — quick facts. */
+/** Lesson 1 — quick facts (tight unbanded strip, drug pattern). */
 export function CourseQuickFacts({ course }: { course: PsychiatryCourse }) {
   return (
-    <Section id="quick-facts" className="bg-muted/20">
+    <Section id="quick-facts" spacing="tight">
       <Container>
-        <SectionHeader
-          eyebrow="Quick Facts"
-          title="The numbers worth carrying."
-          tone="brand"
-          align="center"
-        />
-        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {course.quickFacts.map((fact, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-20px" }}
-              transition={{ duration: 0.25, delay: Math.min(i * 0.05, 0.3) }}
-              className="rounded-xl border border-border/70 bg-card p-4"
-            >
-              <p className="text-[0.65rem] font-semibold uppercase tracking-wide text-muted-foreground">
-                {fact.label}
-              </p>
-              <p className="mt-1.5 font-serif text-xl leading-tight text-foreground">{fact.value}</p>
-              {fact.detail && (
-                <p className="mt-1.5 text-[0.7rem] leading-snug text-muted-foreground">{fact.detail}</p>
-              )}
-            </motion.div>
+            <CardPrimitive key={i} variant="flat" interactive={false} showArrow={false}>
+              <CardBody>
+                <p className="text-overline text-muted-foreground">{fact.label}</p>
+                <p className="mt-1.5 font-serif text-lg font-semibold leading-tight text-foreground">
+                  {fact.value}
+                </p>
+                {fact.detail && (
+                  <p className="mt-2 text-caption text-muted-foreground leading-relaxed">
+                    {fact.detail}
+                  </p>
+                )}
+              </CardBody>
+            </CardPrimitive>
           ))}
         </div>
       </Container>
@@ -275,11 +301,11 @@ export function CourseKnowledgeGraph({ course }: { course: PsychiatryCourse }) {
   );
 }
 
-/** Lesson 2 — mechanism with evidence grading. */
+/** Lesson 2 — mechanism with evidence grading (wide banded, drug rhythm). */
 export function CourseMechanism({ course }: { course: PsychiatryCourse }) {
   return (
-    <Section id="mechanism">
-      <Container width="narrow">
+    <Section id="mechanism" className="bg-muted/20">
+      <Container>
         <SectionHeader
           eyebrow="Mechanism"
           title="What actually happens — graded honestly."
@@ -289,14 +315,18 @@ export function CourseMechanism({ course }: { course: PsychiatryCourse }) {
         <div className="mt-4">
           <EvidenceLegend />
         </div>
-        <div className="mt-6 rounded-xl border border-border/70 bg-card p-5">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-              Overall model grade:
-            </span>
-            <EvidenceBadge grade={course.mechanism.grade} />
-          </div>
-          <p className="mt-3 text-sm leading-relaxed text-foreground/85">{course.mechanism.summary}</p>
+        <div className="mt-6">
+          <CardPrimitive variant="flat" interactive={false} showArrow={false}>
+            <CardBody className="p-4 sm:p-5">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-overline text-muted-foreground">
+                  Overall model grade:
+                </span>
+                <EvidenceBadge grade={course.mechanism.grade} />
+              </div>
+              <p className="mt-3 text-body-sm leading-relaxed text-foreground/85">{course.mechanism.summary}</p>
+            </CardBody>
+          </CardPrimitive>
         </div>
         <div className="mt-8">
           <StepChain steps={course.mechanism.steps.map((s) => ({ label: s, detail: undefined }))} />
@@ -306,11 +336,11 @@ export function CourseMechanism({ course }: { course: PsychiatryCourse }) {
   );
 }
 
-/** Lesson 2 — brain regions. */
+/** Lesson 2 — brain regions (wide unbanded, three-across with stagger). */
 export function CourseBrain({ course }: { course: PsychiatryCourse }) {
   return (
-    <Section id="brain" className="bg-muted/20">
-      <Container width="narrow">
+    <Section id="brain">
+      <Container>
         <SectionHeader
           eyebrow="Brain"
           title="The structures that carry this topic."
@@ -318,15 +348,30 @@ export function CourseBrain({ course }: { course: PsychiatryCourse }) {
           tone="neural"
           align="start"
         />
-        <div className="mt-8 grid gap-3 sm:grid-cols-2">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {course.brainRegions.map((region, i) => (
-            <div key={i} className="rounded-xl border border-neural/25 bg-card p-4">
-              <div className="flex items-start justify-between gap-2">
-                <p className="font-medium leading-snug text-foreground">{region.name}</p>
-                <EvidenceBadge grade={region.grade} />
-              </div>
-              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{region.role}</p>
-            </div>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-20px" }}
+              transition={{ duration: 0.25, delay: Math.min(i * 0.05, 0.3) }}
+            >
+              <CardPrimitive
+                variant="flat"
+                interactive={false}
+                showArrow={false}
+                className="h-full border-neural/25"
+              >
+                <CardBody className="p-4">
+                  <div className="flex items-start justify-between gap-2">
+                    <p className="text-body-sm font-semibold leading-snug text-foreground">{region.name}</p>
+                    <EvidenceBadge grade={region.grade} />
+                  </div>
+                  <p className="mt-2 text-caption leading-relaxed text-muted-foreground">{region.role}</p>
+                </CardBody>
+              </CardPrimitive>
+            </motion.div>
           ))}
         </div>
       </Container>
@@ -334,35 +379,37 @@ export function CourseBrain({ course }: { course: PsychiatryCourse }) {
   );
 }
 
-/** Lesson 2 — neurotransmitters. */
+/** Lesson 2 — neurotransmitters (wide banded, three-across cards). */
 export function CourseNeurotransmitters({ course }: { course: PsychiatryCourse }) {
   return (
-    <Section id="neurotransmitters">
-      <Container width="narrow">
+    <Section id="neurotransmitters" className="bg-muted/20">
+      <Container>
         <SectionHeader
           eyebrow="Neurotransmitters"
           title="The chemical systems involved — and the drugs that speak them."
           tone="neural"
           align="start"
         />
-        <div className="mt-8 space-y-3">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {course.neurotransmitters.map((nt, i) => (
-            <div key={i} className="rounded-xl border border-border/70 bg-card p-4">
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="rounded-md bg-neural-soft/70 px-2 py-0.5 font-mono text-xs font-semibold text-neural">
-                  {nt.symbol}
-                </span>
-                <p className="font-medium text-foreground">{nt.name}</p>
-                <EvidenceBadge grade={nt.grade} className="ml-auto" />
-              </div>
-              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{nt.role}</p>
-              {nt.drugConnection && (
-                <p className="mt-2 inline-flex items-center gap-1 rounded-md border border-brand/25 bg-brand-soft/40 px-2 py-1 text-[0.7rem] font-medium text-brand">
-                  <ArrowRight className="h-3 w-3" />
-                  {nt.drugConnection}
-                </p>
-              )}
-            </div>
+            <CardPrimitive key={i} variant="flat" interactive={false} showArrow={false} className="h-full">
+              <CardBody className="p-4">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="rounded-md bg-neural-soft/70 px-2 py-0.5 font-mono text-xs font-semibold text-neural">
+                    {nt.symbol}
+                  </span>
+                  <p className="text-body-sm font-semibold text-foreground">{nt.name}</p>
+                  <EvidenceBadge grade={nt.grade} className="ml-auto" />
+                </div>
+                <p className="mt-2 text-caption leading-relaxed text-muted-foreground">{nt.role}</p>
+                {nt.drugConnection && (
+                  <p className="mt-3 inline-flex items-center gap-1 rounded-md border border-brand/25 bg-brand-soft/40 px-2 py-1 text-caption font-medium text-brand">
+                    <ArrowRight className="h-3 w-3" />
+                    {nt.drugConnection}
+                  </p>
+                )}
+              </CardBody>
+            </CardPrimitive>
           ))}
         </div>
       </Container>
@@ -373,8 +420,8 @@ export function CourseNeurotransmitters({ course }: { course: PsychiatryCourse }
 /** Lesson 2 — pathways (receptor → pathway → circuit → manifestation chains). */
 export function CoursePathways({ course }: { course: PsychiatryCourse }) {
   return (
-    <Section id="pathways" className="bg-muted/20">
-      <Container width="narrow">
+    <Section id="pathways">
+      <Container>
         <SectionHeader
           eyebrow="Pathways"
           title="Follow the chain from molecule to symptom."
@@ -382,36 +429,38 @@ export function CoursePathways({ course }: { course: PsychiatryCourse }) {
           tone="neural"
           align="start"
         />
-        <div className="mt-8 space-y-4">
+        <div className="mt-10 grid gap-4 lg:grid-cols-2">
           {course.pathways.map((pathway) => (
-            <div key={pathway.id} className="rounded-xl border border-border/70 bg-card p-5">
-              <div className="flex flex-wrap items-center justify-between gap-2">
-                <p className="font-medium text-foreground">{pathway.name}</p>
-                <EvidenceBadge grade={pathway.grade} />
-              </div>
-              <div className="mt-4 flex flex-col items-stretch gap-1 sm:flex-row sm:items-center">
-                {pathway.steps.map((step, i) => (
-                  <React.Fragment key={i}>
-                    <div className="flex min-w-0 flex-1 flex-col rounded-lg border border-border/60 bg-muted/30 px-3 py-2">
-                      <p className="text-xs font-medium leading-snug text-foreground">{step.label}</p>
-                      {step.detail && (
-                        <p className="mt-0.5 text-[0.65rem] leading-snug text-muted-foreground">{step.detail}</p>
+            <CardPrimitive key={pathway.id} variant="flat" interactive={false} showArrow={false}>
+              <CardBody className="p-5">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <p className="text-body-sm font-semibold text-foreground">{pathway.name}</p>
+                  <EvidenceBadge grade={pathway.grade} />
+                </div>
+                <div className="mt-4 flex flex-col items-stretch gap-1 sm:flex-row sm:items-center">
+                  {pathway.steps.map((step, i) => (
+                    <React.Fragment key={i}>
+                      <div className="flex min-w-0 flex-1 flex-col rounded-lg border border-border/60 bg-muted/30 px-3 py-2">
+                        <p className="text-xs font-medium leading-snug text-foreground">{step.label}</p>
+                        {step.detail && (
+                          <p className="mt-0.5 text-[0.65rem] leading-snug text-muted-foreground">{step.detail}</p>
+                        )}
+                      </div>
+                      {i < pathway.steps.length - 1 && (
+                        <ArrowDown
+                          aria-hidden
+                          className="mx-auto h-4 w-4 shrink-0 text-brand/60 sm:rotate-90"
+                        />
                       )}
-                    </div>
-                    {i < pathway.steps.length - 1 && (
-                      <ArrowDown
-                        aria-hidden
-                        className="mx-auto h-4 w-4 shrink-0 text-brand/60 sm:rotate-90"
-                      />
-                    )}
-                  </React.Fragment>
-                ))}
-              </div>
-              <p className="mt-4 rounded-lg border border-brand/20 bg-brand-soft/30 px-3 py-2 text-xs leading-relaxed text-foreground/80">
-                <span className="font-semibold text-brand">Clinical meaning: </span>
-                {pathway.clinicalManifestation}
-              </p>
-            </div>
+                    </React.Fragment>
+                  ))}
+                </div>
+                <p className="mt-4 rounded-lg border border-brand/20 bg-brand-soft/30 px-3 py-2 text-xs leading-relaxed text-foreground/80">
+                  <span className="font-semibold text-brand">Clinical meaning: </span>
+                  {pathway.clinicalManifestation}
+                </p>
+              </CardBody>
+            </CardPrimitive>
           ))}
         </div>
       </Container>
@@ -422,7 +471,7 @@ export function CoursePathways({ course }: { course: PsychiatryCourse }) {
 /** Lesson 2 — timeline (reuses the shared Timeline component). */
 export function CourseTimeline({ course }: { course: PsychiatryCourse }) {
   return (
-    <Section id="timeline">
+    <Section id="timeline" className="bg-muted/20">
       <Container width="narrow">
         <SectionHeader
           eyebrow="Timeline"
