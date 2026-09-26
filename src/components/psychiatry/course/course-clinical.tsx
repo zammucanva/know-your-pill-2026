@@ -289,14 +289,19 @@ export function CourseDifferential({ course }: { course: PsychiatryCourse }) {
 /** Lesson 3 — management options + safety. */
 export function CourseManagement({ course }: { course: PsychiatryCourse }) {
   if (!course.management || course.management.length === 0) return null;
+  // Concept courses (e.g. Neurotransmitters) re-purpose Lesson 3's
+  // management section for prescribing/counselling skills rather than
+  // treatment options — the header must not claim "treatment
+  // principles" for non-treatment content (concept-course firewall).
+  const isConcept = course.kind === "concept";
   return (
     <>
       <Section id="management">
         <Container width="narrow">
           <SectionHeader
-            eyebrow="Management"
-            title="Evidence-based treatment principles."
-            description="Educational content — not a substitute for clinical judgment."
+            eyebrow={isConcept ? "Applying the Science" : "Management"}
+            title={isConcept ? "Using the science at the bedside." : "Evidence-based treatment principles."}
+            description={isConcept ? "How the receptor and transporter map changes prescribing, side-effect reasoning and counselling — educational, not a treatment algorithm." : "Educational content — not a substitute for clinical judgment."}
             tone="success"
             align="start"
           />
