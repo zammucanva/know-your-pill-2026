@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Badge } from "@/components/kyp/ui/badge";
+import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
 import { cn } from "@/lib/utils";
 import {
   evidenceGradeMeta,
@@ -43,20 +44,17 @@ export function EvidenceBadge({ grade, className }: { grade: EvidenceGrade; clas
 export function EvidenceLegend({ className }: { className?: string }) {
   const grades: EvidenceGrade[] = ["established", "supported", "proposed", "uncertain"];
   return (
-    <div
-      className={cn(
-        "flex flex-wrap items-center gap-x-4 gap-y-1.5 rounded-xl border border-border/70 bg-card/60 px-4 py-3",
-        className
-      )}
-    >
-      <span className="text-xs font-medium text-muted-foreground">How to read the grades:</span>
-      {grades.map((g) => (
-        <span key={g} className="flex items-center gap-1.5">
-          <EvidenceBadge grade={g} />
-          <span className="text-[0.7rem] text-muted-foreground">{evidenceGradeMeta[g].description}</span>
-        </span>
-      ))}
-    </div>
+    <CardPrimitive variant="flat" interactive={false} showArrow={false} className={className}>
+      <CardBody className="flex flex-wrap items-center gap-x-4 gap-y-1.5 px-4 py-3">
+        <span className="text-xs font-medium text-muted-foreground">How to read the grades:</span>
+        {grades.map((g) => (
+          <span key={g} className="flex items-center gap-1.5">
+            <EvidenceBadge grade={g} />
+            <span className="text-caption text-muted-foreground">{evidenceGradeMeta[g].description}</span>
+          </span>
+        ))}
+      </CardBody>
+    </CardPrimitive>
   );
 }
 
@@ -74,7 +72,7 @@ export function StepChain({
         <React.Fragment key={i}>
           <li className="flex gap-4">
             <div className="flex flex-col items-center">
-              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-brand/40 bg-brand-soft/60 text-xs font-semibold text-brand">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand font-mono text-sm font-semibold text-primary-foreground">
                 {i + 1}
               </span>
               {i < steps.length - 1 && (
