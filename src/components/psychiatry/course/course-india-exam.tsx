@@ -334,7 +334,6 @@ export function CourseExamLens({ course }: { course: PsychiatryCourse }) {
 export function CourseClinicalCases({ course }: { course: PsychiatryCourse }) {
   if (!course.clinicalCases || course.clinicalCases.length === 0) return null;
   const fields = [
-    { key: "presentation", label: "Presentation" },
     { key: "history", label: "History" },
     { key: "examination", label: "Examination" },
     { key: "diagnosis", label: "Diagnosis" },

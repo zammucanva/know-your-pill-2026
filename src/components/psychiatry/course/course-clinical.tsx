@@ -204,26 +204,28 @@ export function CourseDiagnosis({ course }: { course: PsychiatryCourse }) {
                       <p className="text-caption text-muted-foreground">{scale.fullName}</p>
                     </div>
                     <p className="mt-2 text-caption leading-relaxed text-foreground/80">{scale.measures}</p>
-                    <div className="mt-3 overflow-x-auto">
-                      <table className="w-full min-w-[480px] text-left text-xs">
-                        <thead>
-                          <tr className="border-b border-border/60 text-muted-foreground">
-                            <th className="py-1.5 pr-2 font-medium">Score</th>
-                            <th className="py-1.5 pr-2 font-medium">Severity</th>
-                            <th className="py-1.5 font-medium">Action</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {scale.ranges.map((range, j) => (
-                            <tr key={j} className="border-b border-border/30 last:border-0">
-                              <td className="py-1.5 pr-2 font-mono text-foreground/80">{range.min}–{range.max}</td>
-                              <td className="py-1.5 pr-2 font-medium text-foreground">{range.severity}</td>
-                              <td className="py-1.5 leading-relaxed text-muted-foreground">{range.action}</td>
+                    {scale.ranges.length > 0 && (
+                      <div className="mt-3 overflow-x-auto">
+                        <table className="w-full min-w-[480px] text-left text-xs">
+                          <thead>
+                            <tr className="border-b border-border/60 text-muted-foreground">
+                              <th className="py-1.5 pr-2 font-medium">Score</th>
+                              <th className="py-1.5 pr-2 font-medium">Severity</th>
+                              <th className="py-1.5 font-medium">Action</th>
                             </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
+                          </thead>
+                          <tbody>
+                            {scale.ranges.map((range, j) => (
+                              <tr key={j} className="border-b border-border/30 last:border-0">
+                                <td className="py-1.5 pr-2 font-mono text-foreground/80">{range.min}–{range.max}</td>
+                                <td className="py-1.5 pr-2 font-medium text-foreground">{range.severity}</td>
+                                <td className="py-1.5 leading-relaxed text-muted-foreground">{range.action}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
                     {scale.indianNote && (
                       <p className="mt-2 text-caption leading-relaxed text-muted-foreground">
                         <AlertTriangle className="mr-1 inline h-3 w-3 -mt-0.5 text-warning" aria-hidden />

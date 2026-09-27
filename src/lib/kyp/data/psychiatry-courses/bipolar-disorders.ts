@@ -50,7 +50,7 @@ export const bipolarDisordersCourse: PsychiatryCourse = {
   quickFacts: [
     { label: "Bipolar I prevalence", value: "≈ 0.6–1%", detail: "Lifetime; bipolar II ≈ 0.4–1%; the whole soft spectrum may reach 2–5%" },
     { label: "Heritability", value: "70–85%", detail: "Among the highest in psychiatry; one affected parent raises a child's risk to roughly 5–10%" },
-    { label: "Duration gates", value: "7 / 4 / 2", detail: "Mania ≥ 7 days (or any duration if hospitalisation needed); hypomania ≥ 4 days; depression ≥ 2 weeks; cyclothymia ≥ 2 years; rapid cycling ≥ 4 episodes/year" },
+    { label: "Duration gates", value: "7d / 4d / 2w / 2y / 4/yr", detail: "Mania ≥ 7 days (or any duration if hospitalisation needed); hypomania ≥ 4 days; depression ≥ 2 weeks; cyclothymia ≥ 2 years; rapid cycling ≥ 4 episodes/year" },
     { label: "Diagnosis delay", value: "5–10 years", detail: "From first symptoms to correct diagnosis; most patients are mislabelled unipolar-depressive first and exposed to antidepressants" },
     { label: "Suicide risk", value: "10–15-fold", detail: "Completed-suicide risk elevation; about a third attempt; mixed states and the years just after diagnosis are highest-risk windows" },
     { label: "The unique drug", value: "Lithium", detail: "The only psychiatric drug with replicated suicide-MORTALITY reduction evidence — say this to patients; it matters to them" },
@@ -65,8 +65,8 @@ export const bipolarDisordersCourse: PsychiatryCourse = {
     { label: "Suicide & Self-harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "Among the highest risks in medicine — mixed states especially" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "Reward-circuit currency of the high" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The depressive pole's pharmacology" },
-    { label: "Suprachiasmatic nucleus", type: "brain-region", href: "/psychiatry/neurotransmitters/", note: "The circadian clock — fragile in bipolar disorder" },
-    { label: "Prefrontal Cortex", type: "brain-region", href: "/psychiatry/neurotransmitters/", note: "The safety sensors that burn out in mania" },
+    { label: "Suprachiasmatic nucleus", type: "brain-region", href: "#brain", note: "The circadian clock — fragile in bipolar disorder" },
+    { label: "Prefrontal Cortex", type: "brain-region", href: "#brain", note: "The safety sensors that burn out in mania" },
     { label: "Sertraline", type: "drug", href: "/drugs/sertraline/", note: "Cautious add-on only — never monotherapy in bipolar" },
     { label: "Escitalopram", type: "drug", href: "/drugs/escitalopram/", note: "The safer add-on class if a mood stabiliser already covers the highs" },
   ],
@@ -194,9 +194,40 @@ export const bipolarDisordersCourse: PsychiatryCourse = {
     },
   ],
   severityScales: [
-    { name: "YMRS", fullName: "Young Mania Rating Scale", measures: "Manic symptom severity — documents the high pole and its response.", ranges: [], indianNote: "Named for documentation and exams; items not reproduced (copyright)." },
-    { name: "MDQ", fullName: "Mood Disorder Questionnaire", measures: "Screening instrument for past hypomania — the gateway question set before the clinical interview.", ranges: [] },
-    { name: "PHQ-9 / HAM-D", fullName: "Depression severity instruments", measures: "The depressive pole — read alongside the switch-risk watch.", ranges: [] },
+    {
+      name: "YMRS",
+      fullName: "Young Mania Rating Scale",
+      measures: "Manic symptom severity — documents the high pole and its response.",
+      ranges: [
+        { min: 0, max: 11, severity: "Remission / euthymia", action: "Maintenance continues unchanged; reinforce sleep-protective habits" },
+        { min: 12, max: 19, severity: "Mild manic symptoms", action: "Review sleep, adherence and stressors; outpatient dose review" },
+        { min: 20, max: 25, severity: "Moderate mania", action: "Urgent medication review; assess admission need and risk" },
+        { min: 26, max: 60, severity: "Severe mania", action: "Usually inpatient management; consider antipsychotic + mood stabiliser combination" },
+      ],
+      indianNote: "Named for documentation and exams; items not reproduced (copyright).",
+    },
+    {
+      name: "MDQ",
+      fullName: "Mood Disorder Questionnaire",
+      measures: "Screening instrument for past hypomania — the gateway question set before the clinical interview.",
+      ranges: [
+        { min: 0, max: 6, severity: "Below symptom threshold", action: "Screen negative — proceed with unipolar assessment, but re-screen after any non-response" },
+        { min: 7, max: 13, severity: "At/above threshold", action: "Positive screen ONLY if symptoms co-occurred AND caused moderate-or-greater impairment — then structured interview before any diagnosis" },
+      ],
+    },
+    {
+      name: "PHQ-9 / HAM-D",
+      fullName: "Depression severity instruments",
+      measures: "The depressive pole — read alongside the switch-risk watch.",
+      ranges: [
+        { min: 0, max: 4, severity: "Minimal", action: "Monitor; maintain mood stabiliser cover" },
+        { min: 5, max: 9, severity: "Mild", action: "Psychoeducation + watchful waiting; never antidepressant monotherapy" },
+        { min: 10, max: 14, severity: "Moderate", action: "Bipolar-depression pathway: quetiapine / lithium / lamotrigine discussion" },
+        { min: 15, max: 19, severity: "Moderately severe", action: "Definite bipolar-specific treatment; assess suicide risk every visit" },
+        { min: 20, max: 27, severity: "Severe", action: "Consider ECT for psychotic or life-threatening depression; guard the switch risk" },
+      ],
+      indianNote: "PHQ-9 bands shown (self-report); HAM-D 17-item clinician-rated correspondence: <7 normal, 8–16 mild, 17–23 moderate, ≥24 severe.",
+    },
     { name: "Life chart", fullName: "NIMH life-chart method (episodes on a timeline)", measures: "The single most useful tool in the whole field: episodes, triggers and treatment response on one drawn line — draw it WITH the family in the first two visits.", ranges: [] },
   ],
   differentialDiagnosis: [

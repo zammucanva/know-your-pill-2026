@@ -63,7 +63,7 @@ export const delusionalDisorderCourse: PsychiatryCourse = {
     { label: "Schizoaffective & Schizotypal", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "Loosely-held vs fixed beliefs — the challenge test separates them" },
     { label: "OCD", type: "condition", href: "/psychiatry/ocd/", note: "Ego-dystonic intrusions vs ego-syntonic conviction — the classic viva contrast" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The focal dopamine dysregulation presumed — thin evidence, honestly graded" },
-    { label: "Temporal / frontal cortex", type: "brain-region", href: "/psychiatry/neurotransmitters/", note: "Lesions here mimic the picture — the late-onset workup target" },
+    { label: "Temporal / frontal cortex", type: "brain-region", href: "#brain", note: "Lesions here mimic the picture — the late-onset workup target" },
     { label: "Sertraline", type: "drug", href: "/drugs/sertraline/", note: "Comorbid depression/anxiety responds even when the belief does not" },
     { label: "Suicide & Self-harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "The litigious and jealous courses carry despair and risk — assess it" },
   ],
