@@ -204,8 +204,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
   // registry with provenance, status, mode projections and honest
   // content-gap recording. These tests pin the architecture contract.
 
-  test("15. registry integrity: 3 pilots, note-slug keyed, valid status", () => {
-    expect(psychiatryCourses.length).toBe(3);
+  test("15. registry integrity: 3 pilots + batch 1 (9 courses), note-slug keyed, valid status", () => {
+    expect(psychiatryCourses.length).toBe(9); // 3 validated pilots + 6 batch-1 courses
     const noteSlugs = getAllNoteSlugs();
     for (const course of psychiatryCourses) {
       expect(noteSlugs).toContain(course.slug); // one URL per topic
