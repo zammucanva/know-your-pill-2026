@@ -68,7 +68,7 @@ export const suicideSelfHarmCourse: PsychiatryCourse = {
     { label: "Persistent Mood Disorders", type: "condition", href: "/psychiatry/persistent-mood-disorders/", note: "Chronic passive-ideation risk is real and under-asked" },
     { label: "Acute & Transient Psychosis", type: "condition", href: "/psychiatry/acute-transient-psychosis/", note: "Post-results season — the Indian student emergency" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The SSRI target when depression is the driver" },
-    { label: "Prefrontal Cortex", type: "brain-region", href: "/psychiatry/neurotransmitters/", note: "The narrowing-tunnel circuitry of the crisis state" },
+    { label: "Prefrontal Cortex", type: "brain-region", href: "#brain", note: "The narrowing-tunnel circuitry of the crisis state" },
     { label: "Fluoxetine", type: "drug", href: "/drugs/fluoxetine/", note: "The SSRI with the deepest youth-depression evidence" },
     { label: "Sertraline", type: "drug", href: "/drugs/sertraline/", note: "The workhorse for the depressive driver in adults" },
   ],
@@ -200,8 +200,27 @@ export const suicideSelfHarmCourse: PsychiatryCourse = {
     },
   ],
   severityScales: [
-    { name: "C-SSRS", fullName: "Columbia Suicide Severity Rating Scale", measures: "Ideation intensity and behaviour lethality — the standard structured screen.", ranges: [], indianNote: "Named for documentation and exams; items not reproduced (copyright)." },
-    { name: "SAD PERSONS", fullName: "Mnemonic risk checklist", measures: "Ten static factors — know it for exams, know it lacks context and youth adjustments in real use.", ranges: [] },
+    {
+      name: "C-SSRS",
+      fullName: "Columbia Suicide Severity Rating Scale",
+      measures: "Ideation intensity and behaviour lethality — the standard structured screen.",
+      ranges: [
+        { min: 1, max: 1, severity: "Passive wish to be dead", action: "Full risk assessment; safety plan; means restriction counselling with the family" },
+        { min: 2, max: 3, severity: "Active ideation, no plan or intent", action: "Same-week clinical review; document safety plan; treat the drivers" },
+        { min: 4, max: 5, severity: "Active ideation with plan and/or intent", action: "Same-day psychiatric assessment; consider admission; never leave unassessed" },
+      ],
+      indianNote: "Named for documentation and exams; items not reproduced (copyright). ANY reported behaviour (aborted, interrupted, preparatory or actual attempt) escalates the assessment regardless of the ideation score.",
+    },
+    {
+      name: "SAD PERSONS",
+      fullName: "Mnemonic risk checklist",
+      measures: "Ten static factors — know it for exams, know it lacks context and youth adjustments in real use.",
+      ranges: [
+        { min: 0, max: 2, severity: "Lower risk", action: "Outpatient management with early follow-up" },
+        { min: 3, max: 5, severity: "Moderate risk", action: "Psychiatric consultation; consider admission" },
+        { min: 6, max: 10, severity: "High risk", action: "Hospital admission; do not discharge without specialist review" },
+      ],
+    },
   ],
   differentialDiagnosis: [
     { condition: "Overdose after a breakup, regretted immediately, called for help", distinguishingFeatures: "High-acuity attempt DESPITE ambivalence — ambivalence is the rule, not the safety sign.", keyDifferentiator: "Full risk assessment, never dismissive." },

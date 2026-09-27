@@ -64,7 +64,7 @@ export const schizoaffectiveSchizotypalCourse: PsychiatryCourse = {
     { label: "Persistent Delusional Disorder", type: "condition", href: "/psychiatry/delusional-disorder/", note: "Encapsulated delusion with preserved function — the narrow cousin" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "D2 signalling — the system antipsychotics act on" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "5-HT — the system SSRIs act on for the depressive pole" },
-    { label: "Striatum", type: "brain-region", href: "/psychiatry/neurotransmitters/", note: "Salience circuitry — hyperdopaminergic in psychosis" },
+    { label: "Striatum", type: "brain-region", href: "#brain", note: "Salience circuitry — hyperdopaminergic in psychosis" },
     { label: "Sertraline", type: "drug", href: "/drugs/sertraline/", note: "SSRI added on top of the antipsychotic when depression persists after psychosis control" },
     { label: "Escitalopram", type: "drug", href: "/drugs/escitalopram/", note: "Fewest interactions — practical on polypharmacy" },
     { label: "Suicide & Self-harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "Risk exceeds schizophrenia — assess at every review" },
@@ -195,9 +195,41 @@ export const schizoaffectiveSchizotypalCourse: PsychiatryCourse = {
     },
   ],
   severityScales: [
-    { name: "PANSS", fullName: "Positive and Negative Syndrome Scale", measures: "Psychotic symptom severity — document at intake and serially; the trajectory is the teaching.", ranges: [], indianNote: "Named for exams and clinical documentation; items not reproduced (copyright)." },
-    { name: "YMRS", fullName: "Young Mania Rating Scale", measures: "Manic symptom severity — documents the mood pole and its response.", ranges: [] },
-    { name: "PHQ-9", fullName: "Patient Health Questionnaire-9", measures: "Depressive pole severity in the depressive type.", ranges: [], indianNote: "The bipolar-depression PHQ-9 must be read alongside the switch-risk watch." },
+    {
+      name: "PANSS",
+      fullName: "Positive and Negative Syndrome Scale",
+      measures: "Psychotic symptom severity — document at intake and serially; the trajectory is the teaching.",
+      ranges: [
+        { min: 58, max: 75, severity: "Mild", action: "Outpatient management; focus on function" },
+        { min: 76, max: 95, severity: "Moderate", action: "Active symptom management; review medication adherence" },
+        { min: 96, max: 210, severity: "Severe", action: "Urgent review; assess safety and admission need" },
+      ],
+      indianNote: "Named for exams and clinical documentation; items not reproduced (copyright).",
+    },
+    {
+      name: "YMRS",
+      fullName: "Young Mania Rating Scale",
+      measures: "Manic symptom severity — documents the mood pole and its response.",
+      ranges: [
+        { min: 0, max: 11, severity: "Remission / euthymia", action: "Maintenance continues; track both poles" },
+        { min: 12, max: 19, severity: "Mild manic symptoms", action: "Review sleep and adherence; outpatient dose review" },
+        { min: 20, max: 25, severity: "Moderate mania", action: "Urgent medication review; assess admission need" },
+        { min: 26, max: 60, severity: "Severe mania", action: "Usually inpatient management" },
+      ],
+    },
+    {
+      name: "PHQ-9",
+      fullName: "Patient Health Questionnaire-9",
+      measures: "Depressive pole severity in the depressive type.",
+      ranges: [
+        { min: 0, max: 4, severity: "Minimal", action: "Monitor; antipsychotic maintenance continues" },
+        { min: 5, max: 9, severity: "Mild", action: "Psychoeducation + monitoring; no antidepressant monotherapy" },
+        { min: 10, max: 14, severity: "Moderate", action: "Structured mood treatment; re-verify the psychosis-only intervals" },
+        { min: 15, max: 19, severity: "Moderately severe", action: "Definite mood treatment; assess suicide risk" },
+        { min: 20, max: 27, severity: "Severe", action: "Consider ECT for psychotic or life-threatening depression" },
+      ],
+      indianNote: "The bipolar-depression PHQ-9 must be read alongside the switch-risk watch.",
+    },
   ],
   differentialDiagnosis: [
     { condition: "Schizophrenia", distinguishingFeatures: "Mood episodes dominate substantial chunks of the course; psychosis-only stretches never exceed 2 weeks in pure mood-with-psychosis presentations.", keyDifferentiator: "Prominent mood episodes concurrent with psychosis." },

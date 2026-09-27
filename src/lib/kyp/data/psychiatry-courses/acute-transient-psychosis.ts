@@ -64,8 +64,8 @@ export const acuteTransientPsychosisCourse: PsychiatryCourse = {
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "Post-psychotic depression is a real recovery-phase rider" },
     { label: "Suicide & Self-harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "Assess during the storm and after the shame sets in" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The stress-responsive system that jams at maximum" },
-    { label: "Thalamus", type: "brain-region", href: "/psychiatry/neurotransmitters/", note: "Sensory gating — unfiltered thinking spilling into waking hours" },
-    { label: "Prefrontal Cortex", type: "brain-region", href: "/psychiatry/neurotransmitters/", note: "Reality-testing circuitry overwhelmed by the stress response" },
+    { label: "Thalamus", type: "brain-region", href: "#brain", note: "Sensory gating — unfiltered thinking spilling into waking hours" },
+    { label: "Prefrontal Cortex", type: "brain-region", href: "#brain", note: "Reality-testing circuitry overwhelmed by the stress response" },
   ],
 
   /* ---- Lesson 2: Mechanism & Neuroscience ---- */
@@ -188,7 +188,17 @@ export const acuteTransientPsychosisCourse: PsychiatryCourse = {
     },
   ],
   severityScales: [
-    { name: "PANSS / BPRS", fullName: "Positive and Negative Syndrome Scale / Brief Psychiatric Rating Scale", measures: "Psychosis severity at intake and weekly — the trajectory of scores is diagnostic gold in ATPD.", ranges: [], indianNote: "Named for documentation; items not reproduced (copyright)." },
+    {
+      name: "PANSS / BPRS",
+      fullName: "Positive and Negative Syndrome Scale / Brief Psychiatric Rating Scale",
+      measures: "Psychosis severity at intake and weekly — the trajectory of scores is diagnostic gold in ATPD.",
+      ranges: [
+        { min: 58, max: 75, severity: "Mild (PANSS total)", action: "Outpatient management; weekly re-score to map the trajectory" },
+        { min: 76, max: 95, severity: "Moderate (PANSS total)", action: "Active symptom management; daily review, adherence and safety" },
+        { min: 96, max: 210, severity: "Severe (PANSS total)", action: "Urgent review; admission if safety or self-care compromised" },
+      ],
+      indianNote: "Named for documentation; items not reproduced (copyright). In ATPD the WEEKLY FALL matters more than the intake number — a score that drops fast confirms, one that plateaus argues schizophrenia.",
+    },
   ],
   differentialDiagnosis: [
     { condition: "First-episode schizophrenia", distinguishingFeatures: "Slow prodrome, negative symptoms, stable (not shifting) delusions, social decline.", keyDifferentiator: "Abruptness + polymorphism + absence of prodrome argue for ATPD." },
