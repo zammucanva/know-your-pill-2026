@@ -356,6 +356,14 @@ export function CourseClinicalCases({ course }: { course: PsychiatryCourse }) {
                 <p className="font-serif text-lg font-semibold text-foreground">{clinicalCase.title}</p>
                 <p className="mt-1 text-caption italic leading-relaxed text-muted-foreground">{clinicalCase.presentation}</p>
                 <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {clinicalCase.initialPresentation && (
+                    <div className="rounded-xl border border-border/70 bg-muted/30 p-4 sm:col-span-2">
+                      <p className="text-overline text-muted-foreground">Presentation</p>
+                      <p className="mt-1.5 text-body-sm leading-relaxed text-foreground/85">
+                        {clinicalCase.initialPresentation}
+                      </p>
+                    </div>
+                  )}
                   {fields.map((field) => (
                     <div key={field.key} className="rounded-xl border border-border/70 bg-muted/30 p-4">
                       <p className="text-overline text-muted-foreground">{field.label}</p>

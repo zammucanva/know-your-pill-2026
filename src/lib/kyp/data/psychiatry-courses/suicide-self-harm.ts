@@ -65,8 +65,8 @@ export const suicideSelfHarmCourse: PsychiatryCourse = {
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "Mixed states = the highest-risk window" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "Command hallucinations override reassurance logic" },
     { label: "Alcohol & Substance Use", type: "condition", href: "/psychiatry/substance-use-overview/", note: "Relapse prevention IS suicide prevention" },
-    { label: "Persistent Mood Disorders", type: "condition", href: "/psychiatry/persistent-mood-disorders/", note: "Chronic passive-ideation risk is real and under-asked" },
-    { label: "Acute & Transient Psychosis", type: "condition", href: "/psychiatry/acute-transient-psychosis/", note: "Post-results season — the Indian student emergency" },
+    { label: "Dysthymia, Cyclothymia & Hyperthymia", type: "condition", href: "/psychiatry/persistent-mood-disorders/", note: "Chronic passive-ideation risk is real and under-asked" },
+    { label: "Acute & Transient Psychotic Disorders", type: "condition", href: "/psychiatry/acute-transient-psychosis/", note: "Post-results season — the Indian student emergency" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The SSRI target when depression is the driver" },
     { label: "Prefrontal Cortex", type: "brain-region", href: "#brain", note: "The narrowing-tunnel circuitry of the crisis state" },
     { label: "Fluoxetine", type: "drug", href: "/drugs/fluoxetine/", note: "The SSRI with the deepest youth-depression evidence" },
@@ -456,6 +456,7 @@ export const suicideSelfHarmCourse: PsychiatryCourse = {
     {
       title: "The two-minute bedside conversation",
       presentation: "19-year-old first-year B.Tech student, Indore — ingested pesticide after her semester results; roommate found her vomiting and raised the alarm.",
+      initialPresentation: "A 19-year-old female first-year B.Tech student, medically stabilised after pesticide ingestion triggered by her semester results — found vomiting by her roommate, with stomach wash and 48 hours of observation completed. At psychiatric contact: medically stable, ideation still present though softened. The bedside assessment that followed found a year of depressive symptoms and a specific plan made days earlier.",
       history: "After stomach wash and 48 hours of medical observation, the intern was asked to 'give counselling'. A proper assessment found a year of depressive symptoms, a specific plan made days earlier, and a roommate who had been handed a farewell note.",
       examination: "Medically stable post-toxicology; active ideation still present but softer; depressive episode confirmed on interview.",
       diagnosis: "Major depressive episode with a recent suicide attempt (high-acuity despite immediate regret).",
@@ -470,6 +471,7 @@ export const suicideSelfHarmCourse: PsychiatryCourse = {
     {
       title: "The 'attention-seeker' who wasn't",
       presentation: "16-year-old, Kozhikode — two years of forearm cutting, brought by exasperated parents after the third ED visit; the file note said 'attention-seeking behaviour'.",
+      initialPresentation: "A 16-year-old at the third emergency visit in two years for forearm cutting, this time brought by exasperated parents with a file note reading 'attention-seeking behaviour'. At presentation: scars of varying ages across the forearm, nightly cutting used to 'switch off' intrusive shame after years of classroom bullying, and a passive 'everyone would be relieved' voice — present, and not yet asked about.",
       history: "Nightly cutting to 'switch off' intrusive shame after years of classroom bullying; no wish to die, but a growing voice saying 'everyone would be relieved'.",
       examination: "Forearm scars of varying ages; ideation screen: passive 'everyone would be relieved' ideation present — a risk symptom to document and follow, not dismiss.",
       diagnosis: "Non-suicidal self-injury with emerging passive suicidal ideation, on a background of chronic bullying.",

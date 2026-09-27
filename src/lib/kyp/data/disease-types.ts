@@ -119,7 +119,17 @@ export interface DiseaseDrugLink {
 /** Clinical case for a disease page. */
 export interface DiseaseClinicalCase {
   title: string;
+  /** Narrative hook — the vivid one-line opener rendered under the title. */
   presentation: string;
+  /**
+   * Structured summary of the case's INITIAL presentation (setting,
+   * informant, chief complaint + duration, key features at first
+   * contact). Distinct from `presentation` (the narrative hook); the
+   * case renderer shows it as the "Presentation" field when present.
+   * Batch-1 QA 2026-09-28: added after user audit found the old
+   * template duplicated `presentation` here verbatim.
+   */
+  initialPresentation?: string;
   history: string;
   examination: string;
   diagnosis: string;

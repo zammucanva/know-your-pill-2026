@@ -248,6 +248,31 @@ export function parseMcqs(noteSlug: string, region: string): PsychiatryMcq[] {
 
 const GROUP_RE = /^### Group ([A-R]) — (.+)$/;
 
+/**
+ * Normalise a corpus-index group heading to a uniform "Name (count)".
+ * Source headings vary and are read-only corpus text:
+ *   "Mood disorders (4)"                          -> "Mood disorders (4)"
+ *   "Forensic psychiatry (available subset) (4)"  -> "Forensic psychiatry (4)"
+ *   "Foundations & sciences (select, 12)"         -> "Foundations & sciences (12)"
+ * The old strip-regex ate the space before the trailing count (O/P) or the
+ * whole count (Q/R) — the hub badge inconsistency flagged in the 2026-09-28
+ * user audit.
+ */
+export function normalizeGroupName(raw: string): string {
+  let name = raw;
+  let count: string | null = null;
+  const standalone = name.match(/\((\d+)\)/);
+  if (standalone) count = standalone[1];
+  name = name.replace(/\s*\((?:available subset|select)[^)]*\)/gi, "");
+  if (!count) {
+    const embedded = raw.match(/\((?:available subset|select)\s*,\s*(\d+)\s*\)/i);
+    if (embedded) count = embedded[1];
+  }
+  if (standalone) name = name.replace(standalone[0], "");
+  const base = name.replace(/\s+/g, " ").trim();
+  return count ? `${base} (${count})` : base;
+}
+
 export function parseGroups(indexRaw: string): PsychiatryGroup[] {
   const groups: PsychiatryGroup[] = [];
   let current: PsychiatryGroup | null = null;
@@ -258,7 +283,7 @@ export function parseGroups(indexRaw: string): PsychiatryGroup[] {
     if (gm) {
       current = {
         letter: gm[1],
-        name: gm[2].replace(/\s*\((?:available subset|select)[^)]*\)\s*/i, "").trim(),
+        name: normalizeGroupName(gm[2]),
         noteSlugs: [],
       };
       groups.push(current);

@@ -16,7 +16,7 @@
  */
 import { beforeAll, describe, expect, test } from "bun:test";
 import { BASE_URL, ensureServer } from "./helpers/server";
-import { getAllNoteSlugs } from "../src/lib/oxford/loader";
+import { getAllNoteSlugs, loadCorpus } from "../src/lib/oxford/loader";
 
 /**
  * The source textbook identity — used ONLY for this audit (internal
@@ -260,5 +260,109 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
     const sz = getPsychiatryCourse("schizophrenia")!;
     expect(sz.drugLinks.length).toBe(0);
     expect(sz.contentGaps.join(" ")).toContain("Antipsychotics");
+  });
+});
+
+describe("psychiatry — batch-1 content QA regressions (2026-09-28 user audit)", () => {
+  // The 2026-09-28 user audit of the 6 batch-1 pages found 3 systemic
+  // template bugs (empty severity tables, duplicated case Presentation
+  // text, brain-region graph misrouting) plus minor issues (typo, flipped
+  // KG label, hub badge formats). PR #36 fixed the systemic trio; this
+  // suite pins all of them plus the QA-minors pass that followed.
+
+  const BATCH1 = [
+    "bipolar-disorders",
+    "acute-transient-psychosis",
+    "schizoaffective-schizotypal",
+    "delusional-disorder",
+    "persistent-mood-disorders",
+    "suicide-self-harm",
+  ];
+
+  test("19. severity scales: no header-only Score tables on any course page (all 9)", async () => {
+    for (const course of psychiatryCourses) {
+      const { status, html } = await get(`/psychiatry/${course.slug}`);
+      expect(status).toBe(200);
+      const tables = html.match(/<table[\s\S]*?<\/table>/g) ?? [];
+      for (const t of tables) {
+        if (t.includes(">Score<")) {
+          // a scored instrument must render data rows, never a bare shell;
+          // non-scored instruments (ranges: []) must not render a table at all
+          expect(t.includes("<td")).toBe(true);
+        }
+      }
+    }
+  });
+
+  test("20. clinical cases: distinct structured Presentation on all batch-1 courses", () => {
+    for (const slug of BATCH1) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course.clinicalCases?.length).toBe(2);
+      for (const c of course.clinicalCases ?? []) {
+        expect(c.initialPresentation).toBeTruthy();
+        // the Presentation field must be a separate structured summary —
+        // never a repeat of the narrative hook
+        expect(c.initialPresentation).not.toBe(c.presentation);
+        expect(c.initialPresentation!).not.toContain(c.presentation);
+        expect(c.presentation).not.toContain(c.initialPresentation!);
+        expect(c.initialPresentation!.length).toBeGreaterThan(80);
+      }
+    }
+  });
+
+  test("21. knowledge graph: brain-region nodes anchor to the page's own brain section", () => {
+    const failures: string[] = [];
+    for (const course of psychiatryCourses) {
+      for (const node of course.knowledgeGraph) {
+        if (node.type === "brain-region" && node.href !== "#brain") {
+          // the pre-fix bug: brain-region nodes silently routed to the
+          // neurotransmitter hub page
+          failures.push(`${course.slug}: "${node.label}" -> ${node.href}`);
+        }
+      }
+    }
+    expect(failures).toEqual([]);
+  });
+
+  test("22. knowledge graph: condition-node labels match target course titles", () => {
+    // Neurotransmitter-type nodes carry the molecule name and link to the
+    // signalling hub by design; every OTHER node targeting a registry
+    // course must carry the target page's title (or a word-order-true
+    // prefix of it). Catches flips like "Schizotypal & Schizoaffective".
+    const titles = new Map(psychiatryCourses.map((c) => [c.slug, c.title.toLowerCase()]));
+    const failures: string[] = [];
+    for (const course of psychiatryCourses) {
+      for (const node of course.knowledgeGraph) {
+        const m = node.href.match(/^\/psychiatry\/([a-z0-9-]+)\/?$/);
+        if (!m || node.type === "neurotransmitter") continue;
+        const title = titles.get(m[1]);
+        if (!title) continue; // legacy note targets keep short labels by design
+        if (!title.startsWith(node.label.toLowerCase())) {
+          failures.push(`${course.slug}: "${node.label}" -> ${m[1]} (title "${title}")`);
+        }
+      }
+    }
+    expect(failures).toEqual([]);
+  });
+
+  test("23. hub domain-group badges are uniformly 'Name (count)' with the true count", () => {
+    const groups = loadCorpus().groups;
+    expect(groups.length).toBe(18);
+    const failures: string[] = [];
+    for (const g of groups) {
+      const m = g.name.match(/^(.*\S)\s\((\d+)\)$/);
+      if (!m || m[2] !== String(g.noteSlugs.length)) {
+        // pre-fix: O/P lost the space before the count ("Forensic
+        // psychiatry(4)"), Q/R lost the count entirely
+        failures.push(`${g.letter}: ${g.name} [${g.noteSlugs.length} slugs]`);
+      }
+    }
+    expect(failures).toEqual([]);
+  });
+
+  test("24. known typo regressions stay fixed", () => {
+    const blob = JSON.stringify(psychiatryCourses);
+    expect(blob.includes("fragtle")).toBe(false);
+    expect(blob.includes("adherence-fragile")).toBe(true);
   });
 });

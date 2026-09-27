@@ -7,7 +7,7 @@
     "src/lib/kyp/data/brain.ts": "57cd43ef385311aa581fa938039c63d1722b517cd174656bb665d67549ec48fc",
     "src/lib/kyp/data/search-index.ts": "aee5b2faa6d6e16b36338450401a00273bec98cd0b94c747a017d64c55371a6a",
     "src/lib/kyp/data/drug-taxonomy.ts": "022322b36fab1bb87c63da8455051c9e9b24c659dfce2983ce62ec4152c1bc27",
-    "src/lib/kyp/data/disease-types.ts": "4df5af0bfbc4d1a4ad5aedc0017ec4f6c91fc242f09ac0a5f4b582a8adc03422",
+    "src/lib/kyp/data/disease-types.ts": "de41533d52bb35e7e17ca5b9159d4741513c7a3539a7f973f45839c970497028",
     "src/lib/kyp/data/substance-types.ts": "44c11c6e8bf444f7739209cc768e0eacc94e65d8f0a1b06283b66cb550fe06e4",
     "src/lib/kyp/data/types.ts": "416fce0aad3d9e7b8f7e2fb3fa558dac66997f56e6f50ba880874e7a995bbd6f",
     "src/lib/kyp/data/platform.ts": "d0d49ffb27a20f412954d8be6e67ef6a8c277428b789900cfd81d0e4b425ba57",
