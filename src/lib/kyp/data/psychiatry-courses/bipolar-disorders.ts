@@ -59,10 +59,10 @@ export const bipolarDisordersCourse: PsychiatryCourse = {
   ],
   knowledgeGraph: [
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The great mimic — every depressed patient gets a hypomania screen" },
-    { label: "Persistent Mood Disorders", type: "condition", href: "/psychiatry/persistent-mood-disorders/", note: "Cyclothymia and hyperthymia — the below-threshold spectrum" },
+    { label: "Dysthymia, Cyclothymia & Hyperthymia", type: "condition", href: "/psychiatry/persistent-mood-disorders/", note: "Cyclothymia and hyperthymia — the below-threshold spectrum" },
     { label: "Schizoaffective & Schizotypal", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "Psychosis persisting OUTSIDE mood episodes points there, not here" },
-    { label: "Acute & Transient Psychosis", type: "condition", href: "/psychiatry/acute-transient-psychosis/", note: "Puerperal psychosis as the bipolar-spectrum emergency" },
-    { label: "Suicide & Self-harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "Among the highest risks in medicine — mixed states especially" },
+    { label: "Acute & Transient Psychotic Disorders", type: "condition", href: "/psychiatry/acute-transient-psychosis/", note: "Puerperal psychosis as the bipolar-spectrum emergency" },
+    { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "Among the highest risks in medicine — mixed states especially" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "Reward-circuit currency of the high" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The depressive pole's pharmacology" },
     { label: "Suprachiasmatic nucleus", type: "brain-region", href: "#brain", note: "The circadian clock — fragile in bipolar disorder" },
@@ -480,6 +480,7 @@ export const bipolarDisordersCourse: PsychiatryCourse = {
     {
       title: "The 'model student' crash",
       presentation: "19-year-old engineering student, Vellore — brought by his father after staying awake five nights 'finishing the semester early', spending ₹1.2 lakh of fee money on a 'startup to deliver temple prasadam by drone', and messaging the college director 'direct instructions received'.",
+      initialPresentation: "First psychiatric contact: a 19-year-old male engineering student brought by his father to the OPD in Vellore. Presenting picture: five consecutive nights of near-absent sleep with escalating goal-directed activity — fee money redirected into a drone-delivery 'startup', messages announcing 'direct instructions' sent to the college director. College functioning visibly disrupted; the father is the informant.",
       history: "Treated for 'depression' a year earlier with an SSRI. Timeline taken with the mother revealed a 10-day 'super-study period' then too — 4 hours' sleep, notes in three colours, torrential talking — that the family had enjoyed.",
       examination: "Pressured speech, flight of ideas, grandiose delusions, decreased need for sleep; no organic findings; substance screen negative.",
       diagnosis: "Bipolar I disorder, manic episode with psychotic features, prior antidepressant exposure.",
@@ -494,6 +495,7 @@ export const bipolarDisordersCourse: PsychiatryCourse = {
     {
       title: "The wife who checked the ledger",
       presentation: "34-year-old bank employee, Bhubaneswar — 8 years of 'recurrent depression', three failed antidepressant trials; episodes increasingly short with oversleeping and heaviness.",
+      initialPresentation: "A 34-year-old female bank employee assessed for 'recurrent depression' — eight years of episodes and three adequate antidepressant trials without sustained benefit. Presenting episode features: depressed mood with oversleeping, leaden heaviness and rejection sensitivity (the atypical pattern); the screening question that changes the diagnosis — the best-period interview — had not yet been asked at first contact. Husband available as an independent informant.",
       history: "On structured screening she admitted a recurring 'four-to-five day sparkle': cleaning the whole house at 3 a.m., calling relatives she had fought with, buying sarees on EMI, needing 4 hours' sleep — never reported because 'those were my good days, doctor'. Her husband confirmed it.",
       examination: "Currently in a moderate depressive episode with atypical features (hypersomnia, leaden heaviness, rejection sensitivity).",
       diagnosis: "Bipolar II disorder, currently depressed.",

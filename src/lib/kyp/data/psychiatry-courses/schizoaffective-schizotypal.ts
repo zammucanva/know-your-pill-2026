@@ -59,7 +59,7 @@ export const schizoaffectiveSchizotypalCourse: PsychiatryCourse = {
   knowledgeGraph: [
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The psychotic anchor of the differential — duration and negative symptoms separate them" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "The mood anchor — psychosis only inside mood episodes argues for bipolar, not schizoaffective" },
-    { label: "Acute & Transient Psychosis", type: "condition", href: "/psychiatry/acute-transient-psychosis/", note: "The Indian OPD psychosis — full recovery changes the map" },
+    { label: "Acute & Transient Psychotic Disorders", type: "condition", href: "/psychiatry/acute-transient-psychosis/", note: "The Indian OPD psychosis — full recovery changes the map" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "Depressive-type schizoaffective carries its treatment logic" },
     { label: "Persistent Delusional Disorder", type: "condition", href: "/psychiatry/delusional-disorder/", note: "Encapsulated delusion with preserved function — the narrow cousin" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "D2 signalling — the system antipsychotics act on" },
@@ -67,7 +67,7 @@ export const schizoaffectiveSchizotypalCourse: PsychiatryCourse = {
     { label: "Striatum", type: "brain-region", href: "#brain", note: "Salience circuitry — hyperdopaminergic in psychosis" },
     { label: "Sertraline", type: "drug", href: "/drugs/sertraline/", note: "SSRI added on top of the antipsychotic when depression persists after psychosis control" },
     { label: "Escitalopram", type: "drug", href: "/drugs/escitalopram/", note: "Fewest interactions — practical on polypharmacy" },
-    { label: "Suicide & Self-harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "Risk exceeds schizophrenia — assess at every review" },
+    { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "Risk exceeds schizophrenia — assess at every review" },
   ],
 
   /* ---- Lesson 2: Mechanism & Neuroscience ---- */
@@ -250,7 +250,7 @@ export const schizoaffectiveSchizotypalCourse: PsychiatryCourse = {
     {
       category: "pharmacotherapy",
       name: "Antipsychotic for the psychotic floor",
-      description: "Olanzapine, risperidone, aripiprazole or amisulpride at standard doses; for bipolar type, prefer agents with proven antimanic cover (olanzapine, quetiapine, risperidone). Long-acting injectables suit adherence-fragtle courses and are a good early option.",
+      description: "Olanzapine, risperidone, aripiprazole or amisulpride at standard doses; for bipolar type, prefer agents with proven antimanic cover (olanzapine, quetiapine, risperidone). Long-acting injectables suit adherence-fragile courses and are a good early option.",
       whenToUse: "All schizoaffective disorder — the psychosis engine needs cover whether or not mood symptoms are active.",
       indianContext: "Olanzapine 10 mg ≈ ₹120–250/month; risperidone ≈ ₹80–200/month (approx 2026, generic). KYP antipsychotic drug lessons do not exist yet — recorded in content gaps.",
     },
@@ -470,6 +470,7 @@ export const schizoaffectiveSchizotypalCourse: PsychiatryCourse = {
     {
       title: "The man whose voices stayed after the mood left",
       presentation: "34-year-old software engineer, Pune — grandiose mania: bought three laptops on EMI, sleeping two hours, 'chosen architect of smart cities'.",
+      initialPresentation: "A 34-year-old male software engineer presenting in a first episode of grandiose mania: two-hour sleep, EMI-financed laptop buying and the mission of the 'chosen architect of smart cities'. No prior psychiatric contact at intake; initial working diagnosis was bipolar mania with psychotic features. What would settle the final diagnosis — the symptom that persists after the mood clears — could only be answered at later review.",
       history: "Risperidone plus valproate settled the mania over three weeks; mood normalised at week four. At month-two review his wife reported he still heard a commentary voice and believed his manager was 'planting listeners' in the office.",
       examination: "Euthymic on mental state examination, functioning at work, quietly psychotic — hallucinosis and persecutory ideas persisting outside any mood episode.",
       diagnosis: "Schizoaffective disorder, bipolar type (diagnosis revised from bipolar mania).",
@@ -484,6 +485,7 @@ export const schizoaffectiveSchizotypalCourse: PsychiatryCourse = {
     {
       title: "The 'weird uncle' who was never ill",
       presentation: "22-year-old B.Com student, Kochi — stopped attending college after telling classmates he could 'read the campus through its magnetic field'.",
+      initialPresentation: "A 22-year-old male commerce student at his first-ever psychiatric referral, after college attendance stopped and classmates were told he could 'read the campus through its magnetic field'. Background at presentation: lifelong absence of close friendships, private number theories and loosely held ideas of reference — never previously help-seeking. The referral was triggered by decompensation after his father's sudden death.",
       history: "Lifelong pattern: no close friends since school, elaborate private theories about numbers, loose beliefs that famous people signalled to him through interview phrases — but he could laugh at these ideas when gently challenged. No hallucinations. Decompensated after his father's sudden death.",
       examination: "Ideas of reference held loosely; odd, circumstantial speech; constricted affect; no formal thought disorder, no hallucinations, no delusional conviction.",
       diagnosis: "Schizotypal disorder with a stress-related quasi-psychotic reaction — not schizophrenia.",

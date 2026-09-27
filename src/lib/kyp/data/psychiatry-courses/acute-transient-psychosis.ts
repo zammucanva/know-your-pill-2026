@@ -62,7 +62,7 @@ export const acuteTransientPsychosisCourse: PsychiatryCourse = {
     { label: "Schizoaffective & Schizotypal", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "The mood-plus-psychosis borderland — ATPD remits fully and fast" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "Puerperal psychosis behaves as a bipolar-spectrum marker" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "Post-psychotic depression is a real recovery-phase rider" },
-    { label: "Suicide & Self-harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "Assess during the storm and after the shame sets in" },
+    { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "Assess during the storm and after the shame sets in" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The stress-responsive system that jams at maximum" },
     { label: "Thalamus", type: "brain-region", href: "#brain", note: "Sensory gating — unfiltered thinking spilling into waking hours" },
     { label: "Prefrontal Cortex", type: "brain-region", href: "#brain", note: "Reality-testing circuitry overwhelmed by the stress response" },
@@ -430,6 +430,7 @@ export const acuteTransientPsychosisCourse: PsychiatryCourse = {
     {
       title: "The broken engagement",
       presentation: "27-year-old teacher, Indore — acutely disturbed 8 days after her engagement was dissolved amid public recrimination.",
+      initialPresentation: "A 27-year-old female teacher reaching the emergency ward on day 3 of an abrupt illness, eight days after her engagement was publicly dissolved. At first contact: frightened and perplexed, near-total insomnia, persecutory ideas about men in a white car, speaking with her deceased grandmother, and 'divine sight' declarations by evening. Orientation fluctuating within the interview; urine drug screen, pregnancy test and physical examination normal.",
       history: "Stopped sleeping, guarded the door, said men in a white car were following her, spoke to her deceased grandmother, and by evening declared she had 'divine sight'. Brought to the emergency ward on day 3 of the illness. Urine drug screen negative; pregnancy test negative; physical exam and basic labs normal.",
       examination: "Awake, frightened, perplexed; fleeting persecutory and grandiose ideas shifting within the interview; no consistent delusional system; orientation fluctuating.",
       diagnosis: "Acute and transient psychotic disorder, acute polymorphic type, without symptoms of schizophrenia (brief psychotic disorder with marked stressor in DSM-5).",
@@ -445,6 +446,7 @@ export const acuteTransientPsychosisCourse: PsychiatryCourse = {
     {
       title: "The tenth-day mother",
       presentation: "24-year-old first mother, village near Nagpur — from day 8 postpartum slept under two hours a night; on day 10 spoke in a male voice, refused to hold the baby, said the child was 'not hers but sent to test her', twice tried to walk to the river at night.",
+      initialPresentation: "A 24-year-old first-time mother, after a home delivery of a healthy boy, reaching district-hospital psychiatry on postpartum day 13 — following an ASHA-worker flag and an initial temple visit. Illness onset day 8: under two hours of nightly sleep; by day 10, speaking in a male voice, refusing to hold the baby and walking out toward the river at night. The baby's safety was the immediate presenting concern.",
       history: "Home delivery of a healthy boy. ASHA worker flagged it; the family first took her to a temple. Reached the district hospital on day 13.",
       examination: "Awake, terrified, misidentifying her husband; rapid mood shifts; fleeting persecutory ideas; no stable delusional system.",
       diagnosis: "Puerperal psychosis, acute polymorphic type.",

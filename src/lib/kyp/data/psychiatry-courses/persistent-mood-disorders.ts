@@ -60,8 +60,8 @@ export const persistentMoodDisordersCourse: PsychiatryCourse = {
   knowledgeGraph: [
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The episodic full-syndrome pole — the always-ON contrast" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "The full-syndrome pole of the oscillating spectrum" },
-    { label: "Schizotypal & Schizoaffective", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "Personality-spectrum vs mood-spectrum 'temperament' framings — keep the axes straight" },
-    { label: "Suicide & Self-harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "Chronic passive-ideation risk in dysthymia is real and under-asked" },
+    { label: "Schizoaffective & Schizotypal", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "Personality-spectrum vs mood-spectrum 'temperament' framings — keep the axes straight" },
+    { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "Chronic passive-ideation risk in dysthymia is real and under-asked" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The SSRI target for the chronic depressive floor" },
     { label: "Suprachiasmatic nucleus", type: "brain-region", href: "#brain", note: "The circadian metronome of cyclothymia" },
     { label: "Sertraline", type: "drug", href: "/drugs/sertraline/", note: "First-line SSRI for the chronic floor" },
@@ -443,6 +443,7 @@ export const persistentMoodDisordersCourse: PsychiatryCourse = {
     {
       title: "The grey years under the breakdown",
       presentation: "41-year-old Ludhiana schoolteacher — three-month major episode (weight loss, 4 a.m. waking, 'my class is better without me'), treated with sertraline to full dose, episode remitted by month four.",
+      initialPresentation: "A 41-year-old female schoolteacher first presenting in a three-month major depressive episode — weight loss, 4 a.m. waking and the conviction that her class was better without her. Sertraline was titrated to full dose, with remission by month four. At the remission review the residual picture — sub-syndromal low mood, low self-esteem, poor concentration — became the new presenting complaint, prompting the 20-year timeline.",
       history: "The family's gratitude and the discharge request. The timeline-drawing conversation: the 20-year line since her B.Ed. years — poor appetite 'always', the two-good-weeks-a-month pattern, the early parental-criticism-and-loss history, an untreated mother with the same grey decades.",
       examination: "Post-episode: sub-syndromal low mood, low self-esteem, poor concentration — the chronic floor now visible because the mountain above it has gone.",
       diagnosis: "Persistent depressive disorder with intermittent major episodes (double depression).",
@@ -457,6 +458,7 @@ export const persistentMoodDisordersCourse: PsychiatryCourse = {
     {
       title: "The metronome under the 'moodiness'",
       presentation: "22-year-old engineering student, Hyderabad — brought for 'anger and inconsistency': three years of week-long bright stretches (late-night projects, sudden social whirl, the batch's 'genius week') alternating with week-long flat grey (missed labs, unanswered messages, self-doubt).",
+      initialPresentation: "A 22-year-old male engineering student referred by family for 'anger and inconsistency' — a three-year pattern of alternating week-long bright stretches (late-night projects, sudden social activity) and week-long flat phases (missed labs, unanswered messages, self-doubt). Two SSRI trials had already been given for the low phases; the second was followed by a first-ever sleepless-euphoric four days. Family history notable for a lithium-treated paternal uncle and a hyperthymic father.",
       history: "Label history: 'moody', 'lazy in phases', two SSRI trials — the second accompanied by his first-ever sleepless-euphoric four days. Pedigree: a paternal uncle 'who needed lithium' and a father the family calls a 'workaholic-morning-person' (the hyperthymic tell).",
       examination: "Two clocks conversation + six weeks of prospective daily mood/sleep charting: untriggered day-to-week oscillations, amplitude below-but-approaching the bar; no full syndromes.",
       diagnosis: "Cyclothymic disorder with an antidepressant-triggered switch history; hyperthymic father.",

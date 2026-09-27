@@ -59,13 +59,13 @@ export const delusionalDisorderCourse: PsychiatryCourse = {
   ],
   knowledgeGraph: [
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The restructured whole house — vs delusional disorder's one bricked-shut room" },
-    { label: "Acute & Transient Psychosis", type: "condition", href: "/psychiatry/acute-transient-psychosis/", note: "The storm that clears — vs the fixed weather here" },
+    { label: "Acute & Transient Psychotic Disorders", type: "condition", href: "/psychiatry/acute-transient-psychosis/", note: "The storm that clears — vs the fixed weather here" },
     { label: "Schizoaffective & Schizotypal", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "Loosely-held vs fixed beliefs — the challenge test separates them" },
     { label: "OCD", type: "condition", href: "/psychiatry/ocd/", note: "Ego-dystonic intrusions vs ego-syntonic conviction — the classic viva contrast" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The focal dopamine dysregulation presumed — thin evidence, honestly graded" },
     { label: "Temporal / frontal cortex", type: "brain-region", href: "#brain", note: "Lesions here mimic the picture — the late-onset workup target" },
     { label: "Sertraline", type: "drug", href: "/drugs/sertraline/", note: "Comorbid depression/anxiety responds even when the belief does not" },
-    { label: "Suicide & Self-harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "The litigious and jealous courses carry despair and risk — assess it" },
+    { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "The litigious and jealous courses carry despair and risk — assess it" },
   ],
 
   /* ---- Lesson 2: Mechanism & Neuroscience ---- */
@@ -437,6 +437,7 @@ export const delusionalDisorderCourse: PsychiatryCourse = {
     {
       title: "The bank officer and the wall",
       presentation: "51-year-old bank officer, Nashik — believed for two years that a neighbour was pumping 'a slow poison gas' through the shared wall.",
+      initialPresentation: "A 51-year-old male bank officer brought by his wife for 'sleeplessness and tension' — the complaint he was willing to own. Collateral at intake: a two-year fixed belief that a neighbour pumps 'slow poison gas' through the shared wall, evidenced by two CCTV cameras, twice-resealed wall putty and a dated 200-row 'gas event' spreadsheet. Occupational function preserved — he was promoted during this period.",
       history: "Installed two CCTV cameras, sealed the wall with putty twice, produced a spreadsheet of 200 dated 'gas events'. Promoted during this period; colleagues described him as exacting but reliable. His wife brought him for 'sleeplessness and tension' — the doorway he accepted.",
       examination: "Mental state: one encapsulated, systematised persecutory delusion; no hallucinations, no thought disorder, no negative symptoms; cognition and function intact. Physical exam and labs normal.",
       diagnosis: "Persistent delusional disorder, persecutory type.",
@@ -451,6 +452,7 @@ export const delusionalDisorderCourse: PsychiatryCourse = {
     {
       title: "Othello in the old city",
       presentation: "44-year-old shopkeeper, Hyderabad — convinced his wife of 20 years was unfaithful with a neighbouring vendor.",
+      initialPresentation: "A 44-year-old male shopkeeper entering psychiatric care through the 181-helpline route after his wife's brother escalated the case. Presenting picture: fixed, systematised beliefs of a 20-year wife's infidelity with a neighbouring vendor, with phone-checking, following her to the market, repeated 'confession' demands and two episodes of locking her in. The referral's urgency was set by kerosene being stocked 'for the final honour decision'.",
       history: "Checked her phone, followed her to the market, demanded repeated 'confessions', twice locked her in when he 'saw signals' — she had said thank you to the vendor. His parents initially backed him ('she should not even look up'). When he began stocking kerosene 'for the final honour decision', her brother contacted a psychiatrist through the 181 helpline route.",
       examination: "Fixed, systematised delusional jealousy; escalating checking and confrontation behaviours; no hallucinations or thought disorder.",
       diagnosis: "Persistent delusional disorder, jealous type — high risk for partner violence.",
