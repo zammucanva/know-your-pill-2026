@@ -206,8 +206,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
   // registry with provenance, status, mode projections and honest
   // content-gap recording. These tests pin the architecture contract.
 
-  test("15. registry integrity: 3 pilots + batches 1-4 (26 courses), note-slug keyed, valid status", () => {
-    expect(psychiatryCourses.length).toBe(26); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 courses
+  test("15. registry integrity: 3 pilots + batches 1-5 (33 courses), note-slug keyed, valid status", () => {
+    expect(psychiatryCourses.length).toBe(33); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 courses
     const noteSlugs = getAllNoteSlugs();
     for (const course of psychiatryCourses) {
       expect(noteSlugs).toContain(course.slug); // one URL per topic
@@ -227,6 +227,10 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
     expect(getPsychiatryCourse("ocd")?.groupLetter).toBe("G"); // Group G — batch 3
     expect(getPsychiatryCourse("anorexia-nervosa")?.groupLetter).toBe("H"); // Group H — batch 4
     expect(getPsychiatryCourse("gender-identity-adults")?.groupLetter).toBe("I"); // Group I — batch 4
+    expect(getPsychiatryCourse("personality-disorders-overview")?.groupLetter).toBe("J"); // Group J — batch 5
+    expect(getPsychiatryCourse("personality-disorder-treatment")?.kind).toBe("concept"); // batch-5 concept course
+    expect(getPsychiatryCourse("hypersomnia")?.groupLetter).toBe("K"); // Group K — batch 5
+    expect(getPsychiatryCourse("sleep-basics")?.kind).toBe("concept"); // batch-5 concept course
   });
 
   test("16. mode projections: all four modes declared, sections resolve", () => {
@@ -666,5 +670,126 @@ describe("psychiatry — batch-4 content QA (Groups H+I, eating disorders/sexual
     expect(giBlob).toContain("NALSA"); // the self-ID architecture
     expect(giBlob).toContain("minority-stress"); // the comorbidity model
     expect(giBlob).toContain("fertility"); // the before-hormones discipline
+  });
+});
+
+describe("psychiatry — batch-5 content QA (Groups J+K, personality disorders/sleep-wake)", () => {
+  // Batch 5 migration (Groups J + K): the seven courses below must
+  // uphold the same content invariants the batch-1 audit and the
+  // batch-2/3/4 suites established — distinct structured case
+  // Presentations, honest drug-gap recording — plus the batch-5-
+  // specific architecture checks: the personality trilogy's numbers
+  // (the 88% remission, the 8-10% suicide mortality, the DBT trial
+  // figures, the prison meta-analysis), the sleep quartet's gates
+  // (the 3x3 insomnia gates, the four-engine differential, the
+  // cataplexy question, the RBD prodrome, the master grid), and the
+  // Indian anchors (EUPD terminology, the relabelling trap, the
+  // terrace safety audit, the pharmacy-first exit).
+
+  const BATCH5 = [
+    "personality-disorders-overview",
+    "personality-disorder-types",
+    "personality-disorder-treatment",
+    "sleep-basics",
+    "insomnia",
+    "hypersomnia",
+    "parasomnias",
+  ];
+
+  test("37. batch-5 registry: all seven Group J+K courses present, published, keyed to canonical note slugs", () => {
+    for (const slug of BATCH5) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course).toBeTruthy();
+      expect(course.status).toBe("PUBLISHED");
+      expect(["J", "K"]).toContain(course.groupLetter);
+      expect(course.lessonGroups.length).toBe(6);
+      expect(course.provenance.length).toBeGreaterThanOrEqual(10);
+      expect(course.evidenceMap.length).toBeGreaterThanOrEqual(10);
+    }
+  });
+
+  test("38. batch-5 clinical cases: distinct structured Presentation on all seven courses", () => {
+    for (const slug of BATCH5) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course.clinicalCases?.length).toBe(2);
+      for (const c of course.clinicalCases ?? []) {
+        expect(c.initialPresentation).toBeTruthy();
+        expect(c.initialPresentation).not.toBe(c.presentation);
+        expect(c.initialPresentation!).not.toContain(c.presentation);
+        expect(c.presentation).not.toContain(c.initialPresentation!);
+        expect(c.initialPresentation!.length).toBeGreaterThan(80);
+      }
+    }
+  });
+
+  test("39. batch-5 drug links only to existing KYP drug lessons; gaps recorded honestly", async () => {
+    const { getAllDrugSlugs } = await import("../src/lib/kyp/data");
+    const built = new Set(getAllDrugSlugs());
+    for (const slug of BATCH5) {
+      const course = getPsychiatryCourse(slug)!;
+      for (const link of course.drugLinks) {
+        if (link.slug) {
+          expect(built.has(link.slug)).toBe(true); // no invented routes
+        }
+      }
+    }
+    // personality trilogy: overview none; types fluoxetine only; treatment the honest audit tier
+    const pdo = getPsychiatryCourse("personality-disorders-overview")!;
+    expect(pdo.drugLinks.length).toBe(0);
+    expect(pdo.contentGaps.join(" ")).toContain("No drug is licensed");
+    const pdt = getPsychiatryCourse("personality-disorder-types")!;
+    expect(pdt.drugLinks.length).toBe(1);
+    expect(pdt.drugLinks[0]?.slug).toBe("fluoxetine");
+    expect(pdt.contentGaps.join(" ")).toContain("Topiramate");
+    const pdx = getPsychiatryCourse("personality-disorder-treatment")!;
+    expect(pdx.drugLinks.length).toBe(3);
+    expect(pdx.contentGaps.join(" ")).toContain("aripiprazole");
+    // sleep quartet: sleep-basics none; insomnia mirtazapine+amitriptyline; hypersomnia the cataplexy trio; parasomnias mirtazapine+clomipramine
+    const sb = getPsychiatryCourse("sleep-basics")!;
+    expect(sb.drugLinks.length).toBe(0);
+    const ins = getPsychiatryCourse("insomnia")!;
+    expect(ins.drugLinks.length).toBe(2);
+    expect(ins.contentGaps.join(" ")).toContain("Zolpidem");
+    const hyp = getPsychiatryCourse("hypersomnia")!;
+    expect(hyp.drugLinks.length).toBe(3);
+    expect(hyp.drugLinks.map((d: any) => d.slug).sort()).toEqual(["clomipramine", "fluoxetine", "venlafaxine"]);
+    expect(hyp.contentGaps.join(" ")).toContain("Modafinil");
+    const par = getPsychiatryCourse("parasomnias")!;
+    expect(par.drugLinks.length).toBe(2);
+    expect(par.contentGaps.join(" ")).toContain("Clonazepam");
+  });
+
+  test("40. batch-5 exam-critical numbers and anchors recited in content", () => {
+    const pdoBlob = JSON.stringify(getPsychiatryCourse("personality-disorders-overview")!);
+    expect(pdoBlob).toContain("10–13%"); // the community prevalence
+    expect(pdoBlob).toContain("47% of prisoners"); // the antisocial PD meta-analysis anchor
+    expect(pdoBlob).toContain("EUPD"); // the Indian terminology
+    const pdtBlob = JSON.stringify(getPsychiatryCourse("personality-disorder-types")!);
+    expect(pdtBlob).toContain("8–10%"); // the borderline suicide mortality
+    expect(pdtBlob).toContain("grandiosity"); // the narcissistic-borderline discriminator
+    expect(pdtBlob).toContain("anankastic"); // the ICD translation
+    const pdxBlob = JSON.stringify(getPsychiatryCourse("personality-disorder-treatment")!);
+    expect(pdxBlob).toContain("88%"); // the remission revolution
+    expect(pdxBlob).toContain("8.5 vs 38.8"); // the DBT inpatient-days numbers
+    expect(pdxBlob).toContain("pseudo-diagnoses"); // the APA 2001 critique
+    expect(pdxBlob).toContain("nidotherapy"); // the Type R answer
+    const sbBlob = JSON.stringify(getPsychiatryCourse("sleep-basics")!);
+    expect(sbBlob).toContain("Process S"); // the two-process model
+    expect(sbBlob).toContain("adenosine"); // the pressure currency
+    expect(sbBlob).toContain("SCN"); // the circadian clock seat
+    const insBlob = JSON.stringify(getPsychiatryCourse("insomnia")!);
+    expect(insBlob).toContain("3 nights/week"); // the DSM-5 gates
+    expect(insBlob).toContain("CBT-I"); // the first line
+    expect(insBlob).toContain("Perpetuating"); // the 3P treatment target
+    const hypBlob = JSON.stringify(getPsychiatryCourse("hypersomnia")!);
+    expect(hypBlob).toContain("cataplexy"); // the pathognomonic sign
+    expect(hypBlob).toContain("8 minutes"); // the MSLT latency
+    expect(hypBlob).toContain("orexin"); // the narcolepsy biology
+    expect(hypBlob).toContain("STOP-BANG"); // the OSA screen (named)
+    const parBlob = JSON.stringify(getPsychiatryCourse("parasomnias")!);
+    expect(parBlob).toContain("synucleinopathy"); // the RBD prodrome
+    expect(parBlob).toContain("scheduled awakening"); // the behavioural core
+    expect(parBlob).toContain("Imagery rehearsal"); // the nightmare treatment
+    expect(parBlob).toContain("terraces"); // the Indian safety audit
   });
 });

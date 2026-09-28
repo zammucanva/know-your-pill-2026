@@ -25,6 +25,13 @@ import { bulimiaNervosaCourse } from "./bulimia-nervosa";
 import { sexualDysfunctionsCourse } from "./sexual-dysfunctions";
 import { paraphiliasCourse } from "./paraphilias";
 import { genderIdentityAdultsCourse } from "./gender-identity-adults";
+import { personalityDisordersOverviewCourse } from "./personality-disorders-overview";
+import { personalityDisorderTypesCourse } from "./personality-disorder-types";
+import { personalityDisorderTreatmentCourse } from "./personality-disorder-treatment";
+import { sleepBasicsCourse } from "./sleep-basics";
+import { insomniaCourse } from "./insomnia";
+import { hypersomniaCourse } from "./hypersomnia";
+import { parasomniasCourse } from "./parasomnias";
 
 /**
  * Psychiatry learning-system course registry.
@@ -46,8 +53,11 @@ import { genderIdentityAdultsCourse } from "./gender-identity-adults";
  * impulse-control-disorders, gambling-disorder. Batch 4 (Groups H + I —
  * eating disorders and sexuality/gender): anorexia-nervosa,
  * bulimia-nervosa, sexual-dysfunctions, paraphilias,
- * gender-identity-adults. The completion matrix
- * generator audits coverage.
+ * gender-identity-adults. Batch 5 (Groups J + K — personality
+ * disorders and sleep-wake): personality-disorders-overview,
+ * personality-disorder-types, personality-disorder-treatment,
+ * sleep-basics, insomnia, hypersomnia, parasomnias. The completion
+ * matrix generator audits coverage.
  */
 export const psychiatryCourses: PsychiatryCourse[] = [
   depressiveDisordersCourse,
@@ -76,6 +86,13 @@ export const psychiatryCourses: PsychiatryCourse[] = [
   sexualDysfunctionsCourse,
   paraphiliasCourse,
   genderIdentityAdultsCourse,
+  personalityDisordersOverviewCourse,
+  personalityDisorderTypesCourse,
+  personalityDisorderTreatmentCourse,
+  sleepBasicsCourse,
+  insomniaCourse,
+  hypersomniaCourse,
+  parasomniasCourse,
 ];
 
 export function getPsychiatryCourse(slug: string): PsychiatryCourse | null {
