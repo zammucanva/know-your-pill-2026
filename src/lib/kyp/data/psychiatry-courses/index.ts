@@ -20,6 +20,11 @@ import { panicDisorderCourse } from "./panic-disorder";
 import { ocdCourse } from "./ocd";
 import { impulseControlDisordersCourse } from "./impulse-control-disorders";
 import { gamblingDisorderCourse } from "./gambling-disorder";
+import { anorexiaNervosaCourse } from "./anorexia-nervosa";
+import { bulimiaNervosaCourse } from "./bulimia-nervosa";
+import { sexualDysfunctionsCourse } from "./sexual-dysfunctions";
+import { paraphiliasCourse } from "./paraphilias";
+import { genderIdentityAdultsCourse } from "./gender-identity-adults";
 
 /**
  * Psychiatry learning-system course registry.
@@ -38,7 +43,10 @@ import { gamblingDisorderCourse } from "./gambling-disorder";
  * adjustment-disorder, bereavement, depersonalization-disorder,
  * recovered-memories. Batch 3 (Groups F + G — anxiety disorders and
  * OCD/impulse/habit): gad, social-anxiety-phobias, panic-disorder, ocd,
- * impulse-control-disorders, gambling-disorder. The completion matrix
+ * impulse-control-disorders, gambling-disorder. Batch 4 (Groups H + I —
+ * eating disorders and sexuality/gender): anorexia-nervosa,
+ * bulimia-nervosa, sexual-dysfunctions, paraphilias,
+ * gender-identity-adults. The completion matrix
  * generator audits coverage.
  */
 export const psychiatryCourses: PsychiatryCourse[] = [
@@ -63,6 +71,11 @@ export const psychiatryCourses: PsychiatryCourse[] = [
   ocdCourse,
   impulseControlDisordersCourse,
   gamblingDisorderCourse,
+  anorexiaNervosaCourse,
+  bulimiaNervosaCourse,
+  sexualDysfunctionsCourse,
+  paraphiliasCourse,
+  genderIdentityAdultsCourse,
 ];
 
 export function getPsychiatryCourse(slug: string): PsychiatryCourse | null {

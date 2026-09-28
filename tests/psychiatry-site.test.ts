@@ -107,10 +107,10 @@ describe("psychiatry — routes and identity", () => {
 
   test("4b. non-migrated lessons still render the finalized note shell", async () => {
     // A non-migrated disorder lesson keeps the note-shell contract
-    // (phases + India layer + sources disclosure). Batch 3 migrated
-    // gad (this test's former exemplar) — anorexia-nervosa (Group H)
-    // is the next non-migrated disorder in index order.
-    const { status, html } = await get("/psychiatry/anorexia-nervosa");
+    // (phases + India layer + sources disclosure). Batch 4 migrated
+    // anorexia-nervosa (this test's former exemplar) — delirium
+    // (Group A) is the next non-migrated disorder in index order.
+    const { status, html } = await get("/psychiatry/delirium");
     expect(status).toBe(200);
     expect(html).toContain("Understand");
     expect(html).toContain("India in Practice");
@@ -206,8 +206,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
   // registry with provenance, status, mode projections and honest
   // content-gap recording. These tests pin the architecture contract.
 
-  test("15. registry integrity: 3 pilots + batches 1-3 (21 courses), note-slug keyed, valid status", () => {
-    expect(psychiatryCourses.length).toBe(21); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 courses
+  test("15. registry integrity: 3 pilots + batches 1-4 (26 courses), note-slug keyed, valid status", () => {
+    expect(psychiatryCourses.length).toBe(26); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 courses
     const noteSlugs = getAllNoteSlugs();
     for (const course of psychiatryCourses) {
       expect(noteSlugs).toContain(course.slug); // one URL per topic
@@ -225,6 +225,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
     expect(getPsychiatryCourse("ptsd")?.groupLetter).toBe("E"); // Group E — batch 2
     expect(getPsychiatryCourse("gad")?.groupLetter).toBe("F"); // Group F — batch 3
     expect(getPsychiatryCourse("ocd")?.groupLetter).toBe("G"); // Group G — batch 3
+    expect(getPsychiatryCourse("anorexia-nervosa")?.groupLetter).toBe("H"); // Group H — batch 4
+    expect(getPsychiatryCourse("gender-identity-adults")?.groupLetter).toBe("I"); // Group I — batch 4
   });
 
   test("16. mode projections: all four modes declared, sections resolve", () => {
@@ -561,5 +563,108 @@ describe("psychiatry — batch-3 content QA (Groups F+G, anxiety/OCD/impulse/gam
     expect(gamblingBlob).toContain("12 months"); // the criteria window
     expect(gamblingBlob).toContain("near-miss"); // the master illusion
     expect(gamblingBlob).toContain("variable-ratio"); // the schedule
+  });
+});
+
+describe("psychiatry — batch-4 content QA (Groups H+I, eating disorders/sexuality-gender)", () => {
+  // Batch 4 migration (Groups H + I): the five courses below must uphold
+  // the same content invariants the batch-1 audit and the batch-2/3
+  // suites established — distinct structured case Presentations, no
+  // header-only severity tables (also covered per-course by test 19's
+  // loop), honest drug-gap recording — plus the batch-4-specific
+  // architecture checks: the eating-disorder medical discipline
+  // (refeeding numbers, the fluoxetine dose point), the sexual-medicine
+  // craft (the NATSAL durations, the nitrate law), the forensic-hygiene
+  // anchors of the paraphilia tier, and the de-pathologising facts of
+  // the gender course.
+
+  const BATCH4 = [
+    "anorexia-nervosa",
+    "bulimia-nervosa",
+    "sexual-dysfunctions",
+    "paraphilias",
+    "gender-identity-adults",
+  ];
+
+  test("33. batch-4 registry: all five Group H+I courses present, published, keyed to canonical note slugs", () => {
+    for (const slug of BATCH4) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course).toBeTruthy();
+      expect(course.status).toBe("PUBLISHED");
+      expect(["H", "I"]).toContain(course.groupLetter);
+      expect(course.lessonGroups.length).toBe(6);
+    }
+  });
+
+  test("34. batch-4 clinical cases: distinct structured Presentation on all five disorder courses", () => {
+    for (const slug of BATCH4) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course.clinicalCases?.length).toBe(2);
+      for (const c of course.clinicalCases ?? []) {
+        expect(c.initialPresentation).toBeTruthy();
+        expect(c.initialPresentation).not.toBe(c.presentation);
+        expect(c.initialPresentation!).not.toContain(c.presentation);
+        expect(c.presentation).not.toContain(c.initialPresentation!);
+        expect(c.initialPresentation!.length).toBeGreaterThan(80);
+      }
+    }
+  });
+
+  test("35. batch-4 drug links only to existing KYP drug lessons; gaps recorded honestly", async () => {
+    const { getAllDrugSlugs } = await import("../src/lib/kyp/data");
+    const built = new Set(getAllDrugSlugs());
+    for (const slug of BATCH4) {
+      const course = getPsychiatryCourse(slug)!;
+      for (const link of course.drugLinks) {
+        if (link.slug) {
+          expect(built.has(link.slug)).toBe(true); // no invented routes
+        }
+      }
+    }
+    // anorexia: no drug treats the core; the olanzapine gap recorded
+    const anorexia = getPsychiatryCourse("anorexia-nervosa")!;
+    expect(anorexia.drugLinks.length).toBe(0);
+    expect(anorexia.contentGaps.join(" ")).toContain("Olanzapine");
+    // bulimia: fluoxetine only; topiramate/ondansetron gaps recorded
+    const bulimia = getPsychiatryCourse("bulimia-nervosa")!;
+    expect(bulimia.drugLinks.length).toBe(1);
+    expect(bulimia.drugLinks[0]?.slug).toBe("fluoxetine");
+    expect(bulimia.contentGaps.join(" ")).toContain("Topiramate");
+    // sexual dysfunctions: the bupropion switch + the SSRI PE tier; PDE-5/dapoxetine gaps recorded
+    const sd = getPsychiatryCourse("sexual-dysfunctions")!;
+    expect(sd.drugLinks.length).toBe(4);
+    expect(sd.contentGaps.join(" ")).toContain("Sildenafil");
+    expect(sd.contentGaps.join(" ")).toContain("Dapoxetine");
+    // paraphilias: the SSRI compulsivity tier; the anti-androgen gap recorded
+    const para = getPsychiatryCourse("paraphilias")!;
+    expect(para.drugLinks.length).toBe(2);
+    expect(para.contentGaps.join(" ")).toContain("Cyproterone");
+    // gender identity: the comorbid tier only; the pathway-medicine gap recorded
+    const gi = getPsychiatryCourse("gender-identity-adults")!;
+    expect(gi.drugLinks.length).toBe(2);
+    expect(gi.contentGaps.join(" ")).toContain("oestrogen");
+  });
+
+  test("36. batch-4 time gates and exam-critical numbers recited in content", () => {
+    const anBlob = JSON.stringify(getPsychiatryCourse("anorexia-nervosa")!);
+    expect(anBlob).toContain("24–72 hours"); // the refeeding window
+    expect(anBlob).toContain("Amenorrhoea"); // the deleted criterion
+    expect(anBlob).toContain("Minnesota"); // the starvation-experiment lesson
+    const buBlob = JSON.stringify(getPsychiatryCourse("bulimia-nervosa")!);
+    expect(buBlob).toContain("3 months"); // the frequency gate
+    expect(buBlob).toContain("60 mg"); // the fluoxetine dose point
+    expect(buBlob).toContain("once a week"); // the DSM-5 gate phrasing
+    const sdBlob = JSON.stringify(getPsychiatryCourse("sexual-dysfunctions")!);
+    expect(sdBlob).toContain("15.6%"); // the NATSAL 6-month tier (women)
+    expect(sdBlob).toContain("nitrates"); // the absolute contraindication
+    expect(sdBlob).toContain("Dual Control Model"); // Bancroft
+    const paraBlob = JSON.stringify(getPsychiatryCourse("paraphilias")!);
+    expect(paraBlob).toContain("Navtej"); // the Indian legal hygiene
+    expect(paraBlob).toContain("POCSO"); // the mandatory-reporting anchor
+    expect(paraBlob).toContain("two clocks"); // the risk model
+    const giBlob = JSON.stringify(getPsychiatryCourse("gender-identity-adults")!);
+    expect(giBlob).toContain("NALSA"); // the self-ID architecture
+    expect(giBlob).toContain("minority-stress"); // the comorbidity model
+    expect(giBlob).toContain("fertility"); // the before-hormones discipline
   });
 });
