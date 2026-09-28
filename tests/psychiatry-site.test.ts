@@ -106,9 +106,11 @@ describe("psychiatry — routes and identity", () => {
   });
 
   test("4b. non-migrated lessons still render the finalized note shell", async () => {
-    // A non-pilot disorder lesson keeps the note-shell contract
-    // (phases + India layer + sources disclosure).
-    const { status, html } = await get("/psychiatry/gad");
+    // A non-migrated disorder lesson keeps the note-shell contract
+    // (phases + India layer + sources disclosure). Batch 3 migrated
+    // gad (this test's former exemplar) — anorexia-nervosa (Group H)
+    // is the next non-migrated disorder in index order.
+    const { status, html } = await get("/psychiatry/anorexia-nervosa");
     expect(status).toBe(200);
     expect(html).toContain("Understand");
     expect(html).toContain("India in Practice");
@@ -204,8 +206,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
   // registry with provenance, status, mode projections and honest
   // content-gap recording. These tests pin the architecture contract.
 
-  test("15. registry integrity: 3 pilots + batch 1 + batch 2 (15 courses), note-slug keyed, valid status", () => {
-    expect(psychiatryCourses.length).toBe(15); // 3 validated pilots + 6 batch-1 + 6 batch-2 courses
+  test("15. registry integrity: 3 pilots + batches 1-3 (21 courses), note-slug keyed, valid status", () => {
+    expect(psychiatryCourses.length).toBe(21); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 courses
     const noteSlugs = getAllNoteSlugs();
     for (const course of psychiatryCourses) {
       expect(noteSlugs).toContain(course.slug); // one URL per topic
@@ -221,6 +223,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
     expect(getPsychiatryCourse("neurotransmitters")?.kind).toBe("concept");
     expect(getPsychiatryCourse("recovered-memories")?.kind).toBe("concept"); // batch-2 concept course
     expect(getPsychiatryCourse("ptsd")?.groupLetter).toBe("E"); // Group E — batch 2
+    expect(getPsychiatryCourse("gad")?.groupLetter).toBe("F"); // Group F — batch 3
+    expect(getPsychiatryCourse("ocd")?.groupLetter).toBe("G"); // Group G — batch 3
   });
 
   test("16. mode projections: all four modes declared, sections resolve", () => {
@@ -448,5 +452,114 @@ describe("psychiatry — batch-2 content QA (Group E, stress/trauma/dissociation
     const rmBlob = JSON.stringify(getPsychiatryCourse("recovered-memories")!);
     expect(rmBlob).toContain("20–60%"); // forgetting evidence
     expect(rmBlob).toContain("25–30%"); // implantation rate
+  });
+});
+
+describe("psychiatry — batch-3 content QA (Groups F+G, anxiety/OCD/impulse/gambling)", () => {
+  // Batch 3 migration (Groups F + G): the six courses below must uphold
+  // the same content invariants the batch-1 audit and batch-2 suite
+  // established — distinct structured case Presentations, no
+  // header-only severity tables (also covered per-course by test 19's
+  // loop), honest drug-gap recording — plus the batch-3-specific
+  // architecture checks: the anxiety-triad cross-routing, the OCD
+  // high-dose prescribing discipline, the honest pharmacology of the
+  // impulse/gambling tiers, and the exam-critical numbers.
+
+  const BATCH3 = [
+    "gad",
+    "social-anxiety-phobias",
+    "panic-disorder",
+    "ocd",
+    "impulse-control-disorders",
+    "gambling-disorder",
+  ];
+
+  test("29. batch-3 registry: all six Group F+G courses present, published, keyed to canonical note slugs", () => {
+    for (const slug of BATCH3) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course).toBeTruthy();
+      expect(course.status).toBe("PUBLISHED");
+      expect(["F", "G"]).toContain(course.groupLetter);
+      expect(course.lessonGroups.length).toBe(6);
+    }
+  });
+
+  test("30. batch-3 clinical cases: distinct structured Presentation on all six disorder courses", () => {
+    for (const slug of BATCH3) {
+      const course = getPsychiatryCourse(slug)!;
+      if (course.kind !== "disorder") continue; // concept course exempt (none in batch 3)
+      expect(course.clinicalCases?.length).toBe(2);
+      for (const c of course.clinicalCases ?? []) {
+        expect(c.initialPresentation).toBeTruthy();
+        expect(c.initialPresentation).not.toBe(c.presentation);
+        expect(c.initialPresentation!).not.toContain(c.presentation);
+        expect(c.presentation).not.toContain(c.initialPresentation!);
+        expect(c.initialPresentation!.length).toBeGreaterThan(80);
+      }
+    }
+  });
+
+  test("31. batch-3 drug links only to existing KYP drug lessons; gaps recorded honestly", async () => {
+    const { getAllDrugSlugs } = await import("../src/lib/kyp/data");
+    const built = new Set(getAllDrugSlugs());
+    for (const slug of BATCH3) {
+      const course = getPsychiatryCourse(slug)!;
+      for (const link of course.drugLinks) {
+        if (link.slug) {
+          expect(built.has(link.slug)).toBe(true); // no invented routes
+        }
+      }
+    }
+    // GAD teaches the four-drug pharmacotherapy tier with honest gaps
+    const gad = getPsychiatryCourse("gad")!;
+    expect(gad.drugLinks.length).toBe(4);
+    expect(gad.contentGaps.join(" ")).toContain("Pregabalin");
+    expect(gad.contentGaps.join(" ")).toContain("Buspirone");
+    // social anxiety: the SSRI tier for the generalised subtype; propranolol gap recorded
+    const social = getPsychiatryCourse("social-anxiety-phobias")!;
+    expect(social.drugLinks.length).toBe(3);
+    expect(social.contentGaps.join(" ")).toContain("Propranolol");
+    // panic: the start-low SSRI/SNRI tier with the benzo gap
+    const panic = getPsychiatryCourse("panic-disorder")!;
+    expect(panic.drugLinks.length).toBe(4);
+    expect(panic.contentGaps.join(" ")).toContain("benzodiazepine class");
+    // OCD: the four core OCD drugs; augmentation gaps recorded
+    const ocd = getPsychiatryCourse("ocd")!;
+    expect(ocd.drugLinks.length).toBe(4);
+    expect(ocd.contentGaps.join(" ")).toContain("risperidone");
+    // impulse: honest two-drug tier; NAC gap recorded
+    const icd = getPsychiatryCourse("impulse-control-disorders")!;
+    expect(icd.drugLinks.length).toBe(2);
+    expect(icd.contentGaps.join(" ")).toContain("N-acetylcysteine");
+    // gambling: the comorbid tiers only; naltrexone gap recorded
+    const gambling = getPsychiatryCourse("gambling-disorder")!;
+    expect(gambling.drugLinks.length).toBe(2);
+    expect(gambling.contentGaps.join(" ")).toContain("Naltrexone");
+  });
+
+  test("32. batch-3 time gates and exam-critical numbers recited in content", () => {
+    const gadBlob = JSON.stringify(getPsychiatryCourse("gad")!);
+    expect(gadBlob).toContain("6 months"); // the duration gate
+    expect(gadBlob).toContain("8–12"); // full-trial discipline
+    const socialBlob = JSON.stringify(getPsychiatryCourse("social-anxiety-phobias")!);
+    expect(socialBlob).toContain("applied tension"); // the BII cure
+    expect(socialBlob).toContain("one-session treatment"); // Öst
+    const panicBlob = JSON.stringify(getPsychiatryCourse("panic-disorder")!);
+    expect(panicBlob).toContain("peaks within minutes"); // the attack definition
+    expect(panicBlob).toContain("1 month"); // the disorder clause
+    expect(panicBlob).toContain("interoceptive"); // the signature technique
+    const ocdBlob = JSON.stringify(getPsychiatryCourse("ocd")!);
+    expect(ocdBlob).toContain("10–12"); // OCD trial length
+    expect(ocdBlob).toContain("80–90%"); // intrusive-thought universality
+    expect(ocdBlob).toContain("200 mg"); // sertraline ceiling
+    const icdBlob = JSON.stringify(getPsychiatryCourse("impulse-control-disorders")!);
+    expect(icdBlob).toContain("5% of shoplifters"); // the court figure
+    expect(icdBlob).toContain("Rapunzel"); // the trichobezoar
+    expect(icdBlob).toContain("N-acetylcysteine"); // the NAC tier
+    const gamblingBlob = JSON.stringify(getPsychiatryCourse("gambling-disorder")!);
+    expect(gamblingBlob).toContain("4 of 9"); // the DSM-5 tally
+    expect(gamblingBlob).toContain("12 months"); // the criteria window
+    expect(gamblingBlob).toContain("near-miss"); // the master illusion
+    expect(gamblingBlob).toContain("variable-ratio"); // the schedule
   });
 });
