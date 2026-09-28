@@ -32,6 +32,13 @@ import { sleepBasicsCourse } from "./sleep-basics";
 import { insomniaCourse } from "./insomnia";
 import { hypersomniaCourse } from "./hypersomnia";
 import { parasomniasCourse } from "./parasomnias";
+import { deliriumCourse } from "./delirium";
+import { alzheimersDementiaCourse } from "./alzheimers-dementia";
+import { frontotemporalDementiaCourse } from "./frontotemporal-dementia";
+import { prionDiseaseCourse } from "./prion-disease";
+import { lewyBodyDementiaCourse } from "./lewy-body-dementia";
+import { parkinsonsDementiaCourse } from "./parkinsons-dementia";
+import { huntingtonsNeuropsychiatryCourse } from "./huntingtons-neuropsychiatry";
 
 /**
  * Psychiatry learning-system course registry.
@@ -56,7 +63,11 @@ import { parasomniasCourse } from "./parasomnias";
  * gender-identity-adults. Batch 5 (Groups J + K — personality
  * disorders and sleep-wake): personality-disorders-overview,
  * personality-disorder-types, personality-disorder-treatment,
- * sleep-basics, insomnia, hypersomnia, parasomnias. The completion
+ * sleep-basics, insomnia, hypersomnia, parasomnias. Batch 6 (Group A
+ * — neurocognitive disorders, first half): delirium,
+ * alzheimers-dementia, frontotemporal-dementia, prion-disease,
+ * lewy-body-dementia, parkinsons-dementia,
+ * huntingtons-neuropsychiatry. The completion
  * matrix generator audits coverage.
  */
 export const psychiatryCourses: PsychiatryCourse[] = [
@@ -93,6 +104,13 @@ export const psychiatryCourses: PsychiatryCourse[] = [
   insomniaCourse,
   hypersomniaCourse,
   parasomniasCourse,
+  deliriumCourse,
+  alzheimersDementiaCourse,
+  frontotemporalDementiaCourse,
+  prionDiseaseCourse,
+  lewyBodyDementiaCourse,
+  parkinsonsDementiaCourse,
+  huntingtonsNeuropsychiatryCourse,
 ];
 
 export function getPsychiatryCourse(slug: string): PsychiatryCourse | null {
