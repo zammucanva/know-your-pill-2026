@@ -204,8 +204,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
   // registry with provenance, status, mode projections and honest
   // content-gap recording. These tests pin the architecture contract.
 
-  test("15. registry integrity: 3 pilots + batch 1 (9 courses), note-slug keyed, valid status", () => {
-    expect(psychiatryCourses.length).toBe(9); // 3 validated pilots + 6 batch-1 courses
+  test("15. registry integrity: 3 pilots + batch 1 + batch 2 (15 courses), note-slug keyed, valid status", () => {
+    expect(psychiatryCourses.length).toBe(15); // 3 validated pilots + 6 batch-1 + 6 batch-2 courses
     const noteSlugs = getAllNoteSlugs();
     for (const course of psychiatryCourses) {
       expect(noteSlugs).toContain(course.slug); // one URL per topic
@@ -219,6 +219,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
     expect(getPsychiatryCourse("depressive-disorders")?.kind).toBe("disorder");
     expect(getPsychiatryCourse("schizophrenia")?.kind).toBe("disorder");
     expect(getPsychiatryCourse("neurotransmitters")?.kind).toBe("concept");
+    expect(getPsychiatryCourse("recovered-memories")?.kind).toBe("concept"); // batch-2 concept course
+    expect(getPsychiatryCourse("ptsd")?.groupLetter).toBe("E"); // Group E — batch 2
   });
 
   test("16. mode projections: all four modes declared, sections resolve", () => {
@@ -364,5 +366,87 @@ describe("psychiatry — batch-1 content QA regressions (2026-09-28 user audit)"
     const blob = JSON.stringify(psychiatryCourses);
     expect(blob.includes("fragtle")).toBe(false);
     expect(blob.includes("adherence-fragile")).toBe(true);
+  });
+});
+
+describe("psychiatry — batch-2 content QA (Group E, stress/trauma/dissociation)", () => {
+  // Batch 2 migration (Group E): the six courses below must uphold the
+  // same content invariants the 2026-09-28 user audit forced for batch 1 —
+  // distinct structured case presentations, no header-only severity
+  // tables (also covered per-course by test 19's loop), honest drug-gap
+  // recording — plus the batch-2-specific architecture checks: the PTSD
+  // course links only real drug lessons, and the concept course
+  // (recovered-memories) omits the disorder-only sections by design.
+
+  const BATCH2 = [
+    "acute-stress-reaction",
+    "ptsd",
+    "adjustment-disorder",
+    "bereavement",
+    "depersonalization-disorder",
+    "recovered-memories",
+  ];
+
+  test("25. batch-2 registry: all six Group E courses present, published, keyed to canonical note slugs", () => {
+    for (const slug of BATCH2) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course).toBeTruthy();
+      expect(course.status).toBe("PUBLISHED");
+      expect(course.groupLetter).toBe("E");
+      expect(course.lessonGroups.length).toBe(6);
+    }
+  });
+
+  test("26. batch-2 clinical cases: distinct structured Presentation on the five disorder courses", () => {
+    for (const slug of BATCH2) {
+      const course = getPsychiatryCourse(slug)!;
+      if (course.kind !== "disorder") continue; // concept course exempt
+      expect(course.clinicalCases?.length).toBe(2);
+      for (const c of course.clinicalCases ?? []) {
+        expect(c.initialPresentation).toBeTruthy();
+        expect(c.initialPresentation).not.toBe(c.presentation);
+        expect(c.initialPresentation!).not.toContain(c.presentation);
+        expect(c.presentation).not.toContain(c.initialPresentation!);
+        expect(c.initialPresentation!.length).toBeGreaterThan(80);
+      }
+    }
+  });
+
+  test("27. batch-2 drug links only to existing KYP drug lessons; gaps recorded honestly", async () => {
+    const { getAllDrugSlugs } = await import("../src/lib/kyp/data");
+    const built = new Set(getAllDrugSlugs());
+    for (const slug of BATCH2) {
+      const course = getPsychiatryCourse(slug)!;
+      for (const link of course.drugLinks) {
+        if (link.slug) {
+          expect(built.has(link.slug)).toBe(true); // no invented routes
+        }
+      }
+    }
+    // the sleep-bridge medicines of the acute window have no KYP lessons
+    const asr = getPsychiatryCourse("acute-stress-reaction")!;
+    expect(asr.drugLinks.length).toBe(0);
+    expect(asr.contentGaps.join(" ")).toContain("Sedative-hypnotics");
+    // PTSD teaches the real pharmacotherapy tier: sertraline/paroxetine/venlafaxine
+    const ptsd = getPsychiatryCourse("ptsd")!;
+    expect(ptsd.drugLinks.length).toBe(3);
+    expect(ptsd.contentGaps.join(" ")).toContain("Prazosin");
+  });
+
+  test("28. batch-2 time gates recited in content (exam-critical numbers)", () => {
+    const asrBlob = JSON.stringify(getPsychiatryCourse("acute-stress-reaction")!);
+    expect(asrBlob).toContain("3 days"); // DSM-5 ASD minimum
+    const ptsdBlob = JSON.stringify(getPsychiatryCourse("ptsd")!);
+    expect(ptsdBlob).toContain("1-1-2-2"); // cluster minimum counts
+    const adjBlob = JSON.stringify(getPsychiatryCourse("adjustment-disorder")!);
+    expect(adjBlob).toContain("3 months"); // onset gate
+    const berBlob = JSON.stringify(getPsychiatryCourse("bereavement")!);
+    expect(berBlob).toContain("6 months"); // ICD-11 PGD gate
+    expect(berBlob).toContain("12 months"); // DSM-5-TR adult gate
+    const dpdrBlob = JSON.stringify(getPsychiatryCourse("depersonalization-disorder")!);
+    expect(dpdrBlob).toContain("reality-testing"); // the intact-insight key
+    const rmBlob = JSON.stringify(getPsychiatryCourse("recovered-memories")!);
+    expect(rmBlob).toContain("20–60%"); // forgetting evidence
+    expect(rmBlob).toContain("25–30%"); // implantation rate
   });
 });

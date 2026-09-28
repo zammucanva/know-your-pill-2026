@@ -69,7 +69,7 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
     { label: "Major Depressive Disorder", type: "condition", href: "/diseases/major-depressive-disorder/", note: "KYP disease hub — deeper clinical page" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "The critical differential — always screen for past mania" },
     { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "Assess at every encounter" },
-    { label: "Grief & Bereavement", type: "condition", href: "/psychiatry/bereavement/", note: "Differentiate from depression" },
+    { label: "Bereavement & Complicated Grief", type: "condition", href: "/psychiatry/bereavement/", note: "Differentiate from depression — waves versus flat grey; the gates now have a name" },
   ],
 
   /* ---- Lesson 2: Mechanism & Neuroscience ---- */
