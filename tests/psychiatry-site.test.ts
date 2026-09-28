@@ -108,9 +108,10 @@ describe("psychiatry — routes and identity", () => {
   test("4b. non-migrated lessons still render the finalized note shell", async () => {
     // A non-migrated disorder lesson keeps the note-shell contract
     // (phases + India layer + sources disclosure). Batch 4 migrated
-    // anorexia-nervosa (this test's former exemplar) — delirium
-    // (Group A) is the next non-migrated disorder in index order.
-    const { status, html } = await get("/psychiatry/delirium");
+    // anorexia-nervosa and batch 6 migrated delirium (this test's
+    // former exemplars) — vascular-dementia (Group A, A8) is the next
+    // non-migrated disorder in index order.
+    const { status, html } = await get("/psychiatry/vascular-dementia");
     expect(status).toBe(200);
     expect(html).toContain("Understand");
     expect(html).toContain("India in Practice");
@@ -206,8 +207,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
   // registry with provenance, status, mode projections and honest
   // content-gap recording. These tests pin the architecture contract.
 
-  test("15. registry integrity: 3 pilots + batches 1-5 (33 courses), note-slug keyed, valid status", () => {
-    expect(psychiatryCourses.length).toBe(33); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 courses
+  test("15. registry integrity: 3 pilots + batches 1-6 (40 courses), note-slug keyed, valid status", () => {
+    expect(psychiatryCourses.length).toBe(40); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 courses
     const noteSlugs = getAllNoteSlugs();
     for (const course of psychiatryCourses) {
       expect(noteSlugs).toContain(course.slug); // one URL per topic
@@ -231,6 +232,9 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
     expect(getPsychiatryCourse("personality-disorder-treatment")?.kind).toBe("concept"); // batch-5 concept course
     expect(getPsychiatryCourse("hypersomnia")?.groupLetter).toBe("K"); // Group K — batch 5
     expect(getPsychiatryCourse("sleep-basics")?.kind).toBe("concept"); // batch-5 concept course
+    expect(getPsychiatryCourse("delirium")?.groupLetter).toBe("A"); // Group A — batch 6
+    expect(getPsychiatryCourse("huntingtons-neuropsychiatry")?.kind).toBe("disorder"); // batch-6 disorder course
+    expect(getPsychiatryCourse("alzheimers-dementia")?.groupLetter).toBe("A"); // Group A — batch 6
   });
 
   test("16. mode projections: all four modes declared, sections resolve", () => {
@@ -791,5 +795,113 @@ describe("psychiatry — batch-5 content QA (Groups J+K, personality disorders/s
     expect(parBlob).toContain("scheduled awakening"); // the behavioural core
     expect(parBlob).toContain("Imagery rehearsal"); // the nightmare treatment
     expect(parBlob).toContain("terraces"); // the Indian safety audit
+  });
+});
+
+describe("psychiatry — batch-6 content QA (Group A part 1, neurocognitive disorders)", () => {
+  // Batch 6 migration (Group A, first half): the seven courses below
+  // must uphold the same content invariants the batch-1 audit and the
+  // batch-2/3/4/5 suites established — distinct structured case
+  // Presentations, honest drug-gap recording, brain-region graph
+  // anchoring — plus the batch-6-specific architecture checks: the
+  // antipsychotic-catastrophe rules (DLB and PDD teaching the
+  // forbidden tier), the one-year rule twins (DLB vs PDD), the
+  // genetic counselling discipline (Huntington's three hard rules),
+  // and the tempo signatures that sort the dementias.
+
+  const BATCH6 = [
+    "delirium",
+    "alzheimers-dementia",
+    "frontotemporal-dementia",
+    "prion-disease",
+    "lewy-body-dementia",
+    "parkinsons-dementia",
+    "huntingtons-neuropsychiatry",
+  ];
+
+  test("41. batch-6 registry: all seven Group A (part 1) courses present, published, keyed to canonical note slugs", () => {
+    for (const slug of BATCH6) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course).toBeTruthy();
+      expect(course.status).toBe("PUBLISHED");
+      expect(course.groupLetter).toBe("A");
+      expect(course.lessonGroups.length).toBe(6);
+    }
+  });
+
+  test("42. batch-6 clinical cases: distinct structured Presentation on all seven disorder courses", () => {
+    for (const slug of BATCH6) {
+      const course = getPsychiatryCourse(slug)!;
+      if (course.kind !== "disorder") continue; // concept course exempt
+      expect(course.clinicalCases?.length).toBe(2);
+      for (const c of course.clinicalCases ?? []) {
+        expect(c.initialPresentation).toBeTruthy();
+        expect(c.initialPresentation).not.toBe(c.presentation);
+        expect(c.initialPresentation!).not.toContain(c.presentation);
+        expect(c.presentation).not.toContain(c.initialPresentation!);
+        expect(c.initialPresentation!.length).toBeGreaterThan(80);
+      }
+    }
+  });
+
+  test("43. batch-6 drug links only to existing KYP drug lessons; gaps recorded honestly", async () => {
+    const { getAllDrugSlugs } = await import("../src/lib/kyp/data");
+    const built = new Set(getAllDrugSlugs());
+    for (const slug of BATCH6) {
+      const course = getPsychiatryCourse(slug)!;
+      for (const link of course.drugLinks) {
+        if (link.slug) {
+          expect(built.has(link.slug)).toBe(true); // no invented routes
+        }
+      }
+    }
+    // the antipsychotic and cognitive-enhancer tiers have no KYP lessons:
+    // every batch-6 course records its gaps honestly
+    const dlb = getPsychiatryCourse("lewy-body-dementia")!;
+    expect(dlb.drugLinks.length).toBe(0);
+    expect(dlb.contentGaps.join(" ")).toContain("Rivastigmine"); // the best-evidenced tier, gap-recorded
+    const prion = getPsychiatryCourse("prion-disease")!;
+    expect(prion.drugLinks.length).toBe(0); // no drug treats it — the absence IS the teaching
+    expect(prion.contentGaps.join(" ")).toContain("no drug treats");
+    // the SSRI-first tier links only where it is genuinely first line
+    const hd = getPsychiatryCourse("huntingtons-neuropsychiatry")!;
+    expect(hd.drugLinks.map((l: any) => l.slug).sort()).toEqual(["escitalopram", "sertraline"]);
+  });
+
+  test("44. batch-6 exam-critical numbers and anchors recited in content", () => {
+    const delBlob = JSON.stringify(getPsychiatryCourse("delirium")!);
+    expect(delBlob).toContain("hours to days"); // the onset tempo
+    expect(delBlob).toContain("hypoactive"); // the missed subtype
+    expect(delBlob).toContain("months backwards"); // the bedside screen (paraphrased test)
+    expect(delBlob).toContain("0.25"); // haloperidol dosing taught
+    const alzBlob = JSON.stringify(getPsychiatryCourse("alzheimers-dementia")!);
+    expect(alzBlob).toContain("50–70%"); // the share of dementia
+    expect(alzBlob).toContain("6 in 10"); // the plain-language share
+    expect(alzBlob).toContain("8.8 million"); // the Indian figure
+    expect(alzBlob).toContain("10–15%"); // MCI yearly conversion
+    expect(alzBlob).toContain("donepezil"); // the cholinesterase tier
+    const ftdBlob = JSON.stringify(getPsychiatryCourse("frontotemporal-dementia")!);
+    expect(ftdBlob).toContain("45–65"); // the age window
+    expect(ftdBlob).toContain("kolonel"); // the surface dyslexia pearl
+    expect(ftdBlob).toContain("C9orf72"); // the FTD-ALS gene
+    expect(ftdBlob).toContain("weight gain"); // the hyperorality sign (lowercase variant)
+    const prionBlob = JSON.stringify(getPsychiatryCourse("prion-disease")!);
+    expect(prionBlob).toContain("weeks-to-months"); // the tempo signature
+    expect(prionBlob).toContain("ribbon"); // the DWI MRI sign
+    expect(prionBlob).toContain("RT-QuIC"); // the modern specific test
+    expect(prionBlob).toContain("1–1.5 per million"); // the incidence
+    const dlbBlob2 = JSON.stringify(getPsychiatryCourse("lewy-body-dementia")!);
+    expect(dlbBlob2).toContain("one-year rule"); // the DLB/PDD hinge
+    expect(dlbBlob2).toContain("flips, films, freeze, fights-in-sleep"); // the four-feature hook
+    expect(dlbBlob2).toContain("5–15 years"); // the RBD prodrome
+    const pddBlob = JSON.stringify(getPsychiatryCourse("parkinsons-dementia")!);
+    expect(pddBlob).toContain("25–40%"); // the dementia share in Parkinson's
+    expect(pddBlob).toContain("see-saw"); // the chemistry image
+    expect(pddBlob).toContain("pimavanserin"); // the name-to-know taught in gaps
+    const hdBlob = JSON.stringify(getPsychiatryCourse("huntingtons-neuropsychiatry")!);
+    expect(hdBlob).toContain("50-50"); // the coin flip (hyphen form)
+    expect(hdBlob).toContain("anticipation"); // the lengthening repeat
+    expect(hdBlob).toContain("boxcar"); // the imaging sign
+    expect(hdBlob).toContain("15–20 years"); // the survival arc
   });
 });
