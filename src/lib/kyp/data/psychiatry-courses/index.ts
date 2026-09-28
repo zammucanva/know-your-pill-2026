@@ -8,6 +8,12 @@ import { delusionalDisorderCourse } from "./delusional-disorder";
 import { bipolarDisordersCourse } from "./bipolar-disorders";
 import { persistentMoodDisordersCourse } from "./persistent-mood-disorders";
 import { suicideSelfHarmCourse } from "./suicide-self-harm";
+import { acuteStressReactionCourse } from "./acute-stress-reaction";
+import { ptsdCourse } from "./ptsd";
+import { adjustmentDisorderCourse } from "./adjustment-disorder";
+import { bereavementCourse } from "./bereavement";
+import { depersonalizationDisorderCourse } from "./depersonalization-disorder";
+import { recoveredMemoriesCourse } from "./recovered-memories";
 
 /**
  * Psychiatry learning-system course registry.
@@ -19,10 +25,12 @@ import { suicideSelfHarmCourse } from "./suicide-self-harm";
  * Migration is deliberately incremental (learning-system brief §35–37):
  * pilot first (three validated pilots — depression, schizophrenia,
  * neurotransmitters), then controlled batches after the pilot approval
- * gate. Batch 1 (Groups C + D completion): the six courses below the
- * pilots — schizoaffective-schizotypal, acute-transient-psychosis,
- * delusional-disorder, bipolar-disorders, persistent-mood-disorders,
- * suicide-self-harm. The completion matrix generator audits coverage.
+ * gate. Batch 1 (Groups C + D completion): schizoaffective-schizotypal,
+ * acute-transient-psychosis, delusional-disorder, bipolar-disorders,
+ * persistent-mood-disorders, suicide-self-harm. Batch 2 (Group E —
+ * stress, trauma & dissociation-spectrum): acute-stress-reaction, ptsd,
+ * adjustment-disorder, bereavement, depersonalization-disorder,
+ * recovered-memories. The completion matrix generator audits coverage.
  */
 export const psychiatryCourses: PsychiatryCourse[] = [
   depressiveDisordersCourse,
@@ -34,6 +42,12 @@ export const psychiatryCourses: PsychiatryCourse[] = [
   bipolarDisordersCourse,
   persistentMoodDisordersCourse,
   suicideSelfHarmCourse,
+  acuteStressReactionCourse,
+  ptsdCourse,
+  adjustmentDisorderCourse,
+  bereavementCourse,
+  depersonalizationDisorderCourse,
+  recoveredMemoriesCourse,
 ];
 
 export function getPsychiatryCourse(slug: string): PsychiatryCourse | null {
