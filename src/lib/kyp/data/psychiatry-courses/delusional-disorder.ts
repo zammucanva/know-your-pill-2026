@@ -61,7 +61,7 @@ export const delusionalDisorderCourse: PsychiatryCourse = {
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The restructured whole house — vs delusional disorder's one bricked-shut room" },
     { label: "Acute & Transient Psychotic Disorders", type: "condition", href: "/psychiatry/acute-transient-psychosis/", note: "The storm that clears — vs the fixed weather here" },
     { label: "Schizoaffective & Schizotypal", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "Loosely-held vs fixed beliefs — the challenge test separates them" },
-    { label: "OCD", type: "condition", href: "/psychiatry/ocd/", note: "Ego-dystonic intrusions vs ego-syntonic conviction — the classic viva contrast" },
+    { label: "Obsessive-Compulsive Disorder (OCD)", type: "condition", href: "/psychiatry/ocd/", note: "Ego-dystonic intrusions vs ego-syntonic conviction — the classic viva contrast" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The focal dopamine dysregulation presumed — thin evidence, honestly graded" },
     { label: "Temporal / frontal cortex", type: "brain-region", href: "#brain", note: "Lesions here mimic the picture — the late-onset workup target" },
     { label: "Sertraline", type: "drug", href: "/drugs/sertraline/", note: "Comorbid depression/anxiety responds even when the belief does not" },

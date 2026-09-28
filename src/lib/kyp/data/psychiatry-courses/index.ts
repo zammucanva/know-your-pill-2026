@@ -14,6 +14,12 @@ import { adjustmentDisorderCourse } from "./adjustment-disorder";
 import { bereavementCourse } from "./bereavement";
 import { depersonalizationDisorderCourse } from "./depersonalization-disorder";
 import { recoveredMemoriesCourse } from "./recovered-memories";
+import { gadCourse } from "./gad";
+import { socialAnxietyPhobiasCourse } from "./social-anxiety-phobias";
+import { panicDisorderCourse } from "./panic-disorder";
+import { ocdCourse } from "./ocd";
+import { impulseControlDisordersCourse } from "./impulse-control-disorders";
+import { gamblingDisorderCourse } from "./gambling-disorder";
 
 /**
  * Psychiatry learning-system course registry.
@@ -30,7 +36,10 @@ import { recoveredMemoriesCourse } from "./recovered-memories";
  * persistent-mood-disorders, suicide-self-harm. Batch 2 (Group E —
  * stress, trauma & dissociation-spectrum): acute-stress-reaction, ptsd,
  * adjustment-disorder, bereavement, depersonalization-disorder,
- * recovered-memories. The completion matrix generator audits coverage.
+ * recovered-memories. Batch 3 (Groups F + G — anxiety disorders and
+ * OCD/impulse/habit): gad, social-anxiety-phobias, panic-disorder, ocd,
+ * impulse-control-disorders, gambling-disorder. The completion matrix
+ * generator audits coverage.
  */
 export const psychiatryCourses: PsychiatryCourse[] = [
   depressiveDisordersCourse,
@@ -48,6 +57,12 @@ export const psychiatryCourses: PsychiatryCourse[] = [
   bereavementCourse,
   depersonalizationDisorderCourse,
   recoveredMemoriesCourse,
+  gadCourse,
+  socialAnxietyPhobiasCourse,
+  panicDisorderCourse,
+  ocdCourse,
+  impulseControlDisordersCourse,
+  gamblingDisorderCourse,
 ];
 
 export function getPsychiatryCourse(slug: string): PsychiatryCourse | null {
