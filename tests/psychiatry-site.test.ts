@@ -107,12 +107,12 @@ describe("psychiatry — routes and identity", () => {
 
   test("4b. non-migrated lessons still render the finalized note shell", async () => {
     // A non-migrated disorder lesson keeps the note-shell contract
-    // (phases + India layer + sources disclosure). Batches 4, 6, 7 and 8
-    // migrated anorexia-nervosa, delirium, vascular-dementia and the
-    // Group B first half incl. substance-use-overview (this test's former
-    // exemplars) — benzodiazepine-misuse (Group B) is the next
-    // non-migrated disorder in index order.
-    const { status, html } = await get("/psychiatry/benzodiazepine-misuse");
+    // (phases + India layer + sources disclosure). Batches 4, 6, 7, 8
+    // and 9 migrated anorexia-nervosa, delirium, vascular-dementia and
+    // all ten Group B courses (this test's former exemplars) —
+    // child-neuropsychiatry (Group L) is the next non-migrated
+    // disorder in index order.
+    const { status, html } = await get("/psychiatry/child-neuropsychiatry");
     expect(status).toBe(200);
     expect(html).toContain("Understand");
     expect(html).toContain("India in Practice");
@@ -208,8 +208,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
   // registry with provenance, status, mode projections and honest
   // content-gap recording. These tests pin the architecture contract.
 
-  test("15. registry integrity: 3 pilots + batches 1-8 (52 courses), note-slug keyed, valid status", () => {
-    expect(psychiatryCourses.length).toBe(52); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 + 5 batch-8 courses
+  test("15. registry integrity: 3 pilots + batches 1-9 (57 courses), note-slug keyed, valid status", () => {
+    expect(psychiatryCourses.length).toBe(57); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 + 5 batch-8 + 5 batch-9 courses
     const noteSlugs = getAllNoteSlugs();
     for (const course of psychiatryCourses) {
       expect(noteSlugs).toContain(course.slug); // one URL per topic
@@ -243,6 +243,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
     expect(getPsychiatryCourse("substance-use-overview")?.kind).toBe("concept"); // batch-8 umbrella concept course
     expect(getPsychiatryCourse("alcohol-use-disorders")?.groupLetter).toBe("B"); // Group B — batch 8
     expect(getPsychiatryCourse("hallucinogen-use-disorders")?.kind).toBe("disorder"); // batch-8 disorder course
+    expect(getPsychiatryCourse("benzodiazepine-misuse")?.groupLetter).toBe("B"); // Group B — batch 9
+    expect(getPsychiatryCourse("nicotine-dependence")?.kind).toBe("disorder"); // batch-9 disorder course
   });
 
   test("16. mode projections: all four modes declared, sections resolve", () => {
@@ -1148,5 +1150,125 @@ describe("psychiatry — batch-8 content QA (Group B part 1, substance use disor
     expect(hudBlob).toContain("nystagmus"); // the PCP pearl
     expect(hudBlob).toContain("NBOMe"); // the substitution masquerade
     expect(hudBlob).toContain("re-emergence"); // the PCP cycle
+  });
+});
+
+describe("psychiatry — batch-9 content QA (Group B part 2, substance use disorders)", () => {
+  // Batch 9 migration (Group B, second half): the five courses below
+  // must uphold the same content invariants the batch-1 audit and the
+  // batch-2 through 8 suites established — distinct structured case
+  // Presentations, honest drug-gap recording, brain-region graph
+  // anchoring — plus the batch-9-specific architecture checks: the
+  // conversion-and-taper discipline of the benzodiazepine course, the
+  // two-deaths teaching of the party-drug course, the child-protection
+  // architecture of the inhalant course, the two-sided honesty of the
+  // cannabis course, and the 5-A + CYP1A2 discipline of the nicotine
+  // course.
+
+  const BATCH9 = [
+    "benzodiazepine-misuse",
+    "party-drug-use-disorders",
+    "volatile-substance-misuse",
+    "cannabis-mental-health",
+    "nicotine-dependence",
+  ];
+
+  test("53. batch-9 registry: all five Group B (part 2) courses present, published, keyed to canonical note slugs", () => {
+    for (const slug of BATCH9) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course).toBeTruthy();
+      expect(course.status).toBe("PUBLISHED");
+      expect(course.groupLetter).toBe("B");
+      expect(course.lessonGroups.length).toBe(6);
+      expect(course.provenance.length).toBeGreaterThanOrEqual(10);
+      expect(course.evidenceMap.length).toBeGreaterThanOrEqual(10);
+    }
+  });
+
+  test("54. batch-9 clinical cases: distinct structured Presentation on all five courses", () => {
+    for (const slug of BATCH9) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course.clinicalCases?.length).toBe(2);
+      for (const c of course.clinicalCases ?? []) {
+        expect(c.initialPresentation).toBeTruthy();
+        expect(c.initialPresentation).not.toBe(c.presentation);
+        expect(c.initialPresentation!).not.toContain(c.presentation);
+        expect(c.presentation).not.toContain(c.initialPresentation!);
+        expect(c.initialPresentation!.length).toBeGreaterThan(80);
+      }
+    }
+  });
+
+  test("55. batch-9 drug links only to existing KYP drug lessons; gaps recorded honestly", async () => {
+    const { getAllDrugSlugs } = await import("../src/lib/kyp/data");
+    const built = new Set(getAllDrugSlugs());
+    for (const slug of BATCH9) {
+      const course = getPsychiatryCourse(slug)!;
+      for (const link of course.drugLinks) {
+        if (link.slug) {
+          expect(built.has(link.slug)).toBe(true); // no invented routes
+        }
+      }
+    }
+    // benzodiazepine: the SSRI exit-prescription tier links; the taper
+    // kit (diazepam, carbamazepine, propranolol, the Z-drugs) is
+    // gap-recorded by name
+    const bzd = getPsychiatryCourse("benzodiazepine-misuse")!;
+    expect(bzd.drugLinks.map((l: any) => l.slug)).toEqual(["sertraline"]);
+    expect(bzd.contentGaps.join(" ")).toContain("Diazepam");
+    // party drugs: the emergency tier (baclofen, phenobarbital,
+    // cyproheptadine) has no KYP lessons — the gaps are the teaching
+    const pty = getPsychiatryCourse("party-drug-use-disorders")!;
+    expect(pty.drugLinks.length).toBe(0);
+    expect(pty.contentGaps.join(" ")).toContain("Baclofen");
+    // inhalants: the pharmacological desert is the honest content
+    const inh = getPsychiatryCourse("volatile-substance-misuse")!;
+    expect(inh.drugLinks.length).toBe(0);
+    expect(inh.contentGaps.join(" ")).toContain("B12");
+    // cannabis: no approved pharmacotherapy; trial-tier gaps recorded
+    const can = getPsychiatryCourse("cannabis-mental-health")!;
+    expect(can.drugLinks.length).toBe(0);
+    expect(can.contentGaps.join(" ")).toContain("N-acetylcysteine");
+    // nicotine: bupropion is the one KYP-lessoned cessation medicine;
+    // NRT/varenicline/cytisine gap-recorded
+    const nic = getPsychiatryCourse("nicotine-dependence")!;
+    expect(nic.drugLinks.map((l: any) => l.slug)).toEqual(["bupropion"]);
+    expect(nic.contentGaps.join(" ")).toContain("Varenicline");
+    expect(nic.contentGaps.join(" ")).toContain("Cytisine");
+  });
+
+  test("56. batch-9 exam-critical numbers and anchors recited in content", () => {
+    const bzdBlob = JSON.stringify(getPsychiatryCourse("benzodiazepine-misuse")!);
+    expect(bzdBlob).toContain("Convert–Chart–Cover–Rebuild–Supervise"); // the taper architecture
+    expect(bzdBlob).toContain("Seizure-Stack-Seniors"); // the dangers mnemonic
+    expect(bzdBlob).toContain("0.5 mg alprazolam ≈ 10 mg diazepam"); // the exam equivalence
+    expect(bzdBlob).toContain("2–4 weeks"); // the prescribing ceiling
+    expect(bzdBlob).toContain("10–25%"); // the taper step
+    const ptyBlob = JSON.stringify(getPsychiatryCourse("party-drug-use-disorders")!);
+    expect(ptyBlob).toContain("heat-death triangle"); // MDMA death one
+    expect(ptyBlob).toContain("water-death"); // MDMA death two
+    expect(ptyBlob).toContain("500 ml"); // the middle-path hydration rule
+    expect(ptyBlob).toContain("3 a.m."); // the GHB dependence clock
+    expect(ptyBlob).toContain("baclofen"); // the withdrawal backbone
+    expect(ptyBlob).toContain("ulcerative cystitis"); // the ketamine bladder
+    const inhBlob = JSON.stringify(getPsychiatryCourse("volatile-substance-misuse")!);
+    expect(inhBlob).toContain("sudden sniffing death"); // the sensitised heart
+    expect(inhBlob).toContain("Childline 1098"); // the child's door
+    expect(inhBlob).toContain("Child Welfare Committee"); // the statutory lever
+    expect(inhBlob).toContain("35–70%"); // the street-children prevalence
+    expect(inhBlob).toContain("Lhermitte"); // the nitrous sign
+    const canBlob = JSON.stringify(getPsychiatryCourse("cannabis-mental-health")!);
+    expect(canBlob).toContain("220 million"); // the global figure
+    expect(canBlob).toContain("1 in 6"); // the adolescent dependence rate
+    expect(canBlob).toContain("doubles relapse"); // the schizophrenia message
+    expect(canBlob).toContain("hot shower"); // the hyperemesis pearl
+    expect(canBlob).toContain("4–6 week"); // the re-assessment rule
+    const nicBlob = JSON.stringify(getPsychiatryCourse("nicotine-dependence")!);
+    expect(nicBlob).toContain("Ask–Advise–Agree–Assist–Arrange"); // the 5-As
+    expect(nicBlob).toContain("30 minutes"); // the severity question
+    expect(nicBlob).toContain("CYP1A2"); // the interaction
+    expect(nicBlob).toContain("clozapine"); // the level-rise pearl
+    expect(nicBlob).toContain("submucous fibrosis"); // the chewer's lesion
+    expect(nicBlob).toContain("4–5 kg"); // the weight script
   });
 });
