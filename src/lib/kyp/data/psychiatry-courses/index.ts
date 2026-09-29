@@ -64,6 +64,14 @@ import { elderlyMoodCourse } from "./elderly-mood";
 import { elderlyAnxietyOcdCourse } from "./elderly-anxiety-ocd";
 import { elderlyPersonalityCourse } from "./elderly-personality";
 import { elderlySuicideCourse } from "./elderly-suicide";
+import { intellectualDisabilityOverviewCourse } from "./intellectual-disability-overview";
+import { idSyndromesCourse } from "./id-syndromes";
+import { idDualDiagnosisCourse } from "./id-dual-diagnosis";
+import { idTreatmentServicesCourse } from "./id-treatment-services";
+import { mentalHealthLawCourse } from "./mental-health-law";
+import { psychiatryOffendingCourse } from "./psychiatry-offending";
+import { homicideInfanticideCourse } from "./homicide-infanticide";
+import { juvenileOffendingCourse } from "./juvenile-offending";
 
 /**
  * Psychiatry learning-system course registry.
@@ -106,6 +114,11 @@ import { elderlySuicideCourse } from "./elderly-suicide";
  * psychiatry of old age): elderly-delirium, mci,
  * elderly-substance-use, late-life-psychosis, elderly-mood,
  * elderly-anxiety-ocd, elderly-personality, elderly-suicide.
+ * Batch 11 (Groups N + O — intellectual disability and forensic
+ * psychiatry): intellectual-disability-overview, id-syndromes,
+ * id-dual-diagnosis, id-treatment-services (concept),
+ * mental-health-law (concept), psychiatry-offending (concept),
+ * homicide-infanticide (concept), juvenile-offending (concept).
  * The completion matrix generator audits coverage.
  */
 export const psychiatryCourses: PsychiatryCourse[] = [
@@ -174,6 +187,14 @@ export const psychiatryCourses: PsychiatryCourse[] = [
   elderlyAnxietyOcdCourse,
   elderlyPersonalityCourse,
   elderlySuicideCourse,
+  intellectualDisabilityOverviewCourse,
+  idSyndromesCourse,
+  idDualDiagnosisCourse,
+  idTreatmentServicesCourse,
+  mentalHealthLawCourse,
+  psychiatryOffendingCourse,
+  homicideInfanticideCourse,
+  juvenileOffendingCourse,
 ];
 
 export function getPsychiatryCourse(slug: string): PsychiatryCourse | null {

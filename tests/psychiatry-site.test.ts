@@ -208,8 +208,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
   // registry with provenance, status, mode projections and honest
   // content-gap recording. These tests pin the architecture contract.
 
-  test("15. registry integrity: 3 pilots + batches 1-10 (65 courses), note-slug keyed, valid status", () => {
-    expect(psychiatryCourses.length).toBe(65); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 + 5 batch-8 + 5 batch-9 + 8 batch-10 courses
+  test("15. registry integrity: 3 pilots + batches 1-11 (73 courses), note-slug keyed, valid status", () => {
+    expect(psychiatryCourses.length).toBe(73); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 + 5 batch-8 + 5 batch-9 + 8 batch-10 + 8 batch-11 courses
     const noteSlugs = getAllNoteSlugs();
     for (const course of psychiatryCourses) {
       expect(noteSlugs).toContain(course.slug); // one URL per topic
@@ -248,6 +248,10 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
     expect(getPsychiatryCourse("elderly-delirium")?.groupLetter).toBe("M"); // Group M — batch 10
     expect(getPsychiatryCourse("elderly-mood")?.kind).toBe("disorder"); // batch-10 disorder course
     expect(getPsychiatryCourse("elderly-suicide")?.groupLetter).toBe("M"); // Group M — batch 10
+    expect(getPsychiatryCourse("intellectual-disability-overview")?.groupLetter).toBe("N"); // Group N — batch 11
+    expect(getPsychiatryCourse("id-treatment-services")?.kind).toBe("concept"); // batch-11 concept course
+    expect(getPsychiatryCourse("mental-health-law")?.groupLetter).toBe("O"); // Group O — batch 11
+    expect(getPsychiatryCourse("juvenile-offending")?.kind).toBe("concept"); // batch-11 concept course
   });
 
   test("16. mode projections: all four modes declared, sections resolve", () => {
@@ -1411,5 +1415,120 @@ describe("psychiatry — batch-10 content QA (Group M, psychiatry of old age)", 
     expect(esBlob).toContain("lethality"); // the pattern
     expect(esBlob).toContain("means"); // the audit
     expect(esBlob).toContain("14416"); // Tele-MANAS
+  });
+});
+
+
+describe("psychiatry — batch-11 content QA (Groups N+O, intellectual disability and forensic psychiatry)", () => {
+  // Batch 11 migration (Groups N + O): the eight courses below must
+  // uphold the established invariants — distinct structured case
+  // Presentations, honest drug-gap recording, brain-region graph
+  // anchoring — plus the group-specific checks: the supports-not-scores
+  // definition of ID, the syndrome-by-syndrome psychiatry map, the
+  // diagnostic-overshadowing discipline of dual diagnosis, the
+  // life-course service architecture, the four-abilities capacity law,
+  // the formulation-not-checklist offending discipline, the
+  // destigmatising arithmetic of homicide, and the risk-overlap
+  // principle with the preserved partial-source honesty.
+
+  const BATCH11 = [
+    "intellectual-disability-overview",
+    "id-syndromes",
+    "id-dual-diagnosis",
+    "id-treatment-services",
+    "mental-health-law",
+    "psychiatry-offending",
+    "homicide-infanticide",
+    "juvenile-offending",
+  ];
+
+  test("61. batch-11 registry: all eight Group N+O courses present, published, keyed to canonical note slugs", () => {
+    for (const slug of BATCH11) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course).toBeTruthy();
+      expect(course.status).toBe("PUBLISHED");
+      expect(["N", "O"]).toContain(course.groupLetter);
+      expect(course.lessonGroups.length).toBe(6);
+      expect(course.provenance.length).toBeGreaterThanOrEqual(10);
+      expect(course.evidenceMap.length).toBeGreaterThanOrEqual(10);
+    }
+  });
+
+  test("62. batch-11 clinical cases: distinct structured Presentation on all eight courses", () => {
+    for (const slug of BATCH11) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course.clinicalCases?.length).toBe(2);
+      for (const c of course.clinicalCases ?? []) {
+        expect(c.initialPresentation).toBeTruthy();
+        expect(c.initialPresentation).not.toBe(c.presentation);
+        expect(c.initialPresentation!).not.toContain(c.presentation);
+        expect(c.presentation).not.toContain(c.initialPresentation!);
+        expect(c.initialPresentation!.length).toBeGreaterThan(80);
+      }
+    }
+  });
+
+  test("63. batch-11 drug links only to existing KYP drug lessons; gaps recorded honestly", async () => {
+    const { getAllDrugSlugs } = await import("../src/lib/kyp/data");
+    const built = new Set(getAllDrugSlugs());
+    for (const slug of BATCH11) {
+      const course = getPsychiatryCourse(slug)!;
+      for (const link of course.drugLinks) {
+        if (link.slug) {
+          expect(built.has(link.slug)).toBe(true); // no invented routes
+        }
+      }
+      // the whole group is honest-absence: no KYP drug lesson carries an
+      // ID- or forensic-specific role — the comorbidity tiers are
+      // cross-referenced to their own courses, never invented here
+      expect(course.drugLinks.length).toBe(0);
+      expect(course.contentGaps.length).toBeGreaterThanOrEqual(3);
+    }
+    const idd = getPsychiatryCourse("id-dual-diagnosis")!;
+    expect(idd.contentGaps.join(" ")).toContain("risperidone"); // the caution tier, gap-recorded
+    const idts = getPsychiatryCourse("id-treatment-services")!;
+    expect(idts.contentGaps.join(" ")).toMatch(/[Nn]euroleptic/); // the drug-class audit
+  });
+
+  test("64. batch-11 exam-critical numbers and anchors recited in content", () => {
+    const idoBlob = JSON.stringify(getPsychiatryCourse("intellectual-disability-overview")!);
+    expect(idoBlob).toContain("IQ"); // with the threshold framing
+    expect(idoBlob).toContain("adaptive"); // the real definition
+    expect(idoBlob).toContain("RPwD"); // the Indian entitlements
+    const idsBlob = JSON.stringify(getPsychiatryCourse("id-syndromes")!);
+    expect(idsBlob).toContain("FMR1"); // fragile X genetics
+    expect(idsBlob).toContain("MECP2"); // Rett genetics
+    expect(idsBlob).toContain("hyperphagia"); // Prader-Willi signature
+    expect(idsBlob).toContain("Woods lamp"); // TSC craft
+    const iddBlob = JSON.stringify(getPsychiatryCourse("id-dual-diagnosis")!);
+    expect(iddBlob).toContain("diagnostic overshadowing"); // the cardinal error
+    expect(iddBlob).toContain("Antecedent-Behaviour-Consequence"); // the ABC lens
+    expect(iddBlob).toContain("supported-decision-making"); // the consent model
+    const idtsBlob = JSON.stringify(getPsychiatryCourse("id-treatment-services")!);
+    expect(idtsBlob).toContain("transition cliff"); // the service gap
+    expect(idtsBlob).toContain("double ageing"); // the demographic reality
+    expect(idtsBlob).toContain("National Trust"); // the India legal layer
+    const mhlBlob = JSON.stringify(getPsychiatryCourse("mental-health-law")!);
+    expect(mhlBlob).toContain("four abilities"); // the capacity test
+    expect(mhlBlob).toContain("best-interests"); // the checklist logic
+    expect(mhlBlob).toContain("Bolam"); // negligence
+    expect(mhlBlob).toContain("MHA 2017"); // the India lens
+    const poBlob = JSON.stringify(getPsychiatryCourse("psychiatry-offending")!);
+    expect(poBlob).toContain("Farrington"); // the cohort architecture
+    expect(poBlob).toContain("2–4"); // the schizophrenia multiplier
+    expect(poBlob).toContain("MAOA"); // the gene x maltreatment line
+    expect(poBlob).toContain("NTORS"); // the treatment-outcome data
+    expect(poBlob).toContain("formulation"); // the discipline
+    const hiBlob = JSON.stringify(getPsychiatryCourse("homicide-infanticide")!);
+    expect(hiBlob).toContain("neonaticide"); // the day-one concealment pattern
+    expect(hiBlob).toContain("National Confidential"); // the data quartet
+    expect(hiBlob).toContain("28%"); // predictable
+    expect(hiBlob).toContain("65%"); // preventable
+    expect(hiBlob).toContain("99.97%"); // the stigma answer
+    const joBlob = JSON.stringify(getPsychiatryCourse("juvenile-offending")!);
+    expect(joBlob).toContain("JJ Act"); // the India lens
+    expect(joBlob).toContain("risk-overlap"); // the principle
+    expect(joBlob).toContain("custody"); // the custody reality
+    expect(joBlob).toContain("partial-source"); // the preserved honesty flag (case as in the course object)
   });
 });

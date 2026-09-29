@@ -67,7 +67,7 @@ export const impulseControlDisordersCourse: PsychiatryCourse = {
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The kleptomania-and-depression linkage; the comorbid tier SSRIs ride on" },
     { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The impulsivity overlap and the treatment-tier interaction" },
     { label: "Juvenile Offending", type: "condition", href: "/psychiatry/juvenile-offending/", note: "The fire-setting tiers and the JJ Act interface — where disposition decisions live" },
-    { label: "Psychiatry & Offending", type: "condition", href: "/psychiatry/psychiatry-offending/", note: "The forensic architecture behind the court-report craft" },
+    { label: "Psychiatric Disorder & Offending — The Formulation", type: "condition", href: "/psychiatry/psychiatry-offending/", note: "The forensic architecture behind the court-report craft" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The aggression-impulsivity literature's system — the IED fluoxetine tier rides on it" },
     { label: "Right inferior frontal cortex", type: "brain-region", href: "#brain", note: "The braking apparatus — frontal-limbic control-circuit immaturity or dysfunction across the family" },
   ],
