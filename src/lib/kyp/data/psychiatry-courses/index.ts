@@ -79,6 +79,13 @@ import { autismCourse } from "./autism";
 import { adhdCourse } from "./adhd";
 import { conductDisorderCourse } from "./conduct-disorder";
 import { childAnxietyCourse } from "./child-anxiety";
+import { paediatricMoodCourse } from "./paediatric-mood";
+import { paediatricOcdTicsCourse } from "./paediatric-ocd-tics";
+import { childSleepCourse } from "./child-sleep";
+import { youthSuicideCourse } from "./youth-suicide";
+import { speechLanguageDisordersCourse } from "./speech-language-disorders";
+import { childTraumaAbuseCourse } from "./child-trauma-abuse";
+import { childAdversityContextsCourse } from "./child-adversity-contexts";
 
 /**
  * Psychiatry learning-system course registry.
@@ -129,7 +136,10 @@ import { childAnxietyCourse } from "./child-anxiety";
  * Batch 12 (Group L — child & adolescent psychiatry, first half):
  * child-assessment-epidemiology (concept), child-neuropsychiatry,
  * developmental-disorders, autism, adhd, conduct-disorder,
- * child-anxiety.
+ * child-anxiety. Batch 13 (Group L — child & adolescent
+ * psychiatry, second half): paediatric-mood, paediatric-ocd-tics,
+ * child-sleep, youth-suicide, speech-language-disorders,
+ * child-trauma-abuse, child-adversity-contexts.
  * The completion matrix generator audits coverage.
  */
 export const psychiatryCourses: PsychiatryCourse[] = [
@@ -213,6 +223,13 @@ export const psychiatryCourses: PsychiatryCourse[] = [
   adhdCourse,
   conductDisorderCourse,
   childAnxietyCourse,
+  paediatricMoodCourse,
+  paediatricOcdTicsCourse,
+  childSleepCourse,
+  youthSuicideCourse,
+  speechLanguageDisordersCourse,
+  childTraumaAbuseCourse,
+  childAdversityContextsCourse,
 ];
 
 export function getPsychiatryCourse(slug: string): PsychiatryCourse | null {
