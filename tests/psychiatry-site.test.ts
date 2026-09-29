@@ -107,11 +107,12 @@ describe("psychiatry — routes and identity", () => {
 
   test("4b. non-migrated lessons still render the finalized note shell", async () => {
     // A non-migrated disorder lesson keeps the note-shell contract
-    // (phases + India layer + sources disclosure). Batches 4, 6 and 7
-    // migrated anorexia-nervosa, delirium and vascular-dementia (this
-    // test's former exemplars) — substance-use-overview (Group B) is
-    // the next non-migrated disorder in index order.
-    const { status, html } = await get("/psychiatry/substance-use-overview");
+    // (phases + India layer + sources disclosure). Batches 4, 6, 7 and 8
+    // migrated anorexia-nervosa, delirium, vascular-dementia and the
+    // Group B first half incl. substance-use-overview (this test's former
+    // exemplars) — benzodiazepine-misuse (Group B) is the next
+    // non-migrated disorder in index order.
+    const { status, html } = await get("/psychiatry/benzodiazepine-misuse");
     expect(status).toBe(200);
     expect(html).toContain("Understand");
     expect(html).toContain("India in Practice");
@@ -207,8 +208,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
   // registry with provenance, status, mode projections and honest
   // content-gap recording. These tests pin the architecture contract.
 
-  test("15. registry integrity: 3 pilots + batches 1-7 (47 courses), note-slug keyed, valid status", () => {
-    expect(psychiatryCourses.length).toBe(47); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 courses
+  test("15. registry integrity: 3 pilots + batches 1-8 (52 courses), note-slug keyed, valid status", () => {
+    expect(psychiatryCourses.length).toBe(52); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 + 5 batch-8 courses
     const noteSlugs = getAllNoteSlugs();
     for (const course of psychiatryCourses) {
       expect(noteSlugs).toContain(course.slug); // one URL per topic
@@ -238,6 +239,10 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
     expect(getPsychiatryCourse("vascular-dementia")?.groupLetter).toBe("A"); // Group A — batch 7
     expect(getPsychiatryCourse("dementia-management")?.kind).toBe("concept"); // batch-7 concept course
     expect(getPsychiatryCourse("memory-rehabilitation")?.kind).toBe("concept"); // batch-7 concept course
+    expect(getPsychiatryCourse("substance-use-overview")?.groupLetter).toBe("B"); // Group B — batch 8
+    expect(getPsychiatryCourse("substance-use-overview")?.kind).toBe("concept"); // batch-8 umbrella concept course
+    expect(getPsychiatryCourse("alcohol-use-disorders")?.groupLetter).toBe("B"); // Group B — batch 8
+    expect(getPsychiatryCourse("hallucinogen-use-disorders")?.kind).toBe("disorder"); // batch-8 disorder course
   });
 
   test("16. mode projections: all four modes declared, sections resolve", () => {
@@ -1021,5 +1026,127 @@ describe("psychiatry — batch-7 content QA (Group A part 2, neurocognitive diso
     expect(mrBlob).toContain("spaced retrieval"); // the fact-planting technique
     expect(mrBlob).toContain("dependency cage"); // the failure mode
     expect(mrBlob).toContain("the wall calendar"); // the Indian answer
+  });
+});
+
+describe("psychiatry — batch-8 content QA (Group B part 1, substance use disorders)", () => {
+  // Batch 8 migration (Group B, first half): the five courses below
+  // must uphold the same content invariants the batch-1 audit and the
+  // batch-2 through 7 suites established — distinct structured case
+  // Presentations, honest drug-gap recording, brain-region graph
+  // anchoring — plus the batch-8-specific architecture checks: the
+  // umbrella concept course teaching the pharmacotherapy logic
+  // without owning a single drug route, the withdrawal-ladder hours
+  // of the alcohol course, the overdose-drill and never-use-alone
+  // discipline of the opioid course, the no-maintenance honesty of
+  // the stimulant course, and the quiet-vitals rule of the
+  // hallucinogen course.
+
+  const BATCH8 = [
+    "substance-use-overview",
+    "alcohol-use-disorders",
+    "opioid-use-disorders",
+    "stimulant-use-disorders",
+    "hallucinogen-use-disorders",
+  ];
+
+  test("49. batch-8 registry: all five Group B (part 1) courses present, published, keyed to canonical note slugs", () => {
+    for (const slug of BATCH8) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course).toBeTruthy();
+      expect(course.status).toBe("PUBLISHED");
+      expect(course.groupLetter).toBe("B");
+      expect(course.lessonGroups.length).toBe(6);
+      expect(course.provenance.length).toBeGreaterThanOrEqual(10);
+      expect(course.evidenceMap.length).toBeGreaterThanOrEqual(10);
+    }
+  });
+
+  test("50. batch-8 clinical cases: distinct structured Presentation on all five courses", () => {
+    for (const slug of BATCH8) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course.clinicalCases?.length).toBe(2);
+      for (const c of course.clinicalCases ?? []) {
+        expect(c.initialPresentation).toBeTruthy();
+        expect(c.initialPresentation).not.toBe(c.presentation);
+        expect(c.initialPresentation!).not.toContain(c.presentation);
+        expect(c.presentation).not.toContain(c.initialPresentation!);
+        expect(c.initialPresentation!.length).toBeGreaterThan(80);
+      }
+    }
+  });
+
+  test("51. batch-8 drug links only to existing KYP drug lessons; gaps recorded honestly", async () => {
+    const { getAllDrugSlugs } = await import("../src/lib/kyp/data");
+    const built = new Set(getAllDrugSlugs());
+    for (const slug of BATCH8) {
+      const course = getPsychiatryCourse(slug)!;
+      for (const link of course.drugLinks) {
+        if (link.slug) {
+          expect(built.has(link.slug)).toBe(true); // no invented routes
+        }
+      }
+    }
+    // the umbrella teaches the pharmacotherapy LOGIC; every actual
+    // maintenance medicine belongs to the drug-specific courses and
+    // no KYP lesson exists for any of them — the absence is the lesson
+    const suo = getPsychiatryCourse("substance-use-overview")!;
+    expect(suo.drugLinks.length).toBe(0);
+    expect(suo.contentGaps.join(" ")).toContain("naltrexone");
+    expect(suo.contentGaps.join(" ")).toContain("buprenorphine");
+    // alcohol links only the one rider tier the note assigns; the
+    // relapse-prevention trio is gap-recorded by name
+    const aud = getPsychiatryCourse("alcohol-use-disorders")!;
+    expect(aud.drugLinks.map((l: any) => l.slug)).toEqual(["mirtazapine"]);
+    expect(aud.contentGaps.join(" ")).toContain("naltrexone");
+    expect(aud.contentGaps.join(" ")).toContain("disulfiram");
+    // opioid: the whole maintenance tier (buprenorphine, methadone,
+    // naloxone, naltrexone) is gap-recorded — routes never invented
+    const oud = getPsychiatryCourse("opioid-use-disorders")!;
+    expect(oud.drugLinks.length).toBe(0);
+    expect(oud.contentGaps.join(" ")).toContain("Buprenorphine");
+    expect(oud.contentGaps.join(" ")).toContain("Methadone");
+    // stimulant: no approved maintenance — the honesty IS the teaching
+    const stu = getPsychiatryCourse("stimulant-use-disorders")!;
+    expect(stu.drugLinks.length).toBe(0);
+    expect(stu.contentGaps.join(" ")).toContain("modest");
+    // hallucinogen: the crisis tier has no KYP lessons either
+    const hud = getPsychiatryCourse("hallucinogen-use-disorders")!;
+    expect(hud.drugLinks.length).toBe(0);
+    expect(hud.contentGaps.join(" ")).toContain("Lamotrigine");
+  });
+
+  test("52. batch-8 exam-critical numbers and anchors recited in content", () => {
+    const suoBlob = JSON.stringify(getPsychiatryCourse("substance-use-overview")!);
+    expect(suoBlob).toContain("Want, Like, Calm"); // the three currencies
+    expect(suoBlob).toContain("240–290 million"); // the global burden
+    expect(suoBlob).toContain("1 in 9"); // the treatment gap
+    expect(suoBlob).toContain("Control-Social-Risk-Pharma"); // the DSM clusters
+    expect(suoBlob).toContain("2–6 weeks"); // the new-diagnosis timing rule
+    const audBlob = JSON.stringify(getPsychiatryCourse("alcohol-use-disorders")!);
+    expect(audBlob).toContain("48–96"); // the DT window
+    expect(audBlob).toContain("B1 before D5"); // the sequence law
+    expect(audBlob).toContain("kindling"); // the withdrawal amplifier
+    expect(audBlob).toContain("400 million"); // the global AUD figure
+    expect(audBlob).toContain("2.6 million"); // the deaths figure
+    expect(audBlob).toContain("five-floor"); // the management architecture (source-true)
+    const oudBlob = JSON.stringify(getPsychiatryCourse("opioid-use-disorders")!);
+    expect(oudBlob).toContain("Shout–Breathe–Naloxone–Side–Send"); // the overdose drill
+    expect(oudBlob).toContain("miserable, not lethal"); // the withdrawal framing
+    expect(oudBlob).toContain("precipitated withdrawal"); // the induction error
+    expect(oudBlob).toContain("never use alone"); // the home rule
+    expect(oudBlob).toContain("locus coeruleus"); // the alarm centre
+    const stuBlob = JSON.stringify(getPsychiatryCourse("stimulant-use-disorders")!);
+    expect(stuBlob).toContain("formication"); // the perceptual signature
+    expect(stuBlob).toContain("Run–Crash–Crave"); // the cycle mnemonic
+    expect(stuBlob).toContain("unopposed beta-blockade"); // the cocaine chest-pain law
+    expect(stuBlob).toContain("4–6 week"); // the re-assessment rule
+    const hudBlob = JSON.stringify(getPsychiatryCourse("hallucinogen-use-disorders")!);
+    expect(hudBlob).toContain("5-HT2A"); // the receptor
+    expect(hudBlob).toContain("visual snow"); // the HPPD signature
+    expect(hudBlob).toContain("palinopsia"); // the trailing images
+    expect(hudBlob).toContain("nystagmus"); // the PCP pearl
+    expect(hudBlob).toContain("NBOMe"); // the substitution masquerade
+    expect(hudBlob).toContain("re-emergence"); // the PCP cycle
   });
 });

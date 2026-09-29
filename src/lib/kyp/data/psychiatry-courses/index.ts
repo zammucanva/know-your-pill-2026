@@ -46,6 +46,11 @@ import { alcoholRelatedDementiaCourse } from "./alcohol-related-dementia";
 import { amnesicSyndromesCourse } from "./amnesic-syndromes";
 import { dementiaManagementCourse } from "./dementia-management";
 import { memoryRehabilitationCourse } from "./memory-rehabilitation";
+import { substanceUseOverviewCourse } from "./substance-use-overview";
+import { alcoholUseDisordersCourse } from "./alcohol-use-disorders";
+import { opioidUseDisordersCourse } from "./opioid-use-disorders";
+import { stimulantUseDisordersCourse } from "./stimulant-use-disorders";
+import { hallucinogenUseDisordersCourse } from "./hallucinogen-use-disorders";
 
 /**
  * Psychiatry learning-system course registry.
@@ -78,6 +83,10 @@ import { memoryRehabilitationCourse } from "./memory-rehabilitation";
  * disorders, second half): vascular-dementia, hiv-neuropsychiatry,
  * tbi-neuropsychiatry, alcohol-related-dementia, amnesic-syndromes,
  * dementia-management (concept), memory-rehabilitation (concept).
+ * Batch 8 (Group B — substance use disorders, first half):
+ * substance-use-overview (concept), alcohol-use-disorders,
+ * opioid-use-disorders, stimulant-use-disorders,
+ * hallucinogen-use-disorders.
  * The completion matrix generator audits coverage.
  */
 export const psychiatryCourses: PsychiatryCourse[] = [
@@ -128,6 +137,11 @@ export const psychiatryCourses: PsychiatryCourse[] = [
   amnesicSyndromesCourse,
   dementiaManagementCourse,
   memoryRehabilitationCourse,
+  substanceUseOverviewCourse,
+  alcoholUseDisordersCourse,
+  opioidUseDisordersCourse,
+  stimulantUseDisordersCourse,
+  hallucinogenUseDisordersCourse,
 ];
 
 export function getPsychiatryCourse(slug: string): PsychiatryCourse | null {
