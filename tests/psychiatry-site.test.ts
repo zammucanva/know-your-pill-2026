@@ -111,9 +111,12 @@ describe("psychiatry — routes and identity", () => {
     // 12 migrated anorexia-nervosa, delirium, vascular-dementia, all
     // ten Group B courses and Group L's first half incl.
     // child-neuropsychiatry (this test's former exemplar) —
-    // paediatric-mood (Group L) is the next non-migrated disorder in
-    // index order.
-    const { status, html } = await get("/psychiatry/paediatric-mood");
+    // paediatric-mood and all of Group L (this test's former
+    // exemplars) — with Groups C-O and A-L complete, the remaining
+    // un-migrated notes are the Group P/Q/R concept notes;
+    // dynamic-psychotherapy (Group P) is next in index order and
+    // renders the same six-phase note-shell contract.
+    const { status, html } = await get("/psychiatry/dynamic-psychotherapy");
     expect(status).toBe(200);
     expect(html).toContain("Understand");
     expect(html).toContain("India in Practice");
@@ -209,8 +212,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
   // registry with provenance, status, mode projections and honest
   // content-gap recording. These tests pin the architecture contract.
 
-  test("15. registry integrity: 3 pilots + batches 1-12 (80 courses), note-slug keyed, valid status", () => {
-    expect(psychiatryCourses.length).toBe(80); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 + 5 batch-8 + 5 batch-9 + 8 batch-10 + 8 batch-11 + 7 batch-12 courses
+  test("15. registry integrity: 3 pilots + batches 1-13 (87 courses), note-slug keyed, valid status", () => {
+    expect(psychiatryCourses.length).toBe(87); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 + 5 batch-8 + 5 batch-9 + 8 batch-10 + 8 batch-11 + 7 batch-12 + 7 batch-13 courses
     const noteSlugs = getAllNoteSlugs();
     for (const course of psychiatryCourses) {
       expect(noteSlugs).toContain(course.slug); // one URL per topic
@@ -256,6 +259,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
     expect(getPsychiatryCourse("child-assessment-epidemiology")?.groupLetter).toBe("L"); // Group L — batch 12
     expect(getPsychiatryCourse("child-assessment-epidemiology")?.kind).toBe("concept"); // batch-12 concept course
     expect(getPsychiatryCourse("autism")?.groupLetter).toBe("L"); // Group L — batch 12
+    expect(getPsychiatryCourse("paediatric-mood")?.groupLetter).toBe("L"); // Group L — batch 13
+    expect(getPsychiatryCourse("youth-suicide")?.kind).toBe("disorder"); // batch-13 disorder course
   });
 
   test("16. mode projections: all four modes declared, sections resolve", () => {
@@ -1644,5 +1649,111 @@ describe("psychiatry — batch-12 content QA (Group L part 1, child & adolescent
     expect(canBlob).toContain("somatic"); // the carousel
     expect(canBlob).toContain("school refusal"); // the four engines
     expect(canBlob).toContain("selective mutism"); // the ladder
+  });
+});
+
+
+describe("psychiatry — batch-13 content QA (Group L part 2, child & adolescent psychiatry)", () => {
+  // Batch 13 migration (Group L, second half): the seven courses below
+  // must uphold the established invariants — distinct structured case
+  // Presentations, honest drug-gap recording, brain-region graph
+  // anchoring — plus the group-L-specific checks: the irritability
+  // costume and DMDD gate, the accommodation grid and PANDAS honesty,
+  // the hyperactivity masquerade with the do-not-wake rule, the
+  // safety-first card with means audit and postvention, the critical
+  // age with the bilingual rules, the disclosure discipline with
+  // POCSO, and the adversity-contexts architecture.
+
+  const BATCH13 = [
+    "paediatric-mood",
+    "paediatric-ocd-tics",
+    "child-sleep",
+    "youth-suicide",
+    "speech-language-disorders",
+    "child-trauma-abuse",
+    "child-adversity-contexts",
+  ];
+
+  test("69. batch-13 registry: all seven Group L (part 2) courses present, published, keyed to canonical note slugs", () => {
+    for (const slug of BATCH13) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course).toBeTruthy();
+      expect(course.status).toBe("PUBLISHED");
+      expect(course.groupLetter).toBe("L");
+      expect(course.lessonGroups.length).toBe(6);
+      expect(course.provenance.length).toBeGreaterThanOrEqual(10);
+      expect(course.evidenceMap.length).toBeGreaterThanOrEqual(10);
+    }
+  });
+
+  test("70. batch-13 clinical cases: distinct structured Presentation on all seven courses", () => {
+    for (const slug of BATCH13) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course.clinicalCases?.length).toBe(2);
+      for (const c of course.clinicalCases ?? []) {
+        expect(c.initialPresentation).toBeTruthy();
+        expect(c.initialPresentation).not.toBe(c.presentation);
+        expect(c.initialPresentation!).not.toContain(c.presentation);
+        expect(c.presentation).not.toContain(c.initialPresentation!);
+        expect(c.initialPresentation!.length).toBeGreaterThan(80);
+      }
+    }
+  });
+
+  test("71. batch-13 drug links only to existing KYP drug lessons; gaps recorded honestly", async () => {
+    const { getAllDrugSlugs } = await import("../src/lib/kyp/data");
+    const built = new Set(getAllDrugSlugs());
+    for (const slug of BATCH13) {
+      const course = getPsychiatryCourse(slug)!;
+      for (const link of course.drugLinks) {
+        if (link.slug) {
+          expect(built.has(link.slug)).toBe(true); // no invented routes
+        }
+      }
+    }
+    const pm = getPsychiatryCourse("paediatric-mood")!;
+    expect(pm.drugLinks.map((l: any) => l.slug).sort()).toEqual(["escitalopram", "fluoxetine", "mirtazapine", "sertraline"]);
+    const pot = getPsychiatryCourse("paediatric-ocd-tics")!;
+    expect(pot.drugLinks.map((l: any) => l.slug).sort()).toEqual(["clomipramine", "fluoxetine", "fluvoxamine", "sertraline"]);
+    const ys = getPsychiatryCourse("youth-suicide")!;
+    expect(ys.drugLinks.map((l: any) => l.slug)).toEqual(["fluoxetine"]);
+    expect(ys.contentGaps.join(" ")).toContain("DBT-A"); // the missing tier, recorded
+    const cs = getPsychiatryCourse("child-sleep")!;
+    expect(cs.drugLinks.length).toBe(0);
+    expect(cs.contentGaps.join(" ")).toContain("Melatonin");
+  });
+
+  test("72. batch-13 exam-critical numbers and anchors recited in content", () => {
+    const pmBlob = JSON.stringify(getPsychiatryCourse("paediatric-mood")!);
+    expect(pmBlob).toContain("DMDD"); // the gate
+    expect(pmBlob).toContain("TADS"); // the trial tier
+    expect(pmBlob).toContain("irritab"); // the costume
+    const potBlob = JSON.stringify(getPsychiatryCourse("paediatric-ocd-tics")!);
+    expect(potBlob).toContain("accommodation"); // the grid
+    expect(potBlob).toContain("POTS"); // the trial
+    expect(potBlob).toContain("CBIT"); // the tic treatment
+    expect(potBlob).toContain("PANDAS"); // the honest position
+    const csBlob = JSON.stringify(getPsychiatryCourse("child-sleep")!);
+    expect(csBlob).toContain("20–30%"); // the prevalence
+    expect(csBlob).toContain("DSPS"); // the delayed phase
+    expect(csBlob).toContain("do not wake"); // the arousal rule
+    const ysBlob = JSON.stringify(getPsychiatryCourse("youth-suicide")!);
+    expect(ysBlob).toContain("means"); // the audit
+    expect(ysBlob).toContain("NCRB"); // the data
+    expect(ysBlob).toContain("s.115"); // the duty
+    expect(ysBlob).toContain("postvention"); // the school response
+    expect(ysBlob).toContain("safety plan"); // the card
+    const slBlob = JSON.stringify(getPsychiatryCourse("speech-language-disorders")!);
+    expect(slBlob).toContain("3–7%"); // the SLI prevalence
+    expect(slBlob).toContain("critical age"); // the rule
+    expect(slBlob).toContain("bilingual"); // the India rules
+    const ctBlob = JSON.stringify(getPsychiatryCourse("child-trauma-abuse")!);
+    expect(ctBlob).toContain("POCSO"); // the reporting duty
+    expect(ctBlob).toContain("TF-CBT"); // the phases
+    expect(ctBlob).toContain("disclosure"); // the discipline
+    const caBlob = JSON.stringify(getPsychiatryCourse("child-adversity-contexts")!);
+    expect(caBlob).toContain("six dimensions"); // adoption's framework
+    expect(caBlob).toContain("four mechanisms"); // parental illness
+    expect(caBlob).toContain("1 in 5"); // the referral figure
   });
 });

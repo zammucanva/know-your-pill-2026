@@ -70,7 +70,7 @@ export const ocdCourse: PsychiatryCourse = {
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "Half of OCD patients carry depression; concealed taboo content plus depression is a suicide-risk constellation" },
     { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "Screen every patient — misery plus unspoken content carries the risk" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The absent-insight differential: ritual structure, theme symmetry and course separate OCD from psychosis" },
-    { label: "Paediatric OCD & Tics", type: "condition", href: "/psychiatry/paediatric-ocd-tics/", note: "Childhood-onset, tic-related OCD: stronger genetic loading, the antipsychotic-augmentation responder" },
+    { label: "OCD & Tics in Youth — The Accommodation Grid", type: "condition", href: "/psychiatry/paediatric-ocd-tics/", note: "Childhood-onset, tic-related OCD: stronger genetic loading, the antipsychotic-augmentation responder" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The system the high-dose SSRI/clomipramine tier rides on — dose matters in this disorder" },
     { label: "Basal ganglia / CSTC loop", type: "brain-region", href: "#brain", note: "The alarm-gate circuitry stuck in repetition — the reason basal-ganglia events are implicated" },
   ],
