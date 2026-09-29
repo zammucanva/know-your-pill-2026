@@ -72,6 +72,13 @@ import { mentalHealthLawCourse } from "./mental-health-law";
 import { psychiatryOffendingCourse } from "./psychiatry-offending";
 import { homicideInfanticideCourse } from "./homicide-infanticide";
 import { juvenileOffendingCourse } from "./juvenile-offending";
+import { childAssessmentEpidemiologyCourse } from "./child-assessment-epidemiology";
+import { childNeuropsychiatryCourse } from "./child-neuropsychiatry";
+import { developmentalDisordersCourse } from "./developmental-disorders";
+import { autismCourse } from "./autism";
+import { adhdCourse } from "./adhd";
+import { conductDisorderCourse } from "./conduct-disorder";
+import { childAnxietyCourse } from "./child-anxiety";
 
 /**
  * Psychiatry learning-system course registry.
@@ -119,6 +126,10 @@ import { juvenileOffendingCourse } from "./juvenile-offending";
  * id-dual-diagnosis, id-treatment-services (concept),
  * mental-health-law (concept), psychiatry-offending (concept),
  * homicide-infanticide (concept), juvenile-offending (concept).
+ * Batch 12 (Group L — child & adolescent psychiatry, first half):
+ * child-assessment-epidemiology (concept), child-neuropsychiatry,
+ * developmental-disorders, autism, adhd, conduct-disorder,
+ * child-anxiety.
  * The completion matrix generator audits coverage.
  */
 export const psychiatryCourses: PsychiatryCourse[] = [
@@ -195,6 +206,13 @@ export const psychiatryCourses: PsychiatryCourse[] = [
   psychiatryOffendingCourse,
   homicideInfanticideCourse,
   juvenileOffendingCourse,
+  childAssessmentEpidemiologyCourse,
+  childNeuropsychiatryCourse,
+  developmentalDisordersCourse,
+  autismCourse,
+  adhdCourse,
+  conductDisorderCourse,
+  childAnxietyCourse,
 ];
 
 export function getPsychiatryCourse(slug: string): PsychiatryCourse | null {
