@@ -86,6 +86,13 @@ import { youthSuicideCourse } from "./youth-suicide";
 import { speechLanguageDisordersCourse } from "./speech-language-disorders";
 import { childTraumaAbuseCourse } from "./child-trauma-abuse";
 import { childAdversityContextsCourse } from "./child-adversity-contexts";
+import { dynamicPsychotherapyCourse } from "./dynamic-psychotherapy";
+import { groupTherapyCourse } from "./group-therapy";
+import { couplesTherapyCourse } from "./couples-therapy";
+import { familyTherapyCourse } from "./family-therapy";
+import { therapeuticCommunitiesCourse } from "./therapeutic-communities";
+import { psychiatricRehabilitationCourse } from "./psychiatric-rehabilitation";
+import { indigenousHealingCourse } from "./indigenous-healing";
 
 /**
  * Psychiatry learning-system course registry.
@@ -139,7 +146,11 @@ import { childAdversityContextsCourse } from "./child-adversity-contexts";
  * child-anxiety. Batch 13 (Group L — child & adolescent
  * psychiatry, second half): paediatric-mood, paediatric-ocd-tics,
  * child-sleep, youth-suicide, speech-language-disorders,
- * child-trauma-abuse, child-adversity-contexts.
+ * child-trauma-abuse, child-adversity-contexts. Batch 14 (Group P —
+ * treatment methods, available subset): dynamic-psychotherapy,
+ * group-therapy, couples-therapy, family-therapy,
+ * therapeutic-communities, psychiatric-rehabilitation,
+ * indigenous-healing (all concept).
  * The completion matrix generator audits coverage.
  */
 export const psychiatryCourses: PsychiatryCourse[] = [
@@ -230,6 +241,13 @@ export const psychiatryCourses: PsychiatryCourse[] = [
   speechLanguageDisordersCourse,
   childTraumaAbuseCourse,
   childAdversityContextsCourse,
+  dynamicPsychotherapyCourse,
+  groupTherapyCourse,
+  couplesTherapyCourse,
+  familyTherapyCourse,
+  therapeuticCommunitiesCourse,
+  psychiatricRehabilitationCourse,
+  indigenousHealingCourse,
 ];
 
 export function getPsychiatryCourse(slug: string): PsychiatryCourse | null {

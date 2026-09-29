@@ -113,20 +113,24 @@ describe("psychiatry — routes and identity", () => {
     // child-neuropsychiatry (this test's former exemplar) —
     // paediatric-mood and all of Group L (this test's former
     // exemplars) — with Groups C-O and A-L complete, the remaining
-    // un-migrated notes are the Group P/Q/R concept notes;
-    // dynamic-psychotherapy (Group P) is next in index order and
+    // un-migrated notes are the Group Q/R concept notes (batch 14
+    // migrated dynamic-psychotherapy, this test's former exemplar);
+    // psychiatric-phenomenology (Group Q) is next in index order and
     // renders the same six-phase note-shell contract.
-    const { status, html } = await get("/psychiatry/dynamic-psychotherapy");
+    const { status, html } = await get("/psychiatry/psychiatric-phenomenology");
     expect(status).toBe(200);
     expect(html).toContain("Understand");
     expect(html).toContain("India in Practice");
     expect(html).toContain("Sources &amp; References");
   });
 
-  test("5. concept lesson (couples-therapy) serves 200", async () => {
-    const { status, html } = await get("/psychiatry/couples-therapy");
+  test("5. concept lesson (psychiatric-phenomenology) serves 200", async () => {
+    // Batch 14 migrated couples-therapy (this test's former exemplar) —
+    // psychiatric-phenomenology (Group Q) is the next non-migrated
+    // concept note in index order.
+    const { status, html } = await get("/psychiatry/psychiatric-phenomenology");
     expect(status).toBe(200);
-    expect(html).toContain("Couples");
+    expect(html).toContain("Phenomenology");
   });
 
   test("6. all 109 lesson routes serve 200", async () => {
@@ -212,8 +216,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
   // registry with provenance, status, mode projections and honest
   // content-gap recording. These tests pin the architecture contract.
 
-  test("15. registry integrity: 3 pilots + batches 1-13 (87 courses), note-slug keyed, valid status", () => {
-    expect(psychiatryCourses.length).toBe(87); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 + 5 batch-8 + 5 batch-9 + 8 batch-10 + 8 batch-11 + 7 batch-12 + 7 batch-13 courses
+  test("15. registry integrity: 3 pilots + batches 1-14 (94 courses), note-slug keyed, valid status", () => {
+    expect(psychiatryCourses.length).toBe(94); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 + 5 batch-8 + 5 batch-9 + 8 batch-10 + 8 batch-11 + 7 batch-12 + 7 batch-13 + 7 batch-14 courses
     const noteSlugs = getAllNoteSlugs();
     for (const course of psychiatryCourses) {
       expect(noteSlugs).toContain(course.slug); // one URL per topic
@@ -261,6 +265,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
     expect(getPsychiatryCourse("autism")?.groupLetter).toBe("L"); // Group L — batch 12
     expect(getPsychiatryCourse("paediatric-mood")?.groupLetter).toBe("L"); // Group L — batch 13
     expect(getPsychiatryCourse("youth-suicide")?.kind).toBe("disorder"); // batch-13 disorder course
+    expect(getPsychiatryCourse("dynamic-psychotherapy")?.groupLetter).toBe("P"); // Group P — batch 14
+    expect(getPsychiatryCourse("couples-therapy")?.kind).toBe("concept"); // batch-14 concept course
   });
 
   test("16. mode projections: all four modes declared, sections resolve", () => {
@@ -1755,5 +1761,107 @@ describe("psychiatry — batch-13 content QA (Group L part 2, child & adolescent
     expect(caBlob).toContain("six dimensions"); // adoption's framework
     expect(caBlob).toContain("four mechanisms"); // parental illness
     expect(caBlob).toContain("1 in 5"); // the referral figure
+  });
+});
+
+
+describe("psychiatry — batch-14 content QA (Group P, treatment methods)", () => {
+  // Batch 14 migration (Group P): the seven concept courses below must
+  // uphold the established invariants — distinct structured case
+  // Presentations, honest drug-gap recording, brain-region graph
+  // anchoring — plus the group-P-specific checks: the procedural
+  // unconscious and Malan's triangles, Yalom's paraphrased factors with
+  // the storming wave, the ALI hierarchy with decentring, circular
+  // causality with the honest EE arithmetic, the four Henderson
+  // principles with the Erwadi lesson, the well-part-of-ego philosophy,
+  // and the culturally-embedded-care discipline.
+
+  const BATCH14 = [
+    "dynamic-psychotherapy",
+    "group-therapy",
+    "couples-therapy",
+    "family-therapy",
+    "therapeutic-communities",
+    "psychiatric-rehabilitation",
+    "indigenous-healing",
+  ];
+
+  test("73. batch-14 registry: all seven Group P courses present, published, keyed to canonical note slugs", () => {
+    for (const slug of BATCH14) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course).toBeTruthy();
+      expect(course.status).toBe("PUBLISHED");
+      expect(course.groupLetter).toBe("P");
+      expect(course.kind).toBe("concept"); // the whole group is concept courses
+      expect(course.lessonGroups.length).toBe(6);
+      expect(course.provenance.length).toBeGreaterThanOrEqual(10);
+      expect(course.evidenceMap.length).toBeGreaterThanOrEqual(10);
+    }
+  });
+
+  test("74. batch-14 clinical cases: distinct structured Presentation on all seven courses", () => {
+    for (const slug of BATCH14) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course.clinicalCases?.length).toBe(2);
+      for (const c of course.clinicalCases ?? []) {
+        expect(c.initialPresentation).toBeTruthy();
+        expect(c.initialPresentation).not.toBe(c.presentation);
+        expect(c.initialPresentation!).not.toContain(c.presentation);
+        expect(c.presentation).not.toContain(c.initialPresentation!);
+        expect(c.initialPresentation!.length).toBeGreaterThan(80);
+      }
+    }
+  });
+
+  test("75. batch-14 drug links only to existing KYP drug lessons; gaps recorded honestly", async () => {
+    const { getAllDrugSlugs } = await import("../src/lib/kyp/data");
+    const built = new Set(getAllDrugSlugs());
+    for (const slug of BATCH14) {
+      const course = getPsychiatryCourse(slug)!;
+      for (const link of course.drugLinks) {
+        if (link.slug) {
+          expect(built.has(link.slug)).toBe(true); // no invented routes
+        }
+      }
+      // the whole group is honest-absence: psychotherapy is not a
+      // tablet — the comorbidity tiers belong to their own courses
+      expect(course.drugLinks.length).toBe(0);
+      expect(course.contentGaps.length).toBeGreaterThanOrEqual(3);
+    }
+  });
+
+  test("76. batch-14 exam-critical anchors recited in content", () => {
+    const dpBlob = JSON.stringify(getPsychiatryCourse("dynamic-psychotherapy")!);
+    expect(dpBlob).toContain("triangle of conflict"); // Malan one
+    expect(dpBlob).toContain("triangle of person"); // Malan two
+    expect(dpBlob).toContain("Bose"); // the Indian story
+    expect(dpBlob).toContain("working through"); // the craft
+    const gtBlob = JSON.stringify(getPsychiatryCourse("group-therapy")!);
+    expect(gtBlob).toContain("curative factors"); // Yalom, paraphrased
+    expect(gtBlob).toContain("storming"); // the wave
+    expect(gtBlob).toContain("selection"); // the discipline
+    const ctBlob = JSON.stringify(getPsychiatryCourse("couples-therapy")!);
+    expect(ctBlob).toContain("four schools"); // the map
+    expect(ctBlob).toContain("ALI"); // the hierarchy
+    expect(ctBlob).toContain("decentre"); // the craft
+    expect(ctBlob).toContain("Leff"); // the trial
+    const ftBlob = JSON.stringify(getPsychiatryCourse("family-therapy")!);
+    expect(ftBlob).toContain("circular causality"); // the paradigm
+    expect(ftBlob).toContain("expressed emotion"); // the arithmetic
+    expect(ftBlob).toContain("NIMHANS"); // the Indian family ward
+    expect(ftBlob).toContain("four-rung"); // the ladder
+    const tcBlob = JSON.stringify(getPsychiatryCourse("therapeutic-communities")!);
+    expect(tcBlob).toContain("Henderson"); // the principles
+    expect(tcBlob).toContain("Geel"); // the history
+    expect(tcBlob).toContain("Lees"); // the meta-analysis
+    expect(tcBlob).toContain("Erwadi"); // the Indian lesson
+    const prBlob = JSON.stringify(getPsychiatryCourse("psychiatric-rehabilitation")!);
+    expect(prBlob).toContain("ICF"); // the frame
+    expect(prBlob).toContain("supported employment"); // the practice
+    expect(prBlob).toContain("well part of the ego"); // the philosophy
+    const ihBlob = JSON.stringify(getPsychiatryCourse("indigenous-healing")!);
+    expect(ihBlob).toContain("zar"); // the dissociation distinction
+    expect(ihBlob).toContain("Rumpelstiltskin"); // the naming principle
+    expect(ihBlob).toContain("common factors"); // the mechanism
   });
 });
