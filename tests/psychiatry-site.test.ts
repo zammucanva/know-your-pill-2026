@@ -107,11 +107,11 @@ describe("psychiatry — routes and identity", () => {
 
   test("4b. non-migrated lessons still render the finalized note shell", async () => {
     // A non-migrated disorder lesson keeps the note-shell contract
-    // (phases + India layer + sources disclosure). Batch 4 migrated
-    // anorexia-nervosa and batch 6 migrated delirium (this test's
-    // former exemplars) — vascular-dementia (Group A, A8) is the next
-    // non-migrated disorder in index order.
-    const { status, html } = await get("/psychiatry/vascular-dementia");
+    // (phases + India layer + sources disclosure). Batches 4, 6 and 7
+    // migrated anorexia-nervosa, delirium and vascular-dementia (this
+    // test's former exemplars) — substance-use-overview (Group B) is
+    // the next non-migrated disorder in index order.
+    const { status, html } = await get("/psychiatry/substance-use-overview");
     expect(status).toBe(200);
     expect(html).toContain("Understand");
     expect(html).toContain("India in Practice");
@@ -207,8 +207,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
   // registry with provenance, status, mode projections and honest
   // content-gap recording. These tests pin the architecture contract.
 
-  test("15. registry integrity: 3 pilots + batches 1-6 (40 courses), note-slug keyed, valid status", () => {
-    expect(psychiatryCourses.length).toBe(40); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 courses
+  test("15. registry integrity: 3 pilots + batches 1-7 (47 courses), note-slug keyed, valid status", () => {
+    expect(psychiatryCourses.length).toBe(47); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 courses
     const noteSlugs = getAllNoteSlugs();
     for (const course of psychiatryCourses) {
       expect(noteSlugs).toContain(course.slug); // one URL per topic
@@ -235,6 +235,9 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
     expect(getPsychiatryCourse("delirium")?.groupLetter).toBe("A"); // Group A — batch 6
     expect(getPsychiatryCourse("huntingtons-neuropsychiatry")?.kind).toBe("disorder"); // batch-6 disorder course
     expect(getPsychiatryCourse("alzheimers-dementia")?.groupLetter).toBe("A"); // Group A — batch 6
+    expect(getPsychiatryCourse("vascular-dementia")?.groupLetter).toBe("A"); // Group A — batch 7
+    expect(getPsychiatryCourse("dementia-management")?.kind).toBe("concept"); // batch-7 concept course
+    expect(getPsychiatryCourse("memory-rehabilitation")?.kind).toBe("concept"); // batch-7 concept course
   });
 
   test("16. mode projections: all four modes declared, sections resolve", () => {
@@ -903,5 +906,120 @@ describe("psychiatry — batch-6 content QA (Group A part 1, neurocognitive diso
     expect(hdBlob).toContain("anticipation"); // the lengthening repeat
     expect(hdBlob).toContain("boxcar"); // the imaging sign
     expect(hdBlob).toContain("15–20 years"); // the survival arc
+  });
+});
+
+describe("psychiatry — batch-7 content QA (Group A part 2, neurocognitive disorders)", () => {
+  // Batch 7 migration (Group A, second half): the seven courses below
+  // must uphold the same content invariants the batch-1 audit and the
+  // batch-2 through 6 suites established — distinct structured case
+  // Presentations, honest drug-gap recording, brain-region graph
+  // anchoring — plus the batch-7-specific architecture checks: the
+  // sequence law (thiamine before glucose) taught across the alcohol
+  // and amnesic courses, the PTA-outpredicts-LOC rule of the TBI
+  // course, the staircase history of the vascular course, and the
+  // two concept courses (the five-floor umbrella and the
+  // restoration-versus-compensation verdict) carrying their own
+  // discipline without inventing drug routes.
+
+  const BATCH7 = [
+    "vascular-dementia",
+    "hiv-neuropsychiatry",
+    "tbi-neuropsychiatry",
+    "alcohol-related-dementia",
+    "amnesic-syndromes",
+    "dementia-management",
+    "memory-rehabilitation",
+  ];
+
+  test("45. batch-7 registry: all seven Group A (part 2) courses present, published, keyed to canonical note slugs", () => {
+    for (const slug of BATCH7) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course).toBeTruthy();
+      expect(course.status).toBe("PUBLISHED");
+      expect(course.groupLetter).toBe("A");
+      expect(course.lessonGroups.length).toBe(6);
+    }
+  });
+
+  test("46. batch-7 clinical cases: distinct structured Presentation on the five disorder courses", () => {
+    for (const slug of BATCH7) {
+      const course = getPsychiatryCourse(slug)!;
+      if (course.kind !== "disorder") continue; // concept courses exempt
+      expect(course.clinicalCases?.length).toBe(2);
+      for (const c of course.clinicalCases ?? []) {
+        expect(c.initialPresentation).toBeTruthy();
+        expect(c.initialPresentation).not.toBe(c.presentation);
+        expect(c.initialPresentation!).not.toContain(c.presentation);
+        expect(c.presentation).not.toContain(c.initialPresentation!);
+        expect(c.initialPresentation!.length).toBeGreaterThan(80);
+      }
+    }
+  });
+
+  test("47. batch-7 drug links only to existing KYP drug lessons; gaps recorded honestly", async () => {
+    const { getAllDrugSlugs } = await import("../src/lib/kyp/data");
+    const built = new Set(getAllDrugSlugs());
+    for (const slug of BATCH7) {
+      const course = getPsychiatryCourse(slug)!;
+      for (const link of course.drugLinks) {
+        if (link.slug) {
+          expect(built.has(link.slug)).toBe(true); // no invented routes
+        }
+      }
+    }
+    // the amnesic course's pharmacology IS the absence: no drug restores
+    // the filed gap, and the thiamine sequence rule is taught, not routed
+    const amn = getPsychiatryCourse("amnesic-syndromes")!;
+    expect(amn.drugLinks.length).toBe(0);
+    expect(amn.contentGaps.join(" ")).toContain("no drug restores");
+    // the memory-rehabilitation prescription pad is a diagram, not a tablet
+    const mr = getPsychiatryCourse("memory-rehabilitation")!;
+    expect(mr.drugLinks.length).toBe(0);
+    expect(mr.contentGaps.join(" ")).toContain("a diagram, not a tablet");
+    // the umbrella course links only the one SSRI it genuinely uses
+    const dm = getPsychiatryCourse("dementia-management")!;
+    expect(dm.drugLinks.map((l: any) => l.slug)).toEqual(["sertraline"]);
+    // the vascular course links the SSRI pair for the riders
+    const vad = getPsychiatryCourse("vascular-dementia")!;
+    expect(vad.drugLinks.map((l: any) => l.slug).sort()).toEqual(["escitalopram", "sertraline"]);
+  });
+
+  test("48. batch-7 exam-critical numbers and anchors recited in content", () => {
+    const vadBlob = JSON.stringify(getPsychiatryCourse("vascular-dementia")!);
+    expect(vadBlob).toContain("staircase"); // the course's shape
+    expect(vadBlob).toContain("15–25%"); // the pure-form share
+    expect(vadBlob).toContain("thalamus"); // the strategic site
+    expect(vadBlob).toContain("NOTCH3"); // CADASIL
+    const hivBlob = JSON.stringify(getPsychiatryCourse("hiv-neuropsychiatry")!);
+    expect(hivBlob).toContain("21.1"); // the pre-HAART incidence
+    expect(hivBlob).toContain("38.5"); // the HAART-era survival
+    expect(hivBlob).toContain("Trojan horse"); // the entry mechanism
+    expect(hivBlob).toContain("St John's Wort"); // the classic interaction
+    const tbiBlob = JSON.stringify(getPsychiatryCourse("tbi-neuropsychiatry")!);
+    expect(tbiBlob).toContain("LOC lies; PTA tells"); // the grading rule
+    expect(tbiBlob).toContain("10–15%"); // the persistent mild tier
+    expect(tbiBlob).toContain("subdural"); // the surgical mimic
+    expect(tbiBlob).toContain("hypopituitarism"); // the endocrine mimic
+    const ardBlob = JSON.stringify(getPsychiatryCourse("alcohol-related-dementia")!);
+    expect(ardBlob).toContain("B1 before D5"); // the sequence law
+    expect(ardBlob).toContain("Marchiafava-Bignami"); // the callosal classic
+    expect(ardBlob).toContain("vermis"); // the gait's first sign
+    expect(ardBlob).toContain("a quarter to a half"); // the honest reversibility
+    const amnBlob = JSON.stringify(getPsychiatryCourse("amnesic-syndromes")!);
+    expect(amnBlob).toContain("immediate intact, recent ruined, remote retained"); // the architecture
+    expect(amnBlob).toContain("one sign is enough"); // the Wernicke rule (lowercase variant)
+    expect(amnBlob).toContain("procedural"); // the surviving gift
+    expect(amnBlob).toContain("₹10–30"); // the prevention cost
+    const dmBlob = JSON.stringify(getPsychiatryCourse("dementia-management")!);
+    expect(dmBlob).toContain("PAIN FUSES"); // the checklist
+    expect(dmBlob).toContain("five floors"); // the architecture
+    expect(dmBlob).toContain("hand-feeding"); // the final-phase evidence
+    expect(dmBlob).toContain("14416"); // the carer's line
+    const mrBlob = JSON.stringify(getPsychiatryCourse("memory-rehabilitation")!);
+    expect(mrBlob).toContain("errorless"); // the founding law
+    expect(mrBlob).toContain("spaced retrieval"); // the fact-planting technique
+    expect(mrBlob).toContain("dependency cage"); // the failure mode
+    expect(mrBlob).toContain("the wall calendar"); // the Indian answer
   });
 });

@@ -39,6 +39,13 @@ import { prionDiseaseCourse } from "./prion-disease";
 import { lewyBodyDementiaCourse } from "./lewy-body-dementia";
 import { parkinsonsDementiaCourse } from "./parkinsons-dementia";
 import { huntingtonsNeuropsychiatryCourse } from "./huntingtons-neuropsychiatry";
+import { vascularDementiaCourse } from "./vascular-dementia";
+import { hivNeuropsychiatryCourse } from "./hiv-neuropsychiatry";
+import { tbiNeuropsychiatryCourse } from "./tbi-neuropsychiatry";
+import { alcoholRelatedDementiaCourse } from "./alcohol-related-dementia";
+import { amnesicSyndromesCourse } from "./amnesic-syndromes";
+import { dementiaManagementCourse } from "./dementia-management";
+import { memoryRehabilitationCourse } from "./memory-rehabilitation";
 
 /**
  * Psychiatry learning-system course registry.
@@ -67,8 +74,11 @@ import { huntingtonsNeuropsychiatryCourse } from "./huntingtons-neuropsychiatry"
  * — neurocognitive disorders, first half): delirium,
  * alzheimers-dementia, frontotemporal-dementia, prion-disease,
  * lewy-body-dementia, parkinsons-dementia,
- * huntingtons-neuropsychiatry. The completion
- * matrix generator audits coverage.
+ * huntingtons-neuropsychiatry. Batch 7 (Group A — neurocognitive
+ * disorders, second half): vascular-dementia, hiv-neuropsychiatry,
+ * tbi-neuropsychiatry, alcohol-related-dementia, amnesic-syndromes,
+ * dementia-management (concept), memory-rehabilitation (concept).
+ * The completion matrix generator audits coverage.
  */
 export const psychiatryCourses: PsychiatryCourse[] = [
   depressiveDisordersCourse,
@@ -111,6 +121,13 @@ export const psychiatryCourses: PsychiatryCourse[] = [
   lewyBodyDementiaCourse,
   parkinsonsDementiaCourse,
   huntingtonsNeuropsychiatryCourse,
+  vascularDementiaCourse,
+  hivNeuropsychiatryCourse,
+  tbiNeuropsychiatryCourse,
+  alcoholRelatedDementiaCourse,
+  amnesicSyndromesCourse,
+  dementiaManagementCourse,
+  memoryRehabilitationCourse,
 ];
 
 export function getPsychiatryCourse(slug: string): PsychiatryCourse | null {
