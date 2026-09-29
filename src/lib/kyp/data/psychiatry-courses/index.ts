@@ -56,6 +56,14 @@ import { partyDrugUseDisordersCourse } from "./party-drug-use-disorders";
 import { volatileSubstanceMisuseCourse } from "./volatile-substance-misuse";
 import { cannabisMentalHealthCourse } from "./cannabis-mental-health";
 import { nicotineDependenceCourse } from "./nicotine-dependence";
+import { elderlyDeliriumCourse } from "./elderly-delirium";
+import { mciCourse } from "./mci";
+import { elderlySubstanceUseCourse } from "./elderly-substance-use";
+import { lateLifePsychosisCourse } from "./late-life-psychosis";
+import { elderlyMoodCourse } from "./elderly-mood";
+import { elderlyAnxietyOcdCourse } from "./elderly-anxiety-ocd";
+import { elderlyPersonalityCourse } from "./elderly-personality";
+import { elderlySuicideCourse } from "./elderly-suicide";
 
 /**
  * Psychiatry learning-system course registry.
@@ -94,7 +102,10 @@ import { nicotineDependenceCourse } from "./nicotine-dependence";
  * hallucinogen-use-disorders. Batch 9 (Group B — substance use
  * disorders, second half): benzodiazepine-misuse,
  * party-drug-use-disorders, volatile-substance-misuse,
- * cannabis-mental-health, nicotine-dependence.
+ * cannabis-mental-health, nicotine-dependence. Batch 10 (Group M —
+ * psychiatry of old age): elderly-delirium, mci,
+ * elderly-substance-use, late-life-psychosis, elderly-mood,
+ * elderly-anxiety-ocd, elderly-personality, elderly-suicide.
  * The completion matrix generator audits coverage.
  */
 export const psychiatryCourses: PsychiatryCourse[] = [
@@ -155,6 +166,14 @@ export const psychiatryCourses: PsychiatryCourse[] = [
   volatileSubstanceMisuseCourse,
   cannabisMentalHealthCourse,
   nicotineDependenceCourse,
+  elderlyDeliriumCourse,
+  mciCourse,
+  elderlySubstanceUseCourse,
+  lateLifePsychosisCourse,
+  elderlyMoodCourse,
+  elderlyAnxietyOcdCourse,
+  elderlyPersonalityCourse,
+  elderlySuicideCourse,
 ];
 
 export function getPsychiatryCourse(slug: string): PsychiatryCourse | null {
