@@ -107,12 +107,13 @@ describe("psychiatry — routes and identity", () => {
 
   test("4b. non-migrated lessons still render the finalized note shell", async () => {
     // A non-migrated disorder lesson keeps the note-shell contract
-    // (phases + India layer + sources disclosure). Batches 4, 6, 7, 8
-    // and 9 migrated anorexia-nervosa, delirium, vascular-dementia and
-    // all ten Group B courses (this test's former exemplars) —
-    // child-neuropsychiatry (Group L) is the next non-migrated
-    // disorder in index order.
-    const { status, html } = await get("/psychiatry/child-neuropsychiatry");
+    // (phases + India layer + sources disclosure). Batches 4, 6-9 and
+    // 12 migrated anorexia-nervosa, delirium, vascular-dementia, all
+    // ten Group B courses and Group L's first half incl.
+    // child-neuropsychiatry (this test's former exemplar) —
+    // paediatric-mood (Group L) is the next non-migrated disorder in
+    // index order.
+    const { status, html } = await get("/psychiatry/paediatric-mood");
     expect(status).toBe(200);
     expect(html).toContain("Understand");
     expect(html).toContain("India in Practice");
@@ -208,8 +209,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
   // registry with provenance, status, mode projections and honest
   // content-gap recording. These tests pin the architecture contract.
 
-  test("15. registry integrity: 3 pilots + batches 1-11 (73 courses), note-slug keyed, valid status", () => {
-    expect(psychiatryCourses.length).toBe(73); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 + 5 batch-8 + 5 batch-9 + 8 batch-10 + 8 batch-11 courses
+  test("15. registry integrity: 3 pilots + batches 1-12 (80 courses), note-slug keyed, valid status", () => {
+    expect(psychiatryCourses.length).toBe(80); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 + 5 batch-8 + 5 batch-9 + 8 batch-10 + 8 batch-11 + 7 batch-12 courses
     const noteSlugs = getAllNoteSlugs();
     for (const course of psychiatryCourses) {
       expect(noteSlugs).toContain(course.slug); // one URL per topic
@@ -252,6 +253,9 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
     expect(getPsychiatryCourse("id-treatment-services")?.kind).toBe("concept"); // batch-11 concept course
     expect(getPsychiatryCourse("mental-health-law")?.groupLetter).toBe("O"); // Group O — batch 11
     expect(getPsychiatryCourse("juvenile-offending")?.kind).toBe("concept"); // batch-11 concept course
+    expect(getPsychiatryCourse("child-assessment-epidemiology")?.groupLetter).toBe("L"); // Group L — batch 12
+    expect(getPsychiatryCourse("child-assessment-epidemiology")?.kind).toBe("concept"); // batch-12 concept course
+    expect(getPsychiatryCourse("autism")?.groupLetter).toBe("L"); // Group L — batch 12
   });
 
   test("16. mode projections: all four modes declared, sections resolve", () => {
@@ -1530,5 +1534,115 @@ describe("psychiatry — batch-11 content QA (Groups N+O, intellectual disabilit
     expect(joBlob).toContain("risk-overlap"); // the principle
     expect(joBlob).toContain("custody"); // the custody reality
     expect(joBlob).toContain("partial-source"); // the preserved honesty flag (case as in the course object)
+  });
+});
+
+
+describe("psychiatry — batch-12 content QA (Group L part 1, child & adolescent psychiatry)", () => {
+  // Batch 12 migration (Group L, first half): the seven courses below
+  // must uphold the established invariants — distinct structured case
+  // Presentations, honest drug-gap recording, brain-region graph
+  // anchoring — plus the group-L-specific checks: the prevalence-mover
+  // arithmetic and multi-informant discipline, the behavioural-
+  // phenotype craft, the learning channels with the both-language
+  // rule, the 18-month flags and ComDEAL/WHO-CST parent training of
+  // the autism course, the brakes-and-engine metaphor with the
+  // Schedule-X discipline, the empathy specifier with the case-manager
+  // model, and the four school-refusal engines with the selective-
+  // mutism ladder.
+
+  const BATCH12 = [
+    "child-assessment-epidemiology",
+    "child-neuropsychiatry",
+    "developmental-disorders",
+    "autism",
+    "adhd",
+    "conduct-disorder",
+    "child-anxiety",
+  ];
+
+  test("65. batch-12 registry: all seven Group L (part 1) courses present, published, keyed to canonical note slugs", () => {
+    for (const slug of BATCH12) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course).toBeTruthy();
+      expect(course.status).toBe("PUBLISHED");
+      expect(course.groupLetter).toBe("L");
+      expect(course.lessonGroups.length).toBe(6);
+      expect(course.provenance.length).toBeGreaterThanOrEqual(10);
+      expect(course.evidenceMap.length).toBeGreaterThanOrEqual(10);
+    }
+  });
+
+  test("66. batch-12 clinical cases: distinct structured Presentation on all seven courses", () => {
+    for (const slug of BATCH12) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course.clinicalCases?.length).toBe(2);
+      for (const c of course.clinicalCases ?? []) {
+        expect(c.initialPresentation).toBeTruthy();
+        expect(c.initialPresentation).not.toBe(c.presentation);
+        expect(c.initialPresentation!).not.toContain(c.presentation);
+        expect(c.presentation).not.toContain(c.initialPresentation!);
+        expect(c.initialPresentation!.length).toBeGreaterThan(80);
+      }
+    }
+  });
+
+  test("67. batch-12 drug links only to existing KYP drug lessons; gaps recorded honestly", async () => {
+    const { getAllDrugSlugs } = await import("../src/lib/kyp/data");
+    const built = new Set(getAllDrugSlugs());
+    for (const slug of BATCH12) {
+      const course = getPsychiatryCourse(slug)!;
+      for (const link of course.drugLinks) {
+        if (link.slug) {
+          expect(built.has(link.slug)).toBe(true); // no invented routes
+        }
+      }
+      // the whole batch is honest-absence: the child pharmacotherapy
+      // tiers (stimulants, atomoxetine, the risperidone irritability
+      // tier, the child SSRI tier) have no KYP lessons — cross-
+      // referenced, never invented
+      expect(course.drugLinks.length).toBe(0);
+      expect(course.contentGaps.length).toBeGreaterThanOrEqual(3);
+    }
+    const adhdCourse = getPsychiatryCourse("adhd")!;
+    expect(adhdCourse.contentGaps.join(" ")).toContain("methylphenidate");
+    const autismCourse = getPsychiatryCourse("autism")!;
+    expect(autismCourse.contentGaps.join(" ")).toContain("risperidone");
+    const caCourse = getPsychiatryCourse("child-anxiety")!;
+    expect(caCourse.contentGaps.join(" ")).toContain("SSRI");
+  });
+
+  test("68. batch-12 exam-critical numbers and anchors recited in content", () => {
+    const caeBlob = JSON.stringify(getPsychiatryCourse("child-assessment-epidemiology")!);
+    expect(caeBlob).toContain("9.5%"); // the UK survey prevalence
+    expect(caeBlob).toContain("13.5%"); // the multi-informant arithmetic
+    expect(caeBlob).toContain("multi-informant"); // the discipline
+    const cnBlob = JSON.stringify(getPsychiatryCourse("child-neuropsychiatry")!);
+    expect(cnBlob).toContain("behavioural phenotype"); // the frame
+    expect(cnBlob).toContain("FASD"); // the teratology
+    expect(cnBlob).toContain("pseudoseizure"); // the differentiation
+    const ddBlob = JSON.stringify(getPsychiatryCourse("developmental-disorders")!);
+    expect(ddBlob).toContain("RPwD"); // the entitlements
+    expect(ddBlob).toContain("accommodation"); // the board provisions
+    const auBlob = JSON.stringify(getPsychiatryCourse("autism")!);
+    expect(auBlob).toContain("18-month"); // the red-flag age
+    expect(auBlob).toContain("masking"); // the missed-girl story
+    expect(auBlob).toContain("ComDEAL"); // the NIMHANS programme
+    expect(auBlob).toContain("WHO CST"); // the caregiver training
+    const adhdBlob = JSON.stringify(getPsychiatryCourse("adhd")!);
+    expect(adhdBlob).toContain("brakes"); // the metaphor
+    expect(adhdBlob).toContain("engine"); // the metaphor
+    expect(adhdBlob).toContain("Schedule X"); // the India rule
+    expect(adhdBlob).toContain("methylphenidate"); // the first-line tier
+    expect(adhdBlob).toContain("adult ADHD"); // the lifespan frame
+    const cdBlob = JSON.stringify(getPsychiatryCourse("conduct-disorder")!);
+    expect(cdBlob).toContain("ODD"); // the ladder
+    expect(cdBlob).toContain("prosocial"); // the specifier
+    expect(cdBlob).toContain("JJ Act"); // the India interface
+    expect(cdBlob).toContain("case-manager"); // the service model
+    const canBlob = JSON.stringify(getPsychiatryCourse("child-anxiety")!);
+    expect(canBlob).toContain("somatic"); // the carousel
+    expect(canBlob).toContain("school refusal"); // the four engines
+    expect(canBlob).toContain("selective mutism"); // the ladder
   });
 });
