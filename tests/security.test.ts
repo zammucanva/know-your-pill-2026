@@ -191,9 +191,13 @@ describe("auth/session hardening at HTTP level", () => {
   test("17. cookie value is opaque (not decodable JSON/PII)", async () => {
     const user = await createTestUser("sec", 17);
     const token = user.jar.get(SESSION_COOKIE)!;
-    // Not base64-encoded JSON
+    // Not base64-encoded JSON. The raw payload is random bytes, so it must
+    // never PARSE as JSON — checking only the first byte ("{") was flaky:
+    // a random payload whose first byte happens to be 0x7B (p=1/256) failed
+    // a still-opaque token. The parse check is strictly stronger (catches
+    // objects, arrays, scalars) and deterministic for random payloads.
     const decoded = Buffer.from(token.split(".")[0], "base64url").toString("utf8");
-    expect(decoded.startsWith("{")).toBe(false);
+    expect(() => JSON.parse(decoded)).toThrow();
     expect(decoded.toLowerCase()).not.toContain("email");
     // Not the legacy format
     expect(() => JSON.parse(Buffer.from(token, "base64").toString("utf8"))).toThrow();
