@@ -64,7 +64,7 @@ export const suicideSelfHarmCourse: PsychiatryCourse = {
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The most common driver illness — treat it aggressively" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "Mixed states = the highest-risk window" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "Command hallucinations override reassurance logic" },
-    { label: "Alcohol & Substance Use", type: "condition", href: "/psychiatry/substance-use-overview/", note: "Relapse prevention IS suicide prevention" },
+    { label: "Substance Use — The Reward Hijack", type: "condition", href: "/psychiatry/substance-use-overview/", note: "Relapse prevention IS suicide prevention" },
     { label: "Dysthymia, Cyclothymia & Hyperthymia", type: "condition", href: "/psychiatry/persistent-mood-disorders/", note: "Chronic passive-ideation risk is real and under-asked" },
     { label: "Acute & Transient Psychotic Disorders", type: "condition", href: "/psychiatry/acute-transient-psychosis/", note: "Post-results season — the Indian student emergency" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The SSRI target when depression is the driver" },
