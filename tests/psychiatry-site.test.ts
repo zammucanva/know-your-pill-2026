@@ -208,8 +208,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
   // registry with provenance, status, mode projections and honest
   // content-gap recording. These tests pin the architecture contract.
 
-  test("15. registry integrity: 3 pilots + batches 1-9 (57 courses), note-slug keyed, valid status", () => {
-    expect(psychiatryCourses.length).toBe(57); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 + 5 batch-8 + 5 batch-9 courses
+  test("15. registry integrity: 3 pilots + batches 1-10 (65 courses), note-slug keyed, valid status", () => {
+    expect(psychiatryCourses.length).toBe(65); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 + 5 batch-8 + 5 batch-9 + 8 batch-10 courses
     const noteSlugs = getAllNoteSlugs();
     for (const course of psychiatryCourses) {
       expect(noteSlugs).toContain(course.slug); // one URL per topic
@@ -245,6 +245,9 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
     expect(getPsychiatryCourse("hallucinogen-use-disorders")?.kind).toBe("disorder"); // batch-8 disorder course
     expect(getPsychiatryCourse("benzodiazepine-misuse")?.groupLetter).toBe("B"); // Group B — batch 9
     expect(getPsychiatryCourse("nicotine-dependence")?.kind).toBe("disorder"); // batch-9 disorder course
+    expect(getPsychiatryCourse("elderly-delirium")?.groupLetter).toBe("M"); // Group M — batch 10
+    expect(getPsychiatryCourse("elderly-mood")?.kind).toBe("disorder"); // batch-10 disorder course
+    expect(getPsychiatryCourse("elderly-suicide")?.groupLetter).toBe("M"); // Group M — batch 10
   });
 
   test("16. mode projections: all four modes declared, sections resolve", () => {
@@ -1270,5 +1273,143 @@ describe("psychiatry — batch-9 content QA (Group B part 2, substance use disor
     expect(nicBlob).toContain("clozapine"); // the level-rise pearl
     expect(nicBlob).toContain("submucous fibrosis"); // the chewer's lesion
     expect(nicBlob).toContain("4–5 kg"); // the weight script
+  });
+});
+
+
+describe("psychiatry — batch-10 content QA (Group M, psychiatry of old age)", () => {
+  // Batch 10 migration (Group M): the eight courses below must uphold
+  // the same content invariants the batch-1 through 9 suites
+  // established — distinct structured case Presentations, honest
+  // drug-gap recording, brain-region graph anchoring — plus the
+  // group-M-specific checks: the quiet-emergency discipline of the
+  // elderly delirium course, the crossroads honesty of MCI, the
+  // silent-epidemic and tablet-bag craft of elderly substance use,
+  // the ridden-upon workup of late-life psychosis, the
+  // pseudodementia trap and geriatric prescribing laws of elderly
+  // mood, the wrong-tablet lesson of elderly anxiety, the disguises
+  // and informant discipline of elderly personality, and the
+  // lethality-not-attempts + means-audit safety craft of elderly
+  // suicide.
+
+  const BATCH10 = [
+    "elderly-delirium",
+    "mci",
+    "elderly-substance-use",
+    "late-life-psychosis",
+    "elderly-mood",
+    "elderly-anxiety-ocd",
+    "elderly-personality",
+    "elderly-suicide",
+  ];
+
+  test("57. batch-10 registry: all eight Group M courses present, published, keyed to canonical note slugs", () => {
+    for (const slug of BATCH10) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course).toBeTruthy();
+      expect(course.status).toBe("PUBLISHED");
+      expect(course.groupLetter).toBe("M");
+      expect(course.lessonGroups.length).toBe(6);
+      expect(course.provenance.length).toBeGreaterThanOrEqual(10);
+      expect(course.evidenceMap.length).toBeGreaterThanOrEqual(10);
+    }
+  });
+
+  test("58. batch-10 clinical cases: distinct structured Presentation on all eight courses", () => {
+    for (const slug of BATCH10) {
+      const course = getPsychiatryCourse(slug)!;
+      expect(course.clinicalCases?.length).toBe(2);
+      for (const c of course.clinicalCases ?? []) {
+        expect(c.initialPresentation).toBeTruthy();
+        expect(c.initialPresentation).not.toBe(c.presentation);
+        expect(c.initialPresentation!).not.toContain(c.presentation);
+        expect(c.presentation).not.toContain(c.initialPresentation!);
+        expect(c.initialPresentation!.length).toBeGreaterThan(80);
+      }
+    }
+  });
+
+  test("59. batch-10 drug links only to existing KYP drug lessons; gaps recorded honestly", async () => {
+    const { getAllDrugSlugs } = await import("../src/lib/kyp/data");
+    const built = new Set(getAllDrugSlugs());
+    for (const slug of BATCH10) {
+      const course = getPsychiatryCourse(slug)!;
+      for (const link of course.drugLinks) {
+        if (link.slug) {
+          expect(built.has(link.slug)).toBe(true); // no invented routes
+        }
+      }
+    }
+    // elderly-delirium / mci / late-life-psychosis / elderly-personality:
+    // no drug routes by design — the haloperidol, donepezil, antipsychotic
+    // and refusal-rule tiers are gap-recorded
+    const ed = getPsychiatryCourse("elderly-delirium")!;
+    expect(ed.drugLinks.length).toBe(0);
+    expect(ed.contentGaps.join(" ")).toContain("Haloperidol");
+    const mc = getPsychiatryCourse("mci")!;
+    expect(mc.drugLinks.length).toBe(0);
+    expect(mc.contentGaps.join(" ")).toMatch(/[Dd]onepezil/);
+    const llp = getPsychiatryCourse("late-life-psychosis")!;
+    expect(llp.drugLinks.length).toBe(0);
+    expect(llp.contentGaps.join(" ")).toContain("risperidone");
+    const ep = getPsychiatryCourse("elderly-personality")!;
+    expect(ep.drugLinks.length).toBe(0);
+    // elderly-mood links the note's first-line SSRI pair + mirtazapine niche
+    const em = getPsychiatryCourse("elderly-mood")!;
+    expect(em.drugLinks.map((l: any) => l.slug).sort()).toEqual(["escitalopram", "mirtazapine", "sertraline"]);
+    // elderly-anxiety-ocd links the SSRI pair; oxazepam gap-recorded
+    const eao = getPsychiatryCourse("elderly-anxiety-ocd")!;
+    expect(eao.drugLinks.map((l: any) => l.slug).sort()).toEqual(["escitalopram", "sertraline"]);
+    expect(eao.contentGaps.join(" ")).toContain("Oxazepam");
+    // elderly-suicide links the engine-treatment pair
+    const es = getPsychiatryCourse("elderly-suicide")!;
+    expect(es.drugLinks.map((l: any) => l.slug).sort()).toEqual(["escitalopram", "sertraline"]);
+    // elderly-substance-use: naltrexone + the benzo class gap-recorded
+    const esu = getPsychiatryCourse("elderly-substance-use")!;
+    expect(esu.drugLinks.length).toBe(0);
+    expect(esu.contentGaps.join(" ")).toContain("Naltrexone");
+  });
+
+  test("60. batch-10 exam-critical numbers and anchors recited in content", () => {
+    const edBlob = JSON.stringify(getPsychiatryCourse("elderly-delirium")!);
+    expect(edBlob).toContain("hypoactive"); // the missed subtype
+    expect(edBlob).toContain("vulnerability"); // x insult framing
+    expect(edBlob).toContain("haloperidol"); // with the 0.5 mg start
+    expect(edBlob).toContain("0.5"); // the geriatric dose
+    expect(edBlob).toContain("prevention bundle"); // the proactive craft
+    const mcBlob = JSON.stringify(getPsychiatryCourse("mci")!);
+    expect(mcBlob).toContain("10–15%"); // the yearly conversion
+    expect(mcBlob).toContain("reversible"); // the honest workup
+    expect(mcBlob).toContain("MoCA"); // the testing tier
+    const esuBlob = JSON.stringify(getPsychiatryCourse("elderly-substance-use")!);
+    expect(esuBlob).toContain("silent"); // the epidemic's shape
+    expect(esuBlob).toContain("threshold"); // the lower-dose problem
+    expect(esuBlob).toContain("23%"); // the setting ladder top
+    expect(esuBlob).toContain("CIWA"); // the withdrawal protocol
+    const llpBlob = JSON.stringify(getPsychiatryCourse("late-life-psychosis")!);
+    expect(llpBlob).toContain("partition"); // the delusion theme
+    expect(llpBlob).toContain("deafness"); // the sensory driver
+    expect(llpBlob).toContain("very-late-onset"); // the after-60 subtype
+    const emBlob = JSON.stringify(getPsychiatryCourse("elderly-mood")!);
+    expect(emBlob).toContain("pseudodementia"); // the mask
+    expect(emBlob).toContain("Start LOW, go SLOW, but GO"); // the dose law
+    expect(emBlob).toContain("HY-FIB"); // the watch-list
+    expect(emBlob).toContain("M-T-M-S-D"); // the mania workup
+    expect(emBlob).toContain("ECT"); // the positioning
+    const eaoBlob = JSON.stringify(getPsychiatryCourse("elderly-anxiety-ocd")!);
+    expect(eaoBlob).toContain("general neurotic syndrome"); // the note's frame
+    expect(eaoBlob).toContain("oxazepam"); // the benzo exception
+    expect(eaoBlob).toContain("fear of falling"); // the elderly phobia
+    expect(eaoBlob).toContain("after-50"); // the obsessional organic rule
+    const epBlob = JSON.stringify(getPsychiatryCourse("elderly-personality")!);
+    expect(epBlob).toContain("7–10%"); // the prevalence synthesis
+    expect(epBlob).toContain("ECA"); // the decline data
+    expect(epBlob).toContain("informant"); // the discipline
+    const esBlob = JSON.stringify(getPsychiatryCourse("elderly-suicide")!);
+    expect(esBlob).toContain("D-PBI-BA"); // the risk stack
+    expect(esBlob).toContain("SETTLED"); // the warning signs
+    expect(esBlob).toContain("lethality"); // the pattern
+    expect(esBlob).toContain("means"); // the audit
+    expect(esBlob).toContain("14416"); // Tele-MANAS
   });
 });
