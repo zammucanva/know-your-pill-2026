@@ -330,7 +330,8 @@ describe("password reset completion", () => {
       }
     }
     expect(saw429).toBe(true);
-  });
+  }, 20000); // 21 sequential round-trips exceed bun's 5s default on a
+  // loaded CI runner — the throttle itself is unaffected (same assertion).
 });
 
 // ─── Authenticated password change ─────────────────────────────────────────
