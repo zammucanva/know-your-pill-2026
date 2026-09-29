@@ -51,6 +51,11 @@ import { alcoholUseDisordersCourse } from "./alcohol-use-disorders";
 import { opioidUseDisordersCourse } from "./opioid-use-disorders";
 import { stimulantUseDisordersCourse } from "./stimulant-use-disorders";
 import { hallucinogenUseDisordersCourse } from "./hallucinogen-use-disorders";
+import { benzodiazepineMisuseCourse } from "./benzodiazepine-misuse";
+import { partyDrugUseDisordersCourse } from "./party-drug-use-disorders";
+import { volatileSubstanceMisuseCourse } from "./volatile-substance-misuse";
+import { cannabisMentalHealthCourse } from "./cannabis-mental-health";
+import { nicotineDependenceCourse } from "./nicotine-dependence";
 
 /**
  * Psychiatry learning-system course registry.
@@ -86,7 +91,10 @@ import { hallucinogenUseDisordersCourse } from "./hallucinogen-use-disorders";
  * Batch 8 (Group B — substance use disorders, first half):
  * substance-use-overview (concept), alcohol-use-disorders,
  * opioid-use-disorders, stimulant-use-disorders,
- * hallucinogen-use-disorders.
+ * hallucinogen-use-disorders. Batch 9 (Group B — substance use
+ * disorders, second half): benzodiazepine-misuse,
+ * party-drug-use-disorders, volatile-substance-misuse,
+ * cannabis-mental-health, nicotine-dependence.
  * The completion matrix generator audits coverage.
  */
 export const psychiatryCourses: PsychiatryCourse[] = [
@@ -142,6 +150,11 @@ export const psychiatryCourses: PsychiatryCourse[] = [
   opioidUseDisordersCourse,
   stimulantUseDisordersCourse,
   hallucinogenUseDisordersCourse,
+  benzodiazepineMisuseCourse,
+  partyDrugUseDisordersCourse,
+  volatileSubstanceMisuseCourse,
+  cannabisMentalHealthCourse,
+  nicotineDependenceCourse,
 ];
 
 export function getPsychiatryCourse(slug: string): PsychiatryCourse | null {
