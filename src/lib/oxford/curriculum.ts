@@ -45,3 +45,52 @@ export function curriculumIndex(note: PsychiatryNote): { letter: string; positio
 export function coreNotes(): PsychiatryNote[] {
   return loadCorpus().notes.filter((n) => n.frontmatter.priority === "P1");
 }
+
+/* ─── Learner-facing curriculum order (single authority) ─────────────── */
+
+/**
+ * The curriculum-normalized section order (2026-09-30):
+ * Q. Foundations & sciences FIRST, then the clinical progression
+ * A–P, then R. The source index order is immutable; this is the
+ * presentation-layer ordering used by the hub, library, self-test
+ * AND the course-to-course navigation so all surfaces agree.
+ */
+export const LEARNER_SECTION_ORDER = [
+  "Q", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
+  "K", "L", "M", "N", "O", "P", "R",
+] as const;
+
+/**
+ * The full learner-facing course order: groups in LEARNER_SECTION_ORDER,
+ * and within each group Foundational/Core (P1) → Supporting (P2) →
+ * Reference (P3), preserving the index order inside each tier
+ * (stable sort). Returns slugs.
+ */
+export function curriculumOrderSlugs(): string[] {
+  const corpus = loadCorpus();
+  const TIER_ORDER: Record<string, number> = { P1: 0, P2: 1, P3: 2 };
+  return [...corpus.groups]
+    .sort(
+      (a, b) =>
+        LEARNER_SECTION_ORDER.indexOf(a.letter as never) -
+        LEARNER_SECTION_ORDER.indexOf(b.letter as never)
+    )
+    .flatMap((g) =>
+      g.noteSlugs
+        .map((slug) => corpus.bySlug.get(slug))
+        .filter((n): n is PsychiatryNote => Boolean(n))
+        .sort((a, b) => TIER_ORDER[a.frontmatter.priority] - TIER_ORDER[b.frontmatter.priority])
+        .map((n) => n.frontmatter.slug)
+    );
+}
+
+/** Adjacent courses in the learner-facing order (prev/next). */
+export function adjacentCurriculum(slug: string): { prev: string | null; next: string | null } {
+  const order = curriculumOrderSlugs();
+  const idx = order.indexOf(slug);
+  if (idx === -1) return { prev: null, next: null };
+  return {
+    prev: idx > 0 ? order[idx - 1] : null,
+    next: idx >= 0 && idx < order.length - 1 ? order[idx + 1] : null,
+  };
+}

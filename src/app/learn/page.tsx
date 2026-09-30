@@ -10,6 +10,7 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
 import { drugs, diseases, substancePages, brainRegions, pathways, sideEffects } from "@/lib/kyp/data";
+import { psychiatryStats } from "@/lib/kyp/data/psychiatry-search-records.generated";
 
 /**
  * /learn — the central educational dashboard of KYP.
@@ -83,6 +84,7 @@ export default function LearnPage() {
             {/* Real stats — one inline line, no cards */}
             <Reveal delay={0.2}>
               <p className="mt-12 text-sm text-muted-foreground">
+                <span className="font-serif text-lg font-bold text-foreground">{psychiatryStats.lessons}</span> psychiatry lessons ·
                 <span className="font-serif text-lg font-bold text-foreground">{drugCount}</span> medications ·{" "}
                 <span className="font-serif text-lg font-bold text-foreground">{diseaseCount}</span> disease module ·{" "}
                 <span className="font-serif text-lg font-bold text-foreground">{substanceCount}</span> substances ·{" "}
@@ -105,6 +107,43 @@ export default function LearnPage() {
               </h2>
             </Reveal>
 
+            {/* PRIMARY PATHWAY — Psychiatry (the full 109-lesson curriculum) */}
+            <Reveal delay={0.08}>
+              <Link
+                href="/psychiatry"
+                className="group block border-b border-border/40 pb-10 mb-10"
+              >
+                <div className="flex items-end justify-between gap-6">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-3">
+                      <Brain className="h-5 w-5 text-brand" strokeWidth={1.5} />
+                      <span className="font-mono text-xs text-muted-foreground/50">01 — Primary Pathway</span>
+                    </div>
+                    <h3
+                      className="font-serif font-semibold tracking-tight text-foreground"
+                      style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
+                    >
+                      Psychiatry
+                    </h3>
+                    <p className="mt-4 max-w-xl text-body text-muted-foreground leading-relaxed">
+                      The complete psychiatry curriculum — {psychiatryStats.lessons} lessons across{" "}
+                      {psychiatryStats.domains} clinical domains, each a six-lesson course with
+                      foundations, neuroscience, clinical practice, the Indian context, exam
+                      revision and active recall.
+                    </p>
+                    <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground/60">
+                      <span><span className="font-semibold text-foreground">{psychiatryStats.lessons}</span> lessons</span>
+                      <span>·</span>
+                      <span><span className="font-semibold text-foreground">{psychiatryStats.questions}</span> questions</span>
+                      <span>·</span>
+                      <span>Foundations → clinical → services</span>
+                    </div>
+                  </div>
+                  <ArrowRight className="h-6 w-6 shrink-0 text-muted-foreground/30 transition-all duration-300 group-hover:text-brand group-hover:translate-x-1" />
+                </div>
+              </Link>
+            </Reveal>
+
             {/* PRIMARY PATHWAY — Medications (dominant, full-width) */}
             <Reveal delay={0.08}>
               <Link
@@ -115,7 +154,7 @@ export default function LearnPage() {
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
                       <BookOpen className="h-5 w-5 text-brand" strokeWidth={1.5} />
-                      <span className="font-mono text-xs text-muted-foreground/50">01 — Primary Pathway</span>
+                      <span className="font-mono text-xs text-muted-foreground/50">02 — Primary Pathway</span>
                     </div>
                     <h3
                       className="font-serif font-semibold tracking-tight text-foreground"

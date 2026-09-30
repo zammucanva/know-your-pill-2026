@@ -14,8 +14,26 @@
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { buildPsychiatrySearchRecords } from "../src/lib/oxford/search";
+import { loadCorpus } from "../src/lib/oxford/loader";
+import { getPsychiatryCourse } from "../src/lib/kyp/data/psychiatry-courses";
 
 const records = buildPsychiatrySearchRecords();
+
+// Curriculum stats — derived from the corpus + registry at generation
+// time so downstream client pages (e.g. /learn) never hardcode stale
+// counts. Regenerated together with the records.
+const corpus = loadCorpus();
+const courseKinds = corpus.notes
+  .map((n) => getPsychiatryCourse(n.frontmatter.slug)?.kind)
+  .filter(Boolean);
+const statsExport = `export const psychiatryStats = {
+  lessons: ${corpus.noteCount},
+  domains: ${corpus.groups.length},
+  questions: ${corpus.mcqCount},
+  disorderCourses: ${courseKinds.filter((k) => k === "disorder").length},
+  conceptLessons: ${courseKinds.filter((k) => k === "concept").length},
+};
+`;
 
 const header = `/**
  * AUTO-GENERATED — KYP Psychiatry search records. DO NOT EDIT BY HAND.
@@ -46,7 +64,7 @@ const body = records
   })
   .join("\n");
 
-const file = `${header}${body}\n];\n`;
+const file = `${header}${body}\n];\n\n${statsExport}`;
 
 const outPath = join(process.cwd(), "src/lib/kyp/data/psychiatry-search-records.generated.ts");
 writeFileSync(outPath, file);

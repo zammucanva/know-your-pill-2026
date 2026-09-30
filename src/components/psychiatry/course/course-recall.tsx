@@ -1,12 +1,24 @@
 "use client";
 
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ArrowLeft, ArrowRight, Library } from "lucide-react";
+import Link from "next/link";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { Accordion } from "@/components/kyp/ui/accordion";
+import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
 import type { PsychiatryCourse } from "./course-types";
 import type { CategorisedReferences } from "@/lib/kyp/data";
+import { cn } from "@/lib/utils";
+
+/** An adjacent course in the learner-facing curriculum order. */
+export interface AdjacentCourseRef {
+  slug: string;
+  title: string;
+  tagline: string;
+  groupLetter: string;
+  groupName: string;
+}
 
 /* ============================================================
    Lesson 6 (Active Recall layer, minus the shared
@@ -117,6 +129,117 @@ export function CourseReferences({ course }: { course: PsychiatryCourse }) {
             </p>
           </div>
         </div>
+      </Container>
+    </Section>
+  );
+}
+
+/* ============================================================
+   Curriculum continuation — the closed end of every course.
+   Adjacency comes from the learner-facing curriculum order
+   (same authority as the library: Q first, then A–P, R; tier
+   order within groups) — computed on the server, never guessed.
+   ============================================================ */
+
+function AdjacentCard({
+  neighbor,
+  direction,
+}: {
+  neighbor: AdjacentCourseRef;
+  direction: "prev" | "next";
+}) {
+  return (
+    <Link href={`/psychiatry/${neighbor.slug}`} className="group block h-full">
+      <CardPrimitive className="h-full" interactive>
+        <CardBody className="flex h-full flex-col p-5">
+          <p
+            className={cn(
+              "text-overline",
+              direction === "next" ? "text-brand" : "text-muted-foreground"
+            )}
+          >
+            {direction === "next" ? "Next lesson" : "Previous lesson"}
+          </p>
+          <p className="mt-2.5 text-body font-semibold leading-snug text-foreground group-hover:text-brand">
+            {neighbor.title}
+          </p>
+          <p className="mt-1.5 line-clamp-2 text-caption leading-relaxed text-muted-foreground">
+            {neighbor.tagline}
+          </p>
+          <p className="mt-auto pt-4 text-caption text-muted-foreground/80">
+            <span className="font-mono">{neighbor.groupLetter}.</span> {neighbor.groupName}
+          </p>
+        </CardBody>
+      </CardPrimitive>
+    </Link>
+  );
+}
+
+/** Curriculum continuation block (id="next-course"). */
+export function CourseNextStep({
+  course,
+  adjacent,
+}: {
+  course: PsychiatryCourse;
+  adjacent: { prev: AdjacentCourseRef | null; next: AdjacentCourseRef | null };
+}) {
+  const hasAny = adjacent.prev || adjacent.next;
+  return (
+    <Section id="next-course" className="border-t border-border/60 bg-muted/20">
+      <Container width="narrow">
+        <SectionHeader
+          eyebrow="Continue"
+          title={hasAny ? "Where the curriculum goes next." : "You have reached the end."}
+          align="start"
+        />
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          {adjacent.prev ? (
+            <AdjacentCard neighbor={adjacent.prev} direction="prev" />
+          ) : (
+            <Link href="/psychiatry/library" className="group block h-full">
+              <CardPrimitive className="h-full" interactive>
+                <CardBody className="flex h-full flex-col p-5">
+                  <p className="text-overline text-muted-foreground">Start of the curriculum</p>
+                  <p className="mt-2.5 inline-flex items-center gap-1.5 text-body font-semibold text-foreground group-hover:text-brand">
+                    <ArrowLeft className="h-3.5 w-3.5" aria-hidden /> Back to the Library
+                  </p>
+                  <p className="mt-1.5 text-caption leading-relaxed text-muted-foreground">
+                    Browse all 109 lessons across the 18 clinical domains.
+                  </p>
+                </CardBody>
+              </CardPrimitive>
+            </Link>
+          )}
+          {adjacent.next ? (
+            <AdjacentCard neighbor={adjacent.next} direction="next" />
+          ) : (
+            <Link href="/psychiatry/self-test" className="group block h-full">
+              <CardPrimitive className="h-full" interactive>
+                <CardBody className="flex h-full flex-col p-5">
+                  <p className="text-overline text-brand">Curriculum complete</p>
+                  <p className="mt-2.5 inline-flex items-center gap-1.5 text-body font-semibold text-foreground group-hover:text-brand">
+                    Test yourself <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+                  </p>
+                  <p className="mt-1.5 text-caption leading-relaxed text-muted-foreground">
+                    719 authored self-test questions with explanations — mixed across the whole
+                    curriculum.
+                  </p>
+                </CardBody>
+              </CardPrimitive>
+            </Link>
+          )}
+        </div>
+        <p className="mt-6 text-caption text-muted-foreground">
+          <Library className="mr-1 inline h-3 w-3" aria-hidden />
+          Order follows the KYP Psychiatry curriculum —{" "}
+          <Link
+            href={`/psychiatry/library#group-${course.groupLetter}`}
+            className="text-brand underline-offset-4 hover:underline"
+          >
+            {course.groupLetter}. {course.groupName}
+          </Link>{" "}
+          and onward.
+        </p>
       </Container>
     </Section>
   );
