@@ -105,33 +105,39 @@ describe("psychiatry — routes and identity", () => {
     expect(sz.html).toContain("content gaps");
   });
 
-  test("4b. non-migrated lessons still render the finalized note shell", async () => {
-    // A non-migrated disorder lesson keeps the note-shell contract
-    // (phases + India layer + sources disclosure). Batches 4, 6-9 and
-    // 12 migrated anorexia-nervosa, delirium, vascular-dementia, all
-    // ten Group B courses and Group L's first half incl.
-    // child-neuropsychiatry (this test's former exemplar) —
-    // paediatric-mood and all of Group L (this test's former
-    // exemplars) — with Groups C-O, A-L and P now complete, batch 15
-    // migrated all eleven remaining Group Q courses (psychiatric-
-    // phenomenology was this test's former exemplar); the remaining
-    // un-migrated notes are the four Group R concept notes;
-    // primary-care-psychiatry (R1) is next in index order and
-    // renders the same six-phase note-shell contract.
-    const { status, html } = await get("/psychiatry/primary-care-psychiatry");
-    expect(status).toBe(200);
-    expect(html).toContain("Understand");
-    expect(html).toContain("India in Practice");
-    expect(html).toContain("Sources &amp; References");
+  test("4b. migration complete: all 109 lessons render the six-lesson course view (no note shells remain)", async () => {
+    // The migration is COMPLETE: batches 1-16 + the three pilots have
+    // migrated every one of the 109 source lessons to the six-lesson
+    // PsychiatryCourse architecture. The former contract (non-migrated
+    // lessons render the finalized note shell) has no remaining
+    // subject — this test now asserts the COMPLETED state: every
+    // lesson route serves the migrated course view, and no page still
+    // renders the note-shell phase markers.
+    const slugs = getAllNoteSlugs();
+    expect(slugs.length).toBe(109);
+    let nonCourse: string[] = [];
+    for (const slug of slugs) {
+      if (!getPsychiatryCourse(slug)) nonCourse.push(slug);
+    }
+    expect(nonCourse).toEqual([]); // every source lesson registered
+    // Spot-census the last batch's exemplars (Group R) — migrated
+    // course view, not the note shell.
+    for (const slug of ["primary-care-psychiatry", "mh-services", "refugee-mental-health", "voluntary-sector"]) {
+      const { status, html } = await get(`/psychiatry/${slug}`);
+      expect(status).toBe(200);
+      expect(html).toContain("Foundations");
+      expect(html).toContain("Indian Practice");
+    }
   });
 
-  test("5. concept lesson (primary-care-psychiatry) serves 200", async () => {
-    // Batch 15 migrated psychiatric-phenomenology (this test's former
-    // exemplar) — primary-care-psychiatry (Group R) is the next
-    // non-migrated concept note in index order.
+  test("5. concept lesson (primary-care-psychiatry) serves the migrated course", async () => {
+    // Batch 16 migrated primary-care-psychiatry (Group R, P1) — the
+    // final concept note. The migration census is complete: all 109
+    // source lessons are registered PsychiatryCourses.
     const { status, html } = await get("/psychiatry/primary-care-psychiatry");
     expect(status).toBe(200);
     expect(html).toContain("Primary Care");
+    expect(html).toContain("Foundations");
   });
 
   test("6. all 109 lesson routes serve 200", async () => {
@@ -217,8 +223,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
   // registry with provenance, status, mode projections and honest
   // content-gap recording. These tests pin the architecture contract.
 
-  test("15. registry integrity: 3 pilots + batches 1-15 (105 courses), note-slug keyed, valid status", () => {
-    expect(psychiatryCourses.length).toBe(105); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 + 5 batch-8 + 5 batch-9 + 8 batch-10 + 8 batch-11 + 7 batch-12 + 7 batch-13 + 7 batch-14 + 11 batch-15 courses
+  test("15. registry integrity: 3 pilots + batches 1-16 (109 courses — COMPLETE), note-slug keyed, valid status", () => {
+    expect(psychiatryCourses.length).toBe(109); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 + 5 batch-8 + 5 batch-9 + 8 batch-10 + 8 batch-11 + 7 batch-12 + 7 batch-13 + 7 batch-14 + 11 batch-15 + 4 batch-16 courses = every source lesson
     const noteSlugs = getAllNoteSlugs();
     for (const course of psychiatryCourses) {
       expect(noteSlugs).toContain(course.slug); // one URL per topic
@@ -275,6 +281,10 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
     expect(getPsychiatryCourse("psychiatric-genetics")?.groupLetter).toBe("Q"); // Group Q — batch 15
     expect(getPsychiatryCourse("neuroimaging")?.kind).toBe("concept"); // batch-15 concept course
     expect(getPsychiatryCourse("transcultural-stigma")?.groupLetter).toBe("Q"); // Group Q — batch 15
+    expect(getPsychiatryCourse("primary-care-psychiatry")?.groupLetter).toBe("R"); // Group R — batch 16
+    expect(getPsychiatryCourse("mh-services")?.kind).toBe("concept"); // batch-16 concept course
+    expect(getPsychiatryCourse("refugee-mental-health")?.groupLetter).toBe("R"); // Group R — batch 16
+    expect(getPsychiatryCourse("voluntary-sector")?.kind).toBe("concept"); // batch-16 concept course — the last of 109
   });
 
   test("16. mode projections: all four modes declared, sections resolve", () => {

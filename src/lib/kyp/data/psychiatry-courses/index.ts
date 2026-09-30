@@ -104,6 +104,10 @@ import { neuroimagingCourse } from "./neuroimaging";
 import { memoryEmotionScienceCourse } from "./memory-emotion-science";
 import { psychodynamicTheoriesCourse } from "./psychodynamic-theories";
 import { transculturalStigmaCourse } from "./transcultural-stigma";
+import { primaryCarePsychiatryCourse } from "./primary-care-psychiatry";
+import { mhServicesCourse } from "./mh-services";
+import { refugeeMentalHealthCourse } from "./refugee-mental-health";
+import { voluntarySectorCourse } from "./voluntary-sector";
 
 /**
  * Psychiatry learning-system course registry.
@@ -168,7 +172,10 @@ import { transculturalStigmaCourse } from "./transcultural-stigma";
  * cognitive-assessment, psychiatric-classification,
  * neuroendocrinology, psychiatric-genetics, neuroimaging,
  * memory-emotion-science, psychodynamic-theories,
- * transcultural-stigma (all concept).
+ * transcultural-stigma (all concept). Batch 16 (Group R — social
+ * psychiatry & services, completing the source corpus):
+ * primary-care-psychiatry, mh-services, refugee-mental-health,
+ * voluntary-sector (all concept).
  * The completion matrix generator audits coverage.
  */
 export const psychiatryCourses: PsychiatryCourse[] = [
@@ -277,6 +284,10 @@ export const psychiatryCourses: PsychiatryCourse[] = [
   memoryEmotionScienceCourse,
   psychodynamicTheoriesCourse,
   transculturalStigmaCourse,
+  primaryCarePsychiatryCourse,
+  mhServicesCourse,
+  refugeeMentalHealthCourse,
+  voluntarySectorCourse,
 ];
 
 export function getPsychiatryCourse(slug: string): PsychiatryCourse | null {
