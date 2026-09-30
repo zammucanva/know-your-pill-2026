@@ -122,7 +122,7 @@ export function selectWeakTopics(
     const dueCount = due.get(row.key) ?? 0;
     const mistakeCount = mistakes.get(row.key) ?? 0;
     // Class membership from the generated registry artifact (keeps the
-    // 143-monograph registry out of this client-side module's bundle).
+    // 145-monograph registry out of this client-side module's bundle).
     const drugSlugs = CLASS_DRUG_SLUGS[row.key] ?? [];
     if (drugSlugs.length === 0) continue;
 

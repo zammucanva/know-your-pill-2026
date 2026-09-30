@@ -87,7 +87,7 @@ describe("class comparison — route & feature pins", () => {
     }
   });
 
-  test("3. class membership: 143 total, no duplicate medication in any class", () => {
+  test("3. class membership: 145 total, no duplicate medication in any class", () => {
     const total = comparisonClasses.reduce((n, c) => n + c.medications.length, 0);
     expect(total).toBe(drugs.length);
     const seen = new Set<string>();

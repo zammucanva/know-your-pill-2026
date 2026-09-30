@@ -46,7 +46,7 @@ import {
  */
 
 // Course outline sizes — generated artifact (registry-derived, pinned
-// by tests/platform-hardening.test.ts); keeps the 143-monograph
+// by tests/platform-hardening.test.ts); keeps the 145-monograph
 // registry out of this client chunk.
 const COURSE_OUTLINES = COURSE_STATS;
 

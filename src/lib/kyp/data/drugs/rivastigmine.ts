@@ -535,6 +535,12 @@ export const rivastigmine: Drug = {
       drugClass: "AChE Inhibitor",
       relationship: "Same class (AChE Inhibitor)",
     },
+    {
+      name: "Tacrine",
+      slug: "tacrine",
+      drugClass: "AChE Inhibitor",
+      relationship: "Same class (AChE Inhibitor)",
+    },
   ],
   relatedConditions: [
     {
@@ -706,6 +712,12 @@ export const rivastigmine: Drug = {
         slug: "galantamine",
         relationship: "Same class (AChE Inhibitor)",
         distinguishing: "The nicotinic-modulating AChE inhibitor",
+      },
+      {
+        name: "Tacrine",
+        slug: "tacrine",
+        relationship: "Same class (AChE Inhibitor)",
+        distinguishing: "The hepatotoxic QID prototype — the first Alzheimer's ChEI",
       },
     ],
   },

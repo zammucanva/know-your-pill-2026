@@ -20,7 +20,7 @@ import { drugs, substancePages, diseases } from "@/lib/kyp/data";
  * Server Component: it derives the hero's search plumbing (slug lists,
  * popular chips) from the canonical registries HERE, on the server, so
  * the client hero receives lightweight string arrays instead of pulling
- * the 143-monograph data layer into the browser bundle.
+ * the 145-monograph data layer into the browser bundle.
  */
 // Search plumbing — derived from the canonical registries (never a
 // second list) and passed to the client hero as plain strings.

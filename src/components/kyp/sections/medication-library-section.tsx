@@ -10,7 +10,7 @@ import { medicationClasses, categories, drugs } from "@/lib/kyp/data";
  *
  * Server Component (static content + Links only — the canonical drug
  * registry is consumed at request/build time for the six featured
- * names and the registry count; nothing from the 143-monograph data
+ * names and the registry count; nothing from the 145-monograph data
  * layer ships to the browser through this component).
  */
 export function MedicationLibrarySection() {

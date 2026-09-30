@@ -6,12 +6,12 @@
  * regression anchors the SEO layer must not disturb.
  *
  * Coverage map (per the Phase 7 brief):
- *   1  every one of the 143 drugs produces a schema.org @graph
+ *   1  every one of the 145 drugs produces a schema.org @graph
  *   2  document shape: @context, exactly 3 typed nodes, no duplicate @ids
  *   3  drug identity: name / nonProprietaryName / alternateName /
  *      identifier / url / @id all belong to THE asked drug
  *   4  no cross-contamination: drug A's graph never carries drug B's
- *      identity (spot-verified across all 143 via independent
+ *      identity (spot-verified across all 145 via independent
  *      recomputation; serialized graphs are pairwise distinct)
  *   5  source-grounding: mechanismOfAction / pregnancyWarning /
  *      breastfeedingWarning are verbatim canonical strings
@@ -28,7 +28,7 @@
  *      no stray origins) — and all internal targets are real registry
  *      routes
  *  12  determinism: building twice yields byte-identical JSON for all
- *      143 drugs; URLs are stable functions of the slug
+ *      145 drugs; URLs are stable functions of the slug
  *  13  hygiene: no undefined / null / empty strings / placeholders
  *      anywhere in any graph (deep walk)
  *  14  serialization security: output parses as JSON, contains no raw
@@ -42,13 +42,13 @@
  *  17  metadata consistency: root layout pins metadataBase; robots.txt
  *      keeps its policy and points at the canonical sitemap
  *  18  sitemap: covers exactly the real route inventory (home,
- *      library, 40 class pages, 143 drug pages, 3 substances, 1
+ *      library, 40 class pages, 145 drug pages, 3 substances, 1
  *      disease, 12 app pages), absolute + unique + no localhost
- *  19  Phase 3 regression: 143 records, unique slugs + names, 32
- *      DrugClassId classes in use, all 143 carry PrescriberGuide
+ *  19  Phase 3 regression: 145 records, unique slugs + names, 32
+ *      DrugClassId classes in use, all 145 carry PrescriberGuide
  *  20  Phase 4 regression: interactions + half-life data intact
  *  21  Phase 5 regression: 40 taxonomy class collections intact
- *  22  Phase 6 regression: 178 Stahl MCQs, 143/143 drug coverage
+ *  22  Phase 6 regression: 180 Stahl MCQs, 145/145 drug coverage
  *  23  content lock (byte-level): the canonical data directory is
  *      covered by scripts/content-lock.ts — pinned counts here guard
  *      against drift between lock runs
@@ -85,8 +85,8 @@ function pageTitle(drug: (typeof drugs)[number]): string {
 }
 
 describe("structured-data — 1..2. every drug builds a well-formed graph", () => {
-  test("all 143 registry drugs produce a 3-node schema.org @graph", () => {
-    expect(drugs.length).toBe(143);
+  test("all 145 registry drugs produce a 3-node schema.org @graph", () => {
+    expect(drugs.length).toBe(145);
     for (const drug of drugs) {
       const graph = buildDrugStructuredData(drug, pageTitle(drug));
       expect(graph["@context"]).toBe("https://schema.org");
@@ -98,7 +98,7 @@ describe("structured-data — 1..2. every drug builds a well-formed graph", () =
     }
   });
 
-  test("the independent validator passes for all 143 drugs", () => {
+  test("the independent validator passes for all 145 drugs", () => {
     const allViolations: string[] = [];
     for (const drug of drugs) {
       allViolations.push(
@@ -135,7 +135,7 @@ describe("structured-data — 3..5. drug identity + source-grounding", () => {
     }
   });
 
-  test("no drug's graph carries another drug's identity (all 143, recomputed)", () => {
+  test("no drug's graph carries another drug's identity (all 145, recomputed)", () => {
     const slugs = new Set(getAllDrugSlugs());
     for (const drug of drugs) {
       const url = drugPageUrl(drug);
@@ -152,7 +152,7 @@ describe("structured-data — 3..5. drug identity + source-grounding", () => {
     }
   });
 
-  test("serialized graphs are pairwise distinct across all 143 drugs", () => {
+  test("serialized graphs are pairwise distinct across all 145 drugs", () => {
     const seen = new Map<string, string>();
     for (const drug of drugs) {
       const json = serializeJsonLd(buildDrugStructuredData(drug, pageTitle(drug)));
@@ -160,7 +160,7 @@ describe("structured-data — 3..5. drug identity + source-grounding", () => {
       expect(owner).toBeUndefined(); // no two drugs share a graph
       seen.set(json, drug.slug);
     }
-    expect(seen.size).toBe(143);
+    expect(seen.size).toBe(145);
   });
 });
 
@@ -168,7 +168,7 @@ describe("structured-data — 6..8. optional data, prescribing info, drug class"
   test("boxed warnings included iff the canonical record has them", () => {
     const withWarnings = drugs.filter((d) => d.blackBoxWarnings.length > 0);
     const withoutWarnings = drugs.filter((d) => d.blackBoxWarnings.length === 0);
-    expect(withWarnings.length + withoutWarnings.length).toBe(143);
+    expect(withWarnings.length + withoutWarnings.length).toBe(145);
 
     for (const drug of withWarnings) {
       const drugNode = buildDrugStructuredData(drug, pageTitle(drug))["@graph"][1];
@@ -192,7 +192,7 @@ describe("structured-data — 6..8. optional data, prescribing info, drug class"
     }
   });
 
-  test("prescribingInfo deep-links the #prescriber-guide section for all 143", () => {
+  test("prescribingInfo deep-links the #prescriber-guide section for all 145", () => {
     for (const drug of drugs) {
       expect(drug.prescriberGuide).toBeDefined();
       const drugNode = buildDrugStructuredData(drug, pageTitle(drug))["@graph"][1];
@@ -295,7 +295,7 @@ describe("structured-data — 11..13. URLs, determinism, hygiene", () => {
     }
   });
 
-  test("building twice is byte-identical for all 143 drugs (determinism)", () => {
+  test("building twice is byte-identical for all 145 drugs (determinism)", () => {
     for (const drug of drugs) {
       const a = serializeJsonLd(buildDrugStructuredData(drug, pageTitle(drug)));
       const b = serializeJsonLd(buildDrugStructuredData(drug, pageTitle(drug)));
@@ -588,7 +588,7 @@ describe("structured-data — 18. sitemap covers exactly the real route inventor
     }
     // determinism: lastModified values only come from canonical data
     const dates = sitemap.map((e) => e.lastModified).filter(Boolean);
-    expect(new Set(dates).size).toBeLessThanOrEqual(2); // 2026-07-13 / 2026-09-21
+    expect(new Set(dates).size).toBeLessThanOrEqual(3); // 2026-07-13 / 2026-09-21 / 2026-10-01 (1st-ed. completion pass)
   });
 
   test("sitemap module is sitemap.tsx so the GitHub Pages export includes it", () => {
@@ -614,10 +614,10 @@ describe("structured-data — 18. sitemap covers exactly the real route inventor
 });
 
 describe("structured-data — 19..22. Phase 3/4/5/6 regression anchors", () => {
-  test("Phase 3: 143 unique medications across 32 DrugClassId classes, all with PrescriberGuide", () => {
-    expect(drugs.length).toBe(143);
-    expect(new Set(drugs.map((d) => d.slug)).size).toBe(143);
-    expect(new Set(drugs.map((d) => d.genericName)).size).toBe(143);
+  test("Phase 3: 145 unique medications across 32 DrugClassId classes, all with PrescriberGuide", () => {
+    expect(drugs.length).toBe(145);
+    expect(new Set(drugs.map((d) => d.slug)).size).toBe(145);
+    expect(new Set(drugs.map((d) => d.genericName)).size).toBe(145);
     expect(new Set(drugs.map((d) => d.drugClass)).size).toBe(32);
     expect(drugs.every((d) => d.prescriberGuide)).toBe(true);
   });
@@ -631,13 +631,13 @@ describe("structured-data — 19..22. Phase 3/4/5/6 regression anchors", () => {
   test("Phase 5: the 40 taxonomy class collections are intact", () => {
     expect(drugTaxonomyClasses.length).toBe(40);
     expect(getAllTaxonomyClassIds().length).toBe(40);
-    expect(drugTaxonomyClasses.reduce((n, c) => n + c.medications.length, 0)).toBe(143);
+    expect(drugTaxonomyClasses.reduce((n, c) => n + c.medications.length, 0)).toBe(145);
   });
 
-  test("Phase 6: 178 Stahl MCQs over all 143 medications", () => {
-    expect(stahlMcqs.length).toBe(178);
+  test("Phase 6: 180 Stahl MCQs over all 145 medications", () => {
+    expect(stahlMcqs.length).toBe(180);
     const covered = new Set(stahlMcqs.map((q) => q.drugSlug));
-    expect(covered.size).toBe(143);
+    expect(covered.size).toBe(145);
   });
 
   test("Phase 6 (UI rule): structured data never touches quiz surfaces", () => {

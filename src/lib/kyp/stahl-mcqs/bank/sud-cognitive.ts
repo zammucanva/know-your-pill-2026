@@ -1,6 +1,9 @@
 /**
  * Stahl's MCQ bank — Substance-use treatment (7), cholinesterase
- * inhibitors (3), NMDA antagonists (3). 13 medications.
+ * inhibitors (4, incl. tacrine), NMDA antagonists (3). 14 medications.
+ *
+ * Tacrine (1st-ed.-only monograph, discontinued) is included with
+ * facts verified against its canonical PrescriberGuide record.
  *
  * Facts verified against canonical PrescriberGuide records. The
  * precipitated-withdrawal rules of buprenorphine and naltrexone are
@@ -222,5 +225,22 @@ export const sudCognitiveBank: AuthoredStahlMcq[] = [
     ],
     explanation:
       "The SSRI-syrup trap: serotonin syndrome from cough syrup on an SSRI — the OTC-labeling lesson, which is why the guide says to ask every SSRI patient about cough-syrup use. The parallel OTC trap is diphenhydramine hidden in combination cold products.",
+  }),
+
+  /* ── Tacrine ───────────────────────────────────────── */
+  q({
+    drug: "tacrine",
+    topic: "clinical-pearls",
+    difficulty: "intermediate",
+    type: "class-distinction",
+    stem: "Tacrine was the first cholinesterase inhibitor approved for Alzheimer disease, yet the guide documents it as second-line. Which documented pairing explains why?",
+    correct: f("tacrine", "pearls", 0),
+    distractors: [
+      f("galantamine", "pearls", 3),
+      f("rivastigmine", "pearls", 3),
+      neg("Tacrine is documented as lacking any efficacy for cognition in Alzheimer disease"),
+    ],
+    explanation:
+      "Hepatotoxicity in up to a third of patients plus four-times-daily dosing — that pairing, not any efficacy failure, made tacrine second-line: the prototype that proved cholinesterase inhibition works, then yielded to its successors. The distractors are other agents' documented truths: galantamine's modest differentiation from donepezil in practice (chosen on cost or availability), and rivastigmine's missed-patch re-titration rule — neither is a tacrine fact.",
   }),
 ];

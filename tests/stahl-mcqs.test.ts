@@ -23,7 +23,7 @@
  *      3 distractors; every kind is fact | drug | negation
  *   7  shuffle safety: no "all of the above"-style options anywhere
  *   8  full coverage: every drug with a PrescriberGuide record has
- *      at least one question (143/143), zero orphans
+ *      at least one question (145/145), zero orphans
  *   9  answer-position balance: each of A/B/C/D within ±25% of a
  *      quarter share
  *  10  determinism: re-deriving the position assignment from the
@@ -306,9 +306,9 @@ describe("stahl mcqs — coverage, balance & determinism", () => {
   test("8. full drug coverage — every PrescriberGuide drug is asked about", () => {
     const stats = stahlBankStats();
     const withPg = drugs.filter((d) => d.prescriberGuide);
-    expect(withPg.length).toBe(143);
+    expect(withPg.length).toBe(145);
     expect(stats.drugsWithoutQuestions).toEqual([]);
-    expect(stats.drugsRepresented).toBe(143);
+    expect(stats.drugsRepresented).toBe(145);
   });
 
   test("9. answer-position balance — each position within ±25% of quarter", () => {
@@ -671,9 +671,9 @@ describe("stahl mcqs — UI metadata hygiene", () => {
   });
 
   test("20g. the metadata itself is intact in the data layer", () => {
-    // The bank is untouched: 178 questions (143/143 coverage is
+    // The bank is untouched: 180 questions (145/145 coverage is
     // pinned by test 8) — asserted here as a cleanup invariant.
-    expect(stahlMcqs.length).toBe(178);
+    expect(stahlMcqs.length).toBe(180);
     for (const m of stahlMcqs) {
       expect(m.evidence.length).toBeGreaterThan(0);
       expect(m.topic in STAHL_TOPIC_LABELS).toBe(true);

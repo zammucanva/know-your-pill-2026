@@ -74,8 +74,8 @@ describe("hardening — ?drug= focused practice (behavioral)", async () => {
     expect(empty).toEqual([]);
   });
 
-  test("focused-practice counts are registry-derived and complete (143/143)", () => {
-    expect(drugs.length).toBe(143);
+  test("focused-practice counts are registry-derived and complete (145/145)", () => {
+    expect(drugs.length).toBe(145);
     for (const d of drugs) {
       expect(questionCountBySlug.get(d.slug)).toBeGreaterThan(0);
     }
@@ -132,7 +132,7 @@ describe("hardening — learning-chain deep links (source pins)", () => {
   });
 
   test("the shared interactions callout is class-agnostic (no SSRI-only claims)", () => {
-    // The callout renders on all 143 pages — the copy must be true for
+    // The callout renders on all 145 pages — the copy must be true for
     // every class. The old text asserted serotonin syndrome specifics.
     const src = read(DRUG_INTERACTIONS);
     expect(src).not.toContain("serotonin syndrome");
@@ -151,7 +151,7 @@ describe("hardening — learning-chain deep links (source pins)", () => {
 // ─── Source pins: stale-copy elimination ──────────────────────────────────────
 
 describe("hardening — stale-copy elimination (source pins)", () => {
-  test("no page claims 'Twelve psychiatric medications' (143 exist)", () => {
+  test("no page claims 'Twelve psychiatric medications' (145 exist)", () => {
     const offenders = [
       DRUGS_PAGE,
       MED_LIBRARY,
@@ -379,12 +379,12 @@ describe("hardening — generated client artifacts match the canonical registrie
   const { COURSE_STATS, COURSE_COUNT, FIRST_COURSE_SLUG } =
     await import("../src/lib/kyp/study/course-stats-generated");
 
-  test("the generated search index is deep-equal to the live derivation (227 entries)", () => {
+  test("the generated search index is deep-equal to the live derivation (229 entries)", () => {
     // If this fails: a registry/data change was made without re-running
     // `bun scripts/gen-client-data.ts`. Regenerate — do NOT edit the
     // generated file by hand, and do NOT relax this test.
     expect(searchIndexGenerated).toEqual(liveIndex);
-    expect(searchIndexGenerated.length).toBe(227);
+    expect(searchIndexGenerated.length).toBe(229);
     expect(searchTypeLabelsGenerated).toEqual(liveLabels);
   });
 
@@ -395,7 +395,7 @@ describe("hardening — generated client artifacts match the canonical registrie
     expect(src).toContain('import type { SearchableItem }');
   });
 
-  test("the generated course stats match the registry derivation (143 courses)", () => {
+  test("the generated course stats match the registry derivation (145 courses)", () => {
     const expected = Object.fromEntries(
       drugs.map((d) => [
         d.slug,
@@ -404,7 +404,7 @@ describe("hardening — generated client artifacts match the canonical registrie
     );
     expect(COURSE_STATS).toEqual(expected);
     expect(COURSE_COUNT).toBe(drugs.length);
-    expect(COURSE_COUNT).toBe(143);
+    expect(COURSE_COUNT).toBe(145);
     expect(FIRST_COURSE_SLUG).toBe(drugs[0].slug);
   });
 
@@ -441,7 +441,7 @@ describe("hardening — generated client artifacts match the canonical registrie
   });
 
   test("only the five data-engine client surfaces import the registry", () => {
-    // The full 143-monograph registry may ship to the browser ONLY on
+    // The full 145-monograph registry may ship to the browser ONLY on
     // the surfaces whose client-side engines genuinely need full drug
     // records: /quiz, /quiz/custom, /compare, /interactions,
     // /study/review. Every browsing surface (home, /drugs, /learn,
@@ -500,7 +500,7 @@ describe("hardening — generated client artifacts match the canonical registrie
   });
 
   test("links into registry-heavy routes disable viewport prefetch", () => {
-    // /quiz and /interactions bundles embed the 143-drug registry
+    // /quiz and /interactions bundles embed the 145-drug registry
     // (~1.5MB gzipped). Next's default <Link> prefetch would download
     // them in the background whenever such a link enters the viewport
     // — on every page for the navbar. These links opt out; browsing
@@ -529,7 +529,7 @@ describe("hardening — generated client artifacts match the canonical registrie
   });
 
   test("no LIVE client component imports values from the data barrel", () => {
-    // The barrel re-exports all 143 monographs via `export *`; any
+    // The barrel re-exports all 145 monographs via `export *`; any
     // client value-import drags the whole registry into the browser.
     // Server components importing the barrel are fine (computed at
     // request/build time) — only "use client" files are checked.
@@ -584,7 +584,7 @@ describe("hardening — generated client artifacts match the canonical registrie
 
 // ─── Engine-route prefetch discipline ────────────────────────────────────────
 // The five data-engine routes (/quiz, /quiz/custom, /compare, /interactions,
-// /study/review) legitimately bundle the 143-drug registry (~1.5 MB gzipped).
+// /study/review) legitimately bundle the 145-drug registry (~1.5 MB gzipped).
 // Any <Link> to them from a BROWSING surface must opt out of Next.js
 // viewport prefetch, or every browsing page would speculatively download
 // the registry chunk the moment such a link enters the viewport. Engine

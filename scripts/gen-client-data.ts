@@ -5,7 +5,7 @@
  *   1. src/lib/kyp/data/search-index-generated.ts
  *      The full universal search index as a self-contained literal.
  *      The live derivation (src/lib/kyp/data/search-index.ts) imports
- *      the entire 143-monograph registry at module scope to build its
+ *      the entire 145-monograph registry at module scope to build its
  *      entries — fine on the server, but the search modal renders on
  *      EVERY page, so importing the live derivation client-side would
  *      ship the whole registry to the browser (6.7 MB). The generated
@@ -75,7 +75,7 @@ writeGenerated(
  * The universal search index as a self-contained literal (entries +
  * type labels), generated from the canonical derivation in
  * ./search-index.ts by scripts/gen-client-data.ts. That derivation
- * imports the full 143-monograph registry at module scope — correct
+ * imports the full 145-monograph registry at module scope — correct
  * on the server, but importing it from the client-side search modal
  * (rendered on every page) would ship the entire registry to the
  * browser. This artifact ships only the entries themselves.

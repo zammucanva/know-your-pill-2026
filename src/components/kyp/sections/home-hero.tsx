@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 /** Search plumbing is derived from the canonical registries ON THE
  * SERVER (by the server parent) and passed down as lightweight props —
- * the homepage hero never imports the 143-monograph data layer into
+ * the homepage hero never imports the 145-monograph data layer into
  * the client bundle. `zoloft` is preserved as a legacy brand alias
  * mapped to its canonical slug. */
 interface HomeHeroProps {

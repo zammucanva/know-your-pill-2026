@@ -29,7 +29,7 @@ import { drugs, diseases, substancePages, brainRegions, pathways, sideEffects } 
  * Server Component: the registries are consumed here at request/build
  * time (counts only). The sole interactive section (Continue Learning —
  * fetches /api/progress) lives in ./continue-learning.tsx, so the
- * 143-monograph data layer never ships to the browser from /learn.
+ * 145-monograph data layer never ships to the browser from /learn.
  */
 
 export const metadata: Metadata = {

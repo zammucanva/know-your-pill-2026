@@ -3,7 +3,7 @@
  *
  * Extracted from ./drug-taxonomy.ts (which re-exports it, so the
  * public API is unchanged) because that module imports the entire
- * 143-monograph registry at module scope to derive the taxonomy —
+ * 145-monograph registry at module scope to derive the taxonomy —
  * correct on the server, but CLIENT consumers of this pure function
  * (Study Mode accuracy chips, /study/analytics drill-through links)
  * must not drag the registry into their bundles. This module has zero

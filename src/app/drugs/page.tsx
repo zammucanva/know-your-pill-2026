@@ -20,7 +20,7 @@ import {
  * /drugs — Medication Library index.
  *
  * The primary browse surface for KYP's canonical psychiatric
- * medications (143 — 12 original + 131 from Stahl's Prescriber's
+ * medications (145 — 12 original + 131 from Stahl + 2 first-ed completion's Prescriber's
  * Guide), derived entirely from the canonical drug registry
  * (src/lib/kyp/data/drugs/index.ts) — never a second medication array.
  *
@@ -105,7 +105,7 @@ export default function MedicationLibraryPage() {
             <Reveal delay={0.12}>
               <div className="mt-10 flex flex-wrap gap-3">
                 {/* prefetch={false}: /quiz is an engine route whose bundle
-                    ships the 143-drug registry chunk (~1.5MB) — see navbar.tsx */}
+                    ships the 145-drug registry chunk (~1.5MB) — see navbar.tsx */}
                 <Link
                   href="/quiz"
                   prefetch={false}

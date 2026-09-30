@@ -1,7 +1,11 @@
 /**
- * Stahl's MCQ bank — Stimulants (6, incl. bupropion/NDRI label),
- * wake-promoting agents (2), sodium oxybate, mirtazapine (NaSSA),
- * atypical antidepressants (5), NRIs (2). 17 medications.
+ * Stahl's MCQ bank — Stimulants (7, incl. bupropion/NDRI label and
+ * pemoline), wake-promoting agents (2), sodium oxybate, mirtazapine
+ * (NaSSA), atypical antidepressants (5), NRIs (2). 18 medications.
+ *
+ * Pemoline (1st-ed.-only monograph, withdrawn for hepatotoxicity) is
+ * included with facts verified against its canonical PrescriberGuide
+ * record like every other agent.
  *
  * Facts verified against canonical PrescriberGuide records. The
  * three documented food rules (lurasidone 350 kcal, ziprasidone
@@ -338,5 +342,22 @@ export const stimulantAtypicalBank: AuthoredStahlMcq[] = [
     ],
     explanation:
       "Atomoxetine is the patience drug: 2–6 weeks to effect — pharmacologically an antidepressant, not a stimulant — so the delay must be sold explicitly or the patient is lost. Its documented companions: 24-hour cover from one dose and the comorbid-anxiety niche where stimulants lean anxiogenic.",
+  }),
+
+  /* ── Pemoline ───────────────────────────────────────── */
+  q({
+    drug: "pemoline",
+    topic: "monitoring",
+    difficulty: "foundational",
+    type: "clinical-application",
+    stem: "A child with ADHD who has failed two first-line stimulants starts pemoline. Which monitoring ritual does the guide document as a necessary component of pemoline therapy?",
+    correct: f("pemoline", "pearls", 1),
+    distractors: [
+      f("clozapine", "pearls", 1),
+      f("donepezil", "pearls", 4),
+      neg("Liver function testing is documented as optional once pemoline is tolerated"),
+    ],
+    explanation:
+      "The every-2-weeks ALT ritual: serum SGPT at baseline and every 2 weeks for the entire treatment — discontinue if ALT exceeds twice the upper limit of normal. No way exists to predict who will develop liver failure, but early detection with immediate withdrawal enhances the likelihood of recovery, which is why monitoring was mandated. The contrasted rituals are other drugs' disciplines: clozapine's fever gets troponin/CRP in the first 8 weeks, donepezil's quiet danger is bradycardia with pulse at every review.",
   }),
 ];

@@ -290,7 +290,7 @@ export type Stat = {
 export const stats: Stat[] = [
   {
     label: "Drug pages",
-    value: "143+",
+    value: "145+",
     description: "Substance-specific deep dives with neuroscience breakdowns",
   },
   {

@@ -2,7 +2,7 @@
  * Stahl's Prescriber-Guide Clinical MCQ system — public API (Phase 6).
  *
  * Source-grounded educational question bank built from the canonical
- * PrescriberGuide data of all 143 medications. Every option is a
+ * PrescriberGuide data of all 145 medications. Every option is a
  * verbatim canonical string addressed by FactRef coordinates, a real
  * drug name from the registry, or an explicit logical negation —
  * nothing else can enter a question.

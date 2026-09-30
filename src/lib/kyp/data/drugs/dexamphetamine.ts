@@ -591,6 +591,12 @@ export const dexamphetamine: Drug = {
       drugClass: "Stimulant",
       relationship: "Class reference compound",
     },
+    {
+      name: "Pemoline",
+      slug: "pemoline",
+      drugClass: "Stimulant",
+      relationship: "Same class (Stimulant)",
+    },
   ],
   relatedConditions: [
     {
@@ -754,6 +760,12 @@ export const dexamphetamine: Drug = {
         slug: "dexmethylphenidate",
         relationship: "Same class (Stimulant)",
         distinguishing: "The active isomer — methylphenidate distilled",
+      },
+      {
+        name: "Pemoline",
+        slug: "pemoline",
+        relationship: "Same class (Stimulant)",
+        distinguishing: "The hepatotoxic last-resort — withdrawn from major markets",
       },
     ],
   },

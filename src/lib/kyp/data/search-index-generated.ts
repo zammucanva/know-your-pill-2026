@@ -4,7 +4,7 @@
  * The universal search index as a self-contained literal (entries +
  * type labels), generated from the canonical derivation in
  * ./search-index.ts by scripts/gen-client-data.ts. That derivation
- * imports the full 143-monograph registry at module scope — correct
+ * imports the full 145-monograph registry at module scope — correct
  * on the server, but importing it from the client-side search modal
  * (rendered on every page) would ship the entire registry to the
  * browser. This artifact ships only the entries themselves.
@@ -21,7 +21,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-psychiatry",
     "title": "Psychiatry",
     "type": "collection",
-    "description": "The Psychiatry medication collection — 149 medication guides across 40 classes.",
+    "description": "The Psychiatry medication collection — 151 medication guides across 40 classes.",
     "href": "/drugs/#psychiatry",
     "keywords": [
       "Psychiatry",
@@ -338,7 +338,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-adhd medications",
     "title": "ADHD Medications",
     "type": "collection",
-    "description": "4 classes · 11 medication guides — Alpha-2 Agonists, NRIs, Stimulants, Wake-Promoting Agents.",
+    "description": "4 classes · 12 medication guides — Alpha-2 Agonists, NRIs, Stimulants, Wake-Promoting Agents.",
     "href": "/drugs/#antidepressants",
     "keywords": [
       "ADHD Medications",
@@ -364,6 +364,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Lisdexamfetamine",
       "Dexmethylphenidate",
       "Methylphenidate (d,l)",
+      "Pemoline",
       "Armodafinil",
       "Modafinil"
     ]
@@ -372,7 +373,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-cognitive enhancers",
     "title": "Cognitive Enhancers",
     "type": "collection",
-    "description": "3 classes · 7 medication guides — Cholinesterase Inhibitors, Augmentation Agents, NMDA Antagonists.",
+    "description": "3 classes · 8 medication guides — Cholinesterase Inhibitors, Augmentation Agents, NMDA Antagonists.",
     "href": "/drugs/#antidepressants",
     "keywords": [
       "Cognitive Enhancers",
@@ -389,6 +390,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Donepezil",
       "Galantamine",
       "Rivastigmine",
+      "Tacrine",
       "L-Methylfolate",
       "Caprylidene",
       "Memantine",
@@ -1174,7 +1176,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-stimulant",
     "title": "Stimulants",
     "type": "collection",
-    "description": "CNS Stimulant (Dopamine-Norepinephrine Releasing Agent) — 5 medication guides: Dextroamphetamine (d-Amphetamine), Amphetamine (d,l), Lisdexamfetamine, Dexmethylphenidate, Methylphenidate (d,l).",
+    "description": "CNS Stimulant (Dopamine-Norepinephrine Releasing Agent) — 6 medication guides: Dextroamphetamine (d-Amphetamine), Amphetamine (d,l), Lisdexamfetamine, Dexmethylphenidate, Methylphenidate (d,l), Pemoline.",
     "href": "/drugs/class/stimulant",
     "keywords": [
       "Stimulants",
@@ -1186,6 +1188,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Lisdexamfetamine",
       "Dexmethylphenidate",
       "Methylphenidate (d,l)",
+      "Pemoline",
       "Dexedrine",
       "Dexedrine Spansule",
       "Adderall",
@@ -1194,7 +1197,8 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Focalin",
       "Focalin XR",
       "Ritalin",
-      "Concerta"
+      "Concerta",
+      "Cylert (withdrawn)"
     ]
   },
   {
@@ -1219,7 +1223,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-ache-inhibitor",
     "title": "Cholinesterase Inhibitors",
     "type": "collection",
-    "description": "Acetylcholinesterase Inhibitor — 3 medication guides: Donepezil, Galantamine, Rivastigmine.",
+    "description": "Acetylcholinesterase Inhibitor — 4 medication guides: Donepezil, Galantamine, Rivastigmine, Tacrine.",
     "href": "/drugs/class/ache-inhibitor",
     "keywords": [
       "Cholinesterase Inhibitors",
@@ -1229,12 +1233,14 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Donepezil",
       "Galantamine",
       "Rivastigmine",
+      "Tacrine",
       "Aricept",
       "Aricept ODT",
       "Razadyne",
       "Razadyne ER",
       "Exelon",
-      "Exelon Patch"
+      "Exelon Patch",
+      "Cognex (discontinued)"
     ]
   },
   {
@@ -4813,6 +4819,24 @@ export const searchIndexGenerated: SearchableItem[] = [
     ]
   },
   {
+    "id": "medication-pemoline",
+    "title": "Pemoline",
+    "type": "drug",
+    "description": "The hepatotoxic last-resort stimulant — ADHD's liver-monitoring lesson in a tablet.",
+    "href": "/drugs/pemoline",
+    "keywords": [
+      "Pemoline",
+      "Cylert (withdrawn)",
+      "Stimulant",
+      "CNS Stimulant (Dopaminergic, Mechanism Uncertain)",
+      "Attention deficit hyperactivity disorder (ADHD)",
+      "Dopamine",
+      "Dopaminergic signalling (exact target unknown)",
+      "Attention deficit hyperactivity disorder (ADHD)",
+      "Cylert (withdrawn — never marketed in India)"
+    ]
+  },
+  {
     "id": "medication-armodafinil",
     "title": "Armodafinil",
     "type": "drug",
@@ -4932,6 +4956,29 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Parkinson's disease dementia",
       "Severe Alzheimer's (patch, some regions)",
       "Rivamer / Rivastig (generic)"
+    ]
+  },
+  {
+    "id": "medication-tacrine",
+    "title": "Tacrine",
+    "type": "drug",
+    "description": "The first Alzheimer's cholinesterase inhibitor — the hepatotoxic proof of concept its successors outlived.",
+    "href": "/drugs/tacrine",
+    "keywords": [
+      "Tacrine",
+      "Cognex (discontinued)",
+      "AChE Inhibitor",
+      "Acetylcholinesterase Inhibitor (Central, Reversible — also inhibits BuChE)",
+      "Alzheimer disease",
+      "Memory disorders in other conditions",
+      "Dementia (behavioural and cognitive symptoms)",
+      "Acetylcholine",
+      "Acetylcholinesterase (reversible inhibitor)",
+      "Butyrylcholinesterase (inhibitor)",
+      "Alzheimer disease",
+      "Memory disorders in other conditions",
+      "Dementia (behavioural and cognitive symptoms)",
+      "Cognex (discontinued — never marketed in India)"
     ]
   },
   {

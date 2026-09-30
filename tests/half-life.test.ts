@@ -11,7 +11,7 @@
  *   4     unit conversion: days → hours
  *   5     unparseable: unknowns, "weeks"-only, bare "h" strings → null
  *         (graceful degradation, never invented numbers)
- *   6     real-data invariant: parse rate across all 143 drugs ≥ 85%
+ *   6     real-data invariant: parse rate across all 145 drugs ≥ 85%
  *   7     real-data invariant: every parsed value inside sanity bounds
  *   8     facts follow the classic 5-half-lives rule (4.32× / 5× / 5×)
  *   9     formatDuration humanises hours correctly
@@ -76,7 +76,7 @@ describe("half-life parser — unit pins", () => {
   });
 });
 
-describe("half-life parser — real-data invariants (143 drugs)", () => {
+describe("half-life parser — real-data invariants (145 drugs)", () => {
   test("6. parse rate ≥ 85% across the library", () => {
     const parsed = drugs.filter((d) => parseHalfLife(d.mechanism?.halfLife ?? ""));
     const rate = parsed.length / drugs.length;

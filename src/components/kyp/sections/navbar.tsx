@@ -21,7 +21,7 @@ const navLinks = [
   { href: "/learn", label: "Learn" },
   { href: "/drugs", label: "Medication Library" },
   // prefetch=false: /interactions is a client-side data engine whose
-  // route bundle embeds the 143-drug registry (~1.5MB gzipped). The
+  // route bundle embeds the 145-drug registry (~1.5MB gzipped). The
   // default viewport prefetch would download it in the background on
   // EVERY page; navigating without prefetch only costs the first
   // click. Browsing routes keep their default prefetch.

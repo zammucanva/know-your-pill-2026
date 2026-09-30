@@ -25,7 +25,7 @@ import { drugs } from "@/lib/kyp/data";
 export const metadata: Metadata = {
   title: "Medicine · Know Your Pill",
   description:
-    "Plain-language medicine information — what each of the 143 psychiatric medicines is, what it treats, and how it works, with full guides covering side effects, timelines, and safety.",
+    "Plain-language medicine information — what each of the 145 psychiatric medicines is, what it treats, and how it works, with full guides covering side effects, timelines, and safety.",
   keywords: [
     "medicine information",
     "antidepressant guides",

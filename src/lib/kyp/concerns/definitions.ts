@@ -5,26 +5,26 @@ import type { ConcernDefinition, ConcernId } from "./types";
    ------------------------------------------------------------
    SUPPORT AUDIT (what the canonical registry actually carries):
 
-   Every "effect" concern below was validated against all 143 drug
+   Every "effect" concern below was validated against all 145 drug
    records: a concern is defined ONLY if the registry's documented
    adverse-effect entries (commonSideEffects / seriousSideEffects,
    each carrying a verbatim frequency band) populate it across
    multiple medications. Coverage measured at definition time
    (entries OR an informative Prescriber's Guide note):
 
-     weight-metabolic     115 of 143 medications carry a basis
-     sedation             116 of 143
-     sleep-activation      61 of 143
-     sexual-function       36 of 143
-     eps-akathisia         30 of 143
-     tardive-dyskinesia    29 of 143
-     prolactin             21 of 143
-     anticholinergic       62 of 143
-     qt-cardiac            34 of 143
-     orthostasis           28 of 143
-     nausea-gi             59 of 143
-     monitoring-burden    143 of 143 (structured monitoring array)
-     interaction-burden   143 of 143 (structured interactions array)
+     weight-metabolic     115 of 145 medications carry a basis
+     sedation             116 of 145
+     sleep-activation      61 of 145
+     sexual-function       36 of 145
+     eps-akathisia         30 of 145
+     tardive-dyskinesia    29 of 145
+     prolactin             21 of 145
+     anticholinergic       62 of 145
+     qt-cardiac            34 of 145
+     orthostasis           28 of 145
+     nausea-gi             59 of 145
+     monitoring-burden    145 of 145 (structured monitoring array)
+     interaction-burden   145 of 145 (structured interactions array)
 
    NOT implemented (no sufficient canonical basis — listed for the
    record, per the Phase 5 brief):

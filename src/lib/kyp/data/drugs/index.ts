@@ -121,11 +121,13 @@ import { amphetamine } from "./amphetamine";
 import { lisdexamfetamine } from "./lisdexamfetamine";
 import { dexmethylphenidate } from "./dexmethylphenidate";
 import { methylphenidate } from "./methylphenidate";
+import { pemoline } from "./pemoline";
 import { armodafinil } from "./armodafinil";
 import { modafinil } from "./modafinil";
 import { donepezil } from "./donepezil";
 import { galantamine } from "./galantamine";
 import { rivastigmine } from "./rivastigmine";
+import { tacrine } from "./tacrine";
 import { caprylidene } from "./caprylidene";
 import { memantine } from "./memantine";
 import { acamprosate } from "./acamprosate";
@@ -146,17 +148,20 @@ import { phentermineTopiramate } from "./phentermine-topiramate";
 /**
  * Drug registry — KYP medication library.
  *
- * 143 medication guides:
+ * 145 medication guides:
  *   - 12 original Phase 1 psychiatric core (SSRIs, SNRIs, NDRI, NaSSA, TCAs)
  *   - 131 added in the Stahl Prescriber's Guide integration
  *     (Phase 3), spanning every major psychotropic class:
+ *   - 2 added in the 1st-edition completion pass (pemoline, tacrine —
+ *     withdrawn/discontinued 1st-ed.-only monographs, retained for
+ *     exam and historical completeness)
  *   - Antidepressants: 29
  *   - Antipsychotics: 34
  *   - Mood Stabilisers & Anticonvulsants: 11
  *   - Anxiolytics & Sedatives: 15
  *   - Sleep Medicines: 13
- *   - ADHD Medications: 10
- *   - Cognitive Enhancers: 5
+ *   - ADHD Medications: 11
+ *   - Cognitive Enhancers: 6
  *   - Substance Use Treatments: 7
  *   - Specialised Agents: 7
  *
@@ -292,11 +297,13 @@ export const drugs: Drug[] = [
     lisdexamfetamine,
     dexmethylphenidate,
     methylphenidate,
+    pemoline,
     armodafinil,
     modafinil,
     donepezil,
     galantamine,
     rivastigmine,
+    tacrine,
     caprylidene,
     memantine,
     acamprosate,

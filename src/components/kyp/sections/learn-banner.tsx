@@ -13,7 +13,7 @@ import { drugs, diseases } from "@/lib/kyp/data";
  * A first-time visitor should see this within the first viewport of scrolling.
  *
  * Server Component (counts only — the registries are consumed at
- * request/build time; the 143-monograph data layer never reaches the
+ * request/build time; the 145-monograph data layer never reaches the
  * browser through this component).
  */
 export function LearnBanner() {

@@ -36,7 +36,7 @@ const ALL_SLUGS = getKnowledgeChainSlugs();
 
 describe("knowledge graph — registries", () => {
   test("every registry drug has a chain", () => {
-    expect(ALL_SLUGS.length).toBe(143);
+    expect(ALL_SLUGS.length).toBe(145);
     for (const slug of ALL_SLUGS) {
       const chain = getDrugKnowledgeChain(slug);
       expect(chain).not.toBeNull();
@@ -276,7 +276,7 @@ describe("knowledge chain — rendered row contract (buildKnowledgeChainRows)", 
       "side-effects",
       "monitoring",
     ]);
-    // All 143 drugs carry the 8 universal rows; neural-pathways is
+    // All 145 drugs carry the 8 universal rows; neural-pathways is
     // data-driven (only bupropion has named pathway IDs in the data).
     for (const slug of ALL_SLUGS) {
       const keys = rowKeysFor(slug).filter((k) => k !== "neural-pathways");

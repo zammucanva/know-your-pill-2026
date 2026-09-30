@@ -4,9 +4,10 @@
  * Locks every medical data file under src/lib/kyp/data/ (all drug
  * monographs are enumerated dynamically) by SHA-256 of the raw file
  * bytes, and verifies the canonical content counts:
- *   - 143 medications (12 original + 131 added in Phase 3 from
+ *   - 145 medications (12 original + 131 added in Phase 3 from
  *     Stahl's Essential Psychopharmacology: The Prescriber's Guide,
- *     6th ed. — facts paraphrased, not reproduced)
+ *     6th ed. — plus pemoline and tacrine from the 1st ed. in the
+ *     edition-completion pass — facts paraphrased, not reproduced)
  *   - 1 disease
  *   - 3 substances
  *   - MCQ and search-entry counts as recorded in the baseline
@@ -62,14 +63,14 @@ const LOCKED_FILES: string[] = [
 
 // ─── Canonical content counts ───────────────────────────────────────────────
 // Re-locked after the Phase 3 Stahl's Prescriber's Guide integration
-// (143 medications). MCQ and search-entry counts are carried in the
+// (145 medications). MCQ and search-entry counts are carried in the
 // baseline alongside these canonical expectations.
 const EXPECTED_COUNTS = {
-  medications: 143,
+  medications: 145,
   diseases: 1,
   substances: 3,
-  mcqs: 471,
-  searchEntries: 227,
+  mcqs: 477,
+  searchEntries: 229,
 };
 
 const BASELINE_PATH = resolve(

@@ -586,6 +586,12 @@ export const dexmethylphenidate: Drug = {
       drugClass: "Stimulant",
       relationship: "Class reference compound",
     },
+    {
+      name: "Pemoline",
+      slug: "pemoline",
+      drugClass: "Stimulant",
+      relationship: "Same class (Stimulant)",
+    },
   ],
   relatedConditions: [
     {
@@ -739,6 +745,12 @@ export const dexmethylphenidate: Drug = {
         slug: "amphetamine",
         relationship: "Same class (Stimulant)",
         distinguishing: "The Adderall mixture — d for focus, l for wake",
+      },
+      {
+        name: "Pemoline",
+        slug: "pemoline",
+        relationship: "Same class (Stimulant)",
+        distinguishing: "The hepatotoxic last-resort — withdrawn from major markets",
       },
     ],
   },

@@ -389,6 +389,9 @@ export const COURSE_STATS: Record<string, CourseStatsEntry> = {
   "methylphenidate": {
     "total": 27
   },
+  "pemoline": {
+    "total": 27
+  },
   "armodafinil": {
     "total": 27
   },
@@ -402,6 +405,9 @@ export const COURSE_STATS: Record<string, CourseStatsEntry> = {
     "total": 27
   },
   "rivastigmine": {
+    "total": 27
+  },
+  "tacrine": {
     "total": 27
   },
   "caprylidene": {
@@ -455,7 +461,7 @@ export const COURSE_STATS: Record<string, CourseStatsEntry> = {
 };
 
 /** Number of medication courses in the library. */
-export const COURSE_COUNT: number = 143;
+export const COURSE_COUNT: number = 145;
 
 /** Registry-order first course — the "Start Learning" entry point. */
 export const FIRST_COURSE_SLUG: string = "sertraline";
@@ -648,7 +654,8 @@ export const CLASS_DRUG_SLUGS: Record<string, string[]> = {
     "amphetamine",
     "lisdexamfetamine",
     "dexmethylphenidate",
-    "methylphenidate"
+    "methylphenidate",
+    "pemoline"
   ],
   "Wake-Promoting Agent": [
     "armodafinil",
@@ -657,7 +664,8 @@ export const CLASS_DRUG_SLUGS: Record<string, string[]> = {
   "AChE Inhibitor": [
     "donepezil",
     "galantamine",
-    "rivastigmine"
+    "rivastigmine",
+    "tacrine"
   ],
   "NMDA Antagonist": [
     "memantine",

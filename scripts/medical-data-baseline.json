@@ -1,16 +1,16 @@
 {
   "counts": {
-    "drugs": 143,
+    "drugs": 145,
     "diseases": 1,
     "substancePages": 3,
-    "searchIndex": 227,
+    "searchIndex": 229,
     "categories": 5
   },
   "hashes": {
-    "drugs": "472193b23613408416f11f94d3fde18eba4f5a60d3cdbb72a15fd49f38924991",
+    "drugs": "8fcb13a54077770bddbc23efba764cd921acbe889f6ca7ff662778824461911e",
     "diseases": "f25748f82a0a68c815952d83a48645ac92a9a0bd825b91fc3b9e6c10efd84a4e",
     "substancePages": "2386ac39d82628a2904e3749bd18dda7bf5211610fc3654611b86cef2cffa7ab",
-    "searchIndex": "9e4b25cb95c6dcd9799b9f8c2c912953b5a83c3122e7dd26b1e4da23c16cb7cc",
+    "searchIndex": "8e3f565b9832026930175f7295f1d04bfa9ee426c9dc9c3ab5ec53c001835a53",
     "categories": "e5eae64654d48da8600310c2c92681a14eea539afcdc6ec232b65f0fbbb20012"
   }
 }

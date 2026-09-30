@@ -27,7 +27,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 // Generated, self-contained artifact — NOT the live derivation in
-// @/lib/kyp/data/search-index (which imports the entire 143-monograph
+// @/lib/kyp/data/search-index (which imports the entire 145-monograph
 // registry at module scope and would ship it to every page). Pinned
 // deep-equal to the live derivation by tests/platform-hardening.test.ts.
 import {

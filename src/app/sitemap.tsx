@@ -14,7 +14,7 @@
  *   - /drugs (Medication Library)
  *   - /drugs/class/{classId} — every taxonomy class (derived from the
  *     registry, currently 40)
- *   - /drugs/{slug} — every canonical medication (currently 143)
+ *   - /drugs/{slug} — every canonical medication (currently 145)
  *   - /substances/{slug} — every migrated substance page (currently 3)
  *   - /diseases/{slug} — every disease module (currently 1)
  *   - public learning/practice pages: /learn, /medicine, /study,
