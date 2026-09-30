@@ -19,7 +19,7 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { corpusStats, loadCorpus } from "@/lib/oxford/loader";
-import { coreNotes } from "@/lib/oxford/curriculum";
+import { coreNotes, LEARNER_SECTION_ORDER } from "@/lib/oxford/curriculum";
 
 /**
  * /psychiatry — the KYP Psychiatry hub.
@@ -143,11 +143,14 @@ export default function PsychiatryHubPage() {
             {[...corpus.groups]
               // Curriculum normalization: Q. Foundations & sciences is the
               // first learner-facing section (presentation-layer ordering
-              // only — the source index stays immutable).
-              .sort((a, b) => {
-                const order = ["Q", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R"];
-                return order.indexOf(a.letter) - order.indexOf(b.letter);
-              })
+              // only — the source index stays immutable). LEARNER_SECTION_ORDER
+              // is the single ordering authority (shared with library +
+              // self-test + course-to-course navigation).
+              .sort(
+                (a, b) =>
+                  LEARNER_SECTION_ORDER.indexOf(a.letter as never) -
+                  LEARNER_SECTION_ORDER.indexOf(b.letter as never)
+              )
               .map((g) => {
               const groupNotes = g.noteSlugs
                 .map((slug) => corpus.bySlug.get(slug))

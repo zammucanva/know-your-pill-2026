@@ -12,10 +12,20 @@
 import type { SearchableItem } from "@/lib/kyp/data/types";
 import { loadCorpus } from "./loader";
 import { priorityMeta } from "./learn";
+import { getPsychiatryCourse } from "@/lib/kyp/data/psychiatry-courses";
 
 export function buildPsychiatrySearchRecords(): SearchableItem[] {
   const corpus = loadCorpus();
   const records: SearchableItem[] = [];
+
+  // Course-layer type counts (the learner-facing classification —
+  // treatment/services/law topics are concepts here even when the
+  // source note used the 16-section disorder template).
+  const courseRecords = corpus.notes
+    .map((note) => ({ note, course: getPsychiatryCourse(note.frontmatter.slug) }))
+    .filter(({ course }) => Boolean(course));
+  const conceptCount = courseRecords.filter(({ course }) => course!.kind === "concept").length;
+  const disorderCount = courseRecords.length - conceptCount;
 
   // Hub + library entries
   records.push({
@@ -38,7 +48,7 @@ export function buildPsychiatrySearchRecords(): SearchableItem[] {
     id: "psychiatry-library",
     title: "Psychiatry Library",
     type: "psychiatry-note",
-    description: `Browse all ${corpus.noteCount} psychiatry lessons — ${corpus.disorderCount} disorder courses and ${corpus.conceptCount} concept notes, filterable by domain, priority and progress.`,
+    description: `Browse all ${corpus.noteCount} psychiatry lessons — ${disorderCount} disorder courses and ${conceptCount} concept lessons, filterable by domain, tier and progress.`,
     href: "/psychiatry/library",
     keywords: [
       "psychiatry library",
@@ -46,31 +56,36 @@ export function buildPsychiatrySearchRecords(): SearchableItem[] {
       "psychiatry curriculum",
       "all psychiatry topics",
       "psychiatry domains",
-      "disorder notes list",
+      "disorder courses list",
     ],
   });
 
-  // One record per note
+  // One record per note — curriculum-normalized identity (course-layer
+  // title/tagline/type; the note frontmatter is the immutable fallback).
   for (const note of corpus.notes) {
-    const { title, slug, category, priority } = note.frontmatter;
-    const group = corpus.groupBySlug.get(slug);
+    const course = getPsychiatryCourse(note.frontmatter.slug);
+    const title = course?.title ?? note.frontmatter.title;
+    const kind = course?.kind ?? note.kind;
+    const { category, priority } = note.frontmatter;
+    const group = corpus.groupBySlug.get(note.frontmatter.slug);
     const prio = priorityMeta(priority).label;
     records.push({
-      id: `psychiatry-${slug}`,
+      id: `psychiatry-${note.frontmatter.slug}`,
       title,
       type: "psychiatry-note",
       description:
-        (note.tagline ??
-          `${category} ${note.kind === "disorder" ? "lesson" : "concept note"} — ${prio}.`) +
-        ` ~${note.readingMinutes} min${note.mcqs.length ? ` · ${note.mcqs.length} MCQs` : ""}` +
+        (course?.tagline ?? note.tagline ??
+          `${category} ${kind === "disorder" ? "lesson" : "concept lesson"} — ${prio}.`) +
+        ` ~${note.readingMinutes} min read${note.mcqs.length ? ` · ${note.mcqs.length} questions` : ""}` +
         (group ? ` · ${group.name}` : ""),
-      href: `/psychiatry/${slug}`,
+      href: `/psychiatry/${note.frontmatter.slug}`,
       keywords: [
         title.toLowerCase(),
-        slug.replace(/-/g, " "),
+        note.frontmatter.slug.replace(/-/g, " "),
+        note.frontmatter.title.toLowerCase(),
         category.toLowerCase(),
         group?.name.toLowerCase() ?? "",
-        note.kind === "disorder" ? "disorder" : "concept",
+        kind === "disorder" ? "disorder" : "concept",
         "psychiatry",
         "kyp psychiatry",
         `group ${group?.letter.toLowerCase() ?? ""}`,

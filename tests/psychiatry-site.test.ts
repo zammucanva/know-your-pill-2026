@@ -1883,3 +1883,135 @@ describe("psychiatry — batch-14 content QA (Group P, treatment methods)", () =
     expect(ihBlob).toContain("common factors"); // the mechanism
   });
 });
+
+describe("psychiatry — post-migration layer consistency (2026-09-30 audit)", () => {
+  test("77. library shows the course-layer type for the 8 reclassified concept courses", async () => {
+    // Treatment/services/law notes built on the 16-section disorder
+    // template are taught as Concept courses; the library must agree
+    // with the course hero (single learner-facing classification).
+    const { loadCorpus } = await import("../src/lib/oxford/loader");
+    const corpus = loadCorpus();
+    const reclassified = [
+      "dementia-management", "substance-use-overview",
+      "personality-disorder-treatment", "id-treatment-services",
+      "mental-health-law", "psychiatry-offending",
+      "homicide-infanticide", "juvenile-offending",
+    ];
+    for (const slug of reclassified) {
+      const course = getPsychiatryCourse(slug);
+      expect(course?.kind).toBe("concept");
+      const note = corpus.bySlug.get(slug);
+      expect(note?.kind).toBe("disorder"); // structural layer untouched
+    }
+    // Registry-wide: course layer = 74 disorder / 35 concept
+    const courses = reclassified.map((s) => getPsychiatryCourse(s)!);
+    expect(courses.length).toBe(8);
+    const all = corpus.notes.map((n) => getPsychiatryCourse(n.frontmatter.slug)?.kind);
+    expect(all.filter((k) => k === "disorder").length).toBe(74);
+    expect(all.filter((k) => k === "concept").length).toBe(35);
+  });
+
+  test("78. library rows use the honest self-test label and min-read duration", async () => {
+    const { html } = await get("/psychiatry/library");
+    expect(html).toContain("Self-test questions");
+    expect(html).toContain("min read");
+    // The pre-resolution ambiguous label must be gone.
+    expect(html.includes("Count (unlabelled in source)")).toBe(false);
+  });
+
+  test("79. lesson metadata uses the normalized course title (no em-dash source taglines)", async () => {
+    // A reclassified long-title exemplar: the note frontmatter title is
+    // "Mental Health Law — Capacity, Responsibility and the State's Duty"
+    // but the learner-facing <title> is the normalized course title.
+    const ml = await get("/psychiatry/mental-health-law");
+    expect(ml.status).toBe(200);
+    const title = ml.html.match(/<title>([^<]*)<\/title>/)?.[1] ?? "";
+    expect(title).toContain("Mental Health Law");
+    expect(title).toContain("KYP Psychiatry");
+    expect(title.includes("Capacity, Responsibility")).toBe(false);
+    const dm = await get("/psychiatry/dementia-management");
+    const dmTitle = dm.html.match(/<title>([^<]*)<\/title>/)?.[1] ?? "";
+    expect(dmTitle).toContain("Managing Dementia");
+    expect(dmTitle.includes("practical umbrella note")).toBe(false);
+  });
+
+  test("80. self-test question titles use the normalized course layer", async () => {
+    const { html } = await get("/psychiatry/self-test");
+    expect(html).toContain("Mental Health Law"); // normalized title present
+    expect(html.includes("Capacity, Responsibility and the State")).toBe(false);
+  });
+
+  test("81. every course page ends with the curriculum continuation block", async () => {
+    // Spot: a mid-curriculum course shows prev+next; the first course
+    // (Q1, foundations first) links back to the library; the last course
+    // ends at the self-test.
+    const mid = await get("/psychiatry/schizophrenia");
+    expect(mid.html).toContain('id="next-course"');
+    expect(mid.html).toContain("Next lesson");
+    const first = await get("/psychiatry/neurotransmitters");
+    expect(first.html).toContain("Back to the Library");
+    const last = await get("/psychiatry/voluntary-sector");
+    expect(last.html).toContain("Curriculum complete");
+  });
+
+  test("82. /learn dashboard includes the psychiatry pathway with real counts", async () => {
+    const { status, html } = await get("/learn");
+    expect(status).toBe(200);
+    expect(html).toContain("Psychiatry");
+    expect(html).toContain("109"); // lessons — from generated psychiatryStats
+  });
+
+  test("83. search records: course-layer identity + honest counts", async () => {
+    const { psychiatrySearchRecords, psychiatryStats } =
+      await import("../src/lib/kyp/data/psychiatry-search-records.generated");
+    expect(psychiatryStats.lessons).toBe(109);
+    expect(psychiatryStats.domains).toBe(18);
+    expect(psychiatryStats.questions).toBe(719);
+    expect(psychiatryStats.disorderCourses).toBe(74);
+    expect(psychiatryStats.conceptLessons).toBe(35);
+    const library = psychiatrySearchRecords.find((r) => r.id === "psychiatry-library");
+    expect(library?.description).toContain("74 disorder courses");
+    expect(library?.description).toContain("35 concept lessons");
+    const ml = psychiatrySearchRecords.find((r) => r.id === "psychiatry-mental-health-law");
+    expect(ml?.title).toBe("Mental Health Law");
+    expect(ml?.description).toContain("min read");
+    // No record carries a stale note-layer title for the reclassified set
+    for (const slug of ["dementia-management", "homicide-infanticide"]) {
+      const rec = psychiatrySearchRecords.find((r) => r.id === `psychiatry-${slug}`);
+      expect(rec?.description.includes("MCQs")).toBe(false);
+    }
+  });
+
+  test("84. curriculum order: single learner-facing authority (Q first, tier-stable)", async () => {
+    const { curriculumOrderSlugs } = await import("../src/lib/oxford/curriculum");
+    const order = curriculumOrderSlugs();
+    expect(order.length).toBe(109);
+    expect(order[0]).toBe("neurotransmitters"); // Q1 — Foundations first
+    // Adjacency for a known course resolves to real neighbours
+    const { adjacentCurriculum } = await import("../src/lib/oxford/curriculum");
+    const { prev, next } = adjacentCurriculum("schizophrenia");
+    expect(prev).toBeTruthy();
+    expect(next).toBeTruthy();
+    expect(order.indexOf(prev!)).toBe(order.indexOf("schizophrenia") - 1);
+    expect(order.indexOf(next!)).toBe(order.indexOf("schizophrenia") + 1);
+  });
+
+  test("85. library per-course totals derive from the course outline registry", async () => {
+    const { getCourseRenderedSectionIds, courseNavItems } =
+      await import("../src/lib/kyp/psychiatry-course-sections");
+    for (const slug of ["schizophrenia", "neurotransmitters", "mental-health-law"]) {
+      const course = getPsychiatryCourse(slug)!;
+      const rendered = getCourseRenderedSectionIds(course);
+      const nav = courseNavItems(rendered);
+      // The library total is the tracked-outline count: nav items minus
+      // the hero anchor (the exact completionIds contract of the course
+      // view — "epidemiology-band" is a render marker, not a nav id).
+      const total = nav.filter((i) => i.id !== "top").length;
+      expect(total).toBeGreaterThan(10);
+      // every completion id is a real rendered section
+      for (const item of nav.filter((i) => i.id !== "top")) {
+        expect(rendered.has(item.id)).toBe(true);
+      }
+    }
+  });
+});

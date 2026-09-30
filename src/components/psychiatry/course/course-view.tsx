@@ -38,9 +38,9 @@ import {
   CourseClinicalCases,
   CourseHighYield,
 } from "./course-india-exam";
-import { CourseFaq, CourseReferences } from "./course-recall";
+import { CourseFaq, CourseReferences, CourseNextStep, type AdjacentCourseRef } from "./course-recall";
 
-import { courseNavItems } from "@/lib/kyp/psychiatry-course-sections";
+import { courseNavItems, getCourseRenderedSectionIds } from "@/lib/kyp/psychiatry-course-sections";
 import type { PsychiatryCourse } from "@/lib/kyp/data/psychiatry-courses/types";
 import type { LessonGroup } from "@/lib/kyp/data";
 
@@ -59,42 +59,21 @@ import type { LessonGroup } from "@/lib/kyp/data";
  * the note shell uses (slug-keyed) — existing progress for a migrated
  * topic keeps working.
  */
-export function PsychiatryCourseView({ course }: { course: PsychiatryCourse }) {
+export function PsychiatryCourseView({
+  course,
+  adjacent,
+}: {
+  course: PsychiatryCourse;
+  adjacent?: { prev: AdjacentCourseRef | null; next: AdjacentCourseRef | null };
+}) {
   const lessons = course.lessonGroups;
   const quizzes = course.microQuizzes;
   const hasLessons = lessons.length > 0;
 
   // Sections this course actually renders (drives nav + progress).
-  const rendered = React.useMemo(() => {
-    const ids = new Set<string>();
-    const add = (id: string) => ids.add(id);
-    add("top");
-    add("quick-facts");
-    if (course.learningObjectives.length > 0) add("learning-objectives"); // rendered inside hero
-    if (course.knowledgeGraph.length > 0) add("knowledge-graph");
-    if (course.mechanism.steps.length > 0) add("mechanism");
-    if (course.brainRegions.length > 0) add("brain");
-    if (course.neurotransmitters.length > 0) add("neurotransmitters");
-    if (course.pathways.length > 0) add("pathways");
-    if (course.timeline.length > 0) add("timeline");
-    if (course.epidemiology || (course.etiology && course.etiology.length > 0)) add("epidemiology-band");
-    if (course.symptomClusters && course.symptomClusters.length > 0) add("symptoms");
-    if (course.diagnosticCriteria && course.diagnosticCriteria.length > 0) add("diagnosis");
-    if (course.differentialDiagnosis && course.differentialDiagnosis.length > 0) add("differential");
-    if (course.management && course.management.length > 0) add("management");
-    if (course.drugLinks.length > 0 || course.contentGaps.length > 0) add("drug-navigation");
-    add("patient-guide");
-    add("indian-practice");
-    if (course.decisionPath) add("decision-path");
-    if (course.commonMistakes && course.commonMistakes.length > 0) add("common-mistakes");
-    if (course.examLens) add("exam-lens");
-    if (course.clinicalCases && course.clinicalCases.length > 0) add("clinical-case");
-    if (course.clinicalPearls.length > 0 || course.highYieldSummary.length > 0) add("high-yield");
-    if (course.activeRecallQuestions.length > 0) add("active-recall");
-    if (course.faqs.length > 0) add("faq");
-    if (Object.values(course.references).some((category) => (category as unknown[]).length > 0)) add("references");
-    return ids;
-  }, [course]);
+  // Single authority: getCourseRenderedSectionIds (shared with the
+  // library's per-course totals so the two surfaces never disagree).
+  const rendered = React.useMemo(() => getCourseRenderedSectionIds(course), [course]);
 
   const navItems = React.useMemo(() => courseNavItems(rendered), [rendered]);
 
@@ -209,6 +188,9 @@ export function PsychiatryCourseView({ course }: { course: PsychiatryCourse }) {
       {visibility("faq", <CourseFaq course={course} />)}
       {visibility("references", <CourseReferences course={course} />)}
       {checkpoint(5)}
+
+      {/* ===== Curriculum continuation (closed journey end) ===== */}
+      <CourseNextStep course={course} adjacent={adjacent ?? { prev: null, next: null }} />
     </>
   );
 }

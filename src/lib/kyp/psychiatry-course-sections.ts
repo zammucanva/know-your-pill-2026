@@ -1,4 +1,5 @@
 import type { NavItem } from "@/lib/kyp/use-scroll-spy";
+import type { PsychiatryCourse } from "@/lib/kyp/data/psychiatry-courses/types";
 
 /**
  * Psychiatry course section registry — the single source of truth for
@@ -63,4 +64,43 @@ export function courseNavItems(renderedSectionIds: Set<string>): NavItem[] {
   return PSYCH_COURSE_NAV_ITEMS.filter(
     (item) => item.id === "top" || renderedSectionIds.has(item.id)
   ).map(({ id, label, group }) => ({ id, label, group }));
+}
+
+/**
+ * The section ids a course actually renders (drives nav + progress).
+ * Single authority: the course view's conditional-rendering logic,
+ * extracted here so the library page (per-course totals), tests and
+ * any other surface derive the SAME outline instead of duplicating
+ * the conditions. "top" is included — it is the hero anchor the
+ * resume system targets; completion excludes it (see course view).
+ */
+export function getCourseRenderedSectionIds(course: PsychiatryCourse): Set<string> {
+  const ids = new Set<string>();
+  const add = (id: string) => ids.add(id);
+  add("top");
+  add("quick-facts");
+  if (course.learningObjectives.length > 0) add("learning-objectives"); // rendered inside hero
+  if (course.knowledgeGraph.length > 0) add("knowledge-graph");
+  if (course.mechanism.steps.length > 0) add("mechanism");
+  if (course.brainRegions.length > 0) add("brain");
+  if (course.neurotransmitters.length > 0) add("neurotransmitters");
+  if (course.pathways.length > 0) add("pathways");
+  if (course.timeline.length > 0) add("timeline");
+  if (course.epidemiology || (course.etiology && course.etiology.length > 0)) add("epidemiology-band");
+  if (course.symptomClusters && course.symptomClusters.length > 0) add("symptoms");
+  if (course.diagnosticCriteria && course.diagnosticCriteria.length > 0) add("diagnosis");
+  if (course.differentialDiagnosis && course.differentialDiagnosis.length > 0) add("differential");
+  if (course.management && course.management.length > 0) add("management");
+  if (course.drugLinks.length > 0 || course.contentGaps.length > 0) add("drug-navigation");
+  add("patient-guide");
+  add("indian-practice");
+  if (course.decisionPath) add("decision-path");
+  if (course.commonMistakes && course.commonMistakes.length > 0) add("common-mistakes");
+  if (course.examLens) add("exam-lens");
+  if (course.clinicalCases && course.clinicalCases.length > 0) add("clinical-case");
+  if (course.clinicalPearls.length > 0 || course.highYieldSummary.length > 0) add("high-yield");
+  if (course.activeRecallQuestions.length > 0) add("active-recall");
+  if (course.faqs.length > 0) add("faq");
+  if (Object.values(course.references).some((category) => (category as unknown[]).length > 0)) add("references");
+  return ids;
 }

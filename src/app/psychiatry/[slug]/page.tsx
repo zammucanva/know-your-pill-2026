@@ -8,10 +8,11 @@ import { Footer } from "@/components/kyp/sections/footer";
 import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 import { Container } from "@/components/kyp/ui/container";
 import { getNoteBySlug, getAllNoteSlugs } from "@/lib/oxford/loader";
-import { getGroupForSlug, relatedNotes } from "@/lib/oxford/curriculum";
+import { getGroupForSlug, relatedNotes, adjacentCurriculum } from "@/lib/oxford/curriculum";
 import { LessonShell, type LessonRef } from "@/components/oxford/lesson-shell";
 import { getPsychiatryCourse } from "@/lib/kyp/data/psychiatry-courses";
 import { PsychiatryCourseView } from "@/components/psychiatry/course/course-view";
+import type { AdjacentCourseRef } from "@/components/psychiatry/course/course-recall";
 
 /**
  * /psychiatry/[slug] — one KYP Psychiatry lesson per canonical note.
@@ -41,19 +42,24 @@ export async function generateMetadata({
   const note = getNoteBySlug(slug);
   if (!note) return { title: "Lesson not found · KYP Psychiatry" };
 
-  const title = `${note.frontmatter.title} — KYP Psychiatry`;
+  // Curriculum-normalized identity (all 109 notes are migrated): the
+  // course layer owns the learner-facing title/tagline/type; the note
+  // frontmatter is the immutable fallback only.
+  const course = getPsychiatryCourse(slug);
+  const title = `${course?.title ?? note.frontmatter.title} — KYP Psychiatry`;
   const description =
-    (note.tagline ? note.tagline.slice(0, 155) : undefined) ??
-    `Learn ${note.frontmatter.title} through structured clinical learning, cases, active recall and self-testing.`;
+    (course?.tagline ?? note.tagline ?? "").slice(0, 155) ||
+    `Learn ${course?.title ?? note.frontmatter.title} through structured clinical learning, cases, active recall and self-testing.`;
+  const kind = course?.kind ?? note.kind;
   return {
     title,
     description,
     keywords: [
-      note.frontmatter.title,
+      course?.title ?? note.frontmatter.title,
       note.frontmatter.category,
       "psychiatry",
       "KYP Psychiatry",
-      ...(note.kind === "disorder" ? ["disorder", "clinical lesson"] : ["concept", "psychiatry science"]),
+      ...(kind === "disorder" ? ["disorder", "clinical lesson"] : ["concept", "psychiatry science"]),
     ],
     openGraph: {
       title,
@@ -79,6 +85,21 @@ export default async function PsychiatryLessonPage({
   // the note corpus are untouched — the course layer is additive.
   const course = getPsychiatryCourse(slug);
   if (course) {
+    // Curriculum continuation — adjacency derived from the SAME
+    // learner-facing order the library uses (never the migration order).
+    const { prev, next } = adjacentCurriculum(slug);
+    const toAdjacent = (s: string | null): AdjacentCourseRef | null => {
+      const c = s ? getPsychiatryCourse(s) : null;
+      return c
+        ? {
+            slug: c.slug,
+            title: c.title,
+            tagline: c.tagline,
+            groupLetter: c.groupLetter,
+            groupName: c.groupName,
+          }
+        : null;
+    };
     return (
       <div className="flex min-h-screen flex-col">
         <Navbar />
@@ -95,7 +116,10 @@ export default async function PsychiatryLessonPage({
               </nav>
             </Container>
           </div>
-          <PsychiatryCourseView course={course} />
+          <PsychiatryCourseView
+            course={course}
+            adjacent={{ prev: toAdjacent(prev), next: toAdjacent(next) }}
+          />
         </main>
         <Footer />
       </div>

@@ -57,3 +57,27 @@ Implications:
 
 This record exists so the limitation is explicit and auditable, per the
 content-source rules of the psychiatry-library integration.
+
+## Proposed future additions — classification (2026-09-30 review)
+
+The 11 [PROPOSED] additions in the normalization record §5 were reviewed
+against the 109-course corpus. **None can be authored from the existing
+source material** — their origin chapters live in the unuploaded parts 6–7.
+Classification (disposition for when source material arrives):
+
+| # | Proposed area | Classification | Rationale |
+|---|---------------|----------------|-----------|
+| 1 | Dissociative & Conversion Disorders | Future course (E or new) | Only depersonalization + recovered-memories exist; the amnesia/fugue/identity family is absent |
+| 2 | Somatic Symptom & Related Disorders | Future course (new S) | Zero corpus coverage; high-frequency Indian general-practice territory |
+| 3 | Psychopharmacology | **Coordinate with the Medication Library** (future drug-course batches) | The 12 existing medication courses are the canonical drug system; course `contentGaps` already request antipsychotics/mood stabilisers as the next drug batches. A psychiatry-side survey course may complement, never duplicate, that system |
+| 4 | ECT & Neuromodulation | Future course (new T) | Zero corpus coverage |
+| 5 | CBT & Behavioural Therapies | Future course (P) | P group has dynamic/group/family/couples — the most evidenced family is absent |
+| 6 | Emergency Psychiatry | Future course | Standalone acute assessment/containment discipline not covered by the suicide courses |
+| 7 | Consultation-Liaison Psychiatry | Future course | Zero corpus coverage |
+| 8 | Perinatal & Women's Mental Health | Future course | Zero corpus coverage (highest-risk windows) |
+| 9 | Epilepsy & Psychiatry | Future course | HIV/TBI neuropsychiatry exist; epilepsy does not |
+| 10 | Disaster & Mass-Trauma Psychiatry | Future course (R) | Refugee note touches population-level response only |
+| 11 | Stroke Neuropsychiatry | Future course (A) | Vascular-dementia covers cognition only |
+
+Accounting (never mixed): **SOURCE lessons 109 · KYP-added courses 0 ·
+PROPOSED future additions 11.**

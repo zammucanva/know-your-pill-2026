@@ -20,9 +20,9 @@ Every one of the 109 lessons now carries the same learner-facing metadata:
 | **Subtitle** | ≤ 90 characters; carries subtopics, scope clarification, taglines; blank only when genuinely unnecessary. |
 | **Summary** | 1–2 sentences; ≤ 45 words total; no sentence over 30 words; plain clinical language; neutral tone; no invented statistics; no unsupported medical claims. |
 | **Tier** | Preserved exactly from source: P1 = Core, P2 = Supporting, P3 = Reference. |
-| **Type** | Preserved exactly from source: Disorder / Concept (82 disorder, 27 concept). |
+| **Type** | Course-layer classification: Disorder / Concept (74 disorder courses, 35 concept lessons). The note layer (structural: 82 notes use the 16-section disorder template, 27 the 8-section concept template) is preserved byte-untouched; 8 treatment/services/law notes built on the disorder template are taught as **Concept** courses — a semantic reclassification recorded in §9. |
 | **Duration** | Preserved exactly: the note-layer reading minutes (source `reading_time` where authored; otherwise the established 200-wpm computation). Course-layer journey times also preserved unchanged. |
-| **Count (unlabelled in source)** | The trailing per-lesson number, preserved exactly, never reinterpreted — displayed only as "Count (unlabelled in source)". |
+| **Count (self-test questions)** | The per-lesson number, preserved exactly. Resolution (2026-09-30, §7.1): the value is the note's authored self-test MCQ count — displayed as "Self-test questions". |
 
 **Ordering rule inside sections**: Foundational/Core (P1) → Core clinical →
 Supporting (P2) → Reference (P3), with the source index order preserved
@@ -450,15 +450,27 @@ the medical-content requirement.
 
 ---
 
-## 7. Open Questions
+## 7. Open Questions — resolutions recorded 2026-09-30 (post-migration audit)
 
-1. **The trailing number's meaning** is unlabelled in the source. It is
-   preserved exactly and displayed only as "Count (unlabelled in source)".
-   No interpretation (sections, MCQs, questions, concepts, checkpoints,
-   objectives) is offered — by design.
-2. **Duration duality**: note-layer reading minutes vs course-layer journey
-   times both survive. A future decision may unify the learner-facing
-   duration surface; both values are preserved meanwhile.
+1. **The trailing number — RESOLVED with evidence.** The per-lesson
+   value equals the note's authored self-test MCQ count exactly: verified
+   by a corpus-wide multiset comparison of this record's Count column
+   against the loader-parsed MCQ counts (109/109 values match; 76×6,
+   6×7, 15×8, 9×9) and by per-note spot checks. The canonical topic
+   index carries no such column, which is why the number was
+   "unlabelled in source"; the value derives from the corpus itself.
+   Learner-facing consequence: the library chip is now labelled
+   **"Self-test questions"** — an honest label for the value actually
+   displayed (the loader's MCQ count). No content, count or MCQ was
+   changed.
+2. **Duration duality — RESOLVED by disambiguation, both values
+   preserved.** The note-layer reading minutes (11–34 min, the
+   source-derived reading estimate) and the course-layer journey time
+   (25–40 min, the six-lesson course experience) are genuinely different
+   measures and differ on all 109 lessons by design. The learner-facing
+   fix is labelling, not unification: the library shows **"min read"**;
+   the course hero shows the course journey time. No duration value was
+   recomputed or altered.
 3. **Strongest overlap candidate for a future merge**: Alcohol-Related
    Dementia ↔ Amnesic Syndromes share the Korsakoff story from two angles.
    The audit keeps both (different teaching jobs); a future editor wanting a
@@ -493,6 +505,51 @@ the medical-content requirement.
 | CI | green (quality + build) |
 | Deployment | green (GitHub Pages) |
 | Live verification | 109/109 routes HTTP 200, migrated course view |
+
+---
+
+## 9. Post-migration layer-consistency audit (2026-09-30)
+
+A full 109-course programmatic audit (metadata, structure, provenance,
+evidence, India lens, exam lens, cases, recall, drug links, navigation)
+found zero structural defects and closed four layer-consistency gaps.
+All fixes are presentation-layer only:
+
+1. **The 8 semantic type reclassifications** (recorded, justified):
+   `dementia-management`, `substance-use-overview`,
+   `personality-disorder-treatment`, `id-treatment-services`,
+   `mental-health-law`, `psychiatry-offending`, `homicide-infanticide`,
+   `juvenile-offending` — 16-section notes taught as **Concept** courses
+   (treatment, services and law topics are concepts, not disorders).
+   The registry and this record's §3 tables always classified them as
+   concepts; the note-layer structural derivation (section count) and the
+   previous "82/27 preserved exactly" wording are now correctly described
+   by the §1 Type rule. All 8 courses carry their full clinical content
+   (symptom clusters, criteria, differentials, management, cases) — the
+   course view renders those sections kind-independently, so no content
+   was lost. The library type marker, route metadata keywords and search
+   records now use the course-layer classification consistently.
+2. **Normalized metadata**: the lesson route `generateMetadata` and the
+   self-test question titles now use the curriculum-normalized course
+   title/tagline (the note frontmatter remains the immutable fallback),
+   so browser tabs, social cards and quiz surfaces show the same identity
+   the library and course pages show.
+3. **Search records**: the library search entry now states the
+   course-layer counts (74 disorder / 35 concept); per-note records use
+   the normalized title/tagline and "min read" phrasing. Regenerated from
+   the same generator (`scripts/generate-psychiatry-search-records.ts`),
+   which now also emits corpus-derived `psychiatryStats` so downstream
+   client pages never hardcode stale counts.
+4. **Library progress**: the library previously accepted a server-passed
+   `completedSections: 0` and never merged learner progress (dead UI).
+   It now merges the same localStorage progress store the lessons write
+   to (hydration-safe), showing real per-course progress bars, per-chapter
+   completion counts and a "Continue" filter. Progress is real state.
+5. **Curriculum continuation**: every course page now ends with a
+   registry-derived prev/next block in the SAME learner-facing order the
+   library uses (single ordering authority: `LEARNER_SECTION_ORDER` +
+   tier-preserving stable sort), closing the journey (the last course
+   ends at the self-test, the first at the library).
 
 Normalization is presentation-layer only. The source corpus, its MCQs, the
 provenance registries, the evidence maps, the tiers, the types, the
