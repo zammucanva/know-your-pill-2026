@@ -93,6 +93,17 @@ import { familyTherapyCourse } from "./family-therapy";
 import { therapeuticCommunitiesCourse } from "./therapeutic-communities";
 import { psychiatricRehabilitationCourse } from "./psychiatric-rehabilitation";
 import { indigenousHealingCourse } from "./indigenous-healing";
+import { psychiatricPhenomenologyCourse } from "./psychiatric-phenomenology";
+import { psychiatricAssessmentCourse } from "./psychiatric-assessment";
+import { personalityAssessmentCourse } from "./personality-assessment";
+import { cognitiveAssessmentCourse } from "./cognitive-assessment";
+import { psychiatricClassificationCourse } from "./psychiatric-classification";
+import { neuroendocrinologyCourse } from "./neuroendocrinology";
+import { psychiatricGeneticsCourse } from "./psychiatric-genetics";
+import { neuroimagingCourse } from "./neuroimaging";
+import { memoryEmotionScienceCourse } from "./memory-emotion-science";
+import { psychodynamicTheoriesCourse } from "./psychodynamic-theories";
+import { transculturalStigmaCourse } from "./transcultural-stigma";
 
 /**
  * Psychiatry learning-system course registry.
@@ -150,7 +161,14 @@ import { indigenousHealingCourse } from "./indigenous-healing";
  * treatment methods, available subset): dynamic-psychotherapy,
  * group-therapy, couples-therapy, family-therapy,
  * therapeutic-communities, psychiatric-rehabilitation,
- * indigenous-healing (all concept).
+ * indigenous-healing (all concept). Batch 15 (Group Q —
+ * foundations & sciences, completing the group after the
+ * neurotransmitters pilot): psychiatric-phenomenology,
+ * psychiatric-assessment, personality-assessment,
+ * cognitive-assessment, psychiatric-classification,
+ * neuroendocrinology, psychiatric-genetics, neuroimaging,
+ * memory-emotion-science, psychodynamic-theories,
+ * transcultural-stigma (all concept).
  * The completion matrix generator audits coverage.
  */
 export const psychiatryCourses: PsychiatryCourse[] = [
@@ -248,6 +266,17 @@ export const psychiatryCourses: PsychiatryCourse[] = [
   therapeuticCommunitiesCourse,
   psychiatricRehabilitationCourse,
   indigenousHealingCourse,
+  psychiatricPhenomenologyCourse,
+  psychiatricAssessmentCourse,
+  personalityAssessmentCourse,
+  cognitiveAssessmentCourse,
+  psychiatricClassificationCourse,
+  neuroendocrinologyCourse,
+  psychiatricGeneticsCourse,
+  neuroimagingCourse,
+  memoryEmotionScienceCourse,
+  psychodynamicTheoriesCourse,
+  transculturalStigmaCourse,
 ];
 
 export function getPsychiatryCourse(slug: string): PsychiatryCourse | null {

@@ -112,25 +112,26 @@ describe("psychiatry — routes and identity", () => {
     // ten Group B courses and Group L's first half incl.
     // child-neuropsychiatry (this test's former exemplar) —
     // paediatric-mood and all of Group L (this test's former
-    // exemplars) — with Groups C-O and A-L complete, the remaining
-    // un-migrated notes are the Group Q/R concept notes (batch 14
-    // migrated dynamic-psychotherapy, this test's former exemplar);
-    // psychiatric-phenomenology (Group Q) is next in index order and
+    // exemplars) — with Groups C-O, A-L and P now complete, batch 15
+    // migrated all eleven remaining Group Q courses (psychiatric-
+    // phenomenology was this test's former exemplar); the remaining
+    // un-migrated notes are the four Group R concept notes;
+    // primary-care-psychiatry (R1) is next in index order and
     // renders the same six-phase note-shell contract.
-    const { status, html } = await get("/psychiatry/psychiatric-phenomenology");
+    const { status, html } = await get("/psychiatry/primary-care-psychiatry");
     expect(status).toBe(200);
     expect(html).toContain("Understand");
     expect(html).toContain("India in Practice");
     expect(html).toContain("Sources &amp; References");
   });
 
-  test("5. concept lesson (psychiatric-phenomenology) serves 200", async () => {
-    // Batch 14 migrated couples-therapy (this test's former exemplar) —
-    // psychiatric-phenomenology (Group Q) is the next non-migrated
-    // concept note in index order.
-    const { status, html } = await get("/psychiatry/psychiatric-phenomenology");
+  test("5. concept lesson (primary-care-psychiatry) serves 200", async () => {
+    // Batch 15 migrated psychiatric-phenomenology (this test's former
+    // exemplar) — primary-care-psychiatry (Group R) is the next
+    // non-migrated concept note in index order.
+    const { status, html } = await get("/psychiatry/primary-care-psychiatry");
     expect(status).toBe(200);
-    expect(html).toContain("Phenomenology");
+    expect(html).toContain("Primary Care");
   });
 
   test("6. all 109 lesson routes serve 200", async () => {
@@ -216,8 +217,8 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
   // registry with provenance, status, mode projections and honest
   // content-gap recording. These tests pin the architecture contract.
 
-  test("15. registry integrity: 3 pilots + batches 1-14 (94 courses), note-slug keyed, valid status", () => {
-    expect(psychiatryCourses.length).toBe(94); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 + 5 batch-8 + 5 batch-9 + 8 batch-10 + 8 batch-11 + 7 batch-12 + 7 batch-13 + 7 batch-14 courses
+  test("15. registry integrity: 3 pilots + batches 1-15 (105 courses), note-slug keyed, valid status", () => {
+    expect(psychiatryCourses.length).toBe(105); // 3 validated pilots + 6 batch-1 + 6 batch-2 + 6 batch-3 + 5 batch-4 + 7 batch-5 + 7 batch-6 + 7 batch-7 + 5 batch-8 + 5 batch-9 + 8 batch-10 + 8 batch-11 + 7 batch-12 + 7 batch-13 + 7 batch-14 + 11 batch-15 courses
     const noteSlugs = getAllNoteSlugs();
     for (const course of psychiatryCourses) {
       expect(noteSlugs).toContain(course.slug); // one URL per topic
@@ -267,6 +268,13 @@ describe("psychiatry — learning-system course registry (pilot batch)", () => {
     expect(getPsychiatryCourse("youth-suicide")?.kind).toBe("disorder"); // batch-13 disorder course
     expect(getPsychiatryCourse("dynamic-psychotherapy")?.groupLetter).toBe("P"); // Group P — batch 14
     expect(getPsychiatryCourse("couples-therapy")?.kind).toBe("concept"); // batch-14 concept course
+    expect(getPsychiatryCourse("psychiatric-phenomenology")?.groupLetter).toBe("Q"); // Group Q — batch 15
+    expect(getPsychiatryCourse("psychiatric-assessment")?.kind).toBe("concept"); // batch-15 concept course
+    expect(getPsychiatryCourse("cognitive-assessment")?.groupLetter).toBe("Q"); // Group Q — batch 15
+    expect(getPsychiatryCourse("neuroendocrinology")?.kind).toBe("concept"); // batch-15 concept course
+    expect(getPsychiatryCourse("psychiatric-genetics")?.groupLetter).toBe("Q"); // Group Q — batch 15
+    expect(getPsychiatryCourse("neuroimaging")?.kind).toBe("concept"); // batch-15 concept course
+    expect(getPsychiatryCourse("transcultural-stigma")?.groupLetter).toBe("Q"); // Group Q — batch 15
   });
 
   test("16. mode projections: all four modes declared, sections resolve", () => {
