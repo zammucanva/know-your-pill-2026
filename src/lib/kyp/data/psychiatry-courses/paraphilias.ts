@@ -23,7 +23,7 @@ import type { PsychiatryCourse } from "./types";
 export const paraphiliasCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "paraphilias",
-  title: "Paraphilic Disorders — Attraction Templates & Harm Boundaries",
+  title: "Paraphilic Disorders",
   shortName: "Paraphilic Disorders",
   kind: "disorder",
   category: "Paraphilic Disorder",
@@ -35,9 +35,9 @@ export const paraphiliasCourse: PsychiatryCourse = {
   lastReviewed: "2026-09-28",
 
   tagline:
-    "The clinical tier of atypical attraction templates: arousal patterns toward non-consent, children, objects or suffering become DISORDERS only at the harm-or-distress threshold — the distinction that de-pathologises consensual adult variance, keeps help available to the tormented non-offender, and centres forensic psychiatry's actual public duty.",
+    "Attraction templates that become disorders only at the harm-or-distress threshold",
   summary:
-    "The discipline this course teaches first is conceptual hygiene: a paraphilic INTEREST is an atypical arousal pattern; a paraphilic DISORDER is that interest plus a threshold — harm or risk-of-harm to others or self (non-consent included), or marked personal distress. That single line does three pieces of work: it de-pathologises consensual adult variance (homosexuality left the classifications in 1973/1992, and India's law followed in Navtej 2018 — consensual same-sex conduct is neither crime nor disorder, full stop); it keeps psychiatry's help available to the ego-dystonic sufferer (the person tormented by an attraction they never chose, who has harmed no one and wants control — the engagement tier the stigma prevents from ever reaching the clinic); and it centres the forensic tier where psychiatry's actual public duty lives — the assessment and management of sexual-offence risk, especially against children, in cooperation with the law (POCSO's mandatory-reporting architecture, the BNS 2023 offence codes). The mechanism stories: the template that sets (attraction assembled through development and largely unmodifiable thereafter — treatment moves the BEHAVIOURAL expression, not the orientation; a century of failed re-orientation attempts retired the conversion promise); the escalation economy (exposure → private reinforcement → algorithmic deepening → community normalisation → compulsive cycles — the addiction grammar running on arousal as the drug); and the two clocks of harm (the compulsion clock and the opportunity clock — management must work both, because single-clock treatment relapses on the other's schedule). The epidemiological distinction that redirects protection: the majority of child sexual abuse is committed by SITUATIONAL offenders (acquaintances and family members without a primary pedophilic template), not by pedophilic-disorder patients — which is why safeguarding engineering, not stranger-panic, protects children. The Indian reality the course confronts plainly: a rising-detected CSA judicial caseload, tens of millions of internet-escalation-exposed young men, and virtually no engagement pathway for the non-offending help-seeker — the tier where psychiatry could actually prevent the first offence; the treating psychiatrist's OPD is currently the system's only de-facto incarnation of the Prevention Project tier that Germany built. The clinical stance throughout: firm on harm, non-mocking on attraction, evidence-based on treatment (relapse-prevention CBT, the SSRI compulsivity tier, the anti-androgen brakes with their consent-and-ethics architecture — the 'chemical castration' punitive frame rejected), and honest that management, not re-orientation, is the realistic outcome.",
+    "An atypical arousal pattern becomes a paraphilic disorder only at the threshold of harm, risk of harm or marked distress. Treatment manages behaviour and risk, not the attraction itself.",
   estimatedReadTime: "36 min",
   yieldRating: "high",
   primaryAudience: "medical",

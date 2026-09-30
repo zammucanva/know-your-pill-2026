@@ -20,7 +20,7 @@ import type { PsychiatryCourse } from "./types";
 export const alcoholRelatedDementiaCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "alcohol-related-dementia",
-  title: "Alcohol-Related Dementia — The Engine You Can Switch Off",
+  title: "Alcohol-Related Dementia",
   shortName: "ARD",
   kind: "disorder",
   category: "Neurocognitive Disorder",
@@ -36,10 +36,10 @@ export const alcoholRelatedDementiaCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Alcohol damages the brain through many channels at once — the poison itself, the vitamin starvation that travels with it, the repeated withdrawal storms, the falls, the failing liver — producing one of the few dementias that can be halted and partly reversed: stop the alcohol, replace the thiamine, and a meaningful fraction of the lost mind returns.",
+    "The dementia with an engine you can switch off — some of the lost mind can return",
 
   summary:
-    "This is the dementia with an engine, and the engine can be switched off. Between a quarter and a half of people with severe alcohol dependence show measurable cognitive impairment; the classic end-stage picture (the confabulating, apathetic, shuffling Korsakoff patient) is one face of it, but the more common clinical reality is quieter — the fifty-five-year-old who 'just isn't sharp anymore', whose memory holes the family excuses, whose executive planning has eroded. The five damage channels matter clinically because they predict the recovery map: damage from thiamine deficiency, withdrawal storms and undetected subdural can PARTIALLY YIELD to treatment, while long-standing direct toxicity and the wasted vermis largely do not. Two clinical faces share one engine: the executive face (frontal-parietal decline in the still-functioning drinker) and the amnesic face (the Wernicke-Korsakoff memory hole with confabulation, apathy and intact personality — the full account lives in the Amnesic Syndromes course, the compressed version here). The essential casualty discipline: EVERY cognitively impaired drinker gets thiamine before, during and after any glucose — the sugar-without-thiamine error can burn the remaining circuit in an afternoon. The Indian urgency is specific: rising per-capita consumption on a tide of cheap spirits, the malnutrition partnership (the calories of heavy spirit drinking arrive without nutrition), the peculiar Indian non-alcoholic thiamine routes (hyperemesis, tuberculosis, starvation), and families presenting 'weakness' and 'gas' rather than dementia — the diagnosis missed at exactly the point where the disease is most treatable. The honest reversibility arithmetic to hand every family: a quarter to a half of the lost sharpness can return over months of abstinence; the rest is held ground, and holding it is victory.",
+    "Alcohol-related dementia is cognitive impairment built on thiamine deficiency, repeated withdrawal, trauma and direct toxicity, with executive and amnesic faces. Abstinence and thiamine can return a meaningful fraction of the loss — and thiamine must precede every glucose load.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -62,13 +62,13 @@ export const alcoholRelatedDementiaCourse: PsychiatryCourse = {
     { label: "The Indian signature", value: "Spirits + malnutrition + 'weakness'", detail: "IMFL and arrack/toddy patterns (calories without nutrition); the somatic front door ('weakness', 'gas', 'he falls'); the family ledger the only honest drinking history — the patient minimises by reflex" },
   ],
   knowledgeGraph: [
-    { label: "Amnesic Syndromes — The Punched-Out Memory Hole", type: "condition", href: "/psychiatry/amnesic-syndromes/", note: "The full Wernicke-Korsakoff account: the filing-circuit anatomy, the B1-before-D5 rule, the confabulation mechanism, the family-as-hippocampus system" },
-    { label: "Vascular Dementia — The Staircase Decline", type: "condition", href: "/psychiatry/vascular-dementia/", note: "The shared executive face and the shared subdural factory in the falling population — the CT that repays itself in both" },
-    { label: "Frontotemporal Dementia — When Personality Changes First", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The frontal disinhibition differential — the timeline and the drinking history separating the two" },
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "The withdrawal and hepatic encephalopathy overlaps — the fluctuating states that interleave with the dementia's baseline" },
-    { label: "Traumatic Brain Injury Neuropsychiatry — The Invisible Triad", type: "condition", href: "/psychiatry/tbi-neuropsychiatry/", note: "The falls-and-subdural channel shared: the falling drinker's surgical emergency impersonating psychiatric decline" },
+    { label: "Amnesic Syndromes", type: "condition", href: "/psychiatry/amnesic-syndromes/", note: "The full Wernicke-Korsakoff account: the filing-circuit anatomy, the B1-before-D5 rule, the confabulation mechanism, the family-as-hippocampus system" },
+    { label: "Vascular Dementia", type: "condition", href: "/psychiatry/vascular-dementia/", note: "The shared executive face and the shared subdural factory in the falling population — the CT that repays itself in both" },
+    { label: "Frontotemporal Dementia", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The frontal disinhibition differential — the timeline and the drinking history separating the two" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "The withdrawal and hepatic encephalopathy overlaps — the fluctuating states that interleave with the dementia's baseline" },
+    { label: "Traumatic Brain Injury Neuropsychiatry", type: "condition", href: "/psychiatry/tbi-neuropsychiatry/", note: "The falls-and-subdural channel shared: the falling drinker's surgical emergency impersonating psychiatric decline" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The rider and the mimic — depression as both cause and product of the drinking, itself a cognitive fog" },
-    { label: "Insomnias — Chronic Insomnia Disorder", type: "condition", href: "/psychiatry/insomnia/", note: "The insomnia-depression-drinking loop — the sleep tier that sustains the relapse engine" },
+    { label: "Insomnia", type: "condition", href: "/psychiatry/insomnia/", note: "The insomnia-depression-drinking loop — the sleep tier that sustains the relapse engine" },
     { label: "Acetylcholine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The secondary cholinergic burden the frontal atrophy carries — and why the donepezil tier is not this disease's answer" },
     { label: "Frontal lobes", type: "brain-region", href: "#brain", note: "The solvent's first address — planning, judgement and inhibition eroding ahead of the memory store" },
     { label: "Cerebellar vermis", type: "brain-region", href: "#brain", note: "The balance machinery that shrivels early and visibly — the gait that announces the dementia years before the family names it" },

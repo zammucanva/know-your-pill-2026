@@ -85,7 +85,7 @@ export const memoryEmotionScienceCourse: PsychiatryCourse = {
   ],
   knowledgeGraph: [
     { label: "Amnesic Syndromes", type: "condition", href: "/psychiatry/amnesic-syndromes/", note: "The clinical home of the episodic-encoding failure — the Korsakov diencephalic system (medial thalamus, mamillary body, fornix) this course's science explains" },
-    { label: "Alzheimer's Disease & Dementia — The Gradual Erasure", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The episodic-first failure with savings collapsed below 50% at minutes, priming predicted to fail with progression, procedural relatively spared — the bath and prayer routines outlasting the names" },
+    { label: "Alzheimer's Disease & Dementia", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The episodic-first failure with savings collapsed below 50% at minutes, priming predicted to fail with progression, procedural relatively spared — the bath and prayer routines outlasting the names" },
     { label: "Post-Traumatic Stress Disorder (PTSD)", type: "condition", href: "/psychiatry/ptsd/", note: "The trauma-memory signature this course teaches: the emotional-memory system overactive, the contextual system impaired — intrusive fragments without contextual binding" },
     { label: "Recovered & False Memories", type: "condition", href: "/psychiatry/recovered-memories/", note: "The false-memory science's forensic home — laboratory implantation, suggestibility, source-confusion, and the catecholamine-amnesia speculations" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The working-memory impairments and the encoding-retrieval simulation — disproportionate retrieval failures due to compromised encoding" },

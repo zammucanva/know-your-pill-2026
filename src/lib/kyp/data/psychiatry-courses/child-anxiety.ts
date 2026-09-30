@@ -21,13 +21,13 @@ import type { PsychiatryCourse } from "./types";
 export const childAnxietyCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "child-anxiety",
-  title: "Child Anxiety — The School-Refusal Engines",
+  title: "Child Anxiety",
   shortName: "Child anxiety",
   kind: "disorder",
   category: "Child & Adolescent Psychiatry",
   groupLetter: "L",
   groupName: "Child & adolescent psychiatry",
-  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Child Anxiety — The School-Refusal Engines"],
+  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Child Anxiety"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -37,10 +37,10 @@ export const childAnxietyCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Childhood anxiety almost never says its name — it arrives as the Sunday-evening stomach-ache, the school-morning headache that vanishes by lunch, the child frozen speechless at the school gate — and it is one of child psychiatry's genuinely curable illnesses: graded facing of the feared thing, parents coached out of the rescue business, and the alarm recalibrates.",
+    "The school-refusal engines — Sunday stomach aches, gate tantrums and frozen speech",
 
   summary:
-    "Anxiety is the mind's smoke detector — essential when there is smoke, miserable when it false-alarms — and in children it rarely announces itself as anxiety. It arrives in paediatric costume: the recurring Sunday-evening stomach-ache, the school-morning headache gone by lunch, the bed-wetting regression, the tantrum at the school gate, the child who cannot sleep alone, the one who vomits before every exam. That somatic carousel is the Indian clinic's main door: years of ultrasounds, stool tests, panels and tonics before anyone asks the fear questions, and the sentence that ends the carousel — pain that follows the school calendar is a message about school — is this course's first teaching. The five disorders are one alarm misplaced in different rooms: separation anxiety (the commonest in younger children and the top engine of early school refusal), generalised anxiety (the school-age worrier, with the exam-perfect detail that children need only ONE accompanying symptom where adults need three or more), social anxiety (the frozen or blushing child), specific phobia (dogs, injections, lifts), and selective mutism — social anxiety's most extreme costume, the child who narrates cricket at full volume in the kitchen and cannot speak at school, treated through a speech-generalisation ladder that runs, rung by rung, through friends first. School refusal itself is a SYMPTOM, not a diagnosis, with four engines — separation, anxiety-specific, mood, truancy — because the treatment differs per engine. The mechanism is three stories: a sensitive alarm (the amygdala's hair trigger and the temperament that ships with it), the avoidance trap (each rescue teaches the brain the thing was dangerous), and the calibration classroom (the anxious household's alarm teaching the child's). The treatment architecture follows exactly: CBT built around graded exposure — the Coping Cat lineage, the ladder ranked 0–10, started at 2–3, with the stay-till-the-wave-falls rule — with the parent module (the accommodation inventory, the withdrawal of rescue, the SPACE logic) running parallel and sometimes being the whole treatment; SSRIs (sertraline, fluoxetine) reserved for the moderate-to-severe with the suicidality-class-warning conversation held honestly, and benzodiazepines documented as having essentially no child role. The India layer is not decoration: the joint-family rescue economy (the programme dies at the grandmother's 6 a.m. rescue mission), the hostel decision (readiness is the child's nervous system, not the family's ambition), the March exam-season somatic monsoon, and the mother's own untreated anxiety — treat it, and the child's programme's success rate doubles. Half of adult anxiety disorders began as childhood conditions; treated, most children recover fully. That is the whole argument for asking the fear questions at the third paediatric visit, not the thirteenth.",
+    "Childhood anxiety presents as somatic complaints, school refusal, clinginess or selective mutism rather than as voiced fear. Graded exposure CBT with a parent module is first-line, with SSRIs reserved for moderate-to-severe cases.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -65,11 +65,11 @@ export const childAnxietyCourse: PsychiatryCourse = {
     { label: "The Indian signature", value: "The somatic carousel before the fear interview", detail: "The paediatric OPD tours — ultrasound, stool, blood, tonics — for years; the sentence that breaks it: pain that follows the school calendar is a message about school" },
   ],
   knowledgeGraph: [
-    { label: "Child Assessment & Epidemiology — The Prevalence Movers", type: "condition", href: "/psychiatry/child-assessment-epidemiology/", note: "The developmental-history discipline and the survey architecture behind the childhood prevalence figures this course quotes" },
-    { label: "Autism Spectrum Disorder — The Prediction Engine", type: "condition", href: "/psychiatry/autism/", note: "The selective-mutism differential that runs both ways — reciprocity history and sensory profile against participation-without-speech" },
-    { label: "ADHD — The Brakes and the Engine", type: "condition", href: "/psychiatry/adhd/", note: "The concentration complaints anxiety whittles — attention intact on preferred non-feared tasks is the tell" },
-    { label: "Conduct Disorders — The Empathy Specifier", type: "condition", href: "/psychiatry/conduct-disorder/", note: "The truancy engine of school refusal — absence without distress, the family unaware, the treatment a conduct programme rather than a ladder" },
-    { label: "Developmental Disorders — The Learning Channels", type: "condition", href: "/psychiatry/developmental-disorders/", note: "Learning-disorder school aversion — fear of the subject or of failure's exposure, not of school itself" },
+    { label: "Child Assessment & Epidemiology", type: "condition", href: "/psychiatry/child-assessment-epidemiology/", note: "The developmental-history discipline and the survey architecture behind the childhood prevalence figures this course quotes" },
+    { label: "Autism Spectrum Disorder", type: "condition", href: "/psychiatry/autism/", note: "The selective-mutism differential that runs both ways — reciprocity history and sensory profile against participation-without-speech" },
+    { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The concentration complaints anxiety whittles — attention intact on preferred non-feared tasks is the tell" },
+    { label: "Conduct Disorders", type: "condition", href: "/psychiatry/conduct-disorder/", note: "The truancy engine of school refusal — absence without distress, the family unaware, the treatment a conduct programme rather than a ladder" },
+    { label: "Developmental Disorders", type: "condition", href: "/psychiatry/developmental-disorders/", note: "Learning-disorder school aversion — fear of the subject or of failure's exposure, not of school itself" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The mood engine — the adolescent 'anxiety' referral that is depression's anhedonic fatigue" },
     { label: "Panic Disorder & Agoraphobia", type: "condition", href: "/psychiatry/panic-disorder/", note: "The post-pubertal room — racing heart, breathlessness, doom; rare before 12, the full account when it arrives" },
     { label: "Social Anxiety Disorder & Specific Phobias", type: "condition", href: "/psychiatry/social-anxiety-phobias/", note: "The same alarm grown up — and the applied-tension tool for the injection-phobic fainter the child ladder borrows" },

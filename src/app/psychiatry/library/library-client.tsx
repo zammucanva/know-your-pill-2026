@@ -157,7 +157,8 @@ export function LibraryClient({ groups }: { groups: LibraryGroup[] }) {
                 <section key={group.letter} aria-labelledby={`group-${group.letter}`} className="scroll-mt-24" id={`group-${group.letter}`}>
                   <div className="flex items-baseline justify-between gap-3 border-b border-border pb-2">
                     <h2 id={`group-${group.letter}`} className="text-lg font-semibold tracking-tight text-foreground">
-                      <span className="mr-2 font-mono text-xs text-muted-foreground/60">{group.letter}</span>
+                      {/* Curriculum-normalized section format: letter + period + name */}
+                      <span className="mr-1 font-mono text-xs text-muted-foreground/60">{group.letter}.</span>
                       {group.name}
                     </h2>
                     <p className="shrink-0 text-xs text-muted-foreground">
@@ -209,7 +210,11 @@ export function LibraryClient({ groups }: { groups: LibraryGroup[] }) {
                               {note.readingMinutes}m
                             </span>
                             {note.mcqCount > 0 && (
-                              <span className="hidden items-center gap-1 md:inline-flex">
+                              <span
+                                className="hidden items-center gap-1 md:inline-flex"
+                                title="Count (unlabelled in source)"
+                                aria-label={`Count (unlabelled in source): ${note.mcqCount}`}
+                              >
                                 <ListChecks className="h-3 w-3" aria-hidden />
                                 {note.mcqCount}
                               </span>

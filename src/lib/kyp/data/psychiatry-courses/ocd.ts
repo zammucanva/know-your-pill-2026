@@ -27,15 +27,15 @@ export const ocdCourse: PsychiatryCourse = {
   category: "OCD & Related Disorder",
   groupLetter: "G",
   groupName: "OCD, impulse & habit disorders",
-  learningPath: ["Psychiatry", "OCD & Related", "OCD"],
+  learningPath: ["Psychiatry", "OCD & Related", "Obsessive-Compulsive Disorder (OCD)"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-28",
 
   tagline:
-    "A disorder of stuck alarm signals: unwanted intrusive thoughts the mind appraises as dangerous or meaningful, driving rituals that briefly relieve and permanently entrench the circuit.",
+    "Unwanted intrusive thoughts drive rituals that briefly relieve and entrench the circuit",
   summary:
-    "Nearly everyone has intrusive thoughts — a fleeting image of shouting in a silent hall, a 'what if I swerve', a doubt about whether the stove was really off. In OCD the machinery that should dismiss these as mental noise BREAKS at the appraisal step: the thought is read as meaningful, dangerous, or revealing of one's true character ('having this thought means I might DO it, or that I AM it'). That catastrophic appraisal demands action — checking, washing, praying, neutralising, confessing — and the action works for minutes; that minute of relief is the trap, teaching the brain that the ritual saved the day so the alarm re-arms louder next time. Two clarifications matter daily in Indian clinics: OCD is NOT 'liking orderliness' (that is personality — the ego-dystonic distinction), and it is eminently treatable — exposure-and-response-prevention therapy plus high-dose SSRIs routinely rescue lives that families had written off as 'madness', 'possessed' or 'just difficult'. This course covers the four content dimensions (including the taboo thoughts patients hide for years), the Salkovskis appraisal model, thought-action fusion, reassurance as a compulsion, the ERP protocol, the OCD-specific prescribing rules (higher doses, 10–12 week trials, clomipramine second-line, antipsychotic augmentation) — and the Indian layer: purity-contamination fusion, religious scrupulosity, the tantrik years, family accommodation as treatment target, and the dose-timeframe audit that reclaims 'treatment-resistant' cases.",
+    "OCD pairs unwanted intrusive thoughts, read as meaningful or dangerous, with compulsive rituals that briefly relieve and deepen the trap. Exposure-and-response-prevention with high-dose SSRIs is effective treatment.",
   estimatedReadTime: "38 min",
   yieldRating: "high",
   primaryAudience: "medical",
@@ -65,12 +65,12 @@ export const ocdCourse: PsychiatryCourse = {
   knowledgeGraph: [
     { label: "Generalized Anxiety Disorder (GAD)", type: "condition", href: "/psychiatry/gad/", note: "Verbal-realistic worry across domains versus image-taboo intrusions with rituals — 'they worry differently'" },
     { label: "Panic Disorder & Agoraphobia", type: "condition", href: "/psychiatry/panic-disorder/", note: "Surges out of the blue versus the obsession-ritigation loop" },
-    { label: "Impulse Control Disorders (Kleptomania, Pyromania, IED, Trichotillomania)", type: "condition", href: "/psychiatry/impulse-control-disorders/", note: "The grooming-circuit cousins (trich, skin-picking) debate their home on this spectrum" },
-    { label: "Gambling Disorder — The Addiction Without a Drug", type: "condition", href: "/psychiatry/gambling-disorder/", note: "DSM-5 moved gambling OUT to addictions; OCD got its own chapter — the re-chaptering neighbours" },
+    { label: "Impulse Control Disorders", type: "condition", href: "/psychiatry/impulse-control-disorders/", note: "The grooming-circuit cousins (trich, skin-picking) debate their home on this spectrum" },
+    { label: "Gambling Disorder", type: "condition", href: "/psychiatry/gambling-disorder/", note: "DSM-5 moved gambling OUT to addictions; OCD got its own chapter — the re-chaptering neighbours" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "Half of OCD patients carry depression; concealed taboo content plus depression is a suicide-risk constellation" },
     { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "Screen every patient — misery plus unspoken content carries the risk" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The absent-insight differential: ritual structure, theme symmetry and course separate OCD from psychosis" },
-    { label: "OCD & Tics in Youth — The Accommodation Grid", type: "condition", href: "/psychiatry/paediatric-ocd-tics/", note: "Childhood-onset, tic-related OCD: stronger genetic loading, the antipsychotic-augmentation responder" },
+    { label: "OCD & Tics in Youth", type: "condition", href: "/psychiatry/paediatric-ocd-tics/", note: "Childhood-onset, tic-related OCD: stronger genetic loading, the antipsychotic-augmentation responder" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The system the high-dose SSRI/clomipramine tier rides on — dose matters in this disorder" },
     { label: "Basal ganglia / CSTC loop", type: "brain-region", href: "#brain", note: "The alarm-gate circuitry stuck in repetition — the reason basal-ganglia events are implicated" },
   ],

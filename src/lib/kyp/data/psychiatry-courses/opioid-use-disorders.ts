@@ -23,13 +23,13 @@ import type { PsychiatryCourse } from "./types";
 export const opioidUseDisordersCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "opioid-use-disorders",
-  title: "Opioid Use Disorders — The Medicine That Holds the Door",
+  title: "Opioid Use Disorders",
   shortName: "OUD",
   kind: "disorder",
   category: "Substance Use Disorder",
   groupLetter: "B",
   groupName: "Substance use disorders",
-  learningPath: ["Psychiatry", "Substance Use Disorders", "Opioid Use Disorders — The Medicine That Holds the Door"],
+  learningPath: ["Psychiatry", "Substance Use Disorders", "Opioid Use Disorders"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -39,10 +39,10 @@ export const opioidUseDisordersCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Opioid dependence is the addiction with the highest overdose-death risk and the best evidence-based medicines: the overdose that kills in minutes is reversed by naloxone in minutes by anyone who knows the drill, the withdrawal that feels like dying is miserable but survivable, and the treatment philosophy has moved decisively from detox-and-pray to long-term stabilisation on a single daily medicine — like any chronic disease, because it is one.",
+    "The addiction with the highest overdose risk and the best evidence-based medicines",
 
   summary:
-    "This is the addiction with the highest overdose death risk and the best evidence-based medicines, and the whole course turns on holding both truths at once. India sits between two opioid stories: the traditional heroin routes through the north-western states, and the newer pharmaceutical wave — tramadol, codeine-containing cough syrups, injection pentazocine-type drugs — leaking from pharmacies with thin prescription oversight. Dependence develops fast because opioids pay the brain in its deepest currencies at once: the warm contentment of the endorphin system and the 'safety' signal that silences distress; within weeks to months the brain re-wires so that without the drug everything feels like illness — body aches, diarrhoea, gooseflesh, yawning, restlessness — the withdrawal that is MISERABLE, NOT LETHAL, which is precisely why relapse and overdose, not withdrawal itself, kill people: tolerance fades within days of abstinence, so the relapse at the old dose stops the breathing clock, most lethally with a benzodiazepine or alcohol on board. The drill every family must own: Shout–Breathe–Naloxone–Side–Send — naloxone (a few hundred rupees, safe, impossible to misuse) reverses the overdose in minutes, and the hospital transfer happens whatever the response, because naloxone is shorter-acting than most opioids. The backbone: buprenorphine-naloxone or methadone as daily stabilisation, tapered only when life is rebuilt — maintenance measured in years, like any chronic disease, with the diabetes-insulin analogy answering the 'substituting one addiction' stigma plainly. The riders complete the picture: HIV, hepatitis B/C, TB, endocarditis, injection sites; and the Indian frame: the NDPS Act's treatment-protection realities, the never-use-alone rule, and the family's 30-minute overdose kit that prevents the next death before it needs reversing. The sentence to hand the family early: 'This is a medical illness of the brain's calming system; the medicines for it are real; and the first rule at home is never use alone.'",
+    "Opioid use disorders carry the highest overdose-death risk of any addiction, because tolerance fades within days of abstinence. Naloxone reverses overdose, and long-term stabilisation with buprenorphine or methadone treats it like the chronic disease it is.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -66,10 +66,10 @@ export const opioidUseDisordersCourse: PsychiatryCourse = {
     { label: "The 30-minute kit", value: "Never use alone", detail: "The family overdose kit — recognition, naloxone, recovery position, the written relapse plan — taught before discharge, not after a death; naloxone costs a few hundred rupees, is safe and impossible to misuse" },
   ],
   knowledgeGraph: [
-    { label: "Substance Use — The Reward Hijack", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The parent frame: the single-disorder severity-graded logic, the reward hijack, the PAWS grey zone this course's withdrawal tail lives in" },
-    { label: "Alcohol Use Disorders — The Disease of More", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The lethality contrast — alcohol withdrawal kills, opioid withdrawal does not; and the benzodiazepine co-sedation the two share" },
-    { label: "Stimulant Use Disorders — Run, Crash, Crave", type: "condition", href: "/psychiatry/stimulant-use-disorders/", note: "The crash differential — hypersomnia and hunger against the opioid flu's diarrhoea and gooseflesh" },
-    { label: "Hallucinogen Use Disorders — The Great Exception", type: "condition", href: "/psychiatry/hallucinogen-use-disorders/", note: "The sibling without a withdrawal syndrome — the exception that proves the depressant rule" },
+    { label: "Substance Use", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The parent frame: the single-disorder severity-graded logic, the reward hijack, the PAWS grey zone this course's withdrawal tail lives in" },
+    { label: "Alcohol Use Disorders", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The lethality contrast — alcohol withdrawal kills, opioid withdrawal does not; and the benzodiazepine co-sedation the two share" },
+    { label: "Stimulant Use Disorders", type: "condition", href: "/psychiatry/stimulant-use-disorders/", note: "The crash differential — hypersomnia and hunger against the opioid flu's diarrhoea and gooseflesh" },
+    { label: "Hallucinogen Use Disorders", type: "condition", href: "/psychiatry/hallucinogen-use-disorders/", note: "The sibling without a withdrawal syndrome — the exception that proves the depressant rule" },
     { label: "Benzodiazepine Misuse", type: "condition", href: "/psychiatry/benzodiazepine-misuse/", note: "The other lethal withdrawal — and the co-sedation partner in the commonest lethal combination in Indian practice" },
     { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "The overdose, the detox and the shame all raise the risk — the assessment offered at every encounter in this population" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The rider travelling under the opioid use — trauma, grief and untreated depression; the SSRI tier of the 'cough' case" },

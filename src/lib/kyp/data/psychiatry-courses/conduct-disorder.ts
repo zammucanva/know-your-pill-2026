@@ -24,13 +24,13 @@ import type { PsychiatryCourse } from "./types";
 export const conductDisorderCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "conduct-disorder",
-  title: "Conduct Disorders — The Empathy Specifier",
+  title: "Conduct Disorders",
   shortName: "CD",
   kind: "disorder",
   category: "Child & Adolescent Psychiatry",
   groupLetter: "L",
   groupName: "Child & adolescent psychiatry",
-  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Conduct Disorders — The Empathy Specifier"],
+  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Conduct Disorders"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -40,10 +40,10 @@ export const conductDisorderCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "ODD defies and CD violates — one ladder, two rungs, and a specifier that changes the manual: the child without guilt or empathy does not need louder consequences, he needs predictable ones, a warmer-coached family, and a longer horizon. Treatment runs through the system around the child, never the child alone.",
+    "ODD defies, CD violates — the empathy specifier that changes the plan",
 
   summary:
-    "This is child psychiatry's most honest fork in the road. The ladder first: oppositional defiant disorder (ODD) is the lower rung — anger, argument, defiance toward authority, vindictiveness, exhausting but WITHOUT aggression that harms others, theft or law violations, in roughly 3–6% of children. Conduct disorder (CD) is the upper rung — the four DSM/ICD symptom bands of aggression to people and animals, property destruction, deceit/theft and serious rule violation, in around 2–4% of adolescents. Two prognostic splits run through everything: childhood-onset CD (before 10, riding on ADHD, impulsivity and harsh parenting) carries the higher risk of adult antisocial personality disorder — a third to half in severe cohorts — while adolescent-onset CD is peer-driven and mostly desists; and the specifier that changes the plan, limited prosocial emotions (2 of 4: guilt absent, callous lack of empathy, unconcern about performance, shallow affect, established from multiple sources over time), which predicts a harder, longer course and demands a treatment designed for it. Four mechanism stories do the teaching: the coercive family cycle, the hostile attribution bias, the cold engine of weak fear-and-empathy learning, and the street school of peer contagion. The treatment honesty: parent management training (8–20 structured sessions) is first-line for ODD and childhood CD; multisystemic-family approaches carry the evidence for moderate-to-severe CD; boot camps and fear-based institutions are iatrogenic, not merely useless. No drug treats CD itself — medication treats the drivers, and treating comorbid ADHD is the strongest pharmacological route to less aggression this field owns. The Indian layer is a funnel that runs backwards: the police and the Juvenile Justice Board see what the clinic should have seen earlier, the JJ Act 2015 machinery (Juvenile Justice Board, observation home, rehabilitation mandate) is the legal spine, Childline 1098 the network — and the runaway girl's 'conduct' label must always be inverted into an abuse screen before any behaviour programme is written.",
+    "Conduct disorder is aggression, destruction, deceit-theft or serious rule violation, the rung above oppositional defiant disorder. Parent management training is first-line, treating comorbid ADHD reduces aggression, and the limited prosocial emotions specifier demands longer, more specialised plans.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -67,13 +67,13 @@ export const conductDisorderCourse: PsychiatryCourse = {
     { label: "The Indian spine", value: "JJ Act 2015 and Childline 1098", detail: "The Juvenile Justice (Care and Protection of Children) Act 2015 processes the child in conflict with law through the Juvenile Justice Board and observation homes with a rehabilitation mandate; the clinical approximation of the missing programmes is the case-manager model — and the metro's private packages (₹50,000–2,00,000+, approx 2026) deserve the 'name the model' question" },
   ],
   knowledgeGraph: [
-    { label: "ADHD — The Brakes and the Engine", type: "condition", href: "/psychiatry/adhd/", note: "The great companion: the ignition under up to half of childhood-onset CD, and the treatable driver whose treatment measurably reduces aggression" },
-    { label: "Juvenile Offending — The Risk-Overlap Principle", type: "condition", href: "/psychiatry/juvenile-offending/", note: "The JJ Act 2015 machinery the CD child meets when the clinic was never called — the risk factors overlap, and so must the services" },
+    { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The great companion: the ignition under up to half of childhood-onset CD, and the treatable driver whose treatment measurably reduces aggression" },
+    { label: "Juvenile Offending", type: "condition", href: "/psychiatry/juvenile-offending/", note: "The JJ Act 2015 machinery the CD child meets when the clinic was never called — the risk factors overlap, and so must the services" },
     { label: "Post-Traumatic Stress Disorder (PTSD)", type: "condition", href: "/psychiatry/ptsd/", note: "The trauma engine under reactive, triggered, hypervigilant aggression — the screen every 'CD' child gets, boys included" },
-    { label: "Autism Spectrum Disorder — The Prediction Engine", type: "condition", href: "/psychiatry/autism/", note: "The rigidity crises that counterfeit calculation — rule violations from incomprehension, not intent; no predatory shape" },
-    { label: "Volatile Substance Misuse — The Stationery-Shop Drug", type: "condition", href: "/psychiatry/volatile-substance-misuse/", note: "The glue-first street tier that both mimics and deepens conduct presentations — screen every street-referred child" },
-    { label: "Psychiatric Disorder & Offending — The Formulation", type: "condition", href: "/psychiatry/psychiatry-offending/", note: "The adult end of the trajectory this course exists to bend — the formulation logic, not the moral verdict" },
-    { label: "Child Assessment & Epidemiology — The Prevalence Movers", type: "condition", href: "/psychiatry/child-assessment-epidemiology/", note: "The two-informant discipline and the developmental map this assessment runs on — home AND school, never one interview" },
+    { label: "Autism Spectrum Disorder", type: "condition", href: "/psychiatry/autism/", note: "The rigidity crises that counterfeit calculation — rule violations from incomprehension, not intent; no predatory shape" },
+    { label: "Volatile Substance Misuse", type: "condition", href: "/psychiatry/volatile-substance-misuse/", note: "The glue-first street tier that both mimics and deepens conduct presentations — screen every street-referred child" },
+    { label: "Psychiatric Disorder & Offending", type: "condition", href: "/psychiatry/psychiatry-offending/", note: "The adult end of the trajectory this course exists to bend — the formulation logic, not the moral verdict" },
+    { label: "Child Assessment & Epidemiology", type: "condition", href: "/psychiatry/child-assessment-epidemiology/", note: "The two-informant discipline and the developmental map this assessment runs on — home AND school, never one interview" },
     { label: "Amygdala", type: "brain-region", href: "#brain", note: "The threat system whose under-response writes the callous story — fear that never taught, distress that never inhibited" },
     { label: "Prefrontal cortex", type: "brain-region", href: "#brain", note: "The brakes — impulse control and the executive machinery the ADHD ignition rides; low verbal ability leaves fists where words should exit" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The reward-dominant decision style's currency — and the target of the stimulant tier that treats the ADHD driver" },

@@ -20,13 +20,13 @@ import type { PsychiatryCourse } from "./types";
 export const sleepBasicsCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "sleep-basics",
-  title: "Sleep–Wake Physiology — The Factory Night-Shift and Its Two Clocks",
+  title: "Sleep–Wake Physiology",
   shortName: "Sleep Basics",
   kind: "concept",
   category: "Sleep-Wake Disorder",
   groupLetter: "K",
   groupName: "Sleep-wake disorders",
-  learningPath: ["Psychiatry", "Sleep-Wake Disorders", "Physiology & Basics"],
+  learningPath: ["Psychiatry", "Sleep-Wake Disorders", "Sleep–Wake Physiology"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-28",
@@ -36,9 +36,9 @@ export const sleepBasicsCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Sleep is not the absence of activity but an actively generated brain state with its own architecture — deep sleep, light sleep, dream sleep in ~90-minute cycles — run by two biological clocks, a sleep-pressure meter and a circadian timer, whose disruption underlies every sleep disorder psychiatry treats.",
+    "An actively generated brain state with its own architecture, run by two biological clocks",
   summary:
-    "Most people think of sleep as a light-switch: on at night, off in the morning. It is closer to a factory night-shift with its own departments and schedules. In a normal night, the brain cycles through four to six ~90-minute loops, each containing lighter stages, deep slow-wave sleep (the physical-restoration department, front-loaded into the first third of the night) and REM sleep (the dream-and-emotional-filing department, back-loaded toward morning — which is why remembered dreams live at 5–6 a.m.). Two forces decide when sleep arrives: Process S, a homeostatic sleep-pressure meter that builds with every waking hour (adenosine, the same molecule caffeine blocks), and Process C, the circadian clock in the hypothalamus — 20,000 cells of suprachiasmatic nucleus trained by daylight — that sets the 24-hour schedule of sleepiness, alertness, hormones and body temperature, and even manufactures a 'forbidden zone' for sleep in the hours before habitual bedtime (why the insomniac's 9 p.m. attempt fails while midnight succeeds). Sleep medicine's core clinical insight: most common sleep complaints are not 'sleep problems' but CLOCK problems — pressure taken at the wrong time, or timing trained to the wrong schedule — which is why the effective treatments (sleep restriction, light timing, stimulus control) retrain the clocks rather than sedate the person. Every psychiatrist also needs the second insight: sleep is a vital sign of mental health — nearly every psychiatric disorder disturbs sleep, and disturbed sleep deepens nearly every psychiatric disorder.",
+    "Sleep is an actively generated brain state with cycling architecture, governed by homeostatic pressure and the circadian clock. Most common sleep complaints are timing problems, which is why effective treatments retrain the clocks rather than sedate the person.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -62,7 +62,7 @@ export const sleepBasicsCourse: PsychiatryCourse = {
     { label: "The psychiatric vital sign", value: "Every disorder has a sleep signature", detail: "Depression's early waking; mania's reduced need; PTSD's nightmares; dementia's sundowning; ADHD's delayed phase; psychosis's sleep-wake collapse — ask about sleep in EVERY review and chart it like temperature" },
   ],
   knowledgeGraph: [
-    { label: "Insomnias", type: "condition", href: "/psychiatry/insomnia/", note: "The clock-and-habit mismanagement tier — this course's two-process logic becomes CBT-I there" },
+    { label: "Insomnia", type: "condition", href: "/psychiatry/insomnia/", note: "The clock-and-habit mismanagement tier — this course's two-process logic becomes CBT-I there" },
     { label: "Excessive Sleepiness & Hypersomnias", type: "condition", href: "/psychiatry/hypersomnia/", note: "The four engines of daytime sleepiness — insufficient, broken, central or secondary" },
     { label: "Parasomnias", type: "condition", href: "/psychiatry/parasomnias/", note: "Behaviours erupting out of sleep's mixed states — NREM first-third, REM last-third" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The classic sleep signature (early waking) and the bidirectional risk road" },

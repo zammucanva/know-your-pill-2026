@@ -26,13 +26,13 @@ import type { PsychiatryCourse } from "./types";
 export const intellectualDisabilityOverviewCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "intellectual-disability-overview",
-  title: "Intellectual Disability — Supports, Not Just Scores",
+  title: "Intellectual Disability",
   shortName: "ID",
   kind: "disorder",
   category: "Intellectual Disability",
   groupLetter: "N",
   groupName: "Intellectual disability",
-  learningPath: ["Psychiatry", "Intellectual Disability", "Intellectual Disability — Supports, Not Just Scores"],
+  learningPath: ["Psychiatry", "Intellectual Disability", "Intellectual Disability"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -42,10 +42,10 @@ export const intellectualDisabilityOverviewCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Two dials, both low from childhood — reasoning and daily living — graded not by the IQ decimal but by the support the person needs to run a life: the modern definition, the Indian instruments that measure it, and the certificate-and-benefits architecture most families are never told exists.",
+    "Supports, not just scores — severity graded by adaptive support needs, not the IQ decimal",
 
   summary:
-    "Intellectual disability (ICD-11: disorder of intellectual development) requires BOTH dials limited from the developmental period — intellectual functioning (reasoning, learning, problem-solving) AND adaptive functioning (daily living, communication, social independence) — and the discipline of the modern definition is which dial decides: the IQ ~70 line (roughly two standard deviations below the population mean) is a rough door, a screening threshold inherited from the psychometric era; the adaptive functioning — what the person can actually DO across conceptual, social and practical domains — is the real definition, the severity grader and the treatment planner. That is the AAIDD-lineage move ICD-11 and DSM-5 adopted: severity is assigned by support needs, not IQ decimal points. Roughly 1% of any population meets the two-dial rule, and about 85% of them sit in the MILD band — the children and adults who learn slower, read simpler, work steadily in structured jobs, marry, raise families and stay invisible to statistics precisely because mild ID lives among us functioning. The causes map by timing — genetic (Down syndrome the commonest identifiable, fragile X the commonest inherited in boys), prenatal (TORCH infections, alcohol, valproate, iodine and folate), perinatal (hypoxia, kernicterus, prematurity), postnatal (meningitis, cerebral malaria, lead, deprivation) — with the honest Indian layer: a heavier preventable share (iodisation conquered the goitre-cretinism belt; newborn screening and perinatal care remain open ground). The assessment craft is Indian and specific: the Binet-Kamat for the reasoning dial, the Vineland Social Maturity Scale for the adaptive dial, performance batteries for the non-literate — with the screen-before-certify rule (hearing and vision BEFORE any label) and the under-5 discipline (delay is a flag, not a verdict; intervention first). No medicine treats the ID itself — the treatment IS education, skills, health and the support architecture, delivered in decades, in doses of repetition, with the family as the primary therapist. And the Indian spine: the RPwD 2016 certificate (the medical board's percentage assessment, ≥40% the benchmark tier) unlocking the pension, travel concessions, Niramaya insurance, National Trust guardianship and the 4% government-job reservation — plus the two conversations every Indian ID family eventually needs: the marriage question and the 'after we die' plan.",
+    "Intellectual disability means limited intellectual and adaptive functioning from the developmental period, with severity graded by support needs rather than IQ alone. Treatment is education, skills and support architecture delivered over decades, with the family as primary therapist.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -68,12 +68,12 @@ export const intellectualDisabilityOverviewCourse: PsychiatryCourse = {
     { label: "The benefit spine", value: "RPwD 2016, ≥40% benchmark", detail: "The medical board's percentage assessment above 40% unlocks the state disability pension, travel concessions, Niramaya insurance (₹1-lakh family cover at token premium), National Trust guardianship and the 4% government-job reservation" },
   ],
   knowledgeGraph: [
-    { label: "Genetic Syndromes in ID — The Psychiatry Each Carries", type: "condition", href: "/psychiatry/id-syndromes/", note: "Down syndrome, fragile X and the behavioural phenotypes — the syndrome-specific surveillance and counselling tier this overview points downward to" },
-    { label: "Dual Diagnosis in ID — Beyond Diagnostic Overshadowing", type: "condition", href: "/psychiatry/id-dual-diagnosis/", note: "The mental-illness-in-ID territory: recognition above general-population rates, the behaviour-as-communication discipline, the careful medication tier" },
-    { label: "ID Treatment & Services — The Life-Course Architecture", type: "condition", href: "/psychiatry/id-treatment-services/", note: "The intervention ladder's full account: early intervention, school-and-vocational routes, the service map and the lifetime plan" },
-    { label: "Mental Health Law — Capacity, Liability, Duty", type: "condition", href: "/psychiatry/mental-health-law/", note: "Consent, capacity and the guardianship questions the marriage-and-after-we-die conversations run on" },
+    { label: "Genetic Syndromes in ID", type: "condition", href: "/psychiatry/id-syndromes/", note: "Down syndrome, fragile X and the behavioural phenotypes — the syndrome-specific surveillance and counselling tier this overview points downward to" },
+    { label: "Dual Diagnosis in ID", type: "condition", href: "/psychiatry/id-dual-diagnosis/", note: "The mental-illness-in-ID territory: recognition above general-population rates, the behaviour-as-communication discipline, the careful medication tier" },
+    { label: "ID Treatment & Services", type: "condition", href: "/psychiatry/id-treatment-services/", note: "The intervention ladder's full account: early intervention, school-and-vocational routes, the service map and the lifetime plan" },
+    { label: "Mental Health Law", type: "condition", href: "/psychiatry/mental-health-law/", note: "Consent, capacity and the guardianship questions the marriage-and-after-we-die conversations run on" },
     { label: "Autism Spectrum Disorder", type: "condition", href: "/psychiatry/autism/", note: "The classic co-occurrence and the lookalike separation — the total-communication discipline shared between the two conditions" },
-    { label: "ADHD — The Brakes and the Engine", type: "condition", href: "/psychiatry/adhd/", note: "The distractible lookalike whose performance varies wildly with engagement — reasoning intact one-to-one" },
+    { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The distractible lookalike whose performance varies wildly with engagement — reasoning intact one-to-one" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The adult comorbidity that arrives at above general-population rates — treatable, and under-recognised because it hides behind 'he is anyway like that'" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "Valproate's neural-tube-plus-neurodevelopmental ledger — the pregnancy rules behind one preventable prenatal tier" },
     { label: "Glutamate", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The learning machine's molecular currency — the plasticity engine the buildable window runs on" },

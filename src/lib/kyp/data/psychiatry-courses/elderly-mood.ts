@@ -23,13 +23,13 @@ import type { PsychiatryCourse } from "./types";
 export const elderlyMoodCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "elderly-mood",
-  title: "Mood Disorders in the Elderly — The Pseudodementia Trap",
+  title: "Mood Disorders in the Elderly",
   shortName: "Elderly Mood",
   kind: "disorder",
   category: "Psychiatry of Old Age",
   groupLetter: "M",
   groupName: "Psychiatry of old age",
-  learningPath: ["Psychiatry", "Psychiatry of Old Age", "Mood Disorders in the Elderly — The Pseudodementia Trap"],
+  learningPath: ["Psychiatry", "Psychiatry of Old Age", "Mood Disorders in the Elderly"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -39,10 +39,10 @@ export const elderlyMoodCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Depression in old age is common, dangerous and chronically under-treated — routinely misread as 'just ageing' through its body-pain and burden-talk costumes — while two geriatric signatures demand special skill: the pseudodementia mask (depression imitating dementia, reversible with treatment) and late-onset mania (often SECONDARY to a stroke, a thyroid storm or a medicine, demanding a workup before a label).",
+    "Depression misread as 'just ageing', the pseudodementia trap, and late-onset mania",
 
   summary:
-    "This is the illness the family calls 'old age' — and the course's first law is that the elder who stops eating, stops walking, complains of body pains and speaks of 'becoming a burden' is not fading naturally but running a treatable illness. The National Mental Health Survey 2015–16 found depression in roughly one in twelve elderly Indians (higher in urban metros, a treatment gap above 85%), and the default Indian reading — budhapa, kamzori, tension — delays the diagnosis by years. The elderly depressive episode presents through the BODY and through PSYCHOMOTOR change more than through weeping sadness: the somatic costume (the joint and back pains, the burning feet, the 'gas' and weakness complaints that tour three OPDs with normal workups), the slowed or agitated motor state, the 3 a.m. waking, and the guilt-nihilism layer that arrives intact — with 'I am a burden; the family would be free without me' standing as the population's signature suicide-risk sentence (attempts fewer, completions higher than the young; the Elderly Suicide course carries that half). Two geriatric signatures organise the clinical skill. First, the pseudodementia mask: depression FREEZES retrieval while dementia destroys storage — the depressed elder answers 'I don't know' with absent effort and keeps the date through the news, while the dementing elder confabulates a near-miss with genuine effort — and because many elders carry both layers, the differentiation is finally made by the TREATMENT TRIAL: treat the depression properly, then re-test; what recovers was depression, what remains is dementia's true floor. Second, the vascular-depression story: the first depression of a 70-year-old often rides on lacunes and white-matter hyperintensities disrupting frontostriatal mood circuitry, arriving with executive dysfunction, apathy and a weaker response to SSRI monotherapy — so the mood treatment includes the blood pressure, the sugars and the vessels. The treatment laws are geriatric throughout: antidepressants work well in elders but 'Start LOW, go SLOW, but GO' (the eternal starter dose is the Indian sin that 'confirms' treatment failure), the HY-FIB watch-list governs every prescription (HYponatraemia, Falls, Interactions, Bleeding with NSAIDs), the response clock runs 8–12 weeks, ECT is often the best medicine this population has for the melancholic, psychotic and food-refusing band, and the first mania after 50 is a brain workup — M-T-M-S-D: MRI, Thyroid, Medications, Stroke-history, Delirium-screen — before it is ever a bipolar label. The Indian layer is structural: the migration-empty-nest aetiology, the physician-OPD intercept through pain complaints, the property-catastrophe prevented by the treatment-trial re-test, and the film-era ECT stigma that withholds the safest fast option from exactly the patients who need it most.",
+    "Late-life depression presents through body pain, psychomotor change and burden-talk rather than weeping, and is routinely misread as normal ageing. Treat the depression fully before diagnosing dementia, and work up any first mania after fifty.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -66,13 +66,13 @@ export const elderlyMoodCourse: PsychiatryCourse = {
     { label: "The sentence that is a screen", value: "'I am a burden'", detail: "Burden-talk — 'the family would be free without me', 'better if God took me' — is the elderly suicide-risk flag: this population attempts less and dies more; every such sentence earns the direct questions, the medicines-secured audit and the same-week assessment" },
   ],
   knowledgeGraph: [
-    { label: "Suicide in the Elderly — The Physician's Opportunity", type: "condition", href: "/psychiatry/elderly-suicide/", note: "The darker half of this course — the lethality pattern (attempts fewer, completions higher), the burden-sentence screen, the stockpiling and affairs-in-order flags" },
-    { label: "Delirium in the Elderly — The Quiet Emergency", type: "condition", href: "/psychiatry/elderly-delirium/", note: "The hypoactive mimic — the days-onset inattention picture that hides inside apparent 'dementia' and inside agitated depression" },
-    { label: "Mild Cognitive Impairment — The Crossroads", type: "condition", href: "/psychiatry/mci/", note: "The follow-up map for the recovered pseudodementia — the serial-cognition discipline, the retained-roles scaffolding principle this course borrows" },
-    { label: "Late-Life Psychosis — The Ridden-Upon Illness", type: "condition", href: "/psychiatry/late-life-psychosis/", note: "The antipsychotic-augmentation cautions (the metabolic-mortality warnings) and the nomenclature for psychotic depression's guilt-delusions in the old" },
+    { label: "Suicide in the Elderly", type: "condition", href: "/psychiatry/elderly-suicide/", note: "The darker half of this course — the lethality pattern (attempts fewer, completions higher), the burden-sentence screen, the stockpiling and affairs-in-order flags" },
+    { label: "Delirium in the Elderly", type: "condition", href: "/psychiatry/elderly-delirium/", note: "The hypoactive mimic — the days-onset inattention picture that hides inside apparent 'dementia' and inside agitated depression" },
+    { label: "Mild Cognitive Impairment", type: "condition", href: "/psychiatry/mci/", note: "The follow-up map for the recovered pseudodementia — the serial-cognition discipline, the retained-roles scaffolding principle this course borrows" },
+    { label: "Late-Life Psychosis", type: "condition", href: "/psychiatry/late-life-psychosis/", note: "The antipsychotic-augmentation cautions (the metabolic-mortality warnings) and the nomenclature for psychotic depression's guilt-delusions in the old" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "The genuine-bipolar home — where the late-onset workup lands when every secondary cause has been cleared, and the sleep-drop alarm's original discipline" },
     { label: "Bereavement & Complicated Grief", type: "condition", href: "/psychiatry/bereavement/", note: "The wave-pattern differential — the spouse of 50 years lost, and the rule that major depression within weeks of a death is often both" },
-    { label: "Benzodiazepine Misuse — The Borrowed Calm", type: "condition", href: "/psychiatry/benzodiazepine-misuse/", note: "The benzodiazepine decade — the night sedative that manufactures the very fog, falls and memory complaints this course unpicks, and the taper bridge" },
+    { label: "Benzodiazepine Misuse", type: "condition", href: "/psychiatry/benzodiazepine-misuse/", note: "The benzodiazepine decade — the night sedative that manufactures the very fog, falls and memory complaints this course unpicks, and the taper bridge" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The first-line SSRI tier's target — and the system whose elder-specific harms (the month-one sodium, the bleeding risk) the watch-list polices" },
     { label: "Frontostriatal circuitry", type: "brain-region", href: "#brain", note: "The mood circuits that run through the brain's watershed territory — where the small-vessel disease of the vascular-depression engine strikes first" },
     { label: "Sertraline", type: "drug", href: "/drugs/sertraline/", note: "The first-line SSRI in elders — started at 25–50 mg and taken to the full effective dose, never parked at the starter dose" },

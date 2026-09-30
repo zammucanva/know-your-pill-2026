@@ -23,13 +23,13 @@ import type { PsychiatryCourse } from "./types";
 export const indigenousHealingCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "indigenous-healing",
-  title: "Indigenous & Folk Healing — Culturally Embedded Care",
+  title: "Indigenous & Folk Healing",
   shortName: "Folk Healing",
   kind: "concept",
   category: "Treatment Methods",
   groupLetter: "P",
   groupName: "Treatment methods",
-  learningPath: ["Psychiatry", "Treatment Methods", "Indigenous & Folk Healing — Culturally Embedded Care"],
+  learningPath: ["Psychiatry", "Treatment Methods", "Indigenous & Folk Healing"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -39,10 +39,10 @@ export const indigenousHealingCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Shamanism, zar ceremonies, sacrificial ritual, divination and temple fortune-sticks are not psychology to the people who use them — they are religion and magic — yet they deliver recognisable psychotherapeutic effects through shared common factors, and the psychiatrist's job is knowledgeable respect, selective support and protection from harm.",
+    "Culturally embedded care: shamanism, zar, divination and ritual as folk psychotherapy",
 
   summary:
-    "The field Tseng's chapter defines: non-orthodox therapeutic practices based on indigenous cultural traditions, operating outside official healthcare systems, validated by experience rather than science, and — the key property — CULTURALLY EMBEDDED: so intensely rooted in the cultural system that invented them that they do not transplant where they lack meaning and legitimacy. Neither healer nor client calls any of it psychological therapy, yet from the mental-health point of view these practices often deliver genuine psychotherapy: FOLK PSYCHOTHERAPY. The course walks the four orientations (supernatural, natural, medical-physiological, socio-psychological); the spirit-mediumship fork the exam loves — the SHAMAN dissociates while the client consults the supernatural through him, whereas in the ZAR ceremony the CLIENT enters the dissociated state herself; the religious healing ceremonies (Salish spirit dancing's brainwashing-like three phases, the Yoruba sacrifice's reassurance-and-conviction logic, Spiritual Baptist mourning's 7 days, snake-handling's risk of death, the Christian healing spectrum); divination's therapeutic operation (the clear-cut answer plus the NAMING effect — the Rumpelstiltskin principle: anxiety falls when the trouble is named); and fortune-telling's quieter liberty — fate is modifiable, the goal adjustment rather than resignation. The synthesis: the common therapeutic factors shared with modern psychotherapy (hope aroused by capitalising on dependency, naming, the healer's admired qualities, expectation and emotional arousal, learning and mastery, technique — Frank, Torrey, Kirmayer), the traditional sector's documented advantages, the chapter's tri-partite stance (prohibit nothing blindly, study everything, support what helps), the five harms the protection duty covers, and the regulation demand — periodic survey and reevaluation so malpractice is prevented. The Indian translation is the chapter's best illustration: the temple-dargah-ojha landscape, the entry question ('which healer has he seen, what was done, what did it cost?'), the possession-trance triad, and the Erwadi-type institutions that make the regulation demand an Indian clinical duty, not an abstraction.",
+    "This course covers indigenous and folk healing practices — shamanism, zar, ritual and divination — and why they often work as folk psychotherapy. The clinical task is informed respect: study what helps, protect patients from harm, and regulate malpractice.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -66,10 +66,10 @@ export const indigenousHealingCourse: PsychiatryCourse = {
     { label: "The Indian entry question", value: "Which healer, what done, what cost", detail: "The traditional sector is often the FIRST help-seeking step in India — temple and dargah healing largely free-to-cheap (offerings, approx 2026), the commercial exorcist end extracting life savings" },
   ],
   knowledgeGraph: [
-    { label: "Dynamic Psychotherapy — The Procedural Unconscious", type: "condition", href: "/psychiatry/dynamic-psychotherapy/", note: "The shared common factors and the symbols-and-metaphors comparison — witchdoctor and psychiatrist, common roots (Torrey)" },
-    { label: "Group Therapy — Yalom's Curative Factors", type: "condition", href: "/psychiatry/group-therapy/", note: "The zar as collective event: catharsis, cohesion and hope delivered to a group — the ceremony as group therapy before group therapy" },
-    { label: "Family Therapy — Circular Causality", type: "condition", href: "/psychiatry/family-therapy/", note: "The help-seeking family and the healer circuit — the system the entry question maps before any individual diagnosis is made" },
-    { label: "Therapeutic Communities — The Four Henderson Principles", type: "condition", href: "/psychiatry/therapeutic-communities/", note: "Healing embedded in community — the ceremony and the milieu compared as total healing environments" },
+    { label: "Dynamic Psychotherapy", type: "condition", href: "/psychiatry/dynamic-psychotherapy/", note: "The shared common factors and the symbols-and-metaphors comparison — witchdoctor and psychiatrist, common roots (Torrey)" },
+    { label: "Group Therapy", type: "condition", href: "/psychiatry/group-therapy/", note: "The zar as collective event: catharsis, cohesion and hope delivered to a group — the ceremony as group therapy before group therapy" },
+    { label: "Family Therapy", type: "condition", href: "/psychiatry/family-therapy/", note: "The help-seeking family and the healer circuit — the system the entry question maps before any individual diagnosis is made" },
+    { label: "Therapeutic Communities", type: "condition", href: "/psychiatry/therapeutic-communities/", note: "Healing embedded in community — the ceremony and the milieu compared as total healing environments" },
     { label: "Depersonalization / Derealization Disorder", type: "condition", href: "/psychiatry/depersonalization-disorder/", note: "The dissociation-spectrum course nearest the possession-trance differential — the compartmentalisation half of the spectrum" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "Psychosis wearing possession's clothing — the mental-state examination behind the trance that separates the two" },
     { label: "Acute & Transient Psychotic Disorders", type: "condition", href: "/psychiatry/acute-transient-psychosis/", note: "The short-lived possession-like presentations — context, course and first-rank symptoms doing the separating" },

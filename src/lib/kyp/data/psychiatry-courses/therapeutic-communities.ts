@@ -21,13 +21,13 @@ import type { PsychiatryCourse } from "./types";
 export const therapeuticCommunitiesCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "therapeutic-communities",
-  title: "Therapeutic Communities — The Four Henderson Principles",
+  title: "Therapeutic Communities",
   shortName: "TCs",
   kind: "concept",
   category: "Treatment Methods",
   groupLetter: "P",
   groupName: "Treatment methods",
-  learningPath: ["Psychiatry", "Treatment Methods", "Therapeutic Communities — The Four Henderson Principles"],
+  learningPath: ["Psychiatry", "Treatment Methods", "Therapeutic Communities"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -37,10 +37,10 @@ export const therapeuticCommunitiesCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "A therapeutic community is a place where the treatment is not delivered in the institution but by it — the whole of daily life (the meetings, the meals, the work, the crises, the decisions) deliberately structured as the therapy, run on the four Henderson principles of democratisation, permissiveness, communalism and reality confrontation.",
+    "The institution is the treatment — daily life itself run on the four Henderson principles",
 
   summary:
-    "The institution IS the treatment. Main's 1946 founding definition — the hospital used 'not as an organization run by doctors in the interests of their own greater technical efficiency, but as a community with the immediate aim of full participation of all its members in its daily life and the eventual aim of the resocialization of the neurotic individual for life in ordinary society' — and Jones's account of the institution's total resources self-consciously pooled, implying above all a change in the usual status of patients. Admitted people are residents, clients or members — never patients. The anatomy taught here: three defining beliefs (staff are not completely well nor residents completely sick; whatever the symptoms, the difficulties are primarily in relationships with other people; therapy is essentially a learning process); Rapoport's four principles from the Henderson Hospital (democratisation, permissiveness, communalism, reality confrontation); the modern quality machinery (the Community of Communities and its 16 Core Standards, 2006); the history (Geel's fourteenth-century sanctuary, the York Retreat's moral treatment, Northfield's wartime crucible, the Cassel and Henderson lineages, the 1970s decline and the 1990s revival); the technique (the living-learning situation and the culture of enquiry — everything that happens between members, especially crises, as the learning material); Haigh's five essential experiences (attachment, containment, communication, inclusion, agency) as the developmental repair model; the four-phase journey with residents participating in selection and joining; the evidence quoted honestly (the Lees review — 8,000 references across 38 countries distilled to 29 studies, a significant pooled effect, log odds ratio −0.567; the severe-PD verdict that the TC model 'currently has the most promising evidence base in this poor field'; Grendon's finding that stays beyond 18 months cut reconviction; Soteria's equal-or-better 2-year psychosis outcomes with less medication); and the contraindication list that makes selection the clinical skill. The Indian translation is the course's quiet triumph: the model's cheapest export — whole-community meetings, shared work and meals, resident participation in decisions — imports into day-care centres, halfway homes, deaddiction facilities and ward routines at zero cost; and the 2001 Erwadi fire is its standing warning: unregulated 'community care' without enquiry, standards or oversight kills.",
+    "A therapeutic community treats through structured shared daily life rather than delivered therapy, guided by the four Henderson principles. The model serves personality disorder and offending populations, and its community-meeting elements transfer to Indian services at little cost.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -64,13 +64,13 @@ export const therapeuticCommunitiesCourse: PsychiatryCourse = {
     { label: "The Indian import", value: "The Core-Standards sample at zero cost", detail: "Whole-group meetings, shared work, discussable everything and positive risk-taking import into any day-care centre, halfway home or ward routine — with the 2001 Erwadi fire as the standing warning: unregulated 'community care' without enquiry, standards or oversight kills" },
   ],
   knowledgeGraph: [
-    { label: "Group Therapy — Yalom's Curative Factors", type: "condition", href: "/psychiatry/group-therapy/", note: "The small-group meeting as the TC's examination hall — the group dynamics the community wraps around its shared life" },
-    { label: "Treating Personality Disorders — Psychotherapies, Pharmacology & Service Design", type: "condition", href: "/psychiatry/personality-disorder-treatment/", note: "The population the democratic TC chiefly treats, and the structured-therapy alternatives it sits beside" },
-    { label: "Psychiatric Rehabilitation — The Well Part of the Ego", type: "condition", href: "/psychiatry/psychiatric-rehabilitation/", note: "The 1990s community-rehabilitation revival the TC rode, and the shared rehabilitation logic" },
+    { label: "Group Therapy", type: "condition", href: "/psychiatry/group-therapy/", note: "The small-group meeting as the TC's examination hall — the group dynamics the community wraps around its shared life" },
+    { label: "Treating Personality Disorders", type: "condition", href: "/psychiatry/personality-disorder-treatment/", note: "The population the democratic TC chiefly treats, and the structured-therapy alternatives it sits beside" },
+    { label: "Psychiatric Rehabilitation", type: "condition", href: "/psychiatry/psychiatric-rehabilitation/", note: "The 1990s community-rehabilitation revival the TC rode, and the shared rehabilitation logic" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "Soteria's first-episode psychosis population — the low-stress, minimal-medication alternative stream" },
-    { label: "Substance Use — The Reward Hijack", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The concept-based addiction TCs (Synanon → Phoenix House, Daytop) and their dependence population" },
+    { label: "Substance Use", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The concept-based addiction TCs (Synanon → Phoenix House, Daytop) and their dependence population" },
     { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "The self-harm indication — the crisis-driven admissions the TC's living-learning discipline re-routes into meetings" },
-    { label: "Dynamic Psychotherapy — The Procedural Unconscious", type: "condition", href: "/psychiatry/dynamic-psychotherapy/", note: "The Northfield lineage: Bion, Main and Foulkes — the group-analytic ancestry of the community meeting" },
+    { label: "Dynamic Psychotherapy", type: "condition", href: "/psychiatry/dynamic-psychotherapy/", note: "The Northfield lineage: Bion, Main and Foulkes — the group-analytic ancestry of the community meeting" },
     { label: "Prefrontal cortex", type: "brain-region", href: "#brain", note: "The reflective tier the community trains by repetition — hundreds of lived feedback episodes practising self-observation" },
     { label: "Oxytocin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The attachment chemistry Haigh's first essential experience rides on — the proposed substrate of lived belonging" },
   ],

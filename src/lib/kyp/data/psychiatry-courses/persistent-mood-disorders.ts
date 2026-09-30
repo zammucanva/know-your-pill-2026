@@ -30,9 +30,9 @@ export const persistentMoodDisordersCourse: PsychiatryCourse = {
   lastReviewed: "2026-09-27",
 
   tagline:
-    "The mood disorders that live below the episode threshold — a depression too mild to hospitalise and too long to ignore, a metronome that never reaches the diagnostic bar, and the sunny temperament that shades bipolar disorder's family tree.",
+    "Mood disorders below the episode threshold — too mild to hospitalise, too long to ignore",
   summary:
-    "Persistent depressive disorder (dysthymia) is a sub-syndromal depression running most days for two years or more — until patient and family mistake it for personality; its treatment is the clearest combination-evidence story in the mood-disorder literature. Double depression is the major episode landing on that chronic floor — and the 'return to baseline' that families celebrate is the residual illness. Cyclothymia is the two-year below-threshold oscillation with the bipolar pedigree and the antidepressant caution; hyperthymia is the temperament, not illness, that most often argues against a pure-unipolar read of a depression. This course covers the duration-first diagnostic craft, the two clocks that separate cyclothymia from borderline reactivity, and the Indian reality of the twenty-year 'tension' patient.",
+    "Dysthymia is a sub-syndromal depression running two years or more, often mistaken for personality. Cyclothymia oscillates below the bipolar threshold, and hyperthymia is the temperament that shades the bipolar family tree.",
   estimatedReadTime: "30 min",
   yieldRating: "medium",
   primaryAudience: "medical",
@@ -60,7 +60,7 @@ export const persistentMoodDisordersCourse: PsychiatryCourse = {
   knowledgeGraph: [
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The episodic full-syndrome pole — the always-ON contrast" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "The full-syndrome pole of the oscillating spectrum" },
-    { label: "Schizoaffective & Schizotypal", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "Personality-spectrum vs mood-spectrum 'temperament' framings — keep the axes straight" },
+    { label: "Schizoaffective & Schizotypal Disorders", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "Personality-spectrum vs mood-spectrum 'temperament' framings — keep the axes straight" },
     { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "Chronic passive-ideation risk in dysthymia is real and under-asked" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The SSRI target for the chronic depressive floor" },
     { label: "Suprachiasmatic nucleus", type: "brain-region", href: "#brain", note: "The circadian metronome of cyclothymia" },

@@ -20,7 +20,7 @@ import type { PsychiatryCourse } from "./types";
 export const deliriumCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "delirium",
-  title: "Delirium — Acute Brain Failure",
+  title: "Delirium",
   shortName: "Delirium",
   kind: "disorder",
   category: "Neurocognitive Disorder",
@@ -36,9 +36,9 @@ export const deliriumCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Delirium is a sudden clouding of the brain caused by physical illness, drugs or surgery — a medical emergency that is frequently mistaken for dementia, depression or 'madness', and that often clears when the underlying cause is found and treated.",
+    "Acute brain failure — sudden confusion signalling a treatable physical cause",
   summary:
-    "A person who was orientated yesterday becomes confused tonight — asking the same question again and again, not recognising family at 3 a.m., pulling out IV lines, or sometimes just going quiet and drowsy. That is delirium: an acute organ failure of the brain, as real and as urgent as kidney failure. It affects roughly one in five general hospital inpatients, up to half of intensive-care and post-operative patients, and up to 80% of people in their last days of life — yet it is not a psychiatric illness in origin; psychiatrists are called because the symptoms look psychiatric. The single most important clinical message: the confusion is a signal, not the disease. Behind it there is almost always something treatable — an infection, a metabolic upset, a drug, a retained bladder, or withdrawal from alcohol. The clinical spine of this course is the three-way discrimination (delirium vs dementia vs depression — onset, course and attention decide it), the two-hit model (a vulnerable brain plus a precipitating insult — the more vulnerable the brain, the smaller the insult needed), the hypoactive subtype trap (the quiet, missed, worst-prognosis face that hides inside 'tired' and 'depressed'), and the management ladder that puts cause-hunting first, environmental mastery second, and drugs last, at the lowest dose for the shortest time. Families should leave knowing three things: it is common, it is not insanity, and the best medicine is often a familiar face, daylight, hearing aids and spectacles — not restraints.",
+    "Delirium is an acute, fluctuating disturbance of attention and awareness caused by physical illness, drugs or surgery. It is a medical emergency: hunt the cause first, manage the environment, and use drugs last, at the lowest dose for the shortest time.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -66,9 +66,9 @@ export const deliriumCourse: PsychiatryCourse = {
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The arousal pusher that runs unchecked when acetylcholine fails — hallucinations and paranoia" },
     { label: "Prefrontal cortex", type: "brain-region", href: "#brain", note: "The attention-and-filter seat — first to brown out when the seesaw tips" },
     { label: "Thalamus", type: "brain-region", href: "#brain", note: "The arousal relay station — the sleep-wake switch that delirium always attacks" },
-    { label: "Alzheimer's Disease & Dementia — The Gradual Erasure", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The strongest predisposing vulnerability — and the alarm bell that a dementia has begun when a first delirium lands on it" },
-    { label: "Dementia with Lewy Bodies — The Fluctuating Dementia", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The antipsychotic catastrophe territory — haloperidol can be life-threatening there" },
-    { label: "Dementia in Parkinson's Disease — The Twin Decline", type: "condition", href: "/psychiatry/parkinsons-dementia/", note: "Vulnerable brain plus antiparkinsonian drugs: the two-hit model in one patient" },
+    { label: "Alzheimer's Disease & Dementia", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The strongest predisposing vulnerability — and the alarm bell that a dementia has begun when a first delirium lands on it" },
+    { label: "Dementia with Lewy Bodies", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The antipsychotic catastrophe territory — haloperidol can be life-threatening there" },
+    { label: "Dementia in Parkinson's Disease", type: "condition", href: "/psychiatry/parkinsons-dementia/", note: "Vulnerable brain plus antiparkinsonian drugs: the two-hit model in one patient" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The third of the bedside three-way discrimination — 'withdrawn and quiet' is screened, not assumed" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The young-onset, voices-and-fixed-beliefs contrast to sudden visual misperceptions in the medically ill" },
     { label: "Amitriptyline", type: "drug", href: "/drugs/amitriptyline/", note: "The anticholinergic-burden caution: a KYP-lessoned drug that can CAUSE the syndrome — the drug-chart review step" },

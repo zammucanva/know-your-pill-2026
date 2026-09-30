@@ -23,13 +23,13 @@ import type { PsychiatryCourse } from "./types";
 export const juvenileOffendingCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "juvenile-offending",
-  title: "Juvenile Offending — The Risk-Overlap Principle",
+  title: "Juvenile Offending",
   shortName: "Juvenile offending",
   kind: "concept",
   category: "Forensic Psychiatry",
   groupLetter: "O",
   groupName: "Forensic psychiatry",
-  learningPath: ["Psychiatry", "Forensic Psychiatry", "Juvenile Offending — The Risk-Overlap Principle"],
+  learningPath: ["Psychiatry", "Forensic Psychiatry", "Juvenile Offending"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -39,10 +39,10 @@ export const juvenileOffendingCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Delinquency is behaviour that could end in conviction — and behind it sits a stack of treatable risk factors shared with mental disorder and substance misuse, so densely shared that every step deeper into the youth justice system is itself a mental-health risk marker.",
+    "Risk factors for offending, poor mental health and substance misuse overlap substantially",
 
   summary:
-    "This is the course for the age band where crime and psychiatry overlap most densely. Delinquency is antisocial behaviour — conduct problems, aggression, the failure to conform to authority, norms or others' rights — that could result in conviction, though most of it never does; the juvenile band runs from the age of criminal responsibility to the adult-court age, both varying by jurisdiction; and both mental disorder and offending peak inside it. The chapter's central epidemiological fact is the risk-overlap principle: the risk factors for offending, poor mental health and substance misuse overlap substantially, and the number of assessed risk factors increases as a young person moves deeper into the youth justice system — so every deep-end community case, and every custodial entrant, is a high-need mental-health case by definition, and screening is epidemiology rather than luxury. The risk architecture taught here (individual, family, social, peer, school, neighbourhood — with poor supervision the strongest and most replicable predictor) comes with the longitudinal numbers that make it stick, drawn from the fully-available juvenile data of the offending chapter (ch 11.2). The service message is the chapter's core instruction: many young offenders are disengaged from mainstream education and health services, and the critical task is maintaining access through supervision and custody, because sentence-end detachment predicts deterioration and adult offending — register, treat and hand over before the gate opens. The India layer runs on the Juvenile Justice Act: Juvenile Justice Boards, observation and special homes, the 16–18 assessment layer, aftercare provisions as the written answer to detachment — with the honest reframe that since only 3% of disposals are custodial, the highest-yield mental-health work belongs in the community, not the institution. Documented limitation, preserved from the note itself: the uploaded source chapter ends mid-way — its introduction, Youth Justice System statistics and service-access conclusions are available, while its middle sections (prevalence tables of mental disorder in young offenders, screening instruments, intervention trial data) are not; the risk-factor architecture is therefore drawn from the chapter's fully-available juvenile companion and cross-referenced to the conduct-disorder note's clinical programme, and nothing missing has been invented. The clinical programme for the conduct spectrum (ODD vs CD, DMDD, the multimodal treatment evidence) is the L6 cross-reference; no drug is assigned a clinical role by this note — the comorbidity pharmacotherapy lives in the sibling courses and in contentGaps, never fabricated here.",
+    "This course covers juvenile offending, its shared risk factors with mental disorder and substance misuse, and the youth justice system’s service implications. Because risk factors accumulate with system depth, every young offender entering the system is a mental-health screening priority.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -66,12 +66,12 @@ export const juvenileOffendingCourse: PsychiatryCourse = {
     { label: "The danger point", value: "Sentence-end detachment", detail: "When statutory supervision ends, service links snap and deterioration with adult offending follows; the intervention window is the supervision period itself — register, treat, hand over before the gate opens" },
   ],
   knowledgeGraph: [
-    { label: "Psychiatric Disorder & Offending — The Formulation", type: "condition", href: "/psychiatry/psychiatry-offending/", note: "The sibling forensic course: the full risk-factor and disorder-association chapters this juvenile frame is built on" },
-    { label: "Conduct Disorders — The Empathy Specifier", type: "condition", href: "/psychiatry/conduct-disorder/", note: "The L6 cross-reference — the clinical programme: ODD vs CD, callous-unemotional traits, DMDD, the multimodal treatment evidence" },
-    { label: "ADHD — The Brakes and the Engine", type: "condition", href: "/psychiatry/adhd/", note: "The unrecognised engine — the attention disorder driving the school-failure bridge and the third board appearance" },
+    { label: "Psychiatric Disorder & Offending", type: "condition", href: "/psychiatry/psychiatry-offending/", note: "The sibling forensic course: the full risk-factor and disorder-association chapters this juvenile frame is built on" },
+    { label: "Conduct Disorders", type: "condition", href: "/psychiatry/conduct-disorder/", note: "The L6 cross-reference — the clinical programme: ODD vs CD, callous-unemotional traits, DMDD, the multimodal treatment evidence" },
+    { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The unrecognised engine — the attention disorder driving the school-failure bridge and the third board appearance" },
     { label: "Post-Traumatic Stress Disorder (PTSD)", type: "condition", href: "/psychiatry/ptsd/", note: "The abuse-history layer — the trauma-focused work the delayed disclosure unlocks" },
     { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "The accidents-and-self-harm mortality pattern — and its custody-screening corollary" },
-    { label: "Substance Use — The Reward Hijack", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The overlap principle's third arm — the substance misuse that shares the risk architecture" },
+    { label: "Substance Use", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The overlap principle's third arm — the substance misuse that shares the risk architecture" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The undisclosed depression beneath the conduct presentation — treatable, and treating it treats the offending risk" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The adolescent reward gain — the risk-taking chemistry of the age band" },
     { label: "Prefrontal cortex", type: "brain-region", href: "#brain", note: "The control machinery maturing last — the impulsivity and executive deficits of the individual risk tier" },

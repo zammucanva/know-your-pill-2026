@@ -21,7 +21,7 @@ import type { PsychiatryCourse } from "./types";
 export const alzheimersDementiaCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "alzheimers-dementia",
-  title: "Alzheimer's Disease & Dementia — The Gradual Erasure",
+  title: "Alzheimer's Disease & Dementia",
   shortName: "Alzheimer's dementia",
   kind: "disorder",
   category: "Neurocognitive Disorder",
@@ -37,9 +37,9 @@ export const alzheimersDementiaCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Dementia is a progressive loss of thinking and daily function big enough to change a person's life; Alzheimer's disease is its commonest cause — a slow, years-long shrinking of memory that currently cannot be cured but can be treated, supported and planned for.",
+    "The gradual erasure — six in ten dementias, incurable but very much treatable",
   summary:
-    "Everyone forgets keys; that is not dementia. Dementia begins when a person cannot manage the day they used to manage — the accounts go wrong, the familiar route becomes strange, the same question returns ten times a day — and it gets slowly worse over months and years, not days. Alzheimer's disease accounts for roughly 6 in 10 dementias worldwide, rising steeply with age: uncommon before 60, perhaps 1 in 10 over 65, and a larger share of those over 85. It is a disease of the brain's cells and connections, not 'just old age', and never a punishment or a curse. The clinical spine of this course: the syndrome-first diagnosis (collateral history is the spine — onset, pace, what was lost first, driving, money; then objective testing, then the bloods that exclude the treatable mimics in every single case), the predictable spread (hippocampus first — memory, then language, then visuospatial function, then frontal judgement, finally motor and swallowing), the honest pharmacology (cholinesterase inhibitors squeeze the remaining acetylcholine harder — months of preserved function, never a reversal; memantine protects from glutamate over-stimulation in moderate-severe disease), the BPSD discipline (behaviour is the language of physical discomfort — pain, impaction, urine, hunger, environment, sleep — before any prescription), and the two truths held together: there is no cure yet, and there is a great deal medicine and family can still do. In India the family IS the treatment team — the daughter-in-law at 24×7 — and the course arms her: the carer check-in in every prescription, legal planning while insight lasts, and the tonic-refusal script that saves money and trust.",
+    "Alzheimer's disease is the commonest dementia: progressive loss of memory, thinking and daily function over years. New anti-amyloid antibodies can modestly slow decline in selected early disease without curing it; management rests on realistic drug expectations, behavioural discipline and family support.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -63,10 +63,10 @@ export const alzheimersDementiaCourse: PsychiatryCourse = {
     { label: "The India numbers", value: "~8.8 million over 60 (Dementia India Report 2020)", detail: "10/66 studies found Indian prevalence comparable to high-income countries — demolishing the 'families immunise' belief; treatment gap quoted in the 90% range" },
   ],
   knowledgeGraph: [
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "The acute impostor and the frequent overlay — sudden worsening on a dementing brain is delirium until proven otherwise" },
-    { label: "Dementia with Lewy Bodies — The Fluctuating Dementia", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The visual-hallucination-and-parkinsonism sibling in the differential" },
-    { label: "Frontotemporal Dementia — When Personality Changes First", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The behaviour-or-language-first, memory-preserved, under-65 contrast" },
-    { label: "Dementia in Parkinson's Disease — The Twin Decline", type: "condition", href: "/psychiatry/parkinsons-dementia/", note: "The subcortical-to-cortical cousin; the antipsychotic-sensitivity territory" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "The acute impostor and the frequent overlay — sudden worsening on a dementing brain is delirium until proven otherwise" },
+    { label: "Dementia with Lewy Bodies", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The visual-hallucination-and-parkinsonism sibling in the differential" },
+    { label: "Frontotemporal Dementia", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The behaviour-or-language-first, memory-preserved, under-65 contrast" },
+    { label: "Dementia in Parkinson's Disease", type: "condition", href: "/psychiatry/parkinsons-dementia/", note: "The subcortical-to-cortical cousin; the antipsychotic-sensitivity territory" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "Pseudodementia — the treatable mimic: treat mood and re-test in 2–3 months" },
     { label: "Acetylcholine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The learning-and-attention chemistry lost early — the therapeutic target" },
     { label: "Hippocampus", type: "brain-region", href: "#brain", note: "The memory gate — the first region to shrink in typical Alzheimer's" },

@@ -20,7 +20,7 @@ import type { PsychiatryCourse } from "./types";
 export const anorexiaNervosaCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "anorexia-nervosa",
-  title: "Anorexia Nervosa — When Discipline Becomes Starvation",
+  title: "Anorexia Nervosa",
   shortName: "Anorexia",
   kind: "disorder",
   category: "Feeding & Eating Disorder",
@@ -32,9 +32,9 @@ export const anorexiaNervosaCourse: PsychiatryCourse = {
   lastReviewed: "2026-09-28",
 
   tagline:
-    "The psychiatric illness with one of medicine's highest mortality rates: restriction pushed past every alarm, fused with a fear of weight gain and a mirror re-wired to report 'large' at any weight — a multi-organ medical emergency wearing discipline's uniform.",
+    "When discipline becomes starvation — restriction fused with a fear of weight gain",
   summary:
-    "Anorexia presents the paradox that defeats common sense: food is available, hunger is present, and yet the person cannot eat — because eating has fused with catastrophe ('weight gain = failure = the end of me') and the body's inner mirror reports 'large' no matter what the scale and the ribs say. The illness typically begins as something praiseworthy (health-consciousness, exam-season discipline, a New Year diet, 'clean eating') and crosses into disease when restriction becomes compulsory, weight becomes the day's scoreboard, and identity collapses into a number. Medicine must take the driver's seat: starvation is not a mindset but a multi-organ emergency (slow heart, low pressure, fragile bones, electrolyte chaos), and the famous danger is the refeeding syndrome that strikes precisely when treatment begins — the phosphate-and-potassium crash of the first 24–72 hours, prevented only by thiamine-first, modest-start, daily-labs procedural discipline. The Minnesota starvation experiment supplies the field's master lesson: starvation ITSELF manufactures eating-disorder psychology (food obsession, ritual, rigidity, body preoccupation in healthy men), so the first therapeutic target is nutritional — psychological work at low weight skates on ice. The counter-intuitive good news: for adolescents the best-evidenced treatment is FAMILY-based — Maudsley/FBT turns parents, blamed for decades by old theories, into the primary refeeding instrument ('you did not cause this; you ARE the treatment'). The honest pharmacology: no drug treats the core — SSRIs famously fail at low weight — while olanzapine modestly aids weight gain and quiets the food-terror rumination. In India anorexia rises quietly among urban adolescents (girls and, under-recognised, boys), camouflaged as dieting, sattvic discipline, exam-fuelled appetite loss or gym culture's bulking-and-cutting, typically reaching clinics only at medical-complication stage — the amenorrhoea work-up, the fainting-at-school case, the 'food allergy' self-diagnosis — which makes the five diet-to-danger checkpoints and the SCOFF-tier screen the Indian detection system this course hands to every door.",
+    "Anorexia nervosa is restriction pushed past every alarm, fused with fear of weight gain and a body image that reports 'large' at any weight. Starvation and refeeding make it a multi-organ medical emergency, and family-based treatment is the adolescent first-line.",
   estimatedReadTime: "35 min",
   yieldRating: "high",
   primaryAudience: "medical",

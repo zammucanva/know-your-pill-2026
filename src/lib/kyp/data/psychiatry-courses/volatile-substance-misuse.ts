@@ -20,13 +20,13 @@ import type { PsychiatryCourse } from "./types";
 export const volatileSubstanceMisuseCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "volatile-substance-misuse",
-  title: "Volatile Substance Misuse — The Stationery-Shop Drug",
+  title: "Volatile Substance Misuse",
   shortName: "Inhalants",
   kind: "disorder",
   category: "Substance Use Disorder",
   groupLetter: "B",
   groupName: "Substance use disorders",
-  learningPath: ["Psychiatry", "Substance Use Disorders", "Volatile Substance Misuse — The Stationery-Shop Drug"],
+  learningPath: ["Psychiatry", "Substance Use Disorders", "Volatile Substance Misuse"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -36,10 +36,10 @@ export const volatileSubstanceMisuseCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Inhalant misuse is psychiatry's youngest and most neglected addiction: a legal, child-accessible solvent bought at the stationery shop for the price of chai, killing suddenly through a sensitised heart, dissolving the white matter of school-age brains, concentrated among street children the system has already failed once — and treated not with prescriptions but with the child-protection machinery that rescues, shelters and schools the life the sniffing was medicating.",
+    "The stationery-shop drug — legal, cheap, child-accessible, and suddenly lethal",
 
   summary:
-    "This is the addiction the stationery shop supplies. No dealer, no age-gate, no NDPS schedule, no cost barrier: a tube of glue costs less than chai, and that single fact organises the whole epidemiology — the youngest users (commonly 12–14 or younger at first use), the poorest users (35–70% of street children across the Indian metro surveys), and the fastest escalation curve of any intoxicant. The pharmacology is brute and brief: fat-loving hydrocarbons cross the lungs to the brain within seconds and depress it indiscriminately — a 'dirty drunk' of slurred giggling, dizziness and disinhibition that clears within the hour, the craving back before the plastic bag cools. The class's signature emergency is sudden sniffing death: the solvent-sensitised myocardium plus an adrenaline surge (a chase, a startle, a raid, the bag's own terror) tears a healthy child's rhythm into ventricular fibrillation mid-inhale — hence the casualty rule this course repeats: beware adrenaline-class drugs in the acutely intoxicated child. The chronic bill arrives years early: dissolved white matter and a shrunken cerebellum eating the school-age cognition, and the toluene kidney — a distal renal tubular acidosis pouring potassium into the urine until the child presents paralysed with a potassium of 2.1. The modern offshoot is the whippet: nitrous oxide inactivates vitamin B12 at the cobalt, so the metro teen presents with numb soles, Lhermitte's sign and a misleadingly low-normal B12 — the most treatable drug injury in the addiction catalogue (stop the gas, flood the B12, weeks-to-months recovery). Withdrawal, by contrast, is short, mild and irritability-dominated — never the treatment problem; the LIFE is. And that is the course's second thesis: no anti-craving agent, no substitution, no detox exists for solvents anywhere; the active ingredients are structure, attachment, meaning and time, delivered through the child-protection system — Childline 1098, the Child Welfare Committee under the JJ Act, the shelter-and-bridge-school ladder — which is why this course's treatment chapter is written in child-welfare law rather than pharmacology.",
+    "Volatile substance misuse is addiction to inhaled solvents, glues and gases, concentrated among street children because supply is legal, cheap and child-accessible. Sudden sniffing death and white-matter damage dominate the risks, and treatment runs through child protection rather than pharmacology.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -64,10 +64,10 @@ export const volatileSubstanceMisuseCourse: PsychiatryCourse = {
     { label: "The treatment", value: "A child-welfare door, not a pharmacy", detail: "No anti-craving agent, no substitution, no detox exists — Childline 1098 the door, the Child Welfare Committee under the JJ Act the statutory lever, the shelter-and-bridge-school ladder the treatment; structure, attachment, meaning and time the active ingredients" },
   ],
   knowledgeGraph: [
-    { label: "Substance Use — The Reward Hijack", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The parent frame: the availability-to-escalation curve this class runs fastest — the reward hijack in its cheapest, youngest form" },
-    { label: "Opioid Use Disorders — The Medicine That Holds the Door", type: "condition", href: "/psychiatry/opioid-use-disorders/", note: "The street child's other emergency — the drowsy pinpoint-pupil child gets naloxone; the dazed solvent child gets the calm room" },
-    { label: "Party Drugs — The Dance-Floor Trio", type: "condition", href: "/psychiatry/party-drug-use-disorders/", note: "The whippet's home turf — the metro party culture that carries nitrous from the dance floor into the B12-myelopathy clinic" },
-    { label: "Alcohol Use Disorders — The Disease of More", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The dirty-drunk imitation — and the contrast that matters: alcohol withdrawal kills, solvent withdrawal whimpers" },
+    { label: "Substance Use", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The parent frame: the availability-to-escalation curve this class runs fastest — the reward hijack in its cheapest, youngest form" },
+    { label: "Opioid Use Disorders", type: "condition", href: "/psychiatry/opioid-use-disorders/", note: "The street child's other emergency — the drowsy pinpoint-pupil child gets naloxone; the dazed solvent child gets the calm room" },
+    { label: "Party Drugs", type: "condition", href: "/psychiatry/party-drug-use-disorders/", note: "The whippet's home turf — the metro party culture that carries nitrous from the dance floor into the B12-myelopathy clinic" },
+    { label: "Alcohol Use Disorders", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The dirty-drunk imitation — and the contrast that matters: alcohol withdrawal kills, solvent withdrawal whimpers" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The rapid-onset rapid-offset reward tick — the craving-and-relapse engine of short-half-life drugs, at its fastest here" },
     { label: "Noradrenaline", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The sudden-death player: the sensitised myocardium plus the adrenaline surge — the catecholamine caution's chemistry" },
     { label: "Frontal cortex", type: "brain-region", href: "#brain", note: "The disinhibition's first floor — the giggly, slurred, briefly euphoric sink of the fifteen-minute picture" },

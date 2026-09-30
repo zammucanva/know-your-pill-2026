@@ -21,13 +21,13 @@ import type { PsychiatryCourse } from "./types";
 export const homicideInfanticideCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "homicide-infanticide",
-  title: "Homicide, Mass Murder & Infanticide — The Rare Truth",
+  title: "Homicide, Mass Murder & Infanticide",
   shortName: "Homicide & Mental Illness",
   kind: "concept",
   category: "Forensic Psychiatry",
   groupLetter: "O",
   groupName: "Forensic psychiatry",
-  learningPath: ["Psychiatry", "Forensic Psychiatry", "Homicide, Mass Murder & Infanticide — The Rare Truth"],
+  learningPath: ["Psychiatry", "Forensic Psychiatry", "Homicide, Mass Murder & Infanticide"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -37,10 +37,10 @@ export const homicideInfanticideCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "The rarest crime in psychiatry carries the loudest headlines — the National Confidential Inquiry (NCI) reorganises the whole subject around one verdict: mostly unpredictable (a third of perpetrators seen in the final week, risk judged low or absent in 88% of those contacts) yet largely preventable — 28% predictable, 65% preventable — care, not clairvoyance.",
+    "The rare truth — unpredictable, yet largely preventable through better care",
 
   summary:
-    "This is the rarest outcome in psychiatry wearing the loudest headlines, and the numbers are the antidote to both the fear and the false comfort. England and Wales record 500–600 homicides a year; the typical perpetrator is a young man with a knife and alcohol, not a patient. About 1 in 10 perpetrators had recent mental-health service contact (1 in 5 lifetime); around 1 in 20 carried a schizophrenia diagnosis (international range 7–12.6%); and the victims of the mentally ill perpetrator are family members, not strangers — under a sixth of them strangers. The NCI — the consecutive national case series that turned anecdote into epidemiology — supplies the method (every homicide from the Homicide Index, questionnaires to the mental health services of each perpetrator's residential and adjacent districts) and the central finding that reorganises teaching: patient homicides were largely unpredictable yet largely preventable, 28% predictable, 65% preventable, through better care, not better clairvoyance. The special populations each carry their own lesson: infant homicide (the first year of life carries the highest homicide risk of any age — about 4.5 per 100,000 live births; 1 in 25 of the Inquiry's 2,665 perpetrators killed infants, half of them fathers, around a third mothers), with neonaticide as its own entity — the young, usually unmarried mother dissociating through a concealed solitary delivery, panic and shame rather than depression; the multiple-homicide taxonomy (mass = one episode, one location; spree = separate locations, no cooling-off; serial = separate locations with cooling-off periods) with Mullen's autogenic massacre — murder-suicide pursuing a personal grievance agenda, with media modelling doing part of the work; the female 1-in-10 pattern (children in a quarter of cases, partners in over a third; suffocation and poisoning overrepresented; hospital and community rather than prison); and the elderly Darby-and-Joan dyadic death — the rarest group (fewer than 1 in 50 perpetrators), the most male-dominated (19:1), and the most psychiatrically legible: a depressed, exhausted caregiving husband with impoverishment delusions killing his ill wife and then himself, with hospital the preferred disposal. The balanced-view discipline runs through everything the clinician says in public: less than 10% of violent crime is attributable to schizophrenia, and 99.97% of people with schizophrenia commit no serious violent offence in any given year — the destigmatising arithmetic that belongs in every statement. The Indian layer: NCRB volumes of tens of thousands of homicides annually with the same sharp-instrument dominance, no Confidential Inquiry to build the local audit, the 99.97% number as the stigma antidote in a 'madman kills' media environment, the IPC/BNS infanticide provision paralleling the English one, and the district-level shadow audit as the transferable exercise that delivers the same systems findings — undocumented histories, lost follow-up, absent family engagement.",
+    "The National Confidential Inquiry's finding: patient homicides are rare, the victims are family members rather than strangers, and prediction is weak while prevention through care works. The destigmatising arithmetic — almost no one with schizophrenia commits serious violence — belongs in every public statement.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -65,12 +65,12 @@ export const homicideInfanticideCourse: PsychiatryCourse = {
     { label: "The last contact", value: "88%", detail: "A third of patient-homicide perpetrators were seen in the week before the offence — and immediate risk was judged low or absent in 88% of those contacts; the false-positive mathematics that defeats individual prediction" },
   ],
   knowledgeGraph: [
-    { label: "Psychiatric Disorder & Offending — The Formulation", type: "condition", href: "/psychiatry/psychiatry-offending/", note: "The risk architecture this course's numbers rest on — the comorbidity multiplier ladder (18% to 31% to 43%) and the causes-vs-associations discipline" },
-    { label: "Mental Health Law — Capacity, Liability, Duty", type: "condition", href: "/psychiatry/mental-health-law/", note: "The disposal machinery — diminished responsibility, hospital orders, restriction orders — this course quotes as outcomes" },
-    { label: "Juvenile Offending — The Risk-Overlap Principle", type: "condition", href: "/psychiatry/juvenile-offending/", note: "The young-offender counterpart of the young-male violence concentration this course describes" },
+    { label: "Psychiatric Disorder & Offending", type: "condition", href: "/psychiatry/psychiatry-offending/", note: "The risk architecture this course's numbers rest on — the comorbidity multiplier ladder (18% to 31% to 43%) and the causes-vs-associations discipline" },
+    { label: "Mental Health Law", type: "condition", href: "/psychiatry/mental-health-law/", note: "The disposal machinery — diminished responsibility, hospital orders, restriction orders — this course quotes as outcomes" },
+    { label: "Juvenile Offending", type: "condition", href: "/psychiatry/juvenile-offending/", note: "The young-offender counterpart of the young-male violence concentration this course describes" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The 1-in-20 diagnosis whose rare homicides are family tragedies of unmanaged psychosis — and whose 99.97% annual non-violence rate is the anti-stigma arithmetic" },
     { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "The murder-suicide variants — the autogenic massacre and the elderly dyadic death — are suicidology before they are criminology" },
-    { label: "Substance Use — The Reward Hijack", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The comorbidity that carries the multiplier — the significant upward trends in drug and alcohol misuse among perpetrators" },
+    { label: "Substance Use", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The comorbidity that carries the multiplier — the significant upward trends in drug and alcohol misuse among perpetrators" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The salience engine behind the persecutory and passivity phenomena of the rare psychosis-driven killing" },
     { label: "Prefrontal cortex", type: "brain-region", href: "#brain", note: "The planning-and-inhibition seat — where the grievance agenda runs and where psychosis degrades self-monitoring" },
     { label: "Amygdala", type: "brain-region", href: "#brain", note: "The threat-appraisal hub — the persecutory reading of the world shared by psychotic and grievance-driven violence" },

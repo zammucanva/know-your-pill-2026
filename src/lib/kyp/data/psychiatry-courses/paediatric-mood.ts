@@ -23,13 +23,13 @@ import type { PsychiatryCourse } from "./types";
 export const paediatricMoodCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "paediatric-mood",
-  title: "Mood Disorders in Youth — The Irritability Costume",
+  title: "Mood Disorders in Youth",
   shortName: "Youth Mood",
   kind: "disorder",
   category: "Child & Adolescent Psychiatry",
   groupLetter: "L",
   groupName: "Child & adolescent psychiatry",
-  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Mood Disorders in Youth — The Irritability Costume"],
+  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Mood Disorders in Youth"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -39,10 +39,10 @@ export const paediatricMoodCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "In young people, depression rarely wears sadness — it wears irritability: slammed doors, falling marks, dropped cricket, the universal 'boring' — while the child with years of near-daily rage is more often DMDD than bipolar. Read the costume, run the episodic gate, and the right treatment follows.",
+    "Youth depression wears irritability, not sadness: read the costume, run the episodic gate",
 
   summary:
-    "The developmental translation is the whole game. Adult sadness arrives in children as cranky, snappy, out-of-proportion rage — parents bring them for 'attitude problem' or 'phone addiction', not for depression; the anhedonia arrives as attrition (the cricket kit gathering dust, 'boring' as the verdict on everything once loved); the energy and concentration changes arrive as falling marks read as laziness. The numbers say this is not rare: roughly 1–2% of prepubertal children, 3–5% of early adolescents and 6–8% of late adolescents have major depression, with cumulative rates approaching 15–20% by young adulthood — roughly one in five people has had a depressive episode by 18–20 — and suicide is the second leading cause of death in Indian adolescents. The bipolar question is the course's spine: TRUE juvenile mania exists (mostly adolescent, episodic, euphoric-or-irritable grandiose energy with decreased need for sleep and energy intact) but is rarer than the referral letters suggest; the child with years of near-daily severe tantrums is far more often the DSM-5's disruptive mood dysregulation disorder (DMDD) or depression-with-irritability, and the difference decides between psychotherapy-and-watch and mood stabilisers with antipsychotics. Treatment runs on the TADS-era evidence order: mild → CBT or IPT-A; moderate-severe → psychotherapy PLUS fluoxetine-class SSRI, with the suicidality warning handled honestly (roughly 4% vs 2% ideation in the pooled paediatric trials, no completed suicides in the pools, untreated depression the larger risk) and weekly early reviews on any SSRI start. The Indian layer is not decoration: the Std 9–12 band, board results days, the Kota-pattern coaching city where a 16-year-old 1,500 km from home meets weekly rank-postings and the mortgaged plot, post-result season (May–June) as the national risk weather, and the exam-season SSRI-pause request that deserves the clear NO.",
+    "In children and adolescents, depression presents with irritability, anhedonia and falling marks rather than adult sadness. Distinguishing it from DMDD and juvenile mania decides between watchful psychotherapy and mood stabilisers.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -68,11 +68,11 @@ export const paediatricMoodCourse: PsychiatryCourse = {
   ],
   knowledgeGraph: [
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "The full adult-side pharmacology this course's gate guards — lithium, valproate's pregnancy rules, the antipsychotic tier; the episodic gate learned here decides who crosses that bridge" },
-    { label: "Youth Suicide & Self-Harm — The Safety-First Card", type: "condition", href: "/psychiatry/youth-suicide/", note: "The full safety architecture behind every screen this course mandates — the means audit, the crisis card, the post-result season preparedness" },
-    { label: "ADHD — The Brakes and the Engine", type: "condition", href: "/psychiatry/adhd/", note: "The concentration double-book-keeping comorbidity — and the demoralisation mimic whose mood clears with success experiences" },
-    { label: "Conduct Disorders — The Empathy Specifier", type: "condition", href: "/psychiatry/conduct-disorder/", note: "DMDD's exclusion set (cannot be diagnosed alongside ODD/conduct) and the aggressive differential the between-episode irritability separates" },
-    { label: "Child Sleep — The Hyperactivity Masquerade", type: "condition", href: "/psychiatry/child-sleep/", note: "The vortex's other face — the sleep layer this course treats as a target with its own evidence, not a formality" },
-    { label: "Cannabis & Mental Health — The Two-Sided Truth", type: "condition", href: "/psychiatry/cannabis-mental-health/", note: "The frequent hidden companion that both mimics and deepens the adolescent depressive picture — the friends-change sign preceding the mood change" },
+    { label: "Youth Suicide & Self-Harm", type: "condition", href: "/psychiatry/youth-suicide/", note: "The full safety architecture behind every screen this course mandates — the means audit, the crisis card, the post-result season preparedness" },
+    { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The concentration double-book-keeping comorbidity — and the demoralisation mimic whose mood clears with success experiences" },
+    { label: "Conduct Disorders", type: "condition", href: "/psychiatry/conduct-disorder/", note: "DMDD's exclusion set (cannot be diagnosed alongside ODD/conduct) and the aggressive differential the between-episode irritability separates" },
+    { label: "Child Sleep", type: "condition", href: "/psychiatry/child-sleep/", note: "The vortex's other face — the sleep layer this course treats as a target with its own evidence, not a formality" },
+    { label: "Cannabis & Mental Health", type: "condition", href: "/psychiatry/cannabis-mental-health/", note: "The frequent hidden companion that both mimics and deepens the adolescent depressive picture — the friends-change sign preceding the mood change" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The SSRI tier's target and the TADS evidence spine's chemistry — the one system with replicated paediatric treatment evidence in youth depression" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The reward currency — flat in anhedonia-by-attrition, flooded in mania's grandiose energy; the episodic gate's chemistry at the bipolar end" },
     { label: "Amygdala", type: "brain-region", href: "#brain", note: "The sensitised alarm's bell — calibrated hot by early adversity, firing at homework, transitions and the word NO" },

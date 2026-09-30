@@ -22,7 +22,7 @@ import type { PsychiatryCourse } from "./types";
 export const gamblingDisorderCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "gambling-disorder",
-  title: "Gambling Disorder — The Addiction Without a Drug",
+  title: "Gambling Disorder",
   shortName: "Gambling",
   kind: "disorder",
   category: "Substance-Related & Addictive Disorder",
@@ -34,9 +34,9 @@ export const gamblingDisorderCourse: PsychiatryCourse = {
   lastReviewed: "2026-09-28",
 
   tagline:
-    "The behavioural condition that earned addiction's full classification: craving, tolerance, withdrawal-like irritability, loss-chasing, concealment, bailouts and relapse — running on the brain's reward-learning circuit alone, no molecule required.",
+    "The addiction without a drug — craving, loss-chasing and relapse, no molecule required",
   summary:
-    "The deep lesson of gambling science is that the drug was never necessary; the schedule was. A slot machine, a rummy table or an app's daily-fantasy contest delivers rewards on a variable-ratio schedule — unpredictable, occasional, exactly when you least-and-most expect them — which is the most addiction-forming reinforcement pattern learning-science knows; and the near-miss (the two-cherries-and-a-lemon) fires the brain's win-circuitry almost as if you had won, teaching loss-as-almost-victory. Add the pocket casino (availability at 2 a.m. in a hostel bed), cognitive distortions that feel like insight (the gambler's fallacy, the illusion of control, the 'due' machine) and the chase — the suicidal escalation to recover losses — and the disorder assembles itself. The Indian story is young and steep: legalised-by-ambiguity online real-money gaming, fantasy sports and betting apps grew explosively through the late-2010s-2020s on UPI's frictionless payments, the IPL calendar and celebrity advertising, delivering the first mass-exposure gambling economy in the country's history — salaried young men, hostel youth discovering 'skill gaming', and families finding out through debt-collection calls. The clinical tier this course carries: recognise the addiction's grammar inside 'gaming' language, treat the loop (CBT-and-motivational architecture, financial-controls-as-treatment, GA-and-family), confront the loan-app debt spiral and the concealment architecture — and name out loud the highest suicide risk of any addiction, with the suicide screen first.",
+    "Gambling disorder is the behavioural addiction classified alongside substance disorders, built on variable-ratio reinforcement and loss-chasing. Treatment combines CBT and motivational work with financial controls, and suicide risk — the addiction family's highest — is screened first.",
   estimatedReadTime: "33 min",
   yieldRating: "high",
   primaryAudience: "medical",
@@ -63,7 +63,7 @@ export const gamblingDisorderCourse: PsychiatryCourse = {
     { label: "The Indian signature", value: "The UPI diary", detail: "The salary-day deposit-and-72-hour-bleed graph on the statement — the addiction's forensic document; the loan-app tier converts losses into debt spirals" },
   ],
   knowledgeGraph: [
-    { label: "Impulse Control Disorders (Kleptomania, Pyromania, IED, Trichotillomania)", type: "condition", href: "/psychiatry/impulse-control-disorders/", note: "The family it left behind — DSM-5 graduated gambling into the addictions; the converging loop-model" },
+    { label: "Impulse Control Disorders", type: "condition", href: "/psychiatry/impulse-control-disorders/", note: "The family it left behind — DSM-5 graduated gambling into the addictions; the converging loop-model" },
     { label: "Obsessive-Compulsive Disorder (OCD)", type: "condition", href: "/psychiatry/ocd/", note: "The re-chaptering neighbour: OCD got its own block; gambling moved in with the substances" },
     { label: "Alcohol Use Disorders", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The drink-and-table partnership — the comorbidity that half the sessions ride on" },
     { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "The screen that precedes everything else — the addictions' highest-risk tier" },

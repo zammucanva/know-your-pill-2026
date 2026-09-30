@@ -27,9 +27,9 @@ export const neurotransmittersCourse: PsychiatryCourse = {
   lastReviewed: "2026-09-25",
 
   tagline:
-    "The shared language of the brain — and the grammar of every drug you will ever prescribe in psychiatry.",
+    "The shared language of the brain — and the grammar of every drug you prescribe",
   summary:
-    "Chemical neurotransmission is how brain cells talk: dozens of transmitter families, hundreds of receptor proteins, and cascades that reach the genome. Nearly every drug in psychiatry works by entering this conversation — SSRIs at SERT, bupropion at DAT/NET, benzodiazepines at GABA-A, clozapine at D2 and 5-HT2A, lithium at the inositol cycle. This concept course teaches the system once, so every drug lesson afterwards becomes readable: the life cycle of a transmitter, the two great receptor families, the retrograde messengers, and the cascade that explains why antidepressants take weeks.",
+    "Chemical neurotransmission is how brain cells communicate: transmitter families, receptor families and second-messenger cascades. Learning the system once makes every psychiatric drug's mechanism and its timing readable at the bedside.",
   estimatedReadTime: "30 min",
   yieldRating: "high",
   primaryAudience: "medical",

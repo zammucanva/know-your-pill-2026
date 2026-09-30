@@ -21,7 +21,7 @@ import type { PsychiatryCourse } from "./types";
 export const impulseControlDisordersCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "impulse-control-disorders",
-  title: "Impulse Control Disorders (Kleptomania, Pyromania, IED, Trichotillomania)",
+  title: "Impulse Control Disorders",
   shortName: "Impulse Control",
   kind: "disorder",
   category: "Disruptive, Impulse-Control & Conduct Disorder",
@@ -33,9 +33,9 @@ export const impulseControlDisordersCourse: PsychiatryCourse = {
   lastReviewed: "2026-09-28",
 
   tagline:
-    "One engine, five faces: a rising internal urge that grows unbearable, an act that discharges it with genuine relief, and the regret that follows — stealing without profit, fire for the fire's sake, explosive storms, hair-pulling, skin-picking.",
+    "One engine, five faces — kleptomania, pyromania, IED, trichotillomania and skin-picking",
   summary:
-    "The impulse-control family shares a single engine: urge → act → relief → regret. Kleptomania is stealing without need or profit (the wealthy woman lifting a ₹40 trinket); pyromania is fire-setting for the fire's sake with no monetary motive, revenge or delusion; intermittent explosive disorder (IED) is aggressive storms out of all proportion to triggers, arriving and passing like weather with genuine remorse after; trichotillomania is hair-pulling to visible loss with the same urge architecture; excoriation (skin-picking) is its dermatological sibling. Three clinical realities organise this corner of psychiatry. First, the engine is a LEARNED relief-loop — the brain discovers that a specific act switches off an unbearable urge, and the switch gets stamped in — which is why the effective treatments (habit-reversal training, urge-surfing, some glutamate-and-serotonin pharmacology) target the loop, not 'willpower'. Second, the shame-secrecy dome over these conditions is the densest in psychiatry: the woman who has pulled her hair for thirty years and never told her husband; most of this family presents only when caught, or never. Third, the misdiagnosis traffic is heavy in both directions — the impulse-disorder patient accused of criminality (the kleptomaniac treated as a thief) and the criminal wearing the diagnosis (the shoplifter-for-profit claiming kleptomania); the definitions are built precisely to make that discrimination, and the forensic interface runs through everything. This course covers the five members and their gates, the profit-motive exclusion set, habit-reversal training, the honest NAC evidence (adult-positive, paediatric-negative), the forensic craft of the caught kleptomaniac and the juvenile fire-setter — and the Indian layer: the six-dermatologist pilgrimage, the dupatta decade, family policing versus partnership, and the courts that need educating.",
+    "The impulse-control disorders share one engine: an urge rises, the act discharges it, relief follows, then regret. Diagnosis turns on excluding profit, revenge and delusion, and habit-reversal training is first-line for hair-pulling and skin-picking.",
   estimatedReadTime: "33 min",
   yieldRating: "medium",
   primaryAudience: "medical",
@@ -62,12 +62,12 @@ export const impulseControlDisordersCourse: PsychiatryCourse = {
   ],
   knowledgeGraph: [
     { label: "Obsessive-Compulsive Disorder (OCD)", type: "condition", href: "/psychiatry/ocd/", note: "The debated boundary: obsession-then-compulsion serving anxiety-neutralisation versus the urge-relief loop — resolved pragmatically (treat the loop either way)" },
-    { label: "Gambling Disorder — The Addiction Without a Drug", type: "condition", href: "/psychiatry/gambling-disorder/", note: "Graduated out to the addictions chapter in DSM-5; the converging loop-model family" },
+    { label: "Gambling Disorder", type: "condition", href: "/psychiatry/gambling-disorder/", note: "Graduated out to the addictions chapter in DSM-5; the converging loop-model family" },
     { label: "Generalized Anxiety Disorder (GAD)", type: "condition", href: "/psychiatry/gad/", note: "Stress raises the urge's amplitude — but the loop stands in calm weeks too; treat both" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The kleptomania-and-depression linkage; the comorbid tier SSRIs ride on" },
     { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The impulsivity overlap and the treatment-tier interaction" },
     { label: "Juvenile Offending", type: "condition", href: "/psychiatry/juvenile-offending/", note: "The fire-setting tiers and the JJ Act interface — where disposition decisions live" },
-    { label: "Psychiatric Disorder & Offending — The Formulation", type: "condition", href: "/psychiatry/psychiatry-offending/", note: "The forensic architecture behind the court-report craft" },
+    { label: "Psychiatric Disorder & Offending", type: "condition", href: "/psychiatry/psychiatry-offending/", note: "The forensic architecture behind the court-report craft" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The aggression-impulsivity literature's system — the IED fluoxetine tier rides on it" },
     { label: "Right inferior frontal cortex", type: "brain-region", href: "#brain", note: "The braking apparatus — frontal-limbic control-circuit immaturity or dysfunction across the family" },
   ],

@@ -20,7 +20,7 @@ import type { PsychiatryCourse } from "./types";
 export const tbiNeuropsychiatryCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "tbi-neuropsychiatry",
-  title: "Traumatic Brain Injury Neuropsychiatry — The Invisible Triad",
+  title: "Traumatic Brain Injury Neuropsychiatry",
   shortName: "TBI psychiatry",
   kind: "disorder",
   category: "Neurocognitive Disorder",
@@ -36,10 +36,10 @@ export const tbiNeuropsychiatryCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "A knock to the head can leave behind an invisible triad — slowed thinking, changed mood and released temper — that starts months after the accident, lasts years, and is almost never connected to the crash by the family, the employer or the doctor.",
+    "Slowed thinking, changed mood, released temper — the invisible triad after head injury",
 
   summary:
-    "India runs one of the world's largest road-traffic injury burdens, and survivors of significant head injury commonly walk out of surgical care 'recovered' — and then change. The wife says he is not the same man: irritable over nothing, sad without reason, forgetful of instructions, disinhibited at functions, sleeping badly, seizing occasionally. That is post-TBI neuropsychiatry: cognitive, emotional and behavioural sequelae following the injury on a timeline from weeks to years. Three honest truths organise the subject. First, severity predicts only LOOSELY — a 'mild' injury with a long post-traumatic amnesia can disable more than a severe one (LOC lies; PTA tells). Second, most symptoms are TREATABLE — depression, anxiety, sleep, seizures and behavioural overload respond to structured care and careful medicines. Third, the LABEL is therapy — connecting the change to the injury converts 'he became a bad person' into 'his brain was hurt', rescuing marriages, jobs and self-respect. The assessment is historical detective work (what hit, how long was memory lost, what has changed since) plus frontal-weighted testing, and the management runs on the relabel-then-rehabilitate engine: structure and pacing, graded return to work and driving, family education, and small-dose pharmacology (one change at a time) on an injured brain that amplifies every side effect. The two traps that kill: the elderly anticoagulated faller whose weeks-delayed drowsiness is a chronic subdural (a surgical emergency impersonating psychiatry), and the treatment-resistant fatigue that is actually post-TBI hypopituitarism — the under-remembered treatable mimic.",
+    "Traumatic brain injury produces cognitive, emotional and behavioural sequelae on a timeline from weeks to years, often unconnected to the accident by families or clinicians. The label itself is therapeutic, and structured rehabilitation with small-dose pharmacology treats most symptoms.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -63,14 +63,14 @@ export const tbiNeuropsychiatryCourse: PsychiatryCourse = {
     { label: "The Indian tier", value: "No rehab, family as therapist", detail: "Neurosurgery → home → physiotherapy for limbs → nothing for cognition/behaviour; the family-as-therapist teaching programme is the delivery channel, and the employer letter prevents terminations for 'attitude'" },
   ],
   knowledgeGraph: [
-    { label: "Frontotemporal Dementia — When Personality Changes First", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The shared frontal-pole geography — disinhibition and executive failure with the temporal filing-room overlap; the bedside frontal battery belongs to both" },
+    { label: "Frontotemporal Dementia", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The shared frontal-pole geography — disinhibition and executive failure with the temporal filing-room overlap; the bedside frontal battery belongs to both" },
     { label: "Post-Traumatic Stress Disorder (PTSD)", type: "condition", href: "/psychiatry/ptsd/", note: "The co-traveller after road accidents — intrusions, avoidance, hyperarousal sharing symptoms so heavily with post-concussion that both must be assessed in every survivor" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The quarter-to-a-half rider — biological and reactive at once, genuinely elevating suicide risk after injury" },
-    { label: "Vascular Dementia — The Staircase Decline", type: "condition", href: "/psychiatry/vascular-dementia/", note: "The shared executive-first profile and the shared long-game (vascular risk treated as brain medicine after injury)" },
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "The post-traumatic confusion states and the postictal imitators — the episodic-behaviour differential" },
-    { label: "Parasomnias — Sleepwalking, Sleep Terrors & the Dream-Fighter", type: "condition", href: "/psychiatry/parasomnias/", note: "The sleep-wake disruption both populations share — and the sedative restraint both demand" },
-    { label: "Insomnias — Chronic Insomnia Disorder", type: "condition", href: "/psychiatry/insomnia/", note: "The sleep programme that carries post-TBI recovery — hygiene first, melatonin for rhythm, the benzodiazepine exit" },
-    { label: "Alcohol-Related Dementia — The Engine You Can Switch Off", type: "condition", href: "/psychiatry/alcohol-related-dementia/", note: "The alcohol junction — intoxication at injury predicting worse outcomes and misuse escalating after; the falling drinker's subdural factory shared" },
+    { label: "Vascular Dementia", type: "condition", href: "/psychiatry/vascular-dementia/", note: "The shared executive-first profile and the shared long-game (vascular risk treated as brain medicine after injury)" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "The post-traumatic confusion states and the postictal imitators — the episodic-behaviour differential" },
+    { label: "Parasomnias", type: "condition", href: "/psychiatry/parasomnias/", note: "The sleep-wake disruption both populations share — and the sedative restraint both demand" },
+    { label: "Insomnia", type: "condition", href: "/psychiatry/insomnia/", note: "The sleep programme that carries post-TBI recovery — hygiene first, melatonin for rhythm, the benzodiazepine exit" },
+    { label: "Alcohol-Related Dementia", type: "condition", href: "/psychiatry/alcohol-related-dementia/", note: "The alcohol junction — intoxication at injury predicting worse outcomes and misuse escalating after; the falling drinker's subdural factory shared" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The fronto-striatal circuitry the shearing disconnects — drive, initiation and impulse control" },
     { label: "Frontal lobes", type: "brain-region", href: "#brain", note: "The manager of manners and plans — bruised at the poles; the disinhibition's seat" },
     { label: "Temporal poles", type: "brain-region", href: "#brain", note: "The filing room of new memories — the anterior contusion zone behind the new-learning failure" },

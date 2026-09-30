@@ -25,13 +25,13 @@ import type { PsychiatryCourse } from "./types";
 export const psychiatricRehabilitationCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "psychiatric-rehabilitation",
-  title: "Psychiatric Rehabilitation — The Well Part of the Ego",
+  title: "Psychiatric Rehabilitation",
   shortName: "Psychiatric rehab",
   kind: "concept",
   category: "Treatment Methods",
   groupLetter: "P",
   groupName: "Treatment methods",
-  learningPath: ["Psychiatry", "Treatment Methods", "Psychiatric Rehabilitation — The Well Part of the Ego"],
+  learningPath: ["Psychiatry", "Treatment Methods", "Psychiatric Rehabilitation"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -41,10 +41,10 @@ export const psychiatricRehabilitationCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Psychiatric rehabilitation moves the clinical gaze from the illness to the functioning: it works with the well part of the ego, engineers the person and the environment together, and measures success in housing held, jobs kept, relationships sustained and rights exercised — the ordinary life, delivered under real-life conditions.",
+    "Working with the well part of the ego to restore housing, work, relationships and rights",
 
   summary:
-    "This is the discipline that begins with a definitional act of respect: the person with severe mental illness is a holder of ordinary aspirations — a home of one's own, an education and a meaningful work career, satisfying social and intimate relationships, participation in community life with full rights — and the clinician's job is to engineer both the person and the environment until those aspirations are met. The paradigm shift that makes it a discipline: from an illness model to a model of functional disability, with outcomes measured as social-role functioning, quality of life and family burden rather than symptom counts — the frame the ICF (International Classification of Functioning, Disability and Health) supplies: impairments of body structure and function, activity limitations and participation restrictions, each level carrying its own intervention logic, plus the environmental factors that create or undo disability. The philosophy: work under real-life conditions; elicit the person's own goals by motivational interviewing, staged by readiness for change; work with the well part of the ego (Lamb's 'always an intact portion to which treatment and rehabilitation efforts can be directed'); restore hope (Bachrach's acceptance of the illness and its limitations, proceeding from there); honour self-determination (the recovery concept) and build networks. The programmes: supported housing (independent housing plus flexible, individualised support — now the realistic goal for the majority, who once in it mostly stay housed and are hospitalised less); supported employment (the competitive job of the person's choosing first, support continued indefinitely — 'place, then train', the most promising vocational model, with honest unanswered questions); the skills modules (medication management through community re-entry — acquisition, maintenance and transfer to community life demonstrated, but benefits accumulating slowly, unlike medication effects); the family interventions (relapse reduction among the most robust findings in psychiatry — with unknown effective components, no minimum dose and a cultural caveat that demands Indian delivery, not Western import); and the stigma fight (the label's vicious cycle of demoralisation, unemployment and shrinking networks, interrupted by the participation that is itself the treatment). The psychiatrist's particular task is a trade-off conversation: symptom control is not necessarily the highest priority, and side effects that wreck social-role performance are rehabilitation failures however clean the symptom chart. The Indian layer is not an appendix: the family IS the rehabilitation system (the 50–90% living-with-relatives figure is the Indian norm, not a policy outcome), the day-care centre is the delivery hub, the home itself is the assessment's object (space, role, stimulation), and the ecological strategy is not the poor cousin in India — it is the system.",
+    "Psychiatric rehabilitation shifts the clinical focus from symptoms to functioning, engineering person and environment together. It matters because outcomes are measured in housing, work, relationships and rights rather than symptom counts.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -69,11 +69,11 @@ export const psychiatricRehabilitationCourse: PsychiatryCourse = {
   ],
   knowledgeGraph: [
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The dominant diagnosis of the rehabilitation population — held loosely, because the field's insistence is that non-psychotic disorders qualify equally" },
-    { label: "Family Therapy — Circular Causality", type: "condition", href: "/psychiatry/family-therapy/", note: "The working-partner discipline: the relapse-reducing family interventions this course prescribes, and the systems lens the India family-as-system builds on" },
-    { label: "Group Therapy — Yalom's Curative Factors", type: "condition", href: "/psychiatry/group-therapy/", note: "The group vehicle the skills modules ride — role play and interpersonal learning rehearsed before the real-life setting demands them" },
-    { label: "Therapeutic Communities — The Four Henderson Principles", type: "condition", href: "/psychiatry/therapeutic-communities/", note: "The residential-rehabilitation ancestor — the milieu tradition the supported-housing successor replaced for the majority" },
-    { label: "Memory Rehabilitation — The Engineering Discipline", type: "condition", href: "/psychiatry/memory-rehabilitation/", note: "The parallel engineering discipline for the cognitive disabilities — the same person-plus-environment logic in the neurocognitive tier" },
-    { label: "Substance Use — The Reward Hijack", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The dual-diagnosis reality: up to 50% of severe mental illness — the destabiliser every rehabilitation plan must hold" },
+    { label: "Family Therapy", type: "condition", href: "/psychiatry/family-therapy/", note: "The working-partner discipline: the relapse-reducing family interventions this course prescribes, and the systems lens the India family-as-system builds on" },
+    { label: "Group Therapy", type: "condition", href: "/psychiatry/group-therapy/", note: "The group vehicle the skills modules ride — role play and interpersonal learning rehearsed before the real-life setting demands them" },
+    { label: "Therapeutic Communities", type: "condition", href: "/psychiatry/therapeutic-communities/", note: "The residential-rehabilitation ancestor — the milieu tradition the supported-housing successor replaced for the majority" },
+    { label: "Memory Rehabilitation", type: "condition", href: "/psychiatry/memory-rehabilitation/", note: "The parallel engineering discipline for the cognitive disabilities — the same person-plus-environment logic in the neurocognitive tier" },
+    { label: "Substance Use", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The dual-diagnosis reality: up to 50% of severe mental illness — the destabiliser every rehabilitation plan must hold" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The reward-and-motivation chemistry the goal-pursuit and the hope restoration ride on" },
     { label: "Prefrontal cortex", type: "brain-region", href: "#brain", note: "The goal-setting and executive seat — the well part of the ego's address, the planning the modules train" },
     { label: "Amygdala", type: "brain-region", href: "#brain", note: "The threat circuit the stigma expectation rides — the anticipated rejection that keeps the labelled person at home" },

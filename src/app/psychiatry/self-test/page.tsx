@@ -48,11 +48,18 @@ export default function SelfTestPage() {
     }
   }
 
-  const groups: SelfTestGroup[] = corpus.groups.map((g) => ({
-    letter: g.letter,
-    name: g.name,
-    count: groupCountByLetter.get(g.letter) ?? 0,
-  }));
+  const groups: SelfTestGroup[] = [...corpus.groups]
+    // Curriculum normalization: Foundations & sciences first (same
+    // learner-facing section order as the library and hub).
+    .sort((a, b) => {
+      const order = ["Q", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R"];
+      return order.indexOf(a.letter) - order.indexOf(b.letter);
+    })
+    .map((g) => ({
+      letter: g.letter,
+      name: g.name,
+      count: groupCountByLetter.get(g.letter) ?? 0,
+    }));
 
   return (
     <SelfTestClient

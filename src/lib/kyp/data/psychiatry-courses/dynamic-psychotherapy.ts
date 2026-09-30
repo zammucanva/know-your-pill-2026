@@ -22,13 +22,13 @@ import type { PsychiatryCourse } from "./types";
 export const dynamicPsychotherapyCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "dynamic-psychotherapy",
-  title: "Dynamic Psychotherapy — The Procedural Unconscious",
+  title: "Dynamic Psychotherapy",
   shortName: "Dynamic Therapy",
   kind: "concept",
   category: "Treatment Methods",
   groupLetter: "P",
   groupName: "Treatment methods",
-  learningPath: ["Psychiatry", "Treatment Methods", "Dynamic Psychotherapy — The Procedural Unconscious"],
+  learningPath: ["Psychiatry", "Treatment Methods", "Dynamic Psychotherapy"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -38,10 +38,10 @@ export const dynamicPsychotherapyCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "The patterns that hurt a life — the partners repeatedly chosen, the anger that cannot be felt, the closeness that always flees — were learned so early they now run automatically, outside awareness; dynamic therapy makes them visible inside a live relationship and reworks them, slowly, with a trained guide.",
+    "The procedural unconscious: automatic relational habits reworked in a live relationship",
 
   summary:
-    "Every school of psychotherapy descends from psychoanalysis, directly or in reaction — and whatever one thinks of the couch, its founding ideas now run through everyday clinical medicine. This course teaches the modern, plain version of the unconscious: not a locked basement of forbidden wishes but an autopilot of relational habits laid down before language could record them, stored the way bicycle-riding is stored — procedural learning with no sentence anywhere that says it. That single reframe explains why advice so often fails (insight delivered as advice speaks to the verbal system while the pattern lives in the procedural one) and why a live relationship, over time, is the corrective. Defences follow as clinical data: repression, denial, projection, projective identification, splitting, displacement, reaction formation, somatisation, intellectualisation, rationalisation, acting out — and the mature trio of altruism, sublimation and humour — read the way a physician reads a fever pattern, diagnostically, never morally. Transference and countertransference make the patient's history run live in your room: the ward that dreads one patient is holding information, and the clinician's own feelings are the one instrument that never runs out of batteries. Malan's two triangles — the triangle of conflict (impulse – anxiety – defence) and the triangle of person (current figure – therapist – original figure) — compress the whole technique into a drawing an examiner can ask for and a clinician can use. The brief descendants (typically 16–40 weekly sessions, one core conflict, focus instead of open-endedness) and the manualised offshoots (Bateman & Fonagy's mentalization-based treatment, Kernberg's transference-focused psychotherapy, the 16-session dynamic-interpersonal protocol used in Britain's national service) carry the engine with a manual gearbox. The evidence position is stated honestly: short-term dynamic therapy performs roughly on par with CBT in meta-analyses of the common disorders, with a sleeper effect of gains continuing after therapy ends; MBT and TFP have randomised-trial support in borderline personality; long-term work rests on the Oslo LPP cohort with caveats; classical analysis proper remains evidence-by-case-series. The Indian layer is taught without romance: trained dynamic therapists in the low hundreds against need measured in tens of millions, metro fees of ₹800–3,000 per session (approx 2026) making long-term work a middle-and-upper-class purchase, and the Bose–Freud story — the Indian Psychoanalytic Society founded 1922, the first psychoanalytic body outside Europe and North America, and Girindrasekhar Bose's joint-family dissent from the Oedipal triangle — the first serious non-Western theoretical correction to Freud, which Indian candidates answer exams better for knowing.",
+    "Dynamic psychotherapy treats the procedural unconscious, the relational habits laid down before words, through interpretation and new experience within the therapeutic relationship. Defences and transference become clinical data in every encounter.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -64,12 +64,12 @@ export const dynamicPsychotherapyCourse: PsychiatryCourse = {
     { label: "The Indian price", value: "₹800–3,000 metro private", detail: "Approx 2026; NGO and institute clinics slide from ₹100–500, a few supervised training-clinic seats free — long-term weekly work is a middle-and-upper-class purchase, and the class bias in access is a fact to say aloud" },
   ],
   knowledgeGraph: [
-    { label: "Group Therapy — Yalom's Curative Factors", type: "condition", href: "/psychiatry/group-therapy/", note: "The same relational engine run in a group — interpersonal learning and the corrective emotional experience the dynamic tradition supplied" },
-    { label: "Couples Therapy — The Decentred Dialogue", type: "condition", href: "/psychiatry/couples-therapy/", note: "The pattern worked where it lives — the repeated couple dance read through a systemic lens" },
-    { label: "Family Therapy — Circular Causality", type: "condition", href: "/psychiatry/family-therapy/", note: "Where the family-embedded self is the unit — the Indian seam this course works from the individual side" },
-    { label: "Therapeutic Communities — The Four Henderson Principles", type: "condition", href: "/psychiatry/therapeutic-communities/", note: "The relationship-as-treatment principle scaled to a whole institution" },
-    { label: "Psychiatric Rehabilitation — The Well Part of the Ego", type: "condition", href: "/psychiatry/psychiatric-rehabilitation/", note: "Working with the intact part of the personality — the psychodynamic founding idea of rehabilitation itself" },
-    { label: "Treating Personality Disorders — Psychotherapies, Pharmacology & Service Design", type: "condition", href: "/psychiatry/personality-disorder-treatment/", note: "The manualised dynamic descendants in full trial detail — MBT, TFP, schema-focused therapy — with the organised service wrap" },
+    { label: "Group Therapy", type: "condition", href: "/psychiatry/group-therapy/", note: "The same relational engine run in a group — interpersonal learning and the corrective emotional experience the dynamic tradition supplied" },
+    { label: "Couples Therapy", type: "condition", href: "/psychiatry/couples-therapy/", note: "The pattern worked where it lives — the repeated couple dance read through a systemic lens" },
+    { label: "Family Therapy", type: "condition", href: "/psychiatry/family-therapy/", note: "Where the family-embedded self is the unit — the Indian seam this course works from the individual side" },
+    { label: "Therapeutic Communities", type: "condition", href: "/psychiatry/therapeutic-communities/", note: "The relationship-as-treatment principle scaled to a whole institution" },
+    { label: "Psychiatric Rehabilitation", type: "condition", href: "/psychiatry/psychiatric-rehabilitation/", note: "Working with the intact part of the personality — the psychodynamic founding idea of rehabilitation itself" },
+    { label: "Treating Personality Disorders", type: "condition", href: "/psychiatry/personality-disorder-treatment/", note: "The manualised dynamic descendants in full trial detail — MBT, TFP, schema-focused therapy — with the organised service wrap" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The comorbid-episode tier — treat the episode in front of you; the pharmacotherapy lives there, not here" },
     { label: "Recovered & False Memories", type: "condition", href: "/psychiatry/recovered-memories/", note: "What unrestrained suggestive technique can manufacture — the reason the frame, neutrality and evidence discipline exist" },
     { label: "Amygdala", type: "brain-region", href: "#brain", note: "The implicit emotional-learning machinery — the system that learns relationships before words and relearns them inside a live one" },

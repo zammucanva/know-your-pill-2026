@@ -24,13 +24,13 @@ import type { PsychiatryCourse } from "./types";
 export const partyDrugUseDisordersCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "party-drug-use-disorders",
-  title: "Party Drugs — The Dance-Floor Trio",
+  title: "Party Drugs",
   shortName: "Party Drugs",
   kind: "disorder",
   category: "Substance Use Disorder",
   groupLetter: "B",
   groupName: "Substance use disorders",
-  learningPath: ["Psychiatry", "Substance Use Disorders", "Party Drugs — The Dance-Floor Trio"],
+  learningPath: ["Psychiatry", "Substance Use Disorders", "Party Drugs"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -40,10 +40,10 @@ export const partyDrugUseDisordersCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Three pharmacologies in one dress code: the serotonin tablet whose emergencies are heat and water, the capful sedative whose dose is a knife edge and whose stop is a storm, and the dissociative that bills the bladder and the memory — the club casualty is environmental medicine, and the minutes decide.",
+    "MDMA, GHB/GBL and ketamine: three pharmacologies in one dress code, and the room decides",
 
   summary:
-    "This is environmental medicine wearing a party bracelet: three different pharmacologies sharing one dress code, and a casualty pattern whose deadliest ingredients are the room and the countermeasure. MDMA is the serotonin tablet — it flips the transporter backwards, so the pumps push serotonin OUT instead of mopping it up, and the empathogenic hour follows: everybody beautiful, every conversation deep, jaw-clenching bruxism with the gum-chewing tell, sweating, wide pupils, hours of dancing energy. Its two deaths are co-authored by the club: the HEAT death (the heat-death triangle of hyperthermia plus crowding plus dancing — temperature spirals, muscle cooks, rhabdomyolysis with dark urine and a creatine kinase in the hundreds of thousands, kidneys fail, clotting cascades, multi-organ collapse) and the WATER death (the water-death paradox: the drug's SIADH effect makes the body HOLD water while the frightened user drinks litres of plain water — sodium falls, brain cells swell, and the safety advice itself kills). The hydration rule taught since the Leah Betts-class deaths is the middle path: about 500 ml of electrolyte-containing fluid per hour of dancing, never litres of plain water. The comedown is depletion, not withdrawal — Tuesday's brain is an empty warehouse, flat, irritable, teary, sleepless — and it carries the antidepressant-timing trap (no SSRI decisions from the Tuesday-tearful state) alongside the loss-of-magic phenomenon, the natural brake chronic users deserve to be told about. GHB/GBL is the knife edge: the euphoric-relaxed dose and the comatose dose separated by fractions of a capful, the overdose a deep-but-reversible coma with oddly-preserved snoring respiration and the cycling wake-re-sedate pattern the short half-life writes — and the briefly-clear moment is NOT discharge. Dependence builds on the every-few-hours dosing clock, including the 3 a.m. capful the user wakes for; stopping produces the 24-hour compressed storm — tremor, hallucinations, delirium, autonomic surge, seizures — more labile than alcohol's, at times fatal, invisible on standard screens, managed inpatient-only with baclofen/phenobarbital-class protocols (the European clinical-guidance tier). Ketamine's bill is chronic: the K-hole on heavy nights, then the bladder — ulcerative cystitis with frequency every 20–60 minutes, suprapubic pain, haematuria, sterile cultures and the shrunken bladder — with abstinence the only disease-modifying cure and urology the partner, plus the cognitive slow-fade of nightly dissociation. The Indian layer: metro club-and-festival circuits with New-Year casualty waves in Delhi, Mumbai, Bengaluru, Hyderabad, Pune and Goa; darknet-postal supply; the UNODC frame of 10–30 million past-year MDMA users worldwide against an Indian prevalence its proxies alone reveal (seizure statistics climbing, casualty surges, the collapsed 'ecstasy = expensive metro novelty' boundary); the harm-reduction five (reagent testing, middle-path hydration, chill-out zones, the sitter rule, batch-alert etiquette); and the misdiagnosis ledger — the GHB storm labelled 'atypical alcohol withdrawal' — that the 3 a.m. clock question breaks. Venue regulation is where the heat-death triangle is actually cut: prevention advocacy belongs in the clinic bag.",
+    "Three club pharmacologies share one casualty pattern in which heat, over-hydration and dose timing decide outcomes. Chronic costs include GHB dependence with its withdrawal storm and ketamine bladder damage.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -67,12 +67,12 @@ export const partyDrugUseDisordersCourse: PsychiatryCourse = {
     { label: "The natural brake", value: "Loss of magic", detail: "Chronic MDMA use stops delivering warmth — the loss-of-magic phenomenon, its own brake and an honest harm-reduction fact worth telling users; bruxism and gum-chewing remain the bedside tells" },
   ],
   knowledgeGraph: [
-    { label: "Substance Use — The Reward Hijack", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The parent frame — the single severity-graded disorder logic and the reward thermostat all three club pharmacologies jam" },
-    { label: "Stimulant Use Disorders — Run, Crash, Crave", type: "condition", href: "/psychiatry/stimulant-use-disorders/", note: "The stimulant cousin — the borrowed-monoamine frame and the agitation-plus-hyperthermia emergency order the MDMA casualty shares" },
-    { label: "Alcohol Use Disorders — The Disease of More", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The withdrawal comparison and the never-mix absolute — the GHB storm run on alcohol-withdrawal logic compressed to a fraction of the clock" },
-    { label: "Benzodiazepine Misuse — The Borrowed Calm", type: "condition", href: "/psychiatry/benzodiazepine-misuse/", note: "The sedative-class cousin — the GABA receptor family GHB rides, and the cross-tolerance logic under the benzodiazepine backbone of the storm protocols" },
-    { label: "Hallucinogen Use Disorders — The Great Exception", type: "condition", href: "/psychiatry/hallucinogen-use-disorders/", note: "The talking-down floor for the panic states — the dissociation-management skill that transfers to the K-hole" },
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "The coma-and-confusion differentials — the water-death and the cycling sedation both masquerading as unexplained encephalopathy until the party questions are asked" },
+    { label: "Substance Use", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The parent frame — the single severity-graded disorder logic and the reward thermostat all three club pharmacologies jam" },
+    { label: "Stimulant Use Disorders", type: "condition", href: "/psychiatry/stimulant-use-disorders/", note: "The stimulant cousin — the borrowed-monoamine frame and the agitation-plus-hyperthermia emergency order the MDMA casualty shares" },
+    { label: "Alcohol Use Disorders", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The withdrawal comparison and the never-mix absolute — the GHB storm run on alcohol-withdrawal logic compressed to a fraction of the clock" },
+    { label: "Benzodiazepine Misuse", type: "condition", href: "/psychiatry/benzodiazepine-misuse/", note: "The sedative-class cousin — the GABA receptor family GHB rides, and the cross-tolerance logic under the benzodiazepine backbone of the storm protocols" },
+    { label: "Hallucinogen Use Disorders", type: "condition", href: "/psychiatry/hallucinogen-use-disorders/", note: "The talking-down floor for the panic states — the dissociation-management skill that transfers to the K-hole" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "The coma-and-confusion differentials — the water-death and the cycling sedation both masquerading as unexplained encephalopathy until the party questions are asked" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The molecule MDMA reverses — the flood of the empathogenic hour and the empty warehouse of Tuesday" },
     { label: "GABA", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The receptor family GHB rides — the knife edge between the sociable dose and the snoring coma" },
     { label: "Glutamate", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The NMDA channel ketamine blocks — the K-hole's dissociation and the chronic memory bill" },

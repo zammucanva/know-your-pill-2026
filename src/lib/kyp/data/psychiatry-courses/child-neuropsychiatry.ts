@@ -22,13 +22,13 @@ import type { PsychiatryCourse } from "./types";
 export const childNeuropsychiatryCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "child-neuropsychiatry",
-  title: "Child Neuropsychiatry — Behavioural Phenotypes",
+  title: "Child Neuropsychiatry",
   shortName: "Child Neuropsychiatry",
   kind: "disorder",
   category: "Child & Adolescent Psychiatry",
   groupLetter: "L",
   groupName: "Child & adolescent psychiatry",
-  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Child Neuropsychiatry — Behavioural Phenotypes"],
+  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Child Neuropsychiatry"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -37,9 +37,9 @@ export const childNeuropsychiatryCourse: PsychiatryCourse = {
   yieldRating: "high",
   primaryAudience: "medical",
 
-  tagline: "When the behaviour itself is the physical sign: genes, timing, toxins, hormones, injury and electricity writing the mind's script — where the pattern names the syndrome, the pregnancy question prevents the disability, the episode analysis tells the electrical from the psychological, and treating the parent is part of treating the child.",
+  tagline: "Behavioural phenotypes — when the behaviour itself is the physical sign",
   summary:
-    "Developmental neuropsychiatry is the discipline that addresses the neurobiological basis of behaviour in infants, children and adolescents with neurodevelopmental disorders or brain damage acquired during development — and its first idea changes how you read every referral letter: development is TRANSACTIONAL. The child with attention deficits elicits more correction and less warmth; that response amplifies the disruptive tendencies; the amplified behaviour draws harsher handling; the spiral lands in conduct disorder. Which is why, across every condition in this course, the parent's response, adjustment and involvement in treatment is a critical element in outcome — parent guidance is treatment, not an adjunct to it. The second idea: specific genetic syndromes carry BEHAVIOURAL PHENOTYPES (Nyhan's 1972 term) — characteristic personalities that hint at the underlying neuroanatomy. Fragile X boys avert gaze and act hyperactive with autistic-like patterns; Williams children are hypersocial and hyperverbal with striking visuospatial deficits; Lesch–Nyhan children compulsively self-injure; Prader–Willi children are hyperphagic with obsessive-compulsive features; Down syndrome shapes the pattern of language difficulty — readouts made possible by non-Mendelian inheritance (triplet repeats, microdeletions, imprinting, transcriptional derepression, gene dosage) acting on downstream genes. The third: prenatal insults are timing- and dose-dependent — the same alcohol dose that malforms face and organs during embryogenesis (days 14–60, through the shared retinoid-metabolism route to the HOX genes) may 'only' alter behaviour in the foetal period. Foetal alcohol spectrum disorder (full FAS ~1.9 per 1,000 live births; the combined spectrum ~9.1 per 1,000) is the most common preventable example, and its treatment is a question asked early: no agreed safe dose exists. The fourth and fifth: childhood epilepsy and traumatic brain injury (185 per 100,000 children, ~90% mild) generate psychiatric pictures that routinely masquerade as 'pure' behaviour problems — the complex partial seizure read as ADHD, the frontal-lobe epilepsy read as psychosis or mania, the pseudoseizure that must be differentiated from the true seizure (and often coexists with it), and the under-7 injured brain that paradoxically fares WORSE than the older one. The Indian tier runs through everything: epilepsy stigma (school expulsion, marriage-market discrimination, faith-healing circuits), patchy newborn hypothyroidism screening where every month of delay costs IQ points, lead in paint, batteries, contaminated water and surma, and an antenatal booking that rarely asks about alcohol. Brain and behaviour, one continuous story.",
+    "Child neuropsychiatry covers the neurobiological basis of behaviour, from behavioural phenotypes of genetic syndromes to prenatal insults, epilepsy and brain injury. Parent guidance is part of treatment, and asking the pregnancy question early prevents disability.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -63,12 +63,12 @@ export const childNeuropsychiatryCourse: PsychiatryCourse = {
     { label: "The Indian lens", value: "TSH, lead, stigma", detail: "Where newborn screening is patchy, prolonged jaundice, large fontanelle, macroglossia and umbilical hernia must trigger TSH testing — every month of delay costs IQ points; lead hides in paint, batteries, contaminated water and surma; epilepsy carries marriage, schooling and employment discrimination" },
   ],
   knowledgeGraph: [
-    { label: "Genetic Syndromes in ID — The Psychiatry Each Carries", type: "condition", href: "/psychiatry/id-syndromes/", note: "The per-syndrome psychiatric maps this course's behavioural-phenotype principle populates — fragile X, Prader–Willi, Williams and Lesch–Nyhan in full clinical detail" },
-    { label: "Intellectual Disability — Supports, Not Just Scores", type: "condition", href: "/psychiatry/intellectual-disability-overview/", note: "The supports framework the phenotype child is assessed inside — the genetics-informed look begins at the delay, not the behaviour" },
-    { label: "Autism Spectrum Disorder — The Prediction Engine", type: "condition", href: "/psychiatry/autism/", note: "The autistic-like patterns of fragile X and the tuberous-sclerosis regression — the overlap the phenotype lens keeps honest" },
-    { label: "ADHD — The Brakes and the Engine", type: "condition", href: "/psychiatry/adhd/", note: "The prefrontal executive disorder that mislabels electrical episodes and rides with FASD — the most-referred wrong label in this domain" },
-    { label: "Conduct Disorders — The Empathy Specifier", type: "condition", href: "/psychiatry/conduct-disorder/", note: "Where the transactional spiral lands — the ADHD-to-conduct progression this course's mechanism explains and interrupts" },
-    { label: "Traumatic Brain Injury Neuropsychiatry — The Invisible Triad", type: "condition", href: "/psychiatry/tbi-neuropsychiatry/", note: "The adult-facing TBI account this course's paediatric half complements — the under-7 paradox and the decade-long memory deficits" },
+    { label: "Genetic Syndromes in ID", type: "condition", href: "/psychiatry/id-syndromes/", note: "The per-syndrome psychiatric maps this course's behavioural-phenotype principle populates — fragile X, Prader–Willi, Williams and Lesch–Nyhan in full clinical detail" },
+    { label: "Intellectual Disability", type: "condition", href: "/psychiatry/intellectual-disability-overview/", note: "The supports framework the phenotype child is assessed inside — the genetics-informed look begins at the delay, not the behaviour" },
+    { label: "Autism Spectrum Disorder", type: "condition", href: "/psychiatry/autism/", note: "The autistic-like patterns of fragile X and the tuberous-sclerosis regression — the overlap the phenotype lens keeps honest" },
+    { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The prefrontal executive disorder that mislabels electrical episodes and rides with FASD — the most-referred wrong label in this domain" },
+    { label: "Conduct Disorders", type: "condition", href: "/psychiatry/conduct-disorder/", note: "Where the transactional spiral lands — the ADHD-to-conduct progression this course's mechanism explains and interrupts" },
+    { label: "Traumatic Brain Injury Neuropsychiatry", type: "condition", href: "/psychiatry/tbi-neuropsychiatry/", note: "The adult-facing TBI account this course's paediatric half complements — the under-7 paradox and the decade-long memory deficits" },
     { label: "GABA", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The inhibition half of the seizure equation — the immature brain's fewer high-affinity GABA-A receptors explaining childhood's peak incidence" },
     { label: "Glutamate", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The excitation half — the imbalance that generates seizures and the psychiatric faces riding them" },
     { label: "Frontal lobes", type: "brain-region", href: "#brain", note: "The disinhibition address after severe closed injury — and the frontal-lobe epilepsy that mimics psychiatry with pedalling, laughter and nightmares" },

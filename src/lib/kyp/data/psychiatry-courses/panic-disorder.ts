@@ -25,15 +25,15 @@ export const panicDisorderCourse: PsychiatryCourse = {
   category: "Anxiety Disorder",
   groupLetter: "F",
   groupName: "Anxiety disorders",
-  learningPath: ["Psychiatry", "Anxiety Disorders", "Panic Disorder"],
+  learningPath: ["Psychiatry", "Anxiety Disorders", "Panic Disorder & Agoraphobia"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-28",
 
   tagline:
-    "A false alarm that becomes feared: sudden surges of raw physical fear peaking within minutes, then a mind that starts fearing the alarm itself — scanning for the next one and restructuring life around avoiding it, until the world shrinks.",
+    "A false alarm that becomes feared, and a life restructured around avoiding the next one",
   summary:
-    "The panic attack itself is not an illness — half the population experiences a few in a lifetime, and they are harmless even when terrifying. The disorder begins with the interpretation: 'my heart is racing; this must be a heart attack / I am losing my mind / I will die here'. That catastrophic reading converts a bodily event into a threat, which fires more adrenaline, which produces stronger sensations — the vicious circle psychiatry calls the panic cycle. Fear of the next attack produces hypervigilant body-scanning, anticipatory dread and escape behaviour; left untreated the world shrinks — first the bus, then queues, then malls, then leaving home alone. Agoraphobia, an old Greek word that India has filled with new content: autos avoided, temple queues abandoned, the wife who has not crossed the gate alone in five years — and since DSM-5 it stands alone, diagnosable without any panic history. The good news is the best in this whole book: panic disorder is among the most treatable conditions in psychiatry — brief structured therapy cures a large share outright, SSRIs work well, and the treatment is literally the practice of feeling the alarm ring until it bores the brain. This course covers the attack definition and the 1-month clause, the panic cycle, interoceptive exposure (the signature technique), the agoraphobia five-cluster architecture — and the Indian layer: the cardiology-circuit patient, the housebound homemaker, the panic bag, 'ghabrahat ka daura' and the faith alliance.",
+    "Panic attacks are common and harmless, but panic disorder turns them into a feared threat through catastrophic interpretation, driving avoidance that shrinks the world. It is among psychiatry's most treatable conditions, responding to structured psychological therapy and SSRIs.",
   estimatedReadTime: "35 min",
   yieldRating: "high",
   primaryAudience: "medical",

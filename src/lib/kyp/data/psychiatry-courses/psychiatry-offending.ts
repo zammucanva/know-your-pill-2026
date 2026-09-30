@@ -23,13 +23,13 @@ import type { PsychiatryCourse } from "./types";
 export const psychiatryOffendingCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "psychiatry-offending",
-  title: "Psychiatric Disorder & Offending — The Formulation",
+  title: "Psychiatric Disorder & Offending",
   shortName: "Offending",
   kind: "concept",
   category: "Forensic Psychiatry",
   groupLetter: "O",
   groupName: "Forensic psychiatry",
-  learningPath: ["Psychiatry", "Forensic Psychiatry", "Psychiatric Disorder & Offending — The Formulation"],
+  learningPath: ["Psychiatry", "Forensic Psychiatry", "Psychiatric Disorder & Offending"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -39,10 +39,10 @@ export const psychiatryOffendingCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Most offending grows from ordinary disadvantages — supervision, discipline, conflict, poverty and peers; some grows from disorder — schizophrenia's modest violence excess, the substance-misuse multiplier, the frontal neurobiology; and the clinical task is a formulation of perpetrator, victim and context, never a checklist.",
+    "Why the link between mental disorder and offending needs a formulation, not a checklist",
 
   summary:
-    "Three bodies of longitudinal science meet here, and the meeting is the discipline. First, the psychosocial architecture: poor parental supervision as the strongest and most replicable predictor of later offending (Cambridge–Somerville holding the prediction to age 45), harsh and erratic discipline (Nottingham: 40% of offenders smacked or beaten at 11 against 14% of non-offenders), the warmth buffer that protects even within punishment (51% conviction under cold punitive mothers, 21% under warm punitive, 23% under warm non-punitive), the broken-home literature's verdict that CONFLICT is criminogenic and structure is not (McCord's quartet: broken-without-affectionate-mother 62%, united-with-conflict 52%, united-no-conflict 26%, broken-with-affectionate-mother 22%), the criminal-parents concentration (less than 6% of Cambridge families producing half of all convictions; 63% of boys with a convicted parent convicted by 40 — the mediating chain supervision, not teaching), large family size (4+ siblings doubling juvenile conviction risk, 9% rising to 24%), and the socio-economic gradients with the 17–18 affluence paradox. Second, the disorder layer with its honest framing: schizophrenia raises violence risk 2–4× (men) and 6–8× (women) after adjustment — a modest excess translating to about 5% of violent crime attributable to severe mental illness, people with mental illness far more often victims than perpetrators, and the comorbidity multipliers (substance misuse 3–16×, personality disorder 4–18×) dwarfing the disorder effect; within the excess, threat-control-override (TCO) symptoms — perceived threat plus perceived loss of self-control — antecede community violence even after controlling for psychopathy and substance abuse. Third, the substance-misuse multiplier: alcohol a key factor in at least half of interpersonal assaults, the ECA comorbidity ladder (2% / 7% / 20% / 22% one-year violence), acquisitive offending concentrated (NTORS: 10% of clients committing 76% of pre-treatment acquisitive crimes), and the onset sequence (truancy 13.8 → crime 14.5 → drugs 16.2 → hard drugs 19.9 years) proving crime PRECEDES drug use. The neurobiology sits underneath at honest effect size — prefrontal findings marking impulsive/affective not predatory aggression, serotonin relating to impulsivity rather than violence per se, MAOA×maltreatment statistically detectable and individually non-predictive. The practice core: the five-step assessment, the HCR-20 as scaffold and never substitute (actuarial reduction 'at best lazy and at worst negligent'), dual diagnosis as central task, and the court report's three tasks. The India layer runs through it: the 5% figure as the stigma antidote, the drink-before-the-offence screen, the prison-psychiatry service case, and the supervision finding's policy translation.",
+    "This course covers the longitudinal evidence linking child-rearing disadvantage, mental disorder and substance misuse with offending. The clinical task is a formulation of perpetrator, victim and context rather than a checklist.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -66,12 +66,12 @@ export const psychiatryOffendingCourse: PsychiatryCourse = {
   ],
   knowledgeGraph: [
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The disorder behind the modest excess — 2–4× (men) / 6–8× (women) after adjustment; the TCO symptoms and comorbid multipliers riding its positive symptoms" },
-    { label: "Homicide, Mass Murder & Infanticide — The Rare Truth", type: "condition", href: "/psychiatry/homicide-infanticide/", note: "The rarest outcome of the same architecture — the schizophrenia rates of 5–15% and the family-victim pattern" },
-    { label: "Juvenile Offending — The Risk-Overlap Principle", type: "condition", href: "/psychiatry/juvenile-offending/", note: "The same predictors at the younger edge — supervision, warmth, conflict, family size; the onset sequence beginning" },
-    { label: "Mental Health Law — Capacity, Liability, Duty", type: "condition", href: "/psychiatry/mental-health-law/", note: "Where the formulation goes to court — specific vs basic intent, diminished responsibility, the court report's three tasks" },
-    { label: "Alcohol Use Disorders — The Disease of More", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The multiplier's home course — half of interpersonal assaults; the relapse-prevention tier that reduces offending" },
-    { label: "Opioid Use Disorders — The Medicine That Holds the Door", type: "condition", href: "/psychiatry/opioid-use-disorders/", note: "The treatability engine — buprenorphine/methadone maintenance behind the NTORS conviction reductions" },
-    { label: "Cannabis & Mental Health — The Two-Sided Truth", type: "condition", href: "/psychiatry/cannabis-mental-health/", note: "Case 1's comorbidity — the joint smoked 'for the voices'; the dual-diagnosis work that treats both channels" },
+    { label: "Homicide, Mass Murder & Infanticide", type: "condition", href: "/psychiatry/homicide-infanticide/", note: "The rarest outcome of the same architecture — the schizophrenia rates of 5–15% and the family-victim pattern" },
+    { label: "Juvenile Offending", type: "condition", href: "/psychiatry/juvenile-offending/", note: "The same predictors at the younger edge — supervision, warmth, conflict, family size; the onset sequence beginning" },
+    { label: "Mental Health Law", type: "condition", href: "/psychiatry/mental-health-law/", note: "Where the formulation goes to court — specific vs basic intent, diminished responsibility, the court report's three tasks" },
+    { label: "Alcohol Use Disorders", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The multiplier's home course — half of interpersonal assaults; the relapse-prevention tier that reduces offending" },
+    { label: "Opioid Use Disorders", type: "condition", href: "/psychiatry/opioid-use-disorders/", note: "The treatability engine — buprenorphine/methadone maintenance behind the NTORS conviction reductions" },
+    { label: "Cannabis & Mental Health", type: "condition", href: "/psychiatry/cannabis-mental-health/", note: "Case 1's comorbidity — the joint smoked 'for the voices'; the dual-diagnosis work that treats both channels" },
     { label: "Prefrontal cortex", type: "brain-region", href: "#brain", note: "The executive brake — impulsive/affective aggression's address; predatory killers' blood flow resembling controls" },
     { label: "Amygdala", type: "brain-region", href: "#brain", note: "The threat reader — the MAOA×maltreatment interaction and the orbitofrontal-amygdala connectivity of the schizophrenia-violence findings" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "Impulsivity rather than violence per se — the honest narrow reading of the most over-read finding in the field" },

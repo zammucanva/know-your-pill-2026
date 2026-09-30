@@ -20,7 +20,7 @@ import type { PsychiatryCourse } from "./types";
 export const huntingtonsNeuropsychiatryCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "huntingtons-neuropsychiatry",
-  title: "Huntington's Disease Psychiatry — The Family Disease",
+  title: "Huntington's Disease Psychiatry",
   shortName: "Huntington's",
   kind: "disorder",
   category: "Neurocognitive Disorder",
@@ -36,9 +36,9 @@ export const huntingtonsNeuropsychiatryCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Huntington's disease is a single-gene, autosomal dominant brain illness in which movement disorder, psychiatric disturbance and a subcortical dementia travel together over 15–20 years — the psychiatric symptoms often arriving a decade before the chorea, and the family's medical future decided by a blood test that nobody should take without counselling first.",
+    "The family disease — chorea, mood change and dementia on one autosomal dominant gene",
   summary:
-    "One spelling error — a repeated stretch of DNA (CAG repeats) in the huntingtin gene on chromosome 4 — is enough to slowly destroy the striatum (the deep brain's selector of movement and habit) and, with it, the person's motor control, mood regulation, impulse control and thinking. Because the gene is dominant, each child of an affected parent has a 50-50 chance of carrying it; and because the repeat tends to lengthen when passed from father to child, children can fall ill earlier than the parent (anticipation). Onset is typically 35–45 years — the years of jobs, marriages and school-going children — with chorea (the dance-like involuntary movements), irritability and depression, apathy, and a slow subcortical dementia: thinking slows, plans dissolve, but memory storage holds relatively long. Death usually comes 15–20 years from onset, with suicide and aspiration pneumonia the landmark enders. Psychiatry's role is enormous and specific: the behavioural and mood symptoms bring patients to us first (a decade before the dance); our prescribing must respect the movement disorder (SSRI-first, motor-neutral; tetrabenazine's depression trap; antipsychotics as a trade, not a treatment); and our counselling protects the family from two traps — testing children, and testing adults casually. Nothing cures the underlying disease today; nearly everything about comfort, function and family integrity can still be treated. The clinical spine of this course: the triad ('Moves, Moods, Mind'), the psychiatric prodrome that outpaces chorea, the subcortical profile the memory screens miss, the bedside motor fingerprints (the tongue, the saccades, the piano-playing fingers), the suicidality question asked at every visit, and the Indian tier — the marriage-alliance ethics, the family-curse relabelling, and the right not to know guarded against a market that wants to check.",
+    "Huntington's disease is an autosomal dominant neurodegenerative illness in which chorea, psychiatric disturbance and subcortical dementia travel together over 15–20 years. Psychiatry comes first: mood and behaviour changes often arrive a decade before the movement disorder.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -61,10 +61,10 @@ export const huntingtonsNeuropsychiatryCourse: PsychiatryCourse = {
     { label: "The test rule", value: "Counselling before, support during and after", detail: "The choice to know is the patient's alone: never test minors, never test for third parties (employer, prospective spouse's family), never disclose without consent" },
   ],
   knowledgeGraph: [
-    { label: "Frontotemporal Dementia — When Personality Changes First", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The midlife 'personality change' cousin and the shared early-legal-planning urgency — plus the release logic (behaviour there, movement here)" },
-    { label: "Dementia in Parkinson's Disease — The Twin Decline", type: "condition", href: "/psychiatry/parkinsons-dementia/", note: "The other subcortical-frontal dementia — and the antipsychotic trade taught from the other side" },
-    { label: "Alzheimer's Disease & Dementia — The Gradual Erasure", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The cortical amnestic contrast: storage fails there, retrieval cues work here" },
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "The sudden-worsening work-up on any dementing brain — and the tardive-dyskinesia confounder's home discipline" },
+    { label: "Frontotemporal Dementia", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The midlife 'personality change' cousin and the shared early-legal-planning urgency — plus the release logic (behaviour there, movement here)" },
+    { label: "Dementia in Parkinson's Disease", type: "condition", href: "/psychiatry/parkinsons-dementia/", note: "The other subcortical-frontal dementia — and the antipsychotic trade taught from the other side" },
+    { label: "Alzheimer's Disease & Dementia", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The cortical amnestic contrast: storage fails there, retrieval cues work here" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "The sudden-worsening work-up on any dementing brain — and the tardive-dyskinesia confounder's home discipline" },
     { label: "Obsessive-Compulsive Disorder (OCD)", type: "condition", href: "/psychiatry/ocd/", note: "The obsessive-like subgroup of the prodrome — and the SSRI tier shared by both" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The prodrome's commonest treatable member, with the suicidality screen attached" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "The mood-instability differential of the midlife presentation" },

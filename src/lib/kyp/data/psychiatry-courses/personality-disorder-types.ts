@@ -22,13 +22,13 @@ import type { PsychiatryCourse } from "./types";
 export const personalityDisorderTypesCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "personality-disorder-types",
-  title: "Specific Personality Disorder Types — Ten Styles of Being",
+  title: "Specific Personality Disorder Types",
   shortName: "PD Types",
   kind: "disorder",
   category: "Personality Disorder",
   groupLetter: "J",
   groupName: "Personality disorders",
-  learningPath: ["Psychiatry", "Personality Disorders", "Specific Types"],
+  learningPath: ["Psychiatry", "Personality Disorders", "Specific Personality Disorder Types"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-28",
@@ -38,9 +38,9 @@ export const personalityDisorderTypesCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Ten recognisable styles of being — the suspicious, the solitary, the odd; the dramatic, the unstable, the grandiose; the fearful, the clinging, the perfectionist — each a lifelong pattern with its own texture, complications and treatment gesture.",
+    "Ten styles of being, cluster by cluster, each with its own texture and treatment gesture",
   summary:
-    "This course walks the specific personality disorder types cluster by cluster, the way the Oxford chapter does, because the clusters share atmosphere as well as label: Cluster A feels odd (paranoid suspicion, schizoid detachment, schizotypal eccentricity), Cluster B feels overwhelming (antisocial disregard, borderline chaos, histrionic theatre, narcissistic grandiosity), Cluster C feels anxious (avoidant fear, dependent clinging, anankastic control). For each type you get the clinical picture, the differential that matters, the course over time, and the treatment gesture — plus the neurobiological research that increasingly roots these styles in genes and brain systems: dopamine and novelty-seeking, serotonin and anxiety, oxytocin and affiliation, MAO-A and aggression, all with honest effect sizes (the D4DR story explains ~10% of novelty-seeking's genetic variance with mixed replications; the 5-HTT short variant contributes 3–4% — personality is polygenic, which is why no genetic 'personality test' exists). The course's most practically useful gifts are its discrimination pairs, which decide real prescriptions and real referrals: borderline vs bipolar II (the Indian OPD's highest-value discrimination), avoidant vs schizoid (wants closeness vs indifferent), narcissistic vs borderline (grandiosity), obsessive personality vs OCD (ego-syntonic vs ego-dystonic), antisocial vs borderline antisociality (calculated exploitation vs chaotic affect). The safety number lives here too: 8–10% of borderline patients die by suicide — every gesture taken seriously — and the diagnosis becomes rare after 40 as maturation trades chaos for stability.",
+    "Specific personality disorder types are enduring, inflexible patterns grouped into clusters A, B and C. Each type carries its own differential, course and management gesture, and borderline presentations demand active suicide-risk assessment.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -64,10 +64,10 @@ export const personalityDisorderTypesCourse: PsychiatryCourse = {
     { label: "The age rules", value: "Who improves, who breaks", detail: "Antisocial, borderline, histrionic, avoidant improve with age; narcissistic and anankastic decompensate in middle/late life (depression, hypochondriasis) as supplies dry up and control is lost" },
   ],
   knowledgeGraph: [
-    { label: "Personality Disorders — The Concept", type: "condition", href: "/psychiatry/personality-disorders-overview/", note: "The definition, clusters and epidemiology this types course assumes" },
+    { label: "Personality Disorders", type: "condition", href: "/psychiatry/personality-disorders-overview/", note: "The definition, clusters and epidemiology this types course assumes" },
     { label: "Treating Personality Disorders", type: "condition", href: "/psychiatry/personality-disorder-treatment/", note: "The per-type gestures become full programmes here — DBT, MBT, the honest drug audit" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "The great mimic — sustained episodes with true elation vs the borderline's minutes-to-hours reactive dysphoria" },
-    { label: "Obsessive-Compulsive Disorder", type: "condition", href: "/psychiatry/ocd/", note: "The ego-dystonic illness next door to the ego-syntonic anankastic personality" },
+    { label: "Obsessive-Compulsive Disorder (OCD)", type: "condition", href: "/psychiatry/ocd/", note: "The ego-dystonic illness next door to the ego-syntonic anankastic personality" },
     { label: "Social Anxiety Disorder & Specific Phobias", type: "condition", href: "/psychiatry/social-anxiety-phobias/", note: "The avoidant continuum — arguably the same condition, impairment greater and onset earlier in the personality form" },
     { label: "Schizoaffective & Schizotypal Disorders", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "The Cluster A border with the psychosis spectrum — ideas of reference that never reach delusional conviction" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "Low CSF 5-HIAA with impulsive aggression — the serotonergic brake the Cluster B engine lacks" },

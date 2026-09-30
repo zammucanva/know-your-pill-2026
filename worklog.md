@@ -942,3 +942,230 @@ Work Log:
 Stage Summary:
 - 109/109 source Psychiatry lessons migrated and registered as PsychiatryCourses. 0 missing, 0 duplicates.
 - Ready for release chain (branch/commit/push/PR/CI/merge/deploy/live-verify), then the final CURRICULUM NORMALIZATION PHASE.
+
+---
+Task ID: norm-1
+Agent: subagent (curriculum normalization)
+Task: Normalize title/tagline/summary/learningPath for 12 legacy Psychiatry courses
+
+Work Log:
+- bulimia-nervosa.ts: "Bulimia Nervosa — The Secret Cycle" -> "Bulimia Nervosa" (learningPath[2] already matched; tagline 62 ch, summary 38 words)
+- cannabis-mental-health.ts: "Cannabis & Mental Health — The Two-Sided Truth" -> "Cannabis & Mental Health" (tagline 83 ch, summary 36 words)
+- child-adversity-contexts.ts: "Child Adversity Contexts — Bereavement, Adoption, Parental Illness" -> "Child Adversity Contexts" (tagline 84 ch, summary 34 words)
+- child-anxiety.ts: "Child Anxiety — The School-Refusal Engines" -> "Child Anxiety" (tagline 82 ch, summary 32 words)
+- child-assessment-epidemiology.ts: "Child Assessment & Epidemiology — The Prevalence Movers" -> "Child Assessment & Epidemiology" (tagline 82 ch, summary 38 words)
+- child-neuropsychiatry.ts: "Child Neuropsychiatry — Behavioural Phenotypes" -> "Child Neuropsychiatry" (tagline 71 ch, summary 35 words)
+- child-sleep.ts: "Child Sleep — The Hyperactivity Masquerade" -> "Child Sleep" (tagline 83 ch, summary 39 words)
+- child-trauma-abuse.ts: "Child Trauma & Abuse — The Disclosure Discipline" -> "Child Trauma & Abuse" (tagline 82 ch, summary 43 words)
+- conduct-disorder.ts: "Conduct Disorders — The Empathy Specifier" -> "Conduct Disorders" (tagline 69 ch, summary 37 words)
+- couples-therapy.ts: "Couples Therapy — The Decentred Dialogue" -> "Couples Therapy" (tagline 83 ch, summary 38 words)
+- delirium.ts: "Delirium — Acute Brain Failure" -> "Delirium" (learningPath[2] already matched; tagline 76 ch, summary 41 words)
+- delusional-disorder.ts: "Persistent Delusional Disorder" -> unchanged (already topic-only; tagline compressed to 84 ch, summary 42 words)
+
+Stage Summary:
+- 12 files edited in src/lib/kyp/data/psychiatry-courses/ — ONLY the four target fields touched (git diff: 3-4 changed lines per file: title, tagline, summary, learningPath third element); all other fields byte-identical.
+- Every removed em-dash clause carried into the new tagline; every summary rewritten from the course's own content as a tight 1-2 sentence, <=45-word version (no invented claims or statistics).
+- npx tsc --noEmit: exit 0.
+- Self-audit script (outside repo, deleted after use): 12/12 PASS — titles <=60 chars with no spaced em-dash, taglines <=90 chars no trailing period, summaries <=45 words with every sentence <=30 words, learningPath[2] === title for all 12.
+- git diff scoped to my 12 files: only those files carry my changes (other modified course files in the working tree belong to parallel normalization agents, not touched by me).
+
+---
+Task ID: norm-3
+Agent: subagent (curriculum normalization)
+Task: Normalize title/tagline/summary/learningPath for 12 legacy Psychiatry courses
+
+Work Log:
+- family-therapy.ts: "Family Therapy — Circular Causality" -> "Family Therapy" (tagline 81 ch, summary 35 words)
+- frontotemporal-dementia.ts: "Frontotemporal Dementia — When Personality Changes First" -> "Frontotemporal Dementia" (learningPath[2] already matched; tagline 89 ch, summary 35 words)
+- gad.ts: "Generalized Anxiety Disorder (GAD)" -> unchanged (already topic-only, no em-dash; learningPath[2] "GAD" expanded to full title; tagline 87 ch, summary 34 words)
+- gambling-disorder.ts: "Gambling Disorder — The Addiction Without a Drug" -> "Gambling Disorder" (learningPath[2] already matched; tagline 86 ch, summary 37 words)
+- gender-identity-adults.ts: "Gender Identity in Adults — Incongruence, Dysphoria & Affirmative Care" -> "Gender Identity in Adults" (population qualifier kept; learningPath[2] already matched; tagline 76 ch, summary 42 words)
+- group-therapy.ts: "Group Therapy — Yalom's Curative Factors" -> "Group Therapy" (tagline 86 ch, summary 38 words)
+- hallucinogen-use-disorders.ts: "Hallucinogen Use Disorders — The Great Exception" -> "Hallucinogen Use Disorders" (tagline 80 ch, summary 37 words)
+- hiv-neuropsychiatry.ts: "HIV-Associated Neurocognitive Disorder — The Treatable Edge" -> "HIV-Associated Neurocognitive Disorder" (clinical scope kept, not shortened to "HIV"; learningPath[2] already matched; tagline 89 ch, summary 38 words)
+- homicide-infanticide.ts: "Homicide, Mass Murder & Infanticide — The Rare Truth" -> "Homicide, Mass Murder & Infanticide" (tagline 75 ch, summary 44 words)
+- huntingtons-neuropsychiatry.ts: "Huntington's Disease Psychiatry — The Family Disease" -> "Huntington's Disease Psychiatry" (distinguishing "Psychiatry" kept per spec; learningPath[2] already matched; tagline 84 ch, summary 36 words)
+- hypersomnia.ts: "Excessive Sleepiness & Hypersomnias — The Four Engines" -> "Excessive Sleepiness & Hypersomnias" (learningPath[2] was "Excessive Sleepiness", updated to full new title; tagline 79 ch, summary 29 words)
+- id-dual-diagnosis.ts: "Dual Diagnosis in ID — Beyond Diagnostic Overshadowing" -> "Dual Diagnosis in ID" (tagline 79 ch, summary 38 words)
+
+Stage Summary:
+- 12 files edited in src/lib/kyp/data/psychiatry-courses/ — ONLY the four target fields touched (git diff -U0 classification: 22 title lines, 14 learningPath lines, 48 tagline/summary value lines; zero other-field lines); everything else byte-identical, knowledgeGraph labels untouched.
+- Every removed em-dash clause carried into the new tagline; every summary rewritten from the course's own content as a tight 1-2 sentence, <=45-word version (no invented claims or statistics).
+- npx tsc --noEmit: exit 0.
+- Self-audit script (outside repo, deleted after use): 12/12 PASS — titles <=60 chars with no spaced em-dash, taglines <=90 chars no trailing period, summaries <=45 words with every sentence <=30 words, learningPath[2] === title for all 12; learningPath elements 1-2 verified unchanged against HEAD.
+- git diff scoped to my 12 files: only those files carry my changes (other modified course files and worklog entries in the working tree belong to parallel normalization agents, not touched by me).
+
+---
+Task ID: norm-2
+Agent: subagent (curriculum normalization)
+Task: Normalize title/tagline/summary/learningPath for 11 legacy Psychiatry courses
+
+Work Log:
+- dementia-management.ts: "Managing Dementia — The Five Floors" -> "Managing Dementia" (learningPath[2] already matched; tagline 87 ch, summary 29 words)
+- depersonalization-disorder.ts: "Depersonalization / Derealization Disorder" -> unchanged (already topic-only, no em-dash; learningPath[2] "Depersonalization / Derealization" expanded to full title; tagline 72 ch, summary 29 words)
+- depressive-disorders.ts: "Depressive Disorders" -> unchanged (already topic-only; learningPath[2] already matched; tagline 84 ch, summary 30 words)
+- developmental-disorders.ts: "Developmental Disorders — The Learning Channels" -> "Developmental Disorders" (tagline 85 ch, summary 27 words)
+- dynamic-psychotherapy.ts: "Dynamic Psychotherapy — The Procedural Unconscious" -> "Dynamic Psychotherapy" (tagline 87 ch, summary 31 words)
+- elderly-anxiety-ocd.ts: "Anxiety & OCD in the Elderly — The Wrong Tablet" -> "Anxiety & OCD in the Elderly" (population scope "in the Elderly" kept; tagline 88 ch, summary 40 words)
+- elderly-delirium.ts: "Delirium in the Elderly — The Quiet Emergency" -> "Delirium in the Elderly" (population scope kept — separate general Delirium course exists; tagline 87 ch, summary 36 words)
+- elderly-mood.ts: "Mood Disorders in the Elderly — The Pseudodementia Trap" -> "Mood Disorders in the Elderly" (tagline 82 ch, summary 35 words)
+- elderly-personality.ts: "Personality Disorders in the Elderly — The Disguises" -> "Personality Disorders in the Elderly" (tagline 88 ch, summary 33 words)
+- elderly-substance-use.ts: "Substance Use in the Elderly — The Silent Epidemic" -> "Substance Use in the Elderly" (tagline 88 ch, summary 30 words)
+- elderly-suicide.ts: "Suicide in the Elderly — The Physician's Opportunity" -> "Suicide in the Elderly" (tagline 84 ch, summary 36 words)
+
+Stage Summary:
+- 11 files edited in src/lib/kyp/data/psychiatry-courses/ — ONLY the four target fields touched (title, learningPath third element, tagline, summary); knowledgeGraph labels and every other field byte-identical, no reformatting or reordering.
+- Every removed em-dash clause carried into the new tagline; every summary rewritten from the course's own content as a tight 1-2 sentence, <=45-word version (no invented claims or statistics).
+- npx tsc --noEmit: exit 0.
+- Self-audit script (outside repo, deleted after use): 11/11 PASS — titles <=60 chars with no spaced em-dash, taglines <=90 chars no trailing period, summaries <=45 words with every sentence <=30 words, learningPath[2] === title for all 11.
+- git diff scoped to my 11 files: only those files carry my changes (other modified course files and worklog entries in the working tree belong to parallel normalization agents, not touched by me).
+---
+Task ID: norm-0
+Agent: subagent (curriculum normalization)
+Task: Normalize title/tagline/summary/learningPath for 13 legacy Psychiatry courses
+
+Work Log:
+- acute-stress-reaction.ts: "Acute Stress Reactions" -> unchanged (already topic-only, no em-dash; learningPath[2] already matched; tagline 87 ch, summary 44 words)
+- acute-transient-psychosis.ts: "Acute & Transient Psychotic Disorders" -> unchanged (already topic-only; learningPath[2] "Acute & Transient Psychosis" expanded to full title; tagline 80 ch, summary 43 words)
+- adhd.ts: "ADHD — The Brakes and the Engine" -> "ADHD" (tagline 84 ch, summary 42 words)
+- adjustment-disorder.ts: "Adjustment Disorders" -> unchanged (already topic-only; learningPath[2] already matched; tagline 79 ch, summary 41 words)
+- alcohol-related-dementia.ts: "Alcohol-Related Dementia — The Engine You Can Switch Off" -> "Alcohol-Related Dementia" (learningPath[2] already matched; tagline 81 ch, summary 39 words)
+- alcohol-use-disorders.ts: "Alcohol Use Disorders — The Disease of More" -> "Alcohol Use Disorders" (tagline 85 ch, summary 38 words)
+- alzheimers-dementia.ts: "Alzheimer's Disease & Dementia — The Gradual Erasure" -> "Alzheimer's Disease & Dementia" (learningPath[2] already matched; tagline 77 ch, summary 36 words)
+- amnesic-syndromes.ts: "Amnesic Syndromes — The Punched-Out Memory Hole" -> "Amnesic Syndromes" (learningPath[2] already matched; tagline 88 ch, summary 38 words)
+- anorexia-nervosa.ts: "Anorexia Nervosa — When Discipline Becomes Starvation" -> "Anorexia Nervosa" (learningPath[2] already matched; tagline 81 ch, summary 40 words)
+- autism.ts: "Autism Spectrum Disorder — The Prediction Engine" -> "Autism Spectrum Disorder" (tagline 86 ch, summary 35 words)
+- benzodiazepine-misuse.ts: "Benzodiazepine Misuse — The Borrowed Calm" -> "Benzodiazepine Misuse" (tagline 85 ch, summary 35 words)
+- bereavement.ts: "Bereavement & Complicated Grief" -> unchanged (already topic-only; learningPath[2] already matched; tagline 84 ch, summary 38 words)
+- bipolar-disorders.ts: "Bipolar Disorders" -> unchanged (already topic-only; learningPath[2] already matched; tagline 89 ch, summary 39 words)
+
+Stage Summary:
+- 13 files edited in src/lib/kyp/data/psychiatry-courses/ — ONLY the four target fields touched (title, learningPath third element, tagline, summary); knowledgeGraph labels and every other field byte-identical, no reformatting or reordering.
+- Every removed em-dash clause carried into the new tagline; every summary rewritten from the course's own content as a tight 1-2 sentence, <=45-word version (no invented claims or statistics).
+- npx tsc --noEmit: exit 0.
+- Self-audit script (outside repo, deleted after use): 13/13 PASS — titles <=60 chars with no spaced em-dash, taglines <=90 chars no trailing period, summaries <=45 words with every sentence <=30 words, learningPath[2] === title for all 13; byte-level diff vs HEAD confirms only the four field lines changed per file.
+- git diff scoped to my 13 files: only those files carry my changes (other modified course files and worklog entries in the working tree belong to parallel normalization agents, not touched by me).
+
+---
+Task ID: norm-6
+Agent: subagent (curriculum normalization)
+Task: Normalize title/tagline/summary/learningPath for 11 legacy Psychiatry courses
+
+Work Log:
+- personality-disorder-types: "Specific Personality Disorder Types — Ten Styles of Being" -> "Specific Personality Disorder Types" (lp[2] "Specific Types" -> "Specific Personality Disorder Types")
+- personality-disorders-overview: "Personality Disorders — The Concept, the Clusters, the Numbers" -> "Personality Disorders" (lp[2] "Overview & Classification" -> "Personality Disorders")
+- prion-disease: "Prion Diseases (CJD) — The Fastest Dementia" -> "Prion Diseases (CJD)" (lp[2] "Prion Diseases" -> "Prion Diseases (CJD)")
+- psychiatric-rehabilitation: "Psychiatric Rehabilitation — The Well Part of the Ego" -> "Psychiatric Rehabilitation" (lp[2] -> "Psychiatric Rehabilitation")
+- psychiatry-offending: "Psychiatric Disorder & Offending — The Formulation" -> "Psychiatric Disorder & Offending" (lp[2] -> "Psychiatric Disorder & Offending")
+- ptsd: "Post-Traumatic Stress Disorder (PTSD)" -> unchanged (lp[2] "PTSD" -> "Post-Traumatic Stress Disorder (PTSD)")
+- recovered-memories: "Recovered & False Memories" -> unchanged (lp[2] already equals title)
+- schizoaffective-schizotypal: "Schizoaffective & Schizotypal Disorders" -> unchanged (lp[2] "Schizoaffective & Schizotypal" -> "Schizoaffective & Schizotypal Disorders")
+- schizophrenia: "Schizophrenia" -> unchanged (lp[2] already equals title)
+- sexual-dysfunctions: "Sexual Dysfunctions — The Accelerator and the Brakes" -> "Sexual Dysfunctions" (lp[2] already equals new title)
+- sleep-basics: "Sleep–Wake Physiology — The Factory Night-Shift and Its Two Clocks" -> "Sleep–Wake Physiology" (lp[2] "Physiology & Basics" -> "Sleep–Wake Physiology")
+
+Stage Summary:
+- 11 files edited in src/lib/kyp/data/psychiatry-courses/ — ONLY the four target fields touched (title, tagline, summary, learningPath third element); every other field byte-identical, no reformatting or reordering; removed em-dash clauses carried into the new taglines; summaries rewritten as tight 1-2 sentence, <=45-word versions faithful to each course's own content.
+- npx tsc --noEmit: exit 0.
+- Self-audit script (outside repo, deleted after use): 11/11 PASS — titles <=60 chars with no spaced em-dash, taglines <=90 chars no trailing period, summaries <=45 words with every sentence <=30 words, learningPath[2] === title for all files.
+- git diff scoped to my 11 files (37 insertions / 37 deletions, only the four field lines per file); other modified files in the working tree belong to parallel agents, untouched by me.
+
+---
+Task ID: norm-5
+Agent: subagent (curriculum normalization)
+Task: Normalize title/tagline/summary/learningPath for 13 legacy Psychiatry courses
+
+Work Log:
+- neurotransmitters: "Neurotransmitters & Signalling" -> unchanged (already topic-only; learningPath[2] already matched; tagline 78 ch, summary 30 words)
+- nicotine-dependence: "Nicotine Dependence — The Most Quit-Able Addiction" -> "Nicotine Dependence" (lp[2] -> "Nicotine Dependence"; tagline 77 ch, summary 28 words)
+- ocd: "Obsessive-Compulsive Disorder (OCD)" -> unchanged (already topic-only; lp[2] "OCD" -> "Obsessive-Compulsive Disorder (OCD)"; tagline 87 ch, summary 27 words)
+- opioid-use-disorders: "Opioid Use Disorders — The Medicine That Holds the Door" -> "Opioid Use Disorders" (lp[2] -> "Opioid Use Disorders"; tagline 82 ch, summary 36 words)
+- paediatric-mood: "Mood Disorders in Youth — The Irritability Costume" -> "Mood Disorders in Youth" (population scope "in Youth" kept; lp[2] -> "Mood Disorders in Youth"; tagline 89 ch, summary 30 words)
+- paediatric-ocd-tics: "OCD & Tics in Youth — The Accommodation Grid" -> "OCD & Tics in Youth" (population scope kept; lp[2] -> "OCD & Tics in Youth"; tagline 87 ch, summary 40 words)
+- panic-disorder: "Panic Disorder & Agoraphobia" -> unchanged (already topic-only; lp[2] "Panic Disorder" -> "Panic Disorder & Agoraphobia"; tagline 87 ch, summary 38 words)
+- paraphilias: "Paraphilic Disorders — Attraction Templates & Harm Boundaries" -> "Paraphilic Disorders" (lp[2] already matched; tagline 81 ch, summary 29 words)
+- parasomnias: "Parasomnias — Sleepwalking, Sleep Terrors & the Dream-Fighter" -> "Parasomnias" (lp[2] already matched; tagline 89 ch, summary 31 words)
+- parkinsons-dementia: "Dementia in Parkinson's Disease — The Twin Decline" -> "Dementia in Parkinson's Disease" (lp[2] already matched; tagline 89 ch, summary 32 words)
+- party-drug-use-disorders: "Party Drugs — The Dance-Floor Trio" -> "Party Drugs" (lp[2] -> "Party Drugs"; tagline 88 ch, summary 29 words)
+- persistent-mood-disorders: "Dysthymia, Cyclothymia & Hyperthymia" -> unchanged (already topic-only; lp[2] already matched; tagline 88 ch, summary 31 words)
+- personality-disorder-treatment: "Treating Personality Disorders — Psychotherapies, Pharmacology & Service Design" -> "Treating Personality Disorders" (lp[2] "Treatment" -> "Treating Personality Disorders"; tagline 83 ch, summary 33 words)
+
+Stage Summary:
+- 13 files edited in src/lib/kyp/data/psychiatry-courses/ — ONLY the four target fields touched (title, tagline, summary, learningPath third element); knowledgeGraph labels (including cross-references that still carry old em-dash titles — left for the central cascade) and every other field byte-identical, no reformatting or reordering.
+- Removed em-dash clauses carried into the new taglines; summaries rewritten from each course's own content as tight 1-2 sentence, <=45-word versions with no invented claims or numbers.
+- npx tsc --noEmit: exit 0.
+- Self-audit script (outside repo, deleted after use): 13/13 PASS — titles <=60 chars with no spaced em-dash, taglines <=90 chars with no trailing period, summaries <=45 words with every sentence <=30 words, learningPath[2] === title for all 13.
+- git diff scoped to my 13 files: 43 insertions / 43 deletions, only the four field lines per file; other modified files in the working tree belong to parallel normalization agents, untouched by me.
+
+---
+Task ID: norm-4
+Agent: subagent (curriculum normalization)
+Task: Normalize title/tagline/summary/learningPath for 12 legacy Psychiatry courses
+
+Work Log:
+- id-syndromes.ts: "Genetic Syndromes in ID — The Psychiatry Each Carries" -> "Genetic Syndromes in ID" (population/scope qualifier "in ID" kept; tagline 84 ch, summary 37 words)
+- id-treatment-services.ts: "ID Treatment & Services — The Life-Course Architecture" -> "ID Treatment & Services" (tagline 88 ch, summary 40 words)
+- impulse-control-disorders.ts: "Impulse Control Disorders (Kleptomania, Pyromania, IED, Trichotillomania)" -> "Impulse Control Disorders" (parenthetical subtopic list dropped from the 72-char title, members carried into the tagline; learningPath[2] already matched; tagline 87 ch, summary 34 words)
+- indigenous-healing.ts: "Indigenous & Folk Healing — Culturally Embedded Care" -> "Indigenous & Folk Healing" (tagline 85 ch, summary 39 words)
+- insomnia.ts: "Insomnias — Chronic Insomnia Disorder" -> "Insomnia" (left part singularized to match slug/shortName and the existing learningPath[2]; em-dash clause carried into tagline; learningPath[2] already matched, unchanged; tagline 74 ch, summary 43 words)
+- intellectual-disability-overview.ts: "Intellectual Disability — Supports, Not Just Scores" -> "Intellectual Disability" (tagline 89 ch, summary 38 words)
+- juvenile-offending.ts: "Juvenile Offending — The Risk-Overlap Principle" -> "Juvenile Offending" (tagline 89 ch, summary 40 words)
+- late-life-psychosis.ts: "Late-Life Psychosis — The Ridden-Upon Illness" -> "Late-Life Psychosis" (title kept whole per spec; tagline 84 ch, summary 38 words)
+- lewy-body-dementia.ts: "Dementia with Lewy Bodies — The Fluctuating Dementia" -> "Dementia with Lewy Bodies" (learningPath[2] already matched, unchanged; tagline 78 ch, summary 34 words)
+- mci.ts: "Mild Cognitive Impairment — The Crossroads" -> "Mild Cognitive Impairment" (tagline 89 ch, summary 39 words)
+- memory-rehabilitation.ts: "Memory Rehabilitation — The Engineering Discipline" -> "Memory Rehabilitation" (learningPath[2] already matched, unchanged; tagline 87 ch, summary 39 words)
+- mental-health-law.ts: "Mental Health Law — Capacity, Liability, Duty" -> "Mental Health Law" (tagline 83 ch, summary 37 words)
+
+Stage Summary:
+- 12 files edited in src/lib/kyp/data/psychiatry-courses/ — ONLY the four target fields touched (title, learningPath third element, tagline, summary); knowledgeGraph labels and every other field byte-identical, no reformatting or reordering.
+- Every removed em-dash clause carried into the new tagline; every summary rewritten from the course's own content as a tight 1-2 sentence, <=45-word version (no invented claims or statistics).
+- npx tsc --noEmit: exit 0.
+- Self-audit script (outside repo, deleted after use): 12/12 PASS — titles <=60 chars with no spaced em-dash, taglines <=90 chars with no trailing period, summaries <=45 words with every sentence <=30 words, learningPath[2] === title for all 12; learningPath elements 1-2 verified unchanged against HEAD; line-by-line diff vs HEAD confirms only the four field lines changed per file.
+- git diff scoped to my 12 files: only those files carry my changes (other modified course files and worklog entries in the working tree belong to parallel normalization agents, not touched by me).
+
+---
+Task ID: norm-7
+Agent: subagent (curriculum normalization)
+Task: Normalize title/tagline/summary/learningPath for 10 legacy Psychiatry courses
+
+Work Log:
+- social-anxiety-phobias.ts: "Social Anxiety Disorder & Specific Phobias" -> unchanged (already topic-only, 42 ch); learningPath[2] "Social Anxiety & Phobias" -> "Social Anxiety Disorder & Specific Phobias" (tagline 88 ch, summary 38 words)
+- speech-language-disorders.ts: "Speech & Language Disorders — The Critical Age" -> "Speech & Language Disorders" (tagline 87 ch, summary 34 words)
+- stimulant-use-disorders.ts: "Stimulant Use Disorders — Run, Crash, Crave" -> "Stimulant Use Disorders" (tagline 81 ch, summary 41 words)
+- substance-use-overview.ts: "Substance Use — The Reward Hijack" -> "Substance Use" (umbrella scope kept; tagline 87 ch, summary 32 words)
+- suicide-self-harm.ts: "Suicide & Deliberate Self-Harm" -> unchanged (already topic-only); learningPath[2] "Suicide & Self-Harm" -> "Suicide & Deliberate Self-Harm" (tagline 88 ch, summary 39 words)
+- tbi-neuropsychiatry.ts: "Traumatic Brain Injury Neuropsychiatry — The Invisible Triad" -> "Traumatic Brain Injury Neuropsychiatry" (tagline 86 ch, summary 39 words; learningPath[2] already matched, unchanged)
+- therapeutic-communities.ts: "Therapeutic Communities — The Four Henderson Principles" -> "Therapeutic Communities" (tagline 89 ch, summary 38 words)
+- vascular-dementia.ts: "Vascular Dementia — The Staircase Decline" -> "Vascular Dementia" (tagline 84 ch, summary 40 words; learningPath[2] already matched, unchanged)
+- volatile-substance-misuse.ts: "Volatile Substance Misuse — The Stationery-Shop Drug" -> "Volatile Substance Misuse" (tagline 78 ch, summary 40 words)
+- youth-suicide.ts: "Youth Suicide & Self-Harm — The Safety-First Card" -> "Youth Suicide & Self-Harm" (population scope "Youth" kept — child/adolescent course; tagline 88 ch, summary 42 words)
+
+Stage Summary:
+- 10 files edited in src/lib/kyp/data/psychiatry-courses/ — ONLY the four target fields touched (title, tagline, summary, learningPath third element); knowledgeGraph labels and every other field byte-identical, no reformatting or reordering. One mid-run regex bug briefly blanked learningPath elements 1-2 in all 10 files; caught on diff review and fully restored from HEAD values before tsc (final diff shows only the third element changed).
+- Every removed em-dash clause carried into the new tagline; every summary rewritten from the course's own content as a tight 1-2 sentence, <=45-word version (no invented claims or statistics).
+- npx tsc --noEmit: exit 0.
+- Self-audit script (outside repo, deleted after use): 10/10 PASS — titles <=60 chars with no spaced em-dash, taglines <=90 chars with no trailing period, summaries <=45 words with every sentence <=30 words, learningPath[2] === title for all 10; learningPath elements 1-2 verified unchanged against HEAD.
+- git diff scoped to my 10 files: only those files carry my changes (other modified course files and worklog entries in the working tree belong to parallel normalization agents, not touched by me).
+
+---
+Task ID: normalization-phase
+Agent: Main agent (Super Z)
+Task: Final CURRICULUM NORMALIZATION PHASE across all 109 lessons.
+
+Work Log:
+- Normalized learner-facing metadata in the 94 pre-existing courses via 8 parallel surgical agents (only title/tagline/summary/learningPath[2] touched — verified byte-level): 75 titles shortened to topic-only (<=60 chars, scope preserved), all taglines rewritten to <=90-char subtitles, all summaries rewritten to 1-2 sentences <=45 words with <=30-word sentences. The 15 batch-15/16 courses were born normalized.
+- Knowledge-graph label cascade: 383 condition-node labels across 90 files updated to the new target titles (label-prefix rule satisfied).
+- Alzheimer's summary explicitly acknowledges anti-amyloid antibodies (modest slowing in selected early disease, no cure, monitoring, limited availability) per the medical-content requirement.
+- Presentation layer (registry/derived only — source index untouched):
+  * Library + hub + self-test: Q. Foundations & sciences is now the FIRST learner-facing section (SECTION_ORDER Q,A-P,R).
+  * Within sections: tier ordering P1 -> P2 -> P3 (stable, index order inside tier).
+  * Section format now "A. Neurocognitive disorders" (letter + period + name).
+  * Library lesson titles/subtitles now come from the normalized course layer (note frontmatter as immutable fallback).
+  * The trailing per-lesson number is displayed only as "Count (unlabelled in source)" (title attribute + aria-label on the library's checklist count; never reinterpreted).
+- Created KYP-PSYCHIATRY-CURRICULUM-NORMALIZATION.md: normalized metadata model, 18-section cleaned curriculum table (109 rows), full overlap audit (25 clusters reviewed, all KEEP-BOTH with reasons, zero merges executed, zero renames required beyond normalization), 11 [PROPOSED] coverage-gap entries (separate from the 109; no fabricated provenance/MCQs), change log (75 [CHANGED] entries), open questions, final accounting, integrity audit.
+- Added the completion pointer to KYP-PSYCHIATRY-COVERAGE.md.
+- Validation: tsc 0 errors; lint 0 errors (5 pre-existing warnings); 839/839 tests pass; programmatic census: 109 courses, 109 corpus notes, 0 missing, 0 duplicate, all normalization rules pass (title<=60/no em-dash, tagline<=90, summary<=45 words with <=30-word sentences, learningPath[2]==title, no orphan visibility, KG labels valid).
+
+Stage Summary:
+- 109/109 migrated AND normalized. Source corpus byte-untouched. Tiers/types/durations/trailing numbers preserved exactly.
+- Ready for the final release chain: commit -> push -> PR -> CI -> merge -> deploy -> live verify -> final report.

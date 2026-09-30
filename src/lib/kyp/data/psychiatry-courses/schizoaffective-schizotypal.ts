@@ -23,15 +23,15 @@ export const schizoaffectiveSchizotypalCourse: PsychiatryCourse = {
   category: "Psychotic Disorder",
   groupLetter: "C",
   groupName: "Psychotic disorders",
-  learningPath: ["Psychiatry", "Psychosis", "Schizoaffective & Schizotypal"],
+  learningPath: ["Psychiatry", "Psychosis", "Schizoaffective & Schizotypal Disorders"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-27",
 
   tagline:
-    "Two borderland conditions: a psychotic illness and a mood illness in the same person at the same time — and a lifelong 'schizophrenia-flavoured temperament' that never fully becomes schizophrenia.",
+    "Two borderlands: psychosis with mood episodes, and a schizophrenia-flavoured temperament",
   summary:
-    "Schizoaffective disorder is the bridge between schizophrenia and mood disorders: genuine psychosis AND genuine mood episodes, overlapping in time — with the two-week psychosis-only window as the diagnostic swing-gate. Schizotypal disorder is the genetic 'echo' of schizophrenia within families: lifelong odd beliefs, magical thinking and social discomfort that stop short of true delusions and hallucinations. This course separates the two, teaches the longitudinal diagnosis craft, and covers the treatments that genuinely differ: the full psychosis-plus-mood package for schizoaffective disorder, and skills-first, medication-sparing support for schizotypal disorder.",
+    "Schizoaffective disorder combines genuine psychosis with genuine mood episodes. Schizotypal disorder is a lifelong personality organisation stopping short of true delusions, and the two need genuinely different treatments.",
   estimatedReadTime: "30 min",
   yieldRating: "high",
   primaryAudience: "medical",

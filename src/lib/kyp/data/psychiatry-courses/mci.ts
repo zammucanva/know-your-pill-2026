@@ -22,13 +22,13 @@ import type { PsychiatryCourse } from "./types";
 export const mciCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "mci",
-  title: "Mild Cognitive Impairment — The Crossroads",
+  title: "Mild Cognitive Impairment",
   shortName: "MCI",
   kind: "disorder",
   category: "Psychiatry of Old Age",
   groupLetter: "M",
   groupName: "Psychiatry of old age",
-  learningPath: ["Psychiatry", "Psychiatry of Old Age", "Mild Cognitive Impairment — The Crossroads"],
+  learningPath: ["Psychiatry", "Psychiatry of Old Age", "Mild Cognitive Impairment"],
 
   /* ---- Lifecycle + review ---- */
   status: "PUBLISHED",
@@ -40,10 +40,10 @@ export const mciCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "MCI is the crossroads between normal ageing and dementia: memory or another mental function has slipped clearly beyond what age explains, but daily life still runs independently — and because the memory-led form converts to dementia at roughly 10–15% a year while a substantial minority actually improves, the diagnosis is a work order, not a verdict: hunt the reversible fog (tablets, mood, sleep, thyroid, B12, hearing), treat the vascular rails, prescribe the walk, and re-test on a dated map — the road declares itself over follow-up, never at the first visit.",
+    "The crossroads between normal ageing and dementia — objective decline, function preserved",
 
   summary:
-    "The complaint arrives in family rooms everywhere — 'my words walk away mid-sentence', 'she repeats the same question within the hour', 'the keys were in the fridge' — and the clinical task is to sort it honestly into normal ageing, subjective complaint, MCI, or early dementia. MCI's three gates: a concern about a change in cognition raised by the person or an informant; an objective deficit on testing (1–2 SD below age-education norms, or a clear fall from the personal baseline); and daily function PRESERVED — meals cooked, accounts managed, medicines taken, perhaps slower and with more lists, but independent. Slips plus preserved function is MCI; slips taking over function is dementia; that single clause is the boundary the whole subject turns on. What makes the label matter is its arithmetic: the amnestic form converts to Alzheimer-type dementia at roughly 10–15% a year against a 1–2% yearly rate in the general elderly, while 10–20% of MCI actually REVERTS — because some of what looked like degeneration was depression's retrieval-freeze, sleep apnoea's nightly hippocampal starvation, thyroid or B12 lack, the anticholinergic-benzodiazepine medication fog, or hearing-loss isolation. Hence the consultation's engine, in order: the fog audit first (medications, mood, sleep, thyroid, B12, hearing — the fully-reversible layer), then the characterisation of domain and subtype (amnestic versus non-amnestic, single versus multiple — each shadowing a different dementia pathway), then the risk package (aerobic exercise at ~150 min a week, vascular control to the 130s systolic, hearing aids, engagement, mood and sleep, the Mediterranean-style plate), then the dated follow-up — because a single cognitive score is a photograph and MCI is a film: the diagnosis declares itself on the map of serial re-testing at 6–12 months, not at the first visit. The honest refusals matter as much as the prescriptions: no cholinesterase inhibitor as routine MCI treatment (the trials are negative — the exam classic), no Ginkgo or vitamin stacks on hope, and no 'memory tonics' from the market that exploits the frightened family. The Indian layer is specific: the 'senior moments' dismissal that misses the window, the catastrophising that feeds the quack memory clinics and the unlabelled-powder trade, the co-resident informant who is the diagnosis's anchor, literacy-adjusted testing without which the instruments manufacture or miss impairment, and the joint family's scaffolding — roles retained with support added, never lovingly taken over.",
+    "Mild cognitive impairment means a measurable decline beyond age norms with daily function preserved. The amnestic form carries a raised yearly risk of dementia, so management is hunting reversible causes, controlling vascular risk, and re-testing on a dated schedule.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -66,14 +66,14 @@ export const mciCourse: PsychiatryCourse = {
     { label: "The largest modifiable factor", value: "Hearing loss", detail: "The Lancet-commission framing's headline — hearing correction is cognitive medicine; untreated loss is both a fog layer and a conversion-risk factor" },
   ],
   knowledgeGraph: [
-    { label: "Alzheimer's Disease & Dementia — The Gradual Erasure", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The amnestic pathway's destination — the memory-led subtype's shadow and the conversion watch's named endpoint" },
-    { label: "Vascular Dementia — The Staircase Decline", type: "condition", href: "/psychiatry/vascular-dementia/", note: "The executive/attention face's shadow and the shared treatable rails — the Indian picture's most modifiable engine" },
-    { label: "Dementia with Lewy Bodies — The Fluctuating Dementia", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The visuospatial-and-fluctuation shadow the non-amnestic subtypes watch for — and the orthostatic-BP reason it gets queried" },
-    { label: "Frontotemporal Dementia — When Personality Changes First", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The language-led and behavioural shadows at the non-amnestic edge — a differentiation the trajectory settles" },
-    { label: "Delirium in the Elderly — The Quiet Emergency", type: "condition", href: "/psychiatry/elderly-delirium/", note: "The fluctuating impostor after illness or drug change — treated as its own emergency before any MCI reading" },
-    { label: "Mood Disorders in the Elderly — The Pseudodementia Trap", type: "condition", href: "/psychiatry/elderly-mood/", note: "The fog audit's mood layer — the retrieval-freeze that lifts when the depression is treated, and can coexist with true MCI" },
-    { label: "Managing Dementia — The Five Floors", type: "condition", href: "/psychiatry/dementia-management/", note: "Where the converted patient goes — and the advance-planning floors best seeded at the MCI stage, while capacity stands" },
-    { label: "Benzodiazepine Misuse — The Borrowed Calm", type: "condition", href: "/psychiatry/benzodiazepine-misuse/", note: "The taper logic for the decade-long 'sleep tablet' — the single deprescribing act that often buys back a cognitive year" },
+    { label: "Alzheimer's Disease & Dementia", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The amnestic pathway's destination — the memory-led subtype's shadow and the conversion watch's named endpoint" },
+    { label: "Vascular Dementia", type: "condition", href: "/psychiatry/vascular-dementia/", note: "The executive/attention face's shadow and the shared treatable rails — the Indian picture's most modifiable engine" },
+    { label: "Dementia with Lewy Bodies", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The visuospatial-and-fluctuation shadow the non-amnestic subtypes watch for — and the orthostatic-BP reason it gets queried" },
+    { label: "Frontotemporal Dementia", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The language-led and behavioural shadows at the non-amnestic edge — a differentiation the trajectory settles" },
+    { label: "Delirium in the Elderly", type: "condition", href: "/psychiatry/elderly-delirium/", note: "The fluctuating impostor after illness or drug change — treated as its own emergency before any MCI reading" },
+    { label: "Mood Disorders in the Elderly", type: "condition", href: "/psychiatry/elderly-mood/", note: "The fog audit's mood layer — the retrieval-freeze that lifts when the depression is treated, and can coexist with true MCI" },
+    { label: "Managing Dementia", type: "condition", href: "/psychiatry/dementia-management/", note: "Where the converted patient goes — and the advance-planning floors best seeded at the MCI stage, while capacity stands" },
+    { label: "Benzodiazepine Misuse", type: "condition", href: "/psychiatry/benzodiazepine-misuse/", note: "The taper logic for the decade-long 'sleep tablet' — the single deprescribing act that often buys back a cognitive year" },
     { label: "Acetylcholine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The double story: the anticholinergic fog the audit hunts, and the cholinesterase tier that failed to earn routine use in MCI" },
     { label: "Hippocampus", type: "brain-region", href: "#brain", note: "The filing room — the amnestic pathway's earliest casualty and the structure the nightly apnoea starves" },
   ],

@@ -21,13 +21,13 @@ import type { PsychiatryCourse } from "./types";
 export const adhdCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "adhd",
-  title: "ADHD — The Brakes and the Engine",
+  title: "ADHD",
   shortName: "ADHD",
   kind: "disorder",
   category: "Child & Adolescent Psychiatry",
   groupLetter: "L",
   groupName: "Child & adolescent psychiatry",
-  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "ADHD — The Brakes and the Engine"],
+  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "ADHD"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -37,10 +37,10 @@ export const adhdCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "The engine is full-size and the brakes arrive late — a bright, energetic child who loses notebooks, blurts answers and cannot sit through a period, reaping daily punishment for a brain state rather than a character flaw; and one of psychiatry's most treatable conditions.",
+    "The brakes and the engine — a treatable condition of attention, impulse and activity",
 
   summary:
-    "ADHD is the regulation condition: the brain's braking-and-steering system over attention, impulse and activity level matures late and noisily while the engine of drives runs at full size. The result is a child (or adult) who is bright, often wonderfully energetic, and yet loses the notebooks, blurts the answers, cannot sit through a period and makes the careless mistakes — by age nine most have a settled self-image of being 'bad at studies', punished daily for a brain state rather than a character flaw. The diagnostic gate is clinical and strict: several symptoms before age 12, visible in TWO OR MORE settings, with real functional interference and the mimics excluded — because sleep loss, hearing loss, absence epilepsy, anxiety, depression, trauma and chaotic environments all manufacture an ADHD-identical picture, and the assessment discipline (multi-source history, parent AND teacher, the named rating scales, the sleep-and-hearing-first rule) is what earns the label. Two mechanism stories change how everyone sees the child: the brakes and the engine — the prefrontal braking system running some 2–3 years behind on maturation, which is why punishment after the fact teaches nothing, the system being punished was not the one that failed — and the interest dial, attention as a lock-on mechanism that rotates to novel, immediate, rewarding demands and slides off boring-but-important ones: the same child plays three hours of cricket but cannot copy ten lines, and that is dial mechanics, not laziness. The course runs the whole lifespan: a majority of diagnosed children still meet criteria or carry meaningful symptoms into adulthood, where ADHD appears as deadline chaos, careless errors, impulsive spending, driving scrapes and exhaustion from masking — adult ADHD is diagnosed by retrofitting childhood evidence, and the Std 1 school report card is the single most decisive document. Treatment has two rails: behavioural structure (parent training, the daily report card, school accommodations — first-line alone under age 6) and pharmacotherapy with some of the largest short-term effect sizes in child mental health — methylphenidate working from day one, atomoxetine trading speed for 24-hour cover and zero abuse potential, lisdexamfetamine the newer arrival; and the counter-intuitive headline that treated ADHD carries LOWER, not higher, later substance misuse. The Indian layer is inseparable from good practice: 2–3 children with ADHD per class of 50, almost all managed as discipline problems; the punishment-first presentation filter; the tuition paradox; Schedule X prescription discipline for stimulants; and the coaching-city diversion problem — shared tablets and feigned presentations in Kota and the metros — that makes diagnostic rigour a public-health duty.",
+    "ADHD is a disorder of attention, impulse and activity regulation whose braking system matures late, producing bright children punished daily for a brain state rather than a character flaw. It is among psychiatry's most treatable conditions, with behavioural structure and effective medication.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -64,11 +64,11 @@ export const adhdCourse: PsychiatryCourse = {
     { label: "The Indian signature", value: "2–3 per class of 50, Schedule X", detail: "School-based prevalence 1–8% by instrument and cutoff; the punishment-first presentation filter; Schedule X prescription discipline for stimulants; the coaching-city diversion problem" },
   ],
   knowledgeGraph: [
-    { label: "Autism Spectrum Disorder — The Prediction Engine", type: "condition", href: "/psychiatry/autism/", note: "The social-reciprocity and sensory history that separates the two — and the fact that ADHD comorbids with autism rather than mimicking it" },
-    { label: "Conduct Disorders — The Empathy Specifier", type: "condition", href: "/psychiatry/conduct-disorder/", note: "The ODD/CD rider that changes the plan — deliberate, aimed refusal against fast, unaimed, regretted impulsivity; comorbidity the norm" },
-    { label: "Developmental Disorders — The Learning Channels", type: "condition", href: "/psychiatry/developmental-disorders/", note: "The learning-disorder comorbidity riding in a third of cases — oral bright, written collapsing; remediation is its own treatment" },
-    { label: "Child Anxiety — The School-Refusal Engines", type: "condition", href: "/psychiatry/child-anxiety/", note: "The stolen-attention mimic — worry-content history, somatic complaints, exam-month clustering; attention STOLEN, not unfixed" },
-    { label: "Insomnias — Chronic Insomnia Disorder", type: "condition", href: "/psychiatry/insomnia/", note: "The sleep audit that precedes every diagnosis — the sleep-starved child is the ADHD impersonator; treat sleep, re-look in four weeks" },
+    { label: "Autism Spectrum Disorder", type: "condition", href: "/psychiatry/autism/", note: "The social-reciprocity and sensory history that separates the two — and the fact that ADHD comorbids with autism rather than mimicking it" },
+    { label: "Conduct Disorders", type: "condition", href: "/psychiatry/conduct-disorder/", note: "The ODD/CD rider that changes the plan — deliberate, aimed refusal against fast, unaimed, regretted impulsivity; comorbidity the norm" },
+    { label: "Developmental Disorders", type: "condition", href: "/psychiatry/developmental-disorders/", note: "The learning-disorder comorbidity riding in a third of cases — oral bright, written collapsing; remediation is its own treatment" },
+    { label: "Child Anxiety", type: "condition", href: "/psychiatry/child-anxiety/", note: "The stolen-attention mimic — worry-content history, somatic complaints, exam-month clustering; attention STOLEN, not unfixed" },
+    { label: "Insomnia", type: "condition", href: "/psychiatry/insomnia/", note: "The sleep audit that precedes every diagnosis — the sleep-starved child is the ADHD impersonator; treat sleep, re-look in four weeks" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The 'this is worth it' signal — the interest dial's chemistry and the methylphenidate target (no KYP drug lesson; taught in this course, never invented)" },
     { label: "Noradrenaline", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "Prefrontal signal-to-noise — the NET tier; atomoxetine's target and the co-signalling the stimulants ride" },
     { label: "Prefrontal cortex", type: "brain-region", href: "#brain", note: "The brakes — the region running 2–3 years late on maturation; knowledge intact, the rule not arriving at the moment of impulse" },

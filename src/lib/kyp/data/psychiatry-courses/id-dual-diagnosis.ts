@@ -22,13 +22,13 @@ import type { PsychiatryCourse } from "./types";
 export const idDualDiagnosisCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "id-dual-diagnosis",
-  title: "Dual Diagnosis in ID — Beyond Diagnostic Overshadowing",
+  title: "Dual Diagnosis in ID",
   shortName: "Dual Diagnosis in ID",
   kind: "disorder",
   category: "Intellectual Disability",
   groupLetter: "N",
   groupName: "Intellectual disability",
-  learningPath: ["Psychiatry", "Intellectual Disability", "Dual Diagnosis in ID — Beyond Diagnostic Overshadowing"],
+  learningPath: ["Psychiatry", "Intellectual Disability", "Dual Diagnosis in ID"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -38,10 +38,10 @@ export const idDualDiagnosisCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "People with intellectual disability develop mental illnesses at higher rates than the general population and get them diagnosed at lower rates — because of diagnostic overshadowing, the reflex that explains every new symptom away as 'the disability itself', and because their illnesses speak through behaviour rather than words; the discipline is therefore a three-step law: know the person's baseline, audit the body before the mind when behaviour changes, and read the behaviour as the language it is — with medication in a deliberately small, targeted, reviewed role.",
+    "Beyond diagnostic overshadowing — mental illness in ID speaks through behaviour",
 
   summary:
-    "This is the field where the diagnosis fails before the treatment begins. Point-prevalence of psychiatric disorder in people with intellectual disability runs at 2–3× the general population — roughly 30–40% by broad criteria — with the epilepsy and dementia comorbidity tiers elevated 5–10× above base rates; yet the diagnosis rate falls as the disability deepens, the paradox that the most dependent get the least psychiatry. Two systematic errors explain most of the gap: diagnostic overshadowing — the ID diagnosis's gravity field, which pulls every new symptom into 'that is just his condition' through three faces (symptom attrition, presentation attrition, treatment fatalism) — and the behaviour-as-badness reflex, which reads a communication channel's distress as naughtiness. The craft that corrects them is teachable and examinable: the baseline map ('what is THIS person's normal', the family's testimony as the diagnostic instrument — the informant rule: the clinic's 20 minutes against the family's 20 years); the physical-first audit (pain, dental, ears, gut, urine, skin, bones, drugs — because illness presents as behaviour in anyone whose words cannot carry it; new or worsened behaviour is a medical symptom until the body is cleared); the ABC functional analysis (Antecedent-Behaviour-Consequence decoding what the behaviour EARNs — most challenging behaviour is the person's most effective available communication, doing one of four jobs: attention, escape, tangible, sensory); and the behaviour-desensitisation prescribing discipline (fewer drugs, single-symptom targets, low-dose, one change at a time, dated reviews — and the antipsychotics-not-for-behaviour-alone position the withdrawal studies forced). The consent architecture is the MHA 2017 supported-decision-making frame — assent and dissent behaviours honoured, capacity assessed communication-adjusted, ECT's film-era fear corrected with honest evidence: in the life-threatening melancholic band it is the safest, fastest instrument, and ID is no contraindication. The Indian layer runs through everything: the mother as the lifetime service system (her illness is his crisis; the plan has two patients), the school's 'quiet-child' sedation economy and its counter-craft, and the under-examined body's annual physical week.",
+    "People with intellectual disability develop mental illness at higher rates and receive diagnoses at lower rates, through diagnostic overshadowing and behaviour-as-language presentation. The discipline: know the baseline, audit the body before the mind, and read behaviour as communication.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -66,10 +66,10 @@ export const idDualDiagnosisCourse: PsychiatryCourse = {
     { label: "The India signature", value: "The plan has two patients", detail: "The mother as the lifetime service system — her illness is his crisis; the school's quiet-child sedation economy; the ₹5,000–20,000 dental-GA tier that gets deferred (approx 2026)" },
   ],
   knowledgeGraph: [
-    { label: "Intellectual Disability — Supports, Not Just Scores", type: "condition", href: "/psychiatry/intellectual-disability-overview/", note: "The base condition this course's comorbidity tier rides on — the supports frame, the severity bands, the life-course" },
-    { label: "Genetic Syndromes in ID — The Psychiatry Each Carries", type: "condition", href: "/psychiatry/id-syndromes/", note: "The syndrome-specific psychiatric tiers: the 22q11 psychosis rate near 25%, the Down-Alzheimer clock, the fragile-X anxiety arch, the Prader-Willi meltdown architecture" },
-    { label: "ID Treatment & Services — The Life-Course Architecture", type: "condition", href: "/psychiatry/id-treatment-services/", note: "The surveillance calendars and service tiers the behaviour clinic rides on — the behaviour clinic is also the organ clinic" },
-    { label: "Mental Health Law — Capacity, Liability, Duty", type: "condition", href: "/psychiatry/mental-health-law/", note: "The MHA 2017 capacity frame behind the supported-decision-making consent architecture taught here" },
+    { label: "Intellectual Disability", type: "condition", href: "/psychiatry/intellectual-disability-overview/", note: "The base condition this course's comorbidity tier rides on — the supports frame, the severity bands, the life-course" },
+    { label: "Genetic Syndromes in ID", type: "condition", href: "/psychiatry/id-syndromes/", note: "The syndrome-specific psychiatric tiers: the 22q11 psychosis rate near 25%, the Down-Alzheimer clock, the fragile-X anxiety arch, the Prader-Willi meltdown architecture" },
+    { label: "ID Treatment & Services", type: "condition", href: "/psychiatry/id-treatment-services/", note: "The surveillance calendars and service tiers the behaviour clinic rides on — the behaviour clinic is also the organ clinic" },
+    { label: "Mental Health Law", type: "condition", href: "/psychiatry/mental-health-law/", note: "The MHA 2017 capacity frame behind the supported-decision-making consent architecture taught here" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The general-population form the ID-presentations translate — and the behavioural depression of the severe band" },
     { label: "Post-Traumatic Stress Disorder (PTSD)", type: "condition", href: "/psychiatry/ptsd/", note: "The trauma that looks like psychosis — the abuse screen mandatory in every new behaviour and every new 'psychosis'" },
     { label: "Obsessive-Compulsive Disorder (OCD)", type: "condition", href: "/psychiatry/ocd/", note: "The ritual-versus-stereotypy distinction and the higher-slower SSRI OCD doses with their ID clocks" },

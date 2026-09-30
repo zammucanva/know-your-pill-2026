@@ -20,7 +20,7 @@ import type { PsychiatryCourse } from "./types";
 export const bulimiaNervosaCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "bulimia-nervosa",
-  title: "Bulimia Nervosa — The Secret Cycle",
+  title: "Bulimia Nervosa",
   shortName: "Bulimia",
   kind: "disorder",
   category: "Feeding & Eating Disorder",
@@ -32,9 +32,9 @@ export const bulimiaNervosaCourse: PsychiatryCourse = {
   lastReviewed: "2026-09-28",
 
   tagline:
-    "The hidden engine of secret binges and panicked purges running in a normal-weight person who tells no one: restriction builds the food-debt, the binge breaks the dam, the purge books the next cycle — and the body pays in potassium, teeth and shame.",
+    "The secret binge-purge cycle running in a normal-weight person",
   summary:
-    "Where anorexia is visible to the world, bulimia is designed to be invisible: the person often looks healthy, eats normally in company, and performs the binge-purge cycle alone — in bathrooms, in hostels, at 2 a.m. in the kitchen. The engine is a distinctive four-gear machine: restrictive dieting between episodes ('I will be perfect today') builds a food-debt; hunger and stress breach the rules in a trance-like binge; catastrophic panic follows the binge; and the compensatory purge — vomiting, laxatives, fasting, exercise — relieves the panic for minutes and thereby becomes REINFORCED, guaranteeing the next cycle. The body pays in quiet, dangerous currency: potassium loss from vomiting (the cardiac-risk electrolyte) with metabolic alkalosis, tooth erosion from stomach acid (the dentist detects first, years before any psychiatrist), oesophageal strain, parotid swelling and the metabolic chaos of laxative misuse — which purges water and salts, NOT calories: the rescue is almost entirely an illusion sold to the panic. The shame layer makes bulimia one of psychiatry's most concealed disorders: patients average years before disclosure, unmasked by a dentist's finding, a low-potassium lab or a 3 a.m. confession. The DSM-5 gate: binge plus compensatory behaviour, once weekly for three months (relaxed from DSM-IV's twice-weekly — the favourite 'what changed' question), in a person NOT at anorexia-weight (the weight boundary between them). And it is, importantly, one of the most treatable: structured CBT's 16–20 sessions carry strong cure-and-improvement rates with regular eating as the single highest-yield first prescription (removing the arithmetic that powers the binge), the purge-delay ladder applying exposure logic to purging, and fluoxetine at the specific 60 mg dose as the one well-established medicine. In India bulimia hides three layers deep — the behaviour is secret, the normal weight deflects suspicion, and the family-table performance ('she eats so little, such control') actively covers it — while the wedding-diet cycle seeds the engine in perfectly ordinary young women and the 'herbal' detox-tea aisle supplies an invisible purgative channel patients never volunteer unless asked by name.",
+    "Bulimia nervosa is a binge-purge eating disorder in a person not at anorexia-weight, often concealed for years behind a normal appearance. CBT with regular eating is first-line, and fluoxetine 60 mg is the one medicine with specific evidence.",
   estimatedReadTime: "33 min",
   yieldRating: "high",
   primaryAudience: "medical",

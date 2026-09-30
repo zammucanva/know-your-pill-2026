@@ -22,13 +22,13 @@ import type { PsychiatryCourse } from "./types";
 export const childAdversityContextsCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "child-adversity-contexts",
-  title: "Child Adversity Contexts — Bereavement, Adoption, Parental Illness",
+  title: "Child Adversity Contexts",
   shortName: "Adversity contexts",
   kind: "disorder",
   category: "Child & Adolescent Psychiatry",
   groupLetter: "L",
   groupName: "Child & adolescent psychiatry",
-  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Child Adversity Contexts — Bereavement, Adoption, Parental Illness"],
+  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Child Adversity Contexts"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -38,10 +38,10 @@ export const childAdversityContextsCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Three adversities that are not disorders but shape everything — the child placed into a new family, the child living beside an ill parent, the child who loses one — with a single clinical grammar running through all three: risk is real, resilience is the norm, and the treatment is mostly communication, parenting and time.",
+    "Bereavement, adoption and parental illness — contexts that raise risk, not disorders",
 
   summary:
-    "This course gathers three contexts that psychiatry keeps meeting without ever naming them disorders: children placed in new families (adoption, fostering, kinship care), children growing up alongside parental illness (depression, schizophrenia, eating disorders, substance misuse, anxiety, cancer, HIV), and children who lose a parent to death. The framing discipline comes first: none of these is a diagnosis, each is a risk multiplier with resilience as the standing counterweight — most children in all three contexts do NOT develop disorder — and the assessment that documents protective factors (a well parent, high IQ, social support, communication, preparation) as deliberately as risk factors is the one that gets the plan right. For placed children, the six dimensions of family placement (age at placement, prior disturbance, attachments made and lost, placement history, type of adoption, cultural match) form the ready-made assessment skeleton, with age beyond 6 months at placement as the risk gradient and Brodzinsky's contrast doing the mechanism work: later-placed children live the loss overtly and sometimes traumatically, while infant-placed children meet it covertly as comprehension grows. The outcome arithmetic is more hopeful than the lecture-hall mood: about 5% of infant-placed adoptees leave before 18 (adoption breakdown) while roughly 80% of adopters and adoptees report broad satisfaction, and adoptees outperform the adverse environments they left — against matched birth-parent homes a slightly elevated emotional and behavioural risk remains, peaking around age 11, with adoptive identity as the lifelong undertone. For children of ill parents, four mechanisms transmit the risk: impaired parenting, family and environmental discord, direct symptom involvement (the child inside a delusion or an obsession), and the bidirectional child-to-parent arrow — infant irritability and poor motor control at 10 days predict later maternal depression; the parental-cancer finding carries the whole teaching in one line: informed children are LESS anxious than uninformed ones, because communication is the mechanism of protection, not a procedural kindness. For bereaved children the developmental logic governs: the full concept of death (irreversibility, universality) matures only by about 7, so the under-7s grieve in bites — somatic complaints, repeated questions, magical reversals — while adolescents carry the guilt-and-anger load with suicidal feelings more likely acted on inside a depressive reaction. The numbers to quote: 1 in 5 parentally bereaved children needs specialist referral; 1.5–4% of children in industrialised countries lose a parent, up to 21% in some developing countries with HIV responsible for up to three-quarters of those deaths. The management machinery is deliberately unglamorous: a brief family intervention around 2 months after parental death reduces children's morbidity at 1 year, with Schut & Stroebe's conclusion that children are a special case — likely to benefit from primary intervention open to all bereaved children, unlike adults where targeting complicated grief works better; and for traumatic deaths, the sequencing rule is absolute — treat PTSD first, because the witnessed terrifying image blocks the recall mourning needs, and bereavement counselling before trauma treatment does not work. The India layer is structural, not decorative: the joint family is the default placement system (kinship care, usually excellent for attachment and identity continuity, usually unassessed), CARA regulates the formal route, the death rituals — viewing, cremation, the 13-day rites, the yearly shraddha — supply precisely the communal mourning participation the Western literature finds protective, and the clinical additions the Indian district needs are the individual child interview, the memory work and the traumatic-death exception.",
+    "Bereavement, adoption and parental illness raise a child's psychiatric risk without being disorders themselves, and most children stay resilient. Management is communication, parenting support and time, with trauma treated before grief after traumatic deaths.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -65,13 +65,13 @@ export const childAdversityContextsCourse: PsychiatryCourse = {
     { label: "The Indian default", value: "Kinship first, CARA second", detail: "The joint family absorbs orphaned children — often well, always unassessed; the 13-day rites and the yearly shraddha supply the communal mourning the Western literature finds protective" },
   ],
   knowledgeGraph: [
-    { label: "Child Trauma & Abuse — The Disclosure Discipline", type: "condition", href: "/psychiatry/child-trauma-abuse/", note: "The traumatic-death and maltreatment overlap — the witnessed-image territory and the disclosure craft this course's sequencing rule borrows" },
+    { label: "Child Trauma & Abuse", type: "condition", href: "/psychiatry/child-trauma-abuse/", note: "The traumatic-death and maltreatment overlap — the witnessed-image territory and the disclosure craft this course's sequencing rule borrows" },
     { label: "Post-Traumatic Stress Disorder (PTSD)", type: "condition", href: "/psychiatry/ptsd/", note: "The first-thing-treated in traumatic bereavement — the imagery-blocking mechanism and the trauma-focused tier this course sequences" },
-    { label: "Child Anxiety — The School-Refusal Engines", type: "condition", href: "/psychiatry/child-anxiety/", note: "The anxiety-transmission partner: behavioural inhibition, parental over-protection and modelling — the two-fold familial specificity" },
+    { label: "Child Anxiety", type: "condition", href: "/psychiatry/child-anxiety/", note: "The anxiety-transmission partner: behavioural inhibition, parental over-protection and modelling — the two-fold familial specificity" },
     { label: "Bereavement & Complicated Grief", type: "condition", href: "/psychiatry/bereavement/", note: "The adult account and the targeting-rule contrast — adults: target complicated grief; children: primary universal intervention" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The parental illness with the best-quantified offspring risk (three-fold) and the comorbid tier a bereaved adolescent may cross into" },
-    { label: "ADHD — The Brakes and the Engine", type: "condition", href: "/psychiatry/adhd/", note: "The placed-child differential — the institutionalisation overlap and the attention/impulsivity finding in substance-misusing parents' children" },
-    { label: "Child Assessment & Epidemiology — The Prevalence Movers", type: "condition", href: "/psychiatry/child-assessment-epidemiology/", note: "The individual child interview discipline this course leans on — parents under-report, so the child is seen alone" },
+    { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The placed-child differential — the institutionalisation overlap and the attention/impulsivity finding in substance-misusing parents' children" },
+    { label: "Child Assessment & Epidemiology", type: "condition", href: "/psychiatry/child-assessment-epidemiology/", note: "The individual child interview discipline this course leans on — parents under-report, so the child is seen alone" },
     { label: "Amygdala", type: "brain-region", href: "#brain", note: "The alarm circuitry behind behavioural inhibition's increased startle — the temperament that travels in the anxiety transmission" },
     { label: "Prefrontal cortex", type: "brain-region", href: "#brain", note: "The still-maturing regulation machinery the adolescent grief load lands on — the executive ceiling under which all three adversities work" },
     { label: "Oxytocin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The attachment system's chemistry — the machinery a placement severs and re-forms, taught at model level" },

@@ -22,7 +22,7 @@ import type { PsychiatryCourse } from "./types";
 export const hivNeuropsychiatryCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "hiv-neuropsychiatry",
-  title: "HIV-Associated Neurocognitive Disorder — The Treatable Edge",
+  title: "HIV-Associated Neurocognitive Disorder",
   shortName: "HAND",
   kind: "disorder",
   category: "Neurocognitive Disorder",
@@ -38,10 +38,10 @@ export const hivNeuropsychiatryCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "A dementia of young adults where the legs and the motivation slow down before the memory does — one of the few dementias whose engine (the HIV infection itself) can be slowed, halted, or partly reversed by treating the cause: antiretroviral therapy.",
+    "The treatable edge of the dementias: antiretroviral therapy can halt or partly reverse it",
 
   summary:
-    "HIV enters the brain early in infection, hidden inside infected immune cells — the Trojan horse. In some people, mainly those with advanced untreated disease, this produces a characteristic pattern that examiners and clinics alike must recognise on sight: mental slowing, forgetfulness, apathy and clumsiness with leg weakness that worsen over MONTHS, in a YOUNG adult, with naming and vocabulary preserved and consciousness intact — the subcortical speed-and-drive picture against Alzheimer's cortical forgetfulness. Because the patients are often young, and because the early symptoms look like depression or 'not coping', the diagnosis is missed at first — and because HIV is stigmatised, it is rarely volunteered. The three psychiatric jobs: spot it early (any young adult with cognitive decline plus motor slowing gets an HIV test as part of the workup); separate it from depression (the pseudodementia warning signs — variability, complaint-performance mismatch, the 'I don't know' that turns correct with urging) and from the opportunistic mimics (toxoplasmosis, cryptococcus, lymphoma, CNS tuberculosis — fever or focal signs pull the clinician OUT of the dementia script); and walk the pharmacological tightrope, because AIDS patients are exquisitely sensitive to antipsychotic side effects, and the classic herbal interaction (St John's Wort dropping protease-inhibitor levels into the failure range) is the textbook example of why every herbal self-medication must be asked about by name. The numbers that changed everything: HAART halved the incidence (21.1 to 10.5 per 1,000 person-years in the multicentre cohorts) and stretched survival after dementia diagnosis from about 5 months to about 38.5 months — the treatable edge of the dementias. The Indian layer: free NACO ART centres, late diagnosis, stigma interrupting adherence (which feeds the dementia that then destroys adherence — the vicious cycle the psychiatrist is positioned to break), and the methylphenidate-Schedule-X reality.",
+    "HIV-associated neurocognitive disorder is a subcortical dementia of young adults: mental slowing, apathy and motor signs with consciousness preserved. Any young adult with cognitive decline and motor slowing needs an HIV test, because antiretroviral therapy changes the trajectory.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -65,13 +65,13 @@ export const hivNeuropsychiatryCourse: PsychiatryCourse = {
     { label: "The Indian tier", value: "Free ART, late diagnosis, Schedule X", detail: "NACO centres provide free antiretrovirals and counselling; most patients present late through district hospitals; methylphenidate is Schedule X — tightly controlled, scarce outside major centres" },
   ],
   knowledgeGraph: [
-    { label: "Alzheimer's Disease & Dementia — The Gradual Erasure", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The cortical contrast — amnestic-first with naming lost, against the subcortical speed-and-drive of HAND" },
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "The consciousness differential — preserved in HAND, clouded and fluctuating in delirium" },
-    { label: "Vascular Dementia — The Staircase Decline", type: "condition", href: "/psychiatry/vascular-dementia/", note: "The other subcortical-speed dementia — the strategic thalamic infarct as the sudden-onset contrast" },
+    { label: "Alzheimer's Disease & Dementia", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The cortical contrast — amnestic-first with naming lost, against the subcortical speed-and-drive of HAND" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "The consciousness differential — preserved in HAND, clouded and fluctuating in delirium" },
+    { label: "Vascular Dementia", type: "condition", href: "/psychiatry/vascular-dementia/", note: "The other subcortical-speed dementia — the strategic thalamic infarct as the sudden-onset contrast" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The mimic and the co-traveller — the pseudodementia warning signs separate them, and both can coexist in one HIV-positive patient" },
-    { label: "Dementia in Parkinson's Disease — The Twin Decline", type: "condition", href: "/psychiatry/parkinsons-dementia/", note: "The other bradyphrenia-apathy dementia — the drug-tightrope cousin (its D2-blocker catastrophe mirroring HAND's NMS sensitivity)" },
-    { label: "Amnesic Syndromes — The Punched-Out Memory Hole", type: "condition", href: "/psychiatry/amnesic-syndromes/", note: "The thalamic filing circuit both diseases strike — HAND's subtle recall slips against the Korsakoff punched-out hole" },
-    { label: "Parasomnias — Sleepwalking, Sleep Terrors & the Dream-Fighter", type: "condition", href: "/psychiatry/parasomnias/", note: "The sleep-tier differential in the HIV patient — and the sedative restraint both populations demand" },
+    { label: "Dementia in Parkinson's Disease", type: "condition", href: "/psychiatry/parkinsons-dementia/", note: "The other bradyphrenia-apathy dementia — the drug-tightrope cousin (its D2-blocker catastrophe mirroring HAND's NMS sensitivity)" },
+    { label: "Amnesic Syndromes", type: "condition", href: "/psychiatry/amnesic-syndromes/", note: "The thalamic filing circuit both diseases strike — HAND's subtle recall slips against the Korsakoff punched-out hole" },
+    { label: "Parasomnias", type: "condition", href: "/psychiatry/parasomnias/", note: "The sleep-tier differential in the HIV patient — and the sedative restraint both populations demand" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The basal-ganglia chemistry behind the motor slowing — and the EPS-prone system the typical antipsychotics destabilise" },
     { label: "Basal ganglia", type: "brain-region", href: "#brain", note: "The deep motor stations the infection targets early — the legs' clue before the memory's" },
     { label: "Frontal lobes", type: "brain-region", href: "#brain", note: "The manager offices of speed and drive — the apathy and slowing signature's seat" },

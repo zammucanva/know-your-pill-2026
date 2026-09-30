@@ -24,13 +24,13 @@ import type { PsychiatryCourse } from "./types";
 export const benzodiazepineMisuseCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "benzodiazepine-misuse",
-  title: "Benzodiazepine Misuse — The Borrowed Calm",
+  title: "Benzodiazepine Misuse",
   shortName: "Benzo Misuse",
   kind: "disorder",
   category: "Substance Use Disorder",
   groupLetter: "B",
   groupName: "Substance use disorders",
-  learningPath: ["Psychiatry", "Substance Use Disorders", "Benzodiazepine Misuse — The Borrowed Calm"],
+  learningPath: ["Psychiatry", "Substance Use Disorders", "Benzodiazepine Misuse"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -40,10 +40,10 @@ export const benzodiazepineMisuseCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "The 'sleeping and nerve tablets' Indian chemists hand out like change are among the most dependence-forming, withdrawal-dangerous medicines in common use — a withdrawal that can seizure and kill like alcohol's, hiding behind honest prescriptions — and the exit is not willpower but arithmetic: convert to a long-acting equivalent, chart a slow written taper, cover the danger window, rebuild the sleep and anxiety the tablet was borrowed for, and supervise until the brain gets its own brake back.",
+    "The borrowed calm — a withdrawal that can seize and kill, and the taper that exits it",
 
   summary:
-    "This is the addiction where the prescription pad is the pusher, and the course teaches the exit as engineering rather than exhortation. The pharmacology is honest: benzodiazepines and the zolpidem-type Z-drugs press the brain's own brake (GABA-A enhancement), and a brain braked externally for weeks stops pressing its own pedal — receptor down-regulation, tolerance within weeks, and on stopping a rebound that reproduces the original complaint amplified: the patient who started for insomnia cannot sleep at all without the tablet, the one who started for panic feels panic worse than ever. The half-life trap sorts the users before the first prescription: alprazolam, lorazepam and zolpidem leave the body in hours — inter-dose withdrawal, 4 a.m. waking, clock-driven dosing, harder dependence — while diazepam and clonazepam self-taper a little every day, which is precisely the logic of the treatment. Because the withdrawal is dangerous, the cardinal rule differs from most drugs of misuse: NEVER stop abruptly at high dose; taper slowly, in writing, over weeks to months — Convert (to diazepam equivalents, 0.5 mg alprazolam ≈ 10 mg diazepam), Chart (10–25% steps every 1–2 weeks, a 6–12-week schedule, slower at the end), Cover (seizure cover and symptom adjuncts in selected cases), Rebuild (the CBT-I sleep package plus proper treatment of the anxiety, grief or trauma underneath), Supervise (family-held medicines, one pharmacy, the written bad-week plan). Three groups dominate Indian clinics — long-term therapeutic users never reviewed (the deprescribing frame, never the addict label), polysubstance users stacking sedation with alcohol or opioids (the lethal combinations), and recreational counter-coping users (the exam-sleep student, the executive, the nightlife) — and the Z-drugs carry their own stop-signal: sleepwalking, sleep-eating, sleep-driving with amnesia mean stop the medicine immediately, not a taper. The Indian layer is structural: chemist supply without prescription, lakhs of OPD 'insomnia' and 'tension' complaints, sedative misuse around 1% of adults and undercounted, and a prevention prescription written on every pad — 2–4-week ceilings, stop-dates, one pharmacy, never phone repeats, H1-schedule recording, and the elderly stop-list.",
+    "Benzodiazepine misuse grows from tolerance and rebound behind honest prescriptions and chemist counters alike. Because withdrawal seizures can kill, the exit is a slow written diazepam-equivalent taper, with the borrowed sleep and anxiety properly rebuilt.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -67,12 +67,12 @@ export const benzodiazepineMisuseCourse: PsychiatryCourse = {
     { label: "The stop signal", value: "Sleep-driving", detail: "Z-drug complex sleep behaviours — sleepwalking, sleep-eating, sleep-driving with amnesia — mean stop the medicine immediately, not a taper" },
   ],
   knowledgeGraph: [
-    { label: "Substance Use — The Reward Hijack", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The parent frame: the severity-graded single-disorder logic, the lethal-withdrawal triage sentence, the six-step skeleton this taper hangs from" },
-    { label: "Alcohol Use Disorders — The Disease of More", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The twin lethal withdrawal and the commonest co-dependence — the two tapers coordinating, often one benzodiazepine schedule serving both, led by the alcohol programme" },
-    { label: "Opioid Use Disorders — The Medicine That Holds the Door", type: "condition", href: "/psychiatry/opioid-use-disorders/", note: "The overdose-stack partner — respiratory depression when the two are layered; buprenorphine-maintained patients still need the benzo-taper architecture" },
-    { label: "Insomnias — Chronic Insomnia Disorder", type: "condition", href: "/psychiatry/insomnia/", note: "What the tablets were borrowed for — and the CBT-I package that replaces them, first-line" },
-    { label: "Parasomnias — Sleepwalking, Sleep Terrors & the Dream-Fighter", type: "condition", href: "/psychiatry/parasomnias/", note: "The differential for the Z-drug complex sleep behaviours — the amnesia blank-spots the family reports" },
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "Withdrawal delirium's differential home — and the elderly sedative-burden stop-list this course's prevention tier enforces" },
+    { label: "Substance Use", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The parent frame: the severity-graded single-disorder logic, the lethal-withdrawal triage sentence, the six-step skeleton this taper hangs from" },
+    { label: "Alcohol Use Disorders", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The twin lethal withdrawal and the commonest co-dependence — the two tapers coordinating, often one benzodiazepine schedule serving both, led by the alcohol programme" },
+    { label: "Opioid Use Disorders", type: "condition", href: "/psychiatry/opioid-use-disorders/", note: "The overdose-stack partner — respiratory depression when the two are layered; buprenorphine-maintained patients still need the benzo-taper architecture" },
+    { label: "Insomnia", type: "condition", href: "/psychiatry/insomnia/", note: "What the tablets were borrowed for — and the CBT-I package that replaces them, first-line" },
+    { label: "Parasomnias", type: "condition", href: "/psychiatry/parasomnias/", note: "The differential for the Z-drug complex sleep behaviours — the amnesia blank-spots the family reports" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "Withdrawal delirium's differential home — and the elderly sedative-burden stop-list this course's prevention tier enforces" },
     { label: "Bereavement & Complicated Grief", type: "condition", href: "/psychiatry/bereavement/", note: "The archetype start — the grief prescription that becomes the twelve-year tablet" },
     { label: "GABA", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The borrowed brake itself — the receptor system the tablets press, then unlearn" },
     { label: "Amygdala", type: "brain-region", href: "#brain", note: "The alarm circuit the tablet silences — and whose rebound is withdrawal's anxiety" },

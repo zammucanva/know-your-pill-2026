@@ -22,7 +22,7 @@ import type { PsychiatryCourse } from "./types";
 export const dementiaManagementCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "dementia-management",
-  title: "Managing Dementia — The Five Floors",
+  title: "Managing Dementia",
   shortName: "Dementia care",
   kind: "concept",
   category: "Neurocognitive Disorder",
@@ -38,10 +38,10 @@ export const dementiaManagementCourse: PsychiatryCourse = {
   primaryAudience: "resident",
 
   tagline:
-    "Whatever the cause of a dementia, the management always has the same five floors — tell it truly, treat what is treatable, drug the symptoms knowingly, engineer the environment, and support the family who does the caring — and the quality of life five years from diagnosis depends less on which medicine was chosen than on how well those floors were built.",
+    "Five floors of dementia care: tell, treat, drug knowingly, engineer, support the family",
 
   summary:
-    "This is the umbrella course: it puts the practical SYSTEM of dementia care in one place and points to the disease-specific courses (Alzheimer's, vascular, Lewy body, frontotemporal, HIV, Parkinson's, the amnesic and alcohol-related courses) for the details each of them owns. Dementia management is a long, multi-year construction project that begins the day of diagnosis, and most of the suffering families remember was PREVENTABLE: the crisis admissions caused by constipation and urinary infections; the lost money and legal rights because planning came too late; the caregiver's own breakdown because nobody asked about her; the fights over bathing and feeding that a change of technique would have dissolved. The five floors, in their order: Floor 1, tell it truly — the disclosure and planning consultation that converts a chaotic decline into a managed project; Floor 2, treat what is treatable — the reversible-load checklist (PAIN FUSES: pain, activity/constipation, infection, night and sleep, faecal impaction, urine retention, senses, environment, sedating drug burden) run at every review and at every 'worsening'; Floor 3, drug the symptoms knowingly — the modest cognition tier, the antipsychotic decision with its mortality warning carried openly, the stop-list discipline; Floor 4, engineer the environment and read the behaviour — routine as memory, the unmet-need method, the technique corrections that dissolve the bathing and dining wars; Floor 5, support the family — the load-bearing wall under everything, with the caregiver's own health monitored as vigilantly as the patient's. The evidence hierarchy that should embolden every clinician: caregiver intervention trials reduce institutionalisation and carer depression with effect sizes EXCEEDING the drug effects — in India, where virtually all care is home care by one doctor plus one family, the five floors are the treatment with the strongest evidence in the whole field.",
+    "This umbrella course organises dementia management into five floors: disclosure, reversible-load treatment, informed prescribing, environment engineering and family support. Caregiver interventions carry the strongest evidence in the whole field.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -65,15 +65,15 @@ export const dementiaManagementCourse: PsychiatryCourse = {
     { label: "The Indian spine", value: "One doctor + one family + four lines", detail: "The realistic team; the four lines worth writing at every visit (cognition score, function level, top behaviours, carer status + next review) constituting the whole national infrastructure when done consistently; PM-JAY and Jan Aushadhi as the cost tier" },
   ],
   knowledgeGraph: [
-    { label: "Alzheimer's Disease & Dementia — The Gradual Erasure", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The commonest dementia's own course, workup and cognition-tier details — the disease course this umbrella serves" },
-    { label: "Vascular Dementia — The Staircase Decline", type: "condition", href: "/psychiatry/vascular-dementia/", note: "The vascular programme as Floor 2's loudest member — the risk-factor control that IS disease modification there" },
-    { label: "Dementia with Lewy Bodies — The Fluctuating Dementia", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The antipsychotic catastrophe course — the wallet-card rule this umbrella enforces across every subtype" },
-    { label: "Dementia in Parkinson's Disease — The Twin Decline", type: "condition", href: "/psychiatry/parkinsons-dementia/", note: "The best cholinesterase responses and the same forbidden list — the subtype-specific tier pointing into this system" },
-    { label: "Frontotemporal Dementia — When Personality Changes First", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The subtype where cholinesterase inhibitors do NOT belong and the behavioural floors carry everything" },
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "Floor 2's discipline teacher — the reversible-load cascade every 'sudden worsening' runs first" },
-    { label: "Amnesic Syndromes — The Punched-Out Memory Hole", type: "condition", href: "/psychiatry/amnesic-syndromes/", note: "The routine-and-labels home system this umbrella generalises — the family as hippocampus" },
-    { label: "Memory Rehabilitation — The Engineering Discipline", type: "condition", href: "/psychiatry/memory-rehabilitation/", note: "Floor 4's method tier: errorless learning, spaced retrieval, the prosthetic environment built on surviving abilities" },
-    { label: "Alcohol-Related Dementia — The Engine You Can Switch Off", type: "condition", href: "/psychiatry/alcohol-related-dementia/", note: "The abstinence architecture as the disease-specific Floor 3 that outperforms every tablet" },
+    { label: "Alzheimer's Disease & Dementia", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The commonest dementia's own course, workup and cognition-tier details — the disease course this umbrella serves" },
+    { label: "Vascular Dementia", type: "condition", href: "/psychiatry/vascular-dementia/", note: "The vascular programme as Floor 2's loudest member — the risk-factor control that IS disease modification there" },
+    { label: "Dementia with Lewy Bodies", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The antipsychotic catastrophe course — the wallet-card rule this umbrella enforces across every subtype" },
+    { label: "Dementia in Parkinson's Disease", type: "condition", href: "/psychiatry/parkinsons-dementia/", note: "The best cholinesterase responses and the same forbidden list — the subtype-specific tier pointing into this system" },
+    { label: "Frontotemporal Dementia", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The subtype where cholinesterase inhibitors do NOT belong and the behavioural floors carry everything" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "Floor 2's discipline teacher — the reversible-load cascade every 'sudden worsening' runs first" },
+    { label: "Amnesic Syndromes", type: "condition", href: "/psychiatry/amnesic-syndromes/", note: "The routine-and-labels home system this umbrella generalises — the family as hippocampus" },
+    { label: "Memory Rehabilitation", type: "condition", href: "/psychiatry/memory-rehabilitation/", note: "Floor 4's method tier: errorless learning, spaced retrieval, the prosthetic environment built on surviving abilities" },
+    { label: "Alcohol-Related Dementia", type: "condition", href: "/psychiatry/alcohol-related-dementia/", note: "The abstinence architecture as the disease-specific Floor 3 that outperforms every tablet" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The mood floor: depression treated as disease in the patient AND screened in the carer — the one-year screen that protects the wall" },
     { label: "Acetylcholine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The chemistry behind the modest cognition tier — deepest in the synucleinopathies, absent in FTD" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The mood-driven-BPSD tier's target — the SSRI before the antipsychotic in the right behavioural readings" },

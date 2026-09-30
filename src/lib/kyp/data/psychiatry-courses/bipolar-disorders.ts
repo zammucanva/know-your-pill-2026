@@ -29,9 +29,9 @@ export const bipolarDisordersCourse: PsychiatryCourse = {
   lastReviewed: "2026-09-27",
 
   tagline:
-    "A lifelong condition of the mood-regulation system — mania and depression alternating with normal stretches in between, treatable, often very well, but requiring long-term thinking from day one.",
+    "Mania and depression with normal stretches between — treatable, but a long-term condition",
   summary:
-    "Bipolar disorder is episodic, pathological and recurrent: weeks-to-months of illness, not hours of bad temper; dangerous highs and body-stopping lows, not moodiness; and a biology that makes each untreated episode easier to trigger than the last. Bipolar I involves full mania; bipolar II involves hypomanias that families mistake for 'finally being productive' paired with the crushing depressions that bring the patient in — which is why the diagnosis is missed for years and mistreated as ordinary depression. About one person in a hundred has bipolar I and as many again bipolar II; the suicide risk is among the highest in medicine. This course covers the duration gates, the hidden-hypomania screening craft, lithium's unique anti-suicide evidence, the antidepressant-monothepy prohibition, the pregnancy rules (valproate above all), and the Indian realities of arranged-marriage concealment and summer lithium toxicity.",
+    "Bipolar disorders bring weeks-long episodes of mania or hypomania and depression, separated by normal stretches, with each untreated episode easier to trigger than the last. Screening every depression for hidden hypomania is the craft that prevents years of misdiagnosis.",
   estimatedReadTime: "40 min",
   yieldRating: "high",
   primaryAudience: "medical",
@@ -60,7 +60,7 @@ export const bipolarDisordersCourse: PsychiatryCourse = {
   knowledgeGraph: [
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The great mimic — every depressed patient gets a hypomania screen" },
     { label: "Dysthymia, Cyclothymia & Hyperthymia", type: "condition", href: "/psychiatry/persistent-mood-disorders/", note: "Cyclothymia and hyperthymia — the below-threshold spectrum" },
-    { label: "Schizoaffective & Schizotypal", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "Psychosis persisting OUTSIDE mood episodes points there, not here" },
+    { label: "Schizoaffective & Schizotypal Disorders", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "Psychosis persisting OUTSIDE mood episodes points there, not here" },
     { label: "Acute & Transient Psychotic Disorders", type: "condition", href: "/psychiatry/acute-transient-psychosis/", note: "Puerperal psychosis as the bipolar-spectrum emergency" },
     { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "Among the highest risks in medicine — mixed states especially" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "Reward-circuit currency of the high" },

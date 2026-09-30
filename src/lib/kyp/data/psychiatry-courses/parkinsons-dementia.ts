@@ -20,7 +20,7 @@ import type { PsychiatryCourse } from "./types";
 export const parkinsonsDementiaCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "parkinsons-dementia",
-  title: "Dementia in Parkinson's Disease — The Twin Decline",
+  title: "Dementia in Parkinson's Disease",
   shortName: "PDD",
   kind: "disorder",
   category: "Neurocognitive Disorder",
@@ -36,9 +36,9 @@ export const parkinsonsDementiaCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Many people living with Parkinson's disease slowly develop a thinking-and-perception decline on top of the movement disorder — and the same two safety rules that govern Lewy body dementia apply here: protect the brain chemistry with rivastigmine-type drugs, and treat any psychosis without triggering the movement catastrophe that old antipsychotics cause.",
+    "A thinking decline on top of the movement disorder, where antipsychotics risk catastrophe",
   summary:
-    "Parkinson's disease brings tremor, stiffness and slowness first. Over the years — the rule of thumb — dementia arriving MORE than a year after the movement problems earns the label PDD, while dementia arriving before or alongside them is dementia with Lewy bodies; roughly a quarter to a third of Parkinson's patients develop a dementia, and the longer they live with the illness, the higher that proportion climbs (in long-horizon cohorts the majority of long-surviving patients are eventually affected). Its face is the 'subcortical' one: slowing of thought, planning failure, visuospatial trouble and poor attention, while memory storage holds up longer than in Alzheimer's. Alongside it travel hallucinations — frequently CAUSED or worsened by the very medicines that help the walking — and the treacherous problem that almost every psychiatric drug interferes either with the movement disorder or with the psychosis. The good news is genuine: the chemical that most restores thinking and softens hallucinations (acetylcholine) is depleted in PDD even more than in Alzheimer's, and replacing its supply buys real function. The rest of the treatment is timing, drug-list surgery, and family education about what is disease and what is a side effect. The clinical spine of this course: the one-year rule's twin, the see-saw chemistry (dopamine on one side, acetylcholine on the other — every psychiatric drug pushes one), the drug-list-surgery-first discipline (the most reversible intervention in Indian PDD), the levodopa-sparing psychosis ladder, and the Indian medicine-stack problem — the pillbox polypharmacy of three prescribing doctors that one bag-on-the-table habit fixes.",
+    "Dementia developing more than a year after Parkinson's motor symptoms is labelled PDD, distinct from dementia with Lewy bodies. Cholinesterase inhibitors help cognition and hallucinations, while drug-list review comes before new prescriptions.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -61,11 +61,11 @@ export const parkinsonsDementiaCourse: PsychiatryCourse = {
     { label: "The two enders", value: "Falls and dysphagia", detail: "The two events that most often end independent living in PDD — each fall risks the hip fracture that ends walking forever" },
   ],
   knowledgeGraph: [
-    { label: "Dementia with Lewy Bodies — The Fluctuating Dementia", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The twin across the one-year rule — same protein, other door; the safety rules shared verbatim" },
-    { label: "Alzheimer's Disease & Dementia — The Gradual Erasure", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The amnestic-first contrast and the mixed-pathology reality of old brains" },
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "The sudden-worsening impostor on any dementing brain — and the anticholinergic overlap" },
-    { label: "Frontotemporal Dementia — When Personality Changes First", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The other profile memory screens under-sell — the frontal-executive cousin" },
-    { label: "Parasomnias — Sleepwalking, Sleep Terrors & the Dream-Fighter", type: "condition", href: "/psychiatry/parasomnias/", note: "RBD as the shared early marker across the synucleinopathies" },
+    { label: "Dementia with Lewy Bodies", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The twin across the one-year rule — same protein, other door; the safety rules shared verbatim" },
+    { label: "Alzheimer's Disease & Dementia", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The amnestic-first contrast and the mixed-pathology reality of old brains" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "The sudden-worsening impostor on any dementing brain — and the anticholinergic overlap" },
+    { label: "Frontotemporal Dementia", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The other profile memory screens under-sell — the frontal-executive cousin" },
+    { label: "Parasomnias", type: "condition", href: "/psychiatry/parasomnias/", note: "RBD as the shared early marker across the synucleinopathies" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The depression-apathy-comorbidity tier; apathy is flat, depression is painful" },
     { label: "Acetylcholine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The emptied fuel tank — the one lever that pushes back on attention, visuospatial and hallucinations together" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The movement chemistry whose augmentation blooms psychosis — and whose blockade is catastrophe" },
