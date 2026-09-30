@@ -1169,3 +1169,24 @@ Work Log:
 Stage Summary:
 - 109/109 migrated AND normalized. Source corpus byte-untouched. Tiers/types/durations/trailing numbers preserved exactly.
 - Ready for the final release chain: commit -> push -> PR -> CI -> merge -> deploy -> live verify -> final report.
+
+---
+Task ID: final-release
+Agent: Main agent (Super Z)
+Task: Normalization release chain + final verification.
+
+Work Log:
+- Branch codex/psychiatry-curriculum-normalization -> PR #54 -> CI green (quality + build) -> merged at a673648 -> main CI green (quality + build + deploy) -> GitHub Pages deployed.
+- FINAL LIVE VERIFICATION on production:
+  * Full 109-route census: 109/109 HTTP 200 (zero failures).
+  * Library: Q. Foundations & sciences renders as the FIRST section, then A-P, R; section format "Q. Foundations & sciences (12)" (letter + period + name, trailing group count preserved verbatim).
+  * All 109 library titles extracted and verified: ZERO em-dash subtitles; normalized titles render exactly (ADHD, Delirium, Managing Dementia, Paraphilic Disorders, Substance Use, Prion Diseases (CJD), Insomnia confirmed as exact title elements).
+  * Clinical scope preserved live: "Delirium in the Elderly", "Youth Suicide & Self-Harm" confirmed.
+  * Course H1s live: "Alzheimer's Disease & Dementia", "Delirium in the Elderly", "ADHD", "HIV-Associated Neurocognitive Disorder".
+  * Hub: Q-first confirmed live.
+  * Count label "Count (unlabelled in source)" present live.
+  * 839/839 tests, content-lock 32/32, source corpus byte-untouched through the entire run.
+
+Stage Summary:
+- KYP PSYCHIATRY MIGRATION AND CURRICULUM NORMALIZATION COMPLETE.
+- final main SHA a673648; 109/109 source lessons live; 0 missing; 0 duplicated; 0 silently deleted; 11 [PROPOSED] additions documented separately; all source content and provenance preserved; all learner-facing curriculum metadata standardized; overlap audit completed; coverage gaps documented separately as proposed lessons; full validation passed; CI passed; production deployment passed; live verification passed.
