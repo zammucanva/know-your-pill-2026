@@ -22,13 +22,13 @@ import type { PsychiatryCourse } from "./types";
 export const childAssessmentEpidemiologyCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "child-assessment-epidemiology",
-  title: "Child Assessment & Epidemiology — The Prevalence Movers",
+  title: "Child Assessment & Epidemiology",
   shortName: "Child assessment",
   kind: "concept",
   category: "Child & Adolescent Psychiatry",
   groupLetter: "L",
   groupName: "Child & adolescent psychiatry",
-  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Child Assessment & Epidemiology — The Prevalence Movers"],
+  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Child Assessment & Epidemiology"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -38,10 +38,10 @@ export const childAssessmentEpidemiologyCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "One child in ten carries a psychiatric disorder, half of lifetime mental illness has begun by age twelve — and finding it is a systems interview: the child, the parents, the school and the family context each holding a different piece of the same picture.",
+    "The prevalence movers — why estimates differ, and how to find the one child in ten",
 
   summary:
-    "This is the course for the two questions every clinician meets first: how common is this, and how do I find it? The epidemiology half delivers the burden argument — of the 46.4% of adults reporting a lifetime disorder in the National Comorbidity Survey Replication, HALF reported onset by age 12 and three-quarters by age 24, and the forgetting of early episodes makes true childhood onset probably commoner still; child psychiatry is not a small subspecialty at the margin of adult psychiatry, it is where most psychiatric illness begins. The UK national survey (Office for National Statistics; 10,438 children aged 5–15 across England, Scotland and Wales; parent and child interviewed with the DAWBA, a lay interview reviewed by clinicians for best-estimate diagnosis) put overall prevalence at 9.5% — conduct disorders 5.3% the largest group, anxiety 3.8%, hyperkinetic disorders 1.4%, depression 0.9% — and the course teaches why that number moves: four design choices (time frame, informants, age-sex structure, impairment criteria), not four different realities, separate surveys reporting anything from 3.2% to 39.5% for the same anxiety construct in the MECA data. The assessment half teaches the craft the arithmetic forces: adults initiate referrals for their own reasons (the referral question — who wants what changed, and why? — is itself diagnostic data); children rarely volunteer the wish to change; parents and children agree on only 13.5% of cases, making multi-informant assessment a mathematical necessity rather than a preference; DSM criteria were written on adults and must be developmentally translated (irritability for sadness, somatic complaints for verbalised anxiety); and the seven-stream developmental history — regulation, psychomotor, cognitive, interpersonal, emotional, moral, trauma — reads the child's biography. The investigations chapter is a lesson in restraint: laboratory results change the working diagnosis in about 1% of children, with yield under 5% without supportive physical findings — order tests to answer questions the history raises, never as a routine sweep. The India layer is honest: no national DAWBA-style survey exists, the existing Indian studies are mostly school-based and instrument-varying (demonstrating exactly the traps taught here), so the ~10% international anchor is applied with local humility — while the Indian gatekeeper map (parents, teachers, paediatricians, grandparents, tuition teachers, sometimes faith healers, often with the request 'make him study') becomes the first assessment task, the joint family becomes informant richness the Western assessor struggles to assemble, and lead, thyroid and iron studies are never skipped in suggestive presentations. No drug is assigned a clinical role by this note — the disorder programmes' pharmacotherapy lives in the Group L sibling courses, recorded in contentGaps, never fabricated here.",
+    "This course covers how common child psychiatric disorder is, roughly one child in ten, and why survey estimates move with study design. It then teaches multi-informant child assessment, interviewing child, parents and school, and translating adult criteria developmentally.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -65,14 +65,14 @@ export const childAssessmentEpidemiologyCourse: PsychiatryCourse = {
     { label: "The Indian front door", value: "'Make him study'", detail: "Grandparents, tuition teachers, family physicians and sometimes faith healers join parents, teachers and paediatricians as the gatekeepers — mapping who initiated the referral and what they expect is the first Indian assessment task" },
   ],
   knowledgeGraph: [
-    { label: "Child Neuropsychiatry — Behavioural Phenotypes", type: "condition", href: "/psychiatry/child-neuropsychiatry/", note: "The behavioural-phenotype tier the seven-stream history feeds into — where the cognitive stream's findings meet their syndromes" },
-    { label: "Developmental Disorders — The Learning Channels", type: "condition", href: "/psychiatry/developmental-disorders/", note: "The developmental endpoint of the streams discipline — the global-versus-specific question the cognitive stream asks" },
-    { label: "Autism Spectrum Disorder — The Prediction Engine", type: "condition", href: "/psychiatry/autism/", note: "The interpersonal stream's depth — the shared-activities and relationship stability questions that screen the spectrum" },
-    { label: "ADHD — The Brakes and the Engine", type: "condition", href: "/psychiatry/adhd/", note: "The hyperkinetic 1.4% of the survey arithmetic — and the informant the young child cannot be (his own hyperactivity rater)" },
-    { label: "Conduct Disorders — The Empathy Specifier", type: "condition", href: "/psychiatry/conduct-disorder/", note: "The largest diagnostic group at 5.3% — the problem-history function questions (secondary gains, cross-setting pervasiveness) in their full clinical programme" },
-    { label: "Child Anxiety — The School-Refusal Engines", type: "condition", href: "/psychiatry/child-anxiety/", note: "The second-largest group at 3.8% — the impairment gate's proving ground (39.5% of symptoms, 3.2% of disorder)" },
-    { label: "Intellectual Disability — Supports, Not Just Scores", type: "condition", href: "/psychiatry/intellectual-disability-overview/", note: "The chromosomal-testing indication of the laboratory tier — the cognitive stream's global end" },
-    { label: "Juvenile Offending — The Risk-Overlap Principle", type: "condition", href: "/psychiatry/juvenile-offending/", note: "The conduct continuum's deep end — where the assessment discipline meets the youth justice sieve" },
+    { label: "Child Neuropsychiatry", type: "condition", href: "/psychiatry/child-neuropsychiatry/", note: "The behavioural-phenotype tier the seven-stream history feeds into — where the cognitive stream's findings meet their syndromes" },
+    { label: "Developmental Disorders", type: "condition", href: "/psychiatry/developmental-disorders/", note: "The developmental endpoint of the streams discipline — the global-versus-specific question the cognitive stream asks" },
+    { label: "Autism Spectrum Disorder", type: "condition", href: "/psychiatry/autism/", note: "The interpersonal stream's depth — the shared-activities and relationship stability questions that screen the spectrum" },
+    { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The hyperkinetic 1.4% of the survey arithmetic — and the informant the young child cannot be (his own hyperactivity rater)" },
+    { label: "Conduct Disorders", type: "condition", href: "/psychiatry/conduct-disorder/", note: "The largest diagnostic group at 5.3% — the problem-history function questions (secondary gains, cross-setting pervasiveness) in their full clinical programme" },
+    { label: "Child Anxiety", type: "condition", href: "/psychiatry/child-anxiety/", note: "The second-largest group at 3.8% — the impairment gate's proving ground (39.5% of symptoms, 3.2% of disorder)" },
+    { label: "Intellectual Disability", type: "condition", href: "/psychiatry/intellectual-disability-overview/", note: "The chromosomal-testing indication of the laboratory tier — the cognitive stream's global end" },
+    { label: "Juvenile Offending", type: "condition", href: "/psychiatry/juvenile-offending/", note: "The conduct continuum's deep end — where the assessment discipline meets the youth justice sieve" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The maturing reward-and-motor systems behind the hyperkinetic stream — taught as framing, the note's claims are behavioural" },
     { label: "Prefrontal cortex", type: "brain-region", href: "#brain", note: "The control machinery maturing last — the developmental calibration every MSE category and adult-written criterion is judged against" },
   ],

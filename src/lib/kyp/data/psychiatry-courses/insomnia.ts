@@ -21,7 +21,7 @@ import type { PsychiatryCourse } from "./types";
 export const insomniaCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "insomnia",
-  title: "Insomnias — Chronic Insomnia Disorder",
+  title: "Insomnia",
   shortName: "Insomnia",
   kind: "disorder",
   category: "Sleep-Wake Disorder",
@@ -37,9 +37,9 @@ export const insomniaCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Difficulty falling asleep, staying asleep or waking too early — at least three nights a week for three months, with a daytime bill — and the first-line treatment is NOT a sleeping tablet but a structured behavioural retraining of the sleep system that works better and lasts longer.",
+    "Chronic insomnia disorder — CBT-I is the first line, not a sleeping tablet",
   summary:
-    "Everyone sleeps badly some nights — before an exam, after bad news, with a fever. Insomnia becomes a DISORDER when it settles in: three nights a week or more, for three months or more, with a daytime bill (fatigue, low mood, poor concentration, irritability) the person cannot afford. The crucial science: long-term insomnia is rarely maintained by whatever started it. A stressor ignites it; the person's ADAPTATIONS to it — going to bed earlier to 'catch sleep', lying in bed awake for hours, napping, caffeine stacking, sleep-dread, the bedroom trained into a wakefulness arena — keep it burning years after the original fire dies. This is why hypnotic tablets, which force sleep chemically without touching the maintaining machinery, produce dependency instead of cure; and why CBT-I (cognitive behavioural therapy for insomnia), which retrains the pressure, the cues and the beliefs, delivers superior long-term results as every major guideline's first line. The pharmacology that remains is honest and tiered: Z-drugs for genuinely short-term use with the complex-sleep-behaviour warnings; ramelteon for onset; low-dose doxepin for maintenance; the orexin antagonists as the modern no-dependence class; melatonin as a chronobiotic (timing medicine, not a knockout); and the antihistamines as India's most-consumed OTC trap. For India, insomnia is also the country's most mismanaged common complaint: a vast over-the-counter economy of sedating antihistamines, benzo-dispensing pharmacies and 'nerve tonics' manages the nights while manufacturing the dependency.",
+    "Insomnia disorder is difficulty falling or staying asleep at least three nights a week for three months, with daytime impairment. Long-term insomnia is maintained by the behaviours around sleep, which is why CBT-I is the first-line treatment and hypnotics only a short-term adjunct.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [

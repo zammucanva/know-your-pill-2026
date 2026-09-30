@@ -22,13 +22,13 @@ import type { PsychiatryCourse } from "./types";
 export const hallucinogenUseDisordersCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "hallucinogen-use-disorders",
-  title: "Hallucinogen Use Disorders — The Great Exception",
+  title: "Hallucinogen Use Disorders",
   shortName: "Hallucinogens",
   kind: "disorder",
   category: "Substance Use Disorder",
   groupLetter: "B",
   groupName: "Substance use disorders",
-  learningPath: ["Psychiatry", "Substance Use Disorders", "Hallucinogen Use Disorders — The Great Exception"],
+  learningPath: ["Psychiatry", "Substance Use Disorders", "Hallucinogen Use Disorders"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -38,10 +38,10 @@ export const hallucinogenUseDisordersCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "The one recreational class that hijacks no reward circuit and owns no withdrawal — tolerance builds in days, dependence arrives rarely — yet it runs psychiatry's most dramatic acute emergency (the bad trip), its most misunderstood after-effect (the flashback disorder), and, in PCP's separate kingdom, the most dangerous intoxication in the street catalogue.",
+    "The great exception — no reward hijack, no withdrawal, but the bad trip and HPPD",
 
   summary:
-    "This is the great exception among recreational drugs, and the exception has consequences. The classic hallucinogens — LSD, psilocybin, DMT, mescaline — act at one receptor, 5-HT2A, sitting on the deep pyramidal neurons of the cortex's association areas: stimulating it lets the brain's world-modelling machinery run richer and more chaotic than reality warrants, and the self's edges dissolve with it (the default-mode network's de-synchronisation, the neuroimaging signature of ego-dissolution). The clinical irony that follows: a profound subjective storm riding on nearly normal vital signs — modest pupil dilation, a slight pulse rise — while hyperthermia or seizures mean one thing: substitution (NBOMe sold as LSD, an MDMA-class tablet), not the classic agent. The pharmacology that spares this class the addictive syndrome — no reward hijack, tolerance within days (the second consecutive-day trip famously weak), no withdrawal — is the same pharmacology that dictates its service tier: crisis-and-aftercare, not detox-and-agonist programmes. The clinical load sits in three places: the acute panic or psychotic reaction (managed with environment, talking down and benzodiazepines — haloperidol NOT first-line in the pure classic reaction, restraint avoided, the physical-safety audit remembering that the death is usually accident or flight, not chemistry); the persisting perceptual disorder (HPPD: visual snow, palinopsia, halos with insight intact — not stored drug, not ongoing intoxication, not psychosis; the explanation IS the treatment, medication the last low-evidence rung); and the precipitation of psychotic illness in vulnerable minds (some prolonged post-trip psychoses are first-episode schizophrenia introduced — the first-episode pathway, not detox-and-discharge). PCP and street-dose ketamine are pharmacologically a different family — the dissociatives, NMDA blockade — with the violent-numb-nystagmic triad (analgesia, nystagmus, violent strength), cyclical re-emergence that forbids discharging the patient who first 'clears', and the full injury survey the analgesia demands. The Indian frame: population numbers negligible, the casualties arriving from the Goa circuit, metro elite party scenes, darknet-postal blotter, the undersuspected substituted tablet and the returning retreat traveller; psilocybin's therapeutic-research era is overseas, screened and monitored — a research trial, not a retreat ticket — and 2026 India has no approved clinical trial programme under the NDPS schedules. The skill this course teaches is recognition and calm management, in both dialects: the spiritual emergency and the medical event.",
+    "Hallucinogens act at 5-HT2A receptors, produce tolerance within days and cause dependence rarely — the exception to the addictive-disorder framework. Clinical care is crisis management of the bad trip, reassurance-led HPPD care and recognition of the dissociatives.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -65,11 +65,11 @@ export const hallucinogenUseDisordersCourse: PsychiatryCourse = {
     { label: "The Indian frame", value: "Negligible numbers, real circuit casualties", detail: "Goa and coastal festivals, metro elite party scenes, darknet-postal blotter, the undersuspected substituted tablet, the returning retreat traveller — recognition and calm management, not epidemic management" },
   ],
   knowledgeGraph: [
-    { label: "Substance Use — The Reward Hijack", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The framework this class is the great exception to — the dopamine capture, the withdrawal syndromes and the detox tiers the hallucinogens conspicuously lack" },
-    { label: "Alcohol Use Disorders — The Disease of More", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The withdrawal-storm contrast: where alcohol owns the detox ladder, the classic hallucinogens own no withdrawal at all" },
-    { label: "Party Drugs — The Dance-Floor Trio", type: "condition", href: "/psychiatry/party-drug-use-disorders/", note: "The substituted-tablet corner — NBOMe sold as LSD, MDMA cocktails, and the toxicology redirections the quiet-vitals rule forces" },
+    { label: "Substance Use", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The framework this class is the great exception to — the dopamine capture, the withdrawal syndromes and the detox tiers the hallucinogens conspicuously lack" },
+    { label: "Alcohol Use Disorders", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The withdrawal-storm contrast: where alcohol owns the detox ladder, the classic hallucinogens own no withdrawal at all" },
+    { label: "Party Drugs", type: "condition", href: "/psychiatry/party-drug-use-disorders/", note: "The substituted-tablet corner — NBOMe sold as LSD, MDMA cocktails, and the toxicology redirections the quiet-vitals rule forces" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The first-episode pathway the prolonged post-trip psychosis needs — some trips introduce the illness rather than cause it" },
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "The clouded-consciousness differential — the hallucinogen patient is awake and orientated to planet, however far from it" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "The clouded-consciousness differential — the hallucinogen patient is awake and orientated to planet, however far from it" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The 5-HT2A receptor — the single address where the classic class does its work" },
     { label: "Glutamate", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The NMDA receptor the dissociatives block — PCP's violent-numb-nystagmic kingdom" },
     { label: "Cortical association areas", type: "brain-region", href: "#brain", note: "The deep pyramidal neurons carrying 5-HT2A — the world-modelling machinery the class loosens" },

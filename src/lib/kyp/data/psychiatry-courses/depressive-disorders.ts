@@ -27,9 +27,9 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
   lastReviewed: "2026-09-25",
 
   tagline:
-    "The world's most burdensome psychiatric condition — and the most treatable one when recognised early.",
+    "The world's most burdensome psychiatric condition — highly treatable when recognised",
   summary:
-    "Depressive disorders are persistent disorders of mood, energy, cognition and function — not sadness, and not a character flaw. Roughly 322 million people live with depression worldwide (WHO), and in India about one adult in 37 is affected at any given time — about one in 20 over a lifetime. This course builds the full picture in six lessons: what depression is, what actually happens in the brain, how it is diagnosed and treated, how Indian practice shapes management, how exams test it, and how to make it stick through active recall.",
+    "Depressive disorders are persistent conditions of mood, energy, cognition and function, not sadness and not a character flaw. Stepped care combines psychological therapy and antidepressants, with severity guiding the choice.",
   estimatedReadTime: "35 min",
   yieldRating: "high",
   primaryAudience: "medical",

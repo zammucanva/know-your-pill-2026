@@ -21,7 +21,7 @@ import type { PsychiatryCourse } from "./types";
 export const amnesicSyndromesCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "amnesic-syndromes",
-  title: "Amnesic Syndromes — The Punched-Out Memory Hole",
+  title: "Amnesic Syndromes",
   shortName: "Korsakoff",
   kind: "disorder",
   category: "Neurocognitive Disorder",
@@ -37,10 +37,10 @@ export const amnesicSyndromesCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "The amnesic syndrome is a punched-out hole in new memory — attention, personality and old memories intact, fresh learning gone — most often caused by thiamine (vitamin B1) deficiency in alcohol misuse, and the tragedy is that the hole is largely preventable with a 10-rupee injection given in time.",
+    "The punched-out hole in new memory — and the thiamine injection that largely prevents it",
 
   summary:
-    "In the classic amnesic syndrome, a strange thing happens: the person can talk, reason, joke and recognise everyone, but cannot lay down new memories for more than a few minutes. Yesterday's visit vanishes overnight; the same question returns thirty times; the gaps are filled, sometimes magnificently, with CONFABULATION — invented stories produced by a mind trying to be helpful, not to deceive. The cause is damage to a memory-filing circuit that runs through the thalamus and mammillary bodies deep in the brain, and the commonest route there is thiamine deficiency from chronic malnourished drinking: untreated, it first causes the acute crisis of confusion and eye-movement paralysis (Wernicke encephalopathy), then settles into the permanent gap (Korsakoff syndrome). Two other doors exist: blockage of the memory structures (thalamic or temporal stroke — the vascular course's strategic infarct) and severe oxygen or glucose starvation of the brain. The four psychiatric jobs: give thiamine early and generously (BEFORE any glucose load — the sequence rule, B1 before D5); recognise the syndrome behind the 'confabulating alcoholic'; separate it from dementia, delirium and transient global amnesia; and build the family system that lets a memory-less person live safely and with dignity — the routine-and-labels home, the family as the hippocampus, procedural learning exploited (habits survive when facts do not). The Indian layer: the non-alcoholic routes (hyperemesis of pregnancy, starvation, tuberculosis) are the classic exam vignette and the clinical blind spot; thiamine ampoules cost ₹10–30 (approx 2026) — the Korsakoff problem in India is never cost, it is the forgotten sequence rule and the missing follow-up structure; and the majority of Wernicke cases are missed during life, the autopsy series' standing reproach to the bedside.",
+    "The amnesic syndrome punches a hole in new memory while attention, personality and old memories survive, and confabulation fills the gaps. The commonest cause is thiamine deficiency, and the sequence rule — thiamine before glucose — prevents it.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -63,13 +63,13 @@ export const amnesicSyndromesCourse: PsychiatryCourse = {
     { label: "The Indian tier", value: "₹10–30 ampoules, forgotten sequence", detail: "Thiamine among the cheapest medicines in the hospital (approx 2026); the Korsakoff problem is never cost — it is the forgotten B1-before-D5 rule and the missing follow-up structure; the hyperemesis mother the classic missed case" },
   ],
   knowledgeGraph: [
-    { label: "Alcohol-Related Dementia — The Engine You Can Switch Off", type: "condition", href: "/psychiatry/alcohol-related-dementia/", note: "The companion course: the five-channel wider picture, the executive face, the abstinence architecture — this course owns the amnesic face's full account" },
-    { label: "Vascular Dementia — The Staircase Decline", type: "condition", href: "/psychiatry/vascular-dementia/", note: "The strategic thalamic infarct: the non-alcoholic door into the same filing circuit, sudden-onset" },
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "The consciousness differential: immediate memory and attention impaired there, intact here — and the Wernicke emergency itself a delirium-mimic until the eyes are checked" },
-    { label: "HIV-Associated Neurocognitive Disorder — The Treatable Edge", type: "condition", href: "/psychiatry/hiv-neuropsychiatry/", note: "The modern differential's treatable member — the young subcortical-speed picture that earns the HIV test" },
-    { label: "Alzheimer's Disease & Dementia — The Gradual Erasure", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The dementia contrast: gradual, multi-domain, remote memory eventually lost — against the punched-out single-function hole" },
+    { label: "Alcohol-Related Dementia", type: "condition", href: "/psychiatry/alcohol-related-dementia/", note: "The companion course: the five-channel wider picture, the executive face, the abstinence architecture — this course owns the amnesic face's full account" },
+    { label: "Vascular Dementia", type: "condition", href: "/psychiatry/vascular-dementia/", note: "The strategic thalamic infarct: the non-alcoholic door into the same filing circuit, sudden-onset" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "The consciousness differential: immediate memory and attention impaired there, intact here — and the Wernicke emergency itself a delirium-mimic until the eyes are checked" },
+    { label: "HIV-Associated Neurocognitive Disorder", type: "condition", href: "/psychiatry/hiv-neuropsychiatry/", note: "The modern differential's treatable member — the young subcortical-speed picture that earns the HIV test" },
+    { label: "Alzheimer's Disease & Dementia", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The dementia contrast: gradual, multi-domain, remote memory eventually lost — against the punched-out single-function hole" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The encoding-fails-from-effort mimic — new learning recovering with cueing and treatment, unlike the true hole" },
-    { label: "Memory Rehabilitation — The Engineering Discipline", type: "condition", href: "/psychiatry/memory-rehabilitation/", note: "The prosthetic continuation: errorless learning, spaced retrieval, the household prosthetics that run the Korsakoff home" },
+    { label: "Memory Rehabilitation", type: "condition", href: "/psychiatry/memory-rehabilitation/", note: "The prosthetic continuation: errorless learning, spaced retrieval, the household prosthetics that run the Korsakoff home" },
     { label: "Acetylcholine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The honest negative: the cholinesterase trials here disappointing-to-modest — no drug restores the filed gap" },
     { label: "Thalamus", type: "brain-region", href: "#brain", note: "The memory relay and the syndrome's seat — the strategic infarct's target and the thiamine-famine's" },
     { label: "Mammillary bodies", type: "brain-region", href: "#brain", note: "The filing corridor's best-known victim — atrophied on good MRI, the Korsakoff signature" },

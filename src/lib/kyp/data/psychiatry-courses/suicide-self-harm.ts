@@ -25,15 +25,15 @@ export const suicideSelfHarmCourse: PsychiatryCourse = {
   category: "Psychiatric Emergency",
   groupLetter: "D",
   groupName: "Mood disorders",
-  learningPath: ["Psychiatry", "Mood Disorders", "Suicide & Self-Harm"],
+  learningPath: ["Psychiatry", "Mood Disorders", "Suicide & Deliberate Self-Harm"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-27",
 
   tagline:
-    "Not a diagnosis but an emergency state — psychological pain exceeding the person's resources to bear it. The response is always the same three moves: ask directly, remove the means, connect to care fast. Tele-MANAS 14416, 24×7.",
+    "Not a diagnosis but an emergency state — ask directly, remove the means, connect to care",
   summary:
-    "Suicidality is not an illness category; it is an emergency state where pain exceeds coping resources — and almost every person who dies by suicide passed through a healthcare door in the month before death, which means every door is a chance to notice. This course covers the direct interview that does not flinch, the static-versus-acute risk model (WHO to worry about vs WHEN to act today), means-restriction counselling — the single most population-effective prevention tool — the safety plan that replaced the discredited 'no-suicide contract', the NSSI that is never 'just attention-seeking', India's NCRB epidemiology and the MHA 2017 s.115 decriminalisation, and the post-attempt pathway where the first week after discharge is the highest-risk window in medicine.",
+    "Suicidality is an emergency state in which psychological pain exceeds the person's coping resources, not a diagnosis. Management rests on direct asking, means restriction and rapid connection to care, and the first week after discharge is the highest-risk window.",
   estimatedReadTime: "35 min",
   yieldRating: "high",
   primaryAudience: "medical",
@@ -64,7 +64,7 @@ export const suicideSelfHarmCourse: PsychiatryCourse = {
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The most common driver illness — treat it aggressively" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "Mixed states = the highest-risk window" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "Command hallucinations override reassurance logic" },
-    { label: "Substance Use — The Reward Hijack", type: "condition", href: "/psychiatry/substance-use-overview/", note: "Relapse prevention IS suicide prevention" },
+    { label: "Substance Use", type: "condition", href: "/psychiatry/substance-use-overview/", note: "Relapse prevention IS suicide prevention" },
     { label: "Dysthymia, Cyclothymia & Hyperthymia", type: "condition", href: "/psychiatry/persistent-mood-disorders/", note: "Chronic passive-ideation risk is real and under-asked" },
     { label: "Acute & Transient Psychotic Disorders", type: "condition", href: "/psychiatry/acute-transient-psychosis/", note: "Post-results season — the Indian student emergency" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The SSRI target when depression is the driver" },

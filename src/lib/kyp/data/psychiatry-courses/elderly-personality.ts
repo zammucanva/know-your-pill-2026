@@ -21,13 +21,13 @@ import type { PsychiatryCourse } from "./types";
 export const elderlyPersonalityCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "elderly-personality",
-  title: "Personality Disorders in the Elderly — The Disguises",
+  title: "Personality Disorders in the Elderly",
   shortName: "Elderly Personality",
   kind: "disorder",
   category: "Psychiatry of Old Age",
   groupLetter: "M",
   groupName: "Psychiatry of old age",
-  learningPath: ["Psychiatry", "Psychiatry of Old Age", "Personality Disorders in the Elderly — The Disguises"],
+  learningPath: ["Psychiatry", "Psychiatry of Old Age", "Personality Disorders in the Elderly"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -37,10 +37,10 @@ export const elderlyPersonalityCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Personality disorders do not vanish in old age — they change costume: the criteria that once caught them retire with retirement, depression and dementia stand in their clothes, and the diagnosis is made not in the consulting room but in the family's memory of the younger person.",
+    "The criteria retire with retirement while depression and dementia stand in their clothes",
 
   summary:
-    "This is the honest summary of an under-studied field. Personality disorders exist in old age at roughly 7–10%, but they wear disguises: the criteria were written for the young, the behaviours that once signalled disorder retire with retirement, and the diagnosis is as likely to be mimicked by depression or dementia as to be found. The teaching spine runs in four moves. First, stability: personality is substantially stable across adulthood — McCrae and Costa's 30-year correlations of 0.7–0.8, high but not perfect, leaving room for change. Second, the decline: measured prevalence falls with age (the ECA study: any personality disorder 10.5% under 55 vs 6.6% over, the difference almost entirely a three-fold higher Cluster B rate in the younger), while Cluster C — especially obsessive-compulsive traits — persists into old age essentially unchanged; borderline becomes vanishingly rare; Cluster A disappeared from the older group altogether. The explanations form an honest hypothesis menu, not a mechanism: maturation, early death, symptom substitution, measurement failure, myelination completing only at 30–40, ageing neurochemistry, falling testosterone. Third, the impostors: depression makes the elderly patient dependent, avoidant, negative and somatic — a personality disorder on paper — and makes them overestimate lifelong pathology through the depressed lens; dementia changes personality early in frontal, Alzheimer's and vascular disease. State contaminates trait; illness fakes character. Fourth, the discipline: multiple informants asked about the person as a younger individual; defer the personality diagnosis during acute Axis I illness; demand specific historical examples (relationships, jobs, legal history); when the behaviour is recent, hunt the superimposed illness. The management wisdom is protective: treat the Axis I condition first; hold firm, consistent limits for patients AND families; ask 'why now?'; and no psychiatric medication unless a specific diagnosed condition exists — because elders with abnormal traits attract prescriptions. The India layer is not an appendix: the joint family is the informant bank this field's central recommendation demands, and the 'stubborn old man' label that ends Indian assessments is a formulation waiting to be translated.",
+    "Personality disorders persist into old age, though prevalence falls and the young-adult criteria lose their grip. Diagnose through informants' accounts of the younger person, and avoid psychotropics unless a specific disorder is treated.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -64,13 +64,13 @@ export const elderlyPersonalityCourse: PsychiatryCourse = {
     { label: "The Indian instrument", value: "The joint family informant bank", detail: "Multi-informant diagnosis — the field's central recommendation — is natively available in India: siblings, spouse and grown children each holding decades of younger-adult history; the skill is collecting it separately, with concrete anecdotes" },
   ],
   knowledgeGraph: [
-    { label: "Personality Disorders — The Concept, the Clusters, the Numbers", type: "condition", href: "/psychiatry/personality-disorders-overview/", note: "The J-group foundation this course builds on — the cluster architecture and the numbers this course re-reads through the age lens" },
-    { label: "Specific Personality Disorder Types — Ten Styles of Being", type: "condition", href: "/psychiatry/personality-disorder-types/", note: "The ten types at their young-adult volume — this course teaches what each one wears at 80" },
-    { label: "Treating Personality Disorders — Psychotherapies, Pharmacology & Service Design", type: "condition", href: "/psychiatry/personality-disorder-treatment/", note: "The general treatment architecture — this course adds the old-age rules: Axis I first, why-now focus, the medication refusal" },
-    { label: "Mood Disorders in the Elderly — The Pseudodementia Trap", type: "condition", href: "/psychiatry/elderly-mood/", note: "The depression impostor's full account — the dependent-avoidant-negative-somatic colouring and the treat-first, re-ask-after logic" },
-    { label: "Frontotemporal Dementia — When Personality Changes First", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The dementia impostor's flagship — the frontal disease whose first sign is the 'personality change' the clinic is about to mislabel" },
-    { label: "Mild Cognitive Impairment — The Crossroads", type: "condition", href: "/psychiatry/mci/", note: "The cognitive screen the recent-change rule demands — the mild impairment that amplifies lifelong traits while the impostors do the mimicking" },
-    { label: "Late-Life Psychosis — The Ridden-Upon Illness", type: "condition", href: "/psychiatry/late-life-psychosis/", note: "The paranoid states of old age — the distrust spectrum's syndromal and organic territory, distinguished from lifelong paranoid traits by onset and form" },
+    { label: "Personality Disorders", type: "condition", href: "/psychiatry/personality-disorders-overview/", note: "The J-group foundation this course builds on — the cluster architecture and the numbers this course re-reads through the age lens" },
+    { label: "Specific Personality Disorder Types", type: "condition", href: "/psychiatry/personality-disorder-types/", note: "The ten types at their young-adult volume — this course teaches what each one wears at 80" },
+    { label: "Treating Personality Disorders", type: "condition", href: "/psychiatry/personality-disorder-treatment/", note: "The general treatment architecture — this course adds the old-age rules: Axis I first, why-now focus, the medication refusal" },
+    { label: "Mood Disorders in the Elderly", type: "condition", href: "/psychiatry/elderly-mood/", note: "The depression impostor's full account — the dependent-avoidant-negative-somatic colouring and the treat-first, re-ask-after logic" },
+    { label: "Frontotemporal Dementia", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The dementia impostor's flagship — the frontal disease whose first sign is the 'personality change' the clinic is about to mislabel" },
+    { label: "Mild Cognitive Impairment", type: "condition", href: "/psychiatry/mci/", note: "The cognitive screen the recent-change rule demands — the mild impairment that amplifies lifelong traits while the impostors do the mimicking" },
+    { label: "Late-Life Psychosis", type: "condition", href: "/psychiatry/late-life-psychosis/", note: "The paranoid states of old age — the distrust spectrum's syndromal and organic territory, distinguished from lifelong paranoid traits by onset and form" },
     { label: "Frontal cortex", type: "brain-region", href: "#brain", note: "Impulsivity's late-myelinating seat (completing only at 30–40) — and the impostor's address: frontal disease changes personality first" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The ageing shifts proposed to reduce impulsive aggression — the neurochemical limb of the Cluster B mellowing" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The second arm of the ageing-neurochemistry hypothesis — and the dopaminergic dementias' early personality change" },

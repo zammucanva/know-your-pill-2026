@@ -27,15 +27,15 @@ export const socialAnxietyPhobiasCourse: PsychiatryCourse = {
   category: "Anxiety Disorder",
   groupLetter: "F",
   groupName: "Anxiety disorders",
-  learningPath: ["Psychiatry", "Anxiety Disorders", "Social Anxiety & Phobias"],
+  learningPath: ["Psychiatry", "Anxiety Disorders", "Social Anxiety Disorder & Specific Phobias"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-28",
 
   tagline:
-    "Cousins of the same alarm machinery aimed at different targets: pounding fear of being watched, judged and humiliated in social anxiety; focused lightning-strike fears of particular objects or situations in the phobias — both among psychiatry's most treatable conditions.",
+    "Scrutiny fears in social anxiety, single-object fears in phobias — both highly treatable",
   summary:
-    "In social anxiety disorder the target is other human beings — meetings, classrooms, weddings, presentations, even eating in front of others — because the mind has decided that scrutiny equals danger and a stumble equals ruin. In a specific phobia the target is one circumscribed thing: the needle, the dog, the flight, the lift; the person is perfectly calm everywhere else and rational about the fear everywhere except in front of the feared object. Both conditions run on the same maintenance engine: avoidance and safety behaviours buy relief today and extend the fear's warranty — the brain records 'that was dangerous, and the hiding saved me'. Both are also among psychiatry's most treatable conditions: graded, repeated exposure is a genuine cure in the majority of phobia cases and a strong treatment for social anxiety, yet both are under-referred because the suffering is quiet (avoidance, not collapse) and Indian consultation culture rarely brings them in by name. This course covers the DSM-5 gates for both, the performance-only versus generalised split that decides propranolol versus SSRI-plus-CBT, the five specific-phobia categories with the blood-injection-injury type's unique fainting physiology and its applied-tension cure, video-feedback and the spotlight model — and the Indian layer: English-medium seminar terror, viva-voce fear, arranged-marriage meetings, 'log kya kahenge' as household software, wedding-stage engineering and the street-dog geography of exposure design.",
+    "Social anxiety disorder centres on fear of scrutiny and negative evaluation, while specific phobias centre on circumscribed objects or situations. Both are maintained by avoidance and are among psychiatry's most treatable conditions, responding to graded exposure and CBT.",
   estimatedReadTime: "35 min",
   yieldRating: "high",
   primaryAudience: "medical",
@@ -67,7 +67,7 @@ export const socialAnxietyPhobiasCourse: PsychiatryCourse = {
     { label: "Obsessive-Compulsive Disorder (OCD)", type: "condition", href: "/psychiatry/ocd/", note: "Stereotyped intrusions with rituals versus situation-locked fear" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The secondary consequence of years of avoidance and underachievement" },
     { label: "Alcohol Use Disorders", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The 'party lubricant' self-treatment route of generalised social anxiety — name it explicitly" },
-    { label: "Autism", type: "condition", href: "/psychiatry/autism/", note: "Social difference from not-reading cues, not fear of judgment — the treatment differs completely" },
+    { label: "Autism Spectrum Disorder", type: "condition", href: "/psychiatry/autism/", note: "Social difference from not-reading cues, not fear of judgment — the treatment differs completely" },
     { label: "Child Anxiety", type: "condition", href: "/psychiatry/child-anxiety/", note: "Selective mutism: the childhood silhouette of social anxiety — treat early" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The system the SSRI tier rides on for the generalised subtype" },
     { label: "Amygdala", type: "brain-region", href: "#brain", note: "Hyper-activation to faces in social anxiety; a narrow, often single-event circuit in phobias" },

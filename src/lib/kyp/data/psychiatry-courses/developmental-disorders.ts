@@ -21,13 +21,13 @@ import type { PsychiatryCourse } from "./types";
 export const developmentalDisordersCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "developmental-disorders",
-  title: "Developmental Disorders — The Learning Channels",
+  title: "Developmental Disorders",
   shortName: "SLD",
   kind: "disorder",
   category: "Child & Adolescent Psychiatry",
   groupLetter: "L",
   groupName: "Child & adolescent psychiatry",
-  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Developmental Disorders — The Learning Channels"],
+  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Developmental Disorders"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -37,10 +37,10 @@ export const developmentalDisordersCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "A bright child and one narrow gate — reading, writing or arithmetic running years below what the intelligence, the effort and the schooling would predict, in a brain built differently: the channels, the mimics, the both-language rule, and the Indian law that turns a board exam back into a test of knowledge.",
+    "A bright child, one narrow gate: reading, writing or arithmetic far below expectation",
 
   summary:
-    "This course is about the learning channels — reading, writing, arithmetic, and the coordination that carries the pencil — and about what it means that a child's mind can be intact everywhere except one of them. The definition turns on unexpected underachievement: skills in one academic channel sitting far below what the child's overall intelligence, effort and schooling would predict, present from the early school years, and nobody's fault — not the child's laziness, not the parents' upbringing, not the school's failure. Each channel has its own core: dyslexia is a phonological problem — the sound-splitting machine runs grainy, so print stays blurred while the eyes are normal; dyscalculia is a magnitude problem — the mental number-line that never calibrated, leaving arithmetic as a poem memorised in an unknown language; dysgraphia and its companion developmental coordination disorder are motor-program problems — the writing load eats the ideas. Around the academic core runs the second disease, the emotional career: falling behind, scolding, public embarrassment, school avoidance, the 'I am stupid' verdict internalised by age 9–10, and adolescent depression or conduct problems if nobody interrupts. The assessment discipline is Indian and practical: clear the four great mimics — poor schooling, intellectual disability, sensory problems and language exposure — which in India means one non-negotiable rule, test reading in BOTH languages, because the first-generation English-medium learner a year behind in English but at level in Marathi carries an acquisition load, not dyslexia, while the child behind in both carries the real thing. The management is a triad — remediation (structured, systematic, multisensory phonics in the Orton–Gillingham lineage, two-to-four sessions weekly for one-to-two school years, because the dose is the treatment), accommodations (extra time, a scribe, reduced writing, the third-language exemption — remove the penalty, not the standard) and comorbidity treatment, ADHD above all, riding underneath roughly a third of cases and gating every remediation rupee. There is no medicine for a learning disorder — the brain-tonic shelf is commerce — and the Indian legal layer is the counterweight to that therapeutic poverty: the Rights of Persons with Disabilities Act 2016 recognises specific learning disability, and its certificate unlocks the scribe, the extra time and the exemptions that turn a board exam from a life sentence into a measurement. Detected early and supported properly, the prognosis is genuinely good — these children reach medicine, engineering and literature; undetected, the same children reach the adolescent depression clinic.",
+    "Learning disorders present as unexpected underachievement in reading, writing, arithmetic or coordination, often misread as laziness. Remediation, school accommodations and treatment of comorbid ADHD change the trajectory.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -65,12 +65,12 @@ export const developmentalDisordersCourse: PsychiatryCourse = {
     { label: "The medicine answer", value: "None — and that is the answer", detail: "No pharmacotherapy for the learning disorder itself; 'memory syrups' are commerce — the one real drug fact is methylphenidate for the comorbid ADHD, never for reading" },
   ],
   knowledgeGraph: [
-    { label: "ADHD — The Brakes and the Engine", type: "condition", href: "/psychiatry/adhd/", note: "The comorbidity riding underneath roughly a third of cases — and the gate that decides whether remediation money teaches or evaporates" },
-    { label: "Autism Spectrum Disorder — The Prediction Engine", type: "condition", href: "/psychiatry/autism/", note: "The co-occurring neurodevelopmental neighbour — the social-communication channel against the academic ones, with frequent co-travel" },
-    { label: "Intellectual Disability — Supports, Not Just Scores", type: "condition", href: "/psychiatry/intellectual-disability-overview/", note: "The great differential: two dials both low against one narrow gate — global versus channel-specific" },
-    { label: "Child Assessment & Epidemiology — The Prevalence Movers", type: "condition", href: "/psychiatry/child-assessment-epidemiology/", note: "The developmental history, informant craft and prevalence lens this assessment sequence runs on" },
-    { label: "Child Neuropsychiatry — Behavioural Phenotypes", type: "condition", href: "/psychiatry/child-neuropsychiatry/", note: "The soft-sign territory DCD belongs to — the clumsy-athlete end of the neurodevelopmental cluster" },
-    { label: "Child Anxiety — The School-Refusal Engines", type: "condition", href: "/psychiatry/child-anxiety/", note: "The secondary anxiety and school-refusal cascade the unidentified learning disorder feeds" },
+    { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The comorbidity riding underneath roughly a third of cases — and the gate that decides whether remediation money teaches or evaporates" },
+    { label: "Autism Spectrum Disorder", type: "condition", href: "/psychiatry/autism/", note: "The co-occurring neurodevelopmental neighbour — the social-communication channel against the academic ones, with frequent co-travel" },
+    { label: "Intellectual Disability", type: "condition", href: "/psychiatry/intellectual-disability-overview/", note: "The great differential: two dials both low against one narrow gate — global versus channel-specific" },
+    { label: "Child Assessment & Epidemiology", type: "condition", href: "/psychiatry/child-assessment-epidemiology/", note: "The developmental history, informant craft and prevalence lens this assessment sequence runs on" },
+    { label: "Child Neuropsychiatry", type: "condition", href: "/psychiatry/child-neuropsychiatry/", note: "The soft-sign territory DCD belongs to — the clumsy-athlete end of the neurodevelopmental cluster" },
+    { label: "Child Anxiety", type: "condition", href: "/psychiatry/child-anxiety/", note: "The secondary anxiety and school-refusal cascade the unidentified learning disorder feeds" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The adolescent endpoint of the unrecognised case — the second disease that arrives if nobody interrupts the emotional career" },
     { label: "Left temporo-parietal reading areas", type: "brain-region", href: "#brain", note: "The letter-sound mapping table — reduced grey matter and activation here the research signature (never a diagnostic test)" },
     { label: "Intraparietal number circuit", type: "brain-region", href: "#brain", note: "The approximate number system's home — the number-line that never calibrated in dyscalculia" },

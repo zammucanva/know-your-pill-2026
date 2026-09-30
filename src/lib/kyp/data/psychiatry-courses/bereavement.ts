@@ -33,9 +33,9 @@ export const bereavementCourse: PsychiatryCourse = {
   lastReviewed: "2026-09-28",
 
   tagline:
-    "Grief is the healthy, necessary work of rebuilding a life around a loss — it hurts by design, moves in waves not stages, and in most people slowly finds its place; prolonged grief disorder is the name for the minority whose grief stays frozen in its first intensity, disabling them for months and years.",
+    "Waves, not stages — and the prolonged grief that stays frozen at first-day intensity",
   summary:
-    "Losing a parent, a spouse, a child rearranges a person from the inside: identity, daily routine, future plans, even appetite and sleep are all built around someone who is now absent. Grief is the rebuilding process, and it is supposed to hurt, oscillate, and take longer than anyone around the griever expects. The clinical task is mostly to protect the process: reassure families that waves of sorrow at six months are normal, protect sleep and nutrition, keep the bereaved connected, and honour the rituals that cultures evolved precisely to carry this work. But grief can also go wrong in two directions, and both need real treatment: it can freeze into prolonged grief disorder (the person remains as shattered at the first anniversary as on the first day; ICD-11 since 2019, DSM-5-TR since 2022), or it can mask and mate with major depression — a different illness needing its own treatment. Indian mourning culture (the 13-day rites, the terahvin, the feeding of others, the white clothes) is a sophisticated, community-delivered grief programme that modern evidence largely validates; the clinician's job is to work with it, not around it. This course covers the three pictures — normal grief, prolonged grief disorder, grief-masking depression — the dual-process model, the duration gates, complicated grief therapy, and the Indian realities: missed rites, suicide-bereaved families, widow health, and the unritualised COVID cohort.",
+    "Grief is the healthy, wave-like work of rebuilding a life around a loss, and mostly needs protection rather than treatment. The clinician watches for the two failures: grief frozen into prolonged grief disorder, and depression masquerading as grief.",
   estimatedReadTime: "32 min",
   yieldRating: "high",
   primaryAudience: "medical",

@@ -24,13 +24,13 @@ import type { PsychiatryCourse } from "./types";
 export const elderlyDeliriumCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "elderly-delirium",
-  title: "Delirium in the Elderly — The Quiet Emergency",
+  title: "Delirium in the Elderly",
   shortName: "Elderly Delirium",
   kind: "disorder",
   category: "Psychiatry of Old Age",
   groupLetter: "M",
   groupName: "Psychiatry of old age",
-  learningPath: ["Psychiatry", "Psychiatry of Old Age", "Delirium in the Elderly — The Quiet Emergency"],
+  learningPath: ["Psychiatry", "Psychiatry of Old Age", "Delirium in the Elderly"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -40,10 +40,10 @@ export const elderlyDeliriumCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "In old age the emergency usually arrives quietly — a urinary infection, a catheter, a room change derails a vulnerable brain into drowsiness the ward calls dementia, while the treatable causes sit unlooked-for.",
+    "The quiet emergency: drowsiness the ward calls dementia while the treatable causes wait",
 
   summary:
-    "This is the old-age chapter of the delirium story. The general architecture — attention failing acutely, the confused and fluctuating patient — belongs to the Delirium — Acute Brain Failure course; what this course adds is the arithmetic that makes delirium primarily a geriatric disease and the transformed face that makes it missed daily. The model: delirium results from an interaction between individual vulnerability (brain disease, sensory impairment, frailty) and external insults (illness, drugs, environment) — and both sides of that equation accumulate with age. A young brain needs a major insult and then derails dramatically; a vulnerable 85-year-old is felled by a urinary infection, a catheter or a room change, and presents not with agitation but with a reduced conscious level, poor attention, incoherent speech and underactivity. That hypoactive predominance is the quiet emergency of the title: it is missed, mislabelled as dementia or depression or simply 'age', and — the paradox worth the whole course — the quieter the patient, the sicker the patient. The consequences run beyond the acute days: one-third of episodes prolonged or recurrent; increased mortality, longer stays, functional decline and nursing-home discharge; persistent cognitive decline after an episode, with delirium marking the start of the decline that runs on to dementia. The differentials the ward actually needs: dementia (rapid decline from baseline; the premorbid history resolves it), depression (affective-predominant and worse in the mornings, against delirium's evenings), mania (the exhausted, dehydrated 'manic delirium' riding on organic brain disease). The management is four steps with geriatric pharmacology — haloperidol 0.5–2 mg, prescriptions for up to 24 hours to force review, a taper over 3–5 days — and the prevention bundle is the hopeful counterweight: multi-component interventions (prescribing discipline, ward environment, surgical routines) demonstrably and cost-effectively reduce incidence. The Indian urgency is the quiet-ward problem: crowded wards manufacturing exactly the sensory insults the chapter indicts; fluctuating drowsiness attributed to 'weakness' or 'age'; the accompanying family member the single most valuable diagnostic instrument; and the prevention bundle costing discipline, not money.",
+    "In the elderly, delirium is usually hypoactive and quiet, misread as dementia or normal ageing, yet the quieter patient is often the sicker one. Prevention bundles and prompt treatment of reversible causes are the core management.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -66,11 +66,11 @@ export const elderlyDeliriumCourse: PsychiatryCourse = {
     { label: "The Indian question", value: "Is this how he usually is?", detail: "The single screening question to the family — with 'when did the change start?' — that replaces any risk calculator on a busy ward and stops the mislabel cascade at the door" },
   ],
   knowledgeGraph: [
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "The general architecture — the acute attention failure, the fluctuating syndrome; THIS course adds the old-age arithmetic: the vulnerability × insult equation and the quiet face it produces" },
-    { label: "Alzheimer's Disease & Dementia — The Gradual Erasure", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The main differential AND the main risk factor — the already cholinergic-depleted brain that the urinary infection, the catheter and the anticholinergic prescription fell" },
-    { label: "Mood Disorders in the Elderly — The Pseudodementia Trap", type: "condition", href: "/psychiatry/elderly-mood/", note: "The depression differential — affective-predominant, worse in the mornings against delirium's evenings; and the elderly depressed patient who is delirium-prone besides" },
-    { label: "Substance Use in the Elderly — The Silent Epidemic", type: "condition", href: "/psychiatry/elderly-substance-use/", note: "Alcohol withdrawal and the sedative load in the old — the toxicity/withdrawal arm of the hyperactive rule of thumb" },
-    { label: "Late-Life Psychosis — The Ridden-Upon Illness", type: "condition", href: "/psychiatry/late-life-psychosis/", note: "The paranoid states that rarely mimic delirium but leave the patient delirium-prone — self-neglect, neuroleptics and anticholinergics stacking the see-saw" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "The general architecture — the acute attention failure, the fluctuating syndrome; THIS course adds the old-age arithmetic: the vulnerability × insult equation and the quiet face it produces" },
+    { label: "Alzheimer's Disease & Dementia", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The main differential AND the main risk factor — the already cholinergic-depleted brain that the urinary infection, the catheter and the anticholinergic prescription fell" },
+    { label: "Mood Disorders in the Elderly", type: "condition", href: "/psychiatry/elderly-mood/", note: "The depression differential — affective-predominant, worse in the mornings against delirium's evenings; and the elderly depressed patient who is delirium-prone besides" },
+    { label: "Substance Use in the Elderly", type: "condition", href: "/psychiatry/elderly-substance-use/", note: "Alcohol withdrawal and the sedative load in the old — the toxicity/withdrawal arm of the hyperactive rule of thumb" },
+    { label: "Late-Life Psychosis", type: "condition", href: "/psychiatry/late-life-psychosis/", note: "The paranoid states that rarely mimic delirium but leave the patient delirium-prone — self-neglect, neuroleptics and anticholinergics stacking the see-saw" },
     { label: "Acetylcholine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The aged brain's thinnest reserve — the cholinergic hypothesis of delirium, and the anticholinergic burden that tips it" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The hyperactive arm — dopamine agonists among the deliriogenic drugs, and the haloperidol brake dosed 0.5–2 mg" },
     { label: "Prefrontal cortex", type: "brain-region", href: "#brain", note: "Attention's conductor — the first casualty when the see-saw tips, in the quiet face and the noisy face alike" },

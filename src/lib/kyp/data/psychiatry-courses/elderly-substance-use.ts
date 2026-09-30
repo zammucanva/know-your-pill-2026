@@ -27,13 +27,13 @@ import type { PsychiatryCourse } from "./types";
 export const elderlySubstanceUseCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "elderly-substance-use",
-  title: "Substance Use in the Elderly — The Silent Epidemic",
+  title: "Substance Use in the Elderly",
   shortName: "Elderly Substance Use",
   kind: "disorder",
   category: "Psychiatry of Old Age",
   groupLetter: "M",
   groupName: "Psychiatry of old age",
-  learningPath: ["Psychiatry", "Psychiatry of Old Age", "Substance Use in the Elderly — The Silent Epidemic"],
+  learningPath: ["Psychiatry", "Psychiatry of Old Age", "Substance Use in the Elderly"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -43,10 +43,10 @@ export const elderlySubstanceUseCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Alcohol and medication problems do not disappear with age; they go quiet — the same dose does more harm at eighty than at forty, the presentations hide behind falls and confusion, everyone asks the questions less, and the treatment works as well as or better than in the young.",
+    "A silent epidemic: the same dose harms more at eighty, hidden behind falls and confusion",
 
   summary:
-    "This is the silent epidemic, and the silence is manufactured four times over — by the patient who will not volunteer, the clinician who will not ask, the family that cannot perceive, and the society whose ageism dresses the drinking up as 'one of his few pleasures'. The territory divides three ways: alcohol use disorders (the best-studied tier), medication use disorders (the most geriatric-specific — older people take roughly three times the medications of the general population, and benzodiazepines lead the risk), and illicit substances and nicotine (smaller today, growing tomorrow). Two governing problems organise everything. The THRESHOLD problem: pharmacokinetic ageing — the rising fat-to-lean ratio shrinking alcohol's volume of distribution, the falling metabolic efficiency and physiological reserve — plus comorbidity and interacting prescriptions means elderly people develop problems at intakes that would be unremarkable at forty; population 'safe limits' (21/14 units weekly) are inappropriately high for older people, and the NIAAA ceiling is one drink per day. The diagnostic criteria themselves arrive wearing disguises: tolerance and withdrawal are masked by medical conditions, craving is less clear-cut, and the social consequences largely evaporate — no job to lose, no licence, a family reluctant to label grandpa. The INVISIBILITY problem completes the trap: the geriatric presentation is atypical and masked — falls, confusion, self-neglect, 'dementia progressing', depression, insomnia — rather than drunk-and-disorderly, so the disorder presents through its complications and the diagnosis arrives last. Against both problems stands the chapter's best-kept secret: older people do at least as well in treatment as younger people, and the late-onset group (one in three, triggered by bereavement, isolation, retirement or new illness, running on neuroticism and depression rather than the antisocial pattern of the early-onset) often has the best prognosis of all when the trigger is addressed. The prevalence climbs the setting ladder as the questions thin out — community 2–4%, emergency departments 14%, nursing homes 18%, psychiatric inpatients 23% — and the medication arithmetic is its own epidemic: older people are about 13% of the population using more than 30% of prescriptions and 35% of over-the-counter drugs; an Irish community study found 17% of older people prescribed benzodiazepines (women twice men, 52% on long-acting agents, 18% on a second psychotropic). The management is fully learnable: ask always (CAGE the minimum screen, the biophysical markers read with their geriatric false-positive honesty), withdraw with lorazepam (the safest benzodiazepine — ageing and liver disease barely affect its metabolism) dosed by CIWA-Ar with thiamine on board, prevent relapse with naltrexone or acamprosate (disulfiram best avoided), prefer same-age treatment settings, and run the medication-use disorder work through the one instrument that exposes everything at once — the bring-all-medicines-in-their-containers review, which in India is the tablet-bag review and belongs in every cognitive and falls complaint in the geriatric OPD. The Indian tier sharpens every point: families shield ('he only drinks at functions'), doctors skip the question ('what use at this age'), ageist benevolence calls the drinking understandable, decades of easily renewed hypnotic prescriptions make benzodiazepine dependence one of India's commonest geriatric addiction problems — and the family that conceals the drinking can also deliver the treatment.",
+    "Ageing lowers the harm threshold for alcohol and sedatives while the presentations hide behind falls, confusion and self-neglect. Older people respond to treatment at least as well as younger ones.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -70,13 +70,13 @@ export const elderlySubstanceUseCourse: PsychiatryCourse = {
     { label: "The best-kept secret", value: "At least as well as the young", detail: "Older people do at least as well in treatment as younger people, modulated by support systems and age-tailored services; they respond better in same-age settings than mixed-age ones" },
   ],
   knowledgeGraph: [
-    { label: "Alcohol Use Disorders — The Disease of More", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The general AUD science this course stands on: the dependence criteria, the full withdrawal ladder, the relapse-prevention pharmacology — with the geriatric adjustments taught here" },
-    { label: "Benzodiazepine Misuse — The Borrowed Calm", type: "condition", href: "/psychiatry/benzodiazepine-misuse/", note: "The general benzodiazepine dependence account — tolerance, the taper discipline — whose geriatric chapter (the most prescribed psychotropes, the long-acting excess, the falls) is this course" },
-    { label: "Substance Use — The Reward Hijack", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The reward-circuit science underneath every late-onset use: the borrowed calm and the grief-drinking still travel the mesolimbic road" },
-    { label: "Delirium in the Elderly — The Quiet Emergency", type: "condition", href: "/psychiatry/elderly-delirium/", note: "The masked presentation's other half — withdrawal and sedative toxicity presenting as the fluctuating confusion that is never 'just old age'" },
-    { label: "Mild Cognitive Impairment — The Crossroads", type: "condition", href: "/psychiatry/mci/", note: "The memory complaint where the tablet-bag review belongs before the scan — medication toxicity amplifying, sometimes causing, the cognitive picture" },
-    { label: "Amnesic Syndromes — The Punched-Out Memory Hole", type: "condition", href: "/psychiatry/amnesic-syndromes/", note: "The Wernicke–Korsakoff account and the B1-before-carbohydrate discipline that governs every elderly withdrawal" },
-    { label: "Mood Disorders in the Elderly — The Pseudodementia Trap", type: "condition", href: "/psychiatry/elderly-mood/", note: "The resistant-depression disguise — grief-triggered late-onset drinking presenting as depression not responding to two antidepressants" },
+    { label: "Alcohol Use Disorders", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The general AUD science this course stands on: the dependence criteria, the full withdrawal ladder, the relapse-prevention pharmacology — with the geriatric adjustments taught here" },
+    { label: "Benzodiazepine Misuse", type: "condition", href: "/psychiatry/benzodiazepine-misuse/", note: "The general benzodiazepine dependence account — tolerance, the taper discipline — whose geriatric chapter (the most prescribed psychotropes, the long-acting excess, the falls) is this course" },
+    { label: "Substance Use", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The reward-circuit science underneath every late-onset use: the borrowed calm and the grief-drinking still travel the mesolimbic road" },
+    { label: "Delirium in the Elderly", type: "condition", href: "/psychiatry/elderly-delirium/", note: "The masked presentation's other half — withdrawal and sedative toxicity presenting as the fluctuating confusion that is never 'just old age'" },
+    { label: "Mild Cognitive Impairment", type: "condition", href: "/psychiatry/mci/", note: "The memory complaint where the tablet-bag review belongs before the scan — medication toxicity amplifying, sometimes causing, the cognitive picture" },
+    { label: "Amnesic Syndromes", type: "condition", href: "/psychiatry/amnesic-syndromes/", note: "The Wernicke–Korsakoff account and the B1-before-carbohydrate discipline that governs every elderly withdrawal" },
+    { label: "Mood Disorders in the Elderly", type: "condition", href: "/psychiatry/elderly-mood/", note: "The resistant-depression disguise — grief-triggered late-onset drinking presenting as depression not responding to two antidepressants" },
     { label: "GABA", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The receptor the benzodiazepines borrow — and the ageing brain's heightened sensitivity to it, the tolerance architecture and the withdrawal storm's engine" },
     { label: "Frontal lobes", type: "brain-region", href: "#brain", note: "The sedatives' first address — executive function, the word-mixing after dinner, the disinhibition or apathy read as 'ageing'" },
     { label: "Cerebellar vermis", type: "brain-region", href: "#brain", note: "The balance machinery that alcohol shrinks and benzodiazepines stagger — the falls that present the whole epidemic" },

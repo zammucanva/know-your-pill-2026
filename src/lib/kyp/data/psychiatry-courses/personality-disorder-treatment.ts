@@ -24,13 +24,13 @@ import type { PsychiatryCourse } from "./types";
 export const personalityDisorderTreatmentCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "personality-disorder-treatment",
-  title: "Treating Personality Disorders — Psychotherapies, Pharmacology & Service Design",
+  title: "Treating Personality Disorders",
   shortName: "PD Treatment",
   kind: "concept",
   category: "Personality Disorder",
   groupLetter: "J",
   groupName: "Personality disorders",
-  learningPath: ["Psychiatry", "Personality Disorders", "Treatment"],
+  learningPath: ["Psychiatry", "Personality Disorders", "Treating Personality Disorders"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-28",
@@ -40,9 +40,9 @@ export const personalityDisorderTreatmentCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Personality disorders are treatable — but the treatment that works is organised, structured, consistent care built around psychotherapy, with drugs playing a small, honest, symptom-targeted role, and the service design itself acting as part of the therapy.",
+    "Treatable, but with organised psychotherapy-led care and small, targeted drug roles",
   summary:
-    "The Oxford treatment chapters open by dismantling therapeutic nihilism with follow-up data: borderline personality disorder, assumed lifelong, shows 88% remission over 10 years, and over 4 years more than half remit. The course then builds the treatment architecture in three tiers. The psychotherapy tier: several programmes with randomised-trial evidence — DBT (Linehan), mentalization-based treatment (Bateman & Fonagy), transference-focused psychotherapy (Kernberg's school), schema-focused therapy (Young), cognitive therapy, brief dynamic therapies, STEPPS and MACT for public-health scale, therapeutic communities and nidotherapy — all sharing seven structural features that may matter more than the brand name: well-structured, collaborative, clearly focused, theoretically coherent, relatively long-term, attachment-promoting, integrated with other services. The pharmacology tier gets a cold, clean-eyed audit: no drug is licensed for personality disorder; SSRIs help impulsive aggression (fluoxetine); topiramate and perhaps lithium reduce anger; aripiprazole has one encouraging trial; antipsychotics are equivocal (olanzapine showed no core-symptom benefit); tricyclics and MAOIs are effectively retired with behaviour-therapy-alone — the three options with negative risk-benefit ratios; and the APA 2001 guideline's 'symptom-domain' prescribing was famously criticised as pseudo-diagnosis ('the tolerability argument applies equally well to placebo, whose tolerability and safety are unparalleled'). The management tier delivers the master concept: an organised plan of care — consistency, constancy, adequate crisis support — improves outcomes irrespective of the specific intervention; and the commonest management error is failing to notice the personality disorder at all. The Indian translation is direct: one named clinician, a written crisis card, scheduled follow-up, 4–8-week time-limited drug trials with written review dates, family psychoeducation — the package costs discipline, not money, and captures most of what the trials actually demonstrate.",
+    "Personality disorders are treatable, with high long-term remission rates and structured psychotherapy as the core intervention. Drugs play a small, symptom-targeted role, and the commonest error is not noticing the disorder at all.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -67,7 +67,7 @@ export const personalityDisorderTreatmentCourse: PsychiatryCourse = {
     { label: "The Indian package", value: "Costs discipline, not money", detail: "One named clinician · written crisis card · scheduled (not crisis-driven) follow-up · 4–8-week drug trials with written stop-dates · polypharmacy reversal · family psychoeducation — the package that captures most of what the trials demonstrate" },
   ],
   knowledgeGraph: [
-    { label: "Personality Disorders — The Concept", type: "condition", href: "/psychiatry/personality-disorders-overview/", note: "The definition, clusters and epidemiology the treatment architecture serves" },
+    { label: "Personality Disorders", type: "condition", href: "/psychiatry/personality-disorders-overview/", note: "The definition, clusters and epidemiology the treatment architecture serves" },
     { label: "Specific Personality Disorder Types", type: "condition", href: "/psychiatry/personality-disorder-types/", note: "The ten types whose treatment gestures this course expands into programmes" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "Treat the wrong one and every trial in this course fails — the discrimination runs before the prescription" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The presenting illness that most often conceals the personality disorder — treated together, priced differently" },

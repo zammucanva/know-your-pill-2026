@@ -23,13 +23,13 @@ import type { PsychiatryCourse } from "./types";
 export const paediatricOcdTicsCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "paediatric-ocd-tics",
-  title: "OCD & Tics in Youth — The Accommodation Grid",
+  title: "OCD & Tics in Youth",
   shortName: "Paediatric OCD & tics",
   kind: "disorder",
   category: "Child & Adolescent Psychiatry",
   groupLetter: "L",
   groupName: "Child & adolescent psychiatry",
-  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "OCD & Tics in Youth — The Accommodation Grid"],
+  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "OCD & Tics in Youth"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -39,10 +39,10 @@ export const paediatricOcdTicsCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Childhood OCD is the adult sticky-thought engine wearing a child's costume with the family woven into the illness — reassurance, washing and checking done FOR the child that feed the machine — while tics are urge-tension-release loops that suppress at a cost, migrate, and mostly fade; two of child psychiatry's most treatable conditions.",
+    "Family accommodation feeds childhood OCD, while tics suppress at a cost and mostly fade",
 
   summary:
-    "Two conditions travel together often enough to share one course. Childhood OCD shares its engine with the adult disorder but arrives in child costume: magical contagion ('if I see red cars someone dies'), exactness, asking-forever, taboo intrusions the adolescent hides in shame — with thinner insight (the rituals can feel utterly sensible) and one child-specific maintainer the adult illness lacks: family accommodation, the parents' reassurance, ritual-assistance and trigger-removal that feel like love and work like oxygen on the fire. The accommodation grid — mapping each ritual to what each family member does for it — is therefore both the assessment's hidden layer and the treatment's first-order target: CBT evidence itself shows accommodation reduction predicts treatment success. The tic disorders arrive instead through the body: eye-blinks, sniffs, throat-clears and grunts preceded by a building premonitory urge and relieved by the tic itself — suppressible at assembly but at attentional cost (the after-school tic-storm that mystifies parents), waxing and waning over weeks, migrating from tic to tic, and — the prognosis's engine — largely loosening through the teens: peak severity 10–12, roughly a third of Tourette's resolving fully, most of the remainder meaningfully improving. The gates: transient tics under a year (up to a quarter of children pass through one), persistent motor-or-vocal over a year, Tourette's when multiple motor tics and at least one vocal have ridden a year — with ADHD over half and OCD a third to a half riding along. The PANDAS question gets the honest position: explosive post-streptococcal presentations are real and merit evaluation, whether they form a distinct syndrome is contested, and the treatment either way is the standard one — immune therapies are research-tier, not clinic routine. The Indian layer is specific: the punished tic ('stop making that noise'), the OCD-read-as-religious-problem family, the erasing child sent for handwriting remediation, the throat-clear's ENT carousel, and the scarce CBIT professional whose teachable core gets trained into parent-teacher triads instead. Both conditions are genuinely treatable without lifelong medication — ERP and habit-reversal training are among the most effective therapies in child mental health.",
+    "Childhood OCD shares the adult sticky-thought engine but is maintained by family accommodation, the reassurance and rituals done for the child. Tic disorders ride premonitory urges and mostly improve through the teens, and both conditions respond well to behavioural therapy.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -67,11 +67,11 @@ export const paediatricOcdTicsCourse: PsychiatryCourse = {
   ],
   knowledgeGraph: [
     { label: "Obsessive-Compulsive Disorder (OCD)", type: "condition", href: "/psychiatry/ocd/", note: "The adult engine and the full drug dosing — this course carries the child differences: the themes, the thinner insight, the family-accommodation layer the adult illness lacks" },
-    { label: "ADHD — The Brakes and the Engine", type: "condition", href: "/psychiatry/adhd/", note: "The comorbidity in over half of Tourette's — the school trajectory's real decider; and the home of the dead stimulant-worsens-tics dogma" },
-    { label: "Child Anxiety — The School-Refusal Engines", type: "condition", href: "/psychiatry/child-anxiety/", note: "The reassurance-seeking differential — anxiety's worry content is feared events, OCD's is felt-wrongness; the alarm's engine versus the sticky grammar" },
-    { label: "Autism Spectrum Disorder — The Prediction Engine", type: "condition", href: "/psychiatry/autism/", note: "The rigid-routines differential — PREFERRED routines against FEARED-wrong rituals; the social-reciprocity history and the sensory profile decide" },
-    { label: "Child Neuropsychiatry — Behavioural Phenotypes", type: "condition", href: "/psychiatry/child-neuropsychiatry/", note: "The movement-mimic discipline and the basal-ganglia neighbourhood both engines book — Sydenham's chorea's territory" },
-    { label: "Mood Disorders in Youth — The Irritability Costume", type: "condition", href: "/psychiatry/paediatric-mood/", note: "The secondary-depression rider that begins under severe OCD — the mood audit at every review" },
+    { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The comorbidity in over half of Tourette's — the school trajectory's real decider; and the home of the dead stimulant-worsens-tics dogma" },
+    { label: "Child Anxiety", type: "condition", href: "/psychiatry/child-anxiety/", note: "The reassurance-seeking differential — anxiety's worry content is feared events, OCD's is felt-wrongness; the alarm's engine versus the sticky grammar" },
+    { label: "Autism Spectrum Disorder", type: "condition", href: "/psychiatry/autism/", note: "The rigid-routines differential — PREFERRED routines against FEARED-wrong rituals; the social-reciprocity history and the sensory profile decide" },
+    { label: "Child Neuropsychiatry", type: "condition", href: "/psychiatry/child-neuropsychiatry/", note: "The movement-mimic discipline and the basal-ganglia neighbourhood both engines book — Sydenham's chorea's territory" },
+    { label: "Mood Disorders in Youth", type: "condition", href: "/psychiatry/paediatric-mood/", note: "The secondary-depression rider that begins under severe OCD — the mood audit at every review" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The SSRI tier's chemistry — sertraline and fluoxetine carrying the paediatric OCD evidence on the higher-slower clock" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The tic-suppression tier's target — and the paradox of treating a movement disorder with a movement-causing drug class (no KYP lessons for that tier; taught here, never invented)" },
     { label: "Basal ganglia", type: "brain-region", href: "#brain", note: "The hub of the cortico-striato-thalamo-cortical habit circuitry — the reason OCD's not-just-right signal and the tic's urge-loop co-travel in families and in the same child" },

@@ -22,13 +22,13 @@ import type { PsychiatryCourse } from "./types";
 export const childTraumaAbuseCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "child-trauma-abuse",
-  title: "Child Trauma & Abuse — The Disclosure Discipline",
+  title: "Child Trauma & Abuse",
   shortName: "Child Trauma & Abuse",
   kind: "disorder",
   category: "Child & Adolescent Psychiatry",
   groupLetter: "L",
   groupName: "Child & adolescent psychiatry",
-  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Child Trauma & Abuse — The Disclosure Discipline"],
+  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Child Trauma & Abuse"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -38,10 +38,10 @@ export const childTraumaAbuseCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "The child speaks once, quietly, in a fragment — and everything that happens next decides the trajectory: believe her, write her words down exactly, one skilled interview, report under POCSO, protect first, treat the memory — because the second abuse many children receive is the system's handling: disbelief, repeated interrogation and the family's re-traumatising siege.",
+    "The disclosure discipline — believe the child, record verbatim once, protect first",
 
   summary:
-    "This is the course about the two unspectacular clinical acts that decide everything: NOTICE (the injuries that do not fit the story, the behaviour that changed, the child who finally speaks) and RESPOND WELL. The Indian numbers are not subtle — the MWCD 2007 national study found two of every three children reporting physical abuse and over half (53%) reporting one or more forms of sexual abuse, most of it from persons KNOWN to the child, home and school leading the locations; the NCRB's POCSO-era records tell the same story in case-file form. The psychiatric truth is the dose-response: the ACE pyramid links abuse, neglect and household dysfunction in stepwise fashion to adult depression, substance use, suicidality and chronic disease — childhood adversity sits beneath a large share of adult mental illness, which is why treating child trauma is adult-disease prevention. Children do not process trauma the adult way: they speak in regression (the bed that is wet again at nine), in play (the doll-scene repeated), in the body (the paediatric carousel of unexplained pain), in behaviour (the sudden aggression, the frozen obedience) — and in words only last, once, quietly: the disclosure is a test balloon, offered to see what the adult does. The discipline this course teaches: the three flag-layers of recognition (the injury-story mismatch logic, the behavioural indicators, the disclosure pattern itself), the four DON'Ts of receiving a disclosure (never interrogate, never promise secrecy, never confront arena-style, never re-ask), the verbatim-once record, the ONE skilled forensic interview, and the Indian legal machinery that binds every clinician — POCSO 2012 Section 19's mandatory reporting, the CrPC s.164A examination within 24 hours and without an FIR precondition, the Child Welfare Committee and CHILDLINE 1098. The treatment: trauma-focused CBT with the non-offending caregiver in the room, twelve-to-twenty sessions, safety before narrative before meaning. The fork: the non-offending caregiver's belief and support is the strongest single moderator of the child's long-run outcome — and the child who is believed, protected and treated has a genuinely good long-run trajectory: the field's most hopeful and least-known sentence.",
+    "Child abuse is common, mostly from persons known to the child, and is disclosed once, quietly, in a fragment. The discipline is to believe, record verbatim once, use one skilled interview and protect the child, with trauma-focused CBT for those who need treatment.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -65,12 +65,12 @@ export const childTraumaAbuseCourse: PsychiatryCourse = {
   ],
   knowledgeGraph: [
     { label: "Post-Traumatic Stress Disorder (PTSD)", type: "condition", href: "/psychiatry/ptsd/", note: "The adult edition of the post-traumatic structure — the child edition speaks in regression, play re-enactment and somatic complaint instead" },
-    { label: "Conduct Disorders — The Empathy Specifier", type: "condition", href: "/psychiatry/conduct-disorder/", note: "The runaway girl and the conduct-substance channel — the FROM question and the POCSO screen the inverted assessment demands" },
-    { label: "ADHD — The Brakes and the Engine", type: "condition", href: "/psychiatry/adhd/", note: "The treatment-resistant 'ADHD' that is really the trauma transformation — the timeline check and the ACE screen before the label" },
-    { label: "Child Anxiety — The School-Refusal Engines", type: "condition", href: "/psychiatry/child-anxiety/", note: "School refusal and frozen compliance as threat-system presentations — the abuse probe belongs in the engine-list" },
-    { label: "Youth Suicide & Self-Harm — The Safety-First Card", type: "condition", href: "/psychiatry/youth-suicide/", note: "The adolescent transformations: self-harm as the regulation engine, substance initiation, the academic collapse" },
+    { label: "Conduct Disorders", type: "condition", href: "/psychiatry/conduct-disorder/", note: "The runaway girl and the conduct-substance channel — the FROM question and the POCSO screen the inverted assessment demands" },
+    { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The treatment-resistant 'ADHD' that is really the trauma transformation — the timeline check and the ACE screen before the label" },
+    { label: "Child Anxiety", type: "condition", href: "/psychiatry/child-anxiety/", note: "School refusal and frozen compliance as threat-system presentations — the abuse probe belongs in the engine-list" },
+    { label: "Youth Suicide & Self-Harm", type: "condition", href: "/psychiatry/youth-suicide/", note: "The adolescent transformations: self-harm as the regulation engine, substance initiation, the academic collapse" },
     { label: "Recovered & False Memories", type: "condition", href: "/psychiatry/recovered-memories/", note: "The suggestibility science the forensic interface leans on — why leading questions contaminate, and why one skilled interview is the standard" },
-    { label: "Child Adversity Contexts — Bereavement, Adoption, Parental Illness", type: "condition", href: "/psychiatry/child-adversity-contexts/", note: "The other adversities of the pyramid's household-dysfunction tier — the wider dose meter this course's abuse layers sit inside" },
+    { label: "Child Adversity Contexts", type: "condition", href: "/psychiatry/child-adversity-contexts/", note: "The other adversities of the pyramid's household-dysfunction tier — the wider dose meter this course's abuse layers sit inside" },
     { label: "Amygdala", type: "brain-region", href: "#brain", note: "The smoke-detector the chronic threat environment recalibrates to high gain — the hypervigilant, startle-ready child" },
     { label: "Medial prefrontal cortex", type: "brain-region", href: "#brain", note: "The developing regulation canopy — the prefrontal-limbic balance that threat and deprivation sculpt, and the adult later calls depression or 'personality'" },
     { label: "Noradrenaline", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The alarm chemistry carrying the hyperarousal signature — startle, scan-behaviour, the sleep that will not come" },

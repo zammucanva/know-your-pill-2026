@@ -23,13 +23,13 @@ import type { PsychiatryCourse } from "./types";
 export const mentalHealthLawCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "mental-health-law",
-  title: "Mental Health Law — Capacity, Liability, Duty",
+  title: "Mental Health Law",
   shortName: "MH Law",
   kind: "concept",
   category: "Forensic Psychiatry",
   groupLetter: "O",
   groupName: "Forensic psychiatry",
-  learningPath: ["Psychiatry", "Forensic Psychiatry", "Mental Health Law — Capacity, Liability, Duty"],
+  learningPath: ["Psychiatry", "Forensic Psychiatry", "Mental Health Law"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -39,10 +39,10 @@ export const mentalHealthLawCourse: PsychiatryCourse = {
   primaryAudience: "resident",
 
   tagline:
-    "Mental health law asks three questions — can this person decide for herself (capacity), can she be held responsible (criminal liability), and who must answer when things go wrong (negligence and the duties of authorities) — and the modern answer to all three is functional, individual and case-by-case, never status-based: protection and rights are not opponents, and good law protects the vulnerable by respecting their personhood.",
+    "Capacity, liability and duty — answered functionally, case by case, never by status",
 
   summary:
-    "This is the law course that psychiatric training usually postpones and forensic exams force — and its whole architecture fits into three questions. Can she decide for herself? Capacity is tested functionally, never by status: competence relates to the particular decision, at the particular time it must be made, through the four abilities of Grisso and Appelbaum — understanding, appreciation, reasoning and expressing a choice — the bedside quartet the exam glosses as understand, retain, weigh and communicate. The Mental Capacity Act 2005 (MCA) built the architecture around the test: a best-interests checklist that forbids assumption-based determinations, advance statements and deputies for the substituted-judgement tier, independent advocates where carers' views are unavailable, and — the design's central wager — no initial judicial trigger but universal challengeability. Can she be held responsible? Mental disorder enters criminal law through four doors: the mental element of the offence (a complete defence if absent), the McNaghten insanity rules (rarely used, famously deaf to irresistible impulse), diminished responsibility (the abnormality of mind substantially impairing mental responsibility, converting murder to manslaughter, the impairment decided by the trier of fact), and intoxication (a defence only for crimes of specific intent — the recklessness of getting drunk supplying the guilt for the basic-intent crimes). And who must answer when things go wrong? The negligence skeleton (duty, breach, causation, damage) with Bolam's responsible-body standard and its logical-analysis exception; the psychiatric-injury rules (primary and secondary victims, the impact rule, Sion against Tredget, creeping trauma's evolution); the objective standard applied even to the mentally disordered defendant (Nettleship); and the courts' long struggle with authorities' duties (Hill's no-general-duty, Palmer's specificity, Clunis's duty to the patient, Osman's Article 6). The Indian lens is the note's own flag: the Mental Healthcare Act 2017 (MHA 2017) answering the same three questions in India's rights-based idiom — presumed capacity, advance directives, nominated representatives, and s.115's decriminalisation of attempted suicide.",
+    "This course covers the three questions of mental health law: capacity to decide, criminal liability and negligence. Each is answered functionally and case by case, through the Mental Capacity Act framework and India’s Mental Healthcare Act 2017.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -68,13 +68,13 @@ export const mentalHealthLawCourse: PsychiatryCourse = {
     { label: "The Indian answer", value: "MHA 2017", detail: "Presumed capacity, advance directives and nominated representatives, admission safeguards, the chaining and unmodified-ECT prohibitions, and s.115's decriminalisation of attempted suicide — the same three questions in India's rights-based idiom" },
   ],
   knowledgeGraph: [
-    { label: "Psychiatric Disorder & Offending — The Formulation", type: "condition", href: "/psychiatry/psychiatry-offending/", note: "The offender-formulation account this course's liability doors open onto — risk read clinically, never morally" },
-    { label: "Homicide, Mass Murder & Infanticide — The Rare Truth", type: "condition", href: "/psychiatry/homicide-infanticide/", note: "Diminished responsibility's home ground — the abnormality-of-mind formulation in its natural habitat, plus the infanticide provisions this note flags onward" },
-    { label: "Juvenile Offending — The Risk-Overlap Principle", type: "condition", href: "/psychiatry/juvenile-offending/", note: "Where the criminal-responsibility age line meets developmental immaturity — the capacity question's youngest edge" },
-    { label: "Intellectual Disability — Supports, Not Just Scores", type: "condition", href: "/psychiatry/intellectual-disability-overview/", note: "The functional test's most frequent examination hall — supported decision-making before any incapacity declaration" },
+    { label: "Psychiatric Disorder & Offending", type: "condition", href: "/psychiatry/psychiatry-offending/", note: "The offender-formulation account this course's liability doors open onto — risk read clinically, never morally" },
+    { label: "Homicide, Mass Murder & Infanticide", type: "condition", href: "/psychiatry/homicide-infanticide/", note: "Diminished responsibility's home ground — the abnormality-of-mind formulation in its natural habitat, plus the infanticide provisions this note flags onward" },
+    { label: "Juvenile Offending", type: "condition", href: "/psychiatry/juvenile-offending/", note: "Where the criminal-responsibility age line meets developmental immaturity — the capacity question's youngest edge" },
+    { label: "Intellectual Disability", type: "condition", href: "/psychiatry/intellectual-disability-overview/", note: "The functional test's most frequent examination hall — supported decision-making before any incapacity declaration" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The Clunis-type scenario's illness — the discharge, the relapse, the care programme the law will audit" },
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "The fluctuating state that makes any single capacity assessment unrepresentative — treat first, assess at the best hour" },
-    { label: "Amnesic Syndromes — The Punched-Out Memory Hole", type: "condition", href: "/psychiatry/amnesic-syndromes/", note: "The retain-and-weigh abilities' anatomy — the recording failure that decides the capacity verdict" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "The fluctuating state that makes any single capacity assessment unrepresentative — treat first, assess at the best hour" },
+    { label: "Amnesic Syndromes", type: "condition", href: "/psychiatry/amnesic-syndromes/", note: "The retain-and-weigh abilities' anatomy — the recording failure that decides the capacity verdict" },
     { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "s.115's territory — attempted suicide decriminalised as care's business, not punishment's" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The psychosis substrate — the unwellness at discharge that turns the Clunis question from hypothetical to courtroom" },
     { label: "Frontal lobes", type: "brain-region", href: "#brain", note: "The weighing machinery the reasoning ability runs on — the frontal dementias eroding judgement while the memory score holds" },

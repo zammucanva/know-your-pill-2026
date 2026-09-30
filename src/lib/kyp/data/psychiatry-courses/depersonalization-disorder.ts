@@ -26,15 +26,15 @@ export const depersonalizationDisorderCourse: PsychiatryCourse = {
   category: "Dissociative Disorder",
   groupLetter: "E",
   groupName: "Stress, trauma & dissociation-spectrum",
-  learningPath: ["Psychiatry", "Dissociation", "Depersonalization / Derealization"],
+  learningPath: ["Psychiatry", "Dissociation", "Depersonalization / Derealization Disorder"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-28",
 
   tagline:
-    "The mind's emergency detachment switch stuck in the ON position without an emergency — the person feels unreal, robotic, watching themselves from outside, or moves through a flat, dreamlike world behind glass, while KNOWING all along that this is a feeling, not a fact.",
+    "Feeling unreal or behind glass while knowing it is a feeling, not a fact",
   summary:
-    "Transient depersonalization is nearly universal — about half of all people experience a passing episode (exhaustion, fevers, long drives, grief, a bad trip), and the isolated experience is normal. The disorder begins when the detachment persists (weeks-to-years), causes real distress or impairment, and drags its anxiety-loop behind it: feeling unreal is frightening; fighting the feeling strengthens it; monitoring one's unreality ('do I feel real yet?') deepens the glass wall. That intact insight is precisely what separates DPDR from psychosis, and the fear of 'going mad' is usually the illness's loudest symptom. The clinical population is young (onset typically teens-to-twenties), often anxious, frequently post-trauma or post-cannabis, and commonly misrouted in India into two wrong clinics: the psychotic frame ('she says the world looks false — antipsychotics') or the spiritual frame ('a higher state — go deeper'), when the correct address is the anxiety-dissociation tier where explanation, attention-training and comorbidity treatment do most of the work. The course's quiet good news: this is one of the conditions where the diagnosis given calmly is itself the half-cure. Coverage includes the three gates, the cortical-limbic decoupling model in plain language, the four front-door confusions, the anxiety-maintenance loop and its CBT break, the pharmacology honesty, and the Indian-specific doors: the somatic front door, the family psychosis-suspicion run, the post-cannabis student, and the intensive-meditation tier.",
+    "Depersonalization/derealization disorder is persistent, distressing detachment from self or surroundings with insight preserved. A calm explanation plus treatment of comorbid anxiety and depression does much of the therapeutic work.",
   estimatedReadTime: "28 min",
   yieldRating: "medium",
   primaryAudience: "medical",

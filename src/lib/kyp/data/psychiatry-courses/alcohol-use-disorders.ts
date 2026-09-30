@@ -29,13 +29,13 @@ import type { PsychiatryCourse } from "./types";
 export const alcoholUseDisordersCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "alcohol-use-disorders",
-  title: "Alcohol Use Disorders — The Disease of More",
+  title: "Alcohol Use Disorders",
   shortName: "AUD",
   kind: "disorder",
   category: "Substance Use Disorder",
   groupLetter: "B",
   groupName: "Substance use disorders",
-  learningPath: ["Psychiatry", "Substance Use Disorders", "Alcohol Use Disorders — The Disease of More"],
+  learningPath: ["Psychiatry", "Substance Use Disorders", "Alcohol Use Disorders"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -45,10 +45,10 @@ export const alcoholUseDisordersCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Alcohol use disorder is a treatable brain disease of 'more' — more than intended, more often, with more damage — whose four emergencies (withdrawal syndrome, withdrawal seizures, delirium tremens, Wernicke encephalopathy) kill people, whose quiet damages (liver, marriage, driving) break families, and whose treatment works best when medicines that reduce relapse are combined with a plan that rebuilds the days, the cues and the pain underneath.",
+    "The disease of more: more than intended, more often, with more damage — and treatable",
 
   summary:
-    "This is the disease of more, and it is treatable at every stage — the fact most worth carrying into any OPD. The spectrum runs from hazardous use (risk without dependence yet) through harmful use (damage present, control intact) to dependence, where the brain has recalibrated: tolerance, withdrawal, craving and the loss of control the dependent drinker knows as the first drink problem — one drink reliably triggering the search for the next several. Nobody walks in saying 'I drink too much': the illness announces itself as gastritis, insomnia, 'nerves', a liver check-up, a family dispute or a work-performance letter, and the two shame-free questions asked behind every disguise are the highest-yield instrument in Indian medicine. Four emergencies define the sharp end — the withdrawal syndrome, withdrawal seizures, delirium tremens and Wernicke encephalopathy — and the withdrawal ladder carries the hours every exam and every casualty clock runs on: 6–12 h the shakes, 12–24 h hallucinosis, 6–48 h seizures, 48–96 h the DT storm (mortality 1–5% with treatment, far higher without). Two rules protect lives across all of them: thiamine before any glucose — B1 before D5 — and respect for kindling, the way each successive withdrawal fires earlier and worse than the last. The chronic end is the harm inventory: liver (fatty → hepatitis → cirrhosis), pancreas, gastritis and the upper-GI cancers, neuropathy, myopathy, cardiomyopathy, hypertension, the dementia spectrum, sabotaged TB treatment and sexual dysfunction — with GGT and CDT the honest laboratory informants of recent consumption. Treatment is a five-floor plan: the ten-minute brief intervention for hazardous use and the stage-matching that decides who needs the rest; the detoxification decision with the symptom-triggered benzodiazepine protocol (home with family supervision and daily contact, or inpatient for past seizures or DTs, concurrent illness, pregnancy, psychiatric instability, homelessness, polysubstance, failed home attempts — chlordiazepoxide or diazepam where the liver allows, lorazepam in significant liver impairment, with thiamine first and throughout); the three relapse-prevention medicines (naltrexone 50 mg/day with the codeine/tramadol check, acamprosate 666 mg three times daily for the abstinent-motivated, disulfiram 250–500 mg as the family-held commitment device) that roughly double abstinence odds; psychosocial recovery with the written family contract — medicine-holder, money rules, protected activity, calm-fast relapse response, the caregiver's own health; and the riders-and-complications track with long-term monitoring. The Indian layer is decisive: one in three adult men drinks, often in the low-frequency/high-intensity quarter-binge pattern that makes unit-counting a quarters-and-pints craft rather than wine-glass arithmetic; 400 million people worldwide live with alcohol use disorders and alcohol contributes to over 2.6 million deaths a year; and the Indian family, engaged with a written contract in week one rather than 'family counselling' at the third relapse, is the treatment infrastructure the whole plan runs on — with PAWS, the weeks-to-months grey zone that typically ends by 3–6 months, named and dated so it stops silently ending recoveries.",
+    "Alcohol use disorder runs from hazardous drinking through harmful use to dependence, where tolerance, withdrawal and lost control take over. Treatment works at every stage — brief interventions, supervised detoxification, and relapse-prevention medicines that roughly double abstinence odds.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -72,13 +72,13 @@ export const alcoholUseDisordersCourse: PsychiatryCourse = {
     { label: "The disguise problem", value: "'Gastritis', 'insomnia', 'nerves'", detail: "Nobody walks in saying 'I drink too much' — the two shame-free questions (tolerance; used-more-than-meant) asked behind every presenting disguise catch the spectrum years before self-disclosure; NASHA 14446 is the national helpline spine" },
   ],
   knowledgeGraph: [
-    { label: "Substance Use — The Reward Hijack", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The umbrella: the three currencies, the re-set thermostat, and the six-step skeleton this course's five floors hang from" },
-    { label: "Opioid Use Disorders — The Medicine That Holds the Door", type: "condition", href: "/psychiatry/opioid-use-disorders/", note: "The codeine/tramadol co-misuse that must be excluded before naltrexone — and the withdrawal that is miserable-not-lethal beside alcohol's killing ladder" },
-    { label: "Alcohol-Related Dementia — The Engine You Can Switch Off", type: "condition", href: "/psychiatry/alcohol-related-dementia/", note: "The chronic harm inventory's cognitive floor — the five damage channels and the honest reversibility map" },
-    { label: "Amnesic Syndromes — The Punched-Out Memory Hole", type: "condition", href: "/psychiatry/amnesic-syndromes/", note: "The Wernicke-Korsakoff programme in full — B1 before D5's home ground, the thiamine schedules, the family-as-hippocampus system" },
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "The DT storm's differential home — the fluctuating attention and autonomic signs that separate the killing rung from functional psychosis" },
+    { label: "Substance Use", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The umbrella: the three currencies, the re-set thermostat, and the six-step skeleton this course's five floors hang from" },
+    { label: "Opioid Use Disorders", type: "condition", href: "/psychiatry/opioid-use-disorders/", note: "The codeine/tramadol co-misuse that must be excluded before naltrexone — and the withdrawal that is miserable-not-lethal beside alcohol's killing ladder" },
+    { label: "Alcohol-Related Dementia", type: "condition", href: "/psychiatry/alcohol-related-dementia/", note: "The chronic harm inventory's cognitive floor — the five damage channels and the honest reversibility map" },
+    { label: "Amnesic Syndromes", type: "condition", href: "/psychiatry/amnesic-syndromes/", note: "The Wernicke-Korsakoff programme in full — B1 before D5's home ground, the thiamine schedules, the family-as-hippocampus system" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "The DT storm's differential home — the fluctuating attention and autonomic signs that separate the killing rung from functional psychosis" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The co-travelling rider — treated after the week 3–4 abstinence rule if it persists, never diagnosed inside the grey window" },
-    { label: "Insomnias — Chronic Insomnia Disorder", type: "condition", href: "/psychiatry/insomnia/", note: "The commonest disguise and the relapse engine — the sleep the drink lends with one hand and fragments with the other" },
+    { label: "Insomnia", type: "condition", href: "/psychiatry/insomnia/", note: "The commonest disguise and the relapse engine — the sleep the drink lends with one hand and fragments with the other" },
     { label: "GABA", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The brake alcohol presses, then removes — the withdrawal ladder's chemistry from the first shake to the storm" },
     { label: "Alcohol", type: "condition", href: "/substances/alcohol", note: "The substance page — the depressant whose withdrawal kills; India's largest substance burden by far, driven by volume" },
     { label: "Mirtazapine", type: "drug", href: "/drugs/mirtazapine/", note: "Where depression co-travels with the sleepless grey — the rider tier, honestly comorbidity care, never alcohol treatment" },

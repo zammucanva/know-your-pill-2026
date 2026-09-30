@@ -21,13 +21,13 @@ import type { PsychiatryCourse } from "./types";
 export const autismCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "autism",
-  title: "Autism Spectrum Disorder — The Prediction Engine",
+  title: "Autism Spectrum Disorder",
   shortName: "ASD",
   kind: "disorder",
   category: "Child & Adolescent Psychiatry",
   groupLetter: "L",
   groupName: "Child & adolescent psychiatry",
-  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Autism Spectrum Disorder — The Prediction Engine"],
+  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Autism Spectrum Disorder"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -37,10 +37,10 @@ export const autismCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "The autistic brain leans on prediction less and on raw detail more — the world arrives less filtered, less pre-formatted — so the child does the rational thing and anchors to the predictable: the same route, the same plate, the same clip. Insistence on sameness is not stubbornness; it is self-built scaffolding against a world that feels like static, and the clinical task is to build prediction inside the social stream, then stretch it.",
+    "The prediction engine — sameness as self-built scaffolding against an unfiltered world",
 
   summary:
-    "Autism is a difference in how the brain develops its social-communication wiring and its handling of sensation, attention and routine — present from early childhood, lifelong, and wildly variable in profile: a non-speaking child with a strong desire to connect and a fluent-speaking professor who cannot read social subtext are both autistic, which is what 'spectrum' actually means. The clinical architecture runs on two channels: the sharing channel (pointing, showing, gaze in service of communication, to-and-fro conversation) and the predictability channel (intense focused interests, repetitive play, sensory over- and under-reaction, distress at change) — DSM-5 and ICD-11 require both, plus the sensory clause inside the second, present from the early developmental period (possibly masked until demands exceed capacity), causing impairment, and never 'explained away' by intellectual disability, which is judged independently and coexists in a third to half of diagnosed children. The mechanism course teaches four stories in plain words — the prediction engine (sameness as scaffolding against static), the sensory gain dial (the mixer-grinder that is genuinely painful, the under-registered name-call), the attention tunnel (monotropism: the beam that makes both the intense interest and the missed wave), and the connectivity pattern (slow, explicit, rewarded imitation learning — the reason faces and feelings CAN be taught as skills). The discipline of diagnosis is clinical — no blood test — anchored on the 18-month red-flag check (Name, Point, Show, Pretend; fail one, refer now, hearing test first, never 'wait till three'), because the years from 1 to 4 are the brain's most buildable window and intervention inside them changes trajectories. The management grid is honest about what works: 15–25 structured weekly hours of naturalistic developmental-behavioural intervention, communication opened through whatever channel works (AAC/PECS when speech is delayed — giving the channel REDUCES meltdowns), occupational-sensitory work, visual structure used as medicine, education placement decided by function not stigma, and pharmacotherapy ONLY for defined comorbid symptoms. The India layer is load-bearing: a million-plus under-identified children (roughly 1 in 100 in the NIMHANS community study, against about 1 in 36 in US surveillance), the two lost years between parental concern and specialist confirmation, the therapy desert outside metros with its middle-class-breaking ₹6,000–30,000/month session stacks — and the workable rails: parent-mediated programmes validated in Indian conditions (NIMHANS ComDEAL and WHO CST, delivered in Indian districts), RBSK District Early Intervention Centres, RPwD 2016 entitlements, the National Trust framework with Niramaya insurance, and parent organisations that navigate what no clinic can. And the girl who masks — school-fine, home-collapsing, diagnosed at 13 — is taught as a clinical alert in her own right, because the Dr Jekyll/Mr Hyde report is a presentation, not a rarity.",
+    "Autism is a lifelong, early-onset difference in social communication and in the handling of sensation and routine, with profiles ranging from non-speaking to highly fluent. The 18-month red-flag check and early structured intervention change trajectories.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -65,13 +65,13 @@ export const autismCourse: PsychiatryCourse = {
     { label: "The Indian spine", value: "ComDEAL, WHO CST, RBSK/DEIC, RPwD, National Trust", detail: "Parent-training as the scalable delivery channel (NIMHANS ComDEAL; WHO CST delivered in Indian districts with a tele-version); free entry through District Early Intervention Centres; RPwD 2016 entitlements, National Trust guardianship and the genuine ₹1-lakh-cover Niramaya insurance" },
   ],
   knowledgeGraph: [
-    { label: "ADHD — The Brakes and the Engine", type: "condition", href: "/psychiatry/adhd/", note: "The commonest riding comorbidity — inattention and hyperactivity layered on the autism profile, each treated on its own terms, methylphenidate/atomoxetine titrated carefully" },
-    { label: "Intellectual Disability — Supports, Not Just Scores", type: "condition", href: "/psychiatry/intellectual-disability-overview/", note: "A third to half of autistic children carry it — each judged independently; one never excludes the other, and the supports-not-scores frame fits both" },
-    { label: "Genetic Syndromes in ID — The Psychiatry Each Carries", type: "condition", href: "/psychiatry/id-syndromes/", note: "Fragile X, tuberous sclerosis, Rett and chromosome 15 duplications — the syndromic layer behind selected genetic referrals (karyotype, fragile X, CGH microarray)" },
-    { label: "Developmental Disorders — The Learning Channels", type: "condition", href: "/psychiatry/developmental-disorders/", note: "The family frame: the shared early-identification architecture and the co-travelling learning differences of the early-years window" },
-    { label: "Child Assessment & Epidemiology — The Prevalence Movers", type: "condition", href: "/psychiatry/child-assessment-epidemiology/", note: "The developmental-history craft and the survey machinery behind the rising measured prevalence — what moved and why it is not an epidemic" },
-    { label: "Child Anxiety — The School-Refusal Engines", type: "condition", href: "/psychiatry/child-anxiety/", note: "The adolescent anxiety rider and the demand-heavy school years — the costume that 'sudden stubbornness' wears in the autistic adolescent" },
-    { label: "Insomnias — Chronic Insomnia Disorder", type: "condition", href: "/psychiatry/insomnia/", note: "The chronic, under-treated settling and night-waking problems — behavioural programme first, melatonin the best-evidenced pharmacology when needed" },
+    { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The commonest riding comorbidity — inattention and hyperactivity layered on the autism profile, each treated on its own terms, methylphenidate/atomoxetine titrated carefully" },
+    { label: "Intellectual Disability", type: "condition", href: "/psychiatry/intellectual-disability-overview/", note: "A third to half of autistic children carry it — each judged independently; one never excludes the other, and the supports-not-scores frame fits both" },
+    { label: "Genetic Syndromes in ID", type: "condition", href: "/psychiatry/id-syndromes/", note: "Fragile X, tuberous sclerosis, Rett and chromosome 15 duplications — the syndromic layer behind selected genetic referrals (karyotype, fragile X, CGH microarray)" },
+    { label: "Developmental Disorders", type: "condition", href: "/psychiatry/developmental-disorders/", note: "The family frame: the shared early-identification architecture and the co-travelling learning differences of the early-years window" },
+    { label: "Child Assessment & Epidemiology", type: "condition", href: "/psychiatry/child-assessment-epidemiology/", note: "The developmental-history craft and the survey machinery behind the rising measured prevalence — what moved and why it is not an epidemic" },
+    { label: "Child Anxiety", type: "condition", href: "/psychiatry/child-anxiety/", note: "The adolescent anxiety rider and the demand-heavy school years — the costume that 'sudden stubbornness' wears in the autistic adolescent" },
+    { label: "Insomnia", type: "condition", href: "/psychiatry/insomnia/", note: "The chronic, under-treated settling and night-waking problems — behavioural programme first, melatonin the best-evidenced pharmacology when needed" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The anxiety rider's chemistry and the long-standing serotonin line in autism research — the SSRI tier's target, careful and low-start (activation risk)" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The irritability tier's target — risperidone and aripiprazole, the two best-evidenced drugs in this condition, and their weight/sedation/prolactin monitoring" },
     { label: "The social-brain network", type: "brain-region", href: "#brain", note: "The distributed face-processing, gaze-reading and social-attention machinery that coordinates differently — eye contact as a processing trade-off, not simple deficit" },

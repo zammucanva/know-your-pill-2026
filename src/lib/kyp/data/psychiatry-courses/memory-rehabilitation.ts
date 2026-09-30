@@ -22,7 +22,7 @@ import type { PsychiatryCourse } from "./types";
 export const memoryRehabilitationCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "memory-rehabilitation",
-  title: "Memory Rehabilitation — The Engineering Discipline",
+  title: "Memory Rehabilitation",
   shortName: "Memory rehab",
   kind: "concept",
   category: "Neurocognitive Disorder",
@@ -38,10 +38,10 @@ export const memoryRehabilitationCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Memory rehabilitation is not an attempt to regrow a damaged hippocampus; it is the engineering discipline that teaches the person and the household to run daily life on the memory that remains — external systems that remember FOR the patient, learning methods that work WITH amnesia instead of against it, and environments arranged so that failing memory is never the thing that decides safety.",
+    "The engineering discipline — compensation, not restoration, for the memory that remains",
 
   summary:
-    "The founding honesty of this field: forty years of 'memory training' drills (lists, tables, computer games) have essentially FAILED to restore lost storage — the practiced skills improve and nearby life stays broken. What genuinely works is COMPENSATION: the prosthetic tier (diaries, phones-as-brain, calendars, the one-place-one-object doctrine — systems that remember FOR the patient); the method tier (errorless learning and spaced retrieval, techniques built on how amnesic brains actually form traces — the amnesic recorder stores its own mistakes, so the guessing is eliminated, not corrected); the environmental tier (predictable routine and physical scaffolding — every cue the environment carries is memory the person need not hold); and the human tier (the family trained as a memory team without becoming a cage). The assessment that must precede them all: WHICH memory is broken — storage (Alzheimer's, Korsakoff: prescribe the prosthetics, not the drills), retrieval (TBI, depression, ageing: cue-based strategies genuinely help), or prospective (the 'remembering to remember' that is most functionally devastating and most treatable: never trained in the abstract, always BUILT — alarms, one-place rituals, the when-then grammar). The Indian layer is the course's quiet triumph: the household already runs on prosthetics — the wall calendar with festival dates, the steel-tiffin system, the knot in the sari pallu, the shop ledger — so the clinician's best move is to FORMALISE the existing system rather than import an alien one; the cheapest effective rehabilitation programme in the world is a wall calendar, a routine, and a trained spouse, and the young grandchild who sets up grandmother's medicine alarm in ten minutes is the country's de facto rehabilitation worker.",
+    "Memory rehabilitation teaches the person and household to run daily life on the memory that remains. Restoration drills largely fail, so effective programmes build external prosthetics, errorless learning methods and supportive environments matched to which memory system is broken.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -65,13 +65,13 @@ export const memoryRehabilitationCourse: PsychiatryCourse = {
     { label: "The Indian tier", value: "The household already runs on prosthetics", detail: "The wall calendar, the tiffin system, the knot in the pallu, the shop ledger — the clinician formalises the existing system rather than importing an alien one; the grandchild setting up the medicine alarm is the country's de facto rehab worker" },
   ],
   knowledgeGraph: [
-    { label: "Amnesic Syndromes — The Punched-Out Memory Hole", type: "condition", href: "/psychiatry/amnesic-syndromes/", note: "The storage-broken archetypes this course engineers around: the procedural gift preserved, the routine-and-labels home, the family as hippocampus" },
-    { label: "Alzheimer's Disease & Dementia — The Gradual Erasure", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The maintenance-and-function tier for MCI and early disease — the window before the household has replaced the person's function wholesale" },
-    { label: "Traumatic Brain Injury Neuropsychiatry — The Invisible Triad", type: "condition", href: "/psychiatry/tbi-neuropsychiatry/", note: "The retrieval-weak archetypes — the cue-based strategy tier's beneficiaries; the prosthetic canon's home population" },
-    { label: "Managing Dementia — The Five Floors", type: "condition", href: "/psychiatry/dementia-management/", note: "The umbrella this course's engineering serves — Floor 4's method tier and the family programme's skills package" },
-    { label: "Vascular Dementia — The Staircase Decline", type: "condition", href: "/psychiatry/vascular-dementia/", note: "The executive-first profile the prosthetic environment scaffolds between the steps" },
+    { label: "Amnesic Syndromes", type: "condition", href: "/psychiatry/amnesic-syndromes/", note: "The storage-broken archetypes this course engineers around: the procedural gift preserved, the routine-and-labels home, the family as hippocampus" },
+    { label: "Alzheimer's Disease & Dementia", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The maintenance-and-function tier for MCI and early disease — the window before the household has replaced the person's function wholesale" },
+    { label: "Traumatic Brain Injury Neuropsychiatry", type: "condition", href: "/psychiatry/tbi-neuropsychiatry/", note: "The retrieval-weak archetypes — the cue-based strategy tier's beneficiaries; the prosthetic canon's home population" },
+    { label: "Managing Dementia", type: "condition", href: "/psychiatry/dementia-management/", note: "The umbrella this course's engineering serves — Floor 4's method tier and the family programme's skills package" },
+    { label: "Vascular Dementia", type: "condition", href: "/psychiatry/vascular-dementia/", note: "The executive-first profile the prosthetic environment scaffolds between the steps" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The retrieval-weak mimic — the effort-dependent encoding failure that cueing and treatment restore" },
-    { label: "Insomnias — Chronic Insomnia Disorder", type: "condition", href: "/psychiatry/insomnia/", note: "The sleep tier that carries the consolidation this course's methods depend on" },
+    { label: "Insomnia", type: "condition", href: "/psychiatry/insomnia/", note: "The sleep tier that carries the consolidation this course's methods depend on" },
     { label: "Acetylcholine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The honest boundary: the pharmacology lives in the disease courses — this course's prescription pad is a diagram" },
     { label: "Hippocampus", type: "brain-region", href: "#brain", note: "The recording room this course routes around — the storage tier's broken floor" },
     { label: "Frontal lobes", type: "brain-region", href: "#brain", note: "The retrieval-and-strategy seat — the cue-based tier's target when the recording is intact" },

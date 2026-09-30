@@ -23,13 +23,13 @@ import type { PsychiatryCourse } from "./types";
 export const familyTherapyCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "family-therapy",
-  title: "Family Therapy — Circular Causality",
+  title: "Family Therapy",
   shortName: "Family therapy",
   kind: "concept",
   category: "Treatment Methods",
   groupLetter: "P",
   groupName: "Treatment methods",
-  learningPath: ["Psychiatry", "Treatment Methods", "Family Therapy — Circular Causality"],
+  learningPath: ["Psychiatry", "Treatment Methods", "Family Therapy"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -39,10 +39,10 @@ export const familyTherapyCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Family therapy treats the relationship system around the patient instead of (or alongside) the patient alone — not because families cause schizophrenia (they do not), but because symptoms live, breathe and relapse inside households; map the pattern rather than the culprit, re-arrange the interactions rather than the personalities, and in its evidence-based psychoeducational form you hold one of the most cost-effective relapse-prevention treatments psychiatry owns.",
+    "The relationship system around the patient — circular causality, not family blame",
 
   summary:
-    "This is the discipline that treats the room, not only the patient in it. Its founding shift is circular causality: medicine asks what agent caused this disease, and the family teaches the reflexive question — what does each person's response do to the next person's response, and back? A father criticises because the son lies idle; the son withdraws because of the criticism; the withdrawal terrifies the mother, who scolds the father and over-protects the son — nobody in that house is behaving badly, everybody is behaving anxiously, and the anxiety has organised itself into a pattern the illness finds habitable. The shift is emphatically NOT the discredited claim that families cause schizophrenia; the genetic and neurodevelopmental causation stands, and the pattern is the disease's climate, not its origin — climates being treatable even when origins are not. The measurable edge of the climate is expressed emotion (EE): the density of critical comments, hostility and emotional over-involvement in a standard relative's interview, and the arithmetic is among psychiatry's most replicated — high-EE households with schizophrenia relapse roughly two to three times as often over nine months to two years, while multi-session family intervention that is practical in method and includes communication and problem-solving practice roughly halves one-to-two-year relapse, lowering caregiver depression in the same motion. The schools are learned in one breath — structural (Minuchin), strategic (Haley), Milan systemic, transgenerational (Bowen and the genogram), and the behavioural stream that merged into psychoeducation (Falloon, Anderson-Hogarty) — but the clinical spine is the four-rung ladder: the single-session family meeting any clinician runs in 30–45 minutes, the 6–12-session psychoeducation programme, the specialist referral, and the family's own institutions. The Indian layer is not an add-on: the family is the country's primary mental-health infrastructure — its ambulance, its ward, its bank — and the NIMHANS family ward built the caregiver into the admission itself; the Chennai/SCARF and Vellore trials then showed that supervised trained lay workers deliver the relapse reduction without psychiatrists, the finding that seeded WHO community guidance. The honest EE footnotes — several Indian samples reading low-EE despite high contact hours — are taught as what they are: a stress-metric's cultural calibration, never an Indian-family defect.",
+    "Family therapy treats the relationship system around the patient rather than the patient alone. This course covers circular causality, expressed emotion, the major schools, and a four-rung ladder of family work any clinician can run.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -66,15 +66,15 @@ export const familyTherapyCourse: PsychiatryCourse = {
   ],
   knowledgeGraph: [
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The EE arithmetic's home ground — the household as a dose-level variable in relapse, and family intervention among the most replicated results in the illness's management" },
-    { label: "Anorexia Nervosa — When Discipline Becomes Starvation", type: "condition", href: "/psychiatry/anorexia-nervosa/", note: "Family-based treatment (the Maudsley/FBT model) is first-line in adolescent anorexia — parents empowered as the refeeding team" },
-    { label: "ADHD — The Brakes and the Engine", type: "condition", href: "/psychiatry/adhd/", note: "Behavioural parent training: the non-pharmacological first-line, the parent as the patient-who-delivers" },
-    { label: "Conduct Disorders — The Empathy Specifier", type: "condition", href: "/psychiatry/conduct-disorder/", note: "The parent-training tier again — the family work that travels with the childhood behavioural disorders" },
+    { label: "Anorexia Nervosa", type: "condition", href: "/psychiatry/anorexia-nervosa/", note: "Family-based treatment (the Maudsley/FBT model) is first-line in adolescent anorexia — parents empowered as the refeeding team" },
+    { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "Behavioural parent training: the non-pharmacological first-line, the parent as the patient-who-delivers" },
+    { label: "Conduct Disorders", type: "condition", href: "/psychiatry/conduct-disorder/", note: "The parent-training tier again — the family work that travels with the childhood behavioural disorders" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "Family-focused therapy (Miklowitz) — the adjacent strong tier of family intervention evidence" },
-    { label: "Managing Dementia — The Five Floors", type: "condition", href: "/psychiatry/dementia-management/", note: "Caregiver psychoeducation for dementia and chronic illness — burden reduction, delayed institutionalisation, BPSD management" },
-    { label: "Couples Therapy — The Decentred Dialogue", type: "condition", href: "/psychiatry/couples-therapy/", note: "The sister discipline — the couples stream (behavioural and emotionally-focused) carrying the evidence for depression with relationship distress" },
-    { label: "Group Therapy — Yalom's Curative Factors", type: "condition", href: "/psychiatry/group-therapy/", note: "Rung 4's engine — the SHG-logic caregiver circles and multi-family groups on which India's family-work hopes realistically scale" },
-    { label: "Psychiatric Rehabilitation — The Well Part of the Ego", type: "condition", href: "/psychiatry/psychiatric-rehabilitation/", note: "The community-delivery frame — home-based family intervention by trained lay workers as the rehabilitation tier's Indian evidence" },
-    { label: "Mental Health Law — Capacity, Liability, Duty", type: "condition", href: "/psychiatry/mental-health-law/", note: "The Mental Healthcare Act 2017 consent rule — the ethical spine of every multi-stakeholder family session" },
+    { label: "Managing Dementia", type: "condition", href: "/psychiatry/dementia-management/", note: "Caregiver psychoeducation for dementia and chronic illness — burden reduction, delayed institutionalisation, BPSD management" },
+    { label: "Couples Therapy", type: "condition", href: "/psychiatry/couples-therapy/", note: "The sister discipline — the couples stream (behavioural and emotionally-focused) carrying the evidence for depression with relationship distress" },
+    { label: "Group Therapy", type: "condition", href: "/psychiatry/group-therapy/", note: "Rung 4's engine — the SHG-logic caregiver circles and multi-family groups on which India's family-work hopes realistically scale" },
+    { label: "Psychiatric Rehabilitation", type: "condition", href: "/psychiatry/psychiatric-rehabilitation/", note: "The community-delivery frame — home-based family intervention by trained lay workers as the rehabilitation tier's Indian evidence" },
+    { label: "Mental Health Law", type: "condition", href: "/psychiatry/mental-health-law/", note: "The Mental Healthcare Act 2017 consent rule — the ethical spine of every multi-stakeholder family session" },
   ],
 
   /* ---- Lesson 2: Mechanism & Neuroscience ---- */

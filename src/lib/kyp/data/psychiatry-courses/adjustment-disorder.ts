@@ -32,9 +32,9 @@ export const adjustmentDisorderCourse: PsychiatryCourse = {
   lastReviewed: "2026-09-28",
 
   tagline:
-    "A disproportionately intense emotional or behavioural reaction to an identifiable life change — the transfer, the exam failure, the new diagnosis, the broken engagement — that begins within three months, causes real distress, but never grows into a full depressive, anxiety or psychotic episode.",
+    "Sub-syndromal distress after an identifiable life change — never safe to ignore",
   summary:
-    "Between ordinary everyday coping ('I'm stressed') and full mental illness ('major depression') lies a huge middle territory, and adjustment disorder is its clinical name. The trigger is knowable, visible, datable: the transfer order, the board-exam failure, the new dialysis schedule, the move to a strange city. The response is more than the situation deserves in intensity or duration by ordinary standards — tearful collapse, insomnia, inability to attend the office, quarrels, withdrawal — yet falls short of a full syndromal picture when you probe properly. It is one of the most commonly diagnosed psychiatric categories in the world precisely because life keeps happening to people, and in Indian practice it labels the anxious employee, the homesick student, the newly diagnosed patient, the retired officer. The essence of management is time-limited support, problem-solving and restoring function — not long-term medication. But it deserves clinical respect: suicide risk in adjustment disorder is elevated several-fold versus the general population (the register-based, examinable fact), and a missed evolving depression hiding under the label is the main trap. This course covers the two timing rules, the sub-syndromal clause, the subtype architecture, the problem-solving first-line plan, and the Indian contexts: migrating students, transfer orders, arranged-marriage ruptures, bluntly delivered diagnoses and retirement identity collapse.",
+    "Adjustment disorder names the disproportionately intense emotional or behavioural response to an identifiable life change that falls short of a full syndromal illness. Management is time-limited support and problem-solving, but the elevated suicide risk and the depression hiding underneath demand respect.",
   estimatedReadTime: "28 min",
   yieldRating: "high",
   primaryAudience: "medical",
@@ -64,7 +64,7 @@ export const adjustmentDisorderCourse: PsychiatryCourse = {
     { label: "Post-Traumatic Stress Disorder (PTSD)", type: "condition", href: "/psychiatry/ptsd/", note: "Was the stressor death-threat-and-horror? Then the PTSD cluster architecture, not adjustment" },
     { label: "Bereavement & Complicated Grief", type: "condition", href: "/psychiatry/bereavement/", note: "Death of an attachment figure has its own frame — grief waves, not disorder" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "Five symptoms, two weeks, neurovegetative collapse — the syndrome you must actively exclude before writing 'adjustment'" },
-    { label: "Schizoaffective & Schizotypal", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "The boundary reference for mood-plus-psychosis — adjustment reactions are never psychotic" },
+    { label: "Schizoaffective & Schizotypal Disorders", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "The boundary reference for mood-plus-psychosis — adjustment reactions are never psychotic" },
     { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "The safety clause of every adjustment-disorder assessment — several-fold elevated risk" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The system the optional short SSRI course rides on when function fails to return" },
     { label: "Prefrontal Cortex", type: "brain-region", href: "#brain", note: "The problem-solving executive under a load it was never rated for" },

@@ -26,13 +26,13 @@ import type { PsychiatryCourse } from "./types";
 export const idTreatmentServicesCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "id-treatment-services",
-  title: "ID Treatment & Services — The Life-Course Architecture",
+  title: "ID Treatment & Services",
   shortName: "ID Services",
   kind: "concept",
   category: "Intellectual Disability",
   groupLetter: "N",
   groupName: "Intellectual disability",
-  learningPath: ["Psychiatry", "Intellectual Disability", "ID Treatment & Services — The Life-Course Architecture"],
+  learningPath: ["Psychiatry", "Intellectual Disability", "ID Treatment & Services"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -42,10 +42,10 @@ export const idTreatmentServicesCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "No other corner of psychiatry depends so completely on teamwork: the treatment is a multi-method toolkit — behavioural, cognitive-behavioural, psychodynamic, pharmacological — the services are the machinery that delivers it, and the family is the backbone that carries it, grieving, adjusting and ageing alongside the person from diagnosis to double ageing.",
+    "Treatment, services and family support across the life course of intellectual disability",
 
   summary:
-    "Four Oxford chapters combine into one architecture, and this course walks it floor by floor. The toolkit tier: behavioural programmes — forced toward observable behaviour by the communication barrier — are among the most research-backed treatments in psychiatry and produce profound, rapid change; they run on two complementary engines, teaching appropriate skills and unlearning maladaptive behaviour, and replacement beats removal because the behaviour was doing a job. Cognitive-behavioural work arrives adapted: anger management as the flagship, taught through three ascending levels from general clinical care to individualised anger treatment, because anger in this population is an excessive rather than a deviant response, often organic in basis and sometimes panic in disguise — in autism the 'aggression' may simply be the crowded hall exceeding the sensory budget. Psychodynamic therapy survives as six ID-specific adaptations built on loss, concrete communication and barely-established confidentiality. The pharmacological audit is the most honest in medicine: drugs widely used off-label for non-diagnostic purposes, prescribing no less in the community than in institutions, reduced only by determined rationalisation — so the rules are start low, go slow, expect the paradox, one change at a time, and the prescriber consciously carrying the consent responsibility the patient cannot. The life-course tier: the transition cliff at school-leaving — abrupt, imposed, traumatic, with those who have mental health problems or aggressive challenging behaviour the LEAST likely to receive support; the ageing tier — rising longevity, the Down syndrome–Alzheimer link with neuropathology universal but clinical dementia not inevitable, and the double-ageing household where an elderly carer cares for an ageing 'child'; and the family tier — diagnosis as a grief sequence and informal support more efficacious than formal services for many families. The services tier: two models — generic ID community teams and specialist mental health services — organised through three phases (assessment, intervention, follow-up), evaluated by the Matrix Model, delivered through ordinary housing, supported living and integrated employment, and rate-limited by staff training, whose core message is simply that a person with ID may suffer mental illness like anyone else. The Indian translation is direct: the National Trust Act's guardianship layer, RPwD entitlements, Anganwadi-based early detection, the family as the de facto service system — and the family-plus-NGO scaling path with Tele-MANAS-style professional backbones.",
+    "This course maps the treatment methods, service models and family support that carry intellectual disability across the life course. A person with intellectual disability may develop mental illness like anyone else, and services must stay accessible through transition and ageing.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -71,12 +71,12 @@ export const idTreatmentServicesCourse: PsychiatryCourse = {
     { label: "The rate-limiter", value: "Staff training", detail: "First-level care workers receive little or no training in the psychiatric aspects of ID, so illness goes unrecognised; the core curriculum: a person with ID may suffer mental illness like anyone else, the therapeutic options, and the dispelling of myths (medication-is-failure)" },
   ],
   knowledgeGraph: [
-    { label: "Intellectual Disability — Supports, Not Just Scores", type: "condition", href: "/psychiatry/intellectual-disability-overview/", note: "The condition this architecture serves — the supports paradigm the services exist to deliver" },
-    { label: "Genetic Syndromes in ID — The Psychiatry Each Carries", type: "condition", href: "/psychiatry/id-syndromes/", note: "The syndrome-specific psychiatry (Down syndrome's Alzheimer risk, Prader–Willi's compulsive food-seeking) the treatment tiers must know" },
-    { label: "Dual Diagnosis in ID — Beyond Diagnostic Overshadowing", type: "condition", href: "/psychiatry/id-dual-diagnosis/", note: "The planning problem the two service models grew to answer — illness hiding behind the disability" },
-    { label: "Mental Health Law — Capacity, Liability, Duty", type: "condition", href: "/psychiatry/mental-health-law/", note: "The capacity and consent frame the ID prescriber works inside — and the National Trust guardianship layer's legal cousin" },
-    { label: "Alzheimer's Disease & Dementia — The Gradual Erasure", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The middle-age dementia risk of Down syndrome — neuropathology universal, clinical dementia not inevitable" },
-    { label: "Managing Dementia — The Five Floors", type: "condition", href: "/psychiatry/dementia-management/", note: "The symptomatic planning tier for the ageing person with ID — night-lights, single-step instructions, the restructured routine" },
+    { label: "Intellectual Disability", type: "condition", href: "/psychiatry/intellectual-disability-overview/", note: "The condition this architecture serves — the supports paradigm the services exist to deliver" },
+    { label: "Genetic Syndromes in ID", type: "condition", href: "/psychiatry/id-syndromes/", note: "The syndrome-specific psychiatry (Down syndrome's Alzheimer risk, Prader–Willi's compulsive food-seeking) the treatment tiers must know" },
+    { label: "Dual Diagnosis in ID", type: "condition", href: "/psychiatry/id-dual-diagnosis/", note: "The planning problem the two service models grew to answer — illness hiding behind the disability" },
+    { label: "Mental Health Law", type: "condition", href: "/psychiatry/mental-health-law/", note: "The capacity and consent frame the ID prescriber works inside — and the National Trust guardianship layer's legal cousin" },
+    { label: "Alzheimer's Disease & Dementia", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The middle-age dementia risk of Down syndrome — neuropathology universal, clinical dementia not inevitable" },
+    { label: "Managing Dementia", type: "condition", href: "/psychiatry/dementia-management/", note: "The symptomatic planning tier for the ageing person with ID — night-lights, single-step instructions, the restructured routine" },
     { label: "Obsessive-Compulsive Disorder (OCD)", type: "condition", href: "/psychiatry/ocd/", note: "The serotonergic tier's cleanest signal — OCD symptoms in ID responding to serotonergic drugs" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The compulsive-routine and depression rider's chemistry — with the paradoxical anxiety increase as partial serotonin syndrome" },
     { label: "Frontal lobes", type: "brain-region", href: "#brain", note: "The under-built executive tier — behavioural programmes and structured environments acting as the external frontal lobe" },

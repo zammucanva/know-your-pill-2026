@@ -25,15 +25,15 @@ export const gadCourse: PsychiatryCourse = {
   category: "Anxiety Disorder",
   groupLetter: "F",
   groupName: "Anxiety disorders",
-  learningPath: ["Psychiatry", "Anxiety Disorders", "GAD"],
+  learningPath: ["Psychiatry", "Anxiety Disorders", "Generalized Anxiety Disorder (GAD)"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-28",
 
   tagline:
-    "The worry engine with no off-switch: uncontrollable, all-domain worry running for months and years while the body pays the bill in tension, gut complaints and sleepless nights.",
+    "The worry engine with no off-switch: uncontrollable worry, tension and sleepless nights",
   summary:
-    "Ordinary worry targets a real problem, resolves, and releases the body. In GAD the worry is general (money, health, children, work, the future — one topic handed off to the next), uncontrollable (starting is easy; stopping is impossible) and chronic (six months or more by definition). The body pays the bill: muscle tension in the neck and jaw, a churning stomach, sleep that will not come, fatigue no weekend cures, irritability the family bears. GAD is one of the most common mental disorders in the world and, in India, a substantial share of what presents as 'tension', 'gas', headache and burning hands — most Indian GAD patients circulate through general medicine, cardiology and gastroenterology for the body's complaints, or receive months of benzodiazepines that manage the evenings while the engine keeps running. This course covers the DSM-5 architecture (excessive worry + uncontrollability + 6 months + 3 of 6 physical symptoms), the two psychological models that drive treatment (intolerance of uncertainty; worry as cognitive avoidance), the CBT package (worry time, uncertainty experiments, imaginal exposure, relaxation), SSRI/SNRI pharmacotherapy with honest durations — and the Indian practice layer: the somatic front door, the 'tension' label, the family reassurance economy and the benzodiazepine culture it feeds.",
+    "Generalized anxiety disorder is persistent, uncontrollable worry across multiple domains for six months or more, with restlessness, tension and disturbed sleep. First-line treatment is CBT or an SSRI/SNRI, while long-term benzodiazepines are a trap.",
   estimatedReadTime: "35 min",
   yieldRating: "high",
   primaryAudience: "medical",

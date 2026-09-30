@@ -22,13 +22,13 @@ import type { PsychiatryCourse } from "./types";
 export const cannabisMentalHealthCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "cannabis-mental-health",
-  title: "Cannabis & Mental Health — The Two-Sided Truth",
+  title: "Cannabis & Mental Health",
   shortName: "Cannabis",
   kind: "disorder",
   category: "Substance Use Disorder",
   groupLetter: "B",
   groupName: "Substance use disorders",
-  learningPath: ["Psychiatry", "Substance Use Disorders", "Cannabis & Mental Health — The Two-Sided Truth"],
+  learningPath: ["Psychiatry", "Substance Use Disorders", "Cannabis & Mental Health"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -38,10 +38,10 @@ export const cannabisMentalHealthCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "The world's most-used illicit drug and India's most-normalised one — where both sides of the truth are simultaneously true: occasional adult traditional-potency use is genuinely low-risk, and modern high-potency, daily, adolescent-onset use genuinely multiplies the risks of psychosis, dependence and academic collapse; the treatment's engine is honesty — no propaganda, no denial.",
+    "Occasional adult use is low-risk — daily, high-potency, adolescent-onset use is not",
 
   summary:
-    "This is the diagnosis where honesty is the treatment's engine. Cannabis is the most-used illicit substance on earth (around 220 million past-year users, roughly 4% of the global adult population) and India's most-normalised one — and the science is two-sided because both sides are true. On one side: most people who use occasionally, starting as adults, with traditional-potency products, do not develop psychotic illness or the horror-film outcomes of old propaganda — and pretending otherwise destroys the trust the consultation runs on. On the other side: modern cannabis is far stronger than the village variety of past generations, and regular high-potency use begun in the teens measurably doubles-to-quadruples the risk of psychosis in vulnerable people, produces a real dependence syndrome in roughly 1 in 10 users overall and 1 in 6 starting as adolescents, drives academic collapse and the amotivational grey zone, and arrives at the casualty as its second face — synthetic cannabinoid sachets, full CB1 agonists with dose-unpredictable chaos the plant never contained. The mechanism is teachable in three stories: the volume knob (THC, a partial CB1 agonist, shouting through the channel the brain's own anandamide-type molecules whisper through; the system adapting by turning down its own production and sensitivity — tolerance while using, and on stopping a real withdrawal syndrome of irritability, insomnia with strange dreams, appetite loss, craving and headaches that Indian families constantly mistake for 'laziness' or 'attitude'); the unfinished building (the prefrontal cortex under construction until roughly 25, its endocannabinoid wiring part of that construction — daily THC during the building years hits learning, motivation and emotional regulation while the addiction machinery, still wet cement, sets around the drug); and the psychotic diathesis door (high-potency THC switching on the dopamine salience machinery in vulnerable brains — a dose-response, gene×environment interaction in which family history is the usable screening variable). Psychiatry meets cannabis at four doors: the withdrawal misdiagnosed as attitude, the young psychosis presentation with its 4–6 week re-assessment rule, the established schizophrenia patient whose use roughly doubles relapse rates (the single most actionable fact for psychosis families), and the casualty odd-toxicity of synthetic cannabinoids. Alongside the four doors sit two under-recognised classics: cannabinoid hyperemesis syndrome (the daily long-term user with years of 'gastritis', cyclical vomiting relieved by hot showers — cessation the only cure) and the amotivational grey zone of heavy young users. The treatment core is honest about its limits: NO approved pharmacotherapy exists (N-acetylcysteine, gabapentin-type and cannabinoid-adjacent strategies show modest or negative signals); the evidence lives in motivational interviewing, contingency structures, the family contract, structured reduction and the treatment of the comorbidity the joint was self-treating. India's layer is specific: bhang's legal-festival normalisation and the sadhu argument, charas/ganja's religious-mystical narratives, vapes and edibles reaching school and college populations in product language ('gummies? oils? pens?') the clinician must learn to speak, the NDPS personal-use provisions counselled accurately rather than mythologically — and the rehab-camp shortcut mostly irrelevant (there is no dangerous withdrawal to detoxify from); the effective unit is the structured family programme.",
+    "Cannabis is the most-used illicit drug and India's most-normalised one, with risks that depend on dose, potency and age of onset. Daily high-potency use from adolescence raises psychosis and dependence risk, and no approved pharmacotherapy exists.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -66,10 +66,10 @@ export const cannabisMentalHealthCourse: PsychiatryCourse = {
     { label: "The emergency door", value: "Synthetic cannabinoids", detail: "Street 'spice'-type sachets: full CB1 agonists with unpredictable doses — severe agitation, seizures, psychosis, hyperthermia, arrhythmias; a genuinely toxic tier the plant never contained; poison-team follow-up" },
   ],
   knowledgeGraph: [
-    { label: "Substance Use — The Reward Hijack", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The framework this course is the two-sided member of — the reward capture cannabis genuinely produces (1 in 10) against the propaganda that inflated it" },
+    { label: "Substance Use", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The framework this course is the two-sided member of — the reward capture cannabis genuinely produces (1 in 10) against the propaganda that inflated it" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The illness cannabis can precipitate earlier and colder in vulnerable brains, and whose relapse rates the ongoing use roughly doubles — the antipsychotic logic the psychosis door borrows" },
     { label: "Acute & Transient Psychotic Disorders", type: "condition", href: "/psychiatry/acute-transient-psychosis/", note: "The toxic-versus-primary distinction the 4–6 week abstinence re-assessment rule polices" },
-    { label: "Stimulant Use Disorders — Run, Crash, Crave", type: "condition", href: "/psychiatry/stimulant-use-disorders/", note: "The sister psychotomimetic course — the shared 4–6 week re-assessment rule and the stimulant-versus-cannabis psychosis contrasts" },
+    { label: "Stimulant Use Disorders", type: "condition", href: "/psychiatry/stimulant-use-disorders/", note: "The sister psychotomimetic course — the shared 4–6 week re-assessment rule and the stimulant-versus-cannabis psychosis contrasts" },
     { label: "Social Anxiety Disorder & Specific Phobias", type: "condition", href: "/psychiatry/social-anxiety-phobias/", note: "The comorbidity the joint was quieting — treating the rider is relapse prevention (the case's CBT-plus-SSRI tier)" },
     { label: "Cannabis", type: "condition", href: "/substances/cannabis", note: "The substance page — the plant whose potency arithmetic this whole course teaches" },
     { label: "Anandamide", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The brain's own bliss-whisper the THC shout drowns — the volume-knob story's native molecule" },

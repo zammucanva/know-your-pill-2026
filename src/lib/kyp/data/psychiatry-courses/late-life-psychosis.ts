@@ -22,13 +22,13 @@ import type { PsychiatryCourse } from "./types";
 export const lateLifePsychosisCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "late-life-psychosis",
-  title: "Late-Life Psychosis — The Ridden-Upon Illness",
+  title: "Late-Life Psychosis",
   shortName: "Late-Life Psychosis",
   kind: "disorder",
   category: "Psychiatry of Old Age",
   groupLetter: "M",
   groupName: "Psychiatry of old age",
-  learningPath: ["Psychiatry", "Psychiatry of Old Age", "Late-Life Psychosis — The Ridden-Upon Illness"],
+  learningPath: ["Psychiatry", "Psychiatry of Old Age", "Late-Life Psychosis"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -38,10 +38,10 @@ export const lateLifePsychosisCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Psychosis arriving after 40 is a different clinical animal — more persecutory and partition-themed delusions, fewer negative symptoms, and frequently RIDING on something treatable (untreated deafness, a brewing dementia, a depression, a medication, a stroke) — so the first diagnostic law of the grey-haired patient with 'strange ideas' is: never accept the label 'late schizophrenia' until delirium, dementia and the treatable engines have been ruled out, because the treatment differs and the prescribing is treacherous.",
+    "The ridden-upon illness — deafness, dementia, depression or drugs may lie underneath",
 
   summary:
-    "This is the illness that rides on other illnesses, and the course teaches the ridden-upon discipline before the label. The phenomenology genuinely shifts with age: the late-onset (>40) and very-late-onset (>60) schizophrenia-spectrum groups declare themselves through persecutory and partition delusions (the neighbours pumping gas through the wall, the intruders through the ceiling), hallucinations wired to the failing sensory channels, and an ABSENT or faint negative-symptom layer — the elder converses coherently, stays groomed, keeps the pension accounts, an island-in-a-preserved-sea that runs a shallower course than the early-onset form and responds to fractions of the young-adult doses. But the first move is not the criteria — it is the reorder-rule: age has REORDERED the differential, delirium first (the great mimic), dementia second (especially Lewy body's formed visual hallucinations and Alzheimer's theft-delusions), psychotic depression third, substances and medications fourth, and only then the primary late-onset psychoses. The workup is therefore a hunt for the engines underneath: audiometry (the unaided presbycusis finding is the highest-yield test in this population — the muffled world filling its gaps with suspicion), cognitive testing with the informant's memory-first-versus-suspicion-first timeline, the mood screen with the guilt probe, and the medication audit (the anticholinergic bladder tablet, the twelve-year benzodiazepine, the dopaminergic med, the steroid — the secondary-mania workup's territory when the picture excites as well as frightens, and the stroke layer of the silent basal-ganglia burden). The prescribing is where this population is most often harmed: the geriatric dose law (quarter-to-half of young-adult starting doses, half-step titration), the regulatory increased mortality and stroke warnings in dementia-related psychosis, and above them the Lewy body dopamine-hypersensitivity catastrophe — even a 'gentle' quetiapine 25 mg can fell the Lewy body patient, so the LBD examination precedes ANY antipsychotic decision. Distinguishing primary late-onset psychosis from dementia-related psychosis is the fork that governs the whole ladder: the dementia's symptom runs the BPSD trigger-first route, not the antipsychotic reflex. The Indian layer is structural: the deaf-elder epidemic (decades of unaided presbycusis, the single biggest modifiable paranoia engine in Indian elders), the daughter-in-law-accusation pattern with its three layers needing untangling, the 'budhape ki baat' dismissal delaying assessment by years, and the highest-yield interventions costing almost nothing — the hearing test, the medication audit and the dated-review card.",
+    "Psychosis with onset after 40 shows more persecutory delusions and fewer negative symptoms than early-onset illness, and often rides on treatable causes. Rule out delirium, dementia, depression and sensory loss before diagnosing, and prescribe antipsychotics at reduced doses.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -65,14 +65,14 @@ export const lateLifePsychosisCourse: PsychiatryCourse = {
     { label: "The Indian signature", value: "The deaf elder and the daughter-in-law", detail: "Decades of unaided presbycusis mis-routed to psychiatry; the joint-family theft-accusation carrying three layers (the re-hidden purse, the last power-lever, occasionally the real abuse); 'budhape ki baat' delaying assessment by years" },
   ],
   knowledgeGraph: [
-    { label: "Delirium in the Elderly — The Quiet Emergency", type: "condition", href: "/psychiatry/elderly-delirium/", note: "The first stop of the reorder-rule — the great mimic whose screen precedes every label" },
-    { label: "Dementia with Lewy Bodies — The Fluctuating Dementia", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The formed visual hallucinations, the dream-acting RBD flag and the neuroleptic-sensitivity law that forbids careless antipsychotics" },
-    { label: "Mild Cognitive Impairment — The Crossroads", type: "condition", href: "/psychiatry/mci/", note: "The cognitive-testing discipline, the literacy-adjusted instruments and the district-cost map this workup borrows" },
-    { label: "Mood Disorders in the Elderly — The Pseudodementia Trap", type: "condition", href: "/psychiatry/elderly-mood/", note: "The depressive engine under many 'paranoid' elders — the guilt-content probe and the ECT-tier fork" },
+    { label: "Delirium in the Elderly", type: "condition", href: "/psychiatry/elderly-delirium/", note: "The first stop of the reorder-rule — the great mimic whose screen precedes every label" },
+    { label: "Dementia with Lewy Bodies", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The formed visual hallucinations, the dream-acting RBD flag and the neuroleptic-sensitivity law that forbids careless antipsychotics" },
+    { label: "Mild Cognitive Impairment", type: "condition", href: "/psychiatry/mci/", note: "The cognitive-testing discipline, the literacy-adjusted instruments and the district-cost map this workup borrows" },
+    { label: "Mood Disorders in the Elderly", type: "condition", href: "/psychiatry/elderly-mood/", note: "The depressive engine under many 'paranoid' elders — the guilt-content probe and the ECT-tier fork" },
     { label: "Persistent Delusional Disorder", type: "condition", href: "/psychiatry/delusional-disorder/", note: "The years-locked single-theme system — the neighbour-war decade that stays otherwise intact; the ECG rule for the pimozide-era exceptions" },
-    { label: "Suicide in the Elderly — The Physician's Opportunity", type: "condition", href: "/psychiatry/elderly-suicide/", note: "The depressive engine's darkest output — the risk hunted before the label settles" },
+    { label: "Suicide in the Elderly", type: "condition", href: "/psychiatry/elderly-suicide/", note: "The depressive engine's darkest output — the risk hunted before the label settles" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "The secondary-mania workup's home — where a steroid or dopaminergic medication excites as well as frightens" },
-    { label: "Vascular Dementia — The Staircase Decline", type: "condition", href: "/psychiatry/vascular-dementia/", note: "The stroke layer: the silent basal-ganglia and white-matter burden of the very-late-onset imaging studies" },
+    { label: "Vascular Dementia", type: "condition", href: "/psychiatry/vascular-dementia/", note: "The stroke layer: the silent basal-ganglia and white-matter burden of the very-late-onset imaging studies" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The aging system's recalibration — the fraction-dose law and the Lewy body hypersensitivity catastrophe in one molecule" },
     { label: "Temporal cortex", type: "brain-region", href: "#brain", note: "The auditory association tier where the muffled input and the voices live" },
   ],

@@ -20,7 +20,7 @@ import type { PsychiatryCourse } from "./types";
 export const lewyBodyDementiaCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "lewy-body-dementia",
-  title: "Dementia with Lewy Bodies — The Fluctuating Dementia",
+  title: "Dementia with Lewy Bodies",
   shortName: "DLB",
   kind: "disorder",
   category: "Neurocognitive Disorder",
@@ -36,9 +36,9 @@ export const lewyBodyDementiaCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Dementia with Lewy bodies is a dementia where alpha-synuclein protein clumps inside brain cells, producing a four-part signature — fluctuating alertness, vivid visual hallucinations, Parkinson-like slowness, and dream-acting sleep — plus a sometimes life-threatening sensitivity to older antipsychotic drugs, which is the single most important thing a clinician must remember from this course.",
+    "The fluctuating dementia — hallucinations, parkinsonism and dream-acting sleep",
   summary:
-    "If Alzheimer's forgets, DLB drifts and sees. A man dozes off mid-conversation and minutes later is fully sharp; he describes two small children playing in the kitchen at dusk, detailed and unbothered; his handwriting has grown small and his shuffle has appeared; at night he punches the air, swearing at dream robbers, and has fallen out of bed twice. These are not four separate illnesses — they are one disease, caused by Lewy bodies (alpha-synuclein deposits) scattered through the thinking brain and the movement centres. DLB is the third commonest dementia (roughly 4–8% of clinic cases, up to 10–30% in autopsy series — the discrepancy itself telling us we miss it in life), and it sits midway between Alzheimer's and Parkinson's: dementia appears BEFORE or WITHIN one year of the movement problems — that timing is the diagnostic hinge (the one-year rule). The clinical spine of this course: the four core features as a checklist (fluctuation, visual hallucinations, parkinsonism, REM sleep behaviour disorder — 'flips, films, freeze, fights-in-sleep'), the deepest cholinergic deficit of any common dementia (which makes rivastigmine the dementia drug with its BEST evidence here — treating the hallucination chemistry instead of sedating it), the antipsychotic catastrophe rule (haloperidol and risperidone can trigger severe rigidity and malignant-syndrome-like collapse in up to half of patients — the wallet card is as important as any prescription), and the Indian detection tier: three sleep questions to the spouse that would transform diagnosis, taught to every PG.",
+    "Dementia with Lewy bodies combines fluctuating alertness, recurrent visual hallucinations, parkinsonism and REM sleep behaviour disorder, with dementia preceding or accompanying motor signs. Its severe antipsychotic sensitivity makes avoiding older antipsychotics a safety rule.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -62,11 +62,11 @@ export const lewyBodyDementiaCourse: PsychiatryCourse = {
     { label: "The autonomic tier", value: "Faints, falls, constipation, blackouts", detail: "Postural BP drops plus impaired balance; transient unexplained losses of consciousness mislabelled as seizures — falls, not hallucinations, send this disease to hospital" },
   ],
   knowledgeGraph: [
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "The classic DLB trap: hour-to-hour fluctuation mimics delirium — but no trigger, no resolution, plus parkinsonism and dream-acting" },
-    { label: "Alzheimer's Disease & Dementia — The Gradual Erasure", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The memory-first contrast: DLB's hallucinations early and fluctuations marked vs Alzheimer's smooth decline with late rare visions" },
-    { label: "Dementia in Parkinson's Disease — The Twin Decline", type: "condition", href: "/psychiatry/parkinsons-dementia/", note: "The same protein, the other door — the one-year rule's twin across the boundary" },
-    { label: "Frontotemporal Dementia — When Personality Changes First", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The conduct-first contrast: FTD takes behaviour while memory holds; DLB takes perception while storage relatively holds" },
-    { label: "Parasomnias — Sleepwalking, Sleep Terrors & the Dream-Fighter", type: "condition", href: "/psychiatry/parasomnias/", note: "The RBD differential and bed-partner protection tier — the shared night-craft" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "The classic DLB trap: hour-to-hour fluctuation mimics delirium — but no trigger, no resolution, plus parkinsonism and dream-acting" },
+    { label: "Alzheimer's Disease & Dementia", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The memory-first contrast: DLB's hallucinations early and fluctuations marked vs Alzheimer's smooth decline with late rare visions" },
+    { label: "Dementia in Parkinson's Disease", type: "condition", href: "/psychiatry/parkinsons-dementia/", note: "The same protein, the other door — the one-year rule's twin across the boundary" },
+    { label: "Frontotemporal Dementia", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The conduct-first contrast: FTD takes behaviour while memory holds; DLB takes perception while storage relatively holds" },
+    { label: "Parasomnias", type: "condition", href: "/psychiatry/parasomnias/", note: "The RBD differential and bed-partner protection tier — the shared night-craft" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "DLB's depression-apathy comorbidity and the shared widow's-loneliness terrain" },
     { label: "Acetylcholine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The deepest deficit of any common dementia — the therapeutic target and the anticholinergic danger's reason" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The nigral system's fall — and the reason dopamine-blockers are the catastrophe" },

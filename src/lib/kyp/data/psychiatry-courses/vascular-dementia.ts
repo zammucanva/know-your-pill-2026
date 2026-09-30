@@ -20,7 +20,7 @@ import type { PsychiatryCourse } from "./types";
 export const vascularDementiaCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "vascular-dementia",
-  title: "Vascular Dementia — The Staircase Decline",
+  title: "Vascular Dementia",
   shortName: "VaD",
   kind: "disorder",
   category: "Neurocognitive Disorder",
@@ -36,10 +36,10 @@ export const vascularDementiaCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Vascular dementia is thinking loss caused by damaged blood supply — strokes big and small — producing a stepwise, patchy decline whose brightest message is that its main driver, vascular disease, is largely preventable and treatable: the dementia you can fight back against.",
+    "The staircase decline — thinking loss from damaged blood supply, largely preventable",
 
   summary:
-    "The brain is 2% of body weight but takes 20% of the blood supply — the most blood-hungry organ we have. When vessels harden, narrow or burst, brain tissue loses oxygen and dies; when enough strategic tissue is lost, thinking slows, planning fails, walking changes and mood dips. This is vascular cognitive impairment; when severe enough to interfere with daily life it becomes vascular dementia — the second commonest cause of dementia worldwide, and arguably the commonest in stroke-heavy Indian and East Asian clinics. Its personality differs from Alzheimer's in three examinable ways: the decline comes in STEPS (each small stroke a sudden drop, then a plateau) rather than a smooth ramp; slowness and planning trouble appear EARLY while memory may hold for years; and the neurological extras — gait change, falls, urinary urgency, pseudobulbar affect — walk in the door alongside the cognition. Because it rides on hypertension, diabetes, smoking, cholesterol and atrial fibrillation, all treatable, vascular dementia is in a real sense the dementia with the largest preventable fraction — and the same prescription that protects the brain protects the heart and the kidneys, which is why the memory clinic's business here is really the vascular clinic's business wearing a different badge. The clinical spine of this course: the mechanism trio (large-vessel, strategic-infarct, small-vessel), the staircase history that IS the diagnosis, the executive-predominant profile that memory-weighted screens under-sell, the prevention prescription as the real treatment core, and the Indian realities — stopped tablets, unexamined CTs, and the stroke clinic that never asks a memory question.",
+    "Vascular dementia is thinking loss from damaged brain blood supply, declining in steps rather than smoothly, with slowness and planning trouble appearing before memory fails. Its vascular drivers are largely treatable, making it the dementia with the largest preventable fraction.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -63,14 +63,14 @@ export const vascularDementiaCourse: PsychiatryCourse = {
     { label: "The one prescription", value: "Two organs saved", detail: "Blood pressure, sugar, statin, aspirin-or-anticoagulation, walking, salt reduction — the memory clinic prescription IS the heart clinic prescription; the same vessels threaten both, which is why survival is shorter than in Alzheimer's" },
   ],
   knowledgeGraph: [
-    { label: "Alzheimer's Disease & Dementia — The Gradual Erasure", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The smooth ramp against the staircase — and the mixed-brain reality that makes separation partly academic" },
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "Every overnight worsening is a new infarct, a seizure or a delirium trigger until proven otherwise — investigate, don't blame the dementia" },
-    { label: "Dementia with Lewy Bodies — The Fluctuating Dementia", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The other great mimic of fluctuation — hallucinations and the antipsychotic catastrophe distinguish it" },
-    { label: "Dementia in Parkinson's Disease — The Twin Decline", type: "condition", href: "/psychiatry/parkinsons-dementia/", note: "The subcortical-profile cousin — executive failure with cued recall preserved on both sides of that border" },
-    { label: "Frontotemporal Dementia — When Personality Changes First", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The other dementia memory screens under-sell — the frontal-executive differential when imaging is clean" },
+    { label: "Alzheimer's Disease & Dementia", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The smooth ramp against the staircase — and the mixed-brain reality that makes separation partly academic" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "Every overnight worsening is a new infarct, a seizure or a delirium trigger until proven otherwise — investigate, don't blame the dementia" },
+    { label: "Dementia with Lewy Bodies", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The other great mimic of fluctuation — hallucinations and the antipsychotic catastrophe distinguish it" },
+    { label: "Dementia in Parkinson's Disease", type: "condition", href: "/psychiatry/parkinsons-dementia/", note: "The subcortical-profile cousin — executive failure with cued recall preserved on both sides of that border" },
+    { label: "Frontotemporal Dementia", type: "condition", href: "/psychiatry/frontotemporal-dementia/", note: "The other dementia memory screens under-sell — the frontal-executive differential when imaging is clean" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The weeks-onset, effort-dependent mimic — mood before gait change; treating it can 'give back' what looked like dementia" },
-    { label: "Amnesic Syndromes — The Punched-Out Memory Hole", type: "condition", href: "/psychiatry/amnesic-syndromes/", note: "The strategic thalamic infarct that presents as pure amnesia — the stroke door into the filing circuit" },
-    { label: "Traumatic Brain Injury Neuropsychiatry — The Invisible Triad", type: "condition", href: "/psychiatry/tbi-neuropsychiatry/", note: "The chronic subdural that mimics both dementias in the falling, anticoagulated elderly — the CT that repays itself" },
+    { label: "Amnesic Syndromes", type: "condition", href: "/psychiatry/amnesic-syndromes/", note: "The strategic thalamic infarct that presents as pure amnesia — the stroke door into the filing circuit" },
+    { label: "Traumatic Brain Injury Neuropsychiatry", type: "condition", href: "/psychiatry/tbi-neuropsychiatry/", note: "The chronic subdural that mimics both dementias in the falling, anticoagulated elderly — the CT that repays itself" },
     { label: "Acetylcholine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "Why the donepezil tier gives modest benefit here (a secondary chemistry, not the emptied tank it is in Alzheimer's)" },
     { label: "Frontal lobes", type: "brain-region", href: "#brain", note: "The manager offices whose wiring the small-vessel disease cuts first — speed and planning before memory" },
     { label: "Thalamus", type: "brain-region", href: "#brain", note: "The strategic memory relay — one well-placed infarct here can alone produce abrupt dementia" },

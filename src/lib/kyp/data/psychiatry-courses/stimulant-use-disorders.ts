@@ -22,13 +22,13 @@ import type { PsychiatryCourse } from "./types";
 export const stimulantUseDisordersCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "stimulant-use-disorders",
-  title: "Stimulant Use Disorders — Run, Crash, Crave",
+  title: "Stimulant Use Disorders",
   shortName: "Stimulant UD",
   kind: "disorder",
   category: "Substance Use Disorder",
   groupLetter: "B",
   groupName: "Substance use disorders",
-  learningPath: ["Psychiatry", "Substance Use Disorders", "Stimulant Use Disorders — Run, Crash, Crave"],
+  learningPath: ["Psychiatry", "Substance Use Disorders", "Stimulant Use Disorders"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -38,10 +38,10 @@ export const stimulantUseDisordersCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Borrowed energy at crushing interest: days of drive, confidence and no sleep bought from next week's chemistry — then the bill (the crash of flatness, hunger, sleep and craving), the paranoia of an alarm that never turns off, and, unlike opioids, no maintenance medicine to hold the door: the treatment is structure, safety, and days rebuilt so they no longer need the loan.",
+    "Run, crash, crave — borrowed energy where the crash, not the high, drives relapse",
 
   summary:
-    "This is the disease of borrowed energy. Amphetamine-type stimulants (methamphetamine, 'speed', diverted ADHD medicines, party-time pills) and cocaine (powder and crack) push the brain's dopamine and noradrenaline systems to full volume — wakefulness, confidence, talkativeness, appetite abolished, fatigue switched off — and the arithmetic of that borrowing is the whole clinical story: the high is SPENT from the brain's stored currency, so the run is followed by a rebound crash of hypersomnia, ravenous hunger, flat mood, anhedonia, vivid unpleasant dreams and craving that lasts days to weeks — and the crash, not the high, is the relapse engine. The course runs on three mechanism stories: the overdraft account (next week's pay spent tonight, receptor adaptation deepening the debt each cycle until the drug is needed to feel normal); the alarm that never turns off (noradrenaline jammed wide open — pupils, heart, sweat, vigilance graduating into paranoia, then perception breaks: voices at the window, shadow figures, and formication, insects crawling under the skin, with the excoriations of the picking that follows); and the sodium-channel heart (cocaine blocking cardiac sodium channels on top of its vasospasm — the coronary artery clamping and the rhythm destabilising at any age, with any dose; the 28-year-old's party-context chest pain is a myocardial infarction until proven otherwise). The diagnostic discipline the exam loves: stimulant psychosis is persecutory-dominant, dose-and-duration-driven, on a CLEAR CONSCIOUSNESS, and clears within days to weeks of abstinence — the 4–6 week re-assessment rule exists so the post-psychosis grey period is never mislabelled schizophrenia; methamphetamine's persistence in the brain stretches that tail longer. Emergencies arrive as one patient: the agitated hyperthermic user needs the low-stimulation room, benzodiazepines first-line, active cooling and cardiac monitoring (Room–Benzos–Cool–Watch QT) — with NO unopposed beta-blockade in cocaine chest pain; hyperthermia, seizures and rhabdomyolysis are co-managed with medicine from the first hour. The treatment core is honest about its limits: there is NO approved maintenance agonist (the contrast with opioid agonist treatment is the point), the trial tier — substitute stimulants, disulfiram, topiramate, mirtazapine — shows only modest, not established, signals, and the evidence lives in contingency structures, behavioural activation, exercise, cue work, and the treatment of the comorbidity the drug was self-treating, including genuine ADHD under contract. India's picture is the quiet metropolitan layer (nightlife, corporate performance culture, students) over the hidden functional stream — study pills, long-haul drivers' stay-awake route tablets, gym fat-burners, the chemsex pocket asked about respectfully and in private — and the one-line philosophy the whole course rehearses: the run is borrowed, the crash is the bill, and the treatment must make the days affordable without the loan.",
+    "Stimulant use disorders cover cocaine and amphetamine-type stimulants, whose run of wakefulness and confidence is repaid in a crash of hypersomnia, flat mood and craving. No approved maintenance medicine exists, so treatment rests on contingency structures, behavioural care and comorbidity treatment.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -64,13 +64,13 @@ export const stimulantUseDisordersCourse: PsychiatryCourse = {
     { label: "The Indian hidden streams", value: "Study pills, route tablets, fat-burners, chemsex", detail: "Students on 'study pills', long-haul drivers on stay-awake route tablets, corporate weekend binges, gym fat-burners (ephedrine-adjacent) and the chemsex pocket — nobody volunteers these histories; direct, non-judgmental screening is the only way in" },
   ],
   knowledgeGraph: [
-    { label: "Substance Use — The Reward Hijack", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The severity-graded single-disorder logic and the reward thermostat the stimulants jam — the parent frame this course applies" },
-    { label: "Alcohol Use Disorders — The Disease of More", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The cue-map, community reinforcement and family-contract machinery shared here — and the co-misuse that blunts the crash into the polysubstance trap" },
-    { label: "Opioid Use Disorders — The Medicine That Holds the Door", type: "condition", href: "/psychiatry/opioid-use-disorders/", note: "The agonist-maintenance contrast that defines this course's honesty — the medicine exists there, nothing established here" },
+    { label: "Substance Use", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The severity-graded single-disorder logic and the reward thermostat the stimulants jam — the parent frame this course applies" },
+    { label: "Alcohol Use Disorders", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The cue-map, community reinforcement and family-contract machinery shared here — and the co-misuse that blunts the crash into the polysubstance trap" },
+    { label: "Opioid Use Disorders", type: "condition", href: "/psychiatry/opioid-use-disorders/", note: "The agonist-maintenance contrast that defines this course's honesty — the medicine exists there, nothing established here" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The psychosis differential the 4–6 week re-assessment rule guards — dose-timeline, formication and clear sensorium against insidious onset and first-rank symptoms" },
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "The clear-consciousness discriminator — the stimulant psychotic patient is awake and terrifyingly consistent, not fluctuating and clouded" },
-    { label: "ADHD — The Brakes and the Engine", type: "condition", href: "/psychiatry/adhd/", note: "The self-medication loop and the under-contract treatment (one pharmacy, family-held) that treats it instead of punishing it" },
-    { label: "Party Drugs — The Dance-Floor Trio", type: "condition", href: "/psychiatry/party-drug-use-disorders/", note: "The nightlife economy the stimulants share — the come-down mixing, the hydration and hyperthermia counselling" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "The clear-consciousness discriminator — the stimulant psychotic patient is awake and terrifyingly consistent, not fluctuating and clouded" },
+    { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The self-medication loop and the under-contract treatment (one pharmacy, family-held) that treats it instead of punishing it" },
+    { label: "Party Drugs", type: "condition", href: "/psychiatry/party-drug-use-disorders/", note: "The nightlife economy the stimulants share — the come-down mixing, the hydration and hyperthermia counselling" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The borrowed currency — released and reuptake-blocked to full volume, then spent: the run's chemistry and the crash's debt" },
     { label: "Noradrenaline", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The alarm that never turns off — pupils wide, heart racing, vigilance graduating into paranoia" },
     { label: "Nucleus accumbens", type: "brain-region", href: "#brain", note: "The mesolimbic reward hub where the flood is felt — and where the run–crash–craving cycle is written and re-written" },

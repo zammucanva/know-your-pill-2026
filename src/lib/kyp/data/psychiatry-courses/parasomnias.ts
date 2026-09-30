@@ -22,7 +22,7 @@ import type { PsychiatryCourse } from "./types";
 export const parasomniasCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "parasomnias",
-  title: "Parasomnias — Sleepwalking, Sleep Terrors & the Dream-Fighter",
+  title: "Parasomnias",
   shortName: "Parasomnias",
   kind: "disorder",
   category: "Sleep-Wake Disorder",
@@ -38,9 +38,9 @@ export const parasomniasCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Behaviours that erupt out of sleep itself — walking, screaming, eating, acting out dreams — because the sleeping brain has partially woken into a mixed state: the NREM 'sleep-walking' kind (confused, unresponsive, no memory, first-third-of-night) and the REM 'dream-acting' kind (the dream physically performed, and in older men a specific warning sign of Parkinsonian illness years later).",
+    "Sleepwalking, sleep terrors and the REM dream-fighter: when the sleeping brain half-wakes",
   summary:
-    "A sleeping brain is not uniformly 'off'. In parasomnias, the sleeping and waking states get GLUED together in part: enough motor system wakes to walk, scream or eat while the conscious, memory-forming system stays asleep. The NREM family (confusional arousals, sleepwalking, sleep terrors) runs on deep sleep in the first third of the night — the sleepwalker who roams with open eyes and blank face, the child who screams with terror and pushes away comfort, neither remembering anything by morning. The REM family runs on the dream-rich final hours: the nightmare (frightening dream, remembered, in a paralysed body) and its dangerous inversion, REM sleep behaviour disorder, where the dream's paralysis fails and the person physically fights, runs or punches while fully asleep — and where, in older men, this is the earliest red flag of Parkinson's disease and Lewy body dementia appearing years later. Almost every family has a sleepwalker story; the clinical tasks are separating the benign from the dangerous, protecting sleepers from terraces and stairs (the Indian edition of the safety audit), treating the triggers (sleep deprivation, fever, alcohol, sedatives — with apnoea as the hidden amplifier), and, in the over-50 dream-fighter, sending for neurological evaluation with the prodrome window held honestly.",
+    "In parasomnias the sleeping and waking brain states mix, producing sleepwalking, sleep terrors or acted-out dreams. REM sleep behaviour disorder in older men can precede Parkinson's disease and Lewy body dementia.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -65,7 +65,7 @@ export const parasomniasCourse: PsychiatryCourse = {
   ],
   knowledgeGraph: [
     { label: "Sleep–Wake Physiology", type: "condition", href: "/psychiatry/sleep-basics/", note: "The architecture the parasomnia map runs on — N3 first-third, REM last-third, and the atonia brake" },
-    { label: "Insomnias", type: "condition", href: "/psychiatry/insomnia/", note: "The Z-drug complex-behaviour overlap — night eating and walking with amnesia, resolving on withdrawal" },
+    { label: "Insomnia", type: "condition", href: "/psychiatry/insomnia/", note: "The Z-drug complex-behaviour overlap — night eating and walking with amnesia, resolving on withdrawal" },
     { label: "Excessive Sleepiness & Hypersomnias", type: "condition", href: "/psychiatry/hypersomnia/", note: "Apnoea as the fragmentation driver of 'refractory' parasomnias — the amplifier to screen in every case" },
     { label: "Post-Traumatic Stress Disorder (PTSD)", type: "condition", href: "/psychiatry/ptsd/", note: "The nightmare cohort — trauma-focused therapy reduces the nightmare load itself" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "Sleep deprivation as mania's trigger and the parasomnia stack's number-one member — the shared trigger discipline" },

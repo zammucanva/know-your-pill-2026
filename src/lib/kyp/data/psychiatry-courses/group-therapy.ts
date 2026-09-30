@@ -24,13 +24,13 @@ import type { PsychiatryCourse } from "./types";
 export const groupTherapyCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "group-therapy",
-  title: "Group Therapy — Yalom's Curative Factors",
+  title: "Group Therapy",
   shortName: "Group therapy",
   kind: "concept",
   category: "Treatment Methods",
   groupLetter: "P",
   groupName: "Treatment methods",
-  learningPath: ["Psychiatry", "Treatment Methods", "Group Therapy — Yalom's Curative Factors"],
+  learningPath: ["Psychiatry", "Treatment Methods", "Group Therapy"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -40,10 +40,10 @@ export const groupTherapyCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "A circle of six to ten patients, one trained conductor — and the quiet discovery that the real treatment is the members' work on one another: shame dissolved, honesty rehearsed, usefulness restored, and belonging delivered, all within a single clinician's hour.",
+    "Yalom's curative factors, the group's predictable weather, and the craft of the circle",
 
   summary:
-    "This course teaches the therapy that multiplies: a circle of six to ten patients meeting weekly with a trained conductor, in which the treatment is only partly what the professional says — it is what the members do to and for each other. Yalom's curative factors are taught as working clinical tools, paraphrased rather than venerated: the shame-dissolving relief of universality ('I thought I was the only one'), hope as a walking, observable fact, altruism restoring the usefulness that depression corrodes, the group as an interpersonal mirror no paid therapist can imitate, the corrective family re-run for patients whose original family was the wound, and cohesiveness — belonging as an active clinical ingredient, not a soft by-product. The developmental arc is taught as weather to be predicted: the polite dependence of forming, the storming challenge with its third-to-fifth-session drop-out wave (named in advance, it loses half its power), the norms that survive the storm, the working phase in which the conductor falls deliberately silent, and termination itself as curriculum. Selection discipline gets its own examination — who thrives, who needs preparation or combined individual work, who stays out of the mixed circle (the actively suicidal, the acutely paranoid, the unstable user, the family-escorted) — because the drop-out cascade and the vulnerable-member injury are selection failures, not group failures. The formats are separated by engine: the slow-open interactive group running on the here-and-now; the psychoeducational and skills group (6–12 sessions, fixed curriculum) that actually carries most of the world's workload; inpatient circles as riverbeds rather than vessels; and the AA/NA/Al-Anon fellowships — no fee, no professional, the largest group-therapy network on earth and in India. The evidence position is stated honestly (strong in substance use and as a CBT delivery platform; broadly comparable to individual therapy where delivery is comparable), and the Indian chapter lands the course's quiet thesis: the country already runs on groups — de-addiction milieus, AA since the 1980s, Kudumbashree's lakhs of circles, tele-groups since the pandemic — and the conductor shortage, not the concept, is the constraint.",
+    "Group therapy multiplies a scarce clinical workforce: one trained conductor, six to ten patients, and the members' work on one another as the treatment. The course covers Yalom's curative factors, group development, selection, formats and the evidence position.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -67,12 +67,12 @@ export const groupTherapyCourse: PsychiatryCourse = {
     { label: "The India fact", value: "The country already runs on groups", detail: "De-addiction milieus built on morning sharing and relapse-prevention circles, AA in India since the 1980s, NA grown with the opioid wave, Kudumbashree's lakhs of circles — enormous group experience, largely undocumented as group therapy" },
   ],
   knowledgeGraph: [
-    { label: "Therapeutic Communities — The Four Henderson Principles", type: "condition", href: "/psychiatry/therapeutic-communities/", note: "The residential extreme of the same architecture — the whole day as the group, the milieu as the treatment" },
-    { label: "Dynamic Psychotherapy — The Procedural Unconscious", type: "condition", href: "/psychiatry/dynamic-psychotherapy/", note: "The here-and-now engine's theoretical parent — insight, the working alliance and the conductor's deliberate restraint" },
-    { label: "Family Therapy — Circular Causality", type: "condition", href: "/psychiatry/family-therapy/", note: "The family-as-group twin — circular causality, the family-plus-patient psychoeducation tier, the mixed-family format" },
-    { label: "Psychiatric Rehabilitation — The Well Part of the Ego", type: "condition", href: "/psychiatry/psychiatric-rehabilitation/", note: "Where cohesion and role practice become rehabilitation's vehicle — day programmes, livelihood groups, aftercare" },
-    { label: "Alcohol Use Disorders — The Disease of More", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The strongest group-evidence base — relapse-prevention and aftercare groups, and the AA referral discipline carried like a drug dose" },
-    { label: "Opioid Use Disorders — The Medicine That Holds the Door", type: "condition", href: "/psychiatry/opioid-use-disorders/", note: "The NA twin and the stabilised member — motivated remission on maintenance as a group-selection category" },
+    { label: "Therapeutic Communities", type: "condition", href: "/psychiatry/therapeutic-communities/", note: "The residential extreme of the same architecture — the whole day as the group, the milieu as the treatment" },
+    { label: "Dynamic Psychotherapy", type: "condition", href: "/psychiatry/dynamic-psychotherapy/", note: "The here-and-now engine's theoretical parent — insight, the working alliance and the conductor's deliberate restraint" },
+    { label: "Family Therapy", type: "condition", href: "/psychiatry/family-therapy/", note: "The family-as-group twin — circular causality, the family-plus-patient psychoeducation tier, the mixed-family format" },
+    { label: "Psychiatric Rehabilitation", type: "condition", href: "/psychiatry/psychiatric-rehabilitation/", note: "Where cohesion and role practice become rehabilitation's vehicle — day programmes, livelihood groups, aftercare" },
+    { label: "Alcohol Use Disorders", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The strongest group-evidence base — relapse-prevention and aftercare groups, and the AA referral discipline carried like a drug dose" },
+    { label: "Opioid Use Disorders", type: "condition", href: "/psychiatry/opioid-use-disorders/", note: "The NA twin and the stabilised member — motivated remission on maintenance as a group-selection category" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "Psychoeducation and relapse-prevention groups as the aftercare spine — supportive formats for the stabilised member, not insight-oriented ones" },
     { label: "Social Anxiety Disorder & Specific Phobias", type: "condition", href: "/psychiatry/social-anxiety-phobias/", note: "The circle as the practice ladder — the rehearsal at social speed that the individual hour cannot stage" },
     { label: "Medial prefrontal cortex", type: "brain-region", href: "#brain", note: "The mentalizing hub the circle exercises — perspective-taking as the mirror's substrate" },

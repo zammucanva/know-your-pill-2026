@@ -29,9 +29,9 @@ export const delusionalDisorderCourse: PsychiatryCourse = {
   lastReviewed: "2026-09-27",
 
   tagline:
-    "One fixed, logically-built false belief held for a month or more — in a person whose memory, speech, work and daily functioning otherwise remain strikingly normal.",
+    "One fixed false belief held a month or more, in a person otherwise strikingly normal",
   summary:
-    "Delusional disorder is the psychosis of the locked room: a single, systematised, unshakeable belief living inside an otherwise intact mind. Because everything outside the delusion works, these patients rarely reach psychiatrists on their own — they reach police stations, lawyers, dermatologists and consumer courts, whichever door their particular belief points to. This course covers the precise definition of a delusion (and its separations from overvalued ideas and obsessions), the content subtypes and the doors each knocks on first, the dangerous subtypes (jealous, erotomanic, persecutory-litigious) that demand explicit risk management, the never-argue-the-content engagement craft, the modest-but-real pharmacotherapy, and the Indian five-year detour through tantriks, astrologers and courts before psychiatry is even considered.",
+    "Delusional disorder is a single fixed delusion within an otherwise intact mind, so patients reach police, lawyers or courts before psychiatry. Management rests on never arguing the content, treating the distress, and modest antipsychotic use with explicit risk checks for dangerous subtypes.",
   estimatedReadTime: "30 min",
   yieldRating: "high",
   primaryAudience: "medical",
@@ -60,7 +60,7 @@ export const delusionalDisorderCourse: PsychiatryCourse = {
   knowledgeGraph: [
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The restructured whole house — vs delusional disorder's one bricked-shut room" },
     { label: "Acute & Transient Psychotic Disorders", type: "condition", href: "/psychiatry/acute-transient-psychosis/", note: "The storm that clears — vs the fixed weather here" },
-    { label: "Schizoaffective & Schizotypal", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "Loosely-held vs fixed beliefs — the challenge test separates them" },
+    { label: "Schizoaffective & Schizotypal Disorders", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "Loosely-held vs fixed beliefs — the challenge test separates them" },
     { label: "Obsessive-Compulsive Disorder (OCD)", type: "condition", href: "/psychiatry/ocd/", note: "Ego-dystonic intrusions vs ego-syntonic conviction — the classic viva contrast" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The focal dopamine dysregulation presumed — thin evidence, honestly graded" },
     { label: "Temporal / frontal cortex", type: "brain-region", href: "#brain", note: "Lesions here mimic the picture — the late-onset workup target" },

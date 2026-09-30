@@ -20,13 +20,13 @@ import type { PsychiatryCourse } from "./types";
 export const prionDiseaseCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "prion-disease",
-  title: "Prion Diseases (CJD) — The Fastest Dementia",
+  title: "Prion Diseases (CJD)",
   shortName: "Prion disease",
   kind: "disorder",
   category: "Neurocognitive Disorder",
   groupLetter: "A",
   groupName: "Neurocognitive disorders",
-  learningPath: ["Psychiatry", "Neurocognitive Disorders", "Prion Diseases"],
+  learningPath: ["Psychiatry", "Neurocognitive Disorders", "Prion Diseases (CJD)"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-28",
@@ -36,9 +36,9 @@ export const prionDiseaseCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Prion disease is the fastest-moving dementia psychiatry meets — a rare, always-fatal brain illness in which a misfolded protein recruits the mind's own proteins into its wrong shape, typically killing within about a year; the practical psychiatry of it is mostly the discipline of ruling out the treatable mimics before accepting this untreatable diagnosis.",
+    "The fastest dementia: rare, fatal, and mostly a discipline of excluding treatable mimics",
   summary:
-    "The classic picture: a person in their sixties declining over weeks to months — forgetfulness on Monday, disorientation by the month, mute and bed-bound by the season — with lightning jerks (myoclonus), a peculiar EEG, and a brain MRI that lights up like a ribbon. Three facts organise everything else. First, prions are infectious proteins with no DNA or RNA — a shape, not a creature — which is why they resist the sterilisation and immune logic of ordinary germs. Second, almost every case is either spontaneous (sporadic CJD, roughly 85%), inherited (a known PRNP mutation in about 10–15%), or rarely acquired through tissue exposure (historical growth-hormone and dura-mater grafts, beef-borne variant CJD, the extinct cannibalism-transmitted kuru). Third, there is no disease-slowing treatment; management is accurate diagnosis, comfort, honest counsel, and care of the family. The psychiatric relevance is double: variant CJD PRESENTS to psychiatry (young patients with depression, anxiety and personality change first), and every 'rapidly progressive dementia' arriving at a psychiatric clinic obliges a work-up for the autoimmune, infective and metabolic illnesses that imitate CJD and are treatable — at least one in five real-world CJD-suspects in published series turns out to be something treatable. A lookalike rescued is worth more than a prion diagnosis made. The clinical spine of this course: the tempo as the tell (a dementia that declares itself fully between two consecutive OPD visits), the investigation triangle (the DWI-MRI ribbon, the EEG's periodic complexes, the RT-QuIC seeding assay), the mimic work-up that must come FIRST, and the family discipline — honest trajectory counselling, the not-contagious answer, and the genetic conversation for the familial forms.",
+    "Prion diseases are rare, universally fatal illnesses presenting as rapidly progressive dementia, often with psychiatric features. Management is supportive, with the crucial clinical task being exclusion of treatable mimics.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -61,9 +61,9 @@ export const prionDiseaseCourse: PsychiatryCourse = {
     { label: "The contagion answer", value: "NOT contagious by ordinary contact", detail: "Touch, plates, rooms, tears, kissing — all safe; special handling only for brain, spinal, CSF and lymphoid tissue during procedures" },
   ],
   knowledgeGraph: [
-    { label: "Alzheimer's Disease & Dementia — The Gradual Erasure", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The years-scale contrast to the weeks-scale prion tempo — and the mislabel prion cases receive when work-up is skipped" },
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "The fluctuating impostor with a treatable cause — myoclonus in delirium and metabolic states is a hundred-fold commoner than prion disease" },
-    { label: "Dementia with Lewy Bodies — The Fluctuating Dementia", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The slower-on-inspection rapid decliner of the mimic table" },
+    { label: "Alzheimer's Disease & Dementia", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The years-scale contrast to the weeks-scale prion tempo — and the mislabel prion cases receive when work-up is skipped" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "The fluctuating impostor with a treatable cause — myoclonus in delirium and metabolic states is a hundred-fold commoner than prion disease" },
+    { label: "Dementia with Lewy Bodies", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The slower-on-inspection rapid decliner of the mimic table" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The default first label of the prion opening act — grief and depression diagnoses precede the tempo's unmasking" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The young psychiatric-first presentation (variant CJD, anti-NMDA encephalitis) that must earn the medical work-up before the label" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The basal-ganglia territory the avalanche reaches — the movement chaos and rigidity of the classical script" },

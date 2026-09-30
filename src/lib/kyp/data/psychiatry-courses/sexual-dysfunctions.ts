@@ -20,7 +20,7 @@ import type { PsychiatryCourse } from "./types";
 export const sexualDysfunctionsCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "sexual-dysfunctions",
-  title: "Sexual Dysfunctions — The Accelerator and the Brakes",
+  title: "Sexual Dysfunctions",
   shortName: "Sexual Dysfunctions",
   kind: "disorder",
   category: "Sexual Dysfunction",
@@ -32,9 +32,9 @@ export const sexualDysfunctionsCourse: PsychiatryCourse = {
   lastReviewed: "2026-09-28",
 
   tagline:
-    "Sexual problems become dysfunctions when they are persistent, distressing, and not just an understandable response to circumstances — and the calm way to think about them runs on a chain (desire, arousal, orgasm, resolution), a model (accelerator plus brakes), and three windows (the situation, the person, the body-and-medicines).",
+    "Accelerator and brakes, three assessment windows, and the couple as the unit of treatment",
   summary:
-    "The calm, unembarrassed framework this course teaches: sexual response runs on a chain (desire, arousal, orgasm, resolution — DEOR) and any link can fail, in men or women, for reasons ranging from resentment in a marriage to diabetes, antidepressants or a pituitary tumour. Two teaching gifts organise everything: the DUAL CONTROL MODEL — sexual response as an accelerator plus brakes, with people differing from birth in brake-sensitivity (high inhibition produces the person whose desire evaporates the moment anything is wrong; low inhibition produces the risk-taker — and anxiety, resentment and lack of privacy all present clinically as 'brakes on') — and the THREE WINDOWS assessment (the current situation, the person's long-term vulnerability, health-and-medication effects). The crucial distinction the durations teach: transient problems are nearly universal (at least one problem in the past year: ~54% of women, ~35% of men — lasting at least a month), while the persistent clinical tier is the minority (~15.6% and ~6.2% lasting six months): a bad month is not a dysfunction, and a marriage problem presenting through sex is not a broken sexual system. In women, desire is frequently RECEPTIVE (triggered by intimacy, arriving after arousal begins — Basson), and the categories DSM-5 subsequently merged (female desire-and-arousal into FSIAD; dyspareunia-and-vaginismus into genito-pelvic pain/penetration disorder) follow exactly the old chapter's scepticism about copying the male template. The medical core: SSRIs predictably inhibit orgasm and ejaculation in both sexes (the effect exploited as PE treatment), antipsychotics impair function in a majority, prolactin and testosterone are the treatable endocrine causes of low desire, and PDE-5 inhibitors restore the RESPONSE to stimulation in ~75% of men with an absolute nitrate contraindication through the shared cGMP chemistry. The management message is decades ahead of its time: treat the COUPLE, not just the individual — the three-part behavioural programme (non-genital touch → genital touch with intercourse banned → gradual penetration; ~12 sessions over 4–5 months) is simultaneously diagnostic and therapeutic, surfacing the resentment, the old attitudes and the performance anxiety in sequence while removing the pressure that maintains the problem. In India the doors differ — consummation failure arrives via infertility clinics, PE via urology and the unlicensed 'sex clinic' underground, SSRI-induced dysfunction via psychiatry as the leading HIDDEN cause of patients silently stopping medication, and semen-loss anxiety (dhat) as the culturally salient presentation — making one respectful, routine sexual question per consultation the highest-yield diagnostic instrument in the system.",
+    "Sexual dysfunctions are persistent, distressing problems in desire, arousal, orgasm or pain. Assessment works through the situation, the person and health-and-medication effects, and management treats the couple rather than the individual alone.",
   estimatedReadTime: "34 min",
   yieldRating: "high",
   primaryAudience: "medical",
@@ -66,7 +66,7 @@ export const sexualDysfunctionsCourse: PsychiatryCourse = {
     { label: "Paraphilic Disorders", type: "condition", href: "/psychiatry/paraphilias/", note: "The harm-boundary chapter of atypical arousal — a different question from function; the consent line separates them" },
     { label: "Gender Identity in Adults", type: "condition", href: "/psychiatry/gender-identity-adults/", note: "Identity and function are orthogonal axes — the dysphoria course carries its own assessment tier" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "Depression damps the excitation system itself (impaired nocturnal tumescence); a paradoxical minority report increased interest when low" },
-    { label: "Generalized Anxiety Disorder", type: "condition", href: "/psychiatry/gad/", note: "Anxiety as the heaviest brake — loss of interest in GAD, aversion in panic, PE notably common in social phobia" },
+    { label: "Generalized Anxiety Disorder (GAD)", type: "condition", href: "/psychiatry/gad/", note: "Anxiety as the heaviest brake — loss of interest in GAD, aversion in panic, PE notably common in social phobia" },
     { label: "Bupropion", type: "drug", href: "/drugs/bupropion/", note: "The sexuality-sparing antidepressant — the switch-to tier when SSRIs silence the response" },
     { label: "Sertraline", type: "drug", href: "/drugs/sertraline/", note: "The SSRI tier's orgasm-delay exploitation in PE — the same effect that causes the dysfunction" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The accelerator's currency — and prolactin's opposite: the treatable endocrine tier of low desire" },

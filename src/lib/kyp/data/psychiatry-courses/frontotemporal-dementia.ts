@@ -21,7 +21,7 @@ import type { PsychiatryCourse } from "./types";
 export const frontotemporalDementiaCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "frontotemporal-dementia",
-  title: "Frontotemporal Dementia — When Personality Changes First",
+  title: "Frontotemporal Dementia",
   shortName: "FTD",
   kind: "disorder",
   category: "Neurocognitive Disorder",
@@ -37,9 +37,9 @@ export const frontotemporalDementiaCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Frontotemporal dementia is a younger-onset dementia that attacks the frontal and temporal lobes first, so personality, behaviour and language change before memory does — routinely mistaken for depression, marital breakdown, mania, OCD or 'a midlife crisis' for years before anyone thinks of the brain.",
+    "When personality changes first — the younger-onset dementia of frontal and temporal lobes",
   summary:
-    "A 55-year-old bank manager starts making off-colour jokes in meetings, buys things he cannot afford, eats from other people's plates, stops bathing, and no longer asks about his grandchildren. His memory is fine. His MRI is quietly striking: the frontal and temporal lobes are shrinking. This is FTD — a family of dementias that begins, on average, between 45 and 65, making it one of the commonest causes of young-onset dementia (in younger groups it rivals or beats Alzheimer's). Two main doors into it: the behavioural door (disinhibition, apathy, loss of empathy, compulsive habits, changed eating) and the language door (effortful ungrammatical speech, or the slow loss of word meanings). Roughly a third to two-fifths of cases run in families — the strongest familial signal of any common dementia — and some patients develop, or carry alongside, motor neuron disease (ALS), which changes prognosis profoundly. There is no disease-modifying medicine yet: treatment is behaviour management, caregiver architecture, language support and foresighted planning. And the diagnosis itself is a huge intervention: it converts 'he has become a terrible person' into 'he has an illness of the frontal lobes' — rescuing marriages, inheritances and the family's ability to care. The clinical spine of this course: the six behavioural clusters as a checklist, the test paradox (a normal memory screen NEVER excludes FTD — frontal damage is invisible to memory-weighted tests), the two-door variant map, the mimic table psychiatry owns, and the Indian midlife terrain where the blame ('she changed him', 'he must be drinking') delays the MRI by years.",
+    "Frontotemporal dementia is a younger-onset dementia family in which personality, behaviour and language change before memory does. There is no disease-modifying treatment, so care rests on early diagnosis, behavioural management, caregiver support and foresighted planning.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -63,10 +63,10 @@ export const frontotemporalDementiaCourse: PsychiatryCourse = {
     { label: "The survival range", value: "7–13 years from onset on average", detail: "Language variants run slower (over a decade, workable communication with strategy); the FTD-MND fork is the short end" },
   ],
   knowledgeGraph: [
-    { label: "Alzheimer's Disease & Dementia — The Gradual Erasure", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The memory-first contrast — and the source of the reflex prescription (cholinesterase inhibitors) FTD must refuse" },
-    { label: "Delirium — Acute Brain Failure", type: "condition", href: "/psychiatry/delirium/", note: "The sudden-change impostor on any dementing background" },
-    { label: "Dementia with Lewy Bodies — The Fluctuating Dementia", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The other young-ish dementia sibling in the differential" },
-    { label: "Dementia in Parkinson's Disease — The Twin Decline", type: "condition", href: "/psychiatry/parkinsons-dementia/", note: "The parkinsonian cousin — PSP and CBS sit at FTD's own tau border" },
+    { label: "Alzheimer's Disease & Dementia", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The memory-first contrast — and the source of the reflex prescription (cholinesterase inhibitors) FTD must refuse" },
+    { label: "Delirium", type: "condition", href: "/psychiatry/delirium/", note: "The sudden-change impostor on any dementing background" },
+    { label: "Dementia with Lewy Bodies", type: "condition", href: "/psychiatry/lewy-body-dementia/", note: "The other young-ish dementia sibling in the differential" },
+    { label: "Dementia in Parkinson's Disease", type: "condition", href: "/psychiatry/parkinsons-dementia/", note: "The parkinsonian cousin — PSP and CBS sit at FTD's own tau border" },
     { label: "Obsessive-Compulsive Disorder (OCD)", type: "condition", href: "/psychiatry/ocd/", note: "The mimic: FTD rituals are egosyntonic, unresisted and fixed — no anxiety relief-seeking" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "The mania mimic that fails the gates: no sleeplessness, no quickening, no contagious euphoria" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The commonest wrong label: apathy is indifferent, depression is painful — and antidepressants do nothing for FTD" },

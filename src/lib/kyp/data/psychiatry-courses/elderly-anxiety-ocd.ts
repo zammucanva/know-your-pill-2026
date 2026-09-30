@@ -27,13 +27,13 @@ import type { PsychiatryCourse } from "./types";
 export const elderlyAnxietyOcdCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "elderly-anxiety-ocd",
-  title: "Anxiety & OCD in the Elderly — The Wrong Tablet",
+  title: "Anxiety & OCD in the Elderly",
   shortName: "Elderly Anxiety/OCD",
   kind: "disorder",
   category: "Psychiatry of Old Age",
   groupLetter: "M",
   groupName: "Psychiatry of old age",
-  learningPath: ["Psychiatry", "Psychiatry of Old Age", "Anxiety & OCD in the Elderly — The Wrong Tablet"],
+  learningPath: ["Psychiatry", "Psychiatry of Old Age", "Anxiety & OCD in the Elderly"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -43,10 +43,10 @@ export const elderlyAnxietyOcdCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "The neurotic disorders of old age are common, distressing, costly and treatable — and the commonest thing done about them is the wrong one: a renewing benzodiazepine instead of the right things, an antidepressant and adapted CBT.",
+    "Common and treatable, yet answered with a renewing benzodiazepine, not an antidepressant",
 
   summary:
-    "This is the old-age chapter of the anxiety story, and it opens with a complaint: these disorders are common, distressing, costly and treatable, yet still go untreated or get treated with the wrong thing — a benzodiazepine — instead of the right things: an antidepressant and CBT adapted for the ageing sensorium and memory. The classification stance comes first because it changes everything downstream: the stress-related and anxiety disorders of old age are better understood as aspects of one general neurotic syndrome (extensive comorbidity, diagnostic instability over time, all of them persisting into old age) than as discrete categories — with OCD the single exception, a distinct and stable condition with a different aetiology that keeps its own identity across the lifespan. Old age changes the presentation, not the suffering: worry shifts its content to health, finances and crime; the fear of falling becomes the signature geriatric phobia; panic misroutes to cardiologists, neurologists and gastroenterologists; agoraphobia appearing for the first time after 65 usually follows an alarming physical illness rather than panic; post-stroke anxiety becomes chronic in a significant proportion and drags functional recovery with it; and first-onset obsessions after 50 demand a search for organic disease — dementia or a space-occupying lesion — before any OCD label is written. The aetiological engine is the vulnerability–destabilisation–restitution model, with old age multiplying the destabilising events (illness, bereavement, retirement, institutionalisation) precisely as the support systems thin. The judgement that guards the whole assessment: whether an elder's fear is 'reasonable' is decided by physical frailty and the availability of social support — never by age alone. The management message is precise and examinable: these disorders live in primary care; antidepressants are first-line (SSRIs and venlafaxine carry the evidence, and depression usually travels with the anxiety — comorbid anxiety predicting poorer antidepressant response and more relapse); benzodiazepines reluctantly, short-acting and briefly when truly needed (oxazepam, with no active metabolites, the least problematic); CBT adapted for sensory impairment, physical illness and cognitive dysfunction; and prevention folded into stroke, heart-attack and falls aftercare — the window in which chronic neurotic disability is still preventable. The Indian urgency is the mistreatment pattern at its worst: the 'tension' somatic doorway, the normalisation filter ('what do you expect at this age?'), and the renewing benzodiazepine legacy — converting one long-term user to an SSRI plus a planned taper being the single highest-yield geriatric intervention many Indian OPDs can offer.",
+    "In old age, anxiety shifts its address: worry turns to health and finances, fear of falling becomes the signature phobia, and panic misroutes to organ clinics. Antidepressants with CBT adapted to the ageing sensorium are first-line, not a renewing benzodiazepine.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -72,11 +72,11 @@ export const elderlyAnxietyOcdCourse: PsychiatryCourse = {
     { label: "Generalized Anxiety Disorder (GAD)", type: "condition", href: "/psychiatry/gad/", note: "The F-group science of the worry condition — THIS course adds the elderly content shift (health, finances, crime), the 'tension' doorway and the frailty-and-support judgement" },
     { label: "Panic Disorder & Agoraphobia", type: "condition", href: "/psychiatry/panic-disorder/", note: "The general architecture of the surge — and the old-age difference: panic misrouted to cardiology and neurology, agoraphobia after 65 triggered by illness rather than panic" },
     { label: "Obsessive-Compulsive Disorder (OCD)", type: "condition", href: "/psychiatry/ocd/", note: "The exception to the general neurotic syndrome — distinct, stable, differently caused; and the lifelong disorder whose after-50 impostors this course teaches to exclude" },
-    { label: "Benzodiazepine Misuse — The Borrowed Calm", type: "condition", href: "/psychiatry/benzodiazepine-misuse/", note: "The wrong tablet's fuller story — tolerance, dependence, the withdrawal on erratic discontinuation, and the taper discipline that converts the legacy prescription" },
-    { label: "Delirium in the Elderly — The Quiet Emergency", type: "condition", href: "/psychiatry/elderly-delirium/", note: "The benzodiazepine accumulation endgame — and the two-way street: severe anxiety precipitating delirium in the vulnerable, frightening hallucinations producing stormy anxiety" },
-    { label: "Mood Disorders in the Elderly — The Pseudodementia Trap", type: "condition", href: "/psychiatry/elderly-mood/", note: "The comorbidity that matters most — depressive symptoms integral to these disorders, comorbid anxiety predicting poorer antidepressant response and more relapse" },
-    { label: "Mild Cognitive Impairment — The Crossroads", type: "condition", href: "/psychiatry/mci/", note: "The bidirectional street: early dementia presenting with anxiety and obsessinality, anxiety and depression producing the subjective cognitive impairment that presents first" },
-    { label: "Substance Use in the Elderly — The Silent Epidemic", type: "condition", href: "/psychiatry/elderly-substance-use/", note: "The mistreatment trap's other half — sedative and alcohol abuse growing in the void left by the untreated anxiety" },
+    { label: "Benzodiazepine Misuse", type: "condition", href: "/psychiatry/benzodiazepine-misuse/", note: "The wrong tablet's fuller story — tolerance, dependence, the withdrawal on erratic discontinuation, and the taper discipline that converts the legacy prescription" },
+    { label: "Delirium in the Elderly", type: "condition", href: "/psychiatry/elderly-delirium/", note: "The benzodiazepine accumulation endgame — and the two-way street: severe anxiety precipitating delirium in the vulnerable, frightening hallucinations producing stormy anxiety" },
+    { label: "Mood Disorders in the Elderly", type: "condition", href: "/psychiatry/elderly-mood/", note: "The comorbidity that matters most — depressive symptoms integral to these disorders, comorbid anxiety predicting poorer antidepressant response and more relapse" },
+    { label: "Mild Cognitive Impairment", type: "condition", href: "/psychiatry/mci/", note: "The bidirectional street: early dementia presenting with anxiety and obsessinality, anxiety and depression producing the subjective cognitive impairment that presents first" },
+    { label: "Substance Use in the Elderly", type: "condition", href: "/psychiatry/elderly-substance-use/", note: "The mistreatment trap's other half — sedative and alcohol abuse growing in the void left by the untreated anxiety" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The modulation the first-line tier restores — why an antidepressant, not a tranquilliser, is the answer to late-life anxiety and OCD alike" },
     { label: "Amygdala", type: "brain-region", href: "#brain", note: "The threat detector whose output the elderly body translates into chest, gut and dizziness — launching the somatic detour" },
   ],

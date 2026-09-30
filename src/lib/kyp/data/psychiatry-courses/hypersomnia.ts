@@ -20,13 +20,13 @@ import type { PsychiatryCourse } from "./types";
 export const hypersomniaCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "hypersomnia",
-  title: "Excessive Sleepiness & Hypersomnias — The Four Engines",
+  title: "Excessive Sleepiness & Hypersomnias",
   shortName: "Hypersomnia",
   kind: "disorder",
   category: "Sleep-Wake Disorder",
   groupLetter: "K",
   groupName: "Sleep-wake disorders",
-  learningPath: ["Psychiatry", "Sleep-Wake Disorders", "Excessive Sleepiness"],
+  learningPath: ["Psychiatry", "Sleep-Wake Disorders", "Excessive Sleepiness & Hypersomnias"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-28",
@@ -36,9 +36,9 @@ export const hypersomniaCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Excessive daytime sleepiness is the symptom of a person who cannot stay awake when life requires it — and behind it stand four very different engines: not-enough-sleep (the commonest by far), broken sleep (chiefly sleep apnoea), a primary brain sleepiness-disorder (narcolepsy and its cousins), or a medical/psychiatric condition — each demanding a completely different treatment.",
+    "The four engines behind the sleepy patient — each demands a different treatment",
   summary:
-    "'Sleepiness' is routinely trivialised in India — the dozing commuter, the lorry driver, the teenager asleep at the desk are cultural jokes rather than clinical signals. Medicine knows better: sleepiness at the wheel kills on highways (driver sleepiness is implicated in a meaningful share of Indian road accidents, among the world's largest road-fatality burdens); sleepiness in class ends careers; and sleepiness that has lasted years is a symptom with a differential, not a personality. The clinical spine is the four-engine structure: (1) insufficient sleep syndrome — the person simply sleeps 5–6 hours and needs 8, the commonest 'hypersomnia' in India and everywhere; (2) obstructive sleep apnoea — sleep repeatedly shattered by airway collapse, producing unrefreshing nights and deadly days, the most under-diagnosed sleep disorder in the country; (3) central hypersomnias — narcolepsy (with or without the emotion-triggered collapse called cataplexy) and idiopathic hypersomnia, genuine brain-sleepiness disorders of the orexin system; (4) secondary hypersomnia — depression's oversleeping, hypothyroidism, medicines, Kleine-Levin's rare sleeping marathons. The clinician's job is engine-identification — the sleep history, the sleepiness ladder, and the right tests — because the treatments diverge completely: more sleep, an airway-pressure machine, wake-promoting medication, or treatment of the underlying condition.",
+    "Excessive daytime sleepiness has four engines: insufficient sleep, obstructive sleep apnoea, the central hypersomnias and secondary causes. Engine identification through the sleep history matters because the treatments diverge completely.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -63,7 +63,7 @@ export const hypersomniaCourse: PsychiatryCourse = {
   ],
   knowledgeGraph: [
     { label: "Sleep–Wake Physiology", type: "condition", href: "/psychiatry/sleep-basics/", note: "The orexin switchboard and the architecture whose fragmentation produces the sleepy day" },
-    { label: "Insomnias", type: "condition", href: "/psychiatry/insomnia/", note: "The other half of the sleep clinic — and the fatigue-vs-sleepiness fork's partner" },
+    { label: "Insomnia", type: "condition", href: "/psychiatry/insomnia/", note: "The other half of the sleep clinic — and the fatigue-vs-sleepiness fork's partner" },
     { label: "Parasomnias", type: "condition", href: "/psychiatry/parasomnias/", note: "Narcolepsy's REM-boundary phenomena neighbour the parasomnia families; apnoea fragments nights into parasomnia triggers" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "Engine 4's commonest: the atypical, oversleeping depression — screened alongside every sleepy presentation" },
     { label: "Venlafaxine", type: "drug", href: "/drugs/venlafaxine/", note: "The first-line cataplexy tier in Indian practice (37.5–75 mg, REM-suppression)" },

@@ -24,13 +24,13 @@ import type { PsychiatryCourse } from "./types";
 export const couplesTherapyCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "couples-therapy",
-  title: "Couples Therapy — The Decentred Dialogue",
+  title: "Couples Therapy",
   shortName: "Couple Therapy",
   kind: "concept",
   category: "Treatment Methods",
   groupLetter: "P",
   groupName: "Treatment methods",
-  learningPath: ["Psychiatry", "Treatment Methods", "Couples Therapy — The Decentred Dialogue"],
+  learningPath: ["Psychiatry", "Treatment Methods", "Couples Therapy"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -40,10 +40,10 @@ export const couplesTherapyCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Couple therapy treats the relationship as the patient: four schools explain what goes wrong between partners, a Maudsley-bred hybrid called behavioural-systems therapy picks the intervention along the ALI hierarchy, and the therapist's signature craft is decentring — getting out of the dialogue's way so the couple can finally have it.",
+    "The decentred dialogue — the relationship is the patient, not the individuals in it",
 
   summary:
-    "This is the therapy whose patient is a relationship. The Oxford chapter (Crowe) opens with the sociology that fills the waiting room: a marriage institution in crisis, falling marriage rates, divorce reaching 40% of UK marriages by 1996, cohabiting and same-sex partnerships (the latter needing to be STRONGER than average to survive homophobia), and multicultural realities including explicitly noted arranged-marriage preferences in families from the Indian subcontinent. The course then teaches the four schools as four mechanisms of trouble and repair: psychodynamic couple therapy (internal blueprints, projections, shared defences — thin evidence, Wile's critiques taught honestly); behavioural marital therapy (low positive reinforcement and mutual coercion corrected through reciprocity negotiation and communication training — the trial-backed core); cognitive and rational-emotive approaches (automatic negative thoughts, 'intolerable' softened to 'difficult to accept', demands to desires); and systems therapy (enmeshment, circular causality, genograms, sculpting, paradox). The chapter's own method — behavioural-systems couple therapy, developed at the Maudsley by Crowe and Ridley — is taught in full: the Alternative Levels of Intervention (ALI) hierarchy, which climbs from reciprocity negotiation to paradox as the couple's symptoms, rigidity and individual focus demand; the session craft, above all DECENTRING (Minuchin's move: the partners talk to each other while the therapist becomes theatrical producer rather than diplomat) and the ending message with its positive framing, level-matched content, split-team variant and written copy. The format is short-term — 5–10 hour-long sessions over 3–6 months, deliverable in any ordinary consulting room. The psychiatric indications matter most for the exam and the ward: depression in partnered patients (the Leff London trial: couple therapy effective and acceptable, compared with antidepressants), morbid jealousy (conjoint sessions nearly always useful, per De Silva), psychosexual problems, and the McFarlane finding that schizophrenia's most useful psychological interventions involve the nearest relative. The contraindications are equally examinable: acute psychosis and active addiction render a partner emotionally unavailable — defer, stabilise, then return with limited aims. The evidence verdict is taught with the chapter's own honesty: behavioural components proven, systemic components less so, the combination 'likely to be effective' but untried as a package. The training pathway (seminars, role play through every role, observation and supervised practice) and the India lens — the joint family as the invisible third partner, the arranged-marriage couple's desire disparity, consummation failure and in-law conflict, and decentring's perfect cultural fit where couples address each other through intermediaries — complete the course.",
+    "Couple therapy treats the relationship as the patient, drawing on psychodynamic, behavioural, cognitive and systemic schools. Main indications are relationship distress, depression in partnered patients, morbid jealousy and psychosexual problems, with acute psychosis and active addiction as contraindications.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -67,14 +67,14 @@ export const couplesTherapyCourse: PsychiatryCourse = {
     { label: "The contraindications", value: "Acute psychosis · active addiction", detail: "The emotionally unavailable partner cannot do interactional work — defer until stabilisation, then couple-level work with limited aims; partner availability and willingness is the first selection gate" },
   ],
   knowledgeGraph: [
-    { label: "Family Therapy — Circular Causality", type: "condition", href: "/psychiatry/family-therapy/", note: "The systems school's full account — the larger unit to convene when the couple is a subsystem of the joint household" },
-    { label: "Group Therapy — Yalom's Curative Factors", type: "condition", href: "/psychiatry/group-therapy/", note: "The other multi-person format — where the group, not the couple, is the treatment unit" },
-    { label: "Dynamic Psychotherapy — The Procedural Unconscious", type: "condition", href: "/psychiatry/dynamic-psychotherapy/", note: "The psychodynamic school's one-person counterpart — blueprints, projections and defences in individual form" },
+    { label: "Family Therapy", type: "condition", href: "/psychiatry/family-therapy/", note: "The systems school's full account — the larger unit to convene when the couple is a subsystem of the joint household" },
+    { label: "Group Therapy", type: "condition", href: "/psychiatry/group-therapy/", note: "The other multi-person format — where the group, not the couple, is the treatment unit" },
+    { label: "Dynamic Psychotherapy", type: "condition", href: "/psychiatry/dynamic-psychotherapy/", note: "The psychodynamic school's one-person counterpart — blueprints, projections and defences in individual form" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The Leff trial's home territory — the antidepressant comparator arm and the depression indication" },
-    { label: "Sexual Dysfunctions — The Accelerator and the Brakes", type: "condition", href: "/psychiatry/sexual-dysfunctions/", note: "The psychosexual adjunct tier — behavioural-systems couple therapy works alongside it, with individual therapy added where childhood abuse survives in one partner" },
+    { label: "Sexual Dysfunctions", type: "condition", href: "/psychiatry/sexual-dysfunctions/", note: "The psychosexual adjunct tier — behavioural-systems couple therapy works alongside it, with individual therapy added where childhood abuse survives in one partner" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "McFarlane's finding: the most useful psychological interventions involve the nearest relative" },
-    { label: "Alcohol Use Disorders — The Disease of More", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The post-crisis couple work — stabilise the addiction first, then conjoint sessions with limited aims" },
-    { label: "Indigenous & Folk Healing — Culturally Embedded Care", type: "condition", href: "/psychiatry/indigenous-healing/", note: "The cultural lens the transcultural counselling lineage (d'Ardenne & Mahtani, Ahmed & Bhugra, Bhui) shares with this course's India tier" },
+    { label: "Alcohol Use Disorders", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The post-crisis couple work — stabilise the addiction first, then conjoint sessions with limited aims" },
+    { label: "Indigenous & Folk Healing", type: "condition", href: "/psychiatry/indigenous-healing/", note: "The cultural lens the transcultural counselling lineage (d'Ardenne & Mahtani, Ahmed & Bhugra, Bhui) shares with this course's India tier" },
   ],
 
   /* ---- Lesson 2: Mechanism & Neuroscience ---- */

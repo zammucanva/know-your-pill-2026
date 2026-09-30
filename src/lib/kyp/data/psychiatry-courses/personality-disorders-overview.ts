@@ -20,13 +20,13 @@ import type { PsychiatryCourse } from "./types";
 export const personalityDisordersOverviewCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "personality-disorders-overview",
-  title: "Personality Disorders — The Concept, the Clusters, the Numbers",
+  title: "Personality Disorders",
   shortName: "PD Overview",
   kind: "disorder",
   category: "Personality Disorder",
   groupLetter: "J",
   groupName: "Personality disorders",
-  learningPath: ["Psychiatry", "Personality Disorders", "Overview & Classification"],
+  learningPath: ["Psychiatry", "Personality Disorders", "Personality Disorders"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-28",
@@ -36,9 +36,9 @@ export const personalityDisordersOverviewCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Deeply ingrained, inflexible patterns of perceiving, feeling and relating that begin early, persist across situations and cause distress or impairment — the diagnoses psychiatry spent two centuries arguing were 'bad character', and now treats with organised, evidence-backed programmes.",
+    "The concept, the clusters and the numbers: definition, classification and epidemiology",
   summary:
-    "Personality disorder is the diagnosis that asks the oldest question in psychiatry — bad or mad? — and this course answers it with the field's modern verdict: a real, treatable clinical domain. The definition is architectural, not symptomatic: an enduring pattern of inner experience and behaviour deviating markedly from cultural expectations, visible in at least two of four domains (cognition, affectivity, interpersonal functioning, impulse control), inflexible and pervasive, beginning by adolescence or early adulthood, stable over time, and causing distress or impairment — to the person, or to the people around them. Because the pattern feels like 'who I am' (ego-syntonic), patients present with consequences (crises, relationship breakdown, depression, self-harm), never with the pattern itself; because the same person looks normal at work and disordered at home, assessment needs multiple informants and settings. The classification is a live battlefield: the categorical system (ten named types in three clusters — odd/eccentric, dramatic/erratic, anxious/fearful) coexists uneasily with dimensional evidence that disordered personalities are extremes of normal trait variation, and both DSM-5 Section III and ICD-11 have now moved to dimensional hybrids. The epidemiology is the course's quiet bombshell: roughly a tenth of the community, up to half of psychiatric outpatients, and majorities of prisoners carry a personality disorder — which changes the prognosis of every other mental disorder the patient carries. The Indian reality: EUPD terminology on the case notes, borderline presentations relabelled as 'rapid-cycling bipolar', and the accompanying relative in every OPD queue as the most under-used assessment instrument in the country.",
+    "Personality disorder is an enduring, inflexible pattern of inner experience and behaviour causing distress or impairment. Diagnosis matters because prevalence is high across psychiatric settings, and organised, evidence-backed programmes now treat it.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [

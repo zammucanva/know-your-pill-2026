@@ -22,13 +22,13 @@ import type { PsychiatryCourse } from "./types";
 export const childSleepCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "child-sleep",
-  title: "Child Sleep — The Hyperactivity Masquerade",
+  title: "Child Sleep",
   shortName: "Child Sleep",
   kind: "disorder",
   category: "Child & Adolescent Psychiatry",
   groupLetter: "L",
   groupName: "Child & adolescent psychiatry",
-  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Child Sleep — The Hyperactivity Masquerade"],
+  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Child Sleep"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -38,10 +38,10 @@ export const childSleepCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Children are not miniature adults in sleep medicine: their sleep problems are defined by parents, caused largely by parenting and development, present as over-activity rather than sleepiness, and are commoner, more serious, and more treatable than assumed — which is why the sleepy child so often leaves the clinic with an ADHD label instead of a sleep history.",
+    "The hyperactivity masquerade — sleepiness that slows adults down speeds children up",
 
   summary:
-    "Between 20–30% of children from infancy to adolescence have sleep problems significant enough to concern them or their parents, and paediatric sleep medicine is barely taught — so treatable conditions get misread as ADHD, laziness or bad behaviour. The course's one organising idea: the sleepiness that slows an adult down speeds a child UP — irritability, tantrums, restlessness, poor concentration, impulsiveness, aggression — the hyperactivity masquerade, the single most examinable concept in this territory. Some 'ADHD' is obstructive sleep apnoea, periodic limb movements or a circadian disorder, and the behaviour improves when the sleep disorder is treated. The architecture underneath: sleep physiology changes radically across childhood (REM-dominant fragile infancy, slow-wave-rich early childhood that hosts the arousal disorders, the pre-pubertal years of maximal efficiency, the biologically delayed adolescent phase that society's early school bell converts into a sleep-debt epidemic); parents define, cause, maintain and must therefore help treat the problem; and precise diagnosis separates the three complaint families — sleeplessness, excessive daytime sleepiness and parasomnias. The exam centrepieces: the DSPS quartet (late sleep onset, sound uninterrupted sleep, morning dysfunction, evening alertness) with its two-step chronotherapy (a 15-minutes-a-day advance for delays up to about three hours, or a round-the-clock delay in 3-hour steps for severe cases); the paediatric OSA contrasts (usually not obese, tonsils and adenoids rather than fat, equal sex ratio, partial obstruction with hypoventilation, over-activity rather than visible sleepiness — adenotonsillectomy the usual treatment); and the arousal-disorder rule — the child stays asleep and unaware, and waking him increases distress: do not wake. The India layer is structural: co-sleeping is culture, not pathology; the coaching-class and night-study culture manufactures exactly the adolescent sleep debt the physiology predicts; and paediatric polysomnography is scarce outside metros, making the history-based approach — three screening questions, the 24-hour review, the two-week diary — the standard of care.",
+    "Childhood sleep problems are common, parent-defined and largely treatable, but sleepiness presents as over-activity rather than tiredness. Some apparent ADHD is untreated sleep disorder, from obstructive sleep apnoea to delayed phase, and improves when the sleep problem is treated.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -64,14 +64,14 @@ export const childSleepCourse: PsychiatryCourse = {
     { label: "The Indian signature", value: "Family bed + coaching timetable", detail: "Co-sleeping is normal and often adaptive (the clinical targets are timing, routine and limits, not eviction); the coaching-class and night-study culture manufactures exactly the sleep debt the physiology predicts" },
   ],
   knowledgeGraph: [
-    { label: "ADHD — The Brakes and the Engine", type: "condition", href: "/psychiatry/adhd/", note: "The masquerade target: some 'ADHD' is OSA, periodic limb movements or a circadian disorder, and improves when the sleep disorder is treated — the screening questions before the stimulant" },
-    { label: "Parasomnias — Sleepwalking, Sleep Terrors & the Dream-Fighter", type: "condition", href: "/psychiatry/parasomnias/", note: "The adult-side account of the partial-arousal disorders; the paediatric rules are different (frequency, reassurance, the do-not-wake discipline)" },
-    { label: "Excessive Sleepiness & Hypersomnias — The Four Engines", type: "condition", href: "/psychiatry/hypersomnia/", note: "The narcolepsy and hypersomnia biology (orexin, CSF hypocretin) behind the childhood-onset forms that begin as simply prolonged overnight sleep" },
-    { label: "Insomnias — Chronic Insomnia Disorder", type: "condition", href: "/psychiatry/insomnia/", note: "The adult insomnia framework — childhood sleeplessness inverts it: parents define it, parents maintain it, parents treat it" },
-    { label: "Sleep–Wake Physiology — The Factory Night-Shift and Its Two Clocks", type: "condition", href: "/psychiatry/sleep-basics/", note: "The two-process and circadian machinery that childhood rewrites stage by stage — REM-dominant infancy, SWS-rich early childhood, the pubertal phase delay" },
-    { label: "Child Anxiety — The School-Refusal Engines", type: "condition", href: "/psychiatry/child-anxiety/", note: "Night-time fears and frequent nightmares with intense bedtime fears suggest an anxiety disorder — and the nightmare content may reveal the cause, including trauma or abuse" },
-    { label: "Autism Spectrum Disorder — The Prediction Engine", type: "condition", href: "/psychiatry/autism/", note: "Behavioural sleep treatment remains very effective in children with autism and learning disability — the parents' belief that the problems are inevitable and untreatable is the barrier to dismantle" },
-    { label: "Developmental Disorders — The Learning Channels", type: "condition", href: "/psychiatry/developmental-disorders/", note: "Sleep disturbance in learning disability is particularly high and severe — and amenable to treatment: the two facts every parent of such a child deserves to hear together" },
+    { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The masquerade target: some 'ADHD' is OSA, periodic limb movements or a circadian disorder, and improves when the sleep disorder is treated — the screening questions before the stimulant" },
+    { label: "Parasomnias", type: "condition", href: "/psychiatry/parasomnias/", note: "The adult-side account of the partial-arousal disorders; the paediatric rules are different (frequency, reassurance, the do-not-wake discipline)" },
+    { label: "Excessive Sleepiness & Hypersomnias", type: "condition", href: "/psychiatry/hypersomnia/", note: "The narcolepsy and hypersomnia biology (orexin, CSF hypocretin) behind the childhood-onset forms that begin as simply prolonged overnight sleep" },
+    { label: "Insomnia", type: "condition", href: "/psychiatry/insomnia/", note: "The adult insomnia framework — childhood sleeplessness inverts it: parents define it, parents maintain it, parents treat it" },
+    { label: "Sleep–Wake Physiology", type: "condition", href: "/psychiatry/sleep-basics/", note: "The two-process and circadian machinery that childhood rewrites stage by stage — REM-dominant infancy, SWS-rich early childhood, the pubertal phase delay" },
+    { label: "Child Anxiety", type: "condition", href: "/psychiatry/child-anxiety/", note: "Night-time fears and frequent nightmares with intense bedtime fears suggest an anxiety disorder — and the nightmare content may reveal the cause, including trauma or abuse" },
+    { label: "Autism Spectrum Disorder", type: "condition", href: "/psychiatry/autism/", note: "Behavioural sleep treatment remains very effective in children with autism and learning disability — the parents' belief that the problems are inevitable and untreatable is the barrier to dismantle" },
+    { label: "Developmental Disorders", type: "condition", href: "/psychiatry/developmental-disorders/", note: "Sleep disturbance in learning disability is particularly high and severe — and amenable to treatment: the two facts every parent of such a child deserves to hear together" },
     { label: "Orexin/hypocretin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The wake-hold switchboard whose loss is narcolepsy — the childhood form that starts as prolonged sleep and gets called laziness, depression or conversion disorder" },
     { label: "Suprachiasmatic nucleus", type: "brain-region", href: "#brain", note: "The body clock — established by ~6 months in the infant, biologically delayed at puberty: the structure whose timetable explains both the toddler's nights and the teenager's mornings" },
   ],

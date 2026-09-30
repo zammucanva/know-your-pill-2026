@@ -25,13 +25,13 @@ import type { PsychiatryCourse } from "./types";
 export const nicotineDependenceCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "nicotine-dependence",
-  title: "Nicotine Dependence — The Most Quit-Able Addiction",
+  title: "Nicotine Dependence",
   shortName: "Nicotine",
   kind: "disorder",
   category: "Substance Use Disorder",
   groupLetter: "B",
   groupName: "Substance use disorders",
-  learningPath: ["Psychiatry", "Substance Use Disorders", "Nicotine Dependence — The Most Quit-Able Addiction"],
+  learningPath: ["Psychiatry", "Substance Use Disorders", "Nicotine Dependence"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -41,10 +41,10 @@ export const nicotineDependenceCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "India's largest single preventable cause of death arrives as a pocket habit — the bidi, the cigarette, the gutka packet, the paan with zarda — and it is also the most quit-able addiction in medicine: two questions, a quit date, and a few weeks of medicines that cost less than the tobacco did.",
+    "India's largest preventable cause of death — and its most quit-able addiction",
 
   summary:
-    "This is the double epidemic. India's tobacco problem is smoked (bidis, cigarettes — bidis dominating the poor and the rural) AND smokeless (gutka, khaini, paan with tobacco, zarda): about 28% of adults use one or the other, the world's largest smokeless-tobacco population, and over 1 million Indians die of it every year — the largest single preventable cause, with the disease map running through the oral cavity (the world's highest oral-cancer burden), the heart, the lungs and worsened tuberculosis outcomes. The mechanism explains both the grip and the treatment's shape. The two-second teacher: nicotine reaches the brain in about ten seconds of a puff — faster than intravenous for practical purposes — and the act-reward lesson repeats 200+ times a day (every tea, every break, every phone call, every stress spike), the densest cue-web of any addiction. The thermostat-in-hours: the receptors adapt fast, so withdrawal — irritability, craving, poor concentration, hunger — arrives within hours of the last dose, which is why the average unaided quit attempt fails within a week while the health benefits stay invisible: an awful incentive structure that pharmacotherapy simply deletes from the equation. The clinical spine is the two-question minute ('Do you use tobacco?' — both forms — and 'How soon after waking?', with first tobacco within 30 minutes of waking marking high dependence) followed by the 5-A structure — Ask, Advise (personal, never generic), Agree a quit date within two weeks, Assist with medicines and a cue-map, Arrange follow-up inside the withdrawal-peak week. Pharmacotherapy doubles or triples the odds: NRT is the backbone (patch for the steady background, gum or lozenge for breakthrough cravings — the combination outperforms single-form, dosed by dependence, Indian generics approx ₹150–500/week, often cheaper than the habit); varenicline is the strongest single agent (partial α4β2 agonist, started a week before the quit date, the EAGLES-era psychiatric safety quoted honestly); bupropion carries the seizure contraindications (epilepsy, eating disorders, abrupt alcohol or benzodiazepine withdrawal); cytisine is the exam name; and e-cigarettes are no prescription in Indian practice — regulated out of sale. The smokeless adaptation is India's main event: the same architecture with the pocket-environment change (water bottle, cardamom or fennel where the packet lived) and the oral examination for submucous fibrosis and leukoplakia in EVERY chewer with ENT referral — the highest-stakes follow-up in Indian medicine. Psychiatry owns two special duties: the co-addiction rule (psychiatric and other-substance patients smoke at 2–3× the general rate, so tobacco is treated in parallel, never sequentially — staged with clinical stability) and the CYP1A2 alert (tobacco smoke induces the enzyme that clears clozapine and olanzapine, so quitting raises levels substantially — sometimes 50%+ — producing sedation and, with clozapine, seizures; medicine levels reviewed in the first weeks). The Indian frame completes the course: the bidi equity problem (the poorest smoke the most harmful product cheapest — cost-comparison counselling is equity work), the paan-culture tobacco-free-home declaration, the COTPA/NTCP/mCessation policy architecture, and the two relapse scripts — the lapse as a mapped event, and the ~4–5 kg average weight gain scripted in advance so the kilo never becomes the excuse.",
+    "Tobacco dependence drives India's largest preventable death toll, across smoked and smokeless forms. The two-question screen, the 5-A structure and combination pharmacotherapy make it medicine's most quit-able addiction.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -69,9 +69,9 @@ export const nicotineDependenceCourse: PsychiatryCourse = {
     { label: "The kilo to script", value: "4–5 kg average", detail: "Post-cessation weight gain averages 4–5 kg over months — a strongly health-positive trade, scripted in advance (the 30-minute daily walk, sugar-free substitutes) so the unscripted kilo never becomes the relapse excuse" },
   ],
   knowledgeGraph: [
-    { label: "Substance Use — The Reward Hijack", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The shared reward-circuit story and the stimulus-control architecture every substance note runs — at its densest here, because no substance repeats its doses 200+ times a day" },
-    { label: "Alcohol Use Disorders — The Disease of More", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The co-addiction rule's commonest partner — the drinking patient who smokes at double-to-triple rates and needs both treated in parallel" },
-    { label: "Opioid Use Disorders — The Medicine That Holds the Door", type: "condition", href: "/psychiatry/opioid-use-disorders/", note: "The parallel-treatment principle in action — tobacco quitting never waits for the opioid recovery to finish" },
+    { label: "Substance Use", type: "condition", href: "/psychiatry/substance-use-overview/", note: "The shared reward-circuit story and the stimulus-control architecture every substance note runs — at its densest here, because no substance repeats its doses 200+ times a day" },
+    { label: "Alcohol Use Disorders", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "The co-addiction rule's commonest partner — the drinking patient who smokes at double-to-triple rates and needs both treated in parallel" },
+    { label: "Opioid Use Disorders", type: "condition", href: "/psychiatry/opioid-use-disorders/", note: "The parallel-treatment principle in action — tobacco quitting never waits for the opioid recovery to finish" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The 2–3× smoking gradient, the self-medication hypotheses, the 10–20-year mortality gap tobacco leads — and the clozapine patient whose quit changes the prescription" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "The co-travelling depression that makes bupropion the elegant double-duty choice — and the post-quit withdrawal dip that mimics a relapse" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The two-second teacher's currency — the ten-second nicotinic-to-dopamine burst that writes 'that puff mattered' 200+ times a day" },

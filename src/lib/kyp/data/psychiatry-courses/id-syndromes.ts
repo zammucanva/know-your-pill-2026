@@ -23,13 +23,13 @@ import type { PsychiatryCourse } from "./types";
 export const idSyndromesCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "id-syndromes",
-  title: "Genetic Syndromes in ID — The Psychiatry Each Carries",
+  title: "Genetic Syndromes in ID",
   shortName: "Genetic Syndromes in ID",
   kind: "disorder",
   category: "Intellectual Disability",
   groupLetter: "N",
   groupName: "Intellectual disability",
-  learningPath: ["Psychiatry", "Intellectual Disability", "Genetic Syndromes in ID — The Psychiatry Each Carries"],
+  learningPath: ["Psychiatry", "Intellectual Disability", "Genetic Syndromes in ID"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -39,10 +39,10 @@ export const idSyndromesCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Behind the broad label of intellectual disability sits a small, high-yield group of named genetic syndromes, each carrying its own organ clock, its own recurrence arithmetic, and its own behavioural phenotype — the science that converts 'an ID child' into 'a child with Down syndrome who needs a cardiac echo, a thyroid check, and a teaching style built for his social strengths'.",
+    "Each syndrome carries its own organ clock, recurrence risk and behavioural phenotype",
 
   summary:
-    "The named-syndrome tier covers a minority of all intellectual disability but a majority of the severe identified cases, and it pays for its learning in three currencies. The MEDICAL currency: Down's heart-and-thyroid, Prader-Willi's obesity machinery, 22q11's calcium-and-psychosis risk, tuberous sclerosis's kidneys-and-seizures — each syndrome's surveillance table prevents deaths. The BEHAVIOURAL currency: the phenotype science this course carries — the fragile X boy whose social ANXIETY is mistaken for autism's indifference, the Williams child whose cocktail-party warmth pairs with visuospatial blindness, the Prader-Willi child whose food obsession needs a locked kitchen rather than willpower lectures, the Angelman child's laughter, the Rett girl's hands lost to wringing. The FAMILIAL currency: recurrence numbers that differ by orders of magnitude — Down's free-trisomy 1%-ish against the metabolic one-in-four tiers — and genetic counselling that changes next-pregnancy decisions. The clinical frame is a four-step discipline: NAME the syndrome, BUILD the dated surveillance calendar, MATCH the management to the behavioural phenotype, HOLD the family's genetics-and-network architecture. The pharmacology is taught honestly: no drug treats the syndromes' ID core — the medicines serve the riders (seizures, ADHD, anxiety, meltdowns), and the mTOR inhibitors in tuberous sclerosis stand as the one syndrome-specific pharmacology that has actually arrived. The Indian realities run through everything: the newborn-screening layer still not universal, the 'named-then-neglected' trajectory in which the karyotype does its work and the family exits with nothing dated, the access-and-cost gradient on genetic testing, and the one-page surveillance calendar handed at the diagnosis consult as the counter-instrument. The transition dangers get their own windows: Down's early Alzheimer's clock (baseline cognition at 35–40, every decline audited for the treatables before any verdict), 22q11's adolescent psychosis risk (the annual thought-disorder screen from 12), and Rett's regression-after-progress trap.",
+    "Named genetic syndromes account for a minority of intellectual disability but most severe identified cases. Each carries its own organ surveillance schedule, behavioural phenotype and recurrence risk, so naming the syndrome directs medical care and genetic counselling.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -66,13 +66,13 @@ export const idSyndromesCourse: PsychiatryCourse = {
     { label: "The half-diagnosis", value: "The named-then-neglected pattern", detail: "The recurring Indian clinical failure: the syndrome named and the surveillance never scheduled — the named diagnosis without the dated table; the one-page calendar handed at the diagnosis consult is the counter" },
   ],
   knowledgeGraph: [
-    { label: "Intellectual Disability — Supports, Not Just Scores", type: "condition", href: "/psychiatry/intellectual-disability-overview/", note: "The base map: the supports framework, the severity tiers and the family architecture this course's named syndromes sit inside" },
-    { label: "Dual Diagnosis in ID — Beyond Diagnostic Overshadowing", type: "condition", href: "/psychiatry/id-dual-diagnosis/", note: "The psychiatric riders (anxiety, mood, psychosis) read through the ID lens — the overshadowing trap and its corrections" },
-    { label: "ID Treatment & Services — The Life-Course Architecture", type: "condition", href: "/psychiatry/id-treatment-services/", note: "Where the surveillance calendar, the school package and the transition planning actually get delivered" },
+    { label: "Intellectual Disability", type: "condition", href: "/psychiatry/intellectual-disability-overview/", note: "The base map: the supports framework, the severity tiers and the family architecture this course's named syndromes sit inside" },
+    { label: "Dual Diagnosis in ID", type: "condition", href: "/psychiatry/id-dual-diagnosis/", note: "The psychiatric riders (anxiety, mood, psychosis) read through the ID lens — the overshadowing trap and its corrections" },
+    { label: "ID Treatment & Services", type: "condition", href: "/psychiatry/id-treatment-services/", note: "Where the surveillance calendar, the school package and the transition planning actually get delivered" },
     { label: "Autism Spectrum Disorder", type: "condition", href: "/psychiatry/autism/", note: "The overlap and the critical distinction: fragile X's anxious-wanting against autism's indifference; the Rett mislabel window; the TSC comorbidity's strong association" },
-    { label: "ADHD — The Brakes and the Engine", type: "condition", href: "/psychiatry/adhd/", note: "The commonest rider: full treatment legitimacy in fragile X and 22q11 — never treated as merely 'the syndrome'" },
+    { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The commonest rider: full treatment legitimacy in fragile X and 22q11 — never treated as merely 'the syndrome'" },
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The 22q11 story's destination: the highest known single genetic risk factor and the early-psychosis pathway it justifies" },
-    { label: "Alzheimer's Disease & Dementia — The Gradual Erasure", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The Down adult's 40s window: the APP gene on chromosome 21 running the same pathology decades early — the decline-audit gates borrowed back" },
+    { label: "Alzheimer's Disease & Dementia", type: "condition", href: "/psychiatry/alzheimers-dementia/", note: "The Down adult's 40s window: the APP gene on chromosome 21 running the same pathology decades early — the decline-audit gates borrowed back" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The Lesch-Nyhan self-injury science and the ADHD rider's shared currency across the syndromes" },
     { label: "Hypothalamus", type: "brain-region", href: "#brain", note: "The satiety-and-ghrelin circuitry that runs without brakes in Prader-Willi — the missing brake behind the locked kitchen" },
     { label: "Amygdala", type: "brain-region", href: "#brain", note: "The social-threat detector running in inverse in Williams — the cocktail-party warmth's wiring, and the stranger-danger teaching it obliges" },

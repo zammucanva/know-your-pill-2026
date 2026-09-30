@@ -26,15 +26,15 @@ export const ptsdCourse: PsychiatryCourse = {
   category: "Trauma- & Stressor-Related Disorder",
   groupLetter: "E",
   groupName: "Stress, trauma & dissociation-spectrum",
-  learningPath: ["Psychiatry", "Trauma & Stress", "PTSD"],
+  learningPath: ["Psychiatry", "Trauma & Stress", "Post-Traumatic Stress Disorder (PTSD)"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-28",
 
   tagline:
-    "What happens when a terrifying memory refuses to become a memory — it stays alive, erupting in nightmares, flashbacks and body-level alarm, while the person rearranges their entire life to avoid the trigger.",
+    "A terrifying memory that stays alive: nightmares, flashbacks, hypervigilance, avoidance",
   summary:
-    "The event is over — the accident, the assault, the shelling, the fire. But inside the person it is not over: the brain stored the terror 'hot', un-filed, on permanent loop. Sounds and smells drag them back in a heartbeat; sleep becomes a battlefield of nightmares; the world is scanned for danger that is no longer there; feelings shut down; and the person begins avoiding everything connected to the event — the road, the people, the conversations, sometimes the whole personality they used to have. Two names matter beyond the classic picture: complex PTSD (ICD-11) for those who endured prolonged, repeated, inescapable trauma — captivity, chronic childhood abuse, trafficking — where the injury goes beyond fear into the very organisation of self and relationships; and moral injury, the wound of having done, witnessed or failed to prevent something that violated conscience, common in soldiers, disaster responders and physicians. PTSD is common, heavily comorbid with depression and alcohol use, and — the headline for patients and examiners alike — treatable: trauma-focused psychotherapy is among the most effective interventions in all of psychiatry. This course covers the four-cluster architecture, the neurobiology story, the treatment hierarchy (why benzodiazepines are specifically discouraged), and the Indian trauma contexts: road injury, sexual violence, disasters, communal violence and the somatic front door.",
+    "PTSD follows trauma exposure with intrusive re-experiencing, avoidance, negative mood and hyperarousal lasting at least a month. Trauma-focused psychotherapy is the first-line treatment, and benzodiazepines are specifically discouraged.",
   estimatedReadTime: "35 min",
   yieldRating: "high",
   primaryAudience: "medical",

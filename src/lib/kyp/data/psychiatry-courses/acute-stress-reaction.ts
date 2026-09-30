@@ -31,9 +31,9 @@ export const acuteStressReactionCourse: PsychiatryCourse = {
   lastReviewed: "2026-09-28",
 
   tagline:
-    "The mind and body's emergency-mode response to a terrifying event — shaking, numbness, replaying, sleeplessness — that appears within hours and, in most people, settles naturally within days to a few weeks.",
+    "A normal response to an abnormal event — and how to tell recovery from the road to PTSD",
   summary:
-    "Right after a road accident, a fire, an assault or a house collapse, the nervous system does what it was built to do: it floods the body with alarm chemistry and pulls blood away from 'later' functions like digestion and sleep. Shaking, blank staring, restlessness, a racing heart and a mind that will not stop replaying the event are normal responses to an abnormal situation — not signs of madness. Acute stress DISORDER is the clinical label used when these reactions are intense enough to disable in the first month (DSM-5: 3 days to 1 month after trauma); if the same picture persists beyond a month, the diagnosis becomes PTSD. The doctor's jobs in this window: recognise normal distress, protect sleep and safety, avoid harmful interventions (including routine single-session 'debriefing'), and keep watch for the minority who will need real treatment. This course covers the two time gates, the five symptom clusters, psychological first aid in operational terms, the debriefing verdict, and the Indian disaster-response realities of who reaches first and what they should and should not do.",
+    "Acute stress reactions are the nervous system's normal response to terrifying events and mostly settle within weeks. The clinical task is to protect sleep and safety, avoid routine debriefing, and watch the window between three days and one month that separates distress from disorder.",
   estimatedReadTime: "30 min",
   yieldRating: "high",
   primaryAudience: "medical",

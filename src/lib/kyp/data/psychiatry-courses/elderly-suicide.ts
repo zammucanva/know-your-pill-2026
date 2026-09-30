@@ -29,13 +29,13 @@ import type { PsychiatryCourse } from "./types";
 export const elderlySuicideCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "elderly-suicide",
-  title: "Suicide in the Elderly — The Physician's Opportunity",
+  title: "Suicide in the Elderly",
   shortName: "Elderly Suicide",
   kind: "disorder",
   category: "Psychiatry of Old Age",
   groupLetter: "M",
   groupName: "Psychiatry of old age",
-  learningPath: ["Psychiatry", "Psychiatry of Old Age", "Suicide in the Elderly — The Physician's Opportunity"],
+  learningPath: ["Psychiatry", "Psychiatry of Old Age", "Suicide in the Elderly"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -45,10 +45,10 @@ export const elderlySuicideCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "The old attempt less and die more — planned, lethal, quietly-executed acts driven by an engine that treats — which makes the elder's suicide one of psychiatry's most preventable deaths, the physician's room its most-missed catch-point, and the family's one reframed question its front door. Tele-MANAS 14416, free, 24×7.",
+    "The old attempt less and die more — planned, lethal, driven by an engine that treats",
 
   summary:
-    "This is the suicide of the planned quiet. The elderly attempt suicide less often than the young but die of it far more often — the lethality inversion that defines the whole topic: where an adolescent makes an attempt discovered in time, a 78-year-old plans with weeks of quiet, chooses a method that leaves no rescue window, tells no one, and is found by the family who 'never suspected'. The drivers are unglamorous and overwhelmingly treatable: depression — the single largest factor, present in the large majority of elderly suicides and untreated in most because 'budhapa' and 'tension' got the diagnosis (NMHS India: more than 85% of elderly depression untreated — the engine left running) — stacked with chronic pain and illness, the bereavement window (the widowed man's first 1–2 years post-loss, epidemiology's most stable peak), the migration-empty-nest isolation of modern India, financial and functional dependency, the burden-conviction ('they spend on my medicines for nothing'), and the means in the cupboard: the elder's own hoarded cardiac-diabetic-sleeping pharmacy, the pesticide tin, the unwitnessed afternoon. The campaign broadcasts itself — the affairs suddenly sorted, the gold distributed, the reconciliation calls, the lost weight, the sudden calm families misread as acceptance: the SETTLED elder. The two great life-savers are unspectacular: TREATING THE DEPRESSION FULLY (full-dose SSRI-class treatment — start low, go slow, but GO, because the eternal starter dose has killed elders — with ECT early, not last, for the severe band: the fastest de-pressor of the risk itself) and REBUILDING CONNECTEDNESS (fixed-ritual contacts and RETAINED roles, not token ones), while the means come out of the house and the death-talk is taken absolutely seriously. India's picture makes it urgent: NCRB's ADSI reports senior-citizen suicides in the thousands annually with the share climbing, the stated causes dominated by family problems, illness and finances, and the joint family's built-in observation layer dissolving into 'near but not with' households. The physician's opportunity is the system's spine: the Indian elder sees a doctor monthly for the BP, the diabetes, the joints — and the two-question mood-and-death screen riding the vitals is the cheapest save the system owns. MHA 2017 s.115 keeps the frame care-not-custody; Tele-MANAS 14416 is the family-call spine — the elder himself rarely calls.",
+    "Elderly people attempt suicide less often than the young but die of it far more often, through planned, unwitnessed, lethal acts. The usual engine, depression, is treatable, making the physician's routine visit the system's cheapest catch-point.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -73,11 +73,11 @@ export const elderlySuicideCourse: PsychiatryCourse = {
   ],
   knowledgeGraph: [
     { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "The general-population course this one sits beside — the ask-directly discipline, the safety plan, the means-restriction evidence; the geriatric differences are taught here" },
-    { label: "Mood Disorders in the Elderly — The Pseudodementia Trap", type: "condition", href: "/psychiatry/elderly-mood/", note: "The engine's full treatment ladder — the costumes, the pseudodementia check, the adherence engineering this course treats as its pharmacology chapter" },
+    { label: "Mood Disorders in the Elderly", type: "condition", href: "/psychiatry/elderly-mood/", note: "The engine's full treatment ladder — the costumes, the pseudodementia check, the adherence engineering this course treats as its pharmacology chapter" },
     { label: "Bereavement & Complicated Grief", type: "condition", href: "/psychiatry/bereavement/", note: "The widowhood window that supplies the highest-risk subgroup — and the complicated-grief gates for the survivor family afterwards" },
-    { label: "Substance Use in the Elderly — The Silent Epidemic", type: "condition", href: "/psychiatry/elderly-substance-use/", note: "The quiet-drinker cohort's disinhibition layer and the sedative-load ledger — the alcohol and benzodiazepine riders of the stack" },
-    { label: "Mild Cognitive Impairment — The Crossroads", type: "condition", href: "/psychiatry/mci/", note: "The early-dementia insight window — the awareness of slipping carrying its own hopelessness; the post-diagnosis period a risk-window to be counselled through" },
-    { label: "Managing Dementia — The Five Floors", type: "condition", href: "/psychiatry/dementia-management/", note: "The advance-planning floor behind the property-regret cluster — transparency before the transfer, not litigation after the despair" },
+    { label: "Substance Use in the Elderly", type: "condition", href: "/psychiatry/elderly-substance-use/", note: "The quiet-drinker cohort's disinhibition layer and the sedative-load ledger — the alcohol and benzodiazepine riders of the stack" },
+    { label: "Mild Cognitive Impairment", type: "condition", href: "/psychiatry/mci/", note: "The early-dementia insight window — the awareness of slipping carrying its own hopelessness; the post-diagnosis period a risk-window to be counselled through" },
+    { label: "Managing Dementia", type: "condition", href: "/psychiatry/dementia-management/", note: "The advance-planning floor behind the property-regret cluster — transparency before the transfer, not litigation after the despair" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The engine's chemistry — the SSRI-class target when depression is the driver" },
     { label: "Prefrontal cortex", type: "brain-region", href: "#brain", note: "The burden-arithmetic's office — the cost-benefit ledger the depression distorts" },
     { label: "Sertraline", type: "drug", href: "/drugs/sertraline/", note: "The engine treatment's workhorse — full dose, early reviews, never the eternal starter dose" },

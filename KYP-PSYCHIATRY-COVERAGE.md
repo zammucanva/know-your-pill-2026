@@ -1,5 +1,13 @@
 # KYP Psychiatry — Content Coverage Record
 
+> **Migration complete (2026-09-30)**: all 109 notes now have a migrated
+> six-lesson PsychiatryCourse at the same URL. Learner-facing curriculum
+> metadata is standardized in
+> [KYP-PSYCHIATRY-CURRICULUM-NORMALIZATION.md](KYP-PSYCHIATRY-CURRICULUM-NORMALIZATION.md)
+> (cleaned curriculum, overlap audit, [PROPOSED] coverage gaps, change log,
+> integrity audit). The notes in this directory remain the canonical,
+> byte-untouched authority.
+
 ## Canonical source
 
 - Directory: `download/kyp-notes/` (the ONLY canonical note directory)

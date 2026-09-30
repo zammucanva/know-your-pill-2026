@@ -24,15 +24,15 @@ export const acuteTransientPsychosisCourse: PsychiatryCourse = {
   category: "Psychotic Disorder",
   groupLetter: "C",
   groupName: "Psychotic disorders",
-  learningPath: ["Psychiatry", "Psychosis", "Acute & Transient Psychosis"],
+  learningPath: ["Psychiatry", "Psychosis", "Acute & Transient Psychotic Disorders"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-27",
 
   tagline:
-    "A storm of psychosis that erupts within days of a major stress and clears completely — the psychosis of the Indian OPD, the night call, and the 2 a.m. family conference.",
+    "Psychosis that erupts within days and clears completely — the Indian OPD classic",
   summary:
-    "Acute and transient psychotic disorders (ATPD) are defined by three time anchors: psychosis erupting within two weeks of a clearly well state, a polymorphic storm of shifting delusions, hallucinations, confusion and wild mood swings, and full recovery to the previous personality — usually within one to three months. This is the psychosis that concentrates in India and the developing world (WHO determinants-of-outcome data), includes puerperal psychosis as its prototype, and getting it right decides whether a young person hears 'six months of medicine and a full life' or is mislabelled with lifelong schizophrenia. This course covers the time anchors, the mandatory workup that catches what hides inside 'first ATPD', the treat-the-episode-hard-then-reassess rule, and the Indian possession-and-stressor landscape.",
+    "Acute and transient psychotic disorders bring a polymorphic storm of delusions, hallucinations and mood swings that erupts within two weeks and usually resolves fully within one to three months. Distinguishing them from schizophrenia decides whether a young person is spared a lifelong label.",
   estimatedReadTime: "30 min",
   yieldRating: "high",
   primaryAudience: "medical",
@@ -59,7 +59,7 @@ export const acuteTransientPsychosisCourse: PsychiatryCourse = {
   ],
   knowledgeGraph: [
     { label: "Schizophrenia", type: "condition", href: "/psychiatry/schizophrenia/", note: "The critical differential — prodrome, negative symptoms and stability point there, not here" },
-    { label: "Schizoaffective & Schizotypal", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "The mood-plus-psychosis borderland — ATPD remits fully and fast" },
+    { label: "Schizoaffective & Schizotypal Disorders", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "The mood-plus-psychosis borderland — ATPD remits fully and fast" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "Puerperal psychosis behaves as a bipolar-spectrum marker" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "Post-psychotic depression is a real recovery-phase rider" },
     { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "Assess during the storm and after the shame sets in" },

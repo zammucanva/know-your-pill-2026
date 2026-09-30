@@ -29,13 +29,13 @@ import type { PsychiatryCourse } from "./types";
 export const youthSuicideCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "youth-suicide",
-  title: "Youth Suicide & Self-Harm — The Safety-First Card",
+  title: "Youth Suicide & Self-Harm",
   shortName: "Youth suicide",
   kind: "disorder",
   category: "Child & Adolescent Psychiatry",
   groupLetter: "L",
   groupName: "Child & adolescent psychiatry",
-  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Youth Suicide & Self-Harm — The Safety-First Card"],
+  learningPath: ["Psychiatry", "Child & Adolescent Psychiatry", "Youth Suicide & Self-Harm"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -45,10 +45,10 @@ export const youthSuicideCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Not a mystery of sad children — most often an impulsive act of an overwhelmed young brain with easy access to a lethal method, which is why the medicine that actually saves lives is unglamorous: ask directly, remove the means, build the safety-first card, treat the condition underneath. Tele-MANAS 14416 · CHILDLINE 1098.",
+    "Impulsive, means-dependent — ask directly, remove the means, build the safety-first card",
 
   summary:
-    "India loses a student roughly every 40 minutes — the NCRB's Accidental Deaths and Suicides in India counted above 13,000 student suicides in 2022, climbing year on year — and the popular picture is wrong in both directions: wrongly mysterious ('no one could have known', when most young people telegraph distress to someone who wasn't asking) and wrongly simple ('it was exam stress', when the exam is the spark and the calendar, not the gunpowder). What makes youth suicide a different shape from adult suicide is physics: impulse control is the last circuit to mature (prefrontal maturation completes around the mid-20s), so adolescent acts are disproportionately state-dependent — minutes-to-hours of overwhelming urge rather than settled plans — which is exactly why means matter (the pesticide in the shed, the rope, the unlocked medicine strip convert a passing storm into a death) and why three boring interventions carry life-saving evidence: the direct screen (asking does NOT plant the idea — the dead myth), means restriction (the Sri Lankan pesticide-regulation story is the strongest single intervention evidence in suicide research), and the written safety plan — the safety-first card built with the young person's own words, the evidence-based replacement for the useless no-suicide contract. Self-harm is taught here as mostly a different thing — a private way of surviving unbearable feelings through affect regulation — with contempt for it named as the clinician's error, DBT-A as the treatment tier, and the overlap risk that keeps screening mandatory at every review. The school tier (gatekeeper training, the postvention protocol after a student dies, the media discipline that prevents contagion clusters) is clinical work; so is the India layer: the results-season weather, the coaching-city isolation, the marks-contract, the pesticide conversation, and the Mental Healthcare Act 2017 s.115 — attempting suicide decriminalised, the person presumed to be under severe stress and entitled to care, not custody. The infrastructure exists; what must still spread is the will to ask.",
+    "Youth suicide is typically an impulsive response to overwhelming distress in a maturing brain, with the available method deciding outcome. Asking directly, means restriction and written safety planning are the evidence-based core, and adolescent self-harm is treated as affect regulation, not attention-seeking.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -73,12 +73,12 @@ export const youthSuicideCourse: PsychiatryCourse = {
   ],
   knowledgeGraph: [
     { label: "Suicide & Deliberate Self-Harm", type: "condition", href: "/psychiatry/suicide-self-harm/", note: "The general psychiatric-emergency account — the adult risk model, C-SSRS, safety planning and means restriction from the every-age side; this course is the child-and-adolescent layer on top of it" },
-    { label: "Suicide in the Elderly — The Physician's Opportunity", type: "condition", href: "/psychiatry/elderly-suicide/", note: "The other end of the lifespan — planned, high-lethality, warning-driven acts in elders against the minutes-scale state-dependent storms of the young; the asking discipline is shared, the physics is not" },
-    { label: "Mood Disorders in Youth — The Irritability Costume", type: "condition", href: "/psychiatry/paediatric-mood/", note: "The depression underneath the large majority of attempts — the full treatment ladder this course's condition-tier rides on, with the sleep-inversion vortex that degrades regulation" },
-    { label: "Child Trauma & Abuse — The Disclosure Discipline", type: "condition", href: "/psychiatry/child-trauma-abuse/", note: "The abuse layer of the load — the POCSO reporting duty and the protection pathway that the youth-suicide assessment surfaces" },
-    { label: "Child Anxiety — The School-Refusal Engines", type: "condition", href: "/psychiatry/child-anxiety/", note: "The comorbid anxiety tier and the somatic-costume presentations — the paediatric carousel that deserves the screen at every turn" },
-    { label: "ADHD — The Brakes and the Engine", type: "condition", href: "/psychiatry/adhd/", note: "The impulsivity comorbidity — the disinhibition engine that converts storms into acts; each treated on its own evidence" },
-    { label: "Mental Health Law — Capacity, Liability, Duty", type: "condition", href: "/psychiatry/mental-health-law/", note: "The MHA 2017 architecture behind s.115 — the rights-protective admission structure, the nominated representative for minors, the least-restrictive principle" },
+    { label: "Suicide in the Elderly", type: "condition", href: "/psychiatry/elderly-suicide/", note: "The other end of the lifespan — planned, high-lethality, warning-driven acts in elders against the minutes-scale state-dependent storms of the young; the asking discipline is shared, the physics is not" },
+    { label: "Mood Disorders in Youth", type: "condition", href: "/psychiatry/paediatric-mood/", note: "The depression underneath the large majority of attempts — the full treatment ladder this course's condition-tier rides on, with the sleep-inversion vortex that degrades regulation" },
+    { label: "Child Trauma & Abuse", type: "condition", href: "/psychiatry/child-trauma-abuse/", note: "The abuse layer of the load — the POCSO reporting duty and the protection pathway that the youth-suicide assessment surfaces" },
+    { label: "Child Anxiety", type: "condition", href: "/psychiatry/child-anxiety/", note: "The comorbid anxiety tier and the somatic-costume presentations — the paediatric carousel that deserves the screen at every turn" },
+    { label: "ADHD", type: "condition", href: "/psychiatry/adhd/", note: "The impulsivity comorbidity — the disinhibition engine that converts storms into acts; each treated on its own evidence" },
+    { label: "Mental Health Law", type: "condition", href: "/psychiatry/mental-health-law/", note: "The MHA 2017 architecture behind s.115 — the rights-protective admission structure, the nominated representative for minors, the least-restrictive principle" },
     { label: "Fluoxetine", type: "drug", href: "/drugs/fluoxetine/", note: "The SSRI tier for the comorbid depression — the load's commonest treatable ingredient, with the weekly-review and activation-watch discipline" },
     { label: "Serotonin", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The depression tier's chemistry — the treated condition protective at population scale" },
     { label: "Prefrontal cortex", type: "brain-region", href: "#brain", note: "The brakes that arrive last — maturation completing in the mid-20s; the reason youth acts are state-dependent and friction is life-saving" },

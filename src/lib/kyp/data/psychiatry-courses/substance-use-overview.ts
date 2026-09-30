@@ -23,13 +23,13 @@ import type { PsychiatryCourse } from "./types";
 export const substanceUseOverviewCourse: PsychiatryCourse = {
   /* ---- Identity ---- */
   slug: "substance-use-overview",
-  title: "Substance Use — The Reward Hijack",
+  title: "Substance Use",
   shortName: "SUD Overview",
   kind: "concept",
   category: "Substance Use Disorder",
   groupLetter: "B",
   groupName: "Substance use disorders",
-  learningPath: ["Psychiatry", "Substance Use Disorders", "Substance Use — The Reward Hijack"],
+  learningPath: ["Psychiatry", "Substance Use Disorders", "Substance Use"],
 
   status: "PUBLISHED",
   lastReviewed: "2026-09-29",
@@ -39,10 +39,10 @@ export const substanceUseOverviewCourse: PsychiatryCourse = {
   primaryAudience: "medical",
 
   tagline:
-    "Every addictive substance — arrack to heroin to the vape in a school bag — pays the brain in currencies it cannot refuse: dopamine's wanting, endorphin liking, or the calm of a stress system switching off — and the hijacked brain then resets its exchange rate so ordinary life pays grey; the syndrome that follows (tolerance, withdrawal, craving, relapse) is one disease in many dresses, which is why one set of treatment principles covers them all.",
+    "The reward hijack: one disease in many dresses, one set of treatment principles for all",
 
   summary:
-    "This is the umbrella course of the whole substance section: it teaches the machinery every substance shares and points to the drug-specific courses (alcohol, opioids, stimulants, cannabis, benzodiazepines, nicotine, hallucinogens, inhalants, the party drugs) for what each of them owns. The pharmacology is simpler than it looks: pleasure and motivation run on a handful of chemical systems, and drugs push them 2–10 times harder and faster than life ever can; the adaptive brain recalibrates, and that recalibration IS tolerance and withdrawal. The psychology is deeper than the chemistry: people start for pleasure or belonging and stay for relief — of pain, shame, sleeplessness, trauma — and any treatment that ignores the relief-function relapses. DSM-5 folded 'abuse' and 'dependence' into ONE severity-graded disorder of 11 signals in four clusters (Control-Social-Risk-Pharma): 2–3 mild, 4–5 moderate, 6+ severe — 'dependence' today means the moderate-to-severe end of one dimension, not a different species. The clinical spine that survives every exam and every OPD: two shame-free screening questions; a substance-by-substance history that never stops at the referred one; the relief question ('What does it do for you?'); a withdrawal-danger triage (alcohol and benzodiazepine withdrawal can kill, opioid withdrawal makes you wish it would); and the six-step skeleton — brief intervention, safe withdrawal, relapse-prevention pharmacotherapy that roughly doubles abstinence odds, the psychosocial engine, comorbidity treatment in parallel, monitoring over years. The comorbidity rule holds the line: self-medication is a hypothesis, not a diagnosis — treat both fronts in parallel and do not diagnose new psychiatric disorders inside the first weeks of abstinence (the 2–6 weeks grey window) unless dangerous. The Indian layer: alcohol dominates the burden by far, the opioid epidemic belt runs through the north-west, tobacco sits inside almost every other case, and the national spine is NASHA 14446, tele-MANAS linkage, the district de-addiction centres and the family as treatment infrastructure.",
+    "This umbrella course covers the reward machinery every addictive substance shares and the single severity-graded DSM-5 substance use disorder. It supports shame-free screening, withdrawal-danger triage and one management skeleton across all substances.",
 
   /* ---- Lesson 1: Foundations ---- */
   learningObjectives: [
@@ -65,14 +65,14 @@ export const substanceUseOverviewCourse: PsychiatryCourse = {
     { label: "The pharmacotherapy secret", value: "Roughly double the odds", detail: "Maintenance medicines (naltrexone, acamprosate, buprenorphine, methadone, varenicline/NRT, disulfiram) roughly double abstinence odds where prescribed and supervised — the best-kept secret of Indian de-addiction care" },
   ],
   knowledgeGraph: [
-    { label: "Alcohol Use Disorders — The Disease of More", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "India's largest substance burden by far — the spirit-driven wheel taught drug by drug: the withdrawal that kills, the disulfiram/naltrexone/acamprosate tier, the family contract" },
-    { label: "Opioid Use Disorders — The Medicine That Holds the Door", type: "condition", href: "/psychiatry/opioid-use-disorders/", note: "The north-west belt's epidemic — pharmaceutical opioids (tramadol-type, then heroin); the agonist-maintenance logic (buprenorphine, methadone) in full" },
-    { label: "Stimulant Use Disorders — Run, Crash, Crave", type: "condition", href: "/psychiatry/stimulant-use-disorders/", note: "The wanting currency at its most naked — run, crash, crave; no agonist maintenance, so the cue work carries the load" },
-    { label: "Hallucinogen Use Disorders — The Great Exception", type: "condition", href: "/psychiatry/hallucinogen-use-disorders/", note: "The exception that tests the rule — tolerance builds fast, the dependence syndrome rare; the umbrella's logic held honestly against it" },
-    { label: "Cannabis & Mental Health — The Two-Sided Truth", type: "condition", href: "/psychiatry/cannabis-mental-health/", note: "The student case's full account — the cannabis-psychosis referral, the self-medication hypothesis tested by treating the underlying anxiety" },
-    { label: "Nicotine Dependence — The Most Quit-Able Addiction", type: "condition", href: "/psychiatry/nicotine-dependence/", note: "The near-universal co-use treated alongside, never separately — varenicline/NRT, and the adolescent-vape masterclass in cue-learning" },
-    { label: "Benzodiazepine Misuse — The Borrowed Calm", type: "condition", href: "/psychiatry/benzodiazepine-misuse/", note: "The pharmacy-counter dependence — the 'sleep medicine' request and the withdrawal that kills; the one-pharmacy-for-one-family arrangement" },
-    { label: "Gambling Disorder — The Addiction Without a Drug", type: "condition", href: "/psychiatry/gambling-disorder/", note: "The same reward machinery cashed without a molecule — the proof that the hijack is a learning disease, not a chemistry alone" },
+    { label: "Alcohol Use Disorders", type: "condition", href: "/psychiatry/alcohol-use-disorders/", note: "India's largest substance burden by far — the spirit-driven wheel taught drug by drug: the withdrawal that kills, the disulfiram/naltrexone/acamprosate tier, the family contract" },
+    { label: "Opioid Use Disorders", type: "condition", href: "/psychiatry/opioid-use-disorders/", note: "The north-west belt's epidemic — pharmaceutical opioids (tramadol-type, then heroin); the agonist-maintenance logic (buprenorphine, methadone) in full" },
+    { label: "Stimulant Use Disorders", type: "condition", href: "/psychiatry/stimulant-use-disorders/", note: "The wanting currency at its most naked — run, crash, crave; no agonist maintenance, so the cue work carries the load" },
+    { label: "Hallucinogen Use Disorders", type: "condition", href: "/psychiatry/hallucinogen-use-disorders/", note: "The exception that tests the rule — tolerance builds fast, the dependence syndrome rare; the umbrella's logic held honestly against it" },
+    { label: "Cannabis & Mental Health", type: "condition", href: "/psychiatry/cannabis-mental-health/", note: "The student case's full account — the cannabis-psychosis referral, the self-medication hypothesis tested by treating the underlying anxiety" },
+    { label: "Nicotine Dependence", type: "condition", href: "/psychiatry/nicotine-dependence/", note: "The near-universal co-use treated alongside, never separately — varenicline/NRT, and the adolescent-vape masterclass in cue-learning" },
+    { label: "Benzodiazepine Misuse", type: "condition", href: "/psychiatry/benzodiazepine-misuse/", note: "The pharmacy-counter dependence — the 'sleep medicine' request and the withdrawal that kills; the one-pharmacy-for-one-family arrangement" },
+    { label: "Gambling Disorder", type: "condition", href: "/psychiatry/gambling-disorder/", note: "The same reward machinery cashed without a molecule — the proof that the hijack is a learning disease, not a chemistry alone" },
     { label: "Dopamine", type: "neurotransmitter", href: "/psychiatry/neurotransmitters/", note: "The wanting currency — incentive salience, the cue-learning machine, the 2–10-times flood every drug of dependence shares" },
     { label: "Ventral tegmental area", type: "brain-region", href: "#brain", note: "The dopamine fountainhead of wanting — the VTA-to-nucleus-accumbens axis every addictive substance amplifies" },
   ],

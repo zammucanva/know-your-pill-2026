@@ -25,9 +25,9 @@ export const schizophreniaCourse: PsychiatryCourse = {
   lastReviewed: "2026-09-25",
 
   tagline:
-    "A disorder of salience, cognition and self — understandable neurobiologically, manageable clinically, and still one of medicine's great unfinished stories.",
+    "A disorder of salience, cognition and self: neurobiologically grounded and treatable",
   summary:
-    "Schizophrenia affects roughly 1 in 300 people worldwide (about 24–27 million; WHO). It presents with positive symptoms (delusions, hallucinations, disorganisation), negative symptoms (avolition, flat affect, withdrawal) and cognitive impairment — three domains with different neurobiology and different treatments. This course builds the complete picture in six lessons: the syndrome, the neuroscience (dopamine version III, circuits, neuroprogression), diagnosis and its differentials, evidence-based management, the Indian reality (treatment gap ~75%, DUP, family burden), exam preparation, and active recall that makes it stick.",
+    "Schizophrenia presents with positive, negative and cognitive symptom domains, each with different neurobiology and treatment. Good management combines antipsychotics with psychosocial interventions and attention to physical health.",
   estimatedReadTime: "40 min",
   yieldRating: "high",
   primaryAudience: "medical",
@@ -63,7 +63,7 @@ export const schizophreniaCourse: PsychiatryCourse = {
     { label: "Hippocampus", type: "brain-region", href: "#brain", note: "Hyperactivity upstream of dopamine; volume reduction" },
     { label: "Bipolar Disorders", type: "condition", href: "/psychiatry/bipolar-disorders/", note: "Affective psychosis differential" },
     { label: "Persistent Delusional Disorder", type: "condition", href: "/psychiatry/delusional-disorder/", note: "Non-bizarre delusions without decline" },
-    { label: "Schizoaffective & Schizotypal", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "The spectrum middle" },
+    { label: "Schizoaffective & Schizotypal Disorders", type: "condition", href: "/psychiatry/schizoaffective-schizotypal/", note: "The spectrum middle" },
     { label: "Acute & Transient Psychotic Disorders", type: "condition", href: "/psychiatry/acute-transient-psychosis/", note: "Brief psychosis — the Indian-relevant boundary" },
     { label: "Cannabis & Mental Health", type: "condition", href: "/psychiatry/cannabis-mental-health/", note: "High-potency use roughly doubles early-onset psychosis risk" },
     { label: "Depressive Disorders", type: "condition", href: "/psychiatry/depressive-disorders/", note: "Post-psychotic depression is common and treatable" },

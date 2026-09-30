@@ -137,10 +137,18 @@ export default function PsychiatryHubPage() {
           <SectionHeader
             eyebrow="The curriculum"
             title="18 clinical domains"
-            description="From neurocognitive disorders to social psychiatry — the full breadth of the specialty, organised the way it is taught and examined."
+            description="From the foundations and sciences to social psychiatry — the full breadth of the specialty, with Foundations first."
           />
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {corpus.groups.map((g) => {
+            {[...corpus.groups]
+              // Curriculum normalization: Q. Foundations & sciences is the
+              // first learner-facing section (presentation-layer ordering
+              // only — the source index stays immutable).
+              .sort((a, b) => {
+                const order = ["Q", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R"];
+                return order.indexOf(a.letter) - order.indexOf(b.letter);
+              })
+              .map((g) => {
               const groupNotes = g.noteSlugs
                 .map((slug) => corpus.bySlug.get(slug))
                 .filter(Boolean);
@@ -156,7 +164,7 @@ export default function PsychiatryHubPage() {
                 >
                   <div className="min-w-0">
                     <p className="text-sm font-semibold text-foreground group-hover:text-brand">
-                      <span className="mr-2 font-mono text-xs text-muted-foreground/60">{g.letter}</span>
+                      <span className="mr-1 font-mono text-xs text-muted-foreground/60">{g.letter}.</span>
                       {g.name}
                     </p>
                     <p className="mt-1 text-xs text-muted-foreground">
