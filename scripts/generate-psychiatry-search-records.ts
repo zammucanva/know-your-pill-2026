@@ -17,6 +17,11 @@ import { buildPsychiatrySearchRecords } from "../src/lib/oxford/search";
 import { loadCorpus } from "../src/lib/oxford/loader";
 import { getPsychiatryCourse } from "../src/lib/kyp/data/psychiatry-courses";
 
+const LEARNER_ORDER = [
+  "Q", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
+  "K", "L", "M", "N", "O", "P", "R",
+];
+
 const records = buildPsychiatrySearchRecords();
 
 // Curriculum stats — derived from the corpus + registry at generation
@@ -33,6 +38,19 @@ const statsExport = `export const psychiatryStats = {
   disorderCourses: ${courseKinds.filter((k) => k === "disorder").length},
   conceptLessons: ${courseKinds.filter((k) => k === "concept").length},
 };
+
+export const psychiatryDomains = [
+${[...corpus.groups]
+  .sort(
+    (a, b) =>
+      LEARNER_ORDER.indexOf(a.letter) - LEARNER_ORDER.indexOf(b.letter)
+  )
+  .map(
+    (g) =>
+      `  { letter: ${JSON.stringify(g.letter)}, name: ${JSON.stringify(g.name)}, lessons: ${g.noteSlugs.length} },`
+  )
+  .join("\n")}
+];
 `;
 
 const header = `/**

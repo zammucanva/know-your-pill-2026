@@ -908,3 +908,24 @@ export const psychiatryStats = {
   disorderCourses: 74,
   conceptLessons: 35,
 };
+
+export const psychiatryDomains = [
+  { letter: "Q", name: "Foundations & sciences (12)", lessons: 12 },
+  { letter: "A", name: "Neurocognitive disorders (14)", lessons: 14 },
+  { letter: "B", name: "Substance use disorders (10)", lessons: 10 },
+  { letter: "C", name: "Psychotic disorders (4)", lessons: 4 },
+  { letter: "D", name: "Mood disorders (4)", lessons: 4 },
+  { letter: "E", name: "Stress, trauma & dissociation-spectrum (6)", lessons: 6 },
+  { letter: "F", name: "Anxiety disorders (3)", lessons: 3 },
+  { letter: "G", name: "OCD, impulse & habit disorders (3)", lessons: 3 },
+  { letter: "H", name: "Eating disorders (2)", lessons: 2 },
+  { letter: "I", name: "Sexuality & gender (3)", lessons: 3 },
+  { letter: "J", name: "Personality disorders (3)", lessons: 3 },
+  { letter: "K", name: "Sleep–wake disorders (4)", lessons: 4 },
+  { letter: "L", name: "Child & adolescent psychiatry (14)", lessons: 14 },
+  { letter: "M", name: "Psychiatry of old age (8)", lessons: 8 },
+  { letter: "N", name: "Intellectual disability (4)", lessons: 4 },
+  { letter: "O", name: "Forensic psychiatry (4)", lessons: 4 },
+  { letter: "P", name: "Treatment methods (7)", lessons: 7 },
+  { letter: "R", name: "Social psychiatry & services (4)", lessons: 4 },
+];

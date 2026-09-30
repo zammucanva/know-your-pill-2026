@@ -2,6 +2,7 @@ import { HomeHero } from "@/components/kyp/sections/home-hero";
 import { StatsSection } from "@/components/kyp/sections/stats-section";
 import { LearnBanner } from "@/components/kyp/sections/learn-banner";
 import { MedicationLibrarySection } from "@/components/kyp/sections/medication-library-section";
+import { PsychiatrySection } from "@/components/kyp/sections/psychiatry-section";
 import { SubstanceUseSection } from "@/components/kyp/sections/substance-use-section";
 import { TimelineSection } from "@/components/kyp/sections/timeline-section";
 import { NeuroArcadeSection } from "@/components/kyp/sections/neuroarcade-section";
@@ -24,6 +25,7 @@ export function HomeContent() {
         <StatsSection />
         <LearnBanner />
         <MedicationLibrarySection />
+        <PsychiatrySection />
         <SubstanceUseSection />
         <TimelineSection />
         <NeuroArcadeSection />
