@@ -1,0 +1,172 @@
+{
+ "generatedAt": "2026-10-01T17:53:59.270977+00:00",
+ "prodSha": "91ee7bd491d2f990eb329dc3ae5d9a97db4b39e6",
+ "notesSha": "f7cd4e56c56b29d74da9a6105f0db05c0e7a2825",
+ "workingTreesClean": {
+  "prod": false,
+  "notes": true
+ },
+ "monographShaFirewall": {
+  "expected": 145,
+  "notesCount": 145,
+  "prodCount": 145,
+  "shaMatches": 145,
+  "uniqueFingerprintsBefore": 145,
+  "uniqueFingerprintsAfter": 145,
+  "onlyInNotes": [],
+  "onlyInProd": [],
+  "shaMismatches": [],
+  "duplicateGenericNamesInProd": [],
+  "PASS": true
+ },
+ "registryAudit": {
+  "counts": {
+   "monographFiles": 145,
+   "imports": 145,
+   "arrayRegistrations": 145,
+   "uniqueImportSlugs": 145,
+   "uniqueRegistrations": 145
+  },
+  "integrity": {
+   "duplicateImports": [],
+   "duplicateRegistrations": [],
+   "orphanMonographFiles": [],
+   "registryRefsWithoutFile": [],
+   "importVarMatchesFile": true
+  },
+  "PASS": true
+ },
+ "classCensus": {
+  "AChE Inhibitor": 4,
+  "Alpha-1 Blocker": 1,
+  "Alpha-2 Agonist": 2,
+  "Anticholinergic": 2,
+  "Anticonvulsant": 6,
+  "Antihistamine": 2,
+  "Atypical Antidepressant": 1,
+  "Atypical Antipsychotic": 16,
+  "Azapirone": 1,
+  "Benzodiazepine": 9,
+  "Benzodiazepine Antidote": 1,
+  "Benzodiazepine Hypnotic": 6,
+  "Beta-Blocker": 1,
+  "DORA": 1,
+  "Dopamine Stabiliser": 3,
+  "Libido Enhancer": 1,
+  "MAOI": 5,
+  "Medical Food": 2,
+  "Melatonergic Antidepressant": 1,
+  "Melatonin Agonist": 2,
+  "Mood Stabiliser": 5,
+  "Multimodal Antidepressant": 1,
+  "NDRI": 1,
+  "NMDA Antagonist": 2,
+  "NMDA Antidepressant": 1,
+  "NRI": 2,
+  "NaSSA": 1,
+  "SARI": 2,
+  "SNRI": 5,
+  "SPARI": 1,
+  "SSRI": 6,
+  "SUD Treatment": 7,
+  "Sodium Oxybate": 1,
+  "Stimulant": 6,
+  "T3 Augmentation": 1,
+  "TCA": 13,
+  "Typical Antipsychotic": 15,
+  "Wake-Promoting Agent": 2,
+  "Weight Management": 2,
+  "Z-Drug": 4
+ },
+ "classCount": 40,
+ "patientModeCensus": {
+  "generatedAt": "2026-10-01T17:53:59.262806+00:00",
+  "expected": {
+   "drugs": 145,
+   "deepGuides": 12,
+   "fallback": 133
+  },
+  "actual": {
+   "patientMode": 145,
+   "patientExplanation": 145,
+   "patientEducationPoints": 145,
+   "deepGuides": 12,
+   "fallback": 133
+  },
+  "deepGuideFiles": [
+   "amitriptyline",
+   "bupropion",
+   "citalopram",
+   "clomipramine",
+   "duloxetine",
+   "escitalopram",
+   "fluoxetine",
+   "fluvoxamine",
+   "mirtazapine",
+   "paroxetine",
+   "sertraline",
+   "venlafaxine"
+  ],
+  "deepGuidesMissingFields": [],
+  "PASS": true
+ },
+ "generatedDataAudit": {
+  "generatedAt": "2026-10-01T17:53:59.264924+00:00",
+  "searchIndex": {
+   "entries": 340,
+   "drugRecords": 145,
+   "classRecords": 40,
+   "psychiatryRecordsInMainIndex": 111,
+   "duplicateIds": 0,
+   "composition": "145 drugs + 40 class pages + 10 class anchors + 30 home anchors + 110 psychiatry notes/hubs + 3 substances + 1 disease + 1 hub"
+  },
+  "psychiatrySearchRecords": {
+   "entries": 111,
+   "duplicateIds": 0
+  },
+  "courseStats": {
+   "courseEntries": 145
+  },
+  "generator": "scripts/gen-client-data.ts (must not be hand-edited)",
+  "PASS": true
+ },
+ "mcqIntegrity": {
+  "generatedAt": "2026-10-01T17:53:59.267791+00:00",
+  "canonicalBankFiles": [
+   "adjuncts-misc.ts",
+   "atypical-antipsychotics.ts",
+   "benzodiazepines.ts",
+   "mood-anticonvulsants.ts",
+   "sleep-anxiolytics.ts",
+   "ssri-snri.ts",
+   "stimulants-atypical.ts",
+   "sud-cognitive.ts",
+   "tca-maoi.ts",
+   "typical-antipsychotics.ts"
+  ],
+  "authoredCount": 180,
+  "declaredInMissionBrief": 178,
+  "actualCanonicalCount": 180,
+  "drugsReferencedByBank": 145,
+  "resolvedIdCheck": "deferred to repo test suite (tests/stahl-mcqs.test.ts) \u2014 ids are runtime-numbered by the DSL",
+  "documentationNote": "STAHL-NOTES-COMPANION.md says 178; canonical bank data says 180 (pemoline + tacrine additions included). Data wins.",
+  "PASS": true
+ },
+ "deploymentWorkflowFirewall": {
+  "generatedAt": "2026-10-01T17:53:59.270834+00:00",
+  "baseline": "2f8f727 (pre-Stahl production main)",
+  "deployYml": {
+   "presentInProd": true,
+   "presentInNotesRepo": false,
+   "identicalToPreStahlBaseline": true
+  },
+  "ciYml": {
+   "presentInProd": true,
+   "identicalToPreStahlBaseline": true
+  },
+  "note": "Notes repo intentionally excludes .github/workflows (PAT lacked workflow scope); preserved at docs/deploy-pages-workflow.yml.txt there as reference only.",
+  "PASS": true
+ },
+ "overallStatus": "PASS",
+ "failures": []
+}

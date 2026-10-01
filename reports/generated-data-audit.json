@@ -1,0 +1,20 @@
+{
+ "generatedAt": "2026-10-01T17:53:59.264924+00:00",
+ "searchIndex": {
+  "entries": 340,
+  "drugRecords": 145,
+  "classRecords": 40,
+  "psychiatryRecordsInMainIndex": 111,
+  "duplicateIds": 0,
+  "composition": "145 drugs + 40 class pages + 10 class anchors + 30 home anchors + 110 psychiatry notes/hubs + 3 substances + 1 disease + 1 hub"
+ },
+ "psychiatrySearchRecords": {
+  "entries": 111,
+  "duplicateIds": 0
+ },
+ "courseStats": {
+  "courseEntries": 145
+ },
+ "generator": "scripts/gen-client-data.ts (must not be hand-edited)",
+ "PASS": true
+}

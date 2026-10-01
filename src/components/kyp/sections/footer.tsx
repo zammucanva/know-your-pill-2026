@@ -73,7 +73,7 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 mb-12">
             {footerLinks.map((col) => (
               <div key={col.title}>
-                <h3 className="text-overline text-muted-foreground mb-4">{col.title}</h3>
+                <h2 className="text-overline text-muted-foreground mb-4">{col.title}</h2>
                 <ul className="space-y-2">
                   {col.links.map((link) => (
                     <li key={link.label}>
@@ -104,7 +104,7 @@ export function Footer() {
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <span className="relative h-8 w-8 shrink-0 overflow-hidden rounded-lg">
-                  <img
+                  <img width={128} height={128}
                     src={imgPath("/logo-navy-128.png")}
                     alt="Know Your Pill logo"
                     className="h-full w-full object-contain"

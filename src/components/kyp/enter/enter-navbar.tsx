@@ -10,6 +10,7 @@ import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 import { imgPath } from "@/lib/kyp/image-path";
 import { cn } from "@/lib/utils";
 import { motion, type MotionValue } from "framer-motion";
+import { IS_STATIC_EXPORT } from "@/lib/kyp/static-export";
 
 const navLinks = [
   { href: "#library", label: "Medications" },
@@ -76,6 +77,9 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
   }, []);
 
   React.useEffect(() => {
+    // Static export: no session API — skip (the Log in CTA is hidden
+    // there too) [audit B1].
+    if (IS_STATIC_EXPORT) return;
     fetch("/api/auth/session")
       .then((r) => r.json())
       .then((data) => {
@@ -112,7 +116,7 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
             tabIndex={active ? 0 : -1}
           >
             <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-xl">
-              <img
+              <img width={128} height={128}
                 src={imgPath("/logo-navy-128.png")}
                 alt="Know Your Pill logo"
                 className="h-full w-full object-contain"
@@ -177,16 +181,22 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
                 </Button>
               </div>
             ) : (
-              <Link
-                href="/welcome"
-                className="hidden sm:block"
-                tabIndex={active ? 0 : -1}
+              <Button
+                asChild
+                variant="ghost"
+                size="sm"
+                className={cn(
+                  "hidden gap-1.5 rounded-full sm:inline-flex",
+                  IS_STATIC_EXPORT && "sm:hidden"
+                )}
               >
-                <Button variant="ghost" size="sm" className="gap-1.5 rounded-full">
+                {/* asChild — renders the <a> itself as the button element
+                    (no nested button-inside-link, audit B11) */}
+                <Link href="/welcome" tabIndex={active ? 0 : -1}>
                   <LogIn className="h-3.5 w-3.5" />
                   Log in
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             )}
 
             <Button
@@ -228,6 +238,12 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
         {open && active && (
           <div id="enter-mobile-nav-menu" className="border-t border-border/70 bg-background/95 lg:hidden">
             <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
+              {/* Search — the floating pill is hidden below lg (audit B3),
+                  so the menu is the mobile search entry point */}
+              <FloatingSearch
+                variant="button"
+                className="mb-2 w-full min-h-[44px] justify-between rounded-md bg-muted/30"
+              />
               {navLinks.map((l) => (
                 <a
                   key={l.href}
@@ -265,6 +281,8 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
                     </button>
                   </>
                 ) : (
+                  /* Static export: no backend — hide the auth CTA [audit B1]. */
+                  !IS_STATIC_EXPORT && (
                   <Link
                     href="/welcome"
                     onClick={() => setOpen(false)}
@@ -273,6 +291,7 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
                     <LogIn className="h-4 w-4" />
                     Log in / Sign up
                   </Link>
+                  )
                 )}
               </div>
             </nav>

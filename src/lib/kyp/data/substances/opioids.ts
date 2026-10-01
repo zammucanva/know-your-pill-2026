@@ -39,7 +39,7 @@ export const opioids: SubstancePage = {
   name: "Opioids",
   disorderName: "Opioid Use Disorders",
   drugClass: "opioid",
-  artwork: "/artwork/morphine.png",
+  artwork: "/artwork/morphine.webp",
   artworkAlt: "Morphine chemical structure",
 
   tagline: "Explore dependence, withdrawal, respiratory depression, reward pathways, overdose emergencies, and recovery neuroscience through immersive psychiatry education.",

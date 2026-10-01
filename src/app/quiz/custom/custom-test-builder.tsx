@@ -61,6 +61,7 @@ import {
 import { verifyDrugHref } from "@/lib/kyp/drug-course-sections";
 import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
 import { getProgress, type KypProgressData } from "@/lib/kyp/progress/progress-store";
+import { IS_STATIC_EXPORT } from "@/lib/kyp/static-export";
 
 /**
  * /quiz/custom — Build your own test (recovered feature).
@@ -155,6 +156,7 @@ export function CustomTestBuilder() {
   React.useEffect(() => {
     if (difficultyTouched.current) return;
     let cancelled = false;
+    if (IS_STATIC_EXPORT) return;
     fetch("/api/auth/session")
       .then((r) => (r.ok ? r.json() : { user: null }))
       .then((data: { user?: { learnerType?: string } | null }) => {

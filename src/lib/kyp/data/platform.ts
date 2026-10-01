@@ -2,24 +2,24 @@ import type { Stat, EmergencyContact, FAQItem, TimelineEvent } from "./types";
 
 export const stats: Stat[] = [
   {
-    label: "Drug pages",
-    value: "12",
+    label: "Medication guides",
+    value: "145",
     description: "Structured psychiatric medication profiles with mechanism, side effects, and clinical cases",
   },
   {
-    label: "Substance modules",
-    value: "3",
-    description: "Alcohol, opioids, and cannabis with full withdrawal timelines and emergency guidance",
+    label: "Psychiatry lessons",
+    value: "109",
+    description: "Structured clinical lessons across 18 domains with active recall and self-test questions",
   },
   {
-    label: "Side effects mapped",
-    value: "6",
-    description: "High-yield adverse drug reactions linked to receptors, pathways, and management steps",
+    label: "Self-test questions",
+    value: "719",
+    description: "Authored psychiatry questions with explanations, plus per-drug micro-quizzes",
   },
   {
-    label: "Brain regions indexed",
-    value: "6",
-    description: "Each with its neurotransmitters, related disorders, and associated drugs",
+    label: "Drug classes",
+    value: "40",
+    description: "Every class with its medications, mechanisms, and comparison tables",
   },
 ];
 

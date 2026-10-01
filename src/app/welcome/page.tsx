@@ -15,6 +15,7 @@ import {
   Eye, EyeOff, ShieldCheck,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { IS_STATIC_EXPORT } from "@/lib/kyp/static-export";
 
 type Step = "welcome" | "signup" | "login" | "verify" | "role" | "done";
 type Role = "patient" | "student" | "medical_resident" | "medical_student" | "psychiatrist";
@@ -49,6 +50,9 @@ export default function WelcomePage() {
   const [passwordFocused, setPasswordFocused] = React.useState(false);
 
   React.useEffect(() => {
+    // Static export: no session API exists — skip the check (the
+    // buttons below degrade honestly instead) [audit B1].
+    if (IS_STATIC_EXPORT) return;
     fetch("/api/auth/session").then(r => r.json()).then(data => {
       if (data.user) {
         setUserData({ name: data.user.name, email: data.user.email });
@@ -132,6 +136,8 @@ export default function WelcomePage() {
           <img
             src={imgPath("/artwork/hero-brain.png")}
             alt=""
+            width={768}
+            height={1344}
             className="h-full w-full object-cover opacity-20"
           />
         </div>
@@ -177,12 +183,24 @@ export default function WelcomePage() {
                 Visual medical learning built around the way you actually study, practise, and understand medicine.
               </p>
               <div className="mt-8 space-y-3">
-                <Button onClick={() => { setStep("signup"); setError(""); }} className="w-full rounded-xl" size="lg">
-                  Create an account <ArrowRight className="ml-1.5 h-4 w-4" />
-                </Button>
-                <Button onClick={() => { setStep("login"); setError(""); }} variant="outline" className="w-full rounded-xl" size="lg">
-                  Log in
-                </Button>
+                {IS_STATIC_EXPORT ? (
+                  /* No backend on the static deployment — "Get started"
+                     routes straight into the learning experience instead
+                     of an account form that can only fail with
+                     "Network error" [audit B1]. */
+                  <Button onClick={() => router.push("/study")} className="w-full rounded-xl" size="lg">
+                    Get started <ArrowRight className="ml-1.5 h-4 w-4" />
+                  </Button>
+                ) : (
+                  <Button onClick={() => { setStep("signup"); setError(""); }} className="w-full rounded-xl" size="lg">
+                    Create an account <ArrowRight className="ml-1.5 h-4 w-4" />
+                  </Button>
+                )}
+                {!IS_STATIC_EXPORT && (
+                  <Button onClick={() => { setStep("login"); setError(""); }} variant="outline" className="w-full rounded-xl" size="lg">
+                    Log in
+                  </Button>
+                )}
               </div>
               <p className="mt-6 text-xs text-muted-foreground">
                 By continuing, you agree to KYP&apos;s{" "}

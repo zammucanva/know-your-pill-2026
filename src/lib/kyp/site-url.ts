@@ -55,6 +55,10 @@ export function absoluteUrl(path: string): string {
   if (!path.startsWith("/") || path.startsWith("//")) return path;
   if (path === "/") return `${SITE_URL}/`;
   const trailingSlash = process.env.NEXT_PUBLIC_TRAILING_SLASH === "1";
-  const suffix = trailingSlash && !path.includes("#") ? "/" : "";
+  // Asset paths (e.g. "/logo-navy-512.png") never take the trailing
+  // slash — only page routes do. Without this guard the export build
+  // emitted "…/logo-navy-512.png/", a 404.
+  const isAsset = /\.[A-Za-z0-9]+$/.test(path.split("#")[0].split("?")[0]);
+  const suffix = trailingSlash && !path.includes("#") && !isAsset ? "/" : "";
   return `${SITE_URL}${path}${suffix}`;
 }

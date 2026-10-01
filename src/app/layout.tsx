@@ -6,7 +6,7 @@ import { SkipToContentLink } from "@/components/kyp/ui/skip-to-content";
 import { ContentProtection } from "@/lib/contentProtection";
 import { imgPath } from "@/lib/kyp/image-path";
 import { CONTENT_SECURITY_POLICY } from "@/lib/csp";
-import { getSiteUrl } from "@/lib/kyp/site-url";
+import { absoluteUrl, getSiteUrl } from "@/lib/kyp/site-url";
 
 
 export const metadata: Metadata = {
@@ -15,6 +15,11 @@ export const metadata: Metadata = {
   // truth in src/lib/kyp/site-url.ts — overridable per deployment via
   // NEXT_PUBLIC_SITE_URL; never localhost.
   metadataBase: new URL(getSiteUrl()),
+  // Self-referential canonical URL on every route (audit D5). The
+  // relative "./" resolves against each page's own URL — the export
+  // build's trailingSlash + metadataBase then normalise it to the
+  // canonical absolute form (verified per-route in out/ HTML).
+  alternates: { canonical: "./" },
   title: "Know Your Pill — Medication Education Made Visual",
   description:
     "Premium neuroscience-inspired psychiatric medication and substance education platform. Understand how your medicines work in the brain, what to expect, side effects, and how to stay safe.",
@@ -58,11 +63,26 @@ export const metadata: Metadata = {
       "Visual medicine guides with mechanism animations, timelines, side effect clarity, and safety direction.",
     siteName: "Know Your Pill",
     type: "website",
+    // Social preview image (audit D3): the brand mark. Absolute URL on
+    // purpose — Next resolves root-relative image URLs against
+    // metadataBase by CONCATENATION, which would double the Pages
+    // basePath; the absolute form passes through untouched. Applies as
+    // the default og:image for every route (pages may override).
+    images: [
+      {
+        url: absoluteUrl("/logo-navy-512.png"),
+        width: 512,
+        height: 512,
+        alt: "Know Your Pill — brand mark",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Know Your Pill",
     description: "Medication education made visual.",
+    // Twitter/X preview image (audit D3) — same asset as og:image.
+    images: [absoluteUrl("/logo-navy-512.png")],
   },
 };
 

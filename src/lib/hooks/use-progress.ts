@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { IS_STATIC_EXPORT } from "@/lib/kyp/static-export";
 
 /**
  * useProgressTracking — fire-and-forget hook that records a page visit
@@ -21,6 +22,10 @@ interface UseProgressTrackingParams {
 
 export function useProgressTracking({ type, slug, title }: UseProgressTrackingParams) {
   React.useEffect(() => {
+    // Static export: no server to record to (learner-facing progress
+    // persists locally via src/lib/kyp/progress) — skip the call that
+    // could only 404 [audit B2].
+    if (IS_STATIC_EXPORT) return;
     // Fire and forget — don't await, don't block rendering
     fetch("/api/progress", {
       method: "POST",

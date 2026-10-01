@@ -1,0 +1,112 @@
+{
+ "maxDim": 1600,
+ "quality": 92,
+ "files": [
+  {
+   "file": "ethanol.png",
+   "orig": "3375x3375",
+   "now": "1600x1600",
+   "origKB": 130,
+   "webpKB": 40,
+   "savingPct": 69.0
+  },
+  {
+   "file": "cannabis.png",
+   "orig": "1024x1024",
+   "now": "1024x1024",
+   "origKB": 82,
+   "webpKB": 90,
+   "savingPct": -9.1
+  },
+  {
+   "file": "morphine.png",
+   "orig": "3375x3375",
+   "now": "1600x1600",
+   "origKB": 183,
+   "webpKB": 54,
+   "savingPct": 70.6
+  },
+  {
+   "file": "cocaine.png",
+   "orig": "3375x3375",
+   "now": "1600x1600",
+   "origKB": 184,
+   "webpKB": 72,
+   "savingPct": 60.6
+  },
+  {
+   "file": "nicotine.png",
+   "orig": "3375x3375",
+   "now": "1600x1600",
+   "origKB": 153,
+   "webpKB": 49,
+   "savingPct": 68.2
+  },
+  {
+   "file": "amphetamine.png",
+   "orig": "3375x3375",
+   "now": "1600x1600",
+   "origKB": 168,
+   "webpKB": 56,
+   "savingPct": 66.6
+  },
+  {
+   "file": "diazepam.png",
+   "orig": "3375x3375",
+   "now": "1600x1600",
+   "origKB": 182,
+   "webpKB": 57,
+   "savingPct": 68.7
+  },
+  {
+   "file": "barbiturate.png",
+   "orig": "1024x1024",
+   "now": "1024x1024",
+   "origKB": 38,
+   "webpKB": 32,
+   "savingPct": 15.7
+  },
+  {
+   "file": "inhalants.png",
+   "orig": "1024x1024",
+   "now": "1024x1024",
+   "origKB": 43,
+   "webpKB": 33,
+   "savingPct": 23.8
+  },
+  {
+   "file": "lsd.png",
+   "orig": "3375x3375",
+   "now": "1600x1600",
+   "origKB": 170,
+   "webpKB": 51,
+   "savingPct": 69.7
+  },
+  {
+   "file": "pcp.png",
+   "orig": "3375x3375",
+   "now": "1600x1600",
+   "origKB": 164,
+   "webpKB": 54,
+   "savingPct": 67.1
+  },
+  {
+   "file": "withdrawal.png",
+   "orig": "1024x1024",
+   "now": "1024x1024",
+   "origKB": 110,
+   "webpKB": 126,
+   "savingPct": -14.1
+  },
+  {
+   "file": "neuro-arcade.png",
+   "orig": "3375x3375",
+   "now": "1600x1600",
+   "origKB": 1477,
+   "webpKB": 56,
+   "savingPct": 96.2
+  }
+ ],
+ "totalOrigKB": 3084,
+ "totalWebpKB": 770
+}

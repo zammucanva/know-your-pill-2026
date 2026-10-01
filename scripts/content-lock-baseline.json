@@ -1,7 +1,7 @@
 {
   "files": {
     "src/lib/kyp/data/medications.ts": "d2e07f6660240db559c3561572e21ae23719f25766a513cf2507b84443d6a389",
-    "src/lib/kyp/data/drugs.ts": "aa5c6bb3d6100679a2a0ca541cd129637035a3b11b071765d2c0c8872092c12d",
+    "src/lib/kyp/data/drugs.ts": "4af1c46c2cb26b4e67d0e3ccf5e86655e6664ecb4316a93d517a9604368b53a8",
     "src/lib/kyp/data/classes.ts": "3e49f364491049a012b02b06b260ee0473e477488cb2a94d1c6bb452dd080480",
     "src/lib/kyp/data/side-effects.ts": "f0c5f213adf84a5c49fd5422d85379ecb9665640b3b54291a66eb3c20a1560c3",
     "src/lib/kyp/data/brain.ts": "57cd43ef385311aa581fa938039c63d1722b517cd174656bb665d67549ec48fc",
@@ -10,7 +10,7 @@
     "src/lib/kyp/data/disease-types.ts": "de41533d52bb35e7e17ca5b9159d4741513c7a3539a7f973f45839c970497028",
     "src/lib/kyp/data/substance-types.ts": "44c11c6e8bf444f7739209cc768e0eacc94e65d8f0a1b06283b66cb550fe06e4",
     "src/lib/kyp/data/types.ts": "d18e3d2c6283850644fd58b95fe4d72a75955941e8f80bf0eaa137aaaa42d532",
-    "src/lib/kyp/data/platform.ts": "6a68db8df71566967283ebb86d22060970588fe45da52465c5f1028cfddbcdf8",
+    "src/lib/kyp/data/platform.ts": "3c568568680105e633e8d01fc5093354dc3943cc39604765f9c173e0778ccc30",
     "src/lib/kyp/data/index.ts": "3f65f35f76f019e7b285b8ba43718e2b2247079a848480bec01a9e83111de9d7",
     "src/lib/kyp/data/neurotransmitter-artwork.json": "590fdf059028a8bd01ab21e4f7584a2aba15fac6b850e427abe74a6471a1ef58",
     "src/lib/kyp/data/drugs/acamprosate.ts": "a45685fdd768ca0f7529b521851afda0906a2a8d874fd6ed84baa6e23a93eb34",
@@ -162,9 +162,9 @@
     "src/lib/kyp/data/diseases/index.ts": "1a29b24419c75d90b1e344648aec43c465004b62e4c4c4364e37acc303a3f946",
     "src/lib/kyp/data/diseases/major-depressive-disorder.ts": "c42e80d405a763e07a2428cd5771a1afa35436b174a24eedd09096153796cfd2",
     "src/lib/kyp/data/substances/index.ts": "cdfd51ca227dc0dad3d4fd043f3bd5472404f1cf17173bbe37e258dd15162ccd",
-    "src/lib/kyp/data/substances/alcohol.ts": "d79ca5d31ebafc695572ace64178386889a213d784be6fff7561ec2c045bf271",
+    "src/lib/kyp/data/substances/alcohol.ts": "ba4521a8bbdd6e553e065243cb3eb0e1f1478c6e55085738157b970cdb00bce9",
     "src/lib/kyp/data/substances/cannabis.ts": "1d18534cce203d462bd14c60d8fb8e623ddb4d0412228c501e0804a16add1a11",
-    "src/lib/kyp/data/substances/opioids.ts": "b3bf956c5ede725168e615e6cfacff593332b60c5582fca6f542766bca5d1593"
+    "src/lib/kyp/data/substances/opioids.ts": "3bee2e7d17b95c28ffbeba86bd57a1694d28a590d8e035cc73bf9707aaa0426e"
   },
   "counts": {
     "medications": 145,

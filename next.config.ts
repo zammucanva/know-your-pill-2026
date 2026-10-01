@@ -23,6 +23,11 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   env: {
     NEXT_PUBLIC_BASE_PATH: isGithubPages ? `/${repoName}` : "",
+    // Static-export capability flag (audit B1/B2): true only in the
+    // GitHub Pages build — client hooks/components read it to skip
+    // /api/* calls that can only 404 without a server, and to degrade
+    // the auth entry points honestly. See src/lib/kyp/static-export.ts.
+    NEXT_PUBLIC_STATIC: isGithubPages ? "1" : "",
     // Phase 7: the export build uses trailingSlash: true (see below), and
     // Next normalizes canonical/OG metadata URLs to that form. Structured
     // data (JSON-LD, sitemap) must emit the same form so the URLs never

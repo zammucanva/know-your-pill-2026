@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import { Section } from "@/components/kyp/ui/section";
 import { Container } from "@/components/kyp/ui/container";
 import { Reveal } from "@/components/kyp/ui/reveal";
+import { IS_STATIC_EXPORT } from "@/lib/kyp/static-export";
 
 /**
  * ContinueLearningSection — surfaces real progress data if the user is
@@ -22,6 +23,12 @@ export function ContinueLearningSection() {
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
+    // Static export: no progress API — fall through to the "Recommended
+    // starting points" state immediately (never a permanent "Loading…").
+    if (IS_STATIC_EXPORT) {
+      setLoading(false);
+      return;
+    }
     fetch("/api/progress?limit=5")
       .then(r => r.ok ? r.json() : null)
       .then(d => { if (d?.progress) setProgress(d.progress); })

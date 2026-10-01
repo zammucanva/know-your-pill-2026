@@ -12,6 +12,26 @@ import type { DrugClassId } from "@/lib/kyp/data/types";
 import { imgPath } from "@/lib/kyp/image-path";
 import { cn } from "@/lib/utils";
 
+/**
+ * Intrinsic dimensions of the substance artwork files (audit B5 —
+ * width/height attributes let the browser reserve the square box
+ * before the lazy image arrives, eliminating layout shift).
+ */
+const ARTWORK_DIMS: Record<string, { width: number; height: number }> = {
+  "/artwork/ethanol.webp": { width: 1600, height: 1600 },
+  "/artwork/morphine.webp": { width: 1600, height: 1600 },
+  "/artwork/cocaine.webp": { width: 1600, height: 1600 },
+  "/artwork/nicotine.webp": { width: 1600, height: 1600 },
+  "/artwork/amphetamine.webp": { width: 1600, height: 1600 },
+  "/artwork/diazepam.webp": { width: 1600, height: 1600 },
+  "/artwork/barbiturate.webp": { width: 1024, height: 1024 },
+  "/artwork/inhalants.webp": { width: 1024, height: 1024 },
+  "/artwork/lsd.webp": { width: 1600, height: 1600 },
+  "/artwork/pcp.webp": { width: 1600, height: 1600 },
+  "/artwork/cannabis.png": { width: 1024, height: 1024 },
+  "/artwork/withdrawal.png": { width: 1024, height: 1024 },
+};
+
 export function SubstanceUseSection() {
   const [active, setActive] = React.useState<DrugClassId | "all">("all");
 
@@ -91,6 +111,7 @@ export function SubstanceUseSection() {
                       <img
                         src={imgPath(sub.artwork)}
                         alt={sub.artworkAlt ?? `${sub.name} molecule`}
+                        {...ARTWORK_DIMS[sub.artwork] ?? { width: 1024, height: 1024 }}
                         className="h-full w-full object-contain opacity-60 transition-all duration-300 group-hover:opacity-100 group-hover:scale-110"
                         loading="lazy"
                       />

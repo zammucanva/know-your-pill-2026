@@ -15,6 +15,7 @@ import { Section } from "@/components/kyp/ui/section";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { IS_STATIC_EXPORT } from "@/lib/kyp/static-export";
 
 /**
  * /dashboard — personal dashboard showing the user's reading progress,
@@ -81,6 +82,14 @@ export default function DashboardPage() {
   const [bookmarks, setBookmarks] = React.useState<BookmarkEntry[]>([]);
 
   React.useEffect(() => {
+    // Static export: the dashboard is a session surface and there is
+    // no server — send the visitor to Study Mode (whose progress
+    // persists locally) instead of bouncing through /welcome's
+    // now-abstract login path [audit B1].
+    if (IS_STATIC_EXPORT) {
+      router.replace("/study");
+      return;
+    }
     async function load() {
       try {
         const sessionRes = await fetch("/api/auth/session");
@@ -458,21 +467,17 @@ export default function DashboardPage() {
                 Continue Learning
               </h2>
               <div className="flex flex-wrap gap-3">
-                <Link href="/#library">
-                  <Button variant="outline" size="sm" className="rounded-full">
-                    Browse Medications
-                  </Button>
-                </Link>
-                <Link href="/#substances">
-                  <Button variant="outline" size="sm" className="rounded-full">
-                    Browse Substances
-                  </Button>
-                </Link>
-                <Link href="/#neuroarcade">
-                  <Button variant="outline" size="sm" className="rounded-full">
-                    NeuroArcade
-                  </Button>
-                </Link>
+                {/* asChild — renders the <a> itself as the button element
+                    (no nested button-inside-link, audit B11) */}
+                <Button asChild variant="outline" size="sm" className="rounded-full">
+                  <Link href="/#library">Browse Medications</Link>
+                </Button>
+                <Button asChild variant="outline" size="sm" className="rounded-full">
+                  <Link href="/#substances">Browse Substances</Link>
+                </Button>
+                <Button asChild variant="outline" size="sm" className="rounded-full">
+                  <Link href="/#neuroarcade">NeuroArcade</Link>
+                </Button>
               </div>
             </div>
           </Container>

@@ -1,0 +1,31 @@
+{
+ "generatedAt": "2026-10-01T17:53:59.262806+00:00",
+ "expected": {
+  "drugs": 145,
+  "deepGuides": 12,
+  "fallback": 133
+ },
+ "actual": {
+  "patientMode": 145,
+  "patientExplanation": 145,
+  "patientEducationPoints": 145,
+  "deepGuides": 12,
+  "fallback": 133
+ },
+ "deepGuideFiles": [
+  "amitriptyline",
+  "bupropion",
+  "citalopram",
+  "clomipramine",
+  "duloxetine",
+  "escitalopram",
+  "fluoxetine",
+  "fluvoxamine",
+  "mirtazapine",
+  "paroxetine",
+  "sertraline",
+  "venlafaxine"
+ ],
+ "deepGuidesMissingFields": [],
+ "PASS": true
+}
