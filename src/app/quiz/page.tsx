@@ -607,12 +607,15 @@ export default function QuizPage() {
             <Container>
               <Reveal>
                 <p className="text-overline text-brand mb-6">Your result</p>
-                <h1
+                {/* h2, not h1 — the page already has exactly one h1
+                    ("Test your understanding"); the result and each
+                    question are subsections of it (audit B8). */}
+                <h2
                   className="font-serif font-semibold tracking-[-0.03em] text-foreground"
                   style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)" }}
                 >
                   {correctCount} / {results.length}
-                </h1>
+                </h2>
                 <p className="mt-4 text-body-lg text-muted-foreground">
                   {percentage}% correct · {results.length} questions completed
                 </p>
@@ -753,15 +756,15 @@ export default function QuizPage() {
               </Link>
             </div>
 
-            {/* Question */}
-            <h1
+            {/* Question — h2 under the single page h1 (audit B8) */}
+            <h2
               ref={questionRef}
               tabIndex={-1}
               className="font-serif font-semibold tracking-tight text-foreground leading-tight outline-none"
               style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)" }}
             >
               {currentQuestion.question}
-            </h1>
+            </h2>
 
             {/* Options */}
             <div className="mt-10 space-y-3">

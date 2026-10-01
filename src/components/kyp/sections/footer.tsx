@@ -73,7 +73,7 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 mb-12">
             {footerLinks.map((col) => (
               <div key={col.title}>
-                <h3 className="text-overline text-muted-foreground mb-4">{col.title}</h3>
+                <h2 className="text-overline text-muted-foreground mb-4">{col.title}</h2>
                 <ul className="space-y-2">
                   {col.links.map((link) => (
                     <li key={link.label}>

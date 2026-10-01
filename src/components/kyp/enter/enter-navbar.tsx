@@ -177,16 +177,19 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
                 </Button>
               </div>
             ) : (
-              <Link
-                href="/welcome"
-                className="hidden sm:block"
-                tabIndex={active ? 0 : -1}
+              <Button
+                asChild
+                variant="ghost"
+                size="sm"
+                className="hidden gap-1.5 rounded-full sm:inline-flex"
               >
-                <Button variant="ghost" size="sm" className="gap-1.5 rounded-full">
+                {/* asChild — renders the <a> itself as the button element
+                    (no nested button-inside-link, audit B11) */}
+                <Link href="/welcome" tabIndex={active ? 0 : -1}>
                   <LogIn className="h-3.5 w-3.5" />
                   Log in
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             )}
 
             <Button

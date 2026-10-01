@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
 import { Menu, Moon, Sun, X, Phone, LogIn, LogOut, User as UserIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FloatingSearch } from "@/components/kyp/ui/floating-search";
@@ -36,12 +37,26 @@ type SessionUser = { id: string; name: string; email: string; learnerType: strin
 
 export function Navbar() {
   const router = useRouter();
+  const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
   const menuButtonRef = React.useRef<HTMLButtonElement | null>(null);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
   const [user, setUser] = React.useState<SessionUser>(null);
+
+  // aria-current (audit B21): mark the nav link of the page the user is
+  // on. usePathname() includes the Pages basePath in the app router, so
+  // strip it before comparing. Anchor-only entries ("/#substances") are
+  // never "current" — they point at homepage sections.
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const route = pathname?.startsWith(basePath)
+    ? pathname.slice(basePath.length) || "/"
+    : pathname || "/";
+  const isCurrent = (href: string) => {
+    if (href.includes("#")) return false;
+    return route === href || route.startsWith(href + "/");
+  };
 
   // Escape closes the mobile menu (D-3). The listener exists only while
   // the menu is open and mirrors the sheet pattern used by the drug
@@ -121,6 +136,7 @@ export function Navbar() {
               key={l.href}
               href={l.href}
               prefetch={"prefetch" in l ? l.prefetch : undefined}
+              aria-current={isCurrent(l.href) ? "page" : undefined}
               className="rounded-md px-2.5 py-2 text-[13px] font-medium text-muted-foreground transition-colors hover:bg-accent/50 hover:text-foreground xl:px-3 xl:text-sm"
             >
               {l.label}
@@ -161,12 +177,21 @@ export function Navbar() {
               </Button>
             </div>
           ) : (
-            <Link href="/welcome" className="hidden sm:block">
-              <Button variant="ghost" size="sm" className="gap-1.5 rounded-full">
+            /* asChild renders the Link itself as the button element —
+               the previous <Link><Button> composition nested a <button>
+               inside an <a> (invalid interactive-inside-interactive HTML,
+               audit B11). Same classes, same appearance, valid markup. */
+            <Button
+              asChild
+              variant="ghost"
+              size="sm"
+              className="hidden gap-1.5 rounded-full sm:inline-flex"
+            >
+              <Link href="/welcome">
                 <LogIn className="h-3.5 w-3.5" />
                 Log in
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           )}
 
           <Button
@@ -211,6 +236,7 @@ export function Navbar() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
+                aria-current={isCurrent(l.href) ? "page" : undefined}
                 className="flex min-h-[44px] items-center rounded-md px-3 text-body-sm font-medium text-muted-foreground transition-colors hover:bg-accent/60 hover:text-foreground"
               >
                 {l.label}

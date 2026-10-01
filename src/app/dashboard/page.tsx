@@ -458,21 +458,17 @@ export default function DashboardPage() {
                 Continue Learning
               </h2>
               <div className="flex flex-wrap gap-3">
-                <Link href="/#library">
-                  <Button variant="outline" size="sm" className="rounded-full">
-                    Browse Medications
-                  </Button>
-                </Link>
-                <Link href="/#substances">
-                  <Button variant="outline" size="sm" className="rounded-full">
-                    Browse Substances
-                  </Button>
-                </Link>
-                <Link href="/#neuroarcade">
-                  <Button variant="outline" size="sm" className="rounded-full">
-                    NeuroArcade
-                  </Button>
-                </Link>
+                {/* asChild — renders the <a> itself as the button element
+                    (no nested button-inside-link, audit B11) */}
+                <Button asChild variant="outline" size="sm" className="rounded-full">
+                  <Link href="/#library">Browse Medications</Link>
+                </Button>
+                <Button asChild variant="outline" size="sm" className="rounded-full">
+                  <Link href="/#substances">Browse Substances</Link>
+                </Button>
+                <Button asChild variant="outline" size="sm" className="rounded-full">
+                  <Link href="/#neuroarcade">NeuroArcade</Link>
+                </Button>
               </div>
             </div>
           </Container>
