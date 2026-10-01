@@ -8,6 +8,7 @@ import {
   RefreshCw,
   LineChart,
   Scale,
+  Grid3X3,
 } from "lucide-react";
 
 import { Navbar } from "@/components/kyp/sections/navbar";
@@ -45,6 +46,9 @@ import { drugs } from "@/lib/kyp/data";
  * plain links.
  */
 
+/** Class groups derived from the registry's natural order. */
+const classGroups = Array.from(new Set(drugs.map((d) => d.drugClassLabel)));
+
 export const metadata: Metadata = {
   title: "Study Mode · Know Your Pill",
   description:
@@ -61,14 +65,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Study Mode · Know Your Pill",
     description:
-      "Active learning for 12 psychiatric medications — courses, checkpoints, and practice.",
+      `Active learning for ${drugs.length} psychiatric medications — courses, checkpoints, and practice.`,
     type: "website",
     siteName: "Know Your Pill",
   },
 };
-
-/** Class groups derived from the registry's natural order. */
-const classGroups = Array.from(new Set(drugs.map((d) => d.drugClassLabel)));
 
 const totalQuestions = drugs.reduce(
   (sum, d) => sum + (d.microQuizzes?.length || 0),
@@ -231,12 +232,22 @@ export default function StudyPage() {
                     checkpoints, and active recall in every course.
                   </p>
                 </div>
+                {/* prefetch={false}: engine routes bundle the registry chunk */}
                 <Link
                   href="/compare"
+                  prefetch={false}
                   className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                 >
                   <Scale className="h-4 w-4" />
                   Compare medications
+                </Link>
+                <Link
+                  href="/compare/classes"
+                  prefetch={false}
+                  className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                >
+                  <Grid3X3 className="h-4 w-4" />
+                  Compare a class by concern
                 </Link>
                 <Link
                   href="/dashboard"
@@ -366,8 +377,10 @@ export default function StudyPage() {
                       answer.
                     </p>
                   </div>
+                  {/* prefetch={false}: engine route bundles the registry chunk */}
                   <Link
                     href="/quiz"
+                    prefetch={false}
                     className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand/90"
                   >
                     Start Practice
@@ -395,6 +408,7 @@ export default function StudyPage() {
                   </div>
                   <Link
                     href="/quiz/custom"
+                    prefetch={false}
                     className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:text-brand"
                   >
                     Build your own test

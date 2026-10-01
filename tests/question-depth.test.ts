@@ -57,7 +57,7 @@ describe("question depth — tier model", () => {
       ...drugs.flatMap((d) => d.microQuizzes ?? []),
       ...diseases.flatMap((d) => d.microQuizzes ?? []),
     ];
-    expect(total.length).toBe(78); // 72 drug + 6 disease (integrity counts)
+    expect(total.length).toBe(477); // 471 drug + 6 disease (integrity counts)
     for (const q of total) {
       const tier = classifyAuthoredQuestion(q.question);
       expect(DIFFICULTY_TIERS).toContain(tier);
@@ -69,7 +69,7 @@ describe("question depth — tier model", () => {
     expect(counts.foundation).toBeGreaterThan(15);
     expect(counts.clinical).toBeGreaterThan(20);
     expect(counts.advanced).toBeGreaterThan(5);
-    expect(counts.foundation + counts.clinical + counts.advanced).toBe(78);
+    expect(counts.foundation + counts.clinical + counts.advanced).toBe(477);
   });
 
   test("representative stems land in the specified tiers", () => {
@@ -182,10 +182,13 @@ describe("question depth — engine integration", () => {
 
   test("every tier yields a non-empty, duplicate-free attempt (empty-quiz prevention)", () => {
     for (const tier of DIFFICULTY_TIERS) {
-      const { questions, deliveredCount } = buildTest(ALL_SLUGS, 1000, 7, {
+      // Request the entire tier pool — the 145-drug registry's tier
+      // pools (thousands of questions) exceed any fixed round number.
+      const tierTotal = getPoolStats(ALL_SLUGS, tier).total;
+      const { questions, deliveredCount } = buildTest(ALL_SLUGS, tierTotal, 7, {
         difficulty: tier,
       });
-      expect(deliveredCount).toBe(getPoolStats(ALL_SLUGS, tier).total);
+      expect(deliveredCount).toBe(tierTotal);
       const ids = questions.map((q) => q.identity);
       expect(new Set(ids).size).toBe(ids.length); // duplicate prevention
     }
@@ -246,12 +249,12 @@ describe("question depth — identity stability + progress compatibility (5D)", 
     }
   });
 
-  test("all 78 authored ids are present and in the stable slug|mcq:id format", () => {
+  test("all 471 authored drug ids are present and in the stable slug|mcq:id format", () => {
     const pool = buildQuestionPool(ALL_SLUGS);
     const authoredIds = pool
       .filter((q) => q.templateId === "authored")
       .map((q) => q.identity);
-    expect(authoredIds.length).toBe(72);
+    expect(authoredIds.length).toBe(470); // 471 authored minus the option-invalid zotepine entry
     for (const id of authoredIds) {
       expect(id).toMatch(/^[a-z-]+\|mcq:[a-z0-9-]+$/);
     }
@@ -345,9 +348,9 @@ describe("question depth — canonical validity", () => {
     const pool = buildQuestionPool(ALL_SLUGS).filter(
       (q) => q.templateId === "primary-target"
     );
-    // The six single-primary SSRIs + clomipramine share SERT, so every
-    // single-primary drug stamps a question.
-    expect(pool.length).toBe(6);
+    // 39 of the 145 registry drugs have a single-primary target (the
+    // 12-drug era had 6: five SSRIs + clomipramine).
+    expect(pool.length).toBe(39);
     for (const q of pool) {
       expect(q.options[0]).not.toBe("");
     }

@@ -1,0 +1,65 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build static export
+        run: npx next build
+        env:
+          GITHUB_PAGES: "1"
+          NEXT_TELEMETRY_DISABLED: "1"
+
+      - name: Add .nojekyll
+        run: touch out/.nojekyll
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+# NOTE: This workflow was excluded from the pushed history because the
+# fine-grained PAT used for the push lacks `workflow` scope (GitHub blocks
+# workflow-file pushes without it). To re-enable GitHub Pages deployment for
+# THIS repo: copy this file to .github/workflows/deploy.yml, fix the branch
+# trigger typo below, and commit from a token/session with workflow access.
+# Known typo in the original: `branches: ain]` should be `branches: [main]`.

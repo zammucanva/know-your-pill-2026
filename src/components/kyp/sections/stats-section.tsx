@@ -1,10 +1,15 @@
-"use client";
-
+import * as React from "react";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
 import { stats } from "@/lib/kyp/data";
 
+/**
+ * StatsSection — the homepage stats strip.
+ *
+ * Server Component (static content only — `stats` is a tiny curated
+ * platform array, consumed at request/build time).
+ */
 export function StatsSection() {
   return (
     <Section spacing="tight">
@@ -24,5 +29,3 @@ export function StatsSection() {
     </Section>
   );
 }
-
-import * as React from "react";

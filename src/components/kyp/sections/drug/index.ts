@@ -34,6 +34,7 @@ export * from "./drug-guideline-comparison";
 export * from "./drug-evidence-hierarchy";
 export * from "./drug-encounter-context";
 export * from "./drug-prescription-workflow";
+export * from "./drug-prescriber-guide";
 export * from "./drug-exam-frequency-pyq";
 export * from "./drug-indian-comparison";
 export * from "./drug-clinical-decision-path";

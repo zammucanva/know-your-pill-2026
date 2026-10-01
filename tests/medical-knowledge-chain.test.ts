@@ -48,6 +48,7 @@ import {
   getMechanismActionLabel,
 } from "@/lib/kyp/knowledge/entities/mechanism-actions";
 import { drugs } from "@/lib/kyp/data/drugs/index";
+import { drugClassIdFromLabel } from "@/lib/kyp/data/class-id";
 import {
   buildKnowledgeChainView,
 } from "@/components/kyp/sections/drug/medical-knowledge-chain";
@@ -56,7 +57,7 @@ const ALL_SLUGS = getKnowledgeChainSlugs();
 
 describe("knowledge graph — registries", () => {
   test("every registry drug has a chain", () => {
-    expect(ALL_SLUGS.length).toBe(12);
+    expect(ALL_SLUGS.length).toBe(145);
     for (const slug of ALL_SLUGS) {
       const chain = getDrugKnowledgeChain(slug);
       expect(chain).not.toBeNull();
@@ -312,7 +313,7 @@ describe("knowledge chain — rendered view contract (buildKnowledgeChainView)",
       expect(view.path[1].label).toBe(drug.drugClassLabel);
       expect(view.path[2].label).toBe(drug.drugClassFullName);
       expect(view.path[1].href).toBe(
-        `/drugs/class/${drug.drugClassLabel.toLowerCase()}`
+        `/drugs/class/${drugClassIdFromLabel(drug.drugClassLabel)}`
       );
     }
   });
@@ -477,7 +478,10 @@ describe("knowledge chain — rendered view contract (buildKnowledgeChainView)",
   test("MDD merges its indication duplicate into the page-linked entry with unioned statuses", () => {
     for (const slug of ALL_SLUGS) {
       const view = viewFor(slug);
-      const group = view.conditionGroups.find((g) => g.key === "page-linked")!;
+      const group = view.conditionGroups.find((g) => g.key === "page-linked");
+      // Only the registry's disease page is Major Depressive Disorder —
+      // drugs that do not treat MDD have no page-linked group at all.
+      if (!group) continue;
       expect(group).toBeDefined();
       expect(group.items.length).toBe(1);
       const mdd = group.items[0];
@@ -766,9 +770,13 @@ describe("knowledge chain — all 12 canonical medications audit (Phase 3)", () 
     amitriptyline: { primaryTargetId: null, basis: "no-single-primary", candidates: ["sert", "net"], demoted: ["alpha1-adrenergic", "m1-muscarinic", "cardiac-na-channel"] },
   };
 
-  test("every medication resolves to the audited primary-target outcome", () => {
-    expect(ALL_SLUGS.sort()).toEqual(Object.keys(AUDIT).sort());
-    for (const slug of ALL_SLUGS) {
+  test("every medication resolves to a valid primary-target outcome (12 audited in full)", () => {
+    // The Phase-3 audit covers the 12 antidepressants in depth; the other
+    // 133 registry drugs resolve through the same resolver and must
+    // satisfy the generic validity contract below.
+    const audited = Object.keys(AUDIT);
+    for (const slug of audited) expect(ALL_SLUGS).toContain(slug);
+    for (const slug of audited) {
       const chain = getDrugKnowledgeChain(slug)!;
       const p = chain.drug.primaryTarget;
       const expected = AUDIT[slug];

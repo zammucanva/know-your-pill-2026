@@ -18,9 +18,9 @@ import type { Drug } from "../types";
  *   - Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition
  *   - FDA Prescribing Information for CYMBALTA (duloxetine hydrochloride)
  *   - APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder
- *   - NICE Guideline NG222 (Depression in adults, 2022)
+ *   - NICE Clinical Guideline CG91 (Depression in adults)
  *
- * Last reviewed: 2026-10-01
+ * Last reviewed: 2026-07-13
  */
 export const duloxetine: Drug = {
   /* ---- Identity ---- */
@@ -47,7 +47,7 @@ export const duloxetine: Drug = {
   learningObjectives: [
     "Explain how duloxetine differs from venlafaxine mechanistically — balanced SERT + NET blockade from dose 1, with no dose-dependent 'ladder' to unlock noradrenergic effect.",
     "List duloxetine's five FDA-approved indications (MDD, GAD, diabetic peripheral neuropathic pain, fibromyalgia, chronic musculoskeletal pain) and explain why pain relief may precede mood improvement.",
-    "Recognise duloxetine's signature hepatotoxicity risk and identify the patients in whom its use must be avoided (Child-Pugh B/C, cirrhosis, heavy alcohol use).",
+    "Recognise duloxetine's signature hepatotoxicity risk and identify the patients in whom it is contraindicated (Child-Pugh B/C, cirrhosis, heavy alcohol use).",
     "Differentiate duloxetine's safety profile from venlafaxine — minimal hypertension versus dose-dependent hypertension — and explain when each is preferred.",
     "Apply renal, hepatic, and CYP1A2/CYP2D6 interaction logic when starting duloxetine in a complex patient (especially with fluvoxamine, ciprofloxacin, or paroxetine).",
     "Counsel a patient with depression plus chronic pain on what to expect in the first 6 weeks, including the importance of avoiding alcohol and not crushing the enteric-coated capsule.",
@@ -192,7 +192,7 @@ export const duloxetine: Drug = {
       name: "Substantial alcohol use (≥3 drinks/day)",
       severity: "absolute",
       rationale:
-        "The FDA Cymbalta label directs AVOIDING use in patients with substantial alcohol use (≥3 drinks/day) — the label's hepatotoxicity warning (5.2) — because of additive hepatotoxicity risk. Post-marketing reports of severe hepatic injury are over-represented in heavy drinkers.",
+        "FDA Cymbalta label specifically contraindicates use in patients with substantial alcohol use (≥3 drinks/day) due to additive hepatotoxicity risk. Post-marketing reports of severe hepatic injury are over-represented in heavy drinkers.",
     },
     {
       name: "Concurrent thioridazine",
@@ -397,7 +397,7 @@ export const duloxetine: Drug = {
     {
       parameter: "Alcohol use assessment",
       frequency: "Baseline and at each visit.",
-      rationale: "Substantial alcohol use (≥3 drinks/day) is a labeled avoid-use situation due to additive hepatotoxicity. Counsel patients explicitly about this.",
+      rationale: "Substantial alcohol use (≥3 drinks/day) is a contraindication due to additive hepatotoxicity. Counsel patients explicitly about this.",
     },
     {
       parameter: "Renal function (CrCl)",
@@ -493,7 +493,7 @@ export const duloxetine: Drug = {
     "Mild-moderate renal impairment (CrCl 30–80 mL/min): no dose adjustment required. Severe renal impairment (CrCl <30 mL/min): AVOID — use is not recommended; AUC and Cmax approximately double. End-stage renal disease / haemodialysis: AVOID.",
 
   hepaticAdjustment:
-    "Child-Pugh A (mild hepatic impairment): use with caution; consider lower starting dose (30 mg/day) and slower titration. Child-Pugh B or C (moderate-severe hepatic impairment): AVOID (labeled avoid-use; exposure rises sharply). Cirrhosis: AVOID. Substantial alcohol use (≥3 drinks/day): AVOID.",
+    "Child-Pugh A (mild hepatic impairment): use with caution; consider lower starting dose (30 mg/day) and slower titration. Child-Pugh B or C (moderate-severe hepatic impairment): AVOID (contraindicated). Cirrhosis: AVOID. Substantial alcohol use (≥3 drinks/day): AVOID.",
 
   /* ---- Education ---- */
   patientExplanation:
@@ -564,7 +564,7 @@ export const duloxetine: Drug = {
     {
       title: "LIVER Avoids — Duloxetine Hepatotoxicity",
       trick: "LIVER — Liver disease (Child-Pugh B/C), Inflammation (cirrhosis), Volume of alcohol ≥3 drinks/day, End-stage renal (CrCl <30), Rare hepatotoxicity — Avoid all five.",
-      remembers: "Duloxetine's do-not-use situations cluster around hepatic and renal clearance. Check LFTs at baseline; discontinue if ALT/AST >3× ULN.",
+      remembers: "Duloxetine's absolute contraindications cluster around hepatic and renal clearance. Check LFTs at baseline; discontinue if ALT/AST >3× ULN.",
     },
     {
       title: "1A2 = One To Avoid (Duloxetine + Fluvoxamine/Ciprofloxacin)",
@@ -586,7 +586,7 @@ export const duloxetine: Drug = {
     "Onset: pain relief at 1–2 weeks (NET on descending pain pathway); mood effect at 4–6 weeks. Counselling point: pain relief before mood improvement is a feature.",
     "Common side effects: nausea (#1, dual mechanism), dry mouth (NET), somnolence/fatigue, insomnia, headache, dizziness/orthostatic hypotension, constipation, decreased appetite, sweating, sexual dysfunction.",
     "Serious: HEPATOTOXICITY (signature — severe liver injury), orthostatic hypotension/syncope, serotonin syndrome, SIADH, suicidality <25 (black box), bleeding (platelet), activation of mania, discontinuation syndrome (less severe than venlafaxine).",
-    "Do not use in: MAOIs (the labeled contraindication — 14-day washout), hepatic impairment (Child-Pugh B/C) or cirrhosis, ESRD (CrCl <30), substantial alcohol use (≥3 drinks/day) — the latter three are labeled avoid-use — plus thioridazine (CYP2D6) and hypersensitivity.",
+    "Contraindications: MAOIs (14-day washout), hepatic impairment (Child-Pugh B/C) or cirrhosis, ESRD (CrCl <30), substantial alcohol use (≥3 drinks/day), thioridazine (CYP2D6), hypersensitivity.",
     "Interactions: MAOIs (fatal), CYP1A2 inhibitors (fluvoxamine, ciprofloxacin — AVOID, 5× AUC rise), CYP2D6 inhibitors (paroxetine, fluoxetine, bupropion), tramadol/triptans/St John's Wort (serotonin), NSAIDs/warfarin (bleeding), alcohol (hepatotoxic), diuretics (orthostatic), thioridazine (QTc).",
     "Pharmacokinetics: bioavailability ~50%, peak 6h, half-life 12h, protein-bound >90%, hepatic metabolism via CYP1A2 + CYP2D6, no active metabolite, ~70% renal excretion of metabolites.",
     "Pregnancy: NOT drug of choice (sertraline preferred). Former Category C. Third-trimester neonatal adaptation syndrome. Lactation: acceptable but monitor infant for sedation.",
@@ -615,7 +615,7 @@ export const duloxetine: Drug = {
       teachingPoints: [
         "When depression and neuropathic pain coexist (very common in diabetes), duloxetine is uniquely suited — single agent, two FDA indications, balanced mechanism from dose 1.",
         "Pain relief often precedes mood improvement with duloxetine (1–2 weeks vs 4–6 weeks). Use this to counsel patients and maintain adherence during the early 'mood-hasn't-improved-yet' window.",
-        "Alcohol counselling is essential — substantial alcohol use (≥3 drinks/day) warrants avoiding duloxetine entirely due to hepatotoxicity. Even moderate drinkers should reduce. Document the conversation.",
+        "Alcohol counselling is essential — substantial alcohol use (≥3 drinks/day) is a contraindication due to hepatotoxicity. Even moderate drinkers should reduce. Document the conversation.",
         "Orthostatic hypotension is more common than with SSRIs (NET effect). Check orthostatic vitals, especially in patients already on antihypertensives like telmisartan.",
         "Baseline LFTs are essential. Normal LFTs do not eliminate risk — counsel patient to report symptoms of liver injury (jaundice, dark urine, RUQ pain, fatigue) at any point during therapy.",
       ],
@@ -835,7 +835,7 @@ export const duloxetine: Drug = {
         source: "APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder, 3rd edition",
       },
       {
-        source: "NICE Guideline NG222 — Depression in adults: treatment and management (2022)",
+        source: "NICE Clinical Guideline CG91 — Depression in adults: recognition and management",
       },
       {
         source: "American Diabetes Association Standards of Medical Care in Diabetes — Neuropathy chapter",
@@ -876,9 +876,9 @@ export const duloxetine: Drug = {
         source: "Lunn MP, Hughes RA, Wiffen PJ. Duloxetine for treating painful neuropathy, chronic pain or fibromyalgia. Cochrane Database Syst Rev 2014;(1):CD007115.",
       },
       {
-        source: "FDA Prescribing Information — CYMBALTA (duloxetine hydrochloride), revised 2025-07-21 (Lilly)",
+        source: "FDA Prescribing Information — CYMBALTA (duloxetine hydrochloride)",
         section: "Highlights of Prescribing Information",
-        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f7d4d67-10c1-4bf4-a7f2-c185fbad64ba",
+        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/021427s053lbl.pdf",
       },
     ],
     patientResources: [
@@ -1136,7 +1136,7 @@ export const duloxetine: Drug = {
   guidelineComparisons: [
     {
       topic: "Role of duloxetine in depression with comorbid pain",
-      internationalSource: "NICE NG222 / NICE Neuropathic Pain Guideline (CG173)",
+      internationalSource: "NICE CG91 / NICE Neuropathic Pain Guideline (CG173)",
       internationalRecommendation: "Duloxetine is first-line for painful diabetic neuropathy (NICE CG173). For depression with comorbid neuropathic pain, duloxetine is the preferred single agent (treats both). Also FDA-approved for fibromyalgia and chronic musculoskeletal pain.",
       indianSource: "Indian Psychiatric Society (IPS) / IASP India Pain Guidelines",
       indianRecommendation: "IPS guidelines position SSRIs as first-line for uncomplicated depression. Duloxetine is preferred when depression is comorbid with neuropathic pain, fibromyalgia, or chronic musculoskeletal pain. In Indian diabetology practice, duloxetine is increasingly first-line for painful diabetic neuropathy with comorbid depression.",
@@ -1246,7 +1246,7 @@ export const duloxetine: Drug = {
   /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
   evidenceHierarchy: {
     international: [
-      { source: "NICE NG222 (Depression) + CG173 (Neuropathic Pain)", recommendation: "Duloxetine is first-line for painful diabetic neuropathy. For depression with comorbid neuropathic pain, duloxetine is the preferred single agent." },
+      { source: "NICE CG91 (Depression) + CG173 (Neuropathic Pain)", recommendation: "Duloxetine is first-line for painful diabetic neuropathy. For depression with comorbid neuropathic pain, duloxetine is the preferred single agent." },
       { source: "APA Practice Guideline", recommendation: "Duloxetine is a rational SNRI choice for depression with comorbid pain, anxiety, or when BP elevation is a concern with venlafaxine." },
       { source: "FDA", recommendation: "Approved for 5 indications: MDD, GAD, diabetic peripheral neuropathic pain, fibromyalgia, chronic musculoskeletal pain. Hepatotoxicity warning." },
       { source: "American Diabetes Association (ADA)", recommendation: "Duloxetine is a first-line pharmacological option for painful diabetic neuropathy." },
@@ -1382,7 +1382,7 @@ export const duloxetine: Drug = {
       { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders; Pain section" },
       { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants (SNRIs and pain)" },
       { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression with comorbid pain" },
-      { source: "FDA Prescribing Information — CYMBALTA (duloxetine hydrochloride), revised 2025-07-21 (Lilly)", section: "Highlights of Prescribing Information", url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f7d4d67-10c1-4bf4-a7f2-c185fbad64ba" },
+      { source: "FDA Prescribing Information — CYMBALTA (duloxetine hydrochloride)", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/021427s054lbl.pdf" },
       { source: "NICE Clinical Guideline CG173 — Neuropathic pain in adults", section: "Pharmacological management — duloxetine first-line for diabetic neuropathy" },
       { source: "American Diabetes Association (ADA) Standards of Medical Care", section: "Diabetic neuropathy management — duloxetine as first-line pharmacological option" },
       { source: "Cipriani A et al. Lancet 2018 — Comparative efficacy of 21 antidepressants", section: "Network meta-analysis (duloxetine among effective agents)" },
@@ -1696,15 +1696,15 @@ export const duloxetine: Drug = {
     },
     {
       id: "quiz-hepatotoxicity",
-      question: "A heavy drinker (≥3 alcoholic drinks/day) needs an antidepressant. What applies to duloxetine for this patient?",
+      question: "Which of the following is an ABSOLUTE contraindication to duloxetine?",
       options: [
-        "Safe — only hypertension is a concern",
-        "Safe if diabetes is well controlled",
-        "Duloxetine must be AVOIDED — labeled avoid-use with hepatotoxicity warning",
-        "Safe — asthma is the only respiratory concern",
+        "Hypertension",
+        "Diabetes mellitus",
+        "Substantial alcohol use (≥3 drinks/day)",
+        "Asthma",
       ],
       correctIndex: 2,
-      explanation: "Substantial alcohol use (≥3 alcoholic drinks per day) is a labeled AVOID-USE situation on the FDA Cymbalta label — the hepatotoxicity warning directs avoiding duloxetine in heavy drinkers because post-marketing reports of severe hepatic injury are over-represented in this group. (The label's formal CONTRAINDICATIONS are MAOI-related only.) Duloxetine is likewise avoided in liver disease/cirrhosis and CrCl <30 mL/min. Hypertension is NOT a reason to avoid duloxetine (it has less BP effect than venlafaxine).",
+      explanation: "Substantial alcohol use (≥3 alcoholic drinks per day) is an absolute contraindication per the FDA Cymbalta label — additive hepatotoxicity risk. Post-marketing reports of severe hepatic injury are over-represented in heavy drinkers. Duloxetine is also contraindicated in liver disease/cirrhosis and CrCl <30 mL/min. Hypertension is NOT a contraindication (duloxetine has less BP effect than venlafaxine).",
       afterSectionId: "contraindications",
     },
     {
@@ -1791,21 +1791,21 @@ export const duloxetine: Drug = {
       label: "MBBS Student",
       estimatedTime: "20 min",
       description: "Foundations, balanced SNRI mechanism, clinical uses, hepatotoxicity, and MBBS exam content.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
     },
     {
       mode: "neetPg",
       label: "NEET PG / INICET",
       estimatedTime: "38 min",
       description: "Full clinical detail with exam-specific content, PYQs, pain indications, and SNRI comparisons.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
     },
     {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
       description: "Everything — advanced reasoning, ward pearls, pain pharmacology, guideline comparison, full evidence.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
     },
   ],
 
@@ -1855,7 +1855,212 @@ export const duloxetine: Drug = {
     },
   ],
 
+  /* ---- Prescriber's Guide (Stahl layer) ---- */
+  /** Educational paraphrase of Stahl's Essential Psychopharmacology:
+   *  The Prescriber's Guide, 1st ed. (2005). Facts restated, not reproduced. */
+  prescriberGuide: {
+    sourceEdition: "Stahl's Essential Psychopharmacology: The Prescriber's Guide, 1st ed. (2005)",
+
+    onsetTimeline: [
+      "Therapeutic onset usually delayed 2–4 weeks",
+      "No benefit by 6–8 weeks for depression → dose increase or switch",
+      "May continue working for years to prevent relapse",
+    ],
+    ifItWorks: [
+      "Depression and anxiety disorders: aim for complete remission plus relapse prevention",
+      "Fibromyalgia and chronic neuropathic pain: aim to reduce symptoms as much as possible, combined with other treatments — rarely eliminates them completely",
+      "Continue depression/anxiety treatment until remission; first depressive episode: 1 year once well; later episodes may be indefinite",
+      "Fibromyalgia and neuropathic pain use may also be indefinite, though long-term data are limited",
+    ],
+    ifItDoesNotWork: [
+      "Partial response is common — residual insomnia, fatigue, poor concentration",
+      "Some patients are non-responders (treatment-resistant / refractory); some early responders 'poop-out'",
+      "Options: raise dose, switch agent, or add an augmenting drug",
+      "Consider psychotherapy and re-evaluation for another diagnosis or comorbidity",
+      "Apparent non-response from activation of latent bipolar disorder → stop and switch to a mood stabilizer",
+    ],
+    augmentationCombos: [
+      "Augmentation experience is limited compared to other antidepressants — follow SSRI/SNRI augmentation practice only if done by experts with careful monitoring",
+      "For fibromyalgia and neuropathic pain (no controlled studies): experts could theoretically add gabapentin, pregabalin, or tiagabine",
+      "Mirtazapine — the 'California rocket fuel' combination — a potentially powerful dual serotonin/norepinephrine boost; watch for bipolar activation and suicidal ideation",
+      "Noradrenergic enhancers: bupropion, reboxetine, nortriptyline, desipramine, maprotiline, atomoxetine",
+      "Modafinil for fatigue, sleepiness, poor concentration",
+      "Mood stabilizers or atypical antipsychotics for bipolar depression, psychotic or treatment-resistant depression",
+      "Benzodiazepines; if all else fails for anxiety, gabapentin or tiagabine",
+      "Hypnotics or trazodone for insomnia; classically lithium, buspirone, or thyroid hormone",
+    ],
+    testsBeforeStarting: [
+      "Check blood pressure before initiating treatment and regularly during treatment",
+    ],
+
+    sideEffectLogic: [
+      "Serotonin and norepinephrine increases at receptors outside the therapeutic circuits — sleep centers (insomnia), norepinephrine effects on acetylcholine release (decreased appetite, raised blood pressure, urinary retention)",
+      "Most side effects are immediate but often go away with time",
+    ],
+    sideEffectManagement: [
+      "Wait — most early effects fade",
+      "Wait again",
+      "Wait once more",
+      "Lower the dose",
+      "After a few weeks: switch or add other drugs",
+    ],
+    sideEffectRescue: [
+      "For urinary hesitancy: give an alpha-1 blocker such as tamsulosin",
+      "Often better to try another antidepressant monotherapy before augmenting around side effects",
+      "Trazodone or a hypnotic for insomnia",
+      "Bupropion, sildenafil, vardenafil, or tadalafil for sexual dysfunction",
+      "Benzodiazepines for jitteriness and anxiety at initiation",
+      "Mirtazapine for insomnia, agitation, and gastrointestinal effects",
+    ],
+    weightGain: "Reported but not expected",
+    sedation: "Significant minority — may also be activating in some patients",
+
+    dosing: [
+      {
+        indication: "Depression",
+        starting: "40 mg/day in 1–2 doses",
+        titration: "Can increase to 60 mg/day if necessary",
+        target: "40–60 mg/day",
+        max: "120 mg/day (limited experience above 60 mg)",
+        notes: [
+          "Studies have not demonstrated increased efficacy beyond 60 mg/day",
+          "Both serotonin and norepinephrine reuptake blockade are present at 40–60 mg/day",
+          "Swallow whole — do not chew, crush, or sprinkle on food (enteric coating)",
+        ],
+      },
+      {
+        indication: "Stress urinary incontinence",
+        starting: "40 mg/day",
+        titration: "Titrate to twice-daily dosing",
+        target: "40 mg twice daily",
+        max: "80 mg/day",
+      },
+      {
+        indication: "Neuropathic pain / fibromyalgia",
+        starting: "Similar to depression dosing",
+        titration: "Clinical experience still evolving",
+        target: "40–60 mg/day",
+        max: "60 mg/day generally",
+      },
+    ],
+    dosageForms: ["Capsules 20 mg", "Capsules 30 mg", "Capsules 60 mg"],
+    dosingTips: [
+      "Dosing for pain may resemble depression dosing, but stress urinary incontinence dosing differs — experience is still evolving",
+      "Powerful pro-noradrenergic actions may occur at doses greater than 60 mg/day",
+      "Evening dosing can delay absorption up to 3 hours and increase clearance by a third compared with morning dosing",
+      "Activation and agitation may represent induction of a mixed dysphoric bipolar II state with suicidal ideation — add lithium, a mood stabilizer or an antipsychotic, and/or stop duloxetine",
+      "Many side effects are dose- and time-dependent — they spike with each increase, then fade",
+    ],
+    overdose: [
+      "No fatalities reported (as of this edition)",
+    ],
+    longTermUse: "Blood pressure should be monitored regularly",
+    habitForming: "No",
+    howToStop: [
+      "Taper to avoid withdrawal effects (dizziness, nausea, vomiting, headache, paresthesias, irritability)",
+      "Many patients tolerate: 50% reduction for 3 days → another 50% for 3 days → stop",
+      "If withdrawal emerges, raise the dose to abort, then withdraw much more slowly",
+    ],
+    pharmacokinetics: [
+      "Elimination half-life approximately 12 hours",
+      "Metabolized mainly by CYP2D6 and CYP1A2; also inhibits both",
+      "Fatal serotonin syndrome with MAOIs — do not combine; wait 14 days after stopping an MAOI; start MAOIs only 5+ days after stopping duloxetine",
+      "CYP1A2 inhibitors (e.g., fluvoxamine) raise duloxetine levels → dose reduction needed",
+      "Cigarette smoking induces CYP1A2 and may reduce duloxetine levels — no dosage change recommended for smokers",
+      "CYP2D6 inhibitors (paroxetine, fluoxetine, quinidine) raise duloxetine levels → dose reduction",
+      "Via 1A2 inhibition: may theoretically reduce clearance of theophylline and clozapine (theophylline co-administration studies showed no significant effect)",
+      "Via 2D6 inhibition: may blunt codeine analgesia and raise levels of some beta blockers, atomoxetine, and thioridazine (dangerous arrhythmias)",
+      "Can raise TCA levels — caution when combining or switching from a TCA",
+    ],
+    doNotUse: [
+      "Uncontrolled narrow angle-closure glaucoma",
+      "Substantial alcohol use",
+      "Taking an MAO inhibitor",
+      "Taking thioridazine",
+      "Proven allergy to duloxetine",
+    ],
+
+    specialPopulations: [
+      {
+        population: "Renal impairment",
+        guidance: [
+          "Dose adjustment generally not necessary for mild impairment",
+          "Not recommended in end-stage renal disease",
+        ],
+      },
+      {
+        population: "Hepatic impairment",
+        guidance: ["Not recommended for use in hepatic impairment"],
+      },
+      {
+        population: "Cardiac impairment",
+        guidance: [
+          "Use with caution",
+          "Duloxetine may raise blood pressure — monitor during treatment",
+        ],
+      },
+      {
+        population: "Elderly",
+        guidance: ["Some patients may tolerate lower doses better"],
+      },
+      {
+        population: "Children & adolescents",
+        guidance: [
+          "Not specifically approved, but can be used by experts",
+          "Observe for activation of bipolar disorder and suicidal ideation; counsel parents/guardians",
+        ],
+      },
+      {
+        population: "Pregnancy",
+        guidance: [
+          "Risk Category C — not generally recommended, especially first trimester; continuous treatment may nonetheless be necessary and has not been proven harmful",
+          "Late third-trimester SSRI/SNRI exposure: neonatal complications reported (respiratory distress, cyanosis, apnea, seizures, feeding difficulty, hypoglycemia, jitteriness) — consistent with toxicity or a discontinuation syndrome",
+          "Weigh treatment risk against relapse risk — for many, continuing is the better choice",
+        ],
+      },
+      {
+        population: "Breast feeding",
+        guidance: [
+          "Unknown whether duloxetine is secreted in human breast milk — all psychotropics are assumed to be",
+          "If the infant becomes irritable or sedated, breastfeeding or the drug may need to be stopped",
+          "Postpartum is high-risk for relapse — may need reinstitution late in the third trimester or shortly after delivery",
+        ],
+      },
+    ],
+
+    potentialAdvantages: [
+      "Patients with the physical symptoms of depression",
+      "Retarded depression",
+      "Atypical depression",
+      "Possibly higher remission rates on SNRIs than SSRIs in depression",
+      "Depressed patients with somatic symptoms, fatigue, and pain",
+      "Patients who do not respond or remit on SSRIs",
+    ],
+    potentialDisadvantages: [
+      "Patients with urologic or prostate disorders (e.g., older men)",
+      "Patients sensitive to nausea",
+    ],
+    primaryTargetSymptoms: [
+      "Depressed mood",
+      "Energy, motivation, and interest",
+      "Sleep disturbance",
+      "Physical symptoms",
+      "Pain",
+    ],
+    pearls: [
+      "Well-documented efficacy for the physical symptoms of depression",
+      "Only somewhat more potent at serotonin than norepinephrine reuptake blockade — unclear clinical significance as a differentiator from other SNRIs",
+      "No head-to-head studies, but may cause less hypertension than venlafaxine XR",
+      "Not well studied in ADHD or anxiety disorders, but may be effective",
+      "Well studied in stress urinary incontinence (approval was expected at the time of this edition)",
+      "Patients may have higher remission rates for depression on SNRIs than on SSRIs",
+      "Add or switch to/from pro-noradrenergic agents (atomoxetine, reboxetine, other SNRIs, mirtazapine, maprotiline, nortriptyline, desipramine, bupropion) with caution",
+      "Add or switch to/from CYP2D6 substrates (atomoxetine, maprotiline, nortriptyline, desipramine) with caution",
+      "Its SNRI mechanism suggests it may work in some patients who fail SSRIs",
+    ],
+  },
+
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
-  reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Cymbalta label, NICE NG222, NICE CG173 (Neuropathic Pain), APA Practice Guideline, ADA Standards of Care, KD Tripathi 8e, IPS Depression Guidelines, RSSDI Diabetes Guidelines, NMC CBME Curriculum"],
+  reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Cymbalta label, NICE CG91, NICE CG173 (Neuropathic Pain), APA Practice Guideline, ADA Standards of Care, KD Tripathi 8e, IPS Depression Guidelines, RSSDI Diabetes Guidelines, NMC CBME Curriculum"],
 };

@@ -11,7 +11,7 @@ import {
   Timer,
 } from "lucide-react";
 
-import { drugs } from "@/lib/kyp/data";
+import { FIRST_COURSE_SLUG } from "@/lib/kyp/study/course-stats-generated";
 import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
 import {
   coursePercentComplete,
@@ -77,7 +77,7 @@ export function StudyNextPanel() {
 
   /* ── No inputs at all (or pre-hydration) — genuine start state ── */
   if (!data || (recent.length === 0 && mistakeCount === 0 && presets.length === 0 && reviewsDue === 0)) {
-    const start = drugs[0];
+    const start = { slug: FIRST_COURSE_SLUG };
     return (
       <div className="mt-10 flex flex-wrap gap-3">
         <Link

@@ -189,7 +189,14 @@ describe("weak-area — selection", () => {
     seedClass(["venlafaxine", "duloxetine"], "SNRI", 12, 2);
     seedClass(["bupropion"], "NDRI", 12, 6);
     const slugs = weakAreaDrugSlugs(selectWeakTopics(getProgress()));
-    expect(slugs.sort()).toEqual(["bupropion", "duloxetine", "venlafaxine"]);
+    expect(slugs.sort()).toEqual([
+      "bupropion",
+      "desvenlafaxine",
+      "duloxetine",
+      "levomilnacipran",
+      "milnacipran",
+      "venlafaxine",
+    ]); // union of NDRI + SNRI classes (SNRI grew to 5 drugs in Phase 3)
   });
 
   test("8. Diseases are excluded — no drug slugs exist for them", () => {

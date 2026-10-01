@@ -35,9 +35,9 @@ export default function DrugNotFound() {
             </h1>
 
             <p className="mt-4 text-body-lg text-muted-foreground leading-relaxed">
-              This medication hasn&rsquo;t been added to the KYP platform. The team is migrating
-              drugs one at a time to ensure each page meets our clinical quality bar — only
-              Sertraline is available in Sprint 2.
+              This medication isn&apos;t in the KYP library. Browse the
+              medication library to find one of the {drugs.length} medication
+              guides — or search from any page.
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-3">

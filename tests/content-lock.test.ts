@@ -1,9 +1,12 @@
 /**
- * KYP Content Lock Test Suite — 32 checks (one per locked medical data file).
+ * KYP Content Lock Test Suite — one check per locked medical data file
+ * (165 files after the Phase 3 Stahl integration + the 1st-edition
+ * completion pass that added pemoline and tacrine).
  *
  * Each test hashes one locked medical content file and compares it with the
  * recorded baseline (scripts/content-lock-baseline.json). The canonical
- * content counts (12/1/3/78/164) and the medical data-value snapshot are
+ * content counts (145/1/3/477/229 + the KYP Psychiatry search records)
+ * and the medical data-value snapshot are
  * asserted in beforeAll so any drift fails the whole suite.
  */
 
@@ -31,21 +34,20 @@ const baseline: Baseline = existsSync(BASELINE_PATH)
   : { files: {}, counts: { medications: 0, diseases: 0, substances: 0, mcqs: 0, searchEntries: 0 } };
 
 beforeAll(async () => {
-  // Canonical content counts must remain exactly 12/1/3/78/164.
-  // (164 search entries = 46 original + 7 derived taxonomy collection
-  // entries + 111 KYP Psychiatry records — hub + library + 109 note
-  // entries derived from the canonical note corpus. Navigation metadata
+  // Canonical content counts: 145 medications (12 original + 131 from
+  // Stahl 6th ed. + pemoline & tacrine from the 1st-ed. completion pass),
+  // 1 disease, 3 substances, 477 MCQs, and search entries covering the
+  // full registry + the KYP Psychiatry records (hub + library + 109 note
+  // entries derived from the canonical note corpus — navigation metadata
   // only; no medical data values changed — provable via
-  // scripts/medical-data-snapshot.ts, where the drugs / diseases /
-  // substancePages / categories hashes are byte-identical to the
-  // pre-psychiatry baseline, and the original 53 search entries are
-  // prefix-preserved in the array.)
+  // scripts/medical-data-snapshot.ts).
+
   expect(baseline.counts).toEqual({
-    medications: 12,
+    medications: 145,
     diseases: 1,
     substances: 3,
-    mcqs: 78,
-    searchEntries: 164,
+    mcqs: 477,
+    searchEntries: 340,
   });
 
   // Independent data-value level proof: the imported medical data objects
@@ -59,13 +61,13 @@ beforeAll(async () => {
   expect(proc.exitCode).toBe(0);
 });
 
-describe("content lock — 32 locked medical data files", () => {
+describe("content lock — 165 locked medical data files", () => {
   const files = Object.keys(baseline.files);
-  expect(files.length).toBe(32);
+  expect(files.length).toBe(165);
 
   for (let i = 0; i < files.length; i++) {
     const file = files[i];
-    test(`${i + 1}/32 ${file.replace("src/lib/kyp/data/", "")} unchanged`, () => {
+    test(`${i + 1}/${files.length} ${file.replace("src/lib/kyp/data/", "")} unchanged`, () => {
       const absolute = resolve(ROOT, file);
       expect(existsSync(absolute)).toBe(true);
       const actual = createHash("sha256").update(readFileSync(absolute)).digest("hex");

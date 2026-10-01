@@ -13,7 +13,7 @@ and the complete psychiatry curriculum.
 | Psychiatry Library | `/psychiatry/library` | All 109 lessons across 18 clinical domains (A–R, Foundations first) |
 | Psychiatry lesson | `/psychiatry/[slug]` | The six-lesson course journey, one route per source note |
 | Psychiatry self-test | `/psychiatry/self-test` | 719 authored MCQs with explanations, by domain or mixed |
-| Medication Library | `/drugs` | 12 psychiatric medication courses (the drug lesson oracle) |
+| Medication Library | `/drugs` | 145 psychiatric medication monographs across 40 classes (the drug lesson oracle) |
 | Substances | `/substances/[slug]` | Alcohol, opioids, cannabis |
 | Diseases | `/diseases/[slug]` | Major depressive disorder |
 | Practice | `/quiz` | Mixed MCQ practice (Study Mode) |
@@ -55,6 +55,32 @@ and the complete psychiatry curriculum.
 2. **KYP-ADDED** — presentation/learning architecture built on the notes.
 3. **PROPOSED FUTURE** — documented curriculum gaps awaiting source
    material; never counted in the 109, never fabricated.
+
+## The Stahl medication registry
+
+**145 typed drug monographs** — every drug in the Stahl 1st-edition
+*Prescriber's Guide* contents (101/101, including the 4 stereoisomer
+entries) plus 44 modern additions — ~174,000 lines of structured
+clinical notes in one registry:
+
+- One drug = one file: `src/lib/kyp/data/drugs/<slug>.ts` (typed
+  `Drug` object, 60+ fields: mechanism, dosing, black-box warnings,
+  side effects, monitoring, interactions, pregnancy, renal/hepatic
+  adjustments, patient layer, exam lens, memory tricks, clinical cases,
+  Indian practice, knowledge graph, references)
+- `src/lib/kyp/data/drugs/index.ts` — **the single source of truth**;
+  taxonomy, search, class pages, the Medicine page and the MCQ engine
+  all derive from it automatically. No second medication array exists.
+- `src/lib/kyp/stahl-mcqs/` — the Stahl MCQ bank wired into /quiz and
+  the custom test builder (opt-in)
+- Client bundle protection: `scripts/gen-client-data.ts` regenerates
+  the lean search-index/course-stats artifacts consumed by client
+  components; `tests/platform-hardening.test.ts` pins them deep-equal
+  to the live derivation.
+
+👉 **[`STAHL-NOTES-COMPANION.md`](./STAHL-NOTES-COMPANION.md)** — the
+master index: the complete 145-drug table by class, book mapping, the
+integration wiring, and how to extend the registry.
 
 ## Architecture
 

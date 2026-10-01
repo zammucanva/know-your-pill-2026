@@ -29,9 +29,18 @@ import { primaryUsesSummary } from "@/components/kyp/sections/drug/patient-quick
 /** Word-boundary matcher — "Citalopram" must not match inside
  *  "Escitalopram". */
 const mentions = (haystack: string, name: string): boolean =>
-  new RegExp(`\\b${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`).test(
-    haystack
-  );
+  // Letter lookarounds instead of \\b: registry names like
+  // "Amphetamine (d,l)" end in a non-word character, where a trailing
+  // \\b can never match. Letter boundaries still prevent "Citalopram"
+  // from matching inside "Escitalopram".
+  new RegExp(
+    `(?<![A-Za-z])${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?![A-Za-z])`
+  ).test(haystack);
+
+/** Combination products legitimately name their own components —
+ *  "Naltrexone-Bupropion" must be allowed to mention Bupropion. */
+const isComponentOf = (drug: { genericName: string }, other: { genericName: string }): boolean =>
+  drug.genericName.toLowerCase().includes(other.genericName.toLowerCase());
 
 const ALL_SLUGS = new Set(drugs.map((d) => d.slug));
 
@@ -42,6 +51,7 @@ describe("bug 1 — neuroscience mapping copy is this drug's own", () => {
       expect(mentions(intro, drug.genericName)).toBe(true);
       for (const other of drugs) {
         if (other.slug === drug.slug) continue;
+        if (isComponentOf(drug, other)) continue; // combination product
         expect(mentions(intro, other.genericName)).toBe(false);
       }
     }
@@ -53,8 +63,8 @@ describe("bug 1 — neuroscience mapping copy is this drug's own", () => {
         d.brainRegionIds.includes("raphe-nuclei") &&
         d.neurotransmitters.some((nt) => /serotonin/i.test(nt))
     );
-    // 11 of 12 carry serotonin + raphe nuclei; bupropion does not.
-    expect(serotonergic.length).toBe(11);
+    // 31 of 145 carry serotonin + raphe nuclei; bupropion does not.
+    expect(serotonergic.length).toBe(31);
     for (const drug of serotonergic) {
       expect(brainRegionsIntro(drug)).toContain(
         "serotonin neurons project from the raphe nuclei"
@@ -67,7 +77,7 @@ describe("bug 1 — neuroscience mapping copy is this drug's own", () => {
   test("σ1 note: rendered only for drugs whose own receptor profile documents it", () => {
     const withSigma1 = drugs.filter((d) => sigma1ReceptorNote(d) !== undefined);
     expect(withSigma1.map((d) => d.slug).sort()).toEqual(
-      ["fluvoxamine", "sertraline"]
+      ["dextromethorphan", "fluvoxamine", "sertraline"]
     );
     // The note quotes the drug's own verbatim receptor entry.
     for (const drug of withSigma1) {
@@ -93,15 +103,14 @@ describe("bug 1 — neuroscience mapping copy is this drug's own", () => {
       expect(mentions(body, drug.genericName)).toBe(true);
       for (const other of drugs) {
         if (other.slug === drug.slug) continue;
+        if (isComponentOf(drug, other)) continue; // combination product
         expect(mentions(body, other.genericName)).toBe(false);
       }
       // The four pathway names are educational reference, not claims.
       expect(body).toContain("mesolimbic, mesocortical, nigrostriatal, tuberoinfundibular");
     }
-    // Exactly one drug maps to the dopamine pathways (bupropion).
-    expect(drugs.filter((d) => d.pathwayIds.length > 0).map((d) => d.slug)).toEqual([
-      "bupropion",
-    ]);
+    // 42 of 145 drugs map to named pathways (the 12-drug era had one).
+    expect(drugs.filter((d) => d.pathwayIds.length > 0)).toHaveLength(42);
   });
 });
 
@@ -137,12 +146,15 @@ describe("bug 2 — related medications never show a false 'Page coming soon'", 
   });
 
   test("genuinely unbuilt medications stay graceful, never dead links", () => {
-    for (const name of ["Trazodone", "Nortriptyline", "Imipramine", "Varenicline"]) {
+    // The 12-drug era used Trazodone/Nortriptyline/Imipramine/Varenicline —
+    // all four are registry drugs since the 145-drug integration. Use
+    // medications the psychiatric registry genuinely does not carry.
+    for (const name of ["Ibuprofen", "Metformin", "Amoxicillin", "Lisinopril"]) {
       expect(resolveRelatedDrugHref({ name }, ALL_SLUGS)).toBeUndefined();
     }
   });
 
-  test("the live bug's exact cases: 41 built-but-unlinked entries all resolve now", () => {
+  test("the live bug's exact cases: 47 built-but-unlinked entries all resolve now", () => {
     let falseComingSoon = 0;
     const byName = new Map(drugs.map((d) => [d.genericName.toLowerCase(), d.slug]));
     for (const drug of drugs) {
@@ -157,7 +169,7 @@ describe("bug 2 — related medications never show a false 'Page coming soon'", 
         }
       }
     }
-    expect(falseComingSoon).toBe(41);
+    expect(falseComingSoon).toBe(47);
   });
 });
 

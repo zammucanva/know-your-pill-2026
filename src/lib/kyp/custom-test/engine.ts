@@ -25,10 +25,18 @@ import {
   resolveQuestionTier,
   type DifficultySelection,
 } from "./difficulty";
+import { stahlMcqs, stahlMcqToPoolQuestion } from "@/lib/kyp/stahl-mcqs";
 import { createRng } from "./rng";
 import { TEMPLATES, TEMPLATE_IDS } from "./templates";
 import type { Rng } from "./rng";
 import type { PoolQuestion, TestQuestion } from "./types";
+
+/** Options for pool building (Phase 6). */
+export interface PoolOptions {
+  /** Include the Stahl's Prescriber-Guide MCQ bank for the selected
+   *  drugs. Default false — the classic pool is unchanged. */
+  includeStahl?: boolean;
+}
 
 /* ============================================================
    Authored MCQ ingestion
@@ -46,6 +54,20 @@ const UNSHUFFLABLE = [
 export function isShuffleSafe(options: string[]): boolean {
   const lower = options.map((o) => o.toLowerCase().trim());
   return !lower.some((o) => UNSHUFFLABLE.some((u) => o.includes(u)));
+}
+
+/**
+ * Learner-facing option validity: exactly 4 mutually distinct options.
+ * The canonical monographs are content-locked; a data-quality defect
+ * (a duplicated distractor, e.g. zotepine "quiz-side-effects" carries
+ * "Weight gain" twice) is EXCLUDED from generated pools rather than
+ * edited in place — fixing it in the data file would break the
+ * monograph fingerprint lock and requires a medical-authoring
+ * decision for the replacement distractor. See the integration
+ * worklog: known imported defect, scheduled for a content follow-up.
+ */
+export function hasValidQuizOptions(options: string[]): boolean {
+  return options.length === 4 && new Set(options).size === 4;
 }
 
 function authoredQuestions(drugSlugs: Set<string>): PoolQuestion[] {
@@ -87,7 +109,7 @@ function authoredQuestions(drugSlugs: Set<string>): PoolQuestion[] {
    ============================================================ */
 
 /** Build the full unique question pool for a topic selection. */
-export function buildQuestionPool(drugSlugs: string[]): PoolQuestion[] {
+export function buildQuestionPool(drugSlugs: string[], opts: PoolOptions = {}): PoolQuestion[] {
   const selected = new Set(drugSlugs);
   if (selected.size === 0) return [];
   const selectedDrugs = drugs.filter((d) => selected.has(d.slug));
@@ -110,10 +132,24 @@ export function buildQuestionPool(drugSlugs: string[]): PoolQuestion[] {
     });
   };
 
-  // Authored MCQs first (highest-value, human-written).
+  // Authored MCQs first (highest-value, human-written) — only
+  // option-valid ones (see hasValidQuizOptions).
   for (const q of authoredQuestions(selected)) {
+    if (!hasValidQuizOptions(q.options)) continue;
     seen.add(q.identity);
     pool.push(q);
+  }
+
+  // Stahl's Prescriber-Guide bank (opt-in, Phase 6) — resolved,
+  // position-balanced questions carrying their own identities.
+  if (opts.includeStahl) {
+    for (const mcq of stahlMcqs) {
+      if (!selected.has(mcq.drugSlug)) continue;
+      const q = stahlMcqToPoolQuestion(mcq);
+      if (seen.has(q.identity)) continue;
+      seen.add(q.identity);
+      pool.push(q);
+    }
   }
 
   // Template-stamped questions.
@@ -140,9 +176,10 @@ export interface PoolStats {
 /** Real availability for the setup screen — optionally tier-filtered. */
 export function getPoolStats(
   drugSlugs: string[],
-  difficulty: DifficultySelection = "all"
+  difficulty: DifficultySelection = "all",
+  opts: PoolOptions = {}
 ): PoolStats {
-  const pool = filterByDifficulty(buildQuestionPool(drugSlugs), difficulty);
+  const pool = filterByDifficulty(buildQuestionPool(drugSlugs, opts), difficulty);
   const perTemplate: Record<string, number> = {};
   const perDifficulty: Record<string, number> = {};
   let authored = 0;
@@ -239,10 +276,10 @@ export function buildTest(
   drugSlugs: string[],
   requestedCount: number,
   seed: number,
-  opts: { difficulty?: DifficultySelection } = {}
+  opts: PoolOptions & { difficulty?: DifficultySelection } = {}
 ): BuildTestResult {
   const difficulty = opts.difficulty ?? "all";
-  const pool = filterByDifficulty(buildQuestionPool(drugSlugs), difficulty);
+  const pool = filterByDifficulty(buildQuestionPool(drugSlugs, opts), difficulty);
   const rng = createRng(seed);
   const available = pool.length;
   const capped = requestedCount > available;

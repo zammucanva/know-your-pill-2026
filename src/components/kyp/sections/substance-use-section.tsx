@@ -6,8 +6,9 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Callout } from "@/components/kyp/ui/callout";
 import { Reveal } from "@/components/kyp/ui/reveal";
-import { substances, drugClassFilters, drugClasses } from "@/lib/kyp/data";
-import type { DrugClassId } from "@/lib/kyp/data";
+import { substances } from "@/lib/kyp/data/drugs";
+import { drugClassFilters, drugClasses } from "@/lib/kyp/data/classes";
+import type { DrugClassId } from "@/lib/kyp/data/types";
 import { imgPath } from "@/lib/kyp/image-path";
 import { cn } from "@/lib/utils";
 

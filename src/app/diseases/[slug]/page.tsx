@@ -600,7 +600,7 @@ export default async function DiseasePage({ params }: PageProps) {
           </Section>
         )}
 
-        <TestUnderstandingCTA topic={disease.name} />
+        <TestUnderstandingCTA topic={disease.name} quizHref="/quiz?filter=disease" />
 
         {/* ===== EMERGENCY ===== */}
         <EmergencySection />

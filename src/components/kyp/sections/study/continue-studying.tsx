@@ -13,7 +13,7 @@ import {
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Reveal } from "@/components/kyp/ui/reveal";
-import { drugs } from "@/lib/kyp/data";
+import { FIRST_COURSE_SLUG } from "@/lib/kyp/study/course-stats-generated";
 import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
 import {
   clearProgress,
@@ -94,7 +94,7 @@ export function ContinueStudying() {
 
   /* ── GENUINE START STATE ─────────────────────────────────────── */
   if (!hasProgress) {
-    const start = drugs[0];
+    const start = { slug: FIRST_COURSE_SLUG };
     return (
       <Section spacing="relaxed" className="border-t border-border/30 bg-muted/10">
         <Container>

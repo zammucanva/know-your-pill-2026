@@ -58,12 +58,43 @@ export function LearningModule({ drug }: LearningModuleProps) {
           <DrugExamFrequency drug={drug} />
         </div>
 
-        {/* Tabs */}
-        <div className="flex gap-3 overflow-x-auto border-b border-border/60 kyp-scroll">
+        {/* Tabs — WAI-ARIA tabs pattern (roles, aria-selected,
+            aria-controls, arrow-key navigation, Home/End). */}
+        <div
+          role="tablist"
+          aria-label="Learning and exam content"
+          className="flex gap-3 overflow-x-auto border-b border-border/60 kyp-scroll"
+          onKeyDown={(e) => {
+            const idx = tabs.findIndex((t) => t.key === tab);
+            const focusTab = (key: "pearls" | "exam" | "tricks" | "ward") => {
+              setTab(key);
+              // Roving tabindex: move focus with selection
+              requestAnimationFrame(() =>
+                document.getElementById(`learning-module-tab-${key}`)?.focus()
+              );
+            };
+            if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+              e.preventDefault();
+              const dir = e.key === "ArrowRight" ? 1 : -1;
+              focusTab(tabs[(idx + dir + tabs.length) % tabs.length].key);
+            } else if (e.key === "Home") {
+              e.preventDefault();
+              focusTab(tabs[0].key);
+            } else if (e.key === "End") {
+              e.preventDefault();
+              focusTab(tabs[tabs.length - 1].key);
+            }
+          }}
+        >
           {tabs.map((t) => (
             <button
               key={t.key}
               type="button"
+              role="tab"
+              id={`learning-module-tab-${t.key}`}
+              aria-selected={tab === t.key}
+              aria-controls={`learning-module-panel-${t.key}`}
+              tabIndex={tab === t.key ? 0 : -1}
               onClick={() => setTab(t.key)}
               className={cn(
                 "shrink-0 flex items-center gap-1.5 pb-2 text-sm font-medium transition-colors border-b-2 -mb-px",
@@ -72,13 +103,13 @@ export function LearningModule({ drug }: LearningModuleProps) {
                   : "border-transparent text-muted-foreground hover:text-foreground"
               )}
             >
-              <t.icon className="h-3.5 w-3.5" />
+              <t.icon className="h-3.5 w-3.5" aria-hidden />
               {t.label}
             </button>
           ))}
         </div>
 
-        <div className="mt-6">
+        <div className="mt-6" role="tabpanel" id={`learning-module-panel-${tab}`} aria-labelledby={`learning-module-tab-${tab}`} tabIndex={-1}>
           {/* Clinical Pearls */}
           {tab === "pearls" && hasPearls && (
             <div className="grid gap-3 sm:grid-cols-2">

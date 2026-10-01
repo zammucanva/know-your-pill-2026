@@ -59,3 +59,8 @@ Disallow: /
 # ── Everything else (unknown crawlers, future tools): ALLOWED ────────
 User-agent: *
 Allow: /
+
+# ── Sitemap ─────────────────────────────────────────────────────────
+# Canonical site sitemap, generated from the canonical drug registry
+# (app/sitemap.tsx → /sitemap.xml).
+Sitemap: https://zammucanva.github.io/know-your-pill-2026/sitemap.xml

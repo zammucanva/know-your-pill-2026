@@ -3,7 +3,7 @@
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { EmergencyAlert } from "@/components/kyp/ui/emergency-alert";
-import { emergencyContacts } from "@/lib/kyp/data";
+import { emergencyContacts } from "@/lib/kyp/data/platform";
 
 export function EmergencySection() {
   return (

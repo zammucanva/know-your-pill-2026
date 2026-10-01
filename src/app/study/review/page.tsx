@@ -33,7 +33,8 @@ import {
   type MistakeRecordInput,
 } from "@/lib/kyp/progress/progress-store";
 import type { TestQuestion } from "@/lib/kyp/custom-test/types";
-import { drugs, diseases } from "@/lib/kyp/data";
+import { drugs } from "@/lib/kyp/data/drugs/index";
+import { diseases } from "@/lib/kyp/data/diseases/index";
 
 /**
  * /study/review — the Retention Engine's review session (NEXT-X1).
@@ -340,6 +341,9 @@ export default function ReviewPage() {
                 </div>
               </div>
 
+              {/* Question context — the compact drug label only. Source
+                  metadata (bank, section, topic) stays INTERNAL to the
+                  question data; it is not repeated per question. */}
               <div className="mb-6 flex items-center gap-2 text-xs text-muted-foreground/60">
                 <BookOpen className="h-3.5 w-3.5" aria-hidden />
                 <span>From </span>
@@ -349,7 +353,6 @@ export default function ReviewPage() {
                 >
                   {q.source.sourceName}
                 </Link>
-                <span>· {q.source.sectionLabel}</span>
               </div>
 
               <h1

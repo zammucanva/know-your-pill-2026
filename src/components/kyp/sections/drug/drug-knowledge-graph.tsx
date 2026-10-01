@@ -7,7 +7,6 @@ import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { SectionHeader } from "@/components/kyp/ui/section-header";
 import { Badge } from "@/components/kyp/ui/badge";
-import { MedicalKnowledgeChain } from "@/components/kyp/sections/drug/medical-knowledge-chain";
 import type { Drug, KnowledgeGraphNode } from "@/lib/kyp/data";
 import { linkPath } from "@/lib/kyp/image-path";
 import { cn } from "@/lib/utils";
@@ -29,6 +28,11 @@ import { cn } from "@/lib/utils";
 
 interface DrugKnowledgeGraphProps {
   drug: Drug;
+  /** Server-rendered MedicalKnowledgeChain (RSC children pattern) —
+   *  the chain derives from the registry-backed knowledge graph, so it
+   *  is rendered on the server and passed in; the registry never
+   *  reaches this client component's bundle. */
+  knowledgeChain: React.ReactNode;
 }
 
 const nodeTypeConfig = {
@@ -43,7 +47,7 @@ const nodeTypeConfig = {
   "patient-guide": { variant: "outline" as const, label: "Guide", color: "text-foreground", bg: "bg-muted/40", border: "border-border/70" },
 };
 
-export function DrugKnowledgeGraph({ drug }: DrugKnowledgeGraphProps) {
+export function DrugKnowledgeGraph({ drug, knowledgeChain }: DrugKnowledgeGraphProps) {
   const [hoveredIdx, setHoveredIdx] = React.useState<number | null>(null);
   const nodes = drug.knowledgeGraph;
 
@@ -101,7 +105,7 @@ export function DrugKnowledgeGraph({ drug }: DrugKnowledgeGraphProps) {
             the canonical knowledge graph, so it can never drift from the
             data layer. */}
         <div className="mx-auto mt-2 max-w-3xl">
-          <MedicalKnowledgeChain drugSlug={drug.slug} />
+          {knowledgeChain}
         </div>
       </Container>
     </Section>
