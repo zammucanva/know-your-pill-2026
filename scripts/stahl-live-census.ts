@@ -81,7 +81,7 @@ async function main() {
   }
 
   /* 5 ── psychiatry regression sweep (109 courses still live) */
-  const psychSlugs = (await import("../src/lib/kyp/data/psychiatry-courses/index.ts")).psychiatryCourses.map((c: { slug: string }) => c.slug);
+  const psychSlugs = (await import("../src/lib/kyp/data/psychiatry-courses/index")).psychiatryCourses.map((c: { slug: string }) => c.slug);
   let psych200 = 0;
   const psychBad: string[] = [];
   for (const s of psychSlugs) {
