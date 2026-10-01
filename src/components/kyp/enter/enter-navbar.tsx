@@ -116,7 +116,7 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
             tabIndex={active ? 0 : -1}
           >
             <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-xl">
-              <img
+              <img width={128} height={128}
                 src={imgPath("/logo-navy-128.png")}
                 alt="Know Your Pill logo"
                 className="h-full w-full object-contain"

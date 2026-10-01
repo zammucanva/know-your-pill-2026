@@ -136,6 +136,8 @@ export default function WelcomePage() {
           <img
             src={imgPath("/artwork/hero-brain.png")}
             alt=""
+            width={768}
+            height={1344}
             className="h-full w-full object-cover opacity-20"
           />
         </div>

@@ -31,7 +31,7 @@ export const alcohol: SubstancePage = {
   name: "Alcohol",
   disorderName: "Alcohol Use Disorders",
   drugClass: "depressant",
-  artwork: "/artwork/ethanol.png",
+  artwork: "/artwork/ethanol.webp",
   artworkAlt: "Ethanol molecule — alcohol's psychoactive component",
 
   tagline: "Understanding alcohol dependence, intoxication, withdrawal, neuropsychiatric complications, detoxification, and recovery through neuroscience-focused education.",

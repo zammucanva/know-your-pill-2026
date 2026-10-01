@@ -14,7 +14,7 @@ export const substances: Substance[] = [
       "Potentiates GABA-A receptors and triggers dopamine release in the reward pathway. Chronic use downregulates GABA, making abrupt cessation dangerous.",
     neurotransmitter: "GABA · Dopamine · Glutamate",
     href: "/substances/alcohol",
-    artwork: "/artwork/ethanol.png",
+    artwork: "/artwork/ethanol.webp",
     artworkAlt: "Ethanol molecule — alcohol's psychoactive component, illustrating its chemical structure and CNS depressant mechanism",
   },
   {
@@ -38,7 +38,7 @@ export const substances: Substance[] = [
       "Mu-opioid receptor agonism produces analgesia and euphoria. The same receptor drives respiratory depression, which is what makes overdose lethal.",
     neurotransmitter: "Endorphin · Dopamine",
     href: "/substances/opioids",
-    artwork: "/artwork/morphine.png",
+    artwork: "/artwork/morphine.webp",
     artworkAlt: "Morphine molecule — the prototypical opioid, illustrating its binding to μ-opioid receptors and analgesic mechanism",
   },
   {
@@ -50,7 +50,7 @@ export const substances: Substance[] = [
       "Cocaine blocks reuptake of dopamine, norepinephrine, and serotonin. The resulting synaptic flood produces intense euphoria followed by a severe crash.",
     neurotransmitter: "Dopamine · Norepinephrine",
     href: "#substances",
-    artwork: "/artwork/cocaine.png",
+    artwork: "/artwork/cocaine.webp",
     artworkAlt: "Cocaine molecule — illustrating its blockade of monoamine transporters and dopaminergic reward pathway activation",
   },
   {
@@ -62,7 +62,7 @@ export const substances: Substance[] = [
       "Nicotinic acetylcholine receptor activation in the VTA releases dopamine within seconds of inhalation. Dependence develops rapidly.",
     neurotransmitter: "Acetylcholine · Dopamine",
     href: "#substances",
-    artwork: "/artwork/nicotine.png",
+    artwork: "/artwork/nicotine.webp",
     artworkAlt: "Nicotine molecule — illustrating its action on nicotinic acetylcholine receptors and dopaminergic reward activation",
   },
   {
@@ -74,7 +74,7 @@ export const substances: Substance[] = [
       "Amphetamines reverse the dopamine and norepinephrine transporters, effectively pumping catecholamines into the synapse rather than clearing it.",
     neurotransmitter: "Dopamine · Norepinephrine",
     href: "#substances",
-    artwork: "/artwork/amphetamine.png",
+    artwork: "/artwork/amphetamine.webp",
     artworkAlt: "Amphetamine molecule — illustrating its reversal of dopamine and norepinephrine transporters in the synaptic cleft",
   },
   {
@@ -86,7 +86,7 @@ export const substances: Substance[] = [
       "These drugs are positive allosteric modulators at GABA-A receptors. They produce anxiolysis and sedation; abrupt withdrawal can cause seizures.",
     neurotransmitter: "GABA",
     href: "#substances",
-    artwork: "/artwork/diazepam.png",
+    artwork: "/artwork/diazepam.webp",
     artworkAlt: "Diazepam molecule — the prototypical benzodiazepine, illustrating its positive allosteric modulation of GABA-A receptors",
   },
   {
@@ -98,7 +98,7 @@ export const substances: Substance[] = [
       "Barbiturates directly agonise GABA-A receptors and have a notoriously narrow therapeutic index. Once common as anaesthetics, they carry high overdose risk.",
     neurotransmitter: "GABA",
     href: "#substances",
-    artwork: "/artwork/barbiturate.png",
+    artwork: "/artwork/barbiturate.webp",
     artworkAlt: "Phenobarbital molecule — the prototypical barbiturate, illustrating its direct GABA-A receptor agonism and CNS depression",
   },
   {
@@ -110,7 +110,7 @@ export const substances: Substance[] = [
       "These lipophilic solvents cross the blood-brain barrier within seconds. Intoxication is brief; chronic use causes irreversible neurotoxicity.",
     neurotransmitter: "GABA · NMDA",
     href: "#substances",
-    artwork: "/artwork/inhalants.png",
+    artwork: "/artwork/inhalants.webp",
     artworkAlt: "Toluene molecule — a common inhalant solvent, illustrating its lipophilic crossing of the blood-brain barrier and neurotoxic effects",
   },
   {
@@ -122,7 +122,7 @@ export const substances: Substance[] = [
       "LSD is a partial agonist at 5-HT2A serotonin receptors. A single dose can alter perception, mood, and sense of self for 8 to 12 hours.",
     neurotransmitter: "Serotonin",
     href: "#substances",
-    artwork: "/artwork/lsd.png",
+    artwork: "/artwork/lsd.webp",
     artworkAlt: "Lysergic acid diethylamide molecule — illustrating its partial agonism at 5-HT2A serotonin receptors and hallucinogenic effects",
   },
   {
@@ -134,7 +134,7 @@ export const substances: Substance[] = [
       "PCP blocks NMDA glutamate receptors, producing dissociation, analgesia, and unpredictable behaviour. It was abandoned as an anaesthetic for this reason.",
     neurotransmitter: "Glutamate (NMDA)",
     href: "#substances",
-    artwork: "/artwork/pcp.png",
+    artwork: "/artwork/pcp.webp",
     artworkAlt: "Phencyclidine molecule — illustrating its NMDA receptor antagonism and dissociative effects on glutamatergic neurotransmission",
   },
   {
