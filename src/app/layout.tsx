@@ -6,7 +6,7 @@ import { SkipToContentLink } from "@/components/kyp/ui/skip-to-content";
 import { ContentProtection } from "@/lib/contentProtection";
 import { imgPath } from "@/lib/kyp/image-path";
 import { CONTENT_SECURITY_POLICY } from "@/lib/csp";
-import { getSiteUrl } from "@/lib/kyp/site-url";
+import { absoluteUrl, getSiteUrl } from "@/lib/kyp/site-url";
 
 
 export const metadata: Metadata = {
@@ -63,13 +63,14 @@ export const metadata: Metadata = {
       "Visual medicine guides with mechanism animations, timelines, side effect clarity, and safety direction.",
     siteName: "Know Your Pill",
     type: "website",
-    // Social preview image (audit D3): the brand mark — an existing
-    // asset, basePath-prefixed so metadataBase resolves it to the
-    // deployed origin. Applies as the default og:image for every route
-    // (pages may override with a page-specific image).
+    // Social preview image (audit D3): the brand mark. Absolute URL on
+    // purpose — Next resolves root-relative image URLs against
+    // metadataBase by CONCATENATION, which would double the Pages
+    // basePath; the absolute form passes through untouched. Applies as
+    // the default og:image for every route (pages may override).
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo-navy-512.png`,
+        url: absoluteUrl("/logo-navy-512.png"),
         width: 512,
         height: 512,
         alt: "Know Your Pill — brand mark",
@@ -81,7 +82,7 @@ export const metadata: Metadata = {
     title: "Know Your Pill",
     description: "Medication education made visual.",
     // Twitter/X preview image (audit D3) — same asset as og:image.
-    images: [`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo-navy-512.png`],
+    images: [absoluteUrl("/logo-navy-512.png")],
   },
 };
 
