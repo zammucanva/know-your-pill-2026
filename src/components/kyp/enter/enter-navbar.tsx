@@ -238,6 +238,12 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
         {open && active && (
           <div id="enter-mobile-nav-menu" className="border-t border-border/70 bg-background/95 lg:hidden">
             <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
+              {/* Search — the floating pill is hidden below lg (audit B3),
+                  so the menu is the mobile search entry point */}
+              <FloatingSearch
+                variant="button"
+                className="mb-2 w-full min-h-[44px] justify-between rounded-md bg-muted/30"
+              />
               {navLinks.map((l) => (
                 <a
                   key={l.href}
