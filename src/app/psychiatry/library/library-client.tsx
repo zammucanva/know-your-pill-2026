@@ -86,7 +86,10 @@ export function LibraryClient({ groups }: { groups: LibraryGroup[] }) {
     if (!progressData) return map;
     for (const [slug, record] of Object.entries(progressData.courses)) {
       map.set(slug, {
-        completed: record.completedSections.length,
+        // The hero "top" anchor is position-tracking only on the
+        // psychiatry course pages (the canonical completion contract) —
+        // records written before that contract never count it here.
+        completed: record.completedSections.filter((id) => id !== "top").length,
         done: record.completedAt != null,
       });
     }

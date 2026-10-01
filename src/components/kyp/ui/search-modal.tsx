@@ -27,6 +27,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { searchTypeLabels } from "@/lib/kyp/data";
+import { SEARCH_RESULT_GROUPS } from "@/lib/kyp/search-groups";
 import { searchIndex, searchKyp } from "@/lib/kyp/search";
 import type { SearchableItem } from "@/lib/kyp/data";
 import { useSearchHistory } from "@/lib/hooks/use-search-history";
@@ -357,14 +358,11 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
 /**
  * GroupedResults — renders search results grouped by content type.
  *
- * Groups appear in order of relevance: Medications, Collections,
- * Diseases, Substances, Neuroscience (brain-region, pathway,
- * neurotransmitter), Side Effects, Classes, Clinical, Patient Guides.
- *
- * Collections are the derived taxonomy browse destinations (Psychiatry,
- * Antidepressants, SSRIs, SNRIs, NDRIs, NaSSAs, TCAs) — listed right
- * after Medications so direct medication matches stay primary while
- * taxonomy browsing is always discoverable.
+ * The group order and type membership live in SEARCH_RESULT_GROUPS
+ * (src/lib/kyp/search-groups.ts) — the shared, test-pinned
+ * presentation contract. Every SearchableItem type appears in exactly
+ * one group, so no result the engine returns can be invisible in the
+ * UI (the D-1 regression guard).
  *
  * Within each group, results stay in their ranked order. Keyboard
  * navigation still works — the flat `activeIndex` maps to the position
@@ -381,21 +379,9 @@ function GroupedResults({
   setActiveIndex: (fn: (i: number) => number) => void;
   onGo: (item: SearchableItem) => void;
 }) {
-  // Define group order and which types belong to each group
-  const groups: { label: string; types: SearchableItem["type"][] }[] = [
-    { label: "Medications", types: ["drug"] },
-    { label: "Collections", types: ["collection"] },
-    { label: "Diseases", types: ["disease"] },
-    { label: "Substances", types: ["substance"] },
-    { label: "Neuroscience", types: ["brain-region", "pathway", "neurotransmitter"] },
-    { label: "Side Effects", types: ["side-effect"] },
-    { label: "Drug Classes", types: ["class"] },
-    { label: "Clinical & Guides", types: ["clinical", "patient-guide"] },
-  ];
-
   return (
     <>
-      {groups.map((group) => {
+      {SEARCH_RESULT_GROUPS.map((group) => {
         const groupItems = results.filter((item) => group.types.includes(item.type));
         if (groupItems.length === 0) return null;
 
