@@ -10,10 +10,10 @@ import type { Drug } from "../types";
  *   - Katzung Basic & Clinical Pharmacology, 16th edition
  *   - Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition
  *   - FDA Prescribing Information for Zoloft (sertraline hydrochloride)
- *   - NICE Clinical Guideline CG91 (Depression in adults)
+ *   - NICE Guideline NG222 (Depression in adults, 2022)
  *   - APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder
  *
- * Last reviewed: 2026-07-13
+ * Last reviewed: 2026-10-01
  */
 export const sertraline: Drug = {
   /* ---- Identity ---- */
@@ -497,7 +497,7 @@ export const sertraline: Drug = {
     diagnosis:
       "Major Depressive Disorder, single episode, moderate-severe, without psychotic features (ICD-10 F32.2). Differential: adjustment disorder with depressed mood (less likely given severity and neurovegetative symptoms); bipolar depression (screen with MDQ — negative); hypothyroidism-induced depression (TSH to be checked).",
     rationale:
-      "Sertraline chosen because: (1) first-line for MDD per NICE CG91; (2) favourable side-effect profile for a working patient (minimal sedation, low weight gain); (3) sister had a good response — pharmacogenetic concordance; (4) safest SSRI if patient becomes pregnant (reproductive age, no current contraception); (5) once-daily dosing improves adherence. Fluoxetine would be alternative but more activating; mirtazapine rejected due to weight gain in a patient already losing weight.",
+      "Sertraline chosen because: (1) first-line for MDD per NICE NG222; (2) favourable side-effect profile for a working patient (minimal sedation, low weight gain); (3) sister had a good response — pharmacogenetic concordance; (4) safest SSRI if patient becomes pregnant (reproductive age, no current contraception); (5) once-daily dosing improves adherence. Fluoxetine would be alternative but more activating; mirtazapine rejected due to weight gain in a patient already losing weight.",
     management:
       "Started sertraline 50 mg every morning with food. Plan: review at 2 weeks (tolerability + suicidality), 4 weeks (early response), 6 weeks (dose escalation if PHQ-9 reduction <30%), 12 weeks (full response assessment). Patient given PHQ-9 self-rating schedule and safety plan with crisis contacts (112, Tele-MANAS 14416). Counseled: (1) expect side effects before benefit; (2) do not stop abruptly; (3) avoid alcohol; (4) watch for agitation or new suicidal thoughts in first month; (5) full effect takes 4–6 weeks. Concurrent referral for CBT (NICE recommends combining medication + psychotherapy for moderate-severe depression).",
     outcome:
@@ -713,7 +713,7 @@ export const sertraline: Drug = {
   references: {
     guidelines: [
       {
-        source: "NICE Clinical Guideline CG91 — Depression in adults: recognition and management",
+        source: "NICE Guideline NG222 — Depression in adults: treatment and management (2022)",
       },
       {
         source: "APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder, 3rd edition",
@@ -755,9 +755,9 @@ export const sertraline: Drug = {
         section: "India-specific prescribing information",
       },
       {
-        source: "FDA Prescribing Information — ZOLOFT (sertraline hydrochloride)",
+        source: "FDA Prescribing Information — ZOLOFT (sertraline hydrochloride), revised 2023-08-08 (Viatris)",
         section: "Highlights of Prescribing Information",
-        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/019839s74lbl.pdf",
+        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fda754f6-d0f3-4dce-a17a-927d64f912f7",
       },
     ],
     patientResources: [
@@ -1012,7 +1012,7 @@ export const sertraline: Drug = {
   guidelineComparisons: [
     {
       topic: "First-line SSRI for depression",
-      internationalSource: "NICE CG91 / APA Practice Guideline",
+      internationalSource: "NICE NG222 / APA Practice Guideline",
       internationalRecommendation: "SSRIs are first-line for moderate-severe depression. Sertraline is commonly chosen due to favourable side-effect profile and drug interaction profile.",
       indianSource: "Indian Psychiatric Society (IPS)",
       indianRecommendation: "IPS guidelines also recommend SSRIs as first-line for depression. Sertraline and escitalopram are the most commonly prescribed SSRIs in Indian practice. No specific IPS preference between individual SSRIs — selection is based on patient profile (pregnancy, elderly, comorbidities, cost).",
@@ -1117,7 +1117,7 @@ export const sertraline: Drug = {
   /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
   evidenceHierarchy: {
     international: [
-      { source: "NICE CG91", recommendation: "SSRIs are first-line for moderate-severe depression. Sertraline is commonly chosen due to favourable side-effect profile." },
+      { source: "NICE NG222", recommendation: "SSRIs are first-line for moderate-severe depression. Sertraline is commonly chosen due to favourable side-effect profile." },
       { source: "APA Practice Guideline", recommendation: "SSRI first-line for MDD. Sertraline preferred when drug interactions are a concern (mild CYP2D6 inhibition)." },
       { source: "FDA", recommendation: "Approved for 6 indications: MDD, OCD, Panic, PTSD, Social Anxiety, PMDD. Black box warning for suicidality <25." },
       { source: "WHO mhGAP", recommendation: "SSRIs recommended as first-line antidepressants in the Mental Health Gap Action Programme." },
@@ -1253,8 +1253,8 @@ export const sertraline: Drug = {
       { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
       { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants" },
       { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression" },
-      { source: "FDA Prescribing Information — ZOLOFT (sertraline hydrochloride)", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/019839s74lbl.pdf" },
-      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Pharmacological treatment" },
+      { source: "FDA Prescribing Information — ZOLOFT (sertraline hydrochloride), revised 2023-08-08 (Viatris)", section: "Highlights of Prescribing Information", url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fda754f6-d0f3-4dce-a17a-927d64f912f7" },
+      { source: "NICE Guideline NG222 — Depression in adults (2022)", section: "Recommendations — antidepressant choice and switching" },
       { source: "APA Practice Guideline for MDD, 3rd edition" },
       { source: "Cipriani A et al. Lancet 2018 — Comparative efficacy of 21 antidepressants", section: "Network meta-analysis" },
     ],
@@ -1294,7 +1294,7 @@ export const sertraline: Drug = {
       {
         id: "moderate",
         question: "Moderate depression (PHQ-9 10-14)",
-        recommendation: "Sertraline 50mg OD + CBT. First-line per NICE CG91 and IPS guidelines.",
+        recommendation: "Sertraline 50mg OD + CBT. First-line per NICE NG222 and IPS guidelines.",
         reasoning: "SSRI + CBT is first-line for moderate depression. Sertraline is preferred for favourable side-effect profile, pregnancy safety, and low cost in India.",
       },
       {
@@ -1677,5 +1677,5 @@ export const sertraline: Drug = {
 
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
-  reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Zoloft label, NICE CG91, APA Practice Guideline, KD Tripathi 8e, IPS Depression Guidelines, NMC CBME Curriculum"],
+  reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Zoloft label, NICE NG222, APA Practice Guideline, KD Tripathi 8e, IPS Depression Guidelines, NMC CBME Curriculum"],
 };

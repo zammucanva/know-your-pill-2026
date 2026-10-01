@@ -20,7 +20,7 @@ import type { Drug } from "../types";
  *   - APA Practice Guideline for the Treatment of Patients with Obsessive-Compulsive Disorder
  *   - American Geriatrics Society Beers Criteria (2023 update)
  *
- * Last reviewed: 2026-07-13
+ * Last reviewed: 2026-10-01
  */
 export const clomipramine: Drug = {
   /* ---- Identity ---- */
@@ -226,7 +226,7 @@ export const clomipramine: Drug = {
       name: "Seizure disorder",
       severity: "relative",
       rationale:
-        "Clomipramine lowers the seizure threshold MORE than amitriptyline in a dose-dependent manner — particularly at the higher OCD doses (up to 250 mg/day). Avoid in patients with poorly controlled epilepsy; if essential, use lowest effective dose, ensure antiseizure medication is optimised, and avoid other seizure-threshold-lowering drugs. Clomipramine is generally contraindicated in patients with active seizure disorder by the FDA label unless benefits clearly outweigh risks.",
+        "Clomipramine lowers the seizure threshold MORE than amitriptyline in a dose-dependent manner — particularly at the higher OCD doses (up to 250 mg/day). The FDA label identifies seizure as the most significant risk of Anafranil use (cumulative incidence 0.64% at 90 days, 1.45% at 365 days in premarketing evaluation) and directs CAUTION in patients with a history of seizures or other predisposing factors (brain damage, alcoholism, concomitant seizure-threshold-lowering drugs). In practice, avoid in patients with poorly controlled epilepsy; if essential, use lowest effective dose, ensure antiseizure medication is optimised, and avoid other seizure-threshold-lowering drugs.",
     },
     {
       name: "Known hypersensitivity to clomipramine or other TCAs",
@@ -1011,9 +1011,9 @@ export const clomipramine: Drug = {
         section: "TCAs and SSRIs shown to have comparable efficacy for depression — SSRIs better tolerated",
       },
       {
-        source: "FDA Prescribing Information — ANAFRANIL (clomipramine hydrochloride)",
+        source: "FDA Prescribing Information — ANAFRANIL (clomipramine hydrochloride), revised 2024-11-26 (SpecGX)",
         section: "Highlights of Prescribing Information (OCD indication, seizure warning, boxed warning)",
-        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/019906s050lbl.pdf",
+        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4074b555-7635-41a9-809d-fae3b3610059",
       },
       {
         source: "Pigott TA, Seay SM. A review of the efficacy of selective serotonin reuptake inhibitors in obsessive-compulsive disorder. J Clin Psychiatry 1999;60:101-106.",
@@ -1528,9 +1528,9 @@ export const clomipramine: Drug = {
       { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders (TCAs)" },
       { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants (clomipramine for OCD)" },
       { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on OCD and clomipramine" },
-      { source: "FDA Prescribing Information — ANAFRANIL (clomipramine hydrochloride)", section: "Highlights of Prescribing Information" },
+      { source: "FDA Prescribing Information — ANAFRANIL (clomipramine hydrochloride), revised 2024-11-26 (SpecGX)", section: "Highlights of Prescribing Information" },
       { source: "APA Practice Guideline for the Treatment of Patients with OCD", section: "Pharmacological treatment — clomipramine second-line" },
-      { source: "NICE Clinical Guideline CG31 — Obsessive-Compulsive Disorder", section: "Pharmacological treatment" },
+      { source: "NICE Clinical Guideline CG31 — Obsessive-Compulsive Disorder", section: "Recommendations — antidepressant choice and switching" },
       { source: "Cochrane Review — Pharmacological interventions for OCD", section: "Clomipramine efficacy and safety" },
     ],
     indian: [

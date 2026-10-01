@@ -11,10 +11,10 @@ import type { Drug } from "../types";
  *   - Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition
  *   - FDA Prescribing Information for LEXAPRO (escitalopram oxalate)
  *   - FDA Drug Safety Communication: abnormal heart rhythms associated with high doses of citalopram (2011/2012)
- *   - NICE Clinical Guideline CG91 (Depression in adults)
+ *   - NICE Guideline NG222 (Depression in adults, 2022)
  *   - APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder
  *
- * Last reviewed: 2026-07-13
+ * Last reviewed: 2026-10-01
  */
 export const escitalopram: Drug = {
   /* ---- Identity ---- */
@@ -790,7 +790,7 @@ export const escitalopram: Drug = {
         url: "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fda-drug-safety-communication-abnormal-heart-rhythms-associated-high-doses-citalopram-celexa",
       },
       {
-        source: "NICE Clinical Guideline CG91 — Depression in adults: recognition and management",
+        source: "NICE Guideline NG222 — Depression in adults: treatment and management (2022)",
       },
       {
         source: "APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder, 3rd edition",
@@ -822,9 +822,9 @@ export const escitalopram: Drug = {
     ],
     reviews: [
       {
-        source: "FDA Prescribing Information — LEXAPRO (escitalopram oxalate)",
+        source: "FDA Prescribing Information — LEXAPRO (escitalopram), revised 2023-10-01 (Allergan)",
         section: "Highlights of Prescribing Information",
-        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/021323s046lbl.pdf",
+        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=13bb8267-1cab-43e5-acae-55a4d957630a",
       },
       {
         source: "MIMS India — Escitalopram",
@@ -1088,7 +1088,7 @@ export const escitalopram: Drug = {
   guidelineComparisons: [
     {
       topic: "First-line SSRI for depression in elderly",
-      internationalSource: "NICE CG91 / APA Practice Guideline",
+      internationalSource: "NICE NG222 / APA Practice Guideline",
       internationalRecommendation: "SSRIs are first-line for moderate-severe depression. In elderly, an SSRI with low CYP interaction profile and favourable tolerability is preferred — escitalopram and sertraline are commonly chosen.",
       indianSource: "Indian Psychiatric Society (IPS)",
       indianRecommendation: "IPS guidelines recommend SSRIs as first-line for depression. Escitalopram is widely preferred in elderly Indian patients due to lowest CYP interaction profile, favourable tolerability, and once-daily dosing. Dose cap of 10mg/day in >60 years is observed.",
@@ -1198,7 +1198,7 @@ export const escitalopram: Drug = {
   /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
   evidenceHierarchy: {
     international: [
-      { source: "NICE CG91", recommendation: "SSRIs are first-line for moderate-severe depression. Escitalopram is commonly chosen in elderly and in patients on complex regimens due to lowest CYP interaction profile." },
+      { source: "NICE NG222", recommendation: "SSRIs are first-line for moderate-severe depression. Escitalopram is commonly chosen in elderly and in patients on complex regimens due to lowest CYP interaction profile." },
       { source: "APA Practice Guideline", recommendation: "SSRI first-line for MDD. Escitalopram preferred when drug interactions are a concern (minimal CYP2D6 inhibition) and in elderly." },
       { source: "FDA", recommendation: "Approved for MDD in adults and adolescents ≥12 years, and GAD in adults. QTc dose-dependent — max 20mg/day adults, 10mg/day in elderly >60 and CYP2C19 poor metabolisers." },
       { source: "WHO mhGAP", recommendation: "SSRIs recommended as first-line antidepressants in the Mental Health Gap Action Programme." },
@@ -1334,9 +1334,9 @@ export const escitalopram: Drug = {
       { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
       { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants" },
       { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression" },
-      { source: "FDA Prescribing Information — LEXAPRO (escitalopram oxalate)", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/021323s047lbl.pdf" },
+      { source: "FDA Prescribing Information — LEXAPRO (escitalopram), revised 2023-10-01 (Allergan)", section: "Highlights of Prescribing Information", url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=13bb8267-1cab-43e5-acae-55a4d957630a" },
       { source: "FDA Drug Safety Communication: abnormal heart rhythms associated with high doses of citalopram/escitalopram (2011/2012)", section: "Dose-dependent QTc prolongation — dose caps established" },
-      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Pharmacological treatment" },
+      { source: "NICE Guideline NG222 — Depression in adults (2022)", section: "Recommendations — antidepressant choice and switching" },
       { source: "APA Practice Guideline for MDD, 3rd edition" },
     ],
     indian: [
@@ -1375,7 +1375,7 @@ export const escitalopram: Drug = {
       {
         id: "moderate",
         question: "Moderate depression (PHQ-9 10–14)",
-        recommendation: "Escitalopram 10mg OD (5mg in anxious/elderly) + CBT. First-line per NICE CG91 and IPS guidelines, particularly preferred in elderly and polypharmacy.",
+        recommendation: "Escitalopram 10mg OD (5mg in anxious/elderly) + CBT. First-line per NICE NG222 and IPS guidelines, particularly preferred in elderly and polypharmacy.",
         reasoning: "SSRI + CBT is first-line for moderate depression. Escitalopram is preferred in elderly (>60) and in patients on complex regimens due to lowest CYP interaction profile.",
         branches: [
           { label: "Why choose Escitalopram?", next: "start-escitalopram" },
@@ -1767,5 +1767,5 @@ export const escitalopram: Drug = {
 
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
-  reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Lexapro label, FDA Drug Safety Communication on citalopram/escitalopram QTc (2011/2012), NICE CG91, APA Practice Guideline"],
+  reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Lexapro label, FDA Drug Safety Communication on citalopram/escitalopram QTc (2011/2012), NICE NG222, APA Practice Guideline"],
 };

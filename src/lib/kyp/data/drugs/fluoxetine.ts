@@ -11,10 +11,10 @@ import type { Drug } from "../types";
  *   - Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition
  *   - FDA Prescribing Information for PROZAC (fluoxetine hydrochloride)
  *   - FDA Prescribing Information for SARAFEM (fluoxetine hydrochloride, PMDD)
- *   - NICE Clinical Guideline CG91 (Depression in adults)
+ *   - NICE Guideline NG222 (Depression in adults, 2022)
  *   - APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder
  *
- * Last reviewed: 2026-07-13
+ * Last reviewed: 2026-10-01
  */
 export const fluoxetine: Drug = {
   /* ---- Identity ---- */
@@ -862,7 +862,7 @@ export const fluoxetine: Drug = {
     guidelines: [
       {
         source:
-          "NICE Clinical Guideline CG91 — Depression in adults: recognition and management",
+          "NICE Guideline NG222 — Depression in adults: treatment and management (2022)",
       },
       {
         source:
@@ -905,13 +905,13 @@ export const fluoxetine: Drug = {
         source:
           "FDA Prescribing Information — PROZAC (fluoxetine hydrochloride)",
         section: "Highlights of Prescribing Information",
-        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/018936s108lbl.pdf",
+        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c88f33ed-6dfb-4c5e-bc01-d8e36dd97299",
       },
       {
         source:
           "FDA Prescribing Information — SARAFEM (fluoxetine hydrochloride, for PMDD)",
         section: "Highlights of Prescribing Information",
-        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2009/021285s016lbl.pdf",
+        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c88f33ed-6dfb-4c5e-bc01-d8e36dd97299",
       },
       {
         source: "MIMS India — Fluoxetine (Prodep, Flunil)",
@@ -1178,7 +1178,7 @@ export const fluoxetine: Drug = {
   guidelineComparisons: [
     {
       topic: "First-line SSRI for depression",
-      internationalSource: "NICE CG91 / APA Practice Guideline",
+      internationalSource: "NICE NG222 / APA Practice Guideline",
       internationalRecommendation: "SSRIs are first-line for moderate-severe depression. No single SSRI preferred — selection based on patient profile, comorbidities, interactions, and prior response.",
       indianSource: "Indian Psychiatric Society (IPS)",
       indianRecommendation: "IPS guidelines also recommend SSRIs as first-line for depression. Sertraline and escitalopram are the most commonly prescribed first-line SSRIs in Indian practice. Fluoxetine is used selectively — preferred for retarded depression, bulimia, paediatric depression, and adherence-poor patients; avoided in anxious/agitated depression.",
@@ -1283,7 +1283,7 @@ export const fluoxetine: Drug = {
   /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
   evidenceHierarchy: {
     international: [
-      { source: "NICE CG91", recommendation: "SSRIs are first-line for moderate-severe depression. No single SSRI preferred — selection based on patient profile." },
+      { source: "NICE NG222", recommendation: "SSRIs are first-line for moderate-severe depression. No single SSRI preferred — selection based on patient profile." },
       { source: "APA Practice Guideline", recommendation: "SSRI first-line for MDD. Fluoxetine selected for retarded depression, bulimia, paediatric depression, or adherence-poor patients." },
       { source: "FDA", recommendation: "Approved for 5 indications: MDD, OCD, Bulimia, Panic Disorder, PMDD. Paediatric depression ≥8 yrs (unique). Black box warning for suicidality <25." },
       { source: "WHO mhGAP", recommendation: "SSRIs recommended as first-line antidepressants in the Mental Health Gap Action Programme." },
@@ -1419,9 +1419,9 @@ export const fluoxetine: Drug = {
       { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
       { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants" },
       { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression" },
-      { source: "FDA Prescribing Information — PROZAC (fluoxetine hydrochloride)", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/018936s108lbl.pdf" },
-      { source: "FDA Prescribing Information — SARAFEM (fluoxetine, PMDD)", section: "Highlights of Prescribing Information" },
-      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Pharmacological treatment" },
+      { source: "FDA Prescribing Information — PROZAC (fluoxetine hydrochloride), revised 2026-01-08 (Dista/Alkermes)", section: "Highlights of Prescribing Information", url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c88f33ed-6dfb-4c5e-bc01-d8e36dd97299" },
+      { source: "FDA Prescribing Information — PROZAC (fluoxetine hydrochloride), revised 2026-01-08 (Dista/Alkermes)", section: "Highlights of Prescribing Information" },
+      { source: "NICE Guideline NG222 — Depression in adults (2022)", section: "Recommendations — antidepressant choice and switching" },
       { source: "APA Practice Guideline for MDD, 3rd edition" },
       { source: "Cipriani A et al. Lancet 2018 — Comparative efficacy of 21 antidepressants", section: "Network meta-analysis" },
     ],
@@ -1461,7 +1461,7 @@ export const fluoxetine: Drug = {
       {
         id: "moderate",
         question: "Moderate depression (PHQ-9 10–14)",
-        recommendation: "SSRI + CBT. First-line per NICE CG91 and IPS guidelines. Choose fluoxetine if retarded/anhedonic phenotype (psychomotor slowing, hypersomnia, hyperphagia).",
+        recommendation: "SSRI + CBT. First-line per NICE NG222 and IPS guidelines. Choose fluoxetine if retarded/anhedonic phenotype (psychomotor slowing, hypersomnia, hyperphagia).",
         reasoning: "SSRI + CBT is first-line for moderate depression. Fluoxetine's activating profile suits retarded depression; sertraline or escitalopram suit anxious depression.",
         branches: [
           { label: "Retarded phenotype", next: "why-fluoxetine" },
@@ -1877,6 +1877,6 @@ export const fluoxetine: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
   reviewers: [
-    "Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Prozac & Sarafem labels, NICE CG91 & NG69, APA Practice Guideline, KD Tripathi 8e, IPS Depression Guidelines, NMC CBME Curriculum",
+    "Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Prozac & Sarafem labels, NICE NG222 & NG69, APA Practice Guideline, KD Tripathi 8e, IPS Depression Guidelines, NMC CBME Curriculum",
   ],
 };

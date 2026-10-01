@@ -14,7 +14,7 @@ import type { Drug } from "../types";
  *   - NICE Clinical Guideline CG31 (OCD and body dysmorphic disorder)
  *   - APA Practice Guideline for the Treatment of Patients with Obsessive-Compulsive Disorder
  *
- * Last reviewed: 2026-07-13
+ * Last reviewed: 2026-10-01
  */
 export const fluvoxamine: Drug = {
   /* ---- Identity ---- */
@@ -867,7 +867,7 @@ export const fluvoxamine: Drug = {
         section: "Pharmacological treatment recommendations",
       },
       {
-        source: "NICE Clinical Guideline CG91 — Depression in adults: recognition and management",
+        source: "NICE Guideline NG222 — Depression in adults: treatment and management (2022)",
         section: "SSRI selection criteria (note: fluvoxamine not first-choice in UK)",
       },
     ],
@@ -909,9 +909,9 @@ export const fluvoxamine: Drug = {
         section: "Review of σ1 receptor-mediated anti-inflammatory effects in cytokine storm",
       },
       {
-        source: "FDA Prescribing Information — LUVOX (fluvoxamine maleate) and LUVOX CR",
+        source: "FDA Prescribing Information — fluvoxamine maleate tablets, revised 2026-09-11 (Apotex)",
         section: "Highlights of Prescribing Information",
-        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2009/021511s010lbl.pdf",
+        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6eeb14df-6fcf-a737-5359-5744eb4accea",
       },
     ],
     patientResources: [
@@ -1420,9 +1420,9 @@ export const fluvoxamine: Drug = {
       { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
       { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants (CYP1A2 inhibition profile)" },
       { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on drug interactions (clozapine, tizanidine, theophylline)" },
-      { source: "FDA Prescribing Information — LUVOX (fluvoxamine maleate)", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/021519s030lbl.pdf" },
+      { source: "FDA Prescribing Information — fluvoxamine maleate tablets, revised 2026-09-11 (Apotex)", section: "Highlights of Prescribing Information", url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6eeb14df-6fcf-a737-5359-5744eb4accea" },
       { source: "APA Practice Guideline for the Treatment of Patients with Obsessive-Compulsive Disorder", section: "Pharmacotherapy — SSRIs" },
-      { source: "NICE Clinical Guideline CG31 — OCD and body dysmorphic disorder", section: "Pharmacological treatment" },
+      { source: "NICE Clinical Guideline CG31 — OCD and body dysmorphic disorder", section: "Recommendations — antidepressant choice and switching" },
       { source: "Cipriani A et al. Lancet 2018 — Comparative efficacy of 21 antidepressants", section: "Network meta-analysis" },
     ],
     indian: [

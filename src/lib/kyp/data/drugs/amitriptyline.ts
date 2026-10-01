@@ -16,7 +16,7 @@ import type { Drug } from "../types";
  *   - NICE Clinical Guideline CG173 — Neuropathic pain in adults
  *   - American Geriatrics Society Beers Criteria (2023 update)
  *
- * Last reviewed: 2026-07-13
+ * Last reviewed: 2026-10-01
  */
 export const amitriptyline: Drug = {
   /* ---- Identity ---- */
@@ -985,9 +985,9 @@ export const amitriptyline: Drug = {
         section: "Classic RCT establishing TCA efficacy in painful diabetic neuropathy",
       },
       {
-        source: "FDA Prescribing Information — ELAVIL (amitriptyline hydrochloride)",
+        source: "FDA Prescribing Information — amitriptyline hydrochloride tablets, revised 2026-09-08 (Sun Pharmaceutical)",
         section: "Highlights of Prescribing Information",
-        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/008683s079lbl.pdf",
+        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e520c63-1cf6-40f6-a51c-3f9b0e181342",
       },
       {
         source: "Goldberg RJ. Clinical evaluation of amitriptyline and peripheral neuropathy. Psychosomatics 1981;22:167-172.",
@@ -1255,7 +1255,7 @@ export const amitriptyline: Drug = {
   guidelineComparisons: [
     {
       topic: "Place in depression treatment",
-      internationalSource: "NICE CG91 / APA Practice Guideline",
+      internationalSource: "NICE NG222 / APA Practice Guideline",
       internationalRecommendation: "SSRIs are first-line. TCAs including amitriptyline are reserved for severe/melancholic depression, treatment-resistant cases, or when sedation/weight gain is therapeutically useful.",
       indianSource: "Indian Psychiatric Society (IPS)",
       indianRecommendation: "IPS concurs — SSRIs first-line. TCAs are second-line for severe depression with melancholic features, insomnia, or weight loss. Amitriptyline still used in resource-limited settings due to low cost, but overdose risk favours SSRIs.",
@@ -1365,7 +1365,7 @@ export const amitriptyline: Drug = {
   /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
   evidenceHierarchy: {
     international: [
-      { source: "NICE CG91", recommendation: "SSRIs first-line; TCAs (including amitriptyline) reserved for severe or treatment-resistant depression." },
+      { source: "NICE NG222", recommendation: "SSRIs first-line; TCAs (including amitriptyline) reserved for severe or treatment-resistant depression." },
       { source: "NICE CG173", recommendation: "Amitriptyline is a first-line option for neuropathic pain (excluding trigeminal neuralgia) at 10-75mg nocte." },
       { source: "AGS Beers Criteria 2023", recommendation: "Avoid amitriptyline in ≥65 years due to anticholinergic burden, sedation, orthostatic hypotension." },
       { source: "AAN/AHS Migraine Guidelines", recommendation: "Amitriptyline 10-75mg nocte is Level A prophylactic for migraine (especially with insomnia)." },
@@ -1501,8 +1501,8 @@ export const amitriptyline: Drug = {
       { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
       { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants (TCAs)" },
       { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression and TCAs" },
-      { source: "FDA Prescribing Information — Amitriptyline Hydrochloride", section: "Highlights of Prescribing Information" },
-      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Pharmacological treatment — TCAs as second-line" },
+      { source: "FDA Prescribing Information — amitriptyline hydrochloride tablets, revised 2026-09-08 (Sun Pharmaceutical)", section: "Highlights of Prescribing Information" },
+      { source: "NICE Guideline NG222 — Depression in adults (2022)", section: "Pharmacological treatment — TCAs as second-line" },
       { source: "NICE Clinical Guideline CG173 — Neuropathic pain in adults", section: "Amitriptyline as first-line option" },
       { source: "AGS Beers Criteria 2023", section: "Amitriptyline listed as 'Avoid' in ≥65 years" },
     ],

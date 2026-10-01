@@ -16,10 +16,10 @@ import type { Drug } from "../types";
  *   - Katzung Basic & Clinical Pharmacology, 16th edition
  *   - Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition
  *   - FDA Prescribing Information for EFFEXOR XR (venlafaxine hydrochloride)
- *   - NICE Clinical Guideline CG91 (Depression in adults)
+ *   - NICE Guideline NG222 (Depression in adults, 2022)
  *   - APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder
  *
- * Last reviewed: 2026-07-13
+ * Last reviewed: 2026-10-01
  */
 export const venlafaxine: Drug = {
   /* ---- Identity ---- */
@@ -533,7 +533,7 @@ export const venlafaxine: Drug = {
     "Dose-dependent mechanism is THE signature of venlafaxine: 75 mg/day = essentially an SSRI; 150–225 mg/day = true SNRI (dual SERT + NET); >300 mg/day = adds weak DAT inhibition. If a patient on 75 mg isn't responding, escalating to 150 mg isn't just 'more of the same' — it's adding a fundamentally different mechanism.",
     "ALWAYS CHECK BP at every visit — baseline, 2 weeks, 4 weeks, every dose change. Dose-dependent hypertension is the signature adverse effect. If BP rises >10 mmHg diastolic, reduce the dose or switch. Pre-existing hypertension must be controlled before initiation.",
     "Venlafaxine has the WORST discontinuation syndrome of any antidepressant — short parent half-life (~5 h) + dual-mechanism withdrawal. Missed doses can cause withdrawal within HOURS. Always taper over ≥4 weeks; bridge with fluoxetine (long half-life) for the last 2 weeks of taper.",
-    "When an SSRI has failed, venlafaxine's dual mechanism is a logical next step — particularly for anergic/lethargic depression where the noradrenergic component is desirable. The SMENCED algorithm and NICE CG91 both support SNRI switching after SSRI failure.",
+    "When an SSRI has failed, venlafaxine's dual mechanism is a logical next step — particularly for anergic/lethargic depression where the noradrenergic component is desirable. The SMENCED algorithm and NICE NG222 both support SNRI switching after SSRI failure.",
     "Venlafaxine is particularly useful when depression is COMORBID WITH PAIN — neuropathic pain, fibromyalgia, chronic musculoskeletal pain. The NET blockade enhances descending inhibitory pain pathways. Duloxetine is the FDA-approved SNRI for neuropathic pain; venlafaxine is a reasonable off-label alternative.",
     "Desvenlafaxine (Pristiq) is the isolated active metabolite O-desmethylvenlafaxine (ODV), marketed separately. Same pharmacology but cleaner PK (less CYP2D6 dependence, lower inter-patient variability). Patients stable on venlafaxine may be switched mg-for-mg (26 mg desvenlafaxine ≈ 75 mg venlafaxine).",
     "Venlafaxine is more activating than SSRIs (norepinephrine) — useful for atypical/lethargic depression where patients sleep too much and eat too much. Avoid in agitated/anxious depression unless combined with a sedating agent at night.",
@@ -861,7 +861,7 @@ export const venlafaxine: Drug = {
   references: {
     guidelines: [
       {
-        source: "NICE Clinical Guideline CG91 — Depression in adults: recognition and management",
+        source: "NICE Guideline NG222 — Depression in adults: treatment and management (2022)",
       },
       {
         source: "APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder, 3rd edition",
@@ -896,9 +896,9 @@ export const venlafaxine: Drug = {
     ],
     reviews: [
       {
-        source: "FDA Prescribing Information — EFFEXOR XR (venlafaxine hydrochloride)",
+        source: "FDA Prescribing Information — EFFEXOR XR (venlafaxine hydrochloride), revised 2023-08-15 (Viatris)",
         section: "Highlights of Prescribing Information (Boxed Warning, Hypertension, Discontinuation)",
-        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/020699s040lbl.pdf",
+        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c848a5d8-ba94-4c84-80e3-0bf35fb8e32e",
       },
       {
         source: "Sansone RA, Sansone LA. Venlafaxine-induced hypertension: a clinical review. Innov Clin Neurosci 2014;11(7-8):25-29.",
@@ -1172,7 +1172,7 @@ export const venlafaxine: Drug = {
   guidelineComparisons: [
     {
       topic: "Role of SNRIs in depression algorithm",
-      internationalSource: "NICE CG91 / APA Practice Guideline",
+      internationalSource: "NICE NG222 / APA Practice Guideline",
       internationalRecommendation: "SSRIs are first-line. SNRIs (venlafaxine, duloxetine) are second-line after SSRI failure or when comorbid pain/anergic features warrant a noradrenergic component. Venlafaxine is the most studied SNRI for TRD.",
       indianSource: "Indian Psychiatric Society (IPS)",
       indianRecommendation: "IPS guidelines also position SSRIs as first-line and SNRIs as second-line. Venlafaxine is the most commonly prescribed SNRI in Indian private practice, particularly for SSRI-nonresponsive depression and comorbid anxiety. In government settings, cost limits SNRI use.",
@@ -1282,7 +1282,7 @@ export const venlafaxine: Drug = {
   /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
   evidenceHierarchy: {
     international: [
-      { source: "NICE CG91", recommendation: "SSRIs first-line for moderate-severe depression. SNRIs (venlafaxine) are second-line after SSRI failure or when anergic features warrant noradrenergic action." },
+      { source: "NICE NG222", recommendation: "SSRIs first-line for moderate-severe depression. SNRIs (venlafaxine) are second-line after SSRI failure or when anergic features warrant noradrenergic action." },
       { source: "APA Practice Guideline", recommendation: "Venlafaxine is a rational switch option after 1–2 SSRI failures. Useful in treatment-resistant depression." },
       { source: "FDA", recommendation: "Approved for MDD, GAD, Social Anxiety, Panic Disorder. BP monitoring required above 150mg/day." },
       { source: "Maudsley Prescribing Guidelines", recommendation: "Venlafaxine has the worst discontinuation syndrome of any antidepressant. Taper slowly; consider fluoxetine bridging." },
@@ -1418,8 +1418,8 @@ export const venlafaxine: Drug = {
       { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
       { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants (SNRIs)" },
       { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression and discontinuation syndromes" },
-      { source: "FDA Prescribing Information — EFFEXOR XR (venlafaxine hydrochloride)", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/020699s080lbl.pdf" },
-      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Pharmacological treatment — treatment-resistant depression" },
+      { source: "FDA Prescribing Information — EFFEXOR XR (venlafaxine hydrochloride), revised 2023-08-15 (Viatris)", section: "Highlights of Prescribing Information", url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c848a5d8-ba94-4c84-80e3-0bf35fb8e32e" },
+      { source: "NICE Guideline NG222 — Depression in adults (2022)", section: "Pharmacological treatment — treatment-resistant depression" },
       { source: "APA Practice Guideline for MDD, 3rd edition" },
       { source: "Cipriani A et al. Lancet 2018 — Comparative efficacy of 21 antidepressants", section: "Network meta-analysis (venlafaxine among more effective agents)" },
     ],
@@ -1870,5 +1870,5 @@ export const venlafaxine: Drug = {
 
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
-  reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Effexor XR label, NICE CG91, APA Practice Guideline, KD Tripathi 8e, IPS Depression Guidelines, NMC CBME Curriculum"],
+  reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Effexor XR label, NICE NG222, APA Practice Guideline, KD Tripathi 8e, IPS Depression Guidelines, NMC CBME Curriculum"],
 };
