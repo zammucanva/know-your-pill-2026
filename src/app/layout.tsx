@@ -15,6 +15,11 @@ export const metadata: Metadata = {
   // truth in src/lib/kyp/site-url.ts — overridable per deployment via
   // NEXT_PUBLIC_SITE_URL; never localhost.
   metadataBase: new URL(getSiteUrl()),
+  // Self-referential canonical URL on every route (audit D5). The
+  // relative "./" resolves against each page's own URL — the export
+  // build's trailingSlash + metadataBase then normalise it to the
+  // canonical absolute form (verified per-route in out/ HTML).
+  alternates: { canonical: "./" },
   title: "Know Your Pill — Medication Education Made Visual",
   description:
     "Premium neuroscience-inspired psychiatric medication and substance education platform. Understand how your medicines work in the brain, what to expect, side effects, and how to stay safe.",
@@ -58,11 +63,25 @@ export const metadata: Metadata = {
       "Visual medicine guides with mechanism animations, timelines, side effect clarity, and safety direction.",
     siteName: "Know Your Pill",
     type: "website",
+    // Social preview image (audit D3): the brand mark — an existing
+    // asset, basePath-prefixed so metadataBase resolves it to the
+    // deployed origin. Applies as the default og:image for every route
+    // (pages may override with a page-specific image).
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo-navy-512.png`,
+        width: 512,
+        height: 512,
+        alt: "Know Your Pill — brand mark",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Know Your Pill",
     description: "Medication education made visual.",
+    // Twitter/X preview image (audit D3) — same asset as og:image.
+    images: [`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo-navy-512.png`],
   },
 };
 

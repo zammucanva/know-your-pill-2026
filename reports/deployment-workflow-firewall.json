@@ -1,0 +1,15 @@
+{
+ "generatedAt": "2026-10-01T17:53:59.270834+00:00",
+ "baseline": "2f8f727 (pre-Stahl production main)",
+ "deployYml": {
+  "presentInProd": true,
+  "presentInNotesRepo": false,
+  "identicalToPreStahlBaseline": true
+ },
+ "ciYml": {
+  "presentInProd": true,
+  "identicalToPreStahlBaseline": true
+ },
+ "note": "Notes repo intentionally excludes .github/workflows (PAT lacked workflow scope); preserved at docs/deploy-pages-workflow.yml.txt there as reference only.",
+ "PASS": true
+}

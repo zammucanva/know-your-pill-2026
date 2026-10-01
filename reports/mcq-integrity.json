@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-10-01T17:53:59.267791+00:00",
+ "canonicalBankFiles": [
+  "adjuncts-misc.ts",
+  "atypical-antipsychotics.ts",
+  "benzodiazepines.ts",
+  "mood-anticonvulsants.ts",
+  "sleep-anxiolytics.ts",
+  "ssri-snri.ts",
+  "stimulants-atypical.ts",
+  "sud-cognitive.ts",
+  "tca-maoi.ts",
+  "typical-antipsychotics.ts"
+ ],
+ "authoredCount": 180,
+ "declaredInMissionBrief": 178,
+ "actualCanonicalCount": 180,
+ "drugsReferencedByBank": 145,
+ "resolvedIdCheck": "deferred to repo test suite (tests/stahl-mcqs.test.ts) \u2014 ids are runtime-numbered by the DSL",
+ "documentationNote": "STAHL-NOTES-COMPANION.md says 178; canonical bank data says 180 (pemoline + tacrine additions included). Data wins.",
+ "PASS": true
+}

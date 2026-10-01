@@ -1,0 +1,1181 @@
+{
+ "generatedAt": "2026-10-01T17:53:59.247236+00:00",
+ "repo": "know-your-pill-2026@91ee7bd491d2f990eb329dc3ae5d9a97db4b39e6",
+ "counts": {
+  "monographFiles": 145,
+  "imports": 145,
+  "arrayRegistrations": 145,
+  "uniqueImportSlugs": 145,
+  "uniqueRegistrations": 145
+ },
+ "integrity": {
+  "duplicateImports": [],
+  "duplicateRegistrations": [],
+  "orphanMonographFiles": [],
+  "registryRefsWithoutFile": [],
+  "importVarMatchesFile": true
+ },
+ "drugs": [
+  {
+   "slug": "sertraline",
+   "genericName": "Sertraline",
+   "drugClassLabel": "SSRI",
+   "sourceFile": "src/lib/kyp/data/drugs/sertraline.ts",
+   "registryPosition": 1,
+   "sha256": "9187830761af2dfaf0bc0ac61d9205adc6f2f64b6e0f9f6a611c9f23aedef8c4"
+  },
+  {
+   "slug": "fluoxetine",
+   "genericName": "Fluoxetine",
+   "drugClassLabel": "SSRI",
+   "sourceFile": "src/lib/kyp/data/drugs/fluoxetine.ts",
+   "registryPosition": 2,
+   "sha256": "d2ef7ac610f116b14bb53b031e72f6371f35985193d4d21b3f6a10c828f28fd2"
+  },
+  {
+   "slug": "escitalopram",
+   "genericName": "Escitalopram",
+   "drugClassLabel": "SSRI",
+   "sourceFile": "src/lib/kyp/data/drugs/escitalopram.ts",
+   "registryPosition": 3,
+   "sha256": "d8fdfb3e2adcf89407f777e8683ebc33bcb7f6482acd3ec15b153dadd863164f"
+  },
+  {
+   "slug": "paroxetine",
+   "genericName": "Paroxetine",
+   "drugClassLabel": "SSRI",
+   "sourceFile": "src/lib/kyp/data/drugs/paroxetine.ts",
+   "registryPosition": 4,
+   "sha256": "9c83bfde940d8db70ed7a96a1a745ccd79feef2f4d48671551a281ce0c7d6527"
+  },
+  {
+   "slug": "citalopram",
+   "genericName": "Citalopram",
+   "drugClassLabel": "SSRI",
+   "sourceFile": "src/lib/kyp/data/drugs/citalopram.ts",
+   "registryPosition": 5,
+   "sha256": "98c6a6a2bfb909d15ada0201c1099b86f2ee70b4f07fd4a311e9494fad827dd5"
+  },
+  {
+   "slug": "fluvoxamine",
+   "genericName": "Fluvoxamine",
+   "drugClassLabel": "SSRI",
+   "sourceFile": "src/lib/kyp/data/drugs/fluvoxamine.ts",
+   "registryPosition": 6,
+   "sha256": "d55cb7b014b4376d0fb6dd85cfa48910369d3e2ef24e8386817eca0f3ce35fe6"
+  },
+  {
+   "slug": "venlafaxine",
+   "genericName": "Venlafaxine",
+   "drugClassLabel": "SNRI",
+   "sourceFile": "src/lib/kyp/data/drugs/venlafaxine.ts",
+   "registryPosition": 7,
+   "sha256": "7f3cd3931660d26a01d8b5debacd5b32d48eaa51f47b15fd07424656fe72b243"
+  },
+  {
+   "slug": "duloxetine",
+   "genericName": "Duloxetine",
+   "drugClassLabel": "SNRI",
+   "sourceFile": "src/lib/kyp/data/drugs/duloxetine.ts",
+   "registryPosition": 8,
+   "sha256": "23f3d4e6f802a09cd267889cdc55b330752af52d7a35a8ae11fc98e3f11b3bf9"
+  },
+  {
+   "slug": "bupropion",
+   "genericName": "Bupropion",
+   "drugClassLabel": "NDRI",
+   "sourceFile": "src/lib/kyp/data/drugs/bupropion.ts",
+   "registryPosition": 9,
+   "sha256": "e98f1c446b80f9ace6e9a367cc1cbe2126bc9c17f3fb72ad051af4de85c0d4d4"
+  },
+  {
+   "slug": "mirtazapine",
+   "genericName": "Mirtazapine",
+   "drugClassLabel": "NaSSA",
+   "sourceFile": "src/lib/kyp/data/drugs/mirtazapine.ts",
+   "registryPosition": 10,
+   "sha256": "7b02f739271870adf094797954c937f4b1df8b95cf1a4e204a6c7fe1e1893c9e"
+  },
+  {
+   "slug": "amitriptyline",
+   "genericName": "Amitriptyline",
+   "drugClassLabel": "TCA",
+   "sourceFile": "src/lib/kyp/data/drugs/amitriptyline.ts",
+   "registryPosition": 11,
+   "sha256": "0d497909dded422b13ebd6acc028ab43b513fa177da56c7e0ca0c14663c91776"
+  },
+  {
+   "slug": "clomipramine",
+   "genericName": "Clomipramine",
+   "drugClassLabel": "TCA",
+   "sourceFile": "src/lib/kyp/data/drugs/clomipramine.ts",
+   "registryPosition": 12,
+   "sha256": "2fc60d76229504a81c774b190b150e193052a1b1a95f7ae132ce2ef62022f6c6"
+  },
+  {
+   "slug": "tianeptine",
+   "genericName": "Tianeptine",
+   "drugClassLabel": "Atypical Antidepressant",
+   "sourceFile": "src/lib/kyp/data/drugs/tianeptine.ts",
+   "registryPosition": 13,
+   "sha256": "c0cc5e3af637dc7d71084f640dd69220c7f9d03c0376a9088f87e13c4950e5a2"
+  },
+  {
+   "slug": "isocarboxazid",
+   "genericName": "Isocarboxazid",
+   "drugClassLabel": "MAOI",
+   "sourceFile": "src/lib/kyp/data/drugs/isocarboxazid.ts",
+   "registryPosition": 14,
+   "sha256": "e8d8286e4ea533076d2f2192c94a6699937ca442c5162c14980cfb7648e439fd"
+  },
+  {
+   "slug": "moclobemide",
+   "genericName": "Moclobemide",
+   "drugClassLabel": "MAOI",
+   "sourceFile": "src/lib/kyp/data/drugs/moclobemide.ts",
+   "registryPosition": 15,
+   "sha256": "a1f737b3836b84fdd422c7bb75e9315252f227a8265dbe3b7b67231313c02b50"
+  },
+  {
+   "slug": "phenelzine",
+   "genericName": "Phenelzine",
+   "drugClassLabel": "MAOI",
+   "sourceFile": "src/lib/kyp/data/drugs/phenelzine.ts",
+   "registryPosition": 16,
+   "sha256": "9bf036923b6b2c92b02d47a40eb52c73274e56e4ef81c82e0d25b50b4ae31302"
+  },
+  {
+   "slug": "selegiline",
+   "genericName": "Selegiline",
+   "drugClassLabel": "MAOI",
+   "sourceFile": "src/lib/kyp/data/drugs/selegiline.ts",
+   "registryPosition": 17,
+   "sha256": "e43ae13a22bd6d8a6fa0d4782e87bb256d0a5025052a1e10b63c056d8f67834b"
+  },
+  {
+   "slug": "tranylcypromine",
+   "genericName": "Tranylcypromine",
+   "drugClassLabel": "MAOI",
+   "sourceFile": "src/lib/kyp/data/drugs/tranylcypromine.ts",
+   "registryPosition": 18,
+   "sha256": "14619170f0b77c11d34cdd4644f8260ee96b886c45a5abe82fa09c6f923a9bcc"
+  },
+  {
+   "slug": "l-methylfolate",
+   "genericName": "L-Methylfolate",
+   "drugClassLabel": "Medical Food",
+   "sourceFile": "src/lib/kyp/data/drugs/l-methylfolate.ts",
+   "registryPosition": 19,
+   "sha256": "47776e4042c40893e5f1047149f907a42c4d379a9dc8e123540578e2e99e38b7"
+  },
+  {
+   "slug": "agomelatine",
+   "genericName": "Agomelatine",
+   "drugClassLabel": "Melatonergic Antidepressant",
+   "sourceFile": "src/lib/kyp/data/drugs/agomelatine.ts",
+   "registryPosition": 20,
+   "sha256": "63d1ab68a7f06c2dbf0668b97858d0e89958b75319432902696fe6b8cf6162e3"
+  },
+  {
+   "slug": "vortioxetine",
+   "genericName": "Vortioxetine",
+   "drugClassLabel": "Multimodal Antidepressant",
+   "sourceFile": "src/lib/kyp/data/drugs/vortioxetine.ts",
+   "registryPosition": 21,
+   "sha256": "00f383675dba5d48563f14cea50ea2348d1bd9fe6682d5f6e14ad1e35bbc02c5"
+  },
+  {
+   "slug": "ketamine",
+   "genericName": "Ketamine",
+   "drugClassLabel": "NMDA Antidepressant",
+   "sourceFile": "src/lib/kyp/data/drugs/ketamine.ts",
+   "registryPosition": 22,
+   "sha256": "fd99227ebe29e36245587476731c06bbfca565f5bbb8d6164a2bf645670d53ec"
+  },
+  {
+   "slug": "reboxetine",
+   "genericName": "Reboxetine",
+   "drugClassLabel": "NRI",
+   "sourceFile": "src/lib/kyp/data/drugs/reboxetine.ts",
+   "registryPosition": 23,
+   "sha256": "57ebe795dfd5cbb68e1b260784bd01196ac6b9ed21eb9d13858dcd644cd41898"
+  },
+  {
+   "slug": "nefazodone",
+   "genericName": "Nefazodone",
+   "drugClassLabel": "SARI",
+   "sourceFile": "src/lib/kyp/data/drugs/nefazodone.ts",
+   "registryPosition": 24,
+   "sha256": "070c6a7a9522cff994471794d518133c50730a48055b064c3db72ee8f0f53bb3"
+  },
+  {
+   "slug": "trazodone",
+   "genericName": "Trazodone",
+   "drugClassLabel": "SARI",
+   "sourceFile": "src/lib/kyp/data/drugs/trazodone.ts",
+   "registryPosition": 25,
+   "sha256": "70a2aa47683e3cfa3b65fa83dd0093cd8a982a809ab264dac5b6dff2df007d09"
+  },
+  {
+   "slug": "desvenlafaxine",
+   "genericName": "Desvenlafaxine",
+   "drugClassLabel": "SNRI",
+   "sourceFile": "src/lib/kyp/data/drugs/desvenlafaxine.ts",
+   "registryPosition": 26,
+   "sha256": "c33b7f7fe72f67debbb64c02c79a4724795d71bf7b2f12e503241cbf6ac0bcdf"
+  },
+  {
+   "slug": "levomilnacipran",
+   "genericName": "Levomilnacipran",
+   "drugClassLabel": "SNRI",
+   "sourceFile": "src/lib/kyp/data/drugs/levomilnacipran.ts",
+   "registryPosition": 27,
+   "sha256": "324ceb85fca0144acd2e374b00f398c1976da956cc197f8b8b1d4e1a265381a4"
+  },
+  {
+   "slug": "milnacipran",
+   "genericName": "Milnacipran",
+   "drugClassLabel": "SNRI",
+   "sourceFile": "src/lib/kyp/data/drugs/milnacipran.ts",
+   "registryPosition": 28,
+   "sha256": "5d7aabed6cddbb6f10000d8ce836eccb81b40940835becf3d521788741e5b081"
+  },
+  {
+   "slug": "vilazodone",
+   "genericName": "Vilazodone",
+   "drugClassLabel": "SPARI",
+   "sourceFile": "src/lib/kyp/data/drugs/vilazodone.ts",
+   "registryPosition": 29,
+   "sha256": "ba81c0b93fc2138f37ae5aa60e36560c966bf46becf9cf09eeabd2c0ee521b6b"
+  },
+  {
+   "slug": "triiodothyronine",
+   "genericName": "Triiodothyronine (T3)",
+   "drugClassLabel": "T3 Augmentation",
+   "sourceFile": "src/lib/kyp/data/drugs/triiodothyronine.ts",
+   "registryPosition": 30,
+   "sha256": "9c7f2e144f0db6a4db2ebf8ef882a82d19dbd1647ee0654e5f5423e02efe26ab"
+  },
+  {
+   "slug": "amoxapine",
+   "genericName": "Amoxapine",
+   "drugClassLabel": "TCA",
+   "sourceFile": "src/lib/kyp/data/drugs/amoxapine.ts",
+   "registryPosition": 31,
+   "sha256": "3d18eab6f40320cfb57d505b445c2ed36ecfce337a41fcef481445dd45405171"
+  },
+  {
+   "slug": "desipramine",
+   "genericName": "Desipramine",
+   "drugClassLabel": "TCA",
+   "sourceFile": "src/lib/kyp/data/drugs/desipramine.ts",
+   "registryPosition": 32,
+   "sha256": "18926c428d7b8da641a5138aa1f823f7aeceab7666f39bb1abd1952db3941d7b"
+  },
+  {
+   "slug": "dothiepin",
+   "genericName": "Dothiepin",
+   "drugClassLabel": "TCA",
+   "sourceFile": "src/lib/kyp/data/drugs/dothiepin.ts",
+   "registryPosition": 33,
+   "sha256": "fedca8926b622b5f1d3f557d4d08e2627e707078a409e41adcc1aad6b682d8dc"
+  },
+  {
+   "slug": "doxepin",
+   "genericName": "Doxepin",
+   "drugClassLabel": "TCA",
+   "sourceFile": "src/lib/kyp/data/drugs/doxepin.ts",
+   "registryPosition": 34,
+   "sha256": "1e6ce75a38daf1d701305c7d58606cfca4ceb60da04144a0468d26e1be048324"
+  },
+  {
+   "slug": "imipramine",
+   "genericName": "Imipramine",
+   "drugClassLabel": "TCA",
+   "sourceFile": "src/lib/kyp/data/drugs/imipramine.ts",
+   "registryPosition": 35,
+   "sha256": "a7349c763df7c2cce8cd9ad35b33925e845d99245f472e2ae0e43256a940e203"
+  },
+  {
+   "slug": "lofepramine",
+   "genericName": "Lofepramine",
+   "drugClassLabel": "TCA",
+   "sourceFile": "src/lib/kyp/data/drugs/lofepramine.ts",
+   "registryPosition": 36,
+   "sha256": "0f7331d1ed0a514edcaaf4c4e3e6c8a15a6ac5afddd8a457c38d4314f9bdbd14"
+  },
+  {
+   "slug": "maprotiline",
+   "genericName": "Maprotiline",
+   "drugClassLabel": "TCA",
+   "sourceFile": "src/lib/kyp/data/drugs/maprotiline.ts",
+   "registryPosition": 37,
+   "sha256": "343508736f2879c32323966f96c7bf6c914dfe901717bcbdce5bb267248e87dd"
+  },
+  {
+   "slug": "mianserin",
+   "genericName": "Mianserin",
+   "drugClassLabel": "TCA",
+   "sourceFile": "src/lib/kyp/data/drugs/mianserin.ts",
+   "registryPosition": 38,
+   "sha256": "7994d2634c9da1cf55940296dafbef61f30f675e56affba95e2ac22d2ecdfa78"
+  },
+  {
+   "slug": "nortriptyline",
+   "genericName": "Nortriptyline",
+   "drugClassLabel": "TCA",
+   "sourceFile": "src/lib/kyp/data/drugs/nortriptyline.ts",
+   "registryPosition": 39,
+   "sha256": "f526aa0fcd0aebeea32e8a318669e9d15057c912529f5e788eb423b62bd6510b"
+  },
+  {
+   "slug": "protriptyline",
+   "genericName": "Protriptyline",
+   "drugClassLabel": "TCA",
+   "sourceFile": "src/lib/kyp/data/drugs/protriptyline.ts",
+   "registryPosition": 40,
+   "sha256": "c9bb71b038d756699192543f4cebf82877f27a34572f8bd78a09739393f30a9f"
+  },
+  {
+   "slug": "trimipramine",
+   "genericName": "Trimipramine",
+   "drugClassLabel": "TCA",
+   "sourceFile": "src/lib/kyp/data/drugs/trimipramine.ts",
+   "registryPosition": 41,
+   "sha256": "16cbb3706b7bcf1bd6a6c5a76bc620d6d009d4d660ddac02b1be06276d454736"
+  },
+  {
+   "slug": "amisulpride",
+   "genericName": "Amisulpride",
+   "drugClassLabel": "Atypical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/amisulpride.ts",
+   "registryPosition": 42,
+   "sha256": "0e6797d921e4817a5070e56b6f01990d9ea237152466ed9ccd4f32538deea73d"
+  },
+  {
+   "slug": "asenapine",
+   "genericName": "Asenapine",
+   "drugClassLabel": "Atypical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/asenapine.ts",
+   "registryPosition": 43,
+   "sha256": "a677c73b307eb0b118448216e5d908831672ae3c8c221c2729363bd5cc9700c9"
+  },
+  {
+   "slug": "blonanserin",
+   "genericName": "Blonanserin",
+   "drugClassLabel": "Atypical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/blonanserin.ts",
+   "registryPosition": 44,
+   "sha256": "b64692073cf53dae8024b6642a85b74d52f785745cd1fa6aceae185659798fc8"
+  },
+  {
+   "slug": "clozapine",
+   "genericName": "Clozapine",
+   "drugClassLabel": "Atypical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/clozapine.ts",
+   "registryPosition": 45,
+   "sha256": "af4f81052382d3c6ea656e1e6c6b7c713de6e4246870e4fd3f79c85c146063d0"
+  },
+  {
+   "slug": "iloperidone",
+   "genericName": "Iloperidone",
+   "drugClassLabel": "Atypical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/iloperidone.ts",
+   "registryPosition": 46,
+   "sha256": "8c8130b014a9d6328365daae2e9dc110618c0e5b27a4ee598cc9bb5f0e3ffd95"
+  },
+  {
+   "slug": "lurasidone",
+   "genericName": "Lurasidone",
+   "drugClassLabel": "Atypical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/lurasidone.ts",
+   "registryPosition": 47,
+   "sha256": "9dc2646b8290181e0b229be77ed53c6dfdd1fe3e6b821dca1ce66783bcd9b8ca"
+  },
+  {
+   "slug": "olanzapine",
+   "genericName": "Olanzapine",
+   "drugClassLabel": "Atypical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/olanzapine.ts",
+   "registryPosition": 48,
+   "sha256": "73741988bd7dcc9469e73d7edfe5d0edec1e26bfd7e1a586791a1364d0ba6064"
+  },
+  {
+   "slug": "paliperidone",
+   "genericName": "Paliperidone",
+   "drugClassLabel": "Atypical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/paliperidone.ts",
+   "registryPosition": 49,
+   "sha256": "32ebd07e46248b4e72f24c695e5ae9a00dba32ebff2539effcd0259a1e8a2967"
+  },
+  {
+   "slug": "perospirone",
+   "genericName": "Perospirone",
+   "drugClassLabel": "Atypical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/perospirone.ts",
+   "registryPosition": 50,
+   "sha256": "cb16204dee22f8f68a2088aff2cf3ec03f964c80696347ad4b44d6a9f856a077"
+  },
+  {
+   "slug": "pimavanserin",
+   "genericName": "Pimavanserin",
+   "drugClassLabel": "Atypical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/pimavanserin.ts",
+   "registryPosition": 51,
+   "sha256": "ba2bbb57dafc1dfc18e2f45131a1fef1751e21f0b8b387025ef1eb6a85ed6b86"
+  },
+  {
+   "slug": "quetiapine",
+   "genericName": "Quetiapine",
+   "drugClassLabel": "Atypical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/quetiapine.ts",
+   "registryPosition": 52,
+   "sha256": "a89a6294bd27ca9b28b528a1eddeca7916ddf121268e2dc124af4521d85e4498"
+  },
+  {
+   "slug": "risperidone",
+   "genericName": "Risperidone",
+   "drugClassLabel": "Atypical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/risperidone.ts",
+   "registryPosition": 53,
+   "sha256": "6a6dcda9319a037eccbce433ca25557b6ec44e74001da817bad1a8edef8e2efb"
+  },
+  {
+   "slug": "sertindole",
+   "genericName": "Sertindole",
+   "drugClassLabel": "Atypical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/sertindole.ts",
+   "registryPosition": 54,
+   "sha256": "7ecf2878f330adc32db9103d9064366aae7824ce793335b6763ade264f4a1fba"
+  },
+  {
+   "slug": "sulpiride",
+   "genericName": "Sulpiride",
+   "drugClassLabel": "Atypical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/sulpiride.ts",
+   "registryPosition": 55,
+   "sha256": "a202fb8842c02980c29a572053d4e4fad160049a884b52892d9d4d77662e10ff"
+  },
+  {
+   "slug": "ziprasidone",
+   "genericName": "Ziprasidone",
+   "drugClassLabel": "Atypical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/ziprasidone.ts",
+   "registryPosition": 56,
+   "sha256": "ad005c19627598291f15e912d592b46dd90c5dd92c75fd4b0c4e5430f2532572"
+  },
+  {
+   "slug": "zotepine",
+   "genericName": "Zotepine",
+   "drugClassLabel": "Atypical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/zotepine.ts",
+   "registryPosition": 57,
+   "sha256": "e68bea8503f52251cfceb27daffbfe33685cd40fe757167079764e761af7dc85"
+  },
+  {
+   "slug": "aripiprazole",
+   "genericName": "Aripiprazole",
+   "drugClassLabel": "Dopamine Stabiliser",
+   "sourceFile": "src/lib/kyp/data/drugs/aripiprazole.ts",
+   "registryPosition": 58,
+   "sha256": "b281e78c9b573411a641dc6e4557379105ba79822c35b948325ace559793cd3c"
+  },
+  {
+   "slug": "brexpiprazole",
+   "genericName": "Brexpiprazole",
+   "drugClassLabel": "Dopamine Stabiliser",
+   "sourceFile": "src/lib/kyp/data/drugs/brexpiprazole.ts",
+   "registryPosition": 59,
+   "sha256": "7ae02d47ec0f3b71883973fc476835455b73bcc5caf1ed6bce363b5d308a6b51"
+  },
+  {
+   "slug": "cariprazine",
+   "genericName": "Cariprazine",
+   "drugClassLabel": "Dopamine Stabiliser",
+   "sourceFile": "src/lib/kyp/data/drugs/cariprazine.ts",
+   "registryPosition": 60,
+   "sha256": "a3a9d6eaa5b9ac8523270c18b5201866d52f8c6fa9fde9c981fa210f72b07642"
+  },
+  {
+   "slug": "chlorpromazine",
+   "genericName": "Chlorpromazine",
+   "drugClassLabel": "Typical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/chlorpromazine.ts",
+   "registryPosition": 61,
+   "sha256": "7d12b0539fa6fd34659c01e5d887f85aaf665e2156e3d8287c8c8ee3e065f15d"
+  },
+  {
+   "slug": "cyamemazine",
+   "genericName": "Cyamemazine",
+   "drugClassLabel": "Typical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/cyamemazine.ts",
+   "registryPosition": 62,
+   "sha256": "56ece30e21d9dc6e181f7cb2428e4c6db29950e800d3790be662e44ac2157255"
+  },
+  {
+   "slug": "flupenthixol",
+   "genericName": "Flupenthixol",
+   "drugClassLabel": "Typical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/flupenthixol.ts",
+   "registryPosition": 63,
+   "sha256": "2e0d5b953f885a9f57298c9aa4411be7eb7894e9c54b238e4c5d82431c7bbd4b"
+  },
+  {
+   "slug": "fluphenazine",
+   "genericName": "Fluphenazine",
+   "drugClassLabel": "Typical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/fluphenazine.ts",
+   "registryPosition": 64,
+   "sha256": "11b873c2918a05b909184b834539243b8c7783a39f7eda0c58b5b33e4bca12b9"
+  },
+  {
+   "slug": "haloperidol",
+   "genericName": "Haloperidol",
+   "drugClassLabel": "Typical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/haloperidol.ts",
+   "registryPosition": 65,
+   "sha256": "d715ad08d07c360df19eb86840a6b76add994356d7768d7df9a9738804970ed4"
+  },
+  {
+   "slug": "loxapine",
+   "genericName": "Loxapine",
+   "drugClassLabel": "Typical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/loxapine.ts",
+   "registryPosition": 66,
+   "sha256": "ac22bfa47e42736be67c33ac5f2b4f7631906c23f7442cc37c2d6dd13eb02284"
+  },
+  {
+   "slug": "mesoridazine",
+   "genericName": "Mesoridazine",
+   "drugClassLabel": "Typical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/mesoridazine.ts",
+   "registryPosition": 67,
+   "sha256": "6596090137b24b55f5b4d675dbbeeb863a79189aa685a792bf0cffaeb86f8acb"
+  },
+  {
+   "slug": "molindone",
+   "genericName": "Molindone",
+   "drugClassLabel": "Typical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/molindone.ts",
+   "registryPosition": 68,
+   "sha256": "10e8528bf2126eae3ed11521937a9fa3707b1edf52e9c083f25959b585ad1121"
+  },
+  {
+   "slug": "perphenazine",
+   "genericName": "Perphenazine",
+   "drugClassLabel": "Typical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/perphenazine.ts",
+   "registryPosition": 69,
+   "sha256": "e086ae0d445899620a43004d659d1707b178ed14d2f112d6b80470e3d44269f9"
+  },
+  {
+   "slug": "pimozide",
+   "genericName": "Pimozide",
+   "drugClassLabel": "Typical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/pimozide.ts",
+   "registryPosition": 70,
+   "sha256": "8530f775f654b0bd198495b5cd3120e24170767ad82244fd3aa44fb2e3de022f"
+  },
+  {
+   "slug": "pipothiazine",
+   "genericName": "Pipothiazine",
+   "drugClassLabel": "Typical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/pipothiazine.ts",
+   "registryPosition": 71,
+   "sha256": "8ab83418109641f6d27cff0c7ed0d103e4bf18ee9e42eb06069af05a45212308"
+  },
+  {
+   "slug": "thioridazine",
+   "genericName": "Thioridazine",
+   "drugClassLabel": "Typical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/thioridazine.ts",
+   "registryPosition": 72,
+   "sha256": "869b5d86943ca57ae457b6c5b650a4e67f332767bf451463a3af7218f0009055"
+  },
+  {
+   "slug": "thiothixene",
+   "genericName": "Thiothixene",
+   "drugClassLabel": "Typical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/thiothixene.ts",
+   "registryPosition": 73,
+   "sha256": "271d2fb1a7f8eab322a88c74f8341917b598827e8b14833eef9a50e23c4e2cf7"
+  },
+  {
+   "slug": "trifluoperazine",
+   "genericName": "Trifluoperazine",
+   "drugClassLabel": "Typical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/trifluoperazine.ts",
+   "registryPosition": 74,
+   "sha256": "9db834a7853b4e6fad1873a8e9d17e988ccaa7bf1393fda84b0a8b19ad7322ed"
+  },
+  {
+   "slug": "zuclopenthixol",
+   "genericName": "Zuclopenthixol",
+   "drugClassLabel": "Typical Antipsychotic",
+   "sourceFile": "src/lib/kyp/data/drugs/zuclopenthixol.ts",
+   "registryPosition": 75,
+   "sha256": "ce2c43e725b5a041767569c1411a46c3d584a64d84e71e6b23169b075bb4a98d"
+  },
+  {
+   "slug": "gabapentin",
+   "genericName": "Gabapentin",
+   "drugClassLabel": "Anticonvulsant",
+   "sourceFile": "src/lib/kyp/data/drugs/gabapentin.ts",
+   "registryPosition": 76,
+   "sha256": "96f27378046eff919dbbb9ce48feb0ce57265ed549f1dc81fb637e6b2afea66e"
+  },
+  {
+   "slug": "levetiracetam",
+   "genericName": "Levetiracetam",
+   "drugClassLabel": "Anticonvulsant",
+   "sourceFile": "src/lib/kyp/data/drugs/levetiracetam.ts",
+   "registryPosition": 77,
+   "sha256": "65e193855f0a6d08192e3a5fecfe45a0647a3b850cdc734df23943bff7c3777c"
+  },
+  {
+   "slug": "pregabalin",
+   "genericName": "Pregabalin",
+   "drugClassLabel": "Anticonvulsant",
+   "sourceFile": "src/lib/kyp/data/drugs/pregabalin.ts",
+   "registryPosition": 78,
+   "sha256": "6bb2fe49e57f014b30492620d72b8165210e9b1aec611121c9c4a2dd521e4ad4"
+  },
+  {
+   "slug": "tiagabine",
+   "genericName": "Tiagabine",
+   "drugClassLabel": "Anticonvulsant",
+   "sourceFile": "src/lib/kyp/data/drugs/tiagabine.ts",
+   "registryPosition": 79,
+   "sha256": "b87b2a52f8e177f02432184ef616c09761243b679a66200dc12e46f8df7de04a"
+  },
+  {
+   "slug": "topiramate",
+   "genericName": "Topiramate",
+   "drugClassLabel": "Anticonvulsant",
+   "sourceFile": "src/lib/kyp/data/drugs/topiramate.ts",
+   "registryPosition": 80,
+   "sha256": "4132b82f4752353ed2664a2643a26e85cfb3e578b69a8143cce34ee4e05b1001"
+  },
+  {
+   "slug": "zonisamide",
+   "genericName": "Zonisamide",
+   "drugClassLabel": "Anticonvulsant",
+   "sourceFile": "src/lib/kyp/data/drugs/zonisamide.ts",
+   "registryPosition": 81,
+   "sha256": "1654826cdfcf158e8846ecf93caeddb050604b04fe1b0c27ddec1bb868649281"
+  },
+  {
+   "slug": "carbamazepine",
+   "genericName": "Carbamazepine",
+   "drugClassLabel": "Mood Stabiliser",
+   "sourceFile": "src/lib/kyp/data/drugs/carbamazepine.ts",
+   "registryPosition": 82,
+   "sha256": "70aaf64d49ca32be8b9ce194e537ea488695a0d0a8274047519eaa032f90c64c"
+  },
+  {
+   "slug": "lamotrigine",
+   "genericName": "Lamotrigine",
+   "drugClassLabel": "Mood Stabiliser",
+   "sourceFile": "src/lib/kyp/data/drugs/lamotrigine.ts",
+   "registryPosition": 83,
+   "sha256": "5e5a4a6e4527bacc652befd39d31df9b9369f8881b2b49de0b418ae87ca592af"
+  },
+  {
+   "slug": "lithium",
+   "genericName": "Lithium",
+   "drugClassLabel": "Mood Stabiliser",
+   "sourceFile": "src/lib/kyp/data/drugs/lithium.ts",
+   "registryPosition": 84,
+   "sha256": "431a6b40bd4c0b60271965c4a8826a31e78c9e3c4a5001bbd5074b8305f71601"
+  },
+  {
+   "slug": "oxcarbazepine",
+   "genericName": "Oxcarbazepine",
+   "drugClassLabel": "Mood Stabiliser",
+   "sourceFile": "src/lib/kyp/data/drugs/oxcarbazepine.ts",
+   "registryPosition": 85,
+   "sha256": "2f855c8b7d4a3c28a3e9d049783bb3eed8a37ca34f679f8ea7f056a2316d0099"
+  },
+  {
+   "slug": "valproate",
+   "genericName": "Valproate",
+   "drugClassLabel": "Mood Stabiliser",
+   "sourceFile": "src/lib/kyp/data/drugs/valproate.ts",
+   "registryPosition": 86,
+   "sha256": "d15c0933f00df0cb36651d40a3c5ddede35f67fd9d9acfcc038671e2ccc84f51"
+  },
+  {
+   "slug": "prazosin",
+   "genericName": "Prazosin",
+   "drugClassLabel": "Alpha-1 Blocker",
+   "sourceFile": "src/lib/kyp/data/drugs/prazosin.ts",
+   "registryPosition": 87,
+   "sha256": "b82ea5558aa16e70a0312f8806ee2065e3c5c65410b592a76582770a72eeaffe"
+  },
+  {
+   "slug": "diphenhydramine",
+   "genericName": "Diphenhydramine",
+   "drugClassLabel": "Antihistamine",
+   "sourceFile": "src/lib/kyp/data/drugs/diphenhydramine.ts",
+   "registryPosition": 88,
+   "sha256": "be0dccc786ec94304eb606e7c78d8156d2684611be9b99658b7290c84b04fa8f"
+  },
+  {
+   "slug": "hydroxyzine",
+   "genericName": "Hydroxyzine",
+   "drugClassLabel": "Antihistamine",
+   "sourceFile": "src/lib/kyp/data/drugs/hydroxyzine.ts",
+   "registryPosition": 89,
+   "sha256": "6cd1bd2b7b1b0712ecda703661948d19bf11b79155914be7c0b6df7a918fcbf0"
+  },
+  {
+   "slug": "buspirone",
+   "genericName": "Buspirone",
+   "drugClassLabel": "Azapirone",
+   "sourceFile": "src/lib/kyp/data/drugs/buspirone.ts",
+   "registryPosition": 90,
+   "sha256": "00361dfa4f64776b930775235ea4906d53ef8164dc05066535fc16f3e7842fa3"
+  },
+  {
+   "slug": "alprazolam",
+   "genericName": "Alprazolam",
+   "drugClassLabel": "Benzodiazepine",
+   "sourceFile": "src/lib/kyp/data/drugs/alprazolam.ts",
+   "registryPosition": 91,
+   "sha256": "cfb9feaba0fbac0b16c427975c47ac911bdddb6fe6b81e9a348aa1f90296fe67"
+  },
+  {
+   "slug": "chlordiazepoxide",
+   "genericName": "Chlordiazepoxide",
+   "drugClassLabel": "Benzodiazepine",
+   "sourceFile": "src/lib/kyp/data/drugs/chlordiazepoxide.ts",
+   "registryPosition": 92,
+   "sha256": "53dbaa282fd9f69c674c2615bfd3a5a881cf32c36c691c65f167ef248bf3c025"
+  },
+  {
+   "slug": "clonazepam",
+   "genericName": "Clonazepam",
+   "drugClassLabel": "Benzodiazepine",
+   "sourceFile": "src/lib/kyp/data/drugs/clonazepam.ts",
+   "registryPosition": 93,
+   "sha256": "e4b6c21dae4e87e3a67741e5ed37f92609c88708f861b328b494cf3eb478c25d"
+  },
+  {
+   "slug": "clorazepate",
+   "genericName": "Clorazepate",
+   "drugClassLabel": "Benzodiazepine",
+   "sourceFile": "src/lib/kyp/data/drugs/clorazepate.ts",
+   "registryPosition": 94,
+   "sha256": "87e2086e37d32e6f3f67b5a387a868684bad89b1a0a09a00cb8c3f459aa6f346"
+  },
+  {
+   "slug": "diazepam",
+   "genericName": "Diazepam",
+   "drugClassLabel": "Benzodiazepine",
+   "sourceFile": "src/lib/kyp/data/drugs/diazepam.ts",
+   "registryPosition": 95,
+   "sha256": "298e7ea15c007ddf1c412094102fda11ba813e663a2047aa0a27fa7943988997"
+  },
+  {
+   "slug": "loflazepate",
+   "genericName": "Loflazepate",
+   "drugClassLabel": "Benzodiazepine",
+   "sourceFile": "src/lib/kyp/data/drugs/loflazepate.ts",
+   "registryPosition": 96,
+   "sha256": "ab582396c767ee3683580c18c14296b6c13a3ac6587b165d3530bc2b305d50bd"
+  },
+  {
+   "slug": "lorazepam",
+   "genericName": "Lorazepam",
+   "drugClassLabel": "Benzodiazepine",
+   "sourceFile": "src/lib/kyp/data/drugs/lorazepam.ts",
+   "registryPosition": 97,
+   "sha256": "5459a417b830418ed124872d7186a00dd9eeac61525106f992e89a361d1e4142"
+  },
+  {
+   "slug": "midazolam",
+   "genericName": "Midazolam",
+   "drugClassLabel": "Benzodiazepine",
+   "sourceFile": "src/lib/kyp/data/drugs/midazolam.ts",
+   "registryPosition": 98,
+   "sha256": "5d237444984b5ae4ebce4378c3856406e18605a00fd1230261868de873b45b15"
+  },
+  {
+   "slug": "oxazepam",
+   "genericName": "Oxazepam",
+   "drugClassLabel": "Benzodiazepine",
+   "sourceFile": "src/lib/kyp/data/drugs/oxazepam.ts",
+   "registryPosition": 99,
+   "sha256": "7aaa3c30e19dff0a14e45396400b804e2d0f6f0a69982197dcab25062b5dae82"
+  },
+  {
+   "slug": "flumazenil",
+   "genericName": "Flumazenil",
+   "drugClassLabel": "Benzodiazepine Antidote",
+   "sourceFile": "src/lib/kyp/data/drugs/flumazenil.ts",
+   "registryPosition": 100,
+   "sha256": "62d5c020ecd01ba13e747749eb95ef55c06d64c4ca2426f88549244739a3d627"
+  },
+  {
+   "slug": "propranolol",
+   "genericName": "Propranolol",
+   "drugClassLabel": "Beta-Blocker",
+   "sourceFile": "src/lib/kyp/data/drugs/propranolol.ts",
+   "registryPosition": 101,
+   "sha256": "8843ed31037cc7ad97f5a8700f3f85e734f6faf5d6a34c04ef15eb1d6df02978"
+  },
+  {
+   "slug": "estazolam",
+   "genericName": "Estazolam",
+   "drugClassLabel": "Benzodiazepine Hypnotic",
+   "sourceFile": "src/lib/kyp/data/drugs/estazolam.ts",
+   "registryPosition": 102,
+   "sha256": "ad47ca3e7f19023723a73b8ee0cfeb41eb006014e32c2128aaf8f812410c4f69"
+  },
+  {
+   "slug": "flunitrazepam",
+   "genericName": "Flunitrazepam",
+   "drugClassLabel": "Benzodiazepine Hypnotic",
+   "sourceFile": "src/lib/kyp/data/drugs/flunitrazepam.ts",
+   "registryPosition": 103,
+   "sha256": "274a5e6db6c61c182cb17dcffca4cea79895035256e051404dec0a841a099a0c"
+  },
+  {
+   "slug": "flurazepam",
+   "genericName": "Flurazepam",
+   "drugClassLabel": "Benzodiazepine Hypnotic",
+   "sourceFile": "src/lib/kyp/data/drugs/flurazepam.ts",
+   "registryPosition": 104,
+   "sha256": "c3398172c01dbeae6e5ddc92de76782842c4246c2490d272aa17dae4db30ec83"
+  },
+  {
+   "slug": "quazepam",
+   "genericName": "Quazepam",
+   "drugClassLabel": "Benzodiazepine Hypnotic",
+   "sourceFile": "src/lib/kyp/data/drugs/quazepam.ts",
+   "registryPosition": 105,
+   "sha256": "de54ccb7db0fa7db86ae49dbff532aa0446578f1b0846d1a8247d51f29a430fc"
+  },
+  {
+   "slug": "temazepam",
+   "genericName": "Temazepam",
+   "drugClassLabel": "Benzodiazepine Hypnotic",
+   "sourceFile": "src/lib/kyp/data/drugs/temazepam.ts",
+   "registryPosition": 106,
+   "sha256": "cf7200fe527c91096813bd9efc100d96d09d59695d68d4adb631b4e64ece5afc"
+  },
+  {
+   "slug": "triazolam",
+   "genericName": "Triazolam",
+   "drugClassLabel": "Benzodiazepine Hypnotic",
+   "sourceFile": "src/lib/kyp/data/drugs/triazolam.ts",
+   "registryPosition": 107,
+   "sha256": "423114c9e485aab881899b3ddaf0a15fd5e4e0e2c1ab4280ae7c67fec5a466e7"
+  },
+  {
+   "slug": "suvorexant",
+   "genericName": "Suvorexant",
+   "drugClassLabel": "DORA",
+   "sourceFile": "src/lib/kyp/data/drugs/suvorexant.ts",
+   "registryPosition": 108,
+   "sha256": "57adec8669a9ffc114a4192b3228fa1369caf03d08874bc53b35fbedf9f69aea"
+  },
+  {
+   "slug": "ramelteon",
+   "genericName": "Ramelteon",
+   "drugClassLabel": "Melatonin Agonist",
+   "sourceFile": "src/lib/kyp/data/drugs/ramelteon.ts",
+   "registryPosition": 109,
+   "sha256": "4293789b259bb780f42dc4e5f87e3c6be6ae4f062df66350cc4d7cac9cac84fb"
+  },
+  {
+   "slug": "tasimelteon",
+   "genericName": "Tasimelteon",
+   "drugClassLabel": "Melatonin Agonist",
+   "sourceFile": "src/lib/kyp/data/drugs/tasimelteon.ts",
+   "registryPosition": 110,
+   "sha256": "31182743acc20d8f189c07fec96977c446a420ecd97b9fd4f4eda314d535558c"
+  },
+  {
+   "slug": "eszopiclone",
+   "genericName": "Eszopiclone",
+   "drugClassLabel": "Z-Drug",
+   "sourceFile": "src/lib/kyp/data/drugs/eszopiclone.ts",
+   "registryPosition": 111,
+   "sha256": "1ad28eec4fd21f183e7de2fc4a4125aeae5607461b5d34a7c9f35125b8b98915"
+  },
+  {
+   "slug": "zaleplon",
+   "genericName": "Zaleplon",
+   "drugClassLabel": "Z-Drug",
+   "sourceFile": "src/lib/kyp/data/drugs/zaleplon.ts",
+   "registryPosition": 112,
+   "sha256": "99034ee861eebb7369dc873b7d365cd67d2a8b4e69a5751af9c650aa434845ac"
+  },
+  {
+   "slug": "zolpidem",
+   "genericName": "Zolpidem",
+   "drugClassLabel": "Z-Drug",
+   "sourceFile": "src/lib/kyp/data/drugs/zolpidem.ts",
+   "registryPosition": 113,
+   "sha256": "423719abb1c44aae287d37c6b946d7b02d911e71d5f6280a09ad9a50d2f9948d"
+  },
+  {
+   "slug": "zopiclone",
+   "genericName": "Zopiclone",
+   "drugClassLabel": "Z-Drug",
+   "sourceFile": "src/lib/kyp/data/drugs/zopiclone.ts",
+   "registryPosition": 114,
+   "sha256": "21e0c953f1f19830d97afe1734596e12fc6b21a131b4a6c5560e56113fc510ab"
+  },
+  {
+   "slug": "clonidine",
+   "genericName": "Clonidine",
+   "drugClassLabel": "Alpha-2 Agonist",
+   "sourceFile": "src/lib/kyp/data/drugs/clonidine.ts",
+   "registryPosition": 115,
+   "sha256": "3e908382827d068bc3c41583a64bf7d3719f7c16525013054dc7f20a5a296106"
+  },
+  {
+   "slug": "guanfacine",
+   "genericName": "Guanfacine",
+   "drugClassLabel": "Alpha-2 Agonist",
+   "sourceFile": "src/lib/kyp/data/drugs/guanfacine.ts",
+   "registryPosition": 116,
+   "sha256": "ee429fab8d4156fa2c6b8762c22c012a01ba59fd27b22e72d2f3bebaa109d347"
+  },
+  {
+   "slug": "atomoxetine",
+   "genericName": "Atomoxetine",
+   "drugClassLabel": "NRI",
+   "sourceFile": "src/lib/kyp/data/drugs/atomoxetine.ts",
+   "registryPosition": 117,
+   "sha256": "89daae1a57fcc14dcd2b8e78e48d298d758f33a1ba8615fe7098ca8b9a9bc6b6"
+  },
+  {
+   "slug": "dexamphetamine",
+   "genericName": "Dextroamphetamine (d-Amphetamine)",
+   "drugClassLabel": "Stimulant",
+   "sourceFile": "src/lib/kyp/data/drugs/dexamphetamine.ts",
+   "registryPosition": 118,
+   "sha256": "127327601528288912b773f205f3efde28a449392c9a909accd913b96382a00f"
+  },
+  {
+   "slug": "amphetamine",
+   "genericName": "Amphetamine (d,l)",
+   "drugClassLabel": "Stimulant",
+   "sourceFile": "src/lib/kyp/data/drugs/amphetamine.ts",
+   "registryPosition": 119,
+   "sha256": "36c107b31e066858cb2422384168a058ffa9a91ae0587d540b6edb7f3761b2ad"
+  },
+  {
+   "slug": "lisdexamfetamine",
+   "genericName": "Lisdexamfetamine",
+   "drugClassLabel": "Stimulant",
+   "sourceFile": "src/lib/kyp/data/drugs/lisdexamfetamine.ts",
+   "registryPosition": 120,
+   "sha256": "3b236a81d4158d604113bdf3d5bda41367e902aa08e635008632c89372d1267d"
+  },
+  {
+   "slug": "dexmethylphenidate",
+   "genericName": "Dexmethylphenidate",
+   "drugClassLabel": "Stimulant",
+   "sourceFile": "src/lib/kyp/data/drugs/dexmethylphenidate.ts",
+   "registryPosition": 121,
+   "sha256": "3651ddcbed3d4353d5f4b9cdef06b31bf418fbe6adf453bb82fdbb0e41db6fb0"
+  },
+  {
+   "slug": "methylphenidate",
+   "genericName": "Methylphenidate (d,l)",
+   "drugClassLabel": "Stimulant",
+   "sourceFile": "src/lib/kyp/data/drugs/methylphenidate.ts",
+   "registryPosition": 122,
+   "sha256": "f2b9c010931d27b4df25d981474ea4f163981be3a8a5eff67c4f9802a8a86972"
+  },
+  {
+   "slug": "pemoline",
+   "genericName": "Pemoline",
+   "drugClassLabel": "Stimulant",
+   "sourceFile": "src/lib/kyp/data/drugs/pemoline.ts",
+   "registryPosition": 123,
+   "sha256": "00ea26ec7288cf851d091d9d8593a3b936f4d9c35e73102c0351071d70e6c4b4"
+  },
+  {
+   "slug": "armodafinil",
+   "genericName": "Armodafinil",
+   "drugClassLabel": "Wake-Promoting Agent",
+   "sourceFile": "src/lib/kyp/data/drugs/armodafinil.ts",
+   "registryPosition": 124,
+   "sha256": "08d2fb508478f40b392c461fd7614f6a3806d9e6e75535653229398903498c8f"
+  },
+  {
+   "slug": "modafinil",
+   "genericName": "Modafinil",
+   "drugClassLabel": "Wake-Promoting Agent",
+   "sourceFile": "src/lib/kyp/data/drugs/modafinil.ts",
+   "registryPosition": 125,
+   "sha256": "2714ce24ffd0e847619c2cd33c6ea952bd816d112fb667dd95780b661de59536"
+  },
+  {
+   "slug": "donepezil",
+   "genericName": "Donepezil",
+   "drugClassLabel": "AChE Inhibitor",
+   "sourceFile": "src/lib/kyp/data/drugs/donepezil.ts",
+   "registryPosition": 126,
+   "sha256": "181657495ace48ef87da979ea18be5c92a4d5b2390e8159e5ac2eb7248f87315"
+  },
+  {
+   "slug": "galantamine",
+   "genericName": "Galantamine",
+   "drugClassLabel": "AChE Inhibitor",
+   "sourceFile": "src/lib/kyp/data/drugs/galantamine.ts",
+   "registryPosition": 127,
+   "sha256": "dc31eb8a89fd57ed95eefd7e307f5b3eaac35c4517f743f72713dcc0221a0749"
+  },
+  {
+   "slug": "rivastigmine",
+   "genericName": "Rivastigmine",
+   "drugClassLabel": "AChE Inhibitor",
+   "sourceFile": "src/lib/kyp/data/drugs/rivastigmine.ts",
+   "registryPosition": 128,
+   "sha256": "395c4c9167e6b682dd7069b3fda2ed1d609c3d7bbfe6d8cfb373ced52bd40e12"
+  },
+  {
+   "slug": "tacrine",
+   "genericName": "Tacrine",
+   "drugClassLabel": "AChE Inhibitor",
+   "sourceFile": "src/lib/kyp/data/drugs/tacrine.ts",
+   "registryPosition": 129,
+   "sha256": "1b77c043d931061d90e2c464dac6c4fffa87cb5b3619b19f225be3926a8d7765"
+  },
+  {
+   "slug": "caprylidene",
+   "genericName": "Caprylidene",
+   "drugClassLabel": "Medical Food",
+   "sourceFile": "src/lib/kyp/data/drugs/caprylidene.ts",
+   "registryPosition": 130,
+   "sha256": "d458f64c7e7b4fd67c8983c664f75ff799b4ccd7fc1a673cfd7ee4a33c4ae7a4"
+  },
+  {
+   "slug": "memantine",
+   "genericName": "Memantine",
+   "drugClassLabel": "NMDA Antagonist",
+   "sourceFile": "src/lib/kyp/data/drugs/memantine.ts",
+   "registryPosition": 131,
+   "sha256": "f533cc30261ab77cf4274b0f0e05666a83f31cb91db5303c65aabcb6d9f92a9c"
+  },
+  {
+   "slug": "acamprosate",
+   "genericName": "Acamprosate",
+   "drugClassLabel": "SUD Treatment",
+   "sourceFile": "src/lib/kyp/data/drugs/acamprosate.ts",
+   "registryPosition": 132,
+   "sha256": "a45685fdd768ca0f7529b521851afda0906a2a8d874fd6ed84baa6e23a93eb34"
+  },
+  {
+   "slug": "buprenorphine",
+   "genericName": "Buprenorphine",
+   "drugClassLabel": "SUD Treatment",
+   "sourceFile": "src/lib/kyp/data/drugs/buprenorphine.ts",
+   "registryPosition": 133,
+   "sha256": "2262d6b33f67983574bfd9dd76546be2a074ecfa999a3f9a2e047085931f483a"
+  },
+  {
+   "slug": "disulfiram",
+   "genericName": "Disulfiram",
+   "drugClassLabel": "SUD Treatment",
+   "sourceFile": "src/lib/kyp/data/drugs/disulfiram.ts",
+   "registryPosition": 134,
+   "sha256": "b46f8016254c4109d5ffc3313c2beb2446c2dd29ccaf60865241bf739c6321e3"
+  },
+  {
+   "slug": "nalmefene",
+   "genericName": "Nalmefene",
+   "drugClassLabel": "SUD Treatment",
+   "sourceFile": "src/lib/kyp/data/drugs/nalmefene.ts",
+   "registryPosition": 135,
+   "sha256": "ce136ff6859d2ca9fb334f2bbf6497abee315dfe2a72b6752ce90c172de3747f"
+  },
+  {
+   "slug": "naltrexone",
+   "genericName": "Naltrexone",
+   "drugClassLabel": "SUD Treatment",
+   "sourceFile": "src/lib/kyp/data/drugs/naltrexone.ts",
+   "registryPosition": 136,
+   "sha256": "b5ec4dd76ae985af58e6a97ac7c056cb704cbdc0eb8f5477d5b0c403694cc9b1"
+  },
+  {
+   "slug": "naltrexone-bupropion",
+   "genericName": "Naltrexone-Bupropion",
+   "drugClassLabel": "SUD Treatment",
+   "sourceFile": "src/lib/kyp/data/drugs/naltrexone-bupropion.ts",
+   "registryPosition": 137,
+   "sha256": "05085bd9487674382a4a4043ca8b925f8afbf4ec9b75419d41b4dc960ca322ca"
+  },
+  {
+   "slug": "varenicline",
+   "genericName": "Varenicline",
+   "drugClassLabel": "SUD Treatment",
+   "sourceFile": "src/lib/kyp/data/drugs/varenicline.ts",
+   "registryPosition": 138,
+   "sha256": "55de32393356a2cd2ea720c8429c102054ebc41969194f7e6939a279e7879de2"
+  },
+  {
+   "slug": "benztropine",
+   "genericName": "Benztropine",
+   "drugClassLabel": "Anticholinergic",
+   "sourceFile": "src/lib/kyp/data/drugs/benztropine.ts",
+   "registryPosition": 139,
+   "sha256": "398497866a82b12c3cbdc3575a9b8e1edf05889e7b7dad2d86b7f487cc0eec80"
+  },
+  {
+   "slug": "trihexyphenidyl",
+   "genericName": "Trihexyphenidyl",
+   "drugClassLabel": "Anticholinergic",
+   "sourceFile": "src/lib/kyp/data/drugs/trihexyphenidyl.ts",
+   "registryPosition": 140,
+   "sha256": "f3590adc765a732eb514c836b8dc62311ec4b7739172ae260b182142a6d7e014"
+  },
+  {
+   "slug": "flibanserin",
+   "genericName": "Flibanserin",
+   "drugClassLabel": "Libido Enhancer",
+   "sourceFile": "src/lib/kyp/data/drugs/flibanserin.ts",
+   "registryPosition": 141,
+   "sha256": "4227ac22b50ac52d8b7b7f856390a145f1d1760b53f838dafb734b8c7ca17d96"
+  },
+  {
+   "slug": "dextromethorphan",
+   "genericName": "Dextromethorphan",
+   "drugClassLabel": "NMDA Antagonist",
+   "sourceFile": "src/lib/kyp/data/drugs/dextromethorphan.ts",
+   "registryPosition": 142,
+   "sha256": "97272c851fbdea92f49ad0ad7e63df63a55f6cba1eea750bca138ff71a0e2974"
+  },
+  {
+   "slug": "sodium-oxybate",
+   "genericName": "Sodium Oxybate",
+   "drugClassLabel": "Sodium Oxybate",
+   "sourceFile": "src/lib/kyp/data/drugs/sodium-oxybate.ts",
+   "registryPosition": 143,
+   "sha256": "aede9eb4f29bee23ad32666c4fa7f02df0cc749ce1aeefb5dc9f18836a52182d"
+  },
+  {
+   "slug": "lorcaserin",
+   "genericName": "Lorcaserin",
+   "drugClassLabel": "Weight Management",
+   "sourceFile": "src/lib/kyp/data/drugs/lorcaserin.ts",
+   "registryPosition": 144,
+   "sha256": "9072d808f3608141fea667e912eeb7b0861aadd31684d66fbf74c13d37645e5f"
+  },
+  {
+   "slug": "phentermine-topiramate",
+   "genericName": "Phentermine-Topiramate",
+   "drugClassLabel": "Weight Management",
+   "sourceFile": "src/lib/kyp/data/drugs/phentermine-topiramate.ts",
+   "registryPosition": 145,
+   "sha256": "e53a90d997b2b7fef4f9b3827ac6968b524c17b46098f969f9f7d7425c5600b5"
+  }
+ ],
+ "PASS": true
+}
