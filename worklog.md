@@ -821,3 +821,40 @@ Work Log:
 
 Stage Summary:
 - Repository fully committed and clean on local main; origin/main untouched. This entry is part of the commit it documents (hash recorded in the workspace-level worklog at /home/z/my-project/worklog.md).
+
+---
+Task ID: stahl-1st-ed-completion-2026-10-01
+Agent: Super Z (main agent)
+Task: Add the two remaining 1st-edition-only monographs (pemoline, tacrine) so the registry covers BOTH Stahl editions in full; update every derived artifact, count pin, and lock; commit locally and package for download.
+
+Work Log:
+- Extracted both monographs from the 1st-ed PDF (book pp. 357-360, 439-442; PDF offset +17) and authored pemoline.ts (1,141 lines) and tacrine.ts (1,154 lines) in the exact Phase 3 canonical template, prescriberGuide.sourceEdition = 1st ed. (2005), exactly 3 microQuizzes each, empty blackBoxWarnings (no boxed warning on either historical label).
+- Registered both in drugs/index.ts (pemoline after methylphenidate, tacrine after rivastigmine); docblock 145 guides.
+- Cross-linked: pemoline into drugFamilyNav + relatedDrugs of the 5 stimulant files; tacrine into the 3 ChEI files (donepezil, galantamine, rivastigmine). One transient double-comma bug from the insertion script was caught and fixed; syntax re-verified clean across all touched files.
+- Authored 2 Stahl MCQs (stimulants-atypical.ts: pemoline monitoring-ritual question, correct = f("pemoline","pearls",1), distractors ground in clozapine[1]/donepezil[4]; sud-cognitive.ts: tacrine second-line question, correct = f("tacrine","pearls",0), distractors ground in galantamine[3]/rivastigmine[3]); bank 178 -> 180, ids stahl-pemoline-01 / stahl-tacrine-01.
+- Regenerated artifacts (bun scripts/gen-client-data.ts): search-index-generated.ts 229 entries; course-stats-generated.ts 145 courses.
+- Updated every count pin: content-lock.ts EXPECTED_COUNTS 145/1/3/477/229 + --init (165 files); medical-data-baseline.json re-saved; tests content-lock (165 files), custom-test (authored 471), medical-knowledge-chain (145), platform-hardening (145/229/145), stahl-mcqs (145/180), structured-data (145 x7, 180, sitemap date set <= 3), class-comparison + half-life comments; user-facing counts: medicine page meta "145 psychiatric medicines", homepage stat "145+"; ~14 registry-size comments.
+- VALIDATION: tsc --noEmit clean; eslint clean; validate-prescriber-guide 145/145 ALL PASS; content lock 165/165 PASS; medical snapshot saved-then-verified UNCHANGED; bun run build succeeds (both new pages SSG); standalone server manually verified 200 on /drugs/pemoline, /drugs/tacrine, /drugs/class/stimulant, /drugs/class/ache-inhibitor; bun test: 563 pass. The 8 server-boot test failures (auth/idor/learning/password-reset/privacy/routes-search/security/smoke) proved PRE-EXISTING by git-stash round-trip on db3e08d (smoke fails identically pre-change: sandbox 5s boot budget).
+- Committed locally: 96fda32 "feat: complete 1st-edition Stahl coverage..." (44 files, +2,629/-131). Nothing pushed.
+
+Stage Summary:
+- Registry now 145 medications covering BOTH editions completely: 6th ed (2017) 143/143 + 1st ed (2005) 101/101 (99 before, +pemoline +tacrine).
+- Canonical counts: 145 drugs / 477 MCQs / 229 search entries / 180 Stahl MCQs / 165 locked files / 3 review dates.
+- Delivery: /home/z/my-project/download/kyp-pemoline-tacrine-integration.zip (73 files) containing the 2 new monographs, all 44 changed files at repo-relative paths, git format-patch, MANIFEST.txt, INTEGRATION-NOTES.md + rendered INTEGRATION-NOTES.pdf (10 pages, Template 01 HUD cover, QA pass).
+
+---
+Task ID: stahl-notes-push
+Agent: Main agent (Super Z)
+Task: Verify complete Stahl notes registry, add master companion doc, and push everything to github.com/zammucanva/KYP-STALHS-NOTES
+
+Work Log:
+- Verified registry integrity: 145 drug files, 145 imports, 145 array registrations in drugs/index.ts — no orphans, no gaps
+- Verified book coverage: all 101 contents-list entries of the Stahl 1st-edition Prescriber's Guide are covered (d-amphetamine→dexamphetamine, d,l-amphetamine→amphetamine, d,l-methylphenidate→methylphenidate, d-methylphenidate→dexmethylphenidate)
+- Ran full project typecheck: tsc --noEmit exit 0
+- Generated STAHL-NOTES-COMPANION.md (master index: 145-drug table by class, book mapping, integration wiring, extension guide) — also copied to /home/z/my-project/download/
+- Rewrote README.md to orient on the Stahl notes registry
+- Pushed main (full history) to github.com/zammucanva/KYP-STALHS-NOTES, set default branch to main, removed __probe__ placeholder
+
+Stage Summary:
+- 145 monographs / ~174k lines of clinical notes / 101/101 book drugs / 178 MCQs — COMPLETE and pushed
+- Companion doc = the "notes + integration plan" file: STAHL-NOTES-COMPANION.md
