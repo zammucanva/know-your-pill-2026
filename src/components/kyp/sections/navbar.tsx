@@ -32,9 +32,28 @@ export function Navbar() {
   const router = useRouter();
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
+  const menuButtonRef = React.useRef<HTMLButtonElement | null>(null);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
   const [user, setUser] = React.useState<SessionUser>(null);
+
+  // Escape closes the mobile menu (D-3). The listener exists only while
+  // the menu is open and mirrors the sheet pattern used by the drug
+  // lesson navigator: Radix overlays (e.g. the search modal) run their
+  // own capture-phase Escape handling and call preventDefault, so the
+  // defaultPrevented guard keeps one Escape press from dismissing two
+  // stacked surfaces. Focus returns to the disclosure button so it
+  // never rests inside the collapsed menu.
+  React.useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== "Escape" || e.defaultPrevented) return;
+      setOpen(false);
+      menuButtonRef.current?.focus();
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open]);
 
   React.useEffect(() => setMounted(true), []);
 
@@ -167,6 +186,8 @@ export function Navbar() {
             className="h-11 w-11 rounded-full lg:hidden"
             aria-label="Open menu"
             aria-expanded={open}
+            aria-controls="mobile-nav-menu"
+            ref={menuButtonRef}
             onClick={() => setOpen((v) => !v)}
           >
             {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
@@ -176,7 +197,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="border-t border-border/70 bg-background/95 backdrop-blur-xl lg:hidden">
+        <div id="mobile-nav-menu" className="border-t border-border/70 bg-background/95 backdrop-blur-xl lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
             {navLinks.map((l) => (
               <Link

@@ -710,6 +710,7 @@ export const paediatricMoodCourse: PsychiatryCourse = {
       { source: "Birmaher B et al. — the youth-depression course and relapse natural history (the maintenance-treatment rationale)" },
       { source: "Leibenluft E et al. — the DMDD / severe-mood-dysregulation lineages (the chronic-irritability-versus-bipolar distinction's science)" },
       { source: "Kowatch RA, McClellan J et al. — juvenile bipolar diagnosis-and-treatment guidance (the episodic-gate discipline); Findling RL et al. — lithium-in-youth evidence" },
+      { source: "National Mental Health Survey of India 2015–16 — adolescent (13–17) depression prevalence (2016)" },
     ],
     patientResources: [
       { source: "Tele-MANAS 14416 (24×7, free) — the crisis tier for the adolescent and the family's own distress" },

@@ -492,6 +492,7 @@ export const depressiveDisordersCourse: PsychiatryCourse = {
     reviews: [
       { source: "Moncrieff J et al. The serotonin theory of depression: a systematic umbrella review of the evidence. Mol Psychiatry (2023)", url: "https://doi.org/10.1038/s41380-022-01661-0" },
       { source: "Mistry S, Malhi G — Neuroplasticity and depression model summaries (current synthesis framing) (2022)" },
+      { source: "Gururaj G et al. — National Mental Health Survey of India 2015–16 (NIMHANS): prevalence and treatment-gap figures (2016)", url: "https://indianmhs.nimhans.ac.in/" },
     ],
     patientResources: [
       { source: "Tele-MANAS national tele-mental-health helpline (14416), MoHFW India (2024–25)", url: "https://telemanas.mohfw.gov.in" },

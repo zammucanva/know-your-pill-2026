@@ -16,8 +16,11 @@ import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
 import {
   coursePercentComplete,
   getRetentionDueCount,
-  type CourseProgress,
 } from "@/lib/kyp/progress/progress-store";
+import {
+  studyCourseTotal,
+  continueHref,
+} from "@/lib/kyp/study/course-catalog";
 
 /**
  * StudyNextPanel — Study Mode's "what should I do next" surface (NOW-N8).
@@ -30,6 +33,10 @@ import {
  *       (renders only when at least one question to revisit exists);
  *   (4) saved test quick-launch chips (render only when presets exist).
  *
+ * Course totals + routes come from the shared study course catalog —
+ * drug lessons AND psychiatry courses both resolve honestly (the
+ * store records both kinds since the psychiatry layer landed).
+ *
  * Honesty rules (same as the rest of Study Mode): no fabricated
  * numbers — every value derives from the real kyp:progress:v1 store.
  * When nothing exists yet, the panel shows the genuine start state
@@ -38,23 +45,6 @@ import {
  * Pre-hydration it renders nothing that depends on the store (the
  * server snapshot is null), then upgrades after hydration.
  */
-
-/** Course outline sizes, derived from the canonical registry. */
-const COURSE_OUTLINES: Record<string, { total: number }> = Object.fromEntries(
-  drugs.map((d) => [
-    d.slug,
-    { total: new Set((d.lessonGroups ?? []).flatMap((l) => l.sectionIds)).size },
-  ])
-);
-
-/** The real section anchor to continue at, if the page has it. */
-function continueHref(course: CourseProgress): string {
-  const base = `/drugs/${course.slug}`;
-  if (course.currentSectionId && course.completedSections.length > 0) {
-    return `${base}#${course.currentSectionId}`;
-  }
-  return base;
-}
 
 export function StudyNextPanel() {
   const data = useLocalProgress();
@@ -109,7 +99,7 @@ export function StudyNextPanel() {
   }
 
   const first = recent[0];
-  const firstTotal = first ? COURSE_OUTLINES[first.slug]?.total ?? 0 : 0;
+  const firstTotal = first ? studyCourseTotal(first.slug) : 0;
   const firstPercent = first ? coursePercentComplete(first, firstTotal) : 0;
   const firstIsComplete = Boolean(first?.completedAt);
   const otherUnfinished = unfinished.slice(1, 3);
@@ -164,7 +154,7 @@ export function StudyNextPanel() {
         <div className="mt-3 flex flex-wrap gap-3">
           {/* (2) Unfinished courses — compact, real rows */}
           {otherUnfinished.map((course) => {
-            const total = COURSE_OUTLINES[course.slug]?.total ?? 0;
+            const total = studyCourseTotal(course.slug);
             return (
               <Link
                 key={course.slug}

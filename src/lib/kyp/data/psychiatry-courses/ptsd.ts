@@ -642,6 +642,7 @@ export const ptsdCourse: PsychiatryCourse = {
       { source: "Yehuda R — neuroendocrinology of PTSD; Gilbertson MW et al. — hippocampal-volume twin studies (Nature Neuroscience)" },
       { source: "Kessler RC et al. — WHO World Mental Health surveys: conditional PTSD risk" },
       { source: "Catani C / Neuner F & Schauer M — narrative exposure therapy for multiple-trauma and refugee settings" },
+      { source: "National Mental Health Survey of India 2015–16 (NIMHANS) — treatment-gap context (2016)", url: "https://indianmhs.nimhans.ac.in/" },
     ],
     patientResources: [
       { source: "Tele-MANAS — India's national tele-mental-health helpline (14416; 1-800-891-4416)" },

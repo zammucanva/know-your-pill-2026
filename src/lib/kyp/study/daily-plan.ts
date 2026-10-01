@@ -21,6 +21,7 @@
 import type { KypProgressData } from "@/lib/kyp/progress/progress-store";
 import { selectWeakTopics } from "@/lib/kyp/custom-test/weak-area";
 import { drugs } from "@/lib/kyp/data/drugs/index";
+import { studyCourseTotal, studyCourseBase } from "@/lib/kyp/study/course-catalog";
 
 /** One numbered step of the plan. */
 export interface DailyPlanStep {
@@ -30,14 +31,6 @@ export interface DailyPlanStep {
   detail: string;
   href: string;
 }
-
-/** Course outline sizes, derived from the canonical registry. */
-const COURSE_OUTLINES: Record<string, { total: number }> = Object.fromEntries(
-  drugs.map((d) => [
-    d.slug,
-    { total: new Set((d.lessonGroups ?? []).flatMap((l) => l.sectionIds)).size },
-  ])
-);
 
 export function buildDailyPlan(data: KypProgressData, now = Date.now()): DailyPlanStep[] {
   const steps: DailyPlanStep[] = [];
@@ -72,15 +65,15 @@ export function buildDailyPlan(data: KypProgressData, now = Date.now()): DailyPl
   const recent = Object.values(data.courses).sort((a, b) => b.lastVisitedAt - a.lastVisitedAt);
   const unfinished = recent.find((c) => !c.completedAt);
   if (unfinished) {
-    const total = COURSE_OUTLINES[unfinished.slug]?.total ?? 0;
+    const total = studyCourseTotal(unfinished.slug);
     steps.push({
       id: "continue",
       title: `Continue ${unfinished.title}`,
       detail: `${unfinished.completedSections.length} of ${total} sections read — picks up where you stopped.`,
       href:
         unfinished.currentSectionId && unfinished.completedSections.length > 0
-          ? `/drugs/${unfinished.slug}#${unfinished.currentSectionId}`
-          : `/drugs/${unfinished.slug}`,
+          ? `${studyCourseBase(unfinished.slug)}#${unfinished.currentSectionId}`
+          : studyCourseBase(unfinished.slug),
     });
   } else {
     steps.push({

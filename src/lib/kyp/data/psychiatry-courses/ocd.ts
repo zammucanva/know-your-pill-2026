@@ -631,6 +631,7 @@ export const ocdCourse: PsychiatryCourse = {
       { source: "Skapinakis P et al. — antipsychotic augmentation meta-analyses (esp. tic-related benefit)" },
       { source: "Swedo SE et al. — PANDAS original description and the contested literature" },
       { source: "Carmi L et al. — deep TMS; Nuttin/Mayberg-lineage trials — DBS for the refractory ladder" },
+      { source: "National Mental Health Survey of India 2015–16 — pooled morbidity context (no OCD-specific isolation) (2016)", url: "https://indianmhs.nimhans.ac.in/" },
     ],
     patientResources: [
       { source: "Tele-MANAS — India's national tele-mental-health helpline (14416)" },

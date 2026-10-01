@@ -22,11 +22,18 @@ interface FloatingSearchProps {
 export function FloatingSearch({ variant = "floating", className }: FloatingSearchProps) {
   const [open, setOpen] = React.useState(false);
 
-  // Global ⌘K / Ctrl+K shortcut
+  // Global ⌘K / Ctrl+K shortcut. TWO FloatingSearch triggers mount on
+  // most pages (the navbar's desktop button variant + the page's
+  // floating variant), so this keydown reaches two listeners — without
+  // the stopImmediatePropagation guard both modals opened stacked and
+  // the user needed TWO Escape presses to close "the" search (the
+  // first press only dismissed the hidden duplicate). The guard makes
+  // the first-registered instance the single ⌘K handler.
   React.useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
         e.preventDefault();
+        e.stopImmediatePropagation();
         setOpen((v) => !v);
       }
     };

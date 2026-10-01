@@ -160,6 +160,38 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
   const { activeId, completedIds, completedCount, totalCount, toggleComplete } =
     useStickyNav(displayItems, drugSlug, items);
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const openButtonRef = React.useRef<HTMLButtonElement | null>(null);
+  const closeButtonRef = React.useRef<HTMLButtonElement | null>(null);
+
+  // Escape + focus management + scroll lock while the sheet is open
+  // (D-4 — the same contract the drug lesson's MobileLessonNav already
+  // implements). Capture phase + preventDefault give this sheet the
+  // same "topmost overlay wins" semantics Radix layers use: when the
+  // navbar menu is also open underneath, one Escape closes only this
+  // sheet (the navbar's bubble-phase listener skips the already-handled
+  // event).
+  React.useEffect(() => {
+    if (!mobileOpen) return;
+    closeButtonRef.current?.focus();
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== "Escape" || e.defaultPrevented) return;
+      e.preventDefault();
+      setMobileOpen(false);
+      openButtonRef.current?.focus();
+    };
+    document.addEventListener("keydown", onKeyDown, { capture: true });
+    return () => {
+      document.removeEventListener("keydown", onKeyDown, { capture: true });
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [mobileOpen]);
+
+  const closeSheet = () => {
+    setMobileOpen(false);
+    openButtonRef.current?.focus();
+  };
 
   const groups = React.useMemo(() => {
     const map = new Map<string, NavItem[]>();
@@ -245,9 +277,12 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
       {/* Mobile: floating pill */}
       <button
         type="button"
+        ref={openButtonRef}
         onClick={() => setMobileOpen(true)}
         className="lg:hidden fixed bottom-20 left-4 z-40 flex items-center gap-2 rounded-full border border-border/70 bg-card/90 backdrop-blur-xl px-4 py-2.5 shadow-[var(--shadow-lift)]"
         aria-label="Open section navigator"
+        aria-expanded={mobileOpen}
+        aria-controls="section-navigator-sheet"
       >
         <div className="relative h-5 w-5">
           <svg viewBox="0 0 20 20" className="h-5 w-5 -rotate-90">
@@ -265,16 +300,21 @@ export function StickyLearningNav({ items, drugSlug }: StickyLearningNavProps) {
 
       {/* Mobile sheet */}
       {mobileOpen && (
-        <div className="lg:hidden fixed inset-0 z-50 flex items-end">
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Section navigator"
+          className="lg:hidden fixed inset-0 z-50 flex items-end"
+        >
           <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
-          <div className="relative w-full rounded-t-3xl border-t border-border bg-card p-4 pb-6 max-h-[70vh] overflow-y-auto kyp-scroll">
+          <div id="section-navigator-sheet" className="relative w-full rounded-t-3xl border-t border-border bg-card p-4 pb-6 max-h-[70vh] overflow-y-auto kyp-scroll">
             <div className="mx-auto mb-3 h-1 w-10 rounded-full bg-border" />
             <div className="flex items-center justify-between mb-3">
               <div>
                 <p className="text-overline text-muted-foreground">Section Navigator</p>
                 <p className="font-serif text-lg font-semibold">{completedCount} of {totalCount} completed</p>
               </div>
-              <Button variant="ghost" size="icon" onClick={() => setMobileOpen(false)} aria-label="Close">
+              <Button ref={closeButtonRef} variant="ghost" size="icon" onClick={closeSheet} aria-label="Close section navigator">
                 <X className="h-4 w-4" />
               </Button>
             </div>

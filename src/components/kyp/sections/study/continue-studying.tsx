@@ -18,13 +18,19 @@ import { useLocalProgress } from "@/lib/kyp/progress/use-local-progress";
 import {
   clearProgress,
   coursePercentComplete,
-  type CourseProgress,
 } from "@/lib/kyp/progress/progress-store";
+import {
+  studyCourseTotal,
+  continueHref,
+} from "@/lib/kyp/study/course-catalog";
 
 /**
  * ContinueStudying — Study Mode's memory, driven entirely by the
  * local learning-progress layer (kyp:progress:v1). No server API,
  * no authentication — the loop works signed-out on static hosting.
+ *
+ * Course totals + routes come from the shared study course catalog
+ * (drug lessons AND psychiatry courses both resolve honestly).
  *
  * Honesty rules (from the product audit):
  *   - No fabricated percentages — every number comes from the
@@ -45,14 +51,6 @@ import {
  * stray tap.
  */
 
-/** Course outline sizes, derived from the canonical registry. */
-const COURSE_OUTLINES: Record<string, { total: number }> = Object.fromEntries(
-  drugs.map((d) => [
-    d.slug,
-    { total: new Set((d.lessonGroups ?? []).flatMap((l) => l.sectionIds)).size },
-  ])
-);
-
 function timeAgo(ms: number): string {
   const diffMin = Math.floor((Date.now() - ms) / 60000);
   const diffHr = Math.floor(diffMin / 60);
@@ -62,15 +60,6 @@ function timeAgo(ms: number): string {
   if (diffHr < 24) return `${diffHr}h ago`;
   if (diffDay < 7) return `${diffDay}d ago`;
   return new Date(ms).toLocaleDateString();
-}
-
-/** The real section anchor to continue at, if the page has it. */
-function continueHref(course: CourseProgress): string {
-  const base = `/drugs/${course.slug}`;
-  if (course.currentSectionId && course.completedSections.length > 0) {
-    return `${base}#${course.currentSectionId}`;
-  }
-  return `${base}`;
 }
 
 export function ContinueStudying() {
@@ -88,8 +77,7 @@ export function ContinueStudying() {
 
   const hasProgress = recent.length > 0;
   const first = recent[0];
-  const firstOutline = first ? COURSE_OUTLINES[first.slug] : undefined;
-  const firstTotal = firstOutline?.total ?? 0;
+  const firstTotal = first ? studyCourseTotal(first.slug) : 0;
   const firstPercent = first ? coursePercentComplete(first, firstTotal) : 0;
   const firstIsComplete = Boolean(first?.completedAt);
   const firstSectionLabel = first?.currentSectionLabel ?? null;
@@ -222,8 +210,7 @@ export function ContinueStudying() {
 
           {/* Older courses — compact rows */}
           {recent.slice(1).map((course, i) => {
-            const outline = COURSE_OUTLINES[course.slug];
-            const total = outline?.total ?? 0;
+            const total = studyCourseTotal(course.slug);
             const isComplete = Boolean(course.completedAt);
             return (
               <Reveal key={course.slug} delay={(i + 1) * 0.05}>

@@ -47,9 +47,24 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
   const router = useRouter();
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
+  const menuButtonRef = React.useRef<HTMLButtonElement | null>(null);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
   const [user, setUser] = React.useState<SessionUser>(null);
+
+  // Escape closes the mobile menu (D-3 — same contract as the main
+  // Navbar). The menu only renders while the enter animation is
+  // `active`, so the listener is additionally gated on it.
+  React.useEffect(() => {
+    if (!open || !active) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== "Escape" || e.defaultPrevented) return;
+      setOpen(false);
+      menuButtonRef.current?.focus();
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open, active]);
 
   React.useEffect(() => setMounted(true), []);
 
@@ -199,7 +214,9 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
               className="h-9 w-9 rounded-full lg:hidden"
               aria-label="Open menu"
               aria-expanded={open}
+              aria-controls="enter-mobile-nav-menu"
               tabIndex={active ? 0 : -1}
+              ref={menuButtonRef}
               onClick={() => setOpen((v) => !v)}
             >
               {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
@@ -209,7 +226,7 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
 
         {/* Mobile menu */}
         {open && active && (
-          <div className="border-t border-border/70 bg-background/95 lg:hidden">
+          <div id="enter-mobile-nav-menu" className="border-t border-border/70 bg-background/95 lg:hidden">
             <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
               {navLinks.map((l) => (
                 <a

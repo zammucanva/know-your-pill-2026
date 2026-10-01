@@ -602,6 +602,7 @@ export const schizoaffectiveSchizotypalCourse: PsychiatryCourse = {
     reviews: [
       { source: "Polygenic overlap of bipolar disorder and schizophrenia — large-cohort GWAS literature (SWAN and related consortia, 2010s)" },
       { source: "Rector NA et al. — CBT for schizotypal traits and personality-spectrum presentations (J Nerv Ment Dis / J Behav Ther Exp Psychiatry)" },
+      { source: "National Mental Health Survey of India 2015–16 (NIMHANS) — pooled psychotic-disorder prevalence (2016)", url: "https://indianmhs.nimhans.ac.in/" },
     ],
     patientResources: [
       { source: "Tele-MANAS — India's national tele-mental-health helpline (14416; 1-800-891-4416)" },

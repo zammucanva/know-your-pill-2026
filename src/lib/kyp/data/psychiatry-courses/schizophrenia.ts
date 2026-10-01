@@ -495,6 +495,7 @@ export const schizophreniaCourse: PsychiatryCourse = {
       { source: "Howes OD, Nour MM — Dopamine and the aberrant salience hypothesis of schizophrenia. World Psychiatry (2016)" },
       { source: "Laruelle M et al. / CNTRD meta-analyses — Imaging dopamine synthesis capacity in psychosis" },
       { source: "Kapur S — Psychosis as a state of aberrant salience. Am J Psychiatry (2003)" },
+      { source: "National Mental Health Survey of India 2015–16 (NIMHANS) — psychosis prevalence and treatment gap (2016)", url: "https://indianmhs.nimhans.ac.in/" },
     ],
     patientResources: [
       { source: "Tele-MANAS national tele-mental-health helpline (14416), MoHFW India (2024–25)", url: "https://telemanas.mohfw.gov.in" },
