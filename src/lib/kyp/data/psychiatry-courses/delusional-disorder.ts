@@ -573,6 +573,7 @@ export const delusionalDisorderCourse: PsychiatryCourse = {
       { source: "Freeman D — threat-deficit cognitive models of persecutory delusions (Psychol Med series)" },
       { source: "Arnone D et al. — review of shared psychotic disorder (folie à deux) (Gen Hosp Psychiatry, 2006)" },
       { source: "de Clérambault G (historical) and Lasègue & Falret (folie à deux, 1877) — historical framing of eponymous syndromes" },
+      { source: "National Mental Health Survey of India 2015–16 (NIMHANS) — pooled psychosis context (2016)", url: "https://indianmhs.nimhans.ac.in/" },
     ],
     patientResources: [
       { source: "Tele-MANAS — India's national tele-mental-health helpline (14416; 1-800-891-4416)" },

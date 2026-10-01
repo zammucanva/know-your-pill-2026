@@ -53,6 +53,8 @@ import {
   __resetForTests,
   recordAnswerEvents,
   recordMistakes,
+  recordCourseVisit,
+  markSectionComplete,
   getProgress,
   dismissDailyPlan,
   isDailyPlanDismissed,
@@ -203,5 +205,21 @@ describe("daily plan — dismissal + component pins", () => {
     const comp = read("src/components/kyp/sections/study/daily-plan.tsx");
     expect(comp).toContain("Hide it for today whenever you like.");
     expect(comp).toContain("A fixed order");
+  });
+
+  test("10. D-study: a psychiatry course continues with its real total + route", () => {
+    // The Study Mode surfaces used to assume drug-only slugs: a GAD visit
+    // rendered as "X of 0 sections" with a broken /drugs/gad link. The
+    // plan must now resolve the psychiatry total (23, the D-2 canonical)
+    // and the /psychiatry route.
+    recordCourseVisit("gad", "Generalised Anxiety Disorder");
+    markSectionComplete("gad", "quick-facts");
+    markSectionComplete("gad", "learning-objectives");
+    const plan = buildDailyPlan(getProgress());
+    const step = plan.find((s) => s.id === "continue");
+    expect(step).toBeDefined();
+    expect(step!.title).toBe("Continue Generalised Anxiety Disorder");
+    expect(step!.detail).toContain("2 of 23 sections read");
+    expect(step!.href).toBe("/psychiatry/gad");
   });
 });

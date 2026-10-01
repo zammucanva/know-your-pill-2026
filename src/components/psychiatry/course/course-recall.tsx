@@ -78,7 +78,7 @@ export function CourseReferences({ course }: { course: PsychiatryCourse }) {
         <SectionHeader
           eyebrow="References"
           title="Sources — clean and checkable."
-          description={`KYP content review: ${course.lastReviewed}. Every claim is internally mapped to these sources.`}
+          description={`KYP content review: ${course.lastReviewed}. Each course is an original rewrite of its mapped source chapter, supplemented by KYP-researched references (guidelines, trials, surveys) — every claim is internally mapped to these sources.`}
           align="start"
         />
         <div className="mt-10 space-y-6">

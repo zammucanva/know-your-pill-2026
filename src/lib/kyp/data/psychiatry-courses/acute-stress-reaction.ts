@@ -590,6 +590,7 @@ export const acuteStressReactionCourse: PsychiatryCourse = {
     reviews: [
       { source: "Ozer EJ et al. — predictors of PTSD, meta-analysis (Psychological Bulletin 2003): peritraumatic dissociation among the strongest" },
       { source: "Kleim B et al. — sleep in the acute window predicting PTSD onset" },
+      { source: "National Mental Health Survey of India 2015–16 (NIMHANS) — treatment-gap context (2016)", url: "https://indianmhs.nimhans.ac.in/" },
     ],
     patientResources: [
       { source: "Tele-MANAS — India's national tele-mental-health helpline (14416; 1-800-891-4416)" },

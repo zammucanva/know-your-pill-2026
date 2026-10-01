@@ -15,6 +15,8 @@
  *         Who is KYP / About).
  */
 import { beforeAll, describe, expect, test } from "bun:test";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { BASE_URL, ensureServer } from "./helpers/server";
 import { getAllNoteSlugs, loadCorpus } from "../src/lib/oxford/loader";
 
@@ -2095,5 +2097,112 @@ describe("psychiatry — post-migration layer consistency (2026-09-30 audit)", (
     expect(
       courseNavItems(getCourseRenderedSectionIds(gad)).filter((i) => i.id !== "top").length
     ).toBe(23);
+  });
+});
+
+describe("psychiatry — final-closure QA (D-3/D-4/D-5 + Study Mode, 2026-10-01)", () => {
+  test("88. D-5: every learner-facing NMHS claim carries the NMHS learner reference", () => {
+    // The D-5 defect: NMHS India statistics are re-researched claims with
+    // course-level provenance, but 14 courses cited them in learner-facing
+    // content while the "Sources — clean and checkable" section omitted
+    // the survey (its header promises every claim maps to these sources).
+    // Data-level audit: any NMHS mention outside the internal provenance
+    // array must be matched by an NMHS entry in the learner references.
+    let audited = 0;
+    for (const course of psychiatryCourses) {
+      const { provenance: _prov, references, ...learnerContent } = course;
+      const content = JSON.stringify(learnerContent);
+      if (/NMHS/.test(content)) {
+        audited += 1;
+        const refs = JSON.stringify(references);
+        expect(refs).toMatch(/National Mental Health Survey|NMHS/);
+      }
+    }
+    // The fix covered 14 courses; pin that the audit still sees them.
+    expect(audited).toBeGreaterThanOrEqual(14);
+  });
+
+  test("89. Study Mode catalog resolves both course kinds honestly (totals + routes)", async () => {
+    const { studyCourseTotal, studyCourseBase, continueHref } = await import(
+      "../src/lib/kyp/study/course-catalog"
+    );
+    // Psychiatry: the D-2 canonical denominator + the real route.
+    expect(studyCourseTotal("gad")).toBe(23);
+    expect(studyCourseBase("gad")).toBe("/psychiatry/gad");
+    expect(studyCourseTotal("neurotransmitters")).toBe(19);
+    // Drug: the 26-section contract + the drug route (unchanged).
+    expect(studyCourseTotal("sertraline")).toBe(26);
+    expect(studyCourseBase("sertraline")).toBe("/drugs/sertraline");
+    // Resume links keep the saved anchor on both kinds.
+    const psychResume = { slug: "gad", currentSectionId: "symptoms", completedSections: ["quick-facts"] } as never;
+    expect(continueHref(psychResume)).toBe("/psychiatry/gad#symptoms");
+    const drugResume = { slug: "sertraline", currentSectionId: "overview", completedSections: ["overview"] } as never;
+    expect(continueHref(drugResume)).toBe("/drugs/sertraline#overview");
+  });
+
+  test("90. generated study-totals map is fresh (matches the canonical registry computation)", async () => {
+    const { PSYCHIATRY_COURSE_TOTALS } = await import(
+      "../src/lib/kyp/study/psychiatry-course-meta.generated"
+    );
+    const { getCourseRenderedSectionIds, courseNavItems } = await import(
+      "../src/lib/kyp/psychiatry-course-sections"
+    );
+    expect(Object.keys(PSYCHIATRY_COURSE_TOTALS).length).toBe(109);
+    for (const course of psychiatryCourses) {
+      const canonical = courseNavItems(getCourseRenderedSectionIds(course)).filter(
+        (i) => i.id !== "top"
+      ).length;
+      expect(PSYCHIATRY_COURSE_TOTALS[course.slug]).toBe(canonical);
+    }
+  });
+
+  test("91. D-3/D-4: Escape closes the mobile navbar menu and the section-navigator sheet", () => {
+    // Source-contract tests (same style as study-ia.test.ts): pin the
+    // mechanism, not just the word "Escape" (which lives in comments too).
+    const read = (rel: string) =>
+      readFileSync(join(process.cwd(), rel), "utf8");
+
+    // D-3 — main Navbar: listener gated on `open`, guarded against
+    // already-handled Radix dismissals, focus returns to the toggle.
+    const navbar = read("src/components/kyp/sections/navbar.tsx");
+    expect(navbar).toContain('if (e.key !== "Escape" || e.defaultPrevented) return;');
+    expect(navbar).toContain("menuButtonRef.current?.focus();");
+    expect(navbar).toContain('aria-controls="mobile-nav-menu"');
+
+    // D-3 — the /enter page's navbar shares the same contract.
+    const enterNavbar = read("src/components/kyp/enter/enter-navbar.tsx");
+    expect(enterNavbar).toContain('if (e.key !== "Escape" || e.defaultPrevented) return;');
+    expect(enterNavbar).toContain("menuButtonRef.current?.focus();");
+
+    // D-4 — the psychiatry/drug Section Navigator sheet: dialog
+    // semantics + scroll lock + Escape + focus restoration (mirrors the
+    // drug lesson's MobileLessonNav contract).
+    const sheet = read("src/components/kyp/ui/sticky-learning-nav.tsx");
+    expect(sheet).toContain('role="dialog"');
+    expect(sheet).toContain('aria-modal="true"');
+    expect(sheet).toContain('aria-label="Section navigator"');
+    expect(sheet).toContain('document.body.style.overflow = "hidden"');
+    expect(sheet).toContain('if (e.key !== "Escape" || e.defaultPrevented) return;');
+    expect(sheet).toContain("e.preventDefault();");
+    expect(sheet).toContain("openButtonRef.current?.focus();");
+    expect(sheet).toContain('aria-controls="section-navigator-sheet"');
+  });
+
+  test("92. ⌘K opens ONE search modal (no stacked duplicates across triggers)", () => {
+    // Pre-existing defect found during the closure Escape audit: the
+    // navbar's button-variant FloatingSearch AND the page's floating
+    // variant both mount on most pages, and both listened for ⌘K —
+    // one keypress opened TWO stacked identical modals, so the first
+    // Escape only dismissed the hidden duplicate. The
+    // stopImmediatePropagation guard makes the keypress open exactly
+    // one modal (whichever trigger registered first).
+    const read = (rel: string) =>
+      readFileSync(join(process.cwd(), rel), "utf8");
+    const src = read("src/components/kyp/ui/floating-search.tsx");
+    expect(src).toContain("e.stopImmediatePropagation();");
+    // The guard must sit inside the ⌘K branch (not a blanket swallow).
+    expect(src).toMatch(
+      /if \(\(e\.metaKey \|\| e\.ctrlKey\) && e\.key\.toLowerCase\(\) === "k"\) \{\s*\n\s*e\.preventDefault\(\);\s*\n\s*e\.stopImmediatePropagation\(\);/
+    );
   });
 });

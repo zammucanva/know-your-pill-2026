@@ -613,6 +613,7 @@ export const panicDisorderCourse: PsychiatryCourse = {
       { source: "Clark DM — the cognitive model of panic; Barlow DH — panic control treatment" },
       { source: "Taylor CB et al. — the panic-cardiology comorbidity literature and the ER detection pathway" },
       { source: "Shear MK — PDSS development and panic treatment synthesis" },
+      { source: "National Mental Health Survey of India 2015–16 (NIMHANS) — anxiety-bucket data and treatment gap (2016)", url: "https://indianmhs.nimhans.ac.in/" },
     ],
     patientResources: [
       { source: "Tele-MANAS — India's national tele-mental-health helpline (14416)" },

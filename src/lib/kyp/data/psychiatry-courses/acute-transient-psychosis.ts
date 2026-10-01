@@ -568,6 +568,7 @@ export const acuteTransientPsychosisCourse: PsychiatryCourse = {
       { source: "Sit D & Wisner KL — postpartum psychosis: identification, treatment and prophylaxis (Harvard Rev Psychiatry; Am J Psychiatry)" },
       { source: "Bergink V et al. — puerperal psychosis as a bipolar-spectrum marker; treatment and relapse prevention" },
       { source: "Graus F et al. — anti-NMDA-receptor encephalitis diagnostic approach (Lancet Neurol) — the key 'mimic' reference" },
+      { source: "National Mental Health Survey of India 2015–16 (NIMHANS) — service context (2016)", url: "https://indianmhs.nimhans.ac.in/" },
     ],
     patientResources: [
       { source: "Tele-MANAS — India's national tele-mental-health helpline (14416; 1-800-891-4416)" },

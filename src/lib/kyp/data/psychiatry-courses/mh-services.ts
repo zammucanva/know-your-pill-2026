@@ -637,6 +637,7 @@ export const mhServicesCourse: PsychiatryCourse = {
       { source: "Thornicroft G & Tansella M — the matrix model of community mental health: the input-process-outcome planning framework" },
       { source: "Goldberg D et al. — the primary-care interface (the Oxford ch 7.8 companion)" },
       { source: "Harding CM — the longitudinal severe-illness outcome tradition underlying community optimism" },
+      { source: "National Mental Health Survey of India 2015–16 (NIMHANS) — the needs-assessment base for district services (2016)", url: "https://indianmhs.nimhans.ac.in/" },
     ],
     patientResources: [
       { source: "Tele-MANAS 14416 — India's national tele-mental-health helpline, free, 24x7, for distress and guidance on where to go" },

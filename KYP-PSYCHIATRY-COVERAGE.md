@@ -81,3 +81,30 @@ Classification (disposition for when source material arrives):
 
 Accounting (never mixed): **SOURCE lessons 109 · KYP-added courses 0 ·
 PROPOSED future additions 11.**
+
+## Provenance model — the three content classes (D-5 closure, 2026-10-01)
+
+Every learner-facing psychiatry page belongs to exactly one class, and
+the product must never blur them:
+
+1. **SOURCE-DERIVED CONTENT** — the 109 notes (`download/kyp-notes/`)
+   and the course layer built on them. Each course's references section
+   marks its source chapter ("New Oxford Textbook of Psychiatry 2e,
+   ch … — source chapter mapped; content rewritten").
+2. **KYP RE-RESEARCHED CONTENT** — claims the course layer adds beyond
+   the source corpus (India-context statistics, guideline tiers,
+   landmark-trial results). Every such claim carries an entry in the
+   course's internal `provenance` registry, and the learner-facing
+   references section lists the source (e.g. the National Mental Health
+   Survey of India 2015–16). A 2026-10-01 audit found 14 courses citing
+   NMHS figures in learner-facing content without the corresponding
+   learner reference — all 14 now carry it (test #88 pins the
+   invariant: any learner-facing NMHS mention must be matched by an
+   NMHS entry in the references).
+3. **PROPOSED FUTURE CONTENT** — the 11 [PROPOSED] additions above:
+   documentation-only, no course data, never counted in the 109.
+
+The references section header states this model to the learner
+("original rewrite of its mapped source chapter, supplemented by
+KYP-researched references"). The NMHS survey URL is included where the
+course's internal provenance records it (`indianmhs.nimhans.ac.in`).

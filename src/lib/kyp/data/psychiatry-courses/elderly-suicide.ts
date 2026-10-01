@@ -668,6 +668,7 @@ export const elderlySuicideCourse: PsychiatryCourse = {
       { source: "Harwood D et al. — the widowed-elderly-male risk findings and the bereavement-window evidence" },
       { source: "Alexopoulos GS et al. — late-life depression's treatment evidence (the engine-side foundation)" },
       { source: "Gunnell D et al. — the means-restriction evidence (the Sri Lanka natural experiments), applied geriatric-side" },
+      { source: "National Mental Health Survey of India 2015–16 — the elderly-depression treatment gap (2015–16)" },
     ],
     patientResources: [
       { source: "Tele-MANAS 14416 / 1-800-891-4416 — India's national 24×7 tele-mental-health helpline; the family-call spine" },

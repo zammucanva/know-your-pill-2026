@@ -609,6 +609,7 @@ export const gadCourse: PsychiatryCourse = {
       { source: "Newman MG et al. — GAD psychological-treatment meta-analyses; CBT durability data" },
       { source: "Wells A — metacognitive therapy for GAD (the alternative formulation worth naming)" },
       { source: "Telles S et al. — yoga trials in Indian anxiety populations (adjunct evidence)" },
+      { source: "National Mental Health Survey of India 2015–16 (NIMHANS) — neurotic-disorders bucket and treatment gap (2016)", url: "https://indianmhs.nimhans.ac.in/" },
     ],
     patientResources: [
       { source: "Tele-MANAS — India's national tele-mental-health helpline (14416; 1-800-891-4416)" },

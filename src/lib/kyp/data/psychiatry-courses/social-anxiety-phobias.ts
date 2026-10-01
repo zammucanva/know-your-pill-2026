@@ -608,6 +608,7 @@ export const socialAnxietyPhobiasCourse: PsychiatryCourse = {
       { source: "Öst LG — one-session treatment for specific phobias; Wolitzky-Taylor KB et al. — exposure meta-analyses" },
       { source: "Page AC — blood-injection-injury phobia and the applied-tension lineage" },
       { source: "Kessler RC — anxiety-disorder epidemiology (NCS-R/WHO surveys)" },
+      { source: "National Mental Health Survey of India 2015–16 (NIMHANS) — anxiety-bucket data (2016)", url: "https://indianmhs.nimhans.ac.in/" },
     ],
     patientResources: [
       { source: "Tele-MANAS — India's national tele-mental-health helpline (14416)" },
