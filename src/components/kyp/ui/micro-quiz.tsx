@@ -60,8 +60,8 @@ export function MicroQuiz({ quiz, courseSlug, courseQuizCount = 0, onAnswered }:
     <div className="my-6 border-l-2 border-neural/30 pl-4">
       {/* Quiz header */}
       <div className="flex items-center gap-1.5 mb-2">
-        <Lightbulb className="h-3.5 w-3.5 text-neural" />
-        <span className="text-xs font-semibold uppercase tracking-wide text-neural">Check your understanding</span>
+        <Lightbulb className="h-3.5 w-3.5 text-neural-ink" />
+        <span className="text-xs font-semibold uppercase tracking-wide text-neural-ink">Check your understanding</span>
       </div>
 
       {/* Question */}

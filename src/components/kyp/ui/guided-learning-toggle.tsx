@@ -140,7 +140,7 @@ export function GuidedLearningToggle({ className }: GuidedLearningToggleProps) {
             className={cn(
               "inline-flex cursor-pointer items-center gap-1 overflow-hidden whitespace-nowrap rounded-full py-1.5 text-xs font-semibold transition-all duration-[var(--duration-base)] ease-[var(--ease-out-soft)]",
               isActive
-                ? "max-w-[10rem] bg-brand px-2.5 text-primary-foreground opacity-100"
+                ? "max-w-[10rem] bg-brand-ink px-2.5 text-primary-foreground opacity-100"
                 : expanded
                   ? "max-w-[10rem] px-2.5 text-muted-foreground opacity-100 hover:text-foreground"
                   : "max-w-0 px-0 text-muted-foreground opacity-0 pointer-events-none"
@@ -152,7 +152,7 @@ export function GuidedLearningToggle({ className }: GuidedLearningToggleProps) {
               className={cn(
                 "shrink-0 text-[0.6rem] font-normal",
                 isActive
-                  ? "hidden text-primary-foreground/70 sm:inline"
+                  ? "hidden text-primary-foreground sm:inline"
                   : "hidden text-muted-foreground/60 lg:inline"
               )}
             >

@@ -43,9 +43,16 @@ interface ResumeBannerProps {
   noun?: string;
   /** Drug pages filter sections by patient mode; psychiatry passes false. */
   patientFilter?: boolean;
+  /**
+   * Called before the resume scroll (concept lesson systems only):
+   * lets the caller switch to the lesson that owns the target
+   * section BEFORE the browser scrolls to its anchor. Drug pages
+   * never pass this — their behaviour is unchanged.
+   */
+  onBeforeNavigate?: (sectionId: string) => void;
 }
 
-export function ResumeBanner({ courseSlug, items, noun, patientFilter = true }: ResumeBannerProps) {
+export function ResumeBanner({ courseSlug, items, noun, patientFilter = true, onBeforeNavigate }: ResumeBannerProps) {
   const course = useCourseProgress(courseSlug);
   const [navigated, setNavigated] = React.useState(false);
   const mode = useGuidedLearning((s) => s.mode);
@@ -110,6 +117,7 @@ export function ResumeBanner({ courseSlug, items, noun, patientFilter = true }: 
 
   const handleResume = () => {
     setNavigated(true);
+    onBeforeNavigate?.(resumeItem.id);
     const el = document.getElementById(resumeItem.id);
     el?.scrollIntoView({ behavior: "smooth", block: "start" });
   };

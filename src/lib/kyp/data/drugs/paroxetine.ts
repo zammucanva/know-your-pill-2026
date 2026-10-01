@@ -12,11 +12,11 @@ import type { Drug } from "../types";
  *   - FDA Prescribing Information for PAXIL (paroxetine hydrochloride)
  *   - FDA Prescribing Information for PAXIL CR (paroxetine mesylate, controlled-release)
  *   - FDA Prescribing Information for BRISDELLE (paroxetine mesylate 7.5 mg, vasomotor symptoms)
- *   - NICE Clinical Guideline CG91 (Depression in adults)
+ *   - NICE Guideline NG222 (Depression in adults, 2022)
  *   - APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder
  *   - ACOG Committee Opinion No. 753 (Preeclampsia and Pregnancy) on SSRI use in pregnancy
  *
- * Last reviewed: 2026-07-13
+ * Last reviewed: 2026-10-01
  */
 export const paroxetine: Drug = {
   /* ---- Identity ---- */
@@ -847,7 +847,7 @@ export const paroxetine: Drug = {
   references: {
     guidelines: [
       {
-        source: "NICE Clinical Guideline CG91 — Depression in adults: recognition and management",
+        source: "NICE Guideline NG222 — Depression in adults: treatment and management (2022)",
       },
       {
         source: "APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder, 3rd edition",
@@ -893,9 +893,9 @@ export const paroxetine: Drug = {
           "Pletzer et al. & general SSRI pharmacology reviews — Discontinuation syndrome severity ranking among SSRIs (paroxetine > venlafaxine > sertraline > escitalopram > fluoxetine).",
       },
       {
-        source: "FDA Prescribing Information — PAXIL (paroxetine hydrochloride), PAXIL CR, and BRISDELLE 7.5 mg",
+        source: "FDA Prescribing Information — PAXIL (paroxetine hydrochloride) IR tablets, revised 2026-09-16 (Apotex)",
         section: "Highlights of Prescribing Information",
-        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/020936s062lbl.pdf",
+        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ef3b5cbe-f9e1-c1ac-79da-cfe14e3a7e7e",
       },
     ],
     patientResources: [
@@ -1157,7 +1157,7 @@ export const paroxetine: Drug = {
   guidelineComparisons: [
     {
       topic: "First-line SSRI for depression",
-      internationalSource: "NICE CG91 / APA Practice Guideline",
+      internationalSource: "NICE NG222 / APA Practice Guideline",
       internationalRecommendation: "SSRIs are first-line for moderate-severe depression. Paroxetine is effective but NOT preferred as first-line due to discontinuation syndrome, weight gain, sedation, and drug interactions. Sertraline or escitalopram are usually chosen first.",
       indianSource: "Indian Psychiatric Society (IPS)",
       indianRecommendation: "IPS guidelines also recommend SSRIs as first-line for depression. Paroxetine is generally NOT the first choice — sertraline and escitalopram are preferred in Indian practice. Paroxetine is reserved for specific niches (severe anxiety with sedation desired, vasomotor symptoms, premature ejaculation).",
@@ -1267,7 +1267,7 @@ export const paroxetine: Drug = {
   /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
   evidenceHierarchy: {
     international: [
-      { source: "NICE CG91", recommendation: "SSRIs are first-line for moderate-severe depression. Paroxetine is effective but not preferred first-line due to discontinuation syndrome, weight gain, sedation, and drug interactions." },
+      { source: "NICE NG222", recommendation: "SSRIs are first-line for moderate-severe depression. Paroxetine is effective but not preferred first-line due to discontinuation syndrome, weight gain, sedation, and drug interactions." },
       { source: "APA Practice Guideline", recommendation: "SSRI first-line for MDD. Paroxetine generally avoided when drug interactions are a concern (strong CYP2D6 inhibitor) or in pregnancy (Category D)." },
       { source: "FDA", recommendation: "Approved for 8 indications: MDD, OCD, Panic, Social Anxiety, GAD, PTSD, PMDD, Vasomotor Symptoms. Pregnancy Category D. Black box warning for suicidality <25." },
       { source: "ACOG Committee Opinion 753", recommendation: "Paroxetine should be avoided in pregnancy due to 1st-trimester cardiac defect risk. Switch to sertraline if pregnancy is planned or detected." },
@@ -1411,8 +1411,8 @@ export const paroxetine: Drug = {
       { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
       { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants (paroxetine: muscarinic M1 antagonist, strong CYP2D6 inhibitor)" },
       { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression (paroxetine discontinuation, tamoxifen interaction, elderly cautions)" },
-      { source: "FDA Prescribing Information — PAXIL (paroxetine hydrochloride), PAXIL CR, and BRISDELLE 7.5 mg", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2014/020936s062lbl.pdf" },
-      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Pharmacological treatment" },
+      { source: "FDA Prescribing Information — PAXIL (paroxetine hydrochloride) IR tablets, revised 2026-09-16 (Apotex)", section: "Highlights of Prescribing Information", url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ef3b5cbe-f9e1-c1ac-79da-cfe14e3a7e7e" },
+      { source: "NICE Guideline NG222 — Depression in adults (2022)", section: "Recommendations — antidepressant choice and switching" },
       { source: "APA Practice Guideline for MDD, 3rd edition" },
       { source: "Cipriani A et al. Lancet 2018 — Comparative efficacy of 21 antidepressants", section: "Network meta-analysis (paroxetine effective but higher dropout for side effects)" },
     ],
@@ -1851,6 +1851,6 @@ export const paroxetine: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
   reviewers: [
-    "Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Paxil/Paxil CR/Brisdelle labels, NICE CG91, APA Practice Guideline, ACOG Committee Opinion 753",
+    "Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Paxil/Paxil CR/Brisdelle labels, NICE NG222, APA Practice Guideline, ACOG Committee Opinion 753",
   ],
 };

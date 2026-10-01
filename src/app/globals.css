@@ -39,8 +39,10 @@
   --color-emergency: var(--emergency);
   --color-emergency-soft: var(--emergency-soft);
   --color-neural: var(--neural);
+  --color-neural-ink: var(--neural-ink);
   --color-neural-soft: var(--neural-soft);
   --color-warning: var(--warning);
+  --color-warning-ink: var(--warning-ink);
   --color-warning-soft: var(--warning-soft);
   --color-success: var(--success);
   --color-success-soft: var(--success-soft);
@@ -155,9 +157,11 @@
   --emergency-soft: oklch(0.95 0.04 25);
 
   --neural: oklch(0.62 0.16 280);
+  --neural-ink: oklch(0.45 0.13 280);
   --neural-soft: oklch(0.95 0.025 280);
 
   --warning: oklch(0.7 0.18 60);
+  --warning-ink: oklch(0.42 0.13 55);
   --warning-soft: oklch(0.95 0.05 70);
 
   --success: oklch(0.62 0.13 155);
@@ -233,9 +237,11 @@
   --emergency-soft: oklch(0.3 0.08 25);
 
   --neural: oklch(0.72 0.18 280);
+  --neural-ink: oklch(0.78 0.15 280);
   --neural-soft: oklch(0.28 0.06 280);
 
   --warning: oklch(0.78 0.18 60);
+  --warning-ink: oklch(0.85 0.15 60);
   --warning-soft: oklch(0.3 0.08 70);
 
   --success: oklch(0.72 0.15 155);
@@ -554,4 +560,75 @@ summary,
 [data-context-menu-allowed] * {
   user-select: text;
   -webkit-user-select: text;
+}
+
+/* ============================================================
+   Concept lesson template (redesign B) — the lesson-at-a-time
+   stepper, its no-JS fallback and the print revision sheet.
+
+   Progressive enhancement: the server renders every lesson
+   stacked. Only when JS marks a lesson data-inactive does the
+   CSS hide it — with JavaScript disabled every lesson stays
+   visible and readable, exactly as before.
+   ============================================================ */
+
+/* One lesson at a time (JS on) */
+.concept-lesson[data-inactive="true"] {
+  display: none;
+}
+
+/* Reduced motion: no transition on the stepper bar's progress */
+@media (prefers-reduced-motion: reduce) {
+  .concept-stepper * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================
+   Print revision sheet (redesign D): the one-page revision
+   material alone, fitted to 1–2 A4 pages.
+
+   Everything except the revision material is hidden; the
+   revision cards print as a compact numbered list with the
+   full source paragraphs from the sr-only block.
+   ============================================================ */
+@media print {
+  [data-concept-lesson][data-inactive="true"] {
+    display: block !important;
+  }
+  .concept-stepper,
+  .concept-lesson > section:not([data-revision-sheet]),
+  .concept-lesson > div:not(:has([data-revision-sheet])),
+  header nav,
+  footer,
+  [role="progressbar"],
+  .kyp-floating-search,
+  [data-revision-sheet] [data-revision-cards],
+  [data-revision-sheet] button {
+    display: none !important;
+  }
+  [data-revision-sheet] {
+    display: block !important;
+  }
+  [data-revision-sheet] [data-revision-full] {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    clip: auto !important;
+    clip-path: none !important;
+    white-space: normal !important;
+  }
+  [data-revision-full] p {
+    font-size: 9.5pt;
+    line-height: 1.35;
+    margin: 0 0 4pt 0;
+    orphans: 2;
+    widows: 2;
+  }
+  @page {
+    size: A4;
+    margin: 14mm 12mm;
+  }
 }

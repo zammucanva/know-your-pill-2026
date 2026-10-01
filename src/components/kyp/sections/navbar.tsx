@@ -127,7 +127,7 @@ export function Navbar() {
 
           <Link
             href="/#emergency"
-            className="hidden items-center gap-1.5 rounded-full border border-emergency/30 bg-emergency-soft/60 px-2.5 py-1.5 text-[11px] font-semibold text-emergency transition-colors hover:bg-emergency/10 sm:flex xl:px-3 xl:text-xs"
+            className="hidden items-center gap-1.5 rounded-full border border-emergency/30 bg-emergency-soft/60 px-2.5 py-1.5 text-[11px] font-bold text-[oklch(0.4_0.16_25)] transition-colors hover:bg-emergency/10 sm:flex xl:px-3 xl:text-xs"
           >
             <Phone className="h-3 w-3" strokeWidth={2.5} />
             Emergency

@@ -18,9 +18,9 @@ import type { Drug } from "../types";
  *   - Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition
  *   - FDA Prescribing Information for CYMBALTA (duloxetine hydrochloride)
  *   - APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder
- *   - NICE Clinical Guideline CG91 (Depression in adults)
+ *   - NICE Guideline NG222 (Depression in adults, 2022)
  *
- * Last reviewed: 2026-07-13
+ * Last reviewed: 2026-10-01
  */
 export const duloxetine: Drug = {
   /* ---- Identity ---- */
@@ -47,7 +47,7 @@ export const duloxetine: Drug = {
   learningObjectives: [
     "Explain how duloxetine differs from venlafaxine mechanistically — balanced SERT + NET blockade from dose 1, with no dose-dependent 'ladder' to unlock noradrenergic effect.",
     "List duloxetine's five FDA-approved indications (MDD, GAD, diabetic peripheral neuropathic pain, fibromyalgia, chronic musculoskeletal pain) and explain why pain relief may precede mood improvement.",
-    "Recognise duloxetine's signature hepatotoxicity risk and identify the patients in whom it is contraindicated (Child-Pugh B/C, cirrhosis, heavy alcohol use).",
+    "Recognise duloxetine's signature hepatotoxicity risk and identify the patients in whom its use must be avoided (Child-Pugh B/C, cirrhosis, heavy alcohol use).",
     "Differentiate duloxetine's safety profile from venlafaxine — minimal hypertension versus dose-dependent hypertension — and explain when each is preferred.",
     "Apply renal, hepatic, and CYP1A2/CYP2D6 interaction logic when starting duloxetine in a complex patient (especially with fluvoxamine, ciprofloxacin, or paroxetine).",
     "Counsel a patient with depression plus chronic pain on what to expect in the first 6 weeks, including the importance of avoiding alcohol and not crushing the enteric-coated capsule.",
@@ -192,7 +192,7 @@ export const duloxetine: Drug = {
       name: "Substantial alcohol use (≥3 drinks/day)",
       severity: "absolute",
       rationale:
-        "FDA Cymbalta label specifically contraindicates use in patients with substantial alcohol use (≥3 drinks/day) due to additive hepatotoxicity risk. Post-marketing reports of severe hepatic injury are over-represented in heavy drinkers.",
+        "The FDA Cymbalta label directs AVOIDING use in patients with substantial alcohol use (≥3 drinks/day) — the label's hepatotoxicity warning (5.2) — because of additive hepatotoxicity risk. Post-marketing reports of severe hepatic injury are over-represented in heavy drinkers.",
     },
     {
       name: "Concurrent thioridazine",
@@ -397,7 +397,7 @@ export const duloxetine: Drug = {
     {
       parameter: "Alcohol use assessment",
       frequency: "Baseline and at each visit.",
-      rationale: "Substantial alcohol use (≥3 drinks/day) is a contraindication due to additive hepatotoxicity. Counsel patients explicitly about this.",
+      rationale: "Substantial alcohol use (≥3 drinks/day) is a labeled avoid-use situation due to additive hepatotoxicity. Counsel patients explicitly about this.",
     },
     {
       parameter: "Renal function (CrCl)",
@@ -493,7 +493,7 @@ export const duloxetine: Drug = {
     "Mild-moderate renal impairment (CrCl 30–80 mL/min): no dose adjustment required. Severe renal impairment (CrCl <30 mL/min): AVOID — use is not recommended; AUC and Cmax approximately double. End-stage renal disease / haemodialysis: AVOID.",
 
   hepaticAdjustment:
-    "Child-Pugh A (mild hepatic impairment): use with caution; consider lower starting dose (30 mg/day) and slower titration. Child-Pugh B or C (moderate-severe hepatic impairment): AVOID (contraindicated). Cirrhosis: AVOID. Substantial alcohol use (≥3 drinks/day): AVOID.",
+    "Child-Pugh A (mild hepatic impairment): use with caution; consider lower starting dose (30 mg/day) and slower titration. Child-Pugh B or C (moderate-severe hepatic impairment): AVOID (labeled avoid-use; exposure rises sharply). Cirrhosis: AVOID. Substantial alcohol use (≥3 drinks/day): AVOID.",
 
   /* ---- Education ---- */
   patientExplanation:
@@ -564,7 +564,7 @@ export const duloxetine: Drug = {
     {
       title: "LIVER Avoids — Duloxetine Hepatotoxicity",
       trick: "LIVER — Liver disease (Child-Pugh B/C), Inflammation (cirrhosis), Volume of alcohol ≥3 drinks/day, End-stage renal (CrCl <30), Rare hepatotoxicity — Avoid all five.",
-      remembers: "Duloxetine's absolute contraindications cluster around hepatic and renal clearance. Check LFTs at baseline; discontinue if ALT/AST >3× ULN.",
+      remembers: "Duloxetine's do-not-use situations cluster around hepatic and renal clearance. Check LFTs at baseline; discontinue if ALT/AST >3× ULN.",
     },
     {
       title: "1A2 = One To Avoid (Duloxetine + Fluvoxamine/Ciprofloxacin)",
@@ -586,7 +586,7 @@ export const duloxetine: Drug = {
     "Onset: pain relief at 1–2 weeks (NET on descending pain pathway); mood effect at 4–6 weeks. Counselling point: pain relief before mood improvement is a feature.",
     "Common side effects: nausea (#1, dual mechanism), dry mouth (NET), somnolence/fatigue, insomnia, headache, dizziness/orthostatic hypotension, constipation, decreased appetite, sweating, sexual dysfunction.",
     "Serious: HEPATOTOXICITY (signature — severe liver injury), orthostatic hypotension/syncope, serotonin syndrome, SIADH, suicidality <25 (black box), bleeding (platelet), activation of mania, discontinuation syndrome (less severe than venlafaxine).",
-    "Contraindications: MAOIs (14-day washout), hepatic impairment (Child-Pugh B/C) or cirrhosis, ESRD (CrCl <30), substantial alcohol use (≥3 drinks/day), thioridazine (CYP2D6), hypersensitivity.",
+    "Do not use in: MAOIs (the labeled contraindication — 14-day washout), hepatic impairment (Child-Pugh B/C) or cirrhosis, ESRD (CrCl <30), substantial alcohol use (≥3 drinks/day) — the latter three are labeled avoid-use — plus thioridazine (CYP2D6) and hypersensitivity.",
     "Interactions: MAOIs (fatal), CYP1A2 inhibitors (fluvoxamine, ciprofloxacin — AVOID, 5× AUC rise), CYP2D6 inhibitors (paroxetine, fluoxetine, bupropion), tramadol/triptans/St John's Wort (serotonin), NSAIDs/warfarin (bleeding), alcohol (hepatotoxic), diuretics (orthostatic), thioridazine (QTc).",
     "Pharmacokinetics: bioavailability ~50%, peak 6h, half-life 12h, protein-bound >90%, hepatic metabolism via CYP1A2 + CYP2D6, no active metabolite, ~70% renal excretion of metabolites.",
     "Pregnancy: NOT drug of choice (sertraline preferred). Former Category C. Third-trimester neonatal adaptation syndrome. Lactation: acceptable but monitor infant for sedation.",
@@ -615,7 +615,7 @@ export const duloxetine: Drug = {
       teachingPoints: [
         "When depression and neuropathic pain coexist (very common in diabetes), duloxetine is uniquely suited — single agent, two FDA indications, balanced mechanism from dose 1.",
         "Pain relief often precedes mood improvement with duloxetine (1–2 weeks vs 4–6 weeks). Use this to counsel patients and maintain adherence during the early 'mood-hasn't-improved-yet' window.",
-        "Alcohol counselling is essential — substantial alcohol use (≥3 drinks/day) is a contraindication due to hepatotoxicity. Even moderate drinkers should reduce. Document the conversation.",
+        "Alcohol counselling is essential — substantial alcohol use (≥3 drinks/day) warrants avoiding duloxetine entirely due to hepatotoxicity. Even moderate drinkers should reduce. Document the conversation.",
         "Orthostatic hypotension is more common than with SSRIs (NET effect). Check orthostatic vitals, especially in patients already on antihypertensives like telmisartan.",
         "Baseline LFTs are essential. Normal LFTs do not eliminate risk — counsel patient to report symptoms of liver injury (jaundice, dark urine, RUQ pain, fatigue) at any point during therapy.",
       ],
@@ -835,7 +835,7 @@ export const duloxetine: Drug = {
         source: "APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder, 3rd edition",
       },
       {
-        source: "NICE Clinical Guideline CG91 — Depression in adults: recognition and management",
+        source: "NICE Guideline NG222 — Depression in adults: treatment and management (2022)",
       },
       {
         source: "American Diabetes Association Standards of Medical Care in Diabetes — Neuropathy chapter",
@@ -876,9 +876,9 @@ export const duloxetine: Drug = {
         source: "Lunn MP, Hughes RA, Wiffen PJ. Duloxetine for treating painful neuropathy, chronic pain or fibromyalgia. Cochrane Database Syst Rev 2014;(1):CD007115.",
       },
       {
-        source: "FDA Prescribing Information — CYMBALTA (duloxetine hydrochloride)",
+        source: "FDA Prescribing Information — CYMBALTA (duloxetine hydrochloride), revised 2025-07-21 (Lilly)",
         section: "Highlights of Prescribing Information",
-        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/021427s053lbl.pdf",
+        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f7d4d67-10c1-4bf4-a7f2-c185fbad64ba",
       },
     ],
     patientResources: [
@@ -1136,7 +1136,7 @@ export const duloxetine: Drug = {
   guidelineComparisons: [
     {
       topic: "Role of duloxetine in depression with comorbid pain",
-      internationalSource: "NICE CG91 / NICE Neuropathic Pain Guideline (CG173)",
+      internationalSource: "NICE NG222 / NICE Neuropathic Pain Guideline (CG173)",
       internationalRecommendation: "Duloxetine is first-line for painful diabetic neuropathy (NICE CG173). For depression with comorbid neuropathic pain, duloxetine is the preferred single agent (treats both). Also FDA-approved for fibromyalgia and chronic musculoskeletal pain.",
       indianSource: "Indian Psychiatric Society (IPS) / IASP India Pain Guidelines",
       indianRecommendation: "IPS guidelines position SSRIs as first-line for uncomplicated depression. Duloxetine is preferred when depression is comorbid with neuropathic pain, fibromyalgia, or chronic musculoskeletal pain. In Indian diabetology practice, duloxetine is increasingly first-line for painful diabetic neuropathy with comorbid depression.",
@@ -1246,7 +1246,7 @@ export const duloxetine: Drug = {
   /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
   evidenceHierarchy: {
     international: [
-      { source: "NICE CG91 (Depression) + CG173 (Neuropathic Pain)", recommendation: "Duloxetine is first-line for painful diabetic neuropathy. For depression with comorbid neuropathic pain, duloxetine is the preferred single agent." },
+      { source: "NICE NG222 (Depression) + CG173 (Neuropathic Pain)", recommendation: "Duloxetine is first-line for painful diabetic neuropathy. For depression with comorbid neuropathic pain, duloxetine is the preferred single agent." },
       { source: "APA Practice Guideline", recommendation: "Duloxetine is a rational SNRI choice for depression with comorbid pain, anxiety, or when BP elevation is a concern with venlafaxine." },
       { source: "FDA", recommendation: "Approved for 5 indications: MDD, GAD, diabetic peripheral neuropathic pain, fibromyalgia, chronic musculoskeletal pain. Hepatotoxicity warning." },
       { source: "American Diabetes Association (ADA)", recommendation: "Duloxetine is a first-line pharmacological option for painful diabetic neuropathy." },
@@ -1382,7 +1382,7 @@ export const duloxetine: Drug = {
       { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders; Pain section" },
       { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants (SNRIs and pain)" },
       { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression with comorbid pain" },
-      { source: "FDA Prescribing Information — CYMBALTA (duloxetine hydrochloride)", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/021427s054lbl.pdf" },
+      { source: "FDA Prescribing Information — CYMBALTA (duloxetine hydrochloride), revised 2025-07-21 (Lilly)", section: "Highlights of Prescribing Information", url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2f7d4d67-10c1-4bf4-a7f2-c185fbad64ba" },
       { source: "NICE Clinical Guideline CG173 — Neuropathic pain in adults", section: "Pharmacological management — duloxetine first-line for diabetic neuropathy" },
       { source: "American Diabetes Association (ADA) Standards of Medical Care", section: "Diabetic neuropathy management — duloxetine as first-line pharmacological option" },
       { source: "Cipriani A et al. Lancet 2018 — Comparative efficacy of 21 antidepressants", section: "Network meta-analysis (duloxetine among effective agents)" },
@@ -1696,15 +1696,15 @@ export const duloxetine: Drug = {
     },
     {
       id: "quiz-hepatotoxicity",
-      question: "Which of the following is an ABSOLUTE contraindication to duloxetine?",
+      question: "A heavy drinker (≥3 alcoholic drinks/day) needs an antidepressant. What applies to duloxetine for this patient?",
       options: [
-        "Hypertension",
-        "Diabetes mellitus",
-        "Substantial alcohol use (≥3 drinks/day)",
-        "Asthma",
+        "Safe — only hypertension is a concern",
+        "Safe if diabetes is well controlled",
+        "Duloxetine must be AVOIDED — labeled avoid-use with hepatotoxicity warning",
+        "Safe — asthma is the only respiratory concern",
       ],
       correctIndex: 2,
-      explanation: "Substantial alcohol use (≥3 alcoholic drinks per day) is an absolute contraindication per the FDA Cymbalta label — additive hepatotoxicity risk. Post-marketing reports of severe hepatic injury are over-represented in heavy drinkers. Duloxetine is also contraindicated in liver disease/cirrhosis and CrCl <30 mL/min. Hypertension is NOT a contraindication (duloxetine has less BP effect than venlafaxine).",
+      explanation: "Substantial alcohol use (≥3 alcoholic drinks per day) is a labeled AVOID-USE situation on the FDA Cymbalta label — the hepatotoxicity warning directs avoiding duloxetine in heavy drinkers because post-marketing reports of severe hepatic injury are over-represented in this group. (The label's formal CONTRAINDICATIONS are MAOI-related only.) Duloxetine is likewise avoided in liver disease/cirrhosis and CrCl <30 mL/min. Hypertension is NOT a reason to avoid duloxetine (it has less BP effect than venlafaxine).",
       afterSectionId: "contraindications",
     },
     {
@@ -1857,5 +1857,5 @@ export const duloxetine: Drug = {
 
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
-  reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Cymbalta label, NICE CG91, NICE CG173 (Neuropathic Pain), APA Practice Guideline, ADA Standards of Care, KD Tripathi 8e, IPS Depression Guidelines, RSSDI Diabetes Guidelines, NMC CBME Curriculum"],
+  reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Cymbalta label, NICE NG222, NICE CG173 (Neuropathic Pain), APA Practice Guideline, ADA Standards of Care, KD Tripathi 8e, IPS Depression Guidelines, RSSDI Diabetes Guidelines, NMC CBME Curriculum"],
 };

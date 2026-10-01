@@ -22,10 +22,10 @@ import type { Drug } from "../types";
  *   - Katzung Basic & Clinical Pharmacology, 16th edition
  *   - Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition
  *   - FDA Prescribing Information for REMERON / REMERON SolTab (mirtazapine)
- *   - NICE Clinical Guideline CG91 (Depression in adults)
+ *   - NICE Guideline NG222 (Depression in adults, 2022)
  *   - APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder
  *
- * Last reviewed: 2026-07-13
+ * Last reviewed: 2026-10-01
  */
 export const mirtazapine: Drug = {
   /* ---- Identity ---- */
@@ -834,7 +834,7 @@ export const mirtazapine: Drug = {
   references: {
     guidelines: [
       {
-        source: "NICE Clinical Guideline CG91 — Depression in adults: recognition and management",
+        source: "NICE Guideline NG222 — Depression in adults: treatment and management (2022)",
       },
       {
         source: "APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder, 3rd edition",
@@ -875,9 +875,9 @@ export const mirtazapine: Drug = {
         source: "Fawcett J, Barkin RL. A meta-analysis of eight randomized, double-blind, controlled clinical trials of mirtazapine for the treatment of patients with major depression and symptoms of anxiety. J Clin Psychiatry 1998;59:123-127.",
       },
       {
-        source: "FDA Prescribing Information — REMERON / REMERON SolTab (mirtazapine tablets)",
+        source: "FDA Prescribing Information — REMERON/RemeronSolTab (mirtazapine), revised 2025-08-06 (Organon)",
         section: "Highlights of Prescribing Information",
-        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2007/020415s024lbl.pdf",
+        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=98ad1917-a094-44f5-a28f-a64a8cfcd887",
       },
     ],
     patientResources: [
@@ -1248,7 +1248,7 @@ export const mirtazapine: Drug = {
     international: [
       { source: "APA Practice Guideline", recommendation: "SSRIs first-line for MDD. Mirtazapine is an alternative first-line for depression with insomnia/weight loss, and a recognised augmentation strategy in TRD." },
       { source: "FDA", recommendation: "Approved for MDD. Boxed warning: suicidality <25. Agranulocytosis risk ~1 in 1000 — counsel about infection signs." },
-      { source: "NICE CG91", recommendation: "SSRIs first-line. Mirtazapine considered when insomnia and weight loss are prominent symptom-matched features." },
+      { source: "NICE NG222", recommendation: "SSRIs first-line. Mirtazapine considered when insomnia and weight loss are prominent symptom-matched features." },
       { source: "CANMAT (Canada)", recommendation: "Mirtazapine is a recognised first-line alternative and augmentation strategy for MDD, with evidence for California Rocket Fuel combination in TRD." },
     ],
     indian: [
@@ -1382,8 +1382,8 @@ export const mirtazapine: Drug = {
       { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
       { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants (NaSSA, α2 antagonist)" },
       { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression and palliative care" },
-      { source: "FDA Prescribing Information — REMERON / REMERON SolTab (mirtazapine)", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/020415s028lbl.pdf" },
-      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Alternative antidepressants" },
+      { source: "FDA Prescribing Information — REMERON/RemeronSolTab (mirtazapine), revised 2025-08-06 (Organon)", section: "Highlights of Prescribing Information", url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=98ad1917-a094-44f5-a28f-a64a8cfcd887" },
+      { source: "NICE Guideline NG222 — Depression in adults (2022)", section: "Alternative antidepressants" },
       { source: "APA Practice Guideline for MDD, 3rd edition", section: "Pharmacotherapy — atypical antidepressants and augmentation" },
       { source: "CANMAT 2016 — Clinical Guidelines for the Management of Adults with MDD", section: "Augmentation strategies" },
     ],

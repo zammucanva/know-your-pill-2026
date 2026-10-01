@@ -20,10 +20,10 @@ import type { Drug } from "../types";
  *   - FDA Prescribing Information for CELEXA (citalopram hydrobromide)
  *   - FDA Drug Safety Communication (2011): abnormal heart rhythms associated
  *     with high doses of citalopram — dose cap and QTc warning
- *   - NICE Clinical Guideline CG91 (Depression in adults)
+ *   - NICE Guideline NG222 (Depression in adults, 2022)
  *   - APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder
  *
- * Last reviewed: 2026-07-13
+ * Last reviewed: 2026-10-01
  */
 export const citalopram: Drug = {
   /* ---- Identity ---- */
@@ -814,7 +814,7 @@ export const citalopram: Drug = {
         url: "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fda-drug-safety-communication-abnormal-heart-rhythms-associated-high-doses-celexa-citalopram",
       },
       {
-        source: "NICE Clinical Guideline CG91 — Depression in adults: recognition and management",
+        source: "NICE Guideline NG222 — Depression in adults: treatment and management (2022)",
       },
       {
         source: "APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder, 3rd edition",
@@ -846,9 +846,9 @@ export const citalopram: Drug = {
     ],
     reviews: [
       {
-        source: "FDA Prescribing Information — CELEXA (citalopram hydrobromide) tablets",
+        source: "FDA Prescribing Information — CELEXA (citalopram hydrobromide), revised 2023-10-09 (Allergan)",
         section: "Highlights of Prescribing Information (revised post-2011 dose-cap)",
-        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/020822s052lbl.pdf",
+        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4259d9b1-de34-43a4-85a8-41dd214e9177",
       },
       {
         source: "CPIC Guideline for CYP2C19 and CYP2D6 and Selective Serotonin Reuptake Inhibitors",
@@ -1119,7 +1119,7 @@ export const citalopram: Drug = {
     },
     {
       topic: "First-line SSRI selection in depression",
-      internationalSource: "NICE CG91 / APA / Cipriani 2018 Lancet network meta-analysis",
+      internationalSource: "NICE NG222 / APA / Cipriani 2018 Lancet network meta-analysis",
       internationalRecommendation: "SSRIs are first-line. Cipriani 2018 ranked escitalopram (not citalopram) among the most efficacious and best-tolerated antidepressants. Citalopram has no specific advantage over escitalopram and carries QTc risk.",
       indianSource: "Indian Psychiatric Society (IPS)",
       indianRecommendation: "IPS recommends SSRIs as first-line. In Indian practice, escitalopram, sertraline, and fluoxetine are preferred over citalopram. Citalopram is mostly prescribed by non-psychiatrists (GPs, physicians) — psychiatrists increasingly avoid it in favour of escitalopram.",
@@ -1224,7 +1224,7 @@ export const citalopram: Drug = {
     international: [
       { source: "FDA 2011 Drug Safety Communication", recommendation: "Citalopram dose-dependent QTc prolongation → torsades de pointes risk. Dose cap: 40mg/day adults, 20mg/day elderly/hepatic/CYP2C19-inhibited." },
       { source: "Cipriani A et al. Lancet 2018", recommendation: "Network meta-analysis of 21 antidepressants ranked escitalopram (not citalopram) among the most efficacious and best-tolerated." },
-      { source: "NICE CG91 / APA Practice Guideline", recommendation: "SSRIs are first-line for moderate-severe depression. Citalopram has no specific advantage over escitalopram and carries QTc risk." },
+      { source: "NICE NG222 / APA Practice Guideline", recommendation: "SSRIs are first-line for moderate-severe depression. Citalopram has no specific advantage over escitalopram and carries QTc risk." },
       { source: "WHO mhGAP", recommendation: "SSRIs recommended as first-line antidepressants in the Mental Health Gap Action Programme." },
     ],
     indian: [
@@ -1358,9 +1358,9 @@ export const citalopram: Drug = {
       { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
       { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants" },
       { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression and QTc-prolonging drugs" },
-      { source: "FDA Prescribing Information — CELEXA (citalopram hydrobromide)", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/020822s054lbl.pdf" },
+      { source: "FDA Prescribing Information — CELEXA (citalopram hydrobromide), revised 2023-10-09 (Allergan)", section: "Highlights of Prescribing Information", url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4259d9b1-de34-43a4-85a8-41dd214e9177" },
       { source: "FDA Drug Safety Communication (2011) — Abnormal heart rhythms associated with high doses of citalopram", section: "Dose cap and QTc warning" },
-      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Pharmacological treatment" },
+      { source: "NICE Guideline NG222 — Depression in adults (2022)", section: "Recommendations — antidepressant choice and switching" },
       { source: "Cipriani A et al. Lancet 2018 — Comparative efficacy of 21 antidepressants", section: "Network meta-analysis (escitalopram, not citalopram, ranked highest among SSRIs)" },
     ],
     indian: [

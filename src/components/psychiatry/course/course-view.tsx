@@ -43,6 +43,7 @@ import { CourseFaq, CourseReferences, CourseNextStep, type AdjacentCourseRef } f
 import { courseNavItems, getCourseRenderedSectionIds } from "@/lib/kyp/psychiatry-course-sections";
 import type { PsychiatryCourse } from "@/lib/kyp/data/psychiatry-courses/types";
 import type { LessonGroup } from "@/lib/kyp/data";
+import { ConceptCourseView } from "./concept/concept-course-view";
 
 /**
  * PsychiatryCourseView — the six-lesson KYP learning journey.
@@ -59,7 +60,23 @@ import type { LessonGroup } from "@/lib/kyp/data";
  * the note shell uses (slug-keyed) — existing progress for a migrated
  * topic keeps working.
  */
+/** Lesson dispatcher — the concept template for concept courses,
+ *  the shared endless-scroll layout for disorder courses. Kept as a
+ *  hook-free wrapper so both implementations own their hook order. */
 export function PsychiatryCourseView({
+  course,
+  adjacent,
+}: {
+  course: PsychiatryCourse;
+  adjacent?: { prev: AdjacentCourseRef | null; next: AdjacentCourseRef | null };
+}) {
+  if (course.kind === "concept") {
+    return <ConceptCourseView course={course} adjacent={adjacent} />;
+  }
+  return <DisorderCourseView course={course} adjacent={adjacent} />;
+}
+
+function DisorderCourseView({
   course,
   adjacent,
 }: {

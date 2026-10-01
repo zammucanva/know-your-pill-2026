@@ -22,11 +22,11 @@ import type { Drug } from "../types";
  *   - Katzung Basic & Clinical Pharmacology, 16th edition
  *   - Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition
  *   - FDA Prescribing Information for WELLBUTRIN / WELLBUTRIN SR / WELLBUTRIN XL / ZYBAN
- *   - NICE Clinical Guideline CG91 (Depression in adults)
+ *   - NICE Guideline NG222 (Depression in adults, 2022)
  *   - APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder
  *   - US Public Health Service Guideline — Treating Tobacco Use and Dependence
  *
- * Last reviewed: 2026-07-13
+ * Last reviewed: 2026-10-01
  */
 export const bupropion: Drug = {
   /* ---- Identity ---- */
@@ -883,7 +883,7 @@ export const bupropion: Drug = {
         source: "APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder, 3rd edition",
       },
       {
-        source: "NICE Clinical Guideline CG91 — Depression in adults: recognition and management",
+        source: "NICE Guideline NG222 — Depression in adults: treatment and management (2022)",
       },
       {
         source: "U.S. Public Health Service — Treating Tobacco Use and Dependence: Clinical Practice Guideline",
@@ -922,9 +922,9 @@ export const bupropion: Drug = {
         source: "Patel K et al. Bupropion: a systematic review and meta-analysis of effectiveness as an antidepressant. Ther Adv Psychopharmacol 2016;6(2):99-144.",
       },
       {
-        source: "FDA Prescribing Information — WELLBUTRIN / WELLBUTRIN SR / WELLBUTRIN XL / ZYBAN (bupropion hydrochloride)",
+        source: "FDA Prescribing Information — WELLBUTRIN SR (bupropion hydrochloride), revised 2025-11-05 (GlaxoSmithKline); IR/XL/ZYBAN formulation labels (GlaxoSmithKline)",
         section: "Highlights of Prescribing Information",
-        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/018644s039lbl.pdf",
+        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cbc8c074-f080-4489-a5ae-207b5fadeba3",
       },
     ],
     patientResources: [
@@ -1300,7 +1300,7 @@ export const bupropion: Drug = {
     international: [
       { source: "APA Practice Guideline", recommendation: "SSRIs first-line for MDD. Bupropion is an alternative first-line for atypical depression or when SSRI sexual SE / weight gain is a concern." },
       { source: "FDA", recommendation: "Approved for MDD, seasonal affective disorder prevention, and smoking cessation (Zyban). Boxed warning: suicidality <25." },
-      { source: "NICE CG91", recommendation: "SSRIs first-line. Bupropion not commonly used as first-line in UK NHS but is an alternative when sexual dysfunction limits SSRI use." },
+      { source: "NICE NG222", recommendation: "SSRIs first-line. Bupropion not commonly used as first-line in UK NHS but is an alternative when sexual dysfunction limits SSRI use." },
       { source: "US Public Health Service", recommendation: "Bupropion SR is first-line pharmacotherapy for tobacco dependence, alongside varenicline and NRT." },
     ],
     indian: [
@@ -1434,8 +1434,8 @@ export const bupropion: Drug = {
       { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
       { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants (NDRIs)" },
       { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression and smoking cessation" },
-      { source: "FDA Prescribing Information — WELLBUTRIN / WELLBUTRIN SR / WELLBUTRIN XL / ZYBAN", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/018644s037lbl.pdf" },
-      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Alternative antidepressants" },
+      { source: "FDA Prescribing Information — WELLBUTRIN SR (bupropion hydrochloride), revised 2025-11-05 (GlaxoSmithKline); IR/XL/ZYBAN formulation labels (GlaxoSmithKline)", section: "Highlights of Prescribing Information", url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=cbc8c074-f080-4489-a5ae-207b5fadeba3" },
+      { source: "NICE Guideline NG222 — Depression in adults (2022)", section: "Alternative antidepressants" },
       { source: "APA Practice Guideline for MDD, 3rd edition", section: "Pharmacotherapy — atypical antidepressants" },
       { source: "US Public Health Service Guideline — Treating Tobacco Use and Dependence", section: "Pharmacotherapy — bupropion SR" },
     ],
