@@ -10,7 +10,7 @@ import { RoadmapSection } from "@/components/kyp/sections/roadmap-section";
 import { FaqSection } from "@/components/kyp/sections/faq-section";
 import { EmergencySection } from "@/components/kyp/sections/emergency-section";
 import { Footer } from "@/components/kyp/sections/footer";
-import { drugs, substancePages, diseases } from "@/lib/kyp/data";
+import { drugs, substancePages } from "@/lib/kyp/data";
 
 /**
  * HomeContent — the homepage body (main + footer), without the Navbar or
@@ -27,7 +27,6 @@ import { drugs, substancePages, diseases } from "@/lib/kyp/data";
 // second list) and passed to the client hero as plain strings.
 const drugSlugs = drugs.map((d) => d.slug);
 const substanceSlugs = substancePages.map((s) => s.slug);
-const diseaseSlugs = diseases.map((d) => d.slug);
 const popularSearches = drugs.slice(0, 4).map((d) => d.genericName);
 
 export function HomeContent() {
@@ -37,7 +36,6 @@ export function HomeContent() {
         <HomeHero
           drugSlugs={drugSlugs}
           substanceSlugs={substanceSlugs}
-          diseaseSlugs={diseaseSlugs}
           popularSearches={popularSearches}
         />
         <StatsSection />
