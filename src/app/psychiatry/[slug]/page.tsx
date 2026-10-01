@@ -13,6 +13,7 @@ import { LessonShell, type LessonRef } from "@/components/oxford/lesson-shell";
 import { getPsychiatryCourse } from "@/lib/kyp/data/psychiatry-courses";
 import { PsychiatryCourseView } from "@/components/psychiatry/course/course-view";
 import type { AdjacentCourseRef } from "@/components/psychiatry/course/course-recall";
+import { cn } from "@/lib/utils";
 
 /**
  * /psychiatry/[slug] — one KYP Psychiatry lesson per canonical note.
@@ -85,6 +86,9 @@ export default async function PsychiatryLessonPage({
   // the note corpus are untouched — the course layer is additive.
   const course = getPsychiatryCourse(slug);
   if (course) {
+    // Concept courses render the lesson-at-a-time template with no
+    // left section rail; disorder courses keep the rail gutter.
+    const mainPad = course.kind === "concept" ? "pt-16" : "pt-16 lg:pl-52 xl:pl-56";
     // Curriculum continuation — adjacency derived from the SAME
     // learner-facing order the library uses (never the migration order).
     const { prev, next } = adjacentCurriculum(slug);
@@ -104,7 +108,17 @@ export default async function PsychiatryLessonPage({
       <div className="flex min-h-screen flex-col">
         <Navbar />
         <FloatingSearch />
-        <main className="flex-1 pt-16 lg:pl-52 xl:pl-56">
+        <main className={cn("flex-1", mainPad)}>
+          {/* No-JS progressive enhancement: the lesson-at-a-time concept
+              template keeps every lesson stacked without JavaScript;
+              these rules also unhide the JS-driven disclosures (closed
+              Radix accordions, collapsed exam panels) so nothing depends
+              on JS to be readable. Browsers WITH JS ignore <noscript>. */}
+          {course.kind === "concept" && (
+            <noscript>
+              <style>{`[data-slot="accordion-content"][hidden] { display: block !important; height: auto !important; overflow: visible !important; } .concept-exam-panel.sr-only { position: static !important; width: auto !important; height: auto !important; padding: 0 !important; margin: 0 !important; overflow: visible !important; clip: auto !important; clip-path: none !important; white-space: normal !important; } .concept-inline-rest { position: static !important; width: auto !important; height: auto !important; margin: 0 !important; overflow: visible !important; clip: auto !important; clip-path: none !important; white-space: normal !important; }`}</style>
+            </noscript>
+          )}
           <div className="border-b border-border/40 bg-muted/20">
             <Container>
               <nav className="flex items-center gap-2 py-2 text-xs text-muted-foreground" aria-label="Breadcrumb">
