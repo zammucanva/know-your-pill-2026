@@ -36,6 +36,7 @@ import {
   type DifficultySelection,
 } from "@/lib/kyp/custom-test/difficulty";
 import { BookMarked } from "lucide-react";
+import { IS_STATIC_EXPORT } from "@/lib/kyp/static-export";
 
 /**
  * /quiz — aggregate MCQ practice page.
@@ -187,6 +188,7 @@ export default function QuizPage() {
   const [difficulty, setDifficulty] = React.useState<DifficultySelection>("all");
   React.useEffect(() => {
     let cancelled = false;
+    if (IS_STATIC_EXPORT) return;
     fetch("/api/auth/session")
       .then((r) => (r.ok ? r.json() : { user: null }))
       .then((data: { user?: { learnerType?: string } | null }) => {

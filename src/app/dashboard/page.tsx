@@ -15,6 +15,7 @@ import { Section } from "@/components/kyp/ui/section";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { IS_STATIC_EXPORT } from "@/lib/kyp/static-export";
 
 /**
  * /dashboard — personal dashboard showing the user's reading progress,
@@ -81,6 +82,14 @@ export default function DashboardPage() {
   const [bookmarks, setBookmarks] = React.useState<BookmarkEntry[]>([]);
 
   React.useEffect(() => {
+    // Static export: the dashboard is a session surface and there is
+    // no server — send the visitor to Study Mode (whose progress
+    // persists locally) instead of bouncing through /welcome's
+    // now-abstract login path [audit B1].
+    if (IS_STATIC_EXPORT) {
+      router.replace("/study");
+      return;
+    }
     async function load() {
       try {
         const sessionRes = await fetch("/api/auth/session");

@@ -10,6 +10,7 @@ import { Menu, Moon, Sun, X, Phone, LogIn, LogOut, User as UserIcon } from "luci
 import { Button } from "@/components/ui/button";
 import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 import { imgPath } from "@/lib/kyp/image-path";
+import { IS_STATIC_EXPORT } from "@/lib/kyp/static-export";
 import { cn } from "@/lib/utils";
 
 /**
@@ -85,8 +86,10 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Check session on mount
+  // Check session on mount (server mode only — the static export has
+  // no session API and no way to log in, so the CTA is hidden too)
   React.useEffect(() => {
+    if (IS_STATIC_EXPORT) return;
     fetch("/api/auth/session")
       .then(r => r.json())
       .then(data => { if (data.user) setUser(data.user); })
@@ -177,6 +180,10 @@ export function Navbar() {
               </Button>
             </div>
           ) : (
+            /* Static export: no auth backend exists — hide the Log in
+               CTA rather than link to a page whose forms can only fail
+               with "Network error" [audit B1]. */
+            !IS_STATIC_EXPORT && (
             /* asChild renders the Link itself as the button element —
                the previous <Link><Button> composition nested a <button>
                inside an <a> (invalid interactive-inside-interactive HTML,
@@ -192,6 +199,7 @@ export function Navbar() {
                 Log in
               </Link>
             </Button>
+            )
           )}
 
           <Button
@@ -250,7 +258,9 @@ export function Navbar() {
               <Phone className="h-4 w-4" strokeWidth={2.5} />
               Emergency Help
             </Link>
-            {/* Auth link in mobile menu */}
+            {/* Auth link in mobile menu (hidden in the static export —
+                no backend, no dead ends [audit B1]) */}
+            {!IS_STATIC_EXPORT && (
             <div className="mt-2 border-t border-border/50 pt-3">
               {user ? (
                 <>
@@ -285,6 +295,7 @@ export function Navbar() {
                 </Link>
               )}
             </div>
+            )}
           </nav>
         </div>
       )}

@@ -11,6 +11,7 @@ import { Section } from "@/components/kyp/ui/section";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { IS_STATIC_EXPORT } from "@/lib/kyp/static-export";
 
 /**
  * /reset — complete a password reset with a single-use token.
@@ -33,8 +34,15 @@ export default function ResetPasswordPage() {
   const [done, setDone] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
 
-  // Prefill the token from ?token=... (operator-delivered links).
+  // Static export: password resets require the backend API that the
+  // GitHub Pages deployment does not have — the form could only fail.
+  // Redirect home; token links are only ever issued by the operator
+  // in server mode [audit B1].
   React.useEffect(() => {
+    if (IS_STATIC_EXPORT) {
+      router.replace("/");
+      return;
+    }
     const params = new URLSearchParams(window.location.search);
     const t = params.get("token");
     if (t) setToken(t);

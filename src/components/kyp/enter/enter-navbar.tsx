@@ -10,6 +10,7 @@ import { FloatingSearch } from "@/components/kyp/ui/floating-search";
 import { imgPath } from "@/lib/kyp/image-path";
 import { cn } from "@/lib/utils";
 import { motion, type MotionValue } from "framer-motion";
+import { IS_STATIC_EXPORT } from "@/lib/kyp/static-export";
 
 const navLinks = [
   { href: "#library", label: "Medications" },
@@ -76,6 +77,9 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
   }, []);
 
   React.useEffect(() => {
+    // Static export: no session API — skip (the Log in CTA is hidden
+    // there too) [audit B1].
+    if (IS_STATIC_EXPORT) return;
     fetch("/api/auth/session")
       .then((r) => r.json())
       .then((data) => {
@@ -181,7 +185,10 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
                 asChild
                 variant="ghost"
                 size="sm"
-                className="hidden gap-1.5 rounded-full sm:inline-flex"
+                className={cn(
+                  "hidden gap-1.5 rounded-full sm:inline-flex",
+                  IS_STATIC_EXPORT && "sm:hidden"
+                )}
               >
                 {/* asChild — renders the <a> itself as the button element
                     (no nested button-inside-link, audit B11) */}
@@ -268,6 +275,8 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
                     </button>
                   </>
                 ) : (
+                  /* Static export: no backend — hide the auth CTA [audit B1]. */
+                  !IS_STATIC_EXPORT && (
                   <Link
                     href="/welcome"
                     onClick={() => setOpen(false)}
@@ -276,6 +285,7 @@ export function EnterNavbar({ headerOpacity, active, logoRef }: EnterNavbarProps
                     <LogIn className="h-4 w-4" />
                     Log in / Sign up
                   </Link>
+                  )
                 )}
               </div>
             </nav>
