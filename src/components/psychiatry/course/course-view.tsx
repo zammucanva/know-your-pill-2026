@@ -85,6 +85,20 @@ export function PsychiatryCourseView({
     [navItems]
   );
 
+  // The single canonical learner-completable outline: nav items minus
+  // the hero "top" anchor — the exact list `completionIds` derives from
+  // and the Library's per-course totals use (test 85 pins the equality).
+  // Every surface that displays or syncs a denominator gets THIS list:
+  //   StickyLearningNav  — X/N counter, tick checkboxes, toggle sync
+  //   ResumeBanner      — "X/N sections" + completed state
+  // Only SectionReadTracker keeps the FULL navItems (with "top") so the
+  // observer band pins the hero position for resume; its completion
+  // sync uses completionIds, which already excludes "top".
+  const completionNavItems = React.useMemo(
+    () => navItems.filter((item) => item.id !== "top"),
+    [navItems]
+  );
+
   const quizAfter = (sectionId: string) => quizzes.find((q) => q.afterSectionId === sectionId);
   const visibility = (sectionId: string, children: React.ReactNode) => (
     <GuidedLearningVisibility paths={course.learningPaths} sectionId={sectionId}>
@@ -115,7 +129,7 @@ export function PsychiatryCourseView({
 
   return (
     <>
-      <StickyLearningNav items={navItems} drugSlug={course.slug} />
+      <StickyLearningNav items={completionNavItems} drugSlug={course.slug} />
       <div className="fixed right-4 top-20 z-30 hidden sm:block">
         <GuidedLearningToggle />
       </div>
@@ -130,7 +144,7 @@ export function PsychiatryCourseView({
         offset={120}
         completionIds={completionIds}
       />
-      <ResumeBanner courseSlug={course.slug} items={navItems} noun="lesson" patientFilter={false} />
+      <ResumeBanner courseSlug={course.slug} items={completionNavItems} noun="lesson" patientFilter={false} />
 
       {/* Lesson progress strip (hidden in Patient mode) */}
       {hasLessons && (

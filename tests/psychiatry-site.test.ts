@@ -2014,4 +2014,86 @@ describe("psychiatry — post-migration layer consistency (2026-09-30 audit)", (
       }
     }
   });
+
+  test("86. D-1: universal search returns AND renders Psychiatry results", async () => {
+    const { searchKyp } = await import("../src/lib/kyp/search");
+    const { searchTypeLabels } = await import("../src/lib/kyp/data/search-index");
+    const { SEARCH_RESULT_GROUPS } = await import("../src/lib/kyp/search-groups");
+
+    // (a) Exact title search reaches the course route.
+    const exact = searchKyp("schizophrenia");
+    const course = exact.find(
+      (r) => r.type === "psychiatry-note" && r.href === "/psychiatry/schizophrenia"
+    );
+    expect(course).toBeDefined();
+    expect(course!.title).toBe("Schizophrenia");
+
+    // (b) Partial title search still returns it.
+    const partial = searchKyp("schizo");
+    expect(
+      partial.some((r) => r.type === "psychiatry-note" && r.href === "/psychiatry/schizophrenia")
+    ).toBe(true);
+
+    // (c) A concept course is reachable the same way.
+    const concept = searchKyp("neurotransmitters");
+    expect(
+      concept.some((r) => r.type === "psychiatry-note" && r.href === "/psychiatry/neurotransmitters")
+    ).toBe(true);
+
+    // (d) THE D-1 REGRESSION GUARD: every result type the engine can
+    // return belongs to exactly one rendered group — a type with no
+    // group is invisible in the query results UI.
+    const groupedTypes = SEARCH_RESULT_GROUPS.flatMap((g) => g.types);
+    const allTypes = Object.keys(searchTypeLabels);
+    for (const type of allTypes) {
+      expect(groupedTypes.filter((t) => t === type)).toHaveLength(1);
+    }
+    // …and the groups carry no unknown types.
+    for (const type of groupedTypes) {
+      expect(allTypes).toContain(type);
+    }
+  });
+
+  test("87. D-2: ONE progress denominator — course view ≡ library ≡ completable sections", async () => {
+    const { getCourseRenderedSectionIds, courseNavItems } =
+      await import("../src/lib/kyp/psychiatry-course-sections");
+
+    // GAD is the QA-observed defect case (course page showed 3/24,
+    // library 3/23); representative disorder + concept + P3 coverage.
+    for (const slug of ["gad", "schizophrenia", "neurotransmitters"]) {
+      const course = getPsychiatryCourse(slug)!;
+      const rendered = getCourseRenderedSectionIds(course);
+      const nav = courseNavItems(rendered);
+
+      // Library denominator (library/page.tsx): tracked outline minus
+      // the hero "top" anchor.
+      const libraryTotal = nav.filter((i) => i.id !== "top").length;
+
+      // Course-view denominator (what StickyLearningNav + ResumeBanner
+      // receive as their items after D-2): the SAME list —
+      // courseNavItems(rendered) minus "top" — so the two surfaces can
+      // never disagree again.
+      const courseItems = nav.filter((item) => item.id !== "top");
+      expect(courseItems.length).toBe(libraryTotal);
+
+      // The completion contract the read tracker syncs against is
+      // exactly these ids.
+      const completionIds = courseItems.map((item) => item.id);
+      expect(completionIds).not.toContain("top");
+      for (const id of completionIds) {
+        expect(rendered.has(id)).toBe(true);
+      }
+
+      // The hero anchor stays in the observed outline for position/
+      // resume tracking (the tracker keeps the full navItems).
+      expect(nav.some((item) => item.id === "top")).toBe(true);
+    }
+
+    // Pin the exact QA case: GAD's canonical denominator is 23 (was
+    // displayed as 24 on the course page before the fix).
+    const gad = getPsychiatryCourse("gad")!;
+    expect(
+      courseNavItems(getCourseRenderedSectionIds(gad)).filter((i) => i.id !== "top").length
+    ).toBe(23);
+  });
 });

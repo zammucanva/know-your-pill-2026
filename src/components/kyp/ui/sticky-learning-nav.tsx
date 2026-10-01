@@ -93,7 +93,15 @@ export function useStickyNav(items: NavItem[], drugSlug: string, syncItems?: Nav
     () => (syncItems ?? items).map((i) => i.id),
     [items, syncItems]
   );
-  const completedCount = completedSet.size;
+  // Numerator: completed ids that are IN the displayed outline. Raw set
+  // size would count position-only anchors (the psychiatry hero "top")
+  // and any ids an older outline recorded — inflating X past N. The
+  // intersection keeps "X/N" and "course completed" from ever
+  // disagreeing (D-2 contract, same as the note-shell display filter).
+  const completedCount = React.useMemo(
+    () => items.filter((i) => completedSet.has(i.id)).length,
+    [items, completedSet]
+  );
   const totalCount = items.length;
   const remainingCount = totalCount - completedCount;
 

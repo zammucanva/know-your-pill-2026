@@ -94,6 +94,13 @@ export function SectionReadTracker({
     const labelFor = (id: string) => labelsById.get(id) ?? id;
 
     const completeSection = (id: string) => {
+      // Only completion-contract ids may be marked complete. Anchors the
+      // caller passes for position tracking only (the psychiatry hero
+      // "top" — outside `completionIds`) are observed for resume but
+      // never complete, so the store's completed set always matches the
+      // displayed X/N denominator (D-2 canonical contract; drug pages
+      // default to every outline id, including their Overview).
+      if (!requiredIds.includes(id)) return;
       const before = getCourseProgress(drugSlug);
       if (!before || !before.completedSections.includes(id)) {
         markSectionComplete(drugSlug, id);
