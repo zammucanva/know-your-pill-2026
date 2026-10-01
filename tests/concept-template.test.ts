@@ -110,9 +110,12 @@ describe("concept template — revision cards (redesign D)", () => {
 });
 
 describe("concept template — the lesson stepper contract (redesign A)", () => {
-  // The fixed lesson plan from the concept course view
+  // The lesson plan from the concept course view. The hero ("top",
+  // "learning-objectives") renders as the persistent course header —
+  // always visible, never inside a lesson panel.
+  const HERO_SECTIONS = ["top", "learning-objectives"];
   const LESSON_PLAN: Record<number, string[]> = {
-    1: ["top", "quick-facts", "learning-objectives", "knowledge-graph"],
+    1: ["quick-facts", "knowledge-graph"],
     2: ["mechanism", "explanatory-layer", "brain", "neurotransmitters", "pathways", "timeline"],
     3: ["symptoms", "diagnosis", "differential", "management", "patient-guide"],
     4: ["indian-practice", "decision-path", "common-mistakes"],
@@ -124,7 +127,7 @@ describe("concept template — the lesson stepper contract (redesign A)", () => 
     for (const course of concept) {
       const rendered = getCourseRenderedSectionIds(course);
       // "top" plus every rendered section id must map into the plan
-      const planned = new Set(Object.values(LESSON_PLAN).flat());
+      const planned = new Set([...Object.values(LESSON_PLAN).flat(), ...HERO_SECTIONS]);
       for (const id of rendered) {
         if (id === "epidemiology-band") continue; // the shared band rides with symptoms
         expect(planned.has(id)).toBe(true);
