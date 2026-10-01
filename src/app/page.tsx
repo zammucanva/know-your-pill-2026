@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/kyp/sections/navbar";
 import { HomeContent } from "@/components/kyp/home-content";
 import { FloatingSearch } from "@/components/kyp/ui/floating-search";
+import { JsonLd } from "@/components/kyp/json-ld";
 import { SITE_AUTHOR_NAME, SITE_NAME, absoluteUrl } from "@/lib/kyp/site-url";
 
 /**
@@ -13,6 +14,7 @@ export default function Home() {
   // the same machine-readable identity the drug pages already expose via
   // their MedicalWebPage JSON-LD. The site search is a client-side modal
   // with no URL query surface, so no SearchAction is declared.
+  // Serialized through the canonical JsonLd component (safe serializer).
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -39,11 +41,7 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <script
-        type="application/ld+json"
-        // Static, self-authored JSON — no user input, no injection surface.
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd data={jsonLd} />
       <Navbar />
       <HomeContent />
       <FloatingSearch variant="floating" />
