@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-10-01T09:55:52.420Z",
+  "liveBase": "https://zammucanva.github.io/know-your-pill-2026",
+  "medicinePage": {
+    "httpStatus": 200,
+    "displayedCount": 145,
+    "uniqueDrugLinks": 145,
+    "missingSlugs": [],
+    "unknownSlugs": [],
+    "classGroupHeaders": 40,
+    "groupedDrugCards": 145,
+    "groupedUniqueSlugs": 145
+  },
+  "routeCensus": {
+    "total": 145,
+    "http200": 145,
+    "monographMarkers": 145
+  },
+  "mandatorySpotChecks": [
+    "sertraline",
+    "clozapine",
+    "tacrine",
+    "methylphenidate",
+    "lorazepam"
+  ],
+  "psychiatryRegression": {
+    "total": 109,
+    "http200": 109
+  },
+  "overallStatus": "PASS",
+  "failureCount": 0
+}
