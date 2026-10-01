@@ -385,7 +385,7 @@ export function ConceptPathways({ course }: { course: PsychiatryCourse }) {
                   ))}
                 </ol>
                 <p className="mt-4 rounded-lg border border-brand/20 bg-brand-soft/30 px-3 py-2 text-caption leading-relaxed text-foreground/80">
-                  <span className="font-semibold text-brand">Clinical meaning: </span>
+                  <span className="font-semibold text-brand-ink">Clinical meaning: </span>
                   {pathway.clinicalManifestation}
                 </p>
               </div>
@@ -555,7 +555,7 @@ export function ConceptDiagnosis({ course }: { course: PsychiatryCourse }) {
                 </ul>
                 {criteria.indianNote && (
                   <p className="mt-3 rounded-lg border border-brand/20 bg-brand-soft/30 px-3 py-2 text-caption leading-relaxed text-foreground/80">
-                    <span className="font-semibold text-brand">Indian practice: </span>
+                    <span className="font-semibold text-brand-ink">Indian practice: </span>
                     {criteria.indianNote}
                   </p>
                 )}
@@ -624,7 +624,7 @@ export function ConceptDifferential({ course }: { course: PsychiatryCourse }) {
             <div key={i} className="mb-3 rounded-xl border border-border/70 bg-card p-4 last:mb-0">
               <p className="text-body-sm font-semibold text-foreground">{differential.condition}</p>
               <p className="mt-2 text-caption leading-relaxed text-foreground/85">
-                <span className="font-semibold text-brand">Key assessment: </span>
+                <span className="font-semibold text-brand-ink">Key assessment: </span>
                 {differential.keyDifferentiator}
               </p>
               <details className="group mt-2">
@@ -677,7 +677,7 @@ export function ConceptManagement({ course }: { course: PsychiatryCourse }) {
                   </p>
                   {option.indianContext && (
                     <p className="rounded-lg border border-brand/20 bg-brand-soft/25 px-3 py-2 text-caption leading-relaxed text-muted-foreground">
-                      <span className="font-semibold text-brand">India: </span>
+                      <span className="font-semibold text-brand-ink">India: </span>
                       {option.indianContext}
                     </p>
                   )}

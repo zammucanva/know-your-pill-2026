@@ -492,7 +492,7 @@ export function ConceptClinicalCases({ course }: { course: PsychiatryCourse }) {
                   ))}
                 </dl>
                 <div className="mt-4 rounded-xl border border-neural/25 bg-neural-soft/20 p-4">
-                  <p className="text-overline text-neural">Teaching points</p>
+                  <p className="text-overline text-neural-ink">Teaching points</p>
                   <ul className="mt-2 space-y-1.5">
                     {clinicalCase.teachingPoints.map((point, j) => (
                       <li key={j} className="flex gap-2 text-caption leading-relaxed text-foreground/80">
@@ -546,7 +546,7 @@ export function ConceptHighYield({ course }: { course: PsychiatryCourse }) {
           {cards.map((card, i) => (
             <CardPrimitive key={i} variant="flat" interactive={false} showArrow={false} className="h-full">
               <CardBody className="p-4">
-                <p className="text-overline text-warning">Point {i + 1}</p>
+                <p className="text-overline text-warning-ink">Point {i + 1}</p>
                 {card.title && (
                   <p className="mt-1 text-body-sm font-semibold leading-snug text-foreground">
                     {card.title}

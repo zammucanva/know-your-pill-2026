@@ -87,7 +87,7 @@ export function CourseReferences({ course }: { course: PsychiatryCourse }) {
             if (refs.length === 0) return null;
             return (
               <div key={key}>
-                <p className="mb-3 text-overline text-brand">{label}</p>
+                <p className="mb-3 text-overline text-brand-ink">{label}</p>
                 <ul className="space-y-2">
                   {refs.map((reference, i) => (
                     <li
@@ -155,7 +155,7 @@ function AdjacentCard({
           <p
             className={cn(
               "text-overline",
-              direction === "next" ? "text-brand" : "text-muted-foreground"
+              direction === "next" ? "text-brand-ink" : "text-muted-foreground"
             )}
           >
             {direction === "next" ? "Next lesson" : "Previous lesson"}
@@ -166,7 +166,7 @@ function AdjacentCard({
           <p className="mt-1.5 line-clamp-2 text-caption leading-relaxed text-muted-foreground">
             {neighbor.tagline}
           </p>
-          <p className="mt-auto pt-4 text-caption text-muted-foreground/80">
+          <p className="mt-auto pt-4 text-caption text-muted-foreground/90">
             <span className="font-mono">{neighbor.groupLetter}.</span> {neighbor.groupName}
           </p>
         </CardBody>
@@ -190,6 +190,7 @@ export function CourseNextStep({
         <SectionHeader
           eyebrow="Continue"
           title={hasAny ? "Where the curriculum goes next." : "You have reached the end."}
+          tone="brand-ink"
           align="start"
         />
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -216,7 +217,7 @@ export function CourseNextStep({
             <Link href="/psychiatry/self-test" className="group block h-full">
               <CardPrimitive className="h-full" interactive>
                 <CardBody className="flex h-full flex-col p-5">
-                  <p className="text-overline text-brand">Curriculum complete</p>
+                  <p className="text-overline text-brand-ink">Curriculum complete</p>
                   <p className="mt-2.5 inline-flex items-center gap-1.5 text-body font-semibold text-foreground group-hover:text-brand">
                     Test yourself <ArrowRight className="h-3.5 w-3.5" aria-hidden />
                   </p>
@@ -234,7 +235,7 @@ export function CourseNextStep({
           Order follows the KYP Psychiatry curriculum —{" "}
           <Link
             href={`/psychiatry/library#group-${course.groupLetter}`}
-            className="text-brand underline-offset-4 hover:underline"
+            className="text-brand-ink underline underline-offset-4 hover:opacity-80"
           >
             {course.groupLetter}. {course.groupName}
           </Link>{" "}

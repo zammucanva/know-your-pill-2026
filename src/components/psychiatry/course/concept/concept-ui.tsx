@@ -246,7 +246,7 @@ export function InlineExpander({
             aria-expanded={false}
             aria-controls={restId}
             onClick={() => setOpen(true)}
-            className="ml-1 inline text-caption font-medium text-brand underline underline-offset-2 hover:text-brand/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className="ml-1 inline text-caption font-medium text-brand-ink underline underline-offset-2 hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >
             {label}
           </button>

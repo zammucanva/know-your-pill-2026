@@ -38,12 +38,14 @@ export interface SectionHeaderProps
   description?: React.ReactNode;
   action?: React.ReactNode;
   /** Tone of the eyebrow text — defaults to brand teal */
-  tone?: "brand" | "neural" | "emergency" | "success";
+  tone?: "brand" | "brand-ink" | "neural" | "neural-ink" | "emergency" | "success";
 }
 
 const toneClass = {
   brand: "text-brand",
+  "brand-ink": "text-brand-ink",
   neural: "text-neural",
+  "neural-ink": "text-neural-ink",
   emergency: "text-emergency",
   // "success" intentionally maps to no extra class so it renders exactly as
   // it did before it was formally typed (unknown tones produced no class).

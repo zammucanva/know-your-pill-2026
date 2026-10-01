@@ -567,7 +567,7 @@ export function ConceptCourseView({
                     <button
                       type="button"
                       onClick={() => navigateToLesson(nextOfThis.number)}
-                      className="inline-flex min-w-0 items-center gap-1.5 rounded-full border border-brand/30 bg-card px-4 py-2 text-left text-xs font-medium text-brand transition-colors hover:bg-brand hover:text-primary-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                      className="inline-flex min-w-0 items-center gap-1.5 rounded-full border border-brand/40 bg-card px-4 py-2 text-left text-xs font-semibold text-brand-ink transition-colors hover:bg-brand hover:text-primary-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
                     >
                       <span className="whitespace-normal">
                         Continue to {nextOfThis.number}. {nextOfThis.title}
