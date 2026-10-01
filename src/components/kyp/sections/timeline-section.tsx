@@ -7,7 +7,7 @@ import { Timeline } from "@/components/kyp/ui/timeline";
 import { Callout } from "@/components/kyp/ui/callout";
 import { Badge } from "@/components/kyp/ui/badge";
 import { Reveal } from "@/components/kyp/ui/reveal";
-import { ssriTimeline } from "@/lib/kyp/data";
+import { ssriTimeline } from "@/lib/kyp/data/platform";
 
 export function TimelineSection() {
   return (

@@ -36,9 +36,11 @@ export const DRUG_TAXONOMY_CATEGORY_HREF = "/drugs/#psychiatry";
 export const DRUG_TAXONOMY_FAMILY_HREF = "/drugs/#antidepressants";
 
 /** URL-safe collection id for a medication class, derived from its registry label. */
-export function drugClassIdFromLabel(drugClassLabel: string): string {
-  return drugClassLabel.toLowerCase();
-}
+// Pure label→id transform lives in ./class-id.ts (zero data imports)
+// so client consumers can use it without pulling the registry. The
+// public API is unchanged — imported for local use and re-exported.
+import { drugClassIdFromLabel } from "./class-id";
+export { drugClassIdFromLabel };
 
 export interface DrugTaxonomyClass {
   /** URL id — /drugs/class/{id} */

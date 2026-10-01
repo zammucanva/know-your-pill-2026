@@ -20,8 +20,8 @@
 
 import type { KypProgressData } from "@/lib/kyp/progress/progress-store";
 import { selectWeakTopics } from "@/lib/kyp/custom-test/weak-area";
-import { drugs } from "@/lib/kyp/data/drugs/index";
 import { studyCourseTotal, studyCourseBase } from "@/lib/kyp/study/course-catalog";
+import { COURSE_COUNT } from "@/lib/kyp/study/course-stats-generated";
 
 /** One numbered step of the plan. */
 export interface DailyPlanStep {
@@ -79,7 +79,7 @@ export function buildDailyPlan(data: KypProgressData, now = Date.now()): DailyPl
     steps.push({
       id: "start",
       title: "Start a new medication",
-      detail: `${drugs.length} courses in the library, each a structured read.`,
+      detail: `${COURSE_COUNT} courses in the library, each a structured read.`,
       href: "/study#medications",
     });
   }

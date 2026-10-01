@@ -20,10 +20,10 @@ import type { Drug } from "../types";
  *   - FDA Prescribing Information for CELEXA (citalopram hydrobromide)
  *   - FDA Drug Safety Communication (2011): abnormal heart rhythms associated
  *     with high doses of citalopram — dose cap and QTc warning
- *   - NICE Guideline NG222 (Depression in adults, 2022)
+ *   - NICE Clinical Guideline CG91 (Depression in adults)
  *   - APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder
  *
- * Last reviewed: 2026-10-01
+ * Last reviewed: 2026-07-13
  */
 export const citalopram: Drug = {
   /* ---- Identity ---- */
@@ -814,7 +814,7 @@ export const citalopram: Drug = {
         url: "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fda-drug-safety-communication-abnormal-heart-rhythms-associated-high-doses-celexa-citalopram",
       },
       {
-        source: "NICE Guideline NG222 — Depression in adults: treatment and management (2022)",
+        source: "NICE Clinical Guideline CG91 — Depression in adults: recognition and management",
       },
       {
         source: "APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder, 3rd edition",
@@ -846,9 +846,9 @@ export const citalopram: Drug = {
     ],
     reviews: [
       {
-        source: "FDA Prescribing Information — CELEXA (citalopram hydrobromide), revised 2023-10-09 (Allergan)",
+        source: "FDA Prescribing Information — CELEXA (citalopram hydrobromide) tablets",
         section: "Highlights of Prescribing Information (revised post-2011 dose-cap)",
-        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4259d9b1-de34-43a4-85a8-41dd214e9177",
+        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/020822s052lbl.pdf",
       },
       {
         source: "CPIC Guideline for CYP2C19 and CYP2D6 and Selective Serotonin Reuptake Inhibitors",
@@ -1119,7 +1119,7 @@ export const citalopram: Drug = {
     },
     {
       topic: "First-line SSRI selection in depression",
-      internationalSource: "NICE NG222 / APA / Cipriani 2018 Lancet network meta-analysis",
+      internationalSource: "NICE CG91 / APA / Cipriani 2018 Lancet network meta-analysis",
       internationalRecommendation: "SSRIs are first-line. Cipriani 2018 ranked escitalopram (not citalopram) among the most efficacious and best-tolerated antidepressants. Citalopram has no specific advantage over escitalopram and carries QTc risk.",
       indianSource: "Indian Psychiatric Society (IPS)",
       indianRecommendation: "IPS recommends SSRIs as first-line. In Indian practice, escitalopram, sertraline, and fluoxetine are preferred over citalopram. Citalopram is mostly prescribed by non-psychiatrists (GPs, physicians) — psychiatrists increasingly avoid it in favour of escitalopram.",
@@ -1224,7 +1224,7 @@ export const citalopram: Drug = {
     international: [
       { source: "FDA 2011 Drug Safety Communication", recommendation: "Citalopram dose-dependent QTc prolongation → torsades de pointes risk. Dose cap: 40mg/day adults, 20mg/day elderly/hepatic/CYP2C19-inhibited." },
       { source: "Cipriani A et al. Lancet 2018", recommendation: "Network meta-analysis of 21 antidepressants ranked escitalopram (not citalopram) among the most efficacious and best-tolerated." },
-      { source: "NICE NG222 / APA Practice Guideline", recommendation: "SSRIs are first-line for moderate-severe depression. Citalopram has no specific advantage over escitalopram and carries QTc risk." },
+      { source: "NICE CG91 / APA Practice Guideline", recommendation: "SSRIs are first-line for moderate-severe depression. Citalopram has no specific advantage over escitalopram and carries QTc risk." },
       { source: "WHO mhGAP", recommendation: "SSRIs recommended as first-line antidepressants in the Mental Health Gap Action Programme." },
     ],
     indian: [
@@ -1358,9 +1358,9 @@ export const citalopram: Drug = {
       { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
       { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants" },
       { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression and QTc-prolonging drugs" },
-      { source: "FDA Prescribing Information — CELEXA (citalopram hydrobromide), revised 2023-10-09 (Allergan)", section: "Highlights of Prescribing Information", url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4259d9b1-de34-43a4-85a8-41dd214e9177" },
+      { source: "FDA Prescribing Information — CELEXA (citalopram hydrobromide)", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2017/020822s054lbl.pdf" },
       { source: "FDA Drug Safety Communication (2011) — Abnormal heart rhythms associated with high doses of citalopram", section: "Dose cap and QTc warning" },
-      { source: "NICE Guideline NG222 — Depression in adults (2022)", section: "Recommendations — antidepressant choice and switching" },
+      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Pharmacological treatment" },
       { source: "Cipriani A et al. Lancet 2018 — Comparative efficacy of 21 antidepressants", section: "Network meta-analysis (escitalopram, not citalopram, ranked highest among SSRIs)" },
     ],
     indian: [
@@ -1719,21 +1719,21 @@ export const citalopram: Drug = {
       label: "MBBS Student",
       estimatedTime: "18 min",
       description: "Foundations, mechanism, clinical uses, side effects (esp. QTc), and MBBS exam content.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
     },
     {
       mode: "neetPg",
       label: "NEET PG / INICET",
       estimatedTime: "32 min",
       description: "Full clinical detail with exam-specific content, PYQs, and drug comparisons (esp. citalopram vs escitalopram).",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
     },
     {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "38 min",
       description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
     },
   ],
 
@@ -1782,6 +1782,198 @@ export const citalopram: Drug = {
       checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Citalopram — including its relationship to escitalopram and the 2011 FDA dose cap.",
     },
   ],
+
+  /* ---- Prescriber's Guide (Stahl layer) ---- */
+  /** Educational paraphrase of Stahl's Essential Psychopharmacology:
+   *  The Prescriber's Guide, 1st ed. (2005). Facts restated, not reproduced. */
+  prescriberGuide: {
+    sourceEdition: "Stahl's Essential Psychopharmacology: The Prescriber's Guide, 1st ed. (2005)",
+
+    onsetTimeline: [
+      "Therapeutic onset usually delayed 2–4 weeks",
+      "No benefit by 6–8 weeks → dose increase or switch",
+      "May continue working for years to prevent relapse",
+    ],
+    ifItWorks: [
+      "Goal: complete remission plus prevention of future relapses",
+      "Most often reduces or eliminates symptoms but is not a cure — symptoms can recur after stopping",
+      "Continue until symptoms are gone (remission) or clearly reduced (e.g., OCD, PTSD)",
+      "First depressive episode: continue 1 year once well; later episodes and anxiety disorders may need indefinite treatment",
+    ],
+    ifItDoesNotWork: [
+      "Partial response is common — residual insomnia, fatigue, poor concentration",
+      "Some patients are non-responders (treatment-resistant / refractory); some early responders 'poop-out'",
+      "Options: raise dose, switch, or add an augmenting agent",
+      "Consider psychotherapy and re-evaluation for another diagnosis or comorbid condition (medical illness, substance use)",
+      "Apparent non-response from activation of latent bipolar disorder → stop the antidepressant and switch to a mood stabilizer",
+    ],
+    augmentationCombos: [
+      "Trazodone, especially for insomnia",
+      "Bupropion, mirtazapine, reboxetine, or cautious low-dose atomoxetine (citalopram can raise atomoxetine levels)",
+      "Modafinil for fatigue, sleepiness, and poor concentration",
+      "Mood stabilizers or atypical antipsychotics for bipolar depression, psychotic depression, treatment-resistant depression or anxiety",
+      "Benzodiazepines; if all else fails for anxiety, gabapentin or tiagabine",
+      "Hypnotics for insomnia; classically lithium, buspirone, or thyroid hormone",
+    ],
+    testsBeforeStarting: [
+      "None required for healthy individuals",
+    ],
+
+    sideEffectLogic: [
+      "Serotonin increases at receptors outside the therapeutic circuits — sleep centers (insomnia), gut (diarrhea)",
+      "Rising serotonin can dampen dopamine release → emotional flattening, cognitive slowing, apathy",
+      "Side effects are immediate and often fade; therapeutic effects are delayed and build over time",
+      "Citalopram's unique mild antihistamine activity may add to sedation and fatigue in some patients",
+    ],
+    sideEffectManagement: [
+      "Wait — most early effects fade",
+      "Wait again",
+      "Wait once more",
+      "Take in the morning if nighttime insomnia; take at night if daytime sedation",
+      "After a few weeks: switch to another agent or add other drugs",
+    ],
+    sideEffectRescue: [
+      "Often better to try another SSRI or antidepressant monotherapy first",
+      "Trazodone or a hypnotic for insomnia",
+      "Bupropion, sildenafil, vardenafil, or tadalafil for sexual dysfunction",
+      "Bupropion for emotional flattening, cognitive slowing, or apathy",
+      "Mirtazapine for insomnia, agitation, and gastrointestinal effects",
+      "Benzodiazepines for jitteriness and anxiety at initiation, especially in anxious patients",
+    ],
+    weightGain: "Reported but not expected — associated with both gain and loss in studies; relatively weight-neutral overall",
+    sedation: "Occurs in a significant minority",
+
+    dosing: [
+      {
+        indication: "Depression & anxiety disorders (adults)",
+        starting: "20 mg/day",
+        titration: "Increase by 20 mg/day after 1 or more weeks until desired efficacy",
+        target: "20–60 mg/day",
+        max: "60 mg/day",
+        notes: [
+          "Tablets are scored — give 10 mg as half of a 20 mg tablet or 20 mg as half of a 40 mg tablet to save cost (tablets cost about the same in many markets)",
+          "Many patients respond better to 40 mg than to 20 mg",
+          "Once daily, any time of day the patient best tolerates",
+        ],
+      },
+    ],
+    dosageForms: ["Tablets 10 mg", "Tablets 20 mg (scored)", "Tablets 40 mg (scored)"],
+    dosingTips: [
+      "Dose at the lower end of the range in patients needing maximal tolerability",
+      "Intolerable anxiety, insomnia, agitation, akathisia or activation on starting or stopping → consider activated bipolar disorder; switch to a mood stabilizer or atypical antipsychotic",
+      "Many side effects are dose- and time-dependent — they spike with each increase, then fade",
+    ],
+    overdose: [
+      "Rare fatalities reported, both alone and in combination with other drugs",
+      "Vomiting, sedation, heart rhythm disturbances, dizziness, sweating, nausea, tremor",
+      "Rarely amnesia, confusion, coma, convulsions",
+    ],
+    longTermUse: "Safe",
+    habitForming: "No",
+    howToStop: [
+      "Taper not usually necessary, but is generally prudent to avoid potential withdrawal reactions",
+      "Many patients tolerate: 50% reduction for 3 days → another 50% for 3 days → stop",
+      "If withdrawal symptoms emerge, raise the dose to abort, then withdraw much more slowly",
+    ],
+    pharmacokinetics: [
+      "Parent half-life 23–45 hours",
+      "Weak CYP2D6 inhibitor",
+      "Can raise TCA levels; may displace highly protein-bound drugs (e.g., warfarin)",
+      "Fatal serotonin syndrome with MAOIs — do not combine; wait 14 days after stopping an MAOI, and 2 weeks after stopping citalopram before starting an MAOI",
+      "Tramadol raises seizure risk; sumatriptan (and possibly other triptans) can rarely cause weakness, hyperreflexia, incoordination",
+      "Via 2D6: may blunt codeine analgesia and raise levels of some beta blockers, atomoxetine, and thioridazine (dangerous arrhythmias)",
+    ],
+    doNotUse: [
+      "If the patient is taking an MAO inhibitor",
+      "If the patient is taking thioridazine",
+      "Proven allergy to citalopram or escitalopram",
+    ],
+
+    specialPopulations: [
+      {
+        population: "Renal impairment",
+        guidance: [
+          "No dose adjustment for mild to moderate impairment",
+          "Use cautiously in severe impairment",
+        ],
+      },
+      {
+        population: "Hepatic impairment",
+        guidance: [
+          "Recommended dose 20 mg/day; can raise to 40 mg/day for non-responders",
+          "Dose cautiously at the lower end of the range for maximal tolerability",
+        ],
+      },
+      {
+        population: "Cardiac impairment",
+        guidance: [
+          "Clinical experience suggests citalopram is safe in cardiac patients",
+          "SSRI treatment of depression after MI or in acute angina may reduce cardiac events and improve survival as well as mood",
+        ],
+      },
+      {
+        population: "Elderly",
+        guidance: [
+          "20 mg/day; 40 mg/day for non-responders — dose at the lower end when tolerability is an issue",
+          "May be an especially well-tolerated SSRI in the elderly",
+        ],
+      },
+      {
+        population: "Children & adolescents",
+        guidance: [
+          "Not specifically approved, but preliminary data suggest safety and efficacy in children/adolescents with OCD and depression",
+          "Observe for activation of bipolar disorder and suicidal ideation; counsel parents/guardians",
+        ],
+      },
+      {
+        population: "Pregnancy",
+        guidance: [
+          "Risk Category C — not generally recommended, especially first trimester; continuous treatment may nonetheless be necessary and has not been proven harmful",
+          "At delivery: possible increased maternal bleeding and transient newborn irritability or sedation",
+          "Late third-trimester exposure: neonatal complications reported (respiratory distress, cyanosis, apnea, seizures, feeding difficulty, hypoglycemia, jitteriness) — consistent with toxicity or a discontinuation syndrome",
+          "Weigh treatment risk against relapse risk — for many, continuing is the better choice",
+        ],
+      },
+      {
+        population: "Breast feeding",
+        guidance: [
+          "Some drug is found in breast milk; trace amounts in nursing infants",
+          "If the infant becomes irritable or sedated, breastfeeding or the drug may need to be stopped",
+          "Postpartum is high-risk for relapse — may need reinstitution late in the third trimester or shortly after delivery",
+        ],
+      },
+    ],
+
+    potentialAdvantages: [
+      "Elderly patients",
+      "Patients excessively activated or sedated by other SSRIs",
+    ],
+    potentialDisadvantages: [
+      "May require dosage titration for optimal efficacy",
+      "Can be sedating in some patients",
+    ],
+    primaryTargetSymptoms: [
+      "Depressed mood",
+      "Anxiety",
+      "Panic attacks",
+      "Avoidant behavior",
+      "Re-experiencing",
+      "Hyperarousal",
+      "Sleep disturbance (insomnia and hypersomnia)",
+    ],
+    pearls: [
+      "May be more tolerable than some other antidepressants",
+      "May cause less sexual dysfunction than some other SSRIs",
+      "Especially well tolerated in the elderly",
+      "May be less well tolerated than escitalopram — its inactive R-enantiomer may interfere with the active S-enantiomer at the serotonin transporter",
+      "Evidence in anxiety disorders is less comprehensive than for escitalopram and other SSRIs",
+      "Can cause cognitive and affective 'flattening'",
+      "Luteal-phase-only dosing may be more effective than continuous dosing for PMDD",
+      "SSRIs may be less effective in women over 50 not taking estrogen",
+      "SSRIs may help hot flushes in perimenopausal women",
+      "Non-response in the elderly: consider mild cognitive impairment or Alzheimer disease",
+    ],
+  },
 
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",

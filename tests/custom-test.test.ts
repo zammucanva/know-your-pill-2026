@@ -42,7 +42,7 @@ describe("custom test — engine pool", () => {
     expect(new Set(ids).size).toBe(pool.length);
 
     const stats = getPoolStats(ALL_SLUGS);
-    expect(stats.authored).toBe(72); // 6 microQuizzes × 12 drugs
+    expect(stats.authored).toBe(470); // 471 microQuizzes across 145 drugs minus the option-invalid zotepine entry (engine validity guard)
     expect(stats.total).toBeGreaterThan(300); // real generated availability
     expect(stats.total).toBe(pool.length);
 
@@ -123,7 +123,7 @@ describe("custom test — attempt assembly", () => {
       const identities = questions.map((q) => q.identity);
       expect(new Set(identities).size).toBe(identities.length);
     }
-  });
+  }, 60000); // 145-drug registry: full-pool builds are ~6x the 12-drug era
 
   test("requested count above availability is capped and flagged, never padded", () => {
     const one = ["bupropion"];
@@ -170,7 +170,7 @@ describe("custom test — attempt assembly", () => {
         expect([...q.attemptOptions].sort()).toEqual([...q.options].sort());
       }
     }
-  });
+  }, 60000); // 145-drug registry: full-pool builds are ~6x the 12-drug era
 
   test("position-dependent options are never shuffled", () => {
     expect(isShuffleSafe(["A", "B", "C", "All of the above"])).toBe(false);

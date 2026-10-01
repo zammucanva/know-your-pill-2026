@@ -35,6 +35,7 @@ export function MicroQuiz({ quiz, courseSlug, courseQuizCount = 0, onAnswered }:
   const [selectedIdx, setSelectedIdx] = React.useState<number | null>(null);
   const [showExplanation, setShowExplanation] = React.useState(false);
   const reportedRef = React.useRef(false);
+  const explanationRef = React.useRef<HTMLDivElement>(null);
 
   const handleSelect = (idx: number) => {
     if (selectedIdx !== null) return; // Don't allow re-answering
@@ -55,6 +56,14 @@ export function MicroQuiz({ quiz, courseSlug, courseQuizCount = 0, onAnswered }:
   };
 
   const isCorrect = selectedIdx === quiz.correctIndex;
+
+  // Announce the verdict to screen readers (color/icon-only feedback
+  // is invisible to assistive tech) and move focus onto the explanation.
+  React.useEffect(() => {
+    if (showExplanation && explanationRef.current) {
+      explanationRef.current.focus();
+    }
+  }, [showExplanation]);
 
   return (
     <div className="my-6 border-l-2 border-neural/30 pl-4">
@@ -107,17 +116,29 @@ export function MicroQuiz({ quiz, courseSlug, courseQuizCount = 0, onAnswered }:
         })}
       </div>
 
+      {/* Screen-reader verdict announcement — polite live region. */}
+      <p aria-live="polite" className="sr-only">
+        {selectedIdx !== null
+          ? `${isCorrect ? "Correct." : "Not quite."} ${quiz.explanation}`
+          : ""}
+      </p>
+
       {/* Explanation — revealed after answering */}
       {showExplanation && (
-        <div className={cn(
-          "mt-3 rounded-md p-3 text-sm leading-relaxed",
-          isCorrect ? "bg-success-soft/15 text-foreground" : "bg-emergency-soft/15 text-foreground"
-        )}>
+        <div
+          ref={explanationRef}
+          tabIndex={-1}
+          role="status"
+          className={cn(
+            "mt-3 rounded-md p-3 text-sm leading-relaxed outline-none focus-visible:ring-2 focus-visible:ring-neural/40",
+            isCorrect ? "bg-success-soft/15 text-foreground" : "bg-emergency-soft/15 text-foreground"
+          )}
+        >
           <p className="flex items-center gap-1.5 mb-1">
             {isCorrect ? (
-              <><Check className="h-3.5 w-3.5 text-success" /> <span className="text-xs font-semibold text-success">Correct!</span></>
+              <><Check className="h-3.5 w-3.5 text-success" aria-hidden /> <span className="text-xs font-semibold text-success">Correct!</span></>
             ) : (
-              <><X className="h-3.5 w-3.5 text-emergency" /> <span className="text-xs font-semibold text-emergency">Not quite.</span></>
+              <><X className="h-3.5 w-3.5 text-emergency" aria-hidden /> <span className="text-xs font-semibold text-emergency">Not quite.</span></>
             )}
           </p>
           <p className="text-muted-foreground">{quiz.explanation}</p>

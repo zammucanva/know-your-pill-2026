@@ -63,7 +63,7 @@ export const faqs: FAQItem[] = [
   {
     question: "Does KYP cover medications beyond psychiatry?",
     answer:
-      "Not yet. The platform currently covers 12 psychiatric medications across five drug classes (SSRIs, SNRIs, NDRIs, NaSSAs, TCAs), three substance-use modules (alcohol, opioids, cannabis), and one disease page (major depressive disorder). Pain management, antibiotics, and other drug classes are planned but not yet built.",
+      "The medication library focuses on psychotropic drugs — antidepressants, antipsychotics, mood stabilisers, anxiolytics, hypnotics, stimulants, and substance-use treatments — plus substance-use modules (alcohol, opioids, cannabis) and a major-depressive-disorder guide. Pain management, antibiotics, and other non-psychiatric drug classes are planned but not yet built.",
   },
   {
     question: "What is NeuroArcade?",

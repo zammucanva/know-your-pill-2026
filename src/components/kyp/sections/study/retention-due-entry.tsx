@@ -39,8 +39,10 @@ export function RetentionDueEntry() {
           intervals as you get them right.
         </p>
       </div>
+      {/* prefetch={false}: engine route bundles the registry chunk */}
       <Link
         href="/study/review"
+        prefetch={false}
         className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-brand/40 bg-brand-soft/30 px-5 py-3 text-sm font-semibold text-brand transition-colors hover:border-brand/60"
       >
         Start reviewing

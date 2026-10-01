@@ -26,10 +26,16 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { searchTypeLabels } from "@/lib/kyp/data";
+// Generated, self-contained artifact — NOT the live derivation in
+// @/lib/kyp/data/search-index (which imports the entire 145-monograph
+// registry at module scope and would ship it to every page). Pinned
+// deep-equal to the live derivation by tests/platform-hardening.test.ts.
+import {
+  searchIndexGenerated as searchIndex,
+  searchTypeLabelsGenerated as searchTypeLabels,
+} from "@/lib/kyp/data/search-index-generated";
 import { SEARCH_RESULT_GROUPS } from "@/lib/kyp/search-groups";
-import { searchIndex, searchKyp } from "@/lib/kyp/search";
-import type { SearchableItem } from "@/lib/kyp/data";
+import type { SearchableItem } from "@/lib/kyp/data/types";
 import { useSearchHistory } from "@/lib/hooks/use-search-history";
 import { cn } from "@/lib/utils";
 import { Clock, Trash2 } from "lucide-react";
@@ -89,6 +95,52 @@ const typeColor: Record<SearchableItem["type"], string> = {
   "psychiatry-note": "text-neural",
 };
 
+/** Best rank tier for ONE query token against an item. Lower = better. 0 = no match. */
+function rankToken(item: SearchableItem, token: string): number {
+  const title = item.title.toLowerCase();
+  const keywords = item.keywords.map((k) => k.toLowerCase());
+
+  // 1. Exact title match
+  if (title === token) return 1;
+  // 2. Title starts with query
+  if (title.startsWith(token)) return 2;
+  // 3. Title includes query
+  if (title.includes(token)) return 3;
+  // 4. Exact keyword match
+  if (keywords.some((k) => k === token)) return 4;
+  // 5. Keyword starts with query
+  if (keywords.some((k) => k.startsWith(token))) return 5;
+  // 6. Keyword includes query
+  if (keywords.some((k) => k.includes(token))) return 6;
+  // 7. Description includes query
+  if (item.description.toLowerCase().includes(token)) return 7;
+  return 0;
+}
+
+/**
+ * Rank a search result. Lower = better. 0 = no match.
+ *
+ * Multi-word queries ("sertraline anxiety") use AND semantics: every
+ * whitespace-separated token must match the item somewhere (title,
+ * keywords, or description), otherwise the item is excluded. The rank
+ * is the sum of the tokens' best tiers, so results matching more tokens
+ * in stronger fields (title/keyword) sort first. Single-token queries
+ * keep the original 7-tier behavior exactly.
+ */
+function rankResult(item: SearchableItem, q: string): number {
+  const tokens = q.split(/\s+/).filter(Boolean);
+  if (tokens.length === 0) return 0;
+  if (tokens.length === 1) return rankToken(item, tokens[0]);
+
+  let total = 0;
+  for (const token of tokens) {
+    const tier = rankToken(item, token);
+    if (tier === 0) return 0; // AND semantics — one unmatched token excludes the item
+    total += tier;
+  }
+  return total;
+}
+
 export function SearchModal({ open, onOpenChange }: SearchModalProps) {
   const router = useRouter();
   const [query, setQuery] = React.useState("");
@@ -104,7 +156,12 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
       // Show curated top results when query is empty
       return searchIndex.slice(0, 8);
     }
-    return searchKyp(q, { limit: 12 });
+    return searchIndex
+      .map((item) => ({ item, rank: rankResult(item, q) }))
+      .filter((r) => r.rank > 0)
+      .sort((a, b) => a.rank - b.rank || a.item.title.localeCompare(b.item.title))
+      .slice(0, 12)
+      .map((r) => r.item);
   }, [query]);
 
   // Reset active index when results change

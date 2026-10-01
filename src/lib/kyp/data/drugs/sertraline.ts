@@ -10,10 +10,10 @@ import type { Drug } from "../types";
  *   - Katzung Basic & Clinical Pharmacology, 16th edition
  *   - Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition
  *   - FDA Prescribing Information for Zoloft (sertraline hydrochloride)
- *   - NICE Guideline NG222 (Depression in adults, 2022)
+ *   - NICE Clinical Guideline CG91 (Depression in adults)
  *   - APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder
  *
- * Last reviewed: 2026-10-01
+ * Last reviewed: 2026-07-13
  */
 export const sertraline: Drug = {
   /* ---- Identity ---- */
@@ -497,7 +497,7 @@ export const sertraline: Drug = {
     diagnosis:
       "Major Depressive Disorder, single episode, moderate-severe, without psychotic features (ICD-10 F32.2). Differential: adjustment disorder with depressed mood (less likely given severity and neurovegetative symptoms); bipolar depression (screen with MDQ — negative); hypothyroidism-induced depression (TSH to be checked).",
     rationale:
-      "Sertraline chosen because: (1) first-line for MDD per NICE NG222; (2) favourable side-effect profile for a working patient (minimal sedation, low weight gain); (3) sister had a good response — pharmacogenetic concordance; (4) safest SSRI if patient becomes pregnant (reproductive age, no current contraception); (5) once-daily dosing improves adherence. Fluoxetine would be alternative but more activating; mirtazapine rejected due to weight gain in a patient already losing weight.",
+      "Sertraline chosen because: (1) first-line for MDD per NICE CG91; (2) favourable side-effect profile for a working patient (minimal sedation, low weight gain); (3) sister had a good response — pharmacogenetic concordance; (4) safest SSRI if patient becomes pregnant (reproductive age, no current contraception); (5) once-daily dosing improves adherence. Fluoxetine would be alternative but more activating; mirtazapine rejected due to weight gain in a patient already losing weight.",
     management:
       "Started sertraline 50 mg every morning with food. Plan: review at 2 weeks (tolerability + suicidality), 4 weeks (early response), 6 weeks (dose escalation if PHQ-9 reduction <30%), 12 weeks (full response assessment). Patient given PHQ-9 self-rating schedule and safety plan with crisis contacts (112, Tele-MANAS 14416). Counseled: (1) expect side effects before benefit; (2) do not stop abruptly; (3) avoid alcohol; (4) watch for agitation or new suicidal thoughts in first month; (5) full effect takes 4–6 weeks. Concurrent referral for CBT (NICE recommends combining medication + psychotherapy for moderate-severe depression).",
     outcome:
@@ -713,7 +713,7 @@ export const sertraline: Drug = {
   references: {
     guidelines: [
       {
-        source: "NICE Guideline NG222 — Depression in adults: treatment and management (2022)",
+        source: "NICE Clinical Guideline CG91 — Depression in adults: recognition and management",
       },
       {
         source: "APA Practice Guideline for the Treatment of Patients with Major Depressive Disorder, 3rd edition",
@@ -755,9 +755,9 @@ export const sertraline: Drug = {
         section: "India-specific prescribing information",
       },
       {
-        source: "FDA Prescribing Information — ZOLOFT (sertraline hydrochloride), revised 2023-08-08 (Viatris)",
+        source: "FDA Prescribing Information — ZOLOFT (sertraline hydrochloride)",
         section: "Highlights of Prescribing Information",
-        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fda754f6-d0f3-4dce-a17a-927d64f912f7",
+        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/019839s74lbl.pdf",
       },
     ],
     patientResources: [
@@ -1012,7 +1012,7 @@ export const sertraline: Drug = {
   guidelineComparisons: [
     {
       topic: "First-line SSRI for depression",
-      internationalSource: "NICE NG222 / APA Practice Guideline",
+      internationalSource: "NICE CG91 / APA Practice Guideline",
       internationalRecommendation: "SSRIs are first-line for moderate-severe depression. Sertraline is commonly chosen due to favourable side-effect profile and drug interaction profile.",
       indianSource: "Indian Psychiatric Society (IPS)",
       indianRecommendation: "IPS guidelines also recommend SSRIs as first-line for depression. Sertraline and escitalopram are the most commonly prescribed SSRIs in Indian practice. No specific IPS preference between individual SSRIs — selection is based on patient profile (pregnancy, elderly, comorbidities, cost).",
@@ -1117,7 +1117,7 @@ export const sertraline: Drug = {
   /* Evidence hierarchy: International → Indian Guidelines → Indian Clinical Practice */
   evidenceHierarchy: {
     international: [
-      { source: "NICE NG222", recommendation: "SSRIs are first-line for moderate-severe depression. Sertraline is commonly chosen due to favourable side-effect profile." },
+      { source: "NICE CG91", recommendation: "SSRIs are first-line for moderate-severe depression. Sertraline is commonly chosen due to favourable side-effect profile." },
       { source: "APA Practice Guideline", recommendation: "SSRI first-line for MDD. Sertraline preferred when drug interactions are a concern (mild CYP2D6 inhibition)." },
       { source: "FDA", recommendation: "Approved for 6 indications: MDD, OCD, Panic, PTSD, Social Anxiety, PMDD. Black box warning for suicidality <25." },
       { source: "WHO mhGAP", recommendation: "SSRIs recommended as first-line antidepressants in the Mental Health Gap Action Programme." },
@@ -1253,8 +1253,8 @@ export const sertraline: Drug = {
       { source: "Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th edition", section: "Section V — Pharmacotherapy of Mood Disorders" },
       { source: "Stahl's Essential Psychopharmacology, 5th edition", section: "Chapter 7 — Antidepressants" },
       { source: "Maudsley Prescribing Guidelines, 14th edition", section: "Chapter on depression" },
-      { source: "FDA Prescribing Information — ZOLOFT (sertraline hydrochloride), revised 2023-08-08 (Viatris)", section: "Highlights of Prescribing Information", url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fda754f6-d0f3-4dce-a17a-927d64f912f7" },
-      { source: "NICE Guideline NG222 — Depression in adults (2022)", section: "Recommendations — antidepressant choice and switching" },
+      { source: "FDA Prescribing Information — ZOLOFT (sertraline hydrochloride)", section: "Highlights of Prescribing Information", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2016/019839s74lbl.pdf" },
+      { source: "NICE Clinical Guideline CG91 — Depression in adults", section: "Pharmacological treatment" },
       { source: "APA Practice Guideline for MDD, 3rd edition" },
       { source: "Cipriani A et al. Lancet 2018 — Comparative efficacy of 21 antidepressants", section: "Network meta-analysis" },
     ],
@@ -1294,7 +1294,7 @@ export const sertraline: Drug = {
       {
         id: "moderate",
         question: "Moderate depression (PHQ-9 10-14)",
-        recommendation: "Sertraline 50mg OD + CBT. First-line per NICE NG222 and IPS guidelines.",
+        recommendation: "Sertraline 50mg OD + CBT. First-line per NICE CG91 and IPS guidelines.",
         reasoning: "SSRI + CBT is first-line for moderate depression. Sertraline is preferred for favourable side-effect profile, pregnancy safety, and low cost in India.",
       },
       {
@@ -1611,21 +1611,21 @@ export const sertraline: Drug = {
       label: "MBBS Student",
       estimatedTime: "20 min",
       description: "Foundations, mechanism, clinical uses, side effects, and MBBS exam content.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "interactions", "patient-education", "learning-module", "high-yield-summary", "faq"],
     },
     {
       mode: "neetPg",
       label: "NEET PG / INICET",
       estimatedTime: "35 min",
       description: "Full clinical detail with exam-specific content, PYQs, and drug comparisons.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall"],
     },
     {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
       description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence.",
-      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
+      visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
     },
   ],
 
@@ -1675,7 +1675,222 @@ export const sertraline: Drug = {
     },
   ],
 
+  /* ---- Prescriber's Guide (Stahl layer) ---- */
+  /** Educational paraphrase of Stahl's Essential Psychopharmacology:
+   *  The Prescriber's Guide, 1st ed. (2005). Facts restated, not reproduced. */
+  prescriberGuide: {
+    sourceEdition: "Stahl's Essential Psychopharmacology: The Prescriber's Guide, 1st ed. (2005)",
+
+    onsetTimeline: [
+      "Some patients notice increased energy or activation early after starting",
+      "True therapeutic onset is usually delayed 2–4 weeks",
+      "No benefit by 6–8 weeks → consider a dose increase or a different agent",
+      "Continues working for years to prevent symptom relapse",
+    ],
+    ifItWorks: [
+      "Goal is complete remission of current symptoms plus prevention of future episodes — not just partial improvement",
+      "Treatment usually reduces or eliminates symptoms but is not a cure; symptoms can return after stopping",
+      "Continue until symptoms are gone (remission) or clearly reduced — OCD and PTSD often improve without full remission",
+      "First depressive episode: continue for about 1 year once well",
+      "Second and subsequent episodes, and anxiety disorders: treatment may need to be indefinite",
+    ],
+    ifItDoesNotWork: [
+      "Partial response is common — residual insomnia, fatigue and poor concentration may persist in depression",
+      "Some patients are true non-responders (treatment-resistant / treatment-refractory)",
+      "Some early responders relapse despite continuing the drug (so-called poop-out)",
+      "Options: raise the dose, switch to another agent, or add an augmenting drug",
+      "Consider adding psychotherapy and re-evaluating the diagnosis (medical illness, substance use, comorbidity)",
+      "Apparent non-response from activation of latent bipolar disorder → stop the antidepressant and switch to a mood stabilizer",
+    ],
+    augmentationCombos: [
+      "Trazodone for insomnia; bupropion is the classic add-on (the informal 'Well-loft' combination) — watch for activation",
+      "Mirtazapine, reboxetine, or cautious low-dose atomoxetine (sertraline can raise atomoxetine levels)",
+      "Modafinil for fatigue, sleepiness and poor concentration",
+      "Mood stabilizers or atypical antipsychotics for bipolar depression, psychotic depression, and treatment-resistant depression or anxiety",
+      "Benzodiazepines for anxiety; if everything else fails for anxiety, gabapentin or tiagabine",
+      "Hypnotics for insomnia; classically lithium, buspirone, or thyroid hormone",
+    ],
+    testsBeforeStarting: [
+      "None required for healthy individuals",
+    ],
+
+    sideEffectLogic: [
+      "Serotonin rises at receptors outside the therapeutic circuits — sleep centers (insomnia), gut (diarrhea)",
+      "Excess serotonin can dampen dopamine release → emotional flattening, cognitive slowing, apathy; sertraline's mild dopamine reuptake blockade may offset this",
+      "Side effects are usually immediate and fade with time, while therapeutic effects are delayed and build up",
+      "Its dopamine reuptake blockade can contribute to early agitation, anxiety and activation",
+    ],
+    sideEffectManagement: [
+      "Wait — most early effects fade on their own",
+      "Wait again before changing anything",
+      "Wait once more",
+      "If activating: take in the morning to reduce insomnia",
+      "Reduce the dose to 25 mg (or even 12.5 mg) until effects settle, then re-titrate to at least 50 mg/day",
+      "After a few weeks: switch or add other drugs",
+    ],
+    sideEffectRescue: [
+      "Often better to try another SSRI or antidepressant monotherapy than to augment around side effects",
+      "Trazodone or a hypnotic for insomnia",
+      "Bupropion, sildenafil, vardenafil or tadalafil for sexual dysfunction",
+      "Bupropion for emotional flattening, cognitive slowing, or apathy",
+      "Mirtazapine for insomnia, agitation, and gastrointestinal effects",
+      "Benzodiazepines for jitteriness and anxiety, especially at treatment initiation in anxious patients",
+    ],
+    weightGain: "Reported but not expected — some patients actually lose weight",
+    sedation: "Reported but not expected — may be activating",
+
+    dosing: [
+      {
+        indication: "Depression & OCD (adults)",
+        starting: "50 mg/day",
+        titration: "Assess for a few weeks before increasing; can raise once weekly if needed",
+        target: "50–200 mg/day",
+        max: "200 mg/day (experts use up to 400 mg/day in resistant OCD)",
+        notes: [
+          "All tablets are scored — giving 50 mg as half of a 100 mg tablet saves cost, since 100 mg and 50 mg tablets cost about the same in many markets",
+          "Once daily, usually in the morning to reduce insomnia",
+          "Many patients ultimately need more than 50 mg/day; some are dosed above 200 mg",
+        ],
+      },
+      {
+        indication: "Panic disorder & PTSD",
+        starting: "25 mg/day",
+        titration: "Increase to 50 mg/day after 1 week, then wait weeks between further rises",
+        target: "50–200 mg/day",
+        max: "200 mg/day",
+      },
+      {
+        indication: "Patients with prior antidepressant intolerance",
+        starting: "12.5 mg/day (half a 25 mg tablet)",
+        titration: "Re-titrate upward as tolerated",
+        target: "At least 50 mg/day",
+        max: "200 mg/day",
+      },
+    ],
+    dosageForms: ["Tablets 25 mg (scored)", "Tablets 50 mg (scored)", "Tablets 100 mg"],
+    dosingTips: [
+      "The more anxious and agitated the patient: the lower the starting dose, the slower the titration, and the more likely the need for a bridge (trazodone or a benzodiazepine)",
+      "Intolerable anxiety, insomnia, agitation, akathisia or activation — on starting OR stopping — should raise suspicion of activated bipolar disorder; consider switching to a mood stabilizer or atypical antipsychotic",
+      "Activation and agitation can represent a mixed dysphoric bipolar II state, sometimes with suicidal ideation — add lithium, a mood stabilizer or an antipsychotic, and/or stop sertraline",
+      "Many side effects are dose- and time-dependent: they spike on each increase, then fade as tolerance re-develops",
+    ],
+    overdose: [
+      "Rarely lethal in monotherapy overdose — vomiting, sedation, heart rhythm disturbances, dilated pupils, agitation",
+      "Fatalities have been reported when combined with other drugs or alcohol",
+    ],
+    longTermUse: "Safe",
+    habitForming: "No",
+    howToStop: [
+      "Taper to avoid withdrawal effects (dizziness, nausea, stomach cramps, sweating, tingling, dysesthesias)",
+      "Many patients tolerate: 50% dose reduction for 3 days → another 50% for 3 days → stop",
+      "If withdrawal symptoms emerge, raise the dose back to abort them, then withdraw much more slowly",
+    ],
+    pharmacokinetics: [
+      "Parent drug half-life 22–36 hours; active metabolite half-life 62–104 hours",
+      "Weak CYP2D6 inhibition at low doses; weak CYP3A4 inhibition at low doses",
+      "Can raise tricyclic antidepressant levels — caution when combining or switching from a TCA",
+      "Fatal serotonin syndrome with MAO inhibitors: do not combine; wait 14 days after stopping an MAOI, and start MAOIs only 2 weeks after stopping sertraline",
+      "Tramadol raises seizure risk with any antidepressant; sumatriptan (and possibly other triptans) can rarely cause weakness, hyperreflexia and incoordination",
+      "Via CYP2D6: may blunt codeine analgesia and raise levels of some beta blockers, atomoxetine, and thioridazine (risk of dangerous arrhythmias)",
+      "Via CYP3A4: may raise alprazolam, buspirone and triazolam levels; may raise simvastatin/atorvastatin/lovastatin (rhabdomyolysis risk) and pimozide (QTc prolongation)",
+      "May displace highly protein-bound drugs such as warfarin",
+    ],
+    doNotUse: [
+      "If the patient is taking an MAO inhibitor",
+      "If the patient is taking pimozide",
+      "If the patient is taking thioridazine",
+      "Oral concentrate with disulfiram (alcohol content of the concentrate)",
+      "Proven allergy to sertraline",
+    ],
+
+    specialPopulations: [
+      {
+        population: "Renal impairment",
+        guidance: ["No dose adjustment needed", "Not removed by hemodialysis"],
+      },
+      {
+        population: "Hepatic impairment",
+        guidance: ["Lower the dose or give less frequently — perhaps by half"],
+      },
+      {
+        population: "Cardiac impairment",
+        guidance: [
+          "Preliminary research suggests sertraline is safe in cardiac patients",
+          "Treating depression with SSRIs after myocardial infarction or in unstable angina may reduce cardiac events and improve survival as well as mood",
+        ],
+      },
+      {
+        population: "Elderly",
+        guidance: [
+          "May tolerate lower doses and/or slower titration better",
+          "Non-response in the elderly: consider mild cognitive impairment or Alzheimer disease",
+          "SSRIs may be less effective in women over 50 who are not taking estrogen",
+        ],
+      },
+      {
+        population: "Children & adolescents",
+        guidance: [
+          "Approved for OCD: ages 6–12 start at 25 mg/day; age 13 and up use adult dosing",
+          "Long-term effects, particularly on growth, have not been studied",
+          "Use with caution — watch for activation of bipolar disorder and suicidal ideation, and counsel parents/guardians to help observe",
+        ],
+      },
+      {
+        population: "Pregnancy",
+        guidance: [
+          "Risk Category C — not generally recommended, especially in the first trimester, though continuous treatment may be necessary and has not been proven harmful",
+          "At delivery: possible increased maternal bleeding and transient newborn irritability or sedation",
+          "Late third-trimester exposure: neonatal complications reported (respiratory distress, cyanosis, apnea, seizures, temperature instability, feeding difficulty, hypoglycemia, hypertonia/hypotonia, tremor, constant crying) — consistent with toxicity or a discontinuation syndrome",
+          "Weigh risk of treatment (fetal development, delivery) against risk of no treatment (relapse, maternal health, bonding) — for many patients continuing treatment is the better choice",
+        ],
+      },
+      {
+        population: "Breast feeding",
+        guidance: [
+          "Some drug is present in breast milk; trace amounts in nursing infants",
+          "Has shown efficacy for postpartum depression",
+          "If the infant becomes irritable or sedated, breastfeeding or the drug may need to be stopped",
+          "The immediate postpartum period is high-risk for relapse — treatment may need to be reinstituted late in the third trimester or shortly after delivery",
+        ],
+      },
+    ],
+
+    potentialAdvantages: [
+      "Atypical depression (hypersomnia, increased appetite)",
+      "Fatigue and low energy",
+      "Patients who must avoid hyperprolactinemia — the one SSRI that generally does not raise prolactin (pubescent children, galactorrhea, unexplained amenorrhea, postmenopausal women not on estrogen)",
+    ],
+    potentialDisadvantages: [
+      "Starting treatment in anxious patients who already have some insomnia",
+      "Comorbid irritable bowel syndrome (more diarrhea)",
+      "Requires dosage titration",
+    ],
+    primaryTargetSymptoms: [
+      "Depressed mood",
+      "Anxiety",
+      "Sleep disturbance (insomnia and hypersomnia)",
+      "Panic attacks",
+      "Avoidant behavior",
+      "Re-experiencing",
+      "Hyperarousal",
+    ],
+    pearls: [
+      "A rational first-line choice for atypical depression (hypersomnia, hyperphagia, low energy, mood reactivity)",
+      "Mild dopamine reuptake blockade may give an edge in low-energy, anergic depression",
+      "Sigma-1 receptor antagonism may contribute to its anxiolytic actions",
+      "Causes more gastrointestinal effects — particularly diarrhea — than some other antidepressants",
+      "Can cause cognitive and affective flattening, theoretically offset in some patients by its dopamine activity",
+      "May work better for women with PTSD or depression than for men; clinical significance unknown",
+      "For sexual dysfunction: augment with bupropion, sildenafil, vardenafil or tadalafil — or switch to a non-SSRI such as bupropion or mirtazapine",
+      "Some postmenopausal depression responds better to sertraline plus estrogen than to sertraline alone",
+      "Less well tolerated in panic disorder at initiation unless started low or co-treated with benzodiazepines or trazodone",
+      "Relative lack of prolactin effect makes it a preferred SSRI for children, adolescents and women",
+      "Luteal-phase-only dosing may be more effective than continuous dosing for PMDD",
+      "SSRIs may help hot flushes in perimenopausal women",
+    ],
+  },
+
   /* ---- Metadata ---- */
   lastReviewed: "2026-07-13",
-  reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Zoloft label, NICE NG222, APA Practice Guideline, KD Tripathi 8e, IPS Depression Guidelines, NMC CBME Curriculum"],
+  reviewers: ["Compiled from Katzung 16e, Goodman & Gilman 14e, FDA Zoloft label, NICE CG91, APA Practice Guideline, KD Tripathi 8e, IPS Depression Guidelines, NMC CBME Curriculum"],
 };

@@ -1,7 +1,5 @@
-"use client";
-
-import * as React from "react";
 import Link from "next/link";
+import * as React from "react";
 import { Link2, MoveDown, MoveRight } from "lucide-react";
 import type {
   DrugKnowledgeChain,
@@ -14,7 +12,10 @@ import {
   knowledgeGraph,
 } from "@/lib/kyp/knowledge";
 import { getMechanismActionLabel } from "@/lib/kyp/knowledge";
-import { drugClassIdFromLabel } from "@/lib/kyp/data/drug-taxonomy";
+// Pure label->id transform (zero data imports) - importing it from
+// ./drug-taxonomy would drag the 145-monograph registry into this
+// module graph for one string transform.
+import { drugClassIdFromLabel } from "@/lib/kyp/data/class-id";
 import { cn } from "@/lib/utils";
 
 /**
@@ -45,6 +46,14 @@ import { cn } from "@/lib/utils";
  *
  * buildKnowledgeChainView(chain) is exported as a PURE function so the
  * test suite can pin the presentation contract without React.
+ * buildKnowledgeChainView(chain) is exported as a PURE function so the
+ * test suite can pin the presentation contract without React.
+ *
+ * SERVER COMPONENT (no hooks, no event handlers): it derives the chain
+ * from the canonical knowledge graph server-side, so the registry and
+ * the knowledge-graph module never reach the client bundle. The drug
+ * page renders it and passes it INTO the client DrugKnowledgeGraph as
+ * a prop (RSC children pattern).
  */
 
 /* ============================================================

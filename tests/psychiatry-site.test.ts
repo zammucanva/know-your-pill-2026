@@ -157,7 +157,9 @@ describe("psychiatry — routes and identity", () => {
     const { searchIndex } = await import("../src/lib/kyp/data/search-index");
     const psych = searchIndex.filter((i) => i.type === "psychiatry-note");
     expect(psych.length).toBe(111);
-    expect(searchIndex.length).toBe(164);
+    // 340 = 229 registry-era entries (145-drug Stahl integration) +
+    // 111 psychiatry records. Tracked in scripts/content-lock.ts counts.
+    expect(searchIndex.length).toBe(340);
     const hub = searchIndex.find((i) => i.id === "psychiatry-hub");
     expect(hub?.href).toBe("/psychiatry");
   });

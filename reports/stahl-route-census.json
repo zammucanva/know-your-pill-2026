@@ -1,0 +1,1720 @@
+{
+  "generatedAt": "2026-10-01T09:24:15.743Z",
+  "registryTotal": 145,
+  "routeCensus": {
+    "total": 145,
+    "buildGenerated": 145,
+    "http200": 145,
+    "monographMarkerFound": 145,
+    "rows": [
+      {
+        "slug": "sertraline",
+        "genericName": "Sertraline",
+        "drugClassLabel": "SSRI",
+        "expectedRoute": "/drugs/sertraline/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 1029212
+      },
+      {
+        "slug": "fluoxetine",
+        "genericName": "Fluoxetine",
+        "drugClassLabel": "SSRI",
+        "expectedRoute": "/drugs/fluoxetine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 1111741
+      },
+      {
+        "slug": "escitalopram",
+        "genericName": "Escitalopram",
+        "drugClassLabel": "SSRI",
+        "expectedRoute": "/drugs/escitalopram/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 1066436
+      },
+      {
+        "slug": "paroxetine",
+        "genericName": "Paroxetine",
+        "drugClassLabel": "SSRI",
+        "expectedRoute": "/drugs/paroxetine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 1172907
+      },
+      {
+        "slug": "citalopram",
+        "genericName": "Citalopram",
+        "drugClassLabel": "SSRI",
+        "expectedRoute": "/drugs/citalopram/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 1096617
+      },
+      {
+        "slug": "fluvoxamine",
+        "genericName": "Fluvoxamine",
+        "drugClassLabel": "SSRI",
+        "expectedRoute": "/drugs/fluvoxamine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 1120955
+      },
+      {
+        "slug": "venlafaxine",
+        "genericName": "Venlafaxine",
+        "drugClassLabel": "SNRI",
+        "expectedRoute": "/drugs/venlafaxine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 1118052
+      },
+      {
+        "slug": "duloxetine",
+        "genericName": "Duloxetine",
+        "drugClassLabel": "SNRI",
+        "expectedRoute": "/drugs/duloxetine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 1123607
+      },
+      {
+        "slug": "bupropion",
+        "genericName": "Bupropion",
+        "drugClassLabel": "NDRI",
+        "expectedRoute": "/drugs/bupropion/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 1145958
+      },
+      {
+        "slug": "mirtazapine",
+        "genericName": "Mirtazapine",
+        "drugClassLabel": "NaSSA",
+        "expectedRoute": "/drugs/mirtazapine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 1109257
+      },
+      {
+        "slug": "amitriptyline",
+        "genericName": "Amitriptyline",
+        "drugClassLabel": "TCA",
+        "expectedRoute": "/drugs/amitriptyline/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 1162789
+      },
+      {
+        "slug": "clomipramine",
+        "genericName": "Clomipramine",
+        "drugClassLabel": "TCA",
+        "expectedRoute": "/drugs/clomipramine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 1204644
+      },
+      {
+        "slug": "tianeptine",
+        "genericName": "Tianeptine",
+        "drugClassLabel": "Atypical Antidepressant",
+        "expectedRoute": "/drugs/tianeptine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 579666
+      },
+      {
+        "slug": "isocarboxazid",
+        "genericName": "Isocarboxazid",
+        "drugClassLabel": "MAOI",
+        "expectedRoute": "/drugs/isocarboxazid/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 569193
+      },
+      {
+        "slug": "moclobemide",
+        "genericName": "Moclobemide",
+        "drugClassLabel": "MAOI",
+        "expectedRoute": "/drugs/moclobemide/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 597382
+      },
+      {
+        "slug": "phenelzine",
+        "genericName": "Phenelzine",
+        "drugClassLabel": "MAOI",
+        "expectedRoute": "/drugs/phenelzine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 605345
+      },
+      {
+        "slug": "selegiline",
+        "genericName": "Selegiline",
+        "drugClassLabel": "MAOI",
+        "expectedRoute": "/drugs/selegiline/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 598436
+      },
+      {
+        "slug": "tranylcypromine",
+        "genericName": "Tranylcypromine",
+        "drugClassLabel": "MAOI",
+        "expectedRoute": "/drugs/tranylcypromine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 608876
+      },
+      {
+        "slug": "l-methylfolate",
+        "genericName": "L-Methylfolate",
+        "drugClassLabel": "Medical Food",
+        "expectedRoute": "/drugs/l-methylfolate/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 531812
+      },
+      {
+        "slug": "agomelatine",
+        "genericName": "Agomelatine",
+        "drugClassLabel": "Melatonergic Antidepressant",
+        "expectedRoute": "/drugs/agomelatine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 567506
+      },
+      {
+        "slug": "vortioxetine",
+        "genericName": "Vortioxetine",
+        "drugClassLabel": "Multimodal Antidepressant",
+        "expectedRoute": "/drugs/vortioxetine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 615617
+      },
+      {
+        "slug": "ketamine",
+        "genericName": "Ketamine",
+        "drugClassLabel": "NMDA Antidepressant",
+        "expectedRoute": "/drugs/ketamine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 601566
+      },
+      {
+        "slug": "reboxetine",
+        "genericName": "Reboxetine",
+        "drugClassLabel": "NRI",
+        "expectedRoute": "/drugs/reboxetine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 558120
+      },
+      {
+        "slug": "nefazodone",
+        "genericName": "Nefazodone",
+        "drugClassLabel": "SARI",
+        "expectedRoute": "/drugs/nefazodone/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 585558
+      },
+      {
+        "slug": "trazodone",
+        "genericName": "Trazodone",
+        "drugClassLabel": "SARI",
+        "expectedRoute": "/drugs/trazodone/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 628358
+      },
+      {
+        "slug": "desvenlafaxine",
+        "genericName": "Desvenlafaxine",
+        "drugClassLabel": "SNRI",
+        "expectedRoute": "/drugs/desvenlafaxine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 610705
+      },
+      {
+        "slug": "levomilnacipran",
+        "genericName": "Levomilnacipran",
+        "drugClassLabel": "SNRI",
+        "expectedRoute": "/drugs/levomilnacipran/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 581456
+      },
+      {
+        "slug": "milnacipran",
+        "genericName": "Milnacipran",
+        "drugClassLabel": "SNRI",
+        "expectedRoute": "/drugs/milnacipran/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 586727
+      },
+      {
+        "slug": "vilazodone",
+        "genericName": "Vilazodone",
+        "drugClassLabel": "SPARI",
+        "expectedRoute": "/drugs/vilazodone/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 586819
+      },
+      {
+        "slug": "triiodothyronine",
+        "genericName": "Triiodothyronine (T3)",
+        "drugClassLabel": "T3 Augmentation",
+        "expectedRoute": "/drugs/triiodothyronine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 564416
+      },
+      {
+        "slug": "amoxapine",
+        "genericName": "Amoxapine",
+        "drugClassLabel": "TCA",
+        "expectedRoute": "/drugs/amoxapine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 648080
+      },
+      {
+        "slug": "desipramine",
+        "genericName": "Desipramine",
+        "drugClassLabel": "TCA",
+        "expectedRoute": "/drugs/desipramine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 638771
+      },
+      {
+        "slug": "dothiepin",
+        "genericName": "Dothiepin",
+        "drugClassLabel": "TCA",
+        "expectedRoute": "/drugs/dothiepin/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 636414
+      },
+      {
+        "slug": "doxepin",
+        "genericName": "Doxepin",
+        "drugClassLabel": "TCA",
+        "expectedRoute": "/drugs/doxepin/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 652967
+      },
+      {
+        "slug": "imipramine",
+        "genericName": "Imipramine",
+        "drugClassLabel": "TCA",
+        "expectedRoute": "/drugs/imipramine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 649087
+      },
+      {
+        "slug": "lofepramine",
+        "genericName": "Lofepramine",
+        "drugClassLabel": "TCA",
+        "expectedRoute": "/drugs/lofepramine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 637124
+      },
+      {
+        "slug": "maprotiline",
+        "genericName": "Maprotiline",
+        "drugClassLabel": "TCA",
+        "expectedRoute": "/drugs/maprotiline/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 636773
+      },
+      {
+        "slug": "mianserin",
+        "genericName": "Mianserin",
+        "drugClassLabel": "TCA",
+        "expectedRoute": "/drugs/mianserin/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 641044
+      },
+      {
+        "slug": "nortriptyline",
+        "genericName": "Nortriptyline",
+        "drugClassLabel": "TCA",
+        "expectedRoute": "/drugs/nortriptyline/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 651381
+      },
+      {
+        "slug": "protriptyline",
+        "genericName": "Protriptyline",
+        "drugClassLabel": "TCA",
+        "expectedRoute": "/drugs/protriptyline/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 639762
+      },
+      {
+        "slug": "trimipramine",
+        "genericName": "Trimipramine",
+        "drugClassLabel": "TCA",
+        "expectedRoute": "/drugs/trimipramine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 641059
+      },
+      {
+        "slug": "amisulpride",
+        "genericName": "Amisulpride",
+        "drugClassLabel": "Atypical Antipsychotic",
+        "expectedRoute": "/drugs/amisulpride/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 617497
+      },
+      {
+        "slug": "asenapine",
+        "genericName": "Asenapine",
+        "drugClassLabel": "Atypical Antipsychotic",
+        "expectedRoute": "/drugs/asenapine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 629671
+      },
+      {
+        "slug": "blonanserin",
+        "genericName": "Blonanserin",
+        "drugClassLabel": "Atypical Antipsychotic",
+        "expectedRoute": "/drugs/blonanserin/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 582777
+      },
+      {
+        "slug": "clozapine",
+        "genericName": "Clozapine",
+        "drugClassLabel": "Atypical Antipsychotic",
+        "expectedRoute": "/drugs/clozapine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 813363
+      },
+      {
+        "slug": "iloperidone",
+        "genericName": "Iloperidone",
+        "drugClassLabel": "Atypical Antipsychotic",
+        "expectedRoute": "/drugs/iloperidone/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 588753
+      },
+      {
+        "slug": "lurasidone",
+        "genericName": "Lurasidone",
+        "drugClassLabel": "Atypical Antipsychotic",
+        "expectedRoute": "/drugs/lurasidone/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 614514
+      },
+      {
+        "slug": "olanzapine",
+        "genericName": "Olanzapine",
+        "drugClassLabel": "Atypical Antipsychotic",
+        "expectedRoute": "/drugs/olanzapine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 785973
+      },
+      {
+        "slug": "paliperidone",
+        "genericName": "Paliperidone",
+        "drugClassLabel": "Atypical Antipsychotic",
+        "expectedRoute": "/drugs/paliperidone/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 638579
+      },
+      {
+        "slug": "perospirone",
+        "genericName": "Perospirone",
+        "drugClassLabel": "Atypical Antipsychotic",
+        "expectedRoute": "/drugs/perospirone/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 579779
+      },
+      {
+        "slug": "pimavanserin",
+        "genericName": "Pimavanserin",
+        "drugClassLabel": "Atypical Antipsychotic",
+        "expectedRoute": "/drugs/pimavanserin/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 601138
+      },
+      {
+        "slug": "quetiapine",
+        "genericName": "Quetiapine",
+        "drugClassLabel": "Atypical Antipsychotic",
+        "expectedRoute": "/drugs/quetiapine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 780346
+      },
+      {
+        "slug": "risperidone",
+        "genericName": "Risperidone",
+        "drugClassLabel": "Atypical Antipsychotic",
+        "expectedRoute": "/drugs/risperidone/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 771309
+      },
+      {
+        "slug": "sertindole",
+        "genericName": "Sertindole",
+        "drugClassLabel": "Atypical Antipsychotic",
+        "expectedRoute": "/drugs/sertindole/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 595319
+      },
+      {
+        "slug": "sulpiride",
+        "genericName": "Sulpiride",
+        "drugClassLabel": "Atypical Antipsychotic",
+        "expectedRoute": "/drugs/sulpiride/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 591589
+      },
+      {
+        "slug": "ziprasidone",
+        "genericName": "Ziprasidone",
+        "drugClassLabel": "Atypical Antipsychotic",
+        "expectedRoute": "/drugs/ziprasidone/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 638132
+      },
+      {
+        "slug": "zotepine",
+        "genericName": "Zotepine",
+        "drugClassLabel": "Atypical Antipsychotic",
+        "expectedRoute": "/drugs/zotepine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 586869
+      },
+      {
+        "slug": "aripiprazole",
+        "genericName": "Aripiprazole",
+        "drugClassLabel": "Dopamine Stabiliser",
+        "expectedRoute": "/drugs/aripiprazole/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 805334
+      },
+      {
+        "slug": "brexpiprazole",
+        "genericName": "Brexpiprazole",
+        "drugClassLabel": "Dopamine Stabiliser",
+        "expectedRoute": "/drugs/brexpiprazole/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 625299
+      },
+      {
+        "slug": "cariprazine",
+        "genericName": "Cariprazine",
+        "drugClassLabel": "Dopamine Stabiliser",
+        "expectedRoute": "/drugs/cariprazine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 614584
+      },
+      {
+        "slug": "chlorpromazine",
+        "genericName": "Chlorpromazine",
+        "drugClassLabel": "Typical Antipsychotic",
+        "expectedRoute": "/drugs/chlorpromazine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 632316
+      },
+      {
+        "slug": "cyamemazine",
+        "genericName": "Cyamemazine",
+        "drugClassLabel": "Typical Antipsychotic",
+        "expectedRoute": "/drugs/cyamemazine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 591442
+      },
+      {
+        "slug": "flupenthixol",
+        "genericName": "Flupenthixol",
+        "drugClassLabel": "Typical Antipsychotic",
+        "expectedRoute": "/drugs/flupenthixol/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 593603
+      },
+      {
+        "slug": "fluphenazine",
+        "genericName": "Fluphenazine",
+        "drugClassLabel": "Typical Antipsychotic",
+        "expectedRoute": "/drugs/fluphenazine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 601698
+      },
+      {
+        "slug": "haloperidol",
+        "genericName": "Haloperidol",
+        "drugClassLabel": "Typical Antipsychotic",
+        "expectedRoute": "/drugs/haloperidol/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 687331
+      },
+      {
+        "slug": "loxapine",
+        "genericName": "Loxapine",
+        "drugClassLabel": "Typical Antipsychotic",
+        "expectedRoute": "/drugs/loxapine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 597741
+      },
+      {
+        "slug": "mesoridazine",
+        "genericName": "Mesoridazine",
+        "drugClassLabel": "Typical Antipsychotic",
+        "expectedRoute": "/drugs/mesoridazine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 583680
+      },
+      {
+        "slug": "molindone",
+        "genericName": "Molindone",
+        "drugClassLabel": "Typical Antipsychotic",
+        "expectedRoute": "/drugs/molindone/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 588281
+      },
+      {
+        "slug": "perphenazine",
+        "genericName": "Perphenazine",
+        "drugClassLabel": "Typical Antipsychotic",
+        "expectedRoute": "/drugs/perphenazine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 593520
+      },
+      {
+        "slug": "pimozide",
+        "genericName": "Pimozide",
+        "drugClassLabel": "Typical Antipsychotic",
+        "expectedRoute": "/drugs/pimozide/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 595165
+      },
+      {
+        "slug": "pipothiazine",
+        "genericName": "Pipothiazine",
+        "drugClassLabel": "Typical Antipsychotic",
+        "expectedRoute": "/drugs/pipothiazine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 582798
+      },
+      {
+        "slug": "thioridazine",
+        "genericName": "Thioridazine",
+        "drugClassLabel": "Typical Antipsychotic",
+        "expectedRoute": "/drugs/thioridazine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 606054
+      },
+      {
+        "slug": "thiothixene",
+        "genericName": "Thiothixene",
+        "drugClassLabel": "Typical Antipsychotic",
+        "expectedRoute": "/drugs/thiothixene/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 583269
+      },
+      {
+        "slug": "trifluoperazine",
+        "genericName": "Trifluoperazine",
+        "drugClassLabel": "Typical Antipsychotic",
+        "expectedRoute": "/drugs/trifluoperazine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 597494
+      },
+      {
+        "slug": "zuclopenthixol",
+        "genericName": "Zuclopenthixol",
+        "drugClassLabel": "Typical Antipsychotic",
+        "expectedRoute": "/drugs/zuclopenthixol/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 597343
+      },
+      {
+        "slug": "gabapentin",
+        "genericName": "Gabapentin",
+        "drugClassLabel": "Anticonvulsant",
+        "expectedRoute": "/drugs/gabapentin/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 609975
+      },
+      {
+        "slug": "levetiracetam",
+        "genericName": "Levetiracetam",
+        "drugClassLabel": "Anticonvulsant",
+        "expectedRoute": "/drugs/levetiracetam/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 587210
+      },
+      {
+        "slug": "pregabalin",
+        "genericName": "Pregabalin",
+        "drugClassLabel": "Anticonvulsant",
+        "expectedRoute": "/drugs/pregabalin/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 611573
+      },
+      {
+        "slug": "tiagabine",
+        "genericName": "Tiagabine",
+        "drugClassLabel": "Anticonvulsant",
+        "expectedRoute": "/drugs/tiagabine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 572730
+      },
+      {
+        "slug": "topiramate",
+        "genericName": "Topiramate",
+        "drugClassLabel": "Anticonvulsant",
+        "expectedRoute": "/drugs/topiramate/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 634258
+      },
+      {
+        "slug": "zonisamide",
+        "genericName": "Zonisamide",
+        "drugClassLabel": "Anticonvulsant",
+        "expectedRoute": "/drugs/zonisamide/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 593007
+      },
+      {
+        "slug": "carbamazepine",
+        "genericName": "Carbamazepine",
+        "drugClassLabel": "Mood Stabiliser",
+        "expectedRoute": "/drugs/carbamazepine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 620532
+      },
+      {
+        "slug": "lamotrigine",
+        "genericName": "Lamotrigine",
+        "drugClassLabel": "Mood Stabiliser",
+        "expectedRoute": "/drugs/lamotrigine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 628008
+      },
+      {
+        "slug": "lithium",
+        "genericName": "Lithium",
+        "drugClassLabel": "Mood Stabiliser",
+        "expectedRoute": "/drugs/lithium/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 762781
+      },
+      {
+        "slug": "oxcarbazepine",
+        "genericName": "Oxcarbazepine",
+        "drugClassLabel": "Mood Stabiliser",
+        "expectedRoute": "/drugs/oxcarbazepine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 586762
+      },
+      {
+        "slug": "valproate",
+        "genericName": "Valproate",
+        "drugClassLabel": "Mood Stabiliser",
+        "expectedRoute": "/drugs/valproate/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 658727
+      },
+      {
+        "slug": "prazosin",
+        "genericName": "Prazosin",
+        "drugClassLabel": "Alpha-1 Blocker",
+        "expectedRoute": "/drugs/prazosin/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 557106
+      },
+      {
+        "slug": "diphenhydramine",
+        "genericName": "Diphenhydramine",
+        "drugClassLabel": "Antihistamine",
+        "expectedRoute": "/drugs/diphenhydramine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 589378
+      },
+      {
+        "slug": "hydroxyzine",
+        "genericName": "Hydroxyzine",
+        "drugClassLabel": "Antihistamine",
+        "expectedRoute": "/drugs/hydroxyzine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 567968
+      },
+      {
+        "slug": "buspirone",
+        "genericName": "Buspirone",
+        "drugClassLabel": "Azapirone",
+        "expectedRoute": "/drugs/buspirone/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 557572
+      },
+      {
+        "slug": "alprazolam",
+        "genericName": "Alprazolam",
+        "drugClassLabel": "Benzodiazepine",
+        "expectedRoute": "/drugs/alprazolam/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 614428
+      },
+      {
+        "slug": "chlordiazepoxide",
+        "genericName": "Chlordiazepoxide",
+        "drugClassLabel": "Benzodiazepine",
+        "expectedRoute": "/drugs/chlordiazepoxide/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 580629
+      },
+      {
+        "slug": "clonazepam",
+        "genericName": "Clonazepam",
+        "drugClassLabel": "Benzodiazepine",
+        "expectedRoute": "/drugs/clonazepam/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 623273
+      },
+      {
+        "slug": "clorazepate",
+        "genericName": "Clorazepate",
+        "drugClassLabel": "Benzodiazepine",
+        "expectedRoute": "/drugs/clorazepate/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 567584
+      },
+      {
+        "slug": "diazepam",
+        "genericName": "Diazepam",
+        "drugClassLabel": "Benzodiazepine",
+        "expectedRoute": "/drugs/diazepam/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 637583
+      },
+      {
+        "slug": "loflazepate",
+        "genericName": "Loflazepate",
+        "drugClassLabel": "Benzodiazepine",
+        "expectedRoute": "/drugs/loflazepate/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 562454
+      },
+      {
+        "slug": "lorazepam",
+        "genericName": "Lorazepam",
+        "drugClassLabel": "Benzodiazepine",
+        "expectedRoute": "/drugs/lorazepam/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 642245
+      },
+      {
+        "slug": "midazolam",
+        "genericName": "Midazolam",
+        "drugClassLabel": "Benzodiazepine",
+        "expectedRoute": "/drugs/midazolam/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 612967
+      },
+      {
+        "slug": "oxazepam",
+        "genericName": "Oxazepam",
+        "drugClassLabel": "Benzodiazepine",
+        "expectedRoute": "/drugs/oxazepam/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 585679
+      },
+      {
+        "slug": "flumazenil",
+        "genericName": "Flumazenil",
+        "drugClassLabel": "Benzodiazepine Antidote",
+        "expectedRoute": "/drugs/flumazenil/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 560550
+      },
+      {
+        "slug": "propranolol",
+        "genericName": "Propranolol",
+        "drugClassLabel": "Beta-Blocker",
+        "expectedRoute": "/drugs/propranolol/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 595826
+      },
+      {
+        "slug": "estazolam",
+        "genericName": "Estazolam",
+        "drugClassLabel": "Benzodiazepine Hypnotic",
+        "expectedRoute": "/drugs/estazolam/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 584261
+      },
+      {
+        "slug": "flunitrazepam",
+        "genericName": "Flunitrazepam",
+        "drugClassLabel": "Benzodiazepine Hypnotic",
+        "expectedRoute": "/drugs/flunitrazepam/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 575117
+      },
+      {
+        "slug": "flurazepam",
+        "genericName": "Flurazepam",
+        "drugClassLabel": "Benzodiazepine Hypnotic",
+        "expectedRoute": "/drugs/flurazepam/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 566113
+      },
+      {
+        "slug": "quazepam",
+        "genericName": "Quazepam",
+        "drugClassLabel": "Benzodiazepine Hypnotic",
+        "expectedRoute": "/drugs/quazepam/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 564295
+      },
+      {
+        "slug": "temazepam",
+        "genericName": "Temazepam",
+        "drugClassLabel": "Benzodiazepine Hypnotic",
+        "expectedRoute": "/drugs/temazepam/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 594275
+      },
+      {
+        "slug": "triazolam",
+        "genericName": "Triazolam",
+        "drugClassLabel": "Benzodiazepine Hypnotic",
+        "expectedRoute": "/drugs/triazolam/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 589562
+      },
+      {
+        "slug": "suvorexant",
+        "genericName": "Suvorexant",
+        "drugClassLabel": "DORA",
+        "expectedRoute": "/drugs/suvorexant/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 550959
+      },
+      {
+        "slug": "ramelteon",
+        "genericName": "Ramelteon",
+        "drugClassLabel": "Melatonin Agonist",
+        "expectedRoute": "/drugs/ramelteon/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 557036
+      },
+      {
+        "slug": "tasimelteon",
+        "genericName": "Tasimelteon",
+        "drugClassLabel": "Melatonin Agonist",
+        "expectedRoute": "/drugs/tasimelteon/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 552362
+      },
+      {
+        "slug": "eszopiclone",
+        "genericName": "Eszopiclone",
+        "drugClassLabel": "Z-Drug",
+        "expectedRoute": "/drugs/eszopiclone/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 569991
+      },
+      {
+        "slug": "zaleplon",
+        "genericName": "Zaleplon",
+        "drugClassLabel": "Z-Drug",
+        "expectedRoute": "/drugs/zaleplon/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 562940
+      },
+      {
+        "slug": "zolpidem",
+        "genericName": "Zolpidem",
+        "drugClassLabel": "Z-Drug",
+        "expectedRoute": "/drugs/zolpidem/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 603241
+      },
+      {
+        "slug": "zopiclone",
+        "genericName": "Zopiclone",
+        "drugClassLabel": "Z-Drug",
+        "expectedRoute": "/drugs/zopiclone/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 566417
+      },
+      {
+        "slug": "clonidine",
+        "genericName": "Clonidine",
+        "drugClassLabel": "Alpha-2 Agonist",
+        "expectedRoute": "/drugs/clonidine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 577846
+      },
+      {
+        "slug": "guanfacine",
+        "genericName": "Guanfacine",
+        "drugClassLabel": "Alpha-2 Agonist",
+        "expectedRoute": "/drugs/guanfacine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 549348
+      },
+      {
+        "slug": "atomoxetine",
+        "genericName": "Atomoxetine",
+        "drugClassLabel": "NRI",
+        "expectedRoute": "/drugs/atomoxetine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 575244
+      },
+      {
+        "slug": "dexamphetamine",
+        "genericName": "Dextroamphetamine (d-Amphetamine)",
+        "drugClassLabel": "Stimulant",
+        "expectedRoute": "/drugs/dexamphetamine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 590517
+      },
+      {
+        "slug": "amphetamine",
+        "genericName": "Amphetamine (d,l)",
+        "drugClassLabel": "Stimulant",
+        "expectedRoute": "/drugs/amphetamine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 583422
+      },
+      {
+        "slug": "lisdexamfetamine",
+        "genericName": "Lisdexamfetamine",
+        "drugClassLabel": "Stimulant",
+        "expectedRoute": "/drugs/lisdexamfetamine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 574673
+      },
+      {
+        "slug": "dexmethylphenidate",
+        "genericName": "Dexmethylphenidate",
+        "drugClassLabel": "Stimulant",
+        "expectedRoute": "/drugs/dexmethylphenidate/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 571111
+      },
+      {
+        "slug": "methylphenidate",
+        "genericName": "Methylphenidate (d,l)",
+        "drugClassLabel": "Stimulant",
+        "expectedRoute": "/drugs/methylphenidate/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 618798
+      },
+      {
+        "slug": "pemoline",
+        "genericName": "Pemoline",
+        "drugClassLabel": "Stimulant",
+        "expectedRoute": "/drugs/pemoline/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 639554
+      },
+      {
+        "slug": "armodafinil",
+        "genericName": "Armodafinil",
+        "drugClassLabel": "Wake-Promoting Agent",
+        "expectedRoute": "/drugs/armodafinil/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 529647
+      },
+      {
+        "slug": "modafinil",
+        "genericName": "Modafinil",
+        "drugClassLabel": "Wake-Promoting Agent",
+        "expectedRoute": "/drugs/modafinil/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 558852
+      },
+      {
+        "slug": "donepezil",
+        "genericName": "Donepezil",
+        "drugClassLabel": "AChE Inhibitor",
+        "expectedRoute": "/drugs/donepezil/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 585490
+      },
+      {
+        "slug": "galantamine",
+        "genericName": "Galantamine",
+        "drugClassLabel": "AChE Inhibitor",
+        "expectedRoute": "/drugs/galantamine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 554997
+      },
+      {
+        "slug": "rivastigmine",
+        "genericName": "Rivastigmine",
+        "drugClassLabel": "AChE Inhibitor",
+        "expectedRoute": "/drugs/rivastigmine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 559748
+      },
+      {
+        "slug": "tacrine",
+        "genericName": "Tacrine",
+        "drugClassLabel": "AChE Inhibitor",
+        "expectedRoute": "/drugs/tacrine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 636433
+      },
+      {
+        "slug": "caprylidene",
+        "genericName": "Caprylidene",
+        "drugClassLabel": "Medical Food",
+        "expectedRoute": "/drugs/caprylidene/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 508261
+      },
+      {
+        "slug": "memantine",
+        "genericName": "Memantine",
+        "drugClassLabel": "NMDA Antagonist",
+        "expectedRoute": "/drugs/memantine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 561939
+      },
+      {
+        "slug": "acamprosate",
+        "genericName": "Acamprosate",
+        "drugClassLabel": "SUD Treatment",
+        "expectedRoute": "/drugs/acamprosate/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 580646
+      },
+      {
+        "slug": "buprenorphine",
+        "genericName": "Buprenorphine",
+        "drugClassLabel": "SUD Treatment",
+        "expectedRoute": "/drugs/buprenorphine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 626005
+      },
+      {
+        "slug": "disulfiram",
+        "genericName": "Disulfiram",
+        "drugClassLabel": "SUD Treatment",
+        "expectedRoute": "/drugs/disulfiram/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 608658
+      },
+      {
+        "slug": "nalmefene",
+        "genericName": "Nalmefene",
+        "drugClassLabel": "SUD Treatment",
+        "expectedRoute": "/drugs/nalmefene/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 570770
+      },
+      {
+        "slug": "naltrexone",
+        "genericName": "Naltrexone",
+        "drugClassLabel": "SUD Treatment",
+        "expectedRoute": "/drugs/naltrexone/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 614287
+      },
+      {
+        "slug": "naltrexone-bupropion",
+        "genericName": "Naltrexone-Bupropion",
+        "drugClassLabel": "SUD Treatment",
+        "expectedRoute": "/drugs/naltrexone-bupropion/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 588054
+      },
+      {
+        "slug": "varenicline",
+        "genericName": "Varenicline",
+        "drugClassLabel": "SUD Treatment",
+        "expectedRoute": "/drugs/varenicline/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 589440
+      },
+      {
+        "slug": "benztropine",
+        "genericName": "Benztropine",
+        "drugClassLabel": "Anticholinergic",
+        "expectedRoute": "/drugs/benztropine/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 589453
+      },
+      {
+        "slug": "trihexyphenidyl",
+        "genericName": "Trihexyphenidyl",
+        "drugClassLabel": "Anticholinergic",
+        "expectedRoute": "/drugs/trihexyphenidyl/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 568141
+      },
+      {
+        "slug": "flibanserin",
+        "genericName": "Flibanserin",
+        "drugClassLabel": "Libido Enhancer",
+        "expectedRoute": "/drugs/flibanserin/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 553817
+      },
+      {
+        "slug": "dextromethorphan",
+        "genericName": "Dextromethorphan",
+        "drugClassLabel": "NMDA Antagonist",
+        "expectedRoute": "/drugs/dextromethorphan/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 580200
+      },
+      {
+        "slug": "sodium-oxybate",
+        "genericName": "Sodium Oxybate",
+        "drugClassLabel": "Sodium Oxybate",
+        "expectedRoute": "/drugs/sodium-oxybate/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 578921
+      },
+      {
+        "slug": "lorcaserin",
+        "genericName": "Lorcaserin",
+        "drugClassLabel": "Weight Management",
+        "expectedRoute": "/drugs/lorcaserin/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 541354
+      },
+      {
+        "slug": "phentermine-topiramate",
+        "genericName": "Phentermine-Topiramate",
+        "drugClassLabel": "Weight Management",
+        "expectedRoute": "/drugs/phentermine-topiramate/",
+        "buildGenerated": true,
+        "httpStatus": 200,
+        "monographMarkerFound": true,
+        "htmlBytes": 561675
+      }
+    ]
+  },
+  "medicinePage": {
+    "httpStatus": 200,
+    "displayedCount": 145,
+    "uniqueDrugLinks": 145,
+    "missingSlugs": [],
+    "unknownSlugs": [],
+    "classGroupHeaders": 40,
+    "groupedDrugCards": 145,
+    "groupedUniqueSlugs": 145,
+    "rawLinksIncludingHowToExamples": 149
+  },
+  "searchCensus": {
+    "indexEntries": 340,
+    "drugsSearchable": 145,
+    "searchMisses": [],
+    "everyClassRepresented": true,
+    "classCount": 40,
+    "mandatoryLookups": [
+      {
+        "slug": "sertraline",
+        "query": "Sertraline",
+        "resolvedId": "medication-sertraline",
+        "ok": true
+      },
+      {
+        "slug": "clozapine",
+        "query": "Clozapine",
+        "resolvedId": "medication-clozapine",
+        "ok": true
+      },
+      {
+        "slug": "tacrine",
+        "query": "Tacrine",
+        "resolvedId": "medication-tacrine",
+        "ok": true
+      },
+      {
+        "slug": "methylphenidate",
+        "query": "Methylphenidate (d,l)",
+        "resolvedId": "medication-methylphenidate",
+        "ok": true
+      },
+      {
+        "slug": "lorazepam",
+        "query": "Lorazepam",
+        "resolvedId": "medication-lorazepam",
+        "ok": true
+      }
+    ]
+  },
+  "classPages": {
+    "total": 40,
+    "http200": 40,
+    "pages": [
+      {
+        "classLabel": "SSRI",
+        "route": "/drugs/class/ssri/",
+        "status": 200
+      },
+      {
+        "classLabel": "SNRI",
+        "route": "/drugs/class/snri/",
+        "status": 200
+      },
+      {
+        "classLabel": "NDRI",
+        "route": "/drugs/class/ndri/",
+        "status": 200
+      },
+      {
+        "classLabel": "NaSSA",
+        "route": "/drugs/class/nassa/",
+        "status": 200
+      },
+      {
+        "classLabel": "TCA",
+        "route": "/drugs/class/tca/",
+        "status": 200
+      },
+      {
+        "classLabel": "Atypical Antidepressant",
+        "route": "/drugs/class/atypical-antidepressant/",
+        "status": 200
+      },
+      {
+        "classLabel": "MAOI",
+        "route": "/drugs/class/maoi/",
+        "status": 200
+      },
+      {
+        "classLabel": "Medical Food",
+        "route": "/drugs/class/medical-food/",
+        "status": 200
+      },
+      {
+        "classLabel": "Melatonergic Antidepressant",
+        "route": "/drugs/class/melatonergic-antidepressant/",
+        "status": 200
+      },
+      {
+        "classLabel": "Multimodal Antidepressant",
+        "route": "/drugs/class/multimodal-antidepressant/",
+        "status": 200
+      },
+      {
+        "classLabel": "NMDA Antidepressant",
+        "route": "/drugs/class/nmda-antidepressant/",
+        "status": 200
+      },
+      {
+        "classLabel": "NRI",
+        "route": "/drugs/class/nri/",
+        "status": 200
+      },
+      {
+        "classLabel": "SARI",
+        "route": "/drugs/class/sari/",
+        "status": 200
+      },
+      {
+        "classLabel": "SPARI",
+        "route": "/drugs/class/spari/",
+        "status": 200
+      },
+      {
+        "classLabel": "T3 Augmentation",
+        "route": "/drugs/class/t3-augmentation/",
+        "status": 200
+      },
+      {
+        "classLabel": "Atypical Antipsychotic",
+        "route": "/drugs/class/atypical-antipsychotic/",
+        "status": 200
+      },
+      {
+        "classLabel": "Dopamine Stabiliser",
+        "route": "/drugs/class/dopamine-stabiliser/",
+        "status": 200
+      },
+      {
+        "classLabel": "Typical Antipsychotic",
+        "route": "/drugs/class/typical-antipsychotic/",
+        "status": 200
+      },
+      {
+        "classLabel": "Anticonvulsant",
+        "route": "/drugs/class/anticonvulsant/",
+        "status": 200
+      },
+      {
+        "classLabel": "Mood Stabiliser",
+        "route": "/drugs/class/mood-stabiliser/",
+        "status": 200
+      },
+      {
+        "classLabel": "Alpha-1 Blocker",
+        "route": "/drugs/class/alpha-1-blocker/",
+        "status": 200
+      },
+      {
+        "classLabel": "Antihistamine",
+        "route": "/drugs/class/antihistamine/",
+        "status": 200
+      },
+      {
+        "classLabel": "Azapirone",
+        "route": "/drugs/class/azapirone/",
+        "status": 200
+      },
+      {
+        "classLabel": "Benzodiazepine",
+        "route": "/drugs/class/benzodiazepine/",
+        "status": 200
+      },
+      {
+        "classLabel": "Benzodiazepine Antidote",
+        "route": "/drugs/class/benzodiazepine-antidote/",
+        "status": 200
+      },
+      {
+        "classLabel": "Beta-Blocker",
+        "route": "/drugs/class/beta-blocker/",
+        "status": 200
+      },
+      {
+        "classLabel": "Benzodiazepine Hypnotic",
+        "route": "/drugs/class/benzodiazepine-hypnotic/",
+        "status": 200
+      },
+      {
+        "classLabel": "DORA",
+        "route": "/drugs/class/dora/",
+        "status": 200
+      },
+      {
+        "classLabel": "Melatonin Agonist",
+        "route": "/drugs/class/melatonin-agonist/",
+        "status": 200
+      },
+      {
+        "classLabel": "Z-Drug",
+        "route": "/drugs/class/z-drug/",
+        "status": 200
+      },
+      {
+        "classLabel": "Alpha-2 Agonist",
+        "route": "/drugs/class/alpha-2-agonist/",
+        "status": 200
+      },
+      {
+        "classLabel": "Stimulant",
+        "route": "/drugs/class/stimulant/",
+        "status": 200
+      },
+      {
+        "classLabel": "Wake-Promoting Agent",
+        "route": "/drugs/class/wake-promoting-agent/",
+        "status": 200
+      },
+      {
+        "classLabel": "AChE Inhibitor",
+        "route": "/drugs/class/ache-inhibitor/",
+        "status": 200
+      },
+      {
+        "classLabel": "NMDA Antagonist",
+        "route": "/drugs/class/nmda-antagonist/",
+        "status": 200
+      },
+      {
+        "classLabel": "SUD Treatment",
+        "route": "/drugs/class/sud-treatment/",
+        "status": 200
+      },
+      {
+        "classLabel": "Anticholinergic",
+        "route": "/drugs/class/anticholinergic/",
+        "status": 200
+      },
+      {
+        "classLabel": "Libido Enhancer",
+        "route": "/drugs/class/libido-enhancer/",
+        "status": 200
+      },
+      {
+        "classLabel": "Sodium Oxybate",
+        "route": "/drugs/class/sodium-oxybate/",
+        "status": 200
+      },
+      {
+        "classLabel": "Weight Management",
+        "route": "/drugs/class/weight-management/",
+        "status": 200
+      }
+    ]
+  },
+  "overallStatus": "PASS",
+  "failureCount": 0
+}

@@ -35,6 +35,7 @@ export const DRUG_COURSE_NAV_ITEMS: CourseNavItem[] = [
   { id: "side-effects", label: "Side Effects", group: "Lesson 3" },
   { id: "monitoring", label: "Monitoring", group: "Lesson 3" },
   { id: "contraindications", label: "Contraindications", group: "Lesson 3" },
+  { id: "prescriber-guide", label: "Prescriber's Guide", group: "Lesson 3" },
   { id: "evidence-practice", label: "Evidence", group: "Lesson 3" },
   { id: "interactions", label: "Interactions", group: "Lesson 3" },
   { id: "patient-education", label: "Patient Guide", group: "Lesson 3" },
