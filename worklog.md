@@ -858,3 +858,20 @@ Work Log:
 Stage Summary:
 - 145 monographs / ~174k lines of clinical notes / 101/101 book drugs / 178 MCQs — COMPLETE and pushed
 - Companion doc = the "notes + integration plan" file: STAHL-NOTES-COMPANION.md
+
+---
+Task ID: stahl-notes-push (final)
+Agent: Main agent (Super Z)
+Task: Push complete Stahl notes registry to github.com/zammucanva/KYP-STALHS-NOTES
+
+Work Log:
+- Pushed main → https://github.com/zammucanva/KYP-STALHS-NOTES (branch: main)
+- Push size optimized: filtered dev-session artifact dirs (download/, tool-results/, upload/ = 87 MB of screenshots/logs) and 2 broken gitlink entries (PROJECT-KYP, kyp-neon) out of history — tree reduced 113 MB → 26 MB; 83 MB single-pack push kept failing remote index-pack, clean pack went through
+- .github/workflows/deploy.yml excluded from history: the fine-grained PAT lacks `workflow` scope (GitHub refuses workflow-file pushes); preserved as docs/deploy-pages-workflow.yml.txt with re-enable instructions and a noted branch-trigger typo fix (`branches: ain]` → `[main]`)
+- Verified remote tree: 692 files, 145 drug monographs, 11 MCQ bank files, 33 tests, STAHL-NOTES-COMPANION.md, README, no junk dirs
+- Deleted remote `smoke` test branch; `__probe__` placeholder remains default branch — PAT lacks Administration scope, so the default-branch switch + probe deletion needs one manual click: Settings → Branches → default = main, then delete __probe__
+- Original unfiltered history preserved locally on branch `backup-main`; filtered-out artifacts preserved at /home/z/my-project/upload/kyp-repo-artifacts-backup/
+
+Stage Summary:
+- COMPLETE: 145 monographs / ~174k lines / 101/101 book drugs / 178 MCQs live at github.com/zammucanva/KYP-STALHS-NOTES
+- Remaining manual step for user: set default branch to main (PAT permission limit)
