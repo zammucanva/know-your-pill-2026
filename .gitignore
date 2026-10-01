@@ -59,3 +59,10 @@ db/test*.db
 
 # SEC-01 recovery artifacts — never commit, never push
 sec01-recovery/
+
+# Dev-session artifacts — never commit (screenshots, tool logs, uploads)
+/download/
+/tool-results/
+/upload/
+/PROJECT-KYP/
+/kyp-neon/
