@@ -23,7 +23,12 @@ export function ContinueLearningSection() {
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
-    if (IS_STATIC_EXPORT) return;
+    // Static export: no progress API — fall through to the "Recommended
+    // starting points" state immediately (never a permanent "Loading…").
+    if (IS_STATIC_EXPORT) {
+      setLoading(false);
+      return;
+    }
     fetch("/api/progress?limit=5")
       .then(r => r.ok ? r.json() : null)
       .then(d => { if (d?.progress) setProgress(d.progress); })
