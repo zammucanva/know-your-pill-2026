@@ -116,7 +116,7 @@ export default async function PsychiatryLessonPage({
               on JS to be readable. Browsers WITH JS ignore <noscript>. */}
           {course.kind === "concept" && (
             <noscript>
-              <style>{`[data-slot="accordion-content"][hidden] { display: block !important; height: auto !important; overflow: visible !important; } .concept-exam-panel.sr-only { position: static !important; width: auto !important; height: auto !important; padding: 0 !important; margin: 0 !important; overflow: visible !important; clip: auto !important; clip-path: none !important; white-space: normal !important; } .concept-inline-rest { position: static !important; width: auto !important; height: auto !important; margin: 0 !important; overflow: visible !important; clip: auto !important; clip-path: none !important; white-space: normal !important; }`}</style>
+              <style>{`[data-slot="accordion-content"][hidden] { display: block !important; height: auto !important; overflow: visible !important; } .concept-exam-panel.hidden { display: block !important; } .concept-inline-rest { position: static !important; width: auto !important; height: auto !important; padding: 0 !important; margin: 0 !important; overflow: visible !important; clip: auto !important; clip-path: none !important; white-space: normal !important; }`}</style>
             </noscript>
           )}
           <div className="border-b border-border/40 bg-muted/20">

@@ -16,6 +16,7 @@ import { Section } from "@/components/kyp/ui/section";
 import { CardPrimitive, CardBody } from "@/components/kyp/ui/card-primitive";
 import { cn } from "@/lib/utils";
 import {
+  clampSentences,
   splitRevisionParagraph,
 } from "@/lib/kyp/psychiatry-concept-visibility";
 import type { PsychiatryCourse } from "../course-types";
@@ -25,13 +26,14 @@ import type {
   ExamLens,
 } from "@/lib/kyp/data/types";
 import type { DiseaseClinicalCase } from "@/lib/kyp/data/disease-types";
-import { ConceptSectionHeader, ConceptAccordion, EvidenceGradeDot } from "./concept-ui";
+import { ConceptSectionHeader, ConceptAccordion, EvidenceGradeDot, ConceptProse } from "./concept-ui";
 
 /* ============================================================
    Concept lesson sections — Lessons 4–6 (redesign B).
    ============================================================ */
 
-/** Lesson 4 — Indian practice. */
+/** Lesson 4 — Indian practice. Long prose fields render through the
+ *  ConceptProse wall guard (declutter mission). */
 export function ConceptIndianPractice({ course }: { course: PsychiatryCourse }) {
   const ip = course.indianPractice;
   return (
@@ -45,32 +47,42 @@ export function ConceptIndianPractice({ course }: { course: PsychiatryCourse }) 
           <CardPrimitive variant="flat" interactive={false} showArrow={false} className="border-brand/30">
             <CardBody className="p-4">
               <p className="text-h4 text-foreground">Where the patient meets the system</p>
-              <p className="mt-2 text-body-sm leading-relaxed text-foreground/80">{ip.systemContext}</p>
+              <p className="mt-2 text-body-sm leading-relaxed text-foreground/80">
+                <ConceptProse text={ip.systemContext} maxWords={60} />
+              </p>
             </CardBody>
           </CardPrimitive>
           <div className="grid gap-4 sm:grid-cols-2">
             <CardPrimitive variant="flat" interactive={false} showArrow={false}>
               <CardBody className="p-4">
                 <p className="text-overline text-brand-ink">Indian guidelines</p>
-                <p className="mt-2 text-body-sm leading-relaxed text-foreground/80">{ip.indianGuidelines}</p>
+                <p className="mt-2 text-body-sm leading-relaxed text-foreground/80">
+                  <ConceptProse text={ip.indianGuidelines} maxWords={60} />
+                </p>
               </CardBody>
             </CardPrimitive>
             <CardPrimitive variant="flat" interactive={false} showArrow={false}>
               <CardBody className="p-4">
                 <p className="text-overline text-brand-ink">Programmes &amp; law</p>
-                <p className="mt-2 text-body-sm leading-relaxed text-foreground/80">{ip.programmeContext}</p>
+                <p className="mt-2 text-body-sm leading-relaxed text-foreground/80">
+                  <ConceptProse text={ip.programmeContext} maxWords={60} />
+                </p>
               </CardBody>
             </CardPrimitive>
             <CardPrimitive variant="flat" interactive={false} showArrow={false}>
               <CardBody className="p-4">
                 <p className="text-overline text-brand-ink">Cost &amp; access</p>
-                <p className="mt-2 text-body-sm leading-relaxed text-foreground/80">{ip.costConsiderations}</p>
+                <p className="mt-2 text-body-sm leading-relaxed text-foreground/80">
+                  <ConceptProse text={ip.costConsiderations} maxWords={60} />
+                </p>
               </CardBody>
             </CardPrimitive>
             <CardPrimitive variant="flat" interactive={false} showArrow={false}>
               <CardBody className="p-4">
                 <p className="text-overline text-brand-ink">Culture &amp; family</p>
-                <p className="mt-2 text-body-sm leading-relaxed text-foreground/80">{ip.culturalConsiderations}</p>
+                <p className="mt-2 text-body-sm leading-relaxed text-foreground/80">
+                  <ConceptProse text={ip.culturalConsiderations} maxWords={60} />
+                </p>
               </CardBody>
             </CardPrimitive>
           </div>
@@ -194,7 +206,7 @@ export function ConceptDecisionWizard({ path }: { path: ClinicalDecisionPath }) 
               key={i}
               type="button"
               onClick={() => choose(branch.label, branch.next)}
-              className="inline-flex items-center justify-between gap-2 rounded-lg border border-brand/30 bg-brand-soft/40 px-3 py-2 text-xs font-medium text-foreground transition-colors hover:border-brand/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              className="kyp-touch-y inline-flex items-center justify-between gap-2 rounded-lg border border-brand/30 bg-brand-soft/40 px-3 py-2 text-xs font-medium text-foreground transition-colors hover:border-brand/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             >
               {branch.label}
               <ArrowRight className="h-3 w-3 shrink-0" aria-hidden />
@@ -208,14 +220,14 @@ export function ConceptDecisionWizard({ path }: { path: ClinicalDecisionPath }) 
           type="button"
           onClick={back}
           disabled={state.choices.length === 0}
-          className="inline-flex items-center gap-1.5 rounded-lg border border-border/70 bg-card px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-brand/40 disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+          className="kyp-touch-y inline-flex items-center gap-1.5 rounded-lg border border-border/70 bg-card px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-brand/40 disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
         >
           <ArrowLeft className="h-3 w-3" aria-hidden /> Back
         </button>
         <button
           type="button"
           onClick={startOver}
-          className="inline-flex items-center gap-1.5 rounded-lg border border-border/70 bg-card px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-brand/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+          className="kyp-touch-y inline-flex items-center gap-1.5 rounded-lg border border-border/70 bg-card px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-brand/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
         >
           <RotateCcw className="h-3 w-3" aria-hidden /> Start over
         </button>
@@ -360,6 +372,16 @@ export function ConceptExamLens({ course }: { course: PsychiatryCourse }) {
       const prev = EXAM_TABS[(idx - 1 + EXAM_TABS.length) % EXAM_TABS.length];
       selectTab(prev.key);
       tabRefs.current[prev.key]?.focus();
+    } else if (e.key === "Home") {
+      e.preventDefault();
+      const first = EXAM_TABS.find((t) => groupsByTab[t.key].some((g) => g.items.length > 0)) ?? EXAM_TABS[0];
+      selectTab(first.key);
+      tabRefs.current[first.key]?.focus();
+    } else if (e.key === "End") {
+      e.preventDefault();
+      const last = [...EXAM_TABS].reverse().find((t) => groupsByTab[t.key].some((g) => g.items.length > 0)) ?? EXAM_TABS[EXAM_TABS.length - 1];
+      selectTab(last.key);
+      tabRefs.current[last.key]?.focus();
     }
   };
 
@@ -394,7 +416,7 @@ export function ConceptExamLens({ course }: { course: PsychiatryCourse }) {
                 tabIndex={selected ? 0 : -1}
                 onClick={() => selectTab(t.key)}
                 className={cn(
-                  "rounded-full border px-3.5 py-1.5 text-xs font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand",
+                  "kyp-touch-y rounded-full border px-3.5 py-1.5 text-xs font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand",
                   selected
                     ? "border-brand/40 bg-brand-soft/50 text-brand-ink"
                     : "border-border/70 bg-card text-muted-foreground hover:border-brand/30 hover:text-foreground"
@@ -406,8 +428,10 @@ export function ConceptExamLens({ course }: { course: PsychiatryCourse }) {
           })}
         </div>
         {/* Panels for every content tab stay in the DOM (hidden with
-            sr-only rather than unmounted) so no-JS readers and the
-            print sheet keep every exam list. */}
+            the `hidden` class rather than unmounted) so no-JS readers
+            and the print sheet keep every exam list. `hidden` (not
+            sr-only) keeps inactive panels OUT of the accessibility
+            tree — no ghost focus targets (declutter mission). */}
         {EXAM_TABS.map((t) => {
           const groups = groupsByTab[t.key];
           const hasContent = groups.some((g) => g.items.length > 0);
@@ -419,7 +443,7 @@ export function ConceptExamLens({ course }: { course: PsychiatryCourse }) {
               role="tabpanel"
               id={`exam-panel-${t.key}`}
               aria-labelledby={`exam-tab-${t.key}`}
-              className={cn("mt-6 concept-exam-panel", tab !== null && !selected && "sr-only")}
+              className={cn("mt-6 concept-exam-panel", tab !== null && !selected && "hidden")}
             >
               {groups.map((group, gi) => (
                 <div key={group.label} className={cn(gi > 0 && "mt-6")}>
@@ -428,7 +452,7 @@ export function ConceptExamLens({ course }: { course: PsychiatryCourse }) {
                     {group.items.map((item, i) => (
                       <li key={i} className="flex gap-2 text-caption leading-relaxed text-foreground/80">
                         <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand/50" aria-hidden />
-                        {item}
+                        <ConceptProse text={item} maxWords={60} />
                       </li>
                     ))}
                   </ul>
@@ -512,13 +536,17 @@ export function ConceptClinicalCases({ course }: { course: PsychiatryCourse }) {
 }
 
 /* ============================================================
-   Lesson 5 — high-yield revision cards (redesign D): each long
-   paragraph becomes a card with the source's own leading label
-   as the short title and 3–6 visible bullets (re-sliced from
-   the source text; the content-preservation invariant is pinned
-   by tests). Full paragraphs stay available in the print sheet
-   and behind the card's "full text" expander.
+   Lesson 5 — high-yield revision cards (declutter mission):
+   each long paragraph becomes a short 1–2 line card — a
+   verbatim sentence-bounded slice of the source (≤
+   REVISION_VISIBLE_MAX_WORDS), with "Read more" carrying the
+   exact remainder (visible + remainder reconstructs the
+   paragraph, pinned by tests). The full unmodified paragraphs
+   stay in the print sheet.
    ============================================================ */
+
+/** Visible cap for a revision card: about two rendered lines. */
+const REVISION_VISIBLE_MAX_WORDS = 40;
 
 export function ConceptHighYield({ course }: { course: PsychiatryCourse }) {
   const cards = React.useMemo(
@@ -535,7 +563,7 @@ export function ConceptHighYield({ course }: { course: PsychiatryCourse }) {
             <button
               type="button"
               onClick={() => window.print()}
-              className="inline-flex items-center gap-1.5 rounded-lg border border-border/70 bg-card px-3 py-1.5 text-caption font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              className="kyp-touch-y inline-flex items-center gap-1.5 rounded-lg border border-border/70 bg-card px-3 py-1.5 text-caption font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             >
               <Printer className="h-3.5 w-3.5" aria-hidden />
               Print revision sheet
@@ -543,49 +571,36 @@ export function ConceptHighYield({ course }: { course: PsychiatryCourse }) {
           }
         />
         <div className="grid gap-4 min-[900px]:grid-cols-2" data-revision-cards>
-          {cards.map((card, i) => (
-            <CardPrimitive key={i} variant="flat" interactive={false} showArrow={false} className="h-full">
-              <CardBody className="p-4">
-                <p className="text-overline text-warning-ink">Point {i + 1}</p>
-                {card.title && (
-                  <p className="mt-1 text-body-sm font-semibold leading-snug text-foreground">
-                    {card.title}
+          {cards.map((card, i) => {
+            // 1–2 visible lines: a verbatim sentence-bounded slice of
+            // the card's text (≤ REVISION_VISIBLE_MAX_WORDS words).
+            // "Read more" carries the exact remainder — visible +
+            // remainder is the full paragraph, pinned by tests.
+            const { visible, rest } = clampSentences(
+              (card.title ? `${card.title}: ` : "") + card.bullets.join(" "),
+              REVISION_VISIBLE_MAX_WORDS
+            );
+            return (
+              <CardPrimitive key={i} variant="flat" interactive={false} showArrow={false} className="h-full">
+                <CardBody className="p-4">
+                  <p className="text-overline text-warning-ink">Point {i + 1}</p>
+                  <p className="mt-1 text-caption leading-relaxed text-foreground/85">
+                    {visible}
                   </p>
-                )}
-                <ul className="mt-3 space-y-1.5">
-                  {card.bullets.slice(0, 6).map((bullet, j) => (
-                    <li key={j} className="flex gap-2 text-caption leading-relaxed text-foreground/85">
-                      <span
-                        aria-hidden
-                        className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-warning/70"
-                      />
-                      {bullet}
-                    </li>
-                  ))}
-                  {card.bullets.length > 6 && (
-                    <li className="text-caption leading-relaxed text-muted-foreground">
-                      <details className="group">
-                        <summary className="cursor-pointer list-none font-medium text-brand underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
-                          +{card.bullets.length - 6} more lines
-                        </summary>
-                        <ul className="mt-1.5 space-y-1.5">
-                          {card.bullets.slice(6).map((bullet, j) => (
-                            <li key={j} className="flex gap-2 text-caption leading-relaxed text-foreground/85">
-                              <span
-                                aria-hidden
-                                className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-warning/70"
-                              />
-                              {bullet}
-                            </li>
-                          ))}
-                        </ul>
-                      </details>
-                    </li>
+                  {rest && (
+                    <details className="group mt-2">
+                      <summary className="cursor-pointer list-none text-caption font-medium text-brand underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
+                        Read more
+                      </summary>
+                      <p className="mt-1.5 text-caption leading-relaxed text-foreground/85">
+                        {rest}
+                      </p>
+                    </details>
                   )}
-                </ul>
-              </CardBody>
-            </CardPrimitive>
-          ))}
+                </CardBody>
+              </CardPrimitive>
+            );
+          })}
         </div>
 
         {/* The print revision sheet: the full unmodified paragraphs,

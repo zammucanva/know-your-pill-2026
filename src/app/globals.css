@@ -577,6 +577,22 @@ summary,
   display: none;
 }
 
+/* ============================================================
+   Touch-target floors (declutter mission — WCAG 2.2 AA 2.5.8,
+   targeting AAA 2.5.5): keep the compact visual rhythm while
+   guaranteeing a ≥44px interactive area.
+   -kyp-touch-full: both axes (icon-only round controls)
+   -kyp-touch-y:    vertical only (text chips, tabs, pill buttons)
+   ============================================================ */
+.kyp-touch-full {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.kyp-touch-y {
+  min-height: 44px;
+}
+
 /* Reduced motion: no transition on the stepper bar's progress */
 @media (prefers-reduced-motion: reduce) {
   .concept-stepper * {
@@ -605,7 +621,8 @@ summary,
   [role="progressbar"],
   .kyp-floating-search,
   [data-revision-sheet] [data-revision-cards],
-  [data-revision-sheet] button {
+  [data-revision-sheet] button,
+  [data-lesson-pager] {
     display: none !important;
   }
   [data-revision-sheet] {

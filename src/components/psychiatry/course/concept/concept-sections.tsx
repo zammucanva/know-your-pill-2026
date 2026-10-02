@@ -1,8 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { motion } from "framer-motion";
-import { ArrowRight, Network, Printer, Check } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { Container } from "@/components/kyp/ui/container";
 import { Section } from "@/components/kyp/ui/section";
 import { Badge } from "@/components/kyp/ui/badge";
@@ -12,7 +11,8 @@ import { cn } from "@/lib/utils";
 import { linkPath } from "@/lib/kyp/image-path";
 import {
   capQuickFacts,
-  getConceptSectionVisibility,
+  mechanismInShort,
+  type ConceptSectionVisibility,
 } from "@/lib/kyp/psychiatry-concept-visibility";
 import type { PsychiatryCourse } from "../course-types";
 import {
@@ -20,14 +20,19 @@ import {
   EvidenceGradeDot,
   InlineExpander,
   ConceptAccordion,
+  ConceptProse,
 } from "./concept-ui";
 import { StepChain } from "../course-ui";
 
 /* ============================================================
    Concept lesson sections — Lessons 1–3 of the concept course
-   template (redesign B). Content model, section ids, mode
-   gating and completion denominators are UNCHANGED from the
-   shared course layer; only the presentation differs.
+   template (redesign B + declutter mission). Content model,
+   section ids, mode gating and completion denominators are
+   UNCHANGED from the shared course layer; only the presentation
+   differs. The `course` prop is the RENDERABLE view (see
+   renderableCourse) — placeholder meta sentences are already
+   stripped, and every clamp/expander below re-slices (never
+   rewrites) the text it renders.
    ============================================================ */
 
 const nodeTypeLabel: Record<string, string> = {
@@ -54,17 +59,16 @@ const nodeTypeDot: Record<string, string> = {
   "patient-guide": "bg-muted-foreground/60",
 };
 
-/** Lesson 1 — Quick Facts, capped at five cards by priority (redesign D). */
+/** Lesson 1 — Quick Facts: five cards by priority, the rest
+ *  behind a single "More facts" disclosure (declutter mission). */
 export function ConceptQuickFacts({ course }: { course: PsychiatryCourse }) {
   const { visible, rest } = capQuickFacts(course.quickFacts);
-  const [showAll, setShowAll] = React.useState(false);
-  const shown = showAll ? course.quickFacts : visible;
   return (
     <Section id="quick-facts" spacing="tight">
       <Container>
         <ConceptSectionHeader title="Quick Facts" lede="The five facts that carry the most weight." />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {shown.map((fact, i) => (
+          {visible.map((fact, i) => (
             <CardPrimitive key={i} variant="flat" interactive={false} showArrow={false}>
               <CardBody className="p-4">
                 <p className="text-overline text-muted-foreground">{fact.label}</p>
@@ -84,10 +88,10 @@ export function ConceptQuickFacts({ course }: { course: PsychiatryCourse }) {
             </CardPrimitive>
           ))}
         </div>
-        {!showAll && rest.length > 0 && (
+        {rest.length > 0 && (
           <details className="group mt-4 text-center">
-            <summary className="inline-flex cursor-pointer list-none items-center gap-1.5 rounded-full border border-border/70 bg-card px-4 py-2 text-caption font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden">
-              All key facts ({course.quickFacts.length})
+            <summary className="kyp-touch-y inline-flex cursor-pointer list-none items-center gap-1.5 rounded-full border border-border/70 bg-card px-4 py-2 text-caption font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden">
+              More facts ({course.quickFacts.length})
             </summary>
             <div className="mt-4 grid gap-4 text-left sm:grid-cols-2 lg:grid-cols-3">
               {rest.map((fact, i) => (
@@ -113,34 +117,15 @@ export function ConceptQuickFacts({ course }: { course: PsychiatryCourse }) {
   );
 }
 
-/** Lesson 1 — Knowledge Graph, lazily loaded with a fixed
- *  aspect-ratio box; a grouped topic list replaces the grid on
- *  narrow screens (redesign G). */
+/** Lesson 1 — Knowledge Graph behind a user disclosure (declutter
+ *  mission): the topic grid is NOT eagerly rendered — a closed
+ *  <details> ("Show knowledge graph") owns the content, so nothing
+ *  lays out (and nothing activates on scroll) until the learner
+ *  opens it. Below 640px the disclosure contains the plain grouped
+ *  accessible list instead of the grid (redesign G). The content
+ *  stays in the DOM for no-JS readers and the print sheet. */
 export function ConceptKnowledgeGraph({ course }: { course: PsychiatryCourse }) {
   const nodes = course.knowledgeGraph;
-  const wrapperRef = React.useRef<HTMLDivElement | null>(null);
-  const [active, setActive] = React.useState(false);
-
-  React.useEffect(() => {
-    const el = wrapperRef.current;
-    if (!el) return;
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduceMotion) {
-      setActive(true);
-      return;
-    }
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting)) {
-          setActive(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "200px 0px" }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
 
   const grouped = React.useMemo(() => {
     const map = new Map<string, typeof nodes>();
@@ -155,89 +140,97 @@ export function ConceptKnowledgeGraph({ course }: { course: PsychiatryCourse }) 
   return (
     <Section spacing="tight" id="knowledge-graph" className="bg-muted/20">
       <Container>
-        <div ref={wrapperRef}>
         <ConceptSectionHeader
           title="Knowledge Graph"
           lede="Everything this topic touches — every link is a real KYP route."
         />
-        {/* Fixed aspect-ratio box prevents layout shift when the graph
-            lazily activates (redesign G). */}
-        <div className="relative min-h-[220px]">
-          {!active && (
-            <div
+        <details className="group rounded-xl border border-border/60 bg-card/60">
+          <summary className="kyp-touch-y flex cursor-pointer list-none items-center justify-between gap-4 rounded-xl px-4 py-3 text-left transition-colors hover:border-brand/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden">
+            <span className="min-w-0">
+              <span className="block text-body-sm font-semibold text-foreground">
+                Show knowledge graph
+              </span>
+              <span className="mt-0.5 block text-caption leading-relaxed text-muted-foreground">
+                {nodes.length} linked topics — medications, classes, conditions and more
+              </span>
+            </span>
+            <span
               aria-hidden
-              className="min-h-[220px] w-full rounded-xl border border-dashed border-border/60"
-            />
-          )}
-          {active && (
-            <>
-              {/* Wide screens: the topic grid */}
-              <div className="hidden min-[640px]:block">
-                <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-4">
-                  {nodes.map((node, i) => (
-                    <motion.a
-                      key={`${node.type}-${node.label}`}
-                      href={linkPath(node.href)}
-                      initial={{ opacity: 0, scale: 0.97 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.2, delay: Math.min(i * 0.02, 0.25) }}
-                      className="group flex min-w-0 flex-col items-start gap-1.5 rounded-lg border border-border/60 bg-card p-3 transition-colors hover:border-brand/30"
-                      title={node.note ?? undefined}
-                    >
-                      <span className="flex w-full items-center justify-between gap-2">
-                        <span
-                          aria-hidden
-                          className={cn("h-2 w-2 shrink-0 rounded-full", nodeTypeDot[node.type] ?? "bg-brand")}
-                        />
-                        <span className="text-[0.55rem] font-semibold uppercase tracking-wide text-muted-foreground/60">
-                          {nodeTypeLabel[node.type] ?? "Topic"}
-                        </span>
+              className="shrink-0 text-muted-foreground transition-transform duration-200 group-open:rotate-180"
+            >
+              ▾
+            </span>
+          </summary>
+          <div className="border-t border-border/50 px-4 py-4">
+            {/* ≥640px: the topic grid */}
+            <div className="hidden min-[640px]:block">
+              <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-4">
+                {nodes.map((node) => (
+                  <a
+                    key={`${node.type}-${node.label}`}
+                    href={linkPath(node.href)}
+                    className="group flex min-w-0 flex-col items-start gap-1.5 rounded-lg border border-border/60 bg-card p-3 transition-colors hover:border-brand/30"
+                    title={node.note ?? undefined}
+                  >
+                    <span className="flex w-full items-center justify-between gap-2">
+                      <span
+                        aria-hidden
+                        className={cn("h-2 w-2 shrink-0 rounded-full", nodeTypeDot[node.type] ?? "bg-brand")}
+                      />
+                      <span className="text-[0.55rem] font-semibold uppercase tracking-wide text-muted-foreground/60">
+                        {nodeTypeLabel[node.type] ?? "Topic"}
                       </span>
-                      <p className="min-w-0 w-full break-words text-xs font-medium leading-tight text-foreground/85">
-                        {node.label}
+                    </span>
+                    <p className="min-w-0 w-full break-words text-xs font-medium leading-tight text-foreground/85">
+                      {node.label}
+                    </p>
+                    {node.note && (
+                      <p className="hidden text-[0.65rem] leading-snug text-muted-foreground group-hover:block">
+                        {node.note}
                       </p>
-                      {node.note && (
-                        <p className="hidden text-[0.65rem] leading-snug text-muted-foreground group-hover:block">
-                          {node.note}
-                        </p>
-                      )}
-                    </motion.a>
-                  ))}
-                </div>
-              </div>
-              {/* Narrow screens: a simple grouped list (redesign G) */}
-              <div className="min-[640px]:hidden">
-                {grouped.map(([type, groupNodes]) => (
-                  <div key={type} className="mb-4 last:mb-0">
-                    <p className="mb-2 text-overline text-muted-foreground">{type}</p>
-                    <ul className="space-y-1.5">
-                      {groupNodes.map((node) => (
-                        <li key={`${node.type}-${node.label}`}>
-                          <a
-                            href={linkPath(node.href)}
-                            className="flex min-w-0 items-start gap-2 rounded-lg border border-border/50 bg-card px-3 py-2 text-sm leading-snug text-foreground/85 transition-colors hover:border-brand/40 hover:text-brand"
-                          >
-                            <ArrowRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand" aria-hidden />
-                            <span className="min-w-0 break-words">{node.label}</span>
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                    )}
+                  </a>
                 ))}
               </div>
-            </>
-          )}
-        </div>
-        </div>
+            </div>
+            {/* <640px: a simple grouped list (redesign G) */}
+            <div className="min-[640px]:hidden">
+              {grouped.map(([type, groupNodes]) => (
+                <div key={type} className="mb-4 last:mb-0">
+                  <p className="mb-2 text-overline text-muted-foreground">{type}</p>
+                  <ul className="space-y-1.5">
+                    {groupNodes.map((node) => (
+                      <li key={`${node.type}-${node.label}`}>
+                        <a
+                          href={linkPath(node.href)}
+                          className="flex min-w-0 items-start gap-2 rounded-lg border border-border/50 bg-card px-3 py-2 text-sm leading-snug text-foreground/85 transition-colors hover:border-brand/40 hover:text-brand"
+                        >
+                          <ArrowRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-brand" aria-hidden />
+                          <span className="min-w-0 break-words">{node.label}</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </details>
       </Container>
     </Section>
   );
 }
 
-/** Lesson 2 — Mechanism: numbered steps by default, the narrative
- *  behind an expander, the grade once beside the title (redesign D/F). */
+/** Lesson 2 — Mechanism (declutter mission): a 1–3 line
+ *  "In short" lead-in extracted VERBATIM from the head of the
+ *  existing narrative (clause-bounded — never a mid-word cut; see
+ *  mechanismInShort), the long mechanism paragraph kept in a
+ *  closed <details>, and the restating numbered steps collapsed
+ *  into ONE closed <details> (redesign D/F). No clinical word is
+ *  changed: the In-short line is a pure prefix of the narrative. */
 export function ConceptMechanism({ course }: { course: PsychiatryCourse }) {
+  const inShort = mechanismInShort(course.mechanism.summary);
+  const stepCount = course.mechanism.steps.length;
   return (
     <Section spacing="tight" id="mechanism">
       <Container width="narrow">
@@ -246,16 +239,25 @@ export function ConceptMechanism({ course }: { course: PsychiatryCourse }) {
           lede="What actually happens — graded honestly."
           grade={course.mechanism.grade}
         />
-        <div className="mt-2">
-          <StepChain steps={course.mechanism.steps.map((s) => ({ label: s, detail: undefined }))} />
-        </div>
-        <details className="group mt-6">
-          <summary className="inline-flex cursor-pointer list-none items-center gap-1.5 rounded-full border border-border/70 bg-card px-4 py-2 text-caption font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden">
+        <p className="rounded-xl border border-brand/20 bg-brand-soft/20 px-4 py-3 text-body-sm leading-[1.65] text-foreground/90">
+          <span className="font-semibold text-brand-ink">In short. </span>
+          {inShort}
+        </p>
+        <details className="group mt-4">
+          <summary className="kyp-touch-y inline-flex cursor-pointer list-none items-center gap-1.5 rounded-full border border-border/70 bg-card px-4 py-2 text-caption font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden">
             Read the full narrative
           </summary>
           <p className="mt-4 max-w-[68ch] text-body-sm leading-[1.65] text-foreground/85">
             {course.mechanism.summary}
           </p>
+        </details>
+        <details className="group mt-4">
+          <summary className="kyp-touch-y inline-flex cursor-pointer list-none items-center gap-1.5 rounded-full border border-border/70 bg-card px-4 py-2 text-caption font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden">
+            The {stepCount} steps in detail
+          </summary>
+          <div className="mt-4">
+            <StepChain steps={course.mechanism.steps.map((s) => ({ label: s, detail: undefined }))} />
+          </div>
         </details>
       </Container>
     </Section>
@@ -412,9 +414,16 @@ export function ConceptTimeline({ course }: { course: PsychiatryCourse }) {
 /** Lesson 3 — epidemiology / underlying factors, rendered only
  *  when the course carries real (non-placeholder) data for the
  *  family (redesign B). The concept branch uses real topic
- *  names instead of the disease-shaped headers. */
-export function ConceptClinicalContext({ course }: { course: PsychiatryCourse }) {
-  const visibility = getConceptSectionVisibility(course);
+ *  names instead of the disease-shaped headers. Visibility is
+ *  computed by the VIEW on the RAW course (placeholder detection
+ *  must see the unstripped text) and passed in explicitly. */
+export function ConceptClinicalContext({
+  course,
+  visibility,
+}: {
+  course: PsychiatryCourse;
+  visibility: ConceptSectionVisibility;
+}) {
   if (!visibility.epidemiology && !visibility.etiology) return null;
   return (
     <Section className="bg-muted/20" spacing="tight">
@@ -430,7 +439,7 @@ export function ConceptClinicalContext({ course }: { course: PsychiatryCourse })
                 <CardBody className="p-4">
                   <p className="text-overline text-brand-ink">Global</p>
                   <p className="mt-2 text-body-sm leading-relaxed text-foreground/85">
-                    {course.epidemiology.globalPrevalence}
+                    <ConceptProse text={course.epidemiology.globalPrevalence} />
                   </p>
                 </CardBody>
               </CardPrimitive>
@@ -438,7 +447,7 @@ export function ConceptClinicalContext({ course }: { course: PsychiatryCourse })
                 <CardBody className="p-4">
                   <p className="text-overline text-brand-ink">India</p>
                   <p className="mt-2 text-body-sm leading-relaxed text-foreground/85">
-                    {course.epidemiology.indianPrevalence}
+                    <ConceptProse text={course.epidemiology.indianPrevalence} />
                   </p>
                 </CardBody>
               </CardPrimitive>
@@ -447,7 +456,7 @@ export function ConceptClinicalContext({ course }: { course: PsychiatryCourse })
                   <CardBody className="p-4">
                     <p className="text-overline text-muted-foreground">Sex ratio</p>
                     <p className="mt-2 text-body-sm leading-relaxed text-foreground/85">
-                      {course.epidemiology.genderRatio}
+                      <ConceptProse text={course.epidemiology.genderRatio} />
                     </p>
                   </CardBody>
                 </CardPrimitive>
@@ -457,7 +466,7 @@ export function ConceptClinicalContext({ course }: { course: PsychiatryCourse })
                   <CardBody className="p-4">
                     <p className="text-overline text-muted-foreground">Age of onset</p>
                     <p className="mt-2 text-body-sm leading-relaxed text-foreground/85">
-                      {course.epidemiology.ageOfOnset}
+                      <ConceptProse text={course.epidemiology.ageOfOnset} />
                     </p>
                   </CardBody>
                 </CardPrimitive>
@@ -480,7 +489,9 @@ export function ConceptClinicalContext({ course }: { course: PsychiatryCourse })
                     </span>
                     <div className="min-w-0 flex-1">
                       <p className="text-body-sm font-medium text-foreground">{factor.factor}</p>
-                      <p className="mt-1 text-caption leading-relaxed text-muted-foreground">{factor.details}</p>
+                      <p className="mt-1 text-caption leading-relaxed text-muted-foreground">
+                        <ConceptProse text={factor.details} maxWords={60} />
+                      </p>
                     </div>
                   </CardBody>
                 </CardPrimitive>
@@ -568,10 +579,11 @@ export function ConceptDiagnosis({ course }: { course: PsychiatryCourse }) {
   );
 }
 
-/** Lesson 3 — differential: table on wide screens with a sticky
- *  first column and clamped cells; stacked cards below 900px
- *  with the distinguishing-features block collapsed by default
- *  (redesign C). */
+/** Lesson 3 — differential (declutter mission): a REAL semantic
+ *  <table> with a visible <caption> from 640px up (sticky first
+ *  column, clamped cells); below 640px each row renders as a
+ *  stacked Label/Value card so the table is never squeezed
+ *  horizontally. Every value is preserved exactly (redesign C). */
 export function ConceptDifferential({ course }: { course: PsychiatryCourse }) {
   if (!course.differentialDiagnosis || course.differentialDiagnosis.length === 0) return null;
   return (
@@ -581,23 +593,27 @@ export function ConceptDifferential({ course }: { course: PsychiatryCourse }) {
           title="Differential Diagnosis"
           lede="What else it could be — and the feature that decides."
         />
-        {/* ≥900px: the comparison table */}
-        <div className="hidden min-[900px]:block">
+        {/* ≥640px: the semantic comparison table */}
+        <div className="hidden min-[640px]:block">
           <div className="overflow-x-auto rounded-xl border border-border/60">
             <table className="w-full text-left text-xs">
+              <caption className="sr-only sm:not-sr-only px-4 pt-3 pb-2 text-caption text-left text-muted-foreground">
+                {course.title} — differentials with the distinguishing features and the key
+                assessment point that decides each one.
+              </caption>
               <thead>
                 <tr className="border-b-2 border-border/70 bg-muted/30 text-muted-foreground">
-                  <th className="sticky left-0 z-10 bg-muted/30 px-4 py-2.5 font-semibold">Condition</th>
-                  <th className="px-4 py-2.5 font-semibold">Distinguishing features</th>
-                  <th className="px-4 py-2.5 font-semibold">Key assessment point</th>
+                  <th scope="col" className="sticky left-0 z-10 bg-muted/30 px-4 py-2.5 font-semibold">Condition</th>
+                  <th scope="col" className="px-4 py-2.5 font-semibold">Distinguishing features</th>
+                  <th scope="col" className="px-4 py-2.5 font-semibold">Key assessment point</th>
                 </tr>
               </thead>
               <tbody>
                 {course.differentialDiagnosis.map((differential, i) => (
                   <tr key={i} className="border-b border-border/40 align-top last:border-0">
-                    <td className="sticky left-0 z-10 max-w-[180px] bg-card px-4 py-3 font-medium text-foreground">
+                    <th scope="row" className="sticky left-0 z-10 max-w-[180px] bg-card px-4 py-3 text-left font-medium text-foreground">
                       {differential.condition}
-                    </td>
+                    </th>
                     <td className="px-4 py-3 leading-relaxed text-muted-foreground">
                       <InlineExpander
                         short={<span className="line-clamp-2">{differential.distinguishingFeatures}</span>}
@@ -618,23 +634,22 @@ export function ConceptDifferential({ course }: { course: PsychiatryCourse }) {
             </table>
           </div>
         </div>
-        {/* <900px: stacked cards, features collapsed by default (redesign C) */}
-        <div className="min-[900px]:hidden">
+        {/* <640px: stacked Label/Value cards — no squeezed table */}
+        <div className="min-[640px]:hidden">
           {course.differentialDiagnosis.map((differential, i) => (
             <div key={i} className="mb-3 rounded-xl border border-border/70 bg-card p-4 last:mb-0">
-              <p className="text-body-sm font-semibold text-foreground">{differential.condition}</p>
-              <p className="mt-2 text-caption leading-relaxed text-foreground/85">
-                <span className="font-semibold text-brand-ink">Key assessment: </span>
-                {differential.keyDifferentiator}
-              </p>
-              <details className="group mt-2">
-                <summary className="cursor-pointer list-none text-caption font-medium text-brand underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
-                  Distinguishing features
-                </summary>
-                <p className="mt-1.5 text-caption leading-relaxed text-muted-foreground">
-                  {differential.distinguishingFeatures}
-                </p>
-              </details>
+              {(
+                [
+                  ["Condition", differential.condition],
+                  ["Distinguishing features", differential.distinguishingFeatures],
+                  ["Key assessment point", differential.keyDifferentiator],
+                ] as const
+              ).map(([label, value]) => (
+                <div key={label} className="border-b border-border/50 py-2.5 last:border-b-0 last:pb-0">
+                  <p className="text-overline text-muted-foreground">{label}</p>
+                  <p className="mt-1 text-caption leading-relaxed text-foreground/85">{value}</p>
+                </div>
+              ))}
             </div>
           ))}
         </div>
@@ -669,16 +684,18 @@ export function ConceptManagement({ course }: { course: PsychiatryCourse }) {
                   </span>
                   <p className="text-body-sm font-semibold text-foreground">{option.name}</p>
                 </div>
-                <p className="mt-2 text-caption leading-relaxed text-foreground/80">{option.description}</p>
+                <p className="mt-2 text-caption leading-relaxed text-foreground/80">
+                  <ConceptProse text={option.description} maxWords={60} />
+                </p>
                 <div className="mt-3 grid gap-2 sm:grid-cols-2">
                   <p className="rounded-lg border border-border/60 bg-muted/30 px-3 py-2 text-caption leading-relaxed text-muted-foreground">
                     <span className="font-semibold text-foreground/70">When to use: </span>
-                    {option.whenToUse}
+                    <ConceptProse text={option.whenToUse} maxWords={60} />
                   </p>
                   {option.indianContext && (
                     <p className="rounded-lg border border-brand/20 bg-brand-soft/25 px-3 py-2 text-caption leading-relaxed text-muted-foreground">
                       <span className="font-semibold text-brand-ink">India: </span>
-                      {option.indianContext}
+                      <ConceptProse text={option.indianContext} maxWords={60} />
                     </p>
                   )}
                 </div>
@@ -692,7 +709,9 @@ export function ConceptManagement({ course }: { course: PsychiatryCourse }) {
 }
 
 /** Lesson 3 — patient guide (renders when the guide carries real
- *  plain-language content — true for all 35 concept courses). */
+ *  plain-language content — true for all 35 concept courses).
+ *  Text cards whose source was entirely placeholder meta are
+ *  skipped rather than rendered empty (declutter mission). */
 export function ConceptPatientGuide({ course }: { course: PsychiatryCourse }) {
   const guide = course.patientGuide;
   return (
@@ -703,30 +722,46 @@ export function ConceptPatientGuide({ course }: { course: PsychiatryCourse }) {
           lede="In plain language — for patients and families."
         />
         <div className="grid gap-3 sm:grid-cols-2">
-          <CardPrimitive variant="flat" interactive={false} showArrow={false}>
-            <CardBody className="p-4">
-              <p className="text-h4 text-foreground">What it is</p>
-              <p className="mt-2 text-caption leading-relaxed text-foreground/80">{guide.whatIsIt}</p>
-            </CardBody>
-          </CardPrimitive>
-          <CardPrimitive variant="flat" interactive={false} showArrow={false}>
-            <CardBody className="p-4">
-              <p className="text-h4 text-foreground">What causes it</p>
-              <p className="mt-2 text-caption leading-relaxed text-foreground/80">{guide.whatCausesIt}</p>
-            </CardBody>
-          </CardPrimitive>
-          <CardPrimitive variant="flat" interactive={false} showArrow={false}>
-            <CardBody className="p-4">
-              <p className="text-h4 text-foreground">What you may experience</p>
-              <p className="mt-2 text-caption leading-relaxed text-foreground/80">{guide.symptoms}</p>
-            </CardBody>
-          </CardPrimitive>
-          <CardPrimitive variant="flat" interactive={false} showArrow={false}>
-            <CardBody className="p-4">
-              <p className="text-h4 text-foreground">What treatment involves</p>
-              <p className="mt-2 text-caption leading-relaxed text-foreground/80">{guide.treatment}</p>
-            </CardBody>
-          </CardPrimitive>
+          {guide.whatIsIt && (
+            <CardPrimitive variant="flat" interactive={false} showArrow={false}>
+              <CardBody className="p-4">
+                <p className="text-h4 text-foreground">What it is</p>
+                <p className="mt-2 text-caption leading-relaxed text-foreground/80">
+                  <ConceptProse text={guide.whatIsIt} maxWords={80} />
+                </p>
+              </CardBody>
+            </CardPrimitive>
+          )}
+          {guide.whatCausesIt && (
+            <CardPrimitive variant="flat" interactive={false} showArrow={false}>
+              <CardBody className="p-4">
+                <p className="text-h4 text-foreground">What causes it</p>
+                <p className="mt-2 text-caption leading-relaxed text-foreground/80">
+                  <ConceptProse text={guide.whatCausesIt} maxWords={80} />
+                </p>
+              </CardBody>
+            </CardPrimitive>
+          )}
+          {guide.symptoms && (
+            <CardPrimitive variant="flat" interactive={false} showArrow={false}>
+              <CardBody className="p-4">
+                <p className="text-h4 text-foreground">What you may experience</p>
+                <p className="mt-2 text-caption leading-relaxed text-foreground/80">
+                  <ConceptProse text={guide.symptoms} maxWords={80} />
+                </p>
+              </CardBody>
+            </CardPrimitive>
+          )}
+          {guide.treatment && (
+            <CardPrimitive variant="flat" interactive={false} showArrow={false}>
+              <CardBody className="p-4">
+                <p className="text-h4 text-foreground">What treatment involves</p>
+                <p className="mt-2 text-caption leading-relaxed text-foreground/80">
+                  <ConceptProse text={guide.treatment} maxWords={80} />
+                </p>
+              </CardBody>
+            </CardPrimitive>
+          )}
           <CardPrimitive variant="flat" interactive={false} showArrow={false} className="sm:col-span-2">
             <CardBody className="p-4">
               <p className="text-h4 text-foreground">What you can do</p>

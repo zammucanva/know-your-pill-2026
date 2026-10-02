@@ -13,6 +13,7 @@ import {
   evidenceGradeMeta,
   type EvidenceGrade,
 } from "@/lib/kyp/data/psychiatry-courses/types";
+import { clampSentences } from "@/lib/kyp/psychiatry-concept-visibility";
 
 /* ============================================================
    Concept lesson template — shared atoms (redesign B).
@@ -52,20 +53,23 @@ export function EvidenceGradeDot({ grade, className }: { grade: EvidenceGrade; c
   );
 }
 
-/** The single "i" affordance that explains the grading scale. */
+/** The single "i" affordance that explains the grading scale —
+ *  a collapsed native <details> (declutter mission): the scale
+ *  legend renders ONLY when opened, works with keyboard (Enter /
+ *  Space) and touch, and is one legend for the whole template. */
 export function GradeScaleInfo() {
   return (
-    <span className="relative inline-flex items-center group align-middle">
-      <button
-        type="button"
+    <details className="group relative inline-flex align-middle">
+      <summary
         aria-label="What the evidence grades mean"
-        className="inline-flex h-4 w-4 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-brand hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+        title="What the evidence grades mean"
+        className="kyp-touch-full inline-flex cursor-pointer list-none items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-brand hover:text-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden"
       >
         <Info className="h-2.5 w-2.5" aria-hidden />
-      </button>
-      <span
+      </summary>
+      <div
         role="tooltip"
-        className="pointer-events-none absolute bottom-full left-1/2 z-30 mb-2 hidden w-64 -translate-x-1/2 rounded-lg border border-border bg-card p-3 text-left text-caption leading-relaxed text-foreground/85 shadow-[var(--shadow-lift)] group-focus-within:block group-hover:block"
+        className="pointer-events-none absolute bottom-full left-1/2 z-30 mb-2 hidden w-64 -translate-x-1/2 rounded-lg border border-border bg-card p-3 text-left text-caption leading-relaxed text-foreground/85 shadow-[var(--shadow-lift)] group-open:block"
       >
         <span className="mb-1 block font-semibold text-foreground">Evidence grades</span>
         {(Object.keys(evidenceGradeMeta) as EvidenceGrade[]).map((g) => (
@@ -77,8 +81,8 @@ export function GradeScaleInfo() {
             </span>
           </span>
         ))}
-      </span>
-    </span>
+      </div>
+    </details>
   );
 }
 
@@ -252,6 +256,37 @@ export function InlineExpander({
           </button>
         </>
       )}
+    </span>
+  );
+}
+
+/* ============================================================
+   ConceptProse — the wall guard (declutter mission).
+
+   Long prose fields render their first ~`maxWords` words as
+   whole sentence/clause segments; the exact remainder sits behind
+   an inline "More" disclosure (and stays in the DOM for no-JS
+   and print). The clamp is a pure re-slicing of the source —
+   visible + rest reconstructs the text (pinned by tests).
+   ============================================================ */
+
+export function ConceptProse({
+  text,
+  maxWords = 100,
+  className,
+}: {
+  text: string;
+  maxWords?: number;
+  className?: string;
+}) {
+  const { visible, rest } = clampSentences(text, maxWords);
+  if (!rest) {
+    return <span className={className}>{visible}</span>;
+  }
+  return (
+    <span className={className}>
+      {visible}{" "}
+      <InlineExpander short="" rest={rest} label="More" />
     </span>
   );
 }
