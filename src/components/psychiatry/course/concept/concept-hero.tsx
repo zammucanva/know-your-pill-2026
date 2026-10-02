@@ -86,16 +86,35 @@ export function ConceptHero({ course }: { course: PsychiatryCourse }) {
               <CardBody className="p-6">
                 <p className="text-overline text-brand-ink">Learning objectives</p>
                 <ul className="mt-4 space-y-2.5">
-                  {visible.map((objective, i) => (
-                    <li key={i} className="flex items-start gap-2.5">
-                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand/15 text-brand">
-                        <Check className="h-3 w-3" strokeWidth={3} />
-                      </span>
-                      <span className="text-body-sm text-foreground/90 leading-relaxed">
-                        {objectiveOneLiner(objective)}
-                      </span>
-                    </li>
-                  ))}
+                  {visible.map((objective, i) => {
+                    const oneLiner = objectiveOneLiner(objective);
+                    // the one-liner is a prefix slice — the full detail
+                    // stays one disclosure away (declutter mission)
+                    const truncated =
+                      objective.replace(/[.]$/, "") !== oneLiner;
+                    return (
+                      <li key={i} className="flex items-start gap-2.5">
+                        <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand/15 text-brand">
+                          <Check className="h-3 w-3" strokeWidth={3} />
+                        </span>
+                        <span className="min-w-0">
+                          <span className="block text-body-sm text-foreground/90 leading-relaxed">
+                            {oneLiner}
+                          </span>
+                          {truncated && (
+                            <details className="group mt-0.5">
+                              <summary className="cursor-pointer list-none text-caption font-medium text-brand underline-offset-2 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
+                                Read the full objective
+                              </summary>
+                              <p className="mt-1 text-caption leading-relaxed text-muted-foreground">
+                                {objective}
+                              </p>
+                            </details>
+                          )}
+                        </span>
+                      </li>
+                    );
+                  })}
                 </ul>
                 {rest.length > 0 && (
                   <div className="mt-3">

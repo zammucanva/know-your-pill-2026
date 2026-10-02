@@ -7,12 +7,11 @@ import { GuidedLearningVisibility } from "@/components/kyp/ui/guided-learning-vi
 import { MicroQuiz } from "@/components/kyp/ui/micro-quiz";
 import { ActiveRecallSection } from "@/components/kyp/ui/active-recall";
 import { SectionReadTracker } from "@/components/kyp/ui/section-read-tracker";
-import { ResumeBanner } from "@/components/kyp/ui/resume-banner";
 import { Container } from "@/components/kyp/ui/container";
 import { useCourseProgress } from "@/lib/kyp/progress/use-local-progress";
 import { useGuidedLearning } from "@/components/kyp/ui/guided-learning-toggle";
 import { courseNavItems, getCourseRenderedSectionIds } from "@/lib/kyp/psychiatry-course-sections";
-import { getConceptSectionVisibility } from "@/lib/kyp/psychiatry-concept-visibility";
+import { getConceptSectionVisibility, renderableCourse } from "@/lib/kyp/psychiatry-concept-visibility";
 import type { PsychiatryCourse } from "@/lib/kyp/data/psychiatry-courses/types";
 import type { MicroQuiz as MicroQuizType } from "@/lib/kyp/data";
 import type { AdjacentCourseRef } from "../course-recall";
@@ -136,6 +135,11 @@ export function ConceptCourseView({
   const quizzes: MicroQuizType[] = course.microQuizzes;
   const rendered = React.useMemo(() => getCourseRenderedSectionIds(course), [course]);
   const visibility = React.useMemo(() => getConceptSectionVisibility(course), [course]);
+  // The render-time view of the course: placeholder meta sentences
+  // stripped at the PRESENTATION layer only (data files untouched).
+  // Visibility and completion stay keyed on the RAW course above —
+  // placeholder detection must see the unstripped source text.
+  const rc = React.useMemo(() => renderableCourse(course), [course]);
   const navItems = React.useMemo(() => courseNavItems(rendered), [rendered]);
   const completionIds = React.useMemo(
     () => navItems.filter((item) => item.id !== "top").map((item) => item.id),
@@ -216,7 +220,11 @@ export function ConceptCourseView({
     [course.slug, lessons]
   );
 
-  // Initial lesson + hash navigation + back button
+  // Initial lesson + hash navigation + back button. A #lesson-N (or
+  // a section / #exam-* anchor) hash change runs the FULL goToLesson
+  // contract — state, persistence, scroll to the lesson top and
+  // focus on the lesson heading (declutter mission fix: the old
+  // applyHash only flipped state and never scrolled or focused).
   React.useEffect(() => {
     const applyHash = () => {
       const hash = window.location.hash;
@@ -224,8 +232,7 @@ export function ConceptCourseView({
       if (lessonMatch) {
         const n = parseInt(lessonMatch[1], 10);
         if (lessons.some((l) => l.number === n)) {
-          setActiveLesson(n);
-          writeStoredLesson(course.slug, n);
+          goToLesson(n);
           return;
         }
       }
@@ -234,12 +241,16 @@ export function ConceptCourseView({
       if (sectionMatch) {
         const owner = sectionToLesson(lessons, sectionMatch[1]);
         if (owner) {
-          setActiveLesson(owner);
-          writeStoredLesson(course.slug, owner);
+          goToLesson(owner);
+          return;
+        }
+        // #exam-<tab> anchors restore their owning lesson (5)
+        if (sectionMatch[1].startsWith("exam-")) {
+          goToLesson(5);
           return;
         }
       }
-      // last visited lesson, else lesson 1
+      // last visited lesson, else lesson 1 (no focus jump on a plain visit)
       const stored = readStoredLesson(course.slug);
       if (stored !== null && lessons.some((l) => l.number === stored)) {
         setActiveLesson(stored);
@@ -250,7 +261,7 @@ export function ConceptCourseView({
     applyHash();
     window.addEventListener("hashchange", applyHash);
     return () => window.removeEventListener("hashchange", applyHash);
-  }, [course.slug, lessons]);
+  }, [course.slug, goToLesson, lessons]);
 
   // If the active lesson is not visible in this mode, move to the
   // first visible one.
@@ -292,54 +303,54 @@ export function ConceptCourseView({
   const renderSection = (sectionId: string) => {
     switch (sectionId) {
       case "quick-facts":
-        return <ConceptQuickFacts course={course} />;
+        return <ConceptQuickFacts course={rc} />;
       case "knowledge-graph":
-        return <ConceptKnowledgeGraph course={course} />;
+        return <ConceptKnowledgeGraph course={rc} />;
       case "mechanism":
-        return <ConceptMechanism course={course} />;
+        return <ConceptMechanism course={rc} />;
       case "explanatory-layer":
-        return <ConceptExplanatoryLayer course={course} />;
+        return <ConceptExplanatoryLayer course={rc} />;
       case "pathways":
-        return <ConceptPathways course={course} />;
+        return <ConceptPathways course={rc} />;
       case "timeline":
-        return <ConceptTimeline course={course} />;
+        return <ConceptTimeline course={rc} />;
       case "symptoms":
         return (
           <>
-            <ConceptClinicalContext course={course} />
-            <ConceptSymptoms course={course} />
+            <ConceptClinicalContext course={rc} visibility={visibility} />
+            <ConceptSymptoms course={rc} />
           </>
         );
       case "diagnosis":
-        return <ConceptDiagnosis course={course} />;
+        return <ConceptDiagnosis course={rc} />;
       case "differential":
-        return <ConceptDifferential course={course} />;
+        return <ConceptDifferential course={rc} />;
       case "management":
-        return <ConceptManagement course={course} />;
+        return <ConceptManagement course={rc} />;
       case "patient-guide":
-        return <ConceptPatientGuide course={course} />;
+        return <ConceptPatientGuide course={rc} />;
       case "indian-practice":
-        return <ConceptIndianPractice course={course} />;
+        return <ConceptIndianPractice course={rc} />;
       case "decision-path":
-        return <ConceptDecisionPathSection course={course} />;
+        return <ConceptDecisionPathSection course={rc} />;
       case "common-mistakes":
-        return <ConceptCommonMistakes course={course} />;
+        return <ConceptCommonMistakes course={rc} />;
       case "exam-lens":
-        return <ConceptExamLens course={course} />;
+        return <ConceptExamLens course={rc} />;
       case "clinical-case":
-        return <ConceptClinicalCases course={course} />;
+        return <ConceptClinicalCases course={rc} />;
       case "drug-navigation":
-        return <CourseDrugNavigation course={course} />;
+        return <CourseDrugNavigation course={rc} />;
       case "high-yield":
-        return <ConceptHighYield course={course} />;
+        return <ConceptHighYield course={rc} />;
       case "active-recall":
         return (
           <ActiveRecallSection questions={course.activeRecallQuestions} subject={course.title} />
         );
       case "faq":
-        return <CourseFaq course={course} />;
+        return <CourseFaq course={rc} />;
       case "references":
-        return <CourseReferences course={course} />;
+        return <CourseReferences course={rc} />;
       default:
         return null;
     }
@@ -358,16 +369,6 @@ export function ConceptCourseView({
         items={navItems}
         offset={120}
         completionIds={completionIds}
-      />
-      <ResumeBanner
-        courseSlug={course.slug}
-        items={navItems.filter((i) => i.id !== "top")}
-        noun="lesson"
-        patientFilter={false}
-        onBeforeNavigate={(sectionId) => {
-          const owner = sectionToLesson(lessons, sectionId);
-          if (owner) goToLesson(owner, false);
-        }}
       />
 
       <div className="fixed right-4 top-20 z-30 hidden sm:block">
@@ -412,7 +413,7 @@ export function ConceptCourseView({
                 onClick={() => prevLesson && navigateToLesson(prevLesson.number)}
                 disabled={!prevLesson}
                 aria-label={prevLesson ? `Previous lesson: ${prevLesson.title}` : "No previous lesson"}
-                className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-border/70 bg-card text-foreground transition-colors hover:border-brand/40 hover:text-brand disabled:opacity-35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                className="kyp-touch-full inline-flex items-center justify-center rounded-full border border-border/70 bg-card text-foreground transition-colors hover:border-brand/40 hover:text-brand disabled:opacity-35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
               >
                 <ArrowLeft className="h-3.5 w-3.5" aria-hidden />
               </button>
@@ -421,25 +422,35 @@ export function ConceptCourseView({
                 onClick={() => nextLesson && navigateToLesson(nextLesson.number)}
                 disabled={!nextLesson}
                 aria-label={nextLesson ? `Next lesson: ${nextLesson.title}` : "No next lesson"}
-                className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-border/70 bg-card text-foreground transition-colors hover:border-brand/40 hover:text-brand disabled:opacity-35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                className="kyp-touch-full inline-flex items-center justify-center rounded-full border border-border/70 bg-card text-foreground transition-colors hover:border-brand/40 hover:text-brand disabled:opacity-35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
               >
                 <ArrowRight className="h-3.5 w-3.5" aria-hidden />
               </button>
             </div>
           </div>
           {/* Desktop: horizontal lesson chips (scrollable — never widens
-              the page) */}
+              the page). Roving tabindex + Home/End (declutter mission). */}
           <div
             className="hidden gap-1.5 overflow-x-auto pb-2.5 kyp-scroll md:flex"
             role="tablist"
             aria-label="Lessons"
             onKeyDown={(e) => {
-              if (e.key === "ArrowRight" && nextLesson) {
+              const idx = visibleLessons.findIndex((l) => l.number === activeLesson);
+              if (idx < 0) return;
+              if (e.key === "ArrowRight") {
                 e.preventDefault();
-                navigateToLesson(nextLesson.number);
-              } else if (e.key === "ArrowLeft" && prevLesson) {
+                navigateToLesson(visibleLessons[(idx + 1) % visibleLessons.length].number);
+              } else if (e.key === "ArrowLeft") {
                 e.preventDefault();
-                navigateToLesson(prevLesson.number);
+                navigateToLesson(
+                  visibleLessons[(idx - 1 + visibleLessons.length) % visibleLessons.length].number
+                );
+              } else if (e.key === "Home") {
+                e.preventDefault();
+                navigateToLesson(visibleLessons[0].number);
+              } else if (e.key === "End") {
+                e.preventDefault();
+                navigateToLesson(visibleLessons[visibleLessons.length - 1].number);
               }
             }}
           >
@@ -450,10 +461,13 @@ export function ConceptCourseView({
                   key={lesson.number}
                   type="button"
                   role="tab"
+                  id={`lesson-tab-${lesson.number}`}
                   aria-selected={isActive}
+                  aria-controls={`lesson-${lesson.number}`}
+                  tabIndex={isActive ? 0 : -1}
                   onClick={() => navigateToLesson(lesson.number)}
                   className={cn(
-                    "flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand",
+                    "kyp-touch-y flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand",
                     isActive
                       ? "bg-brand-soft/40 text-brand-ink"
                       : "text-muted-foreground hover:text-foreground"
@@ -482,7 +496,7 @@ export function ConceptCourseView({
               id="concept-lesson-select"
               value={activeLesson ?? 1}
               onChange={(e) => navigateToLesson(parseInt(e.target.value, 10))}
-              className="w-full rounded-lg border border-border/70 bg-card px-3 py-2 text-sm text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              className="kyp-touch-y w-full rounded-lg border border-border/70 bg-card px-3 py-2 text-sm text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             >
               {visibleLessons.map((lesson) => (
                 <option key={lesson.number} value={lesson.number}>
@@ -502,10 +516,11 @@ export function ConceptCourseView({
         const isActive = activeLesson === null || lesson.number === activeLesson;
         const lessonSections = lesson.sections.filter(sectionRenders);
         if (lessonSections.length === 0) return null;
-        // Each lesson's footer targets the NEXT visible lesson BY POSITION
+        // Each lesson's footer targets the neighbouring visible lessons BY POSITION
         // (independent of which lesson is currently active, so SSR and
         // client render agree before hydration).
         const thisIdx = visibleLessons.findIndex((l) => l.number === lesson.number);
+        const prevOfThis = thisIdx >= 1 ? visibleLessons[thisIdx - 1] : null;
         const nextOfThis = thisIdx >= 0 ? (visibleLessons[thisIdx + 1] ?? null) : null;
         return (
           <section
@@ -552,42 +567,66 @@ export function ConceptCourseView({
               </React.Fragment>
             ))}
 
-            {/* End-of-lesson footer: the one-line takeaway folded
-                into the Continue area (redesign A) */}
-            {lesson.checkpoint && (nextOfThis || thisIdx > 0) && (
-              <Container className="py-8">
-                <div className="flex flex-wrap items-center gap-x-6 gap-y-3 rounded-xl border border-brand/20 bg-brand-soft/20 px-5 py-4">
-                  <div className="min-w-0 flex-1">
-                    <p className="text-overline text-brand-ink">You should now be able to…</p>
-                    <p className="mt-1 text-sm leading-relaxed text-foreground/90">
-                      {lesson.checkpoint}
-                    </p>
-                  </div>
-                  {nextOfThis ? (
-                    <button
-                      type="button"
-                      onClick={() => navigateToLesson(nextOfThis.number)}
-                      className="inline-flex min-w-0 items-center gap-1.5 rounded-full border border-brand/40 bg-card px-4 py-2 text-left text-xs font-semibold text-brand-ink transition-colors hover:bg-brand hover:text-primary-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-                    >
-                      <span className="whitespace-normal">
-                        Continue to {nextOfThis.number}. {nextOfThis.title}
-                      </span>
-                      <ArrowRight className="h-3 w-3 shrink-0" aria-hidden />
-                    </button>
-                  ) : (
-                    <span className="inline-flex items-center gap-1.5 text-caption font-medium text-success">
-                      <Check className="h-3.5 w-3.5" aria-hidden /> Course complete
-                    </span>
-                  )}
+            {/* End-of-lesson checkpoint: the one-line takeaway only
+                (declutter mission — the Continue chrome moved into
+                the Previous / Next pager below, and "Where the
+                curriculum goes next" renders ONLY inside Lesson 6). */}
+            {lesson.checkpoint && (
+              <Container className="pb-2 pt-8">
+                <div className="rounded-xl border border-brand/20 bg-brand-soft/20 px-5 py-4">
+                  <p className="text-overline text-brand-ink">You should now be able to…</p>
+                  <p className="mt-1 text-sm leading-relaxed text-foreground/90">
+                    {lesson.checkpoint}
+                  </p>
                 </div>
               </Container>
+            )}
+
+            {/* Previous / Next at the bottom of EVERY lesson
+                (declutter mission) — 44px targets, keyboard
+                operable, and the course-complete state on the last. */}
+            <Container className="pb-10">
+              <nav
+                data-lesson-pager
+                aria-label={`Lesson ${lesson.number} navigation`}
+                className="flex flex-wrap items-center justify-between gap-3"
+              >
+                <button
+                  type="button"
+                  onClick={() => prevOfThis && navigateToLesson(prevOfThis.number)}
+                  disabled={!prevOfThis}
+                  aria-label={prevOfThis ? `Previous lesson: ${prevOfThis.title}` : "No previous lesson"}
+                  className="kyp-touch-y inline-flex min-w-0 items-center gap-1.5 rounded-full border border-border/70 bg-card px-4 py-2 text-xs font-medium text-foreground transition-colors hover:border-brand/40 hover:text-brand disabled:opacity-35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                >
+                  <ArrowLeft className="h-3.5 w-3.5 shrink-0" aria-hidden />
+                  <span className="truncate">Previous{prevOfThis ? `: ${prevOfThis.title}` : ""}</span>
+                </button>
+                {nextOfThis ? (
+                  <button
+                    type="button"
+                    onClick={() => navigateToLesson(nextOfThis.number)}
+                    aria-label={`Next lesson: ${nextOfThis.title}`}
+                    className="kyp-touch-y inline-flex min-w-0 items-center gap-1.5 rounded-full border border-brand/40 bg-brand-soft/40 px-4 py-2 text-xs font-semibold text-brand-ink transition-colors hover:bg-brand hover:text-primary-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                  >
+                    <span className="truncate">Next: {nextOfThis.title}</span>
+                    <ArrowRight className="h-3.5 w-3.5 shrink-0" aria-hidden />
+                  </button>
+                ) : (
+                  <span className="inline-flex items-center gap-1.5 text-caption font-medium text-success">
+                    <Check className="h-3.5 w-3.5" aria-hidden /> Course complete
+                  </span>
+                )}
+              </nav>
+            </Container>
+
+            {/* Curriculum continuation lives ONLY inside Lesson 6
+                (declutter mission) — never after every lesson. */}
+            {lesson.number === 6 && (
+              <CourseNextStep course={rc} adjacent={adjacent ?? { prev: null, next: null }} />
             )}
           </section>
         );
       })}
-
-      {/* ===== Curriculum continuation (the closed journey end) ===== */}
-      <CourseNextStep course={course} adjacent={adjacent ?? { prev: null, next: null }} />
     </>
   );
 }
