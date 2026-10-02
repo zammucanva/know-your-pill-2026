@@ -11,14 +11,14 @@ import { cn } from "@/lib/utils";
  * SERVER (by the server parent) and passed down as lightweight props —
  * the homepage hero never imports the 145-monograph data layer into
  * the client bundle. `zoloft` is preserved as a legacy brand alias
- * mapped to its canonical slug. */
+ * mapped to its canonical slug. Everything that is not an exact
+ * drug/substance slug is handed off to the universal search modal
+ * WITH the typed query (generic ranking, user keeps full choice). */
 interface HomeHeroProps {
   /** All canonical drug slugs (typeahead resolution). */
   drugSlugs: string[];
   /** All substance page slugs. */
   substanceSlugs: string[];
-  /** All disease page slugs (first is the search fallback). */
-  diseaseSlugs: string[];
   /** Popular search chips (generic names of the first few drugs). */
   popularSearches: string[];
 }
@@ -31,7 +31,6 @@ const HERO_OVERLINE = "Medication education made visual";
 export function HomeHero({
   drugSlugs,
   substanceSlugs,
-  diseaseSlugs,
   popularSearches,
 }: HomeHeroProps) {
   const router = useRouter();
@@ -102,10 +101,13 @@ export function HomeHero({
                       const drugSlug = resolveSlug(q);
                       if (drugSlug) router.push(`/drugs/${drugSlug}`);
                       else if (substanceSlugs.includes(q)) router.push(`/substances/${q}`);
-                      else if (q === "depression" || q === "mdd" || q.includes("depressive"))
-                        router.push(`/diseases/${diseaseSlugs[0]}`);
                       else
-                        window.dispatchEvent(new KeyboardEvent("keydown", { key: "k", metaKey: true }));
+                        // Generic handoff: open the universal search modal
+                        // WITH the typed query — the engine ranks every
+                        // entity type globally; no hard-coded routes.
+                        window.dispatchEvent(
+                          new CustomEvent("kyp:search", { detail: { query: q } })
+                        );
                     }
                   }}
                 >

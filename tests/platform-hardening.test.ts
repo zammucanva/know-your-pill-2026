@@ -360,11 +360,16 @@ describe("hardening — contrast, print stylesheet, PWA (source pins)", () => {
 // ─── Source pins: search multi-word matching ─────────────────────────────────
 
 describe("hardening — search multi-word matching (source pins)", () => {
-  test("the ranker tokenizes multi-word queries with AND semantics", () => {
+  test("the canonical ranker tokenizes multi-word queries with AND semantics", () => {
+    const engine = read("src/lib/kyp/search.ts");
+    expect(engine).toContain("function rankToken(");
+    expect(engine).toContain('tokenizeQuery(q)');
+    expect(engine).toContain("// AND semantics — one unmatched token excludes the item");
+    // the modal consumes the canonical engine, not an inline copy
     const src = read(SEARCH_MODAL);
-    expect(src).toContain("function rankToken(");
-    expect(src).toContain("q.split(/\\s+/).filter(Boolean)");
-    expect(src).toContain("// AND semantics — one unmatched token excludes the item");
+    expect(src).toContain('from "@/lib/kyp/search"');
+    expect(src).not.toContain("function rankToken(");
+    expect(src).toContain("SEARCH_DISPLAY_CAP");
   });
 });
 

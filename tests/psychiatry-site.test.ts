@@ -2020,12 +2020,13 @@ describe("psychiatry — post-migration layer consistency (2026-09-30 audit)", (
   });
 
   test("86. D-1: universal search returns AND renders Psychiatry results", async () => {
-    const { searchKyp } = await import("../src/lib/kyp/search");
+    const { searchUniversal } = await import("../src/lib/kyp/search");
+    const { searchIndex } = await import("../src/lib/kyp/data/search-index");
     const { searchTypeLabels } = await import("../src/lib/kyp/data/search-index");
     const { SEARCH_RESULT_GROUPS } = await import("../src/lib/kyp/search-groups");
 
     // (a) Exact title search reaches the course route.
-    const exact = searchKyp("schizophrenia");
+    const exact = searchUniversal(searchIndex, "schizophrenia").items;
     const course = exact.find(
       (r) => r.type === "psychiatry-note" && r.href === "/psychiatry/schizophrenia"
     );
@@ -2033,13 +2034,13 @@ describe("psychiatry — post-migration layer consistency (2026-09-30 audit)", (
     expect(course!.title).toBe("Schizophrenia");
 
     // (b) Partial title search still returns it.
-    const partial = searchKyp("schizo");
+    const partial = searchUniversal(searchIndex, "schizo").items;
     expect(
       partial.some((r) => r.type === "psychiatry-note" && r.href === "/psychiatry/schizophrenia")
     ).toBe(true);
 
     // (c) A concept course is reachable the same way.
-    const concept = searchKyp("neurotransmitters");
+    const concept = searchUniversal(searchIndex, "neurotransmitters").items;
     expect(
       concept.some((r) => r.type === "psychiatry-note" && r.href === "/psychiatry/neurotransmitters")
     ).toBe(true);

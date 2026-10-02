@@ -35,6 +35,7 @@ import {
   searchTypeLabelsGenerated as searchTypeLabels,
 } from "@/lib/kyp/data/search-index-generated";
 import { SEARCH_RESULT_GROUPS } from "@/lib/kyp/search-groups";
+import { SEARCH_DISPLAY_CAP, searchUniversal } from "@/lib/kyp/search";
 import type { SearchableItem } from "@/lib/kyp/data/types";
 import { useSearchHistory } from "@/lib/hooks/use-search-history";
 import { cn } from "@/lib/utils";
@@ -46,23 +47,27 @@ import { Clock, Trash2 } from "lucide-react";
  * Searches across: medications, substances, diseases, drug classes,
  * neurotransmitters, side effects, brain regions, pathways, patient guides.
  *
- * Ranking:
- *   1. Exact title match
- *   2. Title starts-with match
- *   3. Title includes match
- *   4. Keyword exact match
- *   5. Keyword includes match
- *   6. Description includes match
+ * The engine lives in @/lib/kyp/search (pure, test-pinned). Ranking
+ * tiers (lower = stronger): 1 exact title · 2 title prefix · 3 title
+ * token prefix · 4 title substring · 5 keyword exact · 6 keyword prefix
+ * · 7 keyword substring · 8 description. Multi-word = AND, Σ tiers.
+ *
+ * Display policy: at most SEARCH_DISPLAY_CAP results from the globally
+ * ranked pool — grouping is presentation-only and never suppresses a
+ * ranked result. The footer states the shown/total counts.
  *
  * Keyboard:
  *   ⌘K / Ctrl+K → open
  *   ↑↓          → navigate
+ *   Home / End  → first / last result
  *   Enter       → go
  *   Esc         → close
  */
 interface SearchModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  /** One-shot query seed (hero-form handoff). Plain opens pass null. */
+  initialQuery?: string | null;
 }
 
 const typeIcon: Record<SearchableItem["type"], React.ElementType> = {
@@ -95,53 +100,7 @@ const typeColor: Record<SearchableItem["type"], string> = {
   "psychiatry-note": "text-neural",
 };
 
-/** Best rank tier for ONE query token against an item. Lower = better. 0 = no match. */
-function rankToken(item: SearchableItem, token: string): number {
-  const title = item.title.toLowerCase();
-  const keywords = item.keywords.map((k) => k.toLowerCase());
-
-  // 1. Exact title match
-  if (title === token) return 1;
-  // 2. Title starts with query
-  if (title.startsWith(token)) return 2;
-  // 3. Title includes query
-  if (title.includes(token)) return 3;
-  // 4. Exact keyword match
-  if (keywords.some((k) => k === token)) return 4;
-  // 5. Keyword starts with query
-  if (keywords.some((k) => k.startsWith(token))) return 5;
-  // 6. Keyword includes query
-  if (keywords.some((k) => k.includes(token))) return 6;
-  // 7. Description includes query
-  if (item.description.toLowerCase().includes(token)) return 7;
-  return 0;
-}
-
-/**
- * Rank a search result. Lower = better. 0 = no match.
- *
- * Multi-word queries ("sertraline anxiety") use AND semantics: every
- * whitespace-separated token must match the item somewhere (title,
- * keywords, or description), otherwise the item is excluded. The rank
- * is the sum of the tokens' best tiers, so results matching more tokens
- * in stronger fields (title/keyword) sort first. Single-token queries
- * keep the original 7-tier behavior exactly.
- */
-function rankResult(item: SearchableItem, q: string): number {
-  const tokens = q.split(/\s+/).filter(Boolean);
-  if (tokens.length === 0) return 0;
-  if (tokens.length === 1) return rankToken(item, tokens[0]);
-
-  let total = 0;
-  for (const token of tokens) {
-    const tier = rankToken(item, token);
-    if (tier === 0) return 0; // AND semantics — one unmatched token excludes the item
-    total += tier;
-  }
-  return total;
-}
-
-export function SearchModal({ open, onOpenChange }: SearchModalProps) {
+export function SearchModal({ open, onOpenChange, initialQuery = null }: SearchModalProps) {
   const router = useRouter();
   const [query, setQuery] = React.useState("");
   const [activeIndex, setActiveIndex] = React.useState(0);
@@ -149,19 +108,17 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
   const listRef = React.useRef<HTMLDivElement>(null);
   const { history, recordSearch, clearHistory } = useSearchHistory(5);
 
-  // Filter + rank results
-  const results = React.useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!q) {
+  // Filter + rank results — global pool first, display cap after ranking
+  const { results, totalMatches } = React.useMemo(() => {
+    if (!query.trim()) {
       // Show curated top results when query is empty
-      return searchIndex.slice(0, 8);
+      const suggestions = searchIndex.slice(0, 8);
+      return { results: suggestions, totalMatches: suggestions.length };
     }
-    return searchIndex
-      .map((item) => ({ item, rank: rankResult(item, q) }))
-      .filter((r) => r.rank > 0)
-      .sort((a, b) => a.rank - b.rank || a.item.title.localeCompare(b.item.title))
-      .slice(0, 12)
-      .map((r) => r.item);
+    const { items, total } = searchUniversal(searchIndex, query, {
+      limit: SEARCH_DISPLAY_CAP,
+    });
+    return { results: items, totalMatches: total };
   }, [query]);
 
   // Reset active index when results change
@@ -169,13 +126,14 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
     setActiveIndex(0);
   }, [query]);
 
-  // Focus input on open
+  // Focus input on open; seed the query when handed off from the hero form
   React.useEffect(() => {
     if (open) {
-      setQuery("");
+      setQuery(initialQuery ?? "");
+      setActiveIndex(0);
       setTimeout(() => inputRef.current?.focus(), 50);
     }
-  }, [open]);
+  }, [open, initialQuery]);
 
   // Scroll active item into view
   React.useEffect(() => {
@@ -232,6 +190,12 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
       setActiveIndex((i) => Math.max(i - 1, 0));
+    } else if (e.key === "Home" && results.length > 0) {
+      e.preventDefault();
+      setActiveIndex(0);
+    } else if (e.key === "End" && results.length > 0) {
+      e.preventDefault();
+      setActiveIndex(results.length - 1);
     } else if (e.key === "Enter") {
       e.preventDefault();
       const item = results[activeIndex];
@@ -404,7 +368,9 @@ export function SearchModal({ open, onOpenChange }: SearchModalProps) {
           </div>
           <span className="flex items-center gap-1">
             <ArrowRight className="h-3 w-3" />
-            {searchIndex.length} entries indexed
+            {query.trim()
+              ? `${results.length} of ${totalMatches} matches`
+              : `${searchIndex.length} entries indexed`}
           </span>
         </div>
       </DialogContent>

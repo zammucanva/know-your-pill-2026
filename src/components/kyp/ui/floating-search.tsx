@@ -13,6 +13,10 @@ import { cn } from "@/lib/utils";
  *
  * Also accepts a `variant="button"` prop to render inline (e.g., in navbar)
  * instead of fixed-position floating.
+ *
+ * Handoff channel: the homepage hero form dispatches a `kyp:search`
+ * CustomEvent carrying the typed query; the first-registered instance opens
+ * the modal WITH that query seeded (a plain ⌘K opens it empty).
  */
 interface FloatingSearchProps {
   variant?: "floating" | "button";
@@ -21,6 +25,7 @@ interface FloatingSearchProps {
 
 export function FloatingSearch({ variant = "floating", className }: FloatingSearchProps) {
   const [open, setOpen] = React.useState(false);
+  const [seedQuery, setSeedQuery] = React.useState<string | null>(null);
 
   // Global ⌘K / Ctrl+K shortcut. TWO FloatingSearch triggers mount on
   // most pages (the navbar's desktop button variant + the page's
@@ -34,12 +39,30 @@ export function FloatingSearch({ variant = "floating", className }: FloatingSear
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
         e.preventDefault();
         e.stopImmediatePropagation();
+        setSeedQuery(null);
         setOpen((v) => !v);
       }
     };
+    // Hero-form handoff — same first-registered-instance guard as ⌘K.
+    const onSearchHandoff = (e: Event) => {
+      e.stopImmediatePropagation();
+      const q = (e as CustomEvent<{ query?: string }>).detail?.query ?? "";
+      setSeedQuery(q);
+      setOpen(true);
+    };
     window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+    window.addEventListener("kyp:search", onSearchHandoff);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("kyp:search", onSearchHandoff);
+    };
   }, []);
+
+  // The seed is one-shot: clear it once the modal has consumed it, so a
+  // later plain open (navbar button / ⌘K) starts from an empty query.
+  React.useEffect(() => {
+    if (!open) setSeedQuery(null);
+  }, [open]);
 
   return (
     <>
@@ -83,7 +106,7 @@ export function FloatingSearch({ variant = "floating", className }: FloatingSear
         </button>
       )}
 
-      <SearchModal open={open} onOpenChange={setOpen} />
+      <SearchModal open={open} onOpenChange={setOpen} initialQuery={seedQuery} />
     </>
   );
 }
