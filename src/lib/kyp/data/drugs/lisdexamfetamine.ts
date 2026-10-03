@@ -814,6 +814,110 @@ export const lisdexamfetamine: Drug = {
       explanation: "For adhd: start 20 mg every morning, target 30-70 mg/day, maximum 70 mg/day. Increase by 10-20 mg weekly",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "stm-ldx-01",
+      question: "Lisdexamfetamine's relationship to dexamphetamine is best described as:",
+      options: [
+        "A covalent L-lysine amide prodrug of dexamphetamine that must be enzymatically hydrolysed before any amphetamine action appears",
+        "The active d-enantiomer of dexamphetamine itself",
+        "A peripherally restricted form that never enters the CNS",
+        "A competitive antagonist at the dopamine transporter"
+      ],
+      correctIndex: 0,
+      explanation: "Lisdexamfetamine (Vyvanse) is dexamphetamine coupled to L-lysine; enzymatic hydrolysis — chiefly in red blood cells — liberates the active dexamphetamine, so the parent compound is pharmacologically inert until cleaved. Option B describes dexamphetamine and inverts the prodrug logic, the molecule does reach the CNS after conversion, and transporter antagonism is methylphenidate's mechanism.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-ldx-02",
+      question: "A 32-year-old woman with moderate-to-severe binge-eating disorder (weekly binge episodes for 2 years, no purging) fails structured CBT. Which single FDA-approved pharmacotherapy is designed for this indication?",
+      options: [
+        "Donepezil 10 mg",
+        "Lisdexamfetamine — the only FDA-approved drug for binge-eating disorder",
+        "Methylphenidate OROS",
+        "Modafinil 200 mg"
+      ],
+      correctIndex: 1,
+      explanation: "Lisdexamfetamine carries the unique binge-eating-disorder label layered on its ADHD indication — the signature examination fact for this prodrug. Methylphenidate and modafinil are wake/attention agents with no BED approval, and donepezil is a cholinesterase inhibitor for Alzheimer's disease, an obviously unrelated class here.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-ldx-03",
+      question: "Compared with immediate-release dexamphetamine, lisdexamfetamine's clinical PK profile shows:",
+      options: [
+        "A faster, sharper peak because the prodrug is absorbed through the sublingual route",
+        "Identical onset since conversion is instantaneous in gastric acid",
+        "A slower onset because enzymatic conversion is rate-limiting, with a smoother, longer axis of effect from gradual dexamphetamine liberation",
+        "No detectable dexamphetamine levels at all after oral dosing"
+      ],
+      correctIndex: 2,
+      explanation: "Because hydrolysis — not absorption — is the rate-limiting step, lisdexamfetamine reaches its amphetamine effect gradually, smoothing the peak and extending coverage versus immediate-release dexamphetamine. Gastric acid does not cleave the amide instantly, the product is swallowed rather than sublingual, and the whole point of the design is measurable dexamphetamine exposure after conversion.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "stm-ldx-04",
+      question: "A pharmacy resident argues that because lisdexamfetamine is a prodrug with low abuse liability, it should be dispensed without controlled-substance paperwork. The correct position is:",
+      options: [
+        "Prodrugs are legally exempt from controlled-substance schedules",
+        "It is Schedule IV like modafinil",
+        "Its abuse liability equals that of intranasal methamphetamine",
+        "Lisdexamfetamine remains a Schedule II amphetamine product — the prodrug design blunts but does not abolish abuse liability"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung's controlled-substances table lists lisdexamfetamine (Vyvanse) among the Schedule II stimulants alongside the amphetamine salts and methylphenidate; lower misuse potential is a relative pharmacokinetic advantage, not a legal exemption. Schedule IV is the modafinil/armodafinil tier, and option C absurdly overstates rather than understates the risk.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-ldx-05",
+      question: "Lisdexamfetamine's two formal indications (US label) are:",
+      options: [
+        "ADHD and binge-eating disorder",
+        "ADHD and obesity",
+        "Depression and binge-eating disorder",
+        "Narcolepsy and obesity"
+      ],
+      correctIndex: 0,
+      explanation: "The label pairs ADHD with moderate-to-severe binge-eating disorder — the second indication being the examination's favourite lisdexamfetamine pearl. Narcolepsy belongs to the amphetamine/methylphenidate/modafinil labels, obesity is precisely what the appetite-suppressant effect was never approved to treat, and depression is not a stimulant label.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-ldx-06",
+      question: "A 26-year-old starts lisdexamfetamine 30 mg for binge-eating disorder and calls about a racing heart, dry mouth and poor sleep. The correct framing of these effects is:",
+      options: [
+        "They confirm serotonin syndrome needing cyproheptadine",
+        "They are expected amphetamine-class sympathomimetic effects managed by dose timing and monitoring, not reasons to add new drugs for each symptom",
+        "They indicate the prodrug has failed and immediate-release dexamphetamine should be substituted",
+        "They are allergen-specific reactions requiring an adrenaline auto-injector"
+      ],
+      correctIndex: 1,
+      explanation: "Conversion to dexamphetamine means the full class signature — tachycardia, dry mouth, insomnia, anorexia — applies; the prodrug smooths but does not remove sympathomimetic effects, so timing, titration and monitoring come first. Switching to immediate-release dexamphetamine would sharpen rather than soften these effects, and allergic-anaphylaxis or serotonin-syndrome framings are pharmacologically wrong for a stimulant.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-ldx-07",
+      question: "A test question pairs intranasal dexamphetamine (rapid euphoric bolus) with intranasal lisdexamfetamine (markedly blunted euphoria). The PK principle demonstrated is:",
+      options: [
+        "Intranasal administration eliminates first-pass metabolism and therefore always abolishes euphoria",
+        "The prodrug is absorbed more quickly intranasally, giving an even higher peak",
+        "Prodrug conversion by enzymatic hydrolysis is route-independent and rate-limiting, so the misuse route cannot create the rapid amphetamine spike that drives reinforcement",
+        "Nasal mucosa converts lisdexamfetamine to lysine, which is an active euphoriant"
+      ],
+      correctIndex: 2,
+      explanation: "The lisdexamfetamine lesson is that the rate-limiting hydrolysis step follows the molecule wherever it goes, so even bypassing gut absorption yields a slow amphetamine rise — the pharmacokinetic basis of its lower abuse liability. The lysine fragment is inert, bypassing first-pass metabolism would if anything favour euphoria, and a higher peak is exactly what the design prevents.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "stm-ldx-08",
+      question: "The examination rationale for teaching lisdexamfetamine is best summarised as:",
+      options: [
+        "It is the only stimulant exempt from pregnancy warnings",
+        "It blocks both DAT and VMAT2 irreversibly",
+        "It is a direct nicotinic receptor agonist with orexin action",
+        "It is the stimulant family's prodrug — enzymatic hydrolysis gives slower onset, blunted euphoria and lower abuse liability, and it is the only FDA-approved drug for binge-eating disorder"
+      ],
+      correctIndex: 3,
+      explanation: "The teachable core is the prodrug concept: L-lysine amide, rate-limiting hydrolysis, blunted euphoria and reduced abuse liability, plus the unique binge-eating-disorder label. The prodrug is still a Schedule II amphetamine product rather than pregnancy-privileged, irreversible transporter/VMAT2 blockade describes no clinical drug here, and nicotinic-orexin pharmacology belongs to galantamine and orexin agents respectively.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

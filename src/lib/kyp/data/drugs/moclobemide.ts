@@ -819,6 +819,110 @@ export const moclobemide: Drug = {
       explanation: "For depression: start 150 mg twice daily, target 300-600 mg/day, maximum 600 mg/day. Increase to 300 mg bd after 3 days; up to 600 mg/day",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "maoi-moc-01",
+      question: "In moclobemide, the acronym RIMA stands for:",
+      options: [
+        "Rapid Irreversible Monoamine oxidase Antagonist",
+        "Reversible Inhibitor of Monoamine oxidase B",
+        "Reversible Inhibitor of Monoamine oxidase A — competitive, selective MAO-A blockade, the design principle behind moclobemide",
+        "Reuptake Inhibitor of Monoamine-A transporters"
+      ],
+      correctIndex: 2,
+      explanation: "Moclobemide is the prototype RIMA: a REversible Inhibitor of MAO-A — competitive and selective for the A isoform, which is why enzyme activity returns within 1-2 days and why tyramine can displace it from the enzyme. The wrong-isozyme and wrong-target options describe what moclobemide is not, and it does not block transporters (that would be an SSRI/NET-type mechanism).",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "maoi-moc-02",
+      question: "The dosing consequence of moclobemide's short half-life (1-2 h) is:",
+      options: [
+        "Two to three divided doses daily — about 150 mg BD-TDS, maximum 600 mg/day",
+        "Once-daily night dosing, like other long-half-life antidepressants",
+        "A weekly transdermal formulation",
+        "A mandatory 3-week titration before MAO inhibition appears"
+      ],
+      correctIndex: 0,
+      explanation: "With a 1-2 hour half-life, moclobemide must be given two to three times a day; Tripathi's schedule is 150 mg BD-TDS up to 600 mg/day, and full MAO activity returns within 1-2 days of stopping. Once-daily night dosing fits long-half-life drugs, a weekly patch is transdermal selegiline's territory, and a competitive inhibitor acts immediately — no 3-week enzyme-loading period exists.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "maoi-moc-03",
+      question: "A patient starting moclobemide refuses it, saying a relative 'almost died from cheese' on an antidepressant. The most accurate reassurance:",
+      options: [
+        "Tyramine reactions are impossible with moclobemide — no caution is ever needed",
+        "The same restrictions as phenelzine apply — MAO-A blockade is identical in every respect",
+        "Moclobemide increases tyramine absorption by blocking gut transporters",
+        "Because inhibition is competitive, ingested tyramine can displace moclobemide from MAO-A, so pressor potentiation is minor and routine dietary restrictions are not required"
+      ],
+      correctIndex: 3,
+      explanation: "This is the RIMA advantage: tyramine competes with and displaces the reversible inhibitor, so the lost first-pass shutoff does not turn a cheese meal into a noradrenaline dump — Tripathi notes potentiation of the pressor response is minor and dietary restrictions are not required. Reactions are not impossible (prudence with very large tyramine loads is still advised), the logic is the opposite of irreversible phenelzine, and no gut-transporter mechanism is involved.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "maoi-moc-04",
+      question: "A patient stable on sertraline is being switched to moclobemide; later she may move back to an SSRI. The correct washouts:",
+      options: [
+        "1-2 days in both directions because moclobemide is reversible",
+        "About 14 days after stopping sertraline before starting moclobemide; only 24-48 hours after stopping moclobemide before the next serotonergic drug",
+        "5 weeks in both directions — the fluoxetine rule applies to all switches",
+        "No washout either way — overlap is permitted with reversible inhibitors"
+      ],
+      correctIndex: 1,
+      explanation: "Washout is asymmetric: any SSRI to MAOI (even a RIMA) still needs the standard 14-day gap to prevent serotonin syndrome, whereas moclobemide's own reversibility means only 1-2 days before starting the next serotonergic drug. The 5-week rule is fluoxetine-specific, and overlapping serotonergic drugs with moclobemide is never permitted — reversibility shrinks, but does not delete, the gap.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "maoi-moc-05",
+      question: "A patient on moclobemide 300 mg/day self-medicates with clomipramine. Two weeks later she has agitation, diaphoresis, mydriasis, hyperreflexia, inducible ankle clonus and temperature 38.8°C. The most likely diagnosis and step:",
+      options: [
+        "Anticholinergic delirium from clomipramine — give physostigmine",
+        "Neuroleptic malignant syndrome — start bromocriptine",
+        "Moclobemide discontinuation delirium — restart moclobemide",
+        "Serotonin syndrome from the moclobemide-TCA combination — stop the serotonergic drugs and give supportive care"
+      ],
+      correctIndex: 3,
+      explanation: "Hyperreflexia, clonus, mydriasis, diaphoresis and fever after adding a TCA to a serotonergic agent is serotonin syndrome — the triad of cognitive, autonomic and neuromuscular signs (Katzung calls MAOI-serotonergic combinations the most serious antidepressant interaction). Anticholinergic delirium does not produce clonus, NMS requires a dopamine blocker with lead-pipe rigidity and bradyreflexia, and this is an interaction, not a discontinuation phenomenon.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "maoi-moc-06",
+      question: "A 70-year-old with ischaemic heart disease asks what to expect from newly started moclobemide. The correct counselling:",
+      options: [
+        "Severe sedation is predictable — take the whole dose at bedtime",
+        "Marked weight gain is its hallmark adverse effect",
+        "Common effects are nausea, dizziness, headache and insomnia; it lacks the anticholinergic, sedative and cardiovascular load of TCAs and is safer in overdose — a good fit for elderly or cardiac patients",
+        "It carries the same anticholinergic burden as amitriptyline"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi's profile: moclobemide's adverse effects are nausea, dizziness, headache and insomnia, and it is explicitly free of the anticholinergic, sedative, cognitive, psychomotor and cardiovascular burdens of TCAs — and safer in overdose — making it a good option for the elderly and for heart-disease patients. Sedation and weight gain are the phenelzine profile, and an anticholinergic comparison with amitriptyline is exactly what moclobemide avoids.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "maoi-moc-07",
+      question: "Which washout summary is correct?",
+      options: [
+        "Moclobemide — 24-48 h; irreversible MAOIs — 14 days; fluoxetine before an MAOI — about 5 weeks",
+        "Moclobemide — 14 days; irreversible MAOIs — 5 weeks; fluoxetine — 1 day",
+        "All MAOIs including moclobemide require a uniform 14-day washout",
+        "Fluoxetine needs only 1 week because norfluoxetine is pharmacologically inactive"
+      ],
+      correctIndex: 0,
+      explanation: "The washout table has three rows: reversible moclobemide restores MAO activity in 1-2 days; irreversible MAOIs need 14 days before or after serotonergic drugs; and fluoxetine demands the longest gap (about 5 weeks) before an MAOI because active norfluoxetine lingers for weeks. Option B shuffles all three values, option C erases the RIMA advantage, and option D is wrong twice — norfluoxetine is active and 1 week is far too short.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "maoi-moc-08",
+      question: "A 28-year-old software professional with mild-moderate depression and social phobia travels constantly and is anxious about 'food restrictions'. She has no cardiac disease. The most fitting prescription and rationale:",
+      options: [
+        "Phenelzine — cheapest in India and without dietary restrictions",
+        "Moclobemide — a well-tolerated RIMA for mild-moderate depression and social phobia, with minimal dietary burden and a 1-2 day washout",
+        "Tranylcypromine — the best MAOI for frequent travellers",
+        "Fluoxetine — because it has no serotonergic interaction liabilities"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi positions moclobemide as a well-tolerated alternative to TCAs in mild-moderate depression and social phobia, notable for absent dietary restrictions, lack of sedative/cardiovascular load and a 24-48-hour washout — ideal for this lifestyle. Phenelzine is precisely the heavily restricted option, tranylcypromine carries the class's tyramine risks plus insomnia, and fluoxetine has major serotonergic liabilities including the longest MAOI washout.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

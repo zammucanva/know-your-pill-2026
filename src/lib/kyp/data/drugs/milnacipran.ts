@@ -754,6 +754,110 @@ export const milnacipran: Drug = {
       explanation: "For fibromyalgia (titration): start 12.5 mg once daily × 1 day, target 50-100 mg twice daily, maximum 200 mg/day. 12.5 bd × 2 days → 25 bd → 50 bd → 100 bd as tolerated",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "snri-mil-01",
+      question: "Milnacipran's US FDA label is for:",
+      options: [
+        "Major depressive disorder",
+        "Generalised anxiety disorder",
+        "Diabetic peripheral neuropathic pain",
+        "Fibromyalgia"
+      ],
+      correctIndex: 3,
+      explanation: "In the United States, milnacipran (as Savella) is labelled for fibromyalgia — NOT depression — even though it is an antidepressant approved for MDD in Europe and Asia. GAD belongs to venlafaxine/duloxetine, DPNP to duloxetine. This reverse-label trap (an 'antidepressant' whose US label is pain) is a favourite of examiners on both sides of the Atlantic.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "snri-mil-02",
+      question: "Milnacipran's typical dosing frequency and its rationale:",
+      options: [
+        "Once-daily XR — the half-life exceeds 24 hours",
+        "Twice-daily — its ~8-hour half-life demands split dosing",
+        "Once weekly — steady state is reached within a week",
+        "Three times daily, taken only with meals"
+      ],
+      correctIndex: 1,
+      explanation: "Milnacipran's half-life (~8 hours) is too short for once-daily cover, so it is dosed twice daily — the odd one out among SNRIs, most of which are once-daily (or weekly for fluoxetine). Once-daily XR describes levomilnacipran. Dosing frequency facts are easy marks when each drug's half-life is memorised as a fingerprint.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "snri-mil-03",
+      question: "A 39-year-old woman has widespread pain, fatigue and sleep disturbance satisfying fibromyalgia criteria, with a comorbid depressive episode. Which prescription addresses both problems?",
+      options: [
+        "Milnacipran",
+        "Alprazolam",
+        "Zolpidem",
+        "Fluvoxamine"
+      ],
+      correctIndex: 0,
+      explanation: "Milnacipran carries a dedicated fibromyalgia label and is a functioning antidepressant — the one option that hits both targets. Duloxetine would also serve, but it is not among the options. Alprazolam and zolpidem treat neither the pain syndrome nor depression and add dependence risk; fluvoxamine has no fibromyalgia role. Non-pharmacologic exercise/CBT remains part of any fibromyalgia plan alongside drug therapy.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "snri-mil-04",
+      question: "A 71-year-old on eight cardiac medications (eGFR 48) needs an SNRI. The most interaction-averse choice is:",
+      options: [
+        "Duloxetine",
+        "Venlafaxine",
+        "Milnacipran — minimal CYP metabolism, with renal dose adjustment",
+        "Fluoxetine"
+      ],
+      correctIndex: 2,
+      explanation: "Milnacipran barely touches the CYP system — it is largely excreted unchanged by the kidney — so it displaces an eight-drug cardiac regimen the least; the only adjustment needed is renal. Duloxetine brings 1A2/2D6 plus hepatotoxicity caution, venlafaxine brings 2D6 and BP elevation, and fluoxetine is the class's most potent 2D6 inhibitor with a long half-life. For CYP-quiet polypharmacy, think milnacipran/desvenlafaxine first.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "snri-mil-05",
+      question: "Which side-effect cluster best matches milnacipran's noradrenergic profile?",
+      options: [
+        "Hypotension, bradycardia and miosis",
+        "Extrapyramidal rigidity and hyperprolactinaemia",
+        "Hypertension, palpitations, urinary hesitation and sweating",
+        "Sedation, hypersalivation and weight loss"
+      ],
+      correctIndex: 2,
+      explanation: "Milnacipran leans slightly noradrenergic, so its adverse effects read like a NET-agonist list: BP elevation, tachycardia/palpitations, urinary hesitancy and sweating. Hypotension-bradycardia-miosis is the opposite autonomic direction; extrapyramidal/hyperprolactinaemia effects belong to dopamine-blocking antipsychotics (risperidone, haloperidol); the sedation-hypersalivation cluster fits clozapine, not an SNRI.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "snri-mil-06",
+      question: "Which statement best characterises milnacipran's reuptake pharmacology?",
+      options: [
+        "It inhibits SERT roughly three times more potently than NET",
+        "Its main target is DAT",
+        "Its main target is 5-HT3",
+        "It inhibits NET somewhat more potently than SERT — a noradrenaline-leaning SNRI"
+      ],
+      correctIndex: 3,
+      explanation: "Milnacipran blocks noradrenaline reuptake a few-fold more potently than serotonin reuptake — the most NE-leaning of the SNRIs alongside its enantiomer levomilnacipran. The SERT-predominant description belongs to venlafaxine at low doses, and DAT/5-HT3 are not milnacipran targets at all. Enantiomer-pair trivia: racemic milnacipran (BID) vs levomilnacipran (the 1S,2R enantiomer, OD).",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "snri-mil-07",
+      question: "Which TWO antidepressants carry FDA approval specifically for fibromyalgia?",
+      options: [
+        "Duloxetine and milnacipran",
+        "Venlafaxine and desvenlafaxine",
+        "Amitriptyline and nortriptyline",
+        "Mirtazapine and trazodone"
+      ],
+      correctIndex: 0,
+      explanation: "The FDA's fibromyalgia list holds pregabalin, duloxetine and milnacipran — so the two antidepressant members are duloxetine and milnacipran. Amitriptyline is the most-cited off-label fibromyalgia drug but never gained the label; venlafaxine/desvenlafaxine and the mirtazapine/trazodone pair have no such label. Pairing 'best evidence, no label' (amitriptyline) against 'labelled' (duloxetine/milnacipran) is a reliable distractor strategy — and a common real-world confusion.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "snri-mil-08",
+      question: "A 55-year-old with BP 172/104 on no antihypertensives presents with fibromyalgia symptoms. Before considering milnacipran, the correct clinical step is:",
+      options: [
+        "Start milnacipran and simply recheck BP in a month",
+        "Treat the blood pressure first — uncontrolled hypertension is a reason to avoid milnacipran and other noradrenergic SNRIs",
+        "Start milnacipran with routine propranolol cover for everyone",
+        "Switch the plan to duloxetine 120 mg, which never raises BP"
+      ],
+      correctIndex: 1,
+      explanation: "Noradrenergic SNRIs raise BP; starting one on top of uncontrolled hypertension invites strokes and cardiac strain — control the BP first (or choose a class without noradrenergic load), then reassess. Rechecking in a month concedes a month of uncontrolled hypertension, routine beta-blocker 'cover' is not standard practice, and duloxetine at 120 mg is neither BP-neutral nor an MDD dosing point. Cardiovascular safety gates every SNRI prescription.",
+      afterSectionId: "timeline",
+    },
   ],
   activeRecallQuestions: [
     {

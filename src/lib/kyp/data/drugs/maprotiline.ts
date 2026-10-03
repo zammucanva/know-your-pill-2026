@@ -915,6 +915,110 @@ export const maprotiline: Drug = {
       explanation: "For depression (outpatient): start 25 mg at bedtime, target 75-150 mg/day, maximum 150 mg/day (outpatient ceiling). Increase slowly to 75-150 mg",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tca-map-01",
+      question: "Maprotiline differs from the classic TCAs structurally and pharmacologically as:",
+      options: [
+        "A tetracyclic (four-ring) compound with selective noradrenaline reuptake inhibition and negligible serotonergic action",
+        "A tricyclic with strong SERT blockade",
+        "A tetracyclic that acts as a D2 antagonist",
+        "A unicyclic amphetamine-like stimulant"
+      ],
+      correctIndex: 0,
+      explanation: "Maprotiline is the tetracyclic, NET-selective member of the older antidepressants — four rings, strong norepinephrine-transporter blockade, essentially no 5-HT action. The D2-blocking tetracyclic is amoxapine (loxapine heritage), and the unicyclic stimulant-family member is bupropion's structural cousin story — both decoys here. Ring counts and receptor selectivity must be memorised separately, because the exam swaps them freely.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tca-map-02",
+      question: "The antidepressant with the classic (exam) reputation for the highest dose-related seizure incidence is:",
+      options: [
+        "Sertraline",
+        "Escitalopram",
+        "Nortriptyline",
+        "Maprotiline"
+      ],
+      correctIndex: 3,
+      explanation: "Maprotiline is the textbook answer for antidepressant seizure liability — dose-related fits that rise steeply with titration — the one-word association ('maprotiline = seizures') every Indian exam candidate is expected to carry. SSRIs and nortriptyline are comparatively safe in this regard. Know the supporting cast too: bupropion, clomipramine and amoxapine form the rest of the higher-risk set, with desipramine among the safer options.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-map-03",
+      question: "A 26-year-old starts maprotiline 75 mg for depression; the dose is escalated to 150 mg by week 3. She then has a first-ever generalised seizure. CT head is normal, sodium 138 mEq/L, no fever, no other drugs. The most appropriate conclusion is:",
+      options: [
+        "New-onset epilepsy — start lifelong antiepileptics",
+        "Panic-related pseudoseizure — continue the drug unchanged",
+        "Dose-related seizure liability of maprotiline — reduce or stop the drug and switch class",
+        "Caffeine withdrawal — no change in treatment needed"
+      ],
+      correctIndex: 2,
+      explanation: "Maprotiline's seizure risk climbs with dose and speed of titration, so a first seizure on an escalating dose is the drug's signature adverse effect until proven otherwise — the correct response is to remove the cause and move to a safer class such as an SSRI. Branding it epilepsy after one seizure during a proconvulsant titration over-treats, and the normal sodium, imaging and absence of fever close the other doors. This vignette is the direct clinical application of the maprotiline-seizures association.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-map-04",
+      question: "A resident adds fluoxetine to maprotiline, hoping to boost the 'serotonergic component'. The most important hazard of this combination is:",
+      options: [
+        "Additive weight gain",
+        "CYP2D6 inhibition by fluoxetine raises maprotiline levels, compounding seizure and cardiac risk",
+        "Fluoxetine reliably reverses maprotiline-induced sedation",
+        "The combination is a standard approved therapy for OCD"
+      ],
+      correctIndex: 1,
+      explanation: "Fluoxetine's potent 2D6 inhibition raises TCA levels dramatically, and stacking that on maprotiline's own seizure liability produces a genuinely dangerous combination — kinetic interaction plus pharmacodynamic amplification at once. Weight gain is trivial next to seizures, maprotiline's sedation is mild anyway, and no such combination carries an OCD label (OCD wants serotonergic monotherapy escalation). SSRIs and TCAs can be combined only deliberately, at low doses, with levels and ECG — never casually.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "tca-map-05",
+      question: "A resident proposes maprotiline for a patient with OCD, reasoning that 'tetracyclic drugs block serotonin more strongly'. The correct rebuttal is:",
+      options: [
+        "Agreed — maprotiline is the most serotonergic antidepressant available",
+        "Agreed — the four-ring structure enhances SERT affinity",
+        "Disagreed — tetracyclics only block D2 receptors",
+        "Disagreed — maprotiline is a selective norepinephrine reuptake inhibitor; OCD needs strong serotonergic drugs such as clomipramine or SSRIs"
+      ],
+      correctIndex: 3,
+      explanation: "Structure does not confer function: the four-ring maprotiline is serotonergically silent and NET-selective, so it has no place in OCD, whose treatment hinges on serotonergic enhancement. The first two options accept a false premise, and the D2 claim confuses maprotiline with amoxapine. This is the batch's recurring lesson — memorise each drug's receptor selectivity, never infer it from chemistry.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tca-map-06",
+      question: "Which set correctly lists the HIGHER seizure-risk members of the antidepressant family?",
+      options: [
+        "Nortriptyline, sertraline, escitalopram",
+        "Desipramine, citalopram, vortioxetine",
+        "Maprotiline, bupropion, clomipramine, amoxapine",
+        "Doxepin, trimipramine, lofepramine"
+      ],
+      correctIndex: 2,
+      explanation: "The higher-risk set is maprotiline (the classic maximum), bupropion, clomipramine and amoxapine — Indian texts name bupropion, clomipramine and amoxapine as having greater seizure propensity, and maprotiline completes the exam set. Desipramine is explicitly cited as safer, and the SSRIs across all three wrong rows are the low-risk reference group. Sorting a drug list into risky-versus-safe columns is how this fact is actually examined.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-map-07",
+      question: "A patient on maprotiline 100 mg reports dry mouth, constipation and light-headedness on standing. He objects: 'I was told this drug is different from the TCAs.' The correct response is:",
+      options: [
+        "He is right — tetracyclics have no autonomic effects",
+        "Tetracyclic does not mean safe — maprotiline produces TCA-like anticholinergic and orthostatic effects and is monitored the same way",
+        "These symptoms are allergic — the drug must be stopped permanently",
+        "These symptoms indicate overdose — call poison control"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung notes explicitly that maprotiline may cause TCA-like adverse effects despite its different ring structure — muscarinic, H1 and alpha-1 blockade produce the same dry mouth, constipation and postural drops, with the same monitoring. There is nothing allergic about anticholinergic symptoms, and therapeutic-dose effects are not an overdose signal. The batch theme repeats: ring chemistry changes the name, receptor blockade writes the symptom list.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-map-08",
+      question: "A 24-year-old with well-controlled epilepsy needs a TCA for depression. The relatively safer choice — and the classic avoid — are:",
+      options: [
+        "Desipramine relatively safer; avoid maprotiline and clomipramine",
+        "Maprotiline relatively safer; avoid desipramine",
+        "Clomipramine relatively safer; avoid imipramine",
+        "Bupropion relatively safer; avoid nortriptyline"
+      ],
+      correctIndex: 0,
+      explanation: "Indian texts grade desipramine (with the SSRIs and SNRIs) as safer for seizure threshold, while maprotiline, clomipramine and bupropion form the classic avoid-set — an epilepsy history amplifies every one of those risks. Each distractor simply inverts the safe and risky columns. Pairing 'who is safe' with 'who is not' in one answer is the standard two-sided way this table is examined.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

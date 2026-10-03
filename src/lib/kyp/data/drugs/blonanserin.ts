@@ -835,6 +835,110 @@ export const blonanserin: Drug = {
       explanation: "For schizophrenia (japan): start 4 mg twice daily, target 8-16 mg/day, maximum 24 mg/day. Increase gradually to 8-16 mg/day",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atp-blo-01",
+      question: "Blonanserin's receptor profile is distinctive for what it LACKS. Correctly stated, it is:",
+      options: [
+        "D2 and 5-HT2A antagonism without 5-HT1A, alpha-1 or H1 activity",
+        "A benzamide acting only at presynaptic autoreceptors",
+        "A D2 partial agonist with strong 5-HT7 blockade",
+        "An H1-dominant sedative antipsychotic"
+      ],
+      correctIndex: 0,
+      explanation: "Blonanserin, developed in Japan, blocks D2 and 5-HT2A with essentially no 5-HT1A, alpha-1 or H1 action — a receptor-clean design explaining low sedation, little orthostasis and a lean metabolic hand. Autoreceptor-selective benzamide action is low-dose amisulpride's trick, D2 partial agonism is the aripiprazole family, and H1-dominance describes quetiapine-type sedation.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atp-blo-02",
+      question: "The tolerability trade-off of blonanserin's clean receptor profile is:",
+      options: [
+        "Severe antimuscarinic ileus",
+        "Moderate EPS — anticholinergic cover is sometimes needed",
+        "Dose-related agranulocytosis",
+        "Universal QTc prolongation beyond 500 ms"
+      ],
+      correctIndex: 1,
+      explanation: "With no serotonergic softening of its D2 action, blonanserin retains moderate EPS — parkinsonian symptoms can appear and anticholinergic cover is sometimes used. Marrow toxicity and ileus are clozapine's burdens, and no antipsychotic here is universally QTc-prolonging.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-blo-03",
+      question: "A patient with schizophrenia (where the drug is available) has dyslipidaemia and prediabetes; the psychiatrist wants a low-metabolic-burden antipsychotic and accepts moderate EPS risk with biperiden cover. The fitting choice is:",
+      options: [
+        "Clozapine",
+        "Olanzapine",
+        "Blonanserin",
+        "Zotepine"
+      ],
+      correctIndex: 2,
+      explanation: "Blonanserin's low metabolic burden makes it a metabolically friendly option where its D2/5-HT2A profile suffices, accepting moderate EPS. Zotepine, clozapine and olanzapine all push weight, glucose and lipids the wrong way — the opposite of the plan.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-blo-04",
+      question: "Because blonanserin lacks alpha-1 and H1 blockade, one predicts in practice:",
+      options: [
+        "Severe orthostatic hypotension with profound daytime sleepiness",
+        "Daily seizures even at low dose",
+        "Universal galactorrhoea as its main complaint",
+        "Little orthostatic hypotension and little sedation"
+      ],
+      correctIndex: 3,
+      explanation: "Absent alpha-1 and H1 activity predicts minimal orthostatic hypotension and minimal sedation — blonanserin's practical tolerability edge alongside low metabolic burden. Seizure risk is a clozapine/zotepine matter, and galactorrhoea belongs to the risperidone/amisulpride prolactin tier rather than being blonanserin's headline.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-blo-05",
+      question: "A journal club discusses novel antipsychotic delivery systems. The formulation development unique to blonanserin is:",
+      options: [
+        "A transdermal patch system developed in Japan",
+        "A once-monthly intramuscular decanoate",
+        "An osmotic-pump (OROS) tablet",
+        "A 24-hour sublingual film"
+      ],
+      correctIndex: 0,
+      explanation: "Japan developed a blonanserin transdermal patch — a distinctive delivery system in the antipsychotic world. Decanoates belong to haloperidol/fluphenazine-style agents, the OROS shell is paliperidone's, and no sublingual film exists (asenapine uses compressed sublingual tablets).",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-blo-06",
+      question: "A woman with schizophrenia switched from risperidone to blonanserin for metabolic reasons; four weeks in she reports hand tremor, stiffness and slowed gait. The correct management is:",
+      options: [
+        "Diagnose idiopathic Parkinson disease and start levodopa",
+        "Recognise blonanserin's moderate EPS — reduce the dose and/or add an anticholinergic",
+        "Immediately switch to clozapine without further trials",
+        "Double blonanserin to overcome tolerance"
+      ],
+      correctIndex: 1,
+      explanation: "Parkinsonian stiffness on blonanserin reflects its moderate EPS liability — managed by dose reduction and anticholinergic cover rather than a leap to clozapine, whose metabolic risk she just escaped. Dose escalation aggravates EPS, and levodopa has no role in drug-induced parkinsonism.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-blo-07",
+      question: "Blonanserin versus risperidone — the most accurate comparison is:",
+      options: [
+        "Blonanserin is a prolactin-sparing partial agonist while risperidone is a full antagonist",
+        "Risperidone is Japan-only while blonanserin is the global standard",
+        "Both are D2/5-HT2A antagonists, but blonanserin omits risperidone's alpha-1/H1 load, trading a hypotension/sedation advantage for more EPS",
+        "Both share alpha-1 and H1 blockade, differing only in price"
+      ],
+      correctIndex: 2,
+      explanation: "Both antagonise D2 and 5-HT2A, but blonanserin omits alpha-1 and H1 — hence less sedation and orthostasis with a lighter metabolic hand, while retaining moderate EPS. Blonanserin is a full antagonist rather than a partial agonist, and it is the Japan-origin molecule, not risperidone.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "atp-blo-08",
+      question: "Which receptor profile correctly identifies blonanserin among its peers?",
+      options: [
+        "Alpha-1-dominant antagonism producing iloperidone-style orthostasis",
+        "H1/M1-dominant binding with weak D2 action",
+        "D3-preferring partial agonism",
+        "5-HT2A/D2 antagonism with no 5-HT1A, alpha-1 or H1 — the receptor-cleanest D2/5-HT2A agent"
+      ],
+      correctIndex: 3,
+      explanation: "Blonanserin is the receptor-clean D2/5-HT2A antagonist — no 5-HT1A, alpha-1 or H1 — distinguishing it from iloperidone (strong alpha-1), quetiapine (H1/M1-dominant) and cariprazine (D3 partial agonist). Each distractor maps to a real competitor's fingerprint.",
+      afterSectionId: "mechanism",
+    },
   ],
   activeRecallQuestions: [
     {

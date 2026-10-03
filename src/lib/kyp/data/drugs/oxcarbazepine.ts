@@ -822,6 +822,110 @@ export const oxcarbazepine: Drug = {
       explanation: "For epilepsy / off-label mood use: start 300 mg twice daily, target 1200–2400 mg/day (mood uses often 900–1800), maximum 2400 mg/day. Increase by 600 mg/day weekly",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "mst-oxc-01",
+      question: "Oxcarbazepine differs from carbamazepine pharmacologically chiefly because:",
+      options: [
+        "It is a 10-keto analogue rapidly reduced to active monohydroxy derivatives (MHD/licarbazepine), and cannot form the 10,11-epoxide metabolite",
+        "It blocks T-type calcium channels selectively, like ethosuximide",
+        "It is a prodrug whose activity resides entirely in the unchanged parent compound",
+        "It enhances GABA reuptake into glial cells, shortening inhibitory responses"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung identifies oxcarbazepine as the 10-keto analog of carbamazepine, rapidly converted to S(+)- and R(-)-licarbazepine (the monohydroxy derivatives, MHDs) that carry the antiseizure activity; it cannot form carbamazepine's 10,11-epoxide, the metabolite blamed for some adverse effects. Its sodium-channel action mirrors carbamazepine rather than a T-channel selectivity, and reuptake enhancement would be the opposite of tiagabine's pharmacology.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "mst-oxc-02",
+      question: "A woman switched from carbamazepine to oxcarbazepine for focal seizures asks her pharmacist how the interaction profile changes, since she takes several other medicines. The correct answer is:",
+      options: [
+        "It is excreted unchanged in urine with no metabolites, so interactions cannot occur at all",
+        "The parent half-life is only 1-2 hours (active MHD 8-12 hours), CYP induction is much weaker, and there is no autoinduction — though the enzyme effect is not zero",
+        "The half-life is longer than carbamazepine's and autoinduction is even faster",
+        "CYP3A4 is required to activate oxcarbazepine, so strong inhibitors abolish its effect"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung gives oxcarbazepine itself a 1-2 hour half-life with activity residing in the 8-12 hour MHDs, and notes it induces hepatic enzymes to a lesser extent, minimising drug interactions; Tripathi adds that interactions and autoinduction are less marked because it is a weak enzyme inducer. Reduction to MHD is a non-CYP reduction step, and the MHD glucuronide is renally excreted — so renal impairment still matters.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "mst-oxc-03",
+      question: "A 68-year-old on oxcarbazepine 900 mg/day for focal seizures develops two weeks of nausea, lethargy and two falls; serum sodium is 124 mEq/L with low plasma osmolality. The most likely explanation is:",
+      options: [
+        "A salt-losing nephropathy unique to oxcarbazepine that requires urgent dialysis",
+        "Carbamazepine contamination of the oxcarbazepine tablet formulation",
+        "Oxcarbazepine-induced hyponatraemia — which occurs at least as often as, and may be more common than, with carbamazepine",
+        "Pure psychogenic polydipsia unrelated to any anticonvulsant"
+      ],
+      correctIndex: 2,
+      explanation: "Both books flag sodium with oxcarbazepine: Katzung notes hyponatraemia may occur more commonly than with carbamazepine, and Tripathi says the hyponatraemia risk is more even though hepatotoxicity risk is estimated lower — so sodium must still be monitored. The mechanism is ADH-enhancing water retention, not a unique nephropathy, and this dilutional hyponatraemia is an established anticonvulsant signal.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-oxc-04",
+      question: "A 30-year-old developed Stevens-Johnson syndrome on carbamazepine three years ago and still has uncontrolled focal seizures. Which statement guides the next anticonvulsant choice?",
+      options: [
+        "Oxcarbazepine is chemically unrelated to carbamazepine, so there is no skin-reactivity concern",
+        "Prior carbamazepine SJS guarantees lifelong tolerance of every other aromatic anticonvulsant",
+        "Only dose reduction, not avoidance, is needed because carbamazepine rash is always dose-dependent",
+        "Oxcarbazepine carries a quoted 25-30% cross-reactivity risk with carbamazepine hypersensitivity, so it is a cautious choice at best and structurally unrelated agents such as levetiracetam are usually preferred"
+      ],
+      correctIndex: 3,
+      explanation: "Cross-reactivity between carbamazepine and oxcarbazepine does not always occur but is clinically material — the KYP monograph quotes about 25-30% — so after SJS the safer route is a structurally unrelated drug like levetiracetam. Katzung's careful wording (cross-reactivity does not always occur) is exactly why the answer says cautious-at-best rather than impossible, and SJS is an idiosyncratic reaction, never a dose-dependent one.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-oxc-05",
+      question: "A resident proposes switching an acutely manic patient from carbamazepine to oxcarbazepine for better tolerability. What does the evidence say?",
+      options: [
+        "Oxcarbazepine is not effective in acute mania despite being a carbamazepine congener, so the switch sacrifices the antimanic mechanism",
+        "Oxcarbazepine is the most potent antimanic available and doubles lithium's efficacy",
+        "Oxcarbazepine is FDA-approved for mania at 2400-3000 mg/day",
+        "Oxcarbazepine and carbamazepine are fully interchangeable in mania at identical doses"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung states plainly that oxcarbazepine is not effective for mania even though carbamazepine is; its bipolar use is off-label and unproven. It is also about 50% less potent dose-for-dose — Katzung notes clinical doses may need to be 50% higher than carbamazepine for equivalent seizure control — so identical-dose substitution is doubly wrong.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "mst-oxc-06",
+      question: "Which row of the carbamazepine-versus-oxcarbazepine comparison table is correct?",
+      options: [
+        "Oxcarbazepine: half the potency of carbamazepine with more hepatotoxicity",
+        "Oxcarbazepine: no epoxide metabolite, weaker enzyme induction, no autoinduction, similar-or-greater hyponatraemia risk",
+        "Oxcarbazepine: forms the 10,11-epoxide, stronger induction than carbamazepine, less hyponatraemia",
+        "Carbamazepine: no autoinduction, no enzyme induction, no haematological risk"
+      ],
+      correctIndex: 1,
+      explanation: "The book-verified row: Katzung notes no epoxide formation and weaker induction, and Tripathi adds less-marked interactions and autoinduction with a hyponatraemia risk that is actually more. Oxcarbazepine is about 1.5 times less potent (doses roughly 50% higher), and its hepatotoxicity risk is estimated lower than carbamazepine's, not higher.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "mst-oxc-07",
+      question: "An 8-year-old with inadequately controlled focal seizures is to be moved from carbamazepine to its better-tolerated congener. Which prescription matches Indian practice?",
+      options: [
+        "Levetiracetam 3 g/day as a direct 1:1 substitution for carbamazepine",
+        "Oxcarbazepine as MAZETOL CR 400 mg twice daily, the sustained-release congener",
+        "Oxcarbazepine as OXETOL/OXCARB/OXEP 150/300/600 mg tablets, titrated with the expectation of needing a dose about 1.5 times the old carbamazepine dose",
+        "Oxcarbazepine as OXETOL 50 mg syrup three times daily at half the carbamazepine dose"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi lists oxcarbazepine in India as OXETOL, OXCARB and OXEP 150/300/600 mg tablets, states it is dose-to-dose 1.5 times less potent than carbamazepine, and shares carbamazepine's indications with possibly better tolerability. MAZETOL is carbamazepine itself, and no 1:1 substitution rule exists across anticonvulsant classes.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "mst-oxc-08",
+      question: "Oxcarbazepine and eslicarbazepine acetate share which active metabolite?",
+      options: [
+        "Carbamazepine-10,11-epoxide, the shared tricyclic metabolite",
+        "2-sulfamoylacetylphenol, the CYP3A4-derived phenol",
+        "9-hydroxyrisperidone, the common hydroxylated metabolite",
+        "S(+)-licarbazepine, the monohydroxy derivative (MHD) responsible for their sodium-channel activity"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung's Table 24-2 footnote describes oxcarbazepine as serving largely as a prodrug for licarbazepine (mainly the S form), and eslicarbazepine acetate is explicitly a prodrug of S(+)-licarbazepine — the monohydroxy derivative (MHD) that carries the sodium-channel activity in both drugs. The 10,11-epoxide is carbamazepine's metabolite, the sulfamoylacetylphenol is zonisamide's, and 9-hydroxyrisperidone is paliperidone — an antipsychotic metabolite, not an anticonvulsant one.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

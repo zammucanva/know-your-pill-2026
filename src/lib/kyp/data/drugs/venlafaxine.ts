@@ -1754,6 +1754,110 @@ export const venlafaxine: Drug = {
       explanation: "Venlafaxine must be tapered SLOWLY — reduce by 37.5 mg every 1–2 weeks over 4–8+ weeks minimum. Even with slow taper, withdrawal symptoms are common. For the last 2 weeks, substituting fluoxetine 20 mg (long half-life, self-tapers) smooths the final discontinuation. Never stop abruptly — severe withdrawal within hours.",
       afterSectionId: "evidence-practice",
     },
+    {
+      id: "snri-ven-01",
+      question: "Venlafaxine's parent half-life is about 5 hours and its active metabolite ODV about 11 hours. The practical clinical implication is:",
+      options: [
+        "Missed doses barely matter — the longest effective half-life in the class",
+        "Once-weekly dosing becomes feasible",
+        "Discontinuation symptoms can begin within hours of a missed dose — among the hardest antidepressants to stop",
+        "Routine serum level monitoring is mandatory"
+      ],
+      correctIndex: 2,
+      explanation: "With a ~5-hour parent half-life plus a dual-mechanism (serotonergic + noradrenergic) withdrawal, venlafaxine has the worst discontinuation syndrome of any antidepressant — symptoms can start within hours of a missed dose. The long-half-life/weekly-dosing profile belongs to fluoxetine, not venlafaxine. Serum levels are not routinely monitored for any antidepressant.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "snri-ven-02",
+      question: "Which option correctly describes venlafaxine's dose-dependent monoamine pharmacology?",
+      options: [
+        "Balanced SERT and NET blockade from the first dose",
+        "Primarily serotonergic at ≤75 mg; NET blockade emerges at 150-225 mg",
+        "Primarily noradrenergic at ≤75 mg, turning serotonergic at high doses",
+        "Meaningful DAT blockade at all therapeutic doses"
+      ],
+      correctIndex: 1,
+      explanation: "Venlafaxine is an SSRI at low doses; noradrenergic (NET) effects only appear as the dose climbs to 150-225 mg, with a weak DAT effect emerging higher still (KYP: 'SERT + NET at moderate dose, weak DAT at high dose'). The 'balanced from dose one' drug is duloxetine. This dose-dependency is exactly why venlafaxine needs titration for treatment-resistant cases.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "snri-ven-03",
+      question: "A 54-year-old on venlafaxine XR titrated to 225 mg returns after 3 weeks: BP 156/98 on repeat check, previously 124/80. Best management:",
+      options: [
+        "Continue unchanged — blood-pressure rises with venlafaxine are unrelated to dose",
+        "Add a diuretic routinely for every patient titrated above 150 mg",
+        "Stop venlafaxine immediately and switch to paroxetine the same day",
+        "Recheck and manage the BP; reduce the venlafaxine dose if it persists — dose-dependent BP elevation is its signature risk"
+      ],
+      correctIndex: 3,
+      explanation: "Venlafaxine causes dose-dependent, sustained blood-pressure elevation — more common at higher doses — which is why KYP tags BP monitoring as its SIGNATURE monitoring (baseline, 2 and 4 weeks, every dose change). The correct move is BP management plus dose reduction, not ignoring it, not reflexive diuretics for all, and not an abrupt same-day swap that invites discontinuation symptoms.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "snri-ven-04",
+      question: "A woman stable on venlafaxine XR 150 mg is started on fluoxetine 20 mg by another clinic. The key pharmacokinetic consequence is:",
+      options: [
+        "Venlafaxine levels crash, precipitating withdrawal",
+        "ODV accumulates to toxic concentrations",
+        "Fluoxetine competitively blocks venlafaxine at the SERT receptor",
+        "Parent venlafaxine rises while ODV falls — total active moiety is roughly preserved, but dose-related effects need watching"
+      ],
+      correctIndex: 3,
+      explanation: "Venlafaxine is activated to ODV mainly by CYP2D6; fluoxetine (and paroxetine) potently inhibit that step, so parent drug rises and metabolite falls. Because venlafaxine and ODV are roughly equipotent, total serotonergic-noradrenergic activity is largely maintained — the concern is a shift toward parent-related effects and the general interaction load. Levels do not crash, ODV does not accumulate, and receptor-level blockade is not the mechanism.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "snri-ven-05",
+      question: "A 38-year-old with MDD has failed sertraline and escitalopram at full doses for adequate durations. BP is 118/76, examinations normal. The most evidence-based next step:",
+      options: [
+        "Venlafaxine — titrate toward 150-225 mg to add noradrenergic drive",
+        "Desvenlafaxine — titrate to 300 mg/day",
+        "Duloxetine — push above 120 mg to gain DAT blockade",
+        "Levomilnacipran — FDA-approved for treatment-resistant depression"
+      ],
+      correctIndex: 0,
+      explanation: "After two SSRI failures, switching to venlafaxine and titrating into the noradrenergic range (150-225 mg) is the classic strategy — the dose-dependent NET effect is the point. Desvenlafaxine caps at 100 mg, duloxetine's DAT effect is not an established escalation strategy and 120 mg is not its MDD titration target, and levomilnacipran's label is plain MDD, not treatment-resistance.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "snri-ven-06",
+      question: "A 41-year-old runs out of venlafaxine XR during a trip and misses 3 days. She returns with 'electric shock' sensations, nausea, irritability and chills. Diagnosis and management:",
+      options: [
+        "Serotonin syndrome — give cyproheptadine",
+        "Migraine with aura — try sumatriptan",
+        "Depressive relapse — restart at the full dose indefinitely",
+        "Discontinuation syndrome — reinstate and taper slowly"
+      ],
+      correctIndex: 3,
+      explanation: "Sensory 'brain zaps', GI upset and flu-like symptoms within days of missing the shortest-half-life-type antidepressant are textbook discontinuation — and venlafaxine is the worst offender. Management is reinstatement followed by a slow taper, never abrupt stopping. There is no serotonergic load to cause serotonin syndrome, and calling it relapse condemns her to indefinite treatment.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "snri-ven-07",
+      question: "A 29-year-old continues venlafaxine 150 mg through pregnancy and is now 36 weeks. Counselling the delivery team should emphasise:",
+      options: [
+        "No special monitoring is needed beyond routine newborn care",
+        "Watching for poor neonatal adaptation — and monitoring the newborn's blood pressure, since neonatal hypertension has been reported",
+        "Mandatory two-week NICU admission for every SNRI-exposed newborn",
+        "Starting the newborn on prophylactic ODV"
+      ],
+      correctIndex: 1,
+      explanation: "SNRI neonatal adaptation syndrome can be MORE severe than with SSRIs (dual-mechanism withdrawal plus noradrenergic effects), and KYP highlights reported neonatal hypertension — unique among antidepressants and attributable to maternal NET blockade. The baby needs observation with BP awareness, not routine NICU admission or prophylactic drug treatment. Maternal relapse risk from abrupt stopping remains the bigger danger.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "snri-ven-08",
+      question: "Among these antidepressants, which carries the greatest risk of conduction abnormalities, tachycardia and seizures in overdose?",
+      options: [
+        "Sertraline",
+        "Escitalopram",
+        "Fluvoxamine",
+        "Venlafaxine"
+      ],
+      correctIndex: 3,
+      explanation: "Venlafaxine is the most toxic of the commonly used newer antidepressants in overdose — noradrenergic activity drives tachycardia and hypertension, with QRS/conduction prolongation and seizures; cardiology input is often needed. The SSRIs listed are comparatively benign in overdose, which is precisely why they replaced TCAs as first-line. This toxicity point separates venlafaxine from its class-mates in exam settings.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
 
   /* End-of-page active recall questions */

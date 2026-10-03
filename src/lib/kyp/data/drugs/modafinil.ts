@@ -748,6 +748,110 @@ export const modafinil: Drug = {
       explanation: "For narcolepsy / osa sleepiness: start 100-200 mg every morning, target 200-400 mg/day, maximum 400 mg/day. May split morning + midday",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "stm-mod-01",
+      question: "Modafinil's wake-promoting mechanism is best described as:",
+      options: [
+        "A wake-promoting agent with weak DAT inhibition plus orexin/histamine activation — Katzung adds NET/DAT inhibition with raised serotonin and glutamate and lowered GABA",
+        "A full D2 receptor agonist producing compulsory wakefulness",
+        "A positive allosteric modulator of the GABA-A receptor",
+        "A potent amphetamine-like releaser with VMAT2 substrate activity"
+      ],
+      correctIndex: 0,
+      explanation: "Modafinil differs from amphetamine in structure, neurochemical profile and behaviour: its arousal rests on weak DAT/NET inhibition with orexin/histamine recruitment, and Katzung documents rises in serotonin and glutamate with reduced GABA. Full D2 agonism is apomorphine-style pharmacology, GABA-A modulation is sedative pharmacology, and VMAT2-substrate releaser activity is amphetamine's signature, not modafinil's.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-mod-02",
+      question: "A 38-year-old long-haul trucker on permanent night shifts has excessive sleepiness despite adequate sleep opportunity; the diagnosis is shift-work sleep disorder. The labelled pharmacological plan is:",
+      options: [
+        "Caffeine 500 mg hourly through the shift as monotherapy",
+        "Modafinil 200 mg about 1 hour before the night shift (Tripathi's dosing) as an adjunct to sleep-hygiene and scheduling measures",
+        "Modafinil 400 mg immediately on waking at 6 pm",
+        "Zolpidem before driving to increase alertness"
+      ],
+      correctIndex: 1,
+      explanation: "Shift-work disorder is a formal modafinil label alongside narcolepsy and OSA residual sleepiness, and Tripathi's box gives 200 mg taken about an hour before night-shift work. Doubling the dose is not the label strategy, a sedative-hypnotic before driving is dangerous nonsense, and caffeine megadoses are neither labelled nor safe monotherapy for this disorder.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-mod-03",
+      question: "A 29-year-old on a combined oral contraceptive starts modafinil for narcolepsy; three months later she is pregnant despite adherence. The mechanism is:",
+      options: [
+        "Modafinil inhibits CYP3A4, raising hormone levels and thereby blocking ovulation",
+        "Modafinil directly destroys the endometrium",
+        "Modafinil induces CYP3A4, accelerating hepatic metabolism of the oestrogen/progestin components to below contraceptive levels",
+        "Modafinil converted the progestin into a teratogen"
+      ],
+      correctIndex: 2,
+      explanation: "The classic modafinil interaction: CYP3A4 induction (Katzung lists modafinil among microsomal inducers) lowers steroidal contraceptive exposure, so a non-hormonal or additional barrier method is advised. Hormone-raising is the direction mirror of the truth, and endometrial destruction or progestin conversion are mechanisms the drug does not possess.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-mod-04",
+      question: "On day 12 of modafinil, a 25-year-old develops a spreading erythematous rash with oral erosions and target-like lesions. The correct action is:",
+      options: [
+        "Halve the dose and continue for two more weeks",
+        "Apply topical steroids and continue modafinil as scheduled",
+        "Continue and add an antihistamine, since modafinil rash is always benign",
+        "Stop modafinil immediately and escalate care — serious rash including SJS/TEN is a labelled warning that mandates discontinuation"
+      ],
+      correctIndex: 3,
+      explanation: "Serious rash/SJS risk is the safety reason modafinil carries a boxed-type warning (KYP anchor): mucosal involvement and target lesions demand immediate withdrawal and urgent evaluation. Options C, A and B all perpetuate dosing under a potential TEN — exactly the error the warning exists to prevent.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-mod-05",
+      question: "Which modafinil PK-dose package matches Tripathi 7e?",
+      options: [
+        "Absorption peaks within 2-4 h, elimination t-half about 15 h, dose 100-200 mg morning and afternoon for narcolepsy/sleep-apnoea sleepiness, brands MODALERT/PROVAKE",
+        "t-half about 2 h with TID dosing up to 600 mg",
+        "t-half about 70 h with weekly dosing",
+        "Dose 5-10 mg at bedtime"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi's box: modafinil is absorbed within 2-4 hours, eliminated with a 15 h t-half, dosed 100-200 mg in the morning and afternoon for daytime sleepiness (or 200 mg an hour before shift work) — MODALERT and PROVAKE are the Indian brands. The 2 h/600 mg option mirrors an immediate-release stimulant profile, 70 h belongs to donepezil, and 5-10 mg bedtime dosing is donepezil's scale, not a wake-promoter's.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "stm-mod-06",
+      question: "A patient beginning modafinil asks what to expect in the first weeks. The accurate common-effect counselling is:",
+      options: [
+        "Immediate hair loss and renal failure are routine",
+        "Headache and insomnia are the most common effects, with mild BP/heart-rate rises possible; most effects are mild and dose-related",
+        "No adverse effect has ever been reported",
+        "Weight gain and profound sedation are the expected effects"
+      ],
+      correctIndex: 1,
+      explanation: "Headache (the commonest), insomnia, nausea and a mild pressor/heart-rate effect form modafinil's expected profile — Katzung notes BP and HR increases that are usually mild — so counsel on morning dosing to protect sleep. Weight gain plus sedation mirrors the actual stimulant direction, the organ-failure claims are fabricated, and option C is never true of any drug.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-mod-07",
+      question: "Which patient is an APPROPRIATE on-label candidate for modafinil?",
+      options: [
+        "A patient with primary insomnia seeking easier sleep onset",
+        "A child with recurrent febrile seizures",
+        "A 45-year-old with treated OSA who continues to have residual excessive daytime sleepiness despite CPAP adherence",
+        "A healthy university student who wants sharper focus before exams"
+      ],
+      correctIndex: 2,
+      explanation: "The three labels — narcolepsy, shift-work disorder and residual sleepiness in treated OSA — define appropriate use; Katzung describes modafinil as used primarily to improve wakefulness in narcolepsy and some other conditions. Enhancement use in healthy people is off-label misuse, modafinil promotes wakefulness (the opposite of the insomniac's need), and febrile seizures are an antipyretic/anticonvulsant matter.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-mod-08",
+      question: "The full modafinil enzyme-interaction package tested in examinations is:",
+      options: [
+        "A pure 2D6 inhibitor with no induction",
+        "No CYP effects at all because it is excreted unchanged by the kidney",
+        "CYP3A4 inhibitor and CYP2C19 inducer — the exact reverse of the truth",
+        "CYP3A4 inducer (cuts steroidal OCP and cyclosporine levels) AND CYP2C19 inhibitor (raises diazepam, phenytoin, omeprazole levels)"
+      ],
+      correctIndex: 3,
+      explanation: "Modafinil's dual profile — CYP3A4 inducer action (the oral-contraceptive-failure mechanism, cutting steroidal OCP and cyclosporine levels) plus CYP2C19 inhibitor action (Katzung's table lists modafinil among 2C19 inhibitors; it raises diazepam, phenytoin, omeprazole levels) — is the examination favourite, and option C is its deliberate direction mirror. 2D6 is not part of its story, and hepatic CYP involvement is precisely why no-interactions is wrong.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

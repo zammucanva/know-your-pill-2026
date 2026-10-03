@@ -916,6 +916,110 @@ export const cariprazine: Drug = {
       explanation: "For schizophrenia: start 1.5 mg once daily, target 1.5–6 mg/day, maximum 6 mg/day. Increase to 3 mg on day 2; up to 6 mg as needed",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atp-car-01",
+      question: "What makes cariprazine mechanistically unique among antipsychotics?",
+      options: [
+        "Partial agonism with preferential D3 (over D2) receptor affinity — the only D3-preferring agent of the class",
+        "Irreversible D2 antagonism combined with equal 5-HT7 inverse agonism",
+        "Selective D1 agonism driving prefrontal dopamine output",
+        "Alpha-2 agonism resembling clonidine"
+      ],
+      correctIndex: 0,
+      explanation: "Cariprazine is a partial agonist with higher affinity for D3 than D2 — Katzung calls it a D3 partial agonist with selectivity for the D3 receptor, unique in the class and tied to its negative-symptom promise. Pure D1 agonism, alpha-2 agonism and irreversible binding are properties of no antipsychotic.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atp-car-02",
+      question: "Cariprazine's half-life profile stands out because:",
+      options: [
+        "Esterases degrade it within minutes of absorption",
+        "A long-lived active didesmethyl metabolite stretches the effective half-life to roughly 1–3 weeks",
+        "A plasma t½ of 6 hours forces thrice-daily dosing",
+        "It is excreted unchanged in urine within hours"
+      ],
+      correctIndex: 1,
+      explanation: "Cariprazine's active didesmethyl metabolite persists so long that the effective half-life reaches about 1–3 weeks — drug action outlasts the last capsule by weeks. Nothing in its kinetics suits thrice-daily titration, and renal unchanged excretion is amisulpride's property.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-car-03",
+      question: "A patient stopped cariprazine three weeks ago because of akathisia and still reports residual drug effects; the new team wants to start a different antipsychotic today. What should guide them?",
+      options: [
+        "Give a doubled starting dose of the new drug to overcome receptor resistance",
+        "Reverse the residual effect with a dopamine-agonist infusion",
+        "Recognise that cariprazine levels fall slowly — effects persist for weeks, so allow washout and start the next drug low",
+        "Treat cariprazine as fully eliminated by now — standard initiation is safe"
+      ],
+      correctIndex: 2,
+      explanation: "With an effective half-life of 1–3 weeks (parent plus didesmethyl metabolite), cariprazine keeps occupying receptors long after the last dose — the classic switching hazard — so the successor drug should start low with patience rather than on a presumed clean slate. Doubling doses and dopamine agonists add toxicity without hastening washout.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-car-04",
+      question: "A 27-year-old is recovering from a first manic episode; his brother's schizophrenia is dominated by negative symptoms, and the psychiatrist weighs one agent against both dimensions. The claim best supported for cariprazine is:",
+      options: [
+        "First-line status for treatment-resistant schizophrenia",
+        "Reliable reversal of established tardive dyskinesia",
+        "An approved obsessive-compulsive disorder indication",
+        "Approval in schizophrenia and bipolar I episodes, with D3-selective promise for negative symptoms"
+      ],
+      correctIndex: 3,
+      explanation: "Cariprazine (US approval 2015) covers schizophrenia and bipolar I manic/mixed (and depressive) episodes, and its D3 selectivity underpins interest in negative symptoms (Katzung). Refractory-schizophrenia first choice is clozapine, dyskinesia reversal is not its claim, and OCD is not among its labels.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-car-05",
+      question: "A woman asks why her team chose cariprazine over risperidone, given her past galactorrhoea and 7 kg weight gain. The honest counselling point is:",
+      options: [
+        "Cariprazine's partial agonism spares prolactin and keeps weight gain low, though akathisia is the complaint to watch",
+        "Cariprazine raises prolactin higher than risperidone but avoids weight gain",
+        "Cariprazine guarantees several kilograms of weight loss",
+        "Cariprazine eliminates every extrapyramidal risk, akathisia included"
+      ],
+      correctIndex: 0,
+      explanation: "As a D3/D2 partial agonist, cariprazine avoids the D2-blockade prolactin surge (like other partial agonists) and carries low weight gain, with akathisia as its main trade-off. No antipsychotic guarantees weight loss, and claiming zero EPS would be false reassurance.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-car-06",
+      question: "A 30-year-old with schizophrenia has avolition, social withdrawal and blunted affect on risperidone 6 mg with positive symptoms controlled — but new galactorrhoea. Which switch best addresses the negative-symptom dimension while sparing prolactin?",
+      options: [
+        "Amisulpride 400 mg/day",
+        "Cariprazine",
+        "Zotepine",
+        "Sulpiride"
+      ],
+      correctIndex: 1,
+      explanation: "Cariprazine's D3-preferring partial agonism offers negative-symptom promise with prolactin and weight sparing — precisely this patient's needs. Sulpiride and standard-dose amisulpride would push prolactin higher still, and zotepine brings clozapine-like metabolic and seizure baggage without a negative-symptom claim.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-car-07",
+      question: "Within the partial-agonist antipsychotics, the correct D3-versus-D2 positioning is:",
+      options: [
+        "Brexpiprazole exceeds cariprazine in D3-receptor selectivity",
+        "All three bind D3 exclusively with no D2 activity",
+        "Cariprazine is the D3-preferring outlier; aripiprazole and brexpiprazole are D2-anchored partial agonists",
+        "Aripiprazole carries the class's highest D3 affinity"
+      ],
+      correctIndex: 2,
+      explanation: "Cariprazine alone prefers D3; aripiprazole and brexpiprazole are D2 partial-agonist 'dopamine system stabilisers' (brexpiprazole adding stronger 5-HT2A antagonism). Exclusive D3 binding misstates all three, and any claim that brexpiprazole out-selects cariprazine at D3 inverts the actual design.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "atp-car-08",
+      question: "Ten days after starting cariprazine, a patient reports inner restlessness and a constant urge to pace the ward; no delusions have returned. The best management is:",
+      options: [
+        "Declare psychotic relapse and raise the cariprazine dose",
+        "Stop cariprazine and start clozapine the same day",
+        "Prescribe a nightly benzodiazepine and leave the antipsychotic untouched",
+        "Recognise akathisia — reduce the dose and/or add propranolol-type symptomatic cover"
+      ],
+      correctIndex: 3,
+      explanation: "Inner restlessness with pacing soon after starting cariprazine is akathisia — its commonest adverse effect — managed by dose reduction and symptomatic measures, not dose escalation. Mistaking it for relapse worsens the syndrome, clozapine is a last-resort refractory drug, and a benzodiazepine alone neither treats akathisia nor secures antipsychotic cover.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

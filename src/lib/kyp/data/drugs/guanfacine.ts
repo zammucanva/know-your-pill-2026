@@ -681,6 +681,110 @@ export const guanfacine: Drug = {
       explanation: "For adhd (er): start 1 mg every morning, target 1-7 mg/day (weight-banded), maximum 7 mg/day. Increase by 1 mg weekly",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "adj-gfc-01",
+      question: "What distinguishes guanfacine's pharmacology from clonidine's?",
+      options: [
+        "Guanfacine is a more selective alpha-2A agonist acting on prefrontal noradrenergic circuits that tune working memory and impulse control, with less vascular alpha-2B and imidazoline activity",
+        "Guanfacine is an alpha-1 antagonist with additional beta-2 agonism, making it bronchodilating",
+        "Guanfacine is a norepinephrine reuptake inhibitor that raises prefrontal noradrenaline by blocking the transporter",
+        "Guanfacine is a dopamine D1 agonist selective for prefrontal mesocortical projections"
+      ],
+      correctIndex: 0,
+      explanation: "KYP anchors guanfacine as the selective alpha-2A agonist whose prefrontal noradrenergic tuning underlies its ADHD benefit, in contrast to clonidine's broader alpha-2 plus imidazoline receptor profile. NET blockade is atomoxetine's mechanism, D1 agonism is investigational pharmacology, and the alpha-1-plus-beta-2 combination describes no marketed ADHD drug.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "adj-gfc-02",
+      question: "A 10-year-old with ADHD plus chronic motor tics and separation anxiety cannot tolerate methylphenidate — the tics worsen and sleep suffers. The non-stimulant sympatholytic chosen is:",
+      options: [
+        "Fluoxetine, which treats ADHD core symptoms by serotonin reuptake blockade",
+        "Guanfacine extended release (Intuniv) — as monotherapy or stimulant adjunct, favoured when tics and anxiety complicate ADHD",
+        "Atomoxetine, which suppresses tics within 48 hours through striatal D2 blockade",
+        "Modafinil, the wakefulness-promoting stimulant with proven antitic efficacy"
+      ],
+      correctIndex: 1,
+      explanation: "Guanfacine XR (Intuniv) is the alpha-2A agonist approved for ADHD as monotherapy or adjunct to stimulants, with particular appeal when tics and anxiety are comorbid (KYP anchor; Katzung groups clonidine and guanfacine as effective in children with ADHD). Atomoxetine is a genuine non-stimulant but acts over weeks via the norepinephrine transporter rather than within 48 hours or via D2, modafinil lacks paediatric ADHD approval, and fluoxetine is not an ADHD drug.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-gfc-03",
+      question: "The adverse-effect profile that most limits guanfacine is:",
+      options: [
+        "Hyperprolactinaemia with galactorrhoea and menstrual irregularity",
+        "Mydriasis with urinary hesitancy from alpha-1 stimulation",
+        "Somnolence, fatigue, hypotension and bradycardia — the expected sympatholytic cluster, worst early or after dose increases",
+        "Akathisia with inner restlessness and a high EPS rate"
+      ],
+      correctIndex: 2,
+      explanation: "Guanfacine's alpha-2A agonism produces the sympatholytic cluster — sedation, fatigue, lowered blood pressure, bradycardia and dry mouth (KYP anchor; in the clonidine class Katzung names sedation as the commonest adverse effect). Akathisia is an antipsychotic EPS, prolactin rise is risperidone and amisulpride territory, and mydriasis with urinary hesitancy reverses the drug's actual autonomic direction.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-gfc-04",
+      question: "The clonidine-versus-guanfacine discontinuation comparison, as taught for exams, is:",
+      options: [
+        "Guanfacine causes explosive rebound hypertension within hours while clonidine has no discontinuation syndrome at all",
+        "Neither drug produces any withdrawal phenomenon because central sympatholysis simply fades",
+        "Rebound occurs only if the drugs are tapered slowly, never after abrupt stoppage",
+        "Both sympatholytics can produce rebound hypertension on abrupt stop, but rebound is distinctly less prominent with guanfacine — and both should still be tapered, never stopped suddenly"
+      ],
+      correctIndex: 3,
+      explanation: "Clonidine's abrupt withdrawal is the classic hypertensive-crisis scenario (missed doses for 1-2 days can suffice, per Tripathi); guanfacine, with its more selective alpha-2A action, is taught as carrying LESS rebound — but the safe rule for both is gradual taper with substituted cover. The explosive-rebound and no-withdrawal claims invert or deny the pharmacology, and the only-on-tapering claim reverses the actual risk pattern.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-gfc-05",
+      question: "A boy stable on guanfacine extended release is started on ketoconazole for tinea capitis; the family reports new drowsiness and light-headedness on standing. The explanation is:",
+      options: [
+        "Ketoconazole is a strong CYP3A4 inhibitor that raises guanfacine exposure, deepening its sedative and hypotensive effects — strong 3A4 inhibitors should be avoided or the dose adjusted",
+        "Ketoconazole is a strong CYP2D6 inhibitor, so toxic guanfacine levels accumulate within hours",
+        "Ketoconazole displaces guanfacine from skeletal-muscle binding sites",
+        "Ketoconazole induces guanfacine's metabolism, causing withdrawal hypertension"
+      ],
+      correctIndex: 0,
+      explanation: "KYP's interaction anchor for guanfacine is avoidance of strong CYP3A4 inhibitors (ketoconazole-type agents) because guanfacine exposure rises with added sedation and hypotension. The 2D6 label is wrong for this pair, muscle-displacement is not a real mechanism, and induction causing withdrawal inverts the direction of an inhibitor's effect.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-gfc-06",
+      question: "Which dosing-PK statement fits guanfacine's current psychiatric use?",
+      options: [
+        "It is given as a monthly depot injection after a single oral loading dose",
+        "It is given as a once-daily extended-release tablet (Intuniv-type) titrated gradually; the older immediate-release antihypertensive offered no advantage over clonidine and fell into disuse",
+        "It requires thrice-daily immediate-release dosing with mandatory weekly ECGs",
+        "It is administered by weekly transdermal patch, the only approved route in psychiatry"
+      ],
+      correctIndex: 1,
+      explanation: "Guanfacine's psychiatric renaissance rides on the once-daily extended-release formulation (KYP's Intuniv anchor), while Katzung notes the old guanfacine antihypertensive offered no advantage over clonidine and is rarely used. There is no ECG requirement, the weekly patch is clonidine's formulation story, and no depot exists.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "adj-gfc-07",
+      question: "A 12-year-old with Tourette syndrome plus impulsive aggression is offered a non-antipsychotic option before risperidone is considered. Which drug's evidence supports BOTH tics and impulsive-aggression control?",
+      options: [
+        "Fluvoxamine, the SSRI with proven antitic efficacy in Tourette syndrome",
+        "Lithium, the mood stabiliser with primary approval for tic suppression",
+        "Clonidine or guanfacine — each reduces tics in about half of children and may particularly help behavioural problems such as impulse-control difficulty",
+        "Haloperidol, which is free of EPS at the low doses used for tics"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung states clonidine reduces motor or vocal tics in about 50% of children, that guanfacine has also been used, and that both may particularly help behavioural symptoms such as impulse-control disorders — exactly the comorbidity in the stem. Haloperidol reduces tic frequency but is far from EPS-free, SSRIs target the OCD comorbidity rather than tics, and lithium has no tic indication.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-gfc-08",
+      question: "In Indian practice, why might a child psychiatrist favour guanfacine extended release over escalating methylphenidate for a small child whose family fears that daily tablets will make him an addict?",
+      options: [
+        "Guanfacine is itself a scheduled stimulant in India, so prescribing it removes stigma while working identically to methylphenidate",
+        "Guanfacine carries no adverse effects, needing no monitoring of pulse or blood pressure",
+        "Guanfacine acts within 2 hours like methylphenidate, so no counselling about gradual titration is needed",
+        "Guanfacine is a non-stimulant alpha-2A agonist without abuse potential or narcotic scheduling, avoiding dependence fears tied to stimulants — provided the family accepts sedation and pulse/BP monitoring instead"
+      ],
+      correctIndex: 3,
+      explanation: "The non-stimulant, unscheduled nature of guanfacine is the counselling advantage when families fear stimulant dependence — but its cost is the sympatholytic adverse-effect cluster requiring pulse and BP vigilance with slow titration. It is not a stimulant, its adverse effects are real, and its onset is gradual rather than methylphenidate-fast.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

@@ -812,6 +812,110 @@ export const loxapine: Drug = {
       explanation: "For psychosis (oral): start 10 mg twice daily, target 60–100 mg/day, maximum 250 mg/day. Increase to 60–100 mg/day in divided doses",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tap-lox-01",
+      question: "Loxapine's receptor pharmacology is best described as:",
+      options: [
+        "Selective D2 blockade with no serotonergic action",
+        "Dibenzoxazepine chemistry with D2 antagonism plus substantial 5-HT2A antagonism — a bridge between typical and atypical agents",
+        "Selective 5-HT2A blockade with no D2 action",
+        "D3-preferring blockade with added 5-HT7 antagonism"
+      ],
+      correctIndex: 1,
+      explanation: "Loxapine is a dibenzoxazepine D2 blocker whose meaningful 5-HT2A antagonism gives it a mid-way receptor profile between pure typicals and clozapine-like atypicals, explaining its moderate EPS with some atypical features. Option D is sulpiride's signature, and the all-or-nothing claims of options A and C are false because loxapine blocks both D2 and 5-HT2A.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tap-lox-02",
+      question: "A 30-year-old with bipolar mania is severely agitated in the emergency room, refuses all injections, and the team wants a non-invasive antipsychotic option with rapid onset. Which formulation fits?",
+      options: [
+        "Inhaled loxapine",
+        "Intramuscular olanzapine",
+        "Orally disintegrating aripiprazole",
+        "Intravenous haloperidol infusion"
+      ],
+      correctIndex: 0,
+      explanation: "Loxapine is available as an inhaled powder (Adasuve) — the only inhaled antipsychotic — delivering rapid effect for acute agitation in schizophrenia or bipolar I under a REMS programme in the USA. Options B and D are injections the patient refuses, and aripiprazole's oral forms act too slowly for this rapid-onset requirement.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-lox-03",
+      question: "A patient stabilised on oral loxapine asks why her antipsychotic is prescribed in divided doses while a friend's olanzapine is once daily. The pharmacokinetic explanation is:",
+      options: [
+        "Loxapine has a half-life of 48-60 hours",
+        "Loxapine is a prodrug needing twice-daily activation",
+        "Loxapine's elimination half-life is short (about 8 hours), so its actions are quick and short-lasting",
+        "Loxapine is fully renally cleared, demanding frequent dosing"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi gives loxapine a half-life of about 8 hours with quick and short-lasting actions — the classic rationale for divided dosing. The 48-60 hour figure belongs to pimozide, olanzapine's 24-30 hour half-life is what makes it once daily, and loxapine is hepatically metabolised with no prodrug step.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tap-lox-04",
+      question: "A 25-year-old asthmatic with acute agitation is considered for inhaled loxapine. The resident must identify the key safety problem with this formulation in this patient. It is:",
+      options: [
+        "Agranulocytosis risk",
+        "Severe hypoglycaemia",
+        "Delayed onset over several days",
+        "Bronchospasm — the reason asthma and COPD are contraindications"
+      ],
+      correctIndex: 3,
+      explanation: "Inhaled loxapine carries a boxed warning for bronchospasm, and reactive airway disease such as asthma or COPD is a contraindication — the basis of its REMS restriction in the USA. Agranulocytosis is clozapine's monitoring burden, hypoglycaemia is not an antipsychotic effect, and the inhaled route is prized precisely for speed, not delayed action.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-lox-05",
+      question: "A 40-year-old with psychotic depression needs a single agent combining antidepressant and neuroleptic properties. Which drug — chemically the N-demethylated metabolite of loxapine — was historically used for exactly this indication?",
+      options: [
+        "Maprotiline",
+        "Amoxapine",
+        "Clomipramine",
+        "Bupropion"
+      ],
+      correctIndex: 1,
+      explanation: "Amoxapine is the N-demethylated metabolite of loxapine and blocks D2 receptors in addition to inhibiting noradrenaline reuptake, giving mixed antidepressant-plus-neuroleptic properties that Tripathi notes offered advantage in psychotic depression. Maprotiline is a structurally distinct tetracyclic NRI, clomipramine is the serotonergic OCD drug, and bupropion is an NDRI — none carries D2-driven antipsychotic activity.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-lox-06",
+      question: "An intern states that amoxapine is just another tricyclic with no relation to antipsychotics. The senior's correction is that amoxapine:",
+      options: [
+        "Is the in-vivo metabolite of the antipsychotic loxapine and retains D2-blocking activity, so EPS and hyperprolactinaemia can occur",
+        "Is a prodrug converted into loxapine inside the brain",
+        "Is chemically unrelated to every antipsychotic ever marketed",
+        "Loses all D2 affinity because of its tetracyclic ring"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung states plainly that amoxapine is the N-demethylated metabolite of loxapine, and one of its active metabolites (7-hydroxyamoxapine) is a potent D2 blocker — hence EPS and hyperprolactinaemia can appear during amoxapine therapy. Option B reverses the direction of the metabolic link, and the D2 activity is documented, not lost.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "tap-lox-07",
+      question: "Which Indian preparation pairing is correct for loxapine?",
+      options: [
+        "Orap tablets of 2 and 4 mg",
+        "Sulpitac tablets of 50, 100, 200 mg",
+        "Loxapac capsules of 10, 25, 50 mg, with a 25 mg/5 mL liquid",
+        "Fluanxol Depot ampoules of 20 mg/mL"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi's table lists loxapine in India as LOXAPAC 10, 25 and 50 mg capsules plus a 25 mg/5 mL liquid concentrate. Orap is pimozide, Sulpitac is sulpiride, and Fluanxol Depot is flupenthixol's decanoate — each a genuine Indian product of another batch drug.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-lox-08",
+      question: "Three weeks after starting loxapine, a 32-year-old develops fever of 39.5 degrees C, generalised muscular rigidity, labile blood pressure and a CPK of 2400 IU/L. The correct response is:",
+      options: [
+        "Continue the drug with paracetamol for the fever",
+        "Add intramuscular promethazine for the stiffness",
+        "Diagnose serotonin syndrome and give cyproheptadine",
+        "Diagnose neuroleptic malignant syndrome — stop loxapine, cool vigorously, and consider dantrolene or bromocriptine"
+      ],
+      correctIndex: 3,
+      explanation: "Fever, lead-pipe rigidity, autonomic instability and a marked CPK rise after an antipsychotic define NMS; Tripathi advises prompt drug withdrawal with supportive care and intravenous dantrolene or high-dose bromocriptine. Continuing the offending drug is dangerous, promethazine treats dystonia rather than NMS, and no serotonergic drug is present to justify option C.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

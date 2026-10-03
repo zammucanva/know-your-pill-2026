@@ -932,6 +932,110 @@ export const carbamazepine: Drug = {
       explanation: "For acute mania: start 200 mg twice daily, target 600–1600 mg/day (level 4–12), maximum Level/counts-limited. Increase by 200 mg/day every few days (divided)",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "mst-cbz-01",
+      question: "Carbamazepine's mechanism and chemical identity are correctly described as:",
+      options: [
+        "A tricyclic iminostilbene (dibenzazepine) related to imipramine that stabilises voltage-gated sodium channels in the inactivated state in a use-dependent manner",
+        "A sulfamate-substituted monosaccharide that blocks AMPA and kainate receptors",
+        "A phenyltriazine that reduces presynaptic glutamate release without sodium-channel effects",
+        "A benzodiazepine derivative acting as a positive allosteric modulator of GABA-A receptors"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung calls carbamazepine the prototypical sodium-channel-blocking antiseizure drug — an iminostilbene chemically akin to imipramine, though unlike tricyclic antidepressants it does not inhibit monoamine transporters and is not used as an antidepressant. The sulfamate-substituted monosaccharide describes topiramate, the phenyltriazine describes lamotrigine, and the GABA-A allosteric-modulator claim belongs to the benzodiazepines.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "mst-cbz-02",
+      question: "A 30-year-old with newly diagnosed focal epilepsy starts carbamazepine 400 mg/day and is seizure-free at week 2 with a trough level of 7 mcg/mL. At week 6 he returns after two breakthrough seizures; adherence is verified, and re-escalating the dose restores control. The best explanation for the week-6 failure is:",
+      options: [
+        "Progressive renal clearance of the drug, which shortens its half-life in proportion to creatinine",
+        "Autoinduction — carbamazepine induces its own CYP3A4/2B6 metabolism, so levels fall over the first weeks and the dose must be re-escalated after stabilisation",
+        "Tolerance with receptor supersensitivity, requiring permanent dose reduction to avoid toxicity",
+        "Accumulation of an inhibitory metabolite that antagonises carbamazepine at the sodium channel"
+      ],
+      correctIndex: 1,
+      explanation: "Carbamazepine is a substrate and inducer of CYP3A4 (and CYP2B6): Katzung describes the half-life falling from about 36 hours after a first dose to 8-12 hours on continued therapy, with concentrations dropping after a few weeks — the classic autoinduction story Tripathi mirrors with 20-40 hours falling to 10-20 hours. Nothing in the mechanism involves antagonistic metabolites or renal clearance, and the textbook response is re-escalation, not dose reduction.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "mst-cbz-03",
+      question: "A 24-year-old woman on an oral contraceptive takes carbamazepine 600 mg/day for trigeminal neuralgia. She returns pregnant at 8 weeks despite perfect pill compliance. The most likely explanation is:",
+      options: [
+        "The contraceptive induced carbamazepine metabolism, raising its level and triggering a teratogenic interaction",
+        "Carbamazepine converted the contraceptive into an inert uterotrophic metabolite that failed to suppress ovulation",
+        "Carbamazepine's enzyme induction accelerated hepatic oestrogen metabolism and caused oral contraceptive failure",
+        "Carbamazepine blocked gastrointestinal absorption of the contraceptive steroid"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi lists oral contraceptives among the drugs whose efficacy carbamazepine reduces through enzyme induction (with haloperidol, lamotrigine, valproate and topiramate), and Katzung stresses CYP3A4 induction as the reason carbamazepine complicates combination therapy. Absorption is unaffected, and the induction runs from carbamazepine to the contraceptive, never the reverse.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-cbz-04",
+      question: "Before starting carbamazepine in a 36-year-old man of Han Chinese ancestry for focal epilepsy, the resident should order:",
+      options: [
+        "HLA-DQB1 typing, which predicts carbamazepine-induced hyponatraemia in Asian patients",
+        "Baseline serum osmolality, because Stevens-Johnson risk tracks directly with the sodium level",
+        "HLA-B*57:01 typing, which is mandatory before all aromatic anticonvulsants",
+        "HLA-B*15:02 typing, because carriers have a sharply higher risk of carbamazepine-induced Stevens-Johnson syndrome"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung notes Stevens-Johnson syndrome risk is significantly higher with the HLA-B*1502 allele and that Asians — with roughly a 10-fold higher incidence of carbamazepine-induced SJS — should be tested before starting the drug. HLA-B*57:01 is the abacavir screen, and hyponatraemia, while a real carbamazepine effect, has nothing to do with the SJS screen.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-cbz-05",
+      question: "A routine full blood count at six weeks of carbamazepine therapy shows WBC 3200/mm3 with neutrophils 1400/mm3; the patient is asymptomatic and afebrile with no mucosal ulceration. The best action is:",
+      options: [
+        "Continue carbamazepine with CBC surveillance — mild leukopenia is common and usually benign, reserving withdrawal for counts that fall further or for agranulocytosis",
+        "Stop carbamazepine immediately, since any leukopenia on the drug means aplastic anaemia is imminent",
+        "Add lithium to boost the white count and continue the same carbamazepine dose without monitoring",
+        "Switch to clozapine, which is safer for the bone marrow in epileptic patients"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung notes a benign leukopenia occurs in many patients on carbamazepine and needs no intervention unless the neutrophil count falls below 1000/mm3; Tripathi likewise calls some degree of leucopenia common with agranulocytosis and aplastic anaemia rare — the reason periodic CBCs are the monitoring bundle. Clozapine is among the most marrow-toxic drugs available, not a safer alternative.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-cbz-06",
+      question: "A 52-year-old woman describes recurrent 15-second electric-shock pains in the right cheek triggered by chewing and by a breeze on the face; neurological examination is normal. The drug of first choice is:",
+      options: [
+        "Oxcarbazepine at the same dose as for mania",
+        "Carbamazepine",
+        "Paracetamol",
+        "Fluoxetine"
+      ],
+      correctIndex: 1,
+      explanation: "Lancinating, trigger-evoked facial pain with a normal examination is trigeminal neuralgia, for which carbamazepine is the drug of first choice — Katzung says it is usually first choice and Tripathi calls it the drug of choice, with about 60% of patients responding well and its action almost diagnostic. Paracetamol and fluoxetine have no role, and oxcarbazepine is explicitly noted by Katzung as not effective in mania with no trigeminal neuralgia first-choice status.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "mst-cbz-07",
+      question: "Where does carbamazepine stand among antimanic drugs, and what teratogenic interaction must be remembered?",
+      options: [
+        "It equals lamotrigine for bipolar depression and carries no teratogenic signal",
+        "It is contraindicated with valproate because the combination abolishes seizure control",
+        "It is second-line after lithium and valproate in acute mania — and combined use with valproate roughly doubles the teratogenic frequency",
+        "It is the first-line antimanic, with efficacy superior to lithium in rapid-cycling illness"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi notes carbamazepine is less effective than lithium or valproate in acute mania, needs gradual dose build-up, and is a valuable alternative or adjunct — Katzung reaches for it when lithium underperforms. The same chapter warns that carbamazepine with valproate doubles the teratogenic frequency, a classic counselling point; the seizure-control claim is the opposite of their real additive risk.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "mst-cbz-08",
+      question: "Which Indian brand-dose pairing for carbamazepine is correct?",
+      options: [
+        "LAMITOR 200-400 mg TDS as the generic carbamazepine in India",
+        "TEGRETOL 600 mg SR tablets taken once at bedtime as the licensed mania regimen",
+        "MAZETOL is the Indian brand of oxcarbazepine sold as 150/300/600 mg tablets",
+        "TEGRETOL, MAZETOL and CARBATOL in 100/200/400 mg tablets, with sustained-release forms preferred and doses of 200-400 mg TDS"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists carbamazepine as TEGRETOL, MAZETOL (and CARBATOL) 100, 200 and 400 mg tablets with 200-400 mg TDS dosing, and notes SR/CR formulations are preferred to avoid high peaks and low troughs. LAMITOR is lamotrigine, and the 150/300/600 mg oxcarbazepine brands are OXETOL, OXCARB and OXEP.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

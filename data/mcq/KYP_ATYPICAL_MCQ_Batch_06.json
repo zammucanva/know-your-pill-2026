@@ -1,0 +1,751 @@
+{
+ "batch": "kyp-atypical-mcq-batch-06",
+ "title": "Atypical Antidepressant MCQ Batch 06 - Bupropion / Mirtazapine / Mianserin / Trazodone / Nefazodone",
+ "generated": "2026-10-02",
+ "examOrientation": "Indian exams (NEET PG / INI-CET) + USMLE-style vignettes",
+ "textbookAnchors": "Facts aligned with Katzung Basic & Clinical Pharmacology 14e Ch.30 (bupropion DA/NE reuptake inhibition with virtually no direct serotonergic action, smoking-cessation approval, hydroxybupropion-driven CYP2D6 inhibition; mirtazapine alpha-2 + 5-HT2/5-HT3/H1 pharmacology, 20-40 h half-life; trazodone mCPP active metabolite, low-dose unlabeled hypnotic use, alpha-1 orthostatic hypotension, rare priapism; nefazodone 2001 FDA black-box hepatotoxicity and potent CYP3A4 inhibition; bupropion-mirtazapine-nefazodone as the antidepressants least associated with sexual side effects) and K.D. Tripathi 7e (mianserin alpha-2/5-HT2/H1 without uptake inhibition, blood dyscrasias and liver dysfunction restricting use, low overdose fatality with seizure risk in overdose; bupropion highest seizure-precipitation risk with eating-disorder contraindication). Verified by targeted search of both book texts; no copyrighted text reproduced.",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras",
+  "notes": [
+   "afterSectionId values are real section ids from the live KYP section set (top, quick-facts, mechanism, timeline, knowledge-graph, high-yield-summary used in this batch).",
+   "Answer positions deliberately spread: A10 B10 C11 D10 (see stats.answerSpread).",
+   "QA gate: passed scripts/mcq_4step_check.py after extending the fact table with atypical-antidepressant data (bupropion/mirtazapine/mianserin/trazodone/nefazodone)."
+  ]
+ },
+ "stats": {
+  "total": 41,
+  "byDrug": {
+   "bupropion": 8,
+   "mirtazapine": 8,
+   "mianserin": 8,
+   "trazodone": 8,
+   "nefazodone": 8,
+   "mixed": 1
+  },
+  "byDifficulty": {
+   "Foundation": 10,
+   "Clinical": 23,
+   "Advanced": 8
+  },
+  "byStyle": {
+   "vignette": 22,
+   "recall": 19
+  },
+  "byDomain": {
+   "Mechanism & Neuroscience": 8,
+   "Pharmacokinetics": 4,
+   "Clinical Uses": 8,
+   "Adverse Effects & Safety": 12,
+   "Drug Interactions": 3,
+   "Indian Practice": 2,
+   "Exam Pearls": 2,
+   "Active Recall": 2
+  },
+  "answerSpread": {
+   "0": 10,
+   "1": 10,
+   "2": 11,
+   "3": 10
+  }
+ },
+ "questions": [
+  {
+   "id": "atd-bup-01",
+   "drugSlug": "bupropion",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Bupropion's monoamine pharmacology is best described as:",
+   "options": [
+    "Weak-to-moderate inhibition of dopamine and norepinephrine reuptake, with no direct action on serotonin",
+    "Balanced SERT and NET blockade from the very first dose",
+    "Potent 5-HT2A antagonism combined with weak SERT inhibition",
+    "Alpha-2 autoreceptor blockade that increases NE and 5-HT release"
+   ],
+   "correctIndex": 0,
+   "explanation": "Bupropion is the NDRI: modest-to-moderate dopamine and norepinephrine reuptake inhibition with virtually no direct serotonergic effect (Katzung) \u2014 the basis of its activating profile and freedom from SSRI-type sexual and GI effects. Option C describes trazodone/nefazodone (SARI), option D describes mirtazapine (NaSSA), and 'balanced from dose one' is duloxetine's SNRI signature."
+  },
+  {
+   "id": "atd-bup-02",
+   "drugSlug": "bupropion",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which triplet correctly lists bupropion's established indications?",
+   "options": [
+    "Major depression, generalized anxiety disorder, and fibromyalgia",
+    "Major depression, seasonal affective disorder, and smoking cessation",
+    "Seasonal affective disorder, bulimia nervosa, and premature ejaculation",
+    "Smoking cessation, obsessive-compulsive disorder, and diabetic neuropathy"
+   ],
+   "correctIndex": 1,
+   "explanation": "Bupropion carries three anchor labels: major depression, seasonal affective disorder, and smoking cessation (approved 1997, the Zyban use). It is not considered effective for anxiety disorders and may poorly tolerate anxious patients, bulimia is a contraindication rather than an indication, and OCD/neuropathy belong to SSRIs and duloxetine respectively."
+  },
+  {
+   "id": "atd-bup-03",
+   "drugSlug": "bupropion",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 22-year-old woman with bulimia nervosa asks about starting bupropion for her depressive symptoms. Why is this drug avoided in her?",
+   "options": [
+    "It provokes severe anticholinergic dry mouth that worsens binge-purge dehydration",
+    "It causes profound weight gain, aggravating her body-image disturbance",
+    "It lowers the seizure threshold in a dose-related way, and purging with electrolyte shifts adds further risk",
+    "It produces pharmacological dependence with a characteristic withdrawal syndrome"
+   ],
+   "correctIndex": 2,
+   "explanation": "Bupropion precipitates seizures more than other standard antidepressants, with dose-related risk, and eating disorders (anorexia, bulimia) are classic contraindications \u2014 vomiting and electrolyte disturbance compound the danger. Weight gain is the opposite of its metabolic profile, and it is not a dependence-producing drug, so the other mechanisms are wrong for this drug."
+  },
+  {
+   "id": "atd-bup-04",
+   "drugSlug": "bupropion",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A 58-year-old stable on bupropion is started on nortriptyline for neuropathic pain; a week later she has dry mouth, urinary hesitancy, constipation and palpitations. The best explanation is:",
+   "options": [
+    "Bupropion induces CYP3A4 and accelerates nortriptyline clearance",
+    "A serotonergic interaction between the two antidepressants",
+    "Additive alpha-1 blockade causing autonomic failure",
+    "Bupropion inhibits CYP2D6, raising nortriptyline levels into toxic anticholinergic and cardiac territory"
+   ],
+   "correctIndex": 3,
+   "explanation": "Bupropion and its metabolite hydroxybupropion moderately inhibit CYP2D6, raising levels of 2D6 substrates \u2014 TCAs, atomoxetine, metoprolol \u2014 a classic NEET-PG interaction pair. TCAs are the highest-stakes substrate: anticholinergic crisis and conduction effects. Bupropion does not induce CYP3A4, there is no serotonergic pair here, and alpha-1 blockade belongs to trazodone."
+  },
+  {
+   "id": "atd-bup-05",
+   "drugSlug": "bupropion",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 40-year-old Indian man smoking about 20 cigarettes a day is being treated for MDD. His previous SSRI caused erectile dysfunction and he stopped it. The best next antidepressant is:",
+   "options": [
+    "Bupropion \u2014 treats depression while supporting cessation, with minimal sexual dysfunction and often weight loss",
+    "Paroxetine \u2014 its strong anticholinergic effect counteracts sexual dysfunction",
+    "Mirtazapine \u2014 its 5-HT3 blockade reliably improves libido",
+    "Sertraline \u2014 switching within the same class restores sexual function"
+   ],
+   "correctIndex": 0,
+   "explanation": "Bupropion is the double-win choice: an approved smoking-cessation agent and one of the three antidepressants (with mirtazapine and nefazodone) least associated with sexual side effects, tending to produce weight loss rather than gain. Paroxetine actually worsens sexual dysfunction, sertraline would reintroduce the same problem, and mirtazapine's 5-HT3 blockade targets nausea, not libido."
+  },
+  {
+   "id": "atd-bup-06",
+   "drugSlug": "bupropion",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 31-year-old starting bupropion XL asks what to expect at follow-up. Which effect profile should she anticipate?",
+   "options": [
+    "Early insomnia replaced by daytime somnolence and weight gain",
+    "Insomnia and agitation early on, possible weight loss, with sexual function preserved",
+    "Nausea and diarrhoea for the first two weeks, then resolution",
+    "Orthostatic dizziness and a priapism risk needing urgent review"
+   ],
+   "correctIndex": 1,
+   "explanation": "Bupropion's signature is activating, not sedating: insomnia and agitation are its characteristic early effects, weight tends to fall, and it is the reference antidepressant for preserved sexual function. Serotonergic GI upset belongs to SSRIs, while orthostatic hypotension and priapism are trazodone's alpha-1-mediated warnings \u2014 none of these is bupropion's profile."
+  },
+  {
+   "id": "atd-bup-07",
+   "drugSlug": "bupropion",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which pharmacokinetic statement about bupropion is correct?",
+   "options": [
+    "It is eliminated unchanged by the kidney, so no caution is needed in cirrhosis",
+    "Its single very long half-life of about 5 days makes staggered discontinuation unnecessary",
+    "It is extensively hepatically metabolized to active metabolites such as hydroxybupropion and it inhibits CYP2D6",
+    "It is a potent CYP3A4 inhibitor, contraindicating several common co-medications"
+   ],
+   "correctIndex": 2,
+   "explanation": "Bupropion undergoes extensive hepatic metabolism (substantial first-pass) to active metabolites, chiefly hydroxybupropion, and parent plus metabolites moderately inhibit CYP2D6 \u2014 the handle behind its TCA and metoprolol interactions. The multi-day half-life is fluoxetine's, potent 3A4 inhibition is nefazodone's trick, and a hepatically cleared drug does demand caution in liver disease."
+  },
+  {
+   "id": "atd-bup-08",
+   "drugSlug": "bupropion",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "An exam vignette asks: among standard antidepressants, which drug has the highest dose-related seizure-precipitation risk \u2014 with eating disorders and prior seizure history as its classic contraindications?",
+   "options": [
+    "Sertraline",
+    "Mirtazapine",
+    "Trazodone",
+    "Bupropion"
+   ],
+   "correctIndex": 3,
+   "explanation": "Bupropion precipitates seizures more than any other standard antidepressant \u2014 the risk is dose-related (sharply rising above about 450 mg/day of the older immediate-release form) and concentrated in eating disorders, seizure history and alcohol withdrawal. Mirtazapine's watch-item is sedation and weight gain, sertraline's is GI upset and hyponatraemia, and trazodone's is priapism and orthostasis."
+  },
+  {
+   "id": "atd-mir-01",
+   "drugSlug": "mirtazapine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Mirtazapine's mechanism (NaSSA) is best summarized as:",
+   "options": [
+    "Selective serotonin reuptake inhibition with additional 5-HT3 antagonism",
+    "Noradrenaline and dopamine reuptake inhibition",
+    "Irreversible MAO-A inhibition raising all monoamines",
+    "Alpha-2 auto- and heteroreceptor blockade increasing NE and 5-HT release, plus 5-HT2/5-HT3/H1 antagonism"
+   ],
+   "correctIndex": 3,
+   "explanation": "Mirtazapine blocks presynaptic alpha-2 autoreceptors on noradrenergic neurones and heteroreceptors on serotonergic neurones, disinhibiting NE and 5-HT release; additional 5-HT2, 5-HT3 and potent H1 antagonism produce its sedative, appetite-stimulating, nausea-free profile. Reuptake inhibition \u2014 serotonergic or NDRI \u2014 is the wrong family, and MAO inhibition is a different class entirely."
+  },
+  {
+   "id": "atd-mir-02",
+   "drugSlug": "mirtazapine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 68-year-old widow has three months of low mood, early insomnia, marked loss of appetite with 5 kg weight loss, and she is fearful after reading about antidepressant sexual side effects. The best antidepressant choice is:",
+   "options": [
+    "Mirtazapine",
+    "Bupropion",
+    "Fluoxetine",
+    "Venlafaxine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Mirtazapine is the textbook match for the depressed patient who is underweight and sleepless: H1 blockade restores sleep, 5-HT2C blockade stimulates appetite and weight gain, and it is essentially free of serotonergic sexual dysfunction. Bupropion would aggravate insomnia and weight loss, while fluoxetine and venlafaxine tend to suppress appetite and disturb sleep further."
+  },
+  {
+   "id": "atd-mir-03",
+   "drugSlug": "mirtazapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient heavily sedated on mirtazapine 15 mg at night is uptitrated to 30 mg \u2014 and paradoxically reports less morning hangover. The commonly taught explanation is:",
+   "options": [
+    "The sedation at 15 mg was a withdrawal phenomenon",
+    "At low doses the antihistaminic (H1) effect dominates; as noradrenergic activation grows with dose, relative sedation lessens",
+    "Higher doses induce hepatic enzymes that clear mirtazapine faster",
+    "Sedation comes from 5-HT3 blockade, which is dose-limited"
+   ],
+   "correctIndex": 1,
+   "explanation": "The classically taught (if debated) mirtazapine quirk: potent H1 antagonism dominates at low doses producing maximal sedation, while dose-driven alpha-2 blockade and rising noradrenergic activation increasingly counteract drowsiness at higher doses \u2014 the reverse of most antidepressants. Enzyme induction is not its mechanism, and sedation is H1-, not 5-HT3-, mediated."
+  },
+  {
+   "id": "atd-mir-04",
+   "drugSlug": "mirtazapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which adverse-effect cluster best characterizes mirtazapine at usual doses?",
+   "options": [
+    "Sexual dysfunction, nausea and diarrhoea",
+    "Insomnia, agitation and weight loss",
+    "Sedation, increased appetite and weight gain",
+    "Tremor, sweating and delayed ejaculation"
+   ],
+   "correctIndex": 2,
+   "explanation": "Mirtazapine's trade-off for its sleep and appetite benefits is sedation plus weight gain \u2014 driven by H1 and 5-HT2C blockade respectively \u2014 while serotonergic effects (nausea, GI upset, sexual dysfunction) are conspicuously minimal. Option B is bupropion's activating profile, and options A and D are SSRI-type serotonergic profiles."
+  },
+  {
+   "id": "atd-mir-05",
+   "drugSlug": "mirtazapine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Mirtazapine's half-life of 20\u201340 hours supports which dosing practice?",
+   "options": [
+    "Twice-daily divided dosing to limit peaks",
+    "Once-weekly maintenance dosing",
+    "Twice-weekly loading doses",
+    "A single evening dose \u2014 once-daily is feasible and the sedation is put to use"
+   ],
+   "correctIndex": 3,
+   "explanation": "With a 20\u201340 hour half-life mirtazapine is genuinely once-daily, and standard practice is to give it in the evening precisely because of its sedation. Weekly dosing belongs to fluoxetine's far longer effective half-life, and no antidepressant uses a loading-dose strategy."
+  },
+  {
+   "id": "atd-mir-06",
+   "drugSlug": "mirtazapine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 35-year-old on sertraline 100 mg for six weeks has improved sleep and anxiety but residual low mood and drive; the psychiatrist wants a safe augmentation with sedative benefit at night. The best add-on is:",
+   "options": [
+    "Mirtazapine",
+    "Bupropion",
+    "Haloperidol",
+    "Lithium at antimanic doses"
+   ],
+   "correctIndex": 0,
+   "explanation": "Mirtazapine augmentation of an SSRI after partial response is a well-established, generally well-tolerated strategy \u2014 adding NE/5-HT disinhibition plus night-time sedation without serotonergic sexual burden. Bupropion is activating (the wrong direction for this patient), haloperidol is not an augmentation agent here, and lithium augmentation uses sub-antimanic doses and is a far more burdensome strategy."
+  },
+  {
+   "id": "atd-mir-07",
+   "drugSlug": "mirtazapine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Which receptor action explains why mirtazapine produces minimal nausea and GI upset compared with SSRIs?",
+   "options": [
+    "Its weak dopamine transporter blockade",
+    "Blockade of 5-HT3 receptors \u2014 the emesis-coupled serotonin receptor",
+    "Antagonism of alpha-1 adrenoceptors",
+    "Inhibition of MAO-A in the gut wall"
+   ],
+   "correctIndex": 1,
+   "explanation": "Mirtazapine is a 5-HT3 antagonist \u2014 the receptor on vagal afferents and the area postrema most tied to nausea \u2014 so instead of SSRI-type queasiness it is, if anything, antiemetic (ondansetron shares this target). Alpha-1 blockade causes hypotension (trazodone territory), MAO inhibition defines a different class, and DAT blockade is bupropion's weak side-action."
+  },
+  {
+   "id": "atd-mir-08",
+   "drugSlug": "mirtazapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Two new MDD patients on the same clinic day: one obese with metabolic syndrome, the other 14 kg underweight with anorexia. Which assignment of two atypical antidepressants is pharmacologically sound?",
+   "options": [
+    "Bupropion for the cachectic patient; mirtazapine for the patient with metabolic syndrome",
+    "Mirtazapine for both patients",
+    "Bupropion for the patient with metabolic syndrome; mirtazapine for the cachectic patient",
+    "Neither drug meaningfully changes body weight"
+   ],
+   "correctIndex": 2,
+   "explanation": "The classic weight contrast: mirtazapine drives appetite and weight UP (H1 plus 5-HT2C blockade) \u2014 ideal for the cachectic-anorexic patient, hazardous in metabolic syndrome; bupropion is weight-neutral-to-LOSS and even helps obesity, but would deepen the underweight patient's problem. Asserting weight-neutrality for either drug ignores their most examinable metabolic signatures."
+  },
+  {
+   "id": "atd-mia-01",
+   "drugSlug": "mianserin",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Mianserin's antidepressant mechanism is best described as:",
+   "options": [
+    "Potent SERT inhibition with additional 5-HT2A antagonism",
+    "Dopamine and noradrenaline reuptake inhibition",
+    "Presynaptic alpha-2 blockade raising NA release, with 5-HT2 and H1 antagonism \u2014 no uptake inhibition",
+    "GABA-A positive allosteric modulation"
+   ],
+   "correctIndex": 2,
+   "explanation": "Mianserin, the tetracyclic NaSSA-type agent, does not inhibit NA or 5-HT uptake at all; its effect comes from blocking presynaptic alpha-2 autoreceptors (increasing NA release and turnover) plus 5-HT2 and H1 antagonism \u2014 the pharmacological ancestor of mirtazapine's profile. Uptake blockade defines TCAs, SSRIs, SNRIs and bupropion, and GABAergic modulation is not its action."
+  },
+  {
+   "id": "atd-mia-02",
+   "drugSlug": "mianserin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient four weeks into mianserin therapy develops fever and a sore throat. The most appropriate immediate step is:",
+   "options": [
+    "Reassure \u2014 this is a known benign antihistaminic effect",
+    "Double the mianserin dose to cover infection",
+    "Add paracetamol and continue the drug unchanged",
+    "Send an urgent CBC for agranulocytosis and hold the drug pending results"
+   ],
+   "correctIndex": 3,
+   "explanation": "Fever with sore throat (or mouth ulceration) on mianserin is agranulocytosis until proven otherwise \u2014 blood dyscrasias are its signature warning and the reason its use is restricted; the response is an urgent white-cell count and stopping the drug if confirmed. Dismissing the sign or dosing through it risks a fatal neutropenic infection; it is not a benign antihistaminic effect."
+  },
+  {
+   "id": "atd-mia-03",
+   "drugSlug": "mianserin",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "top",
+   "question": "Which statement reflects mianserin's positioning in Indian pharmacology textbooks (Tripathi) and current Indian practice?",
+   "options": [
+    "A sedative antidepressant with minimal anticholinergic and cardiac effects, still available in India",
+    "The antidepressant of choice in cardiac conduction disease because of strong NA-uptake blockade",
+    "A stimulant antidepressant preferred in retarded depression with hypersomnia",
+    "An MAO inhibitor requiring tyramine dietary counselling"
+   ],
+   "correctIndex": 0,
+   "explanation": "Mianserin retains a niche in India as a sedating antidepressant whose anticholinergic and cardiac burden is far lower than the TCAs \u2014 its drawback being blood dyscrasias and liver dysfunction. It sedates rather than stimulates, it has no uptake blockade at all (so no strong-NA-blockade rationale), and it is not an MAO inhibitor."
+  },
+  {
+   "id": "atd-mia-04",
+   "drugSlug": "mianserin",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "mechanism",
+   "question": "A pharmacology tutor asks which pair of drugs shares the alpha-2-blockade plus 5-HT2-antagonism signature \u2014 the NaSSA-type profile without uptake inhibition:",
+   "options": [
+    "Trazodone and nefazodone",
+    "Mirtazapine and mianserin",
+    "Bupropion and amoxapine",
+    "Fluoxetine and fluvoxamine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Mirtazapine and mianserin are the NaSSA-type pair \u2014 alpha-2 auto/heteroreceptor blockade with 5-HT2 antagonism, sedation, appetite effects and no monoamine uptake inhibition. Trazodone-nefazodone are SARIs (5-HT2A antagonism WITH weak SERT inhibition), bupropion is the NDRI, and the fluoxetine-fluvoxamine pair are plain SSRIs."
+  },
+  {
+   "id": "atd-mia-05",
+   "drugSlug": "mianserin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The classic treatment-limiting toxicities that restricted mianserin's worldwide use are:",
+   "options": [
+    "QT prolongation and torsades de pointes",
+    "Hypertensive crises with tyramine-containing foods",
+    "Blood dyscrasias (agranulocytosis) and liver dysfunction",
+    "Extrapyramidal symptoms and tardive dyskinesia"
+   ],
+   "correctIndex": 2,
+   "explanation": "Haematological toxicity (agranulocytosis-type blood dyscrasias) and hepatic dysfunction are the two famous mianserin toxicities that curtailed its use \u2014 hence CBC vigilance with fever/sore-throat warnings. QT/torsades is the citalopram-and-TCA message, tyramine crises belong to MAO inhibitors, and extrapyramidal syndromes are antipsychotic (or amoxapine) territory."
+  },
+  {
+   "id": "atd-mia-06",
+   "drugSlug": "mianserin",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 74-year-old with depression, poor sleep and symptomatic prostatic enlargement needs an antidepressant with negligible anticholinergic burden. Among older agents available in India, a reasonable pick is:",
+   "options": [
+    "Amitriptyline",
+    "Imipramine",
+    "Phenelzine",
+    "Mianserin"
+   ],
+   "correctIndex": 3,
+   "explanation": "Mianserin's anticholinergic and cardiac side effects are characteristically less prominent than the TCAs, making it the reasonable older-agent option in an elderly man with prostatism \u2014 amitriptyline and imipramine would aggravate urinary hesitancy, and an MAO inhibitor like phenelzine adds tyramine and interaction hazards. Keep the CBC warning in mind: blood dyscrasias remain its Achilles heel."
+  },
+  {
+   "id": "atd-mia-07",
+   "drugSlug": "mianserin",
+   "domain": "Active Recall",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "One-line differentiators \u2014 which pairing is CORRECT?",
+   "options": [
+    "Mianserin \u2014 blood dyscrasias; mirtazapine \u2014 sedation and weight gain",
+    "Mianserin \u2014 dose-related seizures at therapeutic doses; mirtazapine \u2014 agranulocytosis",
+    "Mirtazapine \u2014 significant sexual dysfunction; mianserin \u2014 SSRI-like nausea",
+    "Mirtazapine \u2014 strong CYP3A4 inhibition; mianserin \u2014 black-box hepatotoxicity"
+   ],
+   "correctIndex": 0,
+   "explanation": "The clean split: mirtazapine's trade-offs are sedation and appetite/weight gain with a benign interaction profile (a substrate of several CYPs, but no strong inhibition); mianserin's red flag is haematological \u2014 blood dyscrasias demanding CBC vigilance. The other rows swap each drug's problem onto the wrong agent; therapeutic-dose seizures are not mianserin's pattern (overdose only), and the strong-3A4-inhibitor/black-box labels belong to nefazodone."
+  },
+  {
+   "id": "atd-mia-08",
+   "drugSlug": "mianserin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A young woman is brought in after taking an overdose of her mother's mianserin tablets. Which statement should guide the emergency management?",
+   "options": [
+    "Anticipate fatal arrhythmias as in TCA overdose",
+    "Overdose fatality is characteristically low, though seizures can occur \u2014 manage supportively",
+    "Naloxone is the specific antidote",
+    "Forced acid diuresis enhances elimination"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi's key point: mianserin has caused seizures in overdose, but its overdose fatality is low \u2014 management is supportive, in sharp contrast to TCA overdose with QRS-widening arrhythmias. There is no specific antidote for mianserin and diuresis plays no role; the contrast with TCAs is exactly what the exam is testing."
+  },
+  {
+   "id": "atd-tra-01",
+   "drugSlug": "trazodone",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Trazodone's mechanism (SARI) is best described as:",
+   "options": [
+    "Strong SERT inhibition with little receptor activity",
+    "5-HT2A antagonism with weak SERT inhibition and alpha-1 blockade",
+    "Alpha-2 blockade with 5-HT3 and H1 antagonism",
+    "DAT and NET inhibition without serotonergic action"
+   ],
+   "correctIndex": 1,
+   "explanation": "Trazodone is a serotonin antagonist and reuptake inhibitor: its clinical effects \u2014 sedation, orthostatic hypotension, the low-dose hypnotic niche \u2014 flow from 5-HT2A antagonism plus alpha-1 blockade, with only weak SERT inhibition; its metabolite mCPP also acts at 5-HT2 receptors. Option C is the NaSSA profile (mirtazapine/mianserin), option D is bupropion's, and strong SERT inhibition defines the SSRIs."
+  },
+  {
+   "id": "atd-tra-02",
+   "drugSlug": "trazodone",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A psychiatry resident reviews prescribing patterns and asks: in current practice, what is the most common way trazodone is actually used?",
+   "options": [
+    "Sole antidepressant therapy at hypnotic-range doses (about 25 mg nightly)",
+    "Hypnotic monotherapy pushed to 500 mg nightly",
+    "A low-dose (25\u2013100 mg) nightly hypnotic, usually alongside another antidepressant",
+    "First-line antidepressant monotherapy at about 600 mg per day"
+   ],
+   "correctIndex": 2,
+   "explanation": "Trazodone's commonest modern use is the low-dose (25\u2013100 mg) unlabeled hypnotic, usually added to another antidepressant \u2014 it sedates without tolerance or dependence (Katzung). Antidepressant activity needs roughly 300\u2013600 mg/day; 25 mg will not treat MDD alone, and 500\u2013600 mg nightly as a hypnotic invites orthostatic and sedative harm without added benefit."
+  },
+  {
+   "id": "atd-tra-03",
+   "drugSlug": "trazodone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 46-year-old man on trazodone 100 mg at night presents with a painful erection that has lasted 5 hours. The correct next step is:",
+   "options": [
+    "Reassure him that this is transient and self-limited, and continue the drug",
+    "Advise cold packs and review in the outpatient clinic next week",
+    "Simply halve the trazodone dose and observe at home",
+    "Treat as priapism \u2014 a urological emergency needing immediate assessment and drug cessation"
+   ],
+   "correctIndex": 3,
+   "explanation": "A painful erection of several hours on trazodone is priapism \u2014 its most feared (if rare) alpha-1-mediated adverse effect and a genuine urological emergency; delayed decompression risks ischaemic fibrosis and permanent erectile dysfunction, so the drug must stop and urgent urological care begins at once. Reassurance or a delayed review risks the organ, not just the erection."
+  },
+  {
+   "id": "atd-tra-04",
+   "drugSlug": "trazodone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "An 80-year-old started on trazodone 50 mg at night stands up on night three and nearly faints. The mechanism-based explanation is:",
+   "options": [
+    "Alpha-1 adrenergic blockade producing dose-related orthostatic hypotension",
+    "5-HT3 blockade causing vagal overactivity",
+    "Dopamine blockade causing neuroleptic-like parkinsonism",
+    "Anticholinergic tachycardia with reflex hypotension"
+   ],
+   "correctIndex": 0,
+   "explanation": "Trazodone and nefazodone are alpha-blocking agents; the resulting orthostatic hypotension is dose-related and is the classic mechanism of trazodone falls and near-syncope in the elderly \u2014 the same receptor pathway as priapism. It is not a 5-HT3, dopaminergic or anticholinergic phenomenon, which is why the other mechanisms fail here."
+  },
+  {
+   "id": "atd-tra-05",
+   "drugSlug": "trazodone",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "The approximate antidepressant dose range of trazodone (as opposed to its low-dose hypnotic range) is:",
+   "options": [
+    "25\u2013100 mg per day",
+    "300\u2013600 mg per day in divided doses",
+    "10\u201320 mg once daily",
+    "150\u2013225 mg once daily"
+   ],
+   "correctIndex": 1,
+   "explanation": "Hypnotic trazodone is 25\u2013100 mg at night; genuine antidepressant effect requires roughly 300\u2013600 mg/day \u2014 a range where orthostatic hypotension and sedation become limiting. Option C is an SSRI-scale dose and option D is venlafaxine's therapeutic window, so both are wrong-class traps."
+  },
+  {
+   "id": "atd-tra-06",
+   "drugSlug": "trazodone",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A man on doxazosin (an alpha-1 blocker) for prostatic obstruction is prescribed trazodone for insomnia. The chief interaction to counsel him about is:",
+   "options": [
+    "Reduced trazodone levels from enzyme induction",
+    "Serotonin syndrome from additive 5-HT activity",
+    "Additive alpha-1 blockade \u2014 marked orthostatic hypotension with fall and syncope risk",
+    "Prolonged QT with torsades de pointes risk"
+   ],
+   "correctIndex": 2,
+   "explanation": "Both trazodone and alpha-1 blockers (doxazosin, prazosin, terazosin) antagonize vascular alpha-1 receptors \u2014 stacking them multiplies positional hypotension, the commonest real-world trazodone interaction hazard in older men. There is no meaningful enzyme induction, no serotonergic add-on, and QT/torsades is not trazodone's signature risk."
+  },
+  {
+   "id": "atd-tra-07",
+   "drugSlug": "trazodone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Comparing the two SARI cousins on liver safety, which statement is correct?",
+   "options": [
+    "Trazodone is the more hepatotoxic of the two SARIs and itself carries a boxed liver warning",
+    "Neither drug has any reported hepatotoxicity",
+    "Both cause dose-dependent QT prolongation requiring routine ECGs",
+    "Trazodone's hepatotoxicity is rare; nefazodone's fulminant hepatic failure risk earned it a black-box warning"
+   ],
+   "correctIndex": 3,
+   "explanation": "The comparative point (Katzung): trazodone has only rarely been linked to liver injury, while its chemical cousin nefazodone received an FDA black-box warning (2001) for hepatotoxicity including lethal hepatic failure \u2014 the reason its prescriptions collapsed. Reversing the ranking or denying liver risk altogether are the classic wrong turns."
+  },
+  {
+   "id": "atd-tra-08",
+   "drugSlug": "trazodone",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which pharmacokinetic/metabolite statement about trazodone is correct?",
+   "options": [
+    "It is rapidly absorbed and its active metabolite mCPP is itself a potent 5-HT2 antagonist, adding to the effect",
+    "It is excreted unchanged in urine, so no hepatic metabolism occurs",
+    "Its metabolite is a potent CYP3A4 inhibitor like nefazodone",
+    "It has no active metabolites at all"
+   ],
+   "correctIndex": 0,
+   "explanation": "Trazodone is rapidly absorbed and hepatically metabolized; its metabolite meta-chlorophenylpiperazine (mCPP) is a potent 5-HT2 antagonist that extends the parent's receptor-based action (and serves as the classic 5-HT2 probe drug). Nefazodone \u2014 not trazodone \u2014 is the strong CYP3A4 inhibitor, and the 'no metabolism/no metabolites' options contradict its hepatic clearance."
+  },
+  {
+   "id": "atd-nef-01",
+   "drugSlug": "nefazodone",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Nefazodone's mechanism is best described as:",
+   "options": [
+    "Potent SERT and NET inhibition",
+    "Irreversible MAO-A inhibition",
+    "Alpha-2 autoreceptor blockade with H1 antagonism",
+    "5-HT2 antagonism with weak SERT and NET inhibition"
+   ],
+   "correctIndex": 3,
+   "explanation": "Nefazodone, chemically related to trazodone, is a 5-HT2 antagonist with only weak SERT and NET inhibition \u2014 and its active metabolites (hydroxynefazodone, mCPP) are 5-HT2 antagonists too. This receptor-first profile underlies its minimal sexual dysfunction and light serotonergic side-effect load. Potent reuptake inhibition is SSRI/SNRI territory, MAO inhibition is a different class, and alpha-2/H1 blockade is mirtazapine's signature."
+  },
+  {
+   "id": "atd-nef-02",
+   "drugSlug": "nefazodone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Eight weeks after starting nefazodone, a 50-year-old reports fatigue, dark urine and icterus; ALT is 8 times the upper limit of normal. The correct action is:",
+   "options": [
+    "Continue the drug and recheck LFTs after a month",
+    "Reduce the dose by half and monitor closely",
+    "Stop nefazodone immediately and evaluate for drug-induced liver injury",
+    "Add ursodeoxycholic acid and continue nefazodone unchanged"
+   ],
+   "correctIndex": 2,
+   "explanation": "Nefazodone carries an FDA black-box warning (2001) for hepatotoxicity, including rare fulminant hepatic failure and deaths \u2014 clinical jaundice with marked transaminase rise mandates immediate cessation and workup. Dose reduction is no remedy for idiosyncratic hepatotoxicity, and dosing through jaundice risks fulminant failure; liver disease is even a reason never to start the drug."
+  },
+  {
+   "id": "atd-nef-03",
+   "drugSlug": "nefazodone",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A patient stable on nefazodone is prescribed oral midazolam before a procedure. Why does the anaesthetist object?",
+   "options": [
+    "Nefazodone induces CYP2D6 and lowers midazolam levels",
+    "Nefazodone is a potent CYP3A4 inhibitor and can raise midazolam to dangerous levels of sedation",
+    "Midazolam antagonizes nefazodone at 5-HT2 receptors",
+    "Both compete for the same renal organic cation transporter"
+   ],
+   "correctIndex": 1,
+   "explanation": "Nefazodone is one of the classic potent CYP3A4 inhibitors \u2014 co-prescription with 3A4 substrates such as midazolam (also statins, cyclosporine, and in their era terfenadine/cisapride) can dangerously amplify levels; this interaction fingerprint is what examiners test. It inhibits rather than induces CYPs, the 5-HT2 story is irrelevant here, and this is hepatic CYP metabolism, not renal transport."
+  },
+  {
+   "id": "atd-nef-04",
+   "drugSlug": "nefazodone",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Despite attractive pharmacology, nefazodone is no longer commonly prescribed. The dominant reason is:",
+   "options": [
+    "The black-box hepatotoxicity warning (rare fulminant hepatic failure) made clinicians abandon it",
+    "A dose-related seizure risk similar to bupropion's",
+    "Its potent CYP2D6 inhibition caused unmanageable interactions",
+    "It was the sedating antidepressant most linked to priapism"
+   ],
+   "correctIndex": 0,
+   "explanation": "After the 2001 black box for hepatotoxicity \u2014 including lethal hepatic failure \u2014 nefazodone's prescriptions collapsed even though it remains generically available; its receptor pharmacology was never the problem. Seizure risk is bupropion's flag, its strong inhibition is of CYP3A4 (not 2D6), and priapism belongs to trazodone."
+  },
+  {
+   "id": "atd-nef-05",
+   "drugSlug": "nefazodone",
+   "domain": "Exam Pearls",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The 'least sexual side effects' antidepressant trio \u2014 a NEET-PG favourite \u2014 is:",
+   "options": [
+    "Fluoxetine, paroxetine, sertraline",
+    "Bupropion, mirtazapine, nefazodone",
+    "Venlafaxine, duloxetine, milnacipran",
+    "Amitriptyline, imipramine, clomipramine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung's line: bupropion, mirtazapine and nefazodone are the antidepressants with the least association with sexual side effects \u2014 the standard answer to 'which antidepressant spares sexual function'. SSRIs, SNRIs and TCAs all carry substantial sexual dysfunction, with paroxetine and clomipramine among the worst offenders."
+  },
+  {
+   "id": "atd-nef-06",
+   "drugSlug": "nefazodone",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "mechanism",
+   "question": "Why do nefazodone and trazodone spare sexual function far better than SSRIs?",
+   "options": [
+    "They block dopamine reuptake, driving libido upward",
+    "Their strong anticholinergic effect masks sexual dysfunction",
+    "They raise serotonin only at the 5-HT3 receptor",
+    "Their serotonergic action is 5-HT2 receptor antagonism rather than strong SERT flooding"
+   ],
+   "correctIndex": 3,
+   "explanation": "Sexual dysfunction tracks with intense SERT blockade and downstream serotonergic receptor stimulation; nefazodone and trazodone act mainly by 5-HT2 antagonism with only weak SERT inhibition, which is why Katzung ties their low sexual-side-effect burden to this receptor profile. Dopamine reuptake blockade is bupropion's trick, and neither SARI is meaningfully anticholinergic."
+  },
+  {
+   "id": "atd-nef-07",
+   "drugSlug": "nefazodone",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which pharmacokinetic statement about nefazodone is correct?",
+   "options": [
+    "It is rapidly absorbed and its active metabolites \u2014 hydroxynefazodone and mCPP \u2014 both contribute 5-HT2 antagonism",
+    "It is a prodrug hydrolyzed to trazodone",
+    "It is excreted renally unchanged with no active metabolites",
+    "Its half-life of several days permits once-weekly dosing"
+   ],
+   "correctIndex": 0,
+   "explanation": "Like trazodone, nefazodone is rapidly absorbed with hepatic metabolism to active metabolites \u2014 hydroxynefazodone and mCPP \u2014 both 5-HT2 antagonists that extend its pharmacological action. It is not a prodrug of trazodone (chemically related but a distinct drug), the multi-day half-life story is fluoxetine's, and 'no metabolites' is factually wrong for this drug."
+  },
+  {
+   "id": "atd-nef-08",
+   "drugSlug": "nefazodone",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 38-year-old on paroxetine for MDD reports loss of libido and delayed orgasm; he is adherent and only partially improved, with prominent insomnia. The evidence-based switch offering sexual sparing plus sedation is:",
+   "options": [
+    "Fluoxetine",
+    "Venlafaxine XR",
+    "Nefazodone",
+    "Clomipramine"
+   ],
+   "correctIndex": 2,
+   "explanation": "For SSRI-induced sexual dysfunction the switch trio is bupropion, mirtazapine or nefazodone; with prominent insomnia and normal LFTs, nefazodone's sedation plus minimal sexual dysfunction makes it the textbook pick. Fluoxetine and venlafaxine would reproduce the sexual problem, and clomipramine \u2014 a potent SERT-blocking TCA \u2014 is among the worst offenders."
+  },
+  {
+   "id": "atd-mix-01",
+   "drugSlug": "mixed",
+   "domain": "Active Recall",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Match each atypical antidepressant to its signature safety red flag \u2014 which mapping is correct?",
+   "options": [
+    "Bupropion \u2014 agranulocytosis; mirtazapine \u2014 seizures; trazodone \u2014 weight gain; nefazodone \u2014 priapism",
+    "Bupropion \u2014 weight gain; mirtazapine \u2014 insomnia; mianserin \u2014 sexual dysfunction; trazodone \u2014 hypertension",
+    "Bupropion \u2014 dose-related seizures; mirtazapine \u2014 sedation and weight gain; mianserin \u2014 blood dyscrasias; trazodone \u2014 priapism; nefazodone \u2014 hepatotoxicity",
+    "Bupropion \u2014 priapism; mirtazapine \u2014 hepatotoxicity; mianserin \u2014 seizures; trazodone \u2014 agranulocytosis"
+   ],
+   "correctIndex": 2,
+   "explanation": "The one-line safety map every exam wants: bupropion = dose-related seizures (avoid eating disorders and seizure history), mirtazapine = sedation with appetite/weight gain, mianserin = blood dyscrasias (fever/sore throat demands a CBC), trazodone = priapism and orthostatic hypotension, nefazodone = black-box hepatotoxicity. Every other row has shifted a red flag onto the wrong drug."
+  }
+ ]
+}

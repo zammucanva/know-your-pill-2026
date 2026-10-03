@@ -809,6 +809,110 @@ export const trifluoperazine: Drug = {
       explanation: "For psychosis: start 2–5 mg twice daily, target 10–20 mg/day, maximum 40 mg/day. Titrate by 5 mg every few days",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tap-tri-01",
+      question: "Tripathi grades alpha-adrenergic blockade of neuroleptics as: CPZ = triflupromazine = thioridazine > clozapine > fluphenazine > haloperidol > trifluoperazine > pimozide. The practical reading of this grading is:",
+      options: [
+        "Higher-potency compounds produce less alpha blockade and therefore less orthostatic hypotension",
+        "Higher-potency compounds produce more orthostatic hypotension",
+        "All neuroleptics produce identical hypotension",
+        "Alpha blockade strength parallels antipsychotic efficacy"
+      ],
+      correctIndex: 0,
+      explanation: "The grading runs from low-potency agents (strong alpha blockade, prominent postural hypotension and inhibited ejaculation) down to high-potency trifluoperazine and pimozide (least alpha blockade) - more potent compounds have lesser alpha-blocking activity. Alpha blockade is a side-effect axis, not the antipsychotic mechanism, which is mesolimbic D2 blockade; so option D is the classic wrong inference.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tap-tri-02",
+      question: "A 60-year-old man with schizophrenia on trifluoperazine develops bradykinesia, rigidity and a pill-rolling tremor. His neurologist proposes levodopa-carbidopa. Why is this proposal wrong?",
+      options: [
+        "Neuroleptic parkinsonism is irreversible, so no drug can help",
+        "Levodopa cannot act because D2 receptors are blocked - antimuscarinics (benztropine/trihexyphenidyl) or dose reduction are the answer",
+        "Levodopa is correct but must be given parenterally",
+        "The dose of trifluoperazine should be doubled to override the parkinsonism"
+      ],
+      correctIndex: 1,
+      explanation: "Antipsychotic parkinsonism is iatrogenic D2 blockade in the striatum, so levodopa's dopamine simply cannot express its effect - Katzung states levodopa should never be used in these patients. Treatment is dose reduction, switching, or antimuscarinic antiparkinsonism drugs (rarely amantadine), with a trial of withdrawing the antiparkinsonism drug every 3-4 months. Neuroleptic parkinsonism is often self-limiting, so option A is also false.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-tri-03",
+      question: "A 34-year-old man with schizophrenia is socially withdrawn, apathetic and blunted, with little agitation or aggression. Following Tripathi's symptom-guided selection, the fitting typical antipsychotics are:",
+      options: [
+        "Chlorpromazine",
+        "Thioridazine",
+        "Trifluoperazine or fluphenazine",
+        "Triflupromazine"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi's target-symptom list: withdrawn and apathetic patients point to the high-potency piperazine phenothiazines trifluoperazine and fluphenazine, whereas agitated, combative or violent patients suit the sedating low-potency agents chlorpromazine and thioridazine. This target-symptom-to-drug matching is a standard NEET PG/INI-CET framing of the older antipsychotics.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-tri-04",
+      question: "Some Indian PPI combination brands (e.g., STELABID, GASTABID) pair omeprazole with a 1 mg dose of which typical antipsychotic, exploiting its antianxiety action in functional GI complaints?",
+      options: [
+        "Haloperidol",
+        "Fluphenazine",
+        "Thioridazine",
+        "Trifluoperazine"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi's omeprazole section lists Indian fixed-dose combinations containing 1 mg trifluoperazine - a trace dose reflecting the piperazine phenothiazine's anxiolytic action (its full antipsychotic range is 5-60 mg/day). None of the other typicals named appear in such gastro-oesophageal combinations.",
+      afterSectionId: "top",
+    },
+    {
+      id: "tap-tri-05",
+      question: "A 45-year-old man becomes slow, quiet and 'depressed-looking' two weeks after his trifluoperazine dose was increased; he denies low mood and his psychotic symptoms are unchanged. The best explanation is:",
+      options: [
+        "A true depressive episode needing an antidepressant",
+        "Drug-induced akinesia (pseudodepression) that responds to cautious antiparkinsonism treatment or dose reduction",
+        "Tardive dyskinesia manifesting as depression",
+        "Cholestatic jaundice from the phenothiazine"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung: a pseudodepression due to drug-induced akinesia usually responds to cautious treatment with antiparkinsonism drugs, and other pseudodepressions reflect more dose than a partially remitted patient needs - so decrease the dose. Tardive dyskinesia is a movement disorder with no depressive picture, and jaundice presents with hepatic symptoms, not psychomotor slowing.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-tri-06",
+      question: "A 50-year-old on trifluoperazine (plus an SSRI) presents with fever 39.8 degrees C, lead-pipe rigidity, hyporeflexia and CK 1800 U/L. A second patient on the SSRI alone shows clonus, hyperreflexia and myoclonus. The discriminator between the two syndromes is:",
+      options: [
+        "Fever, because serotonin syndrome never causes fever",
+        "Mydriasis, because only NMS dilates the pupils",
+        "Neuromuscular pattern: lead-pipe rigidity with hyporeflexia and CK rise = NMS; clonus with hyperreflexia and myoclonus = serotonin syndrome",
+        "The two syndromes cannot be separated clinically"
+      ],
+      correctIndex: 2,
+      explanation: "NMS is a severe extrapyramidal syndrome of D2 blockade: lead-pipe rigidity, hyporeflexia, hyperthermia and elevated muscle-type CK; serotonin syndrome is serotonergic excess with clonus, hyperreflexia, myoclonus and GI symptoms. Fever occurs in BOTH syndromes, so it cannot discriminate (option A is the classic trap), and the syndromes are reliably separable at the bedside by the neuromuscular examination.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-tri-07",
+      question: "Among the following phenothiazines, which has the LOWEST propensity to lower the seizure threshold?",
+      options: [
+        "Chlorpromazine",
+        "Triflupromazine",
+        "Thioridazine",
+        "Trifluoperazine"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi: chlorpromazine lowers the seizure threshold and can precipitate fits in untreated epileptics, whereas the piperazine side-chain compounds (trifluoperazine, fluphenazine) have a much lower propensity - part of their minimal autonomic and CNS-depressant profile. Chlorpromazine and triflupromazine are aliphatic and thioridazine is piperidine, so all three distractors are low-potency, seizure-threshold-lowering agents.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-tri-08",
+      question: "Tripathi's anticholinergic grading of neuroleptics runs: thioridazine > CPZ > triflupromazine > trifluoperazine = haloperidol. A patient with prostatic enlargement prone to urinary retention should therefore avoid:",
+      options: [
+        "Thioridazine",
+        "Trifluoperazine",
+        "Haloperidol",
+        "Pimozide"
+      ],
+      correctIndex: 0,
+      explanation: "Thioridazine tops the anticholinergic list with marked central anticholinergic action (its EPS incidence is correspondingly the lowest), making it the worst choice in urinary retention, glaucoma, constipation or dementia-related delirium. Trifluoperazine and haloperidol sit at the weak-anticholinergic end, and pimozide has little alpha or cholinergic blockade at all.",
+      afterSectionId: "mechanism",
+    },
   ],
   activeRecallQuestions: [
     {

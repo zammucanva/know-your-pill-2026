@@ -897,6 +897,110 @@ export const brexpiprazole: Drug = {
       explanation: "For schizophrenia: start 1 mg once daily, target 2–4 mg/day, maximum 4 mg/day. Increase to 2–4 mg over 1–2 weeks",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atp-bre-01",
+      question: "Brexpiprazole was engineered as aripiprazole's successor chiefly by:",
+      options: [
+        "Retaining D2 partial agonism but strengthening 5-HT2A antagonism, softening akathisia",
+        "Swapping D2 partial agonism for full, irreversible D2 blockade",
+        "Adding strong muscarinic and H1 blockade for sedation",
+        "Replacing receptor pharmacology with dopamine-store depletion"
+      ],
+      correctIndex: 0,
+      explanation: "Brexpiprazole keeps the dopamine-partial-agonist chassis of aripiprazole while antagonising 5-HT2A more strongly, translating into less akathisia and somewhat more sedation than its parent. Full or irreversible D2 blockade would create a typical agent, and clozapine-style antimuscarinic loading was never the design goal.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atp-bre-02",
+      question: "Brexpiprazole's approved uses are:",
+      options: [
+        "Treatment-resistant schizophrenia with mandatory ANC monitoring",
+        "Schizophrenia and adjunctive therapy in major depressive disorder",
+        "Monotherapy for bipolar mania and Tourette syndrome",
+        "Obsessive-compulsive disorder and generalised anxiety disorder"
+      ],
+      correctIndex: 1,
+      explanation: "Brexpiprazole is labelled for schizophrenia and as an antidepressant adjunct in MDD — Katzung lists it among antipsychotics approved for adjunctive unipolar depression. The Tourette and autism-irritability labels belong to aripiprazole, OCD remains off-label territory, and blood-count monitoring is uniquely clozapine's burden.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-bre-03",
+      question: "A man stable on brexpiprazole 2 mg/day is started on fluoxetine by a family physician for depressive symptoms. Within two weeks he is oversedated with new restlessness. The correct explanation and action is:",
+      options: [
+        "A serotonergic malignant syndrome demanding cyproheptadine as the only action",
+        "Fluoxetine opposing brexpiprazole at striatal D2 receptors — switch to haloperidol",
+        "Fluoxetine inhibits CYP2D6, brexpiprazole levels rise — halve the brexpiprazole dose",
+        "Fluoxetine-induced CYP3A4 induction slashed brexpiprazole — raise the dose"
+      ],
+      correctIndex: 2,
+      explanation: "Fluoxetine is a strong CYP2D6 inhibitor and brexpiprazole is a 2D6 substrate, so exposure climbs and produces sedation plus akathisia — the remedy is halving the brexpiprazole dose (label guidance for strong 2D6 inhibitors). Fluoxetine induces nothing, and the picture is a PK interaction, not serotonin syndrome.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-bre-04",
+      question: "A clinical pharmacist reviews a chart showing brexpiprazole 2 mg/day with newly added paroxetine 20 mg. Which alert is correct?",
+      options: [
+        "Paroxetine induces brexpiprazole metabolism — double the dose",
+        "No interaction exists — brexpiprazole is renally cleared",
+        "The pair must never be co-prescribed because of serotonin syndrome",
+        "Paroxetine, a strong CYP2D6 inhibitor, will raise brexpiprazole levels — halve the brexpiprazole dose"
+      ],
+      correctIndex: 3,
+      explanation: "Brexpiprazole is cleared via CYP2D6 (with 3A4 help), so strong 2D6 inhibitors such as paroxetine and fluoxetine mandate a halved dose per label logic. Paroxetine does not induce metabolism, renal unchanged excretion is amisulpride's story, and the combination is permitted with dose adjustment rather than banned.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-bre-05",
+      question: "A man with schizophrenia had disabling akathisia on aripiprazole. Switching him to brexpiprazole, the resident expects which tolerability shift?",
+      options: [
+        "Less akathisia but more sedation and modest weight gain",
+        "More akathisia together with weight loss",
+        "Marked hyperprolactinaemia with galactorrhoea",
+        "Severe constipation with urinary retention"
+      ],
+      correctIndex: 0,
+      explanation: "Brexpiprazole's stronger 5-HT2A antagonism softens aripiprazole-type akathisia at the price of some sedation and modest weight gain — the designed trade-off (Katzung groups brexpiprazole with the no/minimal-prolactin agents). Galactorrhoea belongs to risperidone/amisulpride-tier D2 blockers and antimuscarinic ileus to clozapine.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-bre-06",
+      question: "A 45-year-old woman with MDD has had only partial response to sertraline 150 mg/day over 10 weeks — PHQ-9 still moderately severe. Which augmentation strategy is best supported by an approved adjunctive label?",
+      options: [
+        "Add sertindole",
+        "Add brexpiprazole",
+        "Switch to clozapine",
+        "Add amisulpride 400 mg/day"
+      ],
+      correctIndex: 1,
+      explanation: "Brexpiprazole carries an approved adjunctive-MDD indication — exactly this partial-response scenario (Katzung lists aripiprazole, quetiapine XR, brexpiprazole and olanzapine-fluoxetine among the formally approved options). Clozapine belongs to refractory psychosis, and amisulpride or sertindole lack an MDD-adjunct label while adding prolactin or QTc burdens.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-bre-07",
+      question: "A teaching exercise asks which modern agent was deliberately designed as aripiprazole's successor with a gentler akathisia profile. The best answer is:",
+      options: [
+        "Iloperidone — an irreversible D2 binder",
+        "Zotepine — an SSRI-like molecule with D2 action",
+        "Brexpiprazole — same D2 partial-agonist principle, stronger 5-HT2A antagonism",
+        "Cariprazine — a D2 full antagonist with added H1 blockade"
+      ],
+      correctIndex: 2,
+      explanation: "Brexpiprazole is the refined aripiprazole: dopamine partial agonism retained, serotonergic 5-HT2A antagonism strengthened for tolerability. Cariprazine is a D3-preferring partial agonist, iloperidone is a reversible multi-receptor antagonist, and zotepine's extras are transporter inhibition, not SSRI mimicry.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "atp-bre-08",
+      question: "With carbamazepine co-therapy, brexpiprazole dosing needs:",
+      options: [
+        "Halving, because carbamazepine blocks its metabolism",
+        "No change, because 2D6 alone governs its clearance",
+        "Weekly serum-level monitoring with a fixed 6 mg dose",
+        "An increase, because carbamazepine is a powerful CYP3A4 inducer that slashes brexpiprazole exposure"
+      ],
+      correctIndex: 3,
+      explanation: "Carbamazepine is a strong CYP3A4 inducer; brexpiprazole exposure falls, so its dose must rise — the mirror image of the fluoxetine/paroxetine halving rule. Halving applies to strong 2D6 inhibitors, and no routine serum-level service exists for this drug.",
+      afterSectionId: "timeline",
+    },
   ],
   activeRecallQuestions: [
     {

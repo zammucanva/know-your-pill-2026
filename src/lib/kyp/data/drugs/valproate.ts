@@ -944,6 +944,110 @@ export const valproate: Drug = {
       explanation: "For acute mania (divalproex er): start 25 mg/kg/day once daily (loading-style), target Level 50–125 µg/mL (typically 1000–2500 mg/day), maximum Level/counts-limited. Can start at full therapeutic dose — a major practical advantage",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "mst-val-01",
+      question: "Valproate's anticonvulsant and mood-stabilising actions are attributed to a combination of mechanisms. Which set is correct?",
+      options: [
+        "Phenytoin-like prolongation of sodium-channel inactivation, weak T-type calcium current attenuation, and raised GABA by inhibiting GABA-transaminase",
+        "Selective T-type calcium channel blockade identical to ethosuximide, with no sodium-channel effect",
+        "Alpha2-delta subunit binding that reduces presynaptic calcium entry and glutamate release",
+        "SV2A synaptic vesicle binding that reduces glutamate release during high-frequency firing"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi lists three actions — frequency-dependent sodium-channel inactivation, weak T-current attenuation (ethosuximide-like) and GABA augmentation via GABA-transaminase inhibition — with Katzung adding inositol depletion for the mood-stabilising effect. The selective-T-current-only claim is the single-mechanism story of ethosuximide, the alpha2-delta calcium-channel target belongs to the gabapentinoids, and SV2A synaptic-vesicle binding is levetiracetam's mechanism.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "mst-val-02",
+      question: "A 16-year-old on valproate for juvenile myoclonic epilepsy is brought in with three days of lethargy, vomiting and fluctuating confusion. Valproate level is 85 mcg/mL, ALT mildly raised, no focal neurological signs. The most appropriate next investigation and treatment are:",
+      options: [
+        "Check serum ceruloplasmin and label the events psychogenic until proven otherwise",
+        "Measure blood ammonia and give L-carnitine, since valproate can cause hyperammonaemic encephalopathy even at therapeutic levels",
+        "Order an urgent MRI and add a second anticonvulsant for assumed drug-resistant epilepsy",
+        "Double the valproate dose to push the level above 100 mcg/mL and control the encephalopathy"
+      ],
+      correctIndex: 1,
+      explanation: "Valproate interferes with the conversion of ammonia to urea; Katzung notes lethargy with increased blood ammonia can occur at therapeutic concentrations and that fatal hyperammonaemic encephalopathy has occurred in patients with urea-cycle defects. A therapeutic valproate level with encephalopathy is the signature clue — ammonia is measured, L-carnitine given, and the dose reduced or the drug stopped, never escalated.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-val-03",
+      question: "An 11-year-old girl has childhood absence epilepsy with occasional generalized tonic-clonic seizures. Which single drug best covers both seizure types?",
+      options: [
+        "Carbamazepine",
+        "Phenytoin",
+        "Valproate",
+        "Ethosuximide"
+      ],
+      correctIndex: 2,
+      explanation: "Valproate is Tripathi's drug of choice for absence seizures and for myoclonic and atonic seizures, and Katzung prefers it when generalized tonic-clonic seizures accompany absence — a genuinely broad-spectrum agent. Ethosuximide covers absence but not tonic-clonic seizures, while carbamazepine and phenytoin can exacerbate absence and myoclonic seizures and are avoided in the generalized epilepsies.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "mst-val-04",
+      question: "A 26-year-old woman with generalized epilepsy has been seizure-free for two years on sodium valproate and wishes to conceive. What is the key counselling point?",
+      options: [
+        "Valproate is safe in pregnancy provided the daily dose stays below 1000 mg and folate is taken",
+        "Valproate's main foetal risk is Ebstein anomaly of the tricuspid valve, unique to this drug",
+        "Valproate should simply be stopped on the day pregnancy is confirmed, with no interim plan",
+        "Valproate carries the highest teratogenic burden of the anticonvulsants — about 1-2% neural tube defect risk plus raised overall malformation and neurodevelopmental risk — so a planned switch to a safer agent is usually made before conception"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung quantifies first-trimester valproate neural tube defect risk at 1-2% (including spina bifida) with added cardiovascular, orofacial and digital anomalies and cognitive impairment in offspring, and Tripathi says the drug should be avoided in pregnancy. Ebstein anomaly is lithium's classic association, and abrupt withdrawal risks status epilepticus — changes are planned before conception.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-val-05",
+      question: "A 9-year-old with nephrotic syndrome and marked hypoalbuminaemia is started on valproate, and within a week develops tremor and drowsiness although the total valproate level reads 65 mcg/mL. The best explanation is:",
+      options: [
+        "Valproate is about 90% protein bound, so hypoalbuminaemia raises the free (active) fraction and toxicity can appear at a normal total level",
+        "Valproate is minimally protein bound, so the total level always mirrors pharmacological effect",
+        "The nephrotic syndrome induced autoinduction of valproate metabolism, lowering its clearance",
+        "Valproate levels fall in hypoalbuminaemia, so the dose must be doubled to reach effect"
+      ],
+      correctIndex: 0,
+      explanation: "Valproate is highly protein bound (about 90% per Tripathi) and largely confined to plasma with a small volume of distribution (about 0.15 L/kg per Katzung), so reduced albumin raises the free fraction and produces toxicity at a normal total concentration. There is no autoinduction — that is carbamazepine's signature — and the level would not fall with hypoalbuminaemia.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "mst-val-06",
+      question: "A 20-month-old boy with refractory epilepsy is to start valproate alongside two other anticonvulsants. The paediatrician warns the parents about the single most serious idiosyncratic risk of this plan. It is:",
+      options: [
+        "Hirsutism and gum hypertrophy identical to phenytoin, requiring drug withdrawal in most children",
+        "Fulminant hepatic failure — the risk of valproate hepatotoxicity is greatest in children under 2 years on polytherapy, so liver function is monitored",
+        "Irreversible gingival hyperplasia, which appears within weeks in most toddlers",
+        "Peripheral neuropathy that develops in a majority of infants on polytherapy"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung notes valproate's rare but severe idiosyncratic hepatotoxicity has its greatest risk under 2 years of age and with multiple medications, with most fatalities within 4 months of starting — hence LFT monitoring. Gingival hyperplasia and hirsutism are phenytoin effects, and peripheral neuropathy is not the leading valproate hazard in infants.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-val-07",
+      question: "A 7-year-old on phenobarbitone has valproate added for refractory seizures. A week later he is drowsy to the point of stupor. The most likely mechanism is:",
+      options: [
+        "Valproate displaced phenobarbitone from albumin by saturating the glucuronidation of both drugs",
+        "The combination precipitated absence status, an interaction unique to this pair",
+        "Valproate inhibits phenobarbitone metabolism, steeply raising phenobarbitone levels",
+        "Phenobarbitone inhibits valproate metabolism, raising valproate into the toxic range"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung states valproate inhibits the metabolism of several drugs including phenobarbital, with levels that may rise steeply and cause stupor or coma; Tripathi lists the same interaction. Phenobarbitone is an inducer rather than an inhibitor, so the reverse direction is wrong, and the combination contraindicated with valproate in Tripathi is clonazepam (absence status), not phenobarbitone.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-val-08",
+      question: "Which statement about Indian valproate preparations and divalproex is correct?",
+      options: [
+        "DEPAKOTE in India is the only valproate licensed for intravenous use in status epilepticus",
+        "VALPARIN CHRONO contains a fixed-dose combination of lamotrigine with valproate",
+        "Divalproex has half the bioavailability of sodium valproate but causes less weight gain",
+        "VALPARIN CHRONO and ENCORATE are sodium valproate brands, while divalproex (semisodium valproate, e.g. DEPAKOTE/VALANCE) is a 1:1 valproic acid-sodium valproate compound with better gastric tolerance"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists VALPARIN CHRONO and ENCORATE for sodium valproate and describes divalproex (DIPROEX, VALANCE, DEPAKOTE) as the 1:1 coordination compound with slower absorption but the same bioavailability and better gastric tolerance. Fixed-dose lamotrigine-valproate products do not exist, and divalproex does not halve bioavailability.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

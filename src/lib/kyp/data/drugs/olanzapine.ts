@@ -1106,6 +1106,110 @@ export const olanzapine: Drug = {
       explanation: "For schizophrenia: start 5–10 mg once daily at bedtime, target 10–20 mg/day, maximum 20 mg/day. Increase by 5 mg at intervals of at least several days",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atp-ola-01",
+      question: "Which binding profile correctly characterises olanzapine, the thienobenzodiazepine atypical?",
+      options: [
+        "5-HT2A > H1 > D4 > D2 affinity — multi-receptor blockade driving efficacy plus sedation and weight gain",
+        "Selective D2 antagonism with no H1 or muscarinic affinity",
+        "D2 full agonism with 5-HT3 antagonism only",
+        "H1 > alpha-1 > M1,3 > D2 — the profile responsible for minimal sedation"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung's binding order for olanzapine is 5-HT2A > H1 > D4 > D2 > alpha-1 > D1; the strong H1 and muscarinic blockade explains sedation, anticholinergic effects and metabolic liability, and Tripathi calls it a potent antimuscarinic. The H1 > alpha-1 > M1,3 > D2 ordering is not olanzapine's but quetiapine's — the signature of a heavily sedating, orthostasis-prone drug, so calling it 'minimal sedation' is exactly backwards; selective D2-only blockade describes high-potency typicals like haloperidol, and full D2 agonism is fiction.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atp-ola-02",
+      question: "A man with schizophrenia relapses on olanzapine 10 mg/day; he has smoked 20 cigarettes daily for years and shows no pill-count discrepancy. Which explanation best guides management?",
+      options: [
+        "Nicotine competes for the same receptor, reducing efficacy — double the dose",
+        "Smoking induces CYP1A2, clearing olanzapine faster — smokers need roughly 40% higher doses",
+        "Smoking is pharmacologically irrelevant; relapse implies deliberate non-adherence",
+        "Smoking inhibits CYP2D6, raising toxic metabolites — reduce the dose"
+      ],
+      correctIndex: 1,
+      explanation: "Cigarette smoke is a classic CYP1A2 inducer (Katzung Table 4-2), and olanzapine is metabolised by CYP1A2 plus glucuronidation (Tripathi) — so smokers clear olanzapine faster and may need about 40% higher doses; quitting smoking conversely raises levels and toxicity. The inhibition-based option inverts the enzyme story and names 2D6 (risperidone's enzyme), nicotine-receptor competition is not the mechanism, and dismissing smoking as irrelevant ignores one of the most testable PK pearls in psychopharmacology.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-ola-03",
+      question: "Six months after starting olanzapine 20 mg/day, a 32-year-old man has gained 9 kg; fasting glucose is 128 mg/dL and triglycerides 290 mg/dL. Which drug pair shares olanzapine's rank at the top of the metabolic-risk ladder?",
+      options: [
+        "Haloperidol and trifluoperazine",
+        "Quetiapine and risperidone",
+        "Clozapine and olanzapine",
+        "Aripiprazole and ziprasidone"
+      ],
+      correctIndex: 2,
+      explanation: "Clozapine and olanzapine jointly top the weight/diabetes/dyslipidaemia ladder — Katzung: new diabetes is 'most often seen with clozapine and olanzapine'; Tripathi names the same pair as high risk for precipitating diabetes and raising triglycerides. Aripiprazole and ziprasidone are the leanest atypicals, high-potency typicals like haloperidol/trifluoperazine are metabolically benign but EPS-heavy, and quetiapine/risperidone sit intermediate-to-low, not at the top.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-ola-04",
+      question: "A 45-year-old woman is to start olanzapine 15 mg/day for bipolar maintenance. Which monitoring panel should be established?",
+      options: [
+        "Monthly ECG for QTc alone",
+        "Weekly CBC with differential for agranulocytosis",
+        "Serum prolactin every 3 months, as hyperprolactinaemia is the signature risk",
+        "Baseline and periodic weight/waist, fasting glucose or HbA1c, lipid profile and blood pressure"
+      ],
+      correctIndex: 3,
+      explanation: "Olanzapine's defining liability is metabolic, so baseline and periodic weight, waist circumference, fasting glucose/HbA1c, lipids and BP are the standard panel (Katzung: diabetes and hypercholesterolaemia with clozapine/olanzapine). Weekly CBC is the clozapine rule, not olanzapine's; prolactin is barely raised by olanzapine; and QTc is not its signal to monitor.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-ola-05",
+      question: "A non-adherent patient with schizophrenia is offered olanzapine LAI. Which instruction is mandatory at every injection visit?",
+      options: [
+        "Observation at the facility for at least 3 hours post-injection, for post-injection delirium/sedation syndrome",
+        "Mandatory 24-hour inpatient admission for every injection",
+        "Prophylactic antihistamine before each injection",
+        "Home rest only; no observation is needed after the first dose"
+      ],
+      correctIndex: 0,
+      explanation: "Olanzapine pamoate LAI requires a minimum 3-hour post-injection observation because olanzapine can unintentionally enter the vasculature, producing post-injection delirium/sedation syndrome — a label-level safety rule and a favourite MCQ fact. Home rest after the first dose understates the risk, an antihistamine does not prevent the syndrome, and 24-hour admission overstates what is required: observation, not admission.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-ola-06",
+      question: "Olanzapine's elimination profile is best summarised as:",
+      options: [
+        "Half-life about 75 hours with predominantly renal unchanged excretion",
+        "Half-life 24-30 hours, metabolised by CYP1A2 and glucuronyl transferase, allowing once-daily dosing",
+        "Half-life about 6 hours, mandating twice-daily dosing",
+        "Half-life under 2 hours with an active epoxide metabolite"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi pegs olanzapine's half-life at 24-30 hours with CYP1A2 and glucuronyl transferase metabolism — compatible with once-daily (usually night-time) dosing, and the same 1A2 route that makes smoking clinically relevant. The 6-hour figure is quetiapine IR, the roughly 75-hour one is aripiprazole (which is hepatically, not renally, cleared), and the 2-hour epoxide story describes no antipsychotic.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-ola-07",
+      question: "Olanzapine has a recognised role in each of the following EXCEPT:",
+      options: [
+        "Refractory chemotherapy-induced nausea and vomiting (off-label)",
+        "Maintenance therapy in schizophrenia",
+        "First-line monotherapy for major depressive disorder",
+        "Acute mania in bipolar disorder"
+      ],
+      correctIndex: 2,
+      explanation: "First-line MDD monotherapy is the exception: unlike olanzapine's schizophrenia and acute-mania labels and its off-label role in refractory chemotherapy-induced nausea and vomiting (borrowed by oncology for its broad D2/5-HT/H1/M1 blockade, plus a migraine-adjunct niche), olanzapine is not a first-line MDD drug — the combination product with fluoxetine targets bipolar depression and augmentation scenarios, not routine first-line depression.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-ola-08",
+      question: "The receptor property most often cited to explain olanzapine's off-label efficacy in refractory chemotherapy-induced nausea and vomiting is:",
+      options: [
+        "5-HT4 agonism accelerating gastric emptying",
+        "5-HT1A agonism at the chemoreceptor trigger zone",
+        "Selective NK1 receptor antagonism",
+        "Blockade of multiple emesis-mediating receptors: D2, 5-HT3, H1 and muscarinic M1"
+      ],
+      correctIndex: 3,
+      explanation: "Olanzapine is a broad antagonist at D2, 5-HT2/5-HT3, H1 and M1 receptors, covering several emesis pathways simultaneously — the rationale for its oncology role in refractory CINV. NK1 blockade is aprepitant's mechanism, 5-HT4 agonism is prokinetic (metoclopramide-like) pharmacology, and 5-HT1A agonism misstates olanzapine's serotonergic action.",
+      afterSectionId: "mechanism",
+    },
   ],
   activeRecallQuestions: [
     {

@@ -821,6 +821,110 @@ export const temazepam: Drug = {
       explanation: "For insomnia: start 7.5–15 mg at bedtime (7.5 mg elderly), target 15–30 mg, maximum 30 mg. Short courses only",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "bzd-tem-01",
+      question: "Temazepam's elimination half-life sits at roughly:",
+      options: [
+        "1-2 hours",
+        "10-15 hours — an intermediate span that covers the night with modest hangover",
+        "30-100 hours",
+        "4-6 days"
+      ],
+      correctIndex: 1,
+      explanation: "Temazepam's ~10-15 hour half-life is the hypnotic sweet spot: long enough to maintain sleep, short enough that most patients wake clear-headed. The 1-2 hour tier is zaleplon/triazolam territory, 30-100 hours describes flurazepam and the diazepam family, and days-long half-lives belong to fluoxetine, not hypnotics.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-tem-02",
+      question: "A 45-year-old with sleep-maintenance insomnia (wakes at 3 am nightly) wants a hypnotic without morning fog before an exam week. Reasonable choice:",
+      options: [
+        "Diazepam 10 mg at bedtime",
+        "Flurazepam 30 mg at bedtime",
+        "Clonazepam 1 mg at bedtime indefinitely",
+        "Temazepam 15 mg at bedtime, short course"
+      ],
+      correctIndex: 3,
+      explanation: "Temazepam's intermediate half-life makes it the classic sleep-maintenance hypnotic with a tolerable morning profile for short courses. Diazepam and flurazepam carry long active-moiety tails that fog the next day, and indefinite clonazepam builds dependence — the exam-week framing is precisely when short-course logic matters.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-tem-03",
+      question: "Temazepam's hepatic handling is characterised by:",
+      options: [
+        "Extensive CYP3A4 oxidation to active metabolites",
+        "Direct glucuronidation — one of the LOT trio",
+        "Renal excretion unchanged, like gabapentin",
+        "Ester hydrolysis to an inactive acid"
+      ],
+      correctIndex: 1,
+      explanation: "Temazepam completes the LOT trio (lorazepam, oxazepam, temazepam) — direct glucuronidation with no CYP step and no active metabolites, giving it relative safety in hepatic impairment and old age. Oxidative metabolism defines diazepam-class drugs, renal-unchanged handling fits gabapentin or paliperidone, and ester hydrolysis is the prodrug route.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "bzd-tem-04",
+      question: "Temazepam's gel-filled capsules were reformulated in the UK primarily because:",
+      options: [
+        "The gel caused oesophageal ulceration",
+        "They were too expensive to manufacture",
+        "The capsule shell degraded in humidity",
+        "Drug abusers melted the gel to inject the drug, causing fatal embolic complications"
+      ],
+      correctIndex: 3,
+      explanation: "In the 1980s-90s the lipid-filled temazepam capsules were heated and drawn up for injection — the gel re-solidified in pulmonary vessels and caused fatal emboli — driving reformulation to solid dosage forms. It is a striking real-world pharmacovigilance story and a recurring forensic-style exam item.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-tem-05",
+      question: "The typical hypnotic dose range for temazepam in adults is:",
+      options: [
+        "0.125-0.25 mg",
+        "1-2 mg",
+        "15-30 mg at bedtime",
+        "100-200 mg at bedtime"
+      ],
+      correctIndex: 2,
+      explanation: "Temazepam is dosed 15-30 mg at bedtime — milligram doses an order of magnitude above the high-potency triazolobenzodiazepines. The 0.125-0.25 mg range is triazolam, 1-2 mg is clonazepam/lorazepam territory, and 100-200 mg suits no benzodiazepine hypnotic.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-tem-06",
+      question: "A man with loud snoring and witnessed apnoeas (untreated sleep apnoea) asks for temazepam for his insomnia. Best response:",
+      options: [
+        "Prescribe it — benzodiazepines do not affect breathing during sleep",
+        "Dose it half-strength to be safe",
+        "Prescribe it only with a statin on board",
+        "Defer the benzodiazepine — sedatives depress upper-airway tone and worsen apnoea; treat the OSA (CPAP) and use CBT-I"
+      ],
+      correctIndex: 3,
+      explanation: "Untreated obstructive sleep apnoea is a standard caution for all sedative-hypnotics: benzodiazepines reduce upper-airway muscle tone and blunt arousal responses, prolonging apnoeas and desaturation. Half-dosing does not remove the mechanism, and the correct path is treating the apnoea plus cognitive-behavioural therapy for insomnia.",
+      afterSectionId: "top",
+    },
+    {
+      id: "bzd-tem-07",
+      question: "Ranking classic benzodiazepine hypnotics by next-day hangover, the correct order (worst to best) is roughly:",
+      options: [
+        "Temazepam > triazolam > zaleplon",
+        "Flurazepam > temazepam > triazolam",
+        "Triazolam > flurazepam > temazepam",
+        "All three hang over identically"
+      ],
+      correctIndex: 1,
+      explanation: "Flurazepam's 30-100 hour active-moiety tail makes it the hangover champion; temazepam's intermediate span gives a modest morning residue; triazolam clears fast but instead causes rebound insomnia and amnesia — a different harm, not a hangover. Half-life predicts hangover is the testable rule.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-tem-08",
+      question: "A 70-year-old Indian patient has taken nitrazepam 10 mg nightly for years and now reports daytime sleepiness and a fall. Switching to temazepam at a lower equivalent dose is proposed because:",
+      options: [
+        "Temazepam is more potent per milligram, allowing larger doses",
+        "Temazepam has no withdrawal risk at all",
+        "Temazepam is shorter-acting with fewer active-metabolite accumulations, reducing daytime carryover",
+        "Nitrazepam and temazepam are the same molecule under different brands"
+      ],
+      correctIndex: 2,
+      explanation: "Nitrazepam's long half-life suits young adults poorly in the elderly — accumulation and falls follow — while temazepam's intermediate span plus glucuronidation-only metabolism reduces carryover. Potency per milligram is irrelevant to the accumulation story, withdrawal risk still exists and demands a taper, and the two are distinct molecules.",
+      afterSectionId: "neural-pathways",
+    },
   ],
   activeRecallQuestions: [
     {

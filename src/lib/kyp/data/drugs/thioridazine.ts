@@ -822,6 +822,110 @@ export const thioridazine: Drug = {
       explanation: "For schizophrenia (second-line): start 50–100 mg orally 3 times daily, target 200–600 mg/day, maximum 800 mg/day (absolute ceiling). Increase slowly; ECG at steady state",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tap-thi-01",
+      question: "A 58-year-old man on thioridazine reports palpitations; ECG shows QTc 540 ms with a brief run of polymorphic ventricular tachycardia. Among classic antipsychotics this drug is singled out because it:",
+      options: [
+        "Is the most torsadogenic classic antipsychotic - QTc prolongation and ventricular arrhythmia limit its use",
+        "Causes dose-independent agranulocytosis",
+        "Produces EPS in nearly every patient",
+        "Is the strongest CTZ antiemetic of the class"
+      ],
+      correctIndex: 0,
+      explanation: "Thioridazine carries the worst QTc/torsades reputation of the classic antipsychotics: T-wave and QTc changes appear above 300 mg/day, and overdose torsades is the reason antipsychotic poisoning is lethal almost exclusively with thioridazine (and mesoridazine). Options C and D invert its real profile - thioridazine has the LOWEST EPS incidence and, uniquely, is not a potent CTZ antiemetic.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-thi-02",
+      question: "A 62-year-old man on high-dose thioridazine reports progressive dimming and a brownish discolouration of vision with difficulty in dim light. Funduscopy shows pigmentary changes resembling retinitis pigmentosa. This toxicity is:",
+      options: [
+        "Reversible corneal oedema caused by the drug",
+        "Retinal pigmentary degeneration - thioridazine is the only antipsychotic that causes retinal deposits",
+        "Age-related cataract unrelated to any drug",
+        "Ethambutol optic neuropathy"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung: thioridazine is the ONLY antipsychotic causing retinal deposits - advanced cases resemble retinitis pigmentosa with 'browning' of vision - which is why its daily dose is capped (800 mg) and long-term use is discouraged. Corneal and lenticular deposits are the chlorpromazine story, while the retina is spared by that drug; the distractors belong to other drug classes entirely.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-thi-03",
+      question: "An 80-year-old with behavioural symptoms of dementia is started on thioridazine. He becomes more confused, with dry mouth, constipation and new urinary retention. The best explanation and management is:",
+      options: [
+        "Thioridazine parkinsonism - add trihexyphenidyl",
+        "Thioridazine hyperprolactinaemia - add bromocriptine",
+        "Thioridazine's marked anticholinergic load is worsening the confusional state - stop it and, if an antipsychotic is needed, use a high-potency agent in low dose",
+        "Early neuroleptic malignant syndrome - give dantrolene"
+      ],
+      correctIndex: 2,
+      explanation: "Low-potency piperidine thioridazine is heavily anticholinergic: in elderly or delirium-prone patients that load produces confusion, dry mouth, constipation and retention. Tripathi advises high-potency phenothiazines, haloperidol or aripiprazole in the elderly, and Katzung warns very high doses of antimuscarinic drugs cause toxic-confusional states. Adding trihexyphenidyl (option A) would stack MORE anticholinergic burden - the classic iatrogenic trap.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-thi-04",
+      question: "Thioridazine's pharmacodynamic fingerprint is:",
+      options: [
+        "High-potency piperazine phenothiazine with maximal EPS",
+        "Selective D2 antagonist with no anticholinergic activity",
+        "D2 partial agonist with additional 5-HT1A agonism",
+        "Low-potency piperidine phenothiazine: marked central anticholinergic action with very low EPS incidence"
+      ],
+      correctIndex: 3,
+      explanation: "In Tripathi's phenothiazine classification thioridazine is the piperidine member: low potency, strong central anticholinergic action, very low incidence of extrapyramidal effects, but more cardiac arrhythmia and sexual dysfunction - the pharmacological mirror image of haloperidol. Option A describes trifluoperazine/fluphenazine, option B a hypothetical perfectly selective agent, and option C is aripiprazole's profile.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tap-thi-05",
+      question: "A junior doctor proposes thioridazine 50 mg three times daily as the antiemetic for chemotherapy-induced vomiting. The consultant objects because:",
+      options: [
+        "Thioridazine, uniquely among neuroleptics, lacks the potent CTZ antiemetic action",
+        "Thioridazine becomes emetic at low doses",
+        "Thioridazine is the antiemetic of choice but is unavailable in India",
+        "Chemotherapy vomiting is vestibular, so all CTZ-acting drugs fail"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi states that neuroleptics EXCEPT thioridazine have potent antiemetic action through the chemoreceptor trigger zone - a favourite exception question. Chemotherapy-induced vomiting is CTZ-mediated, which is why prochlorperazine and metoclopramide work; motion sickness is the vestibular type that neuroleptics fail against anyway (option D).",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-thi-06",
+      question: "A 34-year-old man on thioridazine reports ejaculation occurring with minimal sensation or not at all, causing marital distress; libido and erections are intact. The mechanism is:",
+      options: [
+        "Androgen deficiency from pituitary damage",
+        "Alpha-1 adrenergic blockade interfering with ejaculation - thioridazine has the highest propensity among antipsychotics",
+        "Excess spinal serotonin release",
+        "Priapism requiring emergency corpus cavernosum irrigation"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi: postural hypotension, palpitation and inhibited ejaculation (especially with thioridazine) follow alpha adrenergic blockade, and thioridazine has the highest propensity for male sexual dysfunction of the antipsychotics. Priapism is the rarer erection emergency (classically with trazodone) - this patient's problem is emission and ejaculation, not sustained erection.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-thi-07",
+      question: "A 19-year-old is brought 6 hours after ingesting her grandmother's thioridazine. She is sedated and the ECG shows QTc 560 ms. Why is this overdose considered the most dangerous among the classic antipsychotics?",
+      options: [
+        "It always causes fatal agranulocytosis",
+        "It produces intractable status epilepticus",
+        "Along with mesoridazine it is the antipsychotic-poisoning exception - ventricular tachyarrhythmias (torsades, conduction block, sudden death)",
+        "There is no arrhythmic risk; only prolonged sedation occurs"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung: poisonings with antipsychotics are rarely fatal EXCEPT those due to mesoridazine and thioridazine, whose lethality comes from ventricular tachyarrhythmias - management resembles tricyclic overdose with cardiac monitoring. Agranulocytosis is clozapine's signature toxicity, seizures are not the dominant feature, and option D is contradicted by the QTc of 560 ms already on the monitor.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-thi-08",
+      question: "A patient stabilized on thioridazine is about to start fluoxetine. The chief pharmacological concern is:",
+      options: [
+        "Fluoxetine induces thioridazine metabolism and risks psychosis relapse",
+        "The pair stacks H1 blockade and causes hyperthermia",
+        "The combination is standard first-line therapy for schizophrenia",
+        "Fluoxetine inhibits CYP2D6, raising thioridazine levels on top of its own QTc-prolonging action"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung's fluoxetine discussion names thioridazine (with haloperidol) among CYP2D6-cleared antipsychotics whose levels rise under fluoxetine inhibition; thioridazine itself is quinidine-like and QT-prolonging, so the combination is a double hit on cardiac repolarisation. Option A reverses inhibition into induction, and H1 stacking produces sedation - not hyperthermia.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

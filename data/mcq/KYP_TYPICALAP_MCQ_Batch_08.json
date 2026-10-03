@@ -1,0 +1,889 @@
+{
+ "batch": "kyp-typicalap-mcq-batch-08",
+ "title": "Typical Antipsychotic MCQ Batch 08 - Chlorpromazine / Haloperidol / Fluphenazine / Trifluoperazine / Perphenazine / Thioridazine",
+ "generated": "2026-10-02",
+ "examOrientation": "Indian exams (NEET PG / INI-CET) + USMLE-style vignettes",
+ "textbookAnchors": "Facts aligned with Katzung Basic & Clinical Pharmacology 14e (Ch.29 antipsychotic agents: potency dose table, receptor-affinity ranks, decanoates, NMS, ocular/cardiac toxicity, overdose) and K.D. Tripathi Essentials of Medical Pharmacology 7e (Ch.32: phenothiazine classification by side chain, alpha/anticholinergic gradings, cholestatic jaundice, poikilothermia, akathisia/TD management, drug selection by target symptoms), cross-checked against KYP monograph facts. Books win over memory; no copyrighted text reproduced.",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras",
+  "notes": [
+   "afterSectionId values are real section ids observed on KYP pages: top, quick-facts, mechanism, timeline, neurotransmitters, high-yield-summary.",
+   "Answer positions deliberately spread: see stats.answerSpread (A13 B12 C12 D12).",
+   "Potency-EPS axis (high potency = more EPS, less sedation/anticholinergic) is the recurring class thread; thioridazine retinal vs chlorpromazine corneal/lenticular deposits kept as a deliberate mirror pair.",
+   "QA gate: validated with scripts/mcq_4step_check.py after extending the FACTS table with the six typical antipsychotics."
+  ]
+ },
+ "stats": {
+  "total": 49,
+  "byDrug": {
+   "chlorpromazine": 8,
+   "haloperidol": 8,
+   "fluphenazine": 8,
+   "trifluoperazine": 8,
+   "perphenazine": 8,
+   "thioridazine": 8,
+   "mixed": 1
+  },
+  "byDifficulty": {
+   "Foundation": 12,
+   "Clinical": 28,
+   "Advanced": 9
+  },
+  "byStyle": {
+   "recall": 22,
+   "vignette": 27
+  },
+  "byDomain": {
+   "Mechanism & Neuroscience": 8,
+   "Adverse Effects & Safety": 17,
+   "Pharmacokinetics": 5,
+   "Clinical Uses": 10,
+   "Exam Pearls": 4,
+   "Drug Interactions": 3,
+   "Indian Practice": 1,
+   "Active Recall": 1
+  },
+  "answerSpread": {
+   "0": 13,
+   "1": 12,
+   "2": 12,
+   "3": 12
+  }
+ },
+ "questions": [
+  {
+   "id": "tap-chl-01",
+   "drugSlug": "chlorpromazine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Chlorpromazine produces antipsychotic benefit plus a heavy load of orthostatic hypotension, sedation and dry mouth. Which single pharmacodynamic description best explains this whole profile?",
+   "options": [
+    "Selective D2 antagonism confined to the mesolimbic pathway, with no autonomic actions",
+    "Potent 5-HT2A antagonism with only weak D2 blockade",
+    "D2 antagonism combined with strong alpha-1, muscarinic and H1 receptor blockade",
+    "Partial agonism at D2 and 5-HT1A receptors"
+   ],
+   "correctIndex": 2,
+   "explanation": "Chlorpromazine is the prototype low-potency aliphatic phenothiazine: efficacy comes from D2 blockade in the mesolimbic pathway, while its strong alpha-1 (orthostatic falls), muscarinic (dry mouth, constipation) and H1 (sedation) blockade generate the adverse-effect cluster. Katzung gives its affinity as alpha-1 = 5-HT2A > D2 > D1. Option A describes a hypothetically clean selective agent, option B is the atypical (clozapine-like) profile, and option D is aripiprazole pharmacology."
+  },
+  {
+   "id": "tap-chl-02",
+   "drugSlug": "chlorpromazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 58-year-old man with chronic schizophrenia takes chlorpromazine 300 mg/day. He reports giddiness every morning on getting out of bed and once fainted in the bathroom. Lying BP is 112/70 and standing BP is 82/54. Which action of the drug best explains this?",
+   "options": [
+    "Alpha-1 adrenergic blockade producing postural (orthostatic) hypotension",
+    "H1-mediated sedation keeping him recumbent longer",
+    "D2 blockade at the chemoreceptor trigger zone",
+    "Muscarinic blockade with reflex tachycardia"
+   ],
+   "correctIndex": 0,
+   "explanation": "A lying-to-standing BP drop is the classic alpha-1 adrenergic blockade signature of low-potency phenothiazines; it is worse after parenteral dosing and accentuated by hypovolaemia (Tripathi). Management is slow position changes, dose review or switching to a drug with less adrenoceptor blockade. H1 sedation, CTZ antiemetic action and antimuscarinic tachycardia are genuine chlorpromazine effects, yet none of them produces a fall in pressure on standing."
+  },
+  {
+   "id": "tap-chl-03",
+   "drugSlug": "chlorpromazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 50-year-old man has taken high-dose chlorpromazine for 12 years. His wife notices a slate-grey discolouration of sun-exposed skin, and slit-lamp examination reveals corneal and lenticular deposits. This ocular-skin constellation is most characteristic of which drug?",
+   "options": [
+    "Haloperidol",
+    "Thioridazine",
+    "Fluphenazine",
+    "Chlorpromazine"
+   ],
+   "correctIndex": 3,
+   "explanation": "Deposits in the cornea and lens plus bluish-grey pigmentation of sun-exposed skin are the chlorpromazine signature after years of high-dose use (Katzung, ocular complications). Thioridazine's ocular toxicity is different in kind and site - pigmentary RETINAL degeneration resembling retinitis pigmentosa - so option B is the mirror trap. The high-potency drugs haloperidol and fluphenazine are not associated with these deposits."
+  },
+  {
+   "id": "tap-chl-04",
+   "drugSlug": "chlorpromazine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which statement about chlorpromazine's pharmacokinetics is correct?",
+   "options": [
+    "Oral bioavailability is high (about 65%) because first-pass metabolism is minimal",
+    "Elimination half-life is roughly 18-30 hours, yet metabolites continue to be excreted in urine and bile for weeks after stopping",
+    "It is cleared unchanged by the kidney, so no hepatic metabolism occurs",
+    "Clinical duration exactly matches the plasma half-life, forcing thrice-daily dosing"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi gives chlorpromazine a variable elimination half-life mostly in the 18-30 hour range with cumulation on repeated dosing, and metabolites are excreted for months after discontinuation. Oral bioavailability is actually low and erratic (25-35% per Katzung) - the ~65% figure belongs to haloperidol. The drug is oxidised/demethylated by hepatic CYPs (2D6 among them), and clinical duration outlasts the plasma half-life, so once-daily maintenance dosing is feasible."
+  },
+  {
+   "id": "tap-chl-05",
+   "drugSlug": "chlorpromazine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 30-year-old man in the emergency ward is violent and combative and is responding to commanding hallucinations; intravenous access is impossible. Among the typical antipsychotics, which choice matches classic emergency practice?",
+   "options": [
+    "Oral trifluoperazine, which acts within minutes",
+    "IM chlorpromazine 25-50 mg (or IM haloperidol), which calms the patient over 1-3 days",
+    "One immediate oral dose of thioridazine 400 mg",
+    "Fluphenazine decanoate depot injection, which works the same day"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi lists chlorpromazine (25 mg) and haloperidol (2-4 mg) intramuscularly for agitated, combative or violent psychosis and acute mania, with effect in 1-3 days; parenteral bioavailability also exceeds the erratic oral route. Oral dosing is too slow for emergency control, and depot injections are maintenance preparations given every 2-4 weeks with no same-day role."
+  },
+  {
+   "id": "tap-chl-06",
+   "drugSlug": "chlorpromazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "An 82-year-old woman is found drowsy in her unheated bedroom on a January morning; her rectal temperature is 33.5 degrees C. She takes chlorpromazine 200 mg at night for chronic psychosis. The mechanism is:",
+   "options": [
+    "Drug-induced fever with rigors",
+    "Malignant hyperthermia from sustained skeletal-muscle calcium release",
+    "Loss of central temperature regulation (poikilothermia), so body temperature drifts with the surroundings",
+    "Pure anticholinergic sweating blockade with otherwise intact thermoregulation"
+   ],
+   "correctIndex": 2,
+   "explanation": "Phenothiazines knock off central temperature control at higher doses, rendering the patient poikilothermic - body temperature falls in a cold environment (Tripathi). An elderly patient on night-time chlorpromazine in an unheated room is the classic hypothermia setup. The other options raise temperature: malignant hyperthermia is the anaesthetic-related myopathy, anticholinergic sweating blockade causes hyperpyrexia, and NMS combines fever with rigidity."
+  },
+  {
+   "id": "tap-chl-07",
+   "drugSlug": "chlorpromazine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which statement about chlorpromazine's antiemetic action is correct?",
+   "options": [
+    "It blocks the chemoreceptor trigger zone and helps most drug- and disease-induced vomiting, but NOT motion sickness",
+    "It acts on the vestibular apparatus and is the drug of choice for motion sickness",
+    "It has no antiemetic action whatsoever",
+    "It is the first-line antiemetic for vomiting of early pregnancy"
+   ],
+   "correctIndex": 0,
+   "explanation": "Neuroleptics block D2 in the chemoreceptor trigger zone (CTZ), making chlorpromazine effective in drug-, uraemia- or radiation-induced vomiting, but it is ineffective in motion sickness, which is vestibular in origin and needs antihistamines or hyoscine. Option B describes vestibular-acting drugs, and option C is simply false. For early pregnancy vomiting, H1 antihistamines such as doxylamine/promethazine are the traditional first-line agents, not chlorpromazine."
+  },
+  {
+   "id": "tap-chl-08",
+   "drugSlug": "chlorpromazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A young woman is brought in 4 hours after swallowing her grandmother's chlorpromazine tablets. She is drowsy with constricted pupils, BP 85/50, temperature 35 degrees C and a normal ECG. Which feature most distinguishes this poisoning from tricyclic antidepressant overdose?",
+   "options": [
+    "Dry flushed skin with mydriasis, tachycardia and urinary retention",
+    "QRS widening beyond 120 ms with wide-complex arrhythmias",
+    "Generalised tonic-clonic seizures as the dominant feature",
+    "Miotic pupils with hypotension, hypothermia and depressed deep tendon reflexes"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung's overdose profile of phenothiazines: drowsiness proceeding to coma, MIOTIC pupils, decreased reflexes, hypotension and hypothermia - and unlike tricyclics, rarely fatal (the exceptions being thioridazine and mesoridazine). Options A and B are the tricyclic anticholinergic-cardiotoxic picture (mydriasis, QRS widening responsive to bicarbonate). Seizures can occur in both poisonings, so they do not discriminate."
+  },
+  {
+   "id": "tap-hal-01",
+   "drugSlug": "haloperidol",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Haloperidol's rank order of receptor affinity explains why extrapyramidal symptoms dominate its side-effect profile. That rank order is:",
+   "options": [
+    "Alpha-1 = 5-HT2A > D2 > D1",
+    "D2 > alpha-1 > D4 > 5-HT2A > D1 > H1",
+    "5-HT2A > D2 > alpha-1 > muscarinic",
+    "H1 > muscarinic > alpha-1 > D2"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung lists haloperidol as D2 > alpha-1 > D4 > 5-HT2A > D1 > H1: a high-potency butyrophenone with maximal D2 occupancy, so nigrostriatal blockade (acute dystonia, akathisia, parkinsonism, tardive dyskinesia) is the price of its antipsychotic effect, while H1 and muscarinic effects are minimal. Option A is chlorpromazine's profile, option C resembles an atypical agent, and option D describes an essentially antihistaminic drug."
+  },
+  {
+   "id": "tap-hal-02",
+   "drugSlug": "haloperidol",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 22-year-old man started haloperidol 10 days ago for first-episode psychosis. He arrives with his neck twisted to the left, jaw clenched and eyes rolled upward, and is terrified. The most appropriate immediate treatment is:",
+   "options": [
+    "Increase the haloperidol dose and observe",
+    "Start oral propranolol",
+    "Switch to fluphenazine decanoate injections",
+    "Give IM promethazine or IM benztropine"
+   ],
+   "correctIndex": 3,
+   "explanation": "This is an acute dystonic reaction (torticollis, trismus, oculogyric crisis), typically within the first week or two in a young male started on a high-potency D2 blocker; the standard rescue is a parenteral antihistamine (promethazine/diphenhydramine) or anticholinergic (benztropine). Raising the dose or switching to another high-potency agent worsens the dystonia, and propranolol is the drug for akathisia, not dystonia."
+  },
+  {
+   "id": "tap-hal-03",
+   "drugSlug": "haloperidol",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "An ICU team starts an intravenous haloperidol infusion for a 66-year-old man with agitated delirium. Which monitoring is mandatory with this drug and route?",
+   "options": [
+    "Hourly capillary blood glucose",
+    "Weekly CBC for agranulocytosis",
+    "ECG surveillance for QTc prolongation and torsades de pointes",
+    "Daily serum prolactin levels"
+   ],
+   "correctIndex": 2,
+   "explanation": "Intravenous haloperidol, widely used for ICU delirium, carries a QTc-prolongation and torsades warning; Katzung notes QTc monitoring is meaningful once values exceed about 500 ms on rhythm strips or Holter recordings. Agranulocytosis surveillance belongs to clozapine, prolactin rise is a chronic-therapy issue, and glucose monitoring is an atypical-antipsychotic metabolic concern - none is the ICU haloperidol emergency."
+  },
+  {
+   "id": "tap-hal-04",
+   "drugSlug": "haloperidol",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "Five days after his haloperidol dose was stepped up, a 40-year-old man with schizophrenia develops fever of 39.6 degrees C, lead-pipe rigidity, fluctuating BP and tachycardia; CK is 2400 U/L. The correct management is:",
+   "options": [
+    "Stop haloperidol immediately and treat with cooling, IV dantrolene and bromocriptine",
+    "Add benztropine and continue the same haloperidol dose",
+    "Cross over to a higher dose of fluphenazine",
+    "Give IM chlorpromazine for sedation and reassess the next day"
+   ],
+   "correctIndex": 0,
+   "explanation": "Rigidity plus hyperthermia plus autonomic instability plus rising muscle-type CK after a D2 blocker is neuroleptic malignant syndrome (NMS): the offending neuroleptic must be stopped at once, with physical cooling, IV dantrolene for the rigidity and the dopamine agonist bromocriptine (Tripathi notes anticholinergics are of NO help here). Continuing or substituting another potent D2 blocker is dangerous, and sedation alone misses a medical emergency."
+  },
+  {
+   "id": "tap-hal-05",
+   "drugSlug": "haloperidol",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Haloperidol decanoate as long-term maintenance therapy is typically given:",
+   "options": [
+    "Orally, once daily",
+    "Every 2-3 days by deep IM injection",
+    "Every 4 weeks as a depot injection, with oral cover during the loading phase",
+    "Every 6 months"
+   ],
+   "correctIndex": 2,
+   "explanation": "The decanoate ester releases haloperidol slowly, giving a roughly once-a-month (4-weekly) depot for patients who will not or cannot take oral medication (fluphenazine decanoate runs 2-4 weekly). Katzung warns that long-acting injectables continue to block D2 receptors for 3-6 months after the last injection, which is why oral cover is needed while the depot loads - and why switching afterwards is unhurried."
+  },
+  {
+   "id": "tap-hal-06",
+   "drugSlug": "haloperidol",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 28-year-old stable on haloperidol 15 mg/day says: 'For three weeks I have felt driven to keep moving; my legs will not let me sit.' Psychotic symptoms remain controlled. The best next step is:",
+   "options": [
+    "Akathisia - add propranolol or reduce the haloperidol dose; do NOT raise the antipsychotic",
+    "Relapse of psychosis - increase haloperidol",
+    "Tardive dyskinesia - start valbenazine",
+    "Drug-induced parkinsonism - add levodopa"
+   ],
+   "correctIndex": 0,
+   "explanation": "Subjective inner restlessness with preserved insight, on a stable antipsychotic dose, is akathisia - the classic trap is mistaking it for relapse and escalating the D2 blocker, which worsens it. Tripathi: a benzodiazepine or propranolol (most effective) with dose reduction or switch to an atypical is the management. Tardive dyskinesia shows involuntary orofacial movements, and levodopa is contraindicated with neuroleptics."
+  },
+  {
+   "id": "tap-hal-07",
+   "drugSlug": "haloperidol",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 9-year-old boy has had motor tics plus vocalisations (grunts, sudden words) for over a year, worsening at school and distressing the family. Which antipsychotic is the classic named preferred drug for this disorder?",
+   "options": [
+    "Chlorpromazine",
+    "Thioridazine",
+    "Trifluoperazine",
+    "Haloperidol"
+   ],
+   "correctIndex": 3,
+   "explanation": "Haloperidol is the named preferred drug for Gilles de la Tourette syndrome (along with Huntington's disease and acute schizophrenia) in Tripathi; its potent D2 blockade suppresses tic severity, with risperidone and aripiprazole as modern alternatives. Low-potency phenothiazines such as chlorpromazine and thioridazine are not the classic choice here, and trifluoperazine is framed for withdrawn-apathetic psychosis rather than tic disorders."
+  },
+  {
+   "id": "tap-hal-08",
+   "drugSlug": "haloperidol",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "neurotransmitters",
+   "question": "A 26-year-old woman on haloperidol 10 mg/day reports amenorrhoea for 4 months with milky nipple discharge; pregnancy test is negative and serum prolactin is 110 ng/mL. The mechanism is:",
+   "options": [
+    "Direct destruction of pituitary lactotrope cells",
+    "Blockade of D2 receptors on lactotropes, removing tonic dopaminergic inhibition of prolactin secretion",
+    "Direct stimulation of prolactin gene transcription",
+    "Blockade of prolactin receptors on breast duct epithelium"
+   ],
+   "correctIndex": 1,
+   "explanation": "Dopamine acting on tuberoinfundibular D2 receptors tonically inhibits prolactin release; haloperidol removes that brake, so prolactin rises, producing the amenorrhoea-galactorrhoea syndrome and infertility in women (loss of libido, impotence in men) - Katzung suggests switching to a prolactin-neutral atypical such as aripiprazole if dose reduction fails. Options A and C are fabricated mechanisms, and option D would reduce lactation, not cause it."
+  },
+  {
+   "id": "tap-flu-01",
+   "drugSlug": "fluphenazine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Fluphenazine and trifluoperazine share the same side chain and therefore the same pharmacodynamic signature. Which one is it?",
+   "options": [
+    "Piperazine side chain - high potency, minimum autonomic actions, marked EPS",
+    "Aliphatic side chain - low potency with heavy sedation and hypotension",
+    "Piperidine side chain - strong anticholinergic action with very low EPS",
+    "Butyrophenone structure - selective D2 antagonism"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi classes fluphenazine and trifluoperazine together as high-potency piperazine side-chain phenothiazines: minimal sedation, hypotension, seizure-threshold lowering, jaundice and hypersensitivity, but pronounced extrapyramidal side effects. The aliphatic group is chlorpromazine/triflupromazine, the piperidine group is thioridazine, and butyrophenone is haloperidol - a different chemical family altogether."
+  },
+  {
+   "id": "tap-flu-02",
+   "drugSlug": "fluphenazine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Fluphenazine decanoate (ANATENSOL DECANOATE, PROLINATE) as a maintenance preparation is given:",
+   "options": [
+    "Once weekly subcutaneously",
+    "Orally every night",
+    "Every 6 months",
+    "Every 2-4 weeks intramuscularly"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi: fluphenazine decanoate is the classic depot given intramuscularly every 2-4 weeks in uncooperative psychotics - the ester's slow release maintains D2 blockade between doses. Katzung adds that depot formulations may still block D2 receptors 3-6 months after the final injection. Weekly subcutaneous dosing, nightly oral use and half-yearly intervals are all wrong for this ester."
+  },
+  {
+   "id": "tap-flu-03",
+   "drugSlug": "fluphenazine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 31-year-old man with schizophrenia has been hospitalised twice this year because he stops his tablets; he denies illness and dislikes daily pills, though his symptoms are well controlled on oral fluphenazine. The most rational long-term strategy is:",
+   "options": [
+    "Stop antipsychotics and review only after the next relapse",
+    "Convert to fluphenazine decanoate depot injections every 2-4 weeks",
+    "Double the oral dose to offset missed tablets",
+    "Add a benzodiazepine for long-term cover"
+   ],
+   "correctIndex": 1,
+   "explanation": "Non-adherence with repeated relapse is the textbook indication for a depot: Katzung calls fluphenazine and haloperidol decanoate suitable for long-term parenteral maintenance in patients who cannot or will not take oral medication. Stopping invites relapse (average relapse around 6 months after discontinuation), and doubling oral doses or adding benzodiazepines does nothing for the adherence problem itself."
+  },
+  {
+   "id": "tap-flu-04",
+   "drugSlug": "fluphenazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Compared with chlorpromazine, which adverse effect is LEAST likely with high-potency fluphenazine?",
+   "options": [
+    "Acute dystonic reaction",
+    "Akathisia",
+    "Cholestatic jaundice with photosensitivity",
+    "Drug-induced parkinsonism"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi: high-potency piperazine phenothiazines have minimum autonomic actions and are less likely to impair glucose tolerance, cause jaundice and cause hypersensitivity reactions - so cholestatic jaundice (a 2-4 week, 2-4% event of low-potency agents like chlorpromazine) is the least likely here. The three extrapyramidal options are precisely what fluphenazine maximises: acute dystonia, akathisia and parkinsonism are marked."
+  },
+  {
+   "id": "tap-flu-05",
+   "drugSlug": "fluphenazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "After 9 years on fluphenazine, a 55-year-old woman has constant lip-smacking, chewing movements and choreoathetoid limb movements. Which management set is correct?",
+   "options": [
+    "Raise the fluphenazine dose to suppress the movements",
+    "Add trihexyphenidyl",
+    "Start levodopa-carbidopa",
+    "Reduce or stop fluphenazine, switch to a low-TD-risk atypical, consider VMAT2 inhibitors (valbenazine/deutetrabenazine), and avoid anticholinergics"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tardive dyskinesia appears late (10-20% after long-term treatment, worst in elderly women) as purposeless facial and limb movements. Anticholinergics ACCENTUATE it (option B), dose increase only masks it transiently (option A), and levodopa worsens dyskinesia (option C). Katzung's steps: reduce or stop the drug, switch to an atypical with the least TD risk (quetiapine/clozapine), eliminate anticholinergics - and the modern VMAT2 inhibitors valbenazine/deutetrabenazine target the dyskinesia itself."
+  },
+  {
+   "id": "tap-flu-06",
+   "drugSlug": "fluphenazine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "top",
+   "question": "Katzung highlights which pair of first-generation drugs as well-tolerated parenteral preparations available for rapid initiation of treatment?",
+   "options": [
+    "Chlorpromazine and thioridazine",
+    "Haloperidol and fluphenazine",
+    "Trifluoperazine and perphenazine",
+    "Thioridazine and pimozide"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung: parenteral forms of the high-potency older drugs haloperidol and fluphenazine are available for rapid initiation and for maintenance in noncompliant patients - because parenteral bioavailability far exceeds the oral route, IM doses must be only a fraction of oral doses. Low-potency agents (option A) lack this rapid-initiation profile, and pimozide is an oral-only D2 blocker."
+  },
+  {
+   "id": "tap-flu-07",
+   "drugSlug": "fluphenazine",
+   "domain": "Exam Pearls",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "The classic equieffective dose relationship used in exams to compare antipsychotic potency is:",
+   "options": [
+    "100 mg of chlorpromazine is roughly equivalent to 2 mg of fluphenazine",
+    "2 mg of chlorpromazine equals 100 mg of fluphenazine",
+    "All antipsychotics are equieffective at exactly 100 mg",
+    "Potency comparison is impossible because dose ranges never overlap"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung's dose table: minimum effective therapeutic dose is 100 mg/day for chlorpromazine (range 100-1000) versus 2 mg/day for fluphenazine (range 2-60) and 2 mg for haloperidol - a roughly 50:1 ratio that defines low versus high potency. Antipsychotic EFFICACY is equal across the class; potency only changes the milligram dose and the side-effect spectrum. Option B reverses the relationship, and options C and D contradict the table."
+  },
+  {
+   "id": "tap-flu-08",
+   "drugSlug": "fluphenazine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "mechanism",
+   "question": "A 35-year-old man stable on fluphenazine 10 mg/day is started on fluoxetine for depression. Ten days later he complains of new stiffness, slowness and a shuffling gait. The mechanism is:",
+   "options": [
+    "Fluoxetine induces CYP3A4 and lowers fluphenazine levels",
+    "The pair produces additive anticholinergic toxicity",
+    "Fluoxetine inhibits CYP2D6, raising fluphenazine levels and deepening D2 blockade",
+    "Fluoxetine displaces fluphenazine from striatal D2 receptors"
+   ],
+   "correctIndex": 2,
+   "explanation": "Fluoxetine is a potent CYP2D6 inhibitor and fluphenazine is a 2D6-cleared antipsychotic, so antipsychotic exposure rises and parkinsonism emerges within days-to-weeks (Katzung's fluoxetine discussion names haloperidol and thioridazine among such 2D6 substrates). Option A reverses inhibition into induction, anticholinergic stacking would produce dryness and confusion rather than bradykinesia, and displacement from receptors is not how the combination harms."
+  },
+  {
+   "id": "tap-tri-01",
+   "drugSlug": "trifluoperazine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Tripathi grades alpha-adrenergic blockade of neuroleptics as: CPZ = triflupromazine = thioridazine > clozapine > fluphenazine > haloperidol > trifluoperazine > pimozide. The practical reading of this grading is:",
+   "options": [
+    "Higher-potency compounds produce less alpha blockade and therefore less orthostatic hypotension",
+    "Higher-potency compounds produce more orthostatic hypotension",
+    "All neuroleptics produce identical hypotension",
+    "Alpha blockade strength parallels antipsychotic efficacy"
+   ],
+   "correctIndex": 0,
+   "explanation": "The grading runs from low-potency agents (strong alpha blockade, prominent postural hypotension and inhibited ejaculation) down to high-potency trifluoperazine and pimozide (least alpha blockade) - more potent compounds have lesser alpha-blocking activity. Alpha blockade is a side-effect axis, not the antipsychotic mechanism, which is mesolimbic D2 blockade; so option D is the classic wrong inference."
+  },
+  {
+   "id": "tap-tri-02",
+   "drugSlug": "trifluoperazine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 60-year-old man with schizophrenia on trifluoperazine develops bradykinesia, rigidity and a pill-rolling tremor. His neurologist proposes levodopa-carbidopa. Why is this proposal wrong?",
+   "options": [
+    "Neuroleptic parkinsonism is irreversible, so no drug can help",
+    "Levodopa cannot act because D2 receptors are blocked - antimuscarinics (benztropine/trihexyphenidyl) or dose reduction are the answer",
+    "Levodopa is correct but must be given parenterally",
+    "The dose of trifluoperazine should be doubled to override the parkinsonism"
+   ],
+   "correctIndex": 1,
+   "explanation": "Antipsychotic parkinsonism is iatrogenic D2 blockade in the striatum, so levodopa's dopamine simply cannot express its effect - Katzung states levodopa should never be used in these patients. Treatment is dose reduction, switching, or antimuscarinic antiparkinsonism drugs (rarely amantadine), with a trial of withdrawing the antiparkinsonism drug every 3-4 months. Neuroleptic parkinsonism is often self-limiting, so option A is also false."
+  },
+  {
+   "id": "tap-tri-03",
+   "drugSlug": "trifluoperazine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 34-year-old man with schizophrenia is socially withdrawn, apathetic and blunted, with little agitation or aggression. Following Tripathi's symptom-guided selection, the fitting typical antipsychotics are:",
+   "options": [
+    "Chlorpromazine",
+    "Thioridazine",
+    "Trifluoperazine or fluphenazine",
+    "Triflupromazine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi's target-symptom list: withdrawn and apathetic patients point to the high-potency piperazine phenothiazines trifluoperazine and fluphenazine, whereas agitated, combative or violent patients suit the sedating low-potency agents chlorpromazine and thioridazine. This target-symptom-to-drug matching is a standard NEET PG/INI-CET framing of the older antipsychotics."
+  },
+  {
+   "id": "tap-tri-04",
+   "drugSlug": "trifluoperazine",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "top",
+   "question": "Some Indian PPI combination brands (e.g., STELABID, GASTABID) pair omeprazole with a 1 mg dose of which typical antipsychotic, exploiting its antianxiety action in functional GI complaints?",
+   "options": [
+    "Haloperidol",
+    "Fluphenazine",
+    "Thioridazine",
+    "Trifluoperazine"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi's omeprazole section lists Indian fixed-dose combinations containing 1 mg trifluoperazine - a trace dose reflecting the piperazine phenothiazine's anxiolytic action (its full antipsychotic range is 5-60 mg/day). None of the other typicals named appear in such gastro-oesophageal combinations."
+  },
+  {
+   "id": "tap-tri-05",
+   "drugSlug": "trifluoperazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 45-year-old man becomes slow, quiet and 'depressed-looking' two weeks after his trifluoperazine dose was increased; he denies low mood and his psychotic symptoms are unchanged. The best explanation is:",
+   "options": [
+    "A true depressive episode needing an antidepressant",
+    "Drug-induced akinesia (pseudodepression) that responds to cautious antiparkinsonism treatment or dose reduction",
+    "Tardive dyskinesia manifesting as depression",
+    "Cholestatic jaundice from the phenothiazine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung: a pseudodepression due to drug-induced akinesia usually responds to cautious treatment with antiparkinsonism drugs, and other pseudodepressions reflect more dose than a partially remitted patient needs - so decrease the dose. Tardive dyskinesia is a movement disorder with no depressive picture, and jaundice presents with hepatic symptoms, not psychomotor slowing."
+  },
+  {
+   "id": "tap-tri-06",
+   "drugSlug": "trifluoperazine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 50-year-old on trifluoperazine (plus an SSRI) presents with fever 39.8 degrees C, lead-pipe rigidity, hyporeflexia and CK 1800 U/L. A second patient on the SSRI alone shows clonus, hyperreflexia and myoclonus. The discriminator between the two syndromes is:",
+   "options": [
+    "Fever, because serotonin syndrome never causes fever",
+    "Mydriasis, because only NMS dilates the pupils",
+    "Neuromuscular pattern: lead-pipe rigidity with hyporeflexia and CK rise = NMS; clonus with hyperreflexia and myoclonus = serotonin syndrome",
+    "The two syndromes cannot be separated clinically"
+   ],
+   "correctIndex": 2,
+   "explanation": "NMS is a severe extrapyramidal syndrome of D2 blockade: lead-pipe rigidity, hyporeflexia, hyperthermia and elevated muscle-type CK; serotonin syndrome is serotonergic excess with clonus, hyperreflexia, myoclonus and GI symptoms. Fever occurs in BOTH syndromes, so it cannot discriminate (option A is the classic trap), and the syndromes are reliably separable at the bedside by the neuromuscular examination."
+  },
+  {
+   "id": "tap-tri-07",
+   "drugSlug": "trifluoperazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Among the following phenothiazines, which has the LOWEST propensity to lower the seizure threshold?",
+   "options": [
+    "Chlorpromazine",
+    "Triflupromazine",
+    "Thioridazine",
+    "Trifluoperazine"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi: chlorpromazine lowers the seizure threshold and can precipitate fits in untreated epileptics, whereas the piperazine side-chain compounds (trifluoperazine, fluphenazine) have a much lower propensity - part of their minimal autonomic and CNS-depressant profile. Chlorpromazine and triflupromazine are aliphatic and thioridazine is piperidine, so all three distractors are low-potency, seizure-threshold-lowering agents."
+  },
+  {
+   "id": "tap-tri-08",
+   "drugSlug": "trifluoperazine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Tripathi's anticholinergic grading of neuroleptics runs: thioridazine > CPZ > triflupromazine > trifluoperazine = haloperidol. A patient with prostatic enlargement prone to urinary retention should therefore avoid:",
+   "options": [
+    "Thioridazine",
+    "Trifluoperazine",
+    "Haloperidol",
+    "Pimozide"
+   ],
+   "correctIndex": 0,
+   "explanation": "Thioridazine tops the anticholinergic list with marked central anticholinergic action (its EPS incidence is correspondingly the lowest), making it the worst choice in urinary retention, glaucoma, constipation or dementia-related delirium. Trifluoperazine and haloperidol sit at the weak-anticholinergic end, and pimozide has little alpha or cholinergic blockade at all."
+  },
+  {
+   "id": "tap-per-01",
+   "drugSlug": "perphenazine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Perphenazine is best classified as:",
+   "options": [
+    "An aliphatic low-potency phenothiazine like chlorpromazine",
+    "A mid-potency piperazine phenothiazine - the first-generation comparator drug in the CATIE trial",
+    "A piperidine phenothiazine like thioridazine",
+    "A butyrophenone like haloperidol"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung classes perphenazine among the piperazine phenothiazines (footnote group with trifluoperazine) and describes the CATIE trial as using 'perphenazine, a piperazine derivative' as its first-generation comparator. Its EPS-sedation balance sits between low-potency chlorpromazine and high-potency haloperidol. Piperidine is the thioridazine side-chain group and butyrophenone is the haloperidol family."
+  },
+  {
+   "id": "tap-per-02",
+   "drugSlug": "perphenazine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which CYP enzyme is principally responsible for perphenazine's metabolism (Katzung's CYP2D6 substrate list)?",
+   "options": [
+    "CYP3A4",
+    "CYP1A2",
+    "CYP2C19",
+    "CYP2D6"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung's CYP2D6 substrate table lists perphenazine alongside TCAs, benztropine, haloperidol, risperidone and others - so potent 2D6 inhibitors (fluoxetine, paroxetine) and poor-metaboliser status raise its levels. CYP3A4, 1A2 and 2C19 handle other psychotropics but are not perphenazine's principal route."
+  },
+  {
+   "id": "tap-per-03",
+   "drugSlug": "perphenazine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 29-year-old woman with schizoaffective disorder on perphenazine 24 mg/day starts paroxetine 20 mg for a depressive phase. Two weeks later she develops neck stiffness and inner restlessness. The most likely explanation is:",
+   "options": [
+    "Paroxetine's potent CYP2D6 inhibition raised perphenazine levels, unmasking extrapyramidal effects",
+    "Paroxetine induced CYP2D6 and lowered perphenazine levels",
+    "Serotonin syndrome from the drug combination",
+    "Perphenazine reduced paroxetine absorption"
+   ],
+   "correctIndex": 0,
+   "explanation": "Paroxetine is among the strongest CYP2D6 inhibitors and perphenazine is a 2D6 substrate, so antipsychotic exposure climbs and dystonia plus akathisia emerge. Serotonin syndrome would add clonus, hyperreflexia, myoclonus and autonomic storm rather than isolated dystonia, and the induction and absorption options run pharmacologically backwards."
+  },
+  {
+   "id": "tap-per-04",
+   "drugSlug": "perphenazine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 42-year-old woman with severe depression and persecutory delusions has only partly responded to an SSRI. Within classic typical-antipsychotic practice, the rational move is:",
+   "options": [
+    "Combine the SSRI with a relatively LOWER dose of an antipsychotic such as perphenazine",
+    "Stop the SSRI - antipsychotics alone fully treat depression",
+    "Combine two antipsychotics for a synergistic antidepressant effect",
+    "Use high-dose trifluoperazine as monotherapy"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi: in a depressed psychotic patient, a tricyclic/SSRI antidepressant may be combined with a relatively lower dose of an antipsychotic - the classic augmentation setting where a mid-potency agent such as perphenazine fits (schizoaffective and psychotic-depression practice). Antipsychotics alone are not antidepressants, and Katzung warns that combining two antipsychotics confounds evaluation without proven benefit."
+  },
+  {
+   "id": "tap-per-05",
+   "drugSlug": "perphenazine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "top",
+   "question": "In the CATIE trial (as summarised by Katzung), the first-generation antipsychotic used as the mid-potency comparator against the atypicals was:",
+   "options": [
+    "Haloperidol",
+    "Thioridazine",
+    "Perphenazine",
+    "Chlorpromazine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung describes the CATIE findings as reporting that 'perphenazine, a piperazine derivative' served as the first-generation comparator arm against olanzapine, quetiapine, risperidone and ziprasidone. Haloperidol is the classic high-potency comparator of OLDER trials, and thioridazine and chlorpromazine are low-potency agents that were not the CATIE comparator."
+  },
+  {
+   "id": "tap-per-06",
+   "drugSlug": "perphenazine",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Arranging typical antipsychotics by potency (highest first), the correct order is:",
+   "options": [
+    "Chlorpromazine > perphenazine > haloperidol",
+    "Haloperidol > perphenazine > chlorpromazine",
+    "Perphenazine > chlorpromazine > haloperidol",
+    "The three are equipotent"
+   ],
+   "correctIndex": 1,
+   "explanation": "Minimum effective therapeutic doses define the ladder: haloperidol 2 mg (range 2-60), perphenazine 10 mg (range 8-64), chlorpromazine 100 mg (range 100-1000) per Katzung's dose table - higher potency means more EPS but less sedation, hypotension and anticholinergic load. Option A inverts the ladder, and equal EFFICACY does not mean equal POTENCY."
+  },
+  {
+   "id": "tap-per-07",
+   "drugSlug": "perphenazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Of the four classic extrapyramidal syndromes caused by antipsychotics, which characteristically appears LATE, after years of treatment?",
+   "options": [
+    "Acute dystonia",
+    "Akathisia",
+    "Drug-induced parkinsonism",
+    "Tardive dyskinesia"
+   ],
+   "correctIndex": 3,
+   "explanation": "The timing ladder is the exam favourite: acute dystonia within days to the first week or two (young males), akathisia and parkinsonism early over weeks, and tardive dyskinesia ('tardive' = late) after years - 10-20% incidence with long-term typical therapy, commonest in elderly women (Tripathi). Each early syndrome is dose-related and manageable; TD may be lifelong."
+  },
+  {
+   "id": "tap-per-08",
+   "drugSlug": "perphenazine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A man found to be a CYP2D6 poor metaboliser is started on standard-dose perphenazine. The most important counselling point is:",
+   "options": [
+    "He will need a higher dose because poor metabolisers under-respond",
+    "Cholestatic jaundice will inevitably develop",
+    "Drug levels run higher than expected, so the risk of dystonia, akathisia and parkinsonism at standard doses is increased",
+    "Retinal degeneration is expected within months"
+   ],
+   "correctIndex": 2,
+   "explanation": "Poor metabolisers clear CYP2D6 substrates slowly, so perphenazine levels run high and standard doses over-expose striatal D2 receptors - hence exaggerated extrapyramidal effects and a case for lower starting doses. Cholestatic jaundice is an idiosyncratic hypersensitivity reaction unrelated to drug levels, and retinal degeneration is thioridazine's toxicity; option A states exactly the opposite of the truth."
+  },
+  {
+   "id": "tap-thi-01",
+   "drugSlug": "thioridazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 58-year-old man on thioridazine reports palpitations; ECG shows QTc 540 ms with a brief run of polymorphic ventricular tachycardia. Among classic antipsychotics this drug is singled out because it:",
+   "options": [
+    "Is the most torsadogenic classic antipsychotic - QTc prolongation and ventricular arrhythmia limit its use",
+    "Causes dose-independent agranulocytosis",
+    "Produces EPS in nearly every patient",
+    "Is the strongest CTZ antiemetic of the class"
+   ],
+   "correctIndex": 0,
+   "explanation": "Thioridazine carries the worst QTc/torsades reputation of the classic antipsychotics: T-wave and QTc changes appear above 300 mg/day, and overdose torsades is the reason antipsychotic poisoning is lethal almost exclusively with thioridazine (and mesoridazine). Options C and D invert its real profile - thioridazine has the LOWEST EPS incidence and, uniquely, is not a potent CTZ antiemetic."
+  },
+  {
+   "id": "tap-thi-02",
+   "drugSlug": "thioridazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 62-year-old man on high-dose thioridazine reports progressive dimming and a brownish discolouration of vision with difficulty in dim light. Funduscopy shows pigmentary changes resembling retinitis pigmentosa. This toxicity is:",
+   "options": [
+    "Reversible corneal oedema caused by the drug",
+    "Retinal pigmentary degeneration - thioridazine is the only antipsychotic that causes retinal deposits",
+    "Age-related cataract unrelated to any drug",
+    "Ethambutol optic neuropathy"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung: thioridazine is the ONLY antipsychotic causing retinal deposits - advanced cases resemble retinitis pigmentosa with 'browning' of vision - which is why its daily dose is capped (800 mg) and long-term use is discouraged. Corneal and lenticular deposits are the chlorpromazine story, while the retina is spared by that drug; the distractors belong to other drug classes entirely."
+  },
+  {
+   "id": "tap-thi-03",
+   "drugSlug": "thioridazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "An 80-year-old with behavioural symptoms of dementia is started on thioridazine. He becomes more confused, with dry mouth, constipation and new urinary retention. The best explanation and management is:",
+   "options": [
+    "Thioridazine parkinsonism - add trihexyphenidyl",
+    "Thioridazine hyperprolactinaemia - add bromocriptine",
+    "Thioridazine's marked anticholinergic load is worsening the confusional state - stop it and, if an antipsychotic is needed, use a high-potency agent in low dose",
+    "Early neuroleptic malignant syndrome - give dantrolene"
+   ],
+   "correctIndex": 2,
+   "explanation": "Low-potency piperidine thioridazine is heavily anticholinergic: in elderly or delirium-prone patients that load produces confusion, dry mouth, constipation and retention. Tripathi advises high-potency phenothiazines, haloperidol or aripiprazole in the elderly, and Katzung warns very high doses of antimuscarinic drugs cause toxic-confusional states. Adding trihexyphenidyl (option A) would stack MORE anticholinergic burden - the classic iatrogenic trap."
+  },
+  {
+   "id": "tap-thi-04",
+   "drugSlug": "thioridazine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Thioridazine's pharmacodynamic fingerprint is:",
+   "options": [
+    "High-potency piperazine phenothiazine with maximal EPS",
+    "Selective D2 antagonist with no anticholinergic activity",
+    "D2 partial agonist with additional 5-HT1A agonism",
+    "Low-potency piperidine phenothiazine: marked central anticholinergic action with very low EPS incidence"
+   ],
+   "correctIndex": 3,
+   "explanation": "In Tripathi's phenothiazine classification thioridazine is the piperidine member: low potency, strong central anticholinergic action, very low incidence of extrapyramidal effects, but more cardiac arrhythmia and sexual dysfunction - the pharmacological mirror image of haloperidol. Option A describes trifluoperazine/fluphenazine, option B a hypothetical perfectly selective agent, and option C is aripiprazole's profile."
+  },
+  {
+   "id": "tap-thi-05",
+   "drugSlug": "thioridazine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A junior doctor proposes thioridazine 50 mg three times daily as the antiemetic for chemotherapy-induced vomiting. The consultant objects because:",
+   "options": [
+    "Thioridazine, uniquely among neuroleptics, lacks the potent CTZ antiemetic action",
+    "Thioridazine becomes emetic at low doses",
+    "Thioridazine is the antiemetic of choice but is unavailable in India",
+    "Chemotherapy vomiting is vestibular, so all CTZ-acting drugs fail"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi states that neuroleptics EXCEPT thioridazine have potent antiemetic action through the chemoreceptor trigger zone - a favourite exception question. Chemotherapy-induced vomiting is CTZ-mediated, which is why prochlorperazine and metoclopramide work; motion sickness is the vestibular type that neuroleptics fail against anyway (option D)."
+  },
+  {
+   "id": "tap-thi-06",
+   "drugSlug": "thioridazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 34-year-old man on thioridazine reports ejaculation occurring with minimal sensation or not at all, causing marital distress; libido and erections are intact. The mechanism is:",
+   "options": [
+    "Androgen deficiency from pituitary damage",
+    "Alpha-1 adrenergic blockade interfering with ejaculation - thioridazine has the highest propensity among antipsychotics",
+    "Excess spinal serotonin release",
+    "Priapism requiring emergency corpus cavernosum irrigation"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi: postural hypotension, palpitation and inhibited ejaculation (especially with thioridazine) follow alpha adrenergic blockade, and thioridazine has the highest propensity for male sexual dysfunction of the antipsychotics. Priapism is the rarer erection emergency (classically with trazodone) - this patient's problem is emission and ejaculation, not sustained erection."
+  },
+  {
+   "id": "tap-thi-07",
+   "drugSlug": "thioridazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 19-year-old is brought 6 hours after ingesting her grandmother's thioridazine. She is sedated and the ECG shows QTc 560 ms. Why is this overdose considered the most dangerous among the classic antipsychotics?",
+   "options": [
+    "It always causes fatal agranulocytosis",
+    "It produces intractable status epilepticus",
+    "Along with mesoridazine it is the antipsychotic-poisoning exception - ventricular tachyarrhythmias (torsades, conduction block, sudden death)",
+    "There is no arrhythmic risk; only prolonged sedation occurs"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung: poisonings with antipsychotics are rarely fatal EXCEPT those due to mesoridazine and thioridazine, whose lethality comes from ventricular tachyarrhythmias - management resembles tricyclic overdose with cardiac monitoring. Agranulocytosis is clozapine's signature toxicity, seizures are not the dominant feature, and option D is contradicted by the QTc of 560 ms already on the monitor."
+  },
+  {
+   "id": "tap-thi-08",
+   "drugSlug": "thioridazine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient stabilized on thioridazine is about to start fluoxetine. The chief pharmacological concern is:",
+   "options": [
+    "Fluoxetine induces thioridazine metabolism and risks psychosis relapse",
+    "The pair stacks H1 blockade and causes hyperthermia",
+    "The combination is standard first-line therapy for schizophrenia",
+    "Fluoxetine inhibits CYP2D6, raising thioridazine levels on top of its own QTc-prolonging action"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung's fluoxetine discussion names thioridazine (with haloperidol) among CYP2D6-cleared antipsychotics whose levels rise under fluoxetine inhibition; thioridazine itself is quinidine-like and QT-prolonging, so the combination is a double hit on cardiac repolarisation. Option A reverses inhibition into induction, and H1 stacking produces sedation - not hyperthermia."
+  },
+  {
+   "id": "tap-mix-01",
+   "drugSlug": "mixed",
+   "domain": "Active Recall",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Class-summary: which pairing of typical antipsychotic with its signature long-term toxicity is CORRECT?",
+   "options": [
+    "Thioridazine - retinal pigmentary degeneration; chlorpromazine - corneal and lenticular deposits",
+    "Chlorpromazine - retinal degeneration; thioridazine - corneal and lenticular deposits",
+    "Haloperidol - cholestatic jaundice; thioridazine - maximal EPS",
+    "Trifluoperazine - strongest sedation; fluphenazine - most orthostatic hypotension"
+   ],
+   "correctIndex": 0,
+   "explanation": "The two ocular signatures must not be swapped: thioridazine alone causes RETINAL deposits (retinitis-pigmentosa-like, browning of vision), while chlorpromazine causes corneal and lenticular deposits with slate-grey skin pigmentation. Option B mirrors them wrongly. Haloperidol rarely causes jaundice and produces MAXIMAL EPS (option C inverts both), and the high-potency piperazines trifluoperazine and fluphenazine are the least sedating and least hypotensive of the class (option D inverts the potency axis)."
+  }
+ ]
+}

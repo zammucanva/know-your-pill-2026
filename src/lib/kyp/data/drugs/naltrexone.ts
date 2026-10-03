@@ -853,6 +853,110 @@ export const naltrexone: Drug = {
       explanation: "For alcohol use disorder (oral): start 50 mg once daily, target 50 mg/day, maximum 100 mg/day (uncommon). May start 25 mg for tolerability; no titration required pharmacologically",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "sud-nal-01",
+      question: "Naltrexone's core receptor pharmacology - the property that lets it cut alcohol craving and heavy drinking - is best described as:",
+      options: [
+        "Nonselective mu-opioid receptor antagonism that blocks endorphin-mediated reinforcement of drinking",
+        "Partial mu-opioid agonism that substitutes for endogenous opioids the way methadone does",
+        "D2 dopamine receptor antagonism that blunts mesolimbic reward signalling",
+        "Inhibition of aldehyde dehydrogenase, raising aversive acetaldehyde after each drink"
+      ],
+      correctIndex: 0,
+      explanation: "Naltrexone is a relatively long-acting, nonselective opioid antagonist; by blocking mu-opioid receptors it weakens the endorphin-to-dopamine reinforcement that alcohol and opioids share, which is why craving and drinking days fall (Katzung ch.23; Tripathi ch.28). The partial-agonist profile belongs to buprenorphine, D2 blockade is typical-antipsychotic logic, and aldehyde dehydrogenase inhibition is disulfiram's aversion mechanism - none of these is naltrexone's antagonist action.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "sud-nal-02",
+      question: "A 44-year-old man who has been taking tramadol 100 mg three times daily for chronic back pain enters an alcohol deaddiction programme and is started on oral naltrexone 50 mg the same morning. Ninety minutes later he has severe myalgia, abdominal cramps, diarrhoea, piloerection, yawning and lacrimation. The most likely explanation is:",
+      options: [
+        "Acute naltrexone hepatotoxicity presenting within hours of the first dose",
+        "Precipitated opioid withdrawal - naltrexone's mu-antagonism met a patient who was still opioid-dependent on tramadol",
+        "Serotonin syndrome from tramadol's serotonergic activity triggered by naltrexone co-administration",
+        "A disulfiram-ethanol reaction from hidden alcohol in his lunch"
+      ],
+      correctIndex: 1,
+      explanation: "Administering an opioid antagonist to an opioid-dependent patient almost instantaneously precipitates an abstinence syndrome, so patients must be opioid-free (classically 7-10 days for naltrexone) before the first dose - tramadol's opioid agonism counts (Katzung ch.31). Serotonin syndrome would show hyperreflexia, clonus and autonomic storm rather than the miosis-piloerection-yawning pattern, and naltrexone hepatotoxicity is a subacute, dose-dependent problem, not a 90-minute syndrome.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "sud-nal-03",
+      question: "The standard adult dosing of naltrexone in alcohol-use-disorder maintenance is:",
+      options: [
+        "666 mg (two 333 mg enteric-coated tablets) three times daily",
+        "0.5 mg daily titrated to 1 mg twice daily for up to 12 weeks",
+        "Oral 50 mg once daily, with an extended-release intramuscular injection every 4 weeks for adherence problems",
+        "Sublingual 2-16 mg daily, with a subcutaneous implant lasting 6 months"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung gives oral naltrexone 50 mg once daily for alcoholism, with an extended-release IM formulation given every 4 weeks - the depot is the adherence answer (Tripathi lists NALTIMA 50 mg tablets used in Indian deaddiction centres). Sublingual dosing with a 6-month implant is buprenorphine's Probuphine concept, the 666 mg three-times-daily regimen is acamprosate, and 0.5-1 mg twice-daily titration is varenicline's smoking-cessation schedule.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "sud-nal-04",
+      question: "Baseline liver-function testing before naltrexone is standard practice because:",
+      options: [
+        "Standard 50 mg dosing predictably causes fulminant hepatic failure within weeks",
+        "The drug is cleared entirely by the liver with no renal route at all",
+        "It chelates hepatic copper, causing cumulative copper-toxic liver injury",
+        "Naltrexone can cause dose-dependent hepatotoxicity, and the naltrexone-disulfiram combination is specifically avoided as both drugs are potential hepatotoxins"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung notes dose-dependent hepatotoxicity with abnormalities in serum aminotransferases and advises caution plus the explicit avoidance of combining naltrexone with disulfiram, since both are potential hepatotoxins. Fulminant failure at standard doses is not the teaching point, acamprosate - not naltrexone - is the renally-cleared member of this class, and copper chelation is disulfiram's Wilson-disease adjunct role, not a naltrexone toxicity.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "sud-nal-05",
+      question: "A 38-year-old woman three months into naltrexone maintenance for alcohol-use disorder is listed for laparoscopic cholecystectomy. The surgeon proposes standard postoperative opioid analgesia. The pharmacological concern is:",
+      options: [
+        "Naltrexone blocks the analgesic effect of usual opioid doses, so perioperative planning needs regional or non-opioid analgesia, or the antagonist must be held well in advance",
+        "Naltrexone potentiates opioid respiratory depression, so all opioid doses must be halved",
+        "Naltrexone must be stopped and replaced with methadone before any operation",
+        "Opioids remain fully effective under naltrexone but predictably cause histamine-driven hypotension"
+      ],
+      correctIndex: 0,
+      explanation: "Naltrexone blocks the therapeutic analgesic effects of usual doses of opioids - a classic exam trap in any surgical patient on opioid-antagonist therapy (Katzung ch.31). Antagonism does not potentiate respiratory depression, methadone substitution is unnecessary for a naltrexone patient, and histamine-mediated hypotension is morphine's own adverse effect, which is moot while the mu receptors are blocked.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "sud-nal-06",
+      question: "Which pharmacokinetic profile makes oral 'opioid blockade' maintenance with naltrexone practical?",
+      options: [
+        "A terminal half-life near 40 hours from tight receptor binding with biliary-faecal excretion",
+        "A half-life of about 10 hours, with 100 mg orally blocking the effects of injected heroin for up to 48 hours",
+        "A half-life of about 1 hour, so blockade requires a continuous intravenous infusion",
+        "A half-life of 8-10 hours that is only achievable intravenously, with no useful oral activity"
+      ],
+      correctIndex: 1,
+      explanation: "Naltrexone is well absorbed orally (unlike naloxone), has a half-life of about 10 hours, and a single 100 mg oral dose blocks injected heroin for up to 48 hours - the numbers that make maintenance feasible (Katzung ch.31). The 1-2 hour intravenous action describes naloxone, the 8-10 hour IV-only profile describes nalmefene in US practice, and the 40-hour terminal half-life with biliary excretion is buprenorphine's fingerprint.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "sud-nal-07",
+      question: "At an Indian deaddiction centre, a motivated patient has just completed supervised alcohol withdrawal and asks when naltrexone (NALTIMA 50 mg) should begin and why adherence is stressed. The correct teaching is:",
+      options: [
+        "Start only if the patient accepts daily breath-alcohol testing for the next 6 months",
+        "Start at 250 mg daily for one week, then reduce to a 50 mg maintenance dose",
+        "Start only after the withdrawal phase in a motivated patient; good adherence is what delivers reduced craving and fewer drinking days, and the monthly depot can cover forgetfulness",
+        "Start during active withdrawal so the drug smooths the tremor and autonomic symptoms"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi describes naltrexone as approved for relapse prevention in alcohol-dependent subjects and used at most Indian deaddiction centres after withdrawal, in motivated patients; Katzung adds that benefit tracks adherence and that the IM depot is an accepted alternative. Naltrexone is not a withdrawal-suppressing drug (benzodiazepines are), breath-testing is not a licensing condition, and the 500 mg to 250 mg step-down is disulfiram's aversion regimen, not naltrexone's.",
+      afterSectionId: "top",
+    },
+    {
+      id: "sud-nal-08",
+      question: "A heavy drinker tells you his brother had a dramatic reduction in craving on naltrexone while a cousin on the same dose felt nothing. The pharmacogenomic concept this illustrates is:",
+      options: [
+        "CYP2D6 poor-metaboliser status predicts naltrexone toxicity and mandates halving the dose",
+        "Inactive ALDH2 enzyme genotype predicts strong naltrexone benefit rather than aversion benefit",
+        "A GABAA-receptor polymorphism exclusively determines acamprosate response and predicts naltrexone failure",
+        "A polymorphism in the mu-opioid receptor gene has been linked to a blunted naltrexone response, raising the possibility of genotype-guided alcohol-dependence pharmacotherapy"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung ch.23 highlights the link between a polymorphism in an opioid receptor gene and a blunted naltrexone response, explicitly raising genotype-guided pharmacotherapy as a possibility - the exam-friendly pharmacogenomics hook of this class. Naltrexone response is not taught as CYP2D6-dependent, ALDH2 loss-of-function is the protective/aversion-sensitivity genotype, and no exclusive GABAA-acamprosate genotype rule exists.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

@@ -815,6 +815,110 @@ export const perospirone: Drug = {
       explanation: "For schizophrenia (japan): start 4 mg twice daily, target 16-32 mg/day, maximum 48 mg/day. Increase to 8-16 mg bd",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atp-per-01",
+      question: "Perospirone is best characterised as:",
+      options: [
+        "A benzisothiazole with D2/5-HT2A antagonism and weak 5-HT1A partial agonism",
+        "A substituted benzamide with exclusive presynaptic D2 action",
+        "A dibenzodiazepine with M1-dominant binding",
+        "A butyrophenone with maximal EPS"
+      ],
+      correctIndex: 0,
+      explanation: "Perospirone is a Japanese benzisothiazole antipsychotic combining D2 and 5-HT2A antagonism with weak 5-HT1A partial agonism. Benzamides (amisulpride/sulpiride), dibenzodiazepines (clozapine) and butyrophenones (haloperidol) are different chemical families entirely.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atp-per-02",
+      question: "Perospirone's availability and primary use are:",
+      options: [
+        "The Indian standard for treatment-resistant schizophrenia",
+        "A Japanese-market antipsychotic for schizophrenia",
+        "FDA-approved for bipolar depression in the USA",
+        "An EU-only limited-use agent for refractory psychosis"
+      ],
+      correctIndex: 1,
+      explanation: "Perospirone is marketed in Japan for schizophrenia — one of the Japan-developed agents of this batch. It holds no US label, no EU restricted programme (that is sertindole), and refractory-schizophrenia first choice remains clozapine in India as well.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-per-03",
+      question: "A Japanese psychiatrist switches an obese patient from olanzapine to perospirone. The tolerability balance the patient should be told to expect is:",
+      options: [
+        "Severe sialorrhoea with ileus",
+        "Universal torsades requiring monthly ECGs",
+        "Low metabolic burden with moderate EPS possible",
+        "Clozapine-tier weight gain with agranulocytosis"
+      ],
+      correctIndex: 2,
+      explanation: "Perospirone carries a light metabolic footprint while retaining moderate EPS — the same balance taught for blonanserin. Marrow toxicity, ileus and sialorrhoea are clozapine-specific, and routine ECG programmes describe sertindole/ziprasidone practice.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-per-04",
+      question: "A patient gains 8 kg on olanzapine and is switched to perospirone. Which counselling point belongs in the first follow-up visit?",
+      options: [
+        "Weight gain will continue at the same pace but must be tolerated",
+        "No follow-up is needed for a year",
+        "Weekly blood counts are mandatory for six months",
+        "Watch for parkinsonian stiffness or restlessness — EPS is possible despite the favourable metabolic profile"
+      ],
+      correctIndex: 3,
+      explanation: "The switch targets perospirone's low metabolic burden, but its moderate EPS risk means counselling about stiffness, tremor and akathisia with early review. Weekly counts are clozapine practice, and ignoring EPS defeats the visit's purpose.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-per-05",
+      question: "Perospirone's chemical family is:",
+      options: [
+        "Benzisothiazole",
+        "Benzisoxazole (the risperidone-paliperidone family)",
+        "Substituted benzamide (the sulpiride-amisulpride family)",
+        "Dibenzodiazepine (the clozapine family)"
+      ],
+      correctIndex: 0,
+      explanation: "Perospirone is a benzisothiazole; risperidone/paliperidone are benzisoxazoles and amisulpride/sulpiride are substituted benzamides – families that examiners deliberately swap as distractors. The dibenzodiazepine label belongs to clozapine.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atp-per-06",
+      question: "A man three weeks into perospirone reports cogwheel rigidity and slowed movements; fasting glucose is 92 mg/dL and triglycerides are normal. The balanced interpretation is:",
+      options: [
+        "Neuroleptic malignant syndrome — restart perospirone at higher dose",
+        "Drug-induced parkinsonism (moderate EPS) — reduce dose ± anticholinergic; the clean metabolic panel confirms why the drug was chosen",
+        "Early idiopathic Parkinson disease requiring immediate levodopa",
+        "Emergent metabolic syndrome — switch to olanzapine"
+      ],
+      correctIndex: 1,
+      explanation: "Cogwheel rigidity early in therapy is perospirone's moderate EPS showing itself — dose reduction with anticholinergic cover is standard, while the clean metabolic panel illustrates the drug's appeal. Levodopa treats idiopathic disease, olanzapine would reverse the metabolic gain, and NMS means fever with rigidity and CK rise on a stopped drug.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-per-07",
+      question: "For an Indian (NEET PG) setting, perospirone's practical relevance is chiefly:",
+      options: [
+        "Availability in Indian government hospitals as the cheapest antipsychotic",
+        "The recommended adjunct in Indian MDD guidelines",
+        "Exam-level knowledge that it is a Japan-market benzisothiazole not marketed in India",
+        "First-line therapy for refractory schizophrenia in India"
+      ],
+      correctIndex: 2,
+      explanation: "Perospirone is a Japan-market agent — Indian exams test the trivia (Japan, benzisothiazole, weak 5-HT1A partial agonism), not prescribing. It is not the refractory-schizophrenia answer (clozapine is), carries no Indian brand, and Indian MDD adjuncts centre on aripiprazole-type agents.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-per-08",
+      question: "The antipsychotics carrying 5-HT1A partial-agonist activity include:",
+      options: [
+        "Haloperidol and thioridazine",
+        "Amisulpride and sulpiride",
+        "Zotepine and blonanserin",
+        "Ziprasidone, lurasidone, brexpiprazole, aripiprazole and perospirone"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung notes most second-generation agents act as 5-HT1A partial agonists — ziprasidone, lurasidone, brexpiprazole, aripiprazole and the Japanese benzisothiazole perospirone all share this action. Classic D2 antagonists and the benzamides lack it, and blonanserin is precisely the receptor-clean exception.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

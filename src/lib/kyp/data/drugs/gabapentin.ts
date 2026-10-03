@@ -862,6 +862,110 @@ export const gabapentin: Drug = {
       explanation: "For postherpetic neuralgia: start 300 mg at bedtime day 1; 300 mg bd day 2; 300 mg tds day 3, target 1800-3600 mg/day, maximum 3600 mg/day. Increase to 1800-3600 mg/day as tolerated",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "mst-gbp-01",
+      question: "Gabapentin was designed as a GABA analogue, but its actual mechanism is:",
+      options: [
+        "Binding to the alpha2-delta auxiliary subunit of voltage-gated calcium channels, reducing calcium entry and transmitter release — with no direct action at GABA receptors",
+        "Full agonism at GABA-A receptors, opening neuronal chloride channels",
+        "Irreversible inhibition of GABA-transaminase, like vigabatrin",
+        "Blocking the GAT-1 transporter to prolong the synaptic action of GABA"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung is explicit: gabapentinoids are GABA-like molecules that do not act through GABA mechanisms — they bind avidly to alpha2-delta of voltage-gated calcium channels, possibly limiting glutamate release. GABA-transaminase inhibition is vigabatrin, GAT-1 blockade is tiagabine, and direct GABA-A agonism is exactly the trap the chemical structure sets.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "mst-gbp-02",
+      question: "Which indication set is correctly matched to gabapentin?",
+      options: [
+        "Trigeminal neuralgia as the drug of first choice",
+        "Post-herpetic neuralgia, painful diabetic neuropathy, restless legs syndrome and adjunctive treatment of focal seizures",
+        "Childhood absence epilepsy and juvenile myoclonic epilepsy as monotherapy",
+        "Acute mania as a first-line mood stabiliser"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung lists focal seizures plus nonepilepsy uses — neuropathic pain (post-herpetic neuralgia, painful diabetic neuropathy), restless legs syndrome and anxiety disorders — and Tripathi calls gabapentin a first-line drug for neuralgic pain of diabetic neuropathy and post-herpetic neuralgia. It has no efficacy in the generalized epilepsies (and may aggravate absence and myoclonic seizures), Katzung states it is not effective in mania, and trigeminal neuralgia belongs to carbamazepine.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "mst-gbp-03",
+      question: "Increasing gabapentin from 900 mg/day to 2400 mg/day produces a smaller rise in serum levels than the dose ratio predicts. The reason is:",
+      options: [
+        "Increasing protein binding that reduces the free fraction at higher doses",
+        "Dose-dependent shortening of its half-life to under two hours",
+        "Saturable absorption via the l-amino acid transport system of the upper small intestine, so bioavailability falls as the dose climbs",
+        "Autoinduction of its own hepatic metabolism within two weeks"
+      ],
+      correctIndex: 2,
+      explanation: "Gabapentin is absorbed by the l-amino acid transporter found only in the upper small intestine; Katzung states oral bioavailability decreases with increasing dose because this system saturates, so dosing requires individualisation rather than arithmetic scaling. The drug is not metabolised (eliminated unchanged renally), is not protein bound, and pregabalin — used at much lower doses — largely escapes the saturation with linear absorption.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "mst-gbp-04",
+      question: "A 66-year-old diabetic man has burning allodynic pain four months after a thoracic zoster eruption; amitriptyline caused unacceptable sedation. A reasonable next first-line choice is:",
+      options: [
+        "Carbamazepine, because post-herpetic neuralgia is a classic neuralgia responding to it",
+        "Imipramine, which shares amitriptyline's pharmacology with less sedation",
+        "Zonisamide, which is approved for post-herpetic neuralgia at 300 mg/day",
+        "Gabapentin, titrated gradually — a first-line agent for post-herpetic neuralgia with no hepatic interactions"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists gabapentin as a first-line drug for neuralgic pain due to post-herpetic neuralgia (and diabetic neuropathy), and its renal, non-CYP elimination keeps the interaction load minimal. Carbamazepine's neuralgia success is for trigeminal neuralgia — Tripathi explicitly notes it is not useful in diabetic and other forms of neuropathic pain — and imipramine would reproduce the anticholinergic sedation problem.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "mst-gbp-05",
+      question: "A 58-year-old woman with restless legs syndrome has developed intolerable dopaminergic augmentation on pramipexole. Which gabapentinoid-era option fits, and why?",
+      options: [
+        "Gabapentin — an established agent for restless legs syndrome, with renal elimination and few interactions",
+        "Valproate — because restless legs responds to GABA-transaminase inhibition",
+        "Tiagabine — because raising synaptic GABA cures restless legs syndrome",
+        "Levetiracetam — because SV2A binding is the licensed mechanism for restless legs"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung names restless legs syndrome among the nonepilepsy indications of the gabapentinoids, and gabapentin (with its prodrug gabapentin enacarbil, developed specifically for RLS) carries the interaction-free renal profile these patients need. Valproate and tiagabine have no restless-legs role, and levetiracetam's SV2A mechanism is unrelated to licensed RLS therapy.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "mst-gbp-06",
+      question: "A 70-year-old man with diabetic neuropathy and CKD stage 4 (eGFR 22 mL/min) is to start gabapentin. What is the correct approach?",
+      options: [
+        "Give a 3600 mg loading dose and maintain 3600 mg/day regardless of renal function",
+        "Use a reduced dose with cautious titration — gabapentin is excreted unchanged renally, so renal impairment prolongs accumulation",
+        "Give the standard 900 mg/day from day one, because hepatic clearance compensates for renal failure",
+        "Avoid gabapentin permanently, since it is contraindicated at any level of renal impairment"
+      ],
+      correctIndex: 1,
+      explanation: "Gabapentin is eliminated unchanged in the urine with no hepatic metabolism, so impaired renal function demands lower starting doses and slower titration — the mirror image of the hepatically cleared drugs. There is no compensatory hepatic route and no absolute contraindication, only dose adaptation.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "mst-gbp-07",
+      question: "Which newer safety signals have been attached to the gabapentinoids?",
+      options: [
+        "Torsades de pointes requiring routine ECG surveillance",
+        "Irreversible peripheral neuropathy in a majority of long-term users",
+        "Recognised misuse and abuse potential (pregabalin is a US Schedule V controlled substance) and respiratory depression when combined with opioids or sedatives",
+        "Agranulocytosis requiring weekly CBC monitoring"
+      ],
+      correctIndex: 2,
+      explanation: "Gabapentin and pregabalin carry newer-documented misuse potential — anchored in pregabalin's US Schedule V status — plus regulatory warnings for respiratory depression with opioid co-use, both relevant in polypharmacy and addiction-history patients. Marrow toxicity and torsades belong to other classes entirely, and the gabapentinoids are not irreversibly neurotoxic.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "mst-gbp-08",
+      question: "Which Indian gabapentin products are correct?",
+      options: [
+        "GABAPIN 2 mg tablets used as an Indian risperidone substitute",
+        "NEURONTIN 600 mg syrup given once weekly for neuropathic pain",
+        "GABANTIN is the Indian brand of gabapentin enacarbil only, sold as 600 mg ER",
+        "NEURONTIN 300/400 mg capsules and GABANTIN/GABAPIN 100/300/400 mg capsules, started at 300 mg once daily and increased to 300-600 mg TDS"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists gabapentin as NEURONTIN 300 and 400 mg capsules and GABANTIN, GABAPIN 100/300/400 mg capsules, with a starting dose of 300 mg once daily titrated to 300-600 mg TDS. The 2 mg tablet and weekly syrup are inventions, and GABANTIN is plain gabapentin, not the enacarbil prodrug.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

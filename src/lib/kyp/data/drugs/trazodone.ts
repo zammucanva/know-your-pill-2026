@@ -862,6 +862,110 @@ export const trazodone: Drug = {
       explanation: "For insomnia (low dose): start 25-50 mg at bedtime, target 25-100 mg, maximum 100 mg (hypnotic use). May increase to 100 mg",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atd-tra-01",
+      question: "Trazodone's mechanism (SARI) is best described as:",
+      options: [
+        "Strong SERT inhibition with little receptor activity",
+        "5-HT2A antagonism with weak SERT inhibition and alpha-1 blockade",
+        "Alpha-2 blockade with 5-HT3 and H1 antagonism",
+        "DAT and NET inhibition without serotonergic action"
+      ],
+      correctIndex: 1,
+      explanation: "Trazodone is a serotonin antagonist and reuptake inhibitor: its clinical effects — sedation, orthostatic hypotension, the low-dose hypnotic niche — flow from 5-HT2A antagonism plus alpha-1 blockade, with only weak SERT inhibition; its metabolite mCPP also acts at 5-HT2 receptors. Option C is the NaSSA profile (mirtazapine/mianserin), option D is bupropion's, and strong SERT inhibition defines the SSRIs.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atd-tra-02",
+      question: "A psychiatry resident reviews prescribing patterns and asks: in current practice, what is the most common way trazodone is actually used?",
+      options: [
+        "Sole antidepressant therapy at hypnotic-range doses (about 25 mg nightly)",
+        "Hypnotic monotherapy pushed to 500 mg nightly",
+        "A low-dose (25–100 mg) nightly hypnotic, usually alongside another antidepressant",
+        "First-line antidepressant monotherapy at about 600 mg per day"
+      ],
+      correctIndex: 2,
+      explanation: "Trazodone's commonest modern use is the low-dose (25–100 mg) unlabeled hypnotic, usually added to another antidepressant — it sedates without tolerance or dependence (Katzung). Antidepressant activity needs roughly 300–600 mg/day; 25 mg will not treat MDD alone, and 500–600 mg nightly as a hypnotic invites orthostatic and sedative harm without added benefit.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-tra-03",
+      question: "A 46-year-old man on trazodone 100 mg at night presents with a painful erection that has lasted 5 hours. The correct next step is:",
+      options: [
+        "Reassure him that this is transient and self-limited, and continue the drug",
+        "Advise cold packs and review in the outpatient clinic next week",
+        "Simply halve the trazodone dose and observe at home",
+        "Treat as priapism — a urological emergency needing immediate assessment and drug cessation"
+      ],
+      correctIndex: 3,
+      explanation: "A painful erection of several hours on trazodone is priapism — its most feared (if rare) alpha-1-mediated adverse effect and a genuine urological emergency; delayed decompression risks ischaemic fibrosis and permanent erectile dysfunction, so the drug must stop and urgent urological care begins at once. Reassurance or a delayed review risks the organ, not just the erection.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-tra-04",
+      question: "An 80-year-old started on trazodone 50 mg at night stands up on night three and nearly faints. The mechanism-based explanation is:",
+      options: [
+        "Alpha-1 adrenergic blockade producing dose-related orthostatic hypotension",
+        "5-HT3 blockade causing vagal overactivity",
+        "Dopamine blockade causing neuroleptic-like parkinsonism",
+        "Anticholinergic tachycardia with reflex hypotension"
+      ],
+      correctIndex: 0,
+      explanation: "Trazodone and nefazodone are alpha-blocking agents; the resulting orthostatic hypotension is dose-related and is the classic mechanism of trazodone falls and near-syncope in the elderly — the same receptor pathway as priapism. It is not a 5-HT3, dopaminergic or anticholinergic phenomenon, which is why the other mechanisms fail here.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-tra-05",
+      question: "The approximate antidepressant dose range of trazodone (as opposed to its low-dose hypnotic range) is:",
+      options: [
+        "25–100 mg per day",
+        "300–600 mg per day in divided doses",
+        "10–20 mg once daily",
+        "150–225 mg once daily"
+      ],
+      correctIndex: 1,
+      explanation: "Hypnotic trazodone is 25–100 mg at night; genuine antidepressant effect requires roughly 300–600 mg/day — a range where orthostatic hypotension and sedation become limiting. Option C is an SSRI-scale dose and option D is venlafaxine's therapeutic window, so both are wrong-class traps.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-tra-06",
+      question: "A man on doxazosin (an alpha-1 blocker) for prostatic obstruction is prescribed trazodone for insomnia. The chief interaction to counsel him about is:",
+      options: [
+        "Reduced trazodone levels from enzyme induction",
+        "Serotonin syndrome from additive 5-HT activity",
+        "Additive alpha-1 blockade — marked orthostatic hypotension with fall and syncope risk",
+        "Prolonged QT with torsades de pointes risk"
+      ],
+      correctIndex: 2,
+      explanation: "Both trazodone and alpha-1 blockers (doxazosin, prazosin, terazosin) antagonize vascular alpha-1 receptors — stacking them multiplies positional hypotension, the commonest real-world trazodone interaction hazard in older men. There is no meaningful enzyme induction, no serotonergic add-on, and QT/torsades is not trazodone's signature risk.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "atd-tra-07",
+      question: "Comparing the two SARI cousins on liver safety, which statement is correct?",
+      options: [
+        "Trazodone is the more hepatotoxic of the two SARIs and itself carries a boxed liver warning",
+        "Neither drug has any reported hepatotoxicity",
+        "Both cause dose-dependent QT prolongation requiring routine ECGs",
+        "Trazodone's hepatotoxicity is rare; nefazodone's fulminant hepatic failure risk earned it a black-box warning"
+      ],
+      correctIndex: 3,
+      explanation: "The comparative point (Katzung): trazodone has only rarely been linked to liver injury, while its chemical cousin nefazodone received an FDA black-box warning (2001) for hepatotoxicity including lethal hepatic failure — the reason its prescriptions collapsed. Reversing the ranking or denying liver risk altogether are the classic wrong turns.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-tra-08",
+      question: "Which pharmacokinetic/metabolite statement about trazodone is correct?",
+      options: [
+        "It is rapidly absorbed and its active metabolite mCPP is itself a potent 5-HT2 antagonist, adding to the effect",
+        "It is excreted unchanged in urine, so no hepatic metabolism occurs",
+        "Its metabolite is a potent CYP3A4 inhibitor like nefazodone",
+        "It has no active metabolites at all"
+      ],
+      correctIndex: 0,
+      explanation: "Trazodone is rapidly absorbed and hepatically metabolized; its metabolite meta-chlorophenylpiperazine (mCPP) is a potent 5-HT2 antagonist that extends the parent's receptor-based action (and serves as the classic 5-HT2 probe drug). Nefazodone — not trazodone — is the strong CYP3A4 inhibitor, and the 'no metabolism/no metabolites' options contradict its hepatic clearance.",
+      afterSectionId: "timeline",
+    },
   ],
   activeRecallQuestions: [
     {

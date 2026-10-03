@@ -732,6 +732,110 @@ export const clonidine: Drug = {
       explanation: "For adhd (er): start 0.1 mg at bedtime, target 0.1-0.2 mg twice daily, maximum 0.4 mg/day. Increase by 0.1 mg weekly",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "adj-cld-01",
+      question: "The antihypertensive and sympatholytic effect of clonidine follows from:",
+      options: [
+        "Partial agonism at central alpha-2A receptors (especially the brainstem vasomotor centre), reducing sympathetic outflow, with imidazoline-receptor activation contributing",
+        "Competitive blockade of peripheral alpha-1 receptors on vascular smooth muscle",
+        "Inhibition of noradrenaline reuptake at peripheral sympathetic nerve terminals",
+        "Ganglion blockade that cuts all autonomic transmission to the heart and vessels"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi describes clonidine as an imidazoline derivative acting as a partial agonist with high intrinsic activity at alpha-2A receptors in the brainstem vasomotor centre — sympathetic outflow falls and plasma noradrenaline declines — with medullary imidazoline receptors adding to the effect. Alpha-1 blockade is prazosin's mechanism, reuptake inhibition is tricyclic/cocaine pharmacology, and ganglion blockade describes the obsolete hexamethonium-style agents.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "adj-cld-02",
+      question: "A 28-year-old opioid-dependent man in a detoxification unit has lacrimation, yawning, abdominal cramps, diarrhoea, sweating and gooseflesh 18 hours after his last heroin dose. Clonidine is prescribed. The rationale is:",
+      options: [
+        "Clonidine accelerates renal clearance of residual opioids from the body",
+        "Central alpha-2 agonism damps the hyperadrenergic surge of opioid withdrawal, relieving sweating, cramps and diarrhoea, though it does not abolish craving",
+        "Clonidine acts as a mu-opioid receptor agonist, substituting for heroin exactly as methadone does",
+        "Clonidine antagonises NMDA receptors, erasing the conditioned withdrawal memory"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung records that opioid withdrawal reflects hyperactivity of central adrenergic systems and that the alpha-2 agonist clonidine has been used with some success to attenuate withdrawal — clonidine-assisted detox for sweating, cramps and diarrhoea is the classic exam answer. It is not an opioid agonist like methadone or buprenorphine, has no NMDA antagonism, and does not change opioid pharmacokinetics.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-cld-03",
+      question: "A 50-year-old hypertensive on clonidine 300 microgram three times daily for years runs out of tablets; two days later he arrives anxious, sweating, tachycardic, with headache and a blood pressure far above his pretreatment level. What is happening and what is the fix?",
+      options: [
+        "A hypertensive emergency from clonidine accumulation, treated by immediate haemodialysis",
+        "A panic attack with coincidental hypertension, best left untreated and observed",
+        "Clonidine-withdrawal hypertension — sudden loss of central sympathetic inhibition with catecholamine surge and receptor supersensitivity, resembling phaeochromocytoma; treat by reinstituting clonidine (or alpha-plus-beta-blockade) and thereafter tapering slowly",
+        "Phaeochromocytoma unmasked by clonidine, cured by urgent adrenalectomy before any drug is restarted"
+      ],
+      correctIndex: 2,
+      explanation: "Both Katzung and Tripathi warn that abrupt clonidine withdrawal — missed doses for just 1-2 days, risk highest above 1 mg/day — produces an alarming BP rise with tachycardia, sweating, headache and anxiety, a phaeochromocytoma-like state from removed central inhibition plus peripheral adrenergic supersensitivity. Treatment is clonidine reinstatement or combined alpha-beta-blockade, followed by gradual taper with substituted agents; haemodialysis is irrelevant and this is not a panic attack.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-cld-04",
+      question: "A 9-year-old with ADHD has a partial response to methylphenidate but develops evening tics and sleep-onset trouble. Which addition is the classic sympatholytic move?",
+      options: [
+        "Add weight-adjusted propranolol to suppress the tics at their central origin",
+        "Switch to modafinil, which Katzung confirms is FDA-approved for paediatric ADHD",
+        "Add bedtime dextroamphetamine to counteract the stimulant's rebound",
+        "Add clonidine extended release (Kapvay-style) — the alpha-2 agonist used as ADHD monotherapy or stimulant adjunct, particularly useful when tics or sleep problems coexist"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung notes slow or continuous-release preparations of clonidine (and guanfacine) are effective in children with ADHD, and clonidine reduces tics in roughly half of treated children — making it the natural adjunct when tics or sleep-onset trouble complicate stimulant therapy (KYP's Kapvay XR anchor). Propranolol is not an antitic drug, modafinil was never FDA-approved for ADHD with paediatric safety undefined, and a bedtime amphetamine would worsen sleep.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-cld-05",
+      question: "A patient beginning clonidine for opioid detox asks what to expect from the drug itself. Which cluster is the classic clonidine adverse-effect profile?",
+      options: [
+        "Sedation with dry mouth and eyes, constipation, bradycardia and impotence",
+        "Insomnia with diarrhoea, tachycardia and priapism",
+        "Hypertension with mydriasis and profuse sweating throughout treatment",
+        "Hyperkalaemia with coarse facial hair and gum hypertrophy"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi's clonidine list — sedation, disturbed sleep, dryness of mouth, nose and eyes, constipation, impotence, bradycardia and mostly asymptomatic postural hypotension — flows directly from central sympatholysis and antisecretory actions. The insomnia-diarrhoea-tachycardia cluster inverts the real directions (constipation, not diarrhoea; bradycardia, not tachycardia), hypertension belongs to the withdrawal syndrome rather than steady treatment, and the gum-hypertrophy cluster is phenytoin's.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-cld-06",
+      question: "Which co-prescription can abolish clonidine's antihypertensive effect?",
+      options: [
+        "Atorvastatin, via induction of intestinal alpha-2 receptor synthesis",
+        "Tricyclic antidepressants (and chlorpromazine) — their alpha-receptor blockade interferes with clonidine's own alpha-receptor action",
+        "Selective serotonin reuptake inhibitors, via serotonin-mediated alpha-2 potentiation",
+        "Metformin, through competition for renal tubular transport"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi states tricyclic antidepressants and chlorpromazine abolish the antihypertensive action of clonidine by blocking the alpha receptors on which it acts, and Katzung records the same TCA interaction. SSRIs, metformin and statins have no such alpha-receptor mechanism — and because TCAs can also blunt the antihypertensive cover, the pair demands monitoring.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-cld-07",
+      question: "Which pharmacokinetic-dosing statement about clonidine is correct?",
+      options: [
+        "Completely bioavailable with a half-life of 3-4 days, allowing weekly oral dosing",
+        "Activated only after hepatic conversion to methylnorepinephrine, the way alpha-methyldopa works",
+        "Well absorbed orally (peak 2-4 hours), half-life 8-12 hours, roughly half the dose excreted unchanged in urine; a transdermal patch delivers cover for about a week",
+        "Erratically absorbed with bioavailability under 5% and a half-life of 2 hours, mandating TDS-only dosing"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi gives clonidine good oral absorption with peak at 2-4 hours, a plasma half-life of 8-12 hours and half to two-thirds excreted unchanged in urine; the weekly transdermal patch is a signature formulation (Katzung mentions the clonidine patch for ADHD comorbidity). The prodrug-to-methylnorepinephrine story is alpha-methyldopa's, and the other numbers belong to no sympatholytic.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "adj-cld-08",
+      question: "Beyond hypertension, opioid withdrawal and ADHD, clonidine has documented benefit in which additional psychiatry-relevant niche?",
+      options: [
+        "Acute dystonic reactions, where intravenous clonidine is the emergency remedy of choice",
+        "Tardive dyskinesia, where clonidine is the only approved VMAT2 inhibitor",
+        "Benzodiazepine overdose, where clonidine reverses sedation at the GABA-A receptor",
+        "Gilles de la Tourette syndrome — reducing motor and vocal tics in roughly half of children, plus menopausal hot flushes and reduced craving in smokers and narcotic users"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung states clonidine reduces motor or vocal tics in about 50% of children with Tourette syndrome, and also documents hot-flush relief, diminished craving for narcotics and cigarettes, and benefit in diabetic diarrhoea. Acute dystonia belongs to parenteral antimuscarinics, tardive dyskinesia to valbenazine and deutetrabenazine, and benzodiazepine reversal is flumazenil's job.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

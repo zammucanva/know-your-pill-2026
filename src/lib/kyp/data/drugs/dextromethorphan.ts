@@ -701,6 +701,110 @@ export const dextromethorphan: Drug = {
       explanation: "For cough (otc): start 15-30 mg up to four times daily, target 30-120 mg/day, maximum 120 mg/day (OTC labelling). Short-term use",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "spc-dxm-01",
+      question: "Dextromethorphan's antitussive and neuropsychiatric pharmacology rests on which receptor profile?",
+      options: [
+        "Sigma-1 receptor agonism with weak NMDA-channel antagonism",
+        "Full agonism at the mu-opioid receptor like its levorphanol relative",
+        "Selective 5-HT2C receptor agonism in appetite circuits",
+        "Blockade of H1 receptors in the medullary cough centre"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung and Tripathi place dextromethorphan's actions at the sigma-1 receptor with weak NMDA antagonism; it is the dextrorotatory isomer of a levorphanol derivative yet is essentially devoid of opioid agonism. 5-HT2C agonism is lorcaserin's satiety mechanism and H1 blockade belongs to first-generation antihistamines — neither is this drug's answer.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "spc-dxm-02",
+      question: "For simple dry cough in an adult, the standard oral dextromethorphan antitussive regimen is:",
+      options: [
+        "0.15 mg/kg sublingually once weekly",
+        "15-30 mg three or four times daily, available over the counter",
+        "5 mg once daily at bedtime, prescription only",
+        "60 mg intramuscularly every hour until the cough stops"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung gives the usual antitussive dose as 15-30 mg three or four times daily, sold widely in OTC cough products; Tripathi's Indian register is 10-20 mg three times a day. Hourly parenteral dosing and weekly sublingual schedules are fabricated, and once-daily 5 mg is below any labelled regimen.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "spc-dxm-03",
+      question: "A 16-year-old is brought to the emergency department drowsy, with horizontal nystagmus and slurred speech, after drinking a full bottle of an over-the-counter cough syrup he bought to 'get high'. The dissociative intoxication he sought results from:",
+      options: [
+        "Anticholinergic delirium from the syrup's dye component",
+        "Hepatic encephalopathy from paracetamol co-ingestion",
+        "NMDA-channel antagonism at supratherapeutic doses — the same dissociative mechanism as ketamine",
+        "Mu-opioid receptor overdose, since dextromethorphan is a full opioid agonist"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung describes supratherapeutic doses of dextromethorphan producing a dissociative state through NMDA-channel antagonism (plus serotonergic, opioid-site and cholinergic actions) — the 'robotripping' misuse of adolescents and the same dissociative mechanism as ketamine. Opioid overdose does not fit its weak opioid-site action, dyes do not cause delirium, and encephalopathy would show liver stigmata rather than nystagmus with dissociation.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-dxm-04",
+      question: "A mother asks why the pharmacist refuses an over-the-counter dextromethorphan cold preparation for her 4-year-old. The textbook-grounded answer is:",
+      options: [
+        "Dextromethorphan stains developing dental enamel below age 6",
+        "Preschool children metabolise it too rapidly, making it ineffective",
+        "It causes permanent growth stunting in early childhood",
+        "Deaths were reported in young children taking dextromethorphan cold products, so use below 6 years is banned"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung notes increasing reports of death in young children taking dextromethorphan in OTC cold/cough formulations, leading the FDA to ban its use under 6 years. Enamel staining, accelerated clearance and growth stunting are not documented harms — the real concerns are dizziness and drowsiness, and hallucinations with ataxia at high doses (Tripathi).",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "spc-dxm-05",
+      question: "A 58-year-old with atypical depression on phenelzine buys an over-the-counter dextromethorphan cough syrup. Two days later he is febrile, agitated and diaphoretic with clonus and hyperreflexia. The interaction mechanism is:",
+      options: [
+        "Combined serotonergic excess — dextromethorphan is specifically cautioned with MAO inhibitors for serotonin-syndrome risk",
+        "Phenelzine inhibiting the renal clearance of dextromethorphan",
+        "Additive QTc prolongation triggering torsades de pointes",
+        "Disulfiram-like blockade of dextromethorphan metabolism"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung's MAO-inhibitor warnings flag the antitussive dextromethorphan for avoidance with MAO inhibitors — serotonergic and sigma/NMDA actions stacked on MAO blockade can precipitate serotonin syndrome, the classic interaction Tripathi highlights. Renal clearance, torsades and disulfiram-style enzyme blockade are not the mechanism; the metabolic interaction of note is CYP2D6 competition, not MAO.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-dxm-06",
+      question: "In clinical pharmacology, dextromethorphan serves as a classic probe drug. What does it probe?",
+      options: [
+        "NAT2 acetylator status through urinary dextromethorphan excretion",
+        "CYP2D6 activity — its O-demethylation to dextrorphan defines the dextromethorphan/dextrorphan metabolic ratio",
+        "CYP3A4 activity, benchmarked against midazolam hydroxylation",
+        "CYP1A2 activity via urinary caffeine metabolite ratios"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung lists dextromethorphan alongside debrisoquine and desipramine as CYP2D6 substrates — the urinary dextromethorphan/dextrorphan ratio is a standard 2D6 phenotyping test. Caffeine probes 1A2, midazolam probes 3A4, and acetylator testing uses isoniazid-type substrates, not dextromethorphan.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "spc-dxm-07",
+      question: "Per Tripathi, dextromethorphan's Indian dosing and formulation identity is:",
+      options: [
+        "2.5-5 mg intranasally every 10 minutes for adults",
+        "50-100 mg every 4 hours, reserved for hospital use",
+        "10-20 mg three times a day for adults, a common ingredient of many proprietary cough formulations",
+        "100 mg once daily, marketed only as a single-ingredient prescription syrup"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi gives adults 10-20 mg per dose (children 2-6 years 2.5-5 mg; 6-12 years 5-10 mg) and notes dextromethorphan is a common ingredient of proprietary cough combinations. The other regimens are wrong for this drug — 50-100 mg 4-hourly actually matches levopropoxyphene's dose in Katzung's antitussive table, a deliberate mix-up.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "spc-dxm-08",
+      question: "A physician reads about a newly approved oral therapy for major depression that pairs dextromethorphan with bupropion. The pharmacological logic of that fixed-dose combination is:",
+      options: [
+        "Bupropion blocks dextromethorphan's cough reflex so higher antidepressant doses become tolerable",
+        "Dextromethorphan inhibits bupropion's conversion to hydroxybupropion, sharpening the antidepressant effect",
+        "The pair works by jointly antagonising 5-HT2A receptors to restore sleep architecture",
+        "Dextromethorphan's sigma-1 agonism plus weak NMDA antagonism provides rapid antidepressant signalling, while bupropion's NDRI action adds monoamine drive and its 2D6 inhibition raises dextromethorphan exposure"
+      ],
+      correctIndex: 3,
+      explanation: "The approved rapid-onset oral MDD combination exploits sigma-1 plus NMDA signalling from dextromethorphan alongside bupropion's norepinephrine-dopamine reuptake inhibition, with bupropion's strong CYP2D6 inhibition increasing dextromethorphan levels — synergy by design. Cough suppression is irrelevant to antidepressant dosing, the metabolic direction is bupropion inhibiting 2D6 (rather than dextromethorphan blocking 2B6 conversion), and neither drug is a 5-HT2A antagonist.",
+      afterSectionId: "top",
+    },
   ],
   activeRecallQuestions: [
     {

@@ -800,6 +800,110 @@ export const vortioxetine: Drug = {
       explanation: "For major depressive disorder: start 10 mg once daily, target 10-20 mg/day, maximum 20 mg/day. May increase to 20 mg after ≥ 1 week; start 5 mg if tolerability-sensitive",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atd-vor-01",
+      question: "Vortioxetine's \"multimodal\" pharmacology consists of:",
+      options: [
+        "NET blockade plus 5-HT2A antagonism plus weak D2 blockade",
+        "Alpha-2 autoreceptor antagonism plus potent H1 blockade",
+        "Monoamine oxidase-A inhibition plus 5-HT3 antagonism",
+        "SERT inhibition, 5-HT1A agonism, and 5-HT3 antagonism"
+      ],
+      correctIndex: 3,
+      explanation: "Vortioxetine inhibits SERT (allosterically), acts as an agonist or partial agonist at 5-HT1A and 5-HT1B, and blocks 5-HT3 and 5-HT7 receptors — the receptor spread that earned the \"multimodal\" tag and keeps it out of the SSRI class. NET with 5-HT2A is trazodone-flavoured pharmacology, alpha-2 plus H1 defines mirtazapine (NaSSA), and MAO-A inhibition is the RIMA/MAOI territory.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atd-vor-02",
+      question: "Vortioxetine's regulatory label is best summarised as:",
+      options: [
+        "Approved for major depression, obsessive-compulsive disorder, and post-traumatic stress disorder",
+        "Approved for major depressive disorder, with approval in Europe and the USA extending to cognitive dysfunction associated with depression",
+        "Approved only for attention deficit hyperactivity disorder in children over 6 years",
+        "Approved for fibromyalgia and diabetic neuropathic pain"
+      ],
+      correctIndex: 1,
+      explanation: "Vortioxetine is an MDD drug, and its claim to regulatory fame is approval in Europe and the USA for cognitive dysfunction associated with depression — the antidepressant marketed around cognition (Katzung). OCD and PTSD labels belong to the SSRIs, ADHD belongs to atomoxetine, and fibromyalgia with neuropathic pain belongs to duloxetine and pregabalin.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-vor-03",
+      question: "A 47-year-old executive with recurrent depression complains that although her mood has partly recovered on fluoxetine, she still cannot process information fast enough at work and her thinking feels \"foggy.\" Which property makes vortioxetine a rational next option?",
+      options: [
+        "Its studied benefit on processing speed and executive function in MDD, beyond mood symptoms alone",
+        "Its potent CYP2D6 inhibition, which would raise the fluoxetine level",
+        "Its strong antihistamine sedation, which would calm her residual agitation",
+        "Its proven efficacy for diabetic neuropathy, suggesting nerve-protective effects"
+      ],
+      correctIndex: 0,
+      explanation: "Vortioxetine was studied for cognitive domains — processing speed and executive function — in MDD, and that cognition data is its claim to fame when \"brain fog\" outlasts mood recovery. It is not a CYP2D6 inhibitor (it is a 2D6 substrate, so the interaction runs the other way), it is not meaningfully sedating or antihistaminic, and pain labels belong to duloxetine, not vortioxetine.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-vor-04",
+      question: "Three days after starting vortioxetine 10 mg, a 25-year-old woman phones the clinic about persistent nausea. The most appropriate counselling is:",
+      options: [
+        "Nausea is a rare sign of hepatotoxicity; stop the drug and check liver enzymes",
+        "Nausea proves she is a CYP2D6 poor metaboliser and must stop the drug permanently",
+        "Nausea is the leading adverse effect and is dose-dependent; taking it with food and giving it time usually helps",
+        "Switch immediately to paroxetine, which has no gastrointestinal effects"
+      ],
+      correctIndex: 2,
+      explanation: "Serotonergic gastrointestinal effects — nausea above all — are vortioxetine's most common adverse effects, they are dose-dependent (higher doses raise both GI and sexual side-effect rates, per Katzung), and they typically attenuate with time; food co-administration and reassurance come first. Hepatotoxicity monitoring belongs to agomelatine, 2D6 phenotype is not diagnosed by nausea, and paroxetine is itself a GI-offending SSRI with the worst discontinuation burden in the class.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-vor-05",
+      question: "A 39-year-old man on sustained-release bupropion 300 mg daily is switched from sertraline to vortioxetine for residual cognitive complaints. What dose adjustment is required?",
+      options: [
+        "Increase the vortioxetine dose, because bupropion induces its metabolism",
+        "Halve the maximum vortioxetine dose to 20 mg, because bupropion is a strong CYP2D6 inhibitor",
+        "No change is needed — vortioxetine and bupropion share no metabolic pathway",
+        "Separate the two doses by 12 hours to avoid serotonin syndrome"
+      ],
+      correctIndex: 1,
+      explanation: "Vortioxetine is a CYP2D6 (and 2B6) substrate, and strong 2D6 inhibitors — bupropion, fluoxetine, paroxetine — force the maximum dose down to 20 mg, exactly the halving Katzung recommends for coadministration with fluoxetine or bupropion. Bupropion inhibits rather than induces 2D6, the pair plainly does interact, and serotonin syndrome is not the feared outcome here — altered vortioxetine exposure is.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "atd-vor-06",
+      question: "Which pharmacokinetic statement about vortioxetine is correct?",
+      options: [
+        "It is extensively oxidised by CYP2D6 (with CYP2B6 involvement), is not a potent inhibitor of CYP enzymes, and shows linear, dose-proportional kinetics",
+        "It is a potent CYP3A4 inhibitor like nefazodone",
+        "Its elimination is exclusively renal as unchanged drug",
+        "It has a non-linear half-life that rises steeply above 20 mg"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung's profile: vortioxetine is extensively oxidised via CYP2D6 and other isoenzymes followed by glucuronidation, is tightly protein-bound, has linear dose-proportional kinetics, and is not a potent CYP inhibitor — a clean substrate profile. Potent 3A4 inhibition is nefazodone's fingerprint, exclusive renal excretion fits nothing in this class (vilazodone is about 99% metabolised), and non-linear accumulation is not its pattern.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atd-vor-07",
+      question: "Despite inhibiting SERT, vortioxetine is not classified as an SSRI because:",
+      options: [
+        "Its SERT affinity is too weak to reach clinical potency",
+        "It also inhibits NET, which excludes the SSRI definition",
+        "It irreversibly phosphorylates the serotonin transporter",
+        "Its clinical actions are not primarily related to SERT inhibition — the receptor-level 5-HT modulation (1A/1B agonism, 3/7 antagonism) defines the drug"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung's classification point: vortioxetine's actions are not primarily related to SERT inhibition, so it sits among the 5-HT receptor modulators even though SERT blockade contributes — an allosteric SERT interaction plus 5-HT1A/1B agonism and 5-HT3/5-HT7 antagonism. Its SERT inhibition is clinically potent, it has no meaningful NET activity, and irreversible transporter phosphorylation exists for no antidepressant.",
+      afterSectionId: "neurotransmitters",
+    },
+    {
+      id: "atd-vor-08",
+      question: "A 28-year-old woman with MDD on vortioxetine 20 mg asks about pregnancy planning. Which reproductive-safety statement is most accurate?",
+      options: [
+        "It is absolutely contraindicated throughout pregnancy, like isotretinoin",
+        "Human teratogenicity data are limited and unestablished; like most antidepressants it is treated as a Category C agent, so risks and benefits are weighed case by case",
+        "Large controlled human trials have proven it safe at all stages of pregnancy",
+        "It causes neural tube defects, so folic acid cannot mitigate the risk"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung: vortioxetine's teratogenic risks are not known, but like most other antidepressants it is handled as a Category C agent — no proven human teratogenicity, no clean guarantee either — so planning means an individualised risk-benefit discussion rather than automatic withdrawal. Absolute contraindication overstates the data (isotretinoin or warfarin territory), no antidepressant has trial-proven all-trimester safety, and neural-tube-defect causation is not an antidepressant phenomenon.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

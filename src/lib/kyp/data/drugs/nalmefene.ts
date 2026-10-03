@@ -766,6 +766,110 @@ export const nalmefene: Drug = {
       explanation: "For alcohol dependence (as-needed): start 18 mg 1-2 h before anticipated drinking, target 18 mg per drinking day, maximum 18 mg/day. One tablet per drinking day; continuous daily if drinking daily",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "sud-nmf-01",
+      question: "Nalmefene's receptor profile and chemistry are best described as:",
+      options: [
+        "A pure opioid antagonist - mu-blockade with partial kappa-antagonist activity - chemically a derivative of naltrexone",
+        "A mixed agonist-antagonist with strong kappa-agonism that produces dysphoria",
+        "A delta-selective opioid agonist developed as an antitussive",
+        "A sigma-receptor agonist producing psychotomimetic effects"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung groups nalmefene with naloxone and naltrexone among the pure opioid antagonists and calls it a derivative of naltrexone; the KYP monograph adds mu-antagonism with partial kappa-antagonist activity. Strong kappa agonism with dysphoria is the pentazocine-nalbuphine profile, delta-agonist antitussive framing fits no antagonist, and sigma-receptor psychotomimesis is the old nalorphine-pentazocine story, not nalmefene's.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "sud-nmf-02",
+      question: "An opioid-overdose patient wakes after one naloxone dose, walks out of the emergency department at 2 hours, and returns comatose at 5 hours. The teaching point for the residents is:",
+      options: [
+        "Renarcotisation occurs because naloxone slowly converts agonists into antagonists",
+        "Naloxone's 1-2 hour action is shorter than most opioids' effect - renarcotisation risk demands prolonged observation or a longer-acting antagonist such as nalmefene (half-life about 8-10 hours)",
+        "Naloxone induces rebound opioid hypersensitivity, so every discharged patient needs a double naloxone dose",
+        "The relapse proves naloxone induced CYP2E1 and accelerated opioid metabolism"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung's antagonist section warns that a patient may recover after naloxone and relapse into coma 1-2 hours later because the antagonist outlasts nothing - hence observation and, where persistence is needed, nalmefene with its 8-10 hour half-life (KYP anchor: renarcotisation teaching). Rebound hypersensitivity, CYP2E1 induction and agonist-to-antagonist conversion are invented mechanisms that only sound plausible.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "sud-nmf-03",
+      question: "Why might an emergency department keep nalmefene alongside naloxone?",
+      options: [
+        "It is the first-line drug for alcohol-withdrawal delirium",
+        "It substitutes for methadone in maintenance therapy at lower cost",
+        "For reversal of long-acting opioid overdoses where repeated naloxone dosing would otherwise be needed - with no abuse potential of its own",
+        "It reverses benzodiazepine overdose when flumazenil is unavailable"
+      ],
+      correctIndex: 2,
+      explanation: "Like naloxone, nalmefene is used for opioid overdose but persists far longer (Katzung ch.31), making it the antagonist for long-acting opioid situations - and as a pure antagonist it has no abuse potential (KYP anchor). Flumazenil remains the benzodiazepine antidote, alcohol-withdrawal delirium is treated with benzodiazepines, and a pure antagonist can never substitute for a maintenance agonist like methadone.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "sud-nmf-04",
+      question: "A recovering opioid-dependent patient is offered nalmefene and protests that he does not want to get 'hooked on the antidote'. The correct response is:",
+      options: [
+        "It is a mild partial agonist, so low-grade dependence develops within a few weeks",
+        "A benzodiazepine must be co-prescribed to prevent antagonist-induced seizures",
+        "It creates lifelong opioid hypersensitivity, making future analgesia impossible",
+        "As a pure antagonist nalmefene has no abuse potential, produces no tolerance to its antagonism, and causes no withdrawal of its own - it only bites if opioids are still on board"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung notes the antagonists are almost inert without an agonist on board, there is no tolerance to their antagonistic action, and chronic administration produces no abstinence syndrome on withdrawal - the reassurance package for this exact patient (KYP anchor adds no abuse potential). No partial-agonist dependence exists, antagonist seizures are not a thing to cover, and opioid analgesia is fully possible once the antagonist has cleared.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "sud-nmf-05",
+      question: "A heavy drinker refuses 'total prohibition' but wants to cut down; he asks for a tablet to take on days he expects to drink. The European practice he is describing is:",
+      options: [
+        "As-needed nalmefene before anticipated drinking - an antagonist strategy for reducing alcohol use, approved in Europe but not FDA-approved for this indication",
+        "Methadone 20 mg daily to replace alcohol's reward signal",
+        "Acamprosate 666 mg three times daily, taken only on drinking days",
+        "Disulfiram 250 mg swallowed immediately after each drink"
+      ],
+      correctIndex: 0,
+      explanation: "As-needed nalmefene for alcohol-use reduction is the targeted-use concept in Europe; Katzung notes nalmefene has similar effects to naltrexone in alcohol-use disorder without FDA approval for that indication (KYP anchor). Methadone is opioid maintenance, acamprosate is a continuous abstinence drug whose efficacy collapses if taken erratically, and taking disulfiram after drinking inverts the entire aversion design - the reaction would already be underway.",
+      afterSectionId: "top",
+    },
+    {
+      id: "sud-nmf-06",
+      question: "Which comparison of opioid-antagonist half-lives is correct?",
+      options: [
+        "Both antagonists persist about 4 days, so duration never guides the choice",
+        "Nalmefene lasts about 8-10 hours, far beyond naloxone's 1-2 hour intravenous action - a persistence gap that matters in overdose care",
+        "Naloxone acts for 24-36 hours, dwarfing nalmefene's 1-2 hour window",
+        "Nalmefene works for roughly 5 minutes, making it ideal for rapid outpatient discharge"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung gives nalmefene a half-life of 8-10 hours against naloxone's 1-2 hour injection duration (Tripathi puts adult naloxone plasma half-life near 1 hour) - the numbers behind the renarcotisation teaching. The other options invert the ratio, invent a 5-minute antagonist, or erase a difference that is precisely the point of choosing nalmefene.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "sud-nmf-07",
+      question: "An unconscious patient receives intravenous nalmefene; he wakes but within 20 minutes is vomiting, has diarrhoea, gooseflesh, abdominal cramps and agitation. The correct interpretation is:",
+      options: [
+        "Serotonin syndrome generated by nalmefene's serotonergic metabolites",
+        "Anticholinergic delirium from nalmefene's muscarinic blockade",
+        "Precipitated acute opioid withdrawal - the patient was opioid-dependent, and the antagonist instantly unmasked it",
+        "Anaphylaxis to nalmefene, requiring immediate intramuscular adrenaline"
+      ],
+      correctIndex: 2,
+      explanation: "Given to an opioid-dependent subject, an antagonist almost instantaneously precipitates an abstinence syndrome - vomiting, diarrhoea, cramps, piloerection and agitation are the classic picture (Katzung ch.31; Tripathi's naloxone chapter). Anaphylaxis requires bronchospasm, urticaria and hypotension rather than this autonomic pattern, nalmefene has no serotonergic story, and muscarinic blockade would produce dry secretions and delirium of a different character.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "sud-nmf-08",
+      question: "Which statement comparing nalmefene with naltrexone is correct?",
+      options: [
+        "Nalmefene is a partial mu agonist, which is why it suits maintenance therapy",
+        "Nalmefene is more hepatotoxic than naltrexone, so monthly liver tests are mandatory",
+        "Nalmefene is inactive by every route until hepatically activated",
+        "Nalmefene lacks naltrexone's hepatotoxicity signal, has higher oral bioavailability, and is longer acting"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi's antagonist chapter credits nalmefene with lacking naltrexone's hepatotoxicity, higher oral bioavailability and longer action; Katzung 14e adds that in the USA it is available only intravenously for overdose - together the complete comparison card. Partial agonism is buprenorphine's property, the hepatotoxicity ranking inverts the real difference, and a prodrug-activation claim has no basis for nalmefene.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

@@ -792,6 +792,110 @@ export const tianeptine: Drug = {
       explanation: "For major depressive disorder: start 12.5 mg three times daily, target 37.5 mg/day, maximum 37.5 mg/day. Fixed TID dosing per label",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atd-tia-01",
+      question: "Tianeptine's mechanism of antidepressant action is currently best described as:",
+      options: [
+        "Potent inhibition of serotonin reuptake at SERT",
+        "Alpha-2 autoreceptor antagonism combined with H1 blockade",
+        "Monoamine oxidase inhibition combined with dopamine reuptake blockade",
+        "Mu-opioid receptor agonism — though the drug was historically labelled a \"serotonin reuptake enhancer\""
+      ],
+      correctIndex: 3,
+      explanation: "Tianeptine was introduced with the paradoxical label of enhancing (rather than inhibiting) 5-HT uptake — Tripathi still introduces it that way — but its better-supported modern mechanism is agonism at the mu-opioid receptor, which also explains the euphoria and dependence seen with misuse. Alpha-2 plus H1 is mirtazapine, MAO inhibition defines the MAOIs, and potent SERT inhibition would make it an SSRI — the opposite of its historical tag.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atd-tia-02",
+      question: "Tripathi positions tianeptine for which clinical picture?",
+      options: [
+        "Anxiodepressive states, particularly with psychosomatic symptoms, as well as endogenous depression",
+        "Treatment-resistant psychosis with prominent mood symptoms",
+        "Attention deficit hyperactivity disorder in children over 6 years",
+        "Bulimia nervosa with purging behaviour"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi's tianeptine entry is specifically anxiodepressive states, particularly with psychosomatic symptoms, alongside endogenous depression — an anxious-depressed, body-symptom-heavy phenotype. Psychotic depression points to amoxapine or an antipsychotic combination, ADHD belongs to atomoxetine and methylphenidate, and bulimia is a contraindication to bupropion, not a tianeptine use.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-tia-03",
+      question: "A 40-year-old on tianeptine 12.5 mg once daily says the tablet \"seems to wear off by afternoon — my anxiety returns every evening.\" The pharmacokinetic explanation and the labelled fix are:",
+      options: [
+        "Enzyme induction is clearing it faster each week, so double the single daily dose",
+        "It has a very long half-life, so switch to once-weekly dosing",
+        "The drug accumulates across the week, so skip two days each week",
+        "It has a short half-life of a few hours, so the labelled regimen is 12.5 mg two to three times daily"
+      ],
+      correctIndex: 3,
+      explanation: "Tianeptine's short elimination half-life (roughly 2.5 hours) means once-daily dosing leaves long troughs — matching Tripathi's labelled regimen of 12.5 mg BD-TDS (brand Stablon), which spreads exposure across the day. Doubling one daily dose only overshoots peaks, \"long half-life\" is the opposite of the truth (a favourite mirror distractor), and intermittent skipping has no pharmacological basis.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atd-tia-04",
+      question: "A 27-year-old with depression on tianeptine has been requesting early refills, was found buying tablets from three pharmacies, and admits crushing and snorting doses \"for a buzz.\" The best pharmacological explanation is:",
+      options: [
+        "A serotonergic discontinuation syndrome driven by 5-HT uptake enhancement",
+        "Mu-opioid receptor agonism producing euphoria and dependence — tianeptine carries real abuse potential",
+        "Paradoxical catecholamine release identical to amphetamine",
+        "An anticholinergic craving pattern typical of the tricyclics"
+      ],
+      correctIndex: 1,
+      explanation: "Tianeptine misuse is the exam hook: its mu-opioid agonism produces opioid-type euphoria and dependence, and escalating use, doctor-shopping and snorting/injecting are documented — hence caution or avoidance in substance-use history and careful refill control. An SSRI-type discontinuation narrative mislabels the syndrome, amphetamine-like release is bupropion/methylphenidate territory, and anticholinergic craving is not a recognised TCA phenomenon.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-tia-05",
+      question: "Which adverse-effect cluster matches tianeptine as described in Tripathi?",
+      options: [
+        "Marked weight gain, sedation and anticholinergic constipation",
+        "Agranulocytosis, hepatitis and priapism",
+        "Dry mouth, epigastric pain, flatulence, drowsiness or insomnia, tremor and bodyache",
+        "Extrapyramidal rigidity, hyperprolactinaemia and galactorrhoea"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi lists tianeptine's side effects as dry mouth, epigastric pain, flatulence, drowsiness/insomnia, tremor and bodyache — a mild, largely GI-autonomic profile in a drug that is neither sedative nor stimulant. Weight gain with anticholinergic sedation is TCA/mirtazapine territory, blood dyscrasias and priapism map to mianserin and trazodone respectively, and EPS with hyperprolactinaemia is D2-blocker (amoxapine/antipsychotic) pharmacology.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-tia-06",
+      question: "A patient in Delhi asks why his Stablon (tianeptine 12.5 mg) prescription cannot simply be continued during a planned 2-year stay in the United States. The correct explanation is:",
+      options: [
+        "Tianeptine is not FDA-approved and is unavailable in US pharmacies; he needs a locally available alternative and must be warned against internet imports",
+        "Tianeptine is sold over the counter in the US without a prescription",
+        "FDA approval exists, but the brand Stablon is trademark-protected in the US",
+        "US doctors may continue it only at triple the Indian dose"
+      ],
+      correctIndex: 0,
+      explanation: "Tianeptine is available in India and Europe but has never been FDA-approved, so a US pharmacy cannot fill it — the practical plan is switching to a locally available antidepressant plus an explicit warning that internet imports are how most US tianeptine misuse cases began. OTC status, trademark-only barriers and dose tripling are all invented obstacles.",
+      afterSectionId: "top",
+    },
+    {
+      id: "atd-tia-07",
+      question: "Which exam contrast about tianeptine is correct?",
+      options: [
+        "It increases 5-HT uptake and therefore causes a classical serotonergic discontinuation syndrome",
+        "It is neither sedative nor stimulant, yet produces profound anticholinergic toxicity in overdose",
+        "Its efficacy equals clomipramine's in obsessive-compulsive disorder, its other key label",
+        "It is described as neither sedative nor stimulant, and its \"serotonin reuptake enhancer\" tag is the historical oddity among antidepressants"
+      ],
+      correctIndex: 3,
+      explanation: "Tianeptine's exam identity is the odd-one-out: Tripathi notes it reportedly increases rather than inhibits 5-HT uptake while being neither sedative nor stimulant, useful in anxiodepressive and endogenous depression — but the modern mu-opioid mechanism and abuse potential have redefined the drug. A discontinuation syndrome driven by \"enhanced uptake\" is not a real entity, profound anticholinergic overdose toxicity is TCA behaviour, and OCD is clomipramine/SSRI ground, not tianeptine's.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atd-tia-08",
+      question: "A 33-year-old man with major depression has a 5-year history of opioid dependence in remission on buprenorphine maintenance. Which antidepressant should be avoided largely because of its mu-opioid agonism and misuse profile?",
+      options: [
+        "Tianeptine",
+        "Escitalopram",
+        "Agomelatine",
+        "Mirtazapine"
+      ],
+      correctIndex: 0,
+      explanation: "Tianeptine's mu-opioid agonism gives it genuine euphoriant and dependence potential, and reactivating opioid-use disorder is exactly the feared outcome in a buprenorphine-maintained patient — choose a non-opioidergic agent. Escitalopram (SERT), agomelatine (MT1/MT2 plus 5-HT2C) and mirtazapine (alpha-2 plus H1) have no opioidergic action and no misuse liability of this kind.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

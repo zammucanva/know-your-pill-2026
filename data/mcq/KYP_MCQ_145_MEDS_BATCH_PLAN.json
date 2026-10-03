@@ -1,0 +1,303 @@
+{
+ "project": "Know Your Pill — MCQ Expansion to All Medications",
+ "canonicalSource": "https://zammucanva.github.io/know-your-pill-2026/drugs/ (145 medication monographs extracted 2026-10-02; 40 additional class/index pages excluded)",
+ "questionTarget": "8-12 per drug, ~1,200-1,450 total",
+ "textbookAnchors": {
+  "Stahl's Essential Psychopharmacology": "mechanisms, receptor/target profiles, dose-dependent monoamine effects",
+  "Katzung — Basic & Clinical Pharmacology": "pharmacokinetics, indications, adverse effects, toxicity",
+  "K.D. Tripathi — Essentials of Medical Pharmacology": "Indian exam orientation, contraindications, practical dosing",
+  "Oxford Handbook of Psychiatry": "clinical scenarios, monitoring, switching/cross-taper practice",
+  "USMLE-style board references (First Aid / UWorld conventions)": "vignette stems, buzzword formatting, two-step reasoning",
+  "note": "Questions align with the canonical, widely-published facts of these references; no copyrighted text is reproduced. Every answer is additionally cross-checked against the matching KYP monograph."
+ },
+ "qualityGate": "Every batch passes scripts/mcq_4step_check.py (4-step: structural, fact-anchors, distractor-quality, answer-key) + manual semantic review before handoff.",
+ "schema": "Identical to Batch 01 (microQuizzes-compatible): id, question, options[4], correctIndex, explanation, afterSectionId + drugSlug, domain, difficulty, style",
+ "batches": [
+  {
+   "id": "B01",
+   "class": "SSRI (core)",
+   "drugs": [
+    "sertraline",
+    "fluoxetine",
+    "escitalopram",
+    "paroxetine"
+   ],
+   "questions": 46,
+   "status": "DONE — QA pass"
+  },
+  {
+   "id": "B02",
+   "class": "SNRI",
+   "drugs": [
+    "venlafaxine",
+    "desvenlafaxine",
+    "duloxetine",
+    "milnacipran",
+    "levomilnacipran"
+   ],
+   "questions": 41,
+   "status": "DONE — QA pass"
+  },
+  {
+   "id": "B03",
+   "class": "SSRI (completion)",
+   "drugs": [
+    "citalopram",
+    "fluvoxamine"
+   ],
+   "questions": 17,
+   "status": "DONE — QA pass",
+   "file": "KYP_SSRI_MCQ_Batch_03.json",
+   "answerSpread": "A5 B4 C4 D4"
+  },
+  {
+   "id": "B04",
+   "class": "TCA & tetracyclics",
+   "drugs": [
+    "imipramine",
+    "amitriptyline",
+    "clomipramine",
+    "nortriptyline",
+    "desipramine",
+    "doxepin",
+    "trimipramine",
+    "protriptyline",
+    "lofepramine",
+    "dothiepin",
+    "maprotiline",
+    "amoxapine"
+   ],
+   "questions": 97,
+   "status": "DONE — QA pass"
+  },
+  {
+   "id": "B05",
+   "class": "MAOI & RIMA",
+   "drugs": [
+    "phenelzine",
+    "tranylcypromine",
+    "isocarboxazid",
+    "selegiline",
+    "moclobemide"
+   ],
+   "questions": 41,
+   "status": "DONE — QA pass"
+  },
+  {
+   "id": "B06",
+   "class": "Atypical antidepressants I",
+   "drugs": [
+    "bupropion",
+    "mirtazapine",
+    "mianserin",
+    "trazodone",
+    "nefazodone"
+   ],
+   "questions": 41,
+   "status": "DONE — QA pass"
+  },
+  {
+   "id": "B07",
+   "class": "Atypical antidepressants II",
+   "drugs": [
+    "vilazodone",
+    "vortioxetine",
+    "agomelatine",
+    "tianeptine",
+    "reboxetine",
+    "atomoxetine"
+   ],
+   "questions": 49,
+   "status": "DONE — QA pass",
+   "file": "KYP_ATYPICAL2_MCQ_Batch_07.json"
+  },
+  {
+   "id": "B08",
+   "class": "Typical antipsychotics I (phenothiazines & butyrophenones)",
+   "drugs": [
+    "chlorpromazine",
+    "haloperidol",
+    "fluphenazine",
+    "trifluoperazine",
+    "perphenazine",
+    "thioridazine"
+   ],
+   "questions": 49,
+   "status": "DONE — QA pass",
+   "file": "KYP_TYPICALAP_MCQ_Batch_08.json"
+  },
+  {
+   "id": "B09",
+   "class": "Typical antipsychotics II & others",
+   "drugs": [
+    "pimozide",
+    "thiothixene",
+    "loxapine",
+    "flupenthixol",
+    "zuclopenthixol",
+    "pipothiazine",
+    "molindone",
+    "mesoridazine",
+    "cyamemazine",
+    "sulpiride"
+   ],
+   "questions": 81,
+   "status": "DONE — QA pass"
+  },
+  {
+   "id": "B10",
+   "class": "Atypical antipsychotics I",
+   "drugs": [
+    "risperidone",
+    "paliperidone",
+    "olanzapine",
+    "quetiapine",
+    "aripiprazole"
+   ],
+   "questions": 41,
+   "status": "DONE — QA pass"
+  },
+  {
+   "id": "B11",
+   "class": "Atypical antipsychotics II",
+   "drugs": [
+    "clozapine",
+    "ziprasidone",
+    "lurasidone",
+    "asenapine",
+    "cariprazine",
+    "brexpiprazole",
+    "iloperidone",
+    "sertindole",
+    "zotepine",
+    "blonanserin",
+    "perospirone",
+    "amisulpride"
+   ],
+   "questions": 97,
+   "status": "DONE — QA pass (97 Qs)"
+  },
+  {
+   "id": "B12",
+   "class": "Benzodiazepines",
+   "drugs": [
+    "alprazolam",
+    "diazepam",
+    "lorazepam",
+    "clonazepam",
+    "chlordiazepoxide",
+    "clorazepate",
+    "oxazepam",
+    "temazepam",
+    "midazolam",
+    "estazolam",
+    "flurazepam",
+    "quazepam",
+    "triazolam",
+    "flunitrazepam",
+    "loflazepate"
+   ],
+   "questions": 121,
+   "status": "DONE — QA pass (121 Qs)"
+  },
+  {
+   "id": "B13",
+   "class": "Hypnotics & sleep agents",
+   "drugs": [
+    "zolpidem",
+    "zopiclone",
+    "eszopiclone",
+    "zaleplon",
+    "ramelteon",
+    "tasimelteon",
+    "suvorexant",
+    "hydroxyzine",
+    "diphenhydramine"
+   ],
+   "questions": 73,
+   "status": "DONE — QA pass (73 Qs)",
+   "file": "KYP_SLEEP_MCQ_Batch_13.json"
+  },
+  {
+   "id": "B14",
+   "class": "Mood stabilisers & anticonvulsants",
+   "drugs": [
+    "lithium",
+    "valproate",
+    "carbamazepine",
+    "lamotrigine",
+    "oxcarbazepine",
+    "topiramate",
+    "gabapentin",
+    "pregabalin",
+    "levetiracetam",
+    "tiagabine",
+    "zonisamide"
+   ],
+   "questions": 89,
+   "status": "DONE — QA pass (89 Qs)",
+   "file": "KYP_MOODSTAB_MCQ_Batch_14.json"
+  },
+  {
+   "id": "B15",
+   "class": "Stimulants & cognition enhancers",
+   "drugs": [
+    "amphetamine",
+    "dexamphetamine",
+    "lisdexamfetamine",
+    "methylphenidate",
+    "dexmethylphenidate",
+    "modafinil",
+    "armodafinil",
+    "pemoline",
+    "donepezil",
+    "galantamine",
+    "rivastigmine",
+    "tacrine",
+    "memantine"
+   ],
+   "questions": 105,
+   "status": "DONE — QA pass (105 Qs)"
+  },
+  {
+   "id": "B16",
+   "class": "SUD treatments & adjuncts",
+   "drugs": [
+    "naltrexone",
+    "buprenorphine",
+    "acamprosate",
+    "disulfiram",
+    "varenicline",
+    "nalmefene",
+    "naltrexone-bupropion",
+    "sodium-oxybate",
+    "buspirone",
+    "propranolol",
+    "prazosin",
+    "clonidine",
+    "guanfacine",
+    "ketamine",
+    "dextromethorphan",
+    "flumazenil",
+    "l-methylfolate",
+    "triiodothyronine",
+    "caprylidene",
+    "pimavanserin",
+    "flibanserin",
+    "lorcaserin",
+    "phentermine-topiramate",
+    "benztropine",
+    "trihexyphenidyl"
+   ],
+   "questions": 200,
+   "status": "DONE — QA pass (203 Qs)"
+  }
+ ],
+ "totals": {
+  "drugs": 145,
+  "batches": 16,
+  "projectedQuestions": 1191,
+  "completedQuestions": 1191,
+  "status": "COMPLETE — all 145 drugs covered, 1191 QA-passed questions"
+ }
+}

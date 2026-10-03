@@ -872,6 +872,110 @@ export const buprenorphine: Drug = {
       explanation: "For opioid use disorder — induction: start 2-4 mg sublingual when in mild-moderate withdrawal (COWS ≥ 8-12), target —, maximum 32 mg/day day 1 typical. Repeat 2-4 mg hourly to comfort; total day 1 typically 8-16 mg",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "sud-bnp-01",
+      question: "Buprenorphine's receptor signature - the reason it is called a mixed agonist-antagonist - is:",
+      options: [
+        "Partial mu-receptor agonism with low intrinsic activity, plus antagonist actions at delta and kappa receptors",
+        "Full mu-receptor agonism with the highest affinity among clinically used opioids",
+        "Pure mu-receptor antagonism with oral activity and 48-hour heroin blockade",
+        "Partial agonism at alpha4beta2 nicotinic receptors that reduces tobacco craving"
+      ],
+      correctIndex: 0,
+      explanation: "Buprenorphine is a potent, long-acting phenanthrene that is a partial mu-receptor agonist (low intrinsic activity) and an antagonist at delta and kappa receptors - the mixed agonist-antagonist definition (Katzung ch.31; Tripathi adds kappa antagonism). Full high-affinity agonism describes fentanyl or methadone, pure oral antagonism with 48-hour blockade is naltrexone's profile, and alpha4beta2 partial agonism is varenicline's mechanism.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "sud-bnp-02",
+      question: "An opioid-substitution clinic choosing between buprenorphine and methadone asks you to defend buprenorphine's overdose-safety reputation. The exam pearl is:",
+      options: [
+        "Buprenorphine carries no dependence liability, so overdose only occurs in naive users",
+        "Respiratory depression from buprenorphine exhibits a ceiling effect, so dose escalation is far less likely to be fatal than with full agonists like methadone",
+        "Buprenorphine causes less constipation and miosis, therefore overdose is pharmacologically impossible",
+        "A single standard 0.4 mg dose of intravenous naloxone reliably reverses any buprenorphine overdose"
+      ],
+      correctIndex: 1,
+      explanation: "The ceiling effect on buprenorphine's respiratory depression is the signature safety differentiator versus full agonists - Tripathi and Katzung both teach it, and it is why buprenorphine is the safer maintenance opioid (Katzung ch.31). Overdose still occurs, especially with injected misuse plus benzodiazepines; naloxone fails to reverse established buprenorphine effect because of tight receptor binding; and dependence, though milder and slower in onset, is real.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "sud-bnp-03",
+      question: "A man used heroin last night and presents this morning to an opioid-treatment clinic asking to start buprenorphine maintenance today. He has only mild pinpoint pupils and no withdrawal signs. The correct instruction is:",
+      options: [
+        "Give a methadone loading dose first and start buprenorphine the following day",
+        "Give intramuscular buprenorphine 0.3 mg now as a bridge to sublingual therapy",
+        "Wait until objective moderate withdrawal signs appear before the first dose - switching from a full agonist too early precipitates withdrawal",
+        "Give the first sublingual dose immediately; buprenorphine never interacts with residual heroin"
+      ],
+      correctIndex: 2,
+      explanation: "Because buprenorphine is a partial mu agonist with high affinity, giving it while full-agonist opioids still occupy receptors precipitates withdrawal - induction is deliberately delayed until moderate withdrawal is objectively present (Katzung ch.31). Immediate dosing or an IM bridge would trigger exactly that syndrome, and loading with methadone first increases the agonist burden and makes the problem worse, not better.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "sud-bnp-04",
+      question: "Which trio correctly captures buprenorphine's pharmacokinetics?",
+      options: [
+        "Fully bioavailable by mouth, half-life about 10 hours, excreted unchanged in urine",
+        "Intramuscular route only, half-life 1-2 hours, cleared by glucuronidation",
+        "Hepatically activated prodrug, half-life 8-10 hours, dose limited by a toxic metabolite",
+        "Sublingual route preferred, long duration from slow dissociation from mu receptors, terminal half-life around 40 hours with biliary-faecal excretion"
+      ],
+      correctIndex: 3,
+      explanation: "Significant first-pass metabolism makes the sublingual route preferred (Katzung); its long duration reflects slow dissociation from mu receptors, rendering effects resistant to naloxone reversal; and Tripathi gives a terminal half-life of about 40 hours with mostly unchanged biliary excretion into faeces. Oral 10-hour renal excretion matches no opioid here, the 1-2 hour glucuronidated profile is naloxone's, and a hepatotoxic-metabolite prodrug story belongs to no formulation of buprenorphine.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "sud-bnp-05",
+      question: "A patient stable on buprenorphine maintenance has been buying alprazolam from a friend for sleep. The single most important counselling point is:",
+      options: [
+        "Combining buprenorphine with benzodiazepines or other CNS depressants can cause serious respiratory depression and death, even though buprenorphine alone has a ceiling effect",
+        "Benzodiazepines induce CYP3A4 and will drop buprenorphine levels, precipitating acute withdrawal",
+        "The combination is recommended because benzodiazepines prevent the seizures that buprenorphine causes at maintenance doses",
+        "Only intravenous misuse is dangerous; taking benzodiazepines by mouth alongside buprenorphine is entirely safe"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung is explicit that buprenorphine formulations can still cause serious respiratory depression and death, particularly when misused intravenously or combined with benzodiazepines, sedatives, antipsychotics or alcohol - the ceiling lowers risk but does not abolish it. Benzodiazepines are not meaningful 3A4 inducers here, buprenorphine maintenance is not a seizure-producing state, and oral co-ingestion is precisely the documented fatal pattern.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "sud-bnp-06",
+      question: "A patient on methadone 60 mg daily is switched directly to buprenorphine, taking the first sublingual dose 6 hours after his last methadone dose. Within the hour he has cramps, diarrhoea, gooseflesh and agitation. What happened and how is it prevented?",
+      options: [
+        "Acute buprenorphine hepatotoxicity presenting within the first hour",
+        "Precipitated withdrawal - buprenorphine was started too soon after a full agonist; switch only when the methadone dose is low and moderate withdrawal is present",
+        "Acute methadone overdose - the two drugs simply added their agonist effects together",
+        "A histamine reaction to buprenorphine excipients requiring immediate adrenaline"
+      ],
+      correctIndex: 1,
+      explanation: "This is the induction mirror of the naltrexone trap: a partial agonist with high affinity displaces the full agonist from receptors, precipitating withdrawal when the gap after the last methadone dose is short and the dose is still high (Katzung ch.31). Additive agonism is the opposite of what occurred, there is no histamine or anaphylactic pattern here, and hepatic injury is a subacute naltrexone-themed concern rather than a 1-hour event.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "sud-bnp-07",
+      question: "How does high-dose buprenorphine behave at the mu receptor, and why does this matter in opioid-use-disorder treatment?",
+      options: [
+        "At high doses it loses mu-receptor affinity and acts purely at ORL1 receptors",
+        "At high doses it blocks its own CYP3A4 metabolism, producing dose-proportional accumulation",
+        "At high doses its own mu-antagonist-like action limits analgesia and respiratory depression, widening the safety margin compared with methadone",
+        "At high doses it converts into a full agonist, so analgesia and respiratory depression rise without limit"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung states that high-dose administration of buprenorphine results in a mu-opioid antagonist action that limits its analgesic and respiratory-depressant properties - the receptor-level explanation of the ceiling that makes it the gold-standard maintenance agonist. It never converts to an unlimited full agonist, ORL1 (orphanin) binding exists but does not explain the ceiling, and its CYP3A4 metabolism is not self-inhibited.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "sud-bnp-08",
+      question: "Which statement about buprenorphine's Indian formulations and uses is correct?",
+      options: [
+        "It is available only as a once-monthly intramuscular depot suspension",
+        "It is marketed in India only as an antitussive syrup for refractory cough",
+        "Its use is restricted to anaesthetists for intraoperative analgesia alone",
+        "It is available as 0.2 mg sublingual tablets and 0.3 mg/mL injections for pain, and in higher sublingual doses for opioid-substitution therapy"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists NORPHIN, TIDIGESIC and BUPRIGESIC 0.3 mg/mL injections and 0.2 mg sublingual tablets, with buprenorphine recommended for pain as well as the treatment of morphine dependence - the basis of Indian opioid-substitution practice. There is no depot-only reality (monthly IM depots belong to naltrexone and antipsychotics), it is not an antitussive, and its use extends far beyond the operating theatre.",
+      afterSectionId: "top",
+    },
   ],
   activeRecallQuestions: [
     {

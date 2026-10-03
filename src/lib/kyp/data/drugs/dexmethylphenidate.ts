@@ -790,6 +790,110 @@ export const dexmethylphenidate: Drug = {
       explanation: "For adhd (ir): start 2.5 mg twice daily, target 10-20 mg/day, maximum 20 mg/day. Increase weekly",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "stm-dmp-01",
+      question: "Dexmethylphenidate is defined as:",
+      options: [
+        "The d-threo enantiomer — the pharmacologically active half of racemic methylphenidate, marketed alone",
+        "A long-acting ester prodrug of methylphenidate",
+        "A threo-isomer of amphetamine",
+        "The l-threo enantiomer of methylphenidate"
+      ],
+      correctIndex: 0,
+      explanation: "Dexmethylphenidate (Focalin) isolates the d-threo isomer that carries essentially all of racemic methylphenidate's activity — the same single-active-enantiomer logic as escitalopram. Option D picks the near-inactive mirror, option B invents a prodrug (the prodrug in this batch is lisdexamfetamine), and the threo label belongs to the phenidate family, not amphetamine.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-dmp-02",
+      question: "A patient stable on racemic methylphenidate IR 20 mg daily (10 mg twice daily) switches to dexmethylphenidate. The appropriate total daily starting dose is:",
+      options: [
+        "100 mg daily, weight-based",
+        "10 mg daily (5 mg twice daily) — half the racemate's milligram dose",
+        "20 mg daily, identical to the racemate",
+        "40 mg daily, double the racemate"
+      ],
+      correctIndex: 1,
+      explanation: "Because the d-threo enantiomer supplies the activity, dexmethylphenidate is dosed at roughly half the racemic milligram dose — 10 mg total in this patient. Option C ignores enantiomer potency, option A doubles an already-doubled error, and 100 mg is far outside any methylphenidate dosing range.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-dmp-03",
+      question: "A pharmacy student asks why the dexmethylphenidate dose is described as half rather than given a brand-new dose scale. The best teaching answer is:",
+      options: [
+        "Enantiomers always require identical milligram doses",
+        "Dexmethylphenidate doubles the half-life, so the dose halves",
+        "Racemic methylphenidate already delivers its effect through the d-threo isomer, so isolating that enantiomer simply halves the milligrams needed for the same pharmacology",
+        "The l-threo isomer contributes half of the therapeutic effect"
+      ],
+      correctIndex: 2,
+      explanation: "The active-enantiomer principle: the racemate's activity is essentially the d-threo isomer's activity, so the single-isomer product needs about half the milligrams — the mirror of option D's inverted claim. Option A is a false blanket rule that escitalopram and levomilnacipran disprove, and option B confuses dose equivalence with pharmacokinetics.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "stm-dmp-04",
+      question: "Which enantiomer-pattern pairing is CORRECT?",
+      options: [
+        "Escitalopram is the R-enantiomer of citalopram and levomilnacipran is the levo-isomer of venlafaxine",
+        "Dexmethylphenidate is the active half of atomoxetine",
+        "Eszopiclone is the active enantiomer of zaleplon",
+        "Escitalopram is the active S-enantiomer of citalopram, levomilnacipran is the active isomer of milnacipran, and dexmethylphenidate is the active d-threo half of methylphenidate"
+      ],
+      correctIndex: 3,
+      explanation: "The enantiomer pearl lines up three single-isomer success stories — S-citalopram, the active milnacipran isomer and d-threo methylphenidate — exactly the pattern KYP highlights. Option A misassigns both the citalopram stereochemistry and levomilnacipran's parent drug, option B attaches the pattern to the wrong noradrenaline-reuptake inhibitor, and eszopiclone is the S-isomer of zopiclone, not zaleplon.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-dmp-05",
+      question: "A patient on dexmethylphenidate 10 mg asks whether half the dose also means half the side effects. The correct response is:",
+      options: [
+        "Not automatically — the AE profile is the same methylphenidate-class signature (appetite loss, insomnia, BP/HR rise) at any equipotent dose; tolerability is individualized, not geometric",
+        "Yes — all adverse effects scale exactly and only with the milligram dose",
+        "Dexmethylphenidate has no stimulant adverse effects at all",
+        "Side effects appear only above 60 mg daily"
+      ],
+      correctIndex: 0,
+      explanation: "Halving the dose achieves equivalence of EFFECT with the racemate, not a guaranteed halving of harm: the same sympathomimetic AE signature (anorexia, insomnia, raised BP/HR) applies and needs the same monitoring. Option B states a tidy but false rule, option D denies the class pharmacology, and option A invents a threshold.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-dmp-06",
+      question: "Dexmethylphenidate's indication and identity are:",
+      options: [
+        "Alzheimer's disease, marketed as Namenda",
+        "ADHD, marketed as Focalin/Focalin XR — the single d-threo isomer of methylphenidate",
+        "ADHD, marketed as Strattera",
+        "Narcolepsy, marketed as Provigil"
+      ],
+      correctIndex: 1,
+      explanation: "Focalin is the branded dexmethylphenidate with an ADHD label (including an extended-release XR form) — it is the single d-threo isomer of methylphenidate marketed alone. Provigil is modafinil, Namenda is memantine, and Strattera is atomoxetine — three identity swaps that make these classic distractors.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-dmp-07",
+      question: "A community pharmacist receives a call asking whether OROS methylphenidate can be substituted milligram-for-milligram with dexmethylphenidate. The best answer is:",
+      options: [
+        "Yes — all methylphenidate products are interchangeable mg-for-mg",
+        "Yes, provided the capsules are crushed to replicate the OROS release",
+        "No — dexmethylphenidate is dosed at about half the racemate's milligrams, and OROS is extended-release; any switch needs prescriber-led retitration, not 1:1 substitution",
+        "No — dexmethylphenidate must be given intranasally instead"
+      ],
+      correctIndex: 2,
+      explanation: "Two traps combine: enantiomer dose equivalence (half the racemate's milligrams) and formulation equivalence (OROS osmotic release cannot be replicated, and crushing dumps the load). Option A ignores both, crushing defeats extended-release design and risks dose-dumping, and the intranasal route belongs to misuse discussions, not pharmacy practice.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "stm-dmp-08",
+      question: "The examination rationale for teaching dexmethylphenidate is best summarised as:",
+      options: [
+        "It is the only stimulant exempt from pregnancy warnings",
+        "It is a prodrug designed to prevent all misuse",
+        "It blocks both DAT and VMAT2 irreversibly",
+        "It is the methylphenidate-family member of the single-active-enantiomer franchise — d-threo isomer, half the racemate's milligram dose, same ADHD label — tested against the escitalopram/levomilnacipran pattern"
+      ],
+      correctIndex: 3,
+      explanation: "The teachable core is the enantiomer franchise: d-threo isolation, half-dose equivalence and unchanged indication — the same reasoning template as escitalopram and levomilnacipran. Pregnancy categorisation of stimulants is not the pearl here, the anti-misuse prodrug story is lisdexamfetamine's, and irreversible transporter/VMAT2 blockade describes no clinical drug in this class.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

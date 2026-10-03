@@ -835,6 +835,110 @@ export const zotepine: Drug = {
       explanation: "For schizophrenia: start 25-50 mg at night, target 150-300 mg/day, maximum 450 mg/day (inpatient). Increase to 150-300 mg/day (divided)",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atp-zot-01",
+      question: "Zotepine's receptor and reuptake pharmacology is best stated as:",
+      options: [
+        "D2/D1, 5-HT2, alpha-1 and H1 blockade plus weak noradrenaline reuptake inhibition",
+        "Selective 5-HT6 antagonism as its only action",
+        "Pure dopamine depletion at nigrostriatal terminals",
+        "Muscarinic M4 agonism with alpha-2 antagonism"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi lists zotepine as blocking D2, D1, 5-HT2, alpha-1 and H1 receptors while inhibiting NA reuptake — a transporter flavour shared among antipsychotics only with ziprasidone, hinting at an antidepressant-adjacent profile. Selective 5-HT6 blockade, dopamine depletion and muscarinic agonism describe no antipsychotic.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atp-zot-02",
+      question: "Zotepine's pharmacokinetics, in Tripathi's account, are:",
+      options: [
+        "Sublingual absorption bypassing the liver",
+        "Good oral absorption with extensive first-pass metabolism, t½ about 14 hours, titrated 25 mg TDS up to 100 mg TDS",
+        "Zero first-pass effect with a 48-hour half-life and weekly dosing",
+        "Renal excretion of unchanged drug with a 6-hour half-life"
+      ],
+      correctIndex: 1,
+      explanation: "Zotepine is well absorbed but heavily first-passed, has a t½ near 14 hours, and is titrated from 25 mg three times daily up to 100 mg TDS (Tripathi). No sublingual or depot form exists, and renal unchanged excretion is amisulpride's property.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-zot-03",
+      question: "A man with schizophrenia on zotepine 300 mg/day (upper range) presents after a witnessed generalised seizure; he has no epilepsy history and glucose is normal. The most likely explanation is:",
+      options: [
+        "Hypoglycaemia from metformin co-therapy",
+        "Occult benzodiazepine withdrawal",
+        "Dose-related seizure-threshold lowering by zotepine",
+        "Coincidental idiopathic epilepsy unmasked by chance"
+      ],
+      correctIndex: 2,
+      explanation: "Zotepine lowers the seizure threshold and seizures rise with high doses — a clozapine-style liability (Tripathi) — so a seizure at upper-range dosing first implicates the drug and demands dose review. Metformin hypoglycaemia and benzodiazepine withdrawal are not part of this story.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-zot-04",
+      question: "A patient on zotepine gains 9 kg in six months with rising fasting glucose and triglycerides. Which drug does zotepine most resemble in this metabolic behaviour?",
+      options: [
+        "Ziprasidone — identical metabolic and cardiac profile",
+        "Aripiprazole — the same weight-gain tier",
+        "Amisulpride — matching lipid effects",
+        "Clozapine — weight gain, hyperglycaemia and dyslipidaemia, plus shared seizure risk at high dose"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi groups zotepine with clozapine for weight gain, hyperglycaemia and dyslipidaemia, and both share dose-related seizure risk. Ziprasidone and aripiprazole sit in the lean tier rather than this one, and amisulpride's distinguishing marks are prolactin and QTc, not dyslipidaemia.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-zot-05",
+      question: "Zotepine's market and usage status, per Tripathi, is:",
+      options: [
+        "Available in India for schizophrenia but offering no specific advantage; discontinued in the UK",
+        "US first-line for refractory schizophrenia",
+        "Worldwide withdrawal with no market anywhere",
+        "EU limited-use programme with mandatory ECGs"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi notes zotepine remains available in India for schizophrenia without any specific advantage and has been discontinued in the UK — a second-line agent without a unique niche. The ECG programme describes sertindole, and refractory first-line status is clozapine's role.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-zot-06",
+      question: "A 32-year-old with epilepsy (well controlled on valproate) develops schizophrenia. Which antipsychotic choice best avoids seizure-threshold trouble?",
+      options: [
+        "Olanzapine at 40 mg/day",
+        "Ziprasidone",
+        "Zotepine",
+        "Clozapine"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi notes risperidone, quetiapine, aripiprazole and ziprasidone have little effect on seizure threshold — ziprasidone is the safe pick here. Clozapine and zotepine are the class's epileptogenic drugs, and high-dose olanzapine also lowers the threshold.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-zot-07",
+      question: "The Indian preparation of zotepine listed by Tripathi is:",
+      options: [
+        "Fluanxol 0.5–3 mg tablets",
+        "Clopamide 25 mg capsules",
+        "Zoleptil / Nipolept 25 and 50 mg tablets",
+        "Sulpitac 50, 100, 200 mg tablets"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi's preparation table lists ZOLEPTIL and NIPOLEPT 25 and 50 mg tablets for zotepine. Sulpitac is amisulpride, Fluanxol is flupenthixol, and clopamide is a diuretic — each a real product of a different drug class.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-zot-08",
+      question: "Which antipsychotics share noradrenaline reuptake inhibition among their actions?",
+      options: [
+        "Clozapine and olanzapine",
+        "Amisulpride and sulpiride",
+        "Risperidone and paliperidone",
+        "Zotepine and ziprasidone"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi attributes NA reuptake inhibition to zotepine and moderate 5-HT/NA reuptake inhibition to ziprasidone — a transporter flavour rare among antipsychotics. The benzamides act purely at D2/D3 with no reuptake action, and neither the clozapine/olanzapine nor the risperidone/paliperidone pair includes transporter inhibition.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

@@ -846,6 +846,110 @@ export const sertindole: Drug = {
       explanation: "For schizophrenia (ecg-governed): start 4 mg once daily, target 12-20 mg/day, maximum 24 mg/day. Increase by 4 mg at 2-3 day intervals to 12-20 mg",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atp-ser-01",
+      question: "Sertindole's availability is restricted chiefly because of:",
+      options: [
+        "QTc prolongation with arrhythmia risk — dispensed under a limited-use programme with ECG monitoring",
+        "Fatal hepatotoxicity within the first month",
+        "Agranulocytosis requiring weekly blood counts",
+        "Irreversible parkinsonism in most users"
+      ],
+      correctIndex: 0,
+      explanation: "Sertindole prolongs QTc and never entered the US market; in Europe it returned only under a restricted-access programme with baseline and follow-up ECGs. It is not hepatotoxic or marrow-toxic, and parkinsonism is not its problem — the cardiac channel effect is the whole story.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-ser-02",
+      question: "The global regulatory status of sertindole is best summarised as:",
+      options: [
+        "Worldwide withdrawal with no remaining markets",
+        "Approved in some European countries, never approved in the USA, never first-line",
+        "FDA-approved with a black-box weight-gain warning",
+        "First-line in India's national mental-health programmes"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung records sertindole as approved in some European countries but not the USA; even where available it is reserved, never first-line, because of its QTc monitoring demands. It is not a US-labelled drug, and complete worldwide withdrawal overstates the case.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-ser-03",
+      question: "A patient being considered for sertindole under its restricted programme has baseline ECG, electrolytes and cardiac history documented. Follow-up ECG is mandated:",
+      options: [
+        "No further ECGs unless symptoms appear",
+        "Only after adding a benzodiazepine",
+        "After initiation and dose increases — with periodic ECGs throughout treatment",
+        "Only after five years of continuous therapy"
+      ],
+      correctIndex: 2,
+      explanation: "Sertindole programmes require ECG at baseline, after initiation and dose changes, and periodically thereafter, alongside electrolyte vigilance — because repolarisation risk tracks dose and concurrent QT-prolonging drugs. Waiting years or for symptoms defeats the entire monitoring logic.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-ser-04",
+      question: "A man with schizophrenia on sertindole reports no sedation, no weight change and no EPS complaints, but his ECG QTc has drifted to 470 ms. The best interpretation is:",
+      options: [
+        "An idiosyncratic reaction unrelated to the drug — continue unchanged",
+        "Proof of oversedation — reduce the dose",
+        "Emergent clozapine-induced myocarditis",
+        "The expected trade-off of sertindole's clean clinical profile — its repolarisation liability — warranting dose review and continued QT surveillance"
+      ],
+      correctIndex: 3,
+      explanation: "Sertindole's attractive profile — no sedation, low EPS and metabolic burden — is precisely paired with its defining QTc liability, so a lengthening QTc demands dose review, electrolyte checks and continued ECG follow-up rather than reassurance. Oversedation is irrelevant in a non-sedated patient, and myocarditis is clozapine's cardiac story.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-ser-05",
+      question: "A patient has failed adequate trials of olanzapine and risperidone; baseline ECG and cardiac history are normal, and he lives where sertindole's programme operates. What justifies sertindole now?",
+      options: [
+        "Atypical-like efficacy with a clean sedation/EPS/metabolic record — used cautiously under ECG surveillance",
+        "A proven anti-suicide benefit",
+        "A depot formulation guaranteeing adherence",
+        "Superior efficacy over every other antipsychotic"
+      ],
+      correctIndex: 0,
+      explanation: "Sertindole's case-by-case use rests on offering atypical efficacy without sedation, weight gain or EPS, under strict ECG surveillance — never a first-line claim. Anti-suicide evidence is clozapine's monopoly, sertindole has no depot, and sweeping superiority is not claimed.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-ser-06",
+      question: "A man on sertindole becomes acutely agitated on the ward and a junior resident proposes haloperidol 5 mg IV. Why is this a poor plan?",
+      options: [
+        "Haloperidol antagonises sertindole's antipsychotic effect",
+        "Both drugs prolong QTc — additive torsades risk, and IV haloperidol is itself a recognised trigger",
+        "Haloperidol instantly induces sertindole metabolism",
+        "The pair produces malignant hyperthermia"
+      ],
+      correctIndex: 1,
+      explanation: "Sertindole must not meet other QT-prolonging agents, and IV haloperidol is itself a recognised torsades trigger — the combination compounds repolarisation delay, so benzodiazepines are the safer agitation option. Enzyme induction is not the issue, and malignant hyperthermia describes anaesthetic reactions.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-ser-07",
+      question: "In the antipsychotic QTc-risk club taught alongside thioridazine and pimozide, the second-generation members are:",
+      options: [
+        "Quetiapine and aripiprazole",
+        "Sulpiride and molindone",
+        "Ziprasidone and sertindole",
+        "Clozapine and olanzapine"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi names thioridazine, pimozide and ziprasidone for QT prolongation, and sertindole joins ziprasidone as the second-generation repolarisation-risk pair. The clozapine/olanzapine and quetiapine/aripiprazole pairs are metabolic-tier or lean-tier names rather than the QTc club, and molindone carries no such reputation.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "atp-ser-08",
+      question: "Which statement correctly separates sertindole from ziprasidone?",
+      options: [
+        "Sertindole needs food for absorption while ziprasidone does not",
+        "Sertindole is the leaner metabolic agent of the two",
+        "Both are prodrugs of a common active metabolite",
+        "Sertindole is programme-restricted with mandated ECGs; ziprasidone is marketed openly but carries the greatest atypical QTc risk and needs a fed state"
+      ],
+      correctIndex: 3,
+      explanation: "Sertindole's restriction (EU limited-use, ECG monitoring) contrasts with ziprasidone's open marketing, whose caveats are the greatest atypical QTc risk plus the ~500 kcal meal rule — sertindole has no food stipulation. Neither drug is a prodrug, and metabolic leanness is a shared rather than distinguishing feature.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

@@ -1741,6 +1741,110 @@ export const duloxetine: Drug = {
       explanation: "All of the above. Duloxetine is preferred over venlafaxine when: (1) BP is a concern (duloxetine has less BP effect), (2) comorbid neuropathic pain is present (duloxetine is FDA-approved for 3 pain conditions), (3) less severe discontinuation is desired (duloxetine's longer half-life 12h vs venlafaxine's 5h means milder withdrawal). Venlafaxine is preferred when tamoxifen co-administration is needed (weak CYP2D6 inhibition) or in TRD escalation to high dose for the weak DAT effect.",
       afterSectionId: "evidence-practice",
     },
+    {
+      id: "snri-dul-01",
+      question: "The only antidepressant FDA-approved for diabetic peripheral neuropathic pain, fibromyalgia AND chronic musculoskeletal pain is:",
+      options: [
+        "Duloxetine",
+        "Amitriptyline",
+        "Venlafaxine",
+        "Milnacipran"
+      ],
+      correctIndex: 0,
+      explanation: "Duloxetine carries five FDA indications — MDD, GAD, DPNP, fibromyalgia and chronic musculoskeletal pain — making it the only antidepressant labelled for all three pain conditions (KYP: 'the only antidepressant FDA-approved for three pain conditions'). Amitriptyline is widely used for neuropathic pain but off-label; venlafaxine has no pain label; milnacipran's pain label is fibromyalgia only.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "snri-dul-02",
+      question: "Duloxetine's pharmacokinetic signature is:",
+      options: [
+        "~5-hour half-life; CYP2D6 activation to an active metabolite",
+        "12-hour half-life; CYP1A2/2D6 metabolism; no active metabolite",
+        "2-4 day half-life with a long-lived nor-metabolite",
+        "Minimal hepatic metabolism; excreted largely unchanged by kidney"
+      ],
+      correctIndex: 1,
+      explanation: "Duloxetine runs a ~12-hour half-life, is cleared by CYP1A2 and 2D6, and forms no active metabolite. The 5-hour/active-metabolite description is venlafaxine, the long nor-metabolite story is fluoxetine, and the renally-cleared-unchanged profile belongs to milnacipran. Pairing each SNRI with its PK fingerprint is a reliable way examiners build distractors.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "snri-dul-03",
+      question: "A 48-year-old drinks six beers daily, ALT 92 U/L, and asks for duloxetine for chronic low-back pain. Best response:",
+      options: [
+        "Proceed — duloxetine is safe in liver disease",
+        "Proceed but add ursodeoxycholic acid for protection",
+        "Avoid duloxetine — substantial alcohol use and hepatic impairment are contraindications due to hepatotoxicity risk",
+        "Double the dose, since alcohol induces its clearance"
+      ],
+      correctIndex: 2,
+      explanation: "Duloxetine carries a signature hepatotoxicity warning — KYP explicitly says avoid in hepatic impairment, cirrhosis and substantial alcohol use, and this patient stacks all three with a deranged ALT. Ursodeoxycholic acid protects nothing here, and alcohol does not make dose escalation safe. Alternatives with hepatic caution aside, gabapentinoids or topical/physical approaches suit this patient better until the liver and alcohol issues are addressed.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "snri-dul-04",
+      question: "Which co-prescription most dangerously raises duloxetine exposure?",
+      options: [
+        "Sertraline",
+        "Fluvoxamine — a potent CYP1A2 inhibitor",
+        "Metformin",
+        "Amlodipine"
+      ],
+      correctIndex: 1,
+      explanation: "Duloxetine is cleared by CYP1A2 and 2D6; fluvoxamine, the class's prototypical 1A2 inhibitor, can push duloxetine levels sharply up — the combination warrants avoidance or major caution. Sertraline is comparatively CYP-quiet, and metformin/amlodipine are irrelevant to 1A2. Remember the mirrored pairs: fluvoxamine→1A2 (duloxetine), fluoxetine/paroxetine→2D6 (venlafaxine, atomoxetine, TCAs).",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "snri-dul-05",
+      question: "A 58-year-old with type 2 diabetes has burning bilateral foot pain and PHQ-9 of 12 (moderate depression), normal LFTs, no alcohol use. Best single drug choice:",
+      options: [
+        "Amitriptyline 150 mg at night",
+        "Sertraline 100 mg",
+        "Duloxetine — treats mood and neuropathic pain in one agent",
+        "Alprazolam for the burning pain"
+      ],
+      correctIndex: 2,
+      explanation: "This is the classic dual-indication vignette: duloxetine carries both the DPNP and MDD labels, solving both problems with one prescription. Amitriptyline, though effective for pain, is anticholinergic, arrhythmogenic in overdose and off-label — a poor fit with cardiac unknowns; sertraline does nothing for neuropathy; alprazolam treats neither and risks dependence. With normal LFTs and no alcohol use, duloxetine's hepatotoxicity caution is satisfied.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "snri-dul-06",
+      question: "A 34-year-old starts duloxetine 30 mg. On day 4 she calls saying she feels persistently queasy and cannot finish lunch. Best advice:",
+      options: [
+        "Stop immediately — this is a drug allergy",
+        "Double the dose to push past it faster",
+        "Reassure: early nausea is the most common duloxetine effect and usually settles; take with food, and titrate slowly",
+        "Switch to paroxetine the same day"
+      ],
+      correctIndex: 2,
+      explanation: "Nausea is duloxetine's most common early effect — managed with food, slower titration and time, not abandonment; most cases attenuate within 1-2 weeks. Doubling the dose amplifies the very receptor-mediated GI effect causing the problem, abrupt stopping risks withdrawal, and paroxetine brings its own worse long-term burden (discontinuation, anticholinergic, sexual effects).",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "snri-dul-07",
+      question: "A pregnant patient with depression and disabling neuropathic pain genuinely needs an SNRI. Per the Know Your Pill monograph, which drug offers more pregnancy-safety data to lean on?",
+      options: [
+        "Duloxetine",
+        "Milnacipran",
+        "Levomilnacipran",
+        "Venlafaxine"
+      ],
+      correctIndex: 3,
+      explanation: "KYP's duloxetine pregnancy section states it plainly: in a pregnant patient needing depression-plus-neuropathic-pain SNRI cover, duloxetine may be considered after specialist consultation, but venlafaxine has more pregnancy data behind it. The newer SNRIs (milnacipran, levomilnacipran) have thin reproductive databases and are not the data-backed pick. As always with perinatal decisions, shared decision-making and specialist input come first.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "snri-dul-08",
+      question: "How does duloxetine's monoamine pharmacology differ from venlafaxine's?",
+      options: [
+        "Duloxetine blocks SERT and NET fairly evenly from the start; venlafaxine's NET effect only emerges at higher doses",
+        "Duloxetine gains DAT blockade above 150 mg, venlafaxine never does",
+        "Venlafaxine is balanced from dose one; duloxetine becomes so only at high doses",
+        "Duloxetine acts mainly at 5-HT3 receptors with minor NET effects"
+      ],
+      correctIndex: 0,
+      explanation: "This is the defining mechanistic contrast of the SNRI class: duloxetine is 'balanced from dose one', while venlafaxine is an SSRI whose noradrenergic component must be titrated into existence. The DAT claim inverts the true pattern (venlafaxine shows weak DAT effect at high doses, duloxetine none clinically), and 5-HT3 action is a mirtazapine/trazodone story, not duloxetine's.",
+      afterSectionId: "mechanism",
+    },
   ],
 
   /* End-of-page active recall questions */

@@ -805,6 +805,110 @@ export const zuclopenthixol: Drug = {
       explanation: "For psychosis (oral): start 20 mg/day divided, target 20–50 mg/day, maximum 100 mg/day. Titrate to 30–50 mg",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tap-zuc-01",
+      question: "Zuclopenthixol's class and typical sedation profile are correctly described as:",
+      options: [
+        "A thioxanthene D2 antagonist that is moderately sedating",
+        "A thioxanthene that is activating and never sedating",
+        "A low-potency phenothiazine with almost no EPS",
+        "A high-potency butyrophenone with profound weight loss"
+      ],
+      correctIndex: 0,
+      explanation: "Zuclopenthixol is a thioxanthene relative of flupenthixol with moderate sedation — the sedating thioxanthene of this batch. Option B describes low-dose flupenthixol's activating reputation, option C is the chlorpromazine-type profile, and option D welds butyrophenone identity to a false metabolic claim.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tap-zuc-02",
+      question: "A 28-year-old man with an acute psychotic episode is violently agitated in the emergency room and needs short-acting intramuscular cover while longer-term plans are made. The best-fitted drug is:",
+      options: [
+        "Zuclopenthixol decanoate, for its immediate depot release",
+        "Pimozide, for its long half-life",
+        "Zuclopenthixol acetate, a short-acting IM ester acting over roughly 24-72 hours",
+        "Oral sulpiride, for its anxiolytic profile"
+      ],
+      correctIndex: 2,
+      explanation: "Zuclopenthixol acetate (Acuphase) is the purpose-built short-acting ester for acute agitation, acting over about 24-72 hours while decisions about maintenance are made. The decanoate is a weeks-long maintenance depot with no emergency role, pimozide is explicitly unsuitable when psychomotor agitation is prominent, and oral sulpiride is neither acute nor parenteral.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-zuc-03",
+      question: "The twin-ester pharmacokinetics of zuclopenthixol are correctly summarised as:",
+      options: [
+        "Acetate ester acting 24-72 hours for acute episodes; decanoate ester given every 2-4 weeks for maintenance",
+        "Acetate ester given every 2-4 weeks; decanoate ester acting 24-72 hours",
+        "Both esters act for 24-72 hours and differ only in price",
+        "Acetate ester acting 3-6 months; decanoate ester acting 7-10 days"
+      ],
+      correctIndex: 0,
+      explanation: "The exam distinction: the acetate (Acuphase) is the short-acting acute-agitation ester covering 24-72 hours, while the decanoate is the 2-4 weekly maintenance depot. Option B swaps the durations, option C denies the pharmacokinetic difference, and option D inverts both time scales.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tap-zuc-04",
+      question: "A patient started on zuclopenthixol returns to clinic complaining that he falls asleep at his desk and dozes off on the bus home. The most likely cause and correct counselling are:",
+      options: [
+        "Hypertensive crisis — measure tyramine intake",
+        "Drug sedation — zuclopenthixol is moderately sedating; advise no driving or machinery and consider night-time dosing",
+        "Bronchospasm — stop the drug immediately",
+        "Agranulocytosis — order a weekly CBC"
+      ],
+      correctIndex: 1,
+      explanation: "Zuclopenthixol is the moderately sedating thioxanthene, so daytime drowsiness is expected drug effect — counsel against driving and machinery and shift the dose to night. Tyramine crises belong to the MAOIs, bronchospasm to inhaled loxapine, and CBC monitoring to clozapine.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-zuc-05",
+      question: "During a violent episode a patient received two zuclopenthixol acetate injections over four days; he is now calm, insight has returned, and maintenance is planned. The best long-term strategy is:",
+      options: [
+        "Acetate injections twice weekly for life",
+        "Stop all antipsychotics and observe for relapse",
+        "Switch to pimozide, whose long half-life suits agitation",
+        "Convert to zuclopenthixol decanoate every 2-4 weeks, with overlap cover while the depot loads"
+      ],
+      correctIndex: 3,
+      explanation: "The acetate ester is a bridge for acute episodes only; maintenance belongs to the 2-4 weekly decanoate, which needs days to weeks to reach steady state — hence overlap cover during the switch. Twice-weekly acetate for life is not its design, stopping invites relapse, and pimozide is wrong for an agitation-prone patient.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-zuc-06",
+      question: "Why does zuclopenthixol offer both an acetate and a decanoate ester?",
+      options: [
+        "The two esters cancel each other's EPS liability when mixed",
+        "The short-acting acetate covers the first days of illness while the weeks-long decanoate slowly reaches steady state",
+        "Decanoate is absorbed within minutes; acetate takes weeks",
+        "Both esters must be given daily to prevent withdrawal"
+      ],
+      correctIndex: 1,
+      explanation: "The twin-ester system matches ester pharmacokinetics to clinical phases: acetate for the 24-72 hour acute window, decanoate for 2-4 weekly maintenance — a template question in depot pharmacokinetics. The esters do not interact pharmacodynamically, and depot release is slow rather than instantaneous.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-zuc-07",
+      question: "A patient on zuclopenthixol admits to heavy weekend beer intake. The most important interaction to explain to him is:",
+      options: [
+        "Additive CNS depression — alcohol magnifies the sedation",
+        "A tyramine (cheese) hypertensive reaction, as MAOIs cause",
+        "Complete blockade of zuclopenthixol's antipsychotic action",
+        "Immediate serotonin syndrome risk requiring cyproheptadine"
+      ],
+      correctIndex: 0,
+      explanation: "Neuroleptics potentiate all CNS depressants — alcohol, benzodiazepines, opioids and antihistamines (Tripathi) — so alcohol magnifies sedation and impairs judgement. There is no tyramine reaction (that is MAOI pharmacology), no mutual annihilation of effect, and serotonin syndrome requires serotonergic agents, which zuclopenthixol is not.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-zuc-08",
+      question: "The thioxanthene marketed with an acetate preparation called Acuphase and a decanoate for maintenance is:",
+      options: [
+        "Flupenthixol (Fluanxol)",
+        "Thiothixene (Navane)",
+        "Sulpiride (Sulpitac)",
+        "Zuclopenthixol (Clopixol)"
+      ],
+      correctIndex: 3,
+      explanation: "Zuclopenthixol is Clopixol, supplied as short-acting acetate (Acuphase) and long-acting decanoate formulations — the twin-ester thioxanthene. Fluanxol is flupenthixol's brand, Navane is thiothixene in the USA, and Sulpitac is an Indian sulpiride brand.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

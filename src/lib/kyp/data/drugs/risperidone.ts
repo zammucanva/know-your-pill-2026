@@ -1086,6 +1086,110 @@ export const risperidone: Drug = {
       explanation: "For schizophrenia (adults): start 2 mg/day, target 4–6 mg/day, maximum 8 mg/day. Increase by 1–2 mg/day to 4–6 mg; increments no faster than every 24–72 h",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atp-ris-01",
+      question: "Risperidone, a benzisoxazole atypical antipsychotic, produces its antipsychotic effect chiefly through which receptor profile?",
+      options: [
+        "Combined D2 antagonism with potent 5-HT2A antagonism, plus high affinity for alpha-1 and H1 receptors",
+        "Preferential D4 antagonism with negligible 5-HT2A affinity",
+        "Serotonin-norepinephrine reuptake inhibition with weak D2 blockade",
+        "Selective D2 partial agonism with 5-HT1A partial agonism and minimal alpha-1 affinity"
+      ],
+      correctIndex: 0,
+      explanation: "Risperidone pairs D2 blockade with stronger 5-HT2A antagonism (Katzung: greater ability to alter 5-HT2A than D2 activity), while high alpha-1 and H1 affinity explains its postural hypotension and sedation. The D2-partial-agonist/5-HT1A-partial-agonist profile is aripiprazole's 'dopamine system stabiliser' signature, not risperidone's. D4-predominant blockade is clozapine-flavoured pharmacology, and reuptake inhibition belongs to antidepressants, not antipsychotics.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atp-ris-02",
+      question: "A 24-year-old woman treated with risperidone 4 mg/day for schizophrenia returns with bilateral galactorrhoea and secondary amenorrhoea of 3 months' duration; pregnancy test is negative. The mechanism most responsible is:",
+      options: [
+        "Direct stimulation of lactotroph D2 receptors",
+        "D2 receptor blockade in the tuberoinfundibular pathway, disinhibiting prolactin release from the anterior pituitary",
+        "5-HT2A blockade raising a hypothalamic prolactin-releasing factor",
+        "H1 blockade triggering a pseudopregnancy hormonal pattern"
+      ],
+      correctIndex: 1,
+      explanation: "Risperidone is the most prolactin-elevating atypical antipsychotic: D2 blockade in the tuberoinfundibular pathway removes tonic hypothalamic inhibition of prolactin, producing galactorrhoea, amenorrhoea, gynaecomastia and, long term, osteoporosis risk (Tripathi: 'the atypical antipsychotics, except risperidone, do not appreciably raise prolactin'). 5-HT2A and H1 blockade do not drive hyperprolactinaemia, and stimulating lactotroph D2 receptors would suppress, not raise, prolactin secretion.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atp-ris-03",
+      question: "Which statement about risperidone's pharmacokinetics is correct?",
+      options: [
+        "It is excreted unchanged in urine with no active metabolite",
+        "It is a CYP1A2 substrate inactivated by smoking-induced enzyme induction",
+        "It is a CYP2D6 substrate largely converted to the active metabolite 9-hydroxyrisperidone",
+        "It undergoes rapid glucuronidation to an inactive, renally cleared metabolite"
+      ],
+      correctIndex: 2,
+      explanation: "Risperidone sits in Katzung's CYP2D6 substrate list and is rapidly converted in vivo to 9-hydroxyrisperidone (paliperidone), an equally active metabolite; about 10% of patients are 2D6 poor metabolisers with higher parent-drug exposure. The CYP1A2-and-smoking story belongs to olanzapine, and the other two choices wrongly deny the active metabolite that is central to risperidone's clinical kinetics.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atp-ris-04",
+      question: "A 30-year-old man was stable on risperidone 4 mg/day; after escalation to 8 mg/day for residual hallucinations he develops cogwheel rigidity, bradykinesia and restlessness within 2 weeks. The best explanation is:",
+      options: [
+        "An idiosyncratic allergic reaction unrelated to dose",
+        "Accumulation of an inactive toxic metabolite",
+        "Serotonin excess from 5-HT2A over-blockade",
+        "Dose-related D2 blockade: EPS risk rises steeply once the dose exceeds roughly 6 mg/day"
+      ],
+      correctIndex: 3,
+      explanation: "Risperidone causes little or no extrapyramidal dysfunction at low doses, but its potent D2 blockade makes parkinsonism and akathisia clearly dose-related above about 6 mg/day (Tripathi: EPS less only below 6 mg/day; Katzung: EPS and hypotension with higher doses) — escalation to 8 mg crossed that line. The reaction is pharmacological, not allergic, and 5-HT2A antagonism is the property that reduces EPS liability, not causes it.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-ris-05",
+      question: "A 28-year-old man with schizophrenia has relapsed twice after stopping tablets on his own and is keen on an injectable. Which option correctly describes risperidone long-acting injectable (LAI) therapy?",
+      options: [
+        "Two-weekly and monthly LAI preparations are available",
+        "No LAI formulation exists; only haloperidol decanoate can be offered",
+        "A weekly self-administered subcutaneous injection is the standard regimen",
+        "Only 3-monthly preparations are marketed"
+      ],
+      correctIndex: 0,
+      explanation: "Risperidone is available as LAI in two-weekly (microsphere) and monthly presentations — a mainstay for non-adherence (Katzung lists risperidone among the second-generation drugs with LAI formulations). Monthly and 3-monthly intervals are the paliperidone signature, weekly self-injection has no basis, and the claim that no risperidone LAI exists is simply false.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-ris-06",
+      question: "A 35-year-old patient with schizophrenia and comorbid OCD is maintained on risperidone 4 mg/day; fluoxetine 40 mg/day is added for the OCD. Which specific monitoring is most pertinent to this particular combination?",
+      options: [
+        "Fasting blood glucose, because the combination predictably causes new diabetes",
+        "Blood pressure — risperidone plus an SSRI can raise BP",
+        "Serum prolactin, which will predictably fall to subnormal levels",
+        "International normalised ratio, because risperidone potentiates warfarin"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi specifically flags that BP can rise when risperidone is used with an SSRI, so BP checks are the combination-specific monitoring here. The metabolic/diabetes concern attaches to olanzapine and clozapine, not this pairing; prolactin rises rather than falls on risperidone; and no warfarin is involved — risperidone is not a warfarin-potentiating drug.",
+      afterSectionId: "top",
+    },
+    {
+      id: "atp-ris-07",
+      question: "Long-standing risperidone-induced hyperprolactinaemia in a young woman most directly raises the risk of:",
+      options: [
+        "Polycythaemia and venous thromboembolism",
+        "Hypertension secondary to fluid retention",
+        "Osteoporosis, via hypo-oestrogenism from gonadotropin suppression",
+        "Osteosclerosis, from direct prolactin-driven bone apposition"
+      ],
+      correctIndex: 2,
+      explanation: "Chronic hyperprolactinaemia suppresses hypothalamic GnRH, so gonadotropin (FSH-LH) suppression follows and the resulting hypo-oestrogenism drives unopposed bone loss — osteoporosis is the classic long-term pairing with amenorrhoea and galactorrhoea. Osteosclerosis invents the opposite effect, and neither polycythaemia/thrombosis nor hypertension is a prolactin-mediated consequence.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atp-ris-08",
+      question: "A 26-year-old woman is euthymic and working while on risperidone 4 mg/day, but she has persistent galactorrhoea and amenorrhoea; a cautious dose reduction failed. Which change best maintains antipsychotic cover while normalising prolactin?",
+      options: [
+        "Switch to paliperidone — as the active metabolite it is prolactin-neutral",
+        "Switch to haloperidol — potent pituitary D2 blockade lowers prolactin",
+        "Add bromocriptine to ongoing risperidone — a direct prolactin-lowering agonist",
+        "Switch to aripiprazole — D2 partial agonism lowers prolactin while preserving antipsychotic cover"
+      ],
+      correctIndex: 3,
+      explanation: "Aripiprazole's partial D2 agonism reduces prolactin secretion, making it the standard switch (or adjunct) for risperidone-induced hyperprolactinaemia while antipsychotic effect continues. Paliperidone raises prolactin as much as the parent drug, haloperidol is among the worst hyperprolactinaemia offenders in the pharmacopoeia, and adding bromocriptine to a D2-blocking antipsychotic risks unmasking psychosis — aripiprazole achieves the same agonist physiology safely.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

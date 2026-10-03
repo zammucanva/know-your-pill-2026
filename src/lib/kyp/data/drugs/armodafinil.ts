@@ -682,6 +682,110 @@ export const armodafinil: Drug = {
       explanation: "For narcolepsy/osa: start 150 mg every morning, target 150-250 mg/day, maximum 250 mg/day. Increase to 250 mg if needed",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "stm-arm-01",
+      question: "Armodafinil's identity is:",
+      options: [
+        "The R-enantiomer of racemic modafinil, marketed as the single-isomer version",
+        "The S-enantiomer of modafinil",
+        "A prodrug of modafinil requiring hepatic activation",
+        "A metabolite of amphetamine with orexin action"
+      ],
+      correctIndex: 0,
+      explanation: "Armodafinil (Nuvigil) is the R-enantiomer isolated from modafinil's racemate — the same target biology with different pharmacokinetics. Option B picks the wrong mirror, no prodrug step exists in this family, and the amphetamine link is precisely what modafinil's chemistry was designed to avoid.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-arm-02",
+      question: "The pharmacokinetic reason armodafinil gives longer waking coverage than an equal milligram dose of modafinil is:",
+      options: [
+        "Armodafinil is simply dosed at double the milligrams of modafinil",
+        "The R-isomer is the more slowly cleared enantiomer, so equal doses deliver more drug late in the day (the S-isomer's shorter half-life explains modafinil's earlier fade)",
+        "Armodafinil doubles the plasma half-life of the racemate",
+        "The S-enantiomer is entirely absent yet carries all of the activity"
+      ],
+      correctIndex: 1,
+      explanation: "Racemic modafinil's late-day profile is dominated by the R-isomer because the S-isomer clears faster; removing S to make armodafinil yields later Tmax and longer coverage at the same dose — the enantiomer-PK pearl. Doubling the half-life overstates a distribution shift, option D inverts which isomer matters, and equal dose — not double dose — is the comparison.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "stm-arm-03",
+      question: "A 50-year-old CPAP-adherent OSA patient still sleeps through alarms and dozes at work. Tripathi lists armodafinil for which wakefulness indications?",
+      options: [
+        "Generalized anxiety disorder",
+        "Primary insomnia and nightmare disorder",
+        "Obstructive sleep apnoea residual sleepiness, shift-work disorder and narcolepsy",
+        "ADHD in children under 6 years"
+      ],
+      correctIndex: 2,
+      explanation: "Armodafinil was approved for the same wakefulness trio as modafinil — OSA residual sleepiness, shift-work disorder and narcolepsy (Tripathi's note under modafinil). Insomnia needs the opposite pharmacology, ADHD under 6 is outside every label, and anxiety is untouched by orexin/DAT agents.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-arm-04",
+      question: "A woman with narcolepsy on an oral contraceptive is switched from modafinil to armodafinil for longer coverage. The contraceptive advice is:",
+      options: [
+        "Isolating the R-enantiomer removed all drug-drug interactions",
+        "Armodafinil makes oral contraceptives MORE effective",
+        "The interaction applies only to progestin-only pills",
+        "The CYP3A4-inducing interaction applies to armodafinil too — she needs backup/non-hormonal contraception, since the single isomer shares modafinil's enzyme effects"
+      ],
+      correctIndex: 3,
+      explanation: "The oral-contraceptive-failure warning is class-wide: armodafinil retains modafinil's CYP3A4 induction, so steroidal contraceptive exposure falls regardless of isomer purity. Option A is the tempting single-isomer-equals-cleaner fallacy, option B inverts the direction, and the induction hits the hormonal components of combined and progestin-only products alike.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-arm-05",
+      question: "How does armodafinil's labelled indication set compare with modafinil's?",
+      options: [
+        "The indication sets mirror each other — the difference is pharmacokinetic (later Tmax, longer coverage), not the labels",
+        "Armodafinil is labelled only for ADHD",
+        "Armodafinil is labelled exclusively for Alzheimer's disease",
+        "Armodafinil is additionally labelled for cataplexy"
+      ],
+      correctIndex: 0,
+      explanation: "Armodafinil's labels mirror modafinil's (narcolepsy, shift-work disorder, OSA residual sleepiness); the marketing claim rests on pharmacokinetic smoothing, which is why examinations contrast the two on Tmax and coverage rather than indications. ADHD, Alzheimer's and cataplexy belong to other drugs entirely — stimulants, cognition agents and sodium oxybate respectively.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-arm-06",
+      question: "A night-shift worker says modafinil wears off by 3 am mid-shift; his physician offers armodafinil. The pharmacological logic being used is:",
+      options: [
+        "The switch adds a second wakefulness mechanism on top of modafinil",
+        "The R-enantiomer provides a later peak and extended late-day levels, giving longer practical coverage at an equal dose",
+        "Armodafinil has a shorter half-life, matching shift length better",
+        "Armodafinil works only when taken at 3 am"
+      ],
+      correctIndex: 1,
+      explanation: "This is the single-isomer PK argument in practice: with S removed, R's slower disposition yields later Tmax and sustained late coverage — option C is the same logic inverted. It is not a rescue-dose strategy, and switching drugs replaces rather than adds mechanisms.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "stm-arm-07",
+      question: "Armodafinil's adverse-effect and warning profile is:",
+      options: [
+        "Characterised by severe extrapyramidal symptoms",
+        "Defined by hypotension and bradycardia",
+        "Essentially modafinil's — headache, nausea, insomnia, anxiety, mild BP rise, with the same serious-rash/SJS warning and Schedule IV status",
+        "Completely benign, with no rash warning and no scheduling"
+      ],
+      correctIndex: 2,
+      explanation: "Single-isomerisation changed kinetics, not safety: the rash/SJS warning, the headache-insomnia core, the mild pressor effect and Schedule IV control all carry over. Options A and B borrow motor and cardiovascular pictures from other classes, and option D ignores both the warning and the CSA listing — Katzung's Schedule IV table lists both agents.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-arm-08",
+      question: "An examiner asks which approved-drug pair follows the SAME racemate-to-single-later-acting-enantiomer pattern as modafinil to armodafinil:",
+      options: [
+        "Citalopram to escitalopram, because escitalopram acts for twice as long",
+        "Methylphenidate to dexmethylphenidate, because the d-threo isomer halves the dosing frequency",
+        "Amphetamine to dexamphetamine, because the d-isomer adds a new receptor target",
+        "Zopiclone to eszopiclone — the S-isomer with a longer half-life and next-day tolerability advantages"
+      ],
+      correctIndex: 3,
+      explanation: "The closest full-pattern match is zopiclone to eszopiclone: single enantiomer with a longer half-life and later-acting practical advantages. Escitalopram changes potency and selectivity rather than duration, dexmethylphenidate changes dose equivalence rather than kinetics, and dexamphetamine never gained a new receptor — enantiomers differ in degree, not target identity.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

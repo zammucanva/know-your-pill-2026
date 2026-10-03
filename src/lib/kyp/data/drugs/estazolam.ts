@@ -803,6 +803,110 @@ export const estazolam: Drug = {
       explanation: "For insomnia: start 0.5–1 mg at bedtime (elderly 0.5 mg), target 1–2 mg, maximum 2 mg. Short courses",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "bzd-est-01",
+      question: "Estazolam's pharmacological class is:",
+      options: [
+        "A triazolobenzodiazepine hypnotic acting at the benzodiazepine site of GABA-A receptors",
+        "A melatonin MT1/MT2 agonist",
+        "A dual orexin receptor antagonist",
+        "A first-generation antihistamine"
+      ],
+      correctIndex: 0,
+      explanation: "Estazolam is a triazolobenzodiazepine (like alprazolam and triazolam) acting at the standard benzodiazepine site on GABA-A receptors, used as a hypnotic. Melatonin agonists, orexin antagonists and antihistamines are the non-benzodiazepine sleep classes — the exam increasingly asks you to sort hypnotics by mechanism, and estazolam belongs firmly in the benzodiazepine box.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "bzd-est-02",
+      question: "Estazolam's duration tier among hypnotics is best described as:",
+      options: [
+        "Ultra-short — 1-2 hours",
+        "Intermediate — roughly 10-24 hours, able to maintain sleep",
+        "Ultra-long — 3-7 days",
+        "Weeks-long with irreversible binding"
+      ],
+      correctIndex: 1,
+      explanation: "Estazolam is an intermediate-duration benzodiazepine hypnotic (~10-24 hour half-life) — it maintains sleep but carries some morning carryover risk in the elderly. Ultra-short describes zaleplon/triazolam, and multi-day persistence is flurazepam/diazepam-metabolite territory, not estazolam.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-est-03",
+      question: "A patient has taken estazolam nightly for three months and reports that it 'stopped working', so she has started doubling the dose. The correct assessment:",
+      options: [
+        "Tolerance with escalating doses — plan a gradual taper and move to CBT-I",
+        "She needs a permanently higher dose — prescribe double indefinitely",
+        "Switch abruptly to a stronger benzodiazepine at three times the dose",
+        "This is proof the original tablets were substandard"
+      ],
+      correctIndex: 0,
+      explanation: "Nightly benzodiazepine use produces tolerance within weeks; 'it stopped working' plus self-escalation is the dependence warning shot. The evidence-based response is a slow taper with cognitive-behavioural therapy for insomnia taking over — doubling indefinitely deepens dependence, and abrupt switches amplify withdrawal risk.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-est-04",
+      question: "Estazolam's metabolism is primarily:",
+      options: [
+        "Direct glucuronidation — the LOT pattern",
+        "Renal excretion unchanged",
+        "Plasma esterase hydrolysis",
+        "Hepatic oxidation — so caution with CYP inhibitors and liver disease"
+      ],
+      correctIndex: 3,
+      explanation: "Estazolam relies on hepatic oxidation — it is NOT a LOT drug — so CYP3A4 inhibitors, hepatic disease and old age all raise exposure. Glucuronidation defines lorazepam/oxazepam/temazepam; unchanged renal excretion fits gabapentin; esterase hydrolysis is the prodrug esters' story.",
+      afterSectionId: "pathways",
+    },
+    {
+      id: "bzd-est-05",
+      question: "For which insomnia pattern was estazolam traditionally positioned?",
+      options: [
+        "Middle-of-the-night re-dosing",
+        "Daytime sedation for psychosis",
+        "Status epilepticus first-line",
+        "Sleep-maintenance difficulty — the intermediate half-life covers the night"
+      ],
+      correctIndex: 3,
+      explanation: "Estazolam's intermediate duration made it a sleep-maintenance hypnotic — the same niche temazepam occupies. Middle-of-the-night dosing belongs to zaleplon's ultra-short profile, and estazolam has no role in psychosis or status epilepticus.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-est-06",
+      question: "Which set correctly sorts hypnotics by duration (shortest to longest)?",
+      options: [
+        "Flurazepam, estazolam, zaleplon",
+        "Estazolam, zaleplon, flurazepam",
+        "All three share one half-life tier",
+        "Zaleplon, estazolam, flurazepam"
+      ],
+      correctIndex: 3,
+      explanation: "Zaleplon (~1 h) < estazolam (~10-24 h) < flurazepam (~30-100 h with active metabolite) is the correct ladder — half-life ranking is the most reusable hypnotic fact in exams. The other rows simply invert it; hypnotics never share one tier by definition of their clinical niches.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-est-07",
+      question: "An elderly woman on estazolam for months now has day-time drowsiness, slurred speech and a near-fall. Best assessment:",
+      options: [
+        "The dose is too low — increase it",
+        "Normal ageing unrelated to the drug",
+        "Switch immediately to triazolam 0.5 mg nightly",
+        "Cumulative benzodiazepine effect — taper the drug and reassess (falls, fractures and cognitive fog rise with age)"
+      ],
+      correctIndex: 3,
+      explanation: "Sedative carryover in the elderly is a geriatric-safety emergency-in-waiting: benzodiazepines raise fall and fracture risk and mimic dementia. The move is tapering off, not dose escalation, not swapping to another benzodiazepine (triazolam adds amnesia and rebound), and never dismissing a near-fall as 'just ageing'.",
+      afterSectionId: "top",
+    },
+    {
+      id: "bzd-est-08",
+      question: "A woman on estazolam is prescribed ketoconazole for a fungal infection. The relevant counselling:",
+      options: [
+        "No interaction — estazolam is glucuronidated",
+        "Expect reduced estazolam effect from enzyme induction",
+        "Watch for excessive sedation — ketoconazole's CYP3A4 inhibition raises estazolam levels",
+        "Take both with grapefruit juice to normalise levels"
+      ],
+      correctIndex: 2,
+      explanation: "Oxidatively-cleared benzodiazepines such as estazolam are CYP3A4 substrates; ketoconazole's strong inhibition raises levels and sedation. The glucuronidation exemption belongs to the LOT trio, induction would need a drug like rifampicin or carbamazepine, and grapefruit is itself a 3A4 inhibitor — the exact thing to avoid.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

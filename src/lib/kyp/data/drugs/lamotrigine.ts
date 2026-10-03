@@ -878,6 +878,110 @@ export const lamotrigine: Drug = {
       explanation: "For standard schedule (adults, no interacting drugs): start 25 mg once daily × 2 weeks, target 100–200 mg/day (up to 400 in some), maximum 400 mg/day (mood indications rarely need it). Then 50 mg × 2 weeks → 100 mg × 1 week → 200 mg/day target",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "mst-ltg-01",
+      question: "Lamotrigine's anticonvulsant and mood-stabilising pharmacology is best summarised as:",
+      options: [
+        "A phenyltriazine that stabilises voltage-gated sodium channels in the inactivated state and suppresses presynaptic release of glutamate and aspartate",
+        "A direct agonist at GABA-B receptors that opens neuronal potassium channels",
+        "A partial agonist at 5-HT1A receptors with added dopamine D2 partial agonism",
+        "An inhibitor of inositol monophosphatase that depletes neuronal inositol"
+      ],
+      correctIndex: 0,
+      explanation: "Lamotrigine sits in the sodium-channel family — Katzung emphasises inactivated-state, use-dependent binding with reduced excitatory transmitter release, and Tripathi describes stabilisation of the presynaptic membrane preventing glutamate and aspartate release. Inositol monophosphatase inhibition is lithium's mechanism, and the 5-HT1A/D2 partial agonist profile belongs to aripiprazole.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "mst-ltg-02",
+      question: "A 29-year-old woman with bipolar II disorder has recurrent disabling depressive episodes with only brief hypomanias; an antidepressant previously flipped her into hypomania. Which mood stabiliser is the most evidence-based choice for this phase pattern?",
+      options: [
+        "Gabapentin",
+        "Lamotrigine",
+        "Lithium carbonate",
+        "Carbamazepine"
+      ],
+      correctIndex: 1,
+      explanation: "Lamotrigine owns bipolar depression: Tripathi gives it strong evidence for prophylaxis of depressive episodes in bipolar disorder, notes it is not effective for treating or preventing mania, and favours it in bipolar II because the risk of inducing mania is minimal. Lithium and carbamazepine are mania-weighted options, and Katzung states plainly that gabapentin is not effective in mania with no bipolar-depression label.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "mst-ltg-03",
+      question: "A 27-year-old on valproate 1000 mg/day for mania prophylaxis is to start lamotrigine for breakthrough bipolar depression. The correct titration plan is:",
+      options: [
+        "Double the usual lamotrigine titration rate, because valproate induces lamotrigine metabolism",
+        "Give a 200 mg loading dose on day 1, because the combination is synergistic and levels do not matter",
+        "Start 12.5-25 mg on alternate days and escalate slowly over several weeks to a maintenance near 100-200 mg/day — about half the usual dose, because valproate inhibits lamotrigine glucuronidation",
+        "Start the standard 25 mg daily and escalate weekly to 400 mg/day, since valproate has no effect on lamotrigine"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung quantifies the interaction — valproate roughly doubles lamotrigine's half-life and can raise blood levels correspondingly, adding rash risk — and gives the valproate-companion schedule: 12.5-25 mg every other day, increases every two weeks, maintenance 100-200 mg/day. Induction is the opposite of what happens (that is carbamazepine's effect), and lamotrigine loading doses are obsolete precisely because of SJS risk.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-ltg-04",
+      question: "Three weeks after starting lamotrigine 25 mg daily for bipolar depression, a 35-year-old reports a spreading maculopapular rash without mucosal involvement. The safest immediate action is:",
+      options: [
+        "Continue at the same dose and add an antihistamine, because lamotrigine rash is always benign in the first eight weeks",
+        "Double the dose to overcome a mild hypersensitivity response",
+        "Switch directly to carbamazepine, which carries no cross-rash risk",
+        "Stop lamotrigine and seek urgent assessment, since any early lamotrigine rash may herald Stevens-Johnson syndrome and rapid titration is the key avoidable risk"
+      ],
+      correctIndex: 3,
+      explanation: "Lamotrigine can produce a potentially fatal Stevens-Johnson syndrome; Katzung notes slow introduction diminishes rash risk, with children carrying the higher rates (0.3-0.8% versus 0.08-0.3% in adults) — which is exactly why the psychiatric titration creeps from 25 mg toward 200 mg over about six weeks. A new rash mandates stopping, not antihistamine cover, and carbamazepine itself carries the stronger SJS signal.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-ltg-05",
+      question: "A patient stabilised on lamotrigine asks why, unlike her friend on lithium, she never needs blood tests. The correct pharmacokinetic explanation is:",
+      options: [
+        "Lamotrigine has linear kinetics with complete absorption and hepatic glucuronidation to an inactive glucuronide, and no therapeutic serum range was ever established — so monitoring is clinical",
+        "Lamotrigine levels must be checked monthly, since its narrow index mirrors lithium",
+        "Lamotrigine is excreted unchanged renally, so only creatinine needs monitoring",
+        "Lamotrigine has a 60-hour half-life, so a single baseline level suffices for life"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung: lamotrigine is almost completely absorbed with linear kinetics, metabolised by liver glucuronidation to the inactive 2-N-glucuronide, half-life about 24 hours (13-15 hours with enzyme inducers), and therapeutic serum levels have never been established — routine level monitoring is not required. Renal-unchanged excretion describes the gabapentinoids and levetiracetam, and the long half-life belongs to zonisamide.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "mst-ltg-06",
+      question: "Which cluster correctly describes lamotrigine's tolerability fingerprint versus other mood stabilisers?",
+      options: [
+        "Sedation with weight gain and hyperprolactinaemia as core effects",
+        "Weight-neutral, minimally sedating, cognition-sparing — but with paradoxical insomnia in some patients",
+        "Consistent weight loss with paresthesias and metabolic acidosis",
+        "Marked tremor, thirst and polyuria even at therapeutic levels"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung notes lamotrigine is generally well tolerated and weight-neutral with minimal sedation — it may paradoxically cause insomnia instead of sedation — and causes fewer cognitive effects than carbamazepine or topiramate, so it is cognition-sparing; Tripathi reports no negative cognitive effect. The weight-loss with paresthesias and acidosis cluster is topiramate, tremor-thirst-polyuria is lithium, and lamotrigine does not raise prolactin.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "mst-ltg-07",
+      question: "A 40-year-old with epilepsy well controlled on lamotrigine 300 mg/day is started on carbamazepine for a new pain syndrome. Two weeks later he has breakthrough seizures. The most likely mechanism is:",
+      options: [
+        "Lamotrigine induced carbamazepine metabolism, lowering carbamazepine's analgesic effect",
+        "The two sodium-channel blockers became antagonistic at the channel pore",
+        "Carbamazepine's enzyme induction shortened lamotrigine's half-life and lowered its levels",
+        "Carbamazepine displaced lamotrigine from albumin, simultaneously raising toxicity and reducing efficacy"
+      ],
+      correctIndex: 2,
+      explanation: "Lamotrigine's half-life falls to 13-15 hours with enzyme-inducing drugs (Katzung), and Tripathi notes phenytoin, carbamazepine and phenobarbitone cut it to roughly 16 hours — so levels drop and the lamotrigine dose needs upward titration. Induction runs from carbamazepine to lamotrigine, protein binding is only about 55% and displacement is not the mechanism, and there is no pore antagonism between these drugs.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "mst-ltg-08",
+      question: "Which Indian lamotrigine details are correct?",
+      options: [
+        "LAMETOL SR 400 mg as the only licensed Indian lamotrigine, given once weekly",
+        "LAMITOR is the Indian brand of lormetazepam used as a hypnotic adjunct",
+        "Indian lamotrigine is sold only as 300 mg tablets with twice-weekly dosing",
+        "LAMETEC, LAMITOR and LAMIDUS 25/50/100 mg tablets; starting dose about 50 mg/day titrated as needed, with rash the key warning"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi's preparation list gives lamotrigine as LAMETEC, LAMITOR and LAMIDUS 25, 50 and 100 mg tablets, dosed 50 mg/day initially and increased up to 300 mg/day. The SR 400 mg tablet and weekly dosing are fabrications, and lormetazepam is a benzodiazepine unrelated to the LAMITOR brand.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

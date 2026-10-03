@@ -1,0 +1,590 @@
+{
+ "totalBank": 1191,
+ "mixedUnassigned": 18,
+ "drugFiles": 0,
+ "inserted": 0,
+ "skippedExisting": 1173,
+ "perDrug": {
+  "acamprosate": {
+   "before": 20,
+   "inserted": 0
+  },
+  "agomelatine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "alprazolam": {
+   "before": 21,
+   "inserted": 0
+  },
+  "amisulpride": {
+   "before": 22,
+   "inserted": 0
+  },
+  "amitriptyline": {
+   "before": 29,
+   "inserted": 0
+  },
+  "amoxapine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "amphetamine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "aripiprazole": {
+   "before": 24,
+   "inserted": 0
+  },
+  "armodafinil": {
+   "before": 20,
+   "inserted": 0
+  },
+  "asenapine": {
+   "before": 22,
+   "inserted": 0
+  },
+  "atomoxetine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "benztropine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "blonanserin": {
+   "before": 22,
+   "inserted": 0
+  },
+  "brexpiprazole": {
+   "before": 22,
+   "inserted": 0
+  },
+  "buprenorphine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "bupropion": {
+   "before": 29,
+   "inserted": 0
+  },
+  "buspirone": {
+   "before": 20,
+   "inserted": 0
+  },
+  "caprylidene": {
+   "before": 21,
+   "inserted": 0
+  },
+  "carbamazepine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "cariprazine": {
+   "before": 22,
+   "inserted": 0
+  },
+  "chlordiazepoxide": {
+   "before": 21,
+   "inserted": 0
+  },
+  "chlorpromazine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "citalopram": {
+   "before": 29,
+   "inserted": 0
+  },
+  "clomipramine": {
+   "before": 30,
+   "inserted": 0
+  },
+  "clonazepam": {
+   "before": 21,
+   "inserted": 0
+  },
+  "clonidine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "clorazepate": {
+   "before": 21,
+   "inserted": 0
+  },
+  "clozapine": {
+   "before": 24,
+   "inserted": 0
+  },
+  "cyamemazine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "desipramine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "desvenlafaxine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "dexamphetamine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "dexmethylphenidate": {
+   "before": 20,
+   "inserted": 0
+  },
+  "dextromethorphan": {
+   "before": 20,
+   "inserted": 0
+  },
+  "diazepam": {
+   "before": 21,
+   "inserted": 0
+  },
+  "diphenhydramine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "disulfiram": {
+   "before": 20,
+   "inserted": 0
+  },
+  "donepezil": {
+   "before": 20,
+   "inserted": 0
+  },
+  "dothiepin": {
+   "before": 21,
+   "inserted": 0
+  },
+  "doxepin": {
+   "before": 21,
+   "inserted": 0
+  },
+  "duloxetine": {
+   "before": 32,
+   "inserted": 0
+  },
+  "escitalopram": {
+   "before": 32,
+   "inserted": 0
+  },
+  "estazolam": {
+   "before": 21,
+   "inserted": 0
+  },
+  "eszopiclone": {
+   "before": 20,
+   "inserted": 0
+  },
+  "flibanserin": {
+   "before": 21,
+   "inserted": 0
+  },
+  "flumazenil": {
+   "before": 21,
+   "inserted": 0
+  },
+  "flunitrazepam": {
+   "before": 21,
+   "inserted": 0
+  },
+  "fluoxetine": {
+   "before": 34,
+   "inserted": 0
+  },
+  "flupenthixol": {
+   "before": 21,
+   "inserted": 0
+  },
+  "fluphenazine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "flurazepam": {
+   "before": 21,
+   "inserted": 0
+  },
+  "fluvoxamine": {
+   "before": 30,
+   "inserted": 0
+  },
+  "gabapentin": {
+   "before": 20,
+   "inserted": 0
+  },
+  "galantamine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "guanfacine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "haloperidol": {
+   "before": 22,
+   "inserted": 0
+  },
+  "hydroxyzine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "iloperidone": {
+   "before": 22,
+   "inserted": 0
+  },
+  "imipramine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "isocarboxazid": {
+   "before": 20,
+   "inserted": 0
+  },
+  "ketamine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "l-methylfolate": {
+   "before": 21,
+   "inserted": 0
+  },
+  "lamotrigine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "levetiracetam": {
+   "before": 20,
+   "inserted": 0
+  },
+  "levomilnacipran": {
+   "before": 21,
+   "inserted": 0
+  },
+  "lisdexamfetamine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "lithium": {
+   "before": 20,
+   "inserted": 0
+  },
+  "lofepramine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "loflazepate": {
+   "before": 21,
+   "inserted": 0
+  },
+  "lorazepam": {
+   "before": 21,
+   "inserted": 0
+  },
+  "lorcaserin": {
+   "before": 21,
+   "inserted": 0
+  },
+  "loxapine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "lurasidone": {
+   "before": 22,
+   "inserted": 0
+  },
+  "maprotiline": {
+   "before": 21,
+   "inserted": 0
+  },
+  "memantine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "mesoridazine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "methylphenidate": {
+   "before": 20,
+   "inserted": 0
+  },
+  "mianserin": {
+   "before": 21,
+   "inserted": 0
+  },
+  "midazolam": {
+   "before": 21,
+   "inserted": 0
+  },
+  "milnacipran": {
+   "before": 21,
+   "inserted": 0
+  },
+  "mirtazapine": {
+   "before": 29,
+   "inserted": 0
+  },
+  "moclobemide": {
+   "before": 20,
+   "inserted": 0
+  },
+  "modafinil": {
+   "before": 20,
+   "inserted": 0
+  },
+  "molindone": {
+   "before": 21,
+   "inserted": 0
+  },
+  "nalmefene": {
+   "before": 20,
+   "inserted": 0
+  },
+  "naltrexone": {
+   "before": 20,
+   "inserted": 0
+  },
+  "naltrexone-bupropion": {
+   "before": 20,
+   "inserted": 0
+  },
+  "nefazodone": {
+   "before": 21,
+   "inserted": 0
+  },
+  "nortriptyline": {
+   "before": 21,
+   "inserted": 0
+  },
+  "olanzapine": {
+   "before": 23,
+   "inserted": 0
+  },
+  "oxazepam": {
+   "before": 21,
+   "inserted": 0
+  },
+  "oxcarbazepine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "paliperidone": {
+   "before": 22,
+   "inserted": 0
+  },
+  "paroxetine": {
+   "before": 32,
+   "inserted": 0
+  },
+  "pemoline": {
+   "before": 21,
+   "inserted": 0
+  },
+  "perospirone": {
+   "before": 22,
+   "inserted": 0
+  },
+  "perphenazine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "phenelzine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "phentermine-topiramate": {
+   "before": 21,
+   "inserted": 0
+  },
+  "pimavanserin": {
+   "before": 22,
+   "inserted": 0
+  },
+  "pimozide": {
+   "before": 21,
+   "inserted": 0
+  },
+  "pipothiazine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "prazosin": {
+   "before": 20,
+   "inserted": 0
+  },
+  "pregabalin": {
+   "before": 20,
+   "inserted": 0
+  },
+  "propranolol": {
+   "before": 20,
+   "inserted": 0
+  },
+  "protriptyline": {
+   "before": 21,
+   "inserted": 0
+  },
+  "quazepam": {
+   "before": 21,
+   "inserted": 0
+  },
+  "quetiapine": {
+   "before": 24,
+   "inserted": 0
+  },
+  "ramelteon": {
+   "before": 20,
+   "inserted": 0
+  },
+  "reboxetine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "risperidone": {
+   "before": 23,
+   "inserted": 0
+  },
+  "rivastigmine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "selegiline": {
+   "before": 20,
+   "inserted": 0
+  },
+  "sertindole": {
+   "before": 22,
+   "inserted": 0
+  },
+  "sertraline": {
+   "before": 33,
+   "inserted": 0
+  },
+  "sodium-oxybate": {
+   "before": 21,
+   "inserted": 0
+  },
+  "sulpiride": {
+   "before": 22,
+   "inserted": 0
+  },
+  "suvorexant": {
+   "before": 20,
+   "inserted": 0
+  },
+  "tacrine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "tasimelteon": {
+   "before": 20,
+   "inserted": 0
+  },
+  "temazepam": {
+   "before": 21,
+   "inserted": 0
+  },
+  "thioridazine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "thiothixene": {
+   "before": 21,
+   "inserted": 0
+  },
+  "tiagabine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "tianeptine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "topiramate": {
+   "before": 20,
+   "inserted": 0
+  },
+  "tranylcypromine": {
+   "before": 20,
+   "inserted": 0
+  },
+  "trazodone": {
+   "before": 21,
+   "inserted": 0
+  },
+  "triazolam": {
+   "before": 21,
+   "inserted": 0
+  },
+  "trifluoperazine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "trihexyphenidyl": {
+   "before": 20,
+   "inserted": 0
+  },
+  "triiodothyronine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "trimipramine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "valproate": {
+   "before": 20,
+   "inserted": 0
+  },
+  "varenicline": {
+   "before": 20,
+   "inserted": 0
+  },
+  "venlafaxine": {
+   "before": 30,
+   "inserted": 0
+  },
+  "vilazodone": {
+   "before": 21,
+   "inserted": 0
+  },
+  "vortioxetine": {
+   "before": 21,
+   "inserted": 0
+  },
+  "zaleplon": {
+   "before": 20,
+   "inserted": 0
+  },
+  "ziprasidone": {
+   "before": 22,
+   "inserted": 0
+  },
+  "zolpidem": {
+   "before": 20,
+   "inserted": 0
+  },
+  "zonisamide": {
+   "before": 20,
+   "inserted": 0
+  },
+  "zopiclone": {
+   "before": 20,
+   "inserted": 0
+  },
+  "zotepine": {
+   "before": 22,
+   "inserted": 0
+  },
+  "zuclopenthixol": {
+   "before": 21,
+   "inserted": 0
+  }
+ },
+ "errors": []
+}

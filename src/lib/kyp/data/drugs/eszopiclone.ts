@@ -741,6 +741,110 @@ export const eszopiclone: Drug = {
       explanation: "For insomnia (onset + maintenance): start 1 mg at bedtime, target 2–3 mg, maximum 3 mg. Increase to 2–3 mg as needed (elderly max 2 mg)",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "slp-esz-01",
+      question: "Eszopiclone's identity and mechanism are best summarised as:",
+      options: [
+        "The S-enantiomer of the cyclopyrrolone zopiclone, acting at the benzodiazepine site of GABA-A receptors",
+        "The R-enantiomer of melatonin, acting at MT1 and MT2 receptors",
+        "A dual orexin receptor antagonist derived from the benzodiazepine nucleus",
+        "A first-generation H1 antihistamine of piperazine structure"
+      ],
+      correctIndex: 0,
+      explanation: "Eszopiclone is the active S-enantiomer of zopiclone, a cyclopyrrolone that potentiates GABA-A function through the benzodiazepine site with alpha-1 preference, marketed separately for its refined hypnotic profile; the racemate had been available outside the USA since 1989 (Katzung). The melatonin, orexin and antihistamine descriptions belong to ramelteon or tasimelteon, suvorexant, and hydroxyzine respectively. It shares zopiclone's dysgeusia precisely because it is the same molecule.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "slp-esz-02",
+      question: "Among the Z-drugs (zolpidem, zopiclone, eszopiclone, zaleplon), which half-life ranking is correct?",
+      options: [
+        "Zolpidem has the longest half-life at about 24 hours, which permits once-weekly dosing",
+        "Eszopiclone is the longest at about 6 hours; zaleplon the shortest at about 1 hour",
+        "Zaleplon is the longest at about 6 hours; eszopiclone the shortest at about 1 hour",
+        "All four share an identical half-life of about 4 hours, differing only in dose"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung's pharmacokinetic table gives eszopiclone a 6-hour elimination half-life (the longest of the Z-drugs), zolpidem roughly 2 to 3.5 hours, and zaleplon under 1 to 2 hours, so the ranking rises from zaleplon through zolpidem to zopiclone and eszopiclone. The mirror-image ranking is the classic trap, and no member of this class has a 24-hour half-life or a weekly formulation. This ranking drives the next-day hangover differences examiners test.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "slp-esz-03",
+      question: "A 45-year-old man with chronic insomnia accepts eszopiclone but fears he will need ever-larger doses. What is the evidence-based reassurance?",
+      options: [
+        "It loses all effect after 1 week and must be replaced by temazepam for long-term use",
+        "The dose must be escalated to 6 to 9 mg by the second month to retain hypnotic effect",
+        "Efficacy has been maintained for up to 6 months of nightly use without development of tolerance",
+        "Tolerance is certain within 2 weeks, so the dose must be doubled monthly"
+      ],
+      correctIndex: 2,
+      explanation: "Eszopiclone is the Z-drug with long-term data: Tripathi notes it produces little tolerance and physical dependence and is considered suitable for short-term as well as chronic insomnia, with efficacy maintained for about 6 months of continuous nightly use. Predicting obligatory monthly escalation contradicts that profile, and 1 to 3 mg remains the working dose range. Temazepam is a benzodiazepine hypnotic, not an escape from tolerance.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-esz-04",
+      question: "The usual bedtime dose range of eszopiclone in adults is:",
+      options: [
+        "10 to 20 mg",
+        "25 to 50 mg",
+        "100 to 200 mg",
+        "1 to 3 mg"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung's dosing table lists eszopiclone at 1 to 3 mg at bedtime, and nothing higher. The 25 to 50 mg range is hydroxyzine's, not eszopiclone's, and the 100 to 200 mg range, again not eszopiclone's, belongs to historical agents such as secobarbital; milligram potency differs enormously across hypnotic classes, so assuming cross-class dose equivalence is a classic error. The 10 to 20 mg figure is zaleplon's territory, not eszopiclone's.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-esz-05",
+      question: "A 55-year-old woman on eszopiclone develops oropharyngeal candidiasis and starts ketoconazole. She reports heavier morning sedation. Why?",
+      options: [
+        "Ketoconazole inhibits CYP3A4, prolonging eszopiclone's half-life and raising its exposure",
+        "Ketoconazole induces CYP3A4, so eszopiclone now acts faster but wears off sooner",
+        "Ketoconazole displaces eszopiclone from plasma albumin, halving its effective concentration",
+        "Ketoconazole blocks eszopiclone receptors in the gut wall, causing dose dumping"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung notes that eszopiclone's elimination half-life is prolonged in the elderly and in the presence of CYP3A4 inhibitors such as ketoconazole, so exposure and next-morning sedation rise; rifampin, a 3A4 inducer, has the opposite effect. Induction would shorten rather than lengthen the drug's action. There is no clinically relevant albumin-displacement or gut-receptor mechanism here.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "slp-esz-06",
+      question: "A polysomnography report of a patient on eszopiclone 3 mg is discussed at rounds. Which sleep-architecture effect is characteristic of the drug?",
+      options: [
+        "Isolated prolongation of REM sleep without any change in sleep latency",
+        "Increased total sleep time, with REM sleep decreased at the highest recommended dose",
+        "Increased total sleep time with complete REM preservation at every dose, including toxic ones",
+        "Selective suppression of stage 2 NREM sleep with no change in total sleep time"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung states that eszopiclone increases total sleep time, mainly via increases in stage 2 NREM sleep, and that at the highest recommended dose it decreases REM sleep. Complete dose-independent REM preservation overstates the data, and suppressing stage 2 or selectively prolonging REM are the opposite of its documented pattern. Sleep onset also improves, so the drug is not REM-selective.",
+      afterSectionId: "neurotransmitters",
+    },
+    {
+      id: "slp-esz-07",
+      question: "A 50-year-old woman has persistent insomnia despite escitalopram treatment for depression and asks whether her hypnotic choice matters. Why might eszopiclone be favoured here?",
+      options: [
+        "It carries a proven anti-suicidal effect independent of sleep improvement",
+        "It converts partial antidepressant response into remission by raising escitalopram plasma levels",
+        "It has specific trial data as adjunctive therapy for insomnia occurring with depression",
+        "It is the only hypnotic that doubles the antidepressant's serotonin reuptake blockade"
+      ],
+      correctIndex: 2,
+      explanation: "Eszopiclone carries study data supporting benefit in insomnia with comorbid depression, including co-administration with SSRIs, which is exactly the KYP anchor for this clinical situation. It neither potentiates serotonin reuptake inhibition nor changes escitalopram levels, and no hypnotic has an independent anti-suicidal label. The choice rests on sleep-specific evidence, not on antidepressant pharmacokinetics.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-esz-08",
+      question: "A patient with latent tuberculosis is about to start rifampicin while taking eszopiclone. The expected consequence is:",
+      options: [
+        "Reduced hepatic metabolism of eszopiclone via CYP3A4 inhibition, causing daytime sedation",
+        "No interaction at all, because eszopiclone is eliminated unchanged by the kidneys",
+        "Rising eszopiclone levels only if the tablet is taken with grapefruit juice",
+        "Increased hepatic metabolism of eszopiclone via CYP3A4 induction, weakening its hypnotic effect"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung specifically notes that inducers of CYP3A4 such as rifampin increase the hepatic metabolism of eszopiclone, so the hypnotic effect weakens and the dose may need review. Inhibition would raise levels rather than lower them, and renal excretion of unchanged drug is not eszopiclone's route. Grapefruit juice is an intestinal 3A4 inhibitor that raises levels of drugs like suvorexant; it does not rescue an induction interaction.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

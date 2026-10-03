@@ -793,6 +793,110 @@ export const nefazodone: Drug = {
       explanation: "For major depressive disorder (historic): start 100 mg twice daily, target 300-600 mg/day, maximum 600 mg/day. Titrate to 300-600 mg/day divided",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atd-nef-01",
+      question: "Nefazodone's mechanism is best described as:",
+      options: [
+        "Potent SERT and NET inhibition",
+        "Irreversible MAO-A inhibition",
+        "Alpha-2 autoreceptor blockade with H1 antagonism",
+        "5-HT2 antagonism with weak SERT and NET inhibition"
+      ],
+      correctIndex: 3,
+      explanation: "Nefazodone, chemically related to trazodone, is a 5-HT2 antagonist with only weak SERT and NET inhibition — and its active metabolites (hydroxynefazodone, mCPP) are 5-HT2 antagonists too. This receptor-first profile underlies its minimal sexual dysfunction and light serotonergic side-effect load. Potent reuptake inhibition is SSRI/SNRI territory, MAO inhibition is a different class, and alpha-2/H1 blockade is mirtazapine's signature.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atd-nef-02",
+      question: "Eight weeks after starting nefazodone, a 50-year-old reports fatigue, dark urine and icterus; ALT is 8 times the upper limit of normal. The correct action is:",
+      options: [
+        "Continue the drug and recheck LFTs after a month",
+        "Reduce the dose by half and monitor closely",
+        "Stop nefazodone immediately and evaluate for drug-induced liver injury",
+        "Add ursodeoxycholic acid and continue nefazodone unchanged"
+      ],
+      correctIndex: 2,
+      explanation: "Nefazodone carries an FDA black-box warning (2001) for hepatotoxicity, including rare fulminant hepatic failure and deaths — clinical jaundice with marked transaminase rise mandates immediate cessation and workup. Dose reduction is no remedy for idiosyncratic hepatotoxicity, and dosing through jaundice risks fulminant failure; liver disease is even a reason never to start the drug.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-nef-03",
+      question: "A patient stable on nefazodone is prescribed oral midazolam before a procedure. Why does the anaesthetist object?",
+      options: [
+        "Nefazodone induces CYP2D6 and lowers midazolam levels",
+        "Nefazodone is a potent CYP3A4 inhibitor and can raise midazolam to dangerous levels of sedation",
+        "Midazolam antagonizes nefazodone at 5-HT2 receptors",
+        "Both compete for the same renal organic cation transporter"
+      ],
+      correctIndex: 1,
+      explanation: "Nefazodone is one of the classic potent CYP3A4 inhibitors — co-prescription with 3A4 substrates such as midazolam (also statins, cyclosporine, and in their era terfenadine/cisapride) can dangerously amplify levels; this interaction fingerprint is what examiners test. It inhibits rather than induces CYPs, the 5-HT2 story is irrelevant here, and this is hepatic CYP metabolism, not renal transport.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "atd-nef-04",
+      question: "Despite attractive pharmacology, nefazodone is no longer commonly prescribed. The dominant reason is:",
+      options: [
+        "The black-box hepatotoxicity warning (rare fulminant hepatic failure) made clinicians abandon it",
+        "A dose-related seizure risk similar to bupropion's",
+        "Its potent CYP2D6 inhibition caused unmanageable interactions",
+        "It was the sedating antidepressant most linked to priapism"
+      ],
+      correctIndex: 0,
+      explanation: "After the 2001 black box for hepatotoxicity — including lethal hepatic failure — nefazodone's prescriptions collapsed even though it remains generically available; its receptor pharmacology was never the problem. Seizure risk is bupropion's flag, its strong inhibition is of CYP3A4 (not 2D6), and priapism belongs to trazodone.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-nef-05",
+      question: "The 'least sexual side effects' antidepressant trio — a NEET-PG favourite — is:",
+      options: [
+        "Fluoxetine, paroxetine, sertraline",
+        "Bupropion, mirtazapine, nefazodone",
+        "Venlafaxine, duloxetine, milnacipran",
+        "Amitriptyline, imipramine, clomipramine"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung's line: bupropion, mirtazapine and nefazodone are the antidepressants with the least association with sexual side effects — the standard answer to 'which antidepressant spares sexual function'. SSRIs, SNRIs and TCAs all carry substantial sexual dysfunction, with paroxetine and clomipramine among the worst offenders.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-nef-06",
+      question: "Why do nefazodone and trazodone spare sexual function far better than SSRIs?",
+      options: [
+        "They block dopamine reuptake, driving libido upward",
+        "Their strong anticholinergic effect masks sexual dysfunction",
+        "They raise serotonin only at the 5-HT3 receptor",
+        "Their serotonergic action is 5-HT2 receptor antagonism rather than strong SERT flooding"
+      ],
+      correctIndex: 3,
+      explanation: "Sexual dysfunction tracks with intense SERT blockade and downstream serotonergic receptor stimulation; nefazodone and trazodone act mainly by 5-HT2 antagonism with only weak SERT inhibition, which is why Katzung ties their low sexual-side-effect burden to this receptor profile. Dopamine reuptake blockade is bupropion's trick, and neither SARI is meaningfully anticholinergic.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atd-nef-07",
+      question: "Which pharmacokinetic statement about nefazodone is correct?",
+      options: [
+        "It is rapidly absorbed and its active metabolites — hydroxynefazodone and mCPP — both contribute 5-HT2 antagonism",
+        "It is a prodrug hydrolyzed to trazodone",
+        "It is excreted renally unchanged with no active metabolites",
+        "Its half-life of several days permits once-weekly dosing"
+      ],
+      correctIndex: 0,
+      explanation: "Like trazodone, nefazodone is rapidly absorbed with hepatic metabolism to active metabolites — hydroxynefazodone and mCPP — both 5-HT2 antagonists that extend its pharmacological action. It is not a prodrug of trazodone (chemically related but a distinct drug), the multi-day half-life story is fluoxetine's, and 'no metabolites' is factually wrong for this drug.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atd-nef-08",
+      question: "A 38-year-old on paroxetine for MDD reports loss of libido and delayed orgasm; he is adherent and only partially improved, with prominent insomnia. The evidence-based switch offering sexual sparing plus sedation is:",
+      options: [
+        "Fluoxetine",
+        "Venlafaxine XR",
+        "Nefazodone",
+        "Clomipramine"
+      ],
+      correctIndex: 2,
+      explanation: "For SSRI-induced sexual dysfunction the switch trio is bupropion, mirtazapine or nefazodone; with prominent insomnia and normal LFTs, nefazodone's sedation plus minimal sexual dysfunction makes it the textbook pick. Fluoxetine and venlafaxine would reproduce the sexual problem, and clomipramine — a potent SERT-blocking TCA — is among the worst offenders.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

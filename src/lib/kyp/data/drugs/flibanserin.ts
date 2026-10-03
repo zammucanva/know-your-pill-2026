@@ -648,6 +648,110 @@ export const flibanserin: Drug = {
       explanation: "For hsdd (premenopausal women): start 100 mg at bedtime, target 100 mg nocte, maximum 100 mg/day. Once daily at bedtime only; discontinuation if no benefit by 8 weeks",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "spc-flb-01",
+      question: "Flibanserin's central pharmacology — the serotonin-rebalancing design — is:",
+      options: [
+        "5-HT1A receptor agonism combined with 5-HT2A receptor antagonism",
+        "Phosphodiesterase-5 inhibition in the genital vasculature",
+        "Testosterone-receptor agonism in the hypothalamus",
+        "Dopamine D2 receptor agonism in the tuberoinfundibular pathway"
+      ],
+      correctIndex: 0,
+      explanation: "Flibanserin balances serotonin signalling — 5-HT1A agonism plus 5-HT2A antagonism — shifting prefrontal neurotransmitter output toward dopamine and noradrenaline to treat hypoactive sexual desire disorder. PDE5 inhibition (sildenafil), androgen agonism and D2 agonism (bromocriptine-like) are entirely different sexual-pharmacology mechanisms.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "spc-flb-02",
+      question: "Flibanserin's approved indication is:",
+      options: [
+        "Premature ejaculation",
+        "Acquired, generalised hypoactive sexual desire disorder in premenopausal women",
+        "Erectile dysfunction of any vascular cause in men",
+        "Postmenopausal dyspareunia from vulvovaginal atrophy"
+      ],
+      correctIndex: 1,
+      explanation: "The registration is narrow: acquired (not lifelong), generalised (not situational) hypoactive sexual desire disorder in premenopausal women. Erectile dysfunction belongs to PDE5 inhibitors, atrophic dyspareunia to topical oestrogens, and premature ejaculation to SSRIs/dapoxetine — each a real therapy mislabelled for this drug.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "spc-flb-03",
+      question: "A 38-year-old premenopausal woman with acquired, generalised hypoactive sexual desire disorder asks for 'the female Viagra'. Correct counselling includes:",
+      options: [
+        "Its effect is immediate and dose-independent",
+        "Morning dosing with a glass of wine is the recommended routine",
+        "Flibanserin is not an on-demand aphrodisiac — it is taken nightly at bedtime, works over weeks, and can cause hypotension and syncope",
+        "Take one tablet one hour before sexual activity, like sildenafil"
+      ],
+      correctIndex: 2,
+      explanation: "The central teaching: flibanserin is a central serotonin-rebalancing daily therapy, dosed at bedtime because of hypotension and syncope risk, with benefit assessed over weeks — not an aphrodisiac and not on-demand. Pre-activity dosing, immediacy and alcohol with a morning dose are exactly the misuse patterns that cause syncope.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "spc-flb-04",
+      question: "A woman on nightly flibanserin drinks three glasses of wine at dinner and collapses at home with low blood pressure. The boxed-warning mechanism:",
+      options: [
+        "Ethanol blocks flibanserin's renal elimination",
+        "Wine triggers a disulfiram-like flushing reaction specific to flibanserin",
+        "The collapse is a panic attack unrelated to the drug pair",
+        "Flibanserin augments ethanol's hypotensive effect — alcohol is contraindicated, and severe hypotension with syncope is the outcome"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung notes flibanserin augments ethanol's hypotensive effects with severe orthostatic hypotension and syncope — the boxed, signature safety pairing that mandates alcohol abstinence during therapy. Renal metabolic blocking and disulfiram-like reactions are not the interaction, and dismissing a documented drug-alcohol syncope as panic is unsafe.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-flb-05",
+      question: "A woman with recurrent vulvovaginal candidiasis on nightly flibanserin is offered oral fluconazole. The interaction-savvy plan:",
+      options: [
+        "Fluconazole, a moderate CYP3A4 inhibitor, raises flibanserin levels and hypotension risk — prefer topical antifungal therapy",
+        "Fluconazole lowers flibanserin levels by inducing CYP3A4",
+        "The pair is safe because flibanserin is cleared by CYP2C9",
+        "Topical azoles are contraindicated with flibanserin, so use oral fluconazole instead"
+      ],
+      correctIndex: 0,
+      explanation: "Flibanserin is heavily CYP3A4-dependent: strong 3A4 inhibitors are contraindicated and moderate inhibitors such as fluconazole raise exposure with hypotension and syncope risk — topical therapy sidesteps the interaction. Induction would lower levels (the wrong direction), CYP2C9 is not its pathway, and the last option reverses the safe choice.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "spc-flb-06",
+      question: "A woman took her flibanserin dose at 8 AM before work and spent the morning dizzy and faint on standing. The pharmacokinetic counselling:",
+      options: [
+        "The dizziness is an allergic reaction requiring permanent discontinuation",
+        "Flibanserin is dosed at bedtime because its hypotensive and sedative effects peak in the hours after ingestion — daytime dosing invites syncope",
+        "Flibanserin must be taken in the morning to match the cortisol rhythm",
+        "Dizziness means the dose should be doubled to induce tolerance"
+      ],
+      correctIndex: 1,
+      explanation: "Bedtime dosing is built into the label precisely because hypotension and somnolence track peak levels early after each nightly dose; morning ingestion converts that pharmacology into workplace syncope. Cortisol-rhythm dosing, dose doubling for 'tolerance' and allergy framing are all wrong — the fix is simply taking it at bedtime.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "spc-flb-07",
+      question: "In an Indian sexual-health clinic, a woman with distressing low desire asks for tablets. Before any prescription, the clinician must first:",
+      options: [
+        "Offer testosterone pellets as first-line therapy for women",
+        "Reassure that no assessment is needed before drug trials",
+        "Confirm acquired, generalised HSDD with distress, exclude depression, relationship factors and drug causes, and counsel that pharmacotherapy is adjunctive",
+        "Prescribe flibanserin immediately on request"
+      ],
+      correctIndex: 2,
+      explanation: "HSDD is a diagnosis of exclusion with a distress criterion: depression, relationship issues, medications (such as SSRIs) and endocrine causes must be addressed first, and pharmacotherapy — where access and cost permit — is adjunctive to psychosexual counselling. Prescribing on demand, testosterone pellets as a female first-line and no-assessment trials all violate the diagnostic gate.",
+      afterSectionId: "top",
+    },
+    {
+      id: "spc-flb-08",
+      question: "After her first bedtime dose of flibanserin, a woman reports next-morning drowsiness and lightheadedness. The correct framing of these effects:",
+      options: [
+        "They predict inevitable serotonin syndrome",
+        "They are allergic reactions demanding steroid cover",
+        "They indicate the drug is failing and should be stopped at once",
+        "Dizziness, somnolence, nausea and fatigue are its common adverse effects, worst early in treatment and managed by strict bedtime dosing"
+      ],
+      correctIndex: 3,
+      explanation: "The labelled common adverse-effect set is dizziness, somnolence, nausea, fatigue and hypotension, concentrated at treatment start — bedtime dosing and time usually mitigate them. Serotonin syndrome, allergy and therapeutic failure are misreadings of a predictable, early, dose-related profile.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

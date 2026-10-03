@@ -1,0 +1,1300 @@
+{
+ "batch": "kyp-special-mcq-batch-16c",
+ "title": "Special Agent MCQ Batch 16c - Ketamine / Dextromethorphan / L-methylfolate / Triiodothyronine / Caprylidene / Pimavanserin / Flibanserin / Lorcaserin / Phentermine-topiramate",
+ "generated": "2026-10-02",
+ "examOrientation": "Indian exams (NEET PG / INI-CET) + USMLE-style vignettes",
+ "textbookAnchors": "Facts aligned with Katzung Basic & Clinical Pharmacology 14e (ch.25: ketamine phencyclidine/NMDA inhibition, dissociative anaesthesia, norketamine 1/3-1/5 potency, emergence reactions blunted by benzodiazepines, sympathetic BP/HR/CO rise, cerebral vasodilator, bronchodilation with preserved respiratory drive, 1-2 mg/kg IV induction; ch.31/ch.32: dextromethorphan 15-30 mg 3-4x daily antitussive, MAOI caution, FDA ban <6 years, high-dose dissociative state, CYP2D6 probe with debrisoquine/desipramine; ch.38: liothyronine 3-4x potency, ~24 h half-life vs T4 7 days, T3-antidepressant meta-analysis inconclusive, thyroid hormones detrimental in normal-level depression, hyperthyroidism augments warfarin; ch.28: pimavanserin for Parkinson's disease psychosis; ch.23: flibanserin augments ethanol hypotension/syncope; ch.16/41: obesity agents - Fen-Phen 5-HT2 valvulopathy withdrawal, lorcaserin approved list, phentermine-topiramate combination, sibutramine/rimonabant withdrawals), K.D. Tripathi 7e (ketamine raises CBF/ICP, abuse as a rape drug; dextromethorphan 10-20 mg TDS + paediatric doses + combination cough syrups + high-dose hallucinations/ataxia; liothyronine not freely available in India, IV with T4 in myxoedema coma, higher arrhythmia/angina risk, T4 preferred), and KYP monograph anchors (esketamine REMS and hours-fast AMPA/mTOR story, dextromethorphan-bupropion sigma-1 + NDRI combination, l-methylfolate MTHFR-bypass medical-food augmentation, caprylidene MCT-ketone medical food with GI effects and modest/controversial evidence, pimavanserin QTc + no-AD-psychosis label boundary, flibanserin bedtime dosing + boxed alcohol contraindication + CYP3A4, lorcaserin 5-HT2C selectivity and 2020 cancer withdrawal (CAMELLIA-TIMI 61), phentermine-topiramate Schedule IV + topiramate orofacial clefts + paraesthesia/cognition + contraindications). No copyrighted text reproduced.",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras",
+  "notes": [
+   "afterSectionId values are real section ids observed live on KYP drug pages: top, quick-facts, mechanism, timeline, neurotransmitters, knowledge-graph, high-yield-summary.",
+   "Answer positions deliberately spread: A19 B18 C18 D18 (|A-D|=1; see stats.answerSpread).",
+   "Intentional mirror-image distractors kept per spec rule 2: T3-vs-T4 half-life swap (spc-t3-02), hyper/hypothyroid contraindication mirror (spc-ptp-05), matching-row format questions (spc-cpd-08, spc-ptp-08, spc-mix-01) where every row permutes the same signature ladder and each distractor row shifts a signature onto the wrong drug.",
+   "QA gate: this batch passed scripts/mcq_4step_check.py after extending the FACTS table with the 9 special-agent blocks."
+  ]
+ },
+ "stats": {
+  "total": 73,
+  "byDrug": {
+   "ketamine": 8,
+   "dextromethorphan": 8,
+   "l-methylfolate": 8,
+   "triiodothyronine": 8,
+   "caprylidene": 8,
+   "pimavanserin": 8,
+   "flibanserin": 8,
+   "lorcaserin": 8,
+   "phentermine-topiramate": 8,
+   "mixed": 1
+  },
+  "byDifficulty": {
+   "Foundation": 18,
+   "Clinical": 40,
+   "Advanced": 15
+  },
+  "byStyle": {
+   "recall": 32,
+   "vignette": 41
+  },
+  "byDomain": {
+   "Mechanism & Neuroscience": 12,
+   "Pharmacokinetics": 8,
+   "Clinical Uses": 13,
+   "Adverse Effects & Safety": 16,
+   "Drug Interactions": 6,
+   "Indian Practice": 7,
+   "Exam Pearls": 6,
+   "Active Recall": 5
+  },
+  "answerSpread": {
+   "0": 19,
+   "1": 18,
+   "2": 18,
+   "3": 18
+  }
+ },
+ "questions": [
+  {
+   "id": "spc-ket-01",
+   "drugSlug": "ketamine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Ketamine's primary pharmacological action, the one that underlies both its anaesthetic and its rapid antidepressant effects, is best described as:",
+   "options": [
+    "Noncompetitive, use-dependent blockade of the NMDA-type glutamate receptor ion channel",
+    "Competitive antagonism at the GABA-A benzodiazepine site, lowering chloride influx",
+    "Inhibition of monoamine oxidase-A, raising synaptic serotonin and noradrenaline",
+    "Blockade of dopamine D2 receptors in the mesolimbic pathway"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung identifies ketamine as a phencyclidine derivative whose major effect is inhibition of the NMDA receptor complex \u2014 the shared basis of its dissociative anaesthesia and its rapid antidepressant action. GABA-A-site antagonism is a beta-carboline convulsant property, MAO-A inhibition describes phenelzine, and mesolimbic D2 blockade is haloperidol's territory \u2014 none belongs to ketamine."
+  },
+  {
+   "id": "spc-ket-02",
+   "drugSlug": "ketamine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "neurotransmitters",
+   "question": "Receptor binding alone does not explain ketamine's speed. The downstream mechanism most often invoked to explain why a single sub-anaesthetic dose lifts depression within hours is:",
+   "options": [
+    "Direct agonism at nicotinic acetylcholine receptors of the locus coeruleus",
+    "Enhanced AMPA-receptor trafficking with mTOR-driven synaptogenesis following NMDA disinhibition",
+    "Immediate irreversible inhibition of serotonin reuptake at SERT, like fluoxetine but faster",
+    "Rapid up-regulation of striatal D2 dopamine receptors"
+   ],
+   "correctIndex": 1,
+   "explanation": "The breakthrough mechanism story: NMDA blockade on interneurons disinhibits glutamate release, which drives AMPA-receptor insertion and mTOR-mediated synaptogenesis \u2014 structural changes measurable within hours, unlike the slow adaptive shifts that follow monoamine reuptake blockade. SERT blockade is not ketamine's action and is not irreversible, D2 up-regulation is an antipsychotic-tolerance concept, and nicotinic locus-coeruleus agonism is not part of the model."
+  },
+  {
+   "id": "spc-ket-03",
+   "drugSlug": "ketamine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 34-year-old schoolteacher with major depressive disorder has had no meaningful response to three adequate antidepressant trials and now describes active suicidal thinking with a plan. The team wants an intervention whose antidepressant effect begins within hours rather than weeks. The most appropriate choice is:",
+   "options": [
+    "Adding fluoxetine at bedtime for its sedating profile",
+    "Starting lithium and waiting for its full augmentation effect",
+    "Intranasal esketamine under a REMS-style monitoring protocol",
+    "Increasing sertraline from 100 mg to 200 mg and reassessing at 6 weeks"
+   ],
+   "correctIndex": 2,
+   "explanation": "Treatment-resistant depression with acute suicidality is the signature indication for intranasal esketamine \u2014 ketamine's S-enantiomer \u2014 whose antidepressant effect begins within hours and whose dispensing follows a REMS-style monitoring protocol because of sedation, dissociation and transient blood-pressure rises (KYP anchor). Sertraline escalation and lithium augmentation need weeks, and fluoxetine is a nonsedating SSRI with a 2-4 week onset \u2014 none meets the urgency."
+  },
+  {
+   "id": "spc-ket-04",
+   "drugSlug": "ketamine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A psychiatrist plans racemic ketamine for a severely depressed inpatient and is quizzed by a resident on dose logic. Which statement correctly separates the antidepressant use from the anaesthetic use?",
+   "options": [
+    "Antidepressant and anaesthetic doses are identical; only the route differs",
+    "The antidepressant dose exceeds the anaesthetic dose to force a glutamate surge",
+    "Ketamine is dosed by body surface area for depression but by weight for anaesthesia",
+    "The antidepressant dose is sub-anaesthetic \u2014 roughly 0.5 mg/kg infused over 40 minutes, far below the 1-2 mg/kg intravenous induction dose"
+   ],
+   "correctIndex": 3,
+   "explanation": "Sub-anaesthetic dosing (about 0.5 mg/kg over 40 minutes in research protocols) is the antidepressant register, while anaesthetic induction uses 1-2 mg/kg IV or 4-6 mg/kg IM (Katzung) \u2014 pushing to anaesthetic levels in depression buys dissociation, not extra mood benefit. Weight-based dosing applies to both registers, so the remaining options misstate the dose relationship."
+  },
+  {
+   "id": "spc-ket-05",
+   "drugSlug": "ketamine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which statement about ketamine's pharmacokinetics is correct?",
+   "options": [
+    "It is highly lipid-soluble with rapid onset; hepatic N-demethylation yields the active metabolite norketamine, one third to one fifth as potent",
+    "It is water-soluble, slowly brain-penetrating, and cleared unchanged by the kidney",
+    "Its metabolite norketamine is a pure NMDA antagonist several times more potent than the parent drug",
+    "Its bolus effect ends because of dose-dependent renal excretion of unchanged parent drug"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung: high lipid solubility gives rapid onset, a bolus effect ends by redistribution to inactive tissue sites, and liver N-demethylation produces norketamine \u2014 active but only one third to one fifth as potent, then hydroxylated and conjugated for urinary excretion. Calling norketamine more potent than the parent inverts the metabolite fact, and neither slow brain entry nor renal clearing of unchanged drug describes ketamine."
+  },
+  {
+   "id": "spc-ket-06",
+   "drugSlug": "ketamine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A young adult receives intravenous ketamine for a painful dressing change. On emergence he is tearful and frightened, describing vivid out-of-body visions with distorted sounds. The team's best response is grounded in which fact?",
+   "options": [
+    "The reaction means a 10-fold overdose occurred and mandates naloxone reversal",
+    "Unpleasant emergence reactions are the main factor limiting ketamine's use, and they can be blunted by benzodiazepine premedication",
+    "These reactions signal anaphylaxis and demand immediate adrenaline",
+    "Emergence delirium is unique to ketamine among anaesthetics and has no mitigating strategy"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung names vivid dreams, hallucinations and out-of-body experiences during emergence as the main dose-limiting problem, less frequent in children and blunted by benzodiazepine co-administration. Anaphylaxis is not the mechanism, and naloxone is useless here \u2014 ketamine has no opioid action, so the other options misread a predictable, manageable effect."
+  },
+  {
+   "id": "spc-ket-07",
+   "drugSlug": "ketamine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 24-year-old man who has used ketamine recreationally almost daily for three years now reports suprapubic pain, urinary frequency and haematuria; cystoscopy shows ulceration. The most likely explanation is:",
+   "options": [
+    "Cyclophosphamide-induced haemorrhagic cystitis",
+    "Tuberculous cystitis from reactivated pulmonary infection",
+    "Ketamine-induced ulcerative cystitis, a documented toxicity of chronic heavy misuse",
+    "E. coli cystitis acquired from poor hygiene"
+   ],
+   "correctIndex": 2,
+   "explanation": "Chronic ketamine misuse is linked to a distinctive ulcerative cystitis with pelvic pain, frequency and haematuria, alongside cognitive problems \u2014 the reason its misuse profile matters beyond anaesthesia (KYP anchor). No immunosuppressant exposure supports cyclophosphamide cystitis, and an infective cystitis would rest on pyuria and positive culture rather than this drug history."
+  },
+  {
+   "id": "spc-ket-08",
+   "drugSlug": "ketamine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A 6-year-old with severe status asthmaticus needs sedation for ventilation; the intensivist selects ketamine. The pharmacological rationale \u2014 and the caveat the same intensivist must respect \u2014 is:",
+   "options": [
+    "Ketamine is the most potent respiratory depressant among intravenous anaesthetics, useful to quiet air hunger",
+    "Ketamine lowers systemic vascular resistance and intracranial pressure, ideal after head injury",
+    "Ketamine is contraindicated in asthma and is chosen only when no other drug exists",
+    "Ketamine preserves respiratory drive and relaxes bronchial smooth muscle, but raises blood pressure and cerebral blood flow"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung: ketamine relaxes bronchial smooth muscle and spares respiratory reflexes \u2014 a desirable adjunct in reactive airways \u2014 while centrally mediated sympathetic stimulation transiently raises blood pressure, heart rate and cardiac output, and it is a cerebral vasodilator increasing CBF and CMRO2, hence caution with raised intracranial pressure. The other options invert both the respiratory and the haemodynamic profile."
+  },
+  {
+   "id": "spc-dxm-01",
+   "drugSlug": "dextromethorphan",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Dextromethorphan's antitussive and neuropsychiatric pharmacology rests on which receptor profile?",
+   "options": [
+    "Sigma-1 receptor agonism with weak NMDA-channel antagonism",
+    "Full agonism at the mu-opioid receptor like its levorphanol relative",
+    "Selective 5-HT2C receptor agonism in appetite circuits",
+    "Blockade of H1 receptors in the medullary cough centre"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung and Tripathi place dextromethorphan's actions at the sigma-1 receptor with weak NMDA antagonism; it is the dextrorotatory isomer of a levorphanol derivative yet is essentially devoid of opioid agonism. 5-HT2C agonism is lorcaserin's satiety mechanism and H1 blockade belongs to first-generation antihistamines \u2014 neither is this drug's answer."
+  },
+  {
+   "id": "spc-dxm-02",
+   "drugSlug": "dextromethorphan",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "For simple dry cough in an adult, the standard oral dextromethorphan antitussive regimen is:",
+   "options": [
+    "0.15 mg/kg sublingually once weekly",
+    "15-30 mg three or four times daily, available over the counter",
+    "5 mg once daily at bedtime, prescription only",
+    "60 mg intramuscularly every hour until the cough stops"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung gives the usual antitussive dose as 15-30 mg three or four times daily, sold widely in OTC cough products; Tripathi's Indian register is 10-20 mg three times a day. Hourly parenteral dosing and weekly sublingual schedules are fabricated, and once-daily 5 mg is below any labelled regimen."
+  },
+  {
+   "id": "spc-dxm-03",
+   "drugSlug": "dextromethorphan",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 16-year-old is brought to the emergency department drowsy, with horizontal nystagmus and slurred speech, after drinking a full bottle of an over-the-counter cough syrup he bought to 'get high'. The dissociative intoxication he sought results from:",
+   "options": [
+    "Anticholinergic delirium from the syrup's dye component",
+    "Hepatic encephalopathy from paracetamol co-ingestion",
+    "NMDA-channel antagonism at supratherapeutic doses \u2014 the same dissociative mechanism as ketamine",
+    "Mu-opioid receptor overdose, since dextromethorphan is a full opioid agonist"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung describes supratherapeutic doses of dextromethorphan producing a dissociative state through NMDA-channel antagonism (plus serotonergic, opioid-site and cholinergic actions) \u2014 the 'robotripping' misuse of adolescents and the same dissociative mechanism as ketamine. Opioid overdose does not fit its weak opioid-site action, dyes do not cause delirium, and encephalopathy would show liver stigmata rather than nystagmus with dissociation."
+  },
+  {
+   "id": "spc-dxm-04",
+   "drugSlug": "dextromethorphan",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A mother asks why the pharmacist refuses an over-the-counter dextromethorphan cold preparation for her 4-year-old. The textbook-grounded answer is:",
+   "options": [
+    "Dextromethorphan stains developing dental enamel below age 6",
+    "Preschool children metabolise it too rapidly, making it ineffective",
+    "It causes permanent growth stunting in early childhood",
+    "Deaths were reported in young children taking dextromethorphan cold products, so use below 6 years is banned"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung notes increasing reports of death in young children taking dextromethorphan in OTC cold/cough formulations, leading the FDA to ban its use under 6 years. Enamel staining, accelerated clearance and growth stunting are not documented harms \u2014 the real concerns are dizziness and drowsiness, and hallucinations with ataxia at high doses (Tripathi)."
+  },
+  {
+   "id": "spc-dxm-05",
+   "drugSlug": "dextromethorphan",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 58-year-old with atypical depression on phenelzine buys an over-the-counter dextromethorphan cough syrup. Two days later he is febrile, agitated and diaphoretic with clonus and hyperreflexia. The interaction mechanism is:",
+   "options": [
+    "Combined serotonergic excess \u2014 dextromethorphan is specifically cautioned with MAO inhibitors for serotonin-syndrome risk",
+    "Phenelzine inhibiting the renal clearance of dextromethorphan",
+    "Additive QTc prolongation triggering torsades de pointes",
+    "Disulfiram-like blockade of dextromethorphan metabolism"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung's MAO-inhibitor warnings flag the antitussive dextromethorphan for avoidance with MAO inhibitors \u2014 serotonergic and sigma/NMDA actions stacked on MAO blockade can precipitate serotonin syndrome, the classic interaction Tripathi highlights. Renal clearance, torsades and disulfiram-style enzyme blockade are not the mechanism; the metabolic interaction of note is CYP2D6 competition, not MAO."
+  },
+  {
+   "id": "spc-dxm-06",
+   "drugSlug": "dextromethorphan",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "In clinical pharmacology, dextromethorphan serves as a classic probe drug. What does it probe?",
+   "options": [
+    "NAT2 acetylator status through urinary dextromethorphan excretion",
+    "CYP2D6 activity \u2014 its O-demethylation to dextrorphan defines the dextromethorphan/dextrorphan metabolic ratio",
+    "CYP3A4 activity, benchmarked against midazolam hydroxylation",
+    "CYP1A2 activity via urinary caffeine metabolite ratios"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung lists dextromethorphan alongside debrisoquine and desipramine as CYP2D6 substrates \u2014 the urinary dextromethorphan/dextrorphan ratio is a standard 2D6 phenotyping test. Caffeine probes 1A2, midazolam probes 3A4, and acetylator testing uses isoniazid-type substrates, not dextromethorphan."
+  },
+  {
+   "id": "spc-dxm-07",
+   "drugSlug": "dextromethorphan",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Per Tripathi, dextromethorphan's Indian dosing and formulation identity is:",
+   "options": [
+    "2.5-5 mg intranasally every 10 minutes for adults",
+    "50-100 mg every 4 hours, reserved for hospital use",
+    "10-20 mg three times a day for adults, a common ingredient of many proprietary cough formulations",
+    "100 mg once daily, marketed only as a single-ingredient prescription syrup"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi gives adults 10-20 mg per dose (children 2-6 years 2.5-5 mg; 6-12 years 5-10 mg) and notes dextromethorphan is a common ingredient of proprietary cough combinations. The other regimens are wrong for this drug \u2014 50-100 mg 4-hourly actually matches levopropoxyphene's dose in Katzung's antitussive table, a deliberate mix-up."
+  },
+  {
+   "id": "spc-dxm-08",
+   "drugSlug": "dextromethorphan",
+   "domain": "Active Recall",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A physician reads about a newly approved oral therapy for major depression that pairs dextromethorphan with bupropion. The pharmacological logic of that fixed-dose combination is:",
+   "options": [
+    "Bupropion blocks dextromethorphan's cough reflex so higher antidepressant doses become tolerable",
+    "Dextromethorphan inhibits bupropion's conversion to hydroxybupropion, sharpening the antidepressant effect",
+    "The pair works by jointly antagonising 5-HT2A receptors to restore sleep architecture",
+    "Dextromethorphan's sigma-1 agonism plus weak NMDA antagonism provides rapid antidepressant signalling, while bupropion's NDRI action adds monoamine drive and its 2D6 inhibition raises dextromethorphan exposure"
+   ],
+   "correctIndex": 3,
+   "explanation": "The approved rapid-onset oral MDD combination exploits sigma-1 plus NMDA signalling from dextromethorphan alongside bupropion's norepinephrine-dopamine reuptake inhibition, with bupropion's strong CYP2D6 inhibition increasing dextromethorphan levels \u2014 synergy by design. Cough suppression is irrelevant to antidepressant dosing, the metabolic direction is bupropion inhibiting 2D6 (rather than dextromethorphan blocking 2B6 conversion), and neither drug is a 5-HT2A antagonist."
+  },
+  {
+   "id": "spc-lmf-01",
+   "drugSlug": "l-methylfolate",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "L-methylfolate (L-5-MTHF) supports antidepressant response primarily because it:",
+   "options": [
+    "Is the active circulating folate that donates methyl groups for methionine and SAM synthesis and feeds the tetrahydrobiopterin cofactor pathway of monoamine synthesis",
+    "Directly blocks the serotonin transporter with potency between fluoxetine and sertraline",
+    "Is a prodrug that the kidney converts to folic acid for erythropoiesis",
+    "Acts as a thyroid-hormone analogue that sensitises nuclear receptors"
+   ],
+   "correctIndex": 0,
+   "explanation": "L-5-MTHF is the reduced, active folate: it remethylates homocysteine to methionine for SAM-dependent monoamine metabolism and supports tetrahydrobiopterin, the cofactor for tyrosine and tryptophan hydroxylase \u2014 the biochemical rail behind its augmentation use. It has no SERT affinity, no renal activation to folic acid, and no thyroid-receptor action."
+  },
+  {
+   "id": "spc-lmf-02",
+   "drugSlug": "l-methylfolate",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 29-year-old on sertraline 200 mg daily for 10 weeks has only a partial response and refuses 'more chemicals'. She asks for the least burdensome, nonsedating add-on. Which augmentation fits her request?",
+   "options": [
+    "Switching to paroxetine 40 mg daily",
+    "L-methylfolate as a prescription medical-food adjunct",
+    "Adding mirtazapine 30 mg at night",
+    "Adding olanzapine 5 mg daily"
+   ],
+   "correctIndex": 1,
+   "explanation": "L-methylfolate augmentation suits SSRI partial responders who want minimal burden: it carries essentially no adverse-effect or sedation load as a medical food (KYP anchor), whereas mirtazapine adds sedation and weight gain, olanzapine adds metabolic risk, and a paroxetine switch restarts the onset clock with a more anticholinergic, discontinuation-prone SSRI."
+  },
+  {
+   "id": "spc-lmf-03",
+   "drugSlug": "l-methylfolate",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient holding a box of l-methylfolate asks the pharmacist: 'Is this a drug or a supplement?' The accurate regulatory-style answer:",
+   "options": [
+    "It is a full prescription antidepressant approved as monotherapy for MDD",
+    "It is an investigational drug available only through clinical trials",
+    "It is marketed as a prescription medical food \u2014 a niche category for managing a distinct nutritional requirement, not a conventionally approved drug indication",
+    "It is an over-the-counter multivitamin with no prescription status"
+   ],
+   "correctIndex": 2,
+   "explanation": "The nutraceutical-adjacent exam oddity: l-methylfolate sits in the medical-food category used for augmentation in SSRI non-responders \u2014 a status distinct from OTC vitamins, from antidepressant drug approval, and from trial-only access. That label honesty also explains why its evidence standards differ from those of prescription drugs."
+  },
+  {
+   "id": "spc-lmf-04",
+   "drugSlug": "l-methylfolate",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "A patient with a reported MTHFR polymorphism asks why the psychiatrist chose L-methylfolate over plain folic acid. The pharmacokinetic answer:",
+   "options": [
+    "Folic acid requires renal hydroxylation that l-methylfolate avoids",
+    "L-methylfolate is a prodrug converted by gastric acid, unlike folic acid",
+    "The polymorphism causes duodenal malabsorption of folic acid",
+    "Folic acid must be reduced to L-5-MTHF by MTHFR, a step the polymorphism can impair; L-methylfolate bypasses it entirely"
+   ],
+   "correctIndex": 3,
+   "explanation": "The enzyme step that folic acid needs \u2014 MTHFR-mediated reduction to L-5-MTHF \u2014 is exactly what C677T-style polymorphisms impair, so the active form skips the bottleneck and delivers methyl donors directly. Renal activation, gastric-acid conversion and duodenal malabsorption are invented steps; the separate methotrexate-rescue story uses folinic, not methyl, folate."
+  },
+  {
+   "id": "spc-lmf-05",
+   "drugSlug": "l-methylfolate",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A strict vegetarian starting l-methylfolate augmentation has an unexamined borderline macrocytic picture on a routine smear. The pharmacologically wise counselling point is:",
+   "options": [
+    "Folate can normalise the blood counts of B12 deficiency while neurological damage progresses \u2014 check B12 first",
+    "L-methylfolate cures pernicious anaemia and makes B12 testing unnecessary",
+    "The combination causes serotonin syndrome within days",
+    "Folate therapy reliably worsens depression and must be stopped if fatigue appears"
+   ],
+   "correctIndex": 0,
+   "explanation": "The classic haematology caution: methylfolate corrects the megaloblastic anaemia of B12 deficiency, masking it while subacute combined degeneration advances \u2014 hence B12 status is checked before or alongside folate. It neither treats the neurological component, nor interacts serotonergically, nor worsens depression."
+  },
+  {
+   "id": "spc-lmf-06",
+   "drugSlug": "l-methylfolate",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "How does l-methylfolate's interaction profile compare with other augmentation agents?",
+   "options": [
+    "It raises lithium levels through NSAID-like renal competition",
+    "It has essentially no clinically important CYP-mediated interactions \u2014 a vitamin-like clearance with no enzyme induction or inhibition of note",
+    "It inhibits CYP2D6, raising paroxetine levels like fluoxetine",
+    "It induces CYP3A4, reducing quetiapine exposure like carbamazepine"
+   ],
+   "correctIndex": 1,
+   "explanation": "L-methylfolate's vitamin-like clearance leaves essentially no clinically important CYP-mediated interactions \u2014 no enzyme induction or inhibition of note \u2014 which is the contrast the examiner wants with lithium (NSAID/thiazide level-raising interactions), with inducers such as carbamazepine, and with 2D6-inhibiting SSRIs like fluoxetine. The three interaction claims in the other options belong to fluoxetine, carbamazepine and NSAIDs respectively, not to folate."
+  },
+  {
+   "id": "spc-lmf-07",
+   "drugSlug": "l-methylfolate",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "An Indian internist who routinely co-prescribes folic acid with methotrexate and phenytoin asks how l-methylfolate differs. The correct distinction is:",
+   "options": [
+    "L-methylfolate is the preferred rescue agent after high-dose methotrexate",
+    "Folic acid crosses the blood-brain barrier freely while l-methylfolate does not",
+    "Folic-acid co-prescription there prevents antimetabolite and anticonvulsant folate deficiency, whereas L-methylfolate's niche is neuropsychiatric augmentation of antidepressants",
+    "They are the same molecule at different prices"
+   ],
+   "correctIndex": 2,
+   "explanation": "The leucovorin-style rescue and anticonvulsant folate-suppletion stories use folic/folinic acid; l-methylfolate's therapeutic identity is the active form augmenting antidepressant response in the brain. Equating the two ignores the MTHFR-bypass logic, methotrexate rescue uses folinic acid rather than the methyl form, and the barrier claim is backwards \u2014 the reduced form is the CNS-relevant one."
+  },
+  {
+   "id": "spc-lmf-08",
+   "drugSlug": "l-methylfolate",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A postgraduate exam vignette asks a resident to rank augmentation 'speed lanes' for a partial SSRI responder: intranasal esketamine, adjunctive liothyronine, and adjunctive l-methylfolate. The correct ranking of onset is:",
+   "options": [
+    "L-methylfolate fastest, then T3, then esketamine",
+    "All three act within 24-48 hours",
+    "All three require 6-8 weeks before any effect",
+    "Esketamine within hours; T3 within days to about two weeks; l-methylfolate over weeks"
+   ],
+   "correctIndex": 3,
+   "explanation": "The rapid-antidepressant framing: ketamine/esketamine act within hours (AMPA-trafficking story), T3 augmentation is the classic rapid adjunct acting over days to a couple of weeks, and l-methylfolate corrects a cofactor supply over weeks. The inverted ladder and the all-fast/all-slow extremes each misstate at least one lane."
+  },
+  {
+   "id": "spc-t3-01",
+   "drugSlug": "triiodothyronine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Triiodothyronine (T3, liothyronine) produces its physiological and antidepressant-augmentation effects by:",
+   "options": [
+    "Binding nuclear thyroid-hormone receptors that regulate gene transcription \u2014 it is roughly 3-4 times more potent than T4",
+    "Activating the TSH receptor GPCR on thyroid follicular cells",
+    "Opening ligand-gated chloride channels in the brain",
+    "Binding cytosolic cortisol receptors after 5-alpha reduction"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung: T3 is three to four times more potent than levothyroxine and acts through nuclear TRalpha/TRbeta regulation of transcription. TSH-receptor activation is the job of TSH itself (and its stimulating immunoglobulins), chloride-channel opening is benzodiazepine/barbiturate territory, and 5-alpha-reduced steroid binding describes dihydrotestosterone, not T3."
+  },
+  {
+   "id": "spc-t3-02",
+   "drugSlug": "triiodothyronine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "The half-life contrast between liothyronine and levothyroxine, and its dosing consequence, is:",
+   "options": [
+    "Both persist for months after depot injections, making them the longest-acting of the two hormones",
+    "T3 about 1 day versus T4 about 7 days \u2014 so T3 needs multiple daily doses and is harder to monitor",
+    "T3 about 7 days versus T4 about 1 day \u2014 so T3 suits once-weekly dosing",
+    "Both about 2 hours, demanding continuous intravenous infusion"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung gives liothyronine a shorter half-life (about 24 hours) requiring multiple daily doses and making adequacy harder to monitor, versus levothyroxine's long (about 7-day) half-life permitting once-daily dosing. The swapped T3/T4 half-life figure is the deliberate mirror-image trap, and the 2-hour and multi-month figures fit no thyroid preparation."
+  },
+  {
+   "id": "spc-t3-03",
+   "drugSlug": "triiodothyronine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 41-year-old woman with a partial response to imipramine is given adjunctive liothyronine. Ten days later she returns with palpitations, fine tremor, sweating and insomnia. The best interpretation is:",
+   "options": [
+    "Tardive dyskinesia emerging from the antidepressant",
+    "Hypothyroid relapse caused by antidepressant overdose",
+    "Hyperthyroid symptom burden from T3 augmentation \u2014 check pulse and ECG, then reduce or stop the T3",
+    "Imipramine-induced hyponatraemia causing autonomic surges"
+   ],
+   "correctIndex": 2,
+   "explanation": "T3 augmentation carries the hyperthyroid symptom package \u2014 palpitations, tremor, sweating, insomnia \u2014 and cardiac arrhythmia risk is precisely why Tripathi notes liothyronine's higher cardiac hazard versus T4; the response is dose reduction or withdrawal with monitoring. Hyponatraemia presents with confusion more than tremor, tardive dyskinesia is an antipsychotic syndrome, and 'hypothyroid relapse from antidepressant overdose' is a contradiction in terms."
+  },
+  {
+   "id": "spc-t3-04",
+   "drugSlug": "triiodothyronine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A patient with a 60% response to sertraline wants something that works 'quickly, without switching drugs'. The psychiatrist proposes the classic rapid augmentation. Which option matches that plan?",
+   "options": [
+    "Replacing sertraline with desipramine to speed the onset",
+    "Adding levothyroxine (T4) at full replacement dose as a metabolic accelerator",
+    "Starting T3 as monotherapy for the depression",
+    "Adding small-dose liothyronine (T3) to the existing antidepressant \u2014 the traditional rapid-augmentation trick"
+   ],
+   "correctIndex": 3,
+   "explanation": "Triiodothyronine augmentation of an ongoing TCA or SSRI is the classic rapid augmentation (historically favoured, e.g., in women with low-T3 profiles). Switching antidepressants restarts the onset, T4 is not the classic rapid adjunct, and T3 is never chronic monotherapy for depression \u2014 Katzung's meta-analysis view is that even as an adjunct its benefit is modest and inconclusive."
+  },
+  {
+   "id": "spc-t3-05",
+   "drugSlug": "triiodothyronine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 55-year-old has taken self-purchased thyroid tablets alongside her antidepressant for two years with high-normal TSH suppression. She asks about long-term dangers. The textbook-correct concerns are:",
+   "options": [
+    "Accelerated bone loss with long-term use plus cardiac arrhythmia and angina risk",
+    "Weight gain and cold intolerance from a slowed metabolism",
+    "Agranulocytosis requiring weekly blood counts",
+    "Irreversible hypoparathyroidism"
+   ],
+   "correctIndex": 0,
+   "explanation": "Supraphysiological thyroid exposure produces the hyperthyroid symptom constellation and, with prolonged use, bone resorption and osteoporosis risk; Tripathi specifically ties liothyronine to a higher risk of cardiac arrhythmias and angina. Weight gain and cold intolerance are hypothyroid findings, agranulocytosis is the antithyroid-drug (carbimazole) hazard, and hypoparathyroidism is unrelated to T3 therapy."
+  },
+  {
+   "id": "spc-t3-06",
+   "drugSlug": "triiodothyronine",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 62-year-old on warfarin for atrial fibrillation is started on adjunctive T3 for antidepressant augmentation. Two weeks later she has gum bleeding and a rising INR. The interaction is:",
+   "options": [
+    "Warfarin induces T3 metabolism, and the bleeding reflects warfarin overdosing",
+    "Thyroid hormone potentiates warfarin \u2014 hyperthyroidism augments warfarin's effect by increasing clotting-factor catabolism",
+    "T3 displaces warfarin from albumin in a clinically decisive way",
+    "T3 inhibits CYP2C9, blocking S-warfarin clearance"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung lists hyperthyroidism among the states that augment warfarin's effects \u2014 thyroid hormone speeds the breakdown of vitamin-K-dependent clotting factors, so adding T3 demands INR monitoring and dose reduction. Albumin displacement and CYP2C9 inhibition are not the mechanism here, and induction of T3 metabolism would do the opposite of what happened."
+  },
+  {
+   "id": "spc-t3-07",
+   "drugSlug": "triiodothyronine",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Per Tripathi, the place of liothyronine in Indian practice is:",
+   "options": [
+    "The drug of choice for Graves' disease in pregnancy",
+    "Available over the counter as a weight-loss tonic",
+    "Not freely available; occasionally used IV with T4 in myxoedema coma, while l-thyroxine remains preferred for all routine indications",
+    "The routine first-line replacement hormone across India"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi notes liothyronine is not freely available in India and is occasionally given intravenously (with T4) in myxoedema coma; levothyroxine is preferred for all indications for its more sustained, uniform action and lower arrhythmia risk. First-line replacement is T4, Graves' management uses antithyroid drugs (propylthiouracil in pregnancy), and thyroid hormones must not be used for obesity."
+  },
+  {
+   "id": "spc-t3-08",
+   "drugSlug": "triiodothyronine",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "The honest evidence summary an examiner expects for T3 antidepressant augmentation is:",
+   "options": [
+    "An approved disease-modifying therapy for depression with normal thyroid function",
+    "Proof of cure in treatment-resistant depression regardless of thyroid status",
+    "Absolutely contraindicated in any patient taking an antidepressant",
+    "Some meta-analytic signal of benefit but inconclusive overall; thyroid hormones should not be given for depression when thyroid levels are normal without a specific augmentation plan"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung states that a meta-analysis of T3 co-administered with antidepressants showed some benefit but inconclusive results, and that thyroid hormones are ineffective and potentially detrimental in depression with normal thyroid levels \u2014 the Wilson's-era staple framing. Overclaiming approval or cure is wrong, and there is no absolute bar to monitored T3-antidepressant combination."
+  },
+  {
+   "id": "spc-cpd-01",
+   "drugSlug": "caprylidene",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Caprylidene's (medium-chain triglyceride) therapeutic idea in Alzheimer's disease is:",
+   "options": [
+    "Hepatic conversion of medium-chain triglycerides to ketone bodies that cross the blood-brain barrier as alternative neuronal fuel, bypassing impaired glucose utilisation",
+    "Direct stimulation of neuronal glucose transporters to push glucose into neurons",
+    "Reversible inhibition of acetylcholinesterase to raise synaptic acetylcholine",
+    "Blocking NMDA receptors to reduce excitotoxic cell loss"
+   ],
+   "correctIndex": 0,
+   "explanation": "The MCT-ketogenic concept: caprylidene's fats are oxidised to ketone bodies that enter the brain via monocarboxylate transporters, supplying fuel when cerebral glucose utilisation is impaired in Alzheimer's disease. Glucose-transporter stimulation is not an established drug action, acetylcholinesterase inhibition is donepezil's mechanism, and memantine holds the NMDA slot."
+  },
+  {
+   "id": "spc-cpd-02",
+   "drugSlug": "caprylidene",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A family brings their 68-year-old with mild Alzheimer's disease, already on donepezil, and asks whether caprylidene should replace the 'chemical' with something natural. The best-positioned answer:",
+   "options": [
+    "Caprylidene reverses amyloid plaques and cures the disease",
+    "Caprylidene is a medical-food energy adjunct that may be added to standard cholinesterase-inhibitor therapy, not a replacement for it",
+    "Stop donepezil; caprylidene alone is proven superior",
+    "Caprylidene is indicated only in vascular dementia"
+   ],
+   "correctIndex": 1,
+   "explanation": "The medical-food niche positions caprylidene as an adjunctive brain-fuel strategy alongside, not instead of, cholinesterase inhibitors or memantine, with only modest clinical gains expected. The superiority, vascular-only and plaque-reversal claims are unsupported \u2014 the evidence for this agent is itself modest and debated."
+  },
+  {
+   "id": "spc-cpd-03",
+   "drugSlug": "caprylidene",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The adverse-effect profile that dominates caprylidene's label is:",
+   "options": [
+    "Hyperkalaemia with arrhythmia risk",
+    "Tardive dyskinesia after months of use",
+    "Gastrointestinal upset \u2014 nausea, diarrhoea and flatulence",
+    "Rhabdomyolysis with rising creatine kinase"
+   ],
+   "correctIndex": 2,
+   "explanation": "MCT-oil style products classically cause nausea, loose stools and flatulence \u2014 dose-related GI intolerance is the main tolerability issue, managed by taking with food and splitting doses. Rhabdomyolysis is a statin/fibrate concern, hyperkalaemia belongs to RAAS blockers, and tardive dyskinesia is a dopamine-antagonist legacy \u2014 none applies here."
+  },
+  {
+   "id": "spc-cpd-04",
+   "drugSlug": "caprylidene",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Which pharmacokinetic feature lets caprylidene raise blood ketones effectively without a strict full ketogenic diet?",
+   "options": [
+    "Caprylidene is hydrolysed by gastric acid to acetoacetate before absorption",
+    "It is excreted unchanged by the kidney and filtered into the cerebrospinal fluid",
+    "It concentrates selectively in neurons by dopamine-transporter uptake",
+    "Medium-chain fatty acids are absorbed directly into portal blood and rapidly oxidised to ketones, unlike long-chain fats that need chylomicron-carnitine handling"
+   ],
+   "correctIndex": 3,
+   "explanation": "Medium-chain fatty acids are absorbed directly into portal blood and rapidly oxidised to ketones \u2014 unlike long-chain fats that need chylomicron-carnitine handling \u2014 which is the pharmacokinetic basis of the ketogenic effect without demanding full dietary restriction. Gastric generation of ketones, renal-to-CSF transport and dopamine-transporter uptake are fabricated routes."
+  },
+  {
+   "id": "spc-cpd-05",
+   "drugSlug": "caprylidene",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A sceptical resident asks what 'medical food' status actually means for caprylidene. The label-honesty answer:",
+   "options": [
+    "It is sold under the medical-food framework, which does not require the same efficacy demonstration as an approved drug, and its trial evidence is modest and controversial",
+    "It passed the same phase III efficacy standard as donepezil and memantine",
+    "It is a controlled substance because of ketogenic misuse potential",
+    "It is an FDA-approved anti-amyloid antibody in oral form"
+   ],
+   "correctIndex": 0,
+   "explanation": "The exam trap is category honesty: medical foods address the distinctive nutritional requirements of disease and do not carry the full drug-approval efficacy burden; caprylidene's Alzheimer's evidence is modest and contested. Equating it with cholinesterase-inhibitor trials, controlled scheduling or anti-amyloid antibodies misstates both its status and its mechanism."
+  },
+  {
+   "id": "spc-cpd-06",
+   "drugSlug": "caprylidene",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "An Indian family has spent heavily on an imported 'brain fuel' MCT product advertised online for their father's dementia and asks your opinion. The most defensible counselling:",
+   "options": [
+    "Warn that MCT products cause kidney failure in the elderly",
+    "Continue evidence-based dementia therapy; caprylidene is safe but only modestly and controversially effective, so judge the cost against the benefit",
+    "Stop donepezil and memantine; the MCT product replaces both",
+    "Advise doubling the MCT dose to accelerate plaque dissolution"
+   ],
+   "correctIndex": 1,
+   "explanation": "The honest line: it is not a proven disease-modifier \u2014 the evidence is modest and controversial \u2014 so standard pharmacotherapy continues and the family weighs cost against benefit; the main harms are gastrointestinal. Replacement claims and dose doubling lack any basis, and renal failure is not its toxicity (GI upset is), making the kidney warning false counselling."
+  },
+  {
+   "id": "spc-cpd-07",
+   "drugSlug": "caprylidene",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 70-year-old started on caprylidene reports nausea and loose stools within the first week; he takes it on an empty stomach each morning. The most appropriate first step:",
+   "options": [
+    "Add ondansetron and loperamide permanently as co-therapy",
+    "Switch to home intravenous lipid emulsion",
+    "Take it with food and split the daily dose to improve GI tolerance",
+    "Stop all dementia drugs immediately"
+   ],
+   "correctIndex": 2,
+   "explanation": "MCT-related GI upset is dose-related and manageable \u2014 taking the product with meals and splitting the daily dose usually settles the nausea and loose stools. Stopping all therapy over a manageable effect is disproportionate, permanent antidiarrhoeal cover ignores the fixable cause, and home IV lipid emulsions are not a dementia therapy."
+  },
+  {
+   "id": "spc-cpd-08",
+   "drugSlug": "caprylidene",
+   "domain": "Active Recall",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "top",
+   "question": "Which pairing of agent and signature identity is correct?",
+   "options": [
+    "Caprylidene \u2014 selective 5-HT2A inverse agonist for Parkinson's psychosis",
+    "Caprylidene \u2014 sigma-1 agonist antitussive with misuse potential",
+    "Caprylidene \u2014 NMDA-antagonist anaesthetic and rapid antidepressant",
+    "Caprylidene \u2014 medium-chain triglyceride ketogenic medical food for Alzheimer's"
+   ],
+   "correctIndex": 3,
+   "explanation": "The MCT-ketogenic medical-food identity belongs to caprylidene; the 5-HT2A inverse agonist is pimavanserin, the sigma-1 antitussive is dextromethorphan, and the NMDA-antagonist anaesthetic/rapid antidepressant is ketamine \u2014 each swapped identity is a real signature of another drug in this batch, mislabelled onto caprylidene."
+  },
+  {
+   "id": "spc-pmv-01",
+   "drugSlug": "pimavanserin",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Pimavanserin's receptor pharmacology, the design that defines it, is:",
+   "options": [
+    "Selective inverse agonist/antagonist at 5-HT2A receptors, with no dopamine D2 blockade",
+    "High-affinity D2 receptor antagonism like haloperidol",
+    "D2 partial agonism like aripiprazole",
+    "Selective 5-HT2C agonism producing satiety"
+   ],
+   "correctIndex": 0,
+   "explanation": "Pimavanserin is a selective 5-HT2A inverse agonist/antagonist \u2014 the deliberate absence of D2 affinity is its defining feature, because D2 blockade worsens parkinsonian motor function. Haloperidol's D2 antagonism and aripiprazole's partial agonism would both damage motor status, and 5-HT2C agonism is lorcaserin's satiety mechanism, not an antipsychotic action."
+  },
+  {
+   "id": "spc-pmv-02",
+   "drugSlug": "pimavanserin",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "neurotransmitters",
+   "question": "The 'entire design logic' of pimavanserin \u2014 why inverse agonism at 5-HT2A with zero D2 affinity was chosen \u2014 is:",
+   "options": [
+    "5-HT2A inverse agonism directly increases nigral dopamine synthesis",
+    "Parkinson's disease psychosis is driven by aberrant serotonergic 5-HT2A signalling (sensitised by dopaminergic therapy), while D2 blockade would worsen the motor state",
+    "5-HT2A receptors sit only in the gut, so the drug cannot reach motor circuits",
+    "Dopamine receptors are absent from the parkinsonian brain, making D2 blockade harmless"
+   ],
+   "correctIndex": 1,
+   "explanation": "The signature exam story: Parkinson's disease psychosis reflects aberrant 5-HT2A-mediated cortical signalling amplified by dopaminergic medication, and an agent that spares D2 treats hallucinations without aggravating bradykinesia. 5-HT2A receptors are cortical, striatal dopamine receptors are precisely what levodopa stimulates, and inverse agonism at 5-HT2A does not raise dopamine synthesis \u2014 it dampens the serotonergic driver of the psychosis."
+  },
+  {
+   "id": "spc-pmv-03",
+   "drugSlug": "pimavanserin",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 71-year-old with 8-year Parkinson's disease on pramipexole reports vivid visual hallucinations several times weekly. The team wants the agent approved specifically for Parkinson's disease psychosis and orders a baseline ECG. The drug is:",
+   "options": [
+    "Risperidone",
+    "A levodopa-carbidopa dose increase",
+    "Pimavanserin",
+    "Haloperidol"
+   ],
+   "correctIndex": 2,
+   "explanation": "Pimavanserin is the only therapy specifically approved for Parkinson's disease psychosis, chosen with a baseline ECG because of its QTc-prolongation warning (Katzung lists it for PD psychosis). Haloperidol and risperidone are D2 blockers that worsen parkinsonism and are used only as reluctant last resorts, and raising levodopa would aggravate the dopaminergic psychosis rather than treat it."
+  },
+  {
+   "id": "spc-pmv-04",
+   "drugSlug": "pimavanserin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Before starting pimavanserin, the neurologist orders an ECG and reviews the patient's other medications for cardiac risk. The reason:",
+   "options": [
+    "Pimavanserin causes dose-dependent hyperkalaemia that predisposes to arrhythmia",
+    "The drug is an opioid and suppresses the QT interval",
+    "ECGs are needed because pimavanserin lowers the seizure threshold",
+    "Pimavanserin carries a QTc-prolongation warning, so baseline and follow-up ECG monitoring is advised"
+   ],
+   "correctIndex": 3,
+   "explanation": "The label's cardiac warning is QTc prolongation \u2014 hence ECG baseline and vigilance for co-prescribed QT-prolongers (other antipsychotics, macrolides, some antiarrhythmics). Hyperkalaemia is not its mechanism, opioid actions do not apply, and seizures are not the ECG indication \u2014 this mirrors the ziprasidone/sertindole QTc vigilance of earlier antipsychotic batches."
+  },
+  {
+   "id": "spc-pmv-05",
+   "drugSlug": "pimavanserin",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A patient stable on pimavanserin develops tinea cruris, and oral ketoconazole is proposed. The correct caution:",
+   "options": [
+    "Strong CYP3A4 inhibitors raise pimavanserin exposure \u2014 avoid or adjust, given the QTc risk",
+    "Ketoconazole is safe because pimavanserin is cleared renally unchanged",
+    "The interaction is harmless since pimavanserin induces CYP3A4",
+    "Only CYP2A6 matters for pimavanserin, so ignore azoles"
+   ],
+   "correctIndex": 0,
+   "explanation": "Pimavanserin is CYP3A4/2D6-metabolised; strong 3A4 inhibitors such as ketoconazole raise levels and amplify QTc risk, so the antifungal choice should change or the antipsychotic be reduced. Renal-unchanged clearance and 3A4 induction are wrong-direction claims, and 2A6 belongs to lorcaserin's metabolic story, not pimavanserin's."
+  },
+  {
+   "id": "spc-pmv-06",
+   "drugSlug": "pimavanserin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "The daughter of a 79-year-old with moderate Alzheimer's disease (no parkinsonism) requests pimavanserin for her mother's hallucinations. The accurate response:",
+   "options": [
+    "Dementia hallucinations require levodopa trials first",
+    "Pimavanserin's approval is for Parkinson's disease psychosis; use in Alzheimer's-disease psychosis has not succeeded in trials and is not the labelled indication",
+    "Pimavanserin is first-line for all dementia-related hallucinations",
+    "Its registration is for Alzheimer's dementia, and Parkinson's hallucinations were never studied"
+   ],
+   "correctIndex": 1,
+   "explanation": "The label boundary matters: registration is for Parkinson's disease psychosis, and trials in Alzheimer's-disease psychosis did not establish that indication \u2014 general dementia psychosis instead starts with non-drug steps and cautious, time-limited antipsychotic use. The all-dementia-first-line claim and the reversed Alzheimer-registration claim both invert the label, and levodopa has no role in Alzheimer hallucinations."
+  },
+  {
+   "id": "spc-pmv-07",
+   "drugSlug": "pimavanserin",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A cardiology-minded examiner asks: 'Which antipsychotic-era agent treats psychosis in Parkinson's disease without worsening the motor score, yet still demands an ECG?' The intended answer, with its single caveat, is:",
+   "options": [
+    "Haloperidol \u2014 motor-safe because it is high-potency",
+    "Clozapine \u2014 requires ECG but reliably worsens parkinsonism",
+    "Pimavanserin \u2014 no D2 blockade, so motor status is untouched, but QTc prolongation requires ECG vigilance",
+    "Ziprasidone \u2014 zero EPS and no cardiac monitoring needed"
+   ],
+   "correctIndex": 2,
+   "explanation": "Pimavanserin pairs the two exam facts: its D2-sparing design preserves the parkinsonian motor exam, while its QTc warning demands ECG monitoring. Ziprasidone is the atypical that MOST demands cardiac vigilance rather than the least, haloperidol's high potency means maximal EPS, and clozapine treats PD psychosis off-label with agranulocytosis and sedation burdens \u2014 none matches the pairing."
+  },
+  {
+   "id": "spc-pmv-08",
+   "drugSlug": "pimavanserin",
+   "domain": "Active Recall",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "top",
+   "question": "The ONLY approved therapy for Parkinson's disease psychosis is:",
+   "options": [
+    "Risperidone",
+    "Quetiapine",
+    "Amantadine",
+    "Pimavanserin"
+   ],
+   "correctIndex": 3,
+   "explanation": "Pimavanserin holds the specific approval; risperidone carries the highest EPS/prolactin burden of the atypicals, quetiapine is a common off-label low-potency choice rather than an approved therapy, and amantadine treats dyskinesia and fatigue, not psychosis. This 'only-approved-for' framing is the signature NEET-PG/USMLE pearl."
+  },
+  {
+   "id": "spc-flb-01",
+   "drugSlug": "flibanserin",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Flibanserin's central pharmacology \u2014 the serotonin-rebalancing design \u2014 is:",
+   "options": [
+    "5-HT1A receptor agonism combined with 5-HT2A receptor antagonism",
+    "Phosphodiesterase-5 inhibition in the genital vasculature",
+    "Testosterone-receptor agonism in the hypothalamus",
+    "Dopamine D2 receptor agonism in the tuberoinfundibular pathway"
+   ],
+   "correctIndex": 0,
+   "explanation": "Flibanserin balances serotonin signalling \u2014 5-HT1A agonism plus 5-HT2A antagonism \u2014 shifting prefrontal neurotransmitter output toward dopamine and noradrenaline to treat hypoactive sexual desire disorder. PDE5 inhibition (sildenafil), androgen agonism and D2 agonism (bromocriptine-like) are entirely different sexual-pharmacology mechanisms."
+  },
+  {
+   "id": "spc-flb-02",
+   "drugSlug": "flibanserin",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Flibanserin's approved indication is:",
+   "options": [
+    "Premature ejaculation",
+    "Acquired, generalised hypoactive sexual desire disorder in premenopausal women",
+    "Erectile dysfunction of any vascular cause in men",
+    "Postmenopausal dyspareunia from vulvovaginal atrophy"
+   ],
+   "correctIndex": 1,
+   "explanation": "The registration is narrow: acquired (not lifelong), generalised (not situational) hypoactive sexual desire disorder in premenopausal women. Erectile dysfunction belongs to PDE5 inhibitors, atrophic dyspareunia to topical oestrogens, and premature ejaculation to SSRIs/dapoxetine \u2014 each a real therapy mislabelled for this drug."
+  },
+  {
+   "id": "spc-flb-03",
+   "drugSlug": "flibanserin",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 38-year-old premenopausal woman with acquired, generalised hypoactive sexual desire disorder asks for 'the female Viagra'. Correct counselling includes:",
+   "options": [
+    "Its effect is immediate and dose-independent",
+    "Morning dosing with a glass of wine is the recommended routine",
+    "Flibanserin is not an on-demand aphrodisiac \u2014 it is taken nightly at bedtime, works over weeks, and can cause hypotension and syncope",
+    "Take one tablet one hour before sexual activity, like sildenafil"
+   ],
+   "correctIndex": 2,
+   "explanation": "The central teaching: flibanserin is a central serotonin-rebalancing daily therapy, dosed at bedtime because of hypotension and syncope risk, with benefit assessed over weeks \u2014 not an aphrodisiac and not on-demand. Pre-activity dosing, immediacy and alcohol with a morning dose are exactly the misuse patterns that cause syncope."
+  },
+  {
+   "id": "spc-flb-04",
+   "drugSlug": "flibanserin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A woman on nightly flibanserin drinks three glasses of wine at dinner and collapses at home with low blood pressure. The boxed-warning mechanism:",
+   "options": [
+    "Ethanol blocks flibanserin's renal elimination",
+    "Wine triggers a disulfiram-like flushing reaction specific to flibanserin",
+    "The collapse is a panic attack unrelated to the drug pair",
+    "Flibanserin augments ethanol's hypotensive effect \u2014 alcohol is contraindicated, and severe hypotension with syncope is the outcome"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung notes flibanserin augments ethanol's hypotensive effects with severe orthostatic hypotension and syncope \u2014 the boxed, signature safety pairing that mandates alcohol abstinence during therapy. Renal metabolic blocking and disulfiram-like reactions are not the interaction, and dismissing a documented drug-alcohol syncope as panic is unsafe."
+  },
+  {
+   "id": "spc-flb-05",
+   "drugSlug": "flibanserin",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A woman with recurrent vulvovaginal candidiasis on nightly flibanserin is offered oral fluconazole. The interaction-savvy plan:",
+   "options": [
+    "Fluconazole, a moderate CYP3A4 inhibitor, raises flibanserin levels and hypotension risk \u2014 prefer topical antifungal therapy",
+    "Fluconazole lowers flibanserin levels by inducing CYP3A4",
+    "The pair is safe because flibanserin is cleared by CYP2C9",
+    "Topical azoles are contraindicated with flibanserin, so use oral fluconazole instead"
+   ],
+   "correctIndex": 0,
+   "explanation": "Flibanserin is heavily CYP3A4-dependent: strong 3A4 inhibitors are contraindicated and moderate inhibitors such as fluconazole raise exposure with hypotension and syncope risk \u2014 topical therapy sidesteps the interaction. Induction would lower levels (the wrong direction), CYP2C9 is not its pathway, and the last option reverses the safe choice."
+  },
+  {
+   "id": "spc-flb-06",
+   "drugSlug": "flibanserin",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A woman took her flibanserin dose at 8 AM before work and spent the morning dizzy and faint on standing. The pharmacokinetic counselling:",
+   "options": [
+    "The dizziness is an allergic reaction requiring permanent discontinuation",
+    "Flibanserin is dosed at bedtime because its hypotensive and sedative effects peak in the hours after ingestion \u2014 daytime dosing invites syncope",
+    "Flibanserin must be taken in the morning to match the cortisol rhythm",
+    "Dizziness means the dose should be doubled to induce tolerance"
+   ],
+   "correctIndex": 1,
+   "explanation": "Bedtime dosing is built into the label precisely because hypotension and somnolence track peak levels early after each nightly dose; morning ingestion converts that pharmacology into workplace syncope. Cortisol-rhythm dosing, dose doubling for 'tolerance' and allergy framing are all wrong \u2014 the fix is simply taking it at bedtime."
+  },
+  {
+   "id": "spc-flb-07",
+   "drugSlug": "flibanserin",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "In an Indian sexual-health clinic, a woman with distressing low desire asks for tablets. Before any prescription, the clinician must first:",
+   "options": [
+    "Offer testosterone pellets as first-line therapy for women",
+    "Reassure that no assessment is needed before drug trials",
+    "Confirm acquired, generalised HSDD with distress, exclude depression, relationship factors and drug causes, and counsel that pharmacotherapy is adjunctive",
+    "Prescribe flibanserin immediately on request"
+   ],
+   "correctIndex": 2,
+   "explanation": "HSDD is a diagnosis of exclusion with a distress criterion: depression, relationship issues, medications (such as SSRIs) and endocrine causes must be addressed first, and pharmacotherapy \u2014 where access and cost permit \u2014 is adjunctive to psychosexual counselling. Prescribing on demand, testosterone pellets as a female first-line and no-assessment trials all violate the diagnostic gate."
+  },
+  {
+   "id": "spc-flb-08",
+   "drugSlug": "flibanserin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "After her first bedtime dose of flibanserin, a woman reports next-morning drowsiness and lightheadedness. The correct framing of these effects:",
+   "options": [
+    "They predict inevitable serotonin syndrome",
+    "They are allergic reactions demanding steroid cover",
+    "They indicate the drug is failing and should be stopped at once",
+    "Dizziness, somnolence, nausea and fatigue are its common adverse effects, worst early in treatment and managed by strict bedtime dosing"
+   ],
+   "correctIndex": 3,
+   "explanation": "The labelled common adverse-effect set is dizziness, somnolence, nausea, fatigue and hypotension, concentrated at treatment start \u2014 bedtime dosing and time usually mitigate them. Serotonin syndrome, allergy and therapeutic failure are misreadings of a predictable, early, dose-related profile."
+  },
+  {
+   "id": "spc-lrc-01",
+   "drugSlug": "lorcaserin",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Lorcaserin produced weight loss through:",
+   "options": [
+    "Selective 5-HT2C receptor agonism in hypothalamic appetite circuits, enhancing satiety",
+    "Nonselective 5-HT2B/2C agonism copied from fenfluramine",
+    "Orexin-receptor antagonism",
+    "Pancreatic lipase inhibition"
+   ],
+   "correctIndex": 0,
+   "explanation": "Lorcaserin was a selective 5-HT2C agonist \u2014 activation of POMC/CART satiety pathways in hypothalamic appetite circuits reduced food intake; its safety story hinged on selectivity OVER 5-HT2A/2B. Full 2B agonism is fenfluramine's mistake, orexin antagonism is suvorexant's sleep mechanism, and lipase inhibition is orlistat."
+  },
+  {
+   "id": "spc-lrc-02",
+   "drugSlug": "lorcaserin",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "neurotransmitters",
+   "question": "The receptor-selectivity point examiners test about lorcaserin is:",
+   "options": [
+    "It blocked 5-HT2A to cause satiety, mirroring pimavanserin's antipsychotic design",
+    "Its 5-HT2C selectivity over 5-HT2A/2B was designed to avoid the cardiac valvulopathy and pulmonary hypertension linked to 2B agonism in the fenfluramine era",
+    "It was a pure 5-HT2B agonist, and that selectivity was its safety advantage",
+    "5-HT2C receptors exist only on heart valves, explaining its cardiac safety"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung records that the 5-HT2 agonists fenfluramine and dexfenfluramine caused pulmonary hypertension and cardiac valve defects and were withdrawn; lorcaserin's 2C-selectivity was the deliberate fix. Calling it a 2B agonist inverts the story, 2C is not a valvular receptor, and satiety came from 2C agonism \u2014 not from 2A blockade, which is pimavanserin's antipsychotic mechanism."
+  },
+  {
+   "id": "spc-lrc-03",
+   "drugSlug": "lorcaserin",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "In 2018, an obese woman with prediabetes (BMI 33) is prescribed lorcaserin as an adjunct to diet and exercise. The correct dosing register then:",
+   "options": [
+    "0.5 mg subcutaneous injection daily",
+    "60 mg orally once daily at bedtime",
+    "10 mg orally twice daily, adjusted to response and tolerance",
+    "100 mg orally once weekly before breakfast"
+   ],
+   "correctIndex": 2,
+   "explanation": "Lorcaserin's registered oral dosing was 10 mg twice daily as an adjunct to lifestyle measures in obesity (BMI >=30, or >=27 with a comorbidity such as prediabetes). Weekly 100 mg, once-daily 60 mg and a subcutaneous register were never its regimen \u2014 the injected GLP-1 analogue is the modern distractor."
+  },
+  {
+   "id": "spc-lrc-04",
+   "drugSlug": "lorcaserin",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "A patient who took lorcaserin years ago asks why it disappeared from the market. The correct answer:",
+   "options": [
+    "It was withdrawn for cardiac valvulopathy of the fenfluramine type",
+    "It was withdrawn for unacceptable hepatotoxicity",
+    "It lost patent protection and was reformulated",
+    "The FDA requested withdrawal in 2020 after its cardiovascular-outcomes trial signalled an increased cancer risk"
+   ],
+   "correctIndex": 3,
+   "explanation": "Lorcaserin was withdrawn at the FDA's request in 2020 when CAMELLIA-TIMI 61 \u2014 its cardiovascular safety trial \u2014 showed more cancers in the treated arm. Valvulopathy was the fenfluramine/dexfenfluramine story (a deliberate lookalike distractor), sibutramine was withdrawn for cardiovascular events, and hepatotoxicity or patent explanations are fabrications here."
+  },
+  {
+   "id": "spc-lrc-05",
+   "drugSlug": "lorcaserin",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A woman on fluoxetine 40 mg asks to add lorcaserin 'for the last 10 kg'. The correct caution:",
+   "options": [
+    "Both are serotonergic \u2014 serotonin-syndrome risk warrants avoidance or caution with SSRIs, SNRIs and MAOIs",
+    "Lorcaserin is a strong CYP2D6 inhibitor and would raise fluoxetine levels",
+    "Fluoxetine blocks lorcaserin's renal excretion, causing hypoglycaemia",
+    "The combination is the approved way to speed weight loss"
+   ],
+   "correctIndex": 0,
+   "explanation": "Lorcaserin was serotonergic by design, and its label warned about serotonin syndrome with SSRIs, SNRIs and MAOIs \u2014 a pharmacodynamic interaction, not a metabolic one. CYP2D6 inhibition belongs to fluoxetine itself rather than lorcaserin, renal blocking is invented, and combination for speed was never an approval \u2014 it multiplies the risk."
+  },
+  {
+   "id": "spc-lrc-06",
+   "drugSlug": "lorcaserin",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which statement about lorcaserin's drug-interaction identity is correct?",
+   "options": [
+    "Grapefruit juice was contraindicated because lorcaserin inhibits CYP3A4",
+    "Its key interactions were pharmacodynamic \u2014 serotonergic caution with SSRI/SNRI/MAOI therapy and sulfonylurea/insulin hypoglycaemia risk in diabetics",
+    "It required INR monitoring because it strongly inhibited warfarin metabolism",
+    "It was safe to combine freely with MAOIs because its agonism is 2C-selective"
+   ],
+   "correctIndex": 1,
+   "explanation": "The interaction story is pharmacodynamic: serotonergic stacking, and additive hypoglycaemia when added to insulin or sulfonylureas (whose doses needed reduction). Warfarin-metabolism inhibition, MAOI safety and CYP3A4-inhibitor claims misassign mechanisms \u2014 2C-selectivity never licensed MAOI combinations."
+  },
+  {
+   "id": "spc-lrc-07",
+   "drugSlug": "lorcaserin",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "An Indian patient with obesity (BMI 31, no diabetes) asks for a prescription anti-obesity drug today. Which option is actually available and appropriate among the following?",
+   "options": [
+    "Sibutramine sourced from neighbouring-market pharmacies",
+    "Rimonabant imported online",
+    "Orlistat \u2014 the peripheral lipase inhibitor that remains a standard pharmacotherapy option in India",
+    "Lorcaserin, recently reintroduced after 2020"
+   ],
+   "correctIndex": 2,
+   "explanation": "With lorcaserin withdrawn in 2020 and never an Indian mainstay, orlistat remains the accessible anti-obesity agent, acting peripherally on pancreatic lipase with GI effects rather than central serotonergic ones. Sibutramine was withdrawn globally for cardiovascular events and rimonabant for psychiatric risk \u2014 sourcing either online is exactly the hazard the withdrawal history teaches."
+  },
+  {
+   "id": "spc-lrc-08",
+   "drugSlug": "lorcaserin",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient with type 2 diabetes on gliclazide starts lorcaserin and two weeks later has sweating, tremor and confusion relieved by glucose. The mechanism-based management:",
+   "options": [
+    "Gliclazide caused lactic acidosis; switch to metformin",
+    "The episodes are lorcaserin withdrawal symptoms; double its dose",
+    "This is diabetic gastroparesis delaying meals; add a prokinetic",
+    "Lorcaserin can enhance hypoglycaemia with insulin or sulfonylureas \u2014 reduce the antidiabetic doses and monitor glucose"
+   ],
+   "correctIndex": 3,
+   "explanation": "Lorcaserin's label warned of hypoglycaemia when combined with insulin or sulfonylureas, advising antidiabetic dose reduction and glucose monitoring \u2014 exactly this presentation. Lactic acidosis is a metformin concern (and metformin alone rarely causes hypoglycaemia), doubling the weight-loss drug is backwards, and gastroparesis does not produce reproducible post-dose hypoglycaemia."
+  },
+  {
+   "id": "spc-ptp-01",
+   "drugSlug": "phentermine-topiramate",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The mechanistic logic of the phentermine-topiramate combination for weight management is:",
+   "options": [
+    "Phentermine, a sympathomimetic amine, suppresses appetite via noradrenergic signalling, while topiramate adds satiety and weight effects through its anticonvulsant actions",
+    "Both components are opioid antagonists acting on hedonic eating",
+    "Phentermine inhibits pancreatic lipase while topiramate blocks fat absorption",
+    "Topiramate is an SSRI and phentermine a 5-HT2C agonist"
+   ],
+   "correctIndex": 0,
+   "explanation": "The pairing unites noradrenergic appetite suppression (phentermine, an amphetamine-mimic) with topiramate's weight-losing anticonvulsant pharmacology \u2014 the combination registered for chronic weight management (Katzung lists it among approved obesity agents). Opioid antagonism plus NDRI describes naltrexone-bupropion, lipase inhibition is orlistat's peripheral act, and the SSRI-plus-5-HT2C-agonist receptor labels belong to no component of this combination \u2014 pure swapped nonsense."
+  },
+  {
+   "id": "spc-ptp-02",
+   "drugSlug": "phentermine-topiramate",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which regulatory/status statement about phentermine-topiramate is correct?",
+   "options": [
+    "It is sold in India as an OTC ayurvedic-nutraceutical combination",
+    "It is a controlled substance (US Schedule IV) because of phentermine's amphetamine-like sympathomimetic pharmacology and abuse potential",
+    "It is unscheduled worldwide because topiramate is an anticonvulsant",
+    "It is US Schedule II, identical to methamphetamine"
+   ],
+   "correctIndex": 1,
+   "explanation": "The phentermine component's amphetamine-mimic pharmacology places the combination in Schedule IV \u2014 controlled but below amphetamine's Schedule II \u2014 and demands misuse vigilance. Unscheduling ignores phentermine's abuse liability, Schedule II overstates the class, and no OTC Indian ayurvedic version exists; it is prescription-only where marketed."
+  },
+  {
+   "id": "spc-ptp-03",
+   "drugSlug": "phentermine-topiramate",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 30-year-old woman with BMI 34 asks for weight-loss tablets; she mentions she is trying to conceive. The correct response about phentermine-topiramate:",
+   "options": [
+    "It is safe if stopped after the first missed period",
+    "It is contraindicated only in men planning fatherhood",
+    "It is contraindicated \u2014 topiramate carries an orofacial-cleft teratogenic boxed warning, so pregnancy must be avoided with reliable contraception",
+    "It is safe in pregnancy; only valproate is teratogenic"
+   ],
+   "correctIndex": 2,
+   "explanation": "The combination is contraindicated in pregnancy: topiramate's first-trimester orofacial-cleft risk is boxed, and phentermine's sympathomimetic fetal exposure adds nothing safe, so pregnancy planning demands deferral and contraception. Valproate is not the sole teratogen in pharmacology, and stopping 'after a missed period' is too late for structures closing early in the first trimester."
+  },
+  {
+   "id": "spc-ptp-04",
+   "drugSlug": "phentermine-topiramate",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 42-year-old on phentermine-topiramate for four months returns complaining of tingling fingers and toes, word-finding difficulty and a racing heart. The unified explanation:",
+   "options": [
+    "He has developed Guillain-Barre syndrome from the topiramate",
+    "These are definitive signs of serotonin syndrome",
+    "The symptoms indicate hypothyroidism induced by phentermine",
+    "The combination's recognised effects \u2014 topiramate-type paraesthesia and cognitive slowing plus phentermine-type tachycardia and blood-pressure rise"
+   ],
+   "correctIndex": 3,
+   "explanation": "Paraesthesia and word-finding difficulty are classic topiramate effects (carbonic-anhydrase inhibition and cognitive slowing), while palpitations and blood-pressure rise track phentermine's sympathomimetic action \u2014 a combined profile that may force dose reduction or discontinuation. Guillain-Barre is an ascending-paralysis diagnosis, serotonin syndrome needs serotonergic drugs, and phentermine does not induce hypothyroidism (the listed endocrine contraindication is hyperthyroidism)."
+  },
+  {
+   "id": "spc-ptp-05",
+   "drugSlug": "phentermine-topiramate",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which comorbidity makes phentermine-topiramate an outright inappropriate choice?",
+   "options": [
+    "Narrow-angle (angle-closure) glaucoma \u2014 a listed contraindication",
+    "Treated hypothyroidism on stable replacement",
+    "Osteoarthritis of the knees",
+    "Seasonal allergic rhinitis"
+   ],
+   "correctIndex": 0,
+   "explanation": "Glaucoma is among the labelled contraindications \u2014 topiramate itself can provoke acute myopia and angle-closure, and sympathomimetics raise intraocular-pressure risk \u2014 alongside hyperthyroidism, pregnancy and recent MAOI use. Stable hypothyroid replacement, osteoarthritis and rhinitis are not contraindications; note the deliberate hyper/hypothyroid mirror in the distractor."
+  },
+  {
+   "id": "spc-ptp-06",
+   "drugSlug": "phentermine-topiramate",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which pharmacokinetic statement about the phentermine-topiramate combination is correct?",
+   "options": [
+    "Topiramate reliably raises the efficacy of combined oral contraceptives",
+    "Topiramate is long-acting (half-life roughly 20-30 hours), enabling once-daily extended-release dosing, and can reduce oral-contraceptive reliability by enzyme induction",
+    "Topiramate's half-life of about 2 hours mandates thrice-daily dosing",
+    "Phentermine is filtered intact into the cerebrospinal fluid, obviating hepatic metabolism"
+   ],
+   "correctIndex": 1,
+   "explanation": "Topiramate's 20-30-hour monotherapy half-life supports extended-release once-daily escalation, and its enzyme-inducing potential is the classic oral-contraceptive caution (the Batch-14 cross-link). The 2-hour figure is a triazolam-style number, CSF filtration is not a clearance route, and the contraceptive effect is the opposite direction \u2014 reduced reliability, not enhancement."
+  },
+  {
+   "id": "spc-ptp-07",
+   "drugSlug": "phentermine-topiramate",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "An Indian corporate executive with BMI 32 wants 'the American weight-loss pill' without changing his diet. The clinically honest counselling:",
+   "options": [
+    "Anti-obesity drugs are prescribed in India without any screening",
+    "Weight-loss drugs are safe to combine freely with each other",
+    "Pharmacotherapy is an adjunct to structured diet, activity and behavioural change, and only after screening for pregnancy plans, glaucoma, hyperthyroidism and MAOI use",
+    "The tablet substitutes for diet and exercise"
+   ],
+   "correctIndex": 2,
+   "explanation": "The Indian-practice reality mirrors global guidance: lifestyle intervention is the foundation, drugs are adjuncts, and the contraindication screen (pregnancy or plans, glaucoma, hyperthyroidism, recent MAOIs) plus the controlled-substance status must precede any prescription. Substitution for lifestyle, no-screen prescribing and drug stacking are each unsafe myths."
+  },
+  {
+   "id": "spc-ptp-08",
+   "drugSlug": "phentermine-topiramate",
+   "domain": "Active Recall",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "top",
+   "question": "Which pairing of anti-obesity agent and mechanism/status is correct?",
+   "options": [
+    "Naltrexone-bupropion \u2014 selective 5-HT2C agonist withdrawn for cancer",
+    "Liraglutide (high-dose) \u2014 noradrenergic appetite suppressant with Schedule IV status",
+    "Orlistat \u2014 central serotonergic satiety agent with a glaucoma warning",
+    "Phentermine-topiramate \u2014 noradrenergic appetite suppression plus anticonvulsant satiety effect; teratogenic, controlled substance"
+   ],
+   "correctIndex": 3,
+   "explanation": "Phentermine-topiramate's dual sympathomimetic-plus-anticonvulsant design, its teratogenicity and its Schedule IV status are correctly paired. Naltrexone-bupropion is the opioid-antagonist/NDRI combination (the 2C agonist withdrawn for cancer is lorcaserin), liraglutide is an injected GLP-1 agonist, and orlistat is the peripheral lipase inhibitor \u2014 every other pairing mislabels a real drug."
+  },
+  {
+   "id": "spc-mix-01",
+   "drugSlug": "mixed",
+   "domain": "Active Recall",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "top",
+   "question": "Match each special agent to its single most exam-relevant signature:",
+   "options": [
+    "Ketamine \u2014 hours-fast NMDA-antagonist antidepressant; lorcaserin \u2014 withdrawn 2020 for a cancer signal; pimavanserin \u2014 Parkinson's psychosis with zero D2 blockade; flibanserin \u2014 bedtime dosing, alcohol contraindicated",
+    "Ketamine \u2014 withdrawn for cancer; lorcaserin \u2014 D2-sparing Parkinson's antipsychotic; pimavanserin \u2014 alcohol-contraindicated satiety drug; flibanserin \u2014 hours-fast NMDA antidepressant",
+    "Ketamine \u2014 bedtime-dosed antitussive; lorcaserin \u2014 sigma-1 agonist antitussive; pimavanserin \u2014 MCT ketogenic medical food; flibanserin \u2014 withdrawn 2020 for cancer",
+    "Ketamine \u2014 MCT ketogenic medical food; lorcaserin \u2014 hours-fast NMDA antidepressant; pimavanserin \u2014 antitussive with CYP2D6-probe status; flibanserin \u2014 Parkinson's psychosis drug with zero D2 blockade"
+   ],
+   "correctIndex": 0,
+   "explanation": "Only the first row preserves all four signatures: ketamine/esketamine's hour-scale NMDA-antagonist antidepressant action, lorcaserin's 2020 cancer-signal withdrawal, pimavanserin's D2-sparing Parkinson's-psychosis design with ECG vigilance, and flibanserin's bedtime-only, alcohol-contraindicated register. Every other row grafts one agent's signature onto a neighbour \u2014 the batch's cross-drug audit in a single question."
+  }
+ ]
+}

@@ -838,6 +838,110 @@ export const sulpiride: Drug = {
       explanation: "For schizophrenia: start 200 mg twice daily, target 600-1200 mg/day, maximum 1600 mg/day (exceptional). Increase to 600-1200 mg/day",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tap-sul-01",
+      question: "Sulpiride's receptor pharmacology is best described as:",
+      options: [
+        "A substituted benzamide blocking D2 and D3 receptors with roughly equal potency",
+        "A butyrophenone acting chiefly at sigma receptors",
+        "A phenothiazine blocking 5-HT2A more than D2",
+        "A dihydroindolone that depletes vesicular dopamine"
+      ],
+      correctIndex: 0,
+      explanation: "Sulpiride is the substituted benzamide of this batch; Katzung notes its equivalent D2 and D3 potency (with added 5-HT7 antagonism) and its marked prolactin effect. Sigma-receptor lore belongs to haloperidol, 5-HT2A-dominant blockade to clozapine-type agents, and vesicular dopamine depletion is tetrabenazine's VMAT2 mechanism.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tap-sul-02",
+      question: "A psychiatrist plans sulpiride for one patient with prominent anxiety and low mood, and later for another with acute psychosis. The dose-character logic she must apply is:",
+      options: [
+        "Only high doses have any effect; low doses are placebos",
+        "Low doses (below roughly 200 mg/day) behave as anxiolytic and antidepressant-type, while higher doses are antipsychotic",
+        "Low doses are antipsychotic; only high doses help anxiety",
+        "A fixed 600 mg dose treats both anxiety and psychosis"
+      ],
+      correctIndex: 1,
+      explanation: "Sulpiride's dose-dependence is the exam classic: low daily doses carry anxiolytic and antidepressant-flavoured effects, while antipsychotic use needs higher doses — Tripathi lists 200-400 mg twice daily for acute psychosis with negative-symptom use at lower doses. Options A and C invert or deny this dose logic, and the fixed-dose claim is false.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-sul-03",
+      question: "The adverse-effect signature most characteristic of sulpiride among this batch's drugs is:",
+      options: [
+        "Bronchospasm after each dose",
+        "Agranulocytosis within weeks",
+        "Marked hyperprolactinaemia with galactorrhoea, menstrual disturbance and sexual dysfunction",
+        "Hypertensive crisis with tyramine foods"
+      ],
+      correctIndex: 2,
+      explanation: "Sulpiride produces marked rises in serum prolactin (Katzung), so galactorrhoea, amenorrhoea, gynaecomastia and sexual dysfunction follow chronic use. Agranulocytosis is clozapine's burden, bronchospasm belongs to inhaled loxapine, and tyramine crises belong to the MAOIs.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-sul-04",
+      question: "A 24-year-old woman on sulpiride 150 mg/day for low mood presents after three months with bilateral galactorrhoea and amenorrhoea; the pregnancy test is negative, TSH is normal, and serum prolactin is markedly raised. The best assessment is:",
+      options: [
+        "Prolactinoma — schedule urgent transsphenoidal surgery",
+        "Hypothyroidism — start levothyroxine",
+        "Occult pregnancy — repeat the test in two weeks",
+        "Sulpiride-induced hyperprolactinaemia — review and change the drug strategy"
+      ],
+      correctIndex: 3,
+      explanation: "D2 blockade disinhibits pituitary lactotropes, and sulpiride is one of the strongest prolactin elevators — the triad of galactorrhoea, amenorrhoea and high prolactin with a negative pregnancy test and normal TSH points to the drug. Microadenomas are considered after excluding drugs, thyroid disease is excluded by the normal TSH, and pregnancy has been ruled out.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-sul-05",
+      question: "A 60-year-old with stage 4 chronic kidney disease is prescribed sulpiride. The pharmacokinetic reason the dose must be reduced is:",
+      options: [
+        "Sulpiride is excreted largely unchanged by the kidneys",
+        "Sulpiride is extensively metabolised by CYP3A4",
+        "Sulpiride requires intravenous administration to work",
+        "Sulpiride is eliminated mainly in bile with enterohepatic cycling"
+      ],
+      correctIndex: 0,
+      explanation: "Sulpiride is cleared predominantly by renal excretion of unchanged drug, so renal failure demands dose reduction — the benzamides in general lean on the kidney rather than on CYP enzymes. There is no significant CYP3A4 dependence, no intravenous requirement, and biliary cycling is not its route.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tap-sul-06",
+      question: "Which availability statement about sulpiride is correct?",
+      options: [
+        "It is marketed in the USA as Moban",
+        "It is marketed in India (for example Sulpitac 50/100/200 mg tablets) but is not approved in the USA",
+        "It is available in India only as an intravenous infusion",
+        "It has been banned worldwide since 2004"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi lists Indian sulpiride brands SULPITAC, AMIPRIDE and ZONAPRIDE in 50, 100 and 200 mg tablets, while Katzung notes the sulpiride group is not approved in the USA. Moban was molindone's brand, and the other two claims are false — sulpiride remains a marketed oral antipsychotic.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-sul-07",
+      question: "Which prolactin-related pairing is correct?",
+      options: [
+        "Sulpiride lowers prolactin; aripiprazole raises it the most",
+        "Sulpiride and clozapine are both prolactin-sparing",
+        "The degree of prolactin rise reliably predicts better antipsychotic efficacy",
+        "Sulpiride raises prolactin strongly; aripiprazole may even lower it"
+      ],
+      correctIndex: 3,
+      explanation: "The benzamides and risperidone head the hyperprolactinaemia league — Katzung describes marked increases with sulpiride — whereas aripiprazole's partial agonism can leave prolactin normal or lowered. Clozapine is prolactin-sparing but sulpiride is not, and prolactin rise is a liability signal rather than an efficacy certificate.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "tap-sul-08",
+      question: "Sulpiride shares its substituted-benzamide chemistry and D2/D3 selectivity with which congener?",
+      options: [
+        "Clozapine",
+        "Haloperidol",
+        "Loxapine",
+        "Amisulpride"
+      ],
+      correctIndex: 3,
+      explanation: "Amisulpride is sulpiride's benzamide congener — Tripathi introduces it exactly that way, noting the shared D2 and D3 affinity and hyperprolactinaemia (amisulpride receives fuller treatment elsewhere in this series). Clozapine, haloperidol and loxapine belong to unrelated chemical families.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

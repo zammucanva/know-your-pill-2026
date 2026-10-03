@@ -779,6 +779,110 @@ export const vilazodone: Drug = {
       explanation: "For major depressive disorder: start 10 mg once daily × 7 days with food, target 20-40 mg/day, maximum 40 mg/day. Increase by 10 mg weekly to 40 mg",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "atd-vil-01",
+      question: "Vilazodone's pharmacological profile — the basis of its \"SPARI\" label — is best described as:",
+      options: [
+        "Potent serotonin reuptake inhibition combined with partial agonism at the 5-HT1A receptor",
+        "Balanced blockade of SERT and NET with additional 5-HT2A antagonism",
+        "Pure norepinephrine reuptake blockade with no serotonergic activity",
+        "MT1/MT2 melatonin receptor agonism with 5-HT2C antagonism"
+      ],
+      correctIndex: 0,
+      explanation: "Vilazodone is a potent SERT inhibitor and a partial agonist at the 5-HT1A receptor — hence the coined term SPARI (serotonin partial agonist reuptake inhibitor), the 5-HT1A limb being shared with buspirone. Balanced SERT/NET with 5-HT2A antagonism mixes SNRI and trazodone pharmacology, pure NET blockade describes reboxetine/atomoxetine, and melatonin agonism with 5-HT2C antagonism is agomelatine's signature. Exam pearl: the 5-HT1A partial agonism is the offered rationale for vilazodone's low sexual-dysfunction burden.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atd-vil-02",
+      question: "Which statement about vilazodone's approved indications is correct?",
+      options: [
+        "It is approved for major depression, generalized anxiety disorder, and fibromyalgia",
+        "It is approved for major depressive disorder in adults — its label is MDD-only",
+        "It carries approvals for obsessive-compulsive disorder and panic disorder like other serotonergic agents",
+        "It is a first-line approved drug for smoking cessation and seasonal affective disorder"
+      ],
+      correctIndex: 1,
+      explanation: "Vilazodone's regulatory label is confined to adult major depressive disorder — an MDD-only label, a recurring theme among the newer atypicals (vilazodone, vortioxetine, desvenlafaxine). Generalized anxiety and fibromyalgia labels belong to duloxetine/SNRIs, OCD and panic to the SSRIs, and smoking cessation with seasonal affective disorder is bupropion territory, so none of the other triplets is defensible.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-vil-03",
+      question: "A 34-year-old man has taken vilazodone 40 mg each morning on an empty stomach for 5 weeks with no improvement in his depressive symptoms; he admits he skips breakfast because the tablet makes him queasy. The most likely pharmacokinetic explanation for his non-response is:",
+      options: [
+        "CYP3A4 autoinduction by vilazodone has accelerated its own clearance",
+        "A saturable first-pass effect has made the tablet ineffective after the first week",
+        "Food markedly increases vilazodone absorption, so fasting doses roughly halve its bioavailability",
+        "Vilazodone accumulates in the body only when it is taken with dairy products"
+      ],
+      correctIndex: 2,
+      explanation: "Vilazodone must be taken with food — absorption rises sharply with a fatty meal (Katzung), and on an empty stomach bioavailability falls by roughly half, so an apparent non-responder may simply be underdosed. Restoring the breakfast habit recovers exposure before the drug is declared a failure. Autoinduction and dairy-dependent accumulation are invented mechanisms; the real pearl is that this is the signature food-effect antidepressant.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atd-vil-04",
+      question: "Two weeks after starting vilazodone, a 29-year-old woman reports loose stools and queasiness but wants to continue because her mood is \"finally lifting.\" The most appropriate advice is:",
+      options: [
+        "These gastrointestinal effects are the drug's most common adverse effects and usually settle; take each dose with food and review shortly",
+        "Stop immediately — diarrhoea on vilazodone signals emerging hepatotoxicity",
+        "The symptoms indicate a serotonergic excess emergency requiring cyproheptadine",
+        "Split the dose into two daily halves to eliminate gastrointestinal effects permanently"
+      ],
+      correctIndex: 0,
+      explanation: "Diarrhoea and nausea are vilazodone's leading adverse effects — Katzung notes gastrointestinal upset at somewhat higher rates than with the SSRIs — and they are typically mild and transient, so food co-administration and short-interval review are correct. Hepatotoxicity monitoring is agomelatine's duty, serotonin syndrome requires multiple serotonergic drugs with autonomic instability, and no dosing trick abolishes GI effects.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-vil-05",
+      question: "A 41-year-old man stable on vilazodone is prescribed oral ketoconazole; the psychiatrist should anticipate:",
+      options: [
+        "A fall in vilazodone levels requiring double the antidepressant dose",
+        "No interaction — vilazodone is cleared almost entirely by the kidney as unchanged drug",
+        "Toxic accumulation of ketoconazole because vilazodone potently inhibits CYP3A4",
+        "Rising vilazodone exposure, because strong CYP3A4 inhibitors can raise its serum concentration by 50% or more"
+      ],
+      correctIndex: 3,
+      explanation: "Vilazodone is extensively metabolised by CYP3A4 (with minor 2C19 and 2D6 contribution), and strong 3A4 inhibitors such as ketoconazole raise its serum concentration by half or more — Katzung's explicit figure — so the combination demands dose caution. The interaction runs from inhibitor to substrate, only about 1% of vilazodone is excreted unchanged renally, and vilazodone is neither a potent inhibitor nor a strong inducer of any CYP enzyme (it may mildly induce 2C19), so it does not raise ketoconazole levels.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "atd-vil-06",
+      question: "A 26-year-old woman is about to start vilazodone for a first episode of major depression. Which titration plan matches the standard product labelling?",
+      options: [
+        "Begin at 25 mg daily and continue unchanged; the food requirement replaces any titration",
+        "Start 10 mg daily for 7 days, then 20 mg daily for 7 days, then target the usual 40 mg daily maintenance dose",
+        "Start 15 mg daily and step up every 3 days to 80 mg twice daily",
+        "Start 150 mg daily and double weekly to a 450 mg ceiling"
+      ],
+      correctIndex: 1,
+      explanation: "Vilazodone is titrated 10 mg to 20 mg to 40 mg, each step held about a week before reaching the 40 mg usual maintenance dose — a built-in ramp that blunts the nausea and dizziness of initiation. Claiming the food rule replaces titration inverts the logic (food affects absorption, not dose escalation), 80 mg twice daily exceeds the label, and 150-to-450 mg is bupropion dosing territory.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-vil-07",
+      question: "A 30-year-old man in full remission on sertraline asks to switch antidepressants because of distressing sexual dysfunction and 4 kg of weight gain. Which feature of vilazodone is most relevant to his request?",
+      options: [
+        "It is the antidepressant most strongly associated with weight loss and blood-pressure reduction",
+        "It blocks muscarinic receptors, so sexual side effects are simply replaced by dry mouth",
+        "It combines SERT inhibition with 5-HT1A partial agonism and is associated with a low rate of sexual dysfunction",
+        "It has proven efficacy for premature ejaculation at a low nightly dose"
+      ],
+      correctIndex: 2,
+      explanation: "Vilazodone's 5-HT1A partial-agonist limb is the proposed reason its sexual-dysfunction rate stays low despite potent SERT blockade — a classic counselling point when an SSRI must be swapped for sexual side effects. Weight change is not its heralded advantage, it is not meaningfully anticholinergic, and dapoxetine — not vilazodone — is the serotonergic drug labelled for premature ejaculation.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-vil-08",
+      question: "Which statement about vilazodone is FALSE?",
+      options: [
+        "Its metabolism is mainly via CYP3A4, with minor contributions from CYP2C19 and CYP2D6",
+        "Only about 1% of an oral dose is excreted unchanged in the urine",
+        "It is a potent inhibitor of CYP2D6 and is contraindicated with tamoxifen",
+        "Absorption is substantially increased when the dose is taken with a fatty meal"
+      ],
+      correctIndex: 2,
+      explanation: "The tamoxifen claim is the false one: vilazodone is a CYP substrate, not a potent inhibitor — Katzung states it is neither a potent inhibitor nor a strong inducer of any isoenzyme (it may mildly induce CYP2C19). The strong-2D6-inhibitor warning that matters for tamoxifen belongs to paroxetine and fluoxetine. The other statements are all correct: 3A4-dominant metabolism with minor 2C19/2D6 contribution, roughly 1% renal excretion unchanged, and sharply increased absorption with a fatty meal.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

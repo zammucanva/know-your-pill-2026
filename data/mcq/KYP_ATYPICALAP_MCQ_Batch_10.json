@@ -1,0 +1,752 @@
+{
+ "batch": "kyp-atypicalap-mcq-batch-10",
+ "title": "Atypical Antipsychotic MCQ Batch 10 - Risperidone / Paliperidone / Olanzapine / Quetiapine / Aripiprazole",
+ "generated": "2026-10-02",
+ "examOrientation": "Indian exams (NEET PG / INI-CET) + USMLE-style vignettes",
+ "textbookAnchors": "Facts aligned with Stahl's Essential Psychopharmacology, Katzung Basic & Clinical Pharmacology 14e (ch.29 + CYP table 4-2), K.D. Tripathi Essentials of Medical Pharmacology 7e (ch.32), Oxford Handbook of Psychiatry, and USMLE board conventions; cross-checked against KYP monographs (risperidone most prolactin-elevating atypical with dose-related EPS above ~6 mg/day and 2D6 conversion to 9-hydroxyrisperidone; paliperidone OROS once-daily with renal elimination and monthly/3-monthly LAIs; olanzapine metabolic liability shared with clozapine, smoking-CYP1A2 dose effect, LAI 3-hour post-injection observation; quetiapine H1/alpha-1-driven sedation with lowest EPS, 6 h half-life, beagle cataract trivia; aripiprazole D2 partial agonist with ~75 h half-life, akathisia signature and prolactin-lowering). No copyrighted text reproduced.",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras",
+  "notes": [
+   "afterSectionId values are real section ids observed live on KYP antipsychotic pages: top, quick-facts, mechanism, timeline, neurotransmitters, neural-pathways, knowledge-graph, high-yield-summary.",
+   "Answer positions deliberately spread: A11 B10 C10 D10 (see stats.answerSpread).",
+   "QA gate: this batch passed scripts/mcq_4step_check.py after extending the fact table with atypical-antipsychotic data.",
+   "id pattern: atp-<3letter>-01..08 per drug (ris/pal/ola/que/ari) + one atp-mix-01 class-summary at the end."
+  ]
+ },
+ "stats": {
+  "total": 41,
+  "byDrug": {
+   "risperidone": 8,
+   "paliperidone": 8,
+   "olanzapine": 8,
+   "quetiapine": 8,
+   "aripiprazole": 8,
+   "mixed": 1
+  },
+  "byDifficulty": {
+   "Foundation": 10,
+   "Clinical": 23,
+   "Advanced": 8
+  },
+  "byStyle": {
+   "recall": 19,
+   "vignette": 22
+  },
+  "byDomain": {
+   "Mechanism & Neuroscience": 6,
+   "Adverse Effects & Safety": 11,
+   "Pharmacokinetics": 7,
+   "Clinical Uses": 7,
+   "Indian Practice": 2,
+   "Exam Pearls": 4,
+   "Drug Interactions": 3,
+   "Active Recall": 1
+  },
+  "answerSpread": {
+   "0": 11,
+   "1": 10,
+   "2": 10,
+   "3": 10
+  }
+ },
+ "questions": [
+  {
+   "id": "atp-ris-01",
+   "drugSlug": "risperidone",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Risperidone, a benzisoxazole atypical antipsychotic, produces its antipsychotic effect chiefly through which receptor profile?",
+   "options": [
+    "Combined D2 antagonism with potent 5-HT2A antagonism, plus high affinity for alpha-1 and H1 receptors",
+    "Preferential D4 antagonism with negligible 5-HT2A affinity",
+    "Serotonin-norepinephrine reuptake inhibition with weak D2 blockade",
+    "Selective D2 partial agonism with 5-HT1A partial agonism and minimal alpha-1 affinity"
+   ],
+   "correctIndex": 0,
+   "explanation": "Risperidone pairs D2 blockade with stronger 5-HT2A antagonism (Katzung: greater ability to alter 5-HT2A than D2 activity), while high alpha-1 and H1 affinity explains its postural hypotension and sedation. The D2-partial-agonist/5-HT1A-partial-agonist profile is aripiprazole's 'dopamine system stabiliser' signature, not risperidone's. D4-predominant blockade is clozapine-flavoured pharmacology, and reuptake inhibition belongs to antidepressants, not antipsychotics."
+  },
+  {
+   "id": "atp-ris-02",
+   "drugSlug": "risperidone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 24-year-old woman treated with risperidone 4 mg/day for schizophrenia returns with bilateral galactorrhoea and secondary amenorrhoea of 3 months' duration; pregnancy test is negative. The mechanism most responsible is:",
+   "options": [
+    "Direct stimulation of lactotroph D2 receptors",
+    "D2 receptor blockade in the tuberoinfundibular pathway, disinhibiting prolactin release from the anterior pituitary",
+    "5-HT2A blockade raising a hypothalamic prolactin-releasing factor",
+    "H1 blockade triggering a pseudopregnancy hormonal pattern"
+   ],
+   "correctIndex": 1,
+   "explanation": "Risperidone is the most prolactin-elevating atypical antipsychotic: D2 blockade in the tuberoinfundibular pathway removes tonic hypothalamic inhibition of prolactin, producing galactorrhoea, amenorrhoea, gynaecomastia and, long term, osteoporosis risk (Tripathi: 'the atypical antipsychotics, except risperidone, do not appreciably raise prolactin'). 5-HT2A and H1 blockade do not drive hyperprolactinaemia, and stimulating lactotroph D2 receptors would suppress, not raise, prolactin secretion."
+  },
+  {
+   "id": "atp-ris-03",
+   "drugSlug": "risperidone",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which statement about risperidone's pharmacokinetics is correct?",
+   "options": [
+    "It is excreted unchanged in urine with no active metabolite",
+    "It is a CYP1A2 substrate inactivated by smoking-induced enzyme induction",
+    "It is a CYP2D6 substrate largely converted to the active metabolite 9-hydroxyrisperidone",
+    "It undergoes rapid glucuronidation to an inactive, renally cleared metabolite"
+   ],
+   "correctIndex": 2,
+   "explanation": "Risperidone sits in Katzung's CYP2D6 substrate list and is rapidly converted in vivo to 9-hydroxyrisperidone (paliperidone), an equally active metabolite; about 10% of patients are 2D6 poor metabolisers with higher parent-drug exposure. The CYP1A2-and-smoking story belongs to olanzapine, and the other two choices wrongly deny the active metabolite that is central to risperidone's clinical kinetics."
+  },
+  {
+   "id": "atp-ris-04",
+   "drugSlug": "risperidone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 30-year-old man was stable on risperidone 4 mg/day; after escalation to 8 mg/day for residual hallucinations he develops cogwheel rigidity, bradykinesia and restlessness within 2 weeks. The best explanation is:",
+   "options": [
+    "An idiosyncratic allergic reaction unrelated to dose",
+    "Accumulation of an inactive toxic metabolite",
+    "Serotonin excess from 5-HT2A over-blockade",
+    "Dose-related D2 blockade: EPS risk rises steeply once the dose exceeds roughly 6 mg/day"
+   ],
+   "correctIndex": 3,
+   "explanation": "Risperidone causes little or no extrapyramidal dysfunction at low doses, but its potent D2 blockade makes parkinsonism and akathisia clearly dose-related above about 6 mg/day (Tripathi: EPS less only below 6 mg/day; Katzung: EPS and hypotension with higher doses) \u2014 escalation to 8 mg crossed that line. The reaction is pharmacological, not allergic, and 5-HT2A antagonism is the property that reduces EPS liability, not causes it."
+  },
+  {
+   "id": "atp-ris-05",
+   "drugSlug": "risperidone",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 28-year-old man with schizophrenia has relapsed twice after stopping tablets on his own and is keen on an injectable. Which option correctly describes risperidone long-acting injectable (LAI) therapy?",
+   "options": [
+    "Two-weekly and monthly LAI preparations are available",
+    "No LAI formulation exists; only haloperidol decanoate can be offered",
+    "A weekly self-administered subcutaneous injection is the standard regimen",
+    "Only 3-monthly preparations are marketed"
+   ],
+   "correctIndex": 0,
+   "explanation": "Risperidone is available as LAI in two-weekly (microsphere) and monthly presentations \u2014 a mainstay for non-adherence (Katzung lists risperidone among the second-generation drugs with LAI formulations). Monthly and 3-monthly intervals are the paliperidone signature, weekly self-injection has no basis, and the claim that no risperidone LAI exists is simply false."
+  },
+  {
+   "id": "atp-ris-06",
+   "drugSlug": "risperidone",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 35-year-old patient with schizophrenia and comorbid OCD is maintained on risperidone 4 mg/day; fluoxetine 40 mg/day is added for the OCD. Which specific monitoring is most pertinent to this particular combination?",
+   "options": [
+    "Fasting blood glucose, because the combination predictably causes new diabetes",
+    "Blood pressure \u2014 risperidone plus an SSRI can raise BP",
+    "Serum prolactin, which will predictably fall to subnormal levels",
+    "International normalised ratio, because risperidone potentiates warfarin"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi specifically flags that BP can rise when risperidone is used with an SSRI, so BP checks are the combination-specific monitoring here. The metabolic/diabetes concern attaches to olanzapine and clozapine, not this pairing; prolactin rises rather than falls on risperidone; and no warfarin is involved \u2014 risperidone is not a warfarin-potentiating drug."
+  },
+  {
+   "id": "atp-ris-07",
+   "drugSlug": "risperidone",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Long-standing risperidone-induced hyperprolactinaemia in a young woman most directly raises the risk of:",
+   "options": [
+    "Polycythaemia and venous thromboembolism",
+    "Hypertension secondary to fluid retention",
+    "Osteoporosis, via hypo-oestrogenism from gonadotropin suppression",
+    "Osteosclerosis, from direct prolactin-driven bone apposition"
+   ],
+   "correctIndex": 2,
+   "explanation": "Chronic hyperprolactinaemia suppresses hypothalamic GnRH, so gonadotropin (FSH-LH) suppression follows and the resulting hypo-oestrogenism drives unopposed bone loss \u2014 osteoporosis is the classic long-term pairing with amenorrhoea and galactorrhoea. Osteosclerosis invents the opposite effect, and neither polycythaemia/thrombosis nor hypertension is a prolactin-mediated consequence."
+  },
+  {
+   "id": "atp-ris-08",
+   "drugSlug": "risperidone",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 26-year-old woman is euthymic and working while on risperidone 4 mg/day, but she has persistent galactorrhoea and amenorrhoea; a cautious dose reduction failed. Which change best maintains antipsychotic cover while normalising prolactin?",
+   "options": [
+    "Switch to paliperidone \u2014 as the active metabolite it is prolactin-neutral",
+    "Switch to haloperidol \u2014 potent pituitary D2 blockade lowers prolactin",
+    "Add bromocriptine to ongoing risperidone \u2014 a direct prolactin-lowering agonist",
+    "Switch to aripiprazole \u2014 D2 partial agonism lowers prolactin while preserving antipsychotic cover"
+   ],
+   "correctIndex": 3,
+   "explanation": "Aripiprazole's partial D2 agonism reduces prolactin secretion, making it the standard switch (or adjunct) for risperidone-induced hyperprolactinaemia while antipsychotic effect continues. Paliperidone raises prolactin as much as the parent drug, haloperidol is among the worst hyperprolactinaemia offenders in the pharmacopoeia, and adding bromocriptine to a D2-blocking antipsychotic risks unmasking psychosis \u2014 aripiprazole achieves the same agonist physiology safely."
+  },
+  {
+   "id": "atp-pal-01",
+   "drugSlug": "paliperidone",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Paliperidone is best described as:",
+   "options": [
+    "9-hydroxyrisperidone \u2014 the active metabolite of risperidone marketed as a standalone drug",
+    "A butyrophenone congener of haloperidol with purely D2 activity",
+    "A prodrug requiring hepatic conversion to risperidone",
+    "An inactive risperidone metabolite with no antipsychotic action"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung states it plainly: paliperidone is 9-hydroxyrisperidone, the active metabolite of risperidone, marketed in its own right and sharing the D2 + 5-HT2A profile. The prodrug direction is backwards \u2014 risperidone converts to paliperidone, not vice versa \u2014 the metabolite is active rather than inactive, and paliperidone is a benzisoxazole relative of risperidone, not a butyrophenone."
+  },
+  {
+   "id": "atp-pal-02",
+   "drugSlug": "paliperidone",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 55-year-old woman with diabetic nephropathy (eGFR 35 mL/min/1.73 m2) is to start paliperidone ER for schizophrenia. The key dosing principle is:",
+   "options": [
+    "The dose should be doubled to overcome renal loss",
+    "Dose reduction is required because paliperidone is predominantly renally excreted",
+    "Paliperidone is contraindicated at any level of renal impairment",
+    "No adjustment is needed because elimination is entirely hepatic via CYP3A4"
+   ],
+   "correctIndex": 1,
+   "explanation": "Paliperidone is cleared predominantly unchanged by the kidney, so renal impairment mandates dose reduction \u2014 this is its principal practical distinction from risperidone and a favourite exam angle. Entirely hepatic CYP3A4 clearance describes drugs like quetiapine, doubling the dose would invite toxicity, and the label calls for adjustment rather than absolute prohibition in CKD."
+  },
+  {
+   "id": "atp-pal-03",
+   "drugSlug": "paliperidone",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A patient on once-daily paliperidone ER telephones the clinic, alarmed that he has passed an intact-looking 'tablet' in his stool. The correct counselling is:",
+   "options": [
+    "Chewable tablets should be used from now on to avoid the problem",
+    "The dose failed and must be repeated immediately",
+    "It is the inert osmotic-pump shell of the OROS delivery system; the drug has already been absorbed",
+    "This indicates drug resistance and the antipsychotic should be changed"
+   ],
+   "correctIndex": 2,
+   "explanation": "Paliperidone ER uses OROS osmotic-push delivery; the insoluble shell can pass in the stool after the active drug has been absorbed \u2014 a classic counselling point that prevents unnecessary dose repetition (which risks overdose). There is no 'drug resistance' signal here, and tablets must be swallowed intact; no chewable equivalent exists."
+  },
+  {
+   "id": "atp-pal-04",
+   "drugSlug": "paliperidone",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Paliperidone long-acting injectable (LAI) formulations are characterised by:",
+   "options": [
+    "Two-weekly intervals only",
+    "Weekly self-administered subcutaneous injections",
+    "Availability only as an oral solution",
+    "Monthly and 3-monthly injection intervals"
+   ],
+   "correctIndex": 3,
+   "explanation": "Paliperidone LAIs come in monthly and 3-monthly versions, the 3-monthly option being a distinctive selling point in maintenance therapy; Katzung includes paliperidone among the newer LAI second-generation antipsychotics. Two-weekly dosing is the risperidone microsphere schedule, weekly self-injection is not an antipsychotic delivery model, and the LAIs are by definition injectable, not oral solutions."
+  },
+  {
+   "id": "atp-pal-05",
+   "drugSlug": "paliperidone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 38-year-old man on monthly paliperidone LAI for schizophrenia reports bilateral nipple discharge; serum prolactin is 85 ng/mL (laboratory upper limit about 15). Which counselling point is correct?",
+   "options": [
+    "Paliperidone, like risperidone, raises prolactin despite being an atypical",
+    "Only the oral formulation, never the LAI, can raise prolactin",
+    "Paliperidone never affects prolactin, so another cause must be sought",
+    "Paliperidone lowers prolactin through partial agonism"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung groups paliperidone with risperidone among the prolactin-elevating agents, so galactorrhoea on paliperidone is drug-induced hyperprolactinaemia \u2014 a favourite trap, since most other atypicals are prolactin-sparing. Partial agonism lowering prolactin is aripiprazole's trick, 'never affects prolactin' is factually wrong, and the effect is not formulation-limited \u2014 oral and LAI paliperidone behave alike."
+  },
+  {
+   "id": "atp-pal-06",
+   "drugSlug": "paliperidone",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 40-year-old man well controlled on paliperidone ER develops a depressive episode needing paroxetine. What is the most accurate statement about this combination?",
+   "options": [
+    "Paroxetine predictably doubles paliperidone levels, mandating a halved dose",
+    "Minimal pharmacokinetic interaction \u2014 paliperidone is largely renally cleared and far less 2D6-dependent than risperidone",
+    "Paroxetine is contraindicated with all antipsychotics",
+    "The combination causes serotonin syndrome in most patients"
+   ],
+   "correctIndex": 1,
+   "explanation": "Unlike risperidone, whose activation to 9-hydroxyrisperidone depends on CYP2D6, paliperidone bypasses heavy CYP metabolism (renal excretion dominates), so even a strong 2D6 inhibitor such as paroxetine barely moves its levels \u2014 the intended advantage of giving the metabolite directly. The dose-doubling warning fits the risperidone-plus-2D6-inhibitor scenario, a blanket contraindication does not exist, and serotonin syndrome is a concern with serotonergic stacks (MAOIs, linezolid), not with antipsychotic pharmacokinetics."
+  },
+  {
+   "id": "atp-pal-07",
+   "drugSlug": "paliperidone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which statement best characterises paliperidone and QTc?",
+   "options": [
+    "Paliperidone causes marked QTc prolongation and is the worst offender in the class",
+    "Paliperidone has no cardiac signal at any dose",
+    "QTc prolongation is modest, but ECG care is advised when combined with other QTc-prolonging drugs",
+    "QTc monitoring is required only with the 3-monthly LAI"
+   ],
+   "correctIndex": 2,
+   "explanation": "Paliperidone carries a modest QTc-prolonging tendency \u2014 clinically relevant chiefly when stacked with other QTc drugs (thioridazine, ziprasidone, macrolides, diuretic-driven hypokalaemia). 'Worst offender' language belongs to drugs like thioridazine and ziprasidone, claiming no signal at all overstates safety, and the caution applies equally to oral and LAI therapy."
+  },
+  {
+   "id": "atp-pal-08",
+   "drugSlug": "paliperidone",
+   "domain": "Active Recall",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The strongest pharmacokinetic rationale for prescribing paliperidone ER instead of risperidone is:",
+   "options": [
+    "A shorter half-life allowing twice-daily flexibility",
+    "Greater potency at D2 receptors permitting quarter-strength dosing",
+    "Inherent protection from prolactin elevation",
+    "Escape from CYP2D6 polymorphism \u2014 renally cleared, once-daily OROS delivery gives steadier exposure"
+   ],
+   "correctIndex": 3,
+   "explanation": "Paliperidone's appeal is kinetic: minimal CYP dependence (predominantly renal clearance) removes the 2D6 poor-metaboliser variability that complicates risperidone, and OROS once-daily delivery steadies exposure. It is not shorter-acting, it is not more potent at D2, and it still raises prolactin \u2014 endocrine neutrality is precisely what it does not offer."
+  },
+  {
+   "id": "atp-ola-01",
+   "drugSlug": "olanzapine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Which binding profile correctly characterises olanzapine, the thienobenzodiazepine atypical?",
+   "options": [
+    "5-HT2A > H1 > D4 > D2 affinity \u2014 multi-receptor blockade driving efficacy plus sedation and weight gain",
+    "Selective D2 antagonism with no H1 or muscarinic affinity",
+    "D2 full agonism with 5-HT3 antagonism only",
+    "H1 > alpha-1 > M1,3 > D2 \u2014 the profile responsible for minimal sedation"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung's binding order for olanzapine is 5-HT2A > H1 > D4 > D2 > alpha-1 > D1; the strong H1 and muscarinic blockade explains sedation, anticholinergic effects and metabolic liability, and Tripathi calls it a potent antimuscarinic. The H1 > alpha-1 > M1,3 > D2 ordering is not olanzapine's but quetiapine's \u2014 the signature of a heavily sedating, orthostasis-prone drug, so calling it 'minimal sedation' is exactly backwards; selective D2-only blockade describes high-potency typicals like haloperidol, and full D2 agonism is fiction."
+  },
+  {
+   "id": "atp-ola-02",
+   "drugSlug": "olanzapine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A man with schizophrenia relapses on olanzapine 10 mg/day; he has smoked 20 cigarettes daily for years and shows no pill-count discrepancy. Which explanation best guides management?",
+   "options": [
+    "Nicotine competes for the same receptor, reducing efficacy \u2014 double the dose",
+    "Smoking induces CYP1A2, clearing olanzapine faster \u2014 smokers need roughly 40% higher doses",
+    "Smoking is pharmacologically irrelevant; relapse implies deliberate non-adherence",
+    "Smoking inhibits CYP2D6, raising toxic metabolites \u2014 reduce the dose"
+   ],
+   "correctIndex": 1,
+   "explanation": "Cigarette smoke is a classic CYP1A2 inducer (Katzung Table 4-2), and olanzapine is metabolised by CYP1A2 plus glucuronidation (Tripathi) \u2014 so smokers clear olanzapine faster and may need about 40% higher doses; quitting smoking conversely raises levels and toxicity. The inhibition-based option inverts the enzyme story and names 2D6 (risperidone's enzyme), nicotine-receptor competition is not the mechanism, and dismissing smoking as irrelevant ignores one of the most testable PK pearls in psychopharmacology."
+  },
+  {
+   "id": "atp-ola-03",
+   "drugSlug": "olanzapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "Six months after starting olanzapine 20 mg/day, a 32-year-old man has gained 9 kg; fasting glucose is 128 mg/dL and triglycerides 290 mg/dL. Which drug pair shares olanzapine's rank at the top of the metabolic-risk ladder?",
+   "options": [
+    "Haloperidol and trifluoperazine",
+    "Quetiapine and risperidone",
+    "Clozapine and olanzapine",
+    "Aripiprazole and ziprasidone"
+   ],
+   "correctIndex": 2,
+   "explanation": "Clozapine and olanzapine jointly top the weight/diabetes/dyslipidaemia ladder \u2014 Katzung: new diabetes is 'most often seen with clozapine and olanzapine'; Tripathi names the same pair as high risk for precipitating diabetes and raising triglycerides. Aripiprazole and ziprasidone are the leanest atypicals, high-potency typicals like haloperidol/trifluoperazine are metabolically benign but EPS-heavy, and quetiapine/risperidone sit intermediate-to-low, not at the top."
+  },
+  {
+   "id": "atp-ola-04",
+   "drugSlug": "olanzapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 45-year-old woman is to start olanzapine 15 mg/day for bipolar maintenance. Which monitoring panel should be established?",
+   "options": [
+    "Monthly ECG for QTc alone",
+    "Weekly CBC with differential for agranulocytosis",
+    "Serum prolactin every 3 months, as hyperprolactinaemia is the signature risk",
+    "Baseline and periodic weight/waist, fasting glucose or HbA1c, lipid profile and blood pressure"
+   ],
+   "correctIndex": 3,
+   "explanation": "Olanzapine's defining liability is metabolic, so baseline and periodic weight, waist circumference, fasting glucose/HbA1c, lipids and BP are the standard panel (Katzung: diabetes and hypercholesterolaemia with clozapine/olanzapine). Weekly CBC is the clozapine rule, not olanzapine's; prolactin is barely raised by olanzapine; and QTc is not its signal to monitor."
+  },
+  {
+   "id": "atp-ola-05",
+   "drugSlug": "olanzapine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A non-adherent patient with schizophrenia is offered olanzapine LAI. Which instruction is mandatory at every injection visit?",
+   "options": [
+    "Observation at the facility for at least 3 hours post-injection, for post-injection delirium/sedation syndrome",
+    "Mandatory 24-hour inpatient admission for every injection",
+    "Prophylactic antihistamine before each injection",
+    "Home rest only; no observation is needed after the first dose"
+   ],
+   "correctIndex": 0,
+   "explanation": "Olanzapine pamoate LAI requires a minimum 3-hour post-injection observation because olanzapine can unintentionally enter the vasculature, producing post-injection delirium/sedation syndrome \u2014 a label-level safety rule and a favourite MCQ fact. Home rest after the first dose understates the risk, an antihistamine does not prevent the syndrome, and 24-hour admission overstates what is required: observation, not admission."
+  },
+  {
+   "id": "atp-ola-06",
+   "drugSlug": "olanzapine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Olanzapine's elimination profile is best summarised as:",
+   "options": [
+    "Half-life about 75 hours with predominantly renal unchanged excretion",
+    "Half-life 24-30 hours, metabolised by CYP1A2 and glucuronyl transferase, allowing once-daily dosing",
+    "Half-life about 6 hours, mandating twice-daily dosing",
+    "Half-life under 2 hours with an active epoxide metabolite"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi pegs olanzapine's half-life at 24-30 hours with CYP1A2 and glucuronyl transferase metabolism \u2014 compatible with once-daily (usually night-time) dosing, and the same 1A2 route that makes smoking clinically relevant. The 6-hour figure is quetiapine IR, the roughly 75-hour one is aripiprazole (which is hepatically, not renally, cleared), and the 2-hour epoxide story describes no antipsychotic."
+  },
+  {
+   "id": "atp-ola-07",
+   "drugSlug": "olanzapine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Olanzapine has a recognised role in each of the following EXCEPT:",
+   "options": [
+    "Refractory chemotherapy-induced nausea and vomiting (off-label)",
+    "Maintenance therapy in schizophrenia",
+    "First-line monotherapy for major depressive disorder",
+    "Acute mania in bipolar disorder"
+   ],
+   "correctIndex": 2,
+   "explanation": "First-line MDD monotherapy is the exception: unlike olanzapine's schizophrenia and acute-mania labels and its off-label role in refractory chemotherapy-induced nausea and vomiting (borrowed by oncology for its broad D2/5-HT/H1/M1 blockade, plus a migraine-adjunct niche), olanzapine is not a first-line MDD drug \u2014 the combination product with fluoxetine targets bipolar depression and augmentation scenarios, not routine first-line depression."
+  },
+  {
+   "id": "atp-ola-08",
+   "drugSlug": "olanzapine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The receptor property most often cited to explain olanzapine's off-label efficacy in refractory chemotherapy-induced nausea and vomiting is:",
+   "options": [
+    "5-HT4 agonism accelerating gastric emptying",
+    "5-HT1A agonism at the chemoreceptor trigger zone",
+    "Selective NK1 receptor antagonism",
+    "Blockade of multiple emesis-mediating receptors: D2, 5-HT3, H1 and muscarinic M1"
+   ],
+   "correctIndex": 3,
+   "explanation": "Olanzapine is a broad antagonist at D2, 5-HT2/5-HT3, H1 and M1 receptors, covering several emesis pathways simultaneously \u2014 the rationale for its oncology role in refractory CINV. NK1 blockade is aprepitant's mechanism, 5-HT4 agonism is prokinetic (metoclopramide-like) pharmacology, and 5-HT1A agonism misstates olanzapine's serotonergic action."
+  },
+  {
+   "id": "atp-que-01",
+   "drugSlug": "quetiapine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Quetiapine's relative receptor affinities follow the order:",
+   "options": [
+    "H1 > alpha-1 > M1,3 > D2 > 5-HT2A \u2014 explaining sedation and orthostasis at low doses",
+    "5-HT2A > H1 > D4 > D2 with strong muscarinic blockade",
+    "D2 > 5-HT2A > alpha-1 \u2014 a high-potency D2 profile",
+    "D2 = 5-HT2A > D4 with partial agonism at D2"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung lists quetiapine as H1 > alpha-1 > M1,3 > D2 > 5-HT2A \u2014 the H1/alpha-1 dominance explains its sedation and orthostatic hypotension, while weak D2 activity underlies minimal EPS and prolactin effects. The D2-predominant ordering fits haloperidol, partial D2 agonism is aripiprazole, and the 5-HT2A > H1 > D4 > D2 order is olanzapine's."
+  },
+  {
+   "id": "atp-que-02",
+   "drugSlug": "quetiapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 42-year-old long-haul truck driver on quetiapine 300 mg/day reports heavy daytime sleepiness and one near-miss on the highway over the past fortnight. The most appropriate advice is:",
+   "options": [
+    "Stop quetiapine permanently \u2014 sedation signals a rare anaphylactic reaction",
+    "Take the larger dose at bedtime, avoid driving until sedation is reassessed, and inform the occupational physician",
+    "Take both doses in the morning to stay alert during the day",
+    "Reassure that tolerance is irrelevant and he may continue full-time driving"
+   ],
+   "correctIndex": 1,
+   "explanation": "Quetiapine's strong H1 and alpha-1 blockade makes somnolence its most common effect; the correct plan is night-weighted dosing, holding off safety-critical driving until sedation is reassessed (dose reduction or switching considered) and occupational-health disclosure. Continuing heavy-vehicle driving while sedated is dangerous, sedation is pharmacological rather than allergic, and morning dosing would worsen exactly the impairment complained of."
+  },
+  {
+   "id": "atp-que-03",
+   "drugSlug": "quetiapine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 29-year-old woman with bipolar II disorder presents in a depressive episode; a previous SSRI triggered hypomania. Which statement is supported by quetiapine's regulatory approvals?",
+   "options": [
+    "Quetiapine's only approved use is treatment-resistant OCD",
+    "Quetiapine is approved for bulimia nervosa",
+    "Quetiapine monotherapy is approved for bipolar depressive episodes",
+    "Quetiapine is approved only as an add-on to antidepressants for bipolar depression"
+   ],
+   "correctIndex": 2,
+   "explanation": "Quetiapine is approved for schizophrenia, for both manic and depressive episodes of bipolar disorder (monotherapy in bipolar depression \u2014 valuable where antidepressants risk switch), and as adjunctive therapy in MDD with the XR formulation (Katzung: approved for bipolar depression; Tripathi covers mania/bipolar use). OCD is fluvoxamine territory, bulimia belongs to fluoxetine, and the add-on-only claim inverts the monotherapy point."
+  },
+  {
+   "id": "atp-que-04",
+   "drugSlug": "quetiapine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "The immediate-release quetiapine formulation requires twice-daily dosing because:",
+   "options": [
+    "It is a prodrug cleaved slowly in plasma",
+    "Food abolishes its absorption",
+    "Its half-life exceeds 24 hours, so splitting prevents toxicity",
+    "Its elimination half-life is only about 6 hours"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi pegs quetiapine's half-life at about 6 hours \u2014 short for an antipsychotic \u2014 hence BD dosing of the IR tablets, with the XR version restoring once-daily dosing; the same short half-life drives 'major portion of daily dose at night' practice. No prodrug step exists, food does not abolish absorption, and a >24-hour half-life is olanzapine/aripiprazole territory, contradicting the twice-daily need."
+  },
+  {
+   "id": "atp-que-05",
+   "drugSlug": "quetiapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 25-year-old with schizophrenia developed severe parkinsonism on haloperidol and recurrent rigidity on risperidone 8 mg/day. Which is the most EPS-sparing next choice?",
+   "options": [
+    "Quetiapine",
+    "Haloperidol 5 mg with procyclidine cover",
+    "Paliperidone ER",
+    "Risperidone 4 mg"
+   ],
+   "correctIndex": 0,
+   "explanation": "Quetiapine (with clozapine) has the lowest EPS liability among antipsychotics \u2014 Katzung calls quetiapine and clozapine the atypicals least likely to cause tardive dyskinesia, and Tripathi notes minimal extrapyramidal and hyperprolactinaemic effects. Lowering the risperidone dose or switching to paliperidone keeps the same D2-heavy liability (paliperidone also raises prolactin), and haloperidol is the classic EPS offender even with anticholinergic cover."
+  },
+  {
+   "id": "atp-que-06",
+   "drugSlug": "quetiapine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "The historical beagle-dog toxicology finding with quetiapine that survives as a periodic-monitoring teaching point (India exam trivia) concerns:",
+   "options": [
+    "Nephrolithiasis, requiring yearly renal ultrasound",
+    "Cataracts \u2014 hence periodic eye examinations during therapy",
+    "Retinal pigmentation like the older phenothiazines",
+    "Hearing loss, requiring routine audiometry"
+   ],
+   "correctIndex": 1,
+   "explanation": "Early toxicology showed quetiapine-related lens opacities (cataracts) in beagles; although human relevance was never established, the recommendation for periodic eye checks became enduring exam trivia. Retinal pigmentation is thioridazine/chlorpromazine lore, and neither deafness nor renal stones has any quetiapine link."
+  },
+  {
+   "id": "atp-que-07",
+   "drugSlug": "quetiapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "Three days after starting quetiapine 50 mg at night, a 70-year-old woman reports light-headedness on standing from bed. The most likely mechanism is:",
+   "options": [
+    "Muscarinic M1 blockade causing hyperthermia",
+    "Prolactin-mediated volume depletion",
+    "Alpha-1 adrenergic blockade producing orthostatic hypotension, typical during dose titration",
+    "D2 blockade causing parkinsonian autonomic failure"
+   ],
+   "correctIndex": 2,
+   "explanation": "Quetiapine's alpha-1 blockade causes postural hypotension, especially during early dose titration (Tripathi), and elderly patients are most exposed \u2014 the fix is slower up-titration, not drug withdrawal in most cases. Parkinsonian autonomic failure is not its dominant pathway at 50 mg, M1 blockade would give dry mouth and constipation rather than hyperthermia, and prolactin does not deplete volume."
+  },
+  {
+   "id": "atp-que-08",
+   "drugSlug": "quetiapine",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A patient stable on quetiapine 400 mg/day starts carbamazepine for trigeminal neuralgia; two weeks later his psychotic symptoms recur. The best explanation is:",
+   "options": [
+    "Carbamazepine competes with quetiapine for the same D2 receptors",
+    "Carbamazepine increases renal clearance of quetiapine",
+    "Carbamazepine inhibits CYP2D6, raising toxic quetiapine metabolites",
+    "Carbamazepine induces CYP3A4, markedly lowering quetiapine levels"
+   ],
+   "correctIndex": 3,
+   "explanation": "Quetiapine is largely CYP3A4-cleared (Katzung 3A4 substrate list), and carbamazepine is a potent 3A4 inducer, so quetiapine exposure falls substantially \u2014 the classic interaction behind breakthrough psychosis on this pairing. Inhibition via 2D6 inverts both direction and enzyme (2D6 is risperidone's route), receptor-level competition is not how the interaction works, and renal clearance is paliperidone's pathway, not quetiapine's."
+  },
+  {
+   "id": "atp-ari-01",
+   "drugSlug": "aripiprazole",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Aripiprazole's unique mechanism is best described as:",
+   "options": [
+    "D2 partial agonism ('dopamine system stabiliser') plus 5-HT1A partial agonism and 5-HT2A antagonism",
+    "Irreversible D2 antagonism with strong H1 blockade",
+    "Full D2 agonism with anticholinergic activity",
+    "Pure 5-HT2A antagonism without any dopaminergic action"
+   ],
+   "correctIndex": 0,
+   "explanation": "Aripiprazole is the prototype D2 partial agonist with high affinity but low intrinsic activity \u2014 functional antagonism in hyperdopaminergic states, stabilising tone in hypodopaminergic ones \u2014 combined with 5-HT1A partial agonism and 5-HT2A antagonism (Tripathi; Katzung). No antipsychotic binds irreversibly, full agonism would be psychotomimetic rather than therapeutic, and pure 5-HT2A antagonism without dopaminergic action is pimavanserin's profile, not an antipsychotic's."
+  },
+  {
+   "id": "atp-ari-02",
+   "drugSlug": "aripiprazole",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "Six weeks after starting aripiprazole 15 mg/day, a 22-year-old with schizophrenia paces the ward, cannot keep his legs still and describes constant 'inner restlessness'; hallucinations have not returned. The most likely diagnosis is:",
+   "options": [
+    "Neuroleptic malignant syndrome",
+    "Akathisia \u2014 the most common adverse effect of aripiprazole",
+    "Relapse of psychosis requiring dose escalation",
+    "Tardive dyskinesia from years of exposure"
+   ],
+   "correctIndex": 1,
+   "explanation": "Subjective inner restlessness with an inability to sit still, weeks into aripiprazole therapy and without returning psychosis, is akathisia \u2014 the drug's signature and most common adverse effect; management is dose reduction, propranolol or switching, since escalating the dose would worsen it. Relapse presents with positive symptoms rather than motor restlessness, tardive dyskinesia needs prolonged exposure and looks choreoathetoid rather than restless, and NMS brings rigidity, hyperthermia and autonomic instability."
+  },
+  {
+   "id": "atp-ari-03",
+   "drugSlug": "aripiprazole",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which elimination statement fits aripiprazole?",
+   "options": [
+    "Half-life under 2 hours, best given by continuous infusion",
+    "Half-life about 6 hours, requiring twice-daily dosing",
+    "Half-life about 75 hours (~3 days) \u2014 long-acting, so dose changes take weeks to stabilise",
+    "Half-life 24-30 hours with purely renal clearance"
+   ],
+   "correctIndex": 2,
+   "explanation": "Aripiprazole's half-life is roughly 75 hours (Tripathi: about 3 days), explaining once-daily dosing, the availability of LAIs and the advice to adjust the dose only after about 2 weeks on a change. The 6-hour figure is quetiapine IR, the 24-30 hour one is olanzapine \u2014 which is hepatically cleared, not renally \u2014 and infusion dosing describes nothing in this class."
+  },
+  {
+   "id": "atp-ari-04",
+   "drugSlug": "aripiprazole",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A man stable on aripiprazole 15 mg/day starts carbamazepine for trigeminal neuralgia. According to Tripathi's dosing guidance, the aripiprazole dose should be:",
+   "options": [
+    "Stopped immediately and replaced by lithium",
+    "Halved",
+    "Unchanged \u2014 no interaction exists",
+    "Doubled"
+   ],
+   "correctIndex": 3,
+   "explanation": "Aripiprazole is metabolised by CYP3A4 and CYP2D6; carbamazepine's 3A4 induction cuts its exposure, so the aripiprazole dose should be doubled (Tripathi's dosing guidance). Halving is the rule for 3A4/2D6 inhibitors such as ketoconazole or quinidine \u2014 the opposite pharmacology \u2014 there is clearly an interaction to manage, and lithium substitution is unnecessary when a dose adjustment solves it."
+  },
+  {
+   "id": "atp-ari-05",
+   "drugSlug": "aripiprazole",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 9-year-old boy with autism spectrum disorder has severe irritability with aggression despite behavioural intervention. Which statement about aripiprazole is accurate?",
+   "options": [
+    "Aripiprazole is approved for irritability associated with autism",
+    "Aripiprazole is approved for autism-related speech delay",
+    "Aripiprazole is approved only for Tourette syndrome in children",
+    "Aripiprazole is contraindicated below 18 years for any use"
+   ],
+   "correctIndex": 0,
+   "explanation": "Aripiprazole (like risperidone) is approved for irritability associated with autistic disorder \u2014 alongside its labels for schizophrenia, bipolar mania, MDD augmentation and Tourette disorder (Katzung notes aripiprazole and risperidone in this paediatric context). There is no blanket paediatric contraindication, speech delay is not a labelled indication, and claiming Tourette exclusivity ignores its other approved uses."
+  },
+  {
+   "id": "atp-ari-06",
+   "drugSlug": "aripiprazole",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Regarding aripiprazole's metabolic and endocrine profile, the correct statement is:",
+   "options": [
+    "It commonly causes hyperprolactinaemia with galactorrhoea",
+    "It is weight- and prolactin-sparing, and can even lower prolactin in hyperprolactinaemic patients",
+    "It predictably causes the highest weight gain among the big five atypicals",
+    "It carries a high risk of new-onset diabetes similar to clozapine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Aripiprazole shows minimal weight, metabolic and prolactin burden (Katzung: small increases in weight and lipids; no or minimal prolactin rise), and its partial D2 agonism can reduce prolactin \u2014 hence its use to reverse antipsychotic-induced hyperprolactinaemia. Galactorrhoea is risperidone/paliperidone territory, and the extreme weight-gain and diabetes claims transplant olanzapine/clozapine liabilities onto the wrong drug."
+  },
+  {
+   "id": "atp-ari-07",
+   "drugSlug": "aripiprazole",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "neurotransmitters",
+   "question": "PET studies show aripiprazole achieves very high striatal D2 occupancy, yet it causes little EPS. The reconciliation is:",
+   "options": [
+    "Simultaneous strong M1 muscarinic blockade masks the parkinsonism",
+    "Its short half-life prevents sustained receptor blockade",
+    "Partial agonism \u2014 high-affinity binding with low intrinsic activity preserves basal dopaminergic tone",
+    "Occupancy data are artefactual because aripiprazole never reaches the brain"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung's PET discussion notes that aripiprazole shows very high D2 occupancy without EPS because it is a partial D2-receptor agonist: it occupies receptors but its low intrinsic activity leaves residual dopaminergic tone, unlike full antagonists where occupancy near 80% brings parkinsonism. The drug obviously reaches the brain, aripiprazole lacks the strong antimuscarinic action that would mask EPS, and its 75-hour half-life is the opposite of brief."
+  },
+  {
+   "id": "atp-ari-08",
+   "drugSlug": "aripiprazole",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "top",
+   "question": "A 19-year-old college student in Pune with first-episode psychosis is starting treatment; he fears sedation and weight gain during examinations and already sleeps 10 hours nightly. Which initial antipsychotic fits his goals best?",
+   "options": [
+    "Clozapine \u2014 first-line for all first-episode psychosis in India",
+    "Quetiapine IR 200 mg three times daily \u2014 its stimulating profile aids study",
+    "Olanzapine 20 mg \u2014 its metabolic effects improve concentration",
+    "Aripiprazole \u2014 non-sedating (may even cause insomnia), minimal weight and prolactin effects"
+   ],
+   "correctIndex": 3,
+   "explanation": "For a function-focused young patient, aripiprazole's profile \u2014 non-sedating, may even cause insomnia (Tripathi), with little weight gain and no significant hyperprolactinaemia \u2014 matches his priorities. Olanzapine brings sedation plus the class's worst metabolic liability, clozapine is reserved for refractory illness after two adequate trials, and quetiapine is sedating (H1-driven), not stimulating."
+  },
+  {
+   "id": "atp-mix-01",
+   "drugSlug": "mixed",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which drug\u2014signature-liability pair from the 'big five' atypical antipsychotics is correctly matched?",
+   "options": [
+    "Risperidone \u2014 the most prolactin-elevating atypical of the group",
+    "Quetiapine \u2014 highest EPS liability among the five",
+    "Aripiprazole \u2014 the highest weight-gain and diabetes risk",
+    "Olanzapine \u2014 the lowest metabolic liability in the class"
+   ],
+   "correctIndex": 0,
+   "explanation": "Risperidone (with paliperidone) stands apart for prolactin elevation \u2014 galactorrhoea, amenorrhoea, gynaecomastia and long-term osteoporosis risk \u2014 the defining class-contrast pearl. Quetiapine is actually the EPS-sparing one (alongside clozapine), aripiprazole is the leanest of the five, and olanzapine shares the metabolic top with clozapine \u2014 each of the other options deliberately swaps the superlative onto the wrong drug."
+  }
+ ]
+}

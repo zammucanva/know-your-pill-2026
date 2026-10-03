@@ -656,6 +656,110 @@ export const suvorexant: Drug = {
       explanation: "For insomnia (onset + maintenance): start 10 mg within 30 min of bedtime, target 10–20 mg, maximum 20 mg. Increase to 20 mg only if 10 mg inadequate and tolerated",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "slp-suv-01",
+      question: "A 40-year-old man with narcolepsy and cataplexy has read about a new sleep pill that blocks orexin and asks for a prescription. What is the correct response?",
+      options: [
+        "Suvorexant is inappropriate: narcolepsy already involves loss of orexin signalling, and blocking the remaining orexin system is contraindicated",
+        "Prescribe suvorexant, because orexin blockade directly corrects the wakefulness defect of narcolepsy",
+        "Prescribe suvorexant with modafinil, since that combination is specifically approved for narcolepsy",
+        "Double the suvorexant dose, because narcolepsy patients need stronger orexin blockade"
+      ],
+      correctIndex: 0,
+      explanation: "Narcolepsy results from loss of hypothalamic orexin (hypocretin) neurons; Katzung notes that animals lacking orexin or its receptors show narcolepsy, so antagonising the orexin receptors is contraindicated in principle, and the KYP monograph flags narcolepsy with cataplexy caution for suvorexant. Orexin antagonists suppress wakefulness and cannot treat a disorder defined by orexin deficiency. Modafinil, not suvorexant, is the narcolepsy-directed drug.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-suv-02",
+      question: "Suvorexant's mechanism is best described as:",
+      options: [
+        "Competitive blockade of peripheral H1 receptors with central anticholinergic spillover",
+        "Dual antagonism of orexin receptors OX1 and OX2, blocking a wake-promoting neuropeptide system",
+        "Positive modulation of the benzodiazepine site on GABA-A receptors",
+        "Agonism at MT1 and MT2 melatonin receptors in the suprachiasmatic nucleus"
+      ],
+      correctIndex: 1,
+      explanation: "Suvorexant is a dual orexin receptor antagonist: orexin neurons in the hypothalamus promote wakefulness, and blocking OX1/OX2 signalling decreases time to persistent sleep and increases total sleep time (Katzung), a mechanism entirely distinct from GABA-A modulation, melatonin agonism and H1 blockade. Those three alternatives describe the Z-drugs, ramelteon or tasimelteon, and hydroxyzine respectively. This novelty is what makes DORAs a favourite mechanism question.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "slp-suv-03",
+      question: "A 50-year-old man started suvorexant a week ago and reports grogginess lasting well into the morning as his only complaint. What is the correct interpretation?",
+      options: [
+        "Grogginess indicates paradoxical excitation, a reaction unique to orexin antagonists",
+        "Morning symptoms mean the drug is working perfectly and need no review at any dose",
+        "Next-day somnolence is the most common adverse effect of suvorexant; review dose and timing before abandoning the drug",
+        "The grogginess proves emerging narcolepsy, so all sleep medication must be stopped immediately"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung identifies next-day somnolence as the most common adverse effect of suvorexant, so dose and timing review come first rather than drug abandonment or a new narcolepsy diagnosis. Paradoxical excitation is the hallmark of first-generation antihistamines in children, not of orexin antagonists. Dismissing dose-related somnolence as perfect dosing invites driving impairment, which is the safety point the label emphasises.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "slp-suv-04",
+      question: "A patient on suvorexant is starting ketoconazole for tinea, drinks grapefruit juice daily, and his daughter suggests adding fluvoxamine for anxiety. Which counselling is correct?",
+      options: [
+        "All three are safe, because suvorexant is cleared exclusively by renal glucuronidation",
+        "Only grapefruit juice matters; antifungals and SSRIs do not touch suvorexant levels",
+        "Combine everything, but take the suvorexant at breakfast to avoid accumulation",
+        "Avoid strong CYP3A4 inhibitors such as ketoconazole (and fluvoxamine, a potent inhibitor), and skip grapefruit juice, because suvorexant is a CYP3A4 substrate"
+      ],
+      correctIndex: 3,
+      explanation: "Suvorexant is a CYP3A4 substrate whose half-life is prolonged by inhibitors including azole antifungals, clarithromycin and verapamil (Katzung), so ketoconazole should be avoided, the potent inhibitor fluvoxamine is flagged in the KYP anchor, and grapefruit juice should be skipped. Renal glucuronidation is not its clearance route, and morning dosing does not neutralise an inhibition interaction. Checking the total 3A4 load is the transferable skill.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "slp-suv-05",
+      question: "A 60-year-old woman cannot fall asleep and also wakes at 3 am unable to return to sleep. Which hypnotic carries a label covering both sleep-onset and sleep-maintenance insomnia?",
+      options: [
+        "Suvorexant, which is FDA-approved for both sleep-onset and sleep-maintenance insomnia",
+        "Ramelteon, whose label covers both onset and maintenance insomnia",
+        "Zaleplon, whose ultra-short half-life makes it ideal for sleep-maintenance insomnia",
+        "Diphenhydramine, the only agent approved for chronic maintenance insomnia"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung notes that suvorexant is FDA-approved for treatment of both sleep-onset and sleep-maintenance insomnia, reflecting its documented ability to shorten sleep latency and increase total sleep time. Ramelteon's evidence is for sleep-onset latency, zaleplon's niche is single re-dosing after middle-of-night awakening rather than a maintenance label, and diphenhydramine has no such chronic approval. Matching the insomnia phenotype to the label is the clinical skill being tested.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "slp-suv-06",
+      question: "At the systems level, why does blocking orexin signalling promote sleep rather than wakefulness?",
+      options: [
+        "Orexin is the final transmitter of the suprachiasmatic pacemaker, so blockade abolishes the sleep clock",
+        "Orexin neurons in the hypothalamus stabilise arousal by exciting wake-promoting nuclei, so removing that excitatory drive permits sleep",
+        "Orexin neurons inhibit wake-promoting centres, so blocking them releases full wakefulness",
+        "Orexin acts only on the cerebellum, so its blockade sedates through motor pathways"
+      ],
+      correctIndex: 1,
+      explanation: "Hypothalamic orexin neurons project widely and stabilise wakefulness by exciting the arousal systems (locus coeruleus, raphe nuclei, tuberomammillary nucleus and others); Katzung's tables place orexin as an excitatory, glutamate co-releasing system, so antagonism removes wake-drive and permits sleep. The inverted-sign option, the cerebellar claim and the suprachiasmatic-clock claim all misstate the pathway. This wake-stabilisation concept is why orexin loss produces narcolepsy.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "slp-suv-07",
+      question: "Which pairing of agent with next-morning impairment risk is correct?",
+      options: [
+        "Suvorexant: next-day somnolence occurs only in children; zaleplon: severe anterograde amnesia at 5 mg",
+        "Suvorexant: causes morning insomnia by blocking sleep; zaleplon: must be taken in the morning to work",
+        "Suvorexant: next-day somnolence is its commonest adverse effect; zaleplon: least residual sedation among the standard hypnotics",
+        "Suvorexant: famous for zero hangover; zaleplon: the most hangover-prone hypnotic available"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung names next-day somnolence as the most common adverse effect of suvorexant, while zaleplon's sub-hour half-life gives it the lowest hangover burden of the standard hypnotics; the half-life ranking (zaleplon lowest, eszopiclone longest of the Z-drugs) drives next-morning impairment. The remaining options invert documented facts: suvorexant is not a zero-hangover drug, zaleplon is not amnesia-prone at its usual doses, and neither agent is a morning drug.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "slp-suv-08",
+      question: "A 58-year-old man with atrial fibrillation on verapamil asks to add suvorexant for insomnia. What is the key pharmacokinetic concern?",
+      options: [
+        "Verapamil induces CYP3A4 and will strip suvorexant of its effect entirely",
+        "Verapamil and suvorexant share renal tubular secretion, so levels of both rise",
+        "Suvorexant blocks verapamil's calcium channels centrally, causing profound bradycardia",
+        "Verapamil inhibits CYP3A4 and can prolong suvorexant's half-life, increasing next-day somnolence"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung explicitly lists verapamil among the CYP3A4 inhibitors that prolong suvorexant's half-life, alongside azole antifungals and clarithromycin, so co-prescription risks accumulation and next-day somnolence; a melatonergic option may be cleaner in this patient. Induction is the opposite of verapamil's effect, renal co-secretion is not the shared pathway, and suvorexant has no calcium-channel action. Screening the 3A4 load before adding a DORA is the practical rule.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

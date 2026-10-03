@@ -893,6 +893,110 @@ export const lofepramine: Drug = {
       explanation: "For depression: start 70 mg at bedtime, target 140-210 mg/day, maximum 210 mg/day. Increase to 140-210 mg",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tca-lof-01",
+      question: "Lofepramine's mechanism is best described as:",
+      options: [
+        "Direct, strong SERT blockade with no metabolites",
+        "A TCA that is itself a weak reuptake inhibitor but is converted to desipramine, which supplies the norepinephrine reuptake blockade",
+        "Selective dopamine D2 blockade",
+        "MAO-A inhibition combined with 5-HT2 antagonism"
+      ],
+      correctIndex: 1,
+      explanation: "Lofepramine is an imipramine congener whose parent molecule contributes little; hepatic conversion to desipramine provides the NET-dominant antidepressant action. D2 blockade among antidepressants is amoxapine's unique property, and MAO-A inhibition plus 5-HT2 antagonism is moclobemide/mirtazapine territory. It is the third member of the desipramine metabolite family — the fact most often examined about this drug.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tca-lof-02",
+      question: "Compared with amitriptyline, lofepramine's main selling point is:",
+      options: [
+        "Stronger sedation for insomnia",
+        "More weight gain, which helps underweight patients",
+        "Less anticholinergic and cardiac toxicity — better tolerated, including in overdose",
+        "A faster onset — days instead of weeks"
+      ],
+      correctIndex: 2,
+      explanation: "Lofepramine's reputation rests on its lighter muscarinic and cardiac load, which made it the UK general-practice TCA of choice for elderly and higher-risk patients and gives it a comparatively benign overdose profile. Sedation and weight gain are amitriptyline's specialities, not lofepramine's, and no antidepressant works in days — the 1-2 week onset is common to the class. Whenever an exam contrasts these two, safety — not speed or sedation — is the axis.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-lof-03",
+      question: "A 76-year-old man with depression has early prostatism, habitual constipation, and borderline narrow angles on eye review. The physician wants a TCA with the least anticholinergic load. The best choice is:",
+      options: [
+        "Lofepramine",
+        "Amitriptyline",
+        "Doxepin",
+        "Trimipramine"
+      ],
+      correctIndex: 0,
+      explanation: "Every TCA blocks muscarinic receptors, but lofepramine sits at the low end of the class range, while amitriptyline, doxepin and trimipramine are strong blockers that could precipitate urinary retention, impaction or an angle-closure event in exactly this man. His three risk factors (prostate, gut, angle) are the anticholinergic triad — the entire selection rests on the muscarinic column of the class table. Add an ECG and orthostatic checks regardless of which TCA is chosen.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-lof-04",
+      question: "A 30-year-old with depression expresses passive suicidal ideation but is being managed as an outpatient; cost considerations lead the team to consider a TCA. The most defensible TCA choice on overdose-safety grounds is:",
+      options: [
+        "Dothiepin",
+        "Amitriptyline",
+        "Imipramine",
+        "Lofepramine"
+      ],
+      correctIndex: 3,
+      explanation: "When suicide risk is live and a TCA is still chosen, overdose lethality becomes a prescribing criterion — lofepramine is among the least lethal TCAs, while dothiepin and amitriptyline sit at the lethal end of the fatal-toxicity tables. Imipramine offers no such safety margin. Pearl: this 'least-lethal member' logic (lofepramine among TCAs, SSRIs overall) is the same reasoning that retired TCAs from first-line use.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-lof-05",
+      question: "A patient stable on lofepramine is started on fluoxetine by another clinic. Two weeks later he has dry mouth, tremor and palpitations. The best explanation is:",
+      options: [
+        "Fluoxetine blocks CYP2D6, impeding lofepramine's conversion to desipramine and raising tricyclic concentrations toward toxicity",
+        "Fluoxetine induces lofepramine clearance, causing withdrawal effects",
+        "Lofepramine triggers serotonin syndrome with fluoxetine",
+        "Fluoxetine chelates lofepramine in the gut"
+      ],
+      correctIndex: 0,
+      explanation: "Fluoxetine's potent 2D6 inhibition blocks the metabolic gateway shared by lofepramine and its desipramine product, so tricyclic levels rise and the anticholinergic-adrenergic toxicity appears within 1-2 weeks. Induction is the wrong direction, the symptom cluster here is anticholinergic-cardiac rather than serotonergic, and chelation is not how fluoxetine works. Stop or reduce the TCA, obtain an ECG, and document the interaction in both charts.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "tca-lof-06",
+      question: "Ranking TCAs by overdose lethality (fatal-toxicity-index style), the correct statement is:",
+      options: [
+        "Lofepramine is more lethal than dothiepin and amitriptyline",
+        "Nortriptyline tops the lethality tables",
+        "Clomipramine is the most lethal TCA in overdose",
+        "Dothiepin (dosulepin) and amitriptyline rank among the most lethal, while lofepramine ranks among the least"
+      ],
+      correctIndex: 3,
+      explanation: "Indian texts pair amitriptyline with dosulepin as the overdose-dangerous TCAs, UK fatal-toxicity data place dosulepin at the very top, and lofepramine's lighter cardiac load keeps it near the bottom of the lethality range. The first three options each invert or misplace a well-documented rank — nortriptyline is comparatively cardiac-tolerated and clomipramine's notoriety is seizures, not overdose lethality. Lethality ranking is not trivia: it decides which TCA (if any) may leave the clinic with a suicidal patient.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-lof-07",
+      question: "Lofepramine's real-world geography of use is best described as:",
+      options: [
+        "The first-line antidepressant of the United States",
+        "Available only in Japan",
+        "Long established in the UK (and available in India), where its tolerability made it a general-practice staple",
+        "Banned across Europe"
+      ],
+      correctIndex: 2,
+      explanation: "Lofepramine never took a US label but has been a British general-practice workhorse for decades and is available in the Indian market — a geography question that trips up candidates who assume all classic TCAs are American drugs. Japan-only and Europe-wide-ban claims are false. Its UK reputation was built precisely on the tolerability-overdose profile tested in the previous questions.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-lof-08",
+      question: "Which pair of antidepressants shares desipramine as its principal active metabolite?",
+      options: [
+        "Amitriptyline and clomipramine",
+        "Imipramine and lofepramine",
+        "Doxepin and dothiepin",
+        "Trimipramine and protriptyline"
+      ],
+      correctIndex: 1,
+      explanation: "Imipramine is demethylated to desipramine, and lofepramine — an imipramine congener — is also converted to desipramine, making them the two-entry desipramine family. Amitriptyline yields nortriptyline and clomipramine yields desmethylclomipramine, while the doxepin/dothiepin and trimipramine/protriptyline pairs are deliberately unrelated decoys. Metabolite-lineage sorting is a permanent fixture of Indian exam papers — draw the family tree once and reuse it forever.",
+      afterSectionId: "timeline",
+    },
   ],
   activeRecallQuestions: [
     {

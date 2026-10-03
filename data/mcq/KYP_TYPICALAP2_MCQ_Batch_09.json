@@ -1,0 +1,1436 @@
+{
+ "batch": "kyp-typicalap2-mcq-batch-09",
+ "title": "Typical Antipsychotic MCQ Batch 09 - Pimozide / Thiothixene / Loxapine / Flupenthixol / Zuclopenthixol / Pipothiazine / Molindone / Mesoridazine / Cyamemazine / Sulpiride",
+ "generated": "2026-10-02",
+ "examOrientation": "Indian exams (NEET PG / INI-CET) + USMLE-style vignettes",
+ "textbookAnchors": "Facts aligned with Katzung Basic & Clinical Pharmacology 14e Ch.28-30 (tic disorders treated with dopamine antagonists such as pimozide alongside haloperidol, fluphenazine and tetrabenazine, pimozide titrated from 1 mg/day with cardiac rhythm irregularities noted; thiothixene as the thioxanthene exemplar with very high D2/5-HT2A ratio and high extrapyramidal toxicity; amoxapine as the N-demethylated metabolite of loxapine with the active D2-blocking 7-hydroxyamoxapine; pimozide and molindone as first-generation agents with no significant efficacy difference among typicals; the sulpiride group as D2/D3-equivalent benzamides with marked prolactin increases and no US approval; mesoridazine and thioridazine as the overdose-lethal antipsychotics via ventricular tachyarrhythmias; decanoate esters reserved for long-term parenteral maintenance; ziprasidone the least weight-gaining second-generation agent; inhaled loxapine Adasuve) and K.D. Tripathi 7e Ch.32-33 (pimozide elimination half-life 48-60 h suited to maintenance rather than agitation with Gilles de la Tourette use; flupenthixol preferred in withdrawn, apathetic patients and avoided in agitation or mania; loxapine as a dibenzoxazepine with t1/2 about 8 h; amoxapine mixed antidepressant-neuroleptic properties in psychotic depression; Indian preparations Orap/Neurap/Pimodac, Loxapac, Fluanxol and Fluanxol Depot, Sulpitac/Amipride/Zonapride; neuroleptic potentiation of all CNS depressants, levodopa antagonism, EPS management with parenteral anticholinergics or promethazine, akathisia with benzodiazepine or propranolol, NMS with dantrolene or bromocriptine, amisulpride introduced as sulpiride's benzamide congener). Zuclopenthixol acetate/decanoate twin-ester pharmacokinetics, pipothiazine palmitate depot, molindone's weight niche, mesoridazine withdrawal and cyamemazine's French anxiolytic-style niche follow the KYP monograph facts. Verified by targeted search of both book texts; no copyrighted text reproduced.",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras",
+  "notes": [
+   "afterSectionId values are real section ids from the live KYP section set (top, quick-facts, mechanism, timeline, knowledge-graph, high-yield-summary, brain-regions used in this batch).",
+   "Answer positions deliberately spread: A27 B18 C16 D20 (see stats.answerSpread).",
+   "QA gate: passed scripts/mcq_4step_check.py after extending the fact table with typical-antipsychotic-II data (pimozide/thiothixene/loxapine/flupenthixol/zuclopenthixol/pipothiazine/molindone/mesoridazine/cyamemazine/sulpiride)."
+  ]
+ },
+ "stats": {
+  "total": 81,
+  "byDrug": {
+   "pimozide": 8,
+   "thiothixene": 8,
+   "loxapine": 8,
+   "flupenthixol": 8,
+   "zuclopenthixol": 8,
+   "pipothiazine": 8,
+   "molindone": 8,
+   "mesoridazine": 8,
+   "cyamemazine": 8,
+   "sulpiride": 8,
+   "mixed": 1
+  },
+  "byDifficulty": {
+   "Foundation": 19,
+   "Clinical": 46,
+   "Advanced": 16
+  },
+  "byStyle": {
+   "recall": 36,
+   "vignette": 45
+  },
+  "byDomain": {
+   "Mechanism & Neuroscience": 12,
+   "Clinical Uses": 16,
+   "Pharmacokinetics": 7,
+   "Adverse Effects & Safety": 18,
+   "Drug Interactions": 5,
+   "Exam Pearls": 12,
+   "Indian Practice": 6,
+   "Active Recall": 5
+  },
+  "answerSpread": {
+   "0": 21,
+   "1": 20,
+   "2": 20,
+   "3": 20
+  }
+ },
+ "questions": [
+  {
+   "id": "tap-pim-01",
+   "drugSlug": "pimozide",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Pimozide's chemical family and receptor profile are best described as:",
+   "options": [
+    "A diphenylbutylpiperidine that blocks dopamine D2 receptors with minimal alpha-adrenergic or muscarinic blockade",
+    "A thioxanthene congener whose D2 blockade closely resembles haloperidol",
+    "A dibenzoxazepine metabolised to a tetracyclic antidepressant",
+    "A substituted benzamide with equal D2 and D3 affinity"
+   ],
+   "correctIndex": 0,
+   "explanation": "Pimozide belongs to the diphenylbutylpiperidines, structurally related to the butyrophenones, and is a selective D2 antagonist with little alpha-adrenergic or cholinergic action (Tripathi). Option B describes thiothixene, option C describes loxapine, and option D describes sulpiride. Selective D2 blockade with a low autonomic load is the classic exam fingerprint of pimozide."
+  },
+  {
+   "id": "tap-pim-02",
+   "drugSlug": "pimozide",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 9-year-old boy has had both motor and vocal tics for over a year, with marked school disruption despite behavioural therapy. Which classic antipsychotic is traditionally chosen to suppress such tics?",
+   "options": [
+    "Chlorpromazine",
+    "Pimozide",
+    "Molindone",
+    "Trifluoperazine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Dopamine receptor blockers such as pimozide, haloperidol and fluphenazine, plus the depleter tetrabenazine, are the classic tic-suppressing drugs, reducing tic frequency and intensity by about 60% (Katzung), and pimozide is a time-honoured option in Gilles de la Tourette syndrome. Chlorpromazine is too low-potency and sedating for tic control, and molindone and trifluoperazine were never standard tic therapies."
+  },
+  {
+   "id": "tap-pim-03",
+   "drugSlug": "pimozide",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A patient with Tourette disorder is stable on once-daily pimozide and asks why his antipsychotic needs only one dose while a friend's chlorpromazine is taken several times a day. The pharmacokinetic reason is:",
+   "options": [
+    "Pimozide undergoes complete renal excretion unchanged",
+    "Pimozide has the shortest half-life among antipsychotics",
+    "Pimozide has a long elimination half-life of roughly 48-60 hours, so its action lasts for days",
+    "Pimozide is a prodrug converted slowly by esterases"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi gives pimozide an elimination half-life of 48-60 hours with a duration of action of several days after a single oral dose — the basis of once-daily maintenance dosing. The same long action is why pimozide suits maintenance rather than acute agitation. Renal excretion of unchanged drug and esterase-activated prodrugs describe other molecules entirely, not pimozide."
+  },
+  {
+   "id": "tap-pim-04",
+   "drugSlug": "pimozide",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Before starting pimozide for tics in a 12-year-old, the physician reviews the family history and orders a baseline test that will be repeated during follow-up. Which test, and why?",
+   "options": [
+    "Weekly CBC — pimozide causes dose-related agranulocytosis",
+    "Monthly LFTs — pimozide is strongly hepatotoxic",
+    "ECG — pimozide prolongs the QTc and can trigger ventricular arrhythmias",
+    "Serum prolactin — pimozide uniquely lowers prolactin"
+   ],
+   "correctIndex": 2,
+   "explanation": "Pimozide prolongs myocardial repolarisation: Tripathi specifically links it to QT prolongation and arrhythmia risk, and Katzung notes cardiac rhythm irregularities — hence a baseline and periodic ECG, with congenital long-QT an absolute contraindication. Weekly CBC monitoring belongs to clozapine, and pimozide raises (never lowers) prolactin like other D2 blockers."
+  },
+  {
+   "id": "tap-pim-05",
+   "drugSlug": "pimozide",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 12-year-old with Tourette disorder is well controlled on pimozide. Obsessive-compulsive symptoms emerge, and a general practitioner adds fluoxetine. Within two weeks the boy reports palpitations and dizziness. The most likely mechanism is:",
+   "options": [
+    "Serotonergic excess, since pimozide shares fluoxetine's serotonergic action",
+    "Accelerated hepatic clearance of pimozide causing tic rebound",
+    "Fluoxetine-triggered acute dystonia",
+    "Rising pimozide levels from CYP2D6 inhibition, with additive QTc prolongation risking torsades"
+   ],
+   "correctIndex": 3,
+   "explanation": "Fluoxetine is a strong CYP2D6 inhibitor, pimozide depends on CYP2D6/3A4 for clearance, and the combination is contraindicated because pimozide levels rise while repolarisation delay becomes additive — Katzung repeatedly lists pimozide among the QT-critical interaction victims. Pimozide has no serotonergic action of its own, and dystonia is an EPS event, not an SSRI effect."
+  },
+  {
+   "id": "tap-pim-06",
+   "drugSlug": "pimozide",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 10-year-old with severe motor and vocal tics is to start an antipsychotic that classically requires ECG monitoring; his baseline ECG is normal. Which drug fits this plan?",
+   "options": [
+    "Sertraline",
+    "Pimozide",
+    "Carbamazepine",
+    "Methylphenidate"
+   ],
+   "correctIndex": 1,
+   "explanation": "Pimozide is the classic dopamine-antagonist tic suppressant whose QTc liability mandates ECG vigilance; Katzung describes starting at 1 mg/day and titrating by 1 mg every 5 days, with most patients needing 7-16 mg/day. Sertraline is an SSRI for comorbid obsessive symptoms, not a tic suppressant, methylphenidate is a stimulant, and carbamazepine is an anticonvulsant with no tic indication."
+  },
+  {
+   "id": "tap-pim-07",
+   "drugSlug": "pimozide",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "The so-called QTc 'club' of antipsychotics — the drugs taught together as carrying the greatest torsades concern — is best matched by:",
+   "options": [
+    "Haloperidol, trifluoperazine, and fluphenazine",
+    "Clozapine, olanzapine, and quetiapine",
+    "Pimozide, thioridazine, and mesoridazine",
+    "Sulpiride, molindone, and loxapine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Pimozide shares the repolarisation story of the piperidine phenothiazines thioridazine and mesoridazine: Tripathi names thioridazine, pimozide and ziprasidone for QT-prolongation risk, and Katzung lists pimozide with thioridazine among the drugs ziprasidone must not meet. The piperazine group of option A is the EPS club rather than the QTc club, and option B names drugs notorious for metabolic, not electrical, toxicity."
+  },
+  {
+   "id": "tap-pim-08",
+   "drugSlug": "pimozide",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which Indian preparation list correctly matches pimozide?",
+   "options": [
+    "Loxapac capsules of 10, 25, 50 mg",
+    "Fluanxol tablets of 0.5, 1, 3 mg",
+    "Sulpitac tablets of 50, 100, 200 mg",
+    "Orap, Neurap, Pimodac tablets of 2 and 4 mg"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi's preparation table lists pimozide in India as ORAP, NEURAP and PIMODAC 2 and 4 mg tablets. Loxapac is loxapine, Fluanxol is flupenthixol, and Sulpitac is sulpiride — each a real brand of a different batch-mate drug. Small-milligram tablets suit pimozide's high potency and 1 mg/day style titration."
+  },
+  {
+   "id": "tap-tix-01",
+   "drugSlug": "thiothixene",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Thiothixene's chemical class and mechanism are correctly stated as:",
+   "options": [
+    "A thioxanthene dopamine D2 antagonist — the prototype of that group",
+    "An aliphatic phenothiazine with strong anticholinergic activity",
+    "A butyrophenone bearing an imipramine-like side chain",
+    "A dibenzodiazepine with weak D2 and strong 5-HT2A blockade"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung presents thiothixene as the exemplar of the thioxanthene derivatives, acting as a dopamine-receptor antagonist like the phenothiazines and butyrophenones. Option D is the clozapine-type profile, option B describes chlorpromazine, and option C welds butyrophenone chemistry to a false side-chain claim."
+  },
+  {
+   "id": "tap-tix-02",
+   "drugSlug": "thiothixene",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A resident plans to start a young schizophrenic patient on thiothixene and asks what adverse-effect counselling matters most with this high-potency agent. The best answer is:",
+   "options": [
+    "Warn about marked weight gain and diabetes",
+    "Warn about severe anticholinergic urinary retention",
+    "Warn about extrapyramidal effects — dystonia, parkinsonism and akathisia",
+    "Warn about agranulocytosis requiring weekly blood counts"
+   ],
+   "correctIndex": 2,
+   "explanation": "In Katzung's structure-toxicity table thiothixene has a very high D2/5-HT2A ratio and high extrapyramidal toxicity with only medium sedation and medium hypotension — EPS is the counselling priority. Weight gain and metabolic risk define olanzapine and clozapine, weekly CBC monitoring is clozapine's burden, and thioridazine heads the anticholinergic ranking, not thiothixene."
+  },
+  {
+   "id": "tap-tix-03",
+   "drugSlug": "thiothixene",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Which pairing of drug to expected EPS severity is correct?",
+   "options": [
+    "Thiothixene — very low EPS; clozapine — high EPS",
+    "Thiothixene — high EPS; clozapine — very low EPS",
+    "Chlorpromazine — the highest EPS among the typicals",
+    "Haloperidol — free of EPS at therapeutic doses"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung's table scores thiothixene high for extrapyramidal toxicity (very high D2/5-HT2A ratio) and clozapine very low — the mirror image of option A. Chlorpromazine sits among the least EPS-prone typicals, and no therapeutic D2 blocker, haloperidol included, is EPS-free."
+  },
+  {
+   "id": "tap-tix-04",
+   "drugSlug": "thiothixene",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 22-year-old man presents with an acute psychotic exacerbation. The team wants a high-potency typical antipsychotic with minimal anticholinergic and orthostatic burden. The most fitting choice is:",
+   "options": [
+    "Chlorpromazine",
+    "Thioridazine",
+    "Cyamemazine",
+    "Thiothixene"
+   ],
+   "correctIndex": 3,
+   "explanation": "Thiothixene's high-potency profile delivers strong D2 blockade with comparatively little autonomic effect — exactly the requested balance. Chlorpromazine and cyamemazine are low-potency, sedating, alpha-blocking agents, and thioridazine adds the QTc and anticholinergic baggage that has largely removed it from practice."
+  },
+  {
+   "id": "tap-tix-05",
+   "drugSlug": "thiothixene",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "brain-regions",
+   "question": "Three days after starting thiothixene, a 19-year-old develops sudden torticollis, trismus and upward eye deviation but is afebrile with normal CPK. The correct diagnosis and management are:",
+   "options": [
+    "Acute dystonic reaction — parenteral anticholinergic or promethazine, with antipsychotic cover while continuing therapy",
+    "Neuroleptic malignant syndrome — stop the drug and give dantrolene",
+    "Tardive dyskinesia — switch immediately to clozapine",
+    "Akathisia — propranolol and reassurance"
+   ],
+   "correctIndex": 0,
+   "explanation": "Bizarre sustained spasms of linguo-facial and ocular muscles within days of a high-potency antipsychotic define acute dystonia; Tripathi notes intramuscular promethazine or hydroxyzine clears the reaction within minutes. NMS requires fever, rigidity and raised CPK, tardive dyskinesia takes months to years, and akathisia is inner restlessness rather than spasm."
+  },
+  {
+   "id": "tap-tix-06",
+   "drugSlug": "thiothixene",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "During rounds a junior asks why thiothixene is dosed in single-digit milligram equivalents while chlorpromazine may need hundreds of milligrams. The correct explanation is:",
+   "options": [
+    "Thiothixene has the longest half-life of the typical antipsychotics",
+    "Thiothixene undergoes no first-pass metabolism",
+    "High clinical potency reflects high D2 receptor affinity — small doses suffice, though maximal efficacy is no greater",
+    "Thiothixene is more sedating, so lower doses become possible"
+   ],
+   "correctIndex": 2,
+   "explanation": "Clinical potency in Katzung's table means the milligram dose needed for effect: thiothixene is 'very high' potency because of strong D2 binding, but potency is not efficacy — all typicals reach comparable maximal benefit. Half-life, first-pass metabolism and sedation do not determine this potency label."
+  },
+  {
+   "id": "tap-tix-07",
+   "drugSlug": "thiothixene",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "brain-regions",
+   "question": "After five years of thiothixene, a 45-year-old develops lip-smacking, tongue-thrusting and choreiform finger movements that persist even after the dose is halved. The best diagnosis and next step are:",
+   "options": [
+    "Drug-induced parkinsonism — add levodopa",
+    "Tardive dyskinesia — minimise or stop the typical, and consider switching to an atypical such as clozapine",
+    "Acute dystonia — give intramuscular promethazine",
+    "Neuroleptic malignant syndrome — dantrolene and bromocriptine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Late-onset orofacial choreiform movements persisting despite dose reduction are tardive dyskinesia, the dose-limiting legacy of long-term D2 blockade; management is dose minimisation and switching to a low-EPS atypical, with clozapine best documented. Levodopa cannot work while striatal D2 receptors are blocked, and the timing excludes both dystonia and NMS."
+  },
+  {
+   "id": "tap-tix-08",
+   "drugSlug": "thiothixene",
+   "domain": "Active Recall",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "The high-potency thioxanthene marketed in the United States as Navane is:",
+   "options": [
+    "Flupenthixol",
+    "Sulpiride",
+    "Molindone",
+    "Thiothixene"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung's preparation list pairs thiothixene with the brand Navane. Flupenthixol (Fluanxol) is its thioxanthene cousin with a depot ester, molindone was marketed as Moban, and sulpiride — a benzamide — has never been approved in the USA."
+  },
+  {
+   "id": "tap-lox-01",
+   "drugSlug": "loxapine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Loxapine's receptor pharmacology is best described as:",
+   "options": [
+    "Selective D2 blockade with no serotonergic action",
+    "Dibenzoxazepine chemistry with D2 antagonism plus substantial 5-HT2A antagonism — a bridge between typical and atypical agents",
+    "Selective 5-HT2A blockade with no D2 action",
+    "D3-preferring blockade with added 5-HT7 antagonism"
+   ],
+   "correctIndex": 1,
+   "explanation": "Loxapine is a dibenzoxazepine D2 blocker whose meaningful 5-HT2A antagonism gives it a mid-way receptor profile between pure typicals and clozapine-like atypicals, explaining its moderate EPS with some atypical features. Option D is sulpiride's signature, and the all-or-nothing claims of options A and C are false because loxapine blocks both D2 and 5-HT2A."
+  },
+  {
+   "id": "tap-lox-02",
+   "drugSlug": "loxapine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 30-year-old with bipolar mania is severely agitated in the emergency room, refuses all injections, and the team wants a non-invasive antipsychotic option with rapid onset. Which formulation fits?",
+   "options": [
+    "Inhaled loxapine",
+    "Intramuscular olanzapine",
+    "Orally disintegrating aripiprazole",
+    "Intravenous haloperidol infusion"
+   ],
+   "correctIndex": 0,
+   "explanation": "Loxapine is available as an inhaled powder (Adasuve) — the only inhaled antipsychotic — delivering rapid effect for acute agitation in schizophrenia or bipolar I under a REMS programme in the USA. Options B and D are injections the patient refuses, and aripiprazole's oral forms act too slowly for this rapid-onset requirement."
+  },
+  {
+   "id": "tap-lox-03",
+   "drugSlug": "loxapine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A patient stabilised on oral loxapine asks why her antipsychotic is prescribed in divided doses while a friend's olanzapine is once daily. The pharmacokinetic explanation is:",
+   "options": [
+    "Loxapine has a half-life of 48-60 hours",
+    "Loxapine is a prodrug needing twice-daily activation",
+    "Loxapine's elimination half-life is short (about 8 hours), so its actions are quick and short-lasting",
+    "Loxapine is fully renally cleared, demanding frequent dosing"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi gives loxapine a half-life of about 8 hours with quick and short-lasting actions — the classic rationale for divided dosing. The 48-60 hour figure belongs to pimozide, olanzapine's 24-30 hour half-life is what makes it once daily, and loxapine is hepatically metabolised with no prodrug step."
+  },
+  {
+   "id": "tap-lox-04",
+   "drugSlug": "loxapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 25-year-old asthmatic with acute agitation is considered for inhaled loxapine. The resident must identify the key safety problem with this formulation in this patient. It is:",
+   "options": [
+    "Agranulocytosis risk",
+    "Severe hypoglycaemia",
+    "Delayed onset over several days",
+    "Bronchospasm — the reason asthma and COPD are contraindications"
+   ],
+   "correctIndex": 3,
+   "explanation": "Inhaled loxapine carries a boxed warning for bronchospasm, and reactive airway disease such as asthma or COPD is a contraindication — the basis of its REMS restriction in the USA. Agranulocytosis is clozapine's monitoring burden, hypoglycaemia is not an antipsychotic effect, and the inhaled route is prized precisely for speed, not delayed action."
+  },
+  {
+   "id": "tap-lox-05",
+   "drugSlug": "loxapine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 40-year-old with psychotic depression needs a single agent combining antidepressant and neuroleptic properties. Which drug — chemically the N-demethylated metabolite of loxapine — was historically used for exactly this indication?",
+   "options": [
+    "Maprotiline",
+    "Amoxapine",
+    "Clomipramine",
+    "Bupropion"
+   ],
+   "correctIndex": 1,
+   "explanation": "Amoxapine is the N-demethylated metabolite of loxapine and blocks D2 receptors in addition to inhibiting noradrenaline reuptake, giving mixed antidepressant-plus-neuroleptic properties that Tripathi notes offered advantage in psychotic depression. Maprotiline is a structurally distinct tetracyclic NRI, clomipramine is the serotonergic OCD drug, and bupropion is an NDRI — none carries D2-driven antipsychotic activity."
+  },
+  {
+   "id": "tap-lox-06",
+   "drugSlug": "loxapine",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "knowledge-graph",
+   "question": "An intern states that amoxapine is just another tricyclic with no relation to antipsychotics. The senior's correction is that amoxapine:",
+   "options": [
+    "Is the in-vivo metabolite of the antipsychotic loxapine and retains D2-blocking activity, so EPS and hyperprolactinaemia can occur",
+    "Is a prodrug converted into loxapine inside the brain",
+    "Is chemically unrelated to every antipsychotic ever marketed",
+    "Loses all D2 affinity because of its tetracyclic ring"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung states plainly that amoxapine is the N-demethylated metabolite of loxapine, and one of its active metabolites (7-hydroxyamoxapine) is a potent D2 blocker — hence EPS and hyperprolactinaemia can appear during amoxapine therapy. Option B reverses the direction of the metabolic link, and the D2 activity is documented, not lost."
+  },
+  {
+   "id": "tap-lox-07",
+   "drugSlug": "loxapine",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which Indian preparation pairing is correct for loxapine?",
+   "options": [
+    "Orap tablets of 2 and 4 mg",
+    "Sulpitac tablets of 50, 100, 200 mg",
+    "Loxapac capsules of 10, 25, 50 mg, with a 25 mg/5 mL liquid",
+    "Fluanxol Depot ampoules of 20 mg/mL"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi's table lists loxapine in India as LOXAPAC 10, 25 and 50 mg capsules plus a 25 mg/5 mL liquid concentrate. Orap is pimozide, Sulpitac is sulpiride, and Fluanxol Depot is flupenthixol's decanoate — each a genuine Indian product of another batch drug."
+  },
+  {
+   "id": "tap-lox-08",
+   "drugSlug": "loxapine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Three weeks after starting loxapine, a 32-year-old develops fever of 39.5 degrees C, generalised muscular rigidity, labile blood pressure and a CPK of 2400 IU/L. The correct response is:",
+   "options": [
+    "Continue the drug with paracetamol for the fever",
+    "Add intramuscular promethazine for the stiffness",
+    "Diagnose serotonin syndrome and give cyproheptadine",
+    "Diagnose neuroleptic malignant syndrome — stop loxapine, cool vigorously, and consider dantrolene or bromocriptine"
+   ],
+   "correctIndex": 3,
+   "explanation": "Fever, lead-pipe rigidity, autonomic instability and a marked CPK rise after an antipsychotic define NMS; Tripathi advises prompt drug withdrawal with supportive care and intravenous dantrolene or high-dose bromocriptine. Continuing the offending drug is dangerous, promethazine treats dystonia rather than NMS, and no serotonergic drug is present to justify option C."
+  },
+  {
+   "id": "tap-fpx-01",
+   "drugSlug": "flupenthixol",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Flupenthixol's chemistry and dose-dependent character are best captured as:",
+   "options": [
+    "A benzamide whose low doses raise prolactin the least",
+    "A thioxanthene whose low doses are described as dopaminergically activating — an antidepressant-type effect",
+    "A phenothiazine acting predominantly at 5-HT2A",
+    "A dihydroindolone famed for marked weight gain"
+   ],
+   "correctIndex": 1,
+   "explanation": "Flupenthixol is a thioxanthene; classic teaching holds that low doses act dopaminergically in an activating, antidepressant-like way, while full antipsychotic doses block D2 — the reason it suits withdrawn, apathetic patients. Option A names sulpiride's chemical family, option D names molindone's class while inverting its weight claim, and flupenthixol is no 5-HT2A-selective agent."
+  },
+  {
+   "id": "tap-fpx-02",
+   "drugSlug": "flupenthixol",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 26-year-old with schizophrenia is withdrawn and apathetic, spending most of the day silent in a corner, without agitation. Which antipsychotic fits this presentation best?",
+   "options": [
+    "Chlorpromazine",
+    "Flupenthixol",
+    "Thioridazine",
+    "Cyamemazine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi notes flupenthixol is indicated particularly in withdrawn and apathetic patients — its low-dose activating dopaminergic profile matches this negative-symptom picture — while it is explicitly not for psychomotor agitation or mania. The other three options are sedating low-potency agents that would deepen the passivity."
+  },
+  {
+   "id": "tap-fpx-03",
+   "drugSlug": "flupenthixol",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A stable schizophrenic patient is changed to flupenthixol decanoate. He asks how often the deep intramuscular injection will be given. The correct interval is:",
+   "options": [
+    "Once daily, like a tablet",
+    "Every 24-72 hours",
+    "Every 2-4 weeks",
+    "Every 3-6 months"
+   ],
+   "correctIndex": 2,
+   "explanation": "Flupenthixol decanoate is a classic depot given at 2-4 weekly intervals (India: Fluanxol Depot 20 mg/mL), placing it in Katzung's list of decanoate esters meant for long-term parenteral maintenance. The 24-72 hour ester belongs to zuclopenthixol acetate, and no antipsychotic depot runs on a 3-6 month cycle."
+  },
+  {
+   "id": "tap-fpx-04",
+   "drugSlug": "flupenthixol",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 30-year-old with schizophrenia relapses at every discharge because he stops his tablets. On this admission he agrees to a long-acting injection. The most appropriate choice is:",
+   "options": [
+    "Pimozide once daily, citing its 48-60 hour half-life",
+    "Zuclopenthixol acetate at every visit",
+    "Clozapine, to treat non-adherence first",
+    "Flupenthixol decanoate every 2-4 weeks"
+   ],
+   "correctIndex": 3,
+   "explanation": "Decanoate depots exist precisely for patients who cannot or will not take oral maintenance (Katzung), and flupenthixol decanoate is a standard 2-4 weekly option. Zuclopenthixol acetate is a days-scale acute-agitation ester, pimozide is unsuitable when any agitation is present and comes in no depot form, and clozapine is a reserved drug needing CBC monitoring rather than an adherence tool."
+  },
+  {
+   "id": "tap-fpx-05",
+   "drugSlug": "flupenthixol",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Three weeks into flupenthixol therapy, a 24-year-old paces the corridor, cannot sit through meals, and describes inner restlessness; the family insists the psychosis is worsening. The correct interpretation is:",
+   "options": [
+    "Akathisia — reduce the dose; a benzodiazepine or propranolol helps",
+    "Psychotic relapse — increase the antipsychotic dose",
+    "Acute dystonia — intramuscular promethazine",
+    "Tardive dyskinesia — start clozapine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Compelling motor restlessness without anxiety appearing 1-8 weeks into therapy is akathisia (up to 20% incidence per Tripathi), which is easily mistaken for relapse — raising the dose makes it worse. Dose reduction, benzodiazepines and propranolol are the standard moves; dystonia is a spasm, and tardive dyskinesia is late and choreiform."
+  },
+  {
+   "id": "tap-fpx-06",
+   "drugSlug": "flupenthixol",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A junior proposes giving flupenthixol decanoate to an acutely agitated patient because depots seem to work fastest. The correct correction is:",
+   "options": [
+    "Depot esters act fastest because muscle absorbs them instantly",
+    "Depot esters are designed for long-term parenteral maintenance, not for rapid control of acute agitation",
+    "Depots eliminate the need for EPS monitoring",
+    "Depots reduce metabolic risk by shortening drug exposure"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung frames decanoate esters as suitable for long-term parenteral maintenance in patients who cannot or will not take oral medication — onset is governed by slow release from the muscle depot, so depots are the wrong tool for an emergency. They neither abolish EPS nor shorten exposure; they smooth it over weeks."
+  },
+  {
+   "id": "tap-fpx-07",
+   "drugSlug": "flupenthixol",
+   "domain": "Indian Practice",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which Indian preparation set matches flupenthixol?",
+   "options": [
+    "Orap 2 and 4 mg tablets",
+    "Sulpitac 50, 100, 200 mg tablets",
+    "Fluanxol 0.5, 1, 3 mg tablets and Fluanxol Depot 20 mg/mL ampoules",
+    "Loxapac 10, 25, 50 mg capsules"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi lists flupenthixol in India as FLUANXOL 0.5, 1 and 3 mg tablets with FLUANXOL DEPOT 20 mg/mL ampoules for the decanoate. The other strength-lists belong to pimozide, sulpiride and loxapine respectively."
+  },
+  {
+   "id": "tap-fpx-08",
+   "drugSlug": "flupenthixol",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The most defensible pharmacological explanation for low-dose flupenthixol's antidepressant-type reputation is:",
+   "options": [
+    "At low doses it inhibits serotonin reuptake like an SSRI",
+    "At low doses it inhibits monoamine oxidase reversibly",
+    "At low doses it agonises benzodiazepine receptors",
+    "At low doses its dopaminergic action is activating rather than tranquillising, while higher doses block postsynaptic D2 receptors"
+   ],
+   "correctIndex": 3,
+   "explanation": "The classic teaching separates flupenthixol's low-dose dopaminergic activation — an antidepressant-flavoured effect in withdrawn patients — from full-dose postsynaptic D2 blockade; no serotonergic, MAO-inhibiting or benzodiazepine-receptor mechanism exists for this drug. The same dose-dependence theme is how the benzamide sulpiride changes character with dose."
+  },
+  {
+   "id": "tap-zuc-01",
+   "drugSlug": "zuclopenthixol",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Zuclopenthixol's class and typical sedation profile are correctly described as:",
+   "options": [
+    "A thioxanthene D2 antagonist that is moderately sedating",
+    "A thioxanthene that is activating and never sedating",
+    "A low-potency phenothiazine with almost no EPS",
+    "A high-potency butyrophenone with profound weight loss"
+   ],
+   "correctIndex": 0,
+   "explanation": "Zuclopenthixol is a thioxanthene relative of flupenthixol with moderate sedation — the sedating thioxanthene of this batch. Option B describes low-dose flupenthixol's activating reputation, option C is the chlorpromazine-type profile, and option D welds butyrophenone identity to a false metabolic claim."
+  },
+  {
+   "id": "tap-zuc-02",
+   "drugSlug": "zuclopenthixol",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 28-year-old man with an acute psychotic episode is violently agitated in the emergency room and needs short-acting intramuscular cover while longer-term plans are made. The best-fitted drug is:",
+   "options": [
+    "Zuclopenthixol decanoate, for its immediate depot release",
+    "Pimozide, for its long half-life",
+    "Zuclopenthixol acetate, a short-acting IM ester acting over roughly 24-72 hours",
+    "Oral sulpiride, for its anxiolytic profile"
+   ],
+   "correctIndex": 2,
+   "explanation": "Zuclopenthixol acetate (Acuphase) is the purpose-built short-acting ester for acute agitation, acting over about 24-72 hours while decisions about maintenance are made. The decanoate is a weeks-long maintenance depot with no emergency role, pimozide is explicitly unsuitable when psychomotor agitation is prominent, and oral sulpiride is neither acute nor parenteral."
+  },
+  {
+   "id": "tap-zuc-03",
+   "drugSlug": "zuclopenthixol",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "The twin-ester pharmacokinetics of zuclopenthixol are correctly summarised as:",
+   "options": [
+    "Acetate ester acting 24-72 hours for acute episodes; decanoate ester given every 2-4 weeks for maintenance",
+    "Acetate ester given every 2-4 weeks; decanoate ester acting 24-72 hours",
+    "Both esters act for 24-72 hours and differ only in price",
+    "Acetate ester acting 3-6 months; decanoate ester acting 7-10 days"
+   ],
+   "correctIndex": 0,
+   "explanation": "The exam distinction: the acetate (Acuphase) is the short-acting acute-agitation ester covering 24-72 hours, while the decanoate is the 2-4 weekly maintenance depot. Option B swaps the durations, option C denies the pharmacokinetic difference, and option D inverts both time scales."
+  },
+  {
+   "id": "tap-zuc-04",
+   "drugSlug": "zuclopenthixol",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient started on zuclopenthixol returns to clinic complaining that he falls asleep at his desk and dozes off on the bus home. The most likely cause and correct counselling are:",
+   "options": [
+    "Hypertensive crisis — measure tyramine intake",
+    "Drug sedation — zuclopenthixol is moderately sedating; advise no driving or machinery and consider night-time dosing",
+    "Bronchospasm — stop the drug immediately",
+    "Agranulocytosis — order a weekly CBC"
+   ],
+   "correctIndex": 1,
+   "explanation": "Zuclopenthixol is the moderately sedating thioxanthene, so daytime drowsiness is expected drug effect — counsel against driving and machinery and shift the dose to night. Tyramine crises belong to the MAOIs, bronchospasm to inhaled loxapine, and CBC monitoring to clozapine."
+  },
+  {
+   "id": "tap-zuc-05",
+   "drugSlug": "zuclopenthixol",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "During a violent episode a patient received two zuclopenthixol acetate injections over four days; he is now calm, insight has returned, and maintenance is planned. The best long-term strategy is:",
+   "options": [
+    "Acetate injections twice weekly for life",
+    "Stop all antipsychotics and observe for relapse",
+    "Switch to pimozide, whose long half-life suits agitation",
+    "Convert to zuclopenthixol decanoate every 2-4 weeks, with overlap cover while the depot loads"
+   ],
+   "correctIndex": 3,
+   "explanation": "The acetate ester is a bridge for acute episodes only; maintenance belongs to the 2-4 weekly decanoate, which needs days to weeks to reach steady state — hence overlap cover during the switch. Twice-weekly acetate for life is not its design, stopping invites relapse, and pimozide is wrong for an agitation-prone patient."
+  },
+  {
+   "id": "tap-zuc-06",
+   "drugSlug": "zuclopenthixol",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Why does zuclopenthixol offer both an acetate and a decanoate ester?",
+   "options": [
+    "The two esters cancel each other's EPS liability when mixed",
+    "The short-acting acetate covers the first days of illness while the weeks-long decanoate slowly reaches steady state",
+    "Decanoate is absorbed within minutes; acetate takes weeks",
+    "Both esters must be given daily to prevent withdrawal"
+   ],
+   "correctIndex": 1,
+   "explanation": "The twin-ester system matches ester pharmacokinetics to clinical phases: acetate for the 24-72 hour acute window, decanoate for 2-4 weekly maintenance — a template question in depot pharmacokinetics. The esters do not interact pharmacodynamically, and depot release is slow rather than instantaneous."
+  },
+  {
+   "id": "tap-zuc-07",
+   "drugSlug": "zuclopenthixol",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient on zuclopenthixol admits to heavy weekend beer intake. The most important interaction to explain to him is:",
+   "options": [
+    "Additive CNS depression — alcohol magnifies the sedation",
+    "A tyramine (cheese) hypertensive reaction, as MAOIs cause",
+    "Complete blockade of zuclopenthixol's antipsychotic action",
+    "Immediate serotonin syndrome risk requiring cyproheptadine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Neuroleptics potentiate all CNS depressants — alcohol, benzodiazepines, opioids and antihistamines (Tripathi) — so alcohol magnifies sedation and impairs judgement. There is no tyramine reaction (that is MAOI pharmacology), no mutual annihilation of effect, and serotonin syndrome requires serotonergic agents, which zuclopenthixol is not."
+  },
+  {
+   "id": "tap-zuc-08",
+   "drugSlug": "zuclopenthixol",
+   "domain": "Active Recall",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "The thioxanthene marketed with an acetate preparation called Acuphase and a decanoate for maintenance is:",
+   "options": [
+    "Flupenthixol (Fluanxol)",
+    "Thiothixene (Navane)",
+    "Sulpiride (Sulpitac)",
+    "Zuclopenthixol (Clopixol)"
+   ],
+   "correctIndex": 3,
+   "explanation": "Zuclopenthixol is Clopixol, supplied as short-acting acetate (Acuphase) and long-acting decanoate formulations — the twin-ester thioxanthene. Fluanxol is flupenthixol's brand, Navane is thiothixene in the USA, and Sulpitac is an Indian sulpiride brand."
+  },
+  {
+   "id": "tap-pip-01",
+   "drugSlug": "pipothiazine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Pipothiazine's subfamily position and what it implies are correctly stated as:",
+   "options": [
+    "A piperidine-substituted phenothiazine — comparatively lower EPS within the phenothiazine family",
+    "A piperazine phenothiazine — the highest-EPS subfamily",
+    "An aliphatic phenothiazine — the most sedating subfamily",
+    "A thioxanthene — chemically identical to haloperidol"
+   ],
+   "correctIndex": 0,
+   "explanation": "Pipothiazine belongs to the piperidine phenothiazines — the thioridazine subfamily — which Katzung's structure-toxicity table places at the gentler EPS end compared with piperazine congeners such as fluphenazine. The aliphatic group (chlorpromazine) is the most sedating, and it is thiothixene, not any phenothiazine, that is haloperidol's structural cousin."
+  },
+  {
+   "id": "tap-pip-02",
+   "drugSlug": "pipothiazine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 28-year-old man in India with schizophrenia feels well on tablets but relapses whenever he stops them, and he now agrees to a long-acting injection. A fitting Indian option is:",
+   "options": [
+    "Molindone tablets with directly observed daily dosing",
+    "Zuclopenthixol acetate weekly",
+    "Pipothiazine palmitate — a long-acting IM depot given about every 4 weeks",
+    "Cyamemazine syrup nightly"
+   ],
+   "correctIndex": 2,
+   "explanation": "Pipothiazine palmitate is the long-acting piperidine-phenothiazine depot designed for non-adherent patients, dosed at roughly 4-weekly intervals and available in India. Zuclopenthixol acetate is a days-scale acute ester, molindone is an oral-only drug whose US brand has been discontinued, and cyamemazine is a French-market anxiolytic-style phenothiazine."
+  },
+  {
+   "id": "tap-pip-03",
+   "drugSlug": "pipothiazine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "The pharmacokinetic principle behind pipothiazine palmitate's weeks-long duration is:",
+   "options": [
+    "The ester halves plasma protein binding to accelerate clearance",
+    "The lipophilic ester forms an intramuscular reservoir that is slowly hydrolysed by esterases, releasing drug over weeks",
+    "The ester is excreted unchanged in urine without hydrolysis",
+    "The ester bypasses the muscle entirely and acts from gut stores"
+   ],
+   "correctIndex": 1,
+   "explanation": "Depot esters work by slow physics: the highly lipophilic ester dissolves in the injected muscle and is hydrolysed gradually by esterases, releasing active pipothiazine across weeks — the same principle behind the fluphenazine and haloperidol decanoates Katzung recommends for maintenance. Accelerated clearance, renal excretion of intact ester and gut-based action are all false mechanisms."
+  },
+  {
+   "id": "tap-pip-04",
+   "drugSlug": "pipothiazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 35-year-old on pipothiazine palmitate complains of new stiffness, occasional restlessness, mild daytime sleepiness and light-headedness on standing quickly. The best single explanation is:",
+   "options": [
+    "Moderate EPS combined with alpha-1 blockade — sedation and postural dizziness fit the piperidine phenothiazine profile",
+    "Pimozide-type QTc prolongation needing an emergency ECG",
+    "Agranulocytosis presenting as fatigue",
+    "Molindone-type weight loss with insomnia"
+   ],
+   "correctIndex": 0,
+   "explanation": "As a piperidine phenothiazine, pipothiazine carries moderate EPS plus some alpha-1 mediated postural hypotension and sedation — exactly the composite picture here. QTc vigilance is the pimozide and thioridazine story, agranulocytosis is a clozapine-scale issue rather than a fatigue complaint, and pipothiazine does not cause weight loss with insomnia."
+  },
+  {
+   "id": "tap-pip-05",
+   "drugSlug": "pipothiazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A farm worker on pipothiazine develops intense sunburn on his arms and face after a day in the field despite only modest exposure. The most likely drug-related explanation is:",
+   "options": [
+    "Phenothiazine photosensitivity — counsel sun protection, clothing and sunscreen",
+    "Pellagra from niacin deficiency",
+    "Contact dermatitis from pesticide gloves",
+    "Drug-induced systemic lupus requiring steroids"
+   ],
+   "correctIndex": 0,
+   "explanation": "Photosensitivity is a classic phenothiazine hypersensitivity reaction (most famous with chlorpromazine), so bright sun plus a phenothiazine yields exaggerated sunburn — counsel protection. Pellagra and contact dermatitis lack the drug link, and phenothiazine-induced lupus is rare and would not present as simple sunburn."
+  },
+  {
+   "id": "tap-pip-06",
+   "drugSlug": "pipothiazine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 66-year-old with Parkinson's disease on levodopa develops hallucinations, and pipothiazine is proposed for the psychosis. The main pharmacological objection is:",
+   "options": [
+    "Pipothiazine potently induces levodopa metabolism, halting its benefit",
+    "Pipothiazine enhances levodopa's antiparkinsonian effect",
+    "Pipothiazine would dangerously worsen parkinsonism by blocking striatal D2 receptors and opposing levodopa",
+    "Pipothiazine is safe at full antipsychotic doses in parkinsonism"
+   ],
+   "correctIndex": 2,
+   "explanation": "Neuroleptics block the actions of levodopa and direct dopamine agonists (Tripathi): D2 blockade in the striatum aggravates rigidity and bradykinesia, which is why parkinsonian psychosis needs specialist-guided cautious strategies instead. There is no enzyme induction and no synergy, and full-dose safety is the opposite of the truth."
+  },
+  {
+   "id": "tap-pip-07",
+   "drugSlug": "pipothiazine",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Which subfamily assignment is correct?",
+   "options": [
+    "Pipothiazine — piperazine phenothiazine; fluphenazine — piperidine phenothiazine",
+    "Pipothiazine — butyrophenone; haloperidol — phenothiazine",
+    "Pipothiazine — piperidine phenothiazine; fluphenazine — piperazine phenothiazine",
+    "Pipothiazine — dibenzoxazepine; loxapine — phenothiazine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Pipothiazine sits with thioridazine among the piperidine phenothiazines while fluphenazine heads the piperazine group — the mapping that predicts their differing EPS burdens. Options A and B swap families, and option D misfiles both loxapine (a dibenzoxazepine) and pipothiazine."
+  },
+  {
+   "id": "tap-pip-08",
+   "drugSlug": "pipothiazine",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which statement about the depot esters in this batch is correct?",
+   "options": [
+    "Pipothiazine acetate is the classic short-acting agitation ester",
+    "Flupenthixol has no depot preparation anywhere in the world",
+    "All depot esters in this batch must be given daily",
+    "Zuclopenthixol acetate is the short-acting agitation ester, while flupenthixol and pipothiazine depots serve 2-4 weekly maintenance"
+   ],
+   "correctIndex": 3,
+   "explanation": "The batch's ester map: zuclopenthixol acetate covers 24-72 hours of acute agitation, while flupenthixol decanoate and pipothiazine palmitate are weeks-scale maintenance depots. Option A moves the short-acting flag to pipothiazine, option B forgets Fluanxol Depot, and daily dosing would defeat every depot's purpose."
+  },
+  {
+   "id": "tap-mol-01",
+   "drugSlug": "molindone",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Molindone's classification and efficacy standing are correctly stated as:",
+   "options": [
+    "A dibenzodiazepine with minimal D2 affinity",
+    "A dihydroindolone; a first-generation D2 antagonist with efficacy comparable to other typical antipsychotics",
+    "A substituted benzamide selective for D2 and D3",
+    "A tetracyclic selective noradrenaline reuptake inhibitor"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung files molindone among the miscellaneous-structure first-generation antipsychotics (a dihydroindolone) and notes there is no significant efficacy difference among the typicals. The dibenzodiazepine is clozapine, the benzamide is sulpiride, and the tetracyclic NRI is maprotiline."
+  },
+  {
+   "id": "tap-mol-02",
+   "drugSlug": "molindone",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 19-year-old has gained 8 kg on olanzapine and refuses every switch, insisting all antipsychotics cause weight gain. Which drug is the classic counter-example taught for the least weight gain?",
+   "options": [
+    "Olanzapine",
+    "Clozapine",
+    "Molindone",
+    "Chlorpromazine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Classic teaching crowns molindone as the antipsychotic historically associated with the least weight gain — its tolerability niche before market discontinuation. Olanzapine and clozapine head the weight-gain league, and chlorpromazine reliably adds kilograms as well."
+  },
+  {
+   "id": "tap-mol-03",
+   "drugSlug": "molindone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A family is relieved to learn molindone is weight-friendly, so they ask whether any counselling is still needed. The correct counselling is:",
+   "options": [
+    "Weight neutrality abolishes the need for all monitoring",
+    "Only blood pressure needs attention; movement disorders are impossible",
+    "Weight benefit does not protect against EPS — dystonia, akathisia and parkinsonism still occur, so movement effects remain the counselling priority",
+    "Weekly CBCs are mandatory as with clozapine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Molindone's advantage is metabolic, not neurological: as a first-generation D2 antagonist it still causes EPS, so dystonia, akathisia and parkinsonism counselling continues. Agranulocytosis is clozapine-specific, and declaring EPS impossible is simply false."
+  },
+  {
+   "id": "tap-mol-04",
+   "drugSlug": "molindone",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Molindone's clinical standing among first-generation antipsychotics is best summarised as:",
+   "options": [
+    "The most efficacious option for refractory schizophrenia",
+    "A specifically approved treatment for Tourette tics",
+    "The treatment of choice in acute mania",
+    "Comparable efficacy to other typicals, with tolerability — chiefly weight — as its distinguishing appeal"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung states there is no significant efficacy difference among the first-generation agents, so molindone's appeal was tolerability, chiefly the weight story. Refractory schizophrenia is clozapine's territory, the classic tic drugs are pimozide and haloperidol, and no antipsychotic displaces mood stabilisers in mania."
+  },
+  {
+   "id": "tap-mol-05",
+   "drugSlug": "molindone",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A resident cannot find molindone in the hospital pharmacy and asks why. The correct answer is:",
+   "options": [
+    "It was withdrawn worldwide for cardiac arrhythmia deaths",
+    "Its US marketing (brand Moban) has been discontinued for supply and commercial reasons, so availability must be checked locally before prescribing",
+    "It is available only in fixed combination with lithium",
+    "It remains the most widely stocked antipsychotic in US hospitals"
+   ],
+   "correctIndex": 1,
+   "explanation": "Molindone disappeared from the US market for supply and commercial reasons — not a safety withdrawal — so availability must be verified locally. The arrhythmia-withdrawal story belongs to thioridazine and mesoridazine, and the other two options are fabrications."
+  },
+  {
+   "id": "tap-mol-06",
+   "drugSlug": "molindone",
+   "domain": "Clinical Uses",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "An obese 20-year-old with first-episode psychosis needs an antipsychotic with minimal metabolic impact. Applying current practice, the best-fitting second-generation option is:",
+   "options": [
+    "Olanzapine — because it improves lipid profiles",
+    "Clozapine — for its diabetes-protective effect",
+    "Ziprasidone — the second-generation agent with the least weight gain",
+    "Quetiapine — the most weight-neutral atypical"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung identifies ziprasidone as the second-generation drug causing the least weight gain — the modern occupant of the weight-friendly niche molindone once held (with aripiprazole and lurasidone as other low-liability choices). Olanzapine and clozapine carry the greatest metabolic risk, and quetiapine is intermediate, not the most weight-neutral."
+  },
+  {
+   "id": "tap-mol-07",
+   "drugSlug": "molindone",
+   "domain": "Active Recall",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Moban is the US brand name for:",
+   "options": [
+    "Thiothixene",
+    "Pimozide",
+    "Molindone",
+    "Loxapine"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung's preparation list pairs molindone with Moban. The same list pairs thiothixene with Navane, pimozide with Orap, and loxapine — as the inhaled acute-agitation product — with Adasuve, each a real brand of a different drug."
+  },
+  {
+   "id": "tap-mol-08",
+   "drugSlug": "molindone",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "brain-regions",
+   "question": "Two weeks after starting an antipsychotic, a 68-year-old shows mask-like facies, shuffling gait and cogwheel rigidity; the family believes dementia is setting in. The correct assessment is:",
+   "options": [
+    "Early Alzheimer's dementia — begin a cholinesterase inhibitor",
+    "Neuroleptic malignant syndrome — dantrolene immediately",
+    "Worsening psychosis — raise the antipsychotic dose",
+    "Drug-induced parkinsonism — reduce the dose or switch; levodopa will not help while D2 receptors are blocked"
+   ],
+   "correctIndex": 3,
+   "explanation": "Parkinsonism appearing 1-4 weeks into antipsychotic therapy (Tripathi) is dose-related D2 blockade in the nigrostriatal pathway — manage with dose reduction, an anticholinergic or a switch. Levodopa is ineffective while D2 receptors are blocked, raising the dose worsens the picture, and NMS requires fever with a marked CPK rise."
+  },
+  {
+   "id": "tap-mes-01",
+   "drugSlug": "mesoridazine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Mesoridazine's place in antipsychotic chemistry is correctly described as:",
+   "options": [
+    "A thioxanthene prodrug of flupenthixol",
+    "A piperidine phenothiazine formed in the body from thioridazine",
+    "A benzamide metabolite of sulpiride",
+    "A diphenylbutylpiperidine prodrug of pimozide"
+   ],
+   "correctIndex": 1,
+   "explanation": "Mesoridazine is the piperidine phenothiazine derived from thioridazine by side-chain oxidation — Katzung's table lists it among the other piperidine phenothiazines. The prodrug claims in options A and D reverse known chemistry, and the benzamide family belongs to sulpiride."
+  },
+  {
+   "id": "tap-mes-02",
+   "drugSlug": "mesoridazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "While auditing an old prescription file, a resident asks why mesoridazine vanished from practice. The historically correct reason is:",
+   "options": [
+    "Pronounced QTc prolongation with torsades risk led to its withdrawal from most markets",
+    "Extrapyramidal rigidity made it intolerable",
+    "It caused severe weight loss",
+    "It triggered tyramine (cheese) hypertensive crises"
+   ],
+   "correctIndex": 0,
+   "explanation": "Mesoridazine shares thioridazine's repolarisation liability — pronounced QTc prolongation and ventricular arrhythmia risk — which drove its withdrawal from most markets. As a piperidine phenothiazine its EPS is comparatively low, and tyramine reactions are MAOI pharmacology, not phenothiazine."
+  },
+  {
+   "id": "tap-mes-03",
+   "drugSlug": "mesoridazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 54-year-old stable on old-stock mesoridazine presents with palpitations; the ECG shows a QTc of 540 ms with brief runs of polymorphic ventricular tachycardia. The correct response is:",
+   "options": [
+    "Diagnose STEMI and arrange primary angioplasty",
+    "Diagnose sinus bradycardia and give atropine",
+    "Recognise mesoridazine-induced QTc prolongation with torsades — stop the drug, monitor on telemetry, and correct potassium and magnesium",
+    "Diagnose complete heart block and insert a pacemaker"
+   ],
+   "correctIndex": 2,
+   "explanation": "A QTc of 540 ms with polymorphic VT on a QT-prolonging antipsychotic is drug-induced torsades: stop the offender, monitor, and normalise electrolytes — the thioridazine and mesoridazine signature that made them the lethal exceptions among antipsychotic overdoses (Katzung). Nothing in the story suggests infarction, bradycardia or AV block."
+  },
+  {
+   "id": "tap-mes-04",
+   "drugSlug": "mesoridazine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A chart lists both thioridazine and mesoridazine for the same patient, and the intern assumes one is a typo. The true relationship is:",
+   "options": [
+    "They are unrelated drugs from different chemical families",
+    "Mesoridazine is an active metabolite formed from thioridazine in the body",
+    "Thioridazine is the active metabolite of mesoridazine",
+    "Both are inactive until converted by liver esterases"
+   ],
+   "correctIndex": 1,
+   "explanation": "Mesoridazine is generated from thioridazine and is itself pharmacologically active — a parent-to-metabolite pairing, not a typo. Option C reverses the direction, the esterase story describes ester prodrugs such as the depot preparations, and both drugs share the same phenothiazine family."
+  },
+  {
+   "id": "tap-mes-05",
+   "drugSlug": "mesoridazine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient on old-stock mesoridazine is started by cardiology on a rhythm drug; the pharmacist flags the combination as dangerous. Which co-prescription matches the flag?",
+   "options": [
+    "Amoxicillin for dental prophylaxis",
+    "Metformin for prediabetes",
+    "Loratadine for allergic rhinitis",
+    "Quinidine, amiodarone, or sotalol — additive repolarisation delay and torsades risk"
+   ],
+   "correctIndex": 3,
+   "explanation": "Class IA and III antiarrhythmics prolong ventricular repolarisation, so stacking them on a QT-prolonging phenothiazine multiplies torsades risk — the same logic that keeps thioridazine and pimozide away from other QT-extending drugs (Katzung). Amoxicillin, metformin and loratadine are QT-neutral, and second-generation antihistamines were developed precisely to escape terfenadine's QT problem."
+  },
+  {
+   "id": "tap-mes-06",
+   "drugSlug": "mesoridazine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Mesoridazine's current clinical role is best stated as:",
+   "options": [
+    "Historically used in schizophrenia; now essentially obsolete because of cardiac risk",
+    "First-line therapy for first-episode psychosis",
+    "The modern drug of choice for Tourette syndrome",
+    "Standard maintenance treatment for bipolar I disorder"
+   ],
+   "correctIndex": 0,
+   "explanation": "Mesoridazine had a historical place in schizophrenia treatment, but its pronounced QTc liability removed it from most markets — today it is a pharmacology exhibit rather than a prescription. Tic disorders belong to pimozide and haloperidol, and neither first-episode psychosis nor bipolar maintenance has any mesoridazine role."
+  },
+  {
+   "id": "tap-mes-07",
+   "drugSlug": "mesoridazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "An elderly patient on old-stock mesoridazine reports giddiness on standing and one recent fall at night. The most likely mechanism and counselling are:",
+   "options": [
+    "Alpha-1 mediated orthostatic hypotension — rise slowly, hydrate, and review the need for the drug",
+    "Alpha-1 mediated hypertension — reduce dietary salt",
+    "Bronchospasm — avoid cold air",
+    "Hypoglycaemia — eat more sugar"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung lists orthostatic hypotension as a common complication with chlorpromazine or mesoridazine — alpha-adrenergic blockade plus central sympatholysis — a major fall risk in the elderly. The opposite haemodynamic claim, bronchospasm and hypoglycaemia are all foreign to this drug's profile."
+  },
+  {
+   "id": "tap-mes-08",
+   "drugSlug": "mesoridazine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Among antipsychotic overdoses, the ones Katzung singles out as potentially fatal — demanding management similar to tricyclic antidepressant poisoning — involve:",
+   "options": [
+    "Haloperidol and trifluoperazine, via respiratory depression",
+    "Clozapine and olanzapine, via fulminant hepatic failure",
+    "Sulpiride and molindone, via status epilepticus",
+    "Mesoridazine and thioridazine, via ventricular tachyarrhythmias"
+   ],
+   "correctIndex": 3,
+   "explanation": "Antipsychotic poisonings are rarely fatal, with the exception of mesoridazine and thioridazine, whose lethal effects are ventricular tachyarrhythmias — managed like TCA overdose (Katzung). Fulminant hepatic failure is the nefazodone story, and the other pairs misattribute toxicities."
+  },
+  {
+   "id": "tap-cya-01",
+   "drugSlug": "cyamemazine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Cyamemazine's pharmacological identity is best described as:",
+   "options": [
+    "A high-potency butyrophenone with intense EPS",
+    "A low-potency, sedating phenothiazine",
+    "A partial D2 agonist of the aripiprazole type",
+    "A selective serotonin reuptake inhibitor"
+   ],
+   "correctIndex": 1,
+   "explanation": "Cyamemazine is a classic low-potency phenothiazine whose sedation follows the chlorpromazine and thioridazine pattern — strong H1, alpha-1 and muscarinic actions with comparatively little EPS. Butyrophenones, partial D2 agonists and SSRIs describe entirely different receptor strategies."
+  },
+  {
+   "id": "tap-cya-02",
+   "drugSlug": "cyamemazine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "In countries where it is marketed (notably France), cyamemazine's characteristic niche is:",
+   "options": [
+    "Low-dose anxiolytic-style use in anxiety states, with few EPS",
+    "First-line parenteral treatment of acute mania",
+    "Reversal of opioid overdose",
+    "Suppression of tics in Tourette disorder"
+   ],
+   "correctIndex": 0,
+   "explanation": "Cyamemazine is used anxiolytic-style at low doses in French practice — the sedating low-potency phenothiazine profile delivers calm without much EPS. Acute mania calls for high-potency or atypical agents, opioid reversal is naloxone's job, and tic suppression is pimozide and haloperidol territory."
+  },
+  {
+   "id": "tap-cya-03",
+   "drugSlug": "cyamemazine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient prescribed low-dose cyamemazine for anxiety asks why the cardiologist insists on an ECG for a calming tablet. The best answer is:",
+   "options": [
+    "Low potency reduces EPS but does not remove QTc caution — phenothiazines can prolong repolarisation, so cardiac risk factors warrant an ECG",
+    "The ECG is needed because cyamemazine lowers serum potassium",
+    "Low-potency phenothiazines carry the greatest torsades risk of all psychotropics",
+    "The ECG monitors for weight gain"
+   ],
+   "correctIndex": 0,
+   "explanation": "The lesson of thioridazine applies across the family: low EPS and low potency are not cardiac immunity, and cyamemazine carries sedation plus QTc caution as its watch-items. Cyamemazine does not waste potassium, and option C overstates the family — the notorious torsades names are thioridazine, mesoridazine and pimozide."
+  },
+  {
+   "id": "tap-cya-04",
+   "drugSlug": "cyamemazine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Which adverse-effect pairing across the potency spectrum is correct?",
+   "options": [
+    "Both low- and high-potency phenothiazines produce identical adverse-effect profiles",
+    "Cyamemazine — more EPS; haloperidol — more agranulocytosis",
+    "Cyamemazine — more EPS with no sedation; haloperidol — profound sedation",
+    "Cyamemazine — more sedation and orthostatic dizziness with fewer EPS; haloperidol — more EPS with less sedation"
+   ],
+   "correctIndex": 3,
+   "explanation": "Potency logic: low-potency phenothiazines (chlorpromazine, thioridazine, cyamemazine) trade more sedation, alpha-blockade and anticholinergic load for less EPS, while high-potency drugs (haloperidol, fluphenazine, pimozide, thiothixene) invert the trade. Agranulocytosis is a clozapine issue, not a haloperidol one."
+  },
+  {
+   "id": "tap-cya-05",
+   "drugSlug": "cyamemazine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 34-year-old with disabling anxiety has failed two SSRIs due to intolerable effects. In a setting where cyamemazine is available, the prescribing professor describes its realistic role as:",
+   "options": [
+    "A sedating low-potency phenothiazine with anxiolytic-style use — a short-term option, mindful of sedation and QTc",
+    "An activating NDRI suited to anxious insomniacs",
+    "A prolactin-sparing partial D2 agonist",
+    "A benzodiazepine-receptor antagonist for dependence cases"
+   ],
+   "correctIndex": 0,
+   "explanation": "Cyamemazine's realistic niche is exactly that: a low-potency sedating phenothiazine used anxiolytic-style, with counselling for daytime sedation and attention to QTc. Bupropion is the activating NDRI without an anxiolytic label, aripiprazole is the partial agonist, and flumazenil is the benzodiazepine antagonist."
+  },
+  {
+   "id": "tap-cya-06",
+   "drugSlug": "cyamemazine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient on cyamemazine for anxiety is also started on citalopram by a general practitioner. The interaction most worth flagging is:",
+   "options": [
+    "Additive QTc prolongation from the combination",
+    "A tyramine (cheese) reaction with aged cheese",
+    "Acute renal failure when combined with NSAIDs",
+    "Complete loss of oral contraceptive efficacy"
+   ],
+   "correctIndex": 0,
+   "explanation": "Both drugs can delay ventricular repolarisation, so the combination invites additive QTc prolongation — check the ECG and the rest of the QT list rather than assume a low-potency phenothiazine is electrically harmless. Cheese reactions are MAOI territory, and neither renal failure with NSAIDs nor contraceptive failure is an established cyamemazine interaction."
+  },
+  {
+   "id": "tap-cya-07",
+   "drugSlug": "cyamemazine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The best mechanistic explanation for cyamemazine's low EPS burden compared with haloperidol is:",
+   "options": [
+    "Selective striatal D4 receptor blockade",
+    "Partial agonism at D2 receptors shielding the striatum",
+    "Weaker overall D2 receptor blockade, so less interference with nigrostriatal dopamine",
+    "Inhibition of dopamine reuptake in the basal ganglia"
+   ],
+   "correctIndex": 2,
+   "explanation": "Low-potency phenothiazines block D2 less avidly, so nigrostriatal dopamine signalling is less disturbed — the simple basis of their gentler EPS profile. D4 selectivity is the clozapine-era hypothesis, partial agonism is aripiprazole's device, and dopamine reuptake inhibition would raise rather than lower striatal dopaminergic tone."
+  },
+  {
+   "id": "tap-cya-08",
+   "drugSlug": "cyamemazine",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which availability statement about cyamemazine is accurate?",
+   "options": [
+    "It is among the most prescribed antipsychotics in India",
+    "It is available in India as Clopixol",
+    "It is a US first-line antipsychotic",
+    "It is marketed mainly in France and is not a standard Indian antipsychotic"
+   ],
+   "correctIndex": 3,
+   "explanation": "Cyamemazine's market is essentially France and some European countries; Indian and US formularies do not stock it as a standard option. Clopixol is zuclopenthixol's brand, and the other two claims are simply false."
+  },
+  {
+   "id": "tap-sul-01",
+   "drugSlug": "sulpiride",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Sulpiride's receptor pharmacology is best described as:",
+   "options": [
+    "A substituted benzamide blocking D2 and D3 receptors with roughly equal potency",
+    "A butyrophenone acting chiefly at sigma receptors",
+    "A phenothiazine blocking 5-HT2A more than D2",
+    "A dihydroindolone that depletes vesicular dopamine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Sulpiride is the substituted benzamide of this batch; Katzung notes its equivalent D2 and D3 potency (with added 5-HT7 antagonism) and its marked prolactin effect. Sigma-receptor lore belongs to haloperidol, 5-HT2A-dominant blockade to clozapine-type agents, and vesicular dopamine depletion is tetrabenazine's VMAT2 mechanism."
+  },
+  {
+   "id": "tap-sul-02",
+   "drugSlug": "sulpiride",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A psychiatrist plans sulpiride for one patient with prominent anxiety and low mood, and later for another with acute psychosis. The dose-character logic she must apply is:",
+   "options": [
+    "Only high doses have any effect; low doses are placebos",
+    "Low doses (below roughly 200 mg/day) behave as anxiolytic and antidepressant-type, while higher doses are antipsychotic",
+    "Low doses are antipsychotic; only high doses help anxiety",
+    "A fixed 600 mg dose treats both anxiety and psychosis"
+   ],
+   "correctIndex": 1,
+   "explanation": "Sulpiride's dose-dependence is the exam classic: low daily doses carry anxiolytic and antidepressant-flavoured effects, while antipsychotic use needs higher doses — Tripathi lists 200-400 mg twice daily for acute psychosis with negative-symptom use at lower doses. Options A and C invert or deny this dose logic, and the fixed-dose claim is false."
+  },
+  {
+   "id": "tap-sul-03",
+   "drugSlug": "sulpiride",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The adverse-effect signature most characteristic of sulpiride among this batch's drugs is:",
+   "options": [
+    "Bronchospasm after each dose",
+    "Agranulocytosis within weeks",
+    "Marked hyperprolactinaemia with galactorrhoea, menstrual disturbance and sexual dysfunction",
+    "Hypertensive crisis with tyramine foods"
+   ],
+   "correctIndex": 2,
+   "explanation": "Sulpiride produces marked rises in serum prolactin (Katzung), so galactorrhoea, amenorrhoea, gynaecomastia and sexual dysfunction follow chronic use. Agranulocytosis is clozapine's burden, bronchospasm belongs to inhaled loxapine, and tyramine crises belong to the MAOIs."
+  },
+  {
+   "id": "tap-sul-04",
+   "drugSlug": "sulpiride",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 24-year-old woman on sulpiride 150 mg/day for low mood presents after three months with bilateral galactorrhoea and amenorrhoea; the pregnancy test is negative, TSH is normal, and serum prolactin is markedly raised. The best assessment is:",
+   "options": [
+    "Prolactinoma — schedule urgent transsphenoidal surgery",
+    "Hypothyroidism — start levothyroxine",
+    "Occult pregnancy — repeat the test in two weeks",
+    "Sulpiride-induced hyperprolactinaemia — review and change the drug strategy"
+   ],
+   "correctIndex": 3,
+   "explanation": "D2 blockade disinhibits pituitary lactotropes, and sulpiride is one of the strongest prolactin elevators — the triad of galactorrhoea, amenorrhoea and high prolactin with a negative pregnancy test and normal TSH points to the drug. Microadenomas are considered after excluding drugs, thyroid disease is excluded by the normal TSH, and pregnancy has been ruled out."
+  },
+  {
+   "id": "tap-sul-05",
+   "drugSlug": "sulpiride",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 60-year-old with stage 4 chronic kidney disease is prescribed sulpiride. The pharmacokinetic reason the dose must be reduced is:",
+   "options": [
+    "Sulpiride is excreted largely unchanged by the kidneys",
+    "Sulpiride is extensively metabolised by CYP3A4",
+    "Sulpiride requires intravenous administration to work",
+    "Sulpiride is eliminated mainly in bile with enterohepatic cycling"
+   ],
+   "correctIndex": 0,
+   "explanation": "Sulpiride is cleared predominantly by renal excretion of unchanged drug, so renal failure demands dose reduction — the benzamides in general lean on the kidney rather than on CYP enzymes. There is no significant CYP3A4 dependence, no intravenous requirement, and biliary cycling is not its route."
+  },
+  {
+   "id": "tap-sul-06",
+   "drugSlug": "sulpiride",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Which availability statement about sulpiride is correct?",
+   "options": [
+    "It is marketed in the USA as Moban",
+    "It is marketed in India (for example Sulpitac 50/100/200 mg tablets) but is not approved in the USA",
+    "It is available in India only as an intravenous infusion",
+    "It has been banned worldwide since 2004"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi lists Indian sulpiride brands SULPITAC, AMIPRIDE and ZONAPRIDE in 50, 100 and 200 mg tablets, while Katzung notes the sulpiride group is not approved in the USA. Moban was molindone's brand, and the other two claims are false — sulpiride remains a marketed oral antipsychotic."
+  },
+  {
+   "id": "tap-sul-07",
+   "drugSlug": "sulpiride",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Which prolactin-related pairing is correct?",
+   "options": [
+    "Sulpiride lowers prolactin; aripiprazole raises it the most",
+    "Sulpiride and clozapine are both prolactin-sparing",
+    "The degree of prolactin rise reliably predicts better antipsychotic efficacy",
+    "Sulpiride raises prolactin strongly; aripiprazole may even lower it"
+   ],
+   "correctIndex": 3,
+   "explanation": "The benzamides and risperidone head the hyperprolactinaemia league — Katzung describes marked increases with sulpiride — whereas aripiprazole's partial agonism can leave prolactin normal or lowered. Clozapine is prolactin-sparing but sulpiride is not, and prolactin rise is a liability signal rather than an efficacy certificate."
+  },
+  {
+   "id": "tap-sul-08",
+   "drugSlug": "sulpiride",
+   "domain": "Active Recall",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Sulpiride shares its substituted-benzamide chemistry and D2/D3 selectivity with which congener?",
+   "options": [
+    "Clozapine",
+    "Haloperidol",
+    "Loxapine",
+    "Amisulpride"
+   ],
+   "correctIndex": 3,
+   "explanation": "Amisulpride is sulpiride's benzamide congener — Tripathi introduces it exactly that way, noting the shared D2 and D3 affinity and hyperprolactinaemia (amisulpride receives fuller treatment elsewhere in this series). Clozapine, haloperidol and loxapine belong to unrelated chemical families."
+  },
+  {
+   "id": "tap-mix-b09-01",
+   "drugSlug": "mixed",
+   "domain": "Active Recall",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "knowledge-graph",
+   "question": "Which four-way mapping across this batch's drugs is entirely correct?",
+   "options": [
+    "Pimozide — safest choice in congenital long QT; zuclopenthixol acetate — 2-4 weekly maintenance depot; molindone — worst weight gain; sulpiride — prolactin-sparing",
+    "Pimozide — Tourette tics with ECG duty; zuclopenthixol acetate — 24-72 h acute-agitation ester; molindone — least weight gain by classic teaching; sulpiride — marked hyperprolactinaemia",
+    "Loxapine — purely serotonergic with no D2 blockade; flupenthixol decanoate — 24-72 h acute ester; mesoridazine — current first choice for schizophrenia; cyamemazine — highest EPS of the batch",
+    "Thiothixene — thioxanthene with low EPS; pipothiazine — dihydroindolone; loxapine — metabolised to maprotiline; pimozide — benzamide chemistry"
+   ],
+   "correctIndex": 1,
+   "explanation": "Every anchor in one row: pimozide is the Tourette drug with mandatory ECG duty, zuclopenthixol acetate is the 24-72 hour acute ester (the decanoate is the maintenance depot), molindone is the classic least-weight-gain agent, and sulpiride is the batch's strongest prolactin elevator. Each rival row shifts a red flag onto the wrong drug — pimozide is contraindicated in congenital long QT, loxapine is a D2 blocker that yields amoxapine, flupenthixol decanoate runs on weeks, mesoridazine is withdrawn, cyamemazine is a low-EPS phenothiazine, thiothixene is high-EPS, pipothiazine is a phenothiazine, and pimozide is a diphenylbutylpiperidine."
+  }
+ ]
+}

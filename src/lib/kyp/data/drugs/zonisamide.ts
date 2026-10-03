@@ -819,6 +819,110 @@ export const zonisamide: Drug = {
       explanation: "For epilepsy adjunct: start 50 mg daily × 2 weeks, target 300-500 mg/day, maximum 600 mg/day. Increase by 50 mg at ≥ 2-week intervals to 300-500",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "mst-zns-01",
+      question: "Zonisamide's pharmacological identity is best captured by:",
+      options: [
+        "A sulfonamide-derived broad-spectrum anticonvulsant blocking voltage-gated sodium channels and T-type calcium currents, with weak carbonic-anhydrase inhibition",
+        "A benzisoxazole acting at SV2A synaptic vesicles",
+        "A phenyltriazine acting purely at AMPA receptors",
+        "A barbiturate derivative acting at the picrotoxin site of GABA-A receptors"
+      ],
+      correctIndex: 0,
+      explanation: "Zonisamide blocks sodium channels like carbamazepine and suppresses T-type calcium currents, with weak carbonic anhydrase inhibition inherited from its sulfonamide structure — Katzung details the sulfonamide chemistry and Tripathi notes maximal-electroshock and kindling activity without pentylenetetrazol antagonism. SV2A belongs to levetiracetam, the phenyltriazine is lamotrigine, and no barbiturate lineage exists.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "mst-zns-02",
+      question: "A 31-year-old with a documented severe rash from a sulfonamide antibiotic years ago needs an add-on anticonvulsant. A colleague suggests zonisamide. The correct caution is:",
+      options: [
+        "Sulfonamide allergy predicts only nausea with zonisamide, never rash",
+        "Avoid zonisamide — it is a sulfonamide derivative and is to be avoided in sulfonamide-sensitive patients",
+        "Zonisamide is chemically a sulfamate, so sulfa allergy is irrelevant",
+        "Zonisamide allergy cross-talk applies only to topical sulfonamides"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi's verdict is explicit — zonisamide is to be avoided in patients sensitive to sulfonamides — and Katzung reinforces that zonisamide is a sulfonamide (whereas topiramate is strictly a sulfamate) with potentially serious skin rashes among its adverse effects. This sulfa cross-reactivity is the classic trick question of the anticonvulsant chapter.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-zns-03",
+      question: "A 49-year-old on carbamazepine for focal seizures adds zonisamide 100 mg at night. Compared with the monotherapy literature, what should he expect?",
+      options: [
+        "Carbamazepine doubles zonisamide levels by blocking its acetylation",
+        "Zonisamide's half-life lengthens with carbamazepine to about ten days",
+        "Zonisamide's long half-life (about 1-3 days, quoted around 60 hours) still permits once-daily dosing, but carbamazepine's CYP3A4 induction shortens it — so the dose may need to be higher",
+        "Zonisamide's half-life is 6-8 hours regardless of co-medication, so twice-daily dosing is mandatory"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung gives zonisamide a 1-3 day half-life enabling once-daily dosing, and notes carbamazepine, phenytoin and phenobarbital induce CYP3A4 to increase zonisamide clearance and shorten that half-life — potentially requiring a dose increase. Zonisamide has no clinically significant effect on other antiseizure drugs' kinetics; the interaction runs one way only.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "mst-zns-04",
+      question: "A 27-year-old on zonisamide for refractory focal seizures reports two weeks of brief episodes of smelling burning rubber with no concurrent ictal EEG change, plus 4 kg weight loss. The most likely attribution is:",
+      options: [
+        "Topiramate, which is famous for olfactory hallucinations as its leading effect",
+        "Drug failure — the phenomena prove zonisamide is failing and the dose must double",
+        "A sinus infection causing anosmia, unrelated to any anticonvulsant",
+        "Zonisamide — olfactory hallucinations and psychotic phenomena are rarely reported, and weight loss is a recognised effect"
+      ],
+      correctIndex: 3,
+      explanation: "The KYP monograph lists olfactory hallucinations and psychosis as rare zonisamide phenomena, and Katzung adds drowsiness, cognitive impairment, renal stones and weight loss to its profile — so drug attribution with dose review comes before assuming treatment failure. Topiramate's signature is cognitive word-finding difficulty, not smell phenomena, and doubling a drug that may be causing psychosis would be unsafe.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-zns-05",
+      question: "A neurologist wants a broad-spectrum add-on for an adult with focal seizures evolving to bilateral tonic-clonic seizures who has failed two agents. Zonisamide is proposed. Which profile supports it?",
+      options: [
+        "Broad-spectrum efficacy (focal and generalized tonic-clonic seizures, with reports in some myoclonic epilepsies and infantile spasms) at 200-400 mg/day, maximum 600 mg/day",
+        "Efficacy confined to childhood absence seizures at 15 mg/kg/day",
+        "A first-line monotherapy for trigeminal neuralgia at 800 mg/day",
+        "An approved curative therapy for Lennox-Gastaut status"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung calls zonisamide broad-spectrum — focal and generalized tonic-clonic seizures in adults and children with reported benefit in some myoclonic epilepsies and infantile spasms — at maintenance doses of 200-400 mg/day (maximum 600). Absence first-line status belongs to ethosuximide and valproate, and trigeminal neuralgia is carbamazepine territory.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "mst-zns-06",
+      question: "Which interaction statement about zonisamide is correct?",
+      options: [
+        "Valproate and zonisamide are contraindicated together because they share carbonic-anhydrase activity",
+        "Enzyme-inducing anticonvulsants (carbamazepine, phenytoin, phenobarbital) shorten zonisamide's half-life, while zonisamide itself has no clinically significant effect on other antiseizure drugs' kinetics",
+        "Zonisamide potently inhibits CYP3A4 and doubles carbamazepine levels",
+        "Zonisamide doubles warfarin levels by protein-binding displacement"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung: inducers of CYP3A4 raise zonisamide clearance and shorten its half-life (the dose may need increasing), while zonisamide has no clinically significant pharmacokinetic effect on other antiseizure drugs. No inhibition, no warfarin displacement and no shared-carbonic-anhydrase contraindication exist in the literature.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-zns-07",
+      question: "The zonisamide-topiramate twin comparison — which row is book-accurate?",
+      options: [
+        "Neither drug inhibits carbonic anhydrase, and neither affects weight",
+        "Zonisamide causes weight gain while topiramate causes weight loss — a mirror pair",
+        "Zonisamide is a sulfonamide; topiramate is strictly a sulfamate — both inhibit carbonic anhydrase, both cause weight loss, and both rarely cause kidney stones and oligohidrosis",
+        "Zonisamide is a sulfamate and topiramate a sulfonamide — and only topiramate causes weight loss"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung draws the distinction explicitly: zonisamide is a sulfonamide, topiramate contains the same sulfonamide structure but is strictly a sulfamate; both share carbonic-anhydrase inhibition (like acetazolamide), weight loss, and rare kidney stones and oligohidrosis. Weight loss on zonisamide is real, so the gain-versus-loss mirror is the trap.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "mst-zns-08",
+      question: "Which Indian zonisamide facts are correct?",
+      options: [
+        "ZONISEP 400 mg SR once monthly for refractory focal seizures",
+        "ZONIT is the Indian brand of zidovudine for HIV",
+        "Indian zonisamide starts at 600 mg/day with weekly doubling",
+        "ZONISEP, ZONICARE and ZONIT 50/100 mg capsules, dosed 25-100 mg BD, not to be given to children"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists zonisamide as ZONISEP, ZONICARE and ZONIT 50 and 100 mg capsules at 25-100 mg BD with an explicit paediatric caution. Katzung's adult maintenance range is 200-400 mg/day (maximum 600); the monthly SR product and the zidovudine attribution are inventions.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

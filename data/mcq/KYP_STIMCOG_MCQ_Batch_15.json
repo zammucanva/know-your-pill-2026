@@ -1,0 +1,1848 @@
+{
+ "batch": "kyp-stimcog-mcq-batch-15",
+ "title": "Stimulant & Cognition MCQ Batch 15 - Amphetamines, methylphenidate, modafinil class, AChE inhibitors, memantine",
+ "generated": "2026-10-02",
+ "examOrientation": "Indian exams (NEET PG / INI-CET) + USMLE-style vignettes",
+ "textbookAnchors": "Facts aligned with Katzung Basic & Clinical Pharmacology 14e (ch.9 sympathomimetics incl. the monoamine-transporter figure separating releasers from reuptake blockers, the weak-base urinary-trapping figure, and the controlled-substances table listing amphetamines/methylphenidate/lisdexamfetamine in Schedule II and modafinil/armodafinil in Schedule IV; the CNS-stimulant therapeutic-uses passage on ADHD and narcolepsy; the Alzheimer passage crediting tacrine as the first beneficial agent, replaced for hepatic toxicity by donepezil/rivastigmine/galantamine, plus memantine's use-dependent noncompetitive NMDA blockade), K.D. Tripathi Essentials of Medical Pharmacology 7e (CNS-stimulant entries for methylphenidate, modafinil, armodafinil and pemoline; the cognition-enhancer entries with Indian brands RETALIN, MODALERT/PROVAKE, DONECEPT, GALAMER, EXELON/RIVAMER, ADMENTA/MENTADEM/ALMANTIN; tacrine/edrophonium anionic-site binding; rivastigmine carbamate enzyme inhibition up to 10 h despite 2 h plasma t-half), and USMLE board conventions; cross-checked against KYP monographs (amphetamine releaser-vs-methylphenidate blocker distinction; lisdexamfetamine prodrug anti-abuse design with the only FDA binge-eating-disorder label; cardiac screening before stimulants and growth/weight monitoring; modafinil CYP3A4 induction causing oral-contraceptive failure plus CYP2C19 inhibition, serious rash warning and Schedule IV status; armodafinil R-enantiomer later-Tmax logic; pemoline and tacrine as the hepatotoxicity twins; donepezil bradycardia with beta-blockers; rivastigmine Parkinson's-disease-dementia niche and patch tolerability; galantamine dual nicotinic allosteric mechanism; memantine clean cardiac profile and renal dose adjustment; staging AChE inhibitors for mild-moderate vs memantine addition for moderate-severe disease). No copyrighted text reproduced.",
+ "schema": {
+  "core_fields": "id, question, options[4], correctIndex, explanation, afterSectionId - IDENTICAL to KYP microQuizzes",
+  "metadata_fields": "drugSlug, domain, difficulty (Foundation|Clinical|Advanced), style (vignette|recall) - batch extras",
+  "notes": [
+   "afterSectionId values are real section ids observed live on KYP pages: top, quick-facts, mechanism, timeline, neurotransmitters, neural-pathways, knowledge-graph, high-yield-summary.",
+   "Answer positions deliberately spread: A27 B26 C26 D26 (see stats.answerSpread).",
+   "QA gate: this batch passed scripts/mcq_4step_check.py after extending the fact table with stimulant/cognition-agent data.",
+   "id pattern: stm-<code>-01..08 per drug (amp/dex/ldx/mph/dmp/mod/arm/pem/don/gal/riv/tac/mem) + one stm-mix-01 class-summary at the end."
+  ]
+ },
+ "stats": {
+  "total": 105,
+  "byDrug": {
+   "amphetamine": 8,
+   "dexamphetamine": 8,
+   "lisdexamfetamine": 8,
+   "methylphenidate": 8,
+   "dexmethylphenidate": 8,
+   "modafinil": 8,
+   "armodafinil": 8,
+   "pemoline": 8,
+   "donepezil": 8,
+   "galantamine": 8,
+   "rivastigmine": 8,
+   "tacrine": 8,
+   "memantine": 8,
+   "mixed": 1
+  },
+  "byDifficulty": {
+   "Foundation": 26,
+   "Advanced": 22,
+   "Clinical": 57
+  },
+  "byStyle": {
+   "recall": 48,
+   "vignette": 57
+  },
+  "byDomain": {
+   "Mechanism & Neuroscience": 19,
+   "Pharmacokinetics": 15,
+   "Clinical Uses": 29,
+   "Adverse Effects & Safety": 23,
+   "Drug Interactions": 4,
+   "Exam Pearls": 11,
+   "Indian Practice": 3,
+   "Active Recall": 1
+  },
+  "answerSpread": {
+   "0": 27,
+   "1": 26,
+   "2": 26,
+   "3": 26
+  }
+ },
+ "questions": [
+  {
+   "id": "stm-amp-01",
+   "drugSlug": "amphetamine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The most accurate statement of amphetamine's central mechanism (Katzung's transporter framework) is:",
+   "options": [
+    "It reverses DAT and NET to push dopamine and noradrenaline out of the terminal and is a VMAT2 substrate that displaces amines from vesicles \u2014 an indirect releaser",
+    "It purely blocks DAT/NET reuptake without any effect on vesicular storage",
+    "It directly stimulates postsynaptic dopamine D2 receptors as a full agonist",
+    "It inhibits MAO-A within the synaptic cleft as its principal action"
+   ],
+   "correctIndex": 0,
+   "explanation": "Amphetamine enters the terminal via the transporters, reverses DAT/NET flux and, as a VMAT2 substrate, displaces stored monoamines into the cytosol for outward release \u2014 the classic indirect-acting displacer in Katzung's monoamine-transporter figure. Pure reuptake blockade without releaser activity is methylphenidate's and cocaine's signature, not amphetamine's; direct D2 agonism is bromocriptine-style pharmacology, and MAO inhibition is a minor auxiliary action at most."
+  },
+  {
+   "id": "stm-amp-02",
+   "drugSlug": "amphetamine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "A patient who has ingested a large dose of amphetamine is found to have strongly acidic urine. How does this affect elimination?",
+   "options": [
+    "Alkalinization would be required to achieve the same trapping effect",
+    "Acidification ionizes the weak-base amphetamine in the renal tubule, trapping it there and accelerating its urinary excretion",
+    "Urinary pH has no effect because amphetamine is almost completely protein-bound",
+    "Acidification increases reabsorption because only ionized drug crosses tubular membranes"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung's weak-base trapping figure uses methamphetamine/amphetamine as its example: in acidic urine the amine ionizes, the ionized fraction cannot diffuse back across the tubular membrane, and excretion is accelerated. Ionized drug is the NON-diffusible form, so option D inverts the principle; alkalinization would do the opposite; and pH trapping matters precisely because the drug is largely unbound and handled by pH-sensitive passive reabsorption."
+  },
+  {
+   "id": "stm-amp-03",
+   "drugSlug": "amphetamine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 14-year-old boy with severe ADHD is about to start an amphetamine-class or methylphenidate regimen. Which pre-treatment assessment is specifically emphasized before prescribing stimulants?",
+   "options": [
+    "Routine EEG to exclude subclinical epilepsy",
+    "Baseline serum prolactin and liver function tests",
+    "Careful cardiac history and examination with baseline blood pressure and heart rate, because stimulants raise both and structural cardiac disease raises sudden-death concern",
+    "Echocardiography is mandatory in every child before any ADHD drug"
+   ],
+   "correctIndex": 2,
+   "explanation": "The KYP ADHD safety anchor: screen with cardiac history, examination and baseline BP/HR before starting stimulants \u2014 raised BP and HR are real sympathomimetic effects and structural cardiac disease is the concern behind rare sudden-death reports. EEG is not routine, stimulants are not prolactin-raising agents, and echocardiography is reserved for abnormal findings rather than universal."
+  },
+  {
+   "id": "stm-amp-04",
+   "drugSlug": "amphetamine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A narcolepsy patient is choosing between amphetamine-class treatment and modafinil. Katzung's comparative point favouring modafinil in this condition is:",
+   "options": [
+    "Modafinil is a more potent dopamine releaser than amphetamine",
+    "Amphetamine has no CNS effects at narcolepsy doses",
+    "Modafinil is Schedule II while amphetamine is unscheduled",
+    "Modafinil is claimed to have fewer disadvantages than amphetamine in narcolepsy \u2014 less excessive mood change, less insomnia and lower abuse potential"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung's narcolepsy note describes modafinil as a new amphetamine substitute claimed to have fewer disadvantages (excessive mood changes, insomnia, and abuse potential) than amphetamine in this condition. The releaser-potency claim is backwards, amphetamine is the prototypical CNS stimulant at therapeutic doses, and the schedules are the reverse of option C \u2014 amphetamine sits in Schedule II, modafinil in Schedule IV."
+  },
+  {
+   "id": "stm-amp-05",
+   "drugSlug": "amphetamine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 19-year-old who has been escalating dexamphetamine doses recreationally is brought in paranoid, with stereotyped repetitive behaviour and skin-picking. The best pharmacological explanation is:",
+   "options": [
+    "High-dose amphetamine intoxication can produce an amphetamine psychosis with stereotypy that closely mimics acute paranoid schizophrenia",
+    "He has developed catatonia from dopamine depletion",
+    "These are anticholinergic toxidrome features from tablet adulterants",
+    "This is a noradrenaline-withdrawal state from abrupt dose reduction"
+   ],
+   "correctIndex": 0,
+   "explanation": "Chronic high-dose amphetamine produces a dopaminergic psychosis with paranoia, stereotypy and formication \u2014 the classic examination contrast with schizophrenia. Withdrawal more typically yields fatigue, hypersomnia and depression rather than florid paranoia, the anticholinergic toxidrome shows dry skin, mydriasis and delirium instead of stereotypy, and catatonia is not the expected stimulant picture."
+  },
+  {
+   "id": "stm-amp-06",
+   "drugSlug": "amphetamine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The constellation of common peripheral and metabolic adverse effects of chronic amphetamine therapy is best captured as:",
+   "options": [
+    "Cough, peripheral oedema and hyperkalaemia",
+    "Raised blood pressure and heart rate, insomnia, appetite suppression with weight loss, and childhood growth slowing",
+    "Hypotension, hypersomnia, weight gain and prolactin elevation",
+    "Sedation, constipation, urinary retention and blurred vision"
+   ],
+   "correctIndex": 1,
+   "explanation": "As an indirect sympathomimetic, amphetamine raises BP and heart rate, disrupts sleep, suppresses appetite and can slow childhood growth \u2014 hence monitoring of vitals, weight and height, with drug holidays a debated option. Option C is a mirror-image antisympathomimetic picture, option D is the anticholinergic toxidrome, and option A borrows unrelated cardiovascular-renal liabilities."
+  },
+  {
+   "id": "stm-amp-07",
+   "drugSlug": "amphetamine",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A woman on phenelzine for atypical depression asks about starting an amphetamine-based ADHD agent. The correct counselling is:",
+   "options": [
+    "The interaction matters only with reversible MAO-A inhibitors such as moclobemide",
+    "The combination is safe if the amphetamine dose is taken at night",
+    "Combining amphetamines with an MAO inhibitor is contraindicated \u2014 the releaser action on a MAO-blocked terminal risks severe hypertensive crisis and hyperthermia",
+    "Only the d-isomer interacts with MAO inhibitors"
+   ],
+   "correctIndex": 2,
+   "explanation": "Amphetamine is an indirect sympathomimetic releaser; MAO blockade prevents breakdown of the catecholamines it liberates, so the pair is a classic hypertensive-crisis and hyperthermia contraindication shared with tyramine. Dose timing and enantiomer choice do not rescue the interaction, and the risk is not confined to any one MAO inhibitor type \u2014 sympathomimetic avoidance is blanket policy."
+  },
+  {
+   "id": "stm-amp-08",
+   "drugSlug": "amphetamine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A prescription audit asks which of these are formal therapeutic uses of amphetamine-class stimulants today:",
+   "options": [
+    "General stay-awake use in healthy students before examinations",
+    "Substitution treatment of opioid and alcohol dependence",
+    "Obesity and depression as first-line agents",
+    "ADHD and narcolepsy"
+   ],
+   "correctIndex": 3,
+   "explanation": "Amphetamine-class agents are anchored to ADHD and narcolepsy \u2014 the therapeutic pair Katzung lists for the CNS-active sympathomimetics. Appetite suppression never delivered proven long-term weight control and Tripathi bars their use for depression, dementia, obesity or keeping healthy people awake; they carry abuse potential rather than treating dependence, which is naltrexone and buprenorphine territory."
+  },
+  {
+   "id": "stm-dex-01",
+   "drugSlug": "dexamphetamine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Dexamphetamine differs from the racemic amphetamine mixture pharmacologically because:",
+   "options": [
+    "The d-isomer is the more potent CNS dopaminergic isomer, giving stronger central psychostimulant action per milligram than the l-isomer",
+    "The l-isomer is the more potent central dopaminergic isomer",
+    "The two isomers act on entirely different receptor families",
+    "Dexamphetamine is an inactive prodrug requiring amine oxidation"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung states plainly that amphetamine's d-isomer is more potent than the l-isomer, which is why dexamphetamine is the high-potency central agent of the family \u2014 option B is the deliberate mirror. The isomers differ in degree, not in receptor identity, and dexamphetamine is the active parent molecule rather than a prodrug; the prodrug in this set is lisdexamfetamine."
+  },
+  {
+   "id": "stm-dex-02",
+   "drugSlug": "dexamphetamine",
+   "domain": "Clinical Uses",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 30-year-old woman with narcolepsy has severe daytime sleep attacks plus distinct cataplexy triggered by laughter. The most defensible pharmacological plan is:",
+   "options": [
+    "Modafinil for cataplexy and dexamphetamine for the nocturnal sleep paralysis",
+    "A wake-promoting/stimulant drug for daytime sleepiness (dexamphetamine or modafinil class) plus an anticataplectic agent such as an SSRI/SNRI or sodium oxybate",
+    "Dexamphetamine alone, because boosting dopamine abolishes cataplexy as well",
+    "Caffeine tablets for sleepiness and clonazepam for cataplexy"
+   ],
+   "correctIndex": 1,
+   "explanation": "Narcolepsy plans split the targets: stimulants (dexamphetamine class, modafinil) treat excessive daytime sleepiness, whereas cataplexy \u2014 a REM-intrusion phenomenon \u2014 needs a REM-suppressing SSRI/SNRI (venlafaxine is the classic choice) or sodium oxybate. Dopamine-driven stimulants do not directly control cataplexy, caffeine is far too weak for sleep attacks, and option B swaps the two drugs' actual roles."
+  },
+  {
+   "id": "stm-dex-03",
+   "drugSlug": "dexamphetamine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which oral dose range matches Tripathi's listing for dexamphetamine in adults?",
+   "options": [
+    "2.5-5 mg",
+    "25 mg three times daily",
+    "5-10 mg",
+    "100-200 mg"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi's dose box lists dexamphetamine at 5-10 mg orally (amphetamine 5-15 mg) \u2014 the low milligram figures typical of a high-potency releaser. The 100-200 mg range belongs to modafinil dosing, and 25 mg three times daily is not any standard oral psychostimulant regimen, while 2.5-5 mg is dexmethylphenidate's starting scale rather than dexamphetamine's."
+  },
+  {
+   "id": "stm-dex-04",
+   "drugSlug": "dexamphetamine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A narcolepsy patient on dexamphetamine reports difficulty falling asleep and 4 kg weight loss over 3 months. The most appropriate adjustments are:",
+   "options": [
+    "Double the evening dose to consolidate daytime stability",
+    "Add a benzodiazepine at night as routine co-prescription",
+    "Stop all stimulants permanently since these effects signal hepatotoxicity",
+    "Move the last dose earlier in the day, avoid evening dosing, and reinforce calorie-dense meals plus weight monitoring \u2014 insomnia and anorexia are classic dose-related sympathomimetic effects"
+   ],
+   "correctIndex": 3,
+   "explanation": "Insomnia and appetite suppression track the sympathomimetic action and the drug's presence in plasma, so shifting dosing earlier and supporting nutrition is the standard response; Tripathi even notes that starvation from appetite suppression acidifies urine and accelerates amphetamine loss. Routine nightly benzodiazepines breed dependence, these effects have nothing to do with the liver, and escalating evening dosing would worsen the insomnia."
+  },
+  {
+   "id": "stm-dex-05",
+   "drugSlug": "dexamphetamine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Dexamphetamine's two core established indications in psychiatric-neurology practice are:",
+   "options": [
+    "ADHD and narcolepsy",
+    "Generalized anxiety disorder and panic disorder",
+    "Restless legs syndrome and periodic limb movement disorder",
+    "Migraine prophylaxis and tension headache"
+   ],
+   "correctIndex": 0,
+   "explanation": "Like the whole amphetamine family, dexamphetamine is anchored to ADHD and narcolepsy \u2014 the two conditions for which CNS-stimulant benefit is firmly established in Katzung's therapeutic-uses section. Stimulants are activating and can aggravate anxiety states, have no established headache role, and restless-legs therapy runs through dopamine agonists, alpha-2-delta ligands and iron rather than releasers."
+  },
+  {
+   "id": "stm-dex-06",
+   "drugSlug": "dexamphetamine",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A patient brings two US prescriptions: one for mixed amphetamine salts (Adderall) and one for Dexedrine. What is the accurate distinction?",
+   "options": [
+    "Adderall is Schedule IV while Dexedrine is Schedule II",
+    "Adderall is a fixed mixture of amphetamine sulfate, amphetamine aspartate, dextroamphetamine sulfate and dextroamphetamine saccharate, while Dexedrine is dextroamphetamine alone",
+    "Adderall is pure dextroamphetamine and Dexedrine is a four-salt mixture",
+    "Both contain methamphetamine as the active ingredient"
+   ],
+   "correctIndex": 1,
+   "explanation": "Katzung's preparations table lists Adderall as the 1:1:1:1 amphetamine salt mixture and Dexedrine as dextroamphetamine \u2014 the exam-relevant distinction between mixed-salt and single-enantiomer products. Option D swaps the two, methamphetamine (Desoxyn) is a separate drug entirely, and both products sit firmly in Schedule II, not IV."
+  },
+  {
+   "id": "stm-dex-07",
+   "drugSlug": "dexamphetamine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 40-year-old with treatment-resistant daytime hypersomnolence asks why his physician prefers dexamphetamine over pep pills like caffeine. The pharmacological answer is:",
+   "options": [
+    "Caffeine acts identically but is absorbed more slowly",
+    "Caffeine is contraindicated in adults under 50 years of age",
+    "Amphetamines release stored noradrenaline and dopamine centrally at therapeutic doses, producing far more powerful and sustained arousal than the adenosine-receptor antagonism of caffeine",
+    "Dexamphetamine works by blocking adenosine A1 receptors more potently than caffeine"
+   ],
+   "correctIndex": 2,
+   "explanation": "The two wake-promoters sit on different mechanisms: amphetamine is an indirect monoamine releaser driving central dopamine and noradrenaline, whereas caffeine antagonizes adenosine receptors \u2014 a much milder arousal effect. Option A is false since both are rapidly absorbed, option C transplants adenosine pharmacology onto dexamphetamine, and option D's age restriction is a fabricated rule."
+  },
+  {
+   "id": "stm-dex-08",
+   "drugSlug": "dexamphetamine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which statement about the amphetamine enantiomer family is CORRECT for examinations?",
+   "options": [
+    "The l-isomer of amphetamine is the preferred ADHD agent",
+    "Methamphetamine is pharmacologically inert and used only as a decongestant precursor",
+    "Dexamphetamine is the l-enantiomer of amphetamine sulfate",
+    "Dexamphetamine (d-isomer) is the more potent central psychostimulant, and methamphetamine has an even higher central-to-peripheral action ratio"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung notes the d-isomer's greater potency and methamphetamine's even higher ratio of central to peripheral actions \u2014 the two enantiomer-potency pearls of the family. Option A inverts the pearl, option C ignores methamphetamine's potent CNS abuse profile (Desoxyn even carries ADHD/narcolepsy labels in the US), and option D mislabels dexamphetamine as the levo isomer."
+  },
+  {
+   "id": "stm-ldx-01",
+   "drugSlug": "lisdexamfetamine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Lisdexamfetamine's relationship to dexamphetamine is best described as:",
+   "options": [
+    "A covalent L-lysine amide prodrug of dexamphetamine that must be enzymatically hydrolysed before any amphetamine action appears",
+    "The active d-enantiomer of dexamphetamine itself",
+    "A peripherally restricted form that never enters the CNS",
+    "A competitive antagonist at the dopamine transporter"
+   ],
+   "correctIndex": 0,
+   "explanation": "Lisdexamfetamine (Vyvanse) is dexamphetamine coupled to L-lysine; enzymatic hydrolysis \u2014 chiefly in red blood cells \u2014 liberates the active dexamphetamine, so the parent compound is pharmacologically inert until cleaved. Option B describes dexamphetamine and inverts the prodrug logic, the molecule does reach the CNS after conversion, and transporter antagonism is methylphenidate's mechanism."
+  },
+  {
+   "id": "stm-ldx-02",
+   "drugSlug": "lisdexamfetamine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 32-year-old woman with moderate-to-severe binge-eating disorder (weekly binge episodes for 2 years, no purging) fails structured CBT. Which single FDA-approved pharmacotherapy is designed for this indication?",
+   "options": [
+    "Donepezil 10 mg",
+    "Lisdexamfetamine \u2014 the only FDA-approved drug for binge-eating disorder",
+    "Methylphenidate OROS",
+    "Modafinil 200 mg"
+   ],
+   "correctIndex": 1,
+   "explanation": "Lisdexamfetamine carries the unique binge-eating-disorder label layered on its ADHD indication \u2014 the signature examination fact for this prodrug. Methylphenidate and modafinil are wake/attention agents with no BED approval, and donepezil is a cholinesterase inhibitor for Alzheimer's disease, an obviously unrelated class here."
+  },
+  {
+   "id": "stm-ldx-03",
+   "drugSlug": "lisdexamfetamine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Compared with immediate-release dexamphetamine, lisdexamfetamine's clinical PK profile shows:",
+   "options": [
+    "A faster, sharper peak because the prodrug is absorbed through the sublingual route",
+    "Identical onset since conversion is instantaneous in gastric acid",
+    "A slower onset because enzymatic conversion is rate-limiting, with a smoother, longer axis of effect from gradual dexamphetamine liberation",
+    "No detectable dexamphetamine levels at all after oral dosing"
+   ],
+   "correctIndex": 2,
+   "explanation": "Because hydrolysis \u2014 not absorption \u2014 is the rate-limiting step, lisdexamfetamine reaches its amphetamine effect gradually, smoothing the peak and extending coverage versus immediate-release dexamphetamine. Gastric acid does not cleave the amide instantly, the product is swallowed rather than sublingual, and the whole point of the design is measurable dexamphetamine exposure after conversion."
+  },
+  {
+   "id": "stm-ldx-04",
+   "drugSlug": "lisdexamfetamine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A pharmacy resident argues that because lisdexamfetamine is a prodrug with low abuse liability, it should be dispensed without controlled-substance paperwork. The correct position is:",
+   "options": [
+    "Prodrugs are legally exempt from controlled-substance schedules",
+    "It is Schedule IV like modafinil",
+    "Its abuse liability equals that of intranasal methamphetamine",
+    "Lisdexamfetamine remains a Schedule II amphetamine product \u2014 the prodrug design blunts but does not abolish abuse liability"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung's controlled-substances table lists lisdexamfetamine (Vyvanse) among the Schedule II stimulants alongside the amphetamine salts and methylphenidate; lower misuse potential is a relative pharmacokinetic advantage, not a legal exemption. Schedule IV is the modafinil/armodafinil tier, and option C absurdly overstates rather than understates the risk."
+  },
+  {
+   "id": "stm-ldx-05",
+   "drugSlug": "lisdexamfetamine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Lisdexamfetamine's two formal indications (US label) are:",
+   "options": [
+    "ADHD and binge-eating disorder",
+    "ADHD and obesity",
+    "Depression and binge-eating disorder",
+    "Narcolepsy and obesity"
+   ],
+   "correctIndex": 0,
+   "explanation": "The label pairs ADHD with moderate-to-severe binge-eating disorder \u2014 the second indication being the examination's favourite lisdexamfetamine pearl. Narcolepsy belongs to the amphetamine/methylphenidate/modafinil labels, obesity is precisely what the appetite-suppressant effect was never approved to treat, and depression is not a stimulant label."
+  },
+  {
+   "id": "stm-ldx-06",
+   "drugSlug": "lisdexamfetamine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 26-year-old starts lisdexamfetamine 30 mg for binge-eating disorder and calls about a racing heart, dry mouth and poor sleep. The correct framing of these effects is:",
+   "options": [
+    "They confirm serotonin syndrome needing cyproheptadine",
+    "They are expected amphetamine-class sympathomimetic effects managed by dose timing and monitoring, not reasons to add new drugs for each symptom",
+    "They indicate the prodrug has failed and immediate-release dexamphetamine should be substituted",
+    "They are allergen-specific reactions requiring an adrenaline auto-injector"
+   ],
+   "correctIndex": 1,
+   "explanation": "Conversion to dexamphetamine means the full class signature \u2014 tachycardia, dry mouth, insomnia, anorexia \u2014 applies; the prodrug smooths but does not remove sympathomimetic effects, so timing, titration and monitoring come first. Switching to immediate-release dexamphetamine would sharpen rather than soften these effects, and allergic-anaphylaxis or serotonin-syndrome framings are pharmacologically wrong for a stimulant."
+  },
+  {
+   "id": "stm-ldx-07",
+   "drugSlug": "lisdexamfetamine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A test question pairs intranasal dexamphetamine (rapid euphoric bolus) with intranasal lisdexamfetamine (markedly blunted euphoria). The PK principle demonstrated is:",
+   "options": [
+    "Intranasal administration eliminates first-pass metabolism and therefore always abolishes euphoria",
+    "The prodrug is absorbed more quickly intranasally, giving an even higher peak",
+    "Prodrug conversion by enzymatic hydrolysis is route-independent and rate-limiting, so the misuse route cannot create the rapid amphetamine spike that drives reinforcement",
+    "Nasal mucosa converts lisdexamfetamine to lysine, which is an active euphoriant"
+   ],
+   "correctIndex": 2,
+   "explanation": "The lisdexamfetamine lesson is that the rate-limiting hydrolysis step follows the molecule wherever it goes, so even bypassing gut absorption yields a slow amphetamine rise \u2014 the pharmacokinetic basis of its lower abuse liability. The lysine fragment is inert, bypassing first-pass metabolism would if anything favour euphoria, and a higher peak is exactly what the design prevents."
+  },
+  {
+   "id": "stm-ldx-08",
+   "drugSlug": "lisdexamfetamine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The examination rationale for teaching lisdexamfetamine is best summarised as:",
+   "options": [
+    "It is the only stimulant exempt from pregnancy warnings",
+    "It blocks both DAT and VMAT2 irreversibly",
+    "It is a direct nicotinic receptor agonist with orexin action",
+    "It is the stimulant family's prodrug \u2014 enzymatic hydrolysis gives slower onset, blunted euphoria and lower abuse liability, and it is the only FDA-approved drug for binge-eating disorder"
+   ],
+   "correctIndex": 3,
+   "explanation": "The teachable core is the prodrug concept: L-lysine amide, rate-limiting hydrolysis, blunted euphoria and reduced abuse liability, plus the unique binge-eating-disorder label. The prodrug is still a Schedule II amphetamine product rather than pregnancy-privileged, irreversible transporter/VMAT2 blockade describes no clinical drug here, and nicotinic-orexin pharmacology belongs to galantamine and orexin agents respectively."
+  },
+  {
+   "id": "stm-mph-01",
+   "drugSlug": "methylphenidate",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The precise mechanistic contrast between methylphenidate and amphetamine (Katzung's transporter framework) is:",
+   "options": [
+    "Methylphenidate blocks DAT/NET-mediated reuptake of released transmitter, while amphetamine reverses the transporters and displaces vesicular stores as a releaser",
+    "Methylphenidate directly agonizes D1 receptors while amphetamine agonizes D2",
+    "Methylphenidate is a vesicular releaser while amphetamine blocks reuptake",
+    "Both are equally potent VMAT2 substrates"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung's monoamine-transporter figure places methylphenidate with cocaine as a reuptake blocker and amphetamine as the substrate-displacer (releaser) \u2014 the releaser-versus-blocker distinction is this batch's headline mechanism pearl. Option C swaps the labels exactly as examinations love to test, VMAT2 substrate activity is amphetamine's privilege, and neither drug acts as a direct receptor agonist."
+  },
+  {
+   "id": "stm-mph-02",
+   "drugSlug": "methylphenidate",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 9-year-old on immediate-release methylphenidate is fine at school but explosively irritable and hungry at 4 pm, before the next dose. The phenomenon and remedy are:",
+   "options": [
+    "Paradoxical intoxication \u2014 double the afternoon dose",
+    "Wear-off/rebound as the short half-life effect fades \u2014 switch to an extended-release system such as the OROS osmotic pump or adjust dose timing",
+    "Growth-hormone deficiency \u2014 start an endocrine workup first",
+    "Serotonin discontinuation syndrome \u2014 add fluoxetine"
+   ],
+   "correctIndex": 1,
+   "explanation": "Methylphenidate's short plasma half-life (Tripathi 7e: 4-6 h, with the central effect lasting longer but still fading by late afternoon) produces the classic wear-off rebound of irritability and hunger; sustained-release systems such as OROS smooth the coverage. Doubling the dose worsens evening insomnia, SSRIs answer a different neurotransmitter story, and growth deceleration is a separate monitored issue rather than the driver of late-afternoon swings."
+  },
+  {
+   "id": "stm-mph-03",
+   "drugSlug": "methylphenidate",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "Tripathi ranks methylphenidate ahead of amphetamine for childhood ADHD mainly because:",
+   "options": [
+    "It has a longer half-life than any amphetamine product",
+    "It is not a scheduled/controlled substance",
+    "It causes less tachycardia and less growth retardation at effective ADHD doses",
+    "It is a more potent dopamine releaser"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi's verdict \u2014 superior to amphetamine for ADHD because of lesser tachycardia and growth retardation, with behaviour and learning improved in about 3 of 4 children \u2014 explains methylphenidate's first-line status. It is mechanistically a reuptake blocker rather than a stronger releaser, its half-life is short rather than long, and it is as firmly Schedule II as amphetamine in the US."
+  },
+  {
+   "id": "stm-mph-04",
+   "drugSlug": "methylphenidate",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Beyond ADHD, the other classic established indication for methylphenidate is:",
+   "options": [
+    "Migraine prophylaxis",
+    "Obsessive-compulsive disorder",
+    "Alzheimer's disease dementia",
+    "Narcolepsy"
+   ],
+   "correctIndex": 3,
+   "explanation": "The two standing indications of methylphenidate are ADHD and narcolepsy \u2014 the same pair as the amphetamine family. Tripathi explicitly warns against employing it for depression, dementia or obesity, OCD belongs to SSRI/SRI territory, and migraine prophylaxis runs through beta-blockers, amitriptyline, topiramate and CGRP agents."
+  },
+  {
+   "id": "stm-mph-05",
+   "drugSlug": "methylphenidate",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A mother notes her 10-year-old on methylphenidate has crossed two percentile lines downward in weight and height. The evidence-based response is:",
+   "options": [
+    "Monitor height/weight charting, optimise calories and dose timing, and consider dose reduction or drug holidays \u2014 though the benefit of holidays is debated",
+    "Only pemoline causes growth suppression among ADHD drugs",
+    "Growth suppression is irreversible and mandates immediate permanent discontinuation",
+    "Stimulants actually accelerate growth, so the chart is an error"
+   ],
+   "correctIndex": 0,
+   "explanation": "Growth and weight suppression is a real, monitored stimulant effect; the standard response is charting, nutritional support and dose/timing adjustment, with drug holidays an option whose benefit is debated in current evidence. Panic discontinuation is unwarranted, the effect runs the opposite way to acceleration claims, and growth slowing is shared across the stimulant class rather than unique to pemoline."
+  },
+  {
+   "id": "stm-mph-06",
+   "drugSlug": "methylphenidate",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 16-year-old is found to have mild aortic stenosis during ADHD evaluation. How should this shape stimulant prescribing?",
+   "options": [
+    "Only modafinil is contraindicated in structural cardiac disease",
+    "Structural cardiac disease is a specific caution for methylphenidate/amphetamine therapy \u2014 obtain cardiology input, record baseline BP/HR, and avoid or use great caution with stimulants",
+    "Cardiac disease is irrelevant because stimulants have no cardiovascular effects",
+    "Stimulants are the drugs of choice in aortic stenosis"
+   ],
+   "correctIndex": 1,
+   "explanation": "The KYP safety anchor: stimulants raise BP and heart rate, and structural cardiac disease is the setting for the rare sudden-death concerns \u2014 hence cardiac screening before starting and cardiology input when disease is found. Option C denies real sympathomimetic haemodynamics, option D inverts the truth, and modafinil's mild pressor effect does not make it uniquely contraindicated."
+  },
+  {
+   "id": "stm-mph-07",
+   "drugSlug": "methylphenidate",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which formulation/half-life pairing for methylphenidate is CORRECT?",
+   "options": [
+    "Immediate-release requires 6-hourly dosing day and night",
+    "OROS capsules must be taken four times daily to work",
+    "Plasma t-half about 4-6 h (Tripathi) with the central effect outlasting it \u2014 IR tablets need morning and noon dosing, OROS gives once-daily cover, and a transdermal patch exists",
+    "Plasma t-half about 40 h, allowing thrice-weekly dosing"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi's 4-6 h plasma half-life with a longer central effect is why IR methylphenidate is dosed morning and noon (children 0.25-1 mg/kg/day; adults 5-10 mg BD), while OROS (Concerta) and a Daytrana-type patch exist precisely to extend the short-PK cover. A 40 h half-life is fantasy, and options A and B misstate the very dosing schedules those formulations were designed to fix."
+  },
+  {
+   "id": "stm-mph-08",
+   "drugSlug": "methylphenidate",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "An Indian postgraduate lists the ADHD options actually available in India. Which statement is accurate?",
+   "options": [
+    "Adderall and Dexedrine are the standard first-line ADHD drugs in India",
+    "Methylphenidate is banned in India",
+    "Lisdexamfetamine has been the mainstay of Indian ADHD care since 1990",
+    "Methylphenidate (RETALIN) is marketed in India in 5/10/20/30 mg tablets and is the classic ADHD mainstay, while amphetamine/dexamphetamine products have no standard Indian ADHD role"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi lists RETALIN 5, 10, 20, 30 mg as the Indian methylphenidate brand, and Indian ADHD practice centres on methylphenidate (plus atomoxetine), with amphetamine-class products lacking a standard role here. Options A and C import US-market products into India, and option B is the opposite of the actual availability."
+  },
+  {
+   "id": "stm-dmp-01",
+   "drugSlug": "dexmethylphenidate",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Dexmethylphenidate is defined as:",
+   "options": [
+    "The d-threo enantiomer \u2014 the pharmacologically active half of racemic methylphenidate, marketed alone",
+    "A long-acting ester prodrug of methylphenidate",
+    "A threo-isomer of amphetamine",
+    "The l-threo enantiomer of methylphenidate"
+   ],
+   "correctIndex": 0,
+   "explanation": "Dexmethylphenidate (Focalin) isolates the d-threo isomer that carries essentially all of racemic methylphenidate's activity \u2014 the same single-active-enantiomer logic as escitalopram. Option D picks the near-inactive mirror, option B invents a prodrug (the prodrug in this batch is lisdexamfetamine), and the threo label belongs to the phenidate family, not amphetamine."
+  },
+  {
+   "id": "stm-dmp-02",
+   "drugSlug": "dexmethylphenidate",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A patient stable on racemic methylphenidate IR 20 mg daily (10 mg twice daily) switches to dexmethylphenidate. The appropriate total daily starting dose is:",
+   "options": [
+    "100 mg daily, weight-based",
+    "10 mg daily (5 mg twice daily) \u2014 half the racemate's milligram dose",
+    "20 mg daily, identical to the racemate",
+    "40 mg daily, double the racemate"
+   ],
+   "correctIndex": 1,
+   "explanation": "Because the d-threo enantiomer supplies the activity, dexmethylphenidate is dosed at roughly half the racemic milligram dose \u2014 10 mg total in this patient. Option C ignores enantiomer potency, option A doubles an already-doubled error, and 100 mg is far outside any methylphenidate dosing range."
+  },
+  {
+   "id": "stm-dmp-03",
+   "drugSlug": "dexmethylphenidate",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A pharmacy student asks why the dexmethylphenidate dose is described as half rather than given a brand-new dose scale. The best teaching answer is:",
+   "options": [
+    "Enantiomers always require identical milligram doses",
+    "Dexmethylphenidate doubles the half-life, so the dose halves",
+    "Racemic methylphenidate already delivers its effect through the d-threo isomer, so isolating that enantiomer simply halves the milligrams needed for the same pharmacology",
+    "The l-threo isomer contributes half of the therapeutic effect"
+   ],
+   "correctIndex": 2,
+   "explanation": "The active-enantiomer principle: the racemate's activity is essentially the d-threo isomer's activity, so the single-isomer product needs about half the milligrams \u2014 the mirror of option D's inverted claim. Option A is a false blanket rule that escitalopram and levomilnacipran disprove, and option B confuses dose equivalence with pharmacokinetics."
+  },
+  {
+   "id": "stm-dmp-04",
+   "drugSlug": "dexmethylphenidate",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Which enantiomer-pattern pairing is CORRECT?",
+   "options": [
+    "Escitalopram is the R-enantiomer of citalopram and levomilnacipran is the levo-isomer of venlafaxine",
+    "Dexmethylphenidate is the active half of atomoxetine",
+    "Eszopiclone is the active enantiomer of zaleplon",
+    "Escitalopram is the active S-enantiomer of citalopram, levomilnacipran is the active isomer of milnacipran, and dexmethylphenidate is the active d-threo half of methylphenidate"
+   ],
+   "correctIndex": 3,
+   "explanation": "The enantiomer pearl lines up three single-isomer success stories \u2014 S-citalopram, the active milnacipran isomer and d-threo methylphenidate \u2014 exactly the pattern KYP highlights. Option A misassigns both the citalopram stereochemistry and levomilnacipran's parent drug, option B attaches the pattern to the wrong noradrenaline-reuptake inhibitor, and eszopiclone is the S-isomer of zopiclone, not zaleplon."
+  },
+  {
+   "id": "stm-dmp-05",
+   "drugSlug": "dexmethylphenidate",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient on dexmethylphenidate 10 mg asks whether half the dose also means half the side effects. The correct response is:",
+   "options": [
+    "Not automatically \u2014 the AE profile is the same methylphenidate-class signature (appetite loss, insomnia, BP/HR rise) at any equipotent dose; tolerability is individualized, not geometric",
+    "Yes \u2014 all adverse effects scale exactly and only with the milligram dose",
+    "Dexmethylphenidate has no stimulant adverse effects at all",
+    "Side effects appear only above 60 mg daily"
+   ],
+   "correctIndex": 0,
+   "explanation": "Halving the dose achieves equivalence of EFFECT with the racemate, not a guaranteed halving of harm: the same sympathomimetic AE signature (anorexia, insomnia, raised BP/HR) applies and needs the same monitoring. Option B states a tidy but false rule, option D denies the class pharmacology, and option A invents a threshold."
+  },
+  {
+   "id": "stm-dmp-06",
+   "drugSlug": "dexmethylphenidate",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Dexmethylphenidate's indication and identity are:",
+   "options": [
+    "Alzheimer's disease, marketed as Namenda",
+    "ADHD, marketed as Focalin/Focalin XR \u2014 the single d-threo isomer of methylphenidate",
+    "ADHD, marketed as Strattera",
+    "Narcolepsy, marketed as Provigil"
+   ],
+   "correctIndex": 1,
+   "explanation": "Focalin is the branded dexmethylphenidate with an ADHD label (including an extended-release XR form) \u2014 it is the single d-threo isomer of methylphenidate marketed alone. Provigil is modafinil, Namenda is memantine, and Strattera is atomoxetine \u2014 three identity swaps that make these classic distractors."
+  },
+  {
+   "id": "stm-dmp-07",
+   "drugSlug": "dexmethylphenidate",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A community pharmacist receives a call asking whether OROS methylphenidate can be substituted milligram-for-milligram with dexmethylphenidate. The best answer is:",
+   "options": [
+    "Yes \u2014 all methylphenidate products are interchangeable mg-for-mg",
+    "Yes, provided the capsules are crushed to replicate the OROS release",
+    "No \u2014 dexmethylphenidate is dosed at about half the racemate's milligrams, and OROS is extended-release; any switch needs prescriber-led retitration, not 1:1 substitution",
+    "No \u2014 dexmethylphenidate must be given intranasally instead"
+   ],
+   "correctIndex": 2,
+   "explanation": "Two traps combine: enantiomer dose equivalence (half the racemate's milligrams) and formulation equivalence (OROS osmotic release cannot be replicated, and crushing dumps the load). Option A ignores both, crushing defeats extended-release design and risks dose-dumping, and the intranasal route belongs to misuse discussions, not pharmacy practice."
+  },
+  {
+   "id": "stm-dmp-08",
+   "drugSlug": "dexmethylphenidate",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The examination rationale for teaching dexmethylphenidate is best summarised as:",
+   "options": [
+    "It is the only stimulant exempt from pregnancy warnings",
+    "It is a prodrug designed to prevent all misuse",
+    "It blocks both DAT and VMAT2 irreversibly",
+    "It is the methylphenidate-family member of the single-active-enantiomer franchise \u2014 d-threo isomer, half the racemate's milligram dose, same ADHD label \u2014 tested against the escitalopram/levomilnacipran pattern"
+   ],
+   "correctIndex": 3,
+   "explanation": "The teachable core is the enantiomer franchise: d-threo isolation, half-dose equivalence and unchanged indication \u2014 the same reasoning template as escitalopram and levomilnacipran. Pregnancy categorisation of stimulants is not the pearl here, the anti-misuse prodrug story is lisdexamfetamine's, and irreversible transporter/VMAT2 blockade describes no clinical drug in this class."
+  },
+  {
+   "id": "stm-mod-01",
+   "drugSlug": "modafinil",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Modafinil's wake-promoting mechanism is best described as:",
+   "options": [
+    "A wake-promoting agent with weak DAT inhibition plus orexin/histamine activation \u2014 Katzung adds NET/DAT inhibition with raised serotonin and glutamate and lowered GABA",
+    "A full D2 receptor agonist producing compulsory wakefulness",
+    "A positive allosteric modulator of the GABA-A receptor",
+    "A potent amphetamine-like releaser with VMAT2 substrate activity"
+   ],
+   "correctIndex": 0,
+   "explanation": "Modafinil differs from amphetamine in structure, neurochemical profile and behaviour: its arousal rests on weak DAT/NET inhibition with orexin/histamine recruitment, and Katzung documents rises in serotonin and glutamate with reduced GABA. Full D2 agonism is apomorphine-style pharmacology, GABA-A modulation is sedative pharmacology, and VMAT2-substrate releaser activity is amphetamine's signature, not modafinil's."
+  },
+  {
+   "id": "stm-mod-02",
+   "drugSlug": "modafinil",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 38-year-old long-haul trucker on permanent night shifts has excessive sleepiness despite adequate sleep opportunity; the diagnosis is shift-work sleep disorder. The labelled pharmacological plan is:",
+   "options": [
+    "Caffeine 500 mg hourly through the shift as monotherapy",
+    "Modafinil 200 mg about 1 hour before the night shift (Tripathi's dosing) as an adjunct to sleep-hygiene and scheduling measures",
+    "Modafinil 400 mg immediately on waking at 6 pm",
+    "Zolpidem before driving to increase alertness"
+   ],
+   "correctIndex": 1,
+   "explanation": "Shift-work disorder is a formal modafinil label alongside narcolepsy and OSA residual sleepiness, and Tripathi's box gives 200 mg taken about an hour before night-shift work. Doubling the dose is not the label strategy, a sedative-hypnotic before driving is dangerous nonsense, and caffeine megadoses are neither labelled nor safe monotherapy for this disorder."
+  },
+  {
+   "id": "stm-mod-03",
+   "drugSlug": "modafinil",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 29-year-old on a combined oral contraceptive starts modafinil for narcolepsy; three months later she is pregnant despite adherence. The mechanism is:",
+   "options": [
+    "Modafinil inhibits CYP3A4, raising hormone levels and thereby blocking ovulation",
+    "Modafinil directly destroys the endometrium",
+    "Modafinil induces CYP3A4, accelerating hepatic metabolism of the oestrogen/progestin components to below contraceptive levels",
+    "Modafinil converted the progestin into a teratogen"
+   ],
+   "correctIndex": 2,
+   "explanation": "The classic modafinil interaction: CYP3A4 induction (Katzung lists modafinil among microsomal inducers) lowers steroidal contraceptive exposure, so a non-hormonal or additional barrier method is advised. Hormone-raising is the direction mirror of the truth, and endometrial destruction or progestin conversion are mechanisms the drug does not possess."
+  },
+  {
+   "id": "stm-mod-04",
+   "drugSlug": "modafinil",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "On day 12 of modafinil, a 25-year-old develops a spreading erythematous rash with oral erosions and target-like lesions. The correct action is:",
+   "options": [
+    "Halve the dose and continue for two more weeks",
+    "Apply topical steroids and continue modafinil as scheduled",
+    "Continue and add an antihistamine, since modafinil rash is always benign",
+    "Stop modafinil immediately and escalate care \u2014 serious rash including SJS/TEN is a labelled warning that mandates discontinuation"
+   ],
+   "correctIndex": 3,
+   "explanation": "Serious rash/SJS risk is the safety reason modafinil carries a boxed-type warning (KYP anchor): mucosal involvement and target lesions demand immediate withdrawal and urgent evaluation. Options C, A and B all perpetuate dosing under a potential TEN \u2014 exactly the error the warning exists to prevent."
+  },
+  {
+   "id": "stm-mod-05",
+   "drugSlug": "modafinil",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Which modafinil PK-dose package matches Tripathi 7e?",
+   "options": [
+    "Absorption peaks within 2-4 h, elimination t-half about 15 h, dose 100-200 mg morning and afternoon for narcolepsy/sleep-apnoea sleepiness, brands MODALERT/PROVAKE",
+    "t-half about 2 h with TID dosing up to 600 mg",
+    "t-half about 70 h with weekly dosing",
+    "Dose 5-10 mg at bedtime"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi's box: modafinil is absorbed within 2-4 hours, eliminated with a 15 h t-half, dosed 100-200 mg in the morning and afternoon for daytime sleepiness (or 200 mg an hour before shift work) \u2014 MODALERT and PROVAKE are the Indian brands. The 2 h/600 mg option mirrors an immediate-release stimulant profile, 70 h belongs to donepezil, and 5-10 mg bedtime dosing is donepezil's scale, not a wake-promoter's."
+  },
+  {
+   "id": "stm-mod-06",
+   "drugSlug": "modafinil",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Foundation",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient beginning modafinil asks what to expect in the first weeks. The accurate common-effect counselling is:",
+   "options": [
+    "Immediate hair loss and renal failure are routine",
+    "Headache and insomnia are the most common effects, with mild BP/heart-rate rises possible; most effects are mild and dose-related",
+    "No adverse effect has ever been reported",
+    "Weight gain and profound sedation are the expected effects"
+   ],
+   "correctIndex": 1,
+   "explanation": "Headache (the commonest), insomnia, nausea and a mild pressor/heart-rate effect form modafinil's expected profile \u2014 Katzung notes BP and HR increases that are usually mild \u2014 so counsel on morning dosing to protect sleep. Weight gain plus sedation mirrors the actual stimulant direction, the organ-failure claims are fabricated, and option C is never true of any drug."
+  },
+  {
+   "id": "stm-mod-07",
+   "drugSlug": "modafinil",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "Which patient is an APPROPRIATE on-label candidate for modafinil?",
+   "options": [
+    "A patient with primary insomnia seeking easier sleep onset",
+    "A child with recurrent febrile seizures",
+    "A 45-year-old with treated OSA who continues to have residual excessive daytime sleepiness despite CPAP adherence",
+    "A healthy university student who wants sharper focus before exams"
+   ],
+   "correctIndex": 2,
+   "explanation": "The three labels \u2014 narcolepsy, shift-work disorder and residual sleepiness in treated OSA \u2014 define appropriate use; Katzung describes modafinil as used primarily to improve wakefulness in narcolepsy and some other conditions. Enhancement use in healthy people is off-label misuse, modafinil promotes wakefulness (the opposite of the insomniac's need), and febrile seizures are an antipyretic/anticonvulsant matter."
+  },
+  {
+   "id": "stm-mod-08",
+   "drugSlug": "modafinil",
+   "domain": "Drug Interactions",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The full modafinil enzyme-interaction package tested in examinations is:",
+   "options": [
+    "A pure 2D6 inhibitor with no induction",
+    "No CYP effects at all because it is excreted unchanged by the kidney",
+    "CYP3A4 inhibitor and CYP2C19 inducer \u2014 the exact reverse of the truth",
+    "CYP3A4 inducer (cuts steroidal OCP and cyclosporine levels) AND CYP2C19 inhibitor (raises diazepam, phenytoin, omeprazole levels)"
+   ],
+   "correctIndex": 3,
+   "explanation": "Modafinil's dual profile \u2014 CYP3A4 inducer action (the oral-contraceptive-failure mechanism, cutting steroidal OCP and cyclosporine levels) plus CYP2C19 inhibitor action (Katzung's table lists modafinil among 2C19 inhibitors; it raises diazepam, phenytoin, omeprazole levels) \u2014 is the examination favourite, and option C is its deliberate direction mirror. 2D6 is not part of its story, and hepatic CYP involvement is precisely why no-interactions is wrong."
+  },
+  {
+   "id": "stm-arm-01",
+   "drugSlug": "armodafinil",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Armodafinil's identity is:",
+   "options": [
+    "The R-enantiomer of racemic modafinil, marketed as the single-isomer version",
+    "The S-enantiomer of modafinil",
+    "A prodrug of modafinil requiring hepatic activation",
+    "A metabolite of amphetamine with orexin action"
+   ],
+   "correctIndex": 0,
+   "explanation": "Armodafinil (Nuvigil) is the R-enantiomer isolated from modafinil's racemate \u2014 the same target biology with different pharmacokinetics. Option B picks the wrong mirror, no prodrug step exists in this family, and the amphetamine link is precisely what modafinil's chemistry was designed to avoid."
+  },
+  {
+   "id": "stm-arm-02",
+   "drugSlug": "armodafinil",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "The pharmacokinetic reason armodafinil gives longer waking coverage than an equal milligram dose of modafinil is:",
+   "options": [
+    "Armodafinil is simply dosed at double the milligrams of modafinil",
+    "The R-isomer is the more slowly cleared enantiomer, so equal doses deliver more drug late in the day (the S-isomer's shorter half-life explains modafinil's earlier fade)",
+    "Armodafinil doubles the plasma half-life of the racemate",
+    "The S-enantiomer is entirely absent yet carries all of the activity"
+   ],
+   "correctIndex": 1,
+   "explanation": "Racemic modafinil's late-day profile is dominated by the R-isomer because the S-isomer clears faster; removing S to make armodafinil yields later Tmax and longer coverage at the same dose \u2014 the enantiomer-PK pearl. Doubling the half-life overstates a distribution shift, option D inverts which isomer matters, and equal dose \u2014 not double dose \u2014 is the comparison."
+  },
+  {
+   "id": "stm-arm-03",
+   "drugSlug": "armodafinil",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 50-year-old CPAP-adherent OSA patient still sleeps through alarms and dozes at work. Tripathi lists armodafinil for which wakefulness indications?",
+   "options": [
+    "Generalized anxiety disorder",
+    "Primary insomnia and nightmare disorder",
+    "Obstructive sleep apnoea residual sleepiness, shift-work disorder and narcolepsy",
+    "ADHD in children under 6 years"
+   ],
+   "correctIndex": 2,
+   "explanation": "Armodafinil was approved for the same wakefulness trio as modafinil \u2014 OSA residual sleepiness, shift-work disorder and narcolepsy (Tripathi's note under modafinil). Insomnia needs the opposite pharmacology, ADHD under 6 is outside every label, and anxiety is untouched by orexin/DAT agents."
+  },
+  {
+   "id": "stm-arm-04",
+   "drugSlug": "armodafinil",
+   "domain": "Drug Interactions",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A woman with narcolepsy on an oral contraceptive is switched from modafinil to armodafinil for longer coverage. The contraceptive advice is:",
+   "options": [
+    "Isolating the R-enantiomer removed all drug-drug interactions",
+    "Armodafinil makes oral contraceptives MORE effective",
+    "The interaction applies only to progestin-only pills",
+    "The CYP3A4-inducing interaction applies to armodafinil too \u2014 she needs backup/non-hormonal contraception, since the single isomer shares modafinil's enzyme effects"
+   ],
+   "correctIndex": 3,
+   "explanation": "The oral-contraceptive-failure warning is class-wide: armodafinil retains modafinil's CYP3A4 induction, so steroidal contraceptive exposure falls regardless of isomer purity. Option A is the tempting single-isomer-equals-cleaner fallacy, option B inverts the direction, and the induction hits the hormonal components of combined and progestin-only products alike."
+  },
+  {
+   "id": "stm-arm-05",
+   "drugSlug": "armodafinil",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "How does armodafinil's labelled indication set compare with modafinil's?",
+   "options": [
+    "The indication sets mirror each other \u2014 the difference is pharmacokinetic (later Tmax, longer coverage), not the labels",
+    "Armodafinil is labelled only for ADHD",
+    "Armodafinil is labelled exclusively for Alzheimer's disease",
+    "Armodafinil is additionally labelled for cataplexy"
+   ],
+   "correctIndex": 0,
+   "explanation": "Armodafinil's labels mirror modafinil's (narcolepsy, shift-work disorder, OSA residual sleepiness); the marketing claim rests on pharmacokinetic smoothing, which is why examinations contrast the two on Tmax and coverage rather than indications. ADHD, Alzheimer's and cataplexy belong to other drugs entirely \u2014 stimulants, cognition agents and sodium oxybate respectively."
+  },
+  {
+   "id": "stm-arm-06",
+   "drugSlug": "armodafinil",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A night-shift worker says modafinil wears off by 3 am mid-shift; his physician offers armodafinil. The pharmacological logic being used is:",
+   "options": [
+    "The switch adds a second wakefulness mechanism on top of modafinil",
+    "The R-enantiomer provides a later peak and extended late-day levels, giving longer practical coverage at an equal dose",
+    "Armodafinil has a shorter half-life, matching shift length better",
+    "Armodafinil works only when taken at 3 am"
+   ],
+   "correctIndex": 1,
+   "explanation": "This is the single-isomer PK argument in practice: with S removed, R's slower disposition yields later Tmax and sustained late coverage \u2014 option C is the same logic inverted. It is not a rescue-dose strategy, and switching drugs replaces rather than adds mechanisms."
+  },
+  {
+   "id": "stm-arm-07",
+   "drugSlug": "armodafinil",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Armodafinil's adverse-effect and warning profile is:",
+   "options": [
+    "Characterised by severe extrapyramidal symptoms",
+    "Defined by hypotension and bradycardia",
+    "Essentially modafinil's \u2014 headache, nausea, insomnia, anxiety, mild BP rise, with the same serious-rash/SJS warning and Schedule IV status",
+    "Completely benign, with no rash warning and no scheduling"
+   ],
+   "correctIndex": 2,
+   "explanation": "Single-isomerisation changed kinetics, not safety: the rash/SJS warning, the headache-insomnia core, the mild pressor effect and Schedule IV control all carry over. Options A and B borrow motor and cardiovascular pictures from other classes, and option D ignores both the warning and the CSA listing \u2014 Katzung's Schedule IV table lists both agents."
+  },
+  {
+   "id": "stm-arm-08",
+   "drugSlug": "armodafinil",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "An examiner asks which approved-drug pair follows the SAME racemate-to-single-later-acting-enantiomer pattern as modafinil to armodafinil:",
+   "options": [
+    "Citalopram to escitalopram, because escitalopram acts for twice as long",
+    "Methylphenidate to dexmethylphenidate, because the d-threo isomer halves the dosing frequency",
+    "Amphetamine to dexamphetamine, because the d-isomer adds a new receptor target",
+    "Zopiclone to eszopiclone \u2014 the S-isomer with a longer half-life and next-day tolerability advantages"
+   ],
+   "correctIndex": 3,
+   "explanation": "The closest full-pattern match is zopiclone to eszopiclone: single enantiomer with a longer half-life and later-acting practical advantages. Escitalopram changes potency and selectivity rather than duration, dexmethylphenidate changes dose equivalence rather than kinetics, and dexamphetamine never gained a new receptor \u2014 enantiomers differ in degree, not target identity."
+  },
+  {
+   "id": "stm-pem-01",
+   "drugSlug": "pemoline",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Pemoline's pharmacological position among ADHD agents is:",
+   "options": [
+    "A chemically unrelated CNS stimulant with actions similar to methylphenidate but insignificant sympathomimetic and cardiovascular effects (Tripathi)",
+    "An amphetamine congener with the strongest cardiovascular effects of the class",
+    "A dopamine receptor antagonist",
+    "A selective serotonin reuptake inhibitor"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi's entry: chemically unrelated to the phenidates, with CNS stimulation similar to methylphenidate but negligible sympathomimetic and cardiovascular actions \u2014 its distinguishing pharmacology. Option B is the mirror of its actual weak-cardiovascular profile, and receptor antagonism or SSRI action contradicts its stimulant nature."
+  },
+  {
+   "id": "stm-pem-02",
+   "drugSlug": "pemoline",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A historian of pharmacology asks why pemoline disappeared from ADHD practice despite decades of use. The reason is:",
+   "options": [
+    "Complete loss of efficacy after 2 weeks of use",
+    "Hepatotoxicity \u2014 a boxed warning for acute liver failure after reported deaths/transplants, mandatory liver-function monitoring, and then withdrawal",
+    "Irreversible cardiac valvulopathy",
+    "A syndrome of fatal aplastic anaemia"
+   ],
+   "correctIndex": 1,
+   "explanation": "Pemoline's fate was hepatic: acute liver failure cases brought a boxed warning and liver-enzyme-monitoring requirements, and the drug was ultimately withdrawn \u2014 the examination reason it vanished. Valvulopathy belongs to the serotonergic anorectics, aplastic anaemia to felbamate and chloramphenicol territory, and tachyphylaxis was never the issue."
+  },
+  {
+   "id": "stm-pem-03",
+   "drugSlug": "pemoline",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 1990s chart shows pemoline 37.5 mg each morning for ADHD, with benefit noted only after several weeks. Which property does this delayed response reflect, and why did it matter clinically?",
+   "options": [
+    "Pemoline's effect strengthened only after hepatic enzyme induction",
+    "Pemoline worked only when given at bedtime",
+    "Pemoline's slow onset of action weakened its clinical attractiveness even before the hepatotoxicity struck",
+    "Pemoline required 6 weeks of loading before any effect, by design"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi flags slow onset as a practical disadvantage \u2014 parents and prescribers already waited weeks for benefit \u2014 and the hepatotoxicity story then finished the drug off. There was no intentional loading design, enzyme induction is irrelevant to its effect, and bedtime dosing of a stimulant would worsen insomnia rather than help."
+  },
+  {
+   "id": "stm-pem-04",
+   "drugSlug": "pemoline",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The liver-toxicity profile of pemoline is best characterised as:",
+   "options": [
+    "Harmless transaminase flicker never exceeding 1.5 times the upper limit of normal",
+    "A purely cholestatic picture with no risk of failure",
+    "Predictable dose-related jaundice in every user within 2 weeks",
+    "Rare but potentially acute liver failure, sometimes after months of use, severe enough to warrant a boxed warning and ongoing liver-function monitoring while it remained marketed"
+   ],
+   "correctIndex": 3,
+   "explanation": "The problem was that it was rare but unpredictable: acute liver failure occurring without a reliable dose or duration threshold \u2014 sometimes after months of use \u2014 which is why the boxed warning, ongoing liver-function monitoring while it remained marketed, and finally withdrawal followed. Predictable-in-every-user and harmless framings are both wrong by construction, and a purely cholestatic picture understates the hepatocellular failure risk."
+  },
+  {
+   "id": "stm-pem-05",
+   "drugSlug": "pemoline",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Pemoline's current status (Tripathi 7e) is:",
+   "options": [
+    "Discontinued in the USA and not available in India",
+    "First-line ADHD therapy in both the USA and India",
+    "Available in India only as a transdermal patch",
+    "Available only in fixed combination with caffeine"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi states it plainly: because of slow onset of action and hepatotoxicity, pemoline has been discontinued in the USA and is not available in India \u2014 a historical agent only. The other options invent a market presence the drug no longer has anywhere."
+  },
+  {
+   "id": "stm-pem-06",
+   "drugSlug": "pemoline",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "In a retired-by-the-liver quiz, pemoline is paired with which other drug from the stimulant-cognition set?",
+   "options": [
+    "Modafinil",
+    "Tacrine \u2014 the first Alzheimer cholinesterase inhibitor, withdrawn for hepatotoxicity",
+    "Memantine",
+    "Galantamine"
+   ],
+   "correctIndex": 1,
+   "explanation": "The KYP class pearl: tacrine and pemoline are the hepatotoxicity twins \u2014 both historically useful, both retired by the liver (tacrine's ALT-monitoring era, pemoline's boxed warning). Modafinil's rash and memantine's renal dosing are different organ stories, and galantamine replaced tacrine without carrying its liver liability."
+  },
+  {
+   "id": "stm-pem-07",
+   "drugSlug": "pemoline",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "An ADHD clinic inherits a child previously on pemoline whose records show normal ALT six months ago. What did responsible pemoline-era practice require?",
+   "options": [
+    "Annual urine catecholamine testing",
+    "No monitoring, because pemoline had no systemic toxicity",
+    "Periodic liver-function testing \u2014 the era's mandated monitoring \u2014 with immediate drug stoppage for transaminase elevation or symptoms suggesting hepatitis",
+    "Weekly serum pemoline levels only"
+   ],
+   "correctIndex": 2,
+   "explanation": "While marketed, pemoline's boxed warning made liver-function testing the standard of care \u2014 the very burden that made it commercially untenable and led to withdrawal. Serum levels were never the monitoring tool, catecholamines are irrelevant, and option B is the exact misconception the boxed warning corrected."
+  },
+  {
+   "id": "stm-pem-08",
+   "drugSlug": "pemoline",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "When an examination asks why pemoline is no longer prescribed, the expected answer is:",
+   "options": [
+    "A fetal-toxicity ban on paediatric prescribing that never actually existed",
+    "Excessive abuse potential compared with amphetamine",
+    "Lack of efficacy in ADHD",
+    "Hepatotoxicity with acute liver failure risk \u2014 the liver, not the heart or brain, retired it"
+   ],
+   "correctIndex": 3,
+   "explanation": "Pemoline was effective enough for ADHD use over decades, and its sympathomimetic/abuse profile was milder than the amphetamine class \u2014 but hepatotoxicity with acute liver failure risk retired it; the liver, not the heart or brain, ended its run. Option B inverts its actual mild-sympathomimetic profile, option D denies its demonstrated benefit, and option A invents a fetal-toxicity ban that history never recorded."
+  },
+  {
+   "id": "stm-don-01",
+   "drugSlug": "donepezil",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Donepezil's mechanism is best stated as:",
+   "options": [
+    "Reversible, centrally selective acetylcholinesterase inhibition, raising cortical acetylcholine in surviving basal-forebrain projections (Tripathi)",
+    "Irreversible peripheral acetylcholinesterase inhibition",
+    "Competitive NMDA receptor blockade",
+    "Inhibition of acetylcholine release from nerve terminals"
+   ],
+   "correctIndex": 0,
+   "explanation": "Donepezil is the cerebroselective, reversible anti-AChE whose cortical acetylcholine elevation improves cognitive and daily-living scores; its peripheral enzyme inhibition is comparatively weak at therapeutic doses. Irreversible inhibition is organophosphate/echothiophate pharmacology, NMDA blockade is memantine's story, and blocking acetylcholine release is botulinum toxin territory."
+  },
+  {
+   "id": "stm-don-02",
+   "drugSlug": "donepezil",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 76-year-old on donepezil 10 mg (also on metoprolol) has two episodes of near-syncope; Holter shows sinus pauses with heart rate 42. The pharmacological coupling is:",
+   "options": [
+    "The two drugs are pharmacologically unrelated; the pauses are coincidental",
+    "Donepezil's cholinergic vagotonic effect (bradycardia) compounds the beta-blocker's \u2014 cholinesterase inhibitors carry bradycardia/syncope warnings, especially with beta-blockers or sick-sinus tendency",
+    "Donepezil causes hypertension that overdrives the beta-blockade",
+    "Metoprolol blocks donepezil's central effect but spares its cardiac effect"
+   ],
+   "correctIndex": 1,
+   "explanation": "Acetylcholinesterase inhibition amplifies muscarinic vagal tone, producing bradycardia and syncope risk that stacks with beta-blockade and is documented in sick-sinus-susceptible patients \u2014 the KYP cardiac anchor. The interaction is pharmacodynamic rather than receptor-selective as option D suggests, and dismissing it as coincidence is exactly how these syncope clusters get missed."
+  },
+  {
+   "id": "stm-don-03",
+   "drugSlug": "donepezil",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 68-year-old with mild-to-moderate Alzheimer's starts donepezil. The dosing plan (Tripathi/KYP) is:",
+   "options": [
+    "25 mg once weekly",
+    "2 mg twice daily forever, never increased",
+    "5 mg once daily at bedtime, increasing to 10 mg if tolerated \u2014 usable across severities, with once-daily dosing a key advantage",
+    "5 mg four times daily for 2 weeks then stop"
+   ],
+   "correctIndex": 2,
+   "explanation": "Donepezil's long half-life (~70 h, Tripathi) allows bedtime once-daily dosing, titrated from 5 to 10 mg, and it is used across severities \u2014 Tripathi notes it even suits relatively severe AD. Options D, A and B fabricate schedules that no cholinesterase-inhibitor label supports."
+  },
+  {
+   "id": "stm-don-04",
+   "drugSlug": "donepezil",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Donepezil's dosing convenience stems from:",
+   "options": [
+    "Complete renal excretion allowing weekly dosing",
+    "An active metabolite lasting a month",
+    "A 1-hour half-life requiring TID dosing",
+    "A long plasma half-life (~70 h per Tripathi) enabling once-daily bedtime dosing \u2014 an advantage over rivastigmine and galantamine, which need twice-daily schedules"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi's ~70 h half-life is the pharmacokinetic reason donepezil is once-daily at bedtime while rivastigmine and galantamine are twice daily. The other options invent ultrashort, weekly or monthly kinetics that no cholinesterase inhibitor possesses."
+  },
+  {
+   "id": "stm-don-05",
+   "drugSlug": "donepezil",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A patient on donepezil reports trouble sleeping, unusually vivid dreams and nausea. The correct characterisation is:",
+   "options": [
+    "Classic donepezil effects \u2014 cholinergic GI upset plus CNS effects such as insomnia and vivid dreams (Tripathi notes weird dreams) \u2014 usually manageable with timing and titration",
+    "Expected symptoms of worsening Alzheimer's unrelated to the drug",
+    "Symptoms of donepezil-induced parkinsonism needing levodopa",
+    "Signs of hepatic failure demanding tacrine substitution"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi's class adverse-effect line \u2014 GI symptoms, muscle pain and weird dreams \u2014 plus donepezil's insomnia matches this presentation; adjusting timing or titration usually manages it. Parkinsonism and liver failure are not donepezil liabilities (it is not hepatotoxic, unlike tacrine), and dismissing the symptoms ignores real, dose-related drug effects."
+  },
+  {
+   "id": "stm-don-06",
+   "drugSlug": "donepezil",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Donepezil is described as cerebroselective because:",
+   "options": [
+    "It selectively inhibits butyrylcholinesterase in plasma",
+    "Therapeutic doses produce only weak peripheral AChE inhibition, so central cholinergic augmentation dominates while peripheral cholinergic effects stay mild",
+    "It acts only on nicotinic receptors inside the brain",
+    "It is completely excluded from peripheral tissues by P-glycoprotein"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi's phrasing \u2014 measurable central benefit with only weak peripheral enzyme inhibition at therapeutic doses \u2014 is the selectivity claim; it reflects a balance of enzymatic action, not absolute tissue exclusion. Nicotinic allosterism is galantamine's signature, P-glycoprotein exclusion is not the mechanism, and BuChE selectivity belongs to rivastigmine."
+  },
+  {
+   "id": "stm-don-07",
+   "drugSlug": "donepezil",
+   "domain": "Clinical Uses",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 72-year-old with Alzheimer's has declined from moderate to severe impairment but still benefits from donepezil. The evidence-based position on continuing and on adding memantine is:",
+   "options": [
+    "Switch to tacrine for advanced disease",
+    "Stop donepezil at the moderate stage because it works only in mild disease",
+    "Continue donepezil (benefit extends into severe AD) and add memantine for moderate-to-severe disease \u2014 combination use is common, though Katzung notes mixed results for the combination",
+    "Add memantine only after stopping all cholinergic therapy"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi allows donepezil even in relatively severe cases, and memantine is indicated for moderate-to-severe AD \u2014 to replace or supplement an anti-AChE; Katzung's honest caveat is that combination results are mixed, which still supports a trial. Option B imposes a false mild-only ceiling, option D inverts the add-on logic, and tacrine is long retired."
+  },
+  {
+   "id": "stm-don-08",
+   "drugSlug": "donepezil",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Why is donepezil \u2014 not tacrine \u2014 the flagship cholinesterase inhibitor in examinations?",
+   "options": [
+    "It is the only cholinesterase inhibitor with central action",
+    "It is the only one that also inhibits monoamine oxidase",
+    "It is the only one available in India",
+    "It is non-hepatotoxic with a long half-life allowing once-daily dosing across severities \u2014 precisely the advantages that replaced tacrine (Katzung)"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung's replacement logic: donepezil keeps tacrine's (marginal) benefit without the hepatic toxicity, adds ~70 h once-daily pharmacokinetics and severity-spanning use. All the newer agents act centrally (option A false), MAO inhibition is not in the profile, and all three modern AChE inhibitors \u2014 DONECEPT, GALAMER, RIVAMER \u2014 are Indian-market brands per Tripathi."
+  },
+  {
+   "id": "stm-gal-01",
+   "drugSlug": "galantamine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Galantamine's unique dual mechanism is:",
+   "options": [
+    "Cerebral AChE inhibition PLUS allosteric potentiation of nicotinic receptors \u2014 the only AD drug with both actions",
+    "Pure butyrylcholinesterase inhibition with no nicotinic action",
+    "Direct dopamine D2 agonism combined with AChE inhibition",
+    "NMDA-channel blockade plus MAO-B inhibition"
+   ],
+   "correctIndex": 0,
+   "explanation": "Galantamine inhibits acetylcholinesterase and allosterically potentiates nicotinic receptors (Tripathi notes a direct nicotinic agonistic action as well) \u2014 a dual cholinergic strategy unique in the Alzheimer set. NMDA-plus-MAO-B mixes memantine with selegiline, pure BuChE inhibition is rivastigmine's partial claim, and dopamine agonism belongs to no AD drug."
+  },
+  {
+   "id": "stm-gal-02",
+   "drugSlug": "galantamine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 66-year-old with mild-moderate Alzheimer's is started on galantamine. Tripathi's titration schedule is:",
+   "options": [
+    "40 mg TID from day one",
+    "4 mg BD, titrated to a maximum of 12 mg BD \u2014 twice-daily dosing required",
+    "4 mg once weekly",
+    "24 mg once daily at bedtime"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi's box: galantamine 4 mg BD up to a maximum of 12 mg BD \u2014 the twice-daily schedule that donepezil's 70 h half-life avoids. Weekly dosing is fantasy, 24 mg confuses a total daily figure with a once-daily schedule, and 40 mg three times a day is far beyond any Alzheimer titration."
+  },
+  {
+   "id": "stm-gal-03",
+   "drugSlug": "galantamine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "The allosteric potentiation clause of galantamine's mechanism means:",
+   "options": [
+    "It increases the number of nicotinic receptors by gene induction",
+    "It blocks nicotinic receptors presynaptically",
+    "It binds a site distinct from acetylcholine's orthosteric site on nicotinic receptors, increasing the receptor's response to released ACh without itself being a full agonist opening the channel continuously",
+    "It occupies the same site as acetylcholine and opens the channel directly at all times"
+   ],
+   "correctIndex": 2,
+   "explanation": "Allosteric potentiation is defined by site separation: galantamine sensitises the receptor to acetylcholine rather than permanently opening the channel like a full agonist \u2014 the pharmacological nuance examinations quote. Options D and B invert or exaggerate the nicotinic action, and receptor upregulation by gene induction is not its mechanism."
+  },
+  {
+   "id": "stm-gal-04",
+   "drugSlug": "galantamine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "timeline",
+   "question": "Galantamine's metabolic vulnerability to co-medication involves:",
+   "options": [
+    "CYP1A2 and CYP2C9 only",
+    "Exclusive renal excretion of unchanged drug with no CYP role",
+    "CYP2C19 induction by galantamine",
+    "CYP2D6 and CYP3A4 \u2014 strong inhibitors of either (paroxetine, ketoconazole) raise galantamine levels"
+   ],
+   "correctIndex": 3,
+   "explanation": "The label's interaction pair is 2D6 and 3A4: strong inhibitors of either enzyme raise galantamine exposure (KYP anchor; Katzung's CYP tables include galantamine among substrate lists), so paroxetine or azole co-prescription warrants attention. The 1A2/2C9 pair is wrong, unchanged renal excretion is memantine's profile, and galantamine is a victim substrate, not an inducer."
+  },
+  {
+   "id": "stm-gal-05",
+   "drugSlug": "galantamine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Two weeks after titrating galantamine to 12 mg BD, an 80-year-old has nausea, vomiting and 3 kg weight loss. The best management is:",
+   "options": [
+    "Recognise cholinergic GI toxicity of the AChE-inhibitor class \u2014 hold or titrate down, give with food, and monitor weight (all three AD AChE inhibitors share this profile)",
+    "Add metoclopramide long-term and continue the full dose",
+    "Immediately switch to tacrine, which has no GI effects",
+    "Double the dose to overcome tolerance"
+   ],
+   "correctIndex": 0,
+   "explanation": "Nausea, vomiting and weight loss are the shared cholinergic GI signature of donepezil, rivastigmine and galantamine (Tripathi notes comparable GI effects across the three); the response is dose adjustment with food, not escalation. Tacrine's GI effects were worse and it adds liver toxicity, doubling worsens the cholinergic burden, and long-term prokinetic cover ignores the dose-toxicity relationship."
+  },
+  {
+   "id": "stm-gal-06",
+   "drugSlug": "galantamine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Galantamine's natural-origin claim and indication are:",
+   "options": [
+    "A plant alkaloid used for Parkinson's disease psychosis",
+    "A natural alkaloid (snowdrop/daffodil family) used for mild-to-moderate Alzheimer's disease",
+    "A synthetic benzodiazepine for anxiety in dementia",
+    "A marine-toxin derivative for severe AD only"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi calls galantamine a natural alkaloid with cerebral AChE inhibition plus nicotinic action, indicated in mild-to-moderate AD \u2014 GALAMER 4/8/12 mg is the Indian brand line. Anxiety-in-dementia is not its label, severe-only inverts the staging, and Parkinson's psychosis belongs to pimavanserin, not galantamine."
+  },
+  {
+   "id": "stm-gal-07",
+   "drugSlug": "galantamine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "An INI-CET style stem: which drug inhibits acetylcholinesterase AND allosterically potentiates nicotinic receptors?",
+   "options": [
+    "Memantine, because NMDA blockade includes nicotinic potentiation",
+    "Rivastigmine, because BuChE inhibition equals nicotinic potentiation",
+    "Galantamine \u2014 the dual-mechanism signature; donepezil (pure AChE) and memantine (NMDA) are the classic traps",
+    "Donepezil, because all AChE inhibitors also act on nicotinic receptors"
+   ],
+   "correctIndex": 2,
+   "explanation": "The dual mechanism \u2014 acetylcholinesterase inhibition plus allosteric potentiation of nicotinic receptors \u2014 is galantamine's signature alone in the Alzheimer armamentarium; donepezil is pure AChE without the nicotinic clause and memantine works at NMDA channels, making them the classic traps. Option D wrongly universalises the nicotinic action, option B confuses glutamatergic and cholinergic pharmacology, and option C equates BuChE inhibition with a receptor action it does not have."
+  },
+  {
+   "id": "stm-gal-08",
+   "drugSlug": "galantamine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A prescriber notes her Alzheimer patient needs twice-daily dosing with galantamine or rivastigmine but not donepezil. The pharmacological reason is:",
+   "options": [
+    "Galantamine is given twice daily because it is more potent per milligram",
+    "Donepezil cannot be given more than once weekly",
+    "Twice-daily galantamine dosing compensates for its hepatic toxicity",
+    "Galantamine and rivastigmine have shorter plasma half-lives than donepezil's ~70 h, so their schedules are twice daily (galantamine 4-12 mg BD per Tripathi)"
+   ],
+   "correctIndex": 3,
+   "explanation": "This is a half-life scheduling question: shorter plasma PK (rivastigmine's plasma t-half ~2 h with a longer enzymatic effect; galantamine shorter than donepezil) forces twice-daily dosing, while donepezil's ~70 h allows once-daily bedtime dosing. Potency per milligram never dictates frequency, donepezil is exactly the once-daily agent, and galantamine is not hepatotoxic \u2014 that was tacrine."
+  },
+  {
+   "id": "stm-riv-01",
+   "drugSlug": "rivastigmine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Rivastigmine's mechanism that distinguishes it within the AD class is:",
+   "options": [
+    "Pseudo-irreversible carbamate inhibition of BOTH acetylcholinesterase and butyrylcholinesterase (dual cholinesterase), with brain G1-isoform preference",
+    "Reversible inhibition of acetylcholinesterase only, at a single peripheral isoform",
+    "Irreversible organophosphate-style aging of AChE",
+    "Selective nicotinic receptor agonism without any enzyme action"
+   ],
+   "correctIndex": 0,
+   "explanation": "Rivastigmine is the carbamate that carbamylates both AChE and BuChE (Tripathi: both enzymes, with G1-isoform selectivity in brain), the enzyme reactivating slowly over hours \u2014 hence pseudo-irreversible. Option B describes donepezil's narrower profile, true irreversible aging is organophosphate pharmacology, and pure receptor agonism without enzyme action matches nothing in this class \u2014 even galantamine keeps its enzyme inhibition."
+  },
+  {
+   "id": "stm-riv-02",
+   "drugSlug": "rivastigmine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 71-year-old with Parkinson's disease develops progressive dementia with hallucinations. Which AD drug carries a specific label for Parkinson's disease dementia, and in which formulation is GI tolerability best?",
+   "options": [
+    "Galantamine XR, labelled for Lewy body dementias",
+    "Rivastigmine \u2014 the unique PDD label \u2014 preferably as a transdermal patch to reduce GI adverse effects",
+    "Tacrine tablets \u2014 the oldest agent with the broadest label",
+    "Memantine liquid, labelled specifically for PDD"
+   ],
+   "correctIndex": 1,
+   "explanation": "Rivastigmine holds the distinctive Parkinson's-disease-dementia indication (KYP anchor), and its patch trades spiky systemic levels for much less cholinergic GI upset. Tacrine is long withdrawn, memantine's claim is moderate-to-severe AD rather than a PDD label, and galantamine's labels stop at Alzheimer's."
+  },
+  {
+   "id": "stm-riv-03",
+   "drugSlug": "rivastigmine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "Rivastigmine's plasma half-life is only about 2 h, yet cholinesterase inhibition spans the whole dosing interval. The explanation is:",
+   "options": [
+    "The drug accumulates in plasma to 100-fold levels with repeated dosing",
+    "Its active metabolite has a 1-week half-life",
+    "The carbamylated enzyme stays inhibited for up to ~10 hours despite the 2 h plasma t-half \u2014 pharmacodynamic duration decoupled from plasma PK (Tripathi)",
+    "Rivastigmine forms a permanent covalent bond that never reverses"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi's elegant PK-PD split: the carbamyl residue dissociates slowly, so cerebral AChE remains inhibited for up to 10 hours while plasma levels vanish \u2014 duration reflects enzyme reactivation, not plasma presence. True irreversibility is organophosphate aging, plasma accumulation is absent, and no week-long metabolite exists."
+  },
+  {
+   "id": "stm-riv-04",
+   "drugSlug": "rivastigmine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A Parkinson's-disease-dementia patient on oral rivastigmine has severe nausea and vomiting. The formulation-savvy response is:",
+   "options": [
+    "Switch to oral tacrine for better GI tolerance",
+    "Stop all AD therapy permanently",
+    "Add loperamide chronically to mask the cholinergic diarrhoea",
+    "Switch to the rivastigmine transdermal patch, which smooths levels and markedly reduces GI adverse effects, while continuing weight monitoring"
+   ],
+   "correctIndex": 3,
+   "explanation": "The patch is rivastigmine's signature tolerability solution \u2014 steadier absorption with far less GI cholinergic burden (KYP anchor) \u2014 with weight-loss monitoring still required. Tacrine would worsen everything including the liver, permanent cessation abandons a treatable patient, and masking symptoms without changing dose or formulation ignores the mechanism."
+  },
+  {
+   "id": "stm-riv-05",
+   "drugSlug": "rivastigmine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "During rivastigmine titration (1.5 mg BD upward every 2 weeks per Tripathi; EXELON/RIVAMER), the family reports anorexia and weight loss. The correct framing is:",
+   "options": [
+    "Slow the titration, give with food and formally monitor weight \u2014 expected cholinergic class effects, with rivastigmine labels emphasising weight-loss surveillance",
+    "Unrelated aging effects needing no monitoring",
+    "Evidence of tacrine-style hepatotoxicity",
+    "Proof of overdose requiring permanent cessation"
+   ],
+   "correctIndex": 0,
+   "explanation": "Tripathi's stepwise titration (1.5 mg BD up to 6 mg BD) exists precisely to limit the cholinergic GI/anorexic effects, and KYP adds structured weight monitoring as a label obligation. Liver toxicity is tacrine/pemoline territory, titration effects rarely mandate permanent stoppage, and no-monitoring contradicts the label."
+  },
+  {
+   "id": "stm-riv-06",
+   "drugSlug": "rivastigmine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Rivastigmine's indication set (per current labels; Tripathi's 7e text predates part of it) is:",
+   "options": [
+    "Frontotemporal dementia and narcolepsy",
+    "Alzheimer's disease AND Parkinson's disease dementia \u2014 the unique dual-dementia label",
+    "Alzheimer's disease only, explicitly excluding any parkinsonian dementia",
+    "Vascular dementia exclusively"
+   ],
+   "correctIndex": 1,
+   "explanation": "The distinguishing feature is the Parkinson's-disease-dementia label layered on the Alzheimer label \u2014 the examination's rivastigmine signature. Option C reflects Tripathi's 7e-era text (mild-to-moderate AD), but misses the label the KYP anchor emphasises; vascular and frontotemporal dementias were never its labelled niches."
+  },
+  {
+   "id": "stm-riv-07",
+   "drugSlug": "rivastigmine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Pseudo-irreversible inhibition, as applied to rivastigmine, precisely means:",
+   "options": [
+    "The inhibition lasts only minutes because the plasma t-half is 2 h",
+    "Rivastigmine binds only the anionic site non-covalently, like tacrine",
+    "The carbamate covalently carbamylates the enzyme's esteratic site but hydrolyses back over hours, so inhibition is long-lasting yet reversible \u2014 unlike true organophosphate aging",
+    "The inhibition is irreversible, with activity returning only by new enzyme synthesis"
+   ],
+   "correctIndex": 2,
+   "explanation": "The carbamate chemistry: slow decarbamoylation over hours gives long-acting but recoverable inhibition \u2014 the pharmacodynamic half-life that outstrips the ~2 h plasma value. Option D describes organophosphates (and even then, aging is the irreversible step), option A confuses plasma PK with enzyme PD, and option B is tacrine's non-covalent anionic-site binding per Tripathi."
+  },
+  {
+   "id": "stm-riv-08",
+   "drugSlug": "rivastigmine",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "An Indian caregiver asks which rivastigmine brands and forms exist locally. The accurate answer (Tripathi) is:",
+   "options": [
+    "Rivastigmine is sold in India only by injection",
+    "The Indian brands are ADMENTA and ALMANTIN",
+    "Only a 20 mg sustained-release capsule exists in India",
+    "EXELON and RIVAMER capsules in 1.5/3/4.5/6 mg with 1.5 mg BD starting titration up to 6 mg BD; a transdermal patch also exists"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi's Indian list \u2014 EXELON/RIVAMER 1.5, 3, 4.5, 6 mg capsules, starting 1.5 mg BD and titrated to 6 mg BD \u2014 matches the oral forms, with the patch available alongside. Option B's brands (ADMENTA/MENTADEM/ALMANTIN) belong to memantine, and no injectable rivastigmine exists in Indian practice."
+  },
+  {
+   "id": "stm-tac-01",
+   "drugSlug": "tacrine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Tacrine's historical position is:",
+   "options": [
+    "The first centrally acting cholinesterase inhibitor shown to benefit Alzheimer's disease \u2014 Katzung calls it the first drug shown to have any benefit in AD",
+    "The first NMDA antagonist approved for AD",
+    "The first antidepressant used in dementia",
+    "The first antipsychotic for AD-related psychosis"
+   ],
+   "correctIndex": 0,
+   "explanation": "Both Katzung and Tripathi grant tacrine the first title \u2014 the initial anti-AChE with demonstrated AD benefit, preceding donepezil, rivastigmine and galantamine. NMDA-antagonist first place is memantine's later story, and antidepressant/antipsychotic framings are class errors."
+  },
+  {
+   "id": "stm-tac-02",
+   "drugSlug": "tacrine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A 1994 protocol for a patient on tacrine includes ALT testing every other week. The practice existed because:",
+   "options": [
+    "The monitoring tracked renal stone formation",
+    "Tacrine's hepatotoxicity (ALT elevations in a substantial minority) required intense transaminase monitoring \u2014 the burden that contributed to its replacement",
+    "Tacrine raised serum potassium dangerously",
+    "Tacrine caused bone-marrow failure needing weekly counts"
+   ],
+   "correctIndex": 1,
+   "explanation": "Tripathi records hepatotoxicity as the restriction on tacrine's use, and Katzung calls its hepatic toxicity significant \u2014 hence the historic every-other-week ALT schedule (KYP anchor). Potassium, marrow and stone monitoring belong to other drugs \u2014 ACE inhibitors, clozapine and topiramate respectively."
+  },
+  {
+   "id": "stm-tac-03",
+   "drugSlug": "tacrine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 1995 AD clinic: a patient on tacrine reports nausea, needs four daily doses, and shows modest cognitive benefit. Why did clinics tolerate this regimen?",
+   "options": [
+    "Because four-times-daily dosing was standard for all AD drugs",
+    "Because tacrine reversed disease progression permanently",
+    "Because tacrine was the only available option with any demonstrated AD benefit until donepezil arrived \u2014 marginal benefit was still the only benefit",
+    "Because tacrine's efficacy was the highest ever recorded in AD"
+   ],
+   "correctIndex": 2,
+   "explanation": "Katzung: tacrine's efficacy is slight, and its use continued only because nothing better existed; donepezil then offered the same marginal benefit with less toxicity. Highest-efficacy, standard-schedule and disease-reversal claims are each contradicted \u2014 the benefit was modest and symptomatic, not disease-modifying."
+  },
+  {
+   "id": "stm-tac-04",
+   "drugSlug": "tacrine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Tripathi's mechanistic note places tacrine (with edrophonium) in which binding category?",
+   "options": [
+    "Organophosphates causing irreversible aging",
+    "Allosteric modulators of the nicotinic receptor",
+    "Carbamates that covalently modify the esteratic site",
+    "Reversible inhibitors attaching only to the anionic site of acetylcholinesterase \u2014 non-esteratic-site binding, unlike the carbamates"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi: edrophonium and tacrine attach only to the anionic site \u2014 a purely ionic, reversible interaction, contrasted with physostigmine-style carbamylation of the esteratic site (rivastigmine's chemistry). Option C is rivastigmine's mechanism, option A is organophosphate poisoning, and nicotinic allosterism is galantamine's signature."
+  },
+  {
+   "id": "stm-tac-05",
+   "drugSlug": "tacrine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Tacrine's current clinical status is:",
+   "options": [
+    "Withdrawn/discontinued \u2014 replaced by donepezil, rivastigmine and galantamine because of hepatic toxicity",
+    "Available only as a transdermal patch",
+    "Used as an antidote for organophosphate poisoning",
+    "First-line for moderate-to-severe AD"
+   ],
+   "correctIndex": 0,
+   "explanation": "Katzung states that because of its hepatic toxicity, tacrine has been replaced in clinical use by the newer cholinesterase inhibitors \u2014 the withdrawal is textbook fact. First-line AD claims and patch formulations are fictional, and organophosphate antidotes are atropine plus pralidoxime."
+  },
+  {
+   "id": "stm-tac-06",
+   "drugSlug": "tacrine",
+   "domain": "Exam Pearls",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "A quiz asks: which drug was the FIRST approved therapy demonstrating benefit in Alzheimer's disease, and why is it now only a historical anchor? The correct pairing is:",
+   "options": [
+    "Memantine \u2014 first benefit in AD, retired for renal toxicity",
+    "Tacrine \u2014 first benefit in AD, retired for hepatotoxicity once newer, less toxic AChE inhibitors arrived",
+    "Donepezil \u2014 first benefit in AD, retired for bradycardia",
+    "Rivastigmine \u2014 first benefit in AD, retired for skin reactions"
+   ],
+   "correctIndex": 1,
+   "explanation": "The first-benefit title and the hepatotoxicity exit both belong to tacrine \u2014 Katzung: first drug shown to have any benefit, with significant hepatic toxicity. Memantine is a current agent, and donepezil and rivastigmine remain in use; none is retired."
+  },
+  {
+   "id": "stm-tac-07",
+   "drugSlug": "tacrine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A pharmacology historian notes tacrine required four-times-daily oral dosing while its successor is once daily. The pharmacokinetic explanation for the change is:",
+   "options": [
+    "Donepezil is dosed weekly because of tissue storage",
+    "Both agents share identical half-lives; the schedules are arbitrary",
+    "Donepezil's ~70 h half-life permits bedtime once-daily dosing (Tripathi), whereas tacrine's shorter plasma action demanded multiple daily doses (historically QID)",
+    "Tacrine was given QID because it was available only intravenously"
+   ],
+   "correctIndex": 2,
+   "explanation": "Tripathi's donepezil box credits the ~70 h half-life for once-daily bedtime dosing \u2014 an explicit advantage over the older multiple-daily-dose rivals. Tacrine was an oral agent, donepezil is daily rather than weekly, and the schedule difference tracks pharmacokinetics, not arbitrariness."
+  },
+  {
+   "id": "stm-tac-08",
+   "drugSlug": "tacrine",
+   "domain": "Exam Pearls",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "In the cognition-drug graveyard examination, tacrine's epitaph reads:",
+   "options": [
+    "Retired because of addictive potential and overdose deaths",
+    "Retired because it caused irreversible extrapyramidal syndromes",
+    "Retired because memantine proved 10-fold superior",
+    "The first AD cholinesterase inhibitor \u2014 liver toxicity (significant, ALT-monitored) retired it, and its efficacy was slight anyway"
+   ],
+   "correctIndex": 3,
+   "explanation": "Katzung's two-line verdict \u2014 efficacy slight, hepatic toxicity significant, replaced by donepezil, rivastigmine and galantamine \u2014 is the complete epitaph. Addiction, extrapyramidal syndromes and a 10-fold-superiority claim for memantine are fabricated reasons; memantine's advantages are tolerability and mechanism, not 10-fold efficacy."
+  },
+  {
+   "id": "stm-mem-01",
+   "drugSlug": "memantine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Memantine's mechanism is best stated as:",
+   "options": [
+    "Low-affinity, uncompetitive (use-dependent) NMDA-channel antagonism that dampens excessive tonic glutamatergic excitation while sparing normal transmission",
+    "Competitive orthosteric glutamate-site antagonism across all NMDA receptors",
+    "Positive allosteric modulation of GABA-B receptors",
+    "Acetylcholinesterase inhibition with nicotinic potentiation"
+   ],
+   "correctIndex": 0,
+   "explanation": "Memantine enters open NMDA channels in a use-dependent fashion and blocks noncompetitively (Katzung; Tripathi: noncompetitive and use-dependent), pruning pathological excitotoxic signalling while physiological transmission proceeds. Competitive blockade would wreck normal glutamatergic function, GABA-B modulation has no member in this set, and the cholinesterase-nicotinic description is galantamine's."
+  },
+  {
+   "id": "stm-mem-02",
+   "drugSlug": "memantine",
+   "domain": "Clinical Uses",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "A 74-year-old with moderate-to-severe Alzheimer's on donepezil 10 mg deteriorates in function. The staging-appropriate addition is:",
+   "options": [
+    "Stop all cognition therapy since severe AD is untreatable",
+    "Add memantine \u2014 indicated for moderate-to-severe AD and commonly combined with donepezil (Tripathi: replace or supplement; Katzung: combination results mixed but used)",
+    "Add tacrine for extra cholinergic drive",
+    "Replace donepezil with methylphenidate"
+   ],
+   "correctIndex": 1,
+   "explanation": "Memantine is the NMDA-antagonist add-on for moderate-to-severe AD, layered on or substituted for a cholinesterase inhibitor \u2014 the staging pearl (AChE inhibitors earlier, memantine later). Tacrine is retired, methylphenidate is not an AD drug (Tripathi explicitly bars dementia use), and abandoning therapy contradicts current practice."
+  },
+  {
+   "id": "stm-mem-03",
+   "drugSlug": "memantine",
+   "domain": "Mechanism & Neuroscience",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "mechanism",
+   "question": "Why does memantine spare physiological glutamatergic transmission while blocking excitotoxicity? The receptor-kinetic answer is:",
+   "options": [
+    "It antagonises glutamate at metabotropic receptors instead",
+    "It increases glutamate reuptake by astrocytes",
+    "Low affinity and fast off-rate let the blocker clear during brief physiological channel openings but accumulate in persistently open channels under tonic pathological activation",
+    "It binds irreversibly only to receptors on diseased neurons"
+   ],
+   "correctIndex": 2,
+   "explanation": "The uncompetitive, use-dependent, low-affinity profile means memantine preferentially occupies channels that stay open too long (tonic/pathological) and exits quickly when pulses are brief \u2014 the kinetic rationale quoted in every mechanism lecture. Neuron-selective irreversible binding, metabotropic antagonism and astrocytic uptake effects are mechanisms it does not possess."
+  },
+  {
+   "id": "stm-mem-04",
+   "drugSlug": "memantine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "high-yield-summary",
+   "question": "Two weeks after starting memantine 10 mg twice daily, a patient has hallucinations, confusion and dizziness. The correct handling is:",
+   "options": [
+    "They indicate a missed tacrine-style hepatic emergency",
+    "They are inevitable and untreatable",
+    "They prove cholinergic excess requiring atropine",
+    "These are recognised memantine adverse effects (Tripathi: dizziness, confusion; hallucinations occur) \u2014 assess, and reduce or stop if unacceptable, remembering renal dose adjustment"
+   ],
+   "correctIndex": 3,
+   "explanation": "Memantine's adverse-effect line \u2014 constipation, tiredness, headache, dizziness, drowsiness, with confusion and hallucinations recognised \u2014 is managed by dose review, not by organ-failure panic or antidotes. Hepatotoxicity is tacrine/pemoline's story, and the cholinergic-excess reading is backwards: memantine is the agent free of cholinergic burden."
+  },
+  {
+   "id": "stm-mem-05",
+   "drugSlug": "memantine",
+   "domain": "Clinical Uses",
+   "difficulty": "Foundation",
+   "style": "recall",
+   "afterSectionId": "quick-facts",
+   "question": "Memantine's indication and positioning are:",
+   "options": [
+    "Moderate-to-severe Alzheimer's disease \u2014 to replace or supplement an anti-AChE (Tripathi); benefit in milder disease is unclear",
+    "Mild cognitive impairment as first-line",
+    "Mild AD only, before any AChE inhibitor",
+    "Delirium prophylaxis in the ICU"
+   ],
+   "correctIndex": 0,
+   "explanation": "The label anchors to moderate-to-severe AD (Tripathi: slows functional decline; Katzung: modest efficacy in moderate-to-severe disease), with replacement or supplementation of cholinesterase inhibitors as the positioning pearl. MCI and mild AD lack established benefit, and ICU delirium prophylaxis is not a memantine role."
+  },
+  {
+   "id": "stm-mem-06",
+   "drugSlug": "memantine",
+   "domain": "Pharmacokinetics",
+   "difficulty": "Advanced",
+   "style": "vignette",
+   "afterSectionId": "timeline",
+   "question": "A 70-year-old with eGFR 28 mL/min is to start memantine. The PK-based counselling is:",
+   "options": [
+    "Renal impairment mandates doubling the dose",
+    "Memantine is largely renally excreted unchanged, so renal impairment requires dose adjustment \u2014 the standard caution in moderate-to-severe impairment",
+    "Memantine is fully hepatically metabolised by CYP3A4, so renal function is irrelevant",
+    "Memantine is a prodrug activated in the kidney, so impairment speeds activation"
+   ],
+   "correctIndex": 1,
+   "explanation": "Renal excretion of largely unchanged drug is memantine's PK signature (contrast galantamine's CYP story), hence labelled renal dose adjustment in impairment. Options A, C and D invert or fabricate: no relevant 3A4 metabolism, no renal prodrug activation, and impairment reduces \u2014 never doubles \u2014 the dose."
+  },
+  {
+   "id": "stm-mem-07",
+   "drugSlug": "memantine",
+   "domain": "Adverse Effects & Safety",
+   "difficulty": "Clinical",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "The classic memantine-versus-AChE-inhibitor cardiac-GI comparison in examinations is:",
+   "options": [
+    "AChE inhibitors are cardiac-safe while memantine blocks cardiac sodium channels",
+    "Both classes share identical adverse-effect profiles",
+    "Memantine lacks the cholinergic cardiac (bradycardia/syncope) and GI (nausea/vomiting) burden that AChE inhibitors carry \u2014 its AEs are dizziness, confusion/hallucinations, constipation, headache",
+    "Memantine causes more bradycardia than donepezil"
+   ],
+   "correctIndex": 2,
+   "explanation": "The comparison hinges on pharmacology: cholinergic cardiac effects (bradycardia/syncope) and GI effects (nausea/vomiting) belong to acetylcholinesterase inhibition, and memantine \u2014 an NMDA antagonist \u2014 lacks both burdens, its own AEs being dizziness, confusion, hallucinations, constipation and headache. Option D inverts the teaching point, option A borrows antiarrhythmic pharmacology, and option B erases the contrast the question tests."
+  },
+  {
+   "id": "stm-mem-08",
+   "drugSlug": "memantine",
+   "domain": "Indian Practice",
+   "difficulty": "Clinical",
+   "style": "vignette",
+   "afterSectionId": "quick-facts",
+   "question": "An Indian family asks how memantine will be started and when it is judged futile. Tripathi's practice box says:",
+   "options": [
+    "Start 25 mg OD and review monthly",
+    "The Indian brands are DONECEPT and GALAMER",
+    "Titrate to a fixed 40 mg/day target for all patients",
+    "Start 5 mg OD, titrate gradually to 10 mg BD (ADMENTA/MENTADEM 5/10 mg; ALMANTIN 5 mg), and stop if no clinical benefit after 6 months"
+   ],
+   "correctIndex": 3,
+   "explanation": "Tripathi's memantine box: 5 mg OD titrated to 10 mg BD, brands ADMENTA/MENTADEM/ALMANTIN, with a pragmatic stop-rule at 6 months without benefit. The 25 mg and 40 mg figures import no real Indian schedule, and DONECEPT/GALAMER are donepezil and galantamine brands."
+  },
+  {
+   "id": "stm-mix-01",
+   "drugSlug": "mixed",
+   "domain": "Active Recall",
+   "difficulty": "Advanced",
+   "style": "recall",
+   "afterSectionId": "high-yield-summary",
+   "question": "Which drug-mechanism pair from the Know Your Pill stimulant-cognition comparison is CORRECT?",
+   "options": [
+    "Galantamine \u2014 acetylcholinesterase inhibition plus allosteric potentiation of nicotinic receptors",
+    "Memantine \u2014 pseudo-irreversible dual AChE/BuChE carbamate",
+    "Lisdexamfetamine \u2014 low-affinity uncompetitive NMDA channel antagonist",
+    "Methylphenidate \u2014 an indirect releaser that reverses DAT/NET and VMAT2"
+   ],
+   "correctIndex": 0,
+   "explanation": "The KYP class table assigns each signature exactly once, and galantamine owns acetylcholinesterase inhibition plus allosteric potentiation of nicotinic receptors. Option D is amphetamine's releaser signature (methylphenidate is the pure reuptake blocker), option B is rivastigmine's carbamate profile (memantine is the NMDA antagonist), and option C is memantine's mechanism (lisdexamfetamine is the prodrug releaser) \u2014 three deliberate signature swaps."
+  }
+ ]
+}

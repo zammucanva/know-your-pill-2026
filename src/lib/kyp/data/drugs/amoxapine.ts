@@ -920,6 +920,110 @@ export const amoxapine: Drug = {
       explanation: "For depression: start 50 mg two to three times daily, target 200-400 mg/day, maximum 600 mg/day. Increase to 200-400 mg/day (divided)",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tca-amo-01",
+      question: "What makes amoxapine unique among antidepressants?",
+      options: [
+        "It is an SSRI with 5-HT3 antagonism",
+        "It combines norepinephrine reuptake inhibition with dopamine D2 receptor blockade — antipsychotic-like activity",
+        "It is an irreversible MAO-B inhibitor",
+        "It is a benzodiazepine-site agonist"
+      ],
+      correctIndex: 1,
+      explanation: "Amoxapine is the only older antidepressant that blocks D2 receptors alongside its NET inhibition — Indian texts state that none of the TCAs except amoxapine block dopamine receptors — giving it a mixed antidepressant-neuroleptic profile. 5-HT3 antagonism is vortioxetine's mechanism, MAO-B inhibition is selegiline's, and benzodiazepine-site action is unrelated. That D2 block is the root of everything unique about the drug: EPS, hyperprolactinaemia and its psychotic-depression niche.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tca-amo-02",
+      question: "Amoxapine's chemical pedigree is best described as:",
+      options: [
+        "The N-demethylated metabolite of the antipsychotic loxapine",
+        "The active metabolite of imipramine",
+        "The R-enantiomer of maprotiline",
+        "A prodrug of clozapine"
+      ],
+      correctIndex: 0,
+      explanation: "Amoxapine is literally the N-demethylated metabolite of loxapine, an older antipsychotic — which is why one molecule can carry both antidepressant and neuroleptic properties. Imipramine's metabolite is desipramine (the swap trap again), enantiomer stories belong to escitalopram and levomilnacipran, and no clozapine prodrug exists. Pedigree questions are the most reliable marks in this drug's section of any exam.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tca-amo-03",
+      question: "A 55-year-old man, five weeks into amoxapine for depression, develops bradykinesia, cogwheel rigidity and a masked face. He takes no antipsychotics and the CT head is normal. The best explanation is:",
+      options: [
+        "Worsening depression with psychomotor retardation",
+        "Incident idiopathic Parkinson's disease — start levodopa",
+        "TCA-induced chorea",
+        "Amoxapine's D2 blockade causing drug-induced parkinsonism — review and stop the drug"
+      ],
+      correctIndex: 3,
+      explanation: "Amoxapine's D2-blocking action (parent drug plus its 7-hydroxy metabolite) can produce a parkinsonian syndrome — Katzung calls it out specifically — and it is the one antidepressant whose complaint list reads like a low-dose antipsychotic's. Psychomotor retardation does not produce cogwheel rigidity, prescribing levodopa before withdrawing the culprit drug is premature, and chorea is the wrong movement disorder entirely. Withdrawal or dose reduction usually reverses the syndrome — diagnose iatrogenic disease first.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-amo-04",
+      question: "A 48-year-old has severe depression with mood-congruent delusions of guilt. Modern care would use an antidepressant plus an antipsychotic. Historically, which single antidepressant offered both activities in one molecule for exactly this 'psychotic depression' problem?",
+      options: [
+        "Doxepin",
+        "Nortriptyline",
+        "Amoxapine",
+        "Lofepramine"
+      ],
+      correctIndex: 2,
+      explanation: "Amoxapine's mixed antidepressant-plus-neuroleptic properties — inherited from its loxapine parentage — made it the historical one-molecule answer for psychotic depression, as Indian texts note. Doxepin, nortriptyline and lofepramine have no D2 action and no antipsychotic credentials. The modern regimen (for example sertraline or a TCA plus an antipsychotic) superseded it, but the pharmacology behind the old strategy still earns marks.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-amo-05",
+      question: "A 39-year-old woman on amoxapine reports bilateral breast discharge and amenorrhoea. Serum prolactin is markedly raised and pituitary MRI is normal. The best explanation is:",
+      options: [
+        "Amoxapine's D2 blockade disinhibiting prolactin secretion — drug-induced hyperprolactinaemia",
+        "An early prolactinoma missed by MRI",
+        "Hypothyroidism unrelated to the drug",
+        "A generic TCA class effect mediated by H1 blockade"
+      ],
+      correctIndex: 0,
+      explanation: "Tuberoinfundibular D2 tone normally suppresses prolactin; amoxapine's D2 antagonism removes it, producing galactorrhoea and menstrual disruption — an antipsychotic-type effect unique among antidepressants. A normal MRI with a clear drug timeline argues against tumour (check TSH, but the drug is the leading suspect), and H1 blockade has nothing to do with prolactin. No other antidepressant regularly does this — that uniqueness is the exam point.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-amo-06",
+      question: "During an emergency-ward teaching round on antidepressant overdoses, which pairing is correct?",
+      options: [
+        "Fluoxetine overdose — status epilepticus is the leading cause of death",
+        "Sertraline overdose — QRS widening routinely requiring bicarbonate",
+        "Amoxapine overdose — seizures can progress to status epilepticus on top of the usual TCA-like picture",
+        "Citalopram overdose — no cardiac effects at all"
+      ],
+      correctIndex: 2,
+      explanation: "Amoxapine overdose combines TCA-like toxicity with a special liability to seizures, including status epilepticus — Indian texts flag this explicitly, and it follows from the same D2/receptor pharmacology that marks the drug otherwise. SSRI overdoses are famously benign (fluoxetine's risk is not status epilepticus), sertraline does not routinely widen QRS, and citalopram is the SSRI with a dose-dependent QT effect — so 'no cardiac effects at all' is false. Overdose-profile sorting across the antidepressant classes is a reliable exam station.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-amo-07",
+      question: "Per Indian textbook accounts, which set of TCAs was listed as useful in childhood ADHD before atomoxetine's arrival?",
+      options: [
+        "Doxepin, trimipramine, dothiepin",
+        "Amitriptyline, clomipramine, lofepramine",
+        "Maprotiline, protriptyline, doxepin",
+        "Imipramine, nortriptyline, amoxapine"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists imipramine, nortriptyline and amoxapine — the TCAs with less depressant properties — as then-first-line ADHD drugs with steadier action than stimulants, a historical footprint atomoxetine (a selective NRI) has since replaced. The wrong rows are padded with strongly sedating or seizure-prone members that never had the ADHD role. Notice the thread: norepinephrine reuptake inhibition runs from these TCAs straight to atomoxetine's modern label.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-amo-08",
+      question: "Amoxapine's antipsychotic (D2-blocking) punch comes mainly from:",
+      options: [
+        "Renal excretion of unchanged amoxapine",
+        "Its active metabolite 7-hydroxyamoxapine — a potent D2 blocker",
+        "Back-conversion to loxapine in the liver",
+        "Its own strong SERT blockade"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung identifies 7-hydroxyamoxapine as a potent D2 blocker with antipsychotic effects — the metabolite, not the parent, drives much of the extrapyramidal and prolactin story. Metabolism runs loxapine to amoxapine, never the reverse, and only about 5% of TCAs leave unchanged in urine while SERT blockade belongs to clomipramine. When an active metabolite outpowers the parent, timing questions (why EPS appears days into treatment) answer themselves.",
+      afterSectionId: "timeline",
+    },
   ],
   activeRecallQuestions: [
     {

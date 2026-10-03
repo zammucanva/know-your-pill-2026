@@ -1040,6 +1040,110 @@ export const lithium: Drug = {
       explanation: "For acute mania: start 600–900 mg/day divided (or 900–1800 depending on preparation), target 900–1800 mg/day, maximum Level-limited (1.2–1.5 acute max). Level-guided: check at 5–7 days, target 0.8–1.2 mEq/L",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "mst-lit-01",
+      question: "Lithium's accepted molecular mechanism of mood stabilisation centres on:",
+      options: [
+        "Inhibition of inositol monophosphatase with depletion of intracellular inositol, plus direct inhibition of GSK-3 kinase",
+        "Competitive blockade of postsynaptic dopamine D2 receptors, exactly like haloperidol",
+        "Irreversible inhibition of GABA transaminase, raising brain GABA concentrations",
+        "Use-dependent blockade of voltage-gated sodium channels in their inactivated state"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung identifies two signal-transduction targets: inositol monophosphatase inhibition depletes free inositol and dampens overactive PIP2-linked signalling, while GSK-3 inhibition favours beta-catenin accumulation and neuroplasticity. D2 blockade defines the antipsychotics, GABA-transaminase inhibition is vigabatrin's mechanism, and inactivated-state sodium-channel blockade is the fingerprint of carbamazepine and lamotrigine — not lithium.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "mst-lit-02",
+      question: "A 68-year-old man with mild chronic kidney disease (eGFR 48 mL/min) is to start lithium for bipolar maintenance. His junior asks why the starting dose must be lower and the monitoring tighter than in a younger patient. The pharmacokinetic reason is:",
+      options: [
+        "Lithium is hepatically metabolised to an inactive glucuronide whose clearance slows with age",
+        "Lithium is handled like sodium — nearly 80% of the filtered load is reabsorbed in the proximal tubule, and levels run higher in older patients and in renal insufficiency",
+        "Lithium is completely filtered with zero tubular reabsorption, so clearance always equals the GFR",
+        "Lithium is actively secreted by renal organic anion transporters, which age accelerates"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi details the renal handling: nearly 80% of filtered lithium is reabsorbed in the proximal convoluted tubule competing with sodium, renal clearance is only about one-fifth of creatinine clearance, and levels are explicitly higher in older patients and those with renal insufficiency. Lithium is neither protein bound nor metabolised, so the glucuronide and secretory options describe other molecules entirely.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "mst-lit-03",
+      question: "A 42-year-old man maintained on lithium reports three months of passing large volumes of pale urine with thirst of 4-5 L/day. Serum lithium is 0.7 mEq/L and urine osmolality fails to rise after desmopressin. The best next step is:",
+      options: [
+        "Give an intravenous vasopressin infusion, the hormone missing in this condition",
+        "Start demeclocycline, which restores renal responsiveness to vasopressin",
+        "Start amiloride, which restores urinary concentrating ability in lithium-induced nephrogenic diabetes insipidus",
+        "Stop lithium permanently, since the renal concentrating lesion is irreversible"
+      ],
+      correctIndex: 2,
+      explanation: "Lithium produces a vasopressin-resistant nephrogenic diabetes insipidus; Katzung notes it responds to amiloride and Tripathi calls amiloride the drug of choice for lithium-induced diabetes insipidus. The lesion is reversible and occurs even at therapeutic levels, and demeclocycline is itself a recognised cause of drug-induced nephrogenic diabetes insipidus, so it would deepen the problem.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-lit-04",
+      question: "A 55-year-old woman stable on lithium 900 mg/day buys over-the-counter ibuprofen for knee osteoarthritis. Two weeks later she has coarse tremor, giddiness, ataxia and confusion; serum lithium is 2.1 mEq/L. The most likely explanation is:",
+      options: [
+        "Ibuprofen displaced lithium from plasma proteins, raising the free level",
+        "Ibuprofen induced hepatic metabolism of lithium to a neurotoxic metabolite",
+        "Ibuprofen caused sodium gain, driving lithium into cells and lowering serum levels",
+        "Ibuprofen reduced renal prostaglandin synthesis, cutting lithium clearance and causing accumulation"
+      ],
+      correctIndex: 3,
+      explanation: "NSAIDs that inhibit renal prostaglandin synthesis reduce lithium clearance — Katzung's interaction table lists NSAIDs, thiazide diuretics and ACE inhibitors among the classic level-raising offenders (aspirin and paracetamol are exceptions). Lithium is not protein bound and undergoes no metabolism, so displacement and metabolic theories cannot apply, and the presentation is toxicity rather than deficiency.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-lit-05",
+      question: "A 60-year-old man on lithium with hydrochlorothiazide develops gastroenteritis with vomiting and poor fluid intake. He is found confused and ataxic with coarse tremor and slurred speech; serum lithium is 3.6 mEq/L and creatinine has doubled from baseline. The most appropriate management is:",
+      options: [
+        "Stop lithium and arrange urgent haemodialysis, the preferred removal method in severe lithium toxicity",
+        "Give sodium bicarbonate infusion alone and observe, since levels reliably fall within hours",
+        "Give flumazenil to reverse the neurotoxicity and continue the same dosing",
+        "Double the lithium dose to overcome the renal resistance caused by dehydration"
+      ],
+      correctIndex: 0,
+      explanation: "Confusion, ataxia and a rising creatinine with a level above 2 mEq/L mean severe lithium toxicity — Katzung notes any value over 2 mEq/L must be considered likely toxic and that the small ion is readily dialysed, with haemodialysis preferred; Tripathi quotes levels above 4 mEq/L as a haemodialysis trigger. There is no specific antidote — supportive care, fluid and sodium correction and dialysis do the work.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-lit-06",
+      question: "A 49-year-old woman two years into lithium maintenance reports fatigue, cold intolerance and 4 kg weight gain. TSH is 12 mIU/L with low free T4; she was euthyroid before lithium and her mood has been stable. The best course is:",
+      options: [
+        "Stop lithium and start valproate, since thyroid failure is an absolute contraindication to all mood stabilisers",
+        "Continue lithium at the same dose and start levothyroxine — lithium-induced hypothyroidism does not mandate stopping the drug",
+        "Stop lithium immediately, because hypothyroidism signals the drug is accumulating towards toxicity",
+        "Add carbimazole to suppress the lithium-stimulated thyroid, then recheck in six weeks"
+      ],
+      correctIndex: 1,
+      explanation: "Lithium inhibits thyroid hormone release, producing compensated euthyroidism in most patients but frank hypothyroidism in a few — Tripathi reports goitre in about 4% and Katzung advises a TSH every 6-12 months. Goitre and hypothyroidism do not warrant stopping lithium and are managed with thyroid hormone supplementation, so the standard answer is levothyroxine with lithium continued.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-lit-07",
+      question: "A 24-year-old woman on lithium for bipolar I disorder discovers she is 6 weeks pregnant. She has had two prior manic episodes and one suicide attempt. Which counselling best reflects the evidence?",
+      options: [
+        "Lithium is an absolute teratogen in every trimester, so it must be stopped the same day in all patients",
+        "Lithium in pregnancy reliably causes foetal goitre that progresses to congenital hypothyroidism requiring surgery",
+        "Lithium's classic foetal association is Ebstein's anomaly of the tricuspid valve — rare overall — so with her relapse and suicide history, the plan needs specialist joint counselling rather than abrupt stopping",
+        "Lithium causes neural tube defects in 1-2% of exposures, so high-dose folate makes continued treatment safe"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung's Table 59-1 pairs lithium with Ebstein's anomaly (a tricuspid valve malformation) and neonatal toxicity after third-trimester exposure, while its text notes newer data suggest a relatively low absolute teratogenic risk. The neural tube defect story belongs to valproate, and abruptly stopping lithium in a patient with prior mania and suicidality risks relapse — lithium also reduces suicide risk, so decisions are gradual and shared.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "mst-lit-08",
+      question: "Which pairing of Indian lithium products and dosing facts is correct?",
+      options: [
+        "LITHOSUN is a lithium citrate syrup given by injection in acute mania",
+        "LICAB SR is given thrice daily at 2 g/day, with levels drawn immediately after the morning dose",
+        "Lithium is marketed in India as TEGRETOL and MAZETOL 300 mg tablets",
+        "LICAB and LITHOSUN 300 mg tablets (400 mg SR available), usually started at 600 mg/day and titrated to 600-1200 mg/day with the level drawn 12 hours after the last dose"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists lithium carbonate as LICAB and LITHOSUN 300 mg tablets with a 400 mg SR option, typical dosing 600-1200 mg/day, and specifies that the serum level is measured 12 hours after the last dose to reflect the steady state. TEGRETOL and MAZETOL are carbamazepine brands, and lithium citrate syrup is an oral formulation — lithium has no injectable antimanic role.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

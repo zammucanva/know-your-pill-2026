@@ -790,6 +790,110 @@ export const thiothixene: Drug = {
       explanation: "For schizophrenia: start 2 mg twice daily, target 6–30 mg/day, maximum 60 mg/day. Titrate by 2–5 mg to 15–30 mg/day",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tap-tix-01",
+      question: "Thiothixene's chemical class and mechanism are correctly stated as:",
+      options: [
+        "A thioxanthene dopamine D2 antagonist — the prototype of that group",
+        "An aliphatic phenothiazine with strong anticholinergic activity",
+        "A butyrophenone bearing an imipramine-like side chain",
+        "A dibenzodiazepine with weak D2 and strong 5-HT2A blockade"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung presents thiothixene as the exemplar of the thioxanthene derivatives, acting as a dopamine-receptor antagonist like the phenothiazines and butyrophenones. Option D is the clozapine-type profile, option B describes chlorpromazine, and option C welds butyrophenone chemistry to a false side-chain claim.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tap-tix-02",
+      question: "A resident plans to start a young schizophrenic patient on thiothixene and asks what adverse-effect counselling matters most with this high-potency agent. The best answer is:",
+      options: [
+        "Warn about marked weight gain and diabetes",
+        "Warn about severe anticholinergic urinary retention",
+        "Warn about extrapyramidal effects — dystonia, parkinsonism and akathisia",
+        "Warn about agranulocytosis requiring weekly blood counts"
+      ],
+      correctIndex: 2,
+      explanation: "In Katzung's structure-toxicity table thiothixene has a very high D2/5-HT2A ratio and high extrapyramidal toxicity with only medium sedation and medium hypotension — EPS is the counselling priority. Weight gain and metabolic risk define olanzapine and clozapine, weekly CBC monitoring is clozapine's burden, and thioridazine heads the anticholinergic ranking, not thiothixene.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-tix-03",
+      question: "Which pairing of drug to expected EPS severity is correct?",
+      options: [
+        "Thiothixene — very low EPS; clozapine — high EPS",
+        "Thiothixene — high EPS; clozapine — very low EPS",
+        "Chlorpromazine — the highest EPS among the typicals",
+        "Haloperidol — free of EPS at therapeutic doses"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung's table scores thiothixene high for extrapyramidal toxicity (very high D2/5-HT2A ratio) and clozapine very low — the mirror image of option A. Chlorpromazine sits among the least EPS-prone typicals, and no therapeutic D2 blocker, haloperidol included, is EPS-free.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "tap-tix-04",
+      question: "A 22-year-old man presents with an acute psychotic exacerbation. The team wants a high-potency typical antipsychotic with minimal anticholinergic and orthostatic burden. The most fitting choice is:",
+      options: [
+        "Chlorpromazine",
+        "Thioridazine",
+        "Cyamemazine",
+        "Thiothixene"
+      ],
+      correctIndex: 3,
+      explanation: "Thiothixene's high-potency profile delivers strong D2 blockade with comparatively little autonomic effect — exactly the requested balance. Chlorpromazine and cyamemazine are low-potency, sedating, alpha-blocking agents, and thioridazine adds the QTc and anticholinergic baggage that has largely removed it from practice.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-tix-05",
+      question: "Three days after starting thiothixene, a 19-year-old develops sudden torticollis, trismus and upward eye deviation but is afebrile with normal CPK. The correct diagnosis and management are:",
+      options: [
+        "Acute dystonic reaction — parenteral anticholinergic or promethazine, with antipsychotic cover while continuing therapy",
+        "Neuroleptic malignant syndrome — stop the drug and give dantrolene",
+        "Tardive dyskinesia — switch immediately to clozapine",
+        "Akathisia — propranolol and reassurance"
+      ],
+      correctIndex: 0,
+      explanation: "Bizarre sustained spasms of linguo-facial and ocular muscles within days of a high-potency antipsychotic define acute dystonia; Tripathi notes intramuscular promethazine or hydroxyzine clears the reaction within minutes. NMS requires fever, rigidity and raised CPK, tardive dyskinesia takes months to years, and akathisia is inner restlessness rather than spasm.",
+      afterSectionId: "brain-regions",
+    },
+    {
+      id: "tap-tix-06",
+      question: "During rounds a junior asks why thiothixene is dosed in single-digit milligram equivalents while chlorpromazine may need hundreds of milligrams. The correct explanation is:",
+      options: [
+        "Thiothixene has the longest half-life of the typical antipsychotics",
+        "Thiothixene undergoes no first-pass metabolism",
+        "High clinical potency reflects high D2 receptor affinity — small doses suffice, though maximal efficacy is no greater",
+        "Thiothixene is more sedating, so lower doses become possible"
+      ],
+      correctIndex: 2,
+      explanation: "Clinical potency in Katzung's table means the milligram dose needed for effect: thiothixene is 'very high' potency because of strong D2 binding, but potency is not efficacy — all typicals reach comparable maximal benefit. Half-life, first-pass metabolism and sedation do not determine this potency label.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-tix-07",
+      question: "After five years of thiothixene, a 45-year-old develops lip-smacking, tongue-thrusting and choreiform finger movements that persist even after the dose is halved. The best diagnosis and next step are:",
+      options: [
+        "Drug-induced parkinsonism — add levodopa",
+        "Tardive dyskinesia — minimise or stop the typical, and consider switching to an atypical such as clozapine",
+        "Acute dystonia — give intramuscular promethazine",
+        "Neuroleptic malignant syndrome — dantrolene and bromocriptine"
+      ],
+      correctIndex: 1,
+      explanation: "Late-onset orofacial choreiform movements persisting despite dose reduction are tardive dyskinesia, the dose-limiting legacy of long-term D2 blockade; management is dose minimisation and switching to a low-EPS atypical, with clozapine best documented. Levodopa cannot work while striatal D2 receptors are blocked, and the timing excludes both dystonia and NMS.",
+      afterSectionId: "brain-regions",
+    },
+    {
+      id: "tap-tix-08",
+      question: "The high-potency thioxanthene marketed in the United States as Navane is:",
+      options: [
+        "Flupenthixol",
+        "Sulpiride",
+        "Molindone",
+        "Thiothixene"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung's preparation list pairs thiothixene with the brand Navane. Flupenthixol (Fluanxol) is its thioxanthene cousin with a depot ester, molindone was marketed as Moban, and sulpiride — a benzamide — has never been approved in the USA.",
+      afterSectionId: "knowledge-graph",
+    },
   ],
   activeRecallQuestions: [
     {

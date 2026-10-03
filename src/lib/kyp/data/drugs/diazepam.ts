@@ -936,6 +936,110 @@ export const diazepam: Drug = {
       explanation: "For anxiety (short course): start 2 mg twice daily (or 5 mg nocte), target 4–30 mg/day divided, maximum Up to 30 mg/day (short-term). Lowest effective dose; 2–4 week maximum course",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "bzd-dia-01",
+      question: "The canonical benzodiazepine mechanism, exemplified by diazepam, is best stated as:",
+      options: [
+        "Binding the alpha/gamma-interface benzodiazepine site on GABA-A receptors and increasing the FREQUENCY of GABA-gated chloride channel opening, with no direct GABA-mimetic action",
+        "Binding the barbiturate site and increasing the DURATION of channel opening, with direct channel activation at high doses",
+        "Directly activating GABA-A receptors as a full GABA agonist independent of endogenous GABA",
+        "Blocking GABA reuptake and thereby raising synaptic GABA concentrations"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi and Katzung both place benzodiazepines at the alpha/gamma subunit interface, where they allosterically increase the frequency of chloride channel-opening events without opening the channel themselves — the basis of their lower ceiling of CNS depression. Option B is barbiturate pharmacology (duration increase plus direct channel opening), full GABA-mimetic activation is what barbiturates do at high concentration, and GABA reuptake blockade describes tiagabine.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "bzd-dia-02",
+      question: "The mother of a 6-year-old with epilepsy calls: her son has had three consecutive convulsions at home without fully regaining awareness between them; the ambulance is on its way. The benzodiazepine formulation designed exactly for this home scenario is:",
+      options: [
+        "Rectal diazepam gel",
+        "Oral clonazepam wafers",
+        "Sublingual flurazepam tablets",
+        "Intramuscular chlordiazepoxide injection"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung notes diazepam's rectal gel formulation is used for acute repetitive (cluster) seizures — the classic out-of-hospital tool when intravenous access is impossible. Oral clonazepam acts far too slowly for cluster seizures, flurazepam has no sublingual emergency role, and chlordiazepoxide combines erratic IM absorption with a weak anticonvulsant action.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-dia-03",
+      question: "A 72-year-old woman started diazepam 5 mg twice daily four weeks ago for lumbar muscle spasm. Her family reports progressive daytime drowsiness, unsteadiness and a near-fall. The most likely pharmacokinetic reason is:",
+      options: [
+        "Diazepam and its active metabolite desmethyldiazepam have effective half-lives measured in days, so the drug accumulates progressively — the elderly are especially vulnerable",
+        "Diazepam is renally cleared, so age-related GFR decline has caused accumulation of unchanged drug",
+        "Diazepam's half-life is only 2-3 hours, so each doubled dose has produced transient overdose peaks",
+        "Diazepam binds its receptor irreversibly, so effect builds with every dose"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi gives diazepam an elimination half-life of 20-30 hours with the biological effect prolonged further by active metabolites, chiefly desmethyldiazepam; Katzung's effective range of 20-80 hours explains why four weeks of dosing in an elderly patient means deep accumulation with falls and confusion. Diazepam is hepatically metabolised rather than excreted unchanged, is nowhere near ultrashort, and binds reversibly — as proven by flumazenil antagonism.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-dia-04",
+      question: "Why does an intravenous bolus of diazepam abort seizures within seconds yet its effect fades within 15-30 minutes, while lorazepam's anticonvulsant effect lasts 6-12 hours?",
+      options: [
+        "Diazepam is highly lipid-soluble, so it enters the brain rapidly but redistributes just as rapidly into peripheral fat; the less lipophilic lorazepam redistributes slowly and lingers in the central compartment",
+        "Diazepam is water-soluble with fast brain entry, while lorazepam reaches the brain only after hepatic activation",
+        "Diazepam is a partial agonist at the benzodiazepine site, whereas lorazepam is a full inverse agonist",
+        "Diazepam is eliminated by the kidneys within minutes, while lorazepam binds the chloride channel irreversibly"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung contrasts logP 2.8 for diazepam with 2.4 for lorazepam: the more lipophilic drug both penetrates brain quickly and exits into peripheral fat quickly, whereas lorazepam's lower lipid solubility gives slower redistribution and a sustained 6-12 hour anticonvulsant effect (Tripathi). Both drugs are reversible, competitive-site modulators, and neither is renally eliminated within minutes nor a prodrug.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-dia-05",
+      question: "A junior doctor orders intramuscular diazepam 10 mg for an agitated alcohol-withdrawal patient in whom intravenous access has failed. The senior's most defensible objection is:",
+      options: [
+        "IM diazepam causes dose-dependent hearing loss",
+        "IM diazepam reaches peak level within two minutes, risking apnoea every time",
+        "IM diazepam is contraindicated because it causes haemolysis in alcoholics",
+        "IM diazepam is erratically and unpredictably absorbed — the rational moves are oral dosing or IM lorazepam if a parenteral benzodiazepine is essential"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung's pharmacokinetic table and Tripathi both flag diazepam's erratic bioavailability from IM injection, which makes the route unreliable precisely when dependable levels are needed; lorazepam is the benzodiazepine with dependable IM absorption. Peak absorption is delayed rather than two-minute, and the hearing-loss and haemolysis objections are fabricated liabilities.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-dia-06",
+      question: "A man with spinal muscle spasm on diazepam 5 mg TDS starts antitubercular therapy including rifampicin. Two weeks later he reports the diazepam 'does nothing now'. The best explanation is:",
+      options: [
+        "Rifampicin is a potent hepatic microsomal enzyme inducer that accelerates the oxidative metabolism of diazepam and its active metabolites",
+        "Rifampicin blocks diazepam's conversion to its active metabolite in the stomach",
+        "Rifampicin competitively displaces diazepam from the benzodiazepine receptor",
+        "Rifampicin raises diazepam levels by saturating hepatic blood flow, causing sedation"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung notes the metabolism of diazepam (with midazolam and triazolam) is affected by hepatic P450 inducers and inhibitors; rifampicin is the classic inducer, so diazepam levels and effect fall. Option B garbles gastric-activation pharmacology (that is clorazepate's story, and rifampicin is irrelevant to it), and displacement or flow-saturation are mechanisms rifampicin does not possess.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-dia-07",
+      question: "A 44-year-old chronic heavy drinker, abstinent for 48 hours, is admitted with coarse tremor, sweating, tachycardia, disorientation and visual hallucinations. Which drug class provides the substitution cover for this presentation, with diazepam a leading intravenous option in severe cases?",
+      options: [
+        "Major tranquillisers such as haloperidol",
+        "Opioid substitution such as buprenorphine",
+        "Naltrexone initiated immediately",
+        "Benzodiazepines"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi states benzodiazepines (chlordiazepoxide, diazepam) are the preferred substitution therapy for alcohol withdrawal, their long duration allowing later gradual tapering. Haloperidol lowers the seizure threshold and provides no cross-tolerance cover, buprenorphine addresses opioid dependence, and naltrexone is relapse-prevention therapy started after detoxification, not acute cover.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-dia-08",
+      question: "A 26-year-old woman discovers she is 8 weeks pregnant after taking diazepam intermittently for sleep; she also asks whether she may use it again near her due date. Counselling should include:",
+      options: [
+        "Continuing freely, since benzodiazepines are proven safe in all trimesters",
+        "Avoiding benzodiazepines where possible in the first trimester because of an association with cleft lip/palate, and avoiding use near term because neonatal flaccidity (floppy infant syndrome) and respiratory depression can occur",
+        "Stopping diazepam but taking a barbiturate hypnotic instead, which is pregnancy-safe",
+        "Doubling the dose near term to prevent withdrawal seizures in the newborn"
+      ],
+      correctIndex: 1,
+      explanation: "The KYP safety anchor is two-fold: first-trimester use is associated with cleft lip/palate (Tripathi notes the original diazepam teratogenicity report was disputed, but caution remains the standard teaching), and administration around labour produces neonatal flaccidity and respiratory depression — Katzung adds that all sedative-hypnotics cross the placenta and can depress neonatal vital functions. Barbiturates are certainly not pregnancy-safe substitutes, and escalating the dose near term is the opposite of sound care.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

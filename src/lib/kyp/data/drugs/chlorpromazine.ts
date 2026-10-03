@@ -880,6 +880,110 @@ export const chlorpromazine: Drug = {
       explanation: "For psychosis (inpatient): start 25–100 mg orally (divided), target 200–800 mg/day, maximum 1000+ mg/day (exceptional). Increase gradually; severe cases need 400+ mg/day",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tap-chl-01",
+      question: "Chlorpromazine produces antipsychotic benefit plus a heavy load of orthostatic hypotension, sedation and dry mouth. Which single pharmacodynamic description best explains this whole profile?",
+      options: [
+        "Selective D2 antagonism confined to the mesolimbic pathway, with no autonomic actions",
+        "Potent 5-HT2A antagonism with only weak D2 blockade",
+        "D2 antagonism combined with strong alpha-1, muscarinic and H1 receptor blockade",
+        "Partial agonism at D2 and 5-HT1A receptors"
+      ],
+      correctIndex: 2,
+      explanation: "Chlorpromazine is the prototype low-potency aliphatic phenothiazine: efficacy comes from D2 blockade in the mesolimbic pathway, while its strong alpha-1 (orthostatic falls), muscarinic (dry mouth, constipation) and H1 (sedation) blockade generate the adverse-effect cluster. Katzung gives its affinity as alpha-1 = 5-HT2A > D2 > D1. Option A describes a hypothetically clean selective agent, option B is the atypical (clozapine-like) profile, and option D is aripiprazole pharmacology.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tap-chl-02",
+      question: "A 58-year-old man with chronic schizophrenia takes chlorpromazine 300 mg/day. He reports giddiness every morning on getting out of bed and once fainted in the bathroom. Lying BP is 112/70 and standing BP is 82/54. Which action of the drug best explains this?",
+      options: [
+        "Alpha-1 adrenergic blockade producing postural (orthostatic) hypotension",
+        "H1-mediated sedation keeping him recumbent longer",
+        "D2 blockade at the chemoreceptor trigger zone",
+        "Muscarinic blockade with reflex tachycardia"
+      ],
+      correctIndex: 0,
+      explanation: "A lying-to-standing BP drop is the classic alpha-1 adrenergic blockade signature of low-potency phenothiazines; it is worse after parenteral dosing and accentuated by hypovolaemia (Tripathi). Management is slow position changes, dose review or switching to a drug with less adrenoceptor blockade. H1 sedation, CTZ antiemetic action and antimuscarinic tachycardia are genuine chlorpromazine effects, yet none of them produces a fall in pressure on standing.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-chl-03",
+      question: "A 50-year-old man has taken high-dose chlorpromazine for 12 years. His wife notices a slate-grey discolouration of sun-exposed skin, and slit-lamp examination reveals corneal and lenticular deposits. This ocular-skin constellation is most characteristic of which drug?",
+      options: [
+        "Haloperidol",
+        "Thioridazine",
+        "Fluphenazine",
+        "Chlorpromazine"
+      ],
+      correctIndex: 3,
+      explanation: "Deposits in the cornea and lens plus bluish-grey pigmentation of sun-exposed skin are the chlorpromazine signature after years of high-dose use (Katzung, ocular complications). Thioridazine's ocular toxicity is different in kind and site - pigmentary RETINAL degeneration resembling retinitis pigmentosa - so option B is the mirror trap. The high-potency drugs haloperidol and fluphenazine are not associated with these deposits.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tap-chl-04",
+      question: "Which statement about chlorpromazine's pharmacokinetics is correct?",
+      options: [
+        "Oral bioavailability is high (about 65%) because first-pass metabolism is minimal",
+        "Elimination half-life is roughly 18-30 hours, yet metabolites continue to be excreted in urine and bile for weeks after stopping",
+        "It is cleared unchanged by the kidney, so no hepatic metabolism occurs",
+        "Clinical duration exactly matches the plasma half-life, forcing thrice-daily dosing"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi gives chlorpromazine a variable elimination half-life mostly in the 18-30 hour range with cumulation on repeated dosing, and metabolites are excreted for months after discontinuation. Oral bioavailability is actually low and erratic (25-35% per Katzung) - the ~65% figure belongs to haloperidol. The drug is oxidised/demethylated by hepatic CYPs (2D6 among them), and clinical duration outlasts the plasma half-life, so once-daily maintenance dosing is feasible.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tap-chl-05",
+      question: "A 30-year-old man in the emergency ward is violent and combative and is responding to commanding hallucinations; intravenous access is impossible. Among the typical antipsychotics, which choice matches classic emergency practice?",
+      options: [
+        "Oral trifluoperazine, which acts within minutes",
+        "IM chlorpromazine 25-50 mg (or IM haloperidol), which calms the patient over 1-3 days",
+        "One immediate oral dose of thioridazine 400 mg",
+        "Fluphenazine decanoate depot injection, which works the same day"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi lists chlorpromazine (25 mg) and haloperidol (2-4 mg) intramuscularly for agitated, combative or violent psychosis and acute mania, with effect in 1-3 days; parenteral bioavailability also exceeds the erratic oral route. Oral dosing is too slow for emergency control, and depot injections are maintenance preparations given every 2-4 weeks with no same-day role.",
+      afterSectionId: "top",
+    },
+    {
+      id: "tap-chl-06",
+      question: "An 82-year-old woman is found drowsy in her unheated bedroom on a January morning; her rectal temperature is 33.5 degrees C. She takes chlorpromazine 200 mg at night for chronic psychosis. The mechanism is:",
+      options: [
+        "Drug-induced fever with rigors",
+        "Malignant hyperthermia from sustained skeletal-muscle calcium release",
+        "Loss of central temperature regulation (poikilothermia), so body temperature drifts with the surroundings",
+        "Pure anticholinergic sweating blockade with otherwise intact thermoregulation"
+      ],
+      correctIndex: 2,
+      explanation: "Phenothiazines knock off central temperature control at higher doses, rendering the patient poikilothermic - body temperature falls in a cold environment (Tripathi). An elderly patient on night-time chlorpromazine in an unheated room is the classic hypothermia setup. The other options raise temperature: malignant hyperthermia is the anaesthetic-related myopathy, anticholinergic sweating blockade causes hyperpyrexia, and NMS combines fever with rigidity.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-chl-07",
+      question: "Which statement about chlorpromazine's antiemetic action is correct?",
+      options: [
+        "It blocks the chemoreceptor trigger zone and helps most drug- and disease-induced vomiting, but NOT motion sickness",
+        "It acts on the vestibular apparatus and is the drug of choice for motion sickness",
+        "It has no antiemetic action whatsoever",
+        "It is the first-line antiemetic for vomiting of early pregnancy"
+      ],
+      correctIndex: 0,
+      explanation: "Neuroleptics block D2 in the chemoreceptor trigger zone (CTZ), making chlorpromazine effective in drug-, uraemia- or radiation-induced vomiting, but it is ineffective in motion sickness, which is vestibular in origin and needs antihistamines or hyoscine. Option B describes vestibular-acting drugs, and option C is simply false. For early pregnancy vomiting, H1 antihistamines such as doxylamine/promethazine are the traditional first-line agents, not chlorpromazine.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tap-chl-08",
+      question: "A young woman is brought in 4 hours after swallowing her grandmother's chlorpromazine tablets. She is drowsy with constricted pupils, BP 85/50, temperature 35 degrees C and a normal ECG. Which feature most distinguishes this poisoning from tricyclic antidepressant overdose?",
+      options: [
+        "Dry flushed skin with mydriasis, tachycardia and urinary retention",
+        "QRS widening beyond 120 ms with wide-complex arrhythmias",
+        "Generalised tonic-clonic seizures as the dominant feature",
+        "Miotic pupils with hypotension, hypothermia and depressed deep tendon reflexes"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung's overdose profile of phenothiazines: drowsiness proceeding to coma, MIOTIC pupils, decreased reflexes, hypotension and hypothermia - and unlike tricyclics, rarely fatal (the exceptions being thioridazine and mesoridazine). Options A and B are the tricyclic anticholinergic-cardiotoxic picture (mydriasis, QRS widening responsive to bicarbonate). Seizures can occur in both poisonings, so they do not discriminate.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

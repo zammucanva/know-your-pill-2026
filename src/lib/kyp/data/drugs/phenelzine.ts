@@ -862,6 +862,110 @@ export const phenelzine: Drug = {
       explanation: "For depression: start 15 mg three times daily, target 45-90 mg/day, maximum 90 mg/day. Increase by 15 mg/day weekly to 45-90 mg/day",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "maoi-phe-01",
+      question: "Which option best describes the pharmacodynamic action of phenelzine?",
+      options: [
+        "Competitive, reversible inhibition of MAO-A alone — the RIMA principle",
+        "Selective irreversible inhibition of MAO-B, sparing dietary amine metabolism",
+        "Irreversible, nonselective inhibition of both MAO-A and MAO-B, raising serotonin, noradrenaline and dopamine stores",
+        "Blockade of SERT with mild NET inhibition, without affecting any enzyme"
+      ],
+      correctIndex: 2,
+      explanation: "Phenelzine is a hydrazine that binds both MAO-A and MAO-B irreversibly and nonselectively, so intraneuronal serotonin, noradrenaline and dopamine all accumulate. Reversible MAO-A-only blockade is moclobemide's mechanism, and MAO-B selectivity belongs to low-dose selegiline. Phenelzine is an enzyme inhibitor, not a reuptake blocker.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "maoi-phe-02",
+      question: "A 52-year-old man three months into phenelzine therapy reports burning, numb feet with a stocking-pattern sensory loss; blood glucose and vitamin B12 are normal. The most likely explanation:",
+      options: [
+        "Hydrazine chemistry has produced pyridoxine (vitamin B6) deficiency — supplement pyridoxine",
+        "Cumulative anticholinergic toxicity — reduce the dose by half",
+        "Serotonin syndrome from tyramine-containing meals — give cyproheptadine",
+        "Orthostatic hypotension of MAOI therapy — advise extra salt and fluids"
+      ],
+      correctIndex: 0,
+      explanation: "Like other hydrazines, phenelzine interferes with pyridoxine, and B6 deficiency presents as a distal sensory (stocking-pattern) peripheral neuropathy — the same logic as isoniazid neuropathy. Supplementation with pyridoxine is the fix, not dose halving. There are no anticholinergic signs, no hyperreflexia or autonomic instability to suggest serotonin syndrome, and salt loading corrects hypotension, not neuropathy.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "maoi-phe-03",
+      question: "A 46-year-old on phenelzine develops a pounding occipital headache, neck stiffness and palpitations about 90 minutes after a meal of aged cheese and wine; BP is 212/118 mmHg. The best immediate treatment:",
+      options: [
+        "IV phentolamine — a rapidly acting alpha-blocker",
+        "IV propranolol alone to control the BP and heart rate",
+        "Oral cyproheptadine — the reaction is serotonergic",
+        "Stop phenelzine and wait 48 hours for enzyme recovery"
+      ],
+      correctIndex: 0,
+      explanation: "This is the classic tyramine (cheese) hypertensive crisis: indirectly acting amines escape gut and hepatic degradation and discharge noradrenaline from adrenergic terminals; it is treated with an immediate IV alpha-blocker such as phentolamine (prazosin or chlorpromazine are described as alternatives). Propranolol alone leaves alpha-mediated vasoconstriction unopposed. Cyproheptadine treats serotonin syndrome, not tyramine crises, and stopping the drug helps nothing — enzyme recovery takes about 2 weeks.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "maoi-phe-04",
+      question: "A 30-year-old with social anxiety disorder has been on sertraline 100 mg and is being switched to phenelzine after poor response. The correct switch protocol:",
+      options: [
+        "Start phenelzine immediately — a 1-week overlap with 50 mg sertraline is safe",
+        "Stop sertraline and start phenelzine after 48-72 hours",
+        "Wait about 5 weeks — every SSRI needs the fluoxetine-length washout",
+        "Stop sertraline and wait 14 days before starting phenelzine"
+      ],
+      correctIndex: 3,
+      explanation: "Any serotonergic antidepressant must be stopped about 14 days before an irreversible MAOI to avoid serotonin syndrome. The 5-week interval is reserved for fluoxetine, whose active metabolite norfluoxetine lingers for weeks; sertraline needs the standard 2 weeks. Overlap or 48-72-hour gaps are dangerously short — that short-interval option belongs to moclobemide-centred switches, where reversibility shrinks the gap.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "maoi-phe-05",
+      question: "A 34-year-old woman has depression with hypersomnia, leaden paralysis, hyperphagia and marked social phobia; she has not responded to two adequate SSRI trials. The most pharmacologically fitting next agent:",
+      options: [
+        "Amitriptyline — TCAs outperform MAOIs in atypical depression",
+        "Phenelzine — atypical/retarded depression with phobic-anxiety features is classic MAOI territory",
+        "Alprazolam monotherapy — social phobia is a benzodiazepine-responsive condition",
+        "Methylphenidate — atypical depression is an approved stimulant indication"
+      ],
+      correctIndex: 1,
+      explanation: "Hypersomnia, leaden paralysis, hyperphagia and phobic-anxiety features define the atypical/retarded-depression profile for which classical MAOIs remain the textbook choice after SSRI failure (Tripathi's classic MAOI indication). TCAs do not outperform MAOIs in this subgroup — the reverse is taught. Alprazolam is not an antidepressant strategy for this presentation, and stimulants hold no such approved label.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "maoi-phe-06",
+      question: "Which adverse-effect profile is most characteristic of phenelzine?",
+      options: [
+        "Insomnia, anorexia and weight loss",
+        "Dry mouth, constipation and urinary retention as the dominant problems",
+        "Sedation, weight gain and paradoxical/orthostatic hypotension",
+        "Extrapyramidal rigidity with hyperprolactinaemia"
+      ],
+      correctIndex: 2,
+      explanation: "Phenelzine is the more sedating MAOI — Katzung contrasts it with the activating tranylcypromine and selegiline — and weight gain plus orthostatic (sometimes paradoxical) hypotension are the class's most treatment-limiting common effects. The insomnia-anorexia cluster describes the amphetamine-like activation profile, dry-mouth/constipation dominance describes TCAs, and rigidity with hyperprolactinaemia belongs to dopamine-blocking antipsychotics.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "maoi-phe-07",
+      question: "The precise pharmacological reason tyramine is dangerous in phenelzine-treated patients is:",
+      options: [
+        "Gut-wall and hepatic MAO can no longer degrade absorbed tyramine, so it reaches the circulation as an indirectly acting sympathomimetic that displaces and releases stored noradrenaline",
+        "Phenelzine directly stimulates vascular alpha-1 receptors",
+        "MAO inhibition converts dietary tyramine into adrenaline inside the adrenal medulla",
+        "Phenelzine blocks the hepatic CYP450 enzymes that clear noradrenaline"
+      ],
+      correctIndex: 0,
+      explanation: "Tyramine is normally inactivated by MAO in the intestinal wall and liver (very high first-pass metabolism). With MAO inhibited it reaches the systemic circulation intact and acts as an indirectly acting sympathomimetic, displacing noradrenaline from transmitter-loaded nerve endings — hence the hypertensive crisis and stroke risk. Phenelzine is not a direct alpha agonist, tyramine is not adrenal-converted, and catecholamines are not cleared by CYP450.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "maoi-phe-08",
+      question: "A patient newly started on phenelzine is attending a wedding banquet with paneer dishes, fermented pickles, soy sauce and drinks, and asks what to avoid. The best advice:",
+      options: [
+        "Only imported blue cheeses are risky; fresh dairy, pickles and alcohol need no caution",
+        "Everything on the table is safe if the phenelzine tablet is taken after the meal",
+        "Dietary restrictions end 3 days after the last phenelzine dose",
+        "Strictly avoid aged and fermented tyramine sources — aged cheese, pickled/fermented foods, soy and yeast extracts, tap beer — and skip alcohol; precautions persist about 2 weeks after stopping"
+      ],
+      correctIndex: 3,
+      explanation: "Fermented and aged items — cheeses, pickled meat and fish, yeast extract, beer and wines — can deliver the 20-50 mg of tyramine that significantly raises blood pressure in irreversible MAOI users, and MAOIs also intensify the sedative effects of alcohol. Tablet timing is irrelevant, and enzyme recovery after stopping takes roughly 2 weeks, not days — so option C's 3-day claim is wrong and the fresh-dairy reassurance misses the real hazards.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

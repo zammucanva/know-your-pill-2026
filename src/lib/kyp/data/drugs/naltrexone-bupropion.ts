@@ -831,6 +831,110 @@ export const naltrexoneBupropion: Drug = {
       explanation: "For chronic weight management: start One tablet (8/90 mg) daily × 1 week, target 32/360 mg per day, maximum 32/360 mg per day. Week 2: 1 bd; week 3+: 2 bd (32/360 mg)",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "sud-ntb-01",
+      question: "The pharmacological rationale for combining naltrexone with bupropion in weight management is:",
+      options: [
+        "Naltrexone blocks the beta-endorphin feedback loop on bupropion-activated hypothalamic POMC neurons, while bupropion's DA/NE reuptake inhibition curbs appetite and craving",
+        "Naltrexone blocks intestinal mu receptors, cutting fat absorption from the gut",
+        "Bupropion inhibits pancreatic lipase while naltrexone raises GLP-1 secretion",
+        "Both drugs antagonise nicotinic taste receptors, blunting the reward of sweet foods"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung calls naltrexone plus bupropion a synergistic weight-loss strategy: bupropion (NDRI) supplies noradrenergic-dopaminergic appetite suppression, and naltrexone's mu-blockade removes the beta-endorphin brake on the activated POMC pathway (KYP anchor; Katzung ch.31 notes the pair for weight loss). Blocking fat absorption is orlistat's mechanism, lipase inhibition plus GLP-1 agonism misassembles orlistat and liraglutide, and nicotinic taste blockade belongs to no approved anti-obesity drug.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "sud-ntb-02",
+      question: "A 39-year-old woman with BMI 33, diet-controlled type 2 diabetes, controlled blood pressure and no seizure history asks about the 'combination slimming tablet'. The approved role of naltrexone-bupropion (Contrave-type) is:",
+      options: [
+        "A short 4-week appetite suppressant for event-driven weight loss",
+        "An FDA-approved weight-loss medication used alongside diet and exercise for chronic weight management",
+        "First-line monotherapy that can induce diabetes remission without any lifestyle change",
+        "A drug approved in India only after bariatric surgery has failed"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung lists naltrexone plus extended-release bupropion among the approved weight-loss medications (with orlistat, phentermine/topiramate, lorcaserin and high-dose liraglutide), always as an adjunct to diet and exercise (ch.41). It is not a diabetes-remission monotherapy, there is no post-bariatric-failure-only approval in India, and chronic management - not a 4-week crash - is the design.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "sud-ntb-03",
+      question: "A 45-year-old man with BMI 34 has untreated blood pressure of 158/100 mmHg and asks to start naltrexone-bupropion for weight loss. The correct decision is:",
+      options: [
+        "Start normally, since the pressor effect belongs to the naltrexone component, not bupropion",
+        "Start it with an added thiazide and review the combination after 6 months",
+        "Do not start it - uncontrolled hypertension is a contraindication because the bupropion component raises blood pressure and heart rate; treat the BP first",
+        "Start at double dose, because obesity-related hypertension blunts the drug's effect"
+      ],
+      correctIndex: 2,
+      explanation: "Bupropion raises blood pressure and heart rate, so uncontrolled hypertension is a hard contraindication for the combination (KYP anchor; the mandated exam vignette) - control the BP before considering it. Doubling a contraindicated drug compounds the hazard, the pressor effect is the bupropion component rather than naltrexone, and adding a thiazide does not convert a contraindication into a permission.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "sud-ntb-04",
+      question: "A patient on phenelzine for atypical depression asks for naltrexone-bupropion to lose weight. The correct answer is:",
+      options: [
+        "Safe concurrently, since both drugs lower the seizure threshold and this combination is desirable",
+        "Safe if the phenelzine dose is halved for the duration of the weight-loss course",
+        "Contraindicated only when the patient also drinks alcohol at the same time",
+        "Contraindicated - MAOIs must be stopped with a 14-day washout before any bupropion-containing product, because of hypertensive-crisis and seizure risk"
+      ],
+      correctIndex: 3,
+      explanation: "Bupropion-containing products are contraindicated with MAOIs and require the standard 14-day washout (KYP anchor; the same MAOI rule that governs all antidepressant switching). Shared seizure-threshold lowering is a danger signal rather than a benefit, halving an MAOI dose does not remove a categorical interaction, and alcohol is a separate concern - the MAOI gate applies regardless.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "sud-ntb-05",
+      question: "A woman on naltrexone-bupropion for weight loss needs an emergency dental extraction under opioid analgesia. The counselling point is:",
+      options: [
+        "The naltrexone component blocks the analgesic effect of usual opioid doses, so the product must be stopped well beforehand or non-opioid and regional analgesia planned",
+        "Opioids work normally but will cause severe hypertension in combination with bupropion",
+        "The bupropion component doubles opioid potency, so the opioid dose should be halved",
+        "No interaction exists - the combination only interacts with weight, nothing else"
+      ],
+      correctIndex: 0,
+      explanation: "The naltrexone component of the combination blocks therapeutic opioid analgesia exactly as standalone naltrexone does (Katzung ch.31; KYP anchor), so perioperative planning must account for it - the same trap as nal-05 applied to a fixed-dose combination. Opioids do not become pressor agents under bupropion, potentiation is pharmacologically backwards, and the opioid blockade is a real, examinable interaction.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "sud-ntb-06",
+      question: "The most common adverse effect of naltrexone-bupropion combination therapy is:",
+      options: [
+        "Hyperprolactinaemia with galactorrhoea and amenorrhoea",
+        "Nausea - the leading complaint, contributed to by both components",
+        "Agranulocytosis - requiring weekly absolute-neutrophil counts",
+        "Retinal pigmentary deposits - requiring annual fundoscopy"
+      ],
+      correctIndex: 1,
+      explanation: "Nausea is the leading complaint with the combination, contributed to by both components (KYP anchor), with insomnia, dry mouth, constipation and a modest BP/HR rise behind it. Weekly neutrophil monitoring is clozapine's burden, retinal pigmentary deposits are thioridazine's signature toxicity, and hyperprolactinaemia with galactorrhoea belongs to risperidone and amisulpride - three monitoring rules that map onto the wrong drugs.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "sud-ntb-07",
+      question: "Which of these patients is an APPROPRIATE candidate for naltrexone-bupropion?",
+      options: [
+        "A patient with bulimia nervosa in active binge-purge cycles",
+        "A patient on methadone maintenance for opioid-use disorder",
+        "A patient with BMI 31, diet-controlled diabetes, BP 128/80 on amlodipine, no seizure history and no opioid therapy",
+        "A patient with a past seizure who stopped lamotrigine one month ago"
+      ],
+      correctIndex: 2,
+      explanation: "This candidate clears every gate: controlled BP, no seizure history, no eating disorder, no opioid exposure (KYP anchor contraindication set). A recent seizure with an anticonvulsant just stopped is a bupropion contraindication, bulimia nervosa and other eating disorders are explicit contraindications (bupropion's seizure risk in a purging patient), and methadone maintenance guarantees both blocked analgesia and precipitated withdrawal from the naltrexone component.",
+      afterSectionId: "top",
+    },
+    {
+      id: "sud-ntb-08",
+      question: "Why is bupropion the preferred pharmacological partner of naltrexone in this weight-loss combination (rather than an SSRI)?",
+      options: [
+        "Bupropion is a potent 5-HT2C antagonist that directly dissolves visceral fat",
+        "Bupropion raises GLP-1 secretion from intestinal L-cells",
+        "Bupropion irreversibly inhibits gastric and pancreatic lipase",
+        "Bupropion's DA/NE reuptake inhibition drives appetite suppression and craving reduction while sparing the serotonergic sexual and weight-gain baggage"
+      ],
+      correctIndex: 3,
+      explanation: "Bupropion is the established NDRI with virtually no direct serotonergic action - dopaminergic/noradrenergic appetite and craving control without SSRI-style weight gain or sexual dysfunction, which is what naltrexone's reward-blockade then complements (Katzung ch.30; KYP anchor). 5-HT2C agonism-selectivity was lorcaserin's mechanism, GLP-1 raising belongs to liraglutide's class, and lipase inhibition is orlistat - the distractor set is the rest of the approved weight-loss arsenal wearing bupropion's name.",
+      afterSectionId: "mechanism",
+    },
   ],
   activeRecallQuestions: [
     {

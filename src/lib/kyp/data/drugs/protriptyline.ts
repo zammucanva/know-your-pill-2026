@@ -915,6 +915,110 @@ export const protriptyline: Drug = {
       explanation: "For depression: start 5 mg three times daily (morning-weighted), target 15-40 mg/day, maximum 60 mg/day. Increase to 15-40 mg/day",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tca-pro-01",
+      question: "The MOST activating (least sedating) tricyclic antidepressant is:",
+      options: [
+        "Amitriptyline",
+        "Doxepin",
+        "Trimipramine",
+        "Protriptyline"
+      ],
+      correctIndex: 3,
+      explanation: "Protriptyline combines strong NET blockade with minimal H1 and muscarinic sedation, making it the class's activating pole — historically described as the stimulant-flavoured TCA. Amitriptyline, doxepin and trimipramine are the three most sedating members, so all three distractors are perfect mirror images of the answer. This superlative ('most activating = protriptyline, most sedating = amitriptyline/trimipramine') is among the highest-frequency TCA facts in Indian exams.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tca-pro-02",
+      question: "Historically, protriptyline was additionally used to:",
+      options: [
+        "Treat status epilepticus",
+        "Lower blood pressure in hypertensive crises",
+        "Promote wakefulness in narcolepsy and fatigue states",
+        "Reduce intraocular pressure in glaucoma"
+      ],
+      correctIndex: 2,
+      explanation: "Protriptyline's wake-promoting, REM-suppressing profile made it a historical adjunct in narcolepsy and related fatigue states — the wakefulness parallel to its activating antidepressant profile. The other options invert its pharmacology: TCAs lower seizure threshold, tend to raise rather than lower pressures, and their anticholinergic action is contraindicated in narrow-angle glaucoma, not used for it. TCA 'second jobs' worth knowing together: imipramine-enuresis, clomipramine-OCD, protriptyline-wakefulness.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-pro-03",
+      question: "A 29-year-old with retarded depression sleeps 12 hours a day, has low drive, no anxiety, and is obese. A sedating TCA made things worse. The best TCA candidate now is:",
+      options: [
+        "Amitriptyline",
+        "Protriptyline",
+        "Trimipramine",
+        "Dothiepin"
+      ],
+      correctIndex: 1,
+      explanation: "An activating, weight-neutral TCA is the pharmacological mirror of his symptom set — protriptyline attacks the hypersomnia and retardation without adding weight. Amitriptyline, trimipramine and dothiepin are all heavily sedating and appetite-promoting — each would aggravate both complaints. The selection logic 'activate the retarded, sedate the agitated' converts receptor tables directly into prescriptions.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-pro-04",
+      question: "A man started protriptyline 15 mg at bedtime and now complains of sleep-onset insomnia and jitteriness. The best correction is:",
+      options: [
+        "Shift the dose to the morning — its activating profile makes bedtime dosing counterproductive",
+        "Double the bedtime dose",
+        "Add a benzodiazepine at night to cover the stimulation",
+        "Increase the dose but keep it at bedtime"
+      ],
+      correctIndex: 0,
+      explanation: "The most activating TCA should be dosed in the morning — bedtime dosing guarantees insomnia, and moving the dose treats the pharmacology rather than sedating around it. Doubling or stacking a hypnotic deepens the problem and adds fall risk, and simply increasing the bedtime dose worsens the stimulation. Dose timing should always follow a drug's profile: sedating TCAs at night, protriptyline with breakfast.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-pro-05",
+      question: "A 50-year-old gained 9 kg over a year of amitriptyline for migraine prophylaxis and now reports low mood without sleep problems. He is keen to avoid further weight gain. The TCA that best fits his constraint is:",
+      options: [
+        "Doxepin",
+        "Amitriptyline at a higher dose",
+        "Protriptyline",
+        "Trimipramine"
+      ],
+      correctIndex: 2,
+      explanation: "Protriptyline is the weight-neutral, non-sedating TCA — the only listed option that respects his anti-weight-gain constraint while treating mood. Amitriptyline (at any dose), doxepin and trimipramine are the class's strongest H1 blockers, and H1 blockade is precisely the mechanism of TCA weight gain. When a patient's constraint is the drug's own signature side effect, pick the member that lacks that signature.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-pro-06",
+      question: "In Indian practice, protriptyline (like maprotiline) is best described as:",
+      options: [
+        "Among the most-prescribed TCAs in India",
+        "Marketed mainly in other countries — absent from the standard Indian TCA brand tables",
+        "Available in India only as fixed-dose combinations",
+        "The TCA that replaced SSRIs in Indian guidelines"
+      ],
+      correctIndex: 1,
+      explanation: "Indian texts explicitly note that protriptyline, maprotiline and similar drugs are marketed in other countries — the Indian brand landscape (Tripathi's Table 33.1) centres on imipramine, amitriptyline, doxepin, clomipramine, dothiepin, trimipramine, nortriptyline and amoxapine. Fixed-dose combinations are not the issue, and SSRIs remain first-line everywhere. Exam relevance: Indian-exam answer options rarely offer protriptyline as a practical prescription, even when its pharmacology is asked.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-pro-07",
+      question: "A patient stops his protriptyline abruptly before a long journey, without telling anyone. Three days later he has nausea, 'electric shock' sensations, vivid dreams and sweating. The best interpretation is:",
+      options: [
+        "Cholinergic-rebound discontinuation syndrome — reinstate and taper slowly",
+        "Food poisoning — supportive care only",
+        "Migraine aura — treat with a triptan",
+        "Depressive relapse requiring an indefinitely higher dose"
+      ],
+      correctIndex: 0,
+      explanation: "TCAs have a prominent discontinuation syndrome built on cholinergic rebound and flu-like symptoms — the autonomic-sensory cluster within days of stopping is textbook, and management is reinstatement followed by a gradual taper. Relabelling it relapse over-treats and misleads, while food poisoning and migraine fit neither the timing nor the sensory pattern. The pearl: even the activating TCAs rebound cholinergically — withdrawal symptoms reflect blocked receptors, not stimulation.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-pro-08",
+      question: "Which row of TCA superlative pairings is entirely CORRECT?",
+      options: [
+        "Most serotonergic — desipramine; most sedating — protriptyline; best post-MI tolerability — amitriptyline",
+        "Most anticholinergic — maprotiline; most seizure-prone — nortriptyline; most weight-neutral — dothiepin",
+        "Strongest H1 blockade — clomipramine; strongest NET blockade — trimipramine; most serotonergic — doxepin",
+        "Most serotonergic — clomipramine; strongest NET blockade — desipramine; best cardiac tolerability — nortriptyline"
+      ],
+      correctIndex: 3,
+      explanation: "The correct row is the class table verbatim: clomipramine owns SERT, desipramine owns NET, nortriptyline owns cardiac tolerability. Every distractor swaps exactly one or two tags — desipramine is the least serotonergic of its row, protriptyline the least sedating, maprotiline the seizure champion, doxepin the H1 champion. When three of four options are tag-swapped versions of the truth, only systematic recall of the class table survives.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

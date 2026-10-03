@@ -786,6 +786,110 @@ export const acamprosate: Drug = {
       explanation: "For alcohol abstinence maintenance: start 666 mg three times daily (> 60 kg), target 1998 mg/day, maximum 1998 mg/day. No titration needed; start at full dose",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "sud-acm-01",
+      question: "Acamprosate's pharmacological identity, as examined in Indian and US tests, is best stated as:",
+      options: [
+        "A taurine analogue that weakly antagonises NMDA-glutamatergic transmission while modestly activating GABAA receptors",
+        "A GABA-transaminase inhibitor that raises brain GABA concentrations progressively",
+        "A benzodiazepine-site agonist with full hypnotic efficacy on the GABAA receptor",
+        "A selective 5-HT3 antagonist that blocks the emetic and reward pathways"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung characterises acamprosate's best-studied actions as weak NMDA-receptor antagonism and GABAA-receptor activation, and the drug is a taurine analogue (KYP monograph) - a glutamatergic stabiliser for the post-withdrawal brain. GABA-transaminase inhibition is vigabatrin's mechanism, full benzodiazepine-site agonism is the sedative-hypnotic model acamprosate deliberately avoids, and 5-HT3 antagonism describes ondansetron.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "sud-acm-02",
+      question: "A 52-year-old man with alcoholic cirrhosis (Child-Pugh B, controlled ascites, deranged transaminases) has completed detoxification and wants a medicine to help him stay abstinent. The most appropriate choice is:",
+      options: [
+        "Chlordiazepoxide maintenance 25 mg three times daily for the next 6 months",
+        "Acamprosate, because it is eliminated by the kidneys and lacks the hepatic-toxicity concerns of the other relapse-prevention options",
+        "Disulfiram 250 mg daily, the classic aversion drug suitable for every newly abstinent patient with liver disease",
+        "Naltrexone 50 mg daily, first-line here because its hepatic metabolism is negligible"
+      ],
+      correctIndex: 1,
+      explanation: "Acamprosate is eliminated by the kidneys and lacks the hepatic-toxicity signal, making it the mirror-image choice in cirrhosis (Katzung ch.23; KYP anchor) - the classic cirrhosis question pairs it against disulfiram and naltrexone. Disulfiram is inappropriate in liver disease and only for supervised motivated abstinence, naltrexone has dose-dependent hepatotoxicity with transaminase caution, and benzodiazepine maintenance is a withdrawal treatment lasting days, not months.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "sud-acm-03",
+      question: "A 61-year-old diabetic hypertensive man with eGFR 28 mL/min on five regular tablets is about to start acamprosate. The correct pharmacokinetic counselling is:",
+      options: [
+        "It undergoes heavy first-pass metabolism, so it must be taken on an empty stomach to be absorbed",
+        "It auto-induces its own metabolism, so plasma levels fall over the first weeks and the dose must be escalated",
+        "Acamprosate is eliminated almost entirely by the kidneys, so the dose must be reduced in renal impairment - and it will not clash with his cardiovascular tablets",
+        "It is cleared by CYP3A4, so grapefruit juice and ketoconazole must be avoided"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung notes acamprosate is eliminated renally and does not appear to participate in drug-drug interactions; the label requires dose adjustment in renal impairment - the renal-versus-hepatic mirror that makes it the choice in cirrhosis and the caution in CKD (KYP anchor). There is no CYP3A4 story, food actually reduces its absorption (so it is taken with meals anyway rather than fasted), and autoinduction is carbamazepine's signature, not acamprosate's.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "sud-acm-04",
+      question: "Two weeks after starting acamprosate, a patient reports daily loose motions and asks whether he should abandon the tablet. The best advice is:",
+      options: [
+        "Diarrhoea signals developing pancreatitis from acamprosate, so stop it permanently",
+        "Diarrhoea proves the tablets are not being absorbed, so double the dose immediately",
+        "Diarrhoea means he has secretly resumed drinking, so escalate to disulfiram",
+        "Diarrhoea is acamprosate's most common adverse effect; taking it with food, maintaining hydration, and usually continuing the drug is the standard approach"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists loose motions as the common side effect of acamprosate (with nausea, abdominal pain and itching), so a symptomatic but benign GI profile is expected and manageable rather than a stop signal. Pancreatitis is not the associated pattern, doubling the dose would aggravate the problem, and no pharmacological rule lets diarrhoea certify relapse to drinking.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "sud-acm-05",
+      question: "In exam terms, how do the relapse-prevention goals of acamprosate and naltrexone differ?",
+      options: [
+        "Acamprosate is used to maintain complete abstinence after withdrawal, whereas naltrexone mainly reduces craving and relapse to heavy drinking if a slip occurs",
+        "Acamprosate blunts the euphoria of the first drink, whereas naltrexone restores normal glutamate tone",
+        "Both are opioid antagonists with interchangeable indications in alcohol-use disorder",
+        "Acamprosate is an aversion agent, whereas naltrexone is a substitution agonist"
+      ],
+      correctIndex: 0,
+      explanation: "The canonical dichotomy: acamprosate (glutamatergic stabiliser) is marketed on abstinence maintenance, while naltrexone (mu-antagonist) reduces craving and heavy-drinking relapse - Tripathi rates acamprosate's abstinence efficacy comparable to naltrexone, and Katzung details the COMBINE trial where acamprosate alone fell short. The swapped definitions invert the pair's mechanisms, opioid antagonism is naltrexone's alone, and aversion and substitution belong to disulfiram and buprenorphine/methadone respectively.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "sud-acm-06",
+      question: "A patient finishes a 7-day benzodiazepine taper for alcohol withdrawal and is now tremor-free and motivated. When should acamprosate start and how is it used?",
+      options: [
+        "Give one monthly depot injection and reassess the need at 3 months",
+        "Start soon after withdrawal is complete and give it continuously - around 666 mg three times daily alongside psychosocial therapy",
+        "Start only after at least 3 months of laboratory-verified abstinence",
+        "Start only during an active withdrawal so the drug can blunt the acute syndrome"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi advises starting acamprosate soon after withdrawing alcohol and continuing it continuously (666 mg two to three times daily) with social and motivational therapy - the window immediately after detox is when it works. Waiting months squanders the highest-risk period, acamprosate is not a withdrawal-suppressing drug (benzodiazepines are), and no depot formulation of acamprosate exists.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "sud-acm-07",
+      question: "A polymorbid hypertensive patient on five drugs asks whether acamprosate will clash with his antihypertensives, statin and metformin. The honest pharmacological answer is:",
+      options: [
+        "It displaces warfarin from albumin and predictably raises INR",
+        "It induces CYP3A4 and will cause oral-contraceptive failure",
+        "Acamprosate appears to participate essentially in no drug-drug interactions, so his existing regimen needs no change",
+        "It is a potent CYP2D6 inhibitor, so metoprolol must be stopped first"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung's alcoholism section states plainly that acamprosate does not appear to participate in drug-drug interactions - consistent with purely renal handling and no CYP dependence. CYP2D6 inhibition is paroxetine-fluoxetine territory, albumin displacement with warfarin is not an acamprosate behaviour, and enzyme-induction contraceptive failure is the carbamazepine-rifampicin lesson imported as a distractor.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "sud-acm-08",
+      question: "Why does early abstinence make acamprosate pharmacologically rational?",
+      options: [
+        "Alcohol withdrawal depletes endogenous opioids, and acamprosate replaces them",
+        "Withdrawal blocks dopamine reuptake, and acamprosate competitively blocks dopamine receptors",
+        "Withdrawal raises acetaldehyde concentrations, and acamprosate accelerates its oxidation",
+        "Chronic ethanol leaves a hyperexcitable glutamatergic state with blunted GABA tone; acamprosate's weak NMDA antagonism plus GABAA support dampens that craving-prone imbalance"
+      ],
+      correctIndex: 3,
+      explanation: "Acamprosate's molecular actions centre on the glutamate-GABA balance - weak NMDA-receptor antagonism with GABAA activation - which targets the hyperglutamatergic craving state left after chronic ethanol (Katzung ch.23). Opioid-replenishment framing describes the system naltrexone modulates (by blocking, not replacing), dopamine-receptor blockade is antipsychotic pharmacology, and acetaldehyde oxidation is disulfiram's target - which it inhibits rather than accelerates.",
+      afterSectionId: "mechanism",
+    },
   ],
   activeRecallQuestions: [
     {

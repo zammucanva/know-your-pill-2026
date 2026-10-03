@@ -731,6 +731,110 @@ export const levomilnacipran: Drug = {
       explanation: "For major depressive disorder: start 20 mg once daily × 2 days, target 40-120 mg/day, maximum 120 mg/day. Increase to 40 mg; titrate by 40 mg at ≥ 2-day intervals to 80-120",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "snri-lev-01",
+      question: "The most noradrenergic of the SNRIs is:",
+      options: [
+        "Levomilnacipran",
+        "Duloxetine",
+        "Venlafaxine",
+        "Desvenlafaxine"
+      ],
+      correctIndex: 0,
+      explanation: "Levomilnacipran blocks NET roughly 2-3 times more potently than SERT — the strongest noradrenaline emphasis in the class — followed by milnacipran, then duloxetine (balanced), then venlafaxine/desvenlafaxine (serotonergic-leaning). Its adverse-effect profile follows the pharmacology: BP/HR rise, urinary hesitancy, mydriasis. Knowing the class's NET-to-SERT gradient lets you predict both benefits (energy, drive) and harms.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "snri-lev-02",
+      question: "Levomilnacipran's formulation and half-life profile:",
+      options: [
+        "Twice-daily IR with a 4-hour half-life",
+        "Once-daily extended-release with a roughly 12-hour half-life",
+        "Once-weekly dosing",
+        "Three times daily, independent of meals"
+      ],
+      correctIndex: 1,
+      explanation: "Levomilnacipran is an extended-release once-daily capsule with a half-life around 12 hours — the XR design compensates for the shortish half-life to give smooth noradrenergic cover. Twice-daily IR describes its parent milnacipran, and weekly dosing exists only for fluoxetine. Half-life-plus-formulation pairings are quick exam wins if memorised as a table.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "snri-lev-03",
+      question: "Levomilnacipran's FDA label covers:",
+      options: [
+        "Major depressive disorder only",
+        "MDD, GAD and panic disorder",
+        "MDD and diabetic peripheral neuropathic pain",
+        "Fibromyalgia"
+      ],
+      correctIndex: 0,
+      explanation: "Levomilnacipran is MDD-only — no anxiety or pain labels. GAD/panic sit with venlafaxine and duloxetine, DPNP with duloxetine, fibromyalgia with duloxetine and milnacipran. The newest SNRI carries the narrowest label; examiners exploit exactly that asymmetry.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "snri-lev-04",
+      question: "A 33-year-old man, three weeks on levomilnacipran XR 40 mg, reports difficulty initiating urination and a dull testicular ache. No fever, examination benign apart from prostatic enlargement history absent. Best interpretation:",
+      options: [
+        "Prostatitis — start ciprofloxacin",
+        "Testicular torsion — arrange immediate surgery",
+        "Noradrenergic effects of levomilnacipran — review the dose and consider switching",
+        "Normal drug response — reassure without review"
+      ],
+      correctIndex: 2,
+      explanation: "Urinary hesitation plus testicular pain is a signature noradrenergic (NET-mediated) adverse-effect pair of levomilnacipran — increased urethral tone and unusual referred pain, both dose-related. There is no infective or ischaemic picture to justify antibiotics or the operating theatre, but 'normal response' would leave the patient suffering; dose reduction or a switch usually resolves it. NET pharmacology predicts these AEs before the drug is even started.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "snri-lev-05",
+      question: "Which co-medication most significantly changes levomilnacipran exposure?",
+      options: [
+        "Ketoconazole — a strong CYP3A4 inhibitor raises levomilnacipran levels",
+        "Ranitidine",
+        "Metformin",
+        "Amlodipine"
+      ],
+      correctIndex: 0,
+      explanation: "Levomilnacipran's only meaningful metabolic handle is minor CYP3A4 — strong 3A4 inhibitors (ketoconazole, clarithromycin) raise its levels and inducers (rifampicin, carbamazepine) lower them. Ranitidine, metformin and amlodipine leave it untouched. The teaching point: 'CYP-minimal' never means 'CYP-invisible' — every renally-cleared or lightly-metabolised drug still has one pathway worth checking.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "snri-lev-06",
+      question: "Levomilnacipran's relationship to milnacipran is best described as:",
+      options: [
+        "It is the racemic form of milnacipran",
+        "It is the single active enantiomer of milnacipran, engineered for once-daily dosing and greater noradrenaline selectivity",
+        "It is milnacipran's inactive metabolite",
+        "It is chemically unrelated to milnacipran"
+      ],
+      correctIndex: 1,
+      explanation: "Milnacipran is racemic; levomilnacipran is its isolated 1S,2R-enantiomer — the noradrenaline-selective workhorse — reformulated as once-daily XR. The enantiomer-isolation strategy mirrors escitalopram-from-citalopram, a recurring psychopharmacology pattern worth one mnemonic: 'cut the racemate, keep the active half, chase the cleaner label'.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "snri-lev-07",
+      question: "Which statement about levomilnacipran's cardiovascular effects is correct?",
+      options: [
+        "It lowers heart rate and blood pressure",
+        "It has no cardiovascular effects at all",
+        "It causes dose-dependent hyperprolactinaemia",
+        "It can raise heart rate and blood pressure — monitor, especially during titration"
+      ],
+      correctIndex: 3,
+      explanation: "Consistent with its NET emphasis, levomilnacipran raises heart rate and blood pressure in a dose-related fashion — baseline vitals and titration-phase checks are standard. The opposite-direction claim (bradycardia-hypotension) and the irrelevant hyperprolactinaemia statement are both wrong. Its BP/HR liability is the practical price of the class's strongest noradrenergic profile.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "snri-lev-08",
+      question: "A 68-year-old with BPH (on tamsulosin), treated hypertension and pure MDD asks about the 'new SNRI'. Best assessment of levomilnacipran:",
+      options: [
+        "Levomilnacipran — the best choice even in prostatic outflow obstruction",
+        "Levomilnacipran — safe because renal clearance bypasses the prostate",
+        "Levomilnacipran at half the usual dose avoids noradrenergic effects",
+        "Levomilnacipran is a poor fit — noradrenergic effects can worsen hypertension and urinary outflow"
+      ],
+      correctIndex: 3,
+      explanation: "BPH and hypertension are the two clinical states noradrenergic drugs aggravate: increased urethral tone worsens obstruction (even on tamsulosin), and NET blockade pushes BP up. 'Renal clearance bypasses the prostate' is pharmacological nonsense, and halving the dose blunts but does not remove the mechanism. A serotonergic-leaning SSRI or SNRI (escitalopram, sertraline) fits this patient better.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

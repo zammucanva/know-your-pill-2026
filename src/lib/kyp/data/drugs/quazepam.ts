@@ -796,6 +796,110 @@ export const quazepam: Drug = {
       explanation: "For insomnia: start 7.5 mg at bedtime (elderly 7.5 mg fixed), target 7.5–15 mg, maximum 15 mg. Short courses",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "bzd-qua-01",
+      question: "Quazepam is best identified as:",
+      options: [
+        "An SSRI with sedative properties",
+        "A barbiturate",
+        "An orexin antagonist",
+        "A long-acting benzodiazepine hypnotic — marketed with claims of alpha1-preferring metabolite selectivity"
+      ],
+      correctIndex: 3,
+      explanation: "Quazepam is a long-acting benzodiazepine hypnotic whose main metabolite was claimed to prefer the alpha1 GABA-A subunit — the same subunit Z-drugs target — but its long half-life gives it classic benzodiazepine hangover anyway. SSRIs, barbiturates and orexin antagonists are different classes entirely.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "bzd-qua-02",
+      question: "Quazepam's approved use and typical dose are:",
+      options: [
+        "Insomnia — about 15 mg at bedtime",
+        "Status epilepticus — 10 mg IV",
+        "Panic disorder — 0.5 mg TDS",
+        "Anaesthesia induction — 2 mg IV"
+      ],
+      correctIndex: 0,
+      explanation: "Quazepam is a bedtime hypnotic at around 15 mg — its only label niche. The IV/anaesthesia and status options describe midazolam and diazepam/lorazepam, and 0.5 mg TDS is alprazolam-scale dosing for panic.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "bzd-qua-03",
+      question: "Quazepam's half-life behaviour most resembles:",
+      options: [
+        "Zaleplon — ultra-short with clean mornings",
+        "Flurazepam — long-acting with accumulating active metabolites",
+        "Oxazepam — intermediate glucuronidated",
+        "Ramelteon — melatonergic with no dependence"
+      ],
+      correctIndex: 1,
+      explanation: "Quazepam and its active metabolites sit in the 30-100 hour tier — the flurazepam club — so repeated use accumulates and fogs mornings. Zaleplon and oxazepam sit at opposite, shorter tiers, and ramelteon is not a benzodiazepine at all.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-qua-04",
+      question: "A long-haul driver taking quazepam nightly reports morning 'heaviness' and a near-miss on the highway. The pharmacologically correct advice:",
+      options: [
+        "Increase the dose so he sleeps deeper and wakes refreshed",
+        "Take the dose at 3 am instead",
+        "Stop the long-acting hypnotic — carryover sedation impairs morning driving; switch to a shorter agent or CBT-I",
+        "Add caffeine tablets each morning"
+      ],
+      correctIndex: 2,
+      explanation: "Long-acting hypnotics guarantee morning carryover — for a driver that is a crash risk, and the fix is stopping the accumulating drug in favour of a short-half-life option or behavioural therapy. Deeper dosing worsens carryover, 3 am dosing wrecks sleep architecture, and caffeine does not restore psychomotor performance.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "bzd-qua-05",
+      question: "Quazepam's distinctive marketing claim — relevant as an exam differentiator — was:",
+      options: [
+        "Selective serotonin reuptake enhancement",
+        "Alpha1-subunit-preferring active metabolite — anxiolysis-hypnosis with theoretically less muscle relaxancy",
+        "Irreversible orexin receptor antagonism",
+        "Barbiturate-like direct chloride-channel opening"
+      ],
+      correctIndex: 1,
+      explanation: "Quazepam's metabolite was claimed to prefer GABA-A alpha1 — the subunit linked to sedation rather than the alpha2/3 anxiolysis-and-myorelaxation sites — a pharmacological cousin-in-spirit of the Z-drug concept. Direct channel opening is barbiturate behaviour, and the other mechanisms belong to unrelated classes.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "bzd-qua-06",
+      question: "An 85-year-old is prescribed quazepam for institutional-night restlessness. The geriatric-pharmacology verdict:",
+      options: [
+        "Ideal — alpha1 selectivity makes it fall-proof",
+        "Avoid — long-acting benzodiazepines are on explicit avoid-lists in dementia/elderly care (falls, delirium)",
+        "Safe if crushed into food",
+        "Preferable to any behavioural intervention"
+      ],
+      correctIndex: 1,
+      explanation: "Whatever the subunit claims, quazepam remains a long-acting benzodiazepine — Beers-criteria territory in the elderly and dementia care for falls, fractures and delirium. Crushing changes nothing pharmacologically, and non-drug behavioural approaches outrank sedatives for night restlessness.",
+      afterSectionId: "top",
+    },
+    {
+      id: "bzd-qua-07",
+      question: "Which hypnotic carries the alpha1-preferring-metabolite claim?",
+      options: [
+        "Temazepam",
+        "Triazolam",
+        "Quazepam",
+        "Eszopiclone"
+      ],
+      correctIndex: 2,
+      explanation: "Quazepam is the textbook answer for the alpha1-preferring-metabolite claim among classic benzodiazepines — a favourite one-liner in pharmacology quizzes. Temazepam and triazolam carry no such claim, and eszopiclone is itself an alpha1-acting Z-drug by primary design, not via a metabolite story.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "bzd-qua-08",
+      question: "After three weeks of nightly quazepam, a patient stops abruptly. Two nights later: severe insomnia, sweating and a generalised seizure. The explanation:",
+      options: [
+        "Benzodiazepine withdrawal syndrome with seizure — reinstate and taper",
+        "A coincidental head injury",
+        "Food allergy to the tablet coating",
+        "Quazepam is exempt from withdrawal because of alpha1 selectivity"
+      ],
+      correctIndex: 0,
+      explanation: "Three weeks of nightly benzodiazepine is dependence territory; abrupt cessation causes rebound insomnia, autonomic surge and seizures — alpha1 selectivity does not exempt any benzodiazepine from GABA-A down-regulation. Management is reinstatement followed by a graded taper, not dismissal.",
+      afterSectionId: "neural-pathways",
+    },
   ],
   activeRecallQuestions: [
     {

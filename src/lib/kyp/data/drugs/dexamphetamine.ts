@@ -810,6 +810,110 @@ export const dexamphetamine: Drug = {
       explanation: "For adhd (ir): start 2.5 mg twice daily (children), target 5-30 mg/day divided, maximum 40 mg/day. Increase weekly",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "stm-dex-01",
+      question: "Dexamphetamine differs from the racemic amphetamine mixture pharmacologically because:",
+      options: [
+        "The d-isomer is the more potent CNS dopaminergic isomer, giving stronger central psychostimulant action per milligram than the l-isomer",
+        "The l-isomer is the more potent central dopaminergic isomer",
+        "The two isomers act on entirely different receptor families",
+        "Dexamphetamine is an inactive prodrug requiring amine oxidation"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung states plainly that amphetamine's d-isomer is more potent than the l-isomer, which is why dexamphetamine is the high-potency central agent of the family — option B is the deliberate mirror. The isomers differ in degree, not in receptor identity, and dexamphetamine is the active parent molecule rather than a prodrug; the prodrug in this set is lisdexamfetamine.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-dex-02",
+      question: "A 30-year-old woman with narcolepsy has severe daytime sleep attacks plus distinct cataplexy triggered by laughter. The most defensible pharmacological plan is:",
+      options: [
+        "Modafinil for cataplexy and dexamphetamine for the nocturnal sleep paralysis",
+        "A wake-promoting/stimulant drug for daytime sleepiness (dexamphetamine or modafinil class) plus an anticataplectic agent such as an SSRI/SNRI or sodium oxybate",
+        "Dexamphetamine alone, because boosting dopamine abolishes cataplexy as well",
+        "Caffeine tablets for sleepiness and clonazepam for cataplexy"
+      ],
+      correctIndex: 1,
+      explanation: "Narcolepsy plans split the targets: stimulants (dexamphetamine class, modafinil) treat excessive daytime sleepiness, whereas cataplexy — a REM-intrusion phenomenon — needs a REM-suppressing SSRI/SNRI (venlafaxine is the classic choice) or sodium oxybate. Dopamine-driven stimulants do not directly control cataplexy, caffeine is far too weak for sleep attacks, and option B swaps the two drugs' actual roles.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-dex-03",
+      question: "Which oral dose range matches Tripathi's listing for dexamphetamine in adults?",
+      options: [
+        "2.5-5 mg",
+        "25 mg three times daily",
+        "5-10 mg",
+        "100-200 mg"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi's dose box lists dexamphetamine at 5-10 mg orally (amphetamine 5-15 mg) — the low milligram figures typical of a high-potency releaser. The 100-200 mg range belongs to modafinil dosing, and 25 mg three times daily is not any standard oral psychostimulant regimen, while 2.5-5 mg is dexmethylphenidate's starting scale rather than dexamphetamine's.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "stm-dex-04",
+      question: "A narcolepsy patient on dexamphetamine reports difficulty falling asleep and 4 kg weight loss over 3 months. The most appropriate adjustments are:",
+      options: [
+        "Double the evening dose to consolidate daytime stability",
+        "Add a benzodiazepine at night as routine co-prescription",
+        "Stop all stimulants permanently since these effects signal hepatotoxicity",
+        "Move the last dose earlier in the day, avoid evening dosing, and reinforce calorie-dense meals plus weight monitoring — insomnia and anorexia are classic dose-related sympathomimetic effects"
+      ],
+      correctIndex: 3,
+      explanation: "Insomnia and appetite suppression track the sympathomimetic action and the drug's presence in plasma, so shifting dosing earlier and supporting nutrition is the standard response; Tripathi even notes that starvation from appetite suppression acidifies urine and accelerates amphetamine loss. Routine nightly benzodiazepines breed dependence, these effects have nothing to do with the liver, and escalating evening dosing would worsen the insomnia.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-dex-05",
+      question: "Dexamphetamine's two core established indications in psychiatric-neurology practice are:",
+      options: [
+        "ADHD and narcolepsy",
+        "Generalized anxiety disorder and panic disorder",
+        "Restless legs syndrome and periodic limb movement disorder",
+        "Migraine prophylaxis and tension headache"
+      ],
+      correctIndex: 0,
+      explanation: "Like the whole amphetamine family, dexamphetamine is anchored to ADHD and narcolepsy — the two conditions for which CNS-stimulant benefit is firmly established in Katzung's therapeutic-uses section. Stimulants are activating and can aggravate anxiety states, have no established headache role, and restless-legs therapy runs through dopamine agonists, alpha-2-delta ligands and iron rather than releasers.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-dex-06",
+      question: "A patient brings two US prescriptions: one for mixed amphetamine salts (Adderall) and one for Dexedrine. What is the accurate distinction?",
+      options: [
+        "Adderall is Schedule IV while Dexedrine is Schedule II",
+        "Adderall is a fixed mixture of amphetamine sulfate, amphetamine aspartate, dextroamphetamine sulfate and dextroamphetamine saccharate, while Dexedrine is dextroamphetamine alone",
+        "Adderall is pure dextroamphetamine and Dexedrine is a four-salt mixture",
+        "Both contain methamphetamine as the active ingredient"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung's preparations table lists Adderall as the 1:1:1:1 amphetamine salt mixture and Dexedrine as dextroamphetamine — the exam-relevant distinction between mixed-salt and single-enantiomer products. Option D swaps the two, methamphetamine (Desoxyn) is a separate drug entirely, and both products sit firmly in Schedule II, not IV.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-dex-07",
+      question: "A 40-year-old with treatment-resistant daytime hypersomnolence asks why his physician prefers dexamphetamine over pep pills like caffeine. The pharmacological answer is:",
+      options: [
+        "Caffeine acts identically but is absorbed more slowly",
+        "Caffeine is contraindicated in adults under 50 years of age",
+        "Amphetamines release stored noradrenaline and dopamine centrally at therapeutic doses, producing far more powerful and sustained arousal than the adenosine-receptor antagonism of caffeine",
+        "Dexamphetamine works by blocking adenosine A1 receptors more potently than caffeine"
+      ],
+      correctIndex: 2,
+      explanation: "The two wake-promoters sit on different mechanisms: amphetamine is an indirect monoamine releaser driving central dopamine and noradrenaline, whereas caffeine antagonizes adenosine receptors — a much milder arousal effect. Option A is false since both are rapidly absorbed, option C transplants adenosine pharmacology onto dexamphetamine, and option D's age restriction is a fabricated rule.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-dex-08",
+      question: "Which statement about the amphetamine enantiomer family is CORRECT for examinations?",
+      options: [
+        "The l-isomer of amphetamine is the preferred ADHD agent",
+        "Methamphetamine is pharmacologically inert and used only as a decongestant precursor",
+        "Dexamphetamine is the l-enantiomer of amphetamine sulfate",
+        "Dexamphetamine (d-isomer) is the more potent central psychostimulant, and methamphetamine has an even higher central-to-peripheral action ratio"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung notes the d-isomer's greater potency and methamphetamine's even higher ratio of central to peripheral actions — the two enantiomer-potency pearls of the family. Option A inverts the pearl, option C ignores methamphetamine's potent CNS abuse profile (Desoxyn even carries ADHD/narcolepsy labels in the US), and option D mislabels dexamphetamine as the levo isomer.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

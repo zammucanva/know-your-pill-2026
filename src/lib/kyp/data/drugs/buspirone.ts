@@ -682,6 +682,110 @@ export const buspirone: Drug = {
       explanation: "For generalised anxiety: start 5 mg two to three times daily, target 20-30 mg/day divided, maximum 60 mg/day. Increase by 5 mg/day every 2-3 days; effect assessed at 2-4 weeks",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "adj-bus-01",
+      question: "Which statement best describes buspirone's receptor pharmacology?",
+      options: [
+        "Partial agonist at presynaptic and postsynaptic 5-HT1A receptors, with no direct interaction with GABA-A or the benzodiazepine site",
+        "Allosteric positive modulator at the benzodiazepine site of GABA-A receptors, raising chloride-channel opening frequency",
+        "Full agonist at the barbiturate site of GABA-A receptors, prolonging channel-opening duration",
+        "Competitive 5-HT2A receptor antagonist combined with potent SERT inhibition"
+      ],
+      correctIndex: 0,
+      explanation: "Buspirone is the prototype azapirone — a 5-HT1A partial agonist that dampens dorsal-raphe serotonergic firing via presynaptic 5-HT1A autoreceptors; Katzung stresses it does not interact directly with GABAergic systems and has no anticonvulsant or muscle-relaxant properties. The benzodiazepine-site and barbiturate-site descriptions belong to other sedative-hypnotic classes, and the 5-HT2A-plus-SERT profile is trazodone-like SARI pharmacology, not buspirone's.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "adj-bus-02",
+      question: "A 32-year-old software engineer has two years of generalised anxiety and worry. He became dependent on alprazolam in the past and now wants a daily anxiolytic that will not hook him again. He is started on buspirone and telephones on day 4 saying it is doing nothing. The essential counselling point is:",
+      options: [
+        "Buspirone is only useful when combined with a benzodiazepine, since it potentiates GABA and deepens sedation",
+        "Buspirone's anxiolytic effect takes 2-4 weeks to become established, so it is continued for chronic GAD despite minimal early benefit — it is non-sedating with no dependence or withdrawal liability",
+        "Buspirone acts within 30-60 minutes like a benzodiazepine, so the dose should be doubled immediately to gain rapid control",
+        "Buspirone must be tapered off within 2 weeks because tolerance and physical dependence develop quickly"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung states buspirone's anxiolytic effects may take 3-4 weeks to become established, making it unsuitable for acute anxiety but ideal for chronic GAD, and Tripathi records maximum benefit delayed up to 2 weeks — the 2-4-week KYP window is the counselling pearl. It has minimal abuse liability with no rebound anxiety or withdrawal on abrupt stop and no alcohol cross-tolerance, which is exactly why it suits this ex-dependent patient. Rapid-onset claims describe benzodiazepines, and buspirone neither touches the GABA system nor potentiates sedative-hypnotics.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-bus-03",
+      question: "A 40-year-old woman stable on buspirone 10 mg three times daily starts drinking two glasses of grapefruit juice each day and develops marked dizziness, headache and light-headedness. The mechanism is:",
+      options: [
+        "Grapefruit juice displaces buspirone from plasma albumin, flooding the brain with free drug",
+        "Grapefruit juice blocks renal tubular secretion, so unchanged buspirone accumulates in blood",
+        "Grapefruit juice inhibits intestinal CYP3A4, sharply raising buspirone plasma levels of this extensively first-pass metabolised drug",
+        "Grapefruit juice induces hepatic CYP2D6, accelerating conversion of buspirone into a sedating metabolite"
+      ],
+      correctIndex: 2,
+      explanation: "Buspirone undergoes extensive first-pass metabolism (oral bioavailability under 5% per Tripathi) via CYP3A4, and Katzung lists grapefruit juice alongside erythromycin, ketoconazole and nefazodone as 3A4 inhibitors that can markedly increase its plasma levels. Rifampin is the classic inducer that shortens buspirone's half-life and weakens it, and neither albumin displacement nor renal secretion explains this interaction.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "adj-bus-04",
+      question: "The characteristic adverse-effect and safety profile of buspirone includes:",
+      options: [
+        "Profound sedation, respiratory depression and high liability for tolerance and physical dependence",
+        "Dose-related extrapyramidal rigidity and tremor needing anticholinergic cover",
+        "Weight gain, hyperprolactinaemia and galactorrhoea from D2-receptor antagonism",
+        "Headache, dizziness, nausea and nervousness, with preserved alertness, no psychomotor impairment and minimal abuse liability"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung notes buspirone causes less psychomotor impairment than benzodiazepines, does not affect driving skills, and lists nonspecific chest pain, tachycardia, dizziness, headache and tinnitus among its effects; Tripathi's minor side-effect list is dizziness, nausea, headache and light-headedness, and unlike the category-D benzodiazepines it is an FDA pregnancy category B drug. Deep sedation with dependence describes benzodiazepines, and although buspirone has weak D2 affinity it produces no antipsychotic, extrapyramidal or prolactin effects.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-bus-05",
+      question: "A 26-year-old man presents during a panic attack with palpitations and fear of dying; a colleague suggests starting buspirone 5 mg three times daily as the anxiolytic of choice here. Why is this plan unsound?",
+      options: [
+        "Buspirone's anxiolytic action is too slow in onset (2-4 weeks) and it is ineffective in panic disorder, where an SSRI with short-term benzodiazepine cover (or alprazolam) is preferred",
+        "Buspirone is contraindicated in panic disorder because it causes dose-dependent pupillary dilatation and raises intraocular pressure",
+        "Buspirone would trigger immediate severe rebound hypertension by sensitising central adrenoceptors",
+        "Buspirone is a potent respiratory depressant and would worsen the hyperventilation of panic attacks"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung explicitly notes the anxiolytic effect of buspirone may take 3-4 weeks to become established, making the drug unsuitable for acute anxiety states, and that it is less effective in panic disorder; Tripathi adds it is ineffective in severe anxiety, panic reaction and OCD — the signature exam pearl. It actually causes pupillary constriction rather than dilatation, the MAO-inhibitor combination rather than panic is what raises blood pressure, and it does not depress respiration.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-bus-06",
+      question: "A 29-year-old woman on sertraline 100 mg for major depression has residual anxiety, low energy and troubling sexual dysfunction. Which augmentation strategy matches buspirone's documented role?",
+      options: [
+        "Adding buspirone to reverse sertraline-induced prolactin elevation and galactorrhoea",
+        "Adding buspirone to augment the SSRI for residual symptoms, its dopamine-facilitating activity offering a chance of offsetting SSRI-induced sexual dysfunction",
+        "Adding buspirone as a sedative-hypnotic to restore GABA tone depleted by sertraline",
+        "Adding buspirone to block sertraline's conversion into its active metabolite and soften side effects"
+      ],
+      correctIndex: 1,
+      explanation: "Buspirone is the classic serotonergic augmentation agent for residual depressive and anxiety symptoms, and KYP's teaching point is that its dopamine-facilitating activity may offset SSRI-associated sexual dysfunction; Tripathi records a mild mood-elevating action attributed to central noradrenergic facilitation. Buspirone has no GABA action, sertraline needs no metabolic help from it, and prolactin reversal is aripiprazole-type partial-agonist work rather than a buspirone claim.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-bus-07",
+      question: "A Chennai psychiatrist prescribes an azapirone dispensed as BUSPIN 5 mg tablets, to be titrated up to three times daily. Which drug and Indian dosing range are in play?",
+      options: [
+        "Lorazepam — 1-4 mg per day; LARPOSE and ATIVAN 1 and 2 mg tablets",
+        "Alprazolam — 0.25-1 mg three times daily; ALPRAX 0.25, 0.5 and 1 mg tablets",
+        "Buspirone — 5-15 mg per day in divided doses (OD-TDS); ANXIPAR, BUSPIN and BUSCALM 5 and 10 mg tablets",
+        "Hydroxyzine — 50-200 mg per day; ATARAX 10 and 25 mg tablets and syrup"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi introduces buspirone as the first azapirone at 5-15 mg OD-TDS, marketed in India as ANXIPAR, BUSPIN and BUSCALM 5 and 10 mg tablets. The 50-200 mg/day range with ATARAX belongs to hydroxyzine, LARPOSE and ATIVAN are the lorazepam family, and ALPRAX is the high-potency benzodiazepine from the alprazolam monograph — all anxiolytics, but none is the non-sedating azapirone.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-bus-08",
+      question: "A patient on phenelzine 45 mg per day for atypical depression is additionally given buspirone 10 mg three times daily by a colleague for persistent anxiety. Three days later he is hypertensive, flushed and sweating. What happened?",
+      options: [
+        "Buspirone competitively inhibits MAO-A itself, so phenelzine rose to toxic concentrations",
+        "Buspirone converted phenelzine into a false transmitter that depleted catecholamine stores",
+        "Buspirone antagonised phenelzine at the benzodiazepine receptor, triggering a withdrawal reaction",
+        "Buspirone combined with an MAO inhibitor can significantly elevate blood pressure — Katzung flags this interaction, so the pair must be avoided"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung warns that blood pressure may be significantly elevated in patients receiving MAO inhibitors together with buspirone — the recognised hypertensive interaction that this scenario reproduces. Buspirone has no MAO-inhibiting action of its own, phenelzine is an irreversible enzyme inhibitor rather than a substrate for such a conversion, and buspirone does not bind the benzodiazepine receptor at all.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

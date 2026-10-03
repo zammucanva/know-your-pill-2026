@@ -1749,6 +1749,110 @@ export const bupropion: Drug = {
       explanation: "Bupropion raises norepinephrine and dopamine — both activating neurotransmitters. Evening dosing causes insomnia. For SR (twice-daily) formulation, the second dose should be at least 8 hours before bedtime (e.g., 8am and 4pm). XL is once-daily in the morning.",
       afterSectionId: "monitoring",
     },
+    {
+      id: "atd-bup-01",
+      question: "Bupropion's monoamine pharmacology is best described as:",
+      options: [
+        "Weak-to-moderate inhibition of dopamine and norepinephrine reuptake, with no direct action on serotonin",
+        "Balanced SERT and NET blockade from the very first dose",
+        "Potent 5-HT2A antagonism combined with weak SERT inhibition",
+        "Alpha-2 autoreceptor blockade that increases NE and 5-HT release"
+      ],
+      correctIndex: 0,
+      explanation: "Bupropion is the NDRI: modest-to-moderate dopamine and norepinephrine reuptake inhibition with virtually no direct serotonergic effect (Katzung) — the basis of its activating profile and freedom from SSRI-type sexual and GI effects. Option C describes trazodone/nefazodone (SARI), option D describes mirtazapine (NaSSA), and 'balanced from dose one' is duloxetine's SNRI signature.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "atd-bup-02",
+      question: "Which triplet correctly lists bupropion's established indications?",
+      options: [
+        "Major depression, generalized anxiety disorder, and fibromyalgia",
+        "Major depression, seasonal affective disorder, and smoking cessation",
+        "Seasonal affective disorder, bulimia nervosa, and premature ejaculation",
+        "Smoking cessation, obsessive-compulsive disorder, and diabetic neuropathy"
+      ],
+      correctIndex: 1,
+      explanation: "Bupropion carries three anchor labels: major depression, seasonal affective disorder, and smoking cessation (approved 1997, the Zyban use). It is not considered effective for anxiety disorders and may poorly tolerate anxious patients, bulimia is a contraindication rather than an indication, and OCD/neuropathy belong to SSRIs and duloxetine respectively.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "atd-bup-03",
+      question: "A 22-year-old woman with bulimia nervosa asks about starting bupropion for her depressive symptoms. Why is this drug avoided in her?",
+      options: [
+        "It provokes severe anticholinergic dry mouth that worsens binge-purge dehydration",
+        "It causes profound weight gain, aggravating her body-image disturbance",
+        "It lowers the seizure threshold in a dose-related way, and purging with electrolyte shifts adds further risk",
+        "It produces pharmacological dependence with a characteristic withdrawal syndrome"
+      ],
+      correctIndex: 2,
+      explanation: "Bupropion precipitates seizures more than other standard antidepressants, with dose-related risk, and eating disorders (anorexia, bulimia) are classic contraindications — vomiting and electrolyte disturbance compound the danger. Weight gain is the opposite of its metabolic profile, and it is not a dependence-producing drug, so the other mechanisms are wrong for this drug.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-bup-04",
+      question: "A 58-year-old stable on bupropion is started on nortriptyline for neuropathic pain; a week later she has dry mouth, urinary hesitancy, constipation and palpitations. The best explanation is:",
+      options: [
+        "Bupropion induces CYP3A4 and accelerates nortriptyline clearance",
+        "A serotonergic interaction between the two antidepressants",
+        "Additive alpha-1 blockade causing autonomic failure",
+        "Bupropion inhibits CYP2D6, raising nortriptyline levels into toxic anticholinergic and cardiac territory"
+      ],
+      correctIndex: 3,
+      explanation: "Bupropion and its metabolite hydroxybupropion moderately inhibit CYP2D6, raising levels of 2D6 substrates — TCAs, atomoxetine, metoprolol — a classic NEET-PG interaction pair. TCAs are the highest-stakes substrate: anticholinergic crisis and conduction effects. Bupropion does not induce CYP3A4, there is no serotonergic pair here, and alpha-1 blockade belongs to trazodone.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "atd-bup-05",
+      question: "A 40-year-old Indian man smoking about 20 cigarettes a day is being treated for MDD. His previous SSRI caused erectile dysfunction and he stopped it. The best next antidepressant is:",
+      options: [
+        "Bupropion — treats depression while supporting cessation, with minimal sexual dysfunction and often weight loss",
+        "Paroxetine — its strong anticholinergic effect counteracts sexual dysfunction",
+        "Mirtazapine — its 5-HT3 blockade reliably improves libido",
+        "Sertraline — switching within the same class restores sexual function"
+      ],
+      correctIndex: 0,
+      explanation: "Bupropion is the double-win choice: an approved smoking-cessation agent and one of the three antidepressants (with mirtazapine and nefazodone) least associated with sexual side effects, tending to produce weight loss rather than gain. Paroxetine actually worsens sexual dysfunction, sertraline would reintroduce the same problem, and mirtazapine's 5-HT3 blockade targets nausea, not libido.",
+      afterSectionId: "top",
+    },
+    {
+      id: "atd-bup-06",
+      question: "A 31-year-old starting bupropion XL asks what to expect at follow-up. Which effect profile should she anticipate?",
+      options: [
+        "Early insomnia replaced by daytime somnolence and weight gain",
+        "Insomnia and agitation early on, possible weight loss, with sexual function preserved",
+        "Nausea and diarrhoea for the first two weeks, then resolution",
+        "Orthostatic dizziness and a priapism risk needing urgent review"
+      ],
+      correctIndex: 1,
+      explanation: "Bupropion's signature is activating, not sedating: insomnia and agitation are its characteristic early effects, weight tends to fall, and it is the reference antidepressant for preserved sexual function. Serotonergic GI upset belongs to SSRIs, while orthostatic hypotension and priapism are trazodone's alpha-1-mediated warnings — none of these is bupropion's profile.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "atd-bup-07",
+      question: "Which pharmacokinetic statement about bupropion is correct?",
+      options: [
+        "It is eliminated unchanged by the kidney, so no caution is needed in cirrhosis",
+        "Its single very long half-life of about 5 days makes staggered discontinuation unnecessary",
+        "It is extensively hepatically metabolized to active metabolites such as hydroxybupropion and it inhibits CYP2D6",
+        "It is a potent CYP3A4 inhibitor, contraindicating several common co-medications"
+      ],
+      correctIndex: 2,
+      explanation: "Bupropion undergoes extensive hepatic metabolism (substantial first-pass) to active metabolites, chiefly hydroxybupropion, and parent plus metabolites moderately inhibit CYP2D6 — the handle behind its TCA and metoprolol interactions. The multi-day half-life is fluoxetine's, potent 3A4 inhibition is nefazodone's trick, and a hepatically cleared drug does demand caution in liver disease.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "atd-bup-08",
+      question: "An exam vignette asks: among standard antidepressants, which drug has the highest dose-related seizure-precipitation risk — with eating disorders and prior seizure history as its classic contraindications?",
+      options: [
+        "Sertraline",
+        "Mirtazapine",
+        "Trazodone",
+        "Bupropion"
+      ],
+      correctIndex: 3,
+      explanation: "Bupropion precipitates seizures more than any other standard antidepressant — the risk is dose-related (sharply rising above about 450 mg/day of the older immediate-release form) and concentrated in eating disorders, seizure history and alcohol withdrawal. Mirtazapine's watch-item is sedation and weight gain, sertraline's is GI upset and hyponatraemia, and trazodone's is priapism and orthostasis.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
 
   /* End-of-page active recall questions */

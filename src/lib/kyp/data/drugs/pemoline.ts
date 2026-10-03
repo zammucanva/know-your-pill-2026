@@ -796,6 +796,110 @@ export const pemoline: Drug = {
       explanation: "Initial 37.5 mg/day in the morning; increase by 18.75 mg each week; usual range 56.25-75 mg/day; maximum 112.5 mg/day — with serum ALT (SGPT) at baseline and every 2 weeks for the duration of treatment. The once-daily morning schedule exploits the ~12-hour half-life and avoids insomnia.",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "stm-pem-01",
+      question: "Pemoline's pharmacological position among ADHD agents is:",
+      options: [
+        "A chemically unrelated CNS stimulant with actions similar to methylphenidate but insignificant sympathomimetic and cardiovascular effects (Tripathi)",
+        "An amphetamine congener with the strongest cardiovascular effects of the class",
+        "A dopamine receptor antagonist",
+        "A selective serotonin reuptake inhibitor"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi's entry: chemically unrelated to the phenidates, with CNS stimulation similar to methylphenidate but negligible sympathomimetic and cardiovascular actions — its distinguishing pharmacology. Option B is the mirror of its actual weak-cardiovascular profile, and receptor antagonism or SSRI action contradicts its stimulant nature.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-pem-02",
+      question: "A historian of pharmacology asks why pemoline disappeared from ADHD practice despite decades of use. The reason is:",
+      options: [
+        "Complete loss of efficacy after 2 weeks of use",
+        "Hepatotoxicity — a boxed warning for acute liver failure after reported deaths/transplants, mandatory liver-function monitoring, and then withdrawal",
+        "Irreversible cardiac valvulopathy",
+        "A syndrome of fatal aplastic anaemia"
+      ],
+      correctIndex: 1,
+      explanation: "Pemoline's fate was hepatic: acute liver failure cases brought a boxed warning and liver-enzyme-monitoring requirements, and the drug was ultimately withdrawn — the examination reason it vanished. Valvulopathy belongs to the serotonergic anorectics, aplastic anaemia to felbamate and chloramphenicol territory, and tachyphylaxis was never the issue.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-pem-03",
+      question: "A 1990s chart shows pemoline 37.5 mg each morning for ADHD, with benefit noted only after several weeks. Which property does this delayed response reflect, and why did it matter clinically?",
+      options: [
+        "Pemoline's effect strengthened only after hepatic enzyme induction",
+        "Pemoline worked only when given at bedtime",
+        "Pemoline's slow onset of action weakened its clinical attractiveness even before the hepatotoxicity struck",
+        "Pemoline required 6 weeks of loading before any effect, by design"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi flags slow onset as a practical disadvantage — parents and prescribers already waited weeks for benefit — and the hepatotoxicity story then finished the drug off. There was no intentional loading design, enzyme induction is irrelevant to its effect, and bedtime dosing of a stimulant would worsen insomnia rather than help.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-pem-04",
+      question: "The liver-toxicity profile of pemoline is best characterised as:",
+      options: [
+        "Harmless transaminase flicker never exceeding 1.5 times the upper limit of normal",
+        "A purely cholestatic picture with no risk of failure",
+        "Predictable dose-related jaundice in every user within 2 weeks",
+        "Rare but potentially acute liver failure, sometimes after months of use, severe enough to warrant a boxed warning and ongoing liver-function monitoring while it remained marketed"
+      ],
+      correctIndex: 3,
+      explanation: "The problem was that it was rare but unpredictable: acute liver failure occurring without a reliable dose or duration threshold — sometimes after months of use — which is why the boxed warning, ongoing liver-function monitoring while it remained marketed, and finally withdrawal followed. Predictable-in-every-user and harmless framings are both wrong by construction, and a purely cholestatic picture understates the hepatocellular failure risk.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-pem-05",
+      question: "Pemoline's current status (Tripathi 7e) is:",
+      options: [
+        "Discontinued in the USA and not available in India",
+        "First-line ADHD therapy in both the USA and India",
+        "Available in India only as a transdermal patch",
+        "Available only in fixed combination with caffeine"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi states it plainly: because of slow onset of action and hepatotoxicity, pemoline has been discontinued in the USA and is not available in India — a historical agent only. The other options invent a market presence the drug no longer has anywhere.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-pem-06",
+      question: "In a retired-by-the-liver quiz, pemoline is paired with which other drug from the stimulant-cognition set?",
+      options: [
+        "Modafinil",
+        "Tacrine — the first Alzheimer cholinesterase inhibitor, withdrawn for hepatotoxicity",
+        "Memantine",
+        "Galantamine"
+      ],
+      correctIndex: 1,
+      explanation: "The KYP class pearl: tacrine and pemoline are the hepatotoxicity twins — both historically useful, both retired by the liver (tacrine's ALT-monitoring era, pemoline's boxed warning). Modafinil's rash and memantine's renal dosing are different organ stories, and galantamine replaced tacrine without carrying its liver liability.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-pem-07",
+      question: "An ADHD clinic inherits a child previously on pemoline whose records show normal ALT six months ago. What did responsible pemoline-era practice require?",
+      options: [
+        "Annual urine catecholamine testing",
+        "No monitoring, because pemoline had no systemic toxicity",
+        "Periodic liver-function testing — the era's mandated monitoring — with immediate drug stoppage for transaminase elevation or symptoms suggesting hepatitis",
+        "Weekly serum pemoline levels only"
+      ],
+      correctIndex: 2,
+      explanation: "While marketed, pemoline's boxed warning made liver-function testing the standard of care — the very burden that made it commercially untenable and led to withdrawal. Serum levels were never the monitoring tool, catecholamines are irrelevant, and option B is the exact misconception the boxed warning corrected.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-pem-08",
+      question: "When an examination asks why pemoline is no longer prescribed, the expected answer is:",
+      options: [
+        "A fetal-toxicity ban on paediatric prescribing that never actually existed",
+        "Excessive abuse potential compared with amphetamine",
+        "Lack of efficacy in ADHD",
+        "Hepatotoxicity with acute liver failure risk — the liver, not the heart or brain, retired it"
+      ],
+      correctIndex: 3,
+      explanation: "Pemoline was effective enough for ADHD use over decades, and its sympathomimetic/abuse profile was milder than the amphetamine class — but hepatotoxicity with acute liver failure risk retired it; the liver, not the heart or brain, ended its run. Option B inverts its actual mild-sympathomimetic profile, option D denies its demonstrated benefit, and option A invents a fetal-toxicity ban that history never recorded.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

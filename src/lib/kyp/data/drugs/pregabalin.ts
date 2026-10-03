@@ -864,6 +864,110 @@ export const pregabalin: Drug = {
       explanation: "For neuropathic pain / fibromyalgia: start 75 mg twice daily, target 150-300 mg bd, maximum 600 mg/day. Increase to 150 mg bd within a week; to 300 mg bd if needed",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "mst-pgb-01",
+      question: "Pregabalin's mechanism, compared with gabapentin's, is:",
+      options: [
+        "The same alpha2-delta calcium-channel subunit binding, at higher potency — with no GABA-receptor action despite the GABA-like structure",
+        "A distinct GABA-A receptor site that gabapentin lacks",
+        "Selective sodium-channel inactivation like carbamazepine",
+        "Inhibition of GABA-transaminase combined with T-type calcium-channel blockade"
+      ],
+      correctIndex: 0,
+      explanation: "Pregabalin binds alpha2-delta just like gabapentin — Katzung treats them as one pharmacodynamic pair — producing reduced presynaptic calcium entry and glutamate release, but at higher potency and far lower doses. Neither drug touches GABA receptors, sodium channels, or GABA metabolism; Tripathi notes both modulate alpha2-delta-1-containing calcium channels.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "mst-pgb-02",
+      question: "The single most important pharmacokinetic difference between pregabalin and gabapentin is:",
+      options: [
+        "Pregabalin is hepatically metabolised; gabapentin is not",
+        "Pregabalin's absorption is linear and dose-independent (bioavailability above 90%), while gabapentin's saturable transporter makes bioavailability fall as the dose rises",
+        "Pregabalin undergoes autoinduction; gabapentin does not",
+        "Pregabalin is extensively protein-bound; gabapentin circulates free"
+      ],
+      correctIndex: 1,
+      explanation: "Katzung contrasts them directly: pregabalin exhibits linear absorption within the therapeutic dose range with dose-independent bioavailability exceeding 90%, whereas gabapentin's l-amino-acid transporter saturates. Neither is protein bound, neither is metabolised, and both are eliminated unchanged by the kidney.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "mst-pgb-03",
+      question: "A 55-year-old with painful diabetic peripheral neuropathy has inadequate relief on duloxetine 60 mg/day. Which add-on or switch is a first-line tier choice for this pain?",
+      options: [
+        "Zonisamide — approved at 300 mg/day for diabetic neuropathy",
+        "Tiagabine — first-line for diabetic neuropathic pain",
+        "Pregabalin — a first-line agent for painful diabetic neuropathy (and fibromyalgia), titrated 75-150 mg BD up to 600 mg/day",
+        "Carbamazepine — the drug of choice for diabetic neuropathic pain"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi highlights gabapentin and pregabalin as first-line drugs for neuralgic pain of diabetic neuropathy and post-herpetic neuralgia, and pregabalin is the gabapentinoid carrying the fibromyalgia label. Tripathi explicitly notes carbamazepine is not useful in diabetic and other forms of neuropathic pain, and zonisamide and tiagabine hold no such labels.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "mst-pgb-04",
+      question: "A 32-year-old with a prior opioid misuse history is to start pregabalin for neuropathic pain. What safety counselling is evidence-based?",
+      options: [
+        "Pregabalin is legally identical to paracetamol, with no abuse potential anywhere",
+        "Pregabalin is Schedule II like morphine, so outpatient prescribing is prohibited",
+        "Misuse risk applies only to intravenous formulations of pregabalin",
+        "Pregabalin has recognised misuse potential — it is a US Schedule V controlled substance — so it should be prescribed with monitoring, and abrupt stopping after high doses can cause withdrawal symptoms"
+      ],
+      correctIndex: 3,
+      explanation: "The gabapentinoids' newer recognition of misuse potential is anchored in pregabalin's US Schedule V status — a real but low scheduling tier, far from morphine's Schedule II — with documented withdrawal on abrupt discontinuation. There is no intravenous pregabalin; the risk lies with oral misuse, hence monitoring in addiction-history patients.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "mst-pgb-05",
+      question: "A 41-year-old woman has three months of widespread pain, unrefreshing sleep and fatigue; the tender-point examination is typical and thyroid tests are normal. Which drug has a specific regulatory approval for this condition?",
+      options: [
+        "Pregabalin",
+        "Zonisamide",
+        "Levetiracetam",
+        "Lamotrigine"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung states pregabalin is approved for the treatment of fibromyalgia — the gabapentinoid with that label — alongside its neuropathic-pain uses. Zonisamide, levetiracetam and lamotrigine hold no fibromyalgia approval, which is what distinguishes the alpha2-delta mechanism here.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "mst-pgb-06",
+      question: "An 80-year-old woman with eGFR 28 mL/min starts pregabalin for post-herpetic neuralgia and reports day-3 dizziness and somnolence on 150 mg BD. The correct interpretation is:",
+      options: [
+        "Pregabalin needs no renal adjustment, so the dose should be doubled for effect",
+        "Pregabalin accumulates in renal impairment because it is excreted unchanged by the kidney — reduce the dose and retitrate",
+        "The reaction is an idiosyncratic allergy to pregabalin requiring permanent avoidance",
+        "The symptoms indicate serotonin syndrome from pregabalin"
+      ],
+      correctIndex: 1,
+      explanation: "Pregabalin is excreted unchanged by the kidney, so renal impairment causes accumulation and the fix is to reduce the dose and retitrate — eGFR-based adjustment is standard for both gabapentinoids, which undergo no metabolism. Dizziness with somnolence is the commonest dose-related effect at initiation. The presentation is pharmacokinetic accumulation, not allergy or a serotonergic syndrome — pregabalin has no serotonergic action.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "mst-pgb-07",
+      question: "The gabapentinoid pair is a favourite exam mirror. Which pairing is correct?",
+      options: [
+        "Both are hepatically metabolised to active metabolites",
+        "Pregabalin — lower potency than gabapentin, requiring tenfold higher doses",
+        "Gabapentin — saturable absorption with gram-scale dosing; pregabalin — linear absorption, higher potency, effective at 150-600 mg/day",
+        "Gabapentin — linear absorption; pregabalin — saturable absorption requiring fractionated dosing"
+      ],
+      correctIndex: 2,
+      explanation: "The exam fingerprint: gabapentin's transporter saturates (dose-dependent bioavailability, gram-scale dosing) while pregabalin's absorption is linear and dose-independent above 90%, so roughly 150-600 mg/day covers the same territory. Neither has active metabolites, and pregabalin is the more potent of the pair, not the less.",
+      afterSectionId: "knowledge-graph",
+    },
+    {
+      id: "mst-pgb-08",
+      question: "Which Indian pregabalin facts are correct?",
+      options: [
+        "PREGABA SR 300 mg once weekly as the licensed neuropathic-pain regimen",
+        "NEUGABA is the Indian brand of gabapentin enacarbil",
+        "TRUEGABA 600 mg tablets as a single daily dose for fibromyalgia",
+        "PREGABA, NEUGABA and TRUEGABA 75/150 mg capsules, dosed 75-150 mg BD with a maximum of 600 mg/day"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists pregabalin as PREGABA, NEUGABA and TRUEGABA 75 and 150 mg capsules at 75-150 mg BD with a maximum of 600 mg/day. Weekly SR dosing and the enacarbil attribution are inventions — enacarbil is the prodrug of gabapentin, not pregabalin.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

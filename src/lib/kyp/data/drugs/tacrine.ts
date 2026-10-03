@@ -822,6 +822,110 @@ export const tacrine: Drug = {
       explanation: "Initial 40 mg/day in 4 divided doses, maintained 4 weeks; if tolerable, increased to 80 mg/day in 4 divided doses with additional titration at 4-week intervals — maximum 160 mg/day. The once-daily option describes donepezil; the patch describes rivastigmine.",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "stm-tac-01",
+      question: "Tacrine's historical position is:",
+      options: [
+        "The first centrally acting cholinesterase inhibitor shown to benefit Alzheimer's disease — Katzung calls it the first drug shown to have any benefit in AD",
+        "The first NMDA antagonist approved for AD",
+        "The first antidepressant used in dementia",
+        "The first antipsychotic for AD-related psychosis"
+      ],
+      correctIndex: 0,
+      explanation: "Both Katzung and Tripathi grant tacrine the first title — the initial anti-AChE with demonstrated AD benefit, preceding donepezil, rivastigmine and galantamine. NMDA-antagonist first place is memantine's later story, and antidepressant/antipsychotic framings are class errors.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-tac-02",
+      question: "A 1994 protocol for a patient on tacrine includes ALT testing every other week. The practice existed because:",
+      options: [
+        "The monitoring tracked renal stone formation",
+        "Tacrine's hepatotoxicity (ALT elevations in a substantial minority) required intense transaminase monitoring — the burden that contributed to its replacement",
+        "Tacrine raised serum potassium dangerously",
+        "Tacrine caused bone-marrow failure needing weekly counts"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi records hepatotoxicity as the restriction on tacrine's use, and Katzung calls its hepatic toxicity significant — hence the historic every-other-week ALT schedule (KYP anchor). Potassium, marrow and stone monitoring belong to other drugs — ACE inhibitors, clozapine and topiramate respectively.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-tac-03",
+      question: "A 1995 AD clinic: a patient on tacrine reports nausea, needs four daily doses, and shows modest cognitive benefit. Why did clinics tolerate this regimen?",
+      options: [
+        "Because four-times-daily dosing was standard for all AD drugs",
+        "Because tacrine reversed disease progression permanently",
+        "Because tacrine was the only available option with any demonstrated AD benefit until donepezil arrived — marginal benefit was still the only benefit",
+        "Because tacrine's efficacy was the highest ever recorded in AD"
+      ],
+      correctIndex: 2,
+      explanation: "Katzung: tacrine's efficacy is slight, and its use continued only because nothing better existed; donepezil then offered the same marginal benefit with less toxicity. Highest-efficacy, standard-schedule and disease-reversal claims are each contradicted — the benefit was modest and symptomatic, not disease-modifying.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-tac-04",
+      question: "Tripathi's mechanistic note places tacrine (with edrophonium) in which binding category?",
+      options: [
+        "Organophosphates causing irreversible aging",
+        "Allosteric modulators of the nicotinic receptor",
+        "Carbamates that covalently modify the esteratic site",
+        "Reversible inhibitors attaching only to the anionic site of acetylcholinesterase — non-esteratic-site binding, unlike the carbamates"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi: edrophonium and tacrine attach only to the anionic site — a purely ionic, reversible interaction, contrasted with physostigmine-style carbamylation of the esteratic site (rivastigmine's chemistry). Option C is rivastigmine's mechanism, option A is organophosphate poisoning, and nicotinic allosterism is galantamine's signature.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-tac-05",
+      question: "Tacrine's current clinical status is:",
+      options: [
+        "Withdrawn/discontinued — replaced by donepezil, rivastigmine and galantamine because of hepatic toxicity",
+        "Available only as a transdermal patch",
+        "Used as an antidote for organophosphate poisoning",
+        "First-line for moderate-to-severe AD"
+      ],
+      correctIndex: 0,
+      explanation: "Katzung states that because of its hepatic toxicity, tacrine has been replaced in clinical use by the newer cholinesterase inhibitors — the withdrawal is textbook fact. First-line AD claims and patch formulations are fictional, and organophosphate antidotes are atropine plus pralidoxime.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-tac-06",
+      question: "A quiz asks: which drug was the FIRST approved therapy demonstrating benefit in Alzheimer's disease, and why is it now only a historical anchor? The correct pairing is:",
+      options: [
+        "Memantine — first benefit in AD, retired for renal toxicity",
+        "Tacrine — first benefit in AD, retired for hepatotoxicity once newer, less toxic AChE inhibitors arrived",
+        "Donepezil — first benefit in AD, retired for bradycardia",
+        "Rivastigmine — first benefit in AD, retired for skin reactions"
+      ],
+      correctIndex: 1,
+      explanation: "The first-benefit title and the hepatotoxicity exit both belong to tacrine — Katzung: first drug shown to have any benefit, with significant hepatic toxicity. Memantine is a current agent, and donepezil and rivastigmine remain in use; none is retired.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-tac-07",
+      question: "A pharmacology historian notes tacrine required four-times-daily oral dosing while its successor is once daily. The pharmacokinetic explanation for the change is:",
+      options: [
+        "Donepezil is dosed weekly because of tissue storage",
+        "Both agents share identical half-lives; the schedules are arbitrary",
+        "Donepezil's ~70 h half-life permits bedtime once-daily dosing (Tripathi), whereas tacrine's shorter plasma action demanded multiple daily doses (historically QID)",
+        "Tacrine was given QID because it was available only intravenously"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi's donepezil box credits the ~70 h half-life for once-daily bedtime dosing — an explicit advantage over the older multiple-daily-dose rivals. Tacrine was an oral agent, donepezil is daily rather than weekly, and the schedule difference tracks pharmacokinetics, not arbitrariness.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "stm-tac-08",
+      question: "In the cognition-drug graveyard examination, tacrine's epitaph reads:",
+      options: [
+        "Retired because of addictive potential and overdose deaths",
+        "Retired because it caused irreversible extrapyramidal syndromes",
+        "Retired because memantine proved 10-fold superior",
+        "The first AD cholinesterase inhibitor — liver toxicity (significant, ALT-monitored) retired it, and its efficacy was slight anyway"
+      ],
+      correctIndex: 3,
+      explanation: "Katzung's two-line verdict — efficacy slight, hepatic toxicity significant, replaced by donepezil, rivastigmine and galantamine — is the complete epitaph. Addiction, extrapyramidal syndromes and a 10-fold-superiority claim for memantine are fabricated reasons; memantine's advantages are tolerability and mechanism, not 10-fold efficacy.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

@@ -930,6 +930,110 @@ export const doxepin: Drug = {
       explanation: "For insomnia (sleep maintenance): start 3 mg 30 min before bed, target 3-6 mg, maximum 6 mg. May increase to 6 mg",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "tca-dox-01",
+      question: "Doxepin stands out among the tricyclic antidepressants for:",
+      options: [
+        "The strongest dopamine-transporter blockade",
+        "The strongest SERT blockade",
+        "The strongest H1 blockade — the basis of its sedation and its low-dose hypnotic role",
+        "The strongest MAO-B inhibition"
+      ],
+      correctIndex: 2,
+      explanation: "Doxepin carries the highest H1 affinity of any TCA — the class-leading histamine blockade that produces its deep sedation, weight gain and, at tiny doses, a clean hypnotic effect. SERT supremacy belongs to clomipramine, and meaningful DAT or MAO-B action is not part of any TCA's profile. Receptor-rank recall ('doxepin = H1, clomipramine = SERT, desipramine = NET') answers a disproportionate share of TCA comparisons.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "tca-dox-02",
+      question: "Low-dose doxepin (3-6 mg) is marketed as a hypnotic. At that dose its pharmacological action is:",
+      options: [
+        "SERT blockade sufficient for an antidepressant effect",
+        "NET blockade sufficient for pain relief",
+        "D2 blockade sufficient for sedation",
+        "Selective H1 antagonism — hypnotic effect without meaningful reuptake blockade"
+      ],
+      correctIndex: 3,
+      explanation: "At 3-6 mg, doxepin achieves H1 occupancy — the hypnotic mechanism — while SERT/NET blockade requires much higher, antidepressant-range exposure, so the low-dose product is functionally a selective antihistamine. D2 blockade is antipsychotic pharmacology (amoxapine being the lone antidepressant exception) and has no hypnotic label here. This dose-selectivity question is the standard way examiners test receptor-affinity logic.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-dox-03",
+      question: "A 71-year-old widow with chronic insomnia had two night-time falls on zolpidem and refuses benzodiazepines. She is not depressed and wants 'something gentler'. A reasonable option is:",
+      options: [
+        "Amitriptyline 75 mg at bedtime",
+        "Low-dose doxepin 3-6 mg at bedtime",
+        "Doxepin 100 mg at bedtime",
+        "Clomipramine 25 mg at bedtime"
+      ],
+      correctIndex: 1,
+      explanation: "Low-dose doxepin gives H1-mediated sleep onset and maintenance without benzodiazepine-receptor effects, and at 3-6 mg it avoids most of the anticholinergic-cardiac burden that full TCA doses would impose on a 71-year-old. The 75-100 mg TCA options are antidepressant doses with real fall, conduction and anticholinergic risk and no extra hypnotic benefit for a non-depressed patient, and clomipramine adds seizure and cardiac concerns for zero sleep advantage. Same molecule, tenfold different risk — dose makes the drug.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "tca-dox-04",
+      question: "A 40-year-old with refractory pruritus of atopic dermatitis finds oral antihistamines too sedating for work hours. Which option from the TCA family is appropriate?",
+      options: [
+        "Oral doxepin 75 mg during the day",
+        "Topical doxepin 5% cream",
+        "Topical imipramine gel",
+        "Oral clomipramine 10 mg three times daily"
+      ],
+      correctIndex: 1,
+      explanation: "Topical doxepin relieves itching in atopic dermatitis and lichen simplex by local H1 blockade (Indian formularies list a 5% cream), delivering antipruritic effect with minimal systemic sedation when used on limited areas. There is no such thing as topical imipramine, daytime oral doxepin 75 mg is an antidepressant dose that guarantees sedation, and clomipramine has no antipruritic niche. Counsel patients that applying it to large body surfaces can still produce drowsiness from absorption.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-dox-05",
+      question: "A 55-year-old on doxepin 50 mg at night for depression with insomnia complains of heavy morning grogginess and slowed reaction time while driving to work. The best explanation and step is:",
+      options: [
+        "Paradoxical stimulation — switch to a morning dose",
+        "Accumulation of an active metabolite with a 3-day half-life — stop the drug immediately",
+        "Tolerance to the hypnotic effect — double the bedtime dose",
+        "Long half-life (about 16-24 hours) with residual H1 sedation carried into the next day — reduce the dose and counsel about driving"
+      ],
+      correctIndex: 3,
+      explanation: "Doxepin's half-life sits in the 16-24 hour band shared with amitriptyline and imipramine, so an antidepressant-dose night dose leaves H1 sedation on board the next morning — the classic hangover effect, worst in older patients and drivers. Doubling deepens the carryover, there is no 3-day metabolite, and morning dosing simply relocates the sedation into the working day. Dose reduction, earlier dosing or a shorter-half-life alternative is the practical fix.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "tca-dox-06",
+      question: "A 66-year-old man with treated BPH starts doxepin 75 mg for depression. On day 4 he cannot pass urine and the bladder is palpably distended. The best explanation is:",
+      options: [
+        "Antimuscarinic effects aggravating prostatic outflow obstruction",
+        "Alpha-1 blockade relaxing the bladder neck — expected and benign, wait for tolerance",
+        "SIADH with overflow incontinence",
+        "H1 blockade paralysing the detrusor"
+      ],
+      correctIndex: 0,
+      explanation: "Doxepin is a strongly muscarinic TCA, and its anticholinergic action deters detrusor contraction while aggravating prostatic obstruction — producing the classic painful retention that Indian texts flag especially in males with enlarged prostates. Alpha-1 blockade would relax outflow (it is the BPH-treatment mechanism), SIADH has nothing to do with voiding mechanics, and H1 receptors are not the detrusor's control. Stop the drug, catheterise if needed, and count a TCA as a permanent BPH caution.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "tca-dox-07",
+      question: "A man on doxepin 75 mg self-starts over-the-counter cimetidine for dyspepsia. A week later his family reports marked sedation and confusion. The best explanation is:",
+      options: [
+        "Cimetidine induces hepatic metabolism and lowers doxepin levels",
+        "Cimetidine inhibits hepatic drug metabolism, raising doxepin levels and producing sedative toxicity",
+        "Antacid chelation has increased doxepin absorption",
+        "Doxepin inhibits cimetidine, causing acid hypersecretion"
+      ],
+      correctIndex: 1,
+      explanation: "Cimetidine is the textbook broad CYP inhibitor; by slowing hepatic clearance it raises TCA levels — doxepin included — and the clinical result is disproportionate sedation and confusion. Induction is the opposite of cimetidine's action, chelation would reduce rather than boost absorption, and the fourth option is pharmacologically backwards. Switching to a non-inhibiting antisecretory agent (or antacid timing separation) resolves the interaction.",
+      afterSectionId: "neural-pathways",
+    },
+    {
+      id: "tca-dox-08",
+      question: "The pharmacological basis of doxepin's 'two personalities' — hypnotic at 3-6 mg, antidepressant at reuptake-blocking doses — is:",
+      options: [
+        "H1 receptors are occupied at very low concentrations, while meaningful SERT/NET blockade requires much higher drug exposure",
+        "Low doses are converted overnight into a special hypnotic metabolite",
+        "The blood-brain barrier admits only low doses at night",
+        "CYP2D6 activity varies circadianly, changing the active fraction"
+      ],
+      correctIndex: 0,
+      explanation: "It is pure receptor-affinity logic: doxepin's H1 affinity is its strongest binding property, so hypnotic H1 occupancy happens at a fraction of the concentration needed to inhibit the monoamine transporters — hence the 3-6 mg hypnotic versus antidepressant doses an order of magnitude higher. Doxepin does have an active demethylated metabolite, but it is not a bedtime-specific 'hypnotic switch'; the barrier and circadian claims are inventions. This question pattern — affinity versus exposure — recurs for every low-dose repurposing story.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

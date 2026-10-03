@@ -697,6 +697,110 @@ export const galantamine: Drug = {
       explanation: "For mild-moderate alzheimer's (er): start 8 mg once daily × 4 weeks, target 16-24 mg/day, maximum 24 mg/day. Increase to 16 mg; may reach 24 mg after ≥ 4 weeks",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "stm-gal-01",
+      question: "Galantamine's unique dual mechanism is:",
+      options: [
+        "Cerebral AChE inhibition PLUS allosteric potentiation of nicotinic receptors — the only AD drug with both actions",
+        "Pure butyrylcholinesterase inhibition with no nicotinic action",
+        "Direct dopamine D2 agonism combined with AChE inhibition",
+        "NMDA-channel blockade plus MAO-B inhibition"
+      ],
+      correctIndex: 0,
+      explanation: "Galantamine inhibits acetylcholinesterase and allosterically potentiates nicotinic receptors (Tripathi notes a direct nicotinic agonistic action as well) — a dual cholinergic strategy unique in the Alzheimer set. NMDA-plus-MAO-B mixes memantine with selegiline, pure BuChE inhibition is rivastigmine's partial claim, and dopamine agonism belongs to no AD drug.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-gal-02",
+      question: "A 66-year-old with mild-moderate Alzheimer's is started on galantamine. Tripathi's titration schedule is:",
+      options: [
+        "40 mg TID from day one",
+        "4 mg BD, titrated to a maximum of 12 mg BD — twice-daily dosing required",
+        "4 mg once weekly",
+        "24 mg once daily at bedtime"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi's box: galantamine 4 mg BD up to a maximum of 12 mg BD — the twice-daily schedule that donepezil's 70 h half-life avoids. Weekly dosing is fantasy, 24 mg confuses a total daily figure with a once-daily schedule, and 40 mg three times a day is far beyond any Alzheimer titration.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-gal-03",
+      question: "The allosteric potentiation clause of galantamine's mechanism means:",
+      options: [
+        "It increases the number of nicotinic receptors by gene induction",
+        "It blocks nicotinic receptors presynaptically",
+        "It binds a site distinct from acetylcholine's orthosteric site on nicotinic receptors, increasing the receptor's response to released ACh without itself being a full agonist opening the channel continuously",
+        "It occupies the same site as acetylcholine and opens the channel directly at all times"
+      ],
+      correctIndex: 2,
+      explanation: "Allosteric potentiation is defined by site separation: galantamine sensitises the receptor to acetylcholine rather than permanently opening the channel like a full agonist — the pharmacological nuance examinations quote. Options D and B invert or exaggerate the nicotinic action, and receptor upregulation by gene induction is not its mechanism.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "stm-gal-04",
+      question: "Galantamine's metabolic vulnerability to co-medication involves:",
+      options: [
+        "CYP1A2 and CYP2C9 only",
+        "Exclusive renal excretion of unchanged drug with no CYP role",
+        "CYP2C19 induction by galantamine",
+        "CYP2D6 and CYP3A4 — strong inhibitors of either (paroxetine, ketoconazole) raise galantamine levels"
+      ],
+      correctIndex: 3,
+      explanation: "The label's interaction pair is 2D6 and 3A4: strong inhibitors of either enzyme raise galantamine exposure (KYP anchor; Katzung's CYP tables include galantamine among substrate lists), so paroxetine or azole co-prescription warrants attention. The 1A2/2C9 pair is wrong, unchanged renal excretion is memantine's profile, and galantamine is a victim substrate, not an inducer.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "stm-gal-05",
+      question: "Two weeks after titrating galantamine to 12 mg BD, an 80-year-old has nausea, vomiting and 3 kg weight loss. The best management is:",
+      options: [
+        "Recognise cholinergic GI toxicity of the AChE-inhibitor class — hold or titrate down, give with food, and monitor weight (all three AD AChE inhibitors share this profile)",
+        "Add metoclopramide long-term and continue the full dose",
+        "Immediately switch to tacrine, which has no GI effects",
+        "Double the dose to overcome tolerance"
+      ],
+      correctIndex: 0,
+      explanation: "Nausea, vomiting and weight loss are the shared cholinergic GI signature of donepezil, rivastigmine and galantamine (Tripathi notes comparable GI effects across the three); the response is dose adjustment with food, not escalation. Tacrine's GI effects were worse and it adds liver toxicity, doubling worsens the cholinergic burden, and long-term prokinetic cover ignores the dose-toxicity relationship.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-gal-06",
+      question: "Galantamine's natural-origin claim and indication are:",
+      options: [
+        "A plant alkaloid used for Parkinson's disease psychosis",
+        "A natural alkaloid (snowdrop/daffodil family) used for mild-to-moderate Alzheimer's disease",
+        "A synthetic benzodiazepine for anxiety in dementia",
+        "A marine-toxin derivative for severe AD only"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi calls galantamine a natural alkaloid with cerebral AChE inhibition plus nicotinic action, indicated in mild-to-moderate AD — GALAMER 4/8/12 mg is the Indian brand line. Anxiety-in-dementia is not its label, severe-only inverts the staging, and Parkinson's psychosis belongs to pimavanserin, not galantamine.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "stm-gal-07",
+      question: "An INI-CET style stem: which drug inhibits acetylcholinesterase AND allosterically potentiates nicotinic receptors?",
+      options: [
+        "Memantine, because NMDA blockade includes nicotinic potentiation",
+        "Rivastigmine, because BuChE inhibition equals nicotinic potentiation",
+        "Galantamine — the dual-mechanism signature; donepezil (pure AChE) and memantine (NMDA) are the classic traps",
+        "Donepezil, because all AChE inhibitors also act on nicotinic receptors"
+      ],
+      correctIndex: 2,
+      explanation: "The dual mechanism — acetylcholinesterase inhibition plus allosteric potentiation of nicotinic receptors — is galantamine's signature alone in the Alzheimer armamentarium; donepezil is pure AChE without the nicotinic clause and memantine works at NMDA channels, making them the classic traps. Option D wrongly universalises the nicotinic action, option B confuses glutamatergic and cholinergic pharmacology, and option C equates BuChE inhibition with a receptor action it does not have.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "stm-gal-08",
+      question: "A prescriber notes her Alzheimer patient needs twice-daily dosing with galantamine or rivastigmine but not donepezil. The pharmacological reason is:",
+      options: [
+        "Galantamine is given twice daily because it is more potent per milligram",
+        "Donepezil cannot be given more than once weekly",
+        "Twice-daily galantamine dosing compensates for its hepatic toxicity",
+        "Galantamine and rivastigmine have shorter plasma half-lives than donepezil's ~70 h, so their schedules are twice daily (galantamine 4-12 mg BD per Tripathi)"
+      ],
+      correctIndex: 3,
+      explanation: "This is a half-life scheduling question: shorter plasma PK (rivastigmine's plasma t-half ~2 h with a longer enzymatic effect; galantamine shorter than donepezil) forces twice-daily dosing, while donepezil's ~70 h allows once-daily bedtime dosing. Potency per milligram never dictates frequency, donepezil is exactly the once-daily agent, and galantamine is not hepatotoxic — that was tacrine.",
+      afterSectionId: "high-yield-summary",
+    },
   ],
   activeRecallQuestions: [
     {

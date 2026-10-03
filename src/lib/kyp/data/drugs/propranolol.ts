@@ -750,6 +750,110 @@ export const propranolol: Drug = {
       explanation: "For performance anxiety (prn): start 10-40 mg 30-60 min before the event, target 10-40 mg PRN, maximum 80 mg PRN (exceptional). Single pre-event dose; titrate by experience",
       afterSectionId: "prescriber-guide",
     },
+    {
+      id: "adj-pro-01",
+      question: "Which receptor profile defines propranolol?",
+      options: [
+        "Non-selective competitive antagonism at both beta-1 and beta-2 adrenoceptors (weak beta-3 activity) without intrinsic sympathomimetic activity",
+        "Cardioselective beta-1-only antagonism, as with metoprolol and atenolol",
+        "Combined beta-blockade plus alpha-1 blockade, the profile of carvedilol and labetalol",
+        "Beta-2 agonism that relaxes bronchial smooth muscle and lowers airway resistance"
+      ],
+      correctIndex: 0,
+      explanation: "Tripathi presents propranolol as the prototype first-generation non-selective beta-blocker (beta-1 and beta-2, weak beta-3), an inverse agonist with no intrinsic sympathomimetic activity. Beta-1 selectivity defines the second-generation agents, additional alpha-1 blockade defines the third-generation vasodilating blockers, and beta-2 agonism is salbutamol's action — the very receptor propranolol blocks.",
+      afterSectionId: "mechanism",
+    },
+    {
+      id: "adj-pro-02",
+      question: "A 21-year-old medical student develops a racing heart, trembling hands and sweating before every seminar presentation, though she is free of worry once the event passes. The best pharmacological aid for the performance itself is:",
+      options: [
+        "A tapering 2-week alprazolam course after each performance to prevent anticipatory fear",
+        "A single dose of propranolol about an hour before the event — it blunts the peripheral somatic symptoms but does not touch the psychological worry",
+        "A single dose of buspirone about an hour before the event — it calms somatic and psychological symptoms together",
+        "Fluoxetine started on the morning of the seminar for immediate anxiolysis"
+      ],
+      correctIndex: 1,
+      explanation: "Tripathi notes propranolol and other non-selective beta-blockers help anxious patients troubled by palpitation, rise in BP, shaking and sweating by cutting the sympathetic vicious cycle — valuable in acutely stressful situations such as examination fear and public appearances — while leaving the psychological symptoms of worry, tension and fear untouched. Buspirone takes weeks to act and is useless acutely, fluoxetine needs weeks as well, and repeated benzodiazepine courses invite dependence.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-pro-03",
+      question: "A 35-year-old man started on haloperidol 10 mg per day reports unbearable inner restlessness: he paces, cannot sit still, and describes motor restlessness without any abnormal involuntary movements. The team wants an agent that will not add another sedating anticholinergic. The best choice is:",
+      options: [
+        "Valbenazine — the VMAT2 inhibitor approved for drug-induced akathisia",
+        "Amantadine — the dopaminergic agent that abolishes akathisia in most patients",
+        "Propranolol — the classic non-anticholinergic remedy for antipsychotic-induced akathisia",
+        "Benztropine — the first-line drug for akathisia because akathisia is an acute dystonia variant"
+      ],
+      correctIndex: 2,
+      explanation: "Akathisia — subjective inner restlessness with an inability to sit still — is the extrapyramidal syndrome for which propranolol is the classic beta-blocker remedy (KYP's exam anchor; Tripathi notes it is more effective and may be given to non-responsive cases). Benztropine is the dystonia and parkinsonism drug, valbenazine is the tardive-dyskinesia VMAT2 agent, and amantadine is only an occasional parkinsonism alternative — none is the classic akathisia answer.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "adj-pro-04",
+      question: "A 24-year-old asthmatic with stage fright asks to reuse his friend's propranolol tablets before an audition. Why must this be discouraged?",
+      options: [
+        "Propranolol causes dose-dependent hyperglycaemia that destabilises airway inflammation",
+        "Propranolol induces CYP3A4 and raises levels of most inhaled corticosteroids",
+        "Propranolol thickens airway mucus through muscarinic receptor blockade",
+        "Propranolol's beta-2 blockade can precipitate severe bronchospasm in asthma — a non-selective beta-blocker is relatively contraindicated in asthmatics"
+      ],
+      correctIndex: 3,
+      explanation: "Blocking bronchial beta-2 receptors removes sympathetically mediated bronchodilatation and can trigger life-threatening bronchospasm — the classic caution that confines non-selective beta-blockers in asthma (Tripathi groups propranolol among the non-selective agents). The other liabilities are wrong-direction claims: propranolol masks hypoglycaemia in diabetics rather than causing hyperglycaemia, induces no 3A4, and has no muscarinic action.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-pro-05",
+      question: "Propranolol is highly lipophilic. The clinical consequence most relevant to psychiatric practice is:",
+      options: [
+        "CNS penetration causing fatigue, sleep disturbance with vivid nightmares and light-headedness",
+        "Inability to cross the blood-brain barrier, confining effects to peripheral tissues",
+        "Mandatory dose escalation in renal failure because the kidney is its sole elimination route",
+        "Selective adipose-tissue accumulation that abolishes its cardiac effects"
+      ],
+      correctIndex: 0,
+      explanation: "As a lipophilic beta-blocker propranolol crosses into the brain, and Katzung lists fatigue, sleep disturbances including nightmares, depression and light-headedness among its CNS adverse effects; wide inter-individual variation in clearance further explains its variable response. The blood-brain-barrier-impermeable description fits hydrophilic agents such as atenolol, propranolol is hepatically metabolised rather than renally cleared, and fat accumulation does not abolish cardiac effects.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-pro-06",
+      question: "Which pharmacokinetic statement about propranolol is correct?",
+      options: [
+        "It follows zero-order saturable kinetics across its whole therapeutic range",
+        "It undergoes extensive first-pass hepatic metabolism with wide inter-individual variation in clearance, so oral doses must be individually titrated",
+        "It is excreted virtually unchanged by the kidney, so fixed dosing by GFR suffices",
+        "Its oral bioavailability is nearly 100% because it bypasses hepatic metabolism"
+      ],
+      correctIndex: 1,
+      explanation: "Propranolol undergoes extensive first-pass hepatic metabolism — Katzung's textbook example of a high-extraction drug with wide inter-individual variation in clearance, and Tripathi lists it among blood-flow-limited drugs — so oral doses must be individually titrated rather than fixed. Renal excretion of unchanged drug and near-complete bioavailability are the false claims, and propranolol behaves with linear first-order kinetics in the usual range.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "adj-pro-07",
+      question: "In a patient with generalised anxiety disorder already on an SSRI, adding propranolol produces which specific change?",
+      options: [
+        "Complete control of psychological and somatic symptoms, making it adequate monotherapy for GAD",
+        "Prevention of panic attacks, which is why it is first-line in panic disorder",
+        "Relief of somatic symptoms — tremor, palpitation and sweating — while worry, tension and fear continue to need the serotonergic core treatment",
+        "Abolition of cognitive worry and anticipatory fear, allowing the SSRI to be stopped within a week"
+      ],
+      correctIndex: 2,
+      explanation: "Tripathi states beta-blockers do not affect the psychological symptoms of anxiety — worry, tension and fear — and provide only symptomatic relief of sympathetic overactivity; KYP's anxiety-toolkit layering keeps propranolol as a somatic-only adjunct, never the core. It is not first-line in panic disorder, and stopping the SSRI within a week contradicts all maintenance teaching.",
+      afterSectionId: "high-yield-summary",
+    },
+    {
+      id: "adj-pro-08",
+      question: "A bipolar patient in Pune on lithium develops a coarse postural tremor that embarrasses him at work; his psychiatrist adds a beta-blocker dispensed as CIPLAR 10 mg tablets. Which drug has been added?",
+      options: [
+        "Metoprolol — a cardioselective beta-1 blocker presented as the first-choice beta-blocker for lithium-induced tremor",
+        "Primidone — an anticonvulsant marketed as the first-line drug for lithium-induced tremor",
+        "Trihexyphenidyl — PACITANE 2 mg tablets, the anticholinergic given for coarse parkinsonian tremor",
+        "Propranolol — INDERAL and CIPLAR 10, 40 and 80 mg tablets, the beta-blocker used for lithium-induced tremor and performance anxiety"
+      ],
+      correctIndex: 3,
+      explanation: "Tripathi lists propranolol in India as INDERAL and CIPLAR 10, 40 and 80 mg tablets, and lithium-induced postural tremor is a recognised propranolol use (Katzung groups lithium among the drugs causing postural tremor treated this way). PACITANE is trihexyphenidyl for drug-induced parkinsonism, primidone belongs to essential tremor rather than lithium tremor, and cardioselective metoprolol is not the classic choice here.",
+      afterSectionId: "quick-facts",
+    },
   ],
   activeRecallQuestions: [
     {

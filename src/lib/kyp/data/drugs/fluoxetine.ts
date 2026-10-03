@@ -1760,6 +1760,149 @@ export const fluoxetine: Drug = {
       explanation: "Fluoxetine is the only SSRI FDA-approved for bulimia nervosa (60mg OD target — reduces binge-purge frequency independent of antidepressant effect) and paediatric depression ≥8 years (10–20mg child, up to 60mg adolescent). These unique approvals — combined with the longest half-life among SSRIs (mildest discontinuation, 5-week MAOI washout), most activating profile (useful in retarded depression), and strongest CYP2D6 inhibition — define fluoxetine's identity.",
       afterSectionId: "evidence-practice",
     },
+    {
+      id: "ssri-flu-01",
+      question: "Fluoxetine's distinctive pharmacokinetic feature and its metabolite are:",
+      options: [
+        "Longest effective half-life in the class; norfluoxetine, an active metabolite",
+        "Shortest half-life in the class; inactive metabolite",
+        "Half-life that shrinks with repeated dosing",
+        "Purely renal clearance with no metabolites"
+      ],
+      correctIndex: 0,
+      explanation: "Fluoxetine's half-life is 2-4 days (longer with chronic dosing) and its demethylated metabolite norfluoxetine persists 7-15 days — the longest effective half-life of any SSRI. This single fact explains three exam favourites: rarest discontinuation syndrome, feasibility of weekly dosing, and the 5-week washout before an MAOI.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "ssri-flu-02",
+      question: "The ONLY SSRI carrying FDA approval for bulimia nervosa is:",
+      options: [
+        "Sertraline",
+        "Fluoxetine",
+        "Escitalopram",
+        "Fluvoxamine"
+      ],
+      correctIndex: 1,
+      explanation: "Fluoxetine is the only SSRI approved for bulimia nervosa (60 mg/day). Fluvoxamine's niche label is OCD — Know Your Pill's class table tags it 'OCD-only FDA indication'. Mixing these two niche labels is a classic distractor pair.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "ssri-flu-03",
+      question: "For paediatric major depressive disorder, the SSRI approved for the youngest age group is:",
+      options: [
+        "Sertraline — approved from age 6 years",
+        "Escitalopram — approved from age 6 years",
+        "Fluoxetine — approved from age 8 years",
+        "Paroxetine — approved from age 12 years"
+      ],
+      correctIndex: 2,
+      explanation: "Fluoxetine is approved for paediatric MDD from age 8 — the youngest in the class (escitalopram's MDD label starts at 12; sertraline and paroxetine have no paediatric MDD label). Paroxetine is actively avoided in young patients. Know Your Pill's comparison table tags fluoxetine 'paediatric >=8yr'.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "ssri-flu-04",
+      question: "A 22-year-old woman has MDD with hypersomnia, leaden paralysis, hyperphagia and low daytime energy that is costing her classes. Which SSRI fits this presentation best?",
+      options: [
+        "Paroxetine",
+        "Sertraline",
+        "Citalopram",
+        "Fluoxetine"
+      ],
+      correctIndex: 3,
+      explanation: "Atypical depressive features with hypersomnia and fatigue call for an activating agent — fluoxetine's stimulating profile is the classic match and it can worsen insomnia if dosed late. Paroxetine sits at the opposite pole (most sedating, most weight gain), compounding hyperphagia.",
+      afterSectionId: "top",
+    },
+    {
+      id: "ssri-flu-05",
+      question: "A 34-year-old stable on fluoxetine 40 mg goes on a three-week trek and misses every single dose. What should she expect on return?",
+      options: [
+        "No meaningful discontinuation — the norfluoxetine reservoir effectively self-tapers",
+        "Severe discontinuation syndrome — the drug must be reinstated urgently",
+        "A hypertensive crisis from rebound monoamine release",
+        "Guaranteed immediate relapse of depression"
+      ],
+      correctIndex: 0,
+      explanation: "Fluoxetine's long half-life means missed doses barely dent plasma levels — the drug tapers itself. Discontinuation syndrome is rarest with fluoxetine and worst with paroxetine (shortest half-life, no active metabolite). This contrast is one of the highest-yield SSRI PK facts.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "ssri-flu-06",
+      question: "A 29-year-old woman has severe PMDD — mood collapse, irritability and functional impairment in the luteal phase every cycle. The evidence-based SSRI and dosing strategy:",
+      options: [
+        "Paroxetine CR — once-weekly dosing",
+        "Fluoxetine — continuous dosing or luteal-phase (intermittent) dosing",
+        "Sertraline — a monthly depot injection",
+        "Escitalopram — dosing only during menses"
+      ],
+      correctIndex: 1,
+      explanation: "Fluoxetine carries a PMDD label and uniquely supports BOTH continuous dosing and luteal-phase (roughly 2-week intermittent) dosing — a favourite exam twist. Paroxetine CR also has a PMDD label but not weekly dosing; there is no SSRI depot. Know Your Pill tags fluoxetine with PMDD among its FDA indications.",
+      afterSectionId: "top",
+    },
+    {
+      id: "ssri-flu-07",
+      question: "Minimum washout period before starting an MAOI in a patient who has just stopped fluoxetine:",
+      options: [
+        "14 days",
+        "7 days",
+        "5 weeks",
+        "24 hours"
+      ],
+      correctIndex: 2,
+      explanation: "Because norfluoxetine lingers for weeks, the washout between fluoxetine and an MAOI is 5 weeks — versus 14 days for every other SSRI. Getting this backwards in either direction risks serotonin syndrome. (MAOI to any SSRI is 14 days.) The 5-week fluoxetine rule is a perennial exam item.",
+      afterSectionId: "timeline",
+    },
+    {
+      id: "ssri-flu-08",
+      question: "Fluoxetine's principal CYP450 footprint is:",
+      options: [
+        "Potent CYP1A2 inhibition",
+        "CYP3A4 induction",
+        "No clinically significant CYP effects",
+        "Potent CYP2D6 inhibition"
+      ],
+      correctIndex: 3,
+      explanation: "Fluoxetine (via itself and norfluoxetine) is a potent CYP2D6 inhibitor — raising levels of TCAs, atomoxetine, metoprolol and undermining tamoxifen activation; pimozide is contraindicated. The 1A2-inhibitor niche belongs to fluvoxamine (tizanidine contraindication). Know Your Pill tags fluoxetine 'longest half-life; only SSRI for bulimia; paediatric >=8yr' and its interactions flow from 2D6.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "ssri-flu-09",
+      question: "A 21-year-old woman with moderate bulimia nervosa (normal electrolytes today) is to start pharmacotherapy. The correct drug and dose:",
+      options: [
+        "Fluoxetine 60 mg/day",
+        "Sertraline 50 mg daily",
+        "Escitalopram 10 mg daily",
+        "Ondansetron 8 mg three times daily"
+      ],
+      correctIndex: 0,
+      explanation: "Fluoxetine 60 mg/day is the only SSRI regimen with an FDA label for bulimia nervosa and reduces binge-purge frequency. Lower doses lack the evidence; ondansetron is not established therapy here. Clinical practice still requires electrolyte and ECG surveillance given purge behaviour.",
+      afterSectionId: "top",
+    },
+    {
+      id: "ssri-flu-10",
+      question: "A psychiatrist plans fluoxetine for a patient already on pimozide for Tourette disorder. The correct assessment:",
+      options: [
+        "No interaction of note",
+        "Contraindicated — additive QTc prolongation plus CYP2D6-mediated rise in pimozide levels",
+        "Acceptable if doses are separated by two hours",
+        "Concern limited to reduced fluoxetine concentrations"
+      ],
+      correctIndex: 1,
+      explanation: "The fluoxetine label contraindicates pimozide on two stacked mechanisms: both prolong QTc, and potent 2D6 inhibition raises pimozide exposure — torsadogenic risk. Spacing doses does nothing to either mechanism. Pimozide + SSRIs is a classic 'spot the contraindication' item.",
+      afterSectionId: "quick-facts",
+    },
+    {
+      id: "ssri-flu-11",
+      question: "A 19-year-old with panic disorder starts fluoxetine 10 mg in the morning. On day 3 she calls: 'I feel more wired, anxious and I cannot sleep.' Best response:",
+      options: [
+        "Stop immediately — this is a drug allergy",
+        "Double the dose to push past the jitteriness",
+        "Reassure and continue: early activation is a known, usually transient fluoxetine effect; keep the dose low and take it in the morning",
+        "Switch to paroxetine the same day"
+      ],
+      correctIndex: 2,
+      explanation: "Fluoxetine's activating profile can transiently amplify anxiety and panic in the first 1-2 weeks — counselled BEFORE starting, managed by low starting dose, morning administration and reassurance. Paroxetine would sedate rather than activate but carries its own baggage (worst discontinuation, anticholinergic load). Abrupt stopping and dose-doubling both backfire.",
+      afterSectionId: "top",
+    },
   ],
 
   /* End-of-page active recall questions */
