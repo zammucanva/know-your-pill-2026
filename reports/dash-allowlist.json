@@ -1,0 +1,4 @@
+{
+  "_comment": "Deliberately kept em-dash strings for lint:dashes. Add exact normalized strings (whitespace-collapsed) ONLY with a documented editorial rationale; the goal is zero abuse of this list.",
+  "strings": []
+}

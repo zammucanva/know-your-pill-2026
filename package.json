@@ -20,7 +20,8 @@
     "typecheck": "tsc --noEmit",
     "test:security": "bun test tests/security.test.ts tests/privacy.test.ts tests/idor.test.ts",
     "db:deploy": "bunx prisma migrate deploy",
-    "lint:content": "bun scripts/concept-content-lint.ts"
+    "lint:content": "bun scripts/concept-content-lint.ts",
+    "lint:dashes": "node scripts/lint-dashes.mjs"
   },
   "dependencies": {
     "@prisma/client": "^6.11.1",
