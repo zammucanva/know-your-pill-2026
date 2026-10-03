@@ -23,14 +23,14 @@ export const lMethylfolate: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antidepressants", "Augmentation Agents", "L-Methylfolate"],
   /* ---- Hero / summary ---- */
-  tagline: "The active folate augmentation — the B-vitamin that powers monoamine synthesis.",
-  summary: "L-methylfolate is the active (5-methyl-THF) form of folate used as augmentation in depression: it supplies the methyl donor that powers the synthesis of serotonin, norepinephrine, and dopamine — particularly relevant in patients with folate-metabolism variants (MTHFR), low-folate states, and SSRI partial response. Marketed as a medical food in the USA; a pragmatic, gentle augmentation with few adverse effects.",
+  tagline: "The active folate augmentation: the B-vitamin that powers monoamine synthesis.",
+  summary: "L-methylfolate is the active (5-methyl-THF) form of folate used as augmentation in depression: it supplies the methyl donor that powers the synthesis of serotonin, norepinephrine, and dopamine, particularly relevant in patients with folate-metabolism variants (MTHFR), low-folate states, and SSRI partial response. Marketed as a medical food in the USA; a pragmatic, gentle augmentation with few adverse effects.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of L-Methylfolate — from its molecular target (Folate cycle → BH4 (tetrahydrobiopterin) cofactor for monoamine synthesis) to clinical effect.",
+    "Explain the mechanism of action of L-Methylfolate, from its molecular target (Folate cycle → BH4 (tetrahydrobiopterin) cofactor for monoamine synthesis) to clinical effect.",
     "List the FDA-approved and off-label uses of L-Methylfolate.",
     "Predict the common and serious side effects of L-Methylfolate from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting L-Methylfolate.",
@@ -38,15 +38,15 @@ export const lMethylfolate: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "L-methylfolate provides the activated folate that drives BH4-dependent tyrosine hydroxylase and tryptophan hydroxylase — the rate-limiting enzymes of dopamine/norepinephrine/serotonin synthesis.",
+    summary: "L-methylfolate provides the activated folate that drives BH4-dependent tyrosine hydroxylase and tryptophan hydroxylase: the rate-limiting enzymes of dopamine/norepinephrine/serotonin synthesis.",
     molecularTarget: "Folate cycle → BH4 (tetrahydrobiopterin) cofactor for monoamine synthesis",
     effect: "Monoaminergic modulation producing the antidepressant effect described.",
     steps: [
-      "L-methylfolate provides the activated folate that drives BH4-dependent tyrosine hydroxylase and tryptophan hydroxylase — the rate-limiting enzymes of dopamine/norepinephrine/serotonin synthesis.",
+      "L-methylfolate provides the activated folate that drives BH4-dependent tyrosine hydroxylase and tryptophan hydroxylase: the rate-limiting enzymes of dopamine/norepinephrine/serotonin synthesis.",
       "Downstream receptor adaptation over 2-6 weeks translates acute monoamine change into clinical response.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life Unknown (water-soluble vitamin kinetics). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life Unknown (water-soluble vitamin kinetics). See mechanism and prescriber sections.",
     halfLife: "Unknown (water-soluble vitamin kinetics).",
     metabolism: "Hepatic CYP metabolism.",
     excretion: "Renal.",
@@ -109,7 +109,7 @@ export const lMethylfolate: Drug = {
         label: "produces",
       },
     ],
-    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation — the central paradox of antidepressant pharmacology.",
+    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation: the central paradox of antidepressant pharmacology.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Serotonin (5-HT)", "Norepinephrine (NE)", "Dopamine (DA)"],
@@ -150,7 +150,7 @@ export const lMethylfolate: Drug = {
       name: "Generally well tolerated",
       frequency: "unknown",
       severity: "mild",
-      description: "Few adverse effects at augmentation doses — the safety attraction.",
+      description: "Few adverse effects at augmentation doses: the safety attraction.",
       management: "—",
     },
   ],
@@ -199,7 +199,7 @@ export const lMethylfolate: Drug = {
   ],
   pregnancy: {
     legacyCategory: "A",
-    summary: "Folate is a pregnancy vitamin — l-methylfolate supplementation in pregnancy is standard (neural-tube prophylaxis); psychiatric augmentation is safe in pregnancy.",
+    summary: "Folate is a pregnancy vitamin: l-methylfolate supplementation in pregnancy is standard (neural-tube prophylaxis); psychiatric augmentation is safe in pregnancy.",
     lactation: "Compatible.",
   },
   renalAdjustment: "No adjustment (water-soluble).",
@@ -207,23 +207,23 @@ export const lMethylfolate: Drug = {
   /* ---- Education ---- */
   patientExplanation: "L-methylfolate is the active form of the B-vitamin folate: it provides a building block the brain needs to manufacture its own mood chemicals (serotonin, noradrenaline, dopamine). Adding it to an antidepressant that has worked only partially can improve response, particularly in people with low folate levels. It is generally free of side effects.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from L-Methylfolate builds over weeks — do not judge it in the first days.",
+    "Benefit from L-Methylfolate builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The enzymatic logic: folate → BH4 → tyrosine hydroxylase and tryptophan hydroxylase — the monoamine assembly line powered by a vitamin.",
-    "The three-audience niche: the SSRI partial responder, the low-folate depressive, and the MTHFR-variant patient — mechanism-guided augmentation.",
-    "Medical food status (USA): not a drug, prescribed like one — regulatory middle ground.",
-    "Safety is the pitch: nearly no adverse-effect burden at augmentation doses — the gentlest augmentation in the cabinet.",
-    "Check B12 first: the classic folate-teacher's warning — masking pernicious anaemia.",
+    "The enzymatic logic: folate → BH4 → tyrosine hydroxylase and tryptophan hydroxylase; the monoamine assembly line powered by a vitamin.",
+    "The three-audience niche: the SSRI partial responder, the low-folate depressive, and the MTHFR-variant patient; mechanism-guided augmentation.",
+    "Medical food status (USA): not a drug, prescribed like one; regulatory middle ground.",
+    "Safety is the pitch: nearly no adverse-effect burden at augmentation doses; the gentlest augmentation in the cabinet.",
+    "Check B12 first: the classic folate-teacher's warning; masking pernicious anaemia.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of L-Methylfolate: L-methylfolate provides the activated folate that drives BH4-dependent tyrosine hydroxylase and tryptophan hydroxylase — the rate-limiting enzymes of dopamine/norepinephrine/serotonin synthesis.",
+        "Mechanism of L-Methylfolate: L-methylfolate provides the activated folate that drives BH4-dependent tyrosine hydroxylase and tryptophan hydroxylase; the rate-limiting enzymes of dopamine/norepinephrine/serotonin synthesis.",
         "Uses of L-Methylfolate: Adjunctive treatment of major depression (especially with low folate / SSRI partial response); Folate deficiency states; MTHFR polymorphism-associated depression",
         "Mechanism: active folate → BH4 cofactor → monoamine synthesis enzymes.",
         "Use: depression AUGMENTATION 7.5-15 mg (low folate, SSRI partial response, MTHFR variants).",
@@ -233,7 +233,7 @@ export const lMethylfolate: Drug = {
         "Outline the monitoring plan: B12 status (Before long-term high-dose use); Augmentation response (At 4-8 weeks)",
       ],
       longAnswer: [
-        "L-Methylfolate: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "L-Methylfolate: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: active folate → BH4 cofactor → monoamine synthesis enzymes.",
         "Use: depression AUGMENTATION 7.5-15 mg (low folate, SSRI partial response, MTHFR variants).",
       ],
@@ -255,7 +255,7 @@ export const lMethylfolate: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on L-Methylfolate develops masking of b12 deficiency (high-dose folate) — next best step?",
+        "A patient on L-Methylfolate develops masking of b12 deficiency (high-dose folate): next best step?",
         "When to choose L-Methylfolate over alternatives in its class.",
       ],
     },
@@ -268,10 +268,10 @@ export const lMethylfolate: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The enzymatic logic: folate → BH4 → tyrosine hydroxylase and tryptophan hydroxylase — the monoamine assembly line powered by a vitamin.",
-        "The three-audience niche: the SSRI partial responder, the low-folate depressive, and the MTHFR-variant patient — mechanism-guided augmentation.",
-        "Medical food status (USA): not a drug, prescribed like one — regulatory middle ground.",
-        "Safety is the pitch: nearly no adverse-effect burden at augmentation doses — the gentlest augmentation in the cabinet.",
+        "The enzymatic logic: folate → BH4 → tyrosine hydroxylase and tryptophan hydroxylase; the monoamine assembly line powered by a vitamin.",
+        "The three-audience niche: the SSRI partial responder, the low-folate depressive, and the MTHFR-variant patient; mechanism-guided augmentation.",
+        "Medical food status (USA): not a drug, prescribed like one; regulatory middle ground.",
+        "Safety is the pitch: nearly no adverse-effect burden at augmentation doses; the gentlest augmentation in the cabinet.",
       ],
     },
   },
@@ -287,7 +287,7 @@ export const lMethylfolate: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — adjunctive treatment of major depression (especially with low folate / ssri partial response)",
+      title: "First presentation: adjunctive treatment of major depression (especially with low folate / ssri partial response)",
       presentation: "A patient presenting with adjunctive treatment of major depression (especially with low folate / ssri partial response), started on L-Methylfolate.",
       history: "A adult patient presents with a adjunctive treatment of major depression (especially with low folate / ssri partial response) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with adjunctive treatment of major depression (especially with low folate / ssri partial response); physical examination and baseline investigations are unremarkable.",
@@ -296,7 +296,7 @@ export const lMethylfolate: Drug = {
       management: "Started at 7.5 mg once daily, titrated to 7.5-15 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "L-Methylfolate takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "L-Methylfolate takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -305,7 +305,7 @@ export const lMethylfolate: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Medical Food vs related agents — orientation table",
+      title: "Medical Food vs related agents: orientation table",
       primaryDrug: "L-Methylfolate",
       rows: [
         {
@@ -340,7 +340,7 @@ export const lMethylfolate: Drug = {
         },
         {
           attribute: "Clinical niche",
-          primaryValue: "The monoamine-synthesis augmentation — gentle and mechanism-sensible",
+          primaryValue: "The monoamine-synthesis augmentation: gentle and mechanism-sensible",
           comparisons: [
             {
               drug: "L-Methylfolate",
@@ -349,7 +349,7 @@ export const lMethylfolate: Drug = {
           ],
         },
       ],
-      takeaway: "L-Methylfolate is compared here with related agents for orientation. Full comparison data lives in each drug's own guide — follow the links for the complete picture.",
+      takeaway: "L-Methylfolate is compared here with related agents for orientation. Full comparison data lives in each drug's own guide: follow the links for the complete picture.",
     },
   ],
   /* ---- Timeline ---- */
@@ -358,7 +358,7 @@ export const lMethylfolate: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "L-Methylfolate reaches peak plasma concentration and begins acting at its molecular target (Folate cycle → BH4 (tetrahydrobiopterin) cofactor for monoamine synthesis). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "L-Methylfolate reaches peak plasma concentration and begins acting at its molecular target (Folate cycle → BH4 (tetrahydrobiopterin) cofactor for monoamine synthesis). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -394,7 +394,7 @@ export const lMethylfolate: Drug = {
   faqs: [
     {
       question: "How long does L-Methylfolate take to work?",
-      answer: "Augmentation benefit assessed over 4-8 weeks.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Augmentation benefit assessed over 4-8 weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of L-Methylfolate?",
@@ -402,11 +402,11 @@ export const lMethylfolate: Drug = {
     },
     {
       question: "Can I stop L-Methylfolate suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is L-Methylfolate habit-forming?",
@@ -414,7 +414,7 @@ export const lMethylfolate: Drug = {
     },
     {
       question: "Can I take L-Methylfolate during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — L-Methylfolate may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. L-Methylfolate may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -543,7 +543,7 @@ export const lMethylfolate: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — L-Methylfolate",
+      label: "Patient Guide. L-Methylfolate",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -551,13 +551,13 @@ export const lMethylfolate: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The active folate augmentation — the B-vitamin that powers monoamine synthesis.",
-    summary: "L-Methylfolate is a prescription medicine used to treat adjunctive treatment of major depression (especially with low folate / ssri partial response). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The active folate augmentation: the B-vitamin that powers monoamine synthesis.",
+    summary: "L-Methylfolate is a prescription medicine used to treat adjunctive treatment of major depression (especially with low folate / ssri partial response). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "L-methylfolate is the active form of the B-vitamin folate: it provides a building block the brain needs to manufacture its own mood chemicals (serotonin, noradrenaline, dopamine). Adding it to an antidepressant that has worked only partially can improve response, particularly in people with low folate levels. It is generally free of side effects.",
-    sideEffects: "The most common side effects are: generally well tolerated. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Masking of B12 deficiency (high-dose folate) and Possible seizure-threshold interaction (anticonvulsant co-therapy). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: b12 status (before long-term high-dose use); augmentation response (at 4-8 weeks). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: generally well tolerated. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Masking of B12 deficiency (high-dose folate) and Possible seizure-threshold interaction (anticonvulsant co-therapy). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: b12 status (before long-term high-dose use); augmentation response (at 4-8 weeks). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Phenytoin, phenobarbital, primidone, Methotrexate. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Phenytoin, phenobarbital, primidone, Methotrexate. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -576,7 +576,7 @@ export const lMethylfolate: Drug = {
     ],
     typicalDoses: "7.5-15 mg/day augmentation.",
     prescribingScenarios: [
-      "Budget augmentation in Indian practice — supplement-grade access.",
+      "Budget augmentation in Indian practice: supplement-grade access.",
       "Perinatal depression (folate-safe).",
     ],
     availability: {
@@ -588,7 +588,7 @@ export const lMethylfolate: Drug = {
     costCategory: "low",
     costNote: "Cost varies by manufacturer and region.",
     monitoring: "B12 baseline.",
-    patientCounselling: ["A safe add-on — give it 4-8 weeks."],
+    patientCounselling: ["A safe add-on: give it 4-8 weeks."],
   },
   sectionDifficulty: {
     mechanism: "mbbs",
@@ -621,7 +621,7 @@ export const lMethylfolate: Drug = {
         name: "L-Methylfolate",
         slug: "l-methylfolate",
         relationship: "This guide",
-        distinguishing: "The monoamine-synthesis augmentation — gentle and mechanism-sensible",
+        distinguishing: "The monoamine-synthesis augmentation: gentle and mechanism-sensible",
       },
     ],
   },
@@ -769,7 +769,7 @@ export const lMethylfolate: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of L-Methylfolate in two sentences.",
-      answer: "L-methylfolate provides the activated folate that drives BH4-dependent tyrosine hydroxylase and tryptophan hydroxylase — the rate-limiting enzymes of dopamine/norepinephrine/serotonin synthesis. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
+      answer: "L-methylfolate provides the activated folate that drives BH4-dependent tyrosine hydroxylase and tryptophan hydroxylase: the rate-limiting enzymes of dopamine/norepinephrine/serotonin synthesis. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
       topic: "Mechanism",
     },
     {
@@ -789,7 +789,7 @@ export const lMethylfolate: Drug = {
     },
     {
       question: "Share one clinical pearl about L-Methylfolate that separates safe prescribers from unsafe ones.",
-      answer: "The enzymatic logic: folate → BH4 → tyrosine hydroxylase and tryptophan hydroxylase — the monoamine assembly line powered by a vitamin.",
+      answer: "The enzymatic logic: folate → BH4 → tyrosine hydroxylase and tryptophan hydroxylase; the monoamine assembly line powered by a vitamin.",
       topic: "Clinical Pearls",
     },
   ],
@@ -865,7 +865,7 @@ export const lMethylfolate: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -910,7 +910,7 @@ export const lMethylfolate: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how L-Methylfolate works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how L-Methylfolate works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -926,7 +926,7 @@ export const lMethylfolate: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe L-Methylfolate safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe L-Methylfolate safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -971,7 +971,7 @@ export const lMethylfolate: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of L-Methylfolate follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of L-Methylfolate follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1001,7 +1001,7 @@ export const lMethylfolate: Drug = {
       "The MTHFR story: genotype-guided reasoning, limited evidence.",
     ],
     overdose: [
-      "Overdose with L-Methylfolate is managed supportively — no specific antidote.",
+      "Overdose with L-Methylfolate is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of L-Methylfolate is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1042,16 +1042,16 @@ export const lMethylfolate: Drug = {
     ],
     primaryTargetSymptoms: ["SSRI partial response (augmentation)", "Low-folate depression"],
     pearls: [
-      "The enzymatic logic: folate → BH4 → tyrosine hydroxylase and tryptophan hydroxylase — the monoamine assembly line powered by a vitamin.",
-      "The three-audience niche: the SSRI partial responder, the low-folate depressive, and the MTHFR-variant patient — mechanism-guided augmentation.",
-      "Medical food status (USA): not a drug, prescribed like one — regulatory middle ground.",
-      "Safety is the pitch: nearly no adverse-effect burden at augmentation doses — the gentlest augmentation in the cabinet.",
-      "Check B12 first: the classic folate-teacher's warning — masking pernicious anaemia.",
+      "The enzymatic logic: folate → BH4 → tyrosine hydroxylase and tryptophan hydroxylase; the monoamine assembly line powered by a vitamin.",
+      "The three-audience niche: the SSRI partial responder, the low-folate depressive, and the MTHFR-variant patient; mechanism-guided augmentation.",
+      "Medical food status (USA): not a drug, prescribed like one; regulatory middle ground.",
+      "Safety is the pitch: nearly no adverse-effect burden at augmentation doses; the gentlest augmentation in the cabinet.",
+      "Check B12 first: the classic folate-teacher's warning; masking pernicious anaemia.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

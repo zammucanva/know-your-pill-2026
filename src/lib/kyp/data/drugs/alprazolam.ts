@@ -23,14 +23,14 @@ export const alprazolam: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Anxiolytics & Sedatives", "Benzodiazepines", "Alprazolam"],
   /* ---- Hero / summary ---- */
-  tagline: "The panic specialist with the hardest withdrawal — the most prescribed and most dependence-prone benzodiazepine.",
+  tagline: "The panic specialist with the hardest withdrawal: the most prescribed and most dependence-prone benzodiazepine.",
   summary: "Alprazolam is a high-potency, short-half-life benzodiazepine famous for rapid panic relief and infamous for the most severe dependence and discontinuation syndrome in the class: its 6–12 hour half-life produces inter-dose withdrawal that patients experience as returning anxiety, driving dose escalation. SSRIs are the long-term panic answer; alprazolam remains valuable as a 2–4 week bridge at the start of SSRI treatment or for rare PRN use. Schedule X in India reflects its abuse record.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Alprazolam — from its molecular target (GABA-A receptor benzodiazepine site (high-potency PAM)) to clinical effect.",
+    "Explain the mechanism of action of Alprazolam, from its molecular target (GABA-A receptor benzodiazepine site (high-potency PAM)) to clinical effect.",
     "List the FDA-approved and off-label uses of Alprazolam.",
     "Predict the common and serious side effects of Alprazolam from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Alprazolam.",
@@ -38,11 +38,11 @@ export const alprazolam: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Alprazolam is a high-potency (triazolo) benzodiazepine GABA-A PAM — the class mechanism at greater receptor potency with a short half-life.",
+    summary: "Alprazolam is a high-potency (triazolo) benzodiazepine GABA-A PAM: the class mechanism at greater receptor potency with a short half-life.",
     molecularTarget: "GABA-A receptor benzodiazepine site (high-potency PAM)",
-    effect: "Rapid, powerful anxiolysis with antidepressant-adjacent effects reported — and the sharpest inter-dose withdrawal of the class.",
+    effect: "Rapid, powerful anxiolysis with antidepressant-adjacent effects reported, and the sharpest inter-dose withdrawal of the class.",
     steps: [
-      "High-affinity benzodiazepine-site binding — anxiolysis at lower doses than diazepam-equivalents.",
+      "High-affinity benzodiazepine-site binding: anxiolysis at lower doses than diazepam-equivalents.",
       "Short half-life (6–12 h) plus active metabolite (alpha-hydroxyalprazolam, ~as potent, short-acting).",
       "Inter-dose symptom return (intermittent withdrawal) drives the escalating-dose pattern.",
       "Some evidence for mild antidepressant effect (unique-ish among benzos).",
@@ -110,12 +110,12 @@ export const alprazolam: Drug = {
         label: "inhibits firing",
       },
     ],
-    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly — which is why their effect is powerful but limited by dependence risk.",
+    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly, which is why their effect is powerful but limited by dependence risk.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["GABA"],
   receptors: [
-    "GABA-A receptor (benzodiazepine site — high-potency PAM)",
+    "GABA-A receptor (benzodiazepine site, high-potency PAM)",
   ],
   brainRegionIds: ["amygdala", "prefrontal-cortex"],
   pathwayIds: [],
@@ -129,7 +129,7 @@ export const alprazolam: Drug = {
     {
       name: "Panic disorder",
       status: "fda-approved",
-      description: "Rapid relief — but the dependence/withdrawal severity makes SSRIs the long-term answer and alprazolam at most a bridge.",
+      description: "Rapid relief, but the dependence/withdrawal severity makes SSRIs the long-term answer and alprazolam at most a bridge.",
     },
   ],
   contraindications: [
@@ -146,12 +146,12 @@ export const alprazolam: Drug = {
   ],
   blackBoxWarnings: [
     {
-      title: "Risks with opioids — sedation, respiratory depression, death",
+      title: "Risks with opioids: sedation, respiratory depression, death",
       text: "As per class: concurrent opioid use causes profound sedation, respiratory depression, and death.",
     },
     {
       title: "Dependence, abuse, and withdrawal",
-      text: "Alprazolam's short half-life produces inter-dose withdrawal and the most severe discontinuation syndrome of the benzodiazepines — taper with particular care; abuse liability is high (Schedule X in India).",
+      text: "Alprazolam's short half-life produces inter-dose withdrawal and the most severe discontinuation syndrome of the benzodiazepines: taper with particular care; abuse liability is high (Schedule X in India).",
     },
   ],
   /* ---- Side effects ---- */
@@ -167,7 +167,7 @@ export const alprazolam: Drug = {
       name: "Inter-dose anxiety return",
       frequency: "common",
       severity: "moderate",
-      description: "The short half-life signature — morning anxiety after an evening dose.",
+      description: "The short half-life signature: morning anxiety after an evening dose.",
       management: "Consolidate dosing; consider XR; convert to a longer-acting agent for tapering.",
     },
     {
@@ -204,7 +204,7 @@ export const alprazolam: Drug = {
       name: "Misuse and diversion",
       frequency: "common",
       severity: "severe",
-      description: "High street value and misuse potential — Schedule X in India.",
+      description: "High street value and misuse potential. Schedule X in India.",
       management: "Small quantities; tablet-count reviews.",
     },
   ],
@@ -212,7 +212,7 @@ export const alprazolam: Drug = {
   monitoring: [
     {
       parameter: "Dependence and dose-escalation review",
-      frequency: "Every visit — no automatic repeats",
+      frequency: "Every visit: no automatic repeats",
       rationale: "The escalation pattern is the failure mode.",
     },
     {
@@ -237,7 +237,7 @@ export const alprazolam: Drug = {
     {
       drug: "Strong CYP3A4 inhibitors (ketoconazole, clarithromycin, ritonavir)",
       severity: "major",
-      mechanism: "Raise alprazolam levels — excessive sedation.",
+      mechanism: "Raise alprazolam levels: excessive sedation.",
       action: "Reduce dose or avoid; grapefruit juice caution.",
     },
     {
@@ -250,52 +250,52 @@ export const alprazolam: Drug = {
   pregnancy: {
     legacyCategory: "D",
     summary: "Class pregnancy considerations: small oral-cleft first-trimester signal and floppy-infant/withdrawal near term. Prefer avoiding regular use in pregnancy.",
-    lactation: "Passes into milk with infant sedation possible — prefer lorazepam if a benzodiazepine is essential while breastfeeding.",
+    lactation: "Passes into milk with infant sedation possible: prefer lorazepam if a benzodiazepine is essential while breastfeeding.",
   },
   renalAdjustment: "Standard caution; start lower in significant impairment.",
-  hepaticAdjustment: "CYP3A4 metabolism — reduce dose in liver disease; the elderly start at 0.25 mg.",
+  hepaticAdjustment: "CYP3A4 metabolism: reduce dose in liver disease; the elderly start at 0.25 mg.",
   /* ---- Education ---- */
-  patientExplanation: "Alprazolam is a strong, fast-acting anti-anxiety medicine — the most potent of its family in common use. Its strength is also its trap: taken regularly, the calm wears off between doses and the dose creeps up, and stopping it suddenly causes the worst withdrawal of its class. It is best used for short periods while a safer long-term medicine (an antidepressant) takes effect.",
+  patientExplanation: "Alprazolam is a strong, fast-acting anti-anxiety medicine: the most potent of its family in common use. Its strength is also its trap: taken regularly, the calm wears off between doses and the dose creeps up, and stopping it suddenly causes the worst withdrawal of its class. It is best used for short periods while a safer long-term medicine (an antidepressant) takes effect.",
   patientEducationPoints: [
-    "This medicine is for short-term or carefully planned use — it can cause dependence within weeks of regular use.",
-    "Never mix it with opioid painkillers or alcohol — the combination can stop breathing.",
+    "This medicine is for short-term or carefully planned use. It can cause dependence within weeks of regular use.",
+    "Never mix it with opioid painkillers or alcohol: the combination can stop breathing.",
     "Do not drive until you know how it affects you.",
-    "Stopping must be gradual — never stop suddenly after regular use.",
-    "Benefit from Alprazolam builds over weeks — do not judge it in the first days.",
+    "Stopping must be gradual, never stop suddenly after regular use.",
+    "Benefit from Alprazolam builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The dependence mathematics: short half-life + high potency = fastest tolerance, hardest withdrawal — alprazolam is the class maximum on both axes.",
-    "Bridge design: alprazolam 2–4 weeks while the SSRI builds — then taper the bridge off.",
+    "The dependence mathematics: short half-life + high potency = fastest tolerance, hardest withdrawal; alprazolam is the class maximum on both axes.",
+    "Bridge design: alprazolam 2–4 weeks while the SSRI builds, then taper the bridge off.",
     "The taper manoeuvre: convert to diazepam equivalent, then reduce 10–25% per step over weeks-months.",
-    "XR smooths inter-dose troughs but does not change the dependence story — only the surface of it.",
-    "Schedule X in India: register-maintained, small-quantity prescribing — treat repeats as a review trigger.",
-    "Elderly: 0.25 mg is a real dose — falls at night are the harm pathway.",
+    "XR smooths inter-dose troughs but does not change the dependence story: only the surface of it.",
+    "Schedule X in India: register-maintained, small-quantity prescribing; treat repeats as a review trigger.",
+    "Elderly: 0.25 mg is a real dose: falls at night are the harm pathway.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Alprazolam: Alprazolam is a high-potency (triazolo) benzodiazepine GABA-A PAM — the class mechanism at greater receptor potency with a short half-life.",
+        "Mechanism of Alprazolam: Alprazolam is a high-potency (triazolo) benzodiazepine GABA-A PAM; the class mechanism at greater receptor potency with a short half-life.",
         "Uses of Alprazolam: Generalised anxiety disorder (short-term); Panic disorder",
         "Mechanism: high-potency triazolo-benzodiazepine GABA-A PAM.",
-        "Half-life 6–12 h (shortest common clinical benzo with oxazepam-like brevity) — inter-dose withdrawal.",
+        "Half-life 6–12 h (shortest common clinical benzo with oxazepam-like brevity): inter-dose withdrawal.",
       ],
       practical: [
         "Prescribe Alprazolam for generalised anxiety disorder (short-term) with dose, timing, and duration.",
-        "Outline the monitoring plan: Dependence and dose-escalation review (Every visit — no automatic repeats); Prescription quantity limits (Each prescription)",
+        "Outline the monitoring plan: Dependence and dose-escalation review (Every visit, no automatic repeats); Prescription quantity limits (Each prescription)",
       ],
       longAnswer: [
-        "Alprazolam: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Alprazolam: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: high-potency triazolo-benzodiazepine GABA-A PAM.",
-        "Half-life 6–12 h (shortest common clinical benzo with oxazepam-like brevity) — inter-dose withdrawal.",
+        "Half-life 6–12 h (shortest common clinical benzo with oxazepam-like brevity): inter-dose withdrawal.",
       ],
     },
     neetPg: {
       highYield: [
         "Mechanism: high-potency triazolo-benzodiazepine GABA-A PAM.",
-        "Half-life 6–12 h (shortest common clinical benzo with oxazepam-like brevity) — inter-dose withdrawal.",
+        "Half-life 6–12 h (shortest common clinical benzo with oxazepam-like brevity): inter-dose withdrawal.",
         "Class-WORST discontinuation syndrome (rebound panic, seizures).",
-        "CYP3A4 metabolism — inhibitors raise levels.",
+        "CYP3A4 metabolism: inhibitors raise levels.",
         "Uses: GAD and panic (short-term); SSRIs are the long-term panic answer.",
         "Schedule X in India (highest control among benzos there).",
       ],
@@ -307,7 +307,7 @@ export const alprazolam: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Alprazolam develops severe withdrawal syndrome — next best step?",
+        "A patient on Alprazolam develops severe withdrawal syndrome: next best step?",
         "When to choose Alprazolam over alternatives in its class.",
       ],
     },
@@ -320,8 +320,8 @@ export const alprazolam: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The escalation trap: inter-dose withdrawal reads as 'my anxiety is worse' — the answer is a taper plan, not a dose increase.",
-        "0.5 mg alprazolam ≈ 10 mg diazepam — the conversion that structures the taper.",
+        "The escalation trap: inter-dose withdrawal reads as 'my anxiety is worse'. The answer is a taper plan, not a dose increase.",
+        "0.5 mg alprazolam ≈ 10 mg diazepam: the conversion that structures the taper.",
         "Bridge, don't build: 2–4 weeks alongside an SSRI, then come down.",
       ],
     },
@@ -329,9 +329,9 @@ export const alprazolam: Drug = {
   memoryTricks: [],
   highYieldSummary: [
     "Mechanism: high-potency triazolo-benzodiazepine GABA-A PAM.",
-    "Half-life 6–12 h (shortest common clinical benzo with oxazepam-like brevity) — inter-dose withdrawal.",
+    "Half-life 6–12 h (shortest common clinical benzo with oxazepam-like brevity): inter-dose withdrawal.",
     "Class-WORST discontinuation syndrome (rebound panic, seizures).",
-    "CYP3A4 metabolism — inhibitors raise levels.",
+    "CYP3A4 metabolism: inhibitors raise levels.",
     "Uses: GAD and panic (short-term); SSRIs are the long-term panic answer.",
     "Schedule X in India (highest control among benzos there).",
     "Taper by conversion to diazepam.",
@@ -339,7 +339,7 @@ export const alprazolam: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — generalised anxiety disorder (short-term)",
+      title: "First presentation: generalised anxiety disorder (short-term)",
       presentation: "A patient presenting with generalised anxiety disorder (short-term), started on Alprazolam.",
       history: "A adult patient presents with a generalised anxiety disorder (short-term) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with generalised anxiety disorder (short-term); physical examination and baseline investigations are unremarkable.",
@@ -348,7 +348,7 @@ export const alprazolam: Drug = {
       management: "Started at 0.25–0.5 mg three times daily, titrated to 1–4 mg/day (up to 6) with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Alprazolam takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Alprazolam takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -357,7 +357,7 @@ export const alprazolam: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Benzodiazepine comparison — choosing within the class",
+      title: "Benzodiazepine comparison: choosing within the class",
       primaryDrug: "Alprazolam",
       rows: [
         {
@@ -428,7 +428,7 @@ export const alprazolam: Drug = {
         },
         {
           attribute: "Sedation",
-          primaryValue: "High — potency-driven.",
+          primaryValue: "High: potency-driven.",
           comparisons: [
             {
               drug: "Clonazepam",
@@ -471,7 +471,7 @@ export const alprazolam: Drug = {
           ],
         },
       ],
-      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -480,7 +480,7 @@ export const alprazolam: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Alprazolam reaches peak plasma concentration and begins acting at its molecular target (GABA-A receptor benzodiazepine site (high-potency PAM)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Alprazolam reaches peak plasma concentration and begins acting at its molecular target (GABA-A receptor benzodiazepine site (high-potency PAM)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -516,7 +516,7 @@ export const alprazolam: Drug = {
   faqs: [
     {
       question: "How long does Alprazolam take to work?",
-      answer: "Oral: 30–60 min (peak 1–2 h); XR slower and smoother.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Oral: 30–60 min (peak 1–2 h); XR slower and smoother.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Alprazolam?",
@@ -524,19 +524,19 @@ export const alprazolam: Drug = {
     },
     {
       question: "Can I stop Alprazolam suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Alprazolam habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Alprazolam exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Alprazolam exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Alprazolam during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Alprazolam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Alprazolam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -698,7 +698,7 @@ export const alprazolam: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Alprazolam",
+      label: "Patient Guide. Alprazolam",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -706,13 +706,13 @@ export const alprazolam: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The panic specialist with the hardest withdrawal — the most prescribed and most dependence-prone benzodiazepine.",
-    summary: "Alprazolam is a prescription medicine used to treat generalised anxiety disorder (short-term). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Alprazolam is a strong, fast-acting anti-anxiety medicine — the most potent of its family in common use. Its strength is also its trap: taken regularly, the calm wears off between doses and the dose creeps up, and stopping it suddenly causes the worst withdrawal of its class. It is best used for short periods while a safer long-term medicine (an antidepressant) takes effect.",
-    sideEffects: "The most common side effects are: sedation and drowsiness, inter-dose anxiety return, cognitive and memory impairment, dependence and tolerance. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Severe withdrawal syndrome and Respiratory depression with opioids. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: dependence and dose-escalation review (every visit — no automatic repeats); prescription quantity limits (each prescription). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The panic specialist with the hardest withdrawal: the most prescribed and most dependence-prone benzodiazepine.",
+    summary: "Alprazolam is a prescription medicine used to treat generalised anxiety disorder (short-term). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Alprazolam is a strong, fast-acting anti-anxiety medicine: the most potent of its family in common use. Its strength is also its trap: taken regularly, the calm wears off between doses and the dose creeps up, and stopping it suddenly causes the worst withdrawal of its class. It is best used for short periods while a safer long-term medicine (an antidepressant) takes effect.",
+    sideEffects: "The most common side effects are: sedation and drowsiness, inter-dose anxiety return, cognitive and memory impairment, dependence and tolerance. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Severe withdrawal syndrome and Respiratory depression with opioids. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: dependence and dose-escalation review (every visit, no automatic repeats); prescription quantity limits (each prescription). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol, Strong CYP3A4 inhibitors (ketoconazole, clarithromycin, ritonavir), Fluoxetine and fluvoxamine. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol, Strong CYP3A4 inhibitors (ketoconazole, clarithromycin, ritonavir), Fluoxetine and fluvoxamine. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -737,7 +737,7 @@ export const alprazolam: Drug = {
     typicalDoses: "Panic 1–4 mg/day divided; GAD 0.75–2 mg; elderly half.",
     prescribingScenarios: [
       "Panic-bridge prescriptions with written stop dates.",
-      "The most commonly misused psychotropic in India's street market — prescribing discipline is the intervention.",
+      "The most commonly misused psychotropic in India's street market: prescribing discipline is the intervention.",
     ],
     availability: {
       governmentHospitals: true,
@@ -791,49 +791,49 @@ export const alprazolam: Drug = {
         name: "Clonazepam",
         slug: "clonazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "The long-acting anticonvulsant benzo — seizures and panic",
+        distinguishing: "The long-acting anticonvulsant benzo: seizures and panic",
       },
       {
         name: "Diazepam",
         slug: "diazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+        distinguishing: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
       },
       {
         name: "Lorazepam",
         slug: "lorazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+        distinguishing: "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo",
       },
       {
         name: "Chlordiazepoxide",
         slug: "chlordiazepoxide",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Alcohol withdrawal tablet — the founding benzo",
+        distinguishing: "Alcohol withdrawal tablet: the founding benzo",
       },
       {
         name: "Midazolam",
         slug: "midazolam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Oxazepam",
         slug: "oxazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Clorazepate",
         slug: "clorazepate",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Loflazepate",
         slug: "loflazepate",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
     ],
   },
@@ -986,7 +986,7 @@ export const alprazolam: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Alprazolam in two sentences.",
-      answer: "Alprazolam is a high-potency (triazolo) benzodiazepine GABA-A PAM — the class mechanism at greater receptor potency with a short half-life. Net effect: Rapid, powerful anxiolysis with antidepressant-adjacent effects reported — and the sharpest inter-dose withdrawal of the class.",
+      answer: "Alprazolam is a high-potency (triazolo) benzodiazepine GABA-A PAM: the class mechanism at greater receptor potency with a short half-life. Net effect: Rapid, powerful anxiolysis with antidepressant-adjacent effects reported, and the sharpest inter-dose withdrawal of the class.",
       topic: "Mechanism",
     },
     {
@@ -1001,12 +1001,12 @@ export const alprazolam: Drug = {
     },
     {
       question: "What monitoring does a patient on Alprazolam require?",
-      answer: "Dependence and dose-escalation review (Every visit — no automatic repeats); Prescription quantity limits (Each prescription)",
+      answer: "Dependence and dose-escalation review (Every visit, no automatic repeats); Prescription quantity limits (Each prescription)",
       topic: "Monitoring",
     },
     {
       question: "Share one clinical pearl about Alprazolam that separates safe prescribers from unsafe ones.",
-      answer: "The escalation trap: inter-dose withdrawal reads as 'my anxiety is worse' — the answer is a taper plan, not a dose increase.",
+      answer: "The escalation trap: inter-dose withdrawal reads as 'my anxiety is worse'. The answer is a taper plan, not a dose increase.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1082,7 +1082,7 @@ export const alprazolam: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1127,7 +1127,7 @@ export const alprazolam: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Alprazolam works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Alprazolam works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1143,7 +1143,7 @@ export const alprazolam: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Alprazolam safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Alprazolam safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1188,7 +1188,7 @@ export const alprazolam: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Alprazolam follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Alprazolam follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1199,7 +1199,7 @@ export const alprazolam: Drug = {
       "Dose reduction or timing change before discontinuation.",
     ],
     weightGain: "See product information and class comparison.",
-    sedation: "High — potency-driven.",
+    sedation: "High: potency-driven.",
     dosing: [
       {
         indication: "Panic disorder (IR)",
@@ -1238,11 +1238,11 @@ export const alprazolam: Drug = {
       "Tablet counts and small dispenses for misuse surveillance.",
     ],
     overdose: [
-      "Overdose with Alprazolam is managed supportively — no specific antidote.",
+      "Overdose with Alprazolam is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Alprazolam is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1279,14 +1279,14 @@ export const alprazolam: Drug = {
     potentialDisadvantages: ["Class-worst dependence and withdrawal.", "Misuse/diversion record (Schedule X).", "Inter-dose anxiety escalates doses.", "Not a long-term answer for anything."],
     primaryTargetSymptoms: ["Panic attacks", "Acute generalised anxiety", "SSRI-bridge period"],
     pearls: [
-      "The escalation trap: inter-dose withdrawal reads as 'my anxiety is worse' — the answer is a taper plan, not a dose increase.",
-      "0.5 mg alprazolam ≈ 10 mg diazepam — the conversion that structures the taper.",
+      "The escalation trap: inter-dose withdrawal reads as 'my anxiety is worse'. The answer is a taper plan, not a dose increase.",
+      "0.5 mg alprazolam ≈ 10 mg diazepam: the conversion that structures the taper.",
       "Bridge, don't build: 2–4 weeks alongside an SSRI, then come down.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

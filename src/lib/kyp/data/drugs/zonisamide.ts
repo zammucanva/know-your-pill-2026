@@ -23,14 +23,14 @@ export const zonisamide: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Mood Stabilisers & Anticonvulsants", "Anticonvulsants", "Zonisamide"],
   /* ---- Hero / summary ---- */
-  tagline: "The second weight-losing anticonvulsant — topiramate's cousin with the same stone-and-sweat cautions.",
-  summary: "Zonisamide is the sulfonamide-structured multi-mechanism anticonvulsant: sodium/calcium channel blockade plus weak carbonic-anhydrase inhibition — topiramate's pharmacological cousin with weight loss, paraesthesia, and cognitive cautions, used in epilepsy and off-label psychiatry (binge, craving, weight-protective augmentation).",
+  tagline: "The second weight-losing anticonvulsant: topiramate's cousin with the same stone-and-sweat cautions.",
+  summary: "Zonisamide is the sulfonamide-structured multi-mechanism anticonvulsant: sodium/calcium channel blockade plus weak carbonic-anhydrase inhibition; topiramate's pharmacological cousin with weight loss, paraesthesia, and cognitive cautions, used in epilepsy and off-label psychiatry (binge, craving, weight-protective augmentation).",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Zonisamide — from its molecular target (Voltage-gated Na+ channels; T-type Ca2+ channels; weak carbonic anhydrase) to clinical effect.",
+    "Explain the mechanism of action of Zonisamide, from its molecular target (Voltage-gated Na+ channels; T-type Ca2+ channels; weak carbonic anhydrase) to clinical effect.",
     "List the FDA-approved and off-label uses of Zonisamide.",
     "Predict the common and serious side effects of Zonisamide from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Zonisamide.",
@@ -38,15 +38,15 @@ export const zonisamide: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Zonisamide blocks sodium and T-type calcium channels with weak carbonic-anhydrase inhibition — topiramate-like multi-mechanism pharmacology in a sulfonamide structure.",
+    summary: "Zonisamide blocks sodium and T-type calcium channels with weak carbonic-anhydrase inhibition: topiramate-like multi-mechanism pharmacology in a sulfonamide structure.",
     molecularTarget: "Voltage-gated Na+ channels; T-type Ca2+ channels; weak carbonic anhydrase",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Zonisamide blocks sodium and T-type calcium channels with weak carbonic-anhydrase inhibition — topiramate-like multi-mechanism pharmacology in a sulfonamide structure.",
+      "Zonisamide blocks sodium and T-type calcium channels with weak carbonic-anhydrase inhibition: topiramate-like multi-mechanism pharmacology in a sulfonamide structure.",
       "The mechanism translates into the clinical profile described.",
       "Practical use follows half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 50-70 hours (once-daily capable). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 50-70 hours (once-daily capable). See mechanism and prescriber sections.",
     halfLife: "50-70 hours (once-daily capable).",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -97,7 +97,7 @@ export const zonisamide: Drug = {
         label: "stabilised",
       },
     ],
-    caption: "Reducing pathological neuronal firing — the shared mechanistic logic of anticonvulsants across epilepsy, neuropathic pain, and mood destabilisation.",
+    caption: "Reducing pathological neuronal firing: the shared mechanistic logic of anticonvulsants across epilepsy, neuropathic pain, and mood destabilisation.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["GABA", "Glutamate"],
@@ -225,46 +225,46 @@ export const zonisamide: Drug = {
   ],
   pregnancy: {
     legacyCategory: "C",
-    summary: "Limited human data; class anticonvulsant pregnancy caution applies — alternatives preferred.",
+    summary: "Limited human data; class anticonvulsant pregnancy caution applies: alternatives preferred.",
     lactation: "Excreted in milk; caution.",
   },
   renalAdjustment: "Avoid in severe renal impairment; stone-risk hydration.",
   hepaticAdjustment: "Standard caution.",
   /* ---- Education ---- */
-  patientExplanation: "Zonisamide is an epilepsy medicine related to topiramate: it steadies overactive nerves through several mechanisms and tends to reduce appetite. Its effects and cautions are similar — tingling, word-finding trouble, kidney-stone risk (drink water), and it belongs to the sulfa family, so any rash should be reported immediately.",
+  patientExplanation: "Zonisamide is an epilepsy medicine related to topiramate: it steadies overactive nerves through several mechanisms and tends to reduce appetite. Its effects and cautions are similar, tingling, word-finding trouble, kidney-stone risk (drink water), and it belongs to the sulfa family, so any rash should be reported immediately.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Zonisamide builds over weeks — do not judge it in the first days.",
+    "Benefit from Zonisamide builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The topiramate cousin: same channels, same carbonic-anhydrase, same weight loss — with a sulfonamide allergy twist.",
-    "The stone-sweat-acidosis set travels with the whole carbonic-anhydrase family — hydration and heat counselling are the package.",
+    "The topiramate cousin: same channels, same carbonic-anhydrase, same weight loss, with a sulfonamide allergy twist.",
+    "The stone-sweat-acidosis set travels with the whole carbonic-anhydrase family: hydration and heat counselling are the package.",
     "The second weight-loser: when topiramate's cognitive toll exceeds benefit, zonisamide is the alternative branch.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Zonisamide: Zonisamide blocks sodium and T-type calcium channels with weak carbonic-anhydrase inhibition — topiramate-like multi-mechanism pharmacology in a sulfonamide structure.",
-        "Uses of Zonisamide: Epilepsy — adjunct for focal seizures; Binge eating / craving (off-label); Weight-protective mood augmentation (off-label); Migraine prophylaxis (off-label)",
-        "Mechanism: Na+/T-type Ca2+ channels + weak carbonic anhydrase — topiramate's cousin.",
+        "Mechanism of Zonisamide: Zonisamide blocks sodium and T-type calcium channels with weak carbonic-anhydrase inhibition; topiramate-like multi-mechanism pharmacology in a sulfonamide structure.",
+        "Uses of Zonisamide: Epilepsy; adjunct for focal seizures; Binge eating / craving (off-label); Weight-protective mood augmentation (off-label); Migraine prophylaxis (off-label)",
+        "Mechanism: Na+/T-type Ca2+ channels + weak carbonic anhydrase; topiramate's cousin.",
         "Epilepsy adjunct approved; psychiatric roles off-label.",
       ],
       practical: [
-        "Prescribe Zonisamide for epilepsy — adjunct for focal seizures with dose, timing, and duration.",
+        "Prescribe Zonisamide for epilepsy: adjunct for focal seizures with dose, timing, and duration.",
         "Outline the monitoring plan: Weight and cognition (At review); Bicarbonate (long use) (Periodically)",
       ],
       longAnswer: [
-        "Zonisamide: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: Na+/T-type Ca2+ channels + weak carbonic anhydrase — topiramate's cousin.",
+        "Zonisamide: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: Na+/T-type Ca2+ channels + weak carbonic anhydrase; topiramate's cousin.",
         "Epilepsy adjunct approved; psychiatric roles off-label.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: Na+/T-type Ca2+ channels + weak carbonic anhydrase — topiramate's cousin.",
+        "Mechanism: Na+/T-type Ca2+ channels + weak carbonic anhydrase; topiramate's cousin.",
         "Epilepsy adjunct approved; psychiatric roles off-label.",
         "Weight loss signature; paraesthesia; cognitive cautions.",
         "Sulfonamide hypersensitivity warning (rash risk).",
@@ -279,7 +279,7 @@ export const zonisamide: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Zonisamide develops sulfonamide hypersensitivity and sjs/ten — next best step?",
+        "A patient on Zonisamide develops sulfonamide hypersensitivity and sjs/ten: next best step?",
         "When to choose Zonisamide over alternatives in its class.",
       ],
     },
@@ -292,15 +292,15 @@ export const zonisamide: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The topiramate cousin: same channels, same carbonic-anhydrase, same weight loss — with a sulfonamide allergy twist.",
-        "The stone-sweat-acidosis set travels with the whole carbonic-anhydrase family — hydration and heat counselling are the package.",
+        "The topiramate cousin: same channels, same carbonic-anhydrase, same weight loss, with a sulfonamide allergy twist.",
+        "The stone-sweat-acidosis set travels with the whole carbonic-anhydrase family: hydration and heat counselling are the package.",
         "The second weight-loser: when topiramate's cognitive toll exceeds benefit, zonisamide is the alternative branch.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: Na+/T-type Ca2+ channels + weak carbonic anhydrase — topiramate's cousin.",
+    "Mechanism: Na+/T-type Ca2+ channels + weak carbonic anhydrase; topiramate's cousin.",
     "Epilepsy adjunct approved; psychiatric roles off-label.",
     "Weight loss signature; paraesthesia; cognitive cautions.",
     "Sulfonamide hypersensitivity warning (rash risk).",
@@ -310,16 +310,16 @@ export const zonisamide: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — epilepsy — adjunct for focal seizures",
-      presentation: "A patient presenting with epilepsy — adjunct for focal seizures, started on Zonisamide.",
-      history: "A adult patient presents with a epilepsy — adjunct for focal seizures picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with epilepsy — adjunct for focal seizures; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Epilepsy — adjunct for focal seizures. Differentials are considered and excluded clinically.",
+      title: "First presentation: epilepsy; adjunct for focal seizures",
+      presentation: "A patient presenting with epilepsy: adjunct for focal seizures, started on Zonisamide.",
+      history: "A adult patient presents with a epilepsy: adjunct for focal seizures picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with epilepsy: adjunct for focal seizures; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Epilepsy: adjunct for focal seizures. Differentials are considered and excluded clinically.",
       rationale: "Zonisamide is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Anticonvulsant) with strong evidence in this condition.",
       management: "Started at 50 mg daily × 2 weeks, titrated to 300-500 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Zonisamide takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Zonisamide takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -328,7 +328,7 @@ export const zonisamide: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Anticonvulsant comparison — choosing within the class",
+      title: "Anticonvulsant comparison: choosing within the class",
       primaryDrug: "Zonisamide",
       rows: [
         {
@@ -421,7 +421,7 @@ export const zonisamide: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The second weight-loser — topiramate's sibling",
+          primaryValue: "The second weight-loser: topiramate's sibling",
           comparisons: [
             {
               drug: "Gabapentin",
@@ -442,7 +442,7 @@ export const zonisamide: Drug = {
           ],
         },
       ],
-      takeaway: "All anticonvulsants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All anticonvulsants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -451,7 +451,7 @@ export const zonisamide: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Zonisamide reaches peak plasma concentration and begins acting at its molecular target (Voltage-gated Na+ channels; T-type Ca2+ channels; weak carbonic anhydrase). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Zonisamide reaches peak plasma concentration and begins acting at its molecular target (Voltage-gated Na+ channels; T-type Ca2+ channels; weak carbonic anhydrase). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -487,7 +487,7 @@ export const zonisamide: Drug = {
   faqs: [
     {
       question: "How long does Zonisamide take to work?",
-      answer: "Weeks of titration to effect.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Weeks of titration to effect.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Zonisamide?",
@@ -495,11 +495,11 @@ export const zonisamide: Drug = {
     },
     {
       question: "Can I stop Zonisamide suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Zonisamide habit-forming?",
@@ -507,7 +507,7 @@ export const zonisamide: Drug = {
     },
     {
       question: "Can I take Zonisamide during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Zonisamide may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Zonisamide may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -641,7 +641,7 @@ export const zonisamide: Drug = {
       note: "Primary molecular target",
     },
     {
-      label: "Epilepsy — adjunct for focal seizures",
+      label: "Epilepsy: adjunct for focal seizures",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -677,7 +677,7 @@ export const zonisamide: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Zonisamide",
+      label: "Patient Guide. Zonisamide",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -685,13 +685,13 @@ export const zonisamide: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The second weight-losing anticonvulsant — topiramate's cousin with the same stone-and-sweat cautions.",
-    summary: "Zonisamide is a prescription medicine used to treat epilepsy — adjunct for focal seizures. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Zonisamide is an epilepsy medicine related to topiramate: it steadies overactive nerves through several mechanisms and tends to reduce appetite. Its effects and cautions are similar — tingling, word-finding trouble, kidney-stone risk (drink water), and it belongs to the sulfa family, so any rash should be reported immediately.",
-    sideEffects: "The most common side effects are: sedation, dizziness, cognitive blunting, appetite suppression and weight loss, paraesthesia, irritability and mood effects. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Sulfonamide hypersensitivity and SJS/TEN and Nephrolithiasis. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and cognition (at review); bicarbonate (long use) (periodically). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The second weight-losing anticonvulsant: topiramate's cousin with the same stone-and-sweat cautions.",
+    summary: "Zonisamide is a prescription medicine used to treat epilepsy: adjunct for focal seizures. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Zonisamide is an epilepsy medicine related to topiramate: it steadies overactive nerves through several mechanisms and tends to reduce appetite. Its effects and cautions are similar, tingling, word-finding trouble, kidney-stone risk (drink water), and it belongs to the sulfa family, so any rash should be reported immediately.",
+    sideEffects: "The most common side effects are: sedation, dizziness, cognitive blunting, appetite suppression and weight loss, paraesthesia, irritability and mood effects. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Sulfonamide hypersensitivity and SJS/TEN and Nephrolithiasis. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and cognition (at review); bicarbonate (long use) (periodically). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Other carbonic-anhydrase inhibitors, CNS depressants. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Other carbonic-anhydrase inhibitors, CNS depressants. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -715,7 +715,7 @@ export const zonisamide: Drug = {
     },
     costCategory: "moderate",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -749,25 +749,25 @@ export const zonisamide: Drug = {
         name: "Zonisamide",
         slug: "zonisamide",
         relationship: "This guide",
-        distinguishing: "The second weight-loser — topiramate's sibling",
+        distinguishing: "The second weight-loser: topiramate's sibling",
       },
       {
         name: "Gabapentin",
         slug: "gabapentin",
         relationship: "Same class (Anticonvulsant)",
-        distinguishing: "The interaction-clean pain-augmentation agent — anxiety and craving off-label",
+        distinguishing: "The interaction-clean pain-augmentation agent: anxiety and craving off-label",
       },
       {
         name: "Pregabalin",
         slug: "pregabalin",
         relationship: "Same class (Anticonvulsant)",
-        distinguishing: "The GAD-approved gabapentinoid — pain, fibromyalgia, anxiety",
+        distinguishing: "The GAD-approved gabapentinoid: pain, fibromyalgia, anxiety",
       },
       {
         name: "Topiramate",
         slug: "topiramate",
         relationship: "Same class (Anticonvulsant)",
-        distinguishing: "The weight-losing multi-mechanism stabiliser — craving and appetite",
+        distinguishing: "The weight-losing multi-mechanism stabiliser: craving and appetite",
       },
       {
         name: "Levetiracetam",
@@ -779,7 +779,7 @@ export const zonisamide: Drug = {
         name: "Tiagabine",
         slug: "tiagabine",
         relationship: "Same class (Anticonvulsant)",
-        distinguishing: "The GABA-reuptake blocker — mechanism elegance, clinical footnote",
+        distinguishing: "The GABA-reuptake blocker: mechanism elegance, clinical footnote",
       },
     ],
   },
@@ -927,12 +927,12 @@ export const zonisamide: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Zonisamide in two sentences.",
-      answer: "Zonisamide blocks sodium and T-type calcium channels with weak carbonic-anhydrase inhibition — topiramate-like multi-mechanism pharmacology in a sulfonamide structure. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Zonisamide blocks sodium and T-type calcium channels with weak carbonic-anhydrase inhibition: topiramate-like multi-mechanism pharmacology in a sulfonamide structure. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Zonisamide.",
-      answer: "Epilepsy — adjunct for focal seizures, Binge eating / craving (off-label), Weight-protective mood augmentation (off-label), Migraine prophylaxis (off-label). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Epilepsy: adjunct for focal seizures, Binge eating / craving (off-label), Weight-protective mood augmentation (off-label), Migraine prophylaxis (off-label). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -947,7 +947,7 @@ export const zonisamide: Drug = {
     },
     {
       question: "Share one clinical pearl about Zonisamide that separates safe prescribers from unsafe ones.",
-      answer: "The topiramate cousin: same channels, same carbonic-anhydrase, same weight loss — with a sulfonamide allergy twist.",
+      answer: "The topiramate cousin: same channels, same carbonic-anhydrase, same weight loss, with a sulfonamide allergy twist.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1023,7 +1023,7 @@ export const zonisamide: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1068,7 +1068,7 @@ export const zonisamide: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Zonisamide works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Zonisamide works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1084,7 +1084,7 @@ export const zonisamide: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Zonisamide safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Zonisamide safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1127,7 +1127,7 @@ export const zonisamide: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Zonisamide follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Zonisamide follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1153,7 +1153,7 @@ export const zonisamide: Drug = {
       "Slow titration; hydration; sulfa-allergy check.",
     ],
     overdose: [
-      "Overdose with Zonisamide is managed supportively — no specific antidote.",
+      "Overdose with Zonisamide is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Zonisamide is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1194,14 +1194,14 @@ export const zonisamide: Drug = {
     ],
     primaryTargetSymptoms: ["Focal epilepsy", "Binge/craving augmentation (off-label)"],
     pearls: [
-      "The topiramate cousin: same channels, same carbonic-anhydrase, same weight loss — with a sulfonamide allergy twist.",
-      "The stone-sweat-acidosis set travels with the whole carbonic-anhydrase family — hydration and heat counselling are the package.",
+      "The topiramate cousin: same channels, same carbonic-anhydrase, same weight loss, with a sulfonamide allergy twist.",
+      "The stone-sweat-acidosis set travels with the whole carbonic-anhydrase family: hydration and heat counselling are the package.",
       "The second weight-loser: when topiramate's cognitive toll exceeds benefit, zonisamide is the alternative branch.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

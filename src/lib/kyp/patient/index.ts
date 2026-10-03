@@ -82,7 +82,7 @@ function validateRegistry(): void {
 
   if (guideSlugs.length > drugSlugs.length) {
     throw new Error(
-      "[patient] Guide registry is larger than the canonical drug registry — " +
+      "[patient] Guide registry is larger than the canonical drug registry. " +
         "impossible state, check for duplicate guide keys."
     );
   }

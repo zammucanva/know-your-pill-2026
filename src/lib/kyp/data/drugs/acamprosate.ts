@@ -23,14 +23,14 @@ export const acamprosate: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Substance Use Treatments", "Alcohol Dependence Treatments", "Acamprosate"],
   /* ---- Hero / summary ---- */
-  tagline: "The abstinence-protecting alcohol medicine — glutamate-GABA rebalancing without dependence.",
+  tagline: "The abstinence-protecting alcohol medicine: glutamate-GABA rebalancing without dependence.",
   summary: "Acamprosate is an alcohol-dependence treatment that restores the glutamate-GABA imbalance of chronic alcohol exposure: it reduces excitatory glutamate tone and enhances inhibitory GABA tone, reducing relapse risk in patients who have already achieved abstinence. It is not intoxicating, not dependent-forming, and combines safely with alcohol (unlike disulfiram) and with naltrexone.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Acamprosate — from its molecular target (Glutamate and GABA systems (multi-modal: mGluR binding, glutamate normalisation)) to clinical effect.",
+    "Explain the mechanism of action of Acamprosate, from its molecular target (Glutamate and GABA systems (multi-modal: mGluR binding, glutamate normalisation)) to clinical effect.",
     "List the FDA-approved and off-label uses of Acamprosate.",
     "Predict the common and serious side effects of Acamprosate from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Acamprosate.",
@@ -38,15 +38,15 @@ export const acamprosate: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Acamprosate theoretically reduces excitatory glutamate neurotransmission and increases inhibitory GABA neurotransmission — acting as 'artificial alcohol' to quiet the hyperexcitable brain of early abstinence.",
+    summary: "Acamprosate theoretically reduces excitatory glutamate neurotransmission and increases inhibitory GABA neurotransmission, acting as 'artificial alcohol' to quiet the hyperexcitable brain of early abstinence.",
     molecularTarget: "Glutamate and GABA systems (multi-modal: mGluR binding, glutamate normalisation)",
     effect: "Modulation of the described target with the agent's clinical effect.",
     steps: [
-      "Acamprosate theoretically reduces excitatory glutamate neurotransmission and increases inhibitory GABA neurotransmission — acting as 'artificial alcohol' to quiet the hyperexcitable brain of early abstinence.",
+      "Acamprosate theoretically reduces excitatory glutamate neurotransmission and increases inhibitory GABA neurotransmission, acting as 'artificial alcohol' to quiet the hyperexcitable brain of early abstinence.",
       "The target engagement produces the clinical effect described.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 20-33 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 20-33 hours. See mechanism and prescriber sections.",
     halfLife: "20-33 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -97,7 +97,7 @@ export const acamprosate: Drug = {
         label: "supports",
       },
     ],
-    caption: "Pharmacotherapy for substance use disorders blunts the reinforcement cycle — medication opens a window; psychosocial treatment walks the patient through it.",
+    caption: "Pharmacotherapy for substance use disorders blunts the reinforcement cycle: medication opens a window; psychosocial treatment walks the patient through it.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -135,7 +135,7 @@ export const acamprosate: Drug = {
       name: "Diarrhoea and GI upset",
       frequency: "common",
       severity: "mild",
-      description: "The most common adverse effect — osmotic GI effects of an amino-acid derivative.",
+      description: "The most common adverse effect: osmotic GI effects of an amino-acid derivative.",
       management: "Take with meals; usually tolerable.",
     },
     {
@@ -158,14 +158,14 @@ export const acamprosate: Drug = {
       name: "Suicidal ideation (rare signal)",
       frequency: "rare",
       severity: "severe",
-      description: "Depression and suicidality reported in trials — monitor mood.",
+      description: "Depression and suicidality reported in trials: monitor mood.",
       management: "Mood review; stop if depression emerges.",
     },
     {
       name: "Renal impairment accumulation",
       frequency: "uncommon",
       severity: "severe",
-      description: "Renally excreted unchanged — contraindicated in severe renal impairment.",
+      description: "Renally excreted unchanged: contraindicated in severe renal impairment.",
       management: "Check creatinine before starting.",
     },
   ],
@@ -191,7 +191,7 @@ export const acamprosate: Drug = {
     {
       drug: "Naltrexone",
       severity: "moderate",
-      mechanism: "Plasma levels may rise — clinically insignificant; the combination is used therapeutically.",
+      mechanism: "Plasma levels may rise: clinically insignificant; the combination is used therapeutically.",
       action: "No dose change needed.",
     },
     {
@@ -203,30 +203,30 @@ export const acamprosate: Drug = {
   ],
   pregnancy: {
     legacyCategory: "C",
-    summary: "Animal teratogenicity data exist; human data lacking. Decisions individualised — abstinence itself is the goal of pregnancy care.",
-    lactation: "Excreted in milk in animals; human data lacking — weigh carefully.",
+    summary: "Animal teratogenicity data exist; human data lacking. Decisions individualised: abstinence itself is the goal of pregnancy care.",
+    lactation: "Excreted in milk in animals; human data lacking: weigh carefully.",
   },
   renalAdjustment: "Contraindicated in severe renal impairment (CrCl < 30); halve dose in moderate impairment.",
-  hepaticAdjustment: "Not hepatically metabolised — dose adjustment not required.",
+  hepaticAdjustment: "Not hepatically metabolised: dose adjustment not required.",
   /* ---- Education ---- */
   patientExplanation: "Acamprosate helps you stay off alcohol once you have stopped: it quietly rebalances brain chemicals that alcohol has disturbed, reducing the discomfort and craving that lead back to drinking. It is not addictive, does not make you sick if you drink, and works best alongside counselling or support groups. It must be taken three times a day with meals.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Acamprosate builds over weeks — do not judge it in the first days.",
+    "Benefit from Acamprosate builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The 'already abstinent' drug: acamprosate protects abstinence; naltrexone reduces heavy drinking — matching drug to drinking pattern is the prescribing skill.",
-    "TID dosing is the adherence tax — anchoring to three meals turns it into a habit.",
-    "Combines safely with alcohol AND naltrexone — the most forgiving agent in the alcohol toolkit.",
-    "Unchanged renal excretion: no interactions, no CYP, no overdose danger — the cleanest pharmacokinetic profile in the class.",
+    "The 'already abstinent' drug: acamprosate protects abstinence; naltrexone reduces heavy drinking, matching drug to drinking pattern is the prescribing skill.",
+    "TID dosing is the adherence tax, anchoring to three meals turns it into a habit.",
+    "Combines safely with alcohol AND naltrexone: the most forgiving agent in the alcohol toolkit.",
+    "Unchanged renal excretion: no interactions, no CYP, no overdose danger; the cleanest pharmacokinetic profile in the class.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Acamprosate: Acamprosate theoretically reduces excitatory glutamate neurotransmission and increases inhibitory GABA neurotransmission — acting as 'artificial alcohol' to quiet the hyperexcitable brain of early abstinence.",
+        "Mechanism of Acamprosate: Acamprosate theoretically reduces excitatory glutamate neurotransmission and increases inhibitory GABA neurotransmission, acting as 'artificial alcohol' to quiet the hyperexcitable brain of early abstinence.",
         "Uses of Acamprosate: Maintenance of alcohol abstinence; Early-abstinence craving and withdrawal-prolonged symptoms",
         "Mechanism: glutamate reduction + GABA enhancement (multi-modal, mGluR-linked).",
         "Indication: maintenance of ABSTINENCE (patient abstinent at start).",
@@ -236,7 +236,7 @@ export const acamprosate: Drug = {
         "Outline the monitoring plan: Renal function (Baseline); Mood and suicidality (At reviews); Abstinence status and craving (Every review)",
       ],
       longAnswer: [
-        "Acamprosate: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Acamprosate: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: glutamate reduction + GABA enhancement (multi-modal, mGluR-linked).",
         "Indication: maintenance of ABSTINENCE (patient abstinent at start).",
       ],
@@ -246,7 +246,7 @@ export const acamprosate: Drug = {
         "Mechanism: glutamate reduction + GABA enhancement (multi-modal, mGluR-linked).",
         "Indication: maintenance of ABSTINENCE (patient abstinent at start).",
         "Dose 666 mg TID (> 60 kg); 666 mg BD (< 60 kg).",
-        "Renally excreted unchanged — contraindicated in severe renal impairment.",
+        "Renally excreted unchanged: contraindicated in severe renal impairment.",
         "Not habit-forming; no interaction with alcohol or naltrexone.",
         "Works over weeks; combine with psychosocial treatment.",
       ],
@@ -258,7 +258,7 @@ export const acamprosate: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Acamprosate develops suicidal ideation (rare signal) — next best step?",
+        "A patient on Acamprosate develops suicidal ideation (rare signal): next best step?",
         "When to choose Acamprosate over alternatives in its class.",
       ],
     },
@@ -271,10 +271,10 @@ export const acamprosate: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The 'already abstinent' drug: acamprosate protects abstinence; naltrexone reduces heavy drinking — matching drug to drinking pattern is the prescribing skill.",
-        "TID dosing is the adherence tax — anchoring to three meals turns it into a habit.",
-        "Combines safely with alcohol AND naltrexone — the most forgiving agent in the alcohol toolkit.",
-        "Unchanged renal excretion: no interactions, no CYP, no overdose danger — the cleanest pharmacokinetic profile in the class.",
+        "The 'already abstinent' drug: acamprosate protects abstinence; naltrexone reduces heavy drinking, matching drug to drinking pattern is the prescribing skill.",
+        "TID dosing is the adherence tax, anchoring to three meals turns it into a habit.",
+        "Combines safely with alcohol AND naltrexone: the most forgiving agent in the alcohol toolkit.",
+        "Unchanged renal excretion: no interactions, no CYP, no overdose danger; the cleanest pharmacokinetic profile in the class.",
       ],
     },
   },
@@ -283,7 +283,7 @@ export const acamprosate: Drug = {
     "Mechanism: glutamate reduction + GABA enhancement (multi-modal, mGluR-linked).",
     "Indication: maintenance of ABSTINENCE (patient abstinent at start).",
     "Dose 666 mg TID (> 60 kg); 666 mg BD (< 60 kg).",
-    "Renally excreted unchanged — contraindicated in severe renal impairment.",
+    "Renally excreted unchanged: contraindicated in severe renal impairment.",
     "Not habit-forming; no interaction with alcohol or naltrexone.",
     "Works over weeks; combine with psychosocial treatment.",
     "Efficacy in trials modest but real (COMBINE study).",
@@ -291,7 +291,7 @@ export const acamprosate: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — maintenance of alcohol abstinence",
+      title: "First presentation: maintenance of alcohol abstinence",
       presentation: "A patient presenting with maintenance of alcohol abstinence, started on Acamprosate.",
       history: "A adult patient presents with a maintenance of alcohol abstinence picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with maintenance of alcohol abstinence; physical examination and baseline investigations are unremarkable.",
@@ -300,7 +300,7 @@ export const acamprosate: Drug = {
       management: "Started at 666 mg three times daily (> 60 kg), titrated to 1998 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Acamprosate takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Acamprosate takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -309,7 +309,7 @@ export const acamprosate: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "SUD Treatment comparison — choosing within the class",
+      title: "SUD Treatment comparison: choosing within the class",
       primaryDrug: "Acamprosate",
       rows: [
         {
@@ -402,7 +402,7 @@ export const acamprosate: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The abstinence-protector — for the already-abstinent patient",
+          primaryValue: "The abstinence-protector, for the already-abstinent patient",
           comparisons: [
             {
               drug: "Buprenorphine",
@@ -423,7 +423,7 @@ export const acamprosate: Drug = {
           ],
         },
       ],
-      takeaway: "All alcohol dependence treatments share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All alcohol dependence treatments share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -432,7 +432,7 @@ export const acamprosate: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Acamprosate reaches peak plasma concentration and begins acting at its molecular target (Glutamate and GABA systems (multi-modal: mGluR binding, glutamate normalisation)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Acamprosate reaches peak plasma concentration and begins acting at its molecular target (Glutamate and GABA systems (multi-modal: mGluR binding, glutamate normalisation)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -468,7 +468,7 @@ export const acamprosate: Drug = {
   faqs: [
     {
       question: "How long does Acamprosate take to work?",
-      answer: "Weeks of treatment before full benefit; efficacy trials 3-12 months.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Weeks of treatment before full benefit; efficacy trials 3-12 months.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Acamprosate?",
@@ -476,11 +476,11 @@ export const acamprosate: Drug = {
     },
     {
       question: "Can I stop Acamprosate suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Acamprosate habit-forming?",
@@ -488,7 +488,7 @@ export const acamprosate: Drug = {
     },
     {
       question: "Can I take Acamprosate during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Acamprosate may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Acamprosate may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -638,7 +638,7 @@ export const acamprosate: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Acamprosate",
+      label: "Patient Guide. Acamprosate",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -646,13 +646,13 @@ export const acamprosate: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The abstinence-protecting alcohol medicine — glutamate-GABA rebalancing without dependence.",
-    summary: "Acamprosate is a prescription medicine used to treat maintenance of alcohol abstinence. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The abstinence-protecting alcohol medicine: glutamate-GABA rebalancing without dependence.",
+    summary: "Acamprosate is a prescription medicine used to treat maintenance of alcohol abstinence. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Acamprosate helps you stay off alcohol once you have stopped: it quietly rebalances brain chemicals that alcohol has disturbed, reducing the discomfort and craving that lead back to drinking. It is not addictive, does not make you sick if you drink, and works best alongside counselling or support groups. It must be taken three times a day with meals.",
-    sideEffects: "The most common side effects are: diarrhoea and gi upset, anxiety and insomnia, flatus and itching. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Suicidal ideation (rare signal) and Renal impairment accumulation. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: renal function (baseline); mood and suicidality (at reviews); abstinence status and craving (every review). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: diarrhoea and gi upset, anxiety and insomnia, flatus and itching. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Suicidal ideation (rare signal) and Renal impairment accumulation. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: renal function (baseline); mood and suicidality (at reviews); abstinence status and craving (every review). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Naltrexone, Antibiotics (e.g., tetracyclines class). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Naltrexone, Antibiotics (e.g., tetracyclines class). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -676,7 +676,7 @@ export const acamprosate: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -710,25 +710,25 @@ export const acamprosate: Drug = {
         name: "Acamprosate",
         slug: "acamprosate",
         relationship: "This guide",
-        distinguishing: "The abstinence-protector — for the already-abstinent patient",
+        distinguishing: "The abstinence-protector, for the already-abstinent patient",
       },
       {
         name: "Buprenorphine",
         slug: "buprenorphine",
         relationship: "Same class (SUD Treatment)",
-        distinguishing: "The safety-ceiling maintenance agonist — office-based opioid treatment",
+        distinguishing: "The safety-ceiling maintenance agonist: office-based opioid treatment",
       },
       {
         name: "Disulfiram",
         slug: "disulfiram",
         relationship: "Same class (SUD Treatment)",
-        distinguishing: "The classical aversion deterrent — for the motivated, supervised patient",
+        distinguishing: "The classical aversion deterrent, for the motivated, supervised patient",
       },
       {
         name: "Naltrexone",
         slug: "naltrexone",
         relationship: "Same class (SUD Treatment)",
-        distinguishing: "The pure antagonist — alcohol relapse and opioid blockade",
+        distinguishing: "The pure antagonist: alcohol relapse and opioid blockade",
       },
       {
         name: "Varenicline",
@@ -894,7 +894,7 @@ export const acamprosate: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Acamprosate in two sentences.",
-      answer: "Acamprosate theoretically reduces excitatory glutamate neurotransmission and increases inhibitory GABA neurotransmission — acting as 'artificial alcohol' to quiet the hyperexcitable brain of early abstinence. Net effect: Modulation of the described target with the agent's clinical effect.",
+      answer: "Acamprosate theoretically reduces excitatory glutamate neurotransmission and increases inhibitory GABA neurotransmission, acting as 'artificial alcohol' to quiet the hyperexcitable brain of early abstinence. Net effect: Modulation of the described target with the agent's clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -904,7 +904,7 @@ export const acamprosate: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Acamprosate and how you would manage it.",
-      answer: "Suicidal ideation (rare signal): Depression and suicidality reported in trials — monitor mood. Management: Mood review; stop if depression emerges.",
+      answer: "Suicidal ideation (rare signal): Depression and suicidality reported in trials; monitor mood. Management: Mood review; stop if depression emerges.",
       topic: "Safety",
     },
     {
@@ -914,7 +914,7 @@ export const acamprosate: Drug = {
     },
     {
       question: "Share one clinical pearl about Acamprosate that separates safe prescribers from unsafe ones.",
-      answer: "The 'already abstinent' drug: acamprosate protects abstinence; naltrexone reduces heavy drinking — matching drug to drinking pattern is the prescribing skill.",
+      answer: "The 'already abstinent' drug: acamprosate protects abstinence; naltrexone reduces heavy drinking, matching drug to drinking pattern is the prescribing skill.",
       topic: "Clinical Pearls",
     },
   ],
@@ -990,7 +990,7 @@ export const acamprosate: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1035,7 +1035,7 @@ export const acamprosate: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Acamprosate works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Acamprosate works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1051,7 +1051,7 @@ export const acamprosate: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Acamprosate safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Acamprosate safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1096,7 +1096,7 @@ export const acamprosate: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Acamprosate follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Acamprosate follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1121,10 +1121,10 @@ export const acamprosate: Drug = {
     dosingTips: [
       "Anchor the three doses to three meals.",
       "Set expectations: it protects abstinence over months, not days.",
-      "Safe with alcohol — no reaction — but the goal remains abstinence.",
+      "Safe with alcohol (no reaction) but the goal remains abstinence.",
     ],
     overdose: [
-      "Overdose with Acamprosate is managed supportively — no specific antidote.",
+      "Overdose with Acamprosate is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Acamprosate is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1158,19 +1158,19 @@ export const acamprosate: Drug = {
     potentialDisadvantages: [
       "TID dosing burden.",
       "Modest effect sizes.",
-      "For the already-abstinent — the wrong drug for the still-drinking patient.",
+      "For the already-abstinent: the wrong drug for the still-drinking patient.",
     ],
     primaryTargetSymptoms: ["Maintenance of alcohol abstinence", "Early-abstinence craving"],
     pearls: [
-      "The 'already abstinent' drug: acamprosate protects abstinence; naltrexone reduces heavy drinking — matching drug to drinking pattern is the prescribing skill.",
-      "TID dosing is the adherence tax — anchoring to three meals turns it into a habit.",
-      "Combines safely with alcohol AND naltrexone — the most forgiving agent in the alcohol toolkit.",
-      "Unchanged renal excretion: no interactions, no CYP, no overdose danger — the cleanest pharmacokinetic profile in the class.",
+      "The 'already abstinent' drug: acamprosate protects abstinence; naltrexone reduces heavy drinking, matching drug to drinking pattern is the prescribing skill.",
+      "TID dosing is the adherence tax, anchoring to three meals turns it into a habit.",
+      "Combines safely with alcohol AND naltrexone: the most forgiving agent in the alcohol toolkit.",
+      "Unchanged renal excretion: no interactions, no CYP, no overdose danger; the cleanest pharmacokinetic profile in the class.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

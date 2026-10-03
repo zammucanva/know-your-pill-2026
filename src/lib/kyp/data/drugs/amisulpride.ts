@@ -23,14 +23,14 @@ export const amisulpride: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Atypical Antipsychotics", "Amisulpride"],
   /* ---- Hero / summary ---- */
-  tagline: "The dose-bands-in-one-drug benzamide — low-dose antidepressant, high-dose antipsychotic, and the sialorrhoea rescue.",
-  summary: "Amisulpride is the substituted benzamide antipsychotic with a distinctive dose-band profile: low doses (50-300 mg) block presynaptic D2/D3 autoreceptors (increasing dopamine release — antidepressant/negative-symptom effect), while higher doses (400-1200 mg) block postsynaptic D2 (antipsychotic). A European/Indian formulary staple with prolactin elevation and QT cautions — and a rescue role for clozapine sialorrhoea.",
+  tagline: "The dose-bands-in-one-drug benzamide: low-dose antidepressant, high-dose antipsychotic, and the sialorrhoea rescue.",
+  summary: "Amisulpride is the substituted benzamide antipsychotic with a distinctive dose-band profile: low doses (50-300 mg) block presynaptic D2/D3 autoreceptors (increasing dopamine release, antidepressant/negative-symptom effect), while higher doses (400-1200 mg) block postsynaptic D2 (antipsychotic). A European/Indian formulary staple with prolactin elevation and QT cautions, and a rescue role for clozapine sialorrhoea.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Amisulpride — from its molecular target (D2/D3 receptors (low-dose presynaptic autoreceptor blockade; high-dose postsynaptic antagonism)) to clinical effect.",
+    "Explain the mechanism of action of Amisulpride, from its molecular target (D2/D3 receptors (low-dose presynaptic autoreceptor blockade; high-dose postsynaptic antagonism)) to clinical effect.",
     "List the FDA-approved and off-label uses of Amisulpride.",
     "Predict the common and serious side effects of Amisulpride from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Amisulpride.",
@@ -46,7 +46,7 @@ export const amisulpride: Drug = {
       "The mechanism translates into the clinical profile described.",
       "Practical use follows half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 12-17 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 12-17 hours. See mechanism and prescriber sections.",
     halfLife: "12-17 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -126,7 +126,7 @@ export const amisulpride: Drug = {
         label: "5-HT2A-mediated benefit",
       },
     ],
-    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms — the serotonin-dopamine hypothesis of atypical antipsychotics.",
+    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms: the serotonin-dopamine hypothesis of atypical antipsychotics.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Dopamine (DA)"],
@@ -145,17 +145,17 @@ export const amisulpride: Drug = {
     {
       name: "Negative symptoms / deficit states (low dose)",
       status: "guideline",
-      description: "50-300 mg/day presynaptic augmentation dosing — the dose-band signature.",
+      description: "50-300 mg/day presynaptic augmentation dosing: the dose-band signature.",
     },
     {
       name: "Dysthymia / depression (low dose, EU)",
       status: "guideline",
-      description: "The antidepressant dose-band (50 mg) — France's dysthymia indication.",
+      description: "The antidepressant dose-band (50 mg). France's dysthymia indication.",
     },
     {
       name: "Clozapine-induced sialorrhoea (rescue)",
       status: "off-label",
-      description: "Low-dose amisulpride is an evidence-based antisialorrhoea add-on — the practical pearl.",
+      description: "Low-dose amisulpride is an evidence-based antisialorrhoea add-on: the practical pearl.",
     },
     {
       name: "Acute mania (adjunct)",
@@ -273,16 +273,16 @@ export const amisulpride: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Amisulpride is an antipsychotic used in Europe and India with a dose-dependent personality: small doses lift mood and motivation, while larger doses treat the positive symptoms of psychosis. It commonly raises prolactin (affecting periods, breast comfort, and sexual function), and higher doses require an occasional heart tracing.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Amisulpride builds over weeks — do not judge it in the first days.",
+    "Benefit from Amisulpride builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The dose-band benzamide: 50-300 mg = presynaptic antidepressant/negative-symptom dosing; 400-1200 mg = postsynaptic antipsychotic — the autoreceptor concept in clinical form.",
-    "The clozapine-drool rescue: low-dose amisulpride is among the best-evidenced treatments for clozapine sialorrhoea — the practical pearl that survives translation.",
-    "The prolactin price: with risperidone at the top of the class — ask about menstrual/sexual effects.",
+    "The dose-band benzamide: 50-300 mg = presynaptic antidepressant/negative-symptom dosing; 400-1200 mg = postsynaptic antipsychotic: the autoreceptor concept in clinical form.",
+    "The clozapine-drool rescue: low-dose amisulpride is among the best-evidenced treatments for clozapine sialorrhoea; the practical pearl that survives translation.",
+    "The prolactin price: with risperidone at the top of the class; ask about menstrual/sexual effects.",
     "The QT heritage: benzamide chemistry (droperidol family) carries the ECG caution at higher doses.",
     "The augmentation evidence: amisulpride is the best-evidenced clozapine augmentation partner in TRS.",
   ],
@@ -290,16 +290,16 @@ export const amisulpride: Drug = {
     mbbs: {
       viva: [
         "Mechanism of Amisulpride: Amisulpride shows dose-dependent dopaminergic action: low-dose presynaptic autoreceptor blockade disinhibits dopamine release; high-dose postsynaptic D2/D3 blockade is antipsychotic.",
-        "Uses of Amisulpride: Schizophrenia (positive symptoms — high dose); Negative symptoms / deficit states (low dose); Dysthymia / depression (low dose, EU); Clozapine-induced sialorrhoea (rescue)",
+        "Uses of Amisulpride: Schizophrenia (positive symptoms, high dose); Negative symptoms / deficit states (low dose); Dysthymia / depression (low dose, EU); Clozapine-induced sialorrhoea (rescue)",
         "Mechanism: substituted benzamide with DOSE-BANDS: low dose presynaptic autoreceptor (antidepressant), high dose postsynaptic D2 (antipsychotic).",
         "Approvals: schizophrenia (EU/India); dysthymia at 50 mg (France).",
       ],
       practical: [
-        "Prescribe Amisulpride for schizophrenia (positive symptoms — high dose) with dose, timing, and duration.",
+        "Prescribe Amisulpride for schizophrenia (positive symptoms, high dose) with dose, timing, and duration.",
         "Outline the monitoring plan: ECG (high doses) (Baseline at > 400 mg and with risk factors); Prolactin symptoms (At review)",
       ],
       longAnswer: [
-        "Amisulpride: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Amisulpride: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: substituted benzamide with DOSE-BANDS: low dose presynaptic autoreceptor (antidepressant), high dose postsynaptic D2 (antipsychotic).",
         "Approvals: schizophrenia (EU/India); dysthymia at 50 mg (France).",
       ],
@@ -321,7 +321,7 @@ export const amisulpride: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Amisulpride develops neuroleptic malignant syndrome — next best step?",
+        "A patient on Amisulpride develops neuroleptic malignant syndrome: next best step?",
         "When to choose Amisulpride over alternatives in its class.",
       ],
     },
@@ -334,9 +334,9 @@ export const amisulpride: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The dose-band benzamide: 50-300 mg = presynaptic antidepressant/negative-symptom dosing; 400-1200 mg = postsynaptic antipsychotic — the autoreceptor concept in clinical form.",
-        "The clozapine-drool rescue: low-dose amisulpride is among the best-evidenced treatments for clozapine sialorrhoea — the practical pearl that survives translation.",
-        "The prolactin price: with risperidone at the top of the class — ask about menstrual/sexual effects.",
+        "The dose-band benzamide: 50-300 mg = presynaptic antidepressant/negative-symptom dosing; 400-1200 mg = postsynaptic antipsychotic: the autoreceptor concept in clinical form.",
+        "The clozapine-drool rescue: low-dose amisulpride is among the best-evidenced treatments for clozapine sialorrhoea; the practical pearl that survives translation.",
+        "The prolactin price: with risperidone at the top of the class; ask about menstrual/sexual effects.",
         "The QT heritage: benzamide chemistry (droperidol family) carries the ECG caution at higher doses.",
       ],
     },
@@ -353,16 +353,16 @@ export const amisulpride: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia (positive symptoms — high dose)",
-      presentation: "A patient presenting with schizophrenia (positive symptoms — high dose), started on Amisulpride.",
-      history: "A adult patient presents with a schizophrenia (positive symptoms — high dose) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with schizophrenia (positive symptoms — high dose); physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Schizophrenia (positive symptoms — high dose). Differentials are considered and excluded clinically.",
+      title: "First presentation: schizophrenia (positive symptoms, high dose)",
+      presentation: "A patient presenting with schizophrenia (positive symptoms, high dose), started on Amisulpride.",
+      history: "A adult patient presents with a schizophrenia (positive symptoms, high dose) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with schizophrenia (positive symptoms, high dose); physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Schizophrenia (positive symptoms, high dose). Differentials are considered and excluded clinically.",
       rationale: "Amisulpride is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Atypical Antipsychotic) with strong evidence in this condition.",
       management: "Started at 400 mg once or twice daily, titrated to 400-800 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Amisulpride takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Amisulpride takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -371,7 +371,7 @@ export const amisulpride: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Atypical Antipsychotic comparison — choosing within the class",
+      title: "Atypical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Amisulpride",
       rows: [
         {
@@ -464,7 +464,7 @@ export const amisulpride: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The dose-band benzamide — European/Indian staple with the clozapine-drool rescue",
+          primaryValue: "The dose-band benzamide. European/Indian staple with the clozapine-drool rescue",
           comparisons: [
             {
               drug: "Aripiprazole",
@@ -485,7 +485,7 @@ export const amisulpride: Drug = {
           ],
         },
       ],
-      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -494,7 +494,7 @@ export const amisulpride: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Amisulpride reaches peak plasma concentration and begins acting at its molecular target (D2/D3 receptors (low-dose presynaptic autoreceptor blockade; high-dose postsynaptic antagonism)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Amisulpride reaches peak plasma concentration and begins acting at its molecular target (D2/D3 receptors (low-dose presynaptic autoreceptor blockade; high-dose postsynaptic antagonism)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -530,7 +530,7 @@ export const amisulpride: Drug = {
   faqs: [
     {
       question: "How long does Amisulpride take to work?",
-      answer: "Dose-band-dependent effects; antipsychotic response 1-3 weeks at high dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Dose-band-dependent effects; antipsychotic response 1-3 weeks at high dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Amisulpride?",
@@ -538,11 +538,11 @@ export const amisulpride: Drug = {
     },
     {
       question: "Can I stop Amisulpride suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Amisulpride habit-forming?",
@@ -550,7 +550,7 @@ export const amisulpride: Drug = {
     },
     {
       question: "Can I take Amisulpride during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Amisulpride may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Amisulpride may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -688,7 +688,7 @@ export const amisulpride: Drug = {
       note: "Primary molecular target",
     },
     {
-      label: "Schizophrenia (positive symptoms — high dose)",
+      label: "Schizophrenia (positive symptoms, high dose)",
       type: "condition",
       href: "#clinical-uses",
       note: "Used clinically",
@@ -724,7 +724,7 @@ export const amisulpride: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Amisulpride",
+      label: "Patient Guide. Amisulpride",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -732,13 +732,13 @@ export const amisulpride: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The dose-bands-in-one-drug benzamide — low-dose antidepressant, high-dose antipsychotic, and the sialorrhoea rescue.",
-    summary: "Amisulpride is a prescription medicine used to treat schizophrenia (positive symptoms — high dose). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The dose-bands-in-one-drug benzamide: low-dose antidepressant, high-dose antipsychotic, and the sialorrhoea rescue.",
+    summary: "Amisulpride is a prescription medicine used to treat schizophrenia (positive symptoms, high dose). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Amisulpride is an antipsychotic used in Europe and India with a dose-dependent personality: small doses lift mood and motivation, while larger doses treat the positive symptoms of psychosis. It commonly raises prolactin (affecting periods, breast comfort, and sexual function), and higher doses require an occasional heart tracing.",
-    sideEffects: "The most common side effects are: insomnia and agitation, extrapyramidal symptoms (high doses), hyperprolactinaemia, weight gain (modest), qt prolongation (dose-related). These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: ecg (high doses) (baseline at > 400 mg and with risk factors); prolactin symptoms (at review). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: insomnia and agitation, extrapyramidal symptoms (high doses), hyperprolactinaemia, weight gain (modest), qt prolongation (dose-related). These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: ecg (high doses) (baseline at > 400 mg and with risk factors); prolactin symptoms (at review). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs, Levodopa and dopamine agonists, Levansulpride-class/sulpirade overlap products. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs, Levodopa and dopamine agonists, Levansulpride-class/sulpirade overlap products. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -805,55 +805,55 @@ export const amisulpride: Drug = {
         name: "Amisulpride",
         slug: "amisulpride",
         relationship: "This guide",
-        distinguishing: "The dose-band benzamide — European/Indian staple with the clozapine-drool rescue",
+        distinguishing: "The dose-band benzamide. European/Indian staple with the clozapine-drool rescue",
       },
       {
         name: "Aripiprazole",
         slug: "aripiprazole",
         relationship: "Same class (Dopamine Stabiliser)",
-        distinguishing: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+        distinguishing: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
       },
       {
         name: "Clozapine",
         slug: "clozapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
       },
       {
         name: "Lurasidone",
         slug: "lurasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+        distinguishing: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
       },
       {
         name: "Olanzapine",
         slug: "olanzapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+        distinguishing: "Most robust broad-spectrum atypical: heaviest metabolic burden",
       },
       {
         name: "Paliperidone",
         slug: "paliperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The LAI platform king — monthly to 6-monthly injections for schizophrenia",
+        distinguishing: "The LAI platform king: monthly to 6-monthly injections for schizophrenia",
       },
       {
         name: "Quetiapine",
         slug: "quetiapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin — the sedating antidepressant-antipsychotic",
+        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin: the sedating antidepressant-antipsychotic",
       },
       {
         name: "Risperidone",
         slug: "risperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most potent D2 blockade among atypicals — highest prolactin, best-studied LAI",
+        distinguishing: "Most potent D2 blockade among atypicals: highest prolactin, best-studied LAI",
       },
       {
         name: "Ziprasidone",
         slug: "ziprasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic — with QT vigilance",
+        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic, with QT vigilance",
       },
     ],
   },
@@ -1006,7 +1006,7 @@ export const amisulpride: Drug = {
     },
     {
       question: "List the key uses of Amisulpride.",
-      answer: "Schizophrenia (positive symptoms — high dose), Negative symptoms / deficit states (low dose), Dysthymia / depression (low dose, EU), Clozapine-induced sialorrhoea (rescue). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Schizophrenia (positive symptoms, high dose), Negative symptoms / deficit states (low dose), Dysthymia / depression (low dose, EU), Clozapine-induced sialorrhoea (rescue). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -1021,7 +1021,7 @@ export const amisulpride: Drug = {
     },
     {
       question: "Share one clinical pearl about Amisulpride that separates safe prescribers from unsafe ones.",
-      answer: "The dose-band benzamide: 50-300 mg = presynaptic antidepressant/negative-symptom dosing; 400-1200 mg = postsynaptic antipsychotic — the autoreceptor concept in clinical form.",
+      answer: "The dose-band benzamide: 50-300 mg = presynaptic antidepressant/negative-symptom dosing; 400-1200 mg = postsynaptic antipsychotic: the autoreceptor concept in clinical form.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1097,7 +1097,7 @@ export const amisulpride: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1142,7 +1142,7 @@ export const amisulpride: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Amisulpride works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Amisulpride works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1158,7 +1158,7 @@ export const amisulpride: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Amisulpride safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Amisulpride safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1203,7 +1203,7 @@ export const amisulpride: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Amisulpride follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Amisulpride follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1245,7 +1245,7 @@ export const amisulpride: Drug = {
       "The clozapine-drool rescue dose is 25-50 mg bd.",
     ],
     overdose: [
-      "Overdose with Amisulpride is managed supportively — no specific antidote.",
+      "Overdose with Amisulpride is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Amisulpride is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1287,9 +1287,9 @@ export const amisulpride: Drug = {
       "Clozapine sialorrhoea (rescue)",
     ],
     pearls: [
-      "The dose-band benzamide: 50-300 mg = presynaptic antidepressant/negative-symptom dosing; 400-1200 mg = postsynaptic antipsychotic — the autoreceptor concept in clinical form.",
-      "The clozapine-drool rescue: low-dose amisulpride is among the best-evidenced treatments for clozapine sialorrhoea — the practical pearl that survives translation.",
-      "The prolactin price: with risperidone at the top of the class — ask about menstrual/sexual effects.",
+      "The dose-band benzamide: 50-300 mg = presynaptic antidepressant/negative-symptom dosing; 400-1200 mg = postsynaptic antipsychotic: the autoreceptor concept in clinical form.",
+      "The clozapine-drool rescue: low-dose amisulpride is among the best-evidenced treatments for clozapine sialorrhoea; the practical pearl that survives translation.",
+      "The prolactin price: with risperidone at the top of the class; ask about menstrual/sexual effects.",
       "The QT heritage: benzamide chemistry (droperidol family) carries the ECG caution at higher doses.",
       "The augmentation evidence: amisulpride is the best-evidenced clozapine augmentation partner in TRS.",
     ],
@@ -1297,6 +1297,6 @@ export const amisulpride: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

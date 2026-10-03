@@ -23,14 +23,14 @@ export const tianeptine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antidepressants", "Atypical Antidepressants", "Tianeptine"],
   /* ---- Hero / summary ---- */
-  tagline: "The atypical antidepressant that modulates glutamate — anxiolytic mood lift with an unusual abuse footnote.",
-  summary: "Tianeptine is the atypical (tricyclic-structured) antidepressant whose mechanism has migrated in the literature from 'serotonin reuptake ENHANCER' to glutamate modulation (and weak mu-opioid agonism): anxiolytic-tilted antidepressant action popular in France, parts of Europe, Asia — and India. Its modern infamy is high-dose abuse (opioid-like) in some countries, prompting control measures.",
+  tagline: "The atypical antidepressant that modulates glutamate: anxiolytic mood lift with an unusual abuse footnote.",
+  summary: "Tianeptine is the atypical (tricyclic-structured) antidepressant whose mechanism has migrated in the literature from 'serotonin reuptake ENHANCER' to glutamate modulation (and weak mu-opioid agonism): anxiolytic-tilted antidepressant action popular in France, parts of Europe, Asia, and India. Its modern infamy is high-dose abuse (opioid-like) in some countries, prompting control measures.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Tianeptine — from its molecular target (Glutamate modulation (described as serotonin reuptake enhancement historically); weak mu-opioid agonism) to clinical effect.",
+    "Explain the mechanism of action of Tianeptine, from its molecular target (Glutamate modulation (described as serotonin reuptake enhancement historically); weak mu-opioid agonism) to clinical effect.",
     "List the FDA-approved and off-label uses of Tianeptine.",
     "Predict the common and serious side effects of Tianeptine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Tianeptine.",
@@ -38,15 +38,15 @@ export const tianeptine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Tianeptine modulates glutamatergic neurotransmission (with weak mu-opioid receptor activity) — an anxiolytic-tilted antidepressant action distinct from SSRI pharmacology.",
+    summary: "Tianeptine modulates glutamatergic neurotransmission (with weak mu-opioid receptor activity): an anxiolytic-tilted antidepressant action distinct from SSRI pharmacology.",
     molecularTarget: "Glutamate modulation (described as serotonin reuptake enhancement historically); weak mu-opioid agonism",
     effect: "Monoaminergic modulation producing the antidepressant effect described.",
     steps: [
-      "Tianeptine modulates glutamatergic neurotransmission (with weak mu-opioid receptor activity) — an anxiolytic-tilted antidepressant action distinct from SSRI pharmacology.",
+      "Tianeptine modulates glutamatergic neurotransmission (with weak mu-opioid receptor activity): an anxiolytic-tilted antidepressant action distinct from SSRI pharmacology.",
       "Downstream receptor adaptation over 2-6 weeks translates acute monoamine change into clinical response.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 2.5 hours (TID dosing). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 2.5 hours (TID dosing). See mechanism and prescriber sections.",
     halfLife: "2.5 hours (TID dosing).",
     metabolism: "Hepatic CYP metabolism.",
     excretion: "Renal.",
@@ -109,7 +109,7 @@ export const tianeptine: Drug = {
         label: "produces",
       },
     ],
-    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation — the central paradox of antidepressant pharmacology.",
+    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation: the central paradox of antidepressant pharmacology.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -231,26 +231,26 @@ export const tianeptine: Drug = {
     lactation: "Excreted in milk; caution.",
   },
   renalAdjustment: "Standard caution in renal impairment.",
-  hepaticAdjustment: "Caution — hepatotoxicity reports; reduce dose in impairment.",
+  hepaticAdjustment: "Caution: hepatotoxicity reports; reduce dose in impairment.",
   /* ---- Education ---- */
-  patientExplanation: "Tianeptine is an older-style antidepressant used in parts of Europe and Asia for depression with anxiety — it works differently from SSRIs, on the brain's glutamate system. Taken three times daily, it is generally well tolerated. In very high doses it has been misused for opioid-like effects, which is why it is prescribed with care and never at more than the stated dose.",
+  patientExplanation: "Tianeptine is an older-style antidepressant used in parts of Europe and Asia for depression with anxiety. It works differently from SSRIs, on the brain's glutamate system. Taken three times daily, it is generally well tolerated. In very high doses it has been misused for opioid-like effects, which is why it is prescribed with care and never at more than the stated dose.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Tianeptine builds over weeks — do not judge it in the first days.",
+    "Benefit from Tianeptine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The mechanism that changed labels: 'serotonin reuptake enhancer' (the anti-SSRI) → glutamate modulator → weak mu-opioid agonism — a pharmacology rewritten by research.",
-    "The abuse footnote: unscheduled US access produced high-dose opioid-like misuse epidemics — a pharmacovigilance story that reached control schedules.",
+    "The mechanism that changed labels: 'serotonin reuptake enhancer' (the anti-SSRI) → glutamate modulator → weak mu-opioid agonism; a pharmacology rewritten by research.",
+    "The abuse footnote: unscheduled US access produced high-dose opioid-like misuse epidemics; a pharmacovigilance story that reached control schedules.",
     "France's anxiolytic antidepressant: the calm-depression niche, then and now in its origin markets.",
-    "TID dosing is the adherence tax — three meals, three tablets.",
+    "TID dosing is the adherence tax: three meals, three tablets.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Tianeptine: Tianeptine modulates glutamatergic neurotransmission (with weak mu-opioid receptor activity) — an anxiolytic-tilted antidepressant action distinct from SSRI pharmacology.",
+        "Mechanism of Tianeptine: Tianeptine modulates glutamatergic neurotransmission (with weak mu-opioid receptor activity); an anxiolytic-tilted antidepressant action distinct from SSRI pharmacology.",
         "Uses of Tianeptine: Major depressive disorder; Depression with anxiety",
         "Mechanism: glutamate modulation (historically 'serotonin reuptake ENHANCEMENT'); weak mu-opioid agonism.",
         "Anxiolytic-tilted antidepressant in EU/Asian markets.",
@@ -260,7 +260,7 @@ export const tianeptine: Drug = {
         "Outline the monitoring plan: Dose-escalation review (Every prescription); LFTs if symptomatic (Symptom-driven)",
       ],
       longAnswer: [
-        "Tianeptine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Tianeptine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: glutamate modulation (historically 'serotonin reuptake ENHANCEMENT'); weak mu-opioid agonism.",
         "Anxiolytic-tilted antidepressant in EU/Asian markets.",
       ],
@@ -281,7 +281,7 @@ export const tianeptine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Tianeptine develops abuse and dependence at high doses — next best step?",
+        "A patient on Tianeptine develops abuse and dependence at high doses: next best step?",
         "When to choose Tianeptine over alternatives in its class.",
       ],
     },
@@ -294,10 +294,10 @@ export const tianeptine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The mechanism that changed labels: 'serotonin reuptake enhancer' (the anti-SSRI) → glutamate modulator → weak mu-opioid agonism — a pharmacology rewritten by research.",
-        "The abuse footnote: unscheduled US access produced high-dose opioid-like misuse epidemics — a pharmacovigilance story that reached control schedules.",
+        "The mechanism that changed labels: 'serotonin reuptake enhancer' (the anti-SSRI) → glutamate modulator → weak mu-opioid agonism; a pharmacology rewritten by research.",
+        "The abuse footnote: unscheduled US access produced high-dose opioid-like misuse epidemics; a pharmacovigilance story that reached control schedules.",
         "France's anxiolytic antidepressant: the calm-depression niche, then and now in its origin markets.",
-        "TID dosing is the adherence tax — three meals, three tablets.",
+        "TID dosing is the adherence tax: three meals, three tablets.",
       ],
     },
   },
@@ -312,7 +312,7 @@ export const tianeptine: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — major depressive disorder",
+      title: "First presentation: major depressive disorder",
       presentation: "A patient presenting with major depressive disorder, started on Tianeptine.",
       history: "A adult patient presents with a major depressive disorder picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with major depressive disorder; physical examination and baseline investigations are unremarkable.",
@@ -321,7 +321,7 @@ export const tianeptine: Drug = {
       management: "Started at 12.5 mg three times daily, titrated to 37.5 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Tianeptine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Tianeptine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -330,7 +330,7 @@ export const tianeptine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Atypical Antidepressant comparison — choosing within the class",
+      title: "Atypical Antidepressant comparison: choosing within the class",
       primaryDrug: "Tianeptine",
       rows: [
         {
@@ -444,7 +444,7 @@ export const tianeptine: Drug = {
           ],
         },
       ],
-      takeaway: "All atypical antidepressants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antidepressants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -453,7 +453,7 @@ export const tianeptine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Tianeptine reaches peak plasma concentration and begins acting at its molecular target (Glutamate modulation (described as serotonin reuptake enhancement historically); weak mu-opioid agonism). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Tianeptine reaches peak plasma concentration and begins acting at its molecular target (Glutamate modulation (described as serotonin reuptake enhancement historically); weak mu-opioid agonism). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -489,7 +489,7 @@ export const tianeptine: Drug = {
   faqs: [
     {
       question: "How long does Tianeptine take to work?",
-      answer: "Response 2-4 weeks.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Response 2-4 weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Tianeptine?",
@@ -497,11 +497,11 @@ export const tianeptine: Drug = {
     },
     {
       question: "Can I stop Tianeptine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Tianeptine habit-forming?",
@@ -509,7 +509,7 @@ export const tianeptine: Drug = {
     },
     {
       question: "Can I take Tianeptine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Tianeptine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Tianeptine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -653,7 +653,7 @@ export const tianeptine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Tianeptine",
+      label: "Patient Guide. Tianeptine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -661,13 +661,13 @@ export const tianeptine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The atypical antidepressant that modulates glutamate — anxiolytic mood lift with an unusual abuse footnote.",
-    summary: "Tianeptine is a prescription medicine used to treat major depressive disorder. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Tianeptine is an older-style antidepressant used in parts of Europe and Asia for depression with anxiety — it works differently from SSRIs, on the brain's glutamate system. Taken three times daily, it is generally well tolerated. In very high doses it has been misused for opioid-like effects, which is why it is prescribed with care and never at more than the stated dose.",
-    sideEffects: "The most common side effects are: nausea and gi upset, drowsiness or dizziness, dry mouth and headache. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Abuse and dependence at high doses and Hepatotoxicity (rare). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: dose-escalation review (every prescription); lfts if symptomatic (symptom-driven). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The atypical antidepressant that modulates glutamate: anxiolytic mood lift with an unusual abuse footnote.",
+    summary: "Tianeptine is a prescription medicine used to treat major depressive disorder. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Tianeptine is an older-style antidepressant used in parts of Europe and Asia for depression with anxiety. It works differently from SSRIs, on the brain's glutamate system. Taken three times daily, it is generally well tolerated. In very high doses it has been misused for opioid-like effects, which is why it is prescribed with care and never at more than the stated dose.",
+    sideEffects: "The most common side effects are: nausea and gi upset, drowsiness or dizziness, dry mouth and headache. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Abuse and dependence at high doses and Hepatotoxicity (rare). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: dose-escalation review (every prescription); lfts if symptomatic (symptom-driven). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: MAOIs, Opioids and CNS depressants, Alcohol. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: MAOIs, Opioids and CNS depressants, Alcohol. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -681,7 +681,7 @@ export const tianeptine: Drug = {
     ],
     typicalDoses: "12.5 mg TID.",
     prescribingScenarios: [
-      "Anxious depression in Indian practice — a mid-century French legacy in the Indian formulary.",
+      "Anxious depression in Indian practice: a mid-century French legacy in the Indian formulary.",
     ],
     availability: {
       governmentHospitals: false,
@@ -693,7 +693,7 @@ export const tianeptine: Drug = {
     costNote: "Cost varies by manufacturer and region.",
     monitoring: "Prescription discipline against escalation.",
     patientCounselling: [
-      "Strictly the prescribed dose — higher doses cause dependence.",
+      "Strictly the prescribed dose: higher doses cause dependence.",
       "Three-times-daily with meals.",
     ],
   },
@@ -734,7 +734,7 @@ export const tianeptine: Drug = {
         name: "Trazodone",
         slug: "trazodone",
         relationship: "Same class (SARI)",
-        distinguishing: "The antidepressant sleeping pill — insomnia at 50 mg, depression at 300 mg",
+        distinguishing: "The antidepressant sleeping pill: insomnia at 50 mg, depression at 300 mg",
       },
       {
         name: "Vilazodone",
@@ -752,7 +752,7 @@ export const tianeptine: Drug = {
         name: "Nefazodone",
         slug: "nefazodone",
         relationship: "Same class (SARI)",
-        distinguishing: "The expert-only SARI — withdrawn for hepatotoxicity",
+        distinguishing: "The expert-only SARI: withdrawn for hepatotoxicity",
       },
     ],
   },
@@ -900,7 +900,7 @@ export const tianeptine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Tianeptine in two sentences.",
-      answer: "Tianeptine modulates glutamatergic neurotransmission (with weak mu-opioid receptor activity) — an anxiolytic-tilted antidepressant action distinct from SSRI pharmacology. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
+      answer: "Tianeptine modulates glutamatergic neurotransmission (with weak mu-opioid receptor activity): an anxiolytic-tilted antidepressant action distinct from SSRI pharmacology. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
       topic: "Mechanism",
     },
     {
@@ -920,7 +920,7 @@ export const tianeptine: Drug = {
     },
     {
       question: "Share one clinical pearl about Tianeptine that separates safe prescribers from unsafe ones.",
-      answer: "The mechanism that changed labels: 'serotonin reuptake enhancer' (the anti-SSRI) → glutamate modulator → weak mu-opioid agonism — a pharmacology rewritten by research.",
+      answer: "The mechanism that changed labels: 'serotonin reuptake enhancer' (the anti-SSRI) → glutamate modulator → weak mu-opioid agonism; a pharmacology rewritten by research.",
       topic: "Clinical Pearls",
     },
   ],
@@ -996,7 +996,7 @@ export const tianeptine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1041,7 +1041,7 @@ export const tianeptine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Tianeptine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Tianeptine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1057,7 +1057,7 @@ export const tianeptine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Tianeptine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Tianeptine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1100,7 +1100,7 @@ export const tianeptine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Tianeptine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Tianeptine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1128,7 +1128,7 @@ export const tianeptine: Drug = {
       "Note the escalation pattern early.",
     ],
     overdose: [
-      "Overdose with Tianeptine is managed supportively — no specific antidote.",
+      "Overdose with Tianeptine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Tianeptine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1171,15 +1171,15 @@ export const tianeptine: Drug = {
     ],
     primaryTargetSymptoms: ["Depression with anxiety", "Dysthymia (its markets)"],
     pearls: [
-      "The mechanism that changed labels: 'serotonin reuptake enhancer' (the anti-SSRI) → glutamate modulator → weak mu-opioid agonism — a pharmacology rewritten by research.",
-      "The abuse footnote: unscheduled US access produced high-dose opioid-like misuse epidemics — a pharmacovigilance story that reached control schedules.",
+      "The mechanism that changed labels: 'serotonin reuptake enhancer' (the anti-SSRI) → glutamate modulator → weak mu-opioid agonism; a pharmacology rewritten by research.",
+      "The abuse footnote: unscheduled US access produced high-dose opioid-like misuse epidemics; a pharmacovigilance story that reached control schedules.",
       "France's anxiolytic antidepressant: the calm-depression niche, then and now in its origin markets.",
-      "TID dosing is the adherence tax — three meals, three tablets.",
+      "TID dosing is the adherence tax: three meals, three tablets.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

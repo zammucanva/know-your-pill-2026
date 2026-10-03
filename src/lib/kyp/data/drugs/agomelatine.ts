@@ -23,14 +23,14 @@ export const agomelatine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antidepressants", "Melatonergic Antidepressants", "Agomelatine"],
   /* ---- Hero / summary ---- */
-  tagline: "The melatonergic antidepressant — MT1/MT2 agonism plus 5-HT2C blockade for sleep-friendly mood lift.",
-  summary: "Agomelatine is the melatonergic antidepressant: an MT1/MT2 receptor agonist (resynchronising circadian rhythm) plus 5-HT2C antagonist (dopamine/noradrenaline disinhibition) — an antidepressant that IMPROVES sleep onset rather than disrupting it. Valued in Europe for depression with sleep disturbance; governed by mandatory LFT monitoring for hepatotoxicity.",
+  tagline: "The melatonergic antidepressant. MT1/MT2 agonism plus 5-HT2C blockade for sleep-friendly mood lift.",
+  summary: "Agomelatine is the melatonergic antidepressant: an MT1/MT2 receptor agonist (resynchronising circadian rhythm) plus 5-HT2C antagonist (dopamine/noradrenaline disinhibition); an antidepressant that IMPROVES sleep onset rather than disrupting it. Valued in Europe for depression with sleep disturbance; governed by mandatory LFT monitoring for hepatotoxicity.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Agomelatine — from its molecular target (Melatonin MT1/MT2 receptors (agonist) + 5-HT2C receptor (antagonist)) to clinical effect.",
+    "Explain the mechanism of action of Agomelatine, from its molecular target (Melatonin MT1/MT2 receptors (agonist) + 5-HT2C receptor (antagonist)) to clinical effect.",
     "List the FDA-approved and off-label uses of Agomelatine.",
     "Predict the common and serious side effects of Agomelatine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Agomelatine.",
@@ -38,15 +38,15 @@ export const agomelatine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Agomelatine agonises melatonin receptors (circadian resynchronisation) and blocks 5-HT2C (monoamine disinhibition) — sleep-facilitating antidepressant action.",
+    summary: "Agomelatine agonises melatonin receptors (circadian resynchronisation) and blocks 5-HT2C (monoamine disinhibition), sleep-facilitating antidepressant action.",
     molecularTarget: "Melatonin MT1/MT2 receptors (agonist) + 5-HT2C receptor (antagonist)",
     effect: "Monoaminergic modulation producing the antidepressant effect described.",
     steps: [
-      "Agomelatine agonises melatonin receptors (circadian resynchronisation) and blocks 5-HT2C (monoamine disinhibition) — sleep-facilitating antidepressant action.",
+      "Agomelatine agonises melatonin receptors (circadian resynchronisation) and blocks 5-HT2C (monoamine disinhibition), sleep-facilitating antidepressant action.",
       "Downstream receptor adaptation over 2-6 weeks translates acute monoamine change into clinical response.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 1-2 hours (short; chronobiotic action outlasts plasma). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 1-2 hours (short; chronobiotic action outlasts plasma). See mechanism and prescriber sections.",
     halfLife: "1-2 hours (short; chronobiotic action outlasts plasma).",
     metabolism: "Hepatic CYP metabolism.",
     excretion: "Renal.",
@@ -109,7 +109,7 @@ export const agomelatine: Drug = {
         label: "produces",
       },
     ],
-    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation — the central paradox of antidepressant pharmacology.",
+    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation: the central paradox of antidepressant pharmacology.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Melatonin", "Serotonin (5-HT)"],
@@ -138,7 +138,7 @@ export const agomelatine: Drug = {
     {
       name: "Strong CYP1A2 inhibitors (fluvoxamine, ciprofloxacin)",
       severity: "absolute",
-      rationale: "Agomelatine levels rise up to 60× — the label contraindication.",
+      rationale: "Agomelatine levels rise up to 60×: the label contraindication.",
     },
   ],
   blackBoxWarnings: [
@@ -183,7 +183,7 @@ export const agomelatine: Drug = {
       name: "Hepatotoxicity",
       frequency: "uncommon",
       severity: "severe",
-      description: "Transaminase elevation in ~1-2%; rare severe injury — mandatory LFT monitoring at baseline, 3, 6, 12, 24 weeks.",
+      description: "Transaminase elevation in ~1-2%; rare severe injury: mandatory LFT monitoring at baseline, 3, 6, 12, 24 weeks.",
       management: "Scheduled LFTs; stop if ≥ 3× ULN.",
     },
     {
@@ -198,7 +198,7 @@ export const agomelatine: Drug = {
   monitoring: [
     {
       parameter: "LFTs",
-      frequency: "Baseline, then weeks 3, 6, 12, and 24 — mandatory",
+      frequency: "Baseline, then weeks 3, 6, 12, and 24: mandatory",
       rationale: "The hepatotoxicity schedule.",
     },
     {
@@ -211,7 +211,7 @@ export const agomelatine: Drug = {
     {
       drug: "Strong CYP1A2 inhibitors (fluvoxamine, ciprofloxacin)",
       severity: "contraindicated",
-      mechanism: "Agomelatine levels rise up to 60× — the label contraindication.",
+      mechanism: "Agomelatine levels rise up to 60×: the label contraindication.",
       action: "Never combine.",
     },
     {
@@ -232,47 +232,47 @@ export const agomelatine: Drug = {
     lactation: "Excreted in milk in animals; avoid pending data.",
   },
   renalAdjustment: "No adjustment for mild-moderate impairment.",
-  hepaticAdjustment: "CONTRAINDICATED in hepatic impairment — the hepatotoxicity rule.",
+  hepaticAdjustment: "CONTRAINDICATED in hepatic impairment: the hepatotoxicity rule.",
   /* ---- Education ---- */
-  patientExplanation: "Agomelatine is an antidepressant that works on the body clock: it mimics the natural sleep hormone melatonin and blocks a serotonin receptor — lifting mood while helping you fall asleep from the very first night, without the sexual or weight side effects of older antidepressants. It is taken at bedtime, and regular blood tests of the liver are a required part of treatment.",
+  patientExplanation: "Agomelatine is an antidepressant that works on the body clock: it mimics the natural sleep hormone melatonin and blocks a serotonin receptor, lifting mood while helping you fall asleep from the very first night, without the sexual or weight side effects of older antidepressants. It is taken at bedtime, and regular blood tests of the liver are a required part of treatment.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Agomelatine builds over weeks — do not judge it in the first days.",
+    "Benefit from Agomelatine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The circadian thesis: resynchronise MT1/MT2 rhythm + disinhibit dopamine/noradrenaline via 5-HT2C blockade — an antidepressant built for the depressed insomniac.",
-    "Sleep improves NIGHT ONE — the fastest felt benefit of any antidepressant (not the mood, the sleep).",
-    "The liver schedule is mandatory, not optional: baseline, 3, 6, 12, 24 weeks — the pharmacovigilance discipline that keeps the drug safe.",
-    "No sexual dysfunction, no weight gain, no discontinuation syndrome — the tolerability trinity that differentiates it from SSRIs.",
-    "Bedtime dosing only — it is a chronobiotic wearing an antidepressant coat.",
+    "The circadian thesis: resynchronise MT1/MT2 rhythm + disinhibit dopamine/noradrenaline via 5-HT2C blockade; an antidepressant built for the depressed insomniac.",
+    "Sleep improves NIGHT ONE: the fastest felt benefit of any antidepressant (not the mood, the sleep).",
+    "The liver schedule is mandatory, not optional: baseline, 3, 6, 12, 24 weeks. The pharmacovigilance discipline that keeps the drug safe.",
+    "No sexual dysfunction, no weight gain, no discontinuation syndrome: the tolerability trinity that differentiates it from SSRIs.",
+    "Bedtime dosing only: it is a chronobiotic wearing an antidepressant coat.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Agomelatine: Agomelatine agonises melatonin receptors (circadian resynchronisation) and blocks 5-HT2C (monoamine disinhibition) — sleep-facilitating antidepressant action.",
+        "Mechanism of Agomelatine: Agomelatine agonises melatonin receptors (circadian resynchronisation) and blocks 5-HT2C (monoamine disinhibition), sleep-facilitating antidepressant action.",
         "Uses of Agomelatine: Major depressive disorder; Depression with sleep disturbance / circadian disruption",
-        "Mechanism: MT1/MT2 AGONIST + 5-HT2C ANTAGONIST — melatonergic antidepressant.",
+        "Mechanism: MT1/MT2 AGONIST + 5-HT2C ANTAGONIST; melatonergic antidepressant.",
         "25-50 mg AT BEDTIME; sleep improves from night one.",
       ],
       practical: [
         "Prescribe Agomelatine for major depressive disorder with dose, timing, and duration.",
-        "Outline the monitoring plan: LFTs (Baseline, then weeks 3, 6, 12, and 24 — mandatory); Sleep and mood response (At 2-4 weeks)",
+        "Outline the monitoring plan: LFTs (Baseline, then weeks 3, 6, 12, and 24, mandatory); Sleep and mood response (At 2-4 weeks)",
       ],
       longAnswer: [
-        "Agomelatine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: MT1/MT2 AGONIST + 5-HT2C ANTAGONIST — melatonergic antidepressant.",
+        "Agomelatine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: MT1/MT2 AGONIST + 5-HT2C ANTAGONIST; melatonergic antidepressant.",
         "25-50 mg AT BEDTIME; sleep improves from night one.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: MT1/MT2 AGONIST + 5-HT2C ANTAGONIST — melatonergic antidepressant.",
+        "Mechanism: MT1/MT2 AGONIST + 5-HT2C ANTAGONIST; melatonergic antidepressant.",
         "25-50 mg AT BEDTIME; sleep improves from night one.",
         "No sexual dysfunction, weight, or discontinuation-syndrome signals.",
-        "Mandatory LFT schedule (baseline, 3, 6, 12, 24 weeks) — hepatotoxicity.",
+        "Mandatory LFT schedule (baseline, 3, 6, 12, 24 weeks): hepatotoxicity.",
         "EU/UK/Australia approvals; not FDA-approved.",
         "Class suicidality caution.",
       ],
@@ -280,7 +280,7 @@ export const agomelatine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Agomelatine develops hepatotoxicity — next best step?",
+        "A patient on Agomelatine develops hepatotoxicity: next best step?",
         "When to choose Agomelatine over alternatives in its class.",
       ],
     },
@@ -293,26 +293,26 @@ export const agomelatine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The circadian thesis: resynchronise MT1/MT2 rhythm + disinhibit dopamine/noradrenaline via 5-HT2C blockade — an antidepressant built for the depressed insomniac.",
-        "Sleep improves NIGHT ONE — the fastest felt benefit of any antidepressant (not the mood, the sleep).",
-        "The liver schedule is mandatory, not optional: baseline, 3, 6, 12, 24 weeks — the pharmacovigilance discipline that keeps the drug safe.",
-        "No sexual dysfunction, no weight gain, no discontinuation syndrome — the tolerability trinity that differentiates it from SSRIs.",
+        "The circadian thesis: resynchronise MT1/MT2 rhythm + disinhibit dopamine/noradrenaline via 5-HT2C blockade; an antidepressant built for the depressed insomniac.",
+        "Sleep improves NIGHT ONE: the fastest felt benefit of any antidepressant (not the mood, the sleep).",
+        "The liver schedule is mandatory, not optional: baseline, 3, 6, 12, 24 weeks. The pharmacovigilance discipline that keeps the drug safe.",
+        "No sexual dysfunction, no weight gain, no discontinuation syndrome: the tolerability trinity that differentiates it from SSRIs.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: MT1/MT2 AGONIST + 5-HT2C ANTAGONIST — melatonergic antidepressant.",
+    "Mechanism: MT1/MT2 AGONIST + 5-HT2C ANTAGONIST; melatonergic antidepressant.",
     "25-50 mg AT BEDTIME; sleep improves from night one.",
     "No sexual dysfunction, weight, or discontinuation-syndrome signals.",
-    "Mandatory LFT schedule (baseline, 3, 6, 12, 24 weeks) — hepatotoxicity.",
+    "Mandatory LFT schedule (baseline, 3, 6, 12, 24 weeks): hepatotoxicity.",
     "EU/UK/Australia approvals; not FDA-approved.",
     "Class suicidality caution.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — major depressive disorder",
+      title: "First presentation: major depressive disorder",
       presentation: "A patient presenting with major depressive disorder, started on Agomelatine.",
       history: "A adult patient presents with a major depressive disorder picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with major depressive disorder; physical examination and baseline investigations are unremarkable.",
@@ -321,7 +321,7 @@ export const agomelatine: Drug = {
       management: "Started at 25 mg once daily at bedtime, titrated to 25-50 mg at night with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Agomelatine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Agomelatine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -330,7 +330,7 @@ export const agomelatine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Melatonergic Antidepressant vs related agents — orientation table",
+      title: "Melatonergic Antidepressant vs related agents: orientation table",
       primaryDrug: "Agomelatine",
       rows: [
         {
@@ -365,7 +365,7 @@ export const agomelatine: Drug = {
         },
         {
           attribute: "Clinical niche",
-          primaryValue: "The circadian antidepressant — sleep-friendly by design",
+          primaryValue: "The circadian antidepressant: sleep-friendly by design",
           comparisons: [
             {
               drug: "Mirtazapine",
@@ -374,7 +374,7 @@ export const agomelatine: Drug = {
           ],
         },
       ],
-      takeaway: "Agomelatine is compared here with related agents for orientation. Full comparison data lives in each drug's own guide — follow the links for the complete picture.",
+      takeaway: "Agomelatine is compared here with related agents for orientation. Full comparison data lives in each drug's own guide: follow the links for the complete picture.",
     },
   ],
   /* ---- Timeline ---- */
@@ -383,7 +383,7 @@ export const agomelatine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Agomelatine reaches peak plasma concentration and begins acting at its molecular target (Melatonin MT1/MT2 receptors (agonist) + 5-HT2C receptor (antagonist)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Agomelatine reaches peak plasma concentration and begins acting at its molecular target (Melatonin MT1/MT2 receptors (agonist) + 5-HT2C receptor (antagonist)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -419,7 +419,7 @@ export const agomelatine: Drug = {
   faqs: [
     {
       question: "How long does Agomelatine take to work?",
-      answer: "Sleep benefit night one; mood benefit 2-4 weeks.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Sleep benefit night one; mood benefit 2-4 weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Agomelatine?",
@@ -427,11 +427,11 @@ export const agomelatine: Drug = {
     },
     {
       question: "Can I stop Agomelatine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Agomelatine habit-forming?",
@@ -439,7 +439,7 @@ export const agomelatine: Drug = {
     },
     {
       question: "Can I take Agomelatine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Agomelatine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Agomelatine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -565,7 +565,7 @@ export const agomelatine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Agomelatine",
+      label: "Patient Guide. Agomelatine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -573,13 +573,13 @@ export const agomelatine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The melatonergic antidepressant — MT1/MT2 agonism plus 5-HT2C blockade for sleep-friendly mood lift.",
-    summary: "Agomelatine is a prescription medicine used to treat major depressive disorder. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Agomelatine is an antidepressant that works on the body clock: it mimics the natural sleep hormone melatonin and blocks a serotonin receptor — lifting mood while helping you fall asleep from the very first night, without the sexual or weight side effects of older antidepressants. It is taken at bedtime, and regular blood tests of the liver are a required part of treatment.",
-    sideEffects: "The most common side effects are: headache, nausea and diarrhoea, somnolence or fatigue, dizziness. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hepatotoxicity and Suicidality warning (class). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: lfts (baseline, then weeks 3, 6, 12, and 24 — mandatory); sleep and mood response (at 2-4 weeks). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The melatonergic antidepressant. MT1/MT2 agonism plus 5-HT2C blockade for sleep-friendly mood lift.",
+    summary: "Agomelatine is a prescription medicine used to treat major depressive disorder. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Agomelatine is an antidepressant that works on the body clock: it mimics the natural sleep hormone melatonin and blocks a serotonin receptor, lifting mood while helping you fall asleep from the very first night, without the sexual or weight side effects of older antidepressants. It is taken at bedtime, and regular blood tests of the liver are a required part of treatment.",
+    sideEffects: "The most common side effects are: headache, nausea and diarrhoea, somnolence or fatigue, dizziness. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hepatotoxicity and Suicidality warning (class). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: lfts (baseline, then weeks 3, 6, 12, and 24, mandatory); sleep and mood response (at 2-4 weeks). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Strong CYP1A2 inhibitors (fluvoxamine, ciprofloxacin), Alcohol, Smoking (1A2 induction). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Strong CYP1A2 inhibitors (fluvoxamine, ciprofloxacin), Alcohol, Smoking (1A2 induction). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -603,7 +603,7 @@ export const agomelatine: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -637,7 +637,7 @@ export const agomelatine: Drug = {
         name: "Agomelatine",
         slug: "agomelatine",
         relationship: "This guide",
-        distinguishing: "The circadian antidepressant — sleep-friendly by design",
+        distinguishing: "The circadian antidepressant: sleep-friendly by design",
       },
     ],
   },
@@ -785,7 +785,7 @@ export const agomelatine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Agomelatine in two sentences.",
-      answer: "Agomelatine agonises melatonin receptors (circadian resynchronisation) and blocks 5-HT2C (monoamine disinhibition) — sleep-facilitating antidepressant action. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
+      answer: "Agomelatine agonises melatonin receptors (circadian resynchronisation) and blocks 5-HT2C (monoamine disinhibition), sleep-facilitating antidepressant action. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
       topic: "Mechanism",
     },
     {
@@ -795,17 +795,17 @@ export const agomelatine: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Agomelatine and how you would manage it.",
-      answer: "Hepatotoxicity: Transaminase elevation in ~1-2%; rare severe injury — mandatory LFT monitoring at baseline, 3, 6, 12, 24 weeks. Management: Scheduled LFTs; stop if ≥ 3× ULN.",
+      answer: "Hepatotoxicity: Transaminase elevation in ~1-2%; rare severe injury: mandatory LFT monitoring at baseline, 3, 6, 12, 24 weeks. Management: Scheduled LFTs; stop if ≥ 3× ULN.",
       topic: "Safety",
     },
     {
       question: "What monitoring does a patient on Agomelatine require?",
-      answer: "LFTs (Baseline, then weeks 3, 6, 12, and 24 — mandatory); Sleep and mood response (At 2-4 weeks)",
+      answer: "LFTs (Baseline, then weeks 3, 6, 12, and 24, mandatory); Sleep and mood response (At 2-4 weeks)",
       topic: "Monitoring",
     },
     {
       question: "Share one clinical pearl about Agomelatine that separates safe prescribers from unsafe ones.",
-      answer: "The circadian thesis: resynchronise MT1/MT2 rhythm + disinhibit dopamine/noradrenaline via 5-HT2C blockade — an antidepressant built for the depressed insomniac.",
+      answer: "The circadian thesis: resynchronise MT1/MT2 rhythm + disinhibit dopamine/noradrenaline via 5-HT2C blockade; an antidepressant built for the depressed insomniac.",
       topic: "Clinical Pearls",
     },
   ],
@@ -881,7 +881,7 @@ export const agomelatine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -926,7 +926,7 @@ export const agomelatine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Agomelatine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Agomelatine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -942,7 +942,7 @@ export const agomelatine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Agomelatine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Agomelatine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -987,7 +987,7 @@ export const agomelatine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Agomelatine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Agomelatine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1010,12 +1010,12 @@ export const agomelatine: Drug = {
     ],
     dosageForms: ["Film-coated tablets 25 mg"],
     dosingTips: [
-      "Bedtime dosing — never morning.",
+      "Bedtime dosing, never morning.",
       "The LFT schedule is a prescribing condition.",
       "Sell the sleep-first benefit; the mood follows in weeks.",
     ],
     overdose: [
-      "Overdose with Agomelatine is managed supportively — no specific antidote.",
+      "Overdose with Agomelatine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Agomelatine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1061,16 +1061,16 @@ export const agomelatine: Drug = {
     ],
     primaryTargetSymptoms: ["Depression with insomnia", "Circadian-disrupted depression"],
     pearls: [
-      "The circadian thesis: resynchronise MT1/MT2 rhythm + disinhibit dopamine/noradrenaline via 5-HT2C blockade — an antidepressant built for the depressed insomniac.",
-      "Sleep improves NIGHT ONE — the fastest felt benefit of any antidepressant (not the mood, the sleep).",
-      "The liver schedule is mandatory, not optional: baseline, 3, 6, 12, 24 weeks — the pharmacovigilance discipline that keeps the drug safe.",
-      "No sexual dysfunction, no weight gain, no discontinuation syndrome — the tolerability trinity that differentiates it from SSRIs.",
-      "Bedtime dosing only — it is a chronobiotic wearing an antidepressant coat.",
+      "The circadian thesis: resynchronise MT1/MT2 rhythm + disinhibit dopamine/noradrenaline via 5-HT2C blockade; an antidepressant built for the depressed insomniac.",
+      "Sleep improves NIGHT ONE: the fastest felt benefit of any antidepressant (not the mood, the sleep).",
+      "The liver schedule is mandatory, not optional: baseline, 3, 6, 12, 24 weeks. The pharmacovigilance discipline that keeps the drug safe.",
+      "No sexual dysfunction, no weight gain, no discontinuation syndrome: the tolerability trinity that differentiates it from SSRIs.",
+      "Bedtime dosing only: it is a chronobiotic wearing an antidepressant coat.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

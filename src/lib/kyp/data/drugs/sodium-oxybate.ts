@@ -23,14 +23,14 @@ export const sodiumOxybate: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Specialised Agents", "Narcolepsy Agents", "Sodium Oxybate"],
   /* ---- Hero / summary ---- */
-  tagline: "The narcolepsy wonder and the controlled-substance paradox — GHB medicine for cataplexy.",
-  summary: "Sodium oxybate (gamma-hydroxybutyrate, GHB) is the sodium salt of the endogenous GABA-B agonist: the most effective treatment for cataplexy, excessive daytime sleepiness, and disrupted night-time sleep in narcolepsy — taken as two nightly liquid doses (its 30-minute half-life). Its recreation-drug history (GHB) makes it the most strictly controlled substance in medicine (Schedule X-class everywhere), dispensed only through restricted programmes.",
+  tagline: "The narcolepsy wonder and the controlled-substance paradox. GHB medicine for cataplexy.",
+  summary: "Sodium oxybate (gamma-hydroxybutyrate, GHB) is the sodium salt of the endogenous GABA-B agonist: the most effective treatment for cataplexy, excessive daytime sleepiness, and disrupted night-time sleep in narcolepsy; taken as two nightly liquid doses (its 30-minute half-life). Its recreation-drug history (GHB) makes it the most strictly controlled substance in medicine (Schedule X-class everywhere), dispensed only through restricted programmes.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Sodium Oxybate — from its molecular target (GABA-B receptors (agonist) + GHB receptors; night-time sodium oxybate consolidates sleep architecture) to clinical effect.",
+    "Explain the mechanism of action of Sodium Oxybate, from its molecular target (GABA-B receptors (agonist) + GHB receptors; night-time sodium oxybate consolidates sleep architecture) to clinical effect.",
     "List the FDA-approved and off-label uses of Sodium Oxybate.",
     "Predict the common and serious side effects of Sodium Oxybate from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Sodium Oxybate.",
@@ -38,15 +38,15 @@ export const sodiumOxybate: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Sodium oxybate is exogenous GHB — agonising GABA-B (and GHB) receptors to consolidate fragmented narcoleptic night sleep, which secondarily reduces cataplexy and daytime sleepiness.",
+    summary: "Sodium oxybate is exogenous GHB, agonising GABA-B (and GHB) receptors to consolidate fragmented narcoleptic night sleep, which secondarily reduces cataplexy and daytime sleepiness.",
     molecularTarget: "GABA-B receptors (agonist) + GHB receptors; night-time sodium oxybate consolidates sleep architecture",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Sodium oxybate is exogenous GHB — agonising GABA-B (and GHB) receptors to consolidate fragmented narcoleptic night sleep, which secondarily reduces cataplexy and daytime sleepiness.",
+      "Sodium oxybate is exogenous GHB, agonising GABA-B (and GHB) receptors to consolidate fragmented narcoleptic night sleep, which secondarily reduces cataplexy and daytime sleepiness.",
       "The mechanism translates into the clinical profile described.",
       "Practical use follows half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 30-60 minutes. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 30-60 minutes. See mechanism and prescriber sections.",
     halfLife: "30-60 minutes.",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -108,7 +108,7 @@ export const sodiumOxybate: Drug = {
         label: "inhibits firing",
       },
     ],
-    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly — which is why their effect is powerful but limited by dependence risk.",
+    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly, which is why their effect is powerful but limited by dependence risk.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["GABA"],
@@ -120,7 +120,7 @@ export const sodiumOxybate: Drug = {
     {
       name: "Narcolepsy with cataplexy",
       status: "fda-approved",
-      description: "The most effective cataplexy therapy — often transforming the lives of heavily cataplectic patients.",
+      description: "The most effective cataplexy therapy: often transforming the lives of heavily cataplectic patients.",
     },
     {
       name: "Excessive daytime sleepiness in narcolepsy",
@@ -152,13 +152,13 @@ export const sodiumOxybate: Drug = {
     {
       name: "Alcohol, benzodiazepines, opioids, and all CNS depressants",
       severity: "absolute",
-      rationale: "Respiratory depression — the catastrophic combination.",
+      rationale: "Respiratory depression: the catastrophic combination.",
     },
   ],
   blackBoxWarnings: [
     {
       title: "CNS depressant combinations and misuse potential",
-      text: "Sodium oxybate causes respiratory depression when combined with alcohol, benzodiazepines, or opioids — potentially fatal. Misuse and diversion risks require restricted-programme dispensing.",
+      text: "Sodium oxybate causes respiratory depression when combined with alcohol, benzodiazepines, or opioids: potentially fatal. Misuse and diversion risks require restricted-programme dispensing.",
     },
   ],
   /* ---- Side effects ---- */
@@ -167,7 +167,7 @@ export const sodiumOxybate: Drug = {
       name: "Nausea",
       frequency: "common",
       severity: "mild",
-      description: "The commonest effect — often transient.",
+      description: "The commonest effect: often transient.",
       management: "Take with food interval separation; antiemetic.",
     },
     {
@@ -195,7 +195,7 @@ export const sodiumOxybate: Drug = {
       name: "Sodium load (Xyrem)",
       frequency: "common",
       severity: "moderate",
-      description: "Significant nightly sodium — Xywav reduced-sodium alternative.",
+      description: "Significant nightly sodium. Xywav reduced-sodium alternative.",
       management: "BP review; heart-failure caution.",
     },
   ],
@@ -204,14 +204,14 @@ export const sodiumOxybate: Drug = {
       name: "Respiratory depression (with alcohol, benzodiazepines, opioids)",
       frequency: "uncommon",
       severity: "life-threatening",
-      description: "The controlled-substance core danger — CNS-depressant combinations.",
+      description: "The controlled-substance core danger. CNS-depressant combinations.",
       management: "Absolute contraindication counselling; medical-alert documentation.",
     },
     {
       name: "Misuse, dependence, and diversion",
       frequency: "uncommon",
       severity: "severe",
-      description: "GHB's recreation history — the restricted-programme rationale.",
+      description: "GHB's recreation history: the restricted-programme rationale.",
       management: "Programme dispensing only; secure storage.",
     },
     {
@@ -244,7 +244,7 @@ export const sodiumOxybate: Drug = {
     {
       drug: "Alcohol, benzodiazepines, opioids, and all CNS depressants",
       severity: "contraindicated",
-      mechanism: "Respiratory depression — the catastrophic combination.",
+      mechanism: "Respiratory depression: the catastrophic combination.",
       action: "Absolute prohibition counselling.",
     },
     {
@@ -261,27 +261,27 @@ export const sodiumOxybate: Drug = {
   renalAdjustment: "Standard caution in significant impairment.",
   hepaticAdjustment: "Reduce dose (major hepatic metabolism and first-pass).",
   /* ---- Education ---- */
-  patientExplanation: "Sodium oxybate is the most effective medicine for narcolepsy with cataplexy — taken as a liquid in two doses during the night (one at bedtime, one when an alarm wakes you 2-4 hours later). It consolidates the broken night sleep of narcolepsy, which powerfully reduces collapse attacks and daytime sleepiness. It is very strictly controlled (it is related to a misused street drug), so it comes only through special programmes — and it must NEVER be combined with alcohol, sleeping tablets, or opioid painkillers, because the combination can stop breathing.",
+  patientExplanation: "Sodium oxybate is the most effective medicine for narcolepsy with cataplexy: taken as a liquid in two doses during the night (one at bedtime, one when an alarm wakes you 2-4 hours later). It consolidates the broken night sleep of narcolepsy, which powerfully reduces collapse attacks and daytime sleepiness. It is very strictly controlled (it is related to a misused street drug), so it comes only through special programmes, and it must NEVER be combined with alcohol, sleeping tablets, or opioid painkillers, because the combination can stop breathing.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Sodium Oxybate builds over weeks — do not judge it in the first days.",
+    "Benefit from Sodium Oxybate builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The two-alarm ritual: dose one in bed, set an alarm for 2.5-4 hours later, dose two in bed — the dosing architecture IS the safety system.",
-    "The night-to-day paradox: a night-sleep sedative that reduces DAYTIME sleepiness and cataplexy — consolidating narcoleptic sleep architecture transforms the disease.",
-    "The controlled-substance summit: heroin-class scheduling with medical-programme access — the tightest distribution in pharmacotherapy (REMS-era pipeline).",
-    "The sodium arithmetic: Xyrem carries a real nightly sodium load — heart-failure and hypertension patients need the Xywav low-sodium version.",
-    "The alcohol/benzo absolute: the respiratory-depression combinations are the catastrophic scenario — counselling and alert documentation.",
+    "The two-alarm ritual: dose one in bed, set an alarm for 2.5-4 hours later, dose two in bed: the dosing architecture IS the safety system.",
+    "The night-to-day paradox: a night-sleep sedative that reduces DAYTIME sleepiness and cataplexy, consolidating narcoleptic sleep architecture transforms the disease.",
+    "The controlled-substance summit: heroin-class scheduling with medical-programme access; the tightest distribution in pharmacotherapy (REMS-era pipeline).",
+    "The sodium arithmetic: Xyrem carries a real nightly sodium load; heart-failure and hypertension patients need the Xywav low-sodium version.",
+    "The alcohol/benzo absolute: the respiratory-depression combinations are the catastrophic scenario; counselling and alert documentation.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Sodium Oxybate: Sodium oxybate is exogenous GHB — agonising GABA-B (and GHB) receptors to consolidate fragmented narcoleptic night sleep, which secondarily reduces cataplexy and daytime sleepiness.",
+        "Mechanism of Sodium Oxybate: Sodium oxybate is exogenous GHB, agonising GABA-B (and GHB) receptors to consolidate fragmented narcoleptic night sleep, which secondarily reduces cataplexy and daytime sleepiness.",
         "Uses of Sodium Oxybate: Narcolepsy with cataplexy; Excessive daytime sleepiness in narcolepsy; Idiopathic hypersomnia (some regions); Alcohol-withdrawal syndrome (historic)",
-        "Identity: sodium oxybate = medical GHB — GABA-B agonist.",
+        "Identity: sodium oxybate = medical GHB. GABA-B agonist.",
         "Indications: cataplexy + EDS in narcolepsy (the most effective cataplexy therapy).",
       ],
       practical: [
@@ -289,17 +289,17 @@ export const sodiumOxybate: Drug = {
         "Outline the monitoring plan: Cataplexy frequency and sleepiness scores (Every review); Sodium load and blood pressure (Xyrem) (At review); Programme compliance and storage (Every dispensing cycle)",
       ],
       longAnswer: [
-        "Sodium Oxybate: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Identity: sodium oxybate = medical GHB — GABA-B agonist.",
+        "Sodium Oxybate: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Identity: sodium oxybate = medical GHB. GABA-B agonist.",
         "Indications: cataplexy + EDS in narcolepsy (the most effective cataplexy therapy).",
       ],
     },
     neetPg: {
       highYield: [
-        "Identity: sodium oxybate = medical GHB — GABA-B agonist.",
+        "Identity: sodium oxybate = medical GHB. GABA-B agonist.",
         "Indications: cataplexy + EDS in narcolepsy (the most effective cataplexy therapy).",
         "Dosing: TWO nightly doses 2.5-4 h apart (short half-life, in-bed administration).",
-        "Controls: maximum-schedule (X-class/REMS programmes) — misuse history.",
+        "Controls: maximum-schedule (X-class/REMS programmes); misuse history.",
         "Absolute contraindications: alcohol, benzodiazepines, opioids (respiratory depression).",
         "Sodium load consideration (Xywav low-sodium alternative).",
       ],
@@ -311,7 +311,7 @@ export const sodiumOxybate: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Sodium Oxybate develops respiratory depression (with alcohol, benzodiazepines, opioids) — next best step?",
+        "A patient on Sodium Oxybate develops respiratory depression (with alcohol, benzodiazepines, opioids): next best step?",
         "When to choose Sodium Oxybate over alternatives in its class.",
       ],
     },
@@ -324,19 +324,19 @@ export const sodiumOxybate: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The two-alarm ritual: dose one in bed, set an alarm for 2.5-4 hours later, dose two in bed — the dosing architecture IS the safety system.",
-        "The night-to-day paradox: a night-sleep sedative that reduces DAYTIME sleepiness and cataplexy — consolidating narcoleptic sleep architecture transforms the disease.",
-        "The controlled-substance summit: heroin-class scheduling with medical-programme access — the tightest distribution in pharmacotherapy (REMS-era pipeline).",
-        "The sodium arithmetic: Xyrem carries a real nightly sodium load — heart-failure and hypertension patients need the Xywav low-sodium version.",
+        "The two-alarm ritual: dose one in bed, set an alarm for 2.5-4 hours later, dose two in bed: the dosing architecture IS the safety system.",
+        "The night-to-day paradox: a night-sleep sedative that reduces DAYTIME sleepiness and cataplexy, consolidating narcoleptic sleep architecture transforms the disease.",
+        "The controlled-substance summit: heroin-class scheduling with medical-programme access; the tightest distribution in pharmacotherapy (REMS-era pipeline).",
+        "The sodium arithmetic: Xyrem carries a real nightly sodium load; heart-failure and hypertension patients need the Xywav low-sodium version.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Identity: sodium oxybate = medical GHB — GABA-B agonist.",
+    "Identity: sodium oxybate = medical GHB. GABA-B agonist.",
     "Indications: cataplexy + EDS in narcolepsy (the most effective cataplexy therapy).",
     "Dosing: TWO nightly doses 2.5-4 h apart (short half-life, in-bed administration).",
-    "Controls: maximum-schedule (X-class/REMS programmes) — misuse history.",
+    "Controls: maximum-schedule (X-class/REMS programmes); misuse history.",
     "Absolute contraindications: alcohol, benzodiazepines, opioids (respiratory depression).",
     "Sodium load consideration (Xywav low-sodium alternative).",
     "Mechanistic paradox: night sedation that improves daytime sleepiness.",
@@ -344,7 +344,7 @@ export const sodiumOxybate: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — narcolepsy with cataplexy",
+      title: "First presentation: narcolepsy with cataplexy",
       presentation: "A patient presenting with narcolepsy with cataplexy, started on Sodium Oxybate.",
       history: "A adult patient presents with a narcolepsy with cataplexy picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with narcolepsy with cataplexy; physical examination and baseline investigations are unremarkable.",
@@ -353,7 +353,7 @@ export const sodiumOxybate: Drug = {
       management: "Started at 2.25 g at bedtime (in bed), titrated to 4.5-6 g/night (split) with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Sodium Oxybate takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Sodium Oxybate takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -362,7 +362,7 @@ export const sodiumOxybate: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Sodium Oxybate vs related agents — orientation table",
+      title: "Sodium Oxybate vs related agents: orientation table",
       primaryDrug: "Sodium Oxybate",
       rows: [
         {
@@ -397,7 +397,7 @@ export const sodiumOxybate: Drug = {
         },
         {
           attribute: "Clinical niche",
-          primaryValue: "The cataplexy gold standard — GHB as medicine under maximum control",
+          primaryValue: "The cataplexy gold standard. GHB as medicine under maximum control",
           comparisons: [
             {
               drug: "Sodium Oxybate",
@@ -406,7 +406,7 @@ export const sodiumOxybate: Drug = {
           ],
         },
       ],
-      takeaway: "Sodium Oxybate is compared here with related agents for orientation. Full comparison data lives in each drug's own guide — follow the links for the complete picture.",
+      takeaway: "Sodium Oxybate is compared here with related agents for orientation. Full comparison data lives in each drug's own guide: follow the links for the complete picture.",
     },
   ],
   /* ---- Timeline ---- */
@@ -415,7 +415,7 @@ export const sodiumOxybate: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Sodium Oxybate reaches peak plasma concentration and begins acting at its molecular target (GABA-B receptors (agonist) + GHB receptors; night-time sodium oxybate consolidates sleep architecture). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Sodium Oxybate reaches peak plasma concentration and begins acting at its molecular target (GABA-B receptors (agonist) + GHB receptors; night-time sodium oxybate consolidates sleep architecture). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -451,7 +451,7 @@ export const sodiumOxybate: Drug = {
   faqs: [
     {
       question: "How long does Sodium Oxybate take to work?",
-      answer: "Night-sleep effects immediately; cataplexy reduction over weeks.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Night-sleep effects immediately; cataplexy reduction over weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Sodium Oxybate?",
@@ -459,19 +459,19 @@ export const sodiumOxybate: Drug = {
     },
     {
       question: "Can I stop Sodium Oxybate suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Sodium Oxybate habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Sodium Oxybate exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Sodium Oxybate exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Sodium Oxybate during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Sodium Oxybate may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Sodium Oxybate may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -602,7 +602,7 @@ export const sodiumOxybate: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Sodium Oxybate",
+      label: "Patient Guide. Sodium Oxybate",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -610,13 +610,13 @@ export const sodiumOxybate: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The narcolepsy wonder and the controlled-substance paradox — GHB medicine for cataplexy.",
-    summary: "Sodium Oxybate is a prescription medicine used to treat narcolepsy with cataplexy. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Sodium oxybate is the most effective medicine for narcolepsy with cataplexy — taken as a liquid in two doses during the night (one at bedtime, one when an alarm wakes you 2-4 hours later). It consolidates the broken night sleep of narcolepsy, which powerfully reduces collapse attacks and daytime sleepiness. It is very strictly controlled (it is related to a misused street drug), so it comes only through special programmes — and it must NEVER be combined with alcohol, sleeping tablets, or opioid painkillers, because the combination can stop breathing.",
-    sideEffects: "The most common side effects are: nausea, dizziness and headache, night-time confusion/wandering, enuresis, sodium load (xyrem). These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression (with alcohol, benzodiazepines, opioids) and Misuse, dependence, and diversion. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: cataplexy frequency and sleepiness scores (every review); sodium load and blood pressure (xyrem) (at review); programme compliance and storage (every dispensing cycle). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The narcolepsy wonder and the controlled-substance paradox. GHB medicine for cataplexy.",
+    summary: "Sodium Oxybate is a prescription medicine used to treat narcolepsy with cataplexy. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Sodium oxybate is the most effective medicine for narcolepsy with cataplexy: taken as a liquid in two doses during the night (one at bedtime, one when an alarm wakes you 2-4 hours later). It consolidates the broken night sleep of narcolepsy, which powerfully reduces collapse attacks and daytime sleepiness. It is very strictly controlled (it is related to a misused street drug), so it comes only through special programmes, and it must NEVER be combined with alcohol, sleeping tablets, or opioid painkillers, because the combination can stop breathing.",
+    sideEffects: "The most common side effects are: nausea, dizziness and headache, night-time confusion/wandering, enuresis, sodium load (xyrem). These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression (with alcohol, benzodiazepines, opioids) and Misuse, dependence, and diversion. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: cataplexy frequency and sleepiness scores (every review); sodium load and blood pressure (xyrem) (at review); programme compliance and storage (every dispensing cycle). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Alcohol, benzodiazepines, opioids, and all CNS depressants, Other sleep-promoting agents. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Alcohol, benzodiazepines, opioids, and all CNS depressants, Other sleep-promoting agents. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -630,7 +630,7 @@ export const sodiumOxybate: Drug = {
     ],
     typicalDoses: "2.25 g × 2 nightly doses (in-bed).",
     prescribingScenarios: [
-      "Narcolepsy programmes at tertiary sleep centres — access through exception/programme routes only.",
+      "Narcolepsy programmes at tertiary sleep centres: access through exception/programme routes only.",
     ],
     availability: {
       governmentHospitals: false,
@@ -678,7 +678,7 @@ export const sodiumOxybate: Drug = {
         name: "Sodium Oxybate",
         slug: "sodium-oxybate",
         relationship: "This guide",
-        distinguishing: "The cataplexy gold standard — GHB as medicine under maximum control",
+        distinguishing: "The cataplexy gold standard. GHB as medicine under maximum control",
       },
     ],
   },
@@ -826,7 +826,7 @@ export const sodiumOxybate: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Sodium Oxybate in two sentences.",
-      answer: "Sodium oxybate is exogenous GHB — agonising GABA-B (and GHB) receptors to consolidate fragmented narcoleptic night sleep, which secondarily reduces cataplexy and daytime sleepiness. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Sodium oxybate is exogenous GHB, agonising GABA-B (and GHB) receptors to consolidate fragmented narcoleptic night sleep, which secondarily reduces cataplexy and daytime sleepiness. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -836,7 +836,7 @@ export const sodiumOxybate: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Sodium Oxybate and how you would manage it.",
-      answer: "Respiratory depression (with alcohol, benzodiazepines, opioids): The controlled-substance core danger — CNS-depressant combinations. Management: Absolute contraindication counselling; medical-alert documentation.",
+      answer: "Respiratory depression (with alcohol, benzodiazepines, opioids): The controlled-substance core danger. CNS-depressant combinations. Management: Absolute contraindication counselling; medical-alert documentation.",
       topic: "Safety",
     },
     {
@@ -846,7 +846,7 @@ export const sodiumOxybate: Drug = {
     },
     {
       question: "Share one clinical pearl about Sodium Oxybate that separates safe prescribers from unsafe ones.",
-      answer: "The two-alarm ritual: dose one in bed, set an alarm for 2.5-4 hours later, dose two in bed — the dosing architecture IS the safety system.",
+      answer: "The two-alarm ritual: dose one in bed, set an alarm for 2.5-4 hours later, dose two in bed: the dosing architecture IS the safety system.",
       topic: "Clinical Pearls",
     },
   ],
@@ -922,7 +922,7 @@ export const sodiumOxybate: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -967,7 +967,7 @@ export const sodiumOxybate: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Sodium Oxybate works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Sodium Oxybate works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -983,7 +983,7 @@ export const sodiumOxybate: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Sodium Oxybate safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Sodium Oxybate safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1028,7 +1028,7 @@ export const sodiumOxybate: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Sodium Oxybate follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Sodium Oxybate follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1060,11 +1060,11 @@ export const sodiumOxybate: Drug = {
       "Alert documentation for every emergency presentation.",
     ],
     overdose: [
-      "Overdose with Sodium Oxybate is managed supportively — no specific antidote.",
+      "Overdose with Sodium Oxybate is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Sodium Oxybate is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1107,16 +1107,16 @@ export const sodiumOxybate: Drug = {
       "Fragmented narcoleptic night sleep",
     ],
     pearls: [
-      "The two-alarm ritual: dose one in bed, set an alarm for 2.5-4 hours later, dose two in bed — the dosing architecture IS the safety system.",
-      "The night-to-day paradox: a night-sleep sedative that reduces DAYTIME sleepiness and cataplexy — consolidating narcoleptic sleep architecture transforms the disease.",
-      "The controlled-substance summit: heroin-class scheduling with medical-programme access — the tightest distribution in pharmacotherapy (REMS-era pipeline).",
-      "The sodium arithmetic: Xyrem carries a real nightly sodium load — heart-failure and hypertension patients need the Xywav low-sodium version.",
-      "The alcohol/benzo absolute: the respiratory-depression combinations are the catastrophic scenario — counselling and alert documentation.",
+      "The two-alarm ritual: dose one in bed, set an alarm for 2.5-4 hours later, dose two in bed: the dosing architecture IS the safety system.",
+      "The night-to-day paradox: a night-sleep sedative that reduces DAYTIME sleepiness and cataplexy, consolidating narcoleptic sleep architecture transforms the disease.",
+      "The controlled-substance summit: heroin-class scheduling with medical-programme access; the tightest distribution in pharmacotherapy (REMS-era pipeline).",
+      "The sodium arithmetic: Xyrem carries a real nightly sodium load; heart-failure and hypertension patients need the Xywav low-sodium version.",
+      "The alcohol/benzo absolute: the respiratory-depression combinations are the catastrophic scenario; counselling and alert documentation.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

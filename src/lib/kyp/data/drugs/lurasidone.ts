@@ -23,14 +23,14 @@ export const lurasidone: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Atypical Antipsychotics", "Lurasidone"],
   /* ---- Hero / summary ---- */
-  tagline: "The metabolically clean bipolar-depression antipsychotic — 5-HT7-powered efficacy without the weight bill.",
-  summary: "Lurasidone is a benzisothiazol atypical antipsychotic with strong D2 and 5-HT2A binding plus distinctive 5-HT7 and 5-HT1A activity. It is FDA-approved for schizophrenia and — its signature niche — bipolar depression as monotherapy and adjunct, with the cleanest metabolic profile in the class alongside aripiprazole and ziprasidone. It must be taken with food (≥ 350 kcal) for adequate absorption, and dose-related akathisia is its main burden.",
+  tagline: "The metabolically clean bipolar-depression antipsychotic: 5-HT7-powered efficacy without the weight bill.",
+  summary: "Lurasidone is a benzisothiazol atypical antipsychotic with strong D2 and 5-HT2A binding plus distinctive 5-HT7 and 5-HT1A activity. It is FDA-approved for schizophrenia and (its signature niche) bipolar depression as monotherapy and adjunct, with the cleanest metabolic profile in the class alongside aripiprazole and ziprasidone. It must be taken with food (≥ 350 kcal) for adequate absorption, and dose-related akathisia is its main burden.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Lurasidone — from its molecular target (D2 (antagonist); 5-HT2A (antagonist); 5-HT7 (antagonist); 5-HT1A (partial agonist)) to clinical effect.",
+    "Explain the mechanism of action of Lurasidone, from its molecular target (D2 (antagonist); 5-HT2A (antagonist); 5-HT7 (antagonist); 5-HT1A (partial agonist)) to clinical effect.",
     "List the FDA-approved and off-label uses of Lurasidone.",
     "Predict the common and serious side effects of Lurasidone from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Lurasidone.",
@@ -40,16 +40,16 @@ export const lurasidone: Drug = {
   mechanism: {
     summary: "Lurasidone blocks D2 and 5-HT2A receptors and antagonises 5-HT7 receptors (a mechanism linked to antidepressant and cognitive effects), with 5-HT1A partial agonism.",
     molecularTarget: "D2 (antagonist); 5-HT2A (antagonist); 5-HT7 (antagonist); 5-HT1A (partial agonist)",
-    effect: "Antipsychotic and antidepressant efficacy with minimal histaminic and muscarinic binding — little weight gain or sedation.",
+    effect: "Antipsychotic and antidepressant efficacy with minimal histaminic and muscarinic binding: little weight gain or sedation.",
     steps: [
       "D2 blockade treats positive symptoms; 5-HT2A antagonism protects the motor system as in other atypicals.",
-      "5-HT7 antagonism is distinctive — linked in preclinical work to antidepressant and pro-cognitive effects, plausibly underpinning its bipolar-depression efficacy.",
+      "5-HT7 antagonism is distinctive: linked in preclinical work to antidepressant and pro-cognitive effects, plausibly underpinning its bipolar-depression efficacy.",
       "5-HT1A partial agonism adds serotonergic modulation.",
       "Negligible H1, M1, and 5-HT2C binding explains the near-absent weight gain and sedation.",
     ],
-    pharmacokinetics: "Absorption rises ~2-fold with food — must be taken with an evening meal of at least 350 kcal; without food, levels are inadequate.",
+    pharmacokinetics: "Absorption rises ~2-fold with food: must be taken with an evening meal of at least 350 kcal; without food, levels are inadequate.",
     halfLife: "18 hours.",
-    metabolism: "Hepatic CYP3A4 exclusively — strong inhibitors and inducers are contraindicated.",
+    metabolism: "Hepatic CYP3A4 exclusively: strong inhibitors and inducers are contraindicated.",
     excretion: "Predominantly hepatic elimination of metabolites.",
   },
   /* ---- Mechanism visual flow ---- */
@@ -127,7 +127,7 @@ export const lurasidone: Drug = {
         label: "5-HT2A-mediated benefit",
       },
     ],
-    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms — the serotonin-dopamine hypothesis of atypical antipsychotics.",
+    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms: the serotonin-dopamine hypothesis of atypical antipsychotics.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Dopamine (DA)", "Serotonin (5-HT)"],
@@ -145,7 +145,7 @@ export const lurasidone: Drug = {
     {
       name: "Bipolar I depression",
       status: "fda-approved",
-      description: "Monotherapy (20–120 mg) and adjunct to lithium/valproate — a signature indication alongside quetiapine.",
+      description: "Monotherapy (20–120 mg) and adjunct to lithium/valproate: a signature indication alongside quetiapine.",
       ageGroup: "Adults",
     },
     {
@@ -173,7 +173,7 @@ export const lurasidone: Drug = {
       name: "Akathisia",
       frequency: "common",
       severity: "moderate",
-      description: "Dose-related restlessness — the most common reason for discontinuation, especially at higher doses.",
+      description: "Dose-related restlessness: the most common reason for discontinuation, especially at higher doses.",
       management: "Dose reduction; propranolol; timing change.",
     },
     {
@@ -210,7 +210,7 @@ export const lurasidone: Drug = {
       name: "Neuroleptic malignant syndrome",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Class risk — rigidity, fever, autonomic instability.",
+      description: "Class risk: rigidity, fever, autonomic instability.",
       management: "Stop; ICU care.",
     },
     {
@@ -226,7 +226,7 @@ export const lurasidone: Drug = {
     {
       parameter: "Weight and BMI",
       frequency: "Baseline, then at 4, 8, 12 weeks and quarterly",
-      rationale: "Class metabolic risk — early trajectory detection.",
+      rationale: "Class metabolic risk: early trajectory detection.",
     },
     {
       parameter: "Fasting glucose / HbA1c",
@@ -241,7 +241,7 @@ export const lurasidone: Drug = {
     {
       parameter: "Blood pressure (orthostatic)",
       frequency: "Baseline and during titration",
-      rationale: "Alpha-1 blockade — orthostasis risk.",
+      rationale: "Alpha-1 blockade: orthostasis risk.",
     },
     {
       parameter: "AIMS examination",
@@ -270,25 +270,25 @@ export const lurasidone: Drug = {
     },
   ],
   pregnancy: {
-    summary: "Limited human data; no teratogenic signal established. Standard antipsychotic pregnancy logic applies — continue if needed for illness control, with obstetric co-management and third-trimester neonatal monitoring.",
-    lactation: "Unknown milk transfer (limited data) — most guidelines advise caution; monitor the infant if used.",
+    summary: "Limited human data; no teratogenic signal established. Standard antipsychotic pregnancy logic applies: continue if needed for illness control, with obstetric co-management and third-trimester neonatal monitoring.",
+    lactation: "Unknown milk transfer (limited data), most guidelines advise caution; monitor the infant if used.",
   },
   renalAdjustment: "Reduce dose for CrCl 10–50 mL/min (do not exceed 40 mg/day); not studied below CrCl 10.",
   hepaticAdjustment: "Reduce dose in moderate impairment (max 40 mg/day); contraindicated in severe hepatic impairment.",
   /* ---- Education ---- */
-  patientExplanation: "Lurasidone works on dopamine and serotonin systems to treat psychosis and, uniquely among many antipsychotics, the depressed phase of bipolar disorder — without the weight gain that similar medicines cause. It must be taken with your evening meal (a proper meal, not a snack) for the body to absorb it properly.",
+  patientExplanation: "Lurasidone works on dopamine and serotonin systems to treat psychosis and, uniquely among many antipsychotics, the depressed phase of bipolar disorder, without the weight gain that similar medicines cause. It must be taken with your evening meal (a proper meal, not a snack) for the body to absorb it properly.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Lurasidone builds over weeks — do not judge it in the first days.",
+    "Benefit from Lurasidone builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "Food is pharmacology: lurasidone without a ≥ 350 kcal meal can be half-absorbed — 'take with dinner' is part of the prescription.",
-    "Best-in-class metabolic profile with aripiprazole and ziprasidone — the go-to when weight or diabetes dominates drug choice.",
-    "Bipolar depression: lurasidone and quetiapine are the leading monotherapies — lurasidone when metabolic risk excludes quetiapine.",
-    "Akathisia is the main tolerability tax — warn, watch, and treat early.",
+    "Food is pharmacology: lurasidone without a ≥ 350 kcal meal can be half-absorbed: 'take with dinner' is part of the prescription.",
+    "Best-in-class metabolic profile with aripiprazole and ziprasidone: the go-to when weight or diabetes dominates drug choice.",
+    "Bipolar depression: lurasidone and quetiapine are the leading monotherapies; lurasidone when metabolic risk excludes quetiapine.",
+    "Akathisia is the main tolerability tax. Warn, watch, and treat early.",
     "3A4-only metabolism: ketoconazole and rifampicin combinations are contraindicated, not just cautioned.",
   ],
   examLens: {
@@ -304,7 +304,7 @@ export const lurasidone: Drug = {
         "Outline the monitoring plan: Weight and BMI (Baseline, then at 4, 8, 12 weeks and quarterly); Fasting glucose / HbA1c (Baseline, 12 weeks, then annually); Lipid profile (fasting) (Baseline, 12 weeks, then annually)",
       ],
       longAnswer: [
-        "Lurasidone: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Lurasidone: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: D2 + 5-HT2A antagonist with distinctive 5-HT7 antagonism (antidepressant/pro-cognitive).",
         "Signature: bipolar depression (mono + adjunct) with the cleanest metabolic profile in class.",
       ],
@@ -313,8 +313,8 @@ export const lurasidone: Drug = {
       highYield: [
         "Mechanism: D2 + 5-HT2A antagonist with distinctive 5-HT7 antagonism (antidepressant/pro-cognitive).",
         "Signature: bipolar depression (mono + adjunct) with the cleanest metabolic profile in class.",
-        "Food effect: take with ≥ 350 kcal meal — without food, absorption is roughly halved.",
-        "CYP3A4 exclusively — strong inhibitors/inducers contraindicated.",
+        "Food effect: take with ≥ 350 kcal meal, without food, absorption is roughly halved.",
+        "CYP3A4 exclusively: strong inhibitors/inducers contraindicated.",
         "Main adverse effect: dose-related akathisia.",
         "Dose: schizophrenia 40–160 mg; bipolar depression 20–120 mg once daily with evening meal.",
       ],
@@ -322,7 +322,7 @@ export const lurasidone: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Lurasidone develops tardive dyskinesia — next best step?",
+        "A patient on Lurasidone develops tardive dyskinesia: next best step?",
         "When to choose Lurasidone over alternatives in its class.",
       ],
     },
@@ -336,8 +336,8 @@ export const lurasidone: Drug = {
     psychiatryResidency: {
       advancedPearls: [
         "Food is pharmacology: a ≥ 350 kcal evening meal is part of the prescription.",
-        "Bipolar depression with metabolic risk — the single clearest indication for lurasidone.",
-        "Akathisia is the tolerability tax — warn at initiation.",
+        "Bipolar depression with metabolic risk: the single clearest indication for lurasidone.",
+        "Akathisia is the tolerability tax. Warn at initiation.",
         "3A4-only metabolism: ketoconazole and rifampicin are contraindicated.",
       ],
     },
@@ -346,15 +346,15 @@ export const lurasidone: Drug = {
   highYieldSummary: [
     "Mechanism: D2 + 5-HT2A antagonist with distinctive 5-HT7 antagonism (antidepressant/pro-cognitive).",
     "Signature: bipolar depression (mono + adjunct) with the cleanest metabolic profile in class.",
-    "Food effect: take with ≥ 350 kcal meal — without food, absorption is roughly halved.",
-    "CYP3A4 exclusively — strong inhibitors/inducers contraindicated.",
+    "Food effect: take with ≥ 350 kcal meal, without food, absorption is roughly halved.",
+    "CYP3A4 exclusively: strong inhibitors/inducers contraindicated.",
     "Main adverse effect: dose-related akathisia.",
     "Dose: schizophrenia 40–160 mg; bipolar depression 20–120 mg once daily with evening meal.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia",
+      title: "First presentation: schizophrenia",
       presentation: "A patient presenting with schizophrenia, started on Lurasidone.",
       history: "A adult patient presents with a schizophrenia picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with schizophrenia; physical examination and baseline investigations are unremarkable.",
@@ -363,7 +363,7 @@ export const lurasidone: Drug = {
       management: "Started at 40 mg once daily with evening meal, titrated to 40–160 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Lurasidone takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Lurasidone takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -372,7 +372,7 @@ export const lurasidone: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Atypical Antipsychotic comparison — choosing within the class",
+      title: "Atypical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Lurasidone",
       rows: [
         {
@@ -443,7 +443,7 @@ export const lurasidone: Drug = {
         },
         {
           attribute: "Sedation",
-          primaryValue: "Low — may be mildly activating.",
+          primaryValue: "Low: may be mildly activating.",
           comparisons: [
             {
               drug: "Aripiprazole",
@@ -465,7 +465,7 @@ export const lurasidone: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+          primaryValue: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
           comparisons: [
             {
               drug: "Aripiprazole",
@@ -486,7 +486,7 @@ export const lurasidone: Drug = {
           ],
         },
       ],
-      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -495,7 +495,7 @@ export const lurasidone: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Lurasidone reaches peak plasma concentration and begins acting at its molecular target (D2 (antagonist); 5-HT2A (antagonist); 5-HT7 (antagonist); 5-HT1A (partial agonist)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Lurasidone reaches peak plasma concentration and begins acting at its molecular target (D2 (antagonist); 5-HT2A (antagonist); 5-HT7 (antagonist); 5-HT1A (partial agonist)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -531,7 +531,7 @@ export const lurasidone: Drug = {
   faqs: [
     {
       question: "How long does Lurasidone take to work?",
-      answer: "Schizophrenia: 1–3 weeks for measurable improvement.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Schizophrenia: 1–3 weeks for measurable improvement.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Lurasidone?",
@@ -539,11 +539,11 @@ export const lurasidone: Drug = {
     },
     {
       question: "Can I stop Lurasidone suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Lurasidone habit-forming?",
@@ -551,7 +551,7 @@ export const lurasidone: Drug = {
     },
     {
       question: "Can I take Lurasidone during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Lurasidone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Lurasidone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -729,7 +729,7 @@ export const lurasidone: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Lurasidone",
+      label: "Patient Guide. Lurasidone",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -737,13 +737,13 @@ export const lurasidone: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The metabolically clean bipolar-depression antipsychotic — 5-HT7-powered efficacy without the weight bill.",
-    summary: "Lurasidone is a prescription medicine used to treat schizophrenia. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Lurasidone works on dopamine and serotonin systems to treat psychosis and, uniquely among many antipsychotics, the depressed phase of bipolar disorder — without the weight gain that similar medicines cause. It must be taken with your evening meal (a proper meal, not a snack) for the body to absorb it properly.",
-    sideEffects: "The most common side effects are: akathisia, nausea and somnolence, insomnia or agitation, parkinsonism. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Tardive dyskinesia and Neuroleptic malignant syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and bmi (baseline, then at 4, 8, 12 weeks and quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually); lipid profile (fasting) (baseline, 12 weeks, then annually). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The metabolically clean bipolar-depression antipsychotic: 5-HT7-powered efficacy without the weight bill.",
+    summary: "Lurasidone is a prescription medicine used to treat schizophrenia. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Lurasidone works on dopamine and serotonin systems to treat psychosis and, uniquely among many antipsychotics, the depressed phase of bipolar disorder, without the weight gain that similar medicines cause. It must be taken with your evening meal (a proper meal, not a snack) for the body to absorb it properly.",
+    sideEffects: "The most common side effects are: akathisia, nausea and somnolence, insomnia or agitation, parkinsonism. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Tardive dyskinesia and Neuroleptic malignant syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and bmi (baseline, then at 4, 8, 12 weeks and quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually); lipid profile (fasting) (baseline, 12 weeks, then annually). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: CNS depressants and alcohol, QT-prolonging drugs, Antihypertensives. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: CNS depressants and alcohol, QT-prolonging drugs, Antihypertensives. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -773,7 +773,7 @@ export const lurasidone: Drug = {
     },
     costCategory: "moderate",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -807,55 +807,55 @@ export const lurasidone: Drug = {
         name: "Lurasidone",
         slug: "lurasidone",
         relationship: "This guide",
-        distinguishing: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+        distinguishing: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
       },
       {
         name: "Aripiprazole",
         slug: "aripiprazole",
         relationship: "Same class (Dopamine Stabiliser)",
-        distinguishing: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+        distinguishing: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
       },
       {
         name: "Clozapine",
         slug: "clozapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
       },
       {
         name: "Olanzapine",
         slug: "olanzapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+        distinguishing: "Most robust broad-spectrum atypical: heaviest metabolic burden",
       },
       {
         name: "Paliperidone",
         slug: "paliperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The LAI platform king — monthly to 6-monthly injections for schizophrenia",
+        distinguishing: "The LAI platform king: monthly to 6-monthly injections for schizophrenia",
       },
       {
         name: "Quetiapine",
         slug: "quetiapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin — the sedating antidepressant-antipsychotic",
+        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin: the sedating antidepressant-antipsychotic",
       },
       {
         name: "Risperidone",
         slug: "risperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most potent D2 blockade among atypicals — highest prolactin, best-studied LAI",
+        distinguishing: "Most potent D2 blockade among atypicals: highest prolactin, best-studied LAI",
       },
       {
         name: "Ziprasidone",
         slug: "ziprasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic — with QT vigilance",
+        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic, with QT vigilance",
       },
       {
         name: "Amisulpride",
         slug: "amisulpride",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The dose-band benzamide — European/Indian staple with the clozapine-drool rescue",
+        distinguishing: "The dose-band benzamide. European/Indian staple with the clozapine-drool rescue",
       },
     ],
   },
@@ -1003,7 +1003,7 @@ export const lurasidone: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Lurasidone in two sentences.",
-      answer: "Lurasidone blocks D2 and 5-HT2A receptors and antagonises 5-HT7 receptors (a mechanism linked to antidepressant and cognitive effects), with 5-HT1A partial agonism. Net effect: Antipsychotic and antidepressant efficacy with minimal histaminic and muscarinic binding — little weight gain or sedation.",
+      answer: "Lurasidone blocks D2 and 5-HT2A receptors and antagonises 5-HT7 receptors (a mechanism linked to antidepressant and cognitive effects), with 5-HT1A partial agonism. Net effect: Antipsychotic and antidepressant efficacy with minimal histaminic and muscarinic binding; little weight gain or sedation.",
       topic: "Mechanism",
     },
     {
@@ -1099,7 +1099,7 @@ export const lurasidone: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1144,7 +1144,7 @@ export const lurasidone: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Lurasidone works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Lurasidone works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1160,7 +1160,7 @@ export const lurasidone: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Lurasidone safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Lurasidone safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1206,7 +1206,7 @@ export const lurasidone: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Lurasidone follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Lurasidone follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1217,7 +1217,7 @@ export const lurasidone: Drug = {
       "Dose reduction or timing change before discontinuation.",
     ],
     weightGain: "See product information and class comparison.",
-    sedation: "Low — may be mildly activating.",
+    sedation: "Low: may be mildly activating.",
     dosing: [
       {
         indication: "Schizophrenia",
@@ -1236,12 +1236,12 @@ export const lurasidone: Drug = {
     ],
     dosageForms: ["Tablets 20, 40, 60, 80, 120 mg"],
     dosingTips: [
-      "Evening meal of ≥ 350 kcal — non-negotiable for absorption.",
-      "Start low in bipolar depression (20 mg) — akathisia risk rises with dose.",
+      "Evening meal of ≥ 350 kcal: non-negotiable for absorption.",
+      "Start low in bipolar depression (20 mg): akathisia risk rises with dose.",
       "Avoid strong 3A4 inhibitors/inducers entirely.",
     ],
     overdose: [
-      "Overdose with Lurasidone is managed supportively — no specific antidote.",
+      "Overdose with Lurasidone is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Lurasidone is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1251,7 +1251,7 @@ export const lurasidone: Drug = {
     ],
     pharmacokinetics: [
       "Half-life: 18 hours..",
-      "Metabolism: Hepatic CYP3A4 exclusively — strong inhibitors and inducers are contraindicated..",
+      "Metabolism: Hepatic CYP3A4 exclusively; strong inhibitors and inducers are contraindicated..",
     ],
     doNotUse: ["Known hypersensitivity to this agent."],
     specialPopulations: [
@@ -1287,14 +1287,14 @@ export const lurasidone: Drug = {
     primaryTargetSymptoms: ["Positive symptoms of psychosis", "Bipolar depressive episodes"],
     pearls: [
       "Food is pharmacology: a ≥ 350 kcal evening meal is part of the prescription.",
-      "Bipolar depression with metabolic risk — the single clearest indication for lurasidone.",
-      "Akathisia is the tolerability tax — warn at initiation.",
+      "Bipolar depression with metabolic risk: the single clearest indication for lurasidone.",
+      "Akathisia is the tolerability tax. Warn at initiation.",
       "3A4-only metabolism: ketoconazole and rifampicin are contraindicated.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

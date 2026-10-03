@@ -19,18 +19,18 @@ export const lamotrigine: Drug = {
   brandNames: ["Lamictal", "Lametec (India)"],
   drugClass: "mood-stabiliser",
   drugClassLabel: "Mood Stabiliser",
-  drugClassFullName: "Mood Stabiliser — Anticonvulsant",
+  drugClassFullName: "Mood Stabiliser. Anticonvulsant",
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Mood Stabilisers & Anticonvulsants", "Mood Stabilisers", "Lamotrigine"],
   /* ---- Hero / summary ---- */
-  tagline: "The depression-side mood stabiliser — the one that prevents the bottom of bipolar without triggering the top.",
-  summary: "Lamotrigine is an anticonvulsant mood stabiliser whose psychiatric signature is the mirror image of lithium and valproate: it is strongest for bipolar DEPRESSION and depressive relapse prevention, with genuine antidepressant effect and no switch risk — while its anti-manic power is weak. Its phenyltriazine chemistry blocks sodium channels and reduces glutamate release. The famous dosing rule — halve and slow when combined with valproate, double with enzyme inducers — and the life-threatening rash risk (SJS/TEN) that mandates slow titration are its defining prescribing disciplines.",
+  tagline: "The depression-side mood stabiliser: the one that prevents the bottom of bipolar without triggering the top.",
+  summary: "Lamotrigine is an anticonvulsant mood stabiliser whose psychiatric signature is the mirror image of lithium and valproate: it is strongest for bipolar DEPRESSION and depressive relapse prevention, with genuine antidepressant effect and no switch risk, while its anti-manic power is weak. Its phenyltriazine chemistry blocks sodium channels and reduces glutamate release. The famous dosing rule (halve and slow when combined with valproate, double with enzyme inducers) and the life-threatening rash risk (SJS/TEN) that mandates slow titration are its defining prescribing disciplines.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Lamotrigine — from its molecular target (Voltage-gated Na+ channels (use-dependent blockade); reduced glutamate and aspartate release) to clinical effect.",
+    "Explain the mechanism of action of Lamotrigine, from its molecular target (Voltage-gated Na+ channels (use-dependent blockade); reduced glutamate and aspartate release) to clinical effect.",
     "List the FDA-approved and off-label uses of Lamotrigine.",
     "Predict the common and serious side effects of Lamotrigine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Lamotrigine.",
@@ -38,19 +38,19 @@ export const lamotrigine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Lamotrigine blocks voltage-gated sodium channels, reducing presynaptic glutamate release — an anti-excitotoxic action that stabilises mood from below without serotonergic switch risk.",
+    summary: "Lamotrigine blocks voltage-gated sodium channels, reducing presynaptic glutamate release: an anti-excitotoxic action that stabilises mood from below without serotonergic switch risk.",
     molecularTarget: "Voltage-gated Na+ channels (use-dependent blockade); reduced glutamate and aspartate release",
-    effect: "Antidepressant and anti-depressant-relapse effect in bipolar disorder with minimal anti-manic action — the drug for the bottom half of the illness.",
+    effect: "Antidepressant and anti-depressant-relapse effect in bipolar disorder with minimal anti-manic action: the drug for the bottom half of the illness.",
     steps: [
       "Use-dependent sodium-channel blockade stabilises hyperexcitable neuronal membranes.",
       "Reduced presynaptic glutamate release dampens excitotoxic cascades implicated in depression and kindling.",
-      "The net effect is antidepressant without manic switch — unique among agents active on the depressed pole.",
-      "Anti-manic efficacy is weak — lamotrigine is not monotherapy for acute mania.",
+      "The net effect is antidepressant without manic switch: unique among agents active on the depressed pole.",
+      "Anti-manic efficacy is weak: lamotrigine is not monotherapy for acute mania.",
     ],
-    pharmacokinetics: "Complete absorption; the classic pharmacokinetic chameleon — its clearance doubles with enzyme inducers (carbamazepine, OCs) and halves with valproate.",
-    halfLife: "25–33 hours alone; ~14 hours with inducers; ~70 hours with valproate — hence the three dosing schedules.",
+    pharmacokinetics: "Complete absorption; the classic pharmacokinetic chameleon: its clearance doubles with enzyme inducers (carbamazepine, OCs) and halves with valproate.",
+    halfLife: "25–33 hours alone; ~14 hours with inducers; ~70 hours with valproate; hence the three dosing schedules.",
     activeMetabolite: "The parent drug is active; N-glucuronide is the metabolite.",
-    metabolism: "Hepatic glucuronidation (UGT1A4) — the pathway valproate inhibits and inducers accelerate.",
+    metabolism: "Hepatic glucuronidation (UGT1A4): the pathway valproate inhibits and inducers accelerate.",
     excretion: "Renal glucuronide excretion.",
   },
   /* ---- Mechanism visual flow ---- */
@@ -118,7 +118,7 @@ export const lamotrigine: Drug = {
     {
       name: "Bipolar depression (acute, off-label mono/adjunct)",
       status: "off-label",
-      description: "Widely used; evidence positive in some trials — the practical backbone of depressed-pole treatment with quetiapine/lurasidone.",
+      description: "Widely used; evidence positive in some trials: the practical backbone of depressed-pole treatment with quetiapine/lurasidone.",
     },
     {
       name: "Epilepsy — focal and generalised seizures",
@@ -133,7 +133,7 @@ export const lamotrigine: Drug = {
     {
       name: "PTSD, borderline personality dysregulation (adjunct)",
       status: "off-label",
-      description: "Affective instability and impulsivity — modest evidence, common practice.",
+      description: "Affective instability and impulsivity: modest evidence, common practice.",
     },
     {
       name: "Cyclothymia / soft bipolar spectrum",
@@ -145,7 +145,7 @@ export const lamotrigine: Drug = {
     {
       name: "Known hypersensitivity to lamotrigine",
       severity: "absolute",
-      rationale: "SJS/TEN risk with rechallenge — never re-expose after a lamotrigine-caused serious rash.",
+      rationale: "SJS/TEN risk with rechallenge, never re-expose after a lamotrigine-caused serious rash.",
     },
   ],
   blackBoxWarnings: [
@@ -174,14 +174,14 @@ export const lamotrigine: Drug = {
       name: "Insomnia or vivid dreams",
       frequency: "common",
       severity: "mild",
-      description: "Mildly activating profile — generally wakeful rather than sedating.",
+      description: "Mildly activating profile: generally wakeful rather than sedating.",
       management: "Morning dosing.",
     },
     {
       name: "Rash (benign)",
       frequency: "common",
       severity: "moderate",
-      description: "Most rashes are benign — but every rash in the titration phase is evaluated, not assumed.",
+      description: "Most rashes are benign, but every rash in the titration phase is evaluated, not assumed.",
       management: "Stop and reassess; never continue titrating through a rash.",
     },
     {
@@ -204,14 +204,14 @@ export const lamotrigine: Drug = {
       name: "Hypersensitivity syndrome / DRESS",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Multi-organ involvement with fever and rash — may evolve over weeks.",
+      description: "Multi-organ involvement with fever and rash: may evolve over weeks.",
       management: "Stop; systemic evaluation; corticosteroids per severity.",
     },
     {
       name: "Aseptic meningitis",
       frequency: "rare",
       severity: "severe",
-      description: "Headache, neck stiffness, fever — a recognised idiosyncratic reaction.",
+      description: "Headache, neck stiffness, fever: a recognised idiosyncratic reaction.",
       management: "Stop; CSF evaluation if suspected.",
     },
     {
@@ -244,7 +244,7 @@ export const lamotrigine: Drug = {
     {
       drug: "Valproate",
       severity: "major",
-      mechanism: "Doubles lamotrigine levels by inhibiting glucuronidation — the classic interaction.",
+      mechanism: "Doubles lamotrigine levels by inhibiting glucuronidation: the classic interaction.",
       action: "Halve the lamotrigine dose AND halve the titration speed (the 'green schedule').",
     },
     {
@@ -256,50 +256,50 @@ export const lamotrigine: Drug = {
     {
       drug: "Combined oral contraceptives",
       severity: "major",
-      mechanism: "Oestrogen induces lamotrigine glucuronidation — levels drop ~50% on active pills and rebound in pill-free weeks (toxicity risk).",
+      mechanism: "Oestrogen induces lamotrigine glucuronidation: levels drop ~50% on active pills and rebound in pill-free weeks (toxicity risk).",
       action: "Monitor clinically; adjust dose; watch the pill-free week for rash/headache clusters.",
     },
   ],
   pregnancy: {
     legacyCategory: "C",
-    summary: "Lamotrigine is among the SAFER anticonvulsants/mood stabilisers in pregnancy — the pregnancy-preferred mood stabiliser alongside careful use of others. Registry data show malformation rates close to background, and the neurodevelopment data are comparatively reassuring. Levels fall substantially during pregnancy and rebound postpartum — dose adjustment is expected.",
-    lactation: "Lamotrigine passes into milk in meaningful amounts and can reach neonatal levels that cause apnoea/rash — infant monitoring (or avoiding breastfeeding at higher doses) is advised.",
+    summary: "Lamotrigine is among the SAFER anticonvulsants/mood stabilisers in pregnancy: the pregnancy-preferred mood stabiliser alongside careful use of others. Registry data show malformation rates close to background, and the neurodevelopment data are comparatively reassuring. Levels fall substantially during pregnancy and rebound postpartum: dose adjustment is expected.",
+    lactation: "Lamotrigine passes into milk in meaningful amounts and can reach neonatal levels that cause apnoea/rash: infant monitoring (or avoiding breastfeeding at higher doses) is advised.",
   },
   renalAdjustment: "No significant adjustment; standard caution in severe impairment.",
   hepaticAdjustment: "No adjustment for mild-moderate; glucuronidation is hepatic.",
   /* ---- Education ---- */
-  patientExplanation: "Lamotrigine is a mood stabiliser that works on the depressed side of bipolar illness — it lifts and protects against depression without the risk of flipping you into mania. Its one famous rule: the dose must be built up very slowly over weeks, because a fast rise can cause a serious skin rash. Any rash in the first months means stopping and calling your doctor the same day.",
+  patientExplanation: "Lamotrigine is a mood stabiliser that works on the depressed side of bipolar illness. It lifts and protects against depression without the risk of flipping you into mania. Its one famous rule: the dose must be built up very slowly over weeks, because a fast rise can cause a serious skin rash. Any rash in the first months means stopping and calling your doctor the same day.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Lamotrigine builds over weeks — do not judge it in the first days.",
+    "Benefit from Lamotrigine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
     "The mirror-image drug: lithium and valproate work from above (mania); lamotrigine works from below (depression).",
-    "Three titration speeds: standard alone, half-speed with valproate, double-speed with carbamazepine — the three-schedule system IS the prescribing skill.",
+    "Three titration speeds: standard alone, half-speed with valproate, double-speed with carbamazepine; the three-schedule system IS the prescribing skill.",
     "Every rash in titration is a stop-and-evaluate event; benign rash can only be called benign in retrospect.",
-    "The Pill interaction is bidirectional: levels halve on active pills and rebound in the pill-free week — the week-off headache/rash cluster is pharmacokinetics.",
+    "The Pill interaction is bidirectional: levels halve on active pills and rebound in the pill-free week. The week-off headache/rash cluster is pharmacokinetics.",
     "Lamotrigine + valproate is the classic synergistic bipolar pair (complementary poles + interaction managed by the green schedule).",
     "After the first 8 weeks, rash risk drops to near-background and the drug is among the best tolerated long-term mood agents.",
-    "Pregnancy: the preferred mood stabiliser — but levels fall through pregnancy and rebound postpartum (titrate and watch).",
-    "Not a mania drug — pairing with an anti-manic agent is the standard architecture of full bipolar cover.",
+    "Pregnancy: the preferred mood stabiliser, but levels fall through pregnancy and rebound postpartum (titrate and watch).",
+    "Not a mania drug: pairing with an anti-manic agent is the standard architecture of full bipolar cover.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Lamotrigine: Lamotrigine blocks voltage-gated sodium channels, reducing presynaptic glutamate release — an anti-excitotoxic action that stabilises mood from below without serotonergic switch risk.",
-        "Uses of Lamotrigine: Bipolar I maintenance — depressive-pole protection; Bipolar depression (acute, off-label mono/adjunct); Epilepsy — focal and generalised seizures; Unipolar depression (adjunct, treatment-resistant)",
+        "Mechanism of Lamotrigine: Lamotrigine blocks voltage-gated sodium channels, reducing presynaptic glutamate release; an anti-excitotoxic action that stabilises mood from below without serotonergic switch risk.",
+        "Uses of Lamotrigine: Bipolar I maintenance; depressive-pole protection; Bipolar depression (acute, off-label mono/adjunct); Epilepsy: focal and generalised seizures; Unipolar depression (adjunct, treatment-resistant)",
         "Mechanism: use-dependent Na+ channel blockade → ↓glutamate release.",
         "Psychiatric signature: bipolar DEPRESSION and depressive-relapse prevention; NOT anti-manic.",
       ],
       practical: [
-        "Prescribe Lamotrigine for bipolar i maintenance — depressive-pole protection with dose, timing, and duration.",
+        "Prescribe Lamotrigine for bipolar i maintenance: depressive-pole protection with dose, timing, and duration.",
         "Outline the monitoring plan: Rash counselling and vigilance (Every visit during titration (first 8 weeks)); No routine levels required (—); Mood polarity review (Every visit)",
       ],
       longAnswer: [
-        "Lamotrigine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Lamotrigine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: use-dependent Na+ channel blockade → ↓glutamate release.",
         "Psychiatric signature: bipolar DEPRESSION and depressive-relapse prevention; NOT anti-manic.",
       ],
@@ -321,7 +321,7 @@ export const lamotrigine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Lamotrigine develops stevens-johnson syndrome / ten — next best step?",
+        "A patient on Lamotrigine develops stevens-johnson syndrome / ten: next best step?",
         "When to choose Lamotrigine over alternatives in its class.",
       ],
     },
@@ -334,7 +334,7 @@ export const lamotrigine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "Depression-pole protection without switch risk — the lamotrigine identity.",
+        "Depression-pole protection without switch risk: the lamotrigine identity.",
         "The three-schedule system is the exam and the practice.",
         "Every rash stops the drug until proven benign.",
         "Lamotrigine + valproate: complementary poles, managed interaction.",
@@ -355,16 +355,16 @@ export const lamotrigine: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — bipolar i maintenance — depressive-pole protection",
-      presentation: "A patient presenting with bipolar i maintenance — depressive-pole protection, started on Lamotrigine.",
-      history: "A adult patient presents with a bipolar i maintenance — depressive-pole protection picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with bipolar i maintenance — depressive-pole protection; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Bipolar I maintenance — depressive-pole protection. Differentials are considered and excluded clinically.",
+      title: "First presentation: bipolar i maintenance; depressive-pole protection",
+      presentation: "A patient presenting with bipolar i maintenance: depressive-pole protection, started on Lamotrigine.",
+      history: "A adult patient presents with a bipolar i maintenance: depressive-pole protection picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with bipolar i maintenance: depressive-pole protection; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Bipolar I maintenance: depressive-pole protection. Differentials are considered and excluded clinically.",
       rationale: "Lamotrigine is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Mood Stabiliser) with strong evidence in this condition.",
       management: "Started at 25 mg once daily × 2 weeks, titrated to 100–200 mg/day (up to 400 in some) with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Lamotrigine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Lamotrigine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -373,7 +373,7 @@ export const lamotrigine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Mood Stabiliser comparison — choosing within the class",
+      title: "Mood Stabiliser comparison: choosing within the class",
       primaryDrug: "Lamotrigine",
       rows: [
         {
@@ -400,7 +400,7 @@ export const lamotrigine: Drug = {
         },
         {
           attribute: "Half-life",
-          primaryValue: "25–33 hours alone; ~14 hours with inducers; ~70 hours with valproate — hence the three dosing schedules.",
+          primaryValue: "25–33 hours alone; ~14 hours with inducers; ~70 hours with valproate; hence the three dosing schedules.",
           comparisons: [
             {
               drug: "Carbamazepine",
@@ -444,7 +444,7 @@ export const lamotrigine: Drug = {
         },
         {
           attribute: "Sedation",
-          primaryValue: "Not sedating — mildly activating (morning dosing suits most).",
+          primaryValue: "Not sedating: mildly activating (morning dosing suits most).",
           comparisons: [
             {
               drug: "Carbamazepine",
@@ -487,7 +487,7 @@ export const lamotrigine: Drug = {
           ],
         },
       ],
-      takeaway: "All mood stabilisers share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All mood stabilisers share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -496,7 +496,7 @@ export const lamotrigine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Lamotrigine reaches peak plasma concentration and begins acting at its molecular target (Voltage-gated Na+ channels (use-dependent blockade); reduced glutamate and aspartate release). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Lamotrigine reaches peak plasma concentration and begins acting at its molecular target (Voltage-gated Na+ channels (use-dependent blockade); reduced glutamate and aspartate release). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -532,7 +532,7 @@ export const lamotrigine: Drug = {
   faqs: [
     {
       question: "How long does Lamotrigine take to work?",
-      answer: "Antidepressant/destabilisation benefit builds over 4–8 weeks.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Antidepressant/destabilisation benefit builds over 4–8 weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Lamotrigine?",
@@ -540,11 +540,11 @@ export const lamotrigine: Drug = {
     },
     {
       question: "Can I stop Lamotrigine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Lamotrigine habit-forming?",
@@ -552,7 +552,7 @@ export const lamotrigine: Drug = {
     },
     {
       question: "Can I take Lamotrigine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Lamotrigine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Lamotrigine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -657,7 +657,7 @@ export const lamotrigine: Drug = {
       label: "Mood Stabiliser",
       type: "class",
       href: "#mechanism",
-      note: "Mood Stabiliser — Anticonvulsant",
+      note: "Mood Stabiliser. Anticonvulsant",
     },
     {
       label: "Glutamate",
@@ -684,7 +684,7 @@ export const lamotrigine: Drug = {
       note: "Region where the drug acts",
     },
     {
-      label: "Bipolar I maintenance — depressive-pole protection",
+      label: "Bipolar I maintenance: depressive-pole protection",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -696,7 +696,7 @@ export const lamotrigine: Drug = {
       note: "Used clinically",
     },
     {
-      label: "Epilepsy — focal and generalised seizures",
+      label: "Epilepsy: focal and generalised seizures",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -720,7 +720,7 @@ export const lamotrigine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Lamotrigine",
+      label: "Patient Guide. Lamotrigine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -728,13 +728,13 @@ export const lamotrigine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The depression-side mood stabiliser — the one that prevents the bottom of bipolar without triggering the top.",
-    summary: "Lamotrigine is a prescription medicine used to treat bipolar i maintenance — depressive-pole protection. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Lamotrigine is a mood stabiliser that works on the depressed side of bipolar illness — it lifts and protects against depression without the risk of flipping you into mania. Its one famous rule: the dose must be built up very slowly over weeks, because a fast rise can cause a serious skin rash. Any rash in the first months means stopping and calling your doctor the same day.",
-    sideEffects: "The most common side effects are: headache, nausea and dizziness, insomnia or vivid dreams, rash (benign), ataxia and diplopia (higher doses, with other anticonvulsants). These usually appear early and many settle with time. Serious effects are uncommon but important to know: Stevens-Johnson syndrome / TEN and Hypersensitivity syndrome / DRESS. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: rash counselling and vigilance (every visit during titration (first 8 weeks)); no routine levels required (—); mood polarity review (every visit). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The depression-side mood stabiliser: the one that prevents the bottom of bipolar without triggering the top.",
+    summary: "Lamotrigine is a prescription medicine used to treat bipolar i maintenance: depressive-pole protection. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Lamotrigine is a mood stabiliser that works on the depressed side of bipolar illness. It lifts and protects against depression without the risk of flipping you into mania. Its one famous rule: the dose must be built up very slowly over weeks, because a fast rise can cause a serious skin rash. Any rash in the first months means stopping and calling your doctor the same day.",
+    sideEffects: "The most common side effects are: headache, nausea and dizziness, insomnia or vivid dreams, rash (benign), ataxia and diplopia (higher doses, with other anticonvulsants). These usually appear early and many settle with time. Serious effects are uncommon but important to know: Stevens-Johnson syndrome / TEN and Hypersensitivity syndrome / DRESS. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: rash counselling and vigilance (every visit during titration (first 8 weeks)); no routine levels required (—); mood polarity review (every visit). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: Known hypersensitivity to lamotrigine. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Valproate, Carbamazepine and other enzyme inducers, Combined oral contraceptives. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Valproate, Carbamazepine and other enzyme inducers, Combined oral contraceptives. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -772,9 +772,9 @@ export const lamotrigine: Drug = {
     costNote: "Cost varies by manufacturer and region.",
     monitoring: "Rash vigilance through titration (8 weeks); document the schedule in the prescription.",
     patientCounselling: [
-      "Any rash = stop the medicine and contact us the same day — no exceptions.",
+      "Any rash = stop the medicine and contact us the same day: no exceptions.",
       "The build-up over weeks is a safety feature, not slowness.",
-      "If you take the contraceptive pill, tell us — the dose may need adjusting.",
+      "If you take the contraceptive pill, tell us: the dose may need adjusting.",
     ],
   },
   sectionDifficulty: {
@@ -821,19 +821,19 @@ export const lamotrigine: Drug = {
         name: "Lithium",
         slug: "lithium",
         relationship: "Same class (Mood Stabiliser)",
-        distinguishing: "Anti-suicide + both-pole prophylaxis — the irreplaceable classic",
+        distinguishing: "Anti-suicide + both-pole prophylaxis: the irreplaceable classic",
       },
       {
         name: "Valproate",
         slug: "valproate",
         relationship: "Same class (Mood Stabiliser)",
-        distinguishing: "Mania workhorse — especially mixed states and rapid cycling; now pregnancy-governed",
+        distinguishing: "Mania workhorse, especially mixed states and rapid cycling; now pregnancy-governed",
       },
       {
         name: "Oxcarbazepine",
         slug: "oxcarbazepine",
         relationship: "Same class (Mood Stabiliser)",
-        distinguishing: "The cleaner carbamazepine — off-label mood use with fewer interactions",
+        distinguishing: "The cleaner carbamazepine: off-label mood use with fewer interactions",
       },
     ],
   },
@@ -986,12 +986,12 @@ export const lamotrigine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Lamotrigine in two sentences.",
-      answer: "Lamotrigine blocks voltage-gated sodium channels, reducing presynaptic glutamate release — an anti-excitotoxic action that stabilises mood from below without serotonergic switch risk. Net effect: Antidepressant and anti-depressant-relapse effect in bipolar disorder with minimal anti-manic action — the drug for the bottom half of the illness.",
+      answer: "Lamotrigine blocks voltage-gated sodium channels, reducing presynaptic glutamate release: an anti-excitotoxic action that stabilises mood from below without serotonergic switch risk. Net effect: Antidepressant and anti-depressant-relapse effect in bipolar disorder with minimal anti-manic action; the drug for the bottom half of the illness.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Lamotrigine.",
-      answer: "Bipolar I maintenance — depressive-pole protection, Bipolar depression (acute, off-label mono/adjunct), Epilepsy — focal and generalised seizures, Unipolar depression (adjunct, treatment-resistant). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Bipolar I maintenance (depressive-pole protection, Bipolar depression (acute, off-label mono/adjunct), Epilepsy) focal and generalised seizures, Unipolar depression (adjunct, treatment-resistant). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -1006,7 +1006,7 @@ export const lamotrigine: Drug = {
     },
     {
       question: "Share one clinical pearl about Lamotrigine that separates safe prescribers from unsafe ones.",
-      answer: "Depression-pole protection without switch risk — the lamotrigine identity.",
+      answer: "Depression-pole protection without switch risk: the lamotrigine identity.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1082,7 +1082,7 @@ export const lamotrigine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1127,7 +1127,7 @@ export const lamotrigine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Lamotrigine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Lamotrigine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1143,7 +1143,7 @@ export const lamotrigine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Lamotrigine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Lamotrigine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1172,7 +1172,7 @@ export const lamotrigine: Drug = {
     sourceEdition: "Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017)",
     onsetTimeline: [
       "Antidepressant/destabilisation benefit builds over 4–8 weeks.",
-      "Titration to 200 mg takes ~5–6 weeks on the standard schedule — patience is built into the drug.",
+      "Titration to 200 mg takes ~5–6 weeks on the standard schedule: patience is built into the drug.",
     ],
     ifItWorks: [
       "Continue Lamotrigine at the lowest effective dose for the guideline-recommended duration for the condition treated.",
@@ -1189,7 +1189,7 @@ export const lamotrigine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Lamotrigine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Lamotrigine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1200,7 +1200,7 @@ export const lamotrigine: Drug = {
       "Dose reduction or timing change before discontinuation.",
     ],
     weightGain: "See product information and class comparison.",
-    sedation: "Not sedating — mildly activating (morning dosing suits most).",
+    sedation: "Not sedating: mildly activating (morning dosing suits most).",
     dosing: [
       {
         indication: "Standard schedule (adults, no interacting drugs)",
@@ -1225,7 +1225,7 @@ export const lamotrigine: Drug = {
       },
       {
         indication: "Withdrawal/restart after a break > 5 days)",
-        starting: "Restart the schedule — do not resume at the old dose",
+        starting: "Restart the schedule: do not resume at the old dose",
         titration: "Taper ~2 weeks when stopping",
         target: "—",
         max: "—",
@@ -1233,14 +1233,14 @@ export const lamotrigine: Drug = {
     ],
     dosageForms: ["Tablets 25–200 mg", "Chewable/dispersible tablets", "Orally disintegrating forms"],
     dosingTips: [
-      "The starter packs encode the schedules — use them.",
+      "The starter packs encode the schedules: use them.",
       "Photograph the titration calendar into the patient's phone.",
       "Restart the schedule after any break > 5 days.",
-      "Pair with an anti-manic for full-polarity cover — lamotrigine alone is half a regimen in bipolar I.",
+      "Pair with an anti-manic for full-polarity cover: lamotrigine alone is half a regimen in bipolar I.",
       "The pill-free week: watch for rash/headache clusters (rebound levels).",
     ],
     overdose: [
-      "Overdose with Lamotrigine is managed supportively — no specific antidote.",
+      "Overdose with Lamotrigine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Lamotrigine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1249,8 +1249,8 @@ export const lamotrigine: Drug = {
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
     pharmacokinetics: [
-      "Half-life: 25–33 hours alone; ~14 hours with inducers; ~70 hours with valproate — hence the three dosing schedules..",
-      "Metabolism: Hepatic glucuronidation (UGT1A4) — the pathway valproate inhibits and inducers accelerate..",
+      "Half-life: 25–33 hours alone; ~14 hours with inducers; ~70 hours with valproate; hence the three dosing schedules..",
+      "Metabolism: Hepatic glucuronidation (UGT1A4); the pathway valproate inhibits and inducers accelerate..",
     ],
     doNotUse: ["Known hypersensitivity to this agent."],
     specialPopulations: [
@@ -1280,7 +1280,7 @@ export const lamotrigine: Drug = {
       "Excellent long-term tolerability.",
     ],
     potentialDisadvantages: [
-      "Weak anti-manic action — never monotherapy for acute mania.",
+      "Weak anti-manic action, never monotherapy for acute mania.",
       "Slow titration = slow onset of benefit (weeks).",
       "Rash-driven black box demands discipline.",
       "OC interaction complicates half the patient population.",
@@ -1291,16 +1291,16 @@ export const lamotrigine: Drug = {
       "Affective instability (adjunct)",
     ],
     pearls: [
-      "Depression-pole protection without switch risk — the lamotrigine identity.",
+      "Depression-pole protection without switch risk: the lamotrigine identity.",
       "The three-schedule system is the exam and the practice.",
       "Every rash stops the drug until proven benign.",
       "Lamotrigine + valproate: complementary poles, managed interaction.",
-      "Weight-neutral and pregnancy-friendly — the tolerability champion of mood stabilisers.",
+      "Weight-neutral and pregnancy-friendly: the tolerability champion of mood stabilisers.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

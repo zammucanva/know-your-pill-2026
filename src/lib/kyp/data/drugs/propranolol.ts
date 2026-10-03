@@ -23,14 +23,14 @@ export const propranolol: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Anxiolytics & Sedatives", "Beta-Blockers", "Propranolol"],
   /* ---- Hero / summary ---- */
-  tagline: "The beta-blocker for the body's anxiety — tremor, pounding heart, and stage fright, without touching the worry.",
-  summary: "Propranolol is the non-selective beta-blocker used in psychiatry for the PERIPHERAL symptoms of anxiety — tremor, tachycardia, sweating, flushing — by blocking peripheral adrenergic receptors. It is the standard treatment for essential tremor, performance anxiety, antipsychotic-induced akathisia, and propranolol-class uses from migraine prophylaxis to thyrotoxicosis control. It does not touch the cognitive worry of anxiety — only its bodily theatre.",
+  tagline: "The beta-blocker for the body's anxiety: tremor, pounding heart, and stage fright, without touching the worry.",
+  summary: "Propranolol is the non-selective beta-blocker used in psychiatry for the PERIPHERAL symptoms of anxiety (tremor, tachycardia, sweating, flushing) by blocking peripheral adrenergic receptors. It is the standard treatment for essential tremor, performance anxiety, antipsychotic-induced akathisia, and propranolol-class uses from migraine prophylaxis to thyrotoxicosis control. It does not touch the cognitive worry of anxiety: only its bodily theatre.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Propranolol — from its molecular target (Beta-1 and beta-2 adrenergic receptors (non-selective antagonist, peripherally and centrally acting)) to clinical effect.",
+    "Explain the mechanism of action of Propranolol, from its molecular target (Beta-1 and beta-2 adrenergic receptors (non-selective antagonist, peripherally and centrally acting)) to clinical effect.",
     "List the FDA-approved and off-label uses of Propranolol.",
     "Predict the common and serious side effects of Propranolol from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Propranolol.",
@@ -38,15 +38,15 @@ export const propranolol: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Propranolol blocks beta-adrenergic receptors — damping the peripheral sympathetic theatre of anxiety (tremor, tachycardia) plus central anxiolytic and antitremor effects.",
+    summary: "Propranolol blocks beta-adrenergic receptors, damping the peripheral sympathetic theatre of anxiety (tremor, tachycardia) plus central anxiolytic and antitremor effects.",
     molecularTarget: "Beta-1 and beta-2 adrenergic receptors (non-selective antagonist, peripherally and centrally acting)",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Propranolol blocks beta-adrenergic receptors — damping the peripheral sympathetic theatre of anxiety (tremor, tachycardia) plus central anxiolytic and antitremor effects.",
+      "Propranolol blocks beta-adrenergic receptors, damping the peripheral sympathetic theatre of anxiety (tremor, tachycardia) plus central anxiolytic and antitremor effects.",
       "The target engagement translates into the clinical effect.",
       "Practical use follows the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 4-6 hours (IR); LA once daily. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 4-6 hours (IR); LA once daily. See mechanism and prescriber sections.",
     halfLife: "4-6 hours (IR); LA once daily.",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -97,7 +97,7 @@ export const propranolol: Drug = {
         label: "produces",
       },
     ],
-    caption: "Modulating noradrenergic signalling at its receptor — a mechanism-driven route to symptom control.",
+    caption: "Modulating noradrenergic signalling at its receptor: a mechanism-driven route to symptom control.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Norepinephrine (NE)"],
@@ -111,7 +111,7 @@ export const propranolol: Drug = {
     {
       name: "Performance / situational anxiety (peripheral symptoms)",
       status: "off-label",
-      description: "The stage-fright drug: PRN 30-60 min before performance — tremor and pounding heart damped.",
+      description: "The stage-fright drug: PRN 30-60 min before performance; tremor and pounding heart damped.",
     },
     {
       name: "Essential tremor",
@@ -146,7 +146,7 @@ export const propranolol: Drug = {
     {
       name: "PTSD re-experiencing/nightmares (adjunct)",
       status: "off-label",
-      description: "Noradrenergic dampening — mixed evidence.",
+      description: "Noradrenergic dampening: mixed evidence.",
     },
   ],
   contraindications: [
@@ -158,12 +158,12 @@ export const propranolol: Drug = {
     {
       name: "Asthma inhalers (beta-agonists)",
       severity: "absolute",
-      rationale: "Pharmacological antagonism — both drugs defeated.",
+      rationale: "Pharmacological antagonism, both drugs defeated.",
     },
     {
       name: "Verapamil and diltiazem",
       severity: "absolute",
-      rationale: "Additive negative chronotropy and inotropy — severe bradycardia/heart block.",
+      rationale: "Additive negative chronotropy and inotropy: severe bradycardia/heart block.",
     },
   ],
   blackBoxWarnings: [],
@@ -217,7 +217,7 @@ export const propranolol: Drug = {
       name: "Bronchospasm in asthma/COPD",
       frequency: "common",
       severity: "life-threatening",
-      description: "Non-selective beta-2 blockade — the absolute respiratory contraindication.",
+      description: "Non-selective beta-2 blockade: the absolute respiratory contraindication.",
       management: "Never in asthma; cardioselective alternatives if a beta-blocker is essential.",
     },
     {
@@ -231,7 +231,7 @@ export const propranolol: Drug = {
       name: "Rebound tachycardia/angina on abrupt withdrawal",
       frequency: "uncommon",
       severity: "severe",
-      description: "Upregulated receptors protest withdrawal — the beta-blocker taper rule.",
+      description: "Upregulated receptors protest withdrawal: the beta-blocker taper rule.",
       management: "Taper over 1-2 weeks always.",
     },
   ],
@@ -252,13 +252,13 @@ export const propranolol: Drug = {
     {
       drug: "Asthma inhalers (beta-agonists)",
       severity: "contraindicated",
-      mechanism: "Pharmacological antagonism — both drugs defeated.",
+      mechanism: "Pharmacological antagonism, both drugs defeated.",
       action: "Never combine propranolol with asthma therapy.",
     },
     {
       drug: "Verapamil and diltiazem",
       severity: "contraindicated",
-      mechanism: "Additive negative chronotropy and inotropy — severe bradycardia/heart block.",
+      mechanism: "Additive negative chronotropy and inotropy: severe bradycardia/heart block.",
       action: "Avoid.",
     },
     {
@@ -283,33 +283,33 @@ export const propranolol: Drug = {
   pregnancy: {
     legacyCategory: "C (historically; beta-blockers used in pregnancy for cardiac indications under supervision)",
     summary: "Beta-blocker use in pregnancy follows cardiac-indication logic (e.g., thyrotoxicosis) with obstetric co-management; for psychiatric PRN use, alternatives preferred.",
-    lactation: "Excreted in milk in small amounts — infant bradycardia monitoring if used.",
+    lactation: "Excreted in milk in small amounts: infant bradycardia monitoring if used.",
   },
   renalAdjustment: "No major adjustment.",
-  hepaticAdjustment: "Extensive first-pass — hepatic impairment raises bioavailability (reduce dose).",
+  hepaticAdjustment: "Extensive first-pass: hepatic impairment raises bioavailability (reduce dose).",
   /* ---- Education ---- */
-  patientExplanation: "Propranolol is a blood-pressure-class medicine that blocks adrenaline's effects on the body: it steadies a shaking voice, slows a pounding heart, and cools sweaty palms — the physical symptoms of anxiety and nervousness. It does not change anxious thoughts themselves. It must never be taken by people with asthma, and it should never be stopped suddenly.",
+  patientExplanation: "Propranolol is a blood-pressure-class medicine that blocks adrenaline's effects on the body: it steadies a shaking voice, slows a pounding heart, and cools sweaty palms; the physical symptoms of anxiety and nervousness. It does not change anxious thoughts themselves. It must never be taken by people with asthma, and it should never be stopped suddenly.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Propranolol builds over weeks — do not judge it in the first days.",
+    "Benefit from Propranolol builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The body-not-mind drug: propranolol does nothing for worried thoughts — it removes the tremor, the pounding heart, and the flush that anxiety feeds on.",
-    "The stage-fright ritual: 10-40 mg, 45 minutes before — rehearsed in advance so the dose is known, not guessed.",
-    "The akathisia first-line: 30-90 mg/day rescues aripiprazole-class and antipsychotic restlessness — the psychopharmacology workhorse.",
-    "Never in asthma — the non-selective beta-2 blockade is an absolute respiratory contraindication.",
-    "Taper always: abrupt withdrawal causes rebound tachycardia and angina — the unlearned lesson of beta-blocker pharmacology.",
-    "Masks hypoglycaemia: insulin users lose their adrenergic warning — counsel explicitly.",
+    "The body-not-mind drug: propranolol does nothing for worried thoughts; it removes the tremor, the pounding heart, and the flush that anxiety feeds on.",
+    "The stage-fright ritual: 10-40 mg, 45 minutes before; rehearsed in advance so the dose is known, not guessed.",
+    "The akathisia first-line: 30-90 mg/day rescues aripiprazole-class and antipsychotic restlessness; the psychopharmacology workhorse.",
+    "Never in asthma: the non-selective beta-2 blockade is an absolute respiratory contraindication.",
+    "Taper always: abrupt withdrawal causes rebound tachycardia and angina; the unlearned lesson of beta-blocker pharmacology.",
+    "Masks hypoglycaemia: insulin users lose their adrenergic warning. Counsel explicitly.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Propranolol: Propranolol blocks beta-adrenergic receptors — damping the peripheral sympathetic theatre of anxiety (tremor, tachycardia) plus central anxiolytic and antitremor effects.",
+        "Mechanism of Propranolol: Propranolol blocks beta-adrenergic receptors, damping the peripheral sympathetic theatre of anxiety (tremor, tachycardia) plus central anxiolytic and antitremor effects.",
         "Uses of Propranolol: Performance / situational anxiety (peripheral symptoms); Essential tremor; Antipsychotic-induced akathisia; Antipsychotic/Lithium tremor",
-        "Mechanism: NON-SELECTIVE beta-1/2 antagonist — peripheral sympathetic damping plus central effects.",
+        "Mechanism: NON-SELECTIVE beta-1/2 antagonist; peripheral sympathetic damping plus central effects.",
         "Psychiatric uses: performance anxiety (PRN), akathisia (first-line), lithium/antipsychotic tremor, essential tremor.",
       ],
       practical: [
@@ -317,14 +317,14 @@ export const propranolol: Drug = {
         "Outline the monitoring plan: Heart rate and blood pressure (Baseline and every visit); Excerpt from exercise tolerance (At review)",
       ],
       longAnswer: [
-        "Propranolol: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: NON-SELECTIVE beta-1/2 antagonist — peripheral sympathetic damping plus central effects.",
+        "Propranolol: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: NON-SELECTIVE beta-1/2 antagonist; peripheral sympathetic damping plus central effects.",
         "Psychiatric uses: performance anxiety (PRN), akathisia (first-line), lithium/antipsychotic tremor, essential tremor.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: NON-SELECTIVE beta-1/2 antagonist — peripheral sympathetic damping plus central effects.",
+        "Mechanism: NON-SELECTIVE beta-1/2 antagonist; peripheral sympathetic damping plus central effects.",
         "Psychiatric uses: performance anxiety (PRN), akathisia (first-line), lithium/antipsychotic tremor, essential tremor.",
         "Does NOT treat the cognitive component of anxiety.",
         "Absolute contraindication: asthma/COPD (beta-2 blockade).",
@@ -339,7 +339,7 @@ export const propranolol: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Propranolol develops severe bradycardia / heart block — next best step?",
+        "A patient on Propranolol develops severe bradycardia / heart block: next best step?",
         "When to choose Propranolol over alternatives in its class.",
       ],
     },
@@ -352,16 +352,16 @@ export const propranolol: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The body-not-mind drug: propranolol does nothing for worried thoughts — it removes the tremor, the pounding heart, and the flush that anxiety feeds on.",
-        "The stage-fright ritual: 10-40 mg, 45 minutes before — rehearsed in advance so the dose is known, not guessed.",
-        "The akathisia first-line: 30-90 mg/day rescues aripiprazole-class and antipsychotic restlessness — the psychopharmacology workhorse.",
-        "Never in asthma — the non-selective beta-2 blockade is an absolute respiratory contraindication.",
+        "The body-not-mind drug: propranolol does nothing for worried thoughts; it removes the tremor, the pounding heart, and the flush that anxiety feeds on.",
+        "The stage-fright ritual: 10-40 mg, 45 minutes before; rehearsed in advance so the dose is known, not guessed.",
+        "The akathisia first-line: 30-90 mg/day rescues aripiprazole-class and antipsychotic restlessness; the psychopharmacology workhorse.",
+        "Never in asthma: the non-selective beta-2 blockade is an absolute respiratory contraindication.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: NON-SELECTIVE beta-1/2 antagonist — peripheral sympathetic damping plus central effects.",
+    "Mechanism: NON-SELECTIVE beta-1/2 antagonist; peripheral sympathetic damping plus central effects.",
     "Psychiatric uses: performance anxiety (PRN), akathisia (first-line), lithium/antipsychotic tremor, essential tremor.",
     "Does NOT treat the cognitive component of anxiety.",
     "Absolute contraindication: asthma/COPD (beta-2 blockade).",
@@ -372,7 +372,7 @@ export const propranolol: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — performance / situational anxiety (peripheral symptoms)",
+      title: "First presentation: performance / situational anxiety (peripheral symptoms)",
       presentation: "A patient presenting with performance / situational anxiety (peripheral symptoms), started on Propranolol.",
       history: "A adult patient presents with a performance / situational anxiety (peripheral symptoms) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with performance / situational anxiety (peripheral symptoms); physical examination and baseline investigations are unremarkable.",
@@ -381,7 +381,7 @@ export const propranolol: Drug = {
       management: "Started at 10-40 mg 30-60 min before the event, titrated to 10-40 mg PRN with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Propranolol takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Propranolol takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -390,7 +390,7 @@ export const propranolol: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Beta-Blocker vs related agents — orientation table",
+      title: "Beta-Blocker vs related agents: orientation table",
       primaryDrug: "Propranolol",
       rows: [
         {
@@ -425,7 +425,7 @@ export const propranolol: Drug = {
         },
         {
           attribute: "Clinical niche",
-          primaryValue: "The peripheral anxiety answer — tremor, stage fright, akathisia",
+          primaryValue: "The peripheral anxiety answer: tremor, stage fright, akathisia",
           comparisons: [
             {
               drug: "Propranolol",
@@ -434,7 +434,7 @@ export const propranolol: Drug = {
           ],
         },
       ],
-      takeaway: "Propranolol is compared here with related agents for orientation. Full comparison data lives in each drug's own guide — follow the links for the complete picture.",
+      takeaway: "Propranolol is compared here with related agents for orientation. Full comparison data lives in each drug's own guide: follow the links for the complete picture.",
     },
   ],
   /* ---- Timeline ---- */
@@ -443,7 +443,7 @@ export const propranolol: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Propranolol reaches peak plasma concentration and begins acting at its molecular target (Beta-1 and beta-2 adrenergic receptors (non-selective antagonist, peripherally and centrally acting)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Propranolol reaches peak plasma concentration and begins acting at its molecular target (Beta-1 and beta-2 adrenergic receptors (non-selective antagonist, peripherally and centrally acting)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -479,7 +479,7 @@ export const propranolol: Drug = {
   faqs: [
     {
       question: "How long does Propranolol take to work?",
-      answer: "PRN effect 30-60 minutes; tremor control within days.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "PRN effect 30-60 minutes; tremor control within days.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Propranolol?",
@@ -487,11 +487,11 @@ export const propranolol: Drug = {
     },
     {
       question: "Can I stop Propranolol suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Propranolol habit-forming?",
@@ -499,7 +499,7 @@ export const propranolol: Drug = {
     },
     {
       question: "Can I take Propranolol during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Propranolol may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Propranolol may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -630,7 +630,7 @@ export const propranolol: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Propranolol",
+      label: "Patient Guide. Propranolol",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -638,13 +638,13 @@ export const propranolol: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The beta-blocker for the body's anxiety — tremor, pounding heart, and stage fright, without touching the worry.",
-    summary: "Propranolol is a prescription medicine used to treat performance / situational anxiety (peripheral symptoms). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Propranolol is a blood-pressure-class medicine that blocks adrenaline's effects on the body: it steadies a shaking voice, slows a pounding heart, and cools sweaty palms — the physical symptoms of anxiety and nervousness. It does not change anxious thoughts themselves. It must never be taken by people with asthma, and it should never be stopped suddenly.",
-    sideEffects: "The most common side effects are: bradycardia, fatigue and reduced exercise tolerance, cold extremities, hypotension and dizziness, sleep disturbance and vivid dreams. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Severe bradycardia / heart block and Bronchospasm in asthma/COPD. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline and every visit); excerpt from exercise tolerance (at review). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The beta-blocker for the body's anxiety: tremor, pounding heart, and stage fright, without touching the worry.",
+    summary: "Propranolol is a prescription medicine used to treat performance / situational anxiety (peripheral symptoms). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Propranolol is a blood-pressure-class medicine that blocks adrenaline's effects on the body: it steadies a shaking voice, slows a pounding heart, and cools sweaty palms; the physical symptoms of anxiety and nervousness. It does not change anxious thoughts themselves. It must never be taken by people with asthma, and it should never be stopped suddenly.",
+    sideEffects: "The most common side effects are: bradycardia, fatigue and reduced exercise tolerance, cold extremities, hypotension and dizziness, sleep disturbance and vivid dreams. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Severe bradycardia / heart block and Bronchospasm in asthma/COPD. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline and every visit); excerpt from exercise tolerance (at review). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Asthma inhalers (beta-agonists), Verapamil and diltiazem, Insulin and sulfonylureas, Clonidine. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Asthma inhalers (beta-agonists), Verapamil and diltiazem, Insulin and sulfonylureas, Clonidine. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -710,7 +710,7 @@ export const propranolol: Drug = {
         name: "Propranolol",
         slug: "propranolol",
         relationship: "This guide",
-        distinguishing: "The peripheral anxiety answer — tremor, stage fright, akathisia",
+        distinguishing: "The peripheral anxiety answer: tremor, stage fright, akathisia",
       },
     ],
   },
@@ -858,7 +858,7 @@ export const propranolol: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Propranolol in two sentences.",
-      answer: "Propranolol blocks beta-adrenergic receptors — damping the peripheral sympathetic theatre of anxiety (tremor, tachycardia) plus central anxiolytic and antitremor effects. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Propranolol blocks beta-adrenergic receptors, damping the peripheral sympathetic theatre of anxiety (tremor, tachycardia) plus central anxiolytic and antitremor effects. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -878,7 +878,7 @@ export const propranolol: Drug = {
     },
     {
       question: "Share one clinical pearl about Propranolol that separates safe prescribers from unsafe ones.",
-      answer: "The body-not-mind drug: propranolol does nothing for worried thoughts — it removes the tremor, the pounding heart, and the flush that anxiety feeds on.",
+      answer: "The body-not-mind drug: propranolol does nothing for worried thoughts; it removes the tremor, the pounding heart, and the flush that anxiety feeds on.",
       topic: "Clinical Pearls",
     },
   ],
@@ -954,7 +954,7 @@ export const propranolol: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -999,7 +999,7 @@ export const propranolol: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Propranolol works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Propranolol works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1015,7 +1015,7 @@ export const propranolol: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Propranolol safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Propranolol safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1060,7 +1060,7 @@ export const propranolol: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Propranolol follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Propranolol follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1100,10 +1100,10 @@ export const propranolol: Drug = {
       "Rehearse the PRN dose before the real event.",
       "Pulse at every review.",
       "Bedtime-weighted dosing for night tremor.",
-      "Taper — never abrupt.",
+      "Taper, never abrupt.",
     ],
     overdose: [
-      "Overdose with Propranolol is managed supportively — no specific antidote.",
+      "Overdose with Propranolol is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Propranolol is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1145,17 +1145,17 @@ export const propranolol: Drug = {
       "Performance anxiety",
     ],
     pearls: [
-      "The body-not-mind drug: propranolol does nothing for worried thoughts — it removes the tremor, the pounding heart, and the flush that anxiety feeds on.",
-      "The stage-fright ritual: 10-40 mg, 45 minutes before — rehearsed in advance so the dose is known, not guessed.",
-      "The akathisia first-line: 30-90 mg/day rescues aripiprazole-class and antipsychotic restlessness — the psychopharmacology workhorse.",
-      "Never in asthma — the non-selective beta-2 blockade is an absolute respiratory contraindication.",
-      "Taper always: abrupt withdrawal causes rebound tachycardia and angina — the unlearned lesson of beta-blocker pharmacology.",
-      "Masks hypoglycaemia: insulin users lose their adrenergic warning — counsel explicitly.",
+      "The body-not-mind drug: propranolol does nothing for worried thoughts; it removes the tremor, the pounding heart, and the flush that anxiety feeds on.",
+      "The stage-fright ritual: 10-40 mg, 45 minutes before; rehearsed in advance so the dose is known, not guessed.",
+      "The akathisia first-line: 30-90 mg/day rescues aripiprazole-class and antipsychotic restlessness; the psychopharmacology workhorse.",
+      "Never in asthma: the non-selective beta-2 blockade is an absolute respiratory contraindication.",
+      "Taper always: abrupt withdrawal causes rebound tachycardia and angina; the unlearned lesson of beta-blocker pharmacology.",
+      "Masks hypoglycaemia: insulin users lose their adrenergic warning. Counsel explicitly.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

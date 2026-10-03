@@ -23,14 +23,14 @@ export const dextromethorphan: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Specialised Agents", "NMDA Antagonists", "Dextromethorphan"],
   /* ---- Hero / summary ---- */
-  tagline: "The cough suppressant with three secret lives — NMDA blocker, sigma agonist, and the newest antidepressant mechanism.",
-  summary: "Dextromethorphan is the OTC antitussive whose CNS pharmacology gave it psychiatric careers: NMDA antagonism (the ketamine-adjacent mechanism), sigma-1 agonism, and — as dextromethorphan-bupropion (Auvelity) — the newest FDA-approved antidepressant mechanism of the decade. Misuse at recreational doses (robo-tripping) and serotonin-syndrome potential complete the profile.",
+  tagline: "The cough suppressant with three secret lives. NMDA blocker, sigma agonist, and the newest antidepressant mechanism.",
+  summary: "Dextromethorphan is the OTC antitussive whose CNS pharmacology gave it psychiatric careers: NMDA antagonism (the ketamine-adjacent mechanism), sigma-1 agonism, and (as dextromethorphan-bupropion (Auvelity)) the newest FDA-approved antidepressant mechanism of the decade. Misuse at recreational doses (robo-tripping) and serotonin-syndrome potential complete the profile.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Dextromethorphan — from its molecular target (NMDA receptor (antagonism) + sigma-1 receptor (agonism); with bupropion = dextrorphan potentiation) to clinical effect.",
+    "Explain the mechanism of action of Dextromethorphan, from its molecular target (NMDA receptor (antagonism) + sigma-1 receptor (agonism); with bupropion = dextrorphan potentiation) to clinical effect.",
     "List the FDA-approved and off-label uses of Dextromethorphan.",
     "Predict the common and serious side effects of Dextromethorphan from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Dextromethorphan.",
@@ -38,16 +38,16 @@ export const dextromethorphan: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Dextromethorphan antagonises NMDA receptors and agonises sigma-1 — glutamate-modulating antidepressant pharmacology (especially combined with bupropion, which raises dextrorphan levels via CYP2D6 competition).",
+    summary: "Dextromethorphan antagonises NMDA receptors and agonises sigma-1: glutamate-modulating antidepressant pharmacology (especially combined with bupropion, which raises dextrorphan levels via CYP2D6 competition).",
     molecularTarget: "NMDA receptor (antagonism) + sigma-1 receptor (agonism); with bupropion = dextrorphan potentiation",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Dextromethorphan antagonises NMDA receptors and agonises sigma-1 — glutamate-modulating antidepressant pharmacology (especially combined with bupropion, which raises dextrorphan levels via CYP2D6 competition).",
+      "Dextromethorphan antagonises NMDA receptors and agonises sigma-1: glutamate-modulating antidepressant pharmacology (especially combined with bupropion, which raises dextrorphan levels via CYP2D6 competition).",
       "The mechanism translates into the clinical profile described.",
       "Practical use follows half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 3-30 hours (2D6-dependent — poor metabolisers hold it longer). — see mechanism and prescriber sections.",
-    halfLife: "3-30 hours (2D6-dependent — poor metabolisers hold it longer).",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 3-30 hours (2D6-dependent, poor metabolisers hold it longer). See mechanism and prescriber sections.",
+    halfLife: "3-30 hours (2D6-dependent, poor metabolisers hold it longer).",
     metabolism: "Hepatic.",
     excretion: "Renal.",
   },
@@ -98,7 +98,7 @@ export const dextromethorphan: Drug = {
         type: "stimulate",
       },
     ],
-    caption: "NMDA antagonism rebalances glutamate signalling — the pathway that can produce antidepressant effects within hours rather than weeks.",
+    caption: "NMDA antagonism rebalances glutamate signalling: the pathway that can produce antidepressant effects within hours rather than weeks.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Glutamate", "Serotonin (5-HT)"],
@@ -115,7 +115,7 @@ export const dextromethorphan: Drug = {
     {
       name: "Major depressive disorder (as dextromethorphan-bupropion combination)",
       status: "fda-approved",
-      description: "Auvelity: 45/105 mg twice daily — the rapidish-onset NMDA-flavoured antidepressant (days-to-weeks onset in trials).",
+      description: "Auvelity: 45/105 mg twice daily; the rapidish-onset NMDA-flavoured antidepressant (days-to-weeks onset in trials).",
     },
     {
       name: "Pseudobulbar affect (as dextromethorphan-quinidine)",
@@ -170,14 +170,14 @@ export const dextromethorphan: Drug = {
       name: "Serotonin syndrome (with SSRIs, MAOIs, other serotonergics)",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Dextromethorphan is serotonergic — the SSRI + cough-syrup interaction is classic.",
+      description: "Dextromethorphan is serotonergic. The SSRI + cough-syrup interaction is classic.",
       management: "Read OTC labels; MAOI absolute contraindication.",
     },
     {
       name: "Misuse and dependence (recreational doses)",
       frequency: "uncommon",
       severity: "severe",
-      description: "Robo-tripping: dissociative misuse of OTC syrup — a real adolescent pattern.",
+      description: "Robo-tripping: dissociative misuse of OTC syrup; a real adolescent pattern.",
       management: "Dispensing awareness; education.",
     },
     {
@@ -211,13 +211,13 @@ export const dextromethorphan: Drug = {
     {
       drug: "SSRIs and serotonergics",
       severity: "major",
-      mechanism: "Serotonin syndrome — including OTC cough-syrup dosing on SSRIs.",
+      mechanism: "Serotonin syndrome, including OTC cough-syrup dosing on SSRIs.",
       action: "Counsel on reading labels.",
     },
     {
       drug: "CYP2D6 inhibitors (bupropion deliberately; fluoxetine incidentally)",
       severity: "major",
-      mechanism: "Raise dextromethorphan levels — intended (Auvelity) or incidental.",
+      mechanism: "Raise dextromethorphan levels: intended (Auvelity) or incidental.",
       action: "Dose awareness.",
     },
   ],
@@ -226,45 +226,45 @@ export const dextromethorphan: Drug = {
     lactation: "Standard caution.",
   },
   renalAdjustment: "Standard caution.",
-  hepaticAdjustment: "2D6 metabolism — hepatic impairment and poor-metaboliser status raise levels.",
+  hepaticAdjustment: "2D6 metabolism: hepatic impairment and poor-metaboliser status raise levels.",
   /* ---- Education ---- */
-  patientExplanation: "Dextromethorphan is the cough-suppressing ingredient in most over-the-counter cough syrups — and, in new prescription combinations, also a fast-acting antidepressant that works on the brain's glutamate system. On its own at normal doses it is safe; it must not be mixed with antidepressants without your doctor's knowledge, and taking large amounts for recreational effects is dangerous.",
+  patientExplanation: "Dextromethorphan is the cough-suppressing ingredient in most over-the-counter cough syrups, and, in new prescription combinations, also a fast-acting antidepressant that works on the brain's glutamate system. On its own at normal doses it is safe; it must not be mixed with antidepressants without your doctor's knowledge, and taking large amounts for recreational effects is dangerous.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Dextromethorphan builds over weeks — do not judge it in the first days.",
+    "Benefit from Dextromethorphan builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The triple life: cough syrup by day, pseudobulbar-affect capsule by prescription, and the newest antidepressant mechanism by combination — one molecule, three careers.",
-    "The 2D6 story: bupropion inhibits CYP2D6, raising dextromethorphan AND its active metabolite dextrorphan — the combination is pharmacokinetic engineering.",
-    "The ketamine connection: NMDA antagonism with sigma-1 agonism — the glutamate-era antidepressant pharmacology at OTC prices.",
+    "The triple life: cough syrup by day, pseudobulbar-affect capsule by prescription, and the newest antidepressant mechanism by combination, one molecule, three careers.",
+    "The 2D6 story: bupropion inhibits CYP2D6, raising dextromethorphan AND its active metabolite dextrorphan. The combination is pharmacokinetic engineering.",
+    "The ketamine connection: NMDA antagonism with sigma-1 agonism; the glutamate-era antidepressant pharmacology at OTC prices.",
     "The adolescent misuse footnote: robo-tripping (dissociative syrup misuse) is the addiction-medicine reminder that OTC is not risk-free.",
-    "The SSRI-syrup trap: serotonin syndrome from cough syrup on an SSRI — the OTC-labeling lesson.",
+    "The SSRI-syrup trap: serotonin syndrome from cough syrup on an SSRI; the OTC-labeling lesson.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Dextromethorphan: Dextromethorphan antagonises NMDA receptors and agonises sigma-1 — glutamate-modulating antidepressant pharmacology (especially combined with bupropion, which raises dextrorphan levels via CYP2D6 competition).",
+        "Mechanism of Dextromethorphan: Dextromethorphan antagonises NMDA receptors and agonises sigma-1; glutamate-modulating antidepressant pharmacology (especially combined with bupropion, which raises dextrorphan levels via CYP2D6 competition).",
         "Uses of Dextromethorphan: Cough suppression (OTC); Major depressive disorder (as dextromethorphan-bupropion combination); Pseudobulbar affect (as dextromethorphan-quinidine); Treatment-resistant depression (off-label, investigational)",
         "Mechanism: NMDA ANTAGONIST + sigma-1 AGONIST (serotonergic activity too).",
-        "Three lives: OTC antitussive + pseudobulbar affect (with quinidine) + MDD (with bupropion — Auvelity).",
+        "Three lives: OTC antitussive + pseudobulbar affect (with quinidine) + MDD (with bupropion. Auvelity).",
       ],
       practical: [
         "Prescribe Dextromethorphan for cough suppression (otc) with dose, timing, and duration.",
         "Outline the monitoring plan: Response (combination MDD use) (At 2-6 weeks); Misuse review (OTC contexts) (In adolescent care)",
       ],
       longAnswer: [
-        "Dextromethorphan: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Dextromethorphan: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: NMDA ANTAGONIST + sigma-1 AGONIST (serotonergic activity too).",
-        "Three lives: OTC antitussive + pseudobulbar affect (with quinidine) + MDD (with bupropion — Auvelity).",
+        "Three lives: OTC antitussive + pseudobulbar affect (with quinidine) + MDD (with bupropion. Auvelity).",
       ],
     },
     neetPg: {
       highYield: [
         "Mechanism: NMDA ANTAGONIST + sigma-1 AGONIST (serotonergic activity too).",
-        "Three lives: OTC antitussive + pseudobulbar affect (with quinidine) + MDD (with bupropion — Auvelity).",
+        "Three lives: OTC antitussive + pseudobulbar affect (with quinidine) + MDD (with bupropion. Auvelity).",
         "The 2D6-bupropion pharmacokinetic pairing raises dextrorphan.",
         "Warnings: serotonin syndrome with SSRIs/MAOIs; recreational misuse (robo-tripping).",
         "The newest FDA antidepressant mechanism of the 2020s.",
@@ -277,7 +277,7 @@ export const dextromethorphan: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Dextromethorphan develops serotonin syndrome (with ssris, maois, other serotonergics) — next best step?",
+        "A patient on Dextromethorphan develops serotonin syndrome (with ssris, maois, other serotonergics): next best step?",
         "When to choose Dextromethorphan over alternatives in its class.",
       ],
     },
@@ -290,9 +290,9 @@ export const dextromethorphan: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The triple life: cough syrup by day, pseudobulbar-affect capsule by prescription, and the newest antidepressant mechanism by combination — one molecule, three careers.",
-        "The 2D6 story: bupropion inhibits CYP2D6, raising dextromethorphan AND its active metabolite dextrorphan — the combination is pharmacokinetic engineering.",
-        "The ketamine connection: NMDA antagonism with sigma-1 agonism — the glutamate-era antidepressant pharmacology at OTC prices.",
+        "The triple life: cough syrup by day, pseudobulbar-affect capsule by prescription, and the newest antidepressant mechanism by combination, one molecule, three careers.",
+        "The 2D6 story: bupropion inhibits CYP2D6, raising dextromethorphan AND its active metabolite dextrorphan. The combination is pharmacokinetic engineering.",
+        "The ketamine connection: NMDA antagonism with sigma-1 agonism; the glutamate-era antidepressant pharmacology at OTC prices.",
         "The adolescent misuse footnote: robo-tripping (dissociative syrup misuse) is the addiction-medicine reminder that OTC is not risk-free.",
       ],
     },
@@ -300,7 +300,7 @@ export const dextromethorphan: Drug = {
   memoryTricks: [],
   highYieldSummary: [
     "Mechanism: NMDA ANTAGONIST + sigma-1 AGONIST (serotonergic activity too).",
-    "Three lives: OTC antitussive + pseudobulbar affect (with quinidine) + MDD (with bupropion — Auvelity).",
+    "Three lives: OTC antitussive + pseudobulbar affect (with quinidine) + MDD (with bupropion. Auvelity).",
     "The 2D6-bupropion pharmacokinetic pairing raises dextrorphan.",
     "Warnings: serotonin syndrome with SSRIs/MAOIs; recreational misuse (robo-tripping).",
     "The newest FDA antidepressant mechanism of the 2020s.",
@@ -308,7 +308,7 @@ export const dextromethorphan: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — cough suppression (otc)",
+      title: "First presentation: cough suppression (otc)",
       presentation: "A patient presenting with cough suppression (otc), started on Dextromethorphan.",
       history: "A adult patient presents with a cough suppression (otc) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with cough suppression (otc); physical examination and baseline investigations are unremarkable.",
@@ -317,7 +317,7 @@ export const dextromethorphan: Drug = {
       management: "Started at 15-30 mg up to four times daily, titrated to 30-120 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Dextromethorphan takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Dextromethorphan takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -326,7 +326,7 @@ export const dextromethorphan: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "NMDA Antagonist vs related agents — orientation table",
+      title: "NMDA Antagonist vs related agents: orientation table",
       primaryDrug: "Dextromethorphan",
       rows: [
         {
@@ -370,7 +370,7 @@ export const dextromethorphan: Drug = {
           ],
         },
       ],
-      takeaway: "Dextromethorphan is compared here with related agents for orientation. Full comparison data lives in each drug's own guide — follow the links for the complete picture.",
+      takeaway: "Dextromethorphan is compared here with related agents for orientation. Full comparison data lives in each drug's own guide: follow the links for the complete picture.",
     },
   ],
   /* ---- Timeline ---- */
@@ -379,7 +379,7 @@ export const dextromethorphan: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Dextromethorphan reaches peak plasma concentration and begins acting at its molecular target (NMDA receptor (antagonism) + sigma-1 receptor (agonism); with bupropion = dextrorphan potentiation). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Dextromethorphan reaches peak plasma concentration and begins acting at its molecular target (NMDA receptor (antagonism) + sigma-1 receptor (agonism); with bupropion = dextrorphan potentiation). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -415,7 +415,7 @@ export const dextromethorphan: Drug = {
   faqs: [
     {
       question: "How long does Dextromethorphan take to work?",
-      answer: "Cough in hours; antidepressant effect days-to-weeks (combination trials).. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Cough in hours; antidepressant effect days-to-weeks (combination trials).. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Dextromethorphan?",
@@ -423,11 +423,11 @@ export const dextromethorphan: Drug = {
     },
     {
       question: "Can I stop Dextromethorphan suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Dextromethorphan habit-forming?",
@@ -435,7 +435,7 @@ export const dextromethorphan: Drug = {
     },
     {
       question: "Can I take Dextromethorphan during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Dextromethorphan may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Dextromethorphan may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -575,7 +575,7 @@ export const dextromethorphan: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Dextromethorphan",
+      label: "Patient Guide. Dextromethorphan",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -583,13 +583,13 @@ export const dextromethorphan: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The cough suppressant with three secret lives — NMDA blocker, sigma agonist, and the newest antidepressant mechanism.",
-    summary: "Dextromethorphan is a prescription medicine used to treat cough suppression (otc). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Dextromethorphan is the cough-suppressing ingredient in most over-the-counter cough syrups — and, in new prescription combinations, also a fast-acting antidepressant that works on the brain's glutamate system. On its own at normal doses it is safe; it must not be mixed with antidepressants without your doctor's knowledge, and taking large amounts for recreational effects is dangerous.",
-    sideEffects: "The most common side effects are: nausea and dizziness (combination products), somnolence or dry mouth, dissociation at high doses. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Serotonin syndrome (with SSRIs, MAOIs, other serotonergics) and Misuse and dependence (recreational doses). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: response (combination mdd use) (at 2-6 weeks); misuse review (otc contexts) (in adolescent care). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The cough suppressant with three secret lives. NMDA blocker, sigma agonist, and the newest antidepressant mechanism.",
+    summary: "Dextromethorphan is a prescription medicine used to treat cough suppression (otc). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Dextromethorphan is the cough-suppressing ingredient in most over-the-counter cough syrups, and, in new prescription combinations, also a fast-acting antidepressant that works on the brain's glutamate system. On its own at normal doses it is safe; it must not be mixed with antidepressants without your doctor's knowledge, and taking large amounts for recreational effects is dangerous.",
+    sideEffects: "The most common side effects are: nausea and dizziness (combination products), somnolence or dry mouth, dissociation at high doses. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Serotonin syndrome (with SSRIs, MAOIs, other serotonergics) and Misuse and dependence (recreational doses). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: response (combination mdd use) (at 2-6 weeks); misuse review (otc contexts) (in adolescent care). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: MAOIs, SSRIs and serotonergics, CYP2D6 inhibitors (bupropion deliberately; fluoxetine incidentally). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: MAOIs, SSRIs and serotonergics, CYP2D6 inhibitors (bupropion deliberately; fluoxetine incidentally). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -809,7 +809,7 @@ export const dextromethorphan: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Dextromethorphan in two sentences.",
-      answer: "Dextromethorphan antagonises NMDA receptors and agonises sigma-1 — glutamate-modulating antidepressant pharmacology (especially combined with bupropion, which raises dextrorphan levels via CYP2D6 competition). Net effect: Target engagement producing the described clinical effect.",
+      answer: "Dextromethorphan antagonises NMDA receptors and agonises sigma-1: glutamate-modulating antidepressant pharmacology (especially combined with bupropion, which raises dextrorphan levels via CYP2D6 competition). Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -819,7 +819,7 @@ export const dextromethorphan: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Dextromethorphan and how you would manage it.",
-      answer: "Serotonin syndrome (with SSRIs, MAOIs, other serotonergics): Dextromethorphan is serotonergic — the SSRI + cough-syrup interaction is classic. Management: Read OTC labels; MAOI absolute contraindication.",
+      answer: "Serotonin syndrome (with SSRIs, MAOIs, other serotonergics): Dextromethorphan is serotonergic. The SSRI + cough-syrup interaction is classic. Management: Read OTC labels; MAOI absolute contraindication.",
       topic: "Safety",
     },
     {
@@ -829,7 +829,7 @@ export const dextromethorphan: Drug = {
     },
     {
       question: "Share one clinical pearl about Dextromethorphan that separates safe prescribers from unsafe ones.",
-      answer: "The triple life: cough syrup by day, pseudobulbar-affect capsule by prescription, and the newest antidepressant mechanism by combination — one molecule, three careers.",
+      answer: "The triple life: cough syrup by day, pseudobulbar-affect capsule by prescription, and the newest antidepressant mechanism by combination, one molecule, three careers.",
       topic: "Clinical Pearls",
     },
   ],
@@ -905,7 +905,7 @@ export const dextromethorphan: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -950,7 +950,7 @@ export const dextromethorphan: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Dextromethorphan works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Dextromethorphan works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -966,7 +966,7 @@ export const dextromethorphan: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Dextromethorphan safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Dextromethorphan safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1011,7 +1011,7 @@ export const dextromethorphan: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Dextromethorphan follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Dextromethorphan follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1042,11 +1042,11 @@ export const dextromethorphan: Drug = {
     dosageForms: ["OTC cough syrups/lozenges", "Auvelity tablets 45/105 mg", "Nuedexta (with quinidine) 20/10 mg"],
     dosingTips: [
       "Ask every SSRI patient about cough-syrup use (serotonin syndrome).",
-      "The Auvelity pairing is deliberate pharmacokinetics — never DIY it.",
+      "The Auvelity pairing is deliberate pharmacokinetics, never DIY it.",
       "Adolescent misuse awareness for syrup quantities.",
     ],
     overdose: [
-      "Overdose with Dextromethorphan is managed supportively — no specific antidote.",
+      "Overdose with Dextromethorphan is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Dextromethorphan is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1055,7 +1055,7 @@ export const dextromethorphan: Drug = {
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
     pharmacokinetics: [
-      "Half-life: 3-30 hours (2D6-dependent — poor metabolisers hold it longer)..",
+      "Half-life: 3-30 hours (2D6-dependent, poor metabolisers hold it longer)..",
       "Metabolism: Hepatic..",
     ],
     doNotUse: ["Known hypersensitivity to this agent."],
@@ -1087,16 +1087,16 @@ export const dextromethorphan: Drug = {
     potentialDisadvantages: ["Serotonin-syndrome interaction surface.", "Misuse potential at high doses.", "2D6 variability.", "Combination product pricing."],
     primaryTargetSymptoms: ["Cough suppression", "Major depression (combination product)", "Pseudobulbar affect (with quinidine)"],
     pearls: [
-      "The triple life: cough syrup by day, pseudobulbar-affect capsule by prescription, and the newest antidepressant mechanism by combination — one molecule, three careers.",
-      "The 2D6 story: bupropion inhibits CYP2D6, raising dextromethorphan AND its active metabolite dextrorphan — the combination is pharmacokinetic engineering.",
-      "The ketamine connection: NMDA antagonism with sigma-1 agonism — the glutamate-era antidepressant pharmacology at OTC prices.",
+      "The triple life: cough syrup by day, pseudobulbar-affect capsule by prescription, and the newest antidepressant mechanism by combination, one molecule, three careers.",
+      "The 2D6 story: bupropion inhibits CYP2D6, raising dextromethorphan AND its active metabolite dextrorphan. The combination is pharmacokinetic engineering.",
+      "The ketamine connection: NMDA antagonism with sigma-1 agonism; the glutamate-era antidepressant pharmacology at OTC prices.",
       "The adolescent misuse footnote: robo-tripping (dissociative syrup misuse) is the addiction-medicine reminder that OTC is not risk-free.",
-      "The SSRI-syrup trap: serotonin syndrome from cough syrup on an SSRI — the OTC-labeling lesson.",
+      "The SSRI-syrup trap: serotonin syndrome from cough syrup on an SSRI; the OTC-labeling lesson.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

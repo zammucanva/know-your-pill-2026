@@ -23,14 +23,14 @@ export const temazepam: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Sleep Medicines", "Benzodiazepine Hypnotics", "Temazepam"],
   /* ---- Hero / summary ---- */
-  tagline: "The classic hypnotic benzodiazepine — 8–10 hour cover from a diazepam descendant.",
-  summary: "Temazepam is the classic benzodiazepine hypnotic (half-life 8–10 h): a diazepam metabolite marketed for sleep, covering both onset and maintenance with full benzodiazepine pharmacology — sedation, amnesia, dependence, and the opioid-combination warning. Largely replaced by Z-drugs and melatonergics as first-line, it remains useful where Z-drugs fail and full hypnotic power is needed.",
+  tagline: "The classic hypnotic benzodiazepine: 8–10 hour cover from a diazepam descendant.",
+  summary: "Temazepam is the classic benzodiazepine hypnotic (half-life 8–10 h): a diazepam metabolite marketed for sleep, covering both onset and maintenance with full benzodiazepine pharmacology; sedation, amnesia, dependence, and the opioid-combination warning. Largely replaced by Z-drugs and melatonergics as first-line, it remains useful where Z-drugs fail and full hypnotic power is needed.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Temazepam — from its molecular target (GABA-A benzodiazepine site (PAM) — intermediate-acting) to clinical effect.",
+    "Explain the mechanism of action of Temazepam (from its molecular target (GABA-A benzodiazepine site (PAM)) intermediate-acting) to clinical effect.",
     "List the FDA-approved and off-label uses of Temazepam.",
     "Predict the common and serious side effects of Temazepam from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Temazepam.",
@@ -38,15 +38,15 @@ export const temazepam: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Intermediate-acting benzodiazepine GABA-A PAM — the classic hypnotic of the benzodiazepine era.",
-    molecularTarget: "GABA-A benzodiazepine site (PAM) — intermediate-acting",
+    summary: "Intermediate-acting benzodiazepine GABA-A PAM: the classic hypnotic of the benzodiazepine era.",
+    molecularTarget: "GABA-A benzodiazepine site (PAM): intermediate-acting",
     effect: "Sleep promotion via the described target.",
     steps: [
-      "Temazepam is the classic benzodiazepine hypnotic (half-life 8–10 h): a diazepam metabolite marketed for sleep, covering both onset and maintenance with full benzodiazepine pharmacology — sedation, amnesia, dependence, and the opioid-combination warning — the mechanism in one line.",
+      "Temazepam is the classic benzodiazepine hypnotic (half-life 8–10 h): a diazepam metabolite marketed for sleep, covering both onset and maintenance with full benzodiazepine pharmacology (sedation, amnesia, dependence, and the opioid-combination warning) the mechanism in one line.",
       "Binding at the described target produces the sleep-promoting effect.",
       "Duration of action follows the half-life: onset agents clear before morning; longer agents add maintenance cover.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 8–10 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 8–10 hours. See mechanism and prescriber sections.",
     halfLife: "8–10 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
@@ -108,14 +108,14 @@ export const temazepam: Drug = {
         label: "inhibits firing",
       },
     ],
-    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly — which is why their effect is powerful but limited by dependence risk.",
+    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly, which is why their effect is powerful but limited by dependence risk.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
     "Central monoaminergic systems (see mechanism)",
   ],
   receptors: [
-    "GABA-A benzodiazepine site (PAM) — intermediate-acting",
+    "GABA-A benzodiazepine site (PAM): intermediate-acting",
   ],
   brainRegionIds: ["amygdala", "prefrontal-cortex"],
   pathwayIds: [],
@@ -136,17 +136,17 @@ export const temazepam: Drug = {
     {
       name: "Opioids",
       severity: "absolute",
-      rationale: "Concurrent use causes profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      rationale: "Concurrent use causes profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
     },
   ],
   blackBoxWarnings: [
     {
-      title: "Risks with opioids — sedation, respiratory depression, death",
+      title: "Risks with opioids: sedation, respiratory depression, death",
       text: "Class benzodiazepine warning.",
     },
     {
       title: "Dependence, abuse, and withdrawal",
-      text: "Class warning — 2–4 week courses; taper on stopping.",
+      text: "Class warning: 2–4 week courses; taper on stopping.",
     },
   ],
   /* ---- Side effects ---- */
@@ -232,7 +232,7 @@ export const temazepam: Drug = {
     {
       drug: "Opioids",
       severity: "contraindicated",
-      mechanism: "Concurrent use causes profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      mechanism: "Concurrent use causes profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
       action: "Avoid; if unavoidable for taper protocols, use lowest doses with intensive monitoring.",
     },
     {
@@ -250,7 +250,7 @@ export const temazepam: Drug = {
     {
       drug: "Older antihistamines (sedating)",
       severity: "moderate",
-      mechanism: "Additive sedation in the elderly — falls.",
+      mechanism: "Additive sedation in the elderly: falls.",
       action: "Prefer non-sedating alternatives.",
     },
   ],
@@ -262,34 +262,34 @@ export const temazepam: Drug = {
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
-  patientExplanation: "Temazepam is a medicine used to treat insomnia — short-term (onset and maintenance). Intermediate-acting benzodiazepine GABA-A PAM — the classic hypnotic of the benzodiazepine era. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+  patientExplanation: "Temazepam is a medicine used to treat insomnia: short-term (onset and maintenance). Intermediate-acting benzodiazepine GABA-A PAM: the classic hypnotic of the benzodiazepine era. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
   patientEducationPoints: [
-    "This medicine is for short-term or carefully planned use — it can cause dependence within weeks of regular use.",
-    "Never mix it with opioid painkillers or alcohol — the combination can stop breathing.",
+    "This medicine is for short-term or carefully planned use. It can cause dependence within weeks of regular use.",
+    "Never mix it with opioid painkillers or alcohol: the combination can stop breathing.",
     "Do not drive until you know how it affects you.",
-    "Stopping must be gradual — never stop suddenly after regular use.",
-    "Benefit from Temazepam builds over weeks — do not judge it in the first days.",
+    "Stopping must be gradual, never stop suddenly after regular use.",
+    "Benefit from Temazepam builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "A diazepam metabolite promoted to its own medicine — the benzodiazepine family tree again (diazepam → nordiazepam → temazepam).",
+    "A diazepam metabolite promoted to its own medicine: the benzodiazepine family tree again (diazepam → nordiazepam → temazepam).",
     "Full benzodiazepine power for sleep: strongest where Z-drugs fail, heaviest where dependence and falls threaten.",
-    "Its oral capsules were the UK's temazepam-abuse era drug (gel-filled capsule injection history) — the origin of Schedule-class controls there.",
+    "Its oral capsules were the UK's temazepam-abuse era drug (gel-filled capsule injection history): the origin of Schedule-class controls there.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Temazepam: Intermediate-acting benzodiazepine GABA-A PAM — the classic hypnotic of the benzodiazepine era.",
-        "Uses of Temazepam: Insomnia — short-term (onset and maintenance)",
+        "Mechanism of Temazepam: Intermediate-acting benzodiazepine GABA-A PAM; the classic hypnotic of the benzodiazepine era.",
+        "Uses of Temazepam: Insomnia; short-term (onset and maintenance)",
         "Intermediate-acting benzo hypnotic (half-life 8–10 h).",
         "Diazepam's metabolite marketed independently.",
       ],
       practical: [
-        "Prescribe Temazepam for insomnia — short-term (onset and maintenance) with dose, timing, and duration.",
+        "Prescribe Temazepam for insomnia: short-term (onset and maintenance) with dose, timing, and duration.",
         "Outline the monitoring plan: Respiratory status and sedation (Clinical review each visit); Dependence review (Every visit for long-term users); Fall risk review (elderly) (Every visit in older patients)",
       ],
       longAnswer: [
-        "Temazepam: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Temazepam: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Intermediate-acting benzo hypnotic (half-life 8–10 h).",
         "Diazepam's metabolite marketed independently.",
       ],
@@ -310,22 +310,22 @@ export const temazepam: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Temazepam develops respiratory depression with opioids — next best step?",
+        "A patient on Temazepam develops respiratory depression with opioids: next best step?",
         "When to choose Temazepam over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: GABA-A benzodiazepine site (PAM) — intermediate-acting",
+        "Primary target: GABA-A benzodiazepine site (PAM), intermediate-acting",
         "Most common side effects: Morning hangover, Anterograde amnesia, Ataxia and falls (elderly)",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "A diazepam metabolite promoted to its own medicine — the benzodiazepine family tree again (diazepam → nordiazepam → temazepam).",
+        "A diazepam metabolite promoted to its own medicine: the benzodiazepine family tree again (diazepam → nordiazepam → temazepam).",
         "Full benzodiazepine power for sleep: strongest where Z-drugs fail, heaviest where dependence and falls threaten.",
-        "Its oral capsules were the UK's temazepam-abuse era drug (gel-filled capsule injection history) — the origin of Schedule-class controls there.",
+        "Its oral capsules were the UK's temazepam-abuse era drug (gel-filled capsule injection history): the origin of Schedule-class controls there.",
       ],
     },
   },
@@ -340,16 +340,16 @@ export const temazepam: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — insomnia — short-term (onset and maintenance)",
-      presentation: "A patient presenting with insomnia — short-term (onset and maintenance), started on Temazepam.",
-      history: "A adult patient presents with a insomnia — short-term (onset and maintenance) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with insomnia — short-term (onset and maintenance); physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Insomnia — short-term (onset and maintenance). Differentials are considered and excluded clinically.",
+      title: "First presentation: insomnia; short-term (onset and maintenance)",
+      presentation: "A patient presenting with insomnia: short-term (onset and maintenance), started on Temazepam.",
+      history: "A adult patient presents with a insomnia: short-term (onset and maintenance) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with insomnia: short-term (onset and maintenance); physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Insomnia: short-term (onset and maintenance). Differentials are considered and excluded clinically.",
       rationale: "Temazepam is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Benzodiazepine Hypnotic) with strong evidence in this condition.",
       management: "Started at 7.5–15 mg at bedtime (7.5 mg elderly), titrated to 15–30 mg with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Temazepam takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Temazepam takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -358,12 +358,12 @@ export const temazepam: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Benzodiazepine Hypnotic comparison — choosing within the class",
+      title: "Benzodiazepine Hypnotic comparison: choosing within the class",
       primaryDrug: "Temazepam",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "GABA-A benzodiazepine site (PAM) — intermediate-acting",
+          primaryValue: "GABA-A benzodiazepine site (PAM): intermediate-acting",
           comparisons: [
             {
               drug: "Triazolam",
@@ -451,7 +451,7 @@ export const temazepam: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The classic benzodiazepine hypnotic — full power, full class risks",
+          primaryValue: "The classic benzodiazepine hypnotic: full power, full class risks",
           comparisons: [
             {
               drug: "Triazolam",
@@ -472,7 +472,7 @@ export const temazepam: Drug = {
           ],
         },
       ],
-      takeaway: "All benzodiazepine hypnotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All benzodiazepine hypnotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -481,7 +481,7 @@ export const temazepam: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Temazepam reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (PAM) — intermediate-acting). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Temazepam reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (PAM), intermediate-acting). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -517,7 +517,7 @@ export const temazepam: Drug = {
   faqs: [
     {
       question: "How long does Temazepam take to work?",
-      answer: "30–60 minutes.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "30–60 minutes.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Temazepam?",
@@ -525,19 +525,19 @@ export const temazepam: Drug = {
     },
     {
       question: "Can I stop Temazepam suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Temazepam habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Temazepam exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Temazepam exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Temazepam during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Temazepam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Temazepam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -647,13 +647,13 @@ export const temazepam: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "GABA-A benzodiazepine site (PAM) — intermediate-acting",
+      label: "GABA-A benzodiazepine site (PAM): intermediate-acting",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
     },
     {
-      label: "Insomnia — short-term (onset and maintenance)",
+      label: "Insomnia: short-term (onset and maintenance)",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -677,7 +677,7 @@ export const temazepam: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Temazepam",
+      label: "Patient Guide. Temazepam",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -685,13 +685,13 @@ export const temazepam: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The classic hypnotic benzodiazepine — 8–10 hour cover from a diazepam descendant.",
-    summary: "Temazepam is a prescription medicine used to treat insomnia — short-term (onset and maintenance). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Temazepam is a medicine used to treat insomnia — short-term (onset and maintenance). Intermediate-acting benzodiazepine GABA-A PAM — the classic hypnotic of the benzodiazepine era. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
-    sideEffects: "The most common side effects are: morning hangover, anterograde amnesia, ataxia and falls (elderly), rebound insomnia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression with opioids and Withdrawal seizures. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The classic hypnotic benzodiazepine: 8–10 hour cover from a diazepam descendant.",
+    summary: "Temazepam is a prescription medicine used to treat insomnia: short-term (onset and maintenance). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Temazepam is a medicine used to treat insomnia: short-term (onset and maintenance). Intermediate-acting benzodiazepine GABA-A PAM: the classic hypnotic of the benzodiazepine era. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+    sideEffects: "The most common side effects are: morning hangover, anterograde amnesia, ataxia and falls (elderly), rebound insomnia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression with opioids and Withdrawal seizures. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, Older antihistamines (sedating). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, Older antihistamines (sedating). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -715,7 +715,7 @@ export const temazepam: Drug = {
     },
     costCategory: "low",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: [
       "Class rules: no alcohol/opioids; taper; report sleep-walking.",
     ],
@@ -751,13 +751,13 @@ export const temazepam: Drug = {
         name: "Temazepam",
         slug: "temazepam",
         relationship: "This guide",
-        distinguishing: "The classic benzodiazepine hypnotic — full power, full class risks",
+        distinguishing: "The classic benzodiazepine hypnotic: full power, full class risks",
       },
       {
         name: "Triazolam",
         slug: "triazolam",
         relationship: "Same class (Benzodiazepine Hypnotic)",
-        distinguishing: "The benzodiazepine zolpidem — onset-only, amnesia-prone",
+        distinguishing: "The benzodiazepine zolpidem: onset-only, amnesia-prone",
       },
       {
         name: "Estazolam",
@@ -769,7 +769,7 @@ export const temazepam: Drug = {
         name: "Flunitrazepam",
         slug: "flunitrazepam",
         relationship: "Same class (Benzodiazepine Hypnotic)",
-        distinguishing: "The strictly-controlled potent hypnotic — pharmacology's misuse lesson",
+        distinguishing: "The strictly-controlled potent hypnotic: pharmacology's misuse lesson",
       },
       {
         name: "Flurazepam",
@@ -781,7 +781,7 @@ export const temazepam: Drug = {
         name: "Quazepam",
         slug: "quazepam",
         relationship: "Same class (Benzodiazepine Hypnotic)",
-        distinguishing: "The alpha-1-selective benzodiazepine — a pharmacology bridge",
+        distinguishing: "The alpha-1-selective benzodiazepine: a pharmacology bridge",
       },
     ],
   },
@@ -929,12 +929,12 @@ export const temazepam: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Temazepam in two sentences.",
-      answer: "Intermediate-acting benzodiazepine GABA-A PAM — the classic hypnotic of the benzodiazepine era. Net effect: Sleep promotion via the described target.",
+      answer: "Intermediate-acting benzodiazepine GABA-A PAM: the classic hypnotic of the benzodiazepine era. Net effect: Sleep promotion via the described target.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Temazepam.",
-      answer: "Insomnia — short-term (onset and maintenance). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Insomnia: short-term (onset and maintenance). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -949,7 +949,7 @@ export const temazepam: Drug = {
     },
     {
       question: "Share one clinical pearl about Temazepam that separates safe prescribers from unsafe ones.",
-      answer: "A diazepam metabolite promoted to its own medicine — the benzodiazepine family tree again (diazepam → nordiazepam → temazepam).",
+      answer: "A diazepam metabolite promoted to its own medicine: the benzodiazepine family tree again (diazepam → nordiazepam → temazepam).",
       topic: "Clinical Pearls",
     },
   ],
@@ -1025,7 +1025,7 @@ export const temazepam: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1070,7 +1070,7 @@ export const temazepam: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Temazepam works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Temazepam works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1086,7 +1086,7 @@ export const temazepam: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Temazepam safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Temazepam safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1129,7 +1129,7 @@ export const temazepam: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Temazepam follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Temazepam follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1152,15 +1152,15 @@ export const temazepam: Drug = {
     ],
     dosageForms: ["Capsules 7.5, 15, 30 mg", "Tablets 10, 20 mg (markets vary)"],
     dosingTips: [
-      "7.5 mg is a real elderly dose — halve everything for over-65s.",
+      "7.5 mg is a real elderly dose: halve everything for over-65s.",
       "Reserve for Z-drug failures; pair with taper planning.",
     ],
     overdose: [
-      "Overdose with Temazepam is managed supportively — no specific antidote.",
+      "Overdose with Temazepam is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Temazepam is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1190,14 +1190,14 @@ export const temazepam: Drug = {
     potentialDisadvantages: ["Morning hangover.", "Full dependence profile.", "Falls in the elderly.", "Opioid-combination lethality."],
     primaryTargetSymptoms: ["Short-term insomnia (Z-drug failures)"],
     pearls: [
-      "A diazepam metabolite promoted to its own medicine — the benzodiazepine family tree again (diazepam → nordiazepam → temazepam).",
+      "A diazepam metabolite promoted to its own medicine: the benzodiazepine family tree again (diazepam → nordiazepam → temazepam).",
       "Full benzodiazepine power for sleep: strongest where Z-drugs fail, heaviest where dependence and falls threaten.",
-      "Its oral capsules were the UK's temazepam-abuse era drug (gel-filled capsule injection history) — the origin of Schedule-class controls there.",
+      "Its oral capsules were the UK's temazepam-abuse era drug (gel-filled capsule injection history): the origin of Schedule-class controls there.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

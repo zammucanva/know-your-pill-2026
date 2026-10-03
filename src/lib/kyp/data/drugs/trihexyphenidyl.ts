@@ -23,14 +23,14 @@ export const trihexyphenidyl: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Specialised Agents", "Anticholinergics", "Trihexyphenidyl"],
   /* ---- Hero / summary ---- */
-  tagline: "India's classic anticholinergic — the trihexyphenidyl half of the trifluoperazine pairing.",
+  tagline: "India's classic anticholinergic: the trihexyphenidyl half of the trifluoperazine pairing.",
   summary: "Trihexyphenidyl is the anticholinergic antiparkinsonian agent best known in Indian psychiatry as the reflexive partner of trifluoperazine and other high-potency typicals: the same striatal muscarinic blockade as benztropine in the subcontinent's classic fixed-combination culture. Same EPS indications, same anticholinergic burden, same taper-early discipline.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Trihexyphenidyl — from its molecular target (Striatal muscarinic (M1) receptors (antagonist)) to clinical effect.",
+    "Explain the mechanism of action of Trihexyphenidyl, from its molecular target (Striatal muscarinic (M1) receptors (antagonist)) to clinical effect.",
     "List the FDA-approved and off-label uses of Trihexyphenidyl.",
     "Predict the common and serious side effects of Trihexyphenidyl from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Trihexyphenidyl.",
@@ -38,15 +38,15 @@ export const trihexyphenidyl: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Trihexyphenidyl blocks striatal muscarinic receptors, restoring the dopamine-acetylcholine balance disturbed by D2 blockade — benztropine's pharmacology in India's classic package.",
+    summary: "Trihexyphenidyl blocks striatal muscarinic receptors, restoring the dopamine-acetylcholine balance disturbed by D2 blockade: benztropine's pharmacology in India's classic package.",
     molecularTarget: "Striatal muscarinic (M1) receptors (antagonist)",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Trihexyphenidyl blocks striatal muscarinic receptors, restoring the dopamine-acetylcholine balance disturbed by D2 blockade — benztropine's pharmacology in India's classic package.",
+      "Trihexyphenidyl blocks striatal muscarinic receptors, restoring the dopamine-acetylcholine balance disturbed by D2 blockade: benztropine's pharmacology in India's classic package.",
       "The target engagement translates into the clinical effect.",
       "Practical use follows the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 3-10 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 3-10 hours. See mechanism and prescriber sections.",
     halfLife: "About 3-10 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -97,7 +97,7 @@ export const trihexyphenidyl: Drug = {
         label: "relieves",
       },
     ],
-    caption: "Antipsychotics block dopamine; anticholinergics block the cholinergic counterbalance — restoring the striatal equilibrium that drug-induced parkinsonism disturbs.",
+    caption: "Antipsychotics block dopamine; anticholinergics block the cholinergic counterbalance, restoring the striatal equilibrium that drug-induced parkinsonism disturbs.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Acetylcholine (ACh)", "Dopamine (DA)"],
@@ -210,13 +210,13 @@ export const trihexyphenidyl: Drug = {
     {
       drug: "Other anticholinergics",
       severity: "major",
-      mechanism: "Cumulative burden — delirium, ileus.",
+      mechanism: "Cumulative burden: delirium, ileus.",
       action: "Audit; minimise.",
     },
     {
       drug: "High-potency typicals",
       severity: "moderate",
-      mechanism: "The therapeutic pairing — with additive burden.",
+      mechanism: "The therapeutic pairing, with additive burden.",
       action: "Lowest dose; taper plan.",
     },
   ],
@@ -228,26 +228,26 @@ export const trihexyphenidyl: Drug = {
   renalAdjustment: "Standard caution.",
   hepaticAdjustment: "Standard caution.",
   /* ---- Education ---- */
-  patientExplanation: "Trihexyphenidyl prevents the stiffness, tremor, and spasm that antipsychotic medicines can cause, by restoring the balance between two brain chemicals they disturb. It is often prescribed alongside those medicines in India. Its own effects — dry mouth, constipation, blurred vision — are why the dose stays low and comes down once the stiffness settles.",
+  patientExplanation: "Trihexyphenidyl prevents the stiffness, tremor, and spasm that antipsychotic medicines can cause, by restoring the balance between two brain chemicals they disturb. It is often prescribed alongside those medicines in India. Its own effects (dry mouth, constipation, blurred vision) are why the dose stays low and comes down once the stiffness settles.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Trihexyphenidyl builds over weeks — do not judge it in the first days.",
+    "Benefit from Trihexyphenidyl builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The Indian institution: trifluoperazine + trihexyphenidyl on one prescription is the budget-psychiatry pairing of the subcontinent — the pharmacology of the reflex.",
-    "Same drug, different geography: benztropine in the Americas, trihexyphenidyl in India — an anticholinergic duet worth knowing as one.",
+    "The Indian institution: trifluoperazine + trihexyphenidyl on one prescription is the budget-psychiatry pairing of the subcontinent; the pharmacology of the reflex.",
+    "Same drug, different geography: benztropine in the Americas, trihexyphenidyl in India; an anticholinergic duet worth knowing as one.",
     "Misuse footnote: the euphoria-at-high-dose record (misuse documented among some institutionalised patients) is a genuine, if rare, monitoring point.",
-    "The taper discipline travels: EPS settles, trihexyphenidyl comes down — or the anticholinergic burden silently accumulates.",
+    "The taper discipline travels: EPS settles, trihexyphenidyl comes down, or the anticholinergic burden silently accumulates.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Trihexyphenidyl: Trihexyphenidyl blocks striatal muscarinic receptors, restoring the dopamine-acetylcholine balance disturbed by D2 blockade — benztropine's pharmacology in India's classic package.",
+        "Mechanism of Trihexyphenidyl: Trihexyphenidyl blocks striatal muscarinic receptors, restoring the dopamine-acetylcholine balance disturbed by D2 blockade; benztropine's pharmacology in India's classic package.",
         "Uses of Trihexyphenidyl: Drug-induced extrapyramidal symptoms; Parkinson's disease (adjunct, historic); Dystonia (including drug-induced)",
-        "Mechanism: striatal muscarinic antagonist — the dopamine-acetylcholine seesaw restored.",
+        "Mechanism: striatal muscarinic antagonist; the dopamine-acetylcholine seesaw restored.",
         "Uses: antipsychotic-induced EPS; the classic Indian pairing with high-potency typicals.",
       ],
       practical: [
@@ -255,17 +255,17 @@ export const trihexyphenidyl: Drug = {
         "Outline the monitoring plan: Bowel, bladder, cognition (At review); AIMS and taper windows (Periodically)",
       ],
       longAnswer: [
-        "Trihexyphenidyl: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: striatal muscarinic antagonist — the dopamine-acetylcholine seesaw restored.",
+        "Trihexyphenidyl: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: striatal muscarinic antagonist; the dopamine-acetylcholine seesaw restored.",
         "Uses: antipsychotic-induced EPS; the classic Indian pairing with high-potency typicals.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: striatal muscarinic antagonist — the dopamine-acetylcholine seesaw restored.",
+        "Mechanism: striatal muscarinic antagonist; the dopamine-acetylcholine seesaw restored.",
         "Uses: antipsychotic-induced EPS; the classic Indian pairing with high-potency typicals.",
         "Full anticholinergic burden: dry mouth, constipation, retention, delirium risk in elderly.",
-        "Taper once EPS settles — chronic use masks TD.",
+        "Taper once EPS settles: chronic use masks TD.",
         "Euphoria/misuse potential at higher doses.",
         "Contraindicated in narrow-angle glaucoma.",
       ],
@@ -277,7 +277,7 @@ export const trihexyphenidyl: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Trihexyphenidyl develops anticholinergic delirium (elderly) — next best step?",
+        "A patient on Trihexyphenidyl develops anticholinergic delirium (elderly): next best step?",
         "When to choose Trihexyphenidyl over alternatives in its class.",
       ],
     },
@@ -290,19 +290,19 @@ export const trihexyphenidyl: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The Indian institution: trifluoperazine + trihexyphenidyl on one prescription is the budget-psychiatry pairing of the subcontinent — the pharmacology of the reflex.",
-        "Same drug, different geography: benztropine in the Americas, trihexyphenidyl in India — an anticholinergic duet worth knowing as one.",
+        "The Indian institution: trifluoperazine + trihexyphenidyl on one prescription is the budget-psychiatry pairing of the subcontinent; the pharmacology of the reflex.",
+        "Same drug, different geography: benztropine in the Americas, trihexyphenidyl in India; an anticholinergic duet worth knowing as one.",
         "Misuse footnote: the euphoria-at-high-dose record (misuse documented among some institutionalised patients) is a genuine, if rare, monitoring point.",
-        "The taper discipline travels: EPS settles, trihexyphenidyl comes down — or the anticholinergic burden silently accumulates.",
+        "The taper discipline travels: EPS settles, trihexyphenidyl comes down, or the anticholinergic burden silently accumulates.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: striatal muscarinic antagonist — the dopamine-acetylcholine seesaw restored.",
+    "Mechanism: striatal muscarinic antagonist; the dopamine-acetylcholine seesaw restored.",
     "Uses: antipsychotic-induced EPS; the classic Indian pairing with high-potency typicals.",
     "Full anticholinergic burden: dry mouth, constipation, retention, delirium risk in elderly.",
-    "Taper once EPS settles — chronic use masks TD.",
+    "Taper once EPS settles: chronic use masks TD.",
     "Euphoria/misuse potential at higher doses.",
     "Contraindicated in narrow-angle glaucoma.",
     "Benztropine's pharmacological twin.",
@@ -310,7 +310,7 @@ export const trihexyphenidyl: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — drug-induced extrapyramidal symptoms",
+      title: "First presentation: drug-induced extrapyramidal symptoms",
       presentation: "A patient presenting with drug-induced extrapyramidal symptoms, started on Trihexyphenidyl.",
       history: "A adult patient presents with a drug-induced extrapyramidal symptoms picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with drug-induced extrapyramidal symptoms; physical examination and baseline investigations are unremarkable.",
@@ -319,7 +319,7 @@ export const trihexyphenidyl: Drug = {
       management: "Started at 1 mg once or twice daily, titrated to 5-15 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Trihexyphenidyl takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Trihexyphenidyl takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -328,7 +328,7 @@ export const trihexyphenidyl: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Anticholinergic comparison — choosing within the class",
+      title: "Anticholinergic comparison: choosing within the class",
       primaryDrug: "Trihexyphenidyl",
       rows: [
         {
@@ -373,7 +373,7 @@ export const trihexyphenidyl: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The Indian classic — anticholinergic EPS cover for typical antipsychotics",
+          primaryValue: "The Indian classic: anticholinergic EPS cover for typical antipsychotics",
           comparisons: [
             {
               drug: "Benztropine",
@@ -382,7 +382,7 @@ export const trihexyphenidyl: Drug = {
           ],
         },
       ],
-      takeaway: "All anticholinergics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All anticholinergics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -391,7 +391,7 @@ export const trihexyphenidyl: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Trihexyphenidyl reaches peak plasma concentration and begins acting at its molecular target (Striatal muscarinic (M1) receptors (antagonist)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Trihexyphenidyl reaches peak plasma concentration and begins acting at its molecular target (Striatal muscarinic (M1) receptors (antagonist)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -427,7 +427,7 @@ export const trihexyphenidyl: Drug = {
   faqs: [
     {
       question: "How long does Trihexyphenidyl take to work?",
-      answer: "EPS relief within hours (oral).. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "EPS relief within hours (oral).. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Trihexyphenidyl?",
@@ -435,11 +435,11 @@ export const trihexyphenidyl: Drug = {
     },
     {
       question: "Can I stop Trihexyphenidyl suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Trihexyphenidyl habit-forming?",
@@ -447,7 +447,7 @@ export const trihexyphenidyl: Drug = {
     },
     {
       question: "Can I take Trihexyphenidyl during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Trihexyphenidyl may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Trihexyphenidyl may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -583,7 +583,7 @@ export const trihexyphenidyl: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Trihexyphenidyl",
+      label: "Patient Guide. Trihexyphenidyl",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -591,13 +591,13 @@ export const trihexyphenidyl: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "India's classic anticholinergic — the trihexyphenidyl half of the trifluoperazine pairing.",
-    summary: "Trihexyphenidyl is a prescription medicine used to treat drug-induced extrapyramidal symptoms. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Trihexyphenidyl prevents the stiffness, tremor, and spasm that antipsychotic medicines can cause, by restoring the balance between two brain chemicals they disturb. It is often prescribed alongside those medicines in India. Its own effects — dry mouth, constipation, blurred vision — are why the dose stays low and comes down once the stiffness settles.",
-    sideEffects: "The most common side effects are: dry mouth, blurred vision, constipation, urinary retention (prostatic men), sedation and memory difficulty, euphoria (noted at higher doses). These usually appear early and many settle with time. Serious effects are uncommon but important to know: Anticholinergic delirium (elderly) and Ileus with cumulative anticholinergics. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: bowel, bladder, cognition (at review); aims and taper windows (periodically). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "India's classic anticholinergic: the trihexyphenidyl half of the trifluoperazine pairing.",
+    summary: "Trihexyphenidyl is a prescription medicine used to treat drug-induced extrapyramidal symptoms. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Trihexyphenidyl prevents the stiffness, tremor, and spasm that antipsychotic medicines can cause, by restoring the balance between two brain chemicals they disturb. It is often prescribed alongside those medicines in India. Its own effects (dry mouth, constipation, blurred vision) are why the dose stays low and comes down once the stiffness settles.",
+    sideEffects: "The most common side effects are: dry mouth, blurred vision, constipation, urinary retention (prostatic men), sedation and memory difficulty, euphoria (noted at higher doses). These usually appear early and many settle with time. Serious effects are uncommon but important to know: Anticholinergic delirium (elderly) and Ileus with cumulative anticholinergics. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: bowel, bladder, cognition (at review); aims and taper windows (periodically). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Other anticholinergics, High-potency typicals. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Other anticholinergics, High-potency typicals. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -664,13 +664,13 @@ export const trihexyphenidyl: Drug = {
         name: "Trihexyphenidyl",
         slug: "trihexyphenidyl",
         relationship: "This guide",
-        distinguishing: "The Indian classic — anticholinergic EPS cover for typical antipsychotics",
+        distinguishing: "The Indian classic: anticholinergic EPS cover for typical antipsychotics",
       },
       {
         name: "Benztropine",
         slug: "benztropine",
         relationship: "Same class (Anticholinergic)",
-        distinguishing: "The EPS antidote — anticholinergic striatal rebalancing",
+        distinguishing: "The EPS antidote: anticholinergic striatal rebalancing",
       },
     ],
   },
@@ -818,7 +818,7 @@ export const trihexyphenidyl: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Trihexyphenidyl in two sentences.",
-      answer: "Trihexyphenidyl blocks striatal muscarinic receptors, restoring the dopamine-acetylcholine balance disturbed by D2 blockade — benztropine's pharmacology in India's classic package. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Trihexyphenidyl blocks striatal muscarinic receptors, restoring the dopamine-acetylcholine balance disturbed by D2 blockade: benztropine's pharmacology in India's classic package. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -838,7 +838,7 @@ export const trihexyphenidyl: Drug = {
     },
     {
       question: "Share one clinical pearl about Trihexyphenidyl that separates safe prescribers from unsafe ones.",
-      answer: "The Indian institution: trifluoperazine + trihexyphenidyl on one prescription is the budget-psychiatry pairing of the subcontinent — the pharmacology of the reflex.",
+      answer: "The Indian institution: trifluoperazine + trihexyphenidyl on one prescription is the budget-psychiatry pairing of the subcontinent; the pharmacology of the reflex.",
       topic: "Clinical Pearls",
     },
   ],
@@ -914,7 +914,7 @@ export const trihexyphenidyl: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -959,7 +959,7 @@ export const trihexyphenidyl: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Trihexyphenidyl works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Trihexyphenidyl works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -975,7 +975,7 @@ export const trihexyphenidyl: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Trihexyphenidyl safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Trihexyphenidyl safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1018,7 +1018,7 @@ export const trihexyphenidyl: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Trihexyphenidyl follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Trihexyphenidyl follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1041,12 +1041,12 @@ export const trihexyphenidyl: Drug = {
     ],
     dosageForms: ["Tablets 2, 5 mg", "Elixir 5 mg/5 mL"],
     dosingTips: [
-      "Taper once EPS settles — the standing order.",
+      "Taper once EPS settles: the standing order.",
       "Avoid in elderly and glaucoma.",
       "Watch for misuse patterns at higher doses.",
     ],
     overdose: [
-      "Overdose with Trihexyphenidyl is managed supportively — no specific antidote.",
+      "Overdose with Trihexyphenidyl is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Trihexyphenidyl is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1080,15 +1080,15 @@ export const trihexyphenidyl: Drug = {
     potentialDisadvantages: ["Full anticholinergic burden.", "TD masking.", "Euphoria/misuse record.", "Elderly delirium."],
     primaryTargetSymptoms: ["Antipsychotic-induced parkinsonism", "Dystonia prevention"],
     pearls: [
-      "The Indian institution: trifluoperazine + trihexyphenidyl on one prescription is the budget-psychiatry pairing of the subcontinent — the pharmacology of the reflex.",
-      "Same drug, different geography: benztropine in the Americas, trihexyphenidyl in India — an anticholinergic duet worth knowing as one.",
+      "The Indian institution: trifluoperazine + trihexyphenidyl on one prescription is the budget-psychiatry pairing of the subcontinent; the pharmacology of the reflex.",
+      "Same drug, different geography: benztropine in the Americas, trihexyphenidyl in India; an anticholinergic duet worth knowing as one.",
       "Misuse footnote: the euphoria-at-high-dose record (misuse documented among some institutionalised patients) is a genuine, if rare, monitoring point.",
-      "The taper discipline travels: EPS settles, trihexyphenidyl comes down — or the anticholinergic burden silently accumulates.",
+      "The taper discipline travels: EPS settles, trihexyphenidyl comes down, or the anticholinergic burden silently accumulates.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

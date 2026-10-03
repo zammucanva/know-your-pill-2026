@@ -23,7 +23,7 @@ export const PATIENT_GUIDE_SECTIONS = {
   howItWorks: "How does it work?",
   whenNotice: "When might I notice a difference?",
   commonSideEffects: "Common side effects",
-  importantSideEffects: "Important side effects — know the warning signs",
+  importantSideEffects: "Important side effects: know the warning signs",
   tellYourDoctor: "What should I tell my doctor?",
   interactions: "Other medicines, alcohol, and this medicine",
   missedDose: "What if I miss a dose?",

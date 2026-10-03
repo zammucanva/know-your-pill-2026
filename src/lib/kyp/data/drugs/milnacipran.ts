@@ -23,14 +23,14 @@ export const milnacipran: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antidepressants", "SNRIs", "Milnacipran"],
   /* ---- Hero / summary ---- */
-  tagline: "The fibromyalgia SNRI — pain and fatigue in one noradrenergic tilt.",
+  tagline: "The fibromyalgia SNRI: pain and fatigue in one noradrenergic tilt.",
   summary: "Milnacipran is the racemic SNRI with norepinephrine preference approved for FIBROMYALGIA in the USA (and used for depression in Europe/Asia): its noradrenergic tilt addresses pain, fatigue, and the physical-burden dimension of fibromyalgia better than its serotonin-tilted cousins.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Milnacipran — from its molecular target (SERT and NET (inhibition — NET-preferring)) to clinical effect.",
+    "Explain the mechanism of action of Milnacipran (from its molecular target (SERT and NET (inhibition) NET-preferring)) to clinical effect.",
     "List the FDA-approved and off-label uses of Milnacipran.",
     "Predict the common and serious side effects of Milnacipran from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Milnacipran.",
@@ -38,15 +38,15 @@ export const milnacipran: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Milnacipran inhibits norepinephrine reuptake preferentially over serotonin — the SNRI shaped for pain and fatigue syndromes.",
-    molecularTarget: "SERT and NET (inhibition — NET-preferring)",
+    summary: "Milnacipran inhibits norepinephrine reuptake preferentially over serotonin: the SNRI shaped for pain and fatigue syndromes.",
+    molecularTarget: "SERT and NET (inhibition. NET-preferring)",
     effect: "Monoaminergic modulation producing the antidepressant effect described.",
     steps: [
-      "Milnacipran inhibits norepinephrine reuptake preferentially over serotonin — the SNRI shaped for pain and fatigue syndromes.",
+      "Milnacipran inhibits norepinephrine reuptake preferentially over serotonin: the SNRI shaped for pain and fatigue syndromes.",
       "Downstream receptor adaptation over 2-6 weeks translates acute monoamine change into clinical response.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 6-8 hours (twice-daily dosing). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 6-8 hours (twice-daily dosing). See mechanism and prescriber sections.",
     halfLife: "6-8 hours (twice-daily dosing).",
     metabolism: "Hepatic CYP metabolism.",
     excretion: "Renal.",
@@ -109,7 +109,7 @@ export const milnacipran: Drug = {
         label: "produces",
       },
     ],
-    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation — the central paradox of antidepressant pharmacology.",
+    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation: the central paradox of antidepressant pharmacology.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Norepinephrine (NE)", "Serotonin (5-HT)"],
@@ -211,7 +211,7 @@ export const milnacipran: Drug = {
       name: "Hepatotoxicity",
       frequency: "rare",
       severity: "severe",
-      description: "Rare liver injury reports — avoid in significant liver disease and alcohol misuse.",
+      description: "Rare liver injury reports: avoid in significant liver disease and alcohol misuse.",
       management: "LFT vigilance.",
     },
   ],
@@ -256,24 +256,24 @@ export const milnacipran: Drug = {
   renalAdjustment: "Halve dose at CrCl 30-80; avoid below 30.",
   hepaticAdjustment: "Avoid in significant hepatic impairment (hepatotoxicity reports).",
   /* ---- Education ---- */
-  patientExplanation: "Milnacipran is an antidepressant-class medicine approved for fibromyalgia: it raises noradrenaline (energy and pain-pathway chemical) more than serotonin, helping the widespread pain and tiredness of fibromyalgia. Its characteristic effects are heavy sweating, a faster pulse, and — in men — trouble starting urination.",
+  patientExplanation: "Milnacipran is an antidepressant-class medicine approved for fibromyalgia: it raises noradrenaline (energy and pain-pathway chemical) more than serotonin, helping the widespread pain and tiredness of fibromyalgia. Its characteristic effects are heavy sweating, a faster pulse, and (in men) trouble starting urination.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Milnacipran builds over weeks — do not judge it in the first days.",
+    "Benefit from Milnacipran builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The fibromyalgia niche: dual pain + fatigue coverage in one noradrenergic-tilted SNRI — duloxetine is the serotonin-tilted competitor.",
-    "Twice-daily dosing with a stepped titration — the fibromyalgia protocol is the product.",
+    "The fibromyalgia niche: dual pain + fatigue coverage in one noradrenergic-tilted SNRI; duloxetine is the serotonin-tilted competitor.",
+    "Twice-daily dosing with a stepped titration: the fibromyalgia protocol is the product.",
     "Urinary hesitation and sweating are the class tells (noradrenergic tilt made visible).",
-    "Depression approval in Europe/Asia, fibromyalgia in the USA — the geography of indications.",
+    "Depression approval in Europe/Asia, fibromyalgia in the USA: the geography of indications.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Milnacipran: Milnacipran inhibits norepinephrine reuptake preferentially over serotonin — the SNRI shaped for pain and fatigue syndromes.",
+        "Mechanism of Milnacipran: Milnacipran inhibits norepinephrine reuptake preferentially over serotonin; the SNRI shaped for pain and fatigue syndromes.",
         "Uses of Milnacipran: Fibromyalgia; Major depressive disorder (Europe/Asia)",
         "Mechanism: SNRI with NET preference.",
         "USA indication: FIBROMYALGIA (pain + fatigue).",
@@ -283,7 +283,7 @@ export const milnacipran: Drug = {
         "Outline the monitoring plan: Heart rate and blood pressure (Baseline and titration); Urinary symptoms (men) (At review)",
       ],
       longAnswer: [
-        "Milnacipran: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Milnacipran: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: SNRI with NET preference.",
         "USA indication: FIBROMYALGIA (pain + fatigue).",
       ],
@@ -295,7 +295,7 @@ export const milnacipran: Drug = {
         "Depression approved in European/Asian markets.",
         "Signature: sweating, urinary hesitation, HR/BP rise.",
         "Dose 50-100 mg bd after stepped titration.",
-        "Rare hepatotoxicity — caution in liver disease/alcohol.",
+        "Rare hepatotoxicity: caution in liver disease/alcohol.",
       ],
       pyqConcepts: [
         "Mechanism/target of Milnacipran",
@@ -305,23 +305,23 @@ export const milnacipran: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Milnacipran develops hypertension and tachycardia — next best step?",
+        "A patient on Milnacipran develops hypertension and tachycardia: next best step?",
         "When to choose Milnacipran over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: SERT and NET (inhibition — NET-preferring)",
+        "Primary target: SERT and NET (inhibition. NET-preferring)",
         "Most common side effects: Nausea, Sweating, Urinary hesitation (men)",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The fibromyalgia niche: dual pain + fatigue coverage in one noradrenergic-tilted SNRI — duloxetine is the serotonin-tilted competitor.",
-        "Twice-daily dosing with a stepped titration — the fibromyalgia protocol is the product.",
+        "The fibromyalgia niche: dual pain + fatigue coverage in one noradrenergic-tilted SNRI; duloxetine is the serotonin-tilted competitor.",
+        "Twice-daily dosing with a stepped titration: the fibromyalgia protocol is the product.",
         "Urinary hesitation and sweating are the class tells (noradrenergic tilt made visible).",
-        "Depression approval in Europe/Asia, fibromyalgia in the USA — the geography of indications.",
+        "Depression approval in Europe/Asia, fibromyalgia in the USA: the geography of indications.",
       ],
     },
   },
@@ -332,12 +332,12 @@ export const milnacipran: Drug = {
     "Depression approved in European/Asian markets.",
     "Signature: sweating, urinary hesitation, HR/BP rise.",
     "Dose 50-100 mg bd after stepped titration.",
-    "Rare hepatotoxicity — caution in liver disease/alcohol.",
+    "Rare hepatotoxicity: caution in liver disease/alcohol.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — fibromyalgia",
+      title: "First presentation: fibromyalgia",
       presentation: "A patient presenting with fibromyalgia, started on Milnacipran.",
       history: "A adult patient presents with a fibromyalgia picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with fibromyalgia; physical examination and baseline investigations are unremarkable.",
@@ -346,7 +346,7 @@ export const milnacipran: Drug = {
       management: "Started at 12.5 mg once daily × 1 day, titrated to 50-100 mg twice daily with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Milnacipran takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Milnacipran takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -355,12 +355,12 @@ export const milnacipran: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "SNRI comparison — choosing within the class",
+      title: "SNRI comparison: choosing within the class",
       primaryDrug: "Milnacipran",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "SERT and NET (inhibition — NET-preferring)",
+          primaryValue: "SERT and NET (inhibition. NET-preferring)",
           comparisons: [
             {
               drug: "Desvenlafaxine",
@@ -416,7 +416,7 @@ export const milnacipran: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The fibromyalgia SNRI — pain + fatigue coverage",
+          primaryValue: "The fibromyalgia SNRI: pain + fatigue coverage",
           comparisons: [
             {
               drug: "Desvenlafaxine",
@@ -429,7 +429,7 @@ export const milnacipran: Drug = {
           ],
         },
       ],
-      takeaway: "All snris share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All snris share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -438,7 +438,7 @@ export const milnacipran: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Milnacipran reaches peak plasma concentration and begins acting at its molecular target (SERT and NET (inhibition — NET-preferring)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Milnacipran reaches peak plasma concentration and begins acting at its molecular target (SERT and NET (inhibition. NET-preferring)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -474,7 +474,7 @@ export const milnacipran: Drug = {
   faqs: [
     {
       question: "How long does Milnacipran take to work?",
-      answer: "Fibromyalgia response over 2-4 weeks.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Fibromyalgia response over 2-4 weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Milnacipran?",
@@ -482,11 +482,11 @@ export const milnacipran: Drug = {
     },
     {
       question: "Can I stop Milnacipran suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Milnacipran habit-forming?",
@@ -494,7 +494,7 @@ export const milnacipran: Drug = {
     },
     {
       question: "Can I take Milnacipran during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Milnacipran may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Milnacipran may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -596,7 +596,7 @@ export const milnacipran: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "SERT and NET (inhibition — NET-preferring)",
+      label: "SERT and NET (inhibition. NET-preferring)",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
@@ -632,7 +632,7 @@ export const milnacipran: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Milnacipran",
+      label: "Patient Guide. Milnacipran",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -640,13 +640,13 @@ export const milnacipran: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The fibromyalgia SNRI — pain and fatigue in one noradrenergic tilt.",
-    summary: "Milnacipran is a prescription medicine used to treat fibromyalgia. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Milnacipran is an antidepressant-class medicine approved for fibromyalgia: it raises noradrenaline (energy and pain-pathway chemical) more than serotonin, helping the widespread pain and tiredness of fibromyalgia. Its characteristic effects are heavy sweating, a faster pulse, and — in men — trouble starting urination.",
-    sideEffects: "The most common side effects are: nausea, sweating, urinary hesitation (men), palpitations and bp rise, constipation and dry mouth, hot flushes. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hypertension and tachycardia and Serotonin syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline and titration); urinary symptoms (men) (at review). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The fibromyalgia SNRI: pain and fatigue in one noradrenergic tilt.",
+    summary: "Milnacipran is a prescription medicine used to treat fibromyalgia. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Milnacipran is an antidepressant-class medicine approved for fibromyalgia: it raises noradrenaline (energy and pain-pathway chemical) more than serotonin, helping the widespread pain and tiredness of fibromyalgia. Its characteristic effects are heavy sweating, a faster pulse, and (in men) trouble starting urination.",
+    sideEffects: "The most common side effects are: nausea, sweating, urinary hesitation (men), palpitations and bp rise, constipation and dry mouth, hot flushes. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hypertension and tachycardia and Serotonin syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline and titration); urinary symptoms (men) (at review). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: MAOIs, Other serotonergics, Alcohol. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: MAOIs, Other serotonergics, Alcohol. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -668,7 +668,7 @@ export const milnacipran: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -702,19 +702,19 @@ export const milnacipran: Drug = {
         name: "Milnacipran",
         slug: "milnacipran",
         relationship: "This guide",
-        distinguishing: "The fibromyalgia SNRI — pain + fatigue coverage",
+        distinguishing: "The fibromyalgia SNRI: pain + fatigue coverage",
       },
       {
         name: "Desvenlafaxine",
         slug: "desvenlafaxine",
         relationship: "Same class (SNRI)",
-        distinguishing: "The simplified SNRI — venlafaxine's metabolite packaged",
+        distinguishing: "The simplified SNRI: venlafaxine's metabolite packaged",
       },
       {
         name: "Levomilnacipran",
         slug: "levomilnacipran",
         relationship: "Same class (SNRI)",
-        distinguishing: "The NE-tilted SNRI — for the anergic depression phenotype",
+        distinguishing: "The NE-tilted SNRI, for the anergic depression phenotype",
       },
     ],
   },
@@ -862,7 +862,7 @@ export const milnacipran: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Milnacipran in two sentences.",
-      answer: "Milnacipran inhibits norepinephrine reuptake preferentially over serotonin — the SNRI shaped for pain and fatigue syndromes. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
+      answer: "Milnacipran inhibits norepinephrine reuptake preferentially over serotonin: the SNRI shaped for pain and fatigue syndromes. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
       topic: "Mechanism",
     },
     {
@@ -882,7 +882,7 @@ export const milnacipran: Drug = {
     },
     {
       question: "Share one clinical pearl about Milnacipran that separates safe prescribers from unsafe ones.",
-      answer: "The fibromyalgia niche: dual pain + fatigue coverage in one noradrenergic-tilted SNRI — duloxetine is the serotonin-tilted competitor.",
+      answer: "The fibromyalgia niche: dual pain + fatigue coverage in one noradrenergic-tilted SNRI; duloxetine is the serotonin-tilted competitor.",
       topic: "Clinical Pearls",
     },
   ],
@@ -958,7 +958,7 @@ export const milnacipran: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1003,7 +1003,7 @@ export const milnacipran: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Milnacipran works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Milnacipran works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1019,7 +1019,7 @@ export const milnacipran: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Milnacipran safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Milnacipran safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1062,7 +1062,7 @@ export const milnacipran: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Milnacipran follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Milnacipran follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1090,7 +1090,7 @@ export const milnacipran: Drug = {
       "HR/BP at each visit.",
     ],
     overdose: [
-      "Overdose with Milnacipran is managed supportively — no specific antidote.",
+      "Overdose with Milnacipran is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Milnacipran is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1127,15 +1127,15 @@ export const milnacipran: Drug = {
     potentialDisadvantages: ["Twice-daily stepped dosing.", "Noradrenergic adverse-effect set.", "Hepatotoxicity caution."],
     primaryTargetSymptoms: ["Fibromyalgia pain and fatigue", "Depression (origin markets)"],
     pearls: [
-      "The fibromyalgia niche: dual pain + fatigue coverage in one noradrenergic-tilted SNRI — duloxetine is the serotonin-tilted competitor.",
-      "Twice-daily dosing with a stepped titration — the fibromyalgia protocol is the product.",
+      "The fibromyalgia niche: dual pain + fatigue coverage in one noradrenergic-tilted SNRI; duloxetine is the serotonin-tilted competitor.",
+      "Twice-daily dosing with a stepped titration: the fibromyalgia protocol is the product.",
       "Urinary hesitation and sweating are the class tells (noradrenergic tilt made visible).",
-      "Depression approval in Europe/Asia, fibromyalgia in the USA — the geography of indications.",
+      "Depression approval in Europe/Asia, fibromyalgia in the USA: the geography of indications.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

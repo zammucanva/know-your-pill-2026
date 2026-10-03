@@ -19,18 +19,18 @@ export const oxcarbazepine: Drug = {
   brandNames: ["Trileptal", "Oxcarb (India)"],
   drugClass: "mood-stabiliser",
   drugClassLabel: "Mood Stabiliser",
-  drugClassFullName: "Mood Stabiliser — Anticonvulsant",
+  drugClassFullName: "Mood Stabiliser. Anticonvulsant",
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Mood Stabilisers & Anticonvulsants", "Mood Stabilisers", "Oxcarbazepine"],
   /* ---- Hero / summary ---- */
-  tagline: "Carbamazepine's kinder descendant — less interaction, less marrow risk, more hyponatraemia.",
-  summary: "Oxcarbazepine is the 10-keto analogue of carbamazepine: same sodium-channel mechanism, but its metabolism to the active monohydroxy derivative (MHD) skips the epoxide and largely sidesteps the auto-induction, marrow, and interaction minefield of its parent — at the price of MORE hyponatraemia. Its psychiatric use (bipolar maintenance, aggression) is off-label but common where carbamazepine's interaction profile is untenable.",
+  tagline: "Carbamazepine's kinder descendant: less interaction, less marrow risk, more hyponatraemia.",
+  summary: "Oxcarbazepine is the 10-keto analogue of carbamazepine: same sodium-channel mechanism, but its metabolism to the active monohydroxy derivative (MHD) skips the epoxide and largely sidesteps the auto-induction, marrow, and interaction minefield of its parent, at the price of MORE hyponatraemia. Its psychiatric use (bipolar maintenance, aggression) is off-label but common where carbamazepine's interaction profile is untenable.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Oxcarbazepine — from its molecular target (Voltage-gated Na+ channels via MHD (active metabolite)) to clinical effect.",
+    "Explain the mechanism of action of Oxcarbazepine, from its molecular target (Voltage-gated Na+ channels via MHD (active metabolite)) to clinical effect.",
     "List the FDA-approved and off-label uses of Oxcarbazepine.",
     "Predict the common and serious side effects of Oxcarbazepine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Oxcarbazepine.",
@@ -38,18 +38,18 @@ export const oxcarbazepine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Oxcarbazepine is reduced to its active monohydroxy derivative (MHD), which blocks voltage-gated sodium channels use-dependently — carbamazepine's mechanism without the epoxide and auto-induction.",
+    summary: "Oxcarbazepine is reduced to its active monohydroxy derivative (MHD), which blocks voltage-gated sodium channels use-dependently: carbamazepine's mechanism without the epoxide and auto-induction.",
     molecularTarget: "Voltage-gated Na+ channels via MHD (active metabolite)",
     effect: "Anticonvulsant and (off-label) mood-stabilising action with a cleaner interaction profile than carbamazepine.",
     steps: [
-      "Rapid reduction to MHD — the active species — without the reactive epoxide of carbamazepine.",
+      "Rapid reduction to MHD (the active species) without the reactive epoxide of carbamazepine.",
       "MHD blocks sodium channels use-dependently; additionally modulates potassium channels.",
-      "No meaningful CYP3A4 auto-induction — drug levels stay predictable.",
+      "No meaningful CYP3A4 auto-induction: drug levels stay predictable.",
       "Mild 3A4 induction and 2C19 inhibition give a small interaction footprint.",
     ],
     pharmacokinetics: "Well absorbed; MHD is the measured species (target 12–35 µg/mL).",
     halfLife: "MHD ~9 hours (predictable, no auto-induction).",
-    activeMetabolite: "Monohydroxy derivative (MHD) — the true active drug.",
+    activeMetabolite: "Monohydroxy derivative (MHD): the true active drug.",
     metabolism: "Cytosolic reduction to MHD (no CYP for activation); mild hepatic interactions.",
     excretion: "Renal (MHD).",
   },
@@ -143,7 +143,7 @@ export const oxcarbazepine: Drug = {
       name: "Hyponatraemia",
       frequency: "very-common",
       severity: "moderate",
-      description: "MORE than carbamazepine — up to 25–30% drop > 5 mmol/L; mostly asymptomatic but symptomatic cases occur.",
+      description: "MORE than carbamazepine: up to 25–30% drop > 5 mmol/L; mostly asymptomatic but symptomatic cases occur.",
       management: "Sodium at baseline and within the first months; reduce or switch if significant.",
     },
     {
@@ -179,7 +179,7 @@ export const oxcarbazepine: Drug = {
       name: "Serious dermatologic reactions (SJS/TEN)",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Possible cross-reactivity (~25–30%) with carbamazepine sensitivity — HLA-B*15:02 carriers remain at risk.",
+      description: "Possible cross-reactivity (~25–30%) with carbamazepine sensitivity. HLA-B*15:02 carriers remain at risk.",
       management: "Avoid after carbamazepine-associated SJS; caution in allele carriers.",
     },
     {
@@ -195,7 +195,7 @@ export const oxcarbazepine: Drug = {
     {
       parameter: "Serum sodium",
       frequency: "Baseline, then within 3 months and periodically (especially in elderly)",
-      rationale: "The oxcarbazepine-specific surveillance — hyponatraemia is its signature.",
+      rationale: "The oxcarbazepine-specific surveillance: hyponatraemia is its signature.",
     },
     {
       parameter: "MHD level (optional)",
@@ -207,7 +207,7 @@ export const oxcarbazepine: Drug = {
     {
       drug: "Oral contraceptives",
       severity: "major",
-      mechanism: "Mild 3A4 induction can lower OC efficacy — less potent than carbamazepine but real.",
+      mechanism: "Mild 3A4 induction can lower OC efficacy: less potent than carbamazepine but real.",
       action: "Additional/alternative contraception advised.",
     },
     {
@@ -222,37 +222,37 @@ export const oxcarbazepine: Drug = {
     summary: "Oxcarbazepine is considered somewhat safer than carbamazepine in pregnancy (less teratogenic signal for oxcarbazepine in registries), but data are limited and folate prophylaxis is standard practice for anticonvulsants in women of childbearing age.",
     lactation: "MHD passes into milk; usually compatible with infant monitoring for sedation and feeding.",
   },
-  renalAdjustment: "Dose reduction needed in significant renal impairment (MHD renally cleared) — start at half dose.",
+  renalAdjustment: "Dose reduction needed in significant renal impairment (MHD renally cleared): start at half dose.",
   hepaticAdjustment: "No major adjustment (no CYP-dependent activation).",
   /* ---- Education ---- */
-  patientExplanation: "Oxcarbazepine is a newer relative of carbamazepine with a cleaner safety story — fewer medicine interactions and much lower risk to the bone marrow. Its one signature issue is lowering blood sodium, so a sodium blood test is routine during the first months.",
+  patientExplanation: "Oxcarbazepine is a newer relative of carbamazepine with a cleaner safety story: fewer medicine interactions and much lower risk to the bone marrow. Its one signature issue is lowering blood sodium, so a sodium blood test is routine during the first months.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Oxcarbazepine builds over weeks — do not judge it in the first days.",
+    "Benefit from Oxcarbazepine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "Hyponatraemia is MORE common with oxcarbazepine than carbamazepine — the one adverse effect that got worse in the redesign.",
-    "No auto-induction, no epoxide, minimal CYP footprint — the reason it exists.",
-    "Cross-rash risk ~25–30% with carbamazepine — do not treat a carbamazepine-SJS survivor with oxcarbazepine.",
+    "Hyponatraemia is MORE common with oxcarbazepine than carbamazepine: the one adverse effect that got worse in the redesign.",
+    "No auto-induction, no epoxide, minimal CYP footprint: the reason it exists.",
+    "Cross-rash risk ~25–30% with carbamazepine: do not treat a carbamazepine-SJS survivor with oxcarbazepine.",
     "Psychiatric use is off-label: weaker mood evidence than lithium/valproate/lamotrigine but a real niche when interactions rule the parent out.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Oxcarbazepine: Oxcarbazepine is reduced to its active monohydroxy derivative (MHD), which blocks voltage-gated sodium channels use-dependently — carbamazepine's mechanism without the epoxide and auto-induction.",
-        "Uses of Oxcarbazepine: Epilepsy — focal seizures; Bipolar maintenance (off-label); Aggression / impulsivity (off-label); Trigeminal neuralgia (alternative)",
+        "Mechanism of Oxcarbazepine: Oxcarbazepine is reduced to its active monohydroxy derivative (MHD), which blocks voltage-gated sodium channels use-dependently; carbamazepine's mechanism without the epoxide and auto-induction.",
+        "Uses of Oxcarbazepine: Epilepsy; focal seizures; Bipolar maintenance (off-label); Aggression / impulsivity (off-label); Trigeminal neuralgia (alternative)",
         "10-keto analogue of carbamazepine; active via MHD (monohydroxy derivative).",
         "Same Na+ channel mechanism; NO auto-induction and minimal CYP interactions.",
       ],
       practical: [
-        "Prescribe Oxcarbazepine for epilepsy — focal seizures with dose, timing, and duration.",
+        "Prescribe Oxcarbazepine for epilepsy: focal seizures with dose, timing, and duration.",
         "Outline the monitoring plan: Serum sodium (Baseline, then within 3 months and periodically (especially in elderly)); MHD level (optional) (When response is inadequate)",
       ],
       longAnswer: [
-        "Oxcarbazepine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Oxcarbazepine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "10-keto analogue of carbamazepine; active via MHD (monohydroxy derivative).",
         "Same Na+ channel mechanism; NO auto-induction and minimal CYP interactions.",
       ],
@@ -274,7 +274,7 @@ export const oxcarbazepine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Oxcarbazepine develops severe symptomatic hyponatraemia — next best step?",
+        "A patient on Oxcarbazepine develops severe symptomatic hyponatraemia: next best step?",
         "When to choose Oxcarbazepine over alternatives in its class.",
       ],
     },
@@ -287,7 +287,7 @@ export const oxcarbazepine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The cleaner carbamazepine — except for sodium.",
+        "The cleaner carbamazepine: except for sodium.",
         "Check sodium in month 1–3, especially in the elderly.",
         "Off-label in psychiatry: know the evidence hierarchy before reaching for it.",
       ],
@@ -305,16 +305,16 @@ export const oxcarbazepine: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — epilepsy — focal seizures",
-      presentation: "A patient presenting with epilepsy — focal seizures, started on Oxcarbazepine.",
-      history: "A adult patient presents with a epilepsy — focal seizures picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with epilepsy — focal seizures; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Epilepsy — focal seizures. Differentials are considered and excluded clinically.",
+      title: "First presentation: epilepsy; focal seizures",
+      presentation: "A patient presenting with epilepsy: focal seizures, started on Oxcarbazepine.",
+      history: "A adult patient presents with a epilepsy: focal seizures picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with epilepsy: focal seizures; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Epilepsy: focal seizures. Differentials are considered and excluded clinically.",
       rationale: "Oxcarbazepine is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Mood Stabiliser) with strong evidence in this condition.",
       management: "Started at 300 mg twice daily, titrated to 1200–2400 mg/day (mood uses often 900–1800) with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Oxcarbazepine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Oxcarbazepine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -323,7 +323,7 @@ export const oxcarbazepine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Mood Stabiliser comparison — choosing within the class",
+      title: "Mood Stabiliser comparison: choosing within the class",
       primaryDrug: "Oxcarbazepine",
       rows: [
         {
@@ -416,7 +416,7 @@ export const oxcarbazepine: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The cleaner carbamazepine — off-label mood use with fewer interactions",
+          primaryValue: "The cleaner carbamazepine: off-label mood use with fewer interactions",
           comparisons: [
             {
               drug: "Carbamazepine",
@@ -437,7 +437,7 @@ export const oxcarbazepine: Drug = {
           ],
         },
       ],
-      takeaway: "All mood stabilisers share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All mood stabilisers share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -446,7 +446,7 @@ export const oxcarbazepine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Oxcarbazepine reaches peak plasma concentration and begins acting at its molecular target (Voltage-gated Na+ channels via MHD (active metabolite)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Oxcarbazepine reaches peak plasma concentration and begins acting at its molecular target (Voltage-gated Na+ channels via MHD (active metabolite)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -482,7 +482,7 @@ export const oxcarbazepine: Drug = {
   faqs: [
     {
       question: "How long does Oxcarbazepine take to work?",
-      answer: "Anticonvulsant effect days; off-label mood effects build over weeks.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Anticonvulsant effect days; off-label mood effects build over weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Oxcarbazepine?",
@@ -490,11 +490,11 @@ export const oxcarbazepine: Drug = {
     },
     {
       question: "Can I stop Oxcarbazepine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Oxcarbazepine habit-forming?",
@@ -502,7 +502,7 @@ export const oxcarbazepine: Drug = {
     },
     {
       question: "Can I take Oxcarbazepine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Oxcarbazepine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Oxcarbazepine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -603,7 +603,7 @@ export const oxcarbazepine: Drug = {
       label: "Mood Stabiliser",
       type: "class",
       href: "#mechanism",
-      note: "Mood Stabiliser — Anticonvulsant",
+      note: "Mood Stabiliser. Anticonvulsant",
     },
     {
       label: "Glutamate",
@@ -636,7 +636,7 @@ export const oxcarbazepine: Drug = {
       note: "Region where the drug acts",
     },
     {
-      label: "Epilepsy — focal seizures",
+      label: "Epilepsy: focal seizures",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -672,7 +672,7 @@ export const oxcarbazepine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Oxcarbazepine",
+      label: "Patient Guide. Oxcarbazepine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -680,13 +680,13 @@ export const oxcarbazepine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "Carbamazepine's kinder descendant — less interaction, less marrow risk, more hyponatraemia.",
-    summary: "Oxcarbazepine is a prescription medicine used to treat epilepsy — focal seizures. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Oxcarbazepine is a newer relative of carbamazepine with a cleaner safety story — fewer medicine interactions and much lower risk to the bone marrow. Its one signature issue is lowering blood sodium, so a sodium blood test is routine during the first months.",
-    sideEffects: "The most common side effects are: hyponatraemia, somnolence, dizziness, diplopia, nausea and vomiting, headache. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Severe symptomatic hyponatraemia and Serious dermatologic reactions (SJS/TEN). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: serum sodium (baseline, then within 3 months and periodically (especially in elderly)); mhd level (optional) (when response is inadequate). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "Carbamazepine's kinder descendant: less interaction, less marrow risk, more hyponatraemia.",
+    summary: "Oxcarbazepine is a prescription medicine used to treat epilepsy: focal seizures. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Oxcarbazepine is a newer relative of carbamazepine with a cleaner safety story: fewer medicine interactions and much lower risk to the bone marrow. Its one signature issue is lowering blood sodium, so a sodium blood test is routine during the first months.",
+    sideEffects: "The most common side effects are: hyponatraemia, somnolence, dizziness, diplopia, nausea and vomiting, headache. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Severe symptomatic hyponatraemia and Serious dermatologic reactions (SJS/TEN). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: serum sodium (baseline, then within 3 months and periodically (especially in elderly)); mhd level (optional) (when response is inadequate). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Oral contraceptives, Carbamazepine (cross-sensitivity). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Oral contraceptives, Carbamazepine (cross-sensitivity). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -716,10 +716,10 @@ export const oxcarbazepine: Drug = {
     },
     costCategory: "moderate",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: [
       "Sodium checks in the first months.",
-      "Report confusion, headache, or new falls — sodium symptoms.",
+      "Report confusion, headache, or new falls: sodium symptoms.",
     ],
   },
   sectionDifficulty: {
@@ -753,7 +753,7 @@ export const oxcarbazepine: Drug = {
         name: "Oxcarbazepine",
         slug: "oxcarbazepine",
         relationship: "This guide",
-        distinguishing: "The cleaner carbamazepine — off-label mood use with fewer interactions",
+        distinguishing: "The cleaner carbamazepine: off-label mood use with fewer interactions",
       },
       {
         name: "Carbamazepine",
@@ -771,13 +771,13 @@ export const oxcarbazepine: Drug = {
         name: "Lithium",
         slug: "lithium",
         relationship: "Same class (Mood Stabiliser)",
-        distinguishing: "Anti-suicide + both-pole prophylaxis — the irreplaceable classic",
+        distinguishing: "Anti-suicide + both-pole prophylaxis: the irreplaceable classic",
       },
       {
         name: "Valproate",
         slug: "valproate",
         relationship: "Same class (Mood Stabiliser)",
-        distinguishing: "Mania workhorse — especially mixed states and rapid cycling; now pregnancy-governed",
+        distinguishing: "Mania workhorse, especially mixed states and rapid cycling; now pregnancy-governed",
       },
     ],
   },
@@ -930,12 +930,12 @@ export const oxcarbazepine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Oxcarbazepine in two sentences.",
-      answer: "Oxcarbazepine is reduced to its active monohydroxy derivative (MHD), which blocks voltage-gated sodium channels use-dependently — carbamazepine's mechanism without the epoxide and auto-induction. Net effect: Anticonvulsant and (off-label) mood-stabilising action with a cleaner interaction profile than carbamazepine.",
+      answer: "Oxcarbazepine is reduced to its active monohydroxy derivative (MHD), which blocks voltage-gated sodium channels use-dependently: carbamazepine's mechanism without the epoxide and auto-induction. Net effect: Anticonvulsant and (off-label) mood-stabilising action with a cleaner interaction profile than carbamazepine.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Oxcarbazepine.",
-      answer: "Epilepsy — focal seizures, Bipolar maintenance (off-label), Aggression / impulsivity (off-label), Trigeminal neuralgia (alternative). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Epilepsy: focal seizures, Bipolar maintenance (off-label), Aggression / impulsivity (off-label), Trigeminal neuralgia (alternative). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -950,7 +950,7 @@ export const oxcarbazepine: Drug = {
     },
     {
       question: "Share one clinical pearl about Oxcarbazepine that separates safe prescribers from unsafe ones.",
-      answer: "The cleaner carbamazepine — except for sodium.",
+      answer: "The cleaner carbamazepine: except for sodium.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1026,7 +1026,7 @@ export const oxcarbazepine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1071,7 +1071,7 @@ export const oxcarbazepine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Oxcarbazepine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Oxcarbazepine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1087,7 +1087,7 @@ export const oxcarbazepine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Oxcarbazepine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Oxcarbazepine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1132,7 +1132,7 @@ export const oxcarbazepine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Oxcarbazepine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Oxcarbazepine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1155,12 +1155,12 @@ export const oxcarbazepine: Drug = {
     ],
     dosageForms: ["Tablets 150–600 mg", "Suspension 300 mg/5 mL"],
     dosingTips: [
-      "Sodium at baseline and month 1–3 — the surveillance that matters.",
+      "Sodium at baseline and month 1–3: the surveillance that matters.",
       "Half the starting dose in renal impairment.",
-      "Real but weaker OC interaction — backup contraception.",
+      "Real but weaker OC interaction: backup contraception.",
     ],
     overdose: [
-      "Overdose with Oxcarbazepine is managed supportively — no specific antidote.",
+      "Overdose with Oxcarbazepine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Oxcarbazepine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1195,7 +1195,7 @@ export const oxcarbazepine: Drug = {
     ],
     potentialAdvantages: [
       "Carbamazepine mechanism without the interaction minefield.",
-      "No auto-induction — predictable levels.",
+      "No auto-induction: predictable levels.",
       "Lower marrow risk.",
     ],
     potentialDisadvantages: [
@@ -1206,7 +1206,7 @@ export const oxcarbazepine: Drug = {
     ],
     primaryTargetSymptoms: ["Focal seizures (approved)", "Mood instability (off-label)", "Aggression (off-label)"],
     pearls: [
-      "The cleaner carbamazepine — except for sodium.",
+      "The cleaner carbamazepine: except for sodium.",
       "Check sodium in month 1–3, especially in the elderly.",
       "Off-label in psychiatry: know the evidence hierarchy before reaching for it.",
     ],
@@ -1214,6 +1214,6 @@ export const oxcarbazepine: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

@@ -23,14 +23,14 @@ export const perospirone: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Atypical Antipsychotics", "Perospirone"],
   /* ---- Hero / summary ---- */
-  tagline: "Japan's 5-HT1A-flavoured atypical — another continuity entry.",
-  summary: "Perospirone is a Japanese-market atypical antipsychotic combining D2/5-HT2A antagonism with 5-HT1A partial agonism — schizophrenia and schizoaffective treatment in Japan, with sedation and EPS cautions. The international-formulary completeness slot.",
+  tagline: "Japan's 5-HT1A-flavoured atypical: another continuity entry.",
+  summary: "Perospirone is a Japanese-market atypical antipsychotic combining D2/5-HT2A antagonism with 5-HT1A partial agonism: schizophrenia and schizoaffective treatment in Japan, with sedation and EPS cautions. The international-formulary completeness slot.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Perospirone — from its molecular target (D2 (antagonist) + 5-HT2A (antagonist) + 5-HT1A (partial agonist)) to clinical effect.",
+    "Explain the mechanism of action of Perospirone, from its molecular target (D2 (antagonist) + 5-HT2A (antagonist) + 5-HT1A (partial agonist)) to clinical effect.",
     "List the FDA-approved and off-label uses of Perospirone.",
     "Predict the common and serious side effects of Perospirone from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Perospirone.",
@@ -38,15 +38,15 @@ export const perospirone: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Perospirone combines D2/5-HT2A antagonism with 5-HT1A partial agonism — the Japanese atypical with a buspirone-flavoured receptor profile.",
+    summary: "Perospirone combines D2/5-HT2A antagonism with 5-HT1A partial agonism: the Japanese atypical with a buspirone-flavoured receptor profile.",
     molecularTarget: "D2 (antagonist) + 5-HT2A (antagonist) + 5-HT1A (partial agonist)",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Perospirone combines D2/5-HT2A antagonism with 5-HT1A partial agonism — the Japanese atypical with a buspirone-flavoured receptor profile.",
+      "Perospirone combines D2/5-HT2A antagonism with 5-HT1A partial agonism: the Japanese atypical with a buspirone-flavoured receptor profile.",
       "The mechanism translates into the clinical profile described.",
       "Practical use follows half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 2-5 hours (BD dosing). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 2-5 hours (BD dosing). See mechanism and prescriber sections.",
     halfLife: "2-5 hours (BD dosing).",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -126,7 +126,7 @@ export const perospirone: Drug = {
         label: "5-HT2A-mediated benefit",
       },
     ],
-    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms — the serotonin-dopamine hypothesis of atypical antipsychotics.",
+    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms: the serotonin-dopamine hypothesis of atypical antipsychotics.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Dopamine (DA)", "Serotonin (5-HT)"],
@@ -185,7 +185,7 @@ export const perospirone: Drug = {
     {
       parameter: "Weight and BMI",
       frequency: "Baseline, then at 4, 8, 12 weeks and quarterly",
-      rationale: "Class metabolic risk — early trajectory detection.",
+      rationale: "Class metabolic risk: early trajectory detection.",
     },
     {
       parameter: "Fasting glucose / HbA1c",
@@ -200,7 +200,7 @@ export const perospirone: Drug = {
     {
       parameter: "Blood pressure (orthostatic)",
       frequency: "Baseline and during titration",
-      rationale: "Alpha-1 blockade — orthostasis risk.",
+      rationale: "Alpha-1 blockade: orthostasis risk.",
     },
     {
       parameter: "AIMS examination",
@@ -229,29 +229,29 @@ export const perospirone: Drug = {
     },
   ],
   pregnancy: {
-    summary: "Data in human pregnancy are limited. The decision to continue or stop balances the risk of untreated illness against possible drug exposure — for serious psychiatric illness, relapse prevention usually outweighs fetal risk. Involve obstetrics early and never stop abruptly without a plan.",
-    lactation: "Small amounts may pass into breast milk. Decisions are individualised — monitor the infant for sedation and poor feeding, and discuss with your doctor.",
+    summary: "Data in human pregnancy are limited. The decision to continue or stop balances the risk of untreated illness against possible drug exposure, for serious psychiatric illness, relapse prevention usually outweighs fetal risk. Involve obstetrics early and never stop abruptly without a plan.",
+    lactation: "Small amounts may pass into breast milk. Decisions are individualised. Monitor the infant for sedation and poor feeding, and discuss with your doctor.",
   },
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
-  patientExplanation: "Perospirone is a medicine used to treat schizophrenia and schizoaffective disorder (japan). Perospirone combines D2/5-HT2A antagonism with 5-HT1A partial agonism — the Japanese atypical with a buspirone-flavoured receptor profile. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+  patientExplanation: "Perospirone is a medicine used to treat schizophrenia and schizoaffective disorder (japan). Perospirone combines D2/5-HT2A antagonism with 5-HT1A partial agonism: the Japanese atypical with a buspirone-flavoured receptor profile. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Perospirone builds over weeks — do not judge it in the first days.",
+    "Benefit from Perospirone builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The 5-HT1A Japanese variant: buspirone's receptor action grafted onto an antipsychotic — the profile predicts modest sedation and anxiolysis.",
+    "The 5-HT1A Japanese variant: buspirone's receptor action grafted onto an antipsychotic; the profile predicts modest sedation and anxiolysis.",
     "Continuity only: encountered when Japanese patients relocate.",
-    "Atypicals add 5-HT2A antagonism to D2 blockade — better motor and prolactin tolerability than typicals, at the price of metabolic risk.",
+    "Atypicals add 5-HT2A antagonism to D2 blockade: better motor and prolactin tolerability than typicals, at the price of metabolic risk.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Perospirone: Perospirone combines D2/5-HT2A antagonism with 5-HT1A partial agonism — the Japanese atypical with a buspirone-flavoured receptor profile.",
+        "Mechanism of Perospirone: Perospirone combines D2/5-HT2A antagonism with 5-HT1A partial agonism; the Japanese atypical with a buspirone-flavoured receptor profile.",
         "Uses of Perospirone: Schizophrenia and schizoaffective disorder (Japan)",
         "Mechanism: D2/5-HT2A antagonist + 5-HT1A partial agonist (Japanese market).",
         "Not FDA/India-approved.",
@@ -261,7 +261,7 @@ export const perospirone: Drug = {
         "Outline the monitoring plan: Weight and BMI (Baseline, then at 4, 8, 12 weeks and quarterly); Fasting glucose / HbA1c (Baseline, 12 weeks, then annually); Lipid profile (fasting) (Baseline, 12 weeks, then annually)",
       ],
       longAnswer: [
-        "Perospirone: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Perospirone: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: D2/5-HT2A antagonist + 5-HT1A partial agonist (Japanese market).",
         "Not FDA/India-approved.",
       ],
@@ -271,7 +271,7 @@ export const perospirone: Drug = {
         "Mechanism: D2/5-HT2A antagonist + 5-HT1A partial agonist (Japanese market).",
         "Not FDA/India-approved.",
         "Dose 8-48 mg/day; sedation-prominent profile.",
-        "Class mechanism: D2 blockade + 5-HT2A antagonism — the atypical signature.",
+        "Class mechanism: D2 blockade + 5-HT2A antagonism; the atypical signature.",
         "Class risk divide: metabolic (olanzapine, clozapine, quetiapine) vs motor/prolactin (risperidone) vs akathisia (aripiprazole, brexpiprazole, cariprazine).",
       ],
       pyqConcepts: [
@@ -282,7 +282,7 @@ export const perospirone: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Perospirone develops neuroleptic malignant syndrome — next best step?",
+        "A patient on Perospirone develops neuroleptic malignant syndrome: next best step?",
         "When to choose Perospirone over alternatives in its class.",
       ],
     },
@@ -295,9 +295,9 @@ export const perospirone: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The 5-HT1A Japanese variant: buspirone's receptor action grafted onto an antipsychotic — the profile predicts modest sedation and anxiolysis.",
+        "The 5-HT1A Japanese variant: buspirone's receptor action grafted onto an antipsychotic; the profile predicts modest sedation and anxiolysis.",
         "Continuity only: encountered when Japanese patients relocate.",
-        "Atypicals add 5-HT2A antagonism to D2 blockade — better motor and prolactin tolerability than typicals, at the price of metabolic risk.",
+        "Atypicals add 5-HT2A antagonism to D2 blockade: better motor and prolactin tolerability than typicals, at the price of metabolic risk.",
       ],
     },
   },
@@ -306,13 +306,13 @@ export const perospirone: Drug = {
     "Mechanism: D2/5-HT2A antagonist + 5-HT1A partial agonist (Japanese market).",
     "Not FDA/India-approved.",
     "Dose 8-48 mg/day; sedation-prominent profile.",
-    "Class mechanism: D2 blockade + 5-HT2A antagonism — the atypical signature.",
+    "Class mechanism: D2 blockade + 5-HT2A antagonism; the atypical signature.",
     "Class risk divide: metabolic (olanzapine, clozapine, quetiapine) vs motor/prolactin (risperidone) vs akathisia (aripiprazole, brexpiprazole, cariprazine).",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia and schizoaffective disorder (japan)",
+      title: "First presentation: schizophrenia and schizoaffective disorder (japan)",
       presentation: "A patient presenting with schizophrenia and schizoaffective disorder (japan), started on Perospirone.",
       history: "A adult patient presents with a schizophrenia and schizoaffective disorder (japan) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with schizophrenia and schizoaffective disorder (japan); physical examination and baseline investigations are unremarkable.",
@@ -321,7 +321,7 @@ export const perospirone: Drug = {
       management: "Started at 4 mg twice daily, titrated to 16-32 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Perospirone takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Perospirone takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -330,7 +330,7 @@ export const perospirone: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Atypical Antipsychotic comparison — choosing within the class",
+      title: "Atypical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Perospirone",
       rows: [
         {
@@ -423,7 +423,7 @@ export const perospirone: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "Japanese 5-HT1A atypical — continuity entry",
+          primaryValue: "Japanese 5-HT1A atypical: continuity entry",
           comparisons: [
             {
               drug: "Aripiprazole",
@@ -444,7 +444,7 @@ export const perospirone: Drug = {
           ],
         },
       ],
-      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -453,7 +453,7 @@ export const perospirone: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Perospirone reaches peak plasma concentration and begins acting at its molecular target (D2 (antagonist) + 5-HT2A (antagonist) + 5-HT1A (partial agonist)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Perospirone reaches peak plasma concentration and begins acting at its molecular target (D2 (antagonist) + 5-HT2A (antagonist) + 5-HT1A (partial agonist)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -489,7 +489,7 @@ export const perospirone: Drug = {
   faqs: [
     {
       question: "How long does Perospirone take to work?",
-      answer: "As with the class.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "As with the class.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Perospirone?",
@@ -497,11 +497,11 @@ export const perospirone: Drug = {
     },
     {
       question: "Can I stop Perospirone suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Perospirone habit-forming?",
@@ -509,7 +509,7 @@ export const perospirone: Drug = {
     },
     {
       question: "Can I take Perospirone during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Perospirone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Perospirone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -655,7 +655,7 @@ export const perospirone: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Perospirone",
+      label: "Patient Guide. Perospirone",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -663,13 +663,13 @@ export const perospirone: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "Japan's 5-HT1A-flavoured atypical — another continuity entry.",
-    summary: "Perospirone is a prescription medicine used to treat schizophrenia and schizoaffective disorder (japan). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Perospirone is a medicine used to treat schizophrenia and schizoaffective disorder (japan). Perospirone combines D2/5-HT2A antagonism with 5-HT1A partial agonism — the Japanese atypical with a buspirone-flavoured receptor profile. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
-    sideEffects: "The most common side effects are: sedation and drowsiness, insomnia and eps. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and bmi (baseline, then at 4, 8, 12 weeks and quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually); lipid profile (fasting) (baseline, 12 weeks, then annually). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "Japan's 5-HT1A-flavoured atypical: another continuity entry.",
+    summary: "Perospirone is a prescription medicine used to treat schizophrenia and schizoaffective disorder (japan). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Perospirone is a medicine used to treat schizophrenia and schizoaffective disorder (japan). Perospirone combines D2/5-HT2A antagonism with 5-HT1A partial agonism: the Japanese atypical with a buspirone-flavoured receptor profile. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+    sideEffects: "The most common side effects are: sedation and drowsiness, insomnia and eps. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and bmi (baseline, then at 4, 8, 12 weeks and quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually); lipid profile (fasting) (baseline, 12 weeks, then annually). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: CNS depressants and alcohol, QT-prolonging drugs, Antihypertensives. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: CNS depressants and alcohol, QT-prolonging drugs, Antihypertensives. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -693,7 +693,7 @@ export const perospirone: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -727,55 +727,55 @@ export const perospirone: Drug = {
         name: "Perospirone",
         slug: "perospirone",
         relationship: "This guide",
-        distinguishing: "Japanese 5-HT1A atypical — continuity entry",
+        distinguishing: "Japanese 5-HT1A atypical: continuity entry",
       },
       {
         name: "Aripiprazole",
         slug: "aripiprazole",
         relationship: "Same class (Dopamine Stabiliser)",
-        distinguishing: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+        distinguishing: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
       },
       {
         name: "Clozapine",
         slug: "clozapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
       },
       {
         name: "Lurasidone",
         slug: "lurasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+        distinguishing: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
       },
       {
         name: "Olanzapine",
         slug: "olanzapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+        distinguishing: "Most robust broad-spectrum atypical: heaviest metabolic burden",
       },
       {
         name: "Paliperidone",
         slug: "paliperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The LAI platform king — monthly to 6-monthly injections for schizophrenia",
+        distinguishing: "The LAI platform king: monthly to 6-monthly injections for schizophrenia",
       },
       {
         name: "Quetiapine",
         slug: "quetiapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin — the sedating antidepressant-antipsychotic",
+        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin: the sedating antidepressant-antipsychotic",
       },
       {
         name: "Risperidone",
         slug: "risperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most potent D2 blockade among atypicals — highest prolactin, best-studied LAI",
+        distinguishing: "Most potent D2 blockade among atypicals: highest prolactin, best-studied LAI",
       },
       {
         name: "Ziprasidone",
         slug: "ziprasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic — with QT vigilance",
+        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic, with QT vigilance",
       },
     ],
   },
@@ -923,7 +923,7 @@ export const perospirone: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Perospirone in two sentences.",
-      answer: "Perospirone combines D2/5-HT2A antagonism with 5-HT1A partial agonism — the Japanese atypical with a buspirone-flavoured receptor profile. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Perospirone combines D2/5-HT2A antagonism with 5-HT1A partial agonism: the Japanese atypical with a buspirone-flavoured receptor profile. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -943,7 +943,7 @@ export const perospirone: Drug = {
     },
     {
       question: "Share one clinical pearl about Perospirone that separates safe prescribers from unsafe ones.",
-      answer: "The 5-HT1A Japanese variant: buspirone's receptor action grafted onto an antipsychotic — the profile predicts modest sedation and anxiolysis.",
+      answer: "The 5-HT1A Japanese variant: buspirone's receptor action grafted onto an antipsychotic; the profile predicts modest sedation and anxiolysis.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1019,7 +1019,7 @@ export const perospirone: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1064,7 +1064,7 @@ export const perospirone: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Perospirone works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Perospirone works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1080,7 +1080,7 @@ export const perospirone: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Perospirone safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Perospirone safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1123,7 +1123,7 @@ export const perospirone: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Perospirone follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Perospirone follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1150,7 +1150,7 @@ export const perospirone: Drug = {
       "Review at 2 and 4 weeks after any dose change.",
     ],
     overdose: [
-      "Overdose with Perospirone is managed supportively — no specific antidote.",
+      "Overdose with Perospirone is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Perospirone is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1181,23 +1181,23 @@ export const perospirone: Drug = {
       },
     ],
     potentialAdvantages: [
-      "Japanese 5-HT1A atypical — continuity entry",
+      "Japanese 5-HT1A atypical: continuity entry",
     ],
     potentialDisadvantages: [
-      "See adverse effects section — the main disadvantages of Perospirone are its key side effects.",
+      "See adverse effects section: the main disadvantages of Perospirone are its key side effects.",
     ],
     primaryTargetSymptoms: [
       "Schizophrenia and schizoaffective disorder (Japan)",
     ],
     pearls: [
-      "The 5-HT1A Japanese variant: buspirone's receptor action grafted onto an antipsychotic — the profile predicts modest sedation and anxiolysis.",
+      "The 5-HT1A Japanese variant: buspirone's receptor action grafted onto an antipsychotic; the profile predicts modest sedation and anxiolysis.",
       "Continuity only: encountered when Japanese patients relocate.",
-      "Atypicals add 5-HT2A antagonism to D2 blockade — better motor and prolactin tolerability than typicals, at the price of metabolic risk.",
+      "Atypicals add 5-HT2A antagonism to D2 blockade: better motor and prolactin tolerability than typicals, at the price of metabolic risk.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

@@ -19,18 +19,18 @@ export const perphenazine: Drug = {
   brandNames: ["Trilafon", "Perphenazine (generic)"],
   drugClass: "typical-antipsychotic",
   drugClassLabel: "Typical Antipsychotic",
-  drugClassFullName: "Typical (Conventional) Antipsychotic — Phenothiazine",
+  drugClassFullName: "Typical (Conventional) Antipsychotic. Phenothiazine",
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Typical Antipsychotics", "Perphenazine"],
   /* ---- Hero / summary ---- */
-  tagline: "The mid-potency phenothiazine that matched atypicals in CATIE — the quiet evidence-based typical.",
-  summary: "Perphenazine is a mid-to-high-potency piperazine phenothiazine that earned modern respect in the CATIE trial, where it performed comparably to atypicals for schizophrenia with moderate adverse effects. It combines solid D2 blockade with mild sedation — a balanced profile between chlorpromazine and haloperidol — with dose-dependent EPS and modest prolactin elevation.",
+  tagline: "The mid-potency phenothiazine that matched atypicals in CATIE: the quiet evidence-based typical.",
+  summary: "Perphenazine is a mid-to-high-potency piperazine phenothiazine that earned modern respect in the CATIE trial, where it performed comparably to atypicals for schizophrenia with moderate adverse effects. It combines solid D2 blockade with mild sedation (a balanced profile between chlorpromazine and haloperidol) with dose-dependent EPS and modest prolactin elevation.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Perphenazine — from its molecular target (D2 (mid-to-high potency antagonist); alpha-1 (mild); H1 (mild)) to clinical effect.",
+    "Explain the mechanism of action of Perphenazine, from its molecular target (D2 (mid-to-high potency antagonist); alpha-1 (mild); H1 (mild)) to clinical effect.",
     "List the FDA-approved and off-label uses of Perphenazine.",
     "Predict the common and serious side effects of Perphenazine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Perphenazine.",
@@ -38,12 +38,12 @@ export const perphenazine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Mid-potency piperazine phenothiazine — balanced D2 blockade with mild sedation and modest off-target binding.",
+    summary: "Mid-potency piperazine phenothiazine: balanced D2 blockade with mild sedation and modest off-target binding.",
     molecularTarget: "D2 (mid-to-high potency antagonist); alpha-1 (mild); H1 (mild)",
-    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — mid-to-high potency: moderate doses, moderate EPS, mild sedation.",
+    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways: mid-to-high potency: moderate doses, moderate EPS, mild sedation.",
     steps: [
-      "Blocks D2 receptors — therapeutic antipsychotic effect at 65–75% occupancy.",
-      "EPS emerges as occupancy passes ~80% — mid-to-high potency: moderate doses, moderate EPS, mild sedation.",
+      "Blocks D2 receptors: therapeutic antipsychotic effect at 65–75% occupancy.",
+      "EPS emerges as occupancy passes ~80%: mid-to-high potency: moderate doses, moderate EPS, mild sedation.",
       "Tuberoinfundibular blockade raises prolactin; nigrostriatal blockade produces parkinsonism and dystonia.",
       "Class-typical receptor binding determines the drug's adverse-effect texture.",
     ],
@@ -109,7 +109,7 @@ export const perphenazine: Drug = {
         label: "hyperprolactinaemia",
       },
     ],
-    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia — efficacy and motor risk are two sides of one coin.",
+    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia: efficacy and motor risk are two sides of one coin.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -156,14 +156,14 @@ export const perphenazine: Drug = {
       name: "Extrapyramidal symptoms (parkinsonism)",
       frequency: "very-common",
       severity: "moderate",
-      description: "Rigidity, bradykinesia, tremor — dose-dependent D2 signature.",
+      description: "Rigidity, bradykinesia, tremor: dose-dependent D2 signature.",
       management: "Reduce dose; anticholinergic.",
     },
     {
       name: "Akathisia",
       frequency: "common",
       severity: "moderate",
-      description: "Restlessness — frequently mistaken for worsening psychosis.",
+      description: "Restlessness: frequently mistaken for worsening psychosis.",
       management: "Reduce dose; propranolol.",
     },
     {
@@ -186,14 +186,14 @@ export const perphenazine: Drug = {
       name: "Neuroleptic malignant syndrome",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency.",
+      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness: the class medical emergency.",
       management: "Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
     },
     {
       name: "Tardive dyskinesia",
       frequency: "uncommon",
       severity: "severe",
-      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex — a defining risk of chronic typical antipsychotics.",
+      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex: a defining risk of chronic typical antipsychotics.",
       management: "Lowest effective dose; AIMS surveillance; reduce or switch on detection; VMAT2 inhibitors for severe cases.",
     },
   ],
@@ -229,13 +229,13 @@ export const perphenazine: Drug = {
     {
       drug: "QT-prolonging drugs (including other antipsychotics)",
       severity: "major",
-      mechanism: "Additive QT prolongation — torsades risk.",
+      mechanism: "Additive QT prolongation: torsades risk.",
       action: "Avoid combinations; ECG monitoring if unavoidable.",
     },
     {
       drug: "Anticholinergic drugs",
       severity: "moderate",
-      mechanism: "Additive anticholinergic burden — cognition, ileus, tachycardia.",
+      mechanism: "Additive anticholinergic burden: cognition, ileus, tachycardia.",
       action: "Minimise total anticholinergic load.",
     },
     {
@@ -247,7 +247,7 @@ export const perphenazine: Drug = {
   ],
   pregnancy: {
     legacyCategory: "C",
-    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk — continue at the lowest effective dose with obstetric co-management.",
+    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk: continue at the lowest effective dose with obstetric co-management.",
     lactation: "Small amounts pass into milk; infant sedation and EPS-like effects are monitored. Generally considered acceptable with infant monitoring.",
   },
   renalAdjustment: "Standard caution.",
@@ -255,41 +255,41 @@ export const perphenazine: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Perphenazine is a well-balanced older antipsychotic: strong enough to control psychosis, moderately sedating, and less likely than the strongest older drugs to cause stiffness. A large modern trial found it comparable to several newer medicines.",
   patientEducationPoints: [
-    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early — these are treatable.",
+    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early: these are treatable.",
     "Stand up slowly during the first week.",
-    "Do not stop suddenly — discuss any change with your doctor.",
-    "Benefit from Perphenazine builds over weeks — do not judge it in the first days.",
+    "Do not stop suddenly: discuss any change with your doctor.",
+    "Benefit from Perphenazine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "CATIE: perphenazine matched quetiapine, risperidone, ziprasidone, and olanzapine on effectiveness — the trial that recalibrated typical-versus-atypical thinking.",
+    "CATIE: perphenazine matched quetiapine, risperidone, ziprasidone, and olanzapine on effectiveness; the trial that recalibrated typical-versus-atypical thinking.",
     "Mid-potency = balance: less EPS than haloperidol, less sedation than chlorpromazine.",
     "Cost-effectiveness champion where the trial evidence is needed: an old drug with modern comparative data.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Perphenazine: Mid-potency piperazine phenothiazine — balanced D2 blockade with mild sedation and modest off-target binding.",
-        "Uses of Perphenazine: Schizophrenia — psychotic manifestations; Severe nausea and vomiting",
+        "Mechanism of Perphenazine: Mid-potency piperazine phenothiazine; balanced D2 blockade with mild sedation and modest off-target binding.",
+        "Uses of Perphenazine: Schizophrenia; psychotic manifestations; Severe nausea and vomiting",
         "Mid-potency piperazine phenothiazine; 8–64 mg/day.",
-        "CATIE (2005): comparable effectiveness to atypicals — the key trial name to attach.",
+        "CATIE (2005): comparable effectiveness to atypicals; the key trial name to attach.",
       ],
       practical: [
-        "Prescribe Perphenazine for schizophrenia — psychotic manifestations with dose, timing, and duration.",
+        "Prescribe Perphenazine for schizophrenia: psychotic manifestations with dose, timing, and duration.",
         "Outline the monitoring plan: Weight and BMI (Baseline, then periodically); AIMS examination (Baseline, then every 6 months); EPS screen (parkinsonism, akathisia, dystonia) (Every review in the first 2 months)",
       ],
       longAnswer: [
-        "Perphenazine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Perphenazine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mid-potency piperazine phenothiazine; 8–64 mg/day.",
-        "CATIE (2005): comparable effectiveness to atypicals — the key trial name to attach.",
+        "CATIE (2005): comparable effectiveness to atypicals; the key trial name to attach.",
       ],
     },
     neetPg: {
       highYield: [
         "Mid-potency piperazine phenothiazine; 8–64 mg/day.",
-        "CATIE (2005): comparable effectiveness to atypicals — the key trial name to attach.",
+        "CATIE (2005): comparable effectiveness to atypicals; the key trial name to attach.",
         "EPS dose-dependent but moderate; mild sedation and prolactin rise.",
-        "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+        "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
         "Potency spectrum: chlorpromazine (low; sedation/hypotension) → haloperidol (high; EPS/prolactin).",
       ],
       pyqConcepts: [
@@ -300,7 +300,7 @@ export const perphenazine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Perphenazine develops neuroleptic malignant syndrome — next best step?",
+        "A patient on Perphenazine develops neuroleptic malignant syndrome: next best step?",
         "When to choose Perphenazine over alternatives in its class.",
       ],
     },
@@ -313,7 +313,7 @@ export const perphenazine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "CATIE: perphenazine matched quetiapine, risperidone, ziprasidone, and olanzapine on effectiveness — the trial that recalibrated typical-versus-atypical thinking.",
+        "CATIE: perphenazine matched quetiapine, risperidone, ziprasidone, and olanzapine on effectiveness; the trial that recalibrated typical-versus-atypical thinking.",
         "Mid-potency = balance: less EPS than haloperidol, less sedation than chlorpromazine.",
         "Cost-effectiveness champion where the trial evidence is needed: an old drug with modern comparative data.",
       ],
@@ -322,24 +322,24 @@ export const perphenazine: Drug = {
   memoryTricks: [],
   highYieldSummary: [
     "Mid-potency piperazine phenothiazine; 8–64 mg/day.",
-    "CATIE (2005): comparable effectiveness to atypicals — the key trial name to attach.",
+    "CATIE (2005): comparable effectiveness to atypicals; the key trial name to attach.",
     "EPS dose-dependent but moderate; mild sedation and prolactin rise.",
-    "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+    "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
     "Potency spectrum: chlorpromazine (low; sedation/hypotension) → haloperidol (high; EPS/prolactin).",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia — psychotic manifestations",
-      presentation: "A patient presenting with schizophrenia — psychotic manifestations, started on Perphenazine.",
-      history: "A adult patient presents with a schizophrenia — psychotic manifestations picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with schizophrenia — psychotic manifestations; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Schizophrenia — psychotic manifestations. Differentials are considered and excluded clinically.",
+      title: "First presentation: schizophrenia with psychotic manifestations",
+      presentation: "A patient presenting with schizophrenia: psychotic manifestations, started on Perphenazine.",
+      history: "A adult patient presents with a schizophrenia: psychotic manifestations picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with schizophrenia: psychotic manifestations; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Schizophrenia: psychotic manifestations. Differentials are considered and excluded clinically.",
       rationale: "Perphenazine is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Typical Antipsychotic) with strong evidence in this condition.",
       management: "Started at 4–8 mg three times daily, titrated to 12–32 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Perphenazine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Perphenazine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -348,7 +348,7 @@ export const perphenazine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Typical Antipsychotic comparison — choosing within the class",
+      title: "Typical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Perphenazine",
       rows: [
         {
@@ -397,7 +397,7 @@ export const perphenazine: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Low — weight gain not expected.",
+          primaryValue: "Low: weight gain not expected.",
           comparisons: [
             {
               drug: "Chlorpromazine",
@@ -462,7 +462,7 @@ export const perphenazine: Drug = {
           ],
         },
       ],
-      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -471,7 +471,7 @@ export const perphenazine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Perphenazine reaches peak plasma concentration and begins acting at its molecular target (D2 (mid-to-high potency antagonist); alpha-1 (mild); H1 (mild)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Perphenazine reaches peak plasma concentration and begins acting at its molecular target (D2 (mid-to-high potency antagonist); alpha-1 (mild); H1 (mild)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -507,7 +507,7 @@ export const perphenazine: Drug = {
   faqs: [
     {
       question: "How long does Perphenazine take to work?",
-      answer: "Clinical effect of Perphenazine typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Clinical effect of Perphenazine typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Perphenazine?",
@@ -515,11 +515,11 @@ export const perphenazine: Drug = {
     },
     {
       question: "Can I stop Perphenazine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Perphenazine habit-forming?",
@@ -527,7 +527,7 @@ export const perphenazine: Drug = {
     },
     {
       question: "Can I take Perphenazine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Perphenazine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Perphenazine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -632,7 +632,7 @@ export const perphenazine: Drug = {
       label: "Typical Antipsychotic",
       type: "class",
       href: "#mechanism",
-      note: "Typical (Conventional) Antipsychotic — Phenothiazine",
+      note: "Typical (Conventional) Antipsychotic. Phenothiazine",
     },
     {
       label: "Central monoaminergic systems (see mechanism)",
@@ -647,7 +647,7 @@ export const perphenazine: Drug = {
       note: "Primary molecular target",
     },
     {
-      label: "Schizophrenia — psychotic manifestations",
+      label: "Schizophrenia: psychotic manifestations",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -677,7 +677,7 @@ export const perphenazine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Perphenazine",
+      label: "Patient Guide. Perphenazine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -685,13 +685,13 @@ export const perphenazine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The mid-potency phenothiazine that matched atypicals in CATIE — the quiet evidence-based typical.",
-    summary: "Perphenazine is a prescription medicine used to treat schizophrenia — psychotic manifestations. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The mid-potency phenothiazine that matched atypicals in CATIE: the quiet evidence-based typical.",
+    summary: "Perphenazine is a prescription medicine used to treat schizophrenia: psychotic manifestations. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Perphenazine is a well-balanced older antipsychotic: strong enough to control psychosis, moderately sedating, and less likely than the strongest older drugs to cause stiffness. A large modern trial found it comparable to several newer medicines.",
-    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
   },
   sectionDifficulty: {
     mechanism: "mbbs",
@@ -733,7 +733,7 @@ export const perphenazine: Drug = {
         name: "Haloperidol",
         slug: "haloperidol",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool",
       },
       {
         name: "Fluphenazine",
@@ -751,7 +751,7 @@ export const perphenazine: Drug = {
         name: "Thioridazine",
         slug: "thioridazine",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "The restricted QT-retinopathy phenothiazine — last-line",
+        distinguishing: "The restricted QT-retinopathy phenothiazine: last-line",
       },
       {
         name: "Trifluoperazine",
@@ -917,17 +917,17 @@ export const perphenazine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Perphenazine in two sentences.",
-      answer: "Mid-potency piperazine phenothiazine — balanced D2 blockade with mild sedation and modest off-target binding. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — mid-to-high potency: moderate doses, moderate EPS, mild sedation.",
+      answer: "Mid-potency piperazine phenothiazine: balanced D2 blockade with mild sedation and modest off-target binding. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways; mid-to-high potency: moderate doses, moderate EPS, mild sedation.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Perphenazine.",
-      answer: "Schizophrenia — psychotic manifestations, Severe nausea and vomiting. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Schizophrenia: psychotic manifestations, Severe nausea and vomiting. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Perphenazine and how you would manage it.",
-      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
+      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness; the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
       topic: "Safety",
     },
     {
@@ -937,7 +937,7 @@ export const perphenazine: Drug = {
     },
     {
       question: "Share one clinical pearl about Perphenazine that separates safe prescribers from unsafe ones.",
-      answer: "CATIE: perphenazine matched quetiapine, risperidone, ziprasidone, and olanzapine on effectiveness — the trial that recalibrated typical-versus-atypical thinking.",
+      answer: "CATIE: perphenazine matched quetiapine, risperidone, ziprasidone, and olanzapine on effectiveness; the trial that recalibrated typical-versus-atypical thinking.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1013,7 +1013,7 @@ export const perphenazine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1058,7 +1058,7 @@ export const perphenazine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Perphenazine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Perphenazine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1074,7 +1074,7 @@ export const perphenazine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Perphenazine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Perphenazine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1119,7 +1119,7 @@ export const perphenazine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Perphenazine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Perphenazine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1129,7 +1129,7 @@ export const perphenazine: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Low — weight gain not expected.",
+    weightGain: "Low: weight gain not expected.",
     sedation: "Mild.",
     dosing: [
       {
@@ -1146,7 +1146,7 @@ export const perphenazine: Drug = {
       "The antiemetic dose (8 mg) is lower than the antipsychotic dose.",
     ],
     overdose: [
-      "Overdose with Perphenazine is managed supportively — no specific antidote.",
+      "Overdose with Perphenazine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Perphenazine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1183,7 +1183,7 @@ export const perphenazine: Drug = {
     potentialDisadvantages: ["EPS still dose-dependent.", "TD risk with chronic use.", "Less used in modern algorithms."],
     primaryTargetSymptoms: ["Positive psychotic symptoms", "Severe nausea/vomiting"],
     pearls: [
-      "CATIE: perphenazine matched quetiapine, risperidone, ziprasidone, and olanzapine on effectiveness — the trial that recalibrated typical-versus-atypical thinking.",
+      "CATIE: perphenazine matched quetiapine, risperidone, ziprasidone, and olanzapine on effectiveness; the trial that recalibrated typical-versus-atypical thinking.",
       "Mid-potency = balance: less EPS than haloperidol, less sedation than chlorpromazine.",
       "Cost-effectiveness champion where the trial evidence is needed: an old drug with modern comparative data.",
     ],
@@ -1191,6 +1191,6 @@ export const perphenazine: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

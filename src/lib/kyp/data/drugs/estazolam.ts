@@ -23,14 +23,14 @@ export const estazolam: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Sleep Medicines", "Benzodiazepine Hypnotics", "Estazolam"],
   /* ---- Hero / summary ---- */
-  tagline: "The intermediate hypnotic benzo — triazolam's longer-acting, quieter cousin.",
-  summary: "Estazolam is an intermediate-acting triazolo-benzodiazepine hypnotic (half-life 10–24 h) covering onset and maintenance with less accumulation than flurazepam and less rebound than triazolam — a mid-position that never gathered fame but works. Class-standard boxed warnings and dependence discipline apply.",
+  tagline: "The intermediate hypnotic benzo: triazolam's longer-acting, quieter cousin.",
+  summary: "Estazolam is an intermediate-acting triazolo-benzodiazepine hypnotic (half-life 10–24 h) covering onset and maintenance with less accumulation than flurazepam and less rebound than triazolam. A mid-position that never gathered fame but works. Class-standard boxed warnings and dependence discipline apply.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Estazolam — from its molecular target (GABA-A benzodiazepine site (PAM) — intermediate-acting triazolobenzodiazepine) to clinical effect.",
+    "Explain the mechanism of action of Estazolam (from its molecular target (GABA-A benzodiazepine site (PAM)) intermediate-acting triazolobenzodiazepine) to clinical effect.",
     "List the FDA-approved and off-label uses of Estazolam.",
     "Predict the common and serious side effects of Estazolam from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Estazolam.",
@@ -38,15 +38,15 @@ export const estazolam: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Intermediate-acting benzodiazepine hypnotic — between triazolam's brevity and flurazepam's accumulation.",
-    molecularTarget: "GABA-A benzodiazepine site (PAM) — intermediate-acting triazolobenzodiazepine",
+    summary: "Intermediate-acting benzodiazepine hypnotic, between triazolam's brevity and flurazepam's accumulation.",
+    molecularTarget: "GABA-A benzodiazepine site (PAM): intermediate-acting triazolobenzodiazepine",
     effect: "Sleep promotion via the described target.",
     steps: [
-      "Estazolam is an intermediate-acting triazolo-benzodiazepine hypnotic (half-life 10–24 h) covering onset and maintenance with less accumulation than flurazepam and less rebound than triazolam — a mid-position that never gathered fame but works — the mechanism in one line.",
+      "Estazolam is an intermediate-acting triazolo-benzodiazepine hypnotic (half-life 10–24 h) covering onset and maintenance with less accumulation than flurazepam and less rebound than triazolam (a mid-position that never gathered fame but works) the mechanism in one line.",
       "Binding at the described target produces the sleep-promoting effect.",
       "Duration of action follows the half-life: onset agents clear before morning; longer agents add maintenance cover.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 10–24 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 10–24 hours. See mechanism and prescriber sections.",
     halfLife: "10–24 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
@@ -108,14 +108,14 @@ export const estazolam: Drug = {
         label: "inhibits firing",
       },
     ],
-    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly — which is why their effect is powerful but limited by dependence risk.",
+    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly, which is why their effect is powerful but limited by dependence risk.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
     "Central monoaminergic systems (see mechanism)",
   ],
   receptors: [
-    "GABA-A benzodiazepine site (PAM) — intermediate-acting triazolobenzodiazepine",
+    "GABA-A benzodiazepine site (PAM): intermediate-acting triazolobenzodiazepine",
   ],
   brainRegionIds: ["amygdala", "prefrontal-cortex"],
   pathwayIds: [],
@@ -136,7 +136,7 @@ export const estazolam: Drug = {
     {
       name: "Opioids",
       severity: "absolute",
-      rationale: "Concurrent use causes profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      rationale: "Concurrent use causes profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
     },
   ],
   blackBoxWarnings: [
@@ -218,7 +218,7 @@ export const estazolam: Drug = {
     {
       drug: "Opioids",
       severity: "contraindicated",
-      mechanism: "Concurrent use causes profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      mechanism: "Concurrent use causes profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
       action: "Avoid; if unavoidable for taper protocols, use lowest doses with intensive monitoring.",
     },
     {
@@ -236,7 +236,7 @@ export const estazolam: Drug = {
     {
       drug: "Older antihistamines (sedating)",
       severity: "moderate",
-      mechanism: "Additive sedation in the elderly — falls.",
+      mechanism: "Additive sedation in the elderly: falls.",
       action: "Prefer non-sedating alternatives.",
     },
   ],
@@ -248,34 +248,34 @@ export const estazolam: Drug = {
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
-  patientExplanation: "Estazolam is a medicine used to treat insomnia — short-term (onset and maintenance). Intermediate-acting benzodiazepine hypnotic — between triazolam's brevity and flurazepam's accumulation. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+  patientExplanation: "Estazolam is a medicine used to treat insomnia: short-term (onset and maintenance). Intermediate-acting benzodiazepine hypnotic, between triazolam's brevity and flurazepam's accumulation. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
   patientEducationPoints: [
-    "This medicine is for short-term or carefully planned use — it can cause dependence within weeks of regular use.",
-    "Never mix it with opioid painkillers or alcohol — the combination can stop breathing.",
+    "This medicine is for short-term or carefully planned use. It can cause dependence within weeks of regular use.",
+    "Never mix it with opioid painkillers or alcohol: the combination can stop breathing.",
     "Do not drive until you know how it affects you.",
-    "Stopping must be gradual — never stop suddenly after regular use.",
-    "Benefit from Estazolam builds over weeks — do not judge it in the first days.",
+    "Stopping must be gradual, never stop suddenly after regular use.",
+    "Benefit from Estazolam builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The mid-position drug: less rebound than triazolam, less accumulation than flurazepam — the geometry explains its quiet usefulness.",
-    "The triazolo-ring family: triazolam (short), estazolam (intermediate), alprazolam (anxiolytic) — chemistry organising kinetics.",
-    "All benzodiazepines share the GABA-A amplification mechanism — the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
+    "The mid-position drug: less rebound than triazolam, less accumulation than flurazepam; the geometry explains its quiet usefulness.",
+    "The triazolo-ring family: triazolam (short), estazolam (intermediate), alprazolam (anxiolytic); chemistry organising kinetics.",
+    "All benzodiazepines share the GABA-A amplification mechanism: the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Estazolam: Intermediate-acting benzodiazepine hypnotic — between triazolam's brevity and flurazepam's accumulation.",
-        "Uses of Estazolam: Insomnia — short-term (onset and maintenance)",
+        "Mechanism of Estazolam: Intermediate-acting benzodiazepine hypnotic, between triazolam's brevity and flurazepam's accumulation.",
+        "Uses of Estazolam: Insomnia; short-term (onset and maintenance)",
         "Intermediate-acting triazolo-benzodiazepine hypnotic (half-life 10–24 h).",
         "Dose 0.5–2 mg (elderly 0.5 mg).",
       ],
       practical: [
-        "Prescribe Estazolam for insomnia — short-term (onset and maintenance) with dose, timing, and duration.",
+        "Prescribe Estazolam for insomnia: short-term (onset and maintenance) with dose, timing, and duration.",
         "Outline the monitoring plan: Respiratory status and sedation (Clinical review each visit); Dependence review (Every visit for long-term users); Fall risk review (elderly) (Every visit in older patients)",
       ],
       longAnswer: [
-        "Estazolam: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Estazolam: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Intermediate-acting triazolo-benzodiazepine hypnotic (half-life 10–24 h).",
         "Dose 0.5–2 mg (elderly 0.5 mg).",
       ],
@@ -285,7 +285,7 @@ export const estazolam: Drug = {
         "Intermediate-acting triazolo-benzodiazepine hypnotic (half-life 10–24 h).",
         "Dose 0.5–2 mg (elderly 0.5 mg).",
         "Mid-position between triazolam and flurazepam.",
-        "Mechanism: GABA-A positive allosteric modulation — amplified natural inhibition.",
+        "Mechanism: GABA-A positive allosteric modulation; amplified natural inhibition.",
         "The class boxed warning: opioids + benzodiazepines = respiratory depression and death.",
       ],
       pyqConcepts: [
@@ -296,22 +296,22 @@ export const estazolam: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Estazolam develops respiratory depression with opioids — next best step?",
+        "A patient on Estazolam develops respiratory depression with opioids: next best step?",
         "When to choose Estazolam over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: GABA-A benzodiazepine site (PAM) — intermediate-acting triazolobenzodiazepine",
+        "Primary target: GABA-A benzodiazepine site (PAM), intermediate-acting triazolobenzodiazepine",
         "Most common side effects: Morning hangover, Amnesia, dizziness, Rebound insomnia",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The mid-position drug: less rebound than triazolam, less accumulation than flurazepam — the geometry explains its quiet usefulness.",
-        "The triazolo-ring family: triazolam (short), estazolam (intermediate), alprazolam (anxiolytic) — chemistry organising kinetics.",
-        "All benzodiazepines share the GABA-A amplification mechanism — the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
+        "The mid-position drug: less rebound than triazolam, less accumulation than flurazepam; the geometry explains its quiet usefulness.",
+        "The triazolo-ring family: triazolam (short), estazolam (intermediate), alprazolam (anxiolytic); chemistry organising kinetics.",
+        "All benzodiazepines share the GABA-A amplification mechanism: the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
       ],
     },
   },
@@ -320,22 +320,22 @@ export const estazolam: Drug = {
     "Intermediate-acting triazolo-benzodiazepine hypnotic (half-life 10–24 h).",
     "Dose 0.5–2 mg (elderly 0.5 mg).",
     "Mid-position between triazolam and flurazepam.",
-    "Mechanism: GABA-A positive allosteric modulation — amplified natural inhibition.",
+    "Mechanism: GABA-A positive allosteric modulation; amplified natural inhibition.",
     "The class boxed warning: opioids + benzodiazepines = respiratory depression and death.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — insomnia — short-term (onset and maintenance)",
-      presentation: "A patient presenting with insomnia — short-term (onset and maintenance), started on Estazolam.",
-      history: "A adult patient presents with a insomnia — short-term (onset and maintenance) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with insomnia — short-term (onset and maintenance); physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Insomnia — short-term (onset and maintenance). Differentials are considered and excluded clinically.",
+      title: "First presentation: insomnia; short-term (onset and maintenance)",
+      presentation: "A patient presenting with insomnia: short-term (onset and maintenance), started on Estazolam.",
+      history: "A adult patient presents with a insomnia: short-term (onset and maintenance) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with insomnia: short-term (onset and maintenance); physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Insomnia: short-term (onset and maintenance). Differentials are considered and excluded clinically.",
       rationale: "Estazolam is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Benzodiazepine Hypnotic) with strong evidence in this condition.",
       management: "Started at 0.5–1 mg at bedtime (elderly 0.5 mg), titrated to 1–2 mg with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Estazolam takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Estazolam takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -344,12 +344,12 @@ export const estazolam: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Benzodiazepine Hypnotic comparison — choosing within the class",
+      title: "Benzodiazepine Hypnotic comparison: choosing within the class",
       primaryDrug: "Estazolam",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "GABA-A benzodiazepine site (PAM) — intermediate-acting triazolobenzodiazepine",
+          primaryValue: "GABA-A benzodiazepine site (PAM): intermediate-acting triazolobenzodiazepine",
           comparisons: [
             {
               drug: "Temazepam",
@@ -458,7 +458,7 @@ export const estazolam: Drug = {
           ],
         },
       ],
-      takeaway: "All benzodiazepine hypnotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All benzodiazepine hypnotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -467,7 +467,7 @@ export const estazolam: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Estazolam reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (PAM) — intermediate-acting triazolobenzodiazepine). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Estazolam reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (PAM), intermediate-acting triazolobenzodiazepine). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -503,7 +503,7 @@ export const estazolam: Drug = {
   faqs: [
     {
       question: "How long does Estazolam take to work?",
-      answer: "15–45 minutes.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "15–45 minutes.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Estazolam?",
@@ -511,19 +511,19 @@ export const estazolam: Drug = {
     },
     {
       question: "Can I stop Estazolam suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Estazolam habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Estazolam exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Estazolam exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Estazolam during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Estazolam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Estazolam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -633,13 +633,13 @@ export const estazolam: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "GABA-A benzodiazepine site (PAM) — intermediate-acting triazolobenzodiazepine",
+      label: "GABA-A benzodiazepine site (PAM): intermediate-acting triazolobenzodiazepine",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
     },
     {
-      label: "Insomnia — short-term (onset and maintenance)",
+      label: "Insomnia: short-term (onset and maintenance)",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -663,7 +663,7 @@ export const estazolam: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Estazolam",
+      label: "Patient Guide. Estazolam",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -671,13 +671,13 @@ export const estazolam: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The intermediate hypnotic benzo — triazolam's longer-acting, quieter cousin.",
-    summary: "Estazolam is a prescription medicine used to treat insomnia — short-term (onset and maintenance). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Estazolam is a medicine used to treat insomnia — short-term (onset and maintenance). Intermediate-acting benzodiazepine hypnotic — between triazolam's brevity and flurazepam's accumulation. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
-    sideEffects: "The most common side effects are: morning hangover, amnesia, dizziness, rebound insomnia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression with opioids and Withdrawal seizures. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The intermediate hypnotic benzo: triazolam's longer-acting, quieter cousin.",
+    summary: "Estazolam is a prescription medicine used to treat insomnia: short-term (onset and maintenance). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Estazolam is a medicine used to treat insomnia: short-term (onset and maintenance). Intermediate-acting benzodiazepine hypnotic, between triazolam's brevity and flurazepam's accumulation. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+    sideEffects: "The most common side effects are: morning hangover, amnesia, dizziness, rebound insomnia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression with opioids and Withdrawal seizures. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, Older antihistamines (sedating). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, Older antihistamines (sedating). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -699,7 +699,7 @@ export const estazolam: Drug = {
     },
     costCategory: "moderate",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Class rules."],
   },
   sectionDifficulty: {
@@ -739,19 +739,19 @@ export const estazolam: Drug = {
         name: "Temazepam",
         slug: "temazepam",
         relationship: "Same class (Benzodiazepine Hypnotic)",
-        distinguishing: "The classic benzodiazepine hypnotic — full power, full class risks",
+        distinguishing: "The classic benzodiazepine hypnotic: full power, full class risks",
       },
       {
         name: "Triazolam",
         slug: "triazolam",
         relationship: "Same class (Benzodiazepine Hypnotic)",
-        distinguishing: "The benzodiazepine zolpidem — onset-only, amnesia-prone",
+        distinguishing: "The benzodiazepine zolpidem: onset-only, amnesia-prone",
       },
       {
         name: "Flunitrazepam",
         slug: "flunitrazepam",
         relationship: "Same class (Benzodiazepine Hypnotic)",
-        distinguishing: "The strictly-controlled potent hypnotic — pharmacology's misuse lesson",
+        distinguishing: "The strictly-controlled potent hypnotic: pharmacology's misuse lesson",
       },
       {
         name: "Flurazepam",
@@ -763,7 +763,7 @@ export const estazolam: Drug = {
         name: "Quazepam",
         slug: "quazepam",
         relationship: "Same class (Benzodiazepine Hypnotic)",
-        distinguishing: "The alpha-1-selective benzodiazepine — a pharmacology bridge",
+        distinguishing: "The alpha-1-selective benzodiazepine: a pharmacology bridge",
       },
     ],
   },
@@ -911,12 +911,12 @@ export const estazolam: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Estazolam in two sentences.",
-      answer: "Intermediate-acting benzodiazepine hypnotic — between triazolam's brevity and flurazepam's accumulation. Net effect: Sleep promotion via the described target.",
+      answer: "Intermediate-acting benzodiazepine hypnotic, between triazolam's brevity and flurazepam's accumulation. Net effect: Sleep promotion via the described target.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Estazolam.",
-      answer: "Insomnia — short-term (onset and maintenance). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Insomnia: short-term (onset and maintenance). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -931,7 +931,7 @@ export const estazolam: Drug = {
     },
     {
       question: "Share one clinical pearl about Estazolam that separates safe prescribers from unsafe ones.",
-      answer: "The mid-position drug: less rebound than triazolam, less accumulation than flurazepam — the geometry explains its quiet usefulness.",
+      answer: "The mid-position drug: less rebound than triazolam, less accumulation than flurazepam; the geometry explains its quiet usefulness.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1007,7 +1007,7 @@ export const estazolam: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1052,7 +1052,7 @@ export const estazolam: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Estazolam works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Estazolam works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1068,7 +1068,7 @@ export const estazolam: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Estazolam safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Estazolam safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1111,7 +1111,7 @@ export const estazolam: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Estazolam follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Estazolam follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1135,11 +1135,11 @@ export const estazolam: Drug = {
     dosageForms: ["Tablets 0.5, 1, 2 mg"],
     dosingTips: ["0.5 mg elderly; 7–8+ h bed."],
     overdose: [
-      "Overdose with Estazolam is managed supportively — no specific antidote.",
+      "Overdose with Estazolam is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Estazolam is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1171,14 +1171,14 @@ export const estazolam: Drug = {
     potentialDisadvantages: ["Full class dependence/fall profile.", "Limited availability."],
     primaryTargetSymptoms: ["Short-term insomnia"],
     pearls: [
-      "The mid-position drug: less rebound than triazolam, less accumulation than flurazepam — the geometry explains its quiet usefulness.",
-      "The triazolo-ring family: triazolam (short), estazolam (intermediate), alprazolam (anxiolytic) — chemistry organising kinetics.",
-      "All benzodiazepines share the GABA-A amplification mechanism — the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
+      "The mid-position drug: less rebound than triazolam, less accumulation than flurazepam; the geometry explains its quiet usefulness.",
+      "The triazolo-ring family: triazolam (short), estazolam (intermediate), alprazolam (anxiolytic); chemistry organising kinetics.",
+      "All benzodiazepines share the GABA-A amplification mechanism: the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

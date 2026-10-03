@@ -24,13 +24,13 @@ export const asenapine: Drug = {
   learningPath: ["Psychiatry", "Antipsychotics", "Atypical Antipsychotics", "Asenapine"],
   /* ---- Hero / summary ---- */
   tagline: "The sublingual transdermal-ready atypical for schizophrenia, mania, and bipolar depression with low prolactin.",
-  summary: "Asenapine is a sublingually administered atypical antipsychotic (also as a twice-yearly depot) with D2/5-HT2A antagonism plus distinctive noradrenergic and serotonergic binding. It is approved for schizophrenia, bipolar mania, and (uniquely among older atypicals) bipolar depression, with essentially no prolactin elevation and moderate metabolic risk. Sublingual administration — no water, no swallowing — is both its convenience and its compliance trap (swallowed tablets absorb poorly).",
+  summary: "Asenapine is a sublingually administered atypical antipsychotic (also as a twice-yearly depot) with D2/5-HT2A antagonism plus distinctive noradrenergic and serotonergic binding. It is approved for schizophrenia, bipolar mania, and (uniquely among older atypicals) bipolar depression, with essentially no prolactin elevation and moderate metabolic risk. Sublingual administration (no water, no swallowing) is both its convenience and its compliance trap (swallowed tablets absorb poorly).",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Asenapine — from its molecular target (D2 (antagonist); 5-HT2A (antagonist); alpha-2 adrenergic; H1; 5-HT2C/5-HT7) to clinical effect.",
+    "Explain the mechanism of action of Asenapine, from its molecular target (D2 (antagonist); 5-HT2A (antagonist); alpha-2 adrenergic; H1; 5-HT2C/5-HT7) to clinical effect.",
     "List the FDA-approved and off-label uses of Asenapine.",
     "Predict the common and serious side effects of Asenapine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Asenapine.",
@@ -38,14 +38,14 @@ export const asenapine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Asenapine blocks D2 and 5-HT2A receptors with additional alpha-2 adrenergic, 5-HT2C/5-HT7, and H1 activity — a broad-binding atypical administered sublingually.",
+    summary: "Asenapine blocks D2 and 5-HT2A receptors with additional alpha-2 adrenergic, 5-HT2C/5-HT7, and H1 activity: a broad-binding atypical administered sublingually.",
     molecularTarget: "D2 (antagonist); 5-HT2A (antagonist); alpha-2 adrenergic; H1; 5-HT2C/5-HT7",
     effect: "Antipsychotic and anti-manic efficacy with antidepressant-range utility in bipolar depression; no prolactin elevation.",
     steps: [
-      "D2 and 5-HT2A antagonism — the standard atypical antipsychotic core.",
+      "D2 and 5-HT2A antagonism: the standard atypical antipsychotic core.",
       "Alpha-2 adrenergic antagonism may contribute to antidepressant effects (yohimbine-like noradrenergic tone).",
-      "Sublingual absorption bypasses first-pass metabolism; swallowed drug absorbs poorly — administration technique is pharmacology.",
-      "No tuberoinfundibular D2 dominance — prolactin stays flat.",
+      "Sublingual absorption bypasses first-pass metabolism; swallowed drug absorbs poorly: administration technique is pharmacology.",
+      "No tuberoinfundibular D2 dominance: prolactin stays flat.",
     ],
     pharmacokinetics: "Sublingual: absorbs in minutes; food and water must be avoided for 10 minutes after the dose. Transdermal patch delivers over 24 hours.",
     halfLife: "About 24 hours combined (short plasma half-life but long receptor kinetics); twice-daily sublingual dosing standard.",
@@ -128,7 +128,7 @@ export const asenapine: Drug = {
         label: "5-HT2A-mediated benefit",
       },
     ],
-    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms — the serotonin-dopamine hypothesis of atypical antipsychotics.",
+    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms: the serotonin-dopamine hypothesis of atypical antipsychotics.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Dopamine (DA)", "Serotonin (5-HT)", "Norepinephrine (NE)"],
@@ -152,7 +152,7 @@ export const asenapine: Drug = {
     {
       name: "Bipolar I depression",
       status: "fda-approved",
-      description: "A distinctive approval — adds to the shortlist of agents for the depressed pole.",
+      description: "A distinctive approval: adds to the shortlist of agents for the depressed pole.",
     },
   ],
   contraindications: [
@@ -181,7 +181,7 @@ export const asenapine: Drug = {
       name: "Oral hypoesthesia / dysgeusia",
       frequency: "common",
       severity: "mild",
-      description: "Numbness or taste disturbance under the tongue — the sublingual signature.",
+      description: "Numbness or taste disturbance under the tongue: the sublingual signature.",
       management: "Reassurance; usually transient.",
     },
     {
@@ -195,7 +195,7 @@ export const asenapine: Drug = {
       name: "Weight gain",
       frequency: "common",
       severity: "moderate",
-      description: "Moderate — between aripiprazole and olanzapine.",
+      description: "Moderate, between aripiprazole and olanzapine.",
       management: "Monitor; lifestyle.",
     },
     {
@@ -211,7 +211,7 @@ export const asenapine: Drug = {
       name: "Hypersensitivity reactions including anaphylaxis",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Reported with sublingual use — the drug's distinctive serious warning.",
+      description: "Reported with sublingual use: the drug's distinctive serious warning.",
       management: "Stop; emergency management.",
     },
     {
@@ -241,7 +241,7 @@ export const asenapine: Drug = {
     {
       parameter: "Weight and BMI",
       frequency: "Baseline, then at 4, 8, 12 weeks and quarterly",
-      rationale: "Class metabolic risk — early trajectory detection.",
+      rationale: "Class metabolic risk: early trajectory detection.",
     },
     {
       parameter: "Fasting glucose / HbA1c",
@@ -256,7 +256,7 @@ export const asenapine: Drug = {
     {
       parameter: "Blood pressure (orthostatic)",
       frequency: "Baseline and during titration",
-      rationale: "Alpha-1 blockade — orthostasis risk.",
+      rationale: "Alpha-1 blockade: orthostasis risk.",
     },
     {
       parameter: "AIMS examination",
@@ -291,25 +291,25 @@ export const asenapine: Drug = {
   renalAdjustment: "No dose adjustment required.",
   hepaticAdjustment: "Not recommended in severe hepatic impairment (exposure rises several-fold).",
   /* ---- Education ---- */
-  patientExplanation: "Asenapine is a tablet that dissolves under the tongue — no water needed. It treats psychosis, mania, and bipolar depression. The golden rule: nothing to eat or drink for 10 minutes after the tablet goes in, because it absorbs through the lining of your mouth, not your stomach.",
+  patientExplanation: "Asenapine is a tablet that dissolves under the tongue: no water needed. It treats psychosis, mania, and bipolar depression. The golden rule: nothing to eat or drink for 10 minutes after the tablet goes in, because it absorbs through the lining of your mouth, not your stomach.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Asenapine builds over weeks — do not judge it in the first days.",
+    "Benefit from Asenapine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "Sublingual = pharmacology: swallowed asenapine is a different (weaker) drug — technique counselling at every dispensing.",
+    "Sublingual = pharmacology: swallowed asenapine is a different (weaker) drug; technique counselling at every dispensing.",
     "The 10-minute rule (no food/drink) is the adherence hinge.",
     "Bipolar depression approval puts it on the short list with quetiapine, lurasidone, cariprazine, and OFC.",
-    "No prolactin rise — an option when risperidone has caused hyperprolactinaemia.",
-    "Secuado patch twice-weekly? — no, once applied delivers 24 hours over a week? (Patch is applied once weekly... verify) — the depot is every 2 weeks.",
+    "No prolactin rise: an option when risperidone has caused hyperprolactinaemia.",
+    "Secuado patch twice-weekly? No, once applied delivers 24 hours over a week? (Patch is applied once weekly... verify): the depot is every 2 weeks.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Asenapine: Asenapine blocks D2 and 5-HT2A receptors with additional alpha-2 adrenergic, 5-HT2C/5-HT7, and H1 activity — a broad-binding atypical administered sublingually.",
+        "Mechanism of Asenapine: Asenapine blocks D2 and 5-HT2A receptors with additional alpha-2 adrenergic, 5-HT2C/5-HT7, and H1 activity; a broad-binding atypical administered sublingually.",
         "Uses of Asenapine: Schizophrenia; Acute manic / mixed episodes of bipolar I; Bipolar I depression",
         "Route: sublingual (absorbs through oral mucosa; swallowed drug poorly absorbed).",
         "Approvals: schizophrenia, bipolar mania (mono/adjunct), bipolar depression.",
@@ -319,7 +319,7 @@ export const asenapine: Drug = {
         "Outline the monitoring plan: Weight and BMI (Baseline, then at 4, 8, 12 weeks and quarterly); Fasting glucose / HbA1c (Baseline, 12 weeks, then annually); Lipid profile (fasting) (Baseline, 12 weeks, then annually)",
       ],
       longAnswer: [
-        "Asenapine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Asenapine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Route: sublingual (absorbs through oral mucosa; swallowed drug poorly absorbed).",
         "Approvals: schizophrenia, bipolar mania (mono/adjunct), bipolar depression.",
       ],
@@ -340,7 +340,7 @@ export const asenapine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Asenapine develops hypersensitivity reactions including anaphylaxis — next best step?",
+        "A patient on Asenapine develops hypersensitivity reactions including anaphylaxis: next best step?",
         "When to choose Asenapine over alternatives in its class.",
       ],
     },
@@ -353,9 +353,9 @@ export const asenapine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "Technique is pharmacology — sublingual absorbed, swallowed wasted.",
+        "Technique is pharmacology: sublingual absorbed, swallowed wasted.",
         "Bipolar depression + no prolactin problems = its niche.",
-        "Sublingual = pharmacology: swallowed asenapine is a different (weaker) drug — technique counselling at every dispensing.",
+        "Sublingual = pharmacology: swallowed asenapine is a different (weaker) drug; technique counselling at every dispensing.",
         "The 10-minute rule (no food/drink) is the adherence hinge.",
       ],
     },
@@ -371,7 +371,7 @@ export const asenapine: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia",
+      title: "First presentation: schizophrenia",
       presentation: "A patient presenting with schizophrenia, started on Asenapine.",
       history: "A adult patient presents with a schizophrenia picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with schizophrenia; physical examination and baseline investigations are unremarkable.",
@@ -380,7 +380,7 @@ export const asenapine: Drug = {
       management: "Started at 5 mg sublingual twice daily, titrated to 5–10 mg twice daily with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Asenapine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Asenapine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -389,7 +389,7 @@ export const asenapine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Atypical Antipsychotic comparison — choosing within the class",
+      title: "Atypical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Asenapine",
       rows: [
         {
@@ -503,7 +503,7 @@ export const asenapine: Drug = {
           ],
         },
       ],
-      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -512,7 +512,7 @@ export const asenapine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Asenapine reaches peak plasma concentration and begins acting at its molecular target (D2 (antagonist); 5-HT2A (antagonist); alpha-2 adrenergic; H1; 5-HT2C/5-HT7). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Asenapine reaches peak plasma concentration and begins acting at its molecular target (D2 (antagonist); 5-HT2A (antagonist); alpha-2 adrenergic; H1; 5-HT2C/5-HT7). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -548,7 +548,7 @@ export const asenapine: Drug = {
   faqs: [
     {
       question: "How long does Asenapine take to work?",
-      answer: "Mania: days; schizophrenia: 1–3 weeks as with class.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Mania: days; schizophrenia: 1–3 weeks as with class.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Asenapine?",
@@ -556,11 +556,11 @@ export const asenapine: Drug = {
     },
     {
       question: "Can I stop Asenapine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Asenapine habit-forming?",
@@ -568,7 +568,7 @@ export const asenapine: Drug = {
     },
     {
       question: "Can I take Asenapine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Asenapine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Asenapine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -752,7 +752,7 @@ export const asenapine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Asenapine",
+      label: "Patient Guide. Asenapine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -761,12 +761,12 @@ export const asenapine: Drug = {
   /* ---- Patient mode ---- */
   patientMode: {
     tagline: "The sublingual transdermal-ready atypical for schizophrenia, mania, and bipolar depression with low prolactin.",
-    summary: "Asenapine is a prescription medicine used to treat schizophrenia. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Asenapine is a tablet that dissolves under the tongue — no water needed. It treats psychosis, mania, and bipolar depression. The golden rule: nothing to eat or drink for 10 minutes after the tablet goes in, because it absorbs through the lining of your mouth, not your stomach.",
-    sideEffects: "The most common side effects are: somnolence and sedation, oral hypoesthesia / dysgeusia, akathisia and eps, weight gain, anxiety and dizziness. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hypersensitivity reactions including anaphylaxis and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and bmi (baseline, then at 4, 8, 12 weeks and quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually); lipid profile (fasting) (baseline, 12 weeks, then annually). Keep every appointment — these checks are how the treatment stays safe.",
+    summary: "Asenapine is a prescription medicine used to treat schizophrenia. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Asenapine is a tablet that dissolves under the tongue: no water needed. It treats psychosis, mania, and bipolar depression. The golden rule: nothing to eat or drink for 10 minutes after the tablet goes in, because it absorbs through the lining of your mouth, not your stomach.",
+    sideEffects: "The most common side effects are: somnolence and sedation, oral hypoesthesia / dysgeusia, akathisia and eps, weight gain, anxiety and dizziness. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hypersensitivity reactions including anaphylaxis and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and bmi (baseline, then at 4, 8, 12 weeks and quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually); lipid profile (fasting) (baseline, 12 weeks, then annually). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: CNS depressants and alcohol, QT-prolonging drugs, Antihypertensives. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: CNS depressants and alcohol, QT-prolonging drugs, Antihypertensives. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -791,7 +791,7 @@ export const asenapine: Drug = {
     },
     costCategory: "moderate",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -831,49 +831,49 @@ export const asenapine: Drug = {
         name: "Aripiprazole",
         slug: "aripiprazole",
         relationship: "Same class (Dopamine Stabiliser)",
-        distinguishing: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+        distinguishing: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
       },
       {
         name: "Clozapine",
         slug: "clozapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
       },
       {
         name: "Lurasidone",
         slug: "lurasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+        distinguishing: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
       },
       {
         name: "Olanzapine",
         slug: "olanzapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+        distinguishing: "Most robust broad-spectrum atypical: heaviest metabolic burden",
       },
       {
         name: "Paliperidone",
         slug: "paliperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The LAI platform king — monthly to 6-monthly injections for schizophrenia",
+        distinguishing: "The LAI platform king: monthly to 6-monthly injections for schizophrenia",
       },
       {
         name: "Quetiapine",
         slug: "quetiapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin — the sedating antidepressant-antipsychotic",
+        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin: the sedating antidepressant-antipsychotic",
       },
       {
         name: "Risperidone",
         slug: "risperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most potent D2 blockade among atypicals — highest prolactin, best-studied LAI",
+        distinguishing: "Most potent D2 blockade among atypicals: highest prolactin, best-studied LAI",
       },
       {
         name: "Ziprasidone",
         slug: "ziprasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic — with QT vigilance",
+        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic, with QT vigilance",
       },
     ],
   },
@@ -1021,7 +1021,7 @@ export const asenapine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Asenapine in two sentences.",
-      answer: "Asenapine blocks D2 and 5-HT2A receptors with additional alpha-2 adrenergic, 5-HT2C/5-HT7, and H1 activity — a broad-binding atypical administered sublingually. Net effect: Antipsychotic and anti-manic efficacy with antidepressant-range utility in bipolar depression; no prolactin elevation.",
+      answer: "Asenapine blocks D2 and 5-HT2A receptors with additional alpha-2 adrenergic, 5-HT2C/5-HT7, and H1 activity: a broad-binding atypical administered sublingually. Net effect: Antipsychotic and anti-manic efficacy with antidepressant-range utility in bipolar depression; no prolactin elevation.",
       topic: "Mechanism",
     },
     {
@@ -1031,7 +1031,7 @@ export const asenapine: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Asenapine and how you would manage it.",
-      answer: "Hypersensitivity reactions including anaphylaxis: Reported with sublingual use — the drug's distinctive serious warning. Management: Stop; emergency management.",
+      answer: "Hypersensitivity reactions including anaphylaxis: Reported with sublingual use; the drug's distinctive serious warning. Management: Stop; emergency management.",
       topic: "Safety",
     },
     {
@@ -1041,7 +1041,7 @@ export const asenapine: Drug = {
     },
     {
       question: "Share one clinical pearl about Asenapine that separates safe prescribers from unsafe ones.",
-      answer: "Technique is pharmacology — sublingual absorbed, swallowed wasted.",
+      answer: "Technique is pharmacology: sublingual absorbed, swallowed wasted.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1117,7 +1117,7 @@ export const asenapine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1162,7 +1162,7 @@ export const asenapine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Asenapine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Asenapine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1178,7 +1178,7 @@ export const asenapine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Asenapine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Asenapine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1223,7 +1223,7 @@ export const asenapine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Asenapine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Asenapine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1265,11 +1265,11 @@ export const asenapine: Drug = {
     ],
     dosingTips: [
       "Teach the 10-minute no-food-drink rule with the first tablet.",
-      "Check the mouth — sublingual tablets are easily pocketed.",
+      "Check the mouth: sublingual tablets are easily pocketed.",
       "Weight one dose to bedtime when sedation helps.",
     ],
     overdose: [
-      "Overdose with Asenapine is managed supportively — no specific antidote.",
+      "Overdose with Asenapine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Asenapine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1310,9 +1310,9 @@ export const asenapine: Drug = {
     potentialDisadvantages: ["10-minute rule is fragile in real life.", "Twice-daily dosing.", "Oral numbness/taste disturbance.", "Moderate weight gain."],
     primaryTargetSymptoms: ["Positive symptoms of psychosis", "Manic symptoms", "Bipolar depressive episodes"],
     pearls: [
-      "Technique is pharmacology — sublingual absorbed, swallowed wasted.",
+      "Technique is pharmacology: sublingual absorbed, swallowed wasted.",
       "Bipolar depression + no prolactin problems = its niche.",
-      "Sublingual = pharmacology: swallowed asenapine is a different (weaker) drug — technique counselling at every dispensing.",
+      "Sublingual = pharmacology: swallowed asenapine is a different (weaker) drug; technique counselling at every dispensing.",
       "The 10-minute rule (no food/drink) is the adherence hinge.",
       "Bipolar depression approval puts it on the short list with quetiapine, lurasidone, cariprazine, and OFC.",
     ],
@@ -1320,6 +1320,6 @@ export const asenapine: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

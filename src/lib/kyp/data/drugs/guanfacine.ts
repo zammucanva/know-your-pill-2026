@@ -23,14 +23,14 @@ export const guanfacine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "ADHD Medications", "Alpha-2 Agonists", "Guanfacine"],
   /* ---- Hero / summary ---- */
-  tagline: "Clonidine's refined cousin — longer-acting alpha-2A selectivity with less sedation.",
+  tagline: "Clonidine's refined cousin: longer-acting alpha-2A selectivity with less sedation.",
   summary: "Guanfacine is the longer-acting, more alpha-2A-selective member of the alpha-2 pair: FDA-approved as ER monotherapy and adjunct for ADHD from age 6, with 24-hour cover, less sedation and hypotension than clonidine, and a tolerability profile that made it the preferred alpha-2 agent in modern child psychiatry. Rebound hypertension on abrupt withdrawal remains the class caution.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Guanfacine — from its molecular target (Central alpha-2A receptors (agonist — 15× more alpha-2A selective than clonidine)) to clinical effect.",
+    "Explain the mechanism of action of Guanfacine (from its molecular target (Central alpha-2A receptors (agonist) 15× more alpha-2A selective than clonidine)) to clinical effect.",
     "List the FDA-approved and off-label uses of Guanfacine.",
     "Predict the common and serious side effects of Guanfacine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Guanfacine.",
@@ -38,15 +38,15 @@ export const guanfacine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Guanfacine selectively agonises alpha-2A receptors, damping noradrenergic locus coeruleus firing — clonidine's mechanism with more selectivity and longer action.",
-    molecularTarget: "Central alpha-2A receptors (agonist — 15× more alpha-2A selective than clonidine)",
+    summary: "Guanfacine selectively agonises alpha-2A receptors, damping noradrenergic locus coeruleus firing: clonidine's mechanism with more selectivity and longer action.",
+    molecularTarget: "Central alpha-2A receptors (agonist, 15× more alpha-2A selective than clonidine)",
     effect: "Catecholamine and wake-system enhancement with the agent's characteristic profile.",
     steps: [
-      "Guanfacine selectively agonises alpha-2A receptors, damping noradrenergic locus coeruleus firing — clonidine's mechanism with more selectivity and longer action.",
+      "Guanfacine selectively agonises alpha-2A receptors, damping noradrenergic locus coeruleus firing: clonidine's mechanism with more selectivity and longer action.",
       "Prefrontal catecholamine enhancement sharpens attention and impulse control.",
       "The agent's formulation and half-life determine practical coverage.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 17 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 17 hours. See mechanism and prescriber sections.",
     halfLife: "About 17 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
@@ -97,7 +97,7 @@ export const guanfacine: Drug = {
         label: "produces",
       },
     ],
-    caption: "Modulating noradrenergic signalling at its receptor — a mechanism-driven route to symptom control.",
+    caption: "Modulating noradrenergic signalling at its receptor: a mechanism-driven route to symptom control.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Norepinephrine (NE)"],
@@ -164,7 +164,7 @@ export const guanfacine: Drug = {
       name: "Rebound hypertension on abrupt withdrawal",
       frequency: "common",
       severity: "severe",
-      description: "Class signature — taper always.",
+      description: "Class signature: taper always.",
       management: "Never stop abruptly.",
     },
   ],
@@ -221,41 +221,41 @@ export const guanfacine: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Guanfacine is a refined version of a mild blood-pressure medicine that calms the brain's alarm system: approved as a once-daily non-stimulant for ADHD, giving round-the-clock help for overactivity and impulsivity with less sleepiness than its older cousin clonidine. As with that cousin, it must never be stopped suddenly.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Guanfacine builds over weeks — do not judge it in the first days.",
+    "Benefit from Guanfacine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
     "The refined cousin: alpha-2A selectivity (~15×) + longer half-life = less sedation/hypotension than clonidine with smoother 24-h cover.",
-    "Stimulant + guanfacine ER is a guideline-recognised combination — each covers the other's blind spots.",
+    "Stimulant + guanfacine ER is a guideline-recognised combination: each covers the other's blind spots.",
     "Taper rule identical to clonidine: rebound hypertension is a class property.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Guanfacine: Guanfacine selectively agonises alpha-2A receptors, damping noradrenergic locus coeruleus firing — clonidine's mechanism with more selectivity and longer action.",
-        "Uses of Guanfacine: ADHD — ER monotherapy or adjunct (ages 6-17); Hypertension (IR); Tics (adjunct)",
-        "Alpha-2A-SELECTIVE agonist — longer half-life (17 h).",
+        "Mechanism of Guanfacine: Guanfacine selectively agonises alpha-2A receptors, damping noradrenergic locus coeruleus firing; clonidine's mechanism with more selectivity and longer action.",
+        "Uses of Guanfacine: ADHD. ER monotherapy or adjunct (ages 6-17); Hypertension (IR); Tics (adjunct)",
+        "Alpha-2A-SELECTIVE agonist: longer half-life (17 h).",
         "ER FDA-approved for ADHD 6-17 (mono + adjunct).",
       ],
       practical: [
-        "Prescribe Guanfacine for adhd — er monotherapy or adjunct (ages 6-17) with dose, timing, and duration.",
+        "Prescribe Guanfacine for adhd: er monotherapy or adjunct (ages 6-17) with dose, timing, and duration.",
         "Outline the monitoring plan: Heart rate and blood pressure (Baseline, every visit); Sedation and function (Every visit)",
       ],
       longAnswer: [
-        "Guanfacine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Alpha-2A-SELECTIVE agonist — longer half-life (17 h).",
+        "Guanfacine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Alpha-2A-SELECTIVE agonist: longer half-life (17 h).",
         "ER FDA-approved for ADHD 6-17 (mono + adjunct).",
       ],
     },
     neetPg: {
       highYield: [
-        "Alpha-2A-SELECTIVE agonist — longer half-life (17 h).",
+        "Alpha-2A-SELECTIVE agonist: longer half-life (17 h).",
         "ER FDA-approved for ADHD 6-17 (mono + adjunct).",
         "Less sedation/hypotension than clonidine.",
-        "Same rebound-hypertension-on-withdrawal danger — taper.",
+        "Same rebound-hypertension-on-withdrawal danger: taper.",
         "Weight-banded ER titration to 1-7 mg/day.",
       ],
       pyqConcepts: [
@@ -266,13 +266,13 @@ export const guanfacine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Guanfacine develops rebound hypertension on abrupt withdrawal — next best step?",
+        "A patient on Guanfacine develops rebound hypertension on abrupt withdrawal: next best step?",
         "When to choose Guanfacine over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: Central alpha-2A receptors (agonist — 15× more alpha-2A selective than clonidine)",
+        "Primary target: Central alpha-2A receptors (agonist, 15× more alpha-2A selective than clonidine)",
         "Most common side effects: Sedation and somnolence, Dry mouth, Bradycardia and hypotension",
         "Key contraindication: known hypersensitivity",
       ],
@@ -280,32 +280,32 @@ export const guanfacine: Drug = {
     psychiatryResidency: {
       advancedPearls: [
         "The refined cousin: alpha-2A selectivity (~15×) + longer half-life = less sedation/hypotension than clonidine with smoother 24-h cover.",
-        "Stimulant + guanfacine ER is a guideline-recognised combination — each covers the other's blind spots.",
+        "Stimulant + guanfacine ER is a guideline-recognised combination: each covers the other's blind spots.",
         "Taper rule identical to clonidine: rebound hypertension is a class property.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Alpha-2A-SELECTIVE agonist — longer half-life (17 h).",
+    "Alpha-2A-SELECTIVE agonist: longer half-life (17 h).",
     "ER FDA-approved for ADHD 6-17 (mono + adjunct).",
     "Less sedation/hypotension than clonidine.",
-    "Same rebound-hypertension-on-withdrawal danger — taper.",
+    "Same rebound-hypertension-on-withdrawal danger: taper.",
     "Weight-banded ER titration to 1-7 mg/day.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — adhd — er monotherapy or adjunct (ages 6-17)",
-      presentation: "A patient presenting with adhd — er monotherapy or adjunct (ages 6-17), started on Guanfacine.",
-      history: "A adult patient presents with a adhd — er monotherapy or adjunct (ages 6-17) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with adhd — er monotherapy or adjunct (ages 6-17); physical examination and baseline investigations are unremarkable.",
-      diagnosis: "ADHD — ER monotherapy or adjunct (ages 6-17). Differentials are considered and excluded clinically.",
+      title: "First presentation: adhd; er monotherapy or adjunct (ages 6-17)",
+      presentation: "A patient presenting with adhd: er monotherapy or adjunct (ages 6-17), started on Guanfacine.",
+      history: "A adult patient presents with a adhd: er monotherapy or adjunct (ages 6-17) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with adhd: er monotherapy or adjunct (ages 6-17); physical examination and baseline investigations are unremarkable.",
+      diagnosis: "ADHD. ER monotherapy or adjunct (ages 6-17). Differentials are considered and excluded clinically.",
       rationale: "Guanfacine is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Alpha-2 Agonist) with strong evidence in this condition.",
       management: "Started at 1 mg every morning, titrated to 1-7 mg/day (weight-banded) with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Guanfacine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Guanfacine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -314,12 +314,12 @@ export const guanfacine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Alpha-2 Agonist comparison — choosing within the class",
+      title: "Alpha-2 Agonist comparison: choosing within the class",
       primaryDrug: "Guanfacine",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "Central alpha-2A receptors (agonist — 15× more alpha-2A selective than clonidine)",
+          primaryValue: "Central alpha-2A receptors (agonist, 15× more alpha-2A selective than clonidine)",
           comparisons: [
             {
               drug: "Clonidine",
@@ -339,7 +339,7 @@ export const guanfacine: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Weight neutral to reducing — appetite effects common.",
+          primaryValue: "Weight neutral to reducing: appetite effects common.",
           comparisons: [
             {
               drug: "Clonidine",
@@ -359,7 +359,7 @@ export const guanfacine: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The refined alpha-2 agonist — ER-approved for ADHD",
+          primaryValue: "The refined alpha-2 agonist. ER-approved for ADHD",
           comparisons: [
             {
               drug: "Clonidine",
@@ -368,7 +368,7 @@ export const guanfacine: Drug = {
           ],
         },
       ],
-      takeaway: "All alpha-2 agonists share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All alpha-2 agonists share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -377,7 +377,7 @@ export const guanfacine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Guanfacine reaches peak plasma concentration and begins acting at its molecular target (Central alpha-2A receptors (agonist — 15× more alpha-2A selective than clonidine)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Guanfacine reaches peak plasma concentration and begins acting at its molecular target (Central alpha-2A receptors (agonist, 15× more alpha-2A selective than clonidine)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -413,7 +413,7 @@ export const guanfacine: Drug = {
   faqs: [
     {
       question: "How long does Guanfacine take to work?",
-      answer: "Days to 2 weeks.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Days to 2 weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Guanfacine?",
@@ -421,11 +421,11 @@ export const guanfacine: Drug = {
     },
     {
       question: "Can I stop Guanfacine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Guanfacine habit-forming?",
@@ -433,7 +433,7 @@ export const guanfacine: Drug = {
     },
     {
       question: "Can I take Guanfacine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Guanfacine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Guanfacine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -521,13 +521,13 @@ export const guanfacine: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "Central alpha-2A receptors (agonist — 15× more alpha-2A selective than clonidine)",
+      label: "Central alpha-2A receptors (agonist, 15× more alpha-2A selective than clonidine)",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
     },
     {
-      label: "ADHD — ER monotherapy or adjunct (ages 6-17)",
+      label: "ADHD. ER monotherapy or adjunct (ages 6-17)",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -563,7 +563,7 @@ export const guanfacine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Guanfacine",
+      label: "Patient Guide. Guanfacine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -571,13 +571,13 @@ export const guanfacine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "Clonidine's refined cousin — longer-acting alpha-2A selectivity with less sedation.",
-    summary: "Guanfacine is a prescription medicine used to treat adhd — er monotherapy or adjunct (ages 6-17). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "Clonidine's refined cousin: longer-acting alpha-2A selectivity with less sedation.",
+    summary: "Guanfacine is a prescription medicine used to treat adhd: er monotherapy or adjunct (ages 6-17). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Guanfacine is a refined version of a mild blood-pressure medicine that calms the brain's alarm system: approved as a once-daily non-stimulant for ADHD, giving round-the-clock help for overactivity and impulsivity with less sleepiness than its older cousin clonidine. As with that cousin, it must never be stopped suddenly.",
-    sideEffects: "The most common side effects are: sedation and somnolence, dry mouth, bradycardia and hypotension, abdominal pain, nausea, rebound hypertension on abrupt withdrawal. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Rebound hypertension on abrupt withdrawal and Severe hypotension/bradycardia in combination. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline, every visit); sedation and function (every visit). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: sedation and somnolence, dry mouth, bradycardia and hypotension, abdominal pain, nausea, rebound hypertension on abrupt withdrawal. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Rebound hypertension on abrupt withdrawal and Severe hypotension/bradycardia in combination. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline, every visit); sedation and function (every visit). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Beta-blockers and antihypertensives, Strong CYP3A4 inhibitors/inducers. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Beta-blockers and antihypertensives, Strong CYP3A4 inhibitors/inducers. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -601,7 +601,7 @@ export const guanfacine: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -635,13 +635,13 @@ export const guanfacine: Drug = {
         name: "Guanfacine",
         slug: "guanfacine",
         relationship: "This guide",
-        distinguishing: "The refined alpha-2 agonist — ER-approved for ADHD",
+        distinguishing: "The refined alpha-2 agonist. ER-approved for ADHD",
       },
       {
         name: "Clonidine",
         slug: "clonidine",
         relationship: "Same class (Alpha-2 Agonist)",
-        distinguishing: "The 24-hour ADHD/tic adjunct — sedating but non-stimulant",
+        distinguishing: "The 24-hour ADHD/tic adjunct: sedating but non-stimulant",
       },
     ],
   },
@@ -789,12 +789,12 @@ export const guanfacine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Guanfacine in two sentences.",
-      answer: "Guanfacine selectively agonises alpha-2A receptors, damping noradrenergic locus coeruleus firing — clonidine's mechanism with more selectivity and longer action. Net effect: Catecholamine and wake-system enhancement with the agent's characteristic profile.",
+      answer: "Guanfacine selectively agonises alpha-2A receptors, damping noradrenergic locus coeruleus firing: clonidine's mechanism with more selectivity and longer action. Net effect: Catecholamine and wake-system enhancement with the agent's characteristic profile.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Guanfacine.",
-      answer: "ADHD — ER monotherapy or adjunct (ages 6-17), Hypertension (IR), Tics (adjunct). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "ADHD. ER monotherapy or adjunct (ages 6-17), Hypertension (IR), Tics (adjunct). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -885,7 +885,7 @@ export const guanfacine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -930,7 +930,7 @@ export const guanfacine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Guanfacine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Guanfacine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -946,7 +946,7 @@ export const guanfacine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Guanfacine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Guanfacine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -989,7 +989,7 @@ export const guanfacine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Guanfacine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Guanfacine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -999,7 +999,7 @@ export const guanfacine: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Weight neutral to reducing — appetite effects common.",
+    weightGain: "Weight neutral to reducing: appetite effects common.",
     sedation: "Not sedating.",
     dosing: [
       {
@@ -1013,7 +1013,7 @@ export const guanfacine: Drug = {
     dosageForms: ["ER tablets 1-4 mg", "IR tablets 1, 2 mg"],
     dosingTips: ["Morning ER dosing.", "Weight-banded titration per label.", "Taper on stopping."],
     overdose: [
-      "Overdose with Guanfacine is managed supportively — no specific antidote.",
+      "Overdose with Guanfacine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Guanfacine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1054,13 +1054,13 @@ export const guanfacine: Drug = {
     ],
     pearls: [
       "The refined cousin: alpha-2A selectivity (~15×) + longer half-life = less sedation/hypotension than clonidine with smoother 24-h cover.",
-      "Stimulant + guanfacine ER is a guideline-recognised combination — each covers the other's blind spots.",
+      "Stimulant + guanfacine ER is a guideline-recognised combination: each covers the other's blind spots.",
       "Taper rule identical to clonidine: rebound hypertension is a class property.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

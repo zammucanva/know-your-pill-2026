@@ -23,14 +23,14 @@ export const selegiline: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antidepressants", "MAOIs", "Selegiline"],
   /* ---- Hero / summary ---- */
-  tagline: "The MAO-B-selective that became an antidepressant patch — Parkinson's drug by day, depression patch at dose.",
-  summary: "Selegiline is the MAO-B-SELECTIVE inhibitor: at low doses (Parkinson's adjunct) it spares MAO-A and needs no tyramine diet; at antidepressant doses (oral ≥ 20 mg) selectivity is lost and full MAOI governance applies — until the TRANSDERMAL PATCH arrived: transdermal selegiline reaches the brain with minimal gut MAO-A inhibition, delivering antidepressant effect WITHOUT the tyramine diet (at 6 mg/24 h).",
+  tagline: "The MAO-B-selective that became an antidepressant patch. Parkinson's drug by day, depression patch at dose.",
+  summary: "Selegiline is the MAO-B-SELECTIVE inhibitor: at low doses (Parkinson's adjunct) it spares MAO-A and needs no tyramine diet; at antidepressant doses (oral ≥ 20 mg) selectivity is lost and full MAOI governance applies: until the TRANSDERMAL PATCH arrived: transdermal selegiline reaches the brain with minimal gut MAO-A inhibition, delivering antidepressant effect WITHOUT the tyramine diet (at 6 mg/24 h).",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Selegiline — from its molecular target (MAO-B (selective inhibition at low dose); MAO-A+B at antidepressant oral doses; patch = CNS-selective) to clinical effect.",
+    "Explain the mechanism of action of Selegiline, from its molecular target (MAO-B (selective inhibition at low dose); MAO-A+B at antidepressant oral doses; patch = CNS-selective) to clinical effect.",
     "List the FDA-approved and off-label uses of Selegiline.",
     "Predict the common and serious side effects of Selegiline from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Selegiline.",
@@ -38,15 +38,15 @@ export const selegiline: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Selegiline selectively inhibits MAO-B at low doses (dopamine-sparing Parkinson's pharmacology); at antidepressant doses it inhibits both enzymes — except the transdermal route, which delivers CNS selectivity without gut MAO-A blockade.",
+    summary: "Selegiline selectively inhibits MAO-B at low doses (dopamine-sparing Parkinson's pharmacology); at antidepressant doses it inhibits both enzymes: except the transdermal route, which delivers CNS selectivity without gut MAO-A blockade.",
     molecularTarget: "MAO-B (selective inhibition at low dose); MAO-A+B at antidepressant oral doses; patch = CNS-selective",
-    effect: "Monoamine oxidase inhibition raising synaptic monoamines — the most powerful monoamine-enhancing mechanism in psychiatry.",
+    effect: "Monoamine oxidase inhibition raising synaptic monoamines: the most powerful monoamine-enhancing mechanism in psychiatry.",
     steps: [
-      "Selegiline selectively inhibits MAO-B at low doses (dopamine-sparing Parkinson's pharmacology); at antidepressant doses it inhibits both enzymes — except the transdermal route, which delivers CNS selectivity without gut MAO-A blockade.",
+      "Selegiline selectively inhibits MAO-B at low doses (dopamine-sparing Parkinson's pharmacology); at antidepressant doses it inhibits both enzymes: except the transdermal route, which delivers CNS selectivity without gut MAO-A blockade.",
       "MAO inhibition raises intracellular and synaptic serotonin, noradrenaline, and dopamine.",
-      "The therapeutic effect — like every antidepressant — requires weeks of downstream adaptation; the tyramine and drug interactions are immediate.",
+      "The therapeutic effect (like every antidepressant) requires weeks of downstream adaptation; the tyramine and drug interactions are immediate.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life Short plasma (~10 h); MAO-B inhibition lasts ~1-2 weeks (irreversible). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life Short plasma (~10 h); MAO-B inhibition lasts ~1-2 weeks (irreversible). See mechanism and prescriber sections.",
     halfLife: "Short plasma (~10 h); MAO-B inhibition lasts ~1-2 weeks (irreversible).",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -98,7 +98,7 @@ export const selegiline: Drug = {
         label: "drives",
       },
     ],
-    caption: "Blocking enzymatic degradation raises all three monoamines simultaneously — powerful, but the same enzyme in the gut protects against dietary tyramine (hence the cheese reaction).",
+    caption: "Blocking enzymatic degradation raises all three monoamines simultaneously: powerful, but the same enzyme in the gut protects against dietary tyramine (hence the cheese reaction).",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Serotonin (5-HT)", "Norepinephrine (NE)", "Dopamine (DA)"],
@@ -110,7 +110,7 @@ export const selegiline: Drug = {
     {
       name: "Major depressive disorder (transdermal patch)",
       status: "fda-approved",
-      description: "The only MAOI without the tyramine diet — the Emsam patch's achievement (6 mg/24 h).",
+      description: "The only MAOI without the tyramine diet: the Emsam patch's achievement (6 mg/24 h).",
     },
     {
       name: "Parkinson's disease — adjunct to levodopa (low-dose oral)",
@@ -132,7 +132,7 @@ export const selegiline: Drug = {
     {
       name: "Serotonergic antidepressants (SSRIs, SNRIs, TCAs, tramadol, triptans, linezolid, methylene blue)",
       severity: "absolute",
-      rationale: "Potentially fatal serotonin syndrome — the 14-day washout rule in both directions (5 weeks for fluoxetine).",
+      rationale: "Potentially fatal serotonin syndrome: the 14-day washout rule in both directions (5 weeks for fluoxetine).",
     },
     {
       name: "Sympathomimetics (OTC decongestants, amphetamines, cocaine)",
@@ -142,7 +142,7 @@ export const selegiline: Drug = {
     {
       name: "Meperidine (pethidine) and dextromethorphan",
       severity: "absolute",
-      rationale: "Serotonin syndrome — the classic anaesthetic and cough-syrup dangers.",
+      rationale: "Serotonin syndrome: the classic anaesthetic and cough-syrup dangers.",
     },
   ],
   blackBoxWarnings: [
@@ -164,7 +164,7 @@ export const selegiline: Drug = {
       name: "Insomnia and activation",
       frequency: "common",
       severity: "moderate",
-      description: "MAO-B dopaminergic alerting — amphetamine metabolites contribute.",
+      description: "MAO-B dopaminergic alerting: amphetamine metabolites contribute.",
       management: "Morning patch application.",
     },
     {
@@ -194,14 +194,14 @@ export const selegiline: Drug = {
       name: "Serotonin syndrome (all routes — serotonergic drugs)",
       frequency: "uncommon",
       severity: "life-threatening",
-      description: "The washout rules apply at ALL antidepressant doses — the diet relaxes, the drug rules do not.",
+      description: "The washout rules apply at ALL antidepressant doses: the diet relaxes, the drug rules do not.",
       management: "14-day washouts.",
     },
     {
       name: "Non-selective shift at oral ≥ 20 mg",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Oral antidepressant dosing loses MAO-B selectivity — full MAOI rules.",
+      description: "Oral antidepressant dosing loses MAO-B selectivity: full MAOI rules.",
       management: "Route-and-dose-based governance.",
     },
   ],
@@ -210,7 +210,7 @@ export const selegiline: Drug = {
     {
       parameter: "Blood pressure (standing and supine)",
       frequency: "Baseline and during titration; home BP for tyramine symptoms",
-      rationale: "Hypertensive crisis and orthostasis — both directions.",
+      rationale: "Hypertensive crisis and orthostasis, both directions.",
     },
     {
       parameter: "Tyramine-diet adherence",
@@ -227,13 +227,13 @@ export const selegiline: Drug = {
     {
       drug: "Serotonergic antidepressants (SSRIs, SNRIs, TCAs, tramadol, triptans, linezolid, methylene blue)",
       severity: "contraindicated",
-      mechanism: "Potentially fatal serotonin syndrome — the 14-day washout rule in both directions (5 weeks for fluoxetine).",
+      mechanism: "Potentially fatal serotonin syndrome: the 14-day washout rule in both directions (5 weeks for fluoxetine).",
       action: "Absolute washout discipline.",
     },
     {
       drug: "Tyramine-rich foods (aged cheese, cured meats, yeast extracts, tap beer, soy sauce, overripe fruit)",
       severity: "major",
-      mechanism: "Hypertensive crisis ('cheese reaction') — tyramine displaces noradrenaline stores.",
+      mechanism: "Hypertensive crisis ('cheese reaction'): tyramine displaces noradrenaline stores.",
       action: "Tyramine-restricted diet education.",
     },
     {
@@ -245,44 +245,44 @@ export const selegiline: Drug = {
     {
       drug: "Meperidine (pethidine) and dextromethorphan",
       severity: "contraindicated",
-      mechanism: "Serotonin syndrome — the classic anaesthetic and cough-syrup dangers.",
+      mechanism: "Serotonin syndrome: the classic anaesthetic and cough-syrup dangers.",
       action: "Medical alert documentation.",
     },
     {
       drug: "Antihypertensives",
       severity: "moderate",
-      mechanism: "Additive hypotension — MAOIs themselves lower BP.",
+      mechanism: "Additive hypotension. MAOIs themselves lower BP.",
       action: "Monitor; adjust.",
     },
   ],
   pregnancy: {
     legacyCategory: "C (variable)",
     summary: "MAOIs are avoided in pregnancy where alternatives exist; specialist individualised decisions only.",
-    lactation: "Avoid — infant effects possible.",
+    lactation: "Avoid: infant effects possible.",
   },
   renalAdjustment: "Standard caution.",
   hepaticAdjustment: "Reduce dose in hepatic impairment.",
   /* ---- Education ---- */
-  patientExplanation: "This is a monoamine oxidase inhibitor — the oldest and one of the most powerful families of antidepressants, used especially when other medicines have failed. It permanently switches off the enzyme that recycles the brain's mood chemicals. Because the same enzyme also protects the body against certain foods and medicines, taking it requires following a diet sheet (avoiding aged cheese, cured meats, and tap beer) and never mixing certain medicines — rules that keep a very effective treatment safe.",
+  patientExplanation: "This is a monoamine oxidase inhibitor: the oldest and one of the most powerful families of antidepressants, used especially when other medicines have failed. It permanently switches off the enzyme that recycles the brain's mood chemicals. Because the same enzyme also protects the body against certain foods and medicines, taking it requires following a diet sheet (avoiding aged cheese, cured meats, and tap beer) and never mixing certain medicines: rules that keep a very effective treatment safe.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Selegiline builds over weeks — do not judge it in the first days.",
+    "Benefit from Selegiline builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The patch's pharmacokinetic magic: transdermal selegiline bypasses first-pass gut MAO-A inhibition — antidepressant brain levels with dietary freedom (at 6 mg).",
+    "The patch's pharmacokinetic magic: transdermal selegiline bypasses first-pass gut MAO-A inhibition; antidepressant brain levels with dietary freedom (at 6 mg).",
     "The dose-diet staircase: oral 5 mg (no rules) → patch 6 mg (no diet) → patch 9-12 mg (diet cautions return) → oral 20 mg+ (full MAOI rules).",
-    "The amphetamine footnote: selegiline metabolises partly to l-amphetamine/l-methamphetamine — the alerting texture and the occasional false-positive urine screen.",
-    "The Parkinson's-depression bridge: one molecule, two CNS careers — MAO-B dopaminergic protection (Parkinson's) and MAO-A-B monoamine elevation (depression).",
-    "The washout honesty: even diet-free patch patients follow the SSRI washout rules — reversibility of DIET, not of DRUG rules.",
+    "The amphetamine footnote: selegiline metabolises partly to l-amphetamine/l-methamphetamine; the alerting texture and the occasional false-positive urine screen.",
+    "The Parkinson's-depression bridge: one molecule, two CNS careers. MAO-B dopaminergic protection (Parkinson's) and MAO-A-B monoamine elevation (depression).",
+    "The washout honesty: even diet-free patch patients follow the SSRI washout rules; reversibility of DIET, not of DRUG rules.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Selegiline: Selegiline selectively inhibits MAO-B at low doses (dopamine-sparing Parkinson's pharmacology); at antidepressant doses it inhibits both enzymes — except the transdermal route, which delivers CNS selectivity without gut MAO-A blockade.",
-        "Uses of Selegiline: Major depressive disorder (transdermal patch); Parkinson's disease — adjunct to levodopa (low-dose oral); Treatment-resistant depression (patch at higher doses)",
+        "Mechanism of Selegiline: Selegiline selectively inhibits MAO-B at low doses (dopamine-sparing Parkinson's pharmacology); at antidepressant doses it inhibits both enzymes: except the transdermal route, which delivers CNS selectivity without gut MAO-A blockade.",
+        "Uses of Selegiline: Major depressive disorder (transdermal patch); Parkinson's disease: adjunct to levodopa (low-dose oral); Treatment-resistant depression (patch at higher doses)",
         "Mechanism: MAO-B-SELECTIVE at low doses; non-selective at oral antidepressant doses; transdermal = CNS-selective.",
         "The EMSAM PATCH (6 mg/24 h): the ONLY MAOI without the tyramine diet.",
       ],
@@ -291,7 +291,7 @@ export const selegiline: Drug = {
         "Outline the monitoring plan: Blood pressure (standing and supine) (Baseline and during titration; home BP for tyramine symptoms); Tyramine-diet adherence (Every review (irreversible MAOIs)); Mood and suicidality (Early weeks)",
       ],
       longAnswer: [
-        "Selegiline: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Selegiline: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: MAO-B-SELECTIVE at low doses; non-selective at oral antidepressant doses; transdermal = CNS-selective.",
         "The EMSAM PATCH (6 mg/24 h): the ONLY MAOI without the tyramine diet.",
       ],
@@ -300,7 +300,7 @@ export const selegiline: Drug = {
       highYield: [
         "Mechanism: MAO-B-SELECTIVE at low doses; non-selective at oral antidepressant doses; transdermal = CNS-selective.",
         "The EMSAM PATCH (6 mg/24 h): the ONLY MAOI without the tyramine diet.",
-        "Parkinson's adjunct (5 mg bd oral) — the origin indication.",
+        "Parkinson's adjunct (5 mg bd oral): the origin indication.",
         "Metabolites include l-amphetamine/l-methamphetamine (alerting + urine-screen caveat).",
         "Serotonergic washout rules apply at ALL antidepressant doses.",
         "Diet cautions return at patch 9-12 mg and oral ≥ 20 mg.",
@@ -313,7 +313,7 @@ export const selegiline: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Selegiline develops hypertensive crisis (oral high-dose; patch ≥ 9 mg with tyramine) — next best step?",
+        "A patient on Selegiline develops hypertensive crisis (oral high-dose; patch ≥ 9 mg with tyramine): next best step?",
         "When to choose Selegiline over alternatives in its class.",
       ],
     },
@@ -326,10 +326,10 @@ export const selegiline: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The patch's pharmacokinetic magic: transdermal selegiline bypasses first-pass gut MAO-A inhibition — antidepressant brain levels with dietary freedom (at 6 mg).",
+        "The patch's pharmacokinetic magic: transdermal selegiline bypasses first-pass gut MAO-A inhibition; antidepressant brain levels with dietary freedom (at 6 mg).",
         "The dose-diet staircase: oral 5 mg (no rules) → patch 6 mg (no diet) → patch 9-12 mg (diet cautions return) → oral 20 mg+ (full MAOI rules).",
-        "The amphetamine footnote: selegiline metabolises partly to l-amphetamine/l-methamphetamine — the alerting texture and the occasional false-positive urine screen.",
-        "The Parkinson's-depression bridge: one molecule, two CNS careers — MAO-B dopaminergic protection (Parkinson's) and MAO-A-B monoamine elevation (depression).",
+        "The amphetamine footnote: selegiline metabolises partly to l-amphetamine/l-methamphetamine; the alerting texture and the occasional false-positive urine screen.",
+        "The Parkinson's-depression bridge: one molecule, two CNS careers. MAO-B dopaminergic protection (Parkinson's) and MAO-A-B monoamine elevation (depression).",
       ],
     },
   },
@@ -337,7 +337,7 @@ export const selegiline: Drug = {
   highYieldSummary: [
     "Mechanism: MAO-B-SELECTIVE at low doses; non-selective at oral antidepressant doses; transdermal = CNS-selective.",
     "The EMSAM PATCH (6 mg/24 h): the ONLY MAOI without the tyramine diet.",
-    "Parkinson's adjunct (5 mg bd oral) — the origin indication.",
+    "Parkinson's adjunct (5 mg bd oral): the origin indication.",
     "Metabolites include l-amphetamine/l-methamphetamine (alerting + urine-screen caveat).",
     "Serotonergic washout rules apply at ALL antidepressant doses.",
     "Diet cautions return at patch 9-12 mg and oral ≥ 20 mg.",
@@ -345,7 +345,7 @@ export const selegiline: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — major depressive disorder (transdermal patch)",
+      title: "First presentation: major depressive disorder (transdermal patch)",
       presentation: "A patient presenting with major depressive disorder (transdermal patch), started on Selegiline.",
       history: "A adult patient presents with a major depressive disorder (transdermal patch) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with major depressive disorder (transdermal patch); physical examination and baseline investigations are unremarkable.",
@@ -354,7 +354,7 @@ export const selegiline: Drug = {
       management: "Started at 6 mg/24 h patch daily, titrated to 6-12 mg/24 h with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Selegiline takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Selegiline takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -363,7 +363,7 @@ export const selegiline: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "MAOI comparison — choosing within the class",
+      title: "MAOI comparison: choosing within the class",
       primaryDrug: "Selegiline",
       rows: [
         {
@@ -412,7 +412,7 @@ export const selegiline: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Weight gain common — the MAOI story.",
+          primaryValue: "Weight gain common: the MAOI story.",
           comparisons: [
             {
               drug: "Phenelzine",
@@ -477,7 +477,7 @@ export const selegiline: Drug = {
           ],
         },
       ],
-      takeaway: "All maois share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All maois share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -486,7 +486,7 @@ export const selegiline: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Selegiline reaches peak plasma concentration and begins acting at its molecular target (MAO-B (selective inhibition at low dose); MAO-A+B at antidepressant oral doses; patch = CNS-selective). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Selegiline reaches peak plasma concentration and begins acting at its molecular target (MAO-B (selective inhibition at low dose); MAO-A+B at antidepressant oral doses; patch = CNS-selective). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -522,7 +522,7 @@ export const selegiline: Drug = {
   faqs: [
     {
       question: "How long does Selegiline take to work?",
-      answer: "Antidepressant effect 2-6 weeks; interactions are immediate from the first dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Antidepressant effect 2-6 weeks; interactions are immediate from the first dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Selegiline?",
@@ -530,11 +530,11 @@ export const selegiline: Drug = {
     },
     {
       question: "Can I stop Selegiline suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Selegiline habit-forming?",
@@ -542,7 +542,7 @@ export const selegiline: Drug = {
     },
     {
       question: "Can I take Selegiline during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Selegiline may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Selegiline may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -666,7 +666,7 @@ export const selegiline: Drug = {
       note: "Key indication",
     },
     {
-      label: "Parkinson's disease — adjunct to levodopa (low-dose oral)",
+      label: "Parkinson's disease: adjunct to levodopa (low-dose oral)",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -684,7 +684,7 @@ export const selegiline: Drug = {
       note: "Important safety issue",
     },
     {
-      label: "Serotonin syndrome (all routes — serotonergic drugs)",
+      label: "Serotonin syndrome (all routes, serotonergic drugs)",
       type: "side-effect",
       href: "#side-effects",
       note: "Important safety issue",
@@ -696,7 +696,7 @@ export const selegiline: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Selegiline",
+      label: "Patient Guide. Selegiline",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -704,13 +704,13 @@ export const selegiline: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The MAO-B-selective that became an antidepressant patch — Parkinson's drug by day, depression patch at dose.",
-    summary: "Selegiline is a prescription medicine used to treat major depressive disorder (transdermal patch). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "This is a monoamine oxidase inhibitor — the oldest and one of the most powerful families of antidepressants, used especially when other medicines have failed. It permanently switches off the enzyme that recycles the brain's mood chemicals. Because the same enzyme also protects the body against certain foods and medicines, taking it requires following a diet sheet (avoiding aged cheese, cured meats, and tap beer) and never mixing certain medicines — rules that keep a very effective treatment safe.",
-    sideEffects: "The most common side effects are: application-site reactions (patch), insomnia and activation, dry mouth and dizziness, orthostatic hypotension. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hypertensive crisis (oral high-dose; patch ≥ 9 mg with tyramine) and Serotonin syndrome (all routes — serotonergic drugs). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: blood pressure (standing and supine) (baseline and during titration; home bp for tyramine symptoms); tyramine-diet adherence (every review (irreversible maois)); mood and suicidality (early weeks). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The MAO-B-selective that became an antidepressant patch. Parkinson's drug by day, depression patch at dose.",
+    summary: "Selegiline is a prescription medicine used to treat major depressive disorder (transdermal patch). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "This is a monoamine oxidase inhibitor: the oldest and one of the most powerful families of antidepressants, used especially when other medicines have failed. It permanently switches off the enzyme that recycles the brain's mood chemicals. Because the same enzyme also protects the body against certain foods and medicines, taking it requires following a diet sheet (avoiding aged cheese, cured meats, and tap beer) and never mixing certain medicines: rules that keep a very effective treatment safe.",
+    sideEffects: "The most common side effects are: application-site reactions (patch), insomnia and activation, dry mouth and dizziness, orthostatic hypotension. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hypertensive crisis (oral high-dose; patch ≥ 9 mg with tyramine) and Serotonin syndrome (all routes: serotonergic drugs). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: blood pressure (standing and supine) (baseline and during titration; home bp for tyramine symptoms); tyramine-diet adherence (every review (irreversible maois)); mood and suicidality (early weeks). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Serotonergic antidepressants (SSRIs, SNRIs, TCAs, tramadol, triptans, linezolid, methylene blue), Tyramine-rich foods (aged cheese, cured meats, yeast extracts, tap beer, soy sauce, overripe fruit), Sympathomimetics (OTC decongestants, amphetamines, cocaine), Meperidine (pethidine) and dextromethorphan. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Serotonergic antidepressants (SSRIs, SNRIs, TCAs, tramadol, triptans, linezolid, methylene blue), Tyramine-rich foods (aged cheese, cured meats, yeast extracts, tap beer, soy sauce, overripe fruit), Sympathomimetics (OTC decongestants, amphetamines, cocaine), Meperidine (pethidine) and dextromethorphan. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -729,7 +729,7 @@ export const selegiline: Drug = {
     ],
     typicalDoses: "Parkinson's 5 mg bd oral; depression patch 6-12 mg/24 h.",
     prescribingScenarios: [
-      "Parkinson's clinics — the common Indian exposure.",
+      "Parkinson's clinics: the common Indian exposure.",
       "Psychiatry patch use rare/imported.",
     ],
     availability: {
@@ -784,25 +784,25 @@ export const selegiline: Drug = {
         name: "Phenelzine",
         slug: "phenelzine",
         relationship: "Same class (MAOI)",
-        distinguishing: "The atypical-depression legend — MAOI pharmacology's flagship",
+        distinguishing: "The atypical-depression legend. MAOI pharmacology's flagship",
       },
       {
         name: "Isocarboxazid",
         slug: "isocarboxazid",
         relationship: "Same class (MAOI)",
-        distinguishing: "The quiet hydrazine — legacy MAOI continuity",
+        distinguishing: "The quiet hydrazine: legacy MAOI continuity",
       },
       {
         name: "Moclobemide",
         slug: "moclobemide",
         relationship: "Same class (MAOI)",
-        distinguishing: "The RIMA — MAOI mechanism with the diet relaxed",
+        distinguishing: "The RIMA. MAOI mechanism with the diet relaxed",
       },
       {
         name: "Tranylcypromine",
         slug: "tranylcypromine",
         relationship: "Same class (MAOI)",
-        distinguishing: "The activating MAOI — anergic treatment-resistant depression",
+        distinguishing: "The activating MAOI: anergic treatment-resistant depression",
       },
     ],
   },
@@ -950,12 +950,12 @@ export const selegiline: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Selegiline in two sentences.",
-      answer: "Selegiline selectively inhibits MAO-B at low doses (dopamine-sparing Parkinson's pharmacology); at antidepressant doses it inhibits both enzymes — except the transdermal route, which delivers CNS selectivity without gut MAO-A blockade. Net effect: Monoamine oxidase inhibition raising synaptic monoamines — the most powerful monoamine-enhancing mechanism in psychiatry.",
+      answer: "Selegiline selectively inhibits MAO-B at low doses (dopamine-sparing Parkinson's pharmacology); at antidepressant doses it inhibits both enzymes: except the transdermal route, which delivers CNS selectivity without gut MAO-A blockade. Net effect: Monoamine oxidase inhibition raising synaptic monoamines; the most powerful monoamine-enhancing mechanism in psychiatry.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Selegiline.",
-      answer: "Major depressive disorder (transdermal patch), Parkinson's disease — adjunct to levodopa (low-dose oral), Treatment-resistant depression (patch at higher doses). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Major depressive disorder (transdermal patch), Parkinson's disease: adjunct to levodopa (low-dose oral), Treatment-resistant depression (patch at higher doses). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -970,7 +970,7 @@ export const selegiline: Drug = {
     },
     {
       question: "Share one clinical pearl about Selegiline that separates safe prescribers from unsafe ones.",
-      answer: "The patch's pharmacokinetic magic: transdermal selegiline bypasses first-pass gut MAO-A inhibition — antidepressant brain levels with dietary freedom (at 6 mg).",
+      answer: "The patch's pharmacokinetic magic: transdermal selegiline bypasses first-pass gut MAO-A inhibition; antidepressant brain levels with dietary freedom (at 6 mg).",
       topic: "Clinical Pearls",
     },
   ],
@@ -1046,7 +1046,7 @@ export const selegiline: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1091,7 +1091,7 @@ export const selegiline: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Selegiline works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Selegiline works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1107,7 +1107,7 @@ export const selegiline: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Selegiline safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Selegiline safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1152,7 +1152,7 @@ export const selegiline: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Selegiline follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Selegiline follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1162,7 +1162,7 @@ export const selegiline: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Weight gain common — the MAOI story.",
+    weightGain: "Weight gain common: the MAOI story.",
     sedation: "Variable (agent-specific).",
     dosing: [
       {
@@ -1187,7 +1187,7 @@ export const selegiline: Drug = {
       "14-day washout rules in both directions.",
     ],
     overdose: [
-      "Overdose with Selegiline is managed supportively — no specific antidote.",
+      "Overdose with Selegiline is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Selegiline is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1221,23 +1221,23 @@ export const selegiline: Drug = {
       },
     ],
     potentialAdvantages: [
-      "Efficacy in treatment-resistant depression — among the most powerful antidepressants.",
+      "Efficacy in treatment-resistant depression, among the most powerful antidepressants.",
       "Atypical depression niche.",
       "Panic/social-anxiety historic efficacy.",
     ],
     potentialDisadvantages: ["Diet and drug-interaction discipline.", "Hypertensive crisis risk.", "Weight gain and sexual dysfunction.", "Washout logistics."],
     primaryTargetSymptoms: ["Treatment-resistant depression", "Atypical depression"],
     pearls: [
-      "The patch's pharmacokinetic magic: transdermal selegiline bypasses first-pass gut MAO-A inhibition — antidepressant brain levels with dietary freedom (at 6 mg).",
+      "The patch's pharmacokinetic magic: transdermal selegiline bypasses first-pass gut MAO-A inhibition; antidepressant brain levels with dietary freedom (at 6 mg).",
       "The dose-diet staircase: oral 5 mg (no rules) → patch 6 mg (no diet) → patch 9-12 mg (diet cautions return) → oral 20 mg+ (full MAOI rules).",
-      "The amphetamine footnote: selegiline metabolises partly to l-amphetamine/l-methamphetamine — the alerting texture and the occasional false-positive urine screen.",
-      "The Parkinson's-depression bridge: one molecule, two CNS careers — MAO-B dopaminergic protection (Parkinson's) and MAO-A-B monoamine elevation (depression).",
-      "The washout honesty: even diet-free patch patients follow the SSRI washout rules — reversibility of DIET, not of DRUG rules.",
+      "The amphetamine footnote: selegiline metabolises partly to l-amphetamine/l-methamphetamine; the alerting texture and the occasional false-positive urine screen.",
+      "The Parkinson's-depression bridge: one molecule, two CNS careers. MAO-B dopaminergic protection (Parkinson's) and MAO-A-B monoamine elevation (depression).",
+      "The washout honesty: even diet-free patch patients follow the SSRI washout rules; reversibility of DIET, not of DRUG rules.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

@@ -10,7 +10,7 @@ export const paroxetinePatientGuide: PatientGuide = {
   slug: "paroxetine",
 
   classInPlainWords:
-    "Paroxetine is an SSRI (selective serotonin reuptake inhibitor) — an older type that works well but tends to cause more side effects and is the hardest of all SSRIs to stop.",
+    "Paroxetine is an SSRI (selective serotonin reuptake inhibitor). An older type that works well but tends to cause more side effects and is the hardest of all SSRIs to stop.",
 
   whatIsThis: paroxetine.patientMode.tagline,
 
@@ -71,7 +71,7 @@ export const paroxetinePatientGuide: PatientGuide = {
   },
 
   whenNotice:
-    "Some early changes — sleep, appetite, energy — can happen within 1–2 weeks, but clearer mood benefit typically takes 4–6 weeks for depression. For anxiety disorders, PTSD, and social anxiety, full effect may take 8–12 weeks. Don't stop early just because you don't feel better yet.",
+    "Some early changes (sleep, appetite, energy) can happen within 1–2 weeks, but clearer mood benefit typically takes 4–6 weeks for depression. For anxiety disorders, PTSD, and social anxiety, full effect may take 8–12 weeks. Don't stop early just because you don't feel better yet.",
 
   timelineShort: "4–6 weeks for depression; 8–12 for anxiety",
 
@@ -80,17 +80,17 @@ export const paroxetinePatientGuide: PatientGuide = {
   commonSideEffects: {
     intro: paroxetine.patientMode.sideEffects,
     list: [
-      "Sleepiness — paroxetine is the most sedating SSRI, so take it at bedtime",
+      "Sleepiness: paroxetine is the most sedating SSRI, so take it at bedtime",
       "Dry mouth, constipation, blurred vision, or trouble passing urine",
-      "Weight gain — more than with most other SSRIs",
+      "Weight gain: more than with most other SSRIs",
       "Feeling sick (nausea) or an upset stomach",
       "Dizziness or light-headedness",
       "Sweating, especially at night",
       "Headache",
       "Feeling weak or tired",
-      "Sexual side effects — the highest of any SSRI, affecting up to half of people",
+      "Sexual side effects: the highest of any SSRI, affecting up to half of people",
     ],
-    note: "If you gain more than 5% of your starting weight, or daytime sleepiness is a problem, talk to your doctor — a different medicine may suit you better.",
+    note: "If you gain more than 5% of your starting weight, or daytime sleepiness is a problem, talk to your doctor: a different medicine may suit you better.",
   },
 
   importantSideEffects: {
@@ -100,28 +100,28 @@ export const paroxetinePatientGuide: PatientGuide = {
       {
         name: "Severe withdrawal when stopped too quickly (discontinuation syndrome)",
         whatItMeans:
-          "Paroxetine leaves the body quickly, so missing even one or two doses can trigger withdrawal within 24–48 hours — dizziness, 'brain zaps', nausea, irritability, vivid dreams, and insomnia. It is the hardest of all SSRIs to stop.",
+          "Paroxetine leaves the body quickly, so missing even one or two doses can trigger withdrawal within 24–48 hours: dizziness, 'brain zaps', nausea, irritability, vivid dreams, and insomnia. It is the hardest of all SSRIs to stop.",
         whatToDo:
-          "Never stop or skip doses on your own. Your doctor will taper the dose very slowly — over months, not weeks. If withdrawal symptoms appear, contact your doctor before the next dose change.",
+          "Never stop or skip doses on your own. Your doctor will taper the dose very slowly: over months, not weeks. If withdrawal symptoms appear, contact your doctor before the next dose change.",
       },
       {
         name: "Harm to an unborn baby (pregnancy risk)",
         whatItMeans:
           "Paroxetine can harm the developing baby, especially in the first three months, and is linked to a higher risk of heart defects.",
         whatToDo:
-          "Use reliable contraception while taking it. If you think you might be pregnant, contact your doctor immediately — but do not stop the medicine on your own.",
+          "Use reliable contraception while taking it. If you think you might be pregnant, contact your doctor immediately, but do not stop the medicine on your own.",
       },
       {
         name: "Tamoxifen not working (tamoxifen interaction)",
         whatItMeans:
           "Tamoxifen is a breast-cancer medicine that needs a liver enzyme to work. Paroxetine strongly blocks that enzyme and can reduce tamoxifen's cancer-fighting effect.",
         whatToDo:
-          "If you take tamoxifen, never take paroxetine — ask your doctor for a different antidepressant. This applies even to the low 7.5 mg hot-flush dose.",
+          "If you take tamoxifen, never take paroxetine. Ask your doctor for a different antidepressant. This applies even to the low 7.5 mg hot-flush dose.",
       },
       {
         name: "Serotonin syndrome",
         whatItMeans:
-          "A rare but serious reaction caused by too much serotonin activity — usually when combined with another medicine that affects serotonin.",
+          "A rare but serious reaction caused by too much serotonin activity: usually when combined with another medicine that affects serotonin.",
         whatToDo:
           "Get emergency help straight away if you have a high fever with confusion, sweating, shaking, muscle twitching or stiffness, or a fast heartbeat.",
       },
@@ -137,53 +137,53 @@ export const paroxetinePatientGuide: PatientGuide = {
         whatItMeans:
           "In the first month or two, antidepressants can occasionally make mood worse instead of better. Paroxetine is not approved for people under 18.",
         whatToDo:
-          "Contact your doctor immediately — do not wait — if you feel more agitated, irritable, anxious, or have any new thoughts of harming yourself.",
+          "Contact your doctor immediately (do not wait) if you feel more agitated, irritable, anxious, or have any new thoughts of harming yourself.",
       },
     ],
   },
 
   tellYourDoctor: [
-    "If you are a woman who could become pregnant, or if you are pregnant — paroxetine is generally not safe in pregnancy.",
-    "If you take tamoxifen for breast cancer — this combination must never happen.",
-    "All other medicines you take — paroxetine blocks a liver enzyme (CYP2D6) that processes many common drugs, including tramadol, codeine, metoprolol, and other psychiatric medicines.",
+    "If you are a woman who could become pregnant, or if you are pregnant: paroxetine is generally not safe in pregnancy.",
+    "If you take tamoxifen for breast cancer: this combination must never happen.",
+    "All other medicines you take: paroxetine blocks a liver enzyme (CYP2D6) that processes many common drugs, including tramadol, codeine, metoprolol, and other psychiatric medicines.",
     "Any herbal products, especially St John's Wort.",
     "If you have trouble passing urine, an enlarged prostate, glaucoma, or constipation.",
-    "If you are over 65 — your doctor may check your blood sodium and watch your fall risk.",
+    "If you are over 65: your doctor may check your blood sodium and watch your fall risk.",
   ],
 
   interactions: paroxetine.patientMode.interactions,
 
   missedDose:
-    "Because paroxetine leaves the body quickly, missing even one or two doses can trigger withdrawal symptoms. Take the missed dose as soon as you remember, unless it is within 8 hours of your next dose — in that case, skip it and continue normally. Do not double up. If you often miss doses, talk to your doctor — a longer-acting antidepressant may suit you better.",
+    "Because paroxetine leaves the body quickly, missing even one or two doses can trigger withdrawal symptoms. Take the missed dose as soon as you remember, unless it is within 8 hours of your next dose. In that case, skip it and continue normally. Do not double up. If you often miss doses, talk to your doctor: a longer-acting antidepressant may suit you better.",
 
   reviewFlags: [
-    "MEDICAL REVIEW REQUIRED — missedDose: the 8-hour window and the 'a longer-acting antidepressant may suit you better' suggestion are not present in canonical paroxetine content (the 8-hour rule is canonical for several other SSRIs, and fluoxetine substitution is described only for tapers). Verify both elements against the approved source before treating them as verified.",
+    "MEDICAL REVIEW REQUIRED: missedDose: the 8-hour window and the 'a longer-acting antidepressant may suit you better' suggestion are not present in canonical paroxetine content (the 8-hour rule is canonical for several other SSRIs, and fluoxetine substitution is described only for tapers). Verify both elements against the approved source before treating them as verified.",
   ],
 
   stopping:
-    "Never stop paroxetine abruptly. It is the hardest of all SSRIs to stop because its effects wear off quickly between doses. Your doctor will reduce the dose very slowly — for long-term users this is usually over several months, often by no more than 10% every 2–4 weeks. Stopping suddenly can cause severe withdrawal: dizziness, 'brain zaps', nausea, irritability, vivid dreams, and insomnia within a day or two. If symptoms appear, the dose goes back up and then comes down more slowly.",
+    "Never stop paroxetine abruptly. It is the hardest of all SSRIs to stop because its effects wear off quickly between doses. Your doctor will reduce the dose very slowly, for long-term users this is usually over several months, often by no more than 10% every 2–4 weeks. Stopping suddenly can cause severe withdrawal: dizziness, 'brain zaps', nausea, irritability, vivid dreams, and insomnia within a day or two. If symptoms appear, the dose goes back up and then comes down more slowly.",
 
   monitoring: paroxetine.patientMode.monitoring,
 
   urgentHelp: {
     intro:
-      "Get urgent medical help — do not wait to see if it passes — if any of these happen:",
+      "Get urgent medical help (do not wait to see if it passes) if any of these happen:",
     signs: [
       "A high fever with confusion, sweating, shaking, muscle twitching or stiffness, and a fast heartbeat (possible serotonin syndrome).",
       "New or worsening thoughts of harming yourself, especially in the first month.",
       "Severe dizziness, confusion, or a seizure.",
-      "You are (or think you are) pregnant while taking paroxetine — contact your doctor urgently to arrange a supervised switch, but do not stop on your own.",
+      "You are (or think you are) pregnant while taking paroxetine: contact your doctor urgently to arrange a supervised switch, but do not stop on your own.",
     ],
     action:
       "If you think someone is in immediate danger, call your local emergency number straight away. KYP lists India-specific helplines in the Emergency Help section at the bottom of every page.",
   },
 
   keyReminders: [
-    "Never stop suddenly or skip doses — paroxetine is the hardest SSRI to stop, and withdrawal can start within a day of a missed dose.",
-    "Take it at bedtime — it is the most sedating SSRI.",
+    "Never stop suddenly or skip doses: paroxetine is the hardest SSRI to stop, and withdrawal can start within a day of a missed dose.",
+    "Take it at bedtime: it is the most sedating SSRI.",
     "Never combine it with tamoxifen (breast-cancer medicine).",
-    "Avoid it in pregnancy — use reliable contraception and tell your doctor at once if you might be pregnant.",
-    "Full benefit takes 4–6 weeks for depression, 8–12 weeks for anxiety — don't stop early.",
-    "Weight gain and sexual side effects are more common than with other SSRIs — both are worth raising with your doctor.",
+    "Avoid it in pregnancy: use reliable contraception and tell your doctor at once if you might be pregnant.",
+    "Full benefit takes 4–6 weeks for depression, 8–12 weeks for anxiety. Don't stop early.",
+    "Weight gain and sexual side effects are more common than with other SSRIs, both are worth raising with your doctor.",
   ],
 };

@@ -23,14 +23,14 @@ export const naltrexoneBupropion: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Substance Use Treatments", "Weight & Addiction Combinations", "Naltrexone-Bupropion"],
   /* ---- Hero / summary ---- */
-  tagline: "The reward-blocker + NDRI combination — appetite and addiction circuitry in two tablets.",
-  summary: "Naltrexone-bupropion (Contrave/Mysimbrand) combines low-dose naltrexone (opioid reward blockade) with bupropion (NDRI appetite and reward modulation) for weight management: the combination reduces hunger and food reward. It carries bupropion's seizure and BP warnings plus naltrexone's opioid rules — and a small antidepressant-adjacent mood benefit from the bupropion half.",
+  tagline: "The reward-blocker + NDRI combination: appetite and addiction circuitry in two tablets.",
+  summary: "Naltrexone-bupropion (Contrave/Mysimbrand) combines low-dose naltrexone (opioid reward blockade) with bupropion (NDRI appetite and reward modulation) for weight management: the combination reduces hunger and food reward. It carries bupropion's seizure and BP warnings plus naltrexone's opioid rules, and a small antidepressant-adjacent mood benefit from the bupropion half.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Naltrexone-Bupropion — from its molecular target (Mu-opioid blockade (naltrexone) + dopamine-norepinephrine reuptake inhibition (bupropion)) to clinical effect.",
+    "Explain the mechanism of action of Naltrexone-Bupropion, from its molecular target (Mu-opioid blockade (naltrexone) + dopamine-norepinephrine reuptake inhibition (bupropion)) to clinical effect.",
     "List the FDA-approved and off-label uses of Naltrexone-Bupropion.",
     "Predict the common and serious side effects of Naltrexone-Bupropion from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Naltrexone-Bupropion.",
@@ -38,16 +38,16 @@ export const naltrexoneBupropion: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Naltrexone blunts the food-reward opioid arc; bupropion (an NDRI) reduces appetite in the hypothalamus and lifts the reward-mood substrate — a hunger-and-reward combination.",
+    summary: "Naltrexone blunts the food-reward opioid arc; bupropion (an NDRI) reduces appetite in the hypothalamus and lifts the reward-mood substrate: a hunger-and-reward combination.",
     molecularTarget: "Mu-opioid blockade (naltrexone) + dopamine-norepinephrine reuptake inhibition (bupropion)",
     effect: "Modulation of the described target with the agent's clinical effect.",
     steps: [
-      "Naltrexone blunts the food-reward opioid arc; bupropion (an NDRI) reduces appetite in the hypothalamus and lifts the reward-mood substrate — a hunger-and-reward combination.",
+      "Naltrexone blunts the food-reward opioid arc; bupropion (an NDRI) reduces appetite in the hypothalamus and lifts the reward-mood substrate: a hunger-and-reward combination.",
       "The target engagement produces the clinical effect described.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life Bupropion ~21 h; naltrexone shorter — combination dosing twice daily. — see mechanism and prescriber sections.",
-    halfLife: "Bupropion ~21 h; naltrexone shorter — combination dosing twice daily.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life Bupropion ~21 h; naltrexone shorter: combination dosing twice daily. See mechanism and prescriber sections.",
+    halfLife: "Bupropion ~21 h; naltrexone shorter: combination dosing twice daily.",
     metabolism: "Hepatic.",
     excretion: "Renal.",
   },
@@ -97,7 +97,7 @@ export const naltrexoneBupropion: Drug = {
         label: "supports",
       },
     ],
-    caption: "Pharmacotherapy for substance use disorders blunts the reinforcement cycle — medication opens a window; psychosocial treatment walks the patient through it.",
+    caption: "Pharmacotherapy for substance use disorders blunts the reinforcement cycle: medication opens a window; psychosocial treatment walks the patient through it.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -130,12 +130,12 @@ export const naltrexoneBupropion: Drug = {
     {
       name: "MAOIs",
       severity: "absolute",
-      rationale: "Bupropion rule — hypertensive crisis.",
+      rationale: "Bupropion rule: hypertensive crisis.",
     },
     {
       name: "Other bupropion products",
       severity: "absolute",
-      rationale: "Duplicate dosing — seizure risk.",
+      rationale: "Duplicate dosing: seizure risk.",
     },
   ],
   blackBoxWarnings: [
@@ -150,7 +150,7 @@ export const naltrexoneBupropion: Drug = {
       name: "Nausea and constipation",
       frequency: "very-common",
       severity: "moderate",
-      description: "The most common adverse effects — naltrexone's GI effects dominate.",
+      description: "The most common adverse effects: naltrexone's GI effects dominate.",
       management: "Titration week; take with food.",
     },
     {
@@ -180,14 +180,14 @@ export const naltrexoneBupropion: Drug = {
       name: "Seizures (bupropion)",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Bupropion dose-related threshold lowering — the combination carries bupropion's warning set.",
+      description: "Bupropion dose-related threshold lowering: the combination carries bupropion's warning set.",
       management: "Avoid in seizure history/eating disorders; 450 mg ceiling discipline.",
     },
     {
       name: "Blood pressure and heart rate rise",
       frequency: "common",
       severity: "moderate",
-      description: "Bupropion's noradrenergic effect — the paradox of a weight drug raising BP.",
+      description: "Bupropion's noradrenergic effect: the paradox of a weight drug raising BP.",
       management: "Monitor BP; caution in uncontrolled hypertension.",
     },
     {
@@ -201,7 +201,7 @@ export const naltrexoneBupropion: Drug = {
       name: "Precipitated opioid withdrawal",
       frequency: "common",
       severity: "severe",
-      description: "The naltrexone rule — blocks and precipitates.",
+      description: "The naltrexone rule: blocks and precipitates.",
       management: "Opioid-free verification; opioid analgesia planning.",
     },
     {
@@ -240,13 +240,13 @@ export const naltrexoneBupropion: Drug = {
     {
       drug: "MAOIs",
       severity: "contraindicated",
-      mechanism: "Bupropion rule — hypertensive crisis.",
+      mechanism: "Bupropion rule: hypertensive crisis.",
       action: "14-day washout.",
     },
     {
       drug: "Other bupropion products",
       severity: "contraindicated",
-      mechanism: "Duplicate dosing — seizure risk.",
+      mechanism: "Duplicate dosing: seizure risk.",
       action: "Never combine with Wellbutrin/Zyban.",
     },
     {
@@ -258,33 +258,33 @@ export const naltrexoneBupropion: Drug = {
   ],
   pregnancy: {
     legacyCategory: "X for weight use",
-    summary: "Contraindicated in pregnancy for weight indications — weight loss is not pursued in pregnancy; bupropion's separate pregnancy psychiatry use differs.",
-    lactation: "Both components pass into milk — avoid.",
+    summary: "Contraindicated in pregnancy for weight indications: weight loss is not pursued in pregnancy; bupropion's separate pregnancy psychiatry use differs.",
+    lactation: "Both components pass into milk: avoid.",
   },
   renalAdjustment: "Reduce dose in renal impairment; contraindicated in severe (bupropion accumulation).",
   hepaticAdjustment: "Reduce dose in hepatic impairment; contraindicated in severe.",
   /* ---- Education ---- */
   patientExplanation: "This combination tablet pairs a medicine that blocks food's reward signals (naltrexone) with one that reduces appetite and lifts mood slightly (bupropion). It is prescribed for longer-term weight management alongside diet and exercise. Its warnings come from both halves: it must not be taken with opioid painkillers, it can raise blood pressure, and it can rarely cause seizures.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Naltrexone-Bupropion builds over weeks — do not judge it in the first days.",
+    "Benefit from Naltrexone-Bupropion builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The logic of the pair: bupropion drives appetite down (NDRI in the hypothalamus) while naltrexone blunts the food-reward arc — hunger AND reward addressed.",
-    "The titration week is a tolerability necessity — full-dose nausea is the dropout reason.",
-    "BP paradox: a weight drug that raises blood pressure — monitor and avoid in uncontrolled hypertension.",
+    "The logic of the pair: bupropion drives appetite down (NDRI in the hypothalamus) while naltrexone blunts the food-reward arc; hunger AND reward addressed.",
+    "The titration week is a tolerability necessity: full-dose nausea is the dropout reason.",
+    "BP paradox: a weight drug that raises blood pressure. Monitor and avoid in uncontrolled hypertension.",
     "Bupropion's full warning set travels with the combination: seizures, eating disorders, MAOI rules.",
     "Opioid rules: no opioid analgesia while aboard (naltrexone blocks it); post-course lost tolerance applies.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Naltrexone-Bupropion: Naltrexone blunts the food-reward opioid arc; bupropion (an NDRI) reduces appetite in the hypothalamus and lifts the reward-mood substrate — a hunger-and-reward combination.",
+        "Mechanism of Naltrexone-Bupropion: Naltrexone blunts the food-reward opioid arc; bupropion (an NDRI) reduces appetite in the hypothalamus and lifts the reward-mood substrate: a hunger-and-reward combination.",
         "Uses of Naltrexone-Bupropion: Weight management (chronic weight management with diet + exercise)",
-        "Mechanism: naltrexone (mu-blockade) + bupropion (NDRI) — food reward and appetite.",
+        "Mechanism: naltrexone (mu-blockade) + bupropion (NDRI); food reward and appetite.",
         "Indication: chronic weight management (BMI ≥ 30, or ≥ 27 + comorbidity).",
       ],
       practical: [
@@ -292,14 +292,14 @@ export const naltrexoneBupropion: Drug = {
         "Outline the monitoring plan: Blood pressure and heart rate (Baseline and regularly); Weight trajectory (Monthly initially); Mood review (Early weeks)",
       ],
       longAnswer: [
-        "Naltrexone-Bupropion: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: naltrexone (mu-blockade) + bupropion (NDRI) — food reward and appetite.",
+        "Naltrexone-Bupropion: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: naltrexone (mu-blockade) + bupropion (NDRI); food reward and appetite.",
         "Indication: chronic weight management (BMI ≥ 30, or ≥ 27 + comorbidity).",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: naltrexone (mu-blockade) + bupropion (NDRI) — food reward and appetite.",
+        "Mechanism: naltrexone (mu-blockade) + bupropion (NDRI); food reward and appetite.",
         "Indication: chronic weight management (BMI ≥ 30, or ≥ 27 + comorbidity).",
         "Dose: weekly titration to 2 tablets twice daily (32/360 mg).",
         "Bupropion warnings aboard: seizures, BP, MAOI, eating disorders.",
@@ -314,7 +314,7 @@ export const naltrexoneBupropion: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Naltrexone-Bupropion develops seizures (bupropion) — next best step?",
+        "A patient on Naltrexone-Bupropion develops seizures (bupropion): next best step?",
         "When to choose Naltrexone-Bupropion over alternatives in its class.",
       ],
     },
@@ -327,16 +327,16 @@ export const naltrexoneBupropion: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The logic of the pair: bupropion drives appetite down (NDRI in the hypothalamus) while naltrexone blunts the food-reward arc — hunger AND reward addressed.",
-        "The titration week is a tolerability necessity — full-dose nausea is the dropout reason.",
-        "BP paradox: a weight drug that raises blood pressure — monitor and avoid in uncontrolled hypertension.",
+        "The logic of the pair: bupropion drives appetite down (NDRI in the hypothalamus) while naltrexone blunts the food-reward arc; hunger AND reward addressed.",
+        "The titration week is a tolerability necessity: full-dose nausea is the dropout reason.",
+        "BP paradox: a weight drug that raises blood pressure. Monitor and avoid in uncontrolled hypertension.",
         "Bupropion's full warning set travels with the combination: seizures, eating disorders, MAOI rules.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: naltrexone (mu-blockade) + bupropion (NDRI) — food reward and appetite.",
+    "Mechanism: naltrexone (mu-blockade) + bupropion (NDRI); food reward and appetite.",
     "Indication: chronic weight management (BMI ≥ 30, or ≥ 27 + comorbidity).",
     "Dose: weekly titration to 2 tablets twice daily (32/360 mg).",
     "Bupropion warnings aboard: seizures, BP, MAOI, eating disorders.",
@@ -346,7 +346,7 @@ export const naltrexoneBupropion: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — weight management (chronic weight management with diet + exercise)",
+      title: "First presentation: weight management (chronic weight management with diet + exercise)",
       presentation: "A patient presenting with weight management (chronic weight management with diet + exercise), started on Naltrexone-Bupropion.",
       history: "A adult patient presents with a weight management (chronic weight management with diet + exercise) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with weight management (chronic weight management with diet + exercise); physical examination and baseline investigations are unremarkable.",
@@ -355,7 +355,7 @@ export const naltrexoneBupropion: Drug = {
       management: "Started at One tablet (8/90 mg) daily × 1 week, titrated to 32/360 mg per day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Naltrexone-Bupropion takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Naltrexone-Bupropion takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -364,7 +364,7 @@ export const naltrexoneBupropion: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "SUD Treatment comparison — choosing within the class",
+      title: "SUD Treatment comparison: choosing within the class",
       primaryDrug: "Naltrexone-Bupropion",
       rows: [
         {
@@ -391,7 +391,7 @@ export const naltrexoneBupropion: Drug = {
         },
         {
           attribute: "Half-life",
-          primaryValue: "Bupropion ~21 h; naltrexone shorter — combination dosing twice daily.",
+          primaryValue: "Bupropion ~21 h; naltrexone shorter: combination dosing twice daily.",
           comparisons: [
             {
               drug: "Acamprosate",
@@ -478,7 +478,7 @@ export const naltrexoneBupropion: Drug = {
           ],
         },
       ],
-      takeaway: "All weight & addiction combinations share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All weight & addiction combinations share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -487,7 +487,7 @@ export const naltrexoneBupropion: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Naltrexone-Bupropion reaches peak plasma concentration and begins acting at its molecular target (Mu-opioid blockade (naltrexone) + dopamine-norepinephrine reuptake inhibition (bupropion)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Naltrexone-Bupropion reaches peak plasma concentration and begins acting at its molecular target (Mu-opioid blockade (naltrexone) + dopamine-norepinephrine reuptake inhibition (bupropion)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -523,7 +523,7 @@ export const naltrexoneBupropion: Drug = {
   faqs: [
     {
       question: "How long does Naltrexone-Bupropion take to work?",
-      answer: "Appetite effect within weeks; weight trajectory over months.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Appetite effect within weeks; weight trajectory over months.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Naltrexone-Bupropion?",
@@ -531,11 +531,11 @@ export const naltrexoneBupropion: Drug = {
     },
     {
       question: "Can I stop Naltrexone-Bupropion suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Naltrexone-Bupropion habit-forming?",
@@ -543,7 +543,7 @@ export const naltrexoneBupropion: Drug = {
     },
     {
       question: "Can I take Naltrexone-Bupropion during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Naltrexone-Bupropion may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Naltrexone-Bupropion may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -683,7 +683,7 @@ export const naltrexoneBupropion: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Naltrexone-Bupropion",
+      label: "Patient Guide. Naltrexone-Bupropion",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -691,13 +691,13 @@ export const naltrexoneBupropion: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The reward-blocker + NDRI combination — appetite and addiction circuitry in two tablets.",
-    summary: "Naltrexone-Bupropion is a prescription medicine used to treat weight management (chronic weight management with diet + exercise). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The reward-blocker + NDRI combination: appetite and addiction circuitry in two tablets.",
+    summary: "Naltrexone-Bupropion is a prescription medicine used to treat weight management (chronic weight management with diet + exercise). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "This combination tablet pairs a medicine that blocks food's reward signals (naltrexone) with one that reduces appetite and lifts mood slightly (bupropion). It is prescribed for longer-term weight management alongside diet and exercise. Its warnings come from both halves: it must not be taken with opioid painkillers, it can raise blood pressure, and it can rarely cause seizures.",
-    sideEffects: "The most common side effects are: nausea and constipation, headache and dry mouth, insomnia, constipation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Seizures (bupropion) and Blood pressure and heart rate rise. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: blood pressure and heart rate (baseline and regularly); weight trajectory (monthly initially); mood review (early weeks). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: nausea and constipation, headache and dry mouth, insomnia, constipation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Seizures (bupropion) and Blood pressure and heart rate rise. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: blood pressure and heart rate (baseline and regularly); weight trajectory (monthly initially); mood review (early weeks). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Opioid analgesics, MAOIs, Other bupropion products, CYP2D6 substrates. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Opioid analgesics, MAOIs, Other bupropion products, CYP2D6 substrates. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -721,7 +721,7 @@ export const naltrexoneBupropion: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -761,25 +761,25 @@ export const naltrexoneBupropion: Drug = {
         name: "Acamprosate",
         slug: "acamprosate",
         relationship: "Same class (SUD Treatment)",
-        distinguishing: "The abstinence-protector — for the already-abstinent patient",
+        distinguishing: "The abstinence-protector, for the already-abstinent patient",
       },
       {
         name: "Buprenorphine",
         slug: "buprenorphine",
         relationship: "Same class (SUD Treatment)",
-        distinguishing: "The safety-ceiling maintenance agonist — office-based opioid treatment",
+        distinguishing: "The safety-ceiling maintenance agonist: office-based opioid treatment",
       },
       {
         name: "Disulfiram",
         slug: "disulfiram",
         relationship: "Same class (SUD Treatment)",
-        distinguishing: "The classical aversion deterrent — for the motivated, supervised patient",
+        distinguishing: "The classical aversion deterrent, for the motivated, supervised patient",
       },
       {
         name: "Naltrexone",
         slug: "naltrexone",
         relationship: "Same class (SUD Treatment)",
-        distinguishing: "The pure antagonist — alcohol relapse and opioid blockade",
+        distinguishing: "The pure antagonist: alcohol relapse and opioid blockade",
       },
       {
         name: "Varenicline",
@@ -939,7 +939,7 @@ export const naltrexoneBupropion: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Naltrexone-Bupropion in two sentences.",
-      answer: "Naltrexone blunts the food-reward opioid arc; bupropion (an NDRI) reduces appetite in the hypothalamus and lifts the reward-mood substrate — a hunger-and-reward combination. Net effect: Modulation of the described target with the agent's clinical effect.",
+      answer: "Naltrexone blunts the food-reward opioid arc; bupropion (an NDRI) reduces appetite in the hypothalamus and lifts the reward-mood substrate: a hunger-and-reward combination. Net effect: Modulation of the described target with the agent's clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -949,7 +949,7 @@ export const naltrexoneBupropion: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Naltrexone-Bupropion and how you would manage it.",
-      answer: "Seizures (bupropion): Bupropion dose-related threshold lowering — the combination carries bupropion's warning set. Management: Avoid in seizure history/eating disorders; 450 mg ceiling discipline.",
+      answer: "Seizures (bupropion): Bupropion dose-related threshold lowering; the combination carries bupropion's warning set. Management: Avoid in seizure history/eating disorders; 450 mg ceiling discipline.",
       topic: "Safety",
     },
     {
@@ -959,7 +959,7 @@ export const naltrexoneBupropion: Drug = {
     },
     {
       question: "Share one clinical pearl about Naltrexone-Bupropion that separates safe prescribers from unsafe ones.",
-      answer: "The logic of the pair: bupropion drives appetite down (NDRI in the hypothalamus) while naltrexone blunts the food-reward arc — hunger AND reward addressed.",
+      answer: "The logic of the pair: bupropion drives appetite down (NDRI in the hypothalamus) while naltrexone blunts the food-reward arc; hunger AND reward addressed.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1035,7 +1035,7 @@ export const naltrexoneBupropion: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1080,7 +1080,7 @@ export const naltrexoneBupropion: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Naltrexone-Bupropion works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Naltrexone-Bupropion works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1096,7 +1096,7 @@ export const naltrexoneBupropion: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Naltrexone-Bupropion safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Naltrexone-Bupropion safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1141,7 +1141,7 @@ export const naltrexoneBupropion: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Naltrexone-Bupropion follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Naltrexone-Bupropion follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1172,7 +1172,7 @@ export const naltrexoneBupropion: Drug = {
       "Review the opioid-alert card.",
     ],
     overdose: [
-      "Overdose with Naltrexone-Bupropion is managed supportively — no specific antidote.",
+      "Overdose with Naltrexone-Bupropion is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Naltrexone-Bupropion is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1181,7 +1181,7 @@ export const naltrexoneBupropion: Drug = {
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
     pharmacokinetics: [
-      "Half-life: Bupropion ~21 h; naltrexone shorter — combination dosing twice daily..",
+      "Half-life: Bupropion ~21 h; naltrexone shorter: combination dosing twice daily..",
       "Metabolism: Hepatic..",
     ],
     doNotUse: ["Known hypersensitivity to this agent."],
@@ -1209,9 +1209,9 @@ export const naltrexoneBupropion: Drug = {
     potentialDisadvantages: ["Modest weight loss.", "BP and seizure warnings.", "Opioid analgesia blocked.", "GI adverse effects common."],
     primaryTargetSymptoms: ["Appetite and food reward", "Chronic weight management"],
     pearls: [
-      "The logic of the pair: bupropion drives appetite down (NDRI in the hypothalamus) while naltrexone blunts the food-reward arc — hunger AND reward addressed.",
-      "The titration week is a tolerability necessity — full-dose nausea is the dropout reason.",
-      "BP paradox: a weight drug that raises blood pressure — monitor and avoid in uncontrolled hypertension.",
+      "The logic of the pair: bupropion drives appetite down (NDRI in the hypothalamus) while naltrexone blunts the food-reward arc; hunger AND reward addressed.",
+      "The titration week is a tolerability necessity: full-dose nausea is the dropout reason.",
+      "BP paradox: a weight drug that raises blood pressure. Monitor and avoid in uncontrolled hypertension.",
       "Bupropion's full warning set travels with the combination: seizures, eating disorders, MAOI rules.",
       "Opioid rules: no opioid analgesia while aboard (naltrexone blocks it); post-course lost tolerance applies.",
     ],
@@ -1219,6 +1219,6 @@ export const naltrexoneBupropion: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

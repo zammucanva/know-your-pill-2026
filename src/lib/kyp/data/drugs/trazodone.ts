@@ -23,14 +23,14 @@ export const trazodone: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antidepressants", "Atypical Antidepressants", "Trazodone"],
   /* ---- Hero / summary ---- */
-  tagline: "The antidepressant that became a sleeping pill — SERT blockade by day, alpha-1 and 5-HT2A sedation by night.",
+  tagline: "The antidepressant that became a sleeping pill. SERT blockade by day, alpha-1 and 5-HT2A sedation by night.",
   summary: "Trazodone is a serotonin antagonist and reuptake inhibitor (SARI) whose low-dose sedating profile made it one of the most-prescribed sleep aids in the world: at 25-100 mg it is an antidepressant-class drug used for insomnia (no dependence, no benzodiazepine warnings), while full antidepressant doses (150-400 mg) treat major depression. Alpha-1 blockade produces orthostasis and the rare priapism warning.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Trazodone — from its molecular target (SERT (inhibition) + 5-HT2A/5-HT2C/alpha-1/H1 (antagonism) — SARI class) to clinical effect.",
+    "Explain the mechanism of action of Trazodone (from its molecular target (SERT (inhibition) + 5-HT2A/5-HT2C/alpha-1/H1 (antagonism)) SARI class) to clinical effect.",
     "List the FDA-approved and off-label uses of Trazodone.",
     "Predict the common and serious side effects of Trazodone from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Trazodone.",
@@ -38,15 +38,15 @@ export const trazodone: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Trazodone blocks SERT (serotonin reuptake) while antagonising 5-HT2A, alpha-1, and H1 receptors — the sedation-antagonism profile that defines the SARI class.",
-    molecularTarget: "SERT (inhibition) + 5-HT2A/5-HT2C/alpha-1/H1 (antagonism) — SARI class",
+    summary: "Trazodone blocks SERT (serotonin reuptake) while antagonising 5-HT2A, alpha-1, and H1 receptors. The sedation-antagonism profile that defines the SARI class.",
+    molecularTarget: "SERT (inhibition) + 5-HT2A/5-HT2C/alpha-1/H1 (antagonism). SARI class",
     effect: "Monoaminergic modulation producing the antidepressant effect described.",
     steps: [
-      "Trazodone blocks SERT (serotonin reuptake) while antagonising 5-HT2A, alpha-1, and H1 receptors — the sedation-antagonism profile that defines the SARI class.",
+      "Trazodone blocks SERT (serotonin reuptake) while antagonising 5-HT2A, alpha-1, and H1 receptors. The sedation-antagonism profile that defines the SARI class.",
       "Downstream receptor adaptation over 2-6 weeks translates acute monoamine change into clinical response.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 5-9 hours (parent); active metabolite mCPP longer. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 5-9 hours (parent); active metabolite mCPP longer. See mechanism and prescriber sections.",
     halfLife: "5-9 hours (parent); active metabolite mCPP longer.",
     metabolism: "Hepatic CYP metabolism.",
     excretion: "Renal.",
@@ -109,7 +109,7 @@ export const trazodone: Drug = {
         label: "produces",
       },
     ],
-    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation — the central paradox of antidepressant pharmacology.",
+    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation: the central paradox of antidepressant pharmacology.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Serotonin (5-HT)"],
@@ -126,7 +126,7 @@ export const trazodone: Drug = {
     {
       name: "Insomnia (low dose, off-label)",
       status: "off-label",
-      description: "25-100 mg at night — the most common real-world use: non-benzodiazepine, non-Z-drug hypnotic with no boxed warnings.",
+      description: "25-100 mg at night: the most common real-world use: non-benzodiazepine, non-Z-drug hypnotic with no boxed warnings.",
     },
     {
       name: "Depression with insomnia / anxiety",
@@ -136,7 +136,7 @@ export const trazodone: Drug = {
     {
       name: "Agitation in dementia (selected cases)",
       status: "off-label",
-      description: "Low-dose sedation — a considered alternative in fall-averse elderly.",
+      description: "Low-dose sedation: a considered alternative in fall-averse elderly.",
     },
   ],
   contraindications: [
@@ -170,7 +170,7 @@ export const trazodone: Drug = {
       name: "Orthostatic hypotension",
       frequency: "common",
       severity: "moderate",
-      description: "Alpha-1 blockade — the practical limit in the elderly.",
+      description: "Alpha-1 blockade: the practical limit in the elderly.",
       management: "Rise slowly; dose review.",
     },
     {
@@ -200,14 +200,14 @@ export const trazodone: Drug = {
       name: "Priapism (rare, medical emergency)",
       frequency: "rare",
       severity: "severe",
-      description: "Prolonged painful erection from alpha-1 blockade — the exam-classic warning; urological emergency.",
+      description: "Prolonged painful erection from alpha-1 blockade: the exam-classic warning; urological emergency.",
       management: "Immediate urology; stop the drug.",
     },
     {
       name: "QT prolongation (modest)",
       frequency: "rare",
       severity: "severe",
-      description: "Dose-related — caution with other QT drugs.",
+      description: "Dose-related: caution with other QT drugs.",
       management: "ECG awareness.",
     },
     {
@@ -248,7 +248,7 @@ export const trazodone: Drug = {
     {
       drug: "SSRIs/SNRIs and triptans",
       severity: "major",
-      mechanism: "Additive serotonergic load — serotonin syndrome risk.",
+      mechanism: "Additive serotonergic load: serotonin syndrome risk.",
       action: "Counsel; lowest combinations.",
     },
     {
@@ -276,29 +276,29 @@ export const trazodone: Drug = {
     lactation: "Excreted in milk in small amounts; infant sedation monitoring if used.",
   },
   renalAdjustment: "No major adjustment; standard caution in severe impairment.",
-  hepaticAdjustment: "Reduce dose in hepatic impairment (prefer non-CYP2D6... trazodone is metabolised by 2D6/3A4 — reduce and monitor).",
+  hepaticAdjustment: "Reduce dose in hepatic impairment (prefer non-CYP2D6... trazodone is metabolised by 2D6/3A4. Reduce and monitor).",
   /* ---- Education ---- */
-  patientExplanation: "Trazodone is an older antidepressant that at low dose is widely used as a sleeping tablet: it is not addictive and does not carry the strict warnings of traditional sleeping pills. At higher doses it treats depression itself. Its main side effects are dizziness on standing and morning drowsiness, and — rarely but importantly — men should know to seek emergency help for any persistent painful erection.",
+  patientExplanation: "Trazodone is an older antidepressant that at low dose is widely used as a sleeping tablet: it is not addictive and does not carry the strict warnings of traditional sleeping pills. At higher doses it treats depression itself. Its main side effects are dizziness on standing and morning drowsiness, and (rarely but importantly) men should know to seek emergency help for any persistent painful erection.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Trazodone builds over weeks — do not judge it in the first days.",
+    "Benefit from Trazodone builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The dose-band drug again: 50 mg = sedative, 300 mg = antidepressant — like quetiapine's bands, the pharmacology shifts with dose (5-HT2A/alpha-1 sedation at low dose; SERT blockade dominating at high).",
-    "The safest-seeming hypnotic: no benzodiazepine dependence warnings, no Z-drug boxed warnings — hence its ubiquity as an off-label sleep aid.",
-    "Priapism is the exam classic: alpha-1 blockade in the corpus cavernosum — hours matter for the organ.",
-    "Orthostasis is the real-world limiter in the elderly — falls outweigh its benzo-sparing advantages if unmonitored.",
-    "In depression with insomnia, it is one drug doing two jobs — an elegant single-agent strategy.",
+    "The dose-band drug again: 50 mg = sedative, 300 mg = antidepressant, like quetiapine's bands, the pharmacology shifts with dose (5-HT2A/alpha-1 sedation at low dose; SERT blockade dominating at high).",
+    "The safest-seeming hypnotic: no benzodiazepine dependence warnings, no Z-drug boxed warnings; hence its ubiquity as an off-label sleep aid.",
+    "Priapism is the exam classic: alpha-1 blockade in the corpus cavernosum; hours matter for the organ.",
+    "Orthostasis is the real-world limiter in the elderly: falls outweigh its benzo-sparing advantages if unmonitored.",
+    "In depression with insomnia, it is one drug doing two jobs: an elegant single-agent strategy.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Trazodone: Trazodone blocks SERT (serotonin reuptake) while antagonising 5-HT2A, alpha-1, and H1 receptors — the sedation-antagonism profile that defines the SARI class.",
+        "Mechanism of Trazodone: Trazodone blocks SERT (serotonin reuptake) while antagonising 5-HT2A, alpha-1, and H1 receptors. The sedation-antagonism profile that defines the SARI class.",
         "Uses of Trazodone: Major depressive disorder; Insomnia (low dose, off-label); Depression with insomnia / anxiety; Agitation in dementia (selected cases)",
-        "Mechanism: SARI — SERT inhibition + 5-HT2A/alpha-1/H1 antagonism.",
+        "Mechanism: SARI. SERT inhibition + 5-HT2A/alpha-1/H1 antagonism.",
         "Two dose identities: 25-100 mg for insomnia (off-label); 150-400 mg for depression.",
       ],
       practical: [
@@ -306,14 +306,14 @@ export const trazodone: Drug = {
         "Outline the monitoring plan: Morning sedation and falls (elderly) (Every review); Response at 2-4 weeks (depression dosing) (Scheduled review)",
       ],
       longAnswer: [
-        "Trazodone: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: SARI — SERT inhibition + 5-HT2A/alpha-1/H1 antagonism.",
+        "Trazodone: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: SARI. SERT inhibition + 5-HT2A/alpha-1/H1 antagonism.",
         "Two dose identities: 25-100 mg for insomnia (off-label); 150-400 mg for depression.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: SARI — SERT inhibition + 5-HT2A/alpha-1/H1 antagonism.",
+        "Mechanism: SARI. SERT inhibition + 5-HT2A/alpha-1/H1 antagonism.",
         "Two dose identities: 25-100 mg for insomnia (off-label); 150-400 mg for depression.",
         "The most-prescribed non-benzodiazepine hypnotic (off-label).",
         "Signature warnings: priapism (emergency) and orthostatic hypotension (falls).",
@@ -328,29 +328,29 @@ export const trazodone: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Trazodone develops priapism (rare, medical emergency) — next best step?",
+        "A patient on Trazodone develops priapism (rare, medical emergency): next best step?",
         "When to choose Trazodone over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: SERT (inhibition) + 5-HT2A/5-HT2C/alpha-1/H1 (antagonism) — SARI class",
+        "Primary target: SERT (inhibition) + 5-HT2A/5-HT2C/alpha-1/H1 (antagonism). SARI class",
         "Most common side effects: Sedation, Orthostatic hypotension, Dizziness and dry mouth",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The dose-band drug again: 50 mg = sedative, 300 mg = antidepressant — like quetiapine's bands, the pharmacology shifts with dose (5-HT2A/alpha-1 sedation at low dose; SERT blockade dominating at high).",
-        "The safest-seeming hypnotic: no benzodiazepine dependence warnings, no Z-drug boxed warnings — hence its ubiquity as an off-label sleep aid.",
-        "Priapism is the exam classic: alpha-1 blockade in the corpus cavernosum — hours matter for the organ.",
-        "Orthostasis is the real-world limiter in the elderly — falls outweigh its benzo-sparing advantages if unmonitored.",
+        "The dose-band drug again: 50 mg = sedative, 300 mg = antidepressant, like quetiapine's bands, the pharmacology shifts with dose (5-HT2A/alpha-1 sedation at low dose; SERT blockade dominating at high).",
+        "The safest-seeming hypnotic: no benzodiazepine dependence warnings, no Z-drug boxed warnings; hence its ubiquity as an off-label sleep aid.",
+        "Priapism is the exam classic: alpha-1 blockade in the corpus cavernosum; hours matter for the organ.",
+        "Orthostasis is the real-world limiter in the elderly: falls outweigh its benzo-sparing advantages if unmonitored.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: SARI — SERT inhibition + 5-HT2A/alpha-1/H1 antagonism.",
+    "Mechanism: SARI. SERT inhibition + 5-HT2A/alpha-1/H1 antagonism.",
     "Two dose identities: 25-100 mg for insomnia (off-label); 150-400 mg for depression.",
     "The most-prescribed non-benzodiazepine hypnotic (off-label).",
     "Signature warnings: priapism (emergency) and orthostatic hypotension (falls).",
@@ -361,7 +361,7 @@ export const trazodone: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — major depressive disorder",
+      title: "First presentation: major depressive disorder",
       presentation: "A patient presenting with major depressive disorder, started on Trazodone.",
       history: "A adult patient presents with a major depressive disorder picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with major depressive disorder; physical examination and baseline investigations are unremarkable.",
@@ -370,7 +370,7 @@ export const trazodone: Drug = {
       management: "Started at 25-50 mg at bedtime, titrated to 25-100 mg with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Trazodone takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Trazodone takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -379,12 +379,12 @@ export const trazodone: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "SARI comparison — choosing within the class",
+      title: "SARI comparison: choosing within the class",
       primaryDrug: "Trazodone",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "SERT (inhibition) + 5-HT2A/5-HT2C/alpha-1/H1 (antagonism) — SARI class",
+          primaryValue: "SERT (inhibition) + 5-HT2A/5-HT2C/alpha-1/H1 (antagonism). SARI class",
           comparisons: [
             {
               drug: "Vilazodone",
@@ -472,7 +472,7 @@ export const trazodone: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The antidepressant sleeping pill — insomnia at 50 mg, depression at 300 mg",
+          primaryValue: "The antidepressant sleeping pill: insomnia at 50 mg, depression at 300 mg",
           comparisons: [
             {
               drug: "Vilazodone",
@@ -493,7 +493,7 @@ export const trazodone: Drug = {
           ],
         },
       ],
-      takeaway: "All atypical antidepressants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antidepressants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -502,7 +502,7 @@ export const trazodone: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Trazodone reaches peak plasma concentration and begins acting at its molecular target (SERT (inhibition) + 5-HT2A/5-HT2C/alpha-1/H1 (antagonism) — SARI class). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Trazodone reaches peak plasma concentration and begins acting at its molecular target (SERT (inhibition) + 5-HT2A/5-HT2C/alpha-1/H1 (antagonism). SARI class). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -538,7 +538,7 @@ export const trazodone: Drug = {
   faqs: [
     {
       question: "How long does Trazodone take to work?",
-      answer: "Sedation within the hour (low dose); antidepressant effect 2-4 weeks at full dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Sedation within the hour (low dose); antidepressant effect 2-4 weeks at full dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Trazodone?",
@@ -546,11 +546,11 @@ export const trazodone: Drug = {
     },
     {
       question: "Can I stop Trazodone suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Trazodone habit-forming?",
@@ -558,7 +558,7 @@ export const trazodone: Drug = {
     },
     {
       question: "Can I take Trazodone during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Trazodone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Trazodone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -674,7 +674,7 @@ export const trazodone: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "SERT (inhibition) + 5-HT2A/5-HT2C/alpha-1/H1 (antagonism) — SARI class",
+      label: "SERT (inhibition) + 5-HT2A/5-HT2C/alpha-1/H1 (antagonism). SARI class",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
@@ -716,7 +716,7 @@ export const trazodone: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Trazodone",
+      label: "Patient Guide. Trazodone",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -724,13 +724,13 @@ export const trazodone: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The antidepressant that became a sleeping pill — SERT blockade by day, alpha-1 and 5-HT2A sedation by night.",
-    summary: "Trazodone is a prescription medicine used to treat major depressive disorder. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Trazodone is an older antidepressant that at low dose is widely used as a sleeping tablet: it is not addictive and does not carry the strict warnings of traditional sleeping pills. At higher doses it treats depression itself. Its main side effects are dizziness on standing and morning drowsiness, and — rarely but importantly — men should know to seek emergency help for any persistent painful erection.",
-    sideEffects: "The most common side effects are: sedation, orthostatic hypotension, dizziness and dry mouth, nausea, next-morning grogginess. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Priapism (rare, medical emergency) and QT prolongation (modest). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: morning sedation and falls (elderly) (every review); response at 2-4 weeks (depression dosing) (scheduled review). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The antidepressant that became a sleeping pill. SERT blockade by day, alpha-1 and 5-HT2A sedation by night.",
+    summary: "Trazodone is a prescription medicine used to treat major depressive disorder. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Trazodone is an older antidepressant that at low dose is widely used as a sleeping tablet: it is not addictive and does not carry the strict warnings of traditional sleeping pills. At higher doses it treats depression itself. Its main side effects are dizziness on standing and morning drowsiness, and (rarely but importantly) men should know to seek emergency help for any persistent painful erection.",
+    sideEffects: "The most common side effects are: sedation, orthostatic hypotension, dizziness and dry mouth, nausea, next-morning grogginess. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Priapism (rare, medical emergency) and QT prolongation (modest). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: morning sedation and falls (elderly) (every review); response at 2-4 weeks (depression dosing) (scheduled review). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: MAOIs, SSRIs/SNRIs and triptans, Ketoconazole/ritonavir (3A4 inhibitors), Carbamazepine (inducer). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: MAOIs, SSRIs/SNRIs and triptans, Ketoconazole/ritonavir (3A4 inhibitors), Carbamazepine (inducer). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -750,7 +750,7 @@ export const trazodone: Drug = {
     typicalDoses: "Insomnia 25-50 mg nocte; depression 150-400 mg.",
     prescribingScenarios: [
       "The default non-benzo hypnotic in Indian practice.",
-      "Depression with insomnia — single-agent cover.",
+      "Depression with insomnia: single-agent cover.",
     ],
     availability: {
       governmentHospitals: true,
@@ -798,7 +798,7 @@ export const trazodone: Drug = {
         name: "Trazodone",
         slug: "trazodone",
         relationship: "This guide",
-        distinguishing: "The antidepressant sleeping pill — insomnia at 50 mg, depression at 300 mg",
+        distinguishing: "The antidepressant sleeping pill: insomnia at 50 mg, depression at 300 mg",
       },
       {
         name: "Vilazodone",
@@ -816,7 +816,7 @@ export const trazodone: Drug = {
         name: "Nefazodone",
         slug: "nefazodone",
         relationship: "Same class (SARI)",
-        distinguishing: "The expert-only SARI — withdrawn for hepatotoxicity",
+        distinguishing: "The expert-only SARI: withdrawn for hepatotoxicity",
       },
       {
         name: "Tianeptine",
@@ -970,7 +970,7 @@ export const trazodone: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Trazodone in two sentences.",
-      answer: "Trazodone blocks SERT (serotonin reuptake) while antagonising 5-HT2A, alpha-1, and H1 receptors — the sedation-antagonism profile that defines the SARI class. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
+      answer: "Trazodone blocks SERT (serotonin reuptake) while antagonising 5-HT2A, alpha-1, and H1 receptors. The sedation-antagonism profile that defines the SARI class. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
       topic: "Mechanism",
     },
     {
@@ -980,7 +980,7 @@ export const trazodone: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Trazodone and how you would manage it.",
-      answer: "Priapism (rare, medical emergency): Prolonged painful erection from alpha-1 blockade — the exam-classic warning; urological emergency. Management: Immediate urology; stop the drug.",
+      answer: "Priapism (rare, medical emergency): Prolonged painful erection from alpha-1 blockade; the exam-classic warning; urological emergency. Management: Immediate urology; stop the drug.",
       topic: "Safety",
     },
     {
@@ -990,7 +990,7 @@ export const trazodone: Drug = {
     },
     {
       question: "Share one clinical pearl about Trazodone that separates safe prescribers from unsafe ones.",
-      answer: "The dose-band drug again: 50 mg = sedative, 300 mg = antidepressant — like quetiapine's bands, the pharmacology shifts with dose (5-HT2A/alpha-1 sedation at low dose; SERT blockade dominating at high).",
+      answer: "The dose-band drug again: 50 mg = sedative, 300 mg = antidepressant, like quetiapine's bands, the pharmacology shifts with dose (5-HT2A/alpha-1 sedation at low dose; SERT blockade dominating at high).",
       topic: "Clinical Pearls",
     },
   ],
@@ -1066,7 +1066,7 @@ export const trazodone: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1111,7 +1111,7 @@ export const trazodone: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Trazodone works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Trazodone works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1127,7 +1127,7 @@ export const trazodone: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Trazodone safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Trazodone safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1172,7 +1172,7 @@ export const trazodone: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Trazodone follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Trazodone follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1207,11 +1207,11 @@ export const trazodone: Drug = {
     dosingTips: [
       "Night dosing only for hypnotic use.",
       "Orthostasis teaching in the elderly.",
-      "Titrate depression dosing to 300+ mg — subtherapeutic dosing is the common failure.",
+      "Titrate depression dosing to 300+ mg: subtherapeutic dosing is the common failure.",
       "One drug for depression + insomnia when both are present.",
     ],
     overdose: [
-      "Overdose with Trazodone is managed supportively — no specific antidote.",
+      "Overdose with Trazodone is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Trazodone is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1253,16 +1253,16 @@ export const trazodone: Drug = {
     ],
     primaryTargetSymptoms: ["Insomnia (low dose)", "Major depression with insomnia", "Anxiety within depression"],
     pearls: [
-      "The dose-band drug again: 50 mg = sedative, 300 mg = antidepressant — like quetiapine's bands, the pharmacology shifts with dose (5-HT2A/alpha-1 sedation at low dose; SERT blockade dominating at high).",
-      "The safest-seeming hypnotic: no benzodiazepine dependence warnings, no Z-drug boxed warnings — hence its ubiquity as an off-label sleep aid.",
-      "Priapism is the exam classic: alpha-1 blockade in the corpus cavernosum — hours matter for the organ.",
-      "Orthostasis is the real-world limiter in the elderly — falls outweigh its benzo-sparing advantages if unmonitored.",
-      "In depression with insomnia, it is one drug doing two jobs — an elegant single-agent strategy.",
+      "The dose-band drug again: 50 mg = sedative, 300 mg = antidepressant, like quetiapine's bands, the pharmacology shifts with dose (5-HT2A/alpha-1 sedation at low dose; SERT blockade dominating at high).",
+      "The safest-seeming hypnotic: no benzodiazepine dependence warnings, no Z-drug boxed warnings; hence its ubiquity as an off-label sleep aid.",
+      "Priapism is the exam classic: alpha-1 blockade in the corpus cavernosum; hours matter for the organ.",
+      "Orthostasis is the real-world limiter in the elderly: falls outweigh its benzo-sparing advantages if unmonitored.",
+      "In depression with insomnia, it is one drug doing two jobs: an elegant single-agent strategy.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

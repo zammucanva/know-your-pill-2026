@@ -23,14 +23,14 @@ export const suvorexant: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Sleep Medicines", "Orexin Antagonists", "Suvorexant"],
   /* ---- Hero / summary ---- */
-  tagline: "The orexin-blocker — sleep by turning down the brain's wake switch rather than forcing sedation.",
-  summary: "Suvorexant is the first dual orexin receptor antagonist (DORA): it blocks the orexin/hypocretin system — the neuropeptidergic 'wake switch' — producing sleep onset and maintenance by reducing wake drive physiologically. GABA-free pharmacology means no dependence signal, REM-related adverse effects (sleep paralysis, hypnagogic hallucinations, cataplexy-like weakness) are its signature, and next-day somnolence is its dose-limitation. A modern alternative for both onset and maintenance insomnia.",
+  tagline: "The orexin-blocker: sleep by turning down the brain's wake switch rather than forcing sedation.",
+  summary: "Suvorexant is the first dual orexin receptor antagonist (DORA): it blocks the orexin/hypocretin system (the neuropeptidergic 'wake switch') producing sleep onset and maintenance by reducing wake drive physiologically. GABA-free pharmacology means no dependence signal, REM-related adverse effects (sleep paralysis, hypnagogic hallucinations, cataplexy-like weakness) are its signature, and next-day somnolence is its dose-limitation. A modern alternative for both onset and maintenance insomnia.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Suvorexant — from its molecular target (Orexin OX1 and OX2 receptors (dual antagonist) — the wake-promoting neuropeptide system) to clinical effect.",
+    "Explain the mechanism of action of Suvorexant (from its molecular target (Orexin OX1 and OX2 receptors (dual antagonist)) the wake-promoting neuropeptide system) to clinical effect.",
     "List the FDA-approved and off-label uses of Suvorexant.",
     "Predict the common and serious side effects of Suvorexant from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Suvorexant.",
@@ -38,16 +38,16 @@ export const suvorexant: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Dual orexin receptor antagonist: blocks the orexin/hypocretin wake-promoting system — reducing wake drive instead of enhancing GABA sedation.",
-    molecularTarget: "Orexin OX1 and OX2 receptors (dual antagonist) — the wake-promoting neuropeptide system",
+    summary: "Dual orexin receptor antagonist: blocks the orexin/hypocretin wake-promoting system, reducing wake drive instead of enhancing GABA sedation.",
+    molecularTarget: "Orexin OX1 and OX2 receptors (dual antagonist): the wake-promoting neuropeptide system",
     effect: "Sleep promotion via the described target.",
     steps: [
-      "Suvorexant is the first dual orexin receptor antagonist (DORA): it blocks the orexin/hypocretin system — the neuropeptidergic 'wake switch' — producing sleep onset and maintenance by reducing wake drive physiologically — the mechanism in one line.",
+      "Suvorexant is the first dual orexin receptor antagonist (DORA): it blocks the orexin/hypocretin system (the neuropeptidergic 'wake switch') producing sleep onset and maintenance by reducing wake drive physiologically; the mechanism in one line.",
       "Binding at the described target produces the sleep-promoting effect.",
       "Duration of action follows the half-life: onset agents clear before morning; longer agents add maintenance cover.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 12 hours (long — drives next-day somnolence). — see mechanism and prescriber sections.",
-    halfLife: "About 12 hours (long — drives next-day somnolence).",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 12 hours (long, drives next-day somnolence). See mechanism and prescriber sections.",
+    halfLife: "About 12 hours (long, drives next-day somnolence).",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
   },
@@ -97,14 +97,14 @@ export const suvorexant: Drug = {
         label: "permits",
       },
     ],
-    caption: "Instead of forcing sleep with GABA, orexin antagonists turn down the brain's wake switch — a physiologically targeted route into sleep.",
+    caption: "Instead of forcing sleep with GABA, orexin antagonists turn down the brain's wake switch: a physiologically targeted route into sleep.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
     "Central monoaminergic systems (see mechanism)",
   ],
   receptors: [
-    "Orexin OX1 and OX2 receptors (dual antagonist) — the wake-promoting neuropeptide system",
+    "Orexin OX1 and OX2 receptors (dual antagonist): the wake-promoting neuropeptide system",
   ],
   brainRegionIds: ["prefrontal-cortex"],
   pathwayIds: [],
@@ -125,13 +125,13 @@ export const suvorexant: Drug = {
     {
       name: "Strong CYP3A4 inhibitors",
       severity: "absolute",
-      rationale: "Raise levels markedly — the label contraindication.",
+      rationale: "Raise levels markedly: the label contraindication.",
     },
   ],
   blackBoxWarnings: [
     {
       title: "Complex sleep behaviours",
-      text: "Class-of-hypnotics warning: sleep-walking/driving/eating reported — stop on any event.",
+      text: "Class-of-hypnotics warning: sleep-walking/driving/eating reported; stop on any event.",
     },
     {
       title: "CNS depressant co-administration",
@@ -144,7 +144,7 @@ export const suvorexant: Drug = {
       name: "Next-day somnolence",
       frequency: "common",
       severity: "moderate",
-      description: "The dose-limiting effect — worse at 20 mg and in the elderly.",
+      description: "The dose-limiting effect: worse at 20 mg and in the elderly.",
       management: "Start 10 mg; 7–8 h in bed.",
     },
     {
@@ -167,14 +167,14 @@ export const suvorexant: Drug = {
       name: "Sleep paralysis / hypnagogic hallucinations",
       frequency: "uncommon",
       severity: "moderate",
-      description: "REM-signature effects — frightening but benign; the DORA fingerprint.",
+      description: "REM-signature effects: frightening but benign; the DORA fingerprint.",
       management: "Counsel in advance; usually diminish.",
     },
     {
       name: "Cataplexy-like weakness",
       frequency: "rare",
       severity: "moderate",
-      description: "Orexin is the narcolepsy system — blocking it can blur into narcolepsy-like phenomena in predisposed patients.",
+      description: "Orexin is the narcolepsy system, blocking it can blur into narcolepsy-like phenomena in predisposed patients.",
       management: "Stop if cataplexy-like events occur.",
     },
     {
@@ -188,7 +188,7 @@ export const suvorexant: Drug = {
       name: "Worsening depression/suicidal ideation",
       frequency: "uncommon",
       severity: "severe",
-      description: "Reported in depression trials — monitor mood.",
+      description: "Reported in depression trials: monitor mood.",
       management: "Review; stop if worsening.",
     },
   ],
@@ -202,7 +202,7 @@ export const suvorexant: Drug = {
     {
       parameter: "REM-signature phenomena review",
       frequency: "Every review",
-      rationale: "Sleep paralysis/hallucinations — counsel in advance.",
+      rationale: "Sleep paralysis/hallucinations: counsel in advance.",
     },
   ],
   interactions: [
@@ -215,7 +215,7 @@ export const suvorexant: Drug = {
     {
       drug: "Strong CYP3A4 inhibitors",
       severity: "contraindicated",
-      mechanism: "Raise levels markedly — the label contraindication.",
+      mechanism: "Raise levels markedly: the label contraindication.",
       action: "Avoid.",
     },
     {
@@ -228,49 +228,49 @@ export const suvorexant: Drug = {
   pregnancy: {
     legacyCategory: "C",
     summary: "Limited data; non-pharmacological care first in pregnancy.",
-    lactation: "Unknown — avoid while breastfeeding pending data.",
+    lactation: "Unknown: avoid while breastfeeding pending data.",
   },
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
-  patientExplanation: "Suvorexant helps you sleep by turning down the brain's own 'wake switch' — a natural chemical system called orexin — rather than by force-sedating the brain like older sleeping pills. Some people experience brief sleep paralysis or vivid dream-like images while falling asleep: these are known, harmless effects of this medicine class.",
+  patientExplanation: "Suvorexant helps you sleep by turning down the brain's own 'wake switch' (a natural chemical system called orexin) rather than by force-sedating the brain like older sleeping pills. Some people experience brief sleep paralysis or vivid dream-like images while falling asleep: these are known, harmless effects of this medicine class.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Suvorexant builds over weeks — do not judge it in the first days.",
+    "Benefit from Suvorexant builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "Anti-wake, not pro-sedation: the DORA concept — turning the orexin switch down instead of pushing GABA.",
-    "The REM signatures (sleep paralysis, hypnagogic hallucinations) map onto orexin's role in narcolepsy — pre-counselling turns fright into trivia.",
-    "No dependence signal in trials to date — a candidate for longer-term use alongside ramelteon.",
+    "Anti-wake, not pro-sedation: the DORA concept; turning the orexin switch down instead of pushing GABA.",
+    "The REM signatures (sleep paralysis, hypnagogic hallucinations) map onto orexin's role in narcolepsy: pre-counselling turns fright into trivia.",
+    "No dependence signal in trials to date: a candidate for longer-term use alongside ramelteon.",
     "10 mg start is near-mandatory: next-day somnolence is the dose-limiting effect at 20 mg.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Suvorexant: Dual orexin receptor antagonist: blocks the orexin/hypocretin wake-promoting system — reducing wake drive instead of enhancing GABA sedation.",
-        "Uses of Suvorexant: Insomnia — sleep onset and maintenance",
-        "Mechanism: dual OREXIN receptor antagonist (OX1/OX2) — the first DORA.",
-        "GABA-free — no dependence signal; REM-signature effects (sleep paralysis, hypnagogic hallucinations).",
+        "Mechanism of Suvorexant: Dual orexin receptor antagonist: blocks the orexin/hypocretin wake-promoting system, reducing wake drive instead of enhancing GABA sedation.",
+        "Uses of Suvorexant: Insomnia; sleep onset and maintenance",
+        "Mechanism: dual OREXIN receptor antagonist (OX1/OX2); the first DORA.",
+        "GABA-free: no dependence signal; REM-signature effects (sleep paralysis, hypnagogic hallucinations).",
       ],
       practical: [
-        "Prescribe Suvorexant for insomnia — sleep onset and maintenance with dose, timing, and duration.",
+        "Prescribe Suvorexant for insomnia: sleep onset and maintenance with dose, timing, and duration.",
         "Outline the monitoring plan: Next-day somnolence (Every early review); REM-signature phenomena review (Every review)",
       ],
       longAnswer: [
-        "Suvorexant: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: dual OREXIN receptor antagonist (OX1/OX2) — the first DORA.",
-        "GABA-free — no dependence signal; REM-signature effects (sleep paralysis, hypnagogic hallucinations).",
+        "Suvorexant: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: dual OREXIN receptor antagonist (OX1/OX2); the first DORA.",
+        "GABA-free: no dependence signal; REM-signature effects (sleep paralysis, hypnagogic hallucinations).",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: dual OREXIN receptor antagonist (OX1/OX2) — the first DORA.",
-        "GABA-free — no dependence signal; REM-signature effects (sleep paralysis, hypnagogic hallucinations).",
+        "Mechanism: dual OREXIN receptor antagonist (OX1/OX2); the first DORA.",
+        "GABA-free: no dependence signal; REM-signature effects (sleep paralysis, hypnagogic hallucinations).",
         "Onset AND maintenance insomnia; 10–20 mg (start 10).",
-        "3A4 metabolism — inhibitors contraindicated, inducers lose efficacy.",
+        "3A4 metabolism: inhibitors contraindicated, inducers lose efficacy.",
         "Next-day somnolence is dose-limiting.",
       ],
       pyqConcepts: [
@@ -281,47 +281,47 @@ export const suvorexant: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Suvorexant develops sleep paralysis / hypnagogic hallucinations — next best step?",
+        "A patient on Suvorexant develops sleep paralysis / hypnagogic hallucinations: next best step?",
         "When to choose Suvorexant over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: Orexin OX1 and OX2 receptors (dual antagonist) — the wake-promoting neuropeptide system",
+        "Primary target: Orexin OX1 and OX2 receptors (dual antagonist); the wake-promoting neuropeptide system",
         "Most common side effects: Next-day somnolence, Headache, Abnormal dreams",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "Anti-wake, not pro-sedation: the DORA concept — turning the orexin switch down instead of pushing GABA.",
-        "The REM signatures (sleep paralysis, hypnagogic hallucinations) map onto orexin's role in narcolepsy — pre-counselling turns fright into trivia.",
-        "No dependence signal in trials to date — a candidate for longer-term use alongside ramelteon.",
+        "Anti-wake, not pro-sedation: the DORA concept; turning the orexin switch down instead of pushing GABA.",
+        "The REM signatures (sleep paralysis, hypnagogic hallucinations) map onto orexin's role in narcolepsy: pre-counselling turns fright into trivia.",
+        "No dependence signal in trials to date: a candidate for longer-term use alongside ramelteon.",
         "10 mg start is near-mandatory: next-day somnolence is the dose-limiting effect at 20 mg.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: dual OREXIN receptor antagonist (OX1/OX2) — the first DORA.",
-    "GABA-free — no dependence signal; REM-signature effects (sleep paralysis, hypnagogic hallucinations).",
+    "Mechanism: dual OREXIN receptor antagonist (OX1/OX2); the first DORA.",
+    "GABA-free: no dependence signal; REM-signature effects (sleep paralysis, hypnagogic hallucinations).",
     "Onset AND maintenance insomnia; 10–20 mg (start 10).",
-    "3A4 metabolism — inhibitors contraindicated, inducers lose efficacy.",
+    "3A4 metabolism: inhibitors contraindicated, inducers lose efficacy.",
     "Next-day somnolence is dose-limiting.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — insomnia — sleep onset and maintenance",
-      presentation: "A patient presenting with insomnia — sleep onset and maintenance, started on Suvorexant.",
-      history: "A adult patient presents with a insomnia — sleep onset and maintenance picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with insomnia — sleep onset and maintenance; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Insomnia — sleep onset and maintenance. Differentials are considered and excluded clinically.",
+      title: "First presentation: insomnia; sleep onset and maintenance",
+      presentation: "A patient presenting with insomnia: sleep onset and maintenance, started on Suvorexant.",
+      history: "A adult patient presents with a insomnia: sleep onset and maintenance picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with insomnia: sleep onset and maintenance; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Insomnia: sleep onset and maintenance. Differentials are considered and excluded clinically.",
       rationale: "Suvorexant is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (DORA) with strong evidence in this condition.",
       management: "Started at 10 mg within 30 min of bedtime, titrated to 10–20 mg with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Suvorexant takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Suvorexant takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -330,12 +330,12 @@ export const suvorexant: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "DORA vs related agents — orientation table",
+      title: "DORA vs related agents: orientation table",
       primaryDrug: "Suvorexant",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "Orexin OX1 and OX2 receptors (dual antagonist) — the wake-promoting neuropeptide system",
+          primaryValue: "Orexin OX1 and OX2 receptors (dual antagonist): the wake-promoting neuropeptide system",
           comparisons: [
             {
               drug: "Suvorexant",
@@ -365,7 +365,7 @@ export const suvorexant: Drug = {
         },
         {
           attribute: "Clinical niche",
-          primaryValue: "The anti-wake hypnotic — GABA-free sleep with REM signatures",
+          primaryValue: "The anti-wake hypnotic. GABA-free sleep with REM signatures",
           comparisons: [
             {
               drug: "Suvorexant",
@@ -374,7 +374,7 @@ export const suvorexant: Drug = {
           ],
         },
       ],
-      takeaway: "Suvorexant is compared here with related agents for orientation. Full comparison data lives in each drug's own guide — follow the links for the complete picture.",
+      takeaway: "Suvorexant is compared here with related agents for orientation. Full comparison data lives in each drug's own guide: follow the links for the complete picture.",
     },
   ],
   /* ---- Timeline ---- */
@@ -383,7 +383,7 @@ export const suvorexant: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Suvorexant reaches peak plasma concentration and begins acting at its molecular target (Orexin OX1 and OX2 receptors (dual antagonist) — the wake-promoting neuropeptide system). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Suvorexant reaches peak plasma concentration and begins acting at its molecular target (Orexin OX1 and OX2 receptors (dual antagonist), the wake-promoting neuropeptide system). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -419,7 +419,7 @@ export const suvorexant: Drug = {
   faqs: [
     {
       question: "How long does Suvorexant take to work?",
-      answer: "Within 30 minutes; steady state ~1 week.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Within 30 minutes; steady state ~1 week.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Suvorexant?",
@@ -427,11 +427,11 @@ export const suvorexant: Drug = {
     },
     {
       question: "Can I stop Suvorexant suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Suvorexant habit-forming?",
@@ -439,7 +439,7 @@ export const suvorexant: Drug = {
     },
     {
       question: "Can I take Suvorexant during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Suvorexant may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Suvorexant may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -512,13 +512,13 @@ export const suvorexant: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "Orexin OX1 and OX2 receptors (dual antagonist) — the wake-promoting neuropeptide system",
+      label: "Orexin OX1 and OX2 receptors (dual antagonist): the wake-promoting neuropeptide system",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
     },
     {
-      label: "Insomnia — sleep onset and maintenance",
+      label: "Insomnia: sleep onset and maintenance",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -542,7 +542,7 @@ export const suvorexant: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Suvorexant",
+      label: "Patient Guide. Suvorexant",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -550,13 +550,13 @@ export const suvorexant: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The orexin-blocker — sleep by turning down the brain's wake switch rather than forcing sedation.",
-    summary: "Suvorexant is a prescription medicine used to treat insomnia — sleep onset and maintenance. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Suvorexant helps you sleep by turning down the brain's own 'wake switch' — a natural chemical system called orexin — rather than by force-sedating the brain like older sleeping pills. Some people experience brief sleep paralysis or vivid dream-like images while falling asleep: these are known, harmless effects of this medicine class.",
-    sideEffects: "The most common side effects are: next-day somnolence, headache, abnormal dreams. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Sleep paralysis / hypnagogic hallucinations and Cataplexy-like weakness. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: next-day somnolence (every early review); rem-signature phenomena review (every review). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The orexin-blocker: sleep by turning down the brain's wake switch rather than forcing sedation.",
+    summary: "Suvorexant is a prescription medicine used to treat insomnia: sleep onset and maintenance. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Suvorexant helps you sleep by turning down the brain's own 'wake switch' (a natural chemical system called orexin) rather than by force-sedating the brain like older sleeping pills. Some people experience brief sleep paralysis or vivid dream-like images while falling asleep: these are known, harmless effects of this medicine class.",
+    sideEffects: "The most common side effects are: next-day somnolence, headache, abnormal dreams. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Sleep paralysis / hypnagogic hallucinations and Cataplexy-like weakness. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: next-day somnolence (every early review); rem-signature phenomena review (every review). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Alcohol and CNS depressants, Strong CYP3A4 inhibitors, CYP3A4 inducers. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Alcohol and CNS depressants, Strong CYP3A4 inhibitors, CYP3A4 inducers. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -580,9 +580,9 @@ export const suvorexant: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: [
-      "Report any brief paralysis or dream-images at sleep onset — expected and harmless.",
+      "Report any brief paralysis or dream-images at sleep onset: expected and harmless.",
     ],
   },
   sectionDifficulty: {
@@ -616,7 +616,7 @@ export const suvorexant: Drug = {
         name: "Suvorexant",
         slug: "suvorexant",
         relationship: "This guide",
-        distinguishing: "The anti-wake hypnotic — GABA-free sleep with REM signatures",
+        distinguishing: "The anti-wake hypnotic. GABA-free sleep with REM signatures",
       },
     ],
   },
@@ -764,17 +764,17 @@ export const suvorexant: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Suvorexant in two sentences.",
-      answer: "Dual orexin receptor antagonist: blocks the orexin/hypocretin wake-promoting system — reducing wake drive instead of enhancing GABA sedation. Net effect: Sleep promotion via the described target.",
+      answer: "Dual orexin receptor antagonist: blocks the orexin/hypocretin wake-promoting system, reducing wake drive instead of enhancing GABA sedation. Net effect: Sleep promotion via the described target.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Suvorexant.",
-      answer: "Insomnia — sleep onset and maintenance. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Insomnia: sleep onset and maintenance. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Suvorexant and how you would manage it.",
-      answer: "Sleep paralysis / hypnagogic hallucinations: REM-signature effects — frightening but benign; the DORA fingerprint. Management: Counsel in advance; usually diminish.",
+      answer: "Sleep paralysis / hypnagogic hallucinations: REM-signature effects; frightening but benign; the DORA fingerprint. Management: Counsel in advance; usually diminish.",
       topic: "Safety",
     },
     {
@@ -784,7 +784,7 @@ export const suvorexant: Drug = {
     },
     {
       question: "Share one clinical pearl about Suvorexant that separates safe prescribers from unsafe ones.",
-      answer: "Anti-wake, not pro-sedation: the DORA concept — turning the orexin switch down instead of pushing GABA.",
+      answer: "Anti-wake, not pro-sedation: the DORA concept; turning the orexin switch down instead of pushing GABA.",
       topic: "Clinical Pearls",
     },
   ],
@@ -860,7 +860,7 @@ export const suvorexant: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -905,7 +905,7 @@ export const suvorexant: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Suvorexant works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Suvorexant works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -921,7 +921,7 @@ export const suvorexant: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Suvorexant safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Suvorexant safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -966,7 +966,7 @@ export const suvorexant: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Suvorexant follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Suvorexant follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -991,10 +991,10 @@ export const suvorexant: Drug = {
     dosingTips: [
       "10 mg start; escalate only if needed.",
       "Pre-counsel on sleep paralysis/hallucinations.",
-      "7–8 h in bed — the 12-h half-life demands it.",
+      "7–8 h in bed: the 12-h half-life demands it.",
     ],
     overdose: [
-      "Overdose with Suvorexant is managed supportively — no specific antidote.",
+      "Overdose with Suvorexant is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Suvorexant is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1003,7 +1003,7 @@ export const suvorexant: Drug = {
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
     pharmacokinetics: [
-      "Half-life: About 12 hours (long — drives next-day somnolence)..",
+      "Half-life: About 12 hours (long, drives next-day somnolence)..",
       "Metabolism: Hepatic..",
     ],
     doNotUse: ["Known hypersensitivity to this agent."],
@@ -1033,15 +1033,15 @@ export const suvorexant: Drug = {
       "Sleep-onset and maintenance insomnia (GABA-free option)",
     ],
     pearls: [
-      "Anti-wake, not pro-sedation: the DORA concept — turning the orexin switch down instead of pushing GABA.",
-      "The REM signatures (sleep paralysis, hypnagogic hallucinations) map onto orexin's role in narcolepsy — pre-counselling turns fright into trivia.",
-      "No dependence signal in trials to date — a candidate for longer-term use alongside ramelteon.",
+      "Anti-wake, not pro-sedation: the DORA concept; turning the orexin switch down instead of pushing GABA.",
+      "The REM signatures (sleep paralysis, hypnagogic hallucinations) map onto orexin's role in narcolepsy: pre-counselling turns fright into trivia.",
+      "No dependence signal in trials to date: a candidate for longer-term use alongside ramelteon.",
       "10 mg start is near-mandatory: next-day somnolence is the dose-limiting effect at 20 mg.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

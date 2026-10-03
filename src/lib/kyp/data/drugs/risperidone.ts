@@ -23,14 +23,14 @@ export const risperidone: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Atypical Antipsychotics", "Risperidone"],
   /* ---- Hero / summary ---- */
-  tagline: "The potent serotonin-dopamine antagonist — strong D2 binding gives robust anti-manic and antipsychotic power at the price of prolactin.",
-  summary: "Risperidone is a serotonin-dopamine antagonist (SDA) and one of the most widely used atypical antipsychotics worldwide. Its strong D2 receptor binding delivers powerful efficacy against psychosis and mania, while 5-HT2A antagonism preserves an atypical profile at low-to-moderate doses. It is the atypical most associated with hyperprolactinaemia and, above 6 mg/day, extrapyramidal symptoms — 'the atypical that behaves like a typical when the dose climbs'. Available as oral, orally disintegrating, and long-acting injectable forms, with deep paediatric and LAI evidence.",
+  tagline: "The potent serotonin-dopamine antagonist: strong D2 binding gives robust anti-manic and antipsychotic power at the price of prolactin.",
+  summary: "Risperidone is a serotonin-dopamine antagonist (SDA) and one of the most widely used atypical antipsychotics worldwide. Its strong D2 receptor binding delivers powerful efficacy against psychosis and mania, while 5-HT2A antagonism preserves an atypical profile at low-to-moderate doses. It is the atypical most associated with hyperprolactinaemia and, above 6 mg/day, extrapyramidal symptoms: 'the atypical that behaves like a typical when the dose climbs'. Available as oral, orally disintegrating, and long-acting injectable forms, with deep paediatric and LAI evidence.",
   estimatedReadTime: "18 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Risperidone — from its molecular target (D2 receptor (potent antagonist); 5-HT2A (high-affinity antagonist); alpha-1 adrenergic; H1) to clinical effect.",
+    "Explain the mechanism of action of Risperidone, from its molecular target (D2 receptor (potent antagonist); 5-HT2A (high-affinity antagonist); alpha-1 adrenergic; H1) to clinical effect.",
     "List the FDA-approved and off-label uses of Risperidone.",
     "Predict the common and serious side effects of Risperidone from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Risperidone.",
@@ -38,21 +38,21 @@ export const risperidone: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Risperidone blocks 5-HT2A receptors with high affinity and D2 receptors potently — a strong serotonin-dopamine antagonist; its active metabolite (paliperidone) adds a long-acting second wave.",
+    summary: "Risperidone blocks 5-HT2A receptors with high affinity and D2 receptors potently: a strong serotonin-dopamine antagonist; its active metabolite (paliperidone) adds a long-acting second wave.",
     molecularTarget: "D2 receptor (potent antagonist); 5-HT2A (high-affinity antagonist); alpha-1 adrenergic; H1",
     effect: "Powerful reduction of positive psychotic and manic symptoms; dose-dependent EPS and prolactin elevation as the D2 occupancy extends beyond therapeutic range.",
     steps: [
-      "Risperidone binds D2 receptors with higher affinity than most atypicals — therapeutic efficacy appears at ~60–72% D2 occupancy.",
+      "Risperidone binds D2 receptors with higher affinity than most atypicals: therapeutic efficacy appears at ~60–72% D2 occupancy.",
       "5-HT2A antagonism disinhibits dopamine release in nigrostriatal and tuberoinfundibular pathways, buying relative protection from EPS and hyperprolactinaemia at low doses.",
-      "Above roughly 6 mg/day, D2 occupancy exceeds ~80% — the 5-HT2A protection is overwhelmed, and EPS and prolactin rise appear (a 'typical-like' profile).",
+      "Above roughly 6 mg/day, D2 occupancy exceeds ~80%: the 5-HT2A protection is overwhelmed, and EPS and prolactin rise appear (a 'typical-like' profile).",
       "Alpha-1 blockade produces orthostatic hypotension, particularly at treatment initiation.",
-      "9-hydroxylation converts risperidone to paliperidone (the same molecule marketed as Invega) — an active metabolite extending effective half-life.",
+      "9-hydroxylation converts risperidone to paliperidone (the same molecule marketed as Invega): an active metabolite extending effective half-life.",
     ],
-    pharmacokinetics: "Well absorbed orally, peak ~1 hour (IR). Steady state ~5 days. Long-acting microsphere injection (Consta) releases therapeutic levels only after ~3 weeks — oral overlap is mandatory at initiation.",
+    pharmacokinetics: "Well absorbed orally, peak ~1 hour (IR). Steady state ~5 days. Long-acting microsphere injection (Consta) releases therapeutic levels only after ~3 weeks: oral overlap is mandatory at initiation.",
     halfLife: "About 20–24 hours combined (parent ~3 hours + active metabolite 9-hydroxyrisperidone ~24 hours); paliperidone itself ~23 hours.",
-    activeMetabolite: "9-hydroxyrisperidone (paliperidone) — equipotent D2/5-HT2A antagonist; the basis of the paliperidone product line.",
+    activeMetabolite: "9-hydroxyrisperidone (paliperidone): equipotent D2/5-HT2A antagonist; the basis of the paliperidone product line.",
     metabolism: "Hepatic CYP2D6 (9-hydroxylation); renal excretion of parent and metabolite.",
-    excretion: "Renal — significant; reduce dose in renal impairment.",
+    excretion: "Renal: significant; reduce dose in renal impairment.",
   },
   /* ---- Mechanism visual flow ---- */
   mechanismFlow: {
@@ -129,7 +129,7 @@ export const risperidone: Drug = {
         label: "5-HT2A-mediated benefit",
       },
     ],
-    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms — the serotonin-dopamine hypothesis of atypical antipsychotics.",
+    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms: the serotonin-dopamine hypothesis of atypical antipsychotics.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Dopamine (DA)", "Serotonin (5-HT)", "Norepinephrine (NE)"],
@@ -169,7 +169,7 @@ export const risperidone: Drug = {
     {
       name: "Behavioural disturbance in dementia",
       status: "off-label",
-      description: "Modest efficacy but boxed-warning territory — use only after non-pharmacological measures fail, at the lowest dose.",
+      description: "Modest efficacy but boxed-warning territory: use only after non-pharmacological measures fail, at the lowest dose.",
     },
     {
       name: "Tourette's disorder and tics",
@@ -196,7 +196,7 @@ export const risperidone: Drug = {
     {
       name: "Levodopa / dopamine agonists",
       severity: "relative",
-      rationale: "D2 blockade antagonises antiparkinsonian effect — risperidone will worsen Parkinson's disease psychosis (prefer quetiapine, clozapine, or pimavanserin).",
+      rationale: "D2 blockade antagonises antiparkinsonian effect: risperidone will worsen Parkinson's disease psychosis (prefer quetiapine, clozapine, or pimavanserin).",
     },
   ],
   blackBoxWarnings: [
@@ -215,14 +215,14 @@ export const risperidone: Drug = {
       name: "Hyperprolactinaemia",
       frequency: "very-common",
       severity: "moderate",
-      description: "The signature adverse effect — highest among atypicals. Galactorrhoea, amenorrhoea, gynaecomastia, sexual dysfunction, and infertility; often asymptomatic on labs.",
-      management: "Ask about sexual and menstrual changes directly; switch to aripiprazole if symptomatic — prolactin usually normalises.",
+      description: "The signature adverse effect: highest among atypicals. Galactorrhoea, amenorrhoea, gynaecomastia, sexual dysfunction, and infertility; often asymptomatic on labs.",
+      management: "Ask about sexual and menstrual changes directly; switch to aripiprazole if symptomatic: prolactin usually normalises.",
     },
     {
       name: "Extrapyramidal symptoms (EPS)",
       frequency: "common",
       severity: "moderate",
-      description: "Dose-dependent parkinsonism, rigidity, and bradykinesia — rises sharply above 6 mg/day; also acute dystonia at initiation.",
+      description: "Dose-dependent parkinsonism, rigidity, and bradykinesia: rises sharply above 6 mg/day; also acute dystonia at initiation.",
       management: "Reduce dose; anticholinergic (benztropine, trihexyphenidyl) for parkinsonism/dystonia.",
     },
     {
@@ -243,14 +243,14 @@ export const risperidone: Drug = {
       name: "Orthostatic hypotension",
       frequency: "common",
       severity: "moderate",
-      description: "Alpha-1 mediated; first-dose phenomenon — dizziness on standing, tachycardia.",
+      description: "Alpha-1 mediated; first-dose phenomenon: dizziness on standing, tachycardia.",
       management: "Titrate slowly; instruct slow rising; review antihypertensives.",
     },
     {
       name: "Weight gain",
       frequency: "common",
       severity: "moderate",
-      description: "Moderate weight gain — less than olanzapine/quetiapine, more than aripiprazole/lurasidone.",
+      description: "Moderate weight gain: less than olanzapine/quetiapine, more than aripiprazole/lurasidone.",
       management: "Lifestyle intervention; metformin if rising; monitor metabolic panel.",
     },
     {
@@ -272,7 +272,7 @@ export const risperidone: Drug = {
       name: "Neuroleptic malignant syndrome",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — reported with risperidone as with all D2 blockers.",
+      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness: reported with risperidone as with all D2 blockers.",
       management: "Stop immediately; ICU supportive care; dantrolene/bromocriptine.",
     },
     {
@@ -286,21 +286,21 @@ export const risperidone: Drug = {
       name: "Cerebrovascular events in dementia patients",
       frequency: "uncommon",
       severity: "life-threatening",
-      description: "Dose-related stroke and TIA signal in elderly dementia patients — the basis of the boxed warning.",
+      description: "Dose-related stroke and TIA signal in elderly dementia patients: the basis of the boxed warning.",
       management: "Avoid in dementia-related psychosis; stop if focal signs develop.",
     },
     {
       name: "Priapism",
       frequency: "rare",
       severity: "severe",
-      description: "Prolonged erection from alpha-1 blockade — a urological emergency.",
+      description: "Prolonged erection from alpha-1 blockade: a urological emergency.",
       management: "Immediate urological referral.",
     },
     {
       name: "Metabolic syndrome",
       frequency: "uncommon",
       severity: "severe",
-      description: "Weight gain, dyslipidaemia, hyperglycaemia — moderate risk.",
+      description: "Weight gain, dyslipidaemia, hyperglycaemia: moderate risk.",
       management: "Monitor weight, fasting glucose, lipids; intervene early.",
     },
     {
@@ -331,7 +331,7 @@ export const risperidone: Drug = {
     {
       parameter: "Prolactin (if symptomatic)",
       frequency: "When symptoms of hyperprolactinaemia emerge",
-      rationale: "Galactorrhoea, amenorrhoea, gynaecomastia, sexual dysfunction — ask, don't wait.",
+      rationale: "Galactorrhoea, amenorrhoea, gynaecomastia, sexual dysfunction: ask, don't wait.",
     },
     {
       parameter: "AIMS examination",
@@ -341,7 +341,7 @@ export const risperidone: Drug = {
     {
       parameter: "Blood pressure (orthostatic)",
       frequency: "Baseline and during titration",
-      rationale: "Alpha-1 blockade — first-dose syncope risk.",
+      rationale: "Alpha-1 blockade: first-dose syncope risk.",
     },
     {
       parameter: "Renal function",
@@ -353,20 +353,20 @@ export const risperidone: Drug = {
     {
       drug: "Fluoxetine and paroxetine (strong CYP2D6 inhibitors)",
       severity: "major",
-      mechanism: "Inhibit risperidone's metabolism — raise combined active levels.",
+      mechanism: "Inhibit risperidone's metabolism: raise combined active levels.",
       action: "Consider reducing risperidone dose; monitor for adverse effects.",
     },
     {
       drug: "Carbamazepine and enzyme inducers",
       severity: "major",
-      mechanism: "Induce CYP2D6/3A4 — lower risperidone levels, possible loss of efficacy.",
+      mechanism: "Induce CYP2D6/3A4: lower risperidone levels, possible loss of efficacy.",
       action: "Monitor response; may need dose increase.",
     },
     {
       drug: "Levodopa and dopamine agonists",
       severity: "major",
       mechanism: "Central D2 antagonism opposes dopaminergic therapy.",
-      action: "Avoid — prefer quetiapine, clozapine, or pimavanserin for Parkinson's psychosis.",
+      action: "Avoid: prefer quetiapine, clozapine, or pimavanserin for Parkinson's psychosis.",
     },
     {
       drug: "Antihypertensives",
@@ -390,60 +390,60 @@ export const risperidone: Drug = {
   pregnancy: {
     legacyCategory: "C",
     evidenceBasedSummary: "Registry data show no major malformation signal above background, but data remain limited; neonates exposed in the third trimester may have EPS and withdrawal symptoms.",
-    indianPracticeNote: "Indian practice mirrors international guidance — continue if needed for psychosis control, involve obstetrics, and document shared decision-making.",
-    summary: "Available registry data have not shown a major teratogenic signal, but experience remains limited. In serious mental illness, relapse prevention usually outweighs fetal risk — do not stop abruptly. Third-trimester exposure warrants neonatal monitoring for rigidity, tremor, and poor feeding.",
+    indianPracticeNote: "Indian practice mirrors international guidance. Continue if needed for psychosis control, involve obstetrics, and document shared decision-making.",
+    summary: "Available registry data have not shown a major teratogenic signal, but experience remains limited. In serious mental illness, relapse prevention usually outweighs fetal risk: do not stop abruptly. Third-trimester exposure warrants neonatal monitoring for rigidity, tremor, and poor feeding.",
     lactation: "Risperidone passes into breast milk in small amounts; infant sedation and weight-gain concerns exist. Many guidelines consider it acceptable with infant monitoring, but alternatives with less milk transfer (e.g., olanzapine) are sometimes preferred.",
   },
   renalAdjustment: "Halve the starting dose in renal impairment (CrCl < 30 mL/min) due to reduced clearance of the active metabolite; titrate slowly.",
   hepaticAdjustment: "No formal adjustment for mild impairment; start low in moderate-to-severe impairment given first-pass metabolism.",
   /* ---- Education ---- */
-  patientExplanation: "Risperidine quiets overactive dopamine and serotonin signalling in the brain — the circuits that drive hallucinations, paranoia, and mania. It is one of the strongest medicines in its class, which is also why it can cause side effects like breast discomfort, missed periods, or restless legs — all of which are worth mentioning to your doctor early rather than stopping the medicine.",
+  patientExplanation: "Risperidine quiets overactive dopamine and serotonin signalling in the brain: the circuits that drive hallucinations, paranoia, and mania. It is one of the strongest medicines in its class, which is also why it can cause side effects like breast discomfort, missed periods, or restless legs, all of which are worth mentioning to your doctor early rather than stopping the medicine.",
   patientEducationPoints: [
-    "Standing up slowly in the first week prevents dizziness — the medicine can lower blood pressure on standing.",
-    "Report breast discomfort, milk production, missed periods, or sexual changes — these are common, treatable, and nothing to be embarrassed about.",
-    "If your legs feel restless or you feel like you cannot sit still, tell your doctor — the dose may need adjusting.",
+    "Standing up slowly in the first week prevents dizziness. The medicine can lower blood pressure on standing.",
+    "Report breast discomfort, milk production, missed periods, or sexual changes: these are common, treatable, and nothing to be embarrassed about.",
+    "If your legs feel restless or you feel like you cannot sit still, tell your doctor: the dose may need adjusting.",
     "Benefit builds over 1–3 weeks; do not stop because it hasn't worked immediately.",
-    "If you are on the 2-weekly injection, never miss your appointment — the medicine releases slowly and needs topping up on schedule.",
-    "Keep your weight, sugar, and cholesterol check-ups — this medicine can cause modest weight gain.",
-    "Do not stop suddenly — discuss any change with your doctor first.",
+    "If you are on the 2-weekly injection, never miss your appointment: the medicine releases slowly and needs topping up on schedule.",
+    "Keep your weight, sugar, and cholesterol check-ups: this medicine can cause modest weight gain.",
+    "Do not stop suddenly: discuss any change with your doctor first.",
   ],
   clinicalPearls: [
-    "6 mg/day is the cliff: below it risperidone behaves like an atypical; above it EPS and prolactin rise steeply — more is not more effective, only more adverse.",
-    "Hyperprolactinaemia is the signature: ask every woman about periods and every man about gynaecomastia — patients rarely volunteer these symptoms.",
-    "Switching to aripiprazole reliably normalises prolactin — one of the most satisfying switch manoeuvres in psychopharmacology.",
-    "Consta takes 3 weeks to start releasing drug — overlap oral risperidone for 3 weeks at initiation or the patient will relapse.",
-    "Risperidone's active metabolite IS paliperidone — knowing this one fact explains the paliperidone product family, the renal dosing, and the 2D6 interaction profile.",
-    "In autism-related irritability (ages 5–16), risperidone and aripiprazole are the two best-evidenced agents — expect weight gain in children and monitor it actively.",
-    "For Parkinson's disease psychosis, risperidone is the wrong tool — its D2 blockade worsens motor symptoms; use quetiapine, clozapine, or pimavanserin.",
-    "Fluoxetine can double risperidone exposure — a common accidental combination in bipolar depression.",
-    "Subcutaneous once-monthly and 2-weekly microsphere options now span the adherence spectrum — the most flexible LAI shelf of any antipsychotic.",
+    "6 mg/day is the cliff: below it risperidone behaves like an atypical; above it EPS and prolactin rise steeply: more is not more effective, only more adverse.",
+    "Hyperprolactinaemia is the signature: ask every woman about periods and every man about gynaecomastia; patients rarely volunteer these symptoms.",
+    "Switching to aripiprazole reliably normalises prolactin, one of the most satisfying switch manoeuvres in psychopharmacology.",
+    "Consta takes 3 weeks to start releasing drug: overlap oral risperidone for 3 weeks at initiation or the patient will relapse.",
+    "Risperidone's active metabolite IS paliperidone: knowing this one fact explains the paliperidone product family, the renal dosing, and the 2D6 interaction profile.",
+    "In autism-related irritability (ages 5–16), risperidone and aripiprazole are the two best-evidenced agents. Expect weight gain in children and monitor it actively.",
+    "For Parkinson's disease psychosis, risperidone is the wrong tool: its D2 blockade worsens motor symptoms; use quetiapine, clozapine, or pimavanserin.",
+    "Fluoxetine can double risperidone exposure: a common accidental combination in bipolar depression.",
+    "Subcutaneous once-monthly and 2-weekly microsphere options now span the adherence spectrum: the most flexible LAI shelf of any antipsychotic.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Risperidone: Risperidone blocks 5-HT2A receptors with high affinity and D2 receptors potently — a strong serotonin-dopamine antagonist; its active metabolite (paliperidone) adds a long-acting second wave.",
+        "Mechanism of Risperidone: Risperidone blocks 5-HT2A receptors with high affinity and D2 receptors potently; a strong serotonin-dopamine antagonist; its active metabolite (paliperidone) adds a long-acting second wave.",
         "Uses of Risperidone: Schizophrenia; Acute manic / mixed episodes of bipolar I; Bipolar I maintenance; Irritability associated with autistic disorder",
-        "Mechanism: potent D2 + 5-HT2A antagonist — strongest D2 binding among commonly used atypicals.",
-        "Signature adverse effect: hyperprolactinaemia — highest in class (galactorrhoea, amenorrhoea, gynaecomastia, sexual dysfunction).",
+        "Mechanism: potent D2 + 5-HT2A antagonist; strongest D2 binding among commonly used atypicals.",
+        "Signature adverse effect: hyperprolactinaemia; highest in class (galactorrhoea, amenorrhoea, gynaecomastia, sexual dysfunction).",
       ],
       practical: [
         "Prescribe Risperidone for schizophrenia with dose, timing, and duration.",
         "Outline the monitoring plan: Weight and BMI (Baseline, 4, 8, 12 weeks, then quarterly); Fasting glucose / HbA1c (Baseline, 12 weeks, then annually); Lipid profile (Baseline, 12 weeks, then annually)",
       ],
       longAnswer: [
-        "Risperidone: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: potent D2 + 5-HT2A antagonist — strongest D2 binding among commonly used atypicals.",
-        "Signature adverse effect: hyperprolactinaemia — highest in class (galactorrhoea, amenorrhoea, gynaecomastia, sexual dysfunction).",
+        "Risperidone: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: potent D2 + 5-HT2A antagonist; strongest D2 binding among commonly used atypicals.",
+        "Signature adverse effect: hyperprolactinaemia; highest in class (galactorrhoea, amenorrhoea, gynaecomastia, sexual dysfunction).",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: potent D2 + 5-HT2A antagonist — strongest D2 binding among commonly used atypicals.",
-        "Signature adverse effect: hyperprolactinaemia — highest in class (galactorrhoea, amenorrhoea, gynaecomastia, sexual dysfunction).",
-        "6 mg/day threshold: above it, EPS rises sharply — the atypical behaves like a typical.",
+        "Mechanism: potent D2 + 5-HT2A antagonist; strongest D2 binding among commonly used atypicals.",
+        "Signature adverse effect: hyperprolactinaemia; highest in class (galactorrhoea, amenorrhoea, gynaecomastia, sexual dysfunction).",
+        "6 mg/day threshold: above it, EPS rises sharply; the atypical behaves like a typical.",
         "Active metabolite = 9-hydroxyrisperidone = paliperidone (marketed separately as Invega).",
-        "CYP2D6 metabolism — fluoxetine/paroxetine raise levels; carbamazepine lowers them.",
-        "Renal clearance matters — halve the dose in significant renal impairment.",
+        "CYP2D6 metabolism: fluoxetine/paroxetine raise levels; carbamazepine lowers them.",
+        "Renal clearance matters: halve the dose in significant renal impairment.",
       ],
       pyqConcepts: [
         "Mechanism/target of Risperidone",
@@ -453,7 +453,7 @@ export const risperidone: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Risperidone develops neuroleptic malignant syndrome — next best step?",
+        "A patient on Risperidone develops neuroleptic malignant syndrome: next best step?",
         "When to choose Risperidone over alternatives in its class.",
       ],
     },
@@ -466,17 +466,17 @@ export const risperidone: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "At 6 mg the drug flips: below it an atypical, above it a typical — dose discipline is everything.",
-        "Prolactin problems announce themselves only if you ask — build one question into every review.",
-        "Aripiprazole is the antidote to risperidone hyperprolactinaemia — switching reliably normalises it.",
-        "Consta takes 3 weeks to start working — '3-week overlap' is the rule to tattoo on the prescription.",
+        "At 6 mg the drug flips: below it an atypical, above it a typical; dose discipline is everything.",
+        "Prolactin problems announce themselves only if you ask: build one question into every review.",
+        "Aripiprazole is the antidote to risperidone hyperprolactinaemia, switching reliably normalises it.",
+        "Consta takes 3 weeks to start working: '3-week overlap' is the rule to tattoo on the prescription.",
       ],
     },
   },
   memoryTricks: [
     {
       title: "RISPeridone = RISPonses for PROlactin",
-      trick: "Risperidone is the atypical with the PROlactin problem — PRL rises, periods stop, breasts leak.",
+      trick: "Risperidone is the atypical with the PROlactin problem. PRL rises, periods stop, breasts leak.",
       remembers: "Which atypical causes hyperprolactinaemia",
     },
     {
@@ -486,27 +486,27 @@ export const risperidone: Drug = {
     },
     {
       title: "3-week overlap rule",
-      trick: "Consta = 'comes later' — 3 weeks of oral overlap before the injection takes over.",
+      trick: "Consta = 'comes later': 3 weeks of oral overlap before the injection takes over.",
       remembers: "Long-acting risperidone initiation",
     },
   ],
   highYieldSummary: [
-    "Mechanism: potent D2 + 5-HT2A antagonist — strongest D2 binding among commonly used atypicals.",
-    "Signature adverse effect: hyperprolactinaemia — highest in class (galactorrhoea, amenorrhoea, gynaecomastia, sexual dysfunction).",
-    "6 mg/day threshold: above it, EPS rises sharply — the atypical behaves like a typical.",
+    "Mechanism: potent D2 + 5-HT2A antagonist; strongest D2 binding among commonly used atypicals.",
+    "Signature adverse effect: hyperprolactinaemia; highest in class (galactorrhoea, amenorrhoea, gynaecomastia, sexual dysfunction).",
+    "6 mg/day threshold: above it, EPS rises sharply; the atypical behaves like a typical.",
     "Active metabolite = 9-hydroxyrisperidone = paliperidone (marketed separately as Invega).",
-    "CYP2D6 metabolism — fluoxetine/paroxetine raise levels; carbamazepine lowers them.",
-    "Renal clearance matters — halve the dose in significant renal impairment.",
+    "CYP2D6 metabolism: fluoxetine/paroxetine raise levels; carbamazepine lowers them.",
+    "Renal clearance matters: halve the dose in significant renal impairment.",
     "Consta (q2wk IM): requires 3 weeks of oral overlap at initiation.",
     "FDA ages: schizophrenia ≥13, bipolar mania ≥10, autism irritability 5–16.",
     "Boxed warnings: mortality and cerebrovascular events in dementia-related psychosis.",
-    "Avoid in Parkinson's psychosis (D2 blockade worsens motor function) — prefer quetiapine/clozapine/pimavanserin.",
+    "Avoid in Parkinson's psychosis (D2 blockade worsens motor function): prefer quetiapine/clozapine/pimavanserin.",
     "Autism irritability: risperidone + aripiprazole are the two best-evidenced drugs.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First-episode mania — the speed of escalation decides the drug",
+      title: "First-episode mania: the speed of escalation decides the drug",
       presentation: "A 19-year-old woman with acute mania, started on risperidone after lithium is deferred.",
       history: "A 19-year-old student is brought to the emergency department by her parents with 5 days of reduced sleep (2–3 hours, feels rested), pressured speech, grandiose plans to start a company, shopping sprees beyond her means, and increasing irritability. First episode; no substance use; family history of bipolar disorder in the father.",
       examination: "Elated but irritable affect; pressured speech; flight of ideas; psychomotor agitation. No psychotic features. YMRS 32. Physical exam normal; pregnancy test negative; thyroid function and renal panel normal.",
@@ -515,16 +515,16 @@ export const risperidone: Drug = {
       management: "Risperidone 2 mg at bedtime, titrated to 4 mg over 4 days; lithium 600 mg begun and titrated to levels. Sleep hygiene, no-discharge-driving counselling, family psychoeducation about bipolar illness. Review at 1 week.",
       outcome: "Manic symptoms improve substantially by day 7 (YMRS 14); sleep normalises first. Mild bilateral hand tremor and one episode of orthostatic dizziness occur; dose held at 4 mg rather than escalated. Outpatient transition with lithium continuation and a planned risperidone taper after 3 months of stability.",
       teachingPoints: [
-        "In acute mania, sedation and sleep restoration are the first signs of response — expect them within days.",
+        "In acute mania, sedation and sleep restoration are the first signs of response. Expect them within days.",
         "Choose an anti-manic antipsychotic with an eye on the maintenance phase: prolactin and weight over years matter in a 19-year-old.",
-        "Lithium plus an antipsychotic is a standard combination — the antipsychotic handles the acute episode; lithium holds the long term.",
+        "Lithium plus an antipsychotic is a standard combination. The antipsychotic handles the acute episode; lithium holds the long term.",
       ],
     },
   ],
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Atypical antipsychotic comparison — where risperidone sits",
+      title: "Atypical antipsychotic comparison, where risperidone sits",
       primaryDrug: "Risperidone",
       rows: [
         {
@@ -573,7 +573,7 @@ export const risperidone: Drug = {
         },
         {
           attribute: "EPS risk",
-          primaryValue: "Dose-dependent — rises sharply > 6 mg",
+          primaryValue: "Dose-dependent: rises sharply > 6 mg",
           comparisons: [
             {
               drug: "Aripiprazole",
@@ -638,7 +638,7 @@ export const risperidone: Drug = {
           ],
         },
       ],
-      takeaway: "Risperidone is the 'strong and reliable' atypical: best-in-class anti-manic potency and paediatric data, cheapest generic, and the most flexible LAI shelf — priced at prolactin elevation and EPS above 6 mg. It rewards careful dosing: most patients need 2–6 mg, not more.",
+      takeaway: "Risperidone is the 'strong and reliable' atypical: best-in-class anti-manic potency and paediatric data, cheapest generic, and the most flexible LAI shelf; priced at prolactin elevation and EPS above 6 mg. It rewards careful dosing: most patients need 2–6 mg, not more.",
     },
   ],
   /* ---- Timeline ---- */
@@ -654,14 +654,14 @@ export const risperidone: Drug = {
       id: "t2",
       time: "Days 1–7",
       title: "Early clinical drift",
-      description: "Sleep, agitation, and aggression often improve first — especially in mania and autism irritability.",
+      description: "Sleep, agitation, and aggression often improve first, especially in mania and autism irritability.",
       phase: "onset",
     },
     {
       id: "t3",
       time: "Weeks 1–2",
       title: "EPS and prolactin emerge",
-      description: "Dose-dependent adverse effects surface — the window to catch parkinsonism, akathisia, and galactorrhoea early.",
+      description: "Dose-dependent adverse effects surface: the window to catch parkinsonism, akathisia, and galactorrhoea early.",
       phase: "peak",
     },
     {
@@ -675,7 +675,7 @@ export const risperidone: Drug = {
       id: "t5",
       time: "Week 3 (Consta)",
       title: "LAI release begins",
-      description: "Microsphere injection only starts delivering therapeutic levels at week 3 — oral overlap covers the gap.",
+      description: "Microsphere injection only starts delivering therapeutic levels at week 3: oral overlap covers the gap.",
       phase: "peak",
     },
     {
@@ -690,7 +690,7 @@ export const risperidone: Drug = {
   faqs: [
     {
       question: "Why has my menstrual cycle stopped on risperidone?",
-      answer: "Risperidone raises prolactin — the hormone that controls milk production and periods. High prolactin can stop periods, cause breast discharge, or reduce sex drive. It is common, reversible, and worth reporting: options include dose reduction, a switch to aripiprazole (which usually normalises prolactin), or treating with dopamine-like medication.",
+      answer: "Risperidone raises prolactin: the hormone that controls milk production and periods. High prolactin can stop periods, cause breast discharge, or reduce sex drive. It is common, reversible, and worth reporting: options include dose reduction, a switch to aripiprazole (which usually normalises prolactin), or treating with dopamine-like medication.",
     },
     {
       question: "Is risperidone stronger than other antipsychotics?",
@@ -701,16 +701,16 @@ export const risperidone: Drug = {
       answer: "Risperidone Consta is the same medicine in a slow-release injection given every 2 weeks. It guarantees steady levels when daily tablets are missed or forgotten. Starting it requires 3 weeks of tablets alongside, because the injection takes that long to begin working.",
     },
     {
-      question: "My mother has dementia and was given risperidone for agitation — is that safe?",
-      answer: "It is a carefully controlled situation: regulatory agencies warn of increased stroke risk and mortality when antipsychotics are used in dementia. Guidelines allow short-term, low-dose use for severe distress or danger only after non-drug approaches have failed — and with documented review dates.",
+      question: "My mother has dementia and was given risperidone for agitation: is that safe?",
+      answer: "It is a carefully controlled situation: regulatory agencies warn of increased stroke risk and mortality when antipsychotics are used in dementia. Guidelines allow short-term, low-dose use for severe distress or danger only after non-drug approaches have failed, and with documented review dates.",
     },
     {
       question: "Can it be used in children?",
-      answer: "Yes — it is one of the best-studied antipsychotics in young people: schizophrenia from 13, bipolar mania from 10, and autism-related irritability from 5. Children are more sensitive to sedation and weight gain, so monitoring is closer.",
+      answer: "Yes: it is one of the best-studied antipsychotics in young people: schizophrenia from 13, bipolar mania from 10, and autism-related irritability from 5. Children are more sensitive to sedation and weight gain, so monitoring is closer.",
     },
     {
       question: "What should I do if I feel faint standing up?",
-      answer: "Sit or lie down immediately. This medicine lowers blood pressure on standing, especially in the first week. Rise slowly, drink enough fluids, and tell your doctor — a slower titration usually solves it.",
+      answer: "Sit or lie down immediately. This medicine lowers blood pressure on standing, especially in the first week. Rise slowly, drink enough fluids, and tell your doctor: a slower titration usually solves it.",
     },
   ],
   /* ---- References & related ---- */
@@ -902,7 +902,7 @@ export const risperidone: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Risperidone",
+      label: "Patient Guide. Risperidone",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -910,13 +910,13 @@ export const risperidone: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The potent serotonin-dopamine antagonist — strong D2 binding gives robust anti-manic and antipsychotic power at the price of prolactin.",
-    summary: "Risperidone is a prescription medicine used to treat schizophrenia. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Risperidine quiets overactive dopamine and serotonin signalling in the brain — the circuits that drive hallucinations, paranoia, and mania. It is one of the strongest medicines in its class, which is also why it can cause side effects like breast discomfort, missed periods, or restless legs — all of which are worth mentioning to your doctor early rather than stopping the medicine.",
-    sideEffects: "The most common side effects are: hyperprolactinaemia, extrapyramidal symptoms (eps), akathisia, sedation and drowsiness, orthostatic hypotension, weight gain. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and bmi (baseline, 4, 8, 12 weeks, then quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually); lipid profile (baseline, 12 weeks, then annually). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The potent serotonin-dopamine antagonist: strong D2 binding gives robust anti-manic and antipsychotic power at the price of prolactin.",
+    summary: "Risperidone is a prescription medicine used to treat schizophrenia. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Risperidine quiets overactive dopamine and serotonin signalling in the brain: the circuits that drive hallucinations, paranoia, and mania. It is one of the strongest medicines in its class, which is also why it can cause side effects like breast discomfort, missed periods, or restless legs, all of which are worth mentioning to your doctor early rather than stopping the medicine.",
+    sideEffects: "The most common side effects are: hyperprolactinaemia, extrapyramidal symptoms (eps), akathisia, sedation and drowsiness, orthostatic hypotension, weight gain. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and bmi (baseline, 4, 8, 12 weeks, then quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually); lipid profile (baseline, 12 weeks, then annually). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: Known hypersensitivity to risperidone or paliperidone, Elderly patients with dementia-related psychosis, Levodopa / dopamine agonists. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Fluoxetine and paroxetine (strong CYP2D6 inhibitors), Carbamazepine and enzyme inducers, Levodopa and dopamine agonists, Antihypertensives. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Fluoxetine and paroxetine (strong CYP2D6 inhibitors), Carbamazepine and enzyme inducers, Levodopa and dopamine agonists, Antihypertensives. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -945,7 +945,7 @@ export const risperidone: Drug = {
     ],
     typicalDoses: "Psychosis 2–6 mg at bedtime; mania 2–6 mg; autism irritability 0.5–2 mg (paediatric); Consta 25–50 mg IM q2wk.",
     prescribingScenarios: [
-      "Acute mania admissions in district hospitals — low cost and IM availability.",
+      "Acute mania admissions in district hospitals: low cost and IM availability.",
       "Maintenance via Consta in government psychiatry institutes for relapse prevention.",
       "Paediatric autism-related aggression in developmental clinics.",
       "Schizophrenia first-episode protocols in medical colleges.",
@@ -961,8 +961,8 @@ export const risperidone: Drug = {
     monitoring: "Weight/BMI, fasting glucose, and lipids at baseline and periodically per district-hospital protocols; AIMS where feasible; prolactin only when symptomatic.",
     patientCounselling: [
       "Bedtime dosing for sedation and orthostasis.",
-      "Ask women about periods and men about breast discomfort at every visit — prolactin effects are common and treatable.",
-      "Consta appointments are every 2 weeks — missing one risks relapse.",
+      "Ask women about periods and men about breast discomfort at every visit: prolactin effects are common and treatable.",
+      "Consta appointments are every 2 weeks, missing one risks relapse.",
       "Do not stop the medicine when the family pressure to stop it is highest (early recovery).",
     ],
   },
@@ -998,55 +998,55 @@ export const risperidone: Drug = {
         name: "Risperidone",
         slug: "risperidone",
         relationship: "This guide",
-        distinguishing: "Most potent D2 blockade among atypicals — highest prolactin, best-studied LAI",
+        distinguishing: "Most potent D2 blockade among atypicals: highest prolactin, best-studied LAI",
       },
       {
         name: "Aripiprazole",
         slug: "aripiprazole",
         relationship: "Same class (Dopamine Stabiliser)",
-        distinguishing: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+        distinguishing: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
       },
       {
         name: "Clozapine",
         slug: "clozapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
       },
       {
         name: "Lurasidone",
         slug: "lurasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+        distinguishing: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
       },
       {
         name: "Olanzapine",
         slug: "olanzapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+        distinguishing: "Most robust broad-spectrum atypical: heaviest metabolic burden",
       },
       {
         name: "Paliperidone",
         slug: "paliperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The LAI platform king — monthly to 6-monthly injections for schizophrenia",
+        distinguishing: "The LAI platform king: monthly to 6-monthly injections for schizophrenia",
       },
       {
         name: "Quetiapine",
         slug: "quetiapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin — the sedating antidepressant-antipsychotic",
+        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin: the sedating antidepressant-antipsychotic",
       },
       {
         name: "Ziprasidone",
         slug: "ziprasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic — with QT vigilance",
+        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic, with QT vigilance",
       },
       {
         name: "Amisulpride",
         slug: "amisulpride",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The dose-band benzamide — European/Indian staple with the clozapine-drool rescue",
+        distinguishing: "The dose-band benzamide. European/Indian staple with the clozapine-drool rescue",
       },
     ],
   },
@@ -1194,7 +1194,7 @@ export const risperidone: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Risperidone in two sentences.",
-      answer: "Risperidone blocks 5-HT2A receptors with high affinity and D2 receptors potently — a strong serotonin-dopamine antagonist; its active metabolite (paliperidone) adds a long-acting second wave. Net effect: Powerful reduction of positive psychotic and manic symptoms; dose-dependent EPS and prolactin elevation as the D2 occupancy extends beyond therapeutic range.",
+      answer: "Risperidone blocks 5-HT2A receptors with high affinity and D2 receptors potently: a strong serotonin-dopamine antagonist; its active metabolite (paliperidone) adds a long-acting second wave. Net effect: Powerful reduction of positive psychotic and manic symptoms; dose-dependent EPS and prolactin elevation as the D2 occupancy extends beyond therapeutic range.",
       topic: "Mechanism",
     },
     {
@@ -1204,7 +1204,7 @@ export const risperidone: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Risperidone and how you would manage it.",
-      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — reported with risperidone as with all D2 blockers. Management: Stop immediately; ICU supportive care; dantrolene/bromocriptine.",
+      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness; reported with risperidone as with all D2 blockers. Management: Stop immediately; ICU supportive care; dantrolene/bromocriptine.",
       topic: "Safety",
     },
     {
@@ -1214,7 +1214,7 @@ export const risperidone: Drug = {
     },
     {
       question: "Share one clinical pearl about Risperidone that separates safe prescribers from unsafe ones.",
-      answer: "At 6 mg the drug flips: below it an atypical, above it a typical — dose discipline is everything.",
+      answer: "At 6 mg the drug flips: below it an atypical, above it a typical; dose discipline is everything.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1290,7 +1290,7 @@ export const risperidone: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1335,7 +1335,7 @@ export const risperidone: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Risperidone works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Risperidone works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1351,7 +1351,7 @@ export const risperidone: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Risperidone safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Risperidone safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1382,13 +1382,13 @@ export const risperidone: Drug = {
       "Mania: anti-manic effect often visible within 2–5 days.",
       "Schizophrenia: agitation and hostility improve within days; positive symptoms over 1–3 weeks.",
       "Autism irritability: aggressive and self-injurious behaviour often improves within 1–2 weeks.",
-      "Consta: no significant release for 3 weeks — oral supplementation mandatory at initiation.",
+      "Consta: no significant release for 3 weeks; oral supplementation mandatory at initiation.",
     ],
     ifItWorks: [
       "Continue at the lowest effective dose; taper toward 2–4 mg/day for maintenance if tolerated.",
       "In bipolar disorder, pair with a mood stabiliser for long-term prophylaxis and plan the antipsychotic exit (usually after 3–6 months of stability).",
       "In schizophrenia, continue for at least 1–2 years after the first episode; indefinitely after relapse.",
-      "Consider switching to LAI if adherence is fragile — early, not after the second relapse.",
+      "Consider switching to LAI if adherence is fragile: early, not after the second relapse.",
     ],
     ifItDoesNotWork: [
       "Confirm adherence and allow an adequate trial of Risperidone (4–6 weeks at target dose) before judging response.",
@@ -1397,23 +1397,23 @@ export const risperidone: Drug = {
     augmentationCombos: [
       "Lithium or valproate in mania not controlled by risperidone alone.",
       "Benzodiazepine short-term for agitation or catatonic features.",
-      "Antidepressant continuation for comorbid depression — monitor for switching.",
+      "Antidepressant continuation for comorbid depression: monitor for switching.",
       "In TRS, the evidence-based move is clozapine, not polypharmacy.",
     ],
     testsBeforeStarting: [
       "Baseline weight/BMI, waist, fasting glucose/HbA1c, lipids, blood pressure.",
       "Pregnancy test where relevant.",
       "Baseline AIMS; consider baseline ECG if cardiac risk factors.",
-      "Prolactin only if symptoms emerge — routine screening is not required.",
+      "Prolactin only if symptoms emerge: routine screening is not required.",
     ],
     sideEffectLogic: [
       "Adverse effects follow receptor binding: strong D2 → EPS and prolactin; alpha-1 → orthostasis; H1 → sedation; 5-HT2C/H1 → weight gain. Every risperidone side effect is predictable from its binding profile.",
     ],
     sideEffectManagement: [
-      "Wait — nausea, headache, and sedation usually settle within 1–2 weeks.",
-      "Reduce the dose — the single most effective manoeuvre for EPS and prolactin effects.",
+      "Wait: nausea, headache, and sedation usually settle within 1–2 weeks.",
+      "Reduce the dose: the single most effective manoeuvre for EPS and prolactin effects.",
       "Add an anticholinergic for parkinsonism/dystonia; propranolol for akathisia.",
-      "Switch to aripiprazole if hyperprolactinaemia is symptomatic — prolactin reliably falls.",
+      "Switch to aripiprazole if hyperprolactinaemia is symptomatic: prolactin reliably falls.",
     ],
     sideEffectRescue: [
       "Benztropine or trihexyphenidyl for acute dystonia and parkinsonism.",
@@ -1463,7 +1463,7 @@ export const risperidone: Drug = {
         target: "1–2.5 mg/day",
         max: "2.5 mg/day",
         notes: [
-          "Weight gain in children is the main concern — monitor closely",
+          "Weight gain in children is the main concern. Monitor closely",
         ],
       },
       {
@@ -1478,7 +1478,7 @@ export const risperidone: Drug = {
         ],
       },
       {
-        indication: "LAI — Consta (q2wk IM gluteal/deltoid)",
+        indication: "LAI. Consta (q2wk IM gluteal/deltoid)",
         starting: "25 mg every 2 weeks",
         titration: "Oral overlap 3 weeks at initiation; dose adjustments no more often than every 4 weeks",
         target: "25–50 mg q2wk",
@@ -1489,7 +1489,7 @@ export const risperidone: Drug = {
         ],
       },
       {
-        indication: "LAI — Perseris (monthly SC abdominal)",
+        indication: "LAI. Perseris (monthly SC abdominal)",
         starting: "90 mg monthly",
         titration: "No oral overlap needed if already tolerating oral risperidone; can start directly",
         target: "90–120 mg/month",
@@ -1507,26 +1507,26 @@ export const risperidone: Drug = {
       "Perseris 90, 120 mg SC prefilled syringe (monthly)",
     ],
     dosingTips: [
-      "Dose at bedtime — sedation and orthostasis then mostly occur during sleep.",
+      "Dose at bedtime: sedation and orthostasis then mostly occur during sleep.",
       "Start 0.5–1 mg in the elderly and in children; their receptors are more sensitive.",
       "The dose–response ceiling is real: beyond 6 mg most extra binding is adverse, not therapeutic.",
-      "When adding fluoxetine, expect higher risperidone levels — halve and titrate.",
+      "When adding fluoxetine, expect higher risperidone levels: halve and titrate.",
       "Consta must be given every 2 weeks strictly; a 3–4 week gap requires re-initiation with oral overlap.",
-      "Ask about sexual and menstrual health at every review — prolactin symptoms are silent until asked.",
+      "Ask about sexual and menstrual health at every review: prolactin symptoms are silent until asked.",
       "Inexpensive generics make risperidone the workhorse antipsychotic in Indian public health settings.",
     ],
     overdose: [
       "Somnolence, EPS, hypotension, and tachycardia are expected; QT prolongation possible with large overdoses.",
-      "Management: supportive — airway, circulation, IV fluids for hypotension; avoid major tranquilisers.",
+      "Management: supportive; airway, circulation, IV fluids for hypotension; avoid major tranquilisers.",
       "No specific antidote; dialysis does not remove the drug (high protein binding).",
     ],
-    longTermUse: "Years of use are well characterised; principal long-term risks are tardive dyskinesia, metabolic drift, and prolactin-related bone density loss — monitor AIMS, weight, and bone health in long-term users.",
+    longTermUse: "Years of use are well characterised; principal long-term risks are tardive dyskinesia, metabolic drift, and prolactin-related bone density loss. Monitor AIMS, weight, and bone health in long-term users.",
     habitForming: "Not considered habit-forming.",
     howToStop: [
-      "Taper rather than stop abruptly — rebound insomnia, agitation, and psychosis risk.",
+      "Taper rather than stop abruptly: rebound insomnia, agitation, and psychosis risk.",
       "Reduce by about 1 mg every 1–2 weeks at maintenance doses.",
       "After a single psychotic episode, guidelines still favour at least 1 year of continuation.",
-      "For Consta, remember the 3-week release delay works in reverse — effects persist weeks after the last injection.",
+      "For Consta, remember the 3-week release delay works in reverse: effects persist weeks after the last injection.",
     ],
     pharmacokinetics: [
       "Half-life ~20–24 h combined (parent + paliperidone).",
@@ -1537,8 +1537,8 @@ export const risperidone: Drug = {
     doNotUse: [
       "Known hypersensitivity to risperidone/paliperidone.",
       "Dementia-related psychosis in the elderly (boxed warning).",
-      "Parkinson's disease psychosis — D2 blockade worsens motor symptoms.",
-      "As an as-needed sedative — prolactin and EPS risks are not PRN-friendly.",
+      "Parkinson's disease psychosis. D2 blockade worsens motor symptoms.",
+      "As an as-needed sedative: prolactin and EPS risks are not PRN-friendly.",
     ],
     specialPopulations: [
       {
@@ -1552,21 +1552,21 @@ export const risperidone: Drug = {
         population: "Hepatic impairment",
         guidance: [
           "Start low (0.5 mg) in moderate–severe impairment.",
-          "First-pass metabolism affected — watch for excessive first-dose hypotension.",
+          "First-pass metabolism affected: watch for excessive first-dose hypotension.",
         ],
       },
       {
         population: "Cardiac impairment",
         guidance: [
-          "Caution with heart failure — alpha-1 blockade and tachycardia.",
-          "Modest QT effect — ECG if additional QT drugs.",
+          "Caution with heart failure: alpha-1 blockade and tachycardia.",
+          "Modest QT effect. ECG if additional QT drugs.",
         ],
       },
       {
         population: "Elderly",
         guidance: [
           "Start 0.25–0.5 mg; the elderly are exquisitely sensitive to EPS, orthostasis, and falls.",
-          "Dementia-related psychosis: boxed warning — avoid.",
+          "Dementia-related psychosis: boxed warning; avoid.",
           "Stroke risk in elderly dementia patients is dose-related.",
         ],
       },
@@ -1574,7 +1574,7 @@ export const risperidone: Drug = {
         population: "Children and adolescents",
         guidance: [
           "Approved: schizophrenia ≥13, mania ≥10, autism irritability 5–16.",
-          "Start at half the adult dose per kg; children gain weight faster — monitor BMI at every visit.",
+          "Start at half the adult dose per kg; children gain weight faster. Monitor BMI at every visit.",
           "Prolactin effects in adolescents deserve specific counselling (delayed puberty, menstrual changes).",
         ],
       },
@@ -1582,7 +1582,7 @@ export const risperidone: Drug = {
         population: "Pregnancy and breastfeeding",
         guidance: [
           "Registry data show no major teratogenic signal; data limited.",
-          "Relapse prevention usually outweighs risk — do not stop abruptly.",
+          "Relapse prevention usually outweighs risk: do not stop abruptly.",
           "Third trimester: neonatal EPS/withdrawal monitoring.",
           "Breastfeeding: small amounts in milk; usually acceptable with infant monitoring.",
         ],
@@ -1597,8 +1597,8 @@ export const risperidone: Drug = {
       "Lowest-dose-friendly: works at 2–4 mg in most patients.",
     ],
     potentialDisadvantages: [
-      "Hyperprolactinaemia — highest among atypicals.",
-      "EPS above 6 mg/day — the 'atypical' advantage is dose-limited.",
+      "Hyperprolactinaemia: highest among atypicals.",
+      "EPS above 6 mg/day: the 'atypical' advantage is dose-limited.",
       "Orthostatic hypotension at initiation.",
       "Moderate weight and metabolic risk.",
       "Wrong choice for Parkinson's psychosis.",
@@ -1611,19 +1611,19 @@ export const risperidone: Drug = {
       "Tics (off-label)",
     ],
     pearls: [
-      "At 6 mg the drug flips: below it an atypical, above it a typical — dose discipline is everything.",
-      "Prolactin problems announce themselves only if you ask — build one question into every review.",
-      "Aripiprazole is the antidote to risperidone hyperprolactinaemia — switching reliably normalises it.",
-      "Consta takes 3 weeks to start working — '3-week overlap' is the rule to tattoo on the prescription.",
-      "Paliperidone is just risperidone's active metabolite — the entire Invega family is risperidone pharmacology.",
-      "In children with autism-related irritability, weight gain is the price of dramatically reduced tantrums — pre-empt with lifestyle counselling.",
-      "Fluoxetine plus risperidone is a stealth interaction — levels rise quietly.",
-      "For long-term users, remember bones: chronic hyperprolactinaemia reduces bone density — check vitamin D and calcium status periodically.",
+      "At 6 mg the drug flips: below it an atypical, above it a typical; dose discipline is everything.",
+      "Prolactin problems announce themselves only if you ask: build one question into every review.",
+      "Aripiprazole is the antidote to risperidone hyperprolactinaemia, switching reliably normalises it.",
+      "Consta takes 3 weeks to start working: '3-week overlap' is the rule to tattoo on the prescription.",
+      "Paliperidone is just risperidone's active metabolite. The entire Invega family is risperidone pharmacology.",
+      "In children with autism-related irritability, weight gain is the price of dramatically reduced tantrums: pre-empt with lifestyle counselling.",
+      "Fluoxetine plus risperidone is a stealth interaction: levels rise quietly.",
+      "For long-term users, remember bones: chronic hyperprolactinaemia reduces bone density. Check vitamin D and calcium status periodically.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

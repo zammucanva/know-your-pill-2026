@@ -10,7 +10,7 @@ export const citalopramPatientGuide: PatientGuide = {
   slug: "citalopram",
 
   classInPlainWords:
-    "Citalopram is an SSRI (selective serotonin reuptake inhibitor) — a common antidepressant with a maximum dose cap that protects your heart rhythm.",
+    "Citalopram is an SSRI (selective serotonin reuptake inhibitor): a common antidepressant with a maximum dose cap that protects your heart rhythm.",
 
   whatIsThis: citalopram.patientMode.tagline,
 
@@ -51,11 +51,11 @@ export const citalopramPatientGuide: PatientGuide = {
   },
 
   whenNotice:
-    "Some early changes — sleep, appetite, energy — can happen within 1–2 weeks, but clearer mood benefit typically takes 4–6 weeks for depression. For anxiety disorders and OCD, full effect may take 8–12 weeks. Don't stop early just because you don't feel better yet.",
+    "Some early changes (sleep, appetite, energy) can happen within 1–2 weeks, but clearer mood benefit typically takes 4–6 weeks for depression. For anxiety disorders and OCD, full effect may take 8–12 weeks. Don't stop early just because you don't feel better yet.",
 
   timelineShort: "4–6 weeks for depression; 8–12 for anxiety or OCD",
 
-  usuallyTaken: "Morning or night — whichever suits you",
+  usuallyTaken: "Morning or night: whichever suits you",
 
   commonSideEffects: {
     intro: citalopram.patientMode.sideEffects,
@@ -67,26 +67,26 @@ export const citalopramPatientGuide: PatientGuide = {
       "Sweating",
       "Loose stools (diarrhoea)",
       "Dizziness",
-      "Cold-like symptoms (upper respiratory tract infection) — reported slightly more often than with a placebo in trials",
-      "Sexual side effects — lower interest or difficulty reaching orgasm",
+      "Cold-like symptoms (upper respiratory tract infection): reported slightly more often than with a placebo in trials",
+      "Sexual side effects: lower interest or difficulty reaching orgasm",
     ],
   },
 
   importantSideEffects: {
     intro:
-      "Serious side effects are rare, but you should know the signs so you can recognise them early. The most important citalopram-specific issue is its effect on the heart's rhythm — this is why the dose is capped.",
+      "Serious side effects are rare, but you should know the signs so you can recognise them early. The most important citalopram-specific issue is its effect on the heart's rhythm. This is why the dose is capped.",
     items: [
       {
         name: "Heart rhythm change (QTc prolongation) and torsades de pointes",
         whatItMeans:
-          "Citalopram can lengthen the heart's electrical recovery time — the QT interval seen on an ECG (a heart-rhythm tracing). In rare cases this triggers a dangerous irregular heartbeat called torsades de pointes. The risk rises with higher doses — which is why the maximum is 40 mg a day for most adults and 20 mg a day if you are over 60 or take certain other medicines.",
+          "Citalopram can lengthen the heart's electrical recovery time: the QT interval seen on an ECG (a heart-rhythm tracing). In rare cases this triggers a dangerous irregular heartbeat called torsades de pointes. The risk rises with higher doses, which is why the maximum is 40 mg a day for most adults and 20 mg a day if you are over 60 or take certain other medicines.",
         whatToDo:
           "Get emergency help for palpitations (a fast, pounding, or irregular heartbeat), fainting, or near-fainting. Tell your doctor if you have heart problems, low potassium or magnesium, or take other heart-rhythm medicines.",
       },
       {
         name: "Serotonin syndrome",
         whatItMeans:
-          "A rare but serious reaction caused by too much serotonin activity — usually when combined with another medicine that affects serotonin.",
+          "A rare but serious reaction caused by too much serotonin activity: usually when combined with another medicine that affects serotonin.",
         whatToDo:
           "Get emergency help straight away if you have a high fever with confusion, sweating, shaking, muscle twitching or stiffness, or a fast heartbeat.",
       },
@@ -102,7 +102,7 @@ export const citalopramPatientGuide: PatientGuide = {
         whatItMeans:
           "In the first month or two, antidepressants can occasionally make mood worse instead of better. Citalopram is not approved for depression in people under 18.",
         whatToDo:
-          "Contact your doctor immediately — do not wait — if you feel more agitated, irritable, anxious, or have any new thoughts of harming yourself.",
+          "Contact your doctor immediately (do not wait) if you feel more agitated, irritable, anxious, or have any new thoughts of harming yourself.",
       },
       {
         name: "Abnormal bleeding",
@@ -115,29 +115,29 @@ export const citalopramPatientGuide: PatientGuide = {
   },
 
   tellYourDoctor: [
-    "All other medicines you take — especially antibiotics (erythromycin, clarithromycin, moxifloxacin, ciprofloxacin), antipsychotics, and heart rhythm medicines.",
-    "If you take omeprazole or esomeprazole for reflux — these raise citalopram levels and mean your dose must stay at 20 mg a day or less.",
+    "All other medicines you take, especially antibiotics (erythromycin, clarithromycin, moxifloxacin, ciprofloxacin), antipsychotics, and heart rhythm medicines.",
+    "If you take omeprazole or esomeprazole for reflux. These raise citalopram levels and mean your dose must stay at 20 mg a day or less.",
     "Any herbal products, especially St John's Wort.",
     "Any heart condition, low potassium or magnesium, or long-QT syndrome (including family history).",
     "If you are pregnant, planning a pregnancy, or breastfeeding.",
-    "If you are over 60 — your dose is capped lower and your doctor may check an ECG.",
+    "If you are over 60: your dose is capped lower and your doctor may check an ECG.",
   ],
 
   interactions: citalopram.patientMode.interactions,
 
   missedDose:
-    "Take the missed dose as soon as you remember, unless it is within 8 hours of your next dose — in that case, skip it and continue normally. Do not double up. If you have missed several doses, you may notice mild withdrawal-like symptoms (dizziness, 'brain zaps') — these usually settle as you resume the medicine.",
+    "Take the missed dose as soon as you remember, unless it is within 8 hours of your next dose. In that case, skip it and continue normally. Do not double up. If you have missed several doses, you may notice mild withdrawal-like symptoms (dizziness, 'brain zaps'): these usually settle as you resume the medicine.",
 
   stopping:
-    "Do not stop citalopram suddenly without medical guidance. Your doctor will recommend a gradual taper over at least four weeks. Stopping suddenly can cause uncomfortable withdrawal-like symptoms — dizziness, 'brain zaps', nausea, and irritability. For a first episode of depression, treatment usually continues for 6–12 months after you feel better, because stopping earlier raises the risk of the depression coming back.",
+    "Do not stop citalopram suddenly without medical guidance. Your doctor will recommend a gradual taper over at least four weeks. Stopping suddenly can cause uncomfortable withdrawal-like symptoms: dizziness, 'brain zaps', nausea, and irritability. For a first episode of depression, treatment usually continues for 6–12 months after you feel better, because stopping earlier raises the risk of the depression coming back.",
 
   monitoring: citalopram.patientMode.monitoring,
 
   urgentHelp: {
     intro:
-      "Get urgent medical help — do not wait to see if it passes — if any of these happen:",
+      "Get urgent medical help (do not wait to see if it passes) if any of these happen:",
     signs: [
-      "Palpitations, fainting, or near-fainting — citalopram can affect the heart's rhythm (torsades de pointes).",
+      "Palpitations, fainting, or near-fainting: citalopram can affect the heart's rhythm (torsades de pointes).",
       "A high fever with confusion, sweating, shaking, muscle twitching or stiffness, and a fast heartbeat (possible serotonin syndrome).",
       "New or worsening thoughts of harming yourself, especially in the first month.",
       "Confusion, a seizure, or a severe new headache.",
@@ -147,9 +147,9 @@ export const citalopramPatientGuide: PatientGuide = {
   },
 
   keyReminders: [
-    "The maximum dose is 40 mg a day — 20 mg if you are over 60 or take certain medicines (like omeprazole). Never increase the dose yourself.",
-    "Full benefit takes 4–6 weeks for depression — don't stop early.",
-    "Tell every doctor, dentist, and pharmacist that you take citalopram — many common medicines interact with it.",
+    "The maximum dose is 40 mg a day: 20 mg if you are over 60 or take certain medicines (like omeprazole). Never increase the dose yourself.",
+    "Full benefit takes 4–6 weeks for depression. Don't stop early.",
+    "Tell every doctor, dentist, and pharmacist that you take citalopram, many common medicines interact with it.",
     "Get emergency help for palpitations or fainting.",
     "It is not addictive, but stopping suddenly can cause uncomfortable withdrawal-like symptoms.",
     "Keep alcohol to a minimum or avoid it, especially in the first month.",

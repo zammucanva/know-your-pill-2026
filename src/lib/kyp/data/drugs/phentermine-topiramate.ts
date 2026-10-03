@@ -23,14 +23,14 @@ export const phentermineTopiramate: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Specialised Agents", "Weight Management Agents", "Phentermine-Topiramate"],
   /* ---- Hero / summary ---- */
-  tagline: "The stimulant-anticonvulsant weight combination — appetite from two directions.",
-  summary: "Phentermine-topiramate (Qsymia) is the combination weight-management product: phentermine (sympathomimetic appetite suppression) plus topiramate (multi-mechanism appetite/craving reduction) at low doses — the highest placebo-subtracted weight loss of the modern anti-obesity drugs, governed by teratogenicity (topiramate's cleft risk), stimulant cautions, and strict pregnancy-prevention rules.",
+  tagline: "The stimulant-anticonvulsant weight combination: appetite from two directions.",
+  summary: "Phentermine-topiramate (Qsymia) is the combination weight-management product: phentermine (sympathomimetic appetite suppression) plus topiramate (multi-mechanism appetite/craving reduction) at low doses; the highest placebo-subtracted weight loss of the modern anti-obesity drugs, governed by teratogenicity (topiramate's cleft risk), stimulant cautions, and strict pregnancy-prevention rules.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Phentermine-Topiramate — from its molecular target (Phentermine (sympathomimetic NA/DA releaser) + topiramate (multi-mechanism appetite suppression)) to clinical effect.",
+    "Explain the mechanism of action of Phentermine-Topiramate, from its molecular target (Phentermine (sympathomimetic NA/DA releaser) + topiramate (multi-mechanism appetite suppression)) to clinical effect.",
     "List the FDA-approved and off-label uses of Phentermine-Topiramate.",
     "Predict the common and serious side effects of Phentermine-Topiramate from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Phentermine-Topiramate.",
@@ -38,15 +38,15 @@ export const phentermineTopiramate: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Phentermine suppresses appetite via sympathomimetic catecholamine release; low-dose topiramate adds a second appetite-craving mechanism — dual-pathway weight pharmacology.",
+    summary: "Phentermine suppresses appetite via sympathomimetic catecholamine release; low-dose topiramate adds a second appetite-craving mechanism: dual-pathway weight pharmacology.",
     molecularTarget: "Phentermine (sympathomimetic NA/DA releaser) + topiramate (multi-mechanism appetite suppression)",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Phentermine suppresses appetite via sympathomimetic catecholamine release; low-dose topiramate adds a second appetite-craving mechanism — dual-pathway weight pharmacology.",
+      "Phentermine suppresses appetite via sympathomimetic catecholamine release; low-dose topiramate adds a second appetite-craving mechanism: dual-pathway weight pharmacology.",
       "The mechanism translates into the clinical profile described.",
       "Practical use follows half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life Phentermine ~20 h; topiramate ~21 h (the pair is once-daily). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life Phentermine ~20 h; topiramate ~21 h (the pair is once-daily). See mechanism and prescriber sections.",
     halfLife: "Phentermine ~20 h; topiramate ~21 h (the pair is once-daily).",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -109,7 +109,7 @@ export const phentermineTopiramate: Drug = {
         label: "produces",
       },
     ],
-    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation — the central paradox of antidepressant pharmacology.",
+    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation: the central paradox of antidepressant pharmacology.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Norepinephrine (NE)", "Dopamine (DA)", "Glutamate"],
@@ -146,7 +146,7 @@ export const phentermineTopiramate: Drug = {
   blackBoxWarnings: [
     {
       title: "Teratogenicity (topiramate component)",
-      text: "Phentermine-topiramate can cause fetal harm (oral clefts) — pregnancy testing before initiation and monthly during use; discontinue if pregnancy occurs.",
+      text: "Phentermine-topiramate can cause fetal harm (oral clefts): pregnancy testing before initiation and monthly during use; discontinue if pregnancy occurs.",
     },
   ],
   /* ---- Side effects ---- */
@@ -214,7 +214,7 @@ export const phentermineTopiramate: Drug = {
   monitoring: [
     {
       parameter: "Pregnancy testing",
-      frequency: "Baseline and monthly — a prescribing condition",
+      frequency: "Baseline and monthly: a prescribing condition",
       rationale: "The topiramate teratogenicity programme.",
     },
     {
@@ -261,48 +261,48 @@ export const phentermineTopiramate: Drug = {
   ],
   pregnancy: {
     legacyCategory: "X for weight use",
-    summary: "Absolutely contraindicated in pregnancy for weight indications — the pregnancy-testing programme is a condition of prescribing.",
-    lactation: "Avoid — both components pass into milk.",
+    summary: "Absolutely contraindicated in pregnancy for weight indications: the pregnancy-testing programme is a condition of prescribing.",
+    lactation: "Avoid, both components pass into milk.",
   },
   renalAdjustment: "Avoid in severe renal impairment; dose limits at moderate.",
   hepaticAdjustment: "Not recommended in significant hepatic impairment.",
   /* ---- Education ---- */
   patientExplanation: "This combination capsule treats obesity with two medicines at once: one suppresses appetite through the body's alerting chemicals, and the second (an epilepsy-class drug) reduces cravings. Because one component can harm an unborn baby, pregnancy tests before starting and monthly during treatment are required. Tingling fingers and word-finding difficulty are its best-known effects.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Phentermine-Topiramate builds over weeks — do not judge it in the first days.",
+    "Benefit from Phentermine-Topiramate builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The dual-pathway logic: phentermine hits appetite sympathetically while topiramate hits cravings multi-mechanistically — two half-drugs at tolerable doses.",
-    "The 12-week gate: escalate only after ≥ 3% loss at the standard dose — outcome-disciplined prescribing.",
-    "The pregnancy programme: monthly testing while on the drug is a US prescribing condition — topiramate's cleft risk is the reason.",
-    "The GLP-1 era context: ~9-10% placebo-subtracted loss led its generation — the comparator baseline semaglutide has now redefined.",
+    "The dual-pathway logic: phentermine hits appetite sympathetically while topiramate hits cravings multi-mechanistically; two half-drugs at tolerable doses.",
+    "The 12-week gate: escalate only after ≥ 3% loss at the standard dose; outcome-disciplined prescribing.",
+    "The pregnancy programme: monthly testing while on the drug is a US prescribing condition; topiramate's cleft risk is the reason.",
+    "The GLP-1 era context: ~9-10% placebo-subtracted loss led its generation; the comparator baseline semaglutide has now redefined.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Phentermine-Topiramate: Phentermine suppresses appetite via sympathomimetic catecholamine release; low-dose topiramate adds a second appetite-craving mechanism — dual-pathway weight pharmacology.",
+        "Mechanism of Phentermine-Topiramate: Phentermine suppresses appetite via sympathomimetic catecholamine release; low-dose topiramate adds a second appetite-craving mechanism: dual-pathway weight pharmacology.",
         "Uses of Phentermine-Topiramate: Chronic weight management (BMI ≥ 30, or ≥ 27 with a comorbidity)",
-        "Mechanism: phentermine (sympathomimetic releaser) + topiramate (multi-mechanism appetite) — dual pathway.",
-        "Indication: chronic weight management — highest pre-GLP-1 efficacy (~9-10%).",
+        "Mechanism: phentermine (sympathomimetic releaser) + topiramate (multi-mechanism appetite); dual pathway.",
+        "Indication: chronic weight management; highest pre-GLP-1 efficacy (~9-10%).",
       ],
       practical: [
         "Prescribe Phentermine-Topiramate for chronic weight management (bmi ≥ 30, or ≥ 27 with a comorbidity) with dose, timing, and duration.",
-        "Outline the monitoring plan: Pregnancy testing (Baseline and monthly — a prescribing condition); Heart rate and blood pressure (Baseline and regularly); Weight trajectory (Monthly; 12-week gate)",
+        "Outline the monitoring plan: Pregnancy testing (Baseline and monthly, a prescribing condition); Heart rate and blood pressure (Baseline and regularly); Weight trajectory (Monthly; 12-week gate)",
       ],
       longAnswer: [
-        "Phentermine-Topiramate: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: phentermine (sympathomimetic releaser) + topiramate (multi-mechanism appetite) — dual pathway.",
-        "Indication: chronic weight management — highest pre-GLP-1 efficacy (~9-10%).",
+        "Phentermine-Topiramate: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: phentermine (sympathomimetic releaser) + topiramate (multi-mechanism appetite); dual pathway.",
+        "Indication: chronic weight management; highest pre-GLP-1 efficacy (~9-10%).",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: phentermine (sympathomimetic releaser) + topiramate (multi-mechanism appetite) — dual pathway.",
-        "Indication: chronic weight management — highest pre-GLP-1 efficacy (~9-10%).",
+        "Mechanism: phentermine (sympathomimetic releaser) + topiramate (multi-mechanism appetite); dual pathway.",
+        "Indication: chronic weight management; highest pre-GLP-1 efficacy (~9-10%).",
         "Teratogenicity (topiramate component): pregnancy testing is a prescribing condition.",
         "Phased escalation; 12-week 3%-loss gate for higher doses.",
         "Phentermine cautions: HR/BP, insomnia; topiramate cautions: cognition, stones, acidosis.",
@@ -310,13 +310,13 @@ export const phentermineTopiramate: Drug = {
       ],
       pyqConcepts: [
         "Mechanism/target of Phentermine-Topiramate",
-        "Key adverse effect: Teratogenicity (topiramate component — oral clefts)",
+        "Key adverse effect: Teratogenicity (topiramate component, oral clefts)",
         "Dosing and titration of Phentermine-Topiramate",
       ],
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Phentermine-Topiramate develops teratogenicity (topiramate component — oral clefts) — next best step?",
+        "A patient on Phentermine-Topiramate develops teratogenicity (topiramate component (oral clefts)) next best step?",
         "When to choose Phentermine-Topiramate over alternatives in its class.",
       ],
     },
@@ -329,17 +329,17 @@ export const phentermineTopiramate: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The dual-pathway logic: phentermine hits appetite sympathetically while topiramate hits cravings multi-mechanistically — two half-drugs at tolerable doses.",
-        "The 12-week gate: escalate only after ≥ 3% loss at the standard dose — outcome-disciplined prescribing.",
-        "The pregnancy programme: monthly testing while on the drug is a US prescribing condition — topiramate's cleft risk is the reason.",
-        "The GLP-1 era context: ~9-10% placebo-subtracted loss led its generation — the comparator baseline semaglutide has now redefined.",
+        "The dual-pathway logic: phentermine hits appetite sympathetically while topiramate hits cravings multi-mechanistically; two half-drugs at tolerable doses.",
+        "The 12-week gate: escalate only after ≥ 3% loss at the standard dose; outcome-disciplined prescribing.",
+        "The pregnancy programme: monthly testing while on the drug is a US prescribing condition; topiramate's cleft risk is the reason.",
+        "The GLP-1 era context: ~9-10% placebo-subtracted loss led its generation; the comparator baseline semaglutide has now redefined.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: phentermine (sympathomimetic releaser) + topiramate (multi-mechanism appetite) — dual pathway.",
-    "Indication: chronic weight management — highest pre-GLP-1 efficacy (~9-10%).",
+    "Mechanism: phentermine (sympathomimetic releaser) + topiramate (multi-mechanism appetite); dual pathway.",
+    "Indication: chronic weight management; highest pre-GLP-1 efficacy (~9-10%).",
     "Teratogenicity (topiramate component): pregnancy testing is a prescribing condition.",
     "Phased escalation; 12-week 3%-loss gate for higher doses.",
     "Phentermine cautions: HR/BP, insomnia; topiramate cautions: cognition, stones, acidosis.",
@@ -348,7 +348,7 @@ export const phentermineTopiramate: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — chronic weight management (bmi ≥ 30, or ≥ 27 with a comorbidity)",
+      title: "First presentation: chronic weight management (bmi ≥ 30, or ≥ 27 with a comorbidity)",
       presentation: "A patient presenting with chronic weight management (bmi ≥ 30, or ≥ 27 with a comorbidity), started on Phentermine-Topiramate.",
       history: "A adult patient presents with a chronic weight management (bmi ≥ 30, or ≥ 27 with a comorbidity) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with chronic weight management (bmi ≥ 30, or ≥ 27 with a comorbidity); physical examination and baseline investigations are unremarkable.",
@@ -357,7 +357,7 @@ export const phentermineTopiramate: Drug = {
       management: "Started at 3.75/23 mg daily × 14 days, titrated to 7.5/46 mg daily with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Phentermine-Topiramate takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Phentermine-Topiramate takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -366,7 +366,7 @@ export const phentermineTopiramate: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Weight Management comparison — choosing within the class",
+      title: "Weight Management comparison: choosing within the class",
       primaryDrug: "Phentermine-Topiramate",
       rows: [
         {
@@ -411,7 +411,7 @@ export const phentermineTopiramate: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The highest-efficacy older weight combination — pregnancy-governed",
+          primaryValue: "The highest-efficacy older weight combination: pregnancy-governed",
           comparisons: [
             {
               drug: "Lorcaserin",
@@ -420,7 +420,7 @@ export const phentermineTopiramate: Drug = {
           ],
         },
       ],
-      takeaway: "All weight management agents share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All weight management agents share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -429,7 +429,7 @@ export const phentermineTopiramate: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Phentermine-Topiramate reaches peak plasma concentration and begins acting at its molecular target (Phentermine (sympathomimetic NA/DA releaser) + topiramate (multi-mechanism appetite suppression)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Phentermine-Topiramate reaches peak plasma concentration and begins acting at its molecular target (Phentermine (sympathomimetic NA/DA releaser) + topiramate (multi-mechanism appetite suppression)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -465,7 +465,7 @@ export const phentermineTopiramate: Drug = {
   faqs: [
     {
       question: "How long does Phentermine-Topiramate take to work?",
-      answer: "Appetite effects within weeks; weight trajectory monthly.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Appetite effects within weeks; weight trajectory monthly.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Phentermine-Topiramate?",
@@ -473,11 +473,11 @@ export const phentermineTopiramate: Drug = {
     },
     {
       question: "Can I stop Phentermine-Topiramate suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Phentermine-Topiramate habit-forming?",
@@ -485,7 +485,7 @@ export const phentermineTopiramate: Drug = {
     },
     {
       question: "Can I take Phentermine-Topiramate during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Phentermine-Topiramate may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Phentermine-Topiramate may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -583,7 +583,7 @@ export const phentermineTopiramate: Drug = {
       note: "Key indication",
     },
     {
-      label: "Teratogenicity (topiramate component — oral clefts)",
+      label: "Teratogenicity (topiramate component, oral clefts)",
       type: "side-effect",
       href: "#side-effects",
       note: "Important safety issue",
@@ -601,7 +601,7 @@ export const phentermineTopiramate: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Phentermine-Topiramate",
+      label: "Patient Guide. Phentermine-Topiramate",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -609,13 +609,13 @@ export const phentermineTopiramate: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The stimulant-anticonvulsant weight combination — appetite from two directions.",
-    summary: "Phentermine-Topiramate is a prescription medicine used to treat chronic weight management (bmi ≥ 30, or ≥ 27 with a comorbidity). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The stimulant-anticonvulsant weight combination: appetite from two directions.",
+    summary: "Phentermine-Topiramate is a prescription medicine used to treat chronic weight management (bmi ≥ 30, or ≥ 27 with a comorbidity). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "This combination capsule treats obesity with two medicines at once: one suppresses appetite through the body's alerting chemicals, and the second (an epilepsy-class drug) reduces cravings. Because one component can harm an unborn baby, pregnancy tests before starting and monthly during treatment are required. Tingling fingers and word-finding difficulty are its best-known effects.",
-    sideEffects: "The most common side effects are: paraesthesia and taste change (topiramate), dry mouth and constipation (phentermine), insomnia (phentermine), cognitive blunting (topiramate). These usually appear early and many settle with time. Serious effects are uncommon but important to know: Teratogenicity (topiramate component — oral clefts) and Cardiovascular sympathomimetic effects. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: pregnancy testing (baseline and monthly — a prescribing condition); heart rate and blood pressure (baseline and regularly); weight trajectory (monthly; 12-week gate). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: paraesthesia and taste change (topiramate), dry mouth and constipation (phentermine), insomnia (phentermine), cognitive blunting (topiramate). These usually appear early and many settle with time. Serious effects are uncommon but important to know: Teratogenicity (topiramate component, oral clefts) and Cardiovascular sympathomimetic effects. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: pregnancy testing (baseline and monthly, a prescribing condition); heart rate and blood pressure (baseline and regularly); weight trajectory (monthly; 12-week gate). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: MAOIs (phentermine), Other sympathomimetics and decongestants, Other topiramate products, Carbonic-anhydrase inhibitors. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: MAOIs (phentermine), Other sympathomimetics and decongestants, Other topiramate products, Carbonic-anhydrase inhibitors. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -637,7 +637,7 @@ export const phentermineTopiramate: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -671,13 +671,13 @@ export const phentermineTopiramate: Drug = {
         name: "Phentermine-Topiramate",
         slug: "phentermine-topiramate",
         relationship: "This guide",
-        distinguishing: "The highest-efficacy older weight combination — pregnancy-governed",
+        distinguishing: "The highest-efficacy older weight combination: pregnancy-governed",
       },
       {
         name: "Lorcaserin",
         slug: "lorcaserin",
         relationship: "Same class (Weight Management)",
-        distinguishing: "The withdrawn serotonergic weight drug — a pharmacology chapter",
+        distinguishing: "The withdrawn serotonergic weight drug: a pharmacology chapter",
       },
     ],
   },
@@ -830,7 +830,7 @@ export const phentermineTopiramate: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Phentermine-Topiramate in two sentences.",
-      answer: "Phentermine suppresses appetite via sympathomimetic catecholamine release; low-dose topiramate adds a second appetite-craving mechanism — dual-pathway weight pharmacology. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Phentermine suppresses appetite via sympathomimetic catecholamine release; low-dose topiramate adds a second appetite-craving mechanism: dual-pathway weight pharmacology. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -840,17 +840,17 @@ export const phentermineTopiramate: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Phentermine-Topiramate and how you would manage it.",
-      answer: "Teratogenicity (topiramate component — oral clefts): Pregnancy testing before and monthly during treatment is a prescribing condition (US REMS-era practice). Management: Pregnancy prevention programme; stop if pregnant.",
+      answer: "Teratogenicity (topiramate component, oral clefts): Pregnancy testing before and monthly during treatment is a prescribing condition (US REMS-era practice). Management: Pregnancy prevention programme; stop if pregnant.",
       topic: "Safety",
     },
     {
       question: "What monitoring does a patient on Phentermine-Topiramate require?",
-      answer: "Pregnancy testing (Baseline and monthly — a prescribing condition); Heart rate and blood pressure (Baseline and regularly); Weight trajectory (Monthly; 12-week gate); Cognition and mood (At review)",
+      answer: "Pregnancy testing (Baseline and monthly, a prescribing condition); Heart rate and blood pressure (Baseline and regularly); Weight trajectory (Monthly; 12-week gate); Cognition and mood (At review)",
       topic: "Monitoring",
     },
     {
       question: "Share one clinical pearl about Phentermine-Topiramate that separates safe prescribers from unsafe ones.",
-      answer: "The dual-pathway logic: phentermine hits appetite sympathetically while topiramate hits cravings multi-mechanistically — two half-drugs at tolerable doses.",
+      answer: "The dual-pathway logic: phentermine hits appetite sympathetically while topiramate hits cravings multi-mechanistically; two half-drugs at tolerable doses.",
       topic: "Clinical Pearls",
     },
   ],
@@ -926,7 +926,7 @@ export const phentermineTopiramate: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -971,7 +971,7 @@ export const phentermineTopiramate: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Phentermine-Topiramate works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Phentermine-Topiramate works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -987,7 +987,7 @@ export const phentermineTopiramate: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Phentermine-Topiramate safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Phentermine-Topiramate safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1032,7 +1032,7 @@ export const phentermineTopiramate: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Phentermine-Topiramate follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Phentermine-Topiramate follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1062,7 +1062,7 @@ export const phentermineTopiramate: Drug = {
       "The 12-week 3%-loss gate before escalating.",
     ],
     overdose: [
-      "Overdose with Phentermine-Topiramate is managed supportively — no specific antidote.",
+      "Overdose with Phentermine-Topiramate is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Phentermine-Topiramate is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1103,15 +1103,15 @@ export const phentermineTopiramate: Drug = {
     potentialDisadvantages: ["Pregnancy-testing programme burden.", "Stimulant + topiramate caution stack.", "Cognitive adverse effects.", "Superseded by GLP-1 era pharmacology."],
     primaryTargetSymptoms: ["Chronic weight management"],
     pearls: [
-      "The dual-pathway logic: phentermine hits appetite sympathetically while topiramate hits cravings multi-mechanistically — two half-drugs at tolerable doses.",
-      "The 12-week gate: escalate only after ≥ 3% loss at the standard dose — outcome-disciplined prescribing.",
-      "The pregnancy programme: monthly testing while on the drug is a US prescribing condition — topiramate's cleft risk is the reason.",
-      "The GLP-1 era context: ~9-10% placebo-subtracted loss led its generation — the comparator baseline semaglutide has now redefined.",
+      "The dual-pathway logic: phentermine hits appetite sympathetically while topiramate hits cravings multi-mechanistically; two half-drugs at tolerable doses.",
+      "The 12-week gate: escalate only after ≥ 3% loss at the standard dose; outcome-disciplined prescribing.",
+      "The pregnancy programme: monthly testing while on the drug is a US prescribing condition; topiramate's cleft risk is the reason.",
+      "The GLP-1 era context: ~9-10% placebo-subtracted loss led its generation; the comparator baseline semaglutide has now redefined.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

@@ -23,14 +23,14 @@ export const tranylcypromine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antidepressants", "MAOIs", "Tranylcypromine"],
   /* ---- Hero / summary ---- */
-  tagline: "The amphetamine-flavoured MAOI — activating, non-hydrazine, and the energising TRD option.",
-  summary: "Tranylcypromine is the non-hydrazine irreversible MAOI: structurally amphetamine-adjacent (trace amine-like alerting effect), activating rather than sedating — the MAOI for anergic, treatment-resistant depression. Full tyramine and washout governance, with less weight gain and more insomnia/activation than phenelzine.",
+  tagline: "The amphetamine-flavoured MAOI: activating, non-hydrazine, and the energising TRD option.",
+  summary: "Tranylcypromine is the non-hydrazine irreversible MAOI: structurally amphetamine-adjacent (trace amine-like alerting effect), activating rather than sedating; the MAOI for anergic, treatment-resistant depression. Full tyramine and washout governance, with less weight gain and more insomnia/activation than phenelzine.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Tranylcypromine — from its molecular target (MAO-A and MAO-B (irreversible non-selective inhibition) + trace amine-like alerting effects) to clinical effect.",
+    "Explain the mechanism of action of Tranylcypromine, from its molecular target (MAO-A and MAO-B (irreversible non-selective inhibition) + trace amine-like alerting effects) to clinical effect.",
     "List the FDA-approved and off-label uses of Tranylcypromine.",
     "Predict the common and serious side effects of Tranylcypromine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Tranylcypromine.",
@@ -38,15 +38,15 @@ export const tranylcypromine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Tranylcypromine irreversibly inhibits MAO-A and B with an amphetamine-adjacent structure producing mild alerting effects — the activating MAOI.",
+    summary: "Tranylcypromine irreversibly inhibits MAO-A and B with an amphetamine-adjacent structure producing mild alerting effects: the activating MAOI.",
     molecularTarget: "MAO-A and MAO-B (irreversible non-selective inhibition) + trace amine-like alerting effects",
-    effect: "Monoamine oxidase inhibition raising synaptic monoamines — the most powerful monoamine-enhancing mechanism in psychiatry.",
+    effect: "Monoamine oxidase inhibition raising synaptic monoamines: the most powerful monoamine-enhancing mechanism in psychiatry.",
     steps: [
-      "Tranylcypromine irreversibly inhibits MAO-A and B with an amphetamine-adjacent structure producing mild alerting effects — the activating MAOI.",
+      "Tranylcypromine irreversibly inhibits MAO-A and B with an amphetamine-adjacent structure producing mild alerting effects: the activating MAOI.",
       "MAO inhibition raises intracellular and synaptic serotonin, noradrenaline, and dopamine.",
-      "The therapeutic effect — like every antidepressant — requires weeks of downstream adaptation; the tyramine and drug interactions are immediate.",
+      "The therapeutic effect (like every antidepressant) requires weeks of downstream adaptation; the tyramine and drug interactions are immediate.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 2-3 hours plasma; irreversible MAO inhibition persists ~1-2 weeks. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 2-3 hours plasma; irreversible MAO inhibition persists ~1-2 weeks. See mechanism and prescriber sections.",
     halfLife: "2-3 hours plasma; irreversible MAO inhibition persists ~1-2 weeks.",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -98,7 +98,7 @@ export const tranylcypromine: Drug = {
         label: "drives",
       },
     ],
-    caption: "Blocking enzymatic degradation raises all three monoamines simultaneously — powerful, but the same enzyme in the gut protects against dietary tyramine (hence the cheese reaction).",
+    caption: "Blocking enzymatic degradation raises all three monoamines simultaneously: powerful, but the same enzyme in the gut protects against dietary tyramine (hence the cheese reaction).",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Serotonin (5-HT)", "Norepinephrine (NE)", "Dopamine (DA)"],
@@ -110,7 +110,7 @@ export const tranylcypromine: Drug = {
     {
       name: "Major depressive disorder (treatment-resistant)",
       status: "fda-approved",
-      description: "The MAOI step after failures — particularly the anergic phenotype.",
+      description: "The MAOI step after failures, particularly the anergic phenotype.",
     },
     {
       name: "Treatment-resistant depression with fatigue/anergia",
@@ -132,7 +132,7 @@ export const tranylcypromine: Drug = {
     {
       name: "Serotonergic antidepressants (SSRIs, SNRIs, TCAs, tramadol, triptans, linezolid, methylene blue)",
       severity: "absolute",
-      rationale: "Potentially fatal serotonin syndrome — the 14-day washout rule in both directions (5 weeks for fluoxetine).",
+      rationale: "Potentially fatal serotonin syndrome: the 14-day washout rule in both directions (5 weeks for fluoxetine).",
     },
     {
       name: "Sympathomimetics (OTC decongestants, amphetamines, cocaine)",
@@ -142,7 +142,7 @@ export const tranylcypromine: Drug = {
     {
       name: "Meperidine (pethidine) and dextromethorphan",
       severity: "absolute",
-      rationale: "Serotonin syndrome — the classic anaesthetic and cough-syrup dangers.",
+      rationale: "Serotonin syndrome: the classic anaesthetic and cough-syrup dangers.",
     },
   ],
   blackBoxWarnings: [
@@ -157,7 +157,7 @@ export const tranylcypromine: Drug = {
       name: "Insomnia and activation",
       frequency: "common",
       severity: "moderate",
-      description: "The amphetamine-adjacent texture — morning dosing essential.",
+      description: "The amphetamine-adjacent texture: morning dosing essential.",
       management: "Morning-weighted dosing.",
     },
     {
@@ -194,7 +194,7 @@ export const tranylcypromine: Drug = {
       name: "Hypertensive crisis (tyramine/sympathomimetics)",
       frequency: "uncommon",
       severity: "life-threatening",
-      description: "The cheese reaction — full MAOI governance.",
+      description: "The cheese reaction: full MAOI governance.",
       management: "Diet education; BP protocol; alert card.",
     },
     {
@@ -217,7 +217,7 @@ export const tranylcypromine: Drug = {
     {
       parameter: "Blood pressure (standing and supine)",
       frequency: "Baseline and during titration; home BP for tyramine symptoms",
-      rationale: "Hypertensive crisis and orthostasis — both directions.",
+      rationale: "Hypertensive crisis and orthostasis, both directions.",
     },
     {
       parameter: "Tyramine-diet adherence",
@@ -234,13 +234,13 @@ export const tranylcypromine: Drug = {
     {
       drug: "Serotonergic antidepressants (SSRIs, SNRIs, TCAs, tramadol, triptans, linezolid, methylene blue)",
       severity: "contraindicated",
-      mechanism: "Potentially fatal serotonin syndrome — the 14-day washout rule in both directions (5 weeks for fluoxetine).",
+      mechanism: "Potentially fatal serotonin syndrome: the 14-day washout rule in both directions (5 weeks for fluoxetine).",
       action: "Absolute washout discipline.",
     },
     {
       drug: "Tyramine-rich foods (aged cheese, cured meats, yeast extracts, tap beer, soy sauce, overripe fruit)",
       severity: "major",
-      mechanism: "Hypertensive crisis ('cheese reaction') — tyramine displaces noradrenaline stores.",
+      mechanism: "Hypertensive crisis ('cheese reaction'): tyramine displaces noradrenaline stores.",
       action: "Tyramine-restricted diet education.",
     },
     {
@@ -252,44 +252,44 @@ export const tranylcypromine: Drug = {
     {
       drug: "Meperidine (pethidine) and dextromethorphan",
       severity: "contraindicated",
-      mechanism: "Serotonin syndrome — the classic anaesthetic and cough-syrup dangers.",
+      mechanism: "Serotonin syndrome: the classic anaesthetic and cough-syrup dangers.",
       action: "Medical alert documentation.",
     },
     {
       drug: "Antihypertensives",
       severity: "moderate",
-      mechanism: "Additive hypotension — MAOIs themselves lower BP.",
+      mechanism: "Additive hypotension. MAOIs themselves lower BP.",
       action: "Monitor; adjust.",
     },
   ],
   pregnancy: {
     legacyCategory: "C (variable)",
     summary: "MAOIs are avoided in pregnancy where alternatives exist; specialist individualised decisions only.",
-    lactation: "Avoid — infant effects possible.",
+    lactation: "Avoid: infant effects possible.",
   },
   renalAdjustment: "Standard caution.",
   hepaticAdjustment: "Reduce dose in hepatic impairment.",
   /* ---- Education ---- */
-  patientExplanation: "This is a monoamine oxidase inhibitor — the oldest and one of the most powerful families of antidepressants, used especially when other medicines have failed. It permanently switches off the enzyme that recycles the brain's mood chemicals. Because the same enzyme also protects the body against certain foods and medicines, taking it requires following a diet sheet (avoiding aged cheese, cured meats, and tap beer) and never mixing certain medicines — rules that keep a very effective treatment safe.",
+  patientExplanation: "This is a monoamine oxidase inhibitor: the oldest and one of the most powerful families of antidepressants, used especially when other medicines have failed. It permanently switches off the enzyme that recycles the brain's mood chemicals. Because the same enzyme also protects the body against certain foods and medicines, taking it requires following a diet sheet (avoiding aged cheese, cured meats, and tap beer) and never mixing certain medicines: rules that keep a very effective treatment safe.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Tranylcypromine builds over weeks — do not judge it in the first days.",
+    "Benefit from Tranylcypromine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The structure story: tranylcypromine is a cyclopropylamine cousin of amphetamine — trace alerting effects without being a stimulant.",
-    "The MAOI pair: phenelzine (sedating, weight-gaining, atypical-depression legend) vs tranylcypromine (activating, insomnia-tilted, anergic-TRD niche) — the prescribing choice between the two.",
-    "Morning dosing only — the insomnia is dependable if you dose late.",
+    "The structure story: tranylcypromine is a cyclopropylamine cousin of amphetamine; trace alerting effects without being a stimulant.",
+    "The MAOI pair: phenelzine (sedating, weight-gaining, atypical-depression legend) vs tranylcypromine (activating, insomnia-tilted, anergic-TRD niche); the prescribing choice between the two.",
+    "Morning dosing only: the insomnia is dependable if you dose late.",
     "The 60 mg ceiling: above it, the amphetamine-like pressor effects join the tyramine risks.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Tranylcypromine: Tranylcypromine irreversibly inhibits MAO-A and B with an amphetamine-adjacent structure producing mild alerting effects — the activating MAOI.",
+        "Mechanism of Tranylcypromine: Tranylcypromine irreversibly inhibits MAO-A and B with an amphetamine-adjacent structure producing mild alerting effects; the activating MAOI.",
         "Uses of Tranylcypromine: Major depressive disorder (treatment-resistant); Treatment-resistant depression with fatigue/anergia; Anxiety states (historic)",
-        "Mechanism: IRREVERSIBLE non-selective MAOI — AMPHETAMINE-ADJACENT structure (alerting).",
+        "Mechanism: IRREVERSIBLE non-selective MAOI. AMPHETAMINE-ADJACENT structure (alerting).",
         "The activating MAOI: anergic treatment-resistant depression niche.",
       ],
       practical: [
@@ -297,14 +297,14 @@ export const tranylcypromine: Drug = {
         "Outline the monitoring plan: Blood pressure (standing and supine) (Baseline and during titration; home BP for tyramine symptoms); Tyramine-diet adherence (Every review (irreversible MAOIs)); Mood and suicidality (Early weeks)",
       ],
       longAnswer: [
-        "Tranylcypromine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: IRREVERSIBLE non-selective MAOI — AMPHETAMINE-ADJACENT structure (alerting).",
+        "Tranylcypromine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: IRREVERSIBLE non-selective MAOI. AMPHETAMINE-ADJACENT structure (alerting).",
         "The activating MAOI: anergic treatment-resistant depression niche.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: IRREVERSIBLE non-selective MAOI — AMPHETAMINE-ADJACENT structure (alerting).",
+        "Mechanism: IRREVERSIBLE non-selective MAOI. AMPHETAMINE-ADJACENT structure (alerting).",
         "The activating MAOI: anergic treatment-resistant depression niche.",
         "Insomnia (morning dosing) vs phenelzine's sedation-weight.",
         "Same tyramine and washout governance as phenelzine.",
@@ -318,7 +318,7 @@ export const tranylcypromine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Tranylcypromine develops hypertensive crisis (tyramine/sympathomimetics) — next best step?",
+        "A patient on Tranylcypromine develops hypertensive crisis (tyramine/sympathomimetics): next best step?",
         "When to choose Tranylcypromine over alternatives in its class.",
       ],
     },
@@ -331,16 +331,16 @@ export const tranylcypromine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The structure story: tranylcypromine is a cyclopropylamine cousin of amphetamine — trace alerting effects without being a stimulant.",
-        "The MAOI pair: phenelzine (sedating, weight-gaining, atypical-depression legend) vs tranylcypromine (activating, insomnia-tilted, anergic-TRD niche) — the prescribing choice between the two.",
-        "Morning dosing only — the insomnia is dependable if you dose late.",
+        "The structure story: tranylcypromine is a cyclopropylamine cousin of amphetamine; trace alerting effects without being a stimulant.",
+        "The MAOI pair: phenelzine (sedating, weight-gaining, atypical-depression legend) vs tranylcypromine (activating, insomnia-tilted, anergic-TRD niche); the prescribing choice between the two.",
+        "Morning dosing only: the insomnia is dependable if you dose late.",
         "The 60 mg ceiling: above it, the amphetamine-like pressor effects join the tyramine risks.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: IRREVERSIBLE non-selective MAOI — AMPHETAMINE-ADJACENT structure (alerting).",
+    "Mechanism: IRREVERSIBLE non-selective MAOI. AMPHETAMINE-ADJACENT structure (alerting).",
     "The activating MAOI: anergic treatment-resistant depression niche.",
     "Insomnia (morning dosing) vs phenelzine's sedation-weight.",
     "Same tyramine and washout governance as phenelzine.",
@@ -349,7 +349,7 @@ export const tranylcypromine: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — major depressive disorder (treatment-resistant)",
+      title: "First presentation: major depressive disorder (treatment-resistant)",
       presentation: "A patient presenting with major depressive disorder (treatment-resistant), started on Tranylcypromine.",
       history: "A adult patient presents with a major depressive disorder (treatment-resistant) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with major depressive disorder (treatment-resistant); physical examination and baseline investigations are unremarkable.",
@@ -358,7 +358,7 @@ export const tranylcypromine: Drug = {
       management: "Started at 10 mg twice daily (morning + midday), titrated to 30-60 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Tranylcypromine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Tranylcypromine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -367,7 +367,7 @@ export const tranylcypromine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "MAOI comparison — choosing within the class",
+      title: "MAOI comparison: choosing within the class",
       primaryDrug: "Tranylcypromine",
       rows: [
         {
@@ -416,7 +416,7 @@ export const tranylcypromine: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Weight gain common — the MAOI story.",
+          primaryValue: "Weight gain common: the MAOI story.",
           comparisons: [
             {
               drug: "Phenelzine",
@@ -460,7 +460,7 @@ export const tranylcypromine: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The activating MAOI — anergic treatment-resistant depression",
+          primaryValue: "The activating MAOI: anergic treatment-resistant depression",
           comparisons: [
             {
               drug: "Phenelzine",
@@ -481,7 +481,7 @@ export const tranylcypromine: Drug = {
           ],
         },
       ],
-      takeaway: "All maois share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All maois share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -490,7 +490,7 @@ export const tranylcypromine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Tranylcypromine reaches peak plasma concentration and begins acting at its molecular target (MAO-A and MAO-B (irreversible non-selective inhibition) + trace amine-like alerting effects). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Tranylcypromine reaches peak plasma concentration and begins acting at its molecular target (MAO-A and MAO-B (irreversible non-selective inhibition) + trace amine-like alerting effects). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -526,7 +526,7 @@ export const tranylcypromine: Drug = {
   faqs: [
     {
       question: "How long does Tranylcypromine take to work?",
-      answer: "Antidepressant effect 2-6 weeks; interactions are immediate from the first dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Antidepressant effect 2-6 weeks; interactions are immediate from the first dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Tranylcypromine?",
@@ -534,11 +534,11 @@ export const tranylcypromine: Drug = {
     },
     {
       question: "Can I stop Tranylcypromine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Tranylcypromine habit-forming?",
@@ -546,7 +546,7 @@ export const tranylcypromine: Drug = {
     },
     {
       question: "Can I take Tranylcypromine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Tranylcypromine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Tranylcypromine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -700,7 +700,7 @@ export const tranylcypromine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Tranylcypromine",
+      label: "Patient Guide. Tranylcypromine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -708,13 +708,13 @@ export const tranylcypromine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The amphetamine-flavoured MAOI — activating, non-hydrazine, and the energising TRD option.",
-    summary: "Tranylcypromine is a prescription medicine used to treat major depressive disorder (treatment-resistant). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "This is a monoamine oxidase inhibitor — the oldest and one of the most powerful families of antidepressants, used especially when other medicines have failed. It permanently switches off the enzyme that recycles the brain's mood chemicals. Because the same enzyme also protects the body against certain foods and medicines, taking it requires following a diet sheet (avoiding aged cheese, cured meats, and tap beer) and never mixing certain medicines — rules that keep a very effective treatment safe.",
-    sideEffects: "The most common side effects are: insomnia and activation, orthostatic hypotension, sexual dysfunction, weight gain (less than phenelzine), tremor and palpitations. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hypertensive crisis (tyramine/sympathomimetics) and Serotonin syndrome (drug interactions). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: blood pressure (standing and supine) (baseline and during titration; home bp for tyramine symptoms); tyramine-diet adherence (every review (irreversible maois)); mood and suicidality (early weeks). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The amphetamine-flavoured MAOI: activating, non-hydrazine, and the energising TRD option.",
+    summary: "Tranylcypromine is a prescription medicine used to treat major depressive disorder (treatment-resistant). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "This is a monoamine oxidase inhibitor: the oldest and one of the most powerful families of antidepressants, used especially when other medicines have failed. It permanently switches off the enzyme that recycles the brain's mood chemicals. Because the same enzyme also protects the body against certain foods and medicines, taking it requires following a diet sheet (avoiding aged cheese, cured meats, and tap beer) and never mixing certain medicines: rules that keep a very effective treatment safe.",
+    sideEffects: "The most common side effects are: insomnia and activation, orthostatic hypotension, sexual dysfunction, weight gain (less than phenelzine), tremor and palpitations. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hypertensive crisis (tyramine/sympathomimetics) and Serotonin syndrome (drug interactions). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: blood pressure (standing and supine) (baseline and during titration; home bp for tyramine symptoms); tyramine-diet adherence (every review (irreversible maois)); mood and suicidality (early weeks). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Serotonergic antidepressants (SSRIs, SNRIs, TCAs, tramadol, triptans, linezolid, methylene blue), Tyramine-rich foods (aged cheese, cured meats, yeast extracts, tap beer, soy sauce, overripe fruit), Sympathomimetics (OTC decongestants, amphetamines, cocaine), Meperidine (pethidine) and dextromethorphan. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Serotonergic antidepressants (SSRIs, SNRIs, TCAs, tramadol, triptans, linezolid, methylene blue), Tyramine-rich foods (aged cheese, cured meats, yeast extracts, tap beer, soy sauce, overripe fruit), Sympathomimetics (OTC decongestants, amphetamines, cocaine), Meperidine (pethidine) and dextromethorphan. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -772,25 +772,25 @@ export const tranylcypromine: Drug = {
         name: "Tranylcypromine",
         slug: "tranylcypromine",
         relationship: "This guide",
-        distinguishing: "The activating MAOI — anergic treatment-resistant depression",
+        distinguishing: "The activating MAOI: anergic treatment-resistant depression",
       },
       {
         name: "Phenelzine",
         slug: "phenelzine",
         relationship: "Same class (MAOI)",
-        distinguishing: "The atypical-depression legend — MAOI pharmacology's flagship",
+        distinguishing: "The atypical-depression legend. MAOI pharmacology's flagship",
       },
       {
         name: "Isocarboxazid",
         slug: "isocarboxazid",
         relationship: "Same class (MAOI)",
-        distinguishing: "The quiet hydrazine — legacy MAOI continuity",
+        distinguishing: "The quiet hydrazine: legacy MAOI continuity",
       },
       {
         name: "Moclobemide",
         slug: "moclobemide",
         relationship: "Same class (MAOI)",
-        distinguishing: "The RIMA — MAOI mechanism with the diet relaxed",
+        distinguishing: "The RIMA. MAOI mechanism with the diet relaxed",
       },
       {
         name: "Selegiline",
@@ -944,7 +944,7 @@ export const tranylcypromine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Tranylcypromine in two sentences.",
-      answer: "Tranylcypromine irreversibly inhibits MAO-A and B with an amphetamine-adjacent structure producing mild alerting effects — the activating MAOI. Net effect: Monoamine oxidase inhibition raising synaptic monoamines — the most powerful monoamine-enhancing mechanism in psychiatry.",
+      answer: "Tranylcypromine irreversibly inhibits MAO-A and B with an amphetamine-adjacent structure producing mild alerting effects: the activating MAOI. Net effect: Monoamine oxidase inhibition raising synaptic monoamines; the most powerful monoamine-enhancing mechanism in psychiatry.",
       topic: "Mechanism",
     },
     {
@@ -954,7 +954,7 @@ export const tranylcypromine: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Tranylcypromine and how you would manage it.",
-      answer: "Hypertensive crisis (tyramine/sympathomimetics): The cheese reaction — full MAOI governance. Management: Diet education; BP protocol; alert card.",
+      answer: "Hypertensive crisis (tyramine/sympathomimetics): The cheese reaction; full MAOI governance. Management: Diet education; BP protocol; alert card.",
       topic: "Safety",
     },
     {
@@ -964,7 +964,7 @@ export const tranylcypromine: Drug = {
     },
     {
       question: "Share one clinical pearl about Tranylcypromine that separates safe prescribers from unsafe ones.",
-      answer: "The structure story: tranylcypromine is a cyclopropylamine cousin of amphetamine — trace alerting effects without being a stimulant.",
+      answer: "The structure story: tranylcypromine is a cyclopropylamine cousin of amphetamine; trace alerting effects without being a stimulant.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1040,7 +1040,7 @@ export const tranylcypromine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1085,7 +1085,7 @@ export const tranylcypromine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Tranylcypromine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Tranylcypromine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1101,7 +1101,7 @@ export const tranylcypromine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Tranylcypromine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Tranylcypromine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1146,7 +1146,7 @@ export const tranylcypromine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Tranylcypromine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Tranylcypromine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1156,7 +1156,7 @@ export const tranylcypromine: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Weight gain common — the MAOI story.",
+    weightGain: "Weight gain common: the MAOI story.",
     sedation: "Variable (agent-specific).",
     dosing: [
       {
@@ -1174,7 +1174,7 @@ export const tranylcypromine: Drug = {
       "14-day washout rules in both directions.",
     ],
     overdose: [
-      "Overdose with Tranylcypromine is managed supportively — no specific antidote.",
+      "Overdose with Tranylcypromine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Tranylcypromine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1208,22 +1208,22 @@ export const tranylcypromine: Drug = {
       },
     ],
     potentialAdvantages: [
-      "Efficacy in treatment-resistant depression — among the most powerful antidepressants.",
+      "Efficacy in treatment-resistant depression, among the most powerful antidepressants.",
       "Atypical depression niche.",
       "Panic/social-anxiety historic efficacy.",
     ],
     potentialDisadvantages: ["Diet and drug-interaction discipline.", "Hypertensive crisis risk.", "Weight gain and sexual dysfunction.", "Washout logistics."],
     primaryTargetSymptoms: ["Treatment-resistant depression", "Atypical depression"],
     pearls: [
-      "The structure story: tranylcypromine is a cyclopropylamine cousin of amphetamine — trace alerting effects without being a stimulant.",
-      "The MAOI pair: phenelzine (sedating, weight-gaining, atypical-depression legend) vs tranylcypromine (activating, insomnia-tilted, anergic-TRD niche) — the prescribing choice between the two.",
-      "Morning dosing only — the insomnia is dependable if you dose late.",
+      "The structure story: tranylcypromine is a cyclopropylamine cousin of amphetamine; trace alerting effects without being a stimulant.",
+      "The MAOI pair: phenelzine (sedating, weight-gaining, atypical-depression legend) vs tranylcypromine (activating, insomnia-tilted, anergic-TRD niche); the prescribing choice between the two.",
+      "Morning dosing only: the insomnia is dependable if you dose late.",
       "The 60 mg ceiling: above it, the amphetamine-like pressor effects join the tyramine risks.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

@@ -23,14 +23,14 @@ export const tasimelteon: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Sleep Medicines", "Melatonin Agonists", "Tasimelteon"],
   /* ---- Hero / summary ---- */
-  tagline: "The Non-24-Hour Sleep-Wake Disorder drug — circadian entrainment for the blind.",
-  summary: "Tasimelteon is an MT1/MT2 melatonin agonist approved for Non-24-Hour Sleep-Wake Rhythm Disorder (Non-24) in blind individuals — the first drug ever approved for that orphan indication. Its entire identity is circadian: it entrains the free-running clock of patients without light input, restoring a 24-hour sleep-wake cycle.",
+  tagline: "The Non-24-Hour Sleep-Wake Disorder drug: circadian entrainment for the blind.",
+  summary: "Tasimelteon is an MT1/MT2 melatonin agonist approved for Non-24-Hour Sleep-Wake Rhythm Disorder (Non-24) in blind individuals: the first drug ever approved for that orphan indication. Its entire identity is circadian: it entrains the free-running clock of patients without light input, restoring a 24-hour sleep-wake cycle.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Tasimelteon — from its molecular target (Melatonin MT1/MT2 receptors (agonist) — circadian entrainment) to clinical effect.",
+    "Explain the mechanism of action of Tasimelteon (from its molecular target (Melatonin MT1/MT2 receptors (agonist)) circadian entrainment) to clinical effect.",
     "List the FDA-approved and off-label uses of Tasimelteon.",
     "Predict the common and serious side effects of Tasimelteon from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Tasimelteon.",
@@ -38,15 +38,15 @@ export const tasimelteon: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "MT1/MT2 agonist that entrains the free-running suprachiasmatic clock — the orphan-drug mechanism for Non-24.",
-    molecularTarget: "Melatonin MT1/MT2 receptors (agonist) — circadian entrainment",
+    summary: "MT1/MT2 agonist that entrains the free-running suprachiasmatic clock: the orphan-drug mechanism for Non-24.",
+    molecularTarget: "Melatonin MT1/MT2 receptors (agonist): circadian entrainment",
     effect: "Sleep promotion via the described target.",
     steps: [
-      "Tasimelteon is an MT1/MT2 melatonin agonist approved for Non-24-Hour Sleep-Wake Rhythm Disorder (Non-24) in blind individuals — the first drug ever approved for that orphan indication — the mechanism in one line.",
+      "Tasimelteon is an MT1/MT2 melatonin agonist approved for Non-24-Hour Sleep-Wake Rhythm Disorder (Non-24) in blind individuals (the first drug ever approved for that orphan indication) the mechanism in one line.",
       "Binding at the described target produces the sleep-promoting effect.",
       "Duration of action follows the half-life: onset agents clear before morning; longer agents add maintenance cover.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 1.3 hours (entrainment effects persist pharmacodynamically). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 1.3 hours (entrainment effects persist pharmacodynamically). See mechanism and prescriber sections.",
     halfLife: "About 1.3 hours (entrainment effects persist pharmacodynamically).",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
@@ -97,14 +97,14 @@ export const tasimelteon: Drug = {
         label: "times",
       },
     ],
-    caption: "Targeting the body clock rather than sedating the cortex — melatonergic agents restore sleep timing without dependence or rebound insomnia.",
+    caption: "Targeting the body clock rather than sedating the cortex: melatonergic agents restore sleep timing without dependence or rebound insomnia.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
     "Central monoaminergic systems (see mechanism)",
   ],
   receptors: [
-    "Melatonin MT1/MT2 receptors (agonist) — circadian entrainment",
+    "Melatonin MT1/MT2 receptors (agonist): circadian entrainment",
   ],
   brainRegionIds: ["prefrontal-cortex"],
   pathwayIds: [],
@@ -113,7 +113,7 @@ export const tasimelteon: Drug = {
     {
       name: "Non-24-Hour Sleep-Wake Rhythm Disorder (Non-24) in blind individuals",
       status: "fda-approved",
-      description: "20 mg daily before bedtime — the first approved treatment.",
+      description: "20 mg daily before bedtime: the first approved treatment.",
     },
     {
       name: "Smith-Magenis syndrome (circadian disruption)",
@@ -215,25 +215,25 @@ export const tasimelteon: Drug = {
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
-  patientExplanation: "Tasimelteon is a medicine for a specific rare condition called Non-24-Hour Sleep-Wake Disorder — most often in people who are blind, whose internal body clock drifts longer than 24 hours and free-runs out of sync with day and night. It mimics the body's clock-setting hormone and helps re-anchor the sleep-wake cycle to a 24-hour day.",
+  patientExplanation: "Tasimelteon is a medicine for a specific rare condition called Non-24-Hour Sleep-Wake Disorder, most often in people who are blind, whose internal body clock drifts longer than 24 hours and free-runs out of sync with day and night. It mimics the body's clock-setting hormone and helps re-anchor the sleep-wake cycle to a 24-hour day.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Tasimelteon builds over weeks — do not judge it in the first days.",
+    "Benefit from Tasimelteon builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
     "The orphan-drug identity: the first and only approved treatment for Non-24 in the blind.",
     "Entrainment, not sedation: judge success by the 24-h cycle consolidating, not by sleep depth alone.",
-    "Timing is the prescription: same clock-time daily — before target bedtime.",
+    "Timing is the prescription: same clock-time daily, before target bedtime.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Tasimelteon: MT1/MT2 agonist that entrains the free-running suprachiasmatic clock — the orphan-drug mechanism for Non-24.",
+        "Mechanism of Tasimelteon: MT1/MT2 agonist that entrains the free-running suprachiasmatic clock; the orphan-drug mechanism for Non-24.",
         "Uses of Tasimelteon: Non-24-Hour Sleep-Wake Rhythm Disorder (Non-24) in blind individuals; Smith-Magenis syndrome (circadian disruption); Non-24 in sighted individuals",
-        "MT1/MT2 agonist — the Non-24 orphan drug.",
+        "MT1/MT2 agonist: the Non-24 orphan drug.",
         "The first drug approved for Non-24-Hour Sleep-Wake Rhythm Disorder (blind individuals).",
       ],
       practical: [
@@ -241,30 +241,30 @@ export const tasimelteon: Drug = {
         "Outline the monitoring plan: Liver function (Baseline and periodically); Sleep-wake diary (entrainment confirmation) (Ongoing)",
       ],
       longAnswer: [
-        "Tasimelteon: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "MT1/MT2 agonist — the Non-24 orphan drug.",
+        "Tasimelteon: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "MT1/MT2 agonist: the Non-24 orphan drug.",
         "The first drug approved for Non-24-Hour Sleep-Wake Rhythm Disorder (blind individuals).",
       ],
     },
     neetPg: {
       highYield: [
-        "MT1/MT2 agonist — the Non-24 orphan drug.",
+        "MT1/MT2 agonist: the Non-24 orphan drug.",
         "The first drug approved for Non-24-Hour Sleep-Wake Rhythm Disorder (blind individuals).",
         "Dose 20 mg daily before bedtime; timing is pharmacology.",
         "Also approved for Smith-Magenis syndrome circadian disorder.",
-        "Hepatic metabolism (1A2/3A4) — fluvoxamine and ketoconazole contraindicated; LFT monitoring per label.",
+        "Hepatic metabolism (1A2/3A4): fluvoxamine and ketoconazole contraindicated; LFT monitoring per label.",
       ],
       pyqConcepts: ["Mechanism/target of Tasimelteon", "Key adverse effect: Hepatotoxicity", "Dosing and titration of Tasimelteon"],
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Tasimelteon develops hepatotoxicity — next best step?",
+        "A patient on Tasimelteon develops hepatotoxicity: next best step?",
         "When to choose Tasimelteon over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: Melatonin MT1/MT2 receptors (agonist) — circadian entrainment",
+        "Primary target: Melatonin MT1/MT2 receptors (agonist); circadian entrainment",
         "Most common side effects: Headache, Somnolence and abnormal dreams/nightmares, Elevated liver enzymes",
         "Key contraindication: known hypersensitivity",
       ],
@@ -273,22 +273,22 @@ export const tasimelteon: Drug = {
       advancedPearls: [
         "The orphan-drug identity: the first and only approved treatment for Non-24 in the blind.",
         "Entrainment, not sedation: judge success by the 24-h cycle consolidating, not by sleep depth alone.",
-        "Timing is the prescription: same clock-time daily — before target bedtime.",
+        "Timing is the prescription: same clock-time daily, before target bedtime.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "MT1/MT2 agonist — the Non-24 orphan drug.",
+    "MT1/MT2 agonist: the Non-24 orphan drug.",
     "The first drug approved for Non-24-Hour Sleep-Wake Rhythm Disorder (blind individuals).",
     "Dose 20 mg daily before bedtime; timing is pharmacology.",
     "Also approved for Smith-Magenis syndrome circadian disorder.",
-    "Hepatic metabolism (1A2/3A4) — fluvoxamine and ketoconazole contraindicated; LFT monitoring per label.",
+    "Hepatic metabolism (1A2/3A4): fluvoxamine and ketoconazole contraindicated; LFT monitoring per label.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — non-24-hour sleep-wake rhythm disorder (non-24) in blind individuals",
+      title: "First presentation: non-24-hour sleep-wake rhythm disorder (non-24) in blind individuals",
       presentation: "A patient presenting with non-24-hour sleep-wake rhythm disorder (non-24) in blind individuals, started on Tasimelteon.",
       history: "A adult patient presents with a non-24-hour sleep-wake rhythm disorder (non-24) in blind individuals picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with non-24-hour sleep-wake rhythm disorder (non-24) in blind individuals; physical examination and baseline investigations are unremarkable.",
@@ -297,7 +297,7 @@ export const tasimelteon: Drug = {
       management: "Started at 20 mg daily before bedtime, titrated to 20 mg with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Tasimelteon takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Tasimelteon takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -306,12 +306,12 @@ export const tasimelteon: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Melatonin Agonist comparison — choosing within the class",
+      title: "Melatonin Agonist comparison: choosing within the class",
       primaryDrug: "Tasimelteon",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "Melatonin MT1/MT2 receptors (agonist) — circadian entrainment",
+          primaryValue: "Melatonin MT1/MT2 receptors (agonist): circadian entrainment",
           comparisons: [
             {
               drug: "Ramelteon",
@@ -351,7 +351,7 @@ export const tasimelteon: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "Non-24-Hour disorder in the blind — the orphan clock drug",
+          primaryValue: "Non-24-Hour disorder in the blind: the orphan clock drug",
           comparisons: [
             {
               drug: "Ramelteon",
@@ -360,7 +360,7 @@ export const tasimelteon: Drug = {
           ],
         },
       ],
-      takeaway: "All melatonin agonists share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All melatonin agonists share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -369,7 +369,7 @@ export const tasimelteon: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Tasimelteon reaches peak plasma concentration and begins acting at its molecular target (Melatonin MT1/MT2 receptors (agonist) — circadian entrainment). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Tasimelteon reaches peak plasma concentration and begins acting at its molecular target (Melatonin MT1/MT2 receptors (agonist), circadian entrainment). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -405,7 +405,7 @@ export const tasimelteon: Drug = {
   faqs: [
     {
       question: "How long does Tasimelteon take to work?",
-      answer: "Entrainment builds over weeks to months of consistent timing.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Entrainment builds over weeks to months of consistent timing.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Tasimelteon?",
@@ -413,11 +413,11 @@ export const tasimelteon: Drug = {
     },
     {
       question: "Can I stop Tasimelteon suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Tasimelteon habit-forming?",
@@ -425,7 +425,7 @@ export const tasimelteon: Drug = {
     },
     {
       question: "Can I take Tasimelteon during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Tasimelteon may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Tasimelteon may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -519,7 +519,7 @@ export const tasimelteon: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "Melatonin MT1/MT2 receptors (agonist) — circadian entrainment",
+      label: "Melatonin MT1/MT2 receptors (agonist): circadian entrainment",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
@@ -561,7 +561,7 @@ export const tasimelteon: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Tasimelteon",
+      label: "Patient Guide. Tasimelteon",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -569,13 +569,13 @@ export const tasimelteon: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The Non-24-Hour Sleep-Wake Disorder drug — circadian entrainment for the blind.",
-    summary: "Tasimelteon is a prescription medicine used to treat non-24-hour sleep-wake rhythm disorder (non-24) in blind individuals. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Tasimelteon is a medicine for a specific rare condition called Non-24-Hour Sleep-Wake Disorder — most often in people who are blind, whose internal body clock drifts longer than 24 hours and free-runs out of sync with day and night. It mimics the body's clock-setting hormone and helps re-anchor the sleep-wake cycle to a 24-hour day.",
-    sideEffects: "The most common side effects are: headache, somnolence and abnormal dreams/nightmares, elevated liver enzymes, nasopharyngitis and upper respiratory symptoms. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hepatotoxicity and Complex sleep behaviours. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: liver function (baseline and periodically); sleep-wake diary (entrainment confirmation) (ongoing). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The Non-24-Hour Sleep-Wake Disorder drug: circadian entrainment for the blind.",
+    summary: "Tasimelteon is a prescription medicine used to treat non-24-hour sleep-wake rhythm disorder (non-24) in blind individuals. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Tasimelteon is a medicine for a specific rare condition called Non-24-Hour Sleep-Wake Disorder, most often in people who are blind, whose internal body clock drifts longer than 24 hours and free-runs out of sync with day and night. It mimics the body's clock-setting hormone and helps re-anchor the sleep-wake cycle to a 24-hour day.",
+    sideEffects: "The most common side effects are: headache, somnolence and abnormal dreams/nightmares, elevated liver enzymes, nasopharyngitis and upper respiratory symptoms. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hepatotoxicity and Complex sleep behaviours. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: liver function (baseline and periodically); sleep-wake diary (entrainment confirmation) (ongoing). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Strong CYP3A4 inhibitors and 1A2 inhibitors (fluvoxamine). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Strong CYP3A4 inhibitors and 1A2 inhibitors (fluvoxamine). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -599,7 +599,7 @@ export const tasimelteon: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: [
       "Timing consistency is the whole treatment.",
     ],
@@ -635,13 +635,13 @@ export const tasimelteon: Drug = {
         name: "Tasimelteon",
         slug: "tasimelteon",
         relationship: "This guide",
-        distinguishing: "Non-24-Hour disorder in the blind — the orphan clock drug",
+        distinguishing: "Non-24-Hour disorder in the blind: the orphan clock drug",
       },
       {
         name: "Ramelteon",
         slug: "ramelteon",
         relationship: "Same class (Melatonin Agonist)",
-        distinguishing: "The dependence-free sleep-onset option — body-clock pharmacology",
+        distinguishing: "The dependence-free sleep-onset option: body-clock pharmacology",
       },
     ],
   },
@@ -794,7 +794,7 @@ export const tasimelteon: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Tasimelteon in two sentences.",
-      answer: "MT1/MT2 agonist that entrains the free-running suprachiasmatic clock — the orphan-drug mechanism for Non-24. Net effect: Sleep promotion via the described target.",
+      answer: "MT1/MT2 agonist that entrains the free-running suprachiasmatic clock: the orphan-drug mechanism for Non-24. Net effect: Sleep promotion via the described target.",
       topic: "Mechanism",
     },
     {
@@ -890,7 +890,7 @@ export const tasimelteon: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -935,7 +935,7 @@ export const tasimelteon: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Tasimelteon works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Tasimelteon works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -951,7 +951,7 @@ export const tasimelteon: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Tasimelteon safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Tasimelteon safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -996,7 +996,7 @@ export const tasimelteon: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Tasimelteon follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Tasimelteon follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1019,12 +1019,12 @@ export const tasimelteon: Drug = {
     ],
     dosageForms: ["Capsules 20 mg"],
     dosingTips: [
-      "Same clock time daily — entrainment is a timing treatment.",
+      "Same clock time daily: entrainment is a timing treatment.",
       "Expect months, not nights.",
       "Liver monitoring per label.",
     ],
     overdose: [
-      "Overdose with Tasimelteon is managed supportively — no specific antidote.",
+      "Overdose with Tasimelteon is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Tasimelteon is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1063,12 +1063,12 @@ export const tasimelteon: Drug = {
     pearls: [
       "The orphan-drug identity: the first and only approved treatment for Non-24 in the blind.",
       "Entrainment, not sedation: judge success by the 24-h cycle consolidating, not by sleep depth alone.",
-      "Timing is the prescription: same clock-time daily — before target bedtime.",
+      "Timing is the prescription: same clock-time daily, before target bedtime.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

@@ -23,14 +23,14 @@ export const memantine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Cognitive Enhancers", "NMDA Antagonists", "Memantine"],
   /* ---- Hero / summary ---- */
-  tagline: "The NMDA modulator — glutamate noise-reduction for moderate-to-severe Alzheimer's.",
-  summary: "Memantine is a low-affinity use-dependent NMDA receptor antagonist that reduces pathological glutamate noise (excitotoxicity) without blocking normal transmission: approved for moderate-to-severe Alzheimer's, where it slows functional decline, combines with donepezil for added benefit, and is famously well tolerated — dizziness and confusion the main limits.",
+  tagline: "The NMDA modulator: glutamate noise-reduction for moderate-to-severe Alzheimer's.",
+  summary: "Memantine is a low-affinity use-dependent NMDA receptor antagonist that reduces pathological glutamate noise (excitotoxicity) without blocking normal transmission: approved for moderate-to-severe Alzheimer's, where it slows functional decline, combines with donepezil for added benefit, and is famously well tolerated; dizziness and confusion the main limits.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Memantine — from its molecular target (NMDA receptor (low-affinity use-dependent antagonist)) to clinical effect.",
+    "Explain the mechanism of action of Memantine, from its molecular target (NMDA receptor (low-affinity use-dependent antagonist)) to clinical effect.",
     "List the FDA-approved and off-label uses of Memantine.",
     "Predict the common and serious side effects of Memantine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Memantine.",
@@ -38,15 +38,15 @@ export const memantine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Memantine blocks NMDA receptors only under pathological tonic glutamate exposure — reducing excitotoxic noise while sparing normal synaptic signalling.",
+    summary: "Memantine blocks NMDA receptors only under pathological tonic glutamate exposure, reducing excitotoxic noise while sparing normal synaptic signalling.",
     molecularTarget: "NMDA receptor (low-affinity use-dependent antagonist)",
     effect: "Modulation of the described target with the agent's clinical effect.",
     steps: [
-      "Memantine blocks NMDA receptors only under pathological tonic glutamate exposure — reducing excitotoxic noise while sparing normal synaptic signalling.",
+      "Memantine blocks NMDA receptors only under pathological tonic glutamate exposure, reducing excitotoxic noise while sparing normal synaptic signalling.",
       "The target engagement produces the clinical effect described.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 60-100 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 60-100 hours. See mechanism and prescriber sections.",
     halfLife: "60-100 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -98,7 +98,7 @@ export const memantine: Drug = {
         type: "stimulate",
       },
     ],
-    caption: "NMDA antagonism rebalances glutamate signalling — the pathway that can produce antidepressant effects within hours rather than weeks.",
+    caption: "NMDA antagonism rebalances glutamate signalling: the pathway that can produce antidepressant effects within hours rather than weeks.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Glutamate"],
@@ -174,7 +174,7 @@ export const memantine: Drug = {
       name: "Renal accumulation delirium (severe impairment)",
       frequency: "uncommon",
       severity: "severe",
-      description: "Renally cleared — severe impairment raises levels causing confusion.",
+      description: "Renally cleared: severe impairment raises levels causing confusion.",
       management: "Halve dose in severe impairment; confusion review.",
     },
     {
@@ -207,7 +207,7 @@ export const memantine: Drug = {
     {
       drug: "Other NMDA antagonists (ketamine, dextromethorphan)",
       severity: "major",
-      mechanism: "Additive NMDA blockade — delirium risk.",
+      mechanism: "Additive NMDA blockade: delirium risk.",
       action: "Avoid combinations.",
     },
     {
@@ -219,7 +219,7 @@ export const memantine: Drug = {
     {
       drug: "Urine-alkalinising drugs (carbonic anhydrase inhibitors, sodium bicarbonate)",
       severity: "major",
-      mechanism: "Alkaline urine reduces renal clearance — levels rise.",
+      mechanism: "Alkaline urine reduces renal clearance: levels rise.",
       action: "Monitor for confusion.",
     },
   ],
@@ -233,44 +233,44 @@ export const memantine: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Memantine protects brain cells from overstimulation by a chemical called glutamate, which in excess acts like static that drowns out signals. It is used in moderate-to-severe Alzheimer's, usually alongside donepezil, and can keep daily function steadier for longer. The dose is built up slowly over several weeks; dizziness is its commonest effect.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Memantine builds over weeks — do not judge it in the first days.",
+    "Benefit from Memantine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The noise-reduction metaphor: memantine turns down the pathological glutamate static without silencing the signal — the cleanest explanation of use-dependent blockade.",
-    "The ADD combination: memantine + donepezil outperforms donepezil alone in moderate-severe disease — the standard duo.",
-    "Weeks-long titration is tolerability, not kinetics — rushing produces dizziness and confusion.",
+    "The noise-reduction metaphor: memantine turns down the pathological glutamate static without silencing the signal; the cleanest explanation of use-dependent blockade.",
+    "The ADD combination: memantine + donepezil outperforms donepezil alone in moderate-severe disease; the standard duo.",
+    "Weeks-long titration is tolerability, not kinetics, rushing produces dizziness and confusion.",
     "Mild-stage use is contested: the trials were negative-to-weak; several guidelines now discourage it.",
-    "Renal dosing: severe impairment halves the dose — confusion on memantine is usually accumulation.",
+    "Renal dosing: severe impairment halves the dose; confusion on memantine is usually accumulation.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Memantine: Memantine blocks NMDA receptors only under pathological tonic glutamate exposure — reducing excitotoxic noise while sparing normal synaptic signalling.",
-        "Uses of Memantine: Alzheimer's disease — moderate to severe; Alzheimer's — mild (off-label/debated); Vascular dementia and other dementias; Reduction of opioid-induced tolerance/hyperalgesia (adjunct)",
-        "Mechanism: low-affinity USE-DEPENDENT NMDA antagonist — pathological-glutamate noise reduction.",
+        "Mechanism of Memantine: Memantine blocks NMDA receptors only under pathological tonic glutamate exposure, reducing excitotoxic noise while sparing normal synaptic signalling.",
+        "Uses of Memantine: Alzheimer's disease; moderate to severe; Alzheimer's: mild (off-label/debated); Vascular dementia and other dementias; Reduction of opioid-induced tolerance/hyperalgesia (adjunct)",
+        "Mechanism: low-affinity USE-DEPENDENT NMDA antagonist; pathological-glutamate noise reduction.",
         "Indication: MODERATE-TO-SEVERE Alzheimer's (mono or added to AChE inhibitors).",
       ],
       practical: [
-        "Prescribe Memantine for alzheimer's disease — moderate to severe with dose, timing, and duration.",
+        "Prescribe Memantine for alzheimer's disease: moderate to severe with dose, timing, and duration.",
         "Outline the monitoring plan: Renal function (Baseline and periodically); Blood pressure (Periodically); Cognition and function scores (Every 6 months)",
       ],
       longAnswer: [
-        "Memantine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: low-affinity USE-DEPENDENT NMDA antagonist — pathological-glutamate noise reduction.",
+        "Memantine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: low-affinity USE-DEPENDENT NMDA antagonist; pathological-glutamate noise reduction.",
         "Indication: MODERATE-TO-SEVERE Alzheimer's (mono or added to AChE inhibitors).",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: low-affinity USE-DEPENDENT NMDA antagonist — pathological-glutamate noise reduction.",
+        "Mechanism: low-affinity USE-DEPENDENT NMDA antagonist; pathological-glutamate noise reduction.",
         "Indication: MODERATE-TO-SEVERE Alzheimer's (mono or added to AChE inhibitors).",
         "The standard duo: memantine + donepezil in moderate-severe disease.",
         "Titration: 5 mg steps weekly to 10 mg bd (20 mg XR).",
-        "Renal clearance — halve dose in severe impairment (confusion = accumulation).",
+        "Renal clearance: halve dose in severe impairment (confusion = accumulation).",
         "Well tolerated: dizziness and confusion the main limits.",
       ],
       pyqConcepts: [
@@ -281,7 +281,7 @@ export const memantine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Memantine develops renal accumulation delirium (severe impairment) — next best step?",
+        "A patient on Memantine develops renal accumulation delirium (severe impairment): next best step?",
         "When to choose Memantine over alternatives in its class.",
       ],
     },
@@ -294,36 +294,36 @@ export const memantine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The noise-reduction metaphor: memantine turns down the pathological glutamate static without silencing the signal — the cleanest explanation of use-dependent blockade.",
-        "The ADD combination: memantine + donepezil outperforms donepezil alone in moderate-severe disease — the standard duo.",
-        "Weeks-long titration is tolerability, not kinetics — rushing produces dizziness and confusion.",
+        "The noise-reduction metaphor: memantine turns down the pathological glutamate static without silencing the signal; the cleanest explanation of use-dependent blockade.",
+        "The ADD combination: memantine + donepezil outperforms donepezil alone in moderate-severe disease; the standard duo.",
+        "Weeks-long titration is tolerability, not kinetics, rushing produces dizziness and confusion.",
         "Mild-stage use is contested: the trials were negative-to-weak; several guidelines now discourage it.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: low-affinity USE-DEPENDENT NMDA antagonist — pathological-glutamate noise reduction.",
+    "Mechanism: low-affinity USE-DEPENDENT NMDA antagonist; pathological-glutamate noise reduction.",
     "Indication: MODERATE-TO-SEVERE Alzheimer's (mono or added to AChE inhibitors).",
     "The standard duo: memantine + donepezil in moderate-severe disease.",
     "Titration: 5 mg steps weekly to 10 mg bd (20 mg XR).",
-    "Renal clearance — halve dose in severe impairment (confusion = accumulation).",
+    "Renal clearance: halve dose in severe impairment (confusion = accumulation).",
     "Well tolerated: dizziness and confusion the main limits.",
     "Mild-stage use discouraged by evidence.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — alzheimer's disease — moderate to severe",
-      presentation: "A patient presenting with alzheimer's disease — moderate to severe, started on Memantine.",
-      history: "A adult patient presents with a alzheimer's disease — moderate to severe picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with alzheimer's disease — moderate to severe; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Alzheimer's disease — moderate to severe. Differentials are considered and excluded clinically.",
+      title: "First presentation: alzheimer's disease; moderate to severe",
+      presentation: "A patient presenting with alzheimer's disease: moderate to severe, started on Memantine.",
+      history: "A adult patient presents with a alzheimer's disease: moderate to severe picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with alzheimer's disease: moderate to severe; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Alzheimer's disease: moderate to severe. Differentials are considered and excluded clinically.",
       rationale: "Memantine is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (NMDA Antagonist) with strong evidence in this condition.",
       management: "Started at 5 mg once daily week 1, titrated to 10 mg bd / 20 mg XR daily with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Memantine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Memantine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -332,7 +332,7 @@ export const memantine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "NMDA Antagonist vs related agents — orientation table",
+      title: "NMDA Antagonist vs related agents: orientation table",
       primaryDrug: "Memantine",
       rows: [
         {
@@ -367,7 +367,7 @@ export const memantine: Drug = {
         },
         {
           attribute: "Clinical niche",
-          primaryValue: "The glutamate-side dementia drug — moderate-severe stage",
+          primaryValue: "The glutamate-side dementia drug: moderate-severe stage",
           comparisons: [
             {
               drug: "Ketamine",
@@ -376,7 +376,7 @@ export const memantine: Drug = {
           ],
         },
       ],
-      takeaway: "Memantine is compared here with related agents for orientation. Full comparison data lives in each drug's own guide — follow the links for the complete picture.",
+      takeaway: "Memantine is compared here with related agents for orientation. Full comparison data lives in each drug's own guide: follow the links for the complete picture.",
     },
   ],
   /* ---- Timeline ---- */
@@ -385,7 +385,7 @@ export const memantine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Memantine reaches peak plasma concentration and begins acting at its molecular target (NMDA receptor (low-affinity use-dependent antagonist)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Memantine reaches peak plasma concentration and begins acting at its molecular target (NMDA receptor (low-affinity use-dependent antagonist)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -421,7 +421,7 @@ export const memantine: Drug = {
   faqs: [
     {
       question: "How long does Memantine take to work?",
-      answer: "Benefit over weeks-months; titration 4 weeks to target.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Benefit over weeks-months; titration 4 weeks to target.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Memantine?",
@@ -429,11 +429,11 @@ export const memantine: Drug = {
     },
     {
       question: "Can I stop Memantine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Memantine habit-forming?",
@@ -441,7 +441,7 @@ export const memantine: Drug = {
     },
     {
       question: "Can I take Memantine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Memantine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Memantine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -539,13 +539,13 @@ export const memantine: Drug = {
       note: "Primary molecular target",
     },
     {
-      label: "Alzheimer's disease — moderate to severe",
+      label: "Alzheimer's disease: moderate to severe",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
     },
     {
-      label: "Alzheimer's — mild (off-label/debated)",
+      label: "Alzheimer's: mild (off-label/debated)",
       type: "condition",
       href: "#clinical-uses",
       note: "Used clinically",
@@ -575,7 +575,7 @@ export const memantine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Memantine",
+      label: "Patient Guide. Memantine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -583,13 +583,13 @@ export const memantine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The NMDA modulator — glutamate noise-reduction for moderate-to-severe Alzheimer's.",
-    summary: "Memantine is a prescription medicine used to treat alzheimer's disease — moderate to severe. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The NMDA modulator: glutamate noise-reduction for moderate-to-severe Alzheimer's.",
+    summary: "Memantine is a prescription medicine used to treat alzheimer's disease: moderate to severe. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Memantine protects brain cells from overstimulation by a chemical called glutamate, which in excess acts like static that drowns out signals. It is used in moderate-to-severe Alzheimer's, usually alongside donepezil, and can keep daily function steadier for longer. The dose is built up slowly over several weeks; dizziness is its commonest effect.",
-    sideEffects: "The most common side effects are: dizziness, headache and confusion, constipation, hypertension (small rise). These usually appear early and many settle with time. Serious effects are uncommon but important to know: Renal accumulation delirium (severe impairment) and Seizures (rare). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: renal function (baseline and periodically); blood pressure (periodically); cognition and function scores (every 6 months). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: dizziness, headache and confusion, constipation, hypertension (small rise). These usually appear early and many settle with time. Serious effects are uncommon but important to know: Renal accumulation delirium (severe impairment) and Seizures (rare). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: renal function (baseline and periodically); blood pressure (periodically); cognition and function scores (every 6 months). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Other NMDA antagonists (ketamine, dextromethorphan), Metformin and drugs raising memantine (cimetidine, ranitidine class), Urine-alkalinising drugs (carbonic anhydrase inhibitors, sodium bicarbonate). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Other NMDA antagonists (ketamine, dextromethorphan), Metformin and drugs raising memantine (cimetidine, ranitidine class), Urine-alkalinising drugs (carbonic anhydrase inhibitors, sodium bicarbonate). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -608,7 +608,7 @@ export const memantine: Drug = {
     ],
     typicalDoses: "Titrate to 10 mg bd (or 20 mg XR).",
     prescribingScenarios: [
-      "Memory clinics — the add-on to donepezil in moderate-severe disease.",
+      "Memory clinics: the add-on to donepezil in moderate-severe disease.",
     ],
     availability: {
       governmentHospitals: true,
@@ -621,7 +621,7 @@ export const memantine: Drug = {
     monitoring: "Renal function at baseline; BP periodically.",
     patientCounselling: [
       "Weekly dose steps.",
-      "Report new confusion — the kidney check comes first.",
+      "Report new confusion: the kidney check comes first.",
     ],
   },
   sectionDifficulty: {
@@ -656,7 +656,7 @@ export const memantine: Drug = {
         name: "Memantine",
         slug: "memantine",
         relationship: "This guide",
-        distinguishing: "The glutamate-side dementia drug — moderate-severe stage",
+        distinguishing: "The glutamate-side dementia drug: moderate-severe stage",
       },
     ],
   },
@@ -804,17 +804,17 @@ export const memantine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Memantine in two sentences.",
-      answer: "Memantine blocks NMDA receptors only under pathological tonic glutamate exposure — reducing excitotoxic noise while sparing normal synaptic signalling. Net effect: Modulation of the described target with the agent's clinical effect.",
+      answer: "Memantine blocks NMDA receptors only under pathological tonic glutamate exposure, reducing excitotoxic noise while sparing normal synaptic signalling. Net effect: Modulation of the described target with the agent's clinical effect.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Memantine.",
-      answer: "Alzheimer's disease — moderate to severe, Alzheimer's — mild (off-label/debated), Vascular dementia and other dementias, Reduction of opioid-induced tolerance/hyperalgesia (adjunct). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Alzheimer's disease (moderate to severe, Alzheimer's) mild (off-label/debated), Vascular dementia and other dementias, Reduction of opioid-induced tolerance/hyperalgesia (adjunct). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Memantine and how you would manage it.",
-      answer: "Renal accumulation delirium (severe impairment): Renally cleared — severe impairment raises levels causing confusion. Management: Halve dose in severe impairment; confusion review.",
+      answer: "Renal accumulation delirium (severe impairment): Renally cleared; severe impairment raises levels causing confusion. Management: Halve dose in severe impairment; confusion review.",
       topic: "Safety",
     },
     {
@@ -824,7 +824,7 @@ export const memantine: Drug = {
     },
     {
       question: "Share one clinical pearl about Memantine that separates safe prescribers from unsafe ones.",
-      answer: "The noise-reduction metaphor: memantine turns down the pathological glutamate static without silencing the signal — the cleanest explanation of use-dependent blockade.",
+      answer: "The noise-reduction metaphor: memantine turns down the pathological glutamate static without silencing the signal; the cleanest explanation of use-dependent blockade.",
       topic: "Clinical Pearls",
     },
   ],
@@ -900,7 +900,7 @@ export const memantine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -945,7 +945,7 @@ export const memantine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Memantine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Memantine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -961,7 +961,7 @@ export const memantine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Memantine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Memantine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1006,7 +1006,7 @@ export const memantine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Memantine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Memantine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1031,10 +1031,10 @@ export const memantine: Drug = {
     dosingTips: [
       "Weekly 5-mg titration steps.",
       "Confusion on memantine: check renal function first.",
-      "Combine with donepezil in moderate-severe disease — the standard duo.",
+      "Combine with donepezil in moderate-severe disease: the standard duo.",
     ],
     overdose: [
-      "Overdose with Memantine is managed supportively — no specific antidote.",
+      "Overdose with Memantine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Memantine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1071,16 +1071,16 @@ export const memantine: Drug = {
       "Functional decline slowing",
     ],
     pearls: [
-      "The noise-reduction metaphor: memantine turns down the pathological glutamate static without silencing the signal — the cleanest explanation of use-dependent blockade.",
-      "The ADD combination: memantine + donepezil outperforms donepezil alone in moderate-severe disease — the standard duo.",
-      "Weeks-long titration is tolerability, not kinetics — rushing produces dizziness and confusion.",
+      "The noise-reduction metaphor: memantine turns down the pathological glutamate static without silencing the signal; the cleanest explanation of use-dependent blockade.",
+      "The ADD combination: memantine + donepezil outperforms donepezil alone in moderate-severe disease; the standard duo.",
+      "Weeks-long titration is tolerability, not kinetics, rushing produces dizziness and confusion.",
       "Mild-stage use is contested: the trials were negative-to-weak; several guidelines now discourage it.",
-      "Renal dosing: severe impairment halves the dose — confusion on memantine is usually accumulation.",
+      "Renal dosing: severe impairment halves the dose; confusion on memantine is usually accumulation.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

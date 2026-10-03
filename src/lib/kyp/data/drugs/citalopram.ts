@@ -39,9 +39,9 @@ export const citalopram: Drug = {
 
   /* ---- Hero / summary ---- */
   tagline:
-    "The racemic parent of escitalopram — an effective SSRI whose dose is capped by dose-dependent QTc prolongation driven by the inactive R-enantiomer.",
+    "The racemic parent of escitalopram: an effective SSRI whose dose is capped by dose-dependent QTc prolongation driven by the inactive R-enantiomer.",
   summary:
-    "Citalopram is a racemic mixture of two enantiomers: S-citalopram (the pharmacologically active serotonin transporter blocker) and R-citalopram (essentially inactive at SERT but a meaningful blocker of the hERG potassium channel). The S-enantiomer does the antidepressant work; the R-enantiomer does most of the QTc damage. This stereochemistry is the entire reason escitalopram — the isolated S-enantiomer — was developed. In 2011, the FDA capped citalopram at 40 mg/day (down from 60 mg) and at 20 mg/day in patients older than 60, those with hepatic impairment, CYP2C19 poor metabolisers, and patients taking CYP2C19 inhibitors, after post-marketing data linked higher doses to QTc prolongation and torsades de pointes. Citalopram is FDA-approved only for major depressive disorder in adults — it is NOT approved for paediatric depression (unlike fluoxetine and escitalopram). It is metabolised primarily by CYP2C19, has a half-life of ~35 hours, and is generally well tolerated at appropriately capped doses.",
+    "Citalopram is a racemic mixture of two enantiomers: S-citalopram (the pharmacologically active serotonin transporter blocker) and R-citalopram (essentially inactive at SERT but a meaningful blocker of the hERG potassium channel). The S-enantiomer does the antidepressant work; the R-enantiomer does most of the QTc damage. This stereochemistry is the entire reason escitalopram (the isolated S-enantiomer) was developed. In 2011, the FDA capped citalopram at 40 mg/day (down from 60 mg) and at 20 mg/day in patients older than 60, those with hepatic impairment, CYP2C19 poor metabolisers, and patients taking CYP2C19 inhibitors, after post-marketing data linked higher doses to QTc prolongation and torsades de pointes. Citalopram is FDA-approved only for major depressive disorder in adults. It is NOT approved for paediatric depression (unlike fluoxetine and escitalopram). It is metabolised primarily by CYP2C19, has a half-life of ~35 hours, and is generally well tolerated at appropriately capped doses.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
@@ -49,10 +49,10 @@ export const citalopram: Drug = {
   /* ---- Learning objectives ---- */
   learningObjectives: [
     "Explain why citalopram is a racemic mixture, identify which enantiomer is responsible for SERT blockade (S) versus hERG blockade (R), and articulate why escitalopram was developed as the S-only successor.",
-    "Describe the mechanism of action — from acute SERT blockade to chronic 5-HT1A autoreceptor desensitisation — and why the clinical antidepressant effect is delayed 4–6 weeks despite rapid pharmacological action.",
+    "Describe the mechanism of action (from acute SERT blockade to chronic 5-HT1A autoreceptor desensitisation) and why the clinical antidepressant effect is delayed 4–6 weeks despite rapid pharmacological action.",
     "Apply the FDA dose-capping rules: 40 mg/day maximum in adults; 20 mg/day maximum in patients >60 years, hepatic impairment, CYP2C19 poor metabolisers, and patients taking CYP2C19 inhibitors (e.g. omeprazole, fluvoxamine).",
     "Design an ECG and electrolyte monitoring plan for patients on citalopram, particularly at doses >20 mg, in the elderly, and in those on other QTc-prolonging drugs.",
-    "Compare citalopram with escitalopram, sertraline, fluoxetine, and paroxetine — and articulate when the cheaper racemic drug is acceptable versus when the S-enantiomer is preferred.",
+    "Compare citalopram with escitalopram, sertraline, fluoxetine, and paroxetine, and articulate when the cheaper racemic drug is acceptable versus when the S-enantiomer is preferred.",
     "Recognise and manage the serious SSRI adverse effects: serotonin syndrome, SIADH, suicidality in patients under 25, abnormal bleeding, activation of mania, and discontinuation syndrome.",
   ],
 
@@ -60,32 +60,32 @@ export const citalopram: Drug = {
   mechanism: {
     summary:
       "Citalopram is a racemic SSRI. The S-enantiomer selectively blocks the serotonin transporter (SERT); the R-enantiomer is essentially inactive at SERT but blocks the hERG potassium channel, producing dose-dependent QTc prolongation.",
-    molecularTarget: "SERT (SLC6A4 — serotonin transporter) — via the S-enantiomer; hERG (KCNH2) potassium channel — via the R-enantiomer",
+    molecularTarget: "SERT (SLC6A4 (serotonin transporter)) via the S-enantiomer; hERG (KCNH2) potassium channel, via the R-enantiomer",
     effect:
       "Acute (S-enantiomer): increased synaptic serotonin. Chronic (2–6 weeks): desensitisation of 5-HT1A somatodendritic autoreceptors in the raphe nuclei, increased serotonergic throughput to the prefrontal cortex, and upregulation of BDNF in the hippocampus. Parallel off-target (R-enantiomer): hERG blockade → delayed ventricular repolarisation → QTc prolongation, dose-dependently.",
     steps: [
-      "Citalopram is administered as a racemate — a 1:1 mixture of S-citalopram and R-citalopram. Only the S-enantiomer has clinically meaningful affinity for SERT; the R-enantiomer is essentially inactive at the transporter.",
+      "Citalopram is administered as a racemate: a 1:1 mixture of S-citalopram and R-citalopram. Only the S-enantiomer has clinically meaningful affinity for SERT; the R-enantiomer is essentially inactive at the transporter.",
       "S-citalopram binds the serotonin transporter (SERT) on the presynaptic neuron, blocking reuptake of serotonin from the synaptic cleft. Acute blockade raises synaptic serotonin concentration within hours.",
-      "Somatodendritic 5-HT1A autoreceptors in the raphe nuclei detect the rise in serotonin and initially inhibit further serotonin release — which is why acute pharmacology does not immediately translate into mood benefit.",
-      "Over 7–14 days, 5-HT1A autoreceptors gradually desensitise — removing the brake on serotonin firing.",
-      "Serotonergic throughput from the raphe nuclei to the prefrontal cortex, amygdala, and hippocampus increases. Downstream neuroadaptive changes occur over 2–6 weeks: increased BDNF expression, hippocampal neurogenesis, and postsynaptic receptor downregulation — these delayed adaptations correlate with clinical antidepressant and anxiolytic effects.",
+      "Somatodendritic 5-HT1A autoreceptors in the raphe nuclei detect the rise in serotonin and initially inhibit further serotonin release, which is why acute pharmacology does not immediately translate into mood benefit.",
+      "Over 7–14 days, 5-HT1A autoreceptors gradually desensitise: removing the brake on serotonin firing.",
+      "Serotonergic throughput from the raphe nuclei to the prefrontal cortex, amygdala, and hippocampus increases. Downstream neuroadaptive changes occur over 2–6 weeks: increased BDNF expression, hippocampal neurogenesis, and postsynaptic receptor downregulation; these delayed adaptations correlate with clinical antidepressant and anxiolytic effects.",
       "In parallel, the R-enantiomer (present in equal amount to the S-enantiomer in the racemate) blocks the hERG (KCNH2) potassium channel responsible for the rapid delayed-rectifier current (IKr) in cardiac ventricular myocytes. Blocking IKr delays phase 3 repolarisation, prolonging the QT interval on the surface ECG in a dose-dependent fashion. At supratherapeutic or high therapeutic doses this can precipitate torsades de pointes.",
       "Because half of every citalopram dose (the R-enantiomer) is essentially 'wasted' therapeutically but contributes fully to cardiac risk, the racemate is intrinsically less efficient than its isolated S-enantiomer (escitalopram). This is the pharmacological rationale for the existence of escitalopram.",
     ],
     pharmacokinetics:
-      "Well absorbed orally (bioavailability ~80%). Peak plasma at 4 hours. Food does not significantly affect absorption. Protein binding ~80%. Volume of distribution ~12 L/kg. Steady state reached in ~7–10 days. The racemate reaches equivalent peak concentrations of both enantiomers, but R-citalopram accumulates slightly more than S-citalopram at steady state — which may contribute to the QTc signal at higher doses.",
-    halfLife: "Approximately 35 hours (range 30–40 hours) for the parent racemate — longer than escitalopram's 27–32 hours.",
+      "Well absorbed orally (bioavailability ~80%). Peak plasma at 4 hours. Food does not significantly affect absorption. Protein binding ~80%. Volume of distribution ~12 L/kg. Steady state reached in ~7–10 days. The racemate reaches equivalent peak concentrations of both enantiomers, but R-citalopram accumulates slightly more than S-citalopram at steady state, which may contribute to the QTc signal at higher doses.",
+    halfLife: "Approximately 35 hours (range 30–40 hours) for the parent racemate: longer than escitalopram's 27–32 hours.",
     activeMetabolite:
-      "N-desmethylcitalopram (DCT) and N-didemethylcitalopram (DDCT) — both weakly active at SERT and present at much lower concentrations than the parent. DDCT has notable hERG channel affinity and was historically implicated in cardiotoxicity at supratherapeutic doses; the FDA label change in 2011 was in part driven by this signal. Both metabolites contribute negligibly to clinical efficacy.",
+      "N-desmethylcitalopram (DCT) and N-didemethylcitalopram (DDCT), both weakly active at SERT and present at much lower concentrations than the parent. DDCT has notable hERG channel affinity and was historically implicated in cardiotoxicity at supratherapeutic doses; the FDA label change in 2011 was in part driven by this signal. Both metabolites contribute negligibly to clinical efficacy.",
     metabolism:
-      "Hepatic CYP2C19 (primary), CYP3A4 and CYP2D6 (minor). CYP2C19 poor metabolisers achieve ~2-fold higher plasma concentrations of citalopram — hence the 20 mg/day dose cap in this population. Less CYP inhibition than fluoxetine or paroxetine, but more than escitalopram.",
+      "Hepatic CYP2C19 (primary), CYP3A4 and CYP2D6 (minor). CYP2C19 poor metabolisers achieve ~2-fold higher plasma concentrations of citalopram; hence the 20 mg/day dose cap in this population. Less CYP inhibition than fluoxetine or paroxetine, but more than escitalopram.",
     excretion: "Roughly 10% renal as unchanged drug; metabolites excreted predominantly in urine (~80%) with a smaller faecal component.",
   },
 
   /* ---- Mechanism visual flow ---- */
   mechanismFlow: {
     nodes: [
-      { id: "presynaptic", label: "Presynaptic neuron", sublabel: "Raphe nuclei — synthesises serotonin", variant: "input" },
+      { id: "presynaptic", label: "Presynaptic neuron", sublabel: "Raphe nuclei: synthesises serotonin", variant: "input" },
       { id: "serotonin", label: "Serotonin (5-HT)", sublabel: "Released into synaptic cleft", variant: "process" },
       { id: "sert", label: "SERT transporter", sublabel: "Normally reuptakes serotonin", variant: "target" },
       { id: "racemate", label: "Citalopram (racemic)", sublabel: "1:1 mixture of S- and R-enantiomers", variant: "input" },
@@ -93,10 +93,10 @@ export const citalopram: Drug = {
       { id: "r_enantiomer", label: "R-enantiomer", sublabel: "Inactive at SERT", variant: "process" },
       { id: "cleft", label: "↑ Synaptic 5-HT", sublabel: "More serotonin available", variant: "output" },
       { id: "autoreceptor", label: "5-HT1A autoreceptor", sublabel: "Initially brakes firing", variant: "process" },
-      { id: "desensitised", label: "Autoreceptors desensitise", sublabel: "Days 7–14 — brake removed", variant: "output" },
-      { id: "bdnf", label: "↑ BDNF + neurogenesis", sublabel: "Weeks 2–6 — antidepressant effect", variant: "output" },
+      { id: "desensitised", label: "Autoreceptors desensitise", sublabel: "Days 7–14: brake removed", variant: "output" },
+      { id: "bdnf", label: "↑ BDNF + neurogenesis", sublabel: "Weeks 2–6: antidepressant effect", variant: "output" },
       { id: "herg", label: "hERG (KCNH2) channel", sublabel: "Cardiac IKr current", variant: "target" },
-      { id: "qtc", label: "QTc prolongation", sublabel: "Dose-dependent — risk of torsades", variant: "output" },
+      { id: "qtc", label: "QTc prolongation", sublabel: "Dose-dependent: risk of torsades", variant: "output" },
     ],
     edges: [
       { from: "presynaptic", to: "serotonin", label: "releases" },
@@ -112,12 +112,12 @@ export const citalopram: Drug = {
       { from: "herg", to: "qtc", label: "delayed repolarisation" },
     ],
     caption:
-      "Citalopram is a racemate. The S-enantiomer drives SERT blockade (therapeutic); the R-enantiomer drives hERG blockade (QTc). This is why escitalopram (S-only) was developed — to separate the therapeutic enantiomer from the cardiotoxic one. The 2011 FDA label change (60 mg → 40 mg max) followed directly from this QTc signal.",
+      "Citalopram is a racemate. The S-enantiomer drives SERT blockade (therapeutic); the R-enantiomer drives hERG blockade (QTc). This is why escitalopram (S-only) was developed, to separate the therapeutic enantiomer from the cardiotoxic one. The 2011 FDA label change (60 mg → 40 mg max) followed directly from this QTc signal.",
   },
 
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Serotonin (5-HT)"],
-  receptors: ["SERT (serotonin transporter) — S-enantiomer", "hERG / KCNH2 potassium channel — R-enantiomer", "5-HT1A (autoreceptor, desensitises)", "5-HT2C", "5-HT7"],
+  receptors: ["SERT (serotonin transporter). S-enantiomer", "hERG / KCNH2 potassium channel. R-enantiomer", "5-HT1A (autoreceptor, desensitises)", "5-HT2C", "5-HT7"],
   brainRegionIds: ["raphe-nuclei", "prefrontal-cortex", "amygdala", "hippocampus"],
   pathwayIds: [], // SSRIs act on the diffuse serotonergic projection system, not the 4 named dopamine pathways
 
@@ -198,7 +198,7 @@ export const citalopram: Drug = {
     {
       title: "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults",
       text:
-        "Antidepressants increased the risk of suicidal thinking and behaviour (suicidality) in short-term studies in children, adolescents, and young adults with Major Depressive Disorder (MDD) and other psychiatric disorders. Citalopram is NOT approved for paediatric depression. Anyone considering the use of citalopram in a child, adolescent, or young adult must balance this risk with the clinical need. Patients of all ages should be monitored closely for clinical worsening, suicidality, or unusual changes in behaviour — especially during the first 1–2 months of therapy and during dose changes. A second boxed warning addresses dose-dependent QTc prolongation and torsades de pointes (see Contraindications and Monitoring).",
+        "Antidepressants increased the risk of suicidal thinking and behaviour (suicidality) in short-term studies in children, adolescents, and young adults with Major Depressive Disorder (MDD) and other psychiatric disorders. Citalopram is NOT approved for paediatric depression. Anyone considering the use of citalopram in a child, adolescent, or young adult must balance this risk with the clinical need. Patients of all ages should be monitored closely for clinical worsening, suicidality, or unusual changes in behaviour, especially during the first 1–2 months of therapy and during dose changes. A second boxed warning addresses dose-dependent QTc prolongation and torsades de pointes (see Contraindications and Monitoring).",
     },
   ],
 
@@ -261,7 +261,7 @@ export const citalopram: Drug = {
       name: "Upper respiratory tract infection",
       frequency: "common",
       severity: "mild",
-      description: "Reported in clinical trials at slightly higher rates than placebo — clinical significance unclear.",
+      description: "Reported in clinical trials at slightly higher rates than placebo: clinical significance unclear.",
     },
   ],
 
@@ -292,7 +292,7 @@ export const citalopram: Drug = {
       description:
         "Triad of mental status change (agitation, confusion), autonomic instability (hyperthermia, tachycardia, hypertension, diaphoresis), and neuromuscular excitation (clonus, hyperreflexia, rigidity). Onset usually within 24 hours of initiating, increasing, or combining serotonergic agents.",
       management:
-        "Discontinue citalopram immediately. Supportive care — cooling, benzodiazepines for agitation. Cyproheptadine (5-HT2A antagonist) in severe cases. ICU admission for hyperthermia >41°C.",
+        "Discontinue citalopram immediately. Supportive care: cooling, benzodiazepines for agitation. Cyproheptadine (5-HT2A antagonist) in severe cases. ICU admission for hyperthermia >41°C.",
       sideEffectId: "serotonin-syndrome",
     },
     {
@@ -335,7 +335,7 @@ export const citalopram: Drug = {
       frequency: "common",
       severity: "moderate",
       description:
-        "Occurs if stopped abruptly after ≥4 weeks of use. Symptoms: dizziness, 'brain zaps' (paresthesia), nausea, headache, irritability, insomnia. Severity is intermediate among SSRIs — worse than fluoxetine, similar to sertraline, milder than paroxetine/venlafaxine.",
+        "Occurs if stopped abruptly after ≥4 weeks of use. Symptoms: dizziness, 'brain zaps' (paresthesia), nausea, headache, irritability, insomnia. Severity is intermediate among SSRIs: worse than fluoxetine, similar to sertraline, milder than paroxetine/venlafaxine.",
       management:
         "Taper over at least 4 weeks. If symptoms emerge, return to previous dose and taper more slowly. Fluoxetine self-taper (long half-life) can be substituted for shorter half-life SSRIs near end of taper.",
     },
@@ -359,7 +359,7 @@ export const citalopram: Drug = {
       parameter: "Mood & suicidality",
       frequency: "Weekly during first month, then every 2–4 weeks until stable.",
       rationale:
-        "Black-box warning for suicidality in patients <25. Monitor for clinical worsening, agitation, irritability, or new suicidal thoughts — especially during dose changes.",
+        "Black-box warning for suicidality in patients <25. Monitor for clinical worsening, agitation, irritability, or new suicidal thoughts, especially during dose changes.",
     },
     {
       parameter: "Serum sodium",
@@ -386,9 +386,9 @@ export const citalopram: Drug = {
 
   interactions: [
     {
-      drug: "Other QTc-prolonging drugs — class IA/III antiarrhythmics (quinidine, procainamide, amiodarone, sotalol), antipsychotics (haloperidol, droperidol, ziprasidone, thioridazine), macrolides (erythromycin, clarithromycin), fluoroquinolones (moxifloxacin), antimalarials",
+      drug: "Other QTc-prolonging drugs: class IA/III antiarrhythmics (quinidine, procainamide, amiodarone, sotalol), antipsychotics (haloperidol, droperidol, ziprasidone, thioridazine), macrolides (erythromycin, clarithromycin), fluoroquinolones (moxifloxacin), antimalarials",
       severity: "major",
-      mechanism: "Additive QTc prolongation via independent hERG blockade. Citalopram contributes its own dose-dependent QTc effect — combinations substantially raise torsades de pointes risk.",
+      mechanism: "Additive QTc prolongation via independent hERG blockade. Citalopram contributes its own dose-dependent QTc effect: combinations substantially raise torsades de pointes risk.",
       action:
         "Avoid combination wherever possible. If unavoidable, use the lowest effective citalopram dose (≤20 mg if risk factors present), correct electrolytes, and obtain baseline + follow-up ECGs. Consider azithromycin instead of erythromycin/clarithromycin (azithromycin has minimal QTc effect).",
     },
@@ -406,10 +406,10 @@ export const citalopram: Drug = {
       action: "Never combine.",
     },
     {
-      drug: "CYP2C19 inhibitors — omeprazole, esomeprazole, fluvoxamine, fluoxetine, moclobemide, ticlopidine",
+      drug: "CYP2C19 inhibitors: omeprazole, esomeprazole, fluvoxamine, fluoxetine, moclobemide, ticlopidine",
       severity: "moderate",
       mechanism:
-        "CYP2C19 is the primary metabolic pathway for citalopram. Inhibition raises citalopram plasma levels ~2-fold — equivalent to being a CYP2C19 poor metaboliser. Higher levels → more QTc prolongation.",
+        "CYP2C19 is the primary metabolic pathway for citalopram. Inhibition raises citalopram plasma levels ~2-fold, equivalent to being a CYP2C19 poor metaboliser. Higher levels → more QTc prolongation.",
       action:
         "Reduce citalopram maximum dose to 20 mg/day when co-prescribed. Consider pantoprazole (less CYP2C19 inhibition) instead of omeprazole. Monitor for QTc and serotonin toxicity.",
     },
@@ -423,7 +423,7 @@ export const citalopram: Drug = {
     {
       drug: "Triptans (sumatriptan, rizatriptan)",
       severity: "major",
-      mechanism: "Triptans are 5-HT1B/1D agonists — additive serotonergic effect.",
+      mechanism: "Triptans are 5-HT1B/1D agonists: additive serotonergic effect.",
       action: "Use cautiously. Monitor for serotonin syndrome, especially in first month of SSRI therapy.",
     },
     {
@@ -444,7 +444,7 @@ export const citalopram: Drug = {
       drug: "St John's Wort",
       severity: "major",
       mechanism: "Herbal SSRI. Additive serotonergic effect.",
-      action: "Avoid combination — serotonin syndrome risk.",
+      action: "Avoid combination: serotonin syndrome risk.",
     },
     {
       drug: "Drugs that lower seizure threshold (bupropion, tramadol, antipsychotics)",
@@ -457,66 +457,66 @@ export const citalopram: Drug = {
   pregnancy: {
     legacyCategory: "C (former FDA category)",
     summary:
-      "Citalopram is generally considered acceptable in pregnancy when pharmacotherapy is necessary, but it is NOT the SSRI of choice — sertraline is preferred due to a larger reproductive safety database and the lowest milk/plasma ratio in lactation. Citalopram has not been associated with a specific teratogenic signal (unlike paroxetine, which carries a 1st-trimester cardiac defect signal). Third-trimester use is associated with neonatal adaptation syndrome (jitteriness, respiratory distress, poor feeding) in ~30% of exposed neonates — usually self-limited. Persistent pulmonary hypertension of the newborn (PPHN) has been weakly associated with third-trimester SSRI exposure (absolute risk ~1 in 200). Untreated maternal depression carries significant risks (preterm birth, low birth weight, poor bonding, suicidality) — the decision to treat must weigh these against medication risks. The QTc precaution is theoretically relevant in the neonatal period; observe exposed neonates for arrhythmia.",
+      "Citalopram is generally considered acceptable in pregnancy when pharmacotherapy is necessary, but it is NOT the SSRI of choice: sertraline is preferred due to a larger reproductive safety database and the lowest milk/plasma ratio in lactation. Citalopram has not been associated with a specific teratogenic signal (unlike paroxetine, which carries a 1st-trimester cardiac defect signal). Third-trimester use is associated with neonatal adaptation syndrome (jitteriness, respiratory distress, poor feeding) in ~30% of exposed neonates: usually self-limited. Persistent pulmonary hypertension of the newborn (PPHN) has been weakly associated with third-trimester SSRI exposure (absolute risk ~1 in 200). Untreated maternal depression carries significant risks (preterm birth, low birth weight, poor bonding, suicidality). The decision to treat must weigh these against medication risks. The QTc precaution is theoretically relevant in the neonatal period; observe exposed neonates for arrhythmia.",
     lactation:
       "Citalopram is excreted into breast milk in higher concentrations than sertraline or paroxetine (milk/plasma ratio ~3; relative infant dose ~3–5%). Infant serum levels are detectable, and isolated case reports describe infant irritability, sedation, and poor weight gain. Sertraline or paroxetine are preferred SSRIs in breastfeeding. If citalopram is required, monitor the infant for sedation, feeding, and weight gain.",
   },
 
-  renalAdjustment: "No dose adjustment required in mild–moderate renal impairment (CrCl 20–50 mL/min). Limited data in severe renal impairment (CrCl <20 mL/min) — use cautiously and at the lower end of the dose range.",
+  renalAdjustment: "No dose adjustment required in mild–moderate renal impairment (CrCl 20–50 mL/min). Limited data in severe renal impairment (CrCl <20 mL/min): use cautiously and at the lower end of the dose range.",
 
   hepaticAdjustment:
-    "Maximum dose 20 mg/day in hepatic impairment (Child-Pugh A and B). The 20 mg cap is mandatory, not optional — hepatic impairment raises citalopram plasma levels and QTc risk. Avoid in severe hepatic impairment (Child-Pugh C) if possible.",
+    "Maximum dose 20 mg/day in hepatic impairment (Child-Pugh A and B). The 20 mg cap is mandatory, not optional: hepatic impairment raises citalopram plasma levels and QTc risk. Avoid in severe hepatic impairment (Child-Pugh C) if possible.",
 
   /* ---- Education ---- */
   patientExplanation:
-    "Citalopram is a medicine that helps the brain keep more of a chemical called serotonin available for longer. Serotonin is one of the chemicals your brain uses to regulate mood, anxiety, sleep, and appetite. By keeping more of it active between nerve cells, citalopram helps your brain's mood-regulation system work better — but this doesn't happen immediately. Most people feel some side effects in the first week or two (often nausea, sleep changes, or feeling a bit wired) before the mood benefit builds up over 4–6 weeks. Citalopram is part of a class of medicines called SSRIs. One thing that is special about citalopram is that the maximum dose is capped — for most adults it is 40 mg a day, and for people over 60 or with certain other conditions it is 20 mg a day. This is because higher doses can affect the electrical rhythm of the heart (the QT interval on an ECG). Always tell every doctor, pharmacist, and dentist that you take citalopram so they can check it against any new medicine they prescribe.",
+    "Citalopram is a medicine that helps the brain keep more of a chemical called serotonin available for longer. Serotonin is one of the chemicals your brain uses to regulate mood, anxiety, sleep, and appetite. By keeping more of it active between nerve cells, citalopram helps your brain's mood-regulation system work better, but this doesn't happen immediately. Most people feel some side effects in the first week or two (often nausea, sleep changes, or feeling a bit wired) before the mood benefit builds up over 4–6 weeks. Citalopram is part of a class of medicines called SSRIs. One thing that is special about citalopram is that the maximum dose is capped, for most adults it is 40 mg a day, and for people over 60 or with certain other conditions it is 20 mg a day. This is because higher doses can affect the electrical rhythm of the heart (the QT interval on an ECG). Always tell every doctor, pharmacist, and dentist that you take citalopram so they can check it against any new medicine they prescribe.",
 
   patientEducationPoints: [
     "Some early changes can happen within 1–2 weeks, but clearer mood benefit often takes 4–6 weeks or longer. Don't stop early just because you don't feel better yet.",
     "Nausea, headache, sleep change, or restlessness may appear before mood benefit. These usually settle within 1–2 weeks. Persistent or severe effects should be discussed with your clinician.",
     "The maximum dose of citalopram is capped for safety. For most adults this is 40 mg a day. If you are over 60, have liver problems, or take certain other medicines (including the common stomach medicine omeprazole), the maximum is 20 mg a day. Never increase your dose beyond what your doctor prescribed.",
-    "Citalopram can affect the electrical rhythm of the heart (the QT interval). Tell your doctor about ALL your medicines — especially antibiotics (macrolides like erythromycin/clarithromycin, and fluoroquinolones like ciprofloxacin/moxifloxacin), antipsychotics, heart rhythm medicines, and over-the-counter medicines. Some combinations can be dangerous.",
+    "Citalopram can affect the electrical rhythm of the heart (the QT interval). Tell your doctor about ALL your medicines, especially antibiotics (macrolides like erythromycin/clarithromycin, and fluoroquinolones like ciprofloxacin/moxifloxacin), antipsychotics, heart rhythm medicines, and over-the-counter medicines. Some combinations can be dangerous.",
     "Tell your doctor if you have ever had a heart problem, an irregular heartbeat, fainting spells, or a family member who died suddenly at a young age. They may want to do an ECG (heart tracing) before and during treatment.",
-    "Tell your doctor about low potassium or magnesium levels, vomiting, diarrhoea, or taking water pills (diuretics) — these can affect heart rhythm and may need a blood test.",
+    "Tell your doctor about low potassium or magnesium levels, vomiting, diarrhoea, or taking water pills (diuretics): these can affect heart rhythm and may need a blood test.",
     "Citalopram is not considered addictive in the way alcohol, opioids, or benzodiazepines can be, but stopping suddenly can still cause uncomfortable discontinuation symptoms ('brain zaps', dizziness, irritability). Always come off slowly with your doctor's guidance.",
-    "Seek emergency help for signs of serotonin syndrome: high fever, confusion, sweating, agitation, tremor, muscle rigidity or twitching, fast heartbeat — especially after a dose increase or starting a new interacting medicine.",
-    "Watch for warning signs in the first month: new or worsening agitation, irritability, anxiety, or suicidal thoughts — particularly if you're under 25. Contact your clinician immediately.",
-    "If you miss a dose, take it when you remember unless it is within 8 hours of your next dose — in that case, skip the missed dose. Do not double up. Avoid alcohol — it can worsen sleepiness, mood symptoms, and tolerability.",
+    "Seek emergency help for signs of serotonin syndrome: high fever, confusion, sweating, agitation, tremor, muscle rigidity or twitching, fast heartbeat, especially after a dose increase or starting a new interacting medicine.",
+    "Watch for warning signs in the first month: new or worsening agitation, irritability, anxiety, or suicidal thoughts, particularly if you're under 25. Contact your clinician immediately.",
+    "If you miss a dose, take it when you remember unless it is within 8 hours of your next dose. In that case, skip the missed dose. Do not double up. Avoid alcohol: it can worsen sleepiness, mood symptoms, and tolerability.",
   ],
 
   clinicalPearls: [
     "Citalopram is the racemic parent of escitalopram. The S-enantiomer does the SERT blockade (the antidepressant work); the R-enantiomer is essentially inactive at SERT but blocks hERG and drives QTc prolongation. This stereochemistry is the entire reason escitalopram exists.",
     "The 2011 FDA Drug Safety Communication capped citalopram at 40 mg/day (down from 60 mg) after post-marketing QTc / torsades data. The same communication capped escitalopram at 20 mg/day. This label change is a high-yield exam fact.",
-    "20 mg of citalopram is approximately equivalent to 10 mg of escitalopram in SERT blockade — but at equivalent antidepressant doses, escitalopram carries less QTc risk because the R-enantiomer is absent.",
+    "20 mg of citalopram is approximately equivalent to 10 mg of escitalopram in SERT blockade, but at equivalent antidepressant doses, escitalopram carries less QTc risk because the R-enantiomer is absent.",
     "Use the 20 mg/day cap in: age >60 years, hepatic impairment (Child-Pugh A/B), CYP2C19 poor metabolisers, and patients taking CYP2C19 inhibitors (omeprazole, esomeprazole, fluvoxamine, fluoxetine, moclobemide). This list is essentially mandatory knowledge for prescribing.",
-    "Citalopram is NOT approved for paediatric depression — fluoxetine (≥8 years) and escitalopram (≥12 years) are. The black-box suicidality warning applies particularly strongly in this population.",
+    "Citalopram is NOT approved for paediatric depression: fluoxetine (≥8 years) and escitalopram (≥12 years) are. The black-box suicidality warning applies particularly strongly in this population.",
     "CYP2C19 is the primary metabolic enzyme (not CYP2D6, as with paroxetine and fluoxetine). CYP2C19 poor metabolisers have ~2× higher plasma levels. Pharmacogenomic testing is increasingly available and is recommended by CPIC when accessible.",
     "Common stomach medicines omeprazole and esomeprazole are CYP2C19 inhibitors and effectively halve the maximum citalopram dose. Use pantoprazole (minimal CYP2C19 inhibition) when a PPI is needed in a patient on citalopram.",
-    "Citalopram is generally the cheapest SSRI (generic, off-patent) and remains a reasonable first-line SSRI for adult depression in resource-limited settings or when escitalopram is unavailable — provided the dose-capping rules and QTc precautions are respected.",
-    "Sexual dysfunction affects 30–50% of patients on citalopram and is the #1 reason patients stop. Always ask directly — patients rarely volunteer it. Add bupropion XL 150 mg/day or switch to bupropion/mirtazapine if problematic.",
+    "Citalopram is generally the cheapest SSRI (generic, off-patent) and remains a reasonable first-line SSRI for adult depression in resource-limited settings or when escitalopram is unavailable: provided the dose-capping rules and QTc precautions are respected.",
+    "Sexual dysfunction affects 30–50% of patients on citalopram and is the #1 reason patients stop. Always ask directly: patients rarely volunteer it. Add bupropion XL 150 mg/day or switch to bupropion/mirtazapine if problematic.",
     "ECG monitoring is recommended at baseline and after dose escalation above 20 mg in patients >60, with cardiac disease, electrolyte abnormalities, or on other QTc-prolonging drugs. A QTc >500 ms or an increase >60 ms from baseline warrants dose reduction or discontinuation.",
   ],
 
   examPearls: [
     "Citalopram = RACEMIC mixture. Escitalopram = S-enantiomer (the active one). The R-enantiomer is essentially inactive at SERT but blocks hERG → QTc prolongation. This single fact underpins the entire clinical distinction.",
     "QTc prolongation is dose-dependent and is the #1 exam fact about citalopram. Mean QTc increase: ~8 ms at 20 mg, ~12 ms at 40 mg, ~18 ms at 60 mg. Above 40 mg/day the torsades risk becomes clinically meaningful.",
-    "Maximum dose: 40 mg/day in adults; 20 mg/day in elderly (>60 yrs), hepatic impairment, CYP2C19 poor metabolisers, and patients taking CYP2C19 inhibitors. Memorise this list — it appears on virtually every prescribing exam.",
+    "Maximum dose: 40 mg/day in adults; 20 mg/day in elderly (>60 yrs), hepatic impairment, CYP2C19 poor metabolisers, and patients taking CYP2C19 inhibitors. Memorise this list: it appears on virtually every prescribing exam.",
     "FDA 2011 Drug Safety Communication: maximum daily dose reduced from 60 mg to 40 mg because of QTc / torsades de pointes risk. The same communication capped escitalopram at 20 mg/day. High-yield historical fact.",
     "R-enantiomer → hERG (KCNH2) blockade → delayed ventricular repolarisation → QTc prolongation. S-enantiomer → SERT blockade → antidepressant effect. The two enantiomers have completely different clinically relevant targets.",
     "Metabolism: CYP2C19 (primary), CYP3A4 and CYP2D6 (minor). NOT primarily CYP2D6 (that is paroxetine/fluoxetine). CYP2C19 poor metabolisers have ~2× higher levels.",
     "Citalopram is NOT FDA-approved for paediatric depression (unlike fluoxetine ≥8 yrs and escitalopram ≥12 yrs). The black-box suicidality warning applies.",
-    "Avoid combining with other QTc-prolonging drugs: class IA/III antiarrhythmics (amiodarone, sotalol, quinidine), antipsychotics (haloperidol, ziprasidone, thioridazine), macrolides (erythromycin, clarithromycin — consider azithromycin), fluoroquinolones (moxifloxacin).",
+    "Avoid combining with other QTc-prolonging drugs: class IA/III antiarrhythmics (amiodarone, sotalol, quinidine), antipsychotics (haloperidol, ziprasidone, thioridazine), macrolides (erythromycin, clarithromycin, consider azithromycin), fluoroquinolones (moxifloxacin).",
     "Common CYP2C19 inhibitors that mandate the 20 mg/day cap: omeprazole, esomeprazole, fluvoxamine, fluoxetine, moclobemide, ticlopidine. Use pantoprazole if a PPI is required.",
-    "Half-life: ~35 hours — longer than escitalopram (27–32 h) and paroxetine (21 h), shorter than fluoxetine (1–4 days with norfluoxetine).",
+    "Half-life: ~35 hours; longer than escitalopram (27–32 h) and paroxetine (21 h), shorter than fluoxetine (1–4 days with norfluoxetine).",
     "Dose equivalence: 20 mg citalopram ≈ 10 mg escitalopram. But at equivalent antidepressant doses, escitalopram has less QTc risk because the R-enantiomer is absent.",
-    "Black box warning: suicidality in <25. Citalopram is not approved in paediatric depression — never first-line in a child or adolescent with depression.",
+    "Black box warning: suicidality in <25. Citalopram is not approved in paediatric depression, never first-line in a child or adolescent with depression.",
     "Contraindications: MAOIs (14-day washout), pimozide (QTc), congenital long-QT syndrome, known hypersensitivity. Relative: other QTc-prolonging drugs, uncorrected hypokalaemia/hypomagnesaemia.",
   ],
 
   /* ---- Memory tricks (mnemonics) ---- */
   memoryTricks: [
     {
-      title: "CIT — Citalopram signature",
+      title: "CIT. Citalopram signature",
       trick: "Citalopram = Check QTc · Isomers Two (R + S) · Twenty mg in elderly",
       remembers:
         "The three highest-yield citalopram facts: (1) QTc monitoring is essential, (2) it is a racemic mixture of R- and S-enantiomers, (3) the maximum dose in elderly (and other at-risk groups) is 20 mg/day.",
@@ -525,7 +525,7 @@ export const citalopram: Drug = {
       title: "S does the Serotonin; R Ruins the Rhythm",
       trick: "S-enantiomer = Serotonin (SERT) blockade = antidepressant effect. R-enantiomer = Rhythm (hERG) blockade = QTc prolongation.",
       remembers:
-        "Which enantiomer does what. The S-enantiomer is the active antidepressant (and is what escitalopram IS). The R-enantiomer is inactive at SERT but causes the cardiac QT problem — and is what escitalopram deliberately LEFT OUT.",
+        "Which enantiomer does what. The S-enantiomer is the active antidepressant (and is what escitalopram IS). The R-enantiomer is inactive at SERT but causes the cardiac QT problem, and is what escitalopram deliberately LEFT OUT.",
     },
     {
       title: "40 → 20 → 2011",
@@ -534,28 +534,28 @@ export const citalopram: Drug = {
         "The full dose-capping rule. Most adults 40 mg/day; four specific groups cap at 20 mg/day; the rule was born in 2011 when the FDA cut the maximum from 60 to 40 mg due to QTc/torsades risk.",
     },
     {
-      title: "2C19 — Not 2D6",
+      title: "2C19. Not 2D6",
       trick: "Citalopram is metabolised by 2C19, not 2D6. '2C19 = Citalopram'.",
       remembers:
-        "The CYP enzyme. Paroxetine and fluoxetine are the famous CYP2D6 inhibitors; citalopram's primary enzyme is CYP2C19 — which is why CYP2C19 inhibitors (omeprazole!) and CYP2C19 poor metaboliser status mandate a 20 mg/day dose cap.",
+        "The CYP enzyme. Paroxetine and fluoxetine are the famous CYP2D6 inhibitors; citalopram's primary enzyme is CYP2C19, which is why CYP2C19 inhibitors (omeprazole!) and CYP2C19 poor metaboliser status mandate a 20 mg/day dose cap.",
     },
     {
       title: "OMEPRAZOLE halves the cap",
       trick: "Omeprazole is a CYP2C19 inhibitor → 20 mg/day citalopram cap when co-prescribed. Swap to Pantoprazole to avoid the interaction.",
       remembers:
-        "The single most common real-world citalopram interaction. Patients on long-term omeprazole for reflux or GI protection often end up on citalopram — and many prescribers forget to halve the dose cap. Switching to pantoprazole (minimal CYP2C19 inhibition) avoids the issue.",
+        "The single most common real-world citalopram interaction. Patients on long-term omeprazole for reflux or GI protection often end up on citalopram, and many prescribers forget to halve the dose cap. Switching to pantoprazole (minimal CYP2C19 inhibition) avoids the issue.",
     },
     {
       title: "Racemic → R-escitalopram problem",
-      trick: "Racemic citalopram has the R-enantiomer. Escitalopram is 'escape'-italopram — escape from the R-enantiomer.",
+      trick: "Racemic citalopram has the R-enantiomer. Escitalopram is 'escape'-italopram: escape from the R-enantiomer.",
       remembers:
-        "Why escitalopram was developed. By isolating the active S-enantiomer, escitalopram delivers the antidepressant effect without the R-enantiomer's hERG/QTc liability — a textbook example of stereochemistry solving a clinical problem.",
+        "Why escitalopram was developed. By isolating the active S-enantiomer, escitalopram delivers the antidepressant effect without the R-enantiomer's hERG/QTc liability: a textbook example of stereochemistry solving a clinical problem.",
     },
   ],
 
   /* ---- High-yield summary (one-page revision) ---- */
   highYieldSummary: [
-    "Class: SSRI — racemic mixture of S-citalopram (active at SERT) and R-citalopram (inactive at SERT, blocks hERG).",
+    "Class: SSRI; racemic mixture of S-citalopram (active at SERT) and R-citalopram (inactive at SERT, blocks hERG).",
     "Mechanism: S-enantiomer blocks SERT → ↑ synaptic 5-HT → 5-HT1A autoreceptor desensitisation (1–2 weeks) → ↑ BDNF + neurogenesis (4–6 weeks). Parallel: R-enantiomer blocks hERG → QTc prolongation (dose-dependent).",
     "FDA indication: Major Depressive Disorder in ADULTS ONLY (not paediatric). Off-label: GAD, panic, OCD, PMDD, social anxiety, PTSD.",
     "Signature risk: dose-dependent QTc prolongation → torsades de pointes. The defining safety issue of this drug.",
@@ -574,7 +574,7 @@ export const citalopram: Drug = {
   /* ---- Clinical cases (plural — supports multiple cases per drug) ---- */
   clinicalCases: [
     {
-      title: "Late-life depression in a 68-year-old man with reflux — why the 20 mg cap and ECG matter",
+      title: "Late-life depression in a 68-year-old man with reflux: why the 20 mg cap and ECG matter",
       presentation:
         "A 68-year-old man presents with 3 months of low mood, anhedonia, early-morning waking, and weight loss. He takes omeprazole 20 mg daily for gastro-oesophageal reflux and has well-controlled hypertension on amlodipine.",
       history:
@@ -582,19 +582,19 @@ export const citalopram: Drug = {
       examination:
         "Alert, oriented, cooperative. Speech slow but normal in content. Mood '3/10', affect congruent. No hallucinations, no delusions, no thought disorder. MoCA 26/30 (mildly reduced, stable from a prior test 2 years ago). Cardiovascular exam: regular rhythm, HR 64, BP 138/82, no murmurs. BMI 24. TSH normal. Basic metabolic panel: Na 138, K 4.1, Mg 0.85 (normal), renal function normal. LFTs normal. Baseline ECG: sinus rhythm, QTc 440 ms (within normal limits for a male).",
       diagnosis:
-        "Major Depressive Disorder, single episode, moderate-severe, without psychotic features (ICD-10 F32.2). Differential: vascular depression (given age and hypertension — likely contributor); hypothyroidism-induced depression (TSH normal — excluded); bipolar depression (screen with MDQ — negative). The omeprazole is clinically critical: it is a CYP2C19 inhibitor and therefore caps citalopram at 20 mg/day in this patient.",
+        "Major Depressive Disorder, single episode, moderate-severe, without psychotic features (ICD-10 F32.2). Differential: vascular depression (given age and hypertension, likely contributor); hypothyroidism-induced depression (TSH normal, excluded); bipolar depression (screen with MDQ, negative). The omeprazole is clinically critical: it is a CYP2C19 inhibitor and therefore caps citalopram at 20 mg/day in this patient.",
       rationale:
-        "An SSRI is first-line. Citalopram is acceptable because: (1) the patient is an adult with MDD; (2) generic citalopram is inexpensive and formulary-preferred; (3) the patient's baseline QTc is normal (440 ms), giving a safe margin; (4) the patient is on amlodipine (no QTc liability, unlike some antihypertensives). Crucial constraints: (i) age >60 → 20 mg/day cap; (ii) omeprazole (CYP2C19 inhibitor) → 20 mg/day cap — both independently mandate the same 20 mg ceiling, so the cap is non-negotiable; (iii) baseline and follow-up ECG required because the dose may need titration toward the cap. Sertraline would be a reasonable alternative (less QTc liability, no CYP2C19 cap) but slightly more CYP2D6 interaction; escitalopram would also be reasonable (10 mg cap in this patient) but more expensive. The shared decision was to use citalopram with strict 20 mg/day ceiling and ECG follow-up.",
+        "An SSRI is first-line. Citalopram is acceptable because: (1) the patient is an adult with MDD; (2) generic citalopram is inexpensive and formulary-preferred; (3) the patient's baseline QTc is normal (440 ms), giving a safe margin; (4) the patient is on amlodipine (no QTc liability, unlike some antihypertensives). Crucial constraints: (i) age >60 → 20 mg/day cap; (ii) omeprazole (CYP2C19 inhibitor) → 20 mg/day cap, both independently mandate the same 20 mg ceiling, so the cap is non-negotiable; (iii) baseline and follow-up ECG required because the dose may need titration toward the cap. Sertraline would be a reasonable alternative (less QTc liability, no CYP2C19 cap) but slightly more CYP2D6 interaction; escitalopram would also be reasonable (10 mg cap in this patient) but more expensive. The shared decision was to use citalopram with strict 20 mg/day ceiling and ECG follow-up.",
       management:
-        "Started citalopram 10 mg every morning with food (lower than the cap, to assess tolerability). Plan: review at 1 week (tolerability + suicidality + ECG), 2 weeks (serum Na — elderly), 4 weeks (early response, ECG, dose escalation to 20 mg if tolerated and PHQ-9 reduction <30%), 8 weeks (full response assessment, ECG). Counseled: (1) expect side effects before benefit; (2) DO NOT exceed 20 mg/day — explained the QTc rationale and the omeprazole interaction in plain language; (3) tell every clinician he sees that he is on citalopram, especially before any new antibiotic or heart medicine; (4) seek emergency care for palpitations, syncope, or near-syncope; (5) avoid alcohol. Concurrent referral for CBT (NICE recommends combining medication + psychotherapy). Safety plan with crisis contacts documented. Advised to continue omeprazole but consider pantoprazole if a future dose increase is contemplated (avoids the CYP2C19 interaction).",
+        "Started citalopram 10 mg every morning with food (lower than the cap, to assess tolerability). Plan: review at 1 week (tolerability + suicidality + ECG), 2 weeks (serum Na, elderly), 4 weeks (early response, ECG, dose escalation to 20 mg if tolerated and PHQ-9 reduction <30%), 8 weeks (full response assessment, ECG). Counseled: (1) expect side effects before benefit; (2) DO NOT exceed 20 mg/day: explained the QTc rationale and the omeprazole interaction in plain language; (3) tell every clinician he sees that he is on citalopram, especially before any new antibiotic or heart medicine; (4) seek emergency care for palpitations, syncope, or near-syncope; (5) avoid alcohol. Concurrent referral for CBT (NICE recommends combining medication + psychotherapy). Safety plan with crisis contacts documented. Advised to continue omeprazole but consider pantoprazole if a future dose increase is contemplated (avoids the CYP2C19 interaction).",
       outcome:
-        "Week 1: mild nausea and sleep disturbance (tolerable, no suicidality, no palpitations). Repeat ECG at week 1: QTc 448 ms (within normal limits, +8 ms from baseline — within the expected effect size at 10 mg/day). Week 2: serum sodium 137 mmol/L (normal). Week 4: nausea settled, sleep improved, PHQ-9 14 (22% reduction — suboptimal). Dose increased to 20 mg/day (the cap for this patient). ECG at week 5 (after 1 week at 20 mg): QTc 458 ms (+18 ms from baseline) — still within normal limits but monitored. Week 8: mood 6/10, PHQ-9 7 (61% reduction — treatment response). ECG at week 8: QTc 460 ms (stable from week 5). No palpitations, no syncope. Returned to gardening, playing with grandchildren. CBT ongoing. Plan: continue citalopram 20 mg/day for 9 more months (12 months total from remission), then taper over 6–8 weeks. ECG every 6 months while on therapy, and after any new medication is added.",
+        "Week 1: mild nausea and sleep disturbance (tolerable, no suicidality, no palpitations). Repeat ECG at week 1: QTc 448 ms (within normal limits, +8 ms from baseline, within the expected effect size at 10 mg/day). Week 2: serum sodium 137 mmol/L (normal). Week 4: nausea settled, sleep improved, PHQ-9 14 (22% reduction, suboptimal). Dose increased to 20 mg/day (the cap for this patient). ECG at week 5 (after 1 week at 20 mg): QTc 458 ms (+18 ms from baseline), still within normal limits but monitored. Week 8: mood 6/10, PHQ-9 7 (61% reduction, treatment response). ECG at week 8: QTc 460 ms (stable from week 5). No palpitations, no syncope. Returned to gardening, playing with grandchildren. CBT ongoing. Plan: continue citalopram 20 mg/day for 9 more months (12 months total from remission), then taper over 6–8 weeks. ECG every 6 months while on therapy, and after any new medication is added.",
       teachingPoints: [
-        "Two independent factors (age >60 years AND concurrent omeprazole) both mandated the 20 mg/day cap in this patient. Recognising CYP2C19 inhibitors (omeprazole!) is essential — they are the most commonly missed citalopram interaction in primary care.",
+        "Two independent factors (age >60 years AND concurrent omeprazole) both mandated the 20 mg/day cap in this patient. Recognising CYP2C19 inhibitors (omeprazole!) is essential. They are the most commonly missed citalopram interaction in primary care.",
         "Baseline ECG before starting and a follow-up ECG after each dose escalation is the standard of care in elderly patients on citalopram. A QTc increase of 8–18 ms at therapeutic doses is expected; >60 ms or an absolute QTc >500 ms warrants action.",
-        "The observed QTc effect (~18 ms at 20 mg) was consistent with published dose-response data. This is precisely the magnitude of effect that led the FDA to cap dosing — and it illustrates why exceeding the cap is dangerous.",
+        "The observed QTc effect (~18 ms at 20 mg) was consistent with published dose-response data. This is precisely the magnitude of effect that led the FDA to cap dosing, and it illustrates why exceeding the cap is dangerous.",
         "Starting at 10 mg rather than 20 mg in an elderly patient reduces early activation and GI side effects, and provides a QTc baseline at the lower dose before titration to the cap.",
-        "Switching omeprazole to pantoprazole (minimal CYP2C19 inhibition) is a useful clinical manoeuvre if a patient genuinely needs a higher citalopram dose — though in this elderly patient the 20 mg cap from age alone would still apply.",
+        "Switching omeprazole to pantoprazole (minimal CYP2C19 inhibition) is a useful clinical manoeuvre if a patient genuinely needs a higher citalopram dose, though in this elderly patient the 20 mg cap from age alone would still apply.",
       ],
     },
   ],
@@ -616,7 +616,7 @@ export const citalopram: Drug = {
         },
         {
           attribute: "QTc prolongation risk",
-          primaryValue: "SIGNATURE — dose-dependent (R-enantiomer hERG blockade)",
+          primaryValue: "SIGNATURE: dose-dependent (R-enantiomer hERG blockade)",
           comparisons: [
             { drug: "Escitalopram", value: "Lower (no R-enantiomer) but dose still capped" },
             { drug: "Sertraline", value: "Minimal QTc effect at therapeutic doses" },
@@ -652,7 +652,7 @@ export const citalopram: Drug = {
         },
         {
           attribute: "FDA indications",
-          primaryValue: "MDD (adults only — NOT paediatric)",
+          primaryValue: "MDD (adults only. NOT paediatric)",
           comparisons: [
             { drug: "Escitalopram", value: "MDD (≥12 yrs), GAD (adults)" },
             { drug: "Sertraline", value: "MDD, OCD, Panic, PTSD, Social Anxiety, PMDD (6 indications)" },
@@ -697,7 +697,7 @@ export const citalopram: Drug = {
         },
       ],
       takeaway:
-        "Citalopram = the racemic, cheaper parent of escitalopram — effective for adult depression but dose-capped by QTc risk driven by the R-enantiomer. Escitalopram delivers the same antidepressant S-enantiomer without the cardiotoxic R-enantiomer, at the cost of a higher price. Sertraline is the best all-rounder (pregnancy, PTSD, anxiety). Fluoxetine is best when long half-life is an asset (paediatric depression, adherence, self-taper). When QTc risk factors (elderly, cardiac disease, electrolyte abnormalities, other QTc-prolonging drugs, CYP2C19 inhibitors like omeprazole) are present, prefer escitalopram or sertraline over citalopram — or strictly respect the 20 mg/day cap if citalopram must be used.",
+        "Citalopram = the racemic, cheaper parent of escitalopram: effective for adult depression but dose-capped by QTc risk driven by the R-enantiomer. Escitalopram delivers the same antidepressant S-enantiomer without the cardiotoxic R-enantiomer, at the cost of a higher price. Sertraline is the best all-rounder (pregnancy, PTSD, anxiety). Fluoxetine is best when long half-life is an asset (paediatric depression, adherence, self-taper). When QTc risk factors (elderly, cardiac disease, electrolyte abnormalities, other QTc-prolonging drugs, CYP2C19 inhibitors like omeprazole) are present, prefer escitalopram or sertraline over citalopram, or strictly respect the 20 mg/day cap if citalopram must be used.",
     },
   ],
 
@@ -708,7 +708,7 @@ export const citalopram: Drug = {
       time: "Hours 1–24",
       title: "Acute SERT blockade (S-enantiomer) + onset of hERG blockade (R-enantiomer)",
       description:
-        "S-citalopram blocks SERT within hours — synaptic serotonin rises. R-citalopram begins to block hERG; QTc effect is small at therapeutic doses but measurable. Side effects (nausea, headache, activation) often appear here. Patients frequently feel worse before they feel better. QTc monitoring begins at baseline before the first dose in at-risk patients.",
+        "S-citalopram blocks SERT within hours: synaptic serotonin rises. R-citalopram begins to block hERG; QTc effect is small at therapeutic doses but measurable. Side effects (nausea, headache, activation) often appear here. Patients frequently feel worse before they feel better. QTc monitoring begins at baseline before the first dose in at-risk patients.",
       phase: "onset",
     },
     {
@@ -716,7 +716,7 @@ export const citalopram: Drug = {
       time: "Days 2–7",
       title: "5-HT1A autoreceptor desensitisation begins",
       description:
-        "Somatodendritic 5-HT1A autoreceptors in the raphe nuclei begin to desensitise. Serotonin release toward the prefrontal cortex gradually increases. Sleep, appetite, and energy often improve first — before mood. QTc remains stable at low doses; check ECG if patient develops syncope or palpitations.",
+        "Somatodendritic 5-HT1A autoreceptors in the raphe nuclei begin to desensitise. Serotonin release toward the prefrontal cortex gradually increases. Sleep, appetite, and energy often improve first, before mood. QTc remains stable at low doses; check ECG if patient develops syncope or palpitations.",
       phase: "onset",
     },
     {
@@ -724,7 +724,7 @@ export const citalopram: Drug = {
       time: "Weeks 2–4",
       title: "Neuroadaptive changes",
       description:
-        "BDNF expression rises in the hippocampus. Postsynaptic receptor downregulation occurs. Early mood improvement becomes noticeable in many patients. Sexual side effects typically emerge here. In elderly or patients on CYP2C19 inhibitors, this is when dose escalation toward the 20 mg cap is typically considered — with a follow-up ECG.",
+        "BDNF expression rises in the hippocampus. Postsynaptic receptor downregulation occurs. Early mood improvement becomes noticeable in many patients. Sexual side effects typically emerge here. In elderly or patients on CYP2C19 inhibitors, this is when dose escalation toward the 20 mg cap is typically considered, with a follow-up ECG.",
       phase: "peak",
     },
     {
@@ -732,7 +732,7 @@ export const citalopram: Drug = {
       time: "Weeks 4–6",
       title: "Full therapeutic effect (depression)",
       description:
-        "Steady-state serotonin levels and full downstream adaptations achieved. Mood, anxiety, and energy typically reach maximum improvement for depression. Side effects usually stabilise. QTc effect at steady state is the clinically relevant one — recheck ECG at this visit if dose was escalated.",
+        "Steady-state serotonin levels and full downstream adaptations achieved. Mood, anxiety, and energy typically reach maximum improvement for depression. Side effects usually stabilise. QTc effect at steady state is the clinically relevant one: recheck ECG at this visit if dose was escalated.",
       phase: "peak",
     },
     {
@@ -740,7 +740,7 @@ export const citalopram: Drug = {
       time: "Weeks 8–12",
       title: "Full therapeutic effect (anxiety, OCD)",
       description:
-        "Anxiety disorders and OCD often take 8–12 weeks for full response — slower than depression. Counsel patients accordingly. If still partial response at week 8, consider dose escalation within the cap, augmentation (bupropion, mirtazapine), or switch.",
+        "Anxiety disorders and OCD often take 8–12 weeks for full response: slower than depression. Counsel patients accordingly. If still partial response at week 8, consider dose escalation within the cap, augmentation (bupropion, mirtazapine), or switch.",
       phase: "duration",
     },
     {
@@ -756,7 +756,7 @@ export const citalopram: Drug = {
       time: "Discontinuation",
       title: "Tapered withdrawal",
       description:
-        "Sudden cessation causes discontinuation syndrome (dizziness, 'brain zaps', nausea, irritability). Taper over at least 4 weeks. Severity is intermediate among SSRIs — worse than fluoxetine (self-tapers) and similar to sertraline, milder than paroxetine/venlafaxine. After the last dose, the QTc effect resolves over ~1 week.",
+        "Sudden cessation causes discontinuation syndrome (dizziness, 'brain zaps', nausea, irritability). Taper over at least 4 weeks. Severity is intermediate among SSRIs: worse than fluoxetine (self-tapers) and similar to sertraline, milder than paroxetine/venlafaxine. After the last dose, the QTc effect resolves over ~1 week.",
       phase: "recovery",
     },
   ],
@@ -766,17 +766,17 @@ export const citalopram: Drug = {
     {
       question: "Why is the maximum dose of citalopram only 40 mg a day (and 20 mg in some people)?",
       answer:
-        "In 2011, the FDA reduced the maximum daily dose of citalopram from 60 mg to 40 mg after post-marketing data showed dose-dependent QTc prolongation on the ECG — a lengthening of the heart's electrical recovery time that can trigger a dangerous arrhythmia called torsades de pointes. The QTc effect is driven mainly by the R-enantiomer of citalopram. People over 60, with liver impairment, who are CYP2C19 poor metabolisers, or who take CYP2C19 inhibitors (including omeprazole) must cap at 20 mg/day because they accumulate higher drug levels.",
+        "In 2011, the FDA reduced the maximum daily dose of citalopram from 60 mg to 40 mg after post-marketing data showed dose-dependent QTc prolongation on the ECG: a lengthening of the heart's electrical recovery time that can trigger a dangerous arrhythmia called torsades de pointes. The QTc effect is driven mainly by the R-enantiomer of citalopram. People over 60, with liver impairment, who are CYP2C19 poor metabolisers, or who take CYP2C19 inhibitors (including omeprazole) must cap at 20 mg/day because they accumulate higher drug levels.",
     },
     {
       question: "What is the difference between citalopram and escitalopram?",
       answer:
-        "Citalopram is a racemic mixture — it contains two mirror-image molecules, the S-enantiomer and the R-enantiomer, in equal amounts. Only the S-enantiomer blocks the serotonin transporter and produces the antidepressant effect; the R-enantiomer is essentially inactive at SERT but blocks the hERG potassium channel and contributes to QTc prolongation. Escitalopram is the isolated S-enantiomer — same antidepressant effect, less QTc liability because the R-enantiomer has been removed. Roughly, 20 mg citalopram ≈ 10 mg escitalopram in antidepressant effect.",
+        "Citalopram is a racemic mixture. It contains two mirror-image molecules, the S-enantiomer and the R-enantiomer, in equal amounts. Only the S-enantiomer blocks the serotonin transporter and produces the antidepressant effect; the R-enantiomer is essentially inactive at SERT but blocks the hERG potassium channel and contributes to QTc prolongation. Escitalopram is the isolated S-enantiomer: same antidepressant effect, less QTc liability because the R-enantiomer has been removed. Roughly, 20 mg citalopram ≈ 10 mg escitalopram in antidepressant effect.",
     },
     {
       question: "Does citalopram affect the heart?",
       answer:
-        "Yes — citalopram can prolong the QT interval on the ECG, which in rare cases can lead to a serious arrhythmia called torsades de pointes. The risk is dose-dependent and is highest in people over 60, those with low potassium or magnesium, those with pre-existing heart disease or congenital long-QT syndrome, and those taking other QTc-prolonging drugs (some antibiotics, antipsychotics, and heart rhythm medicines). Your doctor may do an ECG before and during treatment, especially if any of these risk factors apply to you.",
+        "Yes: citalopram can prolong the QT interval on the ECG, which in rare cases can lead to a serious arrhythmia called torsades de pointes. The risk is dose-dependent and is highest in people over 60, those with low potassium or magnesium, those with pre-existing heart disease or congenital long-QT syndrome, and those taking other QTc-prolonging drugs (some antibiotics, antipsychotics, and heart rhythm medicines). Your doctor may do an ECG before and during treatment, especially if any of these risk factors apply to you.",
     },
     {
       question: "Can I take citalopram with omeprazole (or other acid-suppressing medicines)?",
@@ -791,17 +791,17 @@ export const citalopram: Drug = {
     {
       question: "Is citalopram safe in pregnancy and breastfeeding?",
       answer:
-        "Citalopram is generally considered acceptable in pregnancy when pharmacotherapy is necessary, but it is NOT the SSRI of choice — sertraline is preferred because it has a larger reproductive safety database and the lowest transfer into breast milk. Citalopram has not been linked to a specific birth defect signal (unlike paroxetine, which is avoided in the 1st trimester). In breastfeeding, citalopram is detectable in infant blood and has been linked to isolated reports of infant irritability and poor weight gain — sertraline or paroxetine are preferred. Do not stop citalopram suddenly if you become pregnant — discuss with your obstetrician and psychiatrist.",
+        "Citalopram is generally considered acceptable in pregnancy when pharmacotherapy is necessary, but it is NOT the SSRI of choice: sertraline is preferred because it has a larger reproductive safety database and the lowest transfer into breast milk. Citalopram has not been linked to a specific birth defect signal (unlike paroxetine, which is avoided in the 1st trimester). In breastfeeding, citalopram is detectable in infant blood and has been linked to isolated reports of infant irritability and poor weight gain: sertraline or paroxetine are preferred. Do not stop citalopram suddenly if you become pregnant. Discuss with your obstetrician and psychiatrist.",
     },
     {
       question: "Can I drink alcohol while taking citalopram?",
       answer:
-        "Alcohol can worsen sleepiness, mood symptoms, judgment, and medication tolerability. While not strictly contraindicated, it is best minimised or avoided — particularly during the first month while your body is adapting to the medication. Alcohol does not directly affect citalopram levels, but the combination can make you feel more unwell.",
+        "Alcohol can worsen sleepiness, mood symptoms, judgment, and medication tolerability. While not strictly contraindicated, it is best minimised or avoided, particularly during the first month while your body is adapting to the medication. Alcohol does not directly affect citalopram levels, but the combination can make you feel more unwell.",
     },
     {
       question: "What should I do if I miss a dose?",
       answer:
-        "Take the missed dose as soon as you remember, unless it is within 8 hours of your next scheduled dose — in that case, skip the missed dose and continue normally. Do not double up to make up for a missed dose. If you have missed several doses, you may notice mild discontinuation symptoms (dizziness, 'brain zaps') — these usually settle as you resume the medication.",
+        "Take the missed dose as soon as you remember, unless it is within 8 hours of your next scheduled dose, in that case, skip the missed dose and continue normally. Do not double up to make up for a missed dose. If you have missed several doses, you may notice mild discontinuation symptoms (dizziness, 'brain zaps'): these usually settle as you resume the medication.",
     },
   ],
 
@@ -880,19 +880,19 @@ export const citalopram: Drug = {
       name: "Escitalopram",
       slug: "escitalopram",
       drugClass: "SSRI",
-      relationship: "Same drug, isolated S-enantiomer. Escitalopram was developed specifically to solve citalopram's QTc problem — by removing the inactive R-enantiomer (which causes hERG blockade). 20 mg citalopram ≈ 10 mg escitalopram in antidepressant effect, but escitalopram has less QTc risk at equivalent doses.",
+      relationship: "Same drug, isolated S-enantiomer. Escitalopram was developed specifically to solve citalopram's QTc problem: by removing the inactive R-enantiomer (which causes hERG blockade). 20 mg citalopram ≈ 10 mg escitalopram in antidepressant effect, but escitalopram has less QTc risk at equivalent doses.",
     },
     {
       name: "Sertraline",
       slug: "sertraline",
       drugClass: "SSRI",
-      relationship: "Same class. Best all-rounder — SSRI of choice in pregnancy and lactation, only SSRI FDA-approved for PTSD. Minimal QTc effect at therapeutic doses. Useful alternative when citalopram is contraindicated by QTc risk factors.",
+      relationship: "Same class. Best all-rounder. SSRI of choice in pregnancy and lactation, only SSRI FDA-approved for PTSD. Minimal QTc effect at therapeutic doses. Useful alternative when citalopram is contraindicated by QTc risk factors.",
     },
     {
       name: "Fluoxetine",
       slug: "fluoxetine",
       drugClass: "SSRI",
-      relationship: "Same class. Longest half-life (1–4 days with norfluoxetine) → mildest discontinuation syndrome. Only SSRI approved for paediatric depression (≥8 yrs) — citalopram is NOT. More activating — better for lethargic depression.",
+      relationship: "Same class. Longest half-life (1–4 days with norfluoxetine) → mildest discontinuation syndrome. Only SSRI approved for paediatric depression (≥8 yrs): citalopram is NOT. More activating: better for lethargic depression.",
     },
     {
       name: "Paroxetine",
@@ -903,12 +903,12 @@ export const citalopram: Drug = {
     {
       name: "Fluvoxamine",
       drugClass: "SSRI",
-      relationship: "Same class. Preferred for paediatric OCD. Strong CYP1A2 inhibition — interacts with caffeine, theophylline, clozapine. Also a CYP2C19 inhibitor — would cap citalopram dose if combined.",
+      relationship: "Same class. Preferred for paediatric OCD. Strong CYP1A2 inhibition: interacts with caffeine, theophylline, clozapine. Also a CYP2C19 inhibitor: would cap citalopram dose if combined.",
     },
     {
       name: "Venlafaxine",
       drugClass: "SNRI",
-      relationship: "Alternative class. Serotonin-norepinephrine reuptake inhibitor. May work when SSRI fails. Dose-dependent: <150 mg/day mostly serotonergic; >150 mg/day adds noradrenergic effect. Watch BP — can cause hypertension. Also prolongs QTc in overdose.",
+      relationship: "Alternative class. Serotonin-norepinephrine reuptake inhibitor. May work when SSRI fails. Dose-dependent: <150 mg/day mostly serotonergic; >150 mg/day adds noradrenergic effect. Watch BP: can cause hypertension. Also prolongs QTc in overdose.",
     },
     {
       name: "Bupropion",
@@ -918,7 +918,7 @@ export const citalopram: Drug = {
     {
       name: "Mirtazapine",
       drugClass: "NaSSA",
-      relationship: "Augmentation partner. Noradrenergic and specific serotonergic antidepressant. Adding 15–30 mg at night improves sleep and appetite and may reverse SSRI-induced sexual dysfunction. Sedating — give at night. No QTc liability of note.",
+      relationship: "Augmentation partner. Noradrenergic and specific serotonergic antidepressant. Adding 15–30 mg at night improves sleep and appetite and may reverse SSRI-induced sexual dysfunction. Sedating: give at night. No QTc liability of note.",
     },
   ],
 
@@ -936,39 +936,39 @@ export const citalopram: Drug = {
   /* ---- Knowledge graph ---- */
   knowledgeGraph: [
     { label: "Citalopram", type: "drug", href: "/drugs/citalopram", note: "The racemic SSRI you're reading about" },
-    { label: "Escitalopram (S-enantiomer)", type: "drug", href: "/drugs/escitalopram", note: "The isolated active enantiomer — developed to solve citalopram's QTc problem" },
+    { label: "Escitalopram (S-enantiomer)", type: "drug", href: "/drugs/escitalopram", note: "The isolated active enantiomer: developed to solve citalopram's QTc problem" },
     { label: "SSRI", type: "class", href: "#mechanism", note: "Selective Serotonin Reuptake Inhibitor" },
     { label: "Serotonin (5-HT)", type: "neurotransmitter", href: "#mechanism", note: "The neurotransmitter being modulated by S-citalopram" },
-    { label: "S-enantiomer", type: "neurotransmitter", href: "#mechanism", note: "Active at SERT — the antidepressant half of the racemate" },
+    { label: "S-enantiomer", type: "neurotransmitter", href: "#mechanism", note: "Active at SERT: the antidepressant half of the racemate" },
     { label: "R-enantiomer", type: "neurotransmitter", href: "#mechanism", note: "Inactive at SERT, blocks hERG → QTc prolongation" },
-    { label: "hERG (KCNH2) channel", type: "neurotransmitter", href: "#mechanism", note: "Cardiac potassium channel blocked by R-citalopram — the molecular basis of QTc risk" },
+    { label: "hERG (KCNH2) channel", type: "neurotransmitter", href: "#mechanism", note: "Cardiac potassium channel blocked by R-citalopram: the molecular basis of QTc risk" },
     { label: "SERT (serotonin transporter)", type: "neurotransmitter", href: "#mechanism", note: "Molecular target of the S-enantiomer" },
     { label: "Raphe Nuclei", type: "brain-region", href: "#brain-regions", note: "Where serotonin is synthesised" },
     { label: "Prefrontal Cortex", type: "brain-region", href: "#brain-regions", note: "Target of mood regulation" },
     { label: "Hippocampus", type: "brain-region", href: "#brain-regions", note: "Memory & neurogenesis" },
     { label: "Major Depressive Disorder", type: "condition", href: "#clinical-uses", note: "Only FDA-approved indication (adults only)" },
-    { label: "QTc Prolongation", type: "side-effect", href: "#side-effects", note: "Signature risk — dose-dependent, R-enantiomer driven, FDA capped dosing in 2011" },
-    { label: "Torsades de Pointes", type: "side-effect", href: "#side-effects", note: "Life-threatening polymorphic VT — consequence of QTc prolongation" },
+    { label: "QTc Prolongation", type: "side-effect", href: "#side-effects", note: "Signature risk: dose-dependent, R-enantiomer driven, FDA capped dosing in 2011" },
+    { label: "Torsades de Pointes", type: "side-effect", href: "#side-effects", note: "Life-threatening polymorphic VT: consequence of QTc prolongation" },
     { label: "Serotonin Syndrome", type: "side-effect", href: "#side-effects", note: "Class SSRI risk with serotonergic combinations" },
-    { label: "Patient Guide — Starting Citalopram Safely", type: "patient-guide", href: "#patient-education", note: "Dose caps, ECG monitoring, and what to tell every clinician" },
+    { label: "Patient Guide. Starting Citalopram Safely", type: "patient-guide", href: "#patient-education", note: "Dose caps, ECG monitoring, and what to tell every clinician" },
   ],
 
   /* ---- Patient mode content ---- */
   patientMode: {
     tagline:
-      "An antidepressant that works by keeping more of a mood-regulating chemical (serotonin) available in your brain — with a maximum dose cap to protect your heart rhythm.",
+      "An antidepressant that works by keeping more of a mood-regulating chemical (serotonin) available in your brain, with a maximum dose cap to protect your heart rhythm.",
     summary:
-      "Citalopram is a common antidepressant that belongs to a class called SSRIs. It doesn't make you happy — it helps your brain's natural mood-regulation system work better by keeping more serotonin available between nerve cells. Most people feel some side effects in the first week or two before the mood benefit builds up over 4–6 weeks. One thing that is special about citalopram is that the dose is capped — for most adults it is 40 mg a day, and for people over 60 or with certain other conditions it is 20 mg a day. This is because higher doses can affect the electrical rhythm of the heart. Always tell every doctor and pharmacist that you take citalopram so they can check it against any new medicine.",
+      "Citalopram is a common antidepressant that belongs to a class called SSRIs. It doesn't make you happy. It helps your brain's natural mood-regulation system work better by keeping more serotonin available between nerve cells. Most people feel some side effects in the first week or two before the mood benefit builds up over 4–6 weeks. One thing that is special about citalopram is that the dose is capped, for most adults it is 40 mg a day, and for people over 60 or with certain other conditions it is 20 mg a day. This is because higher doses can affect the electrical rhythm of the heart. Always tell every doctor and pharmacist that you take citalopram so they can check it against any new medicine.",
     mechanism:
-      "Your brain uses a chemical called serotonin to regulate mood, anxiety, sleep, and appetite. Normally, after serotonin is released between nerve cells, it gets quickly taken back up (recycled). Citalopram blocks this recycling, so more serotonin stays available for longer. Over 4–6 weeks this helps your brain's mood-regulation system work better — but it doesn't happen immediately. Citalopram is made of two mirror-image halves (called enantiomers): one half (the S-enantiomer) does the mood work, the other half (the R-enantiomer) doesn't help mood but can affect the heart's electrical rhythm at higher doses. This is why the dose is capped.",
+      "Your brain uses a chemical called serotonin to regulate mood, anxiety, sleep, and appetite. Normally, after serotonin is released between nerve cells, it gets quickly taken back up (recycled). Citalopram blocks this recycling, so more serotonin stays available for longer. Over 4–6 weeks this helps your brain's mood-regulation system work better, but it doesn't happen immediately. Citalopram is made of two mirror-image halves (called enantiomers): one half (the S-enantiomer) does the mood work, the other half (the R-enantiomer) doesn't help mood but can affect the heart's electrical rhythm at higher doses. This is why the dose is capped.",
     sideEffects:
-      "Most people get some side effects in the first 1–2 weeks — usually nausea, headache, sleep changes, or feeling a bit wired. These usually settle as your body adapts. Sexual side effects (lower interest or difficulty reaching orgasm) are common and can persist — talk to your doctor if this bothers you, as there are solutions. The most important safety issue with citalopram is its effect on the heart's electrical rhythm (the QT interval on an ECG). At higher doses — or in people over 60, with liver problems, low potassium or magnesium, or on certain other medicines — this can cause a dangerous irregular heartbeat called torsades de pointes. That is why the dose is capped. Seek emergency help for palpitations, fainting, or near-fainting while on citalopram. Also seek emergency help for signs of serotonin syndrome: high fever, confusion, sweating, agitation, tremor, muscle rigidity or twitching, fast heartbeat.",
+      "Most people get some side effects in the first 1–2 weeks: usually nausea, headache, sleep changes, or feeling a bit wired. These usually settle as your body adapts. Sexual side effects (lower interest or difficulty reaching orgasm) are common and can persist: talk to your doctor if this bothers you, as there are solutions. The most important safety issue with citalopram is its effect on the heart's electrical rhythm (the QT interval on an ECG). At higher doses (or in people over 60, with liver problems, low potassium or magnesium, or on certain other medicines) this can cause a dangerous irregular heartbeat called torsades de pointes. That is why the dose is capped. Seek emergency help for palpitations, fainting, or near-fainting while on citalopram. Also seek emergency help for signs of serotonin syndrome: high fever, confusion, sweating, agitation, tremor, muscle rigidity or twitching, fast heartbeat.",
     monitoring:
       "Your doctor may want to do an ECG (heart tracing) before and during treatment, especially if you are over 60, have heart problems, or take certain other medicines. They will check your mood, sleep, and side effects at 2, 4, and 8 weeks. They may check your blood sodium (especially in the first 2 weeks if you are over 65) and may check potassium and magnesium levels. You may be asked to fill in a short questionnaire (PHQ-9) so your progress can be tracked.",
     contraindications:
-      "Do not take citalopram if you have taken an MAOI antidepressant in the last 14 days (dangerous combination), if you have a congenital heart condition called long-QT syndrome, or if you are allergic to it. Tell your doctor about all other medicines you take — especially antibiotics (erythromycin, clarithromycin, moxifloxacin, ciprofloxacin), antipsychotics, heart rhythm medicines, and over-the-counter products including St John's Wort. The combination with certain stomach medicines (omeprazole, esomeprazole) means your citalopram dose must not exceed 20 mg a day — make sure your doctor and pharmacist know about all your medicines.",
+      "Do not take citalopram if you have taken an MAOI antidepressant in the last 14 days (dangerous combination), if you have a congenital heart condition called long-QT syndrome, or if you are allergic to it. Tell your doctor about all other medicines you take, especially antibiotics (erythromycin, clarithromycin, moxifloxacin, ciprofloxacin), antipsychotics, heart rhythm medicines, and over-the-counter products including St John's Wort. The combination with certain stomach medicines (omeprazole, esomeprazole) means your citalopram dose must not exceed 20 mg a day: make sure your doctor and pharmacist know about all your medicines.",
     interactions:
-      "The single most important thing to know: tell EVERY doctor, pharmacist, and dentist that you take citalopram. Many common medicines can interact with it. The most dangerous combinations are with other medicines that affect the heart's electrical rhythm (some antibiotics, antipsychotics, and heart medicines) and with other medicines that affect serotonin (tramadol, triptans for migraine, St John's Wort, certain cough syrups with dextromethorphan). Common stomach medicines like omeprazole raise citalopram levels and require the dose to be capped at 20 mg a day. Avoid alcohol or keep it to a minimum — it can make you more drowsy and worsen mood symptoms.",
+      "The single most important thing to know: tell EVERY doctor, pharmacist, and dentist that you take citalopram. Many common medicines can interact with it. The most dangerous combinations are with other medicines that affect the heart's electrical rhythm (some antibiotics, antipsychotics, and heart medicines) and with other medicines that affect serotonin (tramadol, triptans for migraine, St John's Wort, certain cough syrups with dextromethorphan). Common stomach medicines like omeprazole raise citalopram levels and require the dose to be capped at 20 mg a day. Avoid alcohol or keep it to a minimum. It can make you more drowsy and worsen mood symptoms.",
   },
 
   /* ---- India-first extensions ---- */
@@ -983,13 +983,13 @@ export const citalopram: Drug = {
       { name: "Recital", manufacturer: "Lupin", strengths: "10mg, 20mg, 40mg" },
     ],
     typicalDoses:
-      "Depression: start 20mg OD, titrate to 20–40mg OD. Maximum 40mg/day in adults; 20mg/day in elderly (>60), hepatic impairment, CYP2C19 poor metabolisers, or with strong CYP2C19 inhibitors (omeprazole, fluconazole). In Indian government hospitals, 10mg OD is often the starting dose in anxious/elderly patients to minimise early side effects, with titration to 20mg after 1–2 weeks. Never exceed 40mg/day — the 2011 FDA label change made this non-negotiable. Not for use in paediatric depression in India.",
+      "Depression: start 20mg OD, titrate to 20–40mg OD. Maximum 40mg/day in adults; 20mg/day in elderly (>60), hepatic impairment, CYP2C19 poor metabolisers, or with strong CYP2C19 inhibitors (omeprazole, fluconazole). In Indian government hospitals, 10mg OD is often the starting dose in anxious/elderly patients to minimise early side effects, with titration to 20mg after 1–2 weeks. Never exceed 40mg/day: the 2011 FDA label change made this non-negotiable. Not for use in paediatric depression in India.",
     prescribingScenarios: [
-      "Second-line SSRI in Indian primary care when sertraline or escitalopram is unavailable or poorly tolerated — chosen because of low cost and wide availability.",
+      "Second-line SSRI in Indian primary care when sertraline or escitalopram is unavailable or poorly tolerated: chosen because of low cost and wide availability.",
       "Occasionally used in government hospital psychiatry OPDs under DMHP where escitalopram (the preferred S-enantiomer) is not stocked but citalopram is.",
-      "Avoided in elderly Indian patients wherever possible — escitalopram is preferred because citalopram's 20mg cap in elderly limits efficacy and the QTc risk is harder to monitor in resource-limited settings.",
-      "Used cautiously in patients on long-term omeprazole or esomeprazole (extremely common in Indian patients with dyspepsia) — dose must not exceed 20mg/day.",
-      "Increasingly AVOIDED in Indian private psychiatry practice in favour of escitalopram — citalopram is now mostly prescribed by non-psychiatrists who are less aware of the QTc issue, which itself is a safety concern.",
+      "Avoided in elderly Indian patients wherever possible: escitalopram is preferred because citalopram's 20mg cap in elderly limits efficacy and the QTc risk is harder to monitor in resource-limited settings.",
+      "Used cautiously in patients on long-term omeprazole or esomeprazole (extremely common in Indian patients with dyspepsia): dose must not exceed 20mg/day.",
+      "Increasingly AVOIDED in Indian private psychiatry practice in favour of escitalopram: citalopram is now mostly prescribed by non-psychiatrists who are less aware of the QTc issue, which itself is a safety concern.",
     ],
     availability: {
       governmentHospitals: true,
@@ -1001,18 +1001,18 @@ export const citalopram: Drug = {
     costCategory: "low",
     costNote: "Generic citalopram is inexpensive in India (approximately ₹2–4 per 20mg tablet). Branded versions (Cilift, Citopam, Cital, Recital) cost ₹3–7 per tablet. Slightly cheaper than escitalopram, which is one reason it is still prescribed in cost-sensitive settings. Jan Aushadhi generic versions are the most affordable.",
     monitoring:
-      "In Indian government hospitals, monitoring is primarily clinical (symptom-based) due to resource constraints. PHQ-9 is used in tertiary centres and DMHP clinics. Serum sodium monitoring in elderly is recommended but practice varies. ECG for baseline QTc is STRONGLY recommended before starting citalopram, especially in elderly, cardiac patients, or those on other QTc-prolonging drugs — but is often skipped in busy government OPDs, which is itself a safety concern. In patients on omeprazole/esomeprazole or known CYP2C19 poor metabolisers, dose must not exceed 20mg/day. Follow-up schedule: 2 weeks (tolerability + ECG if symptomatic), 4 weeks (early response), 6 weeks (dose escalation decision — but capped at 40mg/20mg), 12 weeks (full response assessment). In private practice, monitoring aligns more closely with international guidelines, with baseline and serial ECGs more common.",
+      "In Indian government hospitals, monitoring is primarily clinical (symptom-based) due to resource constraints. PHQ-9 is used in tertiary centres and DMHP clinics. Serum sodium monitoring in elderly is recommended but practice varies. ECG for baseline QTc is STRONGLY recommended before starting citalopram, especially in elderly, cardiac patients, or those on other QTc-prolonging drugs, but is often skipped in busy government OPDs, which is itself a safety concern. In patients on omeprazole/esomeprazole or known CYP2C19 poor metabolisers, dose must not exceed 20mg/day. Follow-up schedule: 2 weeks (tolerability + ECG if symptomatic), 4 weeks (early response), 6 weeks (dose escalation decision, but capped at 40mg/20mg), 12 weeks (full response assessment). In private practice, monitoring aligns more closely with international guidelines, with baseline and serial ECGs more common.",
     patientCounselling: [
-      "Take once daily, morning or evening — your doctor will tell you which. Take with food to reduce nausea.",
-      "It may take 4–6 weeks to feel the full benefit — don't stop early just because you don't feel better yet.",
-      "Do NOT stop suddenly — your doctor will help you reduce the dose gradually over several weeks.",
+      "Take once daily, morning or evening: your doctor will tell you which. Take with food to reduce nausea.",
+      "It may take 4–6 weeks to feel the full benefit. Don't stop early just because you don't feel better yet.",
+      "Do NOT stop suddenly: your doctor will help you reduce the dose gradually over several weeks.",
       "Generic versions (Cilift, Citopam, Cital, Recital) are equally effective. Jan Aushadhi generic citalopram is a good affordable option.",
-      "There is a STRICT dose cap — 40mg for most adults, 20mg if you are over 60, have liver problems, or take stomach medicines like omeprazole. Never take more than prescribed.",
-      "Tell EVERY doctor, dentist, and pharmacist that you take citalopram — many common medicines (some antibiotics, antipsychotics, heart medicines) can interact with it and affect your heart rhythm.",
-      "Seek emergency help if you feel palpitations, fainting, or near-fainting — these could indicate a heart rhythm problem. An ECG may be needed.",
+      "There is a STRICT dose cap: 40mg for most adults, 20mg if you are over 60, have liver problems, or take stomach medicines like omeprazole. Never take more than prescribed.",
+      "Tell EVERY doctor, dentist, and pharmacist that you take citalopram, many common medicines (some antibiotics, antipsychotics, heart medicines) can interact with it and affect your heart rhythm.",
+      "Seek emergency help if you feel palpitations, fainting, or near-fainting: these could indicate a heart rhythm problem. An ECG may be needed.",
       "If you feel worse, more agitated, or have new suicidal thoughts in the first month, contact your doctor immediately or call Tele-MANAS at 14416.",
       "Common side effects in the first 1–2 weeks (nausea, headache, sleep changes) usually settle. If they persist or are severe, tell your doctor.",
-      "Sexual side effects (reduced interest, difficulty reaching orgasm) are common — your doctor can help. Don't stop the medicine without discussing alternatives.",
+      "Sexual side effects (reduced interest, difficulty reaching orgasm) are common: your doctor can help. Don't stop the medicine without discussing alternatives.",
     ],
   },
 
@@ -1020,11 +1020,11 @@ export const citalopram: Drug = {
   cbmeMapping: {
     subject: "Pharmacology",
     mbbsYear: "Second Professional",
-    topic: "Drugs acting on Central Nervous System — Antidepressants (SSRIs)",
+    topic: "Drugs acting on Central Nervous System. Antidepressants (SSRIs)",
     competencyCodes: ["PH7.3", "PH7.4", "PY3.2"],
     competencyDescriptions: [
       "PH7.3: Describe the mechanism of action, pharmacological actions, adverse effects, contraindications, and therapeutic uses of antidepressant drugs with emphasis on SSRIs and the dose-dependent QTc risk of citalopram.",
-      "PH7.4: Explain the rationale for drug selection, dose individualisation (including the 40mg/20mg cap), and monitoring of citalopram therapy — with emphasis on ECG monitoring and CYP2C19 interactions.",
+      "PH7.4: Explain the rationale for drug selection, dose individualisation (including the 40mg/20mg cap), and monitoring of citalopram therapy, with emphasis on ECG monitoring and CYP2C19 interactions.",
       "PY3.2 (Psychiatry, Final Professional): Describe the pharmacological management of mood disorders, including the relative place of citalopram vs escitalopram, the 2011 FDA label change, and QTc-driven dose capping.",
     ],
     integrationSubjects: ["Psychiatry", "General Medicine", "Cardiology", "Community Medicine"],
@@ -1034,16 +1034,16 @@ export const citalopram: Drug = {
   examLens: {
     mbbs: {
       viva: [
-        "What is the relationship between citalopram and escitalopram? (Citalopram is the racemic mixture; escitalopram is the S-enantiomer — the active half. The R-enantiomer in citalopram is essentially inactive at SERT but contributes disproportionately to hERG blockade and QTc prolongation.)",
+        "What is the relationship between citalopram and escitalopram? (Citalopram is the racemic mixture; escitalopram is the S-enantiomer: the active half. The R-enantiomer in citalopram is essentially inactive at SERT but contributes disproportionately to hERG blockade and QTc prolongation.)",
         "Why is citalopram dosing capped? (Dose-dependent QTc prolongation → risk of torsades de pointes. 2011 FDA Drug Safety Communication capped the dose at 40mg/day in adults and 20mg/day in elderly, hepatic impairment, CYP2C19 poor metabolisers, and patients on CYP2C19 inhibitors.)",
         "What is the maximum dose of citalopram in an 80-year-old patient? (20mg/day. Same for hepatic impairment, CYP2C19 poor metabolisers, and patients on strong CYP2C19 inhibitors like omeprazole.)",
-        "Which CYP enzyme metabolises citalopram? (CYP2C19 primarily, CYP3A4 and CYP2D6 minor. This is why omeprazole and fluconazole — CYP2C19 inhibitors — raise citalopram levels and require the 20mg/day cap.)",
-        "Which SSRI is preferred in elderly: citalopram or escitalopram? Why? (Escitalopram — the S-enantiomer alone, without the QTc-prolonging R-enantiomer. Citalopram's 20mg cap in elderly limits efficacy, and QTc monitoring is harder in resource-limited settings.)",
-        "What is the black box warning for citalopram? (Increased suicidality in patients <25 years — monitor weekly in the first month. Same as all antidepressants.)",
+        "Which CYP enzyme metabolises citalopram? (CYP2C19 primarily, CYP3A4 and CYP2D6 minor. This is why omeprazole and fluconazole (CYP2C19 inhibitors) raise citalopram levels and require the 20mg/day cap.)",
+        "Which SSRI is preferred in elderly: citalopram or escitalopram? Why? (Escitalopram, the S-enantiomer alone, without the QTc-prolonging R-enantiomer. Citalopram's 20mg cap in elderly limits efficacy, and QTc monitoring is harder in resource-limited settings.)",
+        "What is the black box warning for citalopram? (Increased suicidality in patients <25 years, monitor weekly in the first month. Same as all antidepressants.)",
       ],
       practical: [
-        "Write a prescription for citalopram for a 40-year-old with first-episode moderate depression (dose: 20mg OD, morning, with food — never exceed 40mg/day).",
-        "Counsel a 70-year-old patient being started on citalopram — address the 20mg dose cap, baseline ECG, and CYP2C19 interactions with omeprazole.",
+        "Write a prescription for citalopram for a 40-year-old with first-episode moderate depression (dose: 20mg OD, morning, with food, never exceed 40mg/day).",
+        "Counsel a 70-year-old patient being started on citalopram: address the 20mg dose cap, baseline ECG, and CYP2C19 interactions with omeprazole.",
         "Identify the contraindications of citalopram from a given clinical scenario (long-QT syndrome, MAOI within 14 days, concurrent pimozide or other QTc-prolonging drugs).",
         "Explain the monitoring schedule for a patient on citalopram (2/4/6/12 weeks, PHQ-9, baseline ECG, sodium in elderly, ECG if dose increased or symptomatic).",
       ],
@@ -1060,23 +1060,23 @@ export const citalopram: Drug = {
         "Long-QT syndrome and concurrent QTc-prolonging drugs (pimozide, thioridazine, ziprasidone, moxifloxacin, erythromycin, ondansetron) are contraindications.",
         "Why escitalopram over citalopram in elderly: same antidepressant efficacy at half the dose, no R-enantiomer hERG blockade, no 20mg cap limiting efficacy, lower QTc risk.",
         "Black box: suicidality <25 years. Weekly monitoring in first month. Same as all antidepressants.",
-        "Discontinuation syndrome: FINISH (Flu-like, Insomnia, Nausea, Imbalance, Sensory/brain zaps, Hyperarousal). Moderate with citalopram (half-life ~35h) — worse than fluoxetine, milder than paroxetine.",
+        "Discontinuation syndrome: FINISH (Flu-like, Insomnia, Nausea, Imbalance, Sensory/brain zaps, Hyperarousal). Moderate with citalopram (half-life ~35h): worse than fluoxetine, milder than paroxetine.",
         "Serotonin syndrome triad: Mental + Autonomic + Neuromuscular (clonus, hyperreflexia). NMS = rigidity + bradyreflexia. SS = clonus + hyperreflexia.",
         "Half-life: ~35 hours. No active metabolite of clinical significance (N-desmethylcitalopram is weak).",
         "Citalopram has NO FDA-approved paediatric indication. Escitalopram is approved for ≥12 years (MDD). Fluoxetine is approved ≥8 years (MDD and OCD).",
       ],
       pyqConcepts: [
-        "NEET PG 2022: Which SSRI has a dose cap due to QTc prolongation, and what is the cap? (Answer: Citalopram — 40mg/day adults, 20mg/day elderly and CYP2C19-inhibited patients. FDA 2011.)",
-        "NEET PG 2021: A patient on long-term omeprazole requires an SSRI for depression. Which SSRI should be AVOIDED or dose-capped, and at what maximum dose? (Answer: Citalopram — CYP2C19 inhibition by omeprazole raises citalopram levels; cap at 20mg/day. Better to use escitalopram.)",
+        "NEET PG 2022: Which SSRI has a dose cap due to QTc prolongation, and what is the cap? (Answer: Citalopram, 40mg/day adults, 20mg/day elderly and CYP2C19-inhibited patients. FDA 2011.)",
+        "NEET PG 2021: A patient on long-term omeprazole requires an SSRI for depression. Which SSRI should be AVOIDED or dose-capped, and at what maximum dose? (Answer: Citalopram. CYP2C19 inhibition by omeprazole raises citalopram levels; cap at 20mg/day. Better to use escitalopram.)",
         "NEET PG 2020: A patient on citalopram 60mg/day presents with syncope and a QTc of 520ms. What is the diagnosis and management? (Answer: Torsades de pointes risk from dose-dependent QTc prolongation. Stop citalopram, IV magnesium, correct electrolytes, switch to escitalopram.)",
-        "NEET PG 2019: Which enantiomer of citalopram is responsible for QTc prolongation? (Answer: The R-enantiomer — it is essentially inactive at SERT but blocks hERG channels. This is why escitalopram (S-enantiomer alone) is safer.)",
+        "NEET PG 2019: Which enantiomer of citalopram is responsible for QTc prolongation? (Answer: The R-enantiomer, it is essentially inactive at SERT but blocks hERG channels. This is why escitalopram (S-enantiomer alone) is safer.)",
         "INICET 2021: A 70-year-old on citalopram 40mg/day presents with confusion and QTc 500ms. What is wrong with the prescription? (Answer: 20mg/day cap in elderly was exceeded. Stop, switch to escitalopram, monitor ECG.)",
       ],
     },
     inicet: {
       clinicalReasoning: [
-        "A 72-year-old man with depression, on long-term omeprazole 20mg for reflux, is prescribed citalopram 40mg OD by his GP. He presents 2 weeks later with a near-syncope and ECG shows QTc 510ms. Critically evaluate the prescription. (Answer: Three errors — (1) 20mg/day cap in elderly not followed; (2) 20mg/day cap with concurrent CYP2C19 inhibitor (omeprazole) not followed; (3) no baseline ECG done. Management: stop citalopram, IV magnesium if torsades, correct K+/Mg2+, switch to escitalopram 10mg OD, repeat ECG, counsel GP.)",
-        "A 30-year-old woman with first-episode moderate depression, no comorbidities, is being started on an SSRI. The choice is between citalopram 20mg OD and escitalopram 10mg OD. Which do you choose and why? (Answer: Escitalopram — same S-enantiomer antidepressant efficacy at half the dose, no R-enantiomer hERG blockade, no QTc concerns, simpler dosing. Citalopram has no clinical advantage over escitalopram in this patient and a worse safety profile. In Indian practice, escitalopram is now the preferred SSRI where cost is similar.)",
+        "A 72-year-old man with depression, on long-term omeprazole 20mg for reflux, is prescribed citalopram 40mg OD by his GP. He presents 2 weeks later with a near-syncope and ECG shows QTc 510ms. Critically evaluate the prescription. (Answer: three errors: (1) 20mg/day cap in elderly not followed; (2) 20mg/day cap with concurrent CYP2C19 inhibitor (omeprazole) not followed; (3) no baseline ECG done. Management: stop citalopram, IV magnesium if torsades, correct K+/Mg2+, switch to escitalopram 10mg OD, repeat ECG, counsel GP.)",
+        "A 30-year-old woman with first-episode moderate depression, no comorbidities, is being started on an SSRI. The choice is between citalopram 20mg OD and escitalopram 10mg OD. Which do you choose and why? (Answer: Escitalopram, same S-enantiomer antidepressant efficacy at half the dose, no R-enantiomer hERG blockade, no QTc concerns, simpler dosing. Citalopram has no clinical advantage over escitalopram in this patient and a worse safety profile. In Indian practice, escitalopram is now the preferred SSRI where cost is similar.)",
         "A 45-year-old woman on citalopram 30mg OD for 6 months reports partial response (PHQ-9 from 18 to 12) and asks for dose escalation. How do you manage? (Answer: Cannot escalate beyond 40mg/day (adult cap). Options: (1) escalate to 40mg OD and reassess at 12 weeks; (2) augment with bupropion XL 150mg or mirtazapine 15mg; (3) switch to escitalopram (10–20mg) which has a wider therapeutic range. Address adherence and sleep. Add CBT.)",
         "A 28-year-old woman on citalopram 20mg OD for 4 weeks reports new-onset palpitations, dizziness on standing, and a feeling of 'skipped beats'. ECG shows QTc 470ms (baseline was 410ms). What is the diagnosis and management? (Answer: Citalopram-induced QTc prolongation. Risk factors to screen: electrolytes (K+, Mg2+, Ca2+), concurrent QTc-prolonging drugs (antibiotics, antipsychotics, ondansetron), CYP2C19 inhibitors. Management: stop citalopram, switch to escitalopram or sertraline (lower QTc risk), correct electrolytes, repeat ECG in 1 week.)",
       ],
@@ -1087,7 +1087,7 @@ export const citalopram: Drug = {
         "Dose cap (2011 FDA): 40mg adults, 20mg elderly/hepatic/CYP2C19-inhibited. Single most tested citalopram fact.",
         "QTc prolongation → torsades de pointes. R-enantiomer causes hERG blockade.",
         "Escitalopram = S-enantiomer of citalopram (the active half).",
-        "CYP2C19 substrate — omeprazole, esomeprazole, fluconazole raise citalopram levels → cap at 20mg/day.",
+        "CYP2C19 substrate: omeprazole, esomeprazole, fluconazole raise citalopram levels → cap at 20mg/day.",
         "Black box warning: suicidal thoughts in patients under 25.",
         "Contraindication: MAOIs (14-day washout), long-QT syndrome, pimozide, thioridazine.",
         "Onset of action: 4–6 weeks.",
@@ -1097,12 +1097,12 @@ export const citalopram: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The 2011 FDA Drug Safety Communication was triggered by post-marketing QTc data showing dose-dependent QTc prolongation with citalopram (placebo ~8ms, 20mg ~13ms, 60mg ~34ms). The 40mg cap was a regulatory compromise — the QTc effect is small in absolute terms but torsades risk is non-linear and unpredictable in individual patients.",
-        "Citalopram has essentially NO clinical advantage over escitalopram — escitalopram is the S-enantiomer alone (the active half), at half the dose, without the R-enantiomer's hERG blockade. The Lancet 2018 network meta-analysis (Cipriani et al.) found escitalopram (not citalopram) to be among the most efficacious and best-tolerated antidepressants. In modern practice, escitalopram should be the default choice whenever citalopram is being considered.",
-        "CYP2C19 polymorphism matters more for citalopram than for other SSRIs. Poor metabolisers (15–20% of South Asians) have ~2× higher citalopram exposure. Indian patients on long-term omeprazole or fluconazole are functionally 'poor metabolisers' and must be capped at 20mg/day — this is a routine clinical pitfall in Indian gastroenterology referrals where the patient is on both drugs without recognising the interaction.",
+        "The 2011 FDA Drug Safety Communication was triggered by post-marketing QTc data showing dose-dependent QTc prolongation with citalopram (placebo ~8ms, 20mg ~13ms, 60mg ~34ms). The 40mg cap was a regulatory compromise. The QTc effect is small in absolute terms but torsades risk is non-linear and unpredictable in individual patients.",
+        "Citalopram has essentially NO clinical advantage over escitalopram: escitalopram is the S-enantiomer alone (the active half), at half the dose, without the R-enantiomer's hERG blockade. The Lancet 2018 network meta-analysis (Cipriani et al.) found escitalopram (not citalopram) to be among the most efficacious and best-tolerated antidepressants. In modern practice, escitalopram should be the default choice whenever citalopram is being considered.",
+        "CYP2C19 polymorphism matters more for citalopram than for other SSRIs. Poor metabolisers (15–20% of South Asians) have ~2× higher citalopram exposure. Indian patients on long-term omeprazole or fluconazole are functionally 'poor metabolisers' and must be capped at 20mg/day. This is a routine clinical pitfall in Indian gastroenterology referrals where the patient is on both drugs without recognising the interaction.",
         "When switching from citalopram to escitalopram: stop citalopram, wait 24–48h, start escitalopram at 10mg OD (equivalent to citalopram 20mg). No washout needed (same active moiety).",
         "QTc-prolonging drug combinations to actively screen for: antibiotics (moxifloxacin, erythromycin, clarithromycin, fluconazole), antipsychotics (pimozide, thioridazine, ziprasidone, haloperidol IV), antiarrhythmics (amiodarone, sotalol, quinidine), ondansetron (especially IV), methadone. Combined with citalopram, each adds QTc burden.",
-        "PHQ-9 monitoring: ≥50% reduction = response. <5 = remission. If <30% at 6 weeks and dose is already at the 40mg cap, DO NOT exceed 40mg — augment or switch instead. This is the key clinical difference vs sertraline (where dose escalation to 200mg is possible).",
+        "PHQ-9 monitoring: ≥50% reduction = response. <5 = remission. If <30% at 6 weeks and dose is already at the 40mg cap, DO NOT exceed 40mg: augment or switch instead. This is the key clinical difference vs sertraline (where dose escalation to 200mg is possible).",
         "In bipolar depression, citalopram (and any antidepressant) can trigger a manic switch. Always screen for bipolar disorder (MDQ questionnaire) before initiating. If bipolar confirmed, use mood stabiliser first; antidepressant only if mood stabiliser alone is insufficient.",
       ],
     },
@@ -1115,21 +1115,21 @@ export const citalopram: Drug = {
       internationalSource: "FDA 2011 Drug Safety Communication",
       internationalRecommendation: "Citalopram dose capped at 40mg/day in adults, 20mg/day in patients >60, hepatic impairment, CYP2C19 poor metabolisers, and patients on CYP2C19 inhibitors. Baseline ECG recommended in patients with cardiac risk factors. Avoid in congenital long-QT syndrome.",
       indianSource: "Indian Psychiatric Society (IPS)",
-      indianRecommendation: "IPS concurs with the FDA dose cap. In Indian practice, ECG availability in government OPDs is limited and baseline ECG is often skipped — this is a recognised safety gap. IPS prefers escitalopram over citalopram wherever possible, particularly in elderly and cardiac patients.",
+      indianRecommendation: "IPS concurs with the FDA dose cap. In Indian practice, ECG availability in government OPDs is limited and baseline ECG is often skipped. This is a recognised safety gap. IPS prefers escitalopram over citalopram wherever possible, particularly in elderly and cardiac patients.",
     },
     {
       topic: "First-line SSRI selection in depression",
       internationalSource: "NICE CG91 / APA / Cipriani 2018 Lancet network meta-analysis",
       internationalRecommendation: "SSRIs are first-line. Cipriani 2018 ranked escitalopram (not citalopram) among the most efficacious and best-tolerated antidepressants. Citalopram has no specific advantage over escitalopram and carries QTc risk.",
       indianSource: "Indian Psychiatric Society (IPS)",
-      indianRecommendation: "IPS recommends SSRIs as first-line. In Indian practice, escitalopram, sertraline, and fluoxetine are preferred over citalopram. Citalopram is mostly prescribed by non-psychiatrists (GPs, physicians) — psychiatrists increasingly avoid it in favour of escitalopram.",
+      indianRecommendation: "IPS recommends SSRIs as first-line. In Indian practice, escitalopram, sertraline, and fluoxetine are preferred over citalopram. Citalopram is mostly prescribed by non-psychiatrists (GPs, physicians): psychiatrists increasingly avoid it in favour of escitalopram.",
     },
     {
       topic: "Use in elderly (>60 years)",
       internationalSource: "FDA / APA",
       internationalRecommendation: "Maximum dose 20mg/day in elderly due to QTc risk, age-related decline in CYP2C19 activity, and comorbid cardiac disease. Use with caution; prefer escitalopram.",
       indianSource: "Indian Psychiatric Society (IPS)",
-      indianRecommendation: "IPS concurs — 20mg/day cap in elderly. In Indian practice, where baseline ECG access is variable and elderly patients often have multiple comorbidities, the case for preferring escitalopram over citalopram in elderly is even stronger than in Western guidelines.",
+      indianRecommendation: "IPS concurs: 20mg/day cap in elderly. In Indian practice, where baseline ECG access is variable and elderly patients often have multiple comorbidities, the case for preferring escitalopram over citalopram in elderly is even stronger than in Western guidelines.",
     },
     {
       topic: "Interaction with CYP2C19 inhibitors (omeprazole, esomeprazole, fluconazole)",
@@ -1141,9 +1141,9 @@ export const citalopram: Drug = {
     {
       topic: "Use in pregnancy and lactation",
       internationalSource: "FDA / APA",
-      internationalRecommendation: "Citalopram is not the SSRI of choice in pregnancy — sertraline is preferred (lowest placental transfer, lowest milk/plasma ratio). Citalopram is acceptable if already established and stable. Former FDA Category C. Third-trimester neonatal adaptation syndrome risk.",
+      internationalRecommendation: "Citalopram is not the SSRI of choice in pregnancy: sertraline is preferred (lowest placental transfer, lowest milk/plasma ratio). Citalopram is acceptable if already established and stable. Former FDA Category C. Third-trimester neonatal adaptation syndrome risk.",
       indianSource: "Indian Psychiatric Society (IPS)",
-      indianRecommendation: "IPS concurs — sertraline is preferred in pregnancy. Citalopram should not be the first choice if pregnancy is possible. In Indian practice, the additional QTc burden on the foetus (theoretical) and the complexity of monitoring favour sertraline or escitalopram.",
+      indianRecommendation: "IPS concurs: sertraline is preferred in pregnancy. Citalopram should not be the first choice if pregnancy is possible. In Indian practice, the additional QTc burden on the foetus (theoretical) and the complexity of monitoring favour sertraline or escitalopram.",
     },
   ],
 
@@ -1229,7 +1229,7 @@ export const citalopram: Drug = {
     ],
     indian: [
       { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS concurs with the FDA dose cap. Escitalopram preferred over citalopram wherever possible, particularly in elderly and cardiac patients." },
-      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS recommends actively screening for PPI (omeprazole, esomeprazole) use before prescribing citalopram — extremely common in Indian patients with dyspepsia." },
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS recommends actively screening for PPI (omeprazole, esomeprazole) use before prescribing citalopram: extremely common in Indian patients with dyspepsia." },
       { source: null, recommendation: "No dedicated IPS guideline on citalopram ECG monitoring frequency. Current section reflects accepted clinical practice and the FDA 2011 communication." },
     ],
     indianClinicalPractice:
@@ -1239,11 +1239,11 @@ export const citalopram: Drug = {
   /* Indian encounter context — where you'll see this drug */
   indianEncounterContext: {
     governmentHospitals:
-      "Second-line SSRI in government hospital psychiatry OPDs when escitalopram is not stocked. Available through DMHP. Starting dose 10–20mg OD, never exceeding 40mg/day (20mg/day in elderly). ECG availability is variable — when not available, prefer escitalopram or sertraline.",
+      "Second-line SSRI in government hospital psychiatry OPDs when escitalopram is not stocked. Available through DMHP. Starting dose 10–20mg OD, never exceeding 40mg/day (20mg/day in elderly). ECG availability is variable, when not available, prefer escitalopram or sertraline.",
     privateHospitals:
       "Progressively being replaced by escitalopram in private psychiatry practice. Still prescribed by GPs and physicians. When used, baseline ECG for QTc is more common, and concurrent omeprazole/esomeprazole is actively screened and dose-capped to 20mg/day. PHQ-9 monitoring at 2/4/6/12 weeks.",
     medicalColleges:
-      "Teaching drug for SSRI pharmacology and the 2011 FDA Drug Safety Communication on QTc. Used in pharmacology practicals (prescription writing, ECG interpretation, patient counselling). High-yield topic for NEET PG and INICET — the dose cap, R-enantiomer hERG blockade, and omeprazole interaction are routine questions.",
+      "Teaching drug for SSRI pharmacology and the 2011 FDA Drug Safety Communication on QTc. Used in pharmacology practicals (prescription writing, ECG interpretation, patient counselling). High-yield topic for NEET PG and INICET: the dose cap, R-enantiomer hERG blockade, and omeprazole interaction are routine questions.",
     primaryCare:
       "Still prescribed by GPs and family physicians for mild-moderate depression, often without baseline ECG. Common pitfall: co-prescription with omeprazole at 40mg/day. Tele-MANAS (14416) for crisis support. Referral to psychiatrist if no response at 6–8 weeks, QTc concerns, or elderly with comorbidities.",
     psychiatryOPD:
@@ -1253,39 +1253,39 @@ export const citalopram: Drug = {
   /* Indian prescription workflow */
   prescriptionWorkflow: {
     beforePrescribing: [
-      "Screen for bipolar disorder (MDQ questionnaire) — SSRIs can trigger manic switch.",
-      "Assess suicidal ideation — if present, involve family for monitoring and provide Tele-MANAS (14416) number.",
-      "Check for MAOI use in last 14 days — absolute contraindication.",
-      "Review concurrent medications — ESPECIALLY omeprazole, esomeprazole, fluconazole (CYP2C19 inhibitors requiring 20mg/day cap) and QTc-prolonging drugs (pimozide, thioridazine, moxifloxacin, erythromycin, ondansetron).",
-      "Baseline ECG for QTc — MANDATORY in elderly (>60), cardiac patients, and those on QTc-prolonging drugs. STRONGLY recommended in all patients where feasible.",
+      "Screen for bipolar disorder (MDQ questionnaire). SSRIs can trigger manic switch.",
+      "Assess suicidal ideation, if present, involve family for monitoring and provide Tele-MANAS (14416) number.",
+      "Check for MAOI use in last 14 days: absolute contraindication.",
+      "Review concurrent medications. ESPECIALLY omeprazole, esomeprazole, fluconazole (CYP2C19 inhibitors requiring 20mg/day cap) and QTc-prolonging drugs (pimozide, thioridazine, moxifloxacin, erythromycin, ondansetron).",
+      "Baseline ECG for QTc. MANDATORY in elderly (>60), cardiac patients, and those on QTc-prolonging drugs. STRONGLY recommended in all patients where feasible.",
       "Baseline serum sodium in elderly (SIADH risk), and check K+/Mg2+ if cardiac history.",
       "Baseline PHQ-9 score for response monitoring.",
-      "Consider escitalopram instead — same active moiety at half the dose, no R-enantiomer hERG blockade, no 20mg cap limiting efficacy. Citalopram has essentially no clinical advantage over escitalopram.",
+      "Consider escitalopram instead: same active moiety at half the dose, no R-enantiomer hERG blockade, no 20mg cap limiting efficacy. Citalopram has essentially no clinical advantage over escitalopram.",
     ],
     duringTreatment: [
       "Week 1–2: assess tolerability (nausea, insomnia, agitation) and suicidality (especially <25 years). Repeat ECG if symptomatic (palpitations, syncope, near-syncope).",
-      "Week 2–4: review early response — sleep, appetite, energy often improve before mood. Recheck sodium in elderly if symptomatic.",
+      "Week 2–4: review early response; sleep, appetite, energy often improve before mood. Recheck sodium in elderly if symptomatic.",
       "Week 4–6: assess response with PHQ-9. If <30% reduction, increase dose IF under cap. NEVER exceed 40mg/day (20mg/day in elderly/CYP2C19-inhibited).",
-      "Week 6–12: full response assessment. If <50% reduction at 12 weeks, AUGMENT (bupropion, mirtazapine) or SWITCH (escitalopram, sertraline) — do NOT exceed dose cap.",
-      "Monitor for sexual dysfunction — ask directly; patients rarely volunteer it.",
+      "Week 6–12: full response assessment. If <50% reduction at 12 weeks, AUGMENT (bupropion, mirtazapine) or SWITCH (escitalopram, sertraline): do NOT exceed dose cap.",
+      "Monitor for sexual dysfunction: ask directly; patients rarely volunteer it.",
       "Watch for hyponatraemia in elderly (confusion, headache, seizures).",
       "Watch for serotonin syndrome if serotonergic drugs are added (tramadol, triptans, linezolid).",
     ],
     followUp: [
       "First follow-up at 2 weeks (tolerability, suicidality, ECG if symptomatic).",
       "Second follow-up at 4 weeks (early response).",
-      "Third follow-up at 6 weeks (dose escalation decision — but capped at 40mg/20mg).",
+      "Third follow-up at 6 weeks (dose escalation decision, but capped at 40mg/20mg).",
       "Fourth follow-up at 12 weeks (full response assessment).",
       "If remission achieved (PHQ-9 <5): continue for 6–12 months for first episode, longer for recurrent.",
       "Before discontinuation: taper over 4+ weeks. Consider substituting fluoxetine for last 2 weeks of taper (self-tapers).",
-      "In government hospitals: follow-up may be every 4–8 weeks due to travel barriers — counsel family to watch for red flags (palpitations, syncope, agitation, new suicidal thoughts).",
+      "In government hospitals: follow-up may be every 4–8 weeks due to travel barriers. Counsel family to watch for red flags (palpitations, syncope, agitation, new suicidal thoughts).",
     ],
     whenToRefer: [
-      "Refer to psychiatrist if no response at the maximum capped dose (40mg adults, 20mg elderly) at 12 weeks — augmentation or switch needed.",
+      "Refer to psychiatrist if no response at the maximum capped dose (40mg adults, 20mg elderly) at 12 weeks: augmentation or switch needed.",
       "Refer urgently if QTc >450ms (men) / >470ms (women) or increases >30ms from baseline, or if torsades symptoms (syncope, palpitations) occur.",
       "Refer urgently if suicidal ideation emerges or worsens.",
       "Refer if bipolar disorder is suspected (manic switch risk).",
-      "Refer if serotonin syndrome develops (emergency — call 112).",
+      "Refer if serotonin syndrome develops (emergency, call 112).",
       "Refer to physician if severe hyponatraemia (Na <120 mmol/L) or seizures.",
       "Refer for ECG and cardiology opinion in any patient developing new cardiac symptoms on citalopram.",
     ],
@@ -1304,7 +1304,7 @@ export const citalopram: Drug = {
     { exam: "NEET PG", year: 2022, concept: "Citalopram dose cap (40mg/20mg) due to QTc", topic: "SSRI safety" },
     { exam: "NEET PG", year: 2021, concept: "Citalopram + omeprazole interaction (CYP2C19) requiring 20mg cap", topic: "Antidepressant drug interactions" },
     { exam: "NEET PG", year: 2020, concept: "R-enantiomer causes QTc prolongation (vs escitalopram S-enantiomer)", topic: "Stereochemistry of SSRIs" },
-    { exam: "NEET PG", year: 2019, concept: "Citalopram vs escitalopram — relationship and clinical implications", topic: "SSRI pharmacology" },
+    { exam: "NEET PG", year: 2019, concept: "Citalopram vs escitalopram: relationship and clinical implications", topic: "SSRI pharmacology" },
     { exam: "INICET", year: 2021, concept: "Citalopram overdose causing torsades de pointes", topic: "Antidepressant toxicity" },
     { exam: "INICET", year: 2023, concept: "FDA 2011 Drug Safety Communication on citalopram", topic: "Regulatory pharmacology" },
     { exam: "FMGE", year: 2022, concept: "Maximum dose of citalopram in elderly (20mg)", topic: "Antidepressant dosing" },
@@ -1315,7 +1315,7 @@ export const citalopram: Drug = {
   indianComparisonContexts: [
     {
       scenario: "Government hospital setup",
-      recommendation: "Citalopram is a second-line SSRI — escitalopram and sertraline are preferred. Citalopram is used when escitalopram is not stocked, but the 20mg cap in elderly and the QTc risk make it less suitable for resource-limited settings without reliable ECG.",
+      recommendation: "Citalopram is a second-line SSRI: escitalopram and sertraline are preferred. Citalopram is used when escitalopram is not stocked, but the 20mg cap in elderly and the QTc risk make it less suitable for resource-limited settings without reliable ECG.",
       alternative: "Escitalopram (preferred) or sertraline (also low cost, available in Jan Aushadhi).",
     },
     {
@@ -1325,18 +1325,18 @@ export const citalopram: Drug = {
     },
     {
       scenario: "Patient on long-term omeprazole or esomeprazole (very common in Indian patients with dyspepsia)",
-      recommendation: "AVOID citalopram — the CYP2C19 inhibition by PPIs raises citalopram levels ~2-fold and forces a 20mg/day cap that limits efficacy. Use sertraline or escitalopram (less affected).",
-      alternative: "Sertraline (preferred — not significantly affected by CYP2C19) or escitalopram (less affected).",
+      recommendation: "AVOID citalopram: the CYP2C19 inhibition by PPIs raises citalopram levels ~2-fold and forces a 20mg/day cap that limits efficacy. Use sertraline or escitalopram (less affected).",
+      alternative: "Sertraline (preferred, not significantly affected by CYP2C19) or escitalopram (less affected).",
     },
     {
       scenario: "Elderly patient (>60 years) with depression",
-      recommendation: "AVOID citalopram — 20mg/day cap limits efficacy, baseline ECG access is variable in India, elderly have multiple comorbidities. Escitalopram or sertraline are preferred.",
-      alternative: "Escitalopram 10mg OD (preferred — wider therapeutic range, lower QTc risk) or sertraline 25–50mg OD.",
+      recommendation: "AVOID citalopram: 20mg/day cap limits efficacy, baseline ECG access is variable in India, elderly have multiple comorbidities. Escitalopram or sertraline are preferred.",
+      alternative: "Escitalopram 10mg OD (preferred, wider therapeutic range, lower QTc risk) or sertraline 25–50mg OD.",
     },
     {
       scenario: "Patient with cardiac history or baseline long-QT",
       recommendation: "Citalopram is CONTRAINDICATED in congenital long-QT syndrome. Use with caution and only with serial ECGs in any cardiac patient. Strongly prefer sertraline (lowest QTc burden among SSRIs).",
-      alternative: "Sertraline (preferred — lowest QTc risk among SSRIs, mild CYP2D6 inhibition only).",
+      alternative: "Sertraline (preferred, lowest QTc risk among SSRIs, mild CYP2D6 inhibition only).",
     },
     {
       scenario: "Cost-sensitive setting",
@@ -1399,8 +1399,8 @@ export const citalopram: Drug = {
       {
         id: "high-risk",
         question: "Elderly (>60), hepatic impairment, cardiac history, or on CYP2C19 inhibitor (omeprazole, esomeprazole, fluconazole)",
-        recommendation: "AVOID citalopram — use escitalopram or sertraline. If citalopram is unavoidable, cap at 20mg/day and obtain baseline + serial ECGs.",
-        reasoning: "The 20mg/day cap in these patients limits efficacy, and QTc monitoring is harder in Indian practice. CYP2C19 inhibitors (especially omeprazole — extremely common in India) raise citalopram levels ~2-fold and force a 20mg/day cap.",
+        recommendation: "AVOID citalopram: use escitalopram or sertraline. If citalopram is unavoidable, cap at 20mg/day and obtain baseline + serial ECGs.",
+        reasoning: "The 20mg/day cap in these patients limits efficacy, and QTc monitoring is harder in Indian practice. CYP2C19 inhibitors (especially omeprazole, extremely common in India) raise citalopram levels ~2-fold and force a 20mg/day cap.",
         branches: [
           { label: "On long-term omeprazole", next: "ppi-interaction" },
           { label: "Elderly with cardiac comorbidity", next: "elderly-cardiac" },
@@ -1415,20 +1415,20 @@ export const citalopram: Drug = {
       {
         id: "elderly-cardiac",
         question: "Elderly patient with cardiac comorbidity",
-        recommendation: "AVOID citalopram — use sertraline (lowest QTc burden among SSRIs) or escitalopram. If citalopram must be used, cap at 20mg/day and obtain baseline + serial ECGs.",
+        recommendation: "AVOID citalopram: use sertraline (lowest QTc burden among SSRIs) or escitalopram. If citalopram must be used, cap at 20mg/day and obtain baseline + serial ECGs.",
         reasoning: "Elderly have age-related CYP2C19 decline, comorbid cardiac disease, and polypharmacy with QTc-prolonging drugs. The 20mg cap and QTc monitoring difficulty make citalopram a poor choice.",
       },
       {
         id: "contraindicated",
         question: "Congenital long-QT syndrome, history of torsades, concurrent pimozide/thioridazine, or MAOI within 14 days",
-        recommendation: "CONTRAINDICATED. Do NOT prescribe citalopram. Use sertraline or escitalopram (with caution and ECG monitoring). For MAOI — wait 14 days.",
+        recommendation: "CONTRAINDICATED. Do NOT prescribe citalopram. Use sertraline or escitalopram (with caution and ECG monitoring). For MAOI: wait 14 days.",
         reasoning: "Citalopram's R-enantiomer blocks hERG → QTc prolongation → torsades. Combining with other QTc-prolonging drugs or congenital long-QT is dangerous. MAOI + SSRI = fatal serotonin syndrome.",
       },
       {
         id: "partial-response",
         question: "Patient on citalopram 40mg for 6 weeks has partial response (PHQ-9 18 → 12)",
         recommendation: "Cannot exceed 40mg cap. Options: (1) augment with bupropion XL 150mg or mirtazapine 15mg; (2) switch to escitalopram 10–20mg (wider therapeutic range); (3) add CBT. Reassess at 12 weeks.",
-        reasoning: "Citalopram's dose cap is the key clinical difference vs sertraline (200mg max) or escitalopram (20mg max but with safer profile). When the cap is reached without remission, augmentation or switching is the only option — NOT dose escalation.",
+        reasoning: "Citalopram's dose cap is the key clinical difference vs sertraline (200mg max) or escitalopram (20mg max but with safer profile). When the cap is reached without remission, augmentation or switching is the only option. NOT dose escalation.",
       },
       {
         id: "switch-to-escitalopram",
@@ -1455,15 +1455,15 @@ export const citalopram: Drug = {
       "",
       "Advice: Take in morning with food. Do not stop suddenly.",
       "Tell every doctor and pharmacist you take citalopram.",
-      "Avoid omeprazole, erythromycin, and other interacting drugs — discuss alternatives.",
+      "Avoid omeprazole, erythromycin, and other interacting drugs: discuss alternatives.",
       "Seek emergency help for palpitations, fainting, or near-fainting.",
       "Report if feeling worse or new suicidal thoughts. Tele-MANAS 14416 for crisis.",
     ],
     followUp: [
-      "Review after 2 weeks — tolerability, suicidality, side effects. ECG if symptomatic.",
-      "Review after 4 weeks — early response (sleep, appetite, energy).",
-      "Review after 6 weeks — PHQ-9; if <30% reduction and under 40mg cap, increase to 40mg.",
-      "Review after 12 weeks — full response assessment.",
+      "Review after 2 weeks: tolerability, suicidality, side effects. ECG if symptomatic.",
+      "Review after 4 weeks: early response (sleep, appetite, energy).",
+      "Review after 6 weeks. PHQ-9; if <30% reduction and under 40mg cap, increase to 40mg.",
+      "Review after 12 weeks: full response assessment.",
       "If remission (PHQ-9 <5): continue 6–12 months, then taper over 4+ weeks.",
       "If QTc >450ms (men) / >470ms (women) at any point: stop citalopram, switch to escitalopram or sertraline.",
     ],
@@ -1480,16 +1480,16 @@ export const citalopram: Drug = {
     {
       mistake: "Exceeding 40mg/day in adults (or 20mg/day in elderly)",
       why: "The 2011 FDA Drug Safety Communication made the 40mg/20mg cap non-negotiable due to dose-dependent QTc prolongation and torsades de pointes risk. Higher doses provide minimal additional antidepressant benefit but substantially raise QTc.",
-      correction: "Maximum 40mg/day in adults; 20mg/day in elderly (>60), hepatic impairment, CYP2C19 poor metabolisers, and patients on CYP2C19 inhibitors. If response is inadequate at the cap, AUGMENT or SWITCH — do NOT exceed the cap.",
+      correction: "Maximum 40mg/day in adults; 20mg/day in elderly (>60), hepatic impairment, CYP2C19 poor metabolisers, and patients on CYP2C19 inhibitors. If response is inadequate at the cap, AUGMENT or SWITCH. Do NOT exceed the cap.",
     },
     {
       mistake: "Not obtaining a baseline ECG, especially in elderly or cardiac patients",
-      why: "QTc monitoring is essential because citalopram's QTc effect is unpredictable in individual patients. In Indian government OPDs, ECG access is variable and baseline ECG is often skipped — this is a recognised safety gap.",
+      why: "QTc monitoring is essential because citalopram's QTc effect is unpredictable in individual patients. In Indian government OPDs, ECG access is variable and baseline ECG is often skipped. This is a recognised safety gap.",
       correction: "Baseline ECG is MANDATORY in elderly (>60), cardiac patients, and those on QTc-prolonging drugs. STRONGLY recommended in all patients where feasible. Repeat ECG if symptomatic (palpitations, syncope) or if dose increased.",
     },
     {
       mistake: "Choosing citalopram over escitalopram without a clear reason",
-      why: "Citalopram has essentially NO clinical advantage over escitalopram — escitalopram is the S-enantiomer alone at half the dose, without the R-enantiomer's hERG blockade. The Lancet 2018 network meta-analysis ranked escitalopram (not citalopram) among the best.",
+      why: "Citalopram has essentially NO clinical advantage over escitalopram: escitalopram is the S-enantiomer alone at half the dose, without the R-enantiomer's hERG blockade. The Lancet 2018 network meta-analysis ranked escitalopram (not citalopram) among the best.",
       correction: "Default to escitalopram 10mg OD when citalopram is being considered. Reserve citalopram for cost-sensitive patients (the cost difference is small) or those already stable on long-term citalopram.",
     },
     {
@@ -1499,7 +1499,7 @@ export const citalopram: Drug = {
     },
     {
       mistake: "Forgetting to check sodium in elderly within the first 2 weeks",
-      why: "SSRIs cause SIADH in ~0.5–1% of patients. Risk is highest in elderly females in the first 2 weeks. Can cause confusion, seizures, or falls — often misattributed to dementia or 'old age' in Indian geriatric practice.",
+      why: "SSRIs cause SIADH in ~0.5–1% of patients. Risk is highest in elderly females in the first 2 weeks. Can cause confusion, seizures, or falls: often misattributed to dementia or 'old age' in Indian geriatric practice.",
       correction: "Check serum sodium at baseline in elderly. Recheck within 2 weeks if symptomatic (confusion, headache, lethargy, falls). Counsel family to watch for these signs.",
     },
     {
@@ -1528,13 +1528,13 @@ export const citalopram: Drug = {
     },
     {
       scenario: "Concurrent strong CYP2C19 inhibitors (omeprazole, esomeprazole, fluconazole, fluvoxamine) at doses above 20mg/day",
-      reason: "CYP2C19 inhibition raises citalopram levels ~2-fold, increasing QTc risk. FDA mandates 20mg/day cap with these combinations — which limits antidepressant efficacy.",
+      reason: "CYP2C19 inhibition raises citalopram levels ~2-fold, increasing QTc risk. FDA mandates 20mg/day cap with these combinations, which limits antidepressant efficacy.",
       alternative: "Switch to sertraline (not significantly affected by CYP2C19) or escitalopram (less affected). If the CYP2C19 inhibitor is essential and citalopram must be continued, cap at 20mg/day and monitor ECG.",
     },
     {
       scenario: "Elderly patients (>60 years) with comorbid cardiac disease",
       reason: "20mg/day cap limits efficacy, age-related CYP2C19 decline increases exposure, comorbid cardiac disease raises QTc risk, and polypharmacy with QTc-prolonging drugs is common.",
-      alternative: "Escitalopram 10mg OD (preferred — wider therapeutic range, lower QTc risk) or sertraline 25–50mg OD (lowest QTc burden).",
+      alternative: "Escitalopram 10mg OD (preferred, wider therapeutic range, lower QTc risk) or sertraline 25–50mg OD (lowest QTc burden).",
     },
     {
       scenario: "Active MAOI use (within 14 days)",
@@ -1543,8 +1543,8 @@ export const citalopram: Drug = {
     },
     {
       scenario: "Bipolar depression without mood stabiliser",
-      reason: "SSRI monotherapy can trigger a manic switch — potentially dangerous. Same risk as all antidepressants.",
-      alternative: "Mood stabiliser first (lithium, valproate, lamotrigine). SSRI only if mood stabiliser alone is insufficient — and prefer sertraline or fluoxetine (better bipolar depression data).",
+      reason: "SSRI monotherapy can trigger a manic switch: potentially dangerous. Same risk as all antidepressants.",
+      alternative: "Mood stabiliser first (lithium, valproate, lamotrigine). SSRI only if mood stabiliser alone is insufficient, and prefer sertraline or fluoxetine (better bipolar depression data).",
     },
   ],
 
@@ -1555,8 +1555,8 @@ export const citalopram: Drug = {
       "What is the 2011 FDA Drug Safety Communication on citalopram, and what are the dose caps? (Dose-dependent QTc prolongation → torsades risk. Cap: 40mg/day adults, 20mg/day elderly/hepatic/CYP2C19-inhibited.)",
       "Why is citalopram rarely the right choice over escitalopram? (Same active moiety at half the dose with escitalopram, no R-enantiomer hERG blockade, no 20mg cap limiting efficacy, lower QTc risk. The Lancet 2018 NMA ranked escitalopram higher.)",
       "A patient on long-term omeprazole is prescribed citalopram 40mg/day by a GP. What is wrong, and what would you do? (CYP2C19 inhibition by omeprazole raises citalopram levels ~2-fold. FDA mandates 20mg/day cap. Switch to sertraline or escitalopram, or cap citalopram at 20mg/day.)",
-      "Which CYP enzyme metabolises citalopram, and which common Indian drugs inhibit it? (CYP2C19. Omeprazole, esomeprazole, fluconazole, fluvoxamine, moclobemide — extremely common in Indian practice.)",
-      "What is the black box warning for citalopram? (Increased suicidality in patients <25 years — same as all antidepressants.)",
+      "Which CYP enzyme metabolises citalopram, and which common Indian drugs inhibit it? (CYP2C19. Omeprazole, esomeprazole, fluconazole, fluvoxamine, moclobemide: extremely common in Indian practice.)",
+      "What is the black box warning for citalopram? (Increased suicidality in patients <25 years, same as all antidepressants.)",
     ],
     residentExpects: [
       "Know the dose caps cold: 40mg adults, 20mg elderly/hepatic/CYP2C19-inhibited. Never exceed.",
@@ -1567,24 +1567,24 @@ export const citalopram: Drug = {
       "Know when to refer to psychiatry: no response at capped dose at 12 weeks, QTc concerns, suicidal ideation, bipolar suspicion.",
     ],
     consultantsDo: [
-      "Obtain baseline ECG in ALL patients starting citalopram, not just elderly — QTc monitoring is a citalopram-specific safety requirement.",
-      "Default to escitalopram over citalopram in nearly every case — citalopram has no clinical advantage and worse safety.",
+      "Obtain baseline ECG in ALL patients starting citalopram, not just elderly. QTc monitoring is a citalopram-specific safety requirement.",
+      "Default to escitalopram over citalopram in nearly every case: citalopram has no clinical advantage and worse safety.",
       "Actively screen for concurrent omeprazole, esomeprazole, fluconazole, and QTc-prolonging drugs before prescribing citalopram.",
       "Use PHQ-9 at every visit for objective monitoring.",
       "Screen for bipolar disorder (MDQ) before starting any antidepressant.",
       "Continue treatment for 6–12 months after remission for first episode; longer for recurrent.",
-      "Consider cost — Jan Aushadhi generic citalopram is ₹2–4/tablet, but Jan Aushadhi escitalopram (₹4–8) is a better value proposition given the safety profile.",
+      "Consider cost. Jan Aushadhi generic citalopram is ₹2–4/tablet, but Jan Aushadhi escitalopram (₹4–8) is a better value proposition given the safety profile.",
     ],
     internsMiss: [
-      "Forgetting to ask about omeprazole/esomeprazole use before prescribing citalopram — extremely common in Indian patients.",
+      "Forgetting to ask about omeprazole/esomeprazole use before prescribing citalopram: extremely common in Indian patients.",
       "Prescribing citalopram 40mg/day to an elderly patient (cap is 20mg/day).",
       "Not obtaining a baseline ECG in elderly or cardiac patients.",
       "Not counselling about the QTc risk and what to do if palpitations or syncope occur.",
-      "Not asking about sexual dysfunction — patient stops silently.",
-      "Not checking sodium in elderly — presents with confusion 2 weeks later.",
-      "Not screening for bipolar disorder — patient has manic switch.",
+      "Not asking about sexual dysfunction: patient stops silently.",
+      "Not checking sodium in elderly: presents with confusion 2 weeks later.",
+      "Not screening for bipolar disorder: patient has manic switch.",
       "Not involving family in monitoring (critical in Indian joint family system).",
-      "Stopping abruptly when patient feels better — discontinuation syndrome.",
+      "Stopping abruptly when patient feels better: discontinuation syndrome.",
       "Not providing Tele-MANAS number (14416) for crisis support.",
     ],
   },
@@ -1779,7 +1779,7 @@ export const citalopram: Drug = {
   activeRecallQuestions: [
     {
       question: "What is the relationship between citalopram and escitalopram? Which enantiomer is responsible for QTc prolongation, and why?",
-      answer: "Citalopram is the racemic mixture of R- and S-enantiomers. Escitalopram is the S-enantiomer alone (the active half). The R-enantiomer is essentially inactive at SERT but blocks hERG potassium channels → QTc prolongation → torsades de pointes. This is why escitalopram is preferred — same antidepressant effect at half the dose, without the R-enantiomer's cardiac risk.",
+      answer: "Citalopram is the racemic mixture of R- and S-enantiomers. Escitalopram is the S-enantiomer alone (the active half). The R-enantiomer is essentially inactive at SERT but blocks hERG potassium channels → QTc prolongation → torsades de pointes. This is why escitalopram is preferred: same antidepressant effect at half the dose, without the R-enantiomer's cardiac risk.",
       topic: "Mechanism",
     },
     {
@@ -1799,12 +1799,12 @@ export const citalopram: Drug = {
     },
     {
       question: "List the Indian brands of citalopram and the Schedule H status. Is Jan Aushadhi generic citalopram available?",
-      answer: "Indian brands: Cilift (Cipla), Citopam (Sun Pharma), Cital (Intas), Recital (Lupin). Schedule H (prescription-only). Jan Aushadhi generic citalopram IS available in 10mg, 20mg, and 40mg tablets — among the most affordable antidepressant options in India (₹2–4 per tablet). However, Jan Aushadhi escitalopram (slightly higher cost but better safety) is increasingly preferred.",
+      answer: "Indian brands: Cilift (Cipla), Citopam (Sun Pharma), Cital (Intas), Recital (Lupin). Schedule H (prescription-only). Jan Aushadhi generic citalopram IS available in 10mg, 20mg, and 40mg tablets, among the most affordable antidepressant options in India (₹2–4 per tablet). However, Jan Aushadhi escitalopram (slightly higher cost but better safety) is increasingly preferred.",
       topic: "Indian Context",
     },
     {
       question: "A patient on citalopram 40mg/day for 6 weeks has partial response (PHQ-9 18 → 12). What are the next steps? Why is dose escalation beyond 40mg NOT an option?",
-      answer: "Cannot exceed 40mg/day (adult cap) due to dose-dependent QTc prolongation. Options: (1) augment with bupropion XL 150mg or mirtazapine 15mg; (2) switch to escitalopram 10–20mg (wider therapeutic range, lower QTc risk); (3) add CBT. Reassess at 12 weeks. This is the key clinical difference vs sertraline (200mg max) — citalopram's dose cap forces earlier augmentation or switching.",
+      answer: "Cannot exceed 40mg/day (adult cap) due to dose-dependent QTc prolongation. Options: (1) augment with bupropion XL 150mg or mirtazapine 15mg; (2) switch to escitalopram 10–20mg (wider therapeutic range, lower QTc risk); (3) add CBT. Reassess at 12 weeks. This is the key clinical difference vs sertraline (200mg max): citalopram's dose cap forces earlier augmentation or switching.",
       topic: "Clinical Management",
     },
   ],
@@ -1836,7 +1836,7 @@ export const citalopram: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "38 min",
-      description: "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence.",
+      description: "Everything: advanced reasoning, ward pearls, guideline comparison, full evidence.",
       visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
     },
   ],
@@ -1855,19 +1855,19 @@ export const citalopram: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Why does the R-enantiomer matter?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand the mechanism — S-enantiomer blocks SERT (antidepressant effect), R-enantiomer blocks hERG (QTc risk). This stereochemistry is THE central concept.",
+      checkpoint: "You understand the mechanism. S-enantiomer blocks SERT (antidepressant effect), R-enantiomer blocks hERG (QTc risk). This stereochemistry is THE central concept.",
     },
     {
       number: 3,
       title: "Clinical Practice",
-      description: "When do you use it? What goes wrong — especially with QTc and CYP2C19?",
+      description: "When do you use it? What goes wrong, especially with QTc and CYP2C19?",
       sectionIds: ["clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education"],
-      checkpoint: "You can now prescribe citalopram safely — you know the 40mg/20mg cap, the omeprazole interaction, the QTc monitoring requirement, and the contraindications.",
+      checkpoint: "You can now prescribe citalopram safely: you know the 40mg/20mg cap, the omeprazole interaction, the QTc monitoring requirement, and the contraindications.",
     },
     {
       number: 4,
       title: "Indian Context",
-      description: "How is it actually used in Indian hospitals — and why is it being replaced by escitalopram?",
+      description: "How is it actually used in Indian hospitals, and why is it being replaced by escitalopram?",
       sectionIds: ["indian-clinical", "decision-path", "common-mistakes"],
       checkpoint: "You know the Indian brands (Cilift, Citopam, Cital, Recital), the omeprazole prescribing pitfall, the common mistakes interns make, and when NOT to choose citalopram.",
     },
@@ -1883,7 +1883,7 @@ export const citalopram: Drug = {
       title: "Active Recall",
       description: "Can you answer these without looking?",
       sectionIds: ["active-recall", "faq", "references"],
-      checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Citalopram — including its relationship to escitalopram and the 2011 FDA dose cap.",
+      checkpoint: "If you could answer all the active recall questions, you have exam-level mastery of Citalopram, including its relationship to escitalopram and the 2011 FDA dose cap.",
     },
   ],
 
@@ -1900,12 +1900,12 @@ export const citalopram: Drug = {
     ],
     ifItWorks: [
       "Goal: complete remission plus prevention of future relapses",
-      "Most often reduces or eliminates symptoms but is not a cure — symptoms can recur after stopping",
+      "Most often reduces or eliminates symptoms but is not a cure: symptoms can recur after stopping",
       "Continue until symptoms are gone (remission) or clearly reduced (e.g., OCD, PTSD)",
       "First depressive episode: continue 1 year once well; later episodes and anxiety disorders may need indefinite treatment",
     ],
     ifItDoesNotWork: [
-      "Partial response is common — residual insomnia, fatigue, poor concentration",
+      "Partial response is common: residual insomnia, fatigue, poor concentration",
       "Some patients are non-responders (treatment-resistant / refractory); some early responders 'poop-out'",
       "Options: raise dose, switch, or add an augmenting agent",
       "Consider psychotherapy and re-evaluation for another diagnosis or comorbid condition (medical illness, substance use)",
@@ -1924,13 +1924,13 @@ export const citalopram: Drug = {
     ],
 
     sideEffectLogic: [
-      "Serotonin increases at receptors outside the therapeutic circuits — sleep centers (insomnia), gut (diarrhea)",
+      "Serotonin increases at receptors outside the therapeutic circuits: sleep centers (insomnia), gut (diarrhea)",
       "Rising serotonin can dampen dopamine release → emotional flattening, cognitive slowing, apathy",
       "Side effects are immediate and often fade; therapeutic effects are delayed and build over time",
       "Citalopram's unique mild antihistamine activity may add to sedation and fatigue in some patients",
     ],
     sideEffectManagement: [
-      "Wait — most early effects fade",
+      "Wait, most early effects fade",
       "Wait again",
       "Wait once more",
       "Take in the morning if nighttime insomnia; take at night if daytime sedation",
@@ -1944,7 +1944,7 @@ export const citalopram: Drug = {
       "Mirtazapine for insomnia, agitation, and gastrointestinal effects",
       "Benzodiazepines for jitteriness and anxiety at initiation, especially in anxious patients",
     ],
-    weightGain: "Reported but not expected — associated with both gain and loss in studies; relatively weight-neutral overall",
+    weightGain: "Reported but not expected: associated with both gain and loss in studies; relatively weight-neutral overall",
     sedation: "Occurs in a significant minority",
 
     dosing: [
@@ -1955,7 +1955,7 @@ export const citalopram: Drug = {
         target: "20–60 mg/day",
         max: "60 mg/day",
         notes: [
-          "Tablets are scored — give 10 mg as half of a 20 mg tablet or 20 mg as half of a 40 mg tablet to save cost (tablets cost about the same in many markets)",
+          "Tablets are scored. Give 10 mg as half of a 20 mg tablet or 20 mg as half of a 40 mg tablet to save cost (tablets cost about the same in many markets)",
           "Many patients respond better to 40 mg than to 20 mg",
           "Once daily, any time of day the patient best tolerates",
         ],
@@ -1965,7 +1965,7 @@ export const citalopram: Drug = {
     dosingTips: [
       "Dose at the lower end of the range in patients needing maximal tolerability",
       "Intolerable anxiety, insomnia, agitation, akathisia or activation on starting or stopping → consider activated bipolar disorder; switch to a mood stabilizer or atypical antipsychotic",
-      "Many side effects are dose- and time-dependent — they spike with each increase, then fade",
+      "Many side effects are dose- and time-dependent. They spike with each increase, then fade",
     ],
     overdose: [
       "Rare fatalities reported, both alone and in combination with other drugs",
@@ -1983,7 +1983,7 @@ export const citalopram: Drug = {
       "Parent half-life 23–45 hours",
       "Weak CYP2D6 inhibitor",
       "Can raise TCA levels; may displace highly protein-bound drugs (e.g., warfarin)",
-      "Fatal serotonin syndrome with MAOIs — do not combine; wait 14 days after stopping an MAOI, and 2 weeks after stopping citalopram before starting an MAOI",
+      "Fatal serotonin syndrome with MAOIs: do not combine; wait 14 days after stopping an MAOI, and 2 weeks after stopping citalopram before starting an MAOI",
       "Tramadol raises seizure risk; sumatriptan (and possibly other triptans) can rarely cause weakness, hyperreflexia, incoordination",
       "Via 2D6: may blunt codeine analgesia and raise levels of some beta blockers, atomoxetine, and thioridazine (dangerous arrhythmias)",
     ],
@@ -2018,7 +2018,7 @@ export const citalopram: Drug = {
       {
         population: "Elderly",
         guidance: [
-          "20 mg/day; 40 mg/day for non-responders — dose at the lower end when tolerability is an issue",
+          "20 mg/day; 40 mg/day for non-responders: dose at the lower end when tolerability is an issue",
           "May be an especially well-tolerated SSRI in the elderly",
         ],
       },
@@ -2032,10 +2032,10 @@ export const citalopram: Drug = {
       {
         population: "Pregnancy",
         guidance: [
-          "Risk Category C — not generally recommended, especially first trimester; continuous treatment may nonetheless be necessary and has not been proven harmful",
+          "Risk Category C, not generally recommended, especially first trimester; continuous treatment may nonetheless be necessary and has not been proven harmful",
           "At delivery: possible increased maternal bleeding and transient newborn irritability or sedation",
-          "Late third-trimester exposure: neonatal complications reported (respiratory distress, cyanosis, apnea, seizures, feeding difficulty, hypoglycemia, jitteriness) — consistent with toxicity or a discontinuation syndrome",
-          "Weigh treatment risk against relapse risk — for many, continuing is the better choice",
+          "Late third-trimester exposure: neonatal complications reported (respiratory distress, cyanosis, apnea, seizures, feeding difficulty, hypoglycemia, jitteriness); consistent with toxicity or a discontinuation syndrome",
+          "Weigh treatment risk against relapse risk, for many, continuing is the better choice",
         ],
       },
       {
@@ -2043,7 +2043,7 @@ export const citalopram: Drug = {
         guidance: [
           "Some drug is found in breast milk; trace amounts in nursing infants",
           "If the infant becomes irritable or sedated, breastfeeding or the drug may need to be stopped",
-          "Postpartum is high-risk for relapse — may need reinstitution late in the third trimester or shortly after delivery",
+          "Postpartum is high-risk for relapse: may need reinstitution late in the third trimester or shortly after delivery",
         ],
       },
     ],
@@ -2069,7 +2069,7 @@ export const citalopram: Drug = {
       "May be more tolerable than some other antidepressants",
       "May cause less sexual dysfunction than some other SSRIs",
       "Especially well tolerated in the elderly",
-      "May be less well tolerated than escitalopram — its inactive R-enantiomer may interfere with the active S-enantiomer at the serotonin transporter",
+      "May be less well tolerated than escitalopram: its inactive R-enantiomer may interfere with the active S-enantiomer at the serotonin transporter",
       "Evidence in anxiety disorders is less comprehensive than for escitalopram and other SSRIs",
       "Can cause cognitive and affective 'flattening'",
       "Luteal-phase-only dosing may be more effective than continuous dosing for PMDD",

@@ -19,18 +19,18 @@ export const pipothiazine: Drug = {
   brandNames: ["Piportil (palmitate depot)"],
   drugClass: "typical-antipsychotic",
   drugClassLabel: "Typical Antipsychotic",
-  drugClassFullName: "Typical (Conventional) Antipsychotic — Phenothiazine",
+  drugClassFullName: "Typical (Conventional) Antipsychotic. Phenothiazine",
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Typical Antipsychotics", "Pipothiazine"],
   /* ---- Hero / summary ---- */
   tagline: "The European/Indian phenothiazine with a 4-weekly palmitate depot.",
-  summary: "Pipothiazine is a piperazine phenothiazine antipsychotic used mainly in Europe and India, best known for its long-acting palmitate injection every 4 weeks — historically favoured in UK maintenance programmes. Moderate potency with the standard phenothiazine adverse-effect texture; now largely replaced but encountered in older patients on established depot regimens.",
+  summary: "Pipothiazine is a piperazine phenothiazine antipsychotic used mainly in Europe and India, best known for its long-acting palmitate injection every 4 weeks: historically favoured in UK maintenance programmes. Moderate potency with the standard phenothiazine adverse-effect texture; now largely replaced but encountered in older patients on established depot regimens.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Pipothiazine — from its molecular target (D2 (moderate potency antagonist); piperazine phenothiazine) to clinical effect.",
+    "Explain the mechanism of action of Pipothiazine, from its molecular target (D2 (moderate potency antagonist); piperazine phenothiazine) to clinical effect.",
     "List the FDA-approved and off-label uses of Pipothiazine.",
     "Predict the common and serious side effects of Pipothiazine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Pipothiazine.",
@@ -40,10 +40,10 @@ export const pipothiazine: Drug = {
   mechanism: {
     summary: "Moderate-potency piperazine phenothiazine D2 antagonist with a 4-weekly palmitate depot.",
     molecularTarget: "D2 (moderate potency antagonist); piperazine phenothiazine",
-    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — moderate potency: moderate doses, dose-dependent EPS, mild anticholinergic texture.",
+    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways: moderate potency: moderate doses, dose-dependent EPS, mild anticholinergic texture.",
     steps: [
-      "Blocks D2 receptors — therapeutic antipsychotic effect at 65–75% occupancy.",
-      "EPS emerges as occupancy passes ~80% — moderate potency: moderate doses, dose-dependent EPS, mild anticholinergic texture.",
+      "Blocks D2 receptors: therapeutic antipsychotic effect at 65–75% occupancy.",
+      "EPS emerges as occupancy passes ~80%: moderate potency: moderate doses, dose-dependent EPS, mild anticholinergic texture.",
       "Tuberoinfundibular blockade raises prolactin; nigrostriatal blockade produces parkinsonism and dystonia.",
       "Class-typical receptor binding determines the drug's adverse-effect texture.",
     ],
@@ -109,7 +109,7 @@ export const pipothiazine: Drug = {
         label: "hyperprolactinaemia",
       },
     ],
-    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia — efficacy and motor risk are two sides of one coin.",
+    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia: efficacy and motor risk are two sides of one coin.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -147,14 +147,14 @@ export const pipothiazine: Drug = {
       name: "Extrapyramidal symptoms (parkinsonism)",
       frequency: "very-common",
       severity: "moderate",
-      description: "Rigidity, bradykinesia, tremor — dose-dependent D2 signature.",
+      description: "Rigidity, bradykinesia, tremor: dose-dependent D2 signature.",
       management: "Reduce dose; anticholinergic.",
     },
     {
       name: "Akathisia",
       frequency: "common",
       severity: "moderate",
-      description: "Restlessness — frequently mistaken for worsening psychosis.",
+      description: "Restlessness: frequently mistaken for worsening psychosis.",
       management: "Reduce dose; propranolol.",
     },
     {
@@ -177,14 +177,14 @@ export const pipothiazine: Drug = {
       name: "Neuroleptic malignant syndrome",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency.",
+      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness: the class medical emergency.",
       management: "Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
     },
     {
       name: "Tardive dyskinesia",
       frequency: "uncommon",
       severity: "severe",
-      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex — a defining risk of chronic typical antipsychotics.",
+      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex: a defining risk of chronic typical antipsychotics.",
       management: "Lowest effective dose; AIMS surveillance; reduce or switch on detection; VMAT2 inhibitors for severe cases.",
     },
   ],
@@ -220,13 +220,13 @@ export const pipothiazine: Drug = {
     {
       drug: "QT-prolonging drugs (including other antipsychotics)",
       severity: "major",
-      mechanism: "Additive QT prolongation — torsades risk.",
+      mechanism: "Additive QT prolongation: torsades risk.",
       action: "Avoid combinations; ECG monitoring if unavoidable.",
     },
     {
       drug: "Anticholinergic drugs",
       severity: "moderate",
-      mechanism: "Additive anticholinergic burden — cognition, ileus, tachycardia.",
+      mechanism: "Additive anticholinergic burden: cognition, ileus, tachycardia.",
       action: "Minimise total anticholinergic load.",
     },
     {
@@ -238,7 +238,7 @@ export const pipothiazine: Drug = {
   ],
   pregnancy: {
     legacyCategory: "C",
-    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk — continue at the lowest effective dose with obstetric co-management.",
+    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk: continue at the lowest effective dose with obstetric co-management.",
     lactation: "Small amounts pass into milk; infant sedation and EPS-like effects are monitored. Generally considered acceptable with infant monitoring.",
   },
   renalAdjustment: "Standard caution.",
@@ -246,31 +246,31 @@ export const pipothiazine: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Pipothiazine is an older antipsychotic given as a monthly injection, mainly seen in patients who have taken it successfully for many years.",
   patientEducationPoints: [
-    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early — these are treatable.",
+    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early: these are treatable.",
     "Stand up slowly during the first week.",
-    "Do not stop suddenly — discuss any change with your doctor.",
-    "Benefit from Pipothiazine builds over weeks — do not judge it in the first days.",
+    "Do not stop suddenly: discuss any change with your doctor.",
+    "Benefit from Pipothiazine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "Encounter it in legacy patients: an older adult stable on 4-weekly pipothiazine for years — the art is deciding whether to switch at all.",
+    "Encounter it in legacy patients: an older adult stable on 4-weekly pipothiazine for years; the art is deciding whether to switch at all.",
     "Palmitate ester = 4-weekly depot (compare: decanoate esters vary by drug).",
-    "Typical antipsychotics all share one mechanism — D2 blockade — so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
+    "Typical antipsychotics all share one mechanism (D2 blockade) so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
   ],
   examLens: {
     mbbs: {
       viva: [
         "Mechanism of Pipothiazine: Moderate-potency piperazine phenothiazine D2 antagonist with a 4-weekly palmitate depot.",
-        "Uses of Pipothiazine: Schizophrenia — maintenance via depot",
+        "Uses of Pipothiazine: Schizophrenia; maintenance via depot",
         "Piperazine phenothiazine with a palmitate 4-weekly depot.",
         "Used in UK/Europe/India; moderate potency.",
       ],
       practical: [
-        "Prescribe Pipothiazine for schizophrenia — maintenance via depot with dose, timing, and duration.",
+        "Prescribe Pipothiazine for schizophrenia: maintenance via depot with dose, timing, and duration.",
         "Outline the monitoring plan: Weight and BMI (Baseline, then periodically); AIMS examination (Baseline, then every 6 months); EPS screen (parkinsonism, akathisia, dystonia) (Every review in the first 2 months)",
       ],
       longAnswer: [
-        "Pipothiazine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Pipothiazine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Piperazine phenothiazine with a palmitate 4-weekly depot.",
         "Used in UK/Europe/India; moderate potency.",
       ],
@@ -279,7 +279,7 @@ export const pipothiazine: Drug = {
       highYield: [
         "Piperazine phenothiazine with a palmitate 4-weekly depot.",
         "Used in UK/Europe/India; moderate potency.",
-        "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+        "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
         "Potency spectrum: chlorpromazine (low; sedation/hypotension) → haloperidol (high; EPS/prolactin).",
         "Class-defining risks: EPS, tardive dyskinesia, NMS, hyperprolactinaemia, QT (variable by drug).",
       ],
@@ -291,7 +291,7 @@ export const pipothiazine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Pipothiazine develops neuroleptic malignant syndrome — next best step?",
+        "A patient on Pipothiazine develops neuroleptic malignant syndrome: next best step?",
         "When to choose Pipothiazine over alternatives in its class.",
       ],
     },
@@ -304,9 +304,9 @@ export const pipothiazine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "Encounter it in legacy patients: an older adult stable on 4-weekly pipothiazine for years — the art is deciding whether to switch at all.",
+        "Encounter it in legacy patients: an older adult stable on 4-weekly pipothiazine for years; the art is deciding whether to switch at all.",
         "Palmitate ester = 4-weekly depot (compare: decanoate esters vary by drug).",
-        "Typical antipsychotics all share one mechanism — D2 blockade — so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
+        "Typical antipsychotics all share one mechanism (D2 blockade) so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
       ],
     },
   },
@@ -314,23 +314,23 @@ export const pipothiazine: Drug = {
   highYieldSummary: [
     "Piperazine phenothiazine with a palmitate 4-weekly depot.",
     "Used in UK/Europe/India; moderate potency.",
-    "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+    "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
     "Potency spectrum: chlorpromazine (low; sedation/hypotension) → haloperidol (high; EPS/prolactin).",
     "Class-defining risks: EPS, tardive dyskinesia, NMS, hyperprolactinaemia, QT (variable by drug).",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia — maintenance via depot",
-      presentation: "A patient presenting with schizophrenia — maintenance via depot, started on Pipothiazine.",
-      history: "A adult patient presents with a schizophrenia — maintenance via depot picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with schizophrenia — maintenance via depot; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Schizophrenia — maintenance via depot. Differentials are considered and excluded clinically.",
+      title: "First presentation: schizophrenia; maintenance via depot",
+      presentation: "A patient presenting with schizophrenia: maintenance via depot, started on Pipothiazine.",
+      history: "A adult patient presents with a schizophrenia: maintenance via depot picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with schizophrenia: maintenance via depot; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Schizophrenia: maintenance via depot. Differentials are considered and excluded clinically.",
       rationale: "Pipothiazine is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Typical Antipsychotic) with strong evidence in this condition.",
       management: "Started at 25 mg IM test dose, titrated to 50 mg every 4 weeks with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Pipothiazine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Pipothiazine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -339,7 +339,7 @@ export const pipothiazine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Typical Antipsychotic comparison — choosing within the class",
+      title: "Typical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Pipothiazine",
       rows: [
         {
@@ -388,7 +388,7 @@ export const pipothiazine: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Low — weight gain not expected.",
+          primaryValue: "Low: weight gain not expected.",
           comparisons: [
             {
               drug: "Chlorpromazine",
@@ -453,7 +453,7 @@ export const pipothiazine: Drug = {
           ],
         },
       ],
-      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -462,7 +462,7 @@ export const pipothiazine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Pipothiazine reaches peak plasma concentration and begins acting at its molecular target (D2 (moderate potency antagonist); piperazine phenothiazine). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Pipothiazine reaches peak plasma concentration and begins acting at its molecular target (D2 (moderate potency antagonist); piperazine phenothiazine). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -498,7 +498,7 @@ export const pipothiazine: Drug = {
   faqs: [
     {
       question: "How long does Pipothiazine take to work?",
-      answer: "Clinical effect of Pipothiazine typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Clinical effect of Pipothiazine typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Pipothiazine?",
@@ -506,11 +506,11 @@ export const pipothiazine: Drug = {
     },
     {
       question: "Can I stop Pipothiazine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Pipothiazine habit-forming?",
@@ -518,7 +518,7 @@ export const pipothiazine: Drug = {
     },
     {
       question: "Can I take Pipothiazine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Pipothiazine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Pipothiazine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -619,7 +619,7 @@ export const pipothiazine: Drug = {
       label: "Typical Antipsychotic",
       type: "class",
       href: "#mechanism",
-      note: "Typical (Conventional) Antipsychotic — Phenothiazine",
+      note: "Typical (Conventional) Antipsychotic. Phenothiazine",
     },
     {
       label: "Central monoaminergic systems (see mechanism)",
@@ -634,7 +634,7 @@ export const pipothiazine: Drug = {
       note: "Primary molecular target",
     },
     {
-      label: "Schizophrenia — maintenance via depot",
+      label: "Schizophrenia: maintenance via depot",
       type: "condition",
       href: "#clinical-uses",
       note: "Used clinically",
@@ -658,7 +658,7 @@ export const pipothiazine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Pipothiazine",
+      label: "Patient Guide. Pipothiazine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -667,12 +667,12 @@ export const pipothiazine: Drug = {
   /* ---- Patient mode ---- */
   patientMode: {
     tagline: "The European/Indian phenothiazine with a 4-weekly palmitate depot.",
-    summary: "Pipothiazine is a prescription medicine used to treat schizophrenia — maintenance via depot. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    summary: "Pipothiazine is a prescription medicine used to treat schizophrenia: maintenance via depot. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Pipothiazine is an older antipsychotic given as a monthly injection, mainly seen in patients who have taken it successfully for many years.",
-    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
   },
   sectionDifficulty: {
     mechanism: "mbbs",
@@ -714,7 +714,7 @@ export const pipothiazine: Drug = {
         name: "Haloperidol",
         slug: "haloperidol",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool",
       },
       {
         name: "Fluphenazine",
@@ -738,7 +738,7 @@ export const pipothiazine: Drug = {
         name: "Thioridazine",
         slug: "thioridazine",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "The restricted QT-retinopathy phenothiazine — last-line",
+        distinguishing: "The restricted QT-retinopathy phenothiazine: last-line",
       },
       {
         name: "Trifluoperazine",
@@ -898,17 +898,17 @@ export const pipothiazine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Pipothiazine in two sentences.",
-      answer: "Moderate-potency piperazine phenothiazine D2 antagonist with a 4-weekly palmitate depot. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — moderate potency: moderate doses, dose-dependent EPS, mild anticholinergic texture.",
+      answer: "Moderate-potency piperazine phenothiazine D2 antagonist with a 4-weekly palmitate depot. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways; moderate potency: moderate doses, dose-dependent EPS, mild anticholinergic texture.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Pipothiazine.",
-      answer: "Schizophrenia — maintenance via depot. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Schizophrenia: maintenance via depot. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Pipothiazine and how you would manage it.",
-      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
+      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness; the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
       topic: "Safety",
     },
     {
@@ -918,7 +918,7 @@ export const pipothiazine: Drug = {
     },
     {
       question: "Share one clinical pearl about Pipothiazine that separates safe prescribers from unsafe ones.",
-      answer: "Encounter it in legacy patients: an older adult stable on 4-weekly pipothiazine for years — the art is deciding whether to switch at all.",
+      answer: "Encounter it in legacy patients: an older adult stable on 4-weekly pipothiazine for years; the art is deciding whether to switch at all.",
       topic: "Clinical Pearls",
     },
   ],
@@ -994,7 +994,7 @@ export const pipothiazine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1039,7 +1039,7 @@ export const pipothiazine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Pipothiazine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Pipothiazine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1055,7 +1055,7 @@ export const pipothiazine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Pipothiazine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Pipothiazine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1100,7 +1100,7 @@ export const pipothiazine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Pipothiazine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Pipothiazine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1110,7 +1110,7 @@ export const pipothiazine: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Low — weight gain not expected.",
+    weightGain: "Low: weight gain not expected.",
     sedation: "Mild.",
     dosing: [
       {
@@ -1126,7 +1126,7 @@ export const pipothiazine: Drug = {
       "In stable legacy patients, 'if it works, don't break it' is a legitimate plan with review dates.",
     ],
     overdose: [
-      "Overdose with Pipothiazine is managed supportively — no specific antidote.",
+      "Overdose with Pipothiazine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Pipothiazine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1167,14 +1167,14 @@ export const pipothiazine: Drug = {
     ],
     primaryTargetSymptoms: ["Maintenance of schizophrenia"],
     pearls: [
-      "Encounter it in legacy patients: an older adult stable on 4-weekly pipothiazine for years — the art is deciding whether to switch at all.",
+      "Encounter it in legacy patients: an older adult stable on 4-weekly pipothiazine for years; the art is deciding whether to switch at all.",
       "Palmitate ester = 4-weekly depot (compare: decanoate esters vary by drug).",
-      "Typical antipsychotics all share one mechanism — D2 blockade — so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
+      "Typical antipsychotics all share one mechanism (D2 blockade) so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

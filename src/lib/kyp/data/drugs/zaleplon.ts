@@ -23,14 +23,14 @@ export const zaleplon: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Sleep Medicines", "Non-Benzodiazepine Hypnotics", "Zaleplon"],
   /* ---- Hero / summary ---- */
-  tagline: "The ultrashort Z-drug — a middle-of-the-night option that clears before morning.",
-  summary: "Zaleplon is the shortest-acting Z-drug (half-life ~1 hour): a pyrazolopyrimidine used for sleep onset and — its unique niche — middle-of-the-night dosing, because levels are near-zero 4–5 hours later. No active metabolite, minimal morning residue, and the class-standard boxed warnings complete the profile.",
+  tagline: "The ultrashort Z-drug: a middle-of-the-night option that clears before morning.",
+  summary: "Zaleplon is the shortest-acting Z-drug (half-life ~1 hour): a pyrazolopyrimidine used for sleep onset and (its unique niche) middle-of-the-night dosing, because levels are near-zero 4–5 hours later. No active metabolite, minimal morning residue, and the class-standard boxed warnings complete the profile.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Zaleplon — from its molecular target (GABA-A alpha-1 receptors (selective PAM) — pyrazolopyrimidine class) to clinical effect.",
+    "Explain the mechanism of action of Zaleplon (from its molecular target (GABA-A alpha-1 receptors (selective PAM)) pyrazolopyrimidine class) to clinical effect.",
     "List the FDA-approved and off-label uses of Zaleplon.",
     "Predict the common and serious side effects of Zaleplon from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Zaleplon.",
@@ -38,15 +38,15 @@ export const zaleplon: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Non-benzodiazepine pyrazolopyrimidine alpha-1-selective GABA-A PAM — the Z-class mechanism at the shortest duration.",
-    molecularTarget: "GABA-A alpha-1 receptors (selective PAM) — pyrazolopyrimidine class",
+    summary: "Non-benzodiazepine pyrazolopyrimidine alpha-1-selective GABA-A PAM: the Z-class mechanism at the shortest duration.",
+    molecularTarget: "GABA-A alpha-1 receptors (selective PAM): pyrazolopyrimidine class",
     effect: "Sleep promotion via the described target.",
     steps: [
-      "Zaleplon is the shortest-acting Z-drug (half-life ~1 hour): a pyrazolopyrimidine used for sleep onset and — its unique niche — middle-of-the-night dosing, because levels are near-zero 4–5 hours later — the mechanism in one line.",
+      "Zaleplon is the shortest-acting Z-drug (half-life ~1 hour): a pyrazolopyrimidine used for sleep onset and (its unique niche) middle-of-the-night dosing, because levels are near-zero 4–5 hours later; the mechanism in one line.",
       "Binding at the described target produces the sleep-promoting effect.",
       "Duration of action follows the half-life: onset agents clear before morning; longer agents add maintenance cover.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 1 hour. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 1 hour. See mechanism and prescriber sections.",
     halfLife: "About 1 hour.",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
@@ -104,7 +104,7 @@ export const zaleplon: Drug = {
     "Central monoaminergic systems (see mechanism)",
   ],
   receptors: [
-    "GABA-A alpha-1 receptors (selective PAM) — pyrazolopyrimidine class",
+    "GABA-A alpha-1 receptors (selective PAM): pyrazolopyrimidine class",
   ],
   brainRegionIds: ["prefrontal-cortex"],
   pathwayIds: [],
@@ -131,7 +131,7 @@ export const zaleplon: Drug = {
   blackBoxWarnings: [
     {
       title: "Complex sleep behaviours",
-      text: "Class warning — stop on any event.",
+      text: "Class warning: stop on any event.",
     },
     {
       title: "CNS depressant co-administration",
@@ -144,7 +144,7 @@ export const zaleplon: Drug = {
       name: "Somnolence and dizziness",
       frequency: "common",
       severity: "mild",
-      description: "Brief — matching the 1-hour half-life.",
+      description: "Brief: matching the 1-hour half-life.",
       management: "Reassurance.",
     },
     {
@@ -194,7 +194,7 @@ export const zaleplon: Drug = {
     {
       parameter: "Complex sleep behaviours",
       frequency: "Ask at every review",
-      rationale: "Sleep-walking/driving/eating — stop the drug if reported.",
+      rationale: "Sleep-walking/driving/eating: stop the drug if reported.",
     },
   ],
   interactions: [
@@ -218,51 +218,51 @@ export const zaleplon: Drug = {
     },
   ],
   pregnancy: {
-    summary: "Data in human pregnancy are limited. The decision to continue or stop balances the risk of untreated illness against possible drug exposure — for serious psychiatric illness, relapse prevention usually outweighs fetal risk. Involve obstetrics early and never stop abruptly without a plan.",
-    lactation: "Small amounts may pass into breast milk. Decisions are individualised — monitor the infant for sedation and poor feeding, and discuss with your doctor.",
+    summary: "Data in human pregnancy are limited. The decision to continue or stop balances the risk of untreated illness against possible drug exposure, for serious psychiatric illness, relapse prevention usually outweighs fetal risk. Involve obstetrics early and never stop abruptly without a plan.",
+    lactation: "Small amounts may pass into breast milk. Decisions are individualised. Monitor the infant for sedation and poor feeding, and discuss with your doctor.",
   },
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
-  patientExplanation: "Zaleplon is an ultra-short sleeping tablet: it helps you fall asleep again and is essentially gone from the body within about four hours — which makes it the one medicine of its kind that can occasionally be taken in the middle of the night without morning grogginess, provided at least four hours remain before you must drive.",
+  patientExplanation: "Zaleplon is an ultra-short sleeping tablet: it helps you fall asleep again and is essentially gone from the body within about four hours, which makes it the one medicine of its kind that can occasionally be taken in the middle of the night without morning grogginess, provided at least four hours remain before you must drive.",
   patientEducationPoints: [
     "Take it only when you can spend a full 7–8 hours in bed.",
     "Do not drive the next morning if you still feel drowsy.",
     "Stop and call your doctor if you sleep-walk, sleep-drive, or eat while asleep.",
-    "Keep the course short — these medicines are for intermittent or short-term use.",
-    "Benefit from Zaleplon builds over weeks — do not judge it in the first days.",
+    "Keep the course short: these medicines are for intermittent or short-term use.",
+    "Benefit from Zaleplon builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The 4-hour rule: zaleplon at 3 am is cleared by 7 — the only hypnotic with a defensible middle-of-the-night label-adjacent niche.",
+    "The 4-hour rule: zaleplon at 3 am is cleared by 7; the only hypnotic with a defensible middle-of-the-night label-adjacent niche.",
     "Ultrashort = no maintenance cover: pure onset drug (or MOTN drug).",
-    "No active metabolite — the cleanest morning of the class.",
+    "No active metabolite: the cleanest morning of the class.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Zaleplon: Non-benzodiazepine pyrazolopyrimidine alpha-1-selective GABA-A PAM — the Z-class mechanism at the shortest duration.",
-        "Uses of Zaleplon: Insomnia — sleep onset; Middle-of-the-night awakening (4+ h before wake time)",
-        "Pyrazolopyrimidine Z-drug; half-life ~1 HOUR — the shortest.",
+        "Mechanism of Zaleplon: Non-benzodiazepine pyrazolopyrimidine alpha-1-selective GABA-A PAM; the Z-class mechanism at the shortest duration.",
+        "Uses of Zaleplon: Insomnia; sleep onset; Middle-of-the-night awakening (4+ h before wake time)",
+        "Pyrazolopyrimidine Z-drug; half-life ~1 HOUR: the shortest.",
         "Niche: middle-of-the-night dosing (≥ 4 h before wake/drive).",
       ],
       practical: [
-        "Prescribe Zaleplon for insomnia — sleep onset with dose, timing, and duration.",
+        "Prescribe Zaleplon for insomnia: sleep onset with dose, timing, and duration.",
         "Outline the monitoring plan: Morning impairment / hangover (Every review); Complex sleep behaviours (Ask at every review)",
       ],
       longAnswer: [
-        "Zaleplon: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Pyrazolopyrimidine Z-drug; half-life ~1 HOUR — the shortest.",
+        "Zaleplon: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Pyrazolopyrimidine Z-drug; half-life ~1 HOUR: the shortest.",
         "Niche: middle-of-the-night dosing (≥ 4 h before wake/drive).",
       ],
     },
     neetPg: {
       highYield: [
-        "Pyrazolopyrimidine Z-drug; half-life ~1 HOUR — the shortest.",
+        "Pyrazolopyrimidine Z-drug; half-life ~1 HOUR: the shortest.",
         "Niche: middle-of-the-night dosing (≥ 4 h before wake/drive).",
         "No active metabolite; minimal morning residue.",
         "Dose 5–20 mg (5 mg elderly).",
-        "Z-drugs: GABA-A alpha-1-selective PAMs — hypnotic without full benzodiazepine breadth.",
+        "Z-drugs: GABA-A alpha-1-selective PAMs; hypnotic without full benzodiazepine breadth.",
       ],
       pyqConcepts: [
         "Mechanism/target of Zaleplon",
@@ -272,46 +272,46 @@ export const zaleplon: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Zaleplon develops complex sleep behaviours — next best step?",
+        "A patient on Zaleplon develops complex sleep behaviours: next best step?",
         "When to choose Zaleplon over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: GABA-A alpha-1 receptors (selective PAM) — pyrazolopyrimidine class",
+        "Primary target: GABA-A alpha-1 receptors (selective PAM); pyrazolopyrimidine class",
         "Most common side effects: Somnolence and dizziness, Headache, Rebound insomnia",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The 4-hour rule: zaleplon at 3 am is cleared by 7 — the only hypnotic with a defensible middle-of-the-night label-adjacent niche.",
+        "The 4-hour rule: zaleplon at 3 am is cleared by 7; the only hypnotic with a defensible middle-of-the-night label-adjacent niche.",
         "Ultrashort = no maintenance cover: pure onset drug (or MOTN drug).",
-        "No active metabolite — the cleanest morning of the class.",
+        "No active metabolite: the cleanest morning of the class.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Pyrazolopyrimidine Z-drug; half-life ~1 HOUR — the shortest.",
+    "Pyrazolopyrimidine Z-drug; half-life ~1 HOUR: the shortest.",
     "Niche: middle-of-the-night dosing (≥ 4 h before wake/drive).",
     "No active metabolite; minimal morning residue.",
     "Dose 5–20 mg (5 mg elderly).",
-    "Z-drugs: GABA-A alpha-1-selective PAMs — hypnotic without full benzodiazepine breadth.",
+    "Z-drugs: GABA-A alpha-1-selective PAMs; hypnotic without full benzodiazepine breadth.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — insomnia — sleep onset",
-      presentation: "A patient presenting with insomnia — sleep onset, started on Zaleplon.",
-      history: "A adult patient presents with a insomnia — sleep onset picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with insomnia — sleep onset; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Insomnia — sleep onset. Differentials are considered and excluded clinically.",
+      title: "First presentation: insomnia; sleep onset",
+      presentation: "A patient presenting with insomnia: sleep onset, started on Zaleplon.",
+      history: "A adult patient presents with a insomnia: sleep onset picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with insomnia: sleep onset; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Insomnia: sleep onset. Differentials are considered and excluded clinically.",
       rationale: "Zaleplon is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Z-Drug) with strong evidence in this condition.",
       management: "Started at 5–10 mg at bedtime (5 mg elderly/hepatic), titrated to 5–20 mg with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Zaleplon takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Zaleplon takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -320,12 +320,12 @@ export const zaleplon: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Z-Drug comparison — choosing within the class",
+      title: "Z-Drug comparison: choosing within the class",
       primaryDrug: "Zaleplon",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "GABA-A alpha-1 receptors (selective PAM) — pyrazolopyrimidine class",
+          primaryValue: "GABA-A alpha-1 receptors (selective PAM): pyrazolopyrimidine class",
           comparisons: [
             {
               drug: "Zolpidem",
@@ -397,7 +397,7 @@ export const zaleplon: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "Middle-of-the-night dosing — cleared before morning",
+          primaryValue: "Middle-of-the-night dosing: cleared before morning",
           comparisons: [
             {
               drug: "Zolpidem",
@@ -414,7 +414,7 @@ export const zaleplon: Drug = {
           ],
         },
       ],
-      takeaway: "All non-benzodiazepine hypnotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All non-benzodiazepine hypnotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -423,7 +423,7 @@ export const zaleplon: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Zaleplon reaches peak plasma concentration and begins acting at its molecular target (GABA-A alpha-1 receptors (selective PAM) — pyrazolopyrimidine class). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Zaleplon reaches peak plasma concentration and begins acting at its molecular target (GABA-A alpha-1 receptors (selective PAM), pyrazolopyrimidine class). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -459,7 +459,7 @@ export const zaleplon: Drug = {
   faqs: [
     {
       question: "How long does Zaleplon take to work?",
-      answer: "15–30 minutes.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "15–30 minutes.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Zaleplon?",
@@ -467,19 +467,19 @@ export const zaleplon: Drug = {
     },
     {
       question: "Can I stop Zaleplon suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Zaleplon habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Zaleplon exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Zaleplon exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Zaleplon during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Zaleplon may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Zaleplon may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -575,13 +575,13 @@ export const zaleplon: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "GABA-A alpha-1 receptors (selective PAM) — pyrazolopyrimidine class",
+      label: "GABA-A alpha-1 receptors (selective PAM): pyrazolopyrimidine class",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
     },
     {
-      label: "Insomnia — sleep onset",
+      label: "Insomnia: sleep onset",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -611,7 +611,7 @@ export const zaleplon: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Zaleplon",
+      label: "Patient Guide. Zaleplon",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -619,13 +619,13 @@ export const zaleplon: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The ultrashort Z-drug — a middle-of-the-night option that clears before morning.",
-    summary: "Zaleplon is a prescription medicine used to treat insomnia — sleep onset. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Zaleplon is an ultra-short sleeping tablet: it helps you fall asleep again and is essentially gone from the body within about four hours — which makes it the one medicine of its kind that can occasionally be taken in the middle of the night without morning grogginess, provided at least four hours remain before you must drive.",
-    sideEffects: "The most common side effects are: somnolence and dizziness, headache, rebound insomnia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Complex sleep behaviours and Driving impairment after middle-of-night dosing. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: morning impairment / hangover (every review); complex sleep behaviours (ask at every review). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The ultrashort Z-drug: a middle-of-the-night option that clears before morning.",
+    summary: "Zaleplon is a prescription medicine used to treat insomnia: sleep onset. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Zaleplon is an ultra-short sleeping tablet: it helps you fall asleep again and is essentially gone from the body within about four hours, which makes it the one medicine of its kind that can occasionally be taken in the middle of the night without morning grogginess, provided at least four hours remain before you must drive.",
+    sideEffects: "The most common side effects are: somnolence and dizziness, headache, rebound insomnia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Complex sleep behaviours and Driving impairment after middle-of-night dosing. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: morning impairment / hangover (every review); complex sleep behaviours (ask at every review). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: other medicines that act on the brain. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: other medicines that act on the brain. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -647,7 +647,7 @@ export const zaleplon: Drug = {
     },
     costCategory: "moderate",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["The 4-hour rule before driving."],
   },
   sectionDifficulty: {
@@ -681,13 +681,13 @@ export const zaleplon: Drug = {
         name: "Zaleplon",
         slug: "zaleplon",
         relationship: "This guide",
-        distinguishing: "Middle-of-the-night dosing — cleared before morning",
+        distinguishing: "Middle-of-the-night dosing: cleared before morning",
       },
       {
         name: "Zolpidem",
         slug: "zolpidem",
         relationship: "Same class (Z-Drug)",
-        distinguishing: "Sleep onset in a non-benzodiazepine molecule — the default Z-drug",
+        distinguishing: "Sleep onset in a non-benzodiazepine molecule: the default Z-drug",
       },
       {
         name: "Eszopiclone",
@@ -699,7 +699,7 @@ export const zaleplon: Drug = {
         name: "Zopiclone",
         slug: "zopiclone",
         relationship: "Same class (Z-Drug)",
-        distinguishing: "The Commonwealth Z-drug — 5-hour cover with taste signature",
+        distinguishing: "The Commonwealth Z-drug: 5-hour cover with taste signature",
       },
     ],
   },
@@ -847,12 +847,12 @@ export const zaleplon: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Zaleplon in two sentences.",
-      answer: "Non-benzodiazepine pyrazolopyrimidine alpha-1-selective GABA-A PAM — the Z-class mechanism at the shortest duration. Net effect: Sleep promotion via the described target.",
+      answer: "Non-benzodiazepine pyrazolopyrimidine alpha-1-selective GABA-A PAM: the Z-class mechanism at the shortest duration. Net effect: Sleep promotion via the described target.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Zaleplon.",
-      answer: "Insomnia — sleep onset, Middle-of-the-night awakening (4+ h before wake time). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Insomnia: sleep onset, Middle-of-the-night awakening (4+ h before wake time). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -867,7 +867,7 @@ export const zaleplon: Drug = {
     },
     {
       question: "Share one clinical pearl about Zaleplon that separates safe prescribers from unsafe ones.",
-      answer: "The 4-hour rule: zaleplon at 3 am is cleared by 7 — the only hypnotic with a defensible middle-of-the-night label-adjacent niche.",
+      answer: "The 4-hour rule: zaleplon at 3 am is cleared by 7; the only hypnotic with a defensible middle-of-the-night label-adjacent niche.",
       topic: "Clinical Pearls",
     },
   ],
@@ -943,7 +943,7 @@ export const zaleplon: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -988,7 +988,7 @@ export const zaleplon: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Zaleplon works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Zaleplon works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1004,7 +1004,7 @@ export const zaleplon: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Zaleplon safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Zaleplon safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1047,7 +1047,7 @@ export const zaleplon: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Zaleplon follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Zaleplon follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1071,14 +1071,14 @@ export const zaleplon: Drug = {
     dosageForms: ["Capsules 5, 10 mg"],
     dosingTips: [
       "Reserve for onset-only insomnia or MOTN awakening with the 4-hour rule.",
-      "No maintenance cover — pair with sleep-hygiene work.",
+      "No maintenance cover: pair with sleep-hygiene work.",
     ],
     overdose: [
-      "Overdose with Zaleplon is managed supportively — no specific antidote.",
+      "Overdose with Zaleplon is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Zaleplon is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1108,14 +1108,14 @@ export const zaleplon: Drug = {
     potentialDisadvantages: ["No sleep-maintenance benefit.", "Availability shrinking in many markets.", "Class boxed warnings."],
     primaryTargetSymptoms: ["Sleep-onset insomnia", "Middle-of-the-night awakening"],
     pearls: [
-      "The 4-hour rule: zaleplon at 3 am is cleared by 7 — the only hypnotic with a defensible middle-of-the-night label-adjacent niche.",
+      "The 4-hour rule: zaleplon at 3 am is cleared by 7; the only hypnotic with a defensible middle-of-the-night label-adjacent niche.",
       "Ultrashort = no maintenance cover: pure onset drug (or MOTN drug).",
-      "No active metabolite — the cleanest morning of the class.",
+      "No active metabolite: the cleanest morning of the class.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

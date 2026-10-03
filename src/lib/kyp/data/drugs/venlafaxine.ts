@@ -35,21 +35,21 @@ export const venlafaxine: Drug = {
 
   /* ---- Hero / summary ---- */
   tagline:
-    "An SNRI with a signature dose-dependent mechanism — pure serotonergic at low dose, dual SERT + NET blockade at moderate dose, weak DAT effect at high dose — and the worst discontinuation syndrome of any antidepressant.",
+    "An SNRI with a signature dose-dependent mechanism (pure serotonergic at low dose, dual SERT + NET blockade at moderate dose, weak DAT effect at high dose) and the worst discontinuation syndrome of any antidepressant.",
   summary:
-    "Venlafaxine is a serotonin–norepinephrine reuptake inhibitor (SNRI) that blocks both the serotonin transporter (SERT) and the norepinephrine transporter (NET). Its pharmacology is uniquely dose-dependent: at 75–150 mg/day it behaves essentially as an SSRI (predominant SERT blockade), at 150–225 mg/day it becomes a true dual SNRI (SERT + NET), and above ~300 mg/day it adds weak dopamine transporter (DAT) inhibition. This dose-dependency is the single most testable fact about the drug. Venlafaxine is FDA-approved for four indications — major depressive disorder, generalised anxiety disorder, social anxiety disorder, and panic disorder — a broader anxiety approval than most SSRIs. Two signature safety issues distinguish it from SSRIs: (1) dose-dependent hypertension (sustained BP elevation occurs in 10–15% of patients at >300 mg/day), and (2) the most severe discontinuation syndrome of any antidepressant, driven by the short parent half-life (~5 hours) and dual-mechanism withdrawal — symptoms can begin within hours of a missed dose. The active metabolite O-desmethylvenlafaxine (ODV) is pharmacologically equivalent to the parent and is marketed separately as desvenlafaxine (Pristiq).",
+    "Venlafaxine is a serotonin–norepinephrine reuptake inhibitor (SNRI) that blocks both the serotonin transporter (SERT) and the norepinephrine transporter (NET). Its pharmacology is uniquely dose-dependent: at 75–150 mg/day it behaves essentially as an SSRI (predominant SERT blockade), at 150–225 mg/day it becomes a true dual SNRI (SERT + NET), and above ~300 mg/day it adds weak dopamine transporter (DAT) inhibition. This dose-dependency is the single most testable fact about the drug. Venlafaxine is FDA-approved for four indications (major depressive disorder, generalised anxiety disorder, social anxiety disorder, and panic disorder) a broader anxiety approval than most SSRIs. Two signature safety issues distinguish it from SSRIs: (1) dose-dependent hypertension (sustained BP elevation occurs in 10–15% of patients at >300 mg/day), and (2) the most severe discontinuation syndrome of any antidepressant, driven by the short parent half-life (~5 hours) and dual-mechanism withdrawal; symptoms can begin within hours of a missed dose. The active metabolite O-desmethylvenlafaxine (ODV) is pharmacologically equivalent to the parent and is marketed separately as desvenlafaxine (Pristiq).",
   estimatedReadTime: "19 min read",
   yieldRating: "high",
   primaryAudience: "medical",
 
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain venlafaxine's dose-dependent mechanism — how SERT blockade at low dose, dual SERT + NET blockade at moderate dose, and weak DAT effect at high dose translate into different clinical profiles.",
+    "Explain venlafaxine's dose-dependent mechanism: how SERT blockade at low dose, dual SERT + NET blockade at moderate dose, and weak DAT effect at high dose translate into different clinical profiles.",
     "Predict the dose-dependent blood-pressure effect of venlafaxine and design an appropriate BP monitoring schedule (baseline, 2 weeks, 4 weeks, every dose change).",
-    "Recognise and manage venlafaxine's discontinuation syndrome — the most severe of any antidepressant — including why missed doses can cause withdrawal within hours and how to taper safely (often bridging with fluoxetine).",
-    "Differentiate venlafaxine from SSRIs (sertraline, fluoxetine, escitalopram, paroxetine) and from the closely related SNRI duloxetine — and select the right agent when an SSRI has failed or when depression is comorbid with neuropathic pain.",
+    "Recognise and manage venlafaxine's discontinuation syndrome (the most severe of any antidepressant) including why missed doses can cause withdrawal within hours and how to taper safely (often bridging with fluoxetine).",
+    "Differentiate venlafaxine from SSRIs (sertraline, fluoxetine, escitalopram, paroxetine) and from the closely related SNRI duloxetine, and select the right agent when an SSRI has failed or when depression is comorbid with neuropathic pain.",
     "Identify the four FDA-approved indications (MDD, GAD, Social Anxiety Disorder, Panic Disorder) and key off-label uses (neuropathic pain, hot flushes, fibromyalgia, cataplexy).",
-    "Counsel a patient on the unique safety profile — BP monitoring, never missing a dose, never stopping abruptly, and recognising early withdrawal — and explain the relationship to desvenlafaxine (Pristiq).",
+    "Counsel a patient on the unique safety profile (BP monitoring, never missing a dose, never stopping abruptly, and recognising early withdrawal) and explain the relationship to desvenlafaxine (Pristiq).",
   ],
 
   /* ---- Mechanism ---- */
@@ -57,46 +57,46 @@ export const venlafaxine: Drug = {
     summary:
       "Venlafaxine blocks both SERT and NET, with a dose-dependent ratio: SERT is inhibited at low doses, NET blockade becomes clinically meaningful only at moderate–high doses, and weak DAT inhibition appears above ~300 mg/day.",
     molecularTarget:
-      "SERT (SLC6A4 — serotonin transporter) and NET (SLC6A2 — norepinephrine transporter); weak DAT (SLC6A3) inhibition at high doses.",
+      "SERT (SLC6A4 (serotonin transporter) and NET (SLC6A2) norepinephrine transporter); weak DAT (SLC6A3) inhibition at high doses.",
     effect:
-      "Acute: increased synaptic serotonin (at all doses) plus increased synaptic norepinephrine (above ~150 mg/day). Chronic (2–6 weeks): desensitisation of 5-HT1A somatodendritic autoreceptors in the raphe nuclei, downregulation of α2-adrenergic autoreceptors in the locus coeruleus, increased cortico-limbic throughput, and upregulation of BDNF in the hippocampus. The noradrenergic component adds benefit in lethargic/anergic depression, neuropathic pain, and attention — but is also responsible for sweating, insomnia, BP elevation, and a more severe withdrawal syndrome.",
+      "Acute: increased synaptic serotonin (at all doses) plus increased synaptic norepinephrine (above ~150 mg/day). Chronic (2–6 weeks): desensitisation of 5-HT1A somatodendritic autoreceptors in the raphe nuclei, downregulation of α2-adrenergic autoreceptors in the locus coeruleus, increased cortico-limbic throughput, and upregulation of BDNF in the hippocampus. The noradrenergic component adds benefit in lethargic/anergic depression, neuropathic pain, and attention, but is also responsible for sweating, insomnia, BP elevation, and a more severe withdrawal syndrome.",
     steps: [
-      "Venlafaxine binds the serotonin transporter (SERT) on the presynaptic neuron, blocking reuptake of serotonin from the synaptic cleft. SERT affinity is high — even at 75 mg/day this effect is near-maximal.",
-      "Acute SERT blockade raises synaptic serotonin within hours — but 5-HT1A autoreceptors in the raphe nuclei detect this and brake further serotonin release.",
+      "Venlafaxine binds the serotonin transporter (SERT) on the presynaptic neuron, blocking reuptake of serotonin from the synaptic cleft. SERT affinity is high, even at 75 mg/day this effect is near-maximal.",
+      "Acute SERT blockade raises synaptic serotonin within hours, but 5-HT1A autoreceptors in the raphe nuclei detect this and brake further serotonin release.",
       "At doses up to ~150 mg/day, NET blockade is clinically negligible. The drug behaves pharmacodynamically as an SSRI.",
       "As the dose climbs above 150 mg/day, venlafaxine's lower NET affinity becomes clinically relevant: NET on presynaptic noradrenergic neurons (locus coeruleus and periphery) is blocked, raising synaptic norepinephrine.",
-      "Above ~300 mg/day, weak dopamine transporter (DAT) inhibition adds a modest dopaminergic effect — sometimes useful in treatment-resistant depression but also raising seizure risk.",
-      "Increased noradrenergic tone drives therapeutic benefits in anergic depression, attention, and descending inhibition of pain — but also drives the signature adverse effects: sweating, insomnia, and dose-dependent hypertension (peripheral NET blockade raises NE at sympathetic synapses → vasoconstriction → ↑ BP).",
-      "Over 2–6 weeks, downstream neuroadaptive changes occur: 5-HT1A autoreceptor desensitisation, α2-adrenoceptor downregulation, increased BDNF expression, and hippocampal neurogenesis. These delayed adaptations — not the acute monoamine rise — correlate with the onset of clinical antidepressant effect.",
+      "Above ~300 mg/day, weak dopamine transporter (DAT) inhibition adds a modest dopaminergic effect: sometimes useful in treatment-resistant depression but also raising seizure risk.",
+      "Increased noradrenergic tone drives therapeutic benefits in anergic depression, attention, and descending inhibition of pain, but also drives the signature adverse effects: sweating, insomnia, and dose-dependent hypertension (peripheral NET blockade raises NE at sympathetic synapses → vasoconstriction → ↑ BP).",
+      "Over 2–6 weeks, downstream neuroadaptive changes occur: 5-HT1A autoreceptor desensitisation, α2-adrenoceptor downregulation, increased BDNF expression, and hippocampal neurogenesis. These delayed adaptations (not the acute monoamine rise) correlate with the onset of clinical antidepressant effect.",
     ],
     pharmacokinetics:
-      "Well absorbed orally (bioavailability ~45% due to first-pass metabolism). Peak plasma at 2–3 hours (IR) or 5.5–7.5 hours (XR). Food does not significantly affect absorption. Modest protein binding (~27%). Volume of distribution ~7.5 L/kg — distributes widely including into CNS. The XR formulation is preferred for tolerability (lower peak-related nausea) and for once-daily dosing.",
+      "Well absorbed orally (bioavailability ~45% due to first-pass metabolism). Peak plasma at 2–3 hours (IR) or 5.5–7.5 hours (XR). Food does not significantly affect absorption. Modest protein binding (~27%). Volume of distribution ~7.5 L/kg: distributes widely including into CNS. The XR formulation is preferred for tolerability (lower peak-related nausea) and for once-daily dosing.",
     halfLife:
-      "Venlafaxine: ~5 hours (parent). O-desmethylvenlafaxine (ODV, active metabolite): ~11 hours. Combined effective half-life ~8–10 hours — short enough that missed doses cause withdrawal within hours, but long enough that steady state is reached in ~3 days.",
+      "Venlafaxine: ~5 hours (parent). O-desmethylvenlafaxine (ODV, active metabolite): ~11 hours. Combined effective half-life ~8–10 hours: short enough that missed doses cause withdrawal within hours, but long enough that steady state is reached in ~3 days.",
     activeMetabolite:
-      "O-desmethylvenlafaxine (ODV) — pharmacologically equivalent to the parent drug (same SERT/NET affinity). Created by CYP2D6 O-demethylation. ODV is itself marketed separately as desvenlafaxine (Pristiq) — essentially the same molecule with cleaner pharmacokinetics (less CYP2D6 dependence, lower inter-patient variability).",
+      "O-desmethylvenlafaxine (ODV): pharmacologically equivalent to the parent drug (same SERT/NET affinity). Created by CYP2D6 O-demethylation. ODV is itself marketed separately as desvenlafaxine (Pristiq): essentially the same molecule with cleaner pharmacokinetics (less CYP2D6 dependence, lower inter-patient variability).",
     metabolism:
-      "Hepatic CYP2D6 (primary — O-demethylation to ODV). Minor contributions from CYP2C19, CYP3A4, and CYP2B6. CYP2D6 poor metabolisers have higher parent venlafaxine and lower ODV levels — total pharmacodynamic exposure is roughly preserved (parent and metabolite are equipotent), but tolerability may be worse due to higher peak parent concentrations.",
+      "Hepatic CYP2D6 (primary. O-demethylation to ODV). Minor contributions from CYP2C19, CYP3A4, and CYP2B6. CYP2D6 poor metabolisers have higher parent venlafaxine and lower ODV levels: total pharmacodynamic exposure is roughly preserved (parent and metabolite are equipotent), but tolerability may be worse due to higher peak parent concentrations.",
     excretion:
-      "Primarily renal (~87% — 5% as unchanged venlafaxine, 29% as unchanged ODV, 53% as conjugated metabolites). Renal impairment significantly prolongs elimination — dose reduction required.",
+      "Primarily renal (~87%, 5% as unchanged venlafaxine, 29% as unchanged ODV, 53% as conjugated metabolites). Renal impairment significantly prolongs elimination: dose reduction required.",
   },
 
   /* ---- Mechanism visual flow ---- */
   mechanismFlow: {
     nodes: [
-      { id: "presynaptic-sero", label: "Presynaptic serotonergic neuron", sublabel: "Raphe nuclei — synthesises serotonin", variant: "input" },
+      { id: "presynaptic-sero", label: "Presynaptic serotonergic neuron", sublabel: "Raphe nuclei: synthesises serotonin", variant: "input" },
       { id: "serotonin", label: "Serotonin (5-HT)", sublabel: "Released into synaptic cleft", variant: "process" },
       { id: "sert", label: "SERT transporter", sublabel: "Normally reuptakes serotonin", variant: "target" },
-      { id: "presynaptic-ne", label: "Presynaptic noradrenergic neuron", sublabel: "Locus coeruleus — synthesises norepinephrine", variant: "input" },
+      { id: "presynaptic-ne", label: "Presynaptic noradrenergic neuron", sublabel: "Locus coeruleus: synthesises norepinephrine", variant: "input" },
       { id: "norepinephrine", label: "Norepinephrine (NE)", sublabel: "Released into synaptic cleft", variant: "process" },
       { id: "net", label: "NET transporter", sublabel: "Normally reuptakes norepinephrine", variant: "target" },
       { id: "venlafaxine", label: "Venlafaxine", sublabel: "Dose-dependent dual reuptake inhibitor", variant: "inhibit" },
       { id: "low-dose", label: "Low dose (75–150 mg/day)", sublabel: "Predominantly SERT blockade → 'SSRI-like'", variant: "process" },
       { id: "mod-dose", label: "Moderate dose (150–225 mg/day)", sublabel: "SERT + NET blockade → true SNRI effect", variant: "process" },
       { id: "high-dose", label: "High dose (>300 mg/day)", sublabel: "SERT + NET + weak DAT → mild dopaminergic", variant: "process" },
-      { id: "bp-elevation", label: "↑ Blood pressure (dose-dependent)", sublabel: "Peripheral NE → vasoconstriction — signature risk", variant: "output" },
+      { id: "bp-elevation", label: "↑ Blood pressure (dose-dependent)", sublabel: "Peripheral NE → vasoconstriction: signature risk", variant: "output" },
       { id: "pfc", label: "Prefrontal cortex", sublabel: "Mood + attention improve (5-HT + NE)", variant: "output" },
-      { id: "pain-pathway", label: "Descending pain pathways", sublabel: "NE-mediated analgesia — useful in neuropathic pain", variant: "output" },
+      { id: "pain-pathway", label: "Descending pain pathways", sublabel: "NE-mediated analgesia: useful in neuropathic pain", variant: "output" },
     ],
     edges: [
       { from: "presynaptic-sero", to: "serotonin", label: "releases" },
@@ -117,16 +117,16 @@ export const venlafaxine: Drug = {
       { from: "net", to: "pain-pathway", label: "descending inhibition" },
     ],
     caption:
-      "The dose-dependent ratio of SERT:NET:DAT blockade is THE signature pharmacology of venlafaxine. Above ~150 mg/day the noradrenergic effect — both therapeutic (energy, attention, pain) and adverse (sweating, insomnia, hypertension) — becomes clinically important.",
+      "The dose-dependent ratio of SERT:NET:DAT blockade is THE signature pharmacology of venlafaxine. Above ~150 mg/day the noradrenergic effect (both therapeutic (energy, attention, pain) and adverse (sweating, insomnia, hypertension)) becomes clinically important.",
   },
 
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Serotonin (5-HT)", "Norepinephrine (NE)", "Dopamine (DA, weak/high-dose)"],
   receptors: [
-    "SERT (serotonin transporter) — high affinity, near-maximal at all doses",
-    "NET (norepinephrine transporter) — lower affinity, clinically relevant above ~150 mg/day",
-    "DAT (dopamine transporter) — weak, only above ~300 mg/day",
-    "5-HT1A (somatodendritic autoreceptor — desensitises over 1–2 weeks)",
+    "SERT (serotonin transporter): high affinity, near-maximal at all doses",
+    "NET (norepinephrine transporter): lower affinity, clinically relevant above ~150 mg/day",
+    "DAT (dopamine transporter): weak, only above ~300 mg/day",
+    "5-HT1A (somatodendritic autoreceptor, desensitises over 1–2 weeks)",
     "5-HT2A / 5-HT2C",
     "α2-adrenergic autoreceptor (downregulates with chronic NET blockade)",
   ],
@@ -139,7 +139,7 @@ export const venlafaxine: Drug = {
       name: "Major Depressive Disorder (MDD)",
       status: "fda-approved",
       description:
-        "First-line option in adults. Often selected after SSRI failure or when anergic/lethargic features predominate (noradrenergic benefit). Dose titration from 75 mg/day to 225 mg/day (max 375 mg/day) is the standard pathway — and is also the pathway that unlocks the dual SNRI effect.",
+        "First-line option in adults. Often selected after SSRI failure or when anergic/lethargic features predominate (noradrenergic benefit). Dose titration from 75 mg/day to 225 mg/day (max 375 mg/day) is the standard pathway, and is also the pathway that unlocks the dual SNRI effect.",
       ageGroup: "Adults",
     },
     {
@@ -153,7 +153,7 @@ export const venlafaxine: Drug = {
       name: "Social Anxiety Disorder (Social Phobia)",
       status: "fda-approved",
       description:
-        "FDA-approved in adults. Effective for both performance anxiety and generalised social anxiety. Onset slower than for depression — 8–12 weeks for full response.",
+        "FDA-approved in adults. Effective for both performance anxiety and generalised social anxiety. Onset slower than for depression: 8–12 weeks for full response.",
       ageGroup: "Adults",
     },
     {
@@ -167,13 +167,13 @@ export const venlafaxine: Drug = {
       name: "Neuropathic pain (off-label)",
       status: "off-label",
       description:
-        "Useful for diabetic peripheral neuropathy, post-herpetic neuralgia, and other neuropathic pain syndromes — the NET blockade enhances descending inhibitory pain pathways. Duloxetine is the preferred SNRI for neuropathic pain (FDA-approved), but venlafaxine is a reasonable alternative when comorbid depression/anxiety also need treatment.",
+        "Useful for diabetic peripheral neuropathy, post-herpetic neuralgia, and other neuropathic pain syndromes: the NET blockade enhances descending inhibitory pain pathways. Duloxetine is the preferred SNRI for neuropathic pain (FDA-approved), but venlafaxine is a reasonable alternative when comorbid depression/anxiety also need treatment.",
     },
     {
       name: "Vasomotor symptoms (hot flushes) — menopause and breast-cancer survivors",
       status: "off-label",
       description:
-        "Effective for menopausal hot flushes and for hot flushes induced by tamoxifen or aromatase inhibitors in breast-cancer survivors (SSRIs — especially paroxetine — can inhibit CYP2D6 and reduce tamoxifen activation; venlafaxine is a weak CYP2D6 inhibitor and is preferred in this setting). Doses of 37.5–75 mg/day are typically sufficient.",
+        "Effective for menopausal hot flushes and for hot flushes induced by tamoxifen or aromatase inhibitors in breast-cancer survivors (SSRIs (especially paroxetine) can inhibit CYP2D6 and reduce tamoxifen activation; venlafaxine is a weak CYP2D6 inhibitor and is preferred in this setting). Doses of 37.5–75 mg/day are typically sufficient.",
     },
     {
       name: "Fibromyalgia (off-label)",
@@ -185,7 +185,7 @@ export const venlafaxine: Drug = {
       name: "Cataplexy in narcolepsy / ADHD adjunct (off-label)",
       status: "off-label",
       description:
-        "Useful adjunctively for cataplexy (noradrenergic effect reduces REM-related muscle atonia). Occasionally used off-label as an adjunct in adult ADHD when stimulants are contraindicated — though not first-line.",
+        "Useful adjunctively for cataplexy (noradrenergic effect reduces REM-related muscle atonia). Occasionally used off-label as an adjunct in adult ADHD when stimulants are contraindicated, though not first-line.",
     },
   ],
 
@@ -219,7 +219,7 @@ export const venlafaxine: Drug = {
     {
       title: "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults",
       text:
-        "Antidepressants increased the risk of suicidal thinking and behaviour (suicidality) in short-term studies in children, adolescents, and young adults with Major Depressive Disorder (MDD) and other psychiatric disorders. Anyone considering the use of venlafaxine in a child, adolescent, or young adult must balance this risk with the clinical need. Patients of all ages should be monitored closely for clinical worsening, suicidality, or unusual changes in behaviour — especially during the first 1–2 months of therapy and during dose changes. Venlafaxine is not approved for use in paediatric patients.",
+        "Antidepressants increased the risk of suicidal thinking and behaviour (suicidality) in short-term studies in children, adolescents, and young adults with Major Depressive Disorder (MDD) and other psychiatric disorders. Anyone considering the use of venlafaxine in a child, adolescent, or young adult must balance this risk with the clinical need. Patients of all ages should be monitored closely for clinical worsening, suicidality, or unusual changes in behaviour, especially during the first 1–2 months of therapy and during dose changes. Venlafaxine is not approved for use in paediatric patients.",
     },
   ],
 
@@ -230,7 +230,7 @@ export const venlafaxine: Drug = {
       frequency: "very-common",
       severity: "mild",
       description:
-        "More pronounced than with SSRIs — combined serotonergic (5-HT3 in gut) and noradrenergic effects slow GI motility. Occurs in ~30–40% of patients. Dose-dependent; worst during titration. The XR formulation reduces peak-related nausea.",
+        "More pronounced than with SSRIs: combined serotonergic (5-HT3 in gut) and noradrenergic effects slow GI motility. Occurs in ~30–40% of patients. Dose-dependent; worst during titration. The XR formulation reduces peak-related nausea.",
       management: "Take with food. Use XR formulation. Start at 37.5 mg for the first week, then titrate. Split dosing if on IR. Usually resolves after 2 weeks.",
     },
     {
@@ -238,7 +238,7 @@ export const venlafaxine: Drug = {
       frequency: "very-common",
       severity: "moderate",
       description:
-        "More frequent and more severe than with SSRIs — a direct noradrenergic effect on eccrine glands and thermoregulation. Often nocturnal. Distressing for patients and frequently under-recognised.",
+        "More frequent and more severe than with SSRIs: a direct noradrenergic effect on eccrine glands and thermoregulation. Often nocturnal. Distressing for patients and frequently under-recognised.",
       management: "Reassure (benign). Reduce dose if possible. Terazosin 1–2 mg at night or glycopyrrolate can help severe cases. Avoid trigger foods.",
     },
     {
@@ -246,7 +246,7 @@ export const venlafaxine: Drug = {
       frequency: "very-common",
       severity: "moderate",
       description:
-        "More activating than SSRIs — noradrenergic effect. Patients often report feeling 'wired', restless, or having vivid dreams. Can be therapeutic in anergic depression but problematic in anxious/agitated patients.",
+        "More activating than SSRIs: noradrenergic effect. Patients often report feeling 'wired', restless, or having vivid dreams. Can be therapeutic in anergic depression but problematic in anxious/agitated patients.",
       management: "Dose in the morning. If severe, reduce dose or switch to duloxetine (less activating). Avoid concurrent caffeine. Add low-dose mirtazapine at night if insomnia persists.",
     },
     {
@@ -261,7 +261,7 @@ export const venlafaxine: Drug = {
       name: "Dry mouth",
       frequency: "common",
       severity: "mild",
-      description: "Mild — less than TCAs but more than SSRIs. Sip water, sugar-free gum.",
+      description: "Mild: less than TCAs but more than SSRIs. Sip water, sugar-free gum.",
     },
     {
       name: "Sexual dysfunction",
@@ -277,7 +277,7 @@ export const venlafaxine: Drug = {
       frequency: "common",
       severity: "mild",
       description:
-        "Multifactorial — noradrenergic effect on vasculature, mild orthostasis, early discontinuation-like symptoms between doses (because of short half-life).",
+        "Multifactorial: noradrenergic effect on vasculature, mild orthostasis, early discontinuation-like symptoms between doses (because of short half-life).",
       management: "Stand up slowly. Check BP. If persistent, consider longer-acting formulation or twice-daily IR dosing.",
     },
     {
@@ -303,7 +303,7 @@ export const venlafaxine: Drug = {
       frequency: "common",
       severity: "severe",
       description:
-        "Dose-dependent sustained BP elevation — the signature safety issue of venlafaxine. At <150 mg/day the BP effect is minimal. At 150–300 mg/day a 2–5 mmHg diastolic rise is typical. At >300 mg/day, clinically significant hypertension develops in 10–15% of patients. Mechanism: peripheral NET blockade raises synaptic norepinephrine at sympathetic vascular synapses → vasoconstriction. Unlike SSRIs, this is dose-dependent and clinically important.",
+        "Dose-dependent sustained BP elevation: the signature safety issue of venlafaxine. At <150 mg/day the BP effect is minimal. At 150–300 mg/day a 2–5 mmHg diastolic rise is typical. At >300 mg/day, clinically significant hypertension develops in 10–15% of patients. Mechanism: peripheral NET blockade raises synaptic norepinephrine at sympathetic vascular synapses → vasoconstriction. Unlike SSRIs, this is dose-dependent and clinically important.",
       management: "Check BP at baseline, 2 weeks, 4 weeks, and at every dose change. If BP rises >10 mmHg diastolic or sustained BP >140/90, reduce dose or switch. If BP becomes uncontrolled, discontinue. Pre-existing hypertension must be controlled before initiation.",
     },
     {
@@ -320,7 +320,7 @@ export const venlafaxine: Drug = {
       severity: "life-threatening",
       description:
         "Triad of mental status change (agitation, confusion), autonomic instability (hyperthermia, tachycardia, hypertension, diaphoresis), and neuromuscular excitation (clonus, hyperreflexia, rigidity). Onset usually within 24 hours of initiating, increasing, or combining serotonergic agents. Venlafaxine's dual mechanism does NOT increase serotonin syndrome risk per se vs SSRIs, but combinations with tramadol, triptans, MAOIs, or St John's Wort are higher-risk.",
-      management: "Discontinue venlafaxine immediately. Supportive care — cooling, benzodiazepines for agitation. Cyproheptadine (5-HT2A antagonist) in severe cases. ICU admission for hyperthermia >41°C.",
+      management: "Discontinue venlafaxine immediately. Supportive care: cooling, benzodiazepines for agitation. Cyproheptadine (5-HT2A antagonist) in severe cases. ICU admission for hyperthermia >41°C.",
       sideEffectId: "serotonin-syndrome",
     },
     {
@@ -328,7 +328,7 @@ export const venlafaxine: Drug = {
       frequency: "uncommon",
       severity: "severe",
       description:
-        "Syndrome of inappropriate antidiuretic hormone. Risk highest in elderly, females, and during first 2 weeks. Presents as headache, nausea, confusion, seizures. Mechanism identical to SSRIs — serotonergic stimulation of vasopressin release.",
+        "Syndrome of inappropriate antidiuretic hormone. Risk highest in elderly, females, and during first 2 weeks. Presents as headache, nausea, confusion, seizures. Mechanism identical to SSRIs: serotonergic stimulation of vasopressin release.",
       management: "Check serum sodium at baseline and within 2 weeks for high-risk patients. Fluid restrict. Hypertonic saline if seizures or Na <120 mmol/L.",
     },
     {
@@ -352,7 +352,7 @@ export const venlafaxine: Drug = {
       frequency: "uncommon",
       severity: "severe",
       description:
-        "In patients with undiagnosed bipolar disorder, venlafaxine can trigger a manic switch — possibly at a higher rate than SSRIs due to the noradrenergic/dopaminergic component at high doses. Screen for personal and family history of bipolar disorder before initiating.",
+        "In patients with undiagnosed bipolar disorder, venlafaxine can trigger a manic switch: possibly at a higher rate than SSRIs due to the noradrenergic/dopaminergic component at high doses. Screen for personal and family history of bipolar disorder before initiating.",
       management: "Discontinue if mania emerges. Screen for bipolar disorder before initiating any antidepressant. Use mood stabiliser first in bipolar depression.",
     },
     {
@@ -360,7 +360,7 @@ export const venlafaxine: Drug = {
       frequency: "rare",
       severity: "severe",
       description:
-        "Seizure risk is dose-dependent and increases markedly in overdose. At therapeutic doses the risk is low but slightly higher than SSRIs — believed to be due to the noradrenergic and high-dose dopaminergic effects.",
+        "Seizure risk is dose-dependent and increases markedly in overdose. At therapeutic doses the risk is low but slightly higher than SSRIs: believed to be due to the noradrenergic and high-dose dopaminergic effects.",
       management: "Use cautiously in patients with epilepsy. Avoid high doses if possible. Benzodiazepines for seizure in overdose setting.",
     },
     {
@@ -385,13 +385,13 @@ export const venlafaxine: Drug = {
       parameter: "Mood & suicidality",
       frequency: "Weekly during first month, then every 2–4 weeks until stable.",
       rationale:
-        "Black-box warning for suicidality in patients <25. Monitor for clinical worsening, agitation, irritability, or new suicidal thoughts — especially during dose changes.",
+        "Black-box warning for suicidality in patients <25. Monitor for clinical worsening, agitation, irritability, or new suicidal thoughts, especially during dose changes.",
     },
     {
       parameter: "Response assessment (PHQ-9 / GAD-7 / HAM-D)",
       frequency: "Baseline, week 4, week 8, then every 3 months.",
       rationale:
-        "Quantifies response. ≥50% reduction in PHQ-9 = response. PHQ-9 <5 = remission. Note: at week 4 consider dose escalation from 75 mg → 150 mg (which adds NET blockade) if response is partial — this is the dose where venlafaxine becomes a true SNRI.",
+        "Quantifies response. ≥50% reduction in PHQ-9 = response. PHQ-9 <5 = remission. Note: at week 4 consider dose escalation from 75 mg → 150 mg (which adds NET blockade) if response is partial. This is the dose where venlafaxine becomes a true SNRI.",
     },
     {
       parameter: "Serum sodium",
@@ -415,7 +415,7 @@ export const venlafaxine: Drug = {
       parameter: "LFTs",
       frequency: "Baseline; only if clinically indicated.",
       rationale:
-        "Hepatotoxicity is rare but reported — slightly higher than SSRIs. Monitor for jaundice, fatigue, dark urine. More caution in pre-existing liver disease.",
+        "Hepatotoxicity is rare but reported: slightly higher than SSRIs. Monitor for jaundice, fatigue, dark urine. More caution in pre-existing liver disease.",
     },
     {
       parameter: "Lipid panel (at high doses)",
@@ -435,8 +435,8 @@ export const venlafaxine: Drug = {
     {
       drug: "Other serotonergic drugs (tramadol, triptans, St John's Wort, linezolid, dextromethorphan, fentanyl, lithium)",
       severity: "major",
-      mechanism: "Additive serotonergic effect raises serotonin syndrome risk. Tramadol is also a weak SNRI — directly overlapping mechanism with venlafaxine.",
-      action: "Avoid if possible. If unavoidable, monitor closely for serotonin syndrome — especially during the first month.",
+      mechanism: "Additive serotonergic effect raises serotonin syndrome risk. Tramadol is also a weak SNRI: directly overlapping mechanism with venlafaxine.",
+      action: "Avoid if possible. If unavoidable, monitor closely for serotonin syndrome, especially during the first month.",
     },
     {
       drug: "NSAIDs, aspirin, and anticoagulants (warfarin, DOACs)",
@@ -449,7 +449,7 @@ export const venlafaxine: Drug = {
       drug: "CYP2D6 inhibitors (paroxetine, fluoxetine, bupropion, quinidine)",
       severity: "major",
       mechanism:
-        "Venlafaxine is metabolised by CYP2D6 to its active metabolite ODV. Strong CYP2D6 inhibitors raise parent venlafaxine and lower ODV — total pharmacodynamic exposure is roughly preserved (parent and metabolite are equipotent) but tolerability may worsen due to higher peak parent concentrations.",
+        "Venlafaxine is metabolised by CYP2D6 to its active metabolite ODV. Strong CYP2D6 inhibitors raise parent venlafaxine and lower ODV: total pharmacodynamic exposure is roughly preserved (parent and metabolite are equipotent) but tolerability may worsen due to higher peak parent concentrations.",
       action: "Reduce venlafaxine dose by 25–50% when initiating a strong CYP2D6 inhibitor. Monitor for nausea, dizziness, and BP changes.",
     },
     {
@@ -470,7 +470,7 @@ export const venlafaxine: Drug = {
       severity: "moderate",
       mechanism:
         "Venlafaxine raises synaptic norepinephrine via NET blockade. Additive sympathomimetic effect → marked BP elevation, tachycardia, arrhythmia risk.",
-      action: "Avoid decongestants in patients on venlafaxine — especially at doses >225 mg/day. Monitor BP closely if combination unavoidable.",
+      action: "Avoid decongestants in patients on venlafaxine, especially at doses >225 mg/day. Monitor BP closely if combination unavoidable.",
     },
     {
       drug: "Pimozide",
@@ -481,19 +481,19 @@ export const venlafaxine: Drug = {
     {
       drug: "Alcohol",
       severity: "moderate",
-      mechanism: "Venlafaxine does not potentiate alcohol impairment in formal studies, but alcohol worsens depression, sleep, and tolerability — and raises bleeding risk if combined with NSAIDs.",
+      mechanism: "Venlafaxine does not potentiate alcohol impairment in formal studies, but alcohol worsens depression, sleep, and tolerability, and raises bleeding risk if combined with NSAIDs.",
       action: "Counsel to minimise or avoid. No safe level during the first month.",
     },
     {
       drug: "CYP2D6 substrates with narrow therapeutic index (TCAs, flecainide, metoprolol)",
       severity: "moderate",
-      mechanism: "Venlafaxine is a weak CYP2D6 inhibitor — can raise levels of co-administered CYP2D6 substrates.",
+      mechanism: "Venlafaxine is a weak CYP2D6 inhibitor: can raise levels of co-administered CYP2D6 substrates.",
       action: "Monitor for toxicity. Consider dose reduction of the substrate.",
     },
     {
       drug: "Sibutramine (where available)",
       severity: "contraindicated",
-      mechanism: "Sibutramine is itself an SNRI — combining two SNRIs raises serotonin syndrome and severe hypertension risk.",
+      mechanism: "Sibutramine is itself an SNRI, combining two SNRIs raises serotonin syndrome and severe hypertension risk.",
       action: "Do not combine.",
     },
   ],
@@ -501,59 +501,59 @@ export const venlafaxine: Drug = {
   pregnancy: {
     legacyCategory: "C (former FDA category)",
     summary:
-      "Venlafaxine is NOT the antidepressant of choice in pregnancy — sertraline is preferred when an SSRI is appropriate. Venlafaxine has not been clearly linked to major congenital malformations, but third-trimester neonatal adaptation syndrome is MORE SEVERE than with SSRIs (dual-mechanism withdrawal + noradrenergic effect). Neonatal hypertension has been reported (unique among antidepressants — directly attributable to maternal NET blockade), along with irritability, jitteriness, respiratory distress, poor feeding, and constant crying. Untreated maternal depression carries significant risks (preterm birth, low birth weight, poor bonding, suicidality) — the decision to treat must weigh these against medication risks. If venlafaxine is necessary in pregnancy, use the lowest effective dose, plan a planned taper in the third trimester if clinically appropriate, and alert the neonatal team at delivery.",
+      "Venlafaxine is NOT the antidepressant of choice in pregnancy: sertraline is preferred when an SSRI is appropriate. Venlafaxine has not been clearly linked to major congenital malformations, but third-trimester neonatal adaptation syndrome is MORE SEVERE than with SSRIs (dual-mechanism withdrawal + noradrenergic effect). Neonatal hypertension has been reported (unique among antidepressants, directly attributable to maternal NET blockade), along with irritability, jitteriness, respiratory distress, poor feeding, and constant crying. Untreated maternal depression carries significant risks (preterm birth, low birth weight, poor bonding, suicidality). The decision to treat must weigh these against medication risks. If venlafaxine is necessary in pregnancy, use the lowest effective dose, plan a planned taper in the third trimester if clinically appropriate, and alert the neonatal team at delivery.",
     lactation:
-      "Venlafaxine and ODV pass into breast milk in clinically meaningful amounts — relative infant dose is ~6–9% (higher than sertraline's ~1%). Most breastfed infants have no adverse effects, but cases of irritability, sedation, and poor weight gain have been reported. Sertraline is the preferred antidepressant in breastfeeding when pharmacotherapy is necessary. If venlafaxine is required, use the lowest effective dose, monitor the infant for sedation/irritability/poor feeding, and consider expressing and discarding milk at peak drug concentration (~4 hours post-dose).",
+      "Venlafaxine and ODV pass into breast milk in clinically meaningful amounts: relative infant dose is ~6–9% (higher than sertraline's ~1%). Most breastfed infants have no adverse effects, but cases of irritability, sedation, and poor weight gain have been reported. Sertraline is the preferred antidepressant in breastfeeding when pharmacotherapy is necessary. If venlafaxine is required, use the lowest effective dose, monitor the infant for sedation/irritability/poor feeding, and consider expressing and discarding milk at peak drug concentration (~4 hours post-dose).",
   },
 
   renalAdjustment:
     "Reduce total daily dose by 25–50% in moderate renal impairment (CrCl 30–89 mL/min). Reduce by 50% or more in severe renal impairment (CrCl <30 mL/min). Reduce by 50% in patients on haemodialysis, and dose AFTER dialysis sessions (venlafaxine and ODV are dialysable).",
 
   hepaticAdjustment:
-    "Reduce total daily dose by 50% in mild-to-moderate hepatic impairment (Child-Pugh A and B). Further reduction may be needed in severe hepatic impairment (Child-Pugh C) — use cautiously and titrate slowly. Consider every-other-day dosing for the XR formulation in severe impairment.",
+    "Reduce total daily dose by 50% in mild-to-moderate hepatic impairment (Child-Pugh A and B). Further reduction may be needed in severe hepatic impairment (Child-Pugh C): use cautiously and titrate slowly. Consider every-other-day dosing for the XR formulation in severe impairment.",
 
   /* ---- Education ---- */
   patientExplanation:
-    "Venlafaxine is a medicine that helps the brain keep more of two mood-regulating chemicals available for longer — serotonin and norepinephrine. SSRIs only affect serotonin; venlafaxine is called an SNRI because it affects both, which is why it can work when an SSRI hasn't. At low doses (75–150 mg/day) it acts mostly like an SSRI; at higher doses (150–225 mg/day) the norepinephrine effect kicks in, helping with energy, attention, and pain. Most people notice side effects in the first 1–2 weeks (commonly nausea, sweating, trouble sleeping) before mood benefit builds up over 4–6 weeks. Two things make venlafaxine different from most other antidepressants: (1) it can raise your blood pressure — especially at higher doses — so your doctor will check it regularly; and (2) it has the most severe withdrawal of any antidepressant, so you must never miss a dose and never stop it suddenly. Always come off it slowly with your doctor's guidance.",
+    "Venlafaxine is a medicine that helps the brain keep more of two mood-regulating chemicals available for longer: serotonin and norepinephrine. SSRIs only affect serotonin; venlafaxine is called an SNRI because it affects both, which is why it can work when an SSRI hasn't. At low doses (75–150 mg/day) it acts mostly like an SSRI; at higher doses (150–225 mg/day) the norepinephrine effect kicks in, helping with energy, attention, and pain. Most people notice side effects in the first 1–2 weeks (commonly nausea, sweating, trouble sleeping) before mood benefit builds up over 4–6 weeks. Two things make venlafaxine different from most other antidepressants: (1) it can raise your blood pressure (especially at higher doses) so your doctor will check it regularly; and (2) it has the most severe withdrawal of any antidepressant, so you must never miss a dose and never stop it suddenly. Always come off it slowly with your doctor's guidance.",
 
   patientEducationPoints: [
     "Some early changes can happen within 1–2 weeks, but clearer mood benefit usually takes 4–6 weeks or longer. Don't stop early just because you don't feel better yet.",
-    "NEVER stop venlafaxine abruptly. Stopping suddenly can cause severe withdrawal — 'brain zaps', dizziness, nausea, irritability, vivid dreams — sometimes within hours of a missed dose.",
+    "NEVER stop venlafaxine abruptly. Stopping suddenly can cause severe withdrawal ('brain zaps', dizziness, nausea, irritability, vivid dreams) sometimes within hours of a missed dose.",
     "NEVER miss a dose. Because venlafaxine has a short half-life, missing even one dose can trigger withdrawal. Refill your prescription at least a week before you run out.",
-    "Your doctor will check your blood pressure at baseline, 2 weeks, 4 weeks, and at every dose change. This is because venlafaxine can raise blood pressure — especially at higher doses. Tell your doctor if you have high BP or are on BP medication.",
+    "Your doctor will check your blood pressure at baseline, 2 weeks, 4 weeks, and at every dose change. This is because venlafaxine can raise blood pressure, especially at higher doses. Tell your doctor if you have high BP or are on BP medication.",
     "Nausea, sweating, headache, or trouble sleeping may appear in the first 1–2 weeks before mood benefit. These usually settle as your body adapts. Take with food to reduce nausea.",
-    "Take it in the morning — venlafaxine can be activating and may keep you awake if taken at night.",
-    "Avoid alcohol — it can worsen sleep, mood, and tolerability. There is no safe alcohol level during the first month.",
-    "Tell your doctor about all other medications — especially tramadol (pain), triptans (migraine), certain antibiotics like linezolid, cough syrups with dextromethorphan, herbal products like St John's Wort, decongestants (pseudoephedrine), and NSAIDs (ibuprofen, aspirin).",
-    "Watch for warning signs in the first month: new or worsening agitation, irritability, anxiety, or suicidal thoughts — particularly if you're under 25. Contact your clinician immediately.",
+    "Take it in the morning: venlafaxine can be activating and may keep you awake if taken at night.",
+    "Avoid alcohol: it can worsen sleep, mood, and tolerability. There is no safe alcohol level during the first month.",
+    "Tell your doctor about all other medications, especially tramadol (pain), triptans (migraine), certain antibiotics like linezolid, cough syrups with dextromethorphan, herbal products like St John's Wort, decongestants (pseudoephedrine), and NSAIDs (ibuprofen, aspirin).",
+    "Watch for warning signs in the first month: new or worsening agitation, irritability, anxiety, or suicidal thoughts, particularly if you're under 25. Contact your clinician immediately.",
     "Seek emergency help for signs of serotonin syndrome (high fever, confusion, sweating, agitation, tremor, muscle rigidity, fast heartbeat) OR for severe headache with very high blood pressure.",
   ],
 
   clinicalPearls: [
-    "Dose-dependent mechanism is THE signature of venlafaxine: 75 mg/day = essentially an SSRI; 150–225 mg/day = true SNRI (dual SERT + NET); >300 mg/day = adds weak DAT inhibition. If a patient on 75 mg isn't responding, escalating to 150 mg isn't just 'more of the same' — it's adding a fundamentally different mechanism.",
-    "ALWAYS CHECK BP at every visit — baseline, 2 weeks, 4 weeks, every dose change. Dose-dependent hypertension is the signature adverse effect. If BP rises >10 mmHg diastolic, reduce the dose or switch. Pre-existing hypertension must be controlled before initiation.",
-    "Venlafaxine has the WORST discontinuation syndrome of any antidepressant — short parent half-life (~5 h) + dual-mechanism withdrawal. Missed doses can cause withdrawal within HOURS. Always taper over ≥4 weeks; bridge with fluoxetine (long half-life) for the last 2 weeks of taper.",
-    "When an SSRI has failed, venlafaxine's dual mechanism is a logical next step — particularly for anergic/lethargic depression where the noradrenergic component is desirable. The SMENCED algorithm and NICE CG91 both support SNRI switching after SSRI failure.",
-    "Venlafaxine is particularly useful when depression is COMORBID WITH PAIN — neuropathic pain, fibromyalgia, chronic musculoskeletal pain. The NET blockade enhances descending inhibitory pain pathways. Duloxetine is the FDA-approved SNRI for neuropathic pain; venlafaxine is a reasonable off-label alternative.",
+    "Dose-dependent mechanism is THE signature of venlafaxine: 75 mg/day = essentially an SSRI; 150–225 mg/day = true SNRI (dual SERT + NET); >300 mg/day = adds weak DAT inhibition. If a patient on 75 mg isn't responding, escalating to 150 mg isn't just 'more of the same': it's adding a fundamentally different mechanism.",
+    "ALWAYS CHECK BP at every visit: baseline, 2 weeks, 4 weeks, every dose change. Dose-dependent hypertension is the signature adverse effect. If BP rises >10 mmHg diastolic, reduce the dose or switch. Pre-existing hypertension must be controlled before initiation.",
+    "Venlafaxine has the WORST discontinuation syndrome of any antidepressant: short parent half-life (~5 h) + dual-mechanism withdrawal. Missed doses can cause withdrawal within HOURS. Always taper over ≥4 weeks; bridge with fluoxetine (long half-life) for the last 2 weeks of taper.",
+    "When an SSRI has failed, venlafaxine's dual mechanism is a logical next step, particularly for anergic/lethargic depression where the noradrenergic component is desirable. The SMENCED algorithm and NICE CG91 both support SNRI switching after SSRI failure.",
+    "Venlafaxine is particularly useful when depression is COMORBID WITH PAIN: neuropathic pain, fibromyalgia, chronic musculoskeletal pain. The NET blockade enhances descending inhibitory pain pathways. Duloxetine is the FDA-approved SNRI for neuropathic pain; venlafaxine is a reasonable off-label alternative.",
     "Desvenlafaxine (Pristiq) is the isolated active metabolite O-desmethylvenlafaxine (ODV), marketed separately. Same pharmacology but cleaner PK (less CYP2D6 dependence, lower inter-patient variability). Patients stable on venlafaxine may be switched mg-for-mg (26 mg desvenlafaxine ≈ 75 mg venlafaxine).",
-    "Venlafaxine is more activating than SSRIs (norepinephrine) — useful for atypical/lethargic depression where patients sleep too much and eat too much. Avoid in agitated/anxious depression unless combined with a sedating agent at night.",
+    "Venlafaxine is more activating than SSRIs (norepinephrine): useful for atypical/lethargic depression where patients sleep too much and eat too much. Avoid in agitated/anxious depression unless combined with a sedating agent at night.",
     "Initial weight LOSS is common (unlike paroxetine/mirtazapine). Useful in overweight patients; problematic in cachectic or geriatric patients. Weight usually plateaus after 3–6 months.",
     "For breast-cancer survivors on tamoxifen: venlafaxine is PREFERRED over paroxetine/fluoxetine for hot flushes because it is a weak CYP2D6 inhibitor and does not block tamoxifen activation. Doses of 37.5–75 mg/day are typically sufficient.",
-    "In bipolar depression, venlafaxine can trigger a manic switch — possibly at a higher rate than SSRIs due to the noradrenergic/dopaminergic component. Always screen for bipolar disorder (MDQ) before prescribing, and avoid using venlafaxine as monotherapy in known bipolar depression.",
+    "In bipolar depression, venlafaxine can trigger a manic switch: possibly at a higher rate than SSRIs due to the noradrenergic/dopaminergic component. Always screen for bipolar disorder (MDQ) before prescribing, and avoid using venlafaxine as monotherapy in known bipolar depression.",
   ],
 
   examPearls: [
-    "Venlafaxine is an SNRI — DUAL SERT + NET blockade. It is NOT an SSRI. The 'SNRI' label is the single most testable fact.",
+    "Venlafaxine is an SNRI. DUAL SERT + NET blockade. It is NOT an SSRI. The 'SNRI' label is the single most testable fact.",
     "DOSE-DEPENDENT mechanism: <150 mg/day = SERT only (SSRI-like); 150–225 mg/day = SERT + NET (true SNRI); >300 mg/day = SERT + NET + weak DAT. This is the most testable mechanism fact about venlafaxine.",
-    "HYPERTENSION is dose-dependent — monitor BP at baseline, 2wk, 4wk, every dose change. At >300 mg/day, 10–15% develop clinically significant hypertension. Unique among antidepressants (only SNRIs and TCAs do this).",
-    "WORST discontinuation syndrome of any antidepressant — short parent half-life (~5 h) + dual-mechanism withdrawal. Missed dose → withdrawal within hours. Taper slowly; bridge with fluoxetine.",
-    "Active metabolite = O-desmethylvenlafaxine (ODV). Desvenlafaxine (Pristiq) is ODV marketed separately — same molecule, cleaner PK.",
-    "4 FDA-approved indications: MDD, GAD, Social Anxiety Disorder, Panic Disorder. Broader anxiety approval than most SSRIs (note: NOT approved for OCD, PTSD, or PMDD — those are sertraline's signature indications).",
-    "Metabolised by CYP2D6 (to ODV). Strong CYP2D6 inhibitors (paroxetine, fluoxetine, bupropion) raise venlafaxine levels — but total pharmacodynamic exposure is roughly preserved because parent and ODV are equipotent.",
-    "Useful for depression WITH PAIN — NET blockade enhances descending inhibitory pain pathways. Indicated off-label for diabetic neuropathy, post-herpetic neuralgia, fibromyalgia.",
+    "HYPERTENSION is dose-dependent. Monitor BP at baseline, 2wk, 4wk, every dose change. At >300 mg/day, 10–15% develop clinically significant hypertension. Unique among antidepressants (only SNRIs and TCAs do this).",
+    "WORST discontinuation syndrome of any antidepressant: short parent half-life (~5 h) + dual-mechanism withdrawal. Missed dose → withdrawal within hours. Taper slowly; bridge with fluoxetine.",
+    "Active metabolite = O-desmethylvenlafaxine (ODV). Desvenlafaxine (Pristiq) is ODV marketed separately: same molecule, cleaner PK.",
+    "4 FDA-approved indications: MDD, GAD, Social Anxiety Disorder, Panic Disorder. Broader anxiety approval than most SSRIs (note: NOT approved for OCD, PTSD, or PMDD, those are sertraline's signature indications).",
+    "Metabolised by CYP2D6 (to ODV). Strong CYP2D6 inhibitors (paroxetine, fluoxetine, bupropion) raise venlafaxine levels, but total pharmacodynamic exposure is roughly preserved because parent and ODV are equipotent.",
+    "Useful for depression WITH PAIN. NET blockade enhances descending inhibitory pain pathways. Indicated off-label for diabetic neuropathy, post-herpetic neuralgia, fibromyalgia.",
     "More NAUSEA than SSRIs (combined 5-HT3 + noradrenergic effect on gut). More SWEATING than SSRIs (noradrenergic effect on eccrine glands). More INSOMNIA than SSRIs (noradrenergic activation).",
     "Can cause weight LOSS initially (unlike paroxetine/mirtazapine which cause weight gain).",
-    "NEONATAL HYPERTENSION reported in third-trimester exposure — unique among antidepressants (directly attributable to maternal NET blockade). NOT the drug of choice in pregnancy (sertraline preferred).",
+    "NEONATAL HYPERTENSION reported in third-trimester exposure: unique among antidepressants (directly attributable to maternal NET blockade). NOT the drug of choice in pregnancy (sertraline preferred).",
     "Preferred over paroxetine/fluoxetine for hot flushes in breast-cancer survivors on tamoxifen (weak CYP2D6 inhibition → does not block tamoxifen activation).",
     "Half-lives to memorise: venlafaxine 5h (parent) + 11h (ODV) → shortest effective half-life among commonly used antidepressants → worst withdrawal. Compare: paroxetine 21h, sertraline 26h, fluoxetine + norfluoxetine 1–4 days (longest, mildest withdrawal).",
   ],
@@ -561,19 +561,19 @@ export const venlafaxine: Drug = {
   /* ---- Memory tricks (mnemonics) ---- */
   memoryTricks: [
     {
-      title: "VEN — the three-fact signature",
+      title: "VEN: the three-fact signature",
       trick: "VENlafaxine = Varies by dose · Expect BP rise · Nasty withdrawal",
       remembers:
         "The three signature facts about venlafaxine: dose-dependent mechanism, dose-dependent hypertension, and the worst discontinuation syndrome of any antidepressant.",
     },
     {
-      title: "75 / 150 / 300 — the dose ladder",
+      title: "75 / 150 / 300: the dose ladder",
       trick: "75 = SERT only (SSRI) · 150 = SERT + NET (SNRI) · 300 = SERT + NET + DAT (mild dopaminergic)",
       remembers:
-        "The dose-dependent mechanism — the single most testable fact. Each step up the ladder adds a transporter. 75 mg behaves like an SSRI; 150 mg unlocks the true SNRI effect; >300 mg adds weak dopamine.",
+        "The dose-dependent mechanism: the single most testable fact. Each step up the ladder adds a transporter. 75 mg behaves like an SSRI; 150 mg unlocks the true SNRI effect; >300 mg adds weak dopamine.",
     },
     {
-      title: "BP³ — Blood Pressure at three timepoints",
+      title: "BP³. Blood Pressure at three timepoints",
       trick: "Baseline · 2 weeks Post-initiation · Per dose-change (and 4 weeks)",
       remembers:
         "The signature BP monitoring schedule: at Baseline, at 2 weeks Post-initiation, and at every dose change (and at 4 weeks). Dose-dependent hypertension is the unique SNRI safety issue.",
@@ -585,22 +585,22 @@ export const venlafaxine: Drug = {
         "Venlafaxine has the most severe discontinuation syndrome of any antidepressant. Mechanism: short parent half-life (~5h) + dual SERT/NET withdrawal. Symptoms begin within hours of a missed dose. Bridge with fluoxetine (long half-life) for the last 2 weeks of any taper.",
     },
     {
-      title: "SNRI Side Effects — 'Sweat, Nausea, Insomnia, BP'",
+      title: "SNRI Side Effects: 'Sweat, Nausea, Insomnia, BP'",
       trick: "SNRI = Sweating + Nausea + Insomnia + BP rise (more than SSRIs)",
       remembers:
         "SNRI-specific side effects. Sweating and BP rise = noradrenergic (NET). Nausea = combined serotonergic + noradrenergic effect on gut. Insomnia = noradrenergic activation. All are more pronounced than with SSRIs.",
     },
     {
-      title: "ODV — the same drug, twice",
-      trick: "Venlafaxine → O-Desmethyl-Venlafaxine (ODV) = Desvenlafaxine (Pristiq) — same active molecule, sold separately",
+      title: "ODV: the same drug, twice",
+      trick: "Venlafaxine → O-Desmethyl-Venlafaxine (ODV) = Desvenlafaxine (Pristiq): same active molecule, sold separately",
       remembers:
-        "ODV is the active metabolite of venlafaxine — pharmacologically equivalent to the parent. Desvenlafaxine (Pristiq) is ODV marketed directly, with cleaner pharmacokinetics (less CYP2D6 dependence). 26 mg desvenlafaxine ≈ 75 mg venlafaxine.",
+        "ODV is the active metabolite of venlafaxine: pharmacologically equivalent to the parent. Desvenlafaxine (Pristiq) is ODV marketed directly, with cleaner pharmacokinetics (less CYP2D6 dependence). 26 mg desvenlafaxine ≈ 75 mg venlafaxine.",
     },
   ],
 
   /* ---- High-yield summary (one-page revision) ---- */
   highYieldSummary: [
-    "Class: SNRI — blocks both SERT and NET (weak DAT at high doses). NOT an SSRI.",
+    "Class: SNRI; blocks both SERT and NET (weak DAT at high doses). NOT an SSRI.",
     "Dose-dependent mechanism: 75–150 mg/day = SERT only (SSRI-like); 150–225 mg/day = SERT + NET (true SNRI); >300 mg/day = + weak DAT (mild dopaminergic). Most testable fact.",
     "4 FDA indications: MDD, GAD, Social Anxiety Disorder, Panic Disorder. Off-label: neuropathic pain, hot flushes (especially in breast-cancer survivors on tamoxifen), fibromyalgia, cataplexy.",
     "Onset: 4–6 weeks for depression; 8–12 weeks for anxiety disorders. Withdrawal can begin within HOURS of a missed dose.",
@@ -611,33 +611,33 @@ export const venlafaxine: Drug = {
     "Interactions: MAOIs (fatal), serotonergic drugs (serotonin syndrome), NSAIDs/warfarin (bleeding), CYP2D6 inhibitors (raise venlafaxine), CYP3A4 inhibitors (raise venlafaxine), diuretics (additive hyponatraemia + HTN), sympathomimetics (additive HTN).",
     "Pregnancy: NOT the drug of choice (sertraline preferred). Neonatal hypertension reported (unique among antidepressants). Severe neonatal adaptation syndrome. Avoid if possible; weigh risks of untreated depression.",
     "Renal: reduce 25–50% (CrCl 30–89), 50%+ (CrCl <30), 50% (haemodialysis). Hepatic: reduce 50% (Child-Pugh A/B); further reduction + caution in C.",
-    "Active metabolite = O-desmethylvenlafaxine (ODV) — equipotent to parent. Desvenlafaxine (Pristiq) is ODV marketed separately with cleaner PK.",
+    "Active metabolite = O-desmethylvenlafaxine (ODV): equipotent to parent. Desvenlafaxine (Pristiq) is ODV marketed separately with cleaner PK.",
   ],
 
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "Treatment-resistant depression after SSRI failure — escalating venlafaxine from 75 mg to 225 mg with BP tracking",
+      title: "Treatment-resistant depression after SSRI failure: escalating venlafaxine from 75 mg to 225 mg with BP tracking",
       presentation:
         "A 42-year-old man with persistent depression despite 10 weeks of sertraline 200 mg/day. Now switched to venlafaxine for its dual mechanism. BP must be tracked through every dose escalation.",
       history:
-        "Rajesh, a 42-year-old accountant, presents to his psychiatrist after an adequate trial of sertraline 200 mg/day for 10 weeks produced only partial response (PHQ-9 fell from 20 at baseline to 14 — a 30% reduction, short of the 50% threshold for response). Symptoms include persistent low mood, anhedonia, marked lethargy (sleeping 11 hours per day), difficulty concentrating at work, and 3 kg weight gain. No suicidal ideation. He finds the lethargy most disabling — describing himself as 'moving through treacle'. No prior psychiatric history. Medical history: pre-hypertension (BP typically 128–134/80–86), no diabetes. Maternal aunt with bipolar disorder. He drinks 4 units of alcohol per week, no recreational drugs, no regular medications besides sertraline. MDQ screen for bipolar disorder is negative. BMI 26.",
+        "Rajesh, a 42-year-old accountant, presents to his psychiatrist after an adequate trial of sertraline 200 mg/day for 10 weeks produced only partial response (PHQ-9 fell from 20 at baseline to 14, a 30% reduction, short of the 50% threshold for response). Symptoms include persistent low mood, anhedonia, marked lethargy (sleeping 11 hours per day), difficulty concentrating at work, and 3 kg weight gain. No suicidal ideation. He finds the lethargy most disabling: describing himself as 'moving through treacle'. No prior psychiatric history. Medical history: pre-hypertension (BP typically 128–134/80–86), no diabetes. Maternal aunt with bipolar disorder. He drinks 4 units of alcohol per week, no recreational drugs, no regular medications besides sertraline. MDQ screen for bipolar disorder is negative. BMI 26.",
       examination:
-        "Alert, oriented, cooperative but visibly slowed. Speech slightly delayed. Mood '4/10', affect congruent and flat. No hallucinations, delusions, or thought disorder. MoCA 27/30 (mild slowing on trail-making). PHQ-9 score 14 (moderate). GAD-7 score 7 (mild). BP 132/84 (baseline — pre-hypertensive). HR 76. BMI 26. No neurological deficit. TSH, FBC, LFTs, fasting glucose, lipid panel all normal. ECG normal (QTc 412 ms).",
+        "Alert, oriented, cooperative but visibly slowed. Speech slightly delayed. Mood '4/10', affect congruent and flat. No hallucinations, delusions, or thought disorder. MoCA 27/30 (mild slowing on trail-making). PHQ-9 score 14 (moderate). GAD-7 score 7 (mild). BP 132/84 (baseline, pre-hypertensive). HR 76. BMI 26. No neurological deficit. TSH, FBC, LFTs, fasting glucose, lipid panel all normal. ECG normal (QTc 412 ms).",
       diagnosis:
-        "Major Depressive Disorder, recurrent episode, moderate, with partial response to SSRI (sertraline) — i.e., 'treatment-resistant' by NICE definition (inadequate response to one adequate antidepressant trial). Differential: bipolar depression (MDQ negative but family history warrants caution); depression with atypical features (hypersomnia, lethargy — favouring a noradrenergic agent).",
+        "Major Depressive Disorder, recurrent episode, moderate, with partial response to SSRI (sertraline), i.e., 'treatment-resistant' by NICE definition (inadequate response to one adequate antidepressant trial). Differential: bipolar depression (MDQ negative but family history warrants caution); depression with atypical features (hypersomnia, lethargy, favouring a noradrenergic agent).",
       rationale:
-        "Venlafaxine chosen because: (1) SSRI has produced only partial response → switching to a different pharmacological class (SERT + NET) is more evidence-based than dose-escalating sertraline further; (2) the patient's phenotype is anergic/hypersomnic — the noradrenergic effect of venlafaxine at moderate dose is particularly suited to lethargic depression; (3) no significant renal/hepatic impairment; (4) baseline BP is pre-hypertensive but controlled — acceptable to start venlafaxine with close BP monitoring; (5) family history of bipolar disorder warrants caution but MDQ is negative and the patient will be monitored closely for manic switch. Plan to escalate through the dose-dependent mechanism: 75 mg (SSRI-like) → 150 mg (true SNRI) → 225 mg (full SNRI) if needed.",
+        "Venlafaxine chosen because: (1) SSRI has produced only partial response → switching to a different pharmacological class (SERT + NET) is more evidence-based than dose-escalating sertraline further; (2) the patient's phenotype is anergic/hypersomnic. The noradrenergic effect of venlafaxine at moderate dose is particularly suited to lethargic depression; (3) no significant renal/hepatic impairment; (4) baseline BP is pre-hypertensive but controlled: acceptable to start venlafaxine with close BP monitoring; (5) family history of bipolar disorder warrants caution but MDQ is negative and the patient will be monitored closely for manic switch. Plan to escalate through the dose-dependent mechanism: 75 mg (SSRI-like) → 150 mg (true SNRI) → 225 mg (full SNRI) if needed.",
       management:
-        "Sertraline tapered and stopped over 1 week (washout period observed). Venlafaxine XR 37.5 mg every morning with food for 4 days, then 75 mg daily. Plan: review at 2 weeks (tolerability + BP + suicidality), 4 weeks (early response + BP), 6 weeks (dose escalation if PHQ-9 reduction <50%), 12 weeks (full response assessment). BP checked at every visit. Patient given PHQ-9 self-rating schedule, BP log to record at home twice weekly, and safety plan with crisis contacts. Counseled: (1) expect nausea and sweating in first 1–2 weeks; (2) NEVER miss a dose — withdrawal can begin within hours; (3) NEVER stop abruptly; (4) take in the morning; (5) watch for agitation, irritability, or new suicidal thoughts in first month; (6) full effect takes 4–6 weeks. Concurrent referral for CBT.",
+        "Sertraline tapered and stopped over 1 week (washout period observed). Venlafaxine XR 37.5 mg every morning with food for 4 days, then 75 mg daily. Plan: review at 2 weeks (tolerability + BP + suicidality), 4 weeks (early response + BP), 6 weeks (dose escalation if PHQ-9 reduction <50%), 12 weeks (full response assessment). BP checked at every visit. Patient given PHQ-9 self-rating schedule, BP log to record at home twice weekly, and safety plan with crisis contacts. Counseled: (1) expect nausea and sweating in first 1–2 weeks; (2) NEVER miss a dose: withdrawal can begin within hours; (3) NEVER stop abruptly; (4) take in the morning; (5) watch for agitation, irritability, or new suicidal thoughts in first month; (6) full effect takes 4–6 weeks. Concurrent referral for CBT.",
       outcome:
-        "Week 2 (venlafaxine XR 75 mg): nausea and increased sweating (tolerable), no suicidality, sleep unchanged. BP 130/82 (baseline 132/84 — no change). PHQ-9 14 (no change yet). Week 4 (still 75 mg): energy mildly improved, BP 132/84 (no change), PHQ-9 12 (14% reduction from venlafaxine baseline — partial response). Dose escalated to 150 mg XR (now true SNRI — adds NET blockade). Week 6 (150 mg): energy noticeably better — sleeping 9 hours instead of 11. BP 138/86 (rise of 6/2 mmHg — monitor but acceptable, <10 mmHg diastolic). PHQ-9 9 (36% reduction). Sweating increased. Dose escalated to 225 mg XR. Week 8 (225 mg): BP 140/86 (rise of 8/2 mmHg from baseline — borderline but acceptable; advised home BP monitoring and dose held at 225 mg). PHQ-9 6 (57% reduction — treatment response). Mood 7/10. Energy restored, returned to full-time work without 'treacle' sensation. Week 12: PHQ-9 4 (remission). BP stable at 138/86. Sweating persistent but tolerated. Plan: continue venlafaxine 225 mg XR for 9 more months (12 months total from remission), then taper over 6–8 weeks with fluoxetine bridge for the last 2 weeks. BP to be monitored at every visit throughout treatment.",
+        "Week 2 (venlafaxine XR 75 mg): nausea and increased sweating (tolerable), no suicidality, sleep unchanged. BP 130/82 (baseline 132/84, no change). PHQ-9 14 (no change yet). Week 4 (still 75 mg): energy mildly improved, BP 132/84 (no change), PHQ-9 12 (14% reduction from venlafaxine baseline, partial response). Dose escalated to 150 mg XR (now true SNRI, adds NET blockade). Week 6 (150 mg): energy noticeably better; sleeping 9 hours instead of 11. BP 138/86 (rise of 6/2 mmHg, monitor but acceptable, <10 mmHg diastolic). PHQ-9 9 (36% reduction). Sweating increased. Dose escalated to 225 mg XR. Week 8 (225 mg): BP 140/86 (rise of 8/2 mmHg from baseline, borderline but acceptable; advised home BP monitoring and dose held at 225 mg). PHQ-9 6 (57% reduction, treatment response). Mood 7/10. Energy restored, returned to full-time work without 'treacle' sensation. Week 12: PHQ-9 4 (remission). BP stable at 138/86. Sweating persistent but tolerated. Plan: continue venlafaxine 225 mg XR for 9 more months (12 months total from remission), then taper over 6–8 weeks with fluoxetine bridge for the last 2 weeks. BP to be monitored at every visit throughout treatment.",
       teachingPoints: [
         "Dose-dependent mechanism in action: at 75 mg Rajesh had only partial SSRI-like response; the meaningful improvement came only after escalation to 150 mg (where NET blockade begins) and 225 mg. This is exactly the dose-dependent pharmacology made clinical.",
-        "BP monitoring IS the prescribing of venlafaxine: his BP rose 6–8 mmHg systolic with escalation — within acceptable limits (<10 mmHg diastolic rise), but if it had crossed that threshold, the dose would have been reduced or the drug switched. The pre-hypertensive baseline warranted extra vigilance.",
-        "Switching antidepressant class after one adequate SSRI trial is more evidence-based than dose-escalating the same SSRI — particularly when the phenotype (anergic, hypersomnic) suggests noradrenergic deficit.",
-        "Plan the taper FROM THE DAY YOU START. Venlafaxine's withdrawal syndrome is severe enough that the exit strategy must be discussed at initiation — including the fluoxetine bridge for the last 2 weeks of any future taper.",
-        "Family history of bipolar disorder warrants MDQ screening before any antidepressant — and ongoing vigilance for manic switch, which may be more likely with venlafaxine than SSRIs due to the noradrenergic/dopaminergic component at higher doses.",
+        "BP monitoring IS the prescribing of venlafaxine: his BP rose 6–8 mmHg systolic with escalation, within acceptable limits (<10 mmHg diastolic rise), but if it had crossed that threshold, the dose would have been reduced or the drug switched. The pre-hypertensive baseline warranted extra vigilance.",
+        "Switching antidepressant class after one adequate SSRI trial is more evidence-based than dose-escalating the same SSRI, particularly when the phenotype (anergic, hypersomnic) suggests noradrenergic deficit.",
+        "Plan the taper FROM THE DAY YOU START. Venlafaxine's withdrawal syndrome is severe enough that the exit strategy must be discussed at initiation, including the fluoxetine bridge for the last 2 weeks of any future taper.",
+        "Family history of bipolar disorder warrants MDQ screening before any antidepressant, and ongoing vigilance for manic switch, which may be more likely with venlafaxine than SSRIs due to the noradrenergic/dopaminergic component at higher doses.",
       ],
     },
   ],
@@ -658,7 +658,7 @@ export const venlafaxine: Drug = {
           ],
         },
         {
-          attribute: "Mechanism — dose-dependent?",
+          attribute: "Mechanism: dose-dependent?",
           primaryValue: "YES (signature): 75 mg = SERT only; 150–225 mg = SERT + NET; >300 mg = + weak DAT",
           comparisons: [
             { drug: "Sertraline", value: "No — pure SERT blockade at all doses" },
@@ -668,7 +668,7 @@ export const venlafaxine: Drug = {
         },
         {
           attribute: "BP monitoring required",
-          primaryValue: "YES — signature. Baseline, 2wk, 4wk, every dose change. Dose-dependent hypertension.",
+          primaryValue: "YES: signature. Baseline, 2wk, 4wk, every dose change. Dose-dependent hypertension.",
           comparisons: [
             { drug: "Sertraline", value: "No — minimal BP effect" },
             { drug: "Duloxetine", value: "Yes — BP elevation reported but less pronounced than venlafaxine; check periodically" },
@@ -713,7 +713,7 @@ export const venlafaxine: Drug = {
         },
         {
           attribute: "Sedation vs activation",
-          primaryValue: "Activating (noradrenergic) — good for anergic depression",
+          primaryValue: "Activating (noradrenergic): good for anergic depression",
           comparisons: [
             { drug: "Sertraline", value: "Mildly activating" },
             { drug: "Duloxetine", value: "Mildly activating" },
@@ -749,7 +749,7 @@ export const venlafaxine: Drug = {
         },
       ],
       takeaway:
-        "Venlafaxine = the dose-dependent SNRI — escalates from SSRI-like to true SNRI to mild dopaminergic as dose rises. Choose it after SSRI failure, for anergic depression, or when comorbid pain/hot flushes make NET blockade desirable. BUT you must monitor BP (signature risk) and never miss a dose (worst withdrawal of any antidepressant). Sertraline remains first-line for uncomplicated depression/anxiety and for pregnancy. Duloxetine is the preferred SNRI when neuropathic pain is the primary indication (FDA-approved). Mirtazapine is reserved for depression with severe insomnia/weight loss.",
+        "Venlafaxine = the dose-dependent SNRI: escalates from SSRI-like to true SNRI to mild dopaminergic as dose rises. Choose it after SSRI failure, for anergic depression, or when comorbid pain/hot flushes make NET blockade desirable. BUT you must monitor BP (signature risk) and never miss a dose (worst withdrawal of any antidepressant). Sertraline remains first-line for uncomplicated depression/anxiety and for pregnancy. Duloxetine is the preferred SNRI when neuropathic pain is the primary indication (FDA-approved). Mirtazapine is reserved for depression with severe insomnia/weight loss.",
     },
   ],
 
@@ -760,7 +760,7 @@ export const venlafaxine: Drug = {
       time: "Hours 1–24",
       title: "Acute SERT blockade (and NET blockade if starting at ≥150 mg)",
       description:
-        "Venlafaxine blocks SERT (and, at higher doses, NET) within hours. Synaptic serotonin and norepinephrine rise. Side effects (nausea, sweating, activation) often appear here. Patients may feel worse before they feel better — particularly anxious patients sensitive to the activating noradrenergic effect.",
+        "Venlafaxine blocks SERT (and, at higher doses, NET) within hours. Synaptic serotonin and norepinephrine rise. Side effects (nausea, sweating, activation) often appear here. Patients may feel worse before they feel better, particularly anxious patients sensitive to the activating noradrenergic effect.",
       phase: "onset",
     },
     {
@@ -768,7 +768,7 @@ export const venlafaxine: Drug = {
       time: "Days 2–7",
       title: "Autoreceptor desensitisation begins",
       description:
-        "5-HT1A autoreceptors in the raphe nuclei begin to desensitise. α2-adrenergic autoreceptors in the locus coeruleus begin to downregulate. Sleep, appetite, and energy often improve first — before mood. Note: if a dose is MISSED during this window, withdrawal symptoms can begin within hours (short half-life).",
+        "5-HT1A autoreceptors in the raphe nuclei begin to desensitise. α2-adrenergic autoreceptors in the locus coeruleus begin to downregulate. Sleep, appetite, and energy often improve first, before mood. Note: if a dose is MISSED during this window, withdrawal symptoms can begin within hours (short half-life).",
       phase: "onset",
     },
     {
@@ -776,7 +776,7 @@ export const venlafaxine: Drug = {
       time: "Weeks 2–4",
       title: "Neuroadaptive changes + dose escalation window",
       description:
-        "BDNF expression rises in the hippocampus. Postsynaptic receptor downregulation occurs. Early mood improvement becomes noticeable. This is the typical window to consider dose escalation from 75 mg to 150 mg — which transforms the drug from an SSRI to a true SNRI by adding NET blockade.",
+        "BDNF expression rises in the hippocampus. Postsynaptic receptor downregulation occurs. Early mood improvement becomes noticeable. This is the typical window to consider dose escalation from 75 mg to 150 mg, which transforms the drug from an SSRI to a true SNRI by adding NET blockade.",
       phase: "peak",
     },
     {
@@ -784,7 +784,7 @@ export const venlafaxine: Drug = {
       time: "Weeks 4–6",
       title: "Full therapeutic effect (depression)",
       description:
-        "Steady-state monoamine levels and full downstream adaptations achieved. Mood, anxiety, and energy typically reach maximum improvement for depression. BP should be rechecked here — if a dose-dependent rise is going to occur, it usually manifests by week 4 at the new dose.",
+        "Steady-state monoamine levels and full downstream adaptations achieved. Mood, anxiety, and energy typically reach maximum improvement for depression. BP should be rechecked here, if a dose-dependent rise is going to occur, it usually manifests by week 4 at the new dose.",
       phase: "peak",
     },
     {
@@ -792,7 +792,7 @@ export const venlafaxine: Drug = {
       time: "Weeks 8–12",
       title: "Full therapeutic effect (anxiety disorders)",
       description:
-        "GAD, social anxiety, and panic disorder often take 8–12 weeks for full response — slower than depression. Counsel patients accordingly.",
+        "GAD, social anxiety, and panic disorder often take 8–12 weeks for full response: slower than depression. Counsel patients accordingly.",
       phase: "duration",
     },
     {
@@ -805,10 +805,10 @@ export const venlafaxine: Drug = {
     },
     {
       id: "t7",
-      time: "Discontinuation (PLANNED — never abrupt)",
+      time: "Discontinuation (PLANNED, never abrupt)",
       title: "Tapered withdrawal over ≥4 weeks",
       description:
-        "Sudden cessation causes the WORST discontinuation syndrome of any antidepressant — within HOURS, patients can experience 'brain zaps', dizziness, nausea, irritability, vivid dreams. Taper over ≥4 weeks (longer for high doses or long duration). Bridge with fluoxetine 10–20 mg for the last 2 weeks — its long half-life self-tapers the patient off the serotonergic component.",
+        "Sudden cessation causes the WORST discontinuation syndrome of any antidepressant, within HOURS, patients can experience 'brain zaps', dizziness, nausea, irritability, vivid dreams. Taper over ≥4 weeks (longer for high doses or long duration). Bridge with fluoxetine 10–20 mg for the last 2 weeks: its long half-life self-tapers the patient off the serotonergic component.",
       phase: "recovery",
     },
   ],
@@ -818,42 +818,42 @@ export const venlafaxine: Drug = {
     {
       question: "Why does my doctor check my blood pressure every time I see them?",
       answer:
-        "Venlafaxine can raise your blood pressure — especially at higher doses (above 150 mg/day). This is a dose-dependent effect: at low doses it's minimal, but at 300 mg/day or more, 10–15% of people develop clinically significant hypertension. Your doctor checks your BP at baseline, 2 weeks, 4 weeks, and at every dose change to catch this early. If your BP rises too much, the dose may be reduced or the medication switched.",
+        "Venlafaxine can raise your blood pressure, especially at higher doses (above 150 mg/day). This is a dose-dependent effect: at low doses it's minimal, but at 300 mg/day or more, 10–15% of people develop clinically significant hypertension. Your doctor checks your BP at baseline, 2 weeks, 4 weeks, and at every dose change to catch this early. If your BP rises too much, the dose may be reduced or the medication switched.",
     },
     {
       question: "Why can't I miss even one dose?",
       answer:
-        "Venlafaxine has a very short half-life (about 5 hours for the parent drug). This means that within hours of a missed dose, your brain starts to feel the absence of the medicine — and withdrawal symptoms can begin: 'brain zaps', dizziness, nausea, irritability, vivid dreams. This is the worst withdrawal of any antidepressant. Always refill your prescription at least a week before you run out, and take your dose at the same time every day.",
+        "Venlafaxine has a very short half-life (about 5 hours for the parent drug). This means that within hours of a missed dose, your brain starts to feel the absence of the medicine, and withdrawal symptoms can begin: 'brain zaps', dizziness, nausea, irritability, vivid dreams. This is the worst withdrawal of any antidepressant. Always refill your prescription at least a week before you run out, and take your dose at the same time every day.",
     },
     {
       question: "What should I do if I run out of medication?",
       answer:
-        "Call your pharmacy or doctor IMMEDIATELY — do not wait. Even one missed dose can trigger withdrawal. If you're travelling, always carry a spare pack. If you absolutely cannot obtain more, contact your doctor who may be able to bridge you with a small supply of fluoxetine (a long-acting SSRI that can smooth the transition). Never stop abruptly.",
+        "Call your pharmacy or doctor IMMEDIATELY: do not wait. Even one missed dose can trigger withdrawal. If you're travelling, always carry a spare pack. If you absolutely cannot obtain more, contact your doctor who may be able to bridge you with a small supply of fluoxetine (a long-acting SSRI that can smooth the transition). Never stop abruptly.",
     },
     {
       question: "How is venlafaxine different from an SSRI like sertraline?",
       answer:
-        "Venlafaxine is an SNRI — it affects both serotonin AND norepinephrine. SSRIs affect only serotonin. This matters for two reasons: (1) the norepinephrine effect can help when SSRIs haven't worked, particularly for lethargic/low-energy depression and for neuropathic pain; (2) the norepinephrine effect also causes the two signature differences — it can raise blood pressure (SSRIs don't) and it causes worse withdrawal when stopped (the dual mechanism makes withdrawal more severe). At low doses (75–150 mg), venlafaxine actually behaves very much like an SSRI; the SNRI effect kicks in at higher doses.",
+        "Venlafaxine is an SNRI: it affects both serotonin AND norepinephrine. SSRIs affect only serotonin. This matters for two reasons: (1) the norepinephrine effect can help when SSRIs haven't worked, particularly for lethargic/low-energy depression and for neuropathic pain; (2) the norepinephrine effect also causes the two signature differences. It can raise blood pressure (SSRIs don't) and it causes worse withdrawal when stopped (the dual mechanism makes withdrawal more severe). At low doses (75–150 mg), venlafaxine actually behaves very much like an SSRI; the SNRI effect kicks in at higher doses.",
     },
     {
       question: "Will I gain or lose weight on venlafaxine?",
       answer:
-        "Unlike paroxetine or mirtazapine, venlafaxine tends to cause mild weight LOSS initially — particularly in the first 3–6 months. This can be welcome if you're overweight, but if you're already underweight or elderly, your doctor will monitor your weight. After the initial period, weight usually plateaus. If weight loss is problematic, switching to mirtazapine is an option.",
+        "Unlike paroxetine or mirtazapine, venlafaxine tends to cause mild weight LOSS initially, particularly in the first 3–6 months. This can be welcome if you're overweight, but if you're already underweight or elderly, your doctor will monitor your weight. After the initial period, weight usually plateaus. If weight loss is problematic, switching to mirtazapine is an option.",
     },
     {
       question: "How long does venlafaxine take to work?",
       answer:
-        "Some early changes (sleep, appetite, energy) can happen within 1–2 weeks, but clearer mood benefit typically takes 4–6 weeks or longer for depression. For anxiety disorders (GAD, social anxiety, panic), full effect may take 8–12 weeks. Don't stop early just because you don't feel better yet — and don't increase the dose on your own. Your doctor will assess response at 4–6 weeks and decide whether to escalate the dose (which also changes the mechanism — adding the norepinephrine effect).",
+        "Some early changes (sleep, appetite, energy) can happen within 1–2 weeks, but clearer mood benefit typically takes 4–6 weeks or longer for depression. For anxiety disorders (GAD, social anxiety, panic), full effect may take 8–12 weeks. Don't stop early just because you don't feel better yet, and don't increase the dose on your own. Your doctor will assess response at 4–6 weeks and decide whether to escalate the dose (which also changes the mechanism, adding the norepinephrine effect).",
     },
     {
       question: "Can I drink alcohol while taking venlafaxine?",
       answer:
-        "Alcohol can worsen sleep, mood, judgment, and medication tolerability — and combined with venlafaxine's already activating profile, it can worsen anxiety, insomnia, and BP. Best minimised or avoided, particularly during the first month. There is no 'safe' level that has been established, so the simplest advice is not to drink while you're stabilising on the medication.",
+        "Alcohol can worsen sleep, mood, judgment, and medication tolerability, and combined with venlafaxine's already activating profile, it can worsen anxiety, insomnia, and BP. Best minimised or avoided, particularly during the first month. There is no 'safe' level that has been established, so the simplest advice is not to drink while you're stabilising on the medication.",
     },
     {
       question: "What if I'm pregnant or breastfeeding?",
       answer:
-        "Venlafaxine is NOT the antidepressant of choice in pregnancy — sertraline is usually preferred. Venlafaxine has not been clearly linked to birth defects, but in the third trimester it can cause a more severe neonatal adaptation syndrome than SSRIs — and, uniquely, neonatal hypertension has been reported. If you're already on venlafaxine and become pregnant, do NOT stop suddenly (severe withdrawal). Talk to your obstetrician and psychiatrist together to weigh the risks of continuing against the risks of untreated depression and the risks of switching. For breastfeeding, sertraline is preferred; if venlafaxine is required, the lowest effective dose is used and the infant is monitored for sedation or poor feeding.",
+        "Venlafaxine is NOT the antidepressant of choice in pregnancy: sertraline is usually preferred. Venlafaxine has not been clearly linked to birth defects, but in the third trimester it can cause a more severe neonatal adaptation syndrome than SSRIs, and, uniquely, neonatal hypertension has been reported. If you're already on venlafaxine and become pregnant, do NOT stop suddenly (severe withdrawal). Talk to your obstetrician and psychiatrist together to weigh the risks of continuing against the risks of untreated depression and the risks of switching. For breastfeeding, sertraline is preferred; if venlafaxine is required, the lowest effective dose is used and the infant is monitored for sedation or poor feeding.",
     },
   ],
 
@@ -930,13 +930,13 @@ export const venlafaxine: Drug = {
       name: "Duloxetine",
       drugClass: "SNRI",
       relationship:
-        "Fellow SNRI — same dual SERT + NET mechanism, but balanced at all doses (no dose-dependent ratio). Duloxetine is FDA-approved for neuropathic pain, fibromyalgia, and chronic musculoskeletal pain — preferred SNRI when pain is the primary indication. Less hypertension risk than venlafaxine; less severe withdrawal.",
+        "Fellow SNRI: same dual SERT + NET mechanism, but balanced at all doses (no dose-dependent ratio). Duloxetine is FDA-approved for neuropathic pain, fibromyalgia, and chronic musculoskeletal pain: preferred SNRI when pain is the primary indication. Less hypertension risk than venlafaxine; less severe withdrawal.",
     },
     {
       name: "Desvenlafaxine (Pristiq)",
       drugClass: "SNRI",
       relationship:
-        "The active metabolite of venlafaxine (O-desmethylvenlafaxine, ODV) marketed as a separate drug. Same pharmacology but cleaner PK — less CYP2D6 dependence, lower inter-patient variability, no dose-dependent mechanism. 26 mg desvenlafaxine ≈ 75 mg venlafaxine.",
+        "The active metabolite of venlafaxine (O-desmethylvenlafaxine, ODV) marketed as a separate drug. Same pharmacology but cleaner PK: less CYP2D6 dependence, lower inter-patient variability, no dose-dependent mechanism. 26 mg desvenlafaxine ≈ 75 mg venlafaxine.",
     },
     {
       name: "Sertraline",
@@ -950,33 +950,33 @@ export const venlafaxine: Drug = {
       slug: "fluoxetine",
       drugClass: "SSRI",
       relationship:
-        "Critical partner in venlafaxine discontinuation — fluoxetine's long half-life (1–4 days with norfluoxetine) makes it the standard 'bridge' for the last 2 weeks of a venlafaxine taper. Self-tapers the patient off the serotonergic component smoothly.",
+        "Critical partner in venlafaxine discontinuation: fluoxetine's long half-life (1–4 days with norfluoxetine) makes it the standard 'bridge' for the last 2 weeks of a venlafaxine taper. Self-tapers the patient off the serotonergic component smoothly.",
     },
     {
       name: "Escitalopram",
       slug: "escitalopram",
       drugClass: "SSRI",
       relationship:
-        "Alternative SSRI — lowest CYP interaction profile, minimal BP effect. Useful comparator when selecting between an SSRI and an SNRI for uncomplicated depression/anxiety.",
+        "Alternative SSRI: lowest CYP interaction profile, minimal BP effect. Useful comparator when selecting between an SSRI and an SNRI for uncomplicated depression/anxiety.",
     },
     {
       name: "Paroxetine",
       slug: "paroxetine",
       drugClass: "SSRI",
       relationship:
-        "Comparator with the worst SSRI discontinuation (still milder than venlafaxine) and strong CYP2D6 inhibition — paroxetine would significantly raise venlafaxine levels if combined. Both drugs require slow tapers; neither is appropriate in pregnancy.",
+        "Comparator with the worst SSRI discontinuation (still milder than venlafaxine) and strong CYP2D6 inhibition: paroxetine would significantly raise venlafaxine levels if combined. Both drugs require slow tapers; neither is appropriate in pregnancy.",
     },
     {
       name: "Bupropion",
       drugClass: "NDRI",
       relationship:
-        "Augmentation partner. Norepinephrine-dopamine reuptake inhibitor. Adding 150 mg XL can augment partial venlafaxine response and may reverse venlafaxine-induced sexual dysfunction. Avoid in seizure disorder and eating disorders. Note: bupropion is a strong CYP2D6 inhibitor — raises venlafaxine levels.",
+        "Augmentation partner. Norepinephrine-dopamine reuptake inhibitor. Adding 150 mg XL can augment partial venlafaxine response and may reverse venlafaxine-induced sexual dysfunction. Avoid in seizure disorder and eating disorders. Note: bupropion is a strong CYP2D6 inhibitor; raises venlafaxine levels.",
     },
     {
       name: "Mirtazapine",
       drugClass: "NaSSA",
       relationship:
-        "Alternative for depression with severe insomnia/weight loss — sedating and appetite-stimulating (opposite of venlafaxine). Also useful as a low-dose (15–30 mg) night-time adjunct to venlafaxine to improve sleep and reduce nausea.",
+        "Alternative for depression with severe insomnia/weight loss: sedating and appetite-stimulating (opposite of venlafaxine). Also useful as a low-dose (15–30 mg) night-time adjunct to venlafaxine to improve sleep and reduce nausea.",
     },
   ],
 
@@ -998,36 +998,36 @@ export const venlafaxine: Drug = {
     { label: "Serotonin (5-HT)", type: "neurotransmitter", href: "#mechanism", note: "Affected at all doses" },
     { label: "Norepinephrine (NE)", type: "neurotransmitter", href: "#mechanism", note: "Affected above ~150 mg/day" },
     { label: "Dopamine (DA)", type: "neurotransmitter", href: "#mechanism", note: "Weak effect only at >300 mg/day" },
-    { label: "SERT (serotonin transporter)", type: "neurotransmitter", href: "#mechanism", note: "Primary target — high affinity" },
-    { label: "NET (norepinephrine transporter)", type: "neurotransmitter", href: "#mechanism", note: "Secondary target — lower affinity, dose-dependent" },
-    { label: "Dose-dependent mechanism", type: "class", href: "#mechanism", note: "Signature pharmacology — SERT → SERT+NET → SERT+NET+DAT" },
-    { label: "Hypertension", type: "side-effect", href: "#side-effects", note: "Signature dose-dependent risk — monitor BP" },
-    { label: "Discontinuation syndrome", type: "side-effect", href: "#side-effects", note: "Worst of any antidepressant — never miss a dose" },
+    { label: "SERT (serotonin transporter)", type: "neurotransmitter", href: "#mechanism", note: "Primary target: high affinity" },
+    { label: "NET (norepinephrine transporter)", type: "neurotransmitter", href: "#mechanism", note: "Secondary target. Lower affinity, dose-dependent" },
+    { label: "Dose-dependent mechanism", type: "class", href: "#mechanism", note: "Signature pharmacology. SERT → SERT+NET → SERT+NET+DAT" },
+    { label: "Hypertension", type: "side-effect", href: "#side-effects", note: "Signature dose-dependent risk: monitor BP" },
+    { label: "Discontinuation syndrome", type: "side-effect", href: "#side-effects", note: "Worst of any antidepressant, never miss a dose" },
     { label: "Raphe Nuclei", type: "brain-region", href: "#brain-regions", note: "Where serotonin is synthesised" },
     { label: "Prefrontal Cortex", type: "brain-region", href: "#brain-regions", note: "Target of mood + attention regulation (5-HT + NE)" },
     { label: "Depression", type: "condition", href: "#clinical-uses", note: "Primary indication" },
     { label: "Generalised Anxiety Disorder", type: "condition", href: "#clinical-uses", note: "FDA-approved" },
-    { label: "Neuropathic Pain", type: "condition", href: "#clinical-uses", note: "Off-label — NET blockade aids descending inhibition" },
+    { label: "Neuropathic Pain", type: "condition", href: "#clinical-uses", note: "Off-label. NET blockade aids descending inhibition" },
     { label: "Desvenlafaxine (Pristiq)", type: "drug", href: "#related-drugs", note: "Active metabolite ODV marketed separately" },
-    { label: "Patient Guide — Starting an SNRI", type: "patient-guide", href: "#patient-education", note: "Never miss a dose · check BP · taper slowly" },
+    { label: "Patient Guide. Starting an SNRI", type: "patient-guide", href: "#patient-education", note: "Never miss a dose · check BP · taper slowly" },
   ],
 
   /* ---- Patient mode content ---- */
   patientMode: {
     tagline:
-      "A medicine that helps your brain keep more of two mood-regulating chemicals (serotonin and norepinephrine) available for longer — used when an SSRI alone hasn't worked.",
+      "A medicine that helps your brain keep more of two mood-regulating chemicals (serotonin and norepinephrine) available for longer: used when an SSRI alone hasn't worked.",
     summary:
-      "Venlafaxine belongs to a class called SNRIs. Unlike SSRIs (which only affect serotonin), venlafaxine affects two brain chemicals — serotonin and norepinephrine. At low doses it acts mostly like an SSRI; at higher doses the norepinephrine effect kicks in, helping with energy, attention, and pain. This is why it can work when an SSRI hasn't. Two things make venlafaxine different from most antidepressants: it can raise your blood pressure (especially at higher doses), and it has the most severe withdrawal of any antidepressant — so you must never miss a dose and never stop it suddenly.",
+      "Venlafaxine belongs to a class called SNRIs. Unlike SSRIs (which only affect serotonin), venlafaxine affects two brain chemicals: serotonin and norepinephrine. At low doses it acts mostly like an SSRI; at higher doses the norepinephrine effect kicks in, helping with energy, attention, and pain. This is why it can work when an SSRI hasn't. Two things make venlafaxine different from most antidepressants: it can raise your blood pressure (especially at higher doses), and it has the most severe withdrawal of any antidepressant, so you must never miss a dose and never stop it suddenly.",
     mechanism:
-      "Your brain uses serotonin and norepinephrine to regulate mood, anxiety, sleep, energy, and attention. Normally, after these chemicals are released between nerve cells, they get quickly taken back up (recycled). Venlafaxine blocks this recycling, so more of both chemicals stays available between the nerve cells for longer. At lower doses (75–150 mg) it mainly affects serotonin; at higher doses (150–225 mg) it also affects norepinephrine, which is why dose increases can add new benefits (and new side effects). Over 4–6 weeks, this helps your brain's mood-regulation system work better — but it doesn't happen immediately.",
+      "Your brain uses serotonin and norepinephrine to regulate mood, anxiety, sleep, energy, and attention. Normally, after these chemicals are released between nerve cells, they get quickly taken back up (recycled). Venlafaxine blocks this recycling, so more of both chemicals stays available between the nerve cells for longer. At lower doses (75–150 mg) it mainly affects serotonin; at higher doses (150–225 mg) it also affects norepinephrine, which is why dose increases can add new benefits (and new side effects). Over 4–6 weeks, this helps your brain's mood-regulation system work better, but it doesn't happen immediately.",
     sideEffects:
-      "Most people get some side effects in the first 1–2 weeks — usually nausea, sweating, headache, trouble sleeping, or feeling a bit wired. These usually settle as your body adapts. Sexual side effects (lower interest or difficulty reaching orgasm) are common and can persist — talk to your doctor if this bothers you. The two signature things to know: (1) venlafaxine can raise your blood pressure, especially at higher doses — your doctor will check it regularly; (2) venlafaxine has the worst withdrawal of any antidepressant, so NEVER miss a dose and NEVER stop suddenly.",
+      "Most people get some side effects in the first 1–2 weeks: usually nausea, sweating, headache, trouble sleeping, or feeling a bit wired. These usually settle as your body adapts. Sexual side effects (lower interest or difficulty reaching orgasm) are common and can persist: talk to your doctor if this bothers you. The two signature things to know: (1) venlafaxine can raise your blood pressure, especially at higher doses; your doctor will check it regularly; (2) venlafaxine has the worst withdrawal of any antidepressant, so NEVER miss a dose and NEVER stop suddenly.",
     monitoring:
-      "Your doctor will check your blood pressure at baseline, 2 weeks, 4 weeks, and at every dose change — this is the signature monitoring for venlafaxine. You'll also have check-ins about your mood, especially in the first month (looking for any new or worsening agitation, irritability, or suicidal thoughts — particularly if you're under 25). You may be asked to fill in a short questionnaire (PHQ-9) so your progress can be tracked. If you're over 65, your doctor may check your blood sodium in the first 2 weeks. You can also check your BP at home twice weekly — keep a log to share with your clinician.",
+      "Your doctor will check your blood pressure at baseline, 2 weeks, 4 weeks, and at every dose change: this is the signature monitoring for venlafaxine. You'll also have check-ins about your mood, especially in the first month (looking for any new or worsening agitation, irritability, or suicidal thoughts, particularly if you're under 25). You may be asked to fill in a short questionnaire (PHQ-9) so your progress can be tracked. If you're over 65, your doctor may check your blood sodium in the first 2 weeks. You can also check your BP at home twice weekly: keep a log to share with your clinician.",
     contraindications:
-      "Don't take venlafaxine if you've taken a MAOI antidepressant in the last 14 days (dangerous combination). Don't take it if your blood pressure is uncontrolled — your BP must be controlled first. Tell your doctor about all other medicines you take — especially tramadol (pain), triptans (migraine), certain antibiotics like linezolid, cough syrups with dextromethorphan, herbal products like St John's Wort, decongestants (pseudoephedrine), and NSAIDs (ibuprofen, aspirin) — because venlafaxine interacts with all of these.",
+      "Don't take venlafaxine if you've taken a MAOI antidepressant in the last 14 days (dangerous combination). Don't take it if your blood pressure is uncontrolled: your BP must be controlled first. Tell your doctor about all other medicines you take, especially tramadol (pain), triptans (migraine), certain antibiotics like linezolid, cough syrups with dextromethorphan, herbal products like St John's Wort, decongestants (pseudoephedrine), and NSAIDs (ibuprofen, aspirin), because venlafaxine interacts with all of these.",
     interactions:
-      "The most important thing to know: NEVER stop venlafaxine suddenly or miss a dose — withdrawal can begin within hours and is severe ('brain zaps', dizziness, nausea, irritability). Always refill your prescription at least a week before you run out. The most dangerous combinations are with other medicines that affect serotonin (your doctor or pharmacist will check for these automatically) and with decongestants (which can push your BP up too high). Avoid alcohol or keep it to a minimum — it can worsen sleep, mood, and tolerability.",
+      "The most important thing to know: NEVER stop venlafaxine suddenly or miss a dose; withdrawal can begin within hours and is severe ('brain zaps', dizziness, nausea, irritability). Always refill your prescription at least a week before you run out. The most dangerous combinations are with other medicines that affect serotonin (your doctor or pharmacist will check for these automatically) and with decongestants (which can push your BP up too high). Avoid alcohol or keep it to a minimum: it can worsen sleep, mood, and tolerability.",
   },
 
   /* ---- India-first extensions ---- */
@@ -1045,9 +1045,9 @@ export const venlafaxine: Drug = {
     typicalDoses:
       "Depression: start 37.5mg XR OD × 7 days, then 75mg OD, titrate by 37.5–75mg every 1–2 weeks to 150–225mg OD (max 375mg). GAD/Social Anxiety/Panic: start 37.5mg XR OD, titrate to 75–225mg. In Indian private practice, doses above 225mg are uncommon due to BP concerns and cost; if depression is treatment-resistant, psychiatrists may push to 300–375mg with strict BP monitoring. The XR formulation is overwhelmingly preferred over IR for tolerability and adherence.",
     prescribingScenarios: [
-      "Second-line after SSRI failure in depression — especially when anergic/lethargic features predominate (noradrenergic benefit).",
+      "Second-line after SSRI failure in depression, especially when anergic/lethargic features predominate (noradrenergic benefit).",
       "First-line SNRI choice in depression with comorbid generalized anxiety (broadest anxiety approval among SNRIs).",
-      "Preferred antidepressant in breast-cancer survivors on tamoxifen with vasomotor symptoms — weak CYP2D6 inhibition (unlike paroxetine) does not reduce tamoxifen activation.",
+      "Preferred antidepressant in breast-cancer survivors on tamoxifen with vasomotor symptoms: weak CYP2D6 inhibition (unlike paroxetine) does not reduce tamoxifen activation.",
       "Used off-label for diabetic neuropathy and fibromyalgia when duloxetine is unavailable or not tolerated.",
       "Sometimes chosen in treatment-resistant depression to push to high-dose (>300mg) for the weak DAT effect.",
     ],
@@ -1056,7 +1056,7 @@ export const venlafaxine: Drug = {
       privatePharmacies: true,
       urban: true,
       rural: false,
-      note: "NOT routinely available in government hospital formularies or District Mental Health Programme (DMHP) centres — SSRIs (sertraline, fluoxetine) are preferred in government settings due to cost and BP monitoring requirements. Widely available in urban private pharmacies. Rural availability is limited; patients may need to travel to district headquarters.",
+      note: "NOT routinely available in government hospital formularies or District Mental Health Programme (DMHP) centres. SSRIs (sertraline, fluoxetine) are preferred in government settings due to cost and BP monitoring requirements. Widely available in urban private pharmacies. Rural availability is limited; patients may need to travel to district headquarters.",
     },
     costCategory: "moderate",
     costNote: "Venlafaxine XR is moderately expensive in India compared to SSRIs. Branded Veniz/Ventab cost approximately ₹8–15 per 75mg XR capsule; Effexor XR (innovator) costs ₹25–40 per capsule. Generic venlafaxine is available but less commonly stocked than generic SSRIs. NOT commonly available in Jan Aushadhi Kendras. Cost is a barrier for long-term use in low-income patients.",
@@ -1064,15 +1064,15 @@ export const venlafaxine: Drug = {
       "Blood pressure monitoring is the signature requirement and is often the limiting factor in government hospital use (where BP cuffs and follow-up capacity are constrained). Schedule: baseline BP, then at 2 weeks, 4 weeks, and every dose change. Above 150mg/day, BP should be checked at every visit. PHQ-9 for mood response. In elderly: serum sodium in first 2 weeks (SIADH risk). ECG not routine unless cardiac disease. In private practice, home BP monitoring with a log is encouraged. Patients must be counselled to never miss a dose (withdrawal within hours).",
     patientCounselling: [
       "Take the XR capsule once daily, ideally in the morning with food, at the same time every day. Do NOT crush, chew, or open the capsule.",
-      "NEVER miss a dose — venlafaxine has the worst withdrawal of any antidepressant and symptoms can start within hours of a missed dose ('brain zaps', dizziness, nausea, irritability).",
-      "NEVER stop suddenly — your doctor will taper the dose slowly over weeks to months. Even then, you may feel withdrawal symptoms.",
-      "Your blood pressure will be checked regularly — venlafaxine can raise BP, especially at higher doses. If you have a BP machine at home, check and log it twice weekly.",
+      "NEVER miss a dose: venlafaxine has the worst withdrawal of any antidepressant and symptoms can start within hours of a missed dose ('brain zaps', dizziness, nausea, irritability).",
+      "NEVER stop suddenly: your doctor will taper the dose slowly over weeks to months. Even then, you may feel withdrawal symptoms.",
+      "Your blood pressure will be checked regularly: venlafaxine can raise BP, especially at higher doses. If you have a BP machine at home, check and log it twice weekly.",
       "It may take 4–6 weeks to feel the full benefit on mood. At higher doses (above 150mg) you may notice more energy and alertness sooner.",
-      "Avoid alcohol — it can worsen mood, sleep, and BP.",
+      "Avoid alcohol: it can worsen mood, sleep, and BP.",
       "Common side effects in the first 1–2 weeks: nausea, sweating (especially night sweats), headache, trouble sleeping, dry mouth, decreased appetite. These usually settle.",
-      "Sexual side effects (reduced interest, difficulty reaching orgasm) are common — talk to your doctor if this bothers you.",
+      "Sexual side effects (reduced interest, difficulty reaching orgasm) are common: talk to your doctor if this bothers you.",
       "If you feel worse, more agitated, or have new suicidal thoughts in the first month, contact your doctor immediately or call Tele-MANAS at 14416.",
-      "If you run out of medicine, get your refill BEFORE you take your last capsule — even one missed dose can cause withdrawal. Keep a buffer stock of a few days.",
+      "If you run out of medicine, get your refill BEFORE you take your last capsule, even one missed dose can cause withdrawal. Keep a buffer stock of a few days.",
     ],
   },
 
@@ -1080,7 +1080,7 @@ export const venlafaxine: Drug = {
   cbmeMapping: {
     subject: "Pharmacology",
     mbbsYear: "Second Professional",
-    topic: "Drugs acting on Central Nervous System — Antidepressants (SNRIs)",
+    topic: "Drugs acting on Central Nervous System. Antidepressants (SNRIs)",
     competencyCodes: ["PH7.3", "PH7.4", "PY3.2"],
     competencyDescriptions: [
       "PH7.3: Describe the mechanism of action, pharmacological actions, adverse effects, contraindications, and therapeutic uses of antidepressant drugs with emphasis on SNRIs and dose-dependent pharmacology.",
@@ -1096,13 +1096,13 @@ export const venlafaxine: Drug = {
       viva: [
         "What is the mechanism of action of venlafaxine? (Dose-dependent: SERT blockade at 75mg, +NET at 150–225mg, +weak DAT >300mg. This is THE signature pharmacology.)",
         "Why does venlafaxine cause hypertension? (NET blockade at peripheral sympathetic synapses raises NE → vasoconstriction → dose-dependent BP elevation in 10–15% at >300mg.)",
-        "What is the active metabolite of venlafaxine and how is it related to desvenlafaxine? (O-desmethylvenlafaxine / ODV — pharmacologically equivalent, created by CYP2D6. Desvenlafaxine (Pristiq) is ODV marketed directly.)",
+        "What is the active metabolite of venlafaxine and how is it related to desvenlafaxine? (O-desmethylvenlafaxine / ODV, pharmacologically equivalent, created by CYP2D6. Desvenlafaxine (Pristiq) is ODV marketed directly.)",
         "Why is venlafaxine's discontinuation syndrome the worst of any antidepressant? (Short parent half-life ~5h, dual SERT+NET withdrawal, symptoms within hours of missed dose. Taper must be slow.)",
-        "Name 4 FDA-approved indications for venlafaxine. (MDD, GAD, Social Anxiety Disorder, Panic Disorder — broader anxiety approval than most SSRIs.)",
+        "Name 4 FDA-approved indications for venlafaxine. (MDD, GAD, Social Anxiety Disorder, Panic Disorder, broader anxiety approval than most SSRIs.)",
         "How do you monitor a patient on venlafaxine? (BP at baseline, 2w, 4w, every dose change. Above 150mg, BP every visit. PHQ-9 for mood. Sodium in elderly.)",
       ],
       practical: [
-        "Counsel a patient starting venlafaxine XR for depression with SSRI failure — address BP monitoring, never missing a dose, and discontinuation.",
+        "Counsel a patient starting venlafaxine XR for depression with SSRI failure: address BP monitoring, never missing a dose, and discontinuation.",
         "Write a prescription for venlafaxine XR for a 40-year-old with GAD (start 37.5mg OD × 7d, then 75mg OD).",
         "Explain the dose-dependent pharmacology of venlafaxine using a graph/diagram (SERT at 75mg, +NET at 150–225mg, +DAT >300mg).",
         "Describe the tapering schedule for a patient on venlafaxine 225mg XR who wants to stop (reduce by 37.5mg every 1–2 weeks; consider fluoxetine bridge).",
@@ -1117,35 +1117,35 @@ export const venlafaxine: Drug = {
         "Venlafaxine = dose-dependent SNRI: 75mg = SERT only (SSRI-like), 150–225mg = +NET (true SNRI), >300mg = +weak DAT. THE most tested SNRI concept.",
         "Venlafaxine = worst discontinuation syndrome of any antidepressant (short half-life 5h, dual withdrawal). Taper slowly; can bridge with fluoxetine.",
         "Dose-dependent hypertension: 10–15% of patients at >300mg. BP must be monitored at every dose change. Uncontrolled HTN = absolute contraindication.",
-        "Active metabolite = O-desmethylvenlafaxine (ODV), created by CYP2D6. ODV is marketed separately as desvenlafaxine (Pristiq) — same molecule, cleaner PK.",
+        "Active metabolite = O-desmethylvenlafaxine (ODV), created by CYP2D6. ODV is marketed separately as desvenlafaxine (Pristiq): same molecule, cleaner PK.",
         "4 FDA indications: MDD, GAD, Social Anxiety, Panic. Broader anxiety approval than most SSRIs.",
-        "Preferred antidepressant in breast-cancer survivors on tamoxifen with hot flushes — weak CYP2D6 inhibition (unlike paroxetine which reduces tamoxifen activation).",
-        "Half-life: venlafaxine ~5h, ODV ~11h. Combined effective ~8–10h — missed doses cause withdrawal within hours.",
+        "Preferred antidepressant in breast-cancer survivors on tamoxifen with hot flushes: weak CYP2D6 inhibition (unlike paroxetine which reduces tamoxifen activation).",
+        "Half-life: venlafaxine ~5h, ODV ~11h. Combined effective ~8–10h: missed doses cause withdrawal within hours.",
         "Off-label uses: diabetic neuropathy, fibromyalgia, hot flushes (menopause + breast cancer), cataplexy.",
-        "CYP2D6 poor metabolisers (5–10% of Indians): higher parent, lower ODV — total exposure preserved but worse tolerability (higher peak parent).",
+        "CYP2D6 poor metabolisers (5–10% of Indians): higher parent, lower ODV; total exposure preserved but worse tolerability (higher peak parent).",
         "Venlafaxine vs duloxetine: venlafaxine = dose-dependent, worst withdrawal, BP issue; duloxetine = balanced from dose 1, hepatotoxicity, pain FDA-approved.",
       ],
       pyqConcepts: [
-        "NEET PG 2022: Which antidepressant has the worst discontinuation syndrome? (Answer: Venlafaxine — short half-life + dual withdrawal.)",
+        "NEET PG 2022: Which antidepressant has the worst discontinuation syndrome? (Answer: Venlafaxine, short half-life + dual withdrawal.)",
         "NEET PG 2021: A patient on venlafaxine 225mg develops sustained BP 150/96. What is the mechanism? (Answer: NET blockade at peripheral sympathetic synapses → ↑NE → vasoconstriction. Manage: reduce dose, add/adjust antihypertensive, consider switch.)",
         "NEET PG 2020: The dose-dependent pharmacology of venlafaxine is best described as: (Answer: SERT at 75mg, SERT+NET at 150–225mg, SERT+NET+DAT >300mg.)",
-        "NEET PG 2019: Active metabolite of venlafaxine? (Answer: O-desmethylvenlafaxine / ODV — same as desvenlafaxine (Pristiq).)",
-        "INICET 2021: A breast cancer survivor on tamoxifen develops hot flushes. Which antidepressant is preferred? (Answer: Venlafaxine — weak CYP2D6 inhibition, doesn't reduce tamoxifen activation. Avoid paroxetine/fluoxetine.)",
+        "NEET PG 2019: Active metabolite of venlafaxine? (Answer: O-desmethylvenlafaxine / ODV, same as desvenlafaxine (Pristiq).)",
+        "INICET 2021: A breast cancer survivor on tamoxifen develops hot flushes. Which antidepressant is preferred? (Answer: Venlafaxine, weak CYP2D6 inhibition, doesn't reduce tamoxifen activation. Avoid paroxetine/fluoxetine.)",
       ],
     },
     inicet: {
       clinicalReasoning: [
-        "A 40-year-old with MDD failed sertraline 200mg for 12 weeks (PHQ-9 18→12). How do you proceed? (Answer: Switch to venlafaxine XR — start 37.5mg × 7d then 75mg, titrate to 150–225mg. Cross-taper: taper sertraline over 1–2 weeks while initiating venlafaxine. Monitor BP.)",
-        "A patient on venlafaxine 225mg XR for 6 months is in remission and wants to stop. How do you counsel? (Answer: Taper slowly over 4–8 weeks minimum — reduce by 37.5mg every 1–2 weeks. Even with slow taper, withdrawal symptoms ('brain zaps', dizziness, irritability) are common. Consider fluoxetine 20mg bridge for last 2 weeks. Counsel: never miss doses during taper.)",
+        "A 40-year-old with MDD failed sertraline 200mg for 12 weeks (PHQ-9 18→12). How do you proceed? (Answer: Switch to venlafaxine XR, start 37.5mg × 7d then 75mg, titrate to 150–225mg. Cross-taper: taper sertraline over 1–2 weeks while initiating venlafaxine. Monitor BP.)",
+        "A patient on venlafaxine 225mg XR for 6 months is in remission and wants to stop. How do you counsel? (Answer: Taper slowly over 4–8 weeks minimum, reduce by 37.5mg every 1–2 weeks. Even with slow taper, withdrawal symptoms ('brain zaps', dizziness, irritability) are common. Consider fluoxetine 20mg bridge for last 2 weeks. Counsel: never miss doses during taper.)",
         "A 55-year-old on venlafaxine 300mg for TRD develops BP 152/98 (baseline 124/80). What is the management? (Answer: Dose-dependent hypertension. Options: (1) reduce venlafaxine to 225mg and reassess, (2) add antihypertensive (amlodipine), (3) switch to duloxetine (less BP effect). Do not stop abruptly.)",
-        "A patient on venlafaxine 150mg XR missed two doses and presents with dizziness, nausea, 'brain zaps', and irritability. Diagnosis? (Answer: Venlafaxine discontinuation syndrome — onset within hours due to short half-life. Management: take the missed dose immediately, resume regular schedule, counsel on never missing a dose.)",
+        "A patient on venlafaxine 150mg XR missed two doses and presents with dizziness, nausea, 'brain zaps', and irritability. Diagnosis? (Answer: Venlafaxine discontinuation syndrome, onset within hours due to short half-life. Management: take the missed dose immediately, resume regular schedule, counsel on never missing a dose.)",
       ],
     },
     fmge: {
       frequentlyTested: [
         "Venlafaxine mechanism: dose-dependent SERT + NET (and weak DAT at high dose).",
-        "Worst discontinuation syndrome of any antidepressant — short half-life (5h), dual withdrawal.",
-        "Dose-dependent hypertension — monitor BP at every dose change.",
+        "Worst discontinuation syndrome of any antidepressant: short half-life (5h), dual withdrawal.",
+        "Dose-dependent hypertension: monitor BP at every dose change.",
         "Active metabolite: O-desmethylvenlafaxine (ODV) = desvenlafaxine (Pristiq).",
         "4 FDA indications: MDD, GAD, Social Anxiety, Panic Disorder.",
         "Metabolism: CYP2D6 (O-demethylation to ODV).",
@@ -1157,12 +1157,12 @@ export const venlafaxine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The dose-dependent SERT:NET:DAT ratio is unique to venlafaxine among SNRIs — duloxetine has balanced SERT+NET from dose 1, milnacipran has a fixed ratio. This means venlafaxine is the only SNRI where dose titration changes the pharmacology, not just the magnitude.",
-        "Treatment-resistant depression algorithm: after 2 SSRI failures, venlafaxine is a rational next step. The noradrenergic component addresses anergic/lethargic depression that SSRIs may miss. Pushing to 300–375mg adds the weak DAT effect — modest but sometimes decisive in TRD.",
+        "The dose-dependent SERT:NET:DAT ratio is unique to venlafaxine among SNRIs; duloxetine has balanced SERT+NET from dose 1, milnacipran has a fixed ratio. This means venlafaxine is the only SNRI where dose titration changes the pharmacology, not just the magnitude.",
+        "Treatment-resistant depression algorithm: after 2 SSRI failures, venlafaxine is a rational next step. The noradrenergic component addresses anergic/lethargic depression that SSRIs may miss. Pushing to 300–375mg adds the weak DAT effect: modest but sometimes decisive in TRD.",
         "Discontinuation management: venlafaxine's short half-life makes tapering brutal. Practical strategy: (1) convert to XR if on IR, (2) reduce by 37.5mg every 1–2 weeks, (3) at 37.5mg, substitute fluoxetine 20mg for 2 weeks then stop fluoxetine (self-tapers). Some patients need months to taper.",
         "BP monitoring: sustained elevation >10mmHg from baseline at any dose warrants attention. Above 150mg/day, check BP every visit. Above 300mg, consider home BP log. If BP uncontrolled despite dose reduction, switch to duloxetine or mirtazapine.",
-        "CYP2D6 poor metabolisers (5–10% of Indians) have higher parent venlafaxine and lower ODV. Total pharmacodynamic exposure is roughly preserved (parent and metabolite are equipotent), but tolerability may be worse due to higher peak parent concentrations — particularly nausea and CNS effects.",
-        "In breast-cancer survivors on tamoxifen, paroxetine and fluoxetine (strong CYP2D6 inhibitors) reduce tamoxifen activation to endoxifen and increase recurrence risk. Venlafaxine is the preferred antidepressant in this setting because of weak CYP2D6 inhibition — and it also treats tamoxifen-induced hot flushes at 37.5–75mg/day.",
+        "CYP2D6 poor metabolisers (5–10% of Indians) have higher parent venlafaxine and lower ODV. Total pharmacodynamic exposure is roughly preserved (parent and metabolite are equipotent), but tolerability may be worse due to higher peak parent concentrations, particularly nausea and CNS effects.",
+        "In breast-cancer survivors on tamoxifen, paroxetine and fluoxetine (strong CYP2D6 inhibitors) reduce tamoxifen activation to endoxifen and increase recurrence risk. Venlafaxine is the preferred antidepressant in this setting because of weak CYP2D6 inhibition, and it also treats tamoxifen-induced hot flushes at 37.5–75mg/day.",
         "Desvenlafaxine (Pristiq) is the active metabolite ODV marketed directly. Advantages: no CYP2D6 dependence, lower inter-patient variability, slightly cleaner PK. Disadvantages: cost, limited dose flexibility. Clinically, venlafaxine and desvenlafaxine are nearly interchangeable.",
       ],
     },
@@ -1182,28 +1182,28 @@ export const venlafaxine: Drug = {
       internationalSource: "FDA Effexor XR label",
       internationalRecommendation: "Regular BP monitoring is recommended, particularly at doses above 150mg/day. Sustained BP elevation (≥10mmHg from baseline) occurs in 10–15% at high doses. Pre-existing hypertension must be controlled before initiation.",
       indianSource: null,
-      indianRecommendation: "No dedicated IPS guideline on venlafaxine BP monitoring. In Indian practice, BP monitoring is the signature safety requirement but is inconsistently applied — particularly in government settings where follow-up capacity is limited. This is a key reason venlafaxine is NOT in DMHP formularies. Current section reflects FDA label and accepted clinical practice.",
+      indianRecommendation: "No dedicated IPS guideline on venlafaxine BP monitoring. In Indian practice, BP monitoring is the signature safety requirement but is inconsistently applied, particularly in government settings where follow-up capacity is limited. This is a key reason venlafaxine is NOT in DMHP formularies. Current section reflects FDA label and accepted clinical practice.",
     },
     {
       topic: "Discontinuation syndrome management",
       internationalSource: "APA / Maudsley Prescribing Guidelines",
       internationalRecommendation: "Venlafaxine has the most severe discontinuation syndrome of any antidepressant. Taper over 4+ weeks minimum (often months for long-term users). Fluoxetine bridging for the last 2 weeks of taper is a recognised strategy. Patients must be warned never to miss a dose.",
       indianSource: "Indian Psychiatric Society (IPS)",
-      indianRecommendation: "IPS acknowledges the severe discontinuation risk. In Indian practice, patient counselling on never missing a dose is critical — particularly given the risk of stock-outs in rural pharmacies. Fluoxetine bridging is used by psychiatrists but is less familiar to non-specialists.",
+      indianRecommendation: "IPS acknowledges the severe discontinuation risk. In Indian practice, patient counselling on never missing a dose is critical, particularly given the risk of stock-outs in rural pharmacies. Fluoxetine bridging is used by psychiatrists but is less familiar to non-specialists.",
     },
     {
       topic: "Use in pregnancy",
       internationalSource: "FDA / APA",
-      internationalRecommendation: "Venlafaxine is not the SSRI/SNRI of choice in pregnancy — sertraline is preferred. Venlafaxine is FDA Category C. Third-trimester use associated with neonatal adaptation syndrome. Use only if benefit justifies risk, particularly in the 3rd trimester.",
+      internationalRecommendation: "Venlafaxine is not the SSRI/SNRI of choice in pregnancy: sertraline is preferred. Venlafaxine is FDA Category C. Third-trimester use associated with neonatal adaptation syndrome. Use only if benefit justifies risk, particularly in the 3rd trimester.",
       indianSource: "Indian Psychiatric Society (IPS)",
-      indianRecommendation: "IPS concurs — sertraline remains first-line in pregnancy. Venlafaxine is reserved for SSRI-resistant depression in pregnancy where the risk of untreated depression outweighs medication risk. Involve obstetrician.",
+      indianRecommendation: "IPS concurs: sertraline remains first-line in pregnancy. Venlafaxine is reserved for SSRI-resistant depression in pregnancy where the risk of untreated depression outweighs medication risk. Involve obstetrician.",
     },
     {
       topic: "Use in neuropathic pain",
       internationalSource: "FDA / NICE Neuropathic Pain Guideline",
       internationalRecommendation: "Duloxetine is FDA-approved for diabetic peripheral neuropathic pain. Venlafaxine is used off-label but has evidence. NICE neuropathic pain guideline places duloxetine, amitriptyline, pregabalin, gabapentin as first-line; venlafaxine is not in the algorithm.",
       indianSource: "Indian Psychiatric Society (IPS) / IAS Pain Guidelines",
-      indianRecommendation: "In Indian practice, venlafaxine is used off-label for neuropathic pain when comorbid depression/anxiety is present — duloxetine is preferred when pain is the primary indication. Cost considerations favour duloxetine where available.",
+      indianRecommendation: "In Indian practice, venlafaxine is used off-label for neuropathic pain when comorbid depression/anxiety is present: duloxetine is preferred when pain is the primary indication. Cost considerations favour duloxetine where available.",
     },
   ],
 
@@ -1289,11 +1289,11 @@ export const venlafaxine: Drug = {
     ],
     indian: [
       { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS guidelines position SSRIs as first-line and SNRIs as second-line. Venlafaxine is the most commonly prescribed SNRI in Indian private practice for SSRI-resistant depression." },
-      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS acknowledges the dose-dependent BP risk and severe discontinuation syndrome — counselling on never missing a dose is emphasised." },
+      { source: "Indian Psychiatric Society (IPS)", recommendation: "IPS acknowledges the dose-dependent BP risk and severe discontinuation syndrome: counselling on never missing a dose is emphasised." },
       { source: null, recommendation: "No dedicated IPS guideline on venlafaxine BP monitoring frequency. Current section reflects FDA label and accepted clinical practice." },
     ],
     indianClinicalPractice:
-      "In Indian private practice, venlafaxine is the most prescribed SNRI, used primarily as second-line after SSRI failure and for depression with comorbid anxiety. It is NOT in government hospital or DMHP formularies due to cost (3–5× more expensive than generic SSRIs) and the BP monitoring requirement that government follow-up capacity cannot reliably support. Starting dose is 37.5mg XR OD (lower than Western 75mg start) to minimise early nausea and activation, titrated to 75–150mg over 1–2 weeks. Doses above 225mg are uncommon in India due to BP concerns and cost. The XR formulation is overwhelmingly preferred. Rural availability is limited — patients in remote areas may face stock-outs, which is dangerous given the withdrawal risk. Counselling on never missing a dose and carrying a buffer stock is critical.",
+      "In Indian private practice, venlafaxine is the most prescribed SNRI, used primarily as second-line after SSRI failure and for depression with comorbid anxiety. It is NOT in government hospital or DMHP formularies due to cost (3–5× more expensive than generic SSRIs) and the BP monitoring requirement that government follow-up capacity cannot reliably support. Starting dose is 37.5mg XR OD (lower than Western 75mg start) to minimise early nausea and activation, titrated to 75–150mg over 1–2 weeks. Doses above 225mg are uncommon in India due to BP concerns and cost. The XR formulation is overwhelmingly preferred. Rural availability is limited: patients in remote areas may face stock-outs, which is dangerous given the withdrawal risk. Counselling on never missing a dose and carrying a buffer stock is critical.",
   },
 
   /* Indian encounter context — where you'll see this drug */
@@ -1305,26 +1305,26 @@ export const venlafaxine: Drug = {
     medicalColleges:
       "Teaching drug for SNRI pharmacology and the concept of dose-dependent receptor binding. Featured in pharmacology practicals (prescription writing, dose-titration planning). Examined in second professional MBBS (pharmacology) and final professional (psychiatry). Commonly featured in NEET PG and INICET questions on dose-dependent pharmacology and discontinuation syndrome.",
     primaryCare:
-      "Infrequently initiated in primary care — most GPs prefer SSRIs as first-line. Venlafaxine is usually started by psychiatrists after SSRI failure. GPs may continue prescriptions initiated by specialists but must be aware of BP monitoring and withdrawal risk.",
+      "Infrequently initiated in primary care, most GPs prefer SSRIs as first-line. Venlafaxine is usually started by psychiatrists after SSRI failure. GPs may continue prescriptions initiated by specialists but must be aware of BP monitoring and withdrawal risk.",
     psychiatryOPD:
-      "Second-line antidepressant in psychiatry OPD. Used after 1–2 SSRI failures, in TRD escalation (push to 300–375mg with BP monitoring), for comorbid depression + anxiety, and for hot flushes in breast-cancer survivors. Often combined with CBT. Tapering is a major OPD activity — patients need slow tapers and fluoxetine bridging.",
+      "Second-line antidepressant in psychiatry OPD. Used after 1–2 SSRI failures, in TRD escalation (push to 300–375mg with BP monitoring), for comorbid depression + anxiety, and for hot flushes in breast-cancer survivors. Often combined with CBT. Tapering is a major OPD activity: patients need slow tapers and fluoxetine bridging.",
   },
 
   /* Indian prescription workflow */
   prescriptionWorkflow: {
     beforePrescribing: [
-      "Screen for bipolar disorder (MDQ) — SNRIs can trigger manic switch.",
-      "Assess suicidal ideation — involve family for monitoring; provide Tele-MANAS (14416) number.",
-      "Check for MAOI use in last 14 days — absolute contraindication.",
-      "Measure baseline blood pressure — if uncontrolled HTN, control first or choose alternative. Document baseline BP for comparison.",
-      "Review concurrent medications — tramadol, triptans, NSAIDs, warfarin, St John's Wort, other serotonergic drugs.",
-      "Check renal function (CrCl) — dose reduction required in renal impairment.",
-      "Check hepatic function — dose reduction in mild-moderate hepatic impairment; avoid in severe.",
-      "Counsel about 4–6 week onset AND the critical 'never miss a dose' rule — set expectation that withdrawal can begin within hours.",
+      "Screen for bipolar disorder (MDQ). SNRIs can trigger manic switch.",
+      "Assess suicidal ideation: involve family for monitoring; provide Tele-MANAS (14416) number.",
+      "Check for MAOI use in last 14 days: absolute contraindication.",
+      "Measure baseline blood pressure, if uncontrolled HTN, control first or choose alternative. Document baseline BP for comparison.",
+      "Review concurrent medications: tramadol, triptans, NSAIDs, warfarin, St John's Wort, other serotonergic drugs.",
+      "Check renal function (CrCl): dose reduction required in renal impairment.",
+      "Check hepatic function: dose reduction in mild-moderate hepatic impairment; avoid in severe.",
+      "Counsel about 4–6 week onset AND the critical 'never miss a dose' rule: set expectation that withdrawal can begin within hours.",
     ],
     duringTreatment: [
       "Week 1: assess tolerability (nausea, sweating, insomnia) and activation. Reassure these settle.",
-      "Week 2: check BP (signature monitoring) and early response — sleep, appetite, energy often improve before mood.",
+      "Week 2: check BP (signature monitoring) and early response; sleep, appetite, energy often improve before mood.",
       "Week 4: assess response with PHQ-9. If <30% reduction, increase dose by 37.5–75mg.",
       "Week 6–12: full response assessment. If <50% reduction at 12 weeks, consider further titration to 225–300mg, augmentation (mirtazapine, bupropion), or switch.",
       "BP at every dose change AND every visit above 150mg/day. If sustained BP elevation >10mmHg, reduce dose or add antihypertensive.",
@@ -1344,10 +1344,10 @@ export const venlafaxine: Drug = {
       "Refer to psychiatrist if no response to venlafaxine 225mg after 12 weeks (consider TRD algorithm).",
       "Refer urgently if suicidal ideation emerges or worsens.",
       "Refer if bipolar disorder is suspected (manic switch risk).",
-      "Refer if serotonin syndrome develops (emergency — call 112).",
+      "Refer if serotonin syndrome develops (emergency, call 112).",
       "Refer to physician if sustained BP elevation despite dose reduction or antihypertensives.",
       "Refer if severe hyponatraemia (Na <120 mmol/L) or seizures.",
-      "Refer to obstetrician if patient becomes pregnant (do NOT stop venlafaxine abruptly — cross-taper to sertraline with obstetric input).",
+      "Refer to obstetrician if patient becomes pregnant (do NOT stop venlafaxine abruptly, cross-taper to sertraline with obstetric input).",
     ],
   },
 
@@ -1375,8 +1375,8 @@ export const venlafaxine: Drug = {
   indianComparisonContexts: [
     {
       scenario: "Government hospital setup",
-      recommendation: "Venlafaxine is NOT preferred — SSRIs (sertraline, fluoxetine) are first-line due to cost, BP monitoring capacity, and DMHP availability. Venlafaxine use is exceptional.",
-      alternative: "If an SNRI is essential, consider generic duloxetine if available — but cost still limits use vs SSRIs.",
+      recommendation: "Venlafaxine is NOT preferred. SSRIs (sertraline, fluoxetine) are first-line due to cost, BP monitoring capacity, and DMHP availability. Venlafaxine use is exceptional.",
+      alternative: "If an SNRI is essential, consider generic duloxetine if available, but cost still limits use vs SSRIs.",
     },
     {
       scenario: "Private psychiatry practice (SSRI-resistant depression)",
@@ -1385,12 +1385,12 @@ export const venlafaxine: Drug = {
     },
     {
       scenario: "Depression with comorbid anxiety (GAD/Social/Panic)",
-      recommendation: "Venlafaxine XR is preferred — broadest anxiety approval among SNRIs (GAD, Social Anxiety, Panic). Onset 4–6 weeks for depression, 8–12 weeks for full anxiolytic effect.",
+      recommendation: "Venlafaxine XR is preferred: broadest anxiety approval among SNRIs (GAD, Social Anxiety, Panic). Onset 4–6 weeks for depression, 8–12 weeks for full anxiolytic effect.",
       alternative: "Sertraline or escitalopram (SSRIs) for first-line. Duloxetine for GAD if comorbid pain.",
     },
     {
       scenario: "Breast cancer survivor on tamoxifen with hot flushes",
-      recommendation: "Venlafaxine 37.5–75mg/day is the antidepressant of choice — weak CYP2D6 inhibition does not reduce tamoxifen activation to endoxifen. Also treats hot flushes effectively.",
+      recommendation: "Venlafaxine 37.5–75mg/day is the antidepressant of choice: weak CYP2D6 inhibition does not reduce tamoxifen activation to endoxifen. Also treats hot flushes effectively.",
       alternative: "Avoid paroxetine and fluoxetine (strong CYP2D6 inhibitors). Gabapentin or clonidine if antidepressant not desired.",
     },
     {
@@ -1443,16 +1443,16 @@ export const venlafaxine: Drug = {
     nodes: [
       {
         id: "start",
-        question: "Patient with depression — has SSRI been tried?",
+        question: "Patient with depression: has SSRI been tried?",
         branches: [
-          { label: "No — first episode", next: "first-line" },
-          { label: "Yes — 1 SSRI failed", next: "ssri-failed" },
-          { label: "Yes — 2+ SSRIs failed (TRD)", next: "trd" },
+          { label: "No: first episode", next: "first-line" },
+          { label: "Yes: 1 SSRI failed", next: "ssri-failed" },
+          { label: "Yes: 2+ SSRIs failed (TRD)", next: "trd" },
         ],
       },
       {
         id: "first-line",
-        question: "First-episode depression — is there a reason to choose SNRI over SSRI?",
+        question: "First-episode depression: is there a reason to choose SNRI over SSRI?",
         recommendation: "Default to SSRI (sertraline/escitalopram) per IPS and international guidelines. Consider venlafaxine only if anergic features predominate or comorbid GAD/Social Anxiety/Panic is severe.",
         reasoning: "SSRIs are first-line for first-episode depression due to lower cost, better safety profile, and wider availability. Venlafaxine adds BP risk and withdrawal risk without clear first-line advantage.",
         branches: [
@@ -1493,18 +1493,18 @@ export const venlafaxine: Drug = {
         id: "high-dose-venlafaxine",
         question: "High-dose venlafaxine (225–375mg) for TRD",
         recommendation: "Titrate by 75mg every 1–2 weeks to 300–375mg. Check BP every visit. If sustained BP elevation, reduce dose or add amlodipine. Consider augmentation if partial response.",
-        reasoning: "High-dose venlafaxine adds weak DAT inhibition — modest but sometimes decisive in TRD. BP monitoring is non-negotiable.",
+        reasoning: "High-dose venlafaxine adds weak DAT inhibition: modest but sometimes decisive in TRD. BP monitoring is non-negotiable.",
       },
       {
         id: "consider-duloxetine",
         question: "Duloxetine may be preferable when",
-        recommendation: "Comorbid neuropathic pain (FDA-approved), hepatic concerns manageable, BP is an issue (less BP effect than venlafaxine). Duloxetine is balanced SNRI from dose 1 — no dose-dependent titration needed.",
+        recommendation: "Comorbid neuropathic pain (FDA-approved), hepatic concerns manageable, BP is an issue (less BP effect than venlafaxine). Duloxetine is balanced SNRI from dose 1: no dose-dependent titration needed.",
         reasoning: "Duloxetine's balanced SERT+NET and pain indications make it preferred when pain is comorbid or when BP is a concern.",
       },
       {
         id: "avoid-first-line",
         question: "Why not Venlafaxine first-line?",
-        recommendation: "For first-episode uncomplicated depression, SSRIs are preferred — lower cost, better safety, no BP monitoring, milder discontinuation. Venlafaxine adds risk without clear benefit.",
+        recommendation: "For first-episode uncomplicated depression, SSRIs are preferred. Lower cost, better safety, no BP monitoring, milder discontinuation. Venlafaxine adds risk without clear benefit.",
         reasoning: "SSRIs are first-line per IPS and international guidelines. Venlafaxine is second-line.",
       },
       {
@@ -1533,10 +1533,10 @@ export const venlafaxine: Drug = {
       "Avoid alcohol. Report if feeling worse or new suicidal thoughts.",
     ],
     followUp: [
-      "Review after 2 weeks — tolerability, BP, suicidality, side effects",
-      "Review after 4 weeks — early response (sleep, appetite, energy), BP",
-      "Review after 6 weeks — PHQ-9; if <30% reduction, increase to 150mg",
-      "Review after 12 weeks — full response assessment; titrate to 225mg if needed",
+      "Review after 2 weeks: tolerability, BP, suicidality, side effects",
+      "Review after 4 weeks: early response (sleep, appetite, energy), BP",
+      "Review after 6 weeks. PHQ-9; if <30% reduction, increase to 150mg",
+      "Review after 12 weeks: full response assessment; titrate to 225mg if needed",
       "If remission (PHQ-9 <5): continue 6–12 months, then taper over 4–8+ weeks",
       "Taper: reduce by 37.5mg every 1–2 weeks; consider fluoxetine 20mg bridge for last 2 weeks",
     ],
@@ -1557,7 +1557,7 @@ export const venlafaxine: Drug = {
     },
     {
       mistake: "Abrupt discontinuation or missing doses",
-      why: "Venlafaxine has the WORST discontinuation syndrome of any antidepressant — short half-life (5h), dual SERT+NET withdrawal. Symptoms ('brain zaps', dizziness, nausea, irritability) can begin within hours of a missed dose.",
+      why: "Venlafaxine has the WORST discontinuation syndrome of any antidepressant: short half-life (5h), dual SERT+NET withdrawal. Symptoms ('brain zaps', dizziness, nausea, irritability) can begin within hours of a missed dose.",
       correction: "Counsel at initiation: 'NEVER miss a dose. Keep a buffer stock of 3–5 days. If you run out, get your refill BEFORE taking your last capsule.' Taper over 4–8+ weeks. Consider fluoxetine 20mg bridge for last 2 weeks.",
     },
     {
@@ -1591,7 +1591,7 @@ export const venlafaxine: Drug = {
   whenNotToUse: [
     {
       scenario: "Uncontrolled hypertension",
-      reason: "Venlafaxine causes dose-dependent BP elevation. Uncontrolled HTN is an absolute contraindication — BP must be controlled first.",
+      reason: "Venlafaxine causes dose-dependent BP elevation. Uncontrolled HTN is an absolute contraindication. BP must be controlled first.",
       alternative: "Control BP first (amlodipine, ACE inhibitor). Then re-initiate venlafaxine with close monitoring, or choose sertraline (no BP effect) or duloxetine (less BP effect).",
     },
     {
@@ -1611,7 +1611,7 @@ export const venlafaxine: Drug = {
     },
     {
       scenario: "Pregnancy (particularly 3rd trimester)",
-      reason: "Venlafaxine is not the SSRI/SNRI of choice in pregnancy — sertraline is preferred. Category C. Third-trimester use associated with neonatal adaptation syndrome.",
+      reason: "Venlafaxine is not the SSRI/SNRI of choice in pregnancy: sertraline is preferred. Category C. Third-trimester use associated with neonatal adaptation syndrome.",
       alternative: "Sertraline is the SSRI of choice in pregnancy. If SNRI essential, involve obstetrician and document risk-benefit.",
     },
     {
@@ -1624,12 +1624,12 @@ export const venlafaxine: Drug = {
   /* Indian ward pearls */
   wardPearls: {
     professorMayAsk: [
-      "What is the dose-dependent pharmacology of venlafaxine? (SERT at 75mg, +NET at 150–225mg, +weak DAT >300mg — THE signature SNRI concept.)",
+      "What is the dose-dependent pharmacology of venlafaxine? (SERT at 75mg, +NET at 150–225mg, +weak DAT >300mg. THE signature SNRI concept.)",
       "Why does venlafaxine cause hypertension? (Peripheral NET blockade → ↑NE at sympathetic synapses → vasoconstriction → dose-dependent BP elevation.)",
-      "What is the relationship between venlafaxine and desvenlafaxine? (Desvenlafaxine is the active metabolite O-desmethylvenlafaxine (ODV), marketed directly. Same molecule, cleaner PK — no CYP2D6 dependence.)",
+      "What is the relationship between venlafaxine and desvenlafaxine? (Desvenlafaxine is the active metabolite O-desmethylvenlafaxine (ODV), marketed directly. Same molecule, cleaner PK: no CYP2D6 dependence.)",
       "Why is venlafaxine's discontinuation syndrome the worst of any antidepressant? (Short parent half-life 5h + dual SERT+NET withdrawal. Symptoms within hours of missed dose.)",
       "How do you taper venlafaxine safely? (Reduce by 37.5mg every 1–2 weeks over 4–8+ weeks. Consider fluoxetine 20mg bridge for last 2 weeks.)",
-      "Which antidepressant is preferred in a breast-cancer survivor on tamoxifen with hot flushes? (Venlafaxine — weak CYP2D6 inhibition does not reduce tamoxifen activation. Avoid paroxetine/fluoxetine.)",
+      "Which antidepressant is preferred in a breast-cancer survivor on tamoxifen with hot flushes? (Venlafaxine, weak CYP2D6 inhibition does not reduce tamoxifen activation. Avoid paroxetine/fluoxetine.)",
     ],
     residentExpects: [
       "Know the starting dose and titration (37.5mg XR → 75mg → 150mg → 225mg; max 375mg in TRD).",
@@ -1646,7 +1646,7 @@ export const venlafaxine: Drug = {
       "Push venlafaxine to 300–375mg in TRD with strict BP monitoring",
       "Cross-taper carefully when switching from SSRI to venlafaxine",
       "Use fluoxetine bridging for the last 2 weeks of venlafaxine taper",
-      "Counsel on never missing a dose and maintaining a buffer stock — especially in rural patients with unreliable supply",
+      "Counsel on never missing a dose and maintaining a buffer stock, especially in rural patients with unreliable supply",
     ],
     internsMiss: [
       "Forgetting to check BP at every visit (signature monitoring!)",
@@ -1669,7 +1669,7 @@ export const venlafaxine: Drug = {
     familyName: "SNRIs (Serotonin-Norepinephrine Reuptake Inhibitors)",
     members: [
       { name: "Venlafaxine", slug: "venlafaxine", relationship: "Current drug", distinguishing: "Dose-dependent SNRI; worst discontinuation; BP monitoring; active metabolite ODV = desvenlafaxine" },
-      { name: "Desvenlafaxine", slug: "desvenlafaxine", relationship: "Same class (SNRI) — active metabolite of venlafaxine", distinguishing: "ODV marketed directly; no CYP2D6 dependence; cleaner PK" },
+      { name: "Desvenlafaxine", slug: "desvenlafaxine", relationship: "Same class (SNRI): active metabolite of venlafaxine", distinguishing: "ODV marketed directly; no CYP2D6 dependence; cleaner PK" },
       { name: "Duloxetine", slug: "duloxetine", relationship: "Same class (SNRI)", distinguishing: "Balanced SERT+NET from dose 1; 3 FDA pain indications; hepatotoxicity; CYP1A2 interaction" },
       { name: "Milnacipran", slug: "milnacipran", relationship: "Same class (SNRI)", distinguishing: "Balanced SERT+NET (1:3 ratio); FDA-approved for fibromyalgia; not widely available in India" },
     ],
@@ -1864,7 +1864,7 @@ export const venlafaxine: Drug = {
   activeRecallQuestions: [
     {
       question: "Explain the dose-dependent pharmacology of venlafaxine. Why is this clinically important?",
-      answer: "Venlafaxine has dose-dependent receptor binding: SERT blockade is near-maximal at 75 mg/day (SSRI-like), NET blockade becomes clinically meaningful above 150 mg/day (true SNRI effect), and weak DAT inhibition appears above 300 mg/day. Clinically: titrating the dose changes the pharmacology, not just the magnitude. This means a patient on 75 mg is NOT getting the dual SNRI benefit they were prescribed venlafaxine for — they need 150–225 mg.",
+      answer: "Venlafaxine has dose-dependent receptor binding: SERT blockade is near-maximal at 75 mg/day (SSRI-like), NET blockade becomes clinically meaningful above 150 mg/day (true SNRI effect), and weak DAT inhibition appears above 300 mg/day. Clinically: titrating the dose changes the pharmacology, not just the magnitude. This means a patient on 75 mg is NOT getting the dual SNRI benefit they were prescribed venlafaxine for: they need 150–225 mg.",
       topic: "Mechanism",
     },
     {
@@ -1879,17 +1879,17 @@ export const venlafaxine: Drug = {
     },
     {
       question: "What is the relationship between venlafaxine and desvenlafaxine?",
-      answer: "Desvenlafaxine (Pristiq) is the active metabolite of venlafaxine — O-desmethylvenlafaxine (ODV). Venlafaxine is O-demethylated by CYP2D6 to ODV, which is pharmacologically equivalent to the parent. Desvenlafaxine is ODV marketed directly, with the advantage of no CYP2D6 dependence and lower inter-patient variability. Clinically, venlafaxine and desvenlafaxine are nearly interchangeable.",
+      answer: "Desvenlafaxine (Pristiq) is the active metabolite of venlafaxine. O-desmethylvenlafaxine (ODV). Venlafaxine is O-demethylated by CYP2D6 to ODV, which is pharmacologically equivalent to the parent. Desvenlafaxine is ODV marketed directly, with the advantage of no CYP2D6 dependence and lower inter-patient variability. Clinically, venlafaxine and desvenlafaxine are nearly interchangeable.",
       topic: "Pharmacokinetics",
     },
     {
       question: "A patient on venlafaxine 225 mg XR missed two doses and presents with dizziness, 'brain zaps', nausea, and irritability. What is the diagnosis and immediate management?",
-      answer: "Venlafaxine discontinuation syndrome — onset within hours due to short half-life (5h) and dual withdrawal. Management: (1) take a dose immediately, (2) resume regular schedule, (3) reassure that symptoms will resolve within 24–48 hours of resuming, (4) counsel on NEVER missing a dose, (5) maintain buffer stock of 3–5 days. If symptoms severe, can give a single dose in the clinic and observe.",
+      answer: "Venlafaxine discontinuation syndrome: onset within hours due to short half-life (5h) and dual withdrawal. Management: (1) take a dose immediately, (2) resume regular schedule, (3) reassure that symptoms will resolve within 24–48 hours of resuming, (4) counsel on NEVER missing a dose, (5) maintain buffer stock of 3–5 days. If symptoms severe, can give a single dose in the clinic and observe.",
       topic: "Clinical Reasoning",
     },
     {
       question: "Why is venlafaxine preferred over paroxetine in a breast-cancer survivor on tamoxifen?",
-      answer: "Tamoxifen is a prodrug that requires CYP2D6 to be activated to endoxifen (the active anti-cancer metabolite). Paroxetine and fluoxetine are STRONG CYP2D6 inhibitors — they reduce tamoxifen activation and increase breast cancer recurrence risk. Venlafaxine is a WEAK CYP2D6 inhibitor and does not significantly affect tamoxifen activation. It also effectively treats tamoxifen-induced hot flushes at 37.5–75 mg/day.",
+      answer: "Tamoxifen is a prodrug that requires CYP2D6 to be activated to endoxifen (the active anti-cancer metabolite). Paroxetine and fluoxetine are STRONG CYP2D6 inhibitors. They reduce tamoxifen activation and increase breast cancer recurrence risk. Venlafaxine is a WEAK CYP2D6 inhibitor and does not significantly affect tamoxifen activation. It also effectively treats tamoxifen-induced hot flushes at 37.5–75 mg/day.",
       topic: "Drug Interactions",
     },
   ],
@@ -1921,7 +1921,7 @@ export const venlafaxine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "50 min",
-      description: "Everything — advanced reasoning, ward pearls, TRD algorithm, guideline comparison, full evidence.",
+      description: "Everything: advanced reasoning, ward pearls, TRD algorithm, guideline comparison, full evidence.",
       visibleSections: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline", "clinical-uses", "side-effects", "monitoring", "contraindications", "prescriber-guide", "evidence-practice", "interactions", "patient-education", "indian-clinical", "decision-path", "common-mistakes", "learning-module", "clinical-case", "drug-navigation", "high-yield-summary", "faq", "active-recall", "references"],
     },
   ],
@@ -1940,14 +1940,14 @@ export const venlafaxine: Drug = {
       title: "Dose-Dependent Mechanism & Neuroscience",
       description: "How does the dose change the pharmacology? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand the dose-dependent SERT → +NET → +DAT pharmacology — THE signature venlafaxine concept. You also understand the active metabolite ODV and its relationship to desvenlafaxine.",
+      checkpoint: "You understand the dose-dependent SERT → +NET → +DAT pharmacology. THE signature venlafaxine concept. You also understand the active metabolite ODV and its relationship to desvenlafaxine.",
     },
     {
       number: 3,
       title: "Clinical Practice & Signature Safety",
       description: "When do you use it? What about BP and discontinuation?",
       sectionIds: ["clinical-uses", "side-effects", "monitoring", "contraindications", "evidence-practice", "interactions", "patient-education"],
-      checkpoint: "You can now prescribe venlafaxine safely — you know the dose-dependent BP monitoring, the worst-in-class discontinuation syndrome, and how to counsel patients on never missing a dose.",
+      checkpoint: "You can now prescribe venlafaxine safely: you know the dose-dependent BP monitoring, the worst-in-class discontinuation syndrome, and how to counsel patients on never missing a dose.",
     },
     {
       number: 4,
@@ -1985,19 +1985,19 @@ export const venlafaxine: Drug = {
       "May continue working for years to prevent relapse",
     ],
     ifItWorks: [
-      "Goal: complete remission plus prevention of future relapses — not a cure; symptoms can recur after stopping",
+      "Goal: complete remission plus prevention of future relapses, not a cure; symptoms can recur after stopping",
       "Continue until all symptoms are gone (remission), especially in depression and whenever possible in anxiety disorders",
       "First depressive episode: continue 1 year once well; later episodes and anxiety disorders may need indefinite treatment",
     ],
     ifItDoesNotWork: [
-      "Partial response is common — residual insomnia, fatigue, poor concentration",
+      "Partial response is common: residual insomnia, fatigue, poor concentration",
       "Some patients are non-responders (treatment-resistant / refractory); some early responders 'poop-out'",
       "Options: raise dose, switch agent, or add an augmenting drug",
       "Consider psychotherapy and re-evaluation for another diagnosis or comorbid condition",
       "Apparent non-response from activation of latent bipolar disorder → stop and switch to a mood stabilizer",
     ],
     augmentationCombos: [
-      "Mirtazapine — the 'California rocket fuel' combination — a potentially powerful dual serotonin/norepinephrine boost; watch for bipolar activation and suicidal ideation",
+      "Mirtazapine (the 'California rocket fuel' combination) a potentially powerful dual serotonin/norepinephrine boost; watch for bipolar activation and suicidal ideation",
       "Noradrenergic enhancers: bupropion, reboxetine, nortriptyline, desipramine, maprotiline, atomoxetine",
       "Modafinil for fatigue, sleepiness, and poor concentration",
       "Mood stabilizers or atypical antipsychotics for bipolar depression, psychotic or treatment-resistant depression",
@@ -2009,12 +2009,12 @@ export const venlafaxine: Drug = {
     ],
 
     sideEffectLogic: [
-      "Serotonin and norepinephrine increases at receptors outside the therapeutic circuits — sleep centers (insomnia), norepinephrine effects on acetylcholine release (constipation, dry mouth)",
+      "Serotonin and norepinephrine increases at receptors outside the therapeutic circuits: sleep centers (insomnia), norepinephrine effects on acetylcholine release (constipation, dry mouth)",
       "Most side effects are immediate but often go away with time",
       "Most side effects increase with higher doses, at least transiently",
     ],
     sideEffectManagement: [
-      "Wait — most early effects fade",
+      "Wait, most early effects fade",
       "Wait again",
       "Wait once more",
       "Lower the dose",
@@ -2027,8 +2027,8 @@ export const venlafaxine: Drug = {
       "Benzodiazepines for jitteriness and anxiety at initiation, especially in anxious patients",
       "Mirtazapine for insomnia, agitation, and gastrointestinal effects",
     ],
-    weightGain: "Reported but not expected — possible weight loss, especially short-term",
-    sedation: "Significant minority — may also be activating in some patients",
+    weightGain: "Reported but not expected: possible weight loss, especially short-term",
+    sedation: "Significant minority: may also be activating in some patients",
 
     dosing: [
       {
@@ -2040,9 +2040,9 @@ export const venlafaxine: Drug = {
         notes: [
           "All doses: potent serotonin reuptake blockade",
           "75–225 mg/day: predominantly serotonergic in some patients, dual SNRI action in others",
-          "225–375 mg/day: dual serotonin and norepinephrine action in most patients — non-responders at lower doses should try higher doses to get the full dual SNRI benefit",
+          "225–375 mg/day: dual serotonin and norepinephrine action in most patients; non-responders at lower doses should try higher doses to get the full dual SNRI benefit",
           "Very high doses (>375 mg/day): dopamine reuptake blockade as well in some patients",
-          "Do not break or chew XR capsules — it destroys the controlled release",
+          "Do not break or chew XR capsules: it destroys the controlled release",
         ],
       },
       {
@@ -2058,16 +2058,16 @@ export const venlafaxine: Drug = {
       "Tablets 25 mg, 37.5 mg, 50 mg, 75 mg, 100 mg (all scored)",
     ],
     dosingTips: [
-      "Active metabolite O-desmethylvenlafaxine (ODV) is formed by CYP2D6 — 2D6 inhibition reduces ODV formation, but clinical significance is uncertain",
+      "Active metabolite O-desmethylvenlafaxine (ODV) is formed by CYP2D6: 2D6 inhibition reduces ODV formation, but clinical significance is uncertain",
       "Non-responders who tolerate high doses: consider checking plasma venlafaxine + ODV levels; if low, experts may prudently push above 375 mg/day with close monitoring",
-      "Severe discontinuation problems: taper over months (about 1% dose reduction every 3 days — crush the tablet, suspend in 100 mL of juice, discard 1 mL and drink the rest, then 2 mL a few days later, and so on). Both biological tapering and behavioral desensitization",
+      "Severe discontinuation problems: taper over months (about 1% dose reduction every 3 days, crush the tablet, suspend in 100 mL of juice, discard 1 mL and drink the rest, then 2 mL a few days later, and so on). Both biological tapering and behavioral desensitization",
       "Alternative for severe withdrawal: add a long-half-life SSRI (especially fluoxetine), taper venlafaxine slowly while maintaining fluoxetine, then taper the fluoxetine",
       "Differentiate re-emergence of symptoms (needs treatment back) from true withdrawal symptoms",
-      "Activation and agitation may represent induction of a mixed dysphoric bipolar II state with suicidal ideation — add lithium, a mood stabilizer or an antipsychotic, and/or stop venlafaxine",
-      "Many side effects are dose- and time-dependent — they spike with each increase, then fade",
+      "Activation and agitation may represent induction of a mixed dysphoric bipolar II state with suicidal ideation. Add lithium, a mood stabilizer or an antipsychotic, and/or stop venlafaxine",
+      "Many side effects are dose- and time-dependent. They spike with each increase, then fade",
     ],
     overdose: [
-      "Rarely lethal — may cause no symptoms; possible sedation, convulsions, rapid heartbeat",
+      "Rarely lethal: may cause no symptoms; possible sedation, convulsions, rapid heartbeat",
     ],
     longTermUse: "See the doctor regularly to monitor blood pressure, especially at doses above 225 mg/day",
     habitForming: "No",
@@ -2075,11 +2075,11 @@ export const venlafaxine: Drug = {
       "Taper to avoid withdrawal effects (dizziness, nausea, stomach cramps, sweating, tingling, dysesthesias)",
       "Many patients tolerate: 50% reduction for 3 days → another 50% for 3 days → stop",
       "If withdrawal emerges, raise the dose to abort, then withdraw much more slowly",
-      "Withdrawal effects can be more common or more severe with venlafaxine than with some other antidepressants — the short half-life makes missed doses and stopping noticeable",
+      "Withdrawal effects can be more common or more severe with venlafaxine than with some other antidepressants: the short half-life makes missed doses and stopping noticeable",
     ],
     pharmacokinetics: [
       "Parent half-life 3–7 hours; active metabolite (ODV) half-life 9–13 hours",
-      "Fatal serotonin syndrome with MAOIs — do not combine; wait 14 days after stopping an MAOI, and 2 weeks after stopping venlafaxine before starting an MAOI",
+      "Fatal serotonin syndrome with MAOIs: do not combine; wait 14 days after stopping an MAOI, and 2 weeks after stopping venlafaxine before starting an MAOI",
       "Cimetidine may reduce clearance and raise venlafaxine levels",
       "Could theoretically blunt codeine analgesia or interact with triptans; tramadol raises seizure risk",
       "Few known adverse drug interactions overall",
@@ -2105,7 +2105,7 @@ export const venlafaxine: Drug = {
       {
         population: "Cardiac impairment",
         guidance: [
-          "Use with caution — venlafaxine has a dose-dependent effect on blood pressure",
+          "Use with caution: venlafaxine has a dose-dependent effect on blood pressure",
         ],
       },
       {
@@ -2122,9 +2122,9 @@ export const venlafaxine: Drug = {
       {
         population: "Pregnancy",
         guidance: [
-          "Risk Category C — not generally recommended, especially first trimester; continuous treatment may nonetheless be necessary and has not been proven harmful",
+          "Risk Category C, not generally recommended, especially first trimester; continuous treatment may nonetheless be necessary and has not been proven harmful",
           "Late third-trimester exposure: neonatal complications reported (respiratory distress, cyanosis, apnea, seizures, feeding difficulty, hypoglycemia, jitteriness)",
-          "Weigh treatment risk against relapse risk — for many, continuing is the better choice",
+          "Weigh treatment risk against relapse risk, for many, continuing is the better choice",
         ],
       },
       {
@@ -2132,7 +2132,7 @@ export const venlafaxine: Drug = {
         guidance: [
           "Some drug is found in breast milk; trace amounts in nursing infants",
           "If the infant becomes irritable or sedated, breastfeeding or the drug may need to be stopped",
-          "Postpartum is high-risk for relapse — may need reinstitution late in the third trimester or shortly after delivery",
+          "Postpartum is high-risk for relapse: may need reinstitution late in the third trimester or shortly after delivery",
         ],
       },
     ],
@@ -2156,14 +2156,14 @@ export const venlafaxine: Drug = {
       "Anxiety",
     ],
     pearls: [
-      "May be effective in patients who fail SSRIs — one of the preferred treatments for treatment-resistant depression",
+      "May be effective in patients who fail SSRIs, one of the preferred treatments for treatment-resistant depression",
       "May be combined with other antidepressants for treatment-refractory cases",
       "XR formulation improves tolerability, reduces nausea, and allows once-daily dosing",
       "May be effective across a broad array of anxiety disorders",
       "May be effective in adult ADHD",
       "Not studied in stress urinary incontinence",
-      "Greater potency for serotonin than norepinephrine reuptake blockade — of unclear clinical significance as a differentiator",
-      "In vitro binding studies underestimate in vivo potency — they ignore high active-metabolite concentrations, oral dosing, and low protein binding that raise functional levels at receptors",
+      "Greater potency for serotonin than norepinephrine reuptake blockade: of unclear clinical significance as a differentiator",
+      "In vitro binding studies underestimate in vivo potency: they ignore high active-metabolite concentrations, oral dosing, and low protein binding that raise functional levels at receptors",
       "Effective dose range is broad: 75–375 mg in many difficult cases, up to 600 mg or more in heroic cases",
       "Preliminary studies suggest potential efficacy in neuropathic pain and fibromyalgia",
       "Both efficacy and side effects (especially nausea and blood pressure) are dose-dependent",

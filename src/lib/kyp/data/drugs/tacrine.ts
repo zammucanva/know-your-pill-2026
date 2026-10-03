@@ -24,37 +24,37 @@ export const tacrine: Drug = {
   brandNames: ["Cognex (discontinued)"],
   drugClass: "cholinesterase-inhibitor",
   drugClassLabel: "AChE Inhibitor",
-  drugClassFullName: "Acetylcholinesterase Inhibitor (Central, Reversible — also inhibits BuChE)",
+  drugClassFullName: "Acetylcholinesterase Inhibitor (Central, Reversible, also inhibits BuChE)",
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Cognitive Enhancers", "Cholinesterase Inhibitors", "Tacrine"],
   /* ---- Hero / summary ---- */
-  tagline: "The first Alzheimer's cholinesterase inhibitor — the hepatotoxic proof of concept its successors outlived.",
-  summary: "Tacrine is a centrally-active, reversible cholinesterase inhibitor (blocking both acetylcholinesterase and butyrylcholinesterase) that compensates in part for the degenerating cholinergic neurons of Alzheimer disease — the first drug approved for the condition. Hepatotoxicity in up to a third of patients and four-times-daily dosing made it a second-line agent that has since disappeared from practice: donepezil, rivastigmine, and galantamine delivered the same cholinergic strategy with better livers and kinder schedules. Tacrine remains the exam-grade lesson in cholinergic pharmacology, CYP1A2 interactions, and transaminase monitoring.",
+  tagline: "The first Alzheimer's cholinesterase inhibitor: the hepatotoxic proof of concept its successors outlived.",
+  summary: "Tacrine is a centrally-active, reversible cholinesterase inhibitor (blocking both acetylcholinesterase and butyrylcholinesterase) that compensates in part for the degenerating cholinergic neurons of Alzheimer disease: the first drug approved for the condition. Hepatotoxicity in up to a third of patients and four-times-daily dosing made it a second-line agent that has since disappeared from practice: donepezil, rivastigmine, and galantamine delivered the same cholinergic strategy with better livers and kinder schedules. Tacrine remains the exam-grade lesson in cholinergic pharmacology, CYP1A2 interactions, and transaminase monitoring.",
   estimatedReadTime: "16 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of tacrine — reversible inhibition of centrally-active acetylcholinesterase (and butyrylcholinesterase), making more acetylcholine available to compensate for degenerating cholinergic neurons.",
+    "Explain the mechanism of tacrine: reversible inhibition of centrally-active acetylcholinesterase (and butyrylcholinesterase), making more acetylcholine available to compensate for degenerating cholinergic neurons.",
     "List the uses of tacrine and its place in the cholinesterase inhibitor sequence: the first approved agent, relegated to second-line by hepatotoxicity and QID dosing.",
     "Predict the cholinergic side-effect profile (nausea, vomiting, weight loss) and the hepatic transaminase elevation that defined the drug.",
     "Construct the dosing and monitoring plan: 40 mg/day in 4 divided doses with 4-week titration steps to a maximum of 160 mg/day, plus serum transaminase surveillance.",
-    "Explain the CYP1A2 interaction web — theophylline, fluvoxamine, cimetidine, smoking — and why tacrine is not rationally combined with another cholinesterase inhibitor.",
+    "Explain the CYP1A2 interaction web (theophylline, fluvoxamine, cimetidine, smoking) and why tacrine is not rationally combined with another cholinesterase inhibitor.",
   ],
   /* ---- Mechanism ---- */
   mechanism: {
     summary: "Tacrine reversibly inhibits centrally-active acetylcholinesterase (AChE), making more acetylcholine available; the increased acetylcholine compensates in part for degenerating cholinergic neurons in neocortex that regulate memory. It also inhibits butyrylcholinesterase (BuChE) and may release growth factors or interfere with amyloid deposition.",
     molecularTarget: "Centrally-active acetylcholinesterase (reversible inhibition) + butyrylcholinesterase; may release growth factors or interfere with amyloid deposition",
-    effect: "Improved memory and behavioural symptoms in Alzheimer disease — compensation for cholinergic deficit, not reversal of degeneration.",
+    effect: "Improved memory and behavioural symptoms in Alzheimer disease: compensation for cholinergic deficit, not reversal of degeneration.",
     steps: [
       "Tacrine reversibly inhibits centrally-active acetylcholinesterase, making more acetylcholine available in the synapse.",
       "Increased acetylcholine compensates in part for the degenerating cholinergic neurons in neocortex that regulate memory.",
       "Butyrylcholinesterase inhibition adds to the effect; tacrine may also release growth factors or interfere with amyloid deposition.",
       "Peripheral cholinesterase inhibition at the same time produces the gastrointestinal side-effect profile.",
     ],
-    pharmacokinetics: "Orally administered in four divided doses; short plasma half-life of only a few hours. Metabolised principally by CYP450 1A2 (and an inhibitor of it). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered in four divided doses; short plasma half-life of only a few hours. Metabolised principally by CYP450 1A2 (and an inhibitor of it). See mechanism and prescriber sections.",
     halfLife: "Approximately 2-4 hours.",
-    metabolism: "Hepatic — principally by CYP450 1A2 (also a CYP1A2 inhibitor).",
+    metabolism: "Hepatic: principally by CYP450 1A2 (also a CYP1A2 inhibitor).",
     excretion: "Hepatic metabolism dominates; smokers have lower plasma levels (CYP1A2 induction).",
   },
   /* ---- Mechanism visual flow ---- */
@@ -114,7 +114,7 @@ export const tacrine: Drug = {
         label: "cholinergic boost",
       },
     ],
-    caption: "The cholinergic hypothesis of Alzheimer disease in one diagram: if the neurons that make acetylcholine are dying, keep what little acetylcholine remains alive at the synapse. Tacrine proved the strategy works — and its successors made it tolerable.",
+    caption: "The cholinergic hypothesis of Alzheimer disease in one diagram: if the neurons that make acetylcholine are dying, keep what little acetylcholine remains alive at the synapse. Tacrine proved the strategy works, and its successors made it tolerable.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Acetylcholine"],
@@ -126,7 +126,7 @@ export const tacrine: Drug = {
     {
       name: "Alzheimer disease",
       status: "fda-approved",
-      description: "The first approved treatment — may improve symptoms and slow progression of disease, but does not reverse the degenerative process.",
+      description: "The first approved treatment: may improve symptoms and slow progression of disease, but does not reverse the degenerative process.",
     },
     {
       name: "Memory disorders in other conditions",
@@ -158,14 +158,14 @@ export const tacrine: Drug = {
       name: "Nausea, vomiting, diarrhoea, appetite loss, dyspepsia",
       frequency: "common",
       severity: "moderate",
-      description: "Peripheral cholinesterase inhibition — the signature cholinergic GI profile; increased gastric acid secretion adds dyspepsia.",
+      description: "Peripheral cholinesterase inhibition: the signature cholinergic GI profile; increased gastric acid secretion adds dyspepsia.",
       management: "Take with meals (reduces GI effects, though food lowers plasma concentrations); slower titration; dose reduction.",
     },
     {
       name: "Weight loss",
       frequency: "common",
       severity: "moderate",
-      description: "Consequence of GI cholinergic effects — though some patients experience none.",
+      description: "Consequence of GI cholinergic effects, though some patients experience none.",
       management: "Monitor weight; dietary counselling.",
     },
     {
@@ -181,7 +181,7 @@ export const tacrine: Drug = {
       name: "Elevated hepatic transaminases and liver toxicity",
       frequency: "common",
       severity: "severe",
-      description: "Hepatotoxicity in up to a third of patients — the defining toxicity that made tacrine second-line. ALT rules: 3-5x ULN reduce dose by 40 mg/day; > 5x ULN discontinue.",
+      description: "Hepatotoxicity in up to a third of patients: the defining toxicity that made tacrine second-line. ALT rules: 3-5x ULN reduce dose by 40 mg/day; > 5x ULN discontinue.",
       management: "Serum transaminase monitoring; dose reduction or discontinuation per protocol; rechallenge only after ALT normalises.",
     },
     {
@@ -195,7 +195,7 @@ export const tacrine: Drug = {
       name: "Bradycardia / heart block",
       frequency: "rare",
       severity: "severe",
-      description: "Cholinergic slowing of conduction — may occur with or without cardiac impairment; combined with beta blockers the risk rises.",
+      description: "Cholinergic slowing of conduction: may occur with or without cardiac impairment; combined with beta blockers the risk rises.",
       management: "Pulse checks; ECG in conduction disease; avoid with bradycardic agents.",
     },
   ],
@@ -204,7 +204,7 @@ export const tacrine: Drug = {
     {
       parameter: "Serum hepatic transaminase levels (ALT/SGPT)",
       frequency: "During dose titration and periodically",
-      rationale: "Hepatotoxicity in up to a third of patients — the ALT algorithm: 3-5x ULN reduce dose by 40 mg/day and re-advance after normalisation; > 5x ULN discontinue (rechallenge possible after ALT returns to normal).",
+      rationale: "Hepatotoxicity in up to a third of patients: the ALT algorithm: 3-5x ULN reduce dose by 40 mg/day and re-advance after normalisation; > 5x ULN discontinue (rechallenge possible after ALT returns to normal).",
     },
     {
       parameter: "Gastrointestinal tolerance, weight, and gastric acid symptoms",
@@ -214,14 +214,14 @@ export const tacrine: Drug = {
     {
       parameter: "Pulse and cardiac conduction",
       frequency: "Every review",
-      rationale: "Cholinergic bradycardia — heart block may occur with or without pre-existing cardiac impairment.",
+      rationale: "Cholinergic bradycardia: heart block may occur with or without pre-existing cardiac impairment.",
     },
   ],
   interactions: [
     {
       drug: "Theophylline and other CYP1A2 substrates",
       severity: "major",
-      mechanism: "Tacrine is metabolised principally by CYP450 1A2 AND inhibits it — it may increase plasma levels of CYP1A2-metabolised drugs (e.g. theophylline) and require dose adjustment.",
+      mechanism: "Tacrine is metabolised principally by CYP450 1A2 AND inhibits it. It may increase plasma levels of CYP1A2-metabolised drugs (e.g. theophylline) and require dose adjustment.",
       action: "Monitor levels; adjust theophylline dose.",
     },
     {
@@ -239,7 +239,7 @@ export const tacrine: Drug = {
     {
       drug: "Anticholinergic agents",
       severity: "moderate",
-      mechanism: "Pharmacodynamic opposition — the combination may decrease the efficacy of both agents.",
+      mechanism: "Pharmacodynamic opposition: the combination may decrease the efficacy of both agents.",
       action: "Avoid co-prescription; review anticholinergic burden in dementia patients.",
     },
     {
@@ -251,7 +251,7 @@ export const tacrine: Drug = {
     {
       drug: "Another cholinesterase inhibitor",
       severity: "contraindicated",
-      mechanism: "Not rational to combine — duplicated mechanism without added benefit.",
+      mechanism: "Not rational to combine: duplicated mechanism without added benefit.",
       action: "Never combine; switch rather than add.",
     },
     {
@@ -274,31 +274,31 @@ export const tacrine: Drug = {
     },
   ],
   pregnancy: {
-    summary: "Risk Category C (no controlled studies in animals or humans) — not recommended for use in pregnant women or in women of childbearing potential.",
-    lactation: "Unknown whether tacrine is secreted in breast milk, but all psychotropics are assumed to be; recommended either to discontinue the drug or to bottle feed — tacrine is not recommended for use in nursing women.",
+    summary: "Risk Category C (no controlled studies in animals or humans), not recommended for use in pregnant women or in women of childbearing potential.",
+    lactation: "Unknown whether tacrine is secreted in breast milk, but all psychotropics are assumed to be; recommended either to discontinue the drug or to bottle feed: tacrine is not recommended for use in nursing women.",
   },
   renalAdjustment: "No dose adjustment required in renal impairment.",
-  hepaticAdjustment: "Use with caution — the potential for liver toxicity defines tacrine; prior jaundice or bilirubin elevation on tacrine prohibits reuse.",
+  hepaticAdjustment: "Use with caution: the potential for liver toxicity defines tacrine; prior jaundice or bilirubin elevation on tacrine prohibits reuse.",
   /* ---- Education ---- */
-  patientExplanation: "Tacrine was the first medicine approved for Alzheimer's disease. It works by raising the level of a brain chemical called acetylcholine, which helps memory — the brain cells that make it are slowly lost in Alzheimer's, so keeping more of it working at the junctions between cells helps for a while. It does not cure or stop the disease. Its two great problems are that it must be taken four times a day and that it can raise liver enzymes in a third of patients, requiring regular blood tests. Newer medicines of the same family (donepezil, rivastigmine, galantamine) have replaced it — taken once a day or by patch, and far kinder to the liver.",
+  patientExplanation: "Tacrine was the first medicine approved for Alzheimer's disease. It works by raising the level of a brain chemical called acetylcholine, which helps memory. The brain cells that make it are slowly lost in Alzheimer's, so keeping more of it working at the junctions between cells helps for a while. It does not cure or stop the disease. Its two great problems are that it must be taken four times a day and that it can raise liver enzymes in a third of patients, requiring regular blood tests. Newer medicines of the same family (donepezil, rivastigmine, galantamine) have replaced it: taken once a day or by patch, and far kinder to the liver.",
   patientEducationPoints: [
     "Take in four divided doses, with meals if stomach upset occurs (though food lowers absorption somewhat).",
-    "Benefit may take up to 6 weeks to appear — and months for any stabilisation of the disease course.",
-    "Report dark urine, yellowing of the eyes, or persistent nausea and vomiting immediately — blood tests watch the liver.",
-    "Do not stop suddenly — stopping may cause a notable deterioration in memory and behaviour that may not be restored on restarting.",
-    "Tell every doctor you see — especially before surgery (tacrine increases anaesthetic effects) and before starting theophylline, cimetidine, or fluvoxamine.",
+    "Benefit may take up to 6 weeks to appear, and months for any stabilisation of the disease course.",
+    "Report dark urine, yellowing of the eyes, or persistent nausea and vomiting immediately: blood tests watch the liver.",
+    "Do not stop suddenly, stopping may cause a notable deterioration in memory and behaviour that may not be restored on restarting.",
+    "Tell every doctor you see, especially before surgery (tacrine increases anaesthetic effects) and before starting theophylline, cimetidine, or fluvoxamine.",
   ],
   clinicalPearls: [
-    "The prototype that proved the strategy: tacrine was the first cholinesterase inhibitor for Alzheimer disease — hepatotoxicity in up to a third of patients and four-times-daily dosing made it second-line, and its successors outlived it.",
-    "The ALT algorithm: 3-5x ULN reduce the daily dose by 40 mg and re-advance after normalisation; > 5x ULN discontinue — rechallenge may occur after ALT returns to normal (40 mg four times daily for 6 weeks before titration).",
-    "The CYP1A2 hub: tacrine is metabolised by AND inhibits CYP1A2 — theophylline levels rise, fluvoxamine and cimetidine raise tacrine, and smokers run lower levels (enzyme induction).",
+    "The prototype that proved the strategy: tacrine was the first cholinesterase inhibitor for Alzheimer disease; hepatotoxicity in up to a third of patients and four-times-daily dosing made it second-line, and its successors outlived it.",
+    "The ALT algorithm: 3-5x ULN reduce the daily dose by 40 mg and re-advance after normalisation; > 5x ULN discontinue: rechallenge may occur after ALT returns to normal (40 mg four times daily for 6 weeks before titration).",
+    "The CYP1A2 hub: tacrine is metabolised by AND inhibits CYP1A2; theophylline levels rise, fluvoxamine and cimetidine raise tacrine, and smokers run lower levels (enzyme induction).",
     "The discontinuation trap: stopping tacrine can cause notable deterioration in memory and behaviour that may NOT be restored when the drug is restarted or another cholinesterase inhibitor is begun.",
-    "The depression masquerade: the first symptoms of Alzheimer disease are often mood changes — antidepressant failure with apathy in the elderly may mean early Alzheimer disease, where a cholinesterase inhibitor may be helpful.",
+    "The depression masquerade: the first symptoms of Alzheimer disease are often mood changes; antidepressant failure with apathy in the elderly may mean early Alzheimer disease, where a cholinesterase inhibitor may be helpful.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of tacrine: reversible inhibition of centrally-active acetylcholinesterase — more acetylcholine available to compensate for degenerating cholinergic neurons; also inhibits butyrylcholinesterase.",
+        "Mechanism of tacrine: reversible inhibition of centrally-active acetylcholinesterase; more acetylcholine available to compensate for degenerating cholinergic neurons; also inhibits butyrylcholinesterase.",
         "Uses of tacrine: Alzheimer disease (first approved agent); memory disorders in other conditions; dementia.",
         "Why is tacrine second-line? Hepatotoxicity in up to a third of patients plus four-times-daily dosing.",
       ],
@@ -307,18 +307,18 @@ export const tacrine: Drug = {
         "Explain the transaminase monitoring algorithm to a caregiver (3-5x ULN reduce; > 5x ULN stop).",
       ],
       longAnswer: [
-        "Tacrine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Tacrine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Compare the cholinesterase inhibitors in Alzheimer disease: tacrine, donepezil, rivastigmine, galantamine.",
       ],
     },
     neetPg: {
       highYield: [
-        "Identity: tacrine = the first cholinesterase inhibitor approved for Alzheimer disease — reversible AChE (+BuChE) inhibitor.",
+        "Identity: tacrine = the first cholinesterase inhibitor approved for Alzheimer disease; reversible AChE (+BuChE) inhibitor.",
         "Dosing: 40 mg/day in 4 divided doses; increase at 4-week intervals if tolerable; maximum 160 mg/day.",
-        "Hepatotoxicity in up to a third of patients — ALT algorithm (3-5x ULN reduce 40 mg/day; > 5x ULN stop; rechallenge at 40 mg QID x 6 weeks after normalisation).",
-        "CYP1A2 dual role: metabolised by AND inhibits 1A2 — theophylline up, fluvoxamine/cimetidine raise tacrine, smoking lowers it.",
+        "Hepatotoxicity in up to a third of patients. ALT algorithm (3-5x ULN reduce 40 mg/day; > 5x ULN stop; rechallenge at 40 mg QID x 6 weeks after normalisation).",
+        "CYP1A2 dual role: metabolised by AND inhibits 1A2; theophylline up, fluvoxamine/cimetidine raise tacrine, smoking lowers it.",
         "Not rational to combine with another cholinesterase inhibitor.",
-        "Short half-life (a few hours) — the QID schedule.",
+        "Short half-life (a few hours): the QID schedule.",
       ],
       pyqConcepts: [
         "Mechanism/target of tacrine",
@@ -329,58 +329,58 @@ export const tacrine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on tacrine develops ALT 6x the upper limit of normal — next best step? (Discontinue; rechallenge only after normalisation.)",
-        "An elderly patient on theophylline starts tacrine — what must you anticipate? (Raised theophylline levels — dose adjustment.)",
+        "A patient on tacrine develops ALT 6x the upper limit of normal: next best step? (Discontinue; rechallenge only after normalisation.)",
+        "An elderly patient on theophylline starts tacrine: what must you anticipate? (Raised theophylline levels, dose adjustment.)",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary use: Alzheimer disease — the first approved cholinesterase inhibitor.",
+        "Primary use: Alzheimer disease; the first approved cholinesterase inhibitor.",
         "Most important adverse effect: elevated hepatic transaminases (up to a third of patients).",
-        "Dosing architecture: four times daily — short half-life of only a few hours.",
+        "Dosing architecture: four times daily; short half-life of only a few hours.",
         "Key interactions: CYP1A2 (theophylline, fluvoxamine, cimetidine, smoking) and beta blockers (bradycardia).",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The early-treatment logic: cholinesterase inhibitors like tacrine depend upon the presence of intact targets for acetylcholine for maximum effectiveness — they may be most effective in the early stages of Alzheimer disease.",
-        "The sex and hormone nuance: plasma concentrations of tacrine are higher in women than in men; some data suggest hormone replacement therapy in women with Alzheimer disease can enhance tacrine's effects — and perimenopausal hormonal changes can mimic dementia symptoms without being dementia.",
-        "The behavioural bonus: tacrine treats behavioural and psychological symptoms of dementia as well as cognitive symptoms — especially apathy, disinhibition, delusions, anxiety, cooperation, and pacing.",
+        "The early-treatment logic: cholinesterase inhibitors like tacrine depend upon the presence of intact targets for acetylcholine for maximum effectiveness; they may be most effective in the early stages of Alzheimer disease.",
+        "The sex and hormone nuance: plasma concentrations of tacrine are higher in women than in men; some data suggest hormone replacement therapy in women with Alzheimer disease can enhance tacrine's effects, and perimenopausal hormonal changes can mimic dementia symptoms without being dementia.",
+        "The behavioural bonus: tacrine treats behavioural and psychological symptoms of dementia as well as cognitive symptoms, especially apathy, disinhibition, delusions, anxiety, cooperation, and pacing.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Identity: tacrine = the first Alzheimer's cholinesterase inhibitor — reversible AChE (+ BuChE) inhibitor, short half-life, QID dosing.",
+    "Identity: tacrine = the first Alzheimer's cholinesterase inhibitor; reversible AChE (+ BuChE) inhibitor, short half-life, QID dosing.",
     "Indications: Alzheimer disease (first approved), memory disorders in other conditions, dementia.",
     "Dosing: 40 mg/day in 4 divided doses; 4-week titration intervals; maximum 160 mg/day.",
-    "Hepatotoxicity in up to a third of patients — transaminase monitoring with the 3-5x / > 5x ULN algorithm.",
-    "CYP1A2 hub: metabolised by and inhibits 1A2 — theophylline, fluvoxamine, cimetidine, smoking interactions.",
+    "Hepatotoxicity in up to a third of patients: transaminase monitoring with the 3-5x / > 5x ULN algorithm.",
+    "CYP1A2 hub: metabolised by and inhibits 1A2; theophylline, fluvoxamine, cimetidine, smoking interactions.",
     "Never combine with another cholinesterase inhibitor; bradycardia with beta blockers.",
-    "Stopping can cause irreversible-appearing deterioration — taper large doses.",
+    "Stopping can cause irreversible-appearing deterioration. Taper large doses.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — mild Alzheimer disease in the Cognex era",
+      title: "First presentation: mild Alzheimer disease in the Cognex era",
       presentation: "A 72-year-old woman with gradual memory decline is started on tacrine.",
       history: "A 72-year-old woman presents with 18 months of progressive forgetfulness, repetitive questions, and growing apathy; her daughter reports she has stopped cooking meals she once managed. Medical history: hypertension on a beta blocker; no psychiatric history. Baseline cognitive testing and imaging support a diagnosis of mild Alzheimer disease. Donepezil is not yet available in her region; tacrine is chosen.",
       examination: "Mental status examination shows impaired recent memory, reduced spontaneity, and apathy without focal neurology. Baseline ALT is normal; pulse 68/min regular.",
-      diagnosis: "Mild Alzheimer disease. Differentials — depression masquerading as dementia, other dementia syndromes — are considered and excluded.",
+      diagnosis: "Mild Alzheimer disease. Differentials (depression masquerading as dementia, other dementia syndromes) are considered and excluded.",
       rationale: "Tacrine compensates in part for the degenerating cholinergic neurons that regulate memory: it may improve symptoms and slow progression, though it does not reverse the degenerative process. Early treatment exploits the presence of intact cholinergic targets.",
       management: "Started at 40 mg/day in 4 divided doses with meals; maintained 4 weeks; if tolerable, increased to 80 mg/day in 4 divided doses, with further 4-weekly titration toward 120-160 mg/day (maximum 160 mg/day). Serum transaminases monitored during titration; pulse checked at every review (beta blocker co-prescription); follow-up at 6 weeks to assess memory and behaviour.",
-      outcome: "At 6-week review, caregivers report modest improvement in engagement and reduced pacing. Transaminases remain normal through titration to 120 mg/day. The teaching point for the modern sequence: the same patient today receives donepezil 5-10 mg once nightly — equal cholinergic strategy, one-fourth the doses, none of the third-of-patients liver risk.",
+      outcome: "At 6-week review, caregivers report modest improvement in engagement and reduced pacing. Transaminases remain normal through titration to 120 mg/day. The teaching point for the modern sequence: the same patient today receives donepezil 5-10 mg once nightly; equal cholinergic strategy, one-fourth the doses, none of the third-of-patients liver risk.",
       teachingPoints: [
-        "The 4-week clock: every titration step waits 4 weeks for tolerability — rushing produces GI failure, not faster benefit.",
-        "The beta-blocker flag: tacrine plus beta blocker invites bradycardia — pulse at every review.",
-        "Antidepressant failure with apathy in the elderly raises the question of early Alzheimer disease — the depression masquerade.",
+        "The 4-week clock: every titration step waits 4 weeks for tolerability; rushing produces GI failure, not faster benefit.",
+        "The beta-blocker flag: tacrine plus beta blocker invites bradycardia; pulse at every review.",
+        "Antidepressant failure with apathy in the elderly raises the question of early Alzheimer disease: the depression masquerade.",
       ],
     },
   ],
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Tacrine vs the modern cholinesterase inhibitors — orientation table",
+      title: "Tacrine vs the modern cholinesterase inhibitors: orientation table",
       primaryDrug: "Tacrine",
       rows: [
         {
@@ -403,7 +403,7 @@ export const tacrine: Drug = {
         },
         {
           attribute: "Dosing frequency",
-          primaryValue: "Four times daily — short half-life of only a few hours",
+          primaryValue: "Four times daily: short half-life of only a few hours",
           comparisons: [
             {
               drug: "Donepezil",
@@ -421,7 +421,7 @@ export const tacrine: Drug = {
         },
         {
           attribute: "Hepatic risk",
-          primaryValue: "Transaminase elevation in up to a third of patients — monitoring mandatory",
+          primaryValue: "Transaminase elevation in up to a third of patients: monitoring mandatory",
           comparisons: [
             {
               drug: "Donepezil",
@@ -439,7 +439,7 @@ export const tacrine: Drug = {
         },
         {
           attribute: "Metabolism / interactions",
-          primaryValue: "CYP1A2 substrate AND inhibitor — theophylline, fluvoxamine, cimetidine, smoking",
+          primaryValue: "CYP1A2 substrate AND inhibitor: theophylline, fluvoxamine, cimetidine, smoking",
           comparisons: [
             {
               drug: "Donepezil",
@@ -457,7 +457,7 @@ export const tacrine: Drug = {
         },
         {
           attribute: "Current status",
-          primaryValue: "Discontinued — the proof-of-concept agent its successors outlived",
+          primaryValue: "Discontinued: the proof-of-concept agent its successors outlived",
           comparisons: [
             {
               drug: "Donepezil",
@@ -474,7 +474,7 @@ export const tacrine: Drug = {
           ],
         },
       ],
-      takeaway: "Tacrine proved that cholinesterase inhibition works in Alzheimer disease — then donepezil, rivastigmine, and galantamine kept the mechanism and discarded the QID schedule and the liver risk. Tacrine remains the pharmacology lesson; the successors are the prescribing reality.",
+      takeaway: "Tacrine proved that cholinesterase inhibition works in Alzheimer disease, then donepezil, rivastigmine, and galantamine kept the mechanism and discarded the QID schedule and the liver risk. Tacrine remains the pharmacology lesson; the successors are the prescribing reality.",
     },
   ],
   /* ---- Timeline ---- */
@@ -483,35 +483,35 @@ export const tacrine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Tacrine reaches peak exposure within hours of each of its four daily doses and begins inhibiting acetylcholinesterase — the short half-life (only a few hours) is why dosing is four times daily.",
+      description: "Tacrine reaches peak exposure within hours of each of its four daily doses and begins inhibiting acetylcholinesterase. The short half-life (only a few hours) is why dosing is four times daily.",
       phase: "onset",
     },
     {
       id: "t2",
       time: "Weeks 1–4",
-      title: "Tolerance phase — the GI barrier",
-      description: "Nausea, vomiting, appetite loss, and dyspepsia are the first experience for many patients — each dose step is held 4 weeks precisely to let tolerance develop. Taking with meals reduces GI effects (at the cost of lower plasma concentrations).",
+      title: "Tolerance phase: the GI barrier",
+      description: "Nausea, vomiting, appetite loss, and dyspepsia are the first experience for many patients. Each dose step is held 4 weeks precisely to let tolerance develop. Taking with meals reduces GI effects (at the cost of lower plasma concentrations).",
       phase: "onset",
     },
     {
       id: "t3",
       time: "Weeks 4–6",
       title: "Cognitive signal emerges",
-      description: "May take up to 6 weeks before any improvement in baseline memory or behaviour is evident — and months before any stabilisation in the degenerative course. Transaminases are watched through every titration step.",
+      description: "May take up to 6 weeks before any improvement in baseline memory or behaviour is evident, and months before any stabilisation in the degenerative course. Transaminases are watched through every titration step.",
       phase: "peak",
     },
     {
       id: "t4",
       time: "Months 1–6",
       title: "Plateau of benefit",
-      description: "Symptomatic improvement or stabilisation — the drug may lose effectiveness in slowing the degenerative course after 6 months, though it can remain effective in some patients for several years.",
+      description: "Symptomatic improvement or stabilisation: the drug may lose effectiveness in slowing the degenerative course after 6 months, though it can remain effective in some patients for several years.",
       phase: "peak",
     },
     {
       id: "t5",
       time: "Maintenance and beyond",
-      title: "Continuation — and the stopping trap",
-      description: "Continue while benefit persists. Discontinuation may lead to notable deterioration in memory and behaviour which may not be restored when the drug is restarted or another cholinesterase inhibitor is initiated — large doses may need tapering.",
+      title: "Continuation, and the stopping trap",
+      description: "Continue while benefit persists. Discontinuation may lead to notable deterioration in memory and behaviour which may not be restored when the drug is restarted or another cholinesterase inhibitor is initiated: large doses may need tapering.",
       phase: "duration",
     },
   ],
@@ -519,11 +519,11 @@ export const tacrine: Drug = {
   faqs: [
     {
       question: "How long does tacrine take to work?",
-      answer: "It may take up to 6 weeks before any improvement in memory or behaviour is evident, and months before any stabilisation in the degenerative course is apparent. Do not stop early because you don't see immediate effects — but tell the doctor about nausea, which limits the dose more than anything else.",
+      answer: "It may take up to 6 weeks before any improvement in memory or behaviour is evident, and months before any stabilisation in the degenerative course is apparent. Do not stop early because you don't see immediate effects, but tell the doctor about nausea, which limits the dose more than anything else.",
     },
     {
       question: "What are the most common side effects of tacrine?",
-      answer: "The most frequently reported effects are nausea, diarrhoea, vomiting, appetite loss, increased gastric acid secretion, dyspepsia, weight loss, myalgia, rhinitis, and rash. The most important monitored effect is raised liver enzymes — which is why blood tests are part of treatment.",
+      answer: "The most frequently reported effects are nausea, diarrhoea, vomiting, appetite loss, increased gastric acid secretion, dyspepsia, weight loss, myalgia, rhinitis, and rash. The most important monitored effect is raised liver enzymes, which is why blood tests are part of treatment.",
     },
     {
       question: "Can tacrine be stopped suddenly?",
@@ -531,15 +531,15 @@ export const tacrine: Drug = {
     },
     {
       question: "Why does tacrine need liver blood tests?",
-      answer: "Because liver enzyme elevation occurs in up to a third of patients. The rules: if ALT is 3-5 times the upper limit of normal, the dose is reduced by 40 mg/day and increased again once ALT normalises; if ALT is greater than 5 times the upper limit, tacrine is stopped — it may be restarted only after ALT returns to normal.",
+      answer: "Because liver enzyme elevation occurs in up to a third of patients. The rules: if ALT is 3-5 times the upper limit of normal, the dose is reduced by 40 mg/day and increased again once ALT normalises; if ALT is greater than 5 times the upper limit, tacrine is stopped: it may be restarted only after ALT returns to normal.",
     },
     {
       question: "Is tacrine habit-forming?",
-      answer: "No — tacrine has no abuse or dependence potential. It is a symptomatic treatment for a neurodegenerative disease, not a drug of misuse.",
+      answer: "No: tacrine has no abuse or dependence potential. It is a symptomatic treatment for a neurodegenerative disease, not a drug of misuse.",
     },
     {
       question: "Is tacrine still available?",
-      answer: "No — tacrine has been discontinued. It was the first cholinesterase inhibitor approved for Alzheimer disease (1993), but four-times-daily dosing and hepatotoxicity in up to a third of patients led to its replacement by donepezil, rivastigmine, and galantamine. It survives in exams as the prototype of its class.",
+      answer: "No: tacrine has been discontinued. It was the first cholinesterase inhibitor approved for Alzheimer disease (1993), but four-times-daily dosing and hepatotoxicity in up to a third of patients led to its replacement by donepezil, rivastigmine, and galantamine. It survives in exams as the prototype of its class.",
     },
   ],
   /* ---- References & related ---- */
@@ -639,7 +639,7 @@ export const tacrine: Drug = {
       label: "Tacrine",
       type: "class",
       href: "#mechanism",
-      note: "Acetylcholinesterase Inhibitor (Central, Reversible — also inhibits BuChE)",
+      note: "Acetylcholinesterase Inhibitor (Central, Reversible, also inhibits BuChE)",
     },
     {
       label: "Acetylcholine",
@@ -678,7 +678,7 @@ export const tacrine: Drug = {
       note: "Cholinergic cardiac effect",
     },
     {
-      label: "Patient Guide — Tacrine",
+      label: "Patient Guide. Tacrine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -686,11 +686,11 @@ export const tacrine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The first Alzheimer's cholinesterase inhibitor — the hepatotoxic proof of concept its successors outlived.",
+    tagline: "The first Alzheimer's cholinesterase inhibitor: the hepatotoxic proof of concept its successors outlived.",
     summary: "Tacrine was the first medicine approved for Alzheimer's disease. It belongs to the cholinesterase inhibitor family and works by raising a memory chemical (acetylcholine) in the brain. It has been discontinued and replaced by newer, safer medicines of the same family.",
-    mechanism: "Tacrine was the first medicine approved for Alzheimer's disease. It stops the breakdown of a brain chemical called acetylcholine, which supports memory — in Alzheimer's the brain cells that make this chemical slowly die, so keeping more of it working helps memory and behaviour for a while. It does not cure or stop the disease. Because the body clears each dose within a few hours, it had to be taken four times a day, and because it raised liver enzymes in many patients, regular blood tests were part of treatment. Newer medicines of the same family (donepezil, rivastigmine, galantamine) have now replaced it.",
-    sideEffects: "The most common side effects are: nausea, vomiting, diarrhoea, appetite loss, dyspepsia, weight loss, myalgia, rhinitis, and rash. These are cholinergic effects — they follow from the medicine's action, not from allergy. The most important monitored effect is raised liver enzymes, which occur in up to a third of patients and need blood tests. Contact your doctor urgently if you notice yellowing of the eyes, dark urine, or persistent vomiting.",
-    monitoring: "While taking tacrine, doctors checked liver blood tests (transaminases) regularly, watched weight and stomach tolerance, and checked the pulse at every visit. Keep every appointment — these checks are how the treatment stays safe.",
+    mechanism: "Tacrine was the first medicine approved for Alzheimer's disease. It stops the breakdown of a brain chemical called acetylcholine, which supports memory, in Alzheimer's the brain cells that make this chemical slowly die, so keeping more of it working helps memory and behaviour for a while. It does not cure or stop the disease. Because the body clears each dose within a few hours, it had to be taken four times a day, and because it raised liver enzymes in many patients, regular blood tests were part of treatment. Newer medicines of the same family (donepezil, rivastigmine, galantamine) have now replaced it.",
+    sideEffects: "The most common side effects are: nausea, vomiting, diarrhoea, appetite loss, dyspepsia, weight loss, myalgia, rhinitis, and rash. These are cholinergic effects. They follow from the medicine's action, not from allergy. The most important monitored effect is raised liver enzymes, which occur in up to a third of patients and need blood tests. Contact your doctor urgently if you notice yellowing of the eyes, dark urine, or persistent vomiting.",
+    monitoring: "While taking tacrine, doctors checked liver blood tests (transaminases) regularly, watched weight and stomach tolerance, and checked the pulse at every visit. Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you previously had to stop tacrine because of jaundice, high bilirubin, or a reaction with raised liver enzymes, or you are allergic to it. Always share your full medical history and medicine list with your doctor.",
     interactions: "Tacrine interacts with several common medicines and situations: theophylline (asthma), fluvoxamine, cimetidine, beta blockers (slow pulse), anticholinergic medicines, and smoking (smokers need higher awareness). It should not be combined with another cholinesterase inhibitor, and it is stopped before surgery. Tell every doctor and pharmacist everything you take.",
   },
@@ -704,9 +704,9 @@ export const tacrine: Drug = {
         strengths: "10 / 20 / 30 / 40 mg capsules",
       },
     ],
-    typicalDoses: "40 mg/day in 4 divided doses, titrated at 4-week intervals to 120-160 mg/day (maximum 160 mg/day) — historical dosing only.",
+    typicalDoses: "40 mg/day in 4 divided doses, titrated at 4-week intervals to 120-160 mg/day (maximum 160 mg/day): historical dosing only.",
     prescribingScenarios: [
-      "Educational and examination context only — Indian dementia practice uses donepezil (widely available, low cost), rivastigmine, galantamine, and memantine; tacrine was never marketed in India.",
+      "Educational and examination context only. Indian dementia practice uses donepezil (widely available, low cost), rivastigmine, galantamine, and memantine; tacrine was never marketed in India.",
     ],
     availability: {
       governmentHospitals: false,
@@ -715,10 +715,10 @@ export const tacrine: Drug = {
       rural: false,
     },
     costCategory: "high",
-    costNote: "Not marketed — historical/import-only context. Cost varies by manufacturer and region.",
+    costNote: "Not marketed: historical/import-only context. Cost varies by manufacturer and region.",
     monitoring: "Historical: serum transaminases during titration and periodically; pulse at every review.",
     patientCounselling: [
-      "Historical drug — counselling points preserved for exams: four daily doses with meals.",
+      "Historical drug: counselling points preserved for exams: four daily doses with meals.",
       "Report jaundice, dark urine, or persistent vomiting immediately.",
       "Never combine with another cholinesterase inhibitor.",
     ],
@@ -754,13 +754,13 @@ export const tacrine: Drug = {
         name: "Tacrine",
         slug: "tacrine",
         relationship: "This guide",
-        distinguishing: "The hepatotoxic QID prototype — the first Alzheimer's ChEI",
+        distinguishing: "The hepatotoxic QID prototype: the first Alzheimer's ChEI",
       },
       {
         name: "Donepezil",
         slug: "donepezil",
         relationship: "Same class (AChE Inhibitor)",
-        distinguishing: "The once-daily AChE inhibitor — Alzheimer's first-line",
+        distinguishing: "The once-daily AChE inhibitor. Alzheimer's first-line",
       },
       {
         name: "Galantamine",
@@ -772,7 +772,7 @@ export const tacrine: Drug = {
         name: "Rivastigmine",
         slug: "rivastigmine",
         relationship: "Same class (AChE Inhibitor)",
-        distinguishing: "The dual-inhibitor with the patch — and the DLB/PDD approval",
+        distinguishing: "The dual-inhibitor with the patch, and the DLB/PDD approval",
       },
     ],
   },
@@ -935,22 +935,22 @@ export const tacrine: Drug = {
     },
     {
       question: "List the key uses of tacrine and its historical position in the class.",
-      answer: "Alzheimer disease (the first approved cholinesterase inhibitor), memory disorders in other conditions, and dementia. It is now discontinued — hepatotoxicity in up to a third of patients and QID dosing made it second-line and then obsolete.",
+      answer: "Alzheimer disease (the first approved cholinesterase inhibitor), memory disorders in other conditions, and dementia. It is now discontinued: hepatotoxicity in up to a third of patients and QID dosing made it second-line and then obsolete.",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of tacrine and how it was managed.",
-      answer: "Elevated hepatic transaminases: serum transaminase levels are monitored — if ALT is 3-5 times the upper limit of normal the dose is reduced by 40 mg/day and increased again once ALT normalises; if ALT exceeds 5 times the upper limit, tacrine is discontinued (rechallenge may occur after ALT returns to normal, starting 40 mg four times daily for 6 weeks).",
+      answer: "Elevated hepatic transaminases: serum transaminase levels are monitored, if ALT is 3-5 times the upper limit of normal the dose is reduced by 40 mg/day and increased again once ALT normalises; if ALT exceeds 5 times the upper limit, tacrine is discontinued (rechallenge may occur after ALT returns to normal, starting 40 mg four times daily for 6 weeks).",
       topic: "Safety",
     },
     {
       question: "What monitoring does a patient on tacrine require?",
-      answer: "Serum hepatic transaminase levels during titration and periodically; gastrointestinal tolerance and weight at every review; and pulse/cardiac conduction checks — bradycardia or heart block may occur with or without cardiac impairment.",
+      answer: "Serum hepatic transaminase levels during titration and periodically; gastrointestinal tolerance and weight at every review; and pulse/cardiac conduction checks: bradycardia or heart block may occur with or without cardiac impairment.",
       topic: "Monitoring",
     },
     {
       question: "Share one clinical pearl about tacrine that separates safe prescribers from unsafe ones.",
-      answer: "The CYP1A2 hub: tacrine is metabolised principally by CYP450 1A2 and inhibits it — it raises theophylline levels, is raised by fluvoxamine and cimetidine, and runs lower in smokers; combined with beta blockers it causes bradycardia. Never combine it with another cholinesterase inhibitor.",
+      answer: "The CYP1A2 hub: tacrine is metabolised principally by CYP450 1A2 and inhibits it. It raises theophylline levels, is raised by fluvoxamine and cimetidine, and runs lower in smokers; combined with beta blockers it causes bradycardia. Never combine it with another cholinesterase inhibitor.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1026,7 +1026,7 @@ export const tacrine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1071,7 +1071,7 @@ export const tacrine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Tacrine works — from cholinesterase inhibition to its clinical effect timeline.",
+      checkpoint: "You understand how Tacrine works, from cholinesterase inhibition to its clinical effect timeline.",
     },
     {
       number: 3,
@@ -1087,7 +1087,7 @@ export const tacrine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can describe how tacrine was prescribed safely — indications, cholinergic side effects, the transaminase algorithm, and the interaction web are mapped.",
+      checkpoint: "You can describe how tacrine was prescribed safely: indications, cholinergic side effects, the transaminase algorithm, and the interaction web are mapped.",
     },
     {
       number: 4,
@@ -1119,12 +1119,12 @@ export const tacrine: Drug = {
       "May take months before any stabilisation in the degenerative course is evident.",
     ],
     ifItWorks: [
-      "May improve symptoms and slow progression of disease — but does not reverse the degenerative process.",
+      "May improve symptoms and slow progression of disease, but does not reverse the degenerative process.",
       "Continue while benefit persists; the drug can be effective in some patients for several years.",
     ],
     ifItDoesNotWork: [
       "Consider adjusting dose, switching to a different cholinesterase inhibitor, or adding an appropriate augmenting agent.",
-      "Reconsider the diagnosis and rule out other conditions — such as depression or a dementia other than Alzheimer disease.",
+      "Reconsider the diagnosis and rule out other conditions, such as depression or a dementia other than Alzheimer disease.",
     ],
     augmentationCombos: [
       "Atypical antipsychotics to reduce behavioural disturbances.",
@@ -1133,21 +1133,21 @@ export const tacrine: Drug = {
       "Divalproex, carbamazepine, or oxcarbazepine for behavioural disturbances.",
     ],
     testsBeforeStarting: [
-      "Serum hepatic transaminase levels should be monitored — baseline before starting.",
+      "Serum hepatic transaminase levels should be monitored: baseline before starting.",
     ],
     sideEffectLogic: [
       "Peripheral inhibition of acetylcholinesterase and butyrylcholinesterase causes the gastrointestinal side effects.",
       "Central inhibition of acetylcholinesterase may contribute to nausea, vomiting, weight loss, and sleep disturbances.",
     ],
     sideEffectManagement: [
-      "Wait — tolerance to the GI effects often develops.",
+      "Wait: tolerance to the GI effects often develops.",
       "Use slower dose titration.",
       "Consider lowering the dose, switching to a different agent, or adding an appropriate augmenting agent.",
     ],
     sideEffectRescue: [
-      "Many side effects cannot be improved with an augmenting agent — dose reduction or switching is the resort.",
+      "Many side effects cannot be improved with an augmenting agent: dose reduction or switching is the resort.",
     ],
-    weightGain: "Reported but not expected — some patients may experience weight loss.",
+    weightGain: "Reported but not expected, some patients may experience weight loss.",
     sedation: "Reported but not expected.",
     dosing: [
       {
@@ -1165,22 +1165,22 @@ export const tacrine: Drug = {
       "Capsule 40 mg",
     ],
     dosingTips: [
-      "Dose titration may need to be slowed to reduce adverse effects — and should never be accelerated beyond the recommended regimen.",
+      "Dose titration may need to be slowed to reduce adverse effects, and should never be accelerated beyond the recommended regimen.",
       "Taking tacrine with meals may reduce gastrointestinal effects; however, food decreases plasma concentrations of tacrine.",
-      "Four-times-daily dosing is pharmacokinetics in action — the short half-life leaves no alternative.",
+      "Four-times-daily dosing is pharmacokinetics in action: the short half-life leaves no alternative.",
     ],
     overdose: [
-      "Can be lethal: nausea, vomiting, excess salivation, sweating, hypotension, bradycardia, collapse, convulsions, muscle weakness — weakness of respiratory muscles can lead to death.",
-      "A cholinergic crisis picture — manage supportively with atropine consideration and respiratory support.",
+      "Can be lethal: nausea, vomiting, excess salivation, sweating, hypotension, bradycardia, collapse, convulsions, muscle weakness; weakness of respiratory muscles can lead to death.",
+      "A cholinergic crisis picture: manage supportively with atropine consideration and respiratory support.",
     ],
-    longTermUse: "The drug may lose effectiveness in slowing the degenerative course of Alzheimer disease after 6 months — but can be effective in some patients for several years.",
+    longTermUse: "The drug may lose effectiveness in slowing the degenerative course of Alzheimer disease after 6 months, but can be effective in some patients for several years.",
     habitForming: "No.",
     howToStop: [
       "May need to taper large doses.",
       "Discontinuation may lead to notable deterioration in memory and behaviour which may not be restored when the drug is restarted or another cholinesterase inhibitor is initiated.",
     ],
     pharmacokinetics: [
-      "Half-life: Approximately 2-4 hours (short — a few hours).",
+      "Half-life: Approximately 2-4 hours (short, a few hours).",
       "Metabolism: Principally by CYP450 1A2.",
       "Also a CYP450 1A2 inhibitor.",
     ],
@@ -1198,13 +1198,13 @@ export const tacrine: Drug = {
       {
         population: "Hepatic impairment",
         guidance: [
-          "Use with caution — potential for liver toxicity.",
+          "Use with caution: potential for liver toxicity.",
         ],
       },
       {
         population: "Cardiac impairment",
         guidance: [
-          "Should be used with caution — bradycardia or heart block may occur in patients with or without cardiac impairment.",
+          "Should be used with caution: bradycardia or heart block may occur in patients with or without cardiac impairment.",
         ],
       },
       {
@@ -1222,8 +1222,8 @@ export const tacrine: Drug = {
       {
         population: "Pregnancy and breastfeeding",
         guidance: [
-          "Risk Category C — not recommended for use in pregnant women or in women of childbearing potential.",
-          "Unknown if secreted in breast milk — recommended either to discontinue the drug or to bottle feed; not recommended for use in nursing women.",
+          "Risk Category C, not recommended for use in pregnant women or in women of childbearing potential.",
+          "Unknown if secreted in breast milk: recommended either to discontinue the drug or to bottle feed; not recommended for use in nursing women.",
         ],
       },
     ],
@@ -1231,9 +1231,9 @@ export const tacrine: Drug = {
       "For some patients who fail to respond to several other cholinesterase inhibitors.",
     ],
     potentialDisadvantages: [
-      "Hepatotoxicity — transaminase elevation in up to a third of patients.",
+      "Hepatotoxicity: transaminase elevation in up to a third of patients.",
       "Patients with gastrointestinal problems tolerate it poorly.",
-      "Patients who have difficulty taking medication several times a day — the four-times-daily burden.",
+      "Patients who have difficulty taking medication several times a day: the four-times-daily burden.",
     ],
     primaryTargetSymptoms: [
       "Memory loss in Alzheimer disease",
@@ -1241,18 +1241,18 @@ export const tacrine: Drug = {
       "Memory loss in other dementias",
     ],
     pearls: [
-      "Hepatotoxicity in up to a third of patients and four-times-daily dosing make tacrine a second-line treatment for Alzheimer disease — the prototype agent that proved cholinesterase inhibition works.",
+      "Hepatotoxicity in up to a third of patients and four-times-daily dosing make tacrine a second-line treatment for Alzheimer disease. The prototype agent that proved cholinesterase inhibition works.",
       "The rechallenge protocol: patients who discontinue tacrine because of ALT/SGPT elevation may be rechallenged at an initial dose of 40 mg four times per day maintained for 6 weeks before titration.",
-      "Treats behavioural and psychological symptoms of dementia as well as cognitive symptoms — especially apathy, disinhibition, delusions, anxiety, cooperation, and pacing.",
-      "Plasma concentrations of tacrine are higher in women than in men — and some data suggest hormone replacement therapy in women with Alzheimer disease can enhance tacrine's effects.",
-      "The depression masquerade: the first symptoms of Alzheimer disease are generally mood changes — Alzheimer disease may initially be diagnosed as depression; if antidepressants fail to improve apathy and depressed mood in the elderly, early Alzheimer disease is a consideration and a cholinesterase inhibitor may be helpful.",
-      "Cholinesterase inhibitors like tacrine depend upon the presence of intact targets for acetylcholine for maximum effectiveness — they may be most effective in the early stages of Alzheimer disease.",
+      "Treats behavioural and psychological symptoms of dementia as well as cognitive symptoms, especially apathy, disinhibition, delusions, anxiety, cooperation, and pacing.",
+      "Plasma concentrations of tacrine are higher in women than in men, and some data suggest hormone replacement therapy in women with Alzheimer disease can enhance tacrine's effects.",
+      "The depression masquerade: the first symptoms of Alzheimer disease are generally mood changes. Alzheimer disease may initially be diagnosed as depression; if antidepressants fail to improve apathy and depressed mood in the elderly, early Alzheimer disease is a consideration and a cholinesterase inhibitor may be helpful.",
+      "Cholinesterase inhibitors like tacrine depend upon the presence of intact targets for acetylcholine for maximum effectiveness: they may be most effective in the early stages of Alzheimer disease.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-10-01",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 1st ed. (2005) — facts paraphrased, not reproduced.",
-    "Tacrine is discontinued — retained for educational completeness; verify against current national guidance before any clinical application.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 1st ed. (2005): facts paraphrased, not reproduced.",
+    "Tacrine is discontinued: retained for educational completeness; verify against current national guidance before any clinical application.",
   ],
 };

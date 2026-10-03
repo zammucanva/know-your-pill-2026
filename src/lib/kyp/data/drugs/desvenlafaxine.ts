@@ -23,14 +23,14 @@ export const desvenlafaxine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antidepressants", "SNRIs", "Desvenlafaxine"],
   /* ---- Hero / summary ---- */
-  tagline: "Venlafaxine's active metabolite, packaged — SNRI efficacy with simpler pharmacokinetics.",
-  summary: "Desvenlafaxine is the active metabolite of venlafaxine (O-desmethylvenlafaxine) marketed directly: the same SNRI mechanism — SERT and NET inhibition — with predictable renal-excreted pharmacokinetics, minimal CYP2D6 dependence, and a low starting dose that reaches therapeutic effect quickly. Approved for MDD, with off-label use mirroring venlafaxine's.",
+  tagline: "Venlafaxine's active metabolite, packaged. SNRI efficacy with simpler pharmacokinetics.",
+  summary: "Desvenlafaxine is the active metabolite of venlafaxine (O-desmethylvenlafaxine) marketed directly: the same SNRI mechanism (SERT and NET inhibition) with predictable renal-excreted pharmacokinetics, minimal CYP2D6 dependence, and a low starting dose that reaches therapeutic effect quickly. Approved for MDD, with off-label use mirroring venlafaxine's.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Desvenlafaxine — from its molecular target (SERT and NET (inhibition) — the SNRI mechanism) to clinical effect.",
+    "Explain the mechanism of action of Desvenlafaxine (from its molecular target (SERT and NET (inhibition)) the SNRI mechanism) to clinical effect.",
     "List the FDA-approved and off-label uses of Desvenlafaxine.",
     "Predict the common and serious side effects of Desvenlafaxine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Desvenlafaxine.",
@@ -38,15 +38,15 @@ export const desvenlafaxine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Desvenlafaxine inhibits serotonin and norepinephrine reuptake — venlafaxine's active metabolite delivered directly.",
-    molecularTarget: "SERT and NET (inhibition) — the SNRI mechanism",
+    summary: "Desvenlafaxine inhibits serotonin and norepinephrine reuptake: venlafaxine's active metabolite delivered directly.",
+    molecularTarget: "SERT and NET (inhibition): the SNRI mechanism",
     effect: "Monoaminergic modulation producing the antidepressant effect described.",
     steps: [
-      "Desvenlafaxine inhibits serotonin and norepinephrine reuptake — venlafaxine's active metabolite delivered directly.",
+      "Desvenlafaxine inhibits serotonin and norepinephrine reuptake: venlafaxine's active metabolite delivered directly.",
       "Downstream receptor adaptation over 2-6 weeks translates acute monoamine change into clinical response.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 11 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 11 hours. See mechanism and prescriber sections.",
     halfLife: "About 11 hours.",
     metabolism: "Hepatic CYP metabolism.",
     excretion: "Renal.",
@@ -109,7 +109,7 @@ export const desvenlafaxine: Drug = {
         label: "produces",
       },
     ],
-    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation — the central paradox of antidepressant pharmacology.",
+    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation: the central paradox of antidepressant pharmacology.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Serotonin (5-HT)", "Norepinephrine (NE)"],
@@ -121,7 +121,7 @@ export const desvenlafaxine: Drug = {
     {
       name: "Major depressive disorder",
       status: "fda-approved",
-      description: "50 mg starting dose IS therapeutic — a rare 'start at target' antidepressant.",
+      description: "50 mg starting dose IS therapeutic: a rare 'start at target' antidepressant.",
     },
     {
       name: "Anxiety disorders (GAD, panic, social anxiety)",
@@ -228,7 +228,7 @@ export const desvenlafaxine: Drug = {
       name: "Discontinuation syndrome",
       frequency: "common",
       severity: "moderate",
-      description: "Short half-life — the SNRI FINISH syndrome.",
+      description: "Short half-life: the SNRI FINISH syndrome.",
       management: "Taper over weeks; never abrupt.",
     },
     {
@@ -291,27 +291,27 @@ export const desvenlafaxine: Drug = {
   renalAdjustment: "Halve dose at CrCl 30-50; avoid or further reduce below 30.",
   hepaticAdjustment: "No adjustment for mild-moderate; reduce in severe.",
   /* ---- Education ---- */
-  patientExplanation: "Desvenlafaxine is a modern SNRI antidepressant — it raises two brain chemicals (serotonin and noradrenaline) involved in mood. Its practical advantage is that the starting dose is usually the full treatment dose. Common effects are nausea, sweating, and — like others in its class — it must not be stopped suddenly, and blood pressure is checked at higher doses.",
+  patientExplanation: "Desvenlafaxine is a modern SNRI antidepressant. It raises two brain chemicals (serotonin and noradrenaline) involved in mood. Its practical advantage is that the starting dose is usually the full treatment dose. Common effects are nausea, sweating, and (like others in its class) it must not be stopped suddenly, and blood pressure is checked at higher doses.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Desvenlafaxine builds over weeks — do not judge it in the first days.",
+    "Benefit from Desvenlafaxine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
     "The 50 mg miracle of prescribing simplicity: unlike most antidepressants, the starting dose IS the therapeutic dose for most patients.",
-    "2D6 independence: desvenlafaxine skips venlafaxine's CYP2D6 activation step — poor metabolisers and fluoxetine co-prescription stop mattering.",
-    "Renal excretion dominant — the rare antidepressant where the kidney, not the liver, is the dosing organ.",
-    "The SNRI dose-BP law applies: above 150 mg-equivalents, blood pressure climbs — monitor.",
-    "Discontinuation syndrome is real (short half-life) — taper, don't ambush.",
+    "2D6 independence: desvenlafaxine skips venlafaxine's CYP2D6 activation step; poor metabolisers and fluoxetine co-prescription stop mattering.",
+    "Renal excretion dominant: the rare antidepressant where the kidney, not the liver, is the dosing organ.",
+    "The SNRI dose-BP law applies: above 150 mg-equivalents, blood pressure climbs; monitor.",
+    "Discontinuation syndrome is real (short half-life). Taper, don't ambush.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Desvenlafaxine: Desvenlafaxine inhibits serotonin and norepinephrine reuptake — venlafaxine's active metabolite delivered directly.",
+        "Mechanism of Desvenlafaxine: Desvenlafaxine inhibits serotonin and norepinephrine reuptake; venlafaxine's active metabolite delivered directly.",
         "Uses of Desvenlafaxine: Major depressive disorder; Anxiety disorders (GAD, panic, social anxiety); Hot flushes (menopause); Neuropathic pain (adjunct)",
-        "Mechanism: SERT + NET inhibition — venlafaxine's ACTIVE METABOLITE marketed directly.",
+        "Mechanism: SERT + NET inhibition; venlafaxine's ACTIVE METABOLITE marketed directly.",
         "50 mg starting = therapeutic dose (the simplicity advantage).",
       ],
       practical: [
@@ -319,19 +319,19 @@ export const desvenlafaxine: Drug = {
         "Outline the monitoring plan: Blood pressure (Baseline and after dose increases); Mood and suicidality (early weeks) (Weeks 1-4); Sodium (elderly) (If unwell/confused)",
       ],
       longAnswer: [
-        "Desvenlafaxine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: SERT + NET inhibition — venlafaxine's ACTIVE METABOLITE marketed directly.",
+        "Desvenlafaxine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: SERT + NET inhibition; venlafaxine's ACTIVE METABOLITE marketed directly.",
         "50 mg starting = therapeutic dose (the simplicity advantage).",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: SERT + NET inhibition — venlafaxine's ACTIVE METABOLITE marketed directly.",
+        "Mechanism: SERT + NET inhibition; venlafaxine's ACTIVE METABOLITE marketed directly.",
         "50 mg starting = therapeutic dose (the simplicity advantage).",
         "Minimal CYP2D6 involvement; renal excretion dominant.",
         "MDD approved; SNRI-class off-label breadth (anxiety, flushes, pain).",
         "Dose-related hypertension above 100 mg.",
-        "Discontinuation syndrome — taper always.",
+        "Discontinuation syndrome: taper always.",
       ],
       pyqConcepts: [
         "Mechanism/target of Desvenlafaxine",
@@ -341,13 +341,13 @@ export const desvenlafaxine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Desvenlafaxine develops sustained hypertension — next best step?",
+        "A patient on Desvenlafaxine develops sustained hypertension: next best step?",
         "When to choose Desvenlafaxine over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: SERT and NET (inhibition) — the SNRI mechanism",
+        "Primary target: SERT and NET (inhibition); the SNRI mechanism",
         "Most common side effects: Nausea, Sweating, Blood pressure rise (dose-related)",
         "Key contraindication: known hypersensitivity",
       ],
@@ -355,26 +355,26 @@ export const desvenlafaxine: Drug = {
     psychiatryResidency: {
       advancedPearls: [
         "The 50 mg miracle of prescribing simplicity: unlike most antidepressants, the starting dose IS the therapeutic dose for most patients.",
-        "2D6 independence: desvenlafaxine skips venlafaxine's CYP2D6 activation step — poor metabolisers and fluoxetine co-prescription stop mattering.",
-        "Renal excretion dominant — the rare antidepressant where the kidney, not the liver, is the dosing organ.",
-        "The SNRI dose-BP law applies: above 150 mg-equivalents, blood pressure climbs — monitor.",
+        "2D6 independence: desvenlafaxine skips venlafaxine's CYP2D6 activation step; poor metabolisers and fluoxetine co-prescription stop mattering.",
+        "Renal excretion dominant: the rare antidepressant where the kidney, not the liver, is the dosing organ.",
+        "The SNRI dose-BP law applies: above 150 mg-equivalents, blood pressure climbs; monitor.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: SERT + NET inhibition — venlafaxine's ACTIVE METABOLITE marketed directly.",
+    "Mechanism: SERT + NET inhibition; venlafaxine's ACTIVE METABOLITE marketed directly.",
     "50 mg starting = therapeutic dose (the simplicity advantage).",
     "Minimal CYP2D6 involvement; renal excretion dominant.",
     "MDD approved; SNRI-class off-label breadth (anxiety, flushes, pain).",
     "Dose-related hypertension above 100 mg.",
-    "Discontinuation syndrome — taper always.",
+    "Discontinuation syndrome: taper always.",
     "Class suicidality warning applies.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — major depressive disorder",
+      title: "First presentation: major depressive disorder",
       presentation: "A patient presenting with major depressive disorder, started on Desvenlafaxine.",
       history: "A adult patient presents with a major depressive disorder picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with major depressive disorder; physical examination and baseline investigations are unremarkable.",
@@ -383,7 +383,7 @@ export const desvenlafaxine: Drug = {
       management: "Started at 50 mg once daily, titrated to 50 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Desvenlafaxine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Desvenlafaxine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -392,12 +392,12 @@ export const desvenlafaxine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "SNRI comparison — choosing within the class",
+      title: "SNRI comparison: choosing within the class",
       primaryDrug: "Desvenlafaxine",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "SERT and NET (inhibition) — the SNRI mechanism",
+          primaryValue: "SERT and NET (inhibition): the SNRI mechanism",
           comparisons: [
             {
               drug: "Levomilnacipran",
@@ -453,7 +453,7 @@ export const desvenlafaxine: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The simplified SNRI — venlafaxine's metabolite packaged",
+          primaryValue: "The simplified SNRI: venlafaxine's metabolite packaged",
           comparisons: [
             {
               drug: "Levomilnacipran",
@@ -466,7 +466,7 @@ export const desvenlafaxine: Drug = {
           ],
         },
       ],
-      takeaway: "All snris share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All snris share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -475,7 +475,7 @@ export const desvenlafaxine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Desvenlafaxine reaches peak plasma concentration and begins acting at its molecular target (SERT and NET (inhibition) — the SNRI mechanism). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Desvenlafaxine reaches peak plasma concentration and begins acting at its molecular target (SERT and NET (inhibition), the SNRI mechanism). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -511,7 +511,7 @@ export const desvenlafaxine: Drug = {
   faqs: [
     {
       question: "How long does Desvenlafaxine take to work?",
-      answer: "Antidepressant response 2-4 weeks at therapeutic dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Antidepressant response 2-4 weeks at therapeutic dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Desvenlafaxine?",
@@ -519,11 +519,11 @@ export const desvenlafaxine: Drug = {
     },
     {
       question: "Can I stop Desvenlafaxine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Desvenlafaxine habit-forming?",
@@ -531,7 +531,7 @@ export const desvenlafaxine: Drug = {
     },
     {
       question: "Can I take Desvenlafaxine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Desvenlafaxine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Desvenlafaxine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -641,7 +641,7 @@ export const desvenlafaxine: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "SERT and NET (inhibition) — the SNRI mechanism",
+      label: "SERT and NET (inhibition): the SNRI mechanism",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
@@ -683,7 +683,7 @@ export const desvenlafaxine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Desvenlafaxine",
+      label: "Patient Guide. Desvenlafaxine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -691,13 +691,13 @@ export const desvenlafaxine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "Venlafaxine's active metabolite, packaged — SNRI efficacy with simpler pharmacokinetics.",
-    summary: "Desvenlafaxine is a prescription medicine used to treat major depressive disorder. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Desvenlafaxine is a modern SNRI antidepressant — it raises two brain chemicals (serotonin and noradrenaline) involved in mood. Its practical advantage is that the starting dose is usually the full treatment dose. Common effects are nausea, sweating, and — like others in its class — it must not be stopped suddenly, and blood pressure is checked at higher doses.",
-    sideEffects: "The most common side effects are: nausea, sweating, blood pressure rise (dose-related), sexual dysfunction, dry mouth and constipation, insomnia or sedation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Sustained hypertension and Serotonin syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: blood pressure (baseline and after dose increases); mood and suicidality (early weeks) (weeks 1-4); sodium (elderly) (if unwell/confused). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "Venlafaxine's active metabolite, packaged. SNRI efficacy with simpler pharmacokinetics.",
+    summary: "Desvenlafaxine is a prescription medicine used to treat major depressive disorder. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Desvenlafaxine is a modern SNRI antidepressant. It raises two brain chemicals (serotonin and noradrenaline) involved in mood. Its practical advantage is that the starting dose is usually the full treatment dose. Common effects are nausea, sweating, and (like others in its class) it must not be stopped suddenly, and blood pressure is checked at higher doses.",
+    sideEffects: "The most common side effects are: nausea, sweating, blood pressure rise (dose-related), sexual dysfunction, dry mouth and constipation, insomnia or sedation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Sustained hypertension and Serotonin syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: blood pressure (baseline and after dose increases); mood and suicidality (early weeks) (weeks 1-4); sodium (elderly) (if unwell/confused). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: MAOIs, Serotonergic drugs and triptans, NSAIDs and anticoagulants, Minimal CYP interaction. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: MAOIs, Serotonergic drugs and triptans, NSAIDs and anticoagulants, Minimal CYP interaction. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -715,7 +715,7 @@ export const desvenlafaxine: Drug = {
       },
     ],
     typicalDoses: "50 mg OD (100 mg max usual).",
-    prescribingScenarios: ["MDD — the simple SNRI option.", "Perimenopausal depression with flushes."],
+    prescribingScenarios: ["MDD: the simple SNRI option.", "Perimenopausal depression with flushes."],
     availability: {
       governmentHospitals: true,
       privatePharmacies: true,
@@ -761,19 +761,19 @@ export const desvenlafaxine: Drug = {
         name: "Desvenlafaxine",
         slug: "desvenlafaxine",
         relationship: "This guide",
-        distinguishing: "The simplified SNRI — venlafaxine's metabolite packaged",
+        distinguishing: "The simplified SNRI: venlafaxine's metabolite packaged",
       },
       {
         name: "Levomilnacipran",
         slug: "levomilnacipran",
         relationship: "Same class (SNRI)",
-        distinguishing: "The NE-tilted SNRI — for the anergic depression phenotype",
+        distinguishing: "The NE-tilted SNRI, for the anergic depression phenotype",
       },
       {
         name: "Milnacipran",
         slug: "milnacipran",
         relationship: "Same class (SNRI)",
-        distinguishing: "The fibromyalgia SNRI — pain + fatigue coverage",
+        distinguishing: "The fibromyalgia SNRI: pain + fatigue coverage",
       },
     ],
   },
@@ -921,7 +921,7 @@ export const desvenlafaxine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Desvenlafaxine in two sentences.",
-      answer: "Desvenlafaxine inhibits serotonin and norepinephrine reuptake — venlafaxine's active metabolite delivered directly. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
+      answer: "Desvenlafaxine inhibits serotonin and norepinephrine reuptake: venlafaxine's active metabolite delivered directly. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
       topic: "Mechanism",
     },
     {
@@ -1017,7 +1017,7 @@ export const desvenlafaxine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1062,7 +1062,7 @@ export const desvenlafaxine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Desvenlafaxine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Desvenlafaxine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1078,7 +1078,7 @@ export const desvenlafaxine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Desvenlafaxine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Desvenlafaxine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1123,7 +1123,7 @@ export const desvenlafaxine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Desvenlafaxine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Desvenlafaxine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1148,10 +1148,10 @@ export const desvenlafaxine: Drug = {
     dosingTips: [
       "Start 50 mg and stay there for most patients.",
       "BP check above 100 mg.",
-      "Taper on stopping — the short half-life punishes abrupt stops.",
+      "Taper on stopping: the short half-life punishes abrupt stops.",
     ],
     overdose: [
-      "Overdose with Desvenlafaxine is managed supportively — no specific antidote.",
+      "Overdose with Desvenlafaxine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Desvenlafaxine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1183,7 +1183,7 @@ export const desvenlafaxine: Drug = {
     ],
     potentialAdvantages: [
       "Start-at-target dosing.",
-      "2D6-independent — simple pharmacokinetics.",
+      "2D6-independent: simple pharmacokinetics.",
       "Renal-dosing clarity.",
     ],
     potentialDisadvantages: [
@@ -1195,15 +1195,15 @@ export const desvenlafaxine: Drug = {
     primaryTargetSymptoms: ["Major depression", "Anxiety spectrum (off-label)", "Vasomotor symptoms (off-label)"],
     pearls: [
       "The 50 mg miracle of prescribing simplicity: unlike most antidepressants, the starting dose IS the therapeutic dose for most patients.",
-      "2D6 independence: desvenlafaxine skips venlafaxine's CYP2D6 activation step — poor metabolisers and fluoxetine co-prescription stop mattering.",
-      "Renal excretion dominant — the rare antidepressant where the kidney, not the liver, is the dosing organ.",
-      "The SNRI dose-BP law applies: above 150 mg-equivalents, blood pressure climbs — monitor.",
-      "Discontinuation syndrome is real (short half-life) — taper, don't ambush.",
+      "2D6 independence: desvenlafaxine skips venlafaxine's CYP2D6 activation step; poor metabolisers and fluoxetine co-prescription stop mattering.",
+      "Renal excretion dominant: the rare antidepressant where the kidney, not the liver, is the dosing organ.",
+      "The SNRI dose-BP law applies: above 150 mg-equivalents, blood pressure climbs; monitor.",
+      "Discontinuation syndrome is real (short half-life). Taper, don't ambush.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

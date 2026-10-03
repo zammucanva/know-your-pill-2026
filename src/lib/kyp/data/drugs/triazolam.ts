@@ -23,14 +23,14 @@ export const triazolam: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Sleep Medicines", "Benzodiazepine Hypnotics", "Triazolam"],
   /* ---- Hero / summary ---- */
-  tagline: "The ultra-short hypnotic benzo — the benzodiazepine's answer to sleep-onset-only dosing.",
-  summary: "Triazolam is the ultra-short-acting (half-life 1.5–5.5 h) high-potency benzodiazepine hypnotic: rapid sleep induction with minimal morning residue — the benzodiazepine-era zolpidem. Its adverse-effect reputation for amnesia, rebound anxiety, and early-morning insomnia (from the short half-life wearing off inside the night) plus full class dependence risks has relegated it behind Z-drugs.",
+  tagline: "The ultra-short hypnotic benzo: the benzodiazepine's answer to sleep-onset-only dosing.",
+  summary: "Triazolam is the ultra-short-acting (half-life 1.5–5.5 h) high-potency benzodiazepine hypnotic: rapid sleep induction with minimal morning residue; the benzodiazepine-era zolpidem. Its adverse-effect reputation for amnesia, rebound anxiety, and early-morning insomnia (from the short half-life wearing off inside the night) plus full class dependence risks has relegated it behind Z-drugs.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Triazolam — from its molecular target (GABA-A benzodiazepine site (high-potency PAM) — ultrashort-acting) to clinical effect.",
+    "Explain the mechanism of action of Triazolam (from its molecular target (GABA-A benzodiazepine site (high-potency PAM)) ultrashort-acting) to clinical effect.",
     "List the FDA-approved and off-label uses of Triazolam.",
     "Predict the common and serious side effects of Triazolam from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Triazolam.",
@@ -38,15 +38,15 @@ export const triazolam: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Ultrashort high-potency benzodiazepine GABA-A PAM — pure sleep-onset cover in benzodiazepine clothing.",
-    molecularTarget: "GABA-A benzodiazepine site (high-potency PAM) — ultrashort-acting",
+    summary: "Ultrashort high-potency benzodiazepine GABA-A PAM: pure sleep-onset cover in benzodiazepine clothing.",
+    molecularTarget: "GABA-A benzodiazepine site (high-potency PAM): ultrashort-acting",
     effect: "Sleep promotion via the described target.",
     steps: [
-      "Triazolam is the ultra-short-acting (half-life 1 — the mechanism in one line.",
+      "Triazolam is the ultra-short-acting (half-life 1, the mechanism in one line.",
       "Binding at the described target produces the sleep-promoting effect.",
       "Duration of action follows the half-life: onset agents clear before morning; longer agents add maintenance cover.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 1.5–5.5 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 1.5–5.5 hours. See mechanism and prescriber sections.",
     halfLife: "1.5–5.5 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
@@ -108,14 +108,14 @@ export const triazolam: Drug = {
         label: "inhibits firing",
       },
     ],
-    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly — which is why their effect is powerful but limited by dependence risk.",
+    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly, which is why their effect is powerful but limited by dependence risk.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
     "Central monoaminergic systems (see mechanism)",
   ],
   receptors: [
-    "GABA-A benzodiazepine site (high-potency PAM) — ultrashort-acting",
+    "GABA-A benzodiazepine site (high-potency PAM): ultrashort-acting",
   ],
   brainRegionIds: ["amygdala", "prefrontal-cortex"],
   pathwayIds: [],
@@ -136,7 +136,7 @@ export const triazolam: Drug = {
     {
       name: "Opioids",
       severity: "absolute",
-      rationale: "Concurrent use causes profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      rationale: "Concurrent use causes profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
     },
   ],
   blackBoxWarnings: [
@@ -146,7 +146,7 @@ export const triazolam: Drug = {
     },
     {
       title: "Dependence, abuse, and withdrawal",
-      text: "Class warning — among the shortest courses of any hypnotic.",
+      text: "Class warning, among the shortest courses of any hypnotic.",
     },
   ],
   /* ---- Side effects ---- */
@@ -162,7 +162,7 @@ export const triazolam: Drug = {
       name: "Early-morning insomnia",
       frequency: "common",
       severity: "moderate",
-      description: "The 2–4 h half-life wears off inside the night — waking at 3 am under-medicated.",
+      description: "The 2–4 h half-life wears off inside the night: waking at 3 am under-medicated.",
       management: "Recognise as drug-wearing-off; consider longer agent.",
     },
     {
@@ -225,7 +225,7 @@ export const triazolam: Drug = {
     {
       drug: "Opioids",
       severity: "contraindicated",
-      mechanism: "Concurrent use causes profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      mechanism: "Concurrent use causes profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
       action: "Avoid; if unavoidable for taper protocols, use lowest doses with intensive monitoring.",
     },
     {
@@ -243,7 +243,7 @@ export const triazolam: Drug = {
     {
       drug: "Older antihistamines (sedating)",
       severity: "moderate",
-      mechanism: "Additive sedation in the elderly — falls.",
+      mechanism: "Additive sedation in the elderly: falls.",
       action: "Prefer non-sedating alternatives.",
     },
   ],
@@ -255,34 +255,34 @@ export const triazolam: Drug = {
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
-  patientExplanation: "Triazolam is a medicine used to treat insomnia — sleep onset (short-term). Ultrashort high-potency benzodiazepine GABA-A PAM — pure sleep-onset cover in benzodiazepine clothing. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+  patientExplanation: "Triazolam is a medicine used to treat insomnia: sleep onset (short-term). Ultrashort high-potency benzodiazepine GABA-A PAM: pure sleep-onset cover in benzodiazepine clothing. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
   patientEducationPoints: [
-    "This medicine is for short-term or carefully planned use — it can cause dependence within weeks of regular use.",
-    "Never mix it with opioid painkillers or alcohol — the combination can stop breathing.",
+    "This medicine is for short-term or carefully planned use. It can cause dependence within weeks of regular use.",
+    "Never mix it with opioid painkillers or alcohol: the combination can stop breathing.",
     "Do not drive until you know how it affects you.",
-    "Stopping must be gradual — never stop suddenly after regular use.",
-    "Benefit from Triazolam builds over weeks — do not judge it in the first days.",
+    "Stopping must be gradual, never stop suddenly after regular use.",
+    "Benefit from Triazolam builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
     "The amnesia + rebound reputation: triazolam taught hypnotic pharmacokinetics the hard way in the 1980s–90s.",
-    "Short half-life inside the night = early-morning waking under-medicated — the paradox of an onset drug causing 3 am insomnia.",
-    "Elderly: 0.125 mg fixed — the smallest hypnotic tablet in the class.",
+    "Short half-life inside the night = early-morning waking under-medicated: the paradox of an onset drug causing 3 am insomnia.",
+    "Elderly: 0.125 mg fixed: the smallest hypnotic tablet in the class.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Triazolam: Ultrashort high-potency benzodiazepine GABA-A PAM — pure sleep-onset cover in benzodiazepine clothing.",
-        "Uses of Triazolam: Insomnia — sleep onset (short-term)",
+        "Mechanism of Triazolam: Ultrashort high-potency benzodiazepine GABA-A PAM; pure sleep-onset cover in benzodiazepine clothing.",
+        "Uses of Triazolam: Insomnia; sleep onset (short-term)",
         "Ultrashort high-potency benzo hypnotic (half-life 1.5–5.5 h).",
         "Signature: anterograde amnesia, rebound anxiety, early-morning insomnia.",
       ],
       practical: [
-        "Prescribe Triazolam for insomnia — sleep onset (short-term) with dose, timing, and duration.",
+        "Prescribe Triazolam for insomnia: sleep onset (short-term) with dose, timing, and duration.",
         "Outline the monitoring plan: Respiratory status and sedation (Clinical review each visit); Dependence review (Every visit for long-term users); Fall risk review (elderly) (Every visit in older patients)",
       ],
       longAnswer: [
-        "Triazolam: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Triazolam: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Ultrashort high-potency benzo hypnotic (half-life 1.5–5.5 h).",
         "Signature: anterograde amnesia, rebound anxiety, early-morning insomnia.",
       ],
@@ -293,7 +293,7 @@ export const triazolam: Drug = {
         "Signature: anterograde amnesia, rebound anxiety, early-morning insomnia.",
         "Dose 0.125–0.25 mg (elderly fixed at 0.125 mg).",
         "The benzodiazepine precursor of the zolpidem concept.",
-        "Mechanism: GABA-A positive allosteric modulation — amplified natural inhibition.",
+        "Mechanism: GABA-A positive allosteric modulation; amplified natural inhibition.",
       ],
       pyqConcepts: [
         "Mechanism/target of Triazolam",
@@ -303,13 +303,13 @@ export const triazolam: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Triazolam develops respiratory depression with opioids — next best step?",
+        "A patient on Triazolam develops respiratory depression with opioids: next best step?",
         "When to choose Triazolam over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: GABA-A benzodiazepine site (high-potency PAM) — ultrashort-acting",
+        "Primary target: GABA-A benzodiazepine site (high-potency PAM), ultrashort-acting",
         "Most common side effects: Anterograde amnesia, Early-morning insomnia, Rebound anxiety",
         "Key contraindication: known hypersensitivity",
       ],
@@ -317,8 +317,8 @@ export const triazolam: Drug = {
     psychiatryResidency: {
       advancedPearls: [
         "The amnesia + rebound reputation: triazolam taught hypnotic pharmacokinetics the hard way in the 1980s–90s.",
-        "Short half-life inside the night = early-morning waking under-medicated — the paradox of an onset drug causing 3 am insomnia.",
-        "Elderly: 0.125 mg fixed — the smallest hypnotic tablet in the class.",
+        "Short half-life inside the night = early-morning waking under-medicated: the paradox of an onset drug causing 3 am insomnia.",
+        "Elderly: 0.125 mg fixed: the smallest hypnotic tablet in the class.",
       ],
     },
   },
@@ -328,21 +328,21 @@ export const triazolam: Drug = {
     "Signature: anterograde amnesia, rebound anxiety, early-morning insomnia.",
     "Dose 0.125–0.25 mg (elderly fixed at 0.125 mg).",
     "The benzodiazepine precursor of the zolpidem concept.",
-    "Mechanism: GABA-A positive allosteric modulation — amplified natural inhibition.",
+    "Mechanism: GABA-A positive allosteric modulation; amplified natural inhibition.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — insomnia — sleep onset (short-term)",
-      presentation: "A patient presenting with insomnia — sleep onset (short-term), started on Triazolam.",
-      history: "A adult patient presents with a insomnia — sleep onset (short-term) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with insomnia — sleep onset (short-term); physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Insomnia — sleep onset (short-term). Differentials are considered and excluded clinically.",
+      title: "First presentation: insomnia; sleep onset (short-term)",
+      presentation: "A patient presenting with insomnia: sleep onset (short-term), started on Triazolam.",
+      history: "A adult patient presents with a insomnia: sleep onset (short-term) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with insomnia: sleep onset (short-term); physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Insomnia: sleep onset (short-term). Differentials are considered and excluded clinically.",
       rationale: "Triazolam is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Benzodiazepine Hypnotic) with strong evidence in this condition.",
       management: "Started at 0.125 mg at bedtime (elderly 0.125 fixed), titrated to 0.125–0.25 mg with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Triazolam takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Triazolam takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -351,12 +351,12 @@ export const triazolam: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Benzodiazepine Hypnotic comparison — choosing within the class",
+      title: "Benzodiazepine Hypnotic comparison: choosing within the class",
       primaryDrug: "Triazolam",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "GABA-A benzodiazepine site (high-potency PAM) — ultrashort-acting",
+          primaryValue: "GABA-A benzodiazepine site (high-potency PAM): ultrashort-acting",
           comparisons: [
             {
               drug: "Temazepam",
@@ -444,7 +444,7 @@ export const triazolam: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The benzodiazepine zolpidem — onset-only, amnesia-prone",
+          primaryValue: "The benzodiazepine zolpidem: onset-only, amnesia-prone",
           comparisons: [
             {
               drug: "Temazepam",
@@ -465,7 +465,7 @@ export const triazolam: Drug = {
           ],
         },
       ],
-      takeaway: "All benzodiazepine hypnotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All benzodiazepine hypnotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -474,7 +474,7 @@ export const triazolam: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Triazolam reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (high-potency PAM) — ultrashort-acting). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Triazolam reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (high-potency PAM), ultrashort-acting). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -510,7 +510,7 @@ export const triazolam: Drug = {
   faqs: [
     {
       question: "How long does Triazolam take to work?",
-      answer: "15–30 minutes.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "15–30 minutes.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Triazolam?",
@@ -518,19 +518,19 @@ export const triazolam: Drug = {
     },
     {
       question: "Can I stop Triazolam suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Triazolam habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Triazolam exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Triazolam exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Triazolam during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Triazolam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Triazolam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -640,13 +640,13 @@ export const triazolam: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "GABA-A benzodiazepine site (high-potency PAM) — ultrashort-acting",
+      label: "GABA-A benzodiazepine site (high-potency PAM): ultrashort-acting",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
     },
     {
-      label: "Insomnia — sleep onset (short-term)",
+      label: "Insomnia: sleep onset (short-term)",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -670,7 +670,7 @@ export const triazolam: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Triazolam",
+      label: "Patient Guide. Triazolam",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -678,13 +678,13 @@ export const triazolam: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The ultra-short hypnotic benzo — the benzodiazepine's answer to sleep-onset-only dosing.",
-    summary: "Triazolam is a prescription medicine used to treat insomnia — sleep onset (short-term). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Triazolam is a medicine used to treat insomnia — sleep onset (short-term). Ultrashort high-potency benzodiazepine GABA-A PAM — pure sleep-onset cover in benzodiazepine clothing. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
-    sideEffects: "The most common side effects are: anterograde amnesia, early-morning insomnia, rebound anxiety, dizziness, headache. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression with opioids and Withdrawal seizures on abrupt stop. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The ultra-short hypnotic benzo: the benzodiazepine's answer to sleep-onset-only dosing.",
+    summary: "Triazolam is a prescription medicine used to treat insomnia: sleep onset (short-term). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Triazolam is a medicine used to treat insomnia: sleep onset (short-term). Ultrashort high-potency benzodiazepine GABA-A PAM: pure sleep-onset cover in benzodiazepine clothing. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+    sideEffects: "The most common side effects are: anterograde amnesia, early-morning insomnia, rebound anxiety, dizziness, headache. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression with opioids and Withdrawal seizures on abrupt stop. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, Older antihistamines (sedating). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, Older antihistamines (sedating). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -708,7 +708,7 @@ export const triazolam: Drug = {
     },
     costCategory: "moderate",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Report memory gaps and 3 am waking."],
   },
   sectionDifficulty: {
@@ -742,13 +742,13 @@ export const triazolam: Drug = {
         name: "Triazolam",
         slug: "triazolam",
         relationship: "This guide",
-        distinguishing: "The benzodiazepine zolpidem — onset-only, amnesia-prone",
+        distinguishing: "The benzodiazepine zolpidem: onset-only, amnesia-prone",
       },
       {
         name: "Temazepam",
         slug: "temazepam",
         relationship: "Same class (Benzodiazepine Hypnotic)",
-        distinguishing: "The classic benzodiazepine hypnotic — full power, full class risks",
+        distinguishing: "The classic benzodiazepine hypnotic: full power, full class risks",
       },
       {
         name: "Estazolam",
@@ -760,7 +760,7 @@ export const triazolam: Drug = {
         name: "Flunitrazepam",
         slug: "flunitrazepam",
         relationship: "Same class (Benzodiazepine Hypnotic)",
-        distinguishing: "The strictly-controlled potent hypnotic — pharmacology's misuse lesson",
+        distinguishing: "The strictly-controlled potent hypnotic: pharmacology's misuse lesson",
       },
       {
         name: "Flurazepam",
@@ -772,7 +772,7 @@ export const triazolam: Drug = {
         name: "Quazepam",
         slug: "quazepam",
         relationship: "Same class (Benzodiazepine Hypnotic)",
-        distinguishing: "The alpha-1-selective benzodiazepine — a pharmacology bridge",
+        distinguishing: "The alpha-1-selective benzodiazepine: a pharmacology bridge",
       },
     ],
   },
@@ -920,12 +920,12 @@ export const triazolam: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Triazolam in two sentences.",
-      answer: "Ultrashort high-potency benzodiazepine GABA-A PAM — pure sleep-onset cover in benzodiazepine clothing. Net effect: Sleep promotion via the described target.",
+      answer: "Ultrashort high-potency benzodiazepine GABA-A PAM: pure sleep-onset cover in benzodiazepine clothing. Net effect: Sleep promotion via the described target.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Triazolam.",
-      answer: "Insomnia — sleep onset (short-term). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Insomnia: sleep onset (short-term). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -1016,7 +1016,7 @@ export const triazolam: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1061,7 +1061,7 @@ export const triazolam: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Triazolam works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Triazolam works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1077,7 +1077,7 @@ export const triazolam: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Triazolam safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Triazolam safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1120,7 +1120,7 @@ export const triazolam: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Triazolam follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Triazolam follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1144,14 +1144,14 @@ export const triazolam: Drug = {
     dosageForms: ["Tablets 0.125, 0.25 mg"],
     dosingTips: [
       "Warn about amnesia explicitly.",
-      "If 3 am waking develops, the drug is wearing off — do not increase.",
+      "If 3 am waking develops, the drug is wearing off. Do not increase.",
     ],
     overdose: [
-      "Overdose with Triazolam is managed supportively — no specific antidote.",
+      "Overdose with Triazolam is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Triazolam is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1182,13 +1182,13 @@ export const triazolam: Drug = {
     primaryTargetSymptoms: ["Sleep-onset insomnia (short-term)"],
     pearls: [
       "The amnesia + rebound reputation: triazolam taught hypnotic pharmacokinetics the hard way in the 1980s–90s.",
-      "Short half-life inside the night = early-morning waking under-medicated — the paradox of an onset drug causing 3 am insomnia.",
-      "Elderly: 0.125 mg fixed — the smallest hypnotic tablet in the class.",
+      "Short half-life inside the night = early-morning waking under-medicated: the paradox of an onset drug causing 3 am insomnia.",
+      "Elderly: 0.125 mg fixed: the smallest hypnotic tablet in the class.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

@@ -23,14 +23,14 @@ export const zotepine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Atypical Antipsychotics", "Zotepine"],
   /* ---- Hero / summary ---- */
-  tagline: "The Japanese tricyclic atypical — serotonin-noradrenaline-dopamine antagonist with seizure caution.",
-  summary: "Zotepine is the Japanese-market tricyclic-structured atypical antipsychotic: D2/5-HT2A antagonism with additional noradrenaline and serotonin effects — sedating, weight-gaining, with the class's notable seizure-threshold caution at higher doses. A continuity and completeness entry.",
+  tagline: "The Japanese tricyclic atypical: serotonin-noradrenaline-dopamine antagonist with seizure caution.",
+  summary: "Zotepine is the Japanese-market tricyclic-structured atypical antipsychotic: D2/5-HT2A antagonism with additional noradrenaline and serotonin effects, sedating, weight-gaining, with the class's notable seizure-threshold caution at higher doses. A continuity and completeness entry.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Zotepine — from its molecular target (D2 (antagonist) + 5-HT2A (antagonist) + noradrenaline/serotonin reuptake effects; seizure threshold dose-related) to clinical effect.",
+    "Explain the mechanism of action of Zotepine, from its molecular target (D2 (antagonist) + 5-HT2A (antagonist) + noradrenaline/serotonin reuptake effects; seizure threshold dose-related) to clinical effect.",
     "List the FDA-approved and off-label uses of Zotepine.",
     "Predict the common and serious side effects of Zotepine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Zotepine.",
@@ -38,15 +38,15 @@ export const zotepine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Zotepine blocks D2 and 5-HT2A with additional monoaminergic effects — a tricyclic-structured atypical with dose-related seizure risk.",
+    summary: "Zotepine blocks D2 and 5-HT2A with additional monoaminergic effects: a tricyclic-structured atypical with dose-related seizure risk.",
     molecularTarget: "D2 (antagonist) + 5-HT2A (antagonist) + noradrenaline/serotonin reuptake effects; seizure threshold dose-related",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Zotepine blocks D2 and 5-HT2A with additional monoaminergic effects — a tricyclic-structured atypical with dose-related seizure risk.",
+      "Zotepine blocks D2 and 5-HT2A with additional monoaminergic effects: a tricyclic-structured atypical with dose-related seizure risk.",
       "The mechanism translates into the clinical profile described.",
       "Practical use follows half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 13-21 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 13-21 hours. See mechanism and prescriber sections.",
     halfLife: "13-21 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -126,7 +126,7 @@ export const zotepine: Drug = {
         label: "5-HT2A-mediated benefit",
       },
     ],
-    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms — the serotonin-dopamine hypothesis of atypical antipsychotics.",
+    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms: the serotonin-dopamine hypothesis of atypical antipsychotics.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Dopamine (DA)", "Serotonin (5-HT)", "Norepinephrine (NE)"],
@@ -199,7 +199,7 @@ export const zotepine: Drug = {
     {
       parameter: "Weight and BMI",
       frequency: "Baseline, then at 4, 8, 12 weeks and quarterly",
-      rationale: "Class metabolic risk — early trajectory detection.",
+      rationale: "Class metabolic risk: early trajectory detection.",
     },
     {
       parameter: "Fasting glucose / HbA1c",
@@ -214,7 +214,7 @@ export const zotepine: Drug = {
     {
       parameter: "Blood pressure (orthostatic)",
       frequency: "Baseline and during titration",
-      rationale: "Alpha-1 blockade — orthostasis risk.",
+      rationale: "Alpha-1 blockade: orthostasis risk.",
     },
     {
       parameter: "AIMS examination",
@@ -243,29 +243,29 @@ export const zotepine: Drug = {
     },
   ],
   pregnancy: {
-    summary: "Data in human pregnancy are limited. The decision to continue or stop balances the risk of untreated illness against possible drug exposure — for serious psychiatric illness, relapse prevention usually outweighs fetal risk. Involve obstetrics early and never stop abruptly without a plan.",
-    lactation: "Small amounts may pass into breast milk. Decisions are individualised — monitor the infant for sedation and poor feeding, and discuss with your doctor.",
+    summary: "Data in human pregnancy are limited. The decision to continue or stop balances the risk of untreated illness against possible drug exposure, for serious psychiatric illness, relapse prevention usually outweighs fetal risk. Involve obstetrics early and never stop abruptly without a plan.",
+    lactation: "Small amounts may pass into breast milk. Decisions are individualised. Monitor the infant for sedation and poor feeding, and discuss with your doctor.",
   },
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
-  patientExplanation: "Zotepine is a medicine used to treat schizophrenia (japan/some european). Zotepine blocks D2 and 5-HT2A with additional monoaminergic effects — a tricyclic-structured atypical with dose-related seizure risk. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+  patientExplanation: "Zotepine is a medicine used to treat schizophrenia (japan/some european). Zotepine blocks D2 and 5-HT2A with additional monoaminergic effects: a tricyclic-structured atypical with dose-related seizure risk. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Zotepine builds over weeks — do not judge it in the first days.",
+    "Benefit from Zotepine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
     "The tricyclic-atypical hybrid: a TCA-shaped antipsychotic with TCA-flavoured adverse effects and a seizure ceiling.",
-    "The dose ceiling (300 mg outpatient) exists because of seizures — the defining safety rule.",
+    "The dose ceiling (300 mg outpatient) exists because of seizures: the defining safety rule.",
     "Continuity entry: Japanese/selected-European exposure.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Zotepine: Zotepine blocks D2 and 5-HT2A with additional monoaminergic effects — a tricyclic-structured atypical with dose-related seizure risk.",
+        "Mechanism of Zotepine: Zotepine blocks D2 and 5-HT2A with additional monoaminergic effects; a tricyclic-structured atypical with dose-related seizure risk.",
         "Uses of Zotepine: Schizophrenia (Japan/some European)",
         "Mechanism: D2/5-HT2A antagonist with tricyclic structure and monoaminergic breadth.",
         "Signature risk: dose-related SEIZURES (300 mg outpatient ceiling).",
@@ -275,7 +275,7 @@ export const zotepine: Drug = {
         "Outline the monitoring plan: Weight and BMI (Baseline, then at 4, 8, 12 weeks and quarterly); Fasting glucose / HbA1c (Baseline, 12 weeks, then annually); Lipid profile (fasting) (Baseline, 12 weeks, then annually)",
       ],
       longAnswer: [
-        "Zotepine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Zotepine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: D2/5-HT2A antagonist with tricyclic structure and monoaminergic breadth.",
         "Signature risk: dose-related SEIZURES (300 mg outpatient ceiling).",
       ],
@@ -286,17 +286,17 @@ export const zotepine: Drug = {
         "Signature risk: dose-related SEIZURES (300 mg outpatient ceiling).",
         "Sedating, weight-gaining, anticholinergic-adjacent profile.",
         "Japan/selected-EU markets; dose 150-300 mg/day.",
-        "Class mechanism: D2 blockade + 5-HT2A antagonism — the atypical signature.",
+        "Class mechanism: D2 blockade + 5-HT2A antagonism; the atypical signature.",
       ],
       pyqConcepts: [
         "Mechanism/target of Zotepine",
-        "Key adverse effect: Seizures (dose-related — the class's notable risk)",
+        "Key adverse effect: Seizures (dose-related, the class's notable risk)",
         "Dosing and titration of Zotepine",
       ],
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Zotepine develops seizures (dose-related — the class's notable risk) — next best step?",
+        "A patient on Zotepine develops seizures (dose-related, the class's notable risk): next best step?",
         "When to choose Zotepine over alternatives in its class.",
       ],
     },
@@ -310,7 +310,7 @@ export const zotepine: Drug = {
     psychiatryResidency: {
       advancedPearls: [
         "The tricyclic-atypical hybrid: a TCA-shaped antipsychotic with TCA-flavoured adverse effects and a seizure ceiling.",
-        "The dose ceiling (300 mg outpatient) exists because of seizures — the defining safety rule.",
+        "The dose ceiling (300 mg outpatient) exists because of seizures: the defining safety rule.",
         "Continuity entry: Japanese/selected-European exposure.",
       ],
     },
@@ -321,12 +321,12 @@ export const zotepine: Drug = {
     "Signature risk: dose-related SEIZURES (300 mg outpatient ceiling).",
     "Sedating, weight-gaining, anticholinergic-adjacent profile.",
     "Japan/selected-EU markets; dose 150-300 mg/day.",
-    "Class mechanism: D2 blockade + 5-HT2A antagonism — the atypical signature.",
+    "Class mechanism: D2 blockade + 5-HT2A antagonism; the atypical signature.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia (japan/some european)",
+      title: "First presentation: schizophrenia (japan/some european)",
       presentation: "A patient presenting with schizophrenia (japan/some european), started on Zotepine.",
       history: "A adult patient presents with a schizophrenia (japan/some european) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with schizophrenia (japan/some european); physical examination and baseline investigations are unremarkable.",
@@ -335,7 +335,7 @@ export const zotepine: Drug = {
       management: "Started at 25-50 mg at night, titrated to 150-300 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Zotepine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Zotepine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -344,7 +344,7 @@ export const zotepine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Atypical Antipsychotic comparison — choosing within the class",
+      title: "Atypical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Zotepine",
       rows: [
         {
@@ -437,7 +437,7 @@ export const zotepine: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "Japanese tricyclic atypical — seizure-cautioned continuity entry",
+          primaryValue: "Japanese tricyclic atypical: seizure-cautioned continuity entry",
           comparisons: [
             {
               drug: "Aripiprazole",
@@ -458,7 +458,7 @@ export const zotepine: Drug = {
           ],
         },
       ],
-      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -467,7 +467,7 @@ export const zotepine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Zotepine reaches peak plasma concentration and begins acting at its molecular target (D2 (antagonist) + 5-HT2A (antagonist) + noradrenaline/serotonin reuptake effects; seizure threshold dose-related). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Zotepine reaches peak plasma concentration and begins acting at its molecular target (D2 (antagonist) + 5-HT2A (antagonist) + noradrenaline/serotonin reuptake effects; seizure threshold dose-related). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -503,7 +503,7 @@ export const zotepine: Drug = {
   faqs: [
     {
       question: "How long does Zotepine take to work?",
-      answer: "As with the class.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "As with the class.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Zotepine?",
@@ -511,11 +511,11 @@ export const zotepine: Drug = {
     },
     {
       question: "Can I stop Zotepine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Zotepine habit-forming?",
@@ -523,7 +523,7 @@ export const zotepine: Drug = {
     },
     {
       question: "Can I take Zotepine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Zotepine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Zotepine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -657,7 +657,7 @@ export const zotepine: Drug = {
       note: "Used clinically",
     },
     {
-      label: "Seizures (dose-related — the class's notable risk)",
+      label: "Seizures (dose-related, the class's notable risk)",
       type: "side-effect",
       href: "#side-effects",
       note: "Important safety issue",
@@ -675,7 +675,7 @@ export const zotepine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Zotepine",
+      label: "Patient Guide. Zotepine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -683,13 +683,13 @@ export const zotepine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The Japanese tricyclic atypical — serotonin-noradrenaline-dopamine antagonist with seizure caution.",
-    summary: "Zotepine is a prescription medicine used to treat schizophrenia (japan/some european). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Zotepine is a medicine used to treat schizophrenia (japan/some european). Zotepine blocks D2 and 5-HT2A with additional monoaminergic effects — a tricyclic-structured atypical with dose-related seizure risk. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
-    sideEffects: "The most common side effects are: sedation and drowsiness, weight gain, dry mouth and constipation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Seizures (dose-related — the class's notable risk) and Neuroleptic malignant syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and bmi (baseline, then at 4, 8, 12 weeks and quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually); lipid profile (fasting) (baseline, 12 weeks, then annually). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The Japanese tricyclic atypical: serotonin-noradrenaline-dopamine antagonist with seizure caution.",
+    summary: "Zotepine is a prescription medicine used to treat schizophrenia (japan/some european). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Zotepine is a medicine used to treat schizophrenia (japan/some european). Zotepine blocks D2 and 5-HT2A with additional monoaminergic effects: a tricyclic-structured atypical with dose-related seizure risk. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+    sideEffects: "The most common side effects are: sedation and drowsiness, weight gain, dry mouth and constipation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Seizures (dose-related, the class's notable risk) and Neuroleptic malignant syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and bmi (baseline, then at 4, 8, 12 weeks and quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually); lipid profile (fasting) (baseline, 12 weeks, then annually). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: CNS depressants and alcohol, QT-prolonging drugs, Antihypertensives. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: CNS depressants and alcohol, QT-prolonging drugs, Antihypertensives. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -713,7 +713,7 @@ export const zotepine: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -747,55 +747,55 @@ export const zotepine: Drug = {
         name: "Zotepine",
         slug: "zotepine",
         relationship: "This guide",
-        distinguishing: "Japanese tricyclic atypical — seizure-cautioned continuity entry",
+        distinguishing: "Japanese tricyclic atypical: seizure-cautioned continuity entry",
       },
       {
         name: "Aripiprazole",
         slug: "aripiprazole",
         relationship: "Same class (Dopamine Stabiliser)",
-        distinguishing: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+        distinguishing: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
       },
       {
         name: "Clozapine",
         slug: "clozapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
       },
       {
         name: "Lurasidone",
         slug: "lurasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+        distinguishing: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
       },
       {
         name: "Olanzapine",
         slug: "olanzapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+        distinguishing: "Most robust broad-spectrum atypical: heaviest metabolic burden",
       },
       {
         name: "Paliperidone",
         slug: "paliperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The LAI platform king — monthly to 6-monthly injections for schizophrenia",
+        distinguishing: "The LAI platform king: monthly to 6-monthly injections for schizophrenia",
       },
       {
         name: "Quetiapine",
         slug: "quetiapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin — the sedating antidepressant-antipsychotic",
+        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin: the sedating antidepressant-antipsychotic",
       },
       {
         name: "Risperidone",
         slug: "risperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most potent D2 blockade among atypicals — highest prolactin, best-studied LAI",
+        distinguishing: "Most potent D2 blockade among atypicals: highest prolactin, best-studied LAI",
       },
       {
         name: "Ziprasidone",
         slug: "ziprasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic — with QT vigilance",
+        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic, with QT vigilance",
       },
     ],
   },
@@ -943,7 +943,7 @@ export const zotepine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Zotepine in two sentences.",
-      answer: "Zotepine blocks D2 and 5-HT2A with additional monoaminergic effects — a tricyclic-structured atypical with dose-related seizure risk. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Zotepine blocks D2 and 5-HT2A with additional monoaminergic effects: a tricyclic-structured atypical with dose-related seizure risk. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -953,7 +953,7 @@ export const zotepine: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Zotepine and how you would manage it.",
-      answer: "Seizures (dose-related — the class's notable risk): Dose-related threshold lowering that defined dose ceilings. Management: Hard ceilings (300 mg outpatient); epilepsy caution.",
+      answer: "Seizures (dose-related, the class's notable risk): Dose-related threshold lowering that defined dose ceilings. Management: Hard ceilings (300 mg outpatient); epilepsy caution.",
       topic: "Safety",
     },
     {
@@ -1039,7 +1039,7 @@ export const zotepine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1084,7 +1084,7 @@ export const zotepine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Zotepine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Zotepine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1100,7 +1100,7 @@ export const zotepine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Zotepine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Zotepine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1143,7 +1143,7 @@ export const zotepine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Zotepine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Zotepine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1170,7 +1170,7 @@ export const zotepine: Drug = {
       "Review at 2 and 4 weeks after any dose change.",
     ],
     overdose: [
-      "Overdose with Zotepine is managed supportively — no specific antidote.",
+      "Overdose with Zotepine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Zotepine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1201,21 +1201,21 @@ export const zotepine: Drug = {
       },
     ],
     potentialAdvantages: [
-      "Japanese tricyclic atypical — seizure-cautioned continuity entry",
+      "Japanese tricyclic atypical: seizure-cautioned continuity entry",
     ],
     potentialDisadvantages: [
-      "See adverse effects section — the main disadvantages of Zotepine are its key side effects.",
+      "See adverse effects section: the main disadvantages of Zotepine are its key side effects.",
     ],
     primaryTargetSymptoms: ["Schizophrenia (Japan/some European)"],
     pearls: [
       "The tricyclic-atypical hybrid: a TCA-shaped antipsychotic with TCA-flavoured adverse effects and a seizure ceiling.",
-      "The dose ceiling (300 mg outpatient) exists because of seizures — the defining safety rule.",
+      "The dose ceiling (300 mg outpatient) exists because of seizures: the defining safety rule.",
       "Continuity entry: Japanese/selected-European exposure.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

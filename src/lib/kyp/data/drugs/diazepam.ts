@@ -23,14 +23,14 @@ export const diazepam: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Anxiolytics & Sedatives", "Benzodiazepines", "Diazepam"],
   /* ---- Hero / summary ---- */
-  tagline: "The original benzodiazepine — muscle-relaxing, seizure-stopping, alcohol-withdrawing, and the textbook of benzodiazepine pharmacokinetics.",
-  summary: "Diazepam is the founding benzodiazepine (1963): a long-acting GABA-A positive allosteric modulator with lipid solubility that makes it fast centrally (30–60 seconds IV) and long-lasting peripherally (active metabolites stretching to 100 hours). Its clinical portfolio — anxiety, alcohol withdrawal, muscle spasm, status epilepticus (historically), pre-procedural sedation — makes it the Swiss Army knife of the class. Dependence risk, accumulation in the elderly, and the opioid combination warning frame its modern use as short-course or carefully justified.",
+  tagline: "The original benzodiazepine: muscle-relaxing, seizure-stopping, alcohol-withdrawing, and the textbook of benzodiazepine pharmacokinetics.",
+  summary: "Diazepam is the founding benzodiazepine (1963): a long-acting GABA-A positive allosteric modulator with lipid solubility that makes it fast centrally (30–60 seconds IV) and long-lasting peripherally (active metabolites stretching to 100 hours). Its clinical portfolio (anxiety, alcohol withdrawal, muscle spasm, status epilepticus (historically), pre-procedural sedation) makes it the Swiss Army knife of the class. Dependence risk, accumulation in the elderly, and the opioid combination warning frame its modern use as short-course or carefully justified.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Diazepam — from its molecular target (GABA-A receptor benzodiazepine site (alpha-1/2/3/5-containing) — positive allosteric modulator) to clinical effect.",
+    "Explain the mechanism of action of Diazepam (from its molecular target (GABA-A receptor benzodiazepine site (alpha-1/2/3/5-containing)) positive allosteric modulator) to clinical effect.",
     "List the FDA-approved and off-label uses of Diazepam.",
     "Predict the common and serious side effects of Diazepam from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Diazepam.",
@@ -38,19 +38,19 @@ export const diazepam: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Diazepam binds the benzodiazepine site on the GABA-A receptor, increasing the frequency of chloride channel opening — amplifying the brain's own inhibitory signal rather than activating it directly.",
-    molecularTarget: "GABA-A receptor benzodiazepine site (alpha-1/2/3/5-containing) — positive allosteric modulator",
-    effect: "Anxiolysis, sedation, muscle relaxation, anticonvulsant action, and amnesia — the four classic benzodiazepine actions in one molecule.",
+    summary: "Diazepam binds the benzodiazepine site on the GABA-A receptor, increasing the frequency of chloride channel opening, amplifying the brain's own inhibitory signal rather than activating it directly.",
+    molecularTarget: "GABA-A receptor benzodiazepine site (alpha-1/2/3/5-containing): positive allosteric modulator",
+    effect: "Anxiolysis, sedation, muscle relaxation, anticonvulsant action, and amnesia: the four classic benzodiazepine actions in one molecule.",
     steps: [
       "Diazepam binds the benzodiazepine (BZ) site at the interface of alpha and gamma subunits on GABA-A.",
-      "GABA-A channels open MORE OFTEN in the presence of GABA — the drug amplifies natural inhibition (a positive allosteric modulator, not an agonist of the chloride channel itself).",
+      "GABA-A channels open MORE OFTEN in the presence of GABA: the drug amplifies natural inhibition (a positive allosteric modulator, not an agonist of the chloride channel itself).",
       "High lipid solubility delivers rapid brain entry (IV: 30–60 seconds; oral: 30–60 minutes).",
-      "Hepatic metabolism to desmethyldiazepam (nordiazepam) — active, half-life 40–100 h — creates the long tail that defines diazepam's cumulative profile.",
-      "The result: fast anxiolysis and anticonvulsant effect with slow, cumulative clearance — ideal for alcohol withdrawal tapering, hazardous for elderly chronic use.",
+      "Hepatic metabolism to desmethyldiazepam (nordiazepam) (active, half-life 40–100 h) creates the long tail that defines diazepam's cumulative profile.",
+      "The result: fast anxiolysis and anticonvulsant effect with slow, cumulative clearance; ideal for alcohol withdrawal tapering, hazardous for elderly chronic use.",
     ],
     pharmacokinetics: "Rapid and complete oral absorption (peak 30–90 min); extensive redistribution to fat; IV onset in under a minute.",
-    halfLife: "Diazepam 20–50 h; nordiazepam (active) 40–100 h — effective drug accumulation with repeated dosing.",
-    activeMetabolite: "Nordiazepam (desmethyldiazepam), plus temazepam and oxazepam — active metabolites that extend the tail.",
+    halfLife: "Diazepam 20–50 h; nordiazepam (active) 40–100 h: effective drug accumulation with repeated dosing.",
+    activeMetabolite: "Nordiazepam (desmethyldiazepam), plus temazepam and oxazepam: active metabolites that extend the tail.",
     metabolism: "Hepatic CYP2C19 and 3A4 → nordiazepam (the long-acting metabolite).",
     excretion: "Renal glucuronide metabolites.",
   },
@@ -111,12 +111,12 @@ export const diazepam: Drug = {
         label: "inhibits firing",
       },
     ],
-    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly — which is why their effect is powerful but limited by dependence risk.",
+    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly, which is why their effect is powerful but limited by dependence risk.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["GABA"],
   receptors: [
-    "GABA-A receptor (benzodiazepine site — PAM)",
+    "GABA-A receptor (benzodiazepine site. PAM)",
   ],
   brainRegionIds: ["amygdala", "prefrontal-cortex"],
   pathwayIds: [],
@@ -140,7 +140,7 @@ export const diazepam: Drug = {
     {
       name: "Status epilepticus (historic/second-line)",
       status: "guideline",
-      description: "IV diazepam stops seizures in under a minute — lorazepam's longer duration has made it the first-line successor.",
+      description: "IV diazepam stops seizures in under a minute: lorazepam's longer duration has made it the first-line successor.",
     },
     {
       name: "Pre-procedural sedation and amnesia",
@@ -150,7 +150,7 @@ export const diazepam: Drug = {
     {
       name: "Panic disorder (adjunct)",
       status: "off-label",
-      description: "Effective but dependence-prone — antidepressants are the long-term answer.",
+      description: "Effective but dependence-prone: antidepressants are the long-term answer.",
     },
   ],
   contraindications: [
@@ -162,12 +162,12 @@ export const diazepam: Drug = {
     {
       name: "Opioids",
       severity: "absolute",
-      rationale: "Profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      rationale: "Profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
     },
   ],
   blackBoxWarnings: [
     {
-      title: "Risks with opioids — sedation, respiratory depression, death",
+      title: "Risks with opioids: sedation, respiratory depression, death",
       text: "Concurrent benzodiazepine and opioid use causes profound sedation, respiratory depression, coma, and death. Reserve for patients for whom alternatives are inadequate; use the lowest doses and shortest duration; warn every patient explicitly.",
     },
     {
@@ -181,35 +181,35 @@ export const diazepam: Drug = {
       name: "Sedation and drowsiness",
       frequency: "very-common",
       severity: "moderate",
-      description: "The dose-limiting effect — additive with alcohol and opioids.",
+      description: "The dose-limiting effect: additive with alcohol and opioids.",
       management: "Dose reduction; avoid driving; night dosing.",
     },
     {
       name: "Muscle weakness / ataxia",
       frequency: "common",
       severity: "moderate",
-      description: "The flip side of muscle relaxation — falls in the elderly.",
+      description: "The flip side of muscle relaxation: falls in the elderly.",
       management: "Fall precautions; reduce dose.",
     },
     {
       name: "Anterograde amnesia",
       frequency: "common",
       severity: "moderate",
-      description: "Memory gaps for events after dosing — used deliberately in procedures, hazardous socially.",
+      description: "Memory gaps for events after dosing: used deliberately in procedures, hazardous socially.",
       management: "Counsel; avoid responsibility-heavy tasks post-dose.",
     },
     {
       name: "Confusion (elderly)",
       frequency: "common",
       severity: "moderate",
-      description: "Paradoxical excitation or confusion in older patients — the classic geriatric hazard.",
+      description: "Paradoxical excitation or confusion in older patients: the classic geriatric hazard.",
       management: "Avoid in the elderly where possible; use short-acting no-metabolite alternatives (lorazepam/oxazepam).",
     },
     {
       name: "Tolerance and dependence",
       frequency: "very-common",
       severity: "severe",
-      description: "Develops within 2–4 weeks of regular use — the defining risk of the class.",
+      description: "Develops within 2–4 weeks of regular use: the defining risk of the class.",
       management: "Short courses; tapering plans; regular review justification.",
     },
   ],
@@ -218,21 +218,21 @@ export const diazepam: Drug = {
       name: "Respiratory depression (with opioids or overdose)",
       frequency: "uncommon",
       severity: "life-threatening",
-      description: "The boxed-warning emergency — IV flumazenil reverses it (with seizure risk in chronic users/TCA co-ingestion).",
+      description: "The boxed-warning emergency. IV flumazenil reverses it (with seizure risk in chronic users/TCA co-ingestion).",
       management: "Airway support; flumazenil with caution; the opioid combination is the usual driver.",
     },
     {
       name: "Withdrawal seizures and delirium",
       frequency: "uncommon",
       severity: "life-threatening",
-      description: "Abrupt cessation after chronic use — seizures, delirium, and a rebound worse than the original anxiety.",
+      description: "Abrupt cessation after chronic use: seizures, delirium, and a rebound worse than the original anxiety.",
       management: "Slow taper (weeks-months for long-term users); switch to diazepam itself for tapering (see pearl).",
     },
     {
       name: "Paradoxical reactions",
       frequency: "rare",
       severity: "severe",
-      description: "Excitement, rage, disinhibition — especially in children, the elderly, and developmental disability.",
+      description: "Excitement, rage, disinhibition, especially in children, the elderly, and developmental disability.",
       management: "Stop; do not rechallenge.",
     },
     {
@@ -265,7 +265,7 @@ export const diazepam: Drug = {
     {
       drug: "Opioids",
       severity: "contraindicated",
-      mechanism: "Profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      mechanism: "Profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
       action: "Avoid; if unavoidable for taper protocols, use lowest doses with intensive monitoring.",
     },
     {
@@ -289,41 +289,41 @@ export const diazepam: Drug = {
     {
       drug: "Older antihistamines (sedating)",
       severity: "moderate",
-      mechanism: "Additive sedation in the elderly — falls.",
+      mechanism: "Additive sedation in the elderly: falls.",
       action: "Prefer non-sedating alternatives.",
     },
   ],
   pregnancy: {
     legacyCategory: "D",
     summary: "First-trimester exposure is associated with a small absolute increase in oral clefts, and third-trimester use causes neonatal floppy infant syndrome (sedation, hypotonia, poor feeding) and withdrawal. Use short courses at the lowest dose when unavoidable; avoid near term.",
-    lactation: "Diazepam and its long-acting metabolites pass into milk and can accumulate in the infant — sedation, poor feeding. Prefer shorter-acting, glucuronidated alternatives (lorazepam/oxazepam) if breastfeeding.",
+    lactation: "Diazepam and its long-acting metabolites pass into milk and can accumulate in the infant: sedation, poor feeding. Prefer shorter-acting, glucuronidated alternatives (lorazepam/oxazepam) if breastfeeding.",
   },
   renalAdjustment: "Active metabolites accumulate in renal impairment; lorazepam/oxazepam (glucuronidated) are preferred in significant renal disease.",
-  hepaticAdjustment: "Cirrhosis markedly slows clearance — halve doses or use lorazepam; watch for encephalopathy in liver disease.",
+  hepaticAdjustment: "Cirrhosis markedly slows clearance: halve doses or use lorazepam; watch for encephalopathy in liver disease.",
   /* ---- Education ---- */
-  patientExplanation: "Diazepam is the original calming medicine of its class — it works by strengthening the brain's natural relaxing chemical (GABA). It relieves anxiety, relaxes muscles, prevents alcohol-withdrawal fits, and sedates for procedures. It is designed for short courses: taken regularly for more than a few weeks it causes dependence, and combined with opioid painkillers it can dangerously slow breathing.",
+  patientExplanation: "Diazepam is the original calming medicine of its class. It works by strengthening the brain's natural relaxing chemical (GABA). It relieves anxiety, relaxes muscles, prevents alcohol-withdrawal fits, and sedates for procedures. It is designed for short courses: taken regularly for more than a few weeks it causes dependence, and combined with opioid painkillers it can dangerously slow breathing.",
   patientEducationPoints: [
-    "This medicine is for short-term or carefully planned use — it can cause dependence within weeks of regular use.",
-    "Never mix it with opioid painkillers or alcohol — the combination can stop breathing.",
+    "This medicine is for short-term or carefully planned use. It can cause dependence within weeks of regular use.",
+    "Never mix it with opioid painkillers or alcohol: the combination can stop breathing.",
     "Do not drive until you know how it affects you.",
-    "Stopping must be gradual — never stop suddenly after regular use.",
-    "Benefit from Diazepam builds over weeks — do not judge it in the first days.",
+    "Stopping must be gradual, never stop suddenly after regular use.",
+    "Benefit from Diazepam builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "Pharmacokinetics IS the prescribing: fast in (lipid solubility), long out (nordiazepam 40–100 h) — great for withdrawal tapers, hazardous for chronic elderly use.",
-    "Diazepam is the taper drug of choice: convert short-half-life benzo dependence to diazepam, then taper the single daily dose — the long tail smooths the descent.",
-    "IV diazepam works in under a minute — but redistributes fast; lorazepam's longer seizure-free duration made it status-epilepticus first-line.",
-    "The metabolite family tree: diazepam → nordiazepam → (temazepam, oxazepam) — three marketed benzos are diazepam's own descendants.",
-    "Avoid in the elderly and in liver disease — accumulation produces the confusion-and-falls syndrome; lorazepam/oxazepam are the glucuronidation escape routes.",
-    "Alcohol withdrawal: symptom-triggered dosing (CIWA-driven) beats fixed schedules — less total drug, same safety.",
+    "Pharmacokinetics IS the prescribing: fast in (lipid solubility), long out (nordiazepam 40–100 h); great for withdrawal tapers, hazardous for chronic elderly use.",
+    "Diazepam is the taper drug of choice: convert short-half-life benzo dependence to diazepam, then taper the single daily dose; the long tail smooths the descent.",
+    "IV diazepam works in under a minute, but redistributes fast; lorazepam's longer seizure-free duration made it status-epilepticus first-line.",
+    "The metabolite family tree: diazepam → nordiazepam → (temazepam, oxazepam); three marketed benzos are diazepam's own descendants.",
+    "Avoid in the elderly and in liver disease: accumulation produces the confusion-and-falls syndrome; lorazepam/oxazepam are the glucuronidation escape routes.",
+    "Alcohol withdrawal: symptom-triggered dosing (CIWA-driven) beats fixed schedules; less total drug, same safety.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Diazepam: Diazepam binds the benzodiazepine site on the GABA-A receptor, increasing the frequency of chloride channel opening — amplifying the brain's own inhibitory signal rather than activating it directly.",
+        "Mechanism of Diazepam: Diazepam binds the benzodiazepine site on the GABA-A receptor, increasing the frequency of chloride channel opening, amplifying the brain's own inhibitory signal rather than activating it directly.",
         "Uses of Diazepam: Anxiety disorders / short-term anxiety relief; Alcohol withdrawal syndrome; Muscle spasm and spasticity; Status epilepticus (historic/second-line)",
-        "Mechanism: GABA-A PAM — increases FREQUENCY of chloride channel opening (vs barbiturates: duration).",
+        "Mechanism: GABA-A PAM; increases FREQUENCY of chloride channel opening (vs barbiturates: duration).",
         "PK signature: fast brain entry (lipid-soluble) + long active metabolite tail (nordiazepam 40–100 h).",
       ],
       practical: [
@@ -331,14 +331,14 @@ export const diazepam: Drug = {
         "Outline the monitoring plan: Respiratory status and sedation (Clinical review each visit); Dependence review (Every visit for long-term users); Fall risk review (elderly) (Every visit in older patients)",
       ],
       longAnswer: [
-        "Diazepam: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: GABA-A PAM — increases FREQUENCY of chloride channel opening (vs barbiturates: duration).",
+        "Diazepam: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: GABA-A PAM; increases FREQUENCY of chloride channel opening (vs barbiturates: duration).",
         "PK signature: fast brain entry (lipid-soluble) + long active metabolite tail (nordiazepam 40–100 h).",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: GABA-A PAM — increases FREQUENCY of chloride channel opening (vs barbiturates: duration).",
+        "Mechanism: GABA-A PAM; increases FREQUENCY of chloride channel opening (vs barbiturates: duration).",
         "PK signature: fast brain entry (lipid-soluble) + long active metabolite tail (nordiazepam 40–100 h).",
         "Clinical portfolio: anxiety, alcohol withdrawal, muscle spasm, status epilepticus (2nd line), procedural sedation.",
         "Boxed warnings: opioid combination (respiratory death) + dependence/withdrawal.",
@@ -353,41 +353,41 @@ export const diazepam: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Diazepam develops respiratory depression (with opioids or overdose) — next best step?",
+        "A patient on Diazepam develops respiratory depression (with opioids or overdose): next best step?",
         "When to choose Diazepam over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: GABA-A receptor benzodiazepine site (alpha-1/2/3/5-containing) — positive allosteric modulator",
+        "Primary target: GABA-A receptor benzodiazepine site (alpha-1/2/3/5-containing); positive allosteric modulator",
         "Most common side effects: Sedation and drowsiness, Muscle weakness / ataxia, Anterograde amnesia",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The pharmacokinetic legend: fastest brain entry, longest metabolite tail — learn diazepam and you know the whole class's geometry.",
+        "The pharmacokinetic legend: fastest brain entry, longest metabolite tail; learn diazepam and you know the whole class's geometry.",
         "Convert-and-taper: diazepam is the standard vehicle for weaning off any short-half-life benzo.",
         "Symptom-triggered (CIWA) alcohol withdrawal dosing: better outcomes than fixed schedules.",
-        "The elderly on diazepam accumulate drug for days — the 'confused for no reason' consultation.",
+        "The elderly on diazepam accumulate drug for days: the 'confused for no reason' consultation.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: GABA-A PAM — increases FREQUENCY of chloride channel opening (vs barbiturates: duration).",
+    "Mechanism: GABA-A PAM; increases FREQUENCY of chloride channel opening (vs barbiturates: duration).",
     "PK signature: fast brain entry (lipid-soluble) + long active metabolite tail (nordiazepam 40–100 h).",
     "Clinical portfolio: anxiety, alcohol withdrawal, muscle spasm, status epilepticus (2nd line), procedural sedation.",
     "Boxed warnings: opioid combination (respiratory death) + dependence/withdrawal.",
     "Preferred for benzo tapering: long half-life smooths withdrawal (convert-and-taper).",
     "Avoid in elderly/liver disease: accumulation → confusion, falls; prefer lorazepam/oxazepam (glucuronidation).",
-    "Withdrawal can include seizures and delirium — taper always.",
+    "Withdrawal can include seizures and delirium: taper always.",
     "Metabolites: nordiazepam (active, long); temazepam and oxazepam are descendants.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — anxiety disorders / short-term anxiety relief",
+      title: "First presentation: anxiety disorders / short-term anxiety relief",
       presentation: "A patient presenting with anxiety disorders / short-term anxiety relief, started on Diazepam.",
       history: "A adult patient presents with a anxiety disorders / short-term anxiety relief picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with anxiety disorders / short-term anxiety relief; physical examination and baseline investigations are unremarkable.",
@@ -396,7 +396,7 @@ export const diazepam: Drug = {
       management: "Started at 2 mg twice daily (or 5 mg nocte), titrated to 4–30 mg/day divided with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Diazepam takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Diazepam takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -405,12 +405,12 @@ export const diazepam: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Benzodiazepine comparison — choosing within the class",
+      title: "Benzodiazepine comparison: choosing within the class",
       primaryDrug: "Diazepam",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "GABA-A receptor benzodiazepine site (alpha-1/2/3/5-containing) — positive allosteric modulator",
+          primaryValue: "GABA-A receptor benzodiazepine site (alpha-1/2/3/5-containing): positive allosteric modulator",
           comparisons: [
             {
               drug: "Alprazolam",
@@ -432,7 +432,7 @@ export const diazepam: Drug = {
         },
         {
           attribute: "Half-life",
-          primaryValue: "Diazepam 20–50 h; nordiazepam (active) 40–100 h — effective drug accumulation with repeated dosing.",
+          primaryValue: "Diazepam 20–50 h; nordiazepam (active) 40–100 h: effective drug accumulation with repeated dosing.",
           comparisons: [
             {
               drug: "Alprazolam",
@@ -476,7 +476,7 @@ export const diazepam: Drug = {
         },
         {
           attribute: "Sedation",
-          primaryValue: "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+          primaryValue: "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
           comparisons: [
             {
               drug: "Alprazolam",
@@ -498,7 +498,7 @@ export const diazepam: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+          primaryValue: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
           comparisons: [
             {
               drug: "Alprazolam",
@@ -519,7 +519,7 @@ export const diazepam: Drug = {
           ],
         },
       ],
-      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -528,7 +528,7 @@ export const diazepam: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Diazepam reaches peak plasma concentration and begins acting at its molecular target (GABA-A receptor benzodiazepine site (alpha-1/2/3/5-containing) — positive allosteric modulator). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Diazepam reaches peak plasma concentration and begins acting at its molecular target (GABA-A receptor benzodiazepine site (alpha-1/2/3/5-containing), positive allosteric modulator). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -564,7 +564,7 @@ export const diazepam: Drug = {
   faqs: [
     {
       question: "How long does Diazepam take to work?",
-      answer: "IV: 30–60 seconds (status epilepticus, agitation).. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "IV: 30–60 seconds (status epilepticus, agitation).. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Diazepam?",
@@ -572,19 +572,19 @@ export const diazepam: Drug = {
     },
     {
       question: "Can I stop Diazepam suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Diazepam habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Diazepam exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Diazepam exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Diazepam during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Diazepam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Diazepam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -710,7 +710,7 @@ export const diazepam: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "GABA-A receptor benzodiazepine site (alpha-1/2/3/5-containing) — positive allosteric modulator",
+      label: "GABA-A receptor benzodiazepine site (alpha-1/2/3/5-containing): positive allosteric modulator",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
@@ -764,7 +764,7 @@ export const diazepam: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Diazepam",
+      label: "Patient Guide. Diazepam",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -772,13 +772,13 @@ export const diazepam: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The original benzodiazepine — muscle-relaxing, seizure-stopping, alcohol-withdrawing, and the textbook of benzodiazepine pharmacokinetics.",
-    summary: "Diazepam is a prescription medicine used to treat anxiety disorders / short-term anxiety relief. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Diazepam is the original calming medicine of its class — it works by strengthening the brain's natural relaxing chemical (GABA). It relieves anxiety, relaxes muscles, prevents alcohol-withdrawal fits, and sedates for procedures. It is designed for short courses: taken regularly for more than a few weeks it causes dependence, and combined with opioid painkillers it can dangerously slow breathing.",
-    sideEffects: "The most common side effects are: sedation and drowsiness, muscle weakness / ataxia, anterograde amnesia, confusion (elderly), tolerance and dependence. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression (with opioids or overdose) and Withdrawal seizures and delirium. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The original benzodiazepine: muscle-relaxing, seizure-stopping, alcohol-withdrawing, and the textbook of benzodiazepine pharmacokinetics.",
+    summary: "Diazepam is a prescription medicine used to treat anxiety disorders / short-term anxiety relief. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Diazepam is the original calming medicine of its class. It works by strengthening the brain's natural relaxing chemical (GABA). It relieves anxiety, relaxes muscles, prevents alcohol-withdrawal fits, and sedates for procedures. It is designed for short courses: taken regularly for more than a few weeks it causes dependence, and combined with opioid painkillers it can dangerously slow breathing.",
+    sideEffects: "The most common side effects are: sedation and drowsiness, muscle weakness / ataxia, anterograde amnesia, confusion (elderly), tolerance and dependence. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression (with opioids or overdose) and Withdrawal seizures and delirium. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, CYP2C19/3A4 inhibitors (omeprazole, ketoconazole, etc.). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, CYP2C19/3A4 inhibitors (omeprazole, ketoconazole, etc.). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -811,8 +811,8 @@ export const diazepam: Drug = {
     costNote: "Cost varies by manufacturer and region.",
     monitoring: "CIWA-scored withdrawal reviews; sedation and respiratory check each IV dose.",
     patientCounselling: [
-      "Never with opioid painkillers or heavy alcohol — breathing can stop.",
-      "Short courses only — dependence builds within weeks.",
+      "Never with opioid painkillers or heavy alcohol: breathing can stop.",
+      "Short courses only: dependence builds within weeks.",
       "No driving until effects are known.",
     ],
   },
@@ -848,7 +848,7 @@ export const diazepam: Drug = {
         name: "Diazepam",
         slug: "diazepam",
         relationship: "This guide",
-        distinguishing: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+        distinguishing: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
       },
       {
         name: "Alprazolam",
@@ -860,43 +860,43 @@ export const diazepam: Drug = {
         name: "Clonazepam",
         slug: "clonazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "The long-acting anticonvulsant benzo — seizures and panic",
+        distinguishing: "The long-acting anticonvulsant benzo: seizures and panic",
       },
       {
         name: "Lorazepam",
         slug: "lorazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+        distinguishing: "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo",
       },
       {
         name: "Chlordiazepoxide",
         slug: "chlordiazepoxide",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Alcohol withdrawal tablet — the founding benzo",
+        distinguishing: "Alcohol withdrawal tablet: the founding benzo",
       },
       {
         name: "Midazolam",
         slug: "midazolam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Oxazepam",
         slug: "oxazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Clorazepate",
         slug: "clorazepate",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Loflazepate",
         slug: "loflazepate",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
     ],
   },
@@ -1044,7 +1044,7 @@ export const diazepam: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Diazepam in two sentences.",
-      answer: "Diazepam binds the benzodiazepine site on the GABA-A receptor, increasing the frequency of chloride channel opening — amplifying the brain's own inhibitory signal rather than activating it directly. Net effect: Anxiolysis, sedation, muscle relaxation, anticonvulsant action, and amnesia — the four classic benzodiazepine actions in one molecule.",
+      answer: "Diazepam binds the benzodiazepine site on the GABA-A receptor, increasing the frequency of chloride channel opening, amplifying the brain's own inhibitory signal rather than activating it directly. Net effect: Anxiolysis, sedation, muscle relaxation, anticonvulsant action, and amnesia; the four classic benzodiazepine actions in one molecule.",
       topic: "Mechanism",
     },
     {
@@ -1054,7 +1054,7 @@ export const diazepam: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Diazepam and how you would manage it.",
-      answer: "Respiratory depression (with opioids or overdose): The boxed-warning emergency — IV flumazenil reverses it (with seizure risk in chronic users/TCA co-ingestion). Management: Airway support; flumazenil with caution; the opioid combination is the usual driver.",
+      answer: "Respiratory depression (with opioids or overdose): The boxed-warning emergency. IV flumazenil reverses it (with seizure risk in chronic users/TCA co-ingestion). Management: Airway support; flumazenil with caution; the opioid combination is the usual driver.",
       topic: "Safety",
     },
     {
@@ -1064,7 +1064,7 @@ export const diazepam: Drug = {
     },
     {
       question: "Share one clinical pearl about Diazepam that separates safe prescribers from unsafe ones.",
-      answer: "The pharmacokinetic legend: fastest brain entry, longest metabolite tail — learn diazepam and you know the whole class's geometry.",
+      answer: "The pharmacokinetic legend: fastest brain entry, longest metabolite tail; learn diazepam and you know the whole class's geometry.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1140,7 +1140,7 @@ export const diazepam: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1185,7 +1185,7 @@ export const diazepam: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Diazepam works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Diazepam works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1201,7 +1201,7 @@ export const diazepam: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Diazepam safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Diazepam safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1248,7 +1248,7 @@ export const diazepam: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Diazepam follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Diazepam follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1259,7 +1259,7 @@ export const diazepam: Drug = {
       "Dose reduction or timing change before discontinuation.",
     ],
     weightGain: "See product information and class comparison.",
-    sedation: "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+    sedation: "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
     dosing: [
       {
         indication: "Anxiety (short course)",
@@ -1285,7 +1285,7 @@ export const diazepam: Drug = {
       {
         indication: "Status epilepticus (second-line)",
         starting: "5–10 mg IV (~0.15–0.2 mg/kg)",
-        titration: "Repeat after 5–10 min if needed — then transition to maintenance",
+        titration: "Repeat after 5–10 min if needed, then transition to maintenance",
         target: "10–20 mg IV per episode",
         max: "Protocol-limited; monitor respiration",
       },
@@ -1300,26 +1300,26 @@ export const diazepam: Drug = {
     dosageForms: [
       "Tablets 2, 5, 10 mg",
       "Oral solution 2 mg/mL (or 5 mg/5 mL)",
-      "Injection 5 mg/mL (IV/IM — IV preferred)",
+      "Injection 5 mg/mL (IV/IM. IV preferred)",
       "Suppositories (some markets)",
     ],
     dosingTips: [
       "Oral for withdrawal loading; reserve IV for seizures and acute agitation.",
       "Convert chronic short-half-life benzo users to diazepam-equivalent once-daily dosing, then taper ~10–25% per step.",
       "Never co-prescribe with opioids without documented justification.",
-      "In the elderly: don't start — switch to lorazepam/oxazepam if a benzo is truly needed.",
+      "In the elderly: don't start. Switch to lorazepam/oxazepam if a benzo is truly needed.",
     ],
     overdose: [
-      "Overdose with Diazepam is managed supportively — no specific antidote.",
+      "Overdose with Diazepam is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Diazepam is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
     pharmacokinetics: [
-      "Half-life: Diazepam 20–50 h; nordiazepam (active) 40–100 h — effective drug accumulation with repeated dosing..",
+      "Half-life: Diazepam 20–50 h; nordiazepam (active) 40–100 h: effective drug accumulation with repeated dosing..",
       "Metabolism: Hepatic CYP2C19 and 3A4 → nordiazepam (the long-acting metabolite)..",
     ],
     doNotUse: ["Known hypersensitivity to this agent."],
@@ -1344,28 +1344,28 @@ export const diazepam: Drug = {
       },
     ],
     potentialAdvantages: [
-      "Fast onset (lipid solubility) + long tail (metabolites) — the taper champion.",
+      "Fast onset (lipid solubility) + long tail (metabolites): the taper champion.",
       "Muscle-relaxant strength.",
       "IV form for status epilepticus and acute agitation.",
       "Cheap and globally available.",
     ],
     potentialDisadvantages: [
-      "Accumulation — falls and confusion in the elderly and liver disease.",
+      "Accumulation: falls and confusion in the elderly and liver disease.",
       "Full dependence profile of the class.",
       "Long metabolite tail complicates withdrawal timing.",
       "Opioid-combination lethality.",
     ],
     primaryTargetSymptoms: ["Acute anxiety and panic", "Alcohol withdrawal autonomic storm", "Muscle spasm", "Seizures (acute)", "Pre-procedural sedation/amnesia"],
     pearls: [
-      "The pharmacokinetic legend: fastest brain entry, longest metabolite tail — learn diazepam and you know the whole class's geometry.",
+      "The pharmacokinetic legend: fastest brain entry, longest metabolite tail; learn diazepam and you know the whole class's geometry.",
       "Convert-and-taper: diazepam is the standard vehicle for weaning off any short-half-life benzo.",
       "Symptom-triggered (CIWA) alcohol withdrawal dosing: better outcomes than fixed schedules.",
-      "The elderly on diazepam accumulate drug for days — the 'confused for no reason' consultation.",
+      "The elderly on diazepam accumulate drug for days: the 'confused for no reason' consultation.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

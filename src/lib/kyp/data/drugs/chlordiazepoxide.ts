@@ -23,14 +23,14 @@ export const chlordiazepoxide: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Anxiolytics & Sedatives", "Benzodiazepines", "Chlordiazepoxide"],
   /* ---- Hero / summary ---- */
-  tagline: "The first benzodiazepine ever — now the alcohol-withdrawal tablet of record.",
-  summary: "Chlordiazepoxide (Librium, 1960) opened the benzodiazepine era. Today its identity is singular: it is the standard ORAL benzodiazepine for uncomplicated alcohol withdrawal — long-acting, smoothly tapering, available as a cheap generic — while its original anxiolytic role has passed to successors. Its long-acting metabolites (including desmethylchlordiazepoxide and nordiazepam) provide the built-in taper that withdrawal management wants.",
+  tagline: "The first benzodiazepine ever: now the alcohol-withdrawal tablet of record.",
+  summary: "Chlordiazepoxide (Librium, 1960) opened the benzodiazepine era. Today its identity is singular: it is the standard ORAL benzodiazepine for uncomplicated alcohol withdrawal (long-acting, smoothly tapering, available as a cheap generic) while its original anxiolytic role has passed to successors. Its long-acting metabolites (including desmethylchlordiazepoxide and nordiazepam) provide the built-in taper that withdrawal management wants.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Chlordiazepoxide — from its molecular target (GABA-A benzodiazepine site (PAM)) to clinical effect.",
+    "Explain the mechanism of action of Chlordiazepoxide, from its molecular target (GABA-A benzodiazepine site (PAM)) to clinical effect.",
     "List the FDA-approved and off-label uses of Chlordiazepoxide.",
     "Predict the common and serious side effects of Chlordiazepoxide from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Chlordiazepoxide.",
@@ -38,15 +38,15 @@ export const chlordiazepoxide: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "The original benzodiazepine GABA-A PAM — long-acting with a cascade of active metabolites including diazepam's own nordiazepam.",
+    summary: "The original benzodiazepine GABA-A PAM: long-acting with a cascade of active metabolites including diazepam's own nordiazepam.",
     molecularTarget: "GABA-A benzodiazepine site (PAM)",
     effect: "Anxiolysis, sedation, anticonvulsant and alcohol-withdrawal coverage via long-acting metabolites.",
     steps: [
       "Class mechanism: benzodiazepine-site PAM amplifying GABA inhibition.",
-      "Metabolised through a chain of active metabolites (desmethyl-, demoxepam, nordiazepam) — each long-acting.",
+      "Metabolised through a chain of active metabolites (desmethyl-, demoxepam, nordiazepam): each long-acting.",
       "The metabolite cascade = built-in self-taper, the property that made it the alcohol-withdrawal tablet standard.",
     ],
-    pharmacokinetics: "Oral absorption slower than diazepam; IM absorption unreliable — oral use preferred.",
+    pharmacokinetics: "Oral absorption slower than diazepam; IM absorption unreliable: oral use preferred.",
     halfLife: "Parent 5–30 h; metabolites extend to 100+ h.",
     activeMetabolite: "Multiple: desmethylchlordiazepoxide, demoxepam, nordiazepam (diazepam's metabolite!).",
     metabolism: "Hepatic CYP3A4 chain.",
@@ -109,12 +109,12 @@ export const chlordiazepoxide: Drug = {
         label: "inhibits firing",
       },
     ],
-    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly — which is why their effect is powerful but limited by dependence risk.",
+    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly, which is why their effect is powerful but limited by dependence risk.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["GABA"],
   receptors: [
-    "GABA-A receptor (benzodiazepine site — PAM)",
+    "GABA-A receptor (benzodiazepine site. PAM)",
   ],
   brainRegionIds: ["amygdala", "prefrontal-cortex"],
   pathwayIds: [],
@@ -128,7 +128,7 @@ export const chlordiazepoxide: Drug = {
     {
       name: "Anxiety (short-term, historic)",
       status: "fda-approved",
-      description: "The original 1960 indication — successors preferred now.",
+      description: "The original 1960 indication: successors preferred now.",
     },
     {
       name: "Preoperative anxiety (historic)",
@@ -155,7 +155,7 @@ export const chlordiazepoxide: Drug = {
     },
     {
       title: "Dependence and withdrawal",
-      text: "Class warning — courses kept short and tapered.",
+      text: "Class warning: courses kept short and tapered.",
     },
   ],
   /* ---- Side effects ---- */
@@ -221,7 +221,7 @@ export const chlordiazepoxide: Drug = {
     {
       drug: "Disulfiram",
       severity: "moderate",
-      mechanism: "Inhibits chlordiazepoxide metabolism — increased sedation.",
+      mechanism: "Inhibits chlordiazepoxide metabolism: increased sedation.",
       action: "Dose reduction; prefer alternatives.",
     },
     {
@@ -233,41 +233,41 @@ export const chlordiazepoxide: Drug = {
   ],
   pregnancy: {
     legacyCategory: "D",
-    summary: "Class considerations — avoid regular use; the alcohol-withdrawal context itself demands specialist decisions.",
+    summary: "Class considerations: avoid regular use; the alcohol-withdrawal context itself demands specialist decisions.",
     lactation: "Passes into milk; infant sedation possible.",
   },
   renalAdjustment: "Standard caution.",
-  hepaticAdjustment: "Active metabolites accumulate in liver disease — reduce dose; lorazepam preferred in significant hepatic impairment.",
+  hepaticAdjustment: "Active metabolites accumulate in liver disease: reduce dose; lorazepam preferred in significant hepatic impairment.",
   /* ---- Education ---- */
-  patientExplanation: "Chlordiazepoxide is the oldest member of its family — used today mainly to make alcohol withdrawal safe and comfortable: it settles the shakes, racing heart, and anxiety of stopping drinking, then is tapered down over a week or so. It works with thiamine (vitamin B1) which protects the brain during withdrawal.",
+  patientExplanation: "Chlordiazepoxide is the oldest member of its family: used today mainly to make alcohol withdrawal safe and comfortable: it settles the shakes, racing heart, and anxiety of stopping drinking, then is tapered down over a week or so. It works with thiamine (vitamin B1) which protects the brain during withdrawal.",
   patientEducationPoints: [
-    "This medicine is for short-term or carefully planned use — it can cause dependence within weeks of regular use.",
-    "Never mix it with opioid painkillers or alcohol — the combination can stop breathing.",
+    "This medicine is for short-term or carefully planned use. It can cause dependence within weeks of regular use.",
+    "Never mix it with opioid painkillers or alcohol: the combination can stop breathing.",
     "Do not drive until you know how it affects you.",
-    "Stopping must be gradual — never stop suddenly after regular use.",
-    "Benefit from Chlordiazepoxide builds over weeks — do not judge it in the first days.",
+    "Stopping must be gradual, never stop suddenly after regular use.",
+    "Benefit from Chlordiazepoxide builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The founding drug of the class (Librium, 1960) — its metabolite chain includes nordiazepam, diazepam's own descendant: the benzo family tree in one molecule.",
+    "The founding drug of the class (Librium, 1960): its metabolite chain includes nordiazepam, diazepam's own descendant: the benzo family tree in one molecule.",
     "Chlordiazepoxide + thiamine = the classic Indian alcohol-withdral prescription pair (thiamine FIRST, before any glucose).",
-    "The metabolite cascade is a built-in taper — the property that made it the withdrawal tablet standard.",
-    "IM absorption is unreliable — oral only (lorazepam owns the IM/IV route).",
+    "The metabolite cascade is a built-in taper: the property that made it the withdrawal tablet standard.",
+    "IM absorption is unreliable: oral only (lorazepam owns the IM/IV route).",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Chlordiazepoxide: The original benzodiazepine GABA-A PAM — long-acting with a cascade of active metabolites including diazepam's own nordiazepam.",
-        "Uses of Chlordiazepoxide: Alcohol withdrawal — mild to moderate, uncomplicated; Anxiety (short-term, historic); Preoperative anxiety (historic)",
+        "Mechanism of Chlordiazepoxide: The original benzodiazepine GABA-A PAM; long-acting with a cascade of active metabolites including diazepam's own nordiazepam.",
+        "Uses of Chlordiazepoxide: Alcohol withdrawal; mild to moderate, uncomplicated; Anxiety (short-term, historic); Preoperative anxiety (historic)",
         "FIRST benzodiazepine (1960, Librium).",
         "Modern identity: oral alcohol withdrawal standard (with thiamine).",
       ],
       practical: [
-        "Prescribe Chlordiazepoxide for alcohol withdrawal — mild to moderate, uncomplicated with dose, timing, and duration.",
+        "Prescribe Chlordiazepoxide for alcohol withdrawal: mild to moderate, uncomplicated with dose, timing, and duration.",
         "Outline the monitoring plan: CIWA-scored withdrawal reviews (During withdrawal regimens); Dependence review (Every repeat)",
       ],
       longAnswer: [
-        "Chlordiazepoxide: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Chlordiazepoxide: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "FIRST benzodiazepine (1960, Librium).",
         "Modern identity: oral alcohol withdrawal standard (with thiamine).",
       ],
@@ -277,8 +277,8 @@ export const chlordiazepoxide: Drug = {
         "FIRST benzodiazepine (1960, Librium).",
         "Modern identity: oral alcohol withdrawal standard (with thiamine).",
         "Long-acting with metabolite cascade (nordiazepam among them) = self-tapering kinetics.",
-        "Unreliable IM absorption — oral only.",
-        "Mechanism: GABA-A positive allosteric modulation — amplified natural inhibition.",
+        "Unreliable IM absorption: oral only.",
+        "Mechanism: GABA-A positive allosteric modulation; amplified natural inhibition.",
       ],
       pyqConcepts: [
         "Mechanism/target of Chlordiazepoxide",
@@ -288,7 +288,7 @@ export const chlordiazepoxide: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Chlordiazepoxide develops respiratory depression with opioids/overdose — next best step?",
+        "A patient on Chlordiazepoxide develops respiratory depression with opioids/overdose: next best step?",
         "When to choose Chlordiazepoxide over alternatives in its class.",
       ],
     },
@@ -302,8 +302,8 @@ export const chlordiazepoxide: Drug = {
     psychiatryResidency: {
       advancedPearls: [
         "Chlordiazepoxide + thiamine: the withdrawal prescription that launched a thousand Indian discharge summaries.",
-        "Its own metabolite chain IS the taper — pharmacokinetics as therapy.",
-        "The founding drug of the class (Librium, 1960) — its metabolite chain includes nordiazepam, diazepam's own descendant: the benzo family tree in one molecule.",
+        "Its own metabolite chain IS the taper: pharmacokinetics as therapy.",
+        "The founding drug of the class (Librium, 1960): its metabolite chain includes nordiazepam, diazepam's own descendant: the benzo family tree in one molecule.",
         "Chlordiazepoxide + thiamine = the classic Indian alcohol-withdral prescription pair (thiamine FIRST, before any glucose).",
       ],
     },
@@ -313,22 +313,22 @@ export const chlordiazepoxide: Drug = {
     "FIRST benzodiazepine (1960, Librium).",
     "Modern identity: oral alcohol withdrawal standard (with thiamine).",
     "Long-acting with metabolite cascade (nordiazepam among them) = self-tapering kinetics.",
-    "Unreliable IM absorption — oral only.",
-    "Mechanism: GABA-A positive allosteric modulation — amplified natural inhibition.",
+    "Unreliable IM absorption: oral only.",
+    "Mechanism: GABA-A positive allosteric modulation; amplified natural inhibition.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — alcohol withdrawal — mild to moderate, uncomplicated",
-      presentation: "A patient presenting with alcohol withdrawal — mild to moderate, uncomplicated, started on Chlordiazepoxide.",
-      history: "A adult patient presents with a alcohol withdrawal — mild to moderate, uncomplicated picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with alcohol withdrawal — mild to moderate, uncomplicated; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Alcohol withdrawal — mild to moderate, uncomplicated. Differentials are considered and excluded clinically.",
+      title: "First presentation: alcohol withdrawal; mild to moderate, uncomplicated",
+      presentation: "A patient presenting with alcohol withdrawal: mild to moderate, uncomplicated, started on Chlordiazepoxide.",
+      history: "A adult patient presents with a alcohol withdrawal: mild to moderate, uncomplicated picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with alcohol withdrawal: mild to moderate, uncomplicated; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Alcohol withdrawal: mild to moderate, uncomplicated. Differentials are considered and excluded clinically.",
       rationale: "Chlordiazepoxide is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Benzodiazepine) with strong evidence in this condition.",
       management: "Started at 10–25 mg three to four times daily (or 50 mg TDS day 1), titrated to 50–100 mg day 1 tapering with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Chlordiazepoxide takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Chlordiazepoxide takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -337,7 +337,7 @@ export const chlordiazepoxide: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Benzodiazepine comparison — choosing within the class",
+      title: "Benzodiazepine comparison: choosing within the class",
       primaryDrug: "Chlordiazepoxide",
       rows: [
         {
@@ -408,7 +408,7 @@ export const chlordiazepoxide: Drug = {
         },
         {
           attribute: "Sedation",
-          primaryValue: "High — useful in withdrawal.",
+          primaryValue: "High: useful in withdrawal.",
           comparisons: [
             {
               drug: "Alprazolam",
@@ -430,7 +430,7 @@ export const chlordiazepoxide: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "Alcohol withdrawal tablet — the founding benzo",
+          primaryValue: "Alcohol withdrawal tablet: the founding benzo",
           comparisons: [
             {
               drug: "Alprazolam",
@@ -451,7 +451,7 @@ export const chlordiazepoxide: Drug = {
           ],
         },
       ],
-      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -460,7 +460,7 @@ export const chlordiazepoxide: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Chlordiazepoxide reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (PAM)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Chlordiazepoxide reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (PAM)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -496,7 +496,7 @@ export const chlordiazepoxide: Drug = {
   faqs: [
     {
       question: "How long does Chlordiazepoxide take to work?",
-      answer: "Oral: 30–60 min; withdrawal stabilisation within hours of loading.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Oral: 30–60 min; withdrawal stabilisation within hours of loading.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Chlordiazepoxide?",
@@ -504,19 +504,19 @@ export const chlordiazepoxide: Drug = {
     },
     {
       question: "Can I stop Chlordiazepoxide suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Chlordiazepoxide habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Chlordiazepoxide exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Chlordiazepoxide exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Chlordiazepoxide during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Chlordiazepoxide may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Chlordiazepoxide may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -652,7 +652,7 @@ export const chlordiazepoxide: Drug = {
       note: "Region where the drug acts",
     },
     {
-      label: "Alcohol withdrawal — mild to moderate, uncomplicated",
+      label: "Alcohol withdrawal: mild to moderate, uncomplicated",
       type: "condition",
       href: "#clinical-uses",
       note: "Used clinically",
@@ -688,7 +688,7 @@ export const chlordiazepoxide: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Chlordiazepoxide",
+      label: "Patient Guide. Chlordiazepoxide",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -696,13 +696,13 @@ export const chlordiazepoxide: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The first benzodiazepine ever — now the alcohol-withdrawal tablet of record.",
-    summary: "Chlordiazepoxide is a prescription medicine used to treat alcohol withdrawal — mild to moderate, uncomplicated. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Chlordiazepoxide is the oldest member of its family — used today mainly to make alcohol withdrawal safe and comfortable: it settles the shakes, racing heart, and anxiety of stopping drinking, then is tapered down over a week or so. It works with thiamine (vitamin B1) which protects the brain during withdrawal.",
-    sideEffects: "The most common side effects are: sedation and drowsiness, ataxia, constipation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression with opioids/overdose and Withdrawal seizures on abrupt stop. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: ciwa-scored withdrawal reviews (during withdrawal regimens); dependence review (every repeat). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The first benzodiazepine ever: now the alcohol-withdrawal tablet of record.",
+    summary: "Chlordiazepoxide is a prescription medicine used to treat alcohol withdrawal: mild to moderate, uncomplicated. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Chlordiazepoxide is the oldest member of its family: used today mainly to make alcohol withdrawal safe and comfortable: it settles the shakes, racing heart, and anxiety of stopping drinking, then is tapered down over a week or so. It works with thiamine (vitamin B1) which protects the brain during withdrawal.",
+    sideEffects: "The most common side effects are: sedation and drowsiness, ataxia, constipation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression with opioids/overdose and Withdrawal seizures on abrupt stop. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: ciwa-scored withdrawal reviews (during withdrawal regimens); dependence review (every repeat). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Opioids, Disulfiram, Alcohol/CNS depressants. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Opioids, Disulfiram, Alcohol/CNS depressants. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -734,7 +734,7 @@ export const chlordiazepoxide: Drug = {
     costNote: "Cost varies by manufacturer and region.",
     monitoring: "CIWA or clinical scoring during taper; watch for delirium tremens escalation (refer if hallucinations/confusion).",
     patientCounselling: [
-      "The written step-down calendar is the treatment — follow it exactly.",
+      "The written step-down calendar is the treatment. Follow it exactly.",
       "Thiamine tablets daily during and after.",
       "This medicine is a bridge to abstinence treatment, not the treatment itself.",
     ],
@@ -771,7 +771,7 @@ export const chlordiazepoxide: Drug = {
         name: "Chlordiazepoxide",
         slug: "chlordiazepoxide",
         relationship: "This guide",
-        distinguishing: "Alcohol withdrawal tablet — the founding benzo",
+        distinguishing: "Alcohol withdrawal tablet: the founding benzo",
       },
       {
         name: "Alprazolam",
@@ -783,43 +783,43 @@ export const chlordiazepoxide: Drug = {
         name: "Clonazepam",
         slug: "clonazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "The long-acting anticonvulsant benzo — seizures and panic",
+        distinguishing: "The long-acting anticonvulsant benzo: seizures and panic",
       },
       {
         name: "Diazepam",
         slug: "diazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+        distinguishing: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
       },
       {
         name: "Lorazepam",
         slug: "lorazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+        distinguishing: "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo",
       },
       {
         name: "Midazolam",
         slug: "midazolam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Oxazepam",
         slug: "oxazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Clorazepate",
         slug: "clorazepate",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Loflazepate",
         slug: "loflazepate",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
     ],
   },
@@ -967,12 +967,12 @@ export const chlordiazepoxide: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Chlordiazepoxide in two sentences.",
-      answer: "The original benzodiazepine GABA-A PAM — long-acting with a cascade of active metabolites including diazepam's own nordiazepam. Net effect: Anxiolysis, sedation, anticonvulsant and alcohol-withdrawal coverage via long-acting metabolites.",
+      answer: "The original benzodiazepine GABA-A PAM: long-acting with a cascade of active metabolites including diazepam's own nordiazepam. Net effect: Anxiolysis, sedation, anticonvulsant and alcohol-withdrawal coverage via long-acting metabolites.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Chlordiazepoxide.",
-      answer: "Alcohol withdrawal — mild to moderate, uncomplicated, Anxiety (short-term, historic), Preoperative anxiety (historic). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Alcohol withdrawal: mild to moderate, uncomplicated, Anxiety (short-term, historic), Preoperative anxiety (historic). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -1063,7 +1063,7 @@ export const chlordiazepoxide: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1108,7 +1108,7 @@ export const chlordiazepoxide: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Chlordiazepoxide works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Chlordiazepoxide works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1124,7 +1124,7 @@ export const chlordiazepoxide: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Chlordiazepoxide safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Chlordiazepoxide safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1169,7 +1169,7 @@ export const chlordiazepoxide: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Chlordiazepoxide follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Chlordiazepoxide follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1180,7 +1180,7 @@ export const chlordiazepoxide: Drug = {
       "Dose reduction or timing change before discontinuation.",
     ],
     weightGain: "See product information and class comparison.",
-    sedation: "High — useful in withdrawal.",
+    sedation: "High: useful in withdrawal.",
     dosing: [
       {
         indication: "Alcohol withdrawal (outpatient mild)",
@@ -1199,16 +1199,16 @@ export const chlordiazepoxide: Drug = {
     ],
     dosageForms: ["Capsules 5, 10, 25 mg", "Tablets 5, 10, 25 mg"],
     dosingTips: [
-      "Fixed-dose taper schedule written as a calendar (e.g., 25/15/10/5 over days) — the Indian practice standard.",
+      "Fixed-dose taper schedule written as a calendar (e.g., 25/15/10/5 over days): the Indian practice standard.",
       "Thiamine before glucose, always.",
-      "Clumsy IM route — if injections needed, switch to lorazepam.",
+      "Clumsy IM route, if injections needed, switch to lorazepam.",
     ],
     overdose: [
-      "Overdose with Chlordiazepoxide is managed supportively — no specific antidote.",
+      "Overdose with Chlordiazepoxide is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Chlordiazepoxide is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1238,11 +1238,11 @@ export const chlordiazepoxide: Drug = {
       },
     ],
     potentialAdvantages: [
-      "The withdrawal tablet of record — smooth metabolite-built taper.",
+      "The withdrawal tablet of record: smooth metabolite-built taper.",
       "Cheap and globally available.",
     ],
     potentialDisadvantages: [
-      "Not for chronic anxiolysis — successors preferred.",
+      "Not for chronic anxiolysis: successors preferred.",
       "Accumulating metabolites in liver disease and elderly.",
       "Class dependence risk.",
     ],
@@ -1252,15 +1252,15 @@ export const chlordiazepoxide: Drug = {
     ],
     pearls: [
       "Chlordiazepoxide + thiamine: the withdrawal prescription that launched a thousand Indian discharge summaries.",
-      "Its own metabolite chain IS the taper — pharmacokinetics as therapy.",
-      "The founding drug of the class (Librium, 1960) — its metabolite chain includes nordiazepam, diazepam's own descendant: the benzo family tree in one molecule.",
+      "Its own metabolite chain IS the taper: pharmacokinetics as therapy.",
+      "The founding drug of the class (Librium, 1960): its metabolite chain includes nordiazepam, diazepam's own descendant: the benzo family tree in one molecule.",
       "Chlordiazepoxide + thiamine = the classic Indian alcohol-withdral prescription pair (thiamine FIRST, before any glucose).",
-      "The metabolite cascade is a built-in taper — the property that made it the withdrawal tablet standard.",
+      "The metabolite cascade is a built-in taper: the property that made it the withdrawal tablet standard.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

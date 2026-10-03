@@ -23,14 +23,14 @@ export const midazolam: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Anxiolytics & Sedatives", "Benzodiazepines", "Midazolam"],
   /* ---- Hero / summary ---- */
-  tagline: "The shortest-acting benzodiazepine — procedural sedation and status epilepticus in one syringe.",
+  tagline: "The shortest-acting benzodiazepine: procedural sedation and status epilepticus in one syringe.",
   summary: "Midazolam is the ultrashort-acting benzodiazepine of anaesthesia and emergencies: 1–5 minute IV onset with a 2–3 hour half-life, water-soluble in acid solutions (painless IV) and membrane-soluble at physiological pH. IM midazolam is the WHO-preferred route for status epilepticus in children (faster than IV access in the field). Its imidazole ring and titratability make it the procedural-sedation standard.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Midazolam — from its molecular target (GABA-A benzodiazepine site (PAM)) to clinical effect.",
+    "Explain the mechanism of action of Midazolam, from its molecular target (GABA-A benzodiazepine site (PAM)) to clinical effect.",
     "List the FDA-approved and off-label uses of Midazolam.",
     "Predict the common and serious side effects of Midazolam from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Midazolam.",
@@ -38,19 +38,19 @@ export const midazolam: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Ultrashort-acting GABA-A PAM — the titratable benzodiazepine with an imidazole ring enabling water solubility at acidic pH and rapid membrane entry at physiological pH.",
+    summary: "Ultrashort-acting GABA-A PAM: the titratable benzodiazepine with an imidazole ring enabling water solubility at acidic pH and rapid membrane entry at physiological pH.",
     molecularTarget: "GABA-A benzodiazepine site (PAM)",
     effect: "Rapid sedation, anxiolysis, amnesia, and anticonvulsant action with a short, titratable course.",
     steps: [
       "Class mechanism at the GABA-A benzodiazepine site.",
-      "Imidazole ring: water-soluble at pH < 4 (painless IV prep), converts to membrane-soluble at pH 7.4 — instant brain entry.",
-      "Half-life 2–3 h: fast on, fast off — the titration property anaesthesia wants.",
+      "Imidazole ring: water-soluble at pH < 4 (painless IV prep), converts to membrane-soluble at pH 7.4: instant brain entry.",
+      "Half-life 2–3 h: fast on, fast off; the titration property anaesthesia wants.",
       "Active metabolite (1-hydroxymidazolam) accumulates only in renal failure or prolonged infusion.",
     ],
     pharmacokinetics: "IV onset 1–5 min; IM 10–15 min; intranasal/buccal rapid. Rectal routes used in paediatric field contexts.",
     halfLife: "2–3 hours.",
     activeMetabolite: "1-hydroxymidazolam (minor; accumulates in renal failure/infusion).",
-    metabolism: "Hepatic CYP3A4 — the fentanyl/ritonavir interaction concern.",
+    metabolism: "Hepatic CYP3A4: the fentanyl/ritonavir interaction concern.",
     excretion: "Renal metabolites.",
   },
   /* ---- Mechanism visual flow ---- */
@@ -110,7 +110,7 @@ export const midazolam: Drug = {
         label: "inhibits firing",
       },
     ],
-    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly — which is why their effect is powerful but limited by dependence risk.",
+    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly, which is why their effect is powerful but limited by dependence risk.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["GABA"],
@@ -122,7 +122,7 @@ export const midazolam: Drug = {
     {
       name: "Procedural sedation and premedication",
       status: "fda-approved",
-      description: "Endoscopy, bronchoscopy, minor surgery — the titratable sedation standard.",
+      description: "Endoscopy, bronchoscopy, minor surgery: the titratable sedation standard.",
     },
     {
       name: "Status epilepticus (IM in the field, IV in-hospital)",
@@ -154,13 +154,13 @@ export const midazolam: Drug = {
     {
       name: "Opioids (fentanyl class)",
       severity: "absolute",
-      rationale: "Profound respiratory depression — the classic pair.",
+      rationale: "Profound respiratory depression: the classic pair.",
     },
   ],
   blackBoxWarnings: [
     {
-      title: "Risks with opioids — profound sedation, respiratory depression, death",
-      text: "Midazolam + fentanyl is the classic anaesthesia pair and the classic respiratory-depression pair — monitoring settings only.",
+      title: "Risks with opioids: profound sedation, respiratory depression, death",
+      text: "Midazolam + fentanyl is the classic anaesthesia pair and the classic respiratory-depression pair: monitoring settings only.",
     },
     {
       title: "Dependence potential (class)",
@@ -231,13 +231,13 @@ export const midazolam: Drug = {
     {
       drug: "Opioids (fentanyl class)",
       severity: "contraindicated",
-      mechanism: "Profound respiratory depression — the classic pair.",
+      mechanism: "Profound respiratory depression: the classic pair.",
       action: "Monitoring settings only.",
     },
     {
       drug: "CYP3A4 inhibitors (ritonavir, ketoconazole, clarithromycin)",
       severity: "major",
-      mechanism: "Sharply raise midazolam levels — prolonged sedation; the ritonavir interaction is legendary.",
+      mechanism: "Sharply raise midazolam levels: prolonged sedation; the ritonavir interaction is legendary.",
       action: "Reduce dose or avoid; document awareness.",
     },
     {
@@ -249,7 +249,7 @@ export const midazolam: Drug = {
   ],
   pregnancy: {
     legacyCategory: "D",
-    summary: "Used at caesarean/obstetric anaesthesia with neonatal monitoring (floppy infant, respiratory depression at birth — resuscitation anticipated). Brief single-dose procedural use is standard practice.",
+    summary: "Used at caesarean/obstetric anaesthesia with neonatal monitoring (floppy infant, respiratory depression at birth, resuscitation anticipated). Brief single-dose procedural use is standard practice.",
     lactation: "Single procedural doses compatible with breastfeeding; avoid repeated dosing while nursing.",
   },
   renalAdjustment: "Metabolites accumulate in renal failure on prolonged infusion; single doses unaffected.",
@@ -257,43 +257,43 @@ export const midazolam: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Midazolam is the very-short-acting member of the calming-medicine family used by anaesthetists and emergency teams: it relaxes and causes forgetfulness of a procedure within minutes and wears off quickly. It is given only in monitored settings because it can slow breathing.",
   patientEducationPoints: [
-    "This medicine is for short-term or carefully planned use — it can cause dependence within weeks of regular use.",
-    "Never mix it with opioid painkillers or alcohol — the combination can stop breathing.",
+    "This medicine is for short-term or carefully planned use. It can cause dependence within weeks of regular use.",
+    "Never mix it with opioid painkillers or alcohol: the combination can stop breathing.",
     "Do not drive until you know how it affects you.",
-    "Stopping must be gradual — never stop suddenly after regular use.",
-    "Benefit from Midazolam builds over weeks — do not judge it in the first days.",
+    "Stopping must be gradual, never stop suddenly after regular use.",
+    "Benefit from Midazolam builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The pH trick: water-soluble in the vial (painless injection), membrane-soluble at body pH (instant brain entry) — the imidazole ring's gift.",
-    "IM midazolam beats IV access for paediatric status in the field — the WHO preference.",
+    "The pH trick: water-soluble in the vial (painless injection), membrane-soluble at body pH (instant brain entry); the imidazole ring's gift.",
+    "IM midazolam beats IV access for paediatric status in the field: the WHO preference.",
     "Buccal/intranasal midazolam is the modern carer-administered seizure-rescue (replacing rectal diazepam's dignity problem).",
-    "The ritonavir interaction can produce 24-hour sedation from a standard dose — the legend that teaches 3A4 pharmacology.",
+    "The ritonavir interaction can produce 24-hour sedation from a standard dose: the legend that teaches 3A4 pharmacology.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Midazolam: Ultrashort-acting GABA-A PAM — the titratable benzodiazepine with an imidazole ring enabling water solubility at acidic pH and rapid membrane entry at physiological pH.",
+        "Mechanism of Midazolam: Ultrashort-acting GABA-A PAM; the titratable benzodiazepine with an imidazole ring enabling water solubility at acidic pH and rapid membrane entry at physiological pH.",
         "Uses of Midazolam: Procedural sedation and premedication; Status epilepticus (IM in the field, IV in-hospital); Acute agitation (ICU); Seizure clusters / acute rescue (buccal/intranasal)",
         "Ultrashort-acting benzodiazepine (half-life 2–3 h).",
-        "The pH-dependent solubility trick (imidazole ring) — water-soluble prep, rapid CNS entry.",
+        "The pH-dependent solubility trick (imidazole ring): water-soluble prep, rapid CNS entry.",
       ],
       practical: [
         "Prescribe Midazolam for procedural sedation and premedication with dose, timing, and duration.",
         "Outline the monitoring plan: Continuous respiratory and cardiac monitoring (During all procedural/ICU use); Sedation depth scoring (ICU) (With infusions)",
       ],
       longAnswer: [
-        "Midazolam: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Midazolam: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Ultrashort-acting benzodiazepine (half-life 2–3 h).",
-        "The pH-dependent solubility trick (imidazole ring) — water-soluble prep, rapid CNS entry.",
+        "The pH-dependent solubility trick (imidazole ring): water-soluble prep, rapid CNS entry.",
       ],
     },
     neetPg: {
       highYield: [
         "Ultrashort-acting benzodiazepine (half-life 2–3 h).",
-        "The pH-dependent solubility trick (imidazole ring) — water-soluble prep, rapid CNS entry.",
+        "The pH-dependent solubility trick (imidazole ring): water-soluble prep, rapid CNS entry.",
         "Uses: procedural sedation, status epilepticus (IM paediatric first-line), ICU titration.",
-        "CYP3A4 metabolism — ritonavir/azoles cause profound prolongation.",
+        "CYP3A4 metabolism: ritonavir/azoles cause profound prolongation.",
         "Reversed by flumazenil (with monitoring).",
       ],
       pyqConcepts: [
@@ -304,7 +304,7 @@ export const midazolam: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Midazolam develops respiratory depression/arrest — next best step?",
+        "A patient on Midazolam develops respiratory depression/arrest: next best step?",
         "When to choose Midazolam over alternatives in its class.",
       ],
     },
@@ -317,7 +317,7 @@ export const midazolam: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "Fast on, fast off, titratable — the three words that define midazolam.",
+        "Fast on, fast off, titratable: the three words that define midazolam.",
         "The ritonavir-midazolam 24-hour sleep is the 3A4 teaching legend.",
         "IM for the field, IV for the ward, buccal for the carer.",
       ],
@@ -326,15 +326,15 @@ export const midazolam: Drug = {
   memoryTricks: [],
   highYieldSummary: [
     "Ultrashort-acting benzodiazepine (half-life 2–3 h).",
-    "The pH-dependent solubility trick (imidazole ring) — water-soluble prep, rapid CNS entry.",
+    "The pH-dependent solubility trick (imidazole ring): water-soluble prep, rapid CNS entry.",
     "Uses: procedural sedation, status epilepticus (IM paediatric first-line), ICU titration.",
-    "CYP3A4 metabolism — ritonavir/azoles cause profound prolongation.",
+    "CYP3A4 metabolism: ritonavir/azoles cause profound prolongation.",
     "Reversed by flumazenil (with monitoring).",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — procedural sedation and premedication",
+      title: "First presentation: procedural sedation and premedication",
       presentation: "A patient presenting with procedural sedation and premedication, started on Midazolam.",
       history: "A adult patient presents with a procedural sedation and premedication picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with procedural sedation and premedication; physical examination and baseline investigations are unremarkable.",
@@ -343,7 +343,7 @@ export const midazolam: Drug = {
       management: "Started at 0.5–1 mg IV titrated, titrated to 2–5 mg typical total with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Midazolam takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Midazolam takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -352,7 +352,7 @@ export const midazolam: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Benzodiazepine comparison — choosing within the class",
+      title: "Benzodiazepine comparison: choosing within the class",
       primaryDrug: "Midazolam",
       rows: [
         {
@@ -445,7 +445,7 @@ export const midazolam: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "Midazolam — see clinical pearls",
+          primaryValue: "Midazolam: see clinical pearls",
           comparisons: [
             {
               drug: "Alprazolam",
@@ -466,7 +466,7 @@ export const midazolam: Drug = {
           ],
         },
       ],
-      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -475,7 +475,7 @@ export const midazolam: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Midazolam reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (PAM)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Midazolam reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (PAM)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -511,7 +511,7 @@ export const midazolam: Drug = {
   faqs: [
     {
       question: "How long does Midazolam take to work?",
-      answer: "IV: 1–5 min. IM: 10–15 min. Buccal/intranasal: 5–10 min.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "IV: 1–5 min. IM: 10–15 min. Buccal/intranasal: 5–10 min.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Midazolam?",
@@ -519,19 +519,19 @@ export const midazolam: Drug = {
     },
     {
       question: "Can I stop Midazolam suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Midazolam habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Midazolam exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Midazolam exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Midazolam during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Midazolam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Midazolam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -711,7 +711,7 @@ export const midazolam: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Midazolam",
+      label: "Patient Guide. Midazolam",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -719,13 +719,13 @@ export const midazolam: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The shortest-acting benzodiazepine — procedural sedation and status epilepticus in one syringe.",
-    summary: "Midazolam is a prescription medicine used to treat procedural sedation and premedication. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The shortest-acting benzodiazepine: procedural sedation and status epilepticus in one syringe.",
+    summary: "Midazolam is a prescription medicine used to treat procedural sedation and premedication. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Midazolam is the very-short-acting member of the calming-medicine family used by anaesthetists and emergency teams: it relaxes and causes forgetfulness of a procedure within minutes and wears off quickly. It is given only in monitored settings because it can slow breathing.",
-    sideEffects: "The most common side effects are: sedation and amnesia, hypotension (with anaesthesia co-drugs), hiccups, nausea, cough. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression/arrest and Paradoxical reactions (children, elderly). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: continuous respiratory and cardiac monitoring (during all procedural/icu use); sedation depth scoring (icu) (with infusions). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: sedation and amnesia, hypotension (with anaesthesia co-drugs), hiccups, nausea, cough. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression/arrest and Paradoxical reactions (children, elderly). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: continuous respiratory and cardiac monitoring (during all procedural/icu use); sedation depth scoring (icu) (with infusions). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Opioids (fentanyl class), CYP3A4 inhibitors (ritonavir, ketoconazole, clarithromycin), Alcohol and CNS depressants. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Opioids (fentanyl class), CYP3A4 inhibitors (ritonavir, ketoconazole, clarithromycin), Alcohol and CNS depressants. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -753,7 +753,7 @@ export const midazolam: Drug = {
     costNote: "Cost varies by manufacturer and region.",
     monitoring: "Continuous respiratory and cardiac monitoring is a condition of use.",
     patientCounselling: [
-      "Given only in monitored settings — patients rarely carry it home (epilepsy carers excepted, with training).",
+      "Given only in monitored settings: patients rarely carry it home (epilepsy carers excepted, with training).",
     ],
   },
   sectionDifficulty: {
@@ -800,43 +800,43 @@ export const midazolam: Drug = {
         name: "Clonazepam",
         slug: "clonazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "The long-acting anticonvulsant benzo — seizures and panic",
+        distinguishing: "The long-acting anticonvulsant benzo: seizures and panic",
       },
       {
         name: "Diazepam",
         slug: "diazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+        distinguishing: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
       },
       {
         name: "Lorazepam",
         slug: "lorazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+        distinguishing: "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo",
       },
       {
         name: "Chlordiazepoxide",
         slug: "chlordiazepoxide",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Alcohol withdrawal tablet — the founding benzo",
+        distinguishing: "Alcohol withdrawal tablet: the founding benzo",
       },
       {
         name: "Oxazepam",
         slug: "oxazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Clorazepate",
         slug: "clorazepate",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Loflazepate",
         slug: "loflazepate",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
     ],
   },
@@ -979,7 +979,7 @@ export const midazolam: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Midazolam in two sentences.",
-      answer: "Ultrashort-acting GABA-A PAM — the titratable benzodiazepine with an imidazole ring enabling water solubility at acidic pH and rapid membrane entry at physiological pH. Net effect: Rapid sedation, anxiolysis, amnesia, and anticonvulsant action with a short, titratable course.",
+      answer: "Ultrashort-acting GABA-A PAM: the titratable benzodiazepine with an imidazole ring enabling water solubility at acidic pH and rapid membrane entry at physiological pH. Net effect: Rapid sedation, anxiolysis, amnesia, and anticonvulsant action with a short, titratable course.",
       topic: "Mechanism",
     },
     {
@@ -999,7 +999,7 @@ export const midazolam: Drug = {
     },
     {
       question: "Share one clinical pearl about Midazolam that separates safe prescribers from unsafe ones.",
-      answer: "Fast on, fast off, titratable — the three words that define midazolam.",
+      answer: "Fast on, fast off, titratable: the three words that define midazolam.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1075,7 +1075,7 @@ export const midazolam: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1120,7 +1120,7 @@ export const midazolam: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Midazolam works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Midazolam works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1136,7 +1136,7 @@ export const midazolam: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Midazolam safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Midazolam safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1181,7 +1181,7 @@ export const midazolam: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Midazolam follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Midazolam follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1225,22 +1225,22 @@ export const midazolam: Drug = {
     ],
     dosageForms: ["Injection 1, 5 mg/mL", "Oral syrup (paediatric premed)", "Buccal liquid"],
     dosingTips: [
-      "Titrate slowly in the elderly (half doses) — respiratory events cluster there.",
+      "Titrate slowly in the elderly (half doses): respiratory events cluster there.",
       "Buccal route for seizure rescue where IV access is absent.",
       "Always with antagonist (flumazenil) and airway capability available.",
     ],
     overdose: [
-      "Overdose with Midazolam is managed supportively — no specific antidote.",
+      "Overdose with Midazolam is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Midazolam is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
     pharmacokinetics: [
       "Half-life: 2–3 hours..",
-      "Metabolism: Hepatic CYP3A4 — the fentanyl/ritonavir interaction concern..",
+      "Metabolism: Hepatic CYP3A4; the fentanyl/ritonavir interaction concern..",
     ],
     doNotUse: ["Known hypersensitivity to this agent."],
     specialPopulations: [
@@ -1264,18 +1264,18 @@ export const midazolam: Drug = {
       },
     ],
     potentialAdvantages: [
-      "Titratable ultrashort action — the anaesthesia favourite.",
+      "Titratable ultrashort action: the anaesthesia favourite.",
       "Best IM bioavailability for emergencies alongside lorazepam.",
       "Amnesia properties ideal for procedures.",
     ],
     potentialDisadvantages: [
       "Respiratory depression requires monitoring settings.",
       "3A4 interaction minefield.",
-      "Pain-free injection invites casual use — resist.",
+      "Pain-free injection invites casual use: resist.",
     ],
     primaryTargetSymptoms: ["Procedural sedation and amnesia", "Status epilepticus", "ICU sedation", "Seizure cluster rescue"],
     pearls: [
-      "Fast on, fast off, titratable — the three words that define midazolam.",
+      "Fast on, fast off, titratable: the three words that define midazolam.",
       "The ritonavir-midazolam 24-hour sleep is the 3A4 teaching legend.",
       "IM for the field, IV for the ward, buccal for the carer.",
     ],
@@ -1283,6 +1283,6 @@ export const midazolam: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

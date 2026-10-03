@@ -23,14 +23,14 @@ export const quetiapine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Atypical Antipsychotics", "Quetiapine"],
   /* ---- Hero / summary ---- */
-  tagline: "The dose-bands-in-one-drug antipsychotic — a sleeping pill at 50 mg, an antidepressant at 300 mg, an antipsychotic at 600 mg.",
-  summary: "Quetiapine is a dibenzothiazepine atypical antipsychotic with weak D2 but potent 5-HT2A and histamine binding; its metabolite norquetiapine blocks norepinephrine reuptake and is believed to drive its antidepressant action. This pharmacology creates three clinical identities in one molecule: low doses act as a sedative, mid doses treat bipolar depression and augmentation, and higher doses treat psychosis and mania. It is the only atypical FDA-approved for bipolar depression as monotherapy, with essentially no EPS or prolactin elevation — priced at sedation, orthostasis, and substantial metabolic risk.",
+  tagline: "The dose-bands-in-one-drug antipsychotic: a sleeping pill at 50 mg, an antidepressant at 300 mg, an antipsychotic at 600 mg.",
+  summary: "Quetiapine is a dibenzothiazepine atypical antipsychotic with weak D2 but potent 5-HT2A and histamine binding; its metabolite norquetiapine blocks norepinephrine reuptake and is believed to drive its antidepressant action. This pharmacology creates three clinical identities in one molecule: low doses act as a sedative, mid doses treat bipolar depression and augmentation, and higher doses treat psychosis and mania. It is the only atypical FDA-approved for bipolar depression as monotherapy, with essentially no EPS or prolactin elevation: priced at sedation, orthostasis, and substantial metabolic risk.",
   estimatedReadTime: "18 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Quetiapine — from its molecular target (5-HT2A (high affinity); H1 (potent); D2 (weak, short-acting occupancy); alpha-1; NET via norquetiapine (metabolite)) to clinical effect.",
+    "Explain the mechanism of action of Quetiapine, from its molecular target (5-HT2A (high affinity); H1 (potent); D2 (weak, short-acting occupancy); alpha-1; NET via norquetiapine (metabolite)) to clinical effect.",
     "List the FDA-approved and off-label uses of Quetiapine.",
     "Predict the common and serious side effects of Quetiapine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Quetiapine.",
@@ -38,19 +38,19 @@ export const quetiapine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Quetiapine blocks 5-HT2A and H1 receptors potently with only weak, transient D2 occupancy; its metabolite norquetiapine inhibits norepinephrine reuptake and blocks 5-HT2C — an antidepressant profile hidden inside an antipsychotic.",
+    summary: "Quetiapine blocks 5-HT2A and H1 receptors potently with only weak, transient D2 occupancy; its metabolite norquetiapine inhibits norepinephrine reuptake and blocks 5-HT2C: an antidepressant profile hidden inside an antipsychotic.",
     molecularTarget: "5-HT2A (high affinity); H1 (potent); D2 (weak, short-acting occupancy); alpha-1; NET via norquetiapine (metabolite)",
     effect: "Sedation and anxiolysis at low doses; antidepressant effect at mid doses (norquetiapine NET + 5-HT2C); antipsychotic effect only at higher doses when D2 occupancy becomes sustained.",
     steps: [
       "Quetiapine itself binds H1 (sedation) and alpha-1 (orthostasis) strongly from the very first low dose.",
-      "Its D2 binding is weak and rapidly disengages — enough antipsychotic occupancy only at higher doses; this is why EPS and prolactin rise are almost absent.",
+      "Its D2 binding is weak and rapidly disengages: enough antipsychotic occupancy only at higher doses; this is why EPS and prolactin rise are almost absent.",
       "5-HT2A antagonism is strong at all doses, contributing to both antipsychotic and mood effects.",
-      "The metabolite norquetiapine inhibits the norepinephrine transporter (NET) and blocks 5-HT2C — the same mechanism family as antidepressants — explaining quetiapine's efficacy in bipolar depression and augmentation.",
+      "The metabolite norquetiapine inhibits the norepinephrine transporter (NET) and blocks 5-HT2C (the same mechanism family as antidepressants) explaining quetiapine's efficacy in bipolar depression and augmentation.",
       "The clinical result is dose-band dependent: 25–50 mg = sedative; 150–300 mg = antidepressant range; 400–800 mg = antipsychotic/anti-manic range.",
     ],
-    pharmacokinetics: "Well absorbed; peak 1–2 hours (IR) / 3–5 hours (XR). Requires titration — starting at full dose causes orthostatic collapse.",
+    pharmacokinetics: "Well absorbed; peak 1–2 hours (IR) / 3–5 hours (XR). Requires titration, starting at full dose causes orthostatic collapse.",
     halfLife: "6–7 hours (IR quetiapine); norquetiapine 9–12 hours; XR formulation smooths delivery to permit once-nightly dosing.",
-    activeMetabolite: "Norquetiapine — NET inhibitor and 5-HT2C antagonist; the antidepressant engine of the drug.",
+    activeMetabolite: "Norquetiapine. NET inhibitor and 5-HT2C antagonist; the antidepressant engine of the drug.",
     metabolism: "Hepatic CYP3A4 (major); CYP2D6 minor.",
     excretion: "Hepatic metabolism with renal excretion of metabolites (~70% renal).",
   },
@@ -129,7 +129,7 @@ export const quetiapine: Drug = {
         label: "5-HT2A-mediated benefit",
       },
     ],
-    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms — the serotonin-dopamine hypothesis of atypical antipsychotics.",
+    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms: the serotonin-dopamine hypothesis of atypical antipsychotics.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Dopamine (DA)", "Serotonin (5-HT)", "Norepinephrine (NE)", "Histamine"],
@@ -160,7 +160,7 @@ export const quetiapine: Drug = {
     {
       name: "Bipolar depression",
       status: "fda-approved",
-      description: "The only atypical monotherapy approved for the depressed pole (XR 300 mg/day) — quetiapine's signature indication.",
+      description: "The only atypical monotherapy approved for the depressed pole (XR 300 mg/day): quetiapine's signature indication.",
       ageGroup: "Adults & ≥10 years",
     },
     {
@@ -181,17 +181,17 @@ export const quetiapine: Drug = {
     {
       name: "Insomnia (low dose)",
       status: "off-label",
-      description: "25–100 mg at night exploits H1 sedation — effective but controversial given metabolic risk and lack of long-term insomnia data.",
+      description: "25–100 mg at night exploits H1 sedation: effective but controversial given metabolic risk and lack of long-term insomnia data.",
     },
     {
       name: "Parkinson's disease psychosis",
       status: "off-label",
-      description: "The best-tolerated antipsychotic option alongside clozapine/pimavanserin — no motor worsening.",
+      description: "The best-tolerated antipsychotic option alongside clozapine/pimavanserin: no motor worsening.",
     },
     {
       name: "Agitation in dementia",
       status: "off-label",
-      description: "Boxed-warning territory — low doses, clear review plan only after non-drug measures fail.",
+      description: "Boxed-warning territory: low doses, clear review plan only after non-drug measures fail.",
     },
   ],
   contraindications: [
@@ -227,14 +227,14 @@ export const quetiapine: Drug = {
       name: "Sedation and next-morning grogginess",
       frequency: "very-common",
       severity: "moderate",
-      description: "H1-mediated; the most common reason patients love it at night and hate it in the morning — dose-timing and XR reduce hangover.",
+      description: "H1-mediated; the most common reason patients love it at night and hate it in the morning: dose-timing and XR reduce hangover.",
       management: "Nightly dosing, XR preferred; morning grogginess usually improves over 1–2 weeks.",
     },
     {
       name: "Orthostatic hypotension",
       frequency: "very-common",
       severity: "moderate",
-      description: "Alpha-1 blockade — first-dose syncope risk; the reason titration is mandatory.",
+      description: "Alpha-1 blockade: first-dose syncope risk; the reason titration is mandatory.",
       management: "Start low, rise slowly, dose at night; review antihypertensives.",
     },
     {
@@ -255,7 +255,7 @@ export const quetiapine: Drug = {
       name: "Dyslipidaemia",
       frequency: "common",
       severity: "moderate",
-      description: "Triglycerides rise prominently — quetiapine has one of the stronger lipid signals.",
+      description: "Triglycerides rise prominently: quetiapine has one of the stronger lipid signals.",
       management: "Baseline and periodic lipids; lifestyle; statin if persistent.",
     },
     {
@@ -285,21 +285,21 @@ export const quetiapine: Drug = {
       name: "Metabolic syndrome and diabetes",
       frequency: "uncommon",
       severity: "severe",
-      description: "Weight gain, dyslipidaemia, hyperglycaemia — moderate-to-high risk; DKA reported rarely.",
+      description: "Weight gain, dyslipidaemia, hyperglycaemia: moderate-to-high risk; DKA reported rarely.",
       management: "Monitor weight, fasting glucose, lipids; intervene early; switch if progressive.",
     },
     {
       name: "Neuroleptic malignant syndrome",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Reported even with quetiapine's weak D2 binding — atypical presentations may show less rigidity.",
+      description: "Reported even with quetiapine's weak D2 binding: atypical presentations may show less rigidity.",
       management: "Stop drug; ICU care; dantrolene/bromocriptine.",
     },
     {
       name: "Tardive dyskinesia",
       frequency: "rare",
       severity: "severe",
-      description: "The lowest risk among antipsychotics but not zero — the class warning stands.",
+      description: "The lowest risk among antipsychotics but not zero: the class warning stands.",
       management: "Reduce or switch; treat severe cases with VMAT2 inhibitors.",
     },
     {
@@ -327,7 +327,7 @@ export const quetiapine: Drug = {
       name: "Priapism",
       frequency: "rare",
       severity: "severe",
-      description: "Alpha-1 blockade — urological emergency.",
+      description: "Alpha-1 blockade: urological emergency.",
       management: "Immediate urological referral.",
     },
   ],
@@ -336,7 +336,7 @@ export const quetiapine: Drug = {
     {
       parameter: "Blood pressure (orthostatic)",
       frequency: "Baseline and during titration",
-      rationale: "First-dose syncope is a real risk — titrate slowly.",
+      rationale: "First-dose syncope is a real risk. Titrate slowly.",
     },
     {
       parameter: "Weight and BMI",
@@ -366,7 +366,7 @@ export const quetiapine: Drug = {
     {
       parameter: "Cataract symptoms",
       frequency: "Ask at reviews; eye exam if symptomatic",
-      rationale: "Historical animal signal — periodic checks in long-term users.",
+      rationale: "Historical animal signal: periodic checks in long-term users.",
     },
   ],
   interactions: [
@@ -374,7 +374,7 @@ export const quetiapine: Drug = {
       drug: "Carbamazepine, phenytoin, rifampicin (strong CYP3A4 inducers)",
       severity: "major",
       mechanism: "Can more than halve quetiapine levels.",
-      action: "Avoid; if unavoidable, increase quetiapine and monitor — often better to choose another antipsychotic.",
+      action: "Avoid; if unavoidable, increase quetiapine and monitor: often better to choose another antipsychotic.",
     },
     {
       drug: "Ketoconazole, clarithromycin, ritonavir (strong 3A4 inhibitors)",
@@ -397,13 +397,13 @@ export const quetiapine: Drug = {
     {
       drug: "QT-prolonging drugs",
       severity: "moderate",
-      mechanism: "Additive QT effect — quetiapine dose-dependent.",
+      mechanism: "Additive QT effect: quetiapine dose-dependent.",
       action: "ECG if combinations unavoidable; correct potassium/magnesium.",
     },
     {
       drug: "Levodopa / dopamine agonists",
       severity: "moderate",
-      mechanism: "Quetiapine's weak D2 binding makes it the antipsychotic of choice in Parkinson's — but antagonism is still possible at high doses.",
+      mechanism: "Quetiapine's weak D2 binding makes it the antipsychotic of choice in Parkinson's, but antagonism is still possible at high doses.",
       action: "Use low-mid doses; monitor motor function.",
     },
   ],
@@ -417,33 +417,33 @@ export const quetiapine: Drug = {
   renalAdjustment: "No dose adjustment required in renal impairment.",
   hepaticAdjustment: "Start lower (25 mg) and titrate more slowly in hepatic impairment; CYP3A4 metabolism is hepatic.",
   /* ---- Education ---- */
-  patientExplanation: "Quetiapine affects several brain chemicals — histamine (which makes you sleepy), serotonin, and (weakly) dopamine. The dose decides what it does: a small night dose helps sleep; a middle dose lifts depression in bipolar disorder; a higher dose treats mania and psychosis. It must be built up slowly at the start because it can drop your blood pressure on standing.",
+  patientExplanation: "Quetiapine affects several brain chemicals: histamine (which makes you sleepy), serotonin, and (weakly) dopamine. The dose decides what it does: a small night dose helps sleep; a middle dose lifts depression in bipolar disorder; a higher dose treats mania and psychosis. It must be built up slowly at the start because it can drop your blood pressure on standing.",
   patientEducationPoints: [
-    "The dose build-up over the first days is not optional — it protects you from dizzy spells.",
+    "The dose build-up over the first days is not optional. It protects you from dizzy spells.",
     "Take it at bedtime; expect some morning grogginess that usually improves.",
     "Stand up slowly, especially in the first week.",
-    "This medicine can raise weight, sugar, and cholesterol even at modest doses — keep the blood test appointments.",
+    "This medicine can raise weight, sugar, and cholesterol even at modest doses. Keep the blood test appointments.",
     "If your mood worsens or new thoughts of self-harm appear, contact your doctor promptly (applies especially under 25).",
-    "Avoid alcohol — the combination is very sedating.",
-    "Tell every doctor you see that you take it — several common medicines (including some antibiotics) change its level.",
-    "Do not stop suddenly — the dose must come down gradually.",
+    "Avoid alcohol: the combination is very sedating.",
+    "Tell every doctor you see that you take it: several common medicines (including some antibiotics) change its level.",
+    "Do not stop suddenly: the dose must come down gradually.",
   ],
   clinicalPearls: [
-    "One molecule, three dose-bands: 25–50 mg = sedative; 150–300 mg = antidepressant (norquetiapine NET); 400–800 mg = antipsychotic — the most important dosing concept in the class.",
-    "Quetiapine is the only atypical monotherapy approved for bipolar depression — XR 300 mg nightly is the evidence-based target.",
-    "In Parkinson's psychosis, quetiapine (with clozapine and pimavanserin) is the safe motor choice — every other antipsychotic worsens the movement disorder.",
-    "Norquetiapine (NET inhibition + 5-HT2C blockade) is the antidepressant engine — think 'hidden bupropion-lite plus mirtazapine-lite' in the metabolite.",
-    "Triglycerides are quetiapine's favourite metabolic target — check them, not just weight.",
-    "The 3A4 interaction shelf is wide: carbamazepine guts levels; ketoconazole/ritonavir explode them — both directions matter in Indian polypharmacy.",
-    "XR at night converts the sedation into sleep and smooths the morning hangover — almost always preferred once dose is established.",
-    "If a patient on quetiapine 800 mg is sedated, the answer is rarely more drug — it's earlier dosing, XR conversion, or dose reduction.",
-    "Thyroid: quetiapine lowers T4 dose-dependently — in a tired patient on quetiapine, check TSH before blaming the drug or the mood.",
-    "Low-dose quetiapine for insomnia is widespread but hard to justify long-term — metabolic cost without antipsychotic benefit; prefer scheduled review and exit strategies.",
+    "One molecule, three dose-bands: 25–50 mg = sedative; 150–300 mg = antidepressant (norquetiapine NET); 400–800 mg = antipsychotic: the most important dosing concept in the class.",
+    "Quetiapine is the only atypical monotherapy approved for bipolar depression. XR 300 mg nightly is the evidence-based target.",
+    "In Parkinson's psychosis, quetiapine (with clozapine and pimavanserin) is the safe motor choice: every other antipsychotic worsens the movement disorder.",
+    "Norquetiapine (NET inhibition + 5-HT2C blockade) is the antidepressant engine: think 'hidden bupropion-lite plus mirtazapine-lite' in the metabolite.",
+    "Triglycerides are quetiapine's favourite metabolic target. Check them, not just weight.",
+    "The 3A4 interaction shelf is wide: carbamazepine guts levels; ketoconazole/ritonavir explode them, both directions matter in Indian polypharmacy.",
+    "XR at night converts the sedation into sleep and smooths the morning hangover: almost always preferred once dose is established.",
+    "If a patient on quetiapine 800 mg is sedated, the answer is rarely more drug: it's earlier dosing, XR conversion, or dose reduction.",
+    "Thyroid: quetiapine lowers T4 dose-dependently, in a tired patient on quetiapine, check TSH before blaming the drug or the mood.",
+    "Low-dose quetiapine for insomnia is widespread but hard to justify long-term: metabolic cost without antipsychotic benefit; prefer scheduled review and exit strategies.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Quetiapine: Quetiapine blocks 5-HT2A and H1 receptors potently with only weak, transient D2 occupancy; its metabolite norquetiapine inhibits norepinephrine reuptake and blocks 5-HT2C — an antidepressant profile hidden inside an antipsychotic.",
+        "Mechanism of Quetiapine: Quetiapine blocks 5-HT2A and H1 receptors potently with only weak, transient D2 occupancy; its metabolite norquetiapine inhibits norepinephrine reuptake and blocks 5-HT2C: an antidepressant profile hidden inside an antipsychotic.",
         "Uses of Quetiapine: Schizophrenia; Acute manic / mixed episodes of bipolar I; Bipolar depression; Bipolar I maintenance",
         "Mechanism: weak/transient D2 + strong 5-HT2A and H1; metabolite norquetiapine inhibits NET (antidepressant action).",
         "Signature: the only atypical monotherapy approved for BIPOLAR DEPRESSION (XR 300 mg/day).",
@@ -453,7 +453,7 @@ export const quetiapine: Drug = {
         "Outline the monitoring plan: Blood pressure (orthostatic) (Baseline and during titration); Weight and BMI (Baseline, 4–8 weeks, then quarterly); Fasting glucose / HbA1c (Baseline, 12 weeks, then annually)",
       ],
       longAnswer: [
-        "Quetiapine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Quetiapine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: weak/transient D2 + strong 5-HT2A and H1; metabolite norquetiapine inhibits NET (antidepressant action).",
         "Signature: the only atypical monotherapy approved for BIPOLAR DEPRESSION (XR 300 mg/day).",
       ],
@@ -463,8 +463,8 @@ export const quetiapine: Drug = {
         "Mechanism: weak/transient D2 + strong 5-HT2A and H1; metabolite norquetiapine inhibits NET (antidepressant action).",
         "Signature: the only atypical monotherapy approved for BIPOLAR DEPRESSION (XR 300 mg/day).",
         "Dose-bands: 25–50 sedative / 150–300 antidepressant / 400–800 antipsychotic.",
-        "EPS and prolactin rise: essentially absent — the class-tolerant choice for motor disease and prolactin sensitivity.",
-        "Metabolism: CYP3A4 — carbamazepine halves levels; ketoconazole/ritonavir multiply them.",
+        "EPS and prolactin rise: essentially absent; the class-tolerant choice for motor disease and prolactin sensitivity.",
+        "Metabolism: CYP3A4; carbamazepine halves levels; ketoconazole/ritonavir multiply them.",
         "Signature adverse effects: sedation, orthostatic hypotension (titration mandatory), weight gain, hypertriglyceridaemia.",
       ],
       pyqConcepts: [
@@ -475,7 +475,7 @@ export const quetiapine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Quetiapine develops metabolic syndrome and diabetes — next best step?",
+        "A patient on Quetiapine develops metabolic syndrome and diabetes: next best step?",
         "When to choose Quetiapine over alternatives in its class.",
       ],
     },
@@ -489,9 +489,9 @@ export const quetiapine: Drug = {
     psychiatryResidency: {
       advancedPearls: [
         "Dose-band thinking is the whole drug: 50 for sleep, 300 for mood, 600 for psychosis.",
-        "Bipolar depression responds at 300 mg XR — pushing higher adds adverse effects, not efficacy.",
-        "Parkinson's psychosis: quetiapine is the practical first try — clozapine if it fails, pimavanserin where available.",
-        "Norquetiapine is the antidepressant engine — NET inhibition is why an antipsychotic lifts bipolar depression.",
+        "Bipolar depression responds at 300 mg XR, pushing higher adds adverse effects, not efficacy.",
+        "Parkinson's psychosis: quetiapine is the practical first try; clozapine if it fails, pimavanserin where available.",
+        "Norquetiapine is the antidepressant engine. NET inhibition is why an antipsychotic lifts bipolar depression.",
       ],
     },
   },
@@ -503,12 +503,12 @@ export const quetiapine: Drug = {
     },
     {
       title: "Q = Quiet and Quick to faint",
-      trick: "Quetiapine sedates (Quiet) and drops blood pressure on standing (Quick to faint) — titrate.",
+      trick: "Quetiapine sedates (Quiet) and drops blood pressure on standing (Quick to faint): titrate.",
       remembers: "The two first-week adverse effects",
     },
     {
       title: "Nor-Q = Noradrenaline",
-      trick: "Norquetiapine blocks Noradrenaline reuptake — the antidepressant alter-ego.",
+      trick: "Norquetiapine blocks Noradrenaline reuptake: the antidepressant alter-ego.",
       remembers: "Why an antipsychotic treats bipolar depression",
     },
   ],
@@ -516,36 +516,36 @@ export const quetiapine: Drug = {
     "Mechanism: weak/transient D2 + strong 5-HT2A and H1; metabolite norquetiapine inhibits NET (antidepressant action).",
     "Signature: the only atypical monotherapy approved for BIPOLAR DEPRESSION (XR 300 mg/day).",
     "Dose-bands: 25–50 sedative / 150–300 antidepressant / 400–800 antipsychotic.",
-    "EPS and prolactin rise: essentially absent — the class-tolerant choice for motor disease and prolactin sensitivity.",
-    "Metabolism: CYP3A4 — carbamazepine halves levels; ketoconazole/ritonavir multiply them.",
+    "EPS and prolactin rise: essentially absent; the class-tolerant choice for motor disease and prolactin sensitivity.",
+    "Metabolism: CYP3A4; carbamazepine halves levels; ketoconazole/ritonavir multiply them.",
     "Signature adverse effects: sedation, orthostatic hypotension (titration mandatory), weight gain, hypertriglyceridaemia.",
-    "Dose-related T4 reduction — check thyroid in tired patients.",
+    "Dose-related T4 reduction: check thyroid in tired patients.",
     "Parkinson's disease psychosis: quetiapine/clozapine/pimavanserin are the safe trio.",
-    "Half-life short (6–7 h) — XR preferred for once-nightly dosing.",
+    "Half-life short (6–7 h). XR preferred for once-nightly dosing.",
     "Boxed warnings: dementia-related psychosis mortality; antidepressant-class suicidality warning for depression uses.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "Bipolar depression — the pole with the fewest options",
+      title: "Bipolar depression: the pole with the fewest options",
       presentation: "A 34-year-old woman with bipolar I disorder presents with a depressive episode and is started on quetiapine XR.",
       history: "A 34-year-old woman with bipolar I (two past manic episodes, both lithium-protected until she stopped it in pregnancy 3 years ago) presents with 5 weeks of pervasive low mood, hypersomnia (12–14 hours), hyperphagia with 5 kg gain, anhedonia, and passive death wishes. No current manic or mixed features. Not on any psychotropic medication.",
       examination: "Psychomotor slowing, tearful, blunted affect; MADRS 32. No psychosis. BMI 26. Fasting glucose 98 mg/dL, triglycerides 165 mg/dL (borderline), TSH normal.",
       diagnosis: "Bipolar I disorder, current episode depressed, moderate-to-severe, with atypical features (hypersomnia, hyperphagia).",
-      rationale: "Bipolar depression has few approved monotherapies; quetiapine XR is the best-evidenced single agent and directly targets her atypical depressive picture. Antidepressant monotherapy is avoided (switch risk and poor evidence). Lithium is re-introduced for maintenance. Her baseline metabolic picture is already softening — weight and lipids become co-managed targets from day one.",
+      rationale: "Bipolar depression has few approved monotherapies; quetiapine XR is the best-evidenced single agent and directly targets her atypical depressive picture. Antidepressant monotherapy is avoided (switch risk and poor evidence). Lithium is re-introduced for maintenance. Her baseline metabolic picture is already softening: weight and lipids become co-managed targets from day one.",
       management: "Quetiapine XR 50 mg nightly, titrated by 50–100 mg every 1–2 nights to 300 mg; lithium restarted, targeting 0.6–0.8 mEq/L. Sleep diary, structured meal plan, psychoeducation on bipolar depression. Weight, orthostatic symptoms, fasting glucose, and lipids at baseline, week 6, and week 12.",
       outcome: "Sleep improves by week 1; mood lifts measurably by week 3 (MADRS 20) and reaches remission by week 8 (MADRS 7) on quetiapine 300 mg + lithium. Weight rises 2 kg then plateaus on the meal plan; triglycerides stabilise. Maintenance continues with 6-monthly metabolic review.",
       teachingPoints: [
-        "Bipolar depression is the hard pole to treat — quetiapine and the other approved agents work where antidepressant monotherapy fails or endangers.",
+        "Bipolar depression is the hard pole to treat: quetiapine and the other approved agents work where antidepressant monotherapy fails or endangers.",
         "Titration is a safety feature: orthostasis is the first-week hazard, and patient education converts it from a dropout reason into a managed effect.",
-        "The metabolic bookkeeping starts at baseline — in a patient already drifting metabolically, the drug's best asset (mood) must not be bought with its worst liability unmonitored.",
+        "The metabolic bookkeeping starts at baseline, in a patient already drifting metabolically, the drug's best asset (mood) must not be bought with its worst liability unmonitored.",
       ],
     },
   ],
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Atypical antipsychotic comparison — where quetiapine sits",
+      title: "Atypical antipsychotic comparison, where quetiapine sits",
       primaryDrug: "Quetiapine",
       rows: [
         {
@@ -616,7 +616,7 @@ export const quetiapine: Drug = {
         },
         {
           attribute: "Sedation",
-          primaryValue: "High — dose-timing and XR manage it",
+          primaryValue: "High: dose-timing and XR manage it",
           comparisons: [
             {
               drug: "Risperidone",
@@ -681,7 +681,7 @@ export const quetiapine: Drug = {
           ],
         },
       ],
-      takeaway: "Quetiapine is the tolerance champion — no EPS, no prolactin, and the only atypical monotherapy for bipolar depression — bought with sedation, orthostasis, and metabolic drift. It is the right drug when motor safety or the depressed pole is the problem, and the wrong drug to ignore metabolically.",
+      takeaway: "Quetiapine is the tolerance champion (no EPS, no prolactin, and the only atypical monotherapy for bipolar depression) bought with sedation, orthostasis, and metabolic drift. It is the right drug when motor safety or the depressed pole is the problem, and the wrong drug to ignore metabolically.",
     },
   ],
   /* ---- Timeline ---- */
@@ -690,7 +690,7 @@ export const quetiapine: Drug = {
       id: "t1",
       time: "Day 1 (25–50 mg)",
       title: "Sedation and orthostasis begin",
-      description: "H1 and alpha-1 effects appear with the first dose — the patient must be warned about dizziness on standing.",
+      description: "H1 and alpha-1 effects appear with the first dose: the patient must be warned about dizziness on standing.",
       phase: "onset",
     },
     {
@@ -704,14 +704,14 @@ export const quetiapine: Drug = {
       id: "t3",
       time: "Days 4–7",
       title: "Sleep and anxiety improve first",
-      description: "Even at low-mid doses, sleep architecture and anxiety respond early — often the first sign the drug is 'working'.",
+      description: "Even at low-mid doses, sleep architecture and anxiety respond early: often the first sign the drug is 'working'.",
       phase: "onset",
     },
     {
       id: "t4",
       time: "Weeks 1–2",
       title: "Antidepressant range engages",
-      description: "At 150–300 mg, norquetiapine's NET inhibition builds — bipolar depression response typically assessed at week 2–4.",
+      description: "At 150–300 mg, norquetiapine's NET inhibition builds: bipolar depression response typically assessed at week 2–4.",
       phase: "peak",
     },
     {
@@ -725,7 +725,7 @@ export const quetiapine: Drug = {
       id: "t6",
       time: "Weeks 4–8",
       title: "Metabolic trajectory visible",
-      description: "Weight and lipids declare themselves — the window for intervention.",
+      description: "Weight and lipids declare themselves: the window for intervention.",
       phase: "duration",
     },
     {
@@ -740,26 +740,26 @@ export const quetiapine: Drug = {
   faqs: [
     {
       question: "Why do I feel dizzy when I stand up?",
-      answer: "Quetiapine relaxes blood vessels, so blood pressure dips briefly on standing — strongest in the first days of each dose increase. Rising slowly, staying hydrated, and taking it at night usually solve it. If you actually faint, tell your doctor: the titration is going too fast.",
+      answer: "Quetiapine relaxes blood vessels, so blood pressure dips briefly on standing: strongest in the first days of each dose increase. Rising slowly, staying hydrated, and taking it at night usually solve it. If you actually faint, tell your doctor: the titration is going too fast.",
     },
     {
-      question: "My doctor started me on a tiny dose — why not the full dose right away?",
-      answer: "The body needs days to adapt to quetiapine's blood-pressure effect. Starting at full dose can cause fainting — the slow build-up (25–50 mg increments) is a safety feature, not hesitation.",
+      question: "My doctor started me on a tiny dose: why not the full dose right away?",
+      answer: "The body needs days to adapt to quetiapine's blood-pressure effect. Starting at full dose can cause fainting. The slow build-up (25–50 mg increments) is a safety feature, not hesitation.",
     },
     {
       question: "Can quetiapine treat depression?",
-      answer: "Yes — this is one of its approved uses. At 150–300 mg (XR) it is the only antipsychotic on its own approved for the depressed phase of bipolar disorder, and it is also approved as an add-on for ordinary depression. The antidepressant effect is believed to come from its breakdown product, which acts like an antidepressant on noradrenaline.",
+      answer: "Yes: this is one of its approved uses. At 150–300 mg (XR) it is the only antipsychotic on its own approved for the depressed phase of bipolar disorder, and it is also approved as an add-on for ordinary depression. The antidepressant effect is believed to come from its breakdown product, which acts like an antidepressant on noradrenaline.",
     },
     {
       question: "Will it make me gain weight?",
-      answer: "It can — moderately in most people. The appetite effect is real, so a food plan from the start, plus weight and blood-lipid checks, are part of standard treatment. If weight climbs steadily, there are alternatives.",
+      answer: "It can: moderately in most people. The appetite effect is real, so a food plan from the start, plus weight and blood-lipid checks, are part of standard treatment. If weight climbs steadily, there are alternatives.",
     },
     {
       question: "Is it addictive?",
-      answer: "It is not addictive in the dependence sense, but stopping abruptly causes insomnia and dizziness — it must be tapered gradually.",
+      answer: "It is not addictive in the dependence sense, but stopping abruptly causes insomnia and dizziness: it must be tapered gradually.",
     },
     {
-      question: "I have Parkinson's and psychosis — is this safe for my movement disorder?",
+      question: "I have Parkinson's and psychosis: is this safe for my movement disorder?",
       answer: "Quetiapine is one of only three options considered safe for psychosis in Parkinson's (with clozapine and pimavanserin), because it barely touches the dopamine receptors that your Parkinson's medicine stimulates. It still needs careful monitoring.",
     },
   ],
@@ -952,7 +952,7 @@ export const quetiapine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Quetiapine",
+      label: "Patient Guide. Quetiapine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -960,13 +960,13 @@ export const quetiapine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The dose-bands-in-one-drug antipsychotic — a sleeping pill at 50 mg, an antidepressant at 300 mg, an antipsychotic at 600 mg.",
-    summary: "Quetiapine is a prescription medicine used to treat schizophrenia. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Quetiapine affects several brain chemicals — histamine (which makes you sleepy), serotonin, and (weakly) dopamine. The dose decides what it does: a small night dose helps sleep; a middle dose lifts depression in bipolar disorder; a higher dose treats mania and psychosis. It must be built up slowly at the start because it can drop your blood pressure on standing.",
-    sideEffects: "The most common side effects are: sedation and next-morning grogginess, orthostatic hypotension, dry mouth and constipation, weight gain and increased appetite, dyslipidaemia, dizziness and headache. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Metabolic syndrome and diabetes and Neuroleptic malignant syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: blood pressure (orthostatic) (baseline and during titration); weight and bmi (baseline, 4–8 weeks, then quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The dose-bands-in-one-drug antipsychotic: a sleeping pill at 50 mg, an antidepressant at 300 mg, an antipsychotic at 600 mg.",
+    summary: "Quetiapine is a prescription medicine used to treat schizophrenia. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Quetiapine affects several brain chemicals: histamine (which makes you sleepy), serotonin, and (weakly) dopamine. The dose decides what it does: a small night dose helps sleep; a middle dose lifts depression in bipolar disorder; a higher dose treats mania and psychosis. It must be built up slowly at the start because it can drop your blood pressure on standing.",
+    sideEffects: "The most common side effects are: sedation and next-morning grogginess, orthostatic hypotension, dry mouth and constipation, weight gain and increased appetite, dyslipidaemia, dizziness and headache. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Metabolic syndrome and diabetes and Neuroleptic malignant syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: blood pressure (orthostatic) (baseline and during titration); weight and bmi (baseline, 4–8 weeks, then quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: Known hypersensitivity to quetiapine, Elderly patients with dementia-related psychosis, Untreated narrow-angle glaucoma. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Carbamazepine, phenytoin, rifampicin (strong CYP3A4 inducers), Ketoconazole, clarithromycin, ritonavir (strong 3A4 inhibitors), Antihypertensives, Alcohol and CNS depressants. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Carbamazepine, phenytoin, rifampicin (strong CYP3A4 inducers), Ketoconazole, clarithromycin, ritonavir (strong 3A4 inhibitors), Antihypertensives, Alcohol and CNS depressants. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -995,8 +995,8 @@ export const quetiapine: Drug = {
     ],
     typicalDoses: "Bipolar depression XR 300 mg nightly (titrate from 50); psychosis 400–800 mg; low-dose sedative 25–100 mg (review-limited).",
     prescribingScenarios: [
-      "Bipolar depression in private and public psychiatry — the approved monotherapy.",
-      "Parkinson's clinic psychosis referrals — motor-safe antipsychotic.",
+      "Bipolar depression in private and public psychiatry: the approved monotherapy.",
+      "Parkinson's clinic psychosis referrals: motor-safe antipsychotic.",
       "Anxiety and insomnia augmentation in general practice (with review dates).",
       "Schizophrenia maintenance where EPS intolerance rules out risperidone.",
     ],
@@ -1008,7 +1008,7 @@ export const quetiapine: Drug = {
     },
     costCategory: "low",
     costNote: "Generic quetiapine (IR and XR equivalents) is inexpensive; XR costs more but generics have narrowed the gap. Cost varies by manufacturer and region.",
-    monitoring: "Weight, fasting glucose, lipids at baseline/12 weeks/annually; TSH periodically; orthostatic checks during titration — district-level protocols emphasise weight at every visit.",
+    monitoring: "Weight, fasting glucose, lipids at baseline/12 weeks/annually; TSH periodically; orthostatic checks during titration: district-level protocols emphasise weight at every visit.",
     patientCounselling: [
       "Explain the dose-band plan in writing so patients understand why the dose changes by indication.",
       "Bedtime dosing; rise slowly in week one.",
@@ -1048,55 +1048,55 @@ export const quetiapine: Drug = {
         name: "Quetiapine",
         slug: "quetiapine",
         relationship: "This guide",
-        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin — the sedating antidepressant-antipsychotic",
+        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin: the sedating antidepressant-antipsychotic",
       },
       {
         name: "Aripiprazole",
         slug: "aripiprazole",
         relationship: "Same class (Dopamine Stabiliser)",
-        distinguishing: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+        distinguishing: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
       },
       {
         name: "Clozapine",
         slug: "clozapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
       },
       {
         name: "Lurasidone",
         slug: "lurasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+        distinguishing: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
       },
       {
         name: "Olanzapine",
         slug: "olanzapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+        distinguishing: "Most robust broad-spectrum atypical: heaviest metabolic burden",
       },
       {
         name: "Paliperidone",
         slug: "paliperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The LAI platform king — monthly to 6-monthly injections for schizophrenia",
+        distinguishing: "The LAI platform king: monthly to 6-monthly injections for schizophrenia",
       },
       {
         name: "Risperidone",
         slug: "risperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most potent D2 blockade among atypicals — highest prolactin, best-studied LAI",
+        distinguishing: "Most potent D2 blockade among atypicals: highest prolactin, best-studied LAI",
       },
       {
         name: "Ziprasidone",
         slug: "ziprasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic — with QT vigilance",
+        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic, with QT vigilance",
       },
       {
         name: "Amisulpride",
         slug: "amisulpride",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The dose-band benzamide — European/Indian staple with the clozapine-drool rescue",
+        distinguishing: "The dose-band benzamide. European/Indian staple with the clozapine-drool rescue",
       },
     ],
   },
@@ -1244,7 +1244,7 @@ export const quetiapine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Quetiapine in two sentences.",
-      answer: "Quetiapine blocks 5-HT2A and H1 receptors potently with only weak, transient D2 occupancy; its metabolite norquetiapine inhibits norepinephrine reuptake and blocks 5-HT2C — an antidepressant profile hidden inside an antipsychotic. Net effect: Sedation and anxiolysis at low doses; antidepressant effect at mid doses (norquetiapine NET + 5-HT2C); antipsychotic effect only at higher doses when D2 occupancy becomes sustained.",
+      answer: "Quetiapine blocks 5-HT2A and H1 receptors potently with only weak, transient D2 occupancy; its metabolite norquetiapine inhibits norepinephrine reuptake and blocks 5-HT2C: an antidepressant profile hidden inside an antipsychotic. Net effect: Sedation and anxiolysis at low doses; antidepressant effect at mid doses (norquetiapine NET + 5-HT2C); antipsychotic effect only at higher doses when D2 occupancy becomes sustained.",
       topic: "Mechanism",
     },
     {
@@ -1254,7 +1254,7 @@ export const quetiapine: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Quetiapine and how you would manage it.",
-      answer: "Metabolic syndrome and diabetes: Weight gain, dyslipidaemia, hyperglycaemia — moderate-to-high risk; DKA reported rarely. Management: Monitor weight, fasting glucose, lipids; intervene early; switch if progressive.",
+      answer: "Metabolic syndrome and diabetes: Weight gain, dyslipidaemia, hyperglycaemia; moderate-to-high risk; DKA reported rarely. Management: Monitor weight, fasting glucose, lipids; intervene early; switch if progressive.",
       topic: "Safety",
     },
     {
@@ -1340,7 +1340,7 @@ export const quetiapine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1385,7 +1385,7 @@ export const quetiapine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Quetiapine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Quetiapine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1401,7 +1401,7 @@ export const quetiapine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Quetiapine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Quetiapine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1439,7 +1439,7 @@ export const quetiapine: Drug = {
       "Continue at the lowest effective dose for the indication's band.",
       "Bipolar depression: continue at least 6 months after remission; consider maintenance given recurrence risk.",
       "Schizophrenia/mania: standard continuation rules (1–2 years minimum post first episode).",
-      "Re-audit the dose band at every review — many patients can step down a band over time.",
+      "Re-audit the dose band at every review, many patients can step down a band over time.",
     ],
     ifItDoesNotWork: [
       "Confirm adherence and allow an adequate trial of Quetiapine (4–6 weeks at target dose) before judging response.",
@@ -1458,12 +1458,12 @@ export const quetiapine: Drug = {
       "Pregnancy test where relevant; AIMS baseline.",
     ],
     sideEffectLogic: [
-      "Sedation and orthostasis are H1/alpha-1 pharmacology from dose one; weight and lipids are 5-HT2C/H1-mediated feeding effects; the absence of EPS and prolactin effects reflects weak, transient D2 occupancy. Every quetiapine effect — good and bad — is dose-band dependent.",
+      "Sedation and orthostasis are H1/alpha-1 pharmacology from dose one; weight and lipids are 5-HT2C/H1-mediated feeding effects; the absence of EPS and prolactin effects reflects weak, transient D2 occupancy. Every quetiapine effect (good and bad) is dose-band dependent.",
     ],
     sideEffectManagement: [
       "Wait and titrate slowly: orthostasis and sedation attenuate with tolerance.",
       "Shift dosing entirely to bedtime; convert IR to XR to smooth the hangover.",
-      "Reduce to the lowest effective band — many patients are over-dosed for their indication.",
+      "Reduce to the lowest effective band, many patients are over-dosed for their indication.",
       "Treat the metabolic axis early: diet structure, metformin when the curve rises.",
     ],
     sideEffectRescue: [
@@ -1483,7 +1483,7 @@ export const quetiapine: Drug = {
         max: "800 mg/day",
         notes: [
           "Faster titration possible in inpatient mania/agitation",
-          "IR often twice-daily — XR preferred",
+          "IR often twice-daily. XR preferred",
         ],
       },
       {
@@ -1504,13 +1504,13 @@ export const quetiapine: Drug = {
         max: "800 mg/day",
       },
       {
-        indication: "Bipolar depression (XR) — signature use",
+        indication: "Bipolar depression (XR): signature use",
         starting: "50 mg nightly",
         titration: "Increase by 50 mg/day to 150 by day 5, then to 300 as needed",
         target: "300 mg/day",
         max: "300 mg/day",
         notes: [
-          "300 mg is the target in the pivotal trials — efficacy evidence above this for bipolar depression is limited",
+          "300 mg is the target in the pivotal trials: efficacy evidence above this for bipolar depression is limited",
           "Slower titration improves tolerability",
         ],
       },
@@ -1558,13 +1558,13 @@ export const quetiapine: Drug = {
       "Generic quetiapine (IR + XR) widely available",
     ],
     dosingTips: [
-      "Titration is pharmacology, not caution theatre — starting at 400 mg will faint the patient.",
+      "Titration is pharmacology, not caution theatre, starting at 400 mg will faint the patient.",
       "The dose band must match the indication: audit every prescription against the 25/300/600 principle.",
       "XR at night, IR if cost forces it but expect twice-daily dosing and more hangover.",
-      "XR absorption changes with a heavy meal — keep evening meals light or dose before food.",
+      "XR absorption changes with a heavy meal: keep evening meals light or dose before food.",
       "In the elderly, start 12.5–25 mg and go half-speed; falls are the harm pathway.",
-      "Ask about lipids specifically — triglycerides rise before weight does in some patients.",
-      "If low-dose use for insomnia creeps past 3 months, force a review — metabolic cost without antipsychotic benefit.",
+      "Ask about lipids specifically: triglycerides rise before weight does in some patients.",
+      "If low-dose use for insomnia creeps past 3 months, force a review: metabolic cost without antipsychotic benefit.",
       "Sudden cardiac death precautions apply to all antipsychotics: correct potassium and magnesium when ill.",
     ],
     overdose: [
@@ -1573,18 +1573,18 @@ export const quetiapine: Drug = {
       "No antidote; charcoal if early and airway protected.",
     ],
     longTermUse: "Long-term metabolic monitoring (weight, glucose, lipids) plus thyroid surveillance; cataract screening historically advised; TD risk lowest in class.",
-    habitForming: "Not considered habit-forming — but psychological reliance on its sleep effect is common and worth addressing.",
+    habitForming: "Not considered habit-forming, but psychological reliance on its sleep effect is common and worth addressing.",
     howToStop: [
-      "Taper gradually — abrupt stop causes rebound insomnia, nausea, and dizziness.",
+      "Taper gradually: abrupt stop causes rebound insomnia, nausea, and dizziness.",
       "Reduce by roughly a band-step every few days (e.g., 400→300→200→100→50).",
       "Watch for relapse of the underlying illness, especially bipolar depression.",
-      "After long low-dose insomnia use, taper even slower — rebound insomnia is the rule.",
+      "After long low-dose insomnia use, taper even slower: rebound insomnia is the rule.",
     ],
     pharmacokinetics: [
       "Half-life 6–7 h (IR); XR extends effective coverage.",
-      "Norquetiapine half-life 9–12 h — carries the antidepressant action.",
-      "CYP3A4 metabolism — inducers/inhibitors move levels sharply.",
-      "XR: food increases exposure — keep evening dosing consistent.",
+      "Norquetiapine half-life 9–12 h: carries the antidepressant action.",
+      "CYP3A4 metabolism: inducers/inhibitors move levels sharply.",
+      "XR: food increases exposure. Keep evening dosing consistent.",
     ],
     doNotUse: [
       "Known hypersensitivity.",
@@ -1612,7 +1612,7 @@ export const quetiapine: Drug = {
       {
         population: "Elderly",
         guidance: [
-          "Start 12.5–25 mg; go half-speed — falls and orthostasis are the harm pathway.",
+          "Start 12.5–25 mg; go half-speed: falls and orthostasis are the harm pathway.",
           "Dementia-related psychosis: boxed warning.",
           "Low doses are often effective for sleep/agitation in palliative care with review dates set.",
         ],
@@ -1621,7 +1621,7 @@ export const quetiapine: Drug = {
         population: "Children and adolescents",
         guidance: [
           "Approved: schizophrenia ≥13, mania ≥10, bipolar depression ≥10 (XR).",
-          "Weight gain in adolescents is the main burden — monitor every visit.",
+          "Weight gain in adolescents is the main burden. Monitor every visit.",
         ],
       },
       {
@@ -1635,7 +1635,7 @@ export const quetiapine: Drug = {
       {
         population: "Comorbid neurological disease",
         guidance: [
-          "Parkinson's psychosis: first-line consideration with clozapine/pimavanserin — weak D2 spares motor function.",
+          "Parkinson's psychosis: first-line consideration with clozapine/pimavanserin; weak D2 spares motor function.",
           "Start tiny (12.5–25 mg) and titrate slowly.",
         ],
       },
@@ -1649,7 +1649,7 @@ export const quetiapine: Drug = {
       "XR enables once-nightly dosing.",
     ],
     potentialDisadvantages: [
-      "Metabolic burden — weight and especially triglycerides.",
+      "Metabolic burden: weight and especially triglycerides.",
       "Sedation and orthostasis require slow titration.",
       "Cannot start at a therapeutic dose (unlike aripiprazole/risperidone).",
       "Short IR half-life forces twice-daily dosing.",
@@ -1666,20 +1666,20 @@ export const quetiapine: Drug = {
     ],
     pearls: [
       "Dose-band thinking is the whole drug: 50 for sleep, 300 for mood, 600 for psychosis.",
-      "Bipolar depression responds at 300 mg XR — pushing higher adds adverse effects, not efficacy.",
-      "Parkinson's psychosis: quetiapine is the practical first try — clozapine if it fails, pimavanserin where available.",
-      "Norquetiapine is the antidepressant engine — NET inhibition is why an antipsychotic lifts bipolar depression.",
+      "Bipolar depression responds at 300 mg XR, pushing higher adds adverse effects, not efficacy.",
+      "Parkinson's psychosis: quetiapine is the practical first try; clozapine if it fails, pimavanserin where available.",
+      "Norquetiapine is the antidepressant engine. NET inhibition is why an antipsychotic lifts bipolar depression.",
       "Titration speed is the difference between a loyal patient and a fainted one.",
-      "Triglycerides are the quiet metabolic signal — check them at 12 weeks.",
+      "Triglycerides are the quiet metabolic signal. Check them at 12 weeks.",
       "Elderly on quetiapine: the enemy is the fall, not the TD.",
-      "If the low-dose sleep prescription outlives its welcome, renegotiate it — metabolic rent is accruing.",
-      "3A4 inducers gut quetiapine — a manic relapse in a carbamazepine co-prescription is pharmacokinetics, not bad luck.",
-      "Conversion IR→XR is roughly total daily IR dose as a single nightly XR dose — then adjust for hangover.",
+      "If the low-dose sleep prescription outlives its welcome, renegotiate it: metabolic rent is accruing.",
+      "3A4 inducers gut quetiapine: a manic relapse in a carbamazepine co-prescription is pharmacokinetics, not bad luck.",
+      "Conversion IR→XR is roughly total daily IR dose as a single nightly XR dose, then adjust for hangover.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

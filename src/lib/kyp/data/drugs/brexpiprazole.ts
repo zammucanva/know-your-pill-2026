@@ -23,14 +23,14 @@ export const brexpiprazole: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Atypical Antipsychotics", "Brexpiprazole"],
   /* ---- Hero / summary ---- */
-  tagline: "Aripiprazole's gentler sibling — the same dopamine-stabiliser mechanism with less akathisia.",
+  tagline: "Aripiprazole's gentler sibling: the same dopamine-stabiliser mechanism with less akathisia.",
   summary: "Brexpiprazole is a second-generation dopamine system stabiliser: a D2 partial agonist (with lower intrinsic activity than aripiprazole) plus 5-HT1A partial agonism and 5-HT2A antagonism. The gentler partial agonism translates into less akathisia and activation than aripiprazole while retaining the metabolic-friendly profile. It is approved for schizophrenia and as adjunctive treatment for major depression.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Brexpiprazole — from its molecular target (D2/D3 (partial agonist, ~45% intrinsic activity vs aripiprazole's ~70%); 5-HT1A (partial agonist); 5-HT2A (antagonist)) to clinical effect.",
+    "Explain the mechanism of action of Brexpiprazole, from its molecular target (D2/D3 (partial agonist, ~45% intrinsic activity vs aripiprazole's ~70%); 5-HT1A (partial agonist); 5-HT2A (antagonist)) to clinical effect.",
     "List the FDA-approved and off-label uses of Brexpiprazole.",
     "Predict the common and serious side effects of Brexpiprazole from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Brexpiprazole.",
@@ -40,15 +40,15 @@ export const brexpiprazole: Drug = {
   mechanism: {
     summary: "Brexpiprazole is a D2/D3 partial agonist with lower intrinsic activity than aripiprazole, plus 5-HT1A partial agonism and 5-HT2A/5-HT2B/5-HT7 antagonism.",
     molecularTarget: "D2/D3 (partial agonist, ~45% intrinsic activity vs aripiprazole's ~70%); 5-HT1A (partial agonist); 5-HT2A (antagonist)",
-    effect: "Dopamine stabilisation — antipsychotic and antidepressant-augmentation efficacy with less activating adverse effects than aripiprazole.",
+    effect: "Dopamine stabilisation: antipsychotic and antidepressant-augmentation efficacy with less activating adverse effects than aripiprazole.",
     steps: [
-      "D2 partial agonism with lower intrinsic activity — still out-competes dopamine in hyperdopaminergic regions but activates less in normo-tonic circuits.",
+      "D2 partial agonism with lower intrinsic activity, still out-competes dopamine in hyperdopaminergic regions but activates less in normo-tonic circuits.",
       "Net effect: antipsychotic efficacy with markedly less akathisia and insomnia than aripiprazole.",
       "5-HT1A partial agonism and 5-HT2A antagonism support the antidepressant augmentation effect.",
       "Serotonergic profile contributes to antidepressant augmentation efficacy.",
     ],
     pharmacokinetics: "Peak 4 hours; steady state in 2 weeks.",
-    halfLife: "91 hours (parent) — among the longest of oral antipsychotics; enables once-daily dosing and delays washout.",
+    halfLife: "91 hours (parent), among the longest of oral antipsychotics; enables once-daily dosing and delays washout.",
     activeMetabolite: "No major active metabolite (hydroxymethyl metabolite minor).",
     metabolism: "Hepatic CYP2D6 and CYP3A4.",
     excretion: "Renal and faecal metabolites.",
@@ -128,7 +128,7 @@ export const brexpiprazole: Drug = {
         label: "5-HT2A-mediated benefit",
       },
     ],
-    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms — the serotonin-dopamine hypothesis of atypical antipsychotics.",
+    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms: the serotonin-dopamine hypothesis of atypical antipsychotics.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Dopamine (DA)", "Serotonin (5-HT)"],
@@ -146,13 +146,13 @@ export const brexpiprazole: Drug = {
     {
       name: "Major depressive disorder — adjunctive",
       status: "fda-approved",
-      description: "1–3 mg/day added to antidepressants — the aripiprazole-alternative augmentation.",
+      description: "1–3 mg/day added to antidepressants: the aripiprazole-alternative augmentation.",
       ageGroup: "Adults",
     },
     {
       name: "Alzheimer's disease agitation",
       status: "fda-approved",
-      description: "Approved in several jurisdictions for agitation in dementia (0.5–2 mg) — the first agent with this specific approval.",
+      description: "Approved in several jurisdictions for agitation in dementia (0.5–2 mg): the first agent with this specific approval.",
     },
   ],
   contraindications: [
@@ -165,7 +165,7 @@ export const brexpiprazole: Drug = {
   blackBoxWarnings: [
     {
       title: "Increased mortality in elderly patients with dementia-related psychosis",
-      text: "Class boxed warning; brexpiprazole's dementia agitation approval carries specific dosing and monitoring requirements — distinguish agitation treatment (approved) from psychosis of dementia (warned against).",
+      text: "Class boxed warning; brexpiprazole's dementia agitation approval carries specific dosing and monitoring requirements: distinguish agitation treatment (approved) from psychosis of dementia (warned against).",
     },
     {
       title: "Suicidal thinking in adjunctive depression use",
@@ -178,14 +178,14 @@ export const brexpiprazole: Drug = {
       name: "Akathisia",
       frequency: "common",
       severity: "moderate",
-      description: "Present but substantially less than aripiprazole — the design goal achieved.",
+      description: "Present but substantially less than aripiprazole: the design goal achieved.",
       management: "Dose reduction; propranolol.",
     },
     {
       name: "Weight gain",
       frequency: "common",
       severity: "moderate",
-      description: "Modest — intermediate between aripiprazole and quetiapine.",
+      description: "Modest: intermediate between aripiprazole and quetiapine.",
       management: "Monitor; lifestyle.",
     },
     {
@@ -208,7 +208,7 @@ export const brexpiprazole: Drug = {
       name: "Impulse control disorders",
       frequency: "uncommon",
       severity: "severe",
-      description: "Shared with aripiprazole — partial agonism class effect; gambling, shopping, hypersexuality.",
+      description: "Shared with aripiprazole: partial agonism class effect; gambling, shopping, hypersexuality.",
       management: "Stop; counsel at initiation.",
     },
     {
@@ -231,7 +231,7 @@ export const brexpiprazole: Drug = {
     {
       parameter: "Weight and BMI",
       frequency: "Baseline, then at 4, 8, 12 weeks and quarterly",
-      rationale: "Class metabolic risk — early trajectory detection.",
+      rationale: "Class metabolic risk: early trajectory detection.",
     },
     {
       parameter: "Fasting glucose / HbA1c",
@@ -246,7 +246,7 @@ export const brexpiprazole: Drug = {
     {
       parameter: "Blood pressure (orthostatic)",
       frequency: "Baseline and during titration",
-      rationale: "Alpha-1 blockade — orthostasis risk.",
+      rationale: "Alpha-1 blockade: orthostasis risk.",
     },
     {
       parameter: "AIMS examination",
@@ -277,24 +277,24 @@ export const brexpiprazole: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Brexpiprazole works like a dopamine thermostat, similar to aripiprazole, but is engineered to cause less of the restless feeling that troubles some patients. It treats schizophrenia and, at low dose, is added to antidepressants when they haven't worked fully on their own.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Brexpiprazole builds over weeks — do not judge it in the first days.",
+    "Benefit from Brexpiprazole builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
     "Think 'aripiprazole with the edges sanded': lower intrinsic activity = less akathisia and activation.",
-    "Adjunctive depression dosing is 1–3 mg — tiny doses, big trials.",
-    "The 91-hour half-life means changes take days to manifest — patience at every dose move.",
-    "Dementia agitation approval (where granted) is separate from the dementia-psychosis boxed warning — know which you are treating.",
-    "Impulse-control warning inherited from the class — one sentence of counselling at initiation.",
+    "Adjunctive depression dosing is 1–3 mg: tiny doses, big trials.",
+    "The 91-hour half-life means changes take days to manifest: patience at every dose move.",
+    "Dementia agitation approval (where granted) is separate from the dementia-psychosis boxed warning: know which you are treating.",
+    "Impulse-control warning inherited from the class, one sentence of counselling at initiation.",
   ],
   examLens: {
     mbbs: {
       viva: [
         "Mechanism of Brexpiprazole: Brexpiprazole is a D2/D3 partial agonist with lower intrinsic activity than aripiprazole, plus 5-HT1A partial agonism and 5-HT2A/5-HT2B/5-HT7 antagonism.",
-        "Uses of Brexpiprazole: Schizophrenia; Major depressive disorder — adjunctive; Alzheimer's disease agitation",
+        "Uses of Brexpiprazole: Schizophrenia; Major depressive disorder: adjunctive; Alzheimer's disease agitation",
         "Mechanism: D2/D3 partial agonist with LOWER intrinsic activity than aripiprazole + 5-HT1A partial agonist + 5-HT2A antagonist.",
         "Signature: less akathisia than aripiprazole at comparable efficacy.",
       ],
@@ -303,7 +303,7 @@ export const brexpiprazole: Drug = {
         "Outline the monitoring plan: Weight and BMI (Baseline, then at 4, 8, 12 weeks and quarterly); Fasting glucose / HbA1c (Baseline, 12 weeks, then annually); Lipid profile (fasting) (Baseline, 12 weeks, then annually)",
       ],
       longAnswer: [
-        "Brexpiprazole: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Brexpiprazole: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: D2/D3 partial agonist with LOWER intrinsic activity than aripiprazole + 5-HT1A partial agonist + 5-HT2A antagonist.",
         "Signature: less akathisia than aripiprazole at comparable efficacy.",
       ],
@@ -313,7 +313,7 @@ export const brexpiprazole: Drug = {
         "Mechanism: D2/D3 partial agonist with LOWER intrinsic activity than aripiprazole + 5-HT1A partial agonist + 5-HT2A antagonist.",
         "Signature: less akathisia than aripiprazole at comparable efficacy.",
         "Approvals: schizophrenia (2–4 mg), MDD adjunct (1–3 mg), Alzheimer's agitation (0.5–2 mg in approving regions).",
-        "Half-life 91 hours — longest common oral antipsychotic.",
+        "Half-life 91 hours: longest common oral antipsychotic.",
         "CYP2D6 + 3A4 metabolism; halve dose when both inhibited.",
       ],
       pyqConcepts: [
@@ -324,7 +324,7 @@ export const brexpiprazole: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Brexpiprazole develops impulse control disorders — next best step?",
+        "A patient on Brexpiprazole develops impulse control disorders: next best step?",
         "When to choose Brexpiprazole over alternatives in its class.",
       ],
     },
@@ -337,10 +337,10 @@ export const brexpiprazole: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "Aripiprazole's mechanism with a gentler profile — the upgrade path for akathisia-intolerant patients.",
+        "Aripiprazole's mechanism with a gentler profile: the upgrade path for akathisia-intolerant patients.",
         "Tiny doses for augmentation; patience for the 91-hour half-life.",
         "Think 'aripiprazole with the edges sanded': lower intrinsic activity = less akathisia and activation.",
-        "Adjunctive depression dosing is 1–3 mg — tiny doses, big trials.",
+        "Adjunctive depression dosing is 1–3 mg: tiny doses, big trials.",
       ],
     },
   },
@@ -349,13 +349,13 @@ export const brexpiprazole: Drug = {
     "Mechanism: D2/D3 partial agonist with LOWER intrinsic activity than aripiprazole + 5-HT1A partial agonist + 5-HT2A antagonist.",
     "Signature: less akathisia than aripiprazole at comparable efficacy.",
     "Approvals: schizophrenia (2–4 mg), MDD adjunct (1–3 mg), Alzheimer's agitation (0.5–2 mg in approving regions).",
-    "Half-life 91 hours — longest common oral antipsychotic.",
+    "Half-life 91 hours: longest common oral antipsychotic.",
     "CYP2D6 + 3A4 metabolism; halve dose when both inhibited.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia",
+      title: "First presentation: schizophrenia",
       presentation: "A patient presenting with schizophrenia, started on Brexpiprazole.",
       history: "A adult patient presents with a schizophrenia picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with schizophrenia; physical examination and baseline investigations are unremarkable.",
@@ -364,7 +364,7 @@ export const brexpiprazole: Drug = {
       management: "Started at 1 mg once daily, titrated to 2–4 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Brexpiprazole takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Brexpiprazole takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -373,7 +373,7 @@ export const brexpiprazole: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Dopamine Stabiliser comparison — choosing within the class",
+      title: "Dopamine Stabiliser comparison: choosing within the class",
       primaryDrug: "Brexpiprazole",
       rows: [
         {
@@ -400,7 +400,7 @@ export const brexpiprazole: Drug = {
         },
         {
           attribute: "Half-life",
-          primaryValue: "91 hours (parent) — among the longest of oral antipsychotics; enables once-daily dosing and delays washout.",
+          primaryValue: "91 hours (parent), among the longest of oral antipsychotics; enables once-daily dosing and delays washout.",
           comparisons: [
             {
               drug: "Aripiprazole",
@@ -444,7 +444,7 @@ export const brexpiprazole: Drug = {
         },
         {
           attribute: "Sedation",
-          primaryValue: "Low — closer to aripiprazole than sedating agents.",
+          primaryValue: "Low: closer to aripiprazole than sedating agents.",
           comparisons: [
             {
               drug: "Aripiprazole",
@@ -487,7 +487,7 @@ export const brexpiprazole: Drug = {
           ],
         },
       ],
-      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -496,7 +496,7 @@ export const brexpiprazole: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Brexpiprazole reaches peak plasma concentration and begins acting at its molecular target (D2/D3 (partial agonist, ~45% intrinsic activity vs aripiprazole's ~70%); 5-HT1A (partial agonist); 5-HT2A (antagonist)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Brexpiprazole reaches peak plasma concentration and begins acting at its molecular target (D2/D3 (partial agonist, ~45% intrinsic activity vs aripiprazole's ~70%); 5-HT1A (partial agonist); 5-HT2A (antagonist)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -532,7 +532,7 @@ export const brexpiprazole: Drug = {
   faqs: [
     {
       question: "How long does Brexpiprazole take to work?",
-      answer: "Schizophrenia: 1–3 weeks; depression augmentation: 1–2 weeks for early benefit.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Schizophrenia: 1–3 weeks; depression augmentation: 1–2 weeks for early benefit.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Brexpiprazole?",
@@ -540,11 +540,11 @@ export const brexpiprazole: Drug = {
     },
     {
       question: "Can I stop Brexpiprazole suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Brexpiprazole habit-forming?",
@@ -552,7 +552,7 @@ export const brexpiprazole: Drug = {
     },
     {
       question: "Can I take Brexpiprazole during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Brexpiprazole may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Brexpiprazole may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -706,7 +706,7 @@ export const brexpiprazole: Drug = {
       note: "Key indication",
     },
     {
-      label: "Major depressive disorder — adjunctive",
+      label: "Major depressive disorder: adjunctive",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -736,7 +736,7 @@ export const brexpiprazole: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Brexpiprazole",
+      label: "Patient Guide. Brexpiprazole",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -744,13 +744,13 @@ export const brexpiprazole: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "Aripiprazole's gentler sibling — the same dopamine-stabiliser mechanism with less akathisia.",
-    summary: "Brexpiprazole is a prescription medicine used to treat schizophrenia. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "Aripiprazole's gentler sibling: the same dopamine-stabiliser mechanism with less akathisia.",
+    summary: "Brexpiprazole is a prescription medicine used to treat schizophrenia. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Brexpiprazole works like a dopamine thermostat, similar to aripiprazole, but is engineered to cause less of the restless feeling that troubles some patients. It treats schizophrenia and, at low dose, is added to antidepressants when they haven't worked fully on their own.",
-    sideEffects: "The most common side effects are: akathisia, weight gain, headache and insomnia, somnolence. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Impulse control disorders and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and bmi (baseline, then at 4, 8, 12 weeks and quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually); lipid profile (fasting) (baseline, 12 weeks, then annually). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: akathisia, weight gain, headache and insomnia, somnolence. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Impulse control disorders and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and bmi (baseline, then at 4, 8, 12 weeks and quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually); lipid profile (fasting) (baseline, 12 weeks, then annually). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Strong CYP2D6 or 3A4 inhibitors, Strong 3A4 inducers (carbamazepine). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Strong CYP2D6 or 3A4 inhibitors, Strong 3A4 inducers (carbamazepine). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -775,7 +775,7 @@ export const brexpiprazole: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -815,49 +815,49 @@ export const brexpiprazole: Drug = {
         name: "Aripiprazole",
         slug: "aripiprazole",
         relationship: "Same class (Dopamine Stabiliser)",
-        distinguishing: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+        distinguishing: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
       },
       {
         name: "Clozapine",
         slug: "clozapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
       },
       {
         name: "Lurasidone",
         slug: "lurasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+        distinguishing: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
       },
       {
         name: "Olanzapine",
         slug: "olanzapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+        distinguishing: "Most robust broad-spectrum atypical: heaviest metabolic burden",
       },
       {
         name: "Paliperidone",
         slug: "paliperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The LAI platform king — monthly to 6-monthly injections for schizophrenia",
+        distinguishing: "The LAI platform king: monthly to 6-monthly injections for schizophrenia",
       },
       {
         name: "Quetiapine",
         slug: "quetiapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin — the sedating antidepressant-antipsychotic",
+        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin: the sedating antidepressant-antipsychotic",
       },
       {
         name: "Risperidone",
         slug: "risperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most potent D2 blockade among atypicals — highest prolactin, best-studied LAI",
+        distinguishing: "Most potent D2 blockade among atypicals: highest prolactin, best-studied LAI",
       },
       {
         name: "Ziprasidone",
         slug: "ziprasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic — with QT vigilance",
+        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic, with QT vigilance",
       },
     ],
   },
@@ -1005,17 +1005,17 @@ export const brexpiprazole: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Brexpiprazole in two sentences.",
-      answer: "Brexpiprazole is a D2/D3 partial agonist with lower intrinsic activity than aripiprazole, plus 5-HT1A partial agonism and 5-HT2A/5-HT2B/5-HT7 antagonism. Net effect: Dopamine stabilisation — antipsychotic and antidepressant-augmentation efficacy with less activating adverse effects than aripiprazole.",
+      answer: "Brexpiprazole is a D2/D3 partial agonist with lower intrinsic activity than aripiprazole, plus 5-HT1A partial agonism and 5-HT2A/5-HT2B/5-HT7 antagonism. Net effect: Dopamine stabilisation; antipsychotic and antidepressant-augmentation efficacy with less activating adverse effects than aripiprazole.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Brexpiprazole.",
-      answer: "Schizophrenia, Major depressive disorder — adjunctive, Alzheimer's disease agitation. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Schizophrenia, Major depressive disorder: adjunctive, Alzheimer's disease agitation. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Brexpiprazole and how you would manage it.",
-      answer: "Impulse control disorders: Shared with aripiprazole — partial agonism class effect; gambling, shopping, hypersexuality. Management: Stop; counsel at initiation.",
+      answer: "Impulse control disorders: Shared with aripiprazole; partial agonism class effect; gambling, shopping, hypersexuality. Management: Stop; counsel at initiation.",
       topic: "Safety",
     },
     {
@@ -1025,7 +1025,7 @@ export const brexpiprazole: Drug = {
     },
     {
       question: "Share one clinical pearl about Brexpiprazole that separates safe prescribers from unsafe ones.",
-      answer: "Aripiprazole's mechanism with a gentler profile — the upgrade path for akathisia-intolerant patients.",
+      answer: "Aripiprazole's mechanism with a gentler profile: the upgrade path for akathisia-intolerant patients.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1101,7 +1101,7 @@ export const brexpiprazole: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1146,7 +1146,7 @@ export const brexpiprazole: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Brexpiprazole works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Brexpiprazole works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1162,7 +1162,7 @@ export const brexpiprazole: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Brexpiprazole safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Brexpiprazole safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1207,7 +1207,7 @@ export const brexpiprazole: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Brexpiprazole follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Brexpiprazole follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1218,7 +1218,7 @@ export const brexpiprazole: Drug = {
       "Dose reduction or timing change before discontinuation.",
     ],
     weightGain: "See product information and class comparison.",
-    sedation: "Low — closer to aripiprazole than sedating agents.",
+    sedation: "Low: closer to aripiprazole than sedating agents.",
     dosing: [
       {
         indication: "Schizophrenia",
@@ -1244,12 +1244,12 @@ export const brexpiprazole: Drug = {
     ],
     dosageForms: ["Tablets 0.25, 0.5, 1, 2, 3, 4 mg"],
     dosingTips: [
-      "Start low in augmentation — 0.5 mg is a real dose, not a token.",
-      "Wait a week between increments — the 91-hour half-life makes faster moves stack up.",
+      "Start low in augmentation: 0.5 mg is a real dose, not a token.",
+      "Wait a week between increments: the 91-hour half-life makes faster moves stack up.",
       "Counsel on impulse-control signs at initiation.",
     ],
     overdose: [
-      "Overdose with Brexpiprazole is managed supportively — no specific antidote.",
+      "Overdose with Brexpiprazole is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Brexpiprazole is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1258,7 +1258,7 @@ export const brexpiprazole: Drug = {
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
     pharmacokinetics: [
-      "Half-life: 91 hours (parent) — among the longest of oral antipsychotics; enables once-daily dosing and delays washout..",
+      "Half-life: 91 hours (parent), among the longest of oral antipsychotics; enables once-daily dosing and delays washout..",
       "Metabolism: Hepatic CYP2D6 and CYP3A4..",
     ],
     doNotUse: ["Known hypersensitivity to this agent."],
@@ -1294,16 +1294,16 @@ export const brexpiprazole: Drug = {
       "Agitation in Alzheimer's disease (where approved)",
     ],
     pearls: [
-      "Aripiprazole's mechanism with a gentler profile — the upgrade path for akathisia-intolerant patients.",
+      "Aripiprazole's mechanism with a gentler profile: the upgrade path for akathisia-intolerant patients.",
       "Tiny doses for augmentation; patience for the 91-hour half-life.",
       "Think 'aripiprazole with the edges sanded': lower intrinsic activity = less akathisia and activation.",
-      "Adjunctive depression dosing is 1–3 mg — tiny doses, big trials.",
-      "The 91-hour half-life means changes take days to manifest — patience at every dose move.",
+      "Adjunctive depression dosing is 1–3 mg: tiny doses, big trials.",
+      "The 91-hour half-life means changes take days to manifest: patience at every dose move.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

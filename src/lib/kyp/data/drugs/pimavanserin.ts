@@ -23,14 +23,14 @@ export const pimavanserin: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Atypical Antipsychotics", "Pimavanserin"],
   /* ---- Hero / summary ---- */
-  tagline: "The non-dopaminergic antipsychotic — 5-HT2A inverse agonism for Parkinson's psychosis without motor cost.",
-  summary: "Pimavanserin is the first antipsychotic with NO dopamine blockade: a selective 5-HT2A inverse agonist approved for hallucinations and delusions in Parkinson's disease psychosis — antipsychotic effect without worsening the motor parkinsonism that every D2-blocking agent causes. QT prolongation is its main caution; the drug represents a mechanism-class of its own.",
+  tagline: "The non-dopaminergic antipsychotic: 5-HT2A inverse agonism for Parkinson's psychosis without motor cost.",
+  summary: "Pimavanserin is the first antipsychotic with NO dopamine blockade: a selective 5-HT2A inverse agonist approved for hallucinations and delusions in Parkinson's disease psychosis; antipsychotic effect without worsening the motor parkinsonism that every D2-blocking agent causes. QT prolongation is its main caution; the drug represents a mechanism-class of its own.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Pimavanserin — from its molecular target (5-HT2A receptors (selective inverse agonist — zero D2 occupancy)) to clinical effect.",
+    "Explain the mechanism of action of Pimavanserin (from its molecular target (5-HT2A receptors (selective inverse agonist) zero D2 occupancy)) to clinical effect.",
     "List the FDA-approved and off-label uses of Pimavanserin.",
     "Predict the common and serious side effects of Pimavanserin from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Pimavanserin.",
@@ -38,15 +38,15 @@ export const pimavanserin: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Pimavanserin selectively acts as a 5-HT2A inverse agonist — treating psychosis through serotonergic modulation while leaving dopamine receptors untouched.",
-    molecularTarget: "5-HT2A receptors (selective inverse agonist — zero D2 occupancy)",
+    summary: "Pimavanserin selectively acts as a 5-HT2A inverse agonist, treating psychosis through serotonergic modulation while leaving dopamine receptors untouched.",
+    molecularTarget: "5-HT2A receptors (selective inverse agonist, zero D2 occupancy)",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Pimavanserin selectively acts as a 5-HT2A inverse agonist — treating psychosis through serotonergic modulation while leaving dopamine receptors untouched.",
+      "Pimavanserin selectively acts as a 5-HT2A inverse agonist, treating psychosis through serotonergic modulation while leaving dopamine receptors untouched.",
       "The mechanism translates into the clinical profile described.",
       "Practical use follows half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 57 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 57 hours. See mechanism and prescriber sections.",
     halfLife: "57 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -126,7 +126,7 @@ export const pimavanserin: Drug = {
         label: "5-HT2A-mediated benefit",
       },
     ],
-    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms — the serotonin-dopamine hypothesis of atypical antipsychotics.",
+    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms: the serotonin-dopamine hypothesis of atypical antipsychotics.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Serotonin (5-HT)"],
@@ -140,7 +140,7 @@ export const pimavanserin: Drug = {
     {
       name: "Hallucinations and delusions associated with Parkinson's disease psychosis",
       status: "fda-approved",
-      description: "The first drug approved for this indication — psychosis control with zero motor worsening.",
+      description: "The first drug approved for this indication: psychosis control with zero motor worsening.",
     },
     {
       name: "Dementia-related psychosis (adjunct/studied)",
@@ -163,7 +163,7 @@ export const pimavanserin: Drug = {
   blackBoxWarnings: [
     {
       title: "Increased mortality in elderly patients with dementia-related psychosis (class framing)",
-      text: "As a class caution for antipsychotics in dementia — pimavanserin's specific approval is for Parkinson's disease psychosis; use within the indication with review discipline.",
+      text: "As a class caution for antipsychotics in dementia: pimavanserin's specific approval is for Parkinson's disease psychosis; use within the indication with review discipline.",
     },
   ],
   /* ---- Side effects ---- */
@@ -179,7 +179,7 @@ export const pimavanserin: Drug = {
       name: "Confusion and delirium",
       frequency: "common",
       severity: "moderate",
-      description: "Reported — the elderly PDP population is frail.",
+      description: "Reported: the elderly PDP population is frail.",
       management: "Monitor cognition; dose review.",
     },
     {
@@ -195,14 +195,14 @@ export const pimavanserin: Drug = {
       name: "QT prolongation",
       frequency: "uncommon",
       severity: "severe",
-      description: "The label caution — modest mean effect; avoid QT-drug combinations.",
+      description: "The label caution: modest mean effect; avoid QT-drug combinations.",
       management: "ECG in at-risk; electrolytes; avoid combinations.",
     },
     {
       name: "Mortality signal in broader dementia populations (label discussion)",
       frequency: "uncommon",
       severity: "severe",
-      description: "The class-of-antipsychotics caution hangs over all antipsychotics in dementia — pimavanserin's specific approval is Parkinson's psychosis.",
+      description: "The class-of-antipsychotics caution hangs over all antipsychotics in dementia: pimavanserin's specific approval is Parkinson's psychosis.",
       management: "Use within the approved indication; review discipline.",
     },
   ],
@@ -228,7 +228,7 @@ export const pimavanserin: Drug = {
     {
       drug: "Strong CYP3A4 inhibitors/inducers",
       severity: "major",
-      mechanism: "3A4 metabolism — levels shift.",
+      mechanism: "3A4 metabolism: levels shift.",
       action: "Dose awareness; avoid strong inducers.",
     },
     {
@@ -240,7 +240,7 @@ export const pimavanserin: Drug = {
     {
       drug: "Serotonergic drugs",
       severity: "moderate",
-      mechanism: "5-HT2A action — serotonin-syndrome caution with SSRIs (label warning).",
+      mechanism: "5-HT2A action: serotonin-syndrome caution with SSRIs (label warning).",
       action: "Counsel; monitor.",
     },
   ],
@@ -251,27 +251,27 @@ export const pimavanserin: Drug = {
   renalAdjustment: "No adjustment for mild-moderate impairment.",
   hepaticAdjustment: "Not recommended in significant hepatic impairment.",
   /* ---- Education ---- */
-  patientExplanation: "Pimavanserin is the first antipsychotic that works without touching the dopamine system — it acts on serotonin receptors instead. This makes it uniquely suited to hallucinations and delusions in Parkinson's disease, because it does not interfere with Parkinson's medicines or worsen movement. It is taken as two capsules once daily; swelling of the legs and confusion are its main side effects, and it can slightly affect the heart's rhythm.",
+  patientExplanation: "Pimavanserin is the first antipsychotic that works without touching the dopamine system. It acts on serotonin receptors instead. This makes it uniquely suited to hallucinations and delusions in Parkinson's disease, because it does not interfere with Parkinson's medicines or worsen movement. It is taken as two capsules once daily; swelling of the legs and confusion are its main side effects, and it can slightly affect the heart's rhythm.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Pimavanserin builds over weeks — do not judge it in the first days.",
+    "Benefit from Pimavanserin builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The mechanism class of one: zero D2 occupancy — psychosis treated through 5-HT2A alone; the proof that dopamine is not the only road.",
-    "The Parkinson's-psychosis prize: every other antipsychotic worsens motor parkinsonism (D2 blockade vs dopaminergic therapy) — pimavanserin leaves the motor system alone.",
+    "The mechanism class of one: zero D2 occupancy; psychosis treated through 5-HT2A alone; the proof that dopamine is not the only road.",
+    "The Parkinson's-psychosis prize: every other antipsychotic worsens motor parkinsonism (D2 blockade vs dopaminergic therapy); pimavanserin leaves the motor system alone.",
     "The quetiapine-clozapine era ends: the field's Parkinson's-psychosis hierarchy (quetiapine → clozapine → pimavanserin where available) now has a licensed first choice.",
-    "The oedema-confusion texture: mild but real in the frail elderly population — monitor what you treat.",
+    "The oedema-confusion texture: mild but real in the frail elderly population; monitor what you treat.",
     "QT caution: modest but the combination audit applies as with any QT agent.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Pimavanserin: Pimavanserin selectively acts as a 5-HT2A inverse agonist — treating psychosis through serotonergic modulation while leaving dopamine receptors untouched.",
+        "Mechanism of Pimavanserin: Pimavanserin selectively acts as a 5-HT2A inverse agonist, treating psychosis through serotonergic modulation while leaving dopamine receptors untouched.",
         "Uses of Pimavanserin: Hallucinations and delusions associated with Parkinson's disease psychosis; Dementia-related psychosis (adjunct/studied); Schizophrenia (adjunct, studied)",
-        "Mechanism: SELECTIVE 5-HT2A INVERSE AGONIST — zero D2 blockade (unique class).",
+        "Mechanism: SELECTIVE 5-HT2A INVERSE AGONIST; zero D2 blockade (unique class).",
         "Indication: hallucinations/delusions in PARKINSON'S DISEASE PSYCHOSIS (first approved drug).",
       ],
       practical: [
@@ -279,14 +279,14 @@ export const pimavanserin: Drug = {
         "Outline the monitoring plan: QT and electrolytes in at-risk (Baseline when indicated); Motor function (unchanged by design) (At review); Cognition and oedema (elderly) (At review)",
       ],
       longAnswer: [
-        "Pimavanserin: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: SELECTIVE 5-HT2A INVERSE AGONIST — zero D2 blockade (unique class).",
+        "Pimavanserin: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: SELECTIVE 5-HT2A INVERSE AGONIST; zero D2 blockade (unique class).",
         "Indication: hallucinations/delusions in PARKINSON'S DISEASE PSYCHOSIS (first approved drug).",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: SELECTIVE 5-HT2A INVERSE AGONIST — zero D2 blockade (unique class).",
+        "Mechanism: SELECTIVE 5-HT2A INVERSE AGONIST; zero D2 blockade (unique class).",
         "Indication: hallucinations/delusions in PARKINSON'S DISEASE PSYCHOSIS (first approved drug).",
         "Motor-neutral: does not worsen parkinsonism (the dopamine-sparing property).",
         "Main caution: QT prolongation (combination audit).",
@@ -297,29 +297,29 @@ export const pimavanserin: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Pimavanserin develops qt prolongation — next best step?",
+        "A patient on Pimavanserin develops qt prolongation: next best step?",
         "When to choose Pimavanserin over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: 5-HT2A receptors (selective inverse agonist — zero D2 occupancy)",
+        "Primary target: 5-HT2A receptors (selective inverse agonist, zero D2 occupancy)",
         "Most common side effects: Peripheral oedema, Confusion and delirium, Nausea and constipation",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The mechanism class of one: zero D2 occupancy — psychosis treated through 5-HT2A alone; the proof that dopamine is not the only road.",
-        "The Parkinson's-psychosis prize: every other antipsychotic worsens motor parkinsonism (D2 blockade vs dopaminergic therapy) — pimavanserin leaves the motor system alone.",
+        "The mechanism class of one: zero D2 occupancy; psychosis treated through 5-HT2A alone; the proof that dopamine is not the only road.",
+        "The Parkinson's-psychosis prize: every other antipsychotic worsens motor parkinsonism (D2 blockade vs dopaminergic therapy); pimavanserin leaves the motor system alone.",
         "The quetiapine-clozapine era ends: the field's Parkinson's-psychosis hierarchy (quetiapine → clozapine → pimavanserin where available) now has a licensed first choice.",
-        "The oedema-confusion texture: mild but real in the frail elderly population — monitor what you treat.",
+        "The oedema-confusion texture: mild but real in the frail elderly population; monitor what you treat.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: SELECTIVE 5-HT2A INVERSE AGONIST — zero D2 blockade (unique class).",
+    "Mechanism: SELECTIVE 5-HT2A INVERSE AGONIST; zero D2 blockade (unique class).",
     "Indication: hallucinations/delusions in PARKINSON'S DISEASE PSYCHOSIS (first approved drug).",
     "Motor-neutral: does not worsen parkinsonism (the dopamine-sparing property).",
     "Main caution: QT prolongation (combination audit).",
@@ -330,7 +330,7 @@ export const pimavanserin: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — hallucinations and delusions associated with parkinson's disease psychosis",
+      title: "First presentation: hallucinations and delusions associated with parkinson's disease psychosis",
       presentation: "A patient presenting with hallucinations and delusions associated with parkinson's disease psychosis, started on Pimavanserin.",
       history: "A adult patient presents with a hallucinations and delusions associated with parkinson's disease psychosis picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with hallucinations and delusions associated with parkinson's disease psychosis; physical examination and baseline investigations are unremarkable.",
@@ -339,7 +339,7 @@ export const pimavanserin: Drug = {
       management: "Started at 34 mg once daily (two 17 mg capsules), titrated to 34 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Pimavanserin takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Pimavanserin takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -348,12 +348,12 @@ export const pimavanserin: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Atypical Antipsychotic comparison — choosing within the class",
+      title: "Atypical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Pimavanserin",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "5-HT2A receptors (selective inverse agonist — zero D2 occupancy)",
+          primaryValue: "5-HT2A receptors (selective inverse agonist, zero D2 occupancy)",
           comparisons: [
             {
               drug: "Aripiprazole",
@@ -441,7 +441,7 @@ export const pimavanserin: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The dopamine-sparing antipsychotic — Parkinson's psychosis specialist",
+          primaryValue: "The dopamine-sparing antipsychotic. Parkinson's psychosis specialist",
           comparisons: [
             {
               drug: "Aripiprazole",
@@ -462,7 +462,7 @@ export const pimavanserin: Drug = {
           ],
         },
       ],
-      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -471,7 +471,7 @@ export const pimavanserin: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Pimavanserin reaches peak plasma concentration and begins acting at its molecular target (5-HT2A receptors (selective inverse agonist — zero D2 occupancy)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Pimavanserin reaches peak plasma concentration and begins acting at its molecular target (5-HT2A receptors (selective inverse agonist, zero D2 occupancy)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -507,7 +507,7 @@ export const pimavanserin: Drug = {
   faqs: [
     {
       question: "How long does Pimavanserin take to work?",
-      answer: "Psychosis benefit over 1-2 weeks at steady state.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Psychosis benefit over 1-2 weeks at steady state.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Pimavanserin?",
@@ -515,11 +515,11 @@ export const pimavanserin: Drug = {
     },
     {
       question: "Can I stop Pimavanserin suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Pimavanserin habit-forming?",
@@ -527,7 +527,7 @@ export const pimavanserin: Drug = {
     },
     {
       question: "Can I take Pimavanserin during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Pimavanserin may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Pimavanserin may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -651,7 +651,7 @@ export const pimavanserin: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "5-HT2A receptors (selective inverse agonist — zero D2 occupancy)",
+      label: "5-HT2A receptors (selective inverse agonist, zero D2 occupancy)",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
@@ -693,7 +693,7 @@ export const pimavanserin: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Pimavanserin",
+      label: "Patient Guide. Pimavanserin",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -701,13 +701,13 @@ export const pimavanserin: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The non-dopaminergic antipsychotic — 5-HT2A inverse agonism for Parkinson's psychosis without motor cost.",
-    summary: "Pimavanserin is a prescription medicine used to treat hallucinations and delusions associated with parkinson's disease psychosis. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Pimavanserin is the first antipsychotic that works without touching the dopamine system — it acts on serotonin receptors instead. This makes it uniquely suited to hallucinations and delusions in Parkinson's disease, because it does not interfere with Parkinson's medicines or worsen movement. It is taken as two capsules once daily; swelling of the legs and confusion are its main side effects, and it can slightly affect the heart's rhythm.",
-    sideEffects: "The most common side effects are: peripheral oedema, confusion and delirium, nausea and constipation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: QT prolongation and Mortality signal in broader dementia populations (label discussion). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: qt and electrolytes in at-risk (baseline when indicated); motor function (unchanged by design) (at review); cognition and oedema (elderly) (at review). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The non-dopaminergic antipsychotic: 5-HT2A inverse agonism for Parkinson's psychosis without motor cost.",
+    summary: "Pimavanserin is a prescription medicine used to treat hallucinations and delusions associated with parkinson's disease psychosis. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Pimavanserin is the first antipsychotic that works without touching the dopamine system. It acts on serotonin receptors instead. This makes it uniquely suited to hallucinations and delusions in Parkinson's disease, because it does not interfere with Parkinson's medicines or worsen movement. It is taken as two capsules once daily; swelling of the legs and confusion are its main side effects, and it can slightly affect the heart's rhythm.",
+    sideEffects: "The most common side effects are: peripheral oedema, confusion and delirium, nausea and constipation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: QT prolongation and Mortality signal in broader dementia populations (label discussion). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: qt and electrolytes in at-risk (baseline when indicated); motor function (unchanged by design) (at review); cognition and oedema (elderly) (at review). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Strong CYP3A4 inhibitors/inducers, QT-prolonging drugs, Serotonergic drugs. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Strong CYP3A4 inhibitors/inducers, QT-prolonging drugs, Serotonergic drugs. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -731,7 +731,7 @@ export const pimavanserin: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -765,55 +765,55 @@ export const pimavanserin: Drug = {
         name: "Pimavanserin",
         slug: "pimavanserin",
         relationship: "This guide",
-        distinguishing: "The dopamine-sparing antipsychotic — Parkinson's psychosis specialist",
+        distinguishing: "The dopamine-sparing antipsychotic. Parkinson's psychosis specialist",
       },
       {
         name: "Aripiprazole",
         slug: "aripiprazole",
         relationship: "Same class (Dopamine Stabiliser)",
-        distinguishing: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+        distinguishing: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
       },
       {
         name: "Clozapine",
         slug: "clozapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
       },
       {
         name: "Lurasidone",
         slug: "lurasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+        distinguishing: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
       },
       {
         name: "Olanzapine",
         slug: "olanzapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+        distinguishing: "Most robust broad-spectrum atypical: heaviest metabolic burden",
       },
       {
         name: "Paliperidone",
         slug: "paliperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The LAI platform king — monthly to 6-monthly injections for schizophrenia",
+        distinguishing: "The LAI platform king: monthly to 6-monthly injections for schizophrenia",
       },
       {
         name: "Quetiapine",
         slug: "quetiapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin — the sedating antidepressant-antipsychotic",
+        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin: the sedating antidepressant-antipsychotic",
       },
       {
         name: "Risperidone",
         slug: "risperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most potent D2 blockade among atypicals — highest prolactin, best-studied LAI",
+        distinguishing: "Most potent D2 blockade among atypicals: highest prolactin, best-studied LAI",
       },
       {
         name: "Ziprasidone",
         slug: "ziprasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic — with QT vigilance",
+        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic, with QT vigilance",
       },
     ],
   },
@@ -961,7 +961,7 @@ export const pimavanserin: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Pimavanserin in two sentences.",
-      answer: "Pimavanserin selectively acts as a 5-HT2A inverse agonist — treating psychosis through serotonergic modulation while leaving dopamine receptors untouched. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Pimavanserin selectively acts as a 5-HT2A inverse agonist, treating psychosis through serotonergic modulation while leaving dopamine receptors untouched. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -971,7 +971,7 @@ export const pimavanserin: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Pimavanserin and how you would manage it.",
-      answer: "QT prolongation: The label caution — modest mean effect; avoid QT-drug combinations. Management: ECG in at-risk; electrolytes; avoid combinations.",
+      answer: "QT prolongation: The label caution; modest mean effect; avoid QT-drug combinations. Management: ECG in at-risk; electrolytes; avoid combinations.",
       topic: "Safety",
     },
     {
@@ -981,7 +981,7 @@ export const pimavanserin: Drug = {
     },
     {
       question: "Share one clinical pearl about Pimavanserin that separates safe prescribers from unsafe ones.",
-      answer: "The mechanism class of one: zero D2 occupancy — psychosis treated through 5-HT2A alone; the proof that dopamine is not the only road.",
+      answer: "The mechanism class of one: zero D2 occupancy; psychosis treated through 5-HT2A alone; the proof that dopamine is not the only road.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1057,7 +1057,7 @@ export const pimavanserin: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1102,7 +1102,7 @@ export const pimavanserin: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Pimavanserin works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Pimavanserin works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1118,7 +1118,7 @@ export const pimavanserin: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Pimavanserin safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Pimavanserin safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1163,7 +1163,7 @@ export const pimavanserin: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Pimavanserin follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Pimavanserin follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1188,10 +1188,10 @@ export const pimavanserin: Drug = {
     dosingTips: [
       "The motor-neutrality is the prescribing point.",
       "QT combination audit as with any QT agent.",
-      "No titration — 34 mg from the start.",
+      "No titration: 34 mg from the start.",
     ],
     overdose: [
-      "Overdose with Pimavanserin is managed supportively — no specific antidote.",
+      "Overdose with Pimavanserin is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Pimavanserin is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1231,16 +1231,16 @@ export const pimavanserin: Drug = {
       "Hallucinations and delusions in Parkinson's disease psychosis",
     ],
     pearls: [
-      "The mechanism class of one: zero D2 occupancy — psychosis treated through 5-HT2A alone; the proof that dopamine is not the only road.",
-      "The Parkinson's-psychosis prize: every other antipsychotic worsens motor parkinsonism (D2 blockade vs dopaminergic therapy) — pimavanserin leaves the motor system alone.",
+      "The mechanism class of one: zero D2 occupancy; psychosis treated through 5-HT2A alone; the proof that dopamine is not the only road.",
+      "The Parkinson's-psychosis prize: every other antipsychotic worsens motor parkinsonism (D2 blockade vs dopaminergic therapy); pimavanserin leaves the motor system alone.",
       "The quetiapine-clozapine era ends: the field's Parkinson's-psychosis hierarchy (quetiapine → clozapine → pimavanserin where available) now has a licensed first choice.",
-      "The oedema-confusion texture: mild but real in the frail elderly population — monitor what you treat.",
+      "The oedema-confusion texture: mild but real in the frail elderly population; monitor what you treat.",
       "QT caution: modest but the combination audit applies as with any QT agent.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

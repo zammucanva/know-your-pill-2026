@@ -23,14 +23,14 @@ export const nalmefene: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Substance Use Treatments", "Opioid Antagonists", "Nalmefene"],
   /* ---- Hero / summary ---- */
-  tagline: "Europe's as-needed antagonist — opioid blockade taken only on drinking days.",
-  summary: "Nalmefene is a long-acting opioid antagonist (naltrexone's structural relative) approved in Europe for ALCOHOL DEPENDENCE with a distinctive as-needed model: one tablet 1-2 hours before an anticipated drinking episode, reducing consumption rather than enforcing abstinence. It targets the still-drinking patient who is not ready for abstinence — a harm-reduction pharmacology.",
+  tagline: "Europe's as-needed antagonist: opioid blockade taken only on drinking days.",
+  summary: "Nalmefene is a long-acting opioid antagonist (naltrexone's structural relative) approved in Europe for ALCOHOL DEPENDENCE with a distinctive as-needed model: one tablet 1-2 hours before an anticipated drinking episode, reducing consumption rather than enforcing abstinence. It targets the still-drinking patient who is not ready for abstinence: a harm-reduction pharmacology.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Nalmefene — from its molecular target (Mu-opioid receptor (antagonist) — kappa-antagonist activity adds mood-relevant pharmacology) to clinical effect.",
+    "Explain the mechanism of action of Nalmefene (from its molecular target (Mu-opioid receptor (antagonist)) kappa-antagonist activity adds mood-relevant pharmacology) to clinical effect.",
     "List the FDA-approved and off-label uses of Nalmefene.",
     "Predict the common and serious side effects of Nalmefene from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Nalmefene.",
@@ -38,15 +38,15 @@ export const nalmefene: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Nalmefene blocks mu-opioid receptors (blunting alcohol reward) with additional kappa-antagonist activity — taken as-needed before drinking.",
-    molecularTarget: "Mu-opioid receptor (antagonist) — kappa-antagonist activity adds mood-relevant pharmacology",
+    summary: "Nalmefene blocks mu-opioid receptors (blunting alcohol reward) with additional kappa-antagonist activity: taken as-needed before drinking.",
+    molecularTarget: "Mu-opioid receptor (antagonist): kappa-antagonist activity adds mood-relevant pharmacology",
     effect: "Modulation of the described target with the agent's clinical effect.",
     steps: [
-      "Nalmefene blocks mu-opioid receptors (blunting alcohol reward) with additional kappa-antagonist activity — taken as-needed before drinking.",
+      "Nalmefene blocks mu-opioid receptors (blunting alcohol reward) with additional kappa-antagonist activity: taken as-needed before drinking.",
       "The target engagement produces the clinical effect described.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 26 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 26 hours. See mechanism and prescriber sections.",
     halfLife: "About 26 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -97,12 +97,12 @@ export const nalmefene: Drug = {
         label: "supports",
       },
     ],
-    caption: "Pharmacotherapy for substance use disorders blunts the reinforcement cycle — medication opens a window; psychosocial treatment walks the patient through it.",
+    caption: "Pharmacotherapy for substance use disorders blunts the reinforcement cycle: medication opens a window; psychosocial treatment walks the patient through it.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Endogenous opioids"],
   receptors: [
-    "Mu-opioid receptor (antagonist) — kappa-antagonist activity adds mood-relevant pharmacology",
+    "Mu-opioid receptor (antagonist): kappa-antagonist activity adds mood-relevant pharmacology",
   ],
   brainRegionIds: ["nucleus-accumbens", "prefrontal-cortex"],
   pathwayIds: [],
@@ -123,7 +123,7 @@ export const nalmefene: Drug = {
     {
       name: "Opioid analgesics",
       severity: "absolute",
-      rationale: "Blockade — no analgesia.",
+      rationale: "Blockade: no analgesia.",
     },
   ],
   blackBoxWarnings: [],
@@ -156,7 +156,7 @@ export const nalmefene: Drug = {
       name: "Precipitated opioid withdrawal",
       frequency: "uncommon",
       severity: "severe",
-      description: "As with naltrexone — opioid-free status required.",
+      description: "As with naltrexone: opioid-free status required.",
       management: "Verify before use.",
     },
     {
@@ -191,7 +191,7 @@ export const nalmefene: Drug = {
     {
       drug: "Opioid analgesics",
       severity: "contraindicated",
-      mechanism: "Blockade — no analgesia.",
+      mechanism: "Blockade: no analgesia.",
       action: "Medical alert; planning.",
     },
   ],
@@ -204,39 +204,39 @@ export const nalmefene: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Nalmefene is a European medicine for people with alcohol problems who are not ready to stop completely: you take one tablet an hour or two before you expect to drink, and it reduces how much you drink in that session. It blocks the brain's reward response to alcohol. It has no abuse potential, and it must never be combined with opioid painkillers.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Nalmefene builds over weeks — do not judge it in the first days.",
+    "Benefit from Nalmefene builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The as-needed revolution: pharmacotherapy for the patient who is NOT choosing abstinence — one tablet before drinking blunts the reward arc.",
+    "The as-needed revolution: pharmacotherapy for the patient who is NOT choosing abstinence, one tablet before drinking blunts the reward arc.",
     "Kappa-antagonism: the pharmacological difference from naltrexone, theoretically relevant to dysphoria-driven drinking.",
     "Harm-reduction philosophy in a tablet: reduce consumption now, abstinence later if chosen.",
-    "Not FDA-approved — a European model encountering patients worldwide.",
+    "Not FDA-approved: a European model encountering patients worldwide.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Nalmefene: Nalmefene blocks mu-opioid receptors (blunting alcohol reward) with additional kappa-antagonist activity — taken as-needed before drinking.",
-        "Uses of Nalmefene: Alcohol dependence — reduction of consumption (as-needed)",
-        "Mechanism: mu-opioid antagonist (+ kappa-antagonism) — as-needed model.",
+        "Mechanism of Nalmefene: Nalmefene blocks mu-opioid receptors (blunting alcohol reward) with additional kappa-antagonist activity; taken as-needed before drinking.",
+        "Uses of Nalmefene: Alcohol dependence; reduction of consumption (as-needed)",
+        "Mechanism: mu-opioid antagonist (+ kappa-antagonism); as-needed model.",
         "Indication: alcohol dependence with REDUCTION (not abstinence) as the goal (EU).",
       ],
       practical: [
-        "Prescribe Nalmefene for alcohol dependence — reduction of consumption (as-needed) with dose, timing, and duration.",
+        "Prescribe Nalmefene for alcohol dependence: reduction of consumption (as-needed) with dose, timing, and duration.",
         "Outline the monitoring plan: Drinking quantity review (Every review); Overdose education (Every prescription)",
       ],
       longAnswer: [
-        "Nalmefene: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: mu-opioid antagonist (+ kappa-antagonism) — as-needed model.",
+        "Nalmefene: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: mu-opioid antagonist (+ kappa-antagonism); as-needed model.",
         "Indication: alcohol dependence with REDUCTION (not abstinence) as the goal (EU).",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: mu-opioid antagonist (+ kappa-antagonism) — as-needed model.",
+        "Mechanism: mu-opioid antagonist (+ kappa-antagonism); as-needed model.",
         "Indication: alcohol dependence with REDUCTION (not abstinence) as the goal (EU).",
         "Dose: 18 mg 1-2 h before anticipated drinking.",
         "Same precipitated-withdrawal and post-treatment overdose cautions as naltrexone.",
@@ -250,29 +250,29 @@ export const nalmefene: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Nalmefene develops precipitated opioid withdrawal — next best step?",
+        "A patient on Nalmefene develops precipitated opioid withdrawal: next best step?",
         "When to choose Nalmefene over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: Mu-opioid receptor (antagonist) — kappa-antagonist activity adds mood-relevant pharmacology",
+        "Primary target: Mu-opioid receptor (antagonist); kappa-antagonist activity adds mood-relevant pharmacology",
         "Most common side effects: Nausea, Dizziness, insomnia, headache, Fatigue",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The as-needed revolution: pharmacotherapy for the patient who is NOT choosing abstinence — one tablet before drinking blunts the reward arc.",
+        "The as-needed revolution: pharmacotherapy for the patient who is NOT choosing abstinence, one tablet before drinking blunts the reward arc.",
         "Kappa-antagonism: the pharmacological difference from naltrexone, theoretically relevant to dysphoria-driven drinking.",
         "Harm-reduction philosophy in a tablet: reduce consumption now, abstinence later if chosen.",
-        "Not FDA-approved — a European model encountering patients worldwide.",
+        "Not FDA-approved: a European model encountering patients worldwide.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: mu-opioid antagonist (+ kappa-antagonism) — as-needed model.",
+    "Mechanism: mu-opioid antagonist (+ kappa-antagonism); as-needed model.",
     "Indication: alcohol dependence with REDUCTION (not abstinence) as the goal (EU).",
     "Dose: 18 mg 1-2 h before anticipated drinking.",
     "Same precipitated-withdrawal and post-treatment overdose cautions as naltrexone.",
@@ -281,16 +281,16 @@ export const nalmefene: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — alcohol dependence — reduction of consumption (as-needed)",
-      presentation: "A patient presenting with alcohol dependence — reduction of consumption (as-needed), started on Nalmefene.",
-      history: "A adult patient presents with a alcohol dependence — reduction of consumption (as-needed) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with alcohol dependence — reduction of consumption (as-needed); physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Alcohol dependence — reduction of consumption (as-needed). Differentials are considered and excluded clinically.",
+      title: "First presentation: alcohol dependence; reduction of consumption (as-needed)",
+      presentation: "A patient presenting with alcohol dependence: reduction of consumption (as-needed), started on Nalmefene.",
+      history: "A adult patient presents with a alcohol dependence: reduction of consumption (as-needed) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with alcohol dependence: reduction of consumption (as-needed); physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Alcohol dependence: reduction of consumption (as-needed). Differentials are considered and excluded clinically.",
       rationale: "Nalmefene is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (SUD Treatment) with strong evidence in this condition.",
       management: "Started at 18 mg 1-2 h before anticipated drinking, titrated to 18 mg per drinking day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Nalmefene takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Nalmefene takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -299,12 +299,12 @@ export const nalmefene: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "SUD Treatment comparison — choosing within the class",
+      title: "SUD Treatment comparison: choosing within the class",
       primaryDrug: "Nalmefene",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "Mu-opioid receptor (antagonist) — kappa-antagonist activity adds mood-relevant pharmacology",
+          primaryValue: "Mu-opioid receptor (antagonist): kappa-antagonist activity adds mood-relevant pharmacology",
           comparisons: [
             {
               drug: "Acamprosate",
@@ -413,7 +413,7 @@ export const nalmefene: Drug = {
           ],
         },
       ],
-      takeaway: "All opioid antagonists share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All opioid antagonists share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -422,7 +422,7 @@ export const nalmefene: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Nalmefene reaches peak plasma concentration and begins acting at its molecular target (Mu-opioid receptor (antagonist) — kappa-antagonist activity adds mood-relevant pharmacology). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Nalmefene reaches peak plasma concentration and begins acting at its molecular target (Mu-opioid receptor (antagonist), kappa-antagonist activity adds mood-relevant pharmacology). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -458,7 +458,7 @@ export const nalmefene: Drug = {
   faqs: [
     {
       question: "How long does Nalmefene take to work?",
-      answer: "Reward-blunting within 1-2 hours of the dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Reward-blunting within 1-2 hours of the dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Nalmefene?",
@@ -466,11 +466,11 @@ export const nalmefene: Drug = {
     },
     {
       question: "Can I stop Nalmefene suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Nalmefene habit-forming?",
@@ -478,7 +478,7 @@ export const nalmefene: Drug = {
     },
     {
       question: "Can I take Nalmefene during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Nalmefene may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Nalmefene may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -588,13 +588,13 @@ export const nalmefene: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "Mu-opioid receptor (antagonist) — kappa-antagonist activity adds mood-relevant pharmacology",
+      label: "Mu-opioid receptor (antagonist): kappa-antagonist activity adds mood-relevant pharmacology",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
     },
     {
-      label: "Alcohol dependence — reduction of consumption (as-needed)",
+      label: "Alcohol dependence: reduction of consumption (as-needed)",
       type: "condition",
       href: "#clinical-uses",
       note: "Used clinically",
@@ -618,7 +618,7 @@ export const nalmefene: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Nalmefene",
+      label: "Patient Guide. Nalmefene",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -626,13 +626,13 @@ export const nalmefene: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "Europe's as-needed antagonist — opioid blockade taken only on drinking days.",
-    summary: "Nalmefene is a prescription medicine used to treat alcohol dependence — reduction of consumption (as-needed). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "Europe's as-needed antagonist: opioid blockade taken only on drinking days.",
+    summary: "Nalmefene is a prescription medicine used to treat alcohol dependence: reduction of consumption (as-needed). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Nalmefene is a European medicine for people with alcohol problems who are not ready to stop completely: you take one tablet an hour or two before you expect to drink, and it reduces how much you drink in that session. It blocks the brain's reward response to alcohol. It has no abuse potential, and it must never be combined with opioid painkillers.",
-    sideEffects: "The most common side effects are: nausea, dizziness, insomnia, headache, fatigue. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Precipitated opioid withdrawal and Post-treatment overdose risk. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: drinking quantity review (every review); overdose education (every prescription). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: nausea, dizziness, insomnia, headache, fatigue. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Precipitated opioid withdrawal and Post-treatment overdose risk. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: drinking quantity review (every review); overdose education (every prescription). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Opioid analgesics. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Opioid analgesics. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -656,7 +656,7 @@ export const nalmefene: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -696,25 +696,25 @@ export const nalmefene: Drug = {
         name: "Acamprosate",
         slug: "acamprosate",
         relationship: "Same class (SUD Treatment)",
-        distinguishing: "The abstinence-protector — for the already-abstinent patient",
+        distinguishing: "The abstinence-protector, for the already-abstinent patient",
       },
       {
         name: "Buprenorphine",
         slug: "buprenorphine",
         relationship: "Same class (SUD Treatment)",
-        distinguishing: "The safety-ceiling maintenance agonist — office-based opioid treatment",
+        distinguishing: "The safety-ceiling maintenance agonist: office-based opioid treatment",
       },
       {
         name: "Disulfiram",
         slug: "disulfiram",
         relationship: "Same class (SUD Treatment)",
-        distinguishing: "The classical aversion deterrent — for the motivated, supervised patient",
+        distinguishing: "The classical aversion deterrent, for the motivated, supervised patient",
       },
       {
         name: "Naltrexone",
         slug: "naltrexone",
         relationship: "Same class (SUD Treatment)",
-        distinguishing: "The pure antagonist — alcohol relapse and opioid blockade",
+        distinguishing: "The pure antagonist: alcohol relapse and opioid blockade",
       },
       {
         name: "Varenicline",
@@ -874,17 +874,17 @@ export const nalmefene: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Nalmefene in two sentences.",
-      answer: "Nalmefene blocks mu-opioid receptors (blunting alcohol reward) with additional kappa-antagonist activity — taken as-needed before drinking. Net effect: Modulation of the described target with the agent's clinical effect.",
+      answer: "Nalmefene blocks mu-opioid receptors (blunting alcohol reward) with additional kappa-antagonist activity: taken as-needed before drinking. Net effect: Modulation of the described target with the agent's clinical effect.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Nalmefene.",
-      answer: "Alcohol dependence — reduction of consumption (as-needed). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Alcohol dependence: reduction of consumption (as-needed). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Nalmefene and how you would manage it.",
-      answer: "Precipitated opioid withdrawal: As with naltrexone — opioid-free status required. Management: Verify before use.",
+      answer: "Precipitated opioid withdrawal: As with naltrexone; opioid-free status required. Management: Verify before use.",
       topic: "Safety",
     },
     {
@@ -894,7 +894,7 @@ export const nalmefene: Drug = {
     },
     {
       question: "Share one clinical pearl about Nalmefene that separates safe prescribers from unsafe ones.",
-      answer: "The as-needed revolution: pharmacotherapy for the patient who is NOT choosing abstinence — one tablet before drinking blunts the reward arc.",
+      answer: "The as-needed revolution: pharmacotherapy for the patient who is NOT choosing abstinence, one tablet before drinking blunts the reward arc.",
       topic: "Clinical Pearls",
     },
   ],
@@ -970,7 +970,7 @@ export const nalmefene: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1015,7 +1015,7 @@ export const nalmefene: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Nalmefene works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Nalmefene works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1031,7 +1031,7 @@ export const nalmefene: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Nalmefene safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Nalmefene safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1076,7 +1076,7 @@ export const nalmefene: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Nalmefene follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Nalmefene follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1099,12 +1099,12 @@ export const nalmefene: Drug = {
     ],
     dosageForms: ["Film-coated tablets 18 mg"],
     dosingTips: [
-      "One tablet before drinking — the simplicity is the adherence.",
+      "One tablet before drinking: the simplicity is the adherence.",
       "Track units: reduction is measured, not assumed.",
       "Opioid-free status before first use.",
     ],
     overdose: [
-      "Overdose with Nalmefene is managed supportively — no specific antidote.",
+      "Overdose with Nalmefene is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Nalmefene is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1134,7 +1134,7 @@ export const nalmefene: Drug = {
         ],
       },
     ],
-    potentialAdvantages: ["As-needed — suits non-abstinence goals.", "Reduces consumption measurably.", "No abuse potential."],
+    potentialAdvantages: ["As-needed: suits non-abstinence goals.", "Reduces consumption measurably.", "No abuse potential."],
     potentialDisadvantages: [
       "Not abstinence-focused (criticised by some).",
       "Not available in many countries (not US).",
@@ -1144,15 +1144,15 @@ export const nalmefene: Drug = {
       "Alcohol consumption per drinking session",
     ],
     pearls: [
-      "The as-needed revolution: pharmacotherapy for the patient who is NOT choosing abstinence — one tablet before drinking blunts the reward arc.",
+      "The as-needed revolution: pharmacotherapy for the patient who is NOT choosing abstinence, one tablet before drinking blunts the reward arc.",
       "Kappa-antagonism: the pharmacological difference from naltrexone, theoretically relevant to dysphoria-driven drinking.",
       "Harm-reduction philosophy in a tablet: reduce consumption now, abstinence later if chosen.",
-      "Not FDA-approved — a European model encountering patients worldwide.",
+      "Not FDA-approved: a European model encountering patients worldwide.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

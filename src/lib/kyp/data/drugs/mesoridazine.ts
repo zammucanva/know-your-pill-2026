@@ -19,18 +19,18 @@ export const mesoridazine: Drug = {
   brandNames: ["Serentil"],
   drugClass: "typical-antipsychotic",
   drugClassLabel: "Typical Antipsychotic",
-  drugClassFullName: "Typical (Conventional) Antipsychotic — Phenothiazine",
+  drugClassFullName: "Typical (Conventional) Antipsychotic. Phenothiazine",
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Typical Antipsychotics", "Mesoridazine"],
   /* ---- Hero / summary ---- */
-  tagline: "Thioridazine's active metabolite — inherited the QT restriction, lost the market.",
+  tagline: "Thioridazine's active metabolite: inherited the QT restriction, lost the market.",
   summary: "Mesoridazine is the active metabolite of thioridazine, once marketed as a better-tolerated low-potency phenothiazine for schizophrenia. Like its parent, it carries significant QT prolongation and now exists only in Stahl's expert-only appendix: a historical footnote that teaches CYP2D6 pharmacology (thioridazine → mesoridazine → sulforidazine) and class toxicity inheritance.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Mesoridazine — from its molecular target (D2 (low-mid potency antagonist); M1; alpha-1; cardiac potassium channel (inherited)) to clinical effect.",
+    "Explain the mechanism of action of Mesoridazine, from its molecular target (D2 (low-mid potency antagonist); M1; alpha-1; cardiac potassium channel (inherited)) to clinical effect.",
     "List the FDA-approved and off-label uses of Mesoridazine.",
     "Predict the common and serious side effects of Mesoridazine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Mesoridazine.",
@@ -38,12 +38,12 @@ export const mesoridazine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Thioridazine's active metabolite — low-mid potency D2 blockade with inherited cardiac ion-channel effects.",
+    summary: "Thioridazine's active metabolite: low-mid potency D2 blockade with inherited cardiac ion-channel effects.",
     molecularTarget: "D2 (low-mid potency antagonist); M1; alpha-1; cardiac potassium channel (inherited)",
-    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — low-mid potency with anticholinergic texture and the parent drug's QT liability.",
+    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways: low-mid potency with anticholinergic texture and the parent drug's QT liability.",
     steps: [
-      "Blocks D2 receptors — therapeutic antipsychotic effect at 65–75% occupancy.",
-      "EPS emerges as occupancy passes ~80% — low-mid potency with anticholinergic texture and the parent drug's QT liability.",
+      "Blocks D2 receptors: therapeutic antipsychotic effect at 65–75% occupancy.",
+      "EPS emerges as occupancy passes ~80%: low-mid potency with anticholinergic texture and the parent drug's QT liability.",
       "Tuberoinfundibular blockade raises prolactin; nigrostriatal blockade produces parkinsonism and dystonia.",
       "Class-typical receptor binding determines the drug's adverse-effect texture.",
     ],
@@ -109,7 +109,7 @@ export const mesoridazine: Drug = {
         label: "hyperprolactinaemia",
       },
     ],
-    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia — efficacy and motor risk are two sides of one coin.",
+    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia: efficacy and motor risk are two sides of one coin.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -138,7 +138,7 @@ export const mesoridazine: Drug = {
   blackBoxWarnings: [
     {
       title: "QT prolongation and torsades de pointes",
-      text: "As with thioridazine: dose-dependent QT prolongation with fatal arrhythmia risk — the reason for market withdrawal.",
+      text: "As with thioridazine: dose-dependent QT prolongation with fatal arrhythmia risk; the reason for market withdrawal.",
     },
   ],
   /* ---- Side effects ---- */
@@ -147,14 +147,14 @@ export const mesoridazine: Drug = {
       name: "Extrapyramidal symptoms (parkinsonism)",
       frequency: "very-common",
       severity: "moderate",
-      description: "Rigidity, bradykinesia, tremor — dose-dependent D2 signature.",
+      description: "Rigidity, bradykinesia, tremor: dose-dependent D2 signature.",
       management: "Reduce dose; anticholinergic.",
     },
     {
       name: "Akathisia",
       frequency: "common",
       severity: "moderate",
-      description: "Restlessness — frequently mistaken for worsening psychosis.",
+      description: "Restlessness: frequently mistaken for worsening psychosis.",
       management: "Reduce dose; propranolol.",
     },
     {
@@ -177,14 +177,14 @@ export const mesoridazine: Drug = {
       name: "Neuroleptic malignant syndrome",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency.",
+      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness: the class medical emergency.",
       management: "Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
     },
     {
       name: "Tardive dyskinesia",
       frequency: "uncommon",
       severity: "severe",
-      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex — a defining risk of chronic typical antipsychotics.",
+      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex: a defining risk of chronic typical antipsychotics.",
       management: "Lowest effective dose; AIMS surveillance; reduce or switch on detection; VMAT2 inhibitors for severe cases.",
     },
   ],
@@ -220,13 +220,13 @@ export const mesoridazine: Drug = {
     {
       drug: "QT-prolonging drugs (including other antipsychotics)",
       severity: "major",
-      mechanism: "Additive QT prolongation — torsades risk.",
+      mechanism: "Additive QT prolongation: torsades risk.",
       action: "Avoid combinations; ECG monitoring if unavoidable.",
     },
     {
       drug: "Anticholinergic drugs",
       severity: "moderate",
-      mechanism: "Additive anticholinergic burden — cognition, ileus, tachycardia.",
+      mechanism: "Additive anticholinergic burden: cognition, ileus, tachycardia.",
       action: "Minimise total anticholinergic load.",
     },
     {
@@ -238,49 +238,49 @@ export const mesoridazine: Drug = {
   ],
   pregnancy: {
     legacyCategory: "C",
-    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk — continue at the lowest effective dose with obstetric co-management.",
+    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk: continue at the lowest effective dose with obstetric co-management.",
     lactation: "Small amounts pass into milk; infant sedation and EPS-like effects are monitored. Generally considered acceptable with infant monitoring.",
   },
   renalAdjustment: "Historical standard caution.",
   hepaticAdjustment: "Hepatic metabolism (2D6 chain).",
   /* ---- Education ---- */
-  patientExplanation: "Mesoridazine is a discontinued relative of thioridazine — of mainly historical interest; it affected heart rhythm like its parent and was withdrawn.",
+  patientExplanation: "Mesoridazine is a discontinued relative of thioridazine: of mainly historical interest; it affected heart rhythm like its parent and was withdrawn.",
   patientEducationPoints: [
-    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early — these are treatable.",
+    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early: these are treatable.",
     "Stand up slowly during the first week.",
-    "Do not stop suddenly — discuss any change with your doctor.",
-    "Benefit from Mesoridazine builds over weeks — do not judge it in the first days.",
+    "Do not stop suddenly: discuss any change with your doctor.",
+    "Benefit from Mesoridazine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
     "Mesoridazine exists today mainly as a pharmacology lesson: thioridazine's 2D6-generated active metabolite.",
-    "It inherited the QT restriction but not the market — discontinued in most countries.",
-    "Stahl's 'expert only' list pairs it with clozapine, thioridazine, and MAOIs — drugs whose danger demands mastery.",
+    "It inherited the QT restriction but not the market: discontinued in most countries.",
+    "Stahl's 'expert only' list pairs it with clozapine, thioridazine, and MAOIs: drugs whose danger demands mastery.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Mesoridazine: Thioridazine's active metabolite — low-mid potency D2 blockade with inherited cardiac ion-channel effects.",
+        "Mechanism of Mesoridazine: Thioridazine's active metabolite; low-mid potency D2 blockade with inherited cardiac ion-channel effects.",
         "Uses of Mesoridazine: Schizophrenia (historical)",
         "Active metabolite of thioridazine (CYP2D6: thioridazine → mesoridazine → sulforidazine).",
-        "Inherited QT prolongation — discontinued in most markets.",
+        "Inherited QT prolongation: discontinued in most markets.",
       ],
       practical: [
         "Prescribe Mesoridazine for schizophrenia (historical) with dose, timing, and duration.",
         "Outline the monitoring plan: Weight and BMI (Baseline, then periodically); AIMS examination (Baseline, then every 6 months); EPS screen (parkinsonism, akathisia, dystonia) (Every review in the first 2 months)",
       ],
       longAnswer: [
-        "Mesoridazine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Mesoridazine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Active metabolite of thioridazine (CYP2D6: thioridazine → mesoridazine → sulforidazine).",
-        "Inherited QT prolongation — discontinued in most markets.",
+        "Inherited QT prolongation: discontinued in most markets.",
       ],
     },
     neetPg: {
       highYield: [
         "Active metabolite of thioridazine (CYP2D6: thioridazine → mesoridazine → sulforidazine).",
-        "Inherited QT prolongation — discontinued in most markets.",
+        "Inherited QT prolongation: discontinued in most markets.",
         "Low potency: sedation and anticholinergic effects dominate over EPS.",
-        "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+        "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
         "Potency spectrum: chlorpromazine (low; sedation/hypotension) → haloperidol (high; EPS/prolactin).",
       ],
       pyqConcepts: [
@@ -291,7 +291,7 @@ export const mesoridazine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Mesoridazine develops neuroleptic malignant syndrome — next best step?",
+        "A patient on Mesoridazine develops neuroleptic malignant syndrome: next best step?",
         "When to choose Mesoridazine over alternatives in its class.",
       ],
     },
@@ -305,23 +305,23 @@ export const mesoridazine: Drug = {
     psychiatryResidency: {
       advancedPearls: [
         "Mesoridazine exists today mainly as a pharmacology lesson: thioridazine's 2D6-generated active metabolite.",
-        "It inherited the QT restriction but not the market — discontinued in most countries.",
-        "Stahl's 'expert only' list pairs it with clozapine, thioridazine, and MAOIs — drugs whose danger demands mastery.",
+        "It inherited the QT restriction but not the market: discontinued in most countries.",
+        "Stahl's 'expert only' list pairs it with clozapine, thioridazine, and MAOIs: drugs whose danger demands mastery.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
     "Active metabolite of thioridazine (CYP2D6: thioridazine → mesoridazine → sulforidazine).",
-    "Inherited QT prolongation — discontinued in most markets.",
+    "Inherited QT prolongation: discontinued in most markets.",
     "Low potency: sedation and anticholinergic effects dominate over EPS.",
-    "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+    "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
     "Potency spectrum: chlorpromazine (low; sedation/hypotension) → haloperidol (high; EPS/prolactin).",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia (historical)",
+      title: "First presentation: schizophrenia (historical)",
       presentation: "A patient presenting with schizophrenia (historical), started on Mesoridazine.",
       history: "A adult patient presents with a schizophrenia (historical) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with schizophrenia (historical); physical examination and baseline investigations are unremarkable.",
@@ -330,7 +330,7 @@ export const mesoridazine: Drug = {
       management: "Started at 25–50 mg twice daily, titrated to 100–400 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Mesoridazine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Mesoridazine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -339,7 +339,7 @@ export const mesoridazine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Typical Antipsychotic comparison — choosing within the class",
+      title: "Typical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Mesoridazine",
       rows: [
         {
@@ -388,7 +388,7 @@ export const mesoridazine: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Low — weight gain not expected.",
+          primaryValue: "Low: weight gain not expected.",
           comparisons: [
             {
               drug: "Chlorpromazine",
@@ -453,7 +453,7 @@ export const mesoridazine: Drug = {
           ],
         },
       ],
-      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -462,7 +462,7 @@ export const mesoridazine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Mesoridazine reaches peak plasma concentration and begins acting at its molecular target (D2 (low-mid potency antagonist); M1; alpha-1; cardiac potassium channel (inherited)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Mesoridazine reaches peak plasma concentration and begins acting at its molecular target (D2 (low-mid potency antagonist); M1; alpha-1; cardiac potassium channel (inherited)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -498,7 +498,7 @@ export const mesoridazine: Drug = {
   faqs: [
     {
       question: "How long does Mesoridazine take to work?",
-      answer: "Clinical effect of Mesoridazine typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Clinical effect of Mesoridazine typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Mesoridazine?",
@@ -506,11 +506,11 @@ export const mesoridazine: Drug = {
     },
     {
       question: "Can I stop Mesoridazine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Mesoridazine habit-forming?",
@@ -518,7 +518,7 @@ export const mesoridazine: Drug = {
     },
     {
       question: "Can I take Mesoridazine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Mesoridazine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Mesoridazine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -619,7 +619,7 @@ export const mesoridazine: Drug = {
       label: "Typical Antipsychotic",
       type: "class",
       href: "#mechanism",
-      note: "Typical (Conventional) Antipsychotic — Phenothiazine",
+      note: "Typical (Conventional) Antipsychotic. Phenothiazine",
     },
     {
       label: "Central monoaminergic systems (see mechanism)",
@@ -658,7 +658,7 @@ export const mesoridazine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Mesoridazine",
+      label: "Patient Guide. Mesoridazine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -666,13 +666,13 @@ export const mesoridazine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "Thioridazine's active metabolite — inherited the QT restriction, lost the market.",
-    summary: "Mesoridazine is a prescription medicine used to treat schizophrenia (historical). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Mesoridazine is a discontinued relative of thioridazine — of mainly historical interest; it affected heart rhythm like its parent and was withdrawn.",
-    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "Thioridazine's active metabolite: inherited the QT restriction, lost the market.",
+    summary: "Mesoridazine is a prescription medicine used to treat schizophrenia (historical). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Mesoridazine is a discontinued relative of thioridazine: of mainly historical interest; it affected heart rhythm like its parent and was withdrawn.",
+    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
   },
   sectionDifficulty: {
     mechanism: "mbbs",
@@ -714,7 +714,7 @@ export const mesoridazine: Drug = {
         name: "Haloperidol",
         slug: "haloperidol",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool",
       },
       {
         name: "Fluphenazine",
@@ -738,7 +738,7 @@ export const mesoridazine: Drug = {
         name: "Thioridazine",
         slug: "thioridazine",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "The restricted QT-retinopathy phenothiazine — last-line",
+        distinguishing: "The restricted QT-retinopathy phenothiazine: last-line",
       },
       {
         name: "Trifluoperazine",
@@ -898,7 +898,7 @@ export const mesoridazine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Mesoridazine in two sentences.",
-      answer: "Thioridazine's active metabolite — low-mid potency D2 blockade with inherited cardiac ion-channel effects. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — low-mid potency with anticholinergic texture and the parent drug's QT liability.",
+      answer: "Thioridazine's active metabolite: low-mid potency D2 blockade with inherited cardiac ion-channel effects. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways; low-mid potency with anticholinergic texture and the parent drug's QT liability.",
       topic: "Mechanism",
     },
     {
@@ -908,7 +908,7 @@ export const mesoridazine: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Mesoridazine and how you would manage it.",
-      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
+      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness; the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
       topic: "Safety",
     },
     {
@@ -994,7 +994,7 @@ export const mesoridazine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1039,7 +1039,7 @@ export const mesoridazine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Mesoridazine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Mesoridazine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1055,7 +1055,7 @@ export const mesoridazine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Mesoridazine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Mesoridazine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1100,7 +1100,7 @@ export const mesoridazine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Mesoridazine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Mesoridazine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1110,7 +1110,7 @@ export const mesoridazine: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Low — weight gain not expected.",
+    weightGain: "Low: weight gain not expected.",
     sedation: "Mild.",
     dosing: [
       {
@@ -1123,10 +1123,10 @@ export const mesoridazine: Drug = {
     ],
     dosageForms: ["Tablets 10–100 mg (historic)"],
     dosingTips: [
-      "Not prescribable in most markets — know it for pharmacology, not practice.",
+      "Not prescribable in most markets: know it for pharmacology, not practice.",
     ],
     overdose: [
-      "Overdose with Mesoridazine is managed supportively — no specific antidote.",
+      "Overdose with Mesoridazine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Mesoridazine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1168,13 +1168,13 @@ export const mesoridazine: Drug = {
     primaryTargetSymptoms: ["Psychosis (historical)"],
     pearls: [
       "Mesoridazine exists today mainly as a pharmacology lesson: thioridazine's 2D6-generated active metabolite.",
-      "It inherited the QT restriction but not the market — discontinued in most countries.",
-      "Stahl's 'expert only' list pairs it with clozapine, thioridazine, and MAOIs — drugs whose danger demands mastery.",
+      "It inherited the QT restriction but not the market: discontinued in most countries.",
+      "Stahl's 'expert only' list pairs it with clozapine, thioridazine, and MAOIs: drugs whose danger demands mastery.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

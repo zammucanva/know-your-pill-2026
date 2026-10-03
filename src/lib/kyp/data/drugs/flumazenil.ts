@@ -23,14 +23,14 @@ export const flumazenil: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Anxiolytics & Sedatives", "Benzodiazepine Antagonists", "Flumazenil"],
   /* ---- Hero / summary ---- */
-  tagline: "The benzodiazepine antidote — pure antagonist with a seizure warning attached.",
+  tagline: "The benzodiazepine antidote: pure antagonist with a seizure warning attached.",
   summary: "Flumazenil is the benzodiazepine receptor ANTAGONIST: it displaces benzodiazepines from the GABA-A receptor and reverses their sedation within 1–2 minutes IV. Its legitimate domain is the known-pure-benzo overdose and procedural over-sedation; its danger is in chronic benzo users, epileptics, and TCA co-ingestions, where reversal precipitates seizures. In real-world overdose practice, airway support has largely displaced pharmacological reversal.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Flumazenil — from its molecular target (GABA-A benzodiazepine site (competitive antagonist)) to clinical effect.",
+    "Explain the mechanism of action of Flumazenil, from its molecular target (GABA-A benzodiazepine site (competitive antagonist)) to clinical effect.",
     "List the FDA-approved and off-label uses of Flumazenil.",
     "Predict the common and serious side effects of Flumazenil from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Flumazenil.",
@@ -38,14 +38,14 @@ export const flumazenil: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Flumazenil is a competitive benzodiazepine-site ANTAGONIST — the class's own antidote, displacing agonists from GABA-A.",
+    summary: "Flumazenil is a competitive benzodiazepine-site ANTAGONIST: the class's own antidote, displacing agonists from GABA-A.",
     molecularTarget: "GABA-A benzodiazepine site (competitive antagonist)",
     effect: "Reversal of benzodiazepine sedation, respiratory depression, and amnesia within 1–2 minutes (duration 30–60 min).",
     steps: [
       "Competitively occupies the benzodiazepine site without efficacy.",
-      "Displaces diazepam/midazolam/etc. — their effect is reversed within 1–2 minutes.",
-      "Short duration (30–60 min): shorter than most benzos — RESEDATION follows; repeat dosing and observation required.",
-      "In dependent brains, sudden blockade unmasks withdrawal — seizures.",
+      "Displaces diazepam/midazolam/etc. Their effect is reversed within 1–2 minutes.",
+      "Short duration (30–60 min): shorter than most benzos. RESEDATION follows; repeat dosing and observation required.",
+      "In dependent brains, sudden blockade unmasks withdrawal: seizures.",
     ],
     pharmacokinetics: "IV (well absorbed orally but heavily first-pass); onset 1–2 min.",
     halfLife: "About 1 hour.",
@@ -110,12 +110,12 @@ export const flumazenil: Drug = {
         label: "inhibits firing",
       },
     ],
-    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly — which is why their effect is powerful but limited by dependence risk.",
+    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly, which is why their effect is powerful but limited by dependence risk.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["GABA"],
   receptors: [
-    "GABA-A receptor (benzodiazepine site — antagonist)",
+    "GABA-A receptor (benzodiazepine site, antagonist)",
   ],
   brainRegionIds: ["amygdala", "prefrontal-cortex"],
   pathwayIds: [],
@@ -129,12 +129,12 @@ export const flumazenil: Drug = {
     {
       name: "Benzodiazepine overdose (pure, known)",
       status: "fda-approved",
-      description: "The classic indication — airway support first, reversal only with certainty of the ingested agents.",
+      description: "The classic indication: airway support first, reversal only with certainty of the ingested agents.",
     },
     {
       name: "Diagnosis of benzodiazepine contribution to coma (controversial)",
       status: "off-label",
-      description: "Coma-of-unknown-cause trials — risky; use rarely.",
+      description: "Coma-of-unknown-cause trials: risky; use rarely.",
     },
   ],
   contraindications: [
@@ -156,7 +156,7 @@ export const flumazenil: Drug = {
   ],
   blackBoxWarnings: [
     {
-      title: "Seizures — contraindications dominate the label",
+      title: "Seizures: contraindications dominate the label",
       text: "Flumazenil can precipitate seizures in benzodiazepine-dependent patients, epileptics, and mixed overdoses (especially with TCAs). Resuscitation capability is a condition of use. Do not use as a routine coma 'diagnostic test'.",
     },
   ],
@@ -189,7 +189,7 @@ export const flumazenil: Drug = {
       name: "Resedation (recurrence of overdose)",
       frequency: "common",
       severity: "life-threatening",
-      description: "Flumazenil (1 h) is SHORTER than the benzos it reverses — the overdose returns.",
+      description: "Flumazenil (1 h) is SHORTER than the benzos it reverses: the overdose returns.",
       management: "Prolonged observation; repeat doses; airway priority.",
     },
     {
@@ -205,7 +205,7 @@ export const flumazenil: Drug = {
     {
       parameter: "Airway and ventilation",
       frequency: "Continuous through the resedation window",
-      rationale: "Resedation is expected — observation continues for hours.",
+      rationale: "Resedation is expected: observation continues for hours.",
     },
     {
       parameter: "Seizure readiness",
@@ -235,24 +235,24 @@ export const flumazenil: Drug = {
   renalAdjustment: "No adjustment (hepatic metabolism).",
   hepaticAdjustment: "Prolonged effect in cirrhosis.",
   /* ---- Education ---- */
-  patientExplanation: "Flumazenil is the antidote to the benzodiazepine family of sedatives: given into a vein, it wakes a person from benzodiazepine sedation within about two minutes. It is shorter-acting than the medicines it reverses, so patients must be watched as its effect wears off. In people who take benzodiazepines regularly it can cause fits — it is reserved for specific, known overdoses and procedure rooms.",
+  patientExplanation: "Flumazenil is the antidote to the benzodiazepine family of sedatives: given into a vein, it wakes a person from benzodiazepine sedation within about two minutes. It is shorter-acting than the medicines it reverses, so patients must be watched as its effect wears off. In people who take benzodiazepines regularly it can cause fits. It is reserved for specific, known overdoses and procedure rooms.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Flumazenil builds over weeks — do not judge it in the first days.",
+    "Benefit from Flumazenil builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "Shorter than everything it reverses: resedation is expected, not exceptional — the observation window is the treatment.",
-    "The seizure paradox: in dependent brains the antidote CAUSES withdrawal — never give flumazenil to a chronic benzo user or an unknown overdose.",
-    "TCA co-ingestion: reversing the benzo's anticonvulsant cover unmasks TCA seizures — the classic exam scenario.",
-    "Modern overdose practice: airway first, antidote rarely — the deflation of pharmacological heroics.",
+    "Shorter than everything it reverses: resedation is expected, not exceptional. The observation window is the treatment.",
+    "The seizure paradox: in dependent brains the antidote CAUSES withdrawal, never give flumazenil to a chronic benzo user or an unknown overdose.",
+    "TCA co-ingestion: reversing the benzo's anticonvulsant cover unmasks TCA seizures; the classic exam scenario.",
+    "Modern overdose practice: airway first, antidote rarely; the deflation of pharmacological heroics.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Flumazenil: Flumazenil is a competitive benzodiazepine-site ANTAGONIST — the class's own antidote, displacing agonists from GABA-A.",
+        "Mechanism of Flumazenil: Flumazenil is a competitive benzodiazepine-site ANTAGONIST; the class's own antidote, displacing agonists from GABA-A.",
         "Uses of Flumazenil: Reversal of benzodiazepine sedation (procedural, known-agent); Benzodiazepine overdose (pure, known); Diagnosis of benzodiazepine contribution to coma (controversial)",
         "Mechanism: competitive ANTAGONIST at the benzodiazepine site.",
         "Onset 1–2 min IV; duration 30–60 min (SHORTER than the drugs it reverses → resedation).",
@@ -262,7 +262,7 @@ export const flumazenil: Drug = {
         "Outline the monitoring plan: Airway and ventilation (Continuous through the resedation window); Seizure readiness (During and after administration)",
       ],
       longAnswer: [
-        "Flumazenil: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Flumazenil: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: competitive ANTAGONIST at the benzodiazepine site.",
         "Onset 1–2 min IV; duration 30–60 min (SHORTER than the drugs it reverses → resedation).",
       ],
@@ -279,7 +279,7 @@ export const flumazenil: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Flumazenil develops seizures — next best step?",
+        "A patient on Flumazenil develops seizures: next best step?",
         "When to choose Flumazenil over alternatives in its class.",
       ],
     },
@@ -292,10 +292,10 @@ export const flumazenil: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The antidote that outlived its own heroism — know the seizure rules.",
-        "1–2 minutes to wake, 60 minutes of cover — plan the observation around that mismatch.",
-        "Shorter than everything it reverses: resedation is expected, not exceptional — the observation window is the treatment.",
-        "The seizure paradox: in dependent brains the antidote CAUSES withdrawal — never give flumazenil to a chronic benzo user or an unknown overdose.",
+        "The antidote that outlived its own heroism: know the seizure rules.",
+        "1–2 minutes to wake, 60 minutes of cover: plan the observation around that mismatch.",
+        "Shorter than everything it reverses: resedation is expected, not exceptional. The observation window is the treatment.",
+        "The seizure paradox: in dependent brains the antidote CAUSES withdrawal, never give flumazenil to a chronic benzo user or an unknown overdose.",
       ],
     },
   },
@@ -310,7 +310,7 @@ export const flumazenil: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — reversal of benzodiazepine sedation (procedural, known-agent)",
+      title: "First presentation: reversal of benzodiazepine sedation (procedural, known-agent)",
       presentation: "A patient presenting with reversal of benzodiazepine sedation (procedural, known-agent), started on Flumazenil.",
       history: "A adult patient presents with a reversal of benzodiazepine sedation (procedural, known-agent) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with reversal of benzodiazepine sedation (procedural, known-agent); physical examination and baseline investigations are unremarkable.",
@@ -319,7 +319,7 @@ export const flumazenil: Drug = {
       management: "Started at 0.2 mg IV over 15 s, titrated to 0.2–1 mg with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Flumazenil takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Flumazenil takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -328,7 +328,7 @@ export const flumazenil: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Benzodiazepine Antidote vs related agents — orientation table",
+      title: "Benzodiazepine Antidote vs related agents: orientation table",
       primaryDrug: "Flumazenil",
       rows: [
         {
@@ -353,7 +353,7 @@ export const flumazenil: Drug = {
         },
         {
           attribute: "Sedation",
-          primaryValue: "None — it is the anti-sedative.",
+          primaryValue: "None: it is the anti-sedative.",
           comparisons: [
             {
               drug: "Flumazenil",
@@ -363,7 +363,7 @@ export const flumazenil: Drug = {
         },
         {
           attribute: "Clinical niche",
-          primaryValue: "Flumazenil — see pearls",
+          primaryValue: "Flumazenil: see pearls",
           comparisons: [
             {
               drug: "Flumazenil",
@@ -372,7 +372,7 @@ export const flumazenil: Drug = {
           ],
         },
       ],
-      takeaway: "Flumazenil is compared here with related agents for orientation. Full comparison data lives in each drug's own guide — follow the links for the complete picture.",
+      takeaway: "Flumazenil is compared here with related agents for orientation. Full comparison data lives in each drug's own guide: follow the links for the complete picture.",
     },
   ],
   /* ---- Timeline ---- */
@@ -381,7 +381,7 @@ export const flumazenil: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Flumazenil reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (competitive antagonist)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Flumazenil reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (competitive antagonist)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -417,7 +417,7 @@ export const flumazenil: Drug = {
   faqs: [
     {
       question: "How long does Flumazenil take to work?",
-      answer: "IV: 1–2 minutes.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "IV: 1–2 minutes.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Flumazenil?",
@@ -425,11 +425,11 @@ export const flumazenil: Drug = {
     },
     {
       question: "Can I stop Flumazenil suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Flumazenil habit-forming?",
@@ -437,7 +437,7 @@ export const flumazenil: Drug = {
     },
     {
       question: "Can I take Flumazenil during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Flumazenil may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Flumazenil may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -572,7 +572,7 @@ export const flumazenil: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Flumazenil",
+      label: "Patient Guide. Flumazenil",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -580,13 +580,13 @@ export const flumazenil: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The benzodiazepine antidote — pure antagonist with a seizure warning attached.",
-    summary: "Flumazenil is a prescription medicine used to treat reversal of benzodiazepine sedation (procedural, known-agent). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Flumazenil is the antidote to the benzodiazepine family of sedatives: given into a vein, it wakes a person from benzodiazepine sedation within about two minutes. It is shorter-acting than the medicines it reverses, so patients must be watched as its effect wears off. In people who take benzodiazepines regularly it can cause fits — it is reserved for specific, known overdoses and procedure rooms.",
-    sideEffects: "The most common side effects are: agitation, anxiety, sweating (withdrawal effects), nausea and dizziness. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Seizures and Resedation (recurrence of overdose). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: airway and ventilation (continuous through the resedation window); seizure readiness (during and after administration). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The benzodiazepine antidote: pure antagonist with a seizure warning attached.",
+    summary: "Flumazenil is a prescription medicine used to treat reversal of benzodiazepine sedation (procedural, known-agent). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Flumazenil is the antidote to the benzodiazepine family of sedatives: given into a vein, it wakes a person from benzodiazepine sedation within about two minutes. It is shorter-acting than the medicines it reverses, so patients must be watched as its effect wears off. In people who take benzodiazepines regularly it can cause fits. It is reserved for specific, known overdoses and procedure rooms.",
+    sideEffects: "The most common side effects are: agitation, anxiety, sweating (withdrawal effects), nausea and dizziness. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Seizures and Resedation (recurrence of overdose). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: airway and ventilation (continuous through the resedation window); seizure readiness (during and after administration). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Tricyclic antidepressant co-ingestion, Chronic benzodiazepine use. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Tricyclic antidepressant co-ingestion, Chronic benzodiazepine use. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -798,7 +798,7 @@ export const flumazenil: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Flumazenil in two sentences.",
-      answer: "Flumazenil is a competitive benzodiazepine-site ANTAGONIST — the class's own antidote, displacing agonists from GABA-A. Net effect: Reversal of benzodiazepine sedation, respiratory depression, and amnesia within 1–2 minutes (duration 30–60 min).",
+      answer: "Flumazenil is a competitive benzodiazepine-site ANTAGONIST: the class's own antidote, displacing agonists from GABA-A. Net effect: Reversal of benzodiazepine sedation, respiratory depression, and amnesia within 1–2 minutes (duration 30–60 min).",
       topic: "Mechanism",
     },
     {
@@ -818,7 +818,7 @@ export const flumazenil: Drug = {
     },
     {
       question: "Share one clinical pearl about Flumazenil that separates safe prescribers from unsafe ones.",
-      answer: "The antidote that outlived its own heroism — know the seizure rules.",
+      answer: "The antidote that outlived its own heroism: know the seizure rules.",
       topic: "Clinical Pearls",
     },
   ],
@@ -894,7 +894,7 @@ export const flumazenil: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -939,7 +939,7 @@ export const flumazenil: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Flumazenil works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Flumazenil works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -955,7 +955,7 @@ export const flumazenil: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Flumazenil safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Flumazenil safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -998,7 +998,7 @@ export const flumazenil: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Flumazenil follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Flumazenil follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1009,7 +1009,7 @@ export const flumazenil: Drug = {
       "Dose reduction or timing change before discontinuation.",
     ],
     weightGain: "See product information and class comparison.",
-    sedation: "None — it is the anti-sedative.",
+    sedation: "None: it is the anti-sedative.",
     dosing: [
       {
         indication: "Procedural reversal (IV)",
@@ -1023,18 +1023,18 @@ export const flumazenil: Drug = {
         starting: "0.2 mg IV",
         titration: "Repeat to 1–3 mg total",
         target: "0.2–3 mg",
-        max: "3 mg (re-assess if no response — it is not a benzo)",
+        max: "3 mg (re-assess if no response, it is not a benzo)",
       },
     ],
     dosageForms: ["Injection 0.1 mg/mL"],
     dosingTips: [
-      "Airway and ventilation first — antidote second.",
+      "Airway and ventilation first: antidote second.",
       "Prolonged observation for resedation (hours, not minutes).",
       "Never in unknown or mixed overdose; never in chronic users.",
       "If seizures occur: benzodiazepines re-administered + resuscitation.",
     ],
     overdose: [
-      "Overdose with Flumazenil is managed supportively — no specific antidote.",
+      "Overdose with Flumazenil is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Flumazenil is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1080,16 +1080,16 @@ export const flumazenil: Drug = {
       "Benzodiazepine over-sedation (procedural and pure overdose)",
     ],
     pearls: [
-      "The antidote that outlived its own heroism — know the seizure rules.",
-      "1–2 minutes to wake, 60 minutes of cover — plan the observation around that mismatch.",
-      "Shorter than everything it reverses: resedation is expected, not exceptional — the observation window is the treatment.",
-      "The seizure paradox: in dependent brains the antidote CAUSES withdrawal — never give flumazenil to a chronic benzo user or an unknown overdose.",
-      "TCA co-ingestion: reversing the benzo's anticonvulsant cover unmasks TCA seizures — the classic exam scenario.",
+      "The antidote that outlived its own heroism: know the seizure rules.",
+      "1–2 minutes to wake, 60 minutes of cover: plan the observation around that mismatch.",
+      "Shorter than everything it reverses: resedation is expected, not exceptional. The observation window is the treatment.",
+      "The seizure paradox: in dependent brains the antidote CAUSES withdrawal, never give flumazenil to a chronic benzo user or an unknown overdose.",
+      "TCA co-ingestion: reversing the benzo's anticonvulsant cover unmasks TCA seizures; the classic exam scenario.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

@@ -23,14 +23,14 @@ export const vortioxetine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antidepressants", "Atypical Antidepressants", "Vortioxetine"],
   /* ---- Hero / summary ---- */
-  tagline: "The multimodal antidepressant — transporter blockade plus five receptor actions, with pro-cognitive evidence.",
+  tagline: "The multimodal antidepressant: transporter blockade plus five receptor actions, with pro-cognitive evidence.",
   summary: "Vortioxetine is the multimodal serotonergic antidepressant: SERT inhibition PLUS direct agonism/antagonism at five serotonin receptor subtypes (5-HT1A agonist, 5-HT1B partial agonist, 5-HT1D/3/7 antagonist). The result is broad serotonergic modulation with low emotional-blunting, a modest pro-cognitive evidence base, and a remarkably clean adverse-effect profile (nausea dominating).",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Vortioxetine — from its molecular target (SERT (inhibition) + 5-HT1A (agonist), 5-HT1B (partial agonist), 5-HT1D/5-HT3/5-HT7 (antagonists)) to clinical effect.",
+    "Explain the mechanism of action of Vortioxetine, from its molecular target (SERT (inhibition) + 5-HT1A (agonist), 5-HT1B (partial agonist), 5-HT1D/5-HT3/5-HT7 (antagonists)) to clinical effect.",
     "List the FDA-approved and off-label uses of Vortioxetine.",
     "Predict the common and serious side effects of Vortioxetine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Vortioxetine.",
@@ -38,15 +38,15 @@ export const vortioxetine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Vortioxetine combines SERT inhibition with direct actions at five 5-HT receptor subtypes — multimodal modulation of serotonergic throughput and downstream glutamatergic/GABAergic balance.",
+    summary: "Vortioxetine combines SERT inhibition with direct actions at five 5-HT receptor subtypes: multimodal modulation of serotonergic throughput and downstream glutamatergic/GABAergic balance.",
     molecularTarget: "SERT (inhibition) + 5-HT1A (agonist), 5-HT1B (partial agonist), 5-HT1D/5-HT3/5-HT7 (antagonists)",
     effect: "Monoaminergic modulation producing the antidepressant effect described.",
     steps: [
-      "Vortioxetine combines SERT inhibition with direct actions at five 5-HT receptor subtypes — multimodal modulation of serotonergic throughput and downstream glutamatergic/GABAergic balance.",
+      "Vortioxetine combines SERT inhibition with direct actions at five 5-HT receptor subtypes: multimodal modulation of serotonergic throughput and downstream glutamatergic/GABAergic balance.",
       "Downstream receptor adaptation over 2-6 weeks translates acute monoamine change into clinical response.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 66 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 66 hours. See mechanism and prescriber sections.",
     halfLife: "About 66 hours.",
     metabolism: "Hepatic CYP metabolism.",
     excretion: "Renal.",
@@ -109,7 +109,7 @@ export const vortioxetine: Drug = {
         label: "produces",
       },
     ],
-    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation — the central paradox of antidepressant pharmacology.",
+    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation: the central paradox of antidepressant pharmacology.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Serotonin (5-HT)", "Acetylcholine (ACh)", "Glutamate"],
@@ -148,7 +148,7 @@ export const vortioxetine: Drug = {
       name: "Nausea",
       frequency: "very-common",
       severity: "mild",
-      description: "The dominant adverse effect — usually transient, worst in week 1.",
+      description: "The dominant adverse effect: usually transient, worst in week 1.",
       management: "With food; slow start at 5 mg.",
     },
     {
@@ -169,7 +169,7 @@ export const vortioxetine: Drug = {
       name: "Sexual dysfunction",
       frequency: "uncommon",
       severity: "moderate",
-      description: "LOWER rates than SSRIs in head-to-head analyses — the emotional/sexual blunting-sparing claim.",
+      description: "LOWER rates than SSRIs in head-to-head analyses: the emotional/sexual blunting-sparing claim.",
       management: "Counsel positively; compare with class.",
     },
   ],
@@ -238,7 +238,7 @@ export const vortioxetine: Drug = {
   ],
   pregnancy: {
     legacyCategory: "C",
-    summary: "Limited human data; class considerations — decisions individualised with obstetrics.",
+    summary: "Limited human data; class considerations: decisions individualised with obstetrics.",
     lactation: "Excreted in milk in small amounts; infant monitoring.",
   },
   renalAdjustment: "No adjustment for mild-moderate impairment.",
@@ -246,25 +246,25 @@ export const vortioxetine: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Vortioxetine is a modern antidepressant that acts on the serotonin system through several different doorways at once rather than only one. In trials it also showed benefits for concentration and processing speed, with lower rates of the sexual side effects that trouble older antidepressants. Its main side effect is nausea in the first week.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Vortioxetine builds over weeks — do not judge it in the first days.",
+    "Benefit from Vortioxetine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The multimodal pitch: one drug, six serotonergic actions — receptor-level pharmacology aimed at blunting, cognition, and emotional range rather than raw potency.",
-    "The pro-cognitive dividend: processing-speed and cognitive-symptom data beyond mood — the antidepressant with a cognition claim.",
-    "The sexual/blunting-sparing profile: lower sexual dysfunction than SSRIs in pooled analyses — a differentiator worth quoting.",
+    "The multimodal pitch: one drug, six serotonergic actions; receptor-level pharmacology aimed at blunting, cognition, and emotional range rather than raw potency.",
+    "The pro-cognitive dividend: processing-speed and cognitive-symptom data beyond mood; the antidepressant with a cognition claim.",
+    "The sexual/blunting-sparing profile: lower sexual dysfunction than SSRIs in pooled analyses; a differentiator worth quoting.",
     "Nausea is the whole adverse-effect story: transient, week-1, manageable with food and a 5 mg start.",
-    "No weight signal and no meaningful CYP interactions (it barely touches them) — the cleanest interaction profile of the modern antidepressants.",
+    "No weight signal and no meaningful CYP interactions (it barely touches them): the cleanest interaction profile of the modern antidepressants.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Vortioxetine: Vortioxetine combines SERT inhibition with direct actions at five 5-HT receptor subtypes — multimodal modulation of serotonergic throughput and downstream glutamatergic/GABAergic balance.",
+        "Mechanism of Vortioxetine: Vortioxetine combines SERT inhibition with direct actions at five 5-HT receptor subtypes; multimodal modulation of serotonergic throughput and downstream glutamatergic/GABAergic balance.",
         "Uses of Vortioxetine: Major depressive disorder",
-        "Mechanism: MULTIMODAL — SERT inhibition + 5-HT1A agonist + 5-HT1B partial agonist + 5-HT1D/3/7 antagonists.",
+        "Mechanism: MULTIMODAL. SERT inhibition + 5-HT1A agonist + 5-HT1B partial agonist + 5-HT1D/3/7 antagonists.",
         "MDD 10-20 mg once daily.",
       ],
       practical: [
@@ -272,14 +272,14 @@ export const vortioxetine: Drug = {
         "Outline the monitoring plan: Nausea tolerance (week 1) (At start); Mood and cognition response (At 4-8 weeks)",
       ],
       longAnswer: [
-        "Vortioxetine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: MULTIMODAL — SERT inhibition + 5-HT1A agonist + 5-HT1B partial agonist + 5-HT1D/3/7 antagonists.",
+        "Vortioxetine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: MULTIMODAL. SERT inhibition + 5-HT1A agonist + 5-HT1B partial agonist + 5-HT1D/3/7 antagonists.",
         "MDD 10-20 mg once daily.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: MULTIMODAL — SERT inhibition + 5-HT1A agonist + 5-HT1B partial agonist + 5-HT1D/3/7 antagonists.",
+        "Mechanism: MULTIMODAL. SERT inhibition + 5-HT1A agonist + 5-HT1B partial agonist + 5-HT1D/3/7 antagonists.",
         "MDD 10-20 mg once daily.",
         "Pro-cognitive evidence (processing speed) beyond mood.",
         "Lower sexual dysfunction than SSRIs in pooled analyses.",
@@ -290,7 +290,7 @@ export const vortioxetine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Vortioxetine develops serotonin syndrome — next best step?",
+        "A patient on Vortioxetine develops serotonin syndrome: next best step?",
         "When to choose Vortioxetine over alternatives in its class.",
       ],
     },
@@ -303,16 +303,16 @@ export const vortioxetine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The multimodal pitch: one drug, six serotonergic actions — receptor-level pharmacology aimed at blunting, cognition, and emotional range rather than raw potency.",
-        "The pro-cognitive dividend: processing-speed and cognitive-symptom data beyond mood — the antidepressant with a cognition claim.",
-        "The sexual/blunting-sparing profile: lower sexual dysfunction than SSRIs in pooled analyses — a differentiator worth quoting.",
+        "The multimodal pitch: one drug, six serotonergic actions; receptor-level pharmacology aimed at blunting, cognition, and emotional range rather than raw potency.",
+        "The pro-cognitive dividend: processing-speed and cognitive-symptom data beyond mood; the antidepressant with a cognition claim.",
+        "The sexual/blunting-sparing profile: lower sexual dysfunction than SSRIs in pooled analyses; a differentiator worth quoting.",
         "Nausea is the whole adverse-effect story: transient, week-1, manageable with food and a 5 mg start.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: MULTIMODAL — SERT inhibition + 5-HT1A agonist + 5-HT1B partial agonist + 5-HT1D/3/7 antagonists.",
+    "Mechanism: MULTIMODAL. SERT inhibition + 5-HT1A agonist + 5-HT1B partial agonist + 5-HT1D/3/7 antagonists.",
     "MDD 10-20 mg once daily.",
     "Pro-cognitive evidence (processing speed) beyond mood.",
     "Lower sexual dysfunction than SSRIs in pooled analyses.",
@@ -323,7 +323,7 @@ export const vortioxetine: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — major depressive disorder",
+      title: "First presentation: major depressive disorder",
       presentation: "A patient presenting with major depressive disorder, started on Vortioxetine.",
       history: "A adult patient presents with a major depressive disorder picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with major depressive disorder; physical examination and baseline investigations are unremarkable.",
@@ -332,7 +332,7 @@ export const vortioxetine: Drug = {
       management: "Started at 10 mg once daily, titrated to 10-20 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Vortioxetine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Vortioxetine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -341,7 +341,7 @@ export const vortioxetine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Multimodal Antidepressant comparison — choosing within the class",
+      title: "Multimodal Antidepressant comparison: choosing within the class",
       primaryDrug: "Vortioxetine",
       rows: [
         {
@@ -455,7 +455,7 @@ export const vortioxetine: Drug = {
           ],
         },
       ],
-      takeaway: "All atypical antidepressants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antidepressants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -464,7 +464,7 @@ export const vortioxetine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Vortioxetine reaches peak plasma concentration and begins acting at its molecular target (SERT (inhibition) + 5-HT1A (agonist), 5-HT1B (partial agonist), 5-HT1D/5-HT3/5-HT7 (antagonists)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Vortioxetine reaches peak plasma concentration and begins acting at its molecular target (SERT (inhibition) + 5-HT1A (agonist), 5-HT1B (partial agonist), 5-HT1D/5-HT3/5-HT7 (antagonists)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -500,7 +500,7 @@ export const vortioxetine: Drug = {
   faqs: [
     {
       question: "How long does Vortioxetine take to work?",
-      answer: "Response 2-4 weeks (cognition effects measured over 8 weeks in trials).. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Response 2-4 weeks (cognition effects measured over 8 weeks in trials).. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Vortioxetine?",
@@ -508,11 +508,11 @@ export const vortioxetine: Drug = {
     },
     {
       question: "Can I stop Vortioxetine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Vortioxetine habit-forming?",
@@ -520,7 +520,7 @@ export const vortioxetine: Drug = {
     },
     {
       question: "Can I take Vortioxetine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Vortioxetine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Vortioxetine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -660,7 +660,7 @@ export const vortioxetine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Vortioxetine",
+      label: "Patient Guide. Vortioxetine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -668,13 +668,13 @@ export const vortioxetine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The multimodal antidepressant — transporter blockade plus five receptor actions, with pro-cognitive evidence.",
-    summary: "Vortioxetine is a prescription medicine used to treat major depressive disorder. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The multimodal antidepressant: transporter blockade plus five receptor actions, with pro-cognitive evidence.",
+    summary: "Vortioxetine is a prescription medicine used to treat major depressive disorder. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Vortioxetine is a modern antidepressant that acts on the serotonin system through several different doorways at once rather than only one. In trials it also showed benefits for concentration and processing speed, with lower rates of the sexual side effects that trouble older antidepressants. Its main side effect is nausea in the first week.",
-    sideEffects: "The most common side effects are: nausea, headache, dizziness and dry mouth, sexual dysfunction. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Serotonin syndrome and Hyponatraemia (elderly). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: nausea tolerance (week 1) (at start); mood and cognition response (at 4-8 weeks). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: nausea, headache, dizziness and dry mouth, sexual dysfunction. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Serotonin syndrome and Hyponatraemia (elderly). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: nausea tolerance (week 1) (at start); mood and cognition response (at 4-8 weeks). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: MAOIs, Strong CYP2D6 inhibitors (bupropion, fluoxetine, paroxetine), Other serotonergics and NSAIDs. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: MAOIs, Strong CYP2D6 inhibitors (bupropion, fluoxetine, paroxetine), Other serotonergics and NSAIDs. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -742,7 +742,7 @@ export const vortioxetine: Drug = {
         name: "Trazodone",
         slug: "trazodone",
         relationship: "Same class (SARI)",
-        distinguishing: "The antidepressant sleeping pill — insomnia at 50 mg, depression at 300 mg",
+        distinguishing: "The antidepressant sleeping pill: insomnia at 50 mg, depression at 300 mg",
       },
       {
         name: "Vilazodone",
@@ -754,7 +754,7 @@ export const vortioxetine: Drug = {
         name: "Nefazodone",
         slug: "nefazodone",
         relationship: "Same class (SARI)",
-        distinguishing: "The expert-only SARI — withdrawn for hepatotoxicity",
+        distinguishing: "The expert-only SARI: withdrawn for hepatotoxicity",
       },
       {
         name: "Tianeptine",
@@ -908,7 +908,7 @@ export const vortioxetine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Vortioxetine in two sentences.",
-      answer: "Vortioxetine combines SERT inhibition with direct actions at five 5-HT receptor subtypes — multimodal modulation of serotonergic throughput and downstream glutamatergic/GABAergic balance. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
+      answer: "Vortioxetine combines SERT inhibition with direct actions at five 5-HT receptor subtypes: multimodal modulation of serotonergic throughput and downstream glutamatergic/GABAergic balance. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
       topic: "Mechanism",
     },
     {
@@ -928,7 +928,7 @@ export const vortioxetine: Drug = {
     },
     {
       question: "Share one clinical pearl about Vortioxetine that separates safe prescribers from unsafe ones.",
-      answer: "The multimodal pitch: one drug, six serotonergic actions — receptor-level pharmacology aimed at blunting, cognition, and emotional range rather than raw potency.",
+      answer: "The multimodal pitch: one drug, six serotonergic actions; receptor-level pharmacology aimed at blunting, cognition, and emotional range rather than raw potency.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1004,7 +1004,7 @@ export const vortioxetine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1049,7 +1049,7 @@ export const vortioxetine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Vortioxetine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Vortioxetine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1065,7 +1065,7 @@ export const vortioxetine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Vortioxetine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Vortioxetine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1110,7 +1110,7 @@ export const vortioxetine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Vortioxetine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Vortioxetine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1138,7 +1138,7 @@ export const vortioxetine: Drug = {
       "The sexual-sparing claim: quote it, counsel on it, and follow up on it.",
     ],
     overdose: [
-      "Overdose with Vortioxetine is managed supportively — no specific antidote.",
+      "Overdose with Vortioxetine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Vortioxetine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1180,16 +1180,16 @@ export const vortioxetine: Drug = {
       "Depression with sexual-function concerns",
     ],
     pearls: [
-      "The multimodal pitch: one drug, six serotonergic actions — receptor-level pharmacology aimed at blunting, cognition, and emotional range rather than raw potency.",
-      "The pro-cognitive dividend: processing-speed and cognitive-symptom data beyond mood — the antidepressant with a cognition claim.",
-      "The sexual/blunting-sparing profile: lower sexual dysfunction than SSRIs in pooled analyses — a differentiator worth quoting.",
+      "The multimodal pitch: one drug, six serotonergic actions; receptor-level pharmacology aimed at blunting, cognition, and emotional range rather than raw potency.",
+      "The pro-cognitive dividend: processing-speed and cognitive-symptom data beyond mood; the antidepressant with a cognition claim.",
+      "The sexual/blunting-sparing profile: lower sexual dysfunction than SSRIs in pooled analyses; a differentiator worth quoting.",
       "Nausea is the whole adverse-effect story: transient, week-1, manageable with food and a 5 mg start.",
-      "No weight signal and no meaningful CYP interactions (it barely touches them) — the cleanest interaction profile of the modern antidepressants.",
+      "No weight signal and no meaningful CYP interactions (it barely touches them): the cleanest interaction profile of the modern antidepressants.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

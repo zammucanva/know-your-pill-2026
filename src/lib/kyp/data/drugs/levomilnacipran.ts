@@ -23,14 +23,14 @@ export const levomilnacipran: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antidepressants", "SNRIs", "Levomilnacipran"],
   /* ---- Hero / summary ---- */
-  tagline: "The norepinephrine-preferring SNRI — milnacipran's active enantiomer with noradrenergic tilt.",
-  summary: "Levomilnacipran is the 1S,2R-enantiomer of milnacipran: an SNRI with NORA-drenaline preference (NET inhibition stronger than SERT) — theoretically energising for anergic, fatigued depression. Approved for MDD in the USA, it inherits the milnacipran class's noradrenergic adverse-effect texture: sweating, urinary hesitation, and cardiovascular monitoring.",
+  tagline: "The norepinephrine-preferring SNRI: milnacipran's active enantiomer with noradrenergic tilt.",
+  summary: "Levomilnacipran is the 1S,2R-enantiomer of milnacipran: an SNRI with NORA-drenaline preference (NET inhibition stronger than SERT); theoretically energising for anergic, fatigued depression. Approved for MDD in the USA, it inherits the milnacipran class's noradrenergic adverse-effect texture: sweating, urinary hesitation, and cardiovascular monitoring.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Levomilnacipran — from its molecular target (SERT and NET (inhibition — NET-preferring)) to clinical effect.",
+    "Explain the mechanism of action of Levomilnacipran (from its molecular target (SERT and NET (inhibition) NET-preferring)) to clinical effect.",
     "List the FDA-approved and off-label uses of Levomilnacipran.",
     "Predict the common and serious side effects of Levomilnacipran from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Levomilnacipran.",
@@ -38,15 +38,15 @@ export const levomilnacipran: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Levomilnacipran inhibits norepinephrine reuptake more potently than serotonin — the noradrenergic-tilted SNRI.",
-    molecularTarget: "SERT and NET (inhibition — NET-preferring)",
+    summary: "Levomilnacipran inhibits norepinephrine reuptake more potently than serotonin: the noradrenergic-tilted SNRI.",
+    molecularTarget: "SERT and NET (inhibition. NET-preferring)",
     effect: "Monoaminergic modulation producing the antidepressant effect described.",
     steps: [
-      "Levomilnacipran inhibits norepinephrine reuptake more potently than serotonin — the noradrenergic-tilted SNRI.",
+      "Levomilnacipran inhibits norepinephrine reuptake more potently than serotonin: the noradrenergic-tilted SNRI.",
       "Downstream receptor adaptation over 2-6 weeks translates acute monoamine change into clinical response.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 12 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 12 hours. See mechanism and prescriber sections.",
     halfLife: "About 12 hours.",
     metabolism: "Hepatic CYP metabolism.",
     excretion: "Renal.",
@@ -109,7 +109,7 @@ export const levomilnacipran: Drug = {
         label: "produces",
       },
     ],
-    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation — the central paradox of antidepressant pharmacology.",
+    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation: the central paradox of antidepressant pharmacology.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Norepinephrine (NE)", "Serotonin (5-HT)"],
@@ -155,7 +155,7 @@ export const levomilnacipran: Drug = {
       name: "Sweating",
       frequency: "very-common",
       severity: "mild",
-      description: "The noradrenergic signature — more than serotonin-tilted SNRIs.",
+      description: "The noradrenergic signature: more than serotonin-tilted SNRIs.",
       management: "Reassurance; clothing strategy.",
     },
     {
@@ -169,7 +169,7 @@ export const levomilnacipran: Drug = {
       name: "Urinary hesitation (men)",
       frequency: "common",
       severity: "moderate",
-      description: "Noradrenergic sphincter effect — the milnacipran class signature.",
+      description: "Noradrenergic sphincter effect: the milnacipran class signature.",
       management: "Counsel; tamsulosin rarely; dose review.",
     },
     {
@@ -245,24 +245,24 @@ export const levomilnacipran: Drug = {
   renalAdjustment: "Halve dose at CrCl 30-59; avoid below 30.",
   hepaticAdjustment: "No adjustment for mild-moderate.",
   /* ---- Education ---- */
-  patientExplanation: "Levomilnacipran is an antidepressant that works more strongly on noradrenaline — the brain chemical linked with energy and drive — than on serotonin, which suits depressions dominated by tiredness and slowing. Its characteristic effects are sweating, a faster pulse, and, in men, difficulty starting urination.",
+  patientExplanation: "Levomilnacipran is an antidepressant that works more strongly on noradrenaline (the brain chemical linked with energy and drive) than on serotonin, which suits depressions dominated by tiredness and slowing. Its characteristic effects are sweating, a faster pulse, and, in men, difficulty starting urination.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Levomilnacipran builds over weeks — do not judge it in the first days.",
+    "Benefit from Levomilnacipran builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The noradrenergic thesis: if fatigue, anergy, and psychomotor slowing dominate, tilt the SNRI toward norepinephrine — levomilnacipran is that tilt.",
-    "Urinary hesitation is the class tell: noradrenergic sphincter effects in men — ask, or patients quietly stop.",
+    "The noradrenergic thesis: if fatigue, anergy, and psychomotor slowing dominate, tilt the SNRI toward norepinephrine; levomilnacipran is that tilt.",
+    "Urinary hesitation is the class tell: noradrenergic sphincter effects in men. Ask, or patients quietly stop.",
     "Sweating beyond SSRI levels: the noradrenergic skin signature.",
     "The cardiovascular price of the tilt: HR/BP monitoring is not optional at 80-120 mg.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Levomilnacipran: Levomilnacipran inhibits norepinephrine reuptake more potently than serotonin — the noradrenergic-tilted SNRI.",
+        "Mechanism of Levomilnacipran: Levomilnacipran inhibits norepinephrine reuptake more potently than serotonin; the noradrenergic-tilted SNRI.",
         "Uses of Levomilnacipran: Major depressive disorder",
         "Mechanism: SNRI with NET PREFERENCE (norepinephrine-tilted).",
         "MDD approved (USA); 40-120 mg ER once daily.",
@@ -272,7 +272,7 @@ export const levomilnacipran: Drug = {
         "Outline the monitoring plan: Heart rate and blood pressure (Baseline and titration); Urinary symptoms (men) (At review)",
       ],
       longAnswer: [
-        "Levomilnacipran: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Levomilnacipran: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: SNRI with NET PREFERENCE (norepinephrine-tilted).",
         "MDD approved (USA); 40-120 mg ER once daily.",
       ],
@@ -293,21 +293,21 @@ export const levomilnacipran: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Levomilnacipran develops sustained hypertension/tachycardia — next best step?",
+        "A patient on Levomilnacipran develops sustained hypertension/tachycardia: next best step?",
         "When to choose Levomilnacipran over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: SERT and NET (inhibition — NET-preferring)",
+        "Primary target: SERT and NET (inhibition. NET-preferring)",
         "Most common side effects: Nausea, Sweating, Heart rate and blood pressure rise",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The noradrenergic thesis: if fatigue, anergy, and psychomotor slowing dominate, tilt the SNRI toward norepinephrine — levomilnacipran is that tilt.",
-        "Urinary hesitation is the class tell: noradrenergic sphincter effects in men — ask, or patients quietly stop.",
+        "The noradrenergic thesis: if fatigue, anergy, and psychomotor slowing dominate, tilt the SNRI toward norepinephrine; levomilnacipran is that tilt.",
+        "Urinary hesitation is the class tell: noradrenergic sphincter effects in men. Ask, or patients quietly stop.",
         "Sweating beyond SSRI levels: the noradrenergic skin signature.",
         "The cardiovascular price of the tilt: HR/BP monitoring is not optional at 80-120 mg.",
       ],
@@ -324,7 +324,7 @@ export const levomilnacipran: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — major depressive disorder",
+      title: "First presentation: major depressive disorder",
       presentation: "A patient presenting with major depressive disorder, started on Levomilnacipran.",
       history: "A adult patient presents with a major depressive disorder picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with major depressive disorder; physical examination and baseline investigations are unremarkable.",
@@ -333,7 +333,7 @@ export const levomilnacipran: Drug = {
       management: "Started at 20 mg once daily × 2 days, titrated to 40-120 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Levomilnacipran takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Levomilnacipran takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -342,12 +342,12 @@ export const levomilnacipran: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "SNRI comparison — choosing within the class",
+      title: "SNRI comparison: choosing within the class",
       primaryDrug: "Levomilnacipran",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "SERT and NET (inhibition — NET-preferring)",
+          primaryValue: "SERT and NET (inhibition. NET-preferring)",
           comparisons: [
             {
               drug: "Desvenlafaxine",
@@ -403,7 +403,7 @@ export const levomilnacipran: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The NE-tilted SNRI — for the anergic depression phenotype",
+          primaryValue: "The NE-tilted SNRI, for the anergic depression phenotype",
           comparisons: [
             {
               drug: "Desvenlafaxine",
@@ -416,7 +416,7 @@ export const levomilnacipran: Drug = {
           ],
         },
       ],
-      takeaway: "All snris share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All snris share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -425,7 +425,7 @@ export const levomilnacipran: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Levomilnacipran reaches peak plasma concentration and begins acting at its molecular target (SERT and NET (inhibition — NET-preferring)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Levomilnacipran reaches peak plasma concentration and begins acting at its molecular target (SERT and NET (inhibition. NET-preferring)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -461,7 +461,7 @@ export const levomilnacipran: Drug = {
   faqs: [
     {
       question: "How long does Levomilnacipran take to work?",
-      answer: "Response 2-4 weeks.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Response 2-4 weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Levomilnacipran?",
@@ -469,11 +469,11 @@ export const levomilnacipran: Drug = {
     },
     {
       question: "Can I stop Levomilnacipran suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Levomilnacipran habit-forming?",
@@ -481,7 +481,7 @@ export const levomilnacipran: Drug = {
     },
     {
       question: "Can I take Levomilnacipran during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Levomilnacipran may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Levomilnacipran may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -579,7 +579,7 @@ export const levomilnacipran: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "SERT and NET (inhibition — NET-preferring)",
+      label: "SERT and NET (inhibition. NET-preferring)",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
@@ -609,7 +609,7 @@ export const levomilnacipran: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Levomilnacipran",
+      label: "Patient Guide. Levomilnacipran",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -617,13 +617,13 @@ export const levomilnacipran: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The norepinephrine-preferring SNRI — milnacipran's active enantiomer with noradrenergic tilt.",
-    summary: "Levomilnacipran is a prescription medicine used to treat major depressive disorder. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Levomilnacipran is an antidepressant that works more strongly on noradrenaline — the brain chemical linked with energy and drive — than on serotonin, which suits depressions dominated by tiredness and slowing. Its characteristic effects are sweating, a faster pulse, and, in men, difficulty starting urination.",
-    sideEffects: "The most common side effects are: nausea, sweating, heart rate and blood pressure rise, urinary hesitation (men), dry mouth and constipation, erectile dysfunction. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Sustained hypertension/tachycardia and Serotonin syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline and titration); urinary symptoms (men) (at review). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The norepinephrine-preferring SNRI: milnacipran's active enantiomer with noradrenergic tilt.",
+    summary: "Levomilnacipran is a prescription medicine used to treat major depressive disorder. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Levomilnacipran is an antidepressant that works more strongly on noradrenaline (the brain chemical linked with energy and drive) than on serotonin, which suits depressions dominated by tiredness and slowing. Its characteristic effects are sweating, a faster pulse, and, in men, difficulty starting urination.",
+    sideEffects: "The most common side effects are: nausea, sweating, heart rate and blood pressure rise, urinary hesitation (men), dry mouth and constipation, erectile dysfunction. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Sustained hypertension/tachycardia and Serotonin syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline and titration); urinary symptoms (men) (at review). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: MAOIs, Serotonergics and NSAIDs. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: MAOIs, Serotonergics and NSAIDs. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -645,7 +645,7 @@ export const levomilnacipran: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -679,19 +679,19 @@ export const levomilnacipran: Drug = {
         name: "Levomilnacipran",
         slug: "levomilnacipran",
         relationship: "This guide",
-        distinguishing: "The NE-tilted SNRI — for the anergic depression phenotype",
+        distinguishing: "The NE-tilted SNRI, for the anergic depression phenotype",
       },
       {
         name: "Desvenlafaxine",
         slug: "desvenlafaxine",
         relationship: "Same class (SNRI)",
-        distinguishing: "The simplified SNRI — venlafaxine's metabolite packaged",
+        distinguishing: "The simplified SNRI: venlafaxine's metabolite packaged",
       },
       {
         name: "Milnacipran",
         slug: "milnacipran",
         relationship: "Same class (SNRI)",
-        distinguishing: "The fibromyalgia SNRI — pain + fatigue coverage",
+        distinguishing: "The fibromyalgia SNRI: pain + fatigue coverage",
       },
     ],
   },
@@ -839,7 +839,7 @@ export const levomilnacipran: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Levomilnacipran in two sentences.",
-      answer: "Levomilnacipran inhibits norepinephrine reuptake more potently than serotonin — the noradrenergic-tilted SNRI. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
+      answer: "Levomilnacipran inhibits norepinephrine reuptake more potently than serotonin: the noradrenergic-tilted SNRI. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
       topic: "Mechanism",
     },
     {
@@ -859,7 +859,7 @@ export const levomilnacipran: Drug = {
     },
     {
       question: "Share one clinical pearl about Levomilnacipran that separates safe prescribers from unsafe ones.",
-      answer: "The noradrenergic thesis: if fatigue, anergy, and psychomotor slowing dominate, tilt the SNRI toward norepinephrine — levomilnacipran is that tilt.",
+      answer: "The noradrenergic thesis: if fatigue, anergy, and psychomotor slowing dominate, tilt the SNRI toward norepinephrine; levomilnacipran is that tilt.",
       topic: "Clinical Pearls",
     },
   ],
@@ -935,7 +935,7 @@ export const levomilnacipran: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -980,7 +980,7 @@ export const levomilnacipran: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Levomilnacipran works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Levomilnacipran works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -996,7 +996,7 @@ export const levomilnacipran: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Levomilnacipran safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Levomilnacipran safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1039,7 +1039,7 @@ export const levomilnacipran: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Levomilnacipran follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Levomilnacipran follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1069,7 +1069,7 @@ export const levomilnacipran: Drug = {
       "HR/BP at each step.",
     ],
     overdose: [
-      "Overdose with Levomilnacipran is managed supportively — no specific antidote.",
+      "Overdose with Levomilnacipran is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Levomilnacipran is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1107,8 +1107,8 @@ export const levomilnacipran: Drug = {
     ],
     primaryTargetSymptoms: ["Anergic, fatigued depression"],
     pearls: [
-      "The noradrenergic thesis: if fatigue, anergy, and psychomotor slowing dominate, tilt the SNRI toward norepinephrine — levomilnacipran is that tilt.",
-      "Urinary hesitation is the class tell: noradrenergic sphincter effects in men — ask, or patients quietly stop.",
+      "The noradrenergic thesis: if fatigue, anergy, and psychomotor slowing dominate, tilt the SNRI toward norepinephrine; levomilnacipran is that tilt.",
+      "Urinary hesitation is the class tell: noradrenergic sphincter effects in men. Ask, or patients quietly stop.",
       "Sweating beyond SSRI levels: the noradrenergic skin signature.",
       "The cardiovascular price of the tilt: HR/BP monitoring is not optional at 80-120 mg.",
     ],
@@ -1116,6 +1116,6 @@ export const levomilnacipran: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

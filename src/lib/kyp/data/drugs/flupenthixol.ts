@@ -19,7 +19,7 @@ export const flupenthixol: Drug = {
   brandNames: ["Fluanxol", "Fluanxol Depot"],
   drugClass: "typical-antipsychotic",
   drugClassLabel: "Typical Antipsychotic",
-  drugClassFullName: "Typical (Conventional) Antipsychotic — Thioxanthene",
+  drugClassFullName: "Typical (Conventional) Antipsychotic. Thioxanthene",
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Typical Antipsychotics", "Flupenthixol"],
   /* ---- Hero / summary ---- */
@@ -30,7 +30,7 @@ export const flupenthixol: Drug = {
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Flupenthixol — from its molecular target (D2 (moderate-potency antagonist); 5-HT2A; thioxanthene class) to clinical effect.",
+    "Explain the mechanism of action of Flupenthixol, from its molecular target (D2 (moderate-potency antagonist); 5-HT2A; thioxanthene class) to clinical effect.",
     "List the FDA-approved and off-label uses of Flupenthixol.",
     "Predict the common and serious side effects of Flupenthixol from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Flupenthixol.",
@@ -38,12 +38,12 @@ export const flupenthixol: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Thioxanthene D2/5-HT2A antagonist — moderate potency, mildly activating at low doses.",
+    summary: "Thioxanthene D2/5-HT2A antagonist: moderate potency, mildly activating at low doses.",
     molecularTarget: "D2 (moderate-potency antagonist); 5-HT2A; thioxanthene class",
-    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — moderate potency: modest doses, EPS dose-dependent, activating rather than sedating.",
+    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways: moderate potency: modest doses, EPS dose-dependent, activating rather than sedating.",
     steps: [
-      "Blocks D2 receptors — therapeutic antipsychotic effect at 65–75% occupancy.",
-      "EPS emerges as occupancy passes ~80% — moderate potency: modest doses, EPS dose-dependent, activating rather than sedating.",
+      "Blocks D2 receptors: therapeutic antipsychotic effect at 65–75% occupancy.",
+      "EPS emerges as occupancy passes ~80%: moderate potency: modest doses, EPS dose-dependent, activating rather than sedating.",
       "Tuberoinfundibular blockade raises prolactin; nigrostriatal blockade produces parkinsonism and dystonia.",
       "Class-typical receptor binding determines the drug's adverse-effect texture.",
     ],
@@ -109,7 +109,7 @@ export const flupenthixol: Drug = {
         label: "hyperprolactinaemia",
       },
     ],
-    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia — efficacy and motor risk are two sides of one coin.",
+    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia: efficacy and motor risk are two sides of one coin.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -152,14 +152,14 @@ export const flupenthixol: Drug = {
       name: "Extrapyramidal symptoms (parkinsonism)",
       frequency: "very-common",
       severity: "moderate",
-      description: "Rigidity, bradykinesia, tremor — dose-dependent D2 signature.",
+      description: "Rigidity, bradykinesia, tremor: dose-dependent D2 signature.",
       management: "Reduce dose; anticholinergic.",
     },
     {
       name: "Akathisia",
       frequency: "common",
       severity: "moderate",
-      description: "Restlessness — frequently mistaken for worsening psychosis.",
+      description: "Restlessness: frequently mistaken for worsening psychosis.",
       management: "Reduce dose; propranolol.",
     },
     {
@@ -182,14 +182,14 @@ export const flupenthixol: Drug = {
       name: "Neuroleptic malignant syndrome",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency.",
+      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness: the class medical emergency.",
       management: "Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
     },
     {
       name: "Tardive dyskinesia",
       frequency: "uncommon",
       severity: "severe",
-      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex — a defining risk of chronic typical antipsychotics.",
+      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex: a defining risk of chronic typical antipsychotics.",
       management: "Lowest effective dose; AIMS surveillance; reduce or switch on detection; VMAT2 inhibitors for severe cases.",
     },
   ],
@@ -225,13 +225,13 @@ export const flupenthixol: Drug = {
     {
       drug: "QT-prolonging drugs (including other antipsychotics)",
       severity: "major",
-      mechanism: "Additive QT prolongation — torsades risk.",
+      mechanism: "Additive QT prolongation: torsades risk.",
       action: "Avoid combinations; ECG monitoring if unavoidable.",
     },
     {
       drug: "Anticholinergic drugs",
       severity: "moderate",
-      mechanism: "Additive anticholinergic burden — cognition, ileus, tachycardia.",
+      mechanism: "Additive anticholinergic burden: cognition, ileus, tachycardia.",
       action: "Minimise total anticholinergic load.",
     },
     {
@@ -243,7 +243,7 @@ export const flupenthixol: Drug = {
   ],
   pregnancy: {
     legacyCategory: "C",
-    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk — continue at the lowest effective dose with obstetric co-management.",
+    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk: continue at the lowest effective dose with obstetric co-management.",
     lactation: "Small amounts pass into milk; infant sedation and EPS-like effects are monitored. Generally considered acceptable with infant monitoring.",
   },
   renalAdjustment: "Standard caution.",
@@ -251,41 +251,41 @@ export const flupenthixol: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Flupenthixol is a mid-strength antipsychotic used in Europe and India. At low doses it has a mild energising effect; at higher doses it treats psychosis. A long-acting injection version every few weeks suits people who forget tablets.",
   patientEducationPoints: [
-    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early — these are treatable.",
+    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early: these are treatable.",
     "Stand up slowly during the first week.",
-    "Do not stop suddenly — discuss any change with your doctor.",
-    "Benefit from Flupenthixol builds over weeks — do not judge it in the first days.",
+    "Do not stop suddenly: discuss any change with your doctor.",
+    "Benefit from Flupenthixol builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "Thioxanthenes = phenothiazine cousins with a sulfur side-chain — flupenthixol and zuclopenthixol are the pair to know.",
-    "Low-dose flupenthixol activates; high-dose treats psychosis — a dose-band quirk shared informally with quetiapine's bands.",
+    "Thioxanthenes = phenothiazine cousins with a sulfur side-chain: flupenthixol and zuclopenthixol are the pair to know.",
+    "Low-dose flupenthixol activates; high-dose treats psychosis: a dose-band quirk shared informally with quetiapine's bands.",
     "The 2–4-weekly depot is a European/Indian programme workhorse.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Flupenthixol: Thioxanthene D2/5-HT2A antagonist — moderate potency, mildly activating at low doses.",
-        "Uses of Flupenthixol: Schizophrenia — psychotic manifestations; Depression with apathy/retardation (historic, low dose)",
-        "Thioxanthene class (with zuclopenthixol) — moderate potency.",
+        "Mechanism of Flupenthixol: Thioxanthene D2/5-HT2A antagonist; moderate potency, mildly activating at low doses.",
+        "Uses of Flupenthixol: Schizophrenia; psychotic manifestations; Depression with apathy/retardation (historic, low dose)",
+        "Thioxanthene class (with zuclopenthixol): moderate potency.",
         "Activating at low doses (historic anergic-depression use); antipsychotic at higher doses.",
       ],
       practical: [
-        "Prescribe Flupenthixol for schizophrenia — psychotic manifestations with dose, timing, and duration.",
+        "Prescribe Flupenthixol for schizophrenia: psychotic manifestations with dose, timing, and duration.",
         "Outline the monitoring plan: Weight and BMI (Baseline, then periodically); AIMS examination (Baseline, then every 6 months); EPS screen (parkinsonism, akathisia, dystonia) (Every review in the first 2 months)",
       ],
       longAnswer: [
-        "Flupenthixol: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Thioxanthene class (with zuclopenthixol) — moderate potency.",
+        "Flupenthixol: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Thioxanthene class (with zuclopenthixol): moderate potency.",
         "Activating at low doses (historic anergic-depression use); antipsychotic at higher doses.",
       ],
     },
     neetPg: {
       highYield: [
-        "Thioxanthene class (with zuclopenthixol) — moderate potency.",
+        "Thioxanthene class (with zuclopenthixol): moderate potency.",
         "Activating at low doses (historic anergic-depression use); antipsychotic at higher doses.",
         "Depot: 20–60 mg every 2–4 weeks.",
-        "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+        "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
         "Potency spectrum: chlorpromazine (low; sedation/hypotension) → haloperidol (high; EPS/prolactin).",
       ],
       pyqConcepts: [
@@ -296,7 +296,7 @@ export const flupenthixol: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Flupenthixol develops neuroleptic malignant syndrome — next best step?",
+        "A patient on Flupenthixol develops neuroleptic malignant syndrome: next best step?",
         "When to choose Flupenthixol over alternatives in its class.",
       ],
     },
@@ -309,33 +309,33 @@ export const flupenthixol: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "Thioxanthenes = phenothiazine cousins with a sulfur side-chain — flupenthixol and zuclopenthixol are the pair to know.",
-        "Low-dose flupenthixol activates; high-dose treats psychosis — a dose-band quirk shared informally with quetiapine's bands.",
+        "Thioxanthenes = phenothiazine cousins with a sulfur side-chain: flupenthixol and zuclopenthixol are the pair to know.",
+        "Low-dose flupenthixol activates; high-dose treats psychosis: a dose-band quirk shared informally with quetiapine's bands.",
         "The 2–4-weekly depot is a European/Indian programme workhorse.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Thioxanthene class (with zuclopenthixol) — moderate potency.",
+    "Thioxanthene class (with zuclopenthixol): moderate potency.",
     "Activating at low doses (historic anergic-depression use); antipsychotic at higher doses.",
     "Depot: 20–60 mg every 2–4 weeks.",
-    "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+    "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
     "Potency spectrum: chlorpromazine (low; sedation/hypotension) → haloperidol (high; EPS/prolactin).",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia — psychotic manifestations",
-      presentation: "A patient presenting with schizophrenia — psychotic manifestations, started on Flupenthixol.",
-      history: "A adult patient presents with a schizophrenia — psychotic manifestations picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with schizophrenia — psychotic manifestations; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Schizophrenia — psychotic manifestations. Differentials are considered and excluded clinically.",
+      title: "First presentation: schizophrenia with psychotic manifestations",
+      presentation: "A patient presenting with schizophrenia: psychotic manifestations, started on Flupenthixol.",
+      history: "A adult patient presents with a schizophrenia: psychotic manifestations picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with schizophrenia: psychotic manifestations; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Schizophrenia: psychotic manifestations. Differentials are considered and excluded clinically.",
       rationale: "Flupenthixol is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Typical Antipsychotic) with strong evidence in this condition.",
       management: "Started at 3 mg once daily, titrated to 3–15 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Flupenthixol takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Flupenthixol takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -344,7 +344,7 @@ export const flupenthixol: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Typical Antipsychotic comparison — choosing within the class",
+      title: "Typical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Flupenthixol",
       rows: [
         {
@@ -393,7 +393,7 @@ export const flupenthixol: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Low — weight gain not expected.",
+          primaryValue: "Low: weight gain not expected.",
           comparisons: [
             {
               drug: "Chlorpromazine",
@@ -458,7 +458,7 @@ export const flupenthixol: Drug = {
           ],
         },
       ],
-      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -467,7 +467,7 @@ export const flupenthixol: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Flupenthixol reaches peak plasma concentration and begins acting at its molecular target (D2 (moderate-potency antagonist); 5-HT2A; thioxanthene class). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Flupenthixol reaches peak plasma concentration and begins acting at its molecular target (D2 (moderate-potency antagonist); 5-HT2A; thioxanthene class). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -503,7 +503,7 @@ export const flupenthixol: Drug = {
   faqs: [
     {
       question: "How long does Flupenthixol take to work?",
-      answer: "Clinical effect of Flupenthixol typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Clinical effect of Flupenthixol typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Flupenthixol?",
@@ -511,11 +511,11 @@ export const flupenthixol: Drug = {
     },
     {
       question: "Can I stop Flupenthixol suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Flupenthixol habit-forming?",
@@ -523,7 +523,7 @@ export const flupenthixol: Drug = {
     },
     {
       question: "Can I take Flupenthixol during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Flupenthixol may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Flupenthixol may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -628,7 +628,7 @@ export const flupenthixol: Drug = {
       label: "Typical Antipsychotic",
       type: "class",
       href: "#mechanism",
-      note: "Typical (Conventional) Antipsychotic — Thioxanthene",
+      note: "Typical (Conventional) Antipsychotic. Thioxanthene",
     },
     {
       label: "Central monoaminergic systems (see mechanism)",
@@ -643,7 +643,7 @@ export const flupenthixol: Drug = {
       note: "Primary molecular target",
     },
     {
-      label: "Schizophrenia — psychotic manifestations",
+      label: "Schizophrenia: psychotic manifestations",
       type: "condition",
       href: "#clinical-uses",
       note: "Used clinically",
@@ -673,7 +673,7 @@ export const flupenthixol: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Flupenthixol",
+      label: "Patient Guide. Flupenthixol",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -682,12 +682,12 @@ export const flupenthixol: Drug = {
   /* ---- Patient mode ---- */
   patientMode: {
     tagline: "The thioxanthene with an antidepressant-flavoured cis-isomer and a 2–4-weekly depot life.",
-    summary: "Flupenthixol is a prescription medicine used to treat schizophrenia — psychotic manifestations. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    summary: "Flupenthixol is a prescription medicine used to treat schizophrenia: psychotic manifestations. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Flupenthixol is a mid-strength antipsychotic used in Europe and India. At low doses it has a mild energising effect; at higher doses it treats psychosis. A long-acting injection version every few weeks suits people who forget tablets.",
-    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
   },
   sectionDifficulty: {
     mechanism: "mbbs",
@@ -729,7 +729,7 @@ export const flupenthixol: Drug = {
         name: "Haloperidol",
         slug: "haloperidol",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool",
       },
       {
         name: "Fluphenazine",
@@ -753,7 +753,7 @@ export const flupenthixol: Drug = {
         name: "Thioridazine",
         slug: "thioridazine",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "The restricted QT-retinopathy phenothiazine — last-line",
+        distinguishing: "The restricted QT-retinopathy phenothiazine: last-line",
       },
       {
         name: "Trifluoperazine",
@@ -913,17 +913,17 @@ export const flupenthixol: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Flupenthixol in two sentences.",
-      answer: "Thioxanthene D2/5-HT2A antagonist — moderate potency, mildly activating at low doses. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — moderate potency: modest doses, EPS dose-dependent, activating rather than sedating.",
+      answer: "Thioxanthene D2/5-HT2A antagonist: moderate potency, mildly activating at low doses. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways; moderate potency: modest doses, EPS dose-dependent, activating rather than sedating.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Flupenthixol.",
-      answer: "Schizophrenia — psychotic manifestations, Depression with apathy/retardation (historic, low dose). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Schizophrenia: psychotic manifestations, Depression with apathy/retardation (historic, low dose). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Flupenthixol and how you would manage it.",
-      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
+      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness; the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
       topic: "Safety",
     },
     {
@@ -933,7 +933,7 @@ export const flupenthixol: Drug = {
     },
     {
       question: "Share one clinical pearl about Flupenthixol that separates safe prescribers from unsafe ones.",
-      answer: "Thioxanthenes = phenothiazine cousins with a sulfur side-chain — flupenthixol and zuclopenthixol are the pair to know.",
+      answer: "Thioxanthenes = phenothiazine cousins with a sulfur side-chain: flupenthixol and zuclopenthixol are the pair to know.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1009,7 +1009,7 @@ export const flupenthixol: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1054,7 +1054,7 @@ export const flupenthixol: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Flupenthixol works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Flupenthixol works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1070,7 +1070,7 @@ export const flupenthixol: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Flupenthixol safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Flupenthixol safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1115,7 +1115,7 @@ export const flupenthixol: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Flupenthixol follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Flupenthixol follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1125,7 +1125,7 @@ export const flupenthixol: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Low — weight gain not expected.",
+    weightGain: "Low: weight gain not expected.",
     sedation: "Mild.",
     dosing: [
       {
@@ -1149,7 +1149,7 @@ export const flupenthixol: Drug = {
       "Depot interval 2–4 weeks individualised by response.",
     ],
     overdose: [
-      "Overdose with Flupenthixol is managed supportively — no specific antidote.",
+      "Overdose with Flupenthixol is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Flupenthixol is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1197,14 +1197,14 @@ export const flupenthixol: Drug = {
       "Apathy and social withdrawal (adjunct, historic)",
     ],
     pearls: [
-      "Thioxanthenes = phenothiazine cousins with a sulfur side-chain — flupenthixol and zuclopenthixol are the pair to know.",
-      "Low-dose flupenthixol activates; high-dose treats psychosis — a dose-band quirk shared informally with quetiapine's bands.",
+      "Thioxanthenes = phenothiazine cousins with a sulfur side-chain: flupenthixol and zuclopenthixol are the pair to know.",
+      "Low-dose flupenthixol activates; high-dose treats psychosis: a dose-band quirk shared informally with quetiapine's bands.",
       "The 2–4-weekly depot is a European/Indian programme workhorse.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

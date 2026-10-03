@@ -23,14 +23,14 @@ export const lisdexamfetamine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "ADHD Medications", "Stimulants", "Lisdexamfetamine"],
   /* ---- Hero / summary ---- */
-  tagline: "The prodrug stimulant — amphetamine in a slow-release chemical disguise that resists misuse.",
-  summary: "Lisdexamfetamine is a prodrug: dextroamphetamine bonded to lysine, enzymatically cleaved in the blood over hours — converting a fast stimulant into a smooth 12-14 hour agent with markedly reduced misuse potential. Its duration and misuse resistance made it the most-prescribed branded stimulant in the USA, with an approved binge-eating indication alongside ADHD.",
+  tagline: "The prodrug stimulant: amphetamine in a slow-release chemical disguise that resists misuse.",
+  summary: "Lisdexamfetamine is a prodrug: dextroamphetamine bonded to lysine, enzymatically cleaved in the blood over hours, converting a fast stimulant into a smooth 12-14 hour agent with markedly reduced misuse potential. Its duration and misuse resistance made it the most-prescribed branded stimulant in the USA, with an approved binge-eating indication alongside ADHD.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Lisdexamfetamine — from its molecular target (Prodrug of dextroamphetamine → DAT/NET substrate (release) + VMAT2) to clinical effect.",
+    "Explain the mechanism of action of Lisdexamfetamine, from its molecular target (Prodrug of dextroamphetamine → DAT/NET substrate (release) + VMAT2) to clinical effect.",
     "List the FDA-approved and off-label uses of Lisdexamfetamine.",
     "Predict the common and serious side effects of Lisdexamfetamine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Lisdexamfetamine.",
@@ -38,15 +38,15 @@ export const lisdexamfetamine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Lisdexamfetamine is a lysine-bound prodrug of dextroamphetamine — red-cell hydrolysis releases the active stimulant gradually over hours.",
+    summary: "Lisdexamfetamine is a lysine-bound prodrug of dextroamphetamine: red-cell hydrolysis releases the active stimulant gradually over hours.",
     molecularTarget: "Prodrug of dextroamphetamine → DAT/NET substrate (release) + VMAT2",
     effect: "Catecholamine and wake-system enhancement with the agent's characteristic profile.",
     steps: [
-      "Lisdexamfetamine is a lysine-bound prodrug of dextroamphetamine — red-cell hydrolysis releases the active stimulant gradually over hours.",
+      "Lisdexamfetamine is a lysine-bound prodrug of dextroamphetamine: red-cell hydrolysis releases the active stimulant gradually over hours.",
       "Prefrontal catecholamine enhancement sharpens attention and impulse control.",
       "The agent's formulation and half-life determine practical coverage.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life Prodrug <1 h; released dextroamphetamine ~10-12 h. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life Prodrug <1 h; released dextroamphetamine ~10-12 h. See mechanism and prescriber sections.",
     halfLife: "Prodrug <1 h; released dextroamphetamine ~10-12 h.",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
@@ -103,7 +103,7 @@ export const lisdexamfetamine: Drug = {
         label: "boosts alertness",
       },
     ],
-    caption: "Catecholamine enhancement in the prefrontal cortex — the brain's attention control centre — corrects the signal-to-noise deficit that defines ADHD.",
+    caption: "Catecholamine enhancement in the prefrontal cortex (the brain's attention control centre) corrects the signal-to-noise deficit that defines ADHD.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -119,7 +119,7 @@ export const lisdexamfetamine: Drug = {
     {
       name: "ADHD — ages 6 and above",
       status: "fda-approved",
-      description: "Once-daily 12-14 h coverage — the longest single-dose stimulant cover.",
+      description: "Once-daily 12-14 h coverage: the longest single-dose stimulant cover.",
     },
     {
       name: "Moderate-to-severe binge eating disorder",
@@ -142,7 +142,7 @@ export const lisdexamfetamine: Drug = {
   blackBoxWarnings: [
     {
       title: "Abuse, dependence, and serious cardiovascular events",
-      text: "High potential for abuse and dependence (controlled substance). Assess abuse risk and monitor for misuse. Serious cardiovascular events reported — screen cardiac and family sudden-death history before starting.",
+      text: "High potential for abuse and dependence (controlled substance). Assess abuse risk and monitor for misuse. Serious cardiovascular events reported: screen cardiac and family sudden-death history before starting.",
     },
   ],
   /* ---- Side effects ---- */
@@ -151,14 +151,14 @@ export const lisdexamfetamine: Drug = {
       name: "Appetite suppression",
       frequency: "very-common",
       severity: "moderate",
-      description: "Class effect — 12+ h of it.",
+      description: "Class effect: 12+ h of it.",
       management: "Breakfast before dosing; evening plan.",
     },
     {
       name: "Insomnia",
       frequency: "common",
       severity: "moderate",
-      description: "Long duration — timing matters.",
+      description: "Long duration: timing matters.",
       management: "Strict single morning dose.",
     },
     {
@@ -239,23 +239,23 @@ export const lisdexamfetamine: Drug = {
     },
   ],
   pregnancy: {
-    summary: "Data in human pregnancy are limited. The decision to continue or stop balances the risk of untreated illness against possible drug exposure — for serious psychiatric illness, relapse prevention usually outweighs fetal risk. Involve obstetrics early and never stop abruptly without a plan.",
-    lactation: "Small amounts may pass into breast milk. Decisions are individualised — monitor the infant for sedation and poor feeding, and discuss with your doctor.",
+    summary: "Data in human pregnancy are limited. The decision to continue or stop balances the risk of untreated illness against possible drug exposure, for serious psychiatric illness, relapse prevention usually outweighs fetal risk. Involve obstetrics early and never stop abruptly without a plan.",
+    lactation: "Small amounts may pass into breast milk. Decisions are individualised. Monitor the infant for sedation and poor feeding, and discuss with your doctor.",
   },
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
-  patientExplanation: "Lisdexamfetamine is a long-acting ADHD medicine: the capsule contains a modified form of a stimulant that the body slowly unlocks during the day — smooth 12-hour cover from one morning dose that is much harder to misuse. It is also the only approved medicine for moderate-to-severe binge eating disorder.",
+  patientExplanation: "Lisdexamfetamine is a long-acting ADHD medicine: the capsule contains a modified form of a stimulant that the body slowly unlocks during the day; smooth 12-hour cover from one morning dose that is much harder to misuse. It is also the only approved medicine for moderate-to-severe binge eating disorder.",
   patientEducationPoints: [
-    "Take it in the morning — later doses disrupt sleep.",
+    "Take it in the morning: later doses disrupt sleep.",
     "Appetite can fall: eat breakfast before the dose, and track weight.",
     "Tell your doctor about any chest pain, fainting, or palpitations.",
-    "This is a controlled medicine — store it safely and never share it.",
-    "Benefit from Lisdexamfetamine builds over weeks — do not judge it in the first days.",
+    "This is a controlled medicine: store it safely and never share it.",
+    "Benefit from Lisdexamfetamine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The prodrug trick: red-cell hydrolysis converts a misusable stimulant into a smooth 12-14 h pump — pharmacokinetics as abuse deterrence.",
+    "The prodrug trick: red-cell hydrolysis converts a misusable stimulant into a smooth 12-14 h pump; pharmacokinetics as abuse deterrence.",
     "Duration is the differentiation: one morning dose covers school AND homework.",
     "Binge-eating approval: the only drug with that indication.",
     "Sprinkle the capsule on cold yoghurt for children; dissolves in water for tube needs (label method).",
@@ -263,29 +263,29 @@ export const lisdexamfetamine: Drug = {
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Lisdexamfetamine: Lisdexamfetamine is a lysine-bound prodrug of dextroamphetamine — red-cell hydrolysis releases the active stimulant gradually over hours.",
-        "Uses of Lisdexamfetamine: ADHD — ages 6 and above; Moderate-to-severe binge eating disorder",
-        "Prodrug: dextroamphetamine + lysine — enzymatic (red-cell) hydrolysis releases active drug over hours.",
-        "12-14 hour duration — the longest single-dose stimulant cover.",
+        "Mechanism of Lisdexamfetamine: Lisdexamfetamine is a lysine-bound prodrug of dextroamphetamine; red-cell hydrolysis releases the active stimulant gradually over hours.",
+        "Uses of Lisdexamfetamine: ADHD; ages 6 and above; Moderate-to-severe binge eating disorder",
+        "Prodrug: dextroamphetamine + lysine; enzymatic (red-cell) hydrolysis releases active drug over hours.",
+        "12-14 hour duration: the longest single-dose stimulant cover.",
       ],
       practical: [
-        "Prescribe Lisdexamfetamine for adhd — ages 6 and above with dose, timing, and duration.",
+        "Prescribe Lisdexamfetamine for adhd: ages 6 and above with dose, timing, and duration.",
         "Outline the monitoring plan: Heart rate and blood pressure (Baseline, then every visit); Height, weight, appetite (Baseline, then every 6 months (children)); Sleep review (Every visit)",
       ],
       longAnswer: [
-        "Lisdexamfetamine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Prodrug: dextroamphetamine + lysine — enzymatic (red-cell) hydrolysis releases active drug over hours.",
-        "12-14 hour duration — the longest single-dose stimulant cover.",
+        "Lisdexamfetamine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Prodrug: dextroamphetamine + lysine; enzymatic (red-cell) hydrolysis releases active drug over hours.",
+        "12-14 hour duration: the longest single-dose stimulant cover.",
       ],
     },
     neetPg: {
       highYield: [
-        "Prodrug: dextroamphetamine + lysine — enzymatic (red-cell) hydrolysis releases active drug over hours.",
-        "12-14 hour duration — the longest single-dose stimulant cover.",
+        "Prodrug: dextroamphetamine + lysine; enzymatic (red-cell) hydrolysis releases active drug over hours.",
+        "12-14 hour duration: the longest single-dose stimulant cover.",
         "Abuse-deterrent by chemistry: snorting/injecting the prodrug does not accelerate onset.",
         "Approved for ADHD ≥6 AND binge eating disorder (the only drug for BED).",
         "Dose 20-70 mg once morning.",
-        "Amphetamine pharmacology: reuptake inhibition + release + VMAT2 — stronger than methylphenidate.",
+        "Amphetamine pharmacology: reuptake inhibition + release + VMAT2; stronger than methylphenidate.",
       ],
       pyqConcepts: [
         "Mechanism/target of Lisdexamfetamine",
@@ -295,7 +295,7 @@ export const lisdexamfetamine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Lisdexamfetamine develops cardiovascular events — next best step?",
+        "A patient on Lisdexamfetamine develops cardiovascular events: next best step?",
         "When to choose Lisdexamfetamine over alternatives in its class.",
       ],
     },
@@ -308,7 +308,7 @@ export const lisdexamfetamine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The prodrug trick: red-cell hydrolysis converts a misusable stimulant into a smooth 12-14 h pump — pharmacokinetics as abuse deterrence.",
+        "The prodrug trick: red-cell hydrolysis converts a misusable stimulant into a smooth 12-14 h pump; pharmacokinetics as abuse deterrence.",
         "Duration is the differentiation: one morning dose covers school AND homework.",
         "Binge-eating approval: the only drug with that indication.",
         "Sprinkle the capsule on cold yoghurt for children; dissolves in water for tube needs (label method).",
@@ -317,26 +317,26 @@ export const lisdexamfetamine: Drug = {
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Prodrug: dextroamphetamine + lysine — enzymatic (red-cell) hydrolysis releases active drug over hours.",
-    "12-14 hour duration — the longest single-dose stimulant cover.",
+    "Prodrug: dextroamphetamine + lysine; enzymatic (red-cell) hydrolysis releases active drug over hours.",
+    "12-14 hour duration: the longest single-dose stimulant cover.",
     "Abuse-deterrent by chemistry: snorting/injecting the prodrug does not accelerate onset.",
     "Approved for ADHD ≥6 AND binge eating disorder (the only drug for BED).",
     "Dose 20-70 mg once morning.",
-    "Amphetamine pharmacology: reuptake inhibition + release + VMAT2 — stronger than methylphenidate.",
+    "Amphetamine pharmacology: reuptake inhibition + release + VMAT2; stronger than methylphenidate.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — adhd — ages 6 and above",
-      presentation: "A patient presenting with adhd — ages 6 and above, started on Lisdexamfetamine.",
-      history: "A adult patient presents with a adhd — ages 6 and above picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with adhd — ages 6 and above; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "ADHD — ages 6 and above. Differentials are considered and excluded clinically.",
+      title: "First presentation: adhd; ages 6 and above",
+      presentation: "A patient presenting with adhd: ages 6 and above, started on Lisdexamfetamine.",
+      history: "A adult patient presents with a adhd: ages 6 and above picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with adhd: ages 6 and above; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "ADHD: ages 6 and above. Differentials are considered and excluded clinically.",
       rationale: "Lisdexamfetamine is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Stimulant) with strong evidence in this condition.",
       management: "Started at 20 mg every morning, titrated to 30-70 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Lisdexamfetamine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Lisdexamfetamine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -345,7 +345,7 @@ export const lisdexamfetamine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Stimulant comparison — choosing within the class",
+      title: "Stimulant comparison: choosing within the class",
       primaryDrug: "Lisdexamfetamine",
       rows: [
         {
@@ -394,7 +394,7 @@ export const lisdexamfetamine: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Weight neutral to reducing — appetite effects common.",
+          primaryValue: "Weight neutral to reducing: appetite effects common.",
           comparisons: [
             {
               drug: "Methylphenidate (d,l)",
@@ -459,7 +459,7 @@ export const lisdexamfetamine: Drug = {
           ],
         },
       ],
-      takeaway: "All stimulants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All stimulants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -468,7 +468,7 @@ export const lisdexamfetamine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Lisdexamfetamine reaches peak plasma concentration and begins acting at its molecular target (Prodrug of dextroamphetamine → DAT/NET substrate (release) + VMAT2). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Lisdexamfetamine reaches peak plasma concentration and begins acting at its molecular target (Prodrug of dextroamphetamine → DAT/NET substrate (release) + VMAT2). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -504,7 +504,7 @@ export const lisdexamfetamine: Drug = {
   faqs: [
     {
       question: "How long does Lisdexamfetamine take to work?",
-      answer: "~1.5-2 h to peak effect.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "~1.5-2 h to peak effect.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Lisdexamfetamine?",
@@ -512,19 +512,19 @@ export const lisdexamfetamine: Drug = {
     },
     {
       question: "Can I stop Lisdexamfetamine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Lisdexamfetamine habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Lisdexamfetamine exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Lisdexamfetamine exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Lisdexamfetamine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Lisdexamfetamine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Lisdexamfetamine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -644,7 +644,7 @@ export const lisdexamfetamine: Drug = {
       note: "Primary molecular target",
     },
     {
-      label: "ADHD — ages 6 and above",
+      label: "ADHD: ages 6 and above",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -674,7 +674,7 @@ export const lisdexamfetamine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Lisdexamfetamine",
+      label: "Patient Guide. Lisdexamfetamine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -682,13 +682,13 @@ export const lisdexamfetamine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The prodrug stimulant — amphetamine in a slow-release chemical disguise that resists misuse.",
-    summary: "Lisdexamfetamine is a prescription medicine used to treat adhd — ages 6 and above. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Lisdexamfetamine is a long-acting ADHD medicine: the capsule contains a modified form of a stimulant that the body slowly unlocks during the day — smooth 12-hour cover from one morning dose that is much harder to misuse. It is also the only approved medicine for moderate-to-severe binge eating disorder.",
-    sideEffects: "The most common side effects are: appetite suppression, insomnia, dry mouth, weight loss, end-of-day wear-off irritability. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Cardiovascular events and Psychosis/mania. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline, then every visit); height, weight, appetite (baseline, then every 6 months (children)); sleep review (every visit). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The prodrug stimulant: amphetamine in a slow-release chemical disguise that resists misuse.",
+    summary: "Lisdexamfetamine is a prescription medicine used to treat adhd: ages 6 and above. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Lisdexamfetamine is a long-acting ADHD medicine: the capsule contains a modified form of a stimulant that the body slowly unlocks during the day; smooth 12-hour cover from one morning dose that is much harder to misuse. It is also the only approved medicine for moderate-to-severe binge eating disorder.",
+    sideEffects: "The most common side effects are: appetite suppression, insomnia, dry mouth, weight loss, end-of-day wear-off irritability. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Cardiovascular events and Psychosis/mania. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline, then every visit); height, weight, appetite (baseline, then every 6 months (children)); sleep review (every visit). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: MAOIs, OTC decongestants and sympathomimetics. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: MAOIs, OTC decongestants and sympathomimetics. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -710,7 +710,7 @@ export const lisdexamfetamine: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -750,31 +750,31 @@ export const lisdexamfetamine: Drug = {
         name: "Methylphenidate (d,l)",
         slug: "methylphenidate",
         relationship: "Same class (Stimulant)",
-        distinguishing: "The default stimulant — 60 years of ADHD first-line",
+        distinguishing: "The default stimulant: 60 years of ADHD first-line",
       },
       {
         name: "Dextroamphetamine (d-Amphetamine)",
         slug: "dexamphetamine",
         relationship: "Same class (Stimulant)",
-        distinguishing: "The pure d-isomer — stronger central, softer peripheral",
+        distinguishing: "The pure d-isomer: stronger central, softer peripheral",
       },
       {
         name: "Amphetamine (d,l)",
         slug: "amphetamine",
         relationship: "Same class (Stimulant)",
-        distinguishing: "The Adderall mixture — d for focus, l for wake",
+        distinguishing: "The Adderall mixture: d for focus, l for wake",
       },
       {
         name: "Dexmethylphenidate",
         slug: "dexmethylphenidate",
         relationship: "Same class (Stimulant)",
-        distinguishing: "The active isomer — methylphenidate distilled",
+        distinguishing: "The active isomer: methylphenidate distilled",
       },
       {
         name: "Pemoline",
         slug: "pemoline",
         relationship: "Same class (Stimulant)",
-        distinguishing: "The hepatotoxic last-resort — withdrawn from major markets",
+        distinguishing: "The hepatotoxic last-resort: withdrawn from major markets",
       },
     ],
   },
@@ -922,12 +922,12 @@ export const lisdexamfetamine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Lisdexamfetamine in two sentences.",
-      answer: "Lisdexamfetamine is a lysine-bound prodrug of dextroamphetamine — red-cell hydrolysis releases the active stimulant gradually over hours. Net effect: Catecholamine and wake-system enhancement with the agent's characteristic profile.",
+      answer: "Lisdexamfetamine is a lysine-bound prodrug of dextroamphetamine: red-cell hydrolysis releases the active stimulant gradually over hours. Net effect: Catecholamine and wake-system enhancement with the agent's characteristic profile.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Lisdexamfetamine.",
-      answer: "ADHD — ages 6 and above, Moderate-to-severe binge eating disorder. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "ADHD: ages 6 and above, Moderate-to-severe binge eating disorder. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -942,7 +942,7 @@ export const lisdexamfetamine: Drug = {
     },
     {
       question: "Share one clinical pearl about Lisdexamfetamine that separates safe prescribers from unsafe ones.",
-      answer: "The prodrug trick: red-cell hydrolysis converts a misusable stimulant into a smooth 12-14 h pump — pharmacokinetics as abuse deterrence.",
+      answer: "The prodrug trick: red-cell hydrolysis converts a misusable stimulant into a smooth 12-14 h pump; pharmacokinetics as abuse deterrence.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1018,7 +1018,7 @@ export const lisdexamfetamine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1063,7 +1063,7 @@ export const lisdexamfetamine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Lisdexamfetamine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Lisdexamfetamine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1079,7 +1079,7 @@ export const lisdexamfetamine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Lisdexamfetamine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Lisdexamfetamine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1122,7 +1122,7 @@ export const lisdexamfetamine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Lisdexamfetamine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Lisdexamfetamine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1132,7 +1132,7 @@ export const lisdexamfetamine: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Weight neutral to reducing — appetite effects common.",
+    weightGain: "Weight neutral to reducing: appetite effects common.",
     sedation: "Not sedating.",
     dosing: [
       {
@@ -1156,11 +1156,11 @@ export const lisdexamfetamine: Drug = {
       "Sprinkle on cold yoghurt/applesauce for children.",
     ],
     overdose: [
-      "Overdose with Lisdexamfetamine is managed supportively — no specific antidote.",
+      "Overdose with Lisdexamfetamine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Lisdexamfetamine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1193,7 +1193,7 @@ export const lisdexamfetamine: Drug = {
     potentialDisadvantages: ["Cannot titrate within a day.", "Full stimulant warning profile.", "Cost where generics unavailable."],
     primaryTargetSymptoms: ["ADHD across the full day", "Binge eating disorder"],
     pearls: [
-      "The prodrug trick: red-cell hydrolysis converts a misusable stimulant into a smooth 12-14 h pump — pharmacokinetics as abuse deterrence.",
+      "The prodrug trick: red-cell hydrolysis converts a misusable stimulant into a smooth 12-14 h pump; pharmacokinetics as abuse deterrence.",
       "Duration is the differentiation: one morning dose covers school AND homework.",
       "Binge-eating approval: the only drug with that indication.",
       "Sprinkle the capsule on cold yoghurt for children; dissolves in water for tube needs (label method).",
@@ -1202,6 +1202,6 @@ export const lisdexamfetamine: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

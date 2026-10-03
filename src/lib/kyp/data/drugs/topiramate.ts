@@ -23,14 +23,14 @@ export const topiramate: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Mood Stabilisers & Anticonvulsants", "Anticonvulsants", "Topiramate"],
   /* ---- Hero / summary ---- */
-  tagline: "The multi-mechanism weight-losing anticonvulsant — appetite suppression as a mood-stabiliser side-effect.",
+  tagline: "The multi-mechanism weight-losing anticonvulsant: appetite suppression as a mood-stabiliser side-effect.",
   summary: "Topiramate is the multi-mechanism anticonvulsant (sodium + calcium channels, AMPA/kainate antagonism, GABA potentiation) used in psychiatry as migraine prophylaxis, binge-eating/bulimia adjunct (its appetite-suppressing signature), alcohol craving, and weight-protective mood augmentation. Cognitive blunting ('dopamax') and word-finding difficulty are its texture; weight LOSS and paraesthesia are its signatures; renal stones, oligohidrosis, and teratogenicity are its cautions.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Topiramate — from its molecular target (Voltage-gated Na+ channels; high-voltage Ca2+ channels; AMPA/kainate (antagonism); GABA-A (potentiation); carbonic anhydrase (weak inhibition)) to clinical effect.",
+    "Explain the mechanism of action of Topiramate, from its molecular target (Voltage-gated Na+ channels; high-voltage Ca2+ channels; AMPA/kainate (antagonism); GABA-A (potentiation); carbonic anhydrase (weak inhibition)) to clinical effect.",
     "List the FDA-approved and off-label uses of Topiramate.",
     "Predict the common and serious side effects of Topiramate from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Topiramate.",
@@ -38,15 +38,15 @@ export const topiramate: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Topiramate acts at multiple targets — sodium and calcium channels, AMPA/kainate glutamate receptors, and GABA potentiation — the anticonvulsant with weight-losing pharmacology.",
+    summary: "Topiramate acts at multiple targets (sodium and calcium channels, AMPA/kainate glutamate receptors, and GABA potentiation) the anticonvulsant with weight-losing pharmacology.",
     molecularTarget: "Voltage-gated Na+ channels; high-voltage Ca2+ channels; AMPA/kainate (antagonism); GABA-A (potentiation); carbonic anhydrase (weak inhibition)",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Topiramate acts at multiple targets — sodium and calcium channels, AMPA/kainate glutamate receptors, and GABA potentiation — the anticonvulsant with weight-losing pharmacology.",
+      "Topiramate acts at multiple targets (sodium and calcium channels, AMPA/kainate glutamate receptors, and GABA potentiation) the anticonvulsant with weight-losing pharmacology.",
       "The mechanism translates into the clinical profile described.",
       "Practical use follows half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 21-23 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 21-23 hours. See mechanism and prescriber sections.",
     halfLife: "21-23 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -97,7 +97,7 @@ export const topiramate: Drug = {
         label: "stabilised",
       },
     ],
-    caption: "Reducing pathological neuronal firing — the shared mechanistic logic of anticonvulsants across epilepsy, neuropathic pain, and mood destabilisation.",
+    caption: "Reducing pathological neuronal firing: the shared mechanistic logic of anticonvulsants across epilepsy, neuropathic pain, and mood destabilisation.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["GABA", "Glutamate"],
@@ -156,21 +156,21 @@ export const topiramate: Drug = {
       name: "Cognitive blunting and word-finding difficulty",
       frequency: "very-common",
       severity: "moderate",
-      description: "The 'Dopamax' signature — slowed thinking, word-loss, mental fog; dose- and titration-speed-dependent.",
+      description: "The 'Dopamax' signature: slowed thinking, word-loss, mental fog; dose- and titration-speed-dependent.",
       management: "Slow titration; dose reduction; counsel explicitly.",
     },
     {
       name: "Paraesthesia (tingling fingers/toes)",
       frequency: "very-common",
       severity: "mild",
-      description: "Carbonic-anhydrase inhibition — the signature sensory effect, usually benign.",
+      description: "Carbonic-anhydrase inhibition: the signature sensory effect, usually benign.",
       management: "Reassurance; potassium check if severe.",
     },
     {
       name: "Appetite suppression and weight loss",
       frequency: "common",
       severity: "moderate",
-      description: "The therapeutic-adjacent signature — often the reason it is chosen.",
+      description: "The therapeutic-adjacent signature: often the reason it is chosen.",
       management: "Monitor weight; therapeutic in binge/craving contexts.",
     },
     {
@@ -200,28 +200,28 @@ export const topiramate: Drug = {
       name: "Oligohidrosis and hyperthermia (children)",
       frequency: "uncommon",
       severity: "severe",
-      description: "Sweating reduction — heat-illness risk in children.",
+      description: "Sweating reduction: heat-illness risk in children.",
       management: "Heat counselling in paediatric use.",
     },
     {
       name: "Acute myopia and angle-closure glaucoma",
       frequency: "rare",
       severity: "severe",
-      description: "The ocular emergency — eye pain/blurred vision warrants urgent review.",
+      description: "The ocular emergency: eye pain/blurred vision warrants urgent review.",
       management: "Stop; urgent ophthalmology.",
     },
     {
       name: "Metabolic acidosis",
       frequency: "uncommon",
       severity: "moderate",
-      description: "Carbonic anhydrase effect — check bicarbonate in long use.",
+      description: "Carbonic anhydrase effect: check bicarbonate in long use.",
       management: "Periodic electrolytes.",
     },
     {
       name: "Teratogenicity (oral clefts)",
       frequency: "uncommon",
       severity: "severe",
-      description: "Topiramate raises oral-cleft risk ~3× — pregnancy planning and folate 5 mg discussions are mandatory.",
+      description: "Topiramate raises oral-cleft risk ~3×: pregnancy planning and folate 5 mg discussions are mandatory.",
       management: "Contraception counselling; alternatives in pregnancy planning.",
     },
   ],
@@ -270,24 +270,24 @@ export const topiramate: Drug = {
   ],
   pregnancy: {
     legacyCategory: "D",
-    summary: "Topiramate raises oral-cleft risk (~3× background) — avoid in pregnancy and pregnancy-planning contexts where alternatives exist; high-dose folate and specialist decisions if unavoidable.",
-    lactation: "Excreted in milk — infant sedation/weight effects; caution.",
+    summary: "Topiramate raises oral-cleft risk (~3× background). Avoid in pregnancy and pregnancy-planning contexts where alternatives exist; high-dose folate and specialist decisions if unavoidable.",
+    lactation: "Excreted in milk: infant sedation/weight effects; caution.",
   },
   renalAdjustment: "Halve dose in significant renal impairment; stone-risk hydration.",
   hepaticAdjustment: "No significant hepatic metabolism concerns.",
   /* ---- Education ---- */
-  patientExplanation: "Topiramate is an epilepsy-and-migraine medicine with several actions on nerve signalling. In psychiatry it is valued for reducing appetite, binge urges, and cravings while stabilising nerves — and its best-known effects are tingling fingers and word-finding difficulty ('the words go missing'), which usually improve with a lower dose or slower build-up. It can cause kidney stones, so drink plenty of water, and it can harm an unborn baby, so contraception matters while taking it.",
+  patientExplanation: "Topiramate is an epilepsy-and-migraine medicine with several actions on nerve signalling. In psychiatry it is valued for reducing appetite, binge urges, and cravings while stabilising nerves, and its best-known effects are tingling fingers and word-finding difficulty ('the words go missing'), which usually improve with a lower dose or slower build-up. It can cause kidney stones, so drink plenty of water, and it can harm an unborn baby, so contraception matters while taking it.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Topiramate builds over weeks — do not judge it in the first days.",
+    "Benefit from Topiramate builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "Dopamax: the cognitive tax is the dose-limit — word-finding loss in conversation is the patient's report to ask for at every review.",
-    "The weight-losers club: topiramate and zonisamide — the anticonvulsants that reverse the metabolic tide; the reason they anchor binge/craving prescriptions.",
-    "The tingling is harmless: carbonic-anhydrase paraesthesia alarms patients more than it harms them — pre-counselling saves calls.",
+    "Dopamax: the cognitive tax is the dose-limit, word-finding loss in conversation is the patient's report to ask for at every review.",
+    "The weight-losers club: topiramate and zonisamide; the anticonvulsants that reverse the metabolic tide; the reason they anchor binge/craving prescriptions.",
+    "The tingling is harmless: carbonic-anhydrase paraesthesia alarms patients more than it harms them, pre-counselling saves calls.",
     "The stone and sweat cautions: hydration counselling and paediatric heat awareness are the practical safety layer.",
     "The pregnancy paragraph: oral-cleft risk makes contraception-and-folate planning a prescribing condition for women of childbearing age.",
     "Slow titration is pharmacology: the cognitive window narrows with every rushed week.",
@@ -295,9 +295,9 @@ export const topiramate: Drug = {
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Topiramate: Topiramate acts at multiple targets — sodium and calcium channels, AMPA/kainate glutamate receptors, and GABA potentiation — the anticonvulsant with weight-losing pharmacology.",
+        "Mechanism of Topiramate: Topiramate acts at multiple targets (sodium and calcium channels, AMPA/kainate glutamate receptors, and GABA potentiation) the anticonvulsant with weight-losing pharmacology.",
         "Uses of Topiramate: Migraine prophylaxis; Epilepsy (focal and generalised); Binge eating disorder / bulimia (adjunct); Alcohol dependence (craving adjunct)",
-        "Mechanism: MULTIPLE — Na+/Ca2+ channels, AMPA/kainate antagonism, GABA potentiation, weak carbonic anhydrase.",
+        "Mechanism: MULTIPLE. Na+/Ca2+ channels, AMPA/kainate antagonism, GABA potentiation, weak carbonic anhydrase.",
         "Approved: migraine prophylaxis + epilepsy.",
       ],
       practical: [
@@ -305,14 +305,14 @@ export const topiramate: Drug = {
         "Outline the monitoring plan: Weight (Every visit); Cognitive function review (Every visit); Bicarbonate (long use) (Periodically)",
       ],
       longAnswer: [
-        "Topiramate: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: MULTIPLE — Na+/Ca2+ channels, AMPA/kainate antagonism, GABA potentiation, weak carbonic anhydrase.",
+        "Topiramate: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: MULTIPLE. Na+/Ca2+ channels, AMPA/kainate antagonism, GABA potentiation, weak carbonic anhydrase.",
         "Approved: migraine prophylaxis + epilepsy.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: MULTIPLE — Na+/Ca2+ channels, AMPA/kainate antagonism, GABA potentiation, weak carbonic anhydrase.",
+        "Mechanism: MULTIPLE. Na+/Ca2+ channels, AMPA/kainate antagonism, GABA potentiation, weak carbonic anhydrase.",
         "Approved: migraine prophylaxis + epilepsy.",
         "Psychiatric signatures: weight LOSS, binge/craving reduction, cognitive blunting (Dopamax).",
         "Caution set: kidney stones, oligohidrosis (children), acute myopia, metabolic acidosis, oral-cleft teratogenicity.",
@@ -327,7 +327,7 @@ export const topiramate: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Topiramate develops nephrolithiasis (kidney stones) — next best step?",
+        "A patient on Topiramate develops nephrolithiasis (kidney stones): next best step?",
         "When to choose Topiramate over alternatives in its class.",
       ],
     },
@@ -340,16 +340,16 @@ export const topiramate: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "Dopamax: the cognitive tax is the dose-limit — word-finding loss in conversation is the patient's report to ask for at every review.",
-        "The weight-losers club: topiramate and zonisamide — the anticonvulsants that reverse the metabolic tide; the reason they anchor binge/craving prescriptions.",
-        "The tingling is harmless: carbonic-anhydrase paraesthesia alarms patients more than it harms them — pre-counselling saves calls.",
+        "Dopamax: the cognitive tax is the dose-limit, word-finding loss in conversation is the patient's report to ask for at every review.",
+        "The weight-losers club: topiramate and zonisamide; the anticonvulsants that reverse the metabolic tide; the reason they anchor binge/craving prescriptions.",
+        "The tingling is harmless: carbonic-anhydrase paraesthesia alarms patients more than it harms them, pre-counselling saves calls.",
         "The stone and sweat cautions: hydration counselling and paediatric heat awareness are the practical safety layer.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: MULTIPLE — Na+/Ca2+ channels, AMPA/kainate antagonism, GABA potentiation, weak carbonic anhydrase.",
+    "Mechanism: MULTIPLE. Na+/Ca2+ channels, AMPA/kainate antagonism, GABA potentiation, weak carbonic anhydrase.",
     "Approved: migraine prophylaxis + epilepsy.",
     "Psychiatric signatures: weight LOSS, binge/craving reduction, cognitive blunting (Dopamax).",
     "Caution set: kidney stones, oligohidrosis (children), acute myopia, metabolic acidosis, oral-cleft teratogenicity.",
@@ -359,7 +359,7 @@ export const topiramate: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — migraine prophylaxis",
+      title: "First presentation: migraine prophylaxis",
       presentation: "A patient presenting with migraine prophylaxis, started on Topiramate.",
       history: "A adult patient presents with a migraine prophylaxis picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with migraine prophylaxis; physical examination and baseline investigations are unremarkable.",
@@ -368,7 +368,7 @@ export const topiramate: Drug = {
       management: "Started at 25 mg at night, titrated to 50-100 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Topiramate takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Topiramate takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -377,7 +377,7 @@ export const topiramate: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Anticonvulsant comparison — choosing within the class",
+      title: "Anticonvulsant comparison: choosing within the class",
       primaryDrug: "Topiramate",
       rows: [
         {
@@ -470,7 +470,7 @@ export const topiramate: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The weight-losing multi-mechanism stabiliser — craving and appetite",
+          primaryValue: "The weight-losing multi-mechanism stabiliser: craving and appetite",
           comparisons: [
             {
               drug: "Gabapentin",
@@ -491,7 +491,7 @@ export const topiramate: Drug = {
           ],
         },
       ],
-      takeaway: "All anticonvulsants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All anticonvulsants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -500,7 +500,7 @@ export const topiramate: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Topiramate reaches peak plasma concentration and begins acting at its molecular target (Voltage-gated Na+ channels; high-voltage Ca2+ channels; AMPA/kainate (antagonism); GABA-A (potentiation); carbonic anhydrase (weak inhibition)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Topiramate reaches peak plasma concentration and begins acting at its molecular target (Voltage-gated Na+ channels; high-voltage Ca2+ channels; AMPA/kainate (antagonism); GABA-A (potentiation); carbonic anhydrase (weak inhibition)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -536,7 +536,7 @@ export const topiramate: Drug = {
   faqs: [
     {
       question: "How long does Topiramate take to work?",
-      answer: "Migraine benefit 4-8 weeks; craving effects over weeks of titration.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Migraine benefit 4-8 weeks; craving effects over weeks of titration.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Topiramate?",
@@ -544,11 +544,11 @@ export const topiramate: Drug = {
     },
     {
       question: "Can I stop Topiramate suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Topiramate habit-forming?",
@@ -556,7 +556,7 @@ export const topiramate: Drug = {
     },
     {
       question: "Can I take Topiramate during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Topiramate may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Topiramate may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -730,7 +730,7 @@ export const topiramate: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Topiramate",
+      label: "Patient Guide. Topiramate",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -738,13 +738,13 @@ export const topiramate: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The multi-mechanism weight-losing anticonvulsant — appetite suppression as a mood-stabiliser side-effect.",
-    summary: "Topiramate is a prescription medicine used to treat migraine prophylaxis. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Topiramate is an epilepsy-and-migraine medicine with several actions on nerve signalling. In psychiatry it is valued for reducing appetite, binge urges, and cravings while stabilising nerves — and its best-known effects are tingling fingers and word-finding difficulty ('the words go missing'), which usually improve with a lower dose or slower build-up. It can cause kidney stones, so drink plenty of water, and it can harm an unborn baby, so contraception matters while taking it.",
-    sideEffects: "The most common side effects are: cognitive blunting and word-finding difficulty, paraesthesia (tingling fingers/toes), appetite suppression and weight loss, sedation and fatigue, taste disturbance and nausea. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Nephrolithiasis (kidney stones) and Oligohidrosis and hyperthermia (children). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight (every visit); cognitive function review (every visit); bicarbonate (long use) (periodically). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The multi-mechanism weight-losing anticonvulsant: appetite suppression as a mood-stabiliser side-effect.",
+    summary: "Topiramate is a prescription medicine used to treat migraine prophylaxis. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Topiramate is an epilepsy-and-migraine medicine with several actions on nerve signalling. In psychiatry it is valued for reducing appetite, binge urges, and cravings while stabilising nerves, and its best-known effects are tingling fingers and word-finding difficulty ('the words go missing'), which usually improve with a lower dose or slower build-up. It can cause kidney stones, so drink plenty of water, and it can harm an unborn baby, so contraception matters while taking it.",
+    sideEffects: "The most common side effects are: cognitive blunting and word-finding difficulty, paraesthesia (tingling fingers/toes), appetite suppression and weight loss, sedation and fatigue, taste disturbance and nausea. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Nephrolithiasis (kidney stones) and Oligohidrosis and hyperthermia (children). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight (every visit); cognitive function review (every visit); bicarbonate (long use) (periodically). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Other carbonic-anhydrase inhibitors (zonisamide, acetazolamide), Topiramate raises phenytoin/valproate levels; OCs may drop, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Other carbonic-anhydrase inhibitors (zonisamide, acetazolamide), Topiramate raises phenytoin/valproate levels; OCs may drop, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -813,19 +813,19 @@ export const topiramate: Drug = {
         name: "Topiramate",
         slug: "topiramate",
         relationship: "This guide",
-        distinguishing: "The weight-losing multi-mechanism stabiliser — craving and appetite",
+        distinguishing: "The weight-losing multi-mechanism stabiliser: craving and appetite",
       },
       {
         name: "Gabapentin",
         slug: "gabapentin",
         relationship: "Same class (Anticonvulsant)",
-        distinguishing: "The interaction-clean pain-augmentation agent — anxiety and craving off-label",
+        distinguishing: "The interaction-clean pain-augmentation agent: anxiety and craving off-label",
       },
       {
         name: "Pregabalin",
         slug: "pregabalin",
         relationship: "Same class (Anticonvulsant)",
-        distinguishing: "The GAD-approved gabapentinoid — pain, fibromyalgia, anxiety",
+        distinguishing: "The GAD-approved gabapentinoid: pain, fibromyalgia, anxiety",
       },
       {
         name: "Levetiracetam",
@@ -837,13 +837,13 @@ export const topiramate: Drug = {
         name: "Tiagabine",
         slug: "tiagabine",
         relationship: "Same class (Anticonvulsant)",
-        distinguishing: "The GABA-reuptake blocker — mechanism elegance, clinical footnote",
+        distinguishing: "The GABA-reuptake blocker: mechanism elegance, clinical footnote",
       },
       {
         name: "Zonisamide",
         slug: "zonisamide",
         relationship: "Same class (Anticonvulsant)",
-        distinguishing: "The second weight-loser — topiramate's sibling",
+        distinguishing: "The second weight-loser: topiramate's sibling",
       },
     ],
   },
@@ -996,7 +996,7 @@ export const topiramate: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Topiramate in two sentences.",
-      answer: "Topiramate acts at multiple targets — sodium and calcium channels, AMPA/kainate glutamate receptors, and GABA potentiation — the anticonvulsant with weight-losing pharmacology. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Topiramate acts at multiple targets (sodium and calcium channels, AMPA/kainate glutamate receptors, and GABA potentiation) the anticonvulsant with weight-losing pharmacology. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -1016,7 +1016,7 @@ export const topiramate: Drug = {
     },
     {
       question: "Share one clinical pearl about Topiramate that separates safe prescribers from unsafe ones.",
-      answer: "Dopamax: the cognitive tax is the dose-limit — word-finding loss in conversation is the patient's report to ask for at every review.",
+      answer: "Dopamax: the cognitive tax is the dose-limit, word-finding loss in conversation is the patient's report to ask for at every review.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1092,7 +1092,7 @@ export const topiramate: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1137,7 +1137,7 @@ export const topiramate: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Topiramate works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Topiramate works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1153,7 +1153,7 @@ export const topiramate: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Topiramate safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Topiramate safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1198,7 +1198,7 @@ export const topiramate: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Topiramate follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Topiramate follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1241,7 +1241,7 @@ export const topiramate: Drug = {
       "Folate 5 mg + contraception discussion for women who may conceive.",
     ],
     overdose: [
-      "Overdose with Topiramate is managed supportively — no specific antidote.",
+      "Overdose with Topiramate is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Topiramate is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1284,9 +1284,9 @@ export const topiramate: Drug = {
     ],
     primaryTargetSymptoms: ["Binge eating and cravings", "Migraine prophylaxis", "Weight-protective mood augmentation", "Alcohol craving (off-label)"],
     pearls: [
-      "Dopamax: the cognitive tax is the dose-limit — word-finding loss in conversation is the patient's report to ask for at every review.",
-      "The weight-losers club: topiramate and zonisamide — the anticonvulsants that reverse the metabolic tide; the reason they anchor binge/craving prescriptions.",
-      "The tingling is harmless: carbonic-anhydrase paraesthesia alarms patients more than it harms them — pre-counselling saves calls.",
+      "Dopamax: the cognitive tax is the dose-limit, word-finding loss in conversation is the patient's report to ask for at every review.",
+      "The weight-losers club: topiramate and zonisamide; the anticonvulsants that reverse the metabolic tide; the reason they anchor binge/craving prescriptions.",
+      "The tingling is harmless: carbonic-anhydrase paraesthesia alarms patients more than it harms them, pre-counselling saves calls.",
       "The stone and sweat cautions: hydration counselling and paediatric heat awareness are the practical safety layer.",
       "The pregnancy paragraph: oral-cleft risk makes contraception-and-folate planning a prescribing condition for women of childbearing age.",
       "Slow titration is pharmacology: the cognitive window narrows with every rushed week.",
@@ -1295,6 +1295,6 @@ export const topiramate: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

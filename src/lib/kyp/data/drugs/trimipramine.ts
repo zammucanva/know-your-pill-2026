@@ -23,14 +23,14 @@ export const trimipramine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antidepressants", "TCAs", "Trimipramine"],
   /* ---- Hero / summary ---- */
-  tagline: "The most sedating TCA — the anxiety-insomnia depression specialist with an unusual receptor map.",
-  summary: "Trimipramine is the most sedating tricyclic: strong H1 binding plus a distinctive receptor profile (5-HT2 antagonism; dopamine blockade) that makes it an anxiolytic-sedative antidepressant for agitated, insomniac depression — and Stahl's noted interest for its atypical pharmacology.",
+  tagline: "The most sedating TCA: the anxiety-insomnia depression specialist with an unusual receptor map.",
+  summary: "Trimipramine is the most sedating tricyclic: strong H1 binding plus a distinctive receptor profile (5-HT2 antagonism; dopamine blockade) that makes it an anxiolytic-sedative antidepressant for agitated, insomniac depression, and Stahl's noted interest for its atypical pharmacology.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Trimipramine — from its molecular target (SERT/NET (moderate inhibition); 5-HT2 (antagonism); H1 (potent); D2 (weak blockade)) to clinical effect.",
+    "Explain the mechanism of action of Trimipramine, from its molecular target (SERT/NET (moderate inhibition); 5-HT2 (antagonism); H1 (potent); D2 (weak blockade)) to clinical effect.",
     "List the FDA-approved and off-label uses of Trimipramine.",
     "Predict the common and serious side effects of Trimipramine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Trimipramine.",
@@ -38,15 +38,15 @@ export const trimipramine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Trimipramine combines moderate monoamine reuptake inhibition with strong 5-HT2/H1 antagonism and weak dopamine blockade — the most sedating tricyclic.",
+    summary: "Trimipramine combines moderate monoamine reuptake inhibition with strong 5-HT2/H1 antagonism and weak dopamine blockade: the most sedating tricyclic.",
     molecularTarget: "SERT/NET (moderate inhibition); 5-HT2 (antagonism); H1 (potent); D2 (weak blockade)",
     effect: "Monoamine reuptake inhibition plus receptor binding producing the classic tricyclic profile.",
     steps: [
-      "Trimipramine combines moderate monoamine reuptake inhibition with strong 5-HT2/H1 antagonism and weak dopamine blockade — the most sedating tricyclic.",
+      "Trimipramine combines moderate monoamine reuptake inhibition with strong 5-HT2/H1 antagonism and weak dopamine blockade: the most sedating tricyclic.",
       "Receptor binding (H1, M1, alpha-1) produces the adverse-effect texture; reuptake inhibition produces the efficacy.",
       "Bedtime dosing converts sedation into therapeutic sleep.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 7-30 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 7-30 hours. See mechanism and prescriber sections.",
     halfLife: "7-30 hours.",
     metabolism: "Hepatic CYP2D6 (and others).",
     excretion: "Renal.",
@@ -149,7 +149,7 @@ export const trimipramine: Drug = {
     {
       name: "MAOIs",
       severity: "absolute",
-      rationale: "Hypertensive crisis and serotonin syndrome — the classic combination prohibition.",
+      rationale: "Hypertensive crisis and serotonin syndrome: the classic combination prohibition.",
     },
   ],
   blackBoxWarnings: [
@@ -164,7 +164,7 @@ export const trimipramine: Drug = {
       name: "Dry mouth",
       frequency: "very-common",
       severity: "moderate",
-      description: "Muscarinic blockade — the classic tricyclic complaint.",
+      description: "Muscarinic blockade: the classic tricyclic complaint.",
       management: "Sips; sugar-free gum; dose timing.",
     },
     {
@@ -178,28 +178,28 @@ export const trimipramine: Drug = {
       name: "Sedation and drowsiness",
       frequency: "very-common",
       severity: "moderate",
-      description: "H1 blockade — often therapeutic in depressed insomniacs.",
+      description: "H1 blockade: often therapeutic in depressed insomniacs.",
       management: "Bedtime-weighted dosing.",
     },
     {
       name: "Blurred vision and urinary hesitation",
       frequency: "common",
       severity: "moderate",
-      description: "Anticholinergic ocular and bladder effects — urinary retention in older men.",
+      description: "Anticholinergic ocular and bladder effects: urinary retention in older men.",
       management: "Ocular review; caution with prostatism.",
     },
     {
       name: "Orthostatic hypotension",
       frequency: "common",
       severity: "severe",
-      description: "Alpha-1 blockade — falls in the elderly, the practical dose-limit.",
+      description: "Alpha-1 blockade: falls in the elderly, the practical dose-limit.",
       management: "Rise slowly; BP checks; elderly caution.",
     },
     {
       name: "Weight gain and increased appetite",
       frequency: "common",
       severity: "moderate",
-      description: "H1/5-HT2C-mediated — the tricyclic metabolic story.",
+      description: "H1/5-HT2C-mediated: the tricyclic metabolic story.",
       management: "Lifestyle structure from the start.",
     },
     {
@@ -213,7 +213,7 @@ export const trimipramine: Drug = {
       name: "Marked sedation",
       frequency: "very-common",
       severity: "moderate",
-      description: "The most sedating TCA — bedtime-only dosing.",
+      description: "The most sedating TCA: bedtime-only dosing.",
       management: "Strict bedtime dosing.",
     },
   ],
@@ -222,14 +222,14 @@ export const trimipramine: Drug = {
       name: "Cardiotoxicity in overdose (the TCA catastrophe)",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Wide QRS, arrhythmias, hypotension, seizures — the reason TCAs require safe dispensing; the deadliest of the classic antidepressants in overdose.",
+      description: "Wide QRS, arrhythmias, hypotension, seizures: the reason TCAs require safe dispensing; the deadliest of the classic antidepressants in overdose.",
       management: "Small quantities; sodium bicarbonate for QRS widening; ICU care.",
     },
     {
       name: "Lethal arrhythmia in cardiac disease",
       frequency: "uncommon",
       severity: "life-threatening",
-      description: "Conduction slowing (quinidine-like) — TCAs are dangerous in ischaemic heart disease and conduction disease.",
+      description: "Conduction slowing (quinidine-like). TCAs are dangerous in ischaemic heart disease and conduction disease.",
       management: "ECG before starting in over-40s; avoid in post-MI and heart block.",
     },
     {
@@ -274,7 +274,7 @@ export const trimipramine: Drug = {
     {
       drug: "MAOIs",
       severity: "contraindicated",
-      mechanism: "Hypertensive crisis and serotonin syndrome — the classic combination prohibition.",
+      mechanism: "Hypertensive crisis and serotonin syndrome: the classic combination prohibition.",
       action: "14-day washout both directions.",
     },
     {
@@ -292,43 +292,43 @@ export const trimipramine: Drug = {
     {
       drug: "SSRIs (CYP2D6 inhibitors)",
       severity: "major",
-      mechanism: "Raise TCA levels — the modern interaction minefield.",
+      mechanism: "Raise TCA levels: the modern interaction minefield.",
       action: "Dose awareness; levels.",
     },
     {
       drug: "Adrenaline/epinephrine (local anaesthetic with vasoconstrictor)",
       severity: "major",
-      mechanism: "TCA-potentiated pressor response — the dental warning.",
+      mechanism: "TCA-potentiated pressor response: the dental warning.",
       action: "Warn dentists; plain local anaesthetic.",
     },
   ],
   pregnancy: {
     legacyCategory: "C (variable by drug)",
     summary: "Tricyclic human experience is long; no consistent major-malformation signal, but neonatal anticholinergic/withdrawal effects near term. Decisions individualised with obstetrics.",
-    lactation: "Excreted in milk in small amounts — infant sedation/anticholinergic monitoring.",
+    lactation: "Excreted in milk in small amounts: infant sedation/anticholinergic monitoring.",
   },
   renalAdjustment: "Standard caution in significant renal impairment.",
-  hepaticAdjustment: "Hepatic 2D6 metabolism — reduce dose in significant hepatic impairment.",
+  hepaticAdjustment: "Hepatic 2D6 metabolism: reduce dose in significant hepatic impairment.",
   /* ---- Education ---- */
-  patientExplanation: "This is a tricyclic antidepressant — one of the oldest and most studied families. It raises two brain chemicals (serotonin and noradrenaline) by slowing their recycling, and also acts on other receptors that cause its well-known effects: dry mouth, constipation, drowsiness, and dizziness on standing. The dose is built up slowly, taken mostly at bedtime, and these medicines must be kept safely away from children because an overdose is dangerous to the heart.",
+  patientExplanation: "This is a tricyclic antidepressant, one of the oldest and most studied families. It raises two brain chemicals (serotonin and noradrenaline) by slowing their recycling, and also acts on other receptors that cause its well-known effects: dry mouth, constipation, drowsiness, and dizziness on standing. The dose is built up slowly, taken mostly at bedtime, and these medicines must be kept safely away from children because an overdose is dangerous to the heart.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Trimipramine builds over weeks — do not judge it in the first days.",
+    "Benefit from Trimipramine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The sedation champion: the TCA for the agitated, sleepless depressive — where the sedation IS the therapy.",
-    "The atypical map: trimipramine's 5-HT2 antagonism and weak D2 blockade made it Stahl's 'interesting' TCA — a hybrid before hybrids.",
+    "The sedation champion: the TCA for the agitated, sleepless depressive, where the sedation IS the therapy.",
+    "The atypical map: trimipramine's 5-HT2 antagonism and weak D2 blockade made it Stahl's 'interesting' TCA; a hybrid before hybrids.",
     "The pain footnote: strong analgesic-adjuvant reputation in palliative practice (with the sedation).",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Trimipramine: Trimipramine combines moderate monoamine reuptake inhibition with strong 5-HT2/H1 antagonism and weak dopamine blockade — the most sedating tricyclic.",
+        "Mechanism of Trimipramine: Trimipramine combines moderate monoamine reuptake inhibition with strong 5-HT2/H1 antagonism and weak dopamine blockade; the most sedating tricyclic.",
         "Uses of Trimipramine: Depression with anxiety, agitation, or insomnia; Depression with psychosis (adjunct, historic)",
-        "The MOST SEDATING TCA — potent H1 + 5-HT2 antagonism + weak D2 blockade.",
+        "The MOST SEDATING TCA: potent H1 + 5-HT2 antagonism + weak D2 blockade.",
         "Niche: agitated, insomniac depression (sedation therapeutic).",
       ],
       practical: [
@@ -336,14 +336,14 @@ export const trimipramine: Drug = {
         "Outline the monitoring plan: ECG (Baseline in over-40s and all with cardiac history); Blood pressure (orthostatic) (Baseline and titration); Tricyclic blood level where available (When response is poor or adverse effects prominent)",
       ],
       longAnswer: [
-        "Trimipramine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "The MOST SEDATING TCA — potent H1 + 5-HT2 antagonism + weak D2 blockade.",
+        "Trimipramine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "The MOST SEDATING TCA: potent H1 + 5-HT2 antagonism + weak D2 blockade.",
         "Niche: agitated, insomniac depression (sedation therapeutic).",
       ],
     },
     neetPg: {
       highYield: [
-        "The MOST SEDATING TCA — potent H1 + 5-HT2 antagonism + weak D2 blockade.",
+        "The MOST SEDATING TCA: potent H1 + 5-HT2 antagonism + weak D2 blockade.",
         "Niche: agitated, insomniac depression (sedation therapeutic).",
         "Analgesic-adjuvant reputation in palliative care.",
         "Bedtime-only dosing; 100-200 mg/day.",
@@ -357,7 +357,7 @@ export const trimipramine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Trimipramine develops cardiotoxicity in overdose (the tca catastrophe) — next best step?",
+        "A patient on Trimipramine develops cardiotoxicity in overdose (the tca catastrophe): next best step?",
         "When to choose Trimipramine over alternatives in its class.",
       ],
     },
@@ -370,15 +370,15 @@ export const trimipramine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The sedation champion: the TCA for the agitated, sleepless depressive — where the sedation IS the therapy.",
-        "The atypical map: trimipramine's 5-HT2 antagonism and weak D2 blockade made it Stahl's 'interesting' TCA — a hybrid before hybrids.",
+        "The sedation champion: the TCA for the agitated, sleepless depressive, where the sedation IS the therapy.",
+        "The atypical map: trimipramine's 5-HT2 antagonism and weak D2 blockade made it Stahl's 'interesting' TCA; a hybrid before hybrids.",
         "The pain footnote: strong analgesic-adjuvant reputation in palliative practice (with the sedation).",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "The MOST SEDATING TCA — potent H1 + 5-HT2 antagonism + weak D2 blockade.",
+    "The MOST SEDATING TCA: potent H1 + 5-HT2 antagonism + weak D2 blockade.",
     "Niche: agitated, insomniac depression (sedation therapeutic).",
     "Analgesic-adjuvant reputation in palliative care.",
     "Bedtime-only dosing; 100-200 mg/day.",
@@ -387,7 +387,7 @@ export const trimipramine: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — depression with anxiety, agitation, or insomnia",
+      title: "First presentation: depression with anxiety, agitation, or insomnia",
       presentation: "A patient presenting with depression with anxiety, agitation, or insomnia, started on Trimipramine.",
       history: "A adult patient presents with a depression with anxiety, agitation, or insomnia picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with depression with anxiety, agitation, or insomnia; physical examination and baseline investigations are unremarkable.",
@@ -396,7 +396,7 @@ export const trimipramine: Drug = {
       management: "Started at 25-50 mg at bedtime, titrated to 100-200 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Trimipramine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Trimipramine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -405,7 +405,7 @@ export const trimipramine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "TCA comparison — choosing within the class",
+      title: "TCA comparison: choosing within the class",
       primaryDrug: "Trimipramine",
       rows: [
         {
@@ -454,7 +454,7 @@ export const trimipramine: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Weight gain common — the tricyclic story.",
+          primaryValue: "Weight gain common: the tricyclic story.",
           comparisons: [
             {
               drug: "Imipramine",
@@ -476,7 +476,7 @@ export const trimipramine: Drug = {
         },
         {
           attribute: "Sedation",
-          primaryValue: "Common — exploited by bedtime dosing.",
+          primaryValue: "Common: exploited by bedtime dosing.",
           comparisons: [
             {
               drug: "Imipramine",
@@ -498,7 +498,7 @@ export const trimipramine: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The most sedating TCA — agitated insomniac depression",
+          primaryValue: "The most sedating TCA: agitated insomniac depression",
           comparisons: [
             {
               drug: "Imipramine",
@@ -519,7 +519,7 @@ export const trimipramine: Drug = {
           ],
         },
       ],
-      takeaway: "All tcas share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All tcas share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -528,7 +528,7 @@ export const trimipramine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Trimipramine reaches peak plasma concentration and begins acting at its molecular target (SERT/NET (moderate inhibition); 5-HT2 (antagonism); H1 (potent); D2 (weak blockade)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Trimipramine reaches peak plasma concentration and begins acting at its molecular target (SERT/NET (moderate inhibition); 5-HT2 (antagonism); H1 (potent); D2 (weak blockade)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -564,7 +564,7 @@ export const trimipramine: Drug = {
   faqs: [
     {
       question: "How long does Trimipramine take to work?",
-      answer: "Sedative effects night one; antidepressant response 2-4 weeks at therapeutic dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Sedative effects night one; antidepressant response 2-4 weeks at therapeutic dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Trimipramine?",
@@ -572,11 +572,11 @@ export const trimipramine: Drug = {
     },
     {
       question: "Can I stop Trimipramine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Trimipramine habit-forming?",
@@ -584,7 +584,7 @@ export const trimipramine: Drug = {
     },
     {
       question: "Can I take Trimipramine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Trimipramine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Trimipramine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -746,7 +746,7 @@ export const trimipramine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Trimipramine",
+      label: "Patient Guide. Trimipramine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -754,13 +754,13 @@ export const trimipramine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The most sedating TCA — the anxiety-insomnia depression specialist with an unusual receptor map.",
-    summary: "Trimipramine is a prescription medicine used to treat depression with anxiety, agitation, or insomnia. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "This is a tricyclic antidepressant — one of the oldest and most studied families. It raises two brain chemicals (serotonin and noradrenaline) by slowing their recycling, and also acts on other receptors that cause its well-known effects: dry mouth, constipation, drowsiness, and dizziness on standing. The dose is built up slowly, taken mostly at bedtime, and these medicines must be kept safely away from children because an overdose is dangerous to the heart.",
-    sideEffects: "The most common side effects are: dry mouth, constipation, sedation and drowsiness, blurred vision and urinary hesitation, orthostatic hypotension, weight gain and increased appetite. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Cardiotoxicity in overdose (the TCA catastrophe) and Lethal arrhythmia in cardiac disease. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: ecg (baseline in over-40s and all with cardiac history); blood pressure (orthostatic) (baseline and titration); tricyclic blood level where available (when response is poor or adverse effects prominent). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The most sedating TCA: the anxiety-insomnia depression specialist with an unusual receptor map.",
+    summary: "Trimipramine is a prescription medicine used to treat depression with anxiety, agitation, or insomnia. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "This is a tricyclic antidepressant, one of the oldest and most studied families. It raises two brain chemicals (serotonin and noradrenaline) by slowing their recycling, and also acts on other receptors that cause its well-known effects: dry mouth, constipation, drowsiness, and dizziness on standing. The dose is built up slowly, taken mostly at bedtime, and these medicines must be kept safely away from children because an overdose is dangerous to the heart.",
+    sideEffects: "The most common side effects are: dry mouth, constipation, sedation and drowsiness, blurred vision and urinary hesitation, orthostatic hypotension, weight gain and increased appetite. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Cardiotoxicity in overdose (the TCA catastrophe) and Lethal arrhythmia in cardiac disease. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: ecg (baseline in over-40s and all with cardiac history); blood pressure (orthostatic) (baseline and titration); tricyclic blood level where available (when response is poor or adverse effects prominent). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: MAOIs, Clonidine and guanethidine, Antiarrhythmics and QT drugs, SSRIs (CYP2D6 inhibitors). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: MAOIs, Clonidine and guanethidine, Antiarrhythmics and QT drugs, SSRIs (CYP2D6 inhibitors). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -785,7 +785,7 @@ export const trimipramine: Drug = {
     },
     costCategory: "moderate",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -819,55 +819,55 @@ export const trimipramine: Drug = {
         name: "Trimipramine",
         slug: "trimipramine",
         relationship: "This guide",
-        distinguishing: "The most sedating TCA — agitated insomniac depression",
+        distinguishing: "The most sedating TCA: agitated insomniac depression",
       },
       {
         name: "Imipramine",
         slug: "imipramine",
         relationship: "Same class (TCA)",
-        distinguishing: "The founding TCA — depression, enuresis, and panic history",
+        distinguishing: "The founding TCA: depression, enuresis, and panic history",
       },
       {
         name: "Nortriptyline",
         slug: "nortriptyline",
         relationship: "Same class (TCA)",
-        distinguishing: "The TCA survivor — level-guided, post-MI-safe, pain-effective",
+        distinguishing: "The TCA survivor: level-guided, post-MI-safe, pain-effective",
       },
       {
         name: "Amoxapine",
         slug: "amoxapine",
         relationship: "Same class (TCA)",
-        distinguishing: "The TCA-neuroleptic hybrid — EPS warnings included",
+        distinguishing: "The TCA-neuroleptic hybrid. EPS warnings included",
       },
       {
         name: "Desipramine",
         slug: "desipramine",
         relationship: "Same class (TCA)",
-        distinguishing: "The NET-pure TCA — energising, and the paediatric-cardiac caution",
+        distinguishing: "The NET-pure TCA: energising, and the paediatric-cardiac caution",
       },
       {
         name: "Doxepin",
         slug: "doxepin",
         relationship: "Same class (TCA)",
-        distinguishing: "The H1-pure micro-dose to the full TCA — three drugs in one",
+        distinguishing: "The H1-pure micro-dose to the full TCA: three drugs in one",
       },
       {
         name: "Dothiepin",
         slug: "dothiepin",
         relationship: "Same class (TCA)",
-        distinguishing: "The retired UK sedative TCA — overdose-toxicity caution",
+        distinguishing: "The retired UK sedative TCA: overdose-toxicity caution",
       },
       {
         name: "Lofepramine",
         slug: "lofepramine",
         relationship: "Same class (TCA)",
-        distinguishing: "The UK kinder TCA — imipramine's safer cousin",
+        distinguishing: "The UK kinder TCA: imipramine's safer cousin",
       },
       {
         name: "Maprotiline",
         slug: "maprotiline",
         relationship: "Same class (TCA)",
-        distinguishing: "The tetracyclic — NET potency with the seizure ceiling",
+        distinguishing: "The tetracyclic. NET potency with the seizure ceiling",
       },
     ],
   },
@@ -1015,7 +1015,7 @@ export const trimipramine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Trimipramine in two sentences.",
-      answer: "Trimipramine combines moderate monoamine reuptake inhibition with strong 5-HT2/H1 antagonism and weak dopamine blockade — the most sedating tricyclic. Net effect: Monoamine reuptake inhibition plus receptor binding producing the classic tricyclic profile.",
+      answer: "Trimipramine combines moderate monoamine reuptake inhibition with strong 5-HT2/H1 antagonism and weak dopamine blockade: the most sedating tricyclic. Net effect: Monoamine reuptake inhibition plus receptor binding producing the classic tricyclic profile.",
       topic: "Mechanism",
     },
     {
@@ -1025,7 +1025,7 @@ export const trimipramine: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Trimipramine and how you would manage it.",
-      answer: "Cardiotoxicity in overdose (the TCA catastrophe): Wide QRS, arrhythmias, hypotension, seizures — the reason TCAs require safe dispensing; the deadliest of the classic antidepressants in overdose. Management: Small quantities; sodium bicarbonate for QRS widening; ICU care.",
+      answer: "Cardiotoxicity in overdose (the TCA catastrophe): Wide QRS, arrhythmias, hypotension, seizures; the reason TCAs require safe dispensing; the deadliest of the classic antidepressants in overdose. Management: Small quantities; sodium bicarbonate for QRS widening; ICU care.",
       topic: "Safety",
     },
     {
@@ -1035,7 +1035,7 @@ export const trimipramine: Drug = {
     },
     {
       question: "Share one clinical pearl about Trimipramine that separates safe prescribers from unsafe ones.",
-      answer: "The sedation champion: the TCA for the agitated, sleepless depressive — where the sedation IS the therapy.",
+      answer: "The sedation champion: the TCA for the agitated, sleepless depressive, where the sedation IS the therapy.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1111,7 +1111,7 @@ export const trimipramine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1156,7 +1156,7 @@ export const trimipramine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Trimipramine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Trimipramine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1172,7 +1172,7 @@ export const trimipramine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Trimipramine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Trimipramine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1217,7 +1217,7 @@ export const trimipramine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Trimipramine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Trimipramine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1227,8 +1227,8 @@ export const trimipramine: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Weight gain common — the tricyclic story.",
-    sedation: "Common — exploited by bedtime dosing.",
+    weightGain: "Weight gain common: the tricyclic story.",
+    sedation: "Common: exploited by bedtime dosing.",
     dosing: [
       {
         indication: "Depression",
@@ -1245,7 +1245,7 @@ export const trimipramine: Drug = {
       "Small safe quantities in suicidal patients.",
     ],
     overdose: [
-      "Overdose with Trimipramine is managed supportively — no specific antidote.",
+      "Overdose with Trimipramine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Trimipramine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1279,21 +1279,21 @@ export const trimipramine: Drug = {
       },
     ],
     potentialAdvantages: [
-      "The most sedating TCA — agitated insomniac depression",
+      "The most sedating TCA: agitated insomniac depression",
     ],
     potentialDisadvantages: [
-      "See adverse effects section — the main disadvantages of Trimipramine are its key side effects.",
+      "See adverse effects section: the main disadvantages of Trimipramine are its key side effects.",
     ],
     primaryTargetSymptoms: ["Major depression", "Anxiety spectrum", "Neuropathic pain (agent-specific)", "Enuresis/ADHD (agent-specific)"],
     pearls: [
-      "The sedation champion: the TCA for the agitated, sleepless depressive — where the sedation IS the therapy.",
-      "The atypical map: trimipramine's 5-HT2 antagonism and weak D2 blockade made it Stahl's 'interesting' TCA — a hybrid before hybrids.",
+      "The sedation champion: the TCA for the agitated, sleepless depressive, where the sedation IS the therapy.",
+      "The atypical map: trimipramine's 5-HT2 antagonism and weak D2 blockade made it Stahl's 'interesting' TCA; a hybrid before hybrids.",
       "The pain footnote: strong analgesic-adjuvant reputation in palliative practice (with the sedation).",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

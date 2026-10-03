@@ -23,14 +23,14 @@ export const nortriptyline: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antidepressants", "TCAs", "Nortriptyline"],
   /* ---- Hero / summary ---- */
-  tagline: "The level-guided TCA — the best therapeutic window and the modern class survivor.",
-  summary: "Nortriptyline is amitriptyline's active demethylated metabolite and the modern TCA of choice: NET-selective reuptake inhibition with less sedation and anticholinergic load than its parent, and the best-defined therapeutic window in psychopharmacology (50-150 ng/mL) — the only TCA routinely guided by blood levels. Its post-MI depression safety data and neuropathic pain efficacy complete the profile.",
+  tagline: "The level-guided TCA: the best therapeutic window and the modern class survivor.",
+  summary: "Nortriptyline is amitriptyline's active demethylated metabolite and the modern TCA of choice: NET-selective reuptake inhibition with less sedation and anticholinergic load than its parent, and the best-defined therapeutic window in psychopharmacology (50-150 ng/mL); the only TCA routinely guided by blood levels. Its post-MI depression safety data and neuropathic pain efficacy complete the profile.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Nortriptyline — from its molecular target (NET (preferential inhibition) + SERT (moderate); reduced H1/M1/alpha-1 vs amitriptyline) to clinical effect.",
+    "Explain the mechanism of action of Nortriptyline, from its molecular target (NET (preferential inhibition) + SERT (moderate); reduced H1/M1/alpha-1 vs amitriptyline) to clinical effect.",
     "List the FDA-approved and off-label uses of Nortriptyline.",
     "Predict the common and serious side effects of Nortriptyline from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Nortriptyline.",
@@ -38,15 +38,15 @@ export const nortriptyline: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Nortriptyline inhibits norepinephrine reuptake preferentially with a gentler receptor-binding profile than amitriptyline — efficacy with the most manageable adverse-effect set of the TCAs.",
+    summary: "Nortriptyline inhibits norepinephrine reuptake preferentially with a gentler receptor-binding profile than amitriptyline: efficacy with the most manageable adverse-effect set of the TCAs.",
     molecularTarget: "NET (preferential inhibition) + SERT (moderate); reduced H1/M1/alpha-1 vs amitriptyline",
     effect: "Monoamine reuptake inhibition plus receptor binding producing the classic tricyclic profile.",
     steps: [
-      "Nortriptyline inhibits norepinephrine reuptake preferentially with a gentler receptor-binding profile than amitriptyline — efficacy with the most manageable adverse-effect set of the TCAs.",
+      "Nortriptyline inhibits norepinephrine reuptake preferentially with a gentler receptor-binding profile than amitriptyline: efficacy with the most manageable adverse-effect set of the TCAs.",
       "Receptor binding (H1, M1, alpha-1) produces the adverse-effect texture; reuptake inhibition produces the efficacy.",
       "Bedtime dosing converts sedation into therapeutic sleep.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 16-90 hours (mean ~26). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 16-90 hours (mean ~26). See mechanism and prescriber sections.",
     halfLife: "16-90 hours (mean ~26).",
     metabolism: "Hepatic CYP2D6 (and others).",
     excretion: "Renal.",
@@ -142,7 +142,7 @@ export const nortriptyline: Drug = {
     {
       name: "Post-myocardial-infarction depression",
       status: "guideline",
-      description: "The ONLY antidepressant with prospective safety data after MI — the cardiac-safe TCA paradox.",
+      description: "The ONLY antidepressant with prospective safety data after MI: the cardiac-safe TCA paradox.",
     },
     {
       name: "Smoking cessation (adjunct, historic)",
@@ -164,7 +164,7 @@ export const nortriptyline: Drug = {
     {
       name: "MAOIs",
       severity: "absolute",
-      rationale: "Hypertensive crisis and serotonin syndrome — the classic combination prohibition.",
+      rationale: "Hypertensive crisis and serotonin syndrome: the classic combination prohibition.",
     },
   ],
   blackBoxWarnings: [
@@ -179,7 +179,7 @@ export const nortriptyline: Drug = {
       name: "Dry mouth",
       frequency: "very-common",
       severity: "moderate",
-      description: "Muscarinic blockade — the classic tricyclic complaint.",
+      description: "Muscarinic blockade: the classic tricyclic complaint.",
       management: "Sips; sugar-free gum; dose timing.",
     },
     {
@@ -193,28 +193,28 @@ export const nortriptyline: Drug = {
       name: "Sedation and drowsiness",
       frequency: "very-common",
       severity: "moderate",
-      description: "H1 blockade — often therapeutic in depressed insomniacs.",
+      description: "H1 blockade: often therapeutic in depressed insomniacs.",
       management: "Bedtime-weighted dosing.",
     },
     {
       name: "Blurred vision and urinary hesitation",
       frequency: "common",
       severity: "moderate",
-      description: "Anticholinergic ocular and bladder effects — urinary retention in older men.",
+      description: "Anticholinergic ocular and bladder effects: urinary retention in older men.",
       management: "Ocular review; caution with prostatism.",
     },
     {
       name: "Orthostatic hypotension",
       frequency: "common",
       severity: "severe",
-      description: "Alpha-1 blockade — falls in the elderly, the practical dose-limit.",
+      description: "Alpha-1 blockade: falls in the elderly, the practical dose-limit.",
       management: "Rise slowly; BP checks; elderly caution.",
     },
     {
       name: "Weight gain and increased appetite",
       frequency: "common",
       severity: "moderate",
-      description: "H1/5-HT2C-mediated — the tricyclic metabolic story.",
+      description: "H1/5-HT2C-mediated: the tricyclic metabolic story.",
       management: "Lifestyle structure from the start.",
     },
     {
@@ -230,14 +230,14 @@ export const nortriptyline: Drug = {
       name: "Cardiotoxicity in overdose (the TCA catastrophe)",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Wide QRS, arrhythmias, hypotension, seizures — the reason TCAs require safe dispensing; the deadliest of the classic antidepressants in overdose.",
+      description: "Wide QRS, arrhythmias, hypotension, seizures: the reason TCAs require safe dispensing; the deadliest of the classic antidepressants in overdose.",
       management: "Small quantities; sodium bicarbonate for QRS widening; ICU care.",
     },
     {
       name: "Lethal arrhythmia in cardiac disease",
       frequency: "uncommon",
       severity: "life-threatening",
-      description: "Conduction slowing (quinidine-like) — TCAs are dangerous in ischaemic heart disease and conduction disease.",
+      description: "Conduction slowing (quinidine-like). TCAs are dangerous in ischaemic heart disease and conduction disease.",
       management: "ECG before starting in over-40s; avoid in post-MI and heart block.",
     },
     {
@@ -282,7 +282,7 @@ export const nortriptyline: Drug = {
     {
       drug: "MAOIs",
       severity: "contraindicated",
-      mechanism: "Hypertensive crisis and serotonin syndrome — the classic combination prohibition.",
+      mechanism: "Hypertensive crisis and serotonin syndrome: the classic combination prohibition.",
       action: "14-day washout both directions.",
     },
     {
@@ -300,61 +300,61 @@ export const nortriptyline: Drug = {
     {
       drug: "SSRIs (CYP2D6 inhibitors)",
       severity: "major",
-      mechanism: "Raise TCA levels — the modern interaction minefield.",
+      mechanism: "Raise TCA levels: the modern interaction minefield.",
       action: "Dose awareness; levels.",
     },
     {
       drug: "Adrenaline/epinephrine (local anaesthetic with vasoconstrictor)",
       severity: "major",
-      mechanism: "TCA-potentiated pressor response — the dental warning.",
+      mechanism: "TCA-potentiated pressor response: the dental warning.",
       action: "Warn dentists; plain local anaesthetic.",
     },
   ],
   pregnancy: {
     legacyCategory: "C (variable by drug)",
     summary: "Tricyclic human experience is long; no consistent major-malformation signal, but neonatal anticholinergic/withdrawal effects near term. Decisions individualised with obstetrics.",
-    lactation: "Excreted in milk in small amounts — infant sedation/anticholinergic monitoring.",
+    lactation: "Excreted in milk in small amounts: infant sedation/anticholinergic monitoring.",
   },
   renalAdjustment: "Standard caution in significant renal impairment.",
-  hepaticAdjustment: "Hepatic 2D6 metabolism — reduce dose in significant hepatic impairment.",
+  hepaticAdjustment: "Hepatic 2D6 metabolism: reduce dose in significant hepatic impairment.",
   /* ---- Education ---- */
-  patientExplanation: "This is a tricyclic antidepressant — one of the oldest and most studied families. It raises two brain chemicals (serotonin and noradrenaline) by slowing their recycling, and also acts on other receptors that cause its well-known effects: dry mouth, constipation, drowsiness, and dizziness on standing. The dose is built up slowly, taken mostly at bedtime, and these medicines must be kept safely away from children because an overdose is dangerous to the heart.",
+  patientExplanation: "This is a tricyclic antidepressant, one of the oldest and most studied families. It raises two brain chemicals (serotonin and noradrenaline) by slowing their recycling, and also acts on other receptors that cause its well-known effects: dry mouth, constipation, drowsiness, and dizziness on standing. The dose is built up slowly, taken mostly at bedtime, and these medicines must be kept safely away from children because an overdose is dangerous to the heart.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Nortriptyline builds over weeks — do not judge it in the first days.",
+    "Benefit from Nortriptyline builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The therapeutic-window legend: 50-150 ng/mL — too little is ineffective and too MUCH loses efficacy (the curvilinear response unique to nortriptyline).",
-    "The post-MI paradox: the safest antidepressant after myocardial infarction is a tricyclic — nortriptyline's prospective data remain unmatched by the SSRI era.",
-    "Amitriptyline's metabolite, market-ready: less sedation, less anticholinergic, same pain efficacy — the refinement that kept TCAs prescribable.",
-    "Level-checking culture: the only TCA where 'check the level' is routine practice — under-dosing and non-response are diagnosable.",
-    "10-hydroxynortriptyline is the metabolite that marks the curvilinear window — the pharmacology behind the level discipline.",
+    "The therapeutic-window legend: 50-150 ng/mL; too little is ineffective and too MUCH loses efficacy (the curvilinear response unique to nortriptyline).",
+    "The post-MI paradox: the safest antidepressant after myocardial infarction is a tricyclic; nortriptyline's prospective data remain unmatched by the SSRI era.",
+    "Amitriptyline's metabolite, market-ready: less sedation, less anticholinergic, same pain efficacy; the refinement that kept TCAs prescribable.",
+    "Level-checking culture: the only TCA where 'check the level' is routine practice, under-dosing and non-response are diagnosable.",
+    "10-hydroxynortriptyline is the metabolite that marks the curvilinear window: the pharmacology behind the level discipline.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Nortriptyline: Nortriptyline inhibits norepinephrine reuptake preferentially with a gentler receptor-binding profile than amitriptyline — efficacy with the most manageable adverse-effect set of the TCAs.",
+        "Mechanism of Nortriptyline: Nortriptyline inhibits norepinephrine reuptake preferentially with a gentler receptor-binding profile than amitriptyline; efficacy with the most manageable adverse-effect set of the TCAs.",
         "Uses of Nortriptyline: Depression; Neuropathic pain; Post-myocardial-infarction depression; Smoking cessation (adjunct, historic)",
-        "Amitriptyline's ACTIVE METABOLITE — NET-preferential, gentler profile.",
-        "Therapeutic window 50-150 ng/mL — curvilinear (above 150, efficacy FALLS).",
+        "Amitriptyline's ACTIVE METABOLITE. NET-preferential, gentler profile.",
+        "Therapeutic window 50-150 ng/mL: curvilinear (above 150, efficacy FALLS).",
       ],
       practical: [
         "Prescribe Nortriptyline for depression with dose, timing, and duration.",
         "Outline the monitoring plan: ECG (Baseline in over-40s and all with cardiac history); Blood pressure (orthostatic) (Baseline and titration); Tricyclic blood level where available (When response is poor or adverse effects prominent)",
       ],
       longAnswer: [
-        "Nortriptyline: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Amitriptyline's ACTIVE METABOLITE — NET-preferential, gentler profile.",
-        "Therapeutic window 50-150 ng/mL — curvilinear (above 150, efficacy FALLS).",
+        "Nortriptyline: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Amitriptyline's ACTIVE METABOLITE. NET-preferential, gentler profile.",
+        "Therapeutic window 50-150 ng/mL: curvilinear (above 150, efficacy FALLS).",
       ],
     },
     neetPg: {
       highYield: [
-        "Amitriptyline's ACTIVE METABOLITE — NET-preferential, gentler profile.",
-        "Therapeutic window 50-150 ng/mL — curvilinear (above 150, efficacy FALLS).",
+        "Amitriptyline's ACTIVE METABOLITE. NET-preferential, gentler profile.",
+        "Therapeutic window 50-150 ng/mL: curvilinear (above 150, efficacy FALLS).",
         "The only TCA with post-MI depression safety data.",
         "The modern TCA of choice (depression + neuropathic pain).",
         "Less sedation/anticholinergic than amitriptyline.",
@@ -368,7 +368,7 @@ export const nortriptyline: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Nortriptyline develops cardiotoxicity in overdose (the tca catastrophe) — next best step?",
+        "A patient on Nortriptyline develops cardiotoxicity in overdose (the tca catastrophe): next best step?",
         "When to choose Nortriptyline over alternatives in its class.",
       ],
     },
@@ -381,17 +381,17 @@ export const nortriptyline: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The therapeutic-window legend: 50-150 ng/mL — too little is ineffective and too MUCH loses efficacy (the curvilinear response unique to nortriptyline).",
-        "The post-MI paradox: the safest antidepressant after myocardial infarction is a tricyclic — nortriptyline's prospective data remain unmatched by the SSRI era.",
-        "Amitriptyline's metabolite, market-ready: less sedation, less anticholinergic, same pain efficacy — the refinement that kept TCAs prescribable.",
-        "Level-checking culture: the only TCA where 'check the level' is routine practice — under-dosing and non-response are diagnosable.",
+        "The therapeutic-window legend: 50-150 ng/mL; too little is ineffective and too MUCH loses efficacy (the curvilinear response unique to nortriptyline).",
+        "The post-MI paradox: the safest antidepressant after myocardial infarction is a tricyclic; nortriptyline's prospective data remain unmatched by the SSRI era.",
+        "Amitriptyline's metabolite, market-ready: less sedation, less anticholinergic, same pain efficacy; the refinement that kept TCAs prescribable.",
+        "Level-checking culture: the only TCA where 'check the level' is routine practice, under-dosing and non-response are diagnosable.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Amitriptyline's ACTIVE METABOLITE — NET-preferential, gentler profile.",
-    "Therapeutic window 50-150 ng/mL — curvilinear (above 150, efficacy FALLS).",
+    "Amitriptyline's ACTIVE METABOLITE. NET-preferential, gentler profile.",
+    "Therapeutic window 50-150 ng/mL: curvilinear (above 150, efficacy FALLS).",
     "The only TCA with post-MI depression safety data.",
     "The modern TCA of choice (depression + neuropathic pain).",
     "Less sedation/anticholinergic than amitriptyline.",
@@ -401,7 +401,7 @@ export const nortriptyline: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — depression",
+      title: "First presentation: depression",
       presentation: "A patient presenting with depression, started on Nortriptyline.",
       history: "A adult patient presents with a depression picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with depression; physical examination and baseline investigations are unremarkable.",
@@ -410,7 +410,7 @@ export const nortriptyline: Drug = {
       management: "Started at 25 mg at bedtime, titrated to 75-150 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Nortriptyline takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Nortriptyline takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -419,7 +419,7 @@ export const nortriptyline: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "TCA comparison — choosing within the class",
+      title: "TCA comparison: choosing within the class",
       primaryDrug: "Nortriptyline",
       rows: [
         {
@@ -468,7 +468,7 @@ export const nortriptyline: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Weight gain common — the tricyclic story.",
+          primaryValue: "Weight gain common: the tricyclic story.",
           comparisons: [
             {
               drug: "Imipramine",
@@ -490,7 +490,7 @@ export const nortriptyline: Drug = {
         },
         {
           attribute: "Sedation",
-          primaryValue: "Common — exploited by bedtime dosing.",
+          primaryValue: "Common: exploited by bedtime dosing.",
           comparisons: [
             {
               drug: "Imipramine",
@@ -512,7 +512,7 @@ export const nortriptyline: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The TCA survivor — level-guided, post-MI-safe, pain-effective",
+          primaryValue: "The TCA survivor: level-guided, post-MI-safe, pain-effective",
           comparisons: [
             {
               drug: "Imipramine",
@@ -533,7 +533,7 @@ export const nortriptyline: Drug = {
           ],
         },
       ],
-      takeaway: "All tcas share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All tcas share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -542,7 +542,7 @@ export const nortriptyline: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Nortriptyline reaches peak plasma concentration and begins acting at its molecular target (NET (preferential inhibition) + SERT (moderate); reduced H1/M1/alpha-1 vs amitriptyline). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Nortriptyline reaches peak plasma concentration and begins acting at its molecular target (NET (preferential inhibition) + SERT (moderate); reduced H1/M1/alpha-1 vs amitriptyline). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -578,7 +578,7 @@ export const nortriptyline: Drug = {
   faqs: [
     {
       question: "How long does Nortriptyline take to work?",
-      answer: "Sedative effects night one; antidepressant response 2-4 weeks at therapeutic dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Sedative effects night one; antidepressant response 2-4 weeks at therapeutic dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Nortriptyline?",
@@ -586,11 +586,11 @@ export const nortriptyline: Drug = {
     },
     {
       question: "Can I stop Nortriptyline suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Nortriptyline habit-forming?",
@@ -598,7 +598,7 @@ export const nortriptyline: Drug = {
     },
     {
       question: "Can I take Nortriptyline during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Nortriptyline may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Nortriptyline may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -778,7 +778,7 @@ export const nortriptyline: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Nortriptyline",
+      label: "Patient Guide. Nortriptyline",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -786,13 +786,13 @@ export const nortriptyline: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The level-guided TCA — the best therapeutic window and the modern class survivor.",
-    summary: "Nortriptyline is a prescription medicine used to treat depression. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "This is a tricyclic antidepressant — one of the oldest and most studied families. It raises two brain chemicals (serotonin and noradrenaline) by slowing their recycling, and also acts on other receptors that cause its well-known effects: dry mouth, constipation, drowsiness, and dizziness on standing. The dose is built up slowly, taken mostly at bedtime, and these medicines must be kept safely away from children because an overdose is dangerous to the heart.",
-    sideEffects: "The most common side effects are: dry mouth, constipation, sedation and drowsiness, blurred vision and urinary hesitation, orthostatic hypotension, weight gain and increased appetite. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Cardiotoxicity in overdose (the TCA catastrophe) and Lethal arrhythmia in cardiac disease. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: ecg (baseline in over-40s and all with cardiac history); blood pressure (orthostatic) (baseline and titration); tricyclic blood level where available (when response is poor or adverse effects prominent). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The level-guided TCA: the best therapeutic window and the modern class survivor.",
+    summary: "Nortriptyline is a prescription medicine used to treat depression. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "This is a tricyclic antidepressant, one of the oldest and most studied families. It raises two brain chemicals (serotonin and noradrenaline) by slowing their recycling, and also acts on other receptors that cause its well-known effects: dry mouth, constipation, drowsiness, and dizziness on standing. The dose is built up slowly, taken mostly at bedtime, and these medicines must be kept safely away from children because an overdose is dangerous to the heart.",
+    sideEffects: "The most common side effects are: dry mouth, constipation, sedation and drowsiness, blurred vision and urinary hesitation, orthostatic hypotension, weight gain and increased appetite. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Cardiotoxicity in overdose (the TCA catastrophe) and Lethal arrhythmia in cardiac disease. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: ecg (baseline in over-40s and all with cardiac history); blood pressure (orthostatic) (baseline and titration); tricyclic blood level where available (when response is poor or adverse effects prominent). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: MAOIs, Clonidine and guanethidine, Antiarrhythmics and QT drugs, SSRIs (CYP2D6 inhibitors). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: MAOIs, Clonidine and guanethidine, Antiarrhythmics and QT drugs, SSRIs (CYP2D6 inhibitors). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -859,55 +859,55 @@ export const nortriptyline: Drug = {
         name: "Nortriptyline",
         slug: "nortriptyline",
         relationship: "This guide",
-        distinguishing: "The TCA survivor — level-guided, post-MI-safe, pain-effective",
+        distinguishing: "The TCA survivor: level-guided, post-MI-safe, pain-effective",
       },
       {
         name: "Imipramine",
         slug: "imipramine",
         relationship: "Same class (TCA)",
-        distinguishing: "The founding TCA — depression, enuresis, and panic history",
+        distinguishing: "The founding TCA: depression, enuresis, and panic history",
       },
       {
         name: "Amoxapine",
         slug: "amoxapine",
         relationship: "Same class (TCA)",
-        distinguishing: "The TCA-neuroleptic hybrid — EPS warnings included",
+        distinguishing: "The TCA-neuroleptic hybrid. EPS warnings included",
       },
       {
         name: "Desipramine",
         slug: "desipramine",
         relationship: "Same class (TCA)",
-        distinguishing: "The NET-pure TCA — energising, and the paediatric-cardiac caution",
+        distinguishing: "The NET-pure TCA: energising, and the paediatric-cardiac caution",
       },
       {
         name: "Doxepin",
         slug: "doxepin",
         relationship: "Same class (TCA)",
-        distinguishing: "The H1-pure micro-dose to the full TCA — three drugs in one",
+        distinguishing: "The H1-pure micro-dose to the full TCA: three drugs in one",
       },
       {
         name: "Dothiepin",
         slug: "dothiepin",
         relationship: "Same class (TCA)",
-        distinguishing: "The retired UK sedative TCA — overdose-toxicity caution",
+        distinguishing: "The retired UK sedative TCA: overdose-toxicity caution",
       },
       {
         name: "Lofepramine",
         slug: "lofepramine",
         relationship: "Same class (TCA)",
-        distinguishing: "The UK kinder TCA — imipramine's safer cousin",
+        distinguishing: "The UK kinder TCA: imipramine's safer cousin",
       },
       {
         name: "Maprotiline",
         slug: "maprotiline",
         relationship: "Same class (TCA)",
-        distinguishing: "The tetracyclic — NET potency with the seizure ceiling",
+        distinguishing: "The tetracyclic. NET potency with the seizure ceiling",
       },
       {
         name: "Mianserin",
         slug: "mianserin",
         relationship: "Same class (TCA)",
-        distinguishing: "Mirtazapine's precursor — with the FBC monitoring",
+        distinguishing: "Mirtazapine's precursor, with the FBC monitoring",
       },
     ],
   },
@@ -1055,7 +1055,7 @@ export const nortriptyline: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Nortriptyline in two sentences.",
-      answer: "Nortriptyline inhibits norepinephrine reuptake preferentially with a gentler receptor-binding profile than amitriptyline — efficacy with the most manageable adverse-effect set of the TCAs. Net effect: Monoamine reuptake inhibition plus receptor binding producing the classic tricyclic profile.",
+      answer: "Nortriptyline inhibits norepinephrine reuptake preferentially with a gentler receptor-binding profile than amitriptyline: efficacy with the most manageable adverse-effect set of the TCAs. Net effect: Monoamine reuptake inhibition plus receptor binding producing the classic tricyclic profile.",
       topic: "Mechanism",
     },
     {
@@ -1065,7 +1065,7 @@ export const nortriptyline: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Nortriptyline and how you would manage it.",
-      answer: "Cardiotoxicity in overdose (the TCA catastrophe): Wide QRS, arrhythmias, hypotension, seizures — the reason TCAs require safe dispensing; the deadliest of the classic antidepressants in overdose. Management: Small quantities; sodium bicarbonate for QRS widening; ICU care.",
+      answer: "Cardiotoxicity in overdose (the TCA catastrophe): Wide QRS, arrhythmias, hypotension, seizures; the reason TCAs require safe dispensing; the deadliest of the classic antidepressants in overdose. Management: Small quantities; sodium bicarbonate for QRS widening; ICU care.",
       topic: "Safety",
     },
     {
@@ -1075,7 +1075,7 @@ export const nortriptyline: Drug = {
     },
     {
       question: "Share one clinical pearl about Nortriptyline that separates safe prescribers from unsafe ones.",
-      answer: "The therapeutic-window legend: 50-150 ng/mL — too little is ineffective and too MUCH loses efficacy (the curvilinear response unique to nortriptyline).",
+      answer: "The therapeutic-window legend: 50-150 ng/mL; too little is ineffective and too MUCH loses efficacy (the curvilinear response unique to nortriptyline).",
       topic: "Clinical Pearls",
     },
   ],
@@ -1151,7 +1151,7 @@ export const nortriptyline: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1196,7 +1196,7 @@ export const nortriptyline: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Nortriptyline works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Nortriptyline works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1212,7 +1212,7 @@ export const nortriptyline: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Nortriptyline safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Nortriptyline safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1257,7 +1257,7 @@ export const nortriptyline: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Nortriptyline follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Nortriptyline follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1267,8 +1267,8 @@ export const nortriptyline: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Weight gain common — the tricyclic story.",
-    sedation: "Common — exploited by bedtime dosing.",
+    weightGain: "Weight gain common: the tricyclic story.",
+    sedation: "Common: exploited by bedtime dosing.",
     dosing: [
       {
         indication: "Depression",
@@ -1285,7 +1285,7 @@ export const nortriptyline: Drug = {
       "Small safe quantities in suicidal patients.",
     ],
     overdose: [
-      "Overdose with Nortriptyline is managed supportively — no specific antidote.",
+      "Overdose with Nortriptyline is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Nortriptyline is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1319,23 +1319,23 @@ export const nortriptyline: Drug = {
       },
     ],
     potentialAdvantages: [
-      "The TCA survivor — level-guided, post-MI-safe, pain-effective",
+      "The TCA survivor: level-guided, post-MI-safe, pain-effective",
     ],
     potentialDisadvantages: [
-      "See adverse effects section — the main disadvantages of Nortriptyline are its key side effects.",
+      "See adverse effects section: the main disadvantages of Nortriptyline are its key side effects.",
     ],
     primaryTargetSymptoms: ["Major depression", "Anxiety spectrum", "Neuropathic pain (agent-specific)", "Enuresis/ADHD (agent-specific)"],
     pearls: [
-      "The therapeutic-window legend: 50-150 ng/mL — too little is ineffective and too MUCH loses efficacy (the curvilinear response unique to nortriptyline).",
-      "The post-MI paradox: the safest antidepressant after myocardial infarction is a tricyclic — nortriptyline's prospective data remain unmatched by the SSRI era.",
-      "Amitriptyline's metabolite, market-ready: less sedation, less anticholinergic, same pain efficacy — the refinement that kept TCAs prescribable.",
-      "Level-checking culture: the only TCA where 'check the level' is routine practice — under-dosing and non-response are diagnosable.",
-      "10-hydroxynortriptyline is the metabolite that marks the curvilinear window — the pharmacology behind the level discipline.",
+      "The therapeutic-window legend: 50-150 ng/mL; too little is ineffective and too MUCH loses efficacy (the curvilinear response unique to nortriptyline).",
+      "The post-MI paradox: the safest antidepressant after myocardial infarction is a tricyclic; nortriptyline's prospective data remain unmatched by the SSRI era.",
+      "Amitriptyline's metabolite, market-ready: less sedation, less anticholinergic, same pain efficacy; the refinement that kept TCAs prescribable.",
+      "Level-checking culture: the only TCA where 'check the level' is routine practice, under-dosing and non-response are diagnosable.",
+      "10-hydroxynortriptyline is the metabolite that marks the curvilinear window: the pharmacology behind the level discipline.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

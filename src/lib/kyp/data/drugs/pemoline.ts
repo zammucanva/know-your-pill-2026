@@ -27,30 +27,30 @@ export const pemoline: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "ADHD Medications", "Stimulants", "Pemoline"],
   /* ---- Hero / summary ---- */
-  tagline: "The hepatotoxic last-resort stimulant — ADHD's liver-monitoring lesson in a tablet.",
-  summary: "Pemoline is a CNS stimulant structurally unrelated to amphetamine and methylphenidate that theoretically enhances dopaminergic neurotransmission by an unknown mechanism. It was reserved for ADHD patients who fail to respond to other treatments — never first-line, because of hepatotoxicity: drug-induced liver failure made pemoline the textbook example of a stimulant retired by its own liver. Its legacy is the every-2-weeks ALT (SGPT) monitoring ritual and the written informed consent that surrounded its use — pharmacovigilance history every prescriber should know.",
+  tagline: "A hepatotoxic last-resort stimulant: an ADHD lesson in liver monitoring.",
+  summary: "Pemoline is a CNS stimulant structurally unrelated to amphetamine and methylphenidate that theoretically enhances dopaminergic neurotransmission by an unknown mechanism. It was reserved for ADHD patients who fail to respond to other treatments, never first-line, because of hepatotoxicity: drug-induced liver failure made pemoline the textbook example of a stimulant retired by its own liver. Its legacy is the every-2-weeks ALT (SGPT) monitoring ritual and the written informed consent that surrounded its use: pharmacovigilance history every prescriber should know.",
   estimatedReadTime: "16 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of pemoline — a dopaminergic stimulant whose exact molecular target remains unknown, structurally unrelated to amphetamines and methylphenidate.",
+    "Explain the mechanism of action of pemoline: a dopaminergic stimulant whose exact molecular target remains unknown, structurally unrelated to amphetamines and methylphenidate.",
     "List the FDA-approved use of pemoline and explain why it was never a first-line ADHD agent.",
-    "Predict the side-effect profile of pemoline from its pharmacology — and explain why its hepatic toxicity ended its market life.",
+    "Predict the side-effect profile of pemoline from its pharmacology, and explain why its hepatic toxicity ended its market life.",
     "Construct the monitoring plan for a patient on pemoline: baseline and every-2-week serum ALT (SGPT), plus height and weight in children.",
     "Compare pemoline with the standard stimulants (methylphenidate, amphetamines) and explain its one-time clinical niche.",
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Pemoline theoretically enhances dopaminergic neurotransmission by an unknown mechanism — it is structurally unrelated to amphetamine or methylphenidate, and its exact molecular target has never been established.",
-    molecularTarget: "Dopaminergic neurotransmission (enhanced — exact mechanism unknown; structurally unrelated to amphetamines and methylphenidate)",
+    summary: "Pemoline theoretically enhances dopaminergic neurotransmission by an unknown mechanism: it is structurally unrelated to amphetamine or methylphenidate, and its exact molecular target has never been established.",
+    molecularTarget: "Dopaminergic neurotransmission (enhanced, exact mechanism unknown; structurally unrelated to amphetamines and methylphenidate)",
     effect: "Improved concentration, attention span, and reduced motor hyperactivity and impulsiveness in ADHD.",
     steps: [
-      "Pemoline theoretically enhances dopaminergic neurotransmission by an unknown mechanism — it is not a reuptake blocker like methylphenidate and not a releasing agent like amphetamine.",
+      "Pemoline theoretically enhances dopaminergic neurotransmission by an unknown mechanism: it is not a reuptake blocker like methylphenidate and not a releasing agent like amphetamine.",
       "Enhanced central dopaminergic tone in prefrontal attention circuits improves concentration, attention span, and impulse control in ADHD.",
       "The same excessive dopamine actions presumably explain the CNS side effects (insomnia, irritability, tic exacerbation), while the hepatic toxicity mechanism remains unknown.",
     ],
-    pharmacokinetics: "Orally administered; relatively long half-life (~12 hours) with sustained duration of clinical activity, allowing once-daily morning dosing. Metabolised by the liver, excreted primarily by the kidneys. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; relatively long half-life (~12 hours) with sustained duration of clinical activity, allowing once-daily morning dosing. Metabolised by the liver, excreted primarily by the kidneys. See mechanism and prescriber sections.",
     halfLife: "Approximately 12 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal (primary).",
@@ -73,7 +73,7 @@ export const pemoline: Drug = {
       {
         id: "drug",
         label: "Pemoline",
-        sublabel: "Mechanism unknown — not a reuptake blocker or releaser",
+        sublabel: "Mechanism unknown, not a reuptake blocker or releaser",
         variant: "process",
       },
       {
@@ -112,7 +112,7 @@ export const pemoline: Drug = {
         label: "translates to clinic",
       },
     ],
-    caption: "Pemoline is the stimulant whose mechanism medicine could never name — pharmacologically active like other CNS stimulants but structurally unrelated to both amphetamine and methylphenidate, with minimal sympathomimetic effects. Its clinical fate was decided not by dopamine but by the liver.",
+    caption: "Pemoline is the stimulant whose mechanism medicine could never name: pharmacologically active like other CNS stimulants but structurally unrelated to both amphetamine and methylphenidate, with minimal sympathomimetic effects. Its clinical fate was decided not by dopamine but by the liver.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Dopamine"],
@@ -124,14 +124,14 @@ export const pemoline: Drug = {
     {
       name: "Attention deficit hyperactivity disorder (ADHD)",
       status: "fda-approved",
-      description: "FDA-approved for ADHD in patients who fail to respond to other treatments — a second-line/third-line niche that reflected its hepatotoxicity, never first-line use.",
+      description: "FDA-approved for ADHD in patients who fail to respond to other treatments: a second-line/third-line niche that reflected its hepatotoxicity, never first-line use.",
     },
   ],
   contraindications: [
     {
       name: "Hepatic impairment",
       severity: "absolute",
-      rationale: "The do-not-use that defines the drug — pemoline's liver toxicity forbids any pre-existing hepatic disease (see Prescriber's Guide: Do Not Use).",
+      rationale: "The do-not-use that defines the drug: pemoline's liver toxicity forbids any pre-existing hepatic disease (see Prescriber's Guide: Do Not Use).",
     },
     {
       name: "Extreme anxiety or agitation",
@@ -156,7 +156,7 @@ export const pemoline: Drug = {
       name: "Insomnia",
       frequency: "common",
       severity: "moderate",
-      description: "The classic stimulant effect — often occurs before therapeutic action begins.",
+      description: "The classic stimulant effect: often occurs before therapeutic action begins.",
       management: "Administer in the morning; short-term hypnotic if needed.",
     },
     {
@@ -193,7 +193,7 @@ export const pemoline: Drug = {
       name: "Liver failure, hepatitis, jaundice",
       frequency: "rare",
       severity: "life-threatening",
-      description: "The effect that ended pemoline's market life — no way exists to predict who will develop liver failure.",
+      description: "The effect that ended pemoline's market life: no way exists to predict who will develop liver failure.",
       management: "Serum ALT every 2 weeks; discontinue immediately if ALT > 2x upper limit of normal or any signs of hepatic dysfunction appear.",
     },
     {
@@ -230,17 +230,17 @@ export const pemoline: Drug = {
     {
       parameter: "Serum ALT (SGPT)",
       frequency: "Baseline and every 2 weeks for the duration of treatment",
-      rationale: "The pemoline ritual — discontinue if ALT rises above twice the upper limit of normal. Monitoring is a necessary component of pemoline therapy, even though it is not clear that testing predicts liver failure; early detection plus immediate withdrawal of the suspect drug enhances the likelihood of recovery.",
+      rationale: "The pemoline ritual: discontinue if ALT rises above twice the upper limit of normal. Monitoring is a necessary component of pemoline therapy, even though it is not clear that testing predicts liver failure; early detection plus immediate withdrawal of the suspect drug enhances the likelihood of recovery.",
     },
     {
       parameter: "Height and weight (children)",
       frequency: "Periodically during long-term treatment",
-      rationale: "Pemoline may be associated with growth suppression (controversial) — children who are not growing or gaining weight should stop treatment, at least temporarily.",
+      rationale: "Pemoline may be associated with growth suppression (controversial): children who are not growing or gaining weight should stop treatment, at least temporarily.",
     },
     {
       parameter: "Need for continued treatment",
       frequency: "Every review",
-      rationale: "Periodic attempts to determine whether behavioural symptoms return off treatment — stop intermittently if treatment is no longer necessary.",
+      rationale: "Periodic attempts to determine whether behavioural symptoms return off treatment: stop intermittently if treatment is no longer necessary.",
     },
   ],
   interactions: [
@@ -253,37 +253,37 @@ export const pemoline: Drug = {
     {
       drug: "Other CNS stimulants",
       severity: "moderate",
-      mechanism: "Combinations with pemoline have not been systematically studied — best left to the expert.",
+      mechanism: "Combinations with pemoline have not been systematically studied: best left to the expert.",
       action: "Do not combine; prefer sequential monotherapy.",
     },
   ],
   pregnancy: {
-    summary: "Risk Category B (animal studies show no adverse effects; no controlled studies in humans). For ADHD patients, pemoline should generally be discontinued before anticipated pregnancies — use in women of childbearing potential requires weighing maternal benefit against fetal risk.",
-    lactation: "Unknown whether pemoline is secreted in human breast milk, but all psychotropics are assumed to be — recommended either to discontinue the drug or to bottle feed.",
+    summary: "Risk Category B (animal studies show no adverse effects; no controlled studies in humans). For ADHD patients, pemoline should generally be discontinued before anticipated pregnancies: use in women of childbearing potential requires weighing maternal benefit against fetal risk.",
+    lactation: "Unknown whether pemoline is secreted in human breast milk, but all psychotropics are assumed to be: recommended either to discontinue the drug or to bottle feed.",
   },
-  renalAdjustment: "Caution — pemoline is excreted primarily by the kidneys; significant renal impairment warrants dose review.",
-  hepaticAdjustment: "Contraindicated — hepatic impairment is a do-not-use condition, and only patients with normal baseline liver function tests should initiate pemoline.",
+  renalAdjustment: "Caution: pemoline is excreted primarily by the kidneys; significant renal impairment warrants dose review.",
+  hepaticAdjustment: "Contraindicated: hepatic impairment is a do-not-use condition, and only patients with normal baseline liver function tests should initiate pemoline.",
   /* ---- Education ---- */
-  patientExplanation: "Pemoline is a stimulant medicine that was used for ADHD when other ADHD medicines had not worked. It is different chemically from the usual stimulants (methylphenidate, amphetamine). Its great problem is that it can seriously harm the liver in a small number of people — nobody can predict who. That is why it was never a first-choice medicine, why a written consent form was needed before starting it, and why blood tests to check the liver (ALT/SGPT) were required every two weeks for as long as it was taken. It has now been withdrawn from the market in most countries because of this liver risk, but it remains an important lesson in medical history and exams.",
+  patientExplanation: "Pemoline is a stimulant medicine that was used for ADHD when other ADHD medicines had not worked. It is different chemically from the usual stimulants (methylphenidate, amphetamine). Its great problem is that it can seriously harm the liver in a small number of people: nobody can predict who. That is why it was never a first-choice medicine, why a written consent form was needed before starting it, and why blood tests to check the liver (ALT/SGPT) were required every two weeks for as long as it was taken. It has now been withdrawn from the market in most countries because of this liver risk, but it remains an important lesson in medical history and exams.",
   patientEducationPoints: [
-    "Take once daily in the morning — this helps prevent insomnia.",
-    "Never combine with other medicines without review — interactions have not been systematically studied.",
-    "Report any yellowing of the eyes, dark urine, unusual tiredness, or loss of appetite immediately — these can be signs of liver injury.",
+    "Take once daily in the morning: this helps prevent insomnia.",
+    "Never combine with other medicines without review: interactions have not been systematically studied.",
+    "Report any yellowing of the eyes, dark urine, unusual tiredness, or loss of appetite immediately: these can be signs of liver injury.",
     "Blood tests to check the liver are needed every two weeks while this medicine is taken.",
-    "Benefit should be clear within 3 weeks of reaching the right dose — if not, the medicine is stopped.",
+    "Benefit should be clear within 3 weeks of reaching the right dose, if not, the medicine is stopped.",
   ],
   clinicalPearls: [
-    "The last-resort stimulant: pemoline was never first-line because of hepatotoxicity — only for ADHD patients who respond to it and not to other ADHD treatments.",
-    "The every-2-weeks ALT ritual: serum SGPT at baseline and every 2 weeks for the entire treatment — discontinue if ALT exceeds twice the upper limit of normal; liver function monitoring is a necessary component of pemoline therapy.",
-    "The consent paradox: written informed consent was required before starting pemoline — a rarity in psychopharmacology that signalled the drug's risk profile.",
-    "The gentle stimulant: minimal sympathomimetic effects despite stimulant activity — less likely than other stimulants to raise blood pressure, with a more gradual onset of action.",
+    "The last-resort stimulant: pemoline was never first-line because of hepatotoxicity; only for ADHD patients who respond to it and not to other ADHD treatments.",
+    "The every-2-weeks ALT ritual: serum SGPT at baseline and every 2 weeks for the entire treatment; discontinue if ALT exceeds twice the upper limit of normal; liver function monitoring is a necessary component of pemoline therapy.",
+    "The consent paradox: written informed consent was required before starting pemoline; a rarity in psychopharmacology that signalled the drug's risk profile.",
+    "The gentle stimulant: minimal sympathomimetic effects despite stimulant activity; less likely than other stimulants to raise blood pressure, with a more gradual onset of action.",
     "The once-daily trick: a ~12-hour half-life with sustained activity means morning-only dosing and no sustained-release formulations needed.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of pemoline: theoretically enhances dopaminergic neurotransmission by an unknown mechanism — structurally unrelated to amphetamine and methylphenidate.",
-        "Use of pemoline: ADHD in patients who fail to respond to other treatments — never first-line.",
+        "Mechanism of pemoline: theoretically enhances dopaminergic neurotransmission by an unknown mechanism; structurally unrelated to amphetamine and methylphenidate.",
+        "Use of pemoline: ADHD in patients who fail to respond to other treatments, never first-line.",
         "Monitoring of pemoline: serum ALT (SGPT) at baseline and every 2 weeks; discontinue if ALT > 2x upper limit of normal.",
       ],
       practical: [
@@ -291,18 +291,18 @@ export const pemoline: Drug = {
         "Counsel a parent about why pemoline is a last-resort option and what the consent form means.",
       ],
       longAnswer: [
-        "Pemoline: mechanism, indication, adverse effects (especially hepatotoxicity), monitoring, and why it was withdrawn — structured answer framework.",
-        "Compare the CNS stimulants used in ADHD: methylphenidate, amphetamines, and pemoline — mechanisms, schedules, and toxicities.",
+        "Pemoline: mechanism, indication, adverse effects (especially hepatotoxicity), monitoring, and why it was withdrawn; structured answer framework.",
+        "Compare the CNS stimulants used in ADHD: methylphenidate, amphetamines, and pemoline; mechanisms, schedules, and toxicities.",
       ],
     },
     neetPg: {
       highYield: [
         "Identity: pemoline = the hepatotoxic stimulant, structurally unrelated to amphetamine and methylphenidate.",
-        "Indication: ADHD only after other treatments fail — never first-line.",
+        "Indication: ADHD only after other treatments fail, never first-line.",
         "Monitoring: serum ALT (SGPT) every 2 weeks for the duration of treatment; stop if > 2x ULN.",
-        "Schedule IV with low abuse potential — less dependence than amphetamine or methylphenidate.",
+        "Schedule IV with low abuse potential: less dependence than amphetamine or methylphenidate.",
         "Dosing: start 37.5 mg each morning; increase 18.75 mg/week; usual range 56.25-75 mg/day; maximum 112.5 mg/day.",
-        "Withdrawn from major markets for liver failure — a classic pharmacovigilance one-liner.",
+        "Withdrawn from major markets for liver failure: a classic pharmacovigilance one-liner.",
       ],
       pyqConcepts: [
         "Mechanism/target of pemoline (unknown, dopaminergic)",
@@ -313,21 +313,21 @@ export const pemoline: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A child on pemoline develops ALT twice the upper limit of normal — next best step? (Discontinue immediately.)",
-        "An ADHD patient with a history of hepatitis asks about stimulant options — why is pemoline contraindicated and what are the alternatives?",
+        "A child on pemoline develops ALT twice the upper limit of normal: next best step? (Discontinue immediately.)",
+        "An ADHD patient with a history of hepatitis asks about stimulant options. Why is pemoline contraindicated and what are the alternatives?",
       ],
     },
     fmge: {
       frequentlyTested: [
         "Primary use: ADHD after failure of other treatments (FDA-approved).",
-        "Most dangerous adverse effect: liver failure — ALT monitoring every 2 weeks.",
+        "Most dangerous adverse effect: liver failure. ALT monitoring every 2 weeks.",
         "Key contraindications: hepatic impairment, extreme anxiety or agitation, Tourette's syndrome.",
-        "Half-life approximately 12 hours — once-daily morning dosing.",
+        "Half-life approximately 12 hours: once-daily morning dosing.",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The monitoring paradox: it is not clear that baseline and periodic liver testing predicts active liver failure — but early detection with immediate withdrawal of the suspect drug enhances the likelihood of recovery, which is why monitoring was nevertheless mandated.",
+        "The monitoring paradox: it is not clear that baseline and periodic liver testing predicts active liver failure, but early detection with immediate withdrawal of the suspect drug enhances the likelihood of recovery, which is why monitoring was nevertheless mandated.",
         "The rechallenge protocol: if pemoline is discontinued and restarted, liver testing must be done prior to reinitiating and then every 2 weeks again.",
         "The overdose antidote note: chlorpromazine or atypical antipsychotics may treat the stimulant effects of pemoline overdose.",
       ],
@@ -335,41 +335,41 @@ export const pemoline: Drug = {
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Identity: pemoline = the hepatotoxic last-resort stimulant — mechanism unknown (dopaminergic), structurally unrelated to amphetamine and methylphenidate.",
-    "Indication: ADHD only after other treatments fail — never first-line.",
+    "Identity: pemoline = the hepatotoxic last-resort stimulant; mechanism unknown (dopaminergic), structurally unrelated to amphetamine and methylphenidate.",
+    "Indication: ADHD only after other treatments fail, never first-line.",
     "Dosing: 37.5 mg each morning; +18.75 mg/week; usual 56.25-75 mg/day; maximum 112.5 mg/day.",
-    "Half-life ~12 hours — once-daily morning dosing, no sustained-release forms needed.",
+    "Half-life ~12 hours: once-daily morning dosing, no sustained-release forms needed.",
     "Monitoring: serum ALT (SGPT) at baseline and every 2 weeks; discontinue if > 2x upper limit of normal.",
-    "Schedule IV, low abuse potential — less dependence than amphetamine or methylphenidate.",
-    "Withdrawn from major markets for liver failure — the pharmacovigilance classic.",
+    "Schedule IV, low abuse potential: less dependence than amphetamine or methylphenidate.",
+    "Withdrawn from major markets for liver failure: the pharmacovigilance classic.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "The stimulant sequence — refractory childhood ADHD",
+      title: "The stimulant sequence: refractory childhood ADHD",
       presentation: "A 10-year-old boy with ADHD who has failed two first-line stimulants is considered for pemoline.",
-      history: "A 10-year-old boy with ADHD has tried optimal trials of methylphenidate and then d-amphetamine — each with partial response and intolerable adverse effects (appetite loss, emotional lability). His school performance continues to deteriorate. No medical history of note; specifically no liver disease, no tic disorder, no seizure disorder. His parents ask what options remain.",
-      examination: "Mental status examination is consistent with ADHD (inattentive, hyperactive, impulsive); physical examination and baseline investigations — including normal liver function tests — are unremarkable.",
+      history: "A 10-year-old boy with ADHD has tried optimal trials of methylphenidate and then d-amphetamine: each with partial response and intolerable adverse effects (appetite loss, emotional lability). His school performance continues to deteriorate. No medical history of note; specifically no liver disease, no tic disorder, no seizure disorder. His parents ask what options remain.",
+      examination: "Mental status examination is consistent with ADHD (inattentive, hyperactive, impulsive); physical examination and baseline investigations (including normal liver function tests) are unremarkable.",
       diagnosis: "ADHD, treatment-refractory to first-line stimulants. Pemoline was historically the next consideration in this sequence.",
       rationale: "Pemoline was appropriate only after failure of other ADHD treatments: its hepatotoxicity meant it was never first-line. Normal baseline liver function tests were a prerequisite, written informed consent was required, and the every-2-week ALT (SGPT) monitoring plan defined the safety architecture of treatment.",
-      management: "Started at 37.5 mg each morning, increased by 18.75 mg each week toward 56.25-75 mg/day (maximum 112.5 mg/day). Serum ALT at baseline and every 2 weeks; height and weight monitored periodically; response assessed 3 weeks after dose titration — no response means discontinue and try another agent.",
-      outcome: "At 3-week review, modest improvement in attention and classroom behaviour with tolerable insomnia (managed by strict morning dosing). ALT remains normal at each 2-week check. In current practice, pemoline's market withdrawal redirects this sequence to atomoxetine, lisdexamfetamine, or non-pharmacological intensification — but the case teaches the monitoring discipline that defined this drug.",
+      management: "Started at 37.5 mg each morning, increased by 18.75 mg each week toward 56.25-75 mg/day (maximum 112.5 mg/day). Serum ALT at baseline and every 2 weeks; height and weight monitored periodically; response assessed 3 weeks after dose titration: no response means discontinue and try another agent.",
+      outcome: "At 3-week review, modest improvement in attention and classroom behaviour with tolerable insomnia (managed by strict morning dosing). ALT remains normal at each 2-week check. In current practice, pemoline's market withdrawal redirects this sequence to atomoxetine, lisdexamfetamine, or non-pharmacological intensification, but the case teaches the monitoring discipline that defined this drug.",
       teachingPoints: [
-        "Pemoline is a last-resort stimulant — the sequence matters: first-line stimulants first, pemoline only after they fail.",
+        "Pemoline is a last-resort stimulant. The sequence matters: first-line stimulants first, pemoline only after they fail.",
         "The safety architecture IS the drug: written consent, normal baseline LFTs, and ALT every 2 weeks.",
-        "No response 3 weeks after dose titration means stop — not increase further.",
+        "No response 3 weeks after dose titration means stop, not increase further.",
       ],
     },
   ],
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Pemoline vs the standard stimulants — orientation table",
+      title: "Pemoline vs the standard stimulants: orientation table",
       primaryDrug: "Pemoline",
       rows: [
         {
           attribute: "Mechanism",
-          primaryValue: "Theoretically dopaminergic — exact mechanism unknown; structurally unrelated to amphetamine and methylphenidate",
+          primaryValue: "Theoretically dopaminergic: exact mechanism unknown; structurally unrelated to amphetamine and methylphenidate",
           comparisons: [
             {
               drug: "Methylphenidate (d,l)",
@@ -397,7 +397,7 @@ export const pemoline: Drug = {
         },
         {
           attribute: "Defining toxicity",
-          primaryValue: "Hepatotoxicity — liver failure, hepatitis, jaundice (the market-withdrawal reason)",
+          primaryValue: "Hepatotoxicity: liver failure, hepatitis, jaundice (the market-withdrawal reason)",
           comparisons: [
             {
               drug: "Methylphenidate (d,l)",
@@ -411,7 +411,7 @@ export const pemoline: Drug = {
         },
         {
           attribute: "Abuse potential",
-          primaryValue: "Schedule IV — low; tolerance and psychological dependence rare",
+          primaryValue: "Schedule IV: low; tolerance and psychological dependence rare",
           comparisons: [
             {
               drug: "Methylphenidate (d,l)",
@@ -425,7 +425,7 @@ export const pemoline: Drug = {
         },
         {
           attribute: "Clinical role",
-          primaryValue: "Historical last-resort for ADHD after other treatments fail — withdrawn from major markets",
+          primaryValue: "Historical last-resort for ADHD after other treatments fail: withdrawn from major markets",
           comparisons: [
             {
               drug: "Methylphenidate (d,l)",
@@ -438,7 +438,7 @@ export const pemoline: Drug = {
           ],
         },
       ],
-      takeaway: "Pemoline's once-daily convenience, low abuse potential, and blood-pressure neutrality could not compensate for its liver risk — the standard stimulants dominate every treatment sequence, and pemoline remains the cautionary tale.",
+      takeaway: "Pemoline's once-daily convenience, low abuse potential, and blood-pressure neutrality could not compensate for its liver risk: the standard stimulants dominate every treatment sequence, and pemoline remains the cautionary tale.",
     },
   ],
   /* ---- Timeline ---- */
@@ -447,21 +447,21 @@ export const pemoline: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Pemoline reaches peak exposure and begins acting — but first-dose effects may not occur, as is common with stimulants. The long half-life (~12 hours) sustains activity across the day from a single morning dose.",
+      description: "Pemoline reaches peak exposure and begins acting, but first-dose effects may not occur, as is common with stimulants. The long half-life (~12 hours) sustains activity across the day from a single morning dose.",
       phase: "onset",
     },
     {
       id: "t2",
       time: "Days 1–7",
       title: "Early adaptation",
-      description: "Insomnia often occurs before any therapeutic action — morning dosing is the countermeasure. Headache, irritability, dizziness, and appetite loss may appear early.",
+      description: "Insomnia often occurs before any therapeutic action: morning dosing is the countermeasure. Headache, irritability, dizziness, and appetite loss may appear early.",
       phase: "onset",
     },
     {
       id: "t3",
       time: "Weeks 1–3 after dose titration",
       title: "Therapeutic effect builds",
-      description: "Substantial clinical benefit should occur within 3 weeks of completing dose titration. No response by then means withdraw treatment and try another agent — the drug does not reward patience.",
+      description: "Substantial clinical benefit should occur within 3 weeks of completing dose titration. No response by then means withdraw treatment and try another agent. The drug does not reward patience.",
       phase: "peak",
     },
     {
@@ -474,7 +474,7 @@ export const pemoline: Drug = {
     {
       id: "t5",
       time: "Maintenance",
-      title: "Continuation — as long as improvement persists",
+      title: "Continuation, as long as improvement persists",
       description: "Treatment continues indefinitely while benefit persists; treatment begun in childhood may need to continue into adolescence and adulthood if continued benefit is documented. Long-term stimulant use may be associated with growth suppression in children (controversial).",
       phase: "duration",
     },
@@ -483,15 +483,15 @@ export const pemoline: Drug = {
   faqs: [
     {
       question: "How long does pemoline take to work?",
-      answer: "First-dose effects may not occur, as is common with stimulants. Substantial clinical benefits should occur within 3 weeks of dose titration — if not, the drug is discontinued and another agent tried. Insomnia often appears before the therapeutic action does.",
+      answer: "First-dose effects may not occur, as is common with stimulants. Substantial clinical benefits should occur within 3 weeks of dose titration, if not, the drug is discontinued and another agent tried. Insomnia often appears before the therapeutic action does.",
     },
     {
       question: "What are the most common side effects of pemoline?",
-      answer: "The most frequently reported effects are insomnia, headache, irritability, drowsiness, dizziness, exacerbation of tics, anorexia and weight loss, and rash. The most important effect is rare but serious: liver injury — which is why blood tests every two weeks were mandatory.",
+      answer: "The most frequently reported effects are insomnia, headache, irritability, drowsiness, dizziness, exacerbation of tics, anorexia and weight loss, and rash. The most important effect is rare but serious: liver injury, which is why blood tests every two weeks were mandatory.",
     },
     {
       question: "Can pemoline be stopped suddenly?",
-      answer: "Yes in most cases — taper is generally unnecessary and not recommended when discontinuing for hepatic toxicity, and discontinuation symptoms are uncommon. Always discuss the plan with your doctor first.",
+      answer: "Yes in most cases: taper is generally unnecessary and not recommended when discontinuing for hepatic toxicity, and discontinuation symptoms are uncommon. Always discuss the plan with your doctor first.",
     },
     {
       question: "Why did pemoline need blood tests every two weeks?",
@@ -499,11 +499,11 @@ export const pemoline: Drug = {
     },
     {
       question: "Is pemoline habit-forming?",
-      answer: "Less than the classic stimulants — it was a Schedule IV drug with low abuse potential, and psychological dependence was rare. Nevertheless it was only ever taken exactly as prescribed.",
+      answer: "Less than the classic stimulants: it was a Schedule IV drug with low abuse potential, and psychological dependence was rare. Nevertheless it was only ever taken exactly as prescribed.",
     },
     {
       question: "Is pemoline still available?",
-      answer: "No — pemoline was withdrawn from the United States and most major markets (2005-2006) because of rare but life-threatening liver failure. It survives in textbooks and exams as the hepatotoxic stimulant and the case study in mandatory liver-function monitoring.",
+      answer: "No: pemoline was withdrawn from the United States and most major markets (2005-2006) because of rare but life-threatening liver failure. It survives in textbooks and exams as the hepatotoxic stimulant and the case study in mandatory liver-function monitoring.",
     },
   ],
   /* ---- References & related ---- */
@@ -640,7 +640,7 @@ export const pemoline: Drug = {
       note: "Common nutritional effect",
     },
     {
-      label: "Patient Guide — Pemoline",
+      label: "Patient Guide. Pemoline",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -648,13 +648,13 @@ export const pemoline: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The hepatotoxic last-resort stimulant — ADHD's liver-monitoring lesson in a tablet.",
-    summary: "Pemoline is a stimulant medicine that was used for ADHD when other ADHD medicines had not worked. It has been withdrawn from most markets because it can seriously harm the liver in rare cases — it remains important in medical history and exams.",
-    mechanism: "Pemoline is a stimulant that doctors believe works on a brain chemical called dopamine, but its exact mechanism was never discovered — it is chemically different from the usual stimulants (methylphenidate, amphetamine). It was only ever used when the standard ADHD medicines had already been tried and had not worked, because of its risk of harming the liver. While taking it, patients needed a blood test to check the liver every two weeks, and it was taken once every morning to avoid sleep problems.",
-    sideEffects: "The most common side effects are: insomnia, headache, irritability, drowsiness, dizziness, exacerbation of tics, anorexia and weight loss, and rash. These usually appear early and many settle with time. The most important effect is uncommon but serious: liver injury (liver failure, hepatitis, jaundice). Contact your doctor urgently if you notice yellowing of the eyes or skin, dark urine, or unusual tiredness. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "While taking pemoline, doctors checked a liver blood test (ALT, also called SGPT) at the start and every two weeks, plus height and weight in children. Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "A hepatotoxic last-resort stimulant: an ADHD lesson in liver monitoring.",
+    summary: "Pemoline is a stimulant medicine that was used for ADHD when other ADHD medicines had not worked. It has been withdrawn from most markets because it can seriously harm the liver in rare cases. It remains important in medical history and exams.",
+    mechanism: "Pemoline is a stimulant that doctors believe works on a brain chemical called dopamine, but its exact mechanism was never discovered. It is chemically different from the usual stimulants (methylphenidate, amphetamine). It was only ever used when the standard ADHD medicines had already been tried and had not worked, because of its risk of harming the liver. While taking it, patients needed a blood test to check the liver every two weeks, and it was taken once every morning to avoid sleep problems.",
+    sideEffects: "The most common side effects are: insomnia, headache, irritability, drowsiness, dizziness, exacerbation of tics, anorexia and weight loss, and rash. These usually appear early and many settle with time. The most important effect is uncommon but serious: liver injury (liver failure, hepatitis, jaundice). Contact your doctor urgently if you notice yellowing of the eyes or skin, dark urine, or unusual tiredness. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "While taking pemoline, doctors checked a liver blood test (ALT, also called SGPT) at the start and every two weeks, plus height and weight in children. Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have any liver problem, extreme anxiety or agitation, or Tourette's syndrome. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Drug interactions involving pemoline have not been systematically studied — tell your doctor and pharmacist about everything you take before starting, and keep other medicines to a minimum while on it.",
+    interactions: "Drug interactions involving pemoline have not been systematically studied. Tell your doctor and pharmacist about everything you take before starting, and keep other medicines to a minimum while on it.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -666,9 +666,9 @@ export const pemoline: Drug = {
         strengths: "18.75 / 37.5 / 75 mg tablets",
       },
     ],
-    typicalDoses: "37.5 mg each morning, increased by 18.75 mg weekly; usual range 56.25-75 mg/day (maximum 112.5 mg/day) — historical dosing only.",
+    typicalDoses: "37.5 mg each morning, increased by 18.75 mg weekly; usual range 56.25-75 mg/day (maximum 112.5 mg/day): historical dosing only.",
     prescribingScenarios: [
-      "Educational and examination context only — Indian practice uses methylphenidate (Schedule X), lisdexamfetamine (import), or atomoxetine for ADHD; pemoline is a withdrawn drug with no current Indian availability.",
+      "Educational and examination context only. Indian practice uses methylphenidate (Schedule X), lisdexamfetamine (import), or atomoxetine for ADHD; pemoline is a withdrawn drug with no current Indian availability.",
     ],
     availability: {
       governmentHospitals: false,
@@ -677,10 +677,10 @@ export const pemoline: Drug = {
       rural: false,
     },
     costCategory: "moderate",
-    costNote: "Not marketed — historical/import-only context. Cost varies by manufacturer and region.",
+    costNote: "Not marketed: historical/import-only context. Cost varies by manufacturer and region.",
     monitoring: "Historical: serum ALT (SGPT) at baseline and every 2 weeks; height and weight in children.",
     patientCounselling: [
-      "Historical drug — counselling points preserved for exams: written informed consent before starting.",
+      "Historical drug: counselling points preserved for exams: written informed consent before starting.",
       "Report jaundice, dark urine, anorexia, or malaise immediately.",
       "Once-daily morning dosing to avoid insomnia.",
     ],
@@ -716,13 +716,13 @@ export const pemoline: Drug = {
         name: "Pemoline",
         slug: "pemoline",
         relationship: "This guide",
-        distinguishing: "The hepatotoxic last-resort — withdrawn from major markets",
+        distinguishing: "The hepatotoxic last-resort: withdrawn from major markets",
       },
       {
         name: "Methylphenidate (d,l)",
         slug: "methylphenidate",
         relationship: "Same class (Stimulant)",
-        distinguishing: "The default stimulant — 60 years of ADHD first-line",
+        distinguishing: "The default stimulant: 60 years of ADHD first-line",
       },
       {
         name: "Lisdexamfetamine",
@@ -734,19 +734,19 @@ export const pemoline: Drug = {
         name: "Dextroamphetamine (d-Amphetamine)",
         slug: "dexamphetamine",
         relationship: "Same class (Stimulant)",
-        distinguishing: "The pure d-isomer — stronger central, softer peripheral",
+        distinguishing: "The pure d-isomer: stronger central, softer peripheral",
       },
       {
         name: "Amphetamine (d,l)",
         slug: "amphetamine",
         relationship: "Same class (Stimulant)",
-        distinguishing: "The Adderall mixture — d for focus, l for wake",
+        distinguishing: "The Adderall mixture: d for focus, l for wake",
       },
       {
         name: "Dexmethylphenidate",
         slug: "dexmethylphenidate",
         relationship: "Same class (Stimulant)",
-        distinguishing: "The active isomer — methylphenidate distilled",
+        distinguishing: "The active isomer: methylphenidate distilled",
       },
     ],
   },
@@ -904,17 +904,17 @@ export const pemoline: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of pemoline in two sentences.",
-      answer: "Pemoline theoretically enhances dopaminergic neurotransmission by an unknown mechanism — it is structurally unrelated to amphetamine and methylphenidate. Its CNS side effects are presumably due to excessive dopamine actions, while the mechanism of its hepatic toxicity is unknown.",
+      answer: "Pemoline theoretically enhances dopaminergic neurotransmission by an unknown mechanism: it is structurally unrelated to amphetamine and methylphenidate. Its CNS side effects are presumably due to excessive dopamine actions, while the mechanism of its hepatic toxicity is unknown.",
       topic: "Mechanism",
     },
     {
       question: "What was pemoline's clinical niche, and why was it never first-line?",
-      answer: "ADHD in patients who fail to respond to other treatments — never first-line because hepatotoxicity (liver failure, hepatitis, jaundice) was unpredictable and life-threatening; written informed consent was required before starting.",
+      answer: "ADHD in patients who fail to respond to other treatments, never first-line because hepatotoxicity (liver failure, hepatitis, jaundice) was unpredictable and life-threatening; written informed consent was required before starting.",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of pemoline and how it was managed.",
-      answer: "Liver failure: no way exists to predict who will develop it, so only patients without liver disease and with normal baseline liver function tests could start pemoline. Management: serum ALT (SGPT) at baseline and every 2 weeks — discontinue if ALT rises above twice the upper limit of normal or if clinical signs of liver dysfunction appear.",
+      answer: "Liver failure: no way exists to predict who will develop it, so only patients without liver disease and with normal baseline liver function tests could start pemoline. Management: serum ALT (SGPT) at baseline and every 2 weeks; discontinue if ALT rises above twice the upper limit of normal or if clinical signs of liver dysfunction appear.",
       topic: "Safety",
     },
     {
@@ -924,7 +924,7 @@ export const pemoline: Drug = {
     },
     {
       question: "Share one clinical pearl about pemoline that separates safe prescribers from unsafe ones.",
-      answer: "The every-2-weeks ALT ritual: serum SGPT at baseline and every 2 weeks for the entire treatment — discontinue if ALT exceeds twice the upper limit of normal; liver function monitoring is a necessary component of pemoline therapy.",
+      answer: "The every-2-weeks ALT ritual: serum SGPT at baseline and every 2 weeks for the entire treatment; discontinue if ALT exceeds twice the upper limit of normal; liver function monitoring is a necessary component of pemoline therapy.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1000,7 +1000,7 @@ export const pemoline: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1045,7 +1045,7 @@ export const pemoline: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Pemoline works — from its uncertain dopaminergic target to its clinical effect timeline.",
+      checkpoint: "You understand how Pemoline works, from its uncertain dopaminergic target to its clinical effect timeline.",
     },
     {
       number: 3,
@@ -1061,7 +1061,7 @@ export const pemoline: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can describe how pemoline was prescribed safely — indications, side effects, contraindications, and the ALT monitoring ritual are mapped.",
+      checkpoint: "You can describe how pemoline was prescribed safely: indications, side effects, contraindications, and the ALT monitoring ritual are mapped.",
     },
     {
       number: 4,
@@ -1104,28 +1104,28 @@ export const pemoline: Drug = {
       "Best to attempt another monotherapy before considering augmentation.",
     ],
     augmentationCombos: [
-      "Drug combinations with pemoline have not been systematically studied — augmentation is best left to the expert if used at all.",
+      "Drug combinations with pemoline have not been systematically studied: augmentation is best left to the expert if used at all.",
     ],
     testsBeforeStarting: [
-      "There is no way to predict who is likely to develop liver failure — only patients without liver disease and with normal baseline liver function tests should initiate pemoline therapy.",
+      "There is no way to predict who is likely to develop liver failure: only patients without liver disease and with normal baseline liver function tests should initiate pemoline therapy.",
       "Serum ALT (SGPT) at baseline and every 2 weeks thereafter.",
       "In children, monitor height and weight.",
     ],
     sideEffectLogic: [
-      "Unknown mechanism overall — CNS side effects are presumably due to excessive dopamine actions, and the mechanism of hepatic toxicity is unknown.",
+      "Unknown mechanism overall. CNS side effects are presumably due to excessive dopamine actions, and the mechanism of hepatic toxicity is unknown.",
     ],
     sideEffectManagement: [
-      "Wait — most side effects appear to be dose-dependent.",
+      "Wait, most side effects appear to be dose-dependent.",
       "Adjust the dose.",
       "If side effects persist, discontinue use.",
       "If signs of hepatic failure develop, discontinue use immediately.",
     ],
     sideEffectRescue: [
       "Short-term use of hypnotics for insomnia.",
-      "Dose reduction or switching to another agent — most side effects cannot be improved with an augmenting agent.",
+      "Dose reduction or switching to another agent, most side effects cannot be improved with an augmenting agent.",
     ],
-    weightGain: "Reported but not expected — some patients may experience weight loss, which is generally regained in 3-6 months.",
-    sedation: "Occurs in a significant minority — activation may also occur.",
+    weightGain: "Reported but not expected, some patients may experience weight loss, which is generally regained in 3-6 months.",
+    sedation: "Occurs in a significant minority: activation may also occur.",
     dosing: [
       {
         indication: "ADHD (patients who fail other treatments)",
@@ -1143,7 +1143,7 @@ export const pemoline: Drug = {
     ],
     dosingTips: [
       "Administer in the morning to avoid insomnia.",
-      "Relatively long half-life (~12 hours) and sustained duration of clinical activity — once daily in the morning, with no sustained-release formulations needed.",
+      "Relatively long half-life (~12 hours) and sustained duration of clinical activity, once daily in the morning, with no sustained-release formulations needed.",
       "May wish to stop treatment intermittently to determine if behavioural symptoms return or treatment is no longer necessary.",
       "Written informed consent is required before initiating treatment (consent form in the manufacturer's package insert).",
     ],
@@ -1152,7 +1152,7 @@ export const pemoline: Drug = {
       "Chlorpromazine or atypical antipsychotics may treat the stimulant effects of pemoline overdose.",
     ],
     longTermUse: "Dependence and abuse are less likely than with amphetamine or methylphenidate; long-term stimulant use may be associated with growth suppression in children (controversial). Must monitor serum ALT (SGPT) every 2 weeks for the duration of treatment; discontinue if ALT increases to a clinically significant level, if any increase above 2 times the upper limit of normal occurs, or if clinical signs suggest liver failure. If therapy is discontinued and restarted, test the liver prior to reinitiating and then every 2 weeks.",
-    habitForming: "Low abuse potential — Schedule IV. Some patients may develop tolerance, but abuse and psychological dependence are rare.",
+    habitForming: "Low abuse potential. Schedule IV. Some patients may develop tolerance, but abuse and psychological dependence are rare.",
     howToStop: [
       "Taper generally unnecessary and not recommended when discontinuing for hepatic toxicity.",
       "Discontinuation symptoms are uncommon.",
@@ -1172,7 +1172,7 @@ export const pemoline: Drug = {
       {
         population: "Renal impairment",
         guidance: [
-          "Use with caution — pemoline is excreted primarily by the kidneys.",
+          "Use with caution: pemoline is excreted primarily by the kidneys.",
         ],
       },
       {
@@ -1184,13 +1184,13 @@ export const pemoline: Drug = {
       {
         population: "Cardiac impairment",
         guidance: [
-          "Use with caution — though less likely than other stimulants to raise blood pressure, with minimal sympathomimetic effects.",
+          "Use with caution, though less likely than other stimulants to raise blood pressure, with minimal sympathomimetic effects.",
         ],
       },
       {
         population: "Elderly",
         guidance: [
-          "Use with caution — elderly patients are more likely to have hepatic impairment; not extensively studied.",
+          "Use with caution: elderly patients are more likely to have hepatic impairment; not extensively studied.",
         ],
       },
       {
@@ -1198,29 +1198,29 @@ export const pemoline: Drug = {
         guidance: [
           "Safety and efficacy not established under age 6; use in children should be reserved for the expert.",
           "May worsen behavioural disturbance and thought disorder in psychotic children.",
-          "May affect predicted height and weight with long-term use (controversial) — monitor both during treatment.",
+          "May affect predicted height and weight with long-term use (controversial): monitor both during treatment.",
         ],
       },
       {
         population: "Pregnancy and breastfeeding",
         guidance: [
-          "Risk Category B — animal studies show no adverse effects, no controlled studies in humans.",
+          "Risk Category B: animal studies show no adverse effects, no controlled studies in humans.",
           "For ADHD patients, pemoline should generally be discontinued before anticipated pregnancies.",
-          "Unknown if secreted in breast milk — recommended either to discontinue the drug or to bottle feed.",
+          "Unknown if secreted in breast milk: recommended either to discontinue the drug or to bottle feed.",
         ],
       },
     ],
     potentialAdvantages: [
-      "Once-daily morning dosing through a ~12-hour half-life — no sustained-release formulation needed.",
-      "Minimal sympathomimetic effects — less likely than other stimulants to raise blood pressure.",
-      "Low abuse potential (Schedule IV) — less dependence liability than amphetamine or methylphenidate.",
+      "Once-daily morning dosing through a ~12-hour half-life: no sustained-release formulation needed.",
+      "Minimal sympathomimetic effects: less likely than other stimulants to raise blood pressure.",
+      "Low abuse potential (Schedule IV): less dependence liability than amphetamine or methylphenidate.",
       "For the rare ADHD patient who responds to this agent and not to other ADHD treatments.",
     ],
     potentialDisadvantages: [
-      "Hepatotoxicity — liver failure, hepatitis, jaundice; unpredictable and the reason pemoline is not used first-line.",
+      "Hepatotoxicity: liver failure, hepatitis, jaundice; unpredictable and the reason pemoline is not used first-line.",
       "Requires written informed consent and liver function testing every 2 weeks for the duration of treatment.",
       "Growth suppression concern in children (controversial).",
-      "Withdrawn from major markets — availability is historical.",
+      "Withdrawn from major markets: availability is historical.",
     ],
     primaryTargetSymptoms: [
       "Concentration and attention span",
@@ -1228,18 +1228,18 @@ export const pemoline: Drug = {
       "Impulsiveness",
     ],
     pearls: [
-      "The last-resort stimulant: not used first-line because of the risk of hepatotoxicity — only for ADHD patients who respond to this agent and not to other treatments of ADHD, and rarely if ever appropriate for off-label uses.",
-      "The every-2-weeks ALT ritual: serum SGPT at baseline and every 2 weeks for the entire treatment — discontinue if ALT exceeds twice the upper limit of normal; liver function monitoring is a necessary component of pemoline therapy.",
-      "Written informed consent from the patient is required before initiating treatment with pemoline — a rarity among psychotropics that marks the drug's risk profile.",
-      "Minimal sympathomimetic effects despite pharmacologic activity similar to other CNS stimulants — less likely than other stimulants to raise blood pressure, with a more gradual onset of action.",
-      "Insomnia often occurs prior to the onset of therapeutic actions — morning dosing is the countermeasure.",
-      "It is not clear that liver function testing is predictive of active liver failure — but early detection of drug-induced hepatic injury with immediate withdrawal of the suspect drug enhances the likelihood of recovery, which is why monitoring was mandated.",
+      "The last-resort stimulant: not used first-line because of the risk of hepatotoxicity; only for ADHD patients who respond to this agent and not to other treatments of ADHD, and rarely if ever appropriate for off-label uses.",
+      "The every-2-weeks ALT ritual: serum SGPT at baseline and every 2 weeks for the entire treatment; discontinue if ALT exceeds twice the upper limit of normal; liver function monitoring is a necessary component of pemoline therapy.",
+      "Written informed consent from the patient is required before initiating treatment with pemoline. A rarity among psychotropics that marks the drug's risk profile.",
+      "Minimal sympathomimetic effects despite pharmacologic activity similar to other CNS stimulants: less likely than other stimulants to raise blood pressure, with a more gradual onset of action.",
+      "Insomnia often occurs prior to the onset of therapeutic actions: morning dosing is the countermeasure.",
+      "It is not clear that liver function testing is predictive of active liver failure, but early detection of drug-induced hepatic injury with immediate withdrawal of the suspect drug enhances the likelihood of recovery, which is why monitoring was mandated.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-10-01",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 1st ed. (2005) — facts paraphrased, not reproduced.",
-    "Pemoline is withdrawn from major markets (hepatotoxicity) — retained for educational completeness; verify against current national guidance before any clinical application.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 1st ed. (2005): facts paraphrased, not reproduced.",
+    "Pemoline is withdrawn from major markets (hepatotoxicity): retained for educational completeness; verify against current national guidance before any clinical application.",
   ],
 };

@@ -18,7 +18,7 @@ export const ketamine: Drug = {
   genericName: "Ketamine",
   brandNames: [
     "Ketalar",
-    "Spravato (esketamine nasal — separate product)",
+    "Spravato (esketamine nasal, separate product)",
   ],
   drugClass: "nmda-antagonist",
   drugClassLabel: "NMDA Antidepressant",
@@ -26,14 +26,14 @@ export const ketamine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antidepressants", "NMDA Antagonists", "Ketamine"],
   /* ---- Hero / summary ---- */
-  tagline: "The dissociative revolution — NMDA blockade that can lift severe depression within hours.",
-  summary: "Ketamine is the dissociative anaesthetic whose NMDA-receptor antagonism (glutamate surge → AMPA → BDNF cascade) produces rapid antidepressant effects in treatment-resistant depression — often within hours, in patients who have failed everything else. Its psychiatric era spans off-label IV sub-anesthetic infusion protocols to the approved intranasal esketamine (with REMS) — alongside dissociation, blood pressure rises, and misuse potential as governing cautions.",
+  tagline: "The dissociative revolution. NMDA blockade that can lift severe depression within hours.",
+  summary: "Ketamine is the dissociative anaesthetic whose NMDA-receptor antagonism (glutamate surge → AMPA → BDNF cascade) produces rapid antidepressant effects in treatment-resistant depression: often within hours, in patients who have failed everything else. Its psychiatric era spans off-label IV sub-anesthetic infusion protocols to the approved intranasal esketamine (with REMS): alongside dissociation, blood pressure rises, and misuse potential as governing cautions.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Ketamine — from its molecular target (NMDA receptor (antagonist) → glutamate surge → AMPA receptor activation → BDNF/mTOR synaptogenesis) to clinical effect.",
+    "Explain the mechanism of action of Ketamine, from its molecular target (NMDA receptor (antagonist) → glutamate surge → AMPA receptor activation → BDNF/mTOR synaptogenesis) to clinical effect.",
     "List the FDA-approved and off-label uses of Ketamine.",
     "Predict the common and serious side effects of Ketamine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Ketamine.",
@@ -41,15 +41,15 @@ export const ketamine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Ketamine blocks NMDA receptors on GABAergic interneurons, disinhibiting a glutamate surge whose AMPA-mediated cascade drives rapid synaptogenesis — an antidepressant mechanism measured in hours, not weeks.",
+    summary: "Ketamine blocks NMDA receptors on GABAergic interneurons, disinhibiting a glutamate surge whose AMPA-mediated cascade drives rapid synaptogenesis: an antidepressant mechanism measured in hours, not weeks.",
     molecularTarget: "NMDA receptor (antagonist) → glutamate surge → AMPA receptor activation → BDNF/mTOR synaptogenesis",
     effect: "Monoaminergic modulation producing the antidepressant effect described.",
     steps: [
-      "Ketamine blocks NMDA receptors on GABAergic interneurons, disinhibiting a glutamate surge whose AMPA-mediated cascade drives rapid synaptogenesis — an antidepressant mechanism measured in hours, not weeks.",
+      "Ketamine blocks NMDA receptors on GABAergic interneurons, disinhibiting a glutamate surge whose AMPA-mediated cascade drives rapid synaptogenesis: an antidepressant mechanism measured in hours, not weeks.",
       "Downstream receptor adaptation over 2-6 weeks translates acute monoamine change into clinical response.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 2-3 hours (IV; antidepressant effects outlast plasma by days). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 2-3 hours (IV; antidepressant effects outlast plasma by days). See mechanism and prescriber sections.",
     halfLife: "2-3 hours (IV; antidepressant effects outlast plasma by days).",
     metabolism: "Hepatic CYP metabolism.",
     excretion: "Renal.",
@@ -101,7 +101,7 @@ export const ketamine: Drug = {
         type: "stimulate",
       },
     ],
-    caption: "NMDA antagonism rebalances glutamate signalling — the pathway that can produce antidepressant effects within hours rather than weeks.",
+    caption: "NMDA antagonism rebalances glutamate signalling: the pathway that can produce antidepressant effects within hours rather than weeks.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Glutamate", "GABA"],
@@ -113,12 +113,12 @@ export const ketamine: Drug = {
     {
       name: "Treatment-resistant depression (IV, off-label)",
       status: "off-label",
-      description: "0.5 mg/kg IV over 40 min — the standard infusion protocol; response within hours to days.",
+      description: "0.5 mg/kg IV over 40 min: the standard infusion protocol; response within hours to days.",
     },
     {
       name: "Treatment-resistant depression (intranasal esketamine, approved)",
       status: "fda-approved",
-      description: "Esketamine nasal spray with oral antidepressant — under REMS monitoring (2-hour observation, blood-pressure protocol).",
+      description: "Esketamine nasal spray with oral antidepressant: under REMS monitoring (2-hour observation, blood-pressure protocol).",
     },
     {
       name: "Major depression with acute suicidality (esketamine)",
@@ -155,14 +155,14 @@ export const ketamine: Drug = {
       name: "Dissociation and perceptual disturbance",
       frequency: "very-common",
       severity: "moderate",
-      description: "The signature effect during and shortly after dosing — dream-like detachment, distortions.",
+      description: "The signature effect during and shortly after dosing: dream-like detachment, distortions.",
       management: "Monitoring setting (REMS for esketamine); settles within the observation window.",
     },
     {
       name: "Blood pressure rise",
       frequency: "very-common",
       severity: "moderate",
-      description: "Sympathomimetic effect — systolic rises of 10-20 mmHg common during dosing.",
+      description: "Sympathomimetic effect: systolic rises of 10-20 mmHg common during dosing.",
       management: "BP monitoring protocol; hold criteria; treat if sustained.",
     },
     {
@@ -192,7 +192,7 @@ export const ketamine: Drug = {
       name: "Severe hypertension during dosing",
       frequency: "uncommon",
       severity: "severe",
-      description: "Marked BP rises in vulnerable patients — the monitoring rationale.",
+      description: "Marked BP rises in vulnerable patients: the monitoring rationale.",
       management: "Protocol hold/treat criteria; defer uncontrolled hypertension.",
     },
     {
@@ -206,7 +206,7 @@ export const ketamine: Drug = {
       name: "Misuse and dependence",
       frequency: "uncommon",
       severity: "severe",
-      description: "Reinforcing dissociative properties — diversion and misuse documented.",
+      description: "Reinforcing dissociative properties: diversion and misuse documented.",
       management: "Controlled setting; screening; no take-home supplies in psychiatric use.",
     },
     {
@@ -220,7 +220,7 @@ export const ketamine: Drug = {
       name: "Perception of memory/cognitive effects (repeated use)",
       frequency: "uncommon",
       severity: "moderate",
-      description: "Long-term data limited — frequency caps and monitoring.",
+      description: "Long-term data limited: frequency caps and monitoring.",
       management: "Interval limits; cognitive check at review.",
     },
   ],
@@ -229,7 +229,7 @@ export const ketamine: Drug = {
     {
       parameter: "Blood pressure (dosing protocol)",
       frequency: "Before, at 40 min, and at discharge every session",
-      rationale: "The sympathomimetic rise — hold/treat criteria.",
+      rationale: "The sympathomimetic rise: hold/treat criteria.",
     },
     {
       parameter: "Dissociation severity (observation window)",
@@ -274,53 +274,53 @@ export const ketamine: Drug = {
     },
   ],
   pregnancy: {
-    summary: "Anaesthetic pregnancy use under specialist care; psychiatric use avoided/individualised — data limited.",
+    summary: "Anaesthetic pregnancy use under specialist care; psychiatric use avoided/individualised: data limited.",
     lactation: "Avoid breastfeeding for 12-24 h after dosing (kinetics-based advice).",
   },
   renalAdjustment: "No specific psychiatric-dose adjustment (bladder caution in chronic misuse).",
   hepaticAdjustment: "Standard caution.",
   /* ---- Education ---- */
-  patientExplanation: "Ketamine is an anaesthetic medicine that, in small doses, can lift severe depression remarkably fast — sometimes within hours rather than weeks. It works on the brain's glutamate system, a different pathway from standard antidepressants. Treatment is given in a clinic under observation because it briefly causes dream-like detachment and a rise in blood pressure; you cannot drive yourself home afterwards.",
+  patientExplanation: "Ketamine is an anaesthetic medicine that, in small doses, can lift severe depression remarkably fast: sometimes within hours rather than weeks. It works on the brain's glutamate system, a different pathway from standard antidepressants. Treatment is given in a clinic under observation because it briefly causes dream-like detachment and a rise in blood pressure; you cannot drive yourself home afterwards.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Ketamine builds over weeks — do not judge it in the first days.",
+    "Benefit from Ketamine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The hours-not-weeks fact: response measurable within 4-24 hours — the single most important pharmacological observation in 50 years of depression research.",
-    "The mechanism journey: NMDA blockade → interneuron disinhibition → glutamate surge → AMPA → BDNF/mTOR → synaptogenesis — the cascade that rewrote the monoamine story.",
+    "The hours-not-weeks fact: response measurable within 4-24 hours; the single most important pharmacological observation in 50 years of depression research.",
+    "The mechanism journey: NMDA blockade → interneuron disinhibition → glutamate surge → AMPA → BDNF/mTOR → synaptogenesis; the cascade that rewrote the monoamine story.",
     "Dissociation is the tax, BP is the monitor, and the setting is the safety system: psychiatric ketamine happens in observed clinical spaces, never take-home.",
-    "Esketamine's REMS: the regulatory answer to a drug that works fast but dissocates and raises BP — 2-hour observation every dose.",
+    "Esketamine's REMS: the regulatory answer to a drug that works fast but dissocates and raises BP; 2-hour observation every dose.",
     "Maintenance is the open question: effects last days-to-weeks; schedules stretch intervals response-guided rather than escalating doses.",
-    "The infusion niche: for the suicidal Wednesday, the failed-everything Friday — ketamine is the circuit-breaker that buys time for slower drugs to work.",
+    "The infusion niche: for the suicidal Wednesday, the failed-everything Friday; ketamine is the circuit-breaker that buys time for slower drugs to work.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Ketamine: Ketamine blocks NMDA receptors on GABAergic interneurons, disinhibiting a glutamate surge whose AMPA-mediated cascade drives rapid synaptogenesis — an antidepressant mechanism measured in hours, not weeks.",
+        "Mechanism of Ketamine: Ketamine blocks NMDA receptors on GABAergic interneurons, disinhibiting a glutamate surge whose AMPA-mediated cascade drives rapid synaptogenesis; an antidepressant mechanism measured in hours, not weeks.",
         "Uses of Ketamine: Treatment-resistant depression (IV, off-label); Treatment-resistant depression (intranasal esketamine, approved); Major depression with acute suicidality (esketamine); Anaesthesia (its first life)",
-        "Mechanism: NMDA ANTAGONIST → glutamate surge → AMPA → BDNF/mTOR synaptogenesis — non-monoamine antidepressant action.",
-        "Onset: HOURS (4-24 h) — the fastest antidepressant effect in medicine.",
+        "Mechanism: NMDA ANTAGONIST → glutamate surge → AMPA → BDNF/mTOR synaptogenesis; non-monoamine antidepressant action.",
+        "Onset: HOURS (4-24 h); the fastest antidepressant effect in medicine.",
       ],
       practical: [
         "Prescribe Ketamine for treatment-resistant depression (iv, off-label) with dose, timing, and duration.",
         "Outline the monitoring plan: Blood pressure (dosing protocol) (Before, at 40 min, and at discharge every session); Dissociation severity (observation window) (Every session (2 h esketamine)); Suicidality and mood trajectory (Between sessions)",
       ],
       longAnswer: [
-        "Ketamine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: NMDA ANTAGONIST → glutamate surge → AMPA → BDNF/mTOR synaptogenesis — non-monoamine antidepressant action.",
-        "Onset: HOURS (4-24 h) — the fastest antidepressant effect in medicine.",
+        "Ketamine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: NMDA ANTAGONIST → glutamate surge → AMPA → BDNF/mTOR synaptogenesis; non-monoamine antidepressant action.",
+        "Onset: HOURS (4-24 h); the fastest antidepressant effect in medicine.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: NMDA ANTAGONIST → glutamate surge → AMPA → BDNF/mTOR synaptogenesis — non-monoamine antidepressant action.",
-        "Onset: HOURS (4-24 h) — the fastest antidepressant effect in medicine.",
+        "Mechanism: NMDA ANTAGONIST → glutamate surge → AMPA → BDNF/mTOR synaptogenesis; non-monoamine antidepressant action.",
+        "Onset: HOURS (4-24 h); the fastest antidepressant effect in medicine.",
         "Uses: treatment-resistant depression (IV off-label 0.5 mg/kg; esketamine nasal approved with REMS); acute suicidality (esketamine).",
         "Signature effects: dissociation + BP rise during dosing (monitoring mandatory).",
-        "Misuse potential — clinical-setting use only; bladder toxicity in chronic misuse.",
+        "Misuse potential: clinical-setting use only; bladder toxicity in chronic misuse.",
         "Racemic IV vs S-enantiomer esketamine: two products, one pharmacology family.",
       ],
       pyqConcepts: [
@@ -331,7 +331,7 @@ export const ketamine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Ketamine develops severe hypertension during dosing — next best step?",
+        "A patient on Ketamine develops severe hypertension during dosing: next best step?",
         "When to choose Ketamine over alternatives in its class.",
       ],
     },
@@ -344,27 +344,27 @@ export const ketamine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The hours-not-weeks fact: response measurable within 4-24 hours — the single most important pharmacological observation in 50 years of depression research.",
-        "The mechanism journey: NMDA blockade → interneuron disinhibition → glutamate surge → AMPA → BDNF/mTOR → synaptogenesis — the cascade that rewrote the monoamine story.",
+        "The hours-not-weeks fact: response measurable within 4-24 hours; the single most important pharmacological observation in 50 years of depression research.",
+        "The mechanism journey: NMDA blockade → interneuron disinhibition → glutamate surge → AMPA → BDNF/mTOR → synaptogenesis; the cascade that rewrote the monoamine story.",
         "Dissociation is the tax, BP is the monitor, and the setting is the safety system: psychiatric ketamine happens in observed clinical spaces, never take-home.",
-        "Esketamine's REMS: the regulatory answer to a drug that works fast but dissocates and raises BP — 2-hour observation every dose.",
+        "Esketamine's REMS: the regulatory answer to a drug that works fast but dissocates and raises BP; 2-hour observation every dose.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: NMDA ANTAGONIST → glutamate surge → AMPA → BDNF/mTOR synaptogenesis — non-monoamine antidepressant action.",
-    "Onset: HOURS (4-24 h) — the fastest antidepressant effect in medicine.",
+    "Mechanism: NMDA ANTAGONIST → glutamate surge → AMPA → BDNF/mTOR synaptogenesis; non-monoamine antidepressant action.",
+    "Onset: HOURS (4-24 h); the fastest antidepressant effect in medicine.",
     "Uses: treatment-resistant depression (IV off-label 0.5 mg/kg; esketamine nasal approved with REMS); acute suicidality (esketamine).",
     "Signature effects: dissociation + BP rise during dosing (monitoring mandatory).",
-    "Misuse potential — clinical-setting use only; bladder toxicity in chronic misuse.",
+    "Misuse potential: clinical-setting use only; bladder toxicity in chronic misuse.",
     "Racemic IV vs S-enantiomer esketamine: two products, one pharmacology family.",
-    "Durations short — maintenance schedules response-guided.",
+    "Durations short: maintenance schedules response-guided.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — treatment-resistant depression (iv, off-label)",
+      title: "First presentation: treatment-resistant depression (iv, off-label)",
       presentation: "A patient presenting with treatment-resistant depression (iv, off-label), started on Ketamine.",
       history: "A adult patient presents with a treatment-resistant depression (iv, off-label) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with treatment-resistant depression (iv, off-label); physical examination and baseline investigations are unremarkable.",
@@ -373,7 +373,7 @@ export const ketamine: Drug = {
       management: "Started at 0.5 mg/kg IV over 40 minutes, titrated to 0.5 mg/kg × 6 (acute course) with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Ketamine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Ketamine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -382,7 +382,7 @@ export const ketamine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "NMDA Antidepressant vs related agents — orientation table",
+      title: "NMDA Antidepressant vs related agents: orientation table",
       primaryDrug: "Ketamine",
       rows: [
         {
@@ -417,7 +417,7 @@ export const ketamine: Drug = {
         },
         {
           attribute: "Clinical niche",
-          primaryValue: "The hours-not-weeks antidepressant — treatment-resistant depression's new lever",
+          primaryValue: "The hours-not-weeks antidepressant: treatment-resistant depression's new lever",
           comparisons: [
             {
               drug: "Ketamine",
@@ -426,7 +426,7 @@ export const ketamine: Drug = {
           ],
         },
       ],
-      takeaway: "Ketamine is compared here with related agents for orientation. Full comparison data lives in each drug's own guide — follow the links for the complete picture.",
+      takeaway: "Ketamine is compared here with related agents for orientation. Full comparison data lives in each drug's own guide: follow the links for the complete picture.",
     },
   ],
   /* ---- Timeline ---- */
@@ -435,7 +435,7 @@ export const ketamine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Ketamine reaches peak plasma concentration and begins acting at its molecular target (NMDA receptor (antagonist) → glutamate surge → AMPA receptor activation → BDNF/mTOR synaptogenesis). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Ketamine reaches peak plasma concentration and begins acting at its molecular target (NMDA receptor (antagonist) → glutamate surge → AMPA receptor activation → BDNF/mTOR synaptogenesis). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -471,7 +471,7 @@ export const ketamine: Drug = {
   faqs: [
     {
       question: "How long does Ketamine take to work?",
-      answer: "Antidepressant effect 4-24 hours; peak 24-72 hours; single-dose effect days-1-2 weeks.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Antidepressant effect 4-24 hours; peak 24-72 hours; single-dose effect days-1-2 weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Ketamine?",
@@ -479,11 +479,11 @@ export const ketamine: Drug = {
     },
     {
       question: "Can I stop Ketamine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Ketamine habit-forming?",
@@ -491,7 +491,7 @@ export const ketamine: Drug = {
     },
     {
       question: "Can I take Ketamine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Ketamine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Ketamine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -628,7 +628,7 @@ export const ketamine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Ketamine",
+      label: "Patient Guide. Ketamine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -636,13 +636,13 @@ export const ketamine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The dissociative revolution — NMDA blockade that can lift severe depression within hours.",
-    summary: "Ketamine is a prescription medicine used to treat treatment-resistant depression (iv, off-label). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Ketamine is an anaesthetic medicine that, in small doses, can lift severe depression remarkably fast — sometimes within hours rather than weeks. It works on the brain's glutamate system, a different pathway from standard antidepressants. Treatment is given in a clinic under observation because it briefly causes dream-like detachment and a rise in blood pressure; you cannot drive yourself home afterwards.",
-    sideEffects: "The most common side effects are: dissociation and perceptual disturbance, blood pressure rise, nausea and vomiting, dizziness and sedation, headache. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Severe hypertension during dosing and Bladder toxicity (chronic misuse). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: blood pressure (dosing protocol) (before, at 40 min, and at discharge every session); dissociation severity (observation window) (every session (2 h esketamine)); suicidality and mood trajectory (between sessions). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The dissociative revolution. NMDA blockade that can lift severe depression within hours.",
+    summary: "Ketamine is a prescription medicine used to treat treatment-resistant depression (iv, off-label). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Ketamine is an anaesthetic medicine that, in small doses, can lift severe depression remarkably fast: sometimes within hours rather than weeks. It works on the brain's glutamate system, a different pathway from standard antidepressants. Treatment is given in a clinic under observation because it briefly causes dream-like detachment and a rise in blood pressure; you cannot drive yourself home afterwards.",
+    sideEffects: "The most common side effects are: dissociation and perceptual disturbance, blood pressure rise, nausea and vomiting, dizziness and sedation, headache. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Severe hypertension during dosing and Bladder toxicity (chronic misuse). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: blood pressure (dosing protocol) (before, at 40 min, and at discharge every session); dissociation severity (observation window) (every session (2 h esketamine)); suicidality and mood trajectory (between sessions). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Benzodiazepines and lamotrigine, MAOIs, Stimulants and sympathomimetics, Alcohol and CNS depressants. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Benzodiazepines and lamotrigine, MAOIs, Stimulants and sympathomimetics, Alcohol and CNS depressants. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -675,7 +675,7 @@ export const ketamine: Drug = {
     costNote: "Cost varies by manufacturer and region.",
     monitoring: "Session BP protocol + 2-hour dissociation observation; misuse screening.",
     patientCounselling: [
-      "Clinic-only administration — never take-home.",
+      "Clinic-only administration, never take-home.",
       "No driving that day.",
       "BP and dream-like effects are expected and monitored.",
     ],
@@ -711,7 +711,7 @@ export const ketamine: Drug = {
         name: "Ketamine",
         slug: "ketamine",
         relationship: "This guide",
-        distinguishing: "The hours-not-weeks antidepressant — treatment-resistant depression's new lever",
+        distinguishing: "The hours-not-weeks antidepressant: treatment-resistant depression's new lever",
       },
     ],
   },
@@ -864,7 +864,7 @@ export const ketamine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Ketamine in two sentences.",
-      answer: "Ketamine blocks NMDA receptors on GABAergic interneurons, disinhibiting a glutamate surge whose AMPA-mediated cascade drives rapid synaptogenesis — an antidepressant mechanism measured in hours, not weeks. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
+      answer: "Ketamine blocks NMDA receptors on GABAergic interneurons, disinhibiting a glutamate surge whose AMPA-mediated cascade drives rapid synaptogenesis: an antidepressant mechanism measured in hours, not weeks. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
       topic: "Mechanism",
     },
     {
@@ -874,7 +874,7 @@ export const ketamine: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Ketamine and how you would manage it.",
-      answer: "Severe hypertension during dosing: Marked BP rises in vulnerable patients — the monitoring rationale. Management: Protocol hold/treat criteria; defer uncontrolled hypertension.",
+      answer: "Severe hypertension during dosing: Marked BP rises in vulnerable patients; the monitoring rationale. Management: Protocol hold/treat criteria; defer uncontrolled hypertension.",
       topic: "Safety",
     },
     {
@@ -884,7 +884,7 @@ export const ketamine: Drug = {
     },
     {
       question: "Share one clinical pearl about Ketamine that separates safe prescribers from unsafe ones.",
-      answer: "The hours-not-weeks fact: response measurable within 4-24 hours — the single most important pharmacological observation in 50 years of depression research.",
+      answer: "The hours-not-weeks fact: response measurable within 4-24 hours; the single most important pharmacological observation in 50 years of depression research.",
       topic: "Clinical Pearls",
     },
   ],
@@ -960,7 +960,7 @@ export const ketamine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1005,7 +1005,7 @@ export const ketamine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Ketamine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Ketamine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1021,7 +1021,7 @@ export const ketamine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Ketamine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Ketamine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1066,7 +1066,7 @@ export const ketamine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Ketamine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Ketamine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1099,14 +1099,14 @@ export const ketamine: Drug = {
       "Esketamine nasal spray device 28 mg/spray (Spravato)",
     ],
     dosingTips: [
-      "The observation period is the prescription — never shortcut it.",
+      "The observation period is the prescription, never shortcut it.",
       "BP protocol with hold criteria at every session.",
       "No driving until the next day after any session.",
       "Interval-stretch maintenance beats dose-escalation.",
       "Screen for psychosis history and substance use before starting.",
     ],
     overdose: [
-      "Overdose with Ketamine is managed supportively — no specific antidote.",
+      "Overdose with Ketamine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Ketamine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1143,26 +1143,26 @@ export const ketamine: Drug = {
       "Hours-not-weeks onset.",
       "Works after multiple failures (the TRS niche).",
       "Suicidality relief speed.",
-      "Non-monoamine mechanism — the research door it opened.",
+      "Non-monoamine mechanism: the research door it opened.",
     ],
-    potentialDisadvantages: ["Dissociation and monitoring burden.", "BP rise every dose.", "Short duration — maintenance treadmill.", "Misuse/diversion potential.", "Long-term data limited."],
+    potentialDisadvantages: ["Dissociation and monitoring burden.", "BP rise every dose.", "Short duration: maintenance treadmill.", "Misuse/diversion potential.", "Long-term data limited."],
     primaryTargetSymptoms: [
       "Treatment-resistant depression",
       "Acute suicidal ideation",
       "Depressive episodes needing rapid bridge",
     ],
     pearls: [
-      "The hours-not-weeks fact: response measurable within 4-24 hours — the single most important pharmacological observation in 50 years of depression research.",
-      "The mechanism journey: NMDA blockade → interneuron disinhibition → glutamate surge → AMPA → BDNF/mTOR → synaptogenesis — the cascade that rewrote the monoamine story.",
+      "The hours-not-weeks fact: response measurable within 4-24 hours; the single most important pharmacological observation in 50 years of depression research.",
+      "The mechanism journey: NMDA blockade → interneuron disinhibition → glutamate surge → AMPA → BDNF/mTOR → synaptogenesis; the cascade that rewrote the monoamine story.",
       "Dissociation is the tax, BP is the monitor, and the setting is the safety system: psychiatric ketamine happens in observed clinical spaces, never take-home.",
-      "Esketamine's REMS: the regulatory answer to a drug that works fast but dissocates and raises BP — 2-hour observation every dose.",
+      "Esketamine's REMS: the regulatory answer to a drug that works fast but dissocates and raises BP; 2-hour observation every dose.",
       "Maintenance is the open question: effects last days-to-weeks; schedules stretch intervals response-guided rather than escalating doses.",
-      "The infusion niche: for the suicidal Wednesday, the failed-everything Friday — ketamine is the circuit-breaker that buys time for slower drugs to work.",
+      "The infusion niche: for the suicidal Wednesday, the failed-everything Friday; ketamine is the circuit-breaker that buys time for slower drugs to work.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

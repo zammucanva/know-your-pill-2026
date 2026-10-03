@@ -23,14 +23,14 @@ export const buspirone: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Anxiolytics & Sedatives", "Azapirones", "Buspirone"],
   /* ---- Hero / summary ---- */
-  tagline: "The non-sedating anxiolytic — 5-HT1A partial agonism that takes weeks but spares dependence.",
-  summary: "Buspirone is the azapirone anxiolytic: a 5-HT1A receptor partial agonist that gradually rebalances serotonergic tone over 2-4 weeks. It is neither sedating nor dependence-forming, does not interact with alcohol or augment respiratory depression, and does not impair driving — the properties that give it a niche despite anxiolytic potency below benzodiazepines. It cannot be used PRN and will not substitute for benzodiazepines acutely.",
+  tagline: "The non-sedating anxiolytic: 5-HT1A partial agonism that takes weeks but spares dependence.",
+  summary: "Buspirone is the azapirone anxiolytic: a 5-HT1A receptor partial agonist that gradually rebalances serotonergic tone over 2-4 weeks. It is neither sedating nor dependence-forming, does not interact with alcohol or augment respiratory depression, and does not impair driving. The properties that give it a niche despite anxiolytic potency below benzodiazepines. It cannot be used PRN and will not substitute for benzodiazepines acutely.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Buspirone — from its molecular target (5-HT1A receptor (partial agonist — pre- and post-synaptic)) to clinical effect.",
+    "Explain the mechanism of action of Buspirone (from its molecular target (5-HT1A receptor (partial agonist) pre- and post-synaptic)) to clinical effect.",
     "List the FDA-approved and off-label uses of Buspirone.",
     "Predict the common and serious side effects of Buspirone from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Buspirone.",
@@ -38,16 +38,16 @@ export const buspirone: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Buspirone partially agonises 5-HT1A receptors, gradually adjusting serotonergic firing — anxiolysis that builds over weeks like an antidepressant.",
-    molecularTarget: "5-HT1A receptor (partial agonist — pre- and post-synaptic)",
+    summary: "Buspirone partially agonises 5-HT1A receptors, gradually adjusting serotonergic firing: anxiolysis that builds over weeks like an antidepressant.",
+    molecularTarget: "5-HT1A receptor (partial agonist, pre- and post-synaptic)",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Buspirone partially agonises 5-HT1A receptors, gradually adjusting serotonergic firing — anxiolysis that builds over weeks like an antidepressant.",
+      "Buspirone partially agonises 5-HT1A receptors, gradually adjusting serotonergic firing: anxiolysis that builds over weeks like an antidepressant.",
       "The target engagement translates into the clinical effect.",
       "Practical use follows the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 2-3 hours (short — divided daily dosing). — see mechanism and prescriber sections.",
-    halfLife: "2-3 hours (short — divided daily dosing).",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 2-3 hours (short, divided daily dosing). See mechanism and prescriber sections.",
+    halfLife: "2-3 hours (short, divided daily dosing).",
     metabolism: "Hepatic.",
     excretion: "Renal.",
   },
@@ -97,7 +97,7 @@ export const buspirone: Drug = {
         label: "over 2–4 weeks",
       },
     ],
-    caption: "Partial agonism at 5-HT1A receptors gently rebalances serotonergic tone — anxiolysis that takes weeks but carries no dependence, sedation, or interaction with alcohol.",
+    caption: "Partial agonism at 5-HT1A receptors gently rebalances serotonergic tone: anxiolysis that takes weeks but carries no dependence, sedation, or interaction with alcohol.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Serotonin (5-HT)"],
@@ -109,7 +109,7 @@ export const buspirone: Drug = {
     {
       name: "Generalised anxiety disorder",
       status: "fda-approved",
-      description: "Second-line to SSRIs; 2-4 weeks to effect — not for acute anxiety.",
+      description: "Second-line to SSRIs; 2-4 weeks to effect, not for acute anxiety.",
     },
     {
       name: "Antidepressant augmentation (partial response)",
@@ -220,7 +220,7 @@ export const buspirone: Drug = {
   ],
   pregnancy: {
     legacyCategory: "B",
-    summary: "No teratogenic signal in available data — among the better-studied anxiolytics in pregnancy; still reserve for clear need.",
+    summary: "No teratogenic signal in available data, among the better-studied anxiolytics in pregnancy; still reserve for clear need.",
     lactation: "Excreted in milk in small amounts; monitor the infant.",
   },
   renalAdjustment: "Avoid in severe renal impairment.",
@@ -228,25 +228,25 @@ export const buspirone: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Buspirone is a non-sedating anti-anxiety medicine that works on the brain's serotonin system: it builds its effect over two to four weeks, like an antidepressant, and cannot be used 'as needed'. Its great advantages are that it is not addictive, does not cause drowsiness, does not interact with alcohol, and does not affect driving.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Buspirone builds over weeks — do not judge it in the first days.",
+    "Benefit from Buspirone builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The expectations drug: buspirone's failure mode is patient expectation — it is an anxiolytic on antidepressant timescales, not a benzodiazepine on minutes.",
-    "No dependence, no sedation, no alcohol interaction, no driving impairment — the safety profile benzodiazepines can never have.",
+    "The expectations drug: buspirone's failure mode is patient expectation. It is an anxiolytic on antidepressant timescales, not a benzodiazepine on minutes.",
+    "No dependence, no sedation, no alcohol interaction, no driving impairment: the safety profile benzodiazepines can never have.",
     "The sexual-dysfunction niche: buspirone + SSRI is the best-evidenced rescue for SSRI sexual adverse effects.",
-    "PRN buspirone does nothing — prescribing it 'as needed' wastes everyone's time.",
+    "PRN buspirone does nothing, prescribing it 'as needed' wastes everyone's time.",
     "2-week patience rule: judge at 2-4 weeks full dose, not on day 3.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Buspirone: Buspirone partially agonises 5-HT1A receptors, gradually adjusting serotonergic firing — anxiolysis that builds over weeks like an antidepressant.",
+        "Mechanism of Buspirone: Buspirone partially agonises 5-HT1A receptors, gradually adjusting serotonergic firing; anxiolysis that builds over weeks like an antidepressant.",
         "Uses of Buspirone: Generalised anxiety disorder; Antidepressant augmentation (partial response); SSRI-emergent sexual dysfunction; Akathisia",
-        "Mechanism: 5-HT1A PARTIAL AGONIST — serotonergic tone rebalancing over weeks.",
+        "Mechanism: 5-HT1A PARTIAL AGONIST; serotonergic tone rebalancing over weeks.",
         "Indication: GAD (2-4 week onset); NOT for acute/PRN anxiety.",
       ],
       practical: [
@@ -254,14 +254,14 @@ export const buspirone: Drug = {
         "Outline the monitoring plan: Effect review at 2-4 weeks (Once at steady therapeutic dose)",
       ],
       longAnswer: [
-        "Buspirone: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: 5-HT1A PARTIAL AGONIST — serotonergic tone rebalancing over weeks.",
+        "Buspirone: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: 5-HT1A PARTIAL AGONIST; serotonergic tone rebalancing over weeks.",
         "Indication: GAD (2-4 week onset); NOT for acute/PRN anxiety.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: 5-HT1A PARTIAL AGONIST — serotonergic tone rebalancing over weeks.",
+        "Mechanism: 5-HT1A PARTIAL AGONIST; serotonergic tone rebalancing over weeks.",
         "Indication: GAD (2-4 week onset); NOT for acute/PRN anxiety.",
         "No dependence, no sedation, no respiratory interaction.",
         "Off-label stars: SSRI augmentation and SSRI sexual-dysfunction rescue.",
@@ -276,29 +276,29 @@ export const buspirone: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Buspirone develops serotonin syndrome (with maois/strong serotonergics) — next best step?",
+        "A patient on Buspirone develops serotonin syndrome (with maois/strong serotonergics): next best step?",
         "When to choose Buspirone over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: 5-HT1A receptor (partial agonist — pre- and post-synaptic)",
+        "Primary target: 5-HT1A receptor (partial agonist, pre- and post-synaptic)",
         "Most common side effects: Dizziness, Nausea and headache, Nervousness or activation",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The expectations drug: buspirone's failure mode is patient expectation — it is an anxiolytic on antidepressant timescales, not a benzodiazepine on minutes.",
-        "No dependence, no sedation, no alcohol interaction, no driving impairment — the safety profile benzodiazepines can never have.",
+        "The expectations drug: buspirone's failure mode is patient expectation. It is an anxiolytic on antidepressant timescales, not a benzodiazepine on minutes.",
+        "No dependence, no sedation, no alcohol interaction, no driving impairment: the safety profile benzodiazepines can never have.",
         "The sexual-dysfunction niche: buspirone + SSRI is the best-evidenced rescue for SSRI sexual adverse effects.",
-        "PRN buspirone does nothing — prescribing it 'as needed' wastes everyone's time.",
+        "PRN buspirone does nothing, prescribing it 'as needed' wastes everyone's time.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: 5-HT1A PARTIAL AGONIST — serotonergic tone rebalancing over weeks.",
+    "Mechanism: 5-HT1A PARTIAL AGONIST; serotonergic tone rebalancing over weeks.",
     "Indication: GAD (2-4 week onset); NOT for acute/PRN anxiety.",
     "No dependence, no sedation, no respiratory interaction.",
     "Off-label stars: SSRI augmentation and SSRI sexual-dysfunction rescue.",
@@ -309,7 +309,7 @@ export const buspirone: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — generalised anxiety disorder",
+      title: "First presentation: generalised anxiety disorder",
       presentation: "A patient presenting with generalised anxiety disorder, started on Buspirone.",
       history: "A adult patient presents with a generalised anxiety disorder picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with generalised anxiety disorder; physical examination and baseline investigations are unremarkable.",
@@ -318,7 +318,7 @@ export const buspirone: Drug = {
       management: "Started at 5 mg two to three times daily, titrated to 20-30 mg/day divided with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Buspirone takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Buspirone takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -327,12 +327,12 @@ export const buspirone: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Azapirone vs related agents — orientation table",
+      title: "Azapirone vs related agents: orientation table",
       primaryDrug: "Buspirone",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "5-HT1A receptor (partial agonist — pre- and post-synaptic)",
+          primaryValue: "5-HT1A receptor (partial agonist, pre- and post-synaptic)",
           comparisons: [
             {
               drug: "Buspirone",
@@ -362,7 +362,7 @@ export const buspirone: Drug = {
         },
         {
           attribute: "Clinical niche",
-          primaryValue: "The dependence-free anxiolytic — weeks not minutes",
+          primaryValue: "The dependence-free anxiolytic: weeks not minutes",
           comparisons: [
             {
               drug: "Buspirone",
@@ -371,7 +371,7 @@ export const buspirone: Drug = {
           ],
         },
       ],
-      takeaway: "Buspirone is compared here with related agents for orientation. Full comparison data lives in each drug's own guide — follow the links for the complete picture.",
+      takeaway: "Buspirone is compared here with related agents for orientation. Full comparison data lives in each drug's own guide: follow the links for the complete picture.",
     },
   ],
   /* ---- Timeline ---- */
@@ -380,7 +380,7 @@ export const buspirone: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Buspirone reaches peak plasma concentration and begins acting at its molecular target (5-HT1A receptor (partial agonist — pre- and post-synaptic)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Buspirone reaches peak plasma concentration and begins acting at its molecular target (5-HT1A receptor (partial agonist, pre- and post-synaptic)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -416,7 +416,7 @@ export const buspirone: Drug = {
   faqs: [
     {
       question: "How long does Buspirone take to work?",
-      answer: "Anxiolysis builds over 2-4 weeks at therapeutic dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Anxiolysis builds over 2-4 weeks at therapeutic dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Buspirone?",
@@ -424,11 +424,11 @@ export const buspirone: Drug = {
     },
     {
       question: "Can I stop Buspirone suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Buspirone habit-forming?",
@@ -436,7 +436,7 @@ export const buspirone: Drug = {
     },
     {
       question: "Can I take Buspirone during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Buspirone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Buspirone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -525,7 +525,7 @@ export const buspirone: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "5-HT1A receptor (partial agonist — pre- and post-synaptic)",
+      label: "5-HT1A receptor (partial agonist, pre- and post-synaptic)",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
@@ -561,7 +561,7 @@ export const buspirone: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Buspirone",
+      label: "Patient Guide. Buspirone",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -569,13 +569,13 @@ export const buspirone: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The non-sedating anxiolytic — 5-HT1A partial agonism that takes weeks but spares dependence.",
-    summary: "Buspirone is a prescription medicine used to treat generalised anxiety disorder. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The non-sedating anxiolytic: 5-HT1A partial agonism that takes weeks but spares dependence.",
+    summary: "Buspirone is a prescription medicine used to treat generalised anxiety disorder. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Buspirone is a non-sedating anti-anxiety medicine that works on the brain's serotonin system: it builds its effect over two to four weeks, like an antidepressant, and cannot be used 'as needed'. Its great advantages are that it is not addictive, does not cause drowsiness, does not interact with alcohol, and does not affect driving.",
-    sideEffects: "The most common side effects are: dizziness, nausea and headache, nervousness or activation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Serotonin syndrome (with MAOIs/strong serotonergics). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: effect review at 2-4 weeks (once at steady therapeutic dose). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: dizziness, nausea and headache, nervousness or activation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Serotonin syndrome (with MAOIs/strong serotonergics). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: effect review at 2-4 weeks (once at steady therapeutic dose). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: MAOIs, Strong CYP3A4 inhibitors (ketoconazole, clarithromycin), Grapefruit juice, Rifampicin and inducers. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: MAOIs, Strong CYP3A4 inhibitors (ketoconazole, clarithromycin), Grapefruit juice, Rifampicin and inducers. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -607,7 +607,7 @@ export const buspirone: Drug = {
     costNote: "Cost varies by manufacturer and region.",
     monitoring: "Effect review at 2-4 weeks.",
     patientCounselling: [
-      "Give it 2-4 weeks — it is not a same-day medicine.",
+      "Give it 2-4 weeks: it is not a same-day medicine.",
       "Take with food, divided doses.",
     ],
   },
@@ -642,7 +642,7 @@ export const buspirone: Drug = {
         name: "Buspirone",
         slug: "buspirone",
         relationship: "This guide",
-        distinguishing: "The dependence-free anxiolytic — weeks not minutes",
+        distinguishing: "The dependence-free anxiolytic: weeks not minutes",
       },
     ],
   },
@@ -790,7 +790,7 @@ export const buspirone: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Buspirone in two sentences.",
-      answer: "Buspirone partially agonises 5-HT1A receptors, gradually adjusting serotonergic firing — anxiolysis that builds over weeks like an antidepressant. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Buspirone partially agonises 5-HT1A receptors, gradually adjusting serotonergic firing: anxiolysis that builds over weeks like an antidepressant. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -810,7 +810,7 @@ export const buspirone: Drug = {
     },
     {
       question: "Share one clinical pearl about Buspirone that separates safe prescribers from unsafe ones.",
-      answer: "The expectations drug: buspirone's failure mode is patient expectation — it is an anxiolytic on antidepressant timescales, not a benzodiazepine on minutes.",
+      answer: "The expectations drug: buspirone's failure mode is patient expectation. It is an anxiolytic on antidepressant timescales, not a benzodiazepine on minutes.",
       topic: "Clinical Pearls",
     },
   ],
@@ -886,7 +886,7 @@ export const buspirone: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -931,7 +931,7 @@ export const buspirone: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Buspirone works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Buspirone works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -947,7 +947,7 @@ export const buspirone: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Buspirone safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Buspirone safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -992,7 +992,7 @@ export const buspirone: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Buspirone follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Buspirone follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1020,7 +1020,7 @@ export const buspirone: Drug = {
       "The SSRI sexual-dysfunction add-on role is worth remembering.",
     ],
     overdose: [
-      "Overdose with Buspirone is managed supportively — no specific antidote.",
+      "Overdose with Buspirone is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Buspirone is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1029,7 +1029,7 @@ export const buspirone: Drug = {
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
     pharmacokinetics: [
-      "Half-life: 2-3 hours (short — divided daily dosing)..",
+      "Half-life: 2-3 hours (short, divided daily dosing)..",
       "Metabolism: Hepatic..",
     ],
     doNotUse: ["Known hypersensitivity to this agent."],
@@ -1062,16 +1062,16 @@ export const buspirone: Drug = {
     ],
     primaryTargetSymptoms: ["Generalised anxiety (chronic)", "SSRI partial response (augmentation)", "SSRI sexual dysfunction"],
     pearls: [
-      "The expectations drug: buspirone's failure mode is patient expectation — it is an anxiolytic on antidepressant timescales, not a benzodiazepine on minutes.",
-      "No dependence, no sedation, no alcohol interaction, no driving impairment — the safety profile benzodiazepines can never have.",
+      "The expectations drug: buspirone's failure mode is patient expectation. It is an anxiolytic on antidepressant timescales, not a benzodiazepine on minutes.",
+      "No dependence, no sedation, no alcohol interaction, no driving impairment: the safety profile benzodiazepines can never have.",
       "The sexual-dysfunction niche: buspirone + SSRI is the best-evidenced rescue for SSRI sexual adverse effects.",
-      "PRN buspirone does nothing — prescribing it 'as needed' wastes everyone's time.",
+      "PRN buspirone does nothing, prescribing it 'as needed' wastes everyone's time.",
       "2-week patience rule: judge at 2-4 weeks full dose, not on day 3.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

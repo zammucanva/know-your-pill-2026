@@ -19,18 +19,18 @@ export const haloperidol: Drug = {
   brandNames: ["Haldol", "Haldol Decanoate", "Serenace"],
   drugClass: "typical-antipsychotic",
   drugClassLabel: "Typical Antipsychotic",
-  drugClassFullName: "Typical (Conventional) Antipsychotic — Butyrophenone",
+  drugClassFullName: "Typical (Conventional) Antipsychotic. Butyrophenone",
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Typical Antipsychotics", "Haloperidol"],
   /* ---- Hero / summary ---- */
-  tagline: "The prototype high-potency D2 blocker — gold-standard potency for psychosis and agitation, at the price of EPS.",
-  summary: "Haloperidol is the reference typical antipsychotic: a potent butyrophenone D2 antagonist used since the 1950s and still a global workhorse for acute psychosis, agitation, delirium, and Tourette's, with a 4-weekly decanoate depot. Its clean profile (minimal sedation, minimal anticholinergic, minimal hypotension) makes it the safest typical in overdose situations and the most agitation-effective IM — while its strong D2 binding delivers the highest EPS and hyperprolactinaemia risk among commonly used agents. In many Indian settings it remains the most available and affordable antipsychotic.",
+  tagline: "The prototype high-potency D2 blocker: gold-standard potency for psychosis and agitation, at the price of EPS.",
+  summary: "Haloperidol is the reference typical antipsychotic: a potent butyrophenone D2 antagonist used since the 1950s and still a global workhorse for acute psychosis, agitation, delirium, and Tourette's, with a 4-weekly decanoate depot. Its clean profile (minimal sedation, minimal anticholinergic, minimal hypotension) makes it the safest typical in overdose situations and the most agitation-effective IM, while its strong D2 binding delivers the highest EPS and hyperprolactinaemia risk among commonly used agents. In many Indian settings it remains the most available and affordable antipsychotic.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Haloperidol — from its molecular target (D2 receptor (potent competitive antagonist); sigma receptors at higher doses) to clinical effect.",
+    "Explain the mechanism of action of Haloperidol, from its molecular target (D2 receptor (potent competitive antagonist); sigma receptors at higher doses) to clinical effect.",
     "List the FDA-approved and off-label uses of Haloperidol.",
     "Predict the common and serious side effects of Haloperidol from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Haloperidol.",
@@ -38,14 +38,14 @@ export const haloperidol: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Haloperidol is a potent, selective D2 receptor antagonist — strong, competitive dopamine blockade with minimal action at histamine, muscarinic, or alpha-1 receptors.",
+    summary: "Haloperidol is a potent, selective D2 receptor antagonist: strong, competitive dopamine blockade with minimal action at histamine, muscarinic, or alpha-1 receptors.",
     molecularTarget: "D2 receptor (potent competitive antagonist); sigma receptors at higher doses",
     effect: "Robust reduction of positive psychotic symptoms, agitation, and tics; dose-dependent EPS, dystonia, akathisia, and hyperprolactinaemia from the same blockade.",
     steps: [
-      "Haloperidol binds D2 receptors with high affinity — therapeutic antipsychotic effect at 65–75% striatal D2 occupancy.",
+      "Haloperidol binds D2 receptors with high affinity: therapeutic antipsychotic effect at 65–75% striatal D2 occupancy.",
       "EPS emerges as occupancy passes ~78–80%: the therapeutic window between antipsychotic effect and motor toxicity is narrow.",
-      "Minimal H1/M1/alpha-1 binding — little sedation, no anticholinergic burden, no meaningful orthostasis (unlike low-potency phenothiazines).",
-      "Tuberoinfundibular D2 blockade raises prolactin markedly — often to symptomatic levels.",
+      "Minimal H1/M1/alpha-1 binding: little sedation, no anticholinergic burden, no meaningful orthostasis (unlike low-potency phenothiazines).",
+      "Tuberoinfundibular D2 blockade raises prolactin markedly: often to symptomatic levels.",
       "IM bioavailability high; decanoate ester releases haloperidol over ~4 weeks for depot maintenance.",
     ],
     pharmacokinetics: "Oral bioavailability 60–70% (first-pass); peak 2–6 h oral, 20 min IM. Decanoate: single injection covers ~4 weeks.",
@@ -111,7 +111,7 @@ export const haloperidol: Drug = {
         label: "hyperprolactinaemia",
       },
     ],
-    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia — efficacy and motor risk are two sides of one coin.",
+    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia: efficacy and motor risk are two sides of one coin.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Dopamine (DA)"],
@@ -171,12 +171,12 @@ export const haloperidol: Drug = {
     {
       name: "Parkinson's disease / Lewy body dementia",
       severity: "absolute",
-      rationale: "D2 blockade causes catastrophic motor worsening — use quetiapine, clozapine, or pimavanserin.",
+      rationale: "D2 blockade causes catastrophic motor worsening. Use quetiapine, clozapine, or pimavanserin.",
     },
     {
       name: "Baseline QT prolongation or uncompensated cardiac disease",
       severity: "relative",
-      rationale: "Haloperidol (especially IV) prolongs QT — ECG and electrolytes first.",
+      rationale: "Haloperidol (especially IV) prolongs QT. ECG and electrolytes first.",
     },
   ],
   blackBoxWarnings: [
@@ -199,15 +199,15 @@ export const haloperidol: Drug = {
       name: "Extrapyramidal symptoms (parkinsonism)",
       frequency: "very-common",
       severity: "moderate",
-      description: "Rigidity, bradykinesia, shuffling gait — the haloperidol signature; dose-dependent.",
+      description: "Rigidity, bradykinesia, shuffling gait: the haloperidol signature; dose-dependent.",
       management: "Reduce dose; add anticholinergic (benztropine/trihexyphenidyl); consider atypical switch.",
     },
     {
       name: "Acute dystonia",
       frequency: "common",
       severity: "severe",
-      description: "Painful muscle spasms — tongue, neck (torticollis), back (opisthotonus), oculogyric crisis; most common in young men within days.",
-      management: "IM/IV benztropine or diphenhydramine — dramatic response; continue oral anticholinergic briefly.",
+      description: "Painful muscle spasms: tongue, neck (torticollis), back (opisthotonus), oculogyric crisis; most common in young men within days.",
+      management: "IM/IV benztropine or diphenhydramine: dramatic response; continue oral anticholinergic briefly.",
     },
     {
       name: "Akathisia",
@@ -220,14 +220,14 @@ export const haloperidol: Drug = {
       name: "Hyperprolactinaemia",
       frequency: "very-common",
       severity: "moderate",
-      description: "Among the highest prolactin elevations in psychiatry — amenorrhoea, galactorrhoea, gynaecomastia, sexual dysfunction, infertility.",
+      description: "Among the highest prolactin elevations in psychiatry: amenorrhoea, galactorrhoea, gynaecomastia, sexual dysfunction, infertility.",
       management: "Ask directly; consider switching to a prolactin-sparing agent.",
     },
     {
       name: "Sedation",
       frequency: "common",
       severity: "mild",
-      description: "Mild — less than low-potency phenothiazines; dose-related.",
+      description: "Mild: less than low-potency phenothiazines; dose-related.",
       management: "Dose timing.",
     },
     {
@@ -243,7 +243,7 @@ export const haloperidol: Drug = {
       name: "Neuroleptic malignant syndrome",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Haloperidol is the classic NMS drug: lead-pipe rigidity, hyperthermia, autonomic instability, CK elevation, coma — mortality 10–20% untreated.",
+      description: "Haloperidol is the classic NMS drug: lead-pipe rigidity, hyperthermia, autonomic instability, CK elevation, coma; mortality 10–20% untreated.",
       management: "Stop immediately; ICU; dantrolene/bromocriptine; avoid rechallenge for at least 2 weeks.",
     },
     {
@@ -251,7 +251,7 @@ export const haloperidol: Drug = {
       frequency: "common",
       severity: "severe",
       description: "Orofacial, limb, and truncal dyskinesia; the highest-risk common antipsychotic with chronic use.",
-      management: "Prevention first — lowest dose, shortest duration; VMAT2 inhibitors for severe cases; consider clozapine.",
+      management: "Prevention first: lowest dose, shortest duration; VMAT2 inhibitors for severe cases; consider clozapine.",
     },
     {
       name: "Torsades de pointes / sudden death (QT)",
@@ -271,7 +271,7 @@ export const haloperidol: Drug = {
       name: "Neutropenia (rare)",
       frequency: "rare",
       severity: "severe",
-      description: "Rare haematological toxicity — the reason clozapine's story began.",
+      description: "Rare haematological toxicity: the reason clozapine's story began.",
       management: "Check FBC if unexplained fever.",
     },
   ],
@@ -305,14 +305,14 @@ export const haloperidol: Drug = {
     {
       parameter: "Weight and metabolic panel",
       frequency: "Baseline, then annually",
-      rationale: "Lower metabolic risk than atypicals — light-touch monitoring.",
+      rationale: "Lower metabolic risk than atypicals: light-touch monitoring.",
     },
   ],
   interactions: [
     {
       drug: "Other QT-prolonging drugs",
       severity: "contraindicated",
-      mechanism: "Additive QT effect — torsades risk concentrates.",
+      mechanism: "Additive QT effect: torsades risk concentrates.",
       action: "Avoid combinations; ECG if unavoidable.",
     },
     {
@@ -336,59 +336,59 @@ export const haloperidol: Drug = {
     {
       drug: "Anticholinergics",
       severity: "moderate",
-      mechanism: "Often co-prescribed for EPS — adds cognitive and bowel burden.",
+      mechanism: "Often co-prescribed for EPS: adds cognitive and bowel burden.",
       action: "Use the minimum effective anticholinergic duration.",
     },
   ],
   pregnancy: {
     legacyCategory: "C",
-    summary: "Decades of use in pregnancy have not shown a major teratogenic signal — among the best-characterised antipsychotics in pregnancy. Third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk.",
-    lactation: "Small milk transfer; infant EPS-like symptoms (stiffness, tremor) possible — monitor. Generally considered acceptable with infant monitoring.",
+    summary: "Decades of use in pregnancy have not shown a major teratogenic signal, among the best-characterised antipsychotics in pregnancy. Third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk.",
+    lactation: "Small milk transfer; infant EPS-like symptoms (stiffness, tremor) possible: monitor. Generally considered acceptable with infant monitoring.",
   },
   renalAdjustment: "No dose adjustment; standard caution.",
   hepaticAdjustment: "Use cautiously in significant hepatic impairment.",
   /* ---- Education ---- */
-  patientExplanation: "Haloperidol is a strong, old, well-understood medicine that blocks dopamine — the brain chemical that is overactive in psychosis and severe agitation. It is powerful and inexpensive, but its strength shows in the body too: stiffness, restlessness, or odd muscle spasms are common early effects, and your doctor will actively check for and treat these.",
+  patientExplanation: "Haloperidol is a strong, old, well-understood medicine that blocks dopamine. The brain chemical that is overactive in psychosis and severe agitation. It is powerful and inexpensive, but its strength shows in the body too: stiffness, restlessness, or odd muscle spasms are common early effects, and your doctor will actively check for and treat these.",
   patientEducationPoints: [
-    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early — these are treatable.",
+    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early: these are treatable.",
     "Stand up slowly during the first week.",
-    "Do not stop suddenly — discuss any change with your doctor.",
-    "Benefit from Haloperidol builds over weeks — do not judge it in the first days.",
+    "Do not stop suddenly: discuss any change with your doctor.",
+    "Benefit from Haloperidol builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "High potency = clean but stiff: minimal sedation/orthostasis/anticholinergic, maximal EPS and prolactin — haloperidol's entire safety story in one line.",
-    "Acute dystonia in a young man within 72 hours of the first dose is the classic presentation — benztropine IM reverses it in minutes.",
-    "Akathisia misread as 'worse psychosis' is the most dangerous haloperidol error — the response is a lower dose, never a higher one.",
+    "High potency = clean but stiff: minimal sedation/orthostasis/anticholinergic, maximal EPS and prolactin; haloperidol's entire safety story in one line.",
+    "Acute dystonia in a young man within 72 hours of the first dose is the classic presentation: benztropine IM reverses it in minutes.",
+    "Akathisia misread as 'worse psychosis' is the most dangerous haloperidol error. The response is a lower dose, never a higher one.",
     "Haloperidol + lorazepam IM is the classical rapid-tranquillisation duo; add promethazine where protocols prefer it.",
-    "IV haloperidol demands ECG and electrolytes — the torsades risk is real at high cumulative doses.",
-    "Decanoate: 10–20× the oral daily dose, given 4-weekly — the standard conversion at stabilisation.",
-    "In resource-limited settings, haloperidol remains the most cost-effective antipsychotic on earth — mastering its motor risk is the skill that makes it safe.",
-    "NMS is the emergency: rigidity + fever + autonomic instability = stop, cool, ICU — haloperidol is its prototype drug.",
+    "IV haloperidol demands ECG and electrolytes: the torsades risk is real at high cumulative doses.",
+    "Decanoate: 10–20× the oral daily dose, given 4-weekly; the standard conversion at stabilisation.",
+    "In resource-limited settings, haloperidol remains the most cost-effective antipsychotic on earth, mastering its motor risk is the skill that makes it safe.",
+    "NMS is the emergency: rigidity + fever + autonomic instability = stop, cool, ICU; haloperidol is its prototype drug.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Haloperidol: Haloperidol is a potent, selective D2 receptor antagonist — strong, competitive dopamine blockade with minimal action at histamine, muscarinic, or alpha-1 receptors.",
-        "Uses of Haloperidol: Schizophrenia — psychotic manifestations; Acute agitation / psychotic excitement; Tourette's disorder — tics and vocal utterances; Severe behaviour problems / hyperexcitability in children (second line)",
-        "Mechanism: potent selective D2 antagonist — the reference typical antipsychotic.",
-        "High potency, 'clean' binding: no anticholinergic, no orthostasis, little sedation — but maximum EPS and hyperprolactinaemia.",
+        "Mechanism of Haloperidol: Haloperidol is a potent, selective D2 receptor antagonist; strong, competitive dopamine blockade with minimal action at histamine, muscarinic, or alpha-1 receptors.",
+        "Uses of Haloperidol: Schizophrenia; psychotic manifestations; Acute agitation / psychotic excitement; Tourette's disorder: tics and vocal utterances; Severe behaviour problems / hyperexcitability in children (second line)",
+        "Mechanism: potent selective D2 antagonist; the reference typical antipsychotic.",
+        "High potency, 'clean' binding: no anticholinergic, no orthostasis, little sedation, but maximum EPS and hyperprolactinaemia.",
       ],
       practical: [
-        "Prescribe Haloperidol for schizophrenia — psychotic manifestations with dose, timing, and duration.",
+        "Prescribe Haloperidol for schizophrenia: psychotic manifestations with dose, timing, and duration.",
         "Outline the monitoring plan: AIMS examination (Baseline, then every 6 months (the highest-TD-risk common agent)); EPS screen at every early review (Weeks 1–4); ECG (Baseline if cardiac risk factors, IV use, or QT-drug combinations)",
       ],
       longAnswer: [
-        "Haloperidol: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: potent selective D2 antagonist — the reference typical antipsychotic.",
-        "High potency, 'clean' binding: no anticholinergic, no orthostasis, little sedation — but maximum EPS and hyperprolactinaemia.",
+        "Haloperidol: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: potent selective D2 antagonist; the reference typical antipsychotic.",
+        "High potency, 'clean' binding: no anticholinergic, no orthostasis, little sedation, but maximum EPS and hyperprolactinaemia.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: potent selective D2 antagonist — the reference typical antipsychotic.",
-        "High potency, 'clean' binding: no anticholinergic, no orthostasis, little sedation — but maximum EPS and hyperprolactinaemia.",
-        "Therapeutic D2 occupancy 65–75%; EPS > 78–80% — the narrow window concept.",
+        "Mechanism: potent selective D2 antagonist; the reference typical antipsychotic.",
+        "High potency, 'clean' binding: no anticholinergic, no orthostasis, little sedation, but maximum EPS and hyperprolactinaemia.",
+        "Therapeutic D2 occupancy 65–75%; EPS > 78–80%: the narrow window concept.",
         "Classical emergency uses: IM rapid tranquillisation (with lorazepam), delirium with agitation, acute dystonia (treats and causes).",
         "Decanoate: 10–20× oral daily dose every 4 weeks.",
         "Highest-priority risks: acute dystonia (young men), akathisia, TD with chronic use, NMS, QT (IV).",
@@ -401,7 +401,7 @@ export const haloperidol: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Haloperidol develops neuroleptic malignant syndrome — next best step?",
+        "A patient on Haloperidol develops neuroleptic malignant syndrome: next best step?",
         "When to choose Haloperidol over alternatives in its class.",
       ],
     },
@@ -415,17 +415,17 @@ export const haloperidol: Drug = {
     psychiatryResidency: {
       advancedPearls: [
         "High potency = clean but stiff: no sedation or hypotension, maximum motor risk.",
-        "Dystonia in the first 72 hours, akathisia in the first weeks, TD in the long years — the haloperidol clock.",
-        "Akathisia misdiagnosed as worsening is the classic error — lower the dose.",
+        "Dystonia in the first 72 hours, akathisia in the first weeks, TD in the long years: the haloperidol clock.",
+        "Akathisia misdiagnosed as worsening is the classic error. Lower the dose.",
         "Decanoate 10–20× oral dose 4-weekly is the depot conversion to remember.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: potent selective D2 antagonist — the reference typical antipsychotic.",
-    "High potency, 'clean' binding: no anticholinergic, no orthostasis, little sedation — but maximum EPS and hyperprolactinaemia.",
-    "Therapeutic D2 occupancy 65–75%; EPS > 78–80% — the narrow window concept.",
+    "Mechanism: potent selective D2 antagonist; the reference typical antipsychotic.",
+    "High potency, 'clean' binding: no anticholinergic, no orthostasis, little sedation, but maximum EPS and hyperprolactinaemia.",
+    "Therapeutic D2 occupancy 65–75%; EPS > 78–80%: the narrow window concept.",
     "Classical emergency uses: IM rapid tranquillisation (with lorazepam), delirium with agitation, acute dystonia (treats and causes).",
     "Decanoate: 10–20× oral daily dose every 4 weeks.",
     "Highest-priority risks: acute dystonia (young men), akathisia, TD with chronic use, NMS, QT (IV).",
@@ -435,16 +435,16 @@ export const haloperidol: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "Acute agitation in the emergency department — the haloperidol hour",
+      title: "Acute agitation in the emergency department: the haloperidol hour",
       presentation: "A 26-year-old man with acute psychotic agitation receives IM haloperidol and lorazepam.",
       history: "A 26-year-old man is brought by police to the emergency department after being found directing traffic undressed at 2 am. He is agitated, shouting that voices command him, and has not slept for 3 nights. No prior psychiatric history obtainable; no signs of intoxication; capillary glucose normal.",
       examination: "Extremely agitated, responding to auditory hallucinations, disorganised speech; no focal neurology. Vital signs: HR 112, BP 142/88, temp 37.0. Physical examination limited by agitation.",
-      diagnosis: "Acute psychotic agitation — first presentation, most consistent with schizophreniaform psychosis pending workup.",
-      rationale: "IM haloperidol with lorazepam is the classical rapid-tranquillisation combination: fast, reliable, cheap, and — crucially — the patient has no cardiac history or ECG risk factors. IV access obtained for chemistry and baseline checks. Anticholinergic cover is prescribed for the first days given his age and sex (highest dystonia demographic).",
+      diagnosis: "Acute psychotic agitation: first presentation, most consistent with schizophreniaform psychosis pending workup.",
+      rationale: "IM haloperidol with lorazepam is the classical rapid-tranquillisation combination: fast, reliable, cheap, and (crucially) the patient has no cardiac history or ECG risk factors. IV access obtained for chemistry and baseline checks. Anticholinergic cover is prescribed for the first days given his age and sex (highest dystonia demographic).",
       management: "Haloperidol 5 mg IM + lorazepam 2 mg IM. Observed 1:1. Within 40 minutes the patient is calmed and cooperative enough for examination and bloods. Oral haloperidol 5 mg twice daily begins the next morning with benztropine 2 mg nightly for the first week; workup initiated.",
-      outcome: "Day 2: mild parkinsonian cogwheeling noted — benztropine continued; haloperidol reduced to 5 mg nocte. Psychosis improves steadily over 2 weeks; the diagnosis is confirmed as schizophreniform disorder; transition planning to an atypical antipsychotic begins as soon as acute control is consolidated.",
+      outcome: "Day 2: mild parkinsonian cogwheeling noted; benztropine continued; haloperidol reduced to 5 mg nocte. Psychosis improves steadily over 2 weeks; the diagnosis is confirmed as schizophreniform disorder; transition planning to an atypical antipsychotic begins as soon as acute control is consolidated.",
       teachingPoints: [
-        "Rapid tranquillisation: treat the danger, then the diagnosis — calm first, investigate immediately after.",
+        "Rapid tranquillisation: treat the danger, then the diagnosis; calm first, investigate immediately after.",
         "The young-male dystonia demographic earns anticholinergic cover from the first dose.",
         "Plan the exit strategy before the first dose: haloperidol controls the storm; an atypical with better long-term tolerability is usually the destination.",
       ],
@@ -453,7 +453,7 @@ export const haloperidol: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Typical Antipsychotic comparison — choosing within the class",
+      title: "Typical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Haloperidol",
       rows: [
         {
@@ -524,7 +524,7 @@ export const haloperidol: Drug = {
         },
         {
           attribute: "Sedation",
-          primaryValue: "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+          primaryValue: "Mild, among the least sedating antipsychotics; alerting more than calming at low doses.",
           comparisons: [
             {
               drug: "Chlorpromazine",
@@ -546,7 +546,7 @@ export const haloperidol: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+          primaryValue: "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool",
           comparisons: [
             {
               drug: "Chlorpromazine",
@@ -567,7 +567,7 @@ export const haloperidol: Drug = {
           ],
         },
       ],
-      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -576,7 +576,7 @@ export const haloperidol: Drug = {
       id: "t1",
       time: "Minutes (IM/IV)",
       title: "Agitation calms",
-      description: "IM onset ~20–30 minutes — the basis of rapid tranquillisation.",
+      description: "IM onset ~20–30 minutes: the basis of rapid tranquillisation.",
       phase: "onset",
     },
     {
@@ -604,7 +604,7 @@ export const haloperidol: Drug = {
       id: "t5",
       time: "Week 4 (decanoate)",
       title: "Steady depot state",
-      description: "After 2–3 injections, trough levels stabilise — dosing interval individualised 3–5 weeks.",
+      description: "After 2–3 injections, trough levels stabilise: dosing interval individualised 3–5 weeks.",
       phase: "duration",
     },
     {
@@ -619,15 +619,15 @@ export const haloperidol: Drug = {
   faqs: [
     {
       question: "Why did my neck/eyes lock up after the first dose?",
-      answer: "That is acute dystonia — a known, dramatic but completely reversible muscle spasm from the medicine's strong dopamine blockade. It is most common in young men in the first days. An injection of another medicine (benztropine or diphenhydramine) relieves it within minutes, and a short course of tablets prevents recurrence.",
+      answer: "That is acute dystonia: a known, dramatic but completely reversible muscle spasm from the medicine's strong dopamine blockade. It is most common in young men in the first days. An injection of another medicine (benztropine or diphenhydramine) relieves it within minutes, and a short course of tablets prevents recurrence.",
     },
     {
       question: "Is haloperidol still used when newer medicines exist?",
       answer: "Very much so: it remains the most reliable and cheapest option for acute agitation and psychosis worldwide, and the 4-weekly injection is a maintenance mainstay in many programmes. Newer drugs improved motor and metabolic tolerability, not fundamental efficacy.",
     },
     {
-      question: "I feel intensely restless — is my illness worse?",
-      answer: "Possibly the opposite: restlessness that makes you unable to sit still (akathisia) is a medicine effect that can mimic worsening. Do not increase the dose yourself — report it; it is treated with dose reduction or propranolol.",
+      question: "I feel intensely restless: is my illness worse?",
+      answer: "Possibly the opposite: restlessness that makes you unable to sit still (akathisia) is a medicine effect that can mimic worsening. Do not increase the dose yourself. Report it; it is treated with dose reduction or propranolol.",
     },
     {
       question: "Why an ECG and blood tests before IV use?",
@@ -635,7 +635,7 @@ export const haloperidol: Drug = {
     },
     {
       question: "Can it be used long-term?",
-      answer: "Yes, at the lowest effective dose, with twice-yearly movement checks — the long-term risk to monitor is tardive dyskinesia, involuntary movements that can become permanent.",
+      answer: "Yes, at the lowest effective dose, with twice-yearly movement checks: the long-term risk to monitor is tardive dyskinesia, involuntary movements that can become permanent.",
     },
   ],
   /* ---- References & related ---- */
@@ -752,7 +752,7 @@ export const haloperidol: Drug = {
       label: "Typical Antipsychotic",
       type: "class",
       href: "#mechanism",
-      note: "Typical (Conventional) Antipsychotic — Butyrophenone",
+      note: "Typical (Conventional) Antipsychotic. Butyrophenone",
     },
     {
       label: "Dopamine (DA)",
@@ -785,7 +785,7 @@ export const haloperidol: Drug = {
       note: "Region where the drug acts",
     },
     {
-      label: "Schizophrenia — psychotic manifestations",
+      label: "Schizophrenia: psychotic manifestations",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -797,7 +797,7 @@ export const haloperidol: Drug = {
       note: "Key indication",
     },
     {
-      label: "Tourette's disorder — tics and vocal utterances",
+      label: "Tourette's disorder: tics and vocal utterances",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -821,7 +821,7 @@ export const haloperidol: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Haloperidol",
+      label: "Patient Guide. Haloperidol",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -829,13 +829,13 @@ export const haloperidol: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The prototype high-potency D2 blocker — gold-standard potency for psychosis and agitation, at the price of EPS.",
-    summary: "Haloperidol is a prescription medicine used to treat schizophrenia — psychotic manifestations. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Haloperidol is a strong, old, well-understood medicine that blocks dopamine — the brain chemical that is overactive in psychosis and severe agitation. It is powerful and inexpensive, but its strength shows in the body too: stiffness, restlessness, or odd muscle spasms are common early effects, and your doctor will actively check for and treat these.",
-    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), acute dystonia, akathisia, hyperprolactinaemia, sedation, blurred vision and dry mouth. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: aims examination (baseline, then every 6 months (the highest-td-risk common agent)); eps screen at every early review (weeks 1–4); ecg (baseline if cardiac risk factors, iv use, or qt-drug combinations). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The prototype high-potency D2 blocker: gold-standard potency for psychosis and agitation, at the price of EPS.",
+    summary: "Haloperidol is a prescription medicine used to treat schizophrenia: psychotic manifestations. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Haloperidol is a strong, old, well-understood medicine that blocks dopamine. The brain chemical that is overactive in psychosis and severe agitation. It is powerful and inexpensive, but its strength shows in the body too: stiffness, restlessness, or odd muscle spasms are common early effects, and your doctor will actively check for and treat these.",
+    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), acute dystonia, akathisia, hyperprolactinaemia, sedation, blurred vision and dry mouth. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: aims examination (baseline, then every 6 months (the highest-td-risk common agent)); eps screen at every early review (weeks 1–4); ecg (baseline if cardiac risk factors, iv use, or qt-drug combinations). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: Known hypersensitivity to haloperidol, Elderly patients with dementia-related psychosis, Parkinson's disease / Lewy body dementia, Baseline QT prolongation or uncompensated cardiac disease. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Other QT-prolonging drugs, Lithium, Carbamazepine and enzyme inducers, CNS depressants. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Other QT-prolonging drugs, Lithium, Carbamazepine and enzyme inducers, CNS depressants. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -868,8 +868,8 @@ export const haloperidol: Drug = {
     costNote: "Cost varies by manufacturer and region.",
     monitoring: "AIMS 6-monthly, EPS review each visit, ECG before IV/high-dose use; weight annually.",
     patientCounselling: [
-      "Report stiffness, restlessness, or odd muscle spasms immediately — they are treatable.",
-      "Do not increase the dose for restlessness without review — it may be the medicine, not the illness.",
+      "Report stiffness, restlessness, or odd muscle spasms immediately: they are treatable.",
+      "Do not increase the dose for restlessness without review: it may be the medicine, not the illness.",
     ],
   },
   sectionDifficulty: {
@@ -904,7 +904,7 @@ export const haloperidol: Drug = {
         name: "Haloperidol",
         slug: "haloperidol",
         relationship: "This guide",
-        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool",
       },
       {
         name: "Chlorpromazine",
@@ -934,7 +934,7 @@ export const haloperidol: Drug = {
         name: "Thioridazine",
         slug: "thioridazine",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "The restricted QT-retinopathy phenothiazine — last-line",
+        distinguishing: "The restricted QT-retinopathy phenothiazine: last-line",
       },
       {
         name: "Trifluoperazine",
@@ -1100,17 +1100,17 @@ export const haloperidol: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Haloperidol in two sentences.",
-      answer: "Haloperidol is a potent, selective D2 receptor antagonist — strong, competitive dopamine blockade with minimal action at histamine, muscarinic, or alpha-1 receptors. Net effect: Robust reduction of positive psychotic symptoms, agitation, and tics; dose-dependent EPS, dystonia, akathisia, and hyperprolactinaemia from the same blockade.",
+      answer: "Haloperidol is a potent, selective D2 receptor antagonist: strong, competitive dopamine blockade with minimal action at histamine, muscarinic, or alpha-1 receptors. Net effect: Robust reduction of positive psychotic symptoms, agitation, and tics; dose-dependent EPS, dystonia, akathisia, and hyperprolactinaemia from the same blockade.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Haloperidol.",
-      answer: "Schizophrenia — psychotic manifestations, Acute agitation / psychotic excitement, Tourette's disorder — tics and vocal utterances, Severe behaviour problems / hyperexcitability in children (second line). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Schizophrenia (psychotic manifestations, Acute agitation / psychotic excitement, Tourette's disorder) tics and vocal utterances, Severe behaviour problems / hyperexcitability in children (second line). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Haloperidol and how you would manage it.",
-      answer: "Neuroleptic malignant syndrome: Haloperidol is the classic NMS drug: lead-pipe rigidity, hyperthermia, autonomic instability, CK elevation, coma — mortality 10–20% untreated. Management: Stop immediately; ICU; dantrolene/bromocriptine; avoid rechallenge for at least 2 weeks.",
+      answer: "Neuroleptic malignant syndrome: Haloperidol is the classic NMS drug: lead-pipe rigidity, hyperthermia, autonomic instability, CK elevation, coma; mortality 10–20% untreated. Management: Stop immediately; ICU; dantrolene/bromocriptine; avoid rechallenge for at least 2 weeks.",
       topic: "Safety",
     },
     {
@@ -1196,7 +1196,7 @@ export const haloperidol: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1241,7 +1241,7 @@ export const haloperidol: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Haloperidol works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Haloperidol works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1257,7 +1257,7 @@ export const haloperidol: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Haloperidol safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Haloperidol safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1290,7 +1290,7 @@ export const haloperidol: Drug = {
     ],
     ifItWorks: [
       "Consolidate at the lowest effective dose.",
-      "Plan transition to maintenance — oral, or decanoate 4-weekly when adherence is fragile.",
+      "Plan transition to maintenance: oral, or decanoate 4-weekly when adherence is fragile.",
       "Attempt dose reduction after stabilisation to find the minimum.",
     ],
     ifItDoesNotWork: [
@@ -1299,7 +1299,7 @@ export const haloperidol: Drug = {
     ],
     augmentationCombos: [
       "Lorazepam for acute agitation (the classical pair).",
-      "Anticholinergic for EPS — prophylactically in dystonia-risk demographics.",
+      "Anticholinergic for EPS: prophylactically in dystonia-risk demographics.",
       "Lithium or valproate if treating mania.",
     ],
     testsBeforeStarting: [
@@ -1308,10 +1308,10 @@ export const haloperidol: Drug = {
       "Baseline AIMS; weight; prolactin only if symptomatic.",
     ],
     sideEffectLogic: [
-      "Strong selective D2 binding predicts everything: EPS, dystonia, akathisia, hyperprolactinaemia — and minimal sedation or hypotension. The adverse-effect profile is the mechanism made visible.",
+      "Strong selective D2 binding predicts everything: EPS, dystonia, akathisia, hyperprolactinaemia, and minimal sedation or hypotension. The adverse-effect profile is the mechanism made visible.",
     ],
     sideEffectManagement: [
-      "Reduce dose — the single most effective EPS manoeuvre.",
+      "Reduce dose: the single most effective EPS manoeuvre.",
       "Anticholinergics for dystonia/parkinsonism; propranolol for akathisia.",
       "Switch to an atypical for dose-limiting or persistent motor effects.",
     ],
@@ -1321,7 +1321,7 @@ export const haloperidol: Drug = {
       "Prophylactic anticholinergic for the first week in high-dystonia-risk patients.",
     ],
     weightGain: "See product information and class comparison.",
-    sedation: "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+    sedation: "Mild, among the least sedating antipsychotics; alerting more than calming at low doses.",
     dosing: [
       {
         indication: "Psychosis (oral, moderate)",
@@ -1365,28 +1365,28 @@ export const haloperidol: Drug = {
       "Anticholinergic cover for the first week in young men (dystonia demographic).",
       "Decanoate: 10–20× oral daily dose, first injection often with a short oral overlap.",
       "One ECG before high-dose or IV use prevents the rare catastrophic outcome.",
-      "In delirium, haloperidol treats agitation, not the underlying cause — the workup continues.",
+      "In delirium, haloperidol treats agitation, not the underlying cause: the workup continues.",
     ],
     overdose: [
       "Severe EPS (rigidity, dystonia), sedation, hypotension, QT prolongation with torsades risk.",
       "ECG monitoring, electrolyte correction, supportive care; physostigmine avoided; anticholinergics for dystonia.",
     ],
-    longTermUse: "Effective for decades of maintenance, but TD risk accrues with time — AIMS surveillance and dose-minimisation attempts are the long-term discipline.",
+    longTermUse: "Effective for decades of maintenance, but TD risk accrues with time. AIMS surveillance and dose-minimisation attempts are the long-term discipline.",
     habitForming: "Not considered habit-forming.",
     howToStop: [
-      "Taper rather than abrupt stop — withdrawal dyskinesia and rebound psychosis described.",
+      "Taper rather than abrupt stop: withdrawal dyskinesia and rebound psychosis described.",
       "After switching to an atypical, overlap during cross-titration.",
-      "Decanoate tapers itself — effects persist a month after the last injection.",
+      "Decanoate tapers itself: effects persist a month after the last injection.",
     ],
     pharmacokinetics: [
       "Oral half-life 12–38 h; decanoate ~3 weeks.",
-      "Metabolism via CYP3A4/2D6 + glucuronidation — moderate interaction surface.",
+      "Metabolism via CYP3A4/2D6 + glucuronidation: moderate interaction surface.",
       "IM nearly complete bioavailability.",
     ],
     doNotUse: [
       "Known hypersensitivity.",
       "Dementia-related psychosis in the elderly (boxed warning).",
-      "Parkinson's disease / Lewy body dementia — motor catastrophe.",
+      "Parkinson's disease / Lewy body dementia: motor catastrophe.",
       "Baseline long QT or uncompensated heart failure without cardiology input.",
     ],
     specialPopulations: [
@@ -1401,21 +1401,21 @@ export const haloperidol: Drug = {
       {
         population: "Children",
         guidance: [
-          "Approved in severe disorders (Tourette's, refractory aggression) — specialist dosing.",
+          "Approved in severe disorders (Tourette's, refractory aggression): specialist dosing.",
           "Dystonia risk highest in children and young men.",
         ],
       },
       {
         population: "Pregnancy",
         guidance: [
-          "Among the best-characterised antipsychotics in pregnancy — no major signal.",
+          "Among the best-characterised antipsychotics in pregnancy: no major signal.",
           "Third-trimester neonatal EPS monitoring.",
         ],
       },
     ],
     potentialAdvantages: [
       "Robust, fast, reliable antipsychotic and anti-agitation effect.",
-      "Cheapest effective option worldwide — formulary backbone.",
+      "Cheapest effective option worldwide: formulary backbone.",
       "No weight gain, no orthostasis, no anticholinergic burden.",
       "Depot every 4 weeks.",
       "Best-studied agent in delirium agitation.",
@@ -1430,8 +1430,8 @@ export const haloperidol: Drug = {
     primaryTargetSymptoms: ["Positive psychotic symptoms", "Acute agitation", "Tics (Tourette's)", "Delirium with agitation"],
     pearls: [
       "High potency = clean but stiff: no sedation or hypotension, maximum motor risk.",
-      "Dystonia in the first 72 hours, akathisia in the first weeks, TD in the long years — the haloperidol clock.",
-      "Akathisia misdiagnosed as worsening is the classic error — lower the dose.",
+      "Dystonia in the first 72 hours, akathisia in the first weeks, TD in the long years: the haloperidol clock.",
+      "Akathisia misdiagnosed as worsening is the classic error. Lower the dose.",
       "Decanoate 10–20× oral dose 4-weekly is the depot conversion to remember.",
       "IV haloperidol: ECG and electrolytes first, always.",
     ],
@@ -1439,6 +1439,6 @@ export const haloperidol: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

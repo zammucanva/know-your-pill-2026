@@ -23,14 +23,14 @@ export const cariprazine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Atypical Antipsychotics", "Cariprazine"],
   /* ---- Hero / summary ---- */
-  tagline: "The D3-preferring stabiliser — the bipolar-depression and negative-symptom specialist.",
-  summary: "Cariprazine is a dopamine D3/D2 partial agonist with the highest D3 affinity in clinical use, plus 5-HT1A partial agonism and 5-HT2B antagonism. Its D3 emphasis is linked to effects on motivation, reward, and negative symptoms — setting it apart from other agents. It is approved for schizophrenia, bipolar mania, and — its signature — bipolar depression, with a metabolically clean profile and very long effective half-life via active metabolites.",
+  tagline: "The D3-preferring stabiliser: the bipolar-depression and negative-symptom specialist.",
+  summary: "Cariprazine is a dopamine D3/D2 partial agonist with the highest D3 affinity in clinical use, plus 5-HT1A partial agonism and 5-HT2B antagonism. Its D3 emphasis is linked to effects on motivation, reward, and negative symptoms, setting it apart from other agents. It is approved for schizophrenia, bipolar mania, and (its signature) bipolar depression, with a metabolically clean profile and very long effective half-life via active metabolites.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Cariprazine — from its molecular target (D3 (highest affinity in clinical use); D2 (partial agonist); 5-HT1A (partial agonist); 5-HT2B (antagonist)) to clinical effect.",
+    "Explain the mechanism of action of Cariprazine, from its molecular target (D3 (highest affinity in clinical use); D2 (partial agonist); 5-HT1A (partial agonist); 5-HT2B (antagonist)) to clinical effect.",
     "List the FDA-approved and off-label uses of Cariprazine.",
     "Predict the common and serious side effects of Cariprazine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Cariprazine.",
@@ -38,18 +38,18 @@ export const cariprazine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Cariprazine is a D3-preferring D3/D2 partial agonist (10-fold D3 selectivity) with 5-HT1A partial agonism — a stabiliser tuned toward the dopamine receptor that governs motivation and reward.",
+    summary: "Cariprazine is a D3-preferring D3/D2 partial agonist (10-fold D3 selectivity) with 5-HT1A partial agonism: a stabiliser tuned toward the dopamine receptor that governs motivation and reward.",
     molecularTarget: "D3 (highest affinity in clinical use); D2 (partial agonist); 5-HT1A (partial agonist); 5-HT2B (antagonist)",
     effect: "Antipsychotic, anti-manic, and antidepressant-range efficacy with D3-linked benefits on motivation and negative symptoms.",
     steps: [
-      "Partial agonism at D2 — the aripiprazole-class stabiliser mechanism for positive symptoms.",
-      "D3 selectivity engages mesolimbic reward and motivation circuitry — the theoretical basis for its negative-symptom and pro-motivational profile.",
+      "Partial agonism at D2: the aripiprazole-class stabiliser mechanism for positive symptoms.",
+      "D3 selectivity engages mesolimbic reward and motivation circuitry: the theoretical basis for its negative-symptom and pro-motivational profile.",
       "5-HT1A partial agonism contributes serotonergic modulation relevant to mood.",
       "Long-acting active metabolites (didemethylcariprazine) extend effective coverage to weeks.",
     ],
     pharmacokinetics: "Peak 3–6 hours; steady state takes 1–2 weeks (metabolites accumulate longer).",
-    halfLife: "Cariprazine 1–3 h BUT active metabolites 21–77 h — effective coverage 1–4 weeks; dose changes take weeks to fully manifest.",
-    activeMetabolite: "Desmethyl- and didesmethylcariprazine — potent D3/D2 partial agonists with long half-lives.",
+    halfLife: "Cariprazine 1–3 h BUT active metabolites 21–77 h: effective coverage 1–4 weeks; dose changes take weeks to fully manifest.",
+    activeMetabolite: "Desmethyl- and didesmethylcariprazine: potent D3/D2 partial agonists with long half-lives.",
     metabolism: "Hepatic CYP3A4 (major) and 2D6 (minor).",
     excretion: "Renal and faecal metabolites.",
   },
@@ -128,7 +128,7 @@ export const cariprazine: Drug = {
         label: "5-HT2A-mediated benefit",
       },
     ],
-    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms — the serotonin-dopamine hypothesis of atypical antipsychotics.",
+    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms: the serotonin-dopamine hypothesis of atypical antipsychotics.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Dopamine (DA)", "Serotonin (5-HT)"],
@@ -152,7 +152,7 @@ export const cariprazine: Drug = {
     {
       name: "Bipolar I depression",
       status: "fda-approved",
-      description: "A signature indication — joins quetiapine, lurasidone, asenapine, and OFC on the short list.",
+      description: "A signature indication: joins quetiapine, lurasidone, asenapine, and OFC on the short list.",
       ageGroup: "Adults",
     },
     {
@@ -248,7 +248,7 @@ export const cariprazine: Drug = {
     {
       parameter: "Weight and BMI",
       frequency: "Baseline, then at 4, 8, 12 weeks and quarterly",
-      rationale: "Class metabolic risk — early trajectory detection.",
+      rationale: "Class metabolic risk: early trajectory detection.",
     },
     {
       parameter: "Fasting glucose / HbA1c",
@@ -263,7 +263,7 @@ export const cariprazine: Drug = {
     {
       parameter: "Blood pressure (orthostatic)",
       frequency: "Baseline and during titration",
-      rationale: "Alpha-1 blockade — orthostasis risk.",
+      rationale: "Alpha-1 blockade: orthostasis risk.",
     },
     {
       parameter: "AIMS examination",
@@ -286,32 +286,32 @@ export const cariprazine: Drug = {
     },
   ],
   pregnancy: {
-    summary: "Limited human data; no teratogenic signal established. Note the long effective half-life — planning ahead matters if switching is desired around conception. Standard antipsychotic pregnancy logic otherwise.",
+    summary: "Limited human data; no teratogenic signal established. Note the long effective half-life: planning ahead matters if switching is desired around conception. Standard antipsychotic pregnancy logic otherwise.",
     lactation: "Limited data; long-half-life metabolites make infant monitoring essential if used.",
   },
   renalAdjustment: "No adjustment for mild-moderate impairment; not studied in severe impairment.",
   hepaticAdjustment: "No adjustment for mild; not recommended in moderate-severe impairment.",
   /* ---- Education ---- */
-  patientExplanation: "Cariprazine is a dopamine-tuning medicine that leans toward the part of the dopamine system responsible for drive and motivation. It treats schizophrenia, mania, and the depressed phase of bipolar disorder. It stays in the body a long time, so its effects build and fade over weeks — dose changes are slow and deliberate.",
+  patientExplanation: "Cariprazine is a dopamine-tuning medicine that leans toward the part of the dopamine system responsible for drive and motivation. It treats schizophrenia, mania, and the depressed phase of bipolar disorder. It stays in the body a long time, so its effects build and fade over weeks: dose changes are slow and deliberate.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Cariprazine builds over weeks — do not judge it in the first days.",
+    "Benefit from Cariprazine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "D3 is the differentiator: motivation, reward, negative symptoms — the cariprazine hypothesis.",
+    "D3 is the differentiator: motivation, reward, negative symptoms; the cariprazine hypothesis.",
     "Bipolar depression + metabolic safety: the indication pairing it shares with lurasidone.",
-    "The metabolite tail is weeks long — patience is dosing pharmacology: changes take weeks to fully show.",
-    "Akathisia remains the main tolerability issue in depression dosing — titrate slowly through 1.5 mg.",
-    "Contraindicated with strong 3A4 inducers — unlike aripiprazole where dose-doubling is possible.",
+    "The metabolite tail is weeks long: patience is dosing pharmacology: changes take weeks to fully show.",
+    "Akathisia remains the main tolerability issue in depression dosing. Titrate slowly through 1.5 mg.",
+    "Contraindicated with strong 3A4 inducers, unlike aripiprazole where dose-doubling is possible.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Cariprazine: Cariprazine is a D3-preferring D3/D2 partial agonist (10-fold D3 selectivity) with 5-HT1A partial agonism — a stabiliser tuned toward the dopamine receptor that governs motivation and reward.",
-        "Uses of Cariprazine: Schizophrenia; Acute manic / mixed episodes of bipolar I; Bipolar I depression; Major depressive disorder — adjunctive",
+        "Mechanism of Cariprazine: Cariprazine is a D3-preferring D3/D2 partial agonist (10-fold D3 selectivity) with 5-HT1A partial agonism; a stabiliser tuned toward the dopamine receptor that governs motivation and reward.",
+        "Uses of Cariprazine: Schizophrenia; Acute manic / mixed episodes of bipolar I; Bipolar I depression; Major depressive disorder: adjunctive",
         "Mechanism: D3-PREFERRING D3/D2 partial agonist (unique in class) + 5-HT1A partial agonist.",
         "Signature: bipolar depression approval + suggested negative-symptom benefit.",
       ],
@@ -320,7 +320,7 @@ export const cariprazine: Drug = {
         "Outline the monitoring plan: Weight and BMI (Baseline, then at 4, 8, 12 weeks and quarterly); Fasting glucose / HbA1c (Baseline, 12 weeks, then annually); Lipid profile (fasting) (Baseline, 12 weeks, then annually)",
       ],
       longAnswer: [
-        "Cariprazine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Cariprazine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: D3-PREFERRING D3/D2 partial agonist (unique in class) + 5-HT1A partial agonist.",
         "Signature: bipolar depression approval + suggested negative-symptom benefit.",
       ],
@@ -331,14 +331,14 @@ export const cariprazine: Drug = {
         "Signature: bipolar depression approval + suggested negative-symptom benefit.",
         "Approvals: schizophrenia, bipolar mania, bipolar depression, MDD adjunct.",
         "Effective half-life 1–4 weeks via long-lived active metabolites.",
-        "CYP3A4 metabolism — inducers contraindicated, inhibitors halve dose.",
+        "CYP3A4 metabolism: inducers contraindicated, inhibitors halve dose.",
         "Doses: schizophrenia 1.5–6 mg; bipolar depression 1.5–3 mg.",
       ],
       pyqConcepts: ["Mechanism/target of Cariprazine", "Key adverse effect: Tardive dyskinesia", "Dosing and titration of Cariprazine"],
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Cariprazine develops tardive dyskinesia — next best step?",
+        "A patient on Cariprazine develops tardive dyskinesia: next best step?",
         "When to choose Cariprazine over alternatives in its class.",
       ],
     },
@@ -351,9 +351,9 @@ export const cariprazine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "D3 selectivity = the motivational antipsychotic — the cariprazine hypothesis.",
+        "D3 selectivity = the motivational antipsychotic: the cariprazine hypothesis.",
         "Weeks-long metabolite tail: patience is the dosing discipline.",
-        "D3 is the differentiator: motivation, reward, negative symptoms — the cariprazine hypothesis.",
+        "D3 is the differentiator: motivation, reward, negative symptoms; the cariprazine hypothesis.",
         "Bipolar depression + metabolic safety: the indication pairing it shares with lurasidone.",
       ],
     },
@@ -364,13 +364,13 @@ export const cariprazine: Drug = {
     "Signature: bipolar depression approval + suggested negative-symptom benefit.",
     "Approvals: schizophrenia, bipolar mania, bipolar depression, MDD adjunct.",
     "Effective half-life 1–4 weeks via long-lived active metabolites.",
-    "CYP3A4 metabolism — inducers contraindicated, inhibitors halve dose.",
+    "CYP3A4 metabolism: inducers contraindicated, inhibitors halve dose.",
     "Doses: schizophrenia 1.5–6 mg; bipolar depression 1.5–3 mg.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia",
+      title: "First presentation: schizophrenia",
       presentation: "A patient presenting with schizophrenia, started on Cariprazine.",
       history: "A adult patient presents with a schizophrenia picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with schizophrenia; physical examination and baseline investigations are unremarkable.",
@@ -379,7 +379,7 @@ export const cariprazine: Drug = {
       management: "Started at 1.5 mg once daily, titrated to 1.5–6 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Cariprazine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Cariprazine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -388,7 +388,7 @@ export const cariprazine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Dopamine Stabiliser comparison — choosing within the class",
+      title: "Dopamine Stabiliser comparison: choosing within the class",
       primaryDrug: "Cariprazine",
       rows: [
         {
@@ -415,7 +415,7 @@ export const cariprazine: Drug = {
         },
         {
           attribute: "Half-life",
-          primaryValue: "Cariprazine 1–3 h BUT active metabolites 21–77 h — effective coverage 1–4 weeks; dose changes take weeks to fully manifest.",
+          primaryValue: "Cariprazine 1–3 h BUT active metabolites 21–77 h: effective coverage 1–4 weeks; dose changes take weeks to fully manifest.",
           comparisons: [
             {
               drug: "Aripiprazole",
@@ -459,7 +459,7 @@ export const cariprazine: Drug = {
         },
         {
           attribute: "Sedation",
-          primaryValue: "Low — mildly activating tendency.",
+          primaryValue: "Low: mildly activating tendency.",
           comparisons: [
             {
               drug: "Aripiprazole",
@@ -502,7 +502,7 @@ export const cariprazine: Drug = {
           ],
         },
       ],
-      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -511,7 +511,7 @@ export const cariprazine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Cariprazine reaches peak plasma concentration and begins acting at its molecular target (D3 (highest affinity in clinical use); D2 (partial agonist); 5-HT1A (partial agonist); 5-HT2B (antagonist)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Cariprazine reaches peak plasma concentration and begins acting at its molecular target (D3 (highest affinity in clinical use); D2 (partial agonist); 5-HT1A (partial agonist); 5-HT2B (antagonist)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -547,7 +547,7 @@ export const cariprazine: Drug = {
   faqs: [
     {
       question: "How long does Cariprazine take to work?",
-      answer: "Mania: days to 1 week; schizophrenia: 1–3 weeks; bipolar depression: 1–3 weeks.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Mania: days to 1 week; schizophrenia: 1–3 weeks; bipolar depression: 1–3 weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Cariprazine?",
@@ -555,11 +555,11 @@ export const cariprazine: Drug = {
     },
     {
       question: "Can I stop Cariprazine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Cariprazine habit-forming?",
@@ -567,7 +567,7 @@ export const cariprazine: Drug = {
     },
     {
       question: "Can I take Cariprazine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Cariprazine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Cariprazine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -755,7 +755,7 @@ export const cariprazine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Cariprazine",
+      label: "Patient Guide. Cariprazine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -763,13 +763,13 @@ export const cariprazine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The D3-preferring stabiliser — the bipolar-depression and negative-symptom specialist.",
-    summary: "Cariprazine is a prescription medicine used to treat schizophrenia. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Cariprazine is a dopamine-tuning medicine that leans toward the part of the dopamine system responsible for drive and motivation. It treats schizophrenia, mania, and the depressed phase of bipolar disorder. It stays in the body a long time, so its effects build and fade over weeks — dose changes are slow and deliberate.",
-    sideEffects: "The most common side effects are: akathisia and restlessness, nausea, insomnia or agitation, restless legs / extrapyramidal symptoms, headache and fatigue. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Tardive dyskinesia and Neuroleptic malignant syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and bmi (baseline, then at 4, 8, 12 weeks and quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually); lipid profile (fasting) (baseline, 12 weeks, then annually). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The D3-preferring stabiliser: the bipolar-depression and negative-symptom specialist.",
+    summary: "Cariprazine is a prescription medicine used to treat schizophrenia. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Cariprazine is a dopamine-tuning medicine that leans toward the part of the dopamine system responsible for drive and motivation. It treats schizophrenia, mania, and the depressed phase of bipolar disorder. It stays in the body a long time, so its effects build and fade over weeks: dose changes are slow and deliberate.",
+    sideEffects: "The most common side effects are: akathisia and restlessness, nausea, insomnia or agitation, restless legs / extrapyramidal symptoms, headache and fatigue. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Tardive dyskinesia and Neuroleptic malignant syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and bmi (baseline, then at 4, 8, 12 weeks and quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually); lipid profile (fasting) (baseline, 12 weeks, then annually). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Strong CYP3A4 inhibitors (ketoconazole, clarithromycin), Strong CYP3A4 inducers (carbamazepine, rifampicin). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Strong CYP3A4 inhibitors (ketoconazole, clarithromycin), Strong CYP3A4 inducers (carbamazepine, rifampicin). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -794,7 +794,7 @@ export const cariprazine: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -834,49 +834,49 @@ export const cariprazine: Drug = {
         name: "Aripiprazole",
         slug: "aripiprazole",
         relationship: "Same class (Dopamine Stabiliser)",
-        distinguishing: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+        distinguishing: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
       },
       {
         name: "Clozapine",
         slug: "clozapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
       },
       {
         name: "Lurasidone",
         slug: "lurasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+        distinguishing: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
       },
       {
         name: "Olanzapine",
         slug: "olanzapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+        distinguishing: "Most robust broad-spectrum atypical: heaviest metabolic burden",
       },
       {
         name: "Paliperidone",
         slug: "paliperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The LAI platform king — monthly to 6-monthly injections for schizophrenia",
+        distinguishing: "The LAI platform king: monthly to 6-monthly injections for schizophrenia",
       },
       {
         name: "Quetiapine",
         slug: "quetiapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin — the sedating antidepressant-antipsychotic",
+        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin: the sedating antidepressant-antipsychotic",
       },
       {
         name: "Risperidone",
         slug: "risperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most potent D2 blockade among atypicals — highest prolactin, best-studied LAI",
+        distinguishing: "Most potent D2 blockade among atypicals: highest prolactin, best-studied LAI",
       },
       {
         name: "Ziprasidone",
         slug: "ziprasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic — with QT vigilance",
+        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic, with QT vigilance",
       },
     ],
   },
@@ -1024,12 +1024,12 @@ export const cariprazine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Cariprazine in two sentences.",
-      answer: "Cariprazine is a D3-preferring D3/D2 partial agonist (10-fold D3 selectivity) with 5-HT1A partial agonism — a stabiliser tuned toward the dopamine receptor that governs motivation and reward. Net effect: Antipsychotic, anti-manic, and antidepressant-range efficacy with D3-linked benefits on motivation and negative symptoms.",
+      answer: "Cariprazine is a D3-preferring D3/D2 partial agonist (10-fold D3 selectivity) with 5-HT1A partial agonism: a stabiliser tuned toward the dopamine receptor that governs motivation and reward. Net effect: Antipsychotic, anti-manic, and antidepressant-range efficacy with D3-linked benefits on motivation and negative symptoms.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Cariprazine.",
-      answer: "Schizophrenia, Acute manic / mixed episodes of bipolar I, Bipolar I depression, Major depressive disorder — adjunctive. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Schizophrenia, Acute manic / mixed episodes of bipolar I, Bipolar I depression, Major depressive disorder: adjunctive. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -1044,7 +1044,7 @@ export const cariprazine: Drug = {
     },
     {
       question: "Share one clinical pearl about Cariprazine that separates safe prescribers from unsafe ones.",
-      answer: "D3 selectivity = the motivational antipsychotic — the cariprazine hypothesis.",
+      answer: "D3 selectivity = the motivational antipsychotic: the cariprazine hypothesis.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1120,7 +1120,7 @@ export const cariprazine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1165,7 +1165,7 @@ export const cariprazine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Cariprazine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Cariprazine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1181,7 +1181,7 @@ export const cariprazine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Cariprazine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Cariprazine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1226,7 +1226,7 @@ export const cariprazine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Cariprazine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Cariprazine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1237,7 +1237,7 @@ export const cariprazine: Drug = {
       "Dose reduction or timing change before discontinuation.",
     ],
     weightGain: "See product information and class comparison.",
-    sedation: "Low — mildly activating tendency.",
+    sedation: "Low: mildly activating tendency.",
     dosing: [
       {
         indication: "Schizophrenia",
@@ -1260,7 +1260,7 @@ export const cariprazine: Drug = {
         target: "1.5–3 mg/day",
         max: "3 mg/day",
         notes: [
-          "Slow titration minimises akathisia — the main tolerability issue in depression",
+          "Slow titration minimises akathisia: the main tolerability issue in depression",
         ],
       },
       {
@@ -1273,12 +1273,12 @@ export const cariprazine: Drug = {
     ],
     dosageForms: ["Capsules 1.5, 3, 4.5, 6 mg"],
     dosingTips: [
-      "Slow titration in depression — akathisia is dose- and speed-related.",
-      "Dose changes take weeks to fully manifest (metabolite tail) — resist rapid escalation.",
+      "Slow titration in depression: akathisia is dose- and speed-related.",
+      "Dose changes take weeks to fully manifest (metabolite tail): resist rapid escalation.",
       "Morning dosing suits the activating tendency.",
     ],
     overdose: [
-      "Overdose with Cariprazine is managed supportively — no specific antidote.",
+      "Overdose with Cariprazine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Cariprazine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1287,7 +1287,7 @@ export const cariprazine: Drug = {
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
     pharmacokinetics: [
-      "Half-life: Cariprazine 1–3 h BUT active metabolites 21–77 h — effective coverage 1–4 weeks; dose changes take weeks to fully manifest..",
+      "Half-life: Cariprazine 1–3 h BUT active metabolites 21–77 h; effective coverage 1–4 weeks; dose changes take weeks to fully manifest..",
       "Metabolism: Hepatic CYP3A4 (major) and 2D6 (minor)..",
     ],
     doNotUse: ["Known hypersensitivity to this agent."],
@@ -1328,16 +1328,16 @@ export const cariprazine: Drug = {
       "Motivation and negative symptoms (emerging evidence)",
     ],
     pearls: [
-      "D3 selectivity = the motivational antipsychotic — the cariprazine hypothesis.",
+      "D3 selectivity = the motivational antipsychotic: the cariprazine hypothesis.",
       "Weeks-long metabolite tail: patience is the dosing discipline.",
-      "D3 is the differentiator: motivation, reward, negative symptoms — the cariprazine hypothesis.",
+      "D3 is the differentiator: motivation, reward, negative symptoms; the cariprazine hypothesis.",
       "Bipolar depression + metabolic safety: the indication pairing it shares with lurasidone.",
-      "The metabolite tail is weeks long — patience is dosing pharmacology: changes take weeks to fully show.",
+      "The metabolite tail is weeks long: patience is dosing pharmacology: changes take weeks to fully show.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

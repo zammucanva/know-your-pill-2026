@@ -19,18 +19,18 @@ export const cyamemazine: Drug = {
   brandNames: ["Tercian"],
   drugClass: "typical-antipsychotic",
   drugClassLabel: "Typical Antipsychotic",
-  drugClassFullName: "Typical (Conventional) Antipsychotic — Phenothiazine",
+  drugClassFullName: "Typical (Conventional) Antipsychotic. Phenothiazine",
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Typical Antipsychotics", "Cyamemazine"],
   /* ---- Hero / summary ---- */
-  tagline: "France's anxiolytic phenothiazine — a cyanide-bearing tricycle with surprising 5-HT profile.",
-  summary: "Cyamemazine is a phenothiazine antipsychotic marketed almost exclusively in France: a low-potency D2 blocker with unusually strong 5-HT2A/5-HT2C affinity, used for anxiety-depression states and agitation in French practice. Its chemistry (a cyano-amino side chain) and its national enclave make it a pharmacological curiosity — and a reminder that psychotropic geography still matters.",
+  tagline: "France's anxiolytic phenothiazine: a cyanide-bearing tricycle with surprising 5-HT profile.",
+  summary: "Cyamemazine is a phenothiazine antipsychotic marketed almost exclusively in France: a low-potency D2 blocker with unusually strong 5-HT2A/5-HT2C affinity, used for anxiety-depression states and agitation in French practice. Its chemistry (a cyano-amino side chain) and its national enclave make it a pharmacological curiosity, and a reminder that psychotropic geography still matters.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Cyamemazine — from its molecular target (D2 (low-mid potency antagonist); 5-HT2A/5-HT2C (unusually high for a phenothiazine); H1) to clinical effect.",
+    "Explain the mechanism of action of Cyamemazine, from its molecular target (D2 (low-mid potency antagonist); 5-HT2A/5-HT2C (unusually high for a phenothiazine); H1) to clinical effect.",
     "List the FDA-approved and off-label uses of Cyamemazine.",
     "Predict the common and serious side effects of Cyamemazine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Cyamemazine.",
@@ -38,12 +38,12 @@ export const cyamemazine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Phenothiazine with low-mid D2 potency but high serotonergic (5-HT2A/2C) affinity — an anxiolytic-flavoured antipsychotic.",
+    summary: "Phenothiazine with low-mid D2 potency but high serotonergic (5-HT2A/2C) affinity: an anxiolytic-flavoured antipsychotic.",
     molecularTarget: "D2 (low-mid potency antagonist); 5-HT2A/5-HT2C (unusually high for a phenothiazine); H1",
-    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — low-mid potency with a serotonergic texture: anxiolysis and sedation at low doses.",
+    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways: low-mid potency with a serotonergic texture: anxiolysis and sedation at low doses.",
     steps: [
-      "Blocks D2 receptors — therapeutic antipsychotic effect at 65–75% occupancy.",
-      "EPS emerges as occupancy passes ~80% — low-mid potency with a serotonergic texture: anxiolysis and sedation at low doses.",
+      "Blocks D2 receptors: therapeutic antipsychotic effect at 65–75% occupancy.",
+      "EPS emerges as occupancy passes ~80%: low-mid potency with a serotonergic texture: anxiolysis and sedation at low doses.",
       "Tuberoinfundibular blockade raises prolactin; nigrostriatal blockade produces parkinsonism and dystonia.",
       "Class-typical receptor binding determines the drug's adverse-effect texture.",
     ],
@@ -109,7 +109,7 @@ export const cyamemazine: Drug = {
         label: "hyperprolactinaemia",
       },
     ],
-    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia — efficacy and motor risk are two sides of one coin.",
+    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia: efficacy and motor risk are two sides of one coin.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -152,14 +152,14 @@ export const cyamemazine: Drug = {
       name: "Extrapyramidal symptoms (parkinsonism)",
       frequency: "very-common",
       severity: "moderate",
-      description: "Rigidity, bradykinesia, tremor — dose-dependent D2 signature.",
+      description: "Rigidity, bradykinesia, tremor: dose-dependent D2 signature.",
       management: "Reduce dose; anticholinergic.",
     },
     {
       name: "Akathisia",
       frequency: "common",
       severity: "moderate",
-      description: "Restlessness — frequently mistaken for worsening psychosis.",
+      description: "Restlessness: frequently mistaken for worsening psychosis.",
       management: "Reduce dose; propranolol.",
     },
     {
@@ -182,14 +182,14 @@ export const cyamemazine: Drug = {
       name: "Neuroleptic malignant syndrome",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency.",
+      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness: the class medical emergency.",
       management: "Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
     },
     {
       name: "Tardive dyskinesia",
       frequency: "uncommon",
       severity: "severe",
-      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex — a defining risk of chronic typical antipsychotics.",
+      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex: a defining risk of chronic typical antipsychotics.",
       management: "Lowest effective dose; AIMS surveillance; reduce or switch on detection; VMAT2 inhibitors for severe cases.",
     },
   ],
@@ -225,13 +225,13 @@ export const cyamemazine: Drug = {
     {
       drug: "QT-prolonging drugs (including other antipsychotics)",
       severity: "major",
-      mechanism: "Additive QT prolongation — torsades risk.",
+      mechanism: "Additive QT prolongation: torsades risk.",
       action: "Avoid combinations; ECG monitoring if unavoidable.",
     },
     {
       drug: "Anticholinergic drugs",
       severity: "moderate",
-      mechanism: "Additive anticholinergic burden — cognition, ileus, tachycardia.",
+      mechanism: "Additive anticholinergic burden: cognition, ileus, tachycardia.",
       action: "Minimise total anticholinergic load.",
     },
     {
@@ -243,7 +243,7 @@ export const cyamemazine: Drug = {
   ],
   pregnancy: {
     legacyCategory: "C",
-    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk — continue at the lowest effective dose with obstetric co-management.",
+    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk: continue at the lowest effective dose with obstetric co-management.",
     lactation: "Small amounts pass into milk; infant sedation and EPS-like effects are monitored. Generally considered acceptable with infant monitoring.",
   },
   renalAdjustment: "Standard caution.",
@@ -251,41 +251,41 @@ export const cyamemazine: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Cyamemazine is a French sedative-antipsychotic used for severe anxiety and agitation; outside France it is essentially never started, only continued for patients already taking it.",
   patientEducationPoints: [
-    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early — these are treatable.",
+    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early: these are treatable.",
     "Stand up slowly during the first week.",
-    "Do not stop suddenly — discuss any change with your doctor.",
-    "Benefit from Cyamemazine builds over weeks — do not judge it in the first days.",
+    "Do not stop suddenly: discuss any change with your doctor.",
+    "Benefit from Cyamemazine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "Geography is pharmacology: cyamemazine is French-only — patients who moved from France arrive on a drug nobody else prescribes.",
-    "Its high 5-HT2A affinity makes it 'the serotonergic phenothiazine' — halfway to a modern atypical profile.",
-    "Typical antipsychotics all share one mechanism — D2 blockade — so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
+    "Geography is pharmacology: cyamemazine is French-only; patients who moved from France arrive on a drug nobody else prescribes.",
+    "Its high 5-HT2A affinity makes it 'the serotonergic phenothiazine': halfway to a modern atypical profile.",
+    "Typical antipsychotics all share one mechanism (D2 blockade) so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Cyamemazine: Phenothiazine with low-mid D2 potency but high serotonergic (5-HT2A/2C) affinity — an anxiolytic-flavoured antipsychotic.",
+        "Mechanism of Cyamemazine: Phenothiazine with low-mid D2 potency but high serotonergic (5-HT2A/2C) affinity; an anxiolytic-flavoured antipsychotic.",
         "Uses of Cyamemazine: Anxiety-depression states (France); Psychosis and agitation",
         "Phenothiazine marketed only in France (Tercian).",
-        "Unusually high 5-HT2A/2C affinity for a typical — anxiolytic flavour.",
+        "Unusually high 5-HT2A/2C affinity for a typical: anxiolytic flavour.",
       ],
       practical: [
         "Prescribe Cyamemazine for anxiety-depression states (france) with dose, timing, and duration.",
         "Outline the monitoring plan: Weight and BMI (Baseline, then periodically); AIMS examination (Baseline, then every 6 months); EPS screen (parkinsonism, akathisia, dystonia) (Every review in the first 2 months)",
       ],
       longAnswer: [
-        "Cyamemazine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Cyamemazine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Phenothiazine marketed only in France (Tercian).",
-        "Unusually high 5-HT2A/2C affinity for a typical — anxiolytic flavour.",
+        "Unusually high 5-HT2A/2C affinity for a typical: anxiolytic flavour.",
       ],
     },
     neetPg: {
       highYield: [
         "Phenothiazine marketed only in France (Tercian).",
-        "Unusually high 5-HT2A/2C affinity for a typical — anxiolytic flavour.",
+        "Unusually high 5-HT2A/2C affinity for a typical: anxiolytic flavour.",
         "Used for anxiety-depression and agitation in French practice.",
-        "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+        "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
         "Potency spectrum: chlorpromazine (low; sedation/hypotension) → haloperidol (high; EPS/prolactin).",
       ],
       pyqConcepts: [
@@ -296,7 +296,7 @@ export const cyamemazine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Cyamemazine develops neuroleptic malignant syndrome — next best step?",
+        "A patient on Cyamemazine develops neuroleptic malignant syndrome: next best step?",
         "When to choose Cyamemazine over alternatives in its class.",
       ],
     },
@@ -309,24 +309,24 @@ export const cyamemazine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "Geography is pharmacology: cyamemazine is French-only — patients who moved from France arrive on a drug nobody else prescribes.",
-        "Its high 5-HT2A affinity makes it 'the serotonergic phenothiazine' — halfway to a modern atypical profile.",
-        "Typical antipsychotics all share one mechanism — D2 blockade — so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
+        "Geography is pharmacology: cyamemazine is French-only; patients who moved from France arrive on a drug nobody else prescribes.",
+        "Its high 5-HT2A affinity makes it 'the serotonergic phenothiazine': halfway to a modern atypical profile.",
+        "Typical antipsychotics all share one mechanism (D2 blockade) so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
     "Phenothiazine marketed only in France (Tercian).",
-    "Unusually high 5-HT2A/2C affinity for a typical — anxiolytic flavour.",
+    "Unusually high 5-HT2A/2C affinity for a typical: anxiolytic flavour.",
     "Used for anxiety-depression and agitation in French practice.",
-    "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+    "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
     "Potency spectrum: chlorpromazine (low; sedation/hypotension) → haloperidol (high; EPS/prolactin).",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — anxiety-depression states (france)",
+      title: "First presentation: anxiety-depression states (france)",
       presentation: "A patient presenting with anxiety-depression states (france), started on Cyamemazine.",
       history: "A adult patient presents with a anxiety-depression states (france) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with anxiety-depression states (france); physical examination and baseline investigations are unremarkable.",
@@ -335,7 +335,7 @@ export const cyamemazine: Drug = {
       management: "Started at 25 mg twice daily, titrated to 50–150 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Cyamemazine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Cyamemazine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -344,7 +344,7 @@ export const cyamemazine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Typical Antipsychotic comparison — choosing within the class",
+      title: "Typical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Cyamemazine",
       rows: [
         {
@@ -393,7 +393,7 @@ export const cyamemazine: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Low — weight gain not expected.",
+          primaryValue: "Low: weight gain not expected.",
           comparisons: [
             {
               drug: "Chlorpromazine",
@@ -458,7 +458,7 @@ export const cyamemazine: Drug = {
           ],
         },
       ],
-      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -467,7 +467,7 @@ export const cyamemazine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Cyamemazine reaches peak plasma concentration and begins acting at its molecular target (D2 (low-mid potency antagonist); 5-HT2A/5-HT2C (unusually high for a phenothiazine); H1). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Cyamemazine reaches peak plasma concentration and begins acting at its molecular target (D2 (low-mid potency antagonist); 5-HT2A/5-HT2C (unusually high for a phenothiazine); H1). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -503,7 +503,7 @@ export const cyamemazine: Drug = {
   faqs: [
     {
       question: "How long does Cyamemazine take to work?",
-      answer: "Clinical effect of Cyamemazine typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Clinical effect of Cyamemazine typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Cyamemazine?",
@@ -511,11 +511,11 @@ export const cyamemazine: Drug = {
     },
     {
       question: "Can I stop Cyamemazine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Cyamemazine habit-forming?",
@@ -523,7 +523,7 @@ export const cyamemazine: Drug = {
     },
     {
       question: "Can I take Cyamemazine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Cyamemazine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Cyamemazine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -628,7 +628,7 @@ export const cyamemazine: Drug = {
       label: "Typical Antipsychotic",
       type: "class",
       href: "#mechanism",
-      note: "Typical (Conventional) Antipsychotic — Phenothiazine",
+      note: "Typical (Conventional) Antipsychotic. Phenothiazine",
     },
     {
       label: "Central monoaminergic systems (see mechanism)",
@@ -673,7 +673,7 @@ export const cyamemazine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Cyamemazine",
+      label: "Patient Guide. Cyamemazine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -681,13 +681,13 @@ export const cyamemazine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "France's anxiolytic phenothiazine — a cyanide-bearing tricycle with surprising 5-HT profile.",
-    summary: "Cyamemazine is a prescription medicine used to treat anxiety-depression states (france). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "France's anxiolytic phenothiazine: a cyanide-bearing tricycle with surprising 5-HT profile.",
+    summary: "Cyamemazine is a prescription medicine used to treat anxiety-depression states (france). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Cyamemazine is a French sedative-antipsychotic used for severe anxiety and agitation; outside France it is essentially never started, only continued for patients already taking it.",
-    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
   },
   sectionDifficulty: {
     mechanism: "mbbs",
@@ -729,7 +729,7 @@ export const cyamemazine: Drug = {
         name: "Haloperidol",
         slug: "haloperidol",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool",
       },
       {
         name: "Fluphenazine",
@@ -753,7 +753,7 @@ export const cyamemazine: Drug = {
         name: "Thioridazine",
         slug: "thioridazine",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "The restricted QT-retinopathy phenothiazine — last-line",
+        distinguishing: "The restricted QT-retinopathy phenothiazine: last-line",
       },
       {
         name: "Trifluoperazine",
@@ -913,7 +913,7 @@ export const cyamemazine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Cyamemazine in two sentences.",
-      answer: "Phenothiazine with low-mid D2 potency but high serotonergic (5-HT2A/2C) affinity — an anxiolytic-flavoured antipsychotic. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — low-mid potency with a serotonergic texture: anxiolysis and sedation at low doses.",
+      answer: "Phenothiazine with low-mid D2 potency but high serotonergic (5-HT2A/2C) affinity: an anxiolytic-flavoured antipsychotic. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways; low-mid potency with a serotonergic texture: anxiolysis and sedation at low doses.",
       topic: "Mechanism",
     },
     {
@@ -923,7 +923,7 @@ export const cyamemazine: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Cyamemazine and how you would manage it.",
-      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
+      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness; the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
       topic: "Safety",
     },
     {
@@ -933,7 +933,7 @@ export const cyamemazine: Drug = {
     },
     {
       question: "Share one clinical pearl about Cyamemazine that separates safe prescribers from unsafe ones.",
-      answer: "Geography is pharmacology: cyamemazine is French-only — patients who moved from France arrive on a drug nobody else prescribes.",
+      answer: "Geography is pharmacology: cyamemazine is French-only; patients who moved from France arrive on a drug nobody else prescribes.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1009,7 +1009,7 @@ export const cyamemazine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1054,7 +1054,7 @@ export const cyamemazine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Cyamemazine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Cyamemazine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1070,7 +1070,7 @@ export const cyamemazine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Cyamemazine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Cyamemazine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1115,7 +1115,7 @@ export const cyamemazine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Cyamemazine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Cyamemazine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1125,7 +1125,7 @@ export const cyamemazine: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Low — weight gain not expected.",
+    weightGain: "Low: weight gain not expected.",
     sedation: "Mild.",
     dosing: [
       {
@@ -1141,7 +1141,7 @@ export const cyamemazine: Drug = {
       "For international continuity: document the dose and plan an equivalent switch with the receiving psychiatrist.",
     ],
     overdose: [
-      "Overdose with Cyamemazine is managed supportively — no specific antidote.",
+      "Overdose with Cyamemazine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Cyamemazine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1184,14 +1184,14 @@ export const cyamemazine: Drug = {
     ],
     primaryTargetSymptoms: ["Anxiety-depression states (France)", "Agitation"],
     pearls: [
-      "Geography is pharmacology: cyamemazine is French-only — patients who moved from France arrive on a drug nobody else prescribes.",
-      "Its high 5-HT2A affinity makes it 'the serotonergic phenothiazine' — halfway to a modern atypical profile.",
-      "Typical antipsychotics all share one mechanism — D2 blockade — so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
+      "Geography is pharmacology: cyamemazine is French-only; patients who moved from France arrive on a drug nobody else prescribes.",
+      "Its high 5-HT2A affinity makes it 'the serotonergic phenothiazine': halfway to a modern atypical profile.",
+      "Typical antipsychotics all share one mechanism (D2 blockade) so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };
