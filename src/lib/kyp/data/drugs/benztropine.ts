@@ -23,14 +23,14 @@ export const benztropine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Specialised Agents", "Anticholinergics", "Benztropine"],
   /* ---- Hero / summary ---- */
-  tagline: "The EPS antidote — anticholinergic blockade of the striatum to undo dopamine-blockade side effects.",
-  summary: "Benztropine is the anticholinergic (antimuscarinic) antiparkinsonian agent that treats antipsychotic-induced extrapyramidal symptoms: it restores the striatal dopamine-acetylcholine balance that D2 blockade disturbs, relieving dystonia, parkinsonism, and (partially) akathisia. Its own adverse-effect currency is the anticholinergic burden — dry mouth, blurred vision, constipation, urinary retention, memory effects — which is why it is dosed low, tapered early, and avoided in the elderly.",
+  tagline: "The EPS antidote: anticholinergic blockade of the striatum to undo dopamine-blockade side effects.",
+  summary: "Benztropine is the anticholinergic (antimuscarinic) antiparkinsonian agent that treats antipsychotic-induced extrapyramidal symptoms: it restores the striatal dopamine-acetylcholine balance that D2 blockade disturbs, relieving dystonia, parkinsonism, and (partially) akathisia. Its own adverse-effect currency is the anticholinergic burden (dry mouth, blurred vision, constipation, urinary retention, memory effects) which is why it is dosed low, tapered early, and avoided in the elderly.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Benztropine — from its molecular target (Striatal muscarinic (M1) receptors (antagonist)) to clinical effect.",
+    "Explain the mechanism of action of Benztropine, from its molecular target (Striatal muscarinic (M1) receptors (antagonist)) to clinical effect.",
     "List the FDA-approved and off-label uses of Benztropine.",
     "Predict the common and serious side effects of Benztropine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Benztropine.",
@@ -38,15 +38,15 @@ export const benztropine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Benztropine blocks striatal muscarinic receptors, releasing the cholinergic overdrive that D2 blockade creates — restoring the dopamine-acetylcholine equilibrium of the basal ganglia.",
+    summary: "Benztropine blocks striatal muscarinic receptors, releasing the cholinergic overdrive that D2 blockade creates, restoring the dopamine-acetylcholine equilibrium of the basal ganglia.",
     molecularTarget: "Striatal muscarinic (M1) receptors (antagonist)",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Benztropine blocks striatal muscarinic receptors, releasing the cholinergic overdrive that D2 blockade creates — restoring the dopamine-acetylcholine equilibrium of the basal ganglia.",
+      "Benztropine blocks striatal muscarinic receptors, releasing the cholinergic overdrive that D2 blockade creates, restoring the dopamine-acetylcholine equilibrium of the basal ganglia.",
       "The target engagement translates into the clinical effect.",
       "Practical use follows the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 4-8 hours (sometimes dosed bd). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 4-8 hours (sometimes dosed bd). See mechanism and prescriber sections.",
     halfLife: "About 4-8 hours (sometimes dosed bd).",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -97,7 +97,7 @@ export const benztropine: Drug = {
         label: "relieves",
       },
     ],
-    caption: "Antipsychotics block dopamine; anticholinergics block the cholinergic counterbalance — restoring the striatal equilibrium that drug-induced parkinsonism disturbs.",
+    caption: "Antipsychotics block dopamine; anticholinergics block the cholinergic counterbalance, restoring the striatal equilibrium that drug-induced parkinsonism disturbs.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Acetylcholine (ACh)", "Dopamine (DA)"],
@@ -150,7 +150,7 @@ export const benztropine: Drug = {
       name: "Constipation",
       frequency: "very-common",
       severity: "moderate",
-      description: "Anticholinergic bowel slowing — additive with antipsychotics.",
+      description: "Anticholinergic bowel slowing: additive with antipsychotics.",
       management: "Bowel regimen; hydration.",
     },
     {
@@ -180,7 +180,7 @@ export const benztropine: Drug = {
       name: "Anticholinergic delirium (elderly, high dose)",
       frequency: "uncommon",
       severity: "severe",
-      description: "Confusion, agitation — the classic antipsychotic-plus-anticholinergic geriatric trap.",
+      description: "Confusion, agitation: the classic antipsychotic-plus-anticholinergic geriatric trap.",
       management: "Avoid in elderly; taper early.",
     },
     {
@@ -201,7 +201,7 @@ export const benztropine: Drug = {
       name: "Tardive dyskinesia masking",
       frequency: "uncommon",
       severity: "moderate",
-      description: "Anticholinergics can mask emerging TD — the AIMS argument for early taper.",
+      description: "Anticholinergics can mask emerging TD: the AIMS argument for early taper.",
       management: "AIMS before and during; taper when EPS settles.",
     },
     {
@@ -234,13 +234,13 @@ export const benztropine: Drug = {
     {
       drug: "Other anticholinergics (bladder drugs, TCAs, diphenhydramine, some antihistamines)",
       severity: "major",
-      mechanism: "Cumulative anticholinergic burden — delirium, ileus.",
+      mechanism: "Cumulative anticholinergic burden: delirium, ileus.",
       action: "Audit; minimise total.",
     },
     {
       drug: "Haloperidol and high-potency antipsychotics",
       severity: "moderate",
-      mechanism: "The therapeutic pairing — but additive memory/bowel burden.",
+      mechanism: "The therapeutic pairing, but additive memory/bowel burden.",
       action: "Lowest effective dose; taper plan.",
     },
     {
@@ -253,33 +253,33 @@ export const benztropine: Drug = {
   pregnancy: {
     legacyCategory: "C",
     summary: "Limited data; use only for clear EPS need at the lowest dose.",
-    lactation: "Excreted in milk — infant anticholinergic effects possible; caution.",
+    lactation: "Excreted in milk: infant anticholinergic effects possible; caution.",
   },
   renalAdjustment: "Standard caution; some retention of metabolites in renal impairment.",
   hepaticAdjustment: "Standard caution.",
   /* ---- Education ---- */
   patientExplanation: "Benztropine treats the stiffness, tremor, and muscle spasms that antipsychotic medicines can cause: it rebalances two brain chemicals (dopamine and acetylcholine) whose equilibrium those medicines disturb. Its own effects are dry mouth, constipation, and blurred vision, so it is used at the lowest effective dose and tapered once the stiffness settles.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Benztropine builds over weeks — do not judge it in the first days.",
+    "Benefit from Benztropine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The balance logic: antipsychotics block dopamine; benztropine blocks acetylcholine — restoring the seesaw the basal ganglia sit on.",
-    "Prescribe with an exit plan: EPS usually settles as tolerance develops — taper benztropine within weeks-months, not never.",
+    "The balance logic: antipsychotics block dopamine; benztropine blocks acetylcholine, restoring the seesaw the basal ganglia sit on.",
+    "Prescribe with an exit plan: EPS usually settles as tolerance develops; taper benztropine within weeks-months, not never.",
     "The reflexive pairing mistake: routine benztropine with every antipsychotic prescription adds anticholinergic burden without benefit for patients without EPS.",
-    "The TD masking argument: chronic anticholinergics can hide emerging tardive dyskinesia — taper to see the true motor picture.",
-    "The elderly receive the worst trade: EPS relief at the price of delirium and urinary retention — avoid where possible.",
-    "IV/IM benztropine (with diphenhydramine as the alternative) ends an acute dystonia in minutes — the emergency pairing of record.",
+    "The TD masking argument: chronic anticholinergics can hide emerging tardive dyskinesia; taper to see the true motor picture.",
+    "The elderly receive the worst trade: EPS relief at the price of delirium and urinary retention; avoid where possible.",
+    "IV/IM benztropine (with diphenhydramine as the alternative) ends an acute dystonia in minutes: the emergency pairing of record.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Benztropine: Benztropine blocks striatal muscarinic receptors, releasing the cholinergic overdrive that D2 blockade creates — restoring the dopamine-acetylcholine equilibrium of the basal ganglia.",
+        "Mechanism of Benztropine: Benztropine blocks striatal muscarinic receptors, releasing the cholinergic overdrive that D2 blockade creates, restoring the dopamine-acetylcholine equilibrium of the basal ganglia.",
         "Uses of Benztropine: Drug-induced extrapyramidal symptoms (parkinsonism, dystonia); Acute dystonic reactions (adjunct to/alternative to diphenhydramine); Parkinson's disease (adjunct, historic); Akathisia (partial benefit)",
-        "Mechanism: striatal MUSCARINIC antagonist — restores the dopamine-acetylcholine balance D2 blockade disturbs.",
+        "Mechanism: striatal MUSCARINIC antagonist; restores the dopamine-acetylcholine balance D2 blockade disturbs.",
         "Indication: antipsychotic-induced EPS (parkinsonism, dystonia); IV/IM for acute dystonia.",
       ],
       practical: [
@@ -287,19 +287,19 @@ export const benztropine: Drug = {
         "Outline the monitoring plan: AIMS before and during (Baseline and periodically); Bowel and bladder function (At review); Cognition (elderly) (At review)",
       ],
       longAnswer: [
-        "Benztropine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: striatal MUSCARINIC antagonist — restores the dopamine-acetylcholine balance D2 blockade disturbs.",
+        "Benztropine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: striatal MUSCARINIC antagonist; restores the dopamine-acetylcholine balance D2 blockade disturbs.",
         "Indication: antipsychotic-induced EPS (parkinsonism, dystonia); IV/IM for acute dystonia.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: striatal MUSCARINIC antagonist — restores the dopamine-acetylcholine balance D2 blockade disturbs.",
+        "Mechanism: striatal MUSCARINIC antagonist; restores the dopamine-acetylcholine balance D2 blockade disturbs.",
         "Indication: antipsychotic-induced EPS (parkinsonism, dystonia); IV/IM for acute dystonia.",
         "Anticholinergic burden: dry mouth, constipation, urinary retention, memory effects, delirium in elderly.",
-        "Taper early — chronic use masks tardive dyskinesia and adds burden.",
+        "Taper early: chronic use masks tardive dyskinesia and adds burden.",
         "Contraindicated in narrow-angle glaucoma; caution with prostatism.",
-        "The classic Indian pairing: trifluoperazine/trihexyphenidyl — benztropine's cousin as the routine partner.",
+        "The classic Indian pairing: trifluoperazine/trihexyphenidyl; benztropine's cousin as the routine partner.",
       ],
       pyqConcepts: [
         "Mechanism/target of Benztropine",
@@ -309,7 +309,7 @@ export const benztropine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Benztropine develops anticholinergic delirium (elderly, high dose) — next best step?",
+        "A patient on Benztropine develops anticholinergic delirium (elderly, high dose): next best step?",
         "When to choose Benztropine over alternatives in its class.",
       ],
     },
@@ -322,27 +322,27 @@ export const benztropine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The balance logic: antipsychotics block dopamine; benztropine blocks acetylcholine — restoring the seesaw the basal ganglia sit on.",
-        "Prescribe with an exit plan: EPS usually settles as tolerance develops — taper benztropine within weeks-months, not never.",
+        "The balance logic: antipsychotics block dopamine; benztropine blocks acetylcholine, restoring the seesaw the basal ganglia sit on.",
+        "Prescribe with an exit plan: EPS usually settles as tolerance develops; taper benztropine within weeks-months, not never.",
         "The reflexive pairing mistake: routine benztropine with every antipsychotic prescription adds anticholinergic burden without benefit for patients without EPS.",
-        "The TD masking argument: chronic anticholinergics can hide emerging tardive dyskinesia — taper to see the true motor picture.",
+        "The TD masking argument: chronic anticholinergics can hide emerging tardive dyskinesia; taper to see the true motor picture.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: striatal MUSCARINIC antagonist — restores the dopamine-acetylcholine balance D2 blockade disturbs.",
+    "Mechanism: striatal MUSCARINIC antagonist; restores the dopamine-acetylcholine balance D2 blockade disturbs.",
     "Indication: antipsychotic-induced EPS (parkinsonism, dystonia); IV/IM for acute dystonia.",
     "Anticholinergic burden: dry mouth, constipation, urinary retention, memory effects, delirium in elderly.",
-    "Taper early — chronic use masks tardive dyskinesia and adds burden.",
+    "Taper early: chronic use masks tardive dyskinesia and adds burden.",
     "Contraindicated in narrow-angle glaucoma; caution with prostatism.",
-    "The classic Indian pairing: trifluoperazine/trihexyphenidyl — benztropine's cousin as the routine partner.",
-    "Akathisia responds less well — propranolol preferred.",
+    "The classic Indian pairing: trifluoperazine/trihexyphenidyl; benztropine's cousin as the routine partner.",
+    "Akathisia responds less well: propranolol preferred.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — drug-induced extrapyramidal symptoms (parkinsonism, dystonia)",
+      title: "First presentation: drug-induced extrapyramidal symptoms (parkinsonism, dystonia)",
       presentation: "A patient presenting with drug-induced extrapyramidal symptoms (parkinsonism, dystonia), started on Benztropine.",
       history: "A adult patient presents with a drug-induced extrapyramidal symptoms (parkinsonism, dystonia) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with drug-induced extrapyramidal symptoms (parkinsonism, dystonia); physical examination and baseline investigations are unremarkable.",
@@ -351,7 +351,7 @@ export const benztropine: Drug = {
       management: "Started at 0.5-1 mg twice daily, titrated to 1-2 mg bd (2-4 mg/day) with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Benztropine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Benztropine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -360,7 +360,7 @@ export const benztropine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Anticholinergic comparison — choosing within the class",
+      title: "Anticholinergic comparison: choosing within the class",
       primaryDrug: "Benztropine",
       rows: [
         {
@@ -405,16 +405,16 @@ export const benztropine: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The EPS antidote — anticholinergic striatal rebalancing",
+          primaryValue: "The EPS antidote: anticholinergic striatal rebalancing",
           comparisons: [
             {
               drug: "Trihexyphenidyl",
-              value: "The Indian classic — anticholinergic EPS cover for typical antipsychotics",
+              value: "The Indian classic: anticholinergic EPS cover for typical antipsychotics",
             },
           ],
         },
       ],
-      takeaway: "All anticholinergics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All anticholinergics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -423,7 +423,7 @@ export const benztropine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Benztropine reaches peak plasma concentration and begins acting at its molecular target (Striatal muscarinic (M1) receptors (antagonist)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Benztropine reaches peak plasma concentration and begins acting at its molecular target (Striatal muscarinic (M1) receptors (antagonist)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -459,7 +459,7 @@ export const benztropine: Drug = {
   faqs: [
     {
       question: "How long does Benztropine take to work?",
-      answer: "EPS relief within hours (oral); minutes (IV/IM dystonia).. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "EPS relief within hours (oral); minutes (IV/IM dystonia).. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Benztropine?",
@@ -467,11 +467,11 @@ export const benztropine: Drug = {
     },
     {
       question: "Can I stop Benztropine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Benztropine habit-forming?",
@@ -479,7 +479,7 @@ export const benztropine: Drug = {
     },
     {
       question: "Can I take Benztropine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Benztropine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Benztropine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -619,7 +619,7 @@ export const benztropine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Benztropine",
+      label: "Patient Guide. Benztropine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -627,13 +627,13 @@ export const benztropine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The EPS antidote — anticholinergic blockade of the striatum to undo dopamine-blockade side effects.",
-    summary: "Benztropine is a prescription medicine used to treat drug-induced extrapyramidal symptoms (parkinsonism, dystonia). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The EPS antidote: anticholinergic blockade of the striatum to undo dopamine-blockade side effects.",
+    summary: "Benztropine is a prescription medicine used to treat drug-induced extrapyramidal symptoms (parkinsonism, dystonia). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Benztropine treats the stiffness, tremor, and muscle spasms that antipsychotic medicines can cause: it rebalances two brain chemicals (dopamine and acetylcholine) whose equilibrium those medicines disturb. Its own effects are dry mouth, constipation, and blurred vision, so it is used at the lowest effective dose and tapered once the stiffness settles.",
-    sideEffects: "The most common side effects are: dry mouth and blurred vision, constipation, urinary retention (men with prostatism), sedation and memory difficulty, tachycardia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Anticholinergic delirium (elderly, high dose) and Ileus (with other anticholinergics). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: aims before and during (baseline and periodically); bowel and bladder function (at review); cognition (elderly) (at review). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: dry mouth and blurred vision, constipation, urinary retention (men with prostatism), sedation and memory difficulty, tachycardia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Anticholinergic delirium (elderly, high dose) and Ileus (with other anticholinergics). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: aims before and during (baseline and periodically); bowel and bladder function (at review); cognition (elderly) (at review). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Other anticholinergics (bladder drugs, TCAs, diphenhydramine, some antihistamines), Haloperidol and high-potency antipsychotics, Alcohol and CNS depressants. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Other anticholinergics (bladder drugs, TCAs, diphenhydramine, some antihistamines), Haloperidol and high-potency antipsychotics, Alcohol and CNS depressants. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -653,7 +653,7 @@ export const benztropine: Drug = {
     typicalDoses: "1 mg bd (EPS); 1-2 mg IM/IV (dystonia).",
     prescribingScenarios: [
       "Emergency dystonia reversal nationwide.",
-      "EPS management with high-potency typicals — the classic pairing.",
+      "EPS management with high-potency typicals: the classic pairing.",
     ],
     availability: {
       governmentHospitals: true,
@@ -665,7 +665,7 @@ export const benztropine: Drug = {
     costNote: "Cost varies by manufacturer and region.",
     monitoring: "AIMS baseline; bowel/bladder review.",
     patientCounselling: [
-      "Dry mouth and constipation expected — manage, don't endure.",
+      "Dry mouth and constipation expected: manage, don't endure.",
       "The dose comes down once stiffness settles.",
     ],
   },
@@ -700,13 +700,13 @@ export const benztropine: Drug = {
         name: "Benztropine",
         slug: "benztropine",
         relationship: "This guide",
-        distinguishing: "The EPS antidote — anticholinergic striatal rebalancing",
+        distinguishing: "The EPS antidote: anticholinergic striatal rebalancing",
       },
       {
         name: "Trihexyphenidyl",
         slug: "trihexyphenidyl",
         relationship: "Same class (Anticholinergic)",
-        distinguishing: "The Indian classic — anticholinergic EPS cover for typical antipsychotics",
+        distinguishing: "The Indian classic: anticholinergic EPS cover for typical antipsychotics",
       },
     ],
   },
@@ -854,7 +854,7 @@ export const benztropine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Benztropine in two sentences.",
-      answer: "Benztropine blocks striatal muscarinic receptors, releasing the cholinergic overdrive that D2 blockade creates — restoring the dopamine-acetylcholine equilibrium of the basal ganglia. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Benztropine blocks striatal muscarinic receptors, releasing the cholinergic overdrive that D2 blockade creates, restoring the dopamine-acetylcholine equilibrium of the basal ganglia. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -864,7 +864,7 @@ export const benztropine: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Benztropine and how you would manage it.",
-      answer: "Anticholinergic delirium (elderly, high dose): Confusion, agitation — the classic antipsychotic-plus-anticholinergic geriatric trap. Management: Avoid in elderly; taper early.",
+      answer: "Anticholinergic delirium (elderly, high dose): Confusion, agitation; the classic antipsychotic-plus-anticholinergic geriatric trap. Management: Avoid in elderly; taper early.",
       topic: "Safety",
     },
     {
@@ -874,7 +874,7 @@ export const benztropine: Drug = {
     },
     {
       question: "Share one clinical pearl about Benztropine that separates safe prescribers from unsafe ones.",
-      answer: "The balance logic: antipsychotics block dopamine; benztropine blocks acetylcholine — restoring the seesaw the basal ganglia sit on.",
+      answer: "The balance logic: antipsychotics block dopamine; benztropine blocks acetylcholine, restoring the seesaw the basal ganglia sit on.",
       topic: "Clinical Pearls",
     },
   ],
@@ -950,7 +950,7 @@ export const benztropine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -995,7 +995,7 @@ export const benztropine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Benztropine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Benztropine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1011,7 +1011,7 @@ export const benztropine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Benztropine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Benztropine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1056,7 +1056,7 @@ export const benztropine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Benztropine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Benztropine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1086,13 +1086,13 @@ export const benztropine: Drug = {
     ],
     dosageForms: ["Tablets 0.5, 1, 2 mg", "Injection 1 mg/mL"],
     dosingTips: [
-      "Pair with an exit plan — taper once EPS settles.",
+      "Pair with an exit plan: taper once EPS settles.",
       "Avoid routine prophylactic pairing with every antipsychotic.",
-      "AIMS baseline — don't let it mask TD.",
+      "AIMS baseline: don't let it mask TD.",
       "Elderly: avoid where possible.",
     ],
     overdose: [
-      "Overdose with Benztropine is managed supportively — no specific antidote.",
+      "Overdose with Benztropine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Benztropine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1133,17 +1133,17 @@ export const benztropine: Drug = {
     potentialDisadvantages: ["Full anticholinergic burden.", "TD masking with chronic use.", "Elderly delirium risk.", "Poor for akathisia."],
     primaryTargetSymptoms: ["Antipsychotic-induced parkinsonism", "Acute dystonia", "Drug-induced tremor"],
     pearls: [
-      "The balance logic: antipsychotics block dopamine; benztropine blocks acetylcholine — restoring the seesaw the basal ganglia sit on.",
-      "Prescribe with an exit plan: EPS usually settles as tolerance develops — taper benztropine within weeks-months, not never.",
+      "The balance logic: antipsychotics block dopamine; benztropine blocks acetylcholine, restoring the seesaw the basal ganglia sit on.",
+      "Prescribe with an exit plan: EPS usually settles as tolerance develops; taper benztropine within weeks-months, not never.",
       "The reflexive pairing mistake: routine benztropine with every antipsychotic prescription adds anticholinergic burden without benefit for patients without EPS.",
-      "The TD masking argument: chronic anticholinergics can hide emerging tardive dyskinesia — taper to see the true motor picture.",
-      "The elderly receive the worst trade: EPS relief at the price of delirium and urinary retention — avoid where possible.",
-      "IV/IM benztropine (with diphenhydramine as the alternative) ends an acute dystonia in minutes — the emergency pairing of record.",
+      "The TD masking argument: chronic anticholinergics can hide emerging tardive dyskinesia; taper to see the true motor picture.",
+      "The elderly receive the worst trade: EPS relief at the price of delirium and urinary retention; avoid where possible.",
+      "IV/IM benztropine (with diphenhydramine as the alternative) ends an acute dystonia in minutes: the emergency pairing of record.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

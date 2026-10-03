@@ -55,8 +55,8 @@ export function ActiveRecallSection({ drug, questions, subject }: ActiveRecallSe
 
         <div className="mt-8">
           <Callout variant="tip" title="Why this matters">
-            Re-reading notes creates an illusion of competence. Retrieval practice — forcing your
-            brain to recall information from memory — produces 2-3× stronger retention than
+            Re-reading notes creates an illusion of competence. Retrieval practice: forcing your
+            brain to recall information from memory: produces 2-3× stronger retention than
             re-reading. If you struggled with any question, go back and review that section.
           </Callout>
         </div>

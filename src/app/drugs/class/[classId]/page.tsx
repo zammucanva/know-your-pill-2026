@@ -64,7 +64,7 @@ export async function generateMetadata({
   const title = `${cls.label} · ${familyName} · Know Your Pill`;
   return {
     title,
-    description: `${cls.fullName} — ${cls.medications.length} medication ${
+    description: `${cls.fullName}: ${cls.medications.length} medication ${
       cls.medications.length === 1 ? "guide" : "guides"
     }: ${cls.medications.map((m) => m.genericName).join(", ")}.`,
     keywords: [cls.label, cls.classLabel, cls.fullName, ...cls.medications.map((m) => m.genericName)],
@@ -188,7 +188,7 @@ export default async function DrugClassPage({
               </h1>
               <p className="mt-4 max-w-2xl text-body-lg text-muted-foreground leading-relaxed">
                 {cls.fullNamePlural} within the {familyName} family. Each guide
-                below follows the same structure — mechanism of action, receptor
+                below follows the same structure: mechanism of action, receptor
                 pharmacology, clinical indications, side effects with
                 management, monitoring parameters, drug interactions, and a
                 real clinical case.
@@ -295,7 +295,7 @@ export default async function DrugClassPage({
                   </h2>
                   <p className="mt-4 text-body-sm text-muted-foreground leading-relaxed">
                     All {cls.medications.length} {cls.label} members share the
-                    class mechanism — {cls.fullName}. The differences that
+                    class mechanism ({cls.fullName}). The differences that
                     matter clinically are below, aggregated from each
                     medication&apos;s own guide.
                   </p>
@@ -368,7 +368,7 @@ export default async function DrugClassPage({
                 </table>
               </div>
               <p className="mt-3 text-xs text-muted-foreground/60">
-                Aggregated from each medication&apos;s locked data — values are
+                Aggregated from each medication&apos;s locked data: values are
                 quoted verbatim from their guides, with no new claims.
               </p>
             </Reveal>

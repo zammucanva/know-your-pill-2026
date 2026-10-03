@@ -48,7 +48,7 @@ export function NeuroArcadeSection() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
               <img
                 src={imgPath("/artwork/neuro-arcade.webp")}
-                alt="NeuroArcade — gamified neuroscience learning platform with interactive psychopharmacology challenges"
+                alt="NeuroArcade: gamified neuroscience learning platform with interactive psychopharmacology challenges"
                 className="h-full w-full object-cover"
                 loading="lazy"
               />

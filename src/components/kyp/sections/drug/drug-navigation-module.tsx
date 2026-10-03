@@ -64,7 +64,7 @@ export function DrugNavigationModule({ drug, builtDrugSlugs }: DrugNavigationMod
         <SectionHeader
           eyebrow="Drug Navigation"
           title="Which drug, in which context?"
-          description="Explore the drug family, compare with alternatives, see Indian-specific scenarios, and find related drugs — all in one place."
+          description="Explore the drug family, compare with alternatives, see Indian-specific scenarios, and find related drugs, all in one place."
           tone="brand"
         />
 

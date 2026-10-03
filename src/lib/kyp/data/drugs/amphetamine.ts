@@ -23,14 +23,14 @@ export const amphetamine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "ADHD Medications", "Stimulants", "Amphetamine (d,l)"],
   /* ---- Hero / summary ---- */
-  tagline: "The racemic mixed amphetamine salts — Adderall chemistry.",
-  summary: "Amphetamine (d,l) here is the mixed amphetamine salts combination (3:1 d:l): the d-isomer's central potency plus the l-isomer's noradrenergic wakefulness, in IR and XR forms — the classic releasing-agent stimulant for ADHD and narcolepsy.",
+  tagline: "The racemic mixed amphetamine salts. Adderall chemistry.",
+  summary: "Amphetamine (d,l) here is the mixed amphetamine salts combination (3:1 d:l): the d-isomer's central potency plus the l-isomer's noradrenergic wakefulness, in IR and XR forms; the classic releasing-agent stimulant for ADHD and narcolepsy.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Amphetamine (d,l) — from its molecular target (DAT/NET substrate (release) + VMAT2; 3:1 d:l isomer mix) to clinical effect.",
+    "Explain the mechanism of action of Amphetamine (d,l), from its molecular target (DAT/NET substrate (release) + VMAT2; 3:1 d:l isomer mix) to clinical effect.",
     "List the FDA-approved and off-label uses of Amphetamine (d,l).",
     "Predict the common and serious side effects of Amphetamine (d,l) from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Amphetamine (d,l).",
@@ -38,15 +38,15 @@ export const amphetamine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Mixed amphetamine salts (75% d, 25% l): the d-isomer drives central dopaminergic ADHD effect; the l-isomer adds noradrenergic wakefulness — combined releasing-agent pharmacology.",
+    summary: "Mixed amphetamine salts (75% d, 25% l): the d-isomer drives central dopaminergic ADHD effect; the l-isomer adds noradrenergic wakefulness: combined releasing-agent pharmacology.",
     molecularTarget: "DAT/NET substrate (release) + VMAT2; 3:1 d:l isomer mix",
     effect: "Catecholamine and wake-system enhancement with the agent's characteristic profile.",
     steps: [
-      "Mixed amphetamine salts (75% d, 25% l): the d-isomer drives central dopaminergic ADHD effect; the l-isomer adds noradrenergic wakefulness — combined releasing-agent pharmacology.",
+      "Mixed amphetamine salts (75% d, 25% l): the d-isomer drives central dopaminergic ADHD effect; the l-isomer adds noradrenergic wakefulness: combined releasing-agent pharmacology.",
       "Prefrontal catecholamine enhancement sharpens attention and impulse control.",
       "The agent's formulation and half-life determine practical coverage.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 9-14 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 9-14 hours. See mechanism and prescriber sections.",
     halfLife: "9-14 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
@@ -103,7 +103,7 @@ export const amphetamine: Drug = {
         label: "boosts alertness",
       },
     ],
-    caption: "Catecholamine enhancement in the prefrontal cortex — the brain's attention control centre — corrects the signal-to-noise deficit that defines ADHD.",
+    caption: "Catecholamine enhancement in the prefrontal cortex (the brain's attention control centre) corrects the signal-to-noise deficit that defines ADHD.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -142,7 +142,7 @@ export const amphetamine: Drug = {
   blackBoxWarnings: [
     {
       title: "Abuse, dependence, and serious cardiovascular events",
-      text: "High potential for abuse and dependence (controlled substance). Assess abuse risk and monitor for misuse. Serious cardiovascular events reported — screen cardiac and family sudden-death history before starting.",
+      text: "High potential for abuse and dependence (controlled substance). Assess abuse risk and monitor for misuse. Serious cardiovascular events reported: screen cardiac and family sudden-death history before starting.",
     },
   ],
   /* ---- Side effects ---- */
@@ -232,48 +232,48 @@ export const amphetamine: Drug = {
     },
   ],
   pregnancy: {
-    summary: "Data in human pregnancy are limited. The decision to continue or stop balances the risk of untreated illness against possible drug exposure — for serious psychiatric illness, relapse prevention usually outweighs fetal risk. Involve obstetrics early and never stop abruptly without a plan.",
-    lactation: "Small amounts may pass into breast milk. Decisions are individualised — monitor the infant for sedation and poor feeding, and discuss with your doctor.",
+    summary: "Data in human pregnancy are limited. The decision to continue or stop balances the risk of untreated illness against possible drug exposure, for serious psychiatric illness, relapse prevention usually outweighs fetal risk. Involve obstetrics early and never stop abruptly without a plan.",
+    lactation: "Small amounts may pass into breast milk. Decisions are individualised. Monitor the infant for sedation and poor feeding, and discuss with your doctor.",
   },
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
   patientExplanation: "Mixed amphetamine salts combine the two mirror-image forms of the classic ADHD stimulant: one mainly sharpens attention, the other mainly promotes wakefulness. It is a controlled medicine with the standard safeguards.",
   patientEducationPoints: [
-    "Take it in the morning — later doses disrupt sleep.",
+    "Take it in the morning: later doses disrupt sleep.",
     "Appetite can fall: eat breakfast before the dose, and track weight.",
     "Tell your doctor about any chest pain, fainting, or palpitations.",
-    "This is a controlled medicine — store it safely and never share it.",
-    "Benefit from Amphetamine (d,l) builds over weeks — do not judge it in the first days.",
+    "This is a controlled medicine: store it safely and never share it.",
+    "Benefit from Amphetamine (d,l) builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The 3:1 story: d-amphetamine (focus) + l-amphetamine (wakefulness, more peripheral) — the mixture's identity.",
-    "XR = two-bead release; Mydayis = triple-bead (longer still) — release architecture as product line.",
-    "Amphetamine psychosis (1930s observation) founded the dopamine hypothesis of schizophrenia — history in a salt mixture.",
+    "The 3:1 story: d-amphetamine (focus) + l-amphetamine (wakefulness, more peripheral); the mixture's identity.",
+    "XR = two-bead release; Mydayis = triple-bead (longer still): release architecture as product line.",
+    "Amphetamine psychosis (1930s observation) founded the dopamine hypothesis of schizophrenia: history in a salt mixture.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Amphetamine (d,l): Mixed amphetamine salts (75% d, 25% l): the d-isomer drives central dopaminergic ADHD effect; the l-isomer adds noradrenergic wakefulness — combined releasing-agent pharmacology.",
-        "Uses of Amphetamine (d,l): ADHD — ages 3 and above (USA label); Narcolepsy",
-        "Mixed amphetamine SALTS 3:1 d:l — Adderall chemistry.",
-        "Releasing agent: DAT/NET substrate + VMAT2 release — stronger than methylphenidate.",
+        "Mechanism of Amphetamine (d,l): Mixed amphetamine salts (75% d, 25% l): the d-isomer drives central dopaminergic ADHD effect; the l-isomer adds noradrenergic wakefulness: combined releasing-agent pharmacology.",
+        "Uses of Amphetamine (d,l): ADHD; ages 3 and above (USA label); Narcolepsy",
+        "Mixed amphetamine SALTS 3:1 d:l. Adderall chemistry.",
+        "Releasing agent: DAT/NET substrate + VMAT2 release; stronger than methylphenidate.",
       ],
       practical: [
-        "Prescribe Amphetamine (d,l) for adhd — ages 3 and above (usa label) with dose, timing, and duration.",
+        "Prescribe Amphetamine (d,l) for adhd: ages 3 and above (usa label) with dose, timing, and duration.",
         "Outline the monitoring plan: Heart rate and blood pressure (Baseline, then every visit); Height, weight, appetite (Baseline, then every 6 months (children)); Sleep review (Every visit)",
       ],
       longAnswer: [
-        "Amphetamine (d,l): mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mixed amphetamine SALTS 3:1 d:l — Adderall chemistry.",
-        "Releasing agent: DAT/NET substrate + VMAT2 release — stronger than methylphenidate.",
+        "Amphetamine (d,l): mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mixed amphetamine SALTS 3:1 d:l. Adderall chemistry.",
+        "Releasing agent: DAT/NET substrate + VMAT2 release; stronger than methylphenidate.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mixed amphetamine SALTS 3:1 d:l — Adderall chemistry.",
-        "Releasing agent: DAT/NET substrate + VMAT2 release — stronger than methylphenidate.",
+        "Mixed amphetamine SALTS 3:1 d:l. Adderall chemistry.",
+        "Releasing agent: DAT/NET substrate + VMAT2 release; stronger than methylphenidate.",
         "IR + XR (two-bead) + triple-bead formulations.",
         "ADHD ≥3 and narcolepsy; full stimulant black box.",
         "Mechanism: catecholamine (dopamine/norepinephrine) enhancement in prefrontal circuits.",
@@ -286,7 +286,7 @@ export const amphetamine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Amphetamine (d,l) develops cardiovascular events — next best step?",
+        "A patient on Amphetamine (d,l) develops cardiovascular events: next best step?",
         "When to choose Amphetamine (d,l) over alternatives in its class.",
       ],
     },
@@ -299,16 +299,16 @@ export const amphetamine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The 3:1 story: d-amphetamine (focus) + l-amphetamine (wakefulness, more peripheral) — the mixture's identity.",
-        "XR = two-bead release; Mydayis = triple-bead (longer still) — release architecture as product line.",
-        "Amphetamine psychosis (1930s observation) founded the dopamine hypothesis of schizophrenia — history in a salt mixture.",
+        "The 3:1 story: d-amphetamine (focus) + l-amphetamine (wakefulness, more peripheral); the mixture's identity.",
+        "XR = two-bead release; Mydayis = triple-bead (longer still): release architecture as product line.",
+        "Amphetamine psychosis (1930s observation) founded the dopamine hypothesis of schizophrenia: history in a salt mixture.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mixed amphetamine SALTS 3:1 d:l — Adderall chemistry.",
-    "Releasing agent: DAT/NET substrate + VMAT2 release — stronger than methylphenidate.",
+    "Mixed amphetamine SALTS 3:1 d:l. Adderall chemistry.",
+    "Releasing agent: DAT/NET substrate + VMAT2 release; stronger than methylphenidate.",
     "IR + XR (two-bead) + triple-bead formulations.",
     "ADHD ≥3 and narcolepsy; full stimulant black box.",
     "Mechanism: catecholamine (dopamine/norepinephrine) enhancement in prefrontal circuits.",
@@ -316,16 +316,16 @@ export const amphetamine: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — adhd — ages 3 and above (usa label)",
-      presentation: "A patient presenting with adhd — ages 3 and above (usa label), started on Amphetamine (d,l).",
-      history: "A adult patient presents with a adhd — ages 3 and above (usa label) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with adhd — ages 3 and above (usa label); physical examination and baseline investigations are unremarkable.",
-      diagnosis: "ADHD — ages 3 and above (USA label). Differentials are considered and excluded clinically.",
+      title: "First presentation: adhd; ages 3 and above (usa label)",
+      presentation: "A patient presenting with adhd: ages 3 and above (usa label), started on Amphetamine (d,l).",
+      history: "A adult patient presents with a adhd: ages 3 and above (usa label) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with adhd: ages 3 and above (usa label); physical examination and baseline investigations are unremarkable.",
+      diagnosis: "ADHD: ages 3 and above (USA label). Differentials are considered and excluded clinically.",
       rationale: "Amphetamine (d,l) is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Stimulant) with strong evidence in this condition.",
       management: "Started at 5 mg once or twice daily, titrated to 10-30 mg/day divided with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Amphetamine (d,l) takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Amphetamine (d,l) takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -334,7 +334,7 @@ export const amphetamine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Stimulant comparison — choosing within the class",
+      title: "Stimulant comparison: choosing within the class",
       primaryDrug: "Amphetamine (d,l)",
       rows: [
         {
@@ -383,11 +383,11 @@ export const amphetamine: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Weight neutral to reducing — appetite effects common.",
+          primaryValue: "Weight neutral to reducing: appetite effects common.",
           comparisons: [
             {
               drug: "Lisdexamfetamine",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
             {
               drug: "Methylphenidate (d,l)",
@@ -395,11 +395,11 @@ export const amphetamine: Drug = {
             },
             {
               drug: "Dextroamphetamine (d-Amphetamine)",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
             {
               drug: "Dexmethylphenidate",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
           ],
         },
@@ -413,7 +413,7 @@ export const amphetamine: Drug = {
             },
             {
               drug: "Methylphenidate (d,l)",
-              value: "Not sedating — the opposite; rebound fatigue occurs at wear-off.",
+              value: "Not sedating: the opposite; rebound fatigue occurs at wear-off.",
             },
             {
               drug: "Dextroamphetamine (d-Amphetamine)",
@@ -427,7 +427,7 @@ export const amphetamine: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The Adderall mixture — d for focus, l for wake",
+          primaryValue: "The Adderall mixture: d for focus, l for wake",
           comparisons: [
             {
               drug: "Lisdexamfetamine",
@@ -435,20 +435,20 @@ export const amphetamine: Drug = {
             },
             {
               drug: "Methylphenidate (d,l)",
-              value: "The default stimulant — 60 years of ADHD first-line",
+              value: "The default stimulant: 60 years of ADHD first-line",
             },
             {
               drug: "Dextroamphetamine (d-Amphetamine)",
-              value: "The pure d-isomer — stronger central, softer peripheral",
+              value: "The pure d-isomer: stronger central, softer peripheral",
             },
             {
               drug: "Dexmethylphenidate",
-              value: "The active isomer — methylphenidate distilled",
+              value: "The active isomer: methylphenidate distilled",
             },
           ],
         },
       ],
-      takeaway: "All stimulants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All stimulants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -457,7 +457,7 @@ export const amphetamine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Amphetamine (d,l) reaches peak plasma concentration and begins acting at its molecular target (DAT/NET substrate (release) + VMAT2; 3:1 d:l isomer mix). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Amphetamine (d,l) reaches peak plasma concentration and begins acting at its molecular target (DAT/NET substrate (release) + VMAT2; 3:1 d:l isomer mix). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -493,7 +493,7 @@ export const amphetamine: Drug = {
   faqs: [
     {
       question: "How long does Amphetamine (d,l) take to work?",
-      answer: "IR 20-30 min; XR ~1 h, 10-12 h cover.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "IR 20-30 min; XR ~1 h, 10-12 h cover.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Amphetamine (d,l)?",
@@ -501,19 +501,19 @@ export const amphetamine: Drug = {
     },
     {
       question: "Can I stop Amphetamine (d,l) suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Amphetamine (d,l) habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Amphetamine (d,l) exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Amphetamine (d,l) exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Amphetamine (d,l) during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Amphetamine (d,l) may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Amphetamine (d,l) may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -633,7 +633,7 @@ export const amphetamine: Drug = {
       note: "Primary molecular target",
     },
     {
-      label: "ADHD — ages 3 and above (USA label)",
+      label: "ADHD: ages 3 and above (USA label)",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -663,7 +663,7 @@ export const amphetamine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Amphetamine (d,l)",
+      label: "Patient Guide. Amphetamine (d,l)",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -671,13 +671,13 @@ export const amphetamine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The racemic mixed amphetamine salts — Adderall chemistry.",
-    summary: "Amphetamine (d,l) is a prescription medicine used to treat adhd — ages 3 and above (usa label). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The racemic mixed amphetamine salts. Adderall chemistry.",
+    summary: "Amphetamine (d,l) is a prescription medicine used to treat adhd: ages 3 and above (usa label). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Mixed amphetamine salts combine the two mirror-image forms of the classic ADHD stimulant: one mainly sharpens attention, the other mainly promotes wakefulness. It is a controlled medicine with the standard safeguards.",
-    sideEffects: "The most common side effects are: appetite suppression, insomnia, tachycardia and dry mouth, emotional lability at wear-off. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Cardiovascular events and Psychosis/mania. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline, then every visit); height, weight, appetite (baseline, then every 6 months (children)); sleep review (every visit). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: appetite suppression, insomnia, tachycardia and dry mouth, emotional lability at wear-off. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Cardiovascular events and Psychosis/mania. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline, then every visit); height, weight, appetite (baseline, then every 6 months (children)); sleep review (every visit). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: MAOIs, OTC decongestants and sympathomimetics. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: MAOIs, OTC decongestants and sympathomimetics. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -701,7 +701,7 @@ export const amphetamine: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -735,7 +735,7 @@ export const amphetamine: Drug = {
         name: "Amphetamine (d,l)",
         slug: "amphetamine",
         relationship: "This guide",
-        distinguishing: "The Adderall mixture — d for focus, l for wake",
+        distinguishing: "The Adderall mixture: d for focus, l for wake",
       },
       {
         name: "Lisdexamfetamine",
@@ -747,25 +747,25 @@ export const amphetamine: Drug = {
         name: "Methylphenidate (d,l)",
         slug: "methylphenidate",
         relationship: "Same class (Stimulant)",
-        distinguishing: "The default stimulant — 60 years of ADHD first-line",
+        distinguishing: "The default stimulant: 60 years of ADHD first-line",
       },
       {
         name: "Dextroamphetamine (d-Amphetamine)",
         slug: "dexamphetamine",
         relationship: "Same class (Stimulant)",
-        distinguishing: "The pure d-isomer — stronger central, softer peripheral",
+        distinguishing: "The pure d-isomer: stronger central, softer peripheral",
       },
       {
         name: "Dexmethylphenidate",
         slug: "dexmethylphenidate",
         relationship: "Same class (Stimulant)",
-        distinguishing: "The active isomer — methylphenidate distilled",
+        distinguishing: "The active isomer: methylphenidate distilled",
       },
       {
         name: "Pemoline",
         slug: "pemoline",
         relationship: "Same class (Stimulant)",
-        distinguishing: "The hepatotoxic last-resort — withdrawn from major markets",
+        distinguishing: "The hepatotoxic last-resort: withdrawn from major markets",
       },
     ],
   },
@@ -913,12 +913,12 @@ export const amphetamine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Amphetamine (d,l) in two sentences.",
-      answer: "Mixed amphetamine salts (75% d, 25% l): the d-isomer drives central dopaminergic ADHD effect; the l-isomer adds noradrenergic wakefulness — combined releasing-agent pharmacology. Net effect: Catecholamine and wake-system enhancement with the agent's characteristic profile.",
+      answer: "Mixed amphetamine salts (75% d, 25% l): the d-isomer drives central dopaminergic ADHD effect; the l-isomer adds noradrenergic wakefulness: combined releasing-agent pharmacology. Net effect: Catecholamine and wake-system enhancement with the agent's characteristic profile.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Amphetamine (d,l).",
-      answer: "ADHD — ages 3 and above (USA label), Narcolepsy. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "ADHD: ages 3 and above (USA label), Narcolepsy. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -933,7 +933,7 @@ export const amphetamine: Drug = {
     },
     {
       question: "Share one clinical pearl about Amphetamine (d,l) that separates safe prescribers from unsafe ones.",
-      answer: "The 3:1 story: d-amphetamine (focus) + l-amphetamine (wakefulness, more peripheral) — the mixture's identity.",
+      answer: "The 3:1 story: d-amphetamine (focus) + l-amphetamine (wakefulness, more peripheral); the mixture's identity.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1009,7 +1009,7 @@ export const amphetamine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1054,7 +1054,7 @@ export const amphetamine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Amphetamine (d,l) works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Amphetamine (d,l) works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1070,7 +1070,7 @@ export const amphetamine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Amphetamine (d,l) safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Amphetamine (d,l) safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1113,7 +1113,7 @@ export const amphetamine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Amphetamine (d,l) follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Amphetamine (d,l) follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1123,7 +1123,7 @@ export const amphetamine: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Weight neutral to reducing — appetite effects common.",
+    weightGain: "Weight neutral to reducing: appetite effects common.",
     sedation: "Not sedating.",
     dosing: [
       {
@@ -1146,11 +1146,11 @@ export const amphetamine: Drug = {
       "XR for school-day; IR for flexible short cover.",
     ],
     overdose: [
-      "Overdose with Amphetamine (d,l) is managed supportively — no specific antidote.",
+      "Overdose with Amphetamine (d,l) is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Amphetamine (d,l) is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1186,14 +1186,14 @@ export const amphetamine: Drug = {
     ],
     primaryTargetSymptoms: ["Inattention/hyperactivity", "Narcolepsy"],
     pearls: [
-      "The 3:1 story: d-amphetamine (focus) + l-amphetamine (wakefulness, more peripheral) — the mixture's identity.",
-      "XR = two-bead release; Mydayis = triple-bead (longer still) — release architecture as product line.",
-      "Amphetamine psychosis (1930s observation) founded the dopamine hypothesis of schizophrenia — history in a salt mixture.",
+      "The 3:1 story: d-amphetamine (focus) + l-amphetamine (wakefulness, more peripheral); the mixture's identity.",
+      "XR = two-bead release; Mydayis = triple-bead (longer still): release architecture as product line.",
+      "Amphetamine psychosis (1930s observation) founded the dopamine hypothesis of schizophrenia: history in a salt mixture.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

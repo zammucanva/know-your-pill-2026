@@ -23,14 +23,14 @@ export const galantamine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Cognitive Enhancers", "Cholinesterase Inhibitors", "Galantamine"],
   /* ---- Hero / summary ---- */
-  tagline: "The cholinesterase inhibitor with nicotinic modulation — the allosteric third member.",
-  summary: "Galantamine is the third cholinesterase inhibitor: a competitive, reversible AChE inhibitor that ALSO allosterically modulates nicotinic receptors — theoretically enhancing cholinergic signalling two ways. Approved in mild-to-moderate Alzheimer's, it is a twice-daily (or ER once-daily) alternative with the class cholinergic profile and the class cardiac cautions.",
+  tagline: "The cholinesterase inhibitor with nicotinic modulation: the allosteric third member.",
+  summary: "Galantamine is the third cholinesterase inhibitor: a competitive, reversible AChE inhibitor that ALSO allosterically modulates nicotinic receptors; theoretically enhancing cholinergic signalling two ways. Approved in mild-to-moderate Alzheimer's, it is a twice-daily (or ER once-daily) alternative with the class cholinergic profile and the class cardiac cautions.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Galantamine — from its molecular target (Acetylcholinesterase (reversible inhibition) + nicotinic receptor allosteric modulation) to clinical effect.",
+    "Explain the mechanism of action of Galantamine, from its molecular target (Acetylcholinesterase (reversible inhibition) + nicotinic receptor allosteric modulation) to clinical effect.",
     "List the FDA-approved and off-label uses of Galantamine.",
     "Predict the common and serious side effects of Galantamine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Galantamine.",
@@ -38,15 +38,15 @@ export const galantamine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Galantamine inhibits acetylcholinesterase AND allosterically potentiates nicotinic receptors — dual cholinergic enhancement.",
+    summary: "Galantamine inhibits acetylcholinesterase AND allosterically potentiates nicotinic receptors: dual cholinergic enhancement.",
     molecularTarget: "Acetylcholinesterase (reversible inhibition) + nicotinic receptor allosteric modulation",
     effect: "Modulation of the described target with the agent's clinical effect.",
     steps: [
-      "Galantamine inhibits acetylcholinesterase AND allosterically potentiates nicotinic receptors — dual cholinergic enhancement.",
+      "Galantamine inhibits acetylcholinesterase AND allosterically potentiates nicotinic receptors: dual cholinergic enhancement.",
       "The target engagement produces the clinical effect described.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 7 hours (IR); ER smooths to once daily. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 7 hours (IR); ER smooths to once daily. See mechanism and prescriber sections.",
     halfLife: "About 7 hours (IR); ER smooths to once daily.",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -129,7 +129,7 @@ export const galantamine: Drug = {
       name: "Nausea and vomiting",
       frequency: "common",
       severity: "moderate",
-      description: "Cholinergic GI effects — class-typical.",
+      description: "Cholinergic GI effects: class-typical.",
       management: "With food; ER form; slow titration.",
     },
     {
@@ -206,32 +206,32 @@ export const galantamine: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Galantamine is one of the three standard medicines for mild-to-moderate Alzheimer's: it raises a memory-related brain chemical by blocking its breakdown and also gently enhances the receptors that respond to it. Taken once daily with food, its commonest effects are stomach upset and dizziness.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Galantamine builds over weeks — do not judge it in the first days.",
+    "Benefit from Galantamine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The nicotinic story: allosteric potentiation of nicotinic receptors is galantamine's theoretical edge — preclinical elegance, modest clinical differentiation.",
-    "Weight matters: the 16→24 mg step is weight-based (≥ 50 kg for 24 mg) — one of the few weight-gated dementia doses.",
-    "ER once daily transformed its tolerability — the IR twice-daily era was nausea-dominated.",
-    "Modest differentiation from donepezil in practice — often chosen on cost or availability.",
+    "The nicotinic story: allosteric potentiation of nicotinic receptors is galantamine's theoretical edge; preclinical elegance, modest clinical differentiation.",
+    "Weight matters: the 16→24 mg step is weight-based (≥ 50 kg for 24 mg), one of the few weight-gated dementia doses.",
+    "ER once daily transformed its tolerability: the IR twice-daily era was nausea-dominated.",
+    "Modest differentiation from donepezil in practice: often chosen on cost or availability.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Galantamine: Galantamine inhibits acetylcholinesterase AND allosterically potentiates nicotinic receptors — dual cholinergic enhancement.",
-        "Uses of Galantamine: Alzheimer's disease — mild to moderate",
+        "Mechanism of Galantamine: Galantamine inhibits acetylcholinesterase AND allosterically potentiates nicotinic receptors; dual cholinergic enhancement.",
+        "Uses of Galantamine: Alzheimer's disease; mild to moderate",
         "Mechanism: reversible AChE inhibition + nicotinic allosteric modulation (dual).",
         "Indication: mild-to-moderate Alzheimer's.",
       ],
       practical: [
-        "Prescribe Galantamine for alzheimer's disease — mild to moderate with dose, timing, and duration.",
+        "Prescribe Galantamine for alzheimer's disease: mild to moderate with dose, timing, and duration.",
         "Outline the monitoring plan: Pulse (Every review); Weight (Periodically)",
       ],
       longAnswer: [
-        "Galantamine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Galantamine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: reversible AChE inhibition + nicotinic allosteric modulation (dual).",
         "Indication: mild-to-moderate Alzheimer's.",
       ],
@@ -252,7 +252,7 @@ export const galantamine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Galantamine develops bradycardia and syncope — next best step?",
+        "A patient on Galantamine develops bradycardia and syncope: next best step?",
         "When to choose Galantamine over alternatives in its class.",
       ],
     },
@@ -265,10 +265,10 @@ export const galantamine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The nicotinic story: allosteric potentiation of nicotinic receptors is galantamine's theoretical edge — preclinical elegance, modest clinical differentiation.",
-        "Weight matters: the 16→24 mg step is weight-based (≥ 50 kg for 24 mg) — one of the few weight-gated dementia doses.",
-        "ER once daily transformed its tolerability — the IR twice-daily era was nausea-dominated.",
-        "Modest differentiation from donepezil in practice — often chosen on cost or availability.",
+        "The nicotinic story: allosteric potentiation of nicotinic receptors is galantamine's theoretical edge; preclinical elegance, modest clinical differentiation.",
+        "Weight matters: the 16→24 mg step is weight-based (≥ 50 kg for 24 mg), one of the few weight-gated dementia doses.",
+        "ER once daily transformed its tolerability: the IR twice-daily era was nausea-dominated.",
+        "Modest differentiation from donepezil in practice: often chosen on cost or availability.",
       ],
     },
   },
@@ -283,16 +283,16 @@ export const galantamine: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — alzheimer's disease — mild to moderate",
-      presentation: "A patient presenting with alzheimer's disease — mild to moderate, started on Galantamine.",
-      history: "A adult patient presents with a alzheimer's disease — mild to moderate picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with alzheimer's disease — mild to moderate; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Alzheimer's disease — mild to moderate. Differentials are considered and excluded clinically.",
+      title: "First presentation: alzheimer's disease; mild to moderate",
+      presentation: "A patient presenting with alzheimer's disease: mild to moderate, started on Galantamine.",
+      history: "A adult patient presents with a alzheimer's disease: mild to moderate picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with alzheimer's disease: mild to moderate; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Alzheimer's disease: mild to moderate. Differentials are considered and excluded clinically.",
       rationale: "Galantamine is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (AChE Inhibitor) with strong evidence in this condition.",
       management: "Started at 8 mg once daily × 4 weeks, titrated to 16-24 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Galantamine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Galantamine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -301,7 +301,7 @@ export const galantamine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "AChE Inhibitor comparison — choosing within the class",
+      title: "AChE Inhibitor comparison: choosing within the class",
       primaryDrug: "Galantamine",
       rows: [
         {
@@ -366,16 +366,16 @@ export const galantamine: Drug = {
           comparisons: [
             {
               drug: "Donepezil",
-              value: "The once-daily AChE inhibitor — Alzheimer's first-line",
+              value: "The once-daily AChE inhibitor. Alzheimer's first-line",
             },
             {
               drug: "Rivastigmine",
-              value: "The dual-inhibitor with the patch — and the DLB/PDD approval",
+              value: "The dual-inhibitor with the patch, and the DLB/PDD approval",
             },
           ],
         },
       ],
-      takeaway: "All cholinesterase inhibitors share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All cholinesterase inhibitors share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -384,7 +384,7 @@ export const galantamine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Galantamine reaches peak plasma concentration and begins acting at its molecular target (Acetylcholinesterase (reversible inhibition) + nicotinic receptor allosteric modulation). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Galantamine reaches peak plasma concentration and begins acting at its molecular target (Acetylcholinesterase (reversible inhibition) + nicotinic receptor allosteric modulation). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -420,7 +420,7 @@ export const galantamine: Drug = {
   faqs: [
     {
       question: "How long does Galantamine take to work?",
-      answer: "Cognitive benefit over weeks-months.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Cognitive benefit over weeks-months.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Galantamine?",
@@ -428,11 +428,11 @@ export const galantamine: Drug = {
     },
     {
       question: "Can I stop Galantamine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Galantamine habit-forming?",
@@ -440,7 +440,7 @@ export const galantamine: Drug = {
     },
     {
       question: "Can I take Galantamine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Galantamine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Galantamine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -538,7 +538,7 @@ export const galantamine: Drug = {
       note: "Primary molecular target",
     },
     {
-      label: "Alzheimer's disease — mild to moderate",
+      label: "Alzheimer's disease: mild to moderate",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -562,7 +562,7 @@ export const galantamine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Galantamine",
+      label: "Patient Guide. Galantamine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -570,13 +570,13 @@ export const galantamine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The cholinesterase inhibitor with nicotinic modulation — the allosteric third member.",
-    summary: "Galantamine is a prescription medicine used to treat alzheimer's disease — mild to moderate. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The cholinesterase inhibitor with nicotinic modulation: the allosteric third member.",
+    summary: "Galantamine is a prescription medicine used to treat alzheimer's disease: mild to moderate. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Galantamine is one of the three standard medicines for mild-to-moderate Alzheimer's: it raises a memory-related brain chemical by blocking its breakdown and also gently enhances the receptors that respond to it. Taken once daily with food, its commonest effects are stomach upset and dizziness.",
-    sideEffects: "The most common side effects are: nausea and vomiting, diarrhoea and anorexia, dizziness and headache. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Bradycardia and syncope and Peptic ulcer risk. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: pulse (every review); weight (periodically). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: nausea and vomiting, diarrhoea and anorexia, dizziness and headache. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Bradycardia and syncope and Peptic ulcer risk. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: pulse (every review); weight (periodically). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Beta-blockers and digoxin, Anticholinergics, Strong CYP2D6/3A4 inhibitors (ketoconazole, paroxetine). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Beta-blockers and digoxin, Anticholinergics, Strong CYP2D6/3A4 inhibitors (ketoconazole, paroxetine). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -645,19 +645,19 @@ export const galantamine: Drug = {
         name: "Donepezil",
         slug: "donepezil",
         relationship: "Same class (AChE Inhibitor)",
-        distinguishing: "The once-daily AChE inhibitor — Alzheimer's first-line",
+        distinguishing: "The once-daily AChE inhibitor. Alzheimer's first-line",
       },
       {
         name: "Rivastigmine",
         slug: "rivastigmine",
         relationship: "Same class (AChE Inhibitor)",
-        distinguishing: "The dual-inhibitor with the patch — and the DLB/PDD approval",
+        distinguishing: "The dual-inhibitor with the patch, and the DLB/PDD approval",
       },
       {
         name: "Tacrine",
         slug: "tacrine",
         relationship: "Same class (AChE Inhibitor)",
-        distinguishing: "The hepatotoxic QID prototype — the first Alzheimer's ChEI",
+        distinguishing: "The hepatotoxic QID prototype: the first Alzheimer's ChEI",
       },
     ],
   },
@@ -805,12 +805,12 @@ export const galantamine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Galantamine in two sentences.",
-      answer: "Galantamine inhibits acetylcholinesterase AND allosterically potentiates nicotinic receptors — dual cholinergic enhancement. Net effect: Modulation of the described target with the agent's clinical effect.",
+      answer: "Galantamine inhibits acetylcholinesterase AND allosterically potentiates nicotinic receptors: dual cholinergic enhancement. Net effect: Modulation of the described target with the agent's clinical effect.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Galantamine.",
-      answer: "Alzheimer's disease — mild to moderate. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Alzheimer's disease: mild to moderate. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -825,7 +825,7 @@ export const galantamine: Drug = {
     },
     {
       question: "Share one clinical pearl about Galantamine that separates safe prescribers from unsafe ones.",
-      answer: "The nicotinic story: allosteric potentiation of nicotinic receptors is galantamine's theoretical edge — preclinical elegance, modest clinical differentiation.",
+      answer: "The nicotinic story: allosteric potentiation of nicotinic receptors is galantamine's theoretical edge; preclinical elegance, modest clinical differentiation.",
       topic: "Clinical Pearls",
     },
   ],
@@ -901,7 +901,7 @@ export const galantamine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -946,7 +946,7 @@ export const galantamine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Galantamine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Galantamine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -962,7 +962,7 @@ export const galantamine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Galantamine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Galantamine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1005,7 +1005,7 @@ export const galantamine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Galantamine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Galantamine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1033,7 +1033,7 @@ export const galantamine: Drug = {
       "The 24 mg step is weight-gated (≥ 50 kg).",
     ],
     overdose: [
-      "Overdose with Galantamine is managed supportively — no specific antidote.",
+      "Overdose with Galantamine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Galantamine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1076,15 +1076,15 @@ export const galantamine: Drug = {
       "Cognition and function in mild-moderate Alzheimer's",
     ],
     pearls: [
-      "The nicotinic story: allosteric potentiation of nicotinic receptors is galantamine's theoretical edge — preclinical elegance, modest clinical differentiation.",
-      "Weight matters: the 16→24 mg step is weight-based (≥ 50 kg for 24 mg) — one of the few weight-gated dementia doses.",
-      "ER once daily transformed its tolerability — the IR twice-daily era was nausea-dominated.",
-      "Modest differentiation from donepezil in practice — often chosen on cost or availability.",
+      "The nicotinic story: allosteric potentiation of nicotinic receptors is galantamine's theoretical edge; preclinical elegance, modest clinical differentiation.",
+      "Weight matters: the 16→24 mg step is weight-based (≥ 50 kg for 24 mg), one of the few weight-gated dementia doses.",
+      "ER once daily transformed its tolerability: the IR twice-daily era was nausea-dominated.",
+      "Modest differentiation from donepezil in practice: often chosen on cost or availability.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

@@ -113,7 +113,7 @@ export function ContinueStudying() {
                 <p className="mt-3 text-body-sm text-muted-foreground leading-relaxed">
                   {resetDone
                     ? "Your local study progress has been cleared. Begin again with any course below."
-                    : "Every course is a complete lesson plan — objectives, checkpoints, active recall. Begin with course 01 and your progress will be remembered on this device."}
+                    : "Every course is a complete lesson plan: objectives, checkpoints, active recall. Begin with course 01 and your progress will be remembered on this device."}
                 </p>
               </div>
               <Link
@@ -251,7 +251,7 @@ export function ContinueStudying() {
             <p className="flex items-center gap-2 text-xs text-muted-foreground/60">
               <BookOpen className="h-3.5 w-3.5" aria-hidden />
               {courseCount} {courseCount === 1 ? "course" : "courses"} remembered on
-              this device — no account needed.
+              this device: no account needed.
             </p>
 
             {confirming ? (

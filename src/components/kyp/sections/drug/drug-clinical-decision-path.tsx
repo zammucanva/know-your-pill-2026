@@ -54,7 +54,7 @@ export function DrugClinicalDecisionPath({ drug }: DrugClinicalDecisionPathProps
         <SectionHeader
           eyebrow="Clinical Decision Path"
           title={path.title}
-          description="Follow the algorithm — students remember decision trees far better than paragraphs. Click through each branch to see the recommendation."
+          description="Follow the algorithm: students remember decision trees far better than paragraphs. Click through each branch to see the recommendation."
           tone="brand"
         />
 

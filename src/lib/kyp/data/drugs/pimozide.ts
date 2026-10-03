@@ -19,18 +19,18 @@ export const pimozide: Drug = {
   brandNames: ["Orap"],
   drugClass: "typical-antipsychotic",
   drugClassLabel: "Typical Antipsychotic",
-  drugClassFullName: "Typical (Conventional) Antipsychotic — Diphenylbutylpiperidine",
+  drugClassFullName: "Typical (Conventional) Antipsychotic. Diphenylbutylpiperidine",
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Typical Antipsychotics", "Pimozide"],
   /* ---- Hero / summary ---- */
-  tagline: "The diphenylbutylpiperidine built for Tourette's and monosymptomatic delusions — under permanent ECG watch.",
-  summary: "Pimozide is a long-acting high-potency diphenylbutylpiperidine antipsychotic with two signature niches: Tourette's disorder (once the drug of choice) and monosymptomatic hypochondriacal/parasitosis delusions. It prolongs the QT interval (ECG mandatory), inhibits CYP2D6 strongly, and is contraindicated with most QT drugs — a specialist agent whose unique indications keep it in use despite its interaction burden.",
+  tagline: "The diphenylbutylpiperidine built for Tourette's and monosymptomatic delusions: under permanent ECG watch.",
+  summary: "Pimozide is a long-acting high-potency diphenylbutylpiperidine antipsychotic with two signature niches: Tourette's disorder (once the drug of choice) and monosymptomatic hypochondriacal/parasitosis delusions. It prolongs the QT interval (ECG mandatory), inhibits CYP2D6 strongly, and is contraindicated with most QT drugs. A specialist agent whose unique indications keep it in use despite its interaction burden.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Pimozide — from its molecular target (D2 (high-potency antagonist, long receptor residence); sigma receptor antagonism; cardiac potassium channel) to clinical effect.",
+    "Explain the mechanism of action of Pimozide, from its molecular target (D2 (high-potency antagonist, long receptor residence); sigma receptor antagonism; cardiac potassium channel) to clinical effect.",
     "List the FDA-approved and off-label uses of Pimozide.",
     "Predict the common and serious side effects of Pimozide from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Pimozide.",
@@ -40,10 +40,10 @@ export const pimozide: Drug = {
   mechanism: {
     summary: "High-potency, very long-acting D2 antagonist (diphenylbutylpiperidine) with strong CYP2D6 inhibition and clinically significant QT effect.",
     molecularTarget: "D2 (high-potency antagonist, long receptor residence); sigma receptor antagonism; cardiac potassium channel",
-    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — high potency with uniquely long receptor binding — weekly-dose pharmacokinetics at the receptor level.",
+    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways (high potency with uniquely long receptor binding) weekly-dose pharmacokinetics at the receptor level.",
     steps: [
-      "Blocks D2 receptors — therapeutic antipsychotic effect at 65–75% occupancy.",
-      "EPS emerges as occupancy passes ~80% — high potency with uniquely long receptor binding — weekly-dose pharmacokinetics at the receptor level.",
+      "Blocks D2 receptors: therapeutic antipsychotic effect at 65–75% occupancy.",
+      "EPS emerges as occupancy passes ~80% (high potency with uniquely long receptor binding) weekly-dose pharmacokinetics at the receptor level.",
       "Tuberoinfundibular blockade raises prolactin; nigrostriatal blockade produces parkinsonism and dystonia.",
       "Class-typical receptor binding determines the drug's adverse-effect texture.",
     ],
@@ -109,7 +109,7 @@ export const pimozide: Drug = {
         label: "hyperprolactinaemia",
       },
     ],
-    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia — efficacy and motor risk are two sides of one coin.",
+    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia: efficacy and motor risk are two sides of one coin.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -131,7 +131,7 @@ export const pimozide: Drug = {
     {
       name: "Monosymptomatic hypochondriacal psychosis (delusional parasitosis)",
       status: "guideline",
-      description: "The classic indication dermatologists consult for — fixed delusion of infestation.",
+      description: "The classic indication dermatologists consult for: fixed delusion of infestation.",
     },
   ],
   contraindications: [
@@ -163,14 +163,14 @@ export const pimozide: Drug = {
       name: "Extrapyramidal symptoms (parkinsonism)",
       frequency: "very-common",
       severity: "moderate",
-      description: "Rigidity, bradykinesia, tremor — dose-dependent D2 signature.",
+      description: "Rigidity, bradykinesia, tremor: dose-dependent D2 signature.",
       management: "Reduce dose; anticholinergic.",
     },
     {
       name: "Akathisia",
       frequency: "common",
       severity: "moderate",
-      description: "Restlessness — frequently mistaken for worsening psychosis.",
+      description: "Restlessness: frequently mistaken for worsening psychosis.",
       management: "Reduce dose; propranolol.",
     },
     {
@@ -191,7 +191,7 @@ export const pimozide: Drug = {
       name: "QT prolongation",
       frequency: "uncommon",
       severity: "life-threatening",
-      description: "Clinically significant — baseline and follow-up ECG mandatory; the restricting toxicity.",
+      description: "Clinically significant: baseline and follow-up ECG mandatory; the restricting toxicity.",
       management: "ECG before and during treatment; avoid all QT combinations.",
     },
   ],
@@ -200,14 +200,14 @@ export const pimozide: Drug = {
       name: "Neuroleptic malignant syndrome",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency.",
+      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness: the class medical emergency.",
       management: "Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
     },
     {
       name: "Tardive dyskinesia",
       frequency: "uncommon",
       severity: "severe",
-      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex — a defining risk of chronic typical antipsychotics.",
+      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex: a defining risk of chronic typical antipsychotics.",
       management: "Lowest effective dose; AIMS surveillance; reduce or switch on detection; VMAT2 inhibitors for severe cases.",
     },
   ],
@@ -235,7 +235,7 @@ export const pimozide: Drug = {
   ],
   pregnancy: {
     legacyCategory: "C",
-    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk — continue at the lowest effective dose with obstetric co-management.",
+    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk: continue at the lowest effective dose with obstetric co-management.",
     lactation: "Small amounts pass into milk; infant sedation and EPS-like effects are monitored. Generally considered acceptable with infant monitoring.",
   },
   renalAdjustment: "Standard caution.",
@@ -243,43 +243,43 @@ export const pimozide: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Pimozide is a specialist medicine for Tourette's tics and for a rare condition where a person is convinced they are infested with parasites despite clear skin. It needs a heart tracing (ECG) before starting and during treatment because it can affect the heart's rhythm.",
   patientEducationPoints: [
-    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early — these are treatable.",
+    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early: these are treatable.",
     "Stand up slowly during the first week.",
-    "Do not stop suddenly — discuss any change with your doctor.",
-    "Benefit from Pimozide builds over weeks — do not judge it in the first days.",
+    "Do not stop suddenly: discuss any change with your doctor.",
+    "Benefit from Pimozide builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "Two niches keep pimozide alive: Tourette's and delusional parasitosis — the dermatology-psychiatry handshake drug.",
+    "Two niches keep pimozide alive: Tourette's and delusional parasitosis; the dermatology-psychiatry handshake drug.",
     "ECG at baseline and after dose changes is part of the prescription.",
-    "Strong 2D6 inhibition is easy to forget — pimozide is a perpetrator, not just a victim, of interactions.",
+    "Strong 2D6 inhibition is easy to forget: pimozide is a perpetrator, not just a victim, of interactions.",
     "Long receptor residence means the pharmacodynamic tail outlasts the plasma half-life.",
   ],
   examLens: {
     mbbs: {
       viva: [
         "Mechanism of Pimozide: High-potency, very long-acting D2 antagonist (diphenylbutylpiperidine) with strong CYP2D6 inhibition and clinically significant QT effect.",
-        "Uses of Pimozide: Tourette's disorder — suppresses tics and vocal utterances; Monosymptomatic hypochondriacal psychosis (delusional parasitosis)",
-        "Diphenylbutylpiperidine — high-potency, long-acting D2 antagonist.",
+        "Uses of Pimozide: Tourette's disorder; suppresses tics and vocal utterances; Monosymptomatic hypochondriacal psychosis (delusional parasitosis)",
+        "Diphenylbutylpiperidine: high-potency, long-acting D2 antagonist.",
         "Signature uses: Tourette's disorder + monosymptomatic delusional parasitosis.",
       ],
       practical: [
-        "Prescribe Pimozide for tourette's disorder — suppresses tics and vocal utterances with dose, timing, and duration.",
+        "Prescribe Pimozide for tourette's disorder: suppresses tics and vocal utterances with dose, timing, and duration.",
         "Outline the monitoring plan: ECG (QTc) (Baseline, after dose changes, and periodically)",
       ],
       longAnswer: [
-        "Pimozide: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Diphenylbutylpiperidine — high-potency, long-acting D2 antagonist.",
+        "Pimozide: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Diphenylbutylpiperidine: high-potency, long-acting D2 antagonist.",
         "Signature uses: Tourette's disorder + monosymptomatic delusional parasitosis.",
       ],
     },
     neetPg: {
       highYield: [
-        "Diphenylbutylpiperidine — high-potency, long-acting D2 antagonist.",
+        "Diphenylbutylpiperidine: high-potency, long-acting D2 antagonist.",
         "Signature uses: Tourette's disorder + monosymptomatic delusional parasitosis.",
         "QT prolongation (ECG mandatory) + strong CYP2D6 inhibition (a perpetrator of interactions).",
         "Dose: 1–4 mg/day (max 10 mg); slow titration with ECG.",
-        "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+        "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
       ],
       pyqConcepts: [
         "Mechanism/target of Pimozide",
@@ -289,7 +289,7 @@ export const pimozide: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Pimozide develops neuroleptic malignant syndrome — next best step?",
+        "A patient on Pimozide develops neuroleptic malignant syndrome: next best step?",
         "When to choose Pimozide over alternatives in its class.",
       ],
     },
@@ -302,34 +302,34 @@ export const pimozide: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "Two niches keep pimozide alive: Tourette's and delusional parasitosis — the dermatology-psychiatry handshake drug.",
+        "Two niches keep pimozide alive: Tourette's and delusional parasitosis; the dermatology-psychiatry handshake drug.",
         "ECG at baseline and after dose changes is part of the prescription.",
-        "Strong 2D6 inhibition is easy to forget — pimozide is a perpetrator, not just a victim, of interactions.",
+        "Strong 2D6 inhibition is easy to forget: pimozide is a perpetrator, not just a victim, of interactions.",
         "Long receptor residence means the pharmacodynamic tail outlasts the plasma half-life.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Diphenylbutylpiperidine — high-potency, long-acting D2 antagonist.",
+    "Diphenylbutylpiperidine: high-potency, long-acting D2 antagonist.",
     "Signature uses: Tourette's disorder + monosymptomatic delusional parasitosis.",
     "QT prolongation (ECG mandatory) + strong CYP2D6 inhibition (a perpetrator of interactions).",
     "Dose: 1–4 mg/day (max 10 mg); slow titration with ECG.",
-    "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+    "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — tourette's disorder — suppresses tics and vocal utterances",
-      presentation: "A patient presenting with tourette's disorder — suppresses tics and vocal utterances, started on Pimozide.",
-      history: "A adult patient presents with a tourette's disorder — suppresses tics and vocal utterances picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with tourette's disorder — suppresses tics and vocal utterances; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Tourette's disorder — suppresses tics and vocal utterances. Differentials are considered and excluded clinically.",
+      title: "First presentation: tourette's disorder; suppresses tics and vocal utterances",
+      presentation: "A patient presenting with tourette's disorder: suppresses tics and vocal utterances, started on Pimozide.",
+      history: "A adult patient presents with a tourette's disorder: suppresses tics and vocal utterances picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with tourette's disorder: suppresses tics and vocal utterances; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Tourette's disorder: suppresses tics and vocal utterances. Differentials are considered and excluded clinically.",
       rationale: "Pimozide is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Typical Antipsychotic) with strong evidence in this condition.",
       management: "Started at 0.5–1 mg once daily, titrated to 1–4 mg/day (0.1 mg/kg in children) with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Pimozide takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Pimozide takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -338,7 +338,7 @@ export const pimozide: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Typical Antipsychotic comparison — choosing within the class",
+      title: "Typical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Pimozide",
       rows: [
         {
@@ -387,11 +387,11 @@ export const pimozide: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Low — weight gain not expected.",
+          primaryValue: "Low: weight gain not expected.",
           comparisons: [
             {
               drug: "Chlorpromazine",
-              value: "Low — weight gain not expected.",
+              value: "Low: weight gain not expected.",
             },
             {
               drug: "Haloperidol",
@@ -399,11 +399,11 @@ export const pimozide: Drug = {
             },
             {
               drug: "Fluphenazine",
-              value: "Low — weight gain not expected.",
+              value: "Low: weight gain not expected.",
             },
             {
               drug: "Perphenazine",
-              value: "Low — weight gain not expected.",
+              value: "Low: weight gain not expected.",
             },
           ],
         },
@@ -417,7 +417,7 @@ export const pimozide: Drug = {
             },
             {
               drug: "Haloperidol",
-              value: "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+              value: "Mild, among the least sedating antipsychotics; alerting more than calming at low doses.",
             },
             {
               drug: "Fluphenazine",
@@ -439,7 +439,7 @@ export const pimozide: Drug = {
             },
             {
               drug: "Haloperidol",
-              value: "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+              value: "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool",
             },
             {
               drug: "Fluphenazine",
@@ -452,7 +452,7 @@ export const pimozide: Drug = {
           ],
         },
       ],
-      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -461,7 +461,7 @@ export const pimozide: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Pimozide reaches peak plasma concentration and begins acting at its molecular target (D2 (high-potency antagonist, long receptor residence); sigma receptor antagonism; cardiac potassium channel). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Pimozide reaches peak plasma concentration and begins acting at its molecular target (D2 (high-potency antagonist, long receptor residence); sigma receptor antagonism; cardiac potassium channel). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -497,7 +497,7 @@ export const pimozide: Drug = {
   faqs: [
     {
       question: "How long does Pimozide take to work?",
-      answer: "Clinical effect of Pimozide typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Clinical effect of Pimozide typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Pimozide?",
@@ -505,11 +505,11 @@ export const pimozide: Drug = {
     },
     {
       question: "Can I stop Pimozide suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Pimozide habit-forming?",
@@ -517,7 +517,7 @@ export const pimozide: Drug = {
     },
     {
       question: "Can I take Pimozide during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Pimozide may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Pimozide may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -622,7 +622,7 @@ export const pimozide: Drug = {
       label: "Typical Antipsychotic",
       type: "class",
       href: "#mechanism",
-      note: "Typical (Conventional) Antipsychotic — Diphenylbutylpiperidine",
+      note: "Typical (Conventional) Antipsychotic. Diphenylbutylpiperidine",
     },
     {
       label: "Central monoaminergic systems (see mechanism)",
@@ -637,7 +637,7 @@ export const pimozide: Drug = {
       note: "Primary molecular target",
     },
     {
-      label: "Tourette's disorder — suppresses tics and vocal utterances",
+      label: "Tourette's disorder: suppresses tics and vocal utterances",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -667,7 +667,7 @@ export const pimozide: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Pimozide",
+      label: "Patient Guide. Pimozide",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -675,13 +675,13 @@ export const pimozide: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The diphenylbutylpiperidine built for Tourette's and monosymptomatic delusions — under permanent ECG watch.",
-    summary: "Pimozide is a prescription medicine used to treat tourette's disorder — suppresses tics and vocal utterances. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The diphenylbutylpiperidine built for Tourette's and monosymptomatic delusions: under permanent ECG watch.",
+    summary: "Pimozide is a prescription medicine used to treat tourette's disorder: suppresses tics and vocal utterances. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Pimozide is a specialist medicine for Tourette's tics and for a rare condition where a person is convinced they are infested with parasites despite clear skin. It needs a heart tracing (ECG) before starting and during treatment because it can affect the heart's rhythm.",
-    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation, qt prolongation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: ecg (qtc) (baseline, after dose changes, and periodically). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation, qt prolongation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: ecg (qtc) (baseline, after dose changes, and periodically). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Strong CYP2D6 inhibitors and QT-prolonging drugs, Macrolide antibiotics. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Strong CYP2D6 inhibitors and QT-prolonging drugs, Macrolide antibiotics. Avoid alcohol unless your doctor says it is safe.",
   },
   sectionDifficulty: {
     mechanism: "mbbs",
@@ -723,7 +723,7 @@ export const pimozide: Drug = {
         name: "Haloperidol",
         slug: "haloperidol",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool",
       },
       {
         name: "Fluphenazine",
@@ -741,7 +741,7 @@ export const pimozide: Drug = {
         name: "Thioridazine",
         slug: "thioridazine",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "The restricted QT-retinopathy phenothiazine — last-line",
+        distinguishing: "The restricted QT-retinopathy phenothiazine: last-line",
       },
       {
         name: "Trifluoperazine",
@@ -912,17 +912,17 @@ export const pimozide: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Pimozide in two sentences.",
-      answer: "High-potency, very long-acting D2 antagonist (diphenylbutylpiperidine) with strong CYP2D6 inhibition and clinically significant QT effect. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — high potency with uniquely long receptor binding — weekly-dose pharmacokinetics at the receptor level.",
+      answer: "High-potency, very long-acting D2 antagonist (diphenylbutylpiperidine) with strong CYP2D6 inhibition and clinically significant QT effect. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways (high potency with uniquely long receptor binding) weekly-dose pharmacokinetics at the receptor level.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Pimozide.",
-      answer: "Tourette's disorder — suppresses tics and vocal utterances, Monosymptomatic hypochondriacal psychosis (delusional parasitosis). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Tourette's disorder: suppresses tics and vocal utterances, Monosymptomatic hypochondriacal psychosis (delusional parasitosis). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Pimozide and how you would manage it.",
-      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
+      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness; the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
       topic: "Safety",
     },
     {
@@ -932,7 +932,7 @@ export const pimozide: Drug = {
     },
     {
       question: "Share one clinical pearl about Pimozide that separates safe prescribers from unsafe ones.",
-      answer: "Two niches keep pimozide alive: Tourette's and delusional parasitosis — the dermatology-psychiatry handshake drug.",
+      answer: "Two niches keep pimozide alive: Tourette's and delusional parasitosis; the dermatology-psychiatry handshake drug.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1008,7 +1008,7 @@ export const pimozide: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1053,7 +1053,7 @@ export const pimozide: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Pimozide works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Pimozide works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1069,7 +1069,7 @@ export const pimozide: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Pimozide safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Pimozide safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1114,7 +1114,7 @@ export const pimozide: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Pimozide follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Pimozide follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1124,7 +1124,7 @@ export const pimozide: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Low — weight gain not expected.",
+    weightGain: "Low: weight gain not expected.",
     sedation: "Mild.",
     dosing: [
       {
@@ -1138,10 +1138,10 @@ export const pimozide: Drug = {
     dosageForms: ["Tablets 1, 2, 4 mg"],
     dosingTips: [
       "ECG before the first dose and after each dose increment.",
-      "In delusional parasitosis, ally with dermatology — treat the fixed belief, not the skin.",
+      "In delusional parasitosis, ally with dermatology: treat the fixed belief, not the skin.",
     ],
     overdose: [
-      "Overdose with Pimozide is managed supportively — no specific antidote.",
+      "Overdose with Pimozide is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Pimozide is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1183,15 +1183,15 @@ export const pimozide: Drug = {
     ],
     primaryTargetSymptoms: ["Tics (Tourette's)", "Monosymptomatic delusional parasitosis"],
     pearls: [
-      "Two niches keep pimozide alive: Tourette's and delusional parasitosis — the dermatology-psychiatry handshake drug.",
+      "Two niches keep pimozide alive: Tourette's and delusional parasitosis; the dermatology-psychiatry handshake drug.",
       "ECG at baseline and after dose changes is part of the prescription.",
-      "Strong 2D6 inhibition is easy to forget — pimozide is a perpetrator, not just a victim, of interactions.",
+      "Strong 2D6 inhibition is easy to forget: pimozide is a perpetrator, not just a victim, of interactions.",
       "Long receptor residence means the pharmacodynamic tail outlasts the plasma half-life.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

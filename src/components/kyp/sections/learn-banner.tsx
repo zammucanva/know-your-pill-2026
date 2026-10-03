@@ -36,7 +36,7 @@ export function LearnBanner() {
                   Start learning medicine
                 </h2>
                 <p className="mt-2 text-body-sm text-muted-foreground max-w-lg">
-                  Structured courses on {drugCount} medications, diseases, substances, and neuroscience — with {mcqCount} practice questions.
+                  Structured courses on {drugCount} medications, diseases, substances, and neuroscience, with {mcqCount} practice questions.
                 </p>
               </div>
               <div className="flex shrink-0 gap-2">

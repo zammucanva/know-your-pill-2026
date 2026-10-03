@@ -23,14 +23,14 @@ export const prazosin: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Anxiolytics & Sedatives", "Alpha-1 Blockers", "Prazosin"],
   /* ---- Hero / summary ---- */
-  tagline: "The alpha-1 blocker that quiets nightmares — PTSD's noradrenergic night-time drug.",
-  summary: "Prazosin is a postsynaptic alpha-1 adrenergic antagonist that crosses into the brain and dampens the noradrenergic storm of PTSD: trauma nightmares, night terrors, and hyperarousal. Its psychiatric identity is entirely the PTSD nightmare niche — supported by the classic VA trials and complicated by the later PACT trial's negative result, with clinical practice retaining it as the nightmare specialist. First-dose orthostatic hypotension and the nightmare-hour timing of dosing define its practical use.",
+  tagline: "The alpha-1 blocker that quiets nightmares. PTSD's noradrenergic night-time drug.",
+  summary: "Prazosin is a postsynaptic alpha-1 adrenergic antagonist that crosses into the brain and dampens the noradrenergic storm of PTSD: trauma nightmares, night terrors, and hyperarousal. Its psychiatric identity is entirely the PTSD nightmare niche: supported by the classic VA trials and complicated by the later PACT trial's negative result, with clinical practice retaining it as the nightmare specialist. First-dose orthostatic hypotension and the nightmare-hour timing of dosing define its practical use.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Prazosin — from its molecular target (Postsynaptic alpha-1 adrenergic receptors (antagonist — brain-penetrant)) to clinical effect.",
+    "Explain the mechanism of action of Prazosin (from its molecular target (Postsynaptic alpha-1 adrenergic receptors (antagonist) brain-penetrant)) to clinical effect.",
     "List the FDA-approved and off-label uses of Prazosin.",
     "Predict the common and serious side effects of Prazosin from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Prazosin.",
@@ -38,16 +38,16 @@ export const prazosin: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Prazosin blocks central alpha-1 receptors, reducing noradrenergic hyperarousal — the engine of trauma nightmares and hypervigilance.",
-    molecularTarget: "Postsynaptic alpha-1 adrenergic receptors (antagonist — brain-penetrant)",
+    summary: "Prazosin blocks central alpha-1 receptors, reducing noradrenergic hyperarousal: the engine of trauma nightmares and hypervigilance.",
+    molecularTarget: "Postsynaptic alpha-1 adrenergic receptors (antagonist, brain-penetrant)",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Prazosin blocks central alpha-1 receptors, reducing noradrenergic hyperarousal — the engine of trauma nightmares and hypervigilance.",
+      "Prazosin blocks central alpha-1 receptors, reducing noradrenergic hyperarousal: the engine of trauma nightmares and hypervigilance.",
       "The target engagement translates into the clinical effect.",
       "Practical use follows the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 2-3 hours (short — hence the timing logic). — see mechanism and prescriber sections.",
-    halfLife: "2-3 hours (short — hence the timing logic).",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 2-3 hours (short, hence the timing logic). See mechanism and prescriber sections.",
+    halfLife: "2-3 hours (short, hence the timing logic).",
     metabolism: "Hepatic.",
     excretion: "Renal.",
   },
@@ -97,7 +97,7 @@ export const prazosin: Drug = {
         label: "produces",
       },
     ],
-    caption: "Modulating noradrenergic signalling at its receptor — a mechanism-driven route to symptom control.",
+    caption: "Modulating noradrenergic signalling at its receptor: a mechanism-driven route to symptom control.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Norepinephrine (NE)"],
@@ -143,7 +143,7 @@ export const prazosin: Drug = {
       name: "First-dose orthostatic hypotension",
       frequency: "very-common",
       severity: "moderate",
-      description: "The first-dose syncope phenomenon — dose at bedtime initially.",
+      description: "The first-dose syncope phenomenon: dose at bedtime initially.",
       management: "Bedtime first dose; rise slowly; titrate slowly.",
     },
     {
@@ -173,7 +173,7 @@ export const prazosin: Drug = {
       name: "Syncope with injury (first-dose/titration)",
       frequency: "uncommon",
       severity: "severe",
-      description: "The orthostatic window — especially in the elderly and on standing at night.",
+      description: "The orthostatic window, especially in the elderly and on standing at night.",
       management: "Bedtime dosing; nocturnal toileting care.",
     },
     {
@@ -225,27 +225,27 @@ export const prazosin: Drug = {
   renalAdjustment: "Standard caution in renal impairment.",
   hepaticAdjustment: "Reduce dose in hepatic impairment.",
   /* ---- Education ---- */
-  patientExplanation: "Prazosin is a blood-pressure medicine that also quiets the brain's alarm chemical, noradrenaline — which in post-traumatic stress drives nightmares and night waking. Taken at bedtime, it can dramatically reduce trauma dreams. The first doses can cause dizziness on standing, so it is started at night at a small dose and built up slowly.",
+  patientExplanation: "Prazosin is a blood-pressure medicine that also quiets the brain's alarm chemical, noradrenaline, which in post-traumatic stress drives nightmares and night waking. Taken at bedtime, it can dramatically reduce trauma dreams. The first doses can cause dizziness on standing, so it is started at night at a small dose and built up slowly.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Prazosin builds over weeks — do not judge it in the first days.",
+    "Benefit from Prazosin builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The nightmare hour logic: prazosin's short half-life means bedtime dosing times the peak to the nightmare window — the pharmacokinetics IS the prescription.",
+    "The nightmare hour logic: prazosin's short half-life means bedtime dosing times the peak to the nightmare window; the pharmacokinetics IS the prescription.",
     "First-dose syncope is the initiation ritual: 1 mg at bedtime, slow steps, never a standing start.",
-    "The VA trials built the indication; PACT complicated it — practice retains prazosin as the nightmare drug with individualised expectations.",
-    "Doses for PTSD (to 10-20 mg) exceed hypertension doses — the surprise for physicians crossing over.",
-    "Complementary to SSRI and trauma-focused therapy — the noradrenergic leg of the PTSD stool.",
+    "The VA trials built the indication; PACT complicated it: practice retains prazosin as the nightmare drug with individualised expectations.",
+    "Doses for PTSD (to 10-20 mg) exceed hypertension doses: the surprise for physicians crossing over.",
+    "Complementary to SSRI and trauma-focused therapy: the noradrenergic leg of the PTSD stool.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Prazosin: Prazosin blocks central alpha-1 receptors, reducing noradrenergic hyperarousal — the engine of trauma nightmares and hypervigilance.",
+        "Mechanism of Prazosin: Prazosin blocks central alpha-1 receptors, reducing noradrenergic hyperarousal; the engine of trauma nightmares and hypervigilance.",
         "Uses of Prazosin: PTSD-associated nightmares and sleep disturbance; PTSD daytime hyperarousal (adjunct); Hypertension; Benign prostatic hyperplasia (symptomatic)",
-        "Mechanism: central postsynaptic ALPHA-1 antagonist — noradrenergic hyperarousal dampening.",
+        "Mechanism: central postsynaptic ALPHA-1 antagonist; noradrenergic hyperarousal dampening.",
         "Signature indication: PTSD trauma nightmares and sleep disruption (off-label, guideline-supported).",
       ],
       practical: [
@@ -253,18 +253,18 @@ export const prazosin: Drug = {
         "Outline the monitoring plan: Blood pressure (orthostatic) (Baseline and during titration); Nightmare frequency (validated scale where possible) (Every review)",
       ],
       longAnswer: [
-        "Prazosin: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: central postsynaptic ALPHA-1 antagonist — noradrenergic hyperarousal dampening.",
+        "Prazosin: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: central postsynaptic ALPHA-1 antagonist; noradrenergic hyperarousal dampening.",
         "Signature indication: PTSD trauma nightmares and sleep disruption (off-label, guideline-supported).",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: central postsynaptic ALPHA-1 antagonist — noradrenergic hyperarousal dampening.",
+        "Mechanism: central postsynaptic ALPHA-1 antagonist; noradrenergic hyperarousal dampening.",
         "Signature indication: PTSD trauma nightmares and sleep disruption (off-label, guideline-supported).",
-        "First-dose orthostatic hypotension — bedtime 1 mg start, slow titration.",
+        "First-dose orthostatic hypotension: bedtime 1 mg start, slow titration.",
         "PTSD dosing 2-10+ mg (exceeds hypertension dosing).",
-        "Short half-life — bedtime timing targets the nightmare window.",
+        "Short half-life: bedtime timing targets the nightmare window.",
         "Original indication: hypertension.",
       ],
       pyqConcepts: [
@@ -275,39 +275,39 @@ export const prazosin: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Prazosin develops syncope with injury (first-dose/titration) — next best step?",
+        "A patient on Prazosin develops syncope with injury (first-dose/titration): next best step?",
         "When to choose Prazosin over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: Postsynaptic alpha-1 adrenergic receptors (antagonist — brain-penetrant)",
+        "Primary target: Postsynaptic alpha-1 adrenergic receptors (antagonist, brain-penetrant)",
         "Most common side effects: First-dose orthostatic hypotension, Dizziness and palpitations, Drowsiness and dry mouth",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The nightmare hour logic: prazosin's short half-life means bedtime dosing times the peak to the nightmare window — the pharmacokinetics IS the prescription.",
+        "The nightmare hour logic: prazosin's short half-life means bedtime dosing times the peak to the nightmare window; the pharmacokinetics IS the prescription.",
         "First-dose syncope is the initiation ritual: 1 mg at bedtime, slow steps, never a standing start.",
-        "The VA trials built the indication; PACT complicated it — practice retains prazosin as the nightmare drug with individualised expectations.",
-        "Doses for PTSD (to 10-20 mg) exceed hypertension doses — the surprise for physicians crossing over.",
+        "The VA trials built the indication; PACT complicated it: practice retains prazosin as the nightmare drug with individualised expectations.",
+        "Doses for PTSD (to 10-20 mg) exceed hypertension doses: the surprise for physicians crossing over.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: central postsynaptic ALPHA-1 antagonist — noradrenergic hyperarousal dampening.",
+    "Mechanism: central postsynaptic ALPHA-1 antagonist; noradrenergic hyperarousal dampening.",
     "Signature indication: PTSD trauma nightmares and sleep disruption (off-label, guideline-supported).",
-    "First-dose orthostatic hypotension — bedtime 1 mg start, slow titration.",
+    "First-dose orthostatic hypotension: bedtime 1 mg start, slow titration.",
     "PTSD dosing 2-10+ mg (exceeds hypertension dosing).",
-    "Short half-life — bedtime timing targets the nightmare window.",
+    "Short half-life: bedtime timing targets the nightmare window.",
     "Original indication: hypertension.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — ptsd-associated nightmares and sleep disturbance",
+      title: "First presentation: ptsd-associated nightmares and sleep disturbance",
       presentation: "A patient presenting with ptsd-associated nightmares and sleep disturbance, started on Prazosin.",
       history: "A adult patient presents with a ptsd-associated nightmares and sleep disturbance picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with ptsd-associated nightmares and sleep disturbance; physical examination and baseline investigations are unremarkable.",
@@ -316,7 +316,7 @@ export const prazosin: Drug = {
       management: "Started at 1 mg at bedtime, titrated to 2-10 mg at night (mean effective ~10 in trials) with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Prazosin takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Prazosin takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -325,16 +325,16 @@ export const prazosin: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Alpha-1 Blocker vs related agents — orientation table",
+      title: "Alpha-1 Blocker vs related agents: orientation table",
       primaryDrug: "Prazosin",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "Postsynaptic alpha-1 adrenergic receptors (antagonist — brain-penetrant)",
+          primaryValue: "Postsynaptic alpha-1 adrenergic receptors (antagonist, brain-penetrant)",
           comparisons: [
             {
               drug: "Prazosin",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },
@@ -360,7 +360,7 @@ export const prazosin: Drug = {
         },
         {
           attribute: "Clinical niche",
-          primaryValue: "The PTSD nightmare specialist — noradrenergic night-time blockade",
+          primaryValue: "The PTSD nightmare specialist: noradrenergic night-time blockade",
           comparisons: [
             {
               drug: "Prazosin",
@@ -369,7 +369,7 @@ export const prazosin: Drug = {
           ],
         },
       ],
-      takeaway: "Prazosin is compared here with related agents for orientation. Full comparison data lives in each drug's own guide — follow the links for the complete picture.",
+      takeaway: "Prazosin is compared here with related agents for orientation. Full comparison data lives in each drug's own guide: follow the links for the complete picture.",
     },
   ],
   /* ---- Timeline ---- */
@@ -378,7 +378,7 @@ export const prazosin: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Prazosin reaches peak plasma concentration and begins acting at its molecular target (Postsynaptic alpha-1 adrenergic receptors (antagonist — brain-penetrant)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Prazosin reaches peak plasma concentration and begins acting at its molecular target (Postsynaptic alpha-1 adrenergic receptors (antagonist, brain-penetrant)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -414,7 +414,7 @@ export const prazosin: Drug = {
   faqs: [
     {
       question: "How long does Prazosin take to work?",
-      answer: "Nightmare reduction within days of an effective dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Nightmare reduction within days of an effective dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Prazosin?",
@@ -422,11 +422,11 @@ export const prazosin: Drug = {
     },
     {
       question: "Can I stop Prazosin suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Prazosin habit-forming?",
@@ -434,7 +434,7 @@ export const prazosin: Drug = {
     },
     {
       question: "Can I take Prazosin during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Prazosin may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Prazosin may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -519,7 +519,7 @@ export const prazosin: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "Postsynaptic alpha-1 adrenergic receptors (antagonist — brain-penetrant)",
+      label: "Postsynaptic alpha-1 adrenergic receptors (antagonist, brain-penetrant)",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
@@ -561,7 +561,7 @@ export const prazosin: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Prazosin",
+      label: "Patient Guide. Prazosin",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -569,13 +569,13 @@ export const prazosin: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The alpha-1 blocker that quiets nightmares — PTSD's noradrenergic night-time drug.",
-    summary: "Prazosin is a prescription medicine used to treat ptsd-associated nightmares and sleep disturbance. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Prazosin is a blood-pressure medicine that also quiets the brain's alarm chemical, noradrenaline — which in post-traumatic stress drives nightmares and night waking. Taken at bedtime, it can dramatically reduce trauma dreams. The first doses can cause dizziness on standing, so it is started at night at a small dose and built up slowly.",
-    sideEffects: "The most common side effects are: first-dose orthostatic hypotension, dizziness and palpitations, drowsiness and dry mouth, nasal congestion. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Syncope with injury (first-dose/titration) and Priapism (rare). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: blood pressure (orthostatic) (baseline and during titration); nightmare frequency (validated scale where possible) (every review). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The alpha-1 blocker that quiets nightmares. PTSD's noradrenergic night-time drug.",
+    summary: "Prazosin is a prescription medicine used to treat ptsd-associated nightmares and sleep disturbance. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Prazosin is a blood-pressure medicine that also quiets the brain's alarm chemical, noradrenaline, which in post-traumatic stress drives nightmares and night waking. Taken at bedtime, it can dramatically reduce trauma dreams. The first doses can cause dizziness on standing, so it is started at night at a small dose and built up slowly.",
+    sideEffects: "The most common side effects are: first-dose orthostatic hypotension, dizziness and palpitations, drowsiness and dry mouth, nasal congestion. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Syncope with injury (first-dose/titration) and Priapism (rare). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: blood pressure (orthostatic) (baseline and during titration); nightmare frequency (validated scale where possible) (every review). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Other antihypertensives and phosphodiesterase-5 inhibitors (sildenafil class), Tricyclic antidepressants, Beta-blockers. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Other antihypertensives and phosphodiesterase-5 inhibitors (sildenafil class), Tricyclic antidepressants, Beta-blockers. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -594,7 +594,7 @@ export const prazosin: Drug = {
     ],
     typicalDoses: "1 mg nocte → 2-10 mg (nightmares).",
     prescribingScenarios: [
-      "PTSD clinics — the nightmare add-on to SSRI/trauma therapy.",
+      "PTSD clinics: the nightmare add-on to SSRI/trauma therapy.",
       "Armed-forces veteran care contexts.",
     ],
     availability: {
@@ -639,7 +639,7 @@ export const prazosin: Drug = {
         name: "Prazosin",
         slug: "prazosin",
         relationship: "This guide",
-        distinguishing: "The PTSD nightmare specialist — noradrenergic night-time blockade",
+        distinguishing: "The PTSD nightmare specialist: noradrenergic night-time blockade",
       },
     ],
   },
@@ -792,7 +792,7 @@ export const prazosin: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Prazosin in two sentences.",
-      answer: "Prazosin blocks central alpha-1 receptors, reducing noradrenergic hyperarousal — the engine of trauma nightmares and hypervigilance. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Prazosin blocks central alpha-1 receptors, reducing noradrenergic hyperarousal: the engine of trauma nightmares and hypervigilance. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -802,7 +802,7 @@ export const prazosin: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Prazosin and how you would manage it.",
-      answer: "Syncope with injury (first-dose/titration): The orthostatic window — especially in the elderly and on standing at night. Management: Bedtime dosing; nocturnal toileting care.",
+      answer: "Syncope with injury (first-dose/titration): The orthostatic window, especially in the elderly and on standing at night. Management: Bedtime dosing; nocturnal toileting care.",
       topic: "Safety",
     },
     {
@@ -812,7 +812,7 @@ export const prazosin: Drug = {
     },
     {
       question: "Share one clinical pearl about Prazosin that separates safe prescribers from unsafe ones.",
-      answer: "The nightmare hour logic: prazosin's short half-life means bedtime dosing times the peak to the nightmare window — the pharmacokinetics IS the prescription.",
+      answer: "The nightmare hour logic: prazosin's short half-life means bedtime dosing times the peak to the nightmare window; the pharmacokinetics IS the prescription.",
       topic: "Clinical Pearls",
     },
   ],
@@ -888,7 +888,7 @@ export const prazosin: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -933,7 +933,7 @@ export const prazosin: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Prazosin works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Prazosin works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -949,7 +949,7 @@ export const prazosin: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Prazosin safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Prazosin safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -994,7 +994,7 @@ export const prazosin: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Prazosin follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Prazosin follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1017,13 +1017,13 @@ export const prazosin: Drug = {
     ],
     dosageForms: ["Capsules/tablets 1, 2, 5 mg"],
     dosingTips: [
-      "1 mg bedtime start — never a standing start.",
+      "1 mg bedtime start, never a standing start.",
       "Titrate weekly toward the trial-proven range (up to 10 mg+).",
       "Bedtime timing is pharmacology.",
       "Pair with SSRI and trauma-focused therapy.",
     ],
     overdose: [
-      "Overdose with Prazosin is managed supportively — no specific antidote.",
+      "Overdose with Prazosin is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Prazosin is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1032,7 +1032,7 @@ export const prazosin: Drug = {
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
     pharmacokinetics: [
-      "Half-life: 2-3 hours (short — hence the timing logic)..",
+      "Half-life: 2-3 hours (short, hence the timing logic)..",
       "Metabolism: Hepatic..",
     ],
     doNotUse: ["Known hypersensitivity to this agent."],
@@ -1068,16 +1068,16 @@ export const prazosin: Drug = {
     ],
     primaryTargetSymptoms: ["PTSD trauma nightmares", "Night-time hyperarousal", "PTSD sleep disruption"],
     pearls: [
-      "The nightmare hour logic: prazosin's short half-life means bedtime dosing times the peak to the nightmare window — the pharmacokinetics IS the prescription.",
+      "The nightmare hour logic: prazosin's short half-life means bedtime dosing times the peak to the nightmare window; the pharmacokinetics IS the prescription.",
       "First-dose syncope is the initiation ritual: 1 mg at bedtime, slow steps, never a standing start.",
-      "The VA trials built the indication; PACT complicated it — practice retains prazosin as the nightmare drug with individualised expectations.",
-      "Doses for PTSD (to 10-20 mg) exceed hypertension doses — the surprise for physicians crossing over.",
-      "Complementary to SSRI and trauma-focused therapy — the noradrenergic leg of the PTSD stool.",
+      "The VA trials built the indication; PACT complicated it: practice retains prazosin as the nightmare drug with individualised expectations.",
+      "Doses for PTSD (to 10-20 mg) exceed hypertension doses: the surprise for physicians crossing over.",
+      "Complementary to SSRI and trauma-focused therapy: the noradrenergic leg of the PTSD stool.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

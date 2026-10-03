@@ -1109,7 +1109,7 @@ export const disclosureTiers: DisclosureTierMeta[] = [
   {
     id: "core",
     label: "Core Learning",
-    description: "Start here — the essential mental model.",
+    description: "Start here: the essential mental model.",
     sectionIds: ["top", "quick-facts", "learning-objectives", "knowledge-graph", "mechanism", "brain-regions", "neurotransmitters", "timeline"],
     visibleInPatientMode: true,
   },

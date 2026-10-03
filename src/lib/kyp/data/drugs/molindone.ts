@@ -19,18 +19,18 @@ export const molindone: Drug = {
   brandNames: ["Moban"],
   drugClass: "typical-antipsychotic",
   drugClassLabel: "Typical Antipsychotic",
-  drugClassFullName: "Typical (Conventional) Antipsychotic — Dihydroindolone",
+  drugClassFullName: "Typical (Conventional) Antipsychotic. Dihydroindolone",
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Typical Antipsychotics", "Molindone"],
   /* ---- Hero / summary ---- */
-  tagline: "The dihydroindolone oddity — an old typical famous for causing weight LOSS.",
-  summary: "Molindone is a dihydroindolone antipsychotic with a standard high-potency D2 profile except for one pharmacological novelty: it is the antipsychotic associated with weight loss rather than gain. Clinically superseded, it survives in exam lore and occasional adolescent use as the 'anti-metabolic typical' — a useful counter-example in a class defined by weight gain.",
+  tagline: "The dihydroindolone oddity: an old typical famous for causing weight LOSS.",
+  summary: "Molindone is a dihydroindolone antipsychotic with a standard high-potency D2 profile except for one pharmacological novelty: it is the antipsychotic associated with weight loss rather than gain. Clinically superseded, it survives in exam lore and occasional adolescent use as the 'anti-metabolic typical': a useful counter-example in a class defined by weight gain.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Molindone — from its molecular target (D2 (moderate-high potency antagonist); dihydroindolone structure; anorectic effect (mechanism unclear)) to clinical effect.",
+    "Explain the mechanism of action of Molindone, from its molecular target (D2 (moderate-high potency antagonist); dihydroindolone structure; anorectic effect (mechanism unclear)) to clinical effect.",
     "List the FDA-approved and off-label uses of Molindone.",
     "Predict the common and serious side effects of Molindone from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Molindone.",
@@ -40,10 +40,10 @@ export const molindone: Drug = {
   mechanism: {
     summary: "Dihydroindolone D2 antagonist with a distinctive appetite-suppressing (anorectic) effect rather than weight gain.",
     molecularTarget: "D2 (moderate-high potency antagonist); dihydroindolone structure; anorectic effect (mechanism unclear)",
-    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — moderate-high potency: EPS dose-dependent, with the unique weight-losing tendency.",
+    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways: moderate-high potency: EPS dose-dependent, with the unique weight-losing tendency.",
     steps: [
-      "Blocks D2 receptors — therapeutic antipsychotic effect at 65–75% occupancy.",
-      "EPS emerges as occupancy passes ~80% — moderate-high potency: EPS dose-dependent, with the unique weight-losing tendency.",
+      "Blocks D2 receptors: therapeutic antipsychotic effect at 65–75% occupancy.",
+      "EPS emerges as occupancy passes ~80%: moderate-high potency: EPS dose-dependent, with the unique weight-losing tendency.",
       "Tuberoinfundibular blockade raises prolactin; nigrostriatal blockade produces parkinsonism and dystonia.",
       "Class-typical receptor binding determines the drug's adverse-effect texture.",
     ],
@@ -109,7 +109,7 @@ export const molindone: Drug = {
         label: "hyperprolactinaemia",
       },
     ],
-    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia — efficacy and motor risk are two sides of one coin.",
+    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia: efficacy and motor risk are two sides of one coin.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -147,14 +147,14 @@ export const molindone: Drug = {
       name: "Extrapyramidal symptoms (parkinsonism)",
       frequency: "very-common",
       severity: "moderate",
-      description: "Rigidity, bradykinesia, tremor — dose-dependent D2 signature.",
+      description: "Rigidity, bradykinesia, tremor: dose-dependent D2 signature.",
       management: "Reduce dose; anticholinergic.",
     },
     {
       name: "Akathisia",
       frequency: "common",
       severity: "moderate",
-      description: "Restlessness — frequently mistaken for worsening psychosis.",
+      description: "Restlessness: frequently mistaken for worsening psychosis.",
       management: "Reduce dose; propranolol.",
     },
     {
@@ -175,7 +175,7 @@ export const molindone: Drug = {
       name: "Weight loss / anorexia",
       frequency: "common",
       severity: "moderate",
-      description: "The signature: appetite suppression in a class of weight-gainers — unique among antipsychotics.",
+      description: "The signature: appetite suppression in a class of weight-gainers; unique among antipsychotics.",
       management: "Monitor weight; usually a non-issue unless cachectic.",
     },
   ],
@@ -184,14 +184,14 @@ export const molindone: Drug = {
       name: "Neuroleptic malignant syndrome",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency.",
+      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness: the class medical emergency.",
       management: "Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
     },
     {
       name: "Tardive dyskinesia",
       frequency: "uncommon",
       severity: "severe",
-      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex — a defining risk of chronic typical antipsychotics.",
+      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex: a defining risk of chronic typical antipsychotics.",
       management: "Lowest effective dose; AIMS surveillance; reduce or switch on detection; VMAT2 inhibitors for severe cases.",
     },
   ],
@@ -227,13 +227,13 @@ export const molindone: Drug = {
     {
       drug: "QT-prolonging drugs (including other antipsychotics)",
       severity: "major",
-      mechanism: "Additive QT prolongation — torsades risk.",
+      mechanism: "Additive QT prolongation: torsades risk.",
       action: "Avoid combinations; ECG monitoring if unavoidable.",
     },
     {
       drug: "Anticholinergic drugs",
       severity: "moderate",
-      mechanism: "Additive anticholinergic burden — cognition, ileus, tachycardia.",
+      mechanism: "Additive anticholinergic burden: cognition, ileus, tachycardia.",
       action: "Minimise total anticholinergic load.",
     },
     {
@@ -245,7 +245,7 @@ export const molindone: Drug = {
   ],
   pregnancy: {
     legacyCategory: "C",
-    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk — continue at the lowest effective dose with obstetric co-management.",
+    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk: continue at the lowest effective dose with obstetric co-management.",
     lactation: "Small amounts pass into milk; infant sedation and EPS-like effects are monitored. Generally considered acceptable with infant monitoring.",
   },
   renalAdjustment: "Standard caution.",
@@ -253,41 +253,41 @@ export const molindone: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Molindone is an older antipsychotic with one unusual feature: instead of the weight gain that similar medicines cause, it tends to reduce appetite. Otherwise it behaves like other strong older antipsychotics, with stiffness and restlessness as its main effects.",
   patientEducationPoints: [
-    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early — these are treatable.",
+    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early: these are treatable.",
     "Stand up slowly during the first week.",
-    "Do not stop suddenly — discuss any change with your doctor.",
-    "Benefit from Molindone builds over weeks — do not judge it in the first days.",
+    "Do not stop suddenly: discuss any change with your doctor.",
+    "Benefit from Molindone builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The exam curiosity: an antipsychotic that causes weight LOSS — molindone's entire modern identity.",
-    "Structurally unlike any other antipsychotic (dihydroindolone) — no family relatives.",
+    "The exam curiosity: an antipsychotic that causes weight LOSS; molindone's entire modern identity.",
+    "Structurally unlike any other antipsychotic (dihydroindolone): no family relatives.",
     "Sometimes revived in adolescents where every other option causes weight gain.",
   ],
   examLens: {
     mbbs: {
       viva: [
         "Mechanism of Molindone: Dihydroindolone D2 antagonist with a distinctive appetite-suppressing (anorectic) effect rather than weight gain.",
-        "Uses of Molindone: Schizophrenia — psychotic manifestations",
-        "Dihydroindolone — structurally unique antipsychotic.",
+        "Uses of Molindone: Schizophrenia; psychotic manifestations",
+        "Dihydroindolone: structurally unique antipsychotic.",
         "Signature: weight LOSS / anorexia (the only antipsychotic with this profile).",
       ],
       practical: [
-        "Prescribe Molindone for schizophrenia — psychotic manifestations with dose, timing, and duration.",
+        "Prescribe Molindone for schizophrenia: psychotic manifestations with dose, timing, and duration.",
         "Outline the monitoring plan: Weight and BMI (Baseline, then periodically); AIMS examination (Baseline, then every 6 months); EPS screen (parkinsonism, akathisia, dystonia) (Every review in the first 2 months)",
       ],
       longAnswer: [
-        "Molindone: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Dihydroindolone — structurally unique antipsychotic.",
+        "Molindone: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Dihydroindolone: structurally unique antipsychotic.",
         "Signature: weight LOSS / anorexia (the only antipsychotic with this profile).",
       ],
     },
     neetPg: {
       highYield: [
-        "Dihydroindolone — structurally unique antipsychotic.",
+        "Dihydroindolone: structurally unique antipsychotic.",
         "Signature: weight LOSS / anorexia (the only antipsychotic with this profile).",
         "EPS otherwise typical of moderate-high potency.",
-        "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+        "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
         "Potency spectrum: chlorpromazine (low; sedation/hypotension) → haloperidol (high; EPS/prolactin).",
       ],
       pyqConcepts: [
@@ -298,7 +298,7 @@ export const molindone: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Molindone develops neuroleptic malignant syndrome — next best step?",
+        "A patient on Molindone develops neuroleptic malignant syndrome: next best step?",
         "When to choose Molindone over alternatives in its class.",
       ],
     },
@@ -311,33 +311,33 @@ export const molindone: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The exam curiosity: an antipsychotic that causes weight LOSS — molindone's entire modern identity.",
-        "Structurally unlike any other antipsychotic (dihydroindolone) — no family relatives.",
+        "The exam curiosity: an antipsychotic that causes weight LOSS; molindone's entire modern identity.",
+        "Structurally unlike any other antipsychotic (dihydroindolone): no family relatives.",
         "Sometimes revived in adolescents where every other option causes weight gain.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Dihydroindolone — structurally unique antipsychotic.",
+    "Dihydroindolone: structurally unique antipsychotic.",
     "Signature: weight LOSS / anorexia (the only antipsychotic with this profile).",
     "EPS otherwise typical of moderate-high potency.",
-    "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+    "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
     "Potency spectrum: chlorpromazine (low; sedation/hypotension) → haloperidol (high; EPS/prolactin).",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia — psychotic manifestations",
-      presentation: "A patient presenting with schizophrenia — psychotic manifestations, started on Molindone.",
-      history: "A adult patient presents with a schizophrenia — psychotic manifestations picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with schizophrenia — psychotic manifestations; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Schizophrenia — psychotic manifestations. Differentials are considered and excluded clinically.",
+      title: "First presentation: schizophrenia with psychotic manifestations",
+      presentation: "A patient presenting with schizophrenia: psychotic manifestations, started on Molindone.",
+      history: "A adult patient presents with a schizophrenia: psychotic manifestations picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with schizophrenia: psychotic manifestations; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Schizophrenia: psychotic manifestations. Differentials are considered and excluded clinically.",
       rationale: "Molindone is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Typical Antipsychotic) with strong evidence in this condition.",
       management: "Started at 5–10 mg twice daily, titrated to 30–100 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Molindone takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Molindone takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -346,7 +346,7 @@ export const molindone: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Typical Antipsychotic comparison — choosing within the class",
+      title: "Typical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Molindone",
       rows: [
         {
@@ -395,11 +395,11 @@ export const molindone: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Low — weight gain not expected.",
+          primaryValue: "Low: weight gain not expected.",
           comparisons: [
             {
               drug: "Chlorpromazine",
-              value: "Low — weight gain not expected.",
+              value: "Low: weight gain not expected.",
             },
             {
               drug: "Haloperidol",
@@ -407,11 +407,11 @@ export const molindone: Drug = {
             },
             {
               drug: "Fluphenazine",
-              value: "Low — weight gain not expected.",
+              value: "Low: weight gain not expected.",
             },
             {
               drug: "Perphenazine",
-              value: "Low — weight gain not expected.",
+              value: "Low: weight gain not expected.",
             },
           ],
         },
@@ -425,7 +425,7 @@ export const molindone: Drug = {
             },
             {
               drug: "Haloperidol",
-              value: "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+              value: "Mild, among the least sedating antipsychotics; alerting more than calming at low doses.",
             },
             {
               drug: "Fluphenazine",
@@ -447,7 +447,7 @@ export const molindone: Drug = {
             },
             {
               drug: "Haloperidol",
-              value: "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+              value: "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool",
             },
             {
               drug: "Fluphenazine",
@@ -460,7 +460,7 @@ export const molindone: Drug = {
           ],
         },
       ],
-      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -469,7 +469,7 @@ export const molindone: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Molindone reaches peak plasma concentration and begins acting at its molecular target (D2 (moderate-high potency antagonist); dihydroindolone structure; anorectic effect (mechanism unclear)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Molindone reaches peak plasma concentration and begins acting at its molecular target (D2 (moderate-high potency antagonist); dihydroindolone structure; anorectic effect (mechanism unclear)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -505,7 +505,7 @@ export const molindone: Drug = {
   faqs: [
     {
       question: "How long does Molindone take to work?",
-      answer: "Clinical effect of Molindone typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Clinical effect of Molindone typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Molindone?",
@@ -513,11 +513,11 @@ export const molindone: Drug = {
     },
     {
       question: "Can I stop Molindone suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Molindone habit-forming?",
@@ -525,7 +525,7 @@ export const molindone: Drug = {
     },
     {
       question: "Can I take Molindone during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Molindone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Molindone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -626,7 +626,7 @@ export const molindone: Drug = {
       label: "Typical Antipsychotic",
       type: "class",
       href: "#mechanism",
-      note: "Typical (Conventional) Antipsychotic — Dihydroindolone",
+      note: "Typical (Conventional) Antipsychotic. Dihydroindolone",
     },
     {
       label: "Central monoaminergic systems (see mechanism)",
@@ -641,7 +641,7 @@ export const molindone: Drug = {
       note: "Primary molecular target",
     },
     {
-      label: "Schizophrenia — psychotic manifestations",
+      label: "Schizophrenia: psychotic manifestations",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -665,7 +665,7 @@ export const molindone: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Molindone",
+      label: "Patient Guide. Molindone",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -673,13 +673,13 @@ export const molindone: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The dihydroindolone oddity — an old typical famous for causing weight LOSS.",
-    summary: "Molindone is a prescription medicine used to treat schizophrenia — psychotic manifestations. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The dihydroindolone oddity: an old typical famous for causing weight LOSS.",
+    summary: "Molindone is a prescription medicine used to treat schizophrenia: psychotic manifestations. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Molindone is an older antipsychotic with one unusual feature: instead of the weight gain that similar medicines cause, it tends to reduce appetite. Otherwise it behaves like other strong older antipsychotics, with stiffness and restlessness as its main effects.",
-    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation, weight loss / anorexia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation, weight loss / anorexia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
   },
   sectionDifficulty: {
     mechanism: "mbbs",
@@ -721,7 +721,7 @@ export const molindone: Drug = {
         name: "Haloperidol",
         slug: "haloperidol",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool",
       },
       {
         name: "Fluphenazine",
@@ -745,7 +745,7 @@ export const molindone: Drug = {
         name: "Thioridazine",
         slug: "thioridazine",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "The restricted QT-retinopathy phenothiazine — last-line",
+        distinguishing: "The restricted QT-retinopathy phenothiazine: last-line",
       },
       {
         name: "Trifluoperazine",
@@ -905,17 +905,17 @@ export const molindone: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Molindone in two sentences.",
-      answer: "Dihydroindolone D2 antagonist with a distinctive appetite-suppressing (anorectic) effect rather than weight gain. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — moderate-high potency: EPS dose-dependent, with the unique weight-losing tendency.",
+      answer: "Dihydroindolone D2 antagonist with a distinctive appetite-suppressing (anorectic) effect rather than weight gain. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways; moderate-high potency: EPS dose-dependent, with the unique weight-losing tendency.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Molindone.",
-      answer: "Schizophrenia — psychotic manifestations. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Schizophrenia: psychotic manifestations. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Molindone and how you would manage it.",
-      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
+      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness; the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
       topic: "Safety",
     },
     {
@@ -925,7 +925,7 @@ export const molindone: Drug = {
     },
     {
       question: "Share one clinical pearl about Molindone that separates safe prescribers from unsafe ones.",
-      answer: "The exam curiosity: an antipsychotic that causes weight LOSS — molindone's entire modern identity.",
+      answer: "The exam curiosity: an antipsychotic that causes weight LOSS; molindone's entire modern identity.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1001,7 +1001,7 @@ export const molindone: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1046,7 +1046,7 @@ export const molindone: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Molindone works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Molindone works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1062,7 +1062,7 @@ export const molindone: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Molindone safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Molindone safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1107,7 +1107,7 @@ export const molindone: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Molindone follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Molindone follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1117,7 +1117,7 @@ export const molindone: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Low — weight gain not expected.",
+    weightGain: "Low: weight gain not expected.",
     sedation: "Mild.",
     dosing: [
       {
@@ -1130,10 +1130,10 @@ export const molindone: Drug = {
     ],
     dosageForms: ["Tablets 5–25 mg", "Capsule 40 mg"],
     dosingTips: [
-      "A consideration when metabolic alternatives all fail — scarcity limits real-world use.",
+      "A consideration when metabolic alternatives all fail: scarcity limits real-world use.",
     ],
     overdose: [
-      "Overdose with Molindone is managed supportively — no specific antidote.",
+      "Overdose with Molindone is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Molindone is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1167,7 +1167,7 @@ export const molindone: Drug = {
       },
     ],
     potentialAdvantages: [
-      "Weight loss instead of gain — unique in class.",
+      "Weight loss instead of gain: unique in class.",
       "No anticholinergic burden.",
     ],
     potentialDisadvantages: [
@@ -1177,14 +1177,14 @@ export const molindone: Drug = {
     ],
     primaryTargetSymptoms: ["Positive psychotic symptoms"],
     pearls: [
-      "The exam curiosity: an antipsychotic that causes weight LOSS — molindone's entire modern identity.",
-      "Structurally unlike any other antipsychotic (dihydroindolone) — no family relatives.",
+      "The exam curiosity: an antipsychotic that causes weight LOSS; molindone's entire modern identity.",
+      "Structurally unlike any other antipsychotic (dihydroindolone): no family relatives.",
       "Sometimes revived in adolescents where every other option causes weight gain.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

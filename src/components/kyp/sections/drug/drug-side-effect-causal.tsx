@@ -50,7 +50,7 @@ export function DrugSideEffectCausal({ drug }: { drug: Drug }) {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="flex items-center gap-2 text-overline text-muted-foreground">
           <Route className="h-3.5 w-3.5" aria-hidden />
-          Why this effect — the causal chain
+          Why this effect: the causal chain
         </p>
         {hasPatientMode && (
           <label className="inline-flex cursor-pointer items-center gap-2 text-xs text-muted-foreground">
@@ -86,11 +86,11 @@ export function DrugSideEffectCausal({ drug }: { drug: Drug }) {
         {plain && hasPatientMode ? (
           <>
             <CausalStep
-              label="How this medication works — plain language"
+              label="How this medication works: plain language"
               body={drug.patientMode!.mechanism}
             />
             <CausalStep
-              label="Its side effects — plain language"
+              label="Its side effects: plain language"
               body={drug.patientMode!.sideEffects}
               last
             />
@@ -110,7 +110,7 @@ export function DrugSideEffectCausal({ drug }: { drug: Drug }) {
               body={drug.mechanism.effect}
             />
             <CausalStep
-              label={`The side effect, as documented — ${effect.name}`}
+              label={`The side effect, as documented: ${effect.name}`}
               body={
                 effect.management
                   ? `${effect.description} Management: ${effect.management}`
@@ -125,7 +125,7 @@ export function DrugSideEffectCausal({ drug }: { drug: Drug }) {
       <p className="mt-5 flex items-start gap-2 text-xs text-muted-foreground/60 leading-relaxed">
         <Link2 className="mt-0.5 h-3 w-3 shrink-0" aria-hidden />
         Assembled from this medication&apos;s own reviewed fields and
-        presented together — the connective structure is ours, every fact
+        presented together: the connective structure is ours, every fact
         is the page&apos;s existing content.
       </p>
     </div>

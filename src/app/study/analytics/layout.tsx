@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Practice Analytics · Know Your Pill",
   description:
-    "Trends from your quiz and test history on this device — accuracy by topic and medication class, answer durations, and where the same mistakes return. Numbers appear only once there is enough history to be meaningful.",
+    "Trends from your quiz and test history on this device: accuracy by topic and medication class, answer durations, and where the same mistakes return. Numbers appear only once there is enough history to be meaningful.",
   keywords: [
     "practice analytics",
     "quiz statistics",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Practice Analytics · Know Your Pill",
     description:
-      "Accuracy by topic and class, durations, and returning mistakes — from your on-device practice history.",
+      "Accuracy by topic and class, durations, and returning mistakes, from your on-device practice history.",
     type: "website",
     siteName: "Know Your Pill",
   },

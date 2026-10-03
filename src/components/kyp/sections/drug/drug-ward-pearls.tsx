@@ -40,7 +40,7 @@ export function DrugWardPearls({ drug }: DrugWardPearlsProps) {
         <SectionHeader
           eyebrow="🇮🇳 Indian Ward Pearls"
           title="What your teaching hospital expects you to know."
-          description="What your psychiatry professor may ask in viva, what the resident expects you to know, what consultants commonly do, and what interns commonly miss — the four levels of ward learning."
+          description="What your psychiatry professor may ask in viva, what the resident expects you to know, what consultants commonly do, and what interns commonly miss: the four levels of ward learning."
           tone="neural"
         />
 

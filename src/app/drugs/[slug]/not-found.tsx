@@ -37,7 +37,7 @@ export default function DrugNotFound() {
             <p className="mt-4 text-body-lg text-muted-foreground leading-relaxed">
               This medication isn&apos;t in the KYP library. Browse the
               medication library to find one of the {drugs.length} medication
-              guides — or search from any page.
+              guides, or search from any page.
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-3">

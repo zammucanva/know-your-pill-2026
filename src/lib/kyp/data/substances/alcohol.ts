@@ -32,7 +32,7 @@ export const alcohol: SubstancePage = {
   disorderName: "Alcohol Use Disorders",
   drugClass: "depressant",
   artwork: "/artwork/ethanol.webp",
-  artworkAlt: "Ethanol molecule — alcohol's psychoactive component",
+  artworkAlt: "Ethanol molecule: alcohol's psychoactive component",
 
   tagline: "Understanding alcohol dependence, intoxication, withdrawal, neuropsychiatric complications, detoxification, and recovery through neuroscience-focused education.",
   summary: "Alcohol dependence is a cluster of physiological, behavioral, and cognitive phenomena in which the use of alcohol takes on a much higher priority for a given individual than other behaviors that once had greater value. It involves a strong inner drive to consume alcohol, impaired control over its use, and continued drinking despite clear evidence of harmful consequences.",
@@ -110,7 +110,7 @@ export const alcohol: SubstancePage = {
         {
           symbol: "ε",
           name: "Epsilon Alcoholism",
-          description: "Dipsomania — periodic binge drinking with complete loss of control during episodes.",
+          description: "Dipsomania: periodic binge drinking with complete loss of control during episodes.",
           features: [
             "Periodic binge drinking",
             "Complete loss of control",
@@ -186,7 +186,7 @@ export const alcohol: SubstancePage = {
   ],
 
   neurobiology: {
-    summary: "Alcohol acts on multiple neurotransmitter systems — enhancing GABA, inhibiting NMDA, and releasing dopamine.",
+    summary: "Alcohol acts on multiple neurotransmitter systems, enhancing GABA, inhibiting NMDA, and releasing dopamine.",
     mechanisms: [
       { title: "GABA-A Potentiation", description: "Alcohol potentiates GABA-A receptors, increasing inhibitory signaling and producing sedative effects." },
       { title: "NMDA Inhibition", description: "Alcohol inhibits NMDA receptors, reducing excitatory neurotransmission and impairing memory formation." },
@@ -266,10 +266,10 @@ export const alcohol: SubstancePage = {
       title: "Detoxification Protocol",
       description: "Alcohol detoxification should always be medically supervised due to the risk of life-threatening withdrawal symptoms. The goal is safe management of withdrawal, prevention of complications, and preparation for ongoing treatment.",
       keyPoints: [
-        "Abrupt withdrawal risks — Can trigger seizures and delirium tremens; never stop suddenly after chronic heavy use",
-        "Delirium tremens prevention — Benzodiazepines are the cornerstone of prevention and treatment",
-        "Symptom stabilization — CIWA-Ar protocol guides medication dosing based on withdrawal severity",
-        "Nutritional support — Thiamine, folate, and multivitamins address common deficiencies",
+        "Abrupt withdrawal risks. Can trigger seizures and delirium tremens; never stop suddenly after chronic heavy use",
+        "Delirium tremens prevention. Benzodiazepines are the cornerstone of prevention and treatment",
+        "Symptom stabilization. CIWA-Ar protocol guides medication dosing based on withdrawal severity",
+        "Nutritional support. Thiamine, folate, and multivitamins address common deficiencies",
         "Always administer thiamine before giving glucose to alcohol-dependent patients. Giving glucose first can precipitate or worsen Wernicke encephalopathy in thiamine-deficient patients.",
       ],
     },
@@ -309,10 +309,10 @@ export const alcohol: SubstancePage = {
         description: "Disulfiram works by inhibiting aldehyde dehydrogenase, causing acetaldehyde to accumulate when alcohol is consumed. This produces an intensely unpleasant reaction that conditions the patient to avoid alcohol.",
         mechanism: "Aldehyde dehydrogenase inhibition",
         mechanismNotes: [
-          "Aldehyde dehydrogenase inhibition — Irreversibly blocks the enzyme that metabolizes acetaldehyde",
-          "Acetaldehyde accumulation — Toxic metabolite builds up to 5-10 times normal levels",
-          "Dopamine beta-hydroxylase inhibition — Also inhibits this enzyme, increasing dopamine and decreasing norepinephrine",
-          "Reaction onset — Begins 10-30 minutes after alcohol ingestion",
+          "Aldehyde dehydrogenase inhibition. Irreversibly blocks the enzyme that metabolizes acetaldehyde",
+          "Acetaldehyde accumulation. Toxic metabolite builds up to 5-10 times normal levels",
+          "Dopamine beta-hydroxylase inhibition. Also inhibits this enzyme, increasing dopamine and decreasing norepinephrine",
+          "Reaction onset. Begins 10-30 minutes after alcohol ingestion",
         ],
         mechanismFlow: [
           { step: "1", title: "Alcohol Ingestion", description: "Patient consumes alcohol while on disulfiram therapy." },

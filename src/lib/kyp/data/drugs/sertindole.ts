@@ -23,14 +23,14 @@ export const sertindole: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Atypical Antipsychotics", "Sertindole"],
   /* ---- Hero / summary ---- */
-  tagline: "The QT-restricted atypical — suspended, reinstated with ECG monitoring, and forever an exam name.",
-  summary: "Sertindole is the 5-HT2A-antagonist-heavy atypical antipsychotic with a clean EPS profile and dose-dependent QT prolongation: suspended in 1998 after arrhythmia deaths, reinstated across Europe with mandatory ECG monitoring — the atypical whose regulatory arc is the QT teaching story.",
+  tagline: "The QT-restricted atypical: suspended, reinstated with ECG monitoring, and forever an exam name.",
+  summary: "Sertindole is the 5-HT2A-antagonist-heavy atypical antipsychotic with a clean EPS profile and dose-dependent QT prolongation: suspended in 1998 after arrhythmia deaths, reinstated across Europe with mandatory ECG monitoring. The atypical whose regulatory arc is the QT teaching story.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Sertindole — from its molecular target (D2 (antagonist) + 5-HT2A (potent antagonist); alpha-1; cardiac potassium channels (dose-related)) to clinical effect.",
+    "Explain the mechanism of action of Sertindole, from its molecular target (D2 (antagonist) + 5-HT2A (potent antagonist); alpha-1; cardiac potassium channels (dose-related)) to clinical effect.",
     "List the FDA-approved and off-label uses of Sertindole.",
     "Predict the common and serious side effects of Sertindole from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Sertindole.",
@@ -38,15 +38,15 @@ export const sertindole: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Sertindole blocks D2 with strong 5-HT2A antagonism and alpha-1 binding — with dose-related cardiac potassium-channel effect (QT) that defines its regulation.",
+    summary: "Sertindole blocks D2 with strong 5-HT2A antagonism and alpha-1 binding, with dose-related cardiac potassium-channel effect (QT) that defines its regulation.",
     molecularTarget: "D2 (antagonist) + 5-HT2A (potent antagonist); alpha-1; cardiac potassium channels (dose-related)",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Sertindole blocks D2 with strong 5-HT2A antagonism and alpha-1 binding — with dose-related cardiac potassium-channel effect (QT) that defines its regulation.",
+      "Sertindole blocks D2 with strong 5-HT2A antagonism and alpha-1 binding, with dose-related cardiac potassium-channel effect (QT) that defines its regulation.",
       "The mechanism translates into the clinical profile described.",
       "Practical use follows half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 3 days (long). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 3 days (long). See mechanism and prescriber sections.",
     halfLife: "About 3 days (long).",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -126,7 +126,7 @@ export const sertindole: Drug = {
         label: "5-HT2A-mediated benefit",
       },
     ],
-    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms — the serotonin-dopamine hypothesis of atypical antipsychotics.",
+    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms: the serotonin-dopamine hypothesis of atypical antipsychotics.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Dopamine (DA)", "Serotonin (5-HT)"],
@@ -138,7 +138,7 @@ export const sertindole: Drug = {
     {
       name: "Schizophrenia (second-line, ECG-governed, Europe)",
       status: "guideline",
-      description: "For patients intolerant of other atypicals — with mandatory ECG monitoring.",
+      description: "For patients intolerant of other atypicals, with mandatory ECG monitoring.",
     },
   ],
   contraindications: [
@@ -175,7 +175,7 @@ export const sertindole: Drug = {
       name: "Nasal congestion",
       frequency: "very-common",
       severity: "mild",
-      description: "The signature adverse effect — alpha-1-mediated rhinitis.",
+      description: "The signature adverse effect: alpha-1-mediated rhinitis.",
       management: "Reassurance; saline.",
     },
     {
@@ -196,7 +196,7 @@ export const sertindole: Drug = {
       name: "QT prolongation",
       frequency: "common",
       severity: "severe",
-      description: "Dose-related — THE sertindole issue; 20-40 ms typical at clinical doses.",
+      description: "Dose-related. THE sertindole issue; 20-40 ms typical at clinical doses.",
       management: "Baseline ECG + steady-state + dose-change ECGs; electrolytes; QT-drug avoidance.",
     },
   ],
@@ -220,7 +220,7 @@ export const sertindole: Drug = {
   monitoring: [
     {
       parameter: "ECG (QTc)",
-      frequency: "Baseline, steady state, and after each dose change — mandatory",
+      frequency: "Baseline, steady state, and after each dose change: mandatory",
       rationale: "The reinstatement condition.",
     },
     {
@@ -258,32 +258,32 @@ export const sertindole: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Sertindole is a European antipsychotic reserved for people who cannot take other newer agents: it is gentle on movement but lengthens the heart's electrical reset, so regular heart tracings (ECGs) are a required part of treatment. A constantly blocked or runny nose is its most common everyday effect.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Sertindole builds over weeks — do not judge it in the first days.",
+    "Benefit from Sertindole builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The regulatory arc: launched → suspended after arrhythmia deaths (1998) → reinstated with mandatory ECGs — pharmacovigilance as a drug's biography.",
+    "The regulatory arc: launched → suspended after arrhythmia deaths (1998) → reinstated with mandatory ECGs; pharmacovigilance as a drug's biography.",
     "The nasal-congestion signature: alpha-1 rhinitis is the everyday tell that patients report.",
-    "The EPS-clean QT-dirty trade: motor-sparing at the price of cardiac monitoring — the opposite of haloperidol's trade.",
-    "Exam fame: sertindole = QT in the same breath — the association that outlives prescribing.",
+    "The EPS-clean QT-dirty trade: motor-sparing at the price of cardiac monitoring; the opposite of haloperidol's trade.",
+    "Exam fame: sertindole = QT in the same breath; the association that outlives prescribing.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Sertindole: Sertindole blocks D2 with strong 5-HT2A antagonism and alpha-1 binding — with dose-related cardiac potassium-channel effect (QT) that defines its regulation.",
+        "Mechanism of Sertindole: Sertindole blocks D2 with strong 5-HT2A antagonism and alpha-1 binding, with dose-related cardiac potassium-channel effect (QT) that defines its regulation.",
         "Uses of Sertindole: Schizophrenia (second-line, ECG-governed, Europe)",
         "Mechanism: D2 + POTENT 5-HT2A antagonist with alpha-1 and cardiac K-channel effects.",
         "Signature: dose-related QT prolongation (suspended 1998, reinstated with ECG programme).",
       ],
       practical: [
         "Prescribe Sertindole for schizophrenia (second-line, ecg-governed, europe) with dose, timing, and duration.",
-        "Outline the monitoring plan: ECG (QTc) (Baseline, steady state, and after each dose change — mandatory); Potassium and magnesium (Baseline and when ill)",
+        "Outline the monitoring plan: ECG (QTc) (Baseline, steady state, and after each dose change, mandatory); Potassium and magnesium (Baseline and when ill)",
       ],
       longAnswer: [
-        "Sertindole: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Sertindole: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: D2 + POTENT 5-HT2A antagonist with alpha-1 and cardiac K-channel effects.",
         "Signature: dose-related QT prolongation (suspended 1998, reinstated with ECG programme).",
       ],
@@ -293,7 +293,7 @@ export const sertindole: Drug = {
         "Mechanism: D2 + POTENT 5-HT2A antagonist with alpha-1 and cardiac K-channel effects.",
         "Signature: dose-related QT prolongation (suspended 1998, reinstated with ECG programme).",
         "Signature everyday effect: NASAL CONGESTION (alpha-1).",
-        "Second-line European schizophrenia use only — ECG-governed.",
+        "Second-line European schizophrenia use only. ECG-governed.",
         "EPS-sparing; modest weight gain.",
         "Dose 12-20 mg/day.",
       ],
@@ -305,7 +305,7 @@ export const sertindole: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Sertindole develops torsades de pointes and sudden death — next best step?",
+        "A patient on Sertindole develops torsades de pointes and sudden death: next best step?",
         "When to choose Sertindole over alternatives in its class.",
       ],
     },
@@ -318,10 +318,10 @@ export const sertindole: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The regulatory arc: launched → suspended after arrhythmia deaths (1998) → reinstated with mandatory ECGs — pharmacovigilance as a drug's biography.",
+        "The regulatory arc: launched → suspended after arrhythmia deaths (1998) → reinstated with mandatory ECGs; pharmacovigilance as a drug's biography.",
         "The nasal-congestion signature: alpha-1 rhinitis is the everyday tell that patients report.",
-        "The EPS-clean QT-dirty trade: motor-sparing at the price of cardiac monitoring — the opposite of haloperidol's trade.",
-        "Exam fame: sertindole = QT in the same breath — the association that outlives prescribing.",
+        "The EPS-clean QT-dirty trade: motor-sparing at the price of cardiac monitoring; the opposite of haloperidol's trade.",
+        "Exam fame: sertindole = QT in the same breath; the association that outlives prescribing.",
       ],
     },
   },
@@ -330,14 +330,14 @@ export const sertindole: Drug = {
     "Mechanism: D2 + POTENT 5-HT2A antagonist with alpha-1 and cardiac K-channel effects.",
     "Signature: dose-related QT prolongation (suspended 1998, reinstated with ECG programme).",
     "Signature everyday effect: NASAL CONGESTION (alpha-1).",
-    "Second-line European schizophrenia use only — ECG-governed.",
+    "Second-line European schizophrenia use only. ECG-governed.",
     "EPS-sparing; modest weight gain.",
     "Dose 12-20 mg/day.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia (second-line, ecg-governed, europe)",
+      title: "First presentation: schizophrenia (second-line, ecg-governed, europe)",
       presentation: "A patient presenting with schizophrenia (second-line, ecg-governed, europe), started on Sertindole.",
       history: "A adult patient presents with a schizophrenia (second-line, ecg-governed, europe) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with schizophrenia (second-line, ecg-governed, europe); physical examination and baseline investigations are unremarkable.",
@@ -346,7 +346,7 @@ export const sertindole: Drug = {
       management: "Started at 4 mg once daily, titrated to 12-20 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Sertindole takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Sertindole takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -355,7 +355,7 @@ export const sertindole: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Atypical Antipsychotic comparison — choosing within the class",
+      title: "Atypical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Sertindole",
       rows: [
         {
@@ -430,7 +430,7 @@ export const sertindole: Drug = {
           comparisons: [
             {
               drug: "Aripiprazole",
-              value: "Low; can be activating — insomnia is more common than somnolence.",
+              value: "Low; can be activating: insomnia is more common than somnolence.",
             },
             {
               drug: "Clozapine",
@@ -438,38 +438,38 @@ export const sertindole: Drug = {
             },
             {
               drug: "Lurasidone",
-              value: "Low — may be mildly activating.",
+              value: "Low: may be mildly activating.",
             },
             {
               drug: "Olanzapine",
-              value: "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+              value: "Moderate to high: usually transient at a given dose but dose-limiting for many patients.",
             },
           ],
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The QT-teaching atypical — suspended and reinstated with ECG strings",
+          primaryValue: "The QT-teaching atypical: suspended and reinstated with ECG strings",
           comparisons: [
             {
               drug: "Aripiprazole",
-              value: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+              value: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
             },
             {
               drug: "Clozapine",
-              value: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+              value: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
             },
             {
               drug: "Lurasidone",
-              value: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+              value: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
             },
             {
               drug: "Olanzapine",
-              value: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+              value: "Most robust broad-spectrum atypical: heaviest metabolic burden",
             },
           ],
         },
       ],
-      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -478,7 +478,7 @@ export const sertindole: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Sertindole reaches peak plasma concentration and begins acting at its molecular target (D2 (antagonist) + 5-HT2A (potent antagonist); alpha-1; cardiac potassium channels (dose-related)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Sertindole reaches peak plasma concentration and begins acting at its molecular target (D2 (antagonist) + 5-HT2A (potent antagonist); alpha-1; cardiac potassium channels (dose-related)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -514,7 +514,7 @@ export const sertindole: Drug = {
   faqs: [
     {
       question: "How long does Sertindole take to work?",
-      answer: "As with the class: 1-3 weeks at antipsychotic dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "As with the class: 1-3 weeks at antipsychotic dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Sertindole?",
@@ -522,11 +522,11 @@ export const sertindole: Drug = {
     },
     {
       question: "Can I stop Sertindole suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Sertindole habit-forming?",
@@ -534,7 +534,7 @@ export const sertindole: Drug = {
     },
     {
       question: "Can I take Sertindole during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Sertindole may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Sertindole may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -686,7 +686,7 @@ export const sertindole: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Sertindole",
+      label: "Patient Guide. Sertindole",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -694,13 +694,13 @@ export const sertindole: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The QT-restricted atypical — suspended, reinstated with ECG monitoring, and forever an exam name.",
-    summary: "Sertindole is a prescription medicine used to treat schizophrenia (second-line, ecg-governed, europe). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The QT-restricted atypical: suspended, reinstated with ECG monitoring, and forever an exam name.",
+    summary: "Sertindole is a prescription medicine used to treat schizophrenia (second-line, ecg-governed, europe). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Sertindole is a European antipsychotic reserved for people who cannot take other newer agents: it is gentle on movement but lengthens the heart's electrical reset, so regular heart tracings (ECGs) are a required part of treatment. A constantly blocked or runny nose is its most common everyday effect.",
-    sideEffects: "The most common side effects are: nasal congestion, weight gain (modest), sedation and dizziness, qt prolongation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Torsades de pointes and sudden death and Neuroleptic malignant syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: ecg (qtc) (baseline, steady state, and after each dose change — mandatory); potassium and magnesium (baseline and when ill). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: nasal congestion, weight gain (modest), sedation and dizziness, qt prolongation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Torsades de pointes and sudden death and Neuroleptic malignant syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: ecg (qtc) (baseline, steady state, and after each dose change, mandatory); potassium and magnesium (baseline and when ill). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: All QT-prolonging drugs, CYP2D6/3A4 inhibitors (paroxetine, ketoconazole), Haloperidol co-prescription (historic). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: All QT-prolonging drugs, CYP2D6/3A4 inhibitors (paroxetine, ketoconazole), Haloperidol co-prescription (historic). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -724,7 +724,7 @@ export const sertindole: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -758,55 +758,55 @@ export const sertindole: Drug = {
         name: "Sertindole",
         slug: "sertindole",
         relationship: "This guide",
-        distinguishing: "The QT-teaching atypical — suspended and reinstated with ECG strings",
+        distinguishing: "The QT-teaching atypical: suspended and reinstated with ECG strings",
       },
       {
         name: "Aripiprazole",
         slug: "aripiprazole",
         relationship: "Same class (Dopamine Stabiliser)",
-        distinguishing: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+        distinguishing: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
       },
       {
         name: "Clozapine",
         slug: "clozapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
       },
       {
         name: "Lurasidone",
         slug: "lurasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+        distinguishing: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
       },
       {
         name: "Olanzapine",
         slug: "olanzapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+        distinguishing: "Most robust broad-spectrum atypical: heaviest metabolic burden",
       },
       {
         name: "Paliperidone",
         slug: "paliperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The LAI platform king — monthly to 6-monthly injections for schizophrenia",
+        distinguishing: "The LAI platform king: monthly to 6-monthly injections for schizophrenia",
       },
       {
         name: "Quetiapine",
         slug: "quetiapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin — the sedating antidepressant-antipsychotic",
+        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin: the sedating antidepressant-antipsychotic",
       },
       {
         name: "Risperidone",
         slug: "risperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most potent D2 blockade among atypicals — highest prolactin, best-studied LAI",
+        distinguishing: "Most potent D2 blockade among atypicals: highest prolactin, best-studied LAI",
       },
       {
         name: "Ziprasidone",
         slug: "ziprasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic — with QT vigilance",
+        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic, with QT vigilance",
       },
     ],
   },
@@ -954,7 +954,7 @@ export const sertindole: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Sertindole in two sentences.",
-      answer: "Sertindole blocks D2 with strong 5-HT2A antagonism and alpha-1 binding — with dose-related cardiac potassium-channel effect (QT) that defines its regulation. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Sertindole blocks D2 with strong 5-HT2A antagonism and alpha-1 binding, with dose-related cardiac potassium-channel effect (QT) that defines its regulation. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -969,12 +969,12 @@ export const sertindole: Drug = {
     },
     {
       question: "What monitoring does a patient on Sertindole require?",
-      answer: "ECG (QTc) (Baseline, steady state, and after each dose change — mandatory); Potassium and magnesium (Baseline and when ill)",
+      answer: "ECG (QTc) (Baseline, steady state, and after each dose change, mandatory); Potassium and magnesium (Baseline and when ill)",
       topic: "Monitoring",
     },
     {
       question: "Share one clinical pearl about Sertindole that separates safe prescribers from unsafe ones.",
-      answer: "The regulatory arc: launched → suspended after arrhythmia deaths (1998) → reinstated with mandatory ECGs — pharmacovigilance as a drug's biography.",
+      answer: "The regulatory arc: launched → suspended after arrhythmia deaths (1998) → reinstated with mandatory ECGs; pharmacovigilance as a drug's biography.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1050,7 +1050,7 @@ export const sertindole: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1095,7 +1095,7 @@ export const sertindole: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Sertindole works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Sertindole works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1111,7 +1111,7 @@ export const sertindole: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Sertindole safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Sertindole safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1156,7 +1156,7 @@ export const sertindole: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Sertindole follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Sertindole follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1180,7 +1180,7 @@ export const sertindole: Drug = {
     dosageForms: ["Tablets 4, 12, 16, 20 mg"],
     dosingTips: ["The ECG programme is the prescription.", "Nasal congestion is expected.", "Electrolytes when intercurrently ill."],
     overdose: [
-      "Overdose with Sertindole is managed supportively — no specific antidote.",
+      "Overdose with Sertindole is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Sertindole is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1220,15 +1220,15 @@ export const sertindole: Drug = {
       "Schizophrenia (second-line, ECG-governed)",
     ],
     pearls: [
-      "The regulatory arc: launched → suspended after arrhythmia deaths (1998) → reinstated with mandatory ECGs — pharmacovigilance as a drug's biography.",
+      "The regulatory arc: launched → suspended after arrhythmia deaths (1998) → reinstated with mandatory ECGs; pharmacovigilance as a drug's biography.",
       "The nasal-congestion signature: alpha-1 rhinitis is the everyday tell that patients report.",
-      "The EPS-clean QT-dirty trade: motor-sparing at the price of cardiac monitoring — the opposite of haloperidol's trade.",
-      "Exam fame: sertindole = QT in the same breath — the association that outlives prescribing.",
+      "The EPS-clean QT-dirty trade: motor-sparing at the price of cardiac monitoring; the opposite of haloperidol's trade.",
+      "Exam fame: sertindole = QT in the same breath; the association that outlives prescribing.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

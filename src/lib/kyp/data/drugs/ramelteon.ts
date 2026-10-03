@@ -23,14 +23,14 @@ export const ramelteon: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Sleep Medicines", "Melatonin Agonists", "Ramelteon"],
   /* ---- Hero / summary ---- */
-  tagline: "The melatonin MT1/MT2 agonist — sleep-onset targeting with zero dependence potential.",
-  summary: "Ramelteon is a selective melatonin MT1/MT2 receptor agonist that targets the suprachiasmatic (body clock) system rather than sedating the cortex: it advances sleep onset modestly with no GABA-ergic action, no dependence, no abuse potential (unscheduled in the US), and no respiratory depression. Its niche is sleep-onset insomnia where dependence concerns rule out Z-drugs and benzos — including in substance-use populations.",
+  tagline: "The melatonin MT1/MT2 agonist: sleep-onset targeting with zero dependence potential.",
+  summary: "Ramelteon is a selective melatonin MT1/MT2 receptor agonist that targets the suprachiasmatic (body clock) system rather than sedating the cortex: it advances sleep onset modestly with no GABA-ergic action, no dependence, no abuse potential (unscheduled in the US), and no respiratory depression. Its niche is sleep-onset insomnia where dependence concerns rule out Z-drugs and benzos, including in substance-use populations.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Ramelteon — from its molecular target (Melatonin MT1 and MT2 receptors (agonist) — suprachiasmatic nucleus) to clinical effect.",
+    "Explain the mechanism of action of Ramelteon (from its molecular target (Melatonin MT1 and MT2 receptors (agonist)) suprachiasmatic nucleus) to clinical effect.",
     "List the FDA-approved and off-label uses of Ramelteon.",
     "Predict the common and serious side effects of Ramelteon from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Ramelteon.",
@@ -38,15 +38,15 @@ export const ramelteon: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Selective melatonin MT1/MT2 agonist acting on the circadian pacemaker — sleep timing, not cortical sedation.",
-    molecularTarget: "Melatonin MT1 and MT2 receptors (agonist) — suprachiasmatic nucleus",
+    summary: "Selective melatonin MT1/MT2 agonist acting on the circadian pacemaker: sleep timing, not cortical sedation.",
+    molecularTarget: "Melatonin MT1 and MT2 receptors (agonist): suprachiasmatic nucleus",
     effect: "Sleep promotion via the described target.",
     steps: [
-      "Ramelteon is a selective melatonin MT1/MT2 receptor agonist that targets the suprachiasmatic (body clock) system rather than sedating the cortex: it advances sleep onset modestly with no GABA-ergic action, no dependence, no abuse potential (unscheduled in the US), and no respiratory depression — the mechanism in one line.",
+      "Ramelteon is a selective melatonin MT1/MT2 receptor agonist that targets the suprachiasmatic (body clock) system rather than sedating the cortex: it advances sleep onset modestly with no GABA-ergic action, no dependence, no abuse potential (unscheduled in the US), and no respiratory depression; the mechanism in one line.",
       "Binding at the described target produces the sleep-promoting effect.",
       "Duration of action follows the half-life: onset agents clear before morning; longer agents add maintenance cover.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 1–2.6 hours (short plasma; chronobiotic effects outlast). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 1–2.6 hours (short plasma; chronobiotic effects outlast). See mechanism and prescriber sections.",
     halfLife: "1–2.6 hours (short plasma; chronobiotic effects outlast).",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
@@ -97,14 +97,14 @@ export const ramelteon: Drug = {
         label: "times",
       },
     ],
-    caption: "Targeting the body clock rather than sedating the cortex — melatonergic agents restore sleep timing without dependence or rebound insomnia.",
+    caption: "Targeting the body clock rather than sedating the cortex: melatonergic agents restore sleep timing without dependence or rebound insomnia.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
     "Central monoaminergic systems (see mechanism)",
   ],
   receptors: [
-    "Melatonin MT1 and MT2 receptors (agonist) — suprachiasmatic nucleus",
+    "Melatonin MT1 and MT2 receptors (agonist): suprachiasmatic nucleus",
   ],
   brainRegionIds: ["prefrontal-cortex"],
   pathwayIds: [],
@@ -123,7 +123,7 @@ export const ramelteon: Drug = {
     {
       name: "Insomnia in substance-use populations",
       status: "guideline",
-      description: "Zero abuse potential — the hypnotic of choice when addiction history is present.",
+      description: "Zero abuse potential: the hypnotic of choice when addiction history is present.",
     },
   ],
   contraindications: [
@@ -145,7 +145,7 @@ export const ramelteon: Drug = {
       name: "Somnolence and fatigue",
       frequency: "common",
       severity: "mild",
-      description: "Usually mild — and partly intended.",
+      description: "Usually mild, and partly intended.",
       management: "Dose timing at bedtime.",
     },
     {
@@ -168,7 +168,7 @@ export const ramelteon: Drug = {
       name: "Hepatotoxicity (rare, dose-related)",
       frequency: "rare",
       severity: "severe",
-      description: "Transaminase elevations at supratherapeutic doses — the label's cautions.",
+      description: "Transaminase elevations at supratherapeutic doses: the label's cautions.",
       management: "LFT vigilance if symptoms; avoid in significant hepatic impairment.",
     },
     {
@@ -184,7 +184,7 @@ export const ramelteon: Drug = {
     {
       parameter: "Course and effect review",
       frequency: "At 2–4 weeks",
-      rationale: "Modest effect sizes — confirm benefit before continuing indefinitely.",
+      rationale: "Modest effect sizes: confirm benefit before continuing indefinitely.",
     },
   ],
   interactions: [
@@ -215,42 +215,42 @@ export const ramelteon: Drug = {
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
-  patientExplanation: "Ramelteon works completely differently from traditional sleeping pills: it mimics the body's own natural sleep hormone (melatonin) to shift your body clock toward sleep. Because it does not act on the brain's calming chemical (GABA), it has no addiction potential and does not disturb breathing — making it the safest choice for longer use, though its sleep-promoting power is gentler.",
+  patientExplanation: "Ramelteon works completely differently from traditional sleeping pills: it mimics the body's own natural sleep hormone (melatonin) to shift your body clock toward sleep. Because it does not act on the brain's calming chemical (GABA), it has no addiction potential and does not disturb breathing, making it the safest choice for longer use, though its sleep-promoting power is gentler.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Ramelteon builds over weeks — do not judge it in the first days.",
+    "Benefit from Ramelteon builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The no-dependence hypnotic: unscheduled, no abuse potential — the answer for substance-use populations and long-term use.",
-    "Melatonin-receptor pharmacology: effect sizes are modest; sell it as gentle, not weak — and pair with sleep-hygiene work.",
+    "The no-dependence hypnotic: unscheduled, no abuse potential; the answer for substance-use populations and long-term use.",
+    "Melatonin-receptor pharmacology: effect sizes are modest; sell it as gentle, not weak, and pair with sleep-hygiene work.",
     "Fluvoxamine contraindication: the 1A2 interaction is the label's headline caution.",
-    "MT1/MT2 selectivity over melatonin's broad binding — targeting the clock without the hangover of supra-physiological melatonin dosing.",
+    "MT1/MT2 selectivity over melatonin's broad binding: targeting the clock without the hangover of supra-physiological melatonin dosing.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Ramelteon: Selective melatonin MT1/MT2 agonist acting on the circadian pacemaker — sleep timing, not cortical sedation.",
-        "Uses of Ramelteon: Insomnia — sleep-onset difficulty (chronic use permitted); Circadian rhythm disorders (delayed sleep phase); Insomnia in substance-use populations",
+        "Mechanism of Ramelteon: Selective melatonin MT1/MT2 agonist acting on the circadian pacemaker; sleep timing, not cortical sedation.",
+        "Uses of Ramelteon: Insomnia; sleep-onset difficulty (chronic use permitted); Circadian rhythm disorders (delayed sleep phase); Insomnia in substance-use populations",
         "Mechanism: selective MT1/MT2 melatonin-receptor AGONIST (not GABA).",
-        "Zero dependence/abuse potential — unscheduled; chronic use permitted.",
+        "Zero dependence/abuse potential: unscheduled; chronic use permitted.",
       ],
       practical: [
-        "Prescribe Ramelteon for insomnia — sleep-onset difficulty (chronic use permitted) with dose, timing, and duration.",
+        "Prescribe Ramelteon for insomnia: sleep-onset difficulty (chronic use permitted) with dose, timing, and duration.",
         "Outline the monitoring plan: Course and effect review (At 2–4 weeks)",
       ],
       longAnswer: [
-        "Ramelteon: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Ramelteon: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: selective MT1/MT2 melatonin-receptor AGONIST (not GABA).",
-        "Zero dependence/abuse potential — unscheduled; chronic use permitted.",
+        "Zero dependence/abuse potential: unscheduled; chronic use permitted.",
       ],
     },
     neetPg: {
       highYield: [
         "Mechanism: selective MT1/MT2 melatonin-receptor AGONIST (not GABA).",
-        "Zero dependence/abuse potential — unscheduled; chronic use permitted.",
+        "Zero dependence/abuse potential: unscheduled; chronic use permitted.",
         "Half-life ~1–2.6 h; takes weeks of consistent timing for full effect.",
         "Contraindicated with fluvoxamine (1A2).",
         "Niche: onset insomnia + substance-use populations.",
@@ -263,30 +263,30 @@ export const ramelteon: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Ramelteon develops hepatotoxicity (rare, dose-related) — next best step?",
+        "A patient on Ramelteon develops hepatotoxicity (rare, dose-related): next best step?",
         "When to choose Ramelteon over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: Melatonin MT1 and MT2 receptors (agonist) — suprachiasmatic nucleus",
+        "Primary target: Melatonin MT1 and MT2 receptors (agonist); suprachiasmatic nucleus",
         "Most common side effects: Somnolence and fatigue, Dizziness, Nausea and decreased appetite",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The no-dependence hypnotic: unscheduled, no abuse potential — the answer for substance-use populations and long-term use.",
-        "Melatonin-receptor pharmacology: effect sizes are modest; sell it as gentle, not weak — and pair with sleep-hygiene work.",
+        "The no-dependence hypnotic: unscheduled, no abuse potential; the answer for substance-use populations and long-term use.",
+        "Melatonin-receptor pharmacology: effect sizes are modest; sell it as gentle, not weak, and pair with sleep-hygiene work.",
         "Fluvoxamine contraindication: the 1A2 interaction is the label's headline caution.",
-        "MT1/MT2 selectivity over melatonin's broad binding — targeting the clock without the hangover of supra-physiological melatonin dosing.",
+        "MT1/MT2 selectivity over melatonin's broad binding: targeting the clock without the hangover of supra-physiological melatonin dosing.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
     "Mechanism: selective MT1/MT2 melatonin-receptor AGONIST (not GABA).",
-    "Zero dependence/abuse potential — unscheduled; chronic use permitted.",
+    "Zero dependence/abuse potential: unscheduled; chronic use permitted.",
     "Half-life ~1–2.6 h; takes weeks of consistent timing for full effect.",
     "Contraindicated with fluvoxamine (1A2).",
     "Niche: onset insomnia + substance-use populations.",
@@ -294,16 +294,16 @@ export const ramelteon: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — insomnia — sleep-onset difficulty (chronic use permitted)",
-      presentation: "A patient presenting with insomnia — sleep-onset difficulty (chronic use permitted), started on Ramelteon.",
-      history: "A adult patient presents with a insomnia — sleep-onset difficulty (chronic use permitted) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with insomnia — sleep-onset difficulty (chronic use permitted); physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Insomnia — sleep-onset difficulty (chronic use permitted). Differentials are considered and excluded clinically.",
+      title: "First presentation: insomnia; sleep-onset difficulty (chronic use permitted)",
+      presentation: "A patient presenting with insomnia: sleep-onset difficulty (chronic use permitted), started on Ramelteon.",
+      history: "A adult patient presents with a insomnia: sleep-onset difficulty (chronic use permitted) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with insomnia: sleep-onset difficulty (chronic use permitted); physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Insomnia: sleep-onset difficulty (chronic use permitted). Differentials are considered and excluded clinically.",
       rationale: "Ramelteon is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Melatonin Agonist) with strong evidence in this condition.",
       management: "Started at 8 mg within 30 min of bedtime, titrated to 8 mg with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Ramelteon takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Ramelteon takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -312,12 +312,12 @@ export const ramelteon: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Melatonin Agonist comparison — choosing within the class",
+      title: "Melatonin Agonist comparison: choosing within the class",
       primaryDrug: "Ramelteon",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "Melatonin MT1 and MT2 receptors (agonist) — suprachiasmatic nucleus",
+          primaryValue: "Melatonin MT1 and MT2 receptors (agonist): suprachiasmatic nucleus",
           comparisons: [
             {
               drug: "Tasimelteon",
@@ -357,16 +357,16 @@ export const ramelteon: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The dependence-free sleep-onset option — body-clock pharmacology",
+          primaryValue: "The dependence-free sleep-onset option: body-clock pharmacology",
           comparisons: [
             {
               drug: "Tasimelteon",
-              value: "Non-24-Hour disorder in the blind — the orphan clock drug",
+              value: "Non-24-Hour disorder in the blind: the orphan clock drug",
             },
           ],
         },
       ],
-      takeaway: "All melatonin agonists share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All melatonin agonists share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -375,7 +375,7 @@ export const ramelteon: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Ramelteon reaches peak plasma concentration and begins acting at its molecular target (Melatonin MT1 and MT2 receptors (agonist) — suprachiasmatic nucleus). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Ramelteon reaches peak plasma concentration and begins acting at its molecular target (Melatonin MT1 and MT2 receptors (agonist), suprachiasmatic nucleus). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -411,7 +411,7 @@ export const ramelteon: Drug = {
   faqs: [
     {
       question: "How long does Ramelteon take to work?",
-      answer: "30 minutes; full chronobiotic effect builds over 1–2 weeks of consistent timing.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "30 minutes; full chronobiotic effect builds over 1–2 weeks of consistent timing.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Ramelteon?",
@@ -419,11 +419,11 @@ export const ramelteon: Drug = {
     },
     {
       question: "Can I stop Ramelteon suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Ramelteon habit-forming?",
@@ -431,7 +431,7 @@ export const ramelteon: Drug = {
     },
     {
       question: "Can I take Ramelteon during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Ramelteon may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Ramelteon may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -525,13 +525,13 @@ export const ramelteon: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "Melatonin MT1 and MT2 receptors (agonist) — suprachiasmatic nucleus",
+      label: "Melatonin MT1 and MT2 receptors (agonist): suprachiasmatic nucleus",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
     },
     {
-      label: "Insomnia — sleep-onset difficulty (chronic use permitted)",
+      label: "Insomnia: sleep-onset difficulty (chronic use permitted)",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -567,7 +567,7 @@ export const ramelteon: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Ramelteon",
+      label: "Patient Guide. Ramelteon",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -575,13 +575,13 @@ export const ramelteon: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The melatonin MT1/MT2 agonist — sleep-onset targeting with zero dependence potential.",
-    summary: "Ramelteon is a prescription medicine used to treat insomnia — sleep-onset difficulty (chronic use permitted). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Ramelteon works completely differently from traditional sleeping pills: it mimics the body's own natural sleep hormone (melatonin) to shift your body clock toward sleep. Because it does not act on the brain's calming chemical (GABA), it has no addiction potential and does not disturb breathing — making it the safest choice for longer use, though its sleep-promoting power is gentler.",
-    sideEffects: "The most common side effects are: somnolence and fatigue, dizziness, nausea and decreased appetite. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hepatotoxicity (rare, dose-related) and Complex sleep behaviours. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: course and effect review (at 2–4 weeks). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The melatonin MT1/MT2 agonist: sleep-onset targeting with zero dependence potential.",
+    summary: "Ramelteon is a prescription medicine used to treat insomnia: sleep-onset difficulty (chronic use permitted). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Ramelteon works completely differently from traditional sleeping pills: it mimics the body's own natural sleep hormone (melatonin) to shift your body clock toward sleep. Because it does not act on the brain's calming chemical (GABA), it has no addiction potential and does not disturb breathing, making it the safest choice for longer use, though its sleep-promoting power is gentler.",
+    sideEffects: "The most common side effects are: somnolence and fatigue, dizziness, nausea and decreased appetite. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hepatotoxicity (rare, dose-related) and Complex sleep behaviours. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: course and effect review (at 2–4 weeks). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Fluvoxamine, Ketoconazole and other 1A2/3A4 inhibitors, Alcohol. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Fluvoxamine, Ketoconazole and other 1A2/3A4 inhibitors, Alcohol. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -606,7 +606,7 @@ export const ramelteon: Drug = {
     },
     costCategory: "moderate",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: [
       "Same time every night; give it 1–2 weeks before judging.",
     ],
@@ -642,13 +642,13 @@ export const ramelteon: Drug = {
         name: "Ramelteon",
         slug: "ramelteon",
         relationship: "This guide",
-        distinguishing: "The dependence-free sleep-onset option — body-clock pharmacology",
+        distinguishing: "The dependence-free sleep-onset option: body-clock pharmacology",
       },
       {
         name: "Tasimelteon",
         slug: "tasimelteon",
         relationship: "Same class (Melatonin Agonist)",
-        distinguishing: "Non-24-Hour disorder in the blind — the orphan clock drug",
+        distinguishing: "Non-24-Hour disorder in the blind: the orphan clock drug",
       },
     ],
   },
@@ -796,17 +796,17 @@ export const ramelteon: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Ramelteon in two sentences.",
-      answer: "Selective melatonin MT1/MT2 agonist acting on the circadian pacemaker — sleep timing, not cortical sedation. Net effect: Sleep promotion via the described target.",
+      answer: "Selective melatonin MT1/MT2 agonist acting on the circadian pacemaker: sleep timing, not cortical sedation. Net effect: Sleep promotion via the described target.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Ramelteon.",
-      answer: "Insomnia — sleep-onset difficulty (chronic use permitted), Circadian rhythm disorders (delayed sleep phase), Insomnia in substance-use populations. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Insomnia: sleep-onset difficulty (chronic use permitted), Circadian rhythm disorders (delayed sleep phase), Insomnia in substance-use populations. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Ramelteon and how you would manage it.",
-      answer: "Hepatotoxicity (rare, dose-related): Transaminase elevations at supratherapeutic doses — the label's cautions. Management: LFT vigilance if symptoms; avoid in significant hepatic impairment.",
+      answer: "Hepatotoxicity (rare, dose-related): Transaminase elevations at supratherapeutic doses; the label's cautions. Management: LFT vigilance if symptoms; avoid in significant hepatic impairment.",
       topic: "Safety",
     },
     {
@@ -816,7 +816,7 @@ export const ramelteon: Drug = {
     },
     {
       question: "Share one clinical pearl about Ramelteon that separates safe prescribers from unsafe ones.",
-      answer: "The no-dependence hypnotic: unscheduled, no abuse potential — the answer for substance-use populations and long-term use.",
+      answer: "The no-dependence hypnotic: unscheduled, no abuse potential; the answer for substance-use populations and long-term use.",
       topic: "Clinical Pearls",
     },
   ],
@@ -892,7 +892,7 @@ export const ramelteon: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -937,7 +937,7 @@ export const ramelteon: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Ramelteon works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Ramelteon works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -953,7 +953,7 @@ export const ramelteon: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Ramelteon safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Ramelteon safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -998,7 +998,7 @@ export const ramelteon: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Ramelteon follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Ramelteon follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1014,19 +1014,19 @@ export const ramelteon: Drug = {
       {
         indication: "Sleep-onset insomnia",
         starting: "8 mg within 30 min of bedtime",
-        titration: "Same clock time nightly — the clock needs consistency",
+        titration: "Same clock time nightly: the clock needs consistency",
         target: "8 mg",
         max: "8 mg",
       },
     ],
     dosageForms: ["Tablets 8 mg"],
     dosingTips: [
-      "Same time nightly — the clock needs consistency.",
-      "Weeks of trial, not nights — set expectations.",
+      "Same time nightly: the clock needs consistency.",
+      "Weeks of trial, not nights: set expectations.",
       "The substance-use population's hypnotic.",
     ],
     overdose: [
-      "Overdose with Ramelteon is managed supportively — no specific antidote.",
+      "Overdose with Ramelteon is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Ramelteon is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1066,15 +1066,15 @@ export const ramelteon: Drug = {
       "Circadian phase delay",
     ],
     pearls: [
-      "The no-dependence hypnotic: unscheduled, no abuse potential — the answer for substance-use populations and long-term use.",
-      "Melatonin-receptor pharmacology: effect sizes are modest; sell it as gentle, not weak — and pair with sleep-hygiene work.",
+      "The no-dependence hypnotic: unscheduled, no abuse potential; the answer for substance-use populations and long-term use.",
+      "Melatonin-receptor pharmacology: effect sizes are modest; sell it as gentle, not weak, and pair with sleep-hygiene work.",
       "Fluvoxamine contraindication: the 1A2 interaction is the label's headline caution.",
-      "MT1/MT2 selectivity over melatonin's broad binding — targeting the clock without the hangover of supra-physiological melatonin dosing.",
+      "MT1/MT2 selectivity over melatonin's broad binding: targeting the clock without the hangover of supra-physiological melatonin dosing.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

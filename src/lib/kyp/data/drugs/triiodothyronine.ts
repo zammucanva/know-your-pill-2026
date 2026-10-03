@@ -23,14 +23,14 @@ export const triiodothyronine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antidepressants", "Augmentation Agents", "Triiodothyronine (T3)"],
   /* ---- Hero / summary ---- */
-  tagline: "The T3 augmentation trick — thyroid hormone that boosts antidepressant response.",
+  tagline: "The T3 augmentation trick: thyroid hormone that boosts antidepressant response.",
   summary: "Triiodothyronine (T3, liothyronine) is thyroid hormone used in psychiatry as antidepressant AUGMENTATION: adding 25-50 mcg T3 to a partially-responding antidepressant accelerates and increases response (the classic Harvard double-switch literature position), and converts non-responders to responders in a meaningful minority. Cheap, rapid, and carried by the thyrotoxicosis cautions.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Triiodothyronine (T3) — from its molecular target (Thyroid hormone receptors (T3 nuclear receptors — gene expression modulation)) to clinical effect.",
+    "Explain the mechanism of action of Triiodothyronine (T3) (from its molecular target (Thyroid hormone receptors (T3 nuclear receptors) gene expression modulation)) to clinical effect.",
     "List the FDA-approved and off-label uses of Triiodothyronine (T3).",
     "Predict the common and serious side effects of Triiodothyronine (T3) from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Triiodothyronine (T3).",
@@ -38,15 +38,15 @@ export const triiodothyronine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "T3 binds nuclear thyroid receptors, modulating gene expression that enhances monoaminergic signalling and receptor sensitivity — the thyroid-brain axis used deliberately for antidepressant augmentation.",
-    molecularTarget: "Thyroid hormone receptors (T3 nuclear receptors — gene expression modulation)",
+    summary: "T3 binds nuclear thyroid receptors, modulating gene expression that enhances monoaminergic signalling and receptor sensitivity: the thyroid-brain axis used deliberately for antidepressant augmentation.",
+    molecularTarget: "Thyroid hormone receptors (T3 nuclear receptors, gene expression modulation)",
     effect: "Monoaminergic modulation producing the antidepressant effect described.",
     steps: [
-      "T3 binds nuclear thyroid receptors, modulating gene expression that enhances monoaminergic signalling and receptor sensitivity — the thyroid-brain axis used deliberately for antidepressant augmentation.",
+      "T3 binds nuclear thyroid receptors, modulating gene expression that enhances monoaminergic signalling and receptor sensitivity: the thyroid-brain axis used deliberately for antidepressant augmentation.",
       "Downstream receptor adaptation over 2-6 weeks translates acute monoamine change into clinical response.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 1-2 days. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 1-2 days. See mechanism and prescriber sections.",
     halfLife: "About 1-2 days.",
     metabolism: "Hepatic CYP metabolism.",
     excretion: "Renal.",
@@ -109,7 +109,7 @@ export const triiodothyronine: Drug = {
         label: "produces",
       },
     ],
-    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation — the central paradox of antidepressant pharmacology.",
+    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation: the central paradox of antidepressant pharmacology.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Thyroid axis"],
@@ -121,7 +121,7 @@ export const triiodothyronine: Drug = {
     {
       name: "Antidepressant augmentation (partial response / non-response)",
       status: "guideline",
-      description: "25-50 mcg/day T3 added to an SSRI/TCA — one of the classic augmentation steps (alongside lithium).",
+      description: "25-50 mcg/day T3 added to an SSRI/TCA, one of the classic augmentation steps (alongside lithium).",
     },
     {
       name: "Hypothyroidism",
@@ -206,7 +206,7 @@ export const triiodothyronine: Drug = {
     {
       parameter: "TSH and free T3/T4",
       frequency: "Baseline, then 4-8 weekly",
-      rationale: "The augmentation discipline — keep dosing lean.",
+      rationale: "The augmentation discipline: keep dosing lean.",
     },
     {
       parameter: "Heart rate and rhythm (elderly)",
@@ -224,13 +224,13 @@ export const triiodothyronine: Drug = {
     {
       drug: "Digoxin",
       severity: "moderate",
-      mechanism: "Thyroid state reduces digoxin effect — levels shift.",
+      mechanism: "Thyroid state reduces digoxin effect: levels shift.",
       action: "Monitor.",
     },
     {
       drug: "Cholestyramine and iron/calcium supplements",
       severity: "moderate",
-      mechanism: "Bind thyroid hormone in the gut — separate by hours.",
+      mechanism: "Bind thyroid hormone in the gut: separate by hours.",
       action: "Timing counselling.",
     },
   ],
@@ -240,27 +240,27 @@ export const triiodothyronine: Drug = {
     lactation: "Minimal milk concern at physiological dosing.",
   },
   renalAdjustment: "No adjustment.",
-  hepaticAdjustment: "Hepatic metabolism — standard caution.",
+  hepaticAdjustment: "Hepatic metabolism: standard caution.",
   /* ---- Education ---- */
-  patientExplanation: "Liothyronine is thyroid hormone — the body's metabolic accelerator — used in psychiatry as a well-known add-on that strengthens and speeds up antidepressant response. It is given as a small daily tablet, with pulse and thyroid blood tests during treatment; too much causes palpitations, tremor, and poor sleep.",
+  patientExplanation: "Liothyronine is thyroid hormone (the body's metabolic accelerator) used in psychiatry as a well-known add-on that strengthens and speeds up antidepressant response. It is given as a small daily tablet, with pulse and thyroid blood tests during treatment; too much causes palpitations, tremor, and poor sleep.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Triiodothyronine (T3) builds over weeks — do not judge it in the first days.",
+    "Benefit from Triiodothyronine (T3) builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The classic pairing: lithium and T3 as the two old-school augmentations — T3 is cheaper, faster, and organ-toxicity-friendlier.",
-    "The acceleration finding: T3 + antidepressant from day one speeds response — the Harvard augmentation literature's second act.",
-    "The TSH discipline: augmentation aims at subtle low-normal/suppressed TSH — monitor TSH and symptoms, keep doses lean.",
-    "The rapid-cycling niche: high-dose thyroid in refractory rapid cycling — the endocrine lever for the hardest bipolar pattern.",
-    "25 mcg is a psychiatric dose — endocrine replacement thinks in different T4-equivalents; don't confuse the dosing worlds.",
+    "The classic pairing: lithium and T3 as the two old-school augmentations. T3 is cheaper, faster, and organ-toxicity-friendlier.",
+    "The acceleration finding: T3 + antidepressant from day one speeds response; the Harvard augmentation literature's second act.",
+    "The TSH discipline: augmentation aims at subtle low-normal/suppressed TSH; monitor TSH and symptoms, keep doses lean.",
+    "The rapid-cycling niche: high-dose thyroid in refractory rapid cycling; the endocrine lever for the hardest bipolar pattern.",
+    "25 mcg is a psychiatric dose: endocrine replacement thinks in different T4-equivalents; don't confuse the dosing worlds.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Triiodothyronine (T3): T3 binds nuclear thyroid receptors, modulating gene expression that enhances monoaminergic signalling and receptor sensitivity — the thyroid-brain axis used deliberately for antidepressant augmentation.",
+        "Mechanism of Triiodothyronine (T3): T3 binds nuclear thyroid receptors, modulating gene expression that enhances monoaminergic signalling and receptor sensitivity; the thyroid-brain axis used deliberately for antidepressant augmentation.",
         "Uses of Triiodothyronine (T3): Antidepressant augmentation (partial response / non-response); Hypothyroidism; Accelerating antidepressant response; Rapid cycling bipolar disorder (thyroid augmentation)",
         "Mechanism: T3 → nuclear thyroid receptors → gene expression enhancing monoaminergic signalling.",
         "Use: antidepressant AUGMENTATION 25-50 mcg (classic step alongside lithium).",
@@ -270,7 +270,7 @@ export const triiodothyronine: Drug = {
         "Outline the monitoring plan: TSH and free T3/T4 (Baseline, then 4-8 weekly); Heart rate and rhythm (elderly) (At review)",
       ],
       longAnswer: [
-        "Triiodothyronine (T3): mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Triiodothyronine (T3): mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: T3 → nuclear thyroid receptors → gene expression enhancing monoaminergic signalling.",
         "Use: antidepressant AUGMENTATION 25-50 mcg (classic step alongside lithium).",
       ],
@@ -292,23 +292,23 @@ export const triiodothyronine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Triiodothyronine (T3) develops atrial fibrillation (elderly, excessive dose) — next best step?",
+        "A patient on Triiodothyronine (T3) develops atrial fibrillation (elderly, excessive dose): next best step?",
         "When to choose Triiodothyronine (T3) over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: Thyroid hormone receptors (T3 nuclear receptors — gene expression modulation)",
+        "Primary target: Thyroid hormone receptors (T3 nuclear receptors, gene expression modulation)",
         "Most common side effects: Palpitations and tachycardia, Tremor and nervousness, Insomnia",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The classic pairing: lithium and T3 as the two old-school augmentations — T3 is cheaper, faster, and organ-toxicity-friendlier.",
-        "The acceleration finding: T3 + antidepressant from day one speeds response — the Harvard augmentation literature's second act.",
-        "The TSH discipline: augmentation aims at subtle low-normal/suppressed TSH — monitor TSH and symptoms, keep doses lean.",
-        "The rapid-cycling niche: high-dose thyroid in refractory rapid cycling — the endocrine lever for the hardest bipolar pattern.",
+        "The classic pairing: lithium and T3 as the two old-school augmentations. T3 is cheaper, faster, and organ-toxicity-friendlier.",
+        "The acceleration finding: T3 + antidepressant from day one speeds response; the Harvard augmentation literature's second act.",
+        "The TSH discipline: augmentation aims at subtle low-normal/suppressed TSH; monitor TSH and symptoms, keep doses lean.",
+        "The rapid-cycling niche: high-dose thyroid in refractory rapid cycling; the endocrine lever for the hardest bipolar pattern.",
       ],
     },
   },
@@ -325,7 +325,7 @@ export const triiodothyronine: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — antidepressant augmentation (partial response / non-response)",
+      title: "First presentation: antidepressant augmentation (partial response / non-response)",
       presentation: "A patient presenting with antidepressant augmentation (partial response / non-response), started on Triiodothyronine (T3).",
       history: "A adult patient presents with a antidepressant augmentation (partial response / non-response) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with antidepressant augmentation (partial response / non-response); physical examination and baseline investigations are unremarkable.",
@@ -334,7 +334,7 @@ export const triiodothyronine: Drug = {
       management: "Started at 25 mcg once daily, titrated to 25-50 mcg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Triiodothyronine (T3) takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Triiodothyronine (T3) takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -343,16 +343,16 @@ export const triiodothyronine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "T3 Augmentation vs related agents — orientation table",
+      title: "T3 Augmentation vs related agents: orientation table",
       primaryDrug: "Triiodothyronine (T3)",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "Thyroid hormone receptors (T3 nuclear receptors — gene expression modulation)",
+          primaryValue: "Thyroid hormone receptors (T3 nuclear receptors, gene expression modulation)",
           comparisons: [
             {
               drug: "Triiodothyronine (T3)",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },
@@ -378,7 +378,7 @@ export const triiodothyronine: Drug = {
         },
         {
           attribute: "Clinical niche",
-          primaryValue: "The cheap rapid augmentation — T3's second career",
+          primaryValue: "The cheap rapid augmentation. T3's second career",
           comparisons: [
             {
               drug: "Triiodothyronine (T3)",
@@ -387,7 +387,7 @@ export const triiodothyronine: Drug = {
           ],
         },
       ],
-      takeaway: "Triiodothyronine (T3) is compared here with related agents for orientation. Full comparison data lives in each drug's own guide — follow the links for the complete picture.",
+      takeaway: "Triiodothyronine (T3) is compared here with related agents for orientation. Full comparison data lives in each drug's own guide: follow the links for the complete picture.",
     },
   ],
   /* ---- Timeline ---- */
@@ -396,7 +396,7 @@ export const triiodothyronine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Triiodothyronine (T3) reaches peak plasma concentration and begins acting at its molecular target (Thyroid hormone receptors (T3 nuclear receptors — gene expression modulation)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Triiodothyronine (T3) reaches peak plasma concentration and begins acting at its molecular target (Thyroid hormone receptors (T3 nuclear receptors, gene expression modulation)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -432,7 +432,7 @@ export const triiodothyronine: Drug = {
   faqs: [
     {
       question: "How long does Triiodothyronine (T3) take to work?",
-      answer: "Augmentation benefit over 1-2 weeks.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Augmentation benefit over 1-2 weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Triiodothyronine (T3)?",
@@ -440,11 +440,11 @@ export const triiodothyronine: Drug = {
     },
     {
       question: "Can I stop Triiodothyronine (T3) suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Triiodothyronine (T3) habit-forming?",
@@ -452,7 +452,7 @@ export const triiodothyronine: Drug = {
     },
     {
       question: "Can I take Triiodothyronine (T3) during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Triiodothyronine (T3) may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Triiodothyronine (T3) may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -537,7 +537,7 @@ export const triiodothyronine: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "Thyroid hormone receptors (T3 nuclear receptors — gene expression modulation)",
+      label: "Thyroid hormone receptors (T3 nuclear receptors, gene expression modulation)",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
@@ -579,7 +579,7 @@ export const triiodothyronine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Triiodothyronine (T3)",
+      label: "Patient Guide. Triiodothyronine (T3)",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -587,13 +587,13 @@ export const triiodothyronine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The T3 augmentation trick — thyroid hormone that boosts antidepressant response.",
-    summary: "Triiodothyronine (T3) is a prescription medicine used to treat antidepressant augmentation (partial response / non-response). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Liothyronine is thyroid hormone — the body's metabolic accelerator — used in psychiatry as a well-known add-on that strengthens and speeds up antidepressant response. It is given as a small daily tablet, with pulse and thyroid blood tests during treatment; too much causes palpitations, tremor, and poor sleep.",
-    sideEffects: "The most common side effects are: palpitations and tachycardia, tremor and nervousness, insomnia, weight loss. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Atrial fibrillation (elderly, excessive dose) and Osteoporosis (long-term supraphysiological dosing). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: tsh and free t3/t4 (baseline, then 4-8 weekly); heart rate and rhythm (elderly) (at review). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The T3 augmentation trick: thyroid hormone that boosts antidepressant response.",
+    summary: "Triiodothyronine (T3) is a prescription medicine used to treat antidepressant augmentation (partial response / non-response). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Liothyronine is thyroid hormone (the body's metabolic accelerator) used in psychiatry as a well-known add-on that strengthens and speeds up antidepressant response. It is given as a small daily tablet, with pulse and thyroid blood tests during treatment; too much causes palpitations, tremor, and poor sleep.",
+    sideEffects: "The most common side effects are: palpitations and tachycardia, tremor and nervousness, insomnia, weight loss. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Atrial fibrillation (elderly, excessive dose) and Osteoporosis (long-term supraphysiological dosing). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: tsh and free t3/t4 (baseline, then 4-8 weekly); heart rate and rhythm (elderly) (at review). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Warfarin, Digoxin, Cholestyramine and iron/calcium supplements. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Warfarin, Digoxin, Cholestyramine and iron/calcium supplements. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -657,7 +657,7 @@ export const triiodothyronine: Drug = {
         name: "Triiodothyronine (T3)",
         slug: "triiodothyronine",
         relationship: "This guide",
-        distinguishing: "The cheap rapid augmentation — T3's second career",
+        distinguishing: "The cheap rapid augmentation. T3's second career",
       },
     ],
   },
@@ -805,7 +805,7 @@ export const triiodothyronine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Triiodothyronine (T3) in two sentences.",
-      answer: "T3 binds nuclear thyroid receptors, modulating gene expression that enhances monoaminergic signalling and receptor sensitivity — the thyroid-brain axis used deliberately for antidepressant augmentation. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
+      answer: "T3 binds nuclear thyroid receptors, modulating gene expression that enhances monoaminergic signalling and receptor sensitivity: the thyroid-brain axis used deliberately for antidepressant augmentation. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
       topic: "Mechanism",
     },
     {
@@ -825,7 +825,7 @@ export const triiodothyronine: Drug = {
     },
     {
       question: "Share one clinical pearl about Triiodothyronine (T3) that separates safe prescribers from unsafe ones.",
-      answer: "The classic pairing: lithium and T3 as the two old-school augmentations — T3 is cheaper, faster, and organ-toxicity-friendlier.",
+      answer: "The classic pairing: lithium and T3 as the two old-school augmentations. T3 is cheaper, faster, and organ-toxicity-friendlier.",
       topic: "Clinical Pearls",
     },
   ],
@@ -901,7 +901,7 @@ export const triiodothyronine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -946,7 +946,7 @@ export const triiodothyronine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Triiodothyronine (T3) works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Triiodothyronine (T3) works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -962,7 +962,7 @@ export const triiodothyronine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Triiodothyronine (T3) safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Triiodothyronine (T3) safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1005,7 +1005,7 @@ export const triiodothyronine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Triiodothyronine (T3) follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Triiodothyronine (T3) follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1029,11 +1029,11 @@ export const triiodothyronine: Drug = {
     dosageForms: ["Tablets 5, 25, 50 mcg"],
     dosingTips: [
       "25 mcg start; 50 mcg rarely needed.",
-      "TSH discipline — augmentation, not thyrotoxicosis.",
+      "TSH discipline: augmentation, not thyrotoxicosis.",
       "Morning dosing for sleep protection.",
     ],
     overdose: [
-      "Overdose with Triiodothyronine (T3) is managed supportively — no specific antidote.",
+      "Overdose with Triiodothyronine (T3) is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Triiodothyronine (T3) is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1071,16 +1071,16 @@ export const triiodothyronine: Drug = {
     potentialDisadvantages: ["Thyrotoxic adverse-effect texture.", "AF/osteoporosis at excess in elderly.", "TSH monitoring duty."],
     primaryTargetSymptoms: ["Antidepressant partial response", "Rapid-cycling bipolar (adjunct)"],
     pearls: [
-      "The classic pairing: lithium and T3 as the two old-school augmentations — T3 is cheaper, faster, and organ-toxicity-friendlier.",
-      "The acceleration finding: T3 + antidepressant from day one speeds response — the Harvard augmentation literature's second act.",
-      "The TSH discipline: augmentation aims at subtle low-normal/suppressed TSH — monitor TSH and symptoms, keep doses lean.",
-      "The rapid-cycling niche: high-dose thyroid in refractory rapid cycling — the endocrine lever for the hardest bipolar pattern.",
-      "25 mcg is a psychiatric dose — endocrine replacement thinks in different T4-equivalents; don't confuse the dosing worlds.",
+      "The classic pairing: lithium and T3 as the two old-school augmentations. T3 is cheaper, faster, and organ-toxicity-friendlier.",
+      "The acceleration finding: T3 + antidepressant from day one speeds response; the Harvard augmentation literature's second act.",
+      "The TSH discipline: augmentation aims at subtle low-normal/suppressed TSH; monitor TSH and symptoms, keep doses lean.",
+      "The rapid-cycling niche: high-dose thyroid in refractory rapid cycling; the endocrine lever for the hardest bipolar pattern.",
+      "25 mcg is a psychiatric dose: endocrine replacement thinks in different T4-equivalents; don't confuse the dosing worlds.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

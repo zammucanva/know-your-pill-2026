@@ -23,14 +23,14 @@ export const loflazepate: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Anxiolytics & Sedatives", "Benzodiazepines", "Loflazepate"],
   /* ---- Hero / summary ---- */
-  tagline: "Japan's long-acting anxiolytic benzo — a regional monograph for completeness.",
+  tagline: "Japan's long-acting anxiolytic benzo: a regional monograph for completeness.",
   summary: "Loflazepate is a long-acting benzodiazepine marketed primarily in Japan for anxiety and anxiety-with-depression states, with psychosomatic symptom coverage. Its metabolism leads to active metabolites including desmethyl- and dibenzyl-derivatives, and its clinical profile is class-standard: anxiolysis with sedation and the full dependence framework of the benzodiazepines.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Loflazepate — from its molecular target (GABA-A benzodiazepine site (PAM)) to clinical effect.",
+    "Explain the mechanism of action of Loflazepate, from its molecular target (GABA-A benzodiazepine site (PAM)) to clinical effect.",
     "List the FDA-approved and off-label uses of Loflazepate.",
     "Predict the common and serious side effects of Loflazepate from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Loflazepate.",
@@ -104,7 +104,7 @@ export const loflazepate: Drug = {
         label: "inhibits firing",
       },
     ],
-    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly — which is why their effect is powerful but limited by dependence risk.",
+    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly, which is why their effect is powerful but limited by dependence risk.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["GABA"],
@@ -133,7 +133,7 @@ export const loflazepate: Drug = {
     {
       name: "Opioids",
       severity: "absolute",
-      rationale: "Concurrent use causes profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      rationale: "Concurrent use causes profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
     },
   ],
   blackBoxWarnings: [
@@ -201,7 +201,7 @@ export const loflazepate: Drug = {
     {
       drug: "Opioids",
       severity: "contraindicated",
-      mechanism: "Concurrent use causes profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      mechanism: "Concurrent use causes profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
       action: "Avoid; if unavoidable for taper protocols, use lowest doses with intensive monitoring.",
     },
     {
@@ -219,7 +219,7 @@ export const loflazepate: Drug = {
     {
       drug: "Older antihistamines (sedating)",
       severity: "moderate",
-      mechanism: "Additive sedation in the elderly — falls.",
+      mechanism: "Additive sedation in the elderly: falls.",
       action: "Prefer non-sedating alternatives.",
     },
   ],
@@ -233,17 +233,17 @@ export const loflazepate: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Loflazepate is a medicine used to treat anxiety and anxiety-depression states (japan). Long-acting benzodiazepine GABA-A PAM with active metabolites (desmethyloflazepate and others). Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
   patientEducationPoints: [
-    "This medicine is for short-term or carefully planned use — it can cause dependence within weeks of regular use.",
-    "Never mix it with opioid painkillers or alcohol — the combination can stop breathing.",
+    "This medicine is for short-term or carefully planned use. It can cause dependence within weeks of regular use.",
+    "Never mix it with opioid painkillers or alcohol: the combination can stop breathing.",
     "Do not drive until you know how it affects you.",
-    "Stopping must be gradual — never stop suddenly after regular use.",
-    "Benefit from Loflazepate builds over weeks — do not judge it in the first days.",
+    "Stopping must be gradual, never stop suddenly after regular use.",
+    "Benefit from Loflazepate builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "Geography matters: a Japanese-market benzo — encountered mainly in continuity-of-care when patients relocate.",
+    "Geography matters: a Japanese-market benzo; encountered mainly in continuity-of-care when patients relocate.",
     "Nothing pharmacologically distinguishes it from the class long-actors; its identity is national.",
-    "All benzodiazepines share the GABA-A amplification mechanism — the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
+    "All benzodiazepines share the GABA-A amplification mechanism: the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
   ],
   examLens: {
     mbbs: {
@@ -258,7 +258,7 @@ export const loflazepate: Drug = {
         "Outline the monitoring plan: Respiratory status and sedation (Clinical review each visit); Dependence review (Every visit for long-term users); Fall risk review (elderly) (Every visit in older patients)",
       ],
       longAnswer: [
-        "Loflazepate: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Loflazepate: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Japanese long-acting benzodiazepine (Meilax).",
         "Class-standard GABA-A PAM profile with active metabolites.",
       ],
@@ -268,7 +268,7 @@ export const loflazepate: Drug = {
         "Japanese long-acting benzodiazepine (Meilax).",
         "Class-standard GABA-A PAM profile with active metabolites.",
         "Anxiety and psychosomatic indications in Japanese practice.",
-        "Mechanism: GABA-A positive allosteric modulation — amplified natural inhibition.",
+        "Mechanism: GABA-A positive allosteric modulation; amplified natural inhibition.",
         "The class boxed warning: opioids + benzodiazepines = respiratory depression and death.",
       ],
       pyqConcepts: [
@@ -279,7 +279,7 @@ export const loflazepate: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Loflazepate develops respiratory depression with opioids — next best step?",
+        "A patient on Loflazepate develops respiratory depression with opioids: next best step?",
         "When to choose Loflazepate over alternatives in its class.",
       ],
     },
@@ -293,9 +293,9 @@ export const loflazepate: Drug = {
     psychiatryResidency: {
       advancedPearls: [
         "The travelling-patient benzo: know it exists for continuity, not for starting.",
-        "Geography matters: a Japanese-market benzo — encountered mainly in continuity-of-care when patients relocate.",
+        "Geography matters: a Japanese-market benzo; encountered mainly in continuity-of-care when patients relocate.",
         "Nothing pharmacologically distinguishes it from the class long-actors; its identity is national.",
-        "All benzodiazepines share the GABA-A amplification mechanism — the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
+        "All benzodiazepines share the GABA-A amplification mechanism: the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
       ],
     },
   },
@@ -304,13 +304,13 @@ export const loflazepate: Drug = {
     "Japanese long-acting benzodiazepine (Meilax).",
     "Class-standard GABA-A PAM profile with active metabolites.",
     "Anxiety and psychosomatic indications in Japanese practice.",
-    "Mechanism: GABA-A positive allosteric modulation — amplified natural inhibition.",
+    "Mechanism: GABA-A positive allosteric modulation; amplified natural inhibition.",
     "The class boxed warning: opioids + benzodiazepines = respiratory depression and death.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — anxiety and anxiety-depression states (japan)",
+      title: "First presentation: anxiety and anxiety-depression states (japan)",
       presentation: "A patient presenting with anxiety and anxiety-depression states (japan), started on Loflazepate.",
       history: "A adult patient presents with a anxiety and anxiety-depression states (japan) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with anxiety and anxiety-depression states (japan); physical examination and baseline investigations are unremarkable.",
@@ -319,7 +319,7 @@ export const loflazepate: Drug = {
       management: "Started at 1 mg twice daily, titrated to 1–3 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Loflazepate takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Loflazepate takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -328,7 +328,7 @@ export const loflazepate: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Benzodiazepine comparison — choosing within the class",
+      title: "Benzodiazepine comparison: choosing within the class",
       primaryDrug: "Loflazepate",
       rows: [
         {
@@ -403,25 +403,25 @@ export const loflazepate: Drug = {
           comparisons: [
             {
               drug: "Alprazolam",
-              value: "High — potency-driven.",
+              value: "High: potency-driven.",
             },
             {
               drug: "Clonazepam",
-              value: "High — the dose-limiting effect.",
+              value: "High: the dose-limiting effect.",
             },
             {
               drug: "Diazepam",
-              value: "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+              value: "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
             },
             {
               drug: "Lorazepam",
-              value: "Moderate — intermediate duration limits hangover vs diazepam.",
+              value: "Moderate: intermediate duration limits hangover vs diazepam.",
             },
           ],
         },
         {
           attribute: "Unique niche",
-          primaryValue: "Loflazepate — see clinical pearls",
+          primaryValue: "Loflazepate: see clinical pearls",
           comparisons: [
             {
               drug: "Alprazolam",
@@ -429,20 +429,20 @@ export const loflazepate: Drug = {
             },
             {
               drug: "Clonazepam",
-              value: "The long-acting anticonvulsant benzo — seizures and panic",
+              value: "The long-acting anticonvulsant benzo: seizures and panic",
             },
             {
               drug: "Diazepam",
-              value: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+              value: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
             },
             {
               drug: "Lorazepam",
-              value: "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+              value: "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo",
             },
           ],
         },
       ],
-      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -451,7 +451,7 @@ export const loflazepate: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Loflazepate reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (PAM)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Loflazepate reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (PAM)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -487,7 +487,7 @@ export const loflazepate: Drug = {
   faqs: [
     {
       question: "How long does Loflazepate take to work?",
-      answer: "Oral: within an hour; long metabolite tail.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Oral: within an hour; long metabolite tail.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Loflazepate?",
@@ -495,19 +495,19 @@ export const loflazepate: Drug = {
     },
     {
       question: "Can I stop Loflazepate suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Loflazepate habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Loflazepate exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Loflazepate exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Loflazepate during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Loflazepate may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Loflazepate may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -663,7 +663,7 @@ export const loflazepate: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Loflazepate",
+      label: "Patient Guide. Loflazepate",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -671,13 +671,13 @@ export const loflazepate: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "Japan's long-acting anxiolytic benzo — a regional monograph for completeness.",
-    summary: "Loflazepate is a prescription medicine used to treat anxiety and anxiety-depression states (japan). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "Japan's long-acting anxiolytic benzo: a regional monograph for completeness.",
+    summary: "Loflazepate is a prescription medicine used to treat anxiety and anxiety-depression states (japan). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Loflazepate is a medicine used to treat anxiety and anxiety-depression states (japan). Long-acting benzodiazepine GABA-A PAM with active metabolites (desmethyloflazepate and others). Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
-    sideEffects: "The most common side effects are: sedation and drowsiness, dizziness / ataxia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression with opioids and Withdrawal phenomena. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: sedation and drowsiness, dizziness / ataxia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression with opioids and Withdrawal phenomena. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, Older antihistamines (sedating). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, Older antihistamines (sedating). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -701,7 +701,7 @@ export const loflazepate: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: [
       "Class rules apply; plan an equivalent switch locally.",
     ],
@@ -749,43 +749,43 @@ export const loflazepate: Drug = {
         name: "Clonazepam",
         slug: "clonazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "The long-acting anticonvulsant benzo — seizures and panic",
+        distinguishing: "The long-acting anticonvulsant benzo: seizures and panic",
       },
       {
         name: "Diazepam",
         slug: "diazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+        distinguishing: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
       },
       {
         name: "Lorazepam",
         slug: "lorazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+        distinguishing: "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo",
       },
       {
         name: "Chlordiazepoxide",
         slug: "chlordiazepoxide",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Alcohol withdrawal tablet — the founding benzo",
+        distinguishing: "Alcohol withdrawal tablet: the founding benzo",
       },
       {
         name: "Midazolam",
         slug: "midazolam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Oxazepam",
         slug: "oxazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Clorazepate",
         slug: "clorazepate",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
     ],
   },
@@ -1024,7 +1024,7 @@ export const loflazepate: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1069,7 +1069,7 @@ export const loflazepate: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Loflazepate works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Loflazepate works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1085,7 +1085,7 @@ export const loflazepate: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Loflazepate safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Loflazepate safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1130,7 +1130,7 @@ export const loflazepate: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Loflazepate follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Loflazepate follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1154,11 +1154,11 @@ export const loflazepate: Drug = {
     dosageForms: ["Tablets 0.5, 1, 2 mg"],
     dosingTips: ["Class discipline: short courses, taper."],
     overdose: [
-      "Overdose with Loflazepate is managed supportively — no specific antidote.",
+      "Overdose with Loflazepate is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Loflazepate is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1194,14 +1194,14 @@ export const loflazepate: Drug = {
     primaryTargetSymptoms: ["Anxiety states", "Somatic anxiety symptoms"],
     pearls: [
       "The travelling-patient benzo: know it exists for continuity, not for starting.",
-      "Geography matters: a Japanese-market benzo — encountered mainly in continuity-of-care when patients relocate.",
+      "Geography matters: a Japanese-market benzo; encountered mainly in continuity-of-care when patients relocate.",
       "Nothing pharmacologically distinguishes it from the class long-actors; its identity is national.",
-      "All benzodiazepines share the GABA-A amplification mechanism — the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
+      "All benzodiazepines share the GABA-A amplification mechanism: the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

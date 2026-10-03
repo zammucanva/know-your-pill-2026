@@ -25,8 +25,8 @@ export function DrugMonitoring({ drug }: DrugMonitoringProps) {
       <Container>
         <SectionHeader
           eyebrow="Monitoring"
-          title="What should be checked — and when?"
-          description="The monitoring schedule below balances clinical safety with practicality. The single most important monitoring parameter is mood and suicidality — especially during the first month of therapy. Tick off each parameter as you review it."
+          title="What should be checked, and when?"
+          description="The monitoring schedule below balances clinical safety with practicality. The single most important monitoring parameter is mood and suicidality, especially during the first month of therapy. Tick off each parameter as you review it."
         />
 
         {/* Interactive checklist */}

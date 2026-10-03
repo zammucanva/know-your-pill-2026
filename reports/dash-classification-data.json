@@ -1,0 +1,348 @@
+{
+  "meta": {
+    "generatedAt": "2026-10-03T11:06:24.105Z",
+    "occurrences": 5112
+  },
+  "totals": {
+    "learnerFaceOccurrences": 5112,
+    "A": 15,
+    "B": 0,
+    "C": 304,
+    "D": 1,
+    "E": 4231,
+    "F": 549,
+    "G": 12,
+    "derivedGeneratedEm": 721,
+    "derivedGeneratedFiles": 2,
+    "mcqProtected": 4292,
+    "comments": 2953,
+    "excluded": 291,
+    "enRangePreserved": 13275,
+    "enOtherPreserved": 1507
+  },
+  "filesPerBucket": {
+    "A": 10,
+    "B": 0,
+    "C": 128,
+    "D": 1,
+    "E": 255,
+    "F": 128,
+    "G": 12
+  },
+  "bFamilies": [],
+  "bFamilyTotal": 0,
+  "eFamilies": [
+    {
+      "count": 133,
+      "files": 133,
+      "sample": "NIMH — Mental Health Medications"
+    },
+    {
+      "count": 132,
+      "files": 132,
+      "sample": "8th ed. — drugs acting on CNS"
+    },
+    {
+      "count": 131,
+      "files": 131,
+      "sample": "16th ed. — autonomic, CNS, and psychiatric drug chapters"
+    },
+    {
+      "count": 26,
+      "files": 13,
+      "sample": "KD Tripathi — Essentials of Medical Pharmacology, 8th edition"
+    },
+    {
+      "count": 25,
+      "files": 13,
+      "sample": "NMC CBME Curriculum — Pharmacology (Second Professional)"
+    },
+    {
+      "count": 25,
+      "files": 13,
+      "sample": "Tele-MANAS (National Tele-Mental Health Helpline) — 14416"
+    },
+    {
+      "count": 24,
+      "files": 12,
+      "sample": "NMC CBME Curriculum — Psychiatry (Final Professional)"
+    },
+    {
+      "count": 23,
+      "files": 13,
+      "sample": "CDSCO — Central Drugs Standard Control Organisation"
+    },
+    {
+      "count": 20,
+      "files": 10,
+      "sample": "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression"
+    },
+    {
+      "count": 17,
+      "files": 11,
+      "sample": "Section V — Pharmacotherapy of Mood Disorders"
+    },
+    {
+      "count": 14,
+      "files": 14,
+      "sample": "Tele-MANAS — India's national tele-mental-health helpline (14416)"
+    },
+    {
+      "count": 11,
+      "files": 11,
+      "sample": "NICE Clinical Guideline CG91 — Depression in adults: recognition and management"
+    },
+    {
+      "count": 11,
+      "files": 6,
+      "sample": "Chapter 33 — Antidepressant Drugs"
+    },
+    {
+      "count": 11,
+      "files": 11,
+      "sample": "Tele-MANAS — India's national tele-mental-health helpline (14416; 1-800-891-4416)"
+    },
+    {
+      "count": 10,
+      "files": 10,
+      "sample": "NIMH (National Institute of Mental Health) — Depression brochure"
+    },
+    {
+      "count": 10,
+      "files": 5,
+      "sample": "Topic: Drugs acting on CNS — Antidepressants"
+    },
+    {
+      "count": 10,
+      "files": 5,
+      "sample": "Topic: Psychopharmacology — Mood disorders"
+    },
+    {
+      "count": 9,
+      "files": 6,
+      "sample": "Chapter 30 — Antidepressant Agents"
+    },
+    {
+      "count": 9,
+      "files": 9,
+      "sample": "NICE Clinical Guideline CG91 — Depression in adults"
+    },
+    {
+      "count": 9,
+      "files": 9,
+      "sample": "Tele-MANAS (National Mental Health Helpline, India) — 14416"
+    },
+    {
+      "count": 8,
+      "files": 4,
+      "sample": "Section on pharmacotherapy — SSRIs"
+    },
+    {
+      "count": 7,
+      "files": 7,
+      "sample": "Cipriani A et al. Lancet 2018 — Comparative efficacy of 21 antidepressants"
+    },
+    {
+      "count": 6,
+      "files": 6,
+      "sample": "Chapter 36 — Psychopharmacology"
+    },
+    {
+      "count": 6,
+      "files": 6,
+      "sample": "Royal College of Psychiatrists — Patient information on SSRIs"
+    },
+    {
+      "count": 5,
+      "files": 5,
+      "sample": "Chapter 7 — Antidepressants"
+    },
+    {
+      "count": 4,
+      "files": 4,
+      "sample": "Royal College of Psychiatrists — Patient information on antidepressants"
+    },
+    {
+      "count": 4,
+      "files": 4,
+      "sample": "Essential medicines for mental health — SSRIs included"
+    },
+    {
+      "count": 4,
+      "files": 4,
+      "sample": "Essential medicines for mental health — SSRIs"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Zwaigenbaum L et al. — early identification of autism (the red-flag evidence); Ozonoff S et al. — the sibling-recurrence work"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Worden JW — tasks of mourning; Klass D, Silverman PR & Nickman SL — continuing bonds"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Reuter J, Raedler T et al. — functional imaging of pathological gamblers; Goudriaan A et al. — the cognitive-and-neuro profile"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Hodgins D — brief-intervention-and-relapse-prevention; Toneatto T — the cognitive-treatment line"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Meyer I — the minority-stress model; Hendricks M & Testa R — the transgender application"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Scammell TE — the orexin/hypocretin biology of narcolepsy (the review lineage); Mignot E — the genetics (HLA-DQB1*06:02) and the Pandemrix epidemiological chapter"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Johns MW — the Epworth Sleepiness Scale (named; not reproduced); Chung F et al. — the STOP-BANG screening literature (named)"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Wise MS et al. / Maski K — paediatric narcolepsy and school accommodations; Billiard M / Arnulf I — Kleine-Levin reviews and the lithium series"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Milner B et al. — the H.M. long-term follow-ups; Knowlton BJ et al. — the striatal procedural-learning double dissociations"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Hopper T, Bayles K et al. — errorless methods and environmental cueing in dementia communication; Gitlin L et al. — environmental interventions and caregiver-outcome dyads"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Weinberger DR et al. — the early hypofrontality observations and the Wisconsin-card-sort activation tradition; Weinberger D & Berman K — the cortical-inefficiency and distributed-n"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Weisz JR et al. — youth-depression psychotherapy meta-analyses; Mufson L et al. — the IPT-A trials (the equal-grade psychotherapy evidence)"
+    }
+  ],
+  "gItems": [
+    {
+      "file": "src/lib/kyp/data/drugs/amitriptyline.ts",
+      "line": 262,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults (and OVERDOSE LETHALITY)"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/bupropion.ts",
+      "line": 234,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/citalopram.ts",
+      "line": 199,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/clomipramine.ts",
+      "line": 264,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults (and OVERDOSE LETHALITY)"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/duloxetine.ts",
+      "line": 217,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/escitalopram.ts",
+      "line": 183,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/fluoxetine.ts",
+      "line": 209,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/fluvoxamine.ts",
+      "line": 212,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/mirtazapine.ts",
+      "line": 234,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/paroxetine.ts",
+      "line": 217,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/sertraline.ts",
+      "line": 173,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/venlafaxine.ts",
+      "line": 220,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    }
+  ],
+  "topAFiles": [
+    {
+      "file": "src/lib/kyp/data/drugs/lamotrigine.ts",
+      "aCount": 3
+    },
+    {
+      "file": "src/lib/kyp/psychiatry-concept-visibility.ts",
+      "aCount": 3
+    },
+    {
+      "file": "src/app/layout.tsx",
+      "aCount": 2
+    },
+    {
+      "file": "src/lib/kyp/custom-test/templates.ts",
+      "aCount": 1
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/venlafaxine.ts",
+      "aCount": 1
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/alcohol-use-disorders.ts",
+      "aCount": 1
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/gender-identity-adults.ts",
+      "aCount": 1
+    },
+    {
+      "file": "src/lib/kyp/knowledge/graph.ts",
+      "aCount": 1
+    },
+    {
+      "file": "src/lib/kyp/pharmacokinetics/half-life.ts",
+      "aCount": 1
+    },
+    {
+      "file": "src/lib/oxford/loader.ts",
+      "aCount": 1
+    }
+  ],
+  "aSamples": [
+    {
+      "file": "src/app/layout.tsx",
+      "line": 23,
+      "key": "title",
+      "str": "Know Your Pill — Medication Education Made Visual"
+    }
+  ]
+}

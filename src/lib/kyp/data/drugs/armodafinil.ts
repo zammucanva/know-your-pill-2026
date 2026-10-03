@@ -23,14 +23,14 @@ export const armodafinil: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "ADHD Medications", "Wake-Promoting Agents", "Armodafinil"],
   /* ---- Hero / summary ---- */
-  tagline: "Modafinil's R-enantiomer — the same wake chemistry with later-day coverage.",
-  summary: "Armodafinil is the R-enantiomer of modafinil: identical wake-promoting mechanism and indications, but with higher later-day plasma levels — producing longer afternoon/evening alertness cover, suiting patients whose sleepiness crashes in the afternoon.",
+  tagline: "Modafinil's R-enantiomer: the same wake chemistry with later-day coverage.",
+  summary: "Armodafinil is the R-enantiomer of modafinil: identical wake-promoting mechanism and indications, but with higher later-day plasma levels, producing longer afternoon/evening alertness cover, suiting patients whose sleepiness crashes in the afternoon.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Armodafinil — from its molecular target (DAT (weak inhibition) + orexin/histamine wake systems — R-enantiomer) to clinical effect.",
+    "Explain the mechanism of action of Armodafinil (from its molecular target (DAT (weak inhibition) + orexin/histamine wake systems) R-enantiomer) to clinical effect.",
     "List the FDA-approved and off-label uses of Armodafinil.",
     "Predict the common and serious side effects of Armodafinil from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Armodafinil.",
@@ -38,15 +38,15 @@ export const armodafinil: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "The R-enantiomer of modafinil — same wake-system pharmacology with longer-lasting plasma levels through the afternoon.",
-    molecularTarget: "DAT (weak inhibition) + orexin/histamine wake systems — R-enantiomer",
+    summary: "The R-enantiomer of modafinil: same wake-system pharmacology with longer-lasting plasma levels through the afternoon.",
+    molecularTarget: "DAT (weak inhibition) + orexin/histamine wake systems. R-enantiomer",
     effect: "Catecholamine and wake-system enhancement with the agent's characteristic profile.",
     steps: [
-      "The R-enantiomer of modafinil — same wake-system pharmacology with longer-lasting plasma levels through the afternoon.",
+      "The R-enantiomer of modafinil: same wake-system pharmacology with longer-lasting plasma levels through the afternoon.",
       "Prefrontal catecholamine enhancement sharpens attention and impulse control.",
       "The agent's formulation and half-life determine practical coverage.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life ~15 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life ~15 hours. See mechanism and prescriber sections.",
     halfLife: "~15 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
@@ -103,14 +103,14 @@ export const armodafinil: Drug = {
         label: "boosts alertness",
       },
     ],
-    caption: "Catecholamine enhancement in the prefrontal cortex — the brain's attention control centre — corrects the signal-to-noise deficit that defines ADHD.",
+    caption: "Catecholamine enhancement in the prefrontal cortex (the brain's attention control centre) corrects the signal-to-noise deficit that defines ADHD.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
     "Central monoaminergic systems (see mechanism)",
   ],
   receptors: [
-    "DAT (weak inhibition) + orexin/histamine wake systems — R-enantiomer",
+    "DAT (weak inhibition) + orexin/histamine wake systems. R-enantiomer",
   ],
   brainRegionIds: ["prefrontal-cortex"],
   pathwayIds: ["mesocortical"],
@@ -174,7 +174,7 @@ export const armodafinil: Drug = {
       name: "Serious rash (SJS/TEN)",
       frequency: "rare",
       severity: "life-threatening",
-      description: "As modafinil — the class-defining warning.",
+      description: "As modafinil: the class-defining warning.",
       management: "Stop on any rash.",
     },
     {
@@ -222,42 +222,42 @@ export const armodafinil: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Armodafinil is a longer-lasting form of the wake-promoting medicine modafinil: same uses, with alertness that holds better through the afternoon. The same rule applies: any rash means stopping and contacting your doctor the same day.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Armodafinil builds over weeks — do not judge it in the first days.",
+    "Benefit from Armodafinil builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The enantiomer story: modafinil is racemic; armodafinil is its R-half — the afternoon-covering version.",
+    "The enantiomer story: modafinil is racemic; armodafinil is its R-half: the afternoon-covering version.",
     "150 mg armodafinil ≈ 200 mg modafinil in clinical coverage terms.",
-    "Same rash warning, same interactions, same indications — the same drug wearing longer.",
+    "Same rash warning, same interactions, same indications: the same drug wearing longer.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Armodafinil: The R-enantiomer of modafinil — same wake-system pharmacology with longer-lasting plasma levels through the afternoon.",
-        "Uses of Armodafinil: Narcolepsy — excessive daytime sleepiness; Shift-work sleep disorder; OSA residual sleepiness (adjunct to CPAP)",
-        "R-enantiomer of modafinil — longer later-day plasma levels.",
+        "Mechanism of Armodafinil: The R-enantiomer of modafinil; same wake-system pharmacology with longer-lasting plasma levels through the afternoon.",
+        "Uses of Armodafinil: Narcolepsy; excessive daytime sleepiness; Shift-work sleep disorder; OSA residual sleepiness (adjunct to CPAP)",
+        "R-enantiomer of modafinil: longer later-day plasma levels.",
         "Same indications (narcolepsy, shift-work, OSA residual).",
       ],
       practical: [
-        "Prescribe Armodafinil for narcolepsy — excessive daytime sleepiness with dose, timing, and duration.",
+        "Prescribe Armodafinil for narcolepsy: excessive daytime sleepiness with dose, timing, and duration.",
         "Outline the monitoring plan: Rash counselling (At initiation); HR/BP (Every visit)",
       ],
       longAnswer: [
-        "Armodafinil: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "R-enantiomer of modafinil — longer later-day plasma levels.",
+        "Armodafinil: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "R-enantiomer of modafinil: longer later-day plasma levels.",
         "Same indications (narcolepsy, shift-work, OSA residual).",
       ],
     },
     neetPg: {
       highYield: [
-        "R-enantiomer of modafinil — longer later-day plasma levels.",
+        "R-enantiomer of modafinil: longer later-day plasma levels.",
         "Same indications (narcolepsy, shift-work, OSA residual).",
         "150-250 mg daily ≈ modafinil 200-400 mg.",
         "Same rash and interaction profile.",
-        "Half-life ~15 h — afternoon cover.",
+        "Half-life ~15 h: afternoon cover.",
       ],
       pyqConcepts: [
         "Mechanism/target of Armodafinil",
@@ -267,46 +267,46 @@ export const armodafinil: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Armodafinil develops serious rash (sjs/ten) — next best step?",
+        "A patient on Armodafinil develops serious rash (sjs/ten): next best step?",
         "When to choose Armodafinil over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: DAT (weak inhibition) + orexin/histamine wake systems — R-enantiomer",
+        "Primary target: DAT (weak inhibition) + orexin/histamine wake systems. R-enantiomer",
         "Most common side effects: Headache, Nausea and insomnia, Anxiety",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The enantiomer story: modafinil is racemic; armodafinil is its R-half — the afternoon-covering version.",
+        "The enantiomer story: modafinil is racemic; armodafinil is its R-half: the afternoon-covering version.",
         "150 mg armodafinil ≈ 200 mg modafinil in clinical coverage terms.",
-        "Same rash warning, same interactions, same indications — the same drug wearing longer.",
+        "Same rash warning, same interactions, same indications: the same drug wearing longer.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "R-enantiomer of modafinil — longer later-day plasma levels.",
+    "R-enantiomer of modafinil: longer later-day plasma levels.",
     "Same indications (narcolepsy, shift-work, OSA residual).",
     "150-250 mg daily ≈ modafinil 200-400 mg.",
     "Same rash and interaction profile.",
-    "Half-life ~15 h — afternoon cover.",
+    "Half-life ~15 h: afternoon cover.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — narcolepsy — excessive daytime sleepiness",
-      presentation: "A patient presenting with narcolepsy — excessive daytime sleepiness, started on Armodafinil.",
-      history: "A adult patient presents with a narcolepsy — excessive daytime sleepiness picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with narcolepsy — excessive daytime sleepiness; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Narcolepsy — excessive daytime sleepiness. Differentials are considered and excluded clinically.",
+      title: "First presentation: narcolepsy; excessive daytime sleepiness",
+      presentation: "A patient presenting with narcolepsy: excessive daytime sleepiness, started on Armodafinil.",
+      history: "A adult patient presents with a narcolepsy: excessive daytime sleepiness picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with narcolepsy: excessive daytime sleepiness; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Narcolepsy: excessive daytime sleepiness. Differentials are considered and excluded clinically.",
       rationale: "Armodafinil is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Wake-Promoting Agent) with strong evidence in this condition.",
       management: "Started at 150 mg every morning, titrated to 150-250 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Armodafinil takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Armodafinil takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -315,12 +315,12 @@ export const armodafinil: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Wake-Promoting Agent comparison — choosing within the class",
+      title: "Wake-Promoting Agent comparison: choosing within the class",
       primaryDrug: "Armodafinil",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "DAT (weak inhibition) + orexin/histamine wake systems — R-enantiomer",
+          primaryValue: "DAT (weak inhibition) + orexin/histamine wake systems. R-enantiomer",
           comparisons: [
             {
               drug: "Modafinil",
@@ -340,11 +340,11 @@ export const armodafinil: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Weight neutral to reducing — appetite effects common.",
+          primaryValue: "Weight neutral to reducing: appetite effects common.",
           comparisons: [
             {
               drug: "Modafinil",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
           ],
         },
@@ -369,7 +369,7 @@ export const armodafinil: Drug = {
           ],
         },
       ],
-      takeaway: "All wake-promoting agents share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All wake-promoting agents share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -378,7 +378,7 @@ export const armodafinil: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Armodafinil reaches peak plasma concentration and begins acting at its molecular target (DAT (weak inhibition) + orexin/histamine wake systems — R-enantiomer). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Armodafinil reaches peak plasma concentration and begins acting at its molecular target (DAT (weak inhibition) + orexin/histamine wake systems. R-enantiomer). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -414,7 +414,7 @@ export const armodafinil: Drug = {
   faqs: [
     {
       question: "How long does Armodafinil take to work?",
-      answer: "~45-60 minutes.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "~45-60 minutes.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Armodafinil?",
@@ -422,11 +422,11 @@ export const armodafinil: Drug = {
     },
     {
       question: "Can I stop Armodafinil suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Armodafinil habit-forming?",
@@ -434,7 +434,7 @@ export const armodafinil: Drug = {
     },
     {
       question: "Can I take Armodafinil during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Armodafinil may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Armodafinil may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -522,13 +522,13 @@ export const armodafinil: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "DAT (weak inhibition) + orexin/histamine wake systems — R-enantiomer",
+      label: "DAT (weak inhibition) + orexin/histamine wake systems. R-enantiomer",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
     },
     {
-      label: "Narcolepsy — excessive daytime sleepiness",
+      label: "Narcolepsy: excessive daytime sleepiness",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -564,7 +564,7 @@ export const armodafinil: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Armodafinil",
+      label: "Patient Guide. Armodafinil",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -572,13 +572,13 @@ export const armodafinil: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "Modafinil's R-enantiomer — the same wake chemistry with later-day coverage.",
-    summary: "Armodafinil is a prescription medicine used to treat narcolepsy — excessive daytime sleepiness. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "Modafinil's R-enantiomer: the same wake chemistry with later-day coverage.",
+    summary: "Armodafinil is a prescription medicine used to treat narcolepsy: excessive daytime sleepiness. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Armodafinil is a longer-lasting form of the wake-promoting medicine modafinil: same uses, with alertness that holds better through the afternoon. The same rule applies: any rash means stopping and contacting your doctor the same day.",
-    sideEffects: "The most common side effects are: headache, nausea and insomnia, anxiety. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Serious rash (SJS/TEN) and Psychiatric symptoms. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: rash counselling (at initiation); hr/bp (every visit). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: headache, nausea and insomnia, anxiety. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Serious rash (SJS/TEN) and Psychiatric symptoms. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: rash counselling (at initiation); hr/bp (every visit). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Hormonal contraceptives and 3A4 substrates, MAOIs. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Hormonal contraceptives and 3A4 substrates, MAOIs. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -602,7 +602,7 @@ export const armodafinil: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -790,17 +790,17 @@ export const armodafinil: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Armodafinil in two sentences.",
-      answer: "The R-enantiomer of modafinil — same wake-system pharmacology with longer-lasting plasma levels through the afternoon. Net effect: Catecholamine and wake-system enhancement with the agent's characteristic profile.",
+      answer: "The R-enantiomer of modafinil: same wake-system pharmacology with longer-lasting plasma levels through the afternoon. Net effect: Catecholamine and wake-system enhancement with the agent's characteristic profile.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Armodafinil.",
-      answer: "Narcolepsy — excessive daytime sleepiness, Shift-work sleep disorder, OSA residual sleepiness (adjunct to CPAP). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Narcolepsy: excessive daytime sleepiness, Shift-work sleep disorder, OSA residual sleepiness (adjunct to CPAP). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Armodafinil and how you would manage it.",
-      answer: "Serious rash (SJS/TEN): As modafinil — the class-defining warning. Management: Stop on any rash.",
+      answer: "Serious rash (SJS/TEN): As modafinil; the class-defining warning. Management: Stop on any rash.",
       topic: "Safety",
     },
     {
@@ -810,7 +810,7 @@ export const armodafinil: Drug = {
     },
     {
       question: "Share one clinical pearl about Armodafinil that separates safe prescribers from unsafe ones.",
-      answer: "The enantiomer story: modafinil is racemic; armodafinil is its R-half — the afternoon-covering version.",
+      answer: "The enantiomer story: modafinil is racemic; armodafinil is its R-half: the afternoon-covering version.",
       topic: "Clinical Pearls",
     },
   ],
@@ -886,7 +886,7 @@ export const armodafinil: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -931,7 +931,7 @@ export const armodafinil: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Armodafinil works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Armodafinil works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -947,7 +947,7 @@ export const armodafinil: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Armodafinil safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Armodafinil safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -990,7 +990,7 @@ export const armodafinil: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Armodafinil follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Armodafinil follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1000,7 +1000,7 @@ export const armodafinil: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Weight neutral to reducing — appetite effects common.",
+    weightGain: "Weight neutral to reducing: appetite effects common.",
     sedation: "Not sedating.",
     dosing: [
       {
@@ -1024,7 +1024,7 @@ export const armodafinil: Drug = {
       "150 mg ≈ 200 mg modafinil.",
     ],
     overdose: [
-      "Overdose with Armodafinil is managed supportively — no specific antidote.",
+      "Overdose with Armodafinil is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Armodafinil is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1058,14 +1058,14 @@ export const armodafinil: Drug = {
     potentialDisadvantages: ["Cost vs modafinil generics.", "Same rash warning and interactions."],
     primaryTargetSymptoms: ["Afternoon-dominant excessive sleepiness"],
     pearls: [
-      "The enantiomer story: modafinil is racemic; armodafinil is its R-half — the afternoon-covering version.",
+      "The enantiomer story: modafinil is racemic; armodafinil is its R-half: the afternoon-covering version.",
       "150 mg armodafinil ≈ 200 mg modafinil in clinical coverage terms.",
-      "Same rash warning, same interactions, same indications — the same drug wearing longer.",
+      "Same rash warning, same interactions, same indications: the same drug wearing longer.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

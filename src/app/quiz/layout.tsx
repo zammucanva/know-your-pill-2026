@@ -16,9 +16,9 @@ import type { Metadata } from "next";
  * to the root layout for both routes.
  */
 export const metadata: Metadata = {
-  title: "Practice MCQs — Test Your Understanding · Know Your Pill",
+  title: "Practice MCQs: Test Your Understanding · Know Your Pill",
   description:
-    "Every multiple-choice question in KYP in one practice interface — medication-course micro quizzes, disease questions, and the Stahl's Prescriber-Guide clinical MCQ bank. Each answer comes with an explanation; nothing is invented.",
+    "Every multiple-choice question in KYP in one practice interface: medication-course micro quizzes, disease questions, and the Stahl's Prescriber-Guide clinical MCQ bank. Each answer comes with an explanation; nothing is invented.",
 };
 
 export default function QuizLayout({

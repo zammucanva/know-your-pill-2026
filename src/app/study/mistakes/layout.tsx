@@ -10,9 +10,9 @@ import type { Metadata } from "next";
  * /study/mistakes, so nothing else can inherit this block.
  */
 export const metadata: Metadata = {
-  title: "Mistake Book — Questions to Revisit · Know Your Pill",
+  title: "Mistake Book: Questions to Revisit · Know Your Pill",
   description:
-    "Every question you answer incorrectly in practice and custom tests, kept on this device. Answer one correctly later and it leaves the list on its own — or clear it yourself once you're confident.",
+    "Every question you answer incorrectly in practice and custom tests, kept on this device. Answer one correctly later and it leaves the list on its own, or clear it yourself once you're confident.",
   keywords: [
     "mistake book",
     "review mistakes",

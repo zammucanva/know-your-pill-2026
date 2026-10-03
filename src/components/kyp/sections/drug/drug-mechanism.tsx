@@ -51,7 +51,7 @@ export function DrugMechanismOfAction({ drug }: DrugMechanismOfActionProps) {
         <div className="mt-10">
           <h3 className="text-h3">Visual mechanism flow</h3>
           <p className="mt-2 text-body text-muted-foreground">
-            Each node below represents a key step in the drug's action — from acute molecular target
+            Each node below represents a key step in the drug's action, from acute molecular target
             to chronic clinical effect. Follow the chain top to bottom.
           </p>
           <MechanismFlow flow={drug.mechanismFlow} />

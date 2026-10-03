@@ -23,14 +23,14 @@ export const clorazepate: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Anxiolytics & Sedatives", "Benzodiazepines", "Clorazepate"],
   /* ---- Hero / summary ---- */
-  tagline: "The prodrug that becomes nordiazepam — anxiety, withdrawal, and a metabolic trick.",
-  summary: "Clorazepate is a benzodiazepine prodrug: the tablet itself is inactive, and stomach acid plus enzymes convert it to desmethyldiazepam (nordiazepam) — diazepam's long-acting metabolite — before it ever reaches the bloodstream. Clinically it behaves as a long-acting anxiolytic and withdrawal agent with the class-standard dependence profile.",
+  tagline: "The prodrug that becomes nordiazepam: anxiety, withdrawal, and a metabolic trick.",
+  summary: "Clorazepate is a benzodiazepine prodrug: the tablet itself is inactive, and stomach acid plus enzymes convert it to desmethyldiazepam (nordiazepam) (diazepam's long-acting metabolite) before it ever reaches the bloodstream. Clinically it behaves as a long-acting anxiolytic and withdrawal agent with the class-standard dependence profile.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Clorazepate — from its molecular target (Nordiazepam (active metabolite) at GABA-A benzodiazepine site) to clinical effect.",
+    "Explain the mechanism of action of Clorazepate, from its molecular target (Nordiazepam (active metabolite) at GABA-A benzodiazepine site) to clinical effect.",
     "List the FDA-approved and off-label uses of Clorazepate.",
     "Predict the common and serious side effects of Clorazepate from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Clorazepate.",
@@ -38,7 +38,7 @@ export const clorazepate: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Prodrug converted (in the stomach and liver) to nordiazepam — diazepam's active long-acting metabolite; a GABA-A PAM by proxy.",
+    summary: "Prodrug converted (in the stomach and liver) to nordiazepam: diazepam's active long-acting metabolite; a GABA-A PAM by proxy.",
     molecularTarget: "Nordiazepam (active metabolite) at GABA-A benzodiazepine site",
     effect: "Long-acting anxiolysis, anticonvulsant action, and withdrawal coverage.",
     steps: [
@@ -108,7 +108,7 @@ export const clorazepate: Drug = {
         label: "inhibits firing",
       },
     ],
-    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly — which is why their effect is powerful but limited by dependence risk.",
+    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly, which is why their effect is powerful but limited by dependence risk.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["GABA"],
@@ -137,7 +137,7 @@ export const clorazepate: Drug = {
     {
       name: "Opioids",
       severity: "absolute",
-      rationale: "Concurrent use causes profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      rationale: "Concurrent use causes profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
     },
   ],
   blackBoxWarnings: [
@@ -205,7 +205,7 @@ export const clorazepate: Drug = {
     {
       drug: "Opioids",
       severity: "contraindicated",
-      mechanism: "Concurrent use causes profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      mechanism: "Concurrent use causes profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
       action: "Avoid; if unavoidable for taper protocols, use lowest doses with intensive monitoring.",
     },
     {
@@ -223,7 +223,7 @@ export const clorazepate: Drug = {
     {
       drug: "Older antihistamines (sedating)",
       severity: "moderate",
-      mechanism: "Additive sedation in the elderly — falls.",
+      mechanism: "Additive sedation in the elderly: falls.",
       action: "Prefer non-sedating alternatives.",
     },
   ],
@@ -235,44 +235,44 @@ export const clorazepate: Drug = {
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
-  patientExplanation: "Clorazepate is a medicine used to treat anxiety disorders / alcohol withdrawal (adjunct). Prodrug converted (in the stomach and liver) to nordiazepam — diazepam's active long-acting metabolite; a GABA-A PAM by proxy. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+  patientExplanation: "Clorazepate is a medicine used to treat anxiety disorders / alcohol withdrawal (adjunct). Prodrug converted (in the stomach and liver) to nordiazepam: diazepam's active long-acting metabolite; a GABA-A PAM by proxy. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
   patientEducationPoints: [
-    "This medicine is for short-term or carefully planned use — it can cause dependence within weeks of regular use.",
-    "Never mix it with opioid painkillers or alcohol — the combination can stop breathing.",
+    "This medicine is for short-term or carefully planned use. It can cause dependence within weeks of regular use.",
+    "Never mix it with opioid painkillers or alcohol: the combination can stop breathing.",
     "Do not drive until you know how it affects you.",
-    "Stopping must be gradual — never stop suddenly after regular use.",
-    "Benefit from Clorazepate builds over weeks — do not judge it in the first days.",
+    "Stopping must be gradual, never stop suddenly after regular use.",
+    "Benefit from Clorazepate builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The prodrug trick: an inactive tablet that becomes nordiazepam before absorption — pharmacology's shell game.",
+    "The prodrug trick: an inactive tablet that becomes nordiazepam before absorption; pharmacology's shell game.",
     "Clinically a long-acting anxiolytic: once-daily coverage, diazepam-family dependence rules.",
-    "All benzodiazepines share the GABA-A amplification mechanism — the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
+    "All benzodiazepines share the GABA-A amplification mechanism: the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Clorazepate: Prodrug converted (in the stomach and liver) to nordiazepam — diazepam's active long-acting metabolite; a GABA-A PAM by proxy.",
+        "Mechanism of Clorazepate: Prodrug converted (in the stomach and liver) to nordiazepam; diazepam's active long-acting metabolite; a GABA-A PAM by proxy.",
         "Uses of Clorazepate: Anxiety disorders / alcohol withdrawal (adjunct); Seizure adjunct (partial seizures)",
         "Prodrug → nordiazepam (diazepam's active metabolite).",
-        "Half-life (as nordiazepam) 40–100 h — long-acting.",
+        "Half-life (as nordiazepam) 40–100 h: long-acting.",
       ],
       practical: [
         "Prescribe Clorazepate for anxiety disorders / alcohol withdrawal (adjunct) with dose, timing, and duration.",
         "Outline the monitoring plan: Respiratory status and sedation (Clinical review each visit); Dependence review (Every visit for long-term users); Fall risk review (elderly) (Every visit in older patients)",
       ],
       longAnswer: [
-        "Clorazepate: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Clorazepate: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Prodrug → nordiazepam (diazepam's active metabolite).",
-        "Half-life (as nordiazepam) 40–100 h — long-acting.",
+        "Half-life (as nordiazepam) 40–100 h: long-acting.",
       ],
     },
     neetPg: {
       highYield: [
         "Prodrug → nordiazepam (diazepam's active metabolite).",
-        "Half-life (as nordiazepam) 40–100 h — long-acting.",
+        "Half-life (as nordiazepam) 40–100 h: long-acting.",
         "Uses: anxiety, withdrawal adjunct, partial-seizure adjunct.",
-        "Mechanism: GABA-A positive allosteric modulation — amplified natural inhibition.",
+        "Mechanism: GABA-A positive allosteric modulation; amplified natural inhibition.",
         "The class boxed warning: opioids + benzodiazepines = respiratory depression and death.",
       ],
       pyqConcepts: [
@@ -283,7 +283,7 @@ export const clorazepate: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Clorazepate develops respiratory depression with opioids — next best step?",
+        "A patient on Clorazepate develops respiratory depression with opioids: next best step?",
         "When to choose Clorazepate over alternatives in its class.",
       ],
     },
@@ -296,9 +296,9 @@ export const clorazepate: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The stomach converts it — one of the few prodrugs activated before absorption.",
+        "The stomach converts it, one of the few prodrugs activated before absorption.",
         "Think 'oral nordiazepam' and you know the whole drug.",
-        "The prodrug trick: an inactive tablet that becomes nordiazepam before absorption — pharmacology's shell game.",
+        "The prodrug trick: an inactive tablet that becomes nordiazepam before absorption; pharmacology's shell game.",
         "Clinically a long-acting anxiolytic: once-daily coverage, diazepam-family dependence rules.",
       ],
     },
@@ -306,15 +306,15 @@ export const clorazepate: Drug = {
   memoryTricks: [],
   highYieldSummary: [
     "Prodrug → nordiazepam (diazepam's active metabolite).",
-    "Half-life (as nordiazepam) 40–100 h — long-acting.",
+    "Half-life (as nordiazepam) 40–100 h: long-acting.",
     "Uses: anxiety, withdrawal adjunct, partial-seizure adjunct.",
-    "Mechanism: GABA-A positive allosteric modulation — amplified natural inhibition.",
+    "Mechanism: GABA-A positive allosteric modulation; amplified natural inhibition.",
     "The class boxed warning: opioids + benzodiazepines = respiratory depression and death.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — anxiety disorders / alcohol withdrawal (adjunct)",
+      title: "First presentation: anxiety disorders / alcohol withdrawal (adjunct)",
       presentation: "A patient presenting with anxiety disorders / alcohol withdrawal (adjunct), started on Clorazepate.",
       history: "A adult patient presents with a anxiety disorders / alcohol withdrawal (adjunct) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with anxiety disorders / alcohol withdrawal (adjunct); physical examination and baseline investigations are unremarkable.",
@@ -323,7 +323,7 @@ export const clorazepate: Drug = {
       management: "Started at 7.5 mg twice daily, titrated to 15–60 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Clorazepate takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Clorazepate takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -332,7 +332,7 @@ export const clorazepate: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Benzodiazepine comparison — choosing within the class",
+      title: "Benzodiazepine comparison: choosing within the class",
       primaryDrug: "Clorazepate",
       rows: [
         {
@@ -407,25 +407,25 @@ export const clorazepate: Drug = {
           comparisons: [
             {
               drug: "Alprazolam",
-              value: "High — potency-driven.",
+              value: "High: potency-driven.",
             },
             {
               drug: "Clonazepam",
-              value: "High — the dose-limiting effect.",
+              value: "High: the dose-limiting effect.",
             },
             {
               drug: "Diazepam",
-              value: "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+              value: "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
             },
             {
               drug: "Lorazepam",
-              value: "Moderate — intermediate duration limits hangover vs diazepam.",
+              value: "Moderate: intermediate duration limits hangover vs diazepam.",
             },
           ],
         },
         {
           attribute: "Unique niche",
-          primaryValue: "Clorazepate — see clinical pearls",
+          primaryValue: "Clorazepate: see clinical pearls",
           comparisons: [
             {
               drug: "Alprazolam",
@@ -433,20 +433,20 @@ export const clorazepate: Drug = {
             },
             {
               drug: "Clonazepam",
-              value: "The long-acting anticonvulsant benzo — seizures and panic",
+              value: "The long-acting anticonvulsant benzo: seizures and panic",
             },
             {
               drug: "Diazepam",
-              value: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+              value: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
             },
             {
               drug: "Lorazepam",
-              value: "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+              value: "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo",
             },
           ],
         },
       ],
-      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -455,7 +455,7 @@ export const clorazepate: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Clorazepate reaches peak plasma concentration and begins acting at its molecular target (Nordiazepam (active metabolite) at GABA-A benzodiazepine site). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Clorazepate reaches peak plasma concentration and begins acting at its molecular target (Nordiazepam (active metabolite) at GABA-A benzodiazepine site). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -491,7 +491,7 @@ export const clorazepate: Drug = {
   faqs: [
     {
       question: "How long does Clorazepate take to work?",
-      answer: "Oral: 30–60 min (after conversion).. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Oral: 30–60 min (after conversion).. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Clorazepate?",
@@ -499,19 +499,19 @@ export const clorazepate: Drug = {
     },
     {
       question: "Can I stop Clorazepate suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Clorazepate habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Clorazepate exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Clorazepate exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Clorazepate during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Clorazepate may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Clorazepate may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -667,7 +667,7 @@ export const clorazepate: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Clorazepate",
+      label: "Patient Guide. Clorazepate",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -675,13 +675,13 @@ export const clorazepate: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The prodrug that becomes nordiazepam — anxiety, withdrawal, and a metabolic trick.",
-    summary: "Clorazepate is a prescription medicine used to treat anxiety disorders / alcohol withdrawal (adjunct). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Clorazepate is a medicine used to treat anxiety disorders / alcohol withdrawal (adjunct). Prodrug converted (in the stomach and liver) to nordiazepam — diazepam's active long-acting metabolite; a GABA-A PAM by proxy. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
-    sideEffects: "The most common side effects are: sedation, dizziness / ataxia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression with opioids and Withdrawal on abrupt stop. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The prodrug that becomes nordiazepam: anxiety, withdrawal, and a metabolic trick.",
+    summary: "Clorazepate is a prescription medicine used to treat anxiety disorders / alcohol withdrawal (adjunct). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Clorazepate is a medicine used to treat anxiety disorders / alcohol withdrawal (adjunct). Prodrug converted (in the stomach and liver) to nordiazepam: diazepam's active long-acting metabolite; a GABA-A PAM by proxy. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+    sideEffects: "The most common side effects are: sedation, dizziness / ataxia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression with opioids and Withdrawal on abrupt stop. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, Older antihistamines (sedating). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, Older antihistamines (sedating). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -695,7 +695,7 @@ export const clorazepate: Drug = {
     ],
     typicalDoses: "15–60 mg/day divided.",
     prescribingScenarios: [
-      "Rarely used in India — diazepam covers the same niche.",
+      "Rarely used in India: diazepam covers the same niche.",
     ],
     availability: {
       governmentHospitals: true,
@@ -705,7 +705,7 @@ export const clorazepate: Drug = {
     },
     costCategory: "moderate",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Class rules apply."],
   },
   sectionDifficulty: {
@@ -751,43 +751,43 @@ export const clorazepate: Drug = {
         name: "Clonazepam",
         slug: "clonazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "The long-acting anticonvulsant benzo — seizures and panic",
+        distinguishing: "The long-acting anticonvulsant benzo: seizures and panic",
       },
       {
         name: "Diazepam",
         slug: "diazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+        distinguishing: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
       },
       {
         name: "Lorazepam",
         slug: "lorazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+        distinguishing: "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo",
       },
       {
         name: "Chlordiazepoxide",
         slug: "chlordiazepoxide",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Alcohol withdrawal tablet — the founding benzo",
+        distinguishing: "Alcohol withdrawal tablet: the founding benzo",
       },
       {
         name: "Midazolam",
         slug: "midazolam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Oxazepam",
         slug: "oxazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Loflazepate",
         slug: "loflazepate",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
     ],
   },
@@ -935,7 +935,7 @@ export const clorazepate: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Clorazepate in two sentences.",
-      answer: "Prodrug converted (in the stomach and liver) to nordiazepam — diazepam's active long-acting metabolite; a GABA-A PAM by proxy. Net effect: Long-acting anxiolysis, anticonvulsant action, and withdrawal coverage.",
+      answer: "Prodrug converted (in the stomach and liver) to nordiazepam: diazepam's active long-acting metabolite; a GABA-A PAM by proxy. Net effect: Long-acting anxiolysis, anticonvulsant action, and withdrawal coverage.",
       topic: "Mechanism",
     },
     {
@@ -955,7 +955,7 @@ export const clorazepate: Drug = {
     },
     {
       question: "Share one clinical pearl about Clorazepate that separates safe prescribers from unsafe ones.",
-      answer: "The stomach converts it — one of the few prodrugs activated before absorption.",
+      answer: "The stomach converts it, one of the few prodrugs activated before absorption.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1031,7 +1031,7 @@ export const clorazepate: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1076,7 +1076,7 @@ export const clorazepate: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Clorazepate works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Clorazepate works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1092,7 +1092,7 @@ export const clorazepate: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Clorazepate safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Clorazepate safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1135,7 +1135,7 @@ export const clorazepate: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Clorazepate follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Clorazepate follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1162,11 +1162,11 @@ export const clorazepate: Drug = {
       "Class tapering discipline.",
     ],
     overdose: [
-      "Overdose with Clorazepate is managed supportively — no specific antidote.",
+      "Overdose with Clorazepate is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Clorazepate is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1197,21 +1197,21 @@ export const clorazepate: Drug = {
     ],
     potentialAdvantages: [
       "Smooth long-acting coverage.",
-      "Prodrug novelty aside — simple once-daily dosing.",
+      "Prodrug novelty aside: simple once-daily dosing.",
     ],
     potentialDisadvantages: ["Class dependence profile.", "Long metabolite accumulation.", "Limited availability in most markets."],
     primaryTargetSymptoms: ["Anxiety", "Alcohol withdrawal (adjunct)", "Partial seizures (adjunct)"],
     pearls: [
-      "The stomach converts it — one of the few prodrugs activated before absorption.",
+      "The stomach converts it, one of the few prodrugs activated before absorption.",
       "Think 'oral nordiazepam' and you know the whole drug.",
-      "The prodrug trick: an inactive tablet that becomes nordiazepam before absorption — pharmacology's shell game.",
+      "The prodrug trick: an inactive tablet that becomes nordiazepam before absorption; pharmacology's shell game.",
       "Clinically a long-acting anxiolytic: once-daily coverage, diazepam-family dependence rules.",
-      "All benzodiazepines share the GABA-A amplification mechanism — the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
+      "All benzodiazepines share the GABA-A amplification mechanism: the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

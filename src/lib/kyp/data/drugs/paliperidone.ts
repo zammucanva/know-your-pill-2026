@@ -23,14 +23,14 @@ export const paliperidone: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Atypical Antipsychotics", "Paliperidone"],
   /* ---- Hero / summary ---- */
-  tagline: "Risperidone's active metabolite, engineered for once-daily delivery — including the once-monthly and 3-monthly injections.",
-  summary: "Paliperidone (9-hydroxyrisperidone) is the active metabolite of risperidone, delivered as an osmotic-release tablet that smooths plasma peaks, and as the leading long-acting injectable platform (monthly, 3-monthly, and 6-monthly options). It shares risperidone's serotonin-dopamine antagonism, efficacy, and adverse-effect profile — including the class-leading hyperprolactinaemia — while renal clearance and the OROS delivery system give flatter levels and fewer titration steps.",
+  tagline: "Risperidone's active metabolite, engineered for once-daily delivery, including the once-monthly and 3-monthly injections.",
+  summary: "Paliperidone (9-hydroxyrisperidone) is the active metabolite of risperidone, delivered as an osmotic-release tablet that smooths plasma peaks, and as the leading long-acting injectable platform (monthly, 3-monthly, and 6-monthly options). It shares risperidone's serotonin-dopamine antagonism, efficacy, and adverse-effect profile (including the class-leading hyperprolactinaemia) while renal clearance and the OROS delivery system give flatter levels and fewer titration steps.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Paliperidone — from its molecular target (D2 (potent antagonist); 5-HT2A (high-affinity antagonist); alpha-1; H1) to clinical effect.",
+    "Explain the mechanism of action of Paliperidone, from its molecular target (D2 (potent antagonist); 5-HT2A (high-affinity antagonist); alpha-1; H1) to clinical effect.",
     "List the FDA-approved and off-label uses of Paliperidone.",
     "Predict the common and serious side effects of Paliperidone from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Paliperidone.",
@@ -38,19 +38,19 @@ export const paliperidone: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Paliperidone is 9-hydroxyrisperidone — a potent D2 and 5-HT2A antagonist (risperidone's active metabolite) delivered via osmotic-release oral technology or long-acting injectables.",
+    summary: "Paliperidone is 9-hydroxyrisperidone: a potent D2 and 5-HT2A antagonist (risperidone's active metabolite) delivered via osmotic-release oral technology or long-acting injectables.",
     molecularTarget: "D2 (potent antagonist); 5-HT2A (high-affinity antagonist); alpha-1; H1",
-    effect: "Same clinical profile as risperidone — robust antipsychotic efficacy with dose-dependent EPS and marked hyperprolactinaemia — with flatter plasma levels from OROS/LAI delivery.",
+    effect: "Same clinical profile as risperidone (robust antipsychotic efficacy with dose-dependent EPS and marked hyperprolactinaemia) with flatter plasma levels from OROS/LAI delivery.",
     steps: [
       "Potent D2 blockade (as with risperidone) treats positive symptoms; 5-HT2A antagonism preserves atypicality at moderate doses.",
-      "OROS tablet releases drug steadily over 24 hours — flatter peaks mean less sedation and orthostasis than immediate-release risperidone.",
-      "Paliperidone is barely metabolised by CYP enzymes (renal clearance dominates) — fewer pharmacokinetic interactions than risperidone.",
-      "LAI forms (pamoate/palmitate) extend delivery from monthly to 6-monthly — the longest-acting antipsychotic options available.",
+      "OROS tablet releases drug steadily over 24 hours: flatter peaks mean less sedation and orthostasis than immediate-release risperidone.",
+      "Paliperidone is barely metabolised by CYP enzymes (renal clearance dominates): fewer pharmacokinetic interactions than risperidone.",
+      "LAI forms (pamoate/palmitate) extend delivery from monthly to 6-monthly: the longest-acting antipsychotic options available.",
     ],
     pharmacokinetics: "OROS tablet: steady 24-hour release, peak ~24 hours. LAI: initiation requires deltoid loading doses before monthly maintenance.",
     halfLife: "23 hours (oral); palmitate LAI: dose-proportional, roughly 25–49 days (monthly), ~84–118 days (3-monthly).",
-    metabolism: "Minimal hepatic CYP metabolism — mostly renal excretion unchanged.",
-    excretion: "Renal (predominant) — dose adjust in renal impairment.",
+    metabolism: "Minimal hepatic CYP metabolism: mostly renal excretion unchanged.",
+    excretion: "Renal (predominant): dose adjust in renal impairment.",
   },
   /* ---- Mechanism visual flow ---- */
   mechanismFlow: {
@@ -127,7 +127,7 @@ export const paliperidone: Drug = {
         label: "5-HT2A-mediated benefit",
       },
     ],
-    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms — the serotonin-dopamine hypothesis of atypical antipsychotics.",
+    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms: the serotonin-dopamine hypothesis of atypical antipsychotics.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Dopamine (DA)", "Serotonin (5-HT)"],
@@ -172,7 +172,7 @@ export const paliperidone: Drug = {
       name: "Hyperprolactinaemia",
       frequency: "very-common",
       severity: "moderate",
-      description: "Same as risperidone — the highest in class; galactorrhoea, amenorrhoea, sexual dysfunction.",
+      description: "Same as risperidone: the highest in class; galactorrhoea, amenorrhoea, sexual dysfunction.",
       management: "Ask directly; switch to aripiprazole if symptomatic.",
     },
     {
@@ -186,7 +186,7 @@ export const paliperidone: Drug = {
       name: "Weight gain",
       frequency: "common",
       severity: "moderate",
-      description: "Moderate — similar to risperidone.",
+      description: "Moderate, similar to risperidone.",
       management: "Monitor; lifestyle intervention.",
     },
     {
@@ -230,7 +230,7 @@ export const paliperidone: Drug = {
       name: "Post-injection delirium/coronary steal (rare with high-dose deltoid)",
       frequency: "rare",
       severity: "severe",
-      description: "Rare events reported with LAI — observe after loading doses.",
+      description: "Rare events reported with LAI: observe after loading doses.",
       management: "Observe post-injection per protocol.",
     },
   ],
@@ -239,7 +239,7 @@ export const paliperidone: Drug = {
     {
       parameter: "Weight and BMI",
       frequency: "Baseline, then at 4, 8, 12 weeks and quarterly",
-      rationale: "Class metabolic risk — early trajectory detection.",
+      rationale: "Class metabolic risk: early trajectory detection.",
     },
     {
       parameter: "Fasting glucose / HbA1c",
@@ -254,7 +254,7 @@ export const paliperidone: Drug = {
     {
       parameter: "Blood pressure (orthostatic)",
       frequency: "Baseline and during titration",
-      rationale: "Alpha-1 blockade — orthostasis risk.",
+      rationale: "Alpha-1 blockade: orthostasis risk.",
     },
     {
       parameter: "AIMS examination",
@@ -283,33 +283,33 @@ export const paliperidone: Drug = {
     },
   ],
   pregnancy: {
-    summary: "Limited data; as risperidone's metabolite, similar pregnancy considerations apply — no clear teratogenic signal, third-trimester neonatal EPS/withdrawal monitoring recommended. Continue if needed for psychosis control.",
+    summary: "Limited data; as risperidone's metabolite, similar pregnancy considerations apply: no clear teratogenic signal, third-trimester neonatal EPS/withdrawal monitoring recommended. Continue if needed for psychosis control.",
     lactation: "Paliperidone passes into milk; infant monitoring for sedation; usually considered acceptable with monitoring.",
   },
-  renalAdjustment: "Reduce dose at CrCl 50–79 (max 6 mg oral); CrCl 10–49: max 3 mg oral; LAI dose adjustments per label — renal clearance is dominant.",
+  renalAdjustment: "Reduce dose at CrCl 50–79 (max 6 mg oral); CrCl 10–49: max 3 mg oral; LAI dose adjustments per label: renal clearance is dominant.",
   hepaticAdjustment: "No adjustment (minimal hepatic metabolism).",
   /* ---- Education ---- */
-  patientExplanation: "Paliperidone is the active form of risperidone, packaged for slow, steady release — as a once-daily tablet that works around the clock, or as an injection lasting from a month to six months. The steady levels mean fewer ups and downs than regular tablets.",
+  patientExplanation: "Paliperidone is the active form of risperidone, packaged for slow, steady release, as a once-daily tablet that works around the clock, or as an injection lasting from a month to six months. The steady levels mean fewer ups and downs than regular tablets.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Paliperidone builds over weeks — do not judge it in the first days.",
+    "Benefit from Paliperidone builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
     "Paliperidone = risperidone's active metabolite with an engineering upgrade: OROS oral delivery or LAI depots from 1 to 6 months.",
-    "Renal clearance dominates — CYP interactions largely disappear, but renal impairment dosing becomes critical.",
-    "Hyperprolactinaemia is inherited from risperidone — the class-leading prolactin problem persists.",
-    "Sustenna needs TWO loading injections (deltoid days 1 and 8) before monthly maintenance — getting this wrong is the classic initiation error.",
-    "Trinza (3-monthly) and Hafyera (6-monthly) are the longest-acting antipsychotics in existence — for the most stable patients who want maximum freedom.",
+    "Renal clearance dominates. CYP interactions largely disappear, but renal impairment dosing becomes critical.",
+    "Hyperprolactinaemia is inherited from risperidone: the class-leading prolactin problem persists.",
+    "Sustenna needs TWO loading injections (deltoid days 1 and 8) before monthly maintenance: getting this wrong is the classic initiation error.",
+    "Trinza (3-monthly) and Hafyera (6-monthly) are the longest-acting antipsychotics in existence, for the most stable patients who want maximum freedom.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Paliperidone: Paliperidone is 9-hydroxyrisperidone — a potent D2 and 5-HT2A antagonist (risperidone's active metabolite) delivered via osmotic-release oral technology or long-acting injectables.",
+        "Mechanism of Paliperidone: Paliperidone is 9-hydroxyrisperidone; a potent D2 and 5-HT2A antagonist (risperidone's active metabolite) delivered via osmotic-release oral technology or long-acting injectables.",
         "Uses of Paliperidone: Schizophrenia; Schizoaffective disorder; Bipolar I disorder (maintenance, adjunct)",
-        "Identity: 9-hydroxyrisperidone — risperidone's active metabolite, marketed separately.",
+        "Identity: 9-hydroxyrisperidone; risperidone's active metabolite, marketed separately.",
         "Delivery platforms: OROS oral (24-hour release) + LAI monthly/3-monthly/6-monthly.",
       ],
       practical: [
@@ -317,17 +317,17 @@ export const paliperidone: Drug = {
         "Outline the monitoring plan: Weight and BMI (Baseline, then at 4, 8, 12 weeks and quarterly); Fasting glucose / HbA1c (Baseline, 12 weeks, then annually); Lipid profile (fasting) (Baseline, 12 weeks, then annually)",
       ],
       longAnswer: [
-        "Paliperidone: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Identity: 9-hydroxyrisperidone — risperidone's active metabolite, marketed separately.",
+        "Paliperidone: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Identity: 9-hydroxyrisperidone; risperidone's active metabolite, marketed separately.",
         "Delivery platforms: OROS oral (24-hour release) + LAI monthly/3-monthly/6-monthly.",
       ],
     },
     neetPg: {
       highYield: [
-        "Identity: 9-hydroxyrisperidone — risperidone's active metabolite, marketed separately.",
+        "Identity: 9-hydroxyrisperidone; risperidone's active metabolite, marketed separately.",
         "Delivery platforms: OROS oral (24-hour release) + LAI monthly/3-monthly/6-monthly.",
-        "Renal clearance — minimal CYP interactions; adjust dose in renal impairment.",
-        "Same prolactin story as risperidone — highest in class.",
+        "Renal clearance: minimal CYP interactions; adjust dose in renal impairment.",
+        "Same prolactin story as risperidone: highest in class.",
         "Sustenna initiation: two deltoid loading doses (day 1 and day 8).",
         "Oral dose: 3–12 mg once daily (schizophrenia).",
       ],
@@ -339,7 +339,7 @@ export const paliperidone: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Paliperidone develops cerebrovascular events in dementia patients — next best step?",
+        "A patient on Paliperidone develops cerebrovascular events in dementia patients: next best step?",
         "When to choose Paliperidone over alternatives in its class.",
       ],
     },
@@ -354,23 +354,23 @@ export const paliperidone: Drug = {
       advancedPearls: [
         "Risperidone's metabolite, engineered: steady levels, renal clearance, LAI shelf from 1 to 6 months.",
         "Two-dose Sustenna loading is the classic exam initiation fact.",
-        "6-monthly Hafyera means two injections a year — the ultimate adherence solution for stable patients.",
+        "6-monthly Hafyera means two injections a year: the ultimate adherence solution for stable patients.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Identity: 9-hydroxyrisperidone — risperidone's active metabolite, marketed separately.",
+    "Identity: 9-hydroxyrisperidone; risperidone's active metabolite, marketed separately.",
     "Delivery platforms: OROS oral (24-hour release) + LAI monthly/3-monthly/6-monthly.",
-    "Renal clearance — minimal CYP interactions; adjust dose in renal impairment.",
-    "Same prolactin story as risperidone — highest in class.",
+    "Renal clearance: minimal CYP interactions; adjust dose in renal impairment.",
+    "Same prolactin story as risperidone: highest in class.",
     "Sustenna initiation: two deltoid loading doses (day 1 and day 8).",
     "Oral dose: 3–12 mg once daily (schizophrenia).",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia",
+      title: "First presentation: schizophrenia",
       presentation: "A patient presenting with schizophrenia, started on Paliperidone.",
       history: "A adult patient presents with a schizophrenia picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with schizophrenia; physical examination and baseline investigations are unremarkable.",
@@ -379,7 +379,7 @@ export const paliperidone: Drug = {
       management: "Started at 6 mg once daily, titrated to 3–12 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Paliperidone takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Paliperidone takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -388,7 +388,7 @@ export const paliperidone: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Atypical Antipsychotic comparison — choosing within the class",
+      title: "Atypical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Paliperidone",
       rows: [
         {
@@ -463,7 +463,7 @@ export const paliperidone: Drug = {
           comparisons: [
             {
               drug: "Aripiprazole",
-              value: "Low; can be activating — insomnia is more common than somnolence.",
+              value: "Low; can be activating: insomnia is more common than somnolence.",
             },
             {
               drug: "Clozapine",
@@ -471,38 +471,38 @@ export const paliperidone: Drug = {
             },
             {
               drug: "Lurasidone",
-              value: "Low — may be mildly activating.",
+              value: "Low: may be mildly activating.",
             },
             {
               drug: "Olanzapine",
-              value: "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+              value: "Moderate to high: usually transient at a given dose but dose-limiting for many patients.",
             },
           ],
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The LAI platform king — monthly to 6-monthly injections for schizophrenia",
+          primaryValue: "The LAI platform king: monthly to 6-monthly injections for schizophrenia",
           comparisons: [
             {
               drug: "Aripiprazole",
-              value: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+              value: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
             },
             {
               drug: "Clozapine",
-              value: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+              value: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
             },
             {
               drug: "Lurasidone",
-              value: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+              value: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
             },
             {
               drug: "Olanzapine",
-              value: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+              value: "Most robust broad-spectrum atypical: heaviest metabolic burden",
             },
           ],
         },
       ],
-      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -511,7 +511,7 @@ export const paliperidone: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Paliperidone reaches peak plasma concentration and begins acting at its molecular target (D2 (potent antagonist); 5-HT2A (high-affinity antagonist); alpha-1; H1). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Paliperidone reaches peak plasma concentration and begins acting at its molecular target (D2 (potent antagonist); 5-HT2A (high-affinity antagonist); alpha-1; H1). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -547,7 +547,7 @@ export const paliperidone: Drug = {
   faqs: [
     {
       question: "How long does Paliperidone take to work?",
-      answer: "Schizophrenia: days to weeks as with risperidone.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Schizophrenia: days to weeks as with risperidone.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Paliperidone?",
@@ -555,11 +555,11 @@ export const paliperidone: Drug = {
     },
     {
       question: "Can I stop Paliperidone suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Paliperidone habit-forming?",
@@ -567,7 +567,7 @@ export const paliperidone: Drug = {
     },
     {
       question: "Can I take Paliperidone during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Paliperidone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Paliperidone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -745,7 +745,7 @@ export const paliperidone: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Paliperidone",
+      label: "Patient Guide. Paliperidone",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -753,13 +753,13 @@ export const paliperidone: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "Risperidone's active metabolite, engineered for once-daily delivery — including the once-monthly and 3-monthly injections.",
-    summary: "Paliperidone is a prescription medicine used to treat schizophrenia. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Paliperidone is the active form of risperidone, packaged for slow, steady release — as a once-daily tablet that works around the clock, or as an injection lasting from a month to six months. The steady levels mean fewer ups and downs than regular tablets.",
-    sideEffects: "The most common side effects are: hyperprolactinaemia, eps and akathisia, weight gain, somnolence and headache, injection-site reactions (lai). These usually appear early and many settle with time. Serious effects are uncommon but important to know: Cerebrovascular events in dementia patients and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and bmi (baseline, then at 4, 8, 12 weeks and quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually); lipid profile (fasting) (baseline, 12 weeks, then annually). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "Risperidone's active metabolite, engineered for once-daily delivery, including the once-monthly and 3-monthly injections.",
+    summary: "Paliperidone is a prescription medicine used to treat schizophrenia. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Paliperidone is the active form of risperidone, packaged for slow, steady release, as a once-daily tablet that works around the clock, or as an injection lasting from a month to six months. The steady levels mean fewer ups and downs than regular tablets.",
+    sideEffects: "The most common side effects are: hyperprolactinaemia, eps and akathisia, weight gain, somnolence and headache, injection-site reactions (lai). These usually appear early and many settle with time. Serious effects are uncommon but important to know: Cerebrovascular events in dementia patients and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and bmi (baseline, then at 4, 8, 12 weeks and quarterly); fasting glucose / hba1c (baseline, 12 weeks, then annually); lipid profile (fasting) (baseline, 12 weeks, then annually). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: CNS depressants and alcohol, QT-prolonging drugs, Antihypertensives. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: CNS depressants and alcohol, QT-prolonging drugs, Antihypertensives. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -789,7 +789,7 @@ export const paliperidone: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -823,55 +823,55 @@ export const paliperidone: Drug = {
         name: "Paliperidone",
         slug: "paliperidone",
         relationship: "This guide",
-        distinguishing: "The LAI platform king — monthly to 6-monthly injections for schizophrenia",
+        distinguishing: "The LAI platform king: monthly to 6-monthly injections for schizophrenia",
       },
       {
         name: "Aripiprazole",
         slug: "aripiprazole",
         relationship: "Same class (Dopamine Stabiliser)",
-        distinguishing: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+        distinguishing: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
       },
       {
         name: "Clozapine",
         slug: "clozapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
       },
       {
         name: "Lurasidone",
         slug: "lurasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+        distinguishing: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
       },
       {
         name: "Olanzapine",
         slug: "olanzapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+        distinguishing: "Most robust broad-spectrum atypical: heaviest metabolic burden",
       },
       {
         name: "Quetiapine",
         slug: "quetiapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin — the sedating antidepressant-antipsychotic",
+        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin: the sedating antidepressant-antipsychotic",
       },
       {
         name: "Risperidone",
         slug: "risperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most potent D2 blockade among atypicals — highest prolactin, best-studied LAI",
+        distinguishing: "Most potent D2 blockade among atypicals: highest prolactin, best-studied LAI",
       },
       {
         name: "Ziprasidone",
         slug: "ziprasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic — with QT vigilance",
+        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic, with QT vigilance",
       },
       {
         name: "Amisulpride",
         slug: "amisulpride",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The dose-band benzamide — European/Indian staple with the clozapine-drool rescue",
+        distinguishing: "The dose-band benzamide. European/Indian staple with the clozapine-drool rescue",
       },
     ],
   },
@@ -1019,7 +1019,7 @@ export const paliperidone: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Paliperidone in two sentences.",
-      answer: "Paliperidone is 9-hydroxyrisperidone — a potent D2 and 5-HT2A antagonist (risperidone's active metabolite) delivered via osmotic-release oral technology or long-acting injectables. Net effect: Same clinical profile as risperidone — robust antipsychotic efficacy with dose-dependent EPS and marked hyperprolactinaemia — with flatter plasma levels from OROS/LAI delivery.",
+      answer: "Paliperidone is 9-hydroxyrisperidone: a potent D2 and 5-HT2A antagonist (risperidone's active metabolite) delivered via osmotic-release oral technology or long-acting injectables. Net effect: Same clinical profile as risperidone (robust antipsychotic efficacy with dose-dependent EPS and marked hyperprolactinaemia) with flatter plasma levels from OROS/LAI delivery.",
       topic: "Mechanism",
     },
     {
@@ -1115,7 +1115,7 @@ export const paliperidone: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1160,7 +1160,7 @@ export const paliperidone: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Paliperidone works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Paliperidone works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1176,7 +1176,7 @@ export const paliperidone: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Paliperidone safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Paliperidone safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1222,7 +1222,7 @@ export const paliperidone: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Paliperidone follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Paliperidone follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1250,7 +1250,7 @@ export const paliperidone: Drug = {
         max: "12 mg/day",
       },
       {
-        indication: "LAI — Sustenna (monthly)",
+        indication: "LAI. Sustenna (monthly)",
         starting: "233 mg deltoid day 1 + 156 mg day 8 (loading)",
         titration: "Then 117 mg monthly (range 39–234)",
         target: "117 mg/month",
@@ -1261,14 +1261,14 @@ export const paliperidone: Drug = {
         ],
       },
       {
-        indication: "LAI — Trinza (3-monthly)",
+        indication: "LAI. Trinza (3-monthly)",
         starting: "Only after ≥ 4 months of tolerating Sustenna",
         titration: "Converts from the monthly dose per table",
         target: "273–819 mg q3mo",
         max: "819 mg q3mo",
       },
       {
-        indication: "LAI — Hafyera (6-monthly)",
+        indication: "LAI. Hafyera (6-monthly)",
         starting: "Only after ≥ 1 year of stable monthly or 3-monthly treatment",
         titration: "Per conversion table",
         target: "874–1365 mg q6mo (USA)",
@@ -1287,7 +1287,7 @@ export const paliperidone: Drug = {
       "Renal impairment: reduce oral dose; LAI use with caution.",
     ],
     overdose: [
-      "Overdose with Paliperidone is managed supportively — no specific antidote.",
+      "Overdose with Paliperidone is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Paliperidone is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1297,7 +1297,7 @@ export const paliperidone: Drug = {
     ],
     pharmacokinetics: [
       "Half-life: 23 hours (oral); palmitate LAI: dose-proportional, roughly 25–49 days (monthly), ~84–118 days (3-monthly)..",
-      "Metabolism: Minimal hepatic CYP metabolism — mostly renal excretion unchanged..",
+      "Metabolism: Minimal hepatic CYP metabolism; mostly renal excretion unchanged..",
     ],
     doNotUse: ["Known hypersensitivity to this agent."],
     specialPopulations: [
@@ -1339,12 +1339,12 @@ export const paliperidone: Drug = {
     pearls: [
       "Risperidone's metabolite, engineered: steady levels, renal clearance, LAI shelf from 1 to 6 months.",
       "Two-dose Sustenna loading is the classic exam initiation fact.",
-      "6-monthly Hafyera means two injections a year — the ultimate adherence solution for stable patients.",
+      "6-monthly Hafyera means two injections a year: the ultimate adherence solution for stable patients.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

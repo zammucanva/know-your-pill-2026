@@ -116,7 +116,7 @@ export function DrugRelatedDrugs({ drug, builtDrugSlugs }: DrugRelatedDrugsProps
         <SectionHeader
           eyebrow="Related Medications"
           title="Why choose one over the other?"
-          description="Each card explains when you'd pick this medication instead of the current one — and when you wouldn't. Clinical reasoning, not just a list of names."
+          description="Each card explains when you'd pick this medication instead of the current one, and when you wouldn't. Clinical reasoning, not just a list of names."
         />
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -182,7 +182,7 @@ export function DrugRelatedDrugs({ drug, builtDrugSlugs }: DrugRelatedDrugsProps
                     <li key={i} className="flex items-start gap-2">
                       <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" strokeWidth={3} />
                       <span>
-                        <strong>{w.scenario}</strong> — {w.reason}{" "}
+                        <strong>{w.scenario}</strong>: {w.reason}{" "}
                         {composition.lead}
                         <span className="text-success">{composition.text}</span>
                         {composition.tail}

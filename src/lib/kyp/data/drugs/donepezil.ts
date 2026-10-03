@@ -23,14 +23,14 @@ export const donepezil: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Cognitive Enhancers", "Cholinesterase Inhibitors", "Donepezil"],
   /* ---- Hero / summary ---- */
-  tagline: "The once-daily cholinesterase inhibitor — the dementia first-line.",
+  tagline: "The once-daily cholinesterase inhibitor: the dementia first-line.",
   summary: "Donepezil is the acetylcholinesterase inhibitor of choice in Alzheimer's disease: once-daily dosing (its practical advantage over rivastigmine and galantamine), dose-dependent efficacy on cognition and global function across mild-to-moderate and severe stages, and a clean adverse-effect profile dominated by cholinergic GI effects and vivid dreams. Bradycardia is the prescribing caution.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Donepezil — from its molecular target (Acetylcholinesterase (central inhibition)) to clinical effect.",
+    "Explain the mechanism of action of Donepezil, from its molecular target (Acetylcholinesterase (central inhibition)) to clinical effect.",
     "List the FDA-approved and off-label uses of Donepezil.",
     "Predict the common and serious side effects of Donepezil from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Donepezil.",
@@ -38,16 +38,16 @@ export const donepezil: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Donepezil inhibits acetylcholinesterase in the cerebral cortex, raising synaptic acetylcholine — amplifying the residual cholinergic neurons of Alzheimer's disease.",
+    summary: "Donepezil inhibits acetylcholinesterase in the cerebral cortex, raising synaptic acetylcholine, amplifying the residual cholinergic neurons of Alzheimer's disease.",
     molecularTarget: "Acetylcholinesterase (central inhibition)",
     effect: "Modulation of the described target with the agent's clinical effect.",
     steps: [
-      "Donepezil inhibits acetylcholinesterase in the cerebral cortex, raising synaptic acetylcholine — amplifying the residual cholinergic neurons of Alzheimer's disease.",
+      "Donepezil inhibits acetylcholinesterase in the cerebral cortex, raising synaptic acetylcholine, amplifying the residual cholinergic neurons of Alzheimer's disease.",
       "The target engagement produces the clinical effect described.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 70 hours (long — once-daily and slow washout). — see mechanism and prescriber sections.",
-    halfLife: "About 70 hours (long — once-daily and slow washout).",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 70 hours (long, once-daily and slow washout). See mechanism and prescriber sections.",
+    halfLife: "About 70 hours (long, once-daily and slow washout).",
     metabolism: "Hepatic.",
     excretion: "Renal.",
   },
@@ -139,14 +139,14 @@ export const donepezil: Drug = {
       name: "Nausea, diarrhoea, vomiting",
       frequency: "common",
       severity: "mild",
-      description: "Cholinergic GI effects — the most common adverse effects.",
+      description: "Cholinergic GI effects: the most common adverse effects.",
       management: "Take with evening meal; slow titration.",
     },
     {
       name: "Vivid dreams and nightmares",
       frequency: "common",
       severity: "mild",
-      description: "Cholinergic REM enhancement — donepezil's famous signature.",
+      description: "Cholinergic REM enhancement: donepezil's famous signature.",
       management: "Morning dosing if dreams are distressing.",
     },
     {
@@ -176,7 +176,7 @@ export const donepezil: Drug = {
       name: "Symptomatic bradycardia / heart block",
       frequency: "uncommon",
       severity: "severe",
-      description: "Cholinergic cardiac conduction slowing — the prescribing caution.",
+      description: "Cholinergic cardiac conduction slowing: the prescribing caution.",
       management: "ECG and pulse checks; caution with beta-blockers/digoxin.",
     },
     {
@@ -229,7 +229,7 @@ export const donepezil: Drug = {
     {
       drug: "Anticholinergics (including many bladder drugs and TCAs)",
       severity: "major",
-      mechanism: "Pharmacodynamic antagonism — the two cancel out.",
+      mechanism: "Pharmacodynamic antagonism: the two cancel out.",
       action: "Avoid combinations; review bladder drugs.",
     },
     {
@@ -253,35 +253,35 @@ export const donepezil: Drug = {
   renalAdjustment: "No renal adjustment.",
   hepaticAdjustment: "No specific adjustment.",
   /* ---- Education ---- */
-  patientExplanation: "Donepezil is the standard medicine for Alzheimer's dementia: it raises acetylcholine — a memory-related brain chemical that Alzheimer's depletes — by stopping its breakdown. It does not cure the disease but can hold function steadier for months. It is taken once a day at bedtime; its commonest effects are stomach upset and unusually vivid dreams, and your pulse will be checked because it can slow the heart.",
+  patientExplanation: "Donepezil is the standard medicine for Alzheimer's dementia: it raises acetylcholine (a memory-related brain chemical that Alzheimer's depletes) by stopping its breakdown. It does not cure the disease but can hold function steadier for months. It is taken once a day at bedtime; its commonest effects are stomach upset and unusually vivid dreams, and your pulse will be checked because it can slow the heart.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Donepezil builds over weeks — do not judge it in the first days.",
+    "Benefit from Donepezil builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
     "Once daily is the advantage: the only AChE inhibitor with true once-daily dosing at every strength.",
-    "Bedtime dosing hides the cholinergic GI effects in sleep — but move to MORNING if vivid dreams wake the patient (the classic dosing dance).",
-    "DLB responds dramatically to cholinesterase inhibition — the fluctuating-parkinsonian-hallucinating patient is the responder phenotype.",
-    "The 23 mg dose: modest gain, more adverse effects — for selected severe patients only.",
+    "Bedtime dosing hides the cholinergic GI effects in sleep, but move to MORNING if vivid dreams wake the patient (the classic dosing dance).",
+    "DLB responds dramatically to cholinesterase inhibition. The fluctuating-parkinsonian-hallucinating patient is the responder phenotype.",
+    "The 23 mg dose: modest gain, more adverse effects, for selected severe patients only.",
     "Bradycardia is the quiet danger: pulse at every review, ECG if any conduction disease.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Donepezil: Donepezil inhibits acetylcholinesterase in the cerebral cortex, raising synaptic acetylcholine — amplifying the residual cholinergic neurons of Alzheimer's disease.",
-        "Uses of Donepezil: Alzheimer's disease — mild to severe; Dementia with Lewy bodies (symptomatic); Vascular and Parkinson's disease dementia (off-label)",
+        "Mechanism of Donepezil: Donepezil inhibits acetylcholinesterase in the cerebral cortex, raising synaptic acetylcholine, amplifying the residual cholinergic neurons of Alzheimer's disease.",
+        "Uses of Donepezil: Alzheimer's disease; mild to severe; Dementia with Lewy bodies (symptomatic); Vascular and Parkinson's disease dementia (off-label)",
         "Mechanism: central acetylcholinesterase inhibition → ↑ synaptic acetylcholine.",
         "Once daily; 5 → 10 mg (23 severe); bedtime default, morning if dreams.",
       ],
       practical: [
-        "Prescribe Donepezil for alzheimer's disease — mild to severe with dose, timing, and duration.",
+        "Prescribe Donepezil for alzheimer's disease: mild to severe with dose, timing, and duration.",
         "Outline the monitoring plan: Pulse (bradycardia) (Baseline and every review); Weight (Periodically); Cognition and function scores (Every 6 months)",
       ],
       longAnswer: [
-        "Donepezil: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Donepezil: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: central acetylcholinesterase inhibition → ↑ synaptic acetylcholine.",
         "Once daily; 5 → 10 mg (23 severe); bedtime default, morning if dreams.",
       ],
@@ -292,7 +292,7 @@ export const donepezil: Drug = {
         "Once daily; 5 → 10 mg (23 severe); bedtime default, morning if dreams.",
         "Approved mild-to-SEVERE Alzheimer's (unique among AChEIs).",
         "Commonest adverse effects: GI cholinergic (nausea, diarrhoea), vivid dreams, cramps.",
-        "Key caution: bradycardia/conduction — pulse and ECG vigilance.",
+        "Key caution: bradycardia/conduction; pulse and ECG vigilance.",
         "DLB and Parkinson's dementia: robust guideline use.",
       ],
       pyqConcepts: [
@@ -303,7 +303,7 @@ export const donepezil: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Donepezil develops symptomatic bradycardia / heart block — next best step?",
+        "A patient on Donepezil develops symptomatic bradycardia / heart block: next best step?",
         "When to choose Donepezil over alternatives in its class.",
       ],
     },
@@ -317,9 +317,9 @@ export const donepezil: Drug = {
     psychiatryResidency: {
       advancedPearls: [
         "Once daily is the advantage: the only AChE inhibitor with true once-daily dosing at every strength.",
-        "Bedtime dosing hides the cholinergic GI effects in sleep — but move to MORNING if vivid dreams wake the patient (the classic dosing dance).",
-        "DLB responds dramatically to cholinesterase inhibition — the fluctuating-parkinsonian-hallucinating patient is the responder phenotype.",
-        "The 23 mg dose: modest gain, more adverse effects — for selected severe patients only.",
+        "Bedtime dosing hides the cholinergic GI effects in sleep, but move to MORNING if vivid dreams wake the patient (the classic dosing dance).",
+        "DLB responds dramatically to cholinesterase inhibition. The fluctuating-parkinsonian-hallucinating patient is the responder phenotype.",
+        "The 23 mg dose: modest gain, more adverse effects, for selected severe patients only.",
       ],
     },
   },
@@ -329,23 +329,23 @@ export const donepezil: Drug = {
     "Once daily; 5 → 10 mg (23 severe); bedtime default, morning if dreams.",
     "Approved mild-to-SEVERE Alzheimer's (unique among AChEIs).",
     "Commonest adverse effects: GI cholinergic (nausea, diarrhoea), vivid dreams, cramps.",
-    "Key caution: bradycardia/conduction — pulse and ECG vigilance.",
+    "Key caution: bradycardia/conduction; pulse and ECG vigilance.",
     "DLB and Parkinson's dementia: robust guideline use.",
     "Modest efficacy: months of function preserved, not cure.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — alzheimer's disease — mild to severe",
-      presentation: "A patient presenting with alzheimer's disease — mild to severe, started on Donepezil.",
-      history: "A adult patient presents with a alzheimer's disease — mild to severe picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with alzheimer's disease — mild to severe; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Alzheimer's disease — mild to severe. Differentials are considered and excluded clinically.",
+      title: "First presentation: alzheimer's disease; mild to severe",
+      presentation: "A patient presenting with alzheimer's disease: mild to severe, started on Donepezil.",
+      history: "A adult patient presents with a alzheimer's disease: mild to severe picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with alzheimer's disease: mild to severe; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Alzheimer's disease: mild to severe. Differentials are considered and excluded clinically.",
       rationale: "Donepezil is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (AChE Inhibitor) with strong evidence in this condition.",
       management: "Started at 5 mg once daily at bedtime × 4 weeks, titrated to 10 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Donepezil takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Donepezil takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -354,7 +354,7 @@ export const donepezil: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "AChE Inhibitor comparison — choosing within the class",
+      title: "AChE Inhibitor comparison: choosing within the class",
       primaryDrug: "Donepezil",
       rows: [
         {
@@ -373,7 +373,7 @@ export const donepezil: Drug = {
         },
         {
           attribute: "Half-life",
-          primaryValue: "About 70 hours (long — once-daily and slow washout).",
+          primaryValue: "About 70 hours (long, once-daily and slow washout).",
           comparisons: [
             {
               drug: "Galantamine",
@@ -415,7 +415,7 @@ export const donepezil: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The once-daily AChE inhibitor — Alzheimer's first-line",
+          primaryValue: "The once-daily AChE inhibitor. Alzheimer's first-line",
           comparisons: [
             {
               drug: "Galantamine",
@@ -423,12 +423,12 @@ export const donepezil: Drug = {
             },
             {
               drug: "Rivastigmine",
-              value: "The dual-inhibitor with the patch — and the DLB/PDD approval",
+              value: "The dual-inhibitor with the patch, and the DLB/PDD approval",
             },
           ],
         },
       ],
-      takeaway: "All cholinesterase inhibitors share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All cholinesterase inhibitors share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -437,7 +437,7 @@ export const donepezil: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Donepezil reaches peak plasma concentration and begins acting at its molecular target (Acetylcholinesterase (central inhibition)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Donepezil reaches peak plasma concentration and begins acting at its molecular target (Acetylcholinesterase (central inhibition)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -473,7 +473,7 @@ export const donepezil: Drug = {
   faqs: [
     {
       question: "How long does Donepezil take to work?",
-      answer: "Cognitive benefit over weeks-months; titration steps at 4-week intervals.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Cognitive benefit over weeks-months; titration steps at 4-week intervals.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Donepezil?",
@@ -481,11 +481,11 @@ export const donepezil: Drug = {
     },
     {
       question: "Can I stop Donepezil suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Donepezil habit-forming?",
@@ -493,7 +493,7 @@ export const donepezil: Drug = {
     },
     {
       question: "Can I take Donepezil during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Donepezil may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Donepezil may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -599,7 +599,7 @@ export const donepezil: Drug = {
       note: "Primary molecular target",
     },
     {
-      label: "Alzheimer's disease — mild to severe",
+      label: "Alzheimer's disease: mild to severe",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -635,7 +635,7 @@ export const donepezil: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Donepezil",
+      label: "Patient Guide. Donepezil",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -643,13 +643,13 @@ export const donepezil: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The once-daily cholinesterase inhibitor — the dementia first-line.",
-    summary: "Donepezil is a prescription medicine used to treat alzheimer's disease — mild to severe. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Donepezil is the standard medicine for Alzheimer's dementia: it raises acetylcholine — a memory-related brain chemical that Alzheimer's depletes — by stopping its breakdown. It does not cure the disease but can hold function steadier for months. It is taken once a day at bedtime; its commonest effects are stomach upset and unusually vivid dreams, and your pulse will be checked because it can slow the heart.",
-    sideEffects: "The most common side effects are: nausea, diarrhoea, vomiting, vivid dreams and nightmares, muscle cramps, insomnia, anorexia and weight loss. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Symptomatic bradycardia / heart block and Syncope. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: pulse (bradycardia) (baseline and every review); weight (periodically); cognition and function scores (every 6 months). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The once-daily cholinesterase inhibitor: the dementia first-line.",
+    summary: "Donepezil is a prescription medicine used to treat alzheimer's disease: mild to severe. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Donepezil is the standard medicine for Alzheimer's dementia: it raises acetylcholine (a memory-related brain chemical that Alzheimer's depletes) by stopping its breakdown. It does not cure the disease but can hold function steadier for months. It is taken once a day at bedtime; its commonest effects are stomach upset and unusually vivid dreams, and your pulse will be checked because it can slow the heart.",
+    sideEffects: "The most common side effects are: nausea, diarrhoea, vomiting, vivid dreams and nightmares, muscle cramps, insomnia, anorexia and weight loss. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Symptomatic bradycardia / heart block and Syncope. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: pulse (bradycardia) (baseline and every review); weight (periodically); cognition and function scores (every 6 months). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Beta-blockers, digoxin, calcium channel blockers, Anticholinergics (including many bladder drugs and TCAs), NSAIDs, CYP2D6/3A4 inhibitors. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Beta-blockers, digoxin, calcium channel blockers, Anticholinergics (including many bladder drugs and TCAs), NSAIDs, CYP2D6/3A4 inhibitors. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -673,7 +673,7 @@ export const donepezil: Drug = {
     ],
     typicalDoses: "5 mg nocte → 10 mg after 4 weeks.",
     prescribingScenarios: [
-      "Memory clinics nationwide — the default dementia drug.",
+      "Memory clinics nationwide: the default dementia drug.",
       "DLB and Parkinson's dementia co-management with neurology.",
     ],
     availability: {
@@ -719,7 +719,7 @@ export const donepezil: Drug = {
         name: "Donepezil",
         slug: "donepezil",
         relationship: "This guide",
-        distinguishing: "The once-daily AChE inhibitor — Alzheimer's first-line",
+        distinguishing: "The once-daily AChE inhibitor. Alzheimer's first-line",
       },
       {
         name: "Galantamine",
@@ -731,13 +731,13 @@ export const donepezil: Drug = {
         name: "Rivastigmine",
         slug: "rivastigmine",
         relationship: "Same class (AChE Inhibitor)",
-        distinguishing: "The dual-inhibitor with the patch — and the DLB/PDD approval",
+        distinguishing: "The dual-inhibitor with the patch, and the DLB/PDD approval",
       },
       {
         name: "Tacrine",
         slug: "tacrine",
         relationship: "Same class (AChE Inhibitor)",
-        distinguishing: "The hepatotoxic QID prototype — the first Alzheimer's ChEI",
+        distinguishing: "The hepatotoxic QID prototype: the first Alzheimer's ChEI",
       },
     ],
   },
@@ -885,17 +885,17 @@ export const donepezil: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Donepezil in two sentences.",
-      answer: "Donepezil inhibits acetylcholinesterase in the cerebral cortex, raising synaptic acetylcholine — amplifying the residual cholinergic neurons of Alzheimer's disease. Net effect: Modulation of the described target with the agent's clinical effect.",
+      answer: "Donepezil inhibits acetylcholinesterase in the cerebral cortex, raising synaptic acetylcholine, amplifying the residual cholinergic neurons of Alzheimer's disease. Net effect: Modulation of the described target with the agent's clinical effect.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Donepezil.",
-      answer: "Alzheimer's disease — mild to severe, Dementia with Lewy bodies (symptomatic), Vascular and Parkinson's disease dementia (off-label). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Alzheimer's disease: mild to severe, Dementia with Lewy bodies (symptomatic), Vascular and Parkinson's disease dementia (off-label). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Donepezil and how you would manage it.",
-      answer: "Symptomatic bradycardia / heart block: Cholinergic cardiac conduction slowing — the prescribing caution. Management: ECG and pulse checks; caution with beta-blockers/digoxin.",
+      answer: "Symptomatic bradycardia / heart block: Cholinergic cardiac conduction slowing; the prescribing caution. Management: ECG and pulse checks; caution with beta-blockers/digoxin.",
       topic: "Safety",
     },
     {
@@ -981,7 +981,7 @@ export const donepezil: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1026,7 +1026,7 @@ export const donepezil: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Donepezil works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Donepezil works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1042,7 +1042,7 @@ export const donepezil: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Donepezil safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Donepezil safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1087,7 +1087,7 @@ export const donepezil: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Donepezil follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Donepezil follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1116,7 +1116,7 @@ export const donepezil: Drug = {
       "Stop or reassess when swallowing or function is lost entirely.",
     ],
     overdose: [
-      "Overdose with Donepezil is managed supportively — no specific antidote.",
+      "Overdose with Donepezil is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Donepezil is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1125,7 +1125,7 @@ export const donepezil: Drug = {
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
     pharmacokinetics: [
-      "Half-life: About 70 hours (long — once-daily and slow washout)..",
+      "Half-life: About 70 hours (long, once-daily and slow washout)..",
       "Metabolism: Hepatic..",
     ],
     doNotUse: ["Known hypersensitivity to this agent."],
@@ -1157,15 +1157,15 @@ export const donepezil: Drug = {
     ],
     pearls: [
       "Once daily is the advantage: the only AChE inhibitor with true once-daily dosing at every strength.",
-      "Bedtime dosing hides the cholinergic GI effects in sleep — but move to MORNING if vivid dreams wake the patient (the classic dosing dance).",
-      "DLB responds dramatically to cholinesterase inhibition — the fluctuating-parkinsonian-hallucinating patient is the responder phenotype.",
-      "The 23 mg dose: modest gain, more adverse effects — for selected severe patients only.",
+      "Bedtime dosing hides the cholinergic GI effects in sleep, but move to MORNING if vivid dreams wake the patient (the classic dosing dance).",
+      "DLB responds dramatically to cholinesterase inhibition. The fluctuating-parkinsonian-hallucinating patient is the responder phenotype.",
+      "The 23 mg dose: modest gain, more adverse effects, for selected severe patients only.",
       "Bradycardia is the quiet danger: pulse at every review, ECG if any conduction disease.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

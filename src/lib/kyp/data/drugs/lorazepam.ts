@@ -23,14 +23,14 @@ export const lorazepam: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Anxiolytics & Sedatives", "Benzodiazepines", "Lorazepam"],
   /* ---- Hero / summary ---- */
-  tagline: "The no-metabolite benzodiazepine — the elder-safe, liver-safe, status-epilepticus first line.",
-  summary: "Lorazepam is the medium-acting benzodiazepine (half-life 10–20 h) whose signature is metabolic simplicity: it is glucuronidated directly with NO active metabolites and no significant CYP involvement — making it the benzo of choice in liver disease, in the elderly, and with interacting drugs. Its IM absorption is reliable (the only benzo that absorbs well intramuscularly), and its combination of rapid onset + intermediate duration made it the first-line drug for status epilepticus and acute agitation. Dependence risk is the class standard; the propylene-glycol carrier of large IV doses causes its own toxicity.",
+  tagline: "The no-metabolite benzodiazepine: the elder-safe, liver-safe, status-epilepticus first line.",
+  summary: "Lorazepam is the medium-acting benzodiazepine (half-life 10–20 h) whose signature is metabolic simplicity: it is glucuronidated directly with NO active metabolites and no significant CYP involvement, making it the benzo of choice in liver disease, in the elderly, and with interacting drugs. Its IM absorption is reliable (the only benzo that absorbs well intramuscularly), and its combination of rapid onset + intermediate duration made it the first-line drug for status epilepticus and acute agitation. Dependence risk is the class standard; the propylene-glycol carrier of large IV doses causes its own toxicity.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Lorazepam — from its molecular target (GABA-A receptor benzodiazepine site (PAM)) to clinical effect.",
+    "Explain the mechanism of action of Lorazepam, from its molecular target (GABA-A receptor benzodiazepine site (PAM)) to clinical effect.",
     "List the FDA-approved and off-label uses of Lorazepam.",
     "Predict the common and serious side effects of Lorazepam from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Lorazepam.",
@@ -38,19 +38,19 @@ export const lorazepam: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Lorazepam is a GABA-A positive allosteric modulator — the class mechanism — with direct glucuronidation and no active metabolites: cleaner kinetics, identical pharmacodynamics.",
+    summary: "Lorazepam is a GABA-A positive allosteric modulator (the class mechanism) with direct glucuronidation and no active metabolites: cleaner kinetics, identical pharmacodynamics.",
     molecularTarget: "GABA-A receptor benzodiazepine site (PAM)",
     effect: "Anxiolysis, sedation, anticonvulsant action, and amnesia with intermediate duration (10–20 h half-life).",
     steps: [
-      "Binds the benzodiazepine site on GABA-A — increases chloride-channel opening frequency when GABA is present (amplified natural inhibition).",
-      "Glucuronidation to inactive lorazepam glucuronide — no CYP enzymes, no active metabolites.",
+      "Binds the benzodiazepine site on GABA-A: increases chloride-channel opening frequency when GABA is present (amplified natural inhibition).",
+      "Glucuronidation to inactive lorazepam glucuronide: no CYP enzymes, no active metabolites.",
       "Intermediate half-life (10–20 h) allows twice-daily dosing without the accumulation of diazepam.",
-      "Reliable IM absorption (unique among benzos) — onset 15–30 min IM; the agitation-route advantage.",
+      "Reliable IM absorption (unique among benzos): onset 15–30 min IM; the agitation-route advantage.",
     ],
     pharmacokinetics: "Oral peak ~2 h; IM 15–30 min (reliable); IV 1–5 min. No active metabolites.",
     halfLife: "10–20 hours.",
-    activeMetabolite: "None — glucuronide is inactive.",
-    metabolism: "Direct glucuronidation (UGT2B15) — the CYP-free benzodiazepine.",
+    activeMetabolite: "None: glucuronide is inactive.",
+    metabolism: "Direct glucuronidation (UGT2B15): the CYP-free benzodiazepine.",
     excretion: "Renal (glucuronide).",
   },
   /* ---- Mechanism visual flow ---- */
@@ -110,12 +110,12 @@ export const lorazepam: Drug = {
         label: "inhibits firing",
       },
     ],
-    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly — which is why their effect is powerful but limited by dependence risk.",
+    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly, which is why their effect is powerful but limited by dependence risk.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["GABA"],
   receptors: [
-    "GABA-A receptor (benzodiazepine site — PAM)",
+    "GABA-A receptor (benzodiazepine site. PAM)",
   ],
   brainRegionIds: ["amygdala", "prefrontal-cortex"],
   pathwayIds: [],
@@ -134,7 +134,7 @@ export const lorazepam: Drug = {
     {
       name: "Acute agitation (IM)",
       status: "off-label",
-      description: "The best-absorbed IM benzo — 0.5–2 mg IM for rapid calming.",
+      description: "The best-absorbed IM benzo: 0.5–2 mg IM for rapid calming.",
     },
     {
       name: "Alcohol withdrawal",
@@ -149,7 +149,7 @@ export const lorazepam: Drug = {
     {
       name: "Catatonia (with haloperidol or alone)",
       status: "guideline",
-      description: "Lorazepam challenge (1–2 mg) is both diagnostic and therapeutic — the catatonia first move.",
+      description: "Lorazepam challenge (1–2 mg) is both diagnostic and therapeutic: the catatonia first move.",
     },
     {
       name: "Insomnia (short-term)",
@@ -176,7 +176,7 @@ export const lorazepam: Drug = {
   ],
   blackBoxWarnings: [
     {
-      title: "Risks with opioids — sedation, respiratory depression, death",
+      title: "Risks with opioids: sedation, respiratory depression, death",
       text: "Concurrent benzodiazepine and opioid use causes profound sedation, respiratory depression, coma, and death. Lowest doses, shortest duration, explicit patient warning.",
     },
     {
@@ -197,7 +197,7 @@ export const lorazepam: Drug = {
       name: "Anterograde amnesia",
       frequency: "common",
       severity: "moderate",
-      description: "Especially at 2 mg+ — used deliberately for procedures.",
+      description: "Especially at 2 mg+: used deliberately for procedures.",
       management: "Counsel on post-dose restrictions.",
     },
     {
@@ -241,7 +241,7 @@ export const lorazepam: Drug = {
       name: "Paradoxical reactions",
       frequency: "rare",
       severity: "severe",
-      description: "Excitement/disinhibition — children, elderly, developmental disability.",
+      description: "Excitement/disinhibition: children, elderly, developmental disability.",
       management: "Stop.",
     },
   ],
@@ -279,7 +279,7 @@ export const lorazepam: Drug = {
     {
       drug: "Valproate",
       severity: "major",
-      mechanism: "Inhibits lorazepam glucuronidation — levels rise.",
+      mechanism: "Inhibits lorazepam glucuronidation: levels rise.",
       action: "Reduce lorazepam dose ~50% with valproate.",
     },
     {
@@ -292,53 +292,53 @@ export const lorazepam: Drug = {
   pregnancy: {
     legacyCategory: "D",
     summary: "Oral-cleft signal (small absolute excess) in first trimester and floppy infant syndrome near term as with the class; short courses at the lowest dose when unavoidable.",
-    lactation: "Minimal metabolite burden but the drug passes into milk — infant sedation possible; usually considered acceptable at low doses with monitoring.",
+    lactation: "Minimal metabolite burden but the drug passes into milk: infant sedation possible; usually considered acceptable at low doses with monitoring.",
   },
-  renalAdjustment: "Glucuronide excreted renally; generally safe — standard caution in severe impairment.",
+  renalAdjustment: "Glucuronide excreted renally; generally safe: standard caution in severe impairment.",
   hepaticAdjustment: "The liver-friendly benzo: glucuronidation preserved even in cirrhosis; dose reduction still prudent in severe disease.",
   /* ---- Education ---- */
-  patientExplanation: "Lorazepam is a calming medicine that works on the brain's natural relaxing chemical (GABA). It is the preferred member of its family in older people and in liver disease because the body clears it simply and completely. It calms severe anxiety, agitation, and seizures, and it is used before procedures. Like all medicines in this family it is meant for short courses — regular use for more than a few weeks causes dependence.",
+  patientExplanation: "Lorazepam is a calming medicine that works on the brain's natural relaxing chemical (GABA). It is the preferred member of its family in older people and in liver disease because the body clears it simply and completely. It calms severe anxiety, agitation, and seizures, and it is used before procedures. Like all medicines in this family it is meant for short courses: regular use for more than a few weeks causes dependence.",
   patientEducationPoints: [
-    "This medicine is for short-term or carefully planned use — it can cause dependence within weeks of regular use.",
-    "Never mix it with opioid painkillers or alcohol — the combination can stop breathing.",
+    "This medicine is for short-term or carefully planned use. It can cause dependence within weeks of regular use.",
+    "Never mix it with opioid painkillers or alcohol: the combination can stop breathing.",
     "Do not drive until you know how it affects you.",
-    "Stopping must be gradual — never stop suddenly after regular use.",
-    "Benefit from Lorazepam builds over weeks — do not judge it in the first days.",
+    "Stopping must be gradual, never stop suddenly after regular use.",
+    "Benefit from Lorazepam builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "Glucuronidation-only metabolism: no active metabolites, no CYP interactions — the benzo for liver disease, the elderly, and complex medication lists (one exception: valproate inhibits glucuronidation — halve the dose).",
-    "The only reliably IM-absorbed benzo — the agitation route advantage.",
-    "Status epilepticus first line: diazepam enters faster but redistributes away; lorazepam STAYS — the longer seizure-free interval wins.",
-    "Catatonia: 1–2 mg lorazepam challenge — diagnosis and treatment in one move.",
+    "Glucuronidation-only metabolism: no active metabolites, no CYP interactions (the benzo for liver disease, the elderly, and complex medication lists (one exception: valproate inhibits glucuronidation) halve the dose).",
+    "The only reliably IM-absorbed benzo: the agitation route advantage.",
+    "Status epilepticus first line: diazepam enters faster but redistributes away; lorazepam STAYS: the longer seizure-free interval wins.",
+    "Catatonia: 1–2 mg lorazepam challenge; diagnosis and treatment in one move.",
     "IM + haloperidol = the classic acute agitation pair (beware additive sedation; separate from IM olanzapine in time).",
-    "Propylene glycol: the hidden dose-limit in high-dose IV use — acidosis, renal failure.",
+    "Propylene glycol: the hidden dose-limit in high-dose IV use; acidosis, renal failure.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Lorazepam: Lorazepam is a GABA-A positive allosteric modulator — the class mechanism — with direct glucuronidation and no active metabolites: cleaner kinetics, identical pharmacodynamics.",
-        "Uses of Lorazepam: Anxiety disorders / short-term anxiety; Status epilepticus — first-line; Acute agitation (IM); Alcohol withdrawal",
+        "Mechanism of Lorazepam: Lorazepam is a GABA-A positive allosteric modulator (the class mechanism) with direct glucuronidation and no active metabolites: cleaner kinetics, identical pharmacodynamics.",
+        "Uses of Lorazepam: Anxiety disorders / short-term anxiety; Status epilepticus: first-line; Acute agitation (IM); Alcohol withdrawal",
         "Mechanism: GABA-A PAM (class-standard).",
-        "Metabolism: direct GLUCURONIDATION — no active metabolites, no CYP (the elder/liver-safe benzo).",
+        "Metabolism: direct GLUCURONIDATION; no active metabolites, no CYP (the elder/liver-safe benzo).",
       ],
       practical: [
         "Prescribe Lorazepam for anxiety disorders / short-term anxiety with dose, timing, and duration.",
         "Outline the monitoring plan: Respiratory status (IV use) (Continuous during IV dosing); Dependence review (Every visit for repeat prescriptions); Acid-base and renal function (high-dose IV) (With infusions/large repeated IV doses)",
       ],
       longAnswer: [
-        "Lorazepam: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Lorazepam: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: GABA-A PAM (class-standard).",
-        "Metabolism: direct GLUCURONIDATION — no active metabolites, no CYP (the elder/liver-safe benzo).",
+        "Metabolism: direct GLUCURONIDATION; no active metabolites, no CYP (the elder/liver-safe benzo).",
       ],
     },
     neetPg: {
       highYield: [
         "Mechanism: GABA-A PAM (class-standard).",
-        "Metabolism: direct GLUCURONIDATION — no active metabolites, no CYP (the elder/liver-safe benzo).",
+        "Metabolism: direct GLUCURONIDATION; no active metabolites, no CYP (the elder/liver-safe benzo).",
         "Half-life 10–20 h; reliable IM absorption (unique in class).",
         "First-line: status epilepticus (IV), acute agitation (IM), catatonia (challenge).",
-        "Interaction exception: valproate inhibits glucuronidation — halve lorazepam.",
+        "Interaction exception: valproate inhibits glucuronidation; halve lorazepam.",
         "Boxed warnings: opioid combination + dependence/withdrawal.",
       ],
       pyqConcepts: [
@@ -349,7 +349,7 @@ export const lorazepam: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Lorazepam develops respiratory depression (opioids/overdose/iv) — next best step?",
+        "A patient on Lorazepam develops respiratory depression (opioids/overdose/iv): next best step?",
         "When to choose Lorazepam over alternatives in its class.",
       ],
     },
@@ -362,9 +362,9 @@ export const lorazepam: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The simple-kinetics benzo: no metabolites, no CYP — the safe default in complex patients.",
-        "Diazepam enters faster but lorazepam STAYS — the status-epilepticus logic.",
-        "Catatonia responds to lorazepam — 1–2 mg is both test and treatment.",
+        "The simple-kinetics benzo: no metabolites, no CYP; the safe default in complex patients.",
+        "Diazepam enters faster but lorazepam STAYS: the status-epilepticus logic.",
+        "Catatonia responds to lorazepam: 1–2 mg is both test and treatment.",
         "Valproate doubles lorazepam: the one interaction it can't escape.",
       ],
     },
@@ -372,17 +372,17 @@ export const lorazepam: Drug = {
   memoryTricks: [],
   highYieldSummary: [
     "Mechanism: GABA-A PAM (class-standard).",
-    "Metabolism: direct GLUCURONIDATION — no active metabolites, no CYP (the elder/liver-safe benzo).",
+    "Metabolism: direct GLUCURONIDATION; no active metabolites, no CYP (the elder/liver-safe benzo).",
     "Half-life 10–20 h; reliable IM absorption (unique in class).",
     "First-line: status epilepticus (IV), acute agitation (IM), catatonia (challenge).",
-    "Interaction exception: valproate inhibits glucuronidation — halve lorazepam.",
+    "Interaction exception: valproate inhibits glucuronidation; halve lorazepam.",
     "Boxed warnings: opioid combination + dependence/withdrawal.",
     "High-dose IV: propylene glycol carrier toxicity (acidosis, renal failure).",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — anxiety disorders / short-term anxiety",
+      title: "First presentation: anxiety disorders / short-term anxiety",
       presentation: "A patient presenting with anxiety disorders / short-term anxiety, started on Lorazepam.",
       history: "A adult patient presents with a anxiety disorders / short-term anxiety picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with anxiety disorders / short-term anxiety; physical examination and baseline investigations are unremarkable.",
@@ -391,7 +391,7 @@ export const lorazepam: Drug = {
       management: "Started at 0.5–1 mg twice daily, titrated to 1–4 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Lorazepam takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Lorazepam takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -400,7 +400,7 @@ export const lorazepam: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Benzodiazepine comparison — choosing within the class",
+      title: "Benzodiazepine comparison: choosing within the class",
       primaryDrug: "Lorazepam",
       rows: [
         {
@@ -471,29 +471,29 @@ export const lorazepam: Drug = {
         },
         {
           attribute: "Sedation",
-          primaryValue: "Moderate — intermediate duration limits hangover vs diazepam.",
+          primaryValue: "Moderate: intermediate duration limits hangover vs diazepam.",
           comparisons: [
             {
               drug: "Alprazolam",
-              value: "High — potency-driven.",
+              value: "High: potency-driven.",
             },
             {
               drug: "Clonazepam",
-              value: "High — the dose-limiting effect.",
+              value: "High: the dose-limiting effect.",
             },
             {
               drug: "Diazepam",
-              value: "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+              value: "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
             },
             {
               drug: "Chlordiazepoxide",
-              value: "High — useful in withdrawal.",
+              value: "High: useful in withdrawal.",
             },
           ],
         },
         {
           attribute: "Unique niche",
-          primaryValue: "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+          primaryValue: "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo",
           comparisons: [
             {
               drug: "Alprazolam",
@@ -501,20 +501,20 @@ export const lorazepam: Drug = {
             },
             {
               drug: "Clonazepam",
-              value: "The long-acting anticonvulsant benzo — seizures and panic",
+              value: "The long-acting anticonvulsant benzo: seizures and panic",
             },
             {
               drug: "Diazepam",
-              value: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+              value: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
             },
             {
               drug: "Chlordiazepoxide",
-              value: "Alcohol withdrawal tablet — the founding benzo",
+              value: "Alcohol withdrawal tablet: the founding benzo",
             },
           ],
         },
       ],
-      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -523,7 +523,7 @@ export const lorazepam: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Lorazepam reaches peak plasma concentration and begins acting at its molecular target (GABA-A receptor benzodiazepine site (PAM)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Lorazepam reaches peak plasma concentration and begins acting at its molecular target (GABA-A receptor benzodiazepine site (PAM)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -559,7 +559,7 @@ export const lorazepam: Drug = {
   faqs: [
     {
       question: "How long does Lorazepam take to work?",
-      answer: "IV: 1–5 minutes. IM: 15–30 min. Oral: 30–60 min (peak ~2 h).. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "IV: 1–5 minutes. IM: 15–30 min. Oral: 30–60 min (peak ~2 h).. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Lorazepam?",
@@ -567,19 +567,19 @@ export const lorazepam: Drug = {
     },
     {
       question: "Can I stop Lorazepam suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Lorazepam habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Lorazepam exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Lorazepam exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Lorazepam during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Lorazepam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Lorazepam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -729,7 +729,7 @@ export const lorazepam: Drug = {
       note: "Key indication",
     },
     {
-      label: "Status epilepticus — first-line",
+      label: "Status epilepticus: first-line",
       type: "condition",
       href: "#clinical-uses",
       note: "Used clinically",
@@ -759,7 +759,7 @@ export const lorazepam: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Lorazepam",
+      label: "Patient Guide. Lorazepam",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -767,13 +767,13 @@ export const lorazepam: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The no-metabolite benzodiazepine — the elder-safe, liver-safe, status-epilepticus first line.",
-    summary: "Lorazepam is a prescription medicine used to treat anxiety disorders / short-term anxiety. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Lorazepam is a calming medicine that works on the brain's natural relaxing chemical (GABA). It is the preferred member of its family in older people and in liver disease because the body clears it simply and completely. It calms severe anxiety, agitation, and seizures, and it is used before procedures. Like all medicines in this family it is meant for short courses — regular use for more than a few weeks causes dependence.",
-    sideEffects: "The most common side effects are: sedation and drowsiness, anterograde amnesia, ataxia and weakness, dependence and rebound anxiety. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression (opioids/overdose/IV) and Withdrawal seizures. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: respiratory status (iv use) (continuous during iv dosing); dependence review (every visit for repeat prescriptions); acid-base and renal function (high-dose iv) (with infusions/large repeated iv doses). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The no-metabolite benzodiazepine: the elder-safe, liver-safe, status-epilepticus first line.",
+    summary: "Lorazepam is a prescription medicine used to treat anxiety disorders / short-term anxiety. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Lorazepam is a calming medicine that works on the brain's natural relaxing chemical (GABA). It is the preferred member of its family in older people and in liver disease because the body clears it simply and completely. It calms severe anxiety, agitation, and seizures, and it is used before procedures. Like all medicines in this family it is meant for short courses: regular use for more than a few weeks causes dependence.",
+    sideEffects: "The most common side effects are: sedation and drowsiness, anterograde amnesia, ataxia and weakness, dependence and rebound anxiety. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression (opioids/overdose/IV) and Withdrawal seizures. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: respiratory status (iv use) (continuous during iv dosing); dependence review (every visit for repeat prescriptions); acid-base and renal function (high-dose iv) (with infusions/large repeated iv doses). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Valproate, Probenecid. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Valproate, Probenecid. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -843,7 +843,7 @@ export const lorazepam: Drug = {
         name: "Lorazepam",
         slug: "lorazepam",
         relationship: "This guide",
-        distinguishing: "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+        distinguishing: "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo",
       },
       {
         name: "Alprazolam",
@@ -855,43 +855,43 @@ export const lorazepam: Drug = {
         name: "Clonazepam",
         slug: "clonazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "The long-acting anticonvulsant benzo — seizures and panic",
+        distinguishing: "The long-acting anticonvulsant benzo: seizures and panic",
       },
       {
         name: "Diazepam",
         slug: "diazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+        distinguishing: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
       },
       {
         name: "Chlordiazepoxide",
         slug: "chlordiazepoxide",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Alcohol withdrawal tablet — the founding benzo",
+        distinguishing: "Alcohol withdrawal tablet: the founding benzo",
       },
       {
         name: "Midazolam",
         slug: "midazolam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Oxazepam",
         slug: "oxazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Clorazepate",
         slug: "clorazepate",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Loflazepate",
         slug: "loflazepate",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
     ],
   },
@@ -1039,12 +1039,12 @@ export const lorazepam: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Lorazepam in two sentences.",
-      answer: "Lorazepam is a GABA-A positive allosteric modulator — the class mechanism — with direct glucuronidation and no active metabolites: cleaner kinetics, identical pharmacodynamics. Net effect: Anxiolysis, sedation, anticonvulsant action, and amnesia with intermediate duration (10–20 h half-life).",
+      answer: "Lorazepam is a GABA-A positive allosteric modulator (the class mechanism) with direct glucuronidation and no active metabolites: cleaner kinetics, identical pharmacodynamics. Net effect: Anxiolysis, sedation, anticonvulsant action, and amnesia with intermediate duration (10–20 h half-life).",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Lorazepam.",
-      answer: "Anxiety disorders / short-term anxiety, Status epilepticus — first-line, Acute agitation (IM), Alcohol withdrawal. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Anxiety disorders / short-term anxiety, Status epilepticus: first-line, Acute agitation (IM), Alcohol withdrawal. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -1059,7 +1059,7 @@ export const lorazepam: Drug = {
     },
     {
       question: "Share one clinical pearl about Lorazepam that separates safe prescribers from unsafe ones.",
-      answer: "The simple-kinetics benzo: no metabolites, no CYP — the safe default in complex patients.",
+      answer: "The simple-kinetics benzo: no metabolites, no CYP; the safe default in complex patients.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1135,7 +1135,7 @@ export const lorazepam: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1180,7 +1180,7 @@ export const lorazepam: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Lorazepam works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Lorazepam works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1196,7 +1196,7 @@ export const lorazepam: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Lorazepam safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Lorazepam safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1241,7 +1241,7 @@ export const lorazepam: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Lorazepam follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Lorazepam follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1252,7 +1252,7 @@ export const lorazepam: Drug = {
       "Dose reduction or timing change before discontinuation.",
     ],
     weightGain: "See product information and class comparison.",
-    sedation: "Moderate — intermediate duration limits hangover vs diazepam.",
+    sedation: "Moderate: intermediate duration limits hangover vs diazepam.",
     dosing: [
       {
         indication: "Anxiety (short course)",
@@ -1306,20 +1306,20 @@ export const lorazepam: Drug = {
       "Sublingual for panic speed without injection.",
       "The valproate check: halve lorazepam when starting valproate.",
       "IV infusion limits: watch propylene glycol (acidosis) beyond ~8 mg/h for extended periods.",
-      "Catatonia: the challenge that treats — 1–2 mg and watch for the awakening.",
+      "Catatonia: the challenge that treats; 1–2 mg and watch for the awakening.",
     ],
     overdose: [
-      "Overdose with Lorazepam is managed supportively — no specific antidote.",
+      "Overdose with Lorazepam is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Lorazepam is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
     pharmacokinetics: [
       "Half-life: 10–20 hours..",
-      "Metabolism: Direct glucuronidation (UGT2B15) — the CYP-free benzodiazepine..",
+      "Metabolism: Direct glucuronidation (UGT2B15); the CYP-free benzodiazepine..",
     ],
     doNotUse: ["Known hypersensitivity to this agent."],
     specialPopulations: [
@@ -1343,7 +1343,7 @@ export const lorazepam: Drug = {
       },
     ],
     potentialAdvantages: [
-      "Clean metabolism — elderly, liver disease, polypharmacy safe.",
+      "Clean metabolism: elderly, liver disease, polypharmacy safe.",
       "Reliable IM route.",
       "Status-epilepticus first line.",
       "Sublingual speed. Catatonia indication.",
@@ -1356,15 +1356,15 @@ export const lorazepam: Drug = {
     ],
     primaryTargetSymptoms: ["Acute anxiety and agitation", "Seizures (status)", "Catatonia", "Alcohol withdrawal", "Pre-procedural sedation"],
     pearls: [
-      "The simple-kinetics benzo: no metabolites, no CYP — the safe default in complex patients.",
-      "Diazepam enters faster but lorazepam STAYS — the status-epilepticus logic.",
-      "Catatonia responds to lorazepam — 1–2 mg is both test and treatment.",
+      "The simple-kinetics benzo: no metabolites, no CYP; the safe default in complex patients.",
+      "Diazepam enters faster but lorazepam STAYS: the status-epilepticus logic.",
+      "Catatonia responds to lorazepam: 1–2 mg is both test and treatment.",
       "Valproate doubles lorazepam: the one interaction it can't escape.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

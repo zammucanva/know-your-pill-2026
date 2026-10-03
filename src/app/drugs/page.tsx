@@ -43,7 +43,7 @@ const classGroups = Array.from(new Set(drugs.map((d) => d.drugClassLabel)));
 export const metadata: Metadata = {
   title: "Medication Library · Know Your Pill",
   description:
-    `${drugs.length} psychiatric medications, structured the same way — mechanism, receptors, indications, side effects, monitoring, interactions, and clinical cases. Browse the full KYP medication library.`,
+    `${drugs.length} psychiatric medications, structured the same way: mechanism, receptors, indications, side effects, monitoring, interactions, and clinical cases. Browse the full KYP medication library.`,
   keywords: [
     "medication library",
     "psychiatric medications",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Medication Library · Know Your Pill",
     description:
-      `${drugs.length} psychiatric medications, structured the same way — from mechanism to clinical cases.`,
+      `${drugs.length} psychiatric medications, structured the same way, from mechanism to clinical cases.`,
     type: "website",
     siteName: "Know Your Pill",
   },
@@ -165,7 +165,7 @@ export default function MedicationLibraryPage() {
                     <p className="mt-3 max-w-2xl text-body-sm text-muted-foreground leading-relaxed">
                       {family.classes.length} classes ·{" "}
                       {taxonomyFamilyMedicationCount(family)} medication guides.
-                      Browse by class, then open any guide — every medication
+                      Browse by class, then open any guide: every medication
                       follows the same structure.
                     </p>
                   </Reveal>

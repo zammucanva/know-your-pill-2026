@@ -23,14 +23,14 @@ export const diphenhydramine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Anxiolytics & Sedatives", "Antihistamines", "Diphenhydramine"],
   /* ---- Hero / summary ---- */
-  tagline: "The ubiquitous sedating antihistamine — OTC sleep aid, EPS rescue, and anticholinergic cautionary tale.",
+  tagline: "The ubiquitous sedating antihistamine. OTC sleep aid, EPS rescue, and anticholinergic cautionary tale.",
   summary: "Diphenhydramine is the first-generation antihistamine found in every medicine cabinet: an H1 blocker with brain-penetrant sedation used OTC for insomnia and allergies, and by prescription as the acute-dystonia rescue drug (IV/IM) alongside its oral antihistamine roles. Its anticholinergic burden in the elderly, abuse-tolerance ceiling as a hypnotic, and confusion/urinary retention risks define its modern cautions; as an EPS antidote it remains an emergency-department classic.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Diphenhydramine — from its molecular target (H1 histamine receptor (first-generation antagonist); muscarinic (anticholinergic) effects at therapeutic doses) to clinical effect.",
+    "Explain the mechanism of action of Diphenhydramine, from its molecular target (H1 histamine receptor (first-generation antagonist); muscarinic (anticholinergic) effects at therapeutic doses) to clinical effect.",
     "List the FDA-approved and off-label uses of Diphenhydramine.",
     "Predict the common and serious side effects of Diphenhydramine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Diphenhydramine.",
@@ -38,15 +38,15 @@ export const diphenhydramine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Diphenhydramine blocks central H1 receptors (sedation) with clinically meaningful antimuscarinic effects — sedation for sleep and allergy, anticholinergic blockade for acute dystonia rescue.",
+    summary: "Diphenhydramine blocks central H1 receptors (sedation) with clinically meaningful antimuscarinic effects: sedation for sleep and allergy, anticholinergic blockade for acute dystonia rescue.",
     molecularTarget: "H1 histamine receptor (first-generation antagonist); muscarinic (anticholinergic) effects at therapeutic doses",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Diphenhydramine blocks central H1 receptors (sedation) with clinically meaningful antimuscarinic effects — sedation for sleep and allergy, anticholinergic blockade for acute dystonia rescue.",
+      "Diphenhydramine blocks central H1 receptors (sedation) with clinically meaningful antimuscarinic effects: sedation for sleep and allergy, anticholinergic blockade for acute dystonia rescue.",
       "The target engagement translates into the clinical effect.",
       "Practical use follows the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 4-9 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 4-9 hours. See mechanism and prescriber sections.",
     halfLife: "4-9 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -75,7 +75,7 @@ export const diphenhydramine: Drug = {
       {
         id: "effect",
         label: "Sedation + anxiolysis",
-        sublabel: "Not an anxiolytic receptor target per se — sedation does the work",
+        sublabel: "Not an anxiolytic receptor target per se: sedation does the work",
         variant: "output",
       },
     ],
@@ -97,13 +97,13 @@ export const diphenhydramine: Drug = {
         label: "produces",
       },
     ],
-    caption: "Antihistamine anxiolysis is really antihistamine sedation — effective short-term, but tolerance develops and next-day grogginess is common.",
+    caption: "Antihistamine anxiolysis is really antihistamine sedation: effective short-term, but tolerance develops and next-day grogginess is common.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Histamine", "Acetylcholine (ACh)"],
   receptors: [
     "H1 receptor (antagonist)",
-    "Muscarinic receptors (antagonism — adverse and therapeutic)",
+    "Muscarinic receptors (antagonism, adverse and therapeutic)",
   ],
   brainRegionIds: ["prefrontal-cortex"],
   pathwayIds: [],
@@ -117,12 +117,12 @@ export const diphenhydramine: Drug = {
     {
       name: "Acute dystonic reactions and drug-induced parkinsonism (adjunct)",
       status: "guideline",
-      description: "IV/IM diphenhydramine reverses acute dystonia within minutes — the emergency classic.",
+      description: "IV/IM diphenhydramine reverses acute dystonia within minutes: the emergency classic.",
     },
     {
       name: "Insomnia (short-term, OTC)",
       status: "fda-approved",
-      description: "Sedation used deliberately — tolerance builds fast.",
+      description: "Sedation used deliberately: tolerance builds fast.",
     },
     {
       name: "Motion sickness and nausea",
@@ -161,14 +161,14 @@ export const diphenhydramine: Drug = {
       name: "Dry mouth, constipation, urinary retention",
       frequency: "common",
       severity: "moderate",
-      description: "Anticholinergic effects — amplified in the elderly.",
+      description: "Anticholinergic effects: amplified in the elderly.",
       management: "Avoid in elderly cognitive impairment; hydrate.",
     },
     {
       name: "Confusion (elderly)",
       frequency: "common",
       severity: "severe",
-      description: "Anticholinergic delirium — the classic geriatric adverse effect.",
+      description: "Anticholinergic delirium: the classic geriatric adverse effect.",
       management: "Avoid in over-65s; delirium review.",
     },
     {
@@ -191,7 +191,7 @@ export const diphenhydramine: Drug = {
       name: "Anticholinergic delirium (elderly, overdose)",
       frequency: "uncommon",
       severity: "life-threatening",
-      description: "Confusion, agitation, hyperthermia, urinary retention — full antimuscarinic toxicity.",
+      description: "Confusion, agitation, hyperthermia, urinary retention: full antimuscarinic toxicity.",
       management: "Avoid in elderly; supportive care; physostigmine rarely.",
     },
     {
@@ -228,7 +228,7 @@ export const diphenhydramine: Drug = {
     {
       drug: "Other anticholinergics (bladder drugs, TCAs, cyclobenzaprine, some antipsychotics)",
       severity: "major",
-      mechanism: "Cumulative anticholinergic burden — delirium, ileus.",
+      mechanism: "Cumulative anticholinergic burden: delirium, ileus.",
       action: "Audit the whole list; avoid in elderly.",
     },
     {
@@ -246,31 +246,31 @@ export const diphenhydramine: Drug = {
   ],
   pregnancy: {
     legacyCategory: "B",
-    summary: "Long antihistamine pregnancy record without teratogenic signal — short-course use acceptable when needed.",
-    lactation: "Excreted in milk — infant sedation; caution or avoid.",
+    summary: "Long antihistamine pregnancy record without teratogenic signal: short-course use acceptable when needed.",
+    lactation: "Excreted in milk: infant sedation; caution or avoid.",
   },
   renalAdjustment: "Reduce dose in renal impairment (some markets).",
   hepaticAdjustment: "Standard caution.",
   /* ---- Education ---- */
   patientExplanation: "Diphenhydramine is the antihistamine in most over-the-counter sleep and allergy products: it causes drowsiness (used for both sleep and allergies) and it is also given by injection in hospitals to reverse sudden muscle spasm reactions from certain medicines. In older people it can cause confusion and should generally be avoided.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Diphenhydramine builds over weeks — do not judge it in the first days.",
+    "Benefit from Diphenhydramine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The emergency classic: IV diphenhydramine reverses an acute dystonia in minutes — the drug that ends the oculogyric crisis on camera.",
-    "The anticholinergic paradox: an OTC sleep aid that causes delirium in exactly the population that buys it — Beers-criteria caution in over-65s.",
+    "The emergency classic: IV diphenhydramine reverses an acute dystonia in minutes; the drug that ends the oculogyric crisis on camera.",
+    "The anticholinergic paradox: an OTC sleep aid that causes delirium in exactly the population that buys it. Beers-criteria caution in over-65s.",
     "Tolerance is fast: nightly use as a hypnotic is a losing game within 1-2 weeks.",
-    "The abuse-tolerance footnote: massive-dose misuse for deliriant effects exists — the anticholinergic ceiling as a hazard.",
-    "Hidden in everything: combination cold/flu products — the accidental double-dose patients never counted.",
+    "The abuse-tolerance footnote: massive-dose misuse for deliriant effects exists; the anticholinergic ceiling as a hazard.",
+    "Hidden in everything: combination cold/flu products; the accidental double-dose patients never counted.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Diphenhydramine: Diphenhydramine blocks central H1 receptors (sedation) with clinically meaningful antimuscarinic effects — sedation for sleep and allergy, anticholinergic blockade for acute dystonia rescue.",
+        "Mechanism of Diphenhydramine: Diphenhydramine blocks central H1 receptors (sedation) with clinically meaningful antimuscarinic effects; sedation for sleep and allergy, anticholinergic blockade for acute dystonia rescue.",
         "Uses of Diphenhydramine: Allergic rhinitis, urticaria, allergic reactions; Acute dystonic reactions and drug-induced parkinsonism (adjunct); Insomnia (short-term, OTC); Motion sickness and nausea",
         "Mechanism: first-generation H1 antagonist + clinically significant ANTICHOLINERGIC effects.",
         "Uses: allergy, insomnia (short-term), motion sickness, and ACUTE DYSTONIA rescue (IV).",
@@ -280,7 +280,7 @@ export const diphenhydramine: Drug = {
         "Outline the monitoring plan: Anticholinergic burden audit (elderly) (At prescribing)",
       ],
       longAnswer: [
-        "Diphenhydramine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Diphenhydramine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: first-generation H1 antagonist + clinically significant ANTICHOLINERGIC effects.",
         "Uses: allergy, insomnia (short-term), motion sickness, and ACUTE DYSTONIA rescue (IV).",
       ],
@@ -289,7 +289,7 @@ export const diphenhydramine: Drug = {
       highYield: [
         "Mechanism: first-generation H1 antagonist + clinically significant ANTICHOLINERGIC effects.",
         "Uses: allergy, insomnia (short-term), motion sickness, and ACUTE DYSTONIA rescue (IV).",
-        "Elderly: anticholinergic delirium and falls — avoid (Beers criteria).",
+        "Elderly: anticholinergic delirium and falls; avoid (Beers criteria).",
         "Tolerance to hypnotic effect within 1-2 weeks of nightly use.",
         "The dystonia drug: 25-50 mg IV reverses antipsychotic-induced dystonia in minutes.",
         "Overdose: anticholinergic toxicity (hot as a hare, dry as a bone, mad as a hatter).",
@@ -302,7 +302,7 @@ export const diphenhydramine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Diphenhydramine develops anticholinergic delirium (elderly, overdose) — next best step?",
+        "A patient on Diphenhydramine develops anticholinergic delirium (elderly, overdose): next best step?",
         "When to choose Diphenhydramine over alternatives in its class.",
       ],
     },
@@ -315,10 +315,10 @@ export const diphenhydramine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The emergency classic: IV diphenhydramine reverses an acute dystonia in minutes — the drug that ends the oculogyric crisis on camera.",
-        "The anticholinergic paradox: an OTC sleep aid that causes delirium in exactly the population that buys it — Beers-criteria caution in over-65s.",
+        "The emergency classic: IV diphenhydramine reverses an acute dystonia in minutes; the drug that ends the oculogyric crisis on camera.",
+        "The anticholinergic paradox: an OTC sleep aid that causes delirium in exactly the population that buys it. Beers-criteria caution in over-65s.",
         "Tolerance is fast: nightly use as a hypnotic is a losing game within 1-2 weeks.",
-        "The abuse-tolerance footnote: massive-dose misuse for deliriant effects exists — the anticholinergic ceiling as a hazard.",
+        "The abuse-tolerance footnote: massive-dose misuse for deliriant effects exists; the anticholinergic ceiling as a hazard.",
       ],
     },
   },
@@ -326,7 +326,7 @@ export const diphenhydramine: Drug = {
   highYieldSummary: [
     "Mechanism: first-generation H1 antagonist + clinically significant ANTICHOLINERGIC effects.",
     "Uses: allergy, insomnia (short-term), motion sickness, and ACUTE DYSTONIA rescue (IV).",
-    "Elderly: anticholinergic delirium and falls — avoid (Beers criteria).",
+    "Elderly: anticholinergic delirium and falls; avoid (Beers criteria).",
     "Tolerance to hypnotic effect within 1-2 weeks of nightly use.",
     "The dystonia drug: 25-50 mg IV reverses antipsychotic-induced dystonia in minutes.",
     "Overdose: anticholinergic toxicity (hot as a hare, dry as a bone, mad as a hatter).",
@@ -334,7 +334,7 @@ export const diphenhydramine: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — allergic rhinitis, urticaria, allergic reactions",
+      title: "First presentation: allergic rhinitis, urticaria, allergic reactions",
       presentation: "A patient presenting with allergic rhinitis, urticaria, allergic reactions, started on Diphenhydramine.",
       history: "A adult patient presents with a allergic rhinitis, urticaria, allergic reactions picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with allergic rhinitis, urticaria, allergic reactions; physical examination and baseline investigations are unremarkable.",
@@ -343,7 +343,7 @@ export const diphenhydramine: Drug = {
       management: "Started at 25-50 mg at bedtime, titrated to 25-50 mg with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Diphenhydramine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Diphenhydramine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -352,7 +352,7 @@ export const diphenhydramine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Antihistamine comparison — choosing within the class",
+      title: "Antihistamine comparison: choosing within the class",
       primaryDrug: "Diphenhydramine",
       rows: [
         {
@@ -397,16 +397,16 @@ export const diphenhydramine: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The OTC sedative + the EPS rescue — and the anticholinergic caution",
+          primaryValue: "The OTC sedative + the EPS rescue, and the anticholinergic caution",
           comparisons: [
             {
               drug: "Hydroxyzine",
-              value: "The antihistamine anxiolytic — benzo-sparing sedation",
+              value: "The antihistamine anxiolytic: benzo-sparing sedation",
             },
           ],
         },
       ],
-      takeaway: "All antihistamines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All antihistamines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -415,7 +415,7 @@ export const diphenhydramine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Diphenhydramine reaches peak plasma concentration and begins acting at its molecular target (H1 histamine receptor (first-generation antagonist); muscarinic (anticholinergic) effects at therapeutic doses). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Diphenhydramine reaches peak plasma concentration and begins acting at its molecular target (H1 histamine receptor (first-generation antagonist); muscarinic (anticholinergic) effects at therapeutic doses). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -451,7 +451,7 @@ export const diphenhydramine: Drug = {
   faqs: [
     {
       question: "How long does Diphenhydramine take to work?",
-      answer: "Sedation 20-30 min; IV dystonia reversal 5-10 min.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Sedation 20-30 min; IV dystonia reversal 5-10 min.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Diphenhydramine?",
@@ -459,11 +459,11 @@ export const diphenhydramine: Drug = {
     },
     {
       question: "Can I stop Diphenhydramine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Diphenhydramine habit-forming?",
@@ -471,7 +471,7 @@ export const diphenhydramine: Drug = {
     },
     {
       question: "Can I take Diphenhydramine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Diphenhydramine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Diphenhydramine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -615,7 +615,7 @@ export const diphenhydramine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Diphenhydramine",
+      label: "Patient Guide. Diphenhydramine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -623,13 +623,13 @@ export const diphenhydramine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The ubiquitous sedating antihistamine — OTC sleep aid, EPS rescue, and anticholinergic cautionary tale.",
-    summary: "Diphenhydramine is a prescription medicine used to treat allergic rhinitis, urticaria, allergic reactions. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The ubiquitous sedating antihistamine. OTC sleep aid, EPS rescue, and anticholinergic cautionary tale.",
+    summary: "Diphenhydramine is a prescription medicine used to treat allergic rhinitis, urticaria, allergic reactions. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Diphenhydramine is the antihistamine in most over-the-counter sleep and allergy products: it causes drowsiness (used for both sleep and allergies) and it is also given by injection in hospitals to reverse sudden muscle spasm reactions from certain medicines. In older people it can cause confusion and should generally be avoided.",
-    sideEffects: "The most common side effects are: sedation and drowsiness, dry mouth, constipation, urinary retention, confusion (elderly), tolerance to hypnotic effect, next-morning grogginess. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Anticholinergic delirium (elderly, overdose) and Falls and fractures (elderly). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: anticholinergic burden audit (elderly) (at prescribing). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: sedation and drowsiness, dry mouth, constipation, urinary retention, confusion (elderly), tolerance to hypnotic effect, next-morning grogginess. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Anticholinergic delirium (elderly, overdose) and Falls and fractures (elderly). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: anticholinergic burden audit (elderly) (at prescribing). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Other anticholinergics (bladder drugs, TCAs, cyclobenzaprine, some antipsychotics), Other sedatives and alcohol, MAOIs. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Other anticholinergics (bladder drugs, TCAs, cyclobenzaprine, some antipsychotics), Other sedatives and alcohol, MAOIs. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -663,7 +663,7 @@ export const diphenhydramine: Drug = {
     monitoring: "Anticholinergic burden audit in elderly.",
     patientCounselling: [
       "Not for regular nightly sleep use.",
-      "Elderly: confusion risk — avoid.",
+      "Elderly: confusion risk; avoid.",
       "Check cold-remedy labels for hidden doses.",
     ],
   },
@@ -698,13 +698,13 @@ export const diphenhydramine: Drug = {
         name: "Diphenhydramine",
         slug: "diphenhydramine",
         relationship: "This guide",
-        distinguishing: "The OTC sedative + the EPS rescue — and the anticholinergic caution",
+        distinguishing: "The OTC sedative + the EPS rescue, and the anticholinergic caution",
       },
       {
         name: "Hydroxyzine",
         slug: "hydroxyzine",
         relationship: "Same class (Antihistamine)",
-        distinguishing: "The antihistamine anxiolytic — benzo-sparing sedation",
+        distinguishing: "The antihistamine anxiolytic: benzo-sparing sedation",
       },
     ],
   },
@@ -857,7 +857,7 @@ export const diphenhydramine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Diphenhydramine in two sentences.",
-      answer: "Diphenhydramine blocks central H1 receptors (sedation) with clinically meaningful antimuscarinic effects — sedation for sleep and allergy, anticholinergic blockade for acute dystonia rescue. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Diphenhydramine blocks central H1 receptors (sedation) with clinically meaningful antimuscarinic effects: sedation for sleep and allergy, anticholinergic blockade for acute dystonia rescue. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -867,7 +867,7 @@ export const diphenhydramine: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Diphenhydramine and how you would manage it.",
-      answer: "Anticholinergic delirium (elderly, overdose): Confusion, agitation, hyperthermia, urinary retention — full antimuscarinic toxicity. Management: Avoid in elderly; supportive care; physostigmine rarely.",
+      answer: "Anticholinergic delirium (elderly, overdose): Confusion, agitation, hyperthermia, urinary retention; full antimuscarinic toxicity. Management: Avoid in elderly; supportive care; physostigmine rarely.",
       topic: "Safety",
     },
     {
@@ -877,7 +877,7 @@ export const diphenhydramine: Drug = {
     },
     {
       question: "Share one clinical pearl about Diphenhydramine that separates safe prescribers from unsafe ones.",
-      answer: "The emergency classic: IV diphenhydramine reverses an acute dystonia in minutes — the drug that ends the oculogyric crisis on camera.",
+      answer: "The emergency classic: IV diphenhydramine reverses an acute dystonia in minutes; the drug that ends the oculogyric crisis on camera.",
       topic: "Clinical Pearls",
     },
   ],
@@ -953,7 +953,7 @@ export const diphenhydramine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -998,7 +998,7 @@ export const diphenhydramine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Diphenhydramine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Diphenhydramine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1014,7 +1014,7 @@ export const diphenhydramine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Diphenhydramine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Diphenhydramine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1059,7 +1059,7 @@ export const diphenhydramine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Diphenhydramine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Diphenhydramine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1096,13 +1096,13 @@ export const diphenhydramine: Drug = {
     ],
     dosageForms: ["Capsules/tablets 25, 50 mg", "Injection 10-50 mg/mL", "Topical (itch)", "Syrup"],
     dosingTips: [
-      "Avoid in over-65s for sleep — the delirium risk.",
+      "Avoid in over-65s for sleep: the delirium risk.",
       "Intermittent use only as a hypnotic.",
       "Check combination cold products for hidden doses.",
       "IV for dystonia: 25-50 mg, watch the minutes tick.",
     ],
     overdose: [
-      "Overdose with Diphenhydramine is managed supportively — no specific antidote.",
+      "Overdose with Diphenhydramine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Diphenhydramine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1145,16 +1145,16 @@ export const diphenhydramine: Drug = {
     ],
     primaryTargetSymptoms: ["Acute dystonia (IV)", "Short-term insomnia", "Allergic symptoms", "Motion sickness"],
     pearls: [
-      "The emergency classic: IV diphenhydramine reverses an acute dystonia in minutes — the drug that ends the oculogyric crisis on camera.",
-      "The anticholinergic paradox: an OTC sleep aid that causes delirium in exactly the population that buys it — Beers-criteria caution in over-65s.",
+      "The emergency classic: IV diphenhydramine reverses an acute dystonia in minutes; the drug that ends the oculogyric crisis on camera.",
+      "The anticholinergic paradox: an OTC sleep aid that causes delirium in exactly the population that buys it. Beers-criteria caution in over-65s.",
       "Tolerance is fast: nightly use as a hypnotic is a losing game within 1-2 weeks.",
-      "The abuse-tolerance footnote: massive-dose misuse for deliriant effects exists — the anticholinergic ceiling as a hazard.",
-      "Hidden in everything: combination cold/flu products — the accidental double-dose patients never counted.",
+      "The abuse-tolerance footnote: massive-dose misuse for deliriant effects exists; the anticholinergic ceiling as a hazard.",
+      "Hidden in everything: combination cold/flu products; the accidental double-dose patients never counted.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

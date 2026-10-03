@@ -38,7 +38,7 @@ export const searchIndex: SearchableItem[] = [
     id: `collection-${category.name.toLowerCase()}`,
     title: category.name,
     type: "collection" as const,
-    description: `The ${category.name} medication collection — ${taxonomyCategoryMedicationCount(category)} medication guides across ${drugTaxonomyClasses.length} classes.`,
+    description: `The ${category.name} medication collection: ${taxonomyCategoryMedicationCount(category)} medication guides across ${drugTaxonomyClasses.length} classes.`,
     href: DRUG_TAXONOMY_CATEGORY_HREF,
     keywords: [
       category.name,
@@ -56,7 +56,7 @@ export const searchIndex: SearchableItem[] = [
       id: `collection-${family.name.toLowerCase()}`,
       title: family.name,
       type: "collection" as const,
-      description: `${family.classes.length} classes · ${taxonomyFamilyMedicationCount(family)} medication guides — ${family.classes.map((c) => c.label).join(", ")}.`,
+      description: `${family.classes.length} classes · ${taxonomyFamilyMedicationCount(family)} medication guides across these classes: ${family.classes.map((c) => c.label).join(", ")}.`,
       href: DRUG_TAXONOMY_FAMILY_HREF,
       keywords: [
         family.name,
@@ -70,7 +70,7 @@ export const searchIndex: SearchableItem[] = [
     id: `collection-class-${c.id}`,
     title: c.label,
     type: "collection" as const,
-    description: `${c.fullName} — ${c.medications.length} medication ${c.medications.length === 1 ? "guide" : "guides"}: ${c.medications.map((m) => m.genericName).join(", ")}.`,
+    description: `${c.fullName}: ${c.medications.length} medication ${c.medications.length === 1 ? "guide" : "guides"}: ${c.medications.map((m) => m.genericName).join(", ")}.`,
     href: `/drugs/class/${c.id}`,
     keywords: [
       c.label,
@@ -248,7 +248,7 @@ export const searchIndex: SearchableItem[] = [
     id: "guide-emergency",
     title: "When to Call Emergency",
     type: "patient-guide",
-    description: "Red flags that require immediate medical attention — overdose, serotonin syndrome, severe withdrawal.",
+    description: "Red flags that require immediate medical attention: overdose, serotonin syndrome, severe withdrawal.",
     href: "/#emergency",
     keywords: ["emergency", "red flag", "overdose", "serotonin syndrome", "crisis", "112", "14416", "naloxone", "suicide"],
   },

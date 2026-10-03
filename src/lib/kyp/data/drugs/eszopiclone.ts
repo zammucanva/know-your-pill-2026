@@ -23,14 +23,14 @@ export const eszopiclone: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Sleep Medicines", "Non-Benzodiazepine Hypnotics", "Eszopiclone"],
   /* ---- Hero / summary ---- */
-  tagline: "The Z-drug licensed for long-term use — sleep onset AND maintenance with a 6-hour half-life.",
-  summary: "Eszopiclone is the cyclopyrrolone Z-drug with a 6-hour half-life — longer than zolpidem and zaleplon — giving it both onset and maintenance cover, and it uniquely carried long-term (6-month) trial data to approval. Same alpha-1-selective GABA-A pharmacology as the Z-class, with a dysgeusia (bitter taste) signature and class-standard boxed warnings.",
+  tagline: "The Z-drug licensed for long-term use: sleep onset AND maintenance with a 6-hour half-life.",
+  summary: "Eszopiclone is the cyclopyrrolone Z-drug with a 6-hour half-life (longer than zolpidem and zaleplon) giving it both onset and maintenance cover, and it uniquely carried long-term (6-month) trial data to approval. Same alpha-1-selective GABA-A pharmacology as the Z-class, with a dysgeusia (bitter taste) signature and class-standard boxed warnings.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Eszopiclone — from its molecular target (GABA-A alpha-1-containing receptors (selective PAM) — cyclopyrrolone class) to clinical effect.",
+    "Explain the mechanism of action of Eszopiclone (from its molecular target (GABA-A alpha-1-containing receptors (selective PAM)) cyclopyrrolone class) to clinical effect.",
     "List the FDA-approved and off-label uses of Eszopiclone.",
     "Predict the common and serious side effects of Eszopiclone from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Eszopiclone.",
@@ -38,15 +38,15 @@ export const eszopiclone: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Non-benzodiazepine cyclopyrrolone with alpha-1-selective GABA-A positive allosteric modulation — the Z-class mechanism at eszopiclone's duration.",
-    molecularTarget: "GABA-A alpha-1-containing receptors (selective PAM) — cyclopyrrolone class",
+    summary: "Non-benzodiazepine cyclopyrrolone with alpha-1-selective GABA-A positive allosteric modulation: the Z-class mechanism at eszopiclone's duration.",
+    molecularTarget: "GABA-A alpha-1-containing receptors (selective PAM): cyclopyrrolone class",
     effect: "Sleep promotion via the described target.",
     steps: [
-      "Eszopiclone is the cyclopyrrolone Z-drug with a 6-hour half-life — longer than zolpidem and zaleplon — giving it both onset and maintenance cover, and it uniquely carried long-term (6-month) trial data to approval — the mechanism in one line.",
+      "Eszopiclone is the cyclopyrrolone Z-drug with a 6-hour half-life (longer than zolpidem and zaleplon) giving it both onset and maintenance cover, and it uniquely carried long-term (6-month) trial data to approval: the mechanism in one line.",
       "Binding at the described target produces the sleep-promoting effect.",
       "Duration of action follows the half-life: onset agents clear before morning; longer agents add maintenance cover.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 6 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 6 hours. See mechanism and prescriber sections.",
     halfLife: "About 6 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
@@ -104,7 +104,7 @@ export const eszopiclone: Drug = {
     "Central monoaminergic systems (see mechanism)",
   ],
   receptors: [
-    "GABA-A alpha-1-containing receptors (selective PAM) — cyclopyrrolone class",
+    "GABA-A alpha-1-containing receptors (selective PAM): cyclopyrrolone class",
   ],
   brainRegionIds: ["prefrontal-cortex"],
   pathwayIds: [],
@@ -126,7 +126,7 @@ export const eszopiclone: Drug = {
   blackBoxWarnings: [
     {
       title: "Complex sleep behaviours",
-      text: "As per zolpidem class warning: sleep-walking/driving/eating with amnesia — stop immediately if any occur.",
+      text: "As per zolpidem class warning: sleep-walking/driving/eating with amnesia; stop immediately if any occur.",
     },
     {
       title: "CNS depressant co-administration",
@@ -139,7 +139,7 @@ export const eszopiclone: Drug = {
       name: "Dysgeusia (unpleasant bitter taste)",
       frequency: "common",
       severity: "mild",
-      description: "The signature adverse effect — metallic/bitter taste through the next day.",
+      description: "The signature adverse effect: metallic/bitter taste through the next day.",
       management: "Reassurance; usually tolerable.",
     },
     {
@@ -204,7 +204,7 @@ export const eszopiclone: Drug = {
     {
       parameter: "Complex sleep behaviours",
       frequency: "Ask at every review",
-      rationale: "Sleep-walking/driving/eating — stop the drug if reported.",
+      rationale: "Sleep-walking/driving/eating: stop the drug if reported.",
     },
   ],
   interactions: [
@@ -217,19 +217,19 @@ export const eszopiclone: Drug = {
     {
       drug: "Ketoconazole, clarithromycin and strong CYP3A4 inhibitors",
       severity: "major",
-      mechanism: "Raise eszopiclone levels — next-day hangover amplifies.",
+      mechanism: "Raise eszopiclone levels: next-day hangover amplifies.",
       action: "Reduce the dose or choose a hypnotic not dependent on 3A4.",
     },
     {
       drug: "Rifampicin and CYP3A4 inducers",
       severity: "moderate",
-      mechanism: "Lower eszopiclone levels — loss of hypnotic efficacy.",
+      mechanism: "Lower eszopiclone levels: loss of hypnotic efficacy.",
       action: "Review response; consider an alternative agent.",
     },
   ],
   pregnancy: {
-    summary: "Data in human pregnancy are limited. The decision to continue or stop balances the risk of untreated illness against possible drug exposure — for serious psychiatric illness, relapse prevention usually outweighs fetal risk. Involve obstetrics early and never stop abruptly without a plan.",
-    lactation: "Small amounts may pass into breast milk. Decisions are individualised — monitor the infant for sedation and poor feeding, and discuss with your doctor.",
+    summary: "Data in human pregnancy are limited. The decision to continue or stop balances the risk of untreated illness against possible drug exposure, for serious psychiatric illness, relapse prevention usually outweighs fetal risk. Involve obstetrics early and never stop abruptly without a plan.",
+    lactation: "Small amounts may pass into breast milk. Decisions are individualised. Monitor the infant for sedation and poor feeding, and discuss with your doctor.",
   },
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
@@ -239,37 +239,37 @@ export const eszopiclone: Drug = {
     "Take it only when you can spend a full 7–8 hours in bed.",
     "Do not drive the next morning if you still feel drowsy.",
     "Stop and call your doctor if you sleep-walk, sleep-drive, or eat while asleep.",
-    "Keep the course short — these medicines are for intermittent or short-term use.",
-    "Benefit from Eszopiclone builds over weeks — do not judge it in the first days.",
+    "Keep the course short: these medicines are for intermittent or short-term use.",
+    "Benefit from Eszopiclone builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The 6-month randomised data: eszopiclone is the Z-drug with the longest continuous-use evidence — though clinical discipline still favours intermittent dosing.",
-    "Dysgeusia is its fingerprint: a bitter taste patients rarely connect to a sleeping pill — ask.",
+    "The 6-month randomised data: eszopiclone is the Z-drug with the longest continuous-use evidence, though clinical discipline still favours intermittent dosing.",
+    "Dysgeusia is its fingerprint: a bitter taste patients rarely connect to a sleeping pill. Ask.",
     "6-hour half-life: covers the 3 am waking that zolpidem misses, at the cost of more morning residue.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Eszopiclone: Non-benzodiazepine cyclopyrrolone with alpha-1-selective GABA-A positive allosteric modulation — the Z-class mechanism at eszopiclone's duration.",
-        "Uses of Eszopiclone: Insomnia — sleep onset and maintenance",
+        "Mechanism of Eszopiclone: Non-benzodiazepine cyclopyrrolone with alpha-1-selective GABA-A positive allosteric modulation; the Z-class mechanism at eszopiclone's duration.",
+        "Uses of Eszopiclone: Insomnia; sleep onset and maintenance",
         "Cyclopyrrolone Z-drug; alpha-1-selective GABA-A PAM.",
-        "Half-life ~6 h — onset AND maintenance cover.",
+        "Half-life ~6 h: onset AND maintenance cover.",
       ],
       practical: [
-        "Prescribe Eszopiclone for insomnia — sleep onset and maintenance with dose, timing, and duration.",
+        "Prescribe Eszopiclone for insomnia: sleep onset and maintenance with dose, timing, and duration.",
         "Outline the monitoring plan: Morning impairment / hangover (Every review); Complex sleep behaviours (Ask at every review)",
       ],
       longAnswer: [
-        "Eszopiclone: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Eszopiclone: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Cyclopyrrolone Z-drug; alpha-1-selective GABA-A PAM.",
-        "Half-life ~6 h — onset AND maintenance cover.",
+        "Half-life ~6 h: onset AND maintenance cover.",
       ],
     },
     neetPg: {
       highYield: [
         "Cyclopyrrolone Z-drug; alpha-1-selective GABA-A PAM.",
-        "Half-life ~6 h — onset AND maintenance cover.",
+        "Half-life ~6 h: onset AND maintenance cover.",
         "Signature adverse effect: dysgeusia (bitter taste).",
         "The only Z-drug with 6-month continuous-use RCT data.",
         "Dose 1–3 mg (elderly max 2 mg).",
@@ -282,21 +282,21 @@ export const eszopiclone: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Eszopiclone develops complex sleep behaviours — next best step?",
+        "A patient on Eszopiclone develops complex sleep behaviours: next best step?",
         "When to choose Eszopiclone over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: GABA-A alpha-1-containing receptors (selective PAM) — cyclopyrrolone class",
+        "Primary target: GABA-A alpha-1-containing receptors (selective PAM); cyclopyrrolone class",
         "Most common side effects: Dysgeusia (unpleasant bitter taste), Morning drowsiness, Dizziness, dry mouth, headache",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The 6-month randomised data: eszopiclone is the Z-drug with the longest continuous-use evidence — though clinical discipline still favours intermittent dosing.",
-        "Dysgeusia is its fingerprint: a bitter taste patients rarely connect to a sleeping pill — ask.",
+        "The 6-month randomised data: eszopiclone is the Z-drug with the longest continuous-use evidence, though clinical discipline still favours intermittent dosing.",
+        "Dysgeusia is its fingerprint: a bitter taste patients rarely connect to a sleeping pill. Ask.",
         "6-hour half-life: covers the 3 am waking that zolpidem misses, at the cost of more morning residue.",
       ],
     },
@@ -304,7 +304,7 @@ export const eszopiclone: Drug = {
   memoryTricks: [],
   highYieldSummary: [
     "Cyclopyrrolone Z-drug; alpha-1-selective GABA-A PAM.",
-    "Half-life ~6 h — onset AND maintenance cover.",
+    "Half-life ~6 h: onset AND maintenance cover.",
     "Signature adverse effect: dysgeusia (bitter taste).",
     "The only Z-drug with 6-month continuous-use RCT data.",
     "Dose 1–3 mg (elderly max 2 mg).",
@@ -312,16 +312,16 @@ export const eszopiclone: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — insomnia — sleep onset and maintenance",
-      presentation: "A patient presenting with insomnia — sleep onset and maintenance, started on Eszopiclone.",
-      history: "A adult patient presents with a insomnia — sleep onset and maintenance picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with insomnia — sleep onset and maintenance; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Insomnia — sleep onset and maintenance. Differentials are considered and excluded clinically.",
+      title: "First presentation: insomnia; sleep onset and maintenance",
+      presentation: "A patient presenting with insomnia: sleep onset and maintenance, started on Eszopiclone.",
+      history: "A adult patient presents with a insomnia: sleep onset and maintenance picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with insomnia: sleep onset and maintenance; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Insomnia: sleep onset and maintenance. Differentials are considered and excluded clinically.",
       rationale: "Eszopiclone is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Z-Drug) with strong evidence in this condition.",
       management: "Started at 1 mg at bedtime, titrated to 2–3 mg with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Eszopiclone takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Eszopiclone takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -330,12 +330,12 @@ export const eszopiclone: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Z-Drug comparison — choosing within the class",
+      title: "Z-Drug comparison: choosing within the class",
       primaryDrug: "Eszopiclone",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "GABA-A alpha-1-containing receptors (selective PAM) — cyclopyrrolone class",
+          primaryValue: "GABA-A alpha-1-containing receptors (selective PAM): cyclopyrrolone class",
           comparisons: [
             {
               drug: "Zolpidem",
@@ -393,7 +393,7 @@ export const eszopiclone: Drug = {
           comparisons: [
             {
               drug: "Zolpidem",
-              value: "High for 2–3 hours — the intended effect; morning residue is the adverse effect.",
+              value: "High for 2–3 hours: the intended effect; morning residue is the adverse effect.",
             },
             {
               drug: "Zaleplon",
@@ -411,20 +411,20 @@ export const eszopiclone: Drug = {
           comparisons: [
             {
               drug: "Zolpidem",
-              value: "Sleep onset in a non-benzodiazepine molecule — the default Z-drug",
+              value: "Sleep onset in a non-benzodiazepine molecule: the default Z-drug",
             },
             {
               drug: "Zaleplon",
-              value: "Middle-of-the-night dosing — cleared before morning",
+              value: "Middle-of-the-night dosing: cleared before morning",
             },
             {
               drug: "Zopiclone",
-              value: "The Commonwealth Z-drug — 5-hour cover with taste signature",
+              value: "The Commonwealth Z-drug: 5-hour cover with taste signature",
             },
           ],
         },
       ],
-      takeaway: "All non-benzodiazepine hypnotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All non-benzodiazepine hypnotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -433,7 +433,7 @@ export const eszopiclone: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Eszopiclone reaches peak plasma concentration and begins acting at its molecular target (GABA-A alpha-1-containing receptors (selective PAM) — cyclopyrrolone class). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Eszopiclone reaches peak plasma concentration and begins acting at its molecular target (GABA-A alpha-1-containing receptors (selective PAM), cyclopyrrolone class). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -469,7 +469,7 @@ export const eszopiclone: Drug = {
   faqs: [
     {
       question: "How long does Eszopiclone take to work?",
-      answer: "15–30 minutes.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "15–30 minutes.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Eszopiclone?",
@@ -477,19 +477,19 @@ export const eszopiclone: Drug = {
     },
     {
       question: "Can I stop Eszopiclone suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Eszopiclone habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Eszopiclone exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Eszopiclone exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Eszopiclone during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Eszopiclone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Eszopiclone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -581,13 +581,13 @@ export const eszopiclone: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "GABA-A alpha-1-containing receptors (selective PAM) — cyclopyrrolone class",
+      label: "GABA-A alpha-1-containing receptors (selective PAM): cyclopyrrolone class",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
     },
     {
-      label: "Insomnia — sleep onset and maintenance",
+      label: "Insomnia: sleep onset and maintenance",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -611,7 +611,7 @@ export const eszopiclone: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Eszopiclone",
+      label: "Patient Guide. Eszopiclone",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -619,13 +619,13 @@ export const eszopiclone: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The Z-drug licensed for long-term use — sleep onset AND maintenance with a 6-hour half-life.",
-    summary: "Eszopiclone is a prescription medicine used to treat insomnia — sleep onset and maintenance. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The Z-drug licensed for long-term use: sleep onset AND maintenance with a 6-hour half-life.",
+    summary: "Eszopiclone is a prescription medicine used to treat insomnia: sleep onset and maintenance. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Eszopiclone is a modern sleeping tablet that covers both falling asleep and staying asleep. Its most distinctive side effect is a bitter or metallic taste the next day. The same safety rules as its class apply: never with alcohol, only when 7–8 hours in bed are guaranteed, and stop and call your doctor for any sleep-walking.",
-    sideEffects: "The most common side effects are: dysgeusia (unpleasant bitter taste), morning drowsiness, dizziness, dry mouth, headache, rebound insomnia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Complex sleep behaviours and Next-day driving impairment. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: morning impairment / hangover (every review); complex sleep behaviours (ask at every review). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: dysgeusia (unpleasant bitter taste), morning drowsiness, dizziness, dry mouth, headache, rebound insomnia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Complex sleep behaviours and Next-day driving impairment. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: morning impairment / hangover (every review); complex sleep behaviours (ask at every review). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: other medicines that act on the brain. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: other medicines that act on the brain. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -647,7 +647,7 @@ export const eszopiclone: Drug = {
     },
     costCategory: "low",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: [
       "Class rules: no alcohol, 7–8 h in bed, report sleep-walking.",
     ],
@@ -689,19 +689,19 @@ export const eszopiclone: Drug = {
         name: "Zolpidem",
         slug: "zolpidem",
         relationship: "Same class (Z-Drug)",
-        distinguishing: "Sleep onset in a non-benzodiazepine molecule — the default Z-drug",
+        distinguishing: "Sleep onset in a non-benzodiazepine molecule: the default Z-drug",
       },
       {
         name: "Zaleplon",
         slug: "zaleplon",
         relationship: "Same class (Z-Drug)",
-        distinguishing: "Middle-of-the-night dosing — cleared before morning",
+        distinguishing: "Middle-of-the-night dosing: cleared before morning",
       },
       {
         name: "Zopiclone",
         slug: "zopiclone",
         relationship: "Same class (Z-Drug)",
-        distinguishing: "The Commonwealth Z-drug — 5-hour cover with taste signature",
+        distinguishing: "The Commonwealth Z-drug: 5-hour cover with taste signature",
       },
     ],
   },
@@ -849,12 +849,12 @@ export const eszopiclone: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Eszopiclone in two sentences.",
-      answer: "Non-benzodiazepine cyclopyrrolone with alpha-1-selective GABA-A positive allosteric modulation — the Z-class mechanism at eszopiclone's duration. Net effect: Sleep promotion via the described target.",
+      answer: "Non-benzodiazepine cyclopyrrolone with alpha-1-selective GABA-A positive allosteric modulation: the Z-class mechanism at eszopiclone's duration. Net effect: Sleep promotion via the described target.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Eszopiclone.",
-      answer: "Insomnia — sleep onset and maintenance. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Insomnia: sleep onset and maintenance. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -869,7 +869,7 @@ export const eszopiclone: Drug = {
     },
     {
       question: "Share one clinical pearl about Eszopiclone that separates safe prescribers from unsafe ones.",
-      answer: "The 6-month randomised data: eszopiclone is the Z-drug with the longest continuous-use evidence — though clinical discipline still favours intermittent dosing.",
+      answer: "The 6-month randomised data: eszopiclone is the Z-drug with the longest continuous-use evidence, though clinical discipline still favours intermittent dosing.",
       topic: "Clinical Pearls",
     },
   ],
@@ -945,7 +945,7 @@ export const eszopiclone: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -990,7 +990,7 @@ export const eszopiclone: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Eszopiclone works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Eszopiclone works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1006,7 +1006,7 @@ export const eszopiclone: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Eszopiclone safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Eszopiclone safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1049,7 +1049,7 @@ export const eszopiclone: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Eszopiclone follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Eszopiclone follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1072,15 +1072,15 @@ export const eszopiclone: Drug = {
     ],
     dosageForms: ["Tablets 1, 2, 3 mg"],
     dosingTips: [
-      "2 mg is the sweet spot for most — 3 mg buys duration at the price of morning residue.",
-      "Ask about taste at review — patients rarely volunteer it.",
+      "2 mg is the sweet spot for most: 3 mg buys duration at the price of morning residue.",
+      "Ask about taste at review: patients rarely volunteer it.",
     ],
     overdose: [
-      "Overdose with Eszopiclone is managed supportively — no specific antidote.",
+      "Overdose with Eszopiclone is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Eszopiclone is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1114,14 +1114,14 @@ export const eszopiclone: Drug = {
     potentialDisadvantages: ["Dysgeusia.", "More morning residue than zolpidem.", "Class boxed warnings."],
     primaryTargetSymptoms: ["Sleep-onset and maintenance insomnia"],
     pearls: [
-      "The 6-month randomised data: eszopiclone is the Z-drug with the longest continuous-use evidence — though clinical discipline still favours intermittent dosing.",
-      "Dysgeusia is its fingerprint: a bitter taste patients rarely connect to a sleeping pill — ask.",
+      "The 6-month randomised data: eszopiclone is the Z-drug with the longest continuous-use evidence, though clinical discipline still favours intermittent dosing.",
+      "Dysgeusia is its fingerprint: a bitter taste patients rarely connect to a sleeping pill. Ask.",
       "6-hour half-life: covers the 3 am waking that zolpidem misses, at the cost of more morning residue.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

@@ -19,18 +19,18 @@ export const fluphenazine: Drug = {
   brandNames: ["Prolixin", "Modecate (decanoate)"],
   drugClass: "typical-antipsychotic",
   drugClassLabel: "Typical Antipsychotic",
-  drugClassFullName: "Typical (Conventional) Antipsychotic — Phenothiazine",
+  drugClassFullName: "Typical (Conventional) Antipsychotic. Phenothiazine",
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Typical Antipsychotics", "Fluphenazine"],
   /* ---- Hero / summary ---- */
-  tagline: "The piperazine phenothiazine that became a depot legend — the 2–5 week decanoate injection.",
-  summary: "Fluphenazine is a high-potency piperazine phenothiazine: strong D2 blockade with little sedation, and its decanoate ester — one of the earliest long-acting injectables (1970s) — remains a mainstay of community maintenance programmes worldwide. High potency brings the full haloperidol-like motor profile: dose-dependent EPS, akathisia, and hyperprolactinaemia, with minimal anticholinergic or hypotensive burden.",
+  tagline: "The piperazine phenothiazine that became a depot legend: the 2–5 week decanoate injection.",
+  summary: "Fluphenazine is a high-potency piperazine phenothiazine: strong D2 blockade with little sedation, and its decanoate ester, one of the earliest long-acting injectables (1970s); remains a mainstay of community maintenance programmes worldwide. High potency brings the full haloperidol-like motor profile: dose-dependent EPS, akathisia, and hyperprolactinaemia, with minimal anticholinergic or hypotensive burden.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Fluphenazine — from its molecular target (D2 (high-potency antagonist); 5-HT2A (moderate); minimal H1/M1/alpha-1) to clinical effect.",
+    "Explain the mechanism of action of Fluphenazine, from its molecular target (D2 (high-potency antagonist); 5-HT2A (moderate); minimal H1/M1/alpha-1) to clinical effect.",
     "List the FDA-approved and off-label uses of Fluphenazine.",
     "Predict the common and serious side effects of Fluphenazine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Fluphenazine.",
@@ -38,12 +38,12 @@ export const fluphenazine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Fluphenazine is a high-potency piperazine phenothiazine — strong selective D2 antagonism with the haloperidol-like 'clean but stiff' profile.",
+    summary: "Fluphenazine is a high-potency piperazine phenothiazine: strong selective D2 antagonism with the haloperidol-like 'clean but stiff' profile.",
     molecularTarget: "D2 (high-potency antagonist); 5-HT2A (moderate); minimal H1/M1/alpha-1",
-    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — high potency means small doses, strong EPS tendency, and little off-target sedation or hypotension.",
+    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways: high potency means small doses, strong EPS tendency, and little off-target sedation or hypotension.",
     steps: [
-      "Blocks D2 receptors — therapeutic antipsychotic effect at 65–75% occupancy.",
-      "EPS emerges as occupancy passes ~80% — high potency means small doses, strong EPS tendency, and little off-target sedation or hypotension.",
+      "Blocks D2 receptors: therapeutic antipsychotic effect at 65–75% occupancy.",
+      "EPS emerges as occupancy passes ~80%: high potency means small doses, strong EPS tendency, and little off-target sedation or hypotension.",
       "Tuberoinfundibular blockade raises prolactin; nigrostriatal blockade produces parkinsonism and dystonia.",
       "Class-typical receptor binding determines the drug's adverse-effect texture.",
     ],
@@ -109,7 +109,7 @@ export const fluphenazine: Drug = {
         label: "hyperprolactinaemia",
       },
     ],
-    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia — efficacy and motor risk are two sides of one coin.",
+    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia: efficacy and motor risk are two sides of one coin.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -156,14 +156,14 @@ export const fluphenazine: Drug = {
       name: "Extrapyramidal symptoms (parkinsonism)",
       frequency: "very-common",
       severity: "moderate",
-      description: "Rigidity, bradykinesia, tremor — dose-dependent D2 signature.",
+      description: "Rigidity, bradykinesia, tremor: dose-dependent D2 signature.",
       management: "Reduce dose; anticholinergic.",
     },
     {
       name: "Akathisia",
       frequency: "common",
       severity: "moderate",
-      description: "Restlessness — frequently mistaken for worsening psychosis.",
+      description: "Restlessness: frequently mistaken for worsening psychosis.",
       management: "Reduce dose; propranolol.",
     },
     {
@@ -193,14 +193,14 @@ export const fluphenazine: Drug = {
       name: "Neuroleptic malignant syndrome",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency.",
+      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness: the class medical emergency.",
       management: "Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
     },
     {
       name: "Tardive dyskinesia",
       frequency: "uncommon",
       severity: "severe",
-      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex — a defining risk of chronic typical antipsychotics.",
+      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex: a defining risk of chronic typical antipsychotics.",
       management: "Lowest effective dose; AIMS surveillance; reduce or switch on detection; VMAT2 inhibitors for severe cases.",
     },
   ],
@@ -236,13 +236,13 @@ export const fluphenazine: Drug = {
     {
       drug: "QT-prolonging drugs (including other antipsychotics)",
       severity: "major",
-      mechanism: "Additive QT prolongation — torsades risk.",
+      mechanism: "Additive QT prolongation: torsades risk.",
       action: "Avoid combinations; ECG monitoring if unavoidable.",
     },
     {
       drug: "Anticholinergic drugs",
       severity: "moderate",
-      mechanism: "Additive anticholinergic burden — cognition, ileus, tachycardia.",
+      mechanism: "Additive anticholinergic burden: cognition, ileus, tachycardia.",
       action: "Minimise total anticholinergic load.",
     },
     {
@@ -254,22 +254,22 @@ export const fluphenazine: Drug = {
   ],
   pregnancy: {
     legacyCategory: "C",
-    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk — continue at the lowest effective dose with obstetric co-management.",
+    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk: continue at the lowest effective dose with obstetric co-management.",
     lactation: "Small amounts pass into milk; infant sedation and EPS-like effects are monitored. Generally considered acceptable with infant monitoring.",
   },
   renalAdjustment: "Standard caution.",
   hepaticAdjustment: "Standard caution in hepatic impairment.",
   /* ---- Education ---- */
-  patientExplanation: "Fluphenazine is a strong, older antipsychotic from the same family as haloperidol. Its special form — the decanoate injection every few weeks — releases the medicine slowly and protects against relapse when daily tablets are forgotten.",
+  patientExplanation: "Fluphenazine is a strong, older antipsychotic from the same family as haloperidol. Its special form (the decanoate injection every few weeks) releases the medicine slowly and protects against relapse when daily tablets are forgotten.",
   patientEducationPoints: [
-    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early — these are treatable.",
+    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early: these are treatable.",
     "Stand up slowly during the first week.",
-    "Do not stop suddenly — discuss any change with your doctor.",
-    "Benefit from Fluphenazine builds over weeks — do not judge it in the first days.",
+    "Do not stop suddenly: discuss any change with your doctor.",
+    "Benefit from Fluphenazine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "Fluphenazine decanoate built the concept of depot psychiatry — medication that outlives the missed dose.",
+    "Fluphenazine decanoate built the concept of depot psychiatry: medication that outlives the missed dose.",
     "Oral→decanoate conversion is conservative: roughly 1.2× the oral daily dose per week, split into 2–5-weekly injections.",
     "High potency = haloperidol's motor texture in a phenothiazine package.",
     "A first-visit test dose (12.5 mg) detects the EPS-sensitive patient before committing to weeks of drug.",
@@ -277,28 +277,28 @@ export const fluphenazine: Drug = {
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Fluphenazine: Fluphenazine is a high-potency piperazine phenothiazine — strong selective D2 antagonism with the haloperidol-like 'clean but stiff' profile.",
-        "Uses of Fluphenazine: Schizophrenia — psychotic manifestations; Maintenance via decanoate",
-        "High-potency piperazine phenothiazine — haloperidol-like profile (strong D2, minimal off-target).",
-        "Decanoate: 12.5–100 mg IM every 2–5 weeks — the classic depot.",
+        "Mechanism of Fluphenazine: Fluphenazine is a high-potency piperazine phenothiazine; strong selective D2 antagonism with the haloperidol-like 'clean but stiff' profile.",
+        "Uses of Fluphenazine: Schizophrenia; psychotic manifestations; Maintenance via decanoate",
+        "High-potency piperazine phenothiazine: haloperidol-like profile (strong D2, minimal off-target).",
+        "Decanoate: 12.5–100 mg IM every 2–5 weeks: the classic depot.",
       ],
       practical: [
-        "Prescribe Fluphenazine for schizophrenia — psychotic manifestations with dose, timing, and duration.",
+        "Prescribe Fluphenazine for schizophrenia: psychotic manifestations with dose, timing, and duration.",
         "Outline the monitoring plan: Weight and BMI (Baseline, then periodically); AIMS examination (Baseline, then every 6 months); EPS screen (parkinsonism, akathisia, dystonia) (Every review in the first 2 months)",
       ],
       longAnswer: [
-        "Fluphenazine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "High-potency piperazine phenothiazine — haloperidol-like profile (strong D2, minimal off-target).",
-        "Decanoate: 12.5–100 mg IM every 2–5 weeks — the classic depot.",
+        "Fluphenazine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "High-potency piperazine phenothiazine: haloperidol-like profile (strong D2, minimal off-target).",
+        "Decanoate: 12.5–100 mg IM every 2–5 weeks: the classic depot.",
       ],
     },
     neetPg: {
       highYield: [
-        "High-potency piperazine phenothiazine — haloperidol-like profile (strong D2, minimal off-target).",
-        "Decanoate: 12.5–100 mg IM every 2–5 weeks — the classic depot.",
+        "High-potency piperazine phenothiazine: haloperidol-like profile (strong D2, minimal off-target).",
+        "Decanoate: 12.5–100 mg IM every 2–5 weeks: the classic depot.",
         "EPS/akathisia/prolactin dose-dependent; little sedation or hypotension.",
         "Historic first-line; now mainly a depot maintenance agent in programme psychiatry.",
-        "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+        "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
       ],
       pyqConcepts: [
         "Mechanism/target of Fluphenazine",
@@ -308,7 +308,7 @@ export const fluphenazine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Fluphenazine develops neuroleptic malignant syndrome — next best step?",
+        "A patient on Fluphenazine develops neuroleptic malignant syndrome: next best step?",
         "When to choose Fluphenazine over alternatives in its class.",
       ],
     },
@@ -321,7 +321,7 @@ export const fluphenazine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "Fluphenazine decanoate built the concept of depot psychiatry — medication that outlives the missed dose.",
+        "Fluphenazine decanoate built the concept of depot psychiatry: medication that outlives the missed dose.",
         "Oral→decanoate conversion is conservative: roughly 1.2× the oral daily dose per week, split into 2–5-weekly injections.",
         "High potency = haloperidol's motor texture in a phenothiazine package.",
         "A first-visit test dose (12.5 mg) detects the EPS-sensitive patient before committing to weeks of drug.",
@@ -330,25 +330,25 @@ export const fluphenazine: Drug = {
   },
   memoryTricks: [],
   highYieldSummary: [
-    "High-potency piperazine phenothiazine — haloperidol-like profile (strong D2, minimal off-target).",
-    "Decanoate: 12.5–100 mg IM every 2–5 weeks — the classic depot.",
+    "High-potency piperazine phenothiazine: haloperidol-like profile (strong D2, minimal off-target).",
+    "Decanoate: 12.5–100 mg IM every 2–5 weeks: the classic depot.",
     "EPS/akathisia/prolactin dose-dependent; little sedation or hypotension.",
     "Historic first-line; now mainly a depot maintenance agent in programme psychiatry.",
-    "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+    "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia — psychotic manifestations",
-      presentation: "A patient presenting with schizophrenia — psychotic manifestations, started on Fluphenazine.",
-      history: "A adult patient presents with a schizophrenia — psychotic manifestations picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with schizophrenia — psychotic manifestations; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Schizophrenia — psychotic manifestations. Differentials are considered and excluded clinically.",
+      title: "First presentation: schizophrenia with psychotic manifestations",
+      presentation: "A patient presenting with schizophrenia: psychotic manifestations, started on Fluphenazine.",
+      history: "A adult patient presents with a schizophrenia: psychotic manifestations picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with schizophrenia: psychotic manifestations; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Schizophrenia: psychotic manifestations. Differentials are considered and excluded clinically.",
       rationale: "Fluphenazine is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Typical Antipsychotic) with strong evidence in this condition.",
       management: "Started at 2.5–10 mg/day, titrated to 2.5–20 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Fluphenazine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Fluphenazine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -357,7 +357,7 @@ export const fluphenazine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Typical Antipsychotic comparison — choosing within the class",
+      title: "Typical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Fluphenazine",
       rows: [
         {
@@ -406,11 +406,11 @@ export const fluphenazine: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Low — weight gain not expected.",
+          primaryValue: "Low: weight gain not expected.",
           comparisons: [
             {
               drug: "Chlorpromazine",
-              value: "Low — weight gain not expected.",
+              value: "Low: weight gain not expected.",
             },
             {
               drug: "Haloperidol",
@@ -418,11 +418,11 @@ export const fluphenazine: Drug = {
             },
             {
               drug: "Perphenazine",
-              value: "Low — weight gain not expected.",
+              value: "Low: weight gain not expected.",
             },
             {
               drug: "Pimozide",
-              value: "Low — weight gain not expected.",
+              value: "Low: weight gain not expected.",
             },
           ],
         },
@@ -436,7 +436,7 @@ export const fluphenazine: Drug = {
             },
             {
               drug: "Haloperidol",
-              value: "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+              value: "Mild, among the least sedating antipsychotics; alerting more than calming at low doses.",
             },
             {
               drug: "Perphenazine",
@@ -458,7 +458,7 @@ export const fluphenazine: Drug = {
             },
             {
               drug: "Haloperidol",
-              value: "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+              value: "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool",
             },
             {
               drug: "Perphenazine",
@@ -471,7 +471,7 @@ export const fluphenazine: Drug = {
           ],
         },
       ],
-      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -480,7 +480,7 @@ export const fluphenazine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Fluphenazine reaches peak plasma concentration and begins acting at its molecular target (D2 (high-potency antagonist); 5-HT2A (moderate); minimal H1/M1/alpha-1). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Fluphenazine reaches peak plasma concentration and begins acting at its molecular target (D2 (high-potency antagonist); 5-HT2A (moderate); minimal H1/M1/alpha-1). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -516,7 +516,7 @@ export const fluphenazine: Drug = {
   faqs: [
     {
       question: "How long does Fluphenazine take to work?",
-      answer: "Clinical effect of Fluphenazine typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Clinical effect of Fluphenazine typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Fluphenazine?",
@@ -524,11 +524,11 @@ export const fluphenazine: Drug = {
     },
     {
       question: "Can I stop Fluphenazine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Fluphenazine habit-forming?",
@@ -536,7 +536,7 @@ export const fluphenazine: Drug = {
     },
     {
       question: "Can I take Fluphenazine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Fluphenazine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Fluphenazine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -641,7 +641,7 @@ export const fluphenazine: Drug = {
       label: "Typical Antipsychotic",
       type: "class",
       href: "#mechanism",
-      note: "Typical (Conventional) Antipsychotic — Phenothiazine",
+      note: "Typical (Conventional) Antipsychotic. Phenothiazine",
     },
     {
       label: "Central monoaminergic systems (see mechanism)",
@@ -656,7 +656,7 @@ export const fluphenazine: Drug = {
       note: "Primary molecular target",
     },
     {
-      label: "Schizophrenia — psychotic manifestations",
+      label: "Schizophrenia: psychotic manifestations",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -686,7 +686,7 @@ export const fluphenazine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Fluphenazine",
+      label: "Patient Guide. Fluphenazine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -694,13 +694,13 @@ export const fluphenazine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The piperazine phenothiazine that became a depot legend — the 2–5 week decanoate injection.",
-    summary: "Fluphenazine is a prescription medicine used to treat schizophrenia — psychotic manifestations. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Fluphenazine is a strong, older antipsychotic from the same family as haloperidol. Its special form — the decanoate injection every few weeks — releases the medicine slowly and protects against relapse when daily tablets are forgotten.",
-    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation, depot injection-site reactions. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The piperazine phenothiazine that became a depot legend: the 2–5 week decanoate injection.",
+    summary: "Fluphenazine is a prescription medicine used to treat schizophrenia: psychotic manifestations. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Fluphenazine is a strong, older antipsychotic from the same family as haloperidol. Its special form (the decanoate injection every few weeks) releases the medicine slowly and protects against relapse when daily tablets are forgotten.",
+    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation, depot injection-site reactions. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
   },
   sectionDifficulty: {
     mechanism: "mbbs",
@@ -742,7 +742,7 @@ export const fluphenazine: Drug = {
         name: "Haloperidol",
         slug: "haloperidol",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool",
       },
       {
         name: "Perphenazine",
@@ -760,7 +760,7 @@ export const fluphenazine: Drug = {
         name: "Thioridazine",
         slug: "thioridazine",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "The restricted QT-retinopathy phenothiazine — last-line",
+        distinguishing: "The restricted QT-retinopathy phenothiazine: last-line",
       },
       {
         name: "Trifluoperazine",
@@ -926,17 +926,17 @@ export const fluphenazine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Fluphenazine in two sentences.",
-      answer: "Fluphenazine is a high-potency piperazine phenothiazine — strong selective D2 antagonism with the haloperidol-like 'clean but stiff' profile. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — high potency means small doses, strong EPS tendency, and little off-target sedation or hypotension.",
+      answer: "Fluphenazine is a high-potency piperazine phenothiazine: strong selective D2 antagonism with the haloperidol-like 'clean but stiff' profile. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways; high potency means small doses, strong EPS tendency, and little off-target sedation or hypotension.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Fluphenazine.",
-      answer: "Schizophrenia — psychotic manifestations, Maintenance via decanoate. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Schizophrenia: psychotic manifestations, Maintenance via decanoate. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Fluphenazine and how you would manage it.",
-      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
+      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness; the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
       topic: "Safety",
     },
     {
@@ -946,7 +946,7 @@ export const fluphenazine: Drug = {
     },
     {
       question: "Share one clinical pearl about Fluphenazine that separates safe prescribers from unsafe ones.",
-      answer: "Fluphenazine decanoate built the concept of depot psychiatry — medication that outlives the missed dose.",
+      answer: "Fluphenazine decanoate built the concept of depot psychiatry: medication that outlives the missed dose.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1022,7 +1022,7 @@ export const fluphenazine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1067,7 +1067,7 @@ export const fluphenazine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Fluphenazine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Fluphenazine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1083,7 +1083,7 @@ export const fluphenazine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Fluphenazine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Fluphenazine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1128,7 +1128,7 @@ export const fluphenazine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Fluphenazine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Fluphenazine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1138,7 +1138,7 @@ export const fluphenazine: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Low — weight gain not expected.",
+    weightGain: "Low: weight gain not expected.",
     sedation: "Mild.",
     dosing: [
       {
@@ -1159,10 +1159,10 @@ export const fluphenazine: Drug = {
     dosageForms: ["Tablets 1–10 mg", "Elixir", "Enanthate/decanoate injections 25 mg/mL"],
     dosingTips: [
       "Test dose first (12.5 mg) in depot-naive patients.",
-      "Interval and dose are independent levers — adjust both.",
+      "Interval and dose are independent levers: adjust both.",
     ],
     overdose: [
-      "Overdose with Fluphenazine is managed supportively — no specific antidote.",
+      "Overdose with Fluphenazine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Fluphenazine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1207,7 +1207,7 @@ export const fluphenazine: Drug = {
     ],
     primaryTargetSymptoms: ["Positive psychotic symptoms", "Maintenance via depot"],
     pearls: [
-      "Fluphenazine decanoate built the concept of depot psychiatry — medication that outlives the missed dose.",
+      "Fluphenazine decanoate built the concept of depot psychiatry: medication that outlives the missed dose.",
       "Oral→decanoate conversion is conservative: roughly 1.2× the oral daily dose per week, split into 2–5-weekly injections.",
       "High potency = haloperidol's motor texture in a phenothiazine package.",
       "A first-visit test dose (12.5 mg) detects the EPS-sensitive patient before committing to weeks of drug.",
@@ -1216,6 +1216,6 @@ export const fluphenazine: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

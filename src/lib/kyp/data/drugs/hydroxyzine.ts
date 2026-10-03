@@ -23,14 +23,14 @@ export const hydroxyzine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Anxiolytics & Sedatives", "Antihistamines", "Hydroxyzine"],
   /* ---- Hero / summary ---- */
-  tagline: "The antihistamine anxiolytic — sedating calm without benzodiazepine dependence.",
-  summary: "Hydroxyzine is a first-generation antihistamine (H1 blocker) used for anxiety and pruritus: it produces sedating anxiolysis without GABA-ergic dependence, making it a useful benzodiazepine-sparing option — including in pregnancy, where it has a long safety record. Its limitations are the antihistamine ceiling: sedation, dry mouth, and tolerance to the anxiolytic effect.",
+  tagline: "The antihistamine anxiolytic: sedating calm without benzodiazepine dependence.",
+  summary: "Hydroxyzine is a first-generation antihistamine (H1 blocker) used for anxiety and pruritus: it produces sedating anxiolysis without GABA-ergic dependence, making it a useful benzodiazepine-sparing option, including in pregnancy, where it has a long safety record. Its limitations are the antihistamine ceiling: sedation, dry mouth, and tolerance to the anxiolytic effect.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Hydroxyzine — from its molecular target (H1 histamine receptor (antagonist — first-generation, brain-penetrant)) to clinical effect.",
+    "Explain the mechanism of action of Hydroxyzine (from its molecular target (H1 histamine receptor (antagonist) first-generation, brain-penetrant)) to clinical effect.",
     "List the FDA-approved and off-label uses of Hydroxyzine.",
     "Predict the common and serious side effects of Hydroxyzine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Hydroxyzine.",
@@ -38,15 +38,15 @@ export const hydroxyzine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Hydroxyzine blocks central H1 receptors, reducing histaminergic wake drive — sedation used deliberately as anxiolysis, without dependence.",
-    molecularTarget: "H1 histamine receptor (antagonist — first-generation, brain-penetrant)",
+    summary: "Hydroxyzine blocks central H1 receptors, reducing histaminergic wake drive: sedation used deliberately as anxiolysis, without dependence.",
+    molecularTarget: "H1 histamine receptor (antagonist, first-generation, brain-penetrant)",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Hydroxyzine blocks central H1 receptors, reducing histaminergic wake drive — sedation used deliberately as anxiolysis, without dependence.",
+      "Hydroxyzine blocks central H1 receptors, reducing histaminergic wake drive: sedation used deliberately as anxiolysis, without dependence.",
       "The target engagement translates into the clinical effect.",
       "Practical use follows the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 20 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 20 hours. See mechanism and prescriber sections.",
     halfLife: "About 20 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -75,7 +75,7 @@ export const hydroxyzine: Drug = {
       {
         id: "effect",
         label: "Sedation + anxiolysis",
-        sublabel: "Not an anxiolytic receptor target per se — sedation does the work",
+        sublabel: "Not an anxiolytic receptor target per se: sedation does the work",
         variant: "output",
       },
     ],
@@ -97,7 +97,7 @@ export const hydroxyzine: Drug = {
         label: "produces",
       },
     ],
-    caption: "Antihistamine anxiolysis is really antihistamine sedation — effective short-term, but tolerance develops and next-day grogginess is common.",
+    caption: "Antihistamine anxiolysis is really antihistamine sedation: effective short-term, but tolerance develops and next-day grogginess is common.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Histamine"],
@@ -167,7 +167,7 @@ export const hydroxyzine: Drug = {
       name: "Tolerance to anxiolysis (weeks)",
       frequency: "common",
       severity: "moderate",
-      description: "The antihistamine ceiling — benefit fades with regular use.",
+      description: "The antihistamine ceiling: benefit fades with regular use.",
       management: "Intermittent use preferred; reassess at review.",
     },
   ],
@@ -176,7 +176,7 @@ export const hydroxyzine: Drug = {
       name: "QT prolongation (high doses)",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Dose-related QT effect — the reason for dose ceilings and caution with other QT drugs.",
+      description: "Dose-related QT effect: the reason for dose ceilings and caution with other QT drugs.",
       management: "Dose ceiling; ECG if risk factors; avoid QT combinations.",
     },
     {
@@ -223,33 +223,33 @@ export const hydroxyzine: Drug = {
     },
   ],
   pregnancy: {
-    summary: "Decades of use without clear teratogenic signal; considered acceptable for short courses when needed in pregnancy (first-generation antihistamine class comfort) — with per-trimester obstetric awareness.",
-    lactation: "Excreted in milk — infant sedation possible; caution or avoid.",
+    summary: "Decades of use without clear teratogenic signal; considered acceptable for short courses when needed in pregnancy (first-generation antihistamine class comfort), with per-trimester obstetric awareness.",
+    lactation: "Excreted in milk: infant sedation possible; caution or avoid.",
   },
   renalAdjustment: "Reduce dose in renal impairment.",
   hepaticAdjustment: "Reduce dose in hepatic impairment (daily ceiling often 50-100 mg).",
   /* ---- Education ---- */
   patientExplanation: "Hydroxyzine is a calming antihistamine: it reduces the brain's wake-up chemical histamine, producing relief of anxiety and itching together with drowsiness. It is not addictive like benzodiazepine tranquillisers and works within about half an hour, but its calming effect weakens if taken daily for many weeks.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Hydroxyzine builds over weeks — do not judge it in the first days.",
+    "Benefit from Hydroxyzine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The benzo-sparing sedative: hydroxyzine delivers GABA-free calm — no dependence, no respiratory interaction with opioids (in the classic sense), no withdrawal.",
+    "The benzo-sparing sedative: hydroxyzine delivers GABA-free calm; no dependence, no respiratory interaction with opioids (in the classic sense), no withdrawal.",
     "Pregnancy record: decades of use give it a comfort zone benzodiazepines lack (with standard caution).",
-    "Tolerance is the ceiling: the anxiolytic effect fades over weeks — plan for intermittent use, not indefinite daily dosing.",
-    "The QT footnote: high-dose hydroxyzine carries a dose-related QT warning — respect the ceilings.",
-    "Pruritus is the second life: itch and anxiety in one drug — useful in dermatology liaison.",
+    "Tolerance is the ceiling: the anxiolytic effect fades over weeks. Plan for intermittent use, not indefinite daily dosing.",
+    "The QT footnote: high-dose hydroxyzine carries a dose-related QT warning; respect the ceilings.",
+    "Pruritus is the second life: itch and anxiety in one drug; useful in dermatology liaison.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Hydroxyzine: Hydroxyzine blocks central H1 receptors, reducing histaminergic wake drive — sedation used deliberately as anxiolysis, without dependence.",
-        "Uses of Hydroxyzine: Anxiety and tension (short-term); Pruritus (itching) — urticaria and allergic conditions; Pre- and post-operative sedation; Insomnia (short-term)",
-        "Mechanism: first-generation H1 ANTAGONIST — central sedation as anxiolysis.",
+        "Mechanism of Hydroxyzine: Hydroxyzine blocks central H1 receptors, reducing histaminergic wake drive; sedation used deliberately as anxiolysis, without dependence.",
+        "Uses of Hydroxyzine: Anxiety and tension (short-term); Pruritus (itching): urticaria and allergic conditions; Pre- and post-operative sedation; Insomnia (short-term)",
+        "Mechanism: first-generation H1 ANTAGONIST; central sedation as anxiolysis.",
         "Indications: anxiety (short-term), pruritus/urticaria, pre-op sedation.",
       ],
       practical: [
@@ -257,18 +257,18 @@ export const hydroxyzine: Drug = {
         "Outline the monitoring plan: Sedation and falls review (elderly) (Every visit)",
       ],
       longAnswer: [
-        "Hydroxyzine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: first-generation H1 ANTAGONIST — central sedation as anxiolysis.",
+        "Hydroxyzine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: first-generation H1 ANTAGONIST; central sedation as anxiolysis.",
         "Indications: anxiety (short-term), pruritus/urticaria, pre-op sedation.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: first-generation H1 ANTAGONIST — central sedation as anxiolysis.",
+        "Mechanism: first-generation H1 ANTAGONIST; central sedation as anxiolysis.",
         "Indications: anxiety (short-term), pruritus/urticaria, pre-op sedation.",
         "No dependence or abuse potential.",
         "Dose-related QT prolongation (respect ceilings).",
-        "Tolerance develops over weeks — intermittent use preferred.",
+        "Tolerance develops over weeks: intermittent use preferred.",
         "Elderly: anticholinergic and falls cautions.",
       ],
       pyqConcepts: [
@@ -279,40 +279,40 @@ export const hydroxyzine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Hydroxyzine develops qt prolongation (high doses) — next best step?",
+        "A patient on Hydroxyzine develops qt prolongation (high doses): next best step?",
         "When to choose Hydroxyzine over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: H1 histamine receptor (antagonist — first-generation, brain-penetrant)",
+        "Primary target: H1 histamine receptor (antagonist, first-generation, brain-penetrant)",
         "Most common side effects: Sedation and drowsiness, Dry mouth, Dizziness",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The benzo-sparing sedative: hydroxyzine delivers GABA-free calm — no dependence, no respiratory interaction with opioids (in the classic sense), no withdrawal.",
+        "The benzo-sparing sedative: hydroxyzine delivers GABA-free calm; no dependence, no respiratory interaction with opioids (in the classic sense), no withdrawal.",
         "Pregnancy record: decades of use give it a comfort zone benzodiazepines lack (with standard caution).",
-        "Tolerance is the ceiling: the anxiolytic effect fades over weeks — plan for intermittent use, not indefinite daily dosing.",
-        "The QT footnote: high-dose hydroxyzine carries a dose-related QT warning — respect the ceilings.",
+        "Tolerance is the ceiling: the anxiolytic effect fades over weeks. Plan for intermittent use, not indefinite daily dosing.",
+        "The QT footnote: high-dose hydroxyzine carries a dose-related QT warning; respect the ceilings.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: first-generation H1 ANTAGONIST — central sedation as anxiolysis.",
+    "Mechanism: first-generation H1 ANTAGONIST; central sedation as anxiolysis.",
     "Indications: anxiety (short-term), pruritus/urticaria, pre-op sedation.",
     "No dependence or abuse potential.",
     "Dose-related QT prolongation (respect ceilings).",
-    "Tolerance develops over weeks — intermittent use preferred.",
+    "Tolerance develops over weeks: intermittent use preferred.",
     "Elderly: anticholinergic and falls cautions.",
     "Pregnancy: long record of use with standard caution.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — anxiety and tension (short-term)",
+      title: "First presentation: anxiety and tension (short-term)",
       presentation: "A patient presenting with anxiety and tension (short-term), started on Hydroxyzine.",
       history: "A adult patient presents with a anxiety and tension (short-term) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with anxiety and tension (short-term); physical examination and baseline investigations are unremarkable.",
@@ -321,7 +321,7 @@ export const hydroxyzine: Drug = {
       management: "Started at 25-50 mg up to four times daily, titrated to 50-100 mg/day divided with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Hydroxyzine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Hydroxyzine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -330,12 +330,12 @@ export const hydroxyzine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Antihistamine comparison — choosing within the class",
+      title: "Antihistamine comparison: choosing within the class",
       primaryDrug: "Hydroxyzine",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "H1 histamine receptor (antagonist — first-generation, brain-penetrant)",
+          primaryValue: "H1 histamine receptor (antagonist, first-generation, brain-penetrant)",
           comparisons: [
             {
               drug: "Diphenhydramine",
@@ -375,16 +375,16 @@ export const hydroxyzine: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The antihistamine anxiolytic — benzo-sparing sedation",
+          primaryValue: "The antihistamine anxiolytic: benzo-sparing sedation",
           comparisons: [
             {
               drug: "Diphenhydramine",
-              value: "The OTC sedative + the EPS rescue — and the anticholinergic caution",
+              value: "The OTC sedative + the EPS rescue, and the anticholinergic caution",
             },
           ],
         },
       ],
-      takeaway: "All antihistamines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All antihistamines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -393,7 +393,7 @@ export const hydroxyzine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Hydroxyzine reaches peak plasma concentration and begins acting at its molecular target (H1 histamine receptor (antagonist — first-generation, brain-penetrant)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Hydroxyzine reaches peak plasma concentration and begins acting at its molecular target (H1 histamine receptor (antagonist, first-generation, brain-penetrant)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -429,7 +429,7 @@ export const hydroxyzine: Drug = {
   faqs: [
     {
       question: "How long does Hydroxyzine take to work?",
-      answer: "Sedation within 30-60 minutes.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Sedation within 30-60 minutes.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Hydroxyzine?",
@@ -437,11 +437,11 @@ export const hydroxyzine: Drug = {
     },
     {
       question: "Can I stop Hydroxyzine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Hydroxyzine habit-forming?",
@@ -449,7 +449,7 @@ export const hydroxyzine: Drug = {
     },
     {
       question: "Can I take Hydroxyzine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Hydroxyzine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Hydroxyzine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -545,7 +545,7 @@ export const hydroxyzine: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "H1 histamine receptor (antagonist — first-generation, brain-penetrant)",
+      label: "H1 histamine receptor (antagonist, first-generation, brain-penetrant)",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
@@ -557,7 +557,7 @@ export const hydroxyzine: Drug = {
       note: "Key indication",
     },
     {
-      label: "Pruritus (itching) — urticaria and allergic conditions",
+      label: "Pruritus (itching): urticaria and allergic conditions",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -587,7 +587,7 @@ export const hydroxyzine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Hydroxyzine",
+      label: "Patient Guide. Hydroxyzine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -595,13 +595,13 @@ export const hydroxyzine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The antihistamine anxiolytic — sedating calm without benzodiazepine dependence.",
-    summary: "Hydroxyzine is a prescription medicine used to treat anxiety and tension (short-term). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The antihistamine anxiolytic: sedating calm without benzodiazepine dependence.",
+    summary: "Hydroxyzine is a prescription medicine used to treat anxiety and tension (short-term). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Hydroxyzine is a calming antihistamine: it reduces the brain's wake-up chemical histamine, producing relief of anxiety and itching together with drowsiness. It is not addictive like benzodiazepine tranquillisers and works within about half an hour, but its calming effect weakens if taken daily for many weeks.",
-    sideEffects: "The most common side effects are: sedation and drowsiness, dry mouth, dizziness, tolerance to anxiolysis (weeks). These usually appear early and many settle with time. Serious effects are uncommon but important to know: QT prolongation (high doses) and Anticholinergic toxicity (elderly, overdose). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: sedation and falls review (elderly) (every visit). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: sedation and drowsiness, dry mouth, dizziness, tolerance to anxiolysis (weeks). These usually appear early and many settle with time. Serious effects are uncommon but important to know: QT prolongation (high doses) and Anticholinergic toxicity (elderly, overdose). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: sedation and falls review (elderly) (every visit). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs, Other anticholinergics and sedating antihistamines, Alcohol and CNS depressants. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs, Other anticholinergics and sedating antihistamines, Alcohol and CNS depressants. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -634,7 +634,7 @@ export const hydroxyzine: Drug = {
     costNote: "Cost varies by manufacturer and region.",
     monitoring: "Sedation/falls review in elderly.",
     patientCounselling: [
-      "Drowsiness expected — no driving at first.",
+      "Drowsiness expected: no driving at first.",
       "Not for continuous daily use over months.",
     ],
   },
@@ -670,13 +670,13 @@ export const hydroxyzine: Drug = {
         name: "Hydroxyzine",
         slug: "hydroxyzine",
         relationship: "This guide",
-        distinguishing: "The antihistamine anxiolytic — benzo-sparing sedation",
+        distinguishing: "The antihistamine anxiolytic: benzo-sparing sedation",
       },
       {
         name: "Diphenhydramine",
         slug: "diphenhydramine",
         relationship: "Same class (Antihistamine)",
-        distinguishing: "The OTC sedative + the EPS rescue — and the anticholinergic caution",
+        distinguishing: "The OTC sedative + the EPS rescue, and the anticholinergic caution",
       },
     ],
   },
@@ -824,17 +824,17 @@ export const hydroxyzine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Hydroxyzine in two sentences.",
-      answer: "Hydroxyzine blocks central H1 receptors, reducing histaminergic wake drive — sedation used deliberately as anxiolysis, without dependence. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Hydroxyzine blocks central H1 receptors, reducing histaminergic wake drive: sedation used deliberately as anxiolysis, without dependence. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Hydroxyzine.",
-      answer: "Anxiety and tension (short-term), Pruritus (itching) — urticaria and allergic conditions, Pre- and post-operative sedation, Insomnia (short-term). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Anxiety and tension (short-term), Pruritus (itching): urticaria and allergic conditions, Pre- and post-operative sedation, Insomnia (short-term). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Hydroxyzine and how you would manage it.",
-      answer: "QT prolongation (high doses): Dose-related QT effect — the reason for dose ceilings and caution with other QT drugs. Management: Dose ceiling; ECG if risk factors; avoid QT combinations.",
+      answer: "QT prolongation (high doses): Dose-related QT effect; the reason for dose ceilings and caution with other QT drugs. Management: Dose ceiling; ECG if risk factors; avoid QT combinations.",
       topic: "Safety",
     },
     {
@@ -844,7 +844,7 @@ export const hydroxyzine: Drug = {
     },
     {
       question: "Share one clinical pearl about Hydroxyzine that separates safe prescribers from unsafe ones.",
-      answer: "The benzo-sparing sedative: hydroxyzine delivers GABA-free calm — no dependence, no respiratory interaction with opioids (in the classic sense), no withdrawal.",
+      answer: "The benzo-sparing sedative: hydroxyzine delivers GABA-free calm; no dependence, no respiratory interaction with opioids (in the classic sense), no withdrawal.",
       topic: "Clinical Pearls",
     },
   ],
@@ -920,7 +920,7 @@ export const hydroxyzine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -965,7 +965,7 @@ export const hydroxyzine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Hydroxyzine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Hydroxyzine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -981,7 +981,7 @@ export const hydroxyzine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Hydroxyzine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Hydroxyzine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1024,7 +1024,7 @@ export const hydroxyzine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Hydroxyzine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Hydroxyzine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1048,7 +1048,7 @@ export const hydroxyzine: Drug = {
     dosageForms: ["Tablets 10, 25, 50 mg", "Capsules (Vistaril)", "Syrup 10 mg/5 mL", "Injection (some markets)"],
     dosingTips: ["Night-weighted dosing.", "Intermittent use beats continuous.", "Respect dose ceilings (QT)."],
     overdose: [
-      "Overdose with Hydroxyzine is managed supportively — no specific antidote.",
+      "Overdose with Hydroxyzine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Hydroxyzine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1082,16 +1082,16 @@ export const hydroxyzine: Drug = {
     potentialDisadvantages: ["Sedation; driving impairment.", "Tolerance over weeks.", "QT ceiling.", "Anticholinergic burden in elderly."],
     primaryTargetSymptoms: ["Acute anxiety and tension", "Pruritus", "Short-term insomnia"],
     pearls: [
-      "The benzo-sparing sedative: hydroxyzine delivers GABA-free calm — no dependence, no respiratory interaction with opioids (in the classic sense), no withdrawal.",
+      "The benzo-sparing sedative: hydroxyzine delivers GABA-free calm; no dependence, no respiratory interaction with opioids (in the classic sense), no withdrawal.",
       "Pregnancy record: decades of use give it a comfort zone benzodiazepines lack (with standard caution).",
-      "Tolerance is the ceiling: the anxiolytic effect fades over weeks — plan for intermittent use, not indefinite daily dosing.",
-      "The QT footnote: high-dose hydroxyzine carries a dose-related QT warning — respect the ceilings.",
-      "Pruritus is the second life: itch and anxiety in one drug — useful in dermatology liaison.",
+      "Tolerance is the ceiling: the anxiolytic effect fades over weeks. Plan for intermittent use, not indefinite daily dosing.",
+      "The QT footnote: high-dose hydroxyzine carries a dose-related QT warning; respect the ceilings.",
+      "Pruritus is the second life: itch and anxiety in one drug; useful in dermatology liaison.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

@@ -23,14 +23,14 @@ export const atomoxetine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "ADHD Medications", "NRIs", "Atomoxetine"],
   /* ---- Hero / summary ---- */
-  tagline: "The non-stimulant first-line — selective norepinephrine reuptake inhibition for 24-hour ADHD cover without abuse potential.",
-  summary: "Atomoxetine is the selective norepinephrine reuptake inhibitor (NRI) approved for ADHD from age 6 through adulthood: a non-stimulant with zero abuse potential, full 24-hour coverage from once-daily dosing, and co-existing anxiety benefit — at the price of weeks-to-effect onset, milder overall efficacy than stimulants, the antidepressant-class suicidality warning, and rare hepatic injury.",
+  tagline: "The non-stimulant first-line: selective norepinephrine reuptake inhibition for 24-hour ADHD cover without abuse potential.",
+  summary: "Atomoxetine is the selective norepinephrine reuptake inhibitor (NRI) approved for ADHD from age 6 through adulthood: a non-stimulant with zero abuse potential, full 24-hour coverage from once-daily dosing, and co-existing anxiety benefit, at the price of weeks-to-effect onset, milder overall efficacy than stimulants, the antidepressant-class suicidality warning, and rare hepatic injury.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Atomoxetine — from its molecular target (NET (norepinephrine transporter — selective blockade)) to clinical effect.",
+    "Explain the mechanism of action of Atomoxetine (from its molecular target (NET (norepinephrine transporter) selective blockade)) to clinical effect.",
     "List the FDA-approved and off-label uses of Atomoxetine.",
     "Predict the common and serious side effects of Atomoxetine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Atomoxetine.",
@@ -38,15 +38,15 @@ export const atomoxetine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Atomoxetine selectively blocks the norepinephrine transporter, raising noradrenergic (and secondarily dopaminergic, in PFC) tone — a non-stimulant ADHD mechanism.",
-    molecularTarget: "NET (norepinephrine transporter — selective blockade)",
+    summary: "Atomoxetine selectively blocks the norepinephrine transporter, raising noradrenergic (and secondarily dopaminergic, in PFC) tone: a non-stimulant ADHD mechanism.",
+    molecularTarget: "NET (norepinephrine transporter, selective blockade)",
     effect: "Catecholamine and wake-system enhancement with the agent's characteristic profile.",
     steps: [
-      "Atomoxetine selectively blocks the norepinephrine transporter, raising noradrenergic (and secondarily dopaminergic, in PFC) tone — a non-stimulant ADHD mechanism.",
+      "Atomoxetine selectively blocks the norepinephrine transporter, raising noradrenergic (and secondarily dopaminergic, in PFC) tone: a non-stimulant ADHD mechanism.",
       "Prefrontal catecholamine enhancement sharpens attention and impulse control.",
       "The agent's formulation and half-life determine practical coverage.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 5 hours (extensive metabolisers); ~21 hours (poor metabolisers). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 5 hours (extensive metabolisers); ~21 hours (poor metabolisers). See mechanism and prescriber sections.",
     halfLife: "5 hours (extensive metabolisers); ~21 hours (poor metabolisers).",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
@@ -109,14 +109,14 @@ export const atomoxetine: Drug = {
         label: "produces",
       },
     ],
-    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation — the central paradox of antidepressant pharmacology.",
+    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation: the central paradox of antidepressant pharmacology.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
     "Central monoaminergic systems (see mechanism)",
   ],
   receptors: [
-    "NET (norepinephrine transporter — selective blockade)",
+    "NET (norepinephrine transporter, selective blockade)",
   ],
   brainRegionIds: ["prefrontal-cortex", "amygdala", "hippocampus"],
   pathwayIds: [],
@@ -135,7 +135,7 @@ export const atomoxetine: Drug = {
     {
       name: "ADHD in substance-use populations",
       status: "guideline",
-      description: "No misuse potential — the stimulant alternative when diversion risk governs.",
+      description: "No misuse potential: the stimulant alternative when diversion risk governs.",
     },
   ],
   contraindications: [
@@ -153,7 +153,7 @@ export const atomoxetine: Drug = {
   blackBoxWarnings: [
     {
       title: "Suicidal thoughts and behaviours in children and adolescents",
-      text: "Antidepressant-class warning: pooled paediatric trials showed emergent suicidality signals — monitor mood and ideation closely during early treatment and dose changes.",
+      text: "Antidepressant-class warning: pooled paediatric trials showed emergent suicidality signals; monitor mood and ideation closely during early treatment and dose changes.",
     },
   ],
   /* ---- Side effects ---- */
@@ -213,7 +213,7 @@ export const atomoxetine: Drug = {
       name: "Suicidality (paediatric)",
       frequency: "uncommon",
       severity: "severe",
-      description: "Emergent ideation in early weeks — the boxed warning.",
+      description: "Emergent ideation in early weeks: the boxed warning.",
       management: "Weekly early mood review; warn families.",
     },
     {
@@ -264,95 +264,95 @@ export const atomoxetine: Drug = {
   renalAdjustment: "No major adjustment.",
   hepaticAdjustment: "Reduce dose in moderate impairment; avoid in severe (hepatotoxicity warning).",
   /* ---- Education ---- */
-  patientExplanation: "Atomoxetine is the standard NON-stimulant medicine for ADHD: it raises noradrenaline — one of the brain's attention chemicals — giving round-the-clock cover from a single daily capsule. Unlike stimulants it is not a controlled drug and cannot be misused, but it takes several weeks to show its full effect. Stomach upset in the first week and mild rises in heart rate are its commonest effects.",
+  patientExplanation: "Atomoxetine is the standard NON-stimulant medicine for ADHD: it raises noradrenaline (one of the brain's attention chemicals) giving round-the-clock cover from a single daily capsule. Unlike stimulants it is not a controlled drug and cannot be misused, but it takes several weeks to show its full effect. Stomach upset in the first week and mild rises in heart rate are its commonest effects.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Atomoxetine builds over weeks — do not judge it in the first days.",
+    "Benefit from Atomoxetine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The patience drug: 2-6 weeks to effect (pharmacologically an antidepressant) — sell the delay or lose the patient.",
-    "24-hour cover from one dose — the morning-to-morning advantage over stimulants.",
-    "Comorbid anxiety: atomoxetine neutral-to-helpful vs stimulant anxiogenic tendency — its strongest niche.",
+    "The patience drug: 2-6 weeks to effect (pharmacologically an antidepressant); sell the delay or lose the patient.",
+    "24-hour cover from one dose: the morning-to-morning advantage over stimulants.",
+    "Comorbid anxiety: atomoxetine neutral-to-helpful vs stimulant anxiogenic tendency; its strongest niche.",
     "2D6 metabolism: poor metabolisers get 5× levels; fluoxetine/paroxetine double everyone.",
     "Weight-based paediatric dosing (1.2 mg/kg) is the titration discipline.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Atomoxetine: Atomoxetine selectively blocks the norepinephrine transporter, raising noradrenergic (and secondarily dopaminergic, in PFC) tone — a non-stimulant ADHD mechanism.",
-        "Uses of Atomoxetine: ADHD — ages 6 and above through adulthood; ADHD with comorbid anxiety; ADHD in substance-use populations",
-        "Mechanism: SELECTIVE NET blockade — the only non-stimulant ADHD first-line.",
+        "Mechanism of Atomoxetine: Atomoxetine selectively blocks the norepinephrine transporter, raising noradrenergic (and secondarily dopaminergic, in PFC) tone; a non-stimulant ADHD mechanism.",
+        "Uses of Atomoxetine: ADHD; ages 6 and above through adulthood; ADHD with comorbid anxiety; ADHD in substance-use populations",
+        "Mechanism: SELECTIVE NET blockade; the only non-stimulant ADHD first-line.",
         "Onset 2-6 WEEKS; 24-h cover from once daily.",
       ],
       practical: [
-        "Prescribe Atomoxetine for adhd — ages 6 and above through adulthood with dose, timing, and duration.",
+        "Prescribe Atomoxetine for adhd: ages 6 and above through adulthood with dose, timing, and duration.",
         "Outline the monitoring plan: Heart rate and blood pressure (Baseline, then every visit); Growth (children) (Every 6 months); Mood and suicidality (early weeks) (Weekly for the first month (paediatric))",
       ],
       longAnswer: [
-        "Atomoxetine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: SELECTIVE NET blockade — the only non-stimulant ADHD first-line.",
+        "Atomoxetine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: SELECTIVE NET blockade; the only non-stimulant ADHD first-line.",
         "Onset 2-6 WEEKS; 24-h cover from once daily.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: SELECTIVE NET blockade — the only non-stimulant ADHD first-line.",
+        "Mechanism: SELECTIVE NET blockade; the only non-stimulant ADHD first-line.",
         "Onset 2-6 WEEKS; 24-h cover from once daily.",
-        "No abuse potential — unscheduled; the stimulant alternative in substance-use contexts.",
+        "No abuse potential: unscheduled; the stimulant alternative in substance-use contexts.",
         "Boxed warning: paediatric suicidality (antidepressant-class).",
-        "CYP2D6 metabolism — inhibitors (fluoxetine) double levels.",
+        "CYP2D6 metabolism: inhibitors (fluoxetine) double levels.",
         "Rare hepatotoxicity (LFT warning).",
       ],
       pyqConcepts: ["Mechanism/target of Atomoxetine", "Key adverse effect: Hepatotoxicity", "Dosing and titration of Atomoxetine"],
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Atomoxetine develops hepatotoxicity — next best step?",
+        "A patient on Atomoxetine develops hepatotoxicity: next best step?",
         "When to choose Atomoxetine over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: NET (norepinephrine transporter — selective blockade)",
+        "Primary target: NET (norepinephrine transporter, selective blockade)",
         "Most common side effects: Nausea and GI upset, Appetite suppression and weight loss, Fatigue or sedation",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The patience drug: 2-6 weeks to effect (pharmacologically an antidepressant) — sell the delay or lose the patient.",
-        "24-hour cover from one dose — the morning-to-morning advantage over stimulants.",
-        "Comorbid anxiety: atomoxetine neutral-to-helpful vs stimulant anxiogenic tendency — its strongest niche.",
+        "The patience drug: 2-6 weeks to effect (pharmacologically an antidepressant); sell the delay or lose the patient.",
+        "24-hour cover from one dose: the morning-to-morning advantage over stimulants.",
+        "Comorbid anxiety: atomoxetine neutral-to-helpful vs stimulant anxiogenic tendency; its strongest niche.",
         "2D6 metabolism: poor metabolisers get 5× levels; fluoxetine/paroxetine double everyone.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: SELECTIVE NET blockade — the only non-stimulant ADHD first-line.",
+    "Mechanism: SELECTIVE NET blockade; the only non-stimulant ADHD first-line.",
     "Onset 2-6 WEEKS; 24-h cover from once daily.",
-    "No abuse potential — unscheduled; the stimulant alternative in substance-use contexts.",
+    "No abuse potential: unscheduled; the stimulant alternative in substance-use contexts.",
     "Boxed warning: paediatric suicidality (antidepressant-class).",
-    "CYP2D6 metabolism — inhibitors (fluoxetine) double levels.",
+    "CYP2D6 metabolism: inhibitors (fluoxetine) double levels.",
     "Rare hepatotoxicity (LFT warning).",
     "Dose targets: 1.2 mg/kg (children) / 80 mg (adults).",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — adhd — ages 6 and above through adulthood",
-      presentation: "A patient presenting with adhd — ages 6 and above through adulthood, started on Atomoxetine.",
-      history: "A adult patient presents with a adhd — ages 6 and above through adulthood picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with adhd — ages 6 and above through adulthood; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "ADHD — ages 6 and above through adulthood. Differentials are considered and excluded clinically.",
+      title: "First presentation: adhd; ages 6 and above through adulthood",
+      presentation: "A patient presenting with adhd: ages 6 and above through adulthood, started on Atomoxetine.",
+      history: "A adult patient presents with a adhd: ages 6 and above through adulthood picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with adhd: ages 6 and above through adulthood; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "ADHD: ages 6 and above through adulthood. Differentials are considered and excluded clinically.",
       rationale: "Atomoxetine is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (NRI) with strong evidence in this condition.",
       management: "Started at 0.5 mg/kg/day for 7 days, titrated to 1.2 mg/kg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Atomoxetine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Atomoxetine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -361,22 +361,22 @@ export const atomoxetine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "NRI vs related agents — orientation table",
+      title: "NRI vs related agents: orientation table",
       primaryDrug: "Atomoxetine",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "NET (norepinephrine transporter — selective blockade)",
+          primaryValue: "NET (norepinephrine transporter, selective blockade)",
           comparisons: [
             {
               drug: "Atomoxetine",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Weight neutral to reducing — appetite effects common.",
+          primaryValue: "Weight neutral to reducing: appetite effects common.",
           comparisons: [
             {
               drug: "Atomoxetine",
@@ -396,7 +396,7 @@ export const atomoxetine: Drug = {
         },
         {
           attribute: "Clinical niche",
-          primaryValue: "The 24-hour non-stimulant — anxiety-comorbid ADHD and substance-use safety",
+          primaryValue: "The 24-hour non-stimulant: anxiety-comorbid ADHD and substance-use safety",
           comparisons: [
             {
               drug: "Atomoxetine",
@@ -405,7 +405,7 @@ export const atomoxetine: Drug = {
           ],
         },
       ],
-      takeaway: "Atomoxetine is compared here with related agents for orientation. Full comparison data lives in each drug's own guide — follow the links for the complete picture.",
+      takeaway: "Atomoxetine is compared here with related agents for orientation. Full comparison data lives in each drug's own guide: follow the links for the complete picture.",
     },
   ],
   /* ---- Timeline ---- */
@@ -414,7 +414,7 @@ export const atomoxetine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Atomoxetine reaches peak plasma concentration and begins acting at its molecular target (NET (norepinephrine transporter — selective blockade)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Atomoxetine reaches peak plasma concentration and begins acting at its molecular target (NET (norepinephrine transporter, selective blockade)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -426,9 +426,9 @@ export const atomoxetine: Drug = {
     },
     {
       id: "t3",
-      time: "Weeks 1–4 (Therapeutic effect builds over 2-6 weeks — not a same-day drug.)",
+      time: "Weeks 1–4 (Therapeutic effect builds over 2-6 weeks, not a same-day drug.)",
       title: "Therapeutic effect builds",
-      description: "Therapeutic effect builds over 2-6 weeks — not a same-day drug. is the typical window for the main therapeutic effect to become apparent. Review at 2 and 4 weeks to assess response and tolerability.",
+      description: "Therapeutic effect builds over 2-6 weeks, not a same-day drug. is the typical window for the main therapeutic effect to become apparent. Review at 2 and 4 weeks to assess response and tolerability.",
       phase: "peak",
     },
     {
@@ -450,7 +450,7 @@ export const atomoxetine: Drug = {
   faqs: [
     {
       question: "How long does Atomoxetine take to work?",
-      answer: "Therapeutic effect builds over 2-6 weeks — not a same-day drug.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Therapeutic effect builds over 2-6 weeks, not a same-day drug.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Atomoxetine?",
@@ -458,11 +458,11 @@ export const atomoxetine: Drug = {
     },
     {
       question: "Can I stop Atomoxetine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Atomoxetine habit-forming?",
@@ -470,7 +470,7 @@ export const atomoxetine: Drug = {
     },
     {
       question: "Can I take Atomoxetine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Atomoxetine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Atomoxetine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -551,13 +551,13 @@ export const atomoxetine: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "NET (norepinephrine transporter — selective blockade)",
+      label: "NET (norepinephrine transporter, selective blockade)",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
     },
     {
-      label: "ADHD — ages 6 and above through adulthood",
+      label: "ADHD: ages 6 and above through adulthood",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -593,7 +593,7 @@ export const atomoxetine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Atomoxetine",
+      label: "Patient Guide. Atomoxetine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -601,13 +601,13 @@ export const atomoxetine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The non-stimulant first-line — selective norepinephrine reuptake inhibition for 24-hour ADHD cover without abuse potential.",
-    summary: "Atomoxetine is a prescription medicine used to treat adhd — ages 6 and above through adulthood. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Atomoxetine is the standard NON-stimulant medicine for ADHD: it raises noradrenaline — one of the brain's attention chemicals — giving round-the-clock cover from a single daily capsule. Unlike stimulants it is not a controlled drug and cannot be misused, but it takes several weeks to show its full effect. Stomach upset in the first week and mild rises in heart rate are its commonest effects.",
-    sideEffects: "The most common side effects are: nausea and gi upset, appetite suppression and weight loss, fatigue or sedation, blood pressure and heart rate rise, sexual dysfunction (adults), sleep disturbance. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hepatotoxicity and Suicidality (paediatric). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline, then every visit); growth (children) (every 6 months); mood and suicidality (early weeks) (weekly for the first month (paediatric)). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The non-stimulant first-line: selective norepinephrine reuptake inhibition for 24-hour ADHD cover without abuse potential.",
+    summary: "Atomoxetine is a prescription medicine used to treat adhd: ages 6 and above through adulthood. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Atomoxetine is the standard NON-stimulant medicine for ADHD: it raises noradrenaline (one of the brain's attention chemicals) giving round-the-clock cover from a single daily capsule. Unlike stimulants it is not a controlled drug and cannot be misused, but it takes several weeks to show its full effect. Stomach upset in the first week and mild rises in heart rate are its commonest effects.",
+    sideEffects: "The most common side effects are: nausea and gi upset, appetite suppression and weight loss, fatigue or sedation, blood pressure and heart rate rise, sexual dysfunction (adults), sleep disturbance. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hepatotoxicity and Suicidality (paediatric). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline, then every visit); growth (children) (every 6 months); mood and suicidality (early weeks) (weekly for the first month (paediatric)). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Fluoxetine and paroxetine (strong 2D6 inhibitors), MAOIs. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Fluoxetine and paroxetine (strong 2D6 inhibitors), MAOIs. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -676,7 +676,7 @@ export const atomoxetine: Drug = {
         name: "Atomoxetine",
         slug: "atomoxetine",
         relationship: "This guide",
-        distinguishing: "The 24-hour non-stimulant — anxiety-comorbid ADHD and substance-use safety",
+        distinguishing: "The 24-hour non-stimulant: anxiety-comorbid ADHD and substance-use safety",
       },
     ],
   },
@@ -824,12 +824,12 @@ export const atomoxetine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Atomoxetine in two sentences.",
-      answer: "Atomoxetine selectively blocks the norepinephrine transporter, raising noradrenergic (and secondarily dopaminergic, in PFC) tone — a non-stimulant ADHD mechanism. Net effect: Catecholamine and wake-system enhancement with the agent's characteristic profile.",
+      answer: "Atomoxetine selectively blocks the norepinephrine transporter, raising noradrenergic (and secondarily dopaminergic, in PFC) tone: a non-stimulant ADHD mechanism. Net effect: Catecholamine and wake-system enhancement with the agent's characteristic profile.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Atomoxetine.",
-      answer: "ADHD — ages 6 and above through adulthood, ADHD with comorbid anxiety, ADHD in substance-use populations. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "ADHD: ages 6 and above through adulthood, ADHD with comorbid anxiety, ADHD in substance-use populations. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -844,7 +844,7 @@ export const atomoxetine: Drug = {
     },
     {
       question: "Share one clinical pearl about Atomoxetine that separates safe prescribers from unsafe ones.",
-      answer: "The patience drug: 2-6 weeks to effect (pharmacologically an antidepressant) — sell the delay or lose the patient.",
+      answer: "The patience drug: 2-6 weeks to effect (pharmacologically an antidepressant); sell the delay or lose the patient.",
       topic: "Clinical Pearls",
     },
   ],
@@ -920,7 +920,7 @@ export const atomoxetine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -965,7 +965,7 @@ export const atomoxetine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Atomoxetine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Atomoxetine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -981,7 +981,7 @@ export const atomoxetine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Atomoxetine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Atomoxetine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1009,7 +1009,7 @@ export const atomoxetine: Drug = {
   prescriberGuide: {
     sourceEdition: "Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017)",
     onsetTimeline: [
-      "Therapeutic effect builds over 2-6 weeks — not a same-day drug.",
+      "Therapeutic effect builds over 2-6 weeks, not a same-day drug.",
     ],
     ifItWorks: [
       "Continue Atomoxetine at the lowest effective dose for the guideline-recommended duration for the condition treated.",
@@ -1026,7 +1026,7 @@ export const atomoxetine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Atomoxetine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Atomoxetine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1036,7 +1036,7 @@ export const atomoxetine: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Weight neutral to reducing — appetite effects common.",
+    weightGain: "Weight neutral to reducing: appetite effects common.",
     sedation: "Not sedating.",
     dosing: [
       {
@@ -1061,7 +1061,7 @@ export const atomoxetine: Drug = {
       "Check HR/BP and growth; ask about mood early.",
     ],
     overdose: [
-      "Overdose with Atomoxetine is managed supportively — no specific antidote.",
+      "Overdose with Atomoxetine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Atomoxetine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1098,9 +1098,9 @@ export const atomoxetine: Drug = {
     potentialDisadvantages: ["Weeks-to-effect onset.", "Milder efficacy than stimulants.", "Paediatric suicidality boxed warning.", "Rare hepatotoxicity."],
     primaryTargetSymptoms: ["ADHD symptoms across the full day", "ADHD with anxiety comorbidity"],
     pearls: [
-      "The patience drug: 2-6 weeks to effect (pharmacologically an antidepressant) — sell the delay or lose the patient.",
-      "24-hour cover from one dose — the morning-to-morning advantage over stimulants.",
-      "Comorbid anxiety: atomoxetine neutral-to-helpful vs stimulant anxiogenic tendency — its strongest niche.",
+      "The patience drug: 2-6 weeks to effect (pharmacologically an antidepressant); sell the delay or lose the patient.",
+      "24-hour cover from one dose: the morning-to-morning advantage over stimulants.",
+      "Comorbid anxiety: atomoxetine neutral-to-helpful vs stimulant anxiogenic tendency; its strongest niche.",
       "2D6 metabolism: poor metabolisers get 5× levels; fluoxetine/paroxetine double everyone.",
       "Weight-based paediatric dosing (1.2 mg/kg) is the titration discipline.",
     ],
@@ -1108,6 +1108,6 @@ export const atomoxetine: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

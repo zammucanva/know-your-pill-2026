@@ -43,7 +43,7 @@ export function DrugInteractions({ drug }: DrugInteractionsProps) {
       <Container>
         <SectionHeader
           eyebrow="Drug Interactions"
-          title="What should not be combined — and why."
+          title="What should not be combined, and why."
           description="Interactions are sorted by severity. The most clinically important are pharmacokinetic interactions (one drug altering the levels of another) and pharmacodynamic interactions (additive effects on the same system)."
         />
 
@@ -70,7 +70,7 @@ export function DrugInteractions({ drug }: DrugInteractionsProps) {
         <div className="mt-8">
           <Callout variant="warning" title="Practical tip for clinicians">
             Always ask about over-the-counter products and herbal supplements during
-            medication reconciliation — cough syrups, herbal products such as St John&apos;s
+            medication reconciliation: cough syrups, herbal products such as St John&apos;s
             Wort, and weight-loss products are commonly missed on standard reconciliation
             and can interact meaningfully with psychiatric medications.
           </Callout>

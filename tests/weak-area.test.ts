@@ -218,7 +218,7 @@ describe("weak-area — builder integration pins", () => {
     expect(src).toContain("Not enough practice history yet");
     expect(src).toContain("No weak classes right now");
     // The reasons banner carries the explanation into the test.
-    expect(src).toContain("Weak-Area Test — drawn from your practice history");
+    expect(src).toContain("Weak-Area Test: drawn from your practice history");
   });
 
   test("10. one-tap ?weak= entry exists for the Daily Plan and chips", () => {

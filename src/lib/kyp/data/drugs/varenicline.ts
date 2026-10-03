@@ -23,14 +23,14 @@ export const varenicline: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Substance Use Treatments", "Smoking Cessation Aids", "Varenicline"],
   /* ---- Hero / summary ---- */
-  tagline: "The partial agonist that doubled quit rates — alpha-4 beta-2 nicotinic partial agonism.",
-  summary: "Varenicline is the alpha-4 beta-2 nicotinic acetylcholine receptor PARTIAL agonist: it stimulates the receptor enough to blunt craving and withdrawal, while blocking nicotine from binding — smoking delivers no reward. In head-to-head trials it outperformed bupropion and nicotine replacement, roughly doubling quit rates. Post-hoc concerns about neuropsychiatric adverse effects were largely laid to rest by the EAGLES trial, though vivid dreams remain its famous signature.",
+  tagline: "The partial agonist that doubled quit rates: alpha-4 beta-2 nicotinic partial agonism.",
+  summary: "Varenicline is the alpha-4 beta-2 nicotinic acetylcholine receptor PARTIAL agonist: it stimulates the receptor enough to blunt craving and withdrawal, while blocking nicotine from binding, smoking delivers no reward. In head-to-head trials it outperformed bupropion and nicotine replacement, roughly doubling quit rates. Post-hoc concerns about neuropsychiatric adverse effects were largely laid to rest by the EAGLES trial, though vivid dreams remain its famous signature.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Varenicline — from its molecular target (Alpha-4 beta-2 nicotinic acetylcholine receptor (partial agonist)) to clinical effect.",
+    "Explain the mechanism of action of Varenicline, from its molecular target (Alpha-4 beta-2 nicotinic acetylcholine receptor (partial agonist)) to clinical effect.",
     "List the FDA-approved and off-label uses of Varenicline.",
     "Predict the common and serious side effects of Varenicline from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Varenicline.",
@@ -38,15 +38,15 @@ export const varenicline: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Varenicline partially agonises the alpha-4 beta-2 nicotinic receptor — occupying it with moderate stimulation (craving relief) while blocking nicotine's full agonist action (no reward from smoking).",
+    summary: "Varenicline partially agonises the alpha-4 beta-2 nicotinic receptor: occupying it with moderate stimulation (craving relief) while blocking nicotine's full agonist action (no reward from smoking).",
     molecularTarget: "Alpha-4 beta-2 nicotinic acetylcholine receptor (partial agonist)",
     effect: "Modulation of the described target with the agent's clinical effect.",
     steps: [
-      "Varenicline partially agonises the alpha-4 beta-2 nicotinic receptor — occupying it with moderate stimulation (craving relief) while blocking nicotine's full agonist action (no reward from smoking).",
+      "Varenicline partially agonises the alpha-4 beta-2 nicotinic receptor: occupying it with moderate stimulation (craving relief) while blocking nicotine's full agonist action (no reward from smoking).",
       "The target engagement produces the clinical effect described.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 24 hours (steady state ~1 week). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 24 hours (steady state ~1 week). See mechanism and prescriber sections.",
     halfLife: "About 24 hours (steady state ~1 week).",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -97,7 +97,7 @@ export const varenicline: Drug = {
         label: "supports",
       },
     ],
-    caption: "Pharmacotherapy for substance use disorders blunts the reinforcement cycle — medication opens a window; psychosocial treatment walks the patient through it.",
+    caption: "Pharmacotherapy for substance use disorders blunts the reinforcement cycle: medication opens a window; psychosocial treatment walks the patient through it.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Acetylcholine (ACh)"],
@@ -133,15 +133,15 @@ export const varenicline: Drug = {
       name: "Nausea",
       frequency: "very-common",
       severity: "mild",
-      description: "The most common effect — dose-related.",
+      description: "The most common effect: dose-related.",
       management: "Take after food; titration week softens it.",
     },
     {
       name: "Vivid, unusual dreams",
       frequency: "very-common",
       severity: "mild",
-      description: "The famous signature — memorable, usually benign.",
-      management: "Counsel in advance — it becomes a compliance badge rather than a complaint.",
+      description: "The famous signature: memorable, usually benign.",
+      management: "Counsel in advance: it becomes a compliance badge rather than a complaint.",
     },
     {
       name: "Insomnia",
@@ -178,7 +178,7 @@ export const varenicline: Drug = {
       frequency: "rare",
       severity: "severe",
       description: "Small meta-analytic increases in cardiovascular events; the quitting benefit usually dominates.",
-      management: "Assess in context — smoking is the greater cardiovascular threat.",
+      management: "Assess in context: smoking is the greater cardiovascular threat.",
     },
     {
       name: "Seizure threshold (rare)",
@@ -217,7 +217,7 @@ export const varenicline: Drug = {
     {
       drug: "Alcohol (tolerance changes)",
       severity: "moderate",
-      mechanism: "Alcohol tolerance reduced in some patients — intoxication at usual amounts.",
+      mechanism: "Alcohol tolerance reduced in some patients: intoxication at usual amounts.",
       action: "Counsel; monitor.",
     },
     {
@@ -236,32 +236,32 @@ export const varenicline: Drug = {
   pregnancy: {
     legacyCategory: "C",
     summary: "Limited human data; behavioural cessation first in pregnancy; varenicline considered when pharmacotherapy is clearly needed (shared decision).",
-    lactation: "Excreted in milk in animals — weigh carefully; behavioural support preferred.",
+    lactation: "Excreted in milk in animals: weigh carefully; behavioural support preferred.",
   },
   renalAdjustment: "No adjustment for mild-moderate impairment; reduce dose in severe renal impairment.",
   hepaticAdjustment: "No significant hepatic metabolism concerns.",
   /* ---- Education ---- */
-  patientExplanation: "Varenicline is the most effective tablet for stopping smoking: it partly stimulates the brain's nicotine receptor — calming craving — while blocking real nicotine from working, so cigarettes stop giving anything back. You start it one week BEFORE your quit date. Its famous effects are nausea (taking it after food helps) and unusually vivid dreams, which are harmless and sometimes even enjoyable.",
+  patientExplanation: "Varenicline is the most effective tablet for stopping smoking: it partly stimulates the brain's nicotine receptor (calming craving) while blocking real nicotine from working, so cigarettes stop giving anything back. You start it one week BEFORE your quit date. Its famous effects are nausea (taking it after food helps) and unusually vivid dreams, which are harmless and sometimes even enjoyable.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Varenicline builds over weeks — do not judge it in the first days.",
+    "Benefit from Varenicline builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The mechanism is elegant: partial agonism relieves craving while receptor occupancy blocks nicotine — the cigarette goes silent.",
+    "The mechanism is elegant: partial agonism relieves craving while receptor occupancy blocks nicotine. The cigarette goes silent.",
     "One week BEFORE the quit date: the run-up design lets steady state arrive before the last cigarette.",
-    "Vivid dreams: the adverse effect patients brag about — pre-counselling converts it from complaint to proof of action.",
-    "EAGLES (2016): the psychiatric-safety RCT that retired most of the black box — the caution remains but the panic is gone.",
-    "Head-to-head: varenicline > bupropion > patch in most meta-analyses — the strongest single-agent quit medicine.",
+    "Vivid dreams: the adverse effect patients brag about; pre-counselling converts it from complaint to proof of action.",
+    "EAGLES (2016): the psychiatric-safety RCT that retired most of the black box; the caution remains but the panic is gone.",
+    "Head-to-head: varenicline > bupropion > patch in most meta-analyses; the strongest single-agent quit medicine.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Varenicline: Varenicline partially agonises the alpha-4 beta-2 nicotinic receptor — occupying it with moderate stimulation (craving relief) while blocking nicotine's full agonist action (no reward from smoking).",
+        "Mechanism of Varenicline: Varenicline partially agonises the alpha-4 beta-2 nicotinic receptor; occupying it with moderate stimulation (craving relief) while blocking nicotine's full agonist action (no reward from smoking).",
         "Uses of Varenicline: Smoking cessation",
-        "Mechanism: alpha-4 beta-2 nicotinic receptor PARTIAL AGONIST — craving relief + nicotine blockade.",
+        "Mechanism: alpha-4 beta-2 nicotinic receptor PARTIAL AGONIST; craving relief + nicotine blockade.",
         "The most effective single-agent smoking-cessation drug (outperforms bupropion and NRT).",
       ],
       practical: [
@@ -269,14 +269,14 @@ export const varenicline: Drug = {
         "Outline the monitoring plan: Mood review (Every visit during the course); Nausea and adherence (Weeks 1-4); Quit status and craving (Weekly early, then monthly)",
       ],
       longAnswer: [
-        "Varenicline: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: alpha-4 beta-2 nicotinic receptor PARTIAL AGONIST — craving relief + nicotine blockade.",
+        "Varenicline: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: alpha-4 beta-2 nicotinic receptor PARTIAL AGONIST; craving relief + nicotine blockade.",
         "The most effective single-agent smoking-cessation drug (outperforms bupropion and NRT).",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: alpha-4 beta-2 nicotinic receptor PARTIAL AGONIST — craving relief + nicotine blockade.",
+        "Mechanism: alpha-4 beta-2 nicotinic receptor PARTIAL AGONIST; craving relief + nicotine blockade.",
         "The most effective single-agent smoking-cessation drug (outperforms bupropion and NRT).",
         "Start 1 week BEFORE the quit date; 12-week course.",
         "Signature adverse effect: vivid dreams; nausea the commonest.",
@@ -291,7 +291,7 @@ export const varenicline: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Varenicline develops neuropsychiatric events (historic warning, now largely resolved) — next best step?",
+        "A patient on Varenicline develops neuropsychiatric events (historic warning, now largely resolved): next best step?",
         "When to choose Varenicline over alternatives in its class.",
       ],
     },
@@ -304,16 +304,16 @@ export const varenicline: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The mechanism is elegant: partial agonism relieves craving while receptor occupancy blocks nicotine — the cigarette goes silent.",
+        "The mechanism is elegant: partial agonism relieves craving while receptor occupancy blocks nicotine. The cigarette goes silent.",
         "One week BEFORE the quit date: the run-up design lets steady state arrive before the last cigarette.",
-        "Vivid dreams: the adverse effect patients brag about — pre-counselling converts it from complaint to proof of action.",
-        "EAGLES (2016): the psychiatric-safety RCT that retired most of the black box — the caution remains but the panic is gone.",
+        "Vivid dreams: the adverse effect patients brag about; pre-counselling converts it from complaint to proof of action.",
+        "EAGLES (2016): the psychiatric-safety RCT that retired most of the black box; the caution remains but the panic is gone.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: alpha-4 beta-2 nicotinic receptor PARTIAL AGONIST — craving relief + nicotine blockade.",
+    "Mechanism: alpha-4 beta-2 nicotinic receptor PARTIAL AGONIST; craving relief + nicotine blockade.",
     "The most effective single-agent smoking-cessation drug (outperforms bupropion and NRT).",
     "Start 1 week BEFORE the quit date; 12-week course.",
     "Signature adverse effect: vivid dreams; nausea the commonest.",
@@ -324,7 +324,7 @@ export const varenicline: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — smoking cessation",
+      title: "First presentation: smoking cessation",
       presentation: "A patient presenting with smoking cessation, started on Varenicline.",
       history: "A adult patient presents with a smoking cessation picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with smoking cessation; physical examination and baseline investigations are unremarkable.",
@@ -333,7 +333,7 @@ export const varenicline: Drug = {
       management: "Started at 0.5 mg once daily × 3 days, then 0.5 mg twice daily × 4 days, titrated to 1 mg twice daily with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Varenicline takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Varenicline takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -342,7 +342,7 @@ export const varenicline: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "SUD Treatment comparison — choosing within the class",
+      title: "SUD Treatment comparison: choosing within the class",
       primaryDrug: "Varenicline",
       rows: [
         {
@@ -439,24 +439,24 @@ export const varenicline: Drug = {
           comparisons: [
             {
               drug: "Acamprosate",
-              value: "The abstinence-protector — for the already-abstinent patient",
+              value: "The abstinence-protector, for the already-abstinent patient",
             },
             {
               drug: "Buprenorphine",
-              value: "The safety-ceiling maintenance agonist — office-based opioid treatment",
+              value: "The safety-ceiling maintenance agonist: office-based opioid treatment",
             },
             {
               drug: "Disulfiram",
-              value: "The classical aversion deterrent — for the motivated, supervised patient",
+              value: "The classical aversion deterrent, for the motivated, supervised patient",
             },
             {
               drug: "Naltrexone",
-              value: "The pure antagonist — alcohol relapse and opioid blockade",
+              value: "The pure antagonist: alcohol relapse and opioid blockade",
             },
           ],
         },
       ],
-      takeaway: "All smoking cessation aids share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All smoking cessation aids share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -465,7 +465,7 @@ export const varenicline: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Varenicline reaches peak plasma concentration and begins acting at its molecular target (Alpha-4 beta-2 nicotinic acetylcholine receptor (partial agonist)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Varenicline reaches peak plasma concentration and begins acting at its molecular target (Alpha-4 beta-2 nicotinic acetylcholine receptor (partial agonist)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -501,7 +501,7 @@ export const varenicline: Drug = {
   faqs: [
     {
       question: "How long does Varenicline take to work?",
-      answer: "Craving relief within days; quit date set at day 8.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Craving relief within days; quit date set at day 8.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Varenicline?",
@@ -509,11 +509,11 @@ export const varenicline: Drug = {
     },
     {
       question: "Can I stop Varenicline suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Varenicline habit-forming?",
@@ -521,7 +521,7 @@ export const varenicline: Drug = {
     },
     {
       question: "Can I take Varenicline during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Varenicline may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Varenicline may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -661,7 +661,7 @@ export const varenicline: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Varenicline",
+      label: "Patient Guide. Varenicline",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -669,13 +669,13 @@ export const varenicline: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The partial agonist that doubled quit rates — alpha-4 beta-2 nicotinic partial agonism.",
-    summary: "Varenicline is a prescription medicine used to treat smoking cessation. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Varenicline is the most effective tablet for stopping smoking: it partly stimulates the brain's nicotine receptor — calming craving — while blocking real nicotine from working, so cigarettes stop giving anything back. You start it one week BEFORE your quit date. Its famous effects are nausea (taking it after food helps) and unusually vivid dreams, which are harmless and sometimes even enjoyable.",
-    sideEffects: "The most common side effects are: nausea, vivid, unusual dreams, insomnia, headache and abnormal dreams, flatulence and taste change. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuropsychiatric events (historic warning, now largely resolved) and Cardiovascular events (small signal). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: mood review (every visit during the course); nausea and adherence (weeks 1-4); quit status and craving (weekly early, then monthly). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The partial agonist that doubled quit rates: alpha-4 beta-2 nicotinic partial agonism.",
+    summary: "Varenicline is a prescription medicine used to treat smoking cessation. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Varenicline is the most effective tablet for stopping smoking: it partly stimulates the brain's nicotine receptor (calming craving) while blocking real nicotine from working, so cigarettes stop giving anything back. You start it one week BEFORE your quit date. Its famous effects are nausea (taking it after food helps) and unusually vivid dreams, which are harmless and sometimes even enjoyable.",
+    sideEffects: "The most common side effects are: nausea, vivid, unusual dreams, insomnia, headache and abnormal dreams, flatulence and taste change. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuropsychiatric events (historic warning, now largely resolved) and Cardiovascular events (small signal). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: mood review (every visit during the course); nausea and adherence (weeks 1-4); quit status and craving (weekly early, then monthly). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Alcohol (tolerance changes), Nicotine replacement therapy, Cimetidine. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Alcohol (tolerance changes), Nicotine replacement therapy, Cimetidine. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -694,8 +694,8 @@ export const varenicline: Drug = {
     ],
     typicalDoses: "Titration week then 1 mg bd × 12 weeks.",
     prescribingScenarios: [
-      "Tobacco cessation clinics — the strongest single agent.",
-      "Smokeless tobacco (gutka/khaini) cessation — off-label but used.",
+      "Tobacco cessation clinics: the strongest single agent.",
+      "Smokeless tobacco (gutka/khaini) cessation: off-label but used.",
     ],
     availability: {
       governmentHospitals: false,
@@ -745,25 +745,25 @@ export const varenicline: Drug = {
         name: "Acamprosate",
         slug: "acamprosate",
         relationship: "Same class (SUD Treatment)",
-        distinguishing: "The abstinence-protector — for the already-abstinent patient",
+        distinguishing: "The abstinence-protector, for the already-abstinent patient",
       },
       {
         name: "Buprenorphine",
         slug: "buprenorphine",
         relationship: "Same class (SUD Treatment)",
-        distinguishing: "The safety-ceiling maintenance agonist — office-based opioid treatment",
+        distinguishing: "The safety-ceiling maintenance agonist: office-based opioid treatment",
       },
       {
         name: "Disulfiram",
         slug: "disulfiram",
         relationship: "Same class (SUD Treatment)",
-        distinguishing: "The classical aversion deterrent — for the motivated, supervised patient",
+        distinguishing: "The classical aversion deterrent, for the motivated, supervised patient",
       },
       {
         name: "Naltrexone",
         slug: "naltrexone",
         relationship: "Same class (SUD Treatment)",
-        distinguishing: "The pure antagonist — alcohol relapse and opioid blockade",
+        distinguishing: "The pure antagonist: alcohol relapse and opioid blockade",
       },
       {
         name: "Naltrexone-Bupropion",
@@ -923,7 +923,7 @@ export const varenicline: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Varenicline in two sentences.",
-      answer: "Varenicline partially agonises the alpha-4 beta-2 nicotinic receptor — occupying it with moderate stimulation (craving relief) while blocking nicotine's full agonist action (no reward from smoking). Net effect: Modulation of the described target with the agent's clinical effect.",
+      answer: "Varenicline partially agonises the alpha-4 beta-2 nicotinic receptor: occupying it with moderate stimulation (craving relief) while blocking nicotine's full agonist action (no reward from smoking). Net effect: Modulation of the described target with the agent's clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -943,7 +943,7 @@ export const varenicline: Drug = {
     },
     {
       question: "Share one clinical pearl about Varenicline that separates safe prescribers from unsafe ones.",
-      answer: "The mechanism is elegant: partial agonism relieves craving while receptor occupancy blocks nicotine — the cigarette goes silent.",
+      answer: "The mechanism is elegant: partial agonism relieves craving while receptor occupancy blocks nicotine. The cigarette goes silent.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1019,7 +1019,7 @@ export const varenicline: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1064,7 +1064,7 @@ export const varenicline: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Varenicline works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Varenicline works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1080,7 +1080,7 @@ export const varenicline: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Varenicline safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Varenicline safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1125,7 +1125,7 @@ export const varenicline: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Varenicline follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Varenicline follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1148,13 +1148,13 @@ export const varenicline: Drug = {
     ],
     dosageForms: ["Tablets 0.5, 1 mg", "Starting pack (titration week)"],
     dosingTips: [
-      "Set the quit date at day 8 — the run-up is part of the design.",
+      "Set the quit date at day 8: the run-up is part of the design.",
       "After-food dosing against nausea.",
       "Pre-counsel on vivid dreams.",
       "Extend to 24 weeks for the relapse-prone.",
     ],
     overdose: [
-      "Overdose with Varenicline is managed supportively — no specific antidote.",
+      "Overdose with Varenicline is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Varenicline is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1196,16 +1196,16 @@ export const varenicline: Drug = {
     potentialDisadvantages: ["Nausea and vivid dreams.", "The residual psychiatric caution.", "12+ week course discipline.", "Renal dosing in severe impairment."],
     primaryTargetSymptoms: ["Nicotine craving and withdrawal", "Smoking-cessation reward extinction"],
     pearls: [
-      "The mechanism is elegant: partial agonism relieves craving while receptor occupancy blocks nicotine — the cigarette goes silent.",
+      "The mechanism is elegant: partial agonism relieves craving while receptor occupancy blocks nicotine. The cigarette goes silent.",
       "One week BEFORE the quit date: the run-up design lets steady state arrive before the last cigarette.",
-      "Vivid dreams: the adverse effect patients brag about — pre-counselling converts it from complaint to proof of action.",
-      "EAGLES (2016): the psychiatric-safety RCT that retired most of the black box — the caution remains but the panic is gone.",
-      "Head-to-head: varenicline > bupropion > patch in most meta-analyses — the strongest single-agent quit medicine.",
+      "Vivid dreams: the adverse effect patients brag about; pre-counselling converts it from complaint to proof of action.",
+      "EAGLES (2016): the psychiatric-safety RCT that retired most of the black box; the caution remains but the panic is gone.",
+      "Head-to-head: varenicline > bupropion > patch in most meta-analyses; the strongest single-agent quit medicine.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

@@ -407,7 +407,7 @@ export default function WelcomePage() {
               </div>
               <h2 className="font-serif text-2xl font-semibold tracking-tight">Verify your email</h2>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                Email verification helps secure your account and enables progress tracking across devices. You can verify later — KYP is ready for you now.
+                Email verification helps secure your account and enables progress tracking across devices. You can verify later. KYP is ready for you now.
               </p>
               <div className="mt-8 space-y-3">
                 <Button onClick={() => setStep("role")} className="w-full rounded-xl" size="lg">Verify email</Button>

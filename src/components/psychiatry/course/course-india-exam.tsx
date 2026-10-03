@@ -182,7 +182,7 @@ export function CourseDecisionPath({ course }: { course: PsychiatryCourse }) {
         <SectionHeader
           eyebrow="Decision Path"
           title={path.title}
-          description="An educational decision tree — never a substitute for professional judgment."
+          description="An educational decision tree, never a substitute for professional judgment."
           tone="brand"
           align="start"
         />
@@ -209,7 +209,7 @@ export function CourseCommonMistakes({ course }: { course: PsychiatryCourse }) {
       <Container>
         <SectionHeader
           eyebrow="Common Mistakes"
-          title="What goes wrong — and the correction."
+          title="What goes wrong, and the correction."
           tone="emergency"
           align="start"
         />
@@ -293,7 +293,7 @@ export function CourseExamLens({ course }: { course: PsychiatryCourse }) {
       <Container>
         <SectionHeader
           eyebrow="Exam Content"
-          title="The exam lens — by examination."
+          title="The exam lens: by examination."
           description="KYP Practice Questions unless a verified previous-year concept is named."
           tone="brand"
           align="start"

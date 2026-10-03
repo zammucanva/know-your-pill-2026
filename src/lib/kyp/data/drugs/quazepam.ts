@@ -23,14 +23,14 @@ export const quazepam: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Sleep Medicines", "Benzodiazepine Hypnotics", "Quazepam"],
   /* ---- Hero / summary ---- */
-  tagline: "The alpha-1-preferring benzodiazepine hypnotic — the bridge between benzos and Z-drugs.",
-  summary: "Quazepam is a long-acting benzodiazepine hypnotic with unusual ALPHA-1 subunit selectivity — the benzodiazepine that anticipates Z-drug pharmacology — while its active metabolites (including flurazepam's desalkyl- family) give it long maintenance cover and accumulation risk. A pharmacological bridge worth knowing more than prescribing.",
+  tagline: "The alpha-1-preferring benzodiazepine hypnotic: the bridge between benzos and Z-drugs.",
+  summary: "Quazepam is a long-acting benzodiazepine hypnotic with unusual ALPHA-1 subunit selectivity (the benzodiazepine that anticipates Z-drug pharmacology) while its active metabolites (including flurazepam's desalkyl- family) give it long maintenance cover and accumulation risk. A pharmacological bridge worth knowing more than prescribing.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Quazepam — from its molecular target (GABA-A benzodiazepine site — alpha-1-preferring PAM; long-acting metabolites) to clinical effect.",
+    "Explain the mechanism of action of Quazepam (from its molecular target (GABA-A benzodiazepine site) alpha-1-preferring PAM; long-acting metabolites) to clinical effect.",
     "List the FDA-approved and off-label uses of Quazepam.",
     "Predict the common and serious side effects of Quazepam from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Quazepam.",
@@ -38,15 +38,15 @@ export const quazepam: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Alpha-1-preferring benzodiazepine hypnotic with long-acting active metabolites — the bridge between benzodiazepine and Z-drug pharmacology.",
-    molecularTarget: "GABA-A benzodiazepine site — alpha-1-preferring PAM; long-acting metabolites",
+    summary: "Alpha-1-preferring benzodiazepine hypnotic with long-acting active metabolites: the bridge between benzodiazepine and Z-drug pharmacology.",
+    molecularTarget: "GABA-A benzodiazepine site: alpha-1-preferring PAM; long-acting metabolites",
     effect: "Sleep promotion via the described target.",
     steps: [
-      "Quazepam is a long-acting benzodiazepine hypnotic with unusual ALPHA-1 subunit selectivity — the benzodiazepine that anticipates Z-drug pharmacology — while its active metabolites (including flurazepam's desalkyl- family) give it long maintenance cover and accumulation risk — the mechanism in one line.",
+      "Quazepam is a long-acting benzodiazepine hypnotic with unusual ALPHA-1 subunit selectivity (the benzodiazepine that anticipates Z-drug pharmacology) while its active metabolites (including flurazepam's desalkyl- family) give it long maintenance cover and accumulation risk: the mechanism in one line.",
       "Binding at the described target produces the sleep-promoting effect.",
       "Duration of action follows the half-life: onset agents clear before morning; longer agents add maintenance cover.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life Parent ~39 h; active metabolites longer. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life Parent ~39 h; active metabolites longer. See mechanism and prescriber sections.",
     halfLife: "Parent ~39 h; active metabolites longer.",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
@@ -108,14 +108,14 @@ export const quazepam: Drug = {
         label: "inhibits firing",
       },
     ],
-    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly — which is why their effect is powerful but limited by dependence risk.",
+    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly, which is why their effect is powerful but limited by dependence risk.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
     "Central monoaminergic systems (see mechanism)",
   ],
   receptors: [
-    "GABA-A benzodiazepine site — alpha-1-preferring PAM; long-acting metabolites",
+    "GABA-A benzodiazepine site: alpha-1-preferring PAM; long-acting metabolites",
   ],
   brainRegionIds: ["amygdala", "prefrontal-cortex"],
   pathwayIds: [],
@@ -136,7 +136,7 @@ export const quazepam: Drug = {
     {
       name: "Opioids",
       severity: "absolute",
-      rationale: "Concurrent use causes profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      rationale: "Concurrent use causes profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
     },
   ],
   blackBoxWarnings: [
@@ -211,7 +211,7 @@ export const quazepam: Drug = {
     {
       drug: "Opioids",
       severity: "contraindicated",
-      mechanism: "Concurrent use causes profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      mechanism: "Concurrent use causes profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
       action: "Avoid; if unavoidable for taper protocols, use lowest doses with intensive monitoring.",
     },
     {
@@ -229,7 +229,7 @@ export const quazepam: Drug = {
     {
       drug: "Older antihistamines (sedating)",
       severity: "moderate",
-      mechanism: "Additive sedation in the elderly — falls.",
+      mechanism: "Additive sedation in the elderly: falls.",
       action: "Prefer non-sedating alternatives.",
     },
   ],
@@ -241,44 +241,44 @@ export const quazepam: Drug = {
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
-  patientExplanation: "Quazepam is a medicine used to treat insomnia — short-term (onset and maintenance). Alpha-1-preferring benzodiazepine hypnotic with long-acting active metabolites — the bridge between benzodiazepine and Z-drug pharmacology. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+  patientExplanation: "Quazepam is a medicine used to treat insomnia: short-term (onset and maintenance). Alpha-1-preferring benzodiazepine hypnotic with long-acting active metabolites: the bridge between benzodiazepine and Z-drug pharmacology. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
   patientEducationPoints: [
-    "This medicine is for short-term or carefully planned use — it can cause dependence within weeks of regular use.",
-    "Never mix it with opioid painkillers or alcohol — the combination can stop breathing.",
+    "This medicine is for short-term or carefully planned use. It can cause dependence within weeks of regular use.",
+    "Never mix it with opioid painkillers or alcohol: the combination can stop breathing.",
     "Do not drive until you know how it affects you.",
-    "Stopping must be gradual — never stop suddenly after regular use.",
-    "Benefit from Quazepam builds over weeks — do not judge it in the first days.",
+    "Stopping must be gradual, never stop suddenly after regular use.",
+    "Benefit from Quazepam builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
     "Alpha-1 selectivity in a genuine benzodiazepine: quazepam is the conceptual stepping stone to zolpidem.",
-    "Its metabolite chain connects it to flurazepam's accumulation family — selectivity at the receptor doesn't rescue the kinetics.",
-    "All benzodiazepines share the GABA-A amplification mechanism — the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
+    "Its metabolite chain connects it to flurazepam's accumulation family: selectivity at the receptor doesn't rescue the kinetics.",
+    "All benzodiazepines share the GABA-A amplification mechanism: the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Quazepam: Alpha-1-preferring benzodiazepine hypnotic with long-acting active metabolites — the bridge between benzodiazepine and Z-drug pharmacology.",
-        "Uses of Quazepam: Insomnia — short-term (onset and maintenance)",
-        "Alpha-1-PREFERRING benzodiazepine hypnotic — the Z-drug preview.",
-        "Long-acting metabolites (flurazepam family) — accumulation risk.",
+        "Mechanism of Quazepam: Alpha-1-preferring benzodiazepine hypnotic with long-acting active metabolites; the bridge between benzodiazepine and Z-drug pharmacology.",
+        "Uses of Quazepam: Insomnia; short-term (onset and maintenance)",
+        "Alpha-1-PREFERRING benzodiazepine hypnotic: the Z-drug preview.",
+        "Long-acting metabolites (flurazepam family): accumulation risk.",
       ],
       practical: [
-        "Prescribe Quazepam for insomnia — short-term (onset and maintenance) with dose, timing, and duration.",
+        "Prescribe Quazepam for insomnia: short-term (onset and maintenance) with dose, timing, and duration.",
         "Outline the monitoring plan: Respiratory status and sedation (Clinical review each visit); Dependence review (Every visit for long-term users); Fall risk review (elderly) (Every visit in older patients)",
       ],
       longAnswer: [
-        "Quazepam: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Alpha-1-PREFERRING benzodiazepine hypnotic — the Z-drug preview.",
-        "Long-acting metabolites (flurazepam family) — accumulation risk.",
+        "Quazepam: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Alpha-1-PREFERRING benzodiazepine hypnotic: the Z-drug preview.",
+        "Long-acting metabolites (flurazepam family): accumulation risk.",
       ],
     },
     neetPg: {
       highYield: [
-        "Alpha-1-PREFERRING benzodiazepine hypnotic — the Z-drug preview.",
-        "Long-acting metabolites (flurazepam family) — accumulation risk.",
+        "Alpha-1-PREFERRING benzodiazepine hypnotic: the Z-drug preview.",
+        "Long-acting metabolites (flurazepam family): accumulation risk.",
         "Dose 7.5–15 mg.",
-        "Mechanism: GABA-A positive allosteric modulation — amplified natural inhibition.",
+        "Mechanism: GABA-A positive allosteric modulation; amplified natural inhibition.",
         "The class boxed warning: opioids + benzodiazepines = respiratory depression and death.",
       ],
       pyqConcepts: [
@@ -289,13 +289,13 @@ export const quazepam: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Quazepam develops respiratory depression with opioids — next best step?",
+        "A patient on Quazepam develops respiratory depression with opioids: next best step?",
         "When to choose Quazepam over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: GABA-A benzodiazepine site — alpha-1-preferring PAM; long-acting metabolites",
+        "Primary target: GABA-A benzodiazepine site; alpha-1-preferring PAM; long-acting metabolites",
         "Most common side effects: Daytime sedation, Dizziness, ataxia, Rebound insomnia",
         "Key contraindication: known hypersensitivity",
       ],
@@ -303,32 +303,32 @@ export const quazepam: Drug = {
     psychiatryResidency: {
       advancedPearls: [
         "Alpha-1 selectivity in a genuine benzodiazepine: quazepam is the conceptual stepping stone to zolpidem.",
-        "Its metabolite chain connects it to flurazepam's accumulation family — selectivity at the receptor doesn't rescue the kinetics.",
-        "All benzodiazepines share the GABA-A amplification mechanism — the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
+        "Its metabolite chain connects it to flurazepam's accumulation family: selectivity at the receptor doesn't rescue the kinetics.",
+        "All benzodiazepines share the GABA-A amplification mechanism: the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Alpha-1-PREFERRING benzodiazepine hypnotic — the Z-drug preview.",
-    "Long-acting metabolites (flurazepam family) — accumulation risk.",
+    "Alpha-1-PREFERRING benzodiazepine hypnotic: the Z-drug preview.",
+    "Long-acting metabolites (flurazepam family): accumulation risk.",
     "Dose 7.5–15 mg.",
-    "Mechanism: GABA-A positive allosteric modulation — amplified natural inhibition.",
+    "Mechanism: GABA-A positive allosteric modulation; amplified natural inhibition.",
     "The class boxed warning: opioids + benzodiazepines = respiratory depression and death.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — insomnia — short-term (onset and maintenance)",
-      presentation: "A patient presenting with insomnia — short-term (onset and maintenance), started on Quazepam.",
-      history: "A adult patient presents with a insomnia — short-term (onset and maintenance) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with insomnia — short-term (onset and maintenance); physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Insomnia — short-term (onset and maintenance). Differentials are considered and excluded clinically.",
+      title: "First presentation: insomnia; short-term (onset and maintenance)",
+      presentation: "A patient presenting with insomnia: short-term (onset and maintenance), started on Quazepam.",
+      history: "A adult patient presents with a insomnia: short-term (onset and maintenance) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with insomnia: short-term (onset and maintenance); physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Insomnia: short-term (onset and maintenance). Differentials are considered and excluded clinically.",
       rationale: "Quazepam is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Benzodiazepine Hypnotic) with strong evidence in this condition.",
       management: "Started at 7.5 mg at bedtime (elderly 7.5 mg fixed), titrated to 7.5–15 mg with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Quazepam takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Quazepam takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -337,12 +337,12 @@ export const quazepam: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Benzodiazepine Hypnotic comparison — choosing within the class",
+      title: "Benzodiazepine Hypnotic comparison: choosing within the class",
       primaryDrug: "Quazepam",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "GABA-A benzodiazepine site — alpha-1-preferring PAM; long-acting metabolites",
+          primaryValue: "GABA-A benzodiazepine site: alpha-1-preferring PAM; long-acting metabolites",
           comparisons: [
             {
               drug: "Temazepam",
@@ -430,15 +430,15 @@ export const quazepam: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The alpha-1-selective benzodiazepine — a pharmacology bridge",
+          primaryValue: "The alpha-1-selective benzodiazepine: a pharmacology bridge",
           comparisons: [
             {
               drug: "Temazepam",
-              value: "The classic benzodiazepine hypnotic — full power, full class risks",
+              value: "The classic benzodiazepine hypnotic: full power, full class risks",
             },
             {
               drug: "Triazolam",
-              value: "The benzodiazepine zolpidem — onset-only, amnesia-prone",
+              value: "The benzodiazepine zolpidem: onset-only, amnesia-prone",
             },
             {
               drug: "Estazolam",
@@ -446,12 +446,12 @@ export const quazepam: Drug = {
             },
             {
               drug: "Flunitrazepam",
-              value: "The strictly-controlled potent hypnotic — pharmacology's misuse lesson",
+              value: "The strictly-controlled potent hypnotic: pharmacology's misuse lesson",
             },
           ],
         },
       ],
-      takeaway: "All benzodiazepine hypnotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All benzodiazepine hypnotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -460,7 +460,7 @@ export const quazepam: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Quazepam reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site — alpha-1-preferring PAM; long-acting metabolites). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Quazepam reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site, alpha-1-preferring PAM; long-acting metabolites). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -496,7 +496,7 @@ export const quazepam: Drug = {
   faqs: [
     {
       question: "How long does Quazepam take to work?",
-      answer: "20–45 minutes.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "20–45 minutes.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Quazepam?",
@@ -504,19 +504,19 @@ export const quazepam: Drug = {
     },
     {
       question: "Can I stop Quazepam suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Quazepam habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Quazepam exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Quazepam exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Quazepam during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Quazepam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Quazepam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -626,13 +626,13 @@ export const quazepam: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "GABA-A benzodiazepine site — alpha-1-preferring PAM; long-acting metabolites",
+      label: "GABA-A benzodiazepine site: alpha-1-preferring PAM; long-acting metabolites",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
     },
     {
-      label: "Insomnia — short-term (onset and maintenance)",
+      label: "Insomnia: short-term (onset and maintenance)",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -656,7 +656,7 @@ export const quazepam: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Quazepam",
+      label: "Patient Guide. Quazepam",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -664,13 +664,13 @@ export const quazepam: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The alpha-1-preferring benzodiazepine hypnotic — the bridge between benzos and Z-drugs.",
-    summary: "Quazepam is a prescription medicine used to treat insomnia — short-term (onset and maintenance). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Quazepam is a medicine used to treat insomnia — short-term (onset and maintenance). Alpha-1-preferring benzodiazepine hypnotic with long-acting active metabolites — the bridge between benzodiazepine and Z-drug pharmacology. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
-    sideEffects: "The most common side effects are: daytime sedation, dizziness, ataxia, rebound insomnia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression with opioids and Withdrawal phenomena. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The alpha-1-preferring benzodiazepine hypnotic: the bridge between benzos and Z-drugs.",
+    summary: "Quazepam is a prescription medicine used to treat insomnia: short-term (onset and maintenance). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Quazepam is a medicine used to treat insomnia: short-term (onset and maintenance). Alpha-1-preferring benzodiazepine hypnotic with long-acting active metabolites: the bridge between benzodiazepine and Z-drug pharmacology. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+    sideEffects: "The most common side effects are: daytime sedation, dizziness, ataxia, rebound insomnia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression with opioids and Withdrawal phenomena. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, Older antihistamines (sedating). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, Older antihistamines (sedating). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -692,7 +692,7 @@ export const quazepam: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["—"],
   },
   sectionDifficulty: {
@@ -726,19 +726,19 @@ export const quazepam: Drug = {
         name: "Quazepam",
         slug: "quazepam",
         relationship: "This guide",
-        distinguishing: "The alpha-1-selective benzodiazepine — a pharmacology bridge",
+        distinguishing: "The alpha-1-selective benzodiazepine: a pharmacology bridge",
       },
       {
         name: "Temazepam",
         slug: "temazepam",
         relationship: "Same class (Benzodiazepine Hypnotic)",
-        distinguishing: "The classic benzodiazepine hypnotic — full power, full class risks",
+        distinguishing: "The classic benzodiazepine hypnotic: full power, full class risks",
       },
       {
         name: "Triazolam",
         slug: "triazolam",
         relationship: "Same class (Benzodiazepine Hypnotic)",
-        distinguishing: "The benzodiazepine zolpidem — onset-only, amnesia-prone",
+        distinguishing: "The benzodiazepine zolpidem: onset-only, amnesia-prone",
       },
       {
         name: "Estazolam",
@@ -750,7 +750,7 @@ export const quazepam: Drug = {
         name: "Flunitrazepam",
         slug: "flunitrazepam",
         relationship: "Same class (Benzodiazepine Hypnotic)",
-        distinguishing: "The strictly-controlled potent hypnotic — pharmacology's misuse lesson",
+        distinguishing: "The strictly-controlled potent hypnotic: pharmacology's misuse lesson",
       },
       {
         name: "Flurazepam",
@@ -904,12 +904,12 @@ export const quazepam: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Quazepam in two sentences.",
-      answer: "Alpha-1-preferring benzodiazepine hypnotic with long-acting active metabolites — the bridge between benzodiazepine and Z-drug pharmacology. Net effect: Sleep promotion via the described target.",
+      answer: "Alpha-1-preferring benzodiazepine hypnotic with long-acting active metabolites: the bridge between benzodiazepine and Z-drug pharmacology. Net effect: Sleep promotion via the described target.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Quazepam.",
-      answer: "Insomnia — short-term (onset and maintenance). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Insomnia: short-term (onset and maintenance). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -1000,7 +1000,7 @@ export const quazepam: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1045,7 +1045,7 @@ export const quazepam: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Quazepam works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Quazepam works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1061,7 +1061,7 @@ export const quazepam: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Quazepam safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Quazepam safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1104,7 +1104,7 @@ export const quazepam: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Quazepam follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Quazepam follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1130,11 +1130,11 @@ export const quazepam: Drug = {
       "Know it for pharmacology; rarely the practical choice.",
     ],
     overdose: [
-      "Overdose with Quazepam is managed supportively — no specific antidote.",
+      "Overdose with Quazepam is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Quazepam is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1170,13 +1170,13 @@ export const quazepam: Drug = {
     primaryTargetSymptoms: ["Short-term insomnia (historic)"],
     pearls: [
       "Alpha-1 selectivity in a genuine benzodiazepine: quazepam is the conceptual stepping stone to zolpidem.",
-      "Its metabolite chain connects it to flurazepam's accumulation family — selectivity at the receptor doesn't rescue the kinetics.",
-      "All benzodiazepines share the GABA-A amplification mechanism — the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
+      "Its metabolite chain connects it to flurazepam's accumulation family: selectivity at the receptor doesn't rescue the kinetics.",
+      "All benzodiazepines share the GABA-A amplification mechanism: the choice between them is pharmacokinetics: onset speed, duration, and metabolite burden.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

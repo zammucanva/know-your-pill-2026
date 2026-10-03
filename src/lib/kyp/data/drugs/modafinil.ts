@@ -23,14 +23,14 @@ export const modafinil: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "ADHD Medications", "Wake-Promoting Agents", "Modafinil"],
   /* ---- Hero / summary ---- */
-  tagline: "The wake-promoting agent — DAT-inhibiting alertness for narcolepsy without classic stimulant pharmacology.",
-  summary: "Modafinil is a wake-promoting agent whose DAT-inhibiting pharmacology produces alertness for narcolepsy, shift-work disorder, and OSA residual sleepiness — with less classic-stimulant adverse-effect and misuse baggage than amphetamines, though it retains controlled status in the USA.",
+  tagline: "The wake-promoting agent. DAT-inhibiting alertness for narcolepsy without classic stimulant pharmacology.",
+  summary: "Modafinil is a wake-promoting agent whose DAT-inhibiting pharmacology produces alertness for narcolepsy, shift-work disorder, and OSA residual sleepiness, with less classic-stimulant adverse-effect and misuse baggage than amphetamines, though it retains controlled status in the USA.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Modafinil — from its molecular target (DAT (weak inhibition) + orexin/hypocretin and histamine wake systems) to clinical effect.",
+    "Explain the mechanism of action of Modafinil, from its molecular target (DAT (weak inhibition) + orexin/hypocretin and histamine wake systems) to clinical effect.",
     "List the FDA-approved and off-label uses of Modafinil.",
     "Predict the common and serious side effects of Modafinil from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Modafinil.",
@@ -46,7 +46,7 @@ export const modafinil: Drug = {
       "Prefrontal catecholamine enhancement sharpens attention and impulse control.",
       "The agent's formulation and half-life determine practical coverage.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 12-15 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 12-15 hours. See mechanism and prescriber sections.",
     halfLife: "12-15 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
@@ -103,7 +103,7 @@ export const modafinil: Drug = {
         label: "boosts alertness",
       },
     ],
-    caption: "Catecholamine enhancement in the prefrontal cortex — the brain's attention control centre — corrects the signal-to-noise deficit that defines ADHD.",
+    caption: "Catecholamine enhancement in the prefrontal cortex (the brain's attention control centre) corrects the signal-to-noise deficit that defines ADHD.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -161,7 +161,7 @@ export const modafinil: Drug = {
       name: "Headache",
       frequency: "very-common",
       severity: "mild",
-      description: "The most common adverse effect — dose-related.",
+      description: "The most common adverse effect: dose-related.",
       management: "Dose split; hydration.",
     },
     {
@@ -198,7 +198,7 @@ export const modafinil: Drug = {
       name: "Serious rash (SJS/TEN)",
       frequency: "rare",
       severity: "life-threatening",
-      description: "The label-defining risk (paediatric rates ~1% any rash) — the reason ADHD approval was refused.",
+      description: "The label-defining risk (paediatric rates ~1% any rash): the reason ADHD approval was refused.",
       management: "Stop on any rash; same-day assessment.",
     },
     {
@@ -219,7 +219,7 @@ export const modafinil: Drug = {
       name: "Cardiovascular events",
       frequency: "rare",
       severity: "severe",
-      description: "Reported — screen as per stimulants.",
+      description: "Reported: screen as per stimulants.",
       management: "Monitor HR/BP.",
     },
   ],
@@ -240,7 +240,7 @@ export const modafinil: Drug = {
     {
       drug: "Cyclosporine, hormonal contraceptives",
       severity: "major",
-      mechanism: "3A4 induction lowers their levels — contraceptive failure.",
+      mechanism: "3A4 induction lowers their levels: contraceptive failure.",
       action: "Alternative contraception counselling.",
     },
     {
@@ -252,7 +252,7 @@ export const modafinil: Drug = {
     {
       drug: "CYP3A4 substrates generally",
       severity: "major",
-      mechanism: "Modafinil induces 3A4 — many drugs drop.",
+      mechanism: "Modafinil induces 3A4, many drugs drop.",
       action: "Review the whole list.",
     },
   ],
@@ -264,16 +264,16 @@ export const modafinil: Drug = {
   renalAdjustment: "No major adjustment.",
   hepaticAdjustment: "Halve dose in significant hepatic impairment.",
   /* ---- Education ---- */
-  patientExplanation: "Modafinil is a wake-promoting medicine for conditions of excessive sleepiness — narcolepsy, shift-work disorder, and remaining sleepiness in treated sleep apnoea. It produces alertness more gently than classic stimulants, though it can still disturb night sleep and cause headache. Any rash while taking it means stopping and contacting your doctor the same day.",
+  patientExplanation: "Modafinil is a wake-promoting medicine for conditions of excessive sleepiness: narcolepsy, shift-work disorder, and remaining sleepiness in treated sleep apnoea. It produces alertness more gently than classic stimulants, though it can still disturb night sleep and cause headache. Any rash while taking it means stopping and contacting your doctor the same day.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Modafinil builds over weeks — do not judge it in the first days.",
+    "Benefit from Modafinil builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The wake-systems drug: DAT inhibition + orexin + histamine — alertness without full sympathomimetic texture.",
+    "The wake-systems drug: DAT inhibition + orexin + histamine; alertness without full sympathomimetic texture.",
     "The rash that blocked ADHD: ~1% paediatric rash rates refused it an ADHD indication.",
     "India's Modalert: the most-copied generic, also the most-diverted 'study drug'.",
     "Doping-banned in sport without TUE.",
@@ -283,16 +283,16 @@ export const modafinil: Drug = {
     mbbs: {
       viva: [
         "Mechanism of Modafinil: Modafinil promotes wakefulness primarily via weak DAT inhibition (raising dopaminergic tone) plus activation of the orexin and histamine wake systems.",
-        "Uses of Modafinil: Narcolepsy — excessive daytime sleepiness; Shift-work sleep disorder; OSA residual sleepiness (adjunct to CPAP); ADHD",
+        "Uses of Modafinil: Narcolepsy; excessive daytime sleepiness; Shift-work sleep disorder; OSA residual sleepiness (adjunct to CPAP); ADHD",
         "Mechanism: weak DAT inhibition (dopamine reuptake) + orexin/histamine wake-system activation.",
         "Approved: narcolepsy, shift-work disorder, OSA residual sleepiness (adjunct to CPAP).",
       ],
       practical: [
-        "Prescribe Modafinil for narcolepsy — excessive daytime sleepiness with dose, timing, and duration.",
+        "Prescribe Modafinil for narcolepsy: excessive daytime sleepiness with dose, timing, and duration.",
         "Outline the monitoring plan: HR/BP (Baseline and every visit); Rash counselling (At initiation)",
       ],
       longAnswer: [
-        "Modafinil: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Modafinil: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: weak DAT inhibition (dopamine reuptake) + orexin/histamine wake-system activation.",
         "Approved: narcolepsy, shift-work disorder, OSA residual sleepiness (adjunct to CPAP).",
       ],
@@ -301,7 +301,7 @@ export const modafinil: Drug = {
       highYield: [
         "Mechanism: weak DAT inhibition (dopamine reuptake) + orexin/histamine wake-system activation.",
         "Approved: narcolepsy, shift-work disorder, OSA residual sleepiness (adjunct to CPAP).",
-        "Half-life 12-15 h — morning dosing only.",
+        "Half-life 12-15 h: morning dosing only.",
         "Signature serious risk: SJS/TEN rash (blocked ADHD approval).",
         "Controlled (US Schedule IV); doping-banned in sport.",
         "Dose 200-400 mg/day.",
@@ -314,7 +314,7 @@ export const modafinil: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Modafinil develops serious rash (sjs/ten) — next best step?",
+        "A patient on Modafinil develops serious rash (sjs/ten): next best step?",
         "When to choose Modafinil over alternatives in its class.",
       ],
     },
@@ -327,7 +327,7 @@ export const modafinil: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The wake-systems drug: DAT inhibition + orexin + histamine — alertness without full sympathomimetic texture.",
+        "The wake-systems drug: DAT inhibition + orexin + histamine; alertness without full sympathomimetic texture.",
         "The rash that blocked ADHD: ~1% paediatric rash rates refused it an ADHD indication.",
         "India's Modalert: the most-copied generic, also the most-diverted 'study drug'.",
         "Doping-banned in sport without TUE.",
@@ -338,7 +338,7 @@ export const modafinil: Drug = {
   highYieldSummary: [
     "Mechanism: weak DAT inhibition (dopamine reuptake) + orexin/histamine wake-system activation.",
     "Approved: narcolepsy, shift-work disorder, OSA residual sleepiness (adjunct to CPAP).",
-    "Half-life 12-15 h — morning dosing only.",
+    "Half-life 12-15 h: morning dosing only.",
     "Signature serious risk: SJS/TEN rash (blocked ADHD approval).",
     "Controlled (US Schedule IV); doping-banned in sport.",
     "Dose 200-400 mg/day.",
@@ -346,16 +346,16 @@ export const modafinil: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — narcolepsy — excessive daytime sleepiness",
-      presentation: "A patient presenting with narcolepsy — excessive daytime sleepiness, started on Modafinil.",
-      history: "A adult patient presents with a narcolepsy — excessive daytime sleepiness picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with narcolepsy — excessive daytime sleepiness; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Narcolepsy — excessive daytime sleepiness. Differentials are considered and excluded clinically.",
+      title: "First presentation: narcolepsy; excessive daytime sleepiness",
+      presentation: "A patient presenting with narcolepsy: excessive daytime sleepiness, started on Modafinil.",
+      history: "A adult patient presents with a narcolepsy: excessive daytime sleepiness picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with narcolepsy: excessive daytime sleepiness; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Narcolepsy: excessive daytime sleepiness. Differentials are considered and excluded clinically.",
       rationale: "Modafinil is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Wake-Promoting Agent) with strong evidence in this condition.",
       management: "Started at 100-200 mg every morning, titrated to 200-400 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Modafinil takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Modafinil takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -364,7 +364,7 @@ export const modafinil: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Wake-Promoting Agent comparison — choosing within the class",
+      title: "Wake-Promoting Agent comparison: choosing within the class",
       primaryDrug: "Modafinil",
       rows: [
         {
@@ -389,11 +389,11 @@ export const modafinil: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Weight neutral to reducing — appetite effects common.",
+          primaryValue: "Weight neutral to reducing: appetite effects common.",
           comparisons: [
             {
               drug: "Armodafinil",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
           ],
         },
@@ -418,7 +418,7 @@ export const modafinil: Drug = {
           ],
         },
       ],
-      takeaway: "All wake-promoting agents share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All wake-promoting agents share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -427,7 +427,7 @@ export const modafinil: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Modafinil reaches peak plasma concentration and begins acting at its molecular target (DAT (weak inhibition) + orexin/hypocretin and histamine wake systems). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Modafinil reaches peak plasma concentration and begins acting at its molecular target (DAT (weak inhibition) + orexin/hypocretin and histamine wake systems). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -463,7 +463,7 @@ export const modafinil: Drug = {
   faqs: [
     {
       question: "How long does Modafinil take to work?",
-      answer: "45-60 minutes.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "45-60 minutes.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Modafinil?",
@@ -471,11 +471,11 @@ export const modafinil: Drug = {
     },
     {
       question: "Can I stop Modafinil suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Modafinil habit-forming?",
@@ -483,7 +483,7 @@ export const modafinil: Drug = {
     },
     {
       question: "Can I take Modafinil during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Modafinil may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Modafinil may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -585,7 +585,7 @@ export const modafinil: Drug = {
       note: "Primary molecular target",
     },
     {
-      label: "Narcolepsy — excessive daytime sleepiness",
+      label: "Narcolepsy: excessive daytime sleepiness",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -621,7 +621,7 @@ export const modafinil: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Modafinil",
+      label: "Patient Guide. Modafinil",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -629,13 +629,13 @@ export const modafinil: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The wake-promoting agent — DAT-inhibiting alertness for narcolepsy without classic stimulant pharmacology.",
-    summary: "Modafinil is a prescription medicine used to treat narcolepsy — excessive daytime sleepiness. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Modafinil is a wake-promoting medicine for conditions of excessive sleepiness — narcolepsy, shift-work disorder, and remaining sleepiness in treated sleep apnoea. It produces alertness more gently than classic stimulants, though it can still disturb night sleep and cause headache. Any rash while taking it means stopping and contacting your doctor the same day.",
-    sideEffects: "The most common side effects are: headache, nausea, insomnia (if afternoon-dosed), anxiety and jitteriness, dry mouth, appetite reduction. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Serious rash (SJS/TEN) and Multi-organ hypersensitivity / DRESS. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: hr/bp (baseline and every visit); rash counselling (at initiation). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The wake-promoting agent. DAT-inhibiting alertness for narcolepsy without classic stimulant pharmacology.",
+    summary: "Modafinil is a prescription medicine used to treat narcolepsy: excessive daytime sleepiness. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Modafinil is a wake-promoting medicine for conditions of excessive sleepiness: narcolepsy, shift-work disorder, and remaining sleepiness in treated sleep apnoea. It produces alertness more gently than classic stimulants, though it can still disturb night sleep and cause headache. Any rash while taking it means stopping and contacting your doctor the same day.",
+    sideEffects: "The most common side effects are: headache, nausea, insomnia (if afternoon-dosed), anxiety and jitteriness, dry mouth, appetite reduction. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Serious rash (SJS/TEN) and Multi-organ hypersensitivity / DRESS. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: hr/bp (baseline and every visit); rash counselling (at initiation). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Cyclosporine, hormonal contraceptives, MAOIs, CYP3A4 substrates generally. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Cyclosporine, hormonal contraceptives, MAOIs, CYP3A4 substrates generally. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -861,12 +861,12 @@ export const modafinil: Drug = {
     },
     {
       question: "List the key uses of Modafinil.",
-      answer: "Narcolepsy — excessive daytime sleepiness, Shift-work sleep disorder, OSA residual sleepiness (adjunct to CPAP), ADHD. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Narcolepsy: excessive daytime sleepiness, Shift-work sleep disorder, OSA residual sleepiness (adjunct to CPAP), ADHD. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Modafinil and how you would manage it.",
-      answer: "Serious rash (SJS/TEN): The label-defining risk (paediatric rates ~1% any rash) — the reason ADHD approval was refused. Management: Stop on any rash; same-day assessment.",
+      answer: "Serious rash (SJS/TEN): The label-defining risk (paediatric rates ~1% any rash); the reason ADHD approval was refused. Management: Stop on any rash; same-day assessment.",
       topic: "Safety",
     },
     {
@@ -876,7 +876,7 @@ export const modafinil: Drug = {
     },
     {
       question: "Share one clinical pearl about Modafinil that separates safe prescribers from unsafe ones.",
-      answer: "The wake-systems drug: DAT inhibition + orexin + histamine — alertness without full sympathomimetic texture.",
+      answer: "The wake-systems drug: DAT inhibition + orexin + histamine; alertness without full sympathomimetic texture.",
       topic: "Clinical Pearls",
     },
   ],
@@ -952,7 +952,7 @@ export const modafinil: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -997,7 +997,7 @@ export const modafinil: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Modafinil works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Modafinil works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1013,7 +1013,7 @@ export const modafinil: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Modafinil safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Modafinil safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1056,7 +1056,7 @@ export const modafinil: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Modafinil follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Modafinil follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1066,7 +1066,7 @@ export const modafinil: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Weight neutral to reducing — appetite effects common.",
+    weightGain: "Weight neutral to reducing: appetite effects common.",
     sedation: "Not sedating.",
     dosing: [
       {
@@ -1091,7 +1091,7 @@ export const modafinil: Drug = {
       "Contraceptive counselling is mandatory.",
     ],
     overdose: [
-      "Overdose with Modafinil is managed supportively — no specific antidote.",
+      "Overdose with Modafinil is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Modafinil is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1129,7 +1129,7 @@ export const modafinil: Drug = {
     potentialDisadvantages: ["Rash warning.", "Controlled status + diversion culture.", "3A4 induction interactions."],
     primaryTargetSymptoms: ["Excessive daytime sleepiness", "Shift-work wakefulness"],
     pearls: [
-      "The wake-systems drug: DAT inhibition + orexin + histamine — alertness without full sympathomimetic texture.",
+      "The wake-systems drug: DAT inhibition + orexin + histamine; alertness without full sympathomimetic texture.",
       "The rash that blocked ADHD: ~1% paediatric rash rates refused it an ADHD indication.",
       "India's Modalert: the most-copied generic, also the most-diverted 'study drug'.",
       "Doping-banned in sport without TUE.",
@@ -1139,6 +1139,6 @@ export const modafinil: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

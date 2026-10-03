@@ -19,18 +19,18 @@ export const chlorpromazine: Drug = {
   brandNames: ["Largactil", "Thorazine"],
   drugClass: "typical-antipsychotic",
   drugClassLabel: "Typical Antipsychotic",
-  drugClassFullName: "Typical (Conventional) Antipsychotic — Phenothiazine",
+  drugClassFullName: "Typical (Conventional) Antipsychotic. Phenothiazine",
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Typical Antipsychotics", "Chlorpromazine"],
   /* ---- Hero / summary ---- */
-  tagline: "The original antipsychotic — a low-potency phenothiazine that started psychiatric pharmacotherapy in 1952.",
-  summary: "Chlorpromazine is the first antipsychotic drug — the 1952 discovery that emptied asylum wards and won a Nobel prize connection. As a low-potency aliphatic phenothiazine it combines modest D2 blockade with strong H1, M1, and alpha-1 binding: heavy sedation, orthostasis, and anticholinergic effects at antipsychotic doses, with lower EPS per milligram than haloperidol. Today it survives as a sedation-heavy option for agitation, severe anxiety states, and intractable hiccups, and as the historical reference point for the entire class.",
+  tagline: "The original antipsychotic: a low-potency phenothiazine that started psychiatric pharmacotherapy in 1952.",
+  summary: "Chlorpromazine is the first antipsychotic drug: the 1952 discovery that emptied asylum wards and won a Nobel prize connection. As a low-potency aliphatic phenothiazine it combines modest D2 blockade with strong H1, M1, and alpha-1 binding: heavy sedation, orthostasis, and anticholinergic effects at antipsychotic doses, with lower EPS per milligram than haloperidol. Today it survives as a sedation-heavy option for agitation, severe anxiety states, and intractable hiccups, and as the historical reference point for the entire class.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Chlorpromazine — from its molecular target (D2 (low-potency antagonist); H1 (potent); M1 (moderate); alpha-1 (moderate); 5-HT2A) to clinical effect.",
+    "Explain the mechanism of action of Chlorpromazine, from its molecular target (D2 (low-potency antagonist); H1 (potent); M1 (moderate); alpha-1 (moderate); 5-HT2A) to clinical effect.",
     "List the FDA-approved and off-label uses of Chlorpromazine.",
     "Predict the common and serious side effects of Chlorpromazine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Chlorpromazine.",
@@ -38,12 +38,12 @@ export const chlorpromazine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Chlorpromazine blocks D2 receptors with low potency but binds strongly at histamine, muscarinic, and alpha-1 receptors — the 'dirty but gentle' pioneer profile.",
+    summary: "Chlorpromazine blocks D2 receptors with low potency but binds strongly at histamine, muscarinic, and alpha-1 receptors: the 'dirty but gentle' pioneer profile.",
     molecularTarget: "D2 (low-potency antagonist); H1 (potent); M1 (moderate); alpha-1 (moderate); 5-HT2A",
-    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — low potency means very large doses are needed, and off-target binding (sedation, hypotension, anticholinergic) dominates the clinical texture.",
+    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways: low potency means very large doses are needed, and off-target binding (sedation, hypotension, anticholinergic) dominates the clinical texture.",
     steps: [
-      "Blocks D2 receptors — therapeutic antipsychotic effect at 65–75% occupancy.",
-      "EPS emerges as occupancy passes ~80% — low potency means very large doses are needed, and off-target binding (sedation, hypotension, anticholinergic) dominates the clinical texture.",
+      "Blocks D2 receptors: therapeutic antipsychotic effect at 65–75% occupancy.",
+      "EPS emerges as occupancy passes ~80%: low potency means very large doses are needed, and off-target binding (sedation, hypotension, anticholinergic) dominates the clinical texture.",
       "Tuberoinfundibular blockade raises prolactin; nigrostriatal blockade produces parkinsonism and dystonia.",
       "Class-typical receptor binding determines the drug's adverse-effect texture.",
     ],
@@ -109,7 +109,7 @@ export const chlorpromazine: Drug = {
         label: "hyperprolactinaemia",
       },
     ],
-    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia — efficacy and motor risk are two sides of one coin.",
+    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia: efficacy and motor risk are two sides of one coin.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -130,12 +130,12 @@ export const chlorpromazine: Drug = {
     {
       name: "Severe anxiety/tension (short-term)",
       status: "fda-approved",
-      description: "Historic indication — heavy sedation used deliberately.",
+      description: "Historic indication: heavy sedation used deliberately.",
     },
     {
       name: "Intractable hiccups",
       status: "fda-approved",
-      description: "A unique niche — chlorpromazine is the only FDA-approved anti-hiccup drug.",
+      description: "A unique niche: chlorpromazine is the only FDA-approved anti-hiccup drug.",
     },
     {
       name: "Acute agitation",
@@ -157,7 +157,7 @@ export const chlorpromazine: Drug = {
     },
     {
       title: "Tardive dyskinesia",
-      text: "Class warning — risk with chronic use.",
+      text: "Class warning: risk with chronic use.",
     },
   ],
   /* ---- Side effects ---- */
@@ -166,14 +166,14 @@ export const chlorpromazine: Drug = {
       name: "Extrapyramidal symptoms (parkinsonism)",
       frequency: "very-common",
       severity: "moderate",
-      description: "Rigidity, bradykinesia, tremor — dose-dependent D2 signature.",
+      description: "Rigidity, bradykinesia, tremor: dose-dependent D2 signature.",
       management: "Reduce dose; anticholinergic.",
     },
     {
       name: "Akathisia",
       frequency: "common",
       severity: "moderate",
-      description: "Restlessness — frequently mistaken for worsening psychosis.",
+      description: "Restlessness: frequently mistaken for worsening psychosis.",
       management: "Reduce dose; propranolol.",
     },
     {
@@ -194,35 +194,35 @@ export const chlorpromazine: Drug = {
       name: "Orthostatic hypotension",
       frequency: "very-common",
       severity: "severe",
-      description: "Alpha-1 blockade — first-dose syncope is a real risk, especially in the elderly.",
+      description: "Alpha-1 blockade: first-dose syncope is a real risk, especially in the elderly.",
       management: "Slow titration; rise slowly; review antihypertensives.",
     },
     {
       name: "Sedation and drowsiness",
       frequency: "very-common",
       severity: "moderate",
-      description: "H1-mediated — the dominant clinical effect at low doses.",
+      description: "H1-mediated: the dominant clinical effect at low doses.",
       management: "Dose timing; tolerance.",
     },
     {
       name: "Anticholinergic effects (dry mouth, constipation, urinary retention)",
       frequency: "common",
       severity: "moderate",
-      description: "M1 blockade — adds up in the elderly.",
+      description: "M1 blockade: adds up in the elderly.",
       management: "Minimise total anticholinergic load.",
     },
     {
       name: "Weight gain",
       frequency: "common",
       severity: "moderate",
-      description: "H1/5-HT2C effects — notable for a typical.",
+      description: "H1/5-HT2C effects: notable for a typical.",
       management: "Monitor; lifestyle.",
     },
     {
       name: "Photosensitivity",
       frequency: "common",
       severity: "mild",
-      description: "A classic phenothiazine quirk — sunburn-like reactions.",
+      description: "A classic phenothiazine quirk: sunburn-like reactions.",
       management: "Sun protection counselling.",
     },
     {
@@ -238,14 +238,14 @@ export const chlorpromazine: Drug = {
       name: "Neuroleptic malignant syndrome",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency.",
+      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness: the class medical emergency.",
       management: "Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
     },
     {
       name: "Tardive dyskinesia",
       frequency: "uncommon",
       severity: "severe",
-      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex — a defining risk of chronic typical antipsychotics.",
+      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex: a defining risk of chronic typical antipsychotics.",
       management: "Lowest effective dose; AIMS surveillance; reduce or switch on detection; VMAT2 inhibitors for severe cases.",
     },
   ],
@@ -281,13 +281,13 @@ export const chlorpromazine: Drug = {
     {
       drug: "QT-prolonging drugs (including other antipsychotics)",
       severity: "major",
-      mechanism: "Additive QT prolongation — torsades risk.",
+      mechanism: "Additive QT prolongation: torsades risk.",
       action: "Avoid combinations; ECG monitoring if unavoidable.",
     },
     {
       drug: "Anticholinergic drugs",
       severity: "moderate",
-      mechanism: "Additive anticholinergic burden — cognition, ileus, tachycardia.",
+      mechanism: "Additive anticholinergic burden: cognition, ileus, tachycardia.",
       action: "Minimise total anticholinergic load.",
     },
     {
@@ -299,48 +299,48 @@ export const chlorpromazine: Drug = {
   ],
   pregnancy: {
     legacyCategory: "C",
-    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk — continue at the lowest effective dose with obstetric co-management.",
+    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk: continue at the lowest effective dose with obstetric co-management.",
     lactation: "Small amounts pass into milk; infant sedation and EPS-like effects are monitored. Generally considered acceptable with infant monitoring.",
   },
   renalAdjustment: "Standard caution in significant renal impairment.",
-  hepaticAdjustment: "Hepatic metabolism — LFT vigilance (cholestatic jaundice is the historic toxicity); avoid in active liver disease.",
+  hepaticAdjustment: "Hepatic metabolism. LFT vigilance (cholestatic jaundice is the historic toxicity); avoid in active liver disease.",
   /* ---- Education ---- */
-  patientExplanation: "Chlorpromazine is the oldest antipsychotic, discovered in 1952. It is a strong sedative that also calms psychotic symptoms. Because it acts on many receptors at once, it lowers blood pressure on standing and causes dry mouth and constipation more than newer medicines — and it makes skin unusually sensitive to sunlight.",
+  patientExplanation: "Chlorpromazine is the oldest antipsychotic, discovered in 1952. It is a strong sedative that also calms psychotic symptoms. Because it acts on many receptors at once, it lowers blood pressure on standing and causes dry mouth and constipation more than newer medicines, and it makes skin unusually sensitive to sunlight.",
   patientEducationPoints: [
-    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early — these are treatable.",
+    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early: these are treatable.",
     "Stand up slowly during the first week.",
-    "Do not stop suddenly — discuss any change with your doctor.",
-    "Benefit from Chlorpromazine builds over weeks — do not judge it in the first days.",
+    "Do not stop suddenly: discuss any change with your doctor.",
+    "Benefit from Chlorpromazine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "1952: chlorpromazine + lithium + imipramine — the founding decade of psychopharmacology; chlorpromazine was its opening act.",
+    "1952: chlorpromazine + lithium + imipramine; the founding decade of psychopharmacology; chlorpromazine was its opening act.",
     "Low potency, high milligrams: 100 mg chlorpromazine ≈ 2 mg haloperidol ≈ 100 mg quetiapine (rough equivalences for orientation).",
-    "Sedation + hypotension are dose-limiting; EPS appears only at the high end — the mirror image of haloperidol.",
-    "The only approved anti-hiccup drug — remembered mainly by examiners and palliative physicians.",
+    "Sedation + hypotension are dose-limiting; EPS appears only at the high end. The mirror image of haloperidol.",
+    "The only approved anti-hiccup drug: remembered mainly by examiners and palliative physicians.",
     "Photosensitivity: warn every long-term patient about sun exposure.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Chlorpromazine: Chlorpromazine blocks D2 receptors with low potency but binds strongly at histamine, muscarinic, and alpha-1 receptors — the 'dirty but gentle' pioneer profile.",
-        "Uses of Chlorpromazine: Schizophrenia — psychotic manifestations; Severe anxiety/tension (short-term); Intractable hiccups; Acute agitation",
-        "First antipsychotic (1952) — aliphatic phenothiazine, low-potency.",
+        "Mechanism of Chlorpromazine: Chlorpromazine blocks D2 receptors with low potency but binds strongly at histamine, muscarinic, and alpha-1 receptors; the 'dirty but gentle' pioneer profile.",
+        "Uses of Chlorpromazine: Schizophrenia; psychotic manifestations; Severe anxiety/tension (short-term); Intractable hiccups; Acute agitation",
+        "First antipsychotic (1952): aliphatic phenothiazine, low-potency.",
         "Receptor profile: weak D2 + strong H1/M1/alpha-1 → sedation, hypotension, anticholinergic >> EPS.",
       ],
       practical: [
-        "Prescribe Chlorpromazine for schizophrenia — psychotic manifestations with dose, timing, and duration.",
+        "Prescribe Chlorpromazine for schizophrenia: psychotic manifestations with dose, timing, and duration.",
         "Outline the monitoring plan: Weight and BMI (Baseline, then periodically); AIMS examination (Baseline, then every 6 months); EPS screen (parkinsonism, akathisia, dystonia) (Every review in the first 2 months)",
       ],
       longAnswer: [
-        "Chlorpromazine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "First antipsychotic (1952) — aliphatic phenothiazine, low-potency.",
+        "Chlorpromazine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "First antipsychotic (1952): aliphatic phenothiazine, low-potency.",
         "Receptor profile: weak D2 + strong H1/M1/alpha-1 → sedation, hypotension, anticholinergic >> EPS.",
       ],
     },
     neetPg: {
       highYield: [
-        "First antipsychotic (1952) — aliphatic phenothiazine, low-potency.",
+        "First antipsychotic (1952): aliphatic phenothiazine, low-potency.",
         "Receptor profile: weak D2 + strong H1/M1/alpha-1 → sedation, hypotension, anticholinergic >> EPS.",
         "Signature adverse effects: orthostatic hypotension, photosensitivity, cholestatic jaundice, neuroleptic malignant syndrome (first described with it).",
         "Unique FDA indication: intractable hiccups.",
@@ -355,7 +355,7 @@ export const chlorpromazine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Chlorpromazine develops neuroleptic malignant syndrome — next best step?",
+        "A patient on Chlorpromazine develops neuroleptic malignant syndrome: next best step?",
         "When to choose Chlorpromazine over alternatives in its class.",
       ],
     },
@@ -368,16 +368,16 @@ export const chlorpromazine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "1952: chlorpromazine + lithium + imipramine — the founding decade of psychopharmacology; chlorpromazine was its opening act.",
+        "1952: chlorpromazine + lithium + imipramine; the founding decade of psychopharmacology; chlorpromazine was its opening act.",
         "Low potency, high milligrams: 100 mg chlorpromazine ≈ 2 mg haloperidol ≈ 100 mg quetiapine (rough equivalences for orientation).",
-        "Sedation + hypotension are dose-limiting; EPS appears only at the high end — the mirror image of haloperidol.",
-        "The only approved anti-hiccup drug — remembered mainly by examiners and palliative physicians.",
+        "Sedation + hypotension are dose-limiting; EPS appears only at the high end. The mirror image of haloperidol.",
+        "The only approved anti-hiccup drug: remembered mainly by examiners and palliative physicians.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "First antipsychotic (1952) — aliphatic phenothiazine, low-potency.",
+    "First antipsychotic (1952): aliphatic phenothiazine, low-potency.",
     "Receptor profile: weak D2 + strong H1/M1/alpha-1 → sedation, hypotension, anticholinergic >> EPS.",
     "Signature adverse effects: orthostatic hypotension, photosensitivity, cholestatic jaundice, neuroleptic malignant syndrome (first described with it).",
     "Unique FDA indication: intractable hiccups.",
@@ -387,16 +387,16 @@ export const chlorpromazine: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia — psychotic manifestations",
-      presentation: "A patient presenting with schizophrenia — psychotic manifestations, started on Chlorpromazine.",
-      history: "A adult patient presents with a schizophrenia — psychotic manifestations picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with schizophrenia — psychotic manifestations; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Schizophrenia — psychotic manifestations. Differentials are considered and excluded clinically.",
+      title: "First presentation: schizophrenia with psychotic manifestations",
+      presentation: "A patient presenting with schizophrenia: psychotic manifestations, started on Chlorpromazine.",
+      history: "A adult patient presents with a schizophrenia: psychotic manifestations picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with schizophrenia: psychotic manifestations; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Schizophrenia: psychotic manifestations. Differentials are considered and excluded clinically.",
       rationale: "Chlorpromazine is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Typical Antipsychotic) with strong evidence in this condition.",
       management: "Started at 25–100 mg orally (divided), titrated to 200–800 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Chlorpromazine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Chlorpromazine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -405,7 +405,7 @@ export const chlorpromazine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Typical Antipsychotic comparison — choosing within the class",
+      title: "Typical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Chlorpromazine",
       rows: [
         {
@@ -454,7 +454,7 @@ export const chlorpromazine: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Low — weight gain not expected.",
+          primaryValue: "Low: weight gain not expected.",
           comparisons: [
             {
               drug: "Haloperidol",
@@ -462,15 +462,15 @@ export const chlorpromazine: Drug = {
             },
             {
               drug: "Fluphenazine",
-              value: "Low — weight gain not expected.",
+              value: "Low: weight gain not expected.",
             },
             {
               drug: "Perphenazine",
-              value: "Low — weight gain not expected.",
+              value: "Low: weight gain not expected.",
             },
             {
               drug: "Pimozide",
-              value: "Low — weight gain not expected.",
+              value: "Low: weight gain not expected.",
             },
           ],
         },
@@ -480,7 +480,7 @@ export const chlorpromazine: Drug = {
           comparisons: [
             {
               drug: "Haloperidol",
-              value: "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+              value: "Mild, among the least sedating antipsychotics; alerting more than calming at low doses.",
             },
             {
               drug: "Fluphenazine",
@@ -502,7 +502,7 @@ export const chlorpromazine: Drug = {
           comparisons: [
             {
               drug: "Haloperidol",
-              value: "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+              value: "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool",
             },
             {
               drug: "Fluphenazine",
@@ -519,7 +519,7 @@ export const chlorpromazine: Drug = {
           ],
         },
       ],
-      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -528,7 +528,7 @@ export const chlorpromazine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Chlorpromazine reaches peak plasma concentration and begins acting at its molecular target (D2 (low-potency antagonist); H1 (potent); M1 (moderate); alpha-1 (moderate); 5-HT2A). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Chlorpromazine reaches peak plasma concentration and begins acting at its molecular target (D2 (low-potency antagonist); H1 (potent); M1 (moderate); alpha-1 (moderate); 5-HT2A). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -564,7 +564,7 @@ export const chlorpromazine: Drug = {
   faqs: [
     {
       question: "How long does Chlorpromazine take to work?",
-      answer: "Clinical effect of Chlorpromazine typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Clinical effect of Chlorpromazine typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Chlorpromazine?",
@@ -572,11 +572,11 @@ export const chlorpromazine: Drug = {
     },
     {
       question: "Can I stop Chlorpromazine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Chlorpromazine habit-forming?",
@@ -584,7 +584,7 @@ export const chlorpromazine: Drug = {
     },
     {
       question: "Can I take Chlorpromazine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Chlorpromazine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Chlorpromazine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -697,7 +697,7 @@ export const chlorpromazine: Drug = {
       label: "Typical Antipsychotic",
       type: "class",
       href: "#mechanism",
-      note: "Typical (Conventional) Antipsychotic — Phenothiazine",
+      note: "Typical (Conventional) Antipsychotic. Phenothiazine",
     },
     {
       label: "Central monoaminergic systems (see mechanism)",
@@ -712,7 +712,7 @@ export const chlorpromazine: Drug = {
       note: "Primary molecular target",
     },
     {
-      label: "Schizophrenia — psychotic manifestations",
+      label: "Schizophrenia: psychotic manifestations",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -748,7 +748,7 @@ export const chlorpromazine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Chlorpromazine",
+      label: "Patient Guide. Chlorpromazine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -756,13 +756,13 @@ export const chlorpromazine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The original antipsychotic — a low-potency phenothiazine that started psychiatric pharmacotherapy in 1952.",
-    summary: "Chlorpromazine is a prescription medicine used to treat schizophrenia — psychotic manifestations. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Chlorpromazine is the oldest antipsychotic, discovered in 1952. It is a strong sedative that also calms psychotic symptoms. Because it acts on many receptors at once, it lowers blood pressure on standing and causes dry mouth and constipation more than newer medicines — and it makes skin unusually sensitive to sunlight.",
-    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation, orthostatic hypotension, sedation and drowsiness. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The original antipsychotic: a low-potency phenothiazine that started psychiatric pharmacotherapy in 1952.",
+    summary: "Chlorpromazine is a prescription medicine used to treat schizophrenia: psychotic manifestations. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Chlorpromazine is the oldest antipsychotic, discovered in 1952. It is a strong sedative that also calms psychotic symptoms. Because it acts on many receptors at once, it lowers blood pressure on standing and causes dry mouth and constipation more than newer medicines, and it makes skin unusually sensitive to sunlight.",
+    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation, orthostatic hypotension, sedation and drowsiness. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
   },
   sectionDifficulty: {
     mechanism: "mbbs",
@@ -798,7 +798,7 @@ export const chlorpromazine: Drug = {
         name: "Haloperidol",
         slug: "haloperidol",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool",
       },
       {
         name: "Fluphenazine",
@@ -822,7 +822,7 @@ export const chlorpromazine: Drug = {
         name: "Thioridazine",
         slug: "thioridazine",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "The restricted QT-retinopathy phenothiazine — last-line",
+        distinguishing: "The restricted QT-retinopathy phenothiazine: last-line",
       },
       {
         name: "Trifluoperazine",
@@ -988,17 +988,17 @@ export const chlorpromazine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Chlorpromazine in two sentences.",
-      answer: "Chlorpromazine blocks D2 receptors with low potency but binds strongly at histamine, muscarinic, and alpha-1 receptors — the 'dirty but gentle' pioneer profile. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — low potency means very large doses are needed, and off-target binding (sedation, hypotension, anticholinergic) dominates the clinical texture.",
+      answer: "Chlorpromazine blocks D2 receptors with low potency but binds strongly at histamine, muscarinic, and alpha-1 receptors: the 'dirty but gentle' pioneer profile. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways; low potency means very large doses are needed, and off-target binding (sedation, hypotension, anticholinergic) dominates the clinical texture.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Chlorpromazine.",
-      answer: "Schizophrenia — psychotic manifestations, Severe anxiety/tension (short-term), Intractable hiccups, Acute agitation. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Schizophrenia: psychotic manifestations, Severe anxiety/tension (short-term), Intractable hiccups, Acute agitation. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Chlorpromazine and how you would manage it.",
-      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
+      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness; the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
       topic: "Safety",
     },
     {
@@ -1008,7 +1008,7 @@ export const chlorpromazine: Drug = {
     },
     {
       question: "Share one clinical pearl about Chlorpromazine that separates safe prescribers from unsafe ones.",
-      answer: "1952: chlorpromazine + lithium + imipramine — the founding decade of psychopharmacology; chlorpromazine was its opening act.",
+      answer: "1952: chlorpromazine + lithium + imipramine; the founding decade of psychopharmacology; chlorpromazine was its opening act.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1084,7 +1084,7 @@ export const chlorpromazine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1129,7 +1129,7 @@ export const chlorpromazine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Chlorpromazine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Chlorpromazine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1145,7 +1145,7 @@ export const chlorpromazine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Chlorpromazine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Chlorpromazine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1190,7 +1190,7 @@ export const chlorpromazine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Chlorpromazine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Chlorpromazine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1200,7 +1200,7 @@ export const chlorpromazine: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Low — weight gain not expected.",
+    weightGain: "Low: weight gain not expected.",
     sedation: "Mild.",
     dosing: [
       {
@@ -1227,12 +1227,12 @@ export const chlorpromazine: Drug = {
     ],
     dosageForms: ["Tablets 10–200 mg", "Syrup/suspension", "Suppositories", "Injection 25 mg/mL"],
     dosingTips: [
-      "Give most of the dose at night — convert sedation into sleep.",
+      "Give most of the dose at night: convert sedation into sleep.",
       "Warn about sun exposure from day one.",
       "Check blood pressure standing in week one.",
     ],
     overdose: [
-      "Overdose with Chlorpromazine is managed supportively — no specific antidote.",
+      "Overdose with Chlorpromazine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Chlorpromazine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1272,7 +1272,7 @@ export const chlorpromazine: Drug = {
       "Multiple formulations including suppository.",
     ],
     potentialDisadvantages: [
-      "Orthostatic hypotension — dose-limiting.",
+      "Orthostatic hypotension: dose-limiting.",
       "Heavy anticholinergic burden.",
       "Photosensitivity.",
       "Cholestatic jaundice (early treatment).",
@@ -1281,16 +1281,16 @@ export const chlorpromazine: Drug = {
     ],
     primaryTargetSymptoms: ["Positive psychotic symptoms", "Severe agitation and anxiety", "Intractable hiccups"],
     pearls: [
-      "1952: chlorpromazine + lithium + imipramine — the founding decade of psychopharmacology; chlorpromazine was its opening act.",
+      "1952: chlorpromazine + lithium + imipramine; the founding decade of psychopharmacology; chlorpromazine was its opening act.",
       "Low potency, high milligrams: 100 mg chlorpromazine ≈ 2 mg haloperidol ≈ 100 mg quetiapine (rough equivalences for orientation).",
-      "Sedation + hypotension are dose-limiting; EPS appears only at the high end — the mirror image of haloperidol.",
-      "The only approved anti-hiccup drug — remembered mainly by examiners and palliative physicians.",
+      "Sedation + hypotension are dose-limiting; EPS appears only at the high end. The mirror image of haloperidol.",
+      "The only approved anti-hiccup drug: remembered mainly by examiners and palliative physicians.",
       "Photosensitivity: warn every long-term patient about sun exposure.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

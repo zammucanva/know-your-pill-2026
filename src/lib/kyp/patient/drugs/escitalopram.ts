@@ -10,7 +10,7 @@ export const escitalopramPatientGuide: PatientGuide = {
   slug: "escitalopram",
 
   classInPlainWords:
-    "Escitalopram is an SSRI (selective serotonin reuptake inhibitor) — a 'cleaner' version of an older medicine called citalopram, with only the active part kept.",
+    "Escitalopram is an SSRI (selective serotonin reuptake inhibitor): a 'cleaner' version of an older medicine called citalopram, with only the active part kept.",
 
   whatIsThis: escitalopram.patientMode.tagline,
 
@@ -56,11 +56,11 @@ export const escitalopramPatientGuide: PatientGuide = {
   },
 
   whenNotice:
-    "Some early changes — sleep, appetite, energy — can happen within 1–2 weeks, and some studies suggest escitalopram may start helping slightly earlier than other SSRIs. Clearer mood benefit typically takes 4–6 weeks for depression and 8–12 weeks for generalised anxiety. Don't stop early just because you don't feel better yet.",
+    "Some early changes (sleep, appetite, energy) can happen within 1–2 weeks, and some studies suggest escitalopram may start helping slightly earlier than other SSRIs. Clearer mood benefit typically takes 4–6 weeks for depression and 8–12 weeks for generalised anxiety. Don't stop early just because you don't feel better yet.",
 
   timelineShort: "4–6 weeks for depression; 8–12 for anxiety",
 
-  usuallyTaken: "Morning or night — whichever suits you",
+  usuallyTaken: "Morning or night: whichever suits you",
 
   commonSideEffects: {
     intro: escitalopram.patientMode.sideEffects,
@@ -73,7 +73,7 @@ export const escitalopramPatientGuide: PatientGuide = {
       "Loose stools (diarrhoea)",
       "Sweating, especially at night",
       "Feeling tired",
-      "Sexual side effects — lower interest or difficulty reaching orgasm",
+      "Sexual side effects: lower interest or difficulty reaching orgasm",
     ],
     note: "Escitalopram can be taken in the morning or at night, depending on whether it makes you more alert or more sleepy.",
   },
@@ -92,7 +92,7 @@ export const escitalopramPatientGuide: PatientGuide = {
       {
         name: "Serotonin syndrome",
         whatItMeans:
-          "A rare but serious reaction caused by too much serotonin activity — usually when combined with another medicine that affects serotonin.",
+          "A rare but serious reaction caused by too much serotonin activity: usually when combined with another medicine that affects serotonin.",
         whatToDo:
           "Get emergency help straight away if you have a high fever with confusion, sweating, shaking, muscle twitching or stiffness, or a fast heartbeat.",
       },
@@ -108,7 +108,7 @@ export const escitalopramPatientGuide: PatientGuide = {
         whatItMeans:
           "In the first month or two, antidepressants can occasionally make mood worse instead of better. This risk is highest in people under 25.",
         whatToDo:
-          "Contact your doctor immediately — do not wait — if you feel more agitated, irritable, anxious, or have any new thoughts of harming yourself.",
+          "Contact your doctor immediately (do not wait) if you feel more agitated, irritable, anxious, or have any new thoughts of harming yourself.",
       },
       {
         name: "Abnormal bleeding",
@@ -121,27 +121,27 @@ export const escitalopramPatientGuide: PatientGuide = {
   },
 
   tellYourDoctor: [
-    "All other medicines you take — especially tramadol (pain), triptans (migraine), certain antibiotics (erythromycin, clarithromycin, linezolid), and cough syrups containing dextromethorphan.",
+    "All other medicines you take, especially tramadol (pain), triptans (migraine), certain antibiotics (erythromycin, clarithromycin, linezolid), and cough syrups containing dextromethorphan.",
     "Any herbal products, especially St John's Wort.",
     "Any heart condition, a family history of heart rhythm problems, or if you have long-QT syndrome.",
-    "If you take omeprazole or similar medicines for reflux — they can raise escitalopram levels.",
+    "If you take omeprazole or similar medicines for reflux. They can raise escitalopram levels.",
     "If you are pregnant, planning a pregnancy, or breastfeeding.",
-    "If you are over 60 — your doctor may start you at a lower dose and check an ECG.",
+    "If you are over 60: your doctor may start you at a lower dose and check an ECG.",
   ],
 
   interactions: escitalopram.patientMode.interactions,
 
   missedDose:
-    "Take the missed dose as soon as you remember. If it is close to your next dose, skip the missed one — do not double up.",
+    "Take the missed dose as soon as you remember. If it is close to your next dose, skip the missed one. Do not double up.",
 
   stopping:
-    "Do not stop escitalopram suddenly without medical guidance. Your doctor will recommend a gradual taper over several weeks. Stopping suddenly after several weeks can cause uncomfortable withdrawal-like symptoms — dizziness, 'brain zaps', nausea, and irritability. For a first episode of depression, treatment usually continues for 6–12 months after you feel better, because stopping earlier raises the risk of the depression coming back.",
+    "Do not stop escitalopram suddenly without medical guidance. Your doctor will recommend a gradual taper over several weeks. Stopping suddenly after several weeks can cause uncomfortable withdrawal-like symptoms: dizziness, 'brain zaps', nausea, and irritability. For a first episode of depression, treatment usually continues for 6–12 months after you feel better, because stopping earlier raises the risk of the depression coming back.",
 
   monitoring: escitalopram.patientMode.monitoring,
 
   urgentHelp: {
     intro:
-      "Get urgent medical help — do not wait to see if it passes — if any of these happen:",
+      "Get urgent medical help (do not wait to see if it passes) if any of these happen:",
     signs: [
       "Fainting, palpitations, or a racing or irregular heartbeat.",
       "A high fever with confusion, sweating, shaking, muscle twitching or stiffness, and a fast heartbeat (possible serotonin syndrome).",
@@ -153,9 +153,9 @@ export const escitalopramPatientGuide: PatientGuide = {
   },
 
   keyReminders: [
-    "Full benefit takes 4–6 weeks for depression and 8–12 weeks for anxiety — don't stop early.",
-    "The dose is capped (20 mg a day; 10 mg if over 60) to protect your heart rhythm — never increase it yourself.",
-    "It has fewer medicine interactions than most other antidepressants — one of its main advantages.",
+    "Full benefit takes 4–6 weeks for depression and 8–12 weeks for anxiety. Don't stop early.",
+    "The dose is capped (20 mg a day; 10 mg if over 60) to protect your heart rhythm, never increase it yourself.",
+    "It has fewer medicine interactions than most other antidepressants, one of its main advantages.",
     "It is not addictive, but stopping suddenly can cause uncomfortable withdrawal-like symptoms.",
     "Tell your doctor if you feel faint or your heart races or beats irregularly.",
     "Keep alcohol to a minimum or avoid it, especially in the first month.",

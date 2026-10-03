@@ -594,7 +594,7 @@ export default async function SubstancePage({ params }: PageProps) {
                   </div>
 
                   <div className="mt-4">
-                    <Callout variant="danger" title="Emergency Action — What to Do">
+                    <Callout variant="danger" title="Emergency Action. What to Do">
                       <p className="text-xs text-foreground/80">{substance.overdoseEmergency.mechanism.emergencyAction}</p>
                     </Callout>
                   </div>
@@ -672,7 +672,7 @@ export default async function SubstancePage({ params }: PageProps) {
                                   <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand/15 font-mono text-[0.6rem] font-bold text-brand">{s.step}</span>
                                   <span>
                                     <strong className="font-medium text-foreground">{s.title}</strong>
-                                    <span className="text-muted-foreground"> — {s.description}</span>
+                                    <span className="text-muted-foreground"> · {s.description}</span>
                                   </span>
                                 </li>
                               ))}

@@ -23,14 +23,14 @@ export const reboxetine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antidepressants", "NRIs", "Reboxetine"],
   /* ---- Hero / summary ---- */
-  tagline: "The pure NRI — noradrenergic energy for the tired, apathetic depression.",
-  summary: "Reboxetine is the selective norepinephrine reuptake inhibitor (NRI) antidepressant: pure NET blockade for the anergic, fatigued, apathetic depression phenotype. Approved in Europe (not the USA), with atomoxetine as its class cousin — cardiovascular effects and urinary hesitation the noradrenergic tax.",
+  tagline: "The pure NRI: noradrenergic energy for the tired, apathetic depression.",
+  summary: "Reboxetine is the selective norepinephrine reuptake inhibitor (NRI) antidepressant: pure NET blockade for the anergic, fatigued, apathetic depression phenotype. Approved in Europe (not the USA), with atomoxetine as its class cousin: cardiovascular effects and urinary hesitation the noradrenergic tax.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Reboxetine — from its molecular target (NET (selective inhibition)) to clinical effect.",
+    "Explain the mechanism of action of Reboxetine, from its molecular target (NET (selective inhibition)) to clinical effect.",
     "List the FDA-approved and off-label uses of Reboxetine.",
     "Predict the common and serious side effects of Reboxetine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Reboxetine.",
@@ -38,15 +38,15 @@ export const reboxetine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Reboxetine selectively inhibits the norepinephrine transporter — pure noradrenergic antidepressant action.",
+    summary: "Reboxetine selectively inhibits the norepinephrine transporter: pure noradrenergic antidepressant action.",
     molecularTarget: "NET (selective inhibition)",
     effect: "Monoaminergic modulation producing the antidepressant effect described.",
     steps: [
-      "Reboxetine selectively inhibits the norepinephrine transporter — pure noradrenergic antidepressant action.",
+      "Reboxetine selectively inhibits the norepinephrine transporter: pure noradrenergic antidepressant action.",
       "Downstream receptor adaptation over 2-6 weeks translates acute monoamine change into clinical response.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 12-14 hours (divided dosing). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 12-14 hours (divided dosing). See mechanism and prescriber sections.",
     halfLife: "12-14 hours (divided dosing).",
     metabolism: "Hepatic CYP metabolism.",
     excretion: "Renal.",
@@ -109,7 +109,7 @@ export const reboxetine: Drug = {
         label: "produces",
       },
     ],
-    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation — the central paradox of antidepressant pharmacology.",
+    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation: the central paradox of antidepressant pharmacology.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Norepinephrine (NE)"],
@@ -199,7 +199,7 @@ export const reboxetine: Drug = {
       name: "Serotonin-syndrome-like interactions (weak)",
       frequency: "rare",
       severity: "moderate",
-      description: "Minimal serotonergic activity — fewer SSRI interactions than most antidepressants.",
+      description: "Minimal serotonergic activity: fewer SSRI interactions than most antidepressants.",
       management: "Standard MAOI caution stands.",
     },
   ],
@@ -243,24 +243,24 @@ export const reboxetine: Drug = {
   renalAdjustment: "Halve dose in renal impairment.",
   hepaticAdjustment: "Reduce dose in hepatic impairment.",
   /* ---- Education ---- */
-  patientExplanation: "Reboxetine is a European antidepressant that acts only on noradrenaline — the brain chemical linked to energy and drive — making it suited to depressions dominated by tiredness and loss of motivation. Its characteristic effects are sweating, poor sleep, and, in men, difficulty starting urination.",
+  patientExplanation: "Reboxetine is a European antidepressant that acts only on noradrenaline (the brain chemical linked to energy and drive) making it suited to depressions dominated by tiredness and loss of motivation. Its characteristic effects are sweating, poor sleep, and, in men, difficulty starting urination.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Reboxetine builds over weeks — do not judge it in the first days.",
+    "Benefit from Reboxetine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The phenotype logic: apathetic, anergic, fatigued depression → norepinephrine — reboxetine is the purest noradrenergic lever in the cabinet.",
+    "The phenotype logic: apathetic, anergic, fatigued depression → norepinephrine; reboxetine is the purest noradrenergic lever in the cabinet.",
     "Atomoxetine's cousin: same NET selectivity, different indication (depression vs ADHD).",
-    "Not FDA-approved (failed US trials on dose-finding grounds) — a European resident.",
-    "The noradrenergic tax: sweating, insomnia, urinary hesitation, HR/BP — the profile to counsel.",
+    "Not FDA-approved (failed US trials on dose-finding grounds): a European resident.",
+    "The noradrenergic tax: sweating, insomnia, urinary hesitation, HR/BP; the profile to counsel.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Reboxetine: Reboxetine selectively inhibits the norepinephrine transporter — pure noradrenergic antidepressant action.",
+        "Mechanism of Reboxetine: Reboxetine selectively inhibits the norepinephrine transporter; pure noradrenergic antidepressant action.",
         "Uses of Reboxetine: Major depressive disorder",
         "Mechanism: selective NRI (pure NET blockade).",
         "MDD (EU/UK); 8-10 mg/day divided.",
@@ -270,7 +270,7 @@ export const reboxetine: Drug = {
         "Outline the monitoring plan: Heart rate and blood pressure (Baseline and titration); Urinary symptoms (men) (At review)",
       ],
       longAnswer: [
-        "Reboxetine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Reboxetine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: selective NRI (pure NET blockade).",
         "MDD (EU/UK); 8-10 mg/day divided.",
       ],
@@ -292,7 +292,7 @@ export const reboxetine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Reboxetine develops sustained hypertension — next best step?",
+        "A patient on Reboxetine develops sustained hypertension: next best step?",
         "When to choose Reboxetine over alternatives in its class.",
       ],
     },
@@ -305,10 +305,10 @@ export const reboxetine: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The phenotype logic: apathetic, anergic, fatigued depression → norepinephrine — reboxetine is the purest noradrenergic lever in the cabinet.",
+        "The phenotype logic: apathetic, anergic, fatigued depression → norepinephrine; reboxetine is the purest noradrenergic lever in the cabinet.",
         "Atomoxetine's cousin: same NET selectivity, different indication (depression vs ADHD).",
-        "Not FDA-approved (failed US trials on dose-finding grounds) — a European resident.",
-        "The noradrenergic tax: sweating, insomnia, urinary hesitation, HR/BP — the profile to counsel.",
+        "Not FDA-approved (failed US trials on dose-finding grounds): a European resident.",
+        "The noradrenergic tax: sweating, insomnia, urinary hesitation, HR/BP; the profile to counsel.",
       ],
     },
   },
@@ -324,7 +324,7 @@ export const reboxetine: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — major depressive disorder",
+      title: "First presentation: major depressive disorder",
       presentation: "A patient presenting with major depressive disorder, started on Reboxetine.",
       history: "A adult patient presents with a major depressive disorder picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with major depressive disorder; physical examination and baseline investigations are unremarkable.",
@@ -333,7 +333,7 @@ export const reboxetine: Drug = {
       management: "Started at 4 mg twice daily, titrated to 8-10 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Reboxetine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Reboxetine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -342,7 +342,7 @@ export const reboxetine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "NRI vs related agents — orientation table",
+      title: "NRI vs related agents: orientation table",
       primaryDrug: "Reboxetine",
       rows: [
         {
@@ -351,7 +351,7 @@ export const reboxetine: Drug = {
           comparisons: [
             {
               drug: "Atomoxetine",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },
@@ -377,7 +377,7 @@ export const reboxetine: Drug = {
         },
         {
           attribute: "Clinical niche",
-          primaryValue: "The European NRI — energy for apathetic depression",
+          primaryValue: "The European NRI: energy for apathetic depression",
           comparisons: [
             {
               drug: "Atomoxetine",
@@ -386,7 +386,7 @@ export const reboxetine: Drug = {
           ],
         },
       ],
-      takeaway: "Reboxetine is compared here with related agents for orientation. Full comparison data lives in each drug's own guide — follow the links for the complete picture.",
+      takeaway: "Reboxetine is compared here with related agents for orientation. Full comparison data lives in each drug's own guide: follow the links for the complete picture.",
     },
   ],
   /* ---- Timeline ---- */
@@ -395,7 +395,7 @@ export const reboxetine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Reboxetine reaches peak plasma concentration and begins acting at its molecular target (NET (selective inhibition)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Reboxetine reaches peak plasma concentration and begins acting at its molecular target (NET (selective inhibition)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -431,7 +431,7 @@ export const reboxetine: Drug = {
   faqs: [
     {
       question: "How long does Reboxetine take to work?",
-      answer: "Response 2-4 weeks.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Response 2-4 weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Reboxetine?",
@@ -439,11 +439,11 @@ export const reboxetine: Drug = {
     },
     {
       question: "Can I stop Reboxetine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Reboxetine habit-forming?",
@@ -451,7 +451,7 @@ export const reboxetine: Drug = {
     },
     {
       question: "Can I take Reboxetine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Reboxetine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Reboxetine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -561,7 +561,7 @@ export const reboxetine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Reboxetine",
+      label: "Patient Guide. Reboxetine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -569,13 +569,13 @@ export const reboxetine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The pure NRI — noradrenergic energy for the tired, apathetic depression.",
-    summary: "Reboxetine is a prescription medicine used to treat major depressive disorder. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Reboxetine is a European antidepressant that acts only on noradrenaline — the brain chemical linked to energy and drive — making it suited to depressions dominated by tiredness and loss of motivation. Its characteristic effects are sweating, poor sleep, and, in men, difficulty starting urination.",
-    sideEffects: "The most common side effects are: insomnia and sweating, dry mouth and constipation, urinary hesitation (men), tachycardia and bp rise, nausea and dizziness. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Sustained hypertension and Urinary retention (prostatic men). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline and titration); urinary symptoms (men) (at review). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The pure NRI: noradrenergic energy for the tired, apathetic depression.",
+    summary: "Reboxetine is a prescription medicine used to treat major depressive disorder. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Reboxetine is a European antidepressant that acts only on noradrenaline (the brain chemical linked to energy and drive) making it suited to depressions dominated by tiredness and loss of motivation. Its characteristic effects are sweating, poor sleep, and, in men, difficulty starting urination.",
+    sideEffects: "The most common side effects are: insomnia and sweating, dry mouth and constipation, urinary hesitation (men), tachycardia and bp rise, nausea and dizziness. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Sustained hypertension and Urinary retention (prostatic men). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline and titration); urinary symptoms (men) (at review). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: MAOIs, Erythromycin and CYP3A4 inhibitors, Fluvoxamine and fluoxetine. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: MAOIs, Erythromycin and CYP3A4 inhibitors, Fluvoxamine and fluoxetine. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -599,7 +599,7 @@ export const reboxetine: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -633,7 +633,7 @@ export const reboxetine: Drug = {
         name: "Reboxetine",
         slug: "reboxetine",
         relationship: "This guide",
-        distinguishing: "The European NRI — energy for apathetic depression",
+        distinguishing: "The European NRI: energy for apathetic depression",
       },
     ],
   },
@@ -776,7 +776,7 @@ export const reboxetine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Reboxetine in two sentences.",
-      answer: "Reboxetine selectively inhibits the norepinephrine transporter — pure noradrenergic antidepressant action. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
+      answer: "Reboxetine selectively inhibits the norepinephrine transporter: pure noradrenergic antidepressant action. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
       topic: "Mechanism",
     },
     {
@@ -796,7 +796,7 @@ export const reboxetine: Drug = {
     },
     {
       question: "Share one clinical pearl about Reboxetine that separates safe prescribers from unsafe ones.",
-      answer: "The phenotype logic: apathetic, anergic, fatigued depression → norepinephrine — reboxetine is the purest noradrenergic lever in the cabinet.",
+      answer: "The phenotype logic: apathetic, anergic, fatigued depression → norepinephrine; reboxetine is the purest noradrenergic lever in the cabinet.",
       topic: "Clinical Pearls",
     },
   ],
@@ -872,7 +872,7 @@ export const reboxetine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -917,7 +917,7 @@ export const reboxetine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Reboxetine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Reboxetine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -933,7 +933,7 @@ export const reboxetine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Reboxetine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Reboxetine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -976,7 +976,7 @@ export const reboxetine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Reboxetine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Reboxetine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1000,7 +1000,7 @@ export const reboxetine: Drug = {
     dosageForms: ["Tablets 4 mg"],
     dosingTips: ["Morning-weighted divided dosing.", "Ask men about urinary hesitation.", "HR/BP at review."],
     overdose: [
-      "Overdose with Reboxetine is managed supportively — no specific antidote.",
+      "Overdose with Reboxetine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Reboxetine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1040,15 +1040,15 @@ export const reboxetine: Drug = {
     potentialDisadvantages: ["Not US-approved.", "Noradrenergic adverse-effect set.", "Divided dosing."],
     primaryTargetSymptoms: ["Anergic, apathetic depression"],
     pearls: [
-      "The phenotype logic: apathetic, anergic, fatigued depression → norepinephrine — reboxetine is the purest noradrenergic lever in the cabinet.",
+      "The phenotype logic: apathetic, anergic, fatigued depression → norepinephrine; reboxetine is the purest noradrenergic lever in the cabinet.",
       "Atomoxetine's cousin: same NET selectivity, different indication (depression vs ADHD).",
-      "Not FDA-approved (failed US trials on dose-finding grounds) — a European resident.",
-      "The noradrenergic tax: sweating, insomnia, urinary hesitation, HR/BP — the profile to counsel.",
+      "Not FDA-approved (failed US trials on dose-finding grounds): a European resident.",
+      "The noradrenergic tax: sweating, insomnia, urinary hesitation, HR/BP; the profile to counsel.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

@@ -94,7 +94,7 @@ export function DrugPYQ({ drug }: DrugPYQProps) {
             <Badge variant="neural" size="sm">{pyqs.length} PYQs</Badge>
           </div>
           <p className="text-xs text-muted-foreground mb-3">
-            Concepts tested in previous exams — not the actual copyrighted questions.
+            Concepts tested in previous exams, not the actual copyrighted questions.
             Use these to identify high-yield topics for your preparation.
           </p>
           <div className="space-y-3">

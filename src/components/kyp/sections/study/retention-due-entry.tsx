@@ -35,7 +35,7 @@ export function RetentionDueEntry() {
         </h3>
         <p className="mt-1 max-w-3xl text-body-sm text-muted-foreground/80 leading-relaxed">
           {due} {due === 1 ? "question" : "questions"} scheduled for spaced
-          review — questions you missed before, brought back at growing
+          review: questions you missed before, brought back at growing
           intervals as you get them right.
         </p>
       </div>

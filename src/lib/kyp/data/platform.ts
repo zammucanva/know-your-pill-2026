@@ -27,13 +27,13 @@ export const emergencyContacts: EmergencyContact[] = [
   {
     label: "Emergency Services",
     number: "112",
-    description: "All India emergency number — medical, police, fire",
+    description: "All India emergency number: medical, police, fire",
     href: "tel:112",
   },
   {
     label: "Tele-MANAS",
     number: "14416",
-    description: "National mental health helpline — free, confidential, 24/7",
+    description: "National mental health helpline: free, confidential, 24/7",
     href: "tel:14416",
   },
   {
@@ -63,7 +63,7 @@ export const faqs: FAQItem[] = [
   {
     question: "Does KYP cover medications beyond psychiatry?",
     answer:
-      "The medication library focuses on psychotropic drugs — antidepressants, antipsychotics, mood stabilisers, anxiolytics, hypnotics, stimulants, and substance-use treatments — plus substance-use modules (alcohol, opioids, cannabis) and a major-depressive-disorder guide. Pain management, antibiotics, and other non-psychiatric drug classes are planned but not yet built.",
+      "The medication library focuses on psychotropic drugs (antidepressants, antipsychotics, mood stabilisers, anxiolytics, hypnotics, stimulants, and substance-use treatments) plus substance-use modules (alcohol, opioids, cannabis) and a major-depressive-disorder guide. Pain management, antibiotics, and other non-psychiatric drug classes are planned but not yet built.",
   },
   {
     question: "What is NeuroArcade?",
@@ -87,7 +87,7 @@ export const ssriTimeline: TimelineEvent[] = [
     time: "Hours 1–24",
     title: "Acute receptor binding",
     description:
-      "Sertraline blocks the serotonin transporter (SERT) within hours. Early side effects (nausea, headache) appear here — patients often feel worse before they feel better.",
+      "Sertraline blocks the serotonin transporter (SERT) within hours. Early side effects (nausea, headache) appear here: patients often feel worse before they feel better.",
     phase: "onset",
   },
   {
@@ -127,7 +127,7 @@ export const ssriTimeline: TimelineEvent[] = [
     time: "Discontinuation",
     title: "Tapered withdrawal",
     description:
-      "Sudden cessation can cause SSRI discontinuation syndrome (flu-like symptoms, dizziness, 'brain zaps'). Taper over 4+ weeks. Half-life matters — paroxetine is worst, fluoxetine is self-tapering.",
+      "Sudden cessation can cause SSRI discontinuation syndrome (flu-like symptoms, dizziness, 'brain zaps'). Taper over 4+ weeks. Half-life matters: paroxetine is worst, fluoxetine is self-tapering.",
     phase: "recovery",
   },
 ];

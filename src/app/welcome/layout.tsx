@@ -14,9 +14,9 @@ import type { Metadata } from "next";
  * block.
  */
 export const metadata: Metadata = {
-  title: "Get Started — Sign Up or Log In · Know Your Pill",
+  title: "Get Started: Sign Up or Log In · Know Your Pill",
   description:
-    "Create a KYP account or log back in, choose the role that fits you — from patient to psychiatrist — and verify your email to enable progress tracking across devices.",
+    "Create a KYP account or log back in, choose the role that fits you (from patient to psychiatrist) and verify your email to enable progress tracking across devices.",
 };
 
 export default function WelcomeLayout({

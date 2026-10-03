@@ -386,7 +386,7 @@ export default function QuizPage() {
                 <p className="mt-6 max-w-xl text-body-lg text-muted-foreground leading-relaxed">
                   {focusedDrug ? (
                     <>
-                      Focused practice on <span className="font-medium text-foreground">{focusedDrug.genericName}</span> — {filteredQuestions.length} questions from its medication course and Stahl&apos;s Prescriber-Guide entry. Each question comes with an explanation.
+                      Focused practice on <span className="font-medium text-foreground">{focusedDrug.genericName}</span>: {filteredQuestions.length} questions from its medication course and Stahl&apos;s Prescriber-Guide entry. Each question comes with an explanation.
                     </>
                   ) : (
                     <>
@@ -542,7 +542,7 @@ export default function QuizPage() {
                     Want to choose exactly what you test yourself on?
                   </p>
                   <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
-                    Build a custom test from any mix of medications — pick the
+                    Build a custom test from any mix of medications: pick the
                     topics, pick the length, review what you got wrong.
                   </p>
                   <Link
@@ -558,7 +558,7 @@ export default function QuizPage() {
               <Reveal delay={0.28}>
                 <p className="mt-8 text-xs text-muted-foreground/75 max-w-md">
                   Questions are drawn from the inline quizzes embedded in KYP
-                  medication and disease pages. No sign-up required — practice
+                  medication and disease pages. No sign-up required: practice
                   scores are kept on this device only, never uploaded.
                 </p>
               </Reveal>

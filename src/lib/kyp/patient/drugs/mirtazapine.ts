@@ -10,7 +10,7 @@ export const mirtazapinePatientGuide: PatientGuide = {
   slug: "mirtazapine",
 
   classInPlainWords:
-    "Mirtazapine is a NaSSA (noradrenergic and specific serotonergic antidepressant) — it raises mood chemicals by blocking certain 'receiver' points in the brain instead of blocking recycling. The result: a sedating, appetite-stimulating medicine with few sexual side effects.",
+    "Mirtazapine is a NaSSA (noradrenergic and specific serotonergic antidepressant). It raises mood chemicals by blocking certain 'receiver' points in the brain instead of blocking recycling. The result: a sedating, appetite-stimulating medicine with few sexual side effects.",
 
   whatIsThis: mirtazapine.patientMode.tagline,
 
@@ -51,7 +51,7 @@ export const mirtazapinePatientGuide: PatientGuide = {
   },
 
   whenNotice:
-    "Sleep and appetite often improve within days — usually before the mood benefit, which takes 2–4 weeks. If your sleep gets better in the first week but your mood hasn't lifted yet, that is normal — keep taking it.",
+    "Sleep and appetite often improve within days: usually before the mood benefit, which takes 2–4 weeks. If your sleep gets better in the first week but your mood hasn't lifted yet, that is normal. Keep taking it.",
 
   timelineShort: "Sleep and appetite in days; mood in 2–4 weeks",
 
@@ -60,11 +60,11 @@ export const mirtazapinePatientGuide: PatientGuide = {
   commonSideEffects: {
     intro: mirtazapine.patientMode.sideEffects,
     list: [
-      "Sleepiness — take it at night; it usually eases over 1–2 weeks",
-      "Increased appetite and weight gain — typically 2–5 kg in the first few months",
+      "Sleepiness: take it at night; it usually eases over 1–2 weeks",
+      "Increased appetite and weight gain: typically 2–5 kg in the first few months",
       "Dry mouth",
       "Constipation",
-      "Dizziness when standing up — stand up slowly",
+      "Dizziness when standing up: stand up slowly",
       "Vivid dreams or nightmares",
       "Swelling or fluid retention in the feet or ankles",
       "Raised cholesterol and blood fats on long-term use",
@@ -79,14 +79,14 @@ export const mirtazapinePatientGuide: PatientGuide = {
       {
         name: "Agranulocytosis (a serious drop in white blood cells)",
         whatItMeans:
-          "Very rarely (about 1 in 1,000 people), mirtazapine lowers the white blood cells that fight infection — usually in the first 1–3 months. Fever, sore throat, or mouth ulcers can be the first signs.",
+          "Very rarely (about 1 in 1,000 people), mirtazapine lowers the white blood cells that fight infection: usually in the first 1–3 months. Fever, sore throat, or mouth ulcers can be the first signs.",
         whatToDo:
-          "If you get a fever or sore throat, stop the medicine and see your doctor the same day for a blood test. It is reversible when caught early — delay is the danger.",
+          "If you get a fever or sore throat, stop the medicine and see your doctor the same day for a blood test. It is reversible when caught early: delay is the danger.",
       },
       {
         name: "Serotonin syndrome",
         whatItMeans:
-          "A rare but serious reaction caused by too much serotonin activity — possible when mirtazapine is combined with other antidepressants, tramadol, triptans, or St John's Wort.",
+          "A rare but serious reaction caused by too much serotonin activity: possible when mirtazapine is combined with other antidepressants, tramadol, triptans, or St John's Wort.",
         whatToDo:
           "Get emergency help straight away if you have a high fever with confusion, sweating, shaking, muscle twitching or stiffness, or a fast heartbeat.",
       },
@@ -102,7 +102,7 @@ export const mirtazapinePatientGuide: PatientGuide = {
         whatItMeans:
           "In the first month or two, antidepressants can occasionally make mood worse instead of better. This risk is highest in people under 25.",
         whatToDo:
-          "Contact your doctor immediately — do not wait — if you feel more agitated, irritable, anxious, or have any new thoughts of harming yourself.",
+          "Contact your doctor immediately (do not wait) if you feel more agitated, irritable, anxious, or have any new thoughts of harming yourself.",
       },
       {
         name: "Liver irritation (rare)",
@@ -115,33 +115,33 @@ export const mirtazapinePatientGuide: PatientGuide = {
   },
 
   tellYourDoctor: [
-    "All other medicines you take — especially other antidepressants, tramadol (pain), triptans (migraine), the antibiotic linezolid, sedatives, sleeping pills, and strong painkillers.",
+    "All other medicines you take, especially other antidepressants, tramadol (pain), triptans (migraine), the antibiotic linezolid, sedatives, sleeping pills, and strong painkillers.",
     "Any herbal products, especially St John's Wort.",
-    "If you are over 65 or take blood-pressure medicine — dizziness on standing matters more.",
+    "If you are over 65 or take blood-pressure medicine: dizziness on standing matters more.",
     "If you are pregnant, planning a pregnancy, or breastfeeding.",
     "If you have ever had a seizure or liver disease.",
-    "If your depression involves overeating or being overweight rather than weight loss — it changes the choice of medicine.",
+    "If your depression involves overeating or being overweight rather than weight loss: it changes the choice of medicine.",
   ],
 
   interactions: mirtazapine.patientMode.interactions,
 
   missedDose:
-    "Mirtazapine is taken at night. If you forget your night dose and remember the same night, take it. If it is already the next morning, skip the missed dose and take the next one at bedtime as normal — do not double up, and do not take it during the day (it will make you drowsy).",
+    "Mirtazapine is taken at night. If you forget your night dose and remember the same night, take it. If it is already the next morning, skip the missed dose and take the next one at bedtime as normal. Do not double up, and do not take it during the day (it will make you drowsy).",
 
   reviewFlags: [
-    "MEDICAL REVIEW REQUIRED — missedDose: the night-dose / next-morning-skip wording is editor-written guidance; canonical mirtazapine content contains no missed-dose instructions. Verify the wording against the approved source before treating it as verified.",
+    "MEDICAL REVIEW REQUIRED: missedDose: the night-dose / next-morning-skip wording is editor-written guidance; canonical mirtazapine content contains no missed-dose instructions. Verify the wording against the approved source before treating it as verified.",
   ],
 
   stopping:
-    "Do not stop mirtazapine suddenly without medical guidance — but the good news is its withdrawal is typically milder than with SSRIs (selective serotonin reuptake inhibitors) or SNRIs (serotonin and norepinephrine reuptake inhibitors). A taper over 2–4 weeks is usually enough. For a first episode of depression, treatment usually continues for 6–12 months after you feel better, because stopping earlier raises the risk of the depression coming back.",
+    "Do not stop mirtazapine suddenly without medical guidance, but the good news is its withdrawal is typically milder than with SSRIs (selective serotonin reuptake inhibitors) or SNRIs (serotonin and norepinephrine reuptake inhibitors). A taper over 2–4 weeks is usually enough. For a first episode of depression, treatment usually continues for 6–12 months after you feel better, because stopping earlier raises the risk of the depression coming back.",
 
   monitoring: mirtazapine.patientMode.monitoring,
 
   urgentHelp: {
     intro:
-      "Get urgent medical help — do not wait to see if it passes — if any of these happen:",
+      "Get urgent medical help (do not wait to see if it passes) if any of these happen:",
     signs: [
-      "A fever, sore throat, or mouth ulcers — stop the medicine and get a blood test the same day (possible agranulocytosis).",
+      "A fever, sore throat, or mouth ulcers: stop the medicine and get a blood test the same day (possible agranulocytosis).",
       "A high fever with confusion, sweating, shaking, muscle twitching or stiffness, and a fast heartbeat (possible serotonin syndrome).",
       "New or worsening thoughts of harming yourself, especially in the first month.",
       "A fall, fainting, or confusion.",
@@ -152,11 +152,11 @@ export const mirtazapinePatientGuide: PatientGuide = {
   },
 
   keyReminders: [
-    "Take it at night — it is sedating, and morning drowsiness usually eases after 1–2 weeks.",
+    "Take it at night: it is sedating, and morning drowsiness usually eases after 1–2 weeks.",
     "Sleep and appetite can improve within days; mood takes 2–4 weeks.",
     "Fever or sore throat means stop the medicine and get a blood test the same day.",
-    "Expect increased appetite and weight gain — helpful if depression caused weight loss, otherwise discuss with your doctor.",
+    "Expect increased appetite and weight gain: helpful if depression caused weight loss, otherwise discuss with your doctor.",
     "It is unlikely to cause the sexual side effects that SSRIs cause.",
-    "Avoid alcohol — it adds to the sedation and dizziness.",
+    "Avoid alcohol: it adds to the sedation and dizziness.",
   ],
 };

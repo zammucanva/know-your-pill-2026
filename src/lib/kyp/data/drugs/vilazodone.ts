@@ -23,14 +23,14 @@ export const vilazodone: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antidepressants", "Atypical Antidepressants", "Vilazodone"],
   /* ---- Hero / summary ---- */
-  tagline: "The SPARI — SSRI reuptake blockade plus 5-HT1A partial agonism in one molecule.",
+  tagline: "The SPARI. SSRI reuptake blockade plus 5-HT1A partial agonism in one molecule.",
   summary: "Vilazodone is the serotonin partial agonist and reuptake inhibitor (SPARI): SERT blockade comparable to an SSRI plus 5-HT1A partial agonism (buspirone's mechanism built in). The design aims at faster onset and lower sexual dysfunction than SSRIs; the clinical record shows solid antidepressant efficacy, a food-requirement quirk, and the class serotonergic warnings.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Vilazodone — from its molecular target (SERT (inhibition) + 5-HT1A (partial agonist)) to clinical effect.",
+    "Explain the mechanism of action of Vilazodone, from its molecular target (SERT (inhibition) + 5-HT1A (partial agonist)) to clinical effect.",
     "List the FDA-approved and off-label uses of Vilazodone.",
     "Predict the common and serious side effects of Vilazodone from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Vilazodone.",
@@ -38,15 +38,15 @@ export const vilazodone: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Vilazodone combines serotonin reuptake inhibition with 5-HT1A partial agonism — an SSRI with buspirone's receptor action built in.",
+    summary: "Vilazodone combines serotonin reuptake inhibition with 5-HT1A partial agonism: an SSRI with buspirone's receptor action built in.",
     molecularTarget: "SERT (inhibition) + 5-HT1A (partial agonist)",
     effect: "Monoaminergic modulation producing the antidepressant effect described.",
     steps: [
-      "Vilazodone combines serotonin reuptake inhibition with 5-HT1A partial agonism — an SSRI with buspirone's receptor action built in.",
+      "Vilazodone combines serotonin reuptake inhibition with 5-HT1A partial agonism: an SSRI with buspirone's receptor action built in.",
       "Downstream receptor adaptation over 2-6 weeks translates acute monoamine change into clinical response.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 25 hours (parent; 40+ with metabolite). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life About 25 hours (parent; 40+ with metabolite). See mechanism and prescriber sections.",
     halfLife: "About 25 hours (parent; 40+ with metabolite).",
     metabolism: "Hepatic CYP metabolism.",
     excretion: "Renal.",
@@ -109,7 +109,7 @@ export const vilazodone: Drug = {
         label: "produces",
       },
     ],
-    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation — the central paradox of antidepressant pharmacology.",
+    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation: the central paradox of antidepressant pharmacology.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Serotonin (5-HT)"],
@@ -169,7 +169,7 @@ export const vilazodone: Drug = {
       name: "Sexual dysfunction",
       frequency: "uncommon",
       severity: "moderate",
-      description: "Lower rates than SSRIs in trial analyses — the design goal.",
+      description: "Lower rates than SSRIs in trial analyses: the design goal.",
       management: "Counsel; compare.",
     },
   ],
@@ -219,7 +219,7 @@ export const vilazodone: Drug = {
     {
       drug: "Food requirement",
       severity: "major",
-      mechanism: "Absorption halves without food — a non-compliance trap.",
+      mechanism: "Absorption halves without food: a non-compliance trap.",
       action: "Counsel explicitly.",
     },
     {
@@ -237,26 +237,26 @@ export const vilazodone: Drug = {
   renalAdjustment: "No adjustment for mild-moderate impairment.",
   hepaticAdjustment: "No adjustment for mild-moderate; caution in severe.",
   /* ---- Education ---- */
-  patientExplanation: "Vilazodone is a modern antidepressant that combines the action of the SSRI family with a second serotonin action borrowed from an anti-anxiety medicine — designed to improve tolerability, including sexual side effects. It must be taken with a proper meal to be absorbed, and its most common effect is diarrhoea in the early weeks.",
+  patientExplanation: "Vilazodone is a modern antidepressant that combines the action of the SSRI family with a second serotonin action borrowed from an anti-anxiety medicine: designed to improve tolerability, including sexual side effects. It must be taken with a proper meal to be absorbed, and its most common effect is diarrhoea in the early weeks.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Vilazodone builds over weeks — do not judge it in the first days.",
+    "Benefit from Vilazodone builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The SPARI concept: SSRI + 5-HT1A partial agonism — buspirone's mechanism inside an SSRI skeleton, aimed at onset speed and sexual tolerability.",
-    "Food is pharmacology: absorption roughly doubles with food — 'take with a meal' is part of the prescription.",
+    "The SPARI concept: SSRI + 5-HT1A partial agonism; buspirone's mechanism inside an SSRI skeleton, aimed at onset speed and sexual tolerability.",
+    "Food is pharmacology: absorption roughly doubles with food: 'take with a meal' is part of the prescription.",
     "Diarrhoea is the GI signature (vs the SSRI-nausea pattern).",
-    "Sexual-sparing data are encouraging but the class warnings still apply — counsel honestly.",
+    "Sexual-sparing data are encouraging but the class warnings still apply. Counsel honestly.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Vilazodone: Vilazodone combines serotonin reuptake inhibition with 5-HT1A partial agonism — an SSRI with buspirone's receptor action built in.",
+        "Mechanism of Vilazodone: Vilazodone combines serotonin reuptake inhibition with 5-HT1A partial agonism; an SSRI with buspirone's receptor action built in.",
         "Uses of Vilazodone: Major depressive disorder",
-        "Mechanism: SPARI — SERT inhibition + 5-HT1A partial agonism.",
+        "Mechanism: SPARI. SERT inhibition + 5-HT1A partial agonism.",
         "MDD 10-40 mg once daily WITH FOOD (absorption doubles with food).",
       ],
       practical: [
@@ -264,14 +264,14 @@ export const vilazodone: Drug = {
         "Outline the monitoring plan: GI tolerance (week 1-2) (At start); Mood response (At 4 weeks)",
       ],
       longAnswer: [
-        "Vilazodone: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: SPARI — SERT inhibition + 5-HT1A partial agonism.",
+        "Vilazodone: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: SPARI. SERT inhibition + 5-HT1A partial agonism.",
         "MDD 10-40 mg once daily WITH FOOD (absorption doubles with food).",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: SPARI — SERT inhibition + 5-HT1A partial agonism.",
+        "Mechanism: SPARI. SERT inhibition + 5-HT1A partial agonism.",
         "MDD 10-40 mg once daily WITH FOOD (absorption doubles with food).",
         "Signature adverse effect: diarrhoea.",
         "Lower sexual dysfunction than SSRIs in analyses.",
@@ -282,7 +282,7 @@ export const vilazodone: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Vilazodone develops serotonin syndrome — next best step?",
+        "A patient on Vilazodone develops serotonin syndrome: next best step?",
         "When to choose Vilazodone over alternatives in its class.",
       ],
     },
@@ -295,16 +295,16 @@ export const vilazodone: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The SPARI concept: SSRI + 5-HT1A partial agonism — buspirone's mechanism inside an SSRI skeleton, aimed at onset speed and sexual tolerability.",
-        "Food is pharmacology: absorption roughly doubles with food — 'take with a meal' is part of the prescription.",
+        "The SPARI concept: SSRI + 5-HT1A partial agonism; buspirone's mechanism inside an SSRI skeleton, aimed at onset speed and sexual tolerability.",
+        "Food is pharmacology: absorption roughly doubles with food: 'take with a meal' is part of the prescription.",
         "Diarrhoea is the GI signature (vs the SSRI-nausea pattern).",
-        "Sexual-sparing data are encouraging but the class warnings still apply — counsel honestly.",
+        "Sexual-sparing data are encouraging but the class warnings still apply. Counsel honestly.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: SPARI — SERT inhibition + 5-HT1A partial agonism.",
+    "Mechanism: SPARI. SERT inhibition + 5-HT1A partial agonism.",
     "MDD 10-40 mg once daily WITH FOOD (absorption doubles with food).",
     "Signature adverse effect: diarrhoea.",
     "Lower sexual dysfunction than SSRIs in analyses.",
@@ -314,7 +314,7 @@ export const vilazodone: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — major depressive disorder",
+      title: "First presentation: major depressive disorder",
       presentation: "A patient presenting with major depressive disorder, started on Vilazodone.",
       history: "A adult patient presents with a major depressive disorder picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with major depressive disorder; physical examination and baseline investigations are unremarkable.",
@@ -323,7 +323,7 @@ export const vilazodone: Drug = {
       management: "Started at 10 mg once daily × 7 days with food, titrated to 20-40 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Vilazodone takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Vilazodone takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -332,7 +332,7 @@ export const vilazodone: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "SPARI comparison — choosing within the class",
+      title: "SPARI comparison: choosing within the class",
       primaryDrug: "Vilazodone",
       rows: [
         {
@@ -429,7 +429,7 @@ export const vilazodone: Drug = {
           comparisons: [
             {
               drug: "Trazodone",
-              value: "The antidepressant sleeping pill — insomnia at 50 mg, depression at 300 mg",
+              value: "The antidepressant sleeping pill: insomnia at 50 mg, depression at 300 mg",
             },
             {
               drug: "Vortioxetine",
@@ -437,7 +437,7 @@ export const vilazodone: Drug = {
             },
             {
               drug: "Nefazodone",
-              value: "The expert-only SARI — withdrawn for hepatotoxicity",
+              value: "The expert-only SARI: withdrawn for hepatotoxicity",
             },
             {
               drug: "Tianeptine",
@@ -446,7 +446,7 @@ export const vilazodone: Drug = {
           ],
         },
       ],
-      takeaway: "All atypical antidepressants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antidepressants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -455,7 +455,7 @@ export const vilazodone: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Vilazodone reaches peak plasma concentration and begins acting at its molecular target (SERT (inhibition) + 5-HT1A (partial agonist)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Vilazodone reaches peak plasma concentration and begins acting at its molecular target (SERT (inhibition) + 5-HT1A (partial agonist)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -491,7 +491,7 @@ export const vilazodone: Drug = {
   faqs: [
     {
       question: "How long does Vilazodone take to work?",
-      answer: "Response 2-4 weeks (1-week claimed edge is unproven).. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Response 2-4 weeks (1-week claimed edge is unproven).. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Vilazodone?",
@@ -499,11 +499,11 @@ export const vilazodone: Drug = {
     },
     {
       question: "Can I stop Vilazodone suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Vilazodone habit-forming?",
@@ -511,7 +511,7 @@ export const vilazodone: Drug = {
     },
     {
       question: "Can I take Vilazodone during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Vilazodone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Vilazodone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -645,7 +645,7 @@ export const vilazodone: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Vilazodone",
+      label: "Patient Guide. Vilazodone",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -653,13 +653,13 @@ export const vilazodone: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The SPARI — SSRI reuptake blockade plus 5-HT1A partial agonism in one molecule.",
-    summary: "Vilazodone is a prescription medicine used to treat major depressive disorder. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Vilazodone is a modern antidepressant that combines the action of the SSRI family with a second serotonin action borrowed from an anti-anxiety medicine — designed to improve tolerability, including sexual side effects. It must be taken with a proper meal to be absorbed, and its most common effect is diarrhoea in the early weeks.",
-    sideEffects: "The most common side effects are: diarrhoea, nausea, headache and insomnia, sexual dysfunction. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Serotonin syndrome and Angle-closure glaucoma. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: gi tolerance (week 1-2) (at start); mood response (at 4 weeks). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The SPARI. SSRI reuptake blockade plus 5-HT1A partial agonism in one molecule.",
+    summary: "Vilazodone is a prescription medicine used to treat major depressive disorder. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Vilazodone is a modern antidepressant that combines the action of the SSRI family with a second serotonin action borrowed from an anti-anxiety medicine: designed to improve tolerability, including sexual side effects. It must be taken with a proper meal to be absorbed, and its most common effect is diarrhoea in the early weeks.",
+    sideEffects: "The most common side effects are: diarrhoea, nausea, headache and insomnia, sexual dysfunction. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Serotonin syndrome and Angle-closure glaucoma. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: gi tolerance (week 1-2) (at start); mood response (at 4 weeks). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: MAOIs, Food requirement, Other serotonergics and NSAIDs. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: MAOIs, Food requirement, Other serotonergics and NSAIDs. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -681,7 +681,7 @@ export const vilazodone: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -721,7 +721,7 @@ export const vilazodone: Drug = {
         name: "Trazodone",
         slug: "trazodone",
         relationship: "Same class (SARI)",
-        distinguishing: "The antidepressant sleeping pill — insomnia at 50 mg, depression at 300 mg",
+        distinguishing: "The antidepressant sleeping pill: insomnia at 50 mg, depression at 300 mg",
       },
       {
         name: "Vortioxetine",
@@ -733,7 +733,7 @@ export const vilazodone: Drug = {
         name: "Nefazodone",
         slug: "nefazodone",
         relationship: "Same class (SARI)",
-        distinguishing: "The expert-only SARI — withdrawn for hepatotoxicity",
+        distinguishing: "The expert-only SARI: withdrawn for hepatotoxicity",
       },
       {
         name: "Tianeptine",
@@ -887,7 +887,7 @@ export const vilazodone: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Vilazodone in two sentences.",
-      answer: "Vilazodone combines serotonin reuptake inhibition with 5-HT1A partial agonism — an SSRI with buspirone's receptor action built in. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
+      answer: "Vilazodone combines serotonin reuptake inhibition with 5-HT1A partial agonism: an SSRI with buspirone's receptor action built in. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
       topic: "Mechanism",
     },
     {
@@ -907,7 +907,7 @@ export const vilazodone: Drug = {
     },
     {
       question: "Share one clinical pearl about Vilazodone that separates safe prescribers from unsafe ones.",
-      answer: "The SPARI concept: SSRI + 5-HT1A partial agonism — buspirone's mechanism inside an SSRI skeleton, aimed at onset speed and sexual tolerability.",
+      answer: "The SPARI concept: SSRI + 5-HT1A partial agonism; buspirone's mechanism inside an SSRI skeleton, aimed at onset speed and sexual tolerability.",
       topic: "Clinical Pearls",
     },
   ],
@@ -983,7 +983,7 @@ export const vilazodone: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1028,7 +1028,7 @@ export const vilazodone: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Vilazodone works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Vilazodone works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1044,7 +1044,7 @@ export const vilazodone: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Vilazodone safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Vilazodone safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1089,7 +1089,7 @@ export const vilazodone: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Vilazodone follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Vilazodone follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1112,12 +1112,12 @@ export const vilazodone: Drug = {
     ],
     dosageForms: ["Tablets 10, 20, 40 mg"],
     dosingTips: [
-      "With a real meal — not a snack.",
+      "With a real meal, not a snack.",
       "Weekly 10 mg titration steps.",
       "Frame the sexual-tolerability data honestly.",
     ],
     overdose: [
-      "Overdose with Vilazodone is managed supportively — no specific antidote.",
+      "Overdose with Vilazodone is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Vilazodone is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1154,15 +1154,15 @@ export const vilazodone: Drug = {
     potentialDisadvantages: ["Food requirement.", "Diarrhoea gate.", "No proven onset advantage over SSRIs.", "Cost."],
     primaryTargetSymptoms: ["Major depression"],
     pearls: [
-      "The SPARI concept: SSRI + 5-HT1A partial agonism — buspirone's mechanism inside an SSRI skeleton, aimed at onset speed and sexual tolerability.",
-      "Food is pharmacology: absorption roughly doubles with food — 'take with a meal' is part of the prescription.",
+      "The SPARI concept: SSRI + 5-HT1A partial agonism; buspirone's mechanism inside an SSRI skeleton, aimed at onset speed and sexual tolerability.",
+      "Food is pharmacology: absorption roughly doubles with food: 'take with a meal' is part of the prescription.",
       "Diarrhoea is the GI signature (vs the SSRI-nausea pattern).",
-      "Sexual-sparing data are encouraging but the class warnings still apply — counsel honestly.",
+      "Sexual-sparing data are encouraging but the class warnings still apply. Counsel honestly.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

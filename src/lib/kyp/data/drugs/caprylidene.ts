@@ -23,14 +23,14 @@ export const caprylidene: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Cognitive Enhancers", "Medical Foods", "Caprylidene"],
   /* ---- Hero / summary ---- */
-  tagline: "The medical-food oddity — ketogenic metabolism support for Alzheimer's.",
-  summary: "Caprylidene is a medical food (a regulated nutritional product, not a drug) for the metabolic imbalances of Alzheimer's: caprylic triglycerides converted by the liver into ketone bodies — an alternative brain fuel when glucose metabolism fails. Modest evidence, gentle intent, and a place only in Stahl's specialist appendix.",
+  tagline: "The medical-food oddity: ketogenic metabolism support for Alzheimer's.",
+  summary: "Caprylidene is a medical food (a regulated nutritional product, not a drug) for the metabolic imbalances of Alzheimer's: caprylic triglycerides converted by the liver into ketone bodies. An alternative brain fuel when glucose metabolism fails. Modest evidence, gentle intent, and a place only in Stahl's specialist appendix.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Caprylidene — from its molecular target (Caprylic triglycerides → hepatic ketogenesis (alternative brain fuel)) to clinical effect.",
+    "Explain the mechanism of action of Caprylidene, from its molecular target (Caprylic triglycerides → hepatic ketogenesis (alternative brain fuel)) to clinical effect.",
     "List the FDA-approved and off-label uses of Caprylidene.",
     "Predict the common and serious side effects of Caprylidene from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Caprylidene.",
@@ -38,15 +38,15 @@ export const caprylidene: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Caprylidene supplies medium-chain triglycerides that the liver converts to ketones — bypassing the brain's failing glucose metabolism in Alzheimer's.",
+    summary: "Caprylidene supplies medium-chain triglycerides that the liver converts to ketones: bypassing the brain's failing glucose metabolism in Alzheimer's.",
     molecularTarget: "Caprylic triglycerides → hepatic ketogenesis (alternative brain fuel)",
     effect: "Modulation of the described target with the agent's clinical effect.",
     steps: [
-      "Caprylidene supplies medium-chain triglycerides that the liver converts to ketones — bypassing the brain's failing glucose metabolism in Alzheimer's.",
+      "Caprylidene supplies medium-chain triglycerides that the liver converts to ketones: bypassing the brain's failing glucose metabolism in Alzheimer's.",
       "The target engagement produces the clinical effect described.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life Absorbed as MCTs; ketosis measurable within hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life Absorbed as MCTs; ketosis measurable within hours. See mechanism and prescriber sections.",
     halfLife: "Absorbed as MCTs; ketosis measurable within hours.",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -109,7 +109,7 @@ export const caprylidene: Drug = {
         label: "produces",
       },
     ],
-    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation — the central paradox of antidepressant pharmacology.",
+    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation: the central paradox of antidepressant pharmacology.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -125,7 +125,7 @@ export const caprylidene: Drug = {
     {
       name: "Metabolic imbalances associated with mild-to-moderate Alzheimer's (dietary management)",
       status: "guideline",
-      description: "As a medical food adjunct — modest evidence, glucose-metabolism rationale.",
+      description: "As a medical food adjunct: modest evidence, glucose-metabolism rationale.",
     },
   ],
   contraindications: [
@@ -142,7 +142,7 @@ export const caprylidene: Drug = {
       name: "GI upset, diarrhoea, nausea",
       frequency: "common",
       severity: "mild",
-      description: "MCT digestive effects — the commonest problems.",
+      description: "MCT digestive effects: the commonest problems.",
       management: "Take gradually with food.",
     },
     {
@@ -183,28 +183,28 @@ export const caprylidene: Drug = {
     lactation: "Standard caution.",
   },
   renalAdjustment: "No specific adjustment.",
-  hepaticAdjustment: "Hepatic conversion to ketones — caution in significant liver disease.",
+  hepaticAdjustment: "Hepatic conversion to ketones: caution in significant liver disease.",
   /* ---- Education ---- */
-  patientExplanation: "Caprylidene is a prescription-only nutritional product (not a medicine) for Alzheimer's: it provides a type of fat the liver converts into ketones — an alternative fuel for a brain that struggles to use glucose. It is taken daily with food and is not intended to replace standard dementia medicines.",
+  patientExplanation: "Caprylidene is a prescription-only nutritional product (not a medicine) for Alzheimer's: it provides a type of fat the liver converts into ketones; an alternative fuel for a brain that struggles to use glucose. It is taken daily with food and is not intended to replace standard dementia medicines.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Caprylidene builds over weeks — do not judge it in the first days.",
+    "Benefit from Caprylidene builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The metabolic story: the Alzheimer's brain under-uses glucose — ketones are the alternative fuel; caprylidene is the packaged ketogenic intent.",
-    "Medical food ≠ drug: regulated as nutrition, evidenced as nutrition — modest claims, modest trials.",
+    "The metabolic story: the Alzheimer's brain under-uses glucose; ketones are the alternative fuel; caprylidene is the packaged ketogenic intent.",
+    "Medical food ≠ drug: regulated as nutrition, evidenced as nutrition; modest claims, modest trials.",
     "Ketoacidosis caution in insulin-dependent diabetics is the one serious rule.",
     "A book-appendix drug: completeness, not advocacy.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Caprylidene: Caprylidene supplies medium-chain triglycerides that the liver converts to ketones — bypassing the brain's failing glucose metabolism in Alzheimer's.",
+        "Mechanism of Caprylidene: Caprylidene supplies medium-chain triglycerides that the liver converts to ketones; bypassing the brain's failing glucose metabolism in Alzheimer's.",
         "Uses of Caprylidene: Metabolic imbalances associated with mild-to-moderate Alzheimer's (dietary management)",
-        "Medical food — caprylic triglycerides → hepatic ketogenesis.",
+        "Medical food: caprylic triglycerides → hepatic ketogenesis.",
         "Rationale: alternative brain fuel when glucose metabolism fails in Alzheimer's.",
       ],
       practical: [
@@ -212,14 +212,14 @@ export const caprylidene: Drug = {
         "Outline the monitoring plan: GI tolerance (First weeks)",
       ],
       longAnswer: [
-        "Caprylidene: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Medical food — caprylic triglycerides → hepatic ketogenesis.",
+        "Caprylidene: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Medical food: caprylic triglycerides → hepatic ketogenesis.",
         "Rationale: alternative brain fuel when glucose metabolism fails in Alzheimer's.",
       ],
     },
     neetPg: {
       highYield: [
-        "Medical food — caprylic triglycerides → hepatic ketogenesis.",
+        "Medical food: caprylic triglycerides → hepatic ketogenesis.",
         "Rationale: alternative brain fuel when glucose metabolism fails in Alzheimer's.",
         "Modest evidence; adjunct-only intent.",
         "Avoid in insulin-dependent diabetes (ketoacidosis).",
@@ -233,7 +233,7 @@ export const caprylidene: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Caprylidene develops ketoacidosis risk (insulin-dependent diabetics) — next best step?",
+        "A patient on Caprylidene develops ketoacidosis risk (insulin-dependent diabetics): next best step?",
         "When to choose Caprylidene over alternatives in its class.",
       ],
     },
@@ -246,8 +246,8 @@ export const caprylidene: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The metabolic story: the Alzheimer's brain under-uses glucose — ketones are the alternative fuel; caprylidene is the packaged ketogenic intent.",
-        "Medical food ≠ drug: regulated as nutrition, evidenced as nutrition — modest claims, modest trials.",
+        "The metabolic story: the Alzheimer's brain under-uses glucose; ketones are the alternative fuel; caprylidene is the packaged ketogenic intent.",
+        "Medical food ≠ drug: regulated as nutrition, evidenced as nutrition; modest claims, modest trials.",
         "Ketoacidosis caution in insulin-dependent diabetics is the one serious rule.",
         "A book-appendix drug: completeness, not advocacy.",
       ],
@@ -255,7 +255,7 @@ export const caprylidene: Drug = {
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Medical food — caprylic triglycerides → hepatic ketogenesis.",
+    "Medical food: caprylic triglycerides → hepatic ketogenesis.",
     "Rationale: alternative brain fuel when glucose metabolism fails in Alzheimer's.",
     "Modest evidence; adjunct-only intent.",
     "Avoid in insulin-dependent diabetes (ketoacidosis).",
@@ -264,7 +264,7 @@ export const caprylidene: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — metabolic imbalances associated with mild-to-moderate alzheimer's (dietary management)",
+      title: "First presentation: metabolic imbalances associated with mild-to-moderate alzheimer's (dietary management)",
       presentation: "A patient presenting with metabolic imbalances associated with mild-to-moderate alzheimer's (dietary management), started on Caprylidene.",
       history: "A adult patient presents with a metabolic imbalances associated with mild-to-moderate alzheimer's (dietary management) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with metabolic imbalances associated with mild-to-moderate alzheimer's (dietary management); physical examination and baseline investigations are unremarkable.",
@@ -273,7 +273,7 @@ export const caprylidene: Drug = {
       management: "Started at One 40 g scoop daily with food, titrated to 40 g/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Caprylidene takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Caprylidene takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -282,7 +282,7 @@ export const caprylidene: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Medical Food vs related agents — orientation table",
+      title: "Medical Food vs related agents: orientation table",
       primaryDrug: "Caprylidene",
       rows: [
         {
@@ -291,7 +291,7 @@ export const caprylidene: Drug = {
           comparisons: [
             {
               drug: "L-Methylfolate",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },
@@ -317,7 +317,7 @@ export const caprylidene: Drug = {
         },
         {
           attribute: "Clinical niche",
-          primaryValue: "The ketogenic medical food — metabolic support intent",
+          primaryValue: "The ketogenic medical food: metabolic support intent",
           comparisons: [
             {
               drug: "L-Methylfolate",
@@ -326,7 +326,7 @@ export const caprylidene: Drug = {
           ],
         },
       ],
-      takeaway: "Caprylidene is compared here with related agents for orientation. Full comparison data lives in each drug's own guide — follow the links for the complete picture.",
+      takeaway: "Caprylidene is compared here with related agents for orientation. Full comparison data lives in each drug's own guide: follow the links for the complete picture.",
     },
   ],
   /* ---- Timeline ---- */
@@ -335,7 +335,7 @@ export const caprylidene: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Caprylidene reaches peak plasma concentration and begins acting at its molecular target (Caprylic triglycerides → hepatic ketogenesis (alternative brain fuel)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Caprylidene reaches peak plasma concentration and begins acting at its molecular target (Caprylic triglycerides → hepatic ketogenesis (alternative brain fuel)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -371,7 +371,7 @@ export const caprylidene: Drug = {
   faqs: [
     {
       question: "How long does Caprylidene take to work?",
-      answer: "Ketone availability within hours; clinical claims over months.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Ketone availability within hours; clinical claims over months.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Caprylidene?",
@@ -379,11 +379,11 @@ export const caprylidene: Drug = {
     },
     {
       question: "Can I stop Caprylidene suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Caprylidene habit-forming?",
@@ -391,7 +391,7 @@ export const caprylidene: Drug = {
     },
     {
       question: "Can I take Caprylidene during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Caprylidene may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Caprylidene may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -495,7 +495,7 @@ export const caprylidene: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Caprylidene",
+      label: "Patient Guide. Caprylidene",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -503,13 +503,13 @@ export const caprylidene: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The medical-food oddity — ketogenic metabolism support for Alzheimer's.",
-    summary: "Caprylidene is a prescription medicine used to treat metabolic imbalances associated with mild-to-moderate alzheimer's (dietary management). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Caprylidene is a prescription-only nutritional product (not a medicine) for Alzheimer's: it provides a type of fat the liver converts into ketones — an alternative fuel for a brain that struggles to use glucose. It is taken daily with food and is not intended to replace standard dementia medicines.",
-    sideEffects: "The most common side effects are: gi upset, diarrhoea, nausea, flatulence. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Ketoacidosis risk (insulin-dependent diabetics). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: gi tolerance (first weeks). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The medical-food oddity: ketogenic metabolism support for Alzheimer's.",
+    summary: "Caprylidene is a prescription medicine used to treat metabolic imbalances associated with mild-to-moderate alzheimer's (dietary management). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Caprylidene is a prescription-only nutritional product (not a medicine) for Alzheimer's: it provides a type of fat the liver converts into ketones; an alternative fuel for a brain that struggles to use glucose. It is taken daily with food and is not intended to replace standard dementia medicines.",
+    sideEffects: "The most common side effects are: gi upset, diarrhoea, nausea, flatulence. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Ketoacidosis risk (insulin-dependent diabetics). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: gi tolerance (first weeks). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Insulin-dependent diabetes regimens. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Insulin-dependent diabetes regimens. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -531,7 +531,7 @@ export const caprylidene: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -565,7 +565,7 @@ export const caprylidene: Drug = {
         name: "Caprylidene",
         slug: "caprylidene",
         relationship: "This guide",
-        distinguishing: "The ketogenic medical food — metabolic support intent",
+        distinguishing: "The ketogenic medical food: metabolic support intent",
       },
     ],
   },
@@ -713,7 +713,7 @@ export const caprylidene: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Caprylidene in two sentences.",
-      answer: "Caprylidene supplies medium-chain triglycerides that the liver converts to ketones — bypassing the brain's failing glucose metabolism in Alzheimer's. Net effect: Modulation of the described target with the agent's clinical effect.",
+      answer: "Caprylidene supplies medium-chain triglycerides that the liver converts to ketones: bypassing the brain's failing glucose metabolism in Alzheimer's. Net effect: Modulation of the described target with the agent's clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -733,7 +733,7 @@ export const caprylidene: Drug = {
     },
     {
       question: "Share one clinical pearl about Caprylidene that separates safe prescribers from unsafe ones.",
-      answer: "The metabolic story: the Alzheimer's brain under-uses glucose — ketones are the alternative fuel; caprylidene is the packaged ketogenic intent.",
+      answer: "The metabolic story: the Alzheimer's brain under-uses glucose; ketones are the alternative fuel; caprylidene is the packaged ketogenic intent.",
       topic: "Clinical Pearls",
     },
   ],
@@ -809,7 +809,7 @@ export const caprylidene: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -854,7 +854,7 @@ export const caprylidene: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Caprylidene works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Caprylidene works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -870,7 +870,7 @@ export const caprylidene: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Caprylidene safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Caprylidene safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -915,7 +915,7 @@ export const caprylidene: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Caprylidene follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Caprylidene follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -942,7 +942,7 @@ export const caprylidene: Drug = {
       "Keep in perspective: adjunct at most.",
     ],
     overdose: [
-      "Overdose with Caprylidene is managed supportively — no specific antidote.",
+      "Overdose with Caprylidene is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Caprylidene is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -981,8 +981,8 @@ export const caprylidene: Drug = {
       "Brain metabolism support in mild-moderate Alzheimer's",
     ],
     pearls: [
-      "The metabolic story: the Alzheimer's brain under-uses glucose — ketones are the alternative fuel; caprylidene is the packaged ketogenic intent.",
-      "Medical food ≠ drug: regulated as nutrition, evidenced as nutrition — modest claims, modest trials.",
+      "The metabolic story: the Alzheimer's brain under-uses glucose; ketones are the alternative fuel; caprylidene is the packaged ketogenic intent.",
+      "Medical food ≠ drug: regulated as nutrition, evidenced as nutrition; modest claims, modest trials.",
       "Ketoacidosis caution in insulin-dependent diabetics is the one serious rule.",
       "A book-appendix drug: completeness, not advocacy.",
     ],
@@ -990,6 +990,6 @@ export const caprylidene: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

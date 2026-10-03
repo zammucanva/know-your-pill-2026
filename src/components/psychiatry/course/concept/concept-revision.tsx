@@ -249,7 +249,7 @@ export function ConceptDecisionPathSection({ course }: { course: PsychiatryCours
           lede={course.decisionPath.title}
         />
         <p className="mb-4 text-caption leading-relaxed text-muted-foreground">
-          An educational decision tree — never a substitute for professional judgment. Work through
+          An educational decision tree, never a substitute for professional judgment. Work through
           one question at a time.
         </p>
         <ConceptDecisionWizard path={course.decisionPath} />
@@ -264,7 +264,7 @@ export function ConceptCommonMistakes({ course }: { course: PsychiatryCourse }) 
   return (
     <Section spacing="tight" id="common-mistakes" className="bg-muted/20">
       <Container width="narrow">
-        <ConceptSectionHeader title="Common Mistakes" lede="What goes wrong — and the correction." />
+        <ConceptSectionHeader title="Common Mistakes" lede="What goes wrong, and the correction." />
         <ConceptAccordion
           label={`${course.title} common mistakes`}
           entries={course.commonMistakes.map((mistake: CommonMistake, i) => ({
@@ -390,7 +390,7 @@ export function ConceptExamLens({ course }: { course: PsychiatryCourse }) {
       <Container width="narrow">
         <ConceptSectionHeader
           title="Exam Content"
-          lede="The exam lens — by examination. KYP Practice Questions unless a verified previous-year concept is named."
+          lede="The exam lens: by examination. KYP Practice Questions unless a verified previous-year concept is named."
         />
         <div
           role="tablist"
@@ -606,7 +606,7 @@ export function ConceptHighYield({ course }: { course: PsychiatryCourse }) {
         {/* The print revision sheet: the full unmodified paragraphs,
             rendered in the compact print layout (1–2 A4 pages). */}
         <div data-revision-full className="sr-only">
-          <h4>{course.title} — one-page revision</h4>
+          <h4>{course.title}: one-page revision</h4>
           {course.highYieldSummary.map((para, i) => (
             <p key={i}>{para}</p>
           ))}

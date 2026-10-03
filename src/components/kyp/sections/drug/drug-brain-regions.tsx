@@ -28,7 +28,7 @@ export function brainRegionsIntro(drug: Drug): string {
     drug.brainRegionIds.includes("raphe-nuclei") &&
     drug.neurotransmitters.some((nt) => /serotonin/i.test(nt));
   return serotonergic
-    ? `${drug.genericName}'s effects are not localised to one region — serotonin neurons project from the raphe nuclei throughout the brain. The regions below are those most clinically relevant to ${drug.genericName}'s effects.`
+    ? `${drug.genericName}'s effects are not localised to one region: serotonin neurons project from the raphe nuclei throughout the brain. The regions below are those most clinically relevant to ${drug.genericName}'s effects.`
     : `${drug.genericName}'s effects are not localised to one region. The regions below are those most clinically relevant to ${drug.genericName}'s effects.`;
 }
 

@@ -23,14 +23,14 @@ export const nefazodone: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antidepressants", "Atypical Antidepressants", "Nefazodone"],
   /* ---- Hero / summary ---- */
-  tagline: "The hepatotoxic SARI — 5-HT2A blockade for anxiety-insomnia depression, withdrawn for the liver.",
-  summary: "Nefazodone is a phenylpiperazine antidepressant (5-HT2A antagonism + weak SERT/NET inhibition) valued for anxiolysis and sleep-friendly depression treatment — but withdrawn in most countries after rare fulminant hepatic failure. Stahl's expert-only appendix: a drug whose receptor elegance is remembered alongside its liver warning.",
+  tagline: "The hepatotoxic SARI: 5-HT2A blockade for anxiety-insomnia depression, withdrawn for the liver.",
+  summary: "Nefazodone is a phenylpiperazine antidepressant (5-HT2A antagonism + weak SERT/NET inhibition) valued for anxiolysis and sleep-friendly depression treatment, but withdrawn in most countries after rare fulminant hepatic failure. Stahl's expert-only appendix: a drug whose receptor elegance is remembered alongside its liver warning.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Nefazodone — from its molecular target (5-HT2A (potent antagonist) + SERT/NET (weak inhibition)) to clinical effect.",
+    "Explain the mechanism of action of Nefazodone, from its molecular target (5-HT2A (potent antagonist) + SERT/NET (weak inhibition)) to clinical effect.",
     "List the FDA-approved and off-label uses of Nefazodone.",
     "Predict the common and serious side effects of Nefazodone from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Nefazodone.",
@@ -38,15 +38,15 @@ export const nefazodone: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Nefazodone blocks 5-HT2A receptors potently with weak monoamine reuptake inhibition — an anxiolytic, sleep-preserving antidepressant profile.",
+    summary: "Nefazodone blocks 5-HT2A receptors potently with weak monoamine reuptake inhibition: an anxiolytic, sleep-preserving antidepressant profile.",
     molecularTarget: "5-HT2A (potent antagonist) + SERT/NET (weak inhibition)",
     effect: "Monoaminergic modulation producing the antidepressant effect described.",
     steps: [
-      "Nefazodone blocks 5-HT2A receptors potently with weak monoamine reuptake inhibition — an anxiolytic, sleep-preserving antidepressant profile.",
+      "Nefazodone blocks 5-HT2A receptors potently with weak monoamine reuptake inhibition: an anxiolytic, sleep-preserving antidepressant profile.",
       "Downstream receptor adaptation over 2-6 weeks translates acute monoamine change into clinical response.",
       "Onset and duration follow the half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 2-5 hours (short; divided dosing). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 2-5 hours (short; divided dosing). See mechanism and prescriber sections.",
     halfLife: "2-5 hours (short; divided dosing).",
     metabolism: "Hepatic CYP metabolism.",
     excretion: "Renal.",
@@ -109,7 +109,7 @@ export const nefazodone: Drug = {
         label: "produces",
       },
     ],
-    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation — the central paradox of antidepressant pharmacology.",
+    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation: the central paradox of antidepressant pharmacology.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -142,7 +142,7 @@ export const nefazodone: Drug = {
     {
       name: "Alprazolam and triazolam",
       severity: "absolute",
-      rationale: "3A4 inhibition triples their levels — the classic interaction.",
+      rationale: "3A4 inhibition triples their levels: the classic interaction.",
     },
     {
       name: "MAOIs",
@@ -185,7 +185,7 @@ export const nefazodone: Drug = {
       name: "Hepatotoxicity (fulminant hepatic failure)",
       frequency: "rare",
       severity: "life-threatening",
-      description: "The withdrawal cause: rare irreversible liver failure — the label-defining catastrophe.",
+      description: "The withdrawal cause: rare irreversible liver failure; the label-defining catastrophe.",
       management: "Avoid where alternatives exist; LFT vigilance in unavoidable use; stop on any hepatitis signs.",
     },
     {
@@ -215,7 +215,7 @@ export const nefazodone: Drug = {
     {
       drug: "Alprazolam and triazolam",
       severity: "contraindicated",
-      mechanism: "3A4 inhibition triples their levels — the classic interaction.",
+      mechanism: "3A4 inhibition triples their levels: the classic interaction.",
       action: "Avoid.",
     },
     {
@@ -237,44 +237,44 @@ export const nefazodone: Drug = {
     lactation: "Historic caution.",
   },
   renalAdjustment: "Standard caution.",
-  hepaticAdjustment: "Contraindicated in liver disease — the defining contraindication.",
+  hepaticAdjustment: "Contraindicated in liver disease: the defining contraindication.",
   /* ---- Education ---- */
   patientExplanation: "Nefazodone is a withdrawn antidepressant remembered for two things: a gentling profile valued in anxious depression, and rare catastrophic liver injury that removed it from most markets. It appears here for completeness and pharmacology teaching.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Nefazodone builds over weeks — do not judge it in the first days.",
+    "Benefit from Nefazodone builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
     "The pharmacology was loved: 5-HT2A blockade without the sedative hangover of trazodone or the sexual blunting of SSRIs.",
-    "The liver ended the story: rare fulminant failure (1/250,000-1/300,000 treatment-years) — withdrawn in most markets.",
-    "The teaching point: post-marketing pharmacovigilance discipline — receptor elegance does not excuse organ toxicity.",
-    "Historic combo fame: nefazodone + CBST in the CBASP trial — the psychotherapy-pharmacology study of its era.",
+    "The liver ended the story: rare fulminant failure (1/250,000-1/300,000 treatment-years); withdrawn in most markets.",
+    "The teaching point: post-marketing pharmacovigilance discipline; receptor elegance does not excuse organ toxicity.",
+    "Historic combo fame: nefazodone + CBST in the CBASP trial; the psychotherapy-pharmacology study of its era.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Nefazodone: Nefazodone blocks 5-HT2A receptors potently with weak monoamine reuptake inhibition — an anxiolytic, sleep-preserving antidepressant profile.",
+        "Mechanism of Nefazodone: Nefazodone blocks 5-HT2A receptors potently with weak monoamine reuptake inhibition; an anxiolytic, sleep-preserving antidepressant profile.",
         "Uses of Nefazodone: Major depressive disorder (historic); Depression with anxiety and insomnia (historic)",
-        "Mechanism: 5-HT2A antagonist + weak SERT/NET inhibition — the SARI profile.",
-        "Withdrawn for rare FULMINANT HEPATIC FAILURE — the drug's defining fact.",
+        "Mechanism: 5-HT2A antagonist + weak SERT/NET inhibition; the SARI profile.",
+        "Withdrawn for rare FULMINANT HEPATIC FAILURE: the drug's defining fact.",
       ],
       practical: [
         "Prescribe Nefazodone for major depressive disorder (historic) with dose, timing, and duration.",
         "Outline the monitoring plan: LFTs (historic) (Baseline and periodic)",
       ],
       longAnswer: [
-        "Nefazodone: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: 5-HT2A antagonist + weak SERT/NET inhibition — the SARI profile.",
-        "Withdrawn for rare FULMINANT HEPATIC FAILURE — the drug's defining fact.",
+        "Nefazodone: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: 5-HT2A antagonist + weak SERT/NET inhibition; the SARI profile.",
+        "Withdrawn for rare FULMINANT HEPATIC FAILURE: the drug's defining fact.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: 5-HT2A antagonist + weak SERT/NET inhibition — the SARI profile.",
-        "Withdrawn for rare FULMINANT HEPATIC FAILURE — the drug's defining fact.",
+        "Mechanism: 5-HT2A antagonist + weak SERT/NET inhibition; the SARI profile.",
+        "Withdrawn for rare FULMINANT HEPATIC FAILURE: the drug's defining fact.",
         "Valued for anxious, insomniac depression.",
         "Strong 3A4 inhibition: triazolobenzodiazepine and other interactions.",
         "The expert-only appendix of Stahl's guide.",
@@ -287,7 +287,7 @@ export const nefazodone: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Nefazodone develops hepatotoxicity (fulminant hepatic failure) — next best step?",
+        "A patient on Nefazodone develops hepatotoxicity (fulminant hepatic failure): next best step?",
         "When to choose Nefazodone over alternatives in its class.",
       ],
     },
@@ -301,16 +301,16 @@ export const nefazodone: Drug = {
     psychiatryResidency: {
       advancedPearls: [
         "The pharmacology was loved: 5-HT2A blockade without the sedative hangover of trazodone or the sexual blunting of SSRIs.",
-        "The liver ended the story: rare fulminant failure (1/250,000-1/300,000 treatment-years) — withdrawn in most markets.",
-        "The teaching point: post-marketing pharmacovigilance discipline — receptor elegance does not excuse organ toxicity.",
-        "Historic combo fame: nefazodone + CBST in the CBASP trial — the psychotherapy-pharmacology study of its era.",
+        "The liver ended the story: rare fulminant failure (1/250,000-1/300,000 treatment-years); withdrawn in most markets.",
+        "The teaching point: post-marketing pharmacovigilance discipline; receptor elegance does not excuse organ toxicity.",
+        "Historic combo fame: nefazodone + CBST in the CBASP trial; the psychotherapy-pharmacology study of its era.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: 5-HT2A antagonist + weak SERT/NET inhibition — the SARI profile.",
-    "Withdrawn for rare FULMINANT HEPATIC FAILURE — the drug's defining fact.",
+    "Mechanism: 5-HT2A antagonist + weak SERT/NET inhibition; the SARI profile.",
+    "Withdrawn for rare FULMINANT HEPATIC FAILURE: the drug's defining fact.",
     "Valued for anxious, insomniac depression.",
     "Strong 3A4 inhibition: triazolobenzodiazepine and other interactions.",
     "The expert-only appendix of Stahl's guide.",
@@ -318,7 +318,7 @@ export const nefazodone: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — major depressive disorder (historic)",
+      title: "First presentation: major depressive disorder (historic)",
       presentation: "A patient presenting with major depressive disorder (historic), started on Nefazodone.",
       history: "A adult patient presents with a major depressive disorder (historic) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with major depressive disorder (historic); physical examination and baseline investigations are unremarkable.",
@@ -327,7 +327,7 @@ export const nefazodone: Drug = {
       management: "Started at 100 mg twice daily, titrated to 300-600 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Nefazodone takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Nefazodone takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -336,7 +336,7 @@ export const nefazodone: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "SARI comparison — choosing within the class",
+      title: "SARI comparison: choosing within the class",
       primaryDrug: "Nefazodone",
       rows: [
         {
@@ -429,11 +429,11 @@ export const nefazodone: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The expert-only SARI — withdrawn for hepatotoxicity",
+          primaryValue: "The expert-only SARI: withdrawn for hepatotoxicity",
           comparisons: [
             {
               drug: "Trazodone",
-              value: "The antidepressant sleeping pill — insomnia at 50 mg, depression at 300 mg",
+              value: "The antidepressant sleeping pill: insomnia at 50 mg, depression at 300 mg",
             },
             {
               drug: "Vilazodone",
@@ -450,7 +450,7 @@ export const nefazodone: Drug = {
           ],
         },
       ],
-      takeaway: "All atypical antidepressants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antidepressants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -459,7 +459,7 @@ export const nefazodone: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Nefazodone reaches peak plasma concentration and begins acting at its molecular target (5-HT2A (potent antagonist) + SERT/NET (weak inhibition)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Nefazodone reaches peak plasma concentration and begins acting at its molecular target (5-HT2A (potent antagonist) + SERT/NET (weak inhibition)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -495,7 +495,7 @@ export const nefazodone: Drug = {
   faqs: [
     {
       question: "How long does Nefazodone take to work?",
-      answer: "Response 2-4 weeks.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Response 2-4 weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Nefazodone?",
@@ -503,11 +503,11 @@ export const nefazodone: Drug = {
     },
     {
       question: "Can I stop Nefazodone suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Nefazodone habit-forming?",
@@ -515,7 +515,7 @@ export const nefazodone: Drug = {
     },
     {
       question: "Can I take Nefazodone during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Nefazodone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Nefazodone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -659,7 +659,7 @@ export const nefazodone: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Nefazodone",
+      label: "Patient Guide. Nefazodone",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -667,13 +667,13 @@ export const nefazodone: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The hepatotoxic SARI — 5-HT2A blockade for anxiety-insomnia depression, withdrawn for the liver.",
-    summary: "Nefazodone is a prescription medicine used to treat major depressive disorder (historic). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "The hepatotoxic SARI: 5-HT2A blockade for anxiety-insomnia depression, withdrawn for the liver.",
+    summary: "Nefazodone is a prescription medicine used to treat major depressive disorder (historic). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Nefazodone is a withdrawn antidepressant remembered for two things: a gentling profile valued in anxious depression, and rare catastrophic liver injury that removed it from most markets. It appears here for completeness and pharmacology teaching.",
-    sideEffects: "The most common side effects are: sedation and dizziness, nausea and dry mouth, asthenia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hepatotoxicity (fulminant hepatic failure) and Serotonin syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: lfts (historic) (baseline and periodic). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: sedation and dizziness, nausea and dry mouth, asthenia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Hepatotoxicity (fulminant hepatic failure) and Serotonin syndrome. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: lfts (historic) (baseline and periodic). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Alprazolam and triazolam, Simvastatin and 3A4 substrates, MAOIs. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Alprazolam and triazolam, Simvastatin and 3A4 substrates, MAOIs. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -695,7 +695,7 @@ export const nefazodone: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -729,13 +729,13 @@ export const nefazodone: Drug = {
         name: "Nefazodone",
         slug: "nefazodone",
         relationship: "This guide",
-        distinguishing: "The expert-only SARI — withdrawn for hepatotoxicity",
+        distinguishing: "The expert-only SARI: withdrawn for hepatotoxicity",
       },
       {
         name: "Trazodone",
         slug: "trazodone",
         relationship: "Same class (SARI)",
-        distinguishing: "The antidepressant sleeping pill — insomnia at 50 mg, depression at 300 mg",
+        distinguishing: "The antidepressant sleeping pill: insomnia at 50 mg, depression at 300 mg",
       },
       {
         name: "Vilazodone",
@@ -901,7 +901,7 @@ export const nefazodone: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Nefazodone in two sentences.",
-      answer: "Nefazodone blocks 5-HT2A receptors potently with weak monoamine reuptake inhibition — an anxiolytic, sleep-preserving antidepressant profile. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
+      answer: "Nefazodone blocks 5-HT2A receptors potently with weak monoamine reuptake inhibition: an anxiolytic, sleep-preserving antidepressant profile. Net effect: Monoaminergic modulation producing the antidepressant effect described.",
       topic: "Mechanism",
     },
     {
@@ -911,7 +911,7 @@ export const nefazodone: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Nefazodone and how you would manage it.",
-      answer: "Hepatotoxicity (fulminant hepatic failure): The withdrawal cause: rare irreversible liver failure — the label-defining catastrophe. Management: Avoid where alternatives exist; LFT vigilance in unavoidable use; stop on any hepatitis signs.",
+      answer: "Hepatotoxicity (fulminant hepatic failure): The withdrawal cause: rare irreversible liver failure; the label-defining catastrophe. Management: Avoid where alternatives exist; LFT vigilance in unavoidable use; stop on any hepatitis signs.",
       topic: "Safety",
     },
     {
@@ -997,7 +997,7 @@ export const nefazodone: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1042,7 +1042,7 @@ export const nefazodone: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Nefazodone works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Nefazodone works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1058,7 +1058,7 @@ export const nefazodone: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Nefazodone safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Nefazodone safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1101,7 +1101,7 @@ export const nefazodone: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Nefazodone follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Nefazodone follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1128,7 +1128,7 @@ export const nefazodone: Drug = {
       "The pharmacology exam, not the pharmacy shelf.",
     ],
     overdose: [
-      "Overdose with Nefazodone is managed supportively — no specific antidote.",
+      "Overdose with Nefazodone is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Nefazodone is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1170,14 +1170,14 @@ export const nefazodone: Drug = {
     ],
     pearls: [
       "The pharmacology was loved: 5-HT2A blockade without the sedative hangover of trazodone or the sexual blunting of SSRIs.",
-      "The liver ended the story: rare fulminant failure (1/250,000-1/300,000 treatment-years) — withdrawn in most markets.",
-      "The teaching point: post-marketing pharmacovigilance discipline — receptor elegance does not excuse organ toxicity.",
-      "Historic combo fame: nefazodone + CBST in the CBASP trial — the psychotherapy-pharmacology study of its era.",
+      "The liver ended the story: rare fulminant failure (1/250,000-1/300,000 treatment-years); withdrawn in most markets.",
+      "The teaching point: post-marketing pharmacovigilance discipline; receptor elegance does not excuse organ toxicity.",
+      "Historic combo fame: nefazodone + CBST in the CBASP trial; the psychotherapy-pharmacology study of its era.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

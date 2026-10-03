@@ -27,7 +27,7 @@ export function DrugClinicalUses({ drug }: DrugClinicalUsesProps) {
         <SectionHeader
           eyebrow="Clinical Uses"
           title="What is it prescribed for?"
-          description="Each indication below is rated by its regulatory status — FDA-approved, off-label, or guideline-supported."
+          description="Each indication below is rated by its regulatory status. FDA-approved, off-label, or guideline-supported."
         />
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

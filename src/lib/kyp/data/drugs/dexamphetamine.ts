@@ -23,14 +23,14 @@ export const dexamphetamine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "ADHD Medications", "Stimulants", "Dextroamphetamine (d-Amphetamine)"],
   /* ---- Hero / summary ---- */
-  tagline: "Pure dextroamphetamine — the classic d-isomer stimulant with less peripheral load than the racemate.",
+  tagline: "Pure dextroamphetamine: the classic d-isomer stimulant with less peripheral load than the racemate.",
   summary: "Dextroamphetamine is the pure d-isomer of amphetamine: a catecholamine releasing agent (DAT/NET substrate plus VMAT2-mediated release) that is 2-3× more centrally potent than the l-isomer while producing less peripheral noradrenergic effect. Used for ADHD (from age 3 in the USA label) and narcolepsy.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Dextroamphetamine (d-Amphetamine) — from its molecular target (DAT/NET substrate (release) + VMAT2 — d-isomer) to clinical effect.",
+    "Explain the mechanism of action of Dextroamphetamine (d-Amphetamine) (from its molecular target (DAT/NET substrate (release) + VMAT2) d-isomer) to clinical effect.",
     "List the FDA-approved and off-label uses of Dextroamphetamine (d-Amphetamine).",
     "Predict the common and serious side effects of Dextroamphetamine (d-Amphetamine) from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Dextroamphetamine (d-Amphetamine).",
@@ -38,15 +38,15 @@ export const dexamphetamine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Dextroamphetamine enters the catecholamine neuron via DAT/NET and triggers dopamine and norepinephrine RELEASE via VMAT2 — a releasing agent, not merely a reuptake blocker.",
-    molecularTarget: "DAT/NET substrate (release) + VMAT2 — d-isomer",
+    summary: "Dextroamphetamine enters the catecholamine neuron via DAT/NET and triggers dopamine and norepinephrine RELEASE via VMAT2: a releasing agent, not merely a reuptake blocker.",
+    molecularTarget: "DAT/NET substrate (release) + VMAT2: d-isomer",
     effect: "Catecholamine and wake-system enhancement with the agent's characteristic profile.",
     steps: [
-      "Dextroamphetamine enters the catecholamine neuron via DAT/NET and triggers dopamine and norepinephrine RELEASE via VMAT2 — a releasing agent, not merely a reuptake blocker.",
+      "Dextroamphetamine enters the catecholamine neuron via DAT/NET and triggers dopamine and norepinephrine RELEASE via VMAT2: a releasing agent, not merely a reuptake blocker.",
       "Prefrontal catecholamine enhancement sharpens attention and impulse control.",
       "The agent's formulation and half-life determine practical coverage.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 10-12 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 10-12 hours. See mechanism and prescriber sections.",
     halfLife: "10-12 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
@@ -103,14 +103,14 @@ export const dexamphetamine: Drug = {
         label: "boosts alertness",
       },
     ],
-    caption: "Catecholamine enhancement in the prefrontal cortex — the brain's attention control centre — corrects the signal-to-noise deficit that defines ADHD.",
+    caption: "Catecholamine enhancement in the prefrontal cortex (the brain's attention control centre) corrects the signal-to-noise deficit that defines ADHD.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
     "Central monoaminergic systems (see mechanism)",
   ],
   receptors: [
-    "DAT/NET substrate (release) + VMAT2 — d-isomer",
+    "DAT/NET substrate (release) + VMAT2: d-isomer",
   ],
   brainRegionIds: ["prefrontal-cortex", "nucleus-accumbens"],
   pathwayIds: ["mesolimbic", "mesocortical", "nigrostriatal"],
@@ -142,7 +142,7 @@ export const dexamphetamine: Drug = {
   blackBoxWarnings: [
     {
       title: "Abuse, dependence, and serious cardiovascular events",
-      text: "High potential for abuse and dependence (controlled substance). Assess abuse risk and monitor for misuse. Serious cardiovascular events reported — screen cardiac and family sudden-death history before starting.",
+      text: "High potential for abuse and dependence (controlled substance). Assess abuse risk and monitor for misuse. Serious cardiovascular events reported: screen cardiac and family sudden-death history before starting.",
     },
   ],
   /* ---- Side effects ---- */
@@ -232,51 +232,51 @@ export const dexamphetamine: Drug = {
     },
   ],
   pregnancy: {
-    summary: "Data in human pregnancy are limited. The decision to continue or stop balances the risk of untreated illness against possible drug exposure — for serious psychiatric illness, relapse prevention usually outweighs fetal risk. Involve obstetrics early and never stop abruptly without a plan.",
-    lactation: "Small amounts may pass into breast milk. Decisions are individualised — monitor the infant for sedation and poor feeding, and discuss with your doctor.",
+    summary: "Data in human pregnancy are limited. The decision to continue or stop balances the risk of untreated illness against possible drug exposure, for serious psychiatric illness, relapse prevention usually outweighs fetal risk. Involve obstetrics early and never stop abruptly without a plan.",
+    lactation: "Small amounts may pass into breast milk. Decisions are individualised. Monitor the infant for sedation and poor feeding, and discuss with your doctor.",
   },
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
-  patientExplanation: "Dextroamphetamine is the purified active form of amphetamine — the classical stimulant for ADHD and narcolepsy. Compared with the mixed form it works more on attention and less on heart rate. It is a controlled medicine with the usual safeguards.",
+  patientExplanation: "Dextroamphetamine is the purified active form of amphetamine: the classical stimulant for ADHD and narcolepsy. Compared with the mixed form it works more on attention and less on heart rate. It is a controlled medicine with the usual safeguards.",
   patientEducationPoints: [
-    "Take it in the morning — later doses disrupt sleep.",
+    "Take it in the morning: later doses disrupt sleep.",
     "Appetite can fall: eat breakfast before the dose, and track weight.",
     "Tell your doctor about any chest pain, fainting, or palpitations.",
-    "This is a controlled medicine — store it safely and never share it.",
-    "Benefit from Dextroamphetamine (d-Amphetamine) builds over weeks — do not judge it in the first days.",
+    "This is a controlled medicine: store it safely and never share it.",
+    "Benefit from Dextroamphetamine (d-Amphetamine) builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
     "The isomer lesson: d-amphetamine = more central (ADHD) effect, less peripheral (cardiovascular) effect than the l-isomer.",
-    "Releasing agent vs reuptake blocker: amphetamines PUSH catecholamines out (VMAT2) — stronger, longer than methylphenidate's blockade.",
+    "Releasing agent vs reuptake blocker: amphetamines PUSH catecholamines out (VMAT2); stronger, longer than methylphenidate's blockade.",
     "Spansule SR: the original long-acting stimulant (1950s bead-release design).",
-    "Australia and UK practice retain dexamphetamine as a first-line stimulant — geography again.",
+    "Australia and UK practice retain dexamphetamine as a first-line stimulant: geography again.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Dextroamphetamine (d-Amphetamine): Dextroamphetamine enters the catecholamine neuron via DAT/NET and triggers dopamine and norepinephrine RELEASE via VMAT2 — a releasing agent, not merely a reuptake blocker.",
-        "Uses of Dextroamphetamine (d-Amphetamine): ADHD — ages 3 and above (USA label); Narcolepsy",
-        "d-isomer of amphetamine — 2-3× central potency of l; LESS peripheral effect.",
+        "Mechanism of Dextroamphetamine (d-Amphetamine): Dextroamphetamine enters the catecholamine neuron via DAT/NET and triggers dopamine and norepinephrine RELEASE via VMAT2; a releasing agent, not merely a reuptake blocker.",
+        "Uses of Dextroamphetamine (d-Amphetamine): ADHD; ages 3 and above (USA label); Narcolepsy",
+        "d-isomer of amphetamine: 2-3× central potency of l; LESS peripheral effect.",
         "Mechanism: reuptake blockade + VMAT2-mediated RELEASE (a catecholamine releasing agent).",
       ],
       practical: [
-        "Prescribe Dextroamphetamine (d-Amphetamine) for adhd — ages 3 and above (usa label) with dose, timing, and duration.",
+        "Prescribe Dextroamphetamine (d-Amphetamine) for adhd: ages 3 and above (usa label) with dose, timing, and duration.",
         "Outline the monitoring plan: Heart rate and blood pressure (Baseline, then every visit); Height, weight, appetite (Baseline, then every 6 months (children)); Sleep review (Every visit)",
       ],
       longAnswer: [
-        "Dextroamphetamine (d-Amphetamine): mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "d-isomer of amphetamine — 2-3× central potency of l; LESS peripheral effect.",
+        "Dextroamphetamine (d-Amphetamine): mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "d-isomer of amphetamine: 2-3× central potency of l; LESS peripheral effect.",
         "Mechanism: reuptake blockade + VMAT2-mediated RELEASE (a catecholamine releasing agent).",
       ],
     },
     neetPg: {
       highYield: [
-        "d-isomer of amphetamine — 2-3× central potency of l; LESS peripheral effect.",
+        "d-isomer of amphetamine: 2-3× central potency of l; LESS peripheral effect.",
         "Mechanism: reuptake blockade + VMAT2-mediated RELEASE (a catecholamine releasing agent).",
         "Uses: ADHD (from age 3, USA) + narcolepsy.",
-        "Spansule SR — the original long-acting stimulant.",
+        "Spansule SR: the original long-acting stimulant.",
         "Full stimulant black box.",
       ],
       pyqConcepts: [
@@ -287,13 +287,13 @@ export const dexamphetamine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Dextroamphetamine (d-Amphetamine) develops cardiovascular events — next best step?",
+        "A patient on Dextroamphetamine (d-Amphetamine) develops cardiovascular events: next best step?",
         "When to choose Dextroamphetamine (d-Amphetamine) over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: DAT/NET substrate (release) + VMAT2 — d-isomer",
+        "Primary target: DAT/NET substrate (release) + VMAT2; d-isomer",
         "Most common side effects: Appetite suppression, Insomnia, Tachycardia/BP rise (milder than racemate)",
         "Key contraindication: known hypersensitivity",
       ],
@@ -301,33 +301,33 @@ export const dexamphetamine: Drug = {
     psychiatryResidency: {
       advancedPearls: [
         "The isomer lesson: d-amphetamine = more central (ADHD) effect, less peripheral (cardiovascular) effect than the l-isomer.",
-        "Releasing agent vs reuptake blocker: amphetamines PUSH catecholamines out (VMAT2) — stronger, longer than methylphenidate's blockade.",
+        "Releasing agent vs reuptake blocker: amphetamines PUSH catecholamines out (VMAT2); stronger, longer than methylphenidate's blockade.",
         "Spansule SR: the original long-acting stimulant (1950s bead-release design).",
-        "Australia and UK practice retain dexamphetamine as a first-line stimulant — geography again.",
+        "Australia and UK practice retain dexamphetamine as a first-line stimulant: geography again.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "d-isomer of amphetamine — 2-3× central potency of l; LESS peripheral effect.",
+    "d-isomer of amphetamine: 2-3× central potency of l; LESS peripheral effect.",
     "Mechanism: reuptake blockade + VMAT2-mediated RELEASE (a catecholamine releasing agent).",
     "Uses: ADHD (from age 3, USA) + narcolepsy.",
-    "Spansule SR — the original long-acting stimulant.",
+    "Spansule SR: the original long-acting stimulant.",
     "Full stimulant black box.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — adhd — ages 3 and above (usa label)",
-      presentation: "A patient presenting with adhd — ages 3 and above (usa label), started on Dextroamphetamine (d-Amphetamine).",
-      history: "A adult patient presents with a adhd — ages 3 and above (usa label) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with adhd — ages 3 and above (usa label); physical examination and baseline investigations are unremarkable.",
-      diagnosis: "ADHD — ages 3 and above (USA label). Differentials are considered and excluded clinically.",
+      title: "First presentation: adhd; ages 3 and above (usa label)",
+      presentation: "A patient presenting with adhd: ages 3 and above (usa label), started on Dextroamphetamine (d-Amphetamine).",
+      history: "A adult patient presents with a adhd: ages 3 and above (usa label) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with adhd: ages 3 and above (usa label); physical examination and baseline investigations are unremarkable.",
+      diagnosis: "ADHD: ages 3 and above (USA label). Differentials are considered and excluded clinically.",
       rationale: "Dextroamphetamine (d-Amphetamine) is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Stimulant) with strong evidence in this condition.",
       management: "Started at 2.5 mg twice daily (children), titrated to 5-30 mg/day divided with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Dextroamphetamine (d-Amphetamine) takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Dextroamphetamine (d-Amphetamine) takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -336,12 +336,12 @@ export const dexamphetamine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Stimulant comparison — choosing within the class",
+      title: "Stimulant comparison: choosing within the class",
       primaryDrug: "Dextroamphetamine (d-Amphetamine)",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "DAT/NET substrate (release) + VMAT2 — d-isomer",
+          primaryValue: "DAT/NET substrate (release) + VMAT2: d-isomer",
           comparisons: [
             {
               drug: "Lisdexamfetamine",
@@ -385,11 +385,11 @@ export const dexamphetamine: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Weight neutral to reducing — appetite effects common.",
+          primaryValue: "Weight neutral to reducing: appetite effects common.",
           comparisons: [
             {
               drug: "Lisdexamfetamine",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
             {
               drug: "Methylphenidate (d,l)",
@@ -397,11 +397,11 @@ export const dexamphetamine: Drug = {
             },
             {
               drug: "Amphetamine (d,l)",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
             {
               drug: "Dexmethylphenidate",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
           ],
         },
@@ -415,7 +415,7 @@ export const dexamphetamine: Drug = {
             },
             {
               drug: "Methylphenidate (d,l)",
-              value: "Not sedating — the opposite; rebound fatigue occurs at wear-off.",
+              value: "Not sedating: the opposite; rebound fatigue occurs at wear-off.",
             },
             {
               drug: "Amphetamine (d,l)",
@@ -429,7 +429,7 @@ export const dexamphetamine: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The pure d-isomer — stronger central, softer peripheral",
+          primaryValue: "The pure d-isomer: stronger central, softer peripheral",
           comparisons: [
             {
               drug: "Lisdexamfetamine",
@@ -437,20 +437,20 @@ export const dexamphetamine: Drug = {
             },
             {
               drug: "Methylphenidate (d,l)",
-              value: "The default stimulant — 60 years of ADHD first-line",
+              value: "The default stimulant: 60 years of ADHD first-line",
             },
             {
               drug: "Amphetamine (d,l)",
-              value: "The Adderall mixture — d for focus, l for wake",
+              value: "The Adderall mixture: d for focus, l for wake",
             },
             {
               drug: "Dexmethylphenidate",
-              value: "The active isomer — methylphenidate distilled",
+              value: "The active isomer: methylphenidate distilled",
             },
           ],
         },
       ],
-      takeaway: "All stimulants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All stimulants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -459,7 +459,7 @@ export const dexamphetamine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Dextroamphetamine (d-Amphetamine) reaches peak plasma concentration and begins acting at its molecular target (DAT/NET substrate (release) + VMAT2 — d-isomer). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Dextroamphetamine (d-Amphetamine) reaches peak plasma concentration and begins acting at its molecular target (DAT/NET substrate (release) + VMAT2, d-isomer). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -495,7 +495,7 @@ export const dexamphetamine: Drug = {
   faqs: [
     {
       question: "How long does Dextroamphetamine (d-Amphetamine) take to work?",
-      answer: "IR 20-30 min; Spansule ~1 h with 6-8 h cover.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "IR 20-30 min; Spansule ~1 h with 6-8 h cover.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Dextroamphetamine (d-Amphetamine)?",
@@ -503,19 +503,19 @@ export const dexamphetamine: Drug = {
     },
     {
       question: "Can I stop Dextroamphetamine (d-Amphetamine) suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Dextroamphetamine (d-Amphetamine) habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Dextroamphetamine (d-Amphetamine) exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Dextroamphetamine (d-Amphetamine) exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Dextroamphetamine (d-Amphetamine) during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Dextroamphetamine (d-Amphetamine) may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Dextroamphetamine (d-Amphetamine) may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -629,13 +629,13 @@ export const dexamphetamine: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "DAT/NET substrate (release) + VMAT2 — d-isomer",
+      label: "DAT/NET substrate (release) + VMAT2: d-isomer",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
     },
     {
-      label: "ADHD — ages 3 and above (USA label)",
+      label: "ADHD: ages 3 and above (USA label)",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -665,7 +665,7 @@ export const dexamphetamine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Dextroamphetamine (d-Amphetamine)",
+      label: "Patient Guide. Dextroamphetamine (d-Amphetamine)",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -673,13 +673,13 @@ export const dexamphetamine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "Pure dextroamphetamine — the classic d-isomer stimulant with less peripheral load than the racemate.",
-    summary: "Dextroamphetamine (d-Amphetamine) is a prescription medicine used to treat adhd — ages 3 and above (usa label). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Dextroamphetamine is the purified active form of amphetamine — the classical stimulant for ADHD and narcolepsy. Compared with the mixed form it works more on attention and less on heart rate. It is a controlled medicine with the usual safeguards.",
-    sideEffects: "The most common side effects are: appetite suppression, insomnia, tachycardia/bp rise (milder than racemate), dry mouth, headache. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Cardiovascular events and Psychosis/mania. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline, then every visit); height, weight, appetite (baseline, then every 6 months (children)); sleep review (every visit). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "Pure dextroamphetamine: the classic d-isomer stimulant with less peripheral load than the racemate.",
+    summary: "Dextroamphetamine (d-Amphetamine) is a prescription medicine used to treat adhd: ages 3 and above (usa label). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Dextroamphetamine is the purified active form of amphetamine: the classical stimulant for ADHD and narcolepsy. Compared with the mixed form it works more on attention and less on heart rate. It is a controlled medicine with the usual safeguards.",
+    sideEffects: "The most common side effects are: appetite suppression, insomnia, tachycardia/bp rise (milder than racemate), dry mouth, headache. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Cardiovascular events and Psychosis/mania. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline, then every visit); height, weight, appetite (baseline, then every 6 months (children)); sleep review (every visit). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: MAOIs, OTC decongestants and sympathomimetics. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: MAOIs, OTC decongestants and sympathomimetics. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -701,7 +701,7 @@ export const dexamphetamine: Drug = {
     },
     costCategory: "moderate",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -735,7 +735,7 @@ export const dexamphetamine: Drug = {
         name: "Dextroamphetamine (d-Amphetamine)",
         slug: "dexamphetamine",
         relationship: "This guide",
-        distinguishing: "The pure d-isomer — stronger central, softer peripheral",
+        distinguishing: "The pure d-isomer: stronger central, softer peripheral",
       },
       {
         name: "Lisdexamfetamine",
@@ -747,25 +747,25 @@ export const dexamphetamine: Drug = {
         name: "Methylphenidate (d,l)",
         slug: "methylphenidate",
         relationship: "Same class (Stimulant)",
-        distinguishing: "The default stimulant — 60 years of ADHD first-line",
+        distinguishing: "The default stimulant: 60 years of ADHD first-line",
       },
       {
         name: "Amphetamine (d,l)",
         slug: "amphetamine",
         relationship: "Same class (Stimulant)",
-        distinguishing: "The Adderall mixture — d for focus, l for wake",
+        distinguishing: "The Adderall mixture: d for focus, l for wake",
       },
       {
         name: "Dexmethylphenidate",
         slug: "dexmethylphenidate",
         relationship: "Same class (Stimulant)",
-        distinguishing: "The active isomer — methylphenidate distilled",
+        distinguishing: "The active isomer: methylphenidate distilled",
       },
       {
         name: "Pemoline",
         slug: "pemoline",
         relationship: "Same class (Stimulant)",
-        distinguishing: "The hepatotoxic last-resort — withdrawn from major markets",
+        distinguishing: "The hepatotoxic last-resort: withdrawn from major markets",
       },
     ],
   },
@@ -918,12 +918,12 @@ export const dexamphetamine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Dextroamphetamine (d-Amphetamine) in two sentences.",
-      answer: "Dextroamphetamine enters the catecholamine neuron via DAT/NET and triggers dopamine and norepinephrine RELEASE via VMAT2 — a releasing agent, not merely a reuptake blocker. Net effect: Catecholamine and wake-system enhancement with the agent's characteristic profile.",
+      answer: "Dextroamphetamine enters the catecholamine neuron via DAT/NET and triggers dopamine and norepinephrine RELEASE via VMAT2: a releasing agent, not merely a reuptake blocker. Net effect: Catecholamine and wake-system enhancement with the agent's characteristic profile.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Dextroamphetamine (d-Amphetamine).",
-      answer: "ADHD — ages 3 and above (USA label), Narcolepsy. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "ADHD: ages 3 and above (USA label), Narcolepsy. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -1014,7 +1014,7 @@ export const dexamphetamine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1059,7 +1059,7 @@ export const dexamphetamine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Dextroamphetamine (d-Amphetamine) works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Dextroamphetamine (d-Amphetamine) works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1075,7 +1075,7 @@ export const dexamphetamine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Dextroamphetamine (d-Amphetamine) safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Dextroamphetamine (d-Amphetamine) safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1120,7 +1120,7 @@ export const dexamphetamine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Dextroamphetamine (d-Amphetamine) follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Dextroamphetamine (d-Amphetamine) follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1130,7 +1130,7 @@ export const dexamphetamine: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Weight neutral to reducing — appetite effects common.",
+    weightGain: "Weight neutral to reducing: appetite effects common.",
     sedation: "Not sedating.",
     dosing: [
       {
@@ -1161,11 +1161,11 @@ export const dexamphetamine: Drug = {
       "Spansule for school-day smoothness.",
     ],
     overdose: [
-      "Overdose with Dextroamphetamine (d-Amphetamine) is managed supportively — no specific antidote.",
+      "Overdose with Dextroamphetamine (d-Amphetamine) is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Dextroamphetamine (d-Amphetamine) is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1199,14 +1199,14 @@ export const dexamphetamine: Drug = {
     primaryTargetSymptoms: ["Inattention/hyperactivity", "Narcolepsy sleepiness"],
     pearls: [
       "The isomer lesson: d-amphetamine = more central (ADHD) effect, less peripheral (cardiovascular) effect than the l-isomer.",
-      "Releasing agent vs reuptake blocker: amphetamines PUSH catecholamines out (VMAT2) — stronger, longer than methylphenidate's blockade.",
+      "Releasing agent vs reuptake blocker: amphetamines PUSH catecholamines out (VMAT2); stronger, longer than methylphenidate's blockade.",
       "Spansule SR: the original long-acting stimulant (1950s bead-release design).",
-      "Australia and UK practice retain dexamphetamine as a first-line stimulant — geography again.",
+      "Australia and UK practice retain dexamphetamine as a first-line stimulant: geography again.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

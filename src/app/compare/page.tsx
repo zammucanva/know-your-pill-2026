@@ -213,9 +213,9 @@ export default function ComparePage() {
                 Compare medications
               </h1>
               <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground leading-relaxed">
-                Pick two or three medications and see them side by side —
+                Pick two or three medications and see them side by side:
                 mechanism, side-effect profile, interactions, monitoring and
-                clinical use — ending in a choosing takeaway. Every value is
+                clinical use: ending in a choosing takeaway. Every value is
                 taken verbatim from the medication pages; nothing is invented.
               </p>
               <p className="mt-4 text-sm text-muted-foreground">
@@ -225,7 +225,7 @@ export default function ComparePage() {
                   className="inline-flex items-center gap-1.5 font-medium text-brand hover:underline"
                 >
                   <Grid3X3 className="h-3.5 w-3.5" aria-hidden />
-                  Class comparison — choose by concern
+                  Class comparison. Choose by concern
                   <ArrowRight className="h-3 w-3" aria-hidden />
                 </Link>
               </p>
@@ -273,8 +273,8 @@ export default function ComparePage() {
                   {selected.length === 0
                     ? `Select ${MIN_SELECTION} or ${MAX_SELECTION} medications to compare.`
                     : selected.length === 1
-                      ? "One more to go — pick at least two."
-                      : `${selected.length} selected${selected.length < MAX_SELECTION ? " — you can add one more" : ""}.`}
+                      ? "One more to go: pick at least two."
+                      : `${selected.length} selected${selected.length < MAX_SELECTION ? " You can add one more" : ""}.`}
                 </p>
               </div>
             </Reveal>
@@ -289,7 +289,7 @@ export default function ComparePage() {
                   <div className="overflow-x-auto rounded-xl border border-border/60">
                     <table className="w-full min-w-[640px] border-collapse text-sm">
                       <caption className="sr-only">
-                        Comparison of {selectedDrugs.map((d) => d.genericName).join(", ")} — values verbatim from their medication pages.
+                        Comparison of {selectedDrugs.map((d) => d.genericName).join(", ")}; values are taken verbatim from their medication pages.
                       </caption>
                       <thead>
                         <tr className="border-b border-border/60 bg-muted/40">
@@ -368,14 +368,14 @@ export default function ComparePage() {
                           {takeaway.text}
                         </p>
                         <p className="mt-3 text-xs text-muted-foreground/70">
-                          Verbatim from {takeaway.source} — the library&apos;s own
+                          Verbatim from {takeaway.source}, the library&apos;s own
                           choosing guidance for this combination.
                         </p>
                       </>
                     ) : (
                       <p className="text-sm leading-relaxed text-muted-foreground">
                         No choosing guide exists in the library for this exact
-                        combination yet — the rows above are each
+                        combination yet: the rows above are each
                         medication&apos;s own page data. The
                         &ldquo;When NOT to use&rdquo; row carries each
                         medication&apos;s own avoidance notes verbatim.
@@ -386,7 +386,7 @@ export default function ComparePage() {
                   <p className="mt-6 flex items-start gap-2 text-xs text-muted-foreground/60 max-w-3xl leading-relaxed">
                     <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden />
                     Every cell is copied verbatim from the selected medications&apos;
-                    reviewed content — values are never merged, averaged or
+                    reviewed content: values are never merged, averaged or
                     inferred. Empty cells mean the library does not carry that
                     datum for that medication.
                   </p>

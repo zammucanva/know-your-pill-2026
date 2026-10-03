@@ -33,7 +33,7 @@ import { psychiatryStats } from "@/lib/kyp/data/psychiatry-search-records.genera
 export const metadata: Metadata = {
   title: "Learning Hub · Know Your Pill",
   description:
-    `The educational home of KYP — structured learning paths across ${drugs.length} medications, diseases, substances, brain regions, and side effects, with entry points into MCQ practice and your continued learning.`,
+    `The educational home of KYP: structured learning paths across ${drugs.length} medications, diseases, substances, brain regions, and side effects, with entry points into MCQ practice and your continued learning.`,
   keywords: [
     "learning hub",
     "medical learning",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Learning Hub · Know Your Pill",
     description:
-      `Structured learning paths across the KYP medication library — from mechanisms to neuroscience concepts and practice.`,
+      `Structured learning paths across the KYP medication library, from mechanisms to neuroscience concepts and practice.`,
     type: "website",
     siteName: "Know Your Pill",
   },
@@ -84,7 +84,7 @@ export default function LearnPage() {
               <p
                 className="mt-6 max-w-2xl text-body-lg text-muted-foreground leading-relaxed"
               >
-                Understand the science. Test what you know. KYP organises medications, diseases, substances, and neuroscience into structured learning paths — built for medical students, residents, and patients who want depth without noise.
+                Understand the science. Test what you know. KYP organises medications, diseases, substances, and neuroscience into structured learning paths: built for medical students, residents, and patients who want depth without noise.
               </p>
             </Reveal>
 
@@ -145,7 +145,7 @@ export default function LearnPage() {
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
                       <Brain className="h-5 w-5 text-brand" strokeWidth={1.5} />
-                      <span className="font-mono text-xs text-muted-foreground/50">01 — Primary Pathway</span>
+                      <span className="font-mono text-xs text-muted-foreground/50">01. Primary Pathway</span>
                     </div>
                     <h3
                       className="font-serif font-semibold tracking-tight text-foreground"
@@ -154,7 +154,7 @@ export default function LearnPage() {
                       Psychiatry
                     </h3>
                     <p className="mt-4 max-w-xl text-body text-muted-foreground leading-relaxed">
-                      The complete psychiatry curriculum — {psychiatryStats.lessons} lessons across{" "}
+                      The complete psychiatry curriculum: {psychiatryStats.lessons} lessons across{" "}
                       {psychiatryStats.domains} clinical domains, each a six-lesson course with
                       foundations, neuroscience, clinical practice, the Indian context, exam
                       revision and active recall.
@@ -182,7 +182,7 @@ export default function LearnPage() {
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
                       <BookOpen className="h-5 w-5 text-brand" strokeWidth={1.5} />
-                      <span className="font-mono text-xs text-muted-foreground/50">02 — Primary Pathway</span>
+                      <span className="font-mono text-xs text-muted-foreground/50">02. Primary Pathway</span>
                     </div>
                     <h3
                       className="font-serif font-semibold tracking-tight text-foreground"
@@ -191,7 +191,7 @@ export default function LearnPage() {
                       Medications
                     </h3>
                     <p className="mt-4 max-w-xl text-body text-muted-foreground leading-relaxed">
-                      Learn how psychiatric medications work — mechanism of action, receptor pharmacology, clinical indications, side effects, and real clinical cases. Each drug is structured as a 6-lesson course with inline quizzes.
+                      Learn how psychiatric medications work: mechanism of action, receptor pharmacology, clinical indications, side effects, and real clinical cases. Each drug is structured as a 6-lesson course with inline quizzes.
                     </p>
                     <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-muted-foreground/60">
                       <span><span className="font-semibold text-foreground">{drugCount}</span> drugs</span>
@@ -225,7 +225,7 @@ export default function LearnPage() {
                     Diseases
                   </h3>
                   <p className="mt-3 text-body-sm text-muted-foreground leading-relaxed max-w-md">
-                    Understand disorders — symptoms, diagnosis criteria, pathophysiology, and management pathways with linked medications.
+                    Understand disorders: symptoms, diagnosis criteria, pathophysiology, and management pathways with linked medications.
                   </p>
                   <p className="mt-4 text-xs text-muted-foreground/50">
                     <span className="font-semibold text-foreground">{diseaseCount}</span> module · Major Depressive Disorder
@@ -250,7 +250,7 @@ export default function LearnPage() {
                     Substances
                   </h3>
                   <p className="mt-3 text-body-sm text-muted-foreground leading-relaxed max-w-md">
-                    Explore alcohol, opioids, and cannabis — receptor pharmacology, intoxication, withdrawal timelines, and emergency management.
+                    Explore alcohol, opioids, and cannabis: receptor pharmacology, intoxication, withdrawal timelines, and emergency management.
                   </p>
                   <p className="mt-4 text-xs text-muted-foreground/50">
                     <span className="font-semibold text-foreground">{substanceCount}</span> modules · Alcohol · Opioids · Cannabis
@@ -355,7 +355,7 @@ export default function LearnPage() {
 
             <div className="space-y-px">
               {[
-                { icon: Layers, label: "Drug Timeline", description: "What happens hour by hour, week by week — the SSRI timeline as a reference.", href: "/#timeline", meta: "6 milestones" },
+                { icon: Layers, label: "Drug Timeline", description: "What happens hour by hour, week by week: the SSRI timeline as a reference.", href: "/#timeline", meta: "6 milestones" },
                 { icon: Brain, label: "Brain Atlas", description: "Six brain regions indexed with their neurotransmitters, disorders, and associated drugs.", href: "/#knowledge-graph", meta: `${brainCount} regions` },
                 { icon: Activity, label: "Side Effect Library", description: "Akathisia, EPS, serotonin syndrome, NMS, sexual dysfunction, weight gain.", href: "/#side-effects", meta: `${sideEffectCount} effects` },
                 { icon: HeartPulse, label: "Emergency & Safety", description: "Crisis contacts, overdose protocols, and when to seek immediate help.", href: "/#emergency", meta: "24/7 helplines" },

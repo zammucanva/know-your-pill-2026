@@ -23,14 +23,14 @@ export const flunitrazepam: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Sleep Medicines", "Benzodiazepine Hypnotics", "Flunitrazepam"],
   /* ---- Hero / summary ---- */
-  tagline: "The infamous one — Rohypnol: potent hypnotic benzo, strict controls, and a pharmacology lesson in misuse.",
+  tagline: "The infamous one. Rohypnol: potent hypnotic benzo, strict controls, and a pharmacology lesson in misuse.",
   summary: "Flunitrazepam (Rohypnol) is an ultra-potent long-acting hypnotic benzodiazepine: 1–2 mg produces deep sleep with strong amnesia for 8+ hours. Its notoriety as a misuse and drug-facilitated-crime agent (the 'date-rape drug' legend) brought Schedule III/IV restrictions, formulation changes (blue dye, slower dissolution), and bans in many countries including the US. As medicine: potent, long-tailed, strictly controlled; as pharmacology: the class's potency ceiling.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Flunitrazepam — from its molecular target (GABA-A benzodiazepine site (ultra-high-potency PAM) — long-acting) to clinical effect.",
+    "Explain the mechanism of action of Flunitrazepam (from its molecular target (GABA-A benzodiazepine site (ultra-high-potency PAM)) long-acting) to clinical effect.",
     "List the FDA-approved and off-label uses of Flunitrazepam.",
     "Predict the common and serious side effects of Flunitrazepam from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Flunitrazepam.",
@@ -38,15 +38,15 @@ export const flunitrazepam: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Ultra-potent long-acting benzodiazepine GABA-A PAM — hypnotic power with deep amnesia and a long tail.",
-    molecularTarget: "GABA-A benzodiazepine site (ultra-high-potency PAM) — long-acting",
+    summary: "Ultra-potent long-acting benzodiazepine GABA-A PAM: hypnotic power with deep amnesia and a long tail.",
+    molecularTarget: "GABA-A benzodiazepine site (ultra-high-potency PAM): long-acting",
     effect: "Sleep promotion via the described target.",
     steps: [
-      "Flunitrazepam (Rohypnol) is an ultra-potent long-acting hypnotic benzodiazepine: 1–2 mg produces deep sleep with strong amnesia for 8+ hours — the mechanism in one line.",
+      "Flunitrazepam (Rohypnol) is an ultra-potent long-acting hypnotic benzodiazepine: 1–2 mg produces deep sleep with strong amnesia for 8+ hours; the mechanism in one line.",
       "Binding at the described target produces the sleep-promoting effect.",
       "Duration of action follows the half-life: onset agents clear before morning; longer agents add maintenance cover.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life Parent 18–26 h; active metabolite (7-aminoflunitrazepam) 20–36 h. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life Parent 18–26 h; active metabolite (7-aminoflunitrazepam) 20–36 h. See mechanism and prescriber sections.",
     halfLife: "Parent 18–26 h; active metabolite (7-aminoflunitrazepam) 20–36 h.",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
@@ -108,14 +108,14 @@ export const flunitrazepam: Drug = {
         label: "inhibits firing",
       },
     ],
-    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly — which is why their effect is powerful but limited by dependence risk.",
+    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly, which is why their effect is powerful but limited by dependence risk.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
     "Central monoaminergic systems (see mechanism)",
   ],
   receptors: [
-    "GABA-A benzodiazepine site (ultra-high-potency PAM) — long-acting",
+    "GABA-A benzodiazepine site (ultra-high-potency PAM): long-acting",
   ],
   brainRegionIds: ["amygdala", "prefrontal-cortex"],
   pathwayIds: [],
@@ -124,7 +124,7 @@ export const flunitrazepam: Drug = {
     {
       name: "Severe insomnia (where legally available)",
       status: "guideline",
-      description: "1–2 mg at bedtime under strict control — rarely the practical choice anywhere.",
+      description: "1–2 mg at bedtime under strict control: rarely the practical choice anywhere.",
     },
     {
       name: "Pre-anaesthetic sedation (historic)",
@@ -141,13 +141,13 @@ export const flunitrazepam: Drug = {
     {
       name: "Opioids",
       severity: "absolute",
-      rationale: "Concurrent use causes profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      rationale: "Concurrent use causes profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
     },
   ],
   blackBoxWarnings: [
     {
       title: "Risks with opioids",
-      text: "Class warning — potency amplifies it.",
+      text: "Class warning: potency amplifies it.",
     },
     {
       title: "Dependence, abuse, and misuse",
@@ -167,7 +167,7 @@ export const flunitrazepam: Drug = {
       name: "Anterograde amnesia",
       frequency: "very-common",
       severity: "severe",
-      description: "Profound — the property exploited in drug-facilitated crime.",
+      description: "Profound: the property exploited in drug-facilitated crime.",
       management: "Counsel explicitly; controlled setting.",
     },
     {
@@ -223,7 +223,7 @@ export const flunitrazepam: Drug = {
     {
       drug: "Opioids",
       severity: "contraindicated",
-      mechanism: "Concurrent use causes profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      mechanism: "Concurrent use causes profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
       action: "Avoid; if unavoidable for taper protocols, use lowest doses with intensive monitoring.",
     },
     {
@@ -241,7 +241,7 @@ export const flunitrazepam: Drug = {
     {
       drug: "Older antihistamines (sedating)",
       severity: "moderate",
-      mechanism: "Additive sedation in the elderly — falls.",
+      mechanism: "Additive sedation in the elderly: falls.",
       action: "Prefer non-sedating alternatives.",
     },
   ],
@@ -253,24 +253,24 @@ export const flunitrazepam: Drug = {
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
-  patientExplanation: "Flunitrazepam is a medicine used to treat severe insomnia (where legally available). Ultra-potent long-acting benzodiazepine GABA-A PAM — hypnotic power with deep amnesia and a long tail. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+  patientExplanation: "Flunitrazepam is a medicine used to treat severe insomnia (where legally available). Ultra-potent long-acting benzodiazepine GABA-A PAM: hypnotic power with deep amnesia and a long tail. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
   patientEducationPoints: [
-    "This medicine is for short-term or carefully planned use — it can cause dependence within weeks of regular use.",
-    "Never mix it with opioid painkillers or alcohol — the combination can stop breathing.",
+    "This medicine is for short-term or carefully planned use. It can cause dependence within weeks of regular use.",
+    "Never mix it with opioid painkillers or alcohol: the combination can stop breathing.",
     "Do not drive until you know how it affects you.",
-    "Stopping must be gradual — never stop suddenly after regular use.",
-    "Benefit from Flunitrazepam builds over weeks — do not judge it in the first days.",
+    "Stopping must be gradual, never stop suddenly after regular use.",
+    "Benefit from Flunitrazepam builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The regulatory arc: medical hypnotic → misuse notoriety → blue-dye reformulation → bans — pharmacology meeting society.",
-    "Potency ceiling of the class: ~10× diazepam mg-for-mg with deep amnesia — powerful medicine and dangerous tool.",
+    "The regulatory arc: medical hypnotic → misuse notoriety → blue-dye reformulation → bans; pharmacology meeting society.",
+    "Potency ceiling of the class: ~10× diazepam mg-for-mg with deep amnesia; powerful medicine and dangerous tool.",
     "Forensic awareness: amnesia + delayed detection drove formulation changes; detection windows matter in assault workups.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Flunitrazepam: Ultra-potent long-acting benzodiazepine GABA-A PAM — hypnotic power with deep amnesia and a long tail.",
+        "Mechanism of Flunitrazepam: Ultra-potent long-acting benzodiazepine GABA-A PAM; hypnotic power with deep amnesia and a long tail.",
         "Uses of Flunitrazepam: Severe insomnia (where legally available); Pre-anaesthetic sedation (historic)",
         "Ultra-potent long-acting benzodiazepine hypnotic (Rohypnol).",
         "1–2 mg = 8+ h deep sleep with profound amnesia.",
@@ -280,7 +280,7 @@ export const flunitrazepam: Drug = {
         "Outline the monitoring plan: Respiratory status and sedation (Clinical review each visit); Dependence review (Every visit for long-term users); Fall risk review (elderly) (Every visit in older patients)",
       ],
       longAnswer: [
-        "Flunitrazepam: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Flunitrazepam: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Ultra-potent long-acting benzodiazepine hypnotic (Rohypnol).",
         "1–2 mg = 8+ h deep sleep with profound amnesia.",
       ],
@@ -291,7 +291,7 @@ export const flunitrazepam: Drug = {
         "1–2 mg = 8+ h deep sleep with profound amnesia.",
         "The misuse/date-rape notoriety → Schedule controls, blue-dye formulation, US ban.",
         "Rarely a therapeutic choice anywhere today.",
-        "Mechanism: GABA-A positive allosteric modulation — amplified natural inhibition.",
+        "Mechanism: GABA-A positive allosteric modulation; amplified natural inhibition.",
       ],
       pyqConcepts: [
         "Mechanism/target of Flunitrazepam",
@@ -301,21 +301,21 @@ export const flunitrazepam: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Flunitrazepam develops respiratory depression (potentiated by opioids/alcohol) — next best step?",
+        "A patient on Flunitrazepam develops respiratory depression (potentiated by opioids/alcohol): next best step?",
         "When to choose Flunitrazepam over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: GABA-A benzodiazepine site (ultra-high-potency PAM) — long-acting",
+        "Primary target: GABA-A benzodiazepine site (ultra-high-potency PAM), long-acting",
         "Most common side effects: Deep sedation with hangover, Anterograde amnesia, Muscle weakness, ataxia",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The regulatory arc: medical hypnotic → misuse notoriety → blue-dye reformulation → bans — pharmacology meeting society.",
-        "Potency ceiling of the class: ~10× diazepam mg-for-mg with deep amnesia — powerful medicine and dangerous tool.",
+        "The regulatory arc: medical hypnotic → misuse notoriety → blue-dye reformulation → bans; pharmacology meeting society.",
+        "Potency ceiling of the class: ~10× diazepam mg-for-mg with deep amnesia; powerful medicine and dangerous tool.",
         "Forensic awareness: amnesia + delayed detection drove formulation changes; detection windows matter in assault workups.",
       ],
     },
@@ -326,12 +326,12 @@ export const flunitrazepam: Drug = {
     "1–2 mg = 8+ h deep sleep with profound amnesia.",
     "The misuse/date-rape notoriety → Schedule controls, blue-dye formulation, US ban.",
     "Rarely a therapeutic choice anywhere today.",
-    "Mechanism: GABA-A positive allosteric modulation — amplified natural inhibition.",
+    "Mechanism: GABA-A positive allosteric modulation; amplified natural inhibition.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — severe insomnia (where legally available)",
+      title: "First presentation: severe insomnia (where legally available)",
       presentation: "A patient presenting with severe insomnia (where legally available), started on Flunitrazepam.",
       history: "A adult patient presents with a severe insomnia (where legally available) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with severe insomnia (where legally available); physical examination and baseline investigations are unremarkable.",
@@ -340,7 +340,7 @@ export const flunitrazepam: Drug = {
       management: "Started at 1 mg at bedtime, titrated to 1–2 mg with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Flunitrazepam takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Flunitrazepam takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -349,12 +349,12 @@ export const flunitrazepam: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Benzodiazepine Hypnotic comparison — choosing within the class",
+      title: "Benzodiazepine Hypnotic comparison: choosing within the class",
       primaryDrug: "Flunitrazepam",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "GABA-A benzodiazepine site (ultra-high-potency PAM) — long-acting",
+          primaryValue: "GABA-A benzodiazepine site (ultra-high-potency PAM): long-acting",
           comparisons: [
             {
               drug: "Temazepam",
@@ -442,15 +442,15 @@ export const flunitrazepam: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The strictly-controlled potent hypnotic — pharmacology's misuse lesson",
+          primaryValue: "The strictly-controlled potent hypnotic: pharmacology's misuse lesson",
           comparisons: [
             {
               drug: "Temazepam",
-              value: "The classic benzodiazepine hypnotic — full power, full class risks",
+              value: "The classic benzodiazepine hypnotic: full power, full class risks",
             },
             {
               drug: "Triazolam",
-              value: "The benzodiazepine zolpidem — onset-only, amnesia-prone",
+              value: "The benzodiazepine zolpidem: onset-only, amnesia-prone",
             },
             {
               drug: "Estazolam",
@@ -463,7 +463,7 @@ export const flunitrazepam: Drug = {
           ],
         },
       ],
-      takeaway: "All benzodiazepine hypnotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All benzodiazepine hypnotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -472,7 +472,7 @@ export const flunitrazepam: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Flunitrazepam reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (ultra-high-potency PAM) — long-acting). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Flunitrazepam reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (ultra-high-potency PAM), long-acting). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -508,7 +508,7 @@ export const flunitrazepam: Drug = {
   faqs: [
     {
       question: "How long does Flunitrazepam take to work?",
-      answer: "20–30 minutes.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "20–30 minutes.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Flunitrazepam?",
@@ -516,19 +516,19 @@ export const flunitrazepam: Drug = {
     },
     {
       question: "Can I stop Flunitrazepam suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Flunitrazepam habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Flunitrazepam exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Flunitrazepam exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Flunitrazepam during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Flunitrazepam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Flunitrazepam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -642,7 +642,7 @@ export const flunitrazepam: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "GABA-A benzodiazepine site (ultra-high-potency PAM) — long-acting",
+      label: "GABA-A benzodiazepine site (ultra-high-potency PAM): long-acting",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
@@ -666,7 +666,7 @@ export const flunitrazepam: Drug = {
       note: "Important safety issue",
     },
     {
-      label: "Dependence — rapid and severe",
+      label: "Dependence: rapid and severe",
       type: "side-effect",
       href: "#side-effects",
       note: "Important safety issue",
@@ -678,7 +678,7 @@ export const flunitrazepam: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Flunitrazepam",
+      label: "Patient Guide. Flunitrazepam",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -686,13 +686,13 @@ export const flunitrazepam: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The infamous one — Rohypnol: potent hypnotic benzo, strict controls, and a pharmacology lesson in misuse.",
-    summary: "Flunitrazepam is a prescription medicine used to treat severe insomnia (where legally available). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Flunitrazepam is a medicine used to treat severe insomnia (where legally available). Ultra-potent long-acting benzodiazepine GABA-A PAM — hypnotic power with deep amnesia and a long tail. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
-    sideEffects: "The most common side effects are: deep sedation with hangover, anterograde amnesia, muscle weakness, ataxia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression (potentiated by opioids/alcohol) and Dependence — rapid and severe. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The infamous one. Rohypnol: potent hypnotic benzo, strict controls, and a pharmacology lesson in misuse.",
+    summary: "Flunitrazepam is a prescription medicine used to treat severe insomnia (where legally available). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Flunitrazepam is a medicine used to treat severe insomnia (where legally available). Ultra-potent long-acting benzodiazepine GABA-A PAM: hypnotic power with deep amnesia and a long tail. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+    sideEffects: "The most common side effects are: deep sedation with hangover, anterograde amnesia, muscle weakness, ataxia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression (potentiated by opioids/alcohol) and Dependence; rapid and severe. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, Older antihistamines (sedating). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, Older antihistamines (sedating). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -706,7 +706,7 @@ export const flunitrazepam: Drug = {
     ],
     typicalDoses: "1–2 mg at bedtime (rarely appropriate).",
     prescribingScenarios: [
-      "Essentially historical in Indian practice — restricted control.",
+      "Essentially historical in Indian practice: restricted control.",
     ],
     availability: {
       governmentHospitals: true,
@@ -716,7 +716,7 @@ export const flunitrazepam: Drug = {
     },
     costCategory: "moderate",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: [
       "Strict controlled dispensing; amnesia counselling explicit.",
     ],
@@ -752,19 +752,19 @@ export const flunitrazepam: Drug = {
         name: "Flunitrazepam",
         slug: "flunitrazepam",
         relationship: "This guide",
-        distinguishing: "The strictly-controlled potent hypnotic — pharmacology's misuse lesson",
+        distinguishing: "The strictly-controlled potent hypnotic: pharmacology's misuse lesson",
       },
       {
         name: "Temazepam",
         slug: "temazepam",
         relationship: "Same class (Benzodiazepine Hypnotic)",
-        distinguishing: "The classic benzodiazepine hypnotic — full power, full class risks",
+        distinguishing: "The classic benzodiazepine hypnotic: full power, full class risks",
       },
       {
         name: "Triazolam",
         slug: "triazolam",
         relationship: "Same class (Benzodiazepine Hypnotic)",
-        distinguishing: "The benzodiazepine zolpidem — onset-only, amnesia-prone",
+        distinguishing: "The benzodiazepine zolpidem: onset-only, amnesia-prone",
       },
       {
         name: "Estazolam",
@@ -782,7 +782,7 @@ export const flunitrazepam: Drug = {
         name: "Quazepam",
         slug: "quazepam",
         relationship: "Same class (Benzodiazepine Hypnotic)",
-        distinguishing: "The alpha-1-selective benzodiazepine — a pharmacology bridge",
+        distinguishing: "The alpha-1-selective benzodiazepine: a pharmacology bridge",
       },
     ],
   },
@@ -930,7 +930,7 @@ export const flunitrazepam: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Flunitrazepam in two sentences.",
-      answer: "Ultra-potent long-acting benzodiazepine GABA-A PAM — hypnotic power with deep amnesia and a long tail. Net effect: Sleep promotion via the described target.",
+      answer: "Ultra-potent long-acting benzodiazepine GABA-A PAM: hypnotic power with deep amnesia and a long tail. Net effect: Sleep promotion via the described target.",
       topic: "Mechanism",
     },
     {
@@ -950,7 +950,7 @@ export const flunitrazepam: Drug = {
     },
     {
       question: "Share one clinical pearl about Flunitrazepam that separates safe prescribers from unsafe ones.",
-      answer: "The regulatory arc: medical hypnotic → misuse notoriety → blue-dye reformulation → bans — pharmacology meeting society.",
+      answer: "The regulatory arc: medical hypnotic → misuse notoriety → blue-dye reformulation → bans; pharmacology meeting society.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1026,7 +1026,7 @@ export const flunitrazepam: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1071,7 +1071,7 @@ export const flunitrazepam: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Flunitrazepam works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Flunitrazepam works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1087,7 +1087,7 @@ export const flunitrazepam: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Flunitrazepam safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Flunitrazepam safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1130,7 +1130,7 @@ export const flunitrazepam: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Flunitrazepam follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Flunitrazepam follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1158,11 +1158,11 @@ export const flunitrazepam: Drug = {
       "Know it for forensics and pharmacology; never initiate therapeutically where alternatives exist.",
     ],
     overdose: [
-      "Overdose with Flunitrazepam is managed supportively — no specific antidote.",
+      "Overdose with Flunitrazepam is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Flunitrazepam is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1197,14 +1197,14 @@ export const flunitrazepam: Drug = {
     potentialDisadvantages: ["Notoriety + strict controls.", "Amnesia and misuse profile.", "Long metabolite tail.", "Banned/restricted in most countries."],
     primaryTargetSymptoms: ["Severe insomnia (strict control only)"],
     pearls: [
-      "The regulatory arc: medical hypnotic → misuse notoriety → blue-dye reformulation → bans — pharmacology meeting society.",
-      "Potency ceiling of the class: ~10× diazepam mg-for-mg with deep amnesia — powerful medicine and dangerous tool.",
+      "The regulatory arc: medical hypnotic → misuse notoriety → blue-dye reformulation → bans; pharmacology meeting society.",
+      "Potency ceiling of the class: ~10× diazepam mg-for-mg with deep amnesia; powerful medicine and dangerous tool.",
       "Forensic awareness: amnesia + delayed detection drove formulation changes; detection windows matter in assault workups.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

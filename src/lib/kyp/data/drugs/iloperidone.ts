@@ -23,14 +23,14 @@ export const iloperidone: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Atypical Antipsychotics", "Iloperidone"],
   /* ---- Hero / summary ---- */
-  tagline: "The orthostasis-first atypical — slow titration as the price of alpha-1 blockade.",
-  summary: "Iloperidone is a piperidinyl-benzozazole atypical antipsychotic with D2/5-HT2A antagonism and pronounced alpha-1 blockade: its orthostatic hypotension demands slow titration from a low start — the defining practical feature — with QT caution and moderate metabolic risk completing the American-market profile.",
+  tagline: "The orthostasis-first atypical: slow titration as the price of alpha-1 blockade.",
+  summary: "Iloperidone is a piperidinyl-benzozazole atypical antipsychotic with D2/5-HT2A antagonism and pronounced alpha-1 blockade: its orthostatic hypotension demands slow titration from a low start (the defining practical feature) with QT caution and moderate metabolic risk completing the American-market profile.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Iloperidone — from its molecular target (D2 (antagonist) + 5-HT2A (antagonist) + alpha-1 (pronounced)) to clinical effect.",
+    "Explain the mechanism of action of Iloperidone, from its molecular target (D2 (antagonist) + 5-HT2A (antagonist) + alpha-1 (pronounced)) to clinical effect.",
     "List the FDA-approved and off-label uses of Iloperidone.",
     "Predict the common and serious side effects of Iloperidone from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Iloperidone.",
@@ -38,15 +38,15 @@ export const iloperidone: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Iloperidone blocks D2 and 5-HT2A with marked alpha-1 antagonism — orthostasis-managed atypical pharmacology.",
+    summary: "Iloperidone blocks D2 and 5-HT2A with marked alpha-1 antagonism: orthostasis-managed atypical pharmacology.",
     molecularTarget: "D2 (antagonist) + 5-HT2A (antagonist) + alpha-1 (pronounced)",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Iloperidone blocks D2 and 5-HT2A with marked alpha-1 antagonism — orthostasis-managed atypical pharmacology.",
+      "Iloperidone blocks D2 and 5-HT2A with marked alpha-1 antagonism: orthostasis-managed atypical pharmacology.",
       "The mechanism translates into the clinical profile described.",
       "Practical use follows half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 18-33 hours (BD dosing). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 18-33 hours (BD dosing). See mechanism and prescriber sections.",
     halfLife: "18-33 hours (BD dosing).",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -126,7 +126,7 @@ export const iloperidone: Drug = {
         label: "5-HT2A-mediated benefit",
       },
     ],
-    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms — the serotonin-dopamine hypothesis of atypical antipsychotics.",
+    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms: the serotonin-dopamine hypothesis of atypical antipsychotics.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Dopamine (DA)", "Serotonin (5-HT)", "Norepinephrine (NE)"],
@@ -160,7 +160,7 @@ export const iloperidone: Drug = {
       name: "Orthostatic hypotension",
       frequency: "very-common",
       severity: "moderate",
-      description: "The first-week defining effect — the reason titration is slow and standing is taught.",
+      description: "The first-week defining effect: the reason titration is slow and standing is taught.",
       management: "Slow titration (the label IS the schedule); stand-slowly counselling.",
     },
     {
@@ -230,7 +230,7 @@ export const iloperidone: Drug = {
     {
       drug: "Antihypertensives",
       severity: "major",
-      mechanism: "Additive hypotension — the alpha-1 interaction.",
+      mechanism: "Additive hypotension: the alpha-1 interaction.",
       action: "Monitor standing BP.",
     },
   ],
@@ -241,42 +241,42 @@ export const iloperidone: Drug = {
   renalAdjustment: "No adjustment.",
   hepaticAdjustment: "Reduce dose in hepatic impairment.",
   /* ---- Education ---- */
-  patientExplanation: "Iloperidone is an American-market antipsychotic for schizophrenia. Because it can drop blood pressure on standing, it is started at a very small dose and doubled every two days — the slow build-up is a safety feature, and standing up slowly in the first weeks is the main instruction.",
+  patientExplanation: "Iloperidone is an American-market antipsychotic for schizophrenia. Because it can drop blood pressure on standing, it is started at a very small dose and doubled every two days. The slow build-up is a safety feature, and standing up slowly in the first weeks is the main instruction.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Iloperidone builds over weeks — do not judge it in the first days.",
+    "Benefit from Iloperidone builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The titration IS the drug: from 1 mg bd doubling every 2 days — the slowest mandated start among atypicals, all because of alpha-1 orthostasis.",
-    "The alpha-1 explanation: iloperidone's hypotension exceeds its EPS — the mirror image of haloperidol.",
-    "The 2D6/3A4 double metabolism: inhibitors raise levels (and QT) — the combination audit applies.",
-    "Slow titration buys orthostatic safety at the price of a week before antipsychotic dose — plan the bridge.",
+    "The titration IS the drug: from 1 mg bd doubling every 2 days; the slowest mandated start among atypicals, all because of alpha-1 orthostasis.",
+    "The alpha-1 explanation: iloperidone's hypotension exceeds its EPS; the mirror image of haloperidol.",
+    "The 2D6/3A4 double metabolism: inhibitors raise levels (and QT); the combination audit applies.",
+    "Slow titration buys orthostatic safety at the price of a week before antipsychotic dose: plan the bridge.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Iloperidone: Iloperidone blocks D2 and 5-HT2A with marked alpha-1 antagonism — orthostasis-managed atypical pharmacology.",
+        "Mechanism of Iloperidone: Iloperidone blocks D2 and 5-HT2A with marked alpha-1 antagonism; orthostasis-managed atypical pharmacology.",
         "Uses of Iloperidone: Schizophrenia (USA)",
         "Mechanism: D2/5-HT2A antagonist with PRONOUNCED alpha-1 blockade.",
-        "The orthostasis-first profile — slow-doubling titration is the label.",
+        "The orthostasis-first profile: slow-doubling titration is the label.",
       ],
       practical: [
         "Prescribe Iloperidone for schizophrenia (usa) with dose, timing, and duration.",
         "Outline the monitoring plan: Orthostatic BP (titration weeks) (Each titration visit); Weight/metabolic panel (Baseline and periodically)",
       ],
       longAnswer: [
-        "Iloperidone: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Iloperidone: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: D2/5-HT2A antagonist with PRONOUNCED alpha-1 blockade.",
-        "The orthostasis-first profile — slow-doubling titration is the label.",
+        "The orthostasis-first profile: slow-doubling titration is the label.",
       ],
     },
     neetPg: {
       highYield: [
         "Mechanism: D2/5-HT2A antagonist with PRONOUNCED alpha-1 blockade.",
-        "The orthostasis-first profile — slow-doubling titration is the label.",
+        "The orthostasis-first profile: slow-doubling titration is the label.",
         "Dose 12-24 mg/day after titration; EPS modest.",
         "QT caution with 2D6/3A4 inhibitors.",
         "FDA-approved (USA); limited availability elsewhere.",
@@ -289,7 +289,7 @@ export const iloperidone: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Iloperidone develops qt prolongation (modest) — next best step?",
+        "A patient on Iloperidone develops qt prolongation (modest): next best step?",
         "When to choose Iloperidone over alternatives in its class.",
       ],
     },
@@ -302,17 +302,17 @@ export const iloperidone: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The titration IS the drug: from 1 mg bd doubling every 2 days — the slowest mandated start among atypicals, all because of alpha-1 orthostasis.",
-        "The alpha-1 explanation: iloperidone's hypotension exceeds its EPS — the mirror image of haloperidol.",
-        "The 2D6/3A4 double metabolism: inhibitors raise levels (and QT) — the combination audit applies.",
-        "Slow titration buys orthostatic safety at the price of a week before antipsychotic dose — plan the bridge.",
+        "The titration IS the drug: from 1 mg bd doubling every 2 days; the slowest mandated start among atypicals, all because of alpha-1 orthostasis.",
+        "The alpha-1 explanation: iloperidone's hypotension exceeds its EPS; the mirror image of haloperidol.",
+        "The 2D6/3A4 double metabolism: inhibitors raise levels (and QT); the combination audit applies.",
+        "Slow titration buys orthostatic safety at the price of a week before antipsychotic dose: plan the bridge.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
     "Mechanism: D2/5-HT2A antagonist with PRONOUNCED alpha-1 blockade.",
-    "The orthostasis-first profile — slow-doubling titration is the label.",
+    "The orthostasis-first profile: slow-doubling titration is the label.",
     "Dose 12-24 mg/day after titration; EPS modest.",
     "QT caution with 2D6/3A4 inhibitors.",
     "FDA-approved (USA); limited availability elsewhere.",
@@ -320,7 +320,7 @@ export const iloperidone: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia (usa)",
+      title: "First presentation: schizophrenia (usa)",
       presentation: "A patient presenting with schizophrenia (usa), started on Iloperidone.",
       history: "A adult patient presents with a schizophrenia (usa) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with schizophrenia (usa); physical examination and baseline investigations are unremarkable.",
@@ -329,7 +329,7 @@ export const iloperidone: Drug = {
       management: "Started at 1 mg twice daily × 3 days, titrated to 12-24 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Iloperidone takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Iloperidone takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -338,7 +338,7 @@ export const iloperidone: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Atypical Antipsychotic comparison — choosing within the class",
+      title: "Atypical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Iloperidone",
       rows: [
         {
@@ -413,7 +413,7 @@ export const iloperidone: Drug = {
           comparisons: [
             {
               drug: "Aripiprazole",
-              value: "Low; can be activating — insomnia is more common than somnolence.",
+              value: "Low; can be activating: insomnia is more common than somnolence.",
             },
             {
               drug: "Clozapine",
@@ -421,38 +421,38 @@ export const iloperidone: Drug = {
             },
             {
               drug: "Lurasidone",
-              value: "Low — may be mildly activating.",
+              value: "Low: may be mildly activating.",
             },
             {
               drug: "Olanzapine",
-              value: "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+              value: "Moderate to high: usually transient at a given dose but dose-limiting for many patients.",
             },
           ],
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The orthostasis-managed atypical — titration is the drug",
+          primaryValue: "The orthostasis-managed atypical: titration is the drug",
           comparisons: [
             {
               drug: "Aripiprazole",
-              value: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+              value: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
             },
             {
               drug: "Clozapine",
-              value: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+              value: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
             },
             {
               drug: "Lurasidone",
-              value: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+              value: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
             },
             {
               drug: "Olanzapine",
-              value: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+              value: "Most robust broad-spectrum atypical: heaviest metabolic burden",
             },
           ],
         },
       ],
-      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -461,7 +461,7 @@ export const iloperidone: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Iloperidone reaches peak plasma concentration and begins acting at its molecular target (D2 (antagonist) + 5-HT2A (antagonist) + alpha-1 (pronounced)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Iloperidone reaches peak plasma concentration and begins acting at its molecular target (D2 (antagonist) + 5-HT2A (antagonist) + alpha-1 (pronounced)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -497,7 +497,7 @@ export const iloperidone: Drug = {
   faqs: [
     {
       question: "How long does Iloperidone take to work?",
-      answer: "Antipsychotic dose reached after the week-long titration; response 1-3 weeks after.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Antipsychotic dose reached after the week-long titration; response 1-3 weeks after.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Iloperidone?",
@@ -505,11 +505,11 @@ export const iloperidone: Drug = {
     },
     {
       question: "Can I stop Iloperidone suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Iloperidone habit-forming?",
@@ -517,7 +517,7 @@ export const iloperidone: Drug = {
     },
     {
       question: "Can I take Iloperidone during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Iloperidone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Iloperidone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -669,7 +669,7 @@ export const iloperidone: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Iloperidone",
+      label: "Patient Guide. Iloperidone",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -677,13 +677,13 @@ export const iloperidone: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The orthostasis-first atypical — slow titration as the price of alpha-1 blockade.",
-    summary: "Iloperidone is a prescription medicine used to treat schizophrenia (usa). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Iloperidone is an American-market antipsychotic for schizophrenia. Because it can drop blood pressure on standing, it is started at a very small dose and doubled every two days — the slow build-up is a safety feature, and standing up slowly in the first weeks is the main instruction.",
-    sideEffects: "The most common side effects are: orthostatic hypotension, dizziness and tachycardia, sedation and dry mouth, weight gain (moderate). These usually appear early and many settle with time. Serious effects are uncommon but important to know: QT prolongation (modest) and Syncope with injury (first weeks). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: orthostatic bp (titration weeks) (each titration visit); weight/metabolic panel (baseline and periodically). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The orthostasis-first atypical: slow titration as the price of alpha-1 blockade.",
+    summary: "Iloperidone is a prescription medicine used to treat schizophrenia (usa). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Iloperidone is an American-market antipsychotic for schizophrenia. Because it can drop blood pressure on standing, it is started at a very small dose and doubled every two days. The slow build-up is a safety feature, and standing up slowly in the first weeks is the main instruction.",
+    sideEffects: "The most common side effects are: orthostatic hypotension, dizziness and tachycardia, sedation and dry mouth, weight gain (moderate). These usually appear early and many settle with time. Serious effects are uncommon but important to know: QT prolongation (modest) and Syncope with injury (first weeks). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: orthostatic bp (titration weeks) (each titration visit); weight/metabolic panel (baseline and periodically). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: CYP2D6 + 3A4 combined inhibitors, QT-prolonging drugs, Antihypertensives. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: CYP2D6 + 3A4 combined inhibitors, QT-prolonging drugs, Antihypertensives. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -705,7 +705,7 @@ export const iloperidone: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -739,55 +739,55 @@ export const iloperidone: Drug = {
         name: "Iloperidone",
         slug: "iloperidone",
         relationship: "This guide",
-        distinguishing: "The orthostasis-managed atypical — titration is the drug",
+        distinguishing: "The orthostasis-managed atypical: titration is the drug",
       },
       {
         name: "Aripiprazole",
         slug: "aripiprazole",
         relationship: "Same class (Dopamine Stabiliser)",
-        distinguishing: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+        distinguishing: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
       },
       {
         name: "Clozapine",
         slug: "clozapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
       },
       {
         name: "Lurasidone",
         slug: "lurasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+        distinguishing: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
       },
       {
         name: "Olanzapine",
         slug: "olanzapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+        distinguishing: "Most robust broad-spectrum atypical: heaviest metabolic burden",
       },
       {
         name: "Paliperidone",
         slug: "paliperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The LAI platform king — monthly to 6-monthly injections for schizophrenia",
+        distinguishing: "The LAI platform king: monthly to 6-monthly injections for schizophrenia",
       },
       {
         name: "Quetiapine",
         slug: "quetiapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin — the sedating antidepressant-antipsychotic",
+        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin: the sedating antidepressant-antipsychotic",
       },
       {
         name: "Risperidone",
         slug: "risperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most potent D2 blockade among atypicals — highest prolactin, best-studied LAI",
+        distinguishing: "Most potent D2 blockade among atypicals: highest prolactin, best-studied LAI",
       },
       {
         name: "Ziprasidone",
         slug: "ziprasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic — with QT vigilance",
+        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic, with QT vigilance",
       },
     ],
   },
@@ -935,7 +935,7 @@ export const iloperidone: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Iloperidone in two sentences.",
-      answer: "Iloperidone blocks D2 and 5-HT2A with marked alpha-1 antagonism — orthostasis-managed atypical pharmacology. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Iloperidone blocks D2 and 5-HT2A with marked alpha-1 antagonism: orthostasis-managed atypical pharmacology. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -955,7 +955,7 @@ export const iloperidone: Drug = {
     },
     {
       question: "Share one clinical pearl about Iloperidone that separates safe prescribers from unsafe ones.",
-      answer: "The titration IS the drug: from 1 mg bd doubling every 2 days — the slowest mandated start among atypicals, all because of alpha-1 orthostasis.",
+      answer: "The titration IS the drug: from 1 mg bd doubling every 2 days; the slowest mandated start among atypicals, all because of alpha-1 orthostasis.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1031,7 +1031,7 @@ export const iloperidone: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1076,7 +1076,7 @@ export const iloperidone: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Iloperidone works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Iloperidone works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1092,7 +1092,7 @@ export const iloperidone: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Iloperidone safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Iloperidone safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1137,7 +1137,7 @@ export const iloperidone: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Iloperidone follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Iloperidone follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1165,7 +1165,7 @@ export const iloperidone: Drug = {
       "2D6/3A4 audit before combining.",
     ],
     overdose: [
-      "Overdose with Iloperidone is managed supportively — no specific antidote.",
+      "Overdose with Iloperidone is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Iloperidone is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1199,15 +1199,15 @@ export const iloperidone: Drug = {
     potentialDisadvantages: ["Orthostasis-driven slow titration.", "QT-combination cautions.", "Limited availability and experience."],
     primaryTargetSymptoms: ["Positive symptoms of schizophrenia"],
     pearls: [
-      "The titration IS the drug: from 1 mg bd doubling every 2 days — the slowest mandated start among atypicals, all because of alpha-1 orthostasis.",
-      "The alpha-1 explanation: iloperidone's hypotension exceeds its EPS — the mirror image of haloperidol.",
-      "The 2D6/3A4 double metabolism: inhibitors raise levels (and QT) — the combination audit applies.",
-      "Slow titration buys orthostatic safety at the price of a week before antipsychotic dose — plan the bridge.",
+      "The titration IS the drug: from 1 mg bd doubling every 2 days; the slowest mandated start among atypicals, all because of alpha-1 orthostasis.",
+      "The alpha-1 explanation: iloperidone's hypotension exceeds its EPS; the mirror image of haloperidol.",
+      "The 2D6/3A4 double metabolism: inhibitors raise levels (and QT); the combination audit applies.",
+      "Slow titration buys orthostatic safety at the price of a week before antipsychotic dose: plan the bridge.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

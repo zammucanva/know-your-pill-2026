@@ -77,8 +77,8 @@ export function CourseReferences({ course }: { course: PsychiatryCourse }) {
       <Container width="narrow">
         <SectionHeader
           eyebrow="References"
-          title="Sources — clean and checkable."
-          description={`KYP content review: ${course.lastReviewed}. Each course is an original rewrite of its mapped source chapter, supplemented by KYP-researched references (guidelines, trials, surveys) — every claim is internally mapped to these sources.`}
+          title="Sources: clean and checkable."
+          description={`KYP content review: ${course.lastReviewed}. Each course is an original rewrite of its mapped source chapter, supplemented by KYP-researched references (guidelines, trials, surveys). Every claim is internally mapped to these sources.`}
           align="start"
         />
         <div className="mt-10 space-y-6">
@@ -123,7 +123,7 @@ export function CourseReferences({ course }: { course: PsychiatryCourse }) {
           })}
           <div className="rounded-xl border border-border/70 bg-muted/30 p-4 text-center">
             <p className="text-caption leading-relaxed text-muted-foreground">
-              Educational content only — not medical advice. Clinical decisions belong to treating
+              Educational content only, not medical advice. Clinical decisions belong to treating
               clinicians with their patients. Full provenance (per-claim source mapping, editions,
               review dates) is maintained internally in the KYP content registry.
             </p>
@@ -222,7 +222,7 @@ export function CourseNextStep({
                     Test yourself <ArrowRight className="h-3.5 w-3.5" aria-hidden />
                   </p>
                   <p className="mt-1.5 text-caption leading-relaxed text-muted-foreground">
-                    719 authored self-test questions with explanations — mixed across the whole
+                    719 authored self-test questions with explanations: mixed across the whole
                     curriculum.
                   </p>
                 </CardBody>
@@ -232,7 +232,7 @@ export function CourseNextStep({
         </div>
         <p className="mt-6 text-caption text-muted-foreground">
           <Library className="mr-1 inline h-3 w-3" aria-hidden />
-          Order follows the KYP Psychiatry curriculum —{" "}
+          Order follows the KYP Psychiatry curriculum:{" "}
           <Link
             href={`/psychiatry/library#group-${course.groupLetter}`}
             className="text-brand-ink underline underline-offset-4 hover:opacity-80"

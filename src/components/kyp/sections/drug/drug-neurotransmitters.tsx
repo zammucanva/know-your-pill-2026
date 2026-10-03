@@ -29,7 +29,7 @@ interface DrugNeurotransmittersProps {
 export function sigma1ReceptorNote(drug: Drug): string | undefined {
   const entry = drug.receptors.find((r) => /σ\s*1|sigma[-\s]?1/i.test(r));
   if (!entry) return undefined;
-  return `${drug.genericName}'s own receptor profile documents σ1 (sigma-1) activity — “${entry}”. The Knowledge Chain section connects this target to ${drug.genericName}'s wider pharmacology.`;
+  return `${drug.genericName}'s own receptor profile documents σ1 (sigma-1) activity: “${entry}”. The Knowledge Chain section connects this target to ${drug.genericName}'s wider pharmacology.`;
 }
 
 export function DrugNeurotransmitters({ drug }: DrugNeurotransmittersProps) {

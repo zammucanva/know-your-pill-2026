@@ -23,14 +23,14 @@ export const clonidine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "ADHD Medications", "Alpha-2 Agonists", "Clonidine"],
   /* ---- Hero / summary ---- */
-  tagline: "The alpha-2 agonist — blood-pressure medicine turned 24-hour ADHD and tic helper.",
-  summary: "Clonidine is a central alpha-2 adrenergic agonist (presynaptic inhibition of norepinephrine release) used in psychiatry for ADHD (especially hyperactive/impulsive and sleep-disrupting symptoms), tics, and stimulant-emergent aggression/insomnia — and in medicine for hypertension. Sedation is its daily texture; REBOUND HYPERTENSION on abrupt withdrawal is its signature danger.",
+  tagline: "The alpha-2 agonist: blood-pressure medicine turned 24-hour ADHD and tic helper.",
+  summary: "Clonidine is a central alpha-2 adrenergic agonist (presynaptic inhibition of norepinephrine release) used in psychiatry for ADHD (especially hyperactive/impulsive and sleep-disrupting symptoms), tics, and stimulant-emergent aggression/insomnia, and in medicine for hypertension. Sedation is its daily texture; REBOUND HYPERTENSION on abrupt withdrawal is its signature danger.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Clonidine — from its molecular target (Central alpha-2A adrenergic receptors (agonist — presynaptic autoinhibition)) to clinical effect.",
+    "Explain the mechanism of action of Clonidine (from its molecular target (Central alpha-2A adrenergic receptors (agonist) presynaptic autoinhibition)) to clinical effect.",
     "List the FDA-approved and off-label uses of Clonidine.",
     "Predict the common and serious side effects of Clonidine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Clonidine.",
@@ -38,15 +38,15 @@ export const clonidine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Clonidine agonises central alpha-2A receptors, damping locus coeruleus noradrenergic firing — sedation, anxiolysis, and ADHD hyperactivity reduction.",
-    molecularTarget: "Central alpha-2A adrenergic receptors (agonist — presynaptic autoinhibition)",
+    summary: "Clonidine agonises central alpha-2A receptors, damping locus coeruleus noradrenergic firing: sedation, anxiolysis, and ADHD hyperactivity reduction.",
+    molecularTarget: "Central alpha-2A adrenergic receptors (agonist, presynaptic autoinhibition)",
     effect: "Catecholamine and wake-system enhancement with the agent's characteristic profile.",
     steps: [
-      "Clonidine agonises central alpha-2A receptors, damping locus coeruleus noradrenergic firing — sedation, anxiolysis, and ADHD hyperactivity reduction.",
+      "Clonidine agonises central alpha-2A receptors, damping locus coeruleus noradrenergic firing: sedation, anxiolysis, and ADHD hyperactivity reduction.",
       "Prefrontal catecholamine enhancement sharpens attention and impulse control.",
       "The agent's formulation and half-life determine practical coverage.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 12-16 hours (IR); patch ~weekly. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 12-16 hours (IR); patch ~weekly. See mechanism and prescriber sections.",
     halfLife: "12-16 hours (IR); patch ~weekly.",
     metabolism: "Hepatic.",
     excretion: "Renal metabolites.",
@@ -97,7 +97,7 @@ export const clonidine: Drug = {
         label: "produces",
       },
     ],
-    caption: "Modulating noradrenergic signalling at its receptor — a mechanism-driven route to symptom control.",
+    caption: "Modulating noradrenergic signalling at its receptor: a mechanism-driven route to symptom control.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Norepinephrine (NE)"],
@@ -186,7 +186,7 @@ export const clonidine: Drug = {
       name: "Rebound hypertension on abrupt withdrawal",
       frequency: "common",
       severity: "severe",
-      description: "THE signature danger — sympathetic overshoot: tachycardia, hypertension, headache, anxiety.",
+      description: "THE signature danger: sympathetic overshoot: tachycardia, hypertension, headache, anxiety.",
       management: "Taper over days-weeks ALWAYS.",
     },
   ],
@@ -195,7 +195,7 @@ export const clonidine: Drug = {
       name: "Rebound hypertension / withdrawal syndrome",
       frequency: "common",
       severity: "severe",
-      description: "Abrupt cessation causes noradrenergic rebound — hypertensive urgency reported.",
+      description: "Abrupt cessation causes noradrenergic rebound: hypertensive urgency reported.",
       management: "Never stop abruptly; taper over 2-4 days minimum.",
     },
     {
@@ -254,26 +254,26 @@ export const clonidine: Drug = {
   renalAdjustment: "Reduce dose in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
-  patientExplanation: "Clonidine is a mild blood-pressure medicine that calms the brain's alarm system (noradrenaline). In ADHD it helps the overactive, impulsive end of the condition and improves sleep — often added to a morning stimulant. Its main effects are sleepiness, dry mouth, and a slower pulse — and it must NEVER be stopped suddenly, because blood pressure can rebound dangerously.",
+  patientExplanation: "Clonidine is a mild blood-pressure medicine that calms the brain's alarm system (noradrenaline). In ADHD it helps the overactive, impulsive end of the condition and improves sleep: often added to a morning stimulant. Its main effects are sleepiness, dry mouth, and a slower pulse, and it must NEVER be stopped suddenly, because blood pressure can rebound dangerously.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Clonidine builds over weeks — do not judge it in the first days.",
+    "Benefit from Clonidine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The taper rule is absolute: abrupt clonidine stop causes noradrenergic rebound — the class's signature emergency.",
-    "Bedtime-first dosing converts sedation into sleep benefit — the classic pairing with morning stimulant.",
-    "Not a first-line inattention monotherapy — its ADHD strength is hyperactivity/impulsivity and sleep disruption.",
-    "A missed patch is an abrupt withdrawal (fold and dispose safely — used patches still contain drug).",
+    "The taper rule is absolute: abrupt clonidine stop causes noradrenergic rebound; the class's signature emergency.",
+    "Bedtime-first dosing converts sedation into sleep benefit: the classic pairing with morning stimulant.",
+    "Not a first-line inattention monotherapy: its ADHD strength is hyperactivity/impulsivity and sleep disruption.",
+    "A missed patch is an abrupt withdrawal (fold and dispose safely, used patches still contain drug).",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Clonidine: Clonidine agonises central alpha-2A receptors, damping locus coeruleus noradrenergic firing — sedation, anxiolysis, and ADHD hyperactivity reduction.",
+        "Mechanism of Clonidine: Clonidine agonises central alpha-2A receptors, damping locus coeruleus noradrenergic firing; sedation, anxiolysis, and ADHD hyperactivity reduction.",
         "Uses of Clonidine: ADHD (ER monotherapy or adjunct); Hypertension; Tics / Tourette's (adjunct); Stimulant-emergent insomnia and aggression",
-        "Mechanism: central alpha-2A AGONIST — presynaptic NE autoinhibition (locus coeruleus damping).",
+        "Mechanism: central alpha-2A AGONIST; presynaptic NE autoinhibition (locus coeruleus damping).",
         "Uses: ADHD (ER approved), tics, stimulant-emergent insomnia, withdrawal states, hypertension.",
       ],
       practical: [
@@ -281,19 +281,19 @@ export const clonidine: Drug = {
         "Outline the monitoring plan: Heart rate and blood pressure (Baseline, then every visit); Sedation and school-day function (Every visit)",
       ],
       longAnswer: [
-        "Clonidine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: central alpha-2A AGONIST — presynaptic NE autoinhibition (locus coeruleus damping).",
+        "Clonidine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: central alpha-2A AGONIST; presynaptic NE autoinhibition (locus coeruleus damping).",
         "Uses: ADHD (ER approved), tics, stimulant-emergent insomnia, withdrawal states, hypertension.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: central alpha-2A AGONIST — presynaptic NE autoinhibition (locus coeruleus damping).",
+        "Mechanism: central alpha-2A AGONIST; presynaptic NE autoinhibition (locus coeruleus damping).",
         "Uses: ADHD (ER approved), tics, stimulant-emergent insomnia, withdrawal states, hypertension.",
-        "Signature danger: REBOUND HYPERTENSION on abrupt withdrawal — always taper.",
+        "Signature danger: REBOUND HYPERTENSION on abrupt withdrawal, always taper.",
         "Signature daily effects: sedation, dry mouth, bradycardia.",
         "ER dose 0.1-0.4 mg/day; IR 0.05-0.3 mg (paediatric).",
-        "Patches deliver weekly — a detached patch is a withdrawal event.",
+        "Patches deliver weekly: a detached patch is a withdrawal event.",
       ],
       pyqConcepts: [
         "Mechanism/target of Clonidine",
@@ -303,39 +303,39 @@ export const clonidine: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Clonidine develops rebound hypertension / withdrawal syndrome — next best step?",
+        "A patient on Clonidine develops rebound hypertension / withdrawal syndrome: next best step?",
         "When to choose Clonidine over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: Central alpha-2A adrenergic receptors (agonist — presynaptic autoinhibition)",
+        "Primary target: Central alpha-2A adrenergic receptors (agonist, presynaptic autoinhibition)",
         "Most common side effects: Sedation and drowsiness, Dry mouth, Dizziness and orthostatic symptoms",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The taper rule is absolute: abrupt clonidine stop causes noradrenergic rebound — the class's signature emergency.",
-        "Bedtime-first dosing converts sedation into sleep benefit — the classic pairing with morning stimulant.",
-        "Not a first-line inattention monotherapy — its ADHD strength is hyperactivity/impulsivity and sleep disruption.",
-        "A missed patch is an abrupt withdrawal (fold and dispose safely — used patches still contain drug).",
+        "The taper rule is absolute: abrupt clonidine stop causes noradrenergic rebound; the class's signature emergency.",
+        "Bedtime-first dosing converts sedation into sleep benefit: the classic pairing with morning stimulant.",
+        "Not a first-line inattention monotherapy: its ADHD strength is hyperactivity/impulsivity and sleep disruption.",
+        "A missed patch is an abrupt withdrawal (fold and dispose safely, used patches still contain drug).",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: central alpha-2A AGONIST — presynaptic NE autoinhibition (locus coeruleus damping).",
+    "Mechanism: central alpha-2A AGONIST; presynaptic NE autoinhibition (locus coeruleus damping).",
     "Uses: ADHD (ER approved), tics, stimulant-emergent insomnia, withdrawal states, hypertension.",
-    "Signature danger: REBOUND HYPERTENSION on abrupt withdrawal — always taper.",
+    "Signature danger: REBOUND HYPERTENSION on abrupt withdrawal, always taper.",
     "Signature daily effects: sedation, dry mouth, bradycardia.",
     "ER dose 0.1-0.4 mg/day; IR 0.05-0.3 mg (paediatric).",
-    "Patches deliver weekly — a detached patch is a withdrawal event.",
+    "Patches deliver weekly: a detached patch is a withdrawal event.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — adhd (er monotherapy or adjunct)",
+      title: "First presentation: adhd (er monotherapy or adjunct)",
       presentation: "A patient presenting with adhd (er monotherapy or adjunct), started on Clonidine.",
       history: "A adult patient presents with a adhd (er monotherapy or adjunct) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with adhd (er monotherapy or adjunct); physical examination and baseline investigations are unremarkable.",
@@ -344,7 +344,7 @@ export const clonidine: Drug = {
       management: "Started at 0.1 mg at bedtime, titrated to 0.1-0.2 mg twice daily with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Clonidine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Clonidine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -353,12 +353,12 @@ export const clonidine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Alpha-2 Agonist comparison — choosing within the class",
+      title: "Alpha-2 Agonist comparison: choosing within the class",
       primaryDrug: "Clonidine",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "Central alpha-2A adrenergic receptors (agonist — presynaptic autoinhibition)",
+          primaryValue: "Central alpha-2A adrenergic receptors (agonist, presynaptic autoinhibition)",
           comparisons: [
             {
               drug: "Guanfacine",
@@ -378,11 +378,11 @@ export const clonidine: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Weight neutral to reducing — appetite effects common.",
+          primaryValue: "Weight neutral to reducing: appetite effects common.",
           comparisons: [
             {
               drug: "Guanfacine",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
           ],
         },
@@ -398,16 +398,16 @@ export const clonidine: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The 24-hour ADHD/tic adjunct — sedating but non-stimulant",
+          primaryValue: "The 24-hour ADHD/tic adjunct: sedating but non-stimulant",
           comparisons: [
             {
               drug: "Guanfacine",
-              value: "The refined alpha-2 agonist — ER-approved for ADHD",
+              value: "The refined alpha-2 agonist. ER-approved for ADHD",
             },
           ],
         },
       ],
-      takeaway: "All alpha-2 agonists share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All alpha-2 agonists share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -416,7 +416,7 @@ export const clonidine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Clonidine reaches peak plasma concentration and begins acting at its molecular target (Central alpha-2A adrenergic receptors (agonist — presynaptic autoinhibition)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Clonidine reaches peak plasma concentration and begins acting at its molecular target (Central alpha-2A adrenergic receptors (agonist, presynaptic autoinhibition)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -452,7 +452,7 @@ export const clonidine: Drug = {
   faqs: [
     {
       question: "How long does Clonidine take to work?",
-      answer: "Sedation within the hour (IR); ADHD effects over 1-2 weeks.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Sedation within the hour (IR); ADHD effects over 1-2 weeks.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Clonidine?",
@@ -460,11 +460,11 @@ export const clonidine: Drug = {
     },
     {
       question: "Can I stop Clonidine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Clonidine habit-forming?",
@@ -472,7 +472,7 @@ export const clonidine: Drug = {
     },
     {
       question: "Can I take Clonidine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Clonidine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Clonidine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -568,7 +568,7 @@ export const clonidine: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "Central alpha-2A adrenergic receptors (agonist — presynaptic autoinhibition)",
+      label: "Central alpha-2A adrenergic receptors (agonist, presynaptic autoinhibition)",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
@@ -610,7 +610,7 @@ export const clonidine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Clonidine",
+      label: "Patient Guide. Clonidine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -618,13 +618,13 @@ export const clonidine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The alpha-2 agonist — blood-pressure medicine turned 24-hour ADHD and tic helper.",
-    summary: "Clonidine is a prescription medicine used to treat adhd (er monotherapy or adjunct). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Clonidine is a mild blood-pressure medicine that calms the brain's alarm system (noradrenaline). In ADHD it helps the overactive, impulsive end of the condition and improves sleep — often added to a morning stimulant. Its main effects are sleepiness, dry mouth, and a slower pulse — and it must NEVER be stopped suddenly, because blood pressure can rebound dangerously.",
-    sideEffects: "The most common side effects are: sedation and drowsiness, dry mouth, dizziness and orthostatic symptoms, bradycardia, constipation, rebound hypertension on abrupt withdrawal. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Rebound hypertension / withdrawal syndrome and Severe bradycardia/hypotension in combination. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline, then every visit); sedation and school-day function (every visit). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The alpha-2 agonist: blood-pressure medicine turned 24-hour ADHD and tic helper.",
+    summary: "Clonidine is a prescription medicine used to treat adhd (er monotherapy or adjunct). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Clonidine is a mild blood-pressure medicine that calms the brain's alarm system (noradrenaline). In ADHD it helps the overactive, impulsive end of the condition and improves sleep: often added to a morning stimulant. Its main effects are sleepiness, dry mouth, and a slower pulse, and it must NEVER be stopped suddenly, because blood pressure can rebound dangerously.",
+    sideEffects: "The most common side effects are: sedation and drowsiness, dry mouth, dizziness and orthostatic symptoms, bradycardia, constipation, rebound hypertension on abrupt withdrawal. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Rebound hypertension / withdrawal syndrome and Severe bradycardia/hypotension in combination. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: heart rate and blood pressure (baseline, then every visit); sedation and school-day function (every visit). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Beta-blockers, Tricyclic antidepressants, Antihypertensives. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Beta-blockers, Tricyclic antidepressants, Antihypertensives. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -686,13 +686,13 @@ export const clonidine: Drug = {
         name: "Clonidine",
         slug: "clonidine",
         relationship: "This guide",
-        distinguishing: "The 24-hour ADHD/tic adjunct — sedating but non-stimulant",
+        distinguishing: "The 24-hour ADHD/tic adjunct: sedating but non-stimulant",
       },
       {
         name: "Guanfacine",
         slug: "guanfacine",
         relationship: "Same class (Alpha-2 Agonist)",
-        distinguishing: "The refined alpha-2 agonist — ER-approved for ADHD",
+        distinguishing: "The refined alpha-2 agonist. ER-approved for ADHD",
       },
     ],
   },
@@ -840,7 +840,7 @@ export const clonidine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Clonidine in two sentences.",
-      answer: "Clonidine agonises central alpha-2A receptors, damping locus coeruleus noradrenergic firing — sedation, anxiolysis, and ADHD hyperactivity reduction. Net effect: Catecholamine and wake-system enhancement with the agent's characteristic profile.",
+      answer: "Clonidine agonises central alpha-2A receptors, damping locus coeruleus noradrenergic firing: sedation, anxiolysis, and ADHD hyperactivity reduction. Net effect: Catecholamine and wake-system enhancement with the agent's characteristic profile.",
       topic: "Mechanism",
     },
     {
@@ -850,7 +850,7 @@ export const clonidine: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Clonidine and how you would manage it.",
-      answer: "Rebound hypertension / withdrawal syndrome: Abrupt cessation causes noradrenergic rebound — hypertensive urgency reported. Management: Never stop abruptly; taper over 2-4 days minimum.",
+      answer: "Rebound hypertension / withdrawal syndrome: Abrupt cessation causes noradrenergic rebound; hypertensive urgency reported. Management: Never stop abruptly; taper over 2-4 days minimum.",
       topic: "Safety",
     },
     {
@@ -860,7 +860,7 @@ export const clonidine: Drug = {
     },
     {
       question: "Share one clinical pearl about Clonidine that separates safe prescribers from unsafe ones.",
-      answer: "The taper rule is absolute: abrupt clonidine stop causes noradrenergic rebound — the class's signature emergency.",
+      answer: "The taper rule is absolute: abrupt clonidine stop causes noradrenergic rebound; the class's signature emergency.",
       topic: "Clinical Pearls",
     },
   ],
@@ -936,7 +936,7 @@ export const clonidine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -981,7 +981,7 @@ export const clonidine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Clonidine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Clonidine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -997,7 +997,7 @@ export const clonidine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Clonidine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Clonidine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1042,7 +1042,7 @@ export const clonidine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Clonidine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Clonidine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1052,7 +1052,7 @@ export const clonidine: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Weight neutral to reducing — appetite effects common.",
+    weightGain: "Weight neutral to reducing: appetite effects common.",
     sedation: "Not sedating.",
     dosing: [
       {
@@ -1077,7 +1077,7 @@ export const clonidine: Drug = {
       "Morning stimulant + night clonidine is a classic pairing.",
     ],
     overdose: [
-      "Overdose with Clonidine is managed supportively — no specific antidote.",
+      "Overdose with Clonidine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Clonidine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1114,15 +1114,15 @@ export const clonidine: Drug = {
     potentialDisadvantages: ["Sedation.", "Rebound hypertension danger.", "Weak for pure inattention."],
     primaryTargetSymptoms: ["Hyperactivity/impulsivity", "ADHD-related sleep disruption", "Tics"],
     pearls: [
-      "The taper rule is absolute: abrupt clonidine stop causes noradrenergic rebound — the class's signature emergency.",
-      "Bedtime-first dosing converts sedation into sleep benefit — the classic pairing with morning stimulant.",
-      "Not a first-line inattention monotherapy — its ADHD strength is hyperactivity/impulsivity and sleep disruption.",
-      "A missed patch is an abrupt withdrawal (fold and dispose safely — used patches still contain drug).",
+      "The taper rule is absolute: abrupt clonidine stop causes noradrenergic rebound; the class's signature emergency.",
+      "Bedtime-first dosing converts sedation into sleep benefit: the classic pairing with morning stimulant.",
+      "Not a first-line inattention monotherapy: its ADHD strength is hyperactivity/impulsivity and sleep disruption.",
+      "A missed patch is an abrupt withdrawal (fold and dispose safely, used patches still contain drug).",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

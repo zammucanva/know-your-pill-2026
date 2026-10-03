@@ -164,8 +164,8 @@ export function Footer() {
 
             <p className="text-caption text-muted-foreground/75 leading-relaxed max-w-3xl">
               <strong className="text-muted-foreground">Copyright:</strong>{" "}
-              © 2026 Zamaan Ali Shamji. All content on this site — including
-              drug pages, disease modules, and educational text — is protected
+              © 2026 Zamaan Ali Shamji. All content on this site, including
+              drug pages, disease modules, and educational text: is protected
               by copyright and may not be reproduced, republished, or
               redistributed without written permission. See{" "}
               <Link

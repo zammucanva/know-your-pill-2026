@@ -163,7 +163,7 @@ export default function MistakeBookPage() {
                 <p className="mt-6 max-w-xl text-body-lg text-muted-foreground leading-relaxed">
                   Questions you answer incorrectly in practice and custom
                   tests are kept here, so you can come back to exactly
-                  those — with the section that teaches each one. Miss
+                  those, with the section that teaches each one. Miss
                   something, and this page remembers it for you.
                 </p>
               </Reveal>
@@ -220,7 +220,7 @@ export default function MistakeBookPage() {
               <p className="mt-6 max-w-xl text-body-lg text-muted-foreground leading-relaxed">
                 Every question you&apos;ve answered incorrectly in practice
                 and custom tests, kept on this device. Answer one correctly
-                later and it leaves this list on its own — or clear it
+                later and it leaves this list on its own, or clear it
                 yourself once you&apos;re confident.
               </p>
             </Reveal>
@@ -382,7 +382,7 @@ export default function MistakeBookPage() {
                         className="inline-flex items-center gap-1 rounded-lg px-2 py-1 text-xs font-medium text-muted-foreground/60 transition-colors hover:text-muted-foreground"
                       >
                         <X className="h-3 w-3" aria-hidden />
-                        I&apos;m confident — clear
+                        I&apos;m confident: clear
                       </button>
                     </div>
                   </article>
@@ -394,7 +394,7 @@ export default function MistakeBookPage() {
             <Reveal delay={0.1}>
               <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-border/30 pt-6">
                 <p className="text-xs text-muted-foreground/60">
-                  Kept on this device only — never uploaded.
+                  Kept on this device only, never uploaded.
                 </p>
                 {confirmingClearAll ? (
                   <div role="group" aria-label="Confirm clearing the Mistake Book" className="flex flex-wrap items-center gap-2">

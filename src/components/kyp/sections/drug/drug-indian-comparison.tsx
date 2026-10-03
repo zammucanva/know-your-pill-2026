@@ -28,7 +28,7 @@ export function DrugIndianComparison({ drug }: DrugIndianComparisonProps) {
         <SectionHeader
           eyebrow="🇮🇳 Indian Comparison"
           title="Which drug, in which Indian setting?"
-          description="Drug selection isn't universal — it depends on the clinical setting, patient population, and resources. Here's how this drug compares in specific Indian scenarios."
+          description="Drug selection isn't universal: it depends on the clinical setting, patient population, and resources. Here's how this drug compares in specific Indian scenarios."
           tone="brand"
         />
 

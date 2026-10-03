@@ -23,14 +23,14 @@ export const ziprasidone: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Atypical Antipsychotics", "Ziprasidone"],
   /* ---- Hero / summary ---- */
-  tagline: "The metabolically clean, QT-watched atypical — modest weight gain plus a signature ECG precaution.",
-  summary: "Ziprasidone is a benzisothiazol atypical antipsychotic with D2/5-HT2A antagonism, 5-HT1A partial agonism, and serotonin-norepinephrine reuptake inhibition — an antidepressant-flavoured profile. Its clean metabolic record (with aripiprazole and lurasidone) made it a preferred weight-neutral option, at the price of a modest QT prolongation that demands ECG awareness and food-dependent absorption (500 kcal) for the oral form. An intramuscular form provides rapid tranquillisation without the hypotension of other IM agents.",
+  tagline: "The metabolically clean, QT-watched atypical: modest weight gain plus a signature ECG precaution.",
+  summary: "Ziprasidone is a benzisothiazol atypical antipsychotic with D2/5-HT2A antagonism, 5-HT1A partial agonism, and serotonin-norepinephrine reuptake inhibition: an antidepressant-flavoured profile. Its clean metabolic record (with aripiprazole and lurasidone) made it a preferred weight-neutral option, at the price of a modest QT prolongation that demands ECG awareness and food-dependent absorption (500 kcal) for the oral form. An intramuscular form provides rapid tranquillisation without the hypotension of other IM agents.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Ziprasidone — from its molecular target (D2 (antagonist); 5-HT2A (potent antagonist); 5-HT1A (partial agonist); SERT/NET (weak inhibition)) to clinical effect.",
+    "Explain the mechanism of action of Ziprasidone, from its molecular target (D2 (antagonist); 5-HT2A (potent antagonist); 5-HT1A (partial agonist); SERT/NET (weak inhibition)) to clinical effect.",
     "List the FDA-approved and off-label uses of Ziprasidone.",
     "Predict the common and serious side effects of Ziprasidone from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Ziprasidone.",
@@ -38,19 +38,19 @@ export const ziprasidone: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Ziprasidone blocks D2 and 5-HT2A receptors, partially agonises 5-HT1A, and inhibits serotonin and norepinephrine reuptake — an antipsychotic with built-in antidepressant pharmacology.",
+    summary: "Ziprasidone blocks D2 and 5-HT2A receptors, partially agonises 5-HT1A, and inhibits serotonin and norepinephrine reuptake: an antipsychotic with built-in antidepressant pharmacology.",
     molecularTarget: "D2 (antagonist); 5-HT2A (potent antagonist); 5-HT1A (partial agonist); SERT/NET (weak inhibition)",
     effect: "Antipsychotic efficacy with weight neutrality and possible antidepressant benefit; modest QT prolongation is the signature safety issue.",
     steps: [
-      "D2 blockade plus strong 5-HT2A antagonism — the standard atypical antipsychotic base.",
-      "5-HT1A partial agonism and weak serotonin/norepinephrine reuptake inhibition give an antidepressant flavour — plausibly relevant in schizoaffective and depressive contexts.",
-      "Negligible H1/M1/5-HT2C binding — weight gain and sedation are minimal.",
-      "Modest QT prolongation (~10–20 ms) — the class QT precaution concentrated in one drug.",
+      "D2 blockade plus strong 5-HT2A antagonism: the standard atypical antipsychotic base.",
+      "5-HT1A partial agonism and weak serotonin/norepinephrine reuptake inhibition give an antidepressant flavour: plausibly relevant in schizoaffective and depressive contexts.",
+      "Negligible H1/M1/5-HT2C binding: weight gain and sedation are minimal.",
+      "Modest QT prolongation (~10–20 ms): the class QT precaution concentrated in one drug.",
     ],
-    pharmacokinetics: "Oral absorption roughly doubles with food — must be taken with a 500 kcal meal. IM form fully absorbed.",
+    pharmacokinetics: "Oral absorption roughly doubles with food: must be taken with a 500 kcal meal. IM form fully absorbed.",
     halfLife: "Oral: ~7 hours (twice-daily dosing); IM: 2–5 hours.",
     activeMetabolite: "No clinically important active metabolite.",
-    metabolism: "Hepatic CYP3A4 (~one-third), plus aldehyde oxidase — fewer interactions than 3A4-only agents.",
+    metabolism: "Hepatic CYP3A4 (~one-third), plus aldehyde oxidase: fewer interactions than 3A4-only agents.",
     excretion: "Minimal renal excretion.",
   },
   /* ---- Mechanism visual flow ---- */
@@ -128,7 +128,7 @@ export const ziprasidone: Drug = {
         label: "5-HT2A-mediated benefit",
       },
     ],
-    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms — the serotonin-dopamine hypothesis of atypical antipsychotics.",
+    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms: the serotonin-dopamine hypothesis of atypical antipsychotics.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Dopamine (DA)", "Serotonin (5-HT)", "Norepinephrine (NE)"],
@@ -152,7 +152,7 @@ export const ziprasidone: Drug = {
     {
       name: "Acute agitation in schizophrenia (IM)",
       status: "fda-approved",
-      description: "10–20 mg IM — rapid calming with minimal hypotension.",
+      description: "10–20 mg IM: rapid calming with minimal hypotension.",
     },
   ],
   contraindications: [
@@ -164,7 +164,7 @@ export const ziprasidone: Drug = {
     {
       name: "Other QT-prolonging drugs",
       severity: "absolute",
-      rationale: "Additive QT effect — the specific ziprasidone precaution.",
+      rationale: "Additive QT effect: the specific ziprasidone precaution.",
     },
   ],
   blackBoxWarnings: [
@@ -220,7 +220,7 @@ export const ziprasidone: Drug = {
       name: "QT prolongation and torsades de pointes",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Modest mean QT effect (~10–20 ms) with rare arrhythmia reports — the concentration of class QT risk in one agent.",
+      description: "Modest mean QT effect (~10–20 ms) with rare arrhythmia reports: the concentration of class QT risk in one agent.",
       management: "Baseline ECG where risk factors; avoid QT drug combinations; correct potassium/magnesium.",
     },
     {
@@ -253,7 +253,7 @@ export const ziprasidone: Drug = {
     {
       parameter: "Weight and metabolic panel",
       frequency: "Baseline, then annually (class standard)",
-      rationale: "Ziprasidone is weight-neutral — light-touch monitoring.",
+      rationale: "Ziprasidone is weight-neutral: light-touch monitoring.",
     },
     {
       parameter: "AIMS examination",
@@ -265,7 +265,7 @@ export const ziprasidone: Drug = {
     {
       drug: "Other QT-prolonging drugs",
       severity: "contraindicated",
-      mechanism: "Additive QT effect — the specific ziprasidone precaution.",
+      mechanism: "Additive QT effect: the specific ziprasidone precaution.",
       action: "Avoid; ECG if unavoidable.",
     },
     {
@@ -282,51 +282,51 @@ export const ziprasidone: Drug = {
     },
   ],
   pregnancy: {
-    summary: "Limited human data; no clear teratogenic signal. Standard antipsychotic pregnancy logic — continue if needed with obstetric co-management and third-trimester neonatal monitoring.",
-    lactation: "Limited data; likely low milk transfer — monitor the infant for sedation if used.",
+    summary: "Limited human data; no clear teratogenic signal. Standard antipsychotic pregnancy logic: continue if needed with obstetric co-management and third-trimester neonatal monitoring.",
+    lactation: "Limited data; likely low milk transfer: monitor the infant for sedation if used.",
   },
   renalAdjustment: "No dose adjustment for oral or IM ziprasidone in renal impairment.",
   hepaticAdjustment: "No initial adjustment for mild-moderate; not recommended in significant hepatic impairment.",
   /* ---- Education ---- */
-  patientExplanation: "Ziprasidone treats psychosis and mania by adjusting dopamine and serotonin signalling, with a mild antidepressant-like action built in. It is famous for NOT causing weight gain — but the tablets only work properly if taken with a full meal, and it can slightly alter the heart's electrical rhythm, so your doctor may order a heart tracing (ECG).",
+  patientExplanation: "Ziprasidone treats psychosis and mania by adjusting dopamine and serotonin signalling, with a mild antidepressant-like action built in. It is famous for NOT causing weight gain, but the tablets only work properly if taken with a full meal, and it can slightly alter the heart's electrical rhythm, so your doctor may order a heart tracing (ECG).",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Ziprasidone builds over weeks — do not judge it in the first days.",
+    "Benefit from Ziprasidone builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The 500 kcal meal rule: ziprasidone with a snack is half a drug — always anchor dosing to real meals.",
-    "Weight-neutral trio: ziprasidone, aripiprazole, lurasidone — the metabolic-safe shelf.",
+    "The 500 kcal meal rule: ziprasidone with a snack is half a drug, always anchor dosing to real meals.",
+    "Weight-neutral trio: ziprasidone, aripiprazole, lurasidone; the metabolic-safe shelf.",
     "QT is the tax: one ECG at baseline in at-risk patients and vigilance with QT drug combinations keeps the risk theoretical.",
-    "IM ziprasidone is the least hypotensive IM antipsychotic — valuable in the agitated patient with borderline blood pressure.",
+    "IM ziprasidone is the least hypotensive IM antipsychotic: valuable in the agitated patient with borderline blood pressure.",
     "Its SERT/NET inhibition is why schizoaffective patients sometimes report a mood lift.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Ziprasidone: Ziprasidone blocks D2 and 5-HT2A receptors, partially agonises 5-HT1A, and inhibits serotonin and norepinephrine reuptake — an antipsychotic with built-in antidepressant pharmacology.",
+        "Mechanism of Ziprasidone: Ziprasidone blocks D2 and 5-HT2A receptors, partially agonises 5-HT1A, and inhibits serotonin and norepinephrine reuptake; an antipsychotic with built-in antidepressant pharmacology.",
         "Uses of Ziprasidone: Schizophrenia; Acute manic / mixed episodes of bipolar I; Acute agitation in schizophrenia (IM)",
         "Mechanism: D2 + 5-HT2A antagonist + 5-HT1A partial agonist + weak SNRI activity.",
-        "Signature safety issue: modest QT prolongation — ECG awareness and QT-drug avoidance.",
+        "Signature safety issue: modest QT prolongation. ECG awareness and QT-drug avoidance.",
       ],
       practical: [
         "Prescribe Ziprasidone for schizophrenia with dose, timing, and duration.",
         "Outline the monitoring plan: ECG (Baseline if cardiac risk factors or planned QT-drug co-prescription); Potassium and magnesium (When ill, diuretic-treated, or in overdose); Weight and metabolic panel (Baseline, then annually (class standard))",
       ],
       longAnswer: [
-        "Ziprasidone: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Ziprasidone: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: D2 + 5-HT2A antagonist + 5-HT1A partial agonist + weak SNRI activity.",
-        "Signature safety issue: modest QT prolongation — ECG awareness and QT-drug avoidance.",
+        "Signature safety issue: modest QT prolongation. ECG awareness and QT-drug avoidance.",
       ],
     },
     neetPg: {
       highYield: [
         "Mechanism: D2 + 5-HT2A antagonist + 5-HT1A partial agonist + weak SNRI activity.",
-        "Signature safety issue: modest QT prolongation — ECG awareness and QT-drug avoidance.",
+        "Signature safety issue: modest QT prolongation. ECG awareness and QT-drug avoidance.",
         "Signature benefit: weight neutrality (with aripiprazole and lurasidone).",
-        "Oral absorption requires a ≥ 500 kcal meal — a compliance trap.",
+        "Oral absorption requires a ≥ 500 kcal meal: a compliance trap.",
         "Twice-daily oral dosing (half-life ~7 h).",
         "IM form: 10–20 mg for acute agitation, minimal hypotension.",
       ],
@@ -338,7 +338,7 @@ export const ziprasidone: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Ziprasidone develops qt prolongation and torsades de pointes — next best step?",
+        "A patient on Ziprasidone develops qt prolongation and torsades de pointes: next best step?",
         "When to choose Ziprasidone over alternatives in its class.",
       ],
     },
@@ -360,16 +360,16 @@ export const ziprasidone: Drug = {
   memoryTricks: [],
   highYieldSummary: [
     "Mechanism: D2 + 5-HT2A antagonist + 5-HT1A partial agonist + weak SNRI activity.",
-    "Signature safety issue: modest QT prolongation — ECG awareness and QT-drug avoidance.",
+    "Signature safety issue: modest QT prolongation. ECG awareness and QT-drug avoidance.",
     "Signature benefit: weight neutrality (with aripiprazole and lurasidone).",
-    "Oral absorption requires a ≥ 500 kcal meal — a compliance trap.",
+    "Oral absorption requires a ≥ 500 kcal meal: a compliance trap.",
     "Twice-daily oral dosing (half-life ~7 h).",
     "IM form: 10–20 mg for acute agitation, minimal hypotension.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia",
+      title: "First presentation: schizophrenia",
       presentation: "A patient presenting with schizophrenia, started on Ziprasidone.",
       history: "A adult patient presents with a schizophrenia picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with schizophrenia; physical examination and baseline investigations are unremarkable.",
@@ -378,7 +378,7 @@ export const ziprasidone: Drug = {
       management: "Started at 20 mg twice daily with food, titrated to 40–80 mg twice daily with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Ziprasidone takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Ziprasidone takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -387,7 +387,7 @@ export const ziprasidone: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Atypical Antipsychotic comparison — choosing within the class",
+      title: "Atypical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Ziprasidone",
       rows: [
         {
@@ -458,11 +458,11 @@ export const ziprasidone: Drug = {
         },
         {
           attribute: "Sedation",
-          primaryValue: "Mild — some patients activate.",
+          primaryValue: "Mild, some patients activate.",
           comparisons: [
             {
               drug: "Aripiprazole",
-              value: "Low; can be activating — insomnia is more common than somnolence.",
+              value: "Low; can be activating: insomnia is more common than somnolence.",
             },
             {
               drug: "Clozapine",
@@ -470,38 +470,38 @@ export const ziprasidone: Drug = {
             },
             {
               drug: "Lurasidone",
-              value: "Low — may be mildly activating.",
+              value: "Low: may be mildly activating.",
             },
             {
               drug: "Olanzapine",
-              value: "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+              value: "Moderate to high: usually transient at a given dose but dose-limiting for many patients.",
             },
           ],
         },
         {
           attribute: "Unique niche",
-          primaryValue: "Weight-neutral oral + the least hypotensive IM antipsychotic — with QT vigilance",
+          primaryValue: "Weight-neutral oral + the least hypotensive IM antipsychotic, with QT vigilance",
           comparisons: [
             {
               drug: "Aripiprazole",
-              value: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+              value: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
             },
             {
               drug: "Clozapine",
-              value: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+              value: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
             },
             {
               drug: "Lurasidone",
-              value: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+              value: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
             },
             {
               drug: "Olanzapine",
-              value: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+              value: "Most robust broad-spectrum atypical: heaviest metabolic burden",
             },
           ],
         },
       ],
-      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -510,7 +510,7 @@ export const ziprasidone: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Ziprasidone reaches peak plasma concentration and begins acting at its molecular target (D2 (antagonist); 5-HT2A (potent antagonist); 5-HT1A (partial agonist); SERT/NET (weak inhibition)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Ziprasidone reaches peak plasma concentration and begins acting at its molecular target (D2 (antagonist); 5-HT2A (potent antagonist); 5-HT1A (partial agonist); SERT/NET (weak inhibition)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -546,7 +546,7 @@ export const ziprasidone: Drug = {
   faqs: [
     {
       question: "How long does Ziprasidone take to work?",
-      answer: "Acute agitation (IM): 15–30 minutes.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Acute agitation (IM): 15–30 minutes.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Ziprasidone?",
@@ -554,11 +554,11 @@ export const ziprasidone: Drug = {
     },
     {
       question: "Can I stop Ziprasidone suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Ziprasidone habit-forming?",
@@ -566,7 +566,7 @@ export const ziprasidone: Drug = {
     },
     {
       question: "Can I take Ziprasidone during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Ziprasidone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Ziprasidone may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -750,7 +750,7 @@ export const ziprasidone: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Ziprasidone",
+      label: "Patient Guide. Ziprasidone",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -758,13 +758,13 @@ export const ziprasidone: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The metabolically clean, QT-watched atypical — modest weight gain plus a signature ECG precaution.",
-    summary: "Ziprasidone is a prescription medicine used to treat schizophrenia. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Ziprasidone treats psychosis and mania by adjusting dopamine and serotonin signalling, with a mild antidepressant-like action built in. It is famous for NOT causing weight gain — but the tablets only work properly if taken with a full meal, and it can slightly alter the heart's electrical rhythm, so your doctor may order a heart tracing (ECG).",
-    sideEffects: "The most common side effects are: somnolence and headache, nausea and dyspepsia, akathisia and eps, insomnia or activation, injection-site pain (im). These usually appear early and many settle with time. Serious effects are uncommon but important to know: QT prolongation and torsades de pointes and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: ecg (baseline if cardiac risk factors or planned qt-drug co-prescription); potassium and magnesium (when ill, diuretic-treated, or in overdose); weight and metabolic panel (baseline, then annually (class standard)). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The metabolically clean, QT-watched atypical: modest weight gain plus a signature ECG precaution.",
+    summary: "Ziprasidone is a prescription medicine used to treat schizophrenia. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Ziprasidone treats psychosis and mania by adjusting dopamine and serotonin signalling, with a mild antidepressant-like action built in. It is famous for NOT causing weight gain, but the tablets only work properly if taken with a full meal, and it can slightly alter the heart's electrical rhythm, so your doctor may order a heart tracing (ECG).",
+    sideEffects: "The most common side effects are: somnolence and headache, nausea and dyspepsia, akathisia and eps, insomnia or activation, injection-site pain (im). These usually appear early and many settle with time. Serious effects are uncommon but important to know: QT prolongation and torsades de pointes and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: ecg (baseline if cardiac risk factors or planned qt-drug co-prescription); potassium and magnesium (when ill, diuretic-treated, or in overdose); weight and metabolic panel (baseline, then annually (class standard)). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Other QT-prolonging drugs, Ketoconazole and strong CYP3A4 inhibitors, Erythromycin, moxifloxacin, and other QT antibiotics. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Other QT-prolonging drugs, Ketoconazole and strong CYP3A4 inhibitors, Erythromycin, moxifloxacin, and other QT antibiotics. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -794,7 +794,7 @@ export const ziprasidone: Drug = {
     },
     costCategory: "moderate",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -828,55 +828,55 @@ export const ziprasidone: Drug = {
         name: "Ziprasidone",
         slug: "ziprasidone",
         relationship: "This guide",
-        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic — with QT vigilance",
+        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic, with QT vigilance",
       },
       {
         name: "Aripiprazole",
         slug: "aripiprazole",
         relationship: "Same class (Dopamine Stabiliser)",
-        distinguishing: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+        distinguishing: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
       },
       {
         name: "Clozapine",
         slug: "clozapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
       },
       {
         name: "Lurasidone",
         slug: "lurasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+        distinguishing: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
       },
       {
         name: "Olanzapine",
         slug: "olanzapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+        distinguishing: "Most robust broad-spectrum atypical: heaviest metabolic burden",
       },
       {
         name: "Paliperidone",
         slug: "paliperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The LAI platform king — monthly to 6-monthly injections for schizophrenia",
+        distinguishing: "The LAI platform king: monthly to 6-monthly injections for schizophrenia",
       },
       {
         name: "Quetiapine",
         slug: "quetiapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin — the sedating antidepressant-antipsychotic",
+        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin: the sedating antidepressant-antipsychotic",
       },
       {
         name: "Risperidone",
         slug: "risperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most potent D2 blockade among atypicals — highest prolactin, best-studied LAI",
+        distinguishing: "Most potent D2 blockade among atypicals: highest prolactin, best-studied LAI",
       },
       {
         name: "Amisulpride",
         slug: "amisulpride",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The dose-band benzamide — European/Indian staple with the clozapine-drool rescue",
+        distinguishing: "The dose-band benzamide. European/Indian staple with the clozapine-drool rescue",
       },
     ],
   },
@@ -1024,7 +1024,7 @@ export const ziprasidone: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Ziprasidone in two sentences.",
-      answer: "Ziprasidone blocks D2 and 5-HT2A receptors, partially agonises 5-HT1A, and inhibits serotonin and norepinephrine reuptake — an antipsychotic with built-in antidepressant pharmacology. Net effect: Antipsychotic efficacy with weight neutrality and possible antidepressant benefit; modest QT prolongation is the signature safety issue.",
+      answer: "Ziprasidone blocks D2 and 5-HT2A receptors, partially agonises 5-HT1A, and inhibits serotonin and norepinephrine reuptake: an antipsychotic with built-in antidepressant pharmacology. Net effect: Antipsychotic efficacy with weight neutrality and possible antidepressant benefit; modest QT prolongation is the signature safety issue.",
       topic: "Mechanism",
     },
     {
@@ -1034,7 +1034,7 @@ export const ziprasidone: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Ziprasidone and how you would manage it.",
-      answer: "QT prolongation and torsades de pointes: Modest mean QT effect (~10–20 ms) with rare arrhythmia reports — the concentration of class QT risk in one agent. Management: Baseline ECG where risk factors; avoid QT drug combinations; correct potassium/magnesium.",
+      answer: "QT prolongation and torsades de pointes: Modest mean QT effect (~10–20 ms) with rare arrhythmia reports; the concentration of class QT risk in one agent. Management: Baseline ECG where risk factors; avoid QT drug combinations; correct potassium/magnesium.",
       topic: "Safety",
     },
     {
@@ -1120,7 +1120,7 @@ export const ziprasidone: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1165,7 +1165,7 @@ export const ziprasidone: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Ziprasidone works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Ziprasidone works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1181,7 +1181,7 @@ export const ziprasidone: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Ziprasidone safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Ziprasidone safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1227,7 +1227,7 @@ export const ziprasidone: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Ziprasidone follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Ziprasidone follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1238,7 +1238,7 @@ export const ziprasidone: Drug = {
       "Dose reduction or timing change before discontinuation.",
     ],
     weightGain: "See product information and class comparison.",
-    sedation: "Mild — some patients activate.",
+    sedation: "Mild, some patients activate.",
     dosing: [
       {
         indication: "Schizophrenia (oral)",
@@ -1264,12 +1264,12 @@ export const ziprasidone: Drug = {
     ],
     dosageForms: ["Capsules 20, 40, 60, 80 mg", "IM vial 20 mg/mL"],
     dosingTips: [
-      "Anchor both doses to meals ≥ 500 kcal — snack-dosing is the hidden non-responder.",
+      "Anchor both doses to meals ≥ 500 kcal: snack-dosing is the hidden non-responder.",
       "Baseline ECG when QT risk factors exist.",
       "Split the largest dose to bedtime if sedation desired; morning if activating.",
     ],
     overdose: [
-      "Overdose with Ziprasidone is managed supportively — no specific antidote.",
+      "Overdose with Ziprasidone is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Ziprasidone is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1279,7 +1279,7 @@ export const ziprasidone: Drug = {
     ],
     pharmacokinetics: [
       "Half-life: Oral: ~7 hours (twice-daily dosing); IM: 2–5 hours..",
-      "Metabolism: Hepatic CYP3A4 (~one-third), plus aldehyde oxidase — fewer interactions than 3A4-only agents..",
+      "Metabolism: Hepatic CYP3A4 (~one-third), plus aldehyde oxidase; fewer interactions than 3A4-only agents..",
     ],
     doNotUse: ["Known hypersensitivity to this agent."],
     specialPopulations: [
@@ -1319,6 +1319,6 @@ export const ziprasidone: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

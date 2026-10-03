@@ -23,14 +23,14 @@ export const oxazepam: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Anxiolytics & Sedatives", "Benzodiazepines", "Oxazepam"],
   /* ---- Hero / summary ---- */
-  tagline: "The final common metabolite — glucuronidated, mild, and the elder-and-liver-friendly anxiolytic.",
-  summary: "Oxazepam is the short-acting (6–20 h) benzodiazepine that is the FINAL metabolite of diazepam's chain: it is glucuronidated directly with no active metabolites and no CYP involvement — the lorazepam-style safety in a gentler, weaker package. Its slow oral absorption makes it less attractive for abuse, and its simple kinetics make it the alcohol-withdrawal and anxiety choice in the elderly and in liver disease.",
+  tagline: "The final common metabolite: glucuronidated, mild, and the elder-and-liver-friendly anxiolytic.",
+  summary: "Oxazepam is the short-acting (6–20 h) benzodiazepine that is the FINAL metabolite of diazepam's chain: it is glucuronidated directly with no active metabolites and no CYP involvement; the lorazepam-style safety in a gentler, weaker package. Its slow oral absorption makes it less attractive for abuse, and its simple kinetics make it the alcohol-withdrawal and anxiety choice in the elderly and in liver disease.",
   estimatedReadTime: "16 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Oxazepam — from its molecular target (GABA-A benzodiazepine site (PAM)) to clinical effect.",
+    "Explain the mechanism of action of Oxazepam, from its molecular target (GABA-A benzodiazepine site (PAM)) to clinical effect.",
     "List the FDA-approved and off-label uses of Oxazepam.",
     "Predict the common and serious side effects of Oxazepam from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Oxazepam.",
@@ -38,16 +38,16 @@ export const oxazepam: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Short-acting GABA-A PAM with direct glucuronidation — no active metabolites, no CYP metabolism.",
+    summary: "Short-acting GABA-A PAM with direct glucuronidation: no active metabolites, no CYP metabolism.",
     molecularTarget: "GABA-A benzodiazepine site (PAM)",
     effect: "Mild-to-moderate anxiolysis and withdrawal coverage with simple, safe kinetics.",
     steps: [
       "Class mechanism: benzodiazepine-site positive allosteric modulation.",
-      "Direct glucuronidation to inactive metabolite — no CYP, no accumulation.",
+      "Direct glucuronidation to inactive metabolite: no CYP, no accumulation.",
       "Slow absorption and moderate potency reduce euphoria/misuse appeal.",
       "10–15 mg oxazepam ≈ 5 mg diazepam.",
     ],
-    pharmacokinetics: "Slow oral absorption (peak ~2–4 h) — onset gentler than siblings.",
+    pharmacokinetics: "Slow oral absorption (peak ~2–4 h): onset gentler than siblings.",
     halfLife: "6–20 hours.",
     metabolism: "Direct glucuronidation only.",
     excretion: "Renal.",
@@ -109,7 +109,7 @@ export const oxazepam: Drug = {
         label: "inhibits firing",
       },
     ],
-    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly — which is why their effect is powerful but limited by dependence risk.",
+    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly, which is why their effect is powerful but limited by dependence risk.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["GABA"],
@@ -138,7 +138,7 @@ export const oxazepam: Drug = {
     {
       name: "Opioids",
       severity: "absolute",
-      rationale: "Concurrent use causes profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      rationale: "Concurrent use causes profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
     },
   ],
   blackBoxWarnings: [
@@ -148,7 +148,7 @@ export const oxazepam: Drug = {
     },
     {
       title: "Dependence and withdrawal",
-      text: "Class warning — short courses, taper.",
+      text: "Class warning: short courses, taper.",
     },
   ],
   /* ---- Side effects ---- */
@@ -206,7 +206,7 @@ export const oxazepam: Drug = {
     {
       drug: "Opioids",
       severity: "contraindicated",
-      mechanism: "Concurrent use causes profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine.",
+      mechanism: "Concurrent use causes profound sedation, respiratory depression, and death: the strongest boxed warning combination in medicine.",
       action: "Avoid; if unavoidable for taper protocols, use lowest doses with intensive monitoring.",
     },
     {
@@ -224,7 +224,7 @@ export const oxazepam: Drug = {
     {
       drug: "Older antihistamines (sedating)",
       severity: "moderate",
-      mechanism: "Additive sedation in the elderly — falls.",
+      mechanism: "Additive sedation in the elderly: falls.",
       action: "Prefer non-sedating alternatives.",
     },
   ],
@@ -236,26 +236,26 @@ export const oxazepam: Drug = {
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
-  patientExplanation: "Oxazepam is a medicine used to treat anxiety disorders / alcohol withdrawal (mild). Short-acting GABA-A PAM with direct glucuronidation — no active metabolites, no CYP metabolism. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+  patientExplanation: "Oxazepam is a medicine used to treat anxiety disorders / alcohol withdrawal (mild). Short-acting GABA-A PAM with direct glucuronidation: no active metabolites, no CYP metabolism. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
   patientEducationPoints: [
-    "This medicine is for short-term or carefully planned use — it can cause dependence within weeks of regular use.",
-    "Never mix it with opioid painkillers or alcohol — the combination can stop breathing.",
+    "This medicine is for short-term or carefully planned use. It can cause dependence within weeks of regular use.",
+    "Never mix it with opioid painkillers or alcohol: the combination can stop breathing.",
     "Do not drive until you know how it affects you.",
-    "Stopping must be gradual — never stop suddenly after regular use.",
-    "Benefit from Oxazepam builds over weeks — do not judge it in the first days.",
+    "Stopping must be gradual, never stop suddenly after regular use.",
+    "Benefit from Oxazepam builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The end of the metabolic road: diazepam → nordiazepam → temazepam → OXAZEPAM — the final common metabolite marketed as its own drug.",
+    "The end of the metabolic road: diazepam → nordiazepam → temazepam → OXAZEPAM; the final common metabolite marketed as its own drug.",
     "Elder + liver = oxazepam or lorazepam: the glucuronidation pair that bypasses CYP entirely.",
-    "Slow absorption = lower misuse appeal — a pharmacokinetic anti-abuse feature.",
+    "Slow absorption = lower misuse appeal: a pharmacokinetic anti-abuse feature.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Oxazepam: Short-acting GABA-A PAM with direct glucuronidation — no active metabolites, no CYP metabolism.",
+        "Mechanism of Oxazepam: Short-acting GABA-A PAM with direct glucuronidation; no active metabolites, no CYP metabolism.",
         "Uses of Oxazepam: Anxiety disorders / alcohol withdrawal (mild); Anxiety in the elderly",
-        "Final inactive-pathway metabolite of diazepam — glucuronidation only.",
+        "Final inactive-pathway metabolite of diazepam: glucuronidation only.",
         "Half-life 6–20 h; no active metabolites; no CYP.",
       ],
       practical: [
@@ -263,18 +263,18 @@ export const oxazepam: Drug = {
         "Outline the monitoring plan: Respiratory status and sedation (Clinical review each visit); Dependence review (Every visit for long-term users); Fall risk review (elderly) (Every visit in older patients)",
       ],
       longAnswer: [
-        "Oxazepam: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Final inactive-pathway metabolite of diazepam — glucuronidation only.",
+        "Oxazepam: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Final inactive-pathway metabolite of diazepam: glucuronidation only.",
         "Half-life 6–20 h; no active metabolites; no CYP.",
       ],
     },
     neetPg: {
       highYield: [
-        "Final inactive-pathway metabolite of diazepam — glucuronidation only.",
+        "Final inactive-pathway metabolite of diazepam: glucuronidation only.",
         "Half-life 6–20 h; no active metabolites; no CYP.",
         "Preferred with lorazepam in elderly/liver disease.",
         "10–15 mg ≈ 5 mg diazepam equivalence.",
-        "Mechanism: GABA-A positive allosteric modulation — amplified natural inhibition.",
+        "Mechanism: GABA-A positive allosteric modulation; amplified natural inhibition.",
       ],
       pyqConcepts: [
         "Mechanism/target of Oxazepam",
@@ -284,7 +284,7 @@ export const oxazepam: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Oxazepam develops respiratory depression with opioids — next best step?",
+        "A patient on Oxazepam develops respiratory depression with opioids: next best step?",
         "When to choose Oxazepam over alternatives in its class.",
       ],
     },
@@ -297,25 +297,25 @@ export const oxazepam: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The diazepam family tree ends here — oxazepam is the metabolite that became a medicine.",
+        "The diazepam family tree ends here: oxazepam is the metabolite that became a medicine.",
         "Simple, weak, safe: exactly what the elderly anxiolytic prescription wants.",
-        "The end of the metabolic road: diazepam → nordiazepam → temazepam → OXAZEPAM — the final common metabolite marketed as its own drug.",
+        "The end of the metabolic road: diazepam → nordiazepam → temazepam → OXAZEPAM; the final common metabolite marketed as its own drug.",
         "Elder + liver = oxazepam or lorazepam: the glucuronidation pair that bypasses CYP entirely.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Final inactive-pathway metabolite of diazepam — glucuronidation only.",
+    "Final inactive-pathway metabolite of diazepam: glucuronidation only.",
     "Half-life 6–20 h; no active metabolites; no CYP.",
     "Preferred with lorazepam in elderly/liver disease.",
     "10–15 mg ≈ 5 mg diazepam equivalence.",
-    "Mechanism: GABA-A positive allosteric modulation — amplified natural inhibition.",
+    "Mechanism: GABA-A positive allosteric modulation; amplified natural inhibition.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — anxiety disorders / alcohol withdrawal (mild)",
+      title: "First presentation: anxiety disorders / alcohol withdrawal (mild)",
       presentation: "A patient presenting with anxiety disorders / alcohol withdrawal (mild), started on Oxazepam.",
       history: "A adult patient presents with a anxiety disorders / alcohol withdrawal (mild) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with anxiety disorders / alcohol withdrawal (mild); physical examination and baseline investigations are unremarkable.",
@@ -324,7 +324,7 @@ export const oxazepam: Drug = {
       management: "Started at 10–20 mg three times daily, titrated to 30–90 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Oxazepam takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Oxazepam takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -333,7 +333,7 @@ export const oxazepam: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Benzodiazepine comparison — choosing within the class",
+      title: "Benzodiazepine comparison: choosing within the class",
       primaryDrug: "Oxazepam",
       rows: [
         {
@@ -408,25 +408,25 @@ export const oxazepam: Drug = {
           comparisons: [
             {
               drug: "Alprazolam",
-              value: "High — potency-driven.",
+              value: "High: potency-driven.",
             },
             {
               drug: "Clonazepam",
-              value: "High — the dose-limiting effect.",
+              value: "High: the dose-limiting effect.",
             },
             {
               drug: "Diazepam",
-              value: "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+              value: "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
             },
             {
               drug: "Lorazepam",
-              value: "Moderate — intermediate duration limits hangover vs diazepam.",
+              value: "Moderate: intermediate duration limits hangover vs diazepam.",
             },
           ],
         },
         {
           attribute: "Unique niche",
-          primaryValue: "Oxazepam — see clinical pearls",
+          primaryValue: "Oxazepam: see clinical pearls",
           comparisons: [
             {
               drug: "Alprazolam",
@@ -434,20 +434,20 @@ export const oxazepam: Drug = {
             },
             {
               drug: "Clonazepam",
-              value: "The long-acting anticonvulsant benzo — seizures and panic",
+              value: "The long-acting anticonvulsant benzo: seizures and panic",
             },
             {
               drug: "Diazepam",
-              value: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+              value: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
             },
             {
               drug: "Lorazepam",
-              value: "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+              value: "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo",
             },
           ],
         },
       ],
-      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -456,7 +456,7 @@ export const oxazepam: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Oxazepam reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (PAM)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Oxazepam reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (PAM)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -468,9 +468,9 @@ export const oxazepam: Drug = {
     },
     {
       id: "t3",
-      time: "Weeks 1–4 (Oral: 45–90 min (slower than siblings — gentle onset).)",
+      time: "Weeks 1–4 (Oral: 45–90 min (slower than siblings, gentle onset).)",
       title: "Therapeutic effect builds",
-      description: "Oral: 45–90 min (slower than siblings — gentle onset). is the typical window for the main therapeutic effect to become apparent. Review at 2 and 4 weeks to assess response and tolerability.",
+      description: "Oral: 45–90 min (slower than siblings, gentle onset). is the typical window for the main therapeutic effect to become apparent. Review at 2 and 4 weeks to assess response and tolerability.",
       phase: "peak",
     },
     {
@@ -492,7 +492,7 @@ export const oxazepam: Drug = {
   faqs: [
     {
       question: "How long does Oxazepam take to work?",
-      answer: "Oral: 45–90 min (slower than siblings — gentle onset).. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Oral: 45–90 min (slower than siblings, gentle onset).. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Oxazepam?",
@@ -500,19 +500,19 @@ export const oxazepam: Drug = {
     },
     {
       question: "Can I stop Oxazepam suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Oxazepam habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Oxazepam exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Oxazepam exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Oxazepam during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Oxazepam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Oxazepam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -668,7 +668,7 @@ export const oxazepam: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Oxazepam",
+      label: "Patient Guide. Oxazepam",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -676,13 +676,13 @@ export const oxazepam: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The final common metabolite — glucuronidated, mild, and the elder-and-liver-friendly anxiolytic.",
-    summary: "Oxazepam is a prescription medicine used to treat anxiety disorders / alcohol withdrawal (mild). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Oxazepam is a medicine used to treat anxiety disorders / alcohol withdrawal (mild). Short-acting GABA-A PAM with direct glucuronidation — no active metabolites, no CYP metabolism. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
-    sideEffects: "The most common side effects are: sedation, dizziness. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression with opioids and Withdrawal seizures on abrupt stop. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The final common metabolite: glucuronidated, mild, and the elder-and-liver-friendly anxiolytic.",
+    summary: "Oxazepam is a prescription medicine used to treat anxiety disorders / alcohol withdrawal (mild). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Oxazepam is a medicine used to treat anxiety disorders / alcohol withdrawal (mild). Short-acting GABA-A PAM with direct glucuronidation: no active metabolites, no CYP metabolism. Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+    sideEffects: "The most common side effects are: sedation, dizziness. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Respiratory depression with opioids and Withdrawal seizures on abrupt stop. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: respiratory status and sedation (clinical review each visit); dependence review (every visit for long-term users); fall risk review (elderly) (every visit in older patients). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, Older antihistamines (sedating). Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol and CNS depressants, Clozapine, Older antihistamines (sedating). Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -706,7 +706,7 @@ export const oxazepam: Drug = {
     },
     costCategory: "moderate",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: [
       "Same class rules: short course, no alcohol.",
     ],
@@ -754,43 +754,43 @@ export const oxazepam: Drug = {
         name: "Clonazepam",
         slug: "clonazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "The long-acting anticonvulsant benzo — seizures and panic",
+        distinguishing: "The long-acting anticonvulsant benzo: seizures and panic",
       },
       {
         name: "Diazepam",
         slug: "diazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+        distinguishing: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
       },
       {
         name: "Lorazepam",
         slug: "lorazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+        distinguishing: "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo",
       },
       {
         name: "Chlordiazepoxide",
         slug: "chlordiazepoxide",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Alcohol withdrawal tablet — the founding benzo",
+        distinguishing: "Alcohol withdrawal tablet: the founding benzo",
       },
       {
         name: "Midazolam",
         slug: "midazolam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Clorazepate",
         slug: "clorazepate",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Loflazepate",
         slug: "loflazepate",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
     ],
   },
@@ -933,7 +933,7 @@ export const oxazepam: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Oxazepam in two sentences.",
-      answer: "Short-acting GABA-A PAM with direct glucuronidation — no active metabolites, no CYP metabolism. Net effect: Mild-to-moderate anxiolysis and withdrawal coverage with simple, safe kinetics.",
+      answer: "Short-acting GABA-A PAM with direct glucuronidation: no active metabolites, no CYP metabolism. Net effect: Mild-to-moderate anxiolysis and withdrawal coverage with simple, safe kinetics.",
       topic: "Mechanism",
     },
     {
@@ -953,7 +953,7 @@ export const oxazepam: Drug = {
     },
     {
       question: "Share one clinical pearl about Oxazepam that separates safe prescribers from unsafe ones.",
-      answer: "The diazepam family tree ends here — oxazepam is the metabolite that became a medicine.",
+      answer: "The diazepam family tree ends here: oxazepam is the metabolite that became a medicine.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1029,7 +1029,7 @@ export const oxazepam: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1074,7 +1074,7 @@ export const oxazepam: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Oxazepam works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Oxazepam works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1090,7 +1090,7 @@ export const oxazepam: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Oxazepam safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Oxazepam safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1118,7 +1118,7 @@ export const oxazepam: Drug = {
   prescriberGuide: {
     sourceEdition: "Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017)",
     onsetTimeline: [
-      "Oral: 45–90 min (slower than siblings — gentle onset).",
+      "Oral: 45–90 min (slower than siblings, gentle onset).",
     ],
     ifItWorks: [
       "Continue Oxazepam at the lowest effective dose for the guideline-recommended duration for the condition treated.",
@@ -1135,7 +1135,7 @@ export const oxazepam: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Oxazepam follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Oxazepam follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1159,14 +1159,14 @@ export const oxazepam: Drug = {
     dosageForms: ["Tablets/capsules 10, 15, 30 mg"],
     dosingTips: [
       "Preferred where accumulation is the enemy: elderly, liver disease, renal cautious.",
-      "Slower onset makes PRN panic use impractical — choose alprazolam/lorazepam for that.",
+      "Slower onset makes PRN panic use impractical. Choose alprazolam/lorazepam for that.",
     ],
     overdose: [
-      "Overdose with Oxazepam is managed supportively — no specific antidote.",
+      "Overdose with Oxazepam is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Oxazepam is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1202,16 +1202,16 @@ export const oxazepam: Drug = {
       "Mild alcohol withdrawal",
     ],
     pearls: [
-      "The diazepam family tree ends here — oxazepam is the metabolite that became a medicine.",
+      "The diazepam family tree ends here: oxazepam is the metabolite that became a medicine.",
       "Simple, weak, safe: exactly what the elderly anxiolytic prescription wants.",
-      "The end of the metabolic road: diazepam → nordiazepam → temazepam → OXAZEPAM — the final common metabolite marketed as its own drug.",
+      "The end of the metabolic road: diazepam → nordiazepam → temazepam → OXAZEPAM; the final common metabolite marketed as its own drug.",
       "Elder + liver = oxazepam or lorazepam: the glucuronidation pair that bypasses CYP entirely.",
-      "Slow absorption = lower misuse appeal — a pharmacokinetic anti-abuse feature.",
+      "Slow absorption = lower misuse appeal: a pharmacokinetic anti-abuse feature.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

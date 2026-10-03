@@ -23,14 +23,14 @@ export const clonazepam: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Anxiolytics & Sedatives", "Benzodiazepines", "Clonazepam"],
   /* ---- Hero / summary ---- */
-  tagline: "The anticonvulsant benzodiazepine — long-acting, high-potency, and the chronic-benzo trap in psychiatric clothing.",
+  tagline: "The anticonvulsant benzodiazepine: long-acting, high-potency, and the chronic-benzo trap in psychiatric clothing.",
   summary: "Clonazepam is a high-potency, long-acting benzodiazepine (half-life 30–40 h) that straddles neurology and psychiatry: FDA-approved for seizure disorders and panic disorder. Its long half-life smooths inter-dose anxiety better than alprazolam, but its high potency and long duration make withdrawal prolonged and its chronic-psychiatric use (anxiety, augmentation) a dependence trap that inpatients and outpatient services alike must actively unwind.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Clonazepam — from its molecular target (GABA-A benzodiazepine site (high-potency PAM); weak serotonin effects) to clinical effect.",
+    "Explain the mechanism of action of Clonazepam, from its molecular target (GABA-A benzodiazepine site (high-potency PAM); weak serotonin effects) to clinical effect.",
     "List the FDA-approved and off-label uses of Clonazepam.",
     "Predict the common and serious side effects of Clonazepam from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Clonazepam.",
@@ -38,14 +38,14 @@ export const clonazepam: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Clonazepam is a high-potency long-acting benzodiazepine GABA-A PAM with serotonergic interactions — the anticonvulsant member of the psychiatric benzo shelf.",
+    summary: "Clonazepam is a high-potency long-acting benzodiazepine GABA-A PAM with serotonergic interactions: the anticonvulsant member of the psychiatric benzo shelf.",
     molecularTarget: "GABA-A benzodiazepine site (high-potency PAM); weak serotonin effects",
     effect: "Anxiolysis, anticonvulsant action, and long-duration coverage (30–40 h half-life).",
     steps: [
       "High-affinity GABA-A benzodiazepine-site binding (class mechanism at high potency).",
-      "Long half-life (30–40 h) — once or twice daily dosing with smoother troughs than alprazolam.",
-      "Anticonvulsant efficacy across seizure types — the neurology credential.",
-      "Chronic use carries the full dependence profile — long-acting means long withdrawal.",
+      "Long half-life (30–40 h), once or twice daily dosing with smoother troughs than alprazolam.",
+      "Anticonvulsant efficacy across seizure types: the neurology credential.",
+      "Chronic use carries the full dependence profile, long-acting means long withdrawal.",
     ],
     pharmacokinetics: "Complete absorption; peak 1–4 h.",
     halfLife: "30–40 hours (long-acting).",
@@ -110,26 +110,26 @@ export const clonazepam: Drug = {
         label: "inhibits firing",
       },
     ],
-    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly — which is why their effect is powerful but limited by dependence risk.",
+    caption: "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly, which is why their effect is powerful but limited by dependence risk.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["GABA", "Serotonin (5-HT)"],
   receptors: [
-    "GABA-A receptor (benzodiazepine site — PAM)",
+    "GABA-A receptor (benzodiazepine site. PAM)",
   ],
   brainRegionIds: ["amygdala", "prefrontal-cortex"],
   pathwayIds: [],
   /* ---- Clinical ---- */
   indications: [
     {
-      name: "Seizure disorders — akinetic, myoclonic, absence seizures; Lennox-Gastaut",
+      name: "Seizure disorders: akinetic, myoclonic, absence seizures; Lennox-Gastaut",
       status: "fda-approved",
       description: "An anticonvulsant benzodiazepine (below).",
     },
     {
       name: "Panic disorder",
       status: "fda-approved",
-      description: "Effective long-term-appearing option — but dependence discipline applies.",
+      description: "Effective long-term-appearing option, but dependence discipline applies.",
     },
     {
       name: "Acute mania / agitation (adjunct, historic)",
@@ -269,52 +269,52 @@ export const clonazepam: Drug = {
   ],
   pregnancy: {
     legacyCategory: "D",
-    summary: "Class considerations: small oral-cleft signal and neonatal sedation/withdrawal; epilepsy decisions weigh untreated seizures against exposure — specialist neurology-obstetric planning.",
-    lactation: "Passes into milk — infant sedation possible; usually compatible at low doses with monitoring.",
+    summary: "Class considerations: small oral-cleft signal and neonatal sedation/withdrawal; epilepsy decisions weigh untreated seizures against exposure: specialist neurology-obstetric planning.",
+    lactation: "Passes into milk: infant sedation possible; usually compatible at low doses with monitoring.",
   },
   renalAdjustment: "Standard caution.",
   hepaticAdjustment: "Reduce dose in liver disease (3A4 metabolism).",
   /* ---- Education ---- */
-  patientExplanation: "Clonazepam is a long-acting calming medicine used both for seizures and for panic disorder. Because it lasts a full day it avoids the between-dose dips of shorter medicines — but that same long action means that if it is stopped suddenly after regular use, withdrawal comes on slowly and lasts for weeks. Any stopping must be gradual and supervised.",
+  patientExplanation: "Clonazepam is a long-acting calming medicine used both for seizures and for panic disorder. Because it lasts a full day it avoids the between-dose dips of shorter medicines, but that same long action means that if it is stopped suddenly after regular use, withdrawal comes on slowly and lasts for weeks. Any stopping must be gradual and supervised.",
   patientEducationPoints: [
-    "This medicine is for short-term or carefully planned use — it can cause dependence within weeks of regular use.",
-    "Never mix it with opioid painkillers or alcohol — the combination can stop breathing.",
+    "This medicine is for short-term or carefully planned use. It can cause dependence within weeks of regular use.",
+    "Never mix it with opioid painkillers or alcohol: the combination can stop breathing.",
     "Do not drive until you know how it affects you.",
-    "Stopping must be gradual — never stop suddenly after regular use.",
-    "Benefit from Clonazepam builds over weeks — do not judge it in the first days.",
+    "Stopping must be gradual, never stop suddenly after regular use.",
+    "Benefit from Clonazepam builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The neurology-psychiatry bridge drug: same molecule treats absence seizures and panic — understand it in both worlds.",
-    "Long half-life cuts inter-dose rebound but extends withdrawal for weeks — the taper is months, not days.",
-    "Historic Indian inpatient practice: IM clonazepam for mania — now a pharmacological footnote.",
-    "RLS second-line behind gabapentinoids/dopamine agonists — augmentation, not monotherapy.",
-    "Chronic clonazepam for 'anxiety' is the commonest inappropriate long-term benzo in Indian psychiatry — tapering programmes are the answer.",
+    "The neurology-psychiatry bridge drug: same molecule treats absence seizures and panic; understand it in both worlds.",
+    "Long half-life cuts inter-dose rebound but extends withdrawal for weeks: the taper is months, not days.",
+    "Historic Indian inpatient practice: IM clonazepam for mania; now a pharmacological footnote.",
+    "RLS second-line behind gabapentinoids/dopamine agonists: augmentation, not monotherapy.",
+    "Chronic clonazepam for 'anxiety' is the commonest inappropriate long-term benzo in Indian psychiatry, tapering programmes are the answer.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Clonazepam: Clonazepam is a high-potency long-acting benzodiazepine GABA-A PAM with serotonergic interactions — the anticonvulsant member of the psychiatric benzo shelf.",
-        "Uses of Clonazepam: Seizure disorders — akinetic, myoclonic, absence seizures; Lennox-Gastaut; Panic disorder; Acute mania / agitation (adjunct, historic); Restless legs syndrome (severe)",
+        "Mechanism of Clonazepam: Clonazepam is a high-potency long-acting benzodiazepine GABA-A PAM with serotonergic interactions; the anticonvulsant member of the psychiatric benzo shelf.",
+        "Uses of Clonazepam: Seizure disorders; akinetic, myoclonic, absence seizures; Lennox-Gastaut; Panic disorder; Acute mania / agitation (adjunct, historic); Restless legs syndrome (severe)",
         "Mechanism: high-potency long-acting GABA-A PAM with anticonvulsant action.",
-        "Half-life 30–40 h — the longest clinical psychiatric benzo (with diazepam metabolites).",
+        "Half-life 30–40 h: the longest clinical psychiatric benzo (with diazepam metabolites).",
       ],
       practical: [
-        "Prescribe Clonazepam for seizure disorders — akinetic, myoclonic, absence seizures; lennox-gastaut with dose, timing, and duration.",
+        "Prescribe Clonazepam for seizure disorders: akinetic, myoclonic, absence seizures; lennox-gastaut with dose, timing, and duration.",
         "Outline the monitoring plan: Dependence review (Every visit for chronic users); Seizure frequency (epilepsy use) (Ongoing)",
       ],
       longAnswer: [
-        "Clonazepam: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Clonazepam: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: high-potency long-acting GABA-A PAM with anticonvulsant action.",
-        "Half-life 30–40 h — the longest clinical psychiatric benzo (with diazepam metabolites).",
+        "Half-life 30–40 h: the longest clinical psychiatric benzo (with diazepam metabolites).",
       ],
     },
     neetPg: {
       highYield: [
         "Mechanism: high-potency long-acting GABA-A PAM with anticonvulsant action.",
-        "Half-life 30–40 h — the longest clinical psychiatric benzo (with diazepam metabolites).",
+        "Half-life 30–40 h: the longest clinical psychiatric benzo (with diazepam metabolites).",
         "Approved: seizures (akinetic, myoclonic, absence, Lennox-Gastaut) + panic disorder.",
-        "Withdrawal is PROLONGED (weeks-months) — slow tapers.",
+        "Withdrawal is PROLONGED (weeks-months): slow tapers.",
         "Off-label: RLS, social anxiety, mania adjunct (historic).",
       ],
       pyqConcepts: [
@@ -325,7 +325,7 @@ export const clonazepam: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Clonazepam develops prolonged withdrawal syndrome — next best step?",
+        "A patient on Clonazepam develops prolonged withdrawal syndrome: next best step?",
         "When to choose Clonazepam over alternatives in its class.",
       ],
     },
@@ -338,34 +338,34 @@ export const clonazepam: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "Smoothest coverage, longest goodbye — the clonazepam trade.",
-        "0.5 mg clonazepam ≈ 10 mg diazepam — the conversion for taper design.",
-        "The neurology-psychiatry bridge drug: same molecule treats absence seizures and panic — understand it in both worlds.",
-        "Long half-life cuts inter-dose rebound but extends withdrawal for weeks — the taper is months, not days.",
+        "Smoothest coverage, longest goodbye: the clonazepam trade.",
+        "0.5 mg clonazepam ≈ 10 mg diazepam: the conversion for taper design.",
+        "The neurology-psychiatry bridge drug: same molecule treats absence seizures and panic; understand it in both worlds.",
+        "Long half-life cuts inter-dose rebound but extends withdrawal for weeks: the taper is months, not days.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
     "Mechanism: high-potency long-acting GABA-A PAM with anticonvulsant action.",
-    "Half-life 30–40 h — the longest clinical psychiatric benzo (with diazepam metabolites).",
+    "Half-life 30–40 h: the longest clinical psychiatric benzo (with diazepam metabolites).",
     "Approved: seizures (akinetic, myoclonic, absence, Lennox-Gastaut) + panic disorder.",
-    "Withdrawal is PROLONGED (weeks-months) — slow tapers.",
+    "Withdrawal is PROLONGED (weeks-months): slow tapers.",
     "Off-label: RLS, social anxiety, mania adjunct (historic).",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — seizure disorders — akinetic, myoclonic, absence seizures; lennox-gastaut",
-      presentation: "A patient presenting with seizure disorders — akinetic, myoclonic, absence seizures; lennox-gastaut, started on Clonazepam.",
-      history: "A adult patient presents with a seizure disorders — akinetic, myoclonic, absence seizures; lennox-gastaut picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with seizure disorders — akinetic, myoclonic, absence seizures; lennox-gastaut; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Seizure disorders — akinetic, myoclonic, absence seizures; Lennox-Gastaut. Differentials are considered and excluded clinically.",
+      title: "First presentation: seizure disorders; akinetic, myoclonic, absence seizures; lennox-gastaut",
+      presentation: "A patient presenting with seizure disorders: akinetic, myoclonic, absence seizures; lennox-gastaut, started on Clonazepam.",
+      history: "A adult patient presents with a seizure disorders: akinetic, myoclonic, absence seizures; lennox-gastaut picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with seizure disorders: akinetic, myoclonic, absence seizures; lennox-gastaut; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Seizure disorders: akinetic, myoclonic, absence seizures; Lennox-Gastaut. Differentials are considered and excluded clinically.",
       rationale: "Clonazepam is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Benzodiazepine) with strong evidence in this condition.",
       management: "Started at 0.25 mg twice daily, titrated to 0.5–2 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Clonazepam takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Clonazepam takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -374,7 +374,7 @@ export const clonazepam: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Benzodiazepine comparison — choosing within the class",
+      title: "Benzodiazepine comparison: choosing within the class",
       primaryDrug: "Clonazepam",
       rows: [
         {
@@ -445,29 +445,29 @@ export const clonazepam: Drug = {
         },
         {
           attribute: "Sedation",
-          primaryValue: "High — the dose-limiting effect.",
+          primaryValue: "High: the dose-limiting effect.",
           comparisons: [
             {
               drug: "Alprazolam",
-              value: "High — potency-driven.",
+              value: "High: potency-driven.",
             },
             {
               drug: "Diazepam",
-              value: "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+              value: "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
             },
             {
               drug: "Lorazepam",
-              value: "Moderate — intermediate duration limits hangover vs diazepam.",
+              value: "Moderate: intermediate duration limits hangover vs diazepam.",
             },
             {
               drug: "Chlordiazepoxide",
-              value: "High — useful in withdrawal.",
+              value: "High: useful in withdrawal.",
             },
           ],
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The long-acting anticonvulsant benzo — seizures and panic",
+          primaryValue: "The long-acting anticonvulsant benzo: seizures and panic",
           comparisons: [
             {
               drug: "Alprazolam",
@@ -475,20 +475,20 @@ export const clonazepam: Drug = {
             },
             {
               drug: "Diazepam",
-              value: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+              value: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
             },
             {
               drug: "Lorazepam",
-              value: "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+              value: "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo",
             },
             {
               drug: "Chlordiazepoxide",
-              value: "Alcohol withdrawal tablet — the founding benzo",
+              value: "Alcohol withdrawal tablet: the founding benzo",
             },
           ],
         },
       ],
-      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All benzodiazepines share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -497,7 +497,7 @@ export const clonazepam: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Clonazepam reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (high-potency PAM); weak serotonin effects). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Clonazepam reaches peak plasma concentration and begins acting at its molecular target (GABA-A benzodiazepine site (high-potency PAM); weak serotonin effects). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -533,7 +533,7 @@ export const clonazepam: Drug = {
   faqs: [
     {
       question: "How long does Clonazepam take to work?",
-      answer: "Oral: 30–60 min; anticonvulsant effect within an hour.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Oral: 30–60 min; anticonvulsant effect within an hour.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Clonazepam?",
@@ -541,19 +541,19 @@ export const clonazepam: Drug = {
     },
     {
       question: "Can I stop Clonazepam suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Clonazepam habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Clonazepam exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Clonazepam exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Clonazepam during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Clonazepam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Clonazepam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -638,7 +638,7 @@ export const clonazepam: Drug = {
   ],
   relatedConditions: [
     {
-      name: "Seizure disorders — akinetic, myoclonic, absence seizures; Lennox-Gastaut",
+      name: "Seizure disorders: akinetic, myoclonic, absence seizures; Lennox-Gastaut",
       relationship: "primary",
     },
     {
@@ -703,7 +703,7 @@ export const clonazepam: Drug = {
       note: "Region where the drug acts",
     },
     {
-      label: "Seizure disorders — akinetic, myoclonic, absence seizures; Lennox-Gastaut",
+      label: "Seizure disorders: akinetic, myoclonic, absence seizures; Lennox-Gastaut",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -739,7 +739,7 @@ export const clonazepam: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Clonazepam",
+      label: "Patient Guide. Clonazepam",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -747,13 +747,13 @@ export const clonazepam: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The anticonvulsant benzodiazepine — long-acting, high-potency, and the chronic-benzo trap in psychiatric clothing.",
-    summary: "Clonazepam is a prescription medicine used to treat seizure disorders — akinetic, myoclonic, absence seizures; lennox-gastaut. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Clonazepam is a long-acting calming medicine used both for seizures and for panic disorder. Because it lasts a full day it avoids the between-dose dips of shorter medicines — but that same long action means that if it is stopped suddenly after regular use, withdrawal comes on slowly and lasts for weeks. Any stopping must be gradual and supervised.",
-    sideEffects: "The most common side effects are: sedation and drowsiness, ataxia and incoordination, behavioural changes (children), cognitive blunting. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Prolonged withdrawal syndrome and Respiratory depression with opioids. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: dependence review (every visit for chronic users); seizure frequency (epilepsy use) (ongoing). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The anticonvulsant benzodiazepine: long-acting, high-potency, and the chronic-benzo trap in psychiatric clothing.",
+    summary: "Clonazepam is a prescription medicine used to treat seizure disorders: akinetic, myoclonic, absence seizures; lennox-gastaut. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Clonazepam is a long-acting calming medicine used both for seizures and for panic disorder. Because it lasts a full day it avoids the between-dose dips of shorter medicines, but that same long action means that if it is stopped suddenly after regular use, withdrawal comes on slowly and lasts for weeks. Any stopping must be gradual and supervised.",
+    sideEffects: "The most common side effects are: sedation and drowsiness, ataxia and incoordination, behavioural changes (children), cognitive blunting. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Prolonged withdrawal syndrome and Respiratory depression with opioids. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: dependence review (every visit for chronic users); seizure frequency (epilepsy use) (ongoing). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol/CNS depressants, CYP3A4 inhibitors, Other anticonvulsants. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Opioids, Alcohol/CNS depressants, CYP3A4 inhibitors, Other anticonvulsants. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -774,7 +774,7 @@ export const clonazepam: Drug = {
     prescribingScenarios: [
       "Panic disorder maintenance (with discipline).",
       "Epilepsy co-management with neurology.",
-      "The classic long-term benzo found in psychiatric case sheets — tapering programmes.",
+      "The classic long-term benzo found in psychiatric case sheets: tapering programmes.",
     ],
     availability: {
       governmentHospitals: true,
@@ -786,7 +786,7 @@ export const clonazepam: Drug = {
     costNote: "Cost varies by manufacturer and region.",
     monitoring: "Every repeat = dependence review; document taper plans at each visit.",
     patientCounselling: [
-      "Long-acting means long withdrawal — any stopping is gradual over months.",
+      "Long-acting means long withdrawal. Any stopping is gradual over months.",
       "Bedtime dosing for sedation.",
     ],
   },
@@ -822,7 +822,7 @@ export const clonazepam: Drug = {
         name: "Clonazepam",
         slug: "clonazepam",
         relationship: "This guide",
-        distinguishing: "The long-acting anticonvulsant benzo — seizures and panic",
+        distinguishing: "The long-acting anticonvulsant benzo: seizures and panic",
       },
       {
         name: "Alprazolam",
@@ -834,43 +834,43 @@ export const clonazepam: Drug = {
         name: "Diazepam",
         slug: "diazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+        distinguishing: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
       },
       {
         name: "Lorazepam",
         slug: "lorazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+        distinguishing: "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo",
       },
       {
         name: "Chlordiazepoxide",
         slug: "chlordiazepoxide",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Alcohol withdrawal tablet — the founding benzo",
+        distinguishing: "Alcohol withdrawal tablet: the founding benzo",
       },
       {
         name: "Midazolam",
         slug: "midazolam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Oxazepam",
         slug: "oxazepam",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Clorazepate",
         slug: "clorazepate",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
       {
         name: "Loflazepate",
         slug: "loflazepate",
         relationship: "Same class (Benzodiazepine)",
-        distinguishing: "Benzodiazepine — see full guide",
+        distinguishing: "Benzodiazepine: see full guide",
       },
     ],
   },
@@ -1018,12 +1018,12 @@ export const clonazepam: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Clonazepam in two sentences.",
-      answer: "Clonazepam is a high-potency long-acting benzodiazepine GABA-A PAM with serotonergic interactions — the anticonvulsant member of the psychiatric benzo shelf. Net effect: Anxiolysis, anticonvulsant action, and long-duration coverage (30–40 h half-life).",
+      answer: "Clonazepam is a high-potency long-acting benzodiazepine GABA-A PAM with serotonergic interactions: the anticonvulsant member of the psychiatric benzo shelf. Net effect: Anxiolysis, anticonvulsant action, and long-duration coverage (30–40 h half-life).",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Clonazepam.",
-      answer: "Seizure disorders — akinetic, myoclonic, absence seizures; Lennox-Gastaut, Panic disorder, Acute mania / agitation (adjunct, historic), Restless legs syndrome (severe). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Seizure disorders: akinetic, myoclonic, absence seizures; Lennox-Gastaut, Panic disorder, Acute mania / agitation (adjunct, historic), Restless legs syndrome (severe). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -1038,7 +1038,7 @@ export const clonazepam: Drug = {
     },
     {
       question: "Share one clinical pearl about Clonazepam that separates safe prescribers from unsafe ones.",
-      answer: "Smoothest coverage, longest goodbye — the clonazepam trade.",
+      answer: "Smoothest coverage, longest goodbye: the clonazepam trade.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1114,7 +1114,7 @@ export const clonazepam: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1159,7 +1159,7 @@ export const clonazepam: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Clonazepam works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Clonazepam works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1175,7 +1175,7 @@ export const clonazepam: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Clonazepam safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Clonazepam safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1220,7 +1220,7 @@ export const clonazepam: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Clonazepam follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Clonazepam follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1231,7 +1231,7 @@ export const clonazepam: Drug = {
       "Dose reduction or timing change before discontinuation.",
     ],
     weightGain: "See product information and class comparison.",
-    sedation: "High — the dose-limiting effect.",
+    sedation: "High: the dose-limiting effect.",
     dosing: [
       {
         indication: "Panic disorder",
@@ -1262,11 +1262,11 @@ export const clonazepam: Drug = {
       "Elderly: half doses; falls surveillance.",
     ],
     overdose: [
-      "Overdose with Clonazepam is managed supportively — no specific antidote.",
+      "Overdose with Clonazepam is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Clonazepam is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1303,16 +1303,16 @@ export const clonazepam: Drug = {
     potentialDisadvantages: ["Prolonged withdrawal.", "Full dependence profile.", "Cognitive blunting with chronic use.", "Behavioural effects in children."],
     primaryTargetSymptoms: ["Panic disorder", "Seizure control", "Restless legs (off-label)"],
     pearls: [
-      "Smoothest coverage, longest goodbye — the clonazepam trade.",
-      "0.5 mg clonazepam ≈ 10 mg diazepam — the conversion for taper design.",
-      "The neurology-psychiatry bridge drug: same molecule treats absence seizures and panic — understand it in both worlds.",
-      "Long half-life cuts inter-dose rebound but extends withdrawal for weeks — the taper is months, not days.",
-      "Historic Indian inpatient practice: IM clonazepam for mania — now a pharmacological footnote.",
+      "Smoothest coverage, longest goodbye: the clonazepam trade.",
+      "0.5 mg clonazepam ≈ 10 mg diazepam: the conversion for taper design.",
+      "The neurology-psychiatry bridge drug: same molecule treats absence seizures and panic; understand it in both worlds.",
+      "Long half-life cuts inter-dose rebound but extends withdrawal for weeks: the taper is months, not days.",
+      "Historic Indian inpatient practice: IM clonazepam for mania; now a pharmacological footnote.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

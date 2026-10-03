@@ -23,14 +23,14 @@ export const tiagabine: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Mood Stabilisers & Anticonvulsants", "Anticonvulsants", "Tiagabine"],
   /* ---- Hero / summary ---- */
-  tagline: "The GAT-1 reuptake blocker — GABA-ergic precision that never found its psychiatric niche.",
-  summary: "Tiagabine is the selective GAT-1 (GABA transporter) inhibitor: it raises synaptic GABA by blocking reuptake — an elegant mechanism that earned epilepsy approval as adjunct therapy but failed psychiatric trials (anxiety, insomnia) and carries seizure-alert cautions. A Stahl-appendix completeness drug whose mechanism teaching outlives its prescribing.",
+  tagline: "The GAT-1 reuptake blocker. GABA-ergic precision that never found its psychiatric niche.",
+  summary: "Tiagabine is the selective GAT-1 (GABA transporter) inhibitor: it raises synaptic GABA by blocking reuptake; an elegant mechanism that earned epilepsy approval as adjunct therapy but failed psychiatric trials (anxiety, insomnia) and carries seizure-alert cautions. A Stahl-appendix completeness drug whose mechanism teaching outlives its prescribing.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Tiagabine — from its molecular target (GAT-1 GABA transporter (selective inhibition — blocks GABA reuptake)) to clinical effect.",
+    "Explain the mechanism of action of Tiagabine (from its molecular target (GAT-1 GABA transporter (selective inhibition) blocks GABA reuptake)) to clinical effect.",
     "List the FDA-approved and off-label uses of Tiagabine.",
     "Predict the common and serious side effects of Tiagabine from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Tiagabine.",
@@ -38,15 +38,15 @@ export const tiagabine: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Tiagabine selectively blocks the GAT-1 GABA transporter, raising synaptic GABA concentration — the GABA-ergic reuptake-blocker concept.",
-    molecularTarget: "GAT-1 GABA transporter (selective inhibition — blocks GABA reuptake)",
+    summary: "Tiagabine selectively blocks the GAT-1 GABA transporter, raising synaptic GABA concentration: the GABA-ergic reuptake-blocker concept.",
+    molecularTarget: "GAT-1 GABA transporter (selective inhibition, blocks GABA reuptake)",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Tiagabine selectively blocks the GAT-1 GABA transporter, raising synaptic GABA concentration — the GABA-ergic reuptake-blocker concept.",
+      "Tiagabine selectively blocks the GAT-1 GABA transporter, raising synaptic GABA concentration: the GABA-ergic reuptake-blocker concept.",
       "The mechanism translates into the clinical profile described.",
       "Practical use follows half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 7-9 hours (with enzyme-inducer co-therapy shorter). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 7-9 hours (with enzyme-inducer co-therapy shorter). See mechanism and prescriber sections.",
     halfLife: "7-9 hours (with enzyme-inducer co-therapy shorter).",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -97,7 +97,7 @@ export const tiagabine: Drug = {
         label: "stabilised",
       },
     ],
-    caption: "Reducing pathological neuronal firing — the shared mechanistic logic of anticonvulsants across epilepsy, neuropathic pain, and mood destabilisation.",
+    caption: "Reducing pathological neuronal firing: the shared mechanistic logic of anticonvulsants across epilepsy, neuropathic pain, and mood destabilisation.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["GABA"],
@@ -114,7 +114,7 @@ export const tiagabine: Drug = {
     {
       name: "Anxiety and insomnia (failed/unapproved)",
       status: "off-label",
-      description: "Psychiatric trials failed — the off-label uses are historic.",
+      description: "Psychiatric trials failed: the off-label uses are historic.",
     },
     {
       name: "Bipolar/catalepsy (no evidence)",
@@ -159,7 +159,7 @@ export const tiagabine: Drug = {
       name: "Seizures (including in non-epileptics — the label warning)",
       frequency: "uncommon",
       severity: "life-threatening",
-      description: "Paradoxical seizure induction, including status epilepticus reports in non-epileptic psychiatric use — the FDA alert that ended psychiatric exploration.",
+      description: "Paradoxical seizure induction, including status epilepticus reports in non-epileptic psychiatric use: the FDA alert that ended psychiatric exploration.",
       management: "Dose ceilings; avoid in non-epilepsy off-label use.",
     },
     {
@@ -200,78 +200,78 @@ export const tiagabine: Drug = {
   renalAdjustment: "No adjustment.",
   hepaticAdjustment: "3A4 metabolism; reduce dose in hepatic impairment and with inducers co-prescribed.",
   /* ---- Education ---- */
-  patientExplanation: "Tiagabine is an anti-seizure medicine that works by blocking the recycling of GABA, the brain's main calming chemical. It is used only as an add-on for focal epilepsy: trials in anxiety and sleep problems did not succeed, and it can paradoxically cause seizures in people without epilepsy if misused — so it is prescribed strictly for its approved purpose.",
+  patientExplanation: "Tiagabine is an anti-seizure medicine that works by blocking the recycling of GABA, the brain's main calming chemical. It is used only as an add-on for focal epilepsy: trials in anxiety and sleep problems did not succeed, and it can paradoxically cause seizures in people without epilepsy if misused, so it is prescribed strictly for its approved purpose.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Tiagabine builds over weeks — do not judge it in the first days.",
+    "Benefit from Tiagabine builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The mechanism lesson: blocking GABA reuptake should calm the brain — psychiatric trials said no, and the seizure alert ended the conversation.",
-    "The paradox: an anticonvulsant that causes seizures in non-epileptics at psychiatric doses — the FDA alert that confined it to epilepsy.",
+    "The mechanism lesson: blocking GABA reuptake should calm the brain; psychiatric trials said no, and the seizure alert ended the conversation.",
+    "The paradox: an anticonvulsant that causes seizures in non-epileptics at psychiatric doses; the FDA alert that confined it to epilepsy.",
     "The completeness entry: know tiagabine for GAT-1 pharmacology, not for prescribing.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Tiagabine: Tiagabine selectively blocks the GAT-1 GABA transporter, raising synaptic GABA concentration — the GABA-ergic reuptake-blocker concept.",
-        "Uses of Tiagabine: Epilepsy — adjunct for focal seizures; Anxiety and insomnia (failed/unapproved); Bipolar/catalepsy (no evidence)",
-        "Mechanism: GAT-1 GABA-TRANSPORTER inhibition (selective) — the GABA-reuptake blocker.",
+        "Mechanism of Tiagabine: Tiagabine selectively blocks the GAT-1 GABA transporter, raising synaptic GABA concentration; the GABA-ergic reuptake-blocker concept.",
+        "Uses of Tiagabine: Epilepsy; adjunct for focal seizures; Anxiety and insomnia (failed/unapproved); Bipolar/catalepsy (no evidence)",
+        "Mechanism: GAT-1 GABA-TRANSPORTER inhibition (selective); the GABA-reuptake blocker.",
         "Approved: focal-epilepsy adjunct only.",
       ],
       practical: [
-        "Prescribe Tiagabine for epilepsy — adjunct for focal seizures with dose, timing, and duration.",
+        "Prescribe Tiagabine for epilepsy: adjunct for focal seizures with dose, timing, and duration.",
         "Outline the monitoring plan: Seizure-alert counselling (At initiation)",
       ],
       longAnswer: [
-        "Tiagabine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: GAT-1 GABA-TRANSPORTER inhibition (selective) — the GABA-reuptake blocker.",
+        "Tiagabine: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: GAT-1 GABA-TRANSPORTER inhibition (selective); the GABA-reuptake blocker.",
         "Approved: focal-epilepsy adjunct only.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: GAT-1 GABA-TRANSPORTER inhibition (selective) — the GABA-reuptake blocker.",
+        "Mechanism: GAT-1 GABA-TRANSPORTER inhibition (selective); the GABA-reuptake blocker.",
         "Approved: focal-epilepsy adjunct only.",
-        "Psychiatric trials failed (anxiety, insomnia) — off-label use historic.",
+        "Psychiatric trials failed (anxiety, insomnia): off-label use historic.",
         "FDA seizure alert: seizures/status in non-epileptics at psychiatric doses.",
         "Dose 32-56 mg/day with food; slow titration.",
         "Teaching value > prescribing value.",
       ],
       pyqConcepts: [
         "Mechanism/target of Tiagabine",
-        "Key adverse effect: Seizures (including in non-epileptics — the label warning)",
+        "Key adverse effect: Seizures (including in non-epileptics, the label warning)",
         "Dosing and titration of Tiagabine",
       ],
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Tiagabine develops seizures (including in non-epileptics — the label warning) — next best step?",
+        "A patient on Tiagabine develops seizures (including in non-epileptics, the label warning): next best step?",
         "When to choose Tiagabine over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: GAT-1 GABA transporter (selective inhibition — blocks GABA reuptake)",
+        "Primary target: GAT-1 GABA transporter (selective inhibition, blocks GABA reuptake)",
         "Most common side effects: Dizziness and sedation, Tremor and concentration difficulty, Nausea and abdominal pain",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The mechanism lesson: blocking GABA reuptake should calm the brain — psychiatric trials said no, and the seizure alert ended the conversation.",
-        "The paradox: an anticonvulsant that causes seizures in non-epileptics at psychiatric doses — the FDA alert that confined it to epilepsy.",
+        "The mechanism lesson: blocking GABA reuptake should calm the brain; psychiatric trials said no, and the seizure alert ended the conversation.",
+        "The paradox: an anticonvulsant that causes seizures in non-epileptics at psychiatric doses; the FDA alert that confined it to epilepsy.",
         "The completeness entry: know tiagabine for GAT-1 pharmacology, not for prescribing.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: GAT-1 GABA-TRANSPORTER inhibition (selective) — the GABA-reuptake blocker.",
+    "Mechanism: GAT-1 GABA-TRANSPORTER inhibition (selective); the GABA-reuptake blocker.",
     "Approved: focal-epilepsy adjunct only.",
-    "Psychiatric trials failed (anxiety, insomnia) — off-label use historic.",
+    "Psychiatric trials failed (anxiety, insomnia): off-label use historic.",
     "FDA seizure alert: seizures/status in non-epileptics at psychiatric doses.",
     "Dose 32-56 mg/day with food; slow titration.",
     "Teaching value > prescribing value.",
@@ -279,16 +279,16 @@ export const tiagabine: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — epilepsy — adjunct for focal seizures",
-      presentation: "A patient presenting with epilepsy — adjunct for focal seizures, started on Tiagabine.",
-      history: "A adult patient presents with a epilepsy — adjunct for focal seizures picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with epilepsy — adjunct for focal seizures; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Epilepsy — adjunct for focal seizures. Differentials are considered and excluded clinically.",
+      title: "First presentation: epilepsy; adjunct for focal seizures",
+      presentation: "A patient presenting with epilepsy: adjunct for focal seizures, started on Tiagabine.",
+      history: "A adult patient presents with a epilepsy: adjunct for focal seizures picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with epilepsy: adjunct for focal seizures; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Epilepsy: adjunct for focal seizures. Differentials are considered and excluded clinically.",
       rationale: "Tiagabine is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Anticonvulsant) with strong evidence in this condition.",
       management: "Started at 4 mg once daily × 1 week, titrated to 32-56 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Tiagabine takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Tiagabine takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -297,12 +297,12 @@ export const tiagabine: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Anticonvulsant comparison — choosing within the class",
+      title: "Anticonvulsant comparison: choosing within the class",
       primaryDrug: "Tiagabine",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "GAT-1 GABA transporter (selective inhibition — blocks GABA reuptake)",
+          primaryValue: "GAT-1 GABA transporter (selective inhibition, blocks GABA reuptake)",
           comparisons: [
             {
               drug: "Gabapentin",
@@ -390,19 +390,19 @@ export const tiagabine: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The GABA-reuptake blocker — mechanism elegance, clinical footnote",
+          primaryValue: "The GABA-reuptake blocker: mechanism elegance, clinical footnote",
           comparisons: [
             {
               drug: "Gabapentin",
-              value: "The interaction-clean pain-augmentation agent — anxiety and craving off-label",
+              value: "The interaction-clean pain-augmentation agent: anxiety and craving off-label",
             },
             {
               drug: "Pregabalin",
-              value: "The GAD-approved gabapentinoid — pain, fibromyalgia, anxiety",
+              value: "The GAD-approved gabapentinoid: pain, fibromyalgia, anxiety",
             },
             {
               drug: "Topiramate",
-              value: "The weight-losing multi-mechanism stabiliser — craving and appetite",
+              value: "The weight-losing multi-mechanism stabiliser: craving and appetite",
             },
             {
               drug: "Levetiracetam",
@@ -411,7 +411,7 @@ export const tiagabine: Drug = {
           ],
         },
       ],
-      takeaway: "All anticonvulsants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All anticonvulsants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -420,7 +420,7 @@ export const tiagabine: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Tiagabine reaches peak plasma concentration and begins acting at its molecular target (GAT-1 GABA transporter (selective inhibition — blocks GABA reuptake)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Tiagabine reaches peak plasma concentration and begins acting at its molecular target (GAT-1 GABA transporter (selective inhibition, blocks GABA reuptake)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -456,7 +456,7 @@ export const tiagabine: Drug = {
   faqs: [
     {
       question: "How long does Tiagabine take to work?",
-      answer: "Seizure adjunct effects within titration.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Seizure adjunct effects within titration.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Tiagabine?",
@@ -464,11 +464,11 @@ export const tiagabine: Drug = {
     },
     {
       question: "Can I stop Tiagabine suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Tiagabine habit-forming?",
@@ -476,7 +476,7 @@ export const tiagabine: Drug = {
     },
     {
       question: "Can I take Tiagabine during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Tiagabine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Tiagabine may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -594,13 +594,13 @@ export const tiagabine: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "GAT-1 GABA transporter (selective inhibition — blocks GABA reuptake)",
+      label: "GAT-1 GABA transporter (selective inhibition, blocks GABA reuptake)",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
     },
     {
-      label: "Epilepsy — adjunct for focal seizures",
+      label: "Epilepsy: adjunct for focal seizures",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -618,7 +618,7 @@ export const tiagabine: Drug = {
       note: "Used clinically",
     },
     {
-      label: "Seizures (including in non-epileptics — the label warning)",
+      label: "Seizures (including in non-epileptics, the label warning)",
       type: "side-effect",
       href: "#side-effects",
       note: "Important safety issue",
@@ -636,7 +636,7 @@ export const tiagabine: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Tiagabine",
+      label: "Patient Guide. Tiagabine",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -644,13 +644,13 @@ export const tiagabine: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The GAT-1 reuptake blocker — GABA-ergic precision that never found its psychiatric niche.",
-    summary: "Tiagabine is a prescription medicine used to treat epilepsy — adjunct for focal seizures. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Tiagabine is an anti-seizure medicine that works by blocking the recycling of GABA, the brain's main calming chemical. It is used only as an add-on for focal epilepsy: trials in anxiety and sleep problems did not succeed, and it can paradoxically cause seizures in people without epilepsy if misused — so it is prescribed strictly for its approved purpose.",
-    sideEffects: "The most common side effects are: dizziness and sedation, tremor and concentration difficulty, nausea and abdominal pain. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Seizures (including in non-epileptics — the label warning) and Cognitive blunting. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: seizure-alert counselling (at initiation). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The GAT-1 reuptake blocker. GABA-ergic precision that never found its psychiatric niche.",
+    summary: "Tiagabine is a prescription medicine used to treat epilepsy: adjunct for focal seizures. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Tiagabine is an anti-seizure medicine that works by blocking the recycling of GABA, the brain's main calming chemical. It is used only as an add-on for focal epilepsy: trials in anxiety and sleep problems did not succeed, and it can paradoxically cause seizures in people without epilepsy if misused, so it is prescribed strictly for its approved purpose.",
+    sideEffects: "The most common side effects are: dizziness and sedation, tremor and concentration difficulty, nausea and abdominal pain. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Seizures (including in non-epileptics, the label warning) and Cognitive blunting. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: seizure-alert counselling (at initiation). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Enzyme inducers (carbamazepine, phenytoin), Other sedatives. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Enzyme inducers (carbamazepine, phenytoin), Other sedatives. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -674,7 +674,7 @@ export const tiagabine: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -708,25 +708,25 @@ export const tiagabine: Drug = {
         name: "Tiagabine",
         slug: "tiagabine",
         relationship: "This guide",
-        distinguishing: "The GABA-reuptake blocker — mechanism elegance, clinical footnote",
+        distinguishing: "The GABA-reuptake blocker: mechanism elegance, clinical footnote",
       },
       {
         name: "Gabapentin",
         slug: "gabapentin",
         relationship: "Same class (Anticonvulsant)",
-        distinguishing: "The interaction-clean pain-augmentation agent — anxiety and craving off-label",
+        distinguishing: "The interaction-clean pain-augmentation agent: anxiety and craving off-label",
       },
       {
         name: "Pregabalin",
         slug: "pregabalin",
         relationship: "Same class (Anticonvulsant)",
-        distinguishing: "The GAD-approved gabapentinoid — pain, fibromyalgia, anxiety",
+        distinguishing: "The GAD-approved gabapentinoid: pain, fibromyalgia, anxiety",
       },
       {
         name: "Topiramate",
         slug: "topiramate",
         relationship: "Same class (Anticonvulsant)",
-        distinguishing: "The weight-losing multi-mechanism stabiliser — craving and appetite",
+        distinguishing: "The weight-losing multi-mechanism stabiliser: craving and appetite",
       },
       {
         name: "Levetiracetam",
@@ -738,7 +738,7 @@ export const tiagabine: Drug = {
         name: "Zonisamide",
         slug: "zonisamide",
         relationship: "Same class (Anticonvulsant)",
-        distinguishing: "The second weight-loser — topiramate's sibling",
+        distinguishing: "The second weight-loser: topiramate's sibling",
       },
     ],
   },
@@ -886,17 +886,17 @@ export const tiagabine: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Tiagabine in two sentences.",
-      answer: "Tiagabine selectively blocks the GAT-1 GABA transporter, raising synaptic GABA concentration — the GABA-ergic reuptake-blocker concept. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Tiagabine selectively blocks the GAT-1 GABA transporter, raising synaptic GABA concentration: the GABA-ergic reuptake-blocker concept. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Tiagabine.",
-      answer: "Epilepsy — adjunct for focal seizures, Anxiety and insomnia (failed/unapproved), Bipolar/catalepsy (no evidence). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Epilepsy: adjunct for focal seizures, Anxiety and insomnia (failed/unapproved), Bipolar/catalepsy (no evidence). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Tiagabine and how you would manage it.",
-      answer: "Seizures (including in non-epileptics — the label warning): Paradoxical seizure induction, including status epilepticus reports in non-epileptic psychiatric use — the FDA alert that ended psychiatric exploration. Management: Dose ceilings; avoid in non-epilepsy off-label use.",
+      answer: "Seizures (including in non-epileptics (the label warning): Paradoxical seizure induction, including status epilepticus reports in non-epileptic psychiatric use) the FDA alert that ended psychiatric exploration. Management: Dose ceilings; avoid in non-epilepsy off-label use.",
       topic: "Safety",
     },
     {
@@ -906,7 +906,7 @@ export const tiagabine: Drug = {
     },
     {
       question: "Share one clinical pearl about Tiagabine that separates safe prescribers from unsafe ones.",
-      answer: "The mechanism lesson: blocking GABA reuptake should calm the brain — psychiatric trials said no, and the seizure alert ended the conversation.",
+      answer: "The mechanism lesson: blocking GABA reuptake should calm the brain; psychiatric trials said no, and the seizure alert ended the conversation.",
       topic: "Clinical Pearls",
     },
   ],
@@ -982,7 +982,7 @@ export const tiagabine: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1027,7 +1027,7 @@ export const tiagabine: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Tiagabine works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Tiagabine works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1043,7 +1043,7 @@ export const tiagabine: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Tiagabine safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Tiagabine safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1088,7 +1088,7 @@ export const tiagabine: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Tiagabine follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Tiagabine follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1115,7 +1115,7 @@ export const tiagabine: Drug = {
       "Do not use off-label in non-epilepsy patients (seizure alert).",
     ],
     overdose: [
-      "Overdose with Tiagabine is managed supportively — no specific antidote.",
+      "Overdose with Tiagabine is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Tiagabine is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1152,14 +1152,14 @@ export const tiagabine: Drug = {
     potentialDisadvantages: ["Failed psychiatric indications.", "Seizure alert in non-epileptics.", "Inducer-dependent dosing."],
     primaryTargetSymptoms: ["Focal seizures (adjunct)"],
     pearls: [
-      "The mechanism lesson: blocking GABA reuptake should calm the brain — psychiatric trials said no, and the seizure alert ended the conversation.",
-      "The paradox: an anticonvulsant that causes seizures in non-epileptics at psychiatric doses — the FDA alert that confined it to epilepsy.",
+      "The mechanism lesson: blocking GABA reuptake should calm the brain; psychiatric trials said no, and the seizure alert ended the conversation.",
+      "The paradox: an anticonvulsant that causes seizures in non-epileptics at psychiatric doses; the FDA alert that confined it to epilepsy.",
       "The completeness entry: know tiagabine for GAT-1 pharmacology, not for prescribing.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

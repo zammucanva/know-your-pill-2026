@@ -86,7 +86,7 @@ export function ContinueLearningSection() {
           /* Honest empty state — no fabricated progress */
           <div className="space-y-px">
             {[
-              { label: "Sertraline", description: "The reference SSRI — start here for the full 6-lesson course.", href: "/drugs/sertraline", meta: "Medication" },
+              { label: "Sertraline", description: "The reference SSRI: start here for the full 6-lesson course.", href: "/drugs/sertraline", meta: "Medication" },
               { label: "Major Depressive Disorder", description: "Understand the clinical condition that SSRIs treat.", href: "/diseases/major-depressive-disorder", meta: "Disease" },
               { label: "Alcohol", description: "GABA, glutamate, and the neuroscience of withdrawal.", href: "/substances/alcohol", meta: "Substance" },
             ].map((item, i) => (

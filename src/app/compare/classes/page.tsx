@@ -30,7 +30,7 @@ import { ClassComparisonClient } from "@/components/kyp/sections/class-compariso
 export const metadata: Metadata = {
   title: "Class Comparison · Know Your Pill",
   description:
-    "Compare medications within a class across clinical concerns — weight and metabolic effects, sedation, prolactin, EPS, QT and more. Every value is documented data from the medication pages; nothing is scored or ranked.",
+    "Compare medications within a class across clinical concerns: weight and metabolic effects, sedation, prolactin, EPS, QT and more. Every value is documented data from the medication pages; nothing is scored or ranked.",
   keywords: [
     "antipsychotic comparison",
     "antidepressant comparison",
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
     "Know Your Pill",
   ],
   openGraph: {
-    title: "Class Comparison — Choose by Concern · Know Your Pill",
+    title: "Class Comparison: Choose by Concern · Know Your Pill",
     description:
-      "How medications in a class differ across documented concerns — an educational comparison, not a prescribing algorithm.",
+      "How medications in a class differ across documented concerns: an educational comparison, not a prescribing algorithm.",
     type: "website",
     siteName: "Know Your Pill",
   },
@@ -80,7 +80,7 @@ export default function ClassComparisonPage() {
               </h1>
               <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground leading-relaxed">
                 How do medications in the same class differ across the concerns
-                that matter — weight and metabolic effects, sedation, prolactin,
+                that matter: weight and metabolic effects, sedation, prolactin,
                 EPS, QT, monitoring burden? Pick a class, pick your concerns,
                 and read the documented differences side by side. Every value is
                 the medication&apos;s own reviewed data; nothing is scored,
@@ -96,7 +96,7 @@ export default function ClassComparisonPage() {
                     aria-hidden
                   />
                   <span>
-                    This is an <strong>educational comparison</strong> — it shows
+                    This is an <strong>educational comparison</strong>: it shows
                     how medications <em>differ</em> across selected concerns so
                     you can inspect the differences yourself. It is not a
                     prescribing algorithm and never names a &ldquo;best&rdquo;

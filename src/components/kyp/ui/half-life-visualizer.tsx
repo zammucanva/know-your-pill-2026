@@ -99,7 +99,7 @@ export function HalfLifeVisualizer({
       <div className="mb-3 flex items-center justify-between gap-3">
         <p className="flex items-center gap-2 text-overline text-muted-foreground">
           <Timer className="h-3.5 w-3.5 text-brand" aria-hidden />
-          Half-life timeline — the 5 half-lives rule
+          Half-life timeline: the 5 half-lives rule
         </p>
         <span className="text-[0.7rem] font-medium text-muted-foreground/70">
           {drugName}
@@ -235,7 +235,7 @@ export function HalfLifeVisualizer({
                 fontSize="10"
                 className="fill-current text-muted-foreground/70"
               >
-                time in half-life multiples — 1× ≈ {formatDuration(parsed.representativeHours)}
+                time in half-life multiples: 1× ≈ {formatDuration(parsed.representativeHours)}
               </text>
             </svg>
             <figcaption className="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-[0.7rem] text-muted-foreground">
@@ -271,7 +271,7 @@ export function HalfLifeVisualizer({
                 {formatDuration(facts.steadyStateHours)}
               </p>
               <p className="mt-0.5 text-[0.7rem] leading-snug text-muted-foreground">
-                (≈ 5 × half-life) — where dose changes fully show
+                (≈ 5 × half-life), where dose changes fully show
               </p>
             </div>
             <div className="rounded-lg border border-warning/30 bg-warning/5 p-3">
@@ -282,7 +282,7 @@ export function HalfLifeVisualizer({
                 {formatDuration(facts.washoutHours)}
               </p>
               <p className="mt-0.5 text-[0.7rem] leading-snug text-muted-foreground">
-                to ≈ 97% cleared — the switching-safety number
+                to ≈ 97% cleared: the switching-safety number
               </p>
             </div>
           </div>
@@ -291,7 +291,7 @@ export function HalfLifeVisualizer({
             <Info className="mt-0.5 h-3 w-3 shrink-0" aria-hidden />
             Idealized single-compartment estimate derived from the stated
             half-life (shown verbatim above). Real kinetics vary with age,
-            liver and kidney function, and interactions — levels fall roughly
+            liver and kidney function, and interactions: levels fall roughly
             50% every half-life, which is why missed doses and taper timing
             hang on this number.
           </p>
@@ -306,7 +306,7 @@ export function HalfLifeVisualizer({
             universal rule still applies: any medication reaches ≈ 97% of
             its steady state after about <span className="font-semibold">5
             half-lives</span> of consistent dosing, and is ≈ 97% cleared
-            about 5 half-lives after the last dose — use the stated
+            about 5 half-lives after the last dose. Use the stated
             half-life above and this profile&apos;s own stopping guidance,
             not a generic curve.
           </p>

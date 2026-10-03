@@ -23,14 +23,14 @@ export const sulpiride: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Atypical Antipsychotics", "Sulpiride"],
   /* ---- Hero / summary ---- */
-  tagline: "The parent benzamide — amisulpride's ancestor with the same dose-band logic.",
+  tagline: "The parent benzamide: amisulpride's ancestor with the same dose-band logic.",
   summary: "Sulpiride is the original substituted benzamide antipsychotic: amisulpride's chemical parent, sharing the dose-band logic (low-dose antidepressant/negative-symptom; high-dose antipsychotic) with weaker potency and the same prolactin-QT profile. A European-Japanese-Indian legacy agent surviving in formularies and teaching.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Sulpiride — from its molecular target (D2/D3 receptors (dose-dependent presynaptic/postsynaptic action)) to clinical effect.",
+    "Explain the mechanism of action of Sulpiride, from its molecular target (D2/D3 receptors (dose-dependent presynaptic/postsynaptic action)) to clinical effect.",
     "List the FDA-approved and off-label uses of Sulpiride.",
     "Predict the common and serious side effects of Sulpiride from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Sulpiride.",
@@ -46,7 +46,7 @@ export const sulpiride: Drug = {
       "The mechanism translates into the clinical profile described.",
       "Practical use follows half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 6-8 hours (divided dosing). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 6-8 hours (divided dosing). See mechanism and prescriber sections.",
     halfLife: "6-8 hours (divided dosing).",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -126,7 +126,7 @@ export const sulpiride: Drug = {
         label: "5-HT2A-mediated benefit",
       },
     ],
-    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms — the serotonin-dopamine hypothesis of atypical antipsychotics.",
+    caption: "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms: the serotonin-dopamine hypothesis of atypical antipsychotics.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Dopamine (DA)"],
@@ -237,28 +237,28 @@ export const sulpiride: Drug = {
     summary: "Limited data; standard antipsychotic caution.",
     lactation: "Excreted in milk; monitoring.",
   },
-  renalAdjustment: "Renal clearance dominant — reduce in impairment.",
+  renalAdjustment: "Renal clearance dominant: reduce in impairment.",
   hepaticAdjustment: "Standard caution.",
   /* ---- Education ---- */
-  patientExplanation: "Sulpiride is an older European and Indian antipsychotic from the same family as amisulpride: small doses were used for low mood and motivation, larger doses for the symptoms of psychosis. It commonly raises prolactin — affecting periods, breast comfort, and sexual function.",
+  patientExplanation: "Sulpiride is an older European and Indian antipsychotic from the same family as amisulpride: small doses were used for low mood and motivation, larger doses for the symptoms of psychosis. It commonly raises prolactin, affecting periods, breast comfort, and sexual function.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Sulpiride builds over weeks — do not judge it in the first days.",
+    "Benefit from Sulpiride builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The family tree: sulpiride → amisulpride (the refined successor) — dose-band pharmacology inherited intact.",
-    "The otology oddity: sulpiride's historic vertigo-tinnitus niche — a benzamide side-door.",
-    "Prolactin at the top: the benzamide price — menstrual and sexual effects to ask about.",
+    "The family tree: sulpiride → amisulpride (the refined successor); dose-band pharmacology inherited intact.",
+    "The otology oddity: sulpiride's historic vertigo-tinnitus niche; a benzamide side-door.",
+    "Prolactin at the top: the benzamide price; menstrual and sexual effects to ask about.",
   ],
   examLens: {
     mbbs: {
       viva: [
         "Mechanism of Sulpiride: Sulpiride shows the benzamide dose-band: low-dose presynaptic autoreceptor blockade, high-dose postsynaptic D2 antagonism.",
         "Uses of Sulpiride: Schizophrenia (positive symptoms); Negative symptoms / dysthymia (low dose); Vertigo and tinnitus (Meniere-type)",
-        "Mechanism: parent SUBSTITUTED BENZAMIDE — dose-band presynaptic/postsynaptic D2 action.",
+        "Mechanism: parent SUBSTITUTED BENZAMIDE; dose-band presynaptic/postsynaptic D2 action.",
         "Legacy approvals: schizophrenia (EU/Asia); low-dose dysthymia tradition.",
       ],
       practical: [
@@ -266,17 +266,17 @@ export const sulpiride: Drug = {
         "Outline the monitoring plan: Prolactin symptoms (At review)",
       ],
       longAnswer: [
-        "Sulpiride: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: parent SUBSTITUTED BENZAMIDE — dose-band presynaptic/postsynaptic D2 action.",
+        "Sulpiride: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: parent SUBSTITUTED BENZAMIDE; dose-band presynaptic/postsynaptic D2 action.",
         "Legacy approvals: schizophrenia (EU/Asia); low-dose dysthymia tradition.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: parent SUBSTITUTED BENZAMIDE — dose-band presynaptic/postsynaptic D2 action.",
+        "Mechanism: parent SUBSTITUTED BENZAMIDE; dose-band presynaptic/postsynaptic D2 action.",
         "Legacy approvals: schizophrenia (EU/Asia); low-dose dysthymia tradition.",
         "Prolactin elevation class-top; QT benzamide caution.",
-        "Amisulpride's ancestor — same pharmacology, weaker potency.",
+        "Amisulpride's ancestor: same pharmacology, weaker potency.",
         "Historic vertigo/tinnitus niche.",
       ],
       pyqConcepts: [
@@ -287,7 +287,7 @@ export const sulpiride: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Sulpiride develops neuroleptic malignant syndrome — next best step?",
+        "A patient on Sulpiride develops neuroleptic malignant syndrome: next best step?",
         "When to choose Sulpiride over alternatives in its class.",
       ],
     },
@@ -300,24 +300,24 @@ export const sulpiride: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The family tree: sulpiride → amisulpride (the refined successor) — dose-band pharmacology inherited intact.",
-        "The otology oddity: sulpiride's historic vertigo-tinnitus niche — a benzamide side-door.",
-        "Prolactin at the top: the benzamide price — menstrual and sexual effects to ask about.",
+        "The family tree: sulpiride → amisulpride (the refined successor); dose-band pharmacology inherited intact.",
+        "The otology oddity: sulpiride's historic vertigo-tinnitus niche; a benzamide side-door.",
+        "Prolactin at the top: the benzamide price; menstrual and sexual effects to ask about.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: parent SUBSTITUTED BENZAMIDE — dose-band presynaptic/postsynaptic D2 action.",
+    "Mechanism: parent SUBSTITUTED BENZAMIDE; dose-band presynaptic/postsynaptic D2 action.",
     "Legacy approvals: schizophrenia (EU/Asia); low-dose dysthymia tradition.",
     "Prolactin elevation class-top; QT benzamide caution.",
-    "Amisulpride's ancestor — same pharmacology, weaker potency.",
+    "Amisulpride's ancestor: same pharmacology, weaker potency.",
     "Historic vertigo/tinnitus niche.",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia (positive symptoms)",
+      title: "First presentation: schizophrenia (positive symptoms)",
       presentation: "A patient presenting with schizophrenia (positive symptoms), started on Sulpiride.",
       history: "A adult patient presents with a schizophrenia (positive symptoms) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with schizophrenia (positive symptoms); physical examination and baseline investigations are unremarkable.",
@@ -326,7 +326,7 @@ export const sulpiride: Drug = {
       management: "Started at 200 mg twice daily, titrated to 600-1200 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Sulpiride takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Sulpiride takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -335,7 +335,7 @@ export const sulpiride: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Atypical Antipsychotic comparison — choosing within the class",
+      title: "Atypical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Sulpiride",
       rows: [
         {
@@ -410,7 +410,7 @@ export const sulpiride: Drug = {
           comparisons: [
             {
               drug: "Aripiprazole",
-              value: "Low; can be activating — insomnia is more common than somnolence.",
+              value: "Low; can be activating: insomnia is more common than somnolence.",
             },
             {
               drug: "Clozapine",
@@ -418,38 +418,38 @@ export const sulpiride: Drug = {
             },
             {
               drug: "Lurasidone",
-              value: "Low — may be mildly activating.",
+              value: "Low: may be mildly activating.",
             },
             {
               drug: "Olanzapine",
-              value: "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+              value: "Moderate to high: usually transient at a given dose but dose-limiting for many patients.",
             },
           ],
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The parent benzamide — legacy dose-band pharmacology",
+          primaryValue: "The parent benzamide: legacy dose-band pharmacology",
           comparisons: [
             {
               drug: "Aripiprazole",
-              value: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+              value: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
             },
             {
               drug: "Clozapine",
-              value: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+              value: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
             },
             {
               drug: "Lurasidone",
-              value: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+              value: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
             },
             {
               drug: "Olanzapine",
-              value: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+              value: "Most robust broad-spectrum atypical: heaviest metabolic burden",
             },
           ],
         },
       ],
-      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -458,7 +458,7 @@ export const sulpiride: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Sulpiride reaches peak plasma concentration and begins acting at its molecular target (D2/D3 receptors (dose-dependent presynaptic/postsynaptic action)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Sulpiride reaches peak plasma concentration and begins acting at its molecular target (D2/D3 receptors (dose-dependent presynaptic/postsynaptic action)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -494,7 +494,7 @@ export const sulpiride: Drug = {
   faqs: [
     {
       question: "How long does Sulpiride take to work?",
-      answer: "As with the class: dose-band-dependent onset.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "As with the class: dose-band-dependent onset.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Sulpiride?",
@@ -502,11 +502,11 @@ export const sulpiride: Drug = {
     },
     {
       question: "Can I stop Sulpiride suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Sulpiride habit-forming?",
@@ -514,7 +514,7 @@ export const sulpiride: Drug = {
     },
     {
       question: "Can I take Sulpiride during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Sulpiride may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Sulpiride may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -680,7 +680,7 @@ export const sulpiride: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Sulpiride",
+      label: "Patient Guide. Sulpiride",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -688,13 +688,13 @@ export const sulpiride: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The parent benzamide — amisulpride's ancestor with the same dose-band logic.",
-    summary: "Sulpiride is a prescription medicine used to treat schizophrenia (positive symptoms). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Sulpiride is an older European and Indian antipsychotic from the same family as amisulpride: small doses were used for low mood and motivation, larger doses for the symptoms of psychosis. It commonly raises prolactin — affecting periods, breast comfort, and sexual function.",
-    sideEffects: "The most common side effects are: insomnia and activation (low dose), eps (high doses), hyperprolactinaemia, sedation and orthostasis. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and QT prolongation. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: prolactin symptoms (at review). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The parent benzamide: amisulpride's ancestor with the same dose-band logic.",
+    summary: "Sulpiride is a prescription medicine used to treat schizophrenia (positive symptoms). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Sulpiride is an older European and Indian antipsychotic from the same family as amisulpride: small doses were used for low mood and motivation, larger doses for the symptoms of psychosis. It commonly raises prolactin, affecting periods, breast comfort, and sexual function.",
+    sideEffects: "The most common side effects are: insomnia and activation (low dose), eps (high doses), hyperprolactinaemia, sedation and orthostasis. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and QT prolongation. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: prolactin symptoms (at review). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs, Levodopa/dopamine agonists. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs, Levodopa/dopamine agonists. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -750,55 +750,55 @@ export const sulpiride: Drug = {
         name: "Sulpiride",
         slug: "sulpiride",
         relationship: "This guide",
-        distinguishing: "The parent benzamide — legacy dose-band pharmacology",
+        distinguishing: "The parent benzamide: legacy dose-band pharmacology",
       },
       {
         name: "Aripiprazole",
         slug: "aripiprazole",
         relationship: "Same class (Dopamine Stabiliser)",
-        distinguishing: "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+        distinguishing: "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic",
       },
       {
         name: "Clozapine",
         slug: "clozapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+        distinguishing: "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures",
       },
       {
         name: "Lurasidone",
         slug: "lurasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+        distinguishing: "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio",
       },
       {
         name: "Olanzapine",
         slug: "olanzapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most robust broad-spectrum atypical — heaviest metabolic burden",
+        distinguishing: "Most robust broad-spectrum atypical: heaviest metabolic burden",
       },
       {
         name: "Paliperidone",
         slug: "paliperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "The LAI platform king — monthly to 6-monthly injections for schizophrenia",
+        distinguishing: "The LAI platform king: monthly to 6-monthly injections for schizophrenia",
       },
       {
         name: "Quetiapine",
         slug: "quetiapine",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin — the sedating antidepressant-antipsychotic",
+        distinguishing: "Bipolar depression approval + virtually zero EPS/prolactin: the sedating antidepressant-antipsychotic",
       },
       {
         name: "Risperidone",
         slug: "risperidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Most potent D2 blockade among atypicals — highest prolactin, best-studied LAI",
+        distinguishing: "Most potent D2 blockade among atypicals: highest prolactin, best-studied LAI",
       },
       {
         name: "Ziprasidone",
         slug: "ziprasidone",
         relationship: "Same class (Atypical Antipsychotic)",
-        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic — with QT vigilance",
+        distinguishing: "Weight-neutral oral + the least hypotensive IM antipsychotic, with QT vigilance",
       },
     ],
   },
@@ -966,7 +966,7 @@ export const sulpiride: Drug = {
     },
     {
       question: "Share one clinical pearl about Sulpiride that separates safe prescribers from unsafe ones.",
-      answer: "The family tree: sulpiride → amisulpride (the refined successor) — dose-band pharmacology inherited intact.",
+      answer: "The family tree: sulpiride → amisulpride (the refined successor); dose-band pharmacology inherited intact.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1042,7 +1042,7 @@ export const sulpiride: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1087,7 +1087,7 @@ export const sulpiride: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Sulpiride works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Sulpiride works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1103,7 +1103,7 @@ export const sulpiride: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Sulpiride safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Sulpiride safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1148,7 +1148,7 @@ export const sulpiride: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Sulpiride follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Sulpiride follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1179,7 +1179,7 @@ export const sulpiride: Drug = {
     dosageForms: ["Tablets 50-200 mg", "Capsules", "Solution"],
     dosingTips: ["Respect the dose-bands.", "Ask about prolactin effects."],
     overdose: [
-      "Overdose with Sulpiride is managed supportively — no specific antidote.",
+      "Overdose with Sulpiride is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Sulpiride is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1213,14 +1213,14 @@ export const sulpiride: Drug = {
     potentialDisadvantages: ["Weak evidence vs modern agents.", "Prolactin and QT cautions.", "Largely superseded."],
     primaryTargetSymptoms: ["Positive symptoms (legacy)", "Negative symptoms (low dose, legacy)"],
     pearls: [
-      "The family tree: sulpiride → amisulpride (the refined successor) — dose-band pharmacology inherited intact.",
-      "The otology oddity: sulpiride's historic vertigo-tinnitus niche — a benzamide side-door.",
-      "Prolactin at the top: the benzamide price — menstrual and sexual effects to ask about.",
+      "The family tree: sulpiride → amisulpride (the refined successor); dose-band pharmacology inherited intact.",
+      "The otology oddity: sulpiride's historic vertigo-tinnitus niche; a benzamide side-door.",
+      "Prolactin at the top: the benzamide price; menstrual and sexual effects to ask about.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

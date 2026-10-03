@@ -23,14 +23,14 @@ export const levetiracetam: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Mood Stabilisers & Anticonvulsants", "Anticonvulsants", "Levetiracetam"],
   /* ---- Hero / summary ---- */
-  tagline: "The SV2A-ligand oddity — clean anticonvulsant pharmacology with a psychiatric behavioural footnote.",
-  summary: "Levetiracetam is the synaptic-vesicle SV2A-protein ligand anticonvulsant: remarkably clean pharmacokinetics (renal excretion, no interactions) with broad-spectrum antiepileptic efficacy — and a psychiatric identity built on its BEHAVIOURAL adverse effects (irritability, agitation, psychosis-like reactions) that demand caution in psychiatric patients, alongside off-label aggression and mood-instability uses.",
+  tagline: "The SV2A-ligand oddity: clean anticonvulsant pharmacology with a psychiatric behavioural footnote.",
+  summary: "Levetiracetam is the synaptic-vesicle SV2A-protein ligand anticonvulsant: remarkably clean pharmacokinetics (renal excretion, no interactions) with broad-spectrum antiepileptic efficacy, and a psychiatric identity built on its BEHAVIOURAL adverse effects (irritability, agitation, psychosis-like reactions) that demand caution in psychiatric patients, alongside off-label aggression and mood-instability uses.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Levetiracetam — from its molecular target (SV2A synaptic-vesicle protein (ligand — reduces transmitter release)) to clinical effect.",
+    "Explain the mechanism of action of Levetiracetam (from its molecular target (SV2A synaptic-vesicle protein (ligand) reduces transmitter release)) to clinical effect.",
     "List the FDA-approved and off-label uses of Levetiracetam.",
     "Predict the common and serious side effects of Levetiracetam from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Levetiracetam.",
@@ -38,15 +38,15 @@ export const levetiracetam: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Levetiracetam binds the SV2A synaptic-vesicle protein, reducing preterminal transmitter release — an anticonvulsant mechanism with no ion-channel or GABA involvement.",
-    molecularTarget: "SV2A synaptic-vesicle protein (ligand — reduces transmitter release)",
+    summary: "Levetiracetam binds the SV2A synaptic-vesicle protein, reducing preterminal transmitter release: an anticonvulsant mechanism with no ion-channel or GABA involvement.",
+    molecularTarget: "SV2A synaptic-vesicle protein (ligand, reduces transmitter release)",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Levetiracetam binds the SV2A synaptic-vesicle protein, reducing preterminal transmitter release — an anticonvulsant mechanism with no ion-channel or GABA involvement.",
+      "Levetiracetam binds the SV2A synaptic-vesicle protein, reducing preterminal transmitter release: an anticonvulsant mechanism with no ion-channel or GABA involvement.",
       "The mechanism translates into the clinical profile described.",
       "Practical use follows half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 7 hours (BD dosing; XR daily). — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 7 hours (BD dosing; XR daily). See mechanism and prescriber sections.",
     halfLife: "7 hours (BD dosing; XR daily).",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -97,7 +97,7 @@ export const levetiracetam: Drug = {
         label: "stabilised",
       },
     ],
-    caption: "Reducing pathological neuronal firing — the shared mechanistic logic of anticonvulsants across epilepsy, neuropathic pain, and mood destabilisation.",
+    caption: "Reducing pathological neuronal firing: the shared mechanistic logic of anticonvulsants across epilepsy, neuropathic pain, and mood destabilisation.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Glutamate", "GABA"],
@@ -153,7 +153,7 @@ export const levetiracetam: Drug = {
       name: "Irritability, agitation, and behavioural change",
       frequency: "common",
       severity: "moderate",
-      description: "The signature psychiatric adverse effect — irritability to psychosis-like reactions; children and psychiatric patients most affected.",
+      description: "The signature psychiatric adverse effect: irritability to psychosis-like reactions; children and psychiatric patients most affected.",
       management: "Dose reduction; stop if severe; counsel families at initiation.",
     },
     {
@@ -204,40 +204,40 @@ export const levetiracetam: Drug = {
   ],
   pregnancy: {
     legacyCategory: "C",
-    summary: "Among the better-studied anticonvulsants in pregnancy (large registry experience, no major signal) — often the anticonvulsant of choice in pregnancy.",
+    summary: "Among the better-studied anticonvulsants in pregnancy (large registry experience, no major signal): often the anticonvulsant of choice in pregnancy.",
     lactation: "Excreted in milk; usually compatible with infant monitoring (sedation, feeding).",
   },
   renalAdjustment: "Dose by CrCl (renal excretion is the entire elimination).",
   hepaticAdjustment: "No hepatic metabolism.",
   /* ---- Education ---- */
-  patientExplanation: "Levetiracetam is a modern anti-seizure medicine with an unusually clean profile — few interactions and simple kidney-only clearance. Its one well-known quirk is behavioural: some people (especially children) become irritable or agitated on it, so families are warned in advance, and the dose is adjusted or stopped if this happens.",
+  patientExplanation: "Levetiracetam is a modern anti-seizure medicine with an unusually clean profile, few interactions and simple kidney-only clearance. Its one well-known quirk is behavioural: some people (especially children) become irritable or agitated on it, so families are warned in advance, and the dose is adjusted or stopped if this happens.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Levetiracetam builds over weeks — do not judge it in the first days.",
+    "Benefit from Levetiracetam builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The SV2A story: a completely non-classical anticonvulsant mechanism — vesicle-protein binding — with renal-only clearance and zero interaction profile.",
-    "The behavioural tax: irritability and agitation are the signature adverse effect — the anticonvulsant psychiatric patients' families need warned about.",
+    "The SV2A story: a completely non-classical anticonvulsant mechanism (vesicle-protein binding) with renal-only clearance and zero interaction profile.",
+    "The behavioural tax: irritability and agitation are the signature adverse effect; the anticonvulsant psychiatric patients' families need warned about.",
     "The paradox use: despite (or reflecting) the behavioural profile, low-dose levetiracetam has selected aggression-augmentation use.",
-    "The clean-pharmacology prize: no interactions, no enzyme induction — the anticonvulsant for the complex-medication patient.",
+    "The clean-pharmacology prize: no interactions, no enzyme induction; the anticonvulsant for the complex-medication patient.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Levetiracetam: Levetiracetam binds the SV2A synaptic-vesicle protein, reducing preterminal transmitter release — an anticonvulsant mechanism with no ion-channel or GABA involvement.",
-        "Uses of Levetiracetam: Epilepsy — focal and generalised (broad spectrum); Myoclonic and absence seizures; Aggression and impulsivity (off-label); Anxiety (adjunct, selected)",
+        "Mechanism of Levetiracetam: Levetiracetam binds the SV2A synaptic-vesicle protein, reducing preterminal transmitter release; an anticonvulsant mechanism with no ion-channel or GABA involvement.",
+        "Uses of Levetiracetam: Epilepsy; focal and generalised (broad spectrum); Myoclonic and absence seizures; Aggression and impulsivity (off-label); Anxiety (adjunct, selected)",
         "Mechanism: SV2A synaptic-VESICLE protein ligand (non-classical).",
         "Broad-spectrum epilepsy efficacy; renal-only clearance; zero interactions.",
       ],
       practical: [
-        "Prescribe Levetiracetam for epilepsy — focal and generalised (broad spectrum) with dose, timing, and duration.",
+        "Prescribe Levetiracetam for epilepsy: focal and generalised (broad spectrum) with dose, timing, and duration.",
         "Outline the monitoring plan: Behavioural/irritability review (Early weeks and every visit)",
       ],
       longAnswer: [
-        "Levetiracetam: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Levetiracetam: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: SV2A synaptic-VESICLE protein ligand (non-classical).",
         "Broad-spectrum epilepsy efficacy; renal-only clearance; zero interactions.",
       ],
@@ -259,23 +259,23 @@ export const levetiracetam: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Levetiracetam develops psychosis-like reactions — next best step?",
+        "A patient on Levetiracetam develops psychosis-like reactions: next best step?",
         "When to choose Levetiracetam over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: SV2A synaptic-vesicle protein (ligand — reduces transmitter release)",
+        "Primary target: SV2A synaptic-vesicle protein (ligand, reduces transmitter release)",
         "Most common side effects: Sedation and fatigue, Irritability, agitation, and behavioural change, Dizziness and asthenia",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The SV2A story: a completely non-classical anticonvulsant mechanism — vesicle-protein binding — with renal-only clearance and zero interaction profile.",
-        "The behavioural tax: irritability and agitation are the signature adverse effect — the anticonvulsant psychiatric patients' families need warned about.",
+        "The SV2A story: a completely non-classical anticonvulsant mechanism (vesicle-protein binding) with renal-only clearance and zero interaction profile.",
+        "The behavioural tax: irritability and agitation are the signature adverse effect; the anticonvulsant psychiatric patients' families need warned about.",
         "The paradox use: despite (or reflecting) the behavioural profile, low-dose levetiracetam has selected aggression-augmentation use.",
-        "The clean-pharmacology prize: no interactions, no enzyme induction — the anticonvulsant for the complex-medication patient.",
+        "The clean-pharmacology prize: no interactions, no enzyme induction; the anticonvulsant for the complex-medication patient.",
       ],
     },
   },
@@ -291,16 +291,16 @@ export const levetiracetam: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — epilepsy — focal and generalised (broad spectrum)",
-      presentation: "A patient presenting with epilepsy — focal and generalised (broad spectrum), started on Levetiracetam.",
-      history: "A adult patient presents with a epilepsy — focal and generalised (broad spectrum) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with epilepsy — focal and generalised (broad spectrum); physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Epilepsy — focal and generalised (broad spectrum). Differentials are considered and excluded clinically.",
+      title: "First presentation: epilepsy; focal and generalised (broad spectrum)",
+      presentation: "A patient presenting with epilepsy: focal and generalised (broad spectrum), started on Levetiracetam.",
+      history: "A adult patient presents with a epilepsy: focal and generalised (broad spectrum) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with epilepsy: focal and generalised (broad spectrum); physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Epilepsy: focal and generalised (broad spectrum). Differentials are considered and excluded clinically.",
       rationale: "Levetiracetam is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Anticonvulsant) with strong evidence in this condition.",
       management: "Started at 250-500 mg twice daily, titrated to 1000-3000 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Levetiracetam takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Levetiracetam takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -309,12 +309,12 @@ export const levetiracetam: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Anticonvulsant comparison — choosing within the class",
+      title: "Anticonvulsant comparison: choosing within the class",
       primaryDrug: "Levetiracetam",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "SV2A synaptic-vesicle protein (ligand — reduces transmitter release)",
+          primaryValue: "SV2A synaptic-vesicle protein (ligand, reduces transmitter release)",
           comparisons: [
             {
               drug: "Gabapentin",
@@ -406,24 +406,24 @@ export const levetiracetam: Drug = {
           comparisons: [
             {
               drug: "Gabapentin",
-              value: "The interaction-clean pain-augmentation agent — anxiety and craving off-label",
+              value: "The interaction-clean pain-augmentation agent: anxiety and craving off-label",
             },
             {
               drug: "Pregabalin",
-              value: "The GAD-approved gabapentinoid — pain, fibromyalgia, anxiety",
+              value: "The GAD-approved gabapentinoid: pain, fibromyalgia, anxiety",
             },
             {
               drug: "Topiramate",
-              value: "The weight-losing multi-mechanism stabiliser — craving and appetite",
+              value: "The weight-losing multi-mechanism stabiliser: craving and appetite",
             },
             {
               drug: "Tiagabine",
-              value: "The GABA-reuptake blocker — mechanism elegance, clinical footnote",
+              value: "The GABA-reuptake blocker: mechanism elegance, clinical footnote",
             },
           ],
         },
       ],
-      takeaway: "All anticonvulsants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All anticonvulsants share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -432,7 +432,7 @@ export const levetiracetam: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Levetiracetam reaches peak plasma concentration and begins acting at its molecular target (SV2A synaptic-vesicle protein (ligand — reduces transmitter release)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Levetiracetam reaches peak plasma concentration and begins acting at its molecular target (SV2A synaptic-vesicle protein (ligand, reduces transmitter release)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -468,7 +468,7 @@ export const levetiracetam: Drug = {
   faqs: [
     {
       question: "How long does Levetiracetam take to work?",
-      answer: "Seizure control within titration; behavioural effects early.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Seizure control within titration; behavioural effects early.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Levetiracetam?",
@@ -476,11 +476,11 @@ export const levetiracetam: Drug = {
     },
     {
       question: "Can I stop Levetiracetam suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Levetiracetam habit-forming?",
@@ -488,7 +488,7 @@ export const levetiracetam: Drug = {
     },
     {
       question: "Can I take Levetiracetam during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Levetiracetam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Levetiracetam may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -620,13 +620,13 @@ export const levetiracetam: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "SV2A synaptic-vesicle protein (ligand — reduces transmitter release)",
+      label: "SV2A synaptic-vesicle protein (ligand, reduces transmitter release)",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
     },
     {
-      label: "Epilepsy — focal and generalised (broad spectrum)",
+      label: "Epilepsy: focal and generalised (broad spectrum)",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -662,7 +662,7 @@ export const levetiracetam: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Levetiracetam",
+      label: "Patient Guide. Levetiracetam",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -670,13 +670,13 @@ export const levetiracetam: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The SV2A-ligand oddity — clean anticonvulsant pharmacology with a psychiatric behavioural footnote.",
-    summary: "Levetiracetam is a prescription medicine used to treat epilepsy — focal and generalised (broad spectrum). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Levetiracetam is a modern anti-seizure medicine with an unusually clean profile — few interactions and simple kidney-only clearance. Its one well-known quirk is behavioural: some people (especially children) become irritable or agitated on it, so families are warned in advance, and the dose is adjusted or stopped if this happens.",
-    sideEffects: "The most common side effects are: sedation and fatigue, irritability, agitation, and behavioural change, dizziness and asthenia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Psychosis-like reactions and Suicidality signal (antiepileptic class). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: behavioural/irritability review (early weeks and every visit). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The SV2A-ligand oddity: clean anticonvulsant pharmacology with a psychiatric behavioural footnote.",
+    summary: "Levetiracetam is a prescription medicine used to treat epilepsy: focal and generalised (broad spectrum). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Levetiracetam is a modern anti-seizure medicine with an unusually clean profile, few interactions and simple kidney-only clearance. Its one well-known quirk is behavioural: some people (especially children) become irritable or agitated on it, so families are warned in advance, and the dose is adjusted or stopped if this happens.",
+    sideEffects: "The most common side effects are: sedation and fatigue, irritability, agitation, and behavioural change, dizziness and asthenia. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Psychosis-like reactions and Suicidality signal (antiepileptic class). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: behavioural/irritability review (early weeks and every visit). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Alcohol and CNS depressants, Essentially no pharmacokinetic interactions. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Alcohol and CNS depressants, Essentially no pharmacokinetic interactions. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -755,31 +755,31 @@ export const levetiracetam: Drug = {
         name: "Gabapentin",
         slug: "gabapentin",
         relationship: "Same class (Anticonvulsant)",
-        distinguishing: "The interaction-clean pain-augmentation agent — anxiety and craving off-label",
+        distinguishing: "The interaction-clean pain-augmentation agent: anxiety and craving off-label",
       },
       {
         name: "Pregabalin",
         slug: "pregabalin",
         relationship: "Same class (Anticonvulsant)",
-        distinguishing: "The GAD-approved gabapentinoid — pain, fibromyalgia, anxiety",
+        distinguishing: "The GAD-approved gabapentinoid: pain, fibromyalgia, anxiety",
       },
       {
         name: "Topiramate",
         slug: "topiramate",
         relationship: "Same class (Anticonvulsant)",
-        distinguishing: "The weight-losing multi-mechanism stabiliser — craving and appetite",
+        distinguishing: "The weight-losing multi-mechanism stabiliser: craving and appetite",
       },
       {
         name: "Tiagabine",
         slug: "tiagabine",
         relationship: "Same class (Anticonvulsant)",
-        distinguishing: "The GABA-reuptake blocker — mechanism elegance, clinical footnote",
+        distinguishing: "The GABA-reuptake blocker: mechanism elegance, clinical footnote",
       },
       {
         name: "Zonisamide",
         slug: "zonisamide",
         relationship: "Same class (Anticonvulsant)",
-        distinguishing: "The second weight-loser — topiramate's sibling",
+        distinguishing: "The second weight-loser: topiramate's sibling",
       },
     ],
   },
@@ -932,12 +932,12 @@ export const levetiracetam: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Levetiracetam in two sentences.",
-      answer: "Levetiracetam binds the SV2A synaptic-vesicle protein, reducing preterminal transmitter release — an anticonvulsant mechanism with no ion-channel or GABA involvement. Net effect: Target engagement producing the described clinical effect.",
+      answer: "Levetiracetam binds the SV2A synaptic-vesicle protein, reducing preterminal transmitter release: an anticonvulsant mechanism with no ion-channel or GABA involvement. Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Levetiracetam.",
-      answer: "Epilepsy — focal and generalised (broad spectrum), Myoclonic and absence seizures, Aggression and impulsivity (off-label), Anxiety (adjunct, selected). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Epilepsy: focal and generalised (broad spectrum), Myoclonic and absence seizures, Aggression and impulsivity (off-label), Anxiety (adjunct, selected). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
@@ -952,7 +952,7 @@ export const levetiracetam: Drug = {
     },
     {
       question: "Share one clinical pearl about Levetiracetam that separates safe prescribers from unsafe ones.",
-      answer: "The SV2A story: a completely non-classical anticonvulsant mechanism — vesicle-protein binding — with renal-only clearance and zero interaction profile.",
+      answer: "The SV2A story: a completely non-classical anticonvulsant mechanism (vesicle-protein binding) with renal-only clearance and zero interaction profile.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1028,7 +1028,7 @@ export const levetiracetam: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1073,7 +1073,7 @@ export const levetiracetam: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Levetiracetam works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Levetiracetam works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1089,7 +1089,7 @@ export const levetiracetam: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Levetiracetam safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Levetiracetam safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1134,7 +1134,7 @@ export const levetiracetam: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Levetiracetam follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Levetiracetam follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1162,7 +1162,7 @@ export const levetiracetam: Drug = {
       "Renal dosing by CrCl.",
     ],
     overdose: [
-      "Overdose with Levetiracetam is managed supportively — no specific antidote.",
+      "Overdose with Levetiracetam is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Levetiracetam is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1203,15 +1203,15 @@ export const levetiracetam: Drug = {
     ],
     primaryTargetSymptoms: ["Focal and generalised seizures", "Aggression (off-label)"],
     pearls: [
-      "The SV2A story: a completely non-classical anticonvulsant mechanism — vesicle-protein binding — with renal-only clearance and zero interaction profile.",
-      "The behavioural tax: irritability and agitation are the signature adverse effect — the anticonvulsant psychiatric patients' families need warned about.",
+      "The SV2A story: a completely non-classical anticonvulsant mechanism (vesicle-protein binding) with renal-only clearance and zero interaction profile.",
+      "The behavioural tax: irritability and agitation are the signature adverse effect; the anticonvulsant psychiatric patients' families need warned about.",
       "The paradox use: despite (or reflecting) the behavioural profile, low-dose levetiracetam has selected aggression-augmentation use.",
-      "The clean-pharmacology prize: no interactions, no enzyme induction — the anticonvulsant for the complex-medication patient.",
+      "The clean-pharmacology prize: no interactions, no enzyme induction; the anticonvulsant for the complex-medication patient.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

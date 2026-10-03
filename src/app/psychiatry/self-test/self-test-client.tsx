@@ -126,7 +126,7 @@ export function SelfTestClient({
               Psychiatry Self-Test
             </h1>
             <p className="mt-3 max-w-2xl text-muted-foreground">
-              Mixed practice from all {noteCount} lessons — every question authored for its
+              Mixed practice from all {noteCount} lessons: every question authored for its
               topic, with explanations. Finished runs feed your practice stats.
             </p>
           </div>
@@ -154,7 +154,7 @@ export function SelfTestClient({
                     <option value="all">All domains ({questions.length} questions)</option>
                     {groups.map((g) => (
                       <option key={g.letter} value={g.letter}>
-                        {g.letter} — {g.name} ({g.count})
+                        {g.letter} · {g.name} ({g.count})
                       </option>
                     ))}
                   </select>
@@ -257,10 +257,10 @@ export function SelfTestClient({
                   </p>
                   <p className="mt-1 text-sm text-muted-foreground">
                     {correctCount === run.length
-                      ? "Perfect run — exam-ready."
+                      ? "Perfect run: exam-ready."
                       : correctCount / run.length >= 0.6
-                        ? "Solid — revisit the misses and run again."
-                        : "Early days — read the explanations, then retry."}
+                        ? "Solid: revisit the misses and run again."
+                        : "Early days: read the explanations, then retry."}
                   </p>
                   <div className="mt-4 flex flex-wrap justify-center gap-2">
                     <button

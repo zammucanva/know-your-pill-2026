@@ -66,7 +66,7 @@ export const pathways: Pathway[] = [
     origin: "Ventral Tegmental Area (VTA)",
     termination: "Nucleus Accumbens",
     neurotransmitter: "Dopamine",
-    function: "Reward, motivation, and reinforcement learning — the brain's primary reward circuit.",
+    function: "Reward, motivation, and reinforcement learning: the brain's primary reward circuit.",
     relatedDrugs: ["Cocaine", "Amphetamines", "Opioids", "Antipsychotics"],
     clinicalRelevance: "Central to addiction. Antipsychotics block D2 here, reducing positive symptoms of schizophrenia.",
   },
@@ -98,6 +98,6 @@ export const pathways: Pathway[] = [
     neurotransmitter: "Dopamine",
     function: "Inhibits prolactin release from the anterior pituitary.",
     relatedDrugs: ["Antipsychotics", "Metoclopramide"],
-    clinicalRelevance: "D2 blockade causes hyperprolactinaemia — galactorrhoea, gynaecomastia, amenorrhoea.",
+    clinicalRelevance: "D2 blockade causes hyperprolactinaemia: galactorrhoea, gynaecomastia, amenorrhoea.",
   },
 ];

@@ -23,14 +23,14 @@ export const zolpidem: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Sleep Medicines", "Non-Benzodiazepine Hypnotics", "Zolpidem"],
   /* ---- Hero / summary ---- */
-  tagline: "The world's default sleeping pill — alpha-1-selective GABA modulation for sleep onset without full benzodiazepine breadth.",
-  summary: "Zolpidem is the most-prescribed hypnotic worldwide: a non-benzodiazepine Z-drug that binds the alpha-1 subunit-rich GABA-A receptors mediating sleep, preserving hypnotic efficacy while theoretically sparing anxiolysis, amnesia, and dependence — though real-world misuse, next-morning driving impairment (especially with the CR form in women), and complex sleep behaviours (sleep-walking, sleep-eating, sleep-driving) have earned it boxed warnings. Short half-life (2.5 h) suits sleep-onset insomnia; the CR form adds 2–3 hours of maintenance cover.",
+  tagline: "The world's default sleeping pill: alpha-1-selective GABA modulation for sleep onset without full benzodiazepine breadth.",
+  summary: "Zolpidem is the most-prescribed hypnotic worldwide: a non-benzodiazepine Z-drug that binds the alpha-1 subunit-rich GABA-A receptors mediating sleep, preserving hypnotic efficacy while theoretically sparing anxiolysis, amnesia, and dependence, though real-world misuse, next-morning driving impairment (especially with the CR form in women), and complex sleep behaviours (sleep-walking, sleep-eating, sleep-driving) have earned it boxed warnings. Short half-life (2.5 h) suits sleep-onset insomnia; the CR form adds 2–3 hours of maintenance cover.",
   estimatedReadTime: "14 min read",
   yieldRating: "high",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Zolpidem — from its molecular target (GABA-A receptors containing alpha-1 subunits (selective PAM)) to clinical effect.",
+    "Explain the mechanism of action of Zolpidem, from its molecular target (GABA-A receptors containing alpha-1 subunits (selective PAM)) to clinical effect.",
     "List the FDA-approved and off-label uses of Zolpidem.",
     "Predict the common and serious side effects of Zolpidem from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Zolpidem.",
@@ -38,14 +38,14 @@ export const zolpidem: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Zolpidem is a non-benzodiazepine selective GABA-A positive allosteric modulator with preferential alpha-1 subunit binding — the subunit pattern most associated with sedation/sleep.",
+    summary: "Zolpidem is a non-benzodiazepine selective GABA-A positive allosteric modulator with preferential alpha-1 subunit binding: the subunit pattern most associated with sedation/sleep.",
     molecularTarget: "GABA-A receptors containing alpha-1 subunits (selective PAM)",
     effect: "Hypnotic effect (sleep onset; CR adds maintenance) with less anxiolysis, muscle relaxation, and anticonvulsant action than benzodiazepines.",
     steps: [
-      "Binds the benzodiazepine site but with alpha-1 subunit selectivity — the imidazopyridine chemical class (not a benzodiazepine ring).",
-      "Alpha-1-rich receptors dominate sedation pathways — selective targeting preserves hypnotic effect.",
+      "Binds the benzodiazepine site but with alpha-1 subunit selectivity: the imidazopyridine chemical class (not a benzodiazepine ring).",
+      "Alpha-1-rich receptors dominate sedation pathways: selective targeting preserves hypnotic effect.",
       "Rapid absorption (peak ~1.5 h) and short half-life (2.5 h) = sleep-onset cover with limited morning residue.",
-      "CR formulation: dual-layer release — immediate layer for onset + slow layer for ~3 h maintenance cover.",
+      "CR formulation: dual-layer release; immediate layer for onset + slow layer for ~3 h maintenance cover.",
     ],
     pharmacokinetics: "Rapid oral absorption; C-max higher in women (the basis for the sex-specific dosing in several labels).",
     halfLife: "About 2.5 hours.",
@@ -170,7 +170,7 @@ export const zolpidem: Drug = {
       name: "Rebound insomnia on stopping",
       frequency: "common",
       severity: "moderate",
-      description: "1–2 nights of worse sleep after cessation — especially after longer courses.",
+      description: "1–2 nights of worse sleep after cessation, especially after longer courses.",
       management: "Taper; warn patients in advance.",
     },
     {
@@ -186,14 +186,14 @@ export const zolpidem: Drug = {
       name: "Complex sleep behaviours (sleep-walking/driving/eating)",
       frequency: "uncommon",
       severity: "severe",
-      description: "The boxed-warning signature: automatic behaviours with partial or full amnesia — accidents and injuries reported.",
+      description: "The boxed-warning signature: automatic behaviours with partial or full amnesia; accidents and injuries reported.",
       management: "Stop immediately on any such event; contraindicated thereafter.",
     },
     {
       name: "Next-morning driving impairment",
       frequency: "common",
       severity: "severe",
-      description: "Blood levels at 8 hours can still impair driving — the reason for the FDA sex-specific dosing cut and the 'minimum 7–8 hours in bed' rule.",
+      description: "Blood levels at 8 hours can still impair driving: the reason for the FDA sex-specific dosing cut and the 'minimum 7–8 hours in bed' rule.",
       management: "Counsel explicitly; 5 mg in women (per most labels).",
     },
     {
@@ -207,14 +207,14 @@ export const zolpidem: Drug = {
       name: "Dependence and misuse",
       frequency: "uncommon",
       severity: "severe",
-      description: "Lower than benzodiazepines but real — euphoriant at higher doses; misuse documented.",
+      description: "Lower than benzodiazepines but real: euphoriant at higher doses; misuse documented.",
       management: "Short courses; small quantities.",
     },
     {
       name: "Paradoxical reactions",
       frequency: "rare",
       severity: "severe",
-      description: "Agitation, hallucinations — more in the elderly.",
+      description: "Agitation, hallucinations: more in the elderly.",
       management: "Stop.",
     },
   ],
@@ -228,7 +228,7 @@ export const zolpidem: Drug = {
     {
       parameter: "Complex sleep behaviours",
       frequency: "Ask at every review",
-      rationale: "Sleep-walking/driving/eating — stop the drug if reported.",
+      rationale: "Sleep-walking/driving/eating: stop the drug if reported.",
     },
     {
       parameter: "Course duration",
@@ -246,13 +246,13 @@ export const zolpidem: Drug = {
     {
       drug: "Ketoconazole and strong 3A4 inhibitors",
       severity: "major",
-      mechanism: "Raise zolpidem levels — morning hangover amplifies.",
+      mechanism: "Raise zolpidem levels: morning hangover amplifies.",
       action: "Dose reduction.",
     },
     {
       drug: "Rifampicin (inducer)",
       severity: "moderate",
-      mechanism: "Lowers zolpidem — loss of efficacy.",
+      mechanism: "Lowers zolpidem: loss of efficacy.",
       action: "Review.",
     },
     {
@@ -265,50 +265,50 @@ export const zolpidem: Drug = {
   pregnancy: {
     legacyCategory: "C",
     summary: "Limited human data; no clear teratogenic signal. Third-trimester use risks neonatal sedation. Insomnia in pregnancy is treated non-pharmacologically first; any drug use is short, low-dose, and obstetrically informed.",
-    lactation: "Minimal milk transfer at low doses — usually considered acceptable with infant sedation monitoring; feed before the nightly dose.",
+    lactation: "Minimal milk transfer at low doses: usually considered acceptable with infant sedation monitoring; feed before the nightly dose.",
   },
   renalAdjustment: "No major adjustment; standard caution in severe impairment.",
   hepaticAdjustment: "Halve the dose in hepatic impairment (slower clearance).",
   /* ---- Education ---- */
-  patientExplanation: "Zolpidem is the most-used modern sleeping tablet: it works on the brain's sleep chemical (GABA) selectively — helping you fall asleep with fewer of the daytime-sedation effects of older sleeping pills. Take it only when you can spend 7–8 hours in bed, never with alcohol, and stop and call your doctor immediately if you ever sleep-walk or do anything while not fully awake.",
+  patientExplanation: "Zolpidem is the most-used modern sleeping tablet: it works on the brain's sleep chemical (GABA) selectively, helping you fall asleep with fewer of the daytime-sedation effects of older sleeping pills. Take it only when you can spend 7–8 hours in bed, never with alcohol, and stop and call your doctor immediately if you ever sleep-walk or do anything while not fully awake.",
   patientEducationPoints: [
     "Take it only when you can spend a full 7–8 hours in bed.",
     "Do not drive the next morning if you still feel drowsy.",
     "Stop and call your doctor if you sleep-walk, sleep-drive, or eat while asleep.",
-    "Keep the course short — these medicines are for intermittent or short-term use.",
-    "Benefit from Zolpidem builds over weeks — do not judge it in the first days.",
+    "Keep the course short: these medicines are for intermittent or short-term use.",
+    "Benefit from Zolpidem builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "Alpha-1 selectivity is the design logic — hypnotic effect with less of the benzodiazepine's anxiolytic/amnestic breadth (though the boxed warnings note the overlap is still real).",
-    "The female-dose story: women clear zolpidem ~45% slower — 5 mg default for women is now standard labelling in many countries after driving-impairment data.",
-    "Sleep-driving is the boxed-warning legend: complex behaviours with amnesia — one event means the drug is finished.",
-    "CR's two layers: immediate onset + 3-hour maintenance tail — choose by insomnia pattern, not habit.",
+    "Alpha-1 selectivity is the design logic: hypnotic effect with less of the benzodiazepine's anxiolytic/amnestic breadth (though the boxed warnings note the overlap is still real).",
+    "The female-dose story: women clear zolpidem ~45% slower; 5 mg default for women is now standard labelling in many countries after driving-impairment data.",
+    "Sleep-driving is the boxed-warning legend: complex behaviours with amnesia, one event means the drug is finished.",
+    "CR's two layers: immediate onset + 3-hour maintenance tail; choose by insomnia pattern, not habit.",
     "The 7–8 hour rule: leaving bed before levels fall is how morning impairment happens.",
-    "Cognitive behavioural therapy for insomnia (CBT-I) outperforms zolpidem at 6 months in head-to-head trials — every prescription deserves a CBT-I referral alongside.",
+    "Cognitive behavioural therapy for insomnia (CBT-I) outperforms zolpidem at 6 months in head-to-head trials: every prescription deserves a CBT-I referral alongside.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Zolpidem: Zolpidem is a non-benzodiazepine selective GABA-A positive allosteric modulator with preferential alpha-1 subunit binding — the subunit pattern most associated with sedation/sleep.",
-        "Uses of Zolpidem: Insomnia — sleep-onset difficulty (short-term); Insomnia — onset AND maintenance (CR form)",
+        "Mechanism of Zolpidem: Zolpidem is a non-benzodiazepine selective GABA-A positive allosteric modulator with preferential alpha-1 subunit binding; the subunit pattern most associated with sedation/sleep.",
+        "Uses of Zolpidem: Insomnia; sleep-onset difficulty (short-term); Insomnia: onset AND maintenance (CR form)",
         "Mechanism: non-benzodiazepine (imidazopyridine) SELECTIVE alpha-1 GABA-A PAM.",
-        "Half-life ~2.5 h — sleep-onset drug (CR adds ~3 h maintenance).",
+        "Half-life ~2.5 h: sleep-onset drug (CR adds ~3 h maintenance).",
       ],
       practical: [
-        "Prescribe Zolpidem for insomnia — sleep-onset difficulty (short-term) with dose, timing, and duration.",
+        "Prescribe Zolpidem for insomnia: sleep-onset difficulty (short-term) with dose, timing, and duration.",
         "Outline the monitoring plan: Morning impairment / hangover (Every review); Complex sleep behaviours (Ask at every review); Course duration (Every prescription)",
       ],
       longAnswer: [
-        "Zolpidem: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Zolpidem: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "Mechanism: non-benzodiazepine (imidazopyridine) SELECTIVE alpha-1 GABA-A PAM.",
-        "Half-life ~2.5 h — sleep-onset drug (CR adds ~3 h maintenance).",
+        "Half-life ~2.5 h: sleep-onset drug (CR adds ~3 h maintenance).",
       ],
     },
     neetPg: {
       highYield: [
         "Mechanism: non-benzodiazepine (imidazopyridine) SELECTIVE alpha-1 GABA-A PAM.",
-        "Half-life ~2.5 h — sleep-onset drug (CR adds ~3 h maintenance).",
+        "Half-life ~2.5 h: sleep-onset drug (CR adds ~3 h maintenance).",
         "Boxed warnings: complex sleep behaviours + next-morning driving impairment.",
         "Sex-specific dosing: 5 mg default in women (slower clearance).",
         "CYP3A4 metabolism; inhibitors raise hangover risk.",
@@ -322,7 +322,7 @@ export const zolpidem: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Zolpidem develops complex sleep behaviours (sleep-walking/driving/eating) — next best step?",
+        "A patient on Zolpidem develops complex sleep behaviours (sleep-walking/driving/eating): next best step?",
         "When to choose Zolpidem over alternatives in its class.",
       ],
     },
@@ -335,7 +335,7 @@ export const zolpidem: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "In bed, lights out, within 15 minutes of the dose — the ritual that prevents sleep-walking.",
+        "In bed, lights out, within 15 minutes of the dose: the ritual that prevents sleep-walking.",
         "Women get 5 mg: the pharmacokinetic fact that changed labelling.",
         "CR for the 3 am waker, IR for the 11 pm non-sleeper.",
       ],
@@ -344,7 +344,7 @@ export const zolpidem: Drug = {
   memoryTricks: [],
   highYieldSummary: [
     "Mechanism: non-benzodiazepine (imidazopyridine) SELECTIVE alpha-1 GABA-A PAM.",
-    "Half-life ~2.5 h — sleep-onset drug (CR adds ~3 h maintenance).",
+    "Half-life ~2.5 h: sleep-onset drug (CR adds ~3 h maintenance).",
     "Boxed warnings: complex sleep behaviours + next-morning driving impairment.",
     "Sex-specific dosing: 5 mg default in women (slower clearance).",
     "CYP3A4 metabolism; inhibitors raise hangover risk.",
@@ -353,16 +353,16 @@ export const zolpidem: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — insomnia — sleep-onset difficulty (short-term)",
-      presentation: "A patient presenting with insomnia — sleep-onset difficulty (short-term), started on Zolpidem.",
-      history: "A adult patient presents with a insomnia — sleep-onset difficulty (short-term) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with insomnia — sleep-onset difficulty (short-term); physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Insomnia — sleep-onset difficulty (short-term). Differentials are considered and excluded clinically.",
+      title: "First presentation: insomnia; sleep-onset difficulty (short-term)",
+      presentation: "A patient presenting with insomnia: sleep-onset difficulty (short-term), started on Zolpidem.",
+      history: "A adult patient presents with a insomnia: sleep-onset difficulty (short-term) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with insomnia: sleep-onset difficulty (short-term); physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Insomnia: sleep-onset difficulty (short-term). Differentials are considered and excluded clinically.",
       rationale: "Zolpidem is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Z-Drug) with strong evidence in this condition.",
       management: "Started at 5 mg at bedtime, titrated to 5 mg with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Zolpidem takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Zolpidem takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -371,7 +371,7 @@ export const zolpidem: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Z-Drug comparison — choosing within the class",
+      title: "Z-Drug comparison: choosing within the class",
       primaryDrug: "Zolpidem",
       rows: [
         {
@@ -430,7 +430,7 @@ export const zolpidem: Drug = {
         },
         {
           attribute: "Sedation",
-          primaryValue: "High for 2–3 hours — the intended effect; morning residue is the adverse effect.",
+          primaryValue: "High for 2–3 hours: the intended effect; morning residue is the adverse effect.",
           comparisons: [
             {
               drug: "Eszopiclone",
@@ -448,7 +448,7 @@ export const zolpidem: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "Sleep onset in a non-benzodiazepine molecule — the default Z-drug",
+          primaryValue: "Sleep onset in a non-benzodiazepine molecule: the default Z-drug",
           comparisons: [
             {
               drug: "Eszopiclone",
@@ -456,16 +456,16 @@ export const zolpidem: Drug = {
             },
             {
               drug: "Zaleplon",
-              value: "Middle-of-the-night dosing — cleared before morning",
+              value: "Middle-of-the-night dosing: cleared before morning",
             },
             {
               drug: "Zopiclone",
-              value: "The Commonwealth Z-drug — 5-hour cover with taste signature",
+              value: "The Commonwealth Z-drug: 5-hour cover with taste signature",
             },
           ],
         },
       ],
-      takeaway: "All non-benzodiazepine hypnotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All non-benzodiazepine hypnotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -474,7 +474,7 @@ export const zolpidem: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Zolpidem reaches peak plasma concentration and begins acting at its molecular target (GABA-A receptors containing alpha-1 subunits (selective PAM)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Zolpidem reaches peak plasma concentration and begins acting at its molecular target (GABA-A receptors containing alpha-1 subunits (selective PAM)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -486,9 +486,9 @@ export const zolpidem: Drug = {
     },
     {
       id: "t3",
-      time: "Weeks 1–4 (15–30 minutes — take it IN BED, not on the sofa.)",
+      time: "Weeks 1–4 (15–30 minutes, take it IN BED, not on the sofa.)",
       title: "Therapeutic effect builds",
-      description: "15–30 minutes — take it IN BED, not on the sofa. is the typical window for the main therapeutic effect to become apparent. Review at 2 and 4 weeks to assess response and tolerability.",
+      description: "15–30 minutes: take it IN BED, not on the sofa. is the typical window for the main therapeutic effect to become apparent. Review at 2 and 4 weeks to assess response and tolerability.",
       phase: "peak",
     },
     {
@@ -510,7 +510,7 @@ export const zolpidem: Drug = {
   faqs: [
     {
       question: "How long does Zolpidem take to work?",
-      answer: "15–30 minutes — take it IN BED, not on the sofa.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "15–30 minutes: take it IN BED, not on the sofa.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Zolpidem?",
@@ -518,19 +518,19 @@ export const zolpidem: Drug = {
     },
     {
       question: "Can I stop Zolpidem suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Zolpidem habit-forming?",
-      answer: "Dependence or misuse potential exists — see the warnings in this guide.. However, every patient should take Zolpidem exactly as prescribed and never change the dose without medical advice.",
+      answer: "Dependence or misuse potential exists; see the warnings in this guide.. However, every patient should take Zolpidem exactly as prescribed and never change the dose without medical advice.",
     },
     {
       question: "Can I take Zolpidem during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Zolpidem may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Zolpidem may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -638,13 +638,13 @@ export const zolpidem: Drug = {
       note: "Region where the drug acts",
     },
     {
-      label: "Insomnia — sleep-onset difficulty (short-term)",
+      label: "Insomnia: sleep-onset difficulty (short-term)",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
     },
     {
-      label: "Insomnia — onset AND maintenance (CR form)",
+      label: "Insomnia: onset AND maintenance (CR form)",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -668,7 +668,7 @@ export const zolpidem: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Zolpidem",
+      label: "Patient Guide. Zolpidem",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -676,13 +676,13 @@ export const zolpidem: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The world's default sleeping pill — alpha-1-selective GABA modulation for sleep onset without full benzodiazepine breadth.",
-    summary: "Zolpidem is a prescription medicine used to treat insomnia — sleep-onset difficulty (short-term). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Zolpidem is the most-used modern sleeping tablet: it works on the brain's sleep chemical (GABA) selectively — helping you fall asleep with fewer of the daytime-sedation effects of older sleeping pills. Take it only when you can spend 7–8 hours in bed, never with alcohol, and stop and call your doctor immediately if you ever sleep-walk or do anything while not fully awake.",
-    sideEffects: "The most common side effects are: morning drowsiness / hangover, dizziness and headache, bitter/metallic taste, rebound insomnia on stopping, gastrointestinal upset. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Complex sleep behaviours (sleep-walking/driving/eating) and Next-morning driving impairment. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: morning impairment / hangover (every review); complex sleep behaviours (ask at every review); course duration (every prescription). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The world's default sleeping pill: alpha-1-selective GABA modulation for sleep onset without full benzodiazepine breadth.",
+    summary: "Zolpidem is a prescription medicine used to treat insomnia: sleep-onset difficulty (short-term). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Zolpidem is the most-used modern sleeping tablet: it works on the brain's sleep chemical (GABA) selectively, helping you fall asleep with fewer of the daytime-sedation effects of older sleeping pills. Take it only when you can spend 7–8 hours in bed, never with alcohol, and stop and call your doctor immediately if you ever sleep-walk or do anything while not fully awake.",
+    sideEffects: "The most common side effects are: morning drowsiness / hangover, dizziness and headache, bitter/metallic taste, rebound insomnia on stopping, gastrointestinal upset. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Complex sleep behaviours (sleep-walking/driving/eating) and Next-morning driving impairment. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: morning impairment / hangover (every review); complex sleep behaviours (ask at every review); course duration (every prescription). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Alcohol and CNS depressants, Ketoconazole and strong 3A4 inhibitors, Rifampicin (inducer), SSRIs. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: Alcohol and CNS depressants, Ketoconazole and strong 3A4 inhibitors, Rifampicin (inducer), SSRIs. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -706,7 +706,7 @@ export const zolpidem: Drug = {
     ],
     typicalDoses: "5–10 mg at bedtime (5 mg in women); CR 6.25–12.5 mg.",
     prescribingScenarios: [
-      "Short-course insomnia in general practice — often over-continued; review discipline is the intervention.",
+      "Short-course insomnia in general practice: often over-continued; review discipline is the intervention.",
       "Hospital inpatient sleep protocols.",
     ],
     availability: {
@@ -756,7 +756,7 @@ export const zolpidem: Drug = {
         name: "Zolpidem",
         slug: "zolpidem",
         relationship: "This guide",
-        distinguishing: "Sleep onset in a non-benzodiazepine molecule — the default Z-drug",
+        distinguishing: "Sleep onset in a non-benzodiazepine molecule: the default Z-drug",
       },
       {
         name: "Eszopiclone",
@@ -768,13 +768,13 @@ export const zolpidem: Drug = {
         name: "Zaleplon",
         slug: "zaleplon",
         relationship: "Same class (Z-Drug)",
-        distinguishing: "Middle-of-the-night dosing — cleared before morning",
+        distinguishing: "Middle-of-the-night dosing: cleared before morning",
       },
       {
         name: "Zopiclone",
         slug: "zopiclone",
         relationship: "Same class (Z-Drug)",
-        distinguishing: "The Commonwealth Z-drug — 5-hour cover with taste signature",
+        distinguishing: "The Commonwealth Z-drug: 5-hour cover with taste signature",
       },
     ],
   },
@@ -922,17 +922,17 @@ export const zolpidem: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Zolpidem in two sentences.",
-      answer: "Zolpidem is a non-benzodiazepine selective GABA-A positive allosteric modulator with preferential alpha-1 subunit binding — the subunit pattern most associated with sedation/sleep. Net effect: Hypnotic effect (sleep onset; CR adds maintenance) with less anxiolysis, muscle relaxation, and anticonvulsant action than benzodiazepines.",
+      answer: "Zolpidem is a non-benzodiazepine selective GABA-A positive allosteric modulator with preferential alpha-1 subunit binding: the subunit pattern most associated with sedation/sleep. Net effect: Hypnotic effect (sleep onset; CR adds maintenance) with less anxiolysis, muscle relaxation, and anticonvulsant action than benzodiazepines.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Zolpidem.",
-      answer: "Insomnia — sleep-onset difficulty (short-term), Insomnia — onset AND maintenance (CR form). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Insomnia (sleep-onset difficulty (short-term), Insomnia) onset AND maintenance (CR form). (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Zolpidem and how you would manage it.",
-      answer: "Complex sleep behaviours (sleep-walking/driving/eating): The boxed-warning signature: automatic behaviours with partial or full amnesia — accidents and injuries reported. Management: Stop immediately on any such event; contraindicated thereafter.",
+      answer: "Complex sleep behaviours (sleep-walking/driving/eating): The boxed-warning signature: automatic behaviours with partial or full amnesia; accidents and injuries reported. Management: Stop immediately on any such event; contraindicated thereafter.",
       topic: "Safety",
     },
     {
@@ -942,7 +942,7 @@ export const zolpidem: Drug = {
     },
     {
       question: "Share one clinical pearl about Zolpidem that separates safe prescribers from unsafe ones.",
-      answer: "In bed, lights out, within 15 minutes of the dose — the ritual that prevents sleep-walking.",
+      answer: "In bed, lights out, within 15 minutes of the dose: the ritual that prevents sleep-walking.",
       topic: "Clinical Pearls",
     },
   ],
@@ -1018,7 +1018,7 @@ export const zolpidem: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1063,7 +1063,7 @@ export const zolpidem: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Zolpidem works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Zolpidem works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1079,7 +1079,7 @@ export const zolpidem: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Zolpidem safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Zolpidem safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1107,7 +1107,7 @@ export const zolpidem: Drug = {
   prescriberGuide: {
     sourceEdition: "Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017)",
     onsetTimeline: [
-      "15–30 minutes — take it IN BED, not on the sofa.",
+      "15–30 minutes: take it IN BED, not on the sofa.",
     ],
     ifItWorks: [
       "Continue Zolpidem at the lowest effective dose for the guideline-recommended duration for the condition treated.",
@@ -1124,7 +1124,7 @@ export const zolpidem: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Zolpidem follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Zolpidem follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1135,7 +1135,7 @@ export const zolpidem: Drug = {
       "Dose reduction or timing change before discontinuation.",
     ],
     weightGain: "See product information and class comparison.",
-    sedation: "High for 2–3 hours — the intended effect; morning residue is the adverse effect.",
+    sedation: "High for 2–3 hours: the intended effect; morning residue is the adverse effect.",
     dosing: [
       {
         indication: "Sleep-onset insomnia (women)",
@@ -1154,7 +1154,7 @@ export const zolpidem: Drug = {
       {
         indication: "Onset + maintenance (CR)",
         starting: "6.25 mg (women) / 12.5 mg (men) at bedtime",
-        titration: "Swallow whole — do not crush the dual-layer",
+        titration: "Swallow whole: do not crush the dual-layer",
         target: "6.25–12.5 mg",
         max: "12.5 mg",
       },
@@ -1173,17 +1173,17 @@ export const zolpidem: Drug = {
       "Oral spray/spray (historic)",
     ],
     dosingTips: [
-      "Take IN bed, lights out — not 30 minutes before bed on the couch.",
+      "Take IN bed, lights out, not 30 minutes before bed on the couch.",
       "7–8 hours in bed guaranteed before driving.",
       "One event of sleep-walking/eating/driving = stop permanently.",
-      "Pair every course with CBT-I referral — the drug buys time for the therapy to work.",
+      "Pair every course with CBT-I referral: the drug buys time for the therapy to work.",
     ],
     overdose: [
-      "Overdose with Zolpidem is managed supportively — no specific antidote.",
+      "Overdose with Zolpidem is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Zolpidem is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
-    habitForming: "Dependence or misuse potential exists — see the warnings in this guide.",
+    habitForming: "Dependence or misuse potential exists; see the warnings in this guide.",
     howToStop: [
       "Taper gradually under medical supervision rather than stopping abruptly.",
     ],
@@ -1221,11 +1221,11 @@ export const zolpidem: Drug = {
       "Complex-sleep-behaviour boxed warning.",
       "Morning driving impairment (esp. CR/high dose).",
       "Rebound insomnia.",
-      "Not a maintenance treatment — CBT-I is.",
+      "Not a maintenance treatment. CBT-I is.",
     ],
     primaryTargetSymptoms: ["Sleep-onset insomnia", "Onset + maintenance (CR)"],
     pearls: [
-      "In bed, lights out, within 15 minutes of the dose — the ritual that prevents sleep-walking.",
+      "In bed, lights out, within 15 minutes of the dose: the ritual that prevents sleep-walking.",
       "Women get 5 mg: the pharmacokinetic fact that changed labelling.",
       "CR for the 3 am waker, IR for the 11 pm non-sleeper.",
     ],
@@ -1233,6 +1233,6 @@ export const zolpidem: Drug = {
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

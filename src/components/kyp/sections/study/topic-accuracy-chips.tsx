@@ -77,7 +77,7 @@ export function TopicAccuracyChips() {
           >
             {topic.label}
             <span className="font-normal text-muted-foreground tabular-nums">
-              — {topic.accuracy}%
+              · {topic.accuracy}%
             </span>
             <span className="font-normal text-muted-foreground/50 tabular-nums">
               · {topic.answered}
@@ -94,7 +94,7 @@ export function TopicAccuracyChips() {
           >
             {topic.label}
             <span className="font-normal italic opacity-70">
-              — not enough data yet
+              (not enough data yet)
             </span>
           </Link>
         ))}

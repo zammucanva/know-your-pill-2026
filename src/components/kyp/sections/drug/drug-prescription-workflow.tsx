@@ -40,7 +40,7 @@ export function DrugPrescriptionWorkflow({ drug }: DrugPrescriptionWorkflowProps
         <SectionHeader
           eyebrow="🇮🇳 Prescription Workflow"
           title="Before → During → Follow-up → Refer."
-          description="The complete Indian prescribing workflow — what to check before starting, what to monitor during treatment, when to follow up, and when to refer to a specialist."
+          description="The complete Indian prescribing workflow: what to check before starting, what to monitor during treatment, when to follow up, and when to refer to a specialist."
           tone="brand"
         />
 

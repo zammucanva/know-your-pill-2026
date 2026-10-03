@@ -19,18 +19,18 @@ export const thiothixene: Drug = {
   brandNames: ["Navane"],
   drugClass: "typical-antipsychotic",
   drugClassLabel: "Typical Antipsychotic",
-  drugClassFullName: "Typical (Conventional) Antipsychotic — Thioxanthene",
+  drugClassFullName: "Typical (Conventional) Antipsychotic. Thioxanthene",
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Antipsychotics", "Typical Antipsychotics", "Thiothixene"],
   /* ---- Hero / summary ---- */
-  tagline: "A high-potency thioxanthene for psychosis — haloperidol's texture in a different ring system.",
-  summary: "Thiothixene is a high-potency thioxanthene antipsychotic for schizophrenia: strong D2 blockade, minimal sedation and anticholinergic burden, and the expected dose-dependent EPS and prolactin elevation. Clinically it behaves like haloperidol with a thioxanthene ring — a solid, superseded workhorse remembered for class completeness.",
+  tagline: "A high-potency thioxanthene for psychosis: haloperidol's texture in a different ring system.",
+  summary: "Thiothixene is a high-potency thioxanthene antipsychotic for schizophrenia: strong D2 blockade, minimal sedation and anticholinergic burden, and the expected dose-dependent EPS and prolactin elevation. Clinically it behaves like haloperidol with a thioxanthene ring: a solid, superseded workhorse remembered for class completeness.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Thiothixene — from its molecular target (D2 (high-potency antagonist); thioxanthene class) to clinical effect.",
+    "Explain the mechanism of action of Thiothixene, from its molecular target (D2 (high-potency antagonist); thioxanthene class) to clinical effect.",
     "List the FDA-approved and off-label uses of Thiothixene.",
     "Predict the common and serious side effects of Thiothixene from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Thiothixene.",
@@ -38,12 +38,12 @@ export const thiothixene: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "High-potency thioxanthene D2 antagonist — the haloperidol-like motor profile with a different scaffold.",
+    summary: "High-potency thioxanthene D2 antagonist: the haloperidol-like motor profile with a different scaffold.",
     molecularTarget: "D2 (high-potency antagonist); thioxanthene class",
-    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — high potency: small doses, EPS-prone, minimal off-target effects.",
+    effect: "D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways: high potency: small doses, EPS-prone, minimal off-target effects.",
     steps: [
-      "Blocks D2 receptors — therapeutic antipsychotic effect at 65–75% occupancy.",
-      "EPS emerges as occupancy passes ~80% — high potency: small doses, EPS-prone, minimal off-target effects.",
+      "Blocks D2 receptors: therapeutic antipsychotic effect at 65–75% occupancy.",
+      "EPS emerges as occupancy passes ~80%: high potency: small doses, EPS-prone, minimal off-target effects.",
       "Tuberoinfundibular blockade raises prolactin; nigrostriatal blockade produces parkinsonism and dystonia.",
       "Class-typical receptor binding determines the drug's adverse-effect texture.",
     ],
@@ -109,7 +109,7 @@ export const thiothixene: Drug = {
         label: "hyperprolactinaemia",
       },
     ],
-    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia — efficacy and motor risk are two sides of one coin.",
+    caption: "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia: efficacy and motor risk are two sides of one coin.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: [
@@ -147,14 +147,14 @@ export const thiothixene: Drug = {
       name: "Extrapyramidal symptoms (parkinsonism)",
       frequency: "very-common",
       severity: "moderate",
-      description: "Rigidity, bradykinesia, tremor — dose-dependent D2 signature.",
+      description: "Rigidity, bradykinesia, tremor: dose-dependent D2 signature.",
       management: "Reduce dose; anticholinergic.",
     },
     {
       name: "Akathisia",
       frequency: "common",
       severity: "moderate",
-      description: "Restlessness — frequently mistaken for worsening psychosis.",
+      description: "Restlessness: frequently mistaken for worsening psychosis.",
       management: "Reduce dose; propranolol.",
     },
     {
@@ -177,14 +177,14 @@ export const thiothixene: Drug = {
       name: "Neuroleptic malignant syndrome",
       frequency: "rare",
       severity: "life-threatening",
-      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency.",
+      description: "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness: the class medical emergency.",
       management: "Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
     },
     {
       name: "Tardive dyskinesia",
       frequency: "uncommon",
       severity: "severe",
-      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex — a defining risk of chronic typical antipsychotics.",
+      description: "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex: a defining risk of chronic typical antipsychotics.",
       management: "Lowest effective dose; AIMS surveillance; reduce or switch on detection; VMAT2 inhibitors for severe cases.",
     },
   ],
@@ -220,13 +220,13 @@ export const thiothixene: Drug = {
     {
       drug: "QT-prolonging drugs (including other antipsychotics)",
       severity: "major",
-      mechanism: "Additive QT prolongation — torsades risk.",
+      mechanism: "Additive QT prolongation: torsades risk.",
       action: "Avoid combinations; ECG monitoring if unavoidable.",
     },
     {
       drug: "Anticholinergic drugs",
       severity: "moderate",
-      mechanism: "Additive anticholinergic burden — cognition, ileus, tachycardia.",
+      mechanism: "Additive anticholinergic burden: cognition, ileus, tachycardia.",
       action: "Minimise total anticholinergic load.",
     },
     {
@@ -238,7 +238,7 @@ export const thiothixene: Drug = {
   ],
   pregnancy: {
     legacyCategory: "C",
-    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk — continue at the lowest effective dose with obstetric co-management.",
+    summary: "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Relapse prevention in serious psychosis usually outweighs fetal risk: continue at the lowest effective dose with obstetric co-management.",
     lactation: "Small amounts pass into milk; infant sedation and EPS-like effects are monitored. Generally considered acceptable with infant monitoring.",
   },
   renalAdjustment: "Standard caution.",
@@ -246,31 +246,31 @@ export const thiothixene: Drug = {
   /* ---- Education ---- */
   patientExplanation: "Thiothixene is an older high-strength antipsychotic that behaves much like haloperidol: effective for psychosis, with stiffness and restlessness as its main side effects.",
   patientEducationPoints: [
-    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early — these are treatable.",
+    "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early: these are treatable.",
     "Stand up slowly during the first week.",
-    "Do not stop suddenly — discuss any change with your doctor.",
-    "Benefit from Thiothixene builds over weeks — do not judge it in the first days.",
+    "Do not stop suddenly: discuss any change with your doctor.",
+    "Benefit from Thiothixene builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "Thiothixene = haloperidol pharmacology in a thioxanthene ring — know the class, know the drug.",
+    "Thiothixene = haloperidol pharmacology in a thioxanthene ring: know the class, know the drug.",
     "The thioxanthene shelf: flupenthixol (activating), zuclopenthixol (sedating), thiothixene (neutral-high potency).",
-    "Typical antipsychotics all share one mechanism — D2 blockade — so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
+    "Typical antipsychotics all share one mechanism (D2 blockade) so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Thiothixene: High-potency thioxanthene D2 antagonist — the haloperidol-like motor profile with a different scaffold.",
-        "Uses of Thiothixene: Schizophrenia — psychotic manifestations",
+        "Mechanism of Thiothixene: High-potency thioxanthene D2 antagonist; the haloperidol-like motor profile with a different scaffold.",
+        "Uses of Thiothixene: Schizophrenia; psychotic manifestations",
         "High-potency thioxanthene for schizophrenia (6–30 mg/day).",
         "Motor/prolactin profile as haloperidol; minimal sedation.",
       ],
       practical: [
-        "Prescribe Thiothixene for schizophrenia — psychotic manifestations with dose, timing, and duration.",
+        "Prescribe Thiothixene for schizophrenia: psychotic manifestations with dose, timing, and duration.",
         "Outline the monitoring plan: Weight and BMI (Baseline, then periodically); AIMS examination (Baseline, then every 6 months); EPS screen (parkinsonism, akathisia, dystonia) (Every review in the first 2 months)",
       ],
       longAnswer: [
-        "Thiothixene: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
+        "Thiothixene: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
         "High-potency thioxanthene for schizophrenia (6–30 mg/day).",
         "Motor/prolactin profile as haloperidol; minimal sedation.",
       ],
@@ -279,7 +279,7 @@ export const thiothixene: Drug = {
       highYield: [
         "High-potency thioxanthene for schizophrenia (6–30 mg/day).",
         "Motor/prolactin profile as haloperidol; minimal sedation.",
-        "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+        "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
         "Potency spectrum: chlorpromazine (low; sedation/hypotension) → haloperidol (high; EPS/prolactin).",
         "Class-defining risks: EPS, tardive dyskinesia, NMS, hyperprolactinaemia, QT (variable by drug).",
       ],
@@ -291,7 +291,7 @@ export const thiothixene: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Thiothixene develops neuroleptic malignant syndrome — next best step?",
+        "A patient on Thiothixene develops neuroleptic malignant syndrome: next best step?",
         "When to choose Thiothixene over alternatives in its class.",
       ],
     },
@@ -304,9 +304,9 @@ export const thiothixene: Drug = {
     },
     psychiatryResidency: {
       advancedPearls: [
-        "Thiothixene = haloperidol pharmacology in a thioxanthene ring — know the class, know the drug.",
+        "Thiothixene = haloperidol pharmacology in a thioxanthene ring: know the class, know the drug.",
         "The thioxanthene shelf: flupenthixol (activating), zuclopenthixol (sedating), thiothixene (neutral-high potency).",
-        "Typical antipsychotics all share one mechanism — D2 blockade — so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
+        "Typical antipsychotics all share one mechanism (D2 blockade) so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
       ],
     },
   },
@@ -314,23 +314,23 @@ export const thiothixene: Drug = {
   highYieldSummary: [
     "High-potency thioxanthene for schizophrenia (6–30 mg/day).",
     "Motor/prolactin profile as haloperidol; minimal sedation.",
-    "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency.",
+    "Class mechanism: D2 receptor blockade; efficacy equivalent across typicals; adverse effects differ by potency.",
     "Potency spectrum: chlorpromazine (low; sedation/hypotension) → haloperidol (high; EPS/prolactin).",
     "Class-defining risks: EPS, tardive dyskinesia, NMS, hyperprolactinaemia, QT (variable by drug).",
   ],
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — schizophrenia — psychotic manifestations",
-      presentation: "A patient presenting with schizophrenia — psychotic manifestations, started on Thiothixene.",
-      history: "A adult patient presents with a schizophrenia — psychotic manifestations picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
-      examination: "Mental status examination is consistent with schizophrenia — psychotic manifestations; physical examination and baseline investigations are unremarkable.",
-      diagnosis: "Schizophrenia — psychotic manifestations. Differentials are considered and excluded clinically.",
+      title: "First presentation: schizophrenia with psychotic manifestations",
+      presentation: "A patient presenting with schizophrenia: psychotic manifestations, started on Thiothixene.",
+      history: "A adult patient presents with a schizophrenia: psychotic manifestations picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
+      examination: "Mental status examination is consistent with schizophrenia: psychotic manifestations; physical examination and baseline investigations are unremarkable.",
+      diagnosis: "Schizophrenia: psychotic manifestations. Differentials are considered and excluded clinically.",
       rationale: "Thiothixene is appropriate as a first-line option: it directly targets the presenting syndrome, has a well-characterised safety profile, and belongs to a class (Typical Antipsychotic) with strong evidence in this condition.",
       management: "Started at 2 mg twice daily, titrated to 6–30 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Thiothixene takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Thiothixene takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -339,7 +339,7 @@ export const thiothixene: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Typical Antipsychotic comparison — choosing within the class",
+      title: "Typical Antipsychotic comparison: choosing within the class",
       primaryDrug: "Thiothixene",
       rows: [
         {
@@ -388,11 +388,11 @@ export const thiothixene: Drug = {
         },
         {
           attribute: "Weight gain",
-          primaryValue: "Low — weight gain not expected.",
+          primaryValue: "Low: weight gain not expected.",
           comparisons: [
             {
               drug: "Chlorpromazine",
-              value: "Low — weight gain not expected.",
+              value: "Low: weight gain not expected.",
             },
             {
               drug: "Haloperidol",
@@ -400,11 +400,11 @@ export const thiothixene: Drug = {
             },
             {
               drug: "Fluphenazine",
-              value: "Low — weight gain not expected.",
+              value: "Low: weight gain not expected.",
             },
             {
               drug: "Perphenazine",
-              value: "Low — weight gain not expected.",
+              value: "Low: weight gain not expected.",
             },
           ],
         },
@@ -418,7 +418,7 @@ export const thiothixene: Drug = {
             },
             {
               drug: "Haloperidol",
-              value: "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+              value: "Mild, among the least sedating antipsychotics; alerting more than calming at low doses.",
             },
             {
               drug: "Fluphenazine",
@@ -440,7 +440,7 @@ export const thiothixene: Drug = {
             },
             {
               drug: "Haloperidol",
-              value: "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+              value: "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool",
             },
             {
               drug: "Fluphenazine",
@@ -453,7 +453,7 @@ export const thiothixene: Drug = {
           ],
         },
       ],
-      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -462,7 +462,7 @@ export const thiothixene: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Thiothixene reaches peak plasma concentration and begins acting at its molecular target (D2 (high-potency antagonist); thioxanthene class). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Thiothixene reaches peak plasma concentration and begins acting at its molecular target (D2 (high-potency antagonist); thioxanthene class). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -498,7 +498,7 @@ export const thiothixene: Drug = {
   faqs: [
     {
       question: "How long does Thiothixene take to work?",
-      answer: "Clinical effect of Thiothixene typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Clinical effect of Thiothixene typically builds over 1–4 weeks at the target dose.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Thiothixene?",
@@ -506,11 +506,11 @@ export const thiothixene: Drug = {
     },
     {
       question: "Can I stop Thiothixene suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Thiothixene habit-forming?",
@@ -518,7 +518,7 @@ export const thiothixene: Drug = {
     },
     {
       question: "Can I take Thiothixene during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Thiothixene may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Thiothixene may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -619,7 +619,7 @@ export const thiothixene: Drug = {
       label: "Typical Antipsychotic",
       type: "class",
       href: "#mechanism",
-      note: "Typical (Conventional) Antipsychotic — Thioxanthene",
+      note: "Typical (Conventional) Antipsychotic. Thioxanthene",
     },
     {
       label: "Central monoaminergic systems (see mechanism)",
@@ -634,7 +634,7 @@ export const thiothixene: Drug = {
       note: "Primary molecular target",
     },
     {
-      label: "Schizophrenia — psychotic manifestations",
+      label: "Schizophrenia: psychotic manifestations",
       type: "condition",
       href: "#clinical-uses",
       note: "Key indication",
@@ -658,7 +658,7 @@ export const thiothixene: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Thiothixene",
+      label: "Patient Guide. Thiothixene",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -666,13 +666,13 @@ export const thiothixene: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "A high-potency thioxanthene for psychosis — haloperidol's texture in a different ring system.",
-    summary: "Thiothixene is a prescription medicine used to treat schizophrenia — psychotic manifestations. It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
+    tagline: "A high-potency thioxanthene for psychosis: haloperidol's texture in a different ring system.",
+    summary: "Thiothixene is a prescription medicine used to treat schizophrenia: psychotic manifestations. It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
     mechanism: "Thiothixene is an older high-strength antipsychotic that behaves much like haloperidol: effective for psychosis, with stiffness and restlessness as its main side effects.",
-    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment — these checks are how the treatment stays safe.",
+    sideEffects: "The most common side effects are: extrapyramidal symptoms (parkinsonism), akathisia, hyperprolactinaemia, sedation. These usually appear early and many settle with time. Serious effects are uncommon but important to know: Neuroleptic malignant syndrome and Tardive dyskinesia. Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every review in the first 2 months). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: QT-prolonging drugs (including other antipsychotics), Anticholinergic drugs, CNS depressants and alcohol. Avoid alcohol unless your doctor says it is safe.",
   },
   sectionDifficulty: {
     mechanism: "mbbs",
@@ -714,7 +714,7 @@ export const thiothixene: Drug = {
         name: "Haloperidol",
         slug: "haloperidol",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+        distinguishing: "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool",
       },
       {
         name: "Fluphenazine",
@@ -738,7 +738,7 @@ export const thiothixene: Drug = {
         name: "Thioridazine",
         slug: "thioridazine",
         relationship: "Same class (Typical Antipsychotic)",
-        distinguishing: "The restricted QT-retinopathy phenothiazine — last-line",
+        distinguishing: "The restricted QT-retinopathy phenothiazine: last-line",
       },
       {
         name: "Trifluoperazine",
@@ -898,17 +898,17 @@ export const thiothixene: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Thiothixene in two sentences.",
-      answer: "High-potency thioxanthene D2 antagonist — the haloperidol-like motor profile with a different scaffold. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways — high potency: small doses, EPS-prone, minimal off-target effects.",
+      answer: "High-potency thioxanthene D2 antagonist: the haloperidol-like motor profile with a different scaffold. Net effect: D2 antagonism across mesolimbic (antipsychotic), nigrostriatal (EPS), and tuberoinfundibular (prolactin) pathways; high potency: small doses, EPS-prone, minimal off-target effects.",
       topic: "Mechanism",
     },
     {
       question: "List the key uses of Thiothixene.",
-      answer: "Schizophrenia — psychotic manifestations. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
+      answer: "Schizophrenia: psychotic manifestations. (FDA-approved uses should be distinguished from off-label uses in viva answers.)",
       topic: "Indications",
     },
     {
       question: "Name the most clinically important safety issue of Thiothixene and how you would manage it.",
-      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
+      answer: "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness; the class medical emergency. Management: Stop immediately; ICU supportive care; dantrolene or bromocriptine.",
       topic: "Safety",
     },
     {
@@ -918,7 +918,7 @@ export const thiothixene: Drug = {
     },
     {
       question: "Share one clinical pearl about Thiothixene that separates safe prescribers from unsafe ones.",
-      answer: "Thiothixene = haloperidol pharmacology in a thioxanthene ring — know the class, know the drug.",
+      answer: "Thiothixene = haloperidol pharmacology in a thioxanthene ring: know the class, know the drug.",
       topic: "Clinical Pearls",
     },
   ],
@@ -994,7 +994,7 @@ export const thiothixene: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -1039,7 +1039,7 @@ export const thiothixene: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Thiothixene works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Thiothixene works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -1055,7 +1055,7 @@ export const thiothixene: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Thiothixene safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Thiothixene safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -1100,7 +1100,7 @@ export const thiothixene: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Thiothixene follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Thiothixene follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -1110,7 +1110,7 @@ export const thiothixene: Drug = {
     sideEffectRescue: [
       "Dose reduction or timing change before discontinuation.",
     ],
-    weightGain: "Low — weight gain not expected.",
+    weightGain: "Low: weight gain not expected.",
     sedation: "Mild.",
     dosing: [
       {
@@ -1126,7 +1126,7 @@ export const thiothixene: Drug = {
       "As with haloperidol: watch the first weeks for dystonia and akathisia.",
     ],
     overdose: [
-      "Overdose with Thiothixene is managed supportively — no specific antidote.",
+      "Overdose with Thiothixene is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Thiothixene is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1163,14 +1163,14 @@ export const thiothixene: Drug = {
     potentialDisadvantages: ["Full EPS/prolactin burden.", "Superseded; scarce in many markets."],
     primaryTargetSymptoms: ["Positive psychotic symptoms"],
     pearls: [
-      "Thiothixene = haloperidol pharmacology in a thioxanthene ring — know the class, know the drug.",
+      "Thiothixene = haloperidol pharmacology in a thioxanthene ring: know the class, know the drug.",
       "The thioxanthene shelf: flupenthixol (activating), zuclopenthixol (sedating), thiothixene (neutral-high potency).",
-      "Typical antipsychotics all share one mechanism — D2 blockade — so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
+      "Typical antipsychotics all share one mechanism (D2 blockade) so efficacy is similar across the class; the choice is really about potency, sedation, and route.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };

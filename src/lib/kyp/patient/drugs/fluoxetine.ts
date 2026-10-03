@@ -11,7 +11,7 @@ export const fluoxetinePatientGuide: PatientGuide = {
   slug: "fluoxetine",
 
   classInPlainWords:
-    "Fluoxetine is an SSRI (selective serotonin reuptake inhibitor) — one of the oldest and most widely used antidepressants in the world.",
+    "Fluoxetine is an SSRI (selective serotonin reuptake inhibitor), one of the oldest and most widely used antidepressants in the world.",
 
   whatIsThis: fluoxetine.patientMode.tagline,
 
@@ -57,7 +57,7 @@ export const fluoxetinePatientGuide: PatientGuide = {
   },
 
   whenNotice:
-    "Some early changes — sleep, appetite, energy — can happen within 1–2 weeks, but clearer mood benefit typically takes 4–6 weeks for depression. Anxiety, OCD, and bulimia can take 8–12 weeks. Because fluoxetine and its breakdown product build up slowly in the body, the complete effect can take slightly longer than with some other antidepressants. Don't stop early just because you don't feel better yet.",
+    "Some early changes (sleep, appetite, energy) can happen within 1–2 weeks, but clearer mood benefit typically takes 4–6 weeks for depression. Anxiety, OCD, and bulimia can take 8–12 weeks. Because fluoxetine and its breakdown product build up slowly in the body, the complete effect can take slightly longer than with some other antidepressants. Don't stop early just because you don't feel better yet.",
 
   timelineShort: "4–6 weeks for depression; 8–12 for anxiety or OCD",
 
@@ -67,15 +67,15 @@ export const fluoxetinePatientGuide: PatientGuide = {
     intro: fluoxetine.patientMode.sideEffects,
     list: [
       "Feeling sick (nausea) or an upset stomach",
-      "Trouble sleeping, or feeling 'wired', jittery, or anxious — fluoxetine is the most stimulating SSRI",
+      "Trouble sleeping, or feeling 'wired', jittery, or anxious: fluoxetine is the most stimulating SSRI",
       "Headache",
       "Dry mouth",
       "Loose stools (diarrhoea)",
       "Sweating, especially at night",
       "Reduced appetite and mild weight loss",
-      "Sexual side effects — lower interest or difficulty reaching orgasm",
+      "Sexual side effects: lower interest or difficulty reaching orgasm",
     ],
-    note: "Taking it in the morning reduces the sleep problem. If early jitteriness feels bad — especially if you have panic attacks — tell your doctor; a lower starting dose usually helps.",
+    note: "Taking it in the morning reduces the sleep problem. If early jitteriness feels bad (especially if you have panic attacks) tell your doctor; a lower starting dose usually helps.",
   },
 
   importantSideEffects: {
@@ -85,7 +85,7 @@ export const fluoxetinePatientGuide: PatientGuide = {
       {
         name: "Serotonin syndrome",
         whatItMeans:
-          "A rare but serious reaction caused by too much serotonin activity — usually when fluoxetine is combined with another medicine that affects serotonin. Because fluoxetine leaves the body slowly, this risk persists for weeks even after you stop it.",
+          "A rare but serious reaction caused by too much serotonin activity: usually when fluoxetine is combined with another medicine that affects serotonin. Because fluoxetine leaves the body slowly, this risk persists for weeks even after you stop it.",
         whatToDo:
           "Get emergency help straight away if you have a high fever with confusion, sweating, shaking, muscle twitching or stiffness, or a fast heartbeat.",
       },
@@ -101,7 +101,7 @@ export const fluoxetinePatientGuide: PatientGuide = {
         whatItMeans:
           "In the first month or two, antidepressants can occasionally make mood worse instead of better. This risk is highest in people under 25.",
         whatToDo:
-          "Contact your doctor immediately — do not wait — if you feel more agitated, irritable, anxious, or have any new thoughts of harming yourself.",
+          "Contact your doctor immediately (do not wait) if you feel more agitated, irritable, anxious, or have any new thoughts of harming yourself.",
       },
       {
         name: "Rash or allergic reaction",
@@ -121,18 +121,18 @@ export const fluoxetinePatientGuide: PatientGuide = {
   },
 
   tellYourDoctor: [
-    "All other medicines you take — fluoxetine affects how your body processes several common drugs, including tramadol, codeine, certain heart medicines (thioridazine, pimozide), the antibiotic linezolid, and cough syrups containing dextromethorphan.",
+    "All other medicines you take: fluoxetine affects how your body processes several common drugs, including tramadol, codeine, certain heart medicines (thioridazine, pimozide), the antibiotic linezolid, and cough syrups containing dextromethorphan.",
     "Any herbal products, especially St John's Wort.",
     "If you have ever had a seizure, bipolar disorder, or bleeding problems.",
-    "If you are pregnant, planning a pregnancy, or breastfeeding — doctors usually prefer a different SSRI (sertraline) in pregnancy.",
+    "If you are pregnant, planning a pregnancy, or breastfeeding: doctors usually prefer a different SSRI (sertraline) in pregnancy.",
     "If you take warfarin or regular painkillers like ibuprofen or aspirin.",
-    "If you are over 65 — your doctor may check your blood sodium in the first weeks.",
+    "If you are over 65: your doctor may check your blood sodium in the first weeks.",
   ],
 
   interactions: fluoxetine.patientMode.interactions,
 
   missedDose:
-    "Take the missed dose as soon as you remember. Because fluoxetine stays in your body for a long time, a missed dose is less of a problem than with other SSRIs. If it is close to your next dose, skip the missed one — do not double up.",
+    "Take the missed dose as soon as you remember. Because fluoxetine stays in your body for a long time, a missed dose is less of a problem than with other SSRIs. If it is close to your next dose, skip the missed one. Do not double up.",
 
   stopping:
     "Fluoxetine is usually the easiest SSRI to stop, because it leaves the body so slowly that it effectively tapers itself. Withdrawal symptoms are the mildest of any SSRI. Still, talk to your doctor before stopping, and remember two things. First, for a first episode of depression, treatment usually continues 6–12 months after you feel better. Second, after your last dose, you must wait at least 5 weeks before starting an MAOI (monoamine oxidase inhibitor) antidepressant, because fluoxetine's breakdown product stays in your body for weeks.",
@@ -141,7 +141,7 @@ export const fluoxetinePatientGuide: PatientGuide = {
 
   urgentHelp: {
     intro:
-      "Get urgent medical help — do not wait to see if it passes — if any of these happen:",
+      "Get urgent medical help (do not wait to see if it passes) if any of these happen:",
     signs: [
       "A high fever with confusion, sweating, shaking, muscle twitching or stiffness, and a fast heartbeat (possible serotonin syndrome).",
       "New or worsening thoughts of harming yourself, especially in the first month.",
@@ -153,11 +153,11 @@ export const fluoxetinePatientGuide: PatientGuide = {
   },
 
   keyReminders: [
-    "Take it in the morning — it can keep you awake if taken at night.",
+    "Take it in the morning: it can keep you awake if taken at night.",
     "It is the most stimulating SSRI: feeling jittery or anxious early on is common and usually settles in 1–2 weeks.",
     "Full benefit takes 4–6 weeks for depression, 8–12 weeks for anxiety, OCD, or bulimia.",
-    "Missed doses matter less than with other SSRIs — and stopping is usually easier.",
-    "Wait at least 5 weeks after stopping before starting an MAOI antidepressant — this is the longest wait of any SSRI.",
-    "Tell every doctor and pharmacist that you take fluoxetine — it interacts with several common medicines.",
+    "Missed doses matter less than with other SSRIs, and stopping is usually easier.",
+    "Wait at least 5 weeks after stopping before starting an MAOI antidepressant: this is the longest wait of any SSRI.",
+    "Tell every doctor and pharmacist that you take fluoxetine: it interacts with several common medicines.",
   ],
 };

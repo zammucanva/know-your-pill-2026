@@ -29,7 +29,7 @@ export function DrugComparisonTables({ drug }: DrugComparisonTablesProps) {
         <SectionHeader
           eyebrow="Comparison Tables"
           title="When to choose which."
-          description="Side-by-side comparison with related drugs in the same class. Use these tables to make an informed choice — every SSRI has trade-offs."
+          description="Side-by-side comparison with related drugs in the same class. Use these tables to make an informed choice. Every SSRI has trade-offs."
         />
 
         <div className="mt-10 space-y-10">

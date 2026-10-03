@@ -39,12 +39,12 @@ export const PHASE_META: Record<LearningPhase, PhaseMeta> = {
   understand: {
     key: "understand",
     label: "Understand",
-    intent: "Core concepts — what it is and what happens in the body and brain.",
+    intent: "Core concepts: what it is and what happens in the body and brain.",
   },
   learn: {
     key: "learn",
     label: "Learn",
-    intent: "Detailed clinical content — epidemiology, causes and risk factors.",
+    intent: "Detailed clinical content: epidemiology, causes and risk factors.",
   },
   india: {
     key: "india",
@@ -54,7 +54,7 @@ export const PHASE_META: Record<LearningPhase, PhaseMeta> = {
   think: {
     key: "think",
     label: "Think",
-    intent: "Clinical reasoning — diagnosis, management and cases.",
+    intent: "Clinical reasoning: diagnosis, management and cases.",
   },
   remember: {
     key: "remember",
@@ -64,7 +64,7 @@ export const PHASE_META: Record<LearningPhase, PhaseMeta> = {
   practice: {
     key: "practice",
     label: "Practice",
-    intent: "Self-test MCQs — check yourself before you move on.",
+    intent: "Self-test MCQs: check yourself before you move on.",
   },
   sources: {
     key: "sources",
@@ -155,9 +155,9 @@ export interface PriorityMeta {
 }
 
 export const PRIORITY_META: Record<string, PriorityMeta> = {
-  P1: { label: "Core", hint: "Core clinical topic — the heart of the curriculum." },
-  P2: { label: "Supporting", hint: "Supporting topic — deepens the core." },
-  P3: { label: "Reference", hint: "Reference topic — optional context." },
+  P1: { label: "Core", hint: "Core clinical topic: the heart of the curriculum." },
+  P2: { label: "Supporting", hint: "Supporting topic: deepens the core." },
+  P3: { label: "Reference", hint: "Reference topic: optional context." },
 };
 
 export function priorityMeta(priority: string): PriorityMeta {
@@ -187,7 +187,7 @@ export const AUDIENCE_LENSES: AudienceLensMeta[] = [
     key: "student",
     label: "Medical Students",
     entryPhases: ["understand", "learn", "remember", "practice"],
-    blurb: "Knowledge map, epidemiology, exam lens and self-testing — built for passing and for retaining.",
+    blurb: "Knowledge map, epidemiology, exam lens and self-testing: built for passing and for retaining.",
   },
   {
     key: "clinician",

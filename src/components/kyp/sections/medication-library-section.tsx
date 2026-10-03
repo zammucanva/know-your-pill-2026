@@ -44,7 +44,7 @@ export function MedicationLibrarySection() {
           >
             <div className="flex items-end justify-between gap-6 border-b border-border/30 pb-8">
               <div>
-                <p className="font-mono text-xs text-muted-foreground/40 mb-2">01 — Primary</p>
+                <p className="font-mono text-xs text-muted-foreground/40 mb-2">01. Primary</p>
                 <h3
                   className="font-serif font-semibold tracking-tight text-foreground"
                   style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)" }}

@@ -27,13 +27,13 @@ import { LibraryClient, type LibraryGroup } from "./library-client";
  * progress store (see library-client.tsx useLocalProgress).
  */
 export const metadata: Metadata = {
-  title: "Psychiatry Library — KYP Psychiatry",
+  title: "Psychiatry Library. KYP Psychiatry",
   description:
-    "Browse the full psychiatry curriculum — 109 lessons across 18 clinical domains, filterable by domain, importance, format and progress.",
+    "Browse the full psychiatry curriculum: 109 lessons across 18 clinical domains, filterable by domain, importance, format and progress.",
   keywords: ["psychiatry library", "psychiatry curriculum", "psychiatry topics", "KYP Psychiatry"],
   openGraph: {
-    title: "Psychiatry Library — KYP Psychiatry",
-    description: "109 lessons across 18 clinical domains — the full psychiatry curriculum.",
+    title: "Psychiatry Library. KYP Psychiatry",
+    description: "109 lessons across 18 clinical domains: the full psychiatry curriculum.",
     type: "website",
     siteName: "Know Your Pill",
   },

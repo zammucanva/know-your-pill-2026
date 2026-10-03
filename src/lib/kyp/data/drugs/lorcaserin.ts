@@ -23,14 +23,14 @@ export const lorcaserin: Drug = {
   /* ---- Learning path (breadcrumb) ---- */
   learningPath: ["Psychiatry", "Specialised Agents", "Weight Management Agents", "Lorcaserin"],
   /* ---- Hero / summary ---- */
-  tagline: "The withdrawn 5-HT2C agonist — weight pharmacology's serotonergic chapter, closed by cancer-signal analysis.",
-  summary: "Lorcaserin was the selective 5-HT2C agonist for chronic weight management — pro-satiety serotonergic pharmacology without the valvular (5-HT2B) risk of fenfluramine-era drugs — withdrawn in 2020 after long-term-trial analysis suggested a small cancer-signal excess. A withdrawn-drug entry for pharmacology completeness.",
+  tagline: "The withdrawn 5-HT2C agonist: weight pharmacology's serotonergic chapter, closed by cancer-signal analysis.",
+  summary: "Lorcaserin was the selective 5-HT2C agonist for chronic weight management (pro-satiety serotonergic pharmacology without the valvular (5-HT2B) risk of fenfluramine-era drugs) withdrawn in 2020 after long-term-trial analysis suggested a small cancer-signal excess. A withdrawn-drug entry for pharmacology completeness.",
   estimatedReadTime: "18 min read",
   yieldRating: "medium",
   primaryAudience: "medical",
   /* ---- Learning objectives ---- */
   learningObjectives: [
-    "Explain the mechanism of action of Lorcaserin — from its molecular target (5-HT2C receptors (selective agonist — pro-satiety POMC-melanocortin pathway)) to clinical effect.",
+    "Explain the mechanism of action of Lorcaserin (from its molecular target (5-HT2C receptors (selective agonist) pro-satiety POMC-melanocortin pathway)) to clinical effect.",
     "List the FDA-approved and off-label uses of Lorcaserin.",
     "Predict the common and serious side effects of Lorcaserin from its pharmacology.",
     "Construct an appropriate dosing and monitoring plan for a patient starting Lorcaserin.",
@@ -38,15 +38,15 @@ export const lorcaserin: Drug = {
   ],
   /* ---- Mechanism ---- */
   mechanism: {
-    summary: "Lorcaserin selectively agonised 5-HT2C receptors — activating pro-satiety melanocortin pathway neurons — while avoiding 5-HT2B (the valvulopathy receptor).",
-    molecularTarget: "5-HT2C receptors (selective agonist — pro-satiety POMC-melanocortin pathway)",
+    summary: "Lorcaserin selectively agonised 5-HT2C receptors (activating pro-satiety melanocortin pathway neurons) while avoiding 5-HT2B (the valvulopathy receptor).",
+    molecularTarget: "5-HT2C receptors (selective agonist, pro-satiety POMC-melanocortin pathway)",
     effect: "Target engagement producing the described clinical effect.",
     steps: [
-      "Lorcaserin selectively agonised 5-HT2C receptors — activating pro-satiety melanocortin pathway neurons — while avoiding 5-HT2B (the valvulopathy receptor).",
+      "Lorcaserin selectively agonised 5-HT2C receptors (activating pro-satiety melanocortin pathway neurons) while avoiding 5-HT2B (the valvulopathy receptor).",
       "The mechanism translates into the clinical profile described.",
       "Practical use follows half-life and formulation.",
     ],
-    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 11 hours. — see mechanism and prescriber sections.",
+    pharmacokinetics: "Orally administered; peak plasma concentration within hours of dosing. Half-life 11 hours. See mechanism and prescriber sections.",
     halfLife: "11 hours.",
     metabolism: "Hepatic.",
     excretion: "Renal.",
@@ -109,7 +109,7 @@ export const lorcaserin: Drug = {
         label: "produces",
       },
     ],
-    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation — the central paradox of antidepressant pharmacology.",
+    caption: "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation: the central paradox of antidepressant pharmacology.",
   },
   /* ---- Neuroscience mapping ---- */
   neurotransmitters: ["Serotonin (5-HT)"],
@@ -121,7 +121,7 @@ export const lorcaserin: Drug = {
     {
       name: "Chronic weight management (withdrawn)",
       status: "fda-approved",
-      description: "For BMI ≥ 30 or ≥ 27 with comorbidity — withdrawn after cancer-signal analysis of long-term data.",
+      description: "For BMI ≥ 30 or ≥ 27 with comorbidity: withdrawn after cancer-signal analysis of long-term data.",
     },
   ],
   contraindications: [
@@ -154,14 +154,14 @@ export const lorcaserin: Drug = {
       name: "Cancer-signal excess in long-term follow-up",
       frequency: "uncommon",
       severity: "severe",
-      description: "The withdrawal cause: pooled long-term trial analysis suggested increased cancer diagnoses — the 2020 withdrawal.",
-      management: "Drug withdrawn — no management to document.",
+      description: "The withdrawal cause: pooled long-term trial analysis suggested increased cancer diagnoses; the 2020 withdrawal.",
+      management: "Drug withdrawn: no management to document.",
     },
     {
       name: "Valvulopathy screening era (5-HT2B selectivity design)",
       frequency: "rare",
       severity: "severe",
-      description: "Designed to AVOID fenfluramine valvulopathy — echocardiographic monitoring was the era's caution.",
+      description: "Designed to AVOID fenfluramine valvulopathy: echocardiographic monitoring was the era's caution.",
       management: "—",
     },
   ],
@@ -177,7 +177,7 @@ export const lorcaserin: Drug = {
     {
       drug: "Serotonergic drugs (SSRIs, SNRIs, MAOIs, triptans, tramadol, linezolid, methylene blue)",
       severity: "major",
-      mechanism: "Additive serotonergic burden — serotonin syndrome risk.",
+      mechanism: "Additive serotonergic burden: serotonin syndrome risk.",
       action: "Educate the patient on the symptom triad (agitation, hyperreflexia, fever) and review the combination's necessity.",
     },
     {
@@ -189,7 +189,7 @@ export const lorcaserin: Drug = {
     {
       drug: "Other weight-loss agents (phentermine, phentermine-topiramate)",
       severity: "moderate",
-      mechanism: "Combinations not studied — additive cardiovascular and CNS effects possible.",
+      mechanism: "Combinations not studied: additive cardiovascular and CNS effects possible.",
       action: "Avoid combining; choose one strategy at a time.",
     },
   ],
@@ -201,25 +201,25 @@ export const lorcaserin: Drug = {
   renalAdjustment: "No specific renal dose adjustment established for this agent; use standard caution in significant renal impairment.",
   hepaticAdjustment: "Use cautiously in hepatic impairment given hepatic metabolism; standard monitoring applies.",
   /* ---- Education ---- */
-  patientExplanation: "Lorcaserin is a medicine used to treat chronic weight management (withdrawn). Lorcaserin selectively agonised 5-HT2C receptors — activating pro-satiety melanocortin pathway neurons — while avoiding 5-HT2B (the valvulopathy receptor). Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+  patientExplanation: "Lorcaserin is a medicine used to treat chronic weight management (withdrawn). Lorcaserin selectively agonised 5-HT2C receptors (activating pro-satiety melanocortin pathway neurons) while avoiding 5-HT2B (the valvulopathy receptor). Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
   patientEducationPoints: [
-    "Take exactly as prescribed — same time each day.",
+    "Take it exactly as prescribed, at the same time each day.",
     "Do not stop suddenly; discuss any change with your doctor first.",
     "Report persistent or worrying side effects early.",
-    "Benefit from Lorcaserin builds over weeks — do not judge it in the first days.",
+    "Benefit from Lorcaserin builds over weeks. Do not judge it in the first days.",
     "Tell every doctor and pharmacist you see that you take this medicine.",
   ],
   clinicalPearls: [
-    "The selective-agonist design: 5-HT2C for satiety while sparing 5-HT2B (the valvular receptor) — pharmacology's answer to the fenfluramine catastrophe.",
-    "The withdrawal lesson: post-marketing long-term analysis found a cancer-signal excess — seven years of safe use undone by follow-up.",
-    "The pharmacology exam survives: 5-HT2C → POMC → melanocortin satiety — the pathway outlives the drug.",
+    "The selective-agonist design: 5-HT2C for satiety while sparing 5-HT2B (the valvular receptor); pharmacology's answer to the fenfluramine catastrophe.",
+    "The withdrawal lesson: post-marketing long-term analysis found a cancer-signal excess; seven years of safe use undone by follow-up.",
+    "The pharmacology exam survives: 5-HT2C → POMC → melanocortin satiety; the pathway outlives the drug.",
   ],
   examLens: {
     mbbs: {
       viva: [
-        "Mechanism of Lorcaserin: Lorcaserin selectively agonised 5-HT2C receptors — activating pro-satiety melanocortin pathway neurons — while avoiding 5-HT2B (the valvulopathy receptor).",
+        "Mechanism of Lorcaserin: Lorcaserin selectively agonised 5-HT2C receptors (activating pro-satiety melanocortin pathway neurons) while avoiding 5-HT2B (the valvulopathy receptor).",
         "Uses of Lorcaserin: Chronic weight management (withdrawn)",
-        "Mechanism: SELECTIVE 5-HT2C agonist (POMC-melanocortin satiety pathway) — designed to spare 5-HT2B.",
+        "Mechanism: SELECTIVE 5-HT2C agonist (POMC-melanocortin satiety pathway); designed to spare 5-HT2B.",
         "Withdrawn 2020 after long-term cancer-signal analysis.",
       ],
       practical: [
@@ -227,14 +227,14 @@ export const lorcaserin: Drug = {
         "Outline the monitoring plan: Clinical response and adverse effects (Every review)",
       ],
       longAnswer: [
-        "Lorcaserin: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework.",
-        "Mechanism: SELECTIVE 5-HT2C agonist (POMC-melanocortin satiety pathway) — designed to spare 5-HT2B.",
+        "Lorcaserin: mechanism, indications, adverse effects, contraindications, and dosing; structured answer framework.",
+        "Mechanism: SELECTIVE 5-HT2C agonist (POMC-melanocortin satiety pathway); designed to spare 5-HT2B.",
         "Withdrawn 2020 after long-term cancer-signal analysis.",
       ],
     },
     neetPg: {
       highYield: [
-        "Mechanism: SELECTIVE 5-HT2C agonist (POMC-melanocortin satiety pathway) — designed to spare 5-HT2B.",
+        "Mechanism: SELECTIVE 5-HT2C agonist (POMC-melanocortin satiety pathway); designed to spare 5-HT2B.",
         "Withdrawn 2020 after long-term cancer-signal analysis.",
         "Historic indication: chronic weight management.",
         "The fenfluramine-era design lesson: valvulopathy avoidance by receptor selectivity.",
@@ -248,28 +248,28 @@ export const lorcaserin: Drug = {
     },
     inicet: {
       clinicalReasoning: [
-        "A patient on Lorcaserin develops cancer-signal excess in long-term follow-up — next best step?",
+        "A patient on Lorcaserin develops cancer-signal excess in long-term follow-up: next best step?",
         "When to choose Lorcaserin over alternatives in its class.",
       ],
     },
     fmge: {
       frequentlyTested: [
-        "Primary target: 5-HT2C receptors (selective agonist — pro-satiety POMC-melanocortin pathway)",
+        "Primary target: 5-HT2C receptors (selective agonist, pro-satiety POMC-melanocortin pathway)",
         "Most common side effects: Headache (historic), Dizziness, fatigue, nausea (historic)",
         "Key contraindication: known hypersensitivity",
       ],
     },
     psychiatryResidency: {
       advancedPearls: [
-        "The selective-agonist design: 5-HT2C for satiety while sparing 5-HT2B (the valvular receptor) — pharmacology's answer to the fenfluramine catastrophe.",
-        "The withdrawal lesson: post-marketing long-term analysis found a cancer-signal excess — seven years of safe use undone by follow-up.",
-        "The pharmacology exam survives: 5-HT2C → POMC → melanocortin satiety — the pathway outlives the drug.",
+        "The selective-agonist design: 5-HT2C for satiety while sparing 5-HT2B (the valvular receptor); pharmacology's answer to the fenfluramine catastrophe.",
+        "The withdrawal lesson: post-marketing long-term analysis found a cancer-signal excess; seven years of safe use undone by follow-up.",
+        "The pharmacology exam survives: 5-HT2C → POMC → melanocortin satiety; the pathway outlives the drug.",
       ],
     },
   },
   memoryTricks: [],
   highYieldSummary: [
-    "Mechanism: SELECTIVE 5-HT2C agonist (POMC-melanocortin satiety pathway) — designed to spare 5-HT2B.",
+    "Mechanism: SELECTIVE 5-HT2C agonist (POMC-melanocortin satiety pathway); designed to spare 5-HT2B.",
     "Withdrawn 2020 after long-term cancer-signal analysis.",
     "Historic indication: chronic weight management.",
     "The fenfluramine-era design lesson: valvulopathy avoidance by receptor selectivity.",
@@ -278,7 +278,7 @@ export const lorcaserin: Drug = {
   /* ---- Clinical cases ---- */
   clinicalCases: [
     {
-      title: "First presentation — chronic weight management (withdrawn)",
+      title: "First presentation: chronic weight management (withdrawn)",
       presentation: "A patient presenting with chronic weight management (withdrawn), started on Lorcaserin.",
       history: "A adult patient presents with a chronic weight management (withdrawn) picture lasting several weeks, with functional impairment. No prior psychiatric treatment. No significant medical history, no substance use, and no regular medications.",
       examination: "Mental status examination is consistent with chronic weight management (withdrawn); physical examination and baseline investigations are unremarkable.",
@@ -287,7 +287,7 @@ export const lorcaserin: Drug = {
       management: "Started at 10 mg twice daily, titrated to 20 mg/day with scheduled follow-up in 2 weeks, then 4–6 weeks to assess response, side effects, and safety monitoring.",
       outcome: "At 6-week review, partial response with tolerable side effects. Dose optimised; psychoeducation and supportive therapy continued. Full response expected over the next 4–8 weeks.",
       teachingPoints: [
-        "Lorcaserin takes weeks for full effect — early follow-up is about tolerability, not efficacy.",
+        "Lorcaserin takes weeks for full effect: early follow-up is about tolerability, not efficacy.",
         "Review adherence and side effects before concluding the drug has failed.",
         "Continue treatment for an adequate duration after response to prevent relapse.",
       ],
@@ -296,12 +296,12 @@ export const lorcaserin: Drug = {
   /* ---- Comparison tables ---- */
   comparisonTables: [
     {
-      title: "Weight Management comparison — choosing within the class",
+      title: "Weight Management comparison: choosing within the class",
       primaryDrug: "Lorcaserin",
       rows: [
         {
           attribute: "Primary molecular target",
-          primaryValue: "5-HT2C receptors (selective agonist — pro-satiety POMC-melanocortin pathway)",
+          primaryValue: "5-HT2C receptors (selective agonist, pro-satiety POMC-melanocortin pathway)",
           comparisons: [
             {
               drug: "Phentermine-Topiramate",
@@ -341,16 +341,16 @@ export const lorcaserin: Drug = {
         },
         {
           attribute: "Unique niche",
-          primaryValue: "The withdrawn serotonergic weight drug — a pharmacology chapter",
+          primaryValue: "The withdrawn serotonergic weight drug: a pharmacology chapter",
           comparisons: [
             {
               drug: "Phentermine-Topiramate",
-              value: "The highest-efficacy older weight combination — pregnancy-governed",
+              value: "The highest-efficacy older weight combination: pregnancy-governed",
             },
           ],
         },
       ],
-      takeaway: "All weight management agents share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile — comorbidity, age, other medications, and which side effects the patient can least afford.",
+      takeaway: "All weight management agents share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile: comorbidity, age, other medications, and which side effects the patient can least afford.",
     },
   ],
   /* ---- Timeline ---- */
@@ -359,7 +359,7 @@ export const lorcaserin: Drug = {
       id: "t1",
       time: "Hours",
       title: "Drug reaches the brain",
-      description: "Lorcaserin reaches peak plasma concentration and begins acting at its molecular target (5-HT2C receptors (selective agonist — pro-satiety POMC-melanocortin pathway)). Initial effects are on sleep, energy, or side effects — not the main symptoms.",
+      description: "Lorcaserin reaches peak plasma concentration and begins acting at its molecular target (5-HT2C receptors (selective agonist, pro-satiety POMC-melanocortin pathway)). Initial effects are on sleep, energy, or side effects, not the main symptoms.",
       phase: "onset",
     },
     {
@@ -395,7 +395,7 @@ export const lorcaserin: Drug = {
   faqs: [
     {
       question: "How long does Lorcaserin take to work?",
-      answer: "Historic.. Like most psychotropic medications, the full benefit builds gradually — some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
+      answer: "Historic.. Like most psychotropic medications, the full benefit builds gradually, some symptoms (sleep, energy, appetite) may improve before the main target symptoms respond. Do not stop early because you don't feel immediate effects.",
     },
     {
       question: "What are the most common side effects of Lorcaserin?",
@@ -403,11 +403,11 @@ export const lorcaserin: Drug = {
     },
     {
       question: "Can I stop Lorcaserin suddenly?",
-      answer: "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
+      answer: "No. Taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the plan with your doctor first.",
     },
     {
       question: "What should I do if I miss a dose?",
-      answer: "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one.",
+      answer: "Take it as soon as you remember unless it is nearly time for your next dose. In that case, skip the missed dose. Never take a double dose to make up for a missed one.",
     },
     {
       question: "Is Lorcaserin habit-forming?",
@@ -415,7 +415,7 @@ export const lorcaserin: Drug = {
     },
     {
       question: "Can I take Lorcaserin during pregnancy or breastfeeding?",
-      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure — Lorcaserin may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
+      answer: "Discuss this with your doctor before becoming pregnant if possible. Decisions depend on balancing the risk of untreated illness against medication exposure. Lorcaserin may be continued, switched, or tapered depending on your situation. Never stop abruptly on your own.",
     },
   ],
   /* ---- References & related ---- */
@@ -495,7 +495,7 @@ export const lorcaserin: Drug = {
       note: "Key neurotransmitter involved",
     },
     {
-      label: "5-HT2C receptors (selective agonist — pro-satiety POMC-melanocortin pathway)",
+      label: "5-HT2C receptors (selective agonist, pro-satiety POMC-melanocortin pathway)",
       type: "neurotransmitter",
       href: "#mechanism",
       note: "Primary molecular target",
@@ -525,7 +525,7 @@ export const lorcaserin: Drug = {
       note: "Most common side effect",
     },
     {
-      label: "Patient Guide — Lorcaserin",
+      label: "Patient Guide. Lorcaserin",
       type: "patient-guide",
       href: "#patient-education",
       note: "What to expect on this medicine",
@@ -533,13 +533,13 @@ export const lorcaserin: Drug = {
   ],
   /* ---- Patient mode ---- */
   patientMode: {
-    tagline: "The withdrawn 5-HT2C agonist — weight pharmacology's serotonergic chapter, closed by cancer-signal analysis.",
-    summary: "Lorcaserin is a prescription medicine used to treat chronic weight management (withdrawn). It belongs to a well-studied class of medicines and works gradually — most people notice the benefit over weeks, not days.",
-    mechanism: "Lorcaserin is a medicine used to treat chronic weight management (withdrawn). Lorcaserin selectively agonised 5-HT2C receptors — activating pro-satiety melanocortin pathway neurons — while avoiding 5-HT2B (the valvulopathy receptor). Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
-    sideEffects: "The most common side effects are: headache (historic), dizziness, fatigue, nausea (historic). These usually appear early and many settle with time. Serious effects are uncommon but important to know: Cancer-signal excess in long-term follow-up and Valvulopathy screening era (5-HT2B selectivity design). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you — there is almost always a solution.",
-    monitoring: "Your doctor will monitor: clinical response and adverse effects (every review). Keep every appointment — these checks are how the treatment stays safe.",
+    tagline: "The withdrawn 5-HT2C agonist: weight pharmacology's serotonergic chapter, closed by cancer-signal analysis.",
+    summary: "Lorcaserin is a prescription medicine used to treat chronic weight management (withdrawn). It belongs to a well-studied class of medicines and works gradually, most people notice the benefit over weeks, not days.",
+    mechanism: "Lorcaserin is a medicine used to treat chronic weight management (withdrawn). Lorcaserin selectively agonised 5-HT2C receptors (activating pro-satiety melanocortin pathway neurons) while avoiding 5-HT2B (the valvulopathy receptor). Like every medicine in its class it works gradually where noted, must be taken exactly as prescribed, and should never be stopped suddenly without speaking to your doctor.",
+    sideEffects: "The most common side effects are: headache (historic), dizziness, fatigue, nausea (historic). These usually appear early and many settle with time. Serious effects are uncommon but important to know: Cancer-signal excess in long-term follow-up and Valvulopathy screening era (5-HT2B selectivity design). Contact your doctor urgently if you experience these. Tell your doctor about any effect that persists or worries you: there is almost always a solution.",
+    monitoring: "Your doctor will monitor: clinical response and adverse effects (every review). Keep every appointment: these checks are how the treatment stays safe.",
     contraindications: "Do not take this medicine if: you have a known allergy to it. Always share your full medical history and medicine list with your doctor.",
-    interactions: "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: other medicines that act on the brain. Avoid alcohol unless your doctor says it is safe.",
+    interactions: "Tell your doctor and pharmacist about everything you take, including over-the-counter and herbal products. Common interacting agents include: other medicines that act on the brain. Avoid alcohol unless your doctor says it is safe.",
   },
   /* ---- India-first extensions ---- */
   indianPractice: {
@@ -561,7 +561,7 @@ export const lorcaserin: Drug = {
     },
     costCategory: "high",
     costNote: "Cost varies by manufacturer and region.",
-    monitoring: "As per international guidance — see Monitoring section.",
+    monitoring: "As per international guidance; see the Monitoring section.",
     patientCounselling: ["Take exactly as prescribed.", "Do not stop suddenly.", "Report persistent side effects."],
   },
   sectionDifficulty: {
@@ -595,13 +595,13 @@ export const lorcaserin: Drug = {
         name: "Lorcaserin",
         slug: "lorcaserin",
         relationship: "This guide",
-        distinguishing: "The withdrawn serotonergic weight drug — a pharmacology chapter",
+        distinguishing: "The withdrawn serotonergic weight drug: a pharmacology chapter",
       },
       {
         name: "Phentermine-Topiramate",
         slug: "phentermine-topiramate",
         relationship: "Same class (Weight Management)",
-        distinguishing: "The highest-efficacy older weight combination — pregnancy-governed",
+        distinguishing: "The highest-efficacy older weight combination: pregnancy-governed",
       },
     ],
   },
@@ -749,7 +749,7 @@ export const lorcaserin: Drug = {
   activeRecallQuestions: [
     {
       question: "State the mechanism of action of Lorcaserin in two sentences.",
-      answer: "Lorcaserin selectively agonised 5-HT2C receptors — activating pro-satiety melanocortin pathway neurons — while avoiding 5-HT2B (the valvulopathy receptor). Net effect: Target engagement producing the described clinical effect.",
+      answer: "Lorcaserin selectively agonised 5-HT2C receptors (activating pro-satiety melanocortin pathway neurons) while avoiding 5-HT2B (the valvulopathy receptor). Net effect: Target engagement producing the described clinical effect.",
       topic: "Mechanism",
     },
     {
@@ -759,7 +759,7 @@ export const lorcaserin: Drug = {
     },
     {
       question: "Name the most clinically important safety issue of Lorcaserin and how you would manage it.",
-      answer: "Cancer-signal excess in long-term follow-up: The withdrawal cause: pooled long-term trial analysis suggested increased cancer diagnoses — the 2020 withdrawal. Management: Drug withdrawn — no management to document.",
+      answer: "Cancer-signal excess in long-term follow-up: The withdrawal cause: pooled long-term trial analysis suggested increased cancer diagnoses; the 2020 withdrawal. Management: Drug withdrawn; no management to document.",
       topic: "Safety",
     },
     {
@@ -769,7 +769,7 @@ export const lorcaserin: Drug = {
     },
     {
       question: "Share one clinical pearl about Lorcaserin that separates safe prescribers from unsafe ones.",
-      answer: "The selective-agonist design: 5-HT2C for satiety while sparing 5-HT2B (the valvular receptor) — pharmacology's answer to the fenfluramine catastrophe.",
+      answer: "The selective-agonist design: 5-HT2C for satiety while sparing 5-HT2B (the valvular receptor); pharmacology's answer to the fenfluramine catastrophe.",
       topic: "Clinical Pearls",
     },
   ],
@@ -845,7 +845,7 @@ export const lorcaserin: Drug = {
       mode: "resident",
       label: "Resident / Clinician",
       estimatedTime: "45 min",
-      description: "Everything — advanced reasoning, full prescriber guide, evidence, and references.",
+      description: "Everything: advanced reasoning, full prescriber guide, evidence, and references.",
       visibleSections: [
         "top",
         "quick-facts",
@@ -890,7 +890,7 @@ export const lorcaserin: Drug = {
       title: "Mechanism & Neuroscience",
       description: "How does it work? Where does it act?",
       sectionIds: ["mechanism", "brain-regions", "neurotransmitters", "neural-pathways", "timeline"],
-      checkpoint: "You understand how Lorcaserin works — from molecular target to clinical effect timeline.",
+      checkpoint: "You understand how Lorcaserin works, from molecular target to clinical effect timeline.",
     },
     {
       number: 3,
@@ -906,7 +906,7 @@ export const lorcaserin: Drug = {
         "interactions",
         "patient-education",
       ],
-      checkpoint: "You can prescribe Lorcaserin safely — indications, side effects, contraindications, and monitoring are mapped.",
+      checkpoint: "You can prescribe Lorcaserin safely: indications, side effects, contraindications, and monitoring are mapped.",
     },
     {
       number: 4,
@@ -949,7 +949,7 @@ export const lorcaserin: Drug = {
       "Baseline weight, blood pressure, and relevant labs per class guidance before starting.",
     ],
     sideEffectLogic: [
-      "Adverse effects of Lorcaserin follow directly from its receptor and organ effects — predict them from the mechanism.",
+      "Adverse effects of Lorcaserin follow directly from its receptor and organ effects: predict them from the mechanism.",
     ],
     sideEffectManagement: [
       "Wait (many effects settle in 1–2 weeks).",
@@ -976,7 +976,7 @@ export const lorcaserin: Drug = {
       "Review at 2 and 4 weeks after any dose change.",
     ],
     overdose: [
-      "Overdose with Lorcaserin is managed supportively — no specific antidote.",
+      "Overdose with Lorcaserin is managed supportively: no specific antidote.",
       "Activated charcoal if early; cardiac and respiratory monitoring as indicated by the class.",
     ],
     longTermUse: "Long-term safety of Lorcaserin is established for its approved uses; periodic review of dose necessity and adverse effects is standard.",
@@ -1007,21 +1007,21 @@ export const lorcaserin: Drug = {
       },
     ],
     potentialAdvantages: [
-      "The withdrawn serotonergic weight drug — a pharmacology chapter",
+      "The withdrawn serotonergic weight drug: a pharmacology chapter",
     ],
     potentialDisadvantages: [
-      "See adverse effects section — the main disadvantages of Lorcaserin are its key side effects.",
+      "See adverse effects section: the main disadvantages of Lorcaserin are its key side effects.",
     ],
     primaryTargetSymptoms: ["Chronic weight management (withdrawn)"],
     pearls: [
-      "The selective-agonist design: 5-HT2C for satiety while sparing 5-HT2B (the valvular receptor) — pharmacology's answer to the fenfluramine catastrophe.",
-      "The withdrawal lesson: post-marketing long-term analysis found a cancer-signal excess — seven years of safe use undone by follow-up.",
-      "The pharmacology exam survives: 5-HT2C → POMC → melanocortin satiety — the pathway outlives the drug.",
+      "The selective-agonist design: 5-HT2C for satiety while sparing 5-HT2B (the valvular receptor); pharmacology's answer to the fenfluramine catastrophe.",
+      "The withdrawal lesson: post-marketing long-term analysis found a cancer-signal excess; seven years of safe use undone by follow-up.",
+      "The pharmacology exam survives: 5-HT2C → POMC → melanocortin satiety; the pathway outlives the drug.",
     ],
   },
   /* ---- Metadata ---- */
   lastReviewed: "2026-09-21",
   reviewers: [
-    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced.",
   ],
 };
