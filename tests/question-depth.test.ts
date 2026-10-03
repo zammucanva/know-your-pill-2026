@@ -57,7 +57,7 @@ describe("question depth — tier model", () => {
       ...drugs.flatMap((d) => d.microQuizzes ?? []),
       ...diseases.flatMap((d) => d.microQuizzes ?? []),
     ];
-    expect(total.length).toBe(477); // 471 drug + 6 disease (integrity counts)
+    expect(total.length).toBe(1650); // 1,644 drug (471 original + 1,173 bank) + 6 disease (integrity counts)
     for (const q of total) {
       const tier = classifyAuthoredQuestion(q.question);
       expect(DIFFICULTY_TIERS).toContain(tier);
@@ -69,7 +69,7 @@ describe("question depth — tier model", () => {
     expect(counts.foundation).toBeGreaterThan(15);
     expect(counts.clinical).toBeGreaterThan(20);
     expect(counts.advanced).toBeGreaterThan(5);
-    expect(counts.foundation + counts.clinical + counts.advanced).toBe(477);
+    expect(counts.foundation + counts.clinical + counts.advanced).toBe(1650);
   });
 
   test("representative stems land in the specified tiers", () => {
@@ -254,7 +254,7 @@ describe("question depth — identity stability + progress compatibility (5D)", 
     const authoredIds = pool
       .filter((q) => q.templateId === "authored")
       .map((q) => q.identity);
-    expect(authoredIds.length).toBe(470); // 471 authored minus the option-invalid zotepine entry
+    expect(authoredIds.length).toBe(1643); // 1,644 authored (471 original + 1,173 bank) minus the option-invalid zotepine entry
     for (const id of authoredIds) {
       expect(id).toMatch(/^[a-z-]+\|mcq:[a-z0-9-]+$/);
     }

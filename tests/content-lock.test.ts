@@ -5,7 +5,7 @@
  *
  * Each test hashes one locked medical content file and compares it with the
  * recorded baseline (scripts/content-lock-baseline.json). The canonical
- * content counts (145/1/3/477/229 + the KYP Psychiatry search records)
+ * content counts (145/1/3/1650/340 + the KYP Psychiatry search records)
  * and the medical data-value snapshot are
  * asserted in beforeAll so any drift fails the whole suite.
  */
@@ -36,7 +36,8 @@ const baseline: Baseline = existsSync(BASELINE_PATH)
 beforeAll(async () => {
   // Canonical content counts: 145 medications (12 original + 131 from
   // Stahl 6th ed. + pemoline & tacrine from the 1st-ed. completion pass),
-  // 1 disease, 3 substances, 477 MCQs, and search entries covering the
+  // 1 disease, 3 substances, 1,650 MCQs (477 pre-bank + the 1,173-question
+  // MCQ bank expansion), and search entries covering the
   // full registry + the KYP Psychiatry records (hub + library + 109 note
   // entries derived from the canonical note corpus — navigation metadata
   // only; no medical data values changed — provable via
@@ -46,7 +47,7 @@ beforeAll(async () => {
     medications: 145,
     diseases: 1,
     substances: 3,
-    mcqs: 477,
+    mcqs: 1650,
     searchEntries: 340,
   });
 
