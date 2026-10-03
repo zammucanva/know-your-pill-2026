@@ -966,7 +966,7 @@
    "domain": "Pharmacokinetics",
    "difficulty": "Advanced",
    "style": "recall",
-   "afterSectionId": "pathways",
+   "afterSectionId": "neural-pathways",
    "question": "Oxazepam's metabolite profile is best described as:",
    "options": [
     "Converted to desmethyldiazepam, which persists for days",
@@ -1221,7 +1221,7 @@
    "domain": "Pharmacokinetics",
    "difficulty": "Clinical",
    "style": "recall",
-   "afterSectionId": "pathways",
+   "afterSectionId": "neural-pathways",
    "question": "Midazolam's formulation advantage over diazepam for IV use is:",
    "options": [
     "It is an ester prodrug activated in plasma",
@@ -1340,7 +1340,7 @@
    "domain": "Pharmacokinetics",
    "difficulty": "Clinical",
    "style": "recall",
-   "afterSectionId": "pathways",
+   "afterSectionId": "neural-pathways",
    "question": "Estazolam's metabolism is primarily:",
    "options": [
     "Direct glucuronidation — the LOT pattern",
@@ -1476,7 +1476,7 @@
    "domain": "Pharmacokinetics",
    "difficulty": "Advanced",
    "style": "recall",
-   "afterSectionId": "pathways",
+   "afterSectionId": "neural-pathways",
    "question": "The pharmacokinetic reason flurazepam hangs over into the next day is:",
    "options": [
     "Its parent drug is irreversibly bound to GABA-A receptors",
@@ -1782,7 +1782,7 @@
    "domain": "Drug Interactions",
    "difficulty": "Advanced",
    "style": "recall",
-   "afterSectionId": "pathways",
+   "afterSectionId": "neural-pathways",
    "question": "Triazolam's metabolic dependence and the classic contraindicated co-drug:",
    "options": [
     "Glucuronidation — caution only in renal failure",
@@ -1884,7 +1884,7 @@
    "domain": "Pharmacokinetics",
    "difficulty": "Clinical",
    "style": "recall",
-   "afterSectionId": "pathways",
+   "afterSectionId": "neural-pathways",
    "question": "Flunitrazepam's elimination profile:",
    "options": [
     "Half-life under 1 hour — cleared before evidence is lost",
@@ -1969,7 +1969,7 @@
    "domain": "Pharmacokinetics",
    "difficulty": "Foundation",
    "style": "recall",
-   "afterSectionId": "pathways",
+   "afterSectionId": "neural-pathways",
    "question": "Loflazepate's pharmacokinetic identity is:",
    "options": [
     "An inactive metabolite of diazepam",
@@ -2037,7 +2037,7 @@
    "domain": "Pharmacokinetics",
    "difficulty": "Advanced",
    "style": "recall",
-   "afterSectionId": "pathways",
+   "afterSectionId": "neural-pathways",
    "question": "A key difference between clorazepate's and loflazepate's prodrug activation:",
    "options": [
     "Clorazepate's decarboxylation requires gastric acid (delayed by PPIs); loflazepate's ester hydrolysis is not acid-dependent",

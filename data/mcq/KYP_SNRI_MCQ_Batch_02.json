@@ -266,7 +266,7 @@
    "domain": "Pharmacokinetics",
    "difficulty": "Advanced",
    "style": "recall",
-   "afterSectionId": "pathways",
+   "afterSectionId": "neural-pathways",
    "question": "Desvenlafaxine's metabolic profile is best described as:",
    "options": [
     "Primarily CYP2D6-dependent, like its parent drug",

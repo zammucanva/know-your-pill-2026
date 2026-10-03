@@ -848,7 +848,7 @@ export const flurazepam: Drug = {
       ],
       correctIndex: 2,
       explanation: "Desalkylflurazepam, the long-lived active metabolite, is lipophilic and builds up with repeated nightly dosing — hangover is pharmacokinetics, not receptor lock-in. No benzodiazepine binds irreversibly, unchanged renal excretion fits gabapentin, and autoinduction is a carbamazepine story.",
-      afterSectionId: "pathways",
+      afterSectionId: "neural-pathways",
     },
     {
       id: "bzd-flz-05",

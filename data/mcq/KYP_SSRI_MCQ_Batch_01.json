@@ -95,7 +95,7 @@
    "domain": "Mechanism & Neuroscience",
    "difficulty": "Foundation",
    "style": "recall",
-   "afterSectionId": "brain",
+   "afterSectionId": "brain-regions",
    "question": "A patient started on sertraline 50 mg calls at day 7: 'I feel no different \u2014 should I double the dose?' The best explanation for the delayed benefit is:",
    "options": [
     "The dose is subtherapeutic and should be doubled now",
@@ -231,7 +231,7 @@
    "domain": "Drug Interactions",
    "difficulty": "Advanced",
    "style": "vignette",
-   "afterSectionId": "pathways",
+   "afterSectionId": "neural-pathways",
    "question": "A 31-year-old on sertraline is admitted for MRSA cellulitis and the intern adds linezolid. What serotonergic risk exists and why?",
    "options": [
     "None \u2014 linezolid is a plain antibiotic with no CNS activity",
@@ -588,7 +588,7 @@
    "domain": "Exam Pearls",
    "difficulty": "Advanced",
    "style": "vignette",
-   "afterSectionId": "pathways",
+   "afterSectionId": "neural-pathways",
    "question": "Why is citalopram capped at 40 mg/day (20 mg in elderly, 20 mg in CYP2C19 poor metabolisers) while escitalopram is not capped the same way?",
    "options": [
     "Citalopram triggers serotonin syndrome above 60 mg",
@@ -605,7 +605,7 @@
    "domain": "Drug Interactions",
    "difficulty": "Advanced",
    "style": "vignette",
-   "afterSectionId": "pathways",
+   "afterSectionId": "neural-pathways",
    "question": "An inpatient on escitalopram is prescribed moxifloxacin for pneumonia and ondansetron as needed. The intern asks about combined risk. Best answer:",
    "options": [
     "Additive QTc prolongation \u2014 get a baseline ECG, correct potassium and magnesium, review whether each QTc drug is necessary",
@@ -622,7 +622,7 @@
    "domain": "Mechanism & Neuroscience",
    "difficulty": "Advanced",
    "style": "recall",
-   "afterSectionId": "brain",
+   "afterSectionId": "brain-regions",
    "question": "How does R-citalopram interact with escitalopram's action at SERT?",
    "options": [
     "It enhances escitalopram's allosteric binding",
@@ -809,7 +809,7 @@
    "domain": "Exam Pearls",
    "difficulty": "Advanced",
    "style": "recall",
-   "afterSectionId": "pathways",
+   "afterSectionId": "neural-pathways",
    "question": "The best-documented pharmacogenomic example of an SSRI\u2013drug interaction affecting disease outcomes is:",
    "options": [
     "CYP2D6 inhibition by paroxetine in tamoxifen-treated patients \u2014 higher breast-cancer recurrence and mortality",

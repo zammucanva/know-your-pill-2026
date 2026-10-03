@@ -934,7 +934,7 @@ export const midazolam: Drug = {
       ],
       correctIndex: 2,
       explanation: "Midazolam's pH-dependent ring opening makes it water-soluble in the vial and lipophilic at physiological pH — comfortable veins and rapid CNS entry. Diazepam's lipid vehicle causes thrombophlebitis. Propylene glycol is the solvent of the parenteral lorazepam/diazepam world (irritant in prolonged infusions), and no benzodiazepine uses active transport to cross the BBB.",
-      afterSectionId: "pathways",
+      afterSectionId: "neural-pathways",
     },
     {
       id: "bzd-mid-06",

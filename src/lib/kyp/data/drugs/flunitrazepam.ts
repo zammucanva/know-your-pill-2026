@@ -872,7 +872,7 @@ export const flunitrazepam: Drug = {
       ],
       correctIndex: 3,
       explanation: "Flunitrazepam's 18-26 hour half-life plus active metabolites means victims can remain sedated and impaired well into the following day — and clinicians may mistake the residue for intoxication with another agent. The ultra-short options describe zaleplon, not this drug.",
-      afterSectionId: "pathways",
+      afterSectionId: "neural-pathways",
     },
     {
       id: "bzd-fnz-05",

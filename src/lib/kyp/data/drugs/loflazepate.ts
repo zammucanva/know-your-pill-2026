@@ -831,7 +831,7 @@ export const loflazepate: Drug = {
       ],
       correctIndex: 3,
       explanation: "Loflazepate (dipotassium clorazepate's chemical cousin in the prodrug club) is an ester that hydrolyses to desmethyldiazepam — the long-lived active benzodiazepine. It is a prodrug, not a metabolite, not an ultra-short agent, and certainly not an antagonist.",
-      afterSectionId: "pathways",
+      afterSectionId: "neural-pathways",
     },
     {
       id: "bzd-lfp-02",
@@ -883,7 +883,7 @@ export const loflazepate: Drug = {
       ],
       correctIndex: 0,
       explanation: "Clorazepate's decarboxylation to desmethyldiazepam happens in the acidic stomach — proton-pump inhibitors measurably delay its absorption — whereas loflazepate's ester hydrolysis proceeds without acid dependency. Both ultimately yield the same active moiety; only the activation chemistry differs.",
-      afterSectionId: "pathways",
+      afterSectionId: "neural-pathways",
     },
     {
       id: "bzd-lfp-06",

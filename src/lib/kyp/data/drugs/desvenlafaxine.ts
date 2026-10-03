@@ -902,7 +902,7 @@ export const desvenlafaxine: Drug = {
       ],
       correctIndex: 2,
       explanation: "Having skipped the parent's 2D6 gate, desvenlafaxine relies mainly on conjugation with minor 3A4 contribution and is largely renally cleared — hence its CYP-quiet reputation. The 2D6 story belongs to venlafaxine, 1A2 to duloxetine, and 3A4-activation claims are backwards (3A4 only plays a minor clearing role). This underpins the desvenlafaxine-in-polypharmacy answer.",
-      afterSectionId: "pathways",
+      afterSectionId: "neural-pathways",
     },
     {
       id: "snri-des-08",

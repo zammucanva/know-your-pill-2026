@@ -1598,7 +1598,7 @@ export const sertraline: Drug = {
       ],
       correctIndex: 2,
       explanation: "SERT blockade raises synaptic serotonin within hours, but 5-HT1A autoreceptors in the raphe nuclei detect the rise and inhibit firing. Their desensitisation removes the brake over 1-2 weeks; downstream neuroadaptation (BDNF, neurogenesis) completes at 4-6 weeks. Steady state is only about a week — so option B confuses PK with pharmacodynamics. Doubling at week 1 only adds side effects.",
-      afterSectionId: "brain",
+      afterSectionId: "brain-regions",
     },
     {
       id: "ssri-ser-04",
@@ -1702,7 +1702,7 @@ export const sertraline: Drug = {
       ],
       correctIndex: 2,
       explanation: "Linezolid is a weak, reversible, non-selective MAO inhibitor — an easily forgotten monoamine-oxidase effect. With an SSRI on board it can contribute to serotonergic excess; counsel the team, monitor for agitation, clonus and autonomic instability, and prefer an alternative antibiotic when feasible. QTc is not the issue here.",
-      afterSectionId: "pathways",
+      afterSectionId: "neural-pathways",
     },
     {
       id: "ssri-ser-12",

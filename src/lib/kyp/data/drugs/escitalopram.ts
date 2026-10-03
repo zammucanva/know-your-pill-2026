@@ -1766,7 +1766,7 @@ export const escitalopram: Drug = {
       ],
       correctIndex: 3,
       explanation: "The FDA's 2011 citalopram warning tied dose to QTc — hence the 40/20 caps. Escitalopram retains a modest QTc signal worth watching in risk stacks (Know Your Pill: 'QTc watch'), but no equivalent cap. Know Your Pill's citalopram line: 'QTc dose-dependent; 40mg cap'.",
-      afterSectionId: "pathways",
+      afterSectionId: "neural-pathways",
     },
     {
       id: "ssri-esc-10",
@@ -1779,7 +1779,7 @@ export const escitalopram: Drug = {
       ],
       correctIndex: 0,
       explanation: "This is the classic QTc stack: SSRI + fluoroquinolone + 5-HT3 antagonist. None is serotonergic, so serotonin syndrome is wrong. Manage by baseline ECG, electrolyte correction (K+, Mg2+), and pruning avoidable QTc drugs. Expecting inpatients on escitalopram to meet moxifloxacin or ondansetron makes this a practical ward question.",
-      afterSectionId: "pathways",
+      afterSectionId: "neural-pathways",
     },
     {
       id: "ssri-esc-11",
@@ -1792,7 +1792,7 @@ export const escitalopram: Drug = {
       ],
       correctIndex: 1,
       explanation: "In the two-point binding model, R-citalopram allosterically counteracts escitalopram's stabilising effect on SERT — stripping it away produces a cleaner, more selective inhibitor. This is the mechanistic justification behind escitalopram's identity as the most selective SSRI and pairs with its 'lowest CYP interactions' tag.",
-      afterSectionId: "brain",
+      afterSectionId: "brain-regions",
     },
   ],
 

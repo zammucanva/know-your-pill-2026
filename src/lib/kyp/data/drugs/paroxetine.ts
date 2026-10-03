@@ -1875,7 +1875,7 @@ export const paroxetine: Drug = {
       ],
       correctIndex: 0,
       explanation: "The paroxetine–tamoxifen CYP2D6 story (Kelly et al., BMJ 2010) is the canonical example: 2D6 inhibition reduced endoxifen and tracked with higher recurrence/mortality. It is cited in every pharmacogenomics lecture that touches psychopharmacology. The distractors describe real-but-minor or apocryphal interactions.",
-      afterSectionId: "pathways",
+      afterSectionId: "neural-pathways",
     },
   ],
 

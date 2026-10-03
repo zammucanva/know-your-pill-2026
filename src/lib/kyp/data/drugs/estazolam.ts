@@ -853,7 +853,7 @@ export const estazolam: Drug = {
       ],
       correctIndex: 3,
       explanation: "Estazolam relies on hepatic oxidation — it is NOT a LOT drug — so CYP3A4 inhibitors, hepatic disease and old age all raise exposure. Glucuronidation defines lorazepam/oxazepam/temazepam; unchanged renal excretion fits gabapentin; esterase hydrolysis is the prodrug esters' story.",
-      afterSectionId: "pathways",
+      afterSectionId: "neural-pathways",
     },
     {
       id: "bzd-est-05",

@@ -901,7 +901,7 @@ export const oxazepam: Drug = {
       ],
       correctIndex: 2,
       explanation: "Oxazepam exits as an inactive glucuronide — there is no active-metabolite relay, which is precisely why it does not accumulate. Desmethyldiazepam is the long-lived metabolite of diazepam, chlordiazepoxide and clorazepate; esterase hydrolysis describes the prodrug esters, not oxazepam.",
-      afterSectionId: "pathways",
+      afterSectionId: "neural-pathways",
     },
     {
       id: "bzd-oxa-07",

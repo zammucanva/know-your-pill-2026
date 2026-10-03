@@ -888,7 +888,7 @@ export const triazolam: Drug = {
       ],
       correctIndex: 1,
       explanation: "Triazolam is a CYP3A4 substrate to an extreme degree — strong 3A4 inhibitors (azoles, ritonavir, macrolides) convert a 0.25 mg tablet into hours of profound sedation, and the label forbids such combinations. Glucuronidation is the LOT exemption, and 2C9 belongs to warfarin and phenytoin.",
-      afterSectionId: "pathways",
+      afterSectionId: "neural-pathways",
     },
     {
       id: "bzd-tzl-07",
