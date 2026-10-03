@@ -55,7 +55,7 @@ export const PRESCRIBER_NOTE_PLACEHOLDERS: readonly string[] = [
 ];
 
 const EFFECT_BASIS =
-  "Based on documented adverse-effect entries in this medication's own profile — " +
+  "Based on documented adverse-effect entries in this medication's own profile. " +
   "frequency bands (very common / common / uncommon / rare) are the documented bands, verbatim.";
 
 const EFFECT_BASIS_WITH_PG =
@@ -114,7 +114,7 @@ export const CONCERN_DEFINITIONS: ConcernDefinition[] = [
     label: "EPS & akathisia (acute)",
     question: "How do these medications differ in acute extrapyramidal symptoms?",
     blurb:
-      "Documented acute parkinsonism, dystonia, rigidity and akathisia — not tardive effects.",
+      "Documented acute parkinsonism, dystonia, rigidity and akathisia, not tardive effects.",
     kind: "effect",
     patterns: [/extrapyramidal|\bEPS\b|akathisia|parkinsonism|dystonia/i],
     basis: EFFECT_BASIS,
@@ -185,20 +185,20 @@ export const CONCERN_DEFINITIONS: ConcernDefinition[] = [
     label: "Monitoring requirements",
     question: "How do these medications differ in what needs monitoring?",
     blurb:
-      "Each medication's own monitoring list — parameters and check frequencies, verbatim.",
+      "Each medication's own monitoring list: parameters and check frequencies, verbatim.",
     kind: "monitoring",
     basis:
-      "Based on the monitoring parameters each medication's own page documents — counts and names, never scored.",
+      "Based on the monitoring parameters each medication's own page documents: counts and names, never scored.",
   },
   {
     id: "interaction-burden",
     label: "Interaction considerations",
     question: "How do these medications differ in documented interaction considerations?",
     blurb:
-      "Each medication's own interaction list, tallied by documented severity — check specific pairs in the Interaction Checker.",
+      "Each medication's own interaction list, tallied by documented severity: check specific pairs in the Interaction Checker.",
     kind: "interactions",
     basis:
-      "Based on the interaction entries each medication's own page documents — severity tallies verbatim, never scored. Use the Interaction Checker for specific pairs.",
+      "Based on the interaction entries each medication's own page documents: severity tallies verbatim, never scored. Use the Interaction Checker for specific pairs.",
   },
 ];
 

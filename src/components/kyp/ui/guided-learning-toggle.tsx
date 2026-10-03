@@ -136,7 +136,7 @@ export function GuidedLearningToggle({ className }: GuidedLearningToggleProps) {
             aria-pressed={isActive}
             aria-hidden={isHidden || undefined}
             tabIndex={isHidden ? -1 : undefined}
-            title={`${shortLabel} — ${time}`}
+            title={`${shortLabel} · ${time}`}
             className={cn(
               "inline-flex cursor-pointer items-center gap-1 overflow-hidden whitespace-nowrap rounded-full py-1.5 text-xs font-semibold transition-all duration-[var(--duration-base)] ease-[var(--ease-out-soft)]",
               isActive

@@ -17,12 +17,12 @@ import {
  * quiz names lessons exactly as the library and course pages do.
  */
 export const metadata: Metadata = {
-  title: "Psychiatry Self-Test — KYP Psychiatry",
+  title: "Psychiatry Self-Test. KYP Psychiatry",
   description:
-    "Mixed MCQ practice across the whole psychiatry curriculum — 719 authored questions with explanations, by domain or all at once.",
+    "Mixed MCQ practice across the whole psychiatry curriculum: 719 authored questions with explanations, by domain or all at once.",
   keywords: ["psychiatry self-test", "psychiatry MCQs", "psychiatry practice questions", "KYP Psychiatry"],
   openGraph: {
-    title: "Psychiatry Self-Test — KYP Psychiatry",
+    title: "Psychiatry Self-Test. KYP Psychiatry",
     description: "Mixed MCQ practice across the psychiatry curriculum, with explanations.",
     type: "website",
     siteName: "Know Your Pill",

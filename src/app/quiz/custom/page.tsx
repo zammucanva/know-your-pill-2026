@@ -68,7 +68,7 @@ function CustomTestShellFallback() {
         </h1>
         <p className="mt-6 max-w-xl text-body-lg text-muted-foreground leading-relaxed">
           Choose exactly what you want to be tested on. Every question is
-          drawn from the same reviewed KYP content you study — nothing
+          drawn from the same reviewed KYP content you study: nothing
           invented, nothing outside the library.
         </p>
         <p role="status" className="mt-10 text-sm text-muted-foreground">

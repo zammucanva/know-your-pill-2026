@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   // Copyright attribution — rendered as <meta name="copyright"> on every page.
   other: {
     copyright:
-      "© 2026 Zamaan Ali Shamji. All content on this site — including drug pages, disease modules, and educational text — is protected by copyright and may not be reproduced, republished, or redistributed without written permission. Terms: /legal/terms",
+      "© 2026 Zamaan Ali Shamji. All content on this site (including drug pages, disease modules, and educational text) is protected by copyright and may not be reproduced, republished, or redistributed without written permission. Terms: /legal/terms",
     // Lightweight provenance watermark (Task 4): invisible meta tag, zero
     // impact on users, SEO, or screen readers — but survives in the HTML
     // source of every exported page so copied HTML retains attribution.
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
         url: absoluteUrl("/logo-navy-512.png"),
         width: 512,
         height: 512,
-        alt: "Know Your Pill — brand mark",
+        alt: "Know Your Pill: brand mark",
       },
     ],
   },

@@ -183,7 +183,7 @@ export function DrugPrescriberGuide({ drug }: DrugPrescriberGuideProps) {
         <SectionHeader
           eyebrow="Prescriber's Guide · after Stahl"
           title="Dose it. Titrate it. Stop it safely."
-          description={`The complete prescribing playbook for ${drug.genericName} — onset, dosing, side-effect rescue, tapering, special populations, and the art of psychopharmacology.`}
+          description={`The complete prescribing playbook for ${drug.genericName}: onset, dosing, side-effect rescue, tapering, special populations, and the art of psychopharmacology.`}
           tone="neural"
         />
 
@@ -220,7 +220,7 @@ export function DrugPrescriberGuide({ drug }: DrugPrescriberGuideProps) {
           </div>
 
           {pg.testsBeforeStarting.length > 0 && (
-            <Callout variant="info" title="Before you start — baseline workup">
+            <Callout variant="info" title="Before you start: baseline workup">
               <ul className="mt-1 space-y-1">
                 {pg.testsBeforeStarting.map((t, i) => (
                   <li key={i} className="text-xs leading-relaxed text-foreground/90">• {t}</li>
@@ -252,7 +252,7 @@ export function DrugPrescriberGuide({ drug }: DrugPrescriberGuideProps) {
 
             <CardPrimitive variant="flat" interactive={false} showArrow={false} className="border-border/60">
               <CardBody>
-                <BlockHeading icon={ShieldAlert} title="Side Effects — The Management Ladder" hint="wait → reduce → switch" />
+                <BlockHeading icon={ShieldAlert} title="Side Effects. The Management Ladder" hint="wait → reduce → switch" />
                 <NumberedList items={pg.sideEffectManagement} />
                 {pg.sideEffectRescue.length > 0 && (
                   <div className="mt-5 border-t border-border/60 pt-4">
@@ -296,7 +296,7 @@ export function DrugPrescriberGuide({ drug }: DrugPrescriberGuideProps) {
             <CardBody>
               <div className="grid gap-6 lg:grid-cols-2">
                 <div>
-                  <BlockHeading icon={ArrowDownToLine} title="How To Stop — Taper Protocol" />
+                  <BlockHeading icon={ArrowDownToLine} title="How To Stop. Taper Protocol" />
                   <NumberedList items={pg.howToStop} />
                 </div>
                 <div className="space-y-5">
@@ -346,7 +346,7 @@ export function DrugPrescriberGuide({ drug }: DrugPrescriberGuideProps) {
 
           {/* ── Hard stops ── */}
           {pg.doNotUse.length > 0 && (
-            <Callout variant="danger" title="Do Not Use — Hard Stops">
+            <Callout variant="danger" title="Do Not Use. Hard Stops">
               <ul className="mt-1 space-y-1">
                 {pg.doNotUse.map((d, i) => (
                   <li key={i} className="flex items-start gap-2 text-xs leading-relaxed text-foreground/90">
@@ -363,7 +363,7 @@ export function DrugPrescriberGuide({ drug }: DrugPrescriberGuideProps) {
             <div className="mb-4 flex items-center gap-2">
               <Sparkles className="h-5 w-5 text-brand" />
               <h3 className="text-h4">The Art of Psychopharmacology</h3>
-              <Badge variant="outline" size="sm">when to choose it — and when not to</Badge>
+              <Badge variant="outline" size="sm">when to choose it, and when not to</Badge>
             </div>
             <div className="grid gap-4 lg:grid-cols-2">
               <CardPrimitive variant="flat" interactive={false} showArrow={false} className="border-success/20 bg-success-soft/30">
@@ -423,7 +423,7 @@ export function DrugPrescriberGuide({ drug }: DrugPrescriberGuideProps) {
               <p className="text-xs leading-relaxed text-foreground/90">
                 Prescriber content on this page is an educational paraphrase of{" "}
                 <span className="font-medium">{pg.sourceEdition}</span> (Cambridge University Press). Facts are
-                restated, not reproduced. This is study material for medical education — not a prescription
+                restated, not reproduced. This is study material for medical education, not a prescription
                 aid or substitute for the current FDA/CDSCO product label, institutional protocols, or clinical
                 judgement. Some entries reflect the source edition&rsquo;s era; always cross-check doses against
                 the latest label before prescribing.

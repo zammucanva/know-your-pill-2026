@@ -41,7 +41,7 @@ export function CourseClinicalContext({ course }: { course: PsychiatryCourse }) 
           <>
             <SectionHeader
               eyebrow="Epidemiology & Burden"
-              title="Who this affects — global and Indian numbers."
+              title="Who this affects: global and Indian numbers."
               tone="brand"
               align="start"
             />
@@ -87,7 +87,7 @@ export function CourseClinicalContext({ course }: { course: PsychiatryCourse }) 
           <div className="mt-12">
             <SectionHeader
               eyebrow="Causes & Risk Factors"
-              title="No single cause — converging pathways."
+              title="No single cause, converging pathways."
               tone="brand"
               align="start"
             />
@@ -121,7 +121,7 @@ export function CourseSymptoms({ course }: { course: PsychiatryCourse }) {
       <Container width="narrow">
         <SectionHeader
           eyebrow="Symptoms"
-          title="What it looks like — by cluster."
+          title="What it looks like: by cluster."
           tone="brand"
           align="start"
         />
@@ -251,7 +251,7 @@ export function CourseDifferential({ course }: { course: PsychiatryCourse }) {
       <Container width="narrow">
         <SectionHeader
           eyebrow="Differential Diagnosis"
-          title="What else it could be — and the feature that decides."
+          title="What else it could be, and the feature that decides."
           description="Condition · distinguishing features · the key differentiator that settles it."
           tone="brand"
           align="start"
@@ -303,7 +303,7 @@ export function CourseManagement({ course }: { course: PsychiatryCourse }) {
           <SectionHeader
             eyebrow={isConcept ? "Applying the Science" : "Management"}
             title={isConcept ? "Using the science at the bedside." : "Evidence-based treatment principles."}
-            description={isConcept ? "How the receptor and transporter map changes prescribing, side-effect reasoning and counselling — educational, not a treatment algorithm." : "Educational content — not a substitute for clinical judgment."}
+            description={isConcept ? "How the receptor and transporter map changes prescribing, side-effect reasoning and counselling: educational, not a treatment algorithm." : "Educational content, not a substitute for clinical judgment."}
             tone="success"
             align="start"
           />
@@ -374,7 +374,7 @@ export function CourseDrugNavigation({ course }: { course: PsychiatryCourse }) {
         <SectionHeader
           eyebrow="Drug Navigation"
           title="From this topic to the medicines that treat it."
-          description="Only real KYP drug lessons are linked. Missing lessons are recorded as content gaps — never invented."
+          description="Only real KYP drug lessons are linked. Missing lessons are recorded as content gaps, never invented."
           tone="brand"
           align="start"
         />
@@ -400,7 +400,7 @@ export function CourseDrugNavigation({ course }: { course: PsychiatryCourse }) {
         ) : (
           <div className="mt-10 rounded-xl border border-dashed border-border/60 bg-card/50 p-5 text-center">
             <p className="text-body-sm text-muted-foreground">
-              No KYP drug lessons exist for this topic yet — see the recorded content gaps below.
+              No KYP drug lessons exist for this topic yet. See the recorded content gaps below.
             </p>
           </div>
         )}
@@ -441,7 +441,7 @@ export function CoursePatientGuide({ course }: { course: PsychiatryCourse }) {
       <Container width="narrow">
         <SectionHeader
           eyebrow="Patient Guide"
-          title="In plain language — for patients and families."
+          title="In plain language, for patients and families."
           description="What it is, what to expect, and where Indian help is."
           tone="success"
           align="start"

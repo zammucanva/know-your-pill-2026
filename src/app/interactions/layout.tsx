@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Interaction Checker · Know Your Pill",
   description:
-    "Pick 2–6 medications and see every interaction their own reviewed pages list between them — severity, mechanism, and what to do, copied verbatim. An educational reference, not a complete interaction database; confirm with your doctor or pharmacist.",
+    "Pick 2–6 medications and see every interaction their own reviewed pages list between them: severity, mechanism, and what to do, copied verbatim. An educational reference, not a complete interaction database; confirm with your doctor or pharmacist.",
   keywords: [
     "drug interactions",
     "medication interactions",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Interaction Checker · Know Your Pill",
     description:
-      "Every interaction the reviewed medication pages list between your selected drugs — verbatim, never re-graded.",
+      "Every interaction the reviewed medication pages list between your selected drugs: verbatim, never re-graded.",
     type: "website",
     siteName: "Know Your Pill",
   },

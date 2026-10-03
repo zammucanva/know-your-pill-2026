@@ -12,7 +12,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Spaced Review · Know Your Pill",
   description:
-    "Questions you've missed come back at growing intervals — 1, 2, 4, 7, 14, then 30 days. Get one right and its next appearance moves further out; miss it and it returns tomorrow. Everything stays on this device.",
+    "Questions you've missed come back at growing intervals: 1, 2, 4, 7, 14, then 30 days. Get one right and its next appearance moves further out; miss it and it returns tomorrow. Everything stays on this device.",
   keywords: [
     "spaced repetition",
     "spaced review",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Spaced Review · Know Your Pill",
     description:
-      "Missed questions return at growing intervals until they stick — spaced review built into KYP.",
+      "Missed questions return at growing intervals until they stick: spaced review built into KYP.",
     type: "website",
     siteName: "Know Your Pill",
   },

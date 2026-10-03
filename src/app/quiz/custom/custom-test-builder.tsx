@@ -262,7 +262,7 @@ export function CustomTestBuilder() {
     if (!cls) return;
     setSelected(new Set(cls.medications.map((m) => m.slug)));
     setExpanded((prev) => new Set([...prev, cls.id]));
-    setClassNotice(`${cls.label} selected — ${cls.medications.length} ${
+    setClassNotice(`${cls.label} selected: ${cls.medications.length} ${
       cls.medications.length === 1 ? "medication" : "medications"
     } from the ${cls.fullName} class.`);
   };
@@ -306,7 +306,7 @@ export function CustomTestBuilder() {
     });
     setCappedNotice(
       built.capped
-        ? `Only ${built.available} unique questions are available for this selection — the test was set to ${built.deliveredCount}.`
+        ? `Only ${built.available} unique questions are available for this selection. The test was set to ${built.deliveredCount}.`
         : null
     );
     setReviewAll(false);
@@ -552,7 +552,7 @@ export function CustomTestBuilder() {
     const slugs = weakAreaDrugSlugs(weakArea);
     if (slugs.length === 0) {
       setWeakNotice(
-        "Not enough practice history yet — take a few tests first and weak areas will be picked automatically."
+        "Not enough practice history yet: take a few tests first and weak areas will be picked automatically."
       );
       return;
     }
@@ -576,7 +576,7 @@ export function CustomTestBuilder() {
     });
     setPresets(getTestPresets());
     setPresetName("");
-    setPresetNotice(`Saved “${saved.name}” — ${saved.drugSlugs.length} ${
+    setPresetNotice(`Saved “${saved.name}”: ${saved.drugSlugs.length} ${
       saved.drugSlugs.length === 1 ? "medication" : "medications"
     } · ${saved.count} questions.`);
   };
@@ -615,7 +615,7 @@ export function CustomTestBuilder() {
         setSelected(new Set(cls.medications.map((m) => m.slug)));
         setExpanded((prev) => new Set([...prev, cls.id]));
         setClassNotice(
-          `${cls.label} pre-selected from the class page — choose a length and start, or adjust the selection.`
+          `${cls.label} pre-selected from the class page: choose a length and start, or adjust the selection.`
         );
       }
     }
@@ -629,7 +629,7 @@ export function CustomTestBuilder() {
         startTest({ slugs, count: 20, timed: false });
       } else {
         setWeakNotice(
-          "Not enough practice history yet — take a few tests first and weak areas will be picked automatically."
+          "Not enough practice history yet: take a few tests first and weak areas will be picked automatically."
         );
       }
       return;
@@ -729,7 +729,7 @@ export function CustomTestBuilder() {
                     {weakArea.topics.length > 0 ? (
                       <>
                         <p className="text-sm leading-relaxed text-foreground/90">
-                          Let the test choose for you — it draws from the
+                          Let the test choose for you: it draws from the
                           classes your practice history shows are weakest.
                         </p>
                         <ul className="mt-4 space-y-2">
@@ -762,8 +762,8 @@ export function CustomTestBuilder() {
                     ) : (
                       <p className="text-sm leading-relaxed text-muted-foreground">
                         {weakArea.enoughData
-                          ? "No weak classes right now — your recent accuracy is holding up across everything you have practised."
-                          : "Not enough practice history yet — take a few tests first and weak areas will be picked automatically."}
+                          ? "No weak classes right now: your recent accuracy is holding up across everything you have practised."
+                          : "Not enough practice history yet: take a few tests first and weak areas will be picked automatically."}
                       </p>
                     )}
                     {weakNotice && (
@@ -997,9 +997,9 @@ export function CustomTestBuilder() {
                   </div>
                   <p className="mt-3 text-xs text-muted-foreground">
                     {difficulty === "all"
-                      ? "Foundation, Clinical, and Advanced reasoning — the full pool."
+                      ? "Foundation, Clinical, and Advanced reasoning: the full pool."
                       : tierDescription(difficulty) +
-                        ". Level filters only — questions, wording, and answers are unchanged."}
+                        ". Level filters only: questions, wording, and answers are unchanged."}
                   </p>
                 </div>
               </Reveal>
@@ -1027,7 +1027,7 @@ export function CustomTestBuilder() {
                       </label>
                       <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
                         Adds the Stahl's Prescriber-Guide clinical MCQ bank for the
-                        medications you selected — source-grounded questions over the
+                        medications you selected: source-grounded questions over the
                         Prescriber's Guide layer, each with its own explanation.
                       </p>
                     </div>
@@ -1120,11 +1120,11 @@ export function CustomTestBuilder() {
                           className="h-4 w-4 rounded border-border accent-[var(--brand)] disabled:opacity-40"
                         />
                         <ClipboardList className="h-4 w-4 text-muted-foreground" aria-hidden />
-                        Exam — feedback after submission
+                        Exam: feedback after submission
                       </label>
                       <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
                         The countdown is on, answers move in one direction,
-                        and no answer is revealed until you submit — then
+                        and no answer is revealed until you submit, then
                         a per-section breakdown explains the result. Off by
                         default.
                       </p>
@@ -1155,11 +1155,11 @@ export function CustomTestBuilder() {
                           className="h-4 w-4 rounded border-border accent-[var(--brand)] disabled:opacity-40"
                         />
                         <Timer className="h-4 w-4 text-muted-foreground" aria-hidden />
-                        Timed — exam pacing
+                        Timed: exam pacing
                       </label>
                       <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
                         {exam
-                          ? "Included in exam mode — the countdown stays on until you submit."
+                          ? "Included in exam mode: the countdown stays on until you submit."
                           : "A countdown for the whole test, a pace indicator while you answer, and your time in the results. Off by default."}
                       </p>
                     </div>
@@ -1182,7 +1182,7 @@ export function CustomTestBuilder() {
                   {timed && (
                     <p className="mt-2 text-xs text-muted-foreground" aria-live="polite">
                       {timedMinutesInput.trim() === ""
-                        ? `Auto: ${effectiveTimedMinutes} min (1 minute per question) — type a number to change.`
+                        ? `Auto: ${effectiveTimedMinutes} min (1 minute per question); type a number to change.`
                         : `Allotted: ${effectiveTimedMinutes} min for ${
                             Number.isFinite(requestedCount) ? requestedCount : 20
                           } questions.`}
@@ -1262,7 +1262,7 @@ export function CustomTestBuilder() {
               <Reveal delay={0.26}>
                 <p className="mt-8 text-xs text-muted-foreground/60 max-w-md">
                   Questions are generated from KYP&apos;s reviewed medication
-                  content and in-course quizzes — no AI-generated medical
+                  content and in-course quizzes: no AI-generated medical
                   facts. Scores stay on this device.
                 </p>
               </Reveal>
@@ -1317,7 +1317,7 @@ export function CustomTestBuilder() {
                   role="status"
                   className="mb-6 rounded-lg border border-brand/40 bg-brand-soft/20 p-3 text-xs text-foreground/80"
                 >
-                  Weak-Area Test — drawn from your practice history:
+                  Weak-Area Test: drawn from your practice history:
                   <ul className="mt-1 list-inside list-disc">
                     {weakReasons.map((reason) => (
                       <li key={reason}>{reason}</li>
@@ -1512,7 +1512,7 @@ export function CustomTestBuilder() {
               {answered && withhold && (
                 <div className="mt-8 flex items-center justify-between gap-4">
                   <p className="text-xs text-muted-foreground" aria-live="polite">
-                    Answer recorded — feedback comes after you submit.
+                    Answer recorded: feedback comes after you submit.
                   </p>
                   <button
                     type="button"
@@ -1621,8 +1621,8 @@ export function CustomTestBuilder() {
                       <strong className="text-success">{correctCount} of {total}</strong>{" "}
                       correctly
                       {correctCount === total
-                        ? " — every one of them."
-                        : ` — ${total - correctCount} still to revisit.`}
+                        ? ": every one of them."
+                        : ` ${total - correctCount} still to revisit.`}
                     </p>
                     {previouslyChosenCount > 0 && (
                       <p className="mt-2 text-xs text-muted-foreground">

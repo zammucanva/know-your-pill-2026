@@ -25,7 +25,7 @@ import { drugs } from "@/lib/kyp/data";
 export const metadata: Metadata = {
   title: "Medicine · Know Your Pill",
   description:
-    "Plain-language medicine information — what each of the 145 psychiatric medicines is, what it treats, and how it works, with full guides covering side effects, timelines, and safety.",
+    "Plain-language medicine information: what each of the 145 psychiatric medicines is, what it treats, and how it works, with full guides covering side effects, timelines, and safety.",
   keywords: [
     "medicine information",
     "antidepressant guides",
@@ -66,7 +66,7 @@ export default function MedicinePage() {
               </h1>
               <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground leading-relaxed">
                 Information first. What each medicine is, what it treats, and
-                how it works — in plain language, before anything else. Every
+                how it works, in plain language, before anything else. Every
                 entry opens a full guide with side effects, what to expect
                 week by week, and safety information.
               </p>
@@ -106,7 +106,7 @@ export default function MedicinePage() {
                   </span>
                   <span className="mt-1.5 block text-sm leading-relaxed text-muted-foreground">
                     Pick two to six medicines and see every interaction their
-                    own pages list between them — what it does, why it
+                    own pages list between them: what it does, why it
                     happens, and what to do about it.
                   </span>
                 </span>
@@ -132,7 +132,7 @@ export default function MedicinePage() {
                   </span>
                   <span className="mt-1.5 block text-sm leading-relaxed text-muted-foreground">
                     Choose a medication class and the concerns that matter —
-                    weight, sedation, prolactin, EPS and more — and see how
+                    weight, sedation, prolactin, EPS and more, and see how
                     each medicine&apos;s own documented profile differs. An
                     educational comparison, never a ranking.
                   </span>
@@ -228,13 +228,13 @@ export default function MedicinePage() {
                   works in the brain, what it is approved to treat, what side
                   effects to expect in the first weeks and which ones fade,
                   what to monitor, and what to do in an emergency. The
-                  information is the same guide your doctor reads — written
+                  information is the same guide your doctor reads: written
                   so you can actually use it.
                 </p>
                 <p className="mt-4 text-body-sm text-muted-foreground/70 leading-relaxed">
                   Medicine guides are education, not prescriptions. Decisions
                   about starting, stopping, or changing any medicine belong
-                  with your clinician — and if you are in crisis, use the
+                  with your clinician, and if you are in crisis, use the
                   emergency help below.
                 </p>
               </div>

@@ -1,0 +1,2720 @@
+{
+  "meta": {
+    "group": "shared",
+    "dry": false,
+    "generatedAt": "2026-10-03T10:52:38.158Z",
+    "files": 41,
+    "filesChanged": 41,
+    "stringsChanged": 101
+  },
+  "changes": [
+    {
+      "file": "src/app/compare/classes/page.tsx",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 46,
+          "rule": "colon",
+          "before": "How medications in a class differ across documented concerns — an educational comparison, not a prescribing algorithm.",
+          "after": "How medications in a class differ across documented concerns: an educational comparison, not a prescribing algorithm."
+        },
+        {
+          "line": 44,
+          "rule": "title-colon",
+          "before": "Class Comparison — Choose by Concern · Know Your Pill",
+          "after": "Class Comparison: Choose by Concern · Know Your Pill"
+        },
+        {
+          "line": 33,
+          "rule": "colon",
+          "before": "Compare medications within a class across clinical concerns — weight and metabolic effects, sedation, prolactin, EPS, QT and more. Every value is documented data from the medication pages; nothing is ",
+          "after": "Compare medications within a class across clinical concerns: weight and metabolic effects, sedation, prolactin, EPS, QT and more. Every value is documented data from the medication pages; nothing is s"
+        }
+      ]
+    },
+    {
+      "file": "src/app/compare/layout.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 30,
+          "rule": "colon",
+          "before": "Two or three psychiatric medications side by side — mechanism to clinical use, verbatim from the medication pages.",
+          "after": "Two or three psychiatric medications side by side: mechanism to clinical use, verbatim from the medication pages."
+        },
+        {
+          "line": 18,
+          "rule": "colon",
+          "before": "Pick 2–3 psychiatric medications and see them side by side — mechanism, side-effect profile with frequency bands, interactions, monitoring, and clinical use. Every cell is verbatim from the medication",
+          "after": "Pick 2–3 psychiatric medications and see them side by side: mechanism, side-effect profile with frequency bands, interactions, monitoring, and clinical use. Every cell is verbatim from the medication "
+        }
+      ]
+    },
+    {
+      "file": "src/app/compare/page.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 276,
+          "rule": "colon",
+          "before": "One more to go — pick at least two.",
+          "after": "One more to go: pick at least two."
+        }
+      ]
+    },
+    {
+      "file": "src/app/dashboard/layout.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 18,
+          "rule": "colon",
+          "before": "Your personal KYP home — reading progress across the medication library, saved bookmarks, and search history in one place, with quick links back into whatever you were learning.",
+          "after": "Your personal KYP home: reading progress across the medication library, saved bookmarks, and search history in one place, with quick links back into whatever you were learning."
+        }
+      ]
+    },
+    {
+      "file": "src/app/dashboard/page.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 183,
+          "rule": "colon",
+          "before": "Network error — please try again.",
+          "after": "Network error: please try again."
+        }
+      ]
+    },
+    {
+      "file": "src/app/drugs/page.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 62,
+          "rule": "comma",
+          "before": "${drugs.length} psychiatric medications, structured the same way — from mechanism to clinical cases.",
+          "after": "${drugs.length} psychiatric medications, structured the same way, from mechanism to clinical cases."
+        },
+        {
+          "line": 46,
+          "rule": "colon",
+          "before": "${drugs.length} psychiatric medications, structured the same way — mechanism, receptors, indications, side effects, monitoring, interactions, and clinical cases. Browse the full KYP medication library",
+          "after": "${drugs.length} psychiatric medications, structured the same way: mechanism, receptors, indications, side effects, monitoring, interactions, and clinical cases. Browse the full KYP medication library."
+        }
+      ]
+    },
+    {
+      "file": "src/app/interactions/layout.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 26,
+          "rule": "colon",
+          "before": "Every interaction the reviewed medication pages list between your selected drugs — verbatim, never re-graded.",
+          "after": "Every interaction the reviewed medication pages list between your selected drugs: verbatim, never re-graded."
+        },
+        {
+          "line": 15,
+          "rule": "colon",
+          "before": "Pick 2–6 medications and see every interaction their own reviewed pages list between them — severity, mechanism, and what to do, copied verbatim. An educational reference, not a complete interaction d",
+          "after": "Pick 2–6 medications and see every interaction their own reviewed pages list between them: severity, mechanism, and what to do, copied verbatim. An educational reference, not a complete interaction da"
+        }
+      ]
+    },
+    {
+      "file": "src/app/interactions/page.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 340,
+          "rule": "colon",
+          "before": "One more to go — pick at least two.",
+          "after": "One more to go: pick at least two."
+        }
+      ]
+    },
+    {
+      "file": "src/app/layout.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 76,
+          "rule": "colon",
+          "before": "Know Your Pill — brand mark",
+          "after": "Know Your Pill: brand mark"
+        },
+        {
+          "line": 41,
+          "rule": "parenthetical",
+          "before": "© 2026 Zamaan Ali Shamji. All content on this site — including drug pages, disease modules, and educational text — is protected by copyright and may not be reproduced, republished, or redistributed wi",
+          "after": "© 2026 Zamaan Ali Shamji. All content on this site (including drug pages, disease modules, and educational text) is protected by copyright and may not be reproduced, republished, or redistributed with"
+        }
+      ]
+    },
+    {
+      "file": "src/app/learn/continue-learning.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 89,
+          "rule": "colon",
+          "before": "The reference SSRI — start here for the full 6-lesson course.",
+          "after": "The reference SSRI: start here for the full 6-lesson course."
+        }
+      ]
+    },
+    {
+      "file": "src/app/learn/page.tsx",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 358,
+          "rule": "colon",
+          "before": "What happens hour by hour, week by week — the SSRI timeline as a reference.",
+          "after": "What happens hour by hour, week by week: the SSRI timeline as a reference."
+        },
+        {
+          "line": 48,
+          "rule": "comma",
+          "before": "Structured learning paths across the KYP medication library — from mechanisms to neuroscience concepts and practice.",
+          "after": "Structured learning paths across the KYP medication library, from mechanisms to neuroscience concepts and practice."
+        },
+        {
+          "line": 36,
+          "rule": "colon",
+          "before": "The educational home of KYP — structured learning paths across ${drugs.length} medications, diseases, substances, brain regions, and side effects, with entry points into MCQ practice and your continue",
+          "after": "The educational home of KYP: structured learning paths across ${drugs.length} medications, diseases, substances, brain regions, and side effects, with entry points into MCQ practice and your continued"
+        }
+      ]
+    },
+    {
+      "file": "src/app/legal/terms/page.tsx",
+      "editCount": 6,
+      "edits": [
+        {
+          "line": 93,
+          "rule": "parenthetical",
+          "before": "Requests to reuse, republish, or adapt content — including translations and educational adaptations — are welcome and are typically answered quickly. Email zammucanva@gmail.com with a short descriptio",
+          "after": "Requests to reuse, republish, or adapt content (including translations and educational adaptations) are welcome and are typically answered quickly. Email zammucanva@gmail.com with a short description "
+        },
+        {
+          "line": 78,
+          "rule": "colon",
+          "before": "If you are building a tool (for example a study aid or search assistant) and believe KYP content would genuinely help, get in touch first — permission is far easier to obtain in advance than to fix re",
+          "after": "If you are building a tool (for example a study aid or search assistant) and believe KYP content would genuinely help, get in touch first: permission is far easier to obtain in advance than to fix ret"
+        },
+        {
+          "line": 69,
+          "rule": "parenthetical",
+          "before": "You may not reproduce, republish, or redistribute the content of this site — in whole or in substantial part — in any form or medium without prior written permission. This includes copying pages into ",
+          "after": "You may not reproduce, republish, or redistribute the content of this site (in whole or in substantial part) in any form or medium without prior written permission. This includes copying pages into ot"
+        },
+        {
+          "line": 61,
+          "rule": "colon",
+          "before": "You are welcome to read, study, and use this site for personal education, and to share links to any page with others — colleagues, students, patients, or on social media. Linking is always allowed and",
+          "after": "You are welcome to read, study, and use this site for personal education, and to share links to any page with others: colleagues, students, patients, or on social media. Linking is always allowed and "
+        },
+        {
+          "line": 53,
+          "rule": "parenthetical",
+          "before": "All content on this website — including medication pages, disease modules, substance-use guides, educational text, quizzes, illustrations, and the site design itself — is the property of Zamaan Ali Sh",
+          "after": "All content on this website (including medication pages, disease modules, substance-use guides, educational text, quizzes, illustrations, and the site design itself) is the property of Zamaan Ali Sham"
+        },
+        {
+          "line": 25,
+          "rule": "parenthetical",
+          "before": "Copyright and reuse terms for Know Your Pill. All content — including drug pages, disease modules, and educational text — is protected by copyright and may not be reproduced, republished, or redistrib",
+          "after": "Copyright and reuse terms for Know Your Pill. All content (including drug pages, disease modules, and educational text) is protected by copyright and may not be reproduced, republished, or redistribut"
+        }
+      ]
+    },
+    {
+      "file": "src/app/medicine/page.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 28,
+          "rule": "colon",
+          "before": "Plain-language medicine information — what each of the 145 psychiatric medicines is, what it treats, and how it works, with full guides covering side effects, timelines, and safety.",
+          "after": "Plain-language medicine information: what each of the 145 psychiatric medicines is, what it treats, and how it works, with full guides covering side effects, timelines, and safety."
+        }
+      ]
+    },
+    {
+      "file": "src/app/psychiatry/[slug]/page.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 50,
+          "rule": "sentence",
+          "before": "${course?.title ?? note.frontmatter.title} — KYP Psychiatry",
+          "after": "${course?.title ?? note.frontmatter.title}. KYP Psychiatry"
+        }
+      ]
+    },
+    {
+      "file": "src/app/psychiatry/library/page.tsx",
+      "editCount": 4,
+      "edits": [
+        {
+          "line": 36,
+          "rule": "colon",
+          "before": "109 lessons across 18 clinical domains — the full psychiatry curriculum.",
+          "after": "109 lessons across 18 clinical domains: the full psychiatry curriculum."
+        },
+        {
+          "line": 35,
+          "rule": "sentence",
+          "before": "Psychiatry Library — KYP Psychiatry",
+          "after": "Psychiatry Library. KYP Psychiatry"
+        },
+        {
+          "line": 32,
+          "rule": "colon",
+          "before": "Browse the full psychiatry curriculum — 109 lessons across 18 clinical domains, filterable by domain, importance, format and progress.",
+          "after": "Browse the full psychiatry curriculum: 109 lessons across 18 clinical domains, filterable by domain, importance, format and progress."
+        },
+        {
+          "line": 30,
+          "rule": "sentence",
+          "before": "Psychiatry Library — KYP Psychiatry",
+          "after": "Psychiatry Library. KYP Psychiatry"
+        }
+      ]
+    },
+    {
+      "file": "src/app/psychiatry/page.tsx",
+      "editCount": 9,
+      "edits": [
+        {
+          "line": 192,
+          "rule": "imperative",
+          "before": "The topics marked Core are the heart of the curriculum — start here if you are new or revising for exams.",
+          "after": "The topics marked Core are the heart of the curriculum. Start here if you are new or revising for exams."
+        },
+        {
+          "line": 140,
+          "rule": "colon",
+          "before": "From the foundations and sciences to social psychiatry — the full breadth of the specialty, with Foundations first.",
+          "after": "From the foundations and sciences to social psychiatry: the full breadth of the specialty, with Foundations first."
+        },
+        {
+          "line": 121,
+          "rule": "colon",
+          "before": "Diagnosis, management and clinical cases — reasoning, not memorising.",
+          "after": "Diagnosis, management and clinical cases: reasoning, not memorising."
+        },
+        {
+          "line": 119,
+          "rule": "colon",
+          "before": "Epidemiology, causes and risk factors — the detailed clinical content.",
+          "after": "Epidemiology, causes and risk factors: the detailed clinical content."
+        },
+        {
+          "line": 118,
+          "rule": "colon",
+          "before": "The concept in plain language — what happens in the body and brain, and the symptoms it produces.",
+          "after": "The concept in plain language: what happens in the body and brain, and the symptoms it produces."
+        },
+        {
+          "line": 114,
+          "rule": "comma",
+          "before": "Each topic moves through the same five phases — so you always know where you are and what comes next.",
+          "after": "Each topic moves through the same five phases, so you always know where you are and what comes next."
+        },
+        {
+          "line": 41,
+          "rule": "sentence",
+          "before": "KYP Psychiatry — Structured Psychiatry Learning",
+          "after": "KYP Psychiatry. Structured Psychiatry Learning"
+        },
+        {
+          "line": 38,
+          "rule": "colon",
+          "before": "Learn psychiatry through structured clinical lessons — 109 topics across 18 domains, clinical cases, active recall, India in practice and 719 self-test questions.",
+          "after": "Learn psychiatry through structured clinical lessons: 109 topics across 18 domains, clinical cases, active recall, India in practice and 719 self-test questions."
+        },
+        {
+          "line": 36,
+          "rule": "sentence",
+          "before": "KYP Psychiatry — Structured Psychiatry Learning",
+          "after": "KYP Psychiatry. Structured Psychiatry Learning"
+        }
+      ]
+    },
+    {
+      "file": "src/app/psychiatry/self-test/page.tsx",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 25,
+          "rule": "sentence",
+          "before": "Psychiatry Self-Test — KYP Psychiatry",
+          "after": "Psychiatry Self-Test. KYP Psychiatry"
+        },
+        {
+          "line": 22,
+          "rule": "colon",
+          "before": "Mixed MCQ practice across the whole psychiatry curriculum — 719 authored questions with explanations, by domain or all at once.",
+          "after": "Mixed MCQ practice across the whole psychiatry curriculum: 719 authored questions with explanations, by domain or all at once."
+        },
+        {
+          "line": 20,
+          "rule": "sentence",
+          "before": "Psychiatry Self-Test — KYP Psychiatry",
+          "after": "Psychiatry Self-Test. KYP Psychiatry"
+        }
+      ]
+    },
+    {
+      "file": "src/app/psychiatry/self-test/self-test-client.tsx",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 263,
+          "rule": "colon",
+          "before": "Early days — read the explanations, then retry.",
+          "after": "Early days: read the explanations, then retry."
+        },
+        {
+          "line": 262,
+          "rule": "colon",
+          "before": "Solid — revisit the misses and run again.",
+          "after": "Solid: revisit the misses and run again."
+        },
+        {
+          "line": 260,
+          "rule": "colon",
+          "before": "Perfect run — exam-ready.",
+          "after": "Perfect run: exam-ready."
+        }
+      ]
+    },
+    {
+      "file": "src/app/quiz/custom/custom-test-builder.tsx",
+      "editCount": 11,
+      "edits": [
+        {
+          "line": 1624,
+          "rule": "colon",
+          "before": " — every one of them.",
+          "after": ": every one of them."
+        },
+        {
+          "line": 1185,
+          "rule": "after-colon",
+          "before": "Auto: ${effectiveTimedMinutes} min (1 minute per question) — type a number to change.",
+          "after": "Auto: ${effectiveTimedMinutes} min (1 minute per question); type a number to change."
+        },
+        {
+          "line": 1162,
+          "rule": "colon",
+          "before": "Included in exam mode — the countdown stays on until you submit.",
+          "after": "Included in exam mode: the countdown stays on until you submit."
+        },
+        {
+          "line": 1002,
+          "rule": "colon",
+          "before": ". Level filters only — questions, wording, and answers are unchanged.",
+          "after": ". Level filters only: questions, wording, and answers are unchanged."
+        },
+        {
+          "line": 1000,
+          "rule": "colon",
+          "before": "Foundation, Clinical, and Advanced reasoning — the full pool.",
+          "after": "Foundation, Clinical, and Advanced reasoning: the full pool."
+        },
+        {
+          "line": 766,
+          "rule": "colon",
+          "before": "Not enough practice history yet — take a few tests first and weak areas will be picked automatically.",
+          "after": "Not enough practice history yet: take a few tests first and weak areas will be picked automatically."
+        },
+        {
+          "line": 765,
+          "rule": "colon",
+          "before": "No weak classes right now — your recent accuracy is holding up across everything you have practised.",
+          "after": "No weak classes right now: your recent accuracy is holding up across everything you have practised."
+        },
+        {
+          "line": 632,
+          "rule": "colon",
+          "before": "Not enough practice history yet — take a few tests first and weak areas will be picked automatically.",
+          "after": "Not enough practice history yet: take a few tests first and weak areas will be picked automatically."
+        },
+        {
+          "line": 618,
+          "rule": "colon",
+          "before": "${cls.label} pre-selected from the class page — choose a length and start, or adjust the selection.",
+          "after": "${cls.label} pre-selected from the class page: choose a length and start, or adjust the selection."
+        },
+        {
+          "line": 555,
+          "rule": "colon",
+          "before": "Not enough practice history yet — take a few tests first and weak areas will be picked automatically.",
+          "after": "Not enough practice history yet: take a few tests first and weak areas will be picked automatically."
+        },
+        {
+          "line": 309,
+          "rule": "independent",
+          "before": "Only ${built.available} unique questions are available for this selection — the test was set to ${built.deliveredCount}.",
+          "after": "Only ${built.available} unique questions are available for this selection. The test was set to ${built.deliveredCount}."
+        }
+      ]
+    },
+    {
+      "file": "src/app/quiz/custom/layout.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 6,
+          "rule": "colon",
+          "before": "Build your own test: choose the medications and the number of questions. Every question is drawn from reviewed KYP content — nothing invented.",
+          "after": "Build your own test: choose the medications and the number of questions. Every question is drawn from reviewed KYP content: nothing invented."
+        },
+        {
+          "line": 4,
+          "rule": "title-colon",
+          "before": "Custom Test — Build Your Own · Know Your Pill",
+          "after": "Custom Test: Build Your Own · Know Your Pill"
+        }
+      ]
+    },
+    {
+      "file": "src/app/quiz/layout.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 21,
+          "rule": "colon",
+          "before": "Every multiple-choice question in KYP in one practice interface — medication-course micro quizzes, disease questions, and the Stahl's Prescriber-Guide clinical MCQ bank. Each answer comes with an expl",
+          "after": "Every multiple-choice question in KYP in one practice interface: medication-course micro quizzes, disease questions, and the Stahl's Prescriber-Guide clinical MCQ bank. Each answer comes with an expla"
+        },
+        {
+          "line": 19,
+          "rule": "title-colon",
+          "before": "Practice MCQs — Test Your Understanding · Know Your Pill",
+          "after": "Practice MCQs: Test Your Understanding · Know Your Pill"
+        }
+      ]
+    },
+    {
+      "file": "src/app/reset/page.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 83,
+          "rule": "colon",
+          "before": "Network error — please check your connection and try again.",
+          "after": "Network error: please check your connection and try again."
+        }
+      ]
+    },
+    {
+      "file": "src/app/study/analytics/layout.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 26,
+          "rule": "comma",
+          "before": "Accuracy by topic and class, durations, and returning mistakes — from your on-device practice history.",
+          "after": "Accuracy by topic and class, durations, and returning mistakes, from your on-device practice history."
+        },
+        {
+          "line": 15,
+          "rule": "colon",
+          "before": "Trends from your quiz and test history on this device — accuracy by topic and medication class, answer durations, and where the same mistakes return. Numbers appear only once there is enough history t",
+          "after": "Trends from your quiz and test history on this device: accuracy by topic and medication class, answer durations, and where the same mistakes return. Numbers appear only once there is enough history to"
+        }
+      ]
+    },
+    {
+      "file": "src/app/study/mistakes/layout.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 15,
+          "rule": "comma",
+          "before": "Every question you answer incorrectly in practice and custom tests, kept on this device. Answer one correctly later and it leaves the list on its own — or clear it yourself once you're confident.",
+          "after": "Every question you answer incorrectly in practice and custom tests, kept on this device. Answer one correctly later and it leaves the list on its own, or clear it yourself once you're confident."
+        },
+        {
+          "line": 13,
+          "rule": "title-colon",
+          "before": "Mistake Book — Questions to Revisit · Know Your Pill",
+          "after": "Mistake Book: Questions to Revisit · Know Your Pill"
+        }
+      ]
+    },
+    {
+      "file": "src/app/study/page.tsx",
+      "editCount": 6,
+      "edits": [
+        {
+          "line": 189,
+          "rule": "colon",
+          "before": "Course position, completed sections, and quiz best scores are saved on this device — progress survives closing the browser, with no account required. Sign-in sync can arrive later without changing how",
+          "after": "Course position, completed sections, and quiz best scores are saved on this device: progress survives closing the browser, with no account required. Sign-in sync can arrive later without changing how "
+        },
+        {
+          "line": 184,
+          "rule": "parenthetical",
+          "before": "Your visited courses are remembered. Study Mode shows exactly where you left off — completed sections, current lesson, and quiz bests — and takes you straight back into the course at the section you s",
+          "after": "Your visited courses are remembered. Study Mode shows exactly where you left off (completed sections, current lesson, and quiz bests) and takes you straight back into the course at the section you sto"
+        },
+        {
+          "line": 179,
+          "rule": "comma",
+          "before": "Questions appear inside the courses after each milestone, and every one of the ${totalQuestions} medication questions is also available in the Practice hub — with immediate feedback and explanations.",
+          "after": "Questions appear inside the courses after each milestone, and every one of the ${totalQuestions} medication questions is also available in the Practice hub, with immediate feedback and explanations."
+        },
+        {
+          "line": 169,
+          "rule": "colon",
+          "before": "All ${drugs.length} medications are listed below, grouped by class. No search required — every course is one tap away. Each one lists its reading time and question count up front so you know what you ",
+          "after": "All ${drugs.length} medications are listed below, grouped by class. No search required: every course is one tap away. Each one lists its reading time and question count up front so you know what you a"
+        },
+        {
+          "line": 68,
+          "rule": "colon",
+          "before": "Active learning for ${drugs.length} psychiatric medications — courses, checkpoints, and practice.",
+          "after": "Active learning for ${drugs.length} psychiatric medications: courses, checkpoints, and practice."
+        },
+        {
+          "line": 55,
+          "rule": "colon",
+          "before": "One learning system — build knowledge with guided medication courses, then test it with MCQs and custom tests. Continue exactly where you left off.",
+          "after": "One learning system: build knowledge with guided medication courses, then test it with MCQs and custom tests. Continue exactly where you left off."
+        }
+      ]
+    },
+    {
+      "file": "src/app/study/review/layout.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 26,
+          "rule": "colon",
+          "before": "Missed questions return at growing intervals until they stick — spaced review built into KYP.",
+          "after": "Missed questions return at growing intervals until they stick: spaced review built into KYP."
+        },
+        {
+          "line": 15,
+          "rule": "colon",
+          "before": "Questions you've missed come back at growing intervals — 1, 2, 4, 7, 14, then 30 days. Get one right and its next appearance moves further out; miss it and it returns tomorrow. Everything stays on thi",
+          "after": "Questions you've missed come back at growing intervals: 1, 2, 4, 7, 14, then 30 days. Get one right and its next appearance moves further out; miss it and it returns tomorrow. Everything stays on this"
+        }
+      ]
+    },
+    {
+      "file": "src/app/study/review/page.tsx",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 486,
+          "rule": "colon",
+          "before": "Every reviewed question moves further out on its interval — well retained.",
+          "after": "Every reviewed question moves further out on its interval: well retained."
+        },
+        {
+          "line": 418,
+          "rule": "colon",
+          "before": "Not quite — back tomorrow",
+          "after": "Not quite: back tomorrow"
+        },
+        {
+          "line": 418,
+          "rule": "colon",
+          "before": "Correct — interval extended",
+          "after": "Correct: interval extended"
+        }
+      ]
+    },
+    {
+      "file": "src/app/substances/[slug]/page.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 597,
+          "rule": "sentence",
+          "before": "Emergency Action — What to Do",
+          "after": "Emergency Action. What to Do"
+        }
+      ]
+    },
+    {
+      "file": "src/app/welcome/layout.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 19,
+          "rule": "parenthetical",
+          "before": "Create a KYP account or log back in, choose the role that fits you — from patient to psychiatrist — and verify your email to enable progress tracking across devices.",
+          "after": "Create a KYP account or log back in, choose the role that fits you (from patient to psychiatrist) and verify your email to enable progress tracking across devices."
+        },
+        {
+          "line": 17,
+          "rule": "title-colon",
+          "before": "Get Started — Sign Up or Log In · Know Your Pill",
+          "after": "Get Started: Sign Up or Log In · Know Your Pill"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-brain-regions.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 31,
+          "rule": "colon",
+          "before": "${drug.genericName}'s effects are not localised to one region — serotonin neurons project from the raphe nuclei throughout the brain. The regions below are those most clinically relevant to ${drug.gen",
+          "after": "${drug.genericName}'s effects are not localised to one region: serotonin neurons project from the raphe nuclei throughout the brain. The regions below are those most clinically relevant to ${drug.gene"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-clinical-decision-path.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 57,
+          "rule": "colon",
+          "before": "Follow the algorithm — students remember decision trees far better than paragraphs. Click through each branch to see the recommendation.",
+          "after": "Follow the algorithm: students remember decision trees far better than paragraphs. Click through each branch to see the recommendation."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-clinical-pearls.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 23,
+          "rule": "colon",
+          "before": "Distilled clinical wisdom — the kind of insights that separate a competent prescriber from an excellent one.",
+          "after": "Distilled clinical wisdom: the kind of insights that separate a competent prescriber from an excellent one."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-clinical-uses.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 30,
+          "rule": "sentence",
+          "before": "Each indication below is rated by its regulatory status — FDA-approved, off-label, or guideline-supported.",
+          "after": "Each indication below is rated by its regulatory status. FDA-approved, off-label, or guideline-supported."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-comparison-tables.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 32,
+          "rule": "independent",
+          "before": "Side-by-side comparison with related drugs in the same class. Use these tables to make an informed choice — every SSRI has trade-offs.",
+          "after": "Side-by-side comparison with related drugs in the same class. Use these tables to make an informed choice. Every SSRI has trade-offs."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-evidence-hierarchy.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 38,
+          "rule": "colon",
+          "before": "What does international evidence say? What do Indian guidelines recommend? How is it actually practiced in India? These are related but not identical — presented clearly so you understand the context.",
+          "after": "What does international evidence say? What do Indian guidelines recommend? How is it actually practiced in India? These are related but not identical: presented clearly so you understand the context."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-exam-lens.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 129,
+          "rule": "sentence",
+          "before": "Structured by Indian examination — MBBS viva and practical, NEET PG high-yield, INICET clinical reasoning, FMGE frequently tested, and psychiatry residency advanced pearls.",
+          "after": "Structured by Indian examination. MBBS viva and practical, NEET PG high-yield, INICET clinical reasoning, FMGE frequently tested, and psychiatry residency advanced pearls."
+        },
+        {
+          "line": 95,
+          "rule": "colon",
+          "before": "MBBS, NEET-PG, USMLE, PLAB — these are the facts that show up repeatedly in pharmacology and psychiatry exams.",
+          "after": "MBBS, NEET-PG, USMLE, PLAB: these are the facts that show up repeatedly in pharmacology and psychiatry exams."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-exam-pearls.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 25,
+          "rule": "colon",
+          "before": "MBBS, NEET-PG, USMLE, PLAB — these are the facts that show up repeatedly in pharmacology and psychiatry exams.",
+          "after": "MBBS, NEET-PG, USMLE, PLAB: these are the facts that show up repeatedly in pharmacology and psychiatry exams."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-indian-comparison.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 31,
+          "rule": "colon",
+          "before": "Drug selection isn't universal — it depends on the clinical setting, patient population, and resources. Here's how this drug compares in specific Indian scenarios.",
+          "after": "Drug selection isn't universal: it depends on the clinical setting, patient population, and resources. Here's how this drug compares in specific Indian scenarios."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-interactions.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 46,
+          "rule": "comma",
+          "before": "What should not be combined — and why.",
+          "after": "What should not be combined, and why."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-knowledge-graph.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 190,
+          "rule": "colon",
+          "before": "A side effect this drug can cause — know the warning signs.",
+          "after": "A side effect this drug can cause: know the warning signs."
+        },
+        {
+          "line": 60,
+          "rule": "colon",
+          "before": "Hover any node to see its relationship. Click to navigate. This is KYP's signature feature — no other psychopharmacology platform surfaces these connections.",
+          "after": "Hover any node to see its relationship. Click to navigate. This is KYP's signature feature: no other psychopharmacology platform surfaces these connections."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-learning-time-badge.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 18,
+          "rule": "sentence",
+          "before": "Extremely High Yield — Memorize",
+          "after": "Extremely High Yield. Memorize"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-monitoring.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 29,
+          "rule": "comma",
+          "before": "The monitoring schedule below balances clinical safety with practicality. The single most important monitoring parameter is mood and suicidality — especially during the first month of therapy. Tick of",
+          "after": "The monitoring schedule below balances clinical safety with practicality. The single most important monitoring parameter is mood and suicidality, especially during the first month of therapy. Tick off"
+        },
+        {
+          "line": 28,
+          "rule": "comma",
+          "before": "What should be checked — and when?",
+          "after": "What should be checked, and when?"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-navigation-module.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 67,
+          "rule": "comma",
+          "before": "Explore the drug family, compare with alternatives, see Indian-specific scenarios, and find related drugs — all in one place.",
+          "after": "Explore the drug family, compare with alternatives, see Indian-specific scenarios, and find related drugs, all in one place."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-neurotransmitters.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 32,
+          "rule": "quoted",
+          "before": "${drug.genericName}'s own receptor profile documents σ1 (sigma-1) activity — “${entry}”. The Knowledge Chain section connects this target to ${drug.genericName}'s wider pharmacology.",
+          "after": "${drug.genericName}'s own receptor profile documents σ1 (sigma-1) activity: “${entry}”. The Knowledge Chain section connects this target to ${drug.genericName}'s wider pharmacology."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-patient-education.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 27,
+          "rule": "colon",
+          "before": "In plain language — what you need to know.",
+          "after": "In plain language: what you need to know."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-prescriber-guide.tsx",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 349,
+          "rule": "sentence",
+          "before": "Do Not Use — Hard Stops",
+          "after": "Do Not Use. Hard Stops"
+        },
+        {
+          "line": 299,
+          "rule": "sentence",
+          "before": "How To Stop — Taper Protocol",
+          "after": "How To Stop. Taper Protocol"
+        },
+        {
+          "line": 255,
+          "rule": "sentence",
+          "before": "Side Effects — The Management Ladder",
+          "after": "Side Effects. The Management Ladder"
+        },
+        {
+          "line": 223,
+          "rule": "colon",
+          "before": "Before you start — baseline workup",
+          "after": "Before you start: baseline workup"
+        },
+        {
+          "line": 186,
+          "rule": "colon",
+          "before": "The complete prescribing playbook for ${drug.genericName} — onset, dosing, side-effect rescue, tapering, special populations, and the art of psychopharmacology.",
+          "after": "The complete prescribing playbook for ${drug.genericName}: onset, dosing, side-effect rescue, tapering, special populations, and the art of psychopharmacology."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-prescription-workflow.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 43,
+          "rule": "colon",
+          "before": "The complete Indian prescribing workflow — what to check before starting, what to monitor during treatment, when to follow up, and when to refer to a specialist.",
+          "after": "The complete Indian prescribing workflow: what to check before starting, what to monitor during treatment, when to follow up, and when to refer to a specialist."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-related-drugs.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 119,
+          "rule": "comma",
+          "before": "Each card explains when you'd pick this medication instead of the current one — and when you wouldn't. Clinical reasoning, not just a list of names.",
+          "after": "Each card explains when you'd pick this medication instead of the current one, and when you wouldn't. Clinical reasoning, not just a list of names."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-side-effect-causal.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 93,
+          "rule": "colon",
+          "before": "Its side effects — plain language",
+          "after": "Its side effects: plain language"
+        },
+        {
+          "line": 89,
+          "rule": "colon",
+          "before": "How this medication works — plain language",
+          "after": "How this medication works: plain language"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-side-effects.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 55,
+          "rule": "comma",
+          "before": "What to expect — and what to worry about.",
+          "after": "What to expect, and what to worry about."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-ward-pearls.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 43,
+          "rule": "colon",
+          "before": "What your psychiatry professor may ask in viva, what the resident expects you to know, what consultants commonly do, and what interns commonly miss — the four levels of ward learning.",
+          "after": "What your psychiatry professor may ask in viva, what the resident expects you to know, what consultants commonly do, and what interns commonly miss: the four levels of ward learning."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/indian-clinical-module.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 55,
+          "rule": "comma",
+          "before": "Brands, availability, cost, hospital encounter, prescription workflow, and a sample Indian OPD prescription — all in one place.",
+          "after": "Brands, availability, cost, hospital encounter, prescription workflow, and a sample Indian OPD prescription, all in one place."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/learning-module.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 52,
+          "rule": "comma",
+          "before": "Clinical pearls, exam-specific content, mnemonics, and Indian ward pearls — all in one place. Switch between tabs to focus on what you need.",
+          "after": "Clinical pearls, exam-specific content, mnemonics, and Indian ward pearls, all in one place. Switch between tabs to focus on what you need."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/medical-knowledge-chain.tsx",
+      "editCount": 4,
+      "edits": [
+        {
+          "line": 644,
+          "rule": "comma",
+          "before": "Referenced in the drug data — not yet a registered graph entity",
+          "after": "Referenced in the drug data, not yet a registered graph entity"
+        },
+        {
+          "line": 464,
+          "rule": "sentence",
+          "before": " — ICD-10 ${entry.icd10}",
+          "after": ". ICD-10 ${entry.icd10}"
+        },
+        {
+          "line": 351,
+          "rule": "imperative",
+          "before": "The canonical data names several co-equal molecular targets rather than one primary — see the full target list below.",
+          "after": "The canonical data names several co-equal molecular targets rather than one primary. See the full target list below."
+        },
+        {
+          "line": 296,
+          "rule": "colon",
+          "before": "All KYP ${chain.class.label}s — medication class collection",
+          "after": "All KYP ${chain.class.label}s: medication class collection"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/patient-guide-section.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 76,
+          "rule": "colon",
+          "before": "Written in plain language for patients and caregivers. It explains what this medicine is, what to expect, and what to watch out for. It is general information — your doctor's instructions for you alwa",
+          "after": "Written in plain language for patients and caregivers. It explains what this medicine is, what to expect, and what to watch out for. It is general information: your doctor's instructions for you alway"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/patient-quick-facts.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 73,
+          "rule": "colon",
+          "before": "${drug.commonSideEffects.length} common, ${drug.seriousSideEffects.length} serious — see full list below.",
+          "after": "${drug.commonSideEffects.length} common, ${drug.seriousSideEffects.length} serious: see full list below."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/home-hero.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 119,
+          "rule": "colon",
+          "before": "Search a medication — sertraline, fluoxetine…",
+          "after": "Search a medication: sertraline, fluoxetine…"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/neuroarcade-section.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 51,
+          "rule": "colon",
+          "before": "NeuroArcade — gamified neuroscience learning platform with interactive psychopharmacology challenges",
+          "after": "NeuroArcade: gamified neuroscience learning platform with interactive psychopharmacology challenges"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/study/continue-studying.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 116,
+          "rule": "colon",
+          "before": "Every course is a complete lesson plan — objectives, checkpoints, active recall. Begin with course 01 and your progress will be remembered on this device.",
+          "after": "Every course is a complete lesson plan: objectives, checkpoints, active recall. Begin with course 01 and your progress will be remembered on this device."
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/ui/emergency-alert.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 25,
+          "rule": "parenthetical",
+          "before": "If you or someone near you is in immediate danger — overdose, suicidal thoughts, severe withdrawal, or unresponsiveness — call now. These lines are free, confidential, and staffed by trained professio",
+          "after": "If you or someone near you is in immediate danger (overdose, suicidal thoughts, severe withdrawal, or unresponsiveness) call now. These lines are free, confidential, and staffed by trained professiona"
+        }
+      ]
+    },
+    {
+      "file": "src/components/psychiatry/course/concept/concept-revision.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 393,
+          "rule": "colon",
+          "before": "The exam lens — by examination. KYP Practice Questions unless a verified previous-year concept is named.",
+          "after": "The exam lens: by examination. KYP Practice Questions unless a verified previous-year concept is named."
+        },
+        {
+          "line": 267,
+          "rule": "comma",
+          "before": "What goes wrong — and the correction.",
+          "after": "What goes wrong, and the correction."
+        }
+      ]
+    },
+    {
+      "file": "src/components/psychiatry/course/concept/concept-sections.tsx",
+      "editCount": 8,
+      "edits": [
+        {
+          "line": 722,
+          "rule": "comma",
+          "before": "In plain language — for patients and families.",
+          "after": "In plain language, for patients and families."
+        },
+        {
+          "line": 675,
+          "rule": "colon",
+          "before": "How the science is used at the bedside — educational, not a treatment algorithm.",
+          "after": "How the science is used at the bedside: educational, not a treatment algorithm."
+        },
+        {
+          "line": 594,
+          "rule": "comma",
+          "before": "What else it could be — and the feature that decides.",
+          "after": "What else it could be, and the feature that decides."
+        },
+        {
+          "line": 513,
+          "rule": "colon",
+          "before": "What it looks like — by cluster.",
+          "after": "What it looks like: by cluster."
+        },
+        {
+          "line": 435,
+          "rule": "colon",
+          "before": "Who this affects — global and Indian numbers.",
+          "after": "Who this affects: global and Indian numbers."
+        },
+        {
+          "line": 364,
+          "rule": "colon",
+          "before": "Follow the chain from molecule to symptom — structured pathway data, rendered.",
+          "after": "Follow the chain from molecule to symptom: structured pathway data, rendered."
+        },
+        {
+          "line": 239,
+          "rule": "colon",
+          "before": "What actually happens — graded honestly.",
+          "after": "What actually happens: graded honestly."
+        },
+        {
+          "line": 145,
+          "rule": "colon",
+          "before": "Everything this topic touches — every link is a real KYP route.",
+          "after": "Everything this topic touches: every link is a real KYP route."
+        }
+      ]
+    },
+    {
+      "file": "src/components/psychiatry/course/course-clinical.tsx",
+      "editCount": 8,
+      "edits": [
+        {
+          "line": 444,
+          "rule": "comma",
+          "before": "In plain language — for patients and families.",
+          "after": "In plain language, for patients and families."
+        },
+        {
+          "line": 377,
+          "rule": "comma",
+          "before": "Only real KYP drug lessons are linked. Missing lessons are recorded as content gaps — never invented.",
+          "after": "Only real KYP drug lessons are linked. Missing lessons are recorded as content gaps, never invented."
+        },
+        {
+          "line": 306,
+          "rule": "comma",
+          "before": "Educational content — not a substitute for clinical judgment.",
+          "after": "Educational content, not a substitute for clinical judgment."
+        },
+        {
+          "line": 306,
+          "rule": "colon",
+          "before": "How the receptor and transporter map changes prescribing, side-effect reasoning and counselling — educational, not a treatment algorithm.",
+          "after": "How the receptor and transporter map changes prescribing, side-effect reasoning and counselling: educational, not a treatment algorithm."
+        },
+        {
+          "line": 254,
+          "rule": "comma",
+          "before": "What else it could be — and the feature that decides.",
+          "after": "What else it could be, and the feature that decides."
+        },
+        {
+          "line": 124,
+          "rule": "colon",
+          "before": "What it looks like — by cluster.",
+          "after": "What it looks like: by cluster."
+        },
+        {
+          "line": 90,
+          "rule": "participial",
+          "before": "No single cause — converging pathways.",
+          "after": "No single cause, converging pathways."
+        },
+        {
+          "line": 44,
+          "rule": "colon",
+          "before": "Who this affects — global and Indian numbers.",
+          "after": "Who this affects: global and Indian numbers."
+        }
+      ]
+    },
+    {
+      "file": "src/components/psychiatry/course/course-foundations.tsx",
+      "editCount": 6,
+      "edits": [
+        {
+          "line": 428,
+          "rule": "colon",
+          "before": "Structured pathway data — rendered, never hard-coded graphics.",
+          "after": "Structured pathway data: rendered, never hard-coded graphics."
+        },
+        {
+          "line": 389,
+          "rule": "comma",
+          "before": "The chemical systems involved — and the drugs that speak them.",
+          "after": "The chemical systems involved, and the drugs that speak them."
+        },
+        {
+          "line": 347,
+          "rule": "colon",
+          "before": "Only regions with a genuine, teachable role — every claim carries its evidence grade.",
+          "after": "Only regions with a genuine, teachable role: every claim carries its evidence grade."
+        },
+        {
+          "line": 311,
+          "rule": "colon",
+          "before": "What actually happens — graded honestly.",
+          "after": "What actually happens: graded honestly."
+        },
+        {
+          "line": 190,
+          "rule": "colon",
+          "before": "Hover any node to see its relationship. Click to navigate — every link is a real KYP route.",
+          "after": "Hover any node to see its relationship. Click to navigate: every link is a real KYP route."
+        },
+        {
+          "line": 173,
+          "rule": "comma",
+          "before": "A medication relevant to this topic — with a full KYP drug lesson.",
+          "after": "A medication relevant to this topic, with a full KYP drug lesson."
+        }
+      ]
+    },
+    {
+      "file": "src/components/psychiatry/course/course-india-exam.tsx",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 296,
+          "rule": "colon",
+          "before": "The exam lens — by examination.",
+          "after": "The exam lens: by examination."
+        },
+        {
+          "line": 212,
+          "rule": "comma",
+          "before": "What goes wrong — and the correction.",
+          "after": "What goes wrong, and the correction."
+        },
+        {
+          "line": 185,
+          "rule": "comma",
+          "before": "An educational decision tree — never a substitute for professional judgment.",
+          "after": "An educational decision tree, never a substitute for professional judgment."
+        }
+      ]
+    },
+    {
+      "file": "src/components/psychiatry/course/course-recall.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 81,
+          "rule": "independent",
+          "before": "KYP content review: ${course.lastReviewed}. Each course is an original rewrite of its mapped source chapter, supplemented by KYP-researched references (guidelines, trials, surveys) — every claim is in",
+          "after": "KYP content review: ${course.lastReviewed}. Each course is an original rewrite of its mapped source chapter, supplemented by KYP-researched references (guidelines, trials, surveys). Every claim is int"
+        },
+        {
+          "line": 80,
+          "rule": "colon",
+          "before": "Sources — clean and checkable.",
+          "after": "Sources: clean and checkable."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/concerns/definitions.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 201,
+          "rule": "colon",
+          "before": "Based on the interaction entries each medication's own page documents — severity tallies verbatim, never scored. Use the Interaction Checker for specific pairs.",
+          "after": "Based on the interaction entries each medication's own page documents: severity tallies verbatim, never scored. Use the Interaction Checker for specific pairs."
+        },
+        {
+          "line": 198,
+          "rule": "colon",
+          "before": "Each medication's own interaction list, tallied by documented severity — check specific pairs in the Interaction Checker.",
+          "after": "Each medication's own interaction list, tallied by documented severity: check specific pairs in the Interaction Checker."
+        },
+        {
+          "line": 191,
+          "rule": "colon",
+          "before": "Based on the monitoring parameters each medication's own page documents — counts and names, never scored.",
+          "after": "Based on the monitoring parameters each medication's own page documents: counts and names, never scored."
+        },
+        {
+          "line": 188,
+          "rule": "colon",
+          "before": "Each medication's own monitoring list — parameters and check frequencies, verbatim.",
+          "after": "Each medication's own monitoring list: parameters and check frequencies, verbatim."
+        },
+        {
+          "line": 117,
+          "rule": "comma",
+          "before": "Documented acute parkinsonism, dystonia, rigidity and akathisia — not tardive effects.",
+          "after": "Documented acute parkinsonism, dystonia, rigidity and akathisia, not tardive effects."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/custom-test/templates.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 572,
+          "rule": "independent",
+          "before": "Both ${drug.genericName} and ${partner.genericName} resolve to ${target.name} as their single primary molecular target — each documented in the canonical molecular-target statement on their drug pages",
+          "after": "Both ${drug.genericName} and ${partner.genericName} resolve to ${target.name} as their single primary molecular target. Each documented in the canonical molecular-target statement on their drug pages."
+        },
+        {
+          "line": 152,
+          "rule": "comma",
+          "before": "${drug.genericName} modulates ${drug.neurotransmitters.join(\", \")} — as documented in its neuroscience profile.",
+          "after": "${drug.genericName} modulates ${drug.neurotransmitters.join(\", \")}, as documented in its neuroscience profile."
+        },
+        {
+          "line": 102,
+          "rule": "colon",
+          "before": "${drug.genericName} is ${drug.drugClassFullName} — class label \"${drug.drugClassLabel}\" in the KYP medication registry.",
+          "after": "${drug.genericName} is ${drug.drugClassFullName}: class label \"${drug.drugClassLabel}\" in the KYP medication registry."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/brain.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 101,
+          "rule": "colon",
+          "before": "D2 blockade causes hyperprolactinaemia — galactorrhoea, gynaecomastia, amenorrhoea.",
+          "after": "D2 blockade causes hyperprolactinaemia: galactorrhoea, gynaecomastia, amenorrhoea."
+        },
+        {
+          "line": 69,
+          "rule": "colon",
+          "before": "Reward, motivation, and reinforcement learning — the brain's primary reward circuit.",
+          "after": "Reward, motivation, and reinforcement learning: the brain's primary reward circuit."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/classes.ts",
+      "editCount": 8,
+      "edits": [
+        {
+          "line": 76,
+          "rule": "colon",
+          "before": "Selective serotonin reuptake inhibitors — first-line antidepressants with wide safety margin.",
+          "after": "Selective serotonin reuptake inhibitors: first-line antidepressants with wide safety margin."
+        },
+        {
+          "line": 67,
+          "rule": "colon",
+          "before": "Lipophilic solvents that rapidly cross the blood-brain barrier — brief intoxication, severe neurotoxicity.",
+          "after": "Lipophilic solvents that rapidly cross the blood-brain barrier: brief intoxication, severe neurotoxicity."
+        },
+        {
+          "line": 58,
+          "rule": "colon",
+          "before": "NMDA receptor antagonists — producing dissociation, analgesia, and hallucinations.",
+          "after": "NMDA receptor antagonists: producing dissociation, analgesia, and hallucinations."
+        },
+        {
+          "line": 49,
+          "rule": "colon",
+          "before": "CB1 receptor agonists — altering perception, mood, memory, and appetite.",
+          "after": "CB1 receptor agonists: altering perception, mood, memory, and appetite."
+        },
+        {
+          "line": 40,
+          "rule": "colon",
+          "before": "μ-opioid receptor agonists — producing analgesia, euphoria, and respiratory depression.",
+          "after": "μ-opioid receptor agonists: producing analgesia, euphoria, and respiratory depression."
+        },
+        {
+          "line": 31,
+          "rule": "colon",
+          "before": "5-HT2A receptor agonists — producing profound alterations in perception, mood, and sense of self.",
+          "after": "5-HT2A receptor agonists: producing profound alterations in perception, mood, and sense of self."
+        },
+        {
+          "line": 22,
+          "rule": "colon",
+          "before": "Increases catecholamine activity — producing alertness, euphoria, tachycardia, and crash.",
+          "after": "Increases catecholamine activity: producing alertness, euphoria, tachycardia, and crash."
+        },
+        {
+          "line": 13,
+          "rule": "colon",
+          "before": "Enhances GABA inhibition — producing sedation, anxiolysis, and at high doses respiratory depression.",
+          "after": "Enhances GABA inhibition: producing sedation, anxiolysis, and at high doses respiratory depression."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs.ts",
+      "editCount": 12,
+      "edits": [
+        {
+          "line": 150,
+          "rule": "colon",
+          "before": "Neurotransmitter imbalance diagram — illustrating the GABA decrease and glutamate increase during substance withdrawal",
+          "after": "Neurotransmitter imbalance diagram: illustrating the GABA decrease and glutamate increase during substance withdrawal"
+        },
+        {
+          "line": 138,
+          "rule": "colon",
+          "before": "Phencyclidine molecule — illustrating its NMDA receptor antagonism and dissociative effects on glutamatergic neurotransmission",
+          "after": "Phencyclidine molecule: illustrating its NMDA receptor antagonism and dissociative effects on glutamatergic neurotransmission"
+        },
+        {
+          "line": 126,
+          "rule": "colon",
+          "before": "Lysergic acid diethylamide molecule — illustrating its partial agonism at 5-HT2A serotonin receptors and hallucinogenic effects",
+          "after": "Lysergic acid diethylamide molecule: illustrating its partial agonism at 5-HT2A serotonin receptors and hallucinogenic effects"
+        },
+        {
+          "line": 114,
+          "rule": "colon",
+          "before": "Toluene molecule — a common inhalant solvent, illustrating its lipophilic crossing of the blood-brain barrier and neurotoxic effects",
+          "after": "Toluene molecule: a common inhalant solvent, illustrating its lipophilic crossing of the blood-brain barrier and neurotoxic effects"
+        },
+        {
+          "line": 102,
+          "rule": "colon",
+          "before": "Phenobarbital molecule — the prototypical barbiturate, illustrating its direct GABA-A receptor agonism and CNS depression",
+          "after": "Phenobarbital molecule: the prototypical barbiturate, illustrating its direct GABA-A receptor agonism and CNS depression"
+        },
+        {
+          "line": 90,
+          "rule": "colon",
+          "before": "Diazepam molecule — the prototypical benzodiazepine, illustrating its positive allosteric modulation of GABA-A receptors",
+          "after": "Diazepam molecule: the prototypical benzodiazepine, illustrating its positive allosteric modulation of GABA-A receptors"
+        },
+        {
+          "line": 78,
+          "rule": "colon",
+          "before": "Amphetamine molecule — illustrating its reversal of dopamine and norepinephrine transporters in the synaptic cleft",
+          "after": "Amphetamine molecule: illustrating its reversal of dopamine and norepinephrine transporters in the synaptic cleft"
+        },
+        {
+          "line": 66,
+          "rule": "colon",
+          "before": "Nicotine molecule — illustrating its action on nicotinic acetylcholine receptors and dopaminergic reward activation",
+          "after": "Nicotine molecule: illustrating its action on nicotinic acetylcholine receptors and dopaminergic reward activation"
+        },
+        {
+          "line": 54,
+          "rule": "colon",
+          "before": "Cocaine molecule — illustrating its blockade of monoamine transporters and dopaminergic reward pathway activation",
+          "after": "Cocaine molecule: illustrating its blockade of monoamine transporters and dopaminergic reward pathway activation"
+        },
+        {
+          "line": 42,
+          "rule": "colon",
+          "before": "Morphine molecule — the prototypical opioid, illustrating its binding to μ-opioid receptors and analgesic mechanism",
+          "after": "Morphine molecule: the prototypical opioid, illustrating its binding to μ-opioid receptors and analgesic mechanism"
+        },
+        {
+          "line": 30,
+          "rule": "colon",
+          "before": "THC molecule — tetrahydrocannabinol, the psychoactive component of cannabis, illustrating its action on CB1 cannabinoid receptors",
+          "after": "THC molecule: tetrahydrocannabinol, the psychoactive component of cannabis, illustrating its action on CB1 cannabinoid receptors"
+        },
+        {
+          "line": 18,
+          "rule": "colon",
+          "before": "Ethanol molecule — alcohol's psychoactive component, illustrating its chemical structure and CNS depressant mechanism",
+          "after": "Ethanol molecule: alcohol's psychoactive component, illustrating its chemical structure and CNS depressant mechanism"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/medications.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 69,
+          "rule": "colon",
+          "before": "Non-opioid analgesics, NSAIDs, opioid analgesics, and neuropathic pain agents — how they block pain signals.",
+          "after": "Non-opioid analgesics, NSAIDs, opioid analgesics, and neuropathic pain agents: how they block pain signals."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/platform.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 130,
+          "rule": "colon",
+          "before": "Sudden cessation can cause SSRI discontinuation syndrome (flu-like symptoms, dizziness, 'brain zaps'). Taper over 4+ weeks. Half-life matters — paroxetine is worst, fluoxetine is self-tapering.",
+          "after": "Sudden cessation can cause SSRI discontinuation syndrome (flu-like symptoms, dizziness, 'brain zaps'). Taper over 4+ weeks. Half-life matters: paroxetine is worst, fluoxetine is self-tapering."
+        },
+        {
+          "line": 90,
+          "rule": "colon",
+          "before": "Sertraline blocks the serotonin transporter (SERT) within hours. Early side effects (nausea, headache) appear here — patients often feel worse before they feel better.",
+          "after": "Sertraline blocks the serotonin transporter (SERT) within hours. Early side effects (nausea, headache) appear here: patients often feel worse before they feel better."
+        },
+        {
+          "line": 66,
+          "rule": "parenthetical",
+          "before": "The medication library focuses on psychotropic drugs — antidepressants, antipsychotics, mood stabilisers, anxiolytics, hypnotics, stimulants, and substance-use treatments — plus substance-use modules ",
+          "after": "The medication library focuses on psychotropic drugs (antidepressants, antipsychotics, mood stabilisers, anxiolytics, hypnotics, stimulants, and substance-use treatments) plus substance-use modules (a"
+        },
+        {
+          "line": 36,
+          "rule": "colon",
+          "before": "National mental health helpline — free, confidential, 24/7",
+          "after": "National mental health helpline: free, confidential, 24/7"
+        },
+        {
+          "line": 30,
+          "rule": "colon",
+          "before": "All India emergency number — medical, police, fire",
+          "after": "All India emergency number: medical, police, fire"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/search-index.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 251,
+          "rule": "colon",
+          "before": "Red flags that require immediate medical attention — overdose, serotonin syndrome, severe withdrawal.",
+          "after": "Red flags that require immediate medical attention: overdose, serotonin syndrome, severe withdrawal."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/side-effects.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 65,
+          "rule": "colon",
+          "before": "Significant metabolic burden — increased appetite, insulin resistance, dyslipidaemia.",
+          "after": "Significant metabolic burden: increased appetite, insulin resistance, dyslipidaemia."
+        },
+        {
+          "line": 55,
+          "rule": "colon",
+          "before": "Decreased libido, delayed orgasm, erectile dysfunction — common with serotonergic antidepressants.",
+          "after": "Decreased libido, delayed orgasm, erectile dysfunction: common with serotonergic antidepressants."
+        },
+        {
+          "line": 12,
+          "rule": "comma",
+          "before": "Inner restlessness and irresistible urge to move — one of the most distressing antipsychotic side effects.",
+          "after": "Inner restlessness and irresistible urge to move, one of the most distressing antipsychotic side effects."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/types.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 1112,
+          "rule": "colon",
+          "before": "Start here — the essential mental model.",
+          "after": "Start here: the essential mental model."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/study/daily-plan.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 72,
+          "rule": "colon",
+          "before": "${unfinished.completedSections.length} of ${total} sections read — picks up where you stopped.",
+          "after": "${unfinished.completedSections.length} of ${total} sections read: picks up where you stopped."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/oxford/learn.ts",
+      "editCount": 8,
+      "edits": [
+        {
+          "line": 190,
+          "rule": "colon",
+          "before": "Knowledge map, epidemiology, exam lens and self-testing — built for passing and for retaining.",
+          "after": "Knowledge map, epidemiology, exam lens and self-testing: built for passing and for retaining."
+        },
+        {
+          "line": 160,
+          "rule": "colon",
+          "before": "Reference topic — optional context.",
+          "after": "Reference topic: optional context."
+        },
+        {
+          "line": 159,
+          "rule": "colon",
+          "before": "Supporting topic — deepens the core.",
+          "after": "Supporting topic: deepens the core."
+        },
+        {
+          "line": 158,
+          "rule": "colon",
+          "before": "Core clinical topic — the heart of the curriculum.",
+          "after": "Core clinical topic: the heart of the curriculum."
+        },
+        {
+          "line": 67,
+          "rule": "colon",
+          "before": "Self-test MCQs — check yourself before you move on.",
+          "after": "Self-test MCQs: check yourself before you move on."
+        },
+        {
+          "line": 57,
+          "rule": "colon",
+          "before": "Clinical reasoning — diagnosis, management and cases.",
+          "after": "Clinical reasoning: diagnosis, management and cases."
+        },
+        {
+          "line": 47,
+          "rule": "colon",
+          "before": "Detailed clinical content — epidemiology, causes and risk factors.",
+          "after": "Detailed clinical content: epidemiology, causes and risk factors."
+        },
+        {
+          "line": 42,
+          "rule": "colon",
+          "before": "Core concepts — what it is and what happens in the body and brain.",
+          "after": "Core concepts: what it is and what happens in the body and brain."
+        }
+      ]
+    },
+    {
+      "file": "src/app/compare/classes/page.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 83,
+          "rule": "jsx-colon",
+          "before": "lass differ across the concerns\n                that matter — weight and metabolic effects, sedation, prolactin,\n       ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/compare/page.tsx",
+      "editCount": 4,
+      "edits": [
+        {
+          "line": 389,
+          "rule": "jsx-colon",
+          "before": "cted medications&apos;\n                    reviewed content — values are never merged, averaged or\n                    i",
+          "after": "JSX"
+        },
+        {
+          "line": 378,
+          "rule": "jsx-colon",
+          "before": "rary for this exact\n                        combination yet — the rows above are each\n                        medication",
+          "after": "JSX"
+        },
+        {
+          "line": 228,
+          "rule": "jsx-imperative",
+          "before": ".5 w-3.5\" aria-hidden />\n                  Class comparison — choose by concern\n                  <ArrowRight className=",
+          "after": "JSX"
+        },
+        {
+          "line": 218,
+          "rule": "jsx-colon",
+          "before": ", interactions, monitoring and\n                clinical use — ending in a choosing takeaway. Every value is\n            ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/diseases/[slug]/page.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 402,
+          "rule": "jsx-sentence",
+          "before": "               <h3 className=\"text-h3 mb-4\">Pharmacotherapy — Drugs for {disease.name}</h3>\n                <div classNa",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/drugs/[slug]/not-found.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 40,
+          "rule": "jsx-comma",
+          "before": "d one of the {drugs.length} medication\n              guides — or search from any page.\n            </p>\n\n            <di",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/drugs/class/[classId]/page.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 371,
+          "rule": "jsx-colon",
+          "before": "         Aggregated from each medication&apos;s locked data — values are\n                quoted verbatim from their guid",
+          "after": "JSX"
+        },
+        {
+          "line": 191,
+          "rule": "jsx-colon",
+          "before": "Each guide\n                below follows the same structure — mechanism of action, receptor\n                pharmacology",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/drugs/page.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 168,
+          "rule": "jsx-colon",
+          "before": "\n                      Browse by class, then open any guide — every medication\n                      follows the same st",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/interactions/page.tsx",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 475,
+          "rule": "jsx-colon",
+          "before": "lected\n                    medications&apos; reviewed pages — severities are never\n                    re-graded, mechan",
+          "after": "JSX"
+        },
+        {
+          "line": 390,
+          "rule": "jsx-colon",
+          "before": "on is listed as\n                            contraindicated — these medications must not be\n                            ",
+          "after": "JSX"
+        },
+        {
+          "line": 256,
+          "rule": "jsx-colon",
+          "before": "teraction their\n                own pages list between them — what it does, why it happens,\n                and what to ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/learn/page.tsx",
+      "editCount": 6,
+      "edits": [
+        {
+          "line": 253,
+          "rule": "jsx-colon",
+          "before": "\n                    Explore alcohol, opioids, and cannabis — receptor pharmacology, intoxication, withdrawal timelines,",
+          "after": "JSX"
+        },
+        {
+          "line": 228,
+          "rule": "jsx-colon",
+          "before": "relaxed max-w-md\">\n                    Understand disorders — symptoms, diagnosis criteria, pathophysiology, and managem",
+          "after": "JSX"
+        },
+        {
+          "line": 194,
+          "rule": "jsx-colon",
+          "before": "                     Learn how psychiatric medications work — mechanism of action, receptor pharmacology, clinical indic",
+          "after": "JSX"
+        },
+        {
+          "line": 185,
+          "rule": "jsx-sentence",
+          "before": "n className=\"font-mono text-xs text-muted-foreground/50\">02 — Primary Pathway</span>\n                    </div>\n        ",
+          "after": "JSX"
+        },
+        {
+          "line": 148,
+          "rule": "jsx-sentence",
+          "before": "n className=\"font-mono text-xs text-muted-foreground/50\">01 — Primary Pathway</span>\n                    </div>\n        ",
+          "after": "JSX"
+        },
+        {
+          "line": 87,
+          "rule": "jsx-colon",
+          "before": "substances, and neuroscience into structured learning paths — built for medical students, residents, and patients who wa",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/medicine/page.tsx",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 237,
+          "rule": "jsx-comma",
+          "before": "g any medicine belong\n                  with your clinician — and if you are in crisis, use the\n                  emerge",
+          "after": "JSX"
+        },
+        {
+          "line": 231,
+          "rule": "jsx-colon",
+          "before": "            information is the same guide your doctor reads — written\n                  so you can actually use it.\n    ",
+          "after": "JSX"
+        },
+        {
+          "line": 135,
+          "rule": "jsx-comma",
+          "before": "                  weight, sedation, prolactin, EPS and more — and see how\n                    each medicine&apos;s own d",
+          "after": "JSX"
+        },
+        {
+          "line": 109,
+          "rule": "jsx-colon",
+          "before": "ction their\n                    own pages list between them — what it does, why it\n                    happens, and what",
+          "after": "JSX"
+        },
+        {
+          "line": 69,
+          "rule": "jsx-comma",
+          "before": "dicine is, what it treats, and\n                how it works — in plain language, before anything else. Every\n           ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/psychiatry/page.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 252,
+          "rule": "jsx-colon",
+          "before": "very lesson carries recall prompts and an exam-lens section — the\n                questions examiners actually ask.\n    ",
+          "after": "JSX"
+        },
+        {
+          "line": 244,
+          "rule": "jsx-colon",
+          "before": "      {stats.mcqCount} authored questions with explanations — inside every lesson\n                or mixed across the cu",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/psychiatry/self-test/self-test-client.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 129,
+          "rule": "jsx-colon",
+          "before": ">\n              Mixed practice from all {noteCount} lessons — every question authored for its\n              topic, with ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/quiz/custom/custom-test-builder.tsx",
+      "editCount": 8,
+      "edits": [
+        {
+          "line": 1515,
+          "rule": "jsx-colon",
+          "before": "nd\" aria-live=\"polite\">\n                    Answer recorded — feedback comes after you submit.\n                  </p>\n  ",
+          "after": "JSX"
+        },
+        {
+          "line": 1320,
+          "rule": "jsx-colon",
+          "before": "ound/80\"\n                >\n                  Weak-Area Test — drawn from your practice history:\n                  <ul cl",
+          "after": "JSX"
+        },
+        {
+          "line": 1265,
+          "rule": "jsx-colon",
+          "before": " medication\n                  content and in-course quizzes — no AI-generated medical\n                  facts. Scores st",
+          "after": "JSX"
+        },
+        {
+          "line": 1158,
+          "rule": "jsx-colon",
+          "before": "ed-foreground\" aria-hidden />\n                        Timed — exam pacing\n                      </label>\n               ",
+          "after": "JSX"
+        },
+        {
+          "line": 1127,
+          "rule": "jsx-comma",
+          "before": "                 and no answer is revealed until you submit — then\n                        a per-section breakdown expla",
+          "after": "JSX"
+        },
+        {
+          "line": 1123,
+          "rule": "jsx-colon",
+          "before": "ted-foreground\" aria-hidden />\n                        Exam — feedback after submission\n                      </label>\n ",
+          "after": "JSX"
+        },
+        {
+          "line": 1030,
+          "rule": "jsx-colon",
+          "before": "nk for the\n                        medications you selected — source-grounded questions over the\n                       ",
+          "after": "JSX"
+        },
+        {
+          "line": 732,
+          "rule": "jsx-colon",
+          "before": "/90\">\n                          Let the test choose for you — it draws from the\n                          classes your p",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/quiz/custom/page.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 71,
+          "rule": "jsx-colon",
+          "before": "         drawn from the same reviewed KYP content you study — nothing\n          invented, nothing outside the library.\n ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/quiz/page.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 561,
+          "rule": "jsx-colon",
+          "before": "          medication and disease pages. No sign-up required — practice\n                  scores are kept on this device ",
+          "after": "JSX"
+        },
+        {
+          "line": 545,
+          "rule": "jsx-colon",
+          "before": "            Build a custom test from any mix of medications — pick the\n                    topics, pick the length, revi",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/study/analytics/page.tsx",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 433,
+          "rule": "jsx-colon",
+          "before": "computed from your own local practice\n              history — nothing is sent anywhere, nothing is tracked.\n            ",
+          "after": "JSX"
+        },
+        {
+          "line": 373,
+          "rule": "jsx-colon",
+          "before": "s answered incorrectly\n                      more than once — the ones worth scheduling for spaced\n                     ",
+          "after": "JSX"
+        },
+        {
+          "line": 290,
+          "rule": "jsx-colon",
+          "before": "                  No completed custom tests with timing yet — durations\n                        appear here as you finis",
+          "after": "JSX"
+        },
+        {
+          "line": 218,
+          "rule": "jsx-colon",
+          "before": "     Percentages need {MIN_TOPIC_SAMPLE}+ answers per class — below\n                      that the number would be noise",
+          "after": "JSX"
+        },
+        {
+          "line": 152,
+          "rule": "jsx-colon",
+          "before": "ld a custom test and this page\n                    fills in — every statistic here comes from your own\n                 ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/study/mistakes/page.tsx",
+      "editCount": 4,
+      "edits": [
+        {
+          "line": 397,
+          "rule": "jsx-comma",
+          "before": "-foreground/60\">\n                  Kept on this device only — never uploaded.\n                </p>\n                {conf",
+          "after": "JSX"
+        },
+        {
+          "line": 385,
+          "rule": "jsx-colon",
+          "before": "\" aria-hidden />\n                        I&apos;m confident — clear\n                      </button>\n                    ",
+          "after": "JSX"
+        },
+        {
+          "line": 223,
+          "rule": "jsx-comma",
+          "before": "ly\n                later and it leaves this list on its own — or clear it\n                yourself once you&apos;re conf",
+          "after": "JSX"
+        },
+        {
+          "line": 166,
+          "rule": "jsx-comma",
+          "before": "re, so you can come back to exactly\n                  those — with the section that teaches each one. Miss\n             ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/study/page.tsx",
+      "editCount": 6,
+      "edits": [
+        {
+          "line": 404,
+          "rule": "jsx-colon",
+          "before": "                    Build a test from the topics you choose — pick the\n                      medications, pick the lengt",
+          "after": "JSX"
+        },
+        {
+          "line": 374,
+          "rule": "jsx-colon",
+          "before": "                  Test yourself with existing question sets — every one\n                      of the {totalQuestions} li",
+          "after": "JSX"
+        },
+        {
+          "line": 356,
+          "rule": "jsx-comma",
+          "before": "is open from the\n                start — no course required — with immediate feedback and\n                explanations o",
+          "after": "JSX"
+        },
+        {
+          "line": 356,
+          "rule": "jsx-colon",
+          "before": "Study Mode. Practice is open from the\n                start — no course required — with immediate feedback and\n         ",
+          "after": "JSX"
+        },
+        {
+          "line": 231,
+          "rule": "jsx-colon",
+          "before": "ication\n                    courses and structured learning — objectives,\n                    checkpoints, and active re",
+          "after": "JSX"
+        },
+        {
+          "line": 110,
+          "rule": "jsx-colon",
+          "before": "               medication and work through it like a course — learning\n                objectives, guided lessons, check",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/study/review/page.tsx",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 292,
+          "rule": "jsx-comma",
+          "before": "                  identity, current interval, next due date — with a clean\n                  export shape (kyp:retention",
+          "after": "JSX"
+        },
+        {
+          "line": 291,
+          "rule": "jsx-colon",
+          "before": "                The review schedule is a plain local record — question\n                  identity, current interval, nex",
+          "after": "JSX"
+        },
+        {
+          "line": 264,
+          "rule": "jsx-colon",
+          "before": "und leading-relaxed\">\n                      A short session — answered with feedback, straight from\n                    ",
+          "after": "JSX"
+        },
+        {
+          "line": 235,
+          "rule": "jsx-comma",
+          "before": "                    it will be scheduled here automatically — or revisit\n                      your Mistake Book to rete",
+          "after": "JSX"
+        },
+        {
+          "line": 219,
+          "rule": "jsx-colon",
+          "before": "sed before come back at growing\n                  intervals — 1, 2, 4, 7, 14, then 30 days. Get one right and\n          ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/app/welcome/page.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 410,
+          "rule": "jsx-sentence",
+          "before": "bles progress tracking across devices. You can verify later — KYP is ready for you now.\n              </p>\n             ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/class-comparison/class-comparison-client.tsx",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 312,
+          "rule": "jsx-colon",
+          "before": "            Pick the concerns that matter for your question — weight and\n                metabolic impact, sedation, pro",
+          "after": "JSX"
+        },
+        {
+          "line": 310,
+          "rule": "jsx-colon",
+          "before": "axed text-muted-foreground\">\n              <li>Pick a class — say, Atypical Antipsychotics (19 medications).</li>\n      ",
+          "after": "JSX"
+        },
+        {
+          "line": 267,
+          "rule": "jsx-comma",
+          "before": "       Sources are the medications&apos; own reviewed pages — including the\n                Stahl&apos;s Essential Psych",
+          "after": "JSX"
+        },
+        {
+          "line": 199,
+          "rule": "jsx-colon",
+          "before": "  <p className=\"text-overline text-muted-foreground\">Step 3 — how they differ</p>\n                <h2\n                  ",
+          "after": "JSX"
+        },
+        {
+          "line": 151,
+          "rule": "jsx-imperative",
+          "before": "-overline text-muted-foreground mb-3\">\n              Step 2 — choose one or more concerns ({concerns.length}/{MAX_CONCER",
+          "after": "JSX"
+        },
+        {
+          "line": 139,
+          "rule": "jsx-colon",
+          "before": "sses, derived live from the medication\n            registry — counts are current members. Classes with a single\n        ",
+          "after": "JSX"
+        },
+        {
+          "line": 97,
+          "rule": "jsx-imperative",
+          "before": "xt-overline text-muted-foreground mb-3\">\n            Step 1 — choose a medication class\n          </p>\n          <div\n  ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/class-comparison/concern-matrix.tsx",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 387,
+          "rule": "jsx-colon",
+          "before": "es behind every cell. Rows appear in registry\n        order — the library deliberately does not rank or recommend.\n     ",
+          "after": "JSX"
+        },
+        {
+          "line": 203,
+          "rule": "jsx-colon",
+          "before": "from {drug.genericName}&apos;s own reviewed\n        profile — the common/serious adverse-effect lists, monitoring list,\n",
+          "after": "JSX"
+        },
+        {
+          "line": 127,
+          "rule": "jsx-colon",
+          "before": "xt-muted-foreground/60\">\n                Data not available — no entry in this medication&apos;s documented\n            ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-exam-frequency-pyq.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 97,
+          "rule": "jsx-comma",
+          "before": "ground mb-3\">\n            Concepts tested in previous exams — not the actual copyrighted questions.\n            Use thes",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-interactions.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 73,
+          "rule": "jsx-colon",
+          "before": "al supplements during\n            medication reconciliation — cough syrups, herbal products such as St John&apos;s\n     ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-knowledge-graph.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 96,
+          "rule": "jsx-colon",
+          "before": ".5\" />\n                {nodes.length} relationships indexed — hover any node above to see how it connects to {drug.gener",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-prescriber-guide.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 426,
+          "rule": "jsx-comma",
+          "before": "ot reproduced. This is study material for medical education — not a prescription\n                aid or substitute for t",
+          "after": "JSX"
+        },
+        {
+          "line": 366,
+          "rule": "jsx-comma",
+          "before": "       <Badge variant=\"outline\" size=\"sm\">when to choose it — and when not to</Badge>\n            </div>\n            <di",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-side-effect-causal.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 128,
+          "rule": "jsx-colon",
+          "before": "n&apos;s own reviewed fields and\n        presented together — the connective structure is ours, every fact\n        is th",
+          "after": "JSX"
+        },
+        {
+          "line": 53,
+          "rule": "jsx-colon",
+          "before": "Name=\"h-3.5 w-3.5\" aria-hidden />\n          Why this effect — the causal chain\n        </p>\n        {hasPatientMode && (",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-side-effects.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 81,
+          "rule": "jsx-colon",
+          "before": "mmediate medical attention. Know the warning signs for each — early\n            recognition is lifesaving.\n          </p",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/drug/medical-knowledge-chain.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 651,
+          "rule": "jsx-comma",
+          "before": "ground/70\">\n                    referenced in the drug data — not yet a registered graph entity\n                  </span",
+          "after": "JSX"
+        },
+        {
+          "line": 566,
+          "rule": "jsx-colon",
+          "before": "den />\n          Derived from the canonical knowledge graph — every link is data-backed.\n        </span>\n      </div>\n\n ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/footer.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 168,
+          "rule": "jsx-colon",
+          "before": "          drug pages, disease modules, and educational text — is protected\n              by copyright and may not be rep",
+          "after": "JSX"
+        },
+        {
+          "line": 167,
+          "rule": "jsx-comma",
+          "before": "         © 2026 Zamaan Ali Shamji. All content on this site — including\n              drug pages, disease modules, and e",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/learn-banner.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 39,
+          "rule": "jsx-comma",
+          "before": "gCount} medications, diseases, substances, and neuroscience — with {mcqCount} practice questions.\n                </p>\n ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/medication-library-section.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 47,
+          "rule": "jsx-sentence",
+          "before": "ssName=\"font-mono text-xs text-muted-foreground/40 mb-2\">01 — Primary</p>\n                <h3\n                  classNam",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/psychiatry-section.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 43,
+          "rule": "jsx-comma",
+          "before": "dian context, exam\n              revision and active recall — with {psychiatryStats.questions}{\" \"}\n              author",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/study/continue-studying.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 254,
+          "rule": "jsx-colon",
+          "before": "ourse\" : \"courses\"} remembered on\n              this device — no account needed.\n            </p>\n\n            {confirmi",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/sections/study/retention-due-entry.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 38,
+          "rule": "jsx-colon",
+          "before": "stion\" : \"questions\"} scheduled for spaced\n          review — questions you missed before, brought back at growing\n     ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/ui/active-recall.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 59,
+          "rule": "jsx-colon",
+          "before": "ng your\n            brain to recall information from memory — produces 2-3× stronger retention than\n            re-readi",
+          "after": "JSX"
+        },
+        {
+          "line": 58,
+          "rule": "jsx-colon",
+          "before": "notes creates an illusion of competence. Retrieval practice — forcing your\n            brain to recall information from ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/kyp/ui/half-life-visualizer.tsx",
+      "editCount": 6,
+      "edits": [
+        {
+          "line": 309,
+          "rule": "jsx-imperative",
+          "before": " cleared\n            about 5 half-lives after the last dose — use the stated\n            half-life above and this profil",
+          "after": "JSX"
+        },
+        {
+          "line": 294,
+          "rule": "jsx-colon",
+          "before": "ge,\n            liver and kidney function, and interactions — levels fall roughly\n            50% every half-life, which",
+          "after": "JSX"
+        },
+        {
+          "line": 285,
+          "rule": "jsx-colon",
+          "before": "ug text-muted-foreground\">\n                to ≈ 97% cleared — the switching-safety number\n              </p>\n           ",
+          "after": "JSX"
+        },
+        {
+          "line": 274,
+          "rule": "jsx-comma",
+          "before": "g text-muted-foreground\">\n                (≈ 5 × half-life) — where dose changes fully show\n              </p>\n         ",
+          "after": "JSX"
+        },
+        {
+          "line": 238,
+          "rule": "jsx-colon",
+          "before": "              >\n                time in half-life multiples — 1× ≈ {formatDuration(parsed.representativeHours)}\n        ",
+          "after": "JSX"
+        },
+        {
+          "line": 102,
+          "rule": "jsx-colon",
+          "before": "3.5 text-brand\" aria-hidden />\n          Half-life timeline — the 5 half-lives rule\n        </p>\n        <span className",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/psychiatry/course/concept/concept-revision.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 252,
+          "rule": "jsx-comma",
+          "before": "t-muted-foreground\">\n          An educational decision tree — never a substitute for professional judgment. Work through",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/psychiatry/course/concept/concept-sections.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 299,
+          "rule": "jsx-colon",
+          "before": "he brain structures and chemical systems beneath the method — open when you are ready\n                for the neuroscien",
+          "after": "JSX"
+        },
+        {
+          "line": 154,
+          "rule": "jsx-colon",
+          "before": "d-foreground\">\n                {nodes.length} linked topics — medications, classes, conditions and more\n              </",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/psychiatry/course/course-clinical.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 403,
+          "rule": "jsx-imperative",
+          "before": "\n              No KYP drug lessons exist for this topic yet — see the recorded content gaps below.\n            </p>\n    ",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/psychiatry/course/course-foundations.tsx",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 294,
+          "rule": "jsx-colon",
+          "before": ".5\" />\n                {nodes.length} relationships indexed — hover any node above to see how it connects to {subject}.\n",
+          "after": "JSX"
+        }
+      ]
+    },
+    {
+      "file": "src/components/psychiatry/course/course-recall.tsx",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 225,
+          "rule": "jsx-colon",
+          "before": "         719 authored self-test questions with explanations — mixed across the whole\n                    curriculum.\n   ",
+          "after": "JSX"
+        },
+        {
+          "line": 126,
+          "rule": "jsx-comma",
+          "before": "t-muted-foreground\">\n              Educational content only — not medical advice. Clinical decisions belong to treating\n",
+          "after": "JSX"
+        }
+      ]
+    }
+  ],
+  "skipped": [
+    {
+      "file": "src/app/compare/page.tsx",
+      "kind": "string",
+      "reason": "would create bad punctuation",
+      "snippet": "ed${selected.length < MAX_SELECTION ? \" — you can add one more\" : \"\"}."
+    },
+    {
+      "file": "src/app/drugs/class/[classId]/page.tsx",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "${cls.fullName} — ${cls.medications.length} medication $"
+    },
+    {
+      "file": "src/app/interactions/page.tsx",
+      "kind": "string",
+      "reason": "would create bad punctuation",
+      "snippet": "ed${selected.length < MAX_SELECTION ? \" — you can add more\" : \" — that's the max"
+    },
+    {
+      "file": "src/app/quiz/custom/custom-test-builder.tsx",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "${cls.label} selected — ${cls.medications.length} ${\n      cls"
+    },
+    {
+      "file": "src/app/quiz/custom/custom-test-builder.tsx",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "Saved “${saved.name}” — ${saved.drugSlugs.length} ${\n      sav"
+    },
+    {
+      "file": "src/app/quiz/custom/custom-test-builder.tsx",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": " — ${total - correctCount} still to revis"
+    },
+    {
+      "file": "src/app/study/analytics/page.tsx",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "${formatDate(t.at)} — ${t.correct ? \"correct\" : \"incorrect\"}"
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-family-navigator.tsx",
+      "kind": "string",
+      "reason": "would create bad punctuation",
+      "snippet": "im()} family. Each has a unique profile — click to explore."
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-side-effect-causal.tsx",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "The side effect, as documented — ${effect.name}"
+    },
+    {
+      "file": "src/components/kyp/ui/guided-learning-toggle.tsx",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "${shortLabel} — ${time}"
+    },
+    {
+      "file": "src/components/psychiatry/course/concept/concept-ui.tsx",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "${evidenceGradeMeta[grade].label} — ${evidenceGradeMeta[grade].description"
+    },
+    {
+      "file": "src/lib/kyp/concerns/definitions.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "ntries in this medication's own profile — "
+    },
+    {
+      "file": "src/lib/kyp/custom-test/templates.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "${region.name} — ${region.functions.join(\", \")}. ${drug"
+    },
+    {
+      "file": "src/lib/kyp/custom-test/templates.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "${ind.name} — ${ind.description}"
+    },
+    {
+      "file": "src/lib/kyp/custom-test/templates.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "${se.name} — ${se.description}"
+    },
+    {
+      "file": "src/lib/kyp/custom-test/templates.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "${se.name} — ${se.description} Management: ${se.man"
+    },
+    {
+      "file": "src/lib/kyp/custom-test/templates.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "${se.name} — ${se.description}"
+    },
+    {
+      "file": "src/lib/kyp/custom-test/templates.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "${m.parameter} — ${m.frequency}. ${m.rationale}"
+    },
+    {
+      "file": "src/lib/kyp/custom-test/templates.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "${c.name} (${c.severity}) — ${c.rationale}"
+    },
+    {
+      "file": "src/lib/kyp/custom-test/templates.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "${stripParens(i.drug)} (${i.severity}) — ${i.mechanism} ${i.action}"
+    },
+    {
+      "file": "src/lib/kyp/custom-test/templates.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "${first.title} — ${first.text}"
+    },
+    {
+      "file": "src/lib/kyp/custom-test/templates.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "${stripParens(i.drug)} (${i.severity}) — ${i.mechanism} ${i.action}"
+    },
+    {
+      "file": "src/lib/kyp/custom-test/templates.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "Interaction mechanism: ${i.drug} — ${i.mechanism}"
+    },
+    {
+      "file": "src/lib/kyp/data/search-index.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": " ${category.name} medication collection — ${taxonomyCategoryMedicationCount(cate"
+    },
+    {
+      "file": "src/lib/kyp/data/search-index.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "icationCount(family)} medication guides — ${family.classes.map((c) => c.label).j"
+    },
+    {
+      "file": "src/lib/kyp/data/search-index.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "${c.fullName} — ${c.medications.length} medication ${c"
+    },
+    {
+      "file": "src/lib/kyp/study/daily-plan.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "Drill your weakest class — ${weakest.classLabel}"
+    },
+    {
+      "file": "src/lib/oxford/search.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "The KYP Psychiatry curriculum — ${corpus.noteCount} structured lessons"
+    },
+    {
+      "file": "src/lib/oxford/search.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": " ${corpus.noteCount} psychiatry lessons — ${disorderCount} disorder courses and "
+    },
+    {
+      "file": "src/lib/oxford/search.ts",
+      "kind": "string",
+      "reason": "non-word continuation",
+      "snippet": "isorder\" ? \"lesson\" : \"concept lesson\"} — ${prio}."
+    }
+  ]
+}

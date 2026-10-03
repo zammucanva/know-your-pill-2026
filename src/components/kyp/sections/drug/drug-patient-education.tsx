@@ -24,7 +24,7 @@ export function DrugPatientEducation({ drug }: DrugPatientEducationProps) {
       <Container>
         <SectionHeader
           eyebrow="Patient Education"
-          title="In plain language — what you need to know."
+          title="In plain language: what you need to know."
           description="This section is written for someone picking up their first prescription. The same content can be printed as a patient leaflet."
           tone="success"
         />

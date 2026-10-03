@@ -35,7 +35,7 @@ export function DrugEvidenceHierarchy({ drug }: DrugEvidenceHierarchyProps) {
         <SectionHeader
           eyebrow="🇮🇳 Evidence & Indian Practice"
           title="Global evidence → Indian practice."
-          description="What does international evidence say? What do Indian guidelines recommend? How is it actually practiced in India? These are related but not identical — presented clearly so you understand the context."
+          description="What does international evidence say? What do Indian guidelines recommend? How is it actually practiced in India? These are related but not identical: presented clearly so you understand the context."
           tone="brand"
         />
 

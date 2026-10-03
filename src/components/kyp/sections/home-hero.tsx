@@ -116,7 +116,7 @@ export function HomeHero({
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     type="search"
-                    placeholder="Search a medication — sertraline, fluoxetine…"
+                    placeholder="Search a medication: sertraline, fluoxetine…"
                     className="min-w-0 flex-1 bg-transparent text-body-sm text-foreground placeholder:text-muted-foreground/60 outline-none"
                     aria-label="Search medications"
                   />

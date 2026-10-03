@@ -22,7 +22,7 @@ import { Reveal } from "@/components/kyp/ui/reveal";
 export const metadata: Metadata = {
   title: "Terms & Copyright · Know Your Pill",
   description:
-    "Copyright and reuse terms for Know Your Pill. All content — including drug pages, disease modules, and educational text — is protected by copyright and may not be reproduced, republished, or redistributed without written permission.",
+    "Copyright and reuse terms for Know Your Pill. All content (including drug pages, disease modules, and educational text) is protected by copyright and may not be reproduced, republished, or redistributed without written permission.",
   keywords: [
     "Know Your Pill",
     "copyright",
@@ -50,7 +50,7 @@ const sections: TermsSection[] = [
     id: "ownership",
     title: "1. Copyright & ownership",
     paragraphs: [
-      "All content on this website — including medication pages, disease modules, substance-use guides, educational text, quizzes, illustrations, and the site design itself — is the property of Zamaan Ali Shamji and is protected by copyright law. © 2026 Zamaan Ali Shamji. All rights reserved.",
+      "All content on this website (including medication pages, disease modules, substance-use guides, educational text, quizzes, illustrations, and the site design itself) is the property of Zamaan Ali Shamji and is protected by copyright law. © 2026 Zamaan Ali Shamji. All rights reserved.",
       "No ownership transfer occurs through use of this site. Viewing, bookmarking, or linking to these pages does not grant any licence beyond the limited personal use described below.",
     ],
   },
@@ -58,7 +58,7 @@ const sections: TermsSection[] = [
     id: "permitted",
     title: "2. What you may do",
     paragraphs: [
-      "You are welcome to read, study, and use this site for personal education, and to share links to any page with others — colleagues, students, patients, or on social media. Linking is always allowed and appreciated.",
+      "You are welcome to read, study, and use this site for personal education, and to share links to any page with others: colleagues, students, patients, or on social media. Linking is always allowed and appreciated.",
       "You may quote a brief excerpt (a sentence or two) in your own writing, provided you attribute it to Know Your Pill, name Zamaan Ali Shamji as the author, and link back to the page it came from. Fair use and fair dealing rights under applicable law are unaffected by these terms.",
     ],
   },
@@ -66,7 +66,7 @@ const sections: TermsSection[] = [
     id: "prohibited",
     title: "3. What you may not do",
     paragraphs: [
-      "You may not reproduce, republish, or redistribute the content of this site — in whole or in substantial part — in any form or medium without prior written permission. This includes copying pages into other websites, documents, courses, videos, or apps, and selling or bundling the content with other products.",
+      "You may not reproduce, republish, or redistribute the content of this site (in whole or in substantial part) in any form or medium without prior written permission. This includes copying pages into other websites, documents, courses, videos, or apps, and selling or bundling the content with other products.",
       "You may not remove, obscure, or alter any copyright notice, attribution, or link that appears on the content, and you may not present KYP content in a way that implies endorsement of a third-party product, service, or treatment.",
     ],
   },
@@ -75,7 +75,7 @@ const sections: TermsSection[] = [
     title: "4. Automated & AI training use",
     paragraphs: [
       "Systematic scraping, bulk downloading, or feeding the content of this site into datasets for training, fine-tuning, or evaluating machine-learning or AI systems is expressly prohibited, regardless of commercial intent. The site's robots.txt disallows common AI-training crawlers for this reason.",
-      "If you are building a tool (for example a study aid or search assistant) and believe KYP content would genuinely help, get in touch first — permission is far easier to obtain in advance than to fix retroactively.",
+      "If you are building a tool (for example a study aid or search assistant) and believe KYP content would genuinely help, get in touch first: permission is far easier to obtain in advance than to fix retroactively.",
     ],
   },
   {
@@ -90,7 +90,7 @@ const sections: TermsSection[] = [
     id: "contact",
     title: "6. Permission requests",
     paragraphs: [
-      "Requests to reuse, republish, or adapt content — including translations and educational adaptations — are welcome and are typically answered quickly. Email zammucanva@gmail.com with a short description of what you would like to use and where.",
+      "Requests to reuse, republish, or adapt content (including translations and educational adaptations) are welcome and are typically answered quickly. Email zammucanva@gmail.com with a short description of what you would like to use and where.",
       "These terms were last updated in September 2026. The version served at this URL is the current authoritative version.",
     ],
   },

@@ -52,7 +52,7 @@ const classGroups = Array.from(new Set(drugs.map((d) => d.drugClassLabel)));
 export const metadata: Metadata = {
   title: "Study Mode · Know Your Pill",
   description:
-    "One learning system — build knowledge with guided medication courses, then test it with MCQs and custom tests. Continue exactly where you left off.",
+    "One learning system: build knowledge with guided medication courses, then test it with MCQs and custom tests. Continue exactly where you left off.",
   keywords: [
     "study mode",
     "active learning",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Study Mode · Know Your Pill",
     description:
-      `Active learning for ${drugs.length} psychiatric medications — courses, checkpoints, and practice.`,
+      `Active learning for ${drugs.length} psychiatric medications: courses, checkpoints, and practice.`,
     type: "website",
     siteName: "Know Your Pill",
   },
@@ -107,7 +107,7 @@ export default function StudyPage() {
               </h1>
               <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground leading-relaxed">
                 Learn. Practice. Continue where you left off. Choose a
-                medication and work through it like a course — learning
+                medication and work through it like a course: learning
                 objectives, guided lessons, checkpoints, and active recall —
                 then test yourself and pick up exactly where you left off
                 next time.
@@ -166,7 +166,7 @@ export default function StudyPage() {
                 {
                   icon: ArrowRight,
                   title: "Choose a medication",
-                  body: `All ${drugs.length} medications are listed below, grouped by class. No search required — every course is one tap away. Each one lists its reading time and question count up front so you know what you are committing to.`,
+                  body: `All ${drugs.length} medications are listed below, grouped by class. No search required: every course is one tap away. Each one lists its reading time and question count up front so you know what you are committing to.`,
                 },
                 {
                   icon: CheckCircle2,
@@ -176,17 +176,17 @@ export default function StudyPage() {
                 {
                   icon: Zap,
                   title: "Test yourself",
-                  body: `Questions appear inside the courses after each milestone, and every one of the ${totalQuestions} medication questions is also available in the Practice hub — with immediate feedback and explanations.`,
+                  body: `Questions appear inside the courses after each milestone, and every one of the ${totalQuestions} medication questions is also available in the Practice hub, with immediate feedback and explanations.`,
                 },
                 {
                   icon: RefreshCw,
                   title: "Review and continue",
-                  body: "Your visited courses are remembered. Study Mode shows exactly where you left off — completed sections, current lesson, and quiz bests — and takes you straight back into the course at the section you stopped reading.",
+                  body: "Your visited courses are remembered. Study Mode shows exactly where you left off (completed sections, current lesson, and quiz bests) and takes you straight back into the course at the section you stopped reading.",
                 },
                 {
                   icon: LineChart,
                   title: "Track progress",
-                  body: "Course position, completed sections, and quiz best scores are saved on this device — progress survives closing the browser, with no account required. Sign-in sync can arrive later without changing how you study.",
+                  body: "Course position, completed sections, and quiz best scores are saved on this device: progress survives closing the browser, with no account required. Sign-in sync can arrive later without changing how you study.",
                 },
               ].map((step, i) => (
                 <Reveal key={step.title} delay={i * 0.05}>
@@ -228,7 +228,7 @@ export default function StudyPage() {
                   </h2>
                   <p className="mt-4 text-body-sm text-muted-foreground leading-relaxed">
                     Build your medical knowledge through guided medication
-                    courses and structured learning — objectives,
+                    courses and structured learning: objectives,
                     checkpoints, and active recall in every course.
                   </p>
                 </div>
@@ -353,7 +353,7 @@ export default function StudyPage() {
               </h2>
               <p className="mb-12 max-w-2xl text-body-sm text-muted-foreground leading-relaxed">
                 The second half of Study Mode. Practice is open from the
-                start — no course required — with immediate feedback and
+                start: no course required, with immediate feedback and
                 explanations on every question.
               </p>
             </Reveal>
@@ -371,7 +371,7 @@ export default function StudyPage() {
                       Quick MCQs
                     </h3>
                     <p className="mt-1 max-w-3xl text-body-sm text-muted-foreground/80 leading-relaxed">
-                      Test yourself with existing question sets — every one
+                      Test yourself with existing question sets: every one
                       of the {totalQuestions} library questions with
                       immediate feedback and a one-line explanation for each
                       answer.
@@ -401,7 +401,7 @@ export default function StudyPage() {
                       Custom Test
                     </h3>
                     <p className="mt-1 max-w-3xl text-body-sm text-muted-foreground/80 leading-relaxed">
-                      Build a test from the topics you choose — pick the
+                      Build a test from the topics you choose: pick the
                       medications, pick the length, then review what you got
                       wrong.
                     </p>

@@ -20,7 +20,7 @@ export function DrugClinicalPearls({ drug }: DrugClinicalPearlsProps) {
         <SectionHeader
           eyebrow="Clinical Pearls"
           title="What every prescriber should know."
-          description="Distilled clinical wisdom — the kind of insights that separate a competent prescriber from an excellent one."
+          description="Distilled clinical wisdom: the kind of insights that separate a competent prescriber from an excellent one."
         />
 
         <div className="mt-10 grid gap-3 sm:grid-cols-2">

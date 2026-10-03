@@ -52,7 +52,7 @@ export function IndianClinicalModule({ drug }: IndianClinicalModuleProps) {
         <SectionHeader
           eyebrow="🇮🇳 Indian Clinical Practice"
           title="Prescribing in India."
-          description="Brands, availability, cost, hospital encounter, prescription workflow, and a sample Indian OPD prescription — all in one place."
+          description="Brands, availability, cost, hospital encounter, prescription workflow, and a sample Indian OPD prescription, all in one place."
           tone="brand"
         />
 

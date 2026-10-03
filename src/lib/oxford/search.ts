@@ -32,7 +32,7 @@ export function buildPsychiatrySearchRecords(): SearchableItem[] {
     id: "psychiatry-hub",
     title: "KYP Psychiatry",
     type: "psychiatry-note",
-    description: `The KYP Psychiatry curriculum — ${corpus.noteCount} structured lessons across ${corpus.groups.length} clinical domains, ${corpus.mcqCount} self-test questions.`,
+    description: `The KYP Psychiatry curriculum: ${corpus.noteCount} structured lessons across ${corpus.groups.length} clinical domains, ${corpus.mcqCount} self-test questions.`,
     href: "/psychiatry",
     keywords: [
       "psychiatry",
@@ -48,7 +48,7 @@ export function buildPsychiatrySearchRecords(): SearchableItem[] {
     id: "psychiatry-library",
     title: "Psychiatry Library",
     type: "psychiatry-note",
-    description: `Browse all ${corpus.noteCount} psychiatry lessons — ${disorderCount} disorder courses and ${conceptCount} concept lessons, filterable by domain, tier and progress.`,
+    description: `Browse all ${corpus.noteCount} psychiatry lessons: ${disorderCount} disorder courses and ${conceptCount} concept lessons, filterable by domain, tier and progress.`,
     href: "/psychiatry/library",
     keywords: [
       "psychiatry library",
@@ -75,7 +75,7 @@ export function buildPsychiatrySearchRecords(): SearchableItem[] {
       type: "psychiatry-note",
       description:
         (course?.tagline ?? note.tagline ??
-          `${category} ${kind === "disorder" ? "lesson" : "concept lesson"} — ${prio}.`) +
+          `${category} ${kind === "disorder" ? "lesson" : "concept lesson"} (${prio}).`) +
         ` ~${note.readingMinutes} min read${note.mcqs.length ? ` · ${note.mcqs.length} questions` : ""}` +
         (group ? ` · ${group.name}` : ""),
       href: `/psychiatry/${note.frontmatter.slug}`,

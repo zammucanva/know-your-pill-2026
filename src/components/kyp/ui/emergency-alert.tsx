@@ -22,7 +22,7 @@ interface EmergencyAlertProps {
 
 export function EmergencyAlert({
   title = "In a crisis right now?",
-  description = "If you or someone near you is in immediate danger — overdose, suicidal thoughts, severe withdrawal, or unresponsiveness — call now. These lines are free, confidential, and staffed by trained professionals.",
+  description = "If you or someone near you is in immediate danger (overdose, suicidal thoughts, severe withdrawal, or unresponsiveness) call now. These lines are free, confidential, and staffed by trained professionals.",
   contacts,
   className,
 }: EmergencyAlertProps) {

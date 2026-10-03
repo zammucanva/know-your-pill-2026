@@ -33,12 +33,12 @@ import { coreNotes, LEARNER_SECTION_ORDER } from "@/lib/oxford/curriculum";
  */
 
 export const metadata: Metadata = {
-  title: "KYP Psychiatry — Structured Psychiatry Learning",
+  title: "KYP Psychiatry. Structured Psychiatry Learning",
   description:
-    "Learn psychiatry through structured clinical lessons — 109 topics across 18 domains, clinical cases, active recall, India in practice and 719 self-test questions.",
+    "Learn psychiatry through structured clinical lessons: 109 topics across 18 domains, clinical cases, active recall, India in practice and 719 self-test questions.",
   keywords: ["psychiatry", "psychiatry learning", "KYP Psychiatry", "psychiatry curriculum", "psychiatric disorders"],
   openGraph: {
-    title: "KYP Psychiatry — Structured Psychiatry Learning",
+    title: "KYP Psychiatry. Structured Psychiatry Learning",
     description:
       "109 structured lessons, 18 clinical domains, cases, active recall and self-testing.",
     type: "website",
@@ -111,14 +111,14 @@ export default function PsychiatryHubPage() {
           <SectionHeader
             eyebrow="How it works"
             title="Every lesson follows one learning structure"
-            description="Each topic moves through the same five phases — so you always know where you are and what comes next."
+            description="Each topic moves through the same five phases, so you always know where you are and what comes next."
           />
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {[
-              { icon: BookOpen, label: "Understand", text: "The concept in plain language — what happens in the body and brain, and the symptoms it produces." },
-              { icon: Layers, label: "Learn", text: "Epidemiology, causes and risk factors — the detailed clinical content." },
+              { icon: BookOpen, label: "Understand", text: "The concept in plain language: what happens in the body and brain, and the symptoms it produces." },
+              { icon: Layers, label: "Learn", text: "Epidemiology, causes and risk factors: the detailed clinical content." },
               { icon: Landmark, label: "India in Practice", text: "Indian epidemiology, services, costs and counselling realities, built into every topic." },
-              { icon: Stethoscope, label: "Think", text: "Diagnosis, management and clinical cases — reasoning, not memorising." },
+              { icon: Stethoscope, label: "Think", text: "Diagnosis, management and clinical cases: reasoning, not memorising." },
               { icon: ListChecks, label: "Remember & Practice", text: "Active recall, FAQs, exam traps and self-test MCQs with explanations." },
             ].map((p) => (
               <div key={p.label} className="rounded-xl border border-border bg-card p-5">
@@ -137,7 +137,7 @@ export default function PsychiatryHubPage() {
           <SectionHeader
             eyebrow="The curriculum"
             title="18 clinical domains"
-            description="From the foundations and sciences to social psychiatry — the full breadth of the specialty, with Foundations first."
+            description="From the foundations and sciences to social psychiatry: the full breadth of the specialty, with Foundations first."
           />
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {[...corpus.groups]
@@ -189,7 +189,7 @@ export default function PsychiatryHubPage() {
           <SectionHeader
             eyebrow="High-yield"
             title="Start with the core"
-            description="The topics marked Core are the heart of the curriculum — start here if you are new or revising for exams."
+            description="The topics marked Core are the heart of the curriculum. Start here if you are new or revising for exams."
           />
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             {core.map((n) => (
@@ -241,7 +241,7 @@ export default function PsychiatryHubPage() {
               <ListChecks className="h-5 w-5 text-neural" aria-hidden />
               <h2 className="mt-3 text-sm font-semibold text-foreground">Self-testing</h2>
               <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
-                {stats.mcqCount} authored questions with explanations — inside every lesson
+                {stats.mcqCount} authored questions with explanations: inside every lesson
                 or mixed across the curriculum in the Psychiatry Self-Test.
               </p>
             </div>
@@ -249,7 +249,7 @@ export default function PsychiatryHubPage() {
               <Brain className="h-5 w-5 text-neural" aria-hidden />
               <h2 className="mt-3 text-sm font-semibold text-foreground">Active recall</h2>
               <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
-                Every lesson carries recall prompts and an exam-lens section — the
+                Every lesson carries recall prompts and an exam-lens section: the
                 questions examiners actually ask.
               </p>
             </div>

@@ -42,7 +42,7 @@ export function EvidenceGradeDot({ grade, className }: { grade: EvidenceGrade; c
   return (
     <span
       className={cn("inline-flex items-center gap-1.5 whitespace-nowrap", className)}
-      title={`${evidenceGradeMeta[grade].label} — ${evidenceGradeMeta[grade].description}`}
+      title={`${evidenceGradeMeta[grade].label}: ${evidenceGradeMeta[grade].description}`}
     >
       <span aria-hidden className={cn("h-2 w-2 rounded-full", gradeDotClass[grade])} />
       <span className="text-[0.65rem] font-medium uppercase tracking-wide text-muted-foreground">

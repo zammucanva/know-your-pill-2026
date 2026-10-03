@@ -70,7 +70,7 @@ export function PatientQuickFacts({ drug, guide }: PatientQuickFactsProps) {
           .slice(0, 3)
           .map((s) => s.name.split(" & ")[0])
           .join(", "),
-        text: `${drug.commonSideEffects.length} common, ${drug.seriousSideEffects.length} serious — see full list below.`,
+        text: `${drug.commonSideEffects.length} common, ${drug.seriousSideEffects.length} serious: see full list below.`,
       },
     ];
 

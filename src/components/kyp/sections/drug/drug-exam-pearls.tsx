@@ -22,7 +22,7 @@ export function DrugExamPearls({ drug }: DrugExamPearlsProps) {
         <SectionHeader
           eyebrow="High-Yield Exam Facts"
           title="What they'll actually test you on."
-          description="MBBS, NEET-PG, USMLE, PLAB — these are the facts that show up repeatedly in pharmacology and psychiatry exams."
+          description="MBBS, NEET-PG, USMLE, PLAB: these are the facts that show up repeatedly in pharmacology and psychiatry exams."
           tone="neural"
         />
 

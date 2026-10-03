@@ -40,7 +40,7 @@ export function PsychiatrySection() {
             <p className="mt-5 max-w-2xl text-body text-muted-foreground leading-relaxed">
               Every topic is a six-lesson course: foundations, mechanism and
               neuroscience, clinical practice, the Indian context, exam
-              revision and active recall — with {psychiatryStats.questions}{" "}
+              revision and active recall, with {psychiatryStats.questions}{" "}
               authored self-test questions across{" "}
               {psychiatryStats.domains} clinical domains.
             </p>

@@ -399,7 +399,7 @@ export default async function DiseasePage({ params }: PageProps) {
             {/* Drug links */}
             {disease.drugs.length > 0 && (
               <div className="mt-8">
-                <h3 className="text-h3 mb-4">Pharmacotherapy — Drugs for {disease.name}</h3>
+                <h3 className="text-h3 mb-4">Pharmacotherapy. Drugs for {disease.name}</h3>
                 <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                   {disease.drugs.map((drug, i) => {
                     const content = (

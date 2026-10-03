@@ -124,7 +124,7 @@ function DetailBlock({
             <p className="text-overline text-muted-foreground">{concern.label}</p>
             {!cell.available && (
               <p className="mt-2 text-xs italic text-muted-foreground/60">
-                Data not available — no entry in this medication&apos;s documented
+                Data not available: no entry in this medication&apos;s documented
                 adverse-effect profile matches this concern. This may reflect
                 absence of effect or absence of documented data; see the{" "}
                 <Link
@@ -200,7 +200,7 @@ function DetailBlock({
       })}
       <p className="text-[0.65rem] leading-snug text-muted-foreground/40 md:col-span-2">
         All values are copied verbatim from {drug.genericName}&apos;s own reviewed
-        profile — the common/serious adverse-effect lists, monitoring list,
+        profile: the common/serious adverse-effect lists, monitoring list,
         interaction list and Prescriber&apos;s Guide layer. Nothing is merged,
         averaged, scored or inferred across medications.
       </p>
@@ -384,7 +384,7 @@ export function ConcernMatrix({ cards, concerns, classLabel }: ConcernMatrixProp
         <ExternalLink className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden />
         Tap any medication name to open its full guide; tap the chevron to expand
         the verbatim source entries behind every cell. Rows appear in registry
-        order — the library deliberately does not rank or recommend.
+        order: the library deliberately does not rank or recommend.
       </p>
     </>
   );

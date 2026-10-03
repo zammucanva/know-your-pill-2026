@@ -55,7 +55,7 @@ export function buildDailyPlan(data: KypProgressData, now = Date.now()): DailyPl
     const weakest = weak.topics[0];
     steps.push({
       id: "weak-drill",
-      title: `Drill your weakest class — ${weakest.classLabel}`,
+      title: `Drill your weakest class: ${weakest.classLabel}`,
       detail: `${weakest.reason}.`,
       href: "/quiz/custom?weak=1",
     });
@@ -69,7 +69,7 @@ export function buildDailyPlan(data: KypProgressData, now = Date.now()): DailyPl
     steps.push({
       id: "continue",
       title: `Continue ${unfinished.title}`,
-      detail: `${unfinished.completedSections.length} of ${total} sections read — picks up where you stopped.`,
+      detail: `${unfinished.completedSections.length} of ${total} sections read: picks up where you stopped.`,
       href:
         unfinished.currentSectionId && unfinished.completedSections.length > 0
           ? `${studyCourseBase(unfinished.slug)}#${unfinished.currentSectionId}`

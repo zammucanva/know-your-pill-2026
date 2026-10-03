@@ -180,7 +180,7 @@ export default function DashboardPage() {
       setNewPassword("");
       setConfirmPassword("");
     } catch {
-      setSecurityError("Network error — please try again.");
+      setSecurityError("Network error: please try again.");
     } finally {
       setSecurityBusy(false);
     }

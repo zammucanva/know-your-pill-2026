@@ -52,7 +52,7 @@ export function DrugSideEffects({ drug }: DrugSideEffectsProps) {
       <Container>
         <SectionHeader
           eyebrow="Side Effects"
-          title="What to expect — and what to worry about."
+          title="What to expect, and what to worry about."
           description="Side effects are split into common (typically mild and self-limiting) and serious (require urgent attention). Knowing the difference is the most important skill for patients and clinicians alike."
         />
 
@@ -78,7 +78,7 @@ export function DrugSideEffects({ drug }: DrugSideEffectsProps) {
             <Badge variant="emergency" size="sm">Urgent</Badge>
           </h3>
           <p className="mt-2 text-body text-muted-foreground">
-            These require immediate medical attention. Know the warning signs for each — early
+            These require immediate medical attention. Know the warning signs for each: early
             recognition is lifesaving.
           </p>
 

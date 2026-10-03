@@ -15,7 +15,7 @@ interface LearningTimeBadgeProps {
 }
 
 const highYieldConfig: Record<HighYieldLevel, { stars: number; label: string; variant: "neural" | "warning" | "outline" | "default" }> = {
-  extreme: { stars: 5, label: "Extremely High Yield — Memorize", variant: "neural" },
+  extreme: { stars: 5, label: "Extremely High Yield. Memorize", variant: "neural" },
   high: { stars: 4, label: "Frequently Asked", variant: "neural" },
   moderate: { stars: 3, label: "Know the concept", variant: "warning" },
   background: { stars: 2, label: "Background knowledge", variant: "outline" },

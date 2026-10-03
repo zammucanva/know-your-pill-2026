@@ -94,7 +94,7 @@ function ClassComparisonBody() {
       <Reveal>
         <div className="mt-12">
           <p className="text-overline text-muted-foreground mb-3">
-            Step 1 — choose a medication class
+            Step 1. Choose a medication class
           </p>
           <div
             className="flex flex-wrap gap-2"
@@ -136,7 +136,7 @@ function ClassComparisonBody() {
           )}
           <p className="mt-3 text-xs leading-relaxed text-muted-foreground/60">
             {comparisonClasses.length} classes, derived live from the medication
-            registry — counts are current members. Classes with a single
+            registry: counts are current members. Classes with a single
             medication show that medication&apos;s profile instead of a
             comparison.
           </p>
@@ -148,7 +148,7 @@ function ClassComparisonBody() {
         <Reveal delay={0.05}>
           <div className="mt-10">
             <p className="text-overline text-muted-foreground mb-3">
-              Step 2 — choose one or more concerns ({concerns.length}/{MAX_CONCERNS})
+              Step 2. Choose one or more concerns ({concerns.length}/{MAX_CONCERNS})
             </p>
             <div
               className="flex flex-wrap gap-2"
@@ -196,7 +196,7 @@ function ClassComparisonBody() {
           <div className="mt-10" id="matrix">
             <div className="mb-4 flex flex-wrap items-baseline justify-between gap-3">
               <div>
-                <p className="text-overline text-muted-foreground">Step 3 — how they differ</p>
+                <p className="text-overline text-muted-foreground">Step 3: how they differ</p>
                 <h2
                   className="mt-1 font-serif font-semibold tracking-tight text-foreground"
                   style={{ fontSize: "clamp(1.35rem, 3vw, 1.9rem)" }}
@@ -264,7 +264,7 @@ function ClassComparisonBody() {
                 ))}
               </ul>
               <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-                Sources are the medications&apos; own reviewed pages — including the
+                Sources are the medications&apos; own reviewed pages, including the
                 Stahl&apos;s Essential Psychopharmacology: The Prescriber&apos;s
                 Guide layer (6th ed. 2017 for the 131 Stahl&apos;s medications,
                 1st ed. 2005 for the original twelve) where present. Frequency
@@ -307,9 +307,9 @@ function ClassComparisonBody() {
               How this works
             </p>
             <ol className="ml-4 list-decimal space-y-2 text-sm leading-relaxed text-muted-foreground">
-              <li>Pick a class — say, Atypical Antipsychotics (19 medications).</li>
+              <li>Pick a class: say, Atypical Antipsychotics (19 medications).</li>
               <li>
-                Pick the concerns that matter for your question — weight and
+                Pick the concerns that matter for your question: weight and
                 metabolic impact, sedation, prolactin, EPS…
               </li>
               <li>

@@ -47,7 +47,7 @@ export async function generateMetadata({
   // course layer owns the learner-facing title/tagline/type; the note
   // frontmatter is the immutable fallback only.
   const course = getPsychiatryCourse(slug);
-  const title = `${course?.title ?? note.frontmatter.title} — KYP Psychiatry`;
+  const title = `${course?.title ?? note.frontmatter.title}. KYP Psychiatry`;
   const description =
     (course?.tagline ?? note.tagline ?? "").slice(0, 155) ||
     `Learn ${course?.title ?? note.frontmatter.title} through structured clinical learning, cases, active recall and self-testing.`;

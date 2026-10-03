@@ -216,7 +216,7 @@ export default function ReviewPage() {
                 </h1>
                 <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground leading-relaxed">
                   Questions you&apos;ve missed before come back at growing
-                  intervals — 1, 2, 4, 7, 14, then 30 days. Get one right and
+                  intervals: 1, 2, 4, 7, 14, then 30 days. Get one right and
                   its next appearance moves further out; miss it and it
                   returns tomorrow. Everything stays on this device.
                 </p>
@@ -232,7 +232,7 @@ export default function ReviewPage() {
                     </p>
                     <p className="text-sm leading-relaxed text-foreground/90">
                       You&apos;re all caught up. Miss a question in practice and
-                      it will be scheduled here automatically — or revisit
+                      it will be scheduled here automatically, or revisit
                       your Mistake Book to retest anything sooner.
                     </p>
                     <div className="mt-4 flex flex-wrap gap-3">
@@ -261,7 +261,7 @@ export default function ReviewPage() {
                       {due} {due === 1 ? "question" : "questions"}
                     </p>
                     <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                      A short session — answered with feedback, straight from
+                      A short session: answered with feedback, straight from
                       the questions you missed before.
                     </p>
                     <div className="mt-4 flex flex-wrap items-center gap-3">
@@ -288,8 +288,8 @@ export default function ReviewPage() {
 
               <Reveal delay={0.1}>
                 <p className="mt-8 max-w-2xl text-xs text-muted-foreground/60 leading-relaxed">
-                  The review schedule is a plain local record — question
-                  identity, current interval, next due date — with a clean
+                  The review schedule is a plain local record: question
+                  identity, current interval, next due date, with a clean
                   export shape (kyp:retention:v1) for a future sync. No
                   account, no tracking, no notifications.
                 </p>
@@ -415,7 +415,7 @@ export default function ReviewPage() {
                 <Reveal>
                   <div className="mt-8 rounded-lg border border-border/60 bg-muted/30 p-5">
                     <p className="text-overline text-muted-foreground mb-2">
-                      {isCorrect ? "Correct — interval extended" : "Not quite — back tomorrow"}
+                      {isCorrect ? "Correct: interval extended" : "Not quite: back tomorrow"}
                     </p>
                     <p className="text-body text-foreground leading-relaxed">
                       {q.explanation}
@@ -483,7 +483,7 @@ export default function ReviewPage() {
                 </h1>
                 <p className="mt-4 max-w-xl text-body-lg text-muted-foreground leading-relaxed">
                   {correct === questions.length
-                    ? "Every reviewed question moves further out on its interval — well retained."
+                    ? "Every reviewed question moves further out on its interval: well retained."
                     : `${correct} ${correct === 1 ? "question" : "questions"} now on longer intervals. ${toSeeAgain} ${toSeeAgain === 1 ? "comes" : "come"} back tomorrow.`}
                 </p>
               </Reveal>

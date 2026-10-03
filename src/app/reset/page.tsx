@@ -80,7 +80,7 @@ export default function ResetPasswordPage() {
       }
       setDone(true);
     } catch {
-      setError("Network error — please check your connection and try again.");
+      setError("Network error: please check your connection and try again.");
     } finally {
       setLoading(false);
     }

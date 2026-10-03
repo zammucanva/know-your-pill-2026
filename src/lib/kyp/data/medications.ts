@@ -66,7 +66,7 @@ export const medicationClasses: MedicationClass[] = [
     number: "02",
     title: "Pain Management",
     description:
-      "Non-opioid analgesics, NSAIDs, opioid analgesics, and neuropathic pain agents — how they block pain signals.",
+      "Non-opioid analgesics, NSAIDs, opioid analgesics, and neuropathic pain agents: how they block pain signals.",
     icon: Pill,
     href: "#library",
     chips: ["Paracetamol", "Ibuprofen", "Morphine", "Gabapentin"],

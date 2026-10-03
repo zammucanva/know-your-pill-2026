@@ -15,7 +15,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Medication Comparison · Know Your Pill",
   description:
-    "Pick 2–3 psychiatric medications and see them side by side — mechanism, side-effect profile with frequency bands, interactions, monitoring, and clinical use. Every cell is verbatim from the medication pages; an educational comparison, not a prescribing algorithm.",
+    "Pick 2–3 psychiatric medications and see them side by side: mechanism, side-effect profile with frequency bands, interactions, monitoring, and clinical use. Every cell is verbatim from the medication pages; an educational comparison, not a prescribing algorithm.",
   keywords: [
     "medication comparison",
     "compare psychiatric medications",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Medication Comparison · Know Your Pill",
     description:
-      "Two or three psychiatric medications side by side — mechanism to clinical use, verbatim from the medication pages.",
+      "Two or three psychiatric medications side by side: mechanism to clinical use, verbatim from the medication pages.",
     type: "website",
     siteName: "Know Your Pill",
   },

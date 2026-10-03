@@ -170,7 +170,7 @@ export function CourseKnowledgeGraph({ course }: { course: PsychiatryCourse }) {
   const subject = course.title;
 
   const relationshipDescriptions: Record<string, string> = {
-    drug: "A medication relevant to this topic — with a full KYP drug lesson.",
+    drug: "A medication relevant to this topic, with a full KYP drug lesson.",
     class: "The pharmacological class relevant to this topic.",
     neurotransmitter: "A chemical messenger central to this topic's neuroscience.",
     "brain-region": "A brain structure where this topic does its work.",
@@ -187,7 +187,7 @@ export function CourseKnowledgeGraph({ course }: { course: PsychiatryCourse }) {
         <SectionHeader
           eyebrow="Knowledge Graph"
           title="Everything this topic touches."
-          description="Hover any node to see its relationship. Click to navigate — every link is a real KYP route."
+          description="Hover any node to see its relationship. Click to navigate: every link is a real KYP route."
           tone="neural"
           align="center"
         />
@@ -291,7 +291,7 @@ export function CourseKnowledgeGraph({ course }: { course: PsychiatryCourse }) {
             <div className="rounded-xl border border-dashed border-border/60 bg-card/40 p-4 text-center">
               <p className="text-sm text-muted-foreground">
                 <Network className="inline h-4 w-4 mr-1.5 -mt-0.5" />
-                {nodes.length} relationships indexed — hover any node above to see how it connects to {subject}.
+                {nodes.length} relationships indexed: hover any node above to see how it connects to {subject}.
               </p>
             </div>
           )}
@@ -308,7 +308,7 @@ export function CourseMechanism({ course }: { course: PsychiatryCourse }) {
       <Container>
         <SectionHeader
           eyebrow="Mechanism"
-          title="What actually happens — graded honestly."
+          title="What actually happens: graded honestly."
           tone="neural"
           align="start"
         />
@@ -344,7 +344,7 @@ export function CourseBrain({ course }: { course: PsychiatryCourse }) {
         <SectionHeader
           eyebrow="Brain"
           title="The structures that carry this topic."
-          description="Only regions with a genuine, teachable role — every claim carries its evidence grade."
+          description="Only regions with a genuine, teachable role: every claim carries its evidence grade."
           tone="neural"
           align="start"
         />
@@ -386,7 +386,7 @@ export function CourseNeurotransmitters({ course }: { course: PsychiatryCourse }
       <Container>
         <SectionHeader
           eyebrow="Neurotransmitters"
-          title="The chemical systems involved — and the drugs that speak them."
+          title="The chemical systems involved, and the drugs that speak them."
           tone="neural"
           align="start"
         />
@@ -425,7 +425,7 @@ export function CoursePathways({ course }: { course: PsychiatryCourse }) {
         <SectionHeader
           eyebrow="Pathways"
           title="Follow the chain from molecule to symptom."
-          description="Structured pathway data — rendered, never hard-coded graphics."
+          description="Structured pathway data: rendered, never hard-coded graphics."
           tone="neural"
           align="start"
         />

@@ -149,7 +149,7 @@ export default function AnalyticsPage() {
                   </p>
                   <p className="text-sm leading-relaxed text-foreground/90">
                     Take a quick set or build a custom test and this page
-                    fills in — every statistic here comes from your own
+                    fills in: every statistic here comes from your own
                     practice history, stored on this device only.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
@@ -215,7 +215,7 @@ export default function AnalyticsPage() {
                       </table>
                     </div>
                     <p className="mt-2 text-xs text-muted-foreground/70">
-                      Percentages need {MIN_TOPIC_SAMPLE}+ answers per class — below
+                      Percentages need {MIN_TOPIC_SAMPLE}+ answers per class: below
                       that the number would be noise, so it stays hidden.
                     </p>
                   </div>
@@ -257,7 +257,7 @@ export default function AnalyticsPage() {
                                 {topic.trend.map((t, i) => (
                                   <span
                                     key={i}
-                                    title={`${formatDate(t.at)} — ${t.correct ? "correct" : "incorrect"}`}
+                                    title={`${formatDate(t.at)} · ${t.correct ? "correct" : "incorrect"}`}
                                     className={cn(
                                       "h-2.5 w-2.5 rounded-full",
                                       t.correct ? "bg-success/70" : "bg-emergency/70"
@@ -287,7 +287,7 @@ export default function AnalyticsPage() {
                     </p>
                     {timedRuns.length === 0 ? (
                       <p className="text-sm text-muted-foreground">
-                        No completed custom tests with timing yet — durations
+                        No completed custom tests with timing yet: durations
                         appear here as you finish tests.
                       </p>
                     ) : (
@@ -370,7 +370,7 @@ export default function AnalyticsPage() {
                     )}
                     <p className="mt-2 text-xs text-muted-foreground/70">
                       “Missed 2+ times” counts questions answered incorrectly
-                      more than once — the ones worth scheduling for spaced
+                      more than once: the ones worth scheduling for spaced
                       review.
                     </p>
                   </div>
@@ -430,7 +430,7 @@ export default function AnalyticsPage() {
 
             <p className="mt-12 max-w-2xl text-xs text-muted-foreground/60 leading-relaxed">
               All analytics are computed from your own local practice
-              history — nothing is sent anywhere, nothing is tracked.
+              history: nothing is sent anywhere, nothing is tracked.
               Clearing your progress resets every number on this page.
             </p>
           </Container>

@@ -15,7 +15,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Your Dashboard · Know Your Pill",
   description:
-    "Your personal KYP home — reading progress across the medication library, saved bookmarks, and search history in one place, with quick links back into whatever you were learning.",
+    "Your personal KYP home: reading progress across the medication library, saved bookmarks, and search history in one place, with quick links back into whatever you were learning.",
 };
 
 export default function DashboardLayout({

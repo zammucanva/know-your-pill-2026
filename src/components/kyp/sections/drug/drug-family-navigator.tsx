@@ -31,7 +31,7 @@ export function DrugFamilyNavigator({ drug }: DrugFamilyNavigatorProps) {
         <SectionHeader
           eyebrow="Drug Family"
           title={family.familyName}
-          description={`All drugs in the ${family.familyName.split("(")[0].trim()} family. Each has a unique profile — click to explore.`}
+          description={`All drugs in the ${family.familyName.split("(")[0].trim()} family. Each has a unique profile. Click to explore.`}
           tone="brand"
         />
 

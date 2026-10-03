@@ -73,7 +73,7 @@ export function PatientGuideSection({ drug, guide }: PatientGuideSectionProps) {
         <SectionHeader
           eyebrow="Patient Guide"
           title={`Your guide to ${drug.genericName}`}
-          description="Written in plain language for patients and caregivers. It explains what this medicine is, what to expect, and what to watch out for. It is general information — your doctor's instructions for you always come first."
+          description="Written in plain language for patients and caregivers. It explains what this medicine is, what to expect, and what to watch out for. It is general information: your doctor's instructions for you always come first."
           tone="success"
         />
 

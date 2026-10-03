@@ -49,7 +49,7 @@ export function LearningModule({ drug }: LearningModuleProps) {
         <SectionHeader
           eyebrow="Learning & Exam"
           title="What you need to know."
-          description="Clinical pearls, exam-specific content, mnemonics, and Indian ward pearls — all in one place. Switch between tabs to focus on what you need."
+          description="Clinical pearls, exam-specific content, mnemonics, and Indian ward pearls, all in one place. Switch between tabs to focus on what you need."
           tone="neural"
         />
 

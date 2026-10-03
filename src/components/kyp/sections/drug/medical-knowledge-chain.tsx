@@ -293,7 +293,7 @@ export function buildKnowledgeChainView(chain: DrugKnowledgeChain): KnowledgeCha
       roleLabel: "Class",
       label: chain.class.label,
       href: `/drugs/class/${drugClassIdFromLabel(chain.class.label)}`,
-      title: `All KYP ${chain.class.label}s — medication class collection`,
+      title: `All KYP ${chain.class.label}s: medication class collection`,
     },
     {
       key: "mechanism",
@@ -348,7 +348,7 @@ export function buildKnowledgeChainView(chain: DrugKnowledgeChain): KnowledgeCha
       roleLabel: "Primary target",
       label: "No single primary target",
       sublabel:
-        "The canonical data names several co-equal molecular targets rather than one primary — see the full target list below.",
+        "The canonical data names several co-equal molecular targets rather than one primary. See the full target list below.",
       title: chain.drug.mechanism.primaryTargetText,
     });
   }
@@ -461,7 +461,7 @@ export function buildKnowledgeChainView(chain: DrugKnowledgeChain): KnowledgeCha
   };
 
   for (const [key, entry] of merged) {
-    const icd = entry.icd10 ? ` — ICD-10 ${entry.icd10}` : "";
+    const icd = entry.icd10 ? `. ICD-10 ${entry.icd10}` : "";
     groupItems[groupOf(entry)].push({
       key,
       name: entry.name,
@@ -563,7 +563,7 @@ export function MedicalKnowledgeChain({ drugSlug }: MedicalKnowledgeChainProps) 
         </div>
         <span className="inline-flex items-center gap-1.5 text-caption text-muted-foreground/70">
           <Link2 className="h-3 w-3 shrink-0" aria-hidden />
-          Derived from the canonical knowledge graph — every link is data-backed.
+          Derived from the canonical knowledge graph: every link is data-backed.
         </span>
       </div>
 
@@ -641,14 +641,14 @@ export function MedicalKnowledgeChain({ drugSlug }: MedicalKnowledgeChainProps) 
               {view.unresolvedTargets.map((text) => (
                 <li
                   key={text}
-                  title="Referenced in the drug data — not yet a registered graph entity"
+                  title="Referenced in the drug data, not yet a registered graph entity"
                   className="grid grid-cols-1 gap-x-4 py-2.5 sm:grid-cols-[minmax(6.5rem,auto)_1fr] sm:items-baseline"
                 >
                   <span className="text-sm font-medium text-foreground/80 [overflow-wrap:anywhere]">
                     {text}
                   </span>
                   <span className="text-caption text-muted-foreground/70">
-                    referenced in the drug data — not yet a registered graph entity
+                    referenced in the drug data, not yet a registered graph entity
                   </span>
                 </li>
               ))}

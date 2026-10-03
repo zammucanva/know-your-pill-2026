@@ -92,7 +92,7 @@ export function DrugExamLens({ drug }: DrugExamLensProps) {
           <SectionHeader
             eyebrow="High-Yield Exam Facts"
             title="What they'll actually test you on."
-            description="MBBS, NEET-PG, USMLE, PLAB — these are the facts that show up repeatedly in pharmacology and psychiatry exams."
+            description="MBBS, NEET-PG, USMLE, PLAB: these are the facts that show up repeatedly in pharmacology and psychiatry exams."
             tone="neural"
           />
           <ol className="mt-10 space-y-3">
@@ -126,7 +126,7 @@ function StructuredExamLens({ drug }: { drug: Drug }) {
         <SectionHeader
           eyebrow="Exam Lens"
           title="What they'll actually test you on."
-          description="Structured by Indian examination — MBBS viva and practical, NEET PG high-yield, INICET clinical reasoning, FMGE frequently tested, and psychiatry residency advanced pearls."
+          description="Structured by Indian examination. MBBS viva and practical, NEET PG high-yield, INICET clinical reasoning, FMGE frequently tested, and psychiatry residency advanced pearls."
           tone="neural"
         />
 

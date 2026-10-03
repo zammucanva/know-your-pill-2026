@@ -142,7 +142,7 @@ export function ConceptKnowledgeGraph({ course }: { course: PsychiatryCourse }) 
       <Container>
         <ConceptSectionHeader
           title="Knowledge Graph"
-          lede="Everything this topic touches — every link is a real KYP route."
+          lede="Everything this topic touches: every link is a real KYP route."
         />
         <details className="group rounded-xl border border-border/60 bg-card/60">
           <summary className="kyp-touch-y flex cursor-pointer list-none items-center justify-between gap-4 rounded-xl px-4 py-3 text-left transition-colors hover:border-brand/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand [&::-webkit-details-marker]:hidden">
@@ -151,7 +151,7 @@ export function ConceptKnowledgeGraph({ course }: { course: PsychiatryCourse }) 
                 Show knowledge graph
               </span>
               <span className="mt-0.5 block text-caption leading-relaxed text-muted-foreground">
-                {nodes.length} linked topics — medications, classes, conditions and more
+                {nodes.length} linked topics: medications, classes, conditions and more
               </span>
             </span>
             <span
@@ -236,7 +236,7 @@ export function ConceptMechanism({ course }: { course: PsychiatryCourse }) {
       <Container width="narrow">
         <ConceptSectionHeader
           title="Mechanism"
-          lede="What actually happens — graded honestly."
+          lede="What actually happens: graded honestly."
           grade={course.mechanism.grade}
         />
         <p className="rounded-xl border border-brand/20 bg-brand-soft/20 px-4 py-3 text-body-sm leading-[1.65] text-foreground/90">
@@ -296,7 +296,7 @@ export function ConceptExplanatoryLayer({ course }: { course: PsychiatryCourse }
                 Explanatory layer (after the description)
               </span>
               <span className="mt-0.5 block text-caption leading-relaxed text-muted-foreground">
-                The brain structures and chemical systems beneath the method — open when you are ready
+                The brain structures and chemical systems beneath the method: open when you are ready
                 for the neuroscience.
               </span>
             </span>
@@ -361,7 +361,7 @@ export function ConceptPathways({ course }: { course: PsychiatryCourse }) {
       <Container width="narrow">
         <ConceptSectionHeader
           title="Pathways"
-          lede="Follow the chain from molecule to symptom — structured pathway data, rendered."
+          lede="Follow the chain from molecule to symptom: structured pathway data, rendered."
         />
         <ConceptAccordion
           label={`${course.title} pathways`}
@@ -432,7 +432,7 @@ export function ConceptClinicalContext({
           <div id="epidemiology" className="scroll-mt-32">
             <ConceptSectionHeader
               title="Epidemiology"
-              lede="Who this affects — global and Indian numbers."
+              lede="Who this affects: global and Indian numbers."
             />
             <div className="grid gap-3 sm:grid-cols-2">
               <CardPrimitive variant="flat" interactive={false} showArrow={false}>
@@ -510,7 +510,7 @@ export function ConceptSymptoms({ course }: { course: PsychiatryCourse }) {
   return (
     <Section spacing="tight" id="symptoms">
       <Container width="narrow">
-        <ConceptSectionHeader title="The Signals" lede="What it looks like — by cluster." />
+        <ConceptSectionHeader title="The Signals" lede="What it looks like: by cluster." />
         <div className="grid gap-3 sm:grid-cols-3">
           {course.symptomClusters.map((cluster, i) => (
             <CardPrimitive key={i} variant="flat" interactive={false} showArrow={false} className="h-full">
@@ -591,7 +591,7 @@ export function ConceptDifferential({ course }: { course: PsychiatryCourse }) {
       <Container width="narrow">
         <ConceptSectionHeader
           title="Differential Diagnosis"
-          lede="What else it could be — and the feature that decides."
+          lede="What else it could be, and the feature that decides."
         />
         {/* ≥640px: the semantic comparison table */}
         <div className="hidden min-[640px]:block">
@@ -672,7 +672,7 @@ export function ConceptManagement({ course }: { course: PsychiatryCourse }) {
       <Container width="narrow">
         <ConceptSectionHeader
           title="Applying the Science"
-          lede="How the science is used at the bedside — educational, not a treatment algorithm."
+          lede="How the science is used at the bedside: educational, not a treatment algorithm."
         />
         <div className="space-y-3">
           {course.management.map((option, i) => (
@@ -719,7 +719,7 @@ export function ConceptPatientGuide({ course }: { course: PsychiatryCourse }) {
       <Container width="narrow">
         <ConceptSectionHeader
           title="Patient Guide"
-          lede="In plain language — for patients and families."
+          lede="In plain language, for patients and families."
         />
         <div className="grid gap-3 sm:grid-cols-2">
           {guide.whatIsIt && (

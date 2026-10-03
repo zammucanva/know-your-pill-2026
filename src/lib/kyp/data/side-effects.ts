@@ -9,7 +9,7 @@ export const sideEffects: SideEffect[] = [
     id: "akathisia",
     name: "Akathisia",
     description:
-      "Inner restlessness and irresistible urge to move — one of the most distressing antipsychotic side effects.",
+      "Inner restlessness and irresistible urge to move, one of the most distressing antipsychotic side effects.",
     receptor: "D2 blockade (mesocortical)",
     pathway: "Mesocortical",
     drugs: ["Haloperidol", "Risperidone", "Olanzapine", "Metoclopramide"],
@@ -52,7 +52,7 @@ export const sideEffects: SideEffect[] = [
     id: "sexual-dysfunction",
     name: "Sexual Dysfunction",
     description:
-      "Decreased libido, delayed orgasm, erectile dysfunction — common with serotonergic antidepressants.",
+      "Decreased libido, delayed orgasm, erectile dysfunction: common with serotonergic antidepressants.",
     receptor: "5-HT2 receptor stimulation",
     pathway: "Spinal & supraspinal serotonergic",
     drugs: ["Sertraline", "Paroxetine", "Fluoxetine"],
@@ -62,7 +62,7 @@ export const sideEffects: SideEffect[] = [
     id: "weight-gain",
     name: "Weight Gain",
     description:
-      "Significant metabolic burden — increased appetite, insulin resistance, dyslipidaemia.",
+      "Significant metabolic burden: increased appetite, insulin resistance, dyslipidaemia.",
     receptor: "5-HT2C & H1 blockade",
     pathway: "Hypothalamic",
     drugs: ["Olanzapine", "Clozapine", "Quetiapine", "Mirtazapine"],

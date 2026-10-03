@@ -57,7 +57,7 @@ export function DrugKnowledgeGraph({ drug, knowledgeChain }: DrugKnowledgeGraphP
         <SectionHeader
           eyebrow="Knowledge Graph"
           title="Everything this drug touches."
-          description="Hover any node to see its relationship. Click to navigate. This is KYP's signature feature — no other psychopharmacology platform surfaces these connections."
+          description="Hover any node to see its relationship. Click to navigate. This is KYP's signature feature: no other psychopharmacology platform surfaces these connections."
           tone="neural"
           align="center"
         />
@@ -93,7 +93,7 @@ export function DrugKnowledgeGraph({ drug, knowledgeChain }: DrugKnowledgeGraphP
             <div className="rounded-xl border border-dashed border-border/60 bg-card/40 p-4 text-center">
               <p className="text-sm text-muted-foreground">
                 <Network className="inline h-4 w-4 mr-1.5 -mt-0.5" />
-                {nodes.length} relationships indexed — hover any node above to see how it connects to {drug.genericName}.
+                {nodes.length} relationships indexed: hover any node above to see how it connects to {drug.genericName}.
               </p>
             </div>
           )}
@@ -187,7 +187,7 @@ function HoverDetail({ node }: { node: KnowledgeGraphNode }) {
     "brain-region": "A brain region where this drug has clinically significant effects.",
     pathway: "A neural circuit relevant to this drug's mechanism.",
     condition: "A clinical condition this drug is used to treat.",
-    "side-effect": "A side effect this drug can cause — know the warning signs.",
+    "side-effect": "A side effect this drug can cause: know the warning signs.",
     "clinical-case": "A real patient case illustrating this drug in practice.",
     "patient-guide": "Plain-language guidance for patients taking this drug.",
   };

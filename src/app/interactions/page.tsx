@@ -253,7 +253,7 @@ export default function InteractionsPage() {
               </h1>
               <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground leading-relaxed">
                 Pick two to six medications and see every interaction their
-                own pages list between them — what it does, why it happens,
+                own pages list between them: what it does, why it happens,
                 and what to do about it. Every entry is copied verbatim from
                 the medication pages; nothing is invented.
               </p>
@@ -337,8 +337,8 @@ export default function InteractionsPage() {
                   {selected.length === 0
                     ? `Select at least ${MIN_SELECTION} medications to check.`
                     : selected.length === 1
-                      ? "One more to go — pick at least two."
-                      : `${selected.length} selected${selected.length < MAX_SELECTION ? " — you can add more" : " — that's the maximum"}.`}
+                      ? "One more to go: pick at least two."
+                      : `${selected.length} selected${selected.length < MAX_SELECTION ? " You can add more" : ". That's the maximum"}.`}
                 </p>
               </div>
             </Reveal>
@@ -387,7 +387,7 @@ export default function InteractionsPage() {
                         {counts.contraindicated > 0 && (
                           <span className="mt-2 block font-medium text-emergency">
                             At least one combination is listed as
-                            contraindicated — these medications must not be
+                            contraindicated: these medications must not be
                             taken together without specialist advice.
                           </span>
                         )}
@@ -472,7 +472,7 @@ export default function InteractionsPage() {
                   <p className="mt-6 flex items-start gap-2 text-xs text-muted-foreground/60 max-w-3xl leading-relaxed">
                     <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden />
                     Every finding is copied verbatim from the selected
-                    medications&apos; reviewed pages — severities are never
+                    medications&apos; reviewed pages: severities are never
                     re-graded, mechanisms never rewritten. Matching is by
                     generic name, brand name or drug class.
                   </p>

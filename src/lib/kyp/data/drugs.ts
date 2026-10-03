@@ -15,7 +15,7 @@ export const substances: Substance[] = [
     neurotransmitter: "GABA · Dopamine · Glutamate",
     href: "/substances/alcohol",
     artwork: "/artwork/ethanol.webp",
-    artworkAlt: "Ethanol molecule — alcohol's psychoactive component, illustrating its chemical structure and CNS depressant mechanism",
+    artworkAlt: "Ethanol molecule: alcohol's psychoactive component, illustrating its chemical structure and CNS depressant mechanism",
   },
   {
     id: "cannabis",
@@ -27,7 +27,7 @@ export const substances: Substance[] = [
     neurotransmitter: "Anandamide · Dopamine",
     href: "/substances/cannabis",
     artwork: "/artwork/cannabis.png",
-    artworkAlt: "THC molecule — tetrahydrocannabinol, the psychoactive component of cannabis, illustrating its action on CB1 cannabinoid receptors",
+    artworkAlt: "THC molecule: tetrahydrocannabinol, the psychoactive component of cannabis, illustrating its action on CB1 cannabinoid receptors",
   },
   {
     id: "opioids",
@@ -39,7 +39,7 @@ export const substances: Substance[] = [
     neurotransmitter: "Endorphin · Dopamine",
     href: "/substances/opioids",
     artwork: "/artwork/morphine.webp",
-    artworkAlt: "Morphine molecule — the prototypical opioid, illustrating its binding to μ-opioid receptors and analgesic mechanism",
+    artworkAlt: "Morphine molecule: the prototypical opioid, illustrating its binding to μ-opioid receptors and analgesic mechanism",
   },
   {
     id: "cocaine",
@@ -51,7 +51,7 @@ export const substances: Substance[] = [
     neurotransmitter: "Dopamine · Norepinephrine",
     href: "#substances",
     artwork: "/artwork/cocaine.webp",
-    artworkAlt: "Cocaine molecule — illustrating its blockade of monoamine transporters and dopaminergic reward pathway activation",
+    artworkAlt: "Cocaine molecule: illustrating its blockade of monoamine transporters and dopaminergic reward pathway activation",
   },
   {
     id: "nicotine",
@@ -63,7 +63,7 @@ export const substances: Substance[] = [
     neurotransmitter: "Acetylcholine · Dopamine",
     href: "#substances",
     artwork: "/artwork/nicotine.webp",
-    artworkAlt: "Nicotine molecule — illustrating its action on nicotinic acetylcholine receptors and dopaminergic reward activation",
+    artworkAlt: "Nicotine molecule: illustrating its action on nicotinic acetylcholine receptors and dopaminergic reward activation",
   },
   {
     id: "amphetamine",
@@ -75,7 +75,7 @@ export const substances: Substance[] = [
     neurotransmitter: "Dopamine · Norepinephrine",
     href: "#substances",
     artwork: "/artwork/amphetamine.webp",
-    artworkAlt: "Amphetamine molecule — illustrating its reversal of dopamine and norepinephrine transporters in the synaptic cleft",
+    artworkAlt: "Amphetamine molecule: illustrating its reversal of dopamine and norepinephrine transporters in the synaptic cleft",
   },
   {
     id: "benzodiazepines",
@@ -87,7 +87,7 @@ export const substances: Substance[] = [
     neurotransmitter: "GABA",
     href: "#substances",
     artwork: "/artwork/diazepam.webp",
-    artworkAlt: "Diazepam molecule — the prototypical benzodiazepine, illustrating its positive allosteric modulation of GABA-A receptors",
+    artworkAlt: "Diazepam molecule: the prototypical benzodiazepine, illustrating its positive allosteric modulation of GABA-A receptors",
   },
   {
     id: "barbiturate",
@@ -99,7 +99,7 @@ export const substances: Substance[] = [
     neurotransmitter: "GABA",
     href: "#substances",
     artwork: "/artwork/barbiturate.webp",
-    artworkAlt: "Phenobarbital molecule — the prototypical barbiturate, illustrating its direct GABA-A receptor agonism and CNS depression",
+    artworkAlt: "Phenobarbital molecule: the prototypical barbiturate, illustrating its direct GABA-A receptor agonism and CNS depression",
   },
   {
     id: "inhalants",
@@ -111,7 +111,7 @@ export const substances: Substance[] = [
     neurotransmitter: "GABA · NMDA",
     href: "#substances",
     artwork: "/artwork/inhalants.webp",
-    artworkAlt: "Toluene molecule — a common inhalant solvent, illustrating its lipophilic crossing of the blood-brain barrier and neurotoxic effects",
+    artworkAlt: "Toluene molecule: a common inhalant solvent, illustrating its lipophilic crossing of the blood-brain barrier and neurotoxic effects",
   },
   {
     id: "lsd",
@@ -123,7 +123,7 @@ export const substances: Substance[] = [
     neurotransmitter: "Serotonin",
     href: "#substances",
     artwork: "/artwork/lsd.webp",
-    artworkAlt: "Lysergic acid diethylamide molecule — illustrating its partial agonism at 5-HT2A serotonin receptors and hallucinogenic effects",
+    artworkAlt: "Lysergic acid diethylamide molecule: illustrating its partial agonism at 5-HT2A serotonin receptors and hallucinogenic effects",
   },
   {
     id: "pcp",
@@ -135,7 +135,7 @@ export const substances: Substance[] = [
     neurotransmitter: "Glutamate (NMDA)",
     href: "#substances",
     artwork: "/artwork/pcp.webp",
-    artworkAlt: "Phencyclidine molecule — illustrating its NMDA receptor antagonism and dissociative effects on glutamatergic neurotransmission",
+    artworkAlt: "Phencyclidine molecule: illustrating its NMDA receptor antagonism and dissociative effects on glutamatergic neurotransmission",
   },
   {
     id: "withdrawal",
@@ -147,6 +147,6 @@ export const substances: Substance[] = [
     neurotransmitter: "Multi-system",
     href: "#substances",
     artwork: "/artwork/withdrawal.png",
-    artworkAlt: "Neurotransmitter imbalance diagram — illustrating the GABA decrease and glutamate increase during substance withdrawal",
+    artworkAlt: "Neurotransmitter imbalance diagram: illustrating the GABA decrease and glutamate increase during substance withdrawal",
   },
 ];
