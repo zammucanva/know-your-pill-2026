@@ -19,6 +19,7 @@
  */
 
 import { createHash } from "node:crypto";
+import { writeFileSync } from "node:fs";
 import { execSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
@@ -111,7 +112,7 @@ console.log(`  SUBSTANTIVE (must be zero): ${substantive.length}`);
 console.log(`structural count drift: ${structural.length}${structural.length ? " !! " + structural.join("; ") : ""}`);
 if (substantive.length) {
   console.log("\nSUBSTANTIVE DIFFERENCES:");
-  require("node:fs").writeFileSync("reports/dash-substantive-diffs.json", JSON.stringify(substantive, null, 2)); console.log("full list: reports/dash-substantive-diffs.json");
+  writeFileSync("reports/dash-substantive-diffs.json", JSON.stringify(substantive, null, 2)); console.log("full list: reports/dash-substantive-diffs.json");
   process.exit(1);
 }
 console.log("\nMEDICAL CONTENT: SEMANTICALLY UNCHANGED (punctuation-only edits)");
