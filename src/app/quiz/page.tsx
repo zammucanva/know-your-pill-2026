@@ -386,7 +386,7 @@ export default function QuizPage() {
                 <p className="mt-6 max-w-xl text-body-lg text-muted-foreground leading-relaxed">
                   {focusedDrug ? (
                     <>
-                      Focused practice on <span className="font-medium text-foreground">{focusedDrug.genericName}</span> — {filteredQuestions.length} questions from its medication course and Stahl&apos;s Prescriber-Guide entry. Each question comes with an explanation.
+                      Focused practice on <span className="font-medium text-foreground">{focusedDrug.genericName}</span>: {filteredQuestions.length} questions from its medication course and Stahl&apos;s Prescriber-Guide entry. Each question comes with an explanation.
                     </>
                   ) : (
                     <>

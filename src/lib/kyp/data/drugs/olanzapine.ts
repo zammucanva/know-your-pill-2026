@@ -626,7 +626,7 @@ export const olanzapine: Drug = {
             },
             {
               drug: "Aripiprazole",
-              value: "Low — activating",
+              value: "Low: activating",
             },
             {
               drug: "Clozapine",

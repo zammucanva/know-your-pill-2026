@@ -112,7 +112,7 @@ export function DrugEvidenceHierarchy({ drug }: DrugEvidenceHierarchyProps) {
           <Callout variant="info" title="Why this hierarchy matters">
             International guidelines are based on global evidence. Indian guidelines adapt this
             evidence to Indian populations, healthcare infrastructure, and cost considerations.
-            Indian clinical practice is how it's actually done in Indian hospitals — which may
+            Indian clinical practice is how it's actually done in Indian hospitals, which may
             differ from both when resources are limited. Understanding all three layers makes
             you a better prescriber in the Indian context.
           </Callout>

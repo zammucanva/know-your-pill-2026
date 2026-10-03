@@ -379,7 +379,7 @@ export const hydroxyzine: Drug = {
           comparisons: [
             {
               drug: "Diphenhydramine",
-              value: "The OTC sedative + the EPS rescue — and the anticholinergic caution",
+              value: "The OTC sedative + the EPS rescue, and the anticholinergic caution",
             },
           ],
         },

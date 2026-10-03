@@ -276,3 +276,116 @@ Current baseline (expected FAIL — this is the gate the Phase 4 cleanup must cl
 - Working tree changes: three new scripts, one JSON data file, this report, `reports/dash-allowlist.json`, and one npm script line in `package.json`. **Zero content/data files touched; zero MCQ files touched; zero generated files touched.**
 - ESLint passes on all new scripts. `npm test`, `typecheck`, `content-lock`, and medical-data checks are unaffected by additive tooling and will run as full gates in Phases 10–11.
 - Incident log: the sandbox reverted to a stale clone mid-session; recovered via `git fetch` + `reset --hard origin/fix/site-wide-dash-cleanup` (census commit `748885e` was already pushed — no work lost).
+
+---
+
+# Phase 4–19 — IMPLEMENTATION RESULTS (2026-10-03)
+
+The cleanup was executed with a deterministic engine (`scripts/dash-cleanup-engine.mjs`) plus curated hand-fixes. Everything below is measured after the final pass.
+
+## 1. Before / after metrics
+
+| Metric | Before (census) | After | Reduction |
+|---|---|---|---|
+| Learner-facing EDITORIAL em dashes (lint:dashes gate: A+B) | **47,798** | **0** | **100%** |
+| Repeated template families (≥3 files) | 279 | 0 | 100% |
+| "structure/list —" constructions | 492 | 0 | 100% |
+| Cluster files (>25 editorial dashes) | 260 | 0 | 100% |
+| Files containing editorial em dashes | 383 | 0 | 100% |
+| Repo-wide em-dash total (all buckets incl. protected) | 62,837 | 40,132* | — |
+| Learner-facing rendered strings (all preserved categories) | 55,189 | 7,299 | — |
+
+\* The repo-wide total includes this audit's own evidence artifacts (the transform log holds the "before" strings, ~25k occurrences in `reports/`), frozen MCQ data (4,292), dev comments (2,953), and canonical notes (291). The learner-facing gate (`npm run lint:dashes`) is the authoritative metric: **0 editorial occurrences**.
+
+## 2. Strings transformed
+
+| Group | Files | Strings changed |
+|---|---|---|
+| Shared templates + routes + joiners (incl. 48 hand-fixed JSX joins) | 78 | ~350 |
+| Drug + patient data | 159 | 13,336 |
+| Psychiatry + clinical data | 114 | 24,896 |
+| Value-key comparison matrices + long clinical labels (follow-up pass) | 32 | 710 |
+| **Total** | **~340 distinct files** | **~38,500 strings** |
+
+Engine rule distribution (final passes): colon 26,600+ / after-colon semicolon 8,100+ / comma 9,100+ / sentence split 2,150+ / parenthetical 2,900+ / imperative 740+ / independent 1,780+ / in-paren 1,360+ / symbol 20 / quoted 330+ / curated 1,180+ / participial 550+ / after-period 47 / conj-adverb 36 / abbreviation 3 / title-colon 9.
+
+## 3. Shared sources fixed at the source (Phase 3)
+
+1. `src/app/drugs/class/[classId]/page.tsx:191` — mission example: "…same structure: mechanism of action…" → renders on all 40 class routes
+2. Same file `:67` — class-page metadata joiner (`${cls.fullName}: ${n} medication guides`)
+3. `src/lib/kyp/data/search-index.ts:41/59/73` + `src/lib/oxford/search.ts:35/51/76` — search/collection descriptions (regenerated below)
+4. `src/app/medicine/page.tsx:28` metadata; `src/app/psychiatry/page.tsx` title
+5. Component joiners: drug-side-effect-causal, guided-learning-toggle, concept-ui, concept-sections, concept-revision, drug-related-drugs, indian-clinical-module, medical-knowledge-chain, drug-evidence-hierarchy, drug-mechanism, patient-hero, patient-guide-section, psychiatry-section, practice-stats-line, topic-accuracy-chips, resume-banner, family-navigator, concern-matrix, class-comparison-client, course-recall, daily-plan, custom-test templates, quiz/study/analytics/self-test/library pages
+6. Derived artifacts regenerated from fixed sources (never hand-edited): `npm run gen:client-data` (search-index-generated, course-stats — 340 entries) + `bun scripts/generate-psychiatry-search-records.ts` (111 records)
+
+## 4. Representative before/after (live vs preview, verified)
+
+| Where | Before | After |
+|---|---|---|
+| /drugs/class/ssri lede | "…same structure — mechanism of action, receptor…" | "…same structure: mechanism of action, receptor…" |
+| Pemoline hero | "The hepatotoxic last-resort stimulant — ADHD's liver-monitoring lesson in a tablet." | "A hepatotoxic last-resort stimulant: an ADHD lesson in liver monitoring." |
+| Sertraline summary | "…neuroadaptive changes — including 5-HT1A… — produce…" | "…neuroadaptive changes (including 5-HT1A…) produce…" |
+| Patient FAQ (124 files) | "No — taper gradually under medical supervision…" | "No. Taper gradually under medical supervision…" |
+| Missed dose (124 files) | "…next dose — in that case, skip the missed dose." | "…next dose. In that case, skip the missed dose." |
+| Recall CTA (102 files) | "…answer the recall questions cold — if not,…" | "…answer the recall questions cold. If not,…" |
+| Quick fact (86 files) | "Take exactly as prescribed — same time each day." | "Take it exactly as prescribed, at the same time each day." |
+| Monitoring (58 files) | "As per international guidance — see Monitoring section." | "As per international guidance; see the Monitoring section." |
+| Audience mode (133 files) | "Everything — advanced reasoning, ward pearls…" | "Everything: advanced reasoning, ward pearls…" |
+| Resource labels (144 copies) | "Patient Guide — Starting an SSRI" | "Patient Guide: Starting an SSRI" |
+| Psychiatry title | "KYP Psychiatry — Structured Psychiatry Learning" | "KYP Psychiatry: Structured Psychiatry Learning" |
+
+## 5. Preserved legitimate dashes (verified in generated HTML)
+
+| Category | Occurrences | Verification |
+|---|---|---|
+| Citations/source titles (E) | 4,231 | HTML samples: "NICE Clinical Guideline CG91 — …", "Section V — Pharmacotherapy of Mood Disorders" |
+| Clinical/technical labels (C) | 304 (+3 gained) | "Insomnia — short-term (onset and maintenance)", test-pinned indication names |
+| Placeholders (F) | 552 | `value: "—"`, `(—)` markers |
+| Numeric ranges (D) | 1 em + 11,057 en | "2–6 weeks", "22–36 hours" |
+| NEEDS CLINICAL REVIEW (G) | 12 | FDA boxed-warning titles, untouched |
+| MCQ-protected | 4,292 | robust extractor proves 0 changed strings |
+| Gene-symbol glosses | ~30 | "SERT (SLC6A4 — serotonin transporter)" — 6 engine commas reverted to convention |
+| Brand | PWA manifest + metadata | "Know Your Pill — Medication Education Made Visual" |
+| Code regexes | 7 lines | documented in lint exemption list |
+| Canonical notes | 291 | excluded directory, untouched |
+
+lint:dashes exemptions are explicit and documented in `scripts/lint-dashes.mjs` (brand, 7 regex lines, gene-gloss pattern, "(—)" placeholders).
+
+## 6. Medical content firewall result
+
+`scripts/medical-value-diff.mjs` (new) compares imported data objects (drugs, diseases, substances, search, categories: **126,118 strings**) pre- vs post-cleanup:
+
+- **14,228 punctuation-only changes** (permitted transform)
+- **297 word-level changes across 15 documented families** — ALL mission-specified template rewrites or joiner restructures with function-word insertions only:
+  - 131× review boilerplate "facts paraphrased" → "facts are paraphrased"
+  - 86× "Take exactly as prescribed" → "Take it exactly as prescribed, at the…" (mission's verbatim example)
+  - 58× "see Monitoring section" → "see the Monitoring section"
+  - 9× "First presentation — schizophrenia — psychotic manifestations" → "First presentation: schizophrenia with psychotic manifestations"
+  - 3× pemoline hero showcase (mission's verbatim example)
+  - 1× fluvoxamine NEET case "~100mg/day" → "(about 100mg/day)"
+  - 12× search-index family joiners "guides — [list]" → "guides across these classes: [list]"
+- **Zero dose / number / mechanism / indication / contraindication / interaction / monitoring / evidence-grade / reference changes. Zero MCQ changes** (independently proven: robust microQuizzes extractor shows 0 files changed; `git diff` shows data/mcq/** and stahl-mcqs/** untouched).
+
+## 7. Test & integrity results
+
+| Gate | Result |
+|---|---|
+| `npm run lint:dashes` (gate mode) | **PASS — 0 editorial occurrences** |
+| `bun test tests/` | 620 tests: 570 pass, 50 fail-lines = **41 unique failures IDENTICAL to the pre-cleanup tree** (environment-only: db/auth/CSP/prisma — no DATABASE_URL or production server in sandbox). **Zero regressions.** |
+| Test assertions updated (content pins) | 5, all punctuation-only: exam-mode ×2, now-quick-wins ×1, weak-area ×1, stahl-mcqs ×1 |
+| `tsc --noEmit` | 73 errors, byte-identical set to pre-cleanup tree (prisma client env; resolved by `prisma generate` for build) |
+| `eslint src/` | 25 problems (20e/5w), byte-identical to pre-cleanup tree |
+| `content-lock` | PASS after documented re-lock (165/165 files, counts 145/1/3/1650/340 unchanged) |
+| `medical-data-snapshot` | re-baselined; value changes = the 297 documented function-word edits above |
+| `npm run build:export-clean` | **SUCCESS** (33s compile, full static export) |
+| Page errors (11 routes, headless browser) | **0** on every route (fresh browser; the single hydration error seen mid-session was a stale dev-server cache artifact, resolved by purging `.next`) |
+| Overflow | 0px on all tested routes at 375/768/1280/1440 (dev runtime); static-serve "overflow" was a local python-server image-loading artifact — live production and dev runtime both measure 0 |
+| Visual QA | 16 screenshots at 375/768/1280/1440 light+dark in `reports/screens/dash-qa/` |
+
+## 8. NEEDS CLINICAL REVIEW items
+
+Unchanged 12 FDA boxed-warning titles (list in §2.2 of the Phase 2 report above). No new items were created; every sentence cleaned was cleaned by punctuation/structure alone.
+
+## 9. Generated-HTML verification (Phase 11)
+
+Mission constructions verified absent from the static export: "same structure — " = 0, "Everything — " = 0, "No — taper" = 0, "as prescribed — " = 0, "cold — " = 0, "Patient Guide — " = 0, "guidance — see" = 0. Remaining " — " instances in HTML are all protected categories (citations, clinical labels, gene glosses, brand, boxed warnings, frozen MCQ explanations) — sampled and verified per route: / (4, all brand), /medicine (136, all indication labels), /drugs/class/ssri (12), escitalopram (103), pemoline (33), sertraline (97), clozapine (25), methylphenidate (38), olanzapine (28), psychiatry (2), MDD (94), alcohol (0), learn (0), quiz (2).

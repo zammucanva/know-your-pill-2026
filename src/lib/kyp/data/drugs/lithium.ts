@@ -597,15 +597,15 @@ export const lithium: Drug = {
           comparisons: [
             {
               drug: "Carbamazepine",
-              value: "Moderate, dose-related — partly tolerance-developing.",
+              value: "Moderate, dose-related: partly tolerance-developing.",
             },
             {
               drug: "Lamotrigine",
-              value: "Not sedating — mildly activating (morning dosing suits most).",
+              value: "Not sedating: mildly activating (morning dosing suits most).",
             },
             {
               drug: "Valproate",
-              value: "Common, dose-related — often useful in acute mania.",
+              value: "Common, dose-related: often useful in acute mania.",
             },
             {
               drug: "Oxcarbazepine",
@@ -627,11 +627,11 @@ export const lithium: Drug = {
             },
             {
               drug: "Valproate",
-              value: "Mania workhorse — especially mixed states and rapid cycling; now pregnancy-governed",
+              value: "Mania workhorse, especially mixed states and rapid cycling; now pregnancy-governed",
             },
             {
               drug: "Oxcarbazepine",
-              value: "The cleaner carbamazepine — off-label mood use with fewer interactions",
+              value: "The cleaner carbamazepine: off-label mood use with fewer interactions",
             },
           ],
         },

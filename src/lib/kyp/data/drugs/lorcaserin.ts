@@ -345,7 +345,7 @@ export const lorcaserin: Drug = {
           comparisons: [
             {
               drug: "Phentermine-Topiramate",
-              value: "The highest-efficacy older weight combination — pregnancy-governed",
+              value: "The highest-efficacy older weight combination: pregnancy-governed",
             },
           ],
         },

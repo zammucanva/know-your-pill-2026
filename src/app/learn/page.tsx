@@ -154,7 +154,7 @@ export default function LearnPage() {
                       Psychiatry
                     </h3>
                     <p className="mt-4 max-w-xl text-body text-muted-foreground leading-relaxed">
-                      The complete psychiatry curriculum — {psychiatryStats.lessons} lessons across{" "}
+                      The complete psychiatry curriculum: {psychiatryStats.lessons} lessons across{" "}
                       {psychiatryStats.domains} clinical domains, each a six-lesson course with
                       foundations, neuroscience, clinical practice, the Indian context, exam
                       revision and active recall.

@@ -291,7 +291,7 @@ export const caprylidene: Drug = {
           comparisons: [
             {
               drug: "L-Methylfolate",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },

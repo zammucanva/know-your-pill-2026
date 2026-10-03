@@ -122,7 +122,7 @@ export const clonazepam: Drug = {
   /* ---- Clinical ---- */
   indications: [
     {
-      name: "Seizure disorders — akinetic, myoclonic, absence seizures; Lennox-Gastaut",
+      name: "Seizure disorders: akinetic, myoclonic, absence seizures; Lennox-Gastaut",
       status: "fda-approved",
       description: "An anticonvulsant benzodiazepine (below).",
     },
@@ -449,19 +449,19 @@ export const clonazepam: Drug = {
           comparisons: [
             {
               drug: "Alprazolam",
-              value: "High — potency-driven.",
+              value: "High: potency-driven.",
             },
             {
               drug: "Diazepam",
-              value: "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+              value: "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
             },
             {
               drug: "Lorazepam",
-              value: "Moderate — intermediate duration limits hangover vs diazepam.",
+              value: "Moderate: intermediate duration limits hangover vs diazepam.",
             },
             {
               drug: "Chlordiazepoxide",
-              value: "High — useful in withdrawal.",
+              value: "High: useful in withdrawal.",
             },
           ],
         },
@@ -475,15 +475,15 @@ export const clonazepam: Drug = {
             },
             {
               drug: "Diazepam",
-              value: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+              value: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
             },
             {
               drug: "Lorazepam",
-              value: "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+              value: "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo",
             },
             {
               drug: "Chlordiazepoxide",
-              value: "Alcohol withdrawal tablet — the founding benzo",
+              value: "Alcohol withdrawal tablet: the founding benzo",
             },
           ],
         },
@@ -638,7 +638,7 @@ export const clonazepam: Drug = {
   ],
   relatedConditions: [
     {
-      name: "Seizure disorders — akinetic, myoclonic, absence seizures; Lennox-Gastaut",
+      name: "Seizure disorders: akinetic, myoclonic, absence seizures; Lennox-Gastaut",
       relationship: "primary",
     },
     {

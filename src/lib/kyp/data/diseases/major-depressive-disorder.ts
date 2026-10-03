@@ -468,14 +468,14 @@ export const majorDepressiveDisorder: Disease = {
       category: "pharmacotherapy",
       name: "Atypical antidepressants — bupropion, mirtazapine",
       description:
-        "Bupropion (NDRI, norepinephrine-dopamine reuptake inhibitor): activating; reverses SSRI-induced sexual dysfunction; first-line augmentation. Avoid in seizure/eating disorder. Mirtazapine (NaSSA, noradrenergic and specific serotonergic): sedating via 5-HT2/5-HT3 and H1 blockade; improves sleep and appetite; useful in depressed patients with insomnia and weight loss.",
+        "Bupropion (NDRI — norepinephrine-dopamine reuptake inhibitor): activating; reverses SSRI-induced sexual dysfunction; first-line augmentation. Avoid in seizure/eating disorder. Mirtazapine (NaSSA, noradrenergic and specific serotonergic): sedating via 5-HT2/5-HT3 and H1 blockade; improves sleep and appetite; useful in depressed patients with insomnia and weight loss.",
       whenToUse: "Bupropion: when SSRI causes sexual dysfunction or fatigue; smoking cessation comorbidity; ADHD comorbidity. Mirtazapine: when insomnia/weight loss prominent; first-line in cancer/geriatric depression with cachexia.",
       indianContext:
         "Bupropion ~₹10–25/tablet; mirtazapine ~₹3–12/tablet. Mirtazapine widely used in Indian oncology and geriatric practice. Bupropion augmentation of SSRI is a common Indian private-practice strategy for partial response.",
     },
     {
       category: "pharmacotherapy",
-      name: "Tricyclic antidepressants (TCAs) — amitriptyline, clomipramine, nortriptyline",
+      name: "Tricyclic antidepressants (TCAs): amitriptyline, clomipramine, nortriptyline",
       description:
         "Block SERT + NET (and 5-HT2, α1, H1, muscarinic, responsible for side effects). Equally efficacious as SSRIs but more side-effect burden. Lethal in overdose (cardiotoxicity. QRS widening, QTc prolongation). Onset 2–4 weeks.",
       whenToUse: "Severe or treatment-resistant MDD; when comorbid neuropathic pain (amitriptyline, nortriptyline); OCD (clomipramine); nocturnal enuresis (imipramine). Avoid in elderly (anticholinergic), cardiac disease (QTc), and suicide risk (lethal overdose).",

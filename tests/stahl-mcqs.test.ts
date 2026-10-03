@@ -654,7 +654,7 @@ describe("stahl mcqs — UI metadata hygiene", () => {
     expect(src).toContain('q.identity.includes("|stahl:")');
     // The opt-in bank toggle still identifies the bank by name.
     expect(src).toContain(
-      "Stahl's Prescriber's Guide — {stahlBankStats().total} clinical MCQs"
+      "Stahl's Prescriber's Guide: {stahlBankStats().total} clinical MCQs"
     );
   });
 

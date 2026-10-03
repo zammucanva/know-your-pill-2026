@@ -295,7 +295,7 @@ export default async function DrugClassPage({
                   </h2>
                   <p className="mt-4 text-body-sm text-muted-foreground leading-relaxed">
                     All {cls.medications.length} {cls.label} members share the
-                    class mechanism — {cls.fullName}. The differences that
+                    class mechanism ({cls.fullName}). The differences that
                     matter clinically are below, aggregated from each
                     medication&apos;s own guide.
                   </p>

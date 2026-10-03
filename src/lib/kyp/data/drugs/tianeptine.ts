@@ -427,7 +427,7 @@ export const tianeptine: Drug = {
           comparisons: [
             {
               drug: "Trazodone",
-              value: "The antidepressant sleeping pill — insomnia at 50 mg, depression at 300 mg",
+              value: "The antidepressant sleeping pill: insomnia at 50 mg, depression at 300 mg",
             },
             {
               drug: "Vilazodone",
@@ -439,7 +439,7 @@ export const tianeptine: Drug = {
             },
             {
               drug: "Nefazodone",
-              value: "The expert-only SARI — withdrawn for hepatotoxicity",
+              value: "The expert-only SARI: withdrawn for hepatotoxicity",
             },
           ],
         },

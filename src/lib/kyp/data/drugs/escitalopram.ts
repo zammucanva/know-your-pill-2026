@@ -51,7 +51,7 @@ export const escitalopram: Drug = {
   mechanism: {
     summary:
       "Escitalopram selectively blocks the serotonin transporter (SERT) with the highest selectivity ratio among SSRIs, increasing synaptic serotonin and (over 2–6 weeks) producing downstream neuroadaptive antidepressant and anxiolytic effects.",
-    molecularTarget: "SERT (SLC6A4, serotonin transporter)",
+    molecularTarget: "SERT (SLC6A4 — serotonin transporter)",
     effect:
       "Acute: increased synaptic serotonin. Chronic (2–6 weeks): desensitisation of 5-HT1A somatodendritic autoreceptors in the raphe nuclei, increased serotonergic throughput to the prefrontal cortex, and upregulation of BDNF in the hippocampus.",
     steps: [
@@ -171,7 +171,7 @@ export const escitalopram: Drug = {
       rationale: "Anaphylaxis and angioedema have been reported. Cross-reactivity with the racemic parent (citalopram) should be assumed.",
     },
     {
-      name: "CYP2C19 poor metabolisers / coadministration with strong CYP2C19 inhibitors (e.g. omeprazole) — at doses >10 mg/day",
+      name: "CYP2C19 poor metabolisers / coadministration with strong CYP2C19 inhibitors (e.g. omeprazole), at doses >10 mg/day",
       severity: "relative",
       rationale:
         "CYP2C19 poor metabolism or inhibition raises escitalopram plasma levels ~2-fold, amplifying QTc risk. The FDA maximum dose in these patients is 10 mg/day.",

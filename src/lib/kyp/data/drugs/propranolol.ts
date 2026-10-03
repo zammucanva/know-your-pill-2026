@@ -399,7 +399,7 @@ export const propranolol: Drug = {
           comparisons: [
             {
               drug: "Propranolol",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },

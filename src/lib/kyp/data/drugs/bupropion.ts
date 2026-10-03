@@ -671,16 +671,16 @@ export const bupropion: Drug = {
           attribute: "Class & mechanism",
           primaryValue: "NDRI: blocks NET + DAT (NO SERT)",
           comparisons: [
-            { drug: "Sertraline", value: "SSRI — blocks SERT only" },
-            { drug: "Venlafaxine", value: "SNRI — blocks SERT + NET (dose-dependent); weak DAT at high dose" },
-            { drug: "Mirtazapine", value: "NaSSA — α2 antagonist + 5-HT2/5-HT3 blocker (NOT a reuptake inhibitor)" },
+            { drug: "Sertraline", value: "SSRI: blocks SERT only" },
+            { drug: "Venlafaxine", value: "SNRI: blocks SERT + NET (dose-dependent); weak DAT at high dose" },
+            { drug: "Mirtazapine", value: "NaSSA: α2 antagonist + 5-HT2/5-HT3 blocker (NOT a reuptake inhibitor)" },
           ],
         },
         {
           attribute: "Sexual dysfunction",
           primaryValue: "NONE: the only commonly used antidepressant that does NOT cause sexual SE",
           comparisons: [
-            { drug: "Sertraline", value: "Common (30–40%) — #1 reason patients stop SSRIs" },
+            { drug: "Sertraline", value: "Common (30–40%): #1 reason patients stop SSRIs" },
             { drug: "Venlafaxine", value: "Common (30–40%), similar to SSRIs" },
             { drug: "Mirtazapine", value: "Lower than SSRIs (~10–15%)" },
           ],
@@ -691,7 +691,7 @@ export const bupropion: Drug = {
           comparisons: [
             { drug: "Sertraline", value: "Mild weight gain long-term" },
             { drug: "Venlafaxine", value: "Weight neutral to mild gain" },
-            { drug: "Mirtazapine", value: "Significant weight gain (5–10 kg) — sometimes used deliberately for cachectic patients" },
+            { drug: "Mirtazapine", value: "Significant weight gain (5–10 kg): sometimes used deliberately for cachectic patients" },
           ],
         },
         {
@@ -700,7 +700,7 @@ export const bupropion: Drug = {
           comparisons: [
             { drug: "Sertraline", value: "Mildly activating" },
             { drug: "Venlafaxine", value: "Activating (NE effect at >150 mg/day)" },
-            { drug: "Mirtazapine", value: "SEDATING — give at night, useful for insomnia" },
+            { drug: "Mirtazapine", value: "SEDATING: give at night, useful for insomnia" },
           ],
         },
         {
@@ -717,7 +717,7 @@ export const bupropion: Drug = {
           primaryValue: "NONE: long half-life + no SERT action = no 'brain zaps'",
           comparisons: [
             { drug: "Sertraline", value: "Mild–moderate (taper over ≥4 weeks)" },
-            { drug: "Venlafaxine", value: "WORST of any antidepressant — missed doses can cause withdrawal within hours" },
+            { drug: "Venlafaxine", value: "WORST of any antidepressant: missed doses can cause withdrawal within hours" },
             { drug: "Mirtazapine", value: "Mild–moderate" },
           ],
         },
@@ -735,7 +735,7 @@ export const bupropion: Drug = {
           primaryValue: "Mild BP elevation (NE effect): less than venlafaxine",
           comparisons: [
             { drug: "Sertraline", value: "No meaningful BP effect" },
-            { drug: "Venlafaxine", value: "Dose-dependent HYPERTENSION — 10–15% at >300 mg/day" },
+            { drug: "Venlafaxine", value: "Dose-dependent HYPERTENSION: 10–15% at >300 mg/day" },
             { drug: "Mirtazapine", value: "No meaningful BP effect" },
           ],
         },
@@ -744,7 +744,7 @@ export const bupropion: Drug = {
           primaryValue: "21 h (parent); 20–24 h (hydroxybupropion active metabolite)",
           comparisons: [
             { drug: "Sertraline", value: "26 h" },
-            { drug: "Venlafaxine", value: "5 h (parent); 11 h (O-desmethylvenlafaxine) — shortest, drives severe withdrawal" },
+            { drug: "Venlafaxine", value: "5 h (parent); 11 h (O-desmethylvenlafaxine): shortest, drives severe withdrawal" },
             { drug: "Mirtazapine", value: "20–40 h" },
           ],
         },

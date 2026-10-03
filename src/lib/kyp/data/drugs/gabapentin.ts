@@ -452,11 +452,11 @@ export const gabapentin: Drug = {
           comparisons: [
             {
               drug: "Pregabalin",
-              value: "The GAD-approved gabapentinoid — pain, fibromyalgia, anxiety",
+              value: "The GAD-approved gabapentinoid: pain, fibromyalgia, anxiety",
             },
             {
               drug: "Topiramate",
-              value: "The weight-losing multi-mechanism stabiliser — craving and appetite",
+              value: "The weight-losing multi-mechanism stabiliser: craving and appetite",
             },
             {
               drug: "Levetiracetam",
@@ -464,7 +464,7 @@ export const gabapentin: Drug = {
             },
             {
               drug: "Tiagabine",
-              value: "The GABA-reuptake blocker — mechanism elegance, clinical footnote",
+              value: "The GABA-reuptake blocker: mechanism elegance, clinical footnote",
             },
           ],
         },

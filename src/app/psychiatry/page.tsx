@@ -33,12 +33,12 @@ import { coreNotes, LEARNER_SECTION_ORDER } from "@/lib/oxford/curriculum";
  */
 
 export const metadata: Metadata = {
-  title: "KYP Psychiatry. Structured Psychiatry Learning",
+  title: "KYP Psychiatry: Structured Psychiatry Learning",
   description:
     "Learn psychiatry through structured clinical lessons: 109 topics across 18 domains, clinical cases, active recall, India in practice and 719 self-test questions.",
   keywords: ["psychiatry", "psychiatry learning", "KYP Psychiatry", "psychiatry curriculum", "psychiatric disorders"],
   openGraph: {
-    title: "KYP Psychiatry. Structured Psychiatry Learning",
+    title: "KYP Psychiatry: Structured Psychiatry Learning",
     description:
       "109 structured lessons, 18 clinical domains, cases, active recall and self-testing.",
     type: "website",
@@ -68,7 +68,7 @@ export default function PsychiatryHubPage() {
               Learn psychiatry the way clinical thinking works.
             </h1>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              A complete psychiatry curriculum — {stats.noteCount} structured lessons across{" "}
+              A complete psychiatry curriculum: {stats.noteCount} structured lessons across{" "}
               {stats.groupCount} clinical domains. Understand the concept, learn the detail,
               reason through cases, remember what matters, then test yourself with{" "}
               {stats.mcqCount} practice questions.

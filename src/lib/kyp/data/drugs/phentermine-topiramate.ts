@@ -415,7 +415,7 @@ export const phentermineTopiramate: Drug = {
           comparisons: [
             {
               drug: "Lorcaserin",
-              value: "The withdrawn serotonergic weight drug — a pharmacology chapter",
+              value: "The withdrawn serotonergic weight drug: a pharmacology chapter",
             },
           ],
         },

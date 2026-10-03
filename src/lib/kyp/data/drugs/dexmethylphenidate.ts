@@ -384,7 +384,7 @@ export const dexmethylphenidate: Drug = {
           comparisons: [
             {
               drug: "Lisdexamfetamine",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
             {
               drug: "Methylphenidate (d,l)",
@@ -392,11 +392,11 @@ export const dexmethylphenidate: Drug = {
             },
             {
               drug: "Dextroamphetamine (d-Amphetamine)",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
             {
               drug: "Amphetamine (d,l)",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
           ],
         },
@@ -410,7 +410,7 @@ export const dexmethylphenidate: Drug = {
             },
             {
               drug: "Methylphenidate (d,l)",
-              value: "Not sedating — the opposite; rebound fatigue occurs at wear-off.",
+              value: "Not sedating: the opposite; rebound fatigue occurs at wear-off.",
             },
             {
               drug: "Dextroamphetamine (d-Amphetamine)",
@@ -432,15 +432,15 @@ export const dexmethylphenidate: Drug = {
             },
             {
               drug: "Methylphenidate (d,l)",
-              value: "The default stimulant — 60 years of ADHD first-line",
+              value: "The default stimulant: 60 years of ADHD first-line",
             },
             {
               drug: "Dextroamphetamine (d-Amphetamine)",
-              value: "The pure d-isomer — stronger central, softer peripheral",
+              value: "The pure d-isomer: stronger central, softer peripheral",
             },
             {
               drug: "Amphetamine (d,l)",
-              value: "The Adderall mixture — d for focus, l for wake",
+              value: "The Adderall mixture: d for focus, l for wake",
             },
           ],
         },

@@ -507,15 +507,15 @@ export const valproate: Drug = {
           comparisons: [
             {
               drug: "Carbamazepine",
-              value: "Moderate, dose-related — partly tolerance-developing.",
+              value: "Moderate, dose-related: partly tolerance-developing.",
             },
             {
               drug: "Lamotrigine",
-              value: "Not sedating — mildly activating (morning dosing suits most).",
+              value: "Not sedating: mildly activating (morning dosing suits most).",
             },
             {
               drug: "Lithium",
-              value: "Not typically sedating — neutral; occasionally described as 'slowing'.",
+              value: "Not typically sedating: neutral; occasionally described as 'slowing'.",
             },
             {
               drug: "Oxcarbazepine",
@@ -537,11 +537,11 @@ export const valproate: Drug = {
             },
             {
               drug: "Lithium",
-              value: "Anti-suicide + both-pole prophylaxis — the irreplaceable classic",
+              value: "Anti-suicide + both-pole prophylaxis: the irreplaceable classic",
             },
             {
               drug: "Oxcarbazepine",
-              value: "The cleaner carbamazepine — off-label mood use with fewer interactions",
+              value: "The cleaner carbamazepine: off-label mood use with fewer interactions",
             },
           ],
         },

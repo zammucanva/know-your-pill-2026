@@ -598,7 +598,7 @@ export function ConceptDifferential({ course }: { course: PsychiatryCourse }) {
           <div className="overflow-x-auto rounded-xl border border-border/60">
             <table className="w-full text-left text-xs">
               <caption className="sr-only sm:not-sr-only px-4 pt-3 pb-2 text-caption text-left text-muted-foreground">
-                {course.title} — differentials with the distinguishing features and the key
+                {course.title}: differentials with the distinguishing features and the key
                 assessment point that decides each one.
               </caption>
               <thead>

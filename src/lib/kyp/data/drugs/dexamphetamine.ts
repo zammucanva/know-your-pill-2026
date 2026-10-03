@@ -389,7 +389,7 @@ export const dexamphetamine: Drug = {
           comparisons: [
             {
               drug: "Lisdexamfetamine",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
             {
               drug: "Methylphenidate (d,l)",
@@ -397,11 +397,11 @@ export const dexamphetamine: Drug = {
             },
             {
               drug: "Amphetamine (d,l)",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
             {
               drug: "Dexmethylphenidate",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
           ],
         },
@@ -415,7 +415,7 @@ export const dexamphetamine: Drug = {
             },
             {
               drug: "Methylphenidate (d,l)",
-              value: "Not sedating — the opposite; rebound fatigue occurs at wear-off.",
+              value: "Not sedating: the opposite; rebound fatigue occurs at wear-off.",
             },
             {
               drug: "Amphetamine (d,l)",
@@ -437,15 +437,15 @@ export const dexamphetamine: Drug = {
             },
             {
               drug: "Methylphenidate (d,l)",
-              value: "The default stimulant — 60 years of ADHD first-line",
+              value: "The default stimulant: 60 years of ADHD first-line",
             },
             {
               drug: "Amphetamine (d,l)",
-              value: "The Adderall mixture — d for focus, l for wake",
+              value: "The Adderall mixture: d for focus, l for wake",
             },
             {
               drug: "Dexmethylphenidate",
-              value: "The active isomer — methylphenidate distilled",
+              value: "The active isomer: methylphenidate distilled",
             },
           ],
         },

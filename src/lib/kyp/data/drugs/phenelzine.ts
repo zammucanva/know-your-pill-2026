@@ -437,19 +437,19 @@ export const phenelzine: Drug = {
           comparisons: [
             {
               drug: "Isocarboxazid",
-              value: "Weight gain common — the MAOI story.",
+              value: "Weight gain common: the MAOI story.",
             },
             {
               drug: "Moclobemide",
-              value: "Weight gain common — the MAOI story.",
+              value: "Weight gain common: the MAOI story.",
             },
             {
               drug: "Selegiline",
-              value: "Weight gain common — the MAOI story.",
+              value: "Weight gain common: the MAOI story.",
             },
             {
               drug: "Tranylcypromine",
-              value: "Weight gain common — the MAOI story.",
+              value: "Weight gain common: the MAOI story.",
             },
           ],
         },
@@ -481,11 +481,11 @@ export const phenelzine: Drug = {
           comparisons: [
             {
               drug: "Isocarboxazid",
-              value: "The quiet hydrazine — legacy MAOI continuity",
+              value: "The quiet hydrazine: legacy MAOI continuity",
             },
             {
               drug: "Moclobemide",
-              value: "The RIMA — MAOI mechanism with the diet relaxed",
+              value: "The RIMA. MAOI mechanism with the diet relaxed",
             },
             {
               drug: "Selegiline",
@@ -493,7 +493,7 @@ export const phenelzine: Drug = {
             },
             {
               drug: "Tranylcypromine",
-              value: "The activating MAOI — anergic treatment-resistant depression",
+              value: "The activating MAOI: anergic treatment-resistant depression",
             },
           ],
         },

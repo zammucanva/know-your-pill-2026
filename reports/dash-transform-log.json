@@ -2,10 +2,10 @@
   "meta": {
     "group": "psych",
     "dry": false,
-    "generatedAt": "2026-10-03T11:00:23.674Z",
-    "files": 114,
-    "filesChanged": 114,
-    "stringsChanged": 24880
+    "generatedAt": "2026-10-03T11:04:19.806Z",
+    "files": 14,
+    "filesChanged": 14,
+    "stringsChanged": 16
   },
   "changes": [
     {
@@ -149969,6 +149969,5304 @@
           "rule": "sentence",
           "before": "Morphine — Prototype opioid analgesic",
           "after": "Morphine. Prototype opioid analgesic"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/acamprosate.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 417,
+          "rule": "colon",
+          "before": "The pure antagonist — alcohol relapse and opioid blockade",
+          "after": "The pure antagonist: alcohol relapse and opioid blockade"
+        },
+        {
+          "line": 413,
+          "rule": "comma",
+          "before": "The classical aversion deterrent — for the motivated, supervised patient",
+          "after": "The classical aversion deterrent, for the motivated, supervised patient"
+        },
+        {
+          "line": 409,
+          "rule": "colon",
+          "before": "The safety-ceiling maintenance agonist — office-based opioid treatment",
+          "after": "The safety-ceiling maintenance agonist: office-based opioid treatment"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/agomelatine.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 342,
+          "rule": "curated",
+          "before": "Different mechanism — see its guide",
+          "after": "Different mechanism: see its guide"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/alprazolam.ts",
+      "editCount": 8,
+      "edits": [
+        {
+          "line": 469,
+          "rule": "colon",
+          "before": "Alcohol withdrawal tablet — the founding benzo",
+          "after": "Alcohol withdrawal tablet: the founding benzo"
+        },
+        {
+          "line": 465,
+          "rule": "colon",
+          "before": "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+          "after": "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo"
+        },
+        {
+          "line": 461,
+          "rule": "colon",
+          "before": "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+          "after": "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse"
+        },
+        {
+          "line": 457,
+          "rule": "colon",
+          "before": "The long-acting anticonvulsant benzo — seizures and panic",
+          "after": "The long-acting anticonvulsant benzo: seizures and panic"
+        },
+        {
+          "line": 447,
+          "rule": "colon",
+          "before": "High — useful in withdrawal.",
+          "after": "High: useful in withdrawal."
+        },
+        {
+          "line": 443,
+          "rule": "colon",
+          "before": "Moderate — intermediate duration limits hangover vs diazepam.",
+          "after": "Moderate: intermediate duration limits hangover vs diazepam."
+        },
+        {
+          "line": 439,
+          "rule": "colon",
+          "before": "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+          "after": "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis."
+        },
+        {
+          "line": 435,
+          "rule": "colon",
+          "before": "High — the dose-limiting effect.",
+          "after": "High: the dose-limiting effect."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/amisulpride.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 483,
+          "rule": "colon",
+          "before": "Most robust broad-spectrum atypical — heaviest metabolic burden",
+          "after": "Most robust broad-spectrum atypical: heaviest metabolic burden"
+        },
+        {
+          "line": 479,
+          "rule": "colon",
+          "before": "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+          "after": "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio"
+        },
+        {
+          "line": 475,
+          "rule": "colon",
+          "before": "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+          "after": "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures"
+        },
+        {
+          "line": 471,
+          "rule": "colon",
+          "before": "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+          "after": "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic"
+        },
+        {
+          "line": 461,
+          "rule": "colon",
+          "before": "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+          "after": "Moderate to high: usually transient at a given dose but dose-limiting for many patients."
+        },
+        {
+          "line": 457,
+          "rule": "colon",
+          "before": "Low — may be mildly activating.",
+          "after": "Low: may be mildly activating."
+        },
+        {
+          "line": 449,
+          "rule": "colon",
+          "before": "Low; can be activating — insomnia is more common than somnolence.",
+          "after": "Low; can be activating: insomnia is more common than somnolence."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/amitriptyline.ts",
+      "editCount": 8,
+      "edits": [
+        {
+          "line": 829,
+          "rule": "colon",
+          "before": "Generally avoided — limited data",
+          "after": "Generally avoided: limited data"
+        },
+        {
+          "line": 794,
+          "rule": "colon",
+          "before": "Same pain indications as amitriptyline — fewer side effects",
+          "after": "Same pain indications as amitriptyline: fewer side effects"
+        },
+        {
+          "line": 785,
+          "rule": "sentence",
+          "before": "Yes — UNIQUE among antidepressants: 50–150 ng/mL",
+          "after": "Yes. UNIQUE among antidepressants: 50–150 ng/mL"
+        },
+        {
+          "line": 784,
+          "rule": "colon",
+          "before": "No — no established therapeutic window",
+          "after": "No: no established therapeutic window"
+        },
+        {
+          "line": 783,
+          "rule": "colon",
+          "before": "No — no established therapeutic window",
+          "after": "No: no established therapeutic window"
+        },
+        {
+          "line": 766,
+          "rule": "colon",
+          "before": "Moderate — more toxic than SSRIs but less than TCAs",
+          "after": "Moderate: more toxic than SSRIs but less than TCAs"
+        },
+        {
+          "line": 765,
+          "rule": "colon",
+          "before": "Safe in overdose — safer than TCAs (the reason SSRIs are first-line)",
+          "after": "Safe in overdose: safer than TCAs (the reason SSRIs are first-line)"
+        },
+        {
+          "line": 757,
+          "rule": "comma",
+          "before": "SERT + NET blockade (clean — like an SNRI)",
+          "after": "SERT + NET blockade (clean, like an SNRI)"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/amoxapine.ts",
+      "editCount": 12,
+      "edits": [
+        {
+          "line": 533,
+          "rule": "colon",
+          "before": "The H1-pure micro-dose to the full TCA — three drugs in one",
+          "after": "The H1-pure micro-dose to the full TCA: three drugs in one"
+        },
+        {
+          "line": 529,
+          "rule": "colon",
+          "before": "The NET-pure TCA — energising, and the paediatric-cardiac caution",
+          "after": "The NET-pure TCA: energising, and the paediatric-cardiac caution"
+        },
+        {
+          "line": 525,
+          "rule": "colon",
+          "before": "The TCA survivor — level-guided, post-MI-safe, pain-effective",
+          "after": "The TCA survivor: level-guided, post-MI-safe, pain-effective"
+        },
+        {
+          "line": 521,
+          "rule": "colon",
+          "before": "The founding TCA — depression, enuresis, and panic history",
+          "after": "The founding TCA: depression, enuresis, and panic history"
+        },
+        {
+          "line": 511,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 507,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 503,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 499,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 489,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 485,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 481,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 477,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/amphetamine.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 446,
+          "rule": "colon",
+          "before": "The active isomer — methylphenidate distilled",
+          "after": "The active isomer: methylphenidate distilled"
+        },
+        {
+          "line": 442,
+          "rule": "colon",
+          "before": "The pure d-isomer — stronger central, softer peripheral",
+          "after": "The pure d-isomer: stronger central, softer peripheral"
+        },
+        {
+          "line": 438,
+          "rule": "colon",
+          "before": "The default stimulant — 60 years of ADHD first-line",
+          "after": "The default stimulant: 60 years of ADHD first-line"
+        },
+        {
+          "line": 416,
+          "rule": "colon",
+          "before": "Not sedating — the opposite; rebound fatigue occurs at wear-off.",
+          "after": "Not sedating: the opposite; rebound fatigue occurs at wear-off."
+        },
+        {
+          "line": 402,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        },
+        {
+          "line": 398,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        },
+        {
+          "line": 390,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/aripiprazole.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 658,
+          "rule": "colon",
+          "before": "Lowest EPS — treats refractory cases",
+          "after": "Lowest EPS: treats refractory cases"
+        },
+        {
+          "line": 632,
+          "rule": "colon",
+          "before": "High — used as a sedative",
+          "after": "High: used as a sedative"
+        },
+        {
+          "line": 584,
+          "rule": "colon",
+          "before": "Highest tier — frequent and significant",
+          "after": "Highest tier: frequent and significant"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/armodafinil.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 347,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/asenapine.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 501,
+          "rule": "colon",
+          "before": "Most robust broad-spectrum atypical — heaviest metabolic burden",
+          "after": "Most robust broad-spectrum atypical: heaviest metabolic burden"
+        },
+        {
+          "line": 497,
+          "rule": "colon",
+          "before": "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+          "after": "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio"
+        },
+        {
+          "line": 493,
+          "rule": "colon",
+          "before": "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+          "after": "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures"
+        },
+        {
+          "line": 489,
+          "rule": "colon",
+          "before": "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+          "after": "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic"
+        },
+        {
+          "line": 479,
+          "rule": "colon",
+          "before": "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+          "after": "Moderate to high: usually transient at a given dose but dose-limiting for many patients."
+        },
+        {
+          "line": 475,
+          "rule": "colon",
+          "before": "Low — may be mildly activating.",
+          "after": "Low: may be mildly activating."
+        },
+        {
+          "line": 467,
+          "rule": "colon",
+          "before": "Low; can be activating — insomnia is more common than somnolence.",
+          "after": "Low; can be activating: insomnia is more common than somnolence."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/atomoxetine.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 373,
+          "rule": "curated",
+          "before": "Different mechanism — see its guide",
+          "after": "Different mechanism: see its guide"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/benztropine.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 412,
+          "rule": "colon",
+          "before": "The Indian classic — anticholinergic EPS cover for typical antipsychotics",
+          "after": "The Indian classic: anticholinergic EPS cover for typical antipsychotics"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/blonanserin.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 456,
+          "rule": "colon",
+          "before": "Most robust broad-spectrum atypical — heaviest metabolic burden",
+          "after": "Most robust broad-spectrum atypical: heaviest metabolic burden"
+        },
+        {
+          "line": 452,
+          "rule": "colon",
+          "before": "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+          "after": "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio"
+        },
+        {
+          "line": 448,
+          "rule": "colon",
+          "before": "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+          "after": "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures"
+        },
+        {
+          "line": 444,
+          "rule": "colon",
+          "before": "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+          "after": "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic"
+        },
+        {
+          "line": 434,
+          "rule": "colon",
+          "before": "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+          "after": "Moderate to high: usually transient at a given dose but dose-limiting for many patients."
+        },
+        {
+          "line": 430,
+          "rule": "colon",
+          "before": "Low — may be mildly activating.",
+          "after": "Low: may be mildly activating."
+        },
+        {
+          "line": 422,
+          "rule": "colon",
+          "before": "Low; can be activating — insomnia is more common than somnolence.",
+          "after": "Low; can be activating: insomnia is more common than somnolence."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/brexpiprazole.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 485,
+          "rule": "colon",
+          "before": "Most robust broad-spectrum atypical — heaviest metabolic burden",
+          "after": "Most robust broad-spectrum atypical: heaviest metabolic burden"
+        },
+        {
+          "line": 481,
+          "rule": "colon",
+          "before": "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+          "after": "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio"
+        },
+        {
+          "line": 477,
+          "rule": "colon",
+          "before": "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+          "after": "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures"
+        },
+        {
+          "line": 473,
+          "rule": "colon",
+          "before": "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+          "after": "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic"
+        },
+        {
+          "line": 463,
+          "rule": "colon",
+          "before": "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+          "after": "Moderate to high: usually transient at a given dose but dose-limiting for many patients."
+        },
+        {
+          "line": 459,
+          "rule": "colon",
+          "before": "Low — may be mildly activating.",
+          "after": "Low: may be mildly activating."
+        },
+        {
+          "line": 451,
+          "rule": "colon",
+          "before": "Low; can be activating — insomnia is more common than somnolence.",
+          "after": "Low; can be activating: insomnia is more common than somnolence."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/buprenorphine.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 478,
+          "rule": "colon",
+          "before": "The pure antagonist — alcohol relapse and opioid blockade",
+          "after": "The pure antagonist: alcohol relapse and opioid blockade"
+        },
+        {
+          "line": 474,
+          "rule": "comma",
+          "before": "The classical aversion deterrent — for the motivated, supervised patient",
+          "after": "The classical aversion deterrent, for the motivated, supervised patient"
+        },
+        {
+          "line": 470,
+          "rule": "comma",
+          "before": "The abstinence-protector — for the already-abstinent patient",
+          "after": "The abstinence-protector, for the already-abstinent patient"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/bupropion.ts",
+      "editCount": 9,
+      "edits": [
+        {
+          "line": 747,
+          "rule": "colon",
+          "before": "5 h (parent); 11 h (O-desmethylvenlafaxine) — shortest, drives severe withdrawal",
+          "after": "5 h (parent); 11 h (O-desmethylvenlafaxine): shortest, drives severe withdrawal"
+        },
+        {
+          "line": 738,
+          "rule": "colon",
+          "before": "Dose-dependent HYPERTENSION — 10–15% at >300 mg/day",
+          "after": "Dose-dependent HYPERTENSION: 10–15% at >300 mg/day"
+        },
+        {
+          "line": 720,
+          "rule": "colon",
+          "before": "WORST of any antidepressant — missed doses can cause withdrawal within hours",
+          "after": "WORST of any antidepressant: missed doses can cause withdrawal within hours"
+        },
+        {
+          "line": 703,
+          "rule": "colon",
+          "before": "SEDATING — give at night, useful for insomnia",
+          "after": "SEDATING: give at night, useful for insomnia"
+        },
+        {
+          "line": 694,
+          "rule": "colon",
+          "before": "Significant weight gain (5–10 kg) — sometimes used deliberately for cachectic patients",
+          "after": "Significant weight gain (5–10 kg): sometimes used deliberately for cachectic patients"
+        },
+        {
+          "line": 683,
+          "rule": "colon",
+          "before": "Common (30–40%) — #1 reason patients stop SSRIs",
+          "after": "Common (30–40%): #1 reason patients stop SSRIs"
+        },
+        {
+          "line": 676,
+          "rule": "colon",
+          "before": "NaSSA — α2 antagonist + 5-HT2/5-HT3 blocker (NOT a reuptake inhibitor)",
+          "after": "NaSSA: α2 antagonist + 5-HT2/5-HT3 blocker (NOT a reuptake inhibitor)"
+        },
+        {
+          "line": 675,
+          "rule": "colon",
+          "before": "SNRI — blocks SERT + NET (dose-dependent); weak DAT at high dose",
+          "after": "SNRI: blocks SERT + NET (dose-dependent); weak DAT at high dose"
+        },
+        {
+          "line": 674,
+          "rule": "colon",
+          "before": "SSRI — blocks SERT only",
+          "after": "SSRI: blocks SERT only"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/buspirone.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 339,
+          "rule": "curated",
+          "before": "Different mechanism — see its guide",
+          "after": "Different mechanism: see its guide"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/caprylidene.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 294,
+          "rule": "curated",
+          "before": "Different mechanism — see its guide",
+          "after": "Different mechanism: see its guide"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/carbamazepine.ts",
+      "editCount": 6,
+      "edits": [
+        {
+          "line": 533,
+          "rule": "colon",
+          "before": "The cleaner carbamazepine — off-label mood use with fewer interactions",
+          "after": "The cleaner carbamazepine: off-label mood use with fewer interactions"
+        },
+        {
+          "line": 529,
+          "rule": "comma",
+          "before": "Mania workhorse — especially mixed states and rapid cycling; now pregnancy-governed",
+          "after": "Mania workhorse, especially mixed states and rapid cycling; now pregnancy-governed"
+        },
+        {
+          "line": 525,
+          "rule": "colon",
+          "before": "Anti-suicide + both-pole prophylaxis — the irreplaceable classic",
+          "after": "Anti-suicide + both-pole prophylaxis: the irreplaceable classic"
+        },
+        {
+          "line": 507,
+          "rule": "colon",
+          "before": "Common, dose-related — often useful in acute mania.",
+          "after": "Common, dose-related: often useful in acute mania."
+        },
+        {
+          "line": 503,
+          "rule": "colon",
+          "before": "Not typically sedating — neutral; occasionally described as 'slowing'.",
+          "after": "Not typically sedating: neutral; occasionally described as 'slowing'."
+        },
+        {
+          "line": 499,
+          "rule": "colon",
+          "before": "Not sedating — mildly activating (morning dosing suits most).",
+          "after": "Not sedating: mildly activating (morning dosing suits most)."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/cariprazine.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 500,
+          "rule": "colon",
+          "before": "Most robust broad-spectrum atypical — heaviest metabolic burden",
+          "after": "Most robust broad-spectrum atypical: heaviest metabolic burden"
+        },
+        {
+          "line": 496,
+          "rule": "colon",
+          "before": "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+          "after": "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio"
+        },
+        {
+          "line": 492,
+          "rule": "colon",
+          "before": "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+          "after": "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures"
+        },
+        {
+          "line": 488,
+          "rule": "colon",
+          "before": "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+          "after": "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic"
+        },
+        {
+          "line": 478,
+          "rule": "colon",
+          "before": "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+          "after": "Moderate to high: usually transient at a given dose but dose-limiting for many patients."
+        },
+        {
+          "line": 474,
+          "rule": "colon",
+          "before": "Low — may be mildly activating.",
+          "after": "Low: may be mildly activating."
+        },
+        {
+          "line": 466,
+          "rule": "colon",
+          "before": "Low; can be activating — insomnia is more common than somnolence.",
+          "after": "Low; can be activating: insomnia is more common than somnolence."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/chlordiazepoxide.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 449,
+          "rule": "colon",
+          "before": "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+          "after": "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo"
+        },
+        {
+          "line": 445,
+          "rule": "colon",
+          "before": "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+          "after": "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse"
+        },
+        {
+          "line": 441,
+          "rule": "colon",
+          "before": "The long-acting anticonvulsant benzo — seizures and panic",
+          "after": "The long-acting anticonvulsant benzo: seizures and panic"
+        },
+        {
+          "line": 427,
+          "rule": "colon",
+          "before": "Moderate — intermediate duration limits hangover vs diazepam.",
+          "after": "Moderate: intermediate duration limits hangover vs diazepam."
+        },
+        {
+          "line": 423,
+          "rule": "colon",
+          "before": "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+          "after": "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis."
+        },
+        {
+          "line": 419,
+          "rule": "colon",
+          "before": "High — the dose-limiting effect.",
+          "after": "High: the dose-limiting effect."
+        },
+        {
+          "line": 415,
+          "rule": "colon",
+          "before": "High — potency-driven.",
+          "after": "High: potency-driven."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/chlorpromazine.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 505,
+          "rule": "colon",
+          "before": "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+          "after": "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool"
+        },
+        {
+          "line": 483,
+          "rule": "comma",
+          "before": "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+          "after": "Mild, among the least sedating antipsychotics; alerting more than calming at low doses."
+        },
+        {
+          "line": 473,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 469,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 465,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/clomipramine.ts",
+      "editCount": 10,
+      "edits": [
+        {
+          "line": 845,
+          "rule": "comma",
+          "before": "Avoid — not drug of choice. Sertraline preferred.",
+          "after": "Avoid, not drug of choice. Sertraline preferred."
+        },
+        {
+          "line": 827,
+          "rule": "in-paren",
+          "before": "Nortriptyline (NET > SERT — defined therapeutic window 50–150 ng/mL)",
+          "after": "Nortriptyline (NET > SERT, defined therapeutic window 50–150 ng/mL)"
+        },
+        {
+          "line": 818,
+          "rule": "colon",
+          "before": "HIGH — same as clomipramine (tertiary amine)",
+          "after": "HIGH: same as clomipramine (tertiary amine)"
+        },
+        {
+          "line": 811,
+          "rule": "colon",
+          "before": "Common (30–40%) — serotonergic class effect",
+          "after": "Common (30–40%): serotonergic class effect"
+        },
+        {
+          "line": 810,
+          "rule": "colon",
+          "before": "Common (30–40%) — serotonergic class effect",
+          "after": "Common (30–40%): serotonergic class effect"
+        },
+        {
+          "line": 793,
+          "rule": "colon",
+          "before": "Safe in overdose — reason SSRIs are first-line",
+          "after": "Safe in overdose: reason SSRIs are first-line"
+        },
+        {
+          "line": 792,
+          "rule": "colon",
+          "before": "Safe in overdose — reason SSRIs are first-line",
+          "after": "Safe in overdose: reason SSRIs are first-line"
+        },
+        {
+          "line": 791,
+          "rule": "colon",
+          "before": "LETHAL — same as clomipramine. #1 antidepressant overdose killer class.",
+          "after": "LETHAL: same as clomipramine. #1 antidepressant overdose killer class."
+        },
+        {
+          "line": 782,
+          "rule": "comma",
+          "before": "NOT effective for OCD (less serotonergic). Off-label for pain, migraine, insomnia — not OCD.",
+          "after": "NOT effective for OCD (less serotonergic). Off-label for pain, migraine, insomnia, not OCD."
+        },
+        {
+          "line": 774,
+          "rule": "in-paren",
+          "before": "Selective SERT blockade only (clean — no off-targets)",
+          "after": "Selective SERT blockade only (clean, no off-targets)"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/clonazepam.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 486,
+          "rule": "colon",
+          "before": "Alcohol withdrawal tablet — the founding benzo",
+          "after": "Alcohol withdrawal tablet: the founding benzo"
+        },
+        {
+          "line": 482,
+          "rule": "colon",
+          "before": "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+          "after": "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo"
+        },
+        {
+          "line": 478,
+          "rule": "colon",
+          "before": "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+          "after": "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse"
+        },
+        {
+          "line": 464,
+          "rule": "colon",
+          "before": "High — useful in withdrawal.",
+          "after": "High: useful in withdrawal."
+        },
+        {
+          "line": 460,
+          "rule": "colon",
+          "before": "Moderate — intermediate duration limits hangover vs diazepam.",
+          "after": "Moderate: intermediate duration limits hangover vs diazepam."
+        },
+        {
+          "line": 456,
+          "rule": "colon",
+          "before": "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+          "after": "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis."
+        },
+        {
+          "line": 452,
+          "rule": "colon",
+          "before": "High — potency-driven.",
+          "after": "High: potency-driven."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/clonidine.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 405,
+          "rule": "sentence",
+          "before": "The refined alpha-2 agonist — ER-approved for ADHD",
+          "after": "The refined alpha-2 agonist. ER-approved for ADHD"
+        },
+        {
+          "line": 385,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/clorazepate.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 444,
+          "rule": "colon",
+          "before": "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+          "after": "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo"
+        },
+        {
+          "line": 440,
+          "rule": "colon",
+          "before": "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+          "after": "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse"
+        },
+        {
+          "line": 436,
+          "rule": "colon",
+          "before": "The long-acting anticonvulsant benzo — seizures and panic",
+          "after": "The long-acting anticonvulsant benzo: seizures and panic"
+        },
+        {
+          "line": 422,
+          "rule": "colon",
+          "before": "Moderate — intermediate duration limits hangover vs diazepam.",
+          "after": "Moderate: intermediate duration limits hangover vs diazepam."
+        },
+        {
+          "line": 418,
+          "rule": "colon",
+          "before": "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+          "after": "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis."
+        },
+        {
+          "line": 414,
+          "rule": "colon",
+          "before": "High — the dose-limiting effect.",
+          "after": "High: the dose-limiting effect."
+        },
+        {
+          "line": 410,
+          "rule": "colon",
+          "before": "High — potency-driven.",
+          "after": "High: potency-driven."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/cyamemazine.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 448,
+          "rule": "colon",
+          "before": "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+          "after": "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool"
+        },
+        {
+          "line": 426,
+          "rule": "comma",
+          "before": "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+          "after": "Mild, among the least sedating antipsychotics; alerting more than calming at low doses."
+        },
+        {
+          "line": 412,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 408,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 400,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/desipramine.ts",
+      "editCount": 12,
+      "edits": [
+        {
+          "line": 524,
+          "rule": "colon",
+          "before": "The H1-pure micro-dose to the full TCA — three drugs in one",
+          "after": "The H1-pure micro-dose to the full TCA: three drugs in one"
+        },
+        {
+          "line": 520,
+          "rule": "sentence",
+          "before": "The TCA-neuroleptic hybrid — EPS warnings included",
+          "after": "The TCA-neuroleptic hybrid. EPS warnings included"
+        },
+        {
+          "line": 516,
+          "rule": "colon",
+          "before": "The TCA survivor — level-guided, post-MI-safe, pain-effective",
+          "after": "The TCA survivor: level-guided, post-MI-safe, pain-effective"
+        },
+        {
+          "line": 512,
+          "rule": "colon",
+          "before": "The founding TCA — depression, enuresis, and panic history",
+          "after": "The founding TCA: depression, enuresis, and panic history"
+        },
+        {
+          "line": 502,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 498,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 494,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 490,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 480,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 476,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 472,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 468,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/desvenlafaxine.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 464,
+          "rule": "colon",
+          "before": "The fibromyalgia SNRI — pain + fatigue coverage",
+          "after": "The fibromyalgia SNRI: pain + fatigue coverage"
+        },
+        {
+          "line": 460,
+          "rule": "comma",
+          "before": "The NE-tilted SNRI — for the anergic depression phenotype",
+          "after": "The NE-tilted SNRI, for the anergic depression phenotype"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/dexamphetamine.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 448,
+          "rule": "colon",
+          "before": "The active isomer — methylphenidate distilled",
+          "after": "The active isomer: methylphenidate distilled"
+        },
+        {
+          "line": 444,
+          "rule": "colon",
+          "before": "The Adderall mixture — d for focus, l for wake",
+          "after": "The Adderall mixture: d for focus, l for wake"
+        },
+        {
+          "line": 440,
+          "rule": "colon",
+          "before": "The default stimulant — 60 years of ADHD first-line",
+          "after": "The default stimulant: 60 years of ADHD first-line"
+        },
+        {
+          "line": 418,
+          "rule": "colon",
+          "before": "Not sedating — the opposite; rebound fatigue occurs at wear-off.",
+          "after": "Not sedating: the opposite; rebound fatigue occurs at wear-off."
+        },
+        {
+          "line": 404,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        },
+        {
+          "line": 400,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        },
+        {
+          "line": 392,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/dexmethylphenidate.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 443,
+          "rule": "colon",
+          "before": "The Adderall mixture — d for focus, l for wake",
+          "after": "The Adderall mixture: d for focus, l for wake"
+        },
+        {
+          "line": 439,
+          "rule": "colon",
+          "before": "The pure d-isomer — stronger central, softer peripheral",
+          "after": "The pure d-isomer: stronger central, softer peripheral"
+        },
+        {
+          "line": 435,
+          "rule": "colon",
+          "before": "The default stimulant — 60 years of ADHD first-line",
+          "after": "The default stimulant: 60 years of ADHD first-line"
+        },
+        {
+          "line": 413,
+          "rule": "colon",
+          "before": "Not sedating — the opposite; rebound fatigue occurs at wear-off.",
+          "after": "Not sedating: the opposite; rebound fatigue occurs at wear-off."
+        },
+        {
+          "line": 399,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        },
+        {
+          "line": 395,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        },
+        {
+          "line": 387,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/dextromethorphan.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 338,
+          "rule": "curated",
+          "before": "Different mechanism — see its guide",
+          "after": "Different mechanism: see its guide"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/diazepam.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 517,
+          "rule": "colon",
+          "before": "Alcohol withdrawal tablet — the founding benzo",
+          "after": "Alcohol withdrawal tablet: the founding benzo"
+        },
+        {
+          "line": 513,
+          "rule": "colon",
+          "before": "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+          "after": "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo"
+        },
+        {
+          "line": 509,
+          "rule": "colon",
+          "before": "The long-acting anticonvulsant benzo — seizures and panic",
+          "after": "The long-acting anticonvulsant benzo: seizures and panic"
+        },
+        {
+          "line": 495,
+          "rule": "colon",
+          "before": "High — useful in withdrawal.",
+          "after": "High: useful in withdrawal."
+        },
+        {
+          "line": 491,
+          "rule": "colon",
+          "before": "Moderate — intermediate duration limits hangover vs diazepam.",
+          "after": "Moderate: intermediate duration limits hangover vs diazepam."
+        },
+        {
+          "line": 487,
+          "rule": "colon",
+          "before": "High — the dose-limiting effect.",
+          "after": "High: the dose-limiting effect."
+        },
+        {
+          "line": 483,
+          "rule": "colon",
+          "before": "High — potency-driven.",
+          "after": "High: potency-driven."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/diphenhydramine.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 404,
+          "rule": "colon",
+          "before": "The antihistamine anxiolytic — benzo-sparing sedation",
+          "after": "The antihistamine anxiolytic: benzo-sparing sedation"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/disulfiram.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 470,
+          "rule": "colon",
+          "before": "The pure antagonist — alcohol relapse and opioid blockade",
+          "after": "The pure antagonist: alcohol relapse and opioid blockade"
+        },
+        {
+          "line": 466,
+          "rule": "colon",
+          "before": "The safety-ceiling maintenance agonist — office-based opioid treatment",
+          "after": "The safety-ceiling maintenance agonist: office-based opioid treatment"
+        },
+        {
+          "line": 462,
+          "rule": "comma",
+          "before": "The abstinence-protector — for the already-abstinent patient",
+          "after": "The abstinence-protector, for the already-abstinent patient"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/donepezil.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 426,
+          "rule": "comma",
+          "before": "The dual-inhibitor with the patch — and the DLB/PDD approval",
+          "after": "The dual-inhibitor with the patch, and the DLB/PDD approval"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/dothiepin.ts",
+      "editCount": 12,
+      "edits": [
+        {
+          "line": 516,
+          "rule": "colon",
+          "before": "The NET-pure TCA — energising, and the paediatric-cardiac caution",
+          "after": "The NET-pure TCA: energising, and the paediatric-cardiac caution"
+        },
+        {
+          "line": 512,
+          "rule": "sentence",
+          "before": "The TCA-neuroleptic hybrid — EPS warnings included",
+          "after": "The TCA-neuroleptic hybrid. EPS warnings included"
+        },
+        {
+          "line": 508,
+          "rule": "colon",
+          "before": "The TCA survivor — level-guided, post-MI-safe, pain-effective",
+          "after": "The TCA survivor: level-guided, post-MI-safe, pain-effective"
+        },
+        {
+          "line": 504,
+          "rule": "colon",
+          "before": "The founding TCA — depression, enuresis, and panic history",
+          "after": "The founding TCA: depression, enuresis, and panic history"
+        },
+        {
+          "line": 494,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 490,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 486,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 482,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 472,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 468,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 464,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 460,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/doxepin.ts",
+      "editCount": 12,
+      "edits": [
+        {
+          "line": 529,
+          "rule": "colon",
+          "before": "The NET-pure TCA — energising, and the paediatric-cardiac caution",
+          "after": "The NET-pure TCA: energising, and the paediatric-cardiac caution"
+        },
+        {
+          "line": 525,
+          "rule": "sentence",
+          "before": "The TCA-neuroleptic hybrid — EPS warnings included",
+          "after": "The TCA-neuroleptic hybrid. EPS warnings included"
+        },
+        {
+          "line": 521,
+          "rule": "colon",
+          "before": "The TCA survivor — level-guided, post-MI-safe, pain-effective",
+          "after": "The TCA survivor: level-guided, post-MI-safe, pain-effective"
+        },
+        {
+          "line": 517,
+          "rule": "colon",
+          "before": "The founding TCA — depression, enuresis, and panic history",
+          "after": "The founding TCA: depression, enuresis, and panic history"
+        },
+        {
+          "line": 507,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 503,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 499,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 495,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 485,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 481,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 477,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 473,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/duloxetine.ts",
+      "editCount": 8,
+      "edits": [
+        {
+          "line": 709,
+          "rule": "colon",
+          "before": "SEDATING — give at night; useful for insomnia",
+          "after": "SEDATING: give at night; useful for insomnia"
+        },
+        {
+          "line": 680,
+          "rule": "colon",
+          "before": "WORST of all antidepressants — severe even with short missed doses",
+          "after": "WORST of all antidepressants: severe even with short missed doses"
+        },
+        {
+          "line": 664,
+          "rule": "colon",
+          "before": "Minimal — occasional orthostatic",
+          "after": "Minimal: occasional orthostatic"
+        },
+        {
+          "line": 662,
+          "rule": "colon",
+          "before": "DOSE-DEPENDENT HYPERTENSION — monitor BP, especially >225 mg/day",
+          "after": "DOSE-DEPENDENT HYPERTENSION: monitor BP, especially >225 mg/day"
+        },
+        {
+          "line": 655,
+          "rule": "comma",
+          "before": "Rare — but monitor LFTs",
+          "after": "Rare, but monitor LFTs"
+        },
+        {
+          "line": 654,
+          "rule": "colon",
+          "before": "Rare — reduce dose in hepatic impairment",
+          "after": "Rare: reduce dose in hepatic impairment"
+        },
+        {
+          "line": 653,
+          "rule": "colon",
+          "before": "Lower — dose reduction in hepatic impairment, not contraindicated",
+          "after": "Lower: dose reduction in hepatic impairment, not contraindicated"
+        },
+        {
+          "line": 635,
+          "rule": "sentence",
+          "before": "DOSE-DEPENDENT ladder — SERT first, NET only >150 mg/day",
+          "after": "DOSE-DEPENDENT ladder. SERT first, NET only >150 mg/day"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/estazolam.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 452,
+          "rule": "colon",
+          "before": "The strictly-controlled potent hypnotic — pharmacology's misuse lesson",
+          "after": "The strictly-controlled potent hypnotic: pharmacology's misuse lesson"
+        },
+        {
+          "line": 448,
+          "rule": "colon",
+          "before": "The benzodiazepine zolpidem — onset-only, amnesia-prone",
+          "after": "The benzodiazepine zolpidem: onset-only, amnesia-prone"
+        },
+        {
+          "line": 444,
+          "rule": "colon",
+          "before": "The classic benzodiazepine hypnotic — full power, full class risks",
+          "after": "The classic benzodiazepine hypnotic: full power, full class risks"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/eszopiclone.ts",
+      "editCount": 4,
+      "edits": [
+        {
+          "line": 422,
+          "rule": "colon",
+          "before": "The Commonwealth Z-drug — 5-hour cover with taste signature",
+          "after": "The Commonwealth Z-drug: 5-hour cover with taste signature"
+        },
+        {
+          "line": 418,
+          "rule": "colon",
+          "before": "Middle-of-the-night dosing — cleared before morning",
+          "after": "Middle-of-the-night dosing: cleared before morning"
+        },
+        {
+          "line": 414,
+          "rule": "colon",
+          "before": "Sleep onset in a non-benzodiazepine molecule — the default Z-drug",
+          "after": "Sleep onset in a non-benzodiazepine molecule: the default Z-drug"
+        },
+        {
+          "line": 396,
+          "rule": "colon",
+          "before": "High for 2–3 hours — the intended effect; morning residue is the adverse effect.",
+          "after": "High for 2–3 hours: the intended effect; morning residue is the adverse effect."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/flibanserin.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 332,
+          "rule": "curated",
+          "before": "Different mechanism — see its guide",
+          "after": "Different mechanism: see its guide"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/flumazenil.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 340,
+          "rule": "curated",
+          "before": "Different mechanism — see its guide",
+          "after": "Different mechanism: see its guide"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/flunitrazepam.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 453,
+          "rule": "colon",
+          "before": "The benzodiazepine zolpidem — onset-only, amnesia-prone",
+          "after": "The benzodiazepine zolpidem: onset-only, amnesia-prone"
+        },
+        {
+          "line": 449,
+          "rule": "colon",
+          "before": "The classic benzodiazepine hypnotic — full power, full class risks",
+          "after": "The classic benzodiazepine hypnotic: full power, full class risks"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/fluoxetine.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 747,
+          "rule": "colon",
+          "before": "Generally avoid — worst discontinuation, most weight gain, contraindicated in pregnancy",
+          "after": "Generally avoid: worst discontinuation, most weight gain, contraindicated in pregnancy"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/flupenthixol.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 448,
+          "rule": "colon",
+          "before": "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+          "after": "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool"
+        },
+        {
+          "line": 426,
+          "rule": "comma",
+          "before": "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+          "after": "Mild, among the least sedating antipsychotics; alerting more than calming at low doses."
+        },
+        {
+          "line": 412,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 408,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 400,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/fluphenazine.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 461,
+          "rule": "colon",
+          "before": "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+          "after": "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool"
+        },
+        {
+          "line": 439,
+          "rule": "comma",
+          "before": "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+          "after": "Mild, among the least sedating antipsychotics; alerting more than calming at low doses."
+        },
+        {
+          "line": 425,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 421,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 413,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/flurazepam.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 449,
+          "rule": "colon",
+          "before": "The strictly-controlled potent hypnotic — pharmacology's misuse lesson",
+          "after": "The strictly-controlled potent hypnotic: pharmacology's misuse lesson"
+        },
+        {
+          "line": 441,
+          "rule": "colon",
+          "before": "The benzodiazepine zolpidem — onset-only, amnesia-prone",
+          "after": "The benzodiazepine zolpidem: onset-only, amnesia-prone"
+        },
+        {
+          "line": 437,
+          "rule": "colon",
+          "before": "The classic benzodiazepine hypnotic — full power, full class risks",
+          "after": "The classic benzodiazepine hypnotic: full power, full class risks"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/fluvoxamine.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 726,
+          "rule": "colon",
+          "before": "Safe — reasonable second-line after sertraline",
+          "after": "Safe: reasonable second-line after sertraline"
+        },
+        {
+          "line": 724,
+          "rule": "colon",
+          "before": "SSRI OF CHOICE — best safety database, lowest milk/plasma ratio",
+          "after": "SSRI OF CHOICE: best safety database, lowest milk/plasma ratio"
+        },
+        {
+          "line": 715,
+          "rule": "colon",
+          "before": "AGONIST — only other SSRI with this property",
+          "after": "AGONIST: only other SSRI with this property"
+        },
+        {
+          "line": 698,
+          "rule": "colon",
+          "before": "MOST ACTIVATING — morning dosing",
+          "after": "MOST ACTIVATING: morning dosing"
+        },
+        {
+          "line": 697,
+          "rule": "colon",
+          "before": "Mildly activating — morning dosing",
+          "after": "Mildly activating: morning dosing"
+        },
+        {
+          "line": 690,
+          "rule": "colon",
+          "before": "Minimal — lowest interaction profile of any SSRI",
+          "after": "Minimal: lowest interaction profile of any SSRI"
+        },
+        {
+          "line": 662,
+          "rule": "sentence",
+          "before": "1–4 days (parent) + 4–9 days (norfluoxetine) — LONGEST",
+          "after": "1–4 days (parent) + 4–9 days (norfluoxetine). LONGEST"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/gabapentin.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 467,
+          "rule": "colon",
+          "before": "The GABA-reuptake blocker — mechanism elegance, clinical footnote",
+          "after": "The GABA-reuptake blocker: mechanism elegance, clinical footnote"
+        },
+        {
+          "line": 459,
+          "rule": "colon",
+          "before": "The weight-losing multi-mechanism stabiliser — craving and appetite",
+          "after": "The weight-losing multi-mechanism stabiliser: craving and appetite"
+        },
+        {
+          "line": 455,
+          "rule": "colon",
+          "before": "The GAD-approved gabapentinoid — pain, fibromyalgia, anxiety",
+          "after": "The GAD-approved gabapentinoid: pain, fibromyalgia, anxiety"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/galantamine.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 373,
+          "rule": "comma",
+          "before": "The dual-inhibitor with the patch — and the DLB/PDD approval",
+          "after": "The dual-inhibitor with the patch, and the DLB/PDD approval"
+        },
+        {
+          "line": 369,
+          "rule": "sentence",
+          "before": "The once-daily AChE inhibitor — Alzheimer's first-line",
+          "after": "The once-daily AChE inhibitor. Alzheimer's first-line"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/guanfacine.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 366,
+          "rule": "colon",
+          "before": "The 24-hour ADHD/tic adjunct — sedating but non-stimulant",
+          "after": "The 24-hour ADHD/tic adjunct: sedating but non-stimulant"
+        },
+        {
+          "line": 346,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/haloperidol.ts",
+      "editCount": 4,
+      "edits": [
+        {
+          "line": 521,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 517,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 513,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 509,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/hydroxyzine.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 382,
+          "rule": "comma",
+          "before": "The OTC sedative + the EPS rescue — and the anticholinergic caution",
+          "after": "The OTC sedative + the EPS rescue, and the anticholinergic caution"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/iloperidone.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 450,
+          "rule": "colon",
+          "before": "Most robust broad-spectrum atypical — heaviest metabolic burden",
+          "after": "Most robust broad-spectrum atypical: heaviest metabolic burden"
+        },
+        {
+          "line": 446,
+          "rule": "colon",
+          "before": "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+          "after": "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio"
+        },
+        {
+          "line": 442,
+          "rule": "colon",
+          "before": "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+          "after": "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures"
+        },
+        {
+          "line": 438,
+          "rule": "colon",
+          "before": "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+          "after": "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic"
+        },
+        {
+          "line": 428,
+          "rule": "colon",
+          "before": "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+          "after": "Moderate to high: usually transient at a given dose but dose-limiting for many patients."
+        },
+        {
+          "line": 424,
+          "rule": "colon",
+          "before": "Low — may be mildly activating.",
+          "after": "Low: may be mildly activating."
+        },
+        {
+          "line": 416,
+          "rule": "colon",
+          "before": "Low; can be activating — insomnia is more common than somnolence.",
+          "after": "Low; can be activating: insomnia is more common than somnolence."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/imipramine.ts",
+      "editCount": 12,
+      "edits": [
+        {
+          "line": 526,
+          "rule": "colon",
+          "before": "The H1-pure micro-dose to the full TCA — three drugs in one",
+          "after": "The H1-pure micro-dose to the full TCA: three drugs in one"
+        },
+        {
+          "line": 522,
+          "rule": "colon",
+          "before": "The NET-pure TCA — energising, and the paediatric-cardiac caution",
+          "after": "The NET-pure TCA: energising, and the paediatric-cardiac caution"
+        },
+        {
+          "line": 518,
+          "rule": "sentence",
+          "before": "The TCA-neuroleptic hybrid — EPS warnings included",
+          "after": "The TCA-neuroleptic hybrid. EPS warnings included"
+        },
+        {
+          "line": 514,
+          "rule": "colon",
+          "before": "The TCA survivor — level-guided, post-MI-safe, pain-effective",
+          "after": "The TCA survivor: level-guided, post-MI-safe, pain-effective"
+        },
+        {
+          "line": 504,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 500,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 496,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 492,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 482,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 478,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 474,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 470,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/isocarboxazid.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 443,
+          "rule": "colon",
+          "before": "The activating MAOI — anergic treatment-resistant depression",
+          "after": "The activating MAOI: anergic treatment-resistant depression"
+        },
+        {
+          "line": 435,
+          "rule": "sentence",
+          "before": "The RIMA — MAOI mechanism with the diet relaxed",
+          "after": "The RIMA. MAOI mechanism with the diet relaxed"
+        },
+        {
+          "line": 431,
+          "rule": "sentence",
+          "before": "The atypical-depression legend — MAOI pharmacology's flagship",
+          "after": "The atypical-depression legend. MAOI pharmacology's flagship"
+        },
+        {
+          "line": 399,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        },
+        {
+          "line": 395,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        },
+        {
+          "line": 391,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        },
+        {
+          "line": 387,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/ketamine.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 394,
+          "rule": "curated",
+          "before": "Different mechanism — see its guide",
+          "after": "Different mechanism: see its guide"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/l-methylfolate.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 317,
+          "rule": "curated",
+          "before": "Different mechanism — see its guide",
+          "after": "Different mechanism: see its guide"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/lamotrigine.ts",
+      "editCount": 6,
+      "edits": [
+        {
+          "line": 485,
+          "rule": "colon",
+          "before": "The cleaner carbamazepine — off-label mood use with fewer interactions",
+          "after": "The cleaner carbamazepine: off-label mood use with fewer interactions"
+        },
+        {
+          "line": 481,
+          "rule": "comma",
+          "before": "Mania workhorse — especially mixed states and rapid cycling; now pregnancy-governed",
+          "after": "Mania workhorse, especially mixed states and rapid cycling; now pregnancy-governed"
+        },
+        {
+          "line": 477,
+          "rule": "colon",
+          "before": "Anti-suicide + both-pole prophylaxis — the irreplaceable classic",
+          "after": "Anti-suicide + both-pole prophylaxis: the irreplaceable classic"
+        },
+        {
+          "line": 459,
+          "rule": "colon",
+          "before": "Common, dose-related — often useful in acute mania.",
+          "after": "Common, dose-related: often useful in acute mania."
+        },
+        {
+          "line": 455,
+          "rule": "colon",
+          "before": "Not typically sedating — neutral; occasionally described as 'slowing'.",
+          "after": "Not typically sedating: neutral; occasionally described as 'slowing'."
+        },
+        {
+          "line": 451,
+          "rule": "colon",
+          "before": "Moderate, dose-related — partly tolerance-developing.",
+          "after": "Moderate, dose-related: partly tolerance-developing."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/levetiracetam.ts",
+      "editCount": 4,
+      "edits": [
+        {
+          "line": 421,
+          "rule": "colon",
+          "before": "The GABA-reuptake blocker — mechanism elegance, clinical footnote",
+          "after": "The GABA-reuptake blocker: mechanism elegance, clinical footnote"
+        },
+        {
+          "line": 417,
+          "rule": "colon",
+          "before": "The weight-losing multi-mechanism stabiliser — craving and appetite",
+          "after": "The weight-losing multi-mechanism stabiliser: craving and appetite"
+        },
+        {
+          "line": 413,
+          "rule": "colon",
+          "before": "The GAD-approved gabapentinoid — pain, fibromyalgia, anxiety",
+          "after": "The GAD-approved gabapentinoid: pain, fibromyalgia, anxiety"
+        },
+        {
+          "line": 409,
+          "rule": "colon",
+          "before": "The interaction-clean pain-augmentation agent — anxiety and craving off-label",
+          "after": "The interaction-clean pain-augmentation agent: anxiety and craving off-label"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/levomilnacipran.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 414,
+          "rule": "colon",
+          "before": "The fibromyalgia SNRI — pain + fatigue coverage",
+          "after": "The fibromyalgia SNRI: pain + fatigue coverage"
+        },
+        {
+          "line": 410,
+          "rule": "colon",
+          "before": "The simplified SNRI — venlafaxine's metabolite packaged",
+          "after": "The simplified SNRI: venlafaxine's metabolite packaged"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/lisdexamfetamine.ts",
+      "editCount": 8,
+      "edits": [
+        {
+          "line": 457,
+          "rule": "colon",
+          "before": "The active isomer — methylphenidate distilled",
+          "after": "The active isomer: methylphenidate distilled"
+        },
+        {
+          "line": 453,
+          "rule": "colon",
+          "before": "The Adderall mixture — d for focus, l for wake",
+          "after": "The Adderall mixture: d for focus, l for wake"
+        },
+        {
+          "line": 449,
+          "rule": "colon",
+          "before": "The pure d-isomer — stronger central, softer peripheral",
+          "after": "The pure d-isomer: stronger central, softer peripheral"
+        },
+        {
+          "line": 445,
+          "rule": "colon",
+          "before": "The default stimulant — 60 years of ADHD first-line",
+          "after": "The default stimulant: 60 years of ADHD first-line"
+        },
+        {
+          "line": 423,
+          "rule": "colon",
+          "before": "Not sedating — the opposite; rebound fatigue occurs at wear-off.",
+          "after": "Not sedating: the opposite; rebound fatigue occurs at wear-off."
+        },
+        {
+          "line": 413,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        },
+        {
+          "line": 409,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        },
+        {
+          "line": 405,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/lithium.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 634,
+          "rule": "colon",
+          "before": "The cleaner carbamazepine — off-label mood use with fewer interactions",
+          "after": "The cleaner carbamazepine: off-label mood use with fewer interactions"
+        },
+        {
+          "line": 630,
+          "rule": "comma",
+          "before": "Mania workhorse — especially mixed states and rapid cycling; now pregnancy-governed",
+          "after": "Mania workhorse, especially mixed states and rapid cycling; now pregnancy-governed"
+        },
+        {
+          "line": 608,
+          "rule": "colon",
+          "before": "Common, dose-related — often useful in acute mania.",
+          "after": "Common, dose-related: often useful in acute mania."
+        },
+        {
+          "line": 604,
+          "rule": "colon",
+          "before": "Not sedating — mildly activating (morning dosing suits most).",
+          "after": "Not sedating: mildly activating (morning dosing suits most)."
+        },
+        {
+          "line": 600,
+          "rule": "colon",
+          "before": "Moderate, dose-related — partly tolerance-developing.",
+          "after": "Moderate, dose-related: partly tolerance-developing."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/lofepramine.ts",
+      "editCount": 12,
+      "edits": [
+        {
+          "line": 516,
+          "rule": "colon",
+          "before": "The NET-pure TCA — energising, and the paediatric-cardiac caution",
+          "after": "The NET-pure TCA: energising, and the paediatric-cardiac caution"
+        },
+        {
+          "line": 512,
+          "rule": "sentence",
+          "before": "The TCA-neuroleptic hybrid — EPS warnings included",
+          "after": "The TCA-neuroleptic hybrid. EPS warnings included"
+        },
+        {
+          "line": 508,
+          "rule": "colon",
+          "before": "The TCA survivor — level-guided, post-MI-safe, pain-effective",
+          "after": "The TCA survivor: level-guided, post-MI-safe, pain-effective"
+        },
+        {
+          "line": 504,
+          "rule": "colon",
+          "before": "The founding TCA — depression, enuresis, and panic history",
+          "after": "The founding TCA: depression, enuresis, and panic history"
+        },
+        {
+          "line": 494,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 490,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 486,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 482,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 472,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 468,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 464,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 460,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/loflazepate.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 440,
+          "rule": "colon",
+          "before": "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+          "after": "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo"
+        },
+        {
+          "line": 436,
+          "rule": "colon",
+          "before": "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+          "after": "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse"
+        },
+        {
+          "line": 432,
+          "rule": "colon",
+          "before": "The long-acting anticonvulsant benzo — seizures and panic",
+          "after": "The long-acting anticonvulsant benzo: seizures and panic"
+        },
+        {
+          "line": 418,
+          "rule": "colon",
+          "before": "Moderate — intermediate duration limits hangover vs diazepam.",
+          "after": "Moderate: intermediate duration limits hangover vs diazepam."
+        },
+        {
+          "line": 414,
+          "rule": "colon",
+          "before": "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+          "after": "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis."
+        },
+        {
+          "line": 410,
+          "rule": "colon",
+          "before": "High — the dose-limiting effect.",
+          "after": "High: the dose-limiting effect."
+        },
+        {
+          "line": 406,
+          "rule": "colon",
+          "before": "High — potency-driven.",
+          "after": "High: potency-driven."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/lorazepam.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 512,
+          "rule": "colon",
+          "before": "Alcohol withdrawal tablet — the founding benzo",
+          "after": "Alcohol withdrawal tablet: the founding benzo"
+        },
+        {
+          "line": 508,
+          "rule": "colon",
+          "before": "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+          "after": "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse"
+        },
+        {
+          "line": 504,
+          "rule": "colon",
+          "before": "The long-acting anticonvulsant benzo — seizures and panic",
+          "after": "The long-acting anticonvulsant benzo: seizures and panic"
+        },
+        {
+          "line": 490,
+          "rule": "colon",
+          "before": "High — useful in withdrawal.",
+          "after": "High: useful in withdrawal."
+        },
+        {
+          "line": 486,
+          "rule": "colon",
+          "before": "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+          "after": "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis."
+        },
+        {
+          "line": 482,
+          "rule": "colon",
+          "before": "High — the dose-limiting effect.",
+          "after": "High: the dose-limiting effect."
+        },
+        {
+          "line": 478,
+          "rule": "colon",
+          "before": "High — potency-driven.",
+          "after": "High: potency-driven."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/lorcaserin.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 348,
+          "rule": "colon",
+          "before": "The highest-efficacy older weight combination — pregnancy-governed",
+          "after": "The highest-efficacy older weight combination: pregnancy-governed"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/loxapine.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 455,
+          "rule": "colon",
+          "before": "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+          "after": "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool"
+        },
+        {
+          "line": 433,
+          "rule": "comma",
+          "before": "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+          "after": "Mild, among the least sedating antipsychotics; alerting more than calming at low doses."
+        },
+        {
+          "line": 419,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 415,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 407,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/lurasidone.ts",
+      "editCount": 6,
+      "edits": [
+        {
+          "line": 484,
+          "rule": "colon",
+          "before": "The LAI platform king — monthly to 6-monthly injections for schizophrenia",
+          "after": "The LAI platform king: monthly to 6-monthly injections for schizophrenia"
+        },
+        {
+          "line": 480,
+          "rule": "colon",
+          "before": "Most robust broad-spectrum atypical — heaviest metabolic burden",
+          "after": "Most robust broad-spectrum atypical: heaviest metabolic burden"
+        },
+        {
+          "line": 476,
+          "rule": "colon",
+          "before": "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+          "after": "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures"
+        },
+        {
+          "line": 472,
+          "rule": "colon",
+          "before": "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+          "after": "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic"
+        },
+        {
+          "line": 458,
+          "rule": "colon",
+          "before": "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+          "after": "Moderate to high: usually transient at a given dose but dose-limiting for many patients."
+        },
+        {
+          "line": 450,
+          "rule": "colon",
+          "before": "Low; can be activating — insomnia is more common than somnolence.",
+          "after": "Low; can be activating: insomnia is more common than somnolence."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/maprotiline.ts",
+      "editCount": 12,
+      "edits": [
+        {
+          "line": 524,
+          "rule": "colon",
+          "before": "The NET-pure TCA — energising, and the paediatric-cardiac caution",
+          "after": "The NET-pure TCA: energising, and the paediatric-cardiac caution"
+        },
+        {
+          "line": 520,
+          "rule": "sentence",
+          "before": "The TCA-neuroleptic hybrid — EPS warnings included",
+          "after": "The TCA-neuroleptic hybrid. EPS warnings included"
+        },
+        {
+          "line": 516,
+          "rule": "colon",
+          "before": "The TCA survivor — level-guided, post-MI-safe, pain-effective",
+          "after": "The TCA survivor: level-guided, post-MI-safe, pain-effective"
+        },
+        {
+          "line": 512,
+          "rule": "colon",
+          "before": "The founding TCA — depression, enuresis, and panic history",
+          "after": "The founding TCA: depression, enuresis, and panic history"
+        },
+        {
+          "line": 502,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 498,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 494,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 490,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 480,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 476,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 472,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 468,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/memantine.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 344,
+          "rule": "curated",
+          "before": "Different mechanism — see its guide",
+          "after": "Different mechanism: see its guide"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/mesoridazine.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 443,
+          "rule": "colon",
+          "before": "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+          "after": "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool"
+        },
+        {
+          "line": 421,
+          "rule": "comma",
+          "before": "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+          "after": "Mild, among the least sedating antipsychotics; alerting more than calming at low doses."
+        },
+        {
+          "line": 407,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 403,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 395,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/methylphenidate.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 494,
+          "rule": "colon",
+          "before": "The active isomer — methylphenidate distilled",
+          "after": "The active isomer: methylphenidate distilled"
+        },
+        {
+          "line": 490,
+          "rule": "colon",
+          "before": "The Adderall mixture — d for focus, l for wake",
+          "after": "The Adderall mixture: d for focus, l for wake"
+        },
+        {
+          "line": 486,
+          "rule": "colon",
+          "before": "The pure d-isomer — stronger central, softer peripheral",
+          "after": "The pure d-isomer: stronger central, softer peripheral"
+        },
+        {
+          "line": 450,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        },
+        {
+          "line": 446,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        },
+        {
+          "line": 442,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        },
+        {
+          "line": 438,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/mianserin.ts",
+      "editCount": 12,
+      "edits": [
+        {
+          "line": 524,
+          "rule": "colon",
+          "before": "The NET-pure TCA — energising, and the paediatric-cardiac caution",
+          "after": "The NET-pure TCA: energising, and the paediatric-cardiac caution"
+        },
+        {
+          "line": 520,
+          "rule": "sentence",
+          "before": "The TCA-neuroleptic hybrid — EPS warnings included",
+          "after": "The TCA-neuroleptic hybrid. EPS warnings included"
+        },
+        {
+          "line": 516,
+          "rule": "colon",
+          "before": "The TCA survivor — level-guided, post-MI-safe, pain-effective",
+          "after": "The TCA survivor: level-guided, post-MI-safe, pain-effective"
+        },
+        {
+          "line": 512,
+          "rule": "colon",
+          "before": "The founding TCA — depression, enuresis, and panic history",
+          "after": "The founding TCA: depression, enuresis, and panic history"
+        },
+        {
+          "line": 502,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 498,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 494,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 490,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 480,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 476,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 472,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 468,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/midazolam.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 464,
+          "rule": "colon",
+          "before": "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+          "after": "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo"
+        },
+        {
+          "line": 460,
+          "rule": "colon",
+          "before": "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+          "after": "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse"
+        },
+        {
+          "line": 456,
+          "rule": "colon",
+          "before": "The long-acting anticonvulsant benzo — seizures and panic",
+          "after": "The long-acting anticonvulsant benzo: seizures and panic"
+        },
+        {
+          "line": 442,
+          "rule": "colon",
+          "before": "Moderate — intermediate duration limits hangover vs diazepam.",
+          "after": "Moderate: intermediate duration limits hangover vs diazepam."
+        },
+        {
+          "line": 438,
+          "rule": "colon",
+          "before": "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+          "after": "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis."
+        },
+        {
+          "line": 434,
+          "rule": "colon",
+          "before": "High — the dose-limiting effect.",
+          "after": "High: the dose-limiting effect."
+        },
+        {
+          "line": 430,
+          "rule": "colon",
+          "before": "High — potency-driven.",
+          "after": "High: potency-driven."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/milnacipran.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 427,
+          "rule": "comma",
+          "before": "The NE-tilted SNRI — for the anergic depression phenotype",
+          "after": "The NE-tilted SNRI, for the anergic depression phenotype"
+        },
+        {
+          "line": 423,
+          "rule": "colon",
+          "before": "The simplified SNRI — venlafaxine's metabolite packaged",
+          "after": "The simplified SNRI: venlafaxine's metabolite packaged"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/mirtazapine.ts",
+      "editCount": 16,
+      "edits": [
+        {
+          "line": 711,
+          "rule": "colon",
+          "before": "5 h parent / 11 h active metabolite — short, hence severe withdrawal",
+          "after": "5 h parent / 11 h active metabolite: short, hence severe withdrawal"
+        },
+        {
+          "line": 710,
+          "rule": "colon",
+          "before": "21 hours (parent) — needs XL formulation for once-daily",
+          "after": "21 hours (parent): needs XL formulation for once-daily"
+        },
+        {
+          "line": 692,
+          "rule": "in-paren",
+          "before": "Seizures (dose-dependent — avoid >450 mg, in eating disorders, seizure disorders)",
+          "after": "Seizures (dose-dependent, avoid >450 mg, in eating disorders, seizure disorders)"
+        },
+        {
+          "line": 684,
+          "rule": "colon",
+          "before": "WORST — severe withdrawal within hours of missed dose",
+          "after": "WORST: severe withdrawal within hours of missed dose"
+        },
+        {
+          "line": 666,
+          "rule": "colon",
+          "before": "Common — worse at initiation",
+          "after": "Common: worse at initiation"
+        },
+        {
+          "line": 664,
+          "rule": "colon",
+          "before": "Common — 5-HT3 activation in gut",
+          "after": "Common: 5-HT3 activation in gut"
+        },
+        {
+          "line": 657,
+          "rule": "sentence",
+          "before": "Common (30–40%) — SERT-mediated",
+          "after": "Common (30–40%). SERT-mediated"
+        },
+        {
+          "line": 656,
+          "rule": "comma",
+          "before": "NONE — also no sexual SE; first-line augment for SSRI sexual SE",
+          "after": "NONE, also no sexual SE; first-line augment for SSRI sexual SE"
+        },
+        {
+          "line": 655,
+          "rule": "sentence",
+          "before": "Common (30–40%) — SERT-mediated",
+          "after": "Common (30–40%). SERT-mediated"
+        },
+        {
+          "line": 647,
+          "rule": "colon",
+          "before": "Weight-neutral or mild weight LOSS — preferred in obesity",
+          "after": "Weight-neutral or mild weight LOSS: preferred in obesity"
+        },
+        {
+          "line": 639,
+          "rule": "colon",
+          "before": "Mildly activating — take in morning",
+          "after": "Mildly activating: take in morning"
+        },
+        {
+          "line": 638,
+          "rule": "colon",
+          "before": "Activating — take in morning. Insomnia common.",
+          "after": "Activating: take in morning. Insomnia common."
+        },
+        {
+          "line": 637,
+          "rule": "colon",
+          "before": "Mildly activating — take in morning",
+          "after": "Mildly activating: take in morning"
+        },
+        {
+          "line": 630,
+          "rule": "sentence",
+          "before": "YES — SERT + NET (dose-dependent), weak DAT",
+          "after": "YES. SERT + NET (dose-dependent), weak DAT"
+        },
+        {
+          "line": 629,
+          "rule": "sentence",
+          "before": "YES — NET + DAT blockade",
+          "after": "YES. NET + DAT blockade"
+        },
+        {
+          "line": 628,
+          "rule": "sentence",
+          "before": "YES — SERT blockade",
+          "after": "YES. SERT blockade"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/moclobemide.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 458,
+          "rule": "colon",
+          "before": "The activating MAOI — anergic treatment-resistant depression",
+          "after": "The activating MAOI: anergic treatment-resistant depression"
+        },
+        {
+          "line": 450,
+          "rule": "colon",
+          "before": "The quiet hydrazine — legacy MAOI continuity",
+          "after": "The quiet hydrazine: legacy MAOI continuity"
+        },
+        {
+          "line": 446,
+          "rule": "sentence",
+          "before": "The atypical-depression legend — MAOI pharmacology's flagship",
+          "after": "The atypical-depression legend. MAOI pharmacology's flagship"
+        },
+        {
+          "line": 414,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        },
+        {
+          "line": 410,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        },
+        {
+          "line": 406,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        },
+        {
+          "line": 402,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/modafinil.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 396,
+          "rule": "curated",
+          "before": "Weight neutral to reducing — appetite effects common.",
+          "after": "Weight neutral to reducing: appetite effects common."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/molindone.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 450,
+          "rule": "colon",
+          "before": "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+          "after": "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool"
+        },
+        {
+          "line": 428,
+          "rule": "comma",
+          "before": "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+          "after": "Mild, among the least sedating antipsychotics; alerting more than calming at low doses."
+        },
+        {
+          "line": 414,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 410,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 402,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/nalmefene.ts",
+      "editCount": 4,
+      "edits": [
+        {
+          "line": 411,
+          "rule": "colon",
+          "before": "The pure antagonist — alcohol relapse and opioid blockade",
+          "after": "The pure antagonist: alcohol relapse and opioid blockade"
+        },
+        {
+          "line": 407,
+          "rule": "comma",
+          "before": "The classical aversion deterrent — for the motivated, supervised patient",
+          "after": "The classical aversion deterrent, for the motivated, supervised patient"
+        },
+        {
+          "line": 403,
+          "rule": "colon",
+          "before": "The safety-ceiling maintenance agonist — office-based opioid treatment",
+          "after": "The safety-ceiling maintenance agonist: office-based opioid treatment"
+        },
+        {
+          "line": 399,
+          "rule": "comma",
+          "before": "The abstinence-protector — for the already-abstinent patient",
+          "after": "The abstinence-protector, for the already-abstinent patient"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/naltrexone-bupropion.ts",
+      "editCount": 4,
+      "edits": [
+        {
+          "line": 476,
+          "rule": "colon",
+          "before": "The pure antagonist — alcohol relapse and opioid blockade",
+          "after": "The pure antagonist: alcohol relapse and opioid blockade"
+        },
+        {
+          "line": 472,
+          "rule": "comma",
+          "before": "The classical aversion deterrent — for the motivated, supervised patient",
+          "after": "The classical aversion deterrent, for the motivated, supervised patient"
+        },
+        {
+          "line": 468,
+          "rule": "colon",
+          "before": "The safety-ceiling maintenance agonist — office-based opioid treatment",
+          "after": "The safety-ceiling maintenance agonist: office-based opioid treatment"
+        },
+        {
+          "line": 464,
+          "rule": "comma",
+          "before": "The abstinence-protector — for the already-abstinent patient",
+          "after": "The abstinence-protector, for the already-abstinent patient"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/naltrexone.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 465,
+          "rule": "comma",
+          "before": "The classical aversion deterrent — for the motivated, supervised patient",
+          "after": "The classical aversion deterrent, for the motivated, supervised patient"
+        },
+        {
+          "line": 461,
+          "rule": "colon",
+          "before": "The safety-ceiling maintenance agonist — office-based opioid treatment",
+          "after": "The safety-ceiling maintenance agonist: office-based opioid treatment"
+        },
+        {
+          "line": 457,
+          "rule": "comma",
+          "before": "The abstinence-protector — for the already-abstinent patient",
+          "after": "The abstinence-protector, for the already-abstinent patient"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/nefazodone.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 436,
+          "rule": "colon",
+          "before": "The antidepressant sleeping pill — insomnia at 50 mg, depression at 300 mg",
+          "after": "The antidepressant sleeping pill: insomnia at 50 mg, depression at 300 mg"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/nortriptyline.ts",
+      "editCount": 12,
+      "edits": [
+        {
+          "line": 531,
+          "rule": "colon",
+          "before": "The H1-pure micro-dose to the full TCA — three drugs in one",
+          "after": "The H1-pure micro-dose to the full TCA: three drugs in one"
+        },
+        {
+          "line": 527,
+          "rule": "colon",
+          "before": "The NET-pure TCA — energising, and the paediatric-cardiac caution",
+          "after": "The NET-pure TCA: energising, and the paediatric-cardiac caution"
+        },
+        {
+          "line": 523,
+          "rule": "sentence",
+          "before": "The TCA-neuroleptic hybrid — EPS warnings included",
+          "after": "The TCA-neuroleptic hybrid. EPS warnings included"
+        },
+        {
+          "line": 519,
+          "rule": "colon",
+          "before": "The founding TCA — depression, enuresis, and panic history",
+          "after": "The founding TCA: depression, enuresis, and panic history"
+        },
+        {
+          "line": 509,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 505,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 501,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 497,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 487,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 483,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 479,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 475,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/olanzapine.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 629,
+          "rule": "colon",
+          "before": "Low — activating",
+          "after": "Low: activating"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/oxazepam.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 445,
+          "rule": "colon",
+          "before": "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+          "after": "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo"
+        },
+        {
+          "line": 441,
+          "rule": "colon",
+          "before": "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+          "after": "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse"
+        },
+        {
+          "line": 437,
+          "rule": "colon",
+          "before": "The long-acting anticonvulsant benzo — seizures and panic",
+          "after": "The long-acting anticonvulsant benzo: seizures and panic"
+        },
+        {
+          "line": 423,
+          "rule": "colon",
+          "before": "Moderate — intermediate duration limits hangover vs diazepam.",
+          "after": "Moderate: intermediate duration limits hangover vs diazepam."
+        },
+        {
+          "line": 419,
+          "rule": "colon",
+          "before": "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+          "after": "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis."
+        },
+        {
+          "line": 415,
+          "rule": "colon",
+          "before": "High — the dose-limiting effect.",
+          "after": "High: the dose-limiting effect."
+        },
+        {
+          "line": 411,
+          "rule": "colon",
+          "before": "High — potency-driven.",
+          "after": "High: potency-driven."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/oxcarbazepine.ts",
+      "editCount": 6,
+      "edits": [
+        {
+          "line": 435,
+          "rule": "comma",
+          "before": "Mania workhorse — especially mixed states and rapid cycling; now pregnancy-governed",
+          "after": "Mania workhorse, especially mixed states and rapid cycling; now pregnancy-governed"
+        },
+        {
+          "line": 431,
+          "rule": "colon",
+          "before": "Anti-suicide + both-pole prophylaxis — the irreplaceable classic",
+          "after": "Anti-suicide + both-pole prophylaxis: the irreplaceable classic"
+        },
+        {
+          "line": 413,
+          "rule": "colon",
+          "before": "Common, dose-related — often useful in acute mania.",
+          "after": "Common, dose-related: often useful in acute mania."
+        },
+        {
+          "line": 409,
+          "rule": "colon",
+          "before": "Not typically sedating — neutral; occasionally described as 'slowing'.",
+          "after": "Not typically sedating: neutral; occasionally described as 'slowing'."
+        },
+        {
+          "line": 405,
+          "rule": "colon",
+          "before": "Not sedating — mildly activating (morning dosing suits most).",
+          "after": "Not sedating: mildly activating (morning dosing suits most)."
+        },
+        {
+          "line": 401,
+          "rule": "colon",
+          "before": "Moderate, dose-related — partly tolerance-developing.",
+          "after": "Moderate, dose-related: partly tolerance-developing."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/paliperidone.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 500,
+          "rule": "colon",
+          "before": "Most robust broad-spectrum atypical — heaviest metabolic burden",
+          "after": "Most robust broad-spectrum atypical: heaviest metabolic burden"
+        },
+        {
+          "line": 496,
+          "rule": "colon",
+          "before": "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+          "after": "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio"
+        },
+        {
+          "line": 492,
+          "rule": "colon",
+          "before": "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+          "after": "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures"
+        },
+        {
+          "line": 488,
+          "rule": "colon",
+          "before": "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+          "after": "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic"
+        },
+        {
+          "line": 478,
+          "rule": "colon",
+          "before": "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+          "after": "Moderate to high: usually transient at a given dose but dose-limiting for many patients."
+        },
+        {
+          "line": 474,
+          "rule": "colon",
+          "before": "Low — may be mildly activating.",
+          "after": "Low: may be mildly activating."
+        },
+        {
+          "line": 466,
+          "rule": "colon",
+          "before": "Low; can be activating — insomnia is more common than somnolence.",
+          "after": "Low; can be activating: insomnia is more common than somnolence."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/paroxetine.ts",
+      "editCount": 9,
+      "edits": [
+        {
+          "line": 678,
+          "rule": "colon",
+          "before": "MOST activating SSRI — morning dosing",
+          "after": "MOST activating SSRI: morning dosing"
+        },
+        {
+          "line": 677,
+          "rule": "colon",
+          "before": "Mildly activating — usually morning",
+          "after": "Mildly activating: usually morning"
+        },
+        {
+          "line": 670,
+          "rule": "in-paren",
+          "before": "Safe (minimal CYP2D6 effect — preferred alternative)",
+          "after": "Safe (minimal CYP2D6 effect, preferred alternative)"
+        },
+        {
+          "line": 668,
+          "rule": "in-paren",
+          "before": "Caution (mild CYP2D6 inhibitor — generally acceptable)",
+          "after": "Caution (mild CYP2D6 inhibitor, generally acceptable)"
+        },
+        {
+          "line": 661,
+          "rule": "colon",
+          "before": "Minimal — lowest interaction profile",
+          "after": "Minimal: lowest interaction profile"
+        },
+        {
+          "line": 652,
+          "rule": "colon",
+          "before": "Mild–moderate — taper over 4+ weeks",
+          "after": "Mild–moderate: taper over 4+ weeks"
+        },
+        {
+          "line": 651,
+          "rule": "colon",
+          "before": "MILDEST — self-tapers due to long half-life",
+          "after": "MILDEST: self-tapers due to long half-life"
+        },
+        {
+          "line": 650,
+          "rule": "colon",
+          "before": "Mild–moderate — taper over 4+ weeks",
+          "after": "Mild–moderate: taper over 4+ weeks"
+        },
+        {
+          "line": 633,
+          "rule": "sentence",
+          "before": "1–4 days (with norfluoxetine — LONGEST)",
+          "after": "1–4 days (with norfluoxetine. LONGEST)"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/pemoline.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 432,
+          "rule": "colon",
+          "before": "The default first-line stimulant — decades of ADHD evidence",
+          "after": "The default first-line stimulant: decades of ADHD evidence"
+        },
+        {
+          "line": 422,
+          "rule": "colon",
+          "before": "Schedule II (US) / Schedule X (India) — higher abuse potential",
+          "after": "Schedule II (US) / Schedule X (India): higher abuse potential"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/perospirone.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 442,
+          "rule": "colon",
+          "before": "Most robust broad-spectrum atypical — heaviest metabolic burden",
+          "after": "Most robust broad-spectrum atypical: heaviest metabolic burden"
+        },
+        {
+          "line": 438,
+          "rule": "colon",
+          "before": "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+          "after": "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio"
+        },
+        {
+          "line": 434,
+          "rule": "colon",
+          "before": "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+          "after": "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures"
+        },
+        {
+          "line": 430,
+          "rule": "colon",
+          "before": "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+          "after": "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic"
+        },
+        {
+          "line": 420,
+          "rule": "colon",
+          "before": "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+          "after": "Moderate to high: usually transient at a given dose but dose-limiting for many patients."
+        },
+        {
+          "line": 416,
+          "rule": "colon",
+          "before": "Low — may be mildly activating.",
+          "after": "Low: may be mildly activating."
+        },
+        {
+          "line": 408,
+          "rule": "colon",
+          "before": "Low; can be activating — insomnia is more common than somnolence.",
+          "after": "Low; can be activating: insomnia is more common than somnolence."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/perphenazine.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 452,
+          "rule": "colon",
+          "before": "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+          "after": "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool"
+        },
+        {
+          "line": 430,
+          "rule": "comma",
+          "before": "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+          "after": "Mild, among the least sedating antipsychotics; alerting more than calming at low doses."
+        },
+        {
+          "line": 416,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 412,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 404,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/phenelzine.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 496,
+          "rule": "colon",
+          "before": "The activating MAOI — anergic treatment-resistant depression",
+          "after": "The activating MAOI: anergic treatment-resistant depression"
+        },
+        {
+          "line": 488,
+          "rule": "sentence",
+          "before": "The RIMA — MAOI mechanism with the diet relaxed",
+          "after": "The RIMA. MAOI mechanism with the diet relaxed"
+        },
+        {
+          "line": 484,
+          "rule": "colon",
+          "before": "The quiet hydrazine — legacy MAOI continuity",
+          "after": "The quiet hydrazine: legacy MAOI continuity"
+        },
+        {
+          "line": 452,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        },
+        {
+          "line": 448,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        },
+        {
+          "line": 444,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        },
+        {
+          "line": 440,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/phentermine-topiramate.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 418,
+          "rule": "colon",
+          "before": "The withdrawn serotonergic weight drug — a pharmacology chapter",
+          "after": "The withdrawn serotonergic weight drug: a pharmacology chapter"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/pimavanserin.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 460,
+          "rule": "colon",
+          "before": "Most robust broad-spectrum atypical — heaviest metabolic burden",
+          "after": "Most robust broad-spectrum atypical: heaviest metabolic burden"
+        },
+        {
+          "line": 456,
+          "rule": "colon",
+          "before": "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+          "after": "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio"
+        },
+        {
+          "line": 452,
+          "rule": "colon",
+          "before": "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+          "after": "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures"
+        },
+        {
+          "line": 448,
+          "rule": "colon",
+          "before": "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+          "after": "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic"
+        },
+        {
+          "line": 438,
+          "rule": "colon",
+          "before": "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+          "after": "Moderate to high: usually transient at a given dose but dose-limiting for many patients."
+        },
+        {
+          "line": 434,
+          "rule": "colon",
+          "before": "Low — may be mildly activating.",
+          "after": "Low: may be mildly activating."
+        },
+        {
+          "line": 426,
+          "rule": "colon",
+          "before": "Low; can be activating — insomnia is more common than somnolence.",
+          "after": "Low; can be activating: insomnia is more common than somnolence."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/pimozide.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 442,
+          "rule": "colon",
+          "before": "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+          "after": "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool"
+        },
+        {
+          "line": 420,
+          "rule": "comma",
+          "before": "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+          "after": "Mild, among the least sedating antipsychotics; alerting more than calming at low doses."
+        },
+        {
+          "line": 406,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 402,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 394,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/pipothiazine.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 443,
+          "rule": "colon",
+          "before": "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+          "after": "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool"
+        },
+        {
+          "line": 421,
+          "rule": "comma",
+          "before": "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+          "after": "Mild, among the least sedating antipsychotics; alerting more than calming at low doses."
+        },
+        {
+          "line": 407,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 403,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 395,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/prazosin.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 337,
+          "rule": "curated",
+          "before": "Different mechanism — see its guide",
+          "after": "Different mechanism: see its guide"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/pregabalin.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 469,
+          "rule": "colon",
+          "before": "The GABA-reuptake blocker — mechanism elegance, clinical footnote",
+          "after": "The GABA-reuptake blocker: mechanism elegance, clinical footnote"
+        },
+        {
+          "line": 461,
+          "rule": "colon",
+          "before": "The weight-losing multi-mechanism stabiliser — craving and appetite",
+          "after": "The weight-losing multi-mechanism stabiliser: craving and appetite"
+        },
+        {
+          "line": 457,
+          "rule": "colon",
+          "before": "The interaction-clean pain-augmentation agent — anxiety and craving off-label",
+          "after": "The interaction-clean pain-augmentation agent: anxiety and craving off-label"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/propranolol.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 402,
+          "rule": "curated",
+          "before": "Different mechanism — see its guide",
+          "after": "Different mechanism: see its guide"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/protriptyline.ts",
+      "editCount": 12,
+      "edits": [
+        {
+          "line": 524,
+          "rule": "colon",
+          "before": "The NET-pure TCA — energising, and the paediatric-cardiac caution",
+          "after": "The NET-pure TCA: energising, and the paediatric-cardiac caution"
+        },
+        {
+          "line": 520,
+          "rule": "sentence",
+          "before": "The TCA-neuroleptic hybrid — EPS warnings included",
+          "after": "The TCA-neuroleptic hybrid. EPS warnings included"
+        },
+        {
+          "line": 516,
+          "rule": "colon",
+          "before": "The TCA survivor — level-guided, post-MI-safe, pain-effective",
+          "after": "The TCA survivor: level-guided, post-MI-safe, pain-effective"
+        },
+        {
+          "line": 512,
+          "rule": "colon",
+          "before": "The founding TCA — depression, enuresis, and panic history",
+          "after": "The founding TCA: depression, enuresis, and panic history"
+        },
+        {
+          "line": 502,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 498,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 494,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 490,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 480,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 476,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 472,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 468,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/quazepam.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 449,
+          "rule": "colon",
+          "before": "The strictly-controlled potent hypnotic — pharmacology's misuse lesson",
+          "after": "The strictly-controlled potent hypnotic: pharmacology's misuse lesson"
+        },
+        {
+          "line": 441,
+          "rule": "colon",
+          "before": "The benzodiazepine zolpidem — onset-only, amnesia-prone",
+          "after": "The benzodiazepine zolpidem: onset-only, amnesia-prone"
+        },
+        {
+          "line": 437,
+          "rule": "colon",
+          "before": "The classic benzodiazepine hypnotic — full power, full class risks",
+          "after": "The classic benzodiazepine hypnotic: full power, full class risks"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/quetiapine.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 631,
+          "rule": "colon",
+          "before": "Low — activating",
+          "after": "Low: activating"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/ramelteon.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 364,
+          "rule": "colon",
+          "before": "Non-24-Hour disorder in the blind — the orphan clock drug",
+          "after": "Non-24-Hour disorder in the blind: the orphan clock drug"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/reboxetine.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 354,
+          "rule": "curated",
+          "before": "Different mechanism — see its guide",
+          "after": "Different mechanism: see its guide"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/risperidone.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 592,
+          "rule": "colon",
+          "before": "Lowest — treats refractory cases",
+          "after": "Lowest: treats refractory cases"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/rivastigmine.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 406,
+          "rule": "sentence",
+          "before": "The once-daily AChE inhibitor — Alzheimer's first-line",
+          "after": "The once-daily AChE inhibitor. Alzheimer's first-line"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/selegiline.ts",
+      "editCount": 8,
+      "edits": [
+        {
+          "line": 475,
+          "rule": "colon",
+          "before": "The activating MAOI — anergic treatment-resistant depression",
+          "after": "The activating MAOI: anergic treatment-resistant depression"
+        },
+        {
+          "line": 471,
+          "rule": "sentence",
+          "before": "The RIMA — MAOI mechanism with the diet relaxed",
+          "after": "The RIMA. MAOI mechanism with the diet relaxed"
+        },
+        {
+          "line": 467,
+          "rule": "colon",
+          "before": "The quiet hydrazine — legacy MAOI continuity",
+          "after": "The quiet hydrazine: legacy MAOI continuity"
+        },
+        {
+          "line": 463,
+          "rule": "sentence",
+          "before": "The atypical-depression legend — MAOI pharmacology's flagship",
+          "after": "The atypical-depression legend. MAOI pharmacology's flagship"
+        },
+        {
+          "line": 431,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        },
+        {
+          "line": 427,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        },
+        {
+          "line": 423,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        },
+        {
+          "line": 419,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/sertindole.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 467,
+          "rule": "colon",
+          "before": "Most robust broad-spectrum atypical — heaviest metabolic burden",
+          "after": "Most robust broad-spectrum atypical: heaviest metabolic burden"
+        },
+        {
+          "line": 463,
+          "rule": "colon",
+          "before": "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+          "after": "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio"
+        },
+        {
+          "line": 459,
+          "rule": "colon",
+          "before": "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+          "after": "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures"
+        },
+        {
+          "line": 455,
+          "rule": "colon",
+          "before": "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+          "after": "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic"
+        },
+        {
+          "line": 445,
+          "rule": "colon",
+          "before": "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+          "after": "Moderate to high: usually transient at a given dose but dose-limiting for many patients."
+        },
+        {
+          "line": 441,
+          "rule": "colon",
+          "before": "Low — may be mildly activating.",
+          "after": "Low: may be mildly activating."
+        },
+        {
+          "line": 433,
+          "rule": "colon",
+          "before": "Low; can be activating — insomnia is more common than somnolence.",
+          "after": "Low; can be activating: insomnia is more common than somnolence."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/sodium-oxybate.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 374,
+          "rule": "curated",
+          "before": "Different mechanism — see its guide",
+          "after": "Different mechanism: see its guide"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/sulpiride.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 447,
+          "rule": "colon",
+          "before": "Most robust broad-spectrum atypical — heaviest metabolic burden",
+          "after": "Most robust broad-spectrum atypical: heaviest metabolic burden"
+        },
+        {
+          "line": 443,
+          "rule": "colon",
+          "before": "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+          "after": "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio"
+        },
+        {
+          "line": 439,
+          "rule": "colon",
+          "before": "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+          "after": "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures"
+        },
+        {
+          "line": 435,
+          "rule": "colon",
+          "before": "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+          "after": "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic"
+        },
+        {
+          "line": 425,
+          "rule": "colon",
+          "before": "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+          "after": "Moderate to high: usually transient at a given dose but dose-limiting for many patients."
+        },
+        {
+          "line": 421,
+          "rule": "colon",
+          "before": "Low — may be mildly activating.",
+          "after": "Low: may be mildly activating."
+        },
+        {
+          "line": 413,
+          "rule": "colon",
+          "before": "Low; can be activating — insomnia is more common than somnolence.",
+          "after": "Low; can be activating: insomnia is more common than somnolence."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/suvorexant.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 342,
+          "rule": "curated",
+          "before": "Different mechanism — see its guide",
+          "after": "Different mechanism: see its guide"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/tacrine.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 450,
+          "rule": "comma",
+          "before": "Not hepatically metabolised — few interactions",
+          "after": "Not hepatically metabolised, few interactions"
+        },
+        {
+          "line": 446,
+          "rule": "colon",
+          "before": "CYP2D6 / 3A4 — modest interaction burden",
+          "after": "CYP2D6 / 3A4: modest interaction burden"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/tasimelteon.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 358,
+          "rule": "colon",
+          "before": "The dependence-free sleep-onset option — body-clock pharmacology",
+          "after": "The dependence-free sleep-onset option: body-clock pharmacology"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/temazepam.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 466,
+          "rule": "colon",
+          "before": "The strictly-controlled potent hypnotic — pharmacology's misuse lesson",
+          "after": "The strictly-controlled potent hypnotic: pharmacology's misuse lesson"
+        },
+        {
+          "line": 458,
+          "rule": "colon",
+          "before": "The benzodiazepine zolpidem — onset-only, amnesia-prone",
+          "after": "The benzodiazepine zolpidem: onset-only, amnesia-prone"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/thioridazine.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 465,
+          "rule": "colon",
+          "before": "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+          "after": "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool"
+        },
+        {
+          "line": 443,
+          "rule": "comma",
+          "before": "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+          "after": "Mild, among the least sedating antipsychotics; alerting more than calming at low doses."
+        },
+        {
+          "line": 429,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 425,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 417,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/thiothixene.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 443,
+          "rule": "colon",
+          "before": "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+          "after": "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool"
+        },
+        {
+          "line": 421,
+          "rule": "comma",
+          "before": "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+          "after": "Mild, among the least sedating antipsychotics; alerting more than calming at low doses."
+        },
+        {
+          "line": 407,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 403,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 395,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/tiagabine.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 405,
+          "rule": "colon",
+          "before": "The weight-losing multi-mechanism stabiliser — craving and appetite",
+          "after": "The weight-losing multi-mechanism stabiliser: craving and appetite"
+        },
+        {
+          "line": 401,
+          "rule": "colon",
+          "before": "The GAD-approved gabapentinoid — pain, fibromyalgia, anxiety",
+          "after": "The GAD-approved gabapentinoid: pain, fibromyalgia, anxiety"
+        },
+        {
+          "line": 397,
+          "rule": "colon",
+          "before": "The interaction-clean pain-augmentation agent — anxiety and craving off-label",
+          "after": "The interaction-clean pain-augmentation agent: anxiety and craving off-label"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/tianeptine.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 442,
+          "rule": "colon",
+          "before": "The expert-only SARI — withdrawn for hepatotoxicity",
+          "after": "The expert-only SARI: withdrawn for hepatotoxicity"
+        },
+        {
+          "line": 430,
+          "rule": "colon",
+          "before": "The antidepressant sleeping pill — insomnia at 50 mg, depression at 300 mg",
+          "after": "The antidepressant sleeping pill: insomnia at 50 mg, depression at 300 mg"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/topiramate.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 489,
+          "rule": "colon",
+          "before": "The GABA-reuptake blocker — mechanism elegance, clinical footnote",
+          "after": "The GABA-reuptake blocker: mechanism elegance, clinical footnote"
+        },
+        {
+          "line": 481,
+          "rule": "colon",
+          "before": "The GAD-approved gabapentinoid — pain, fibromyalgia, anxiety",
+          "after": "The GAD-approved gabapentinoid: pain, fibromyalgia, anxiety"
+        },
+        {
+          "line": 477,
+          "rule": "colon",
+          "before": "The interaction-clean pain-augmentation agent — anxiety and craving off-label",
+          "after": "The interaction-clean pain-augmentation agent: anxiety and craving off-label"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/tranylcypromine.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 475,
+          "rule": "sentence",
+          "before": "The RIMA — MAOI mechanism with the diet relaxed",
+          "after": "The RIMA. MAOI mechanism with the diet relaxed"
+        },
+        {
+          "line": 471,
+          "rule": "colon",
+          "before": "The quiet hydrazine — legacy MAOI continuity",
+          "after": "The quiet hydrazine: legacy MAOI continuity"
+        },
+        {
+          "line": 467,
+          "rule": "sentence",
+          "before": "The atypical-depression legend — MAOI pharmacology's flagship",
+          "after": "The atypical-depression legend. MAOI pharmacology's flagship"
+        },
+        {
+          "line": 435,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        },
+        {
+          "line": 431,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        },
+        {
+          "line": 427,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        },
+        {
+          "line": 423,
+          "rule": "colon",
+          "before": "Weight gain common — the MAOI story.",
+          "after": "Weight gain common: the MAOI story."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/trazodone.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 487,
+          "rule": "colon",
+          "before": "The expert-only SARI — withdrawn for hepatotoxicity",
+          "after": "The expert-only SARI: withdrawn for hepatotoxicity"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/triazolam.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 459,
+          "rule": "colon",
+          "before": "The strictly-controlled potent hypnotic — pharmacology's misuse lesson",
+          "after": "The strictly-controlled potent hypnotic: pharmacology's misuse lesson"
+        },
+        {
+          "line": 451,
+          "rule": "colon",
+          "before": "The classic benzodiazepine hypnotic — full power, full class risks",
+          "after": "The classic benzodiazepine hypnotic: full power, full class risks"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/trifluoperazine.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 452,
+          "rule": "colon",
+          "before": "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+          "after": "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool"
+        },
+        {
+          "line": 430,
+          "rule": "comma",
+          "before": "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+          "after": "Mild, among the least sedating antipsychotics; alerting more than calming at low doses."
+        },
+        {
+          "line": 416,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 412,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 404,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/trihexyphenidyl.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 380,
+          "rule": "colon",
+          "before": "The EPS antidote — anticholinergic striatal rebalancing",
+          "after": "The EPS antidote: anticholinergic striatal rebalancing"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/triiodothyronine.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 355,
+          "rule": "curated",
+          "before": "Different mechanism — see its guide",
+          "after": "Different mechanism: see its guide"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/trimipramine.ts",
+      "editCount": 12,
+      "edits": [
+        {
+          "line": 517,
+          "rule": "colon",
+          "before": "The NET-pure TCA — energising, and the paediatric-cardiac caution",
+          "after": "The NET-pure TCA: energising, and the paediatric-cardiac caution"
+        },
+        {
+          "line": 513,
+          "rule": "sentence",
+          "before": "The TCA-neuroleptic hybrid — EPS warnings included",
+          "after": "The TCA-neuroleptic hybrid. EPS warnings included"
+        },
+        {
+          "line": 509,
+          "rule": "colon",
+          "before": "The TCA survivor — level-guided, post-MI-safe, pain-effective",
+          "after": "The TCA survivor: level-guided, post-MI-safe, pain-effective"
+        },
+        {
+          "line": 505,
+          "rule": "colon",
+          "before": "The founding TCA — depression, enuresis, and panic history",
+          "after": "The founding TCA: depression, enuresis, and panic history"
+        },
+        {
+          "line": 495,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 491,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 487,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 483,
+          "rule": "curated",
+          "before": "Common — exploited by bedtime dosing.",
+          "after": "Common: exploited by bedtime dosing."
+        },
+        {
+          "line": 473,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 469,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 465,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        },
+        {
+          "line": 461,
+          "rule": "curated",
+          "before": "Weight gain common — the tricyclic story.",
+          "after": "Weight gain common: the tricyclic story."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/valproate.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 544,
+          "rule": "colon",
+          "before": "The cleaner carbamazepine — off-label mood use with fewer interactions",
+          "after": "The cleaner carbamazepine: off-label mood use with fewer interactions"
+        },
+        {
+          "line": 540,
+          "rule": "colon",
+          "before": "Anti-suicide + both-pole prophylaxis — the irreplaceable classic",
+          "after": "Anti-suicide + both-pole prophylaxis: the irreplaceable classic"
+        },
+        {
+          "line": 518,
+          "rule": "colon",
+          "before": "Not typically sedating — neutral; occasionally described as 'slowing'.",
+          "after": "Not typically sedating: neutral; occasionally described as 'slowing'."
+        },
+        {
+          "line": 514,
+          "rule": "colon",
+          "before": "Not sedating — mildly activating (morning dosing suits most).",
+          "after": "Not sedating: mildly activating (morning dosing suits most)."
+        },
+        {
+          "line": 510,
+          "rule": "colon",
+          "before": "Moderate, dose-related — partly tolerance-developing.",
+          "after": "Moderate, dose-related: partly tolerance-developing."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/varenicline.ts",
+      "editCount": 4,
+      "edits": [
+        {
+          "line": 454,
+          "rule": "colon",
+          "before": "The pure antagonist — alcohol relapse and opioid blockade",
+          "after": "The pure antagonist: alcohol relapse and opioid blockade"
+        },
+        {
+          "line": 450,
+          "rule": "comma",
+          "before": "The classical aversion deterrent — for the motivated, supervised patient",
+          "after": "The classical aversion deterrent, for the motivated, supervised patient"
+        },
+        {
+          "line": 446,
+          "rule": "colon",
+          "before": "The safety-ceiling maintenance agonist — office-based opioid treatment",
+          "after": "The safety-ceiling maintenance agonist: office-based opioid treatment"
+        },
+        {
+          "line": 442,
+          "rule": "comma",
+          "before": "The abstinence-protector — for the already-abstinent patient",
+          "after": "The abstinence-protector, for the already-abstinent patient"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/venlafaxine.ts",
+      "editCount": 8,
+      "edits": [
+        {
+          "line": 737,
+          "rule": "comma",
+          "before": "Limited data — not first-line in pregnancy",
+          "after": "Limited data, not first-line in pregnancy"
+        },
+        {
+          "line": 720,
+          "rule": "colon",
+          "before": "Sedating — good for insomnia/weight loss",
+          "after": "Sedating: good for insomnia/weight loss"
+        },
+        {
+          "line": 675,
+          "rule": "colon",
+          "before": "No — minimal BP effect (sedation can cause orthostasis)",
+          "after": "No: minimal BP effect (sedation can cause orthostasis)"
+        },
+        {
+          "line": 674,
+          "rule": "sentence",
+          "before": "Yes — BP elevation reported but less pronounced than venlafaxine; check periodically",
+          "after": "Yes. BP elevation reported but less pronounced than venlafaxine; check periodically"
+        },
+        {
+          "line": 673,
+          "rule": "colon",
+          "before": "No — minimal BP effect",
+          "after": "No: minimal BP effect"
+        },
+        {
+          "line": 666,
+          "rule": "colon",
+          "before": "No — blockade of α2 and 5-HT2/3 receptors, dose-independent",
+          "after": "No: blockade of α2 and 5-HT2/3 receptors, dose-independent"
+        },
+        {
+          "line": 665,
+          "rule": "colon",
+          "before": "No — balanced SERT + NET at all doses",
+          "after": "No: balanced SERT + NET at all doses"
+        },
+        {
+          "line": 664,
+          "rule": "colon",
+          "before": "No — pure SERT blockade at all doses",
+          "after": "No: pure SERT blockade at all doses"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/vilazodone.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 440,
+          "rule": "colon",
+          "before": "The expert-only SARI — withdrawn for hepatotoxicity",
+          "after": "The expert-only SARI: withdrawn for hepatotoxicity"
+        },
+        {
+          "line": 432,
+          "rule": "colon",
+          "before": "The antidepressant sleeping pill — insomnia at 50 mg, depression at 300 mg",
+          "after": "The antidepressant sleeping pill: insomnia at 50 mg, depression at 300 mg"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/vortioxetine.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 449,
+          "rule": "colon",
+          "before": "The expert-only SARI — withdrawn for hepatotoxicity",
+          "after": "The expert-only SARI: withdrawn for hepatotoxicity"
+        },
+        {
+          "line": 441,
+          "rule": "colon",
+          "before": "The antidepressant sleeping pill — insomnia at 50 mg, depression at 300 mg",
+          "after": "The antidepressant sleeping pill: insomnia at 50 mg, depression at 300 mg"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/zaleplon.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 412,
+          "rule": "colon",
+          "before": "The Commonwealth Z-drug — 5-hour cover with taste signature",
+          "after": "The Commonwealth Z-drug: 5-hour cover with taste signature"
+        },
+        {
+          "line": 404,
+          "rule": "colon",
+          "before": "Sleep onset in a non-benzodiazepine molecule — the default Z-drug",
+          "after": "Sleep onset in a non-benzodiazepine molecule: the default Z-drug"
+        },
+        {
+          "line": 386,
+          "rule": "colon",
+          "before": "High for 2–3 hours — the intended effect; morning residue is the adverse effect.",
+          "after": "High for 2–3 hours: the intended effect; morning residue is the adverse effect."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/ziprasidone.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 499,
+          "rule": "colon",
+          "before": "Most robust broad-spectrum atypical — heaviest metabolic burden",
+          "after": "Most robust broad-spectrum atypical: heaviest metabolic burden"
+        },
+        {
+          "line": 495,
+          "rule": "colon",
+          "before": "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+          "after": "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio"
+        },
+        {
+          "line": 491,
+          "rule": "colon",
+          "before": "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+          "after": "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures"
+        },
+        {
+          "line": 487,
+          "rule": "colon",
+          "before": "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+          "after": "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic"
+        },
+        {
+          "line": 477,
+          "rule": "colon",
+          "before": "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+          "after": "Moderate to high: usually transient at a given dose but dose-limiting for many patients."
+        },
+        {
+          "line": 473,
+          "rule": "colon",
+          "before": "Low — may be mildly activating.",
+          "after": "Low: may be mildly activating."
+        },
+        {
+          "line": 465,
+          "rule": "colon",
+          "before": "Low; can be activating — insomnia is more common than somnolence.",
+          "after": "Low; can be activating: insomnia is more common than somnolence."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/zolpidem.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 463,
+          "rule": "colon",
+          "before": "The Commonwealth Z-drug — 5-hour cover with taste signature",
+          "after": "The Commonwealth Z-drug: 5-hour cover with taste signature"
+        },
+        {
+          "line": 459,
+          "rule": "colon",
+          "before": "Middle-of-the-night dosing — cleared before morning",
+          "after": "Middle-of-the-night dosing: cleared before morning"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/zonisamide.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 436,
+          "rule": "colon",
+          "before": "The weight-losing multi-mechanism stabiliser — craving and appetite",
+          "after": "The weight-losing multi-mechanism stabiliser: craving and appetite"
+        },
+        {
+          "line": 432,
+          "rule": "colon",
+          "before": "The GAD-approved gabapentinoid — pain, fibromyalgia, anxiety",
+          "after": "The GAD-approved gabapentinoid: pain, fibromyalgia, anxiety"
+        },
+        {
+          "line": 428,
+          "rule": "colon",
+          "before": "The interaction-clean pain-augmentation agent — anxiety and craving off-label",
+          "after": "The interaction-clean pain-augmentation agent: anxiety and craving off-label"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/zopiclone.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 422,
+          "rule": "colon",
+          "before": "Middle-of-the-night dosing — cleared before morning",
+          "after": "Middle-of-the-night dosing: cleared before morning"
+        },
+        {
+          "line": 414,
+          "rule": "colon",
+          "before": "Sleep onset in a non-benzodiazepine molecule — the default Z-drug",
+          "after": "Sleep onset in a non-benzodiazepine molecule: the default Z-drug"
+        },
+        {
+          "line": 396,
+          "rule": "colon",
+          "before": "High for 2–3 hours — the intended effect; morning residue is the adverse effect.",
+          "after": "High for 2–3 hours: the intended effect; morning residue is the adverse effect."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/zotepine.ts",
+      "editCount": 7,
+      "edits": [
+        {
+          "line": 456,
+          "rule": "colon",
+          "before": "Most robust broad-spectrum atypical — heaviest metabolic burden",
+          "after": "Most robust broad-spectrum atypical: heaviest metabolic burden"
+        },
+        {
+          "line": 452,
+          "rule": "colon",
+          "before": "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio",
+          "after": "Bipolar depression + metabolic safety: the 'clean' lurasidone/ziprasidone/aripiprazole trio"
+        },
+        {
+          "line": 448,
+          "rule": "colon",
+          "before": "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures",
+          "after": "Treatment-resistant schizophrenia + anti-suicide efficacy: the drug that rescues the failures"
+        },
+        {
+          "line": 444,
+          "rule": "colon",
+          "before": "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic",
+          "after": "Least metabolic burden among atypicals: the activating 'thermostat' antipsychotic"
+        },
+        {
+          "line": 434,
+          "rule": "colon",
+          "before": "Moderate to high — usually transient at a given dose but dose-limiting for many patients.",
+          "after": "Moderate to high: usually transient at a given dose but dose-limiting for many patients."
+        },
+        {
+          "line": 430,
+          "rule": "colon",
+          "before": "Low — may be mildly activating.",
+          "after": "Low: may be mildly activating."
+        },
+        {
+          "line": 422,
+          "rule": "colon",
+          "before": "Low; can be activating — insomnia is more common than somnolence.",
+          "after": "Low; can be activating: insomnia is more common than somnolence."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/zuclopenthixol.ts",
+      "editCount": 5,
+      "edits": [
+        {
+          "line": 448,
+          "rule": "colon",
+          "before": "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool",
+          "after": "Highest-potency D2 blockade with minimal sedation/hypotension: the agitation and delirium tool"
+        },
+        {
+          "line": 426,
+          "rule": "comma",
+          "before": "Mild — among the least sedating antipsychotics; alerting more than calming at low doses.",
+          "after": "Mild, among the least sedating antipsychotics; alerting more than calming at low doses."
+        },
+        {
+          "line": 412,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 408,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        },
+        {
+          "line": 400,
+          "rule": "curated",
+          "before": "Low — weight gain not expected.",
+          "after": "Low: weight gain not expected."
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/adhd.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 60,
+          "rule": "comma",
+          "before": "~70–80% — among psychiatry's highest",
+          "after": "~70–80%, among psychiatry's highest"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/child-neuropsychiatry.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 56,
+          "rule": "colon",
+          "before": "Nyhan 1972 — five classics",
+          "after": "Nyhan 1972: five classics"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/child-sleep.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 62,
+          "rule": "imperative",
+          "before": "The child stays asleep — do not wake",
+          "after": "The child stays asleep. Do not wake"
+        },
+        {
+          "line": 61,
+          "rule": "colon",
+          "before": "Not fat — tonsils and adenoids",
+          "after": "Not fat: tonsils and adenoids"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/couples-therapy.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 63,
+          "rule": "colon",
+          "before": "The ALI hierarchy — seven levels",
+          "after": "The ALI hierarchy: seven levels"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/developmental-disorders.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 65,
+          "rule": "comma",
+          "before": "None — and that is the answer",
+          "after": "None, and that is the answer"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/elderly-anxiety-ocd.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 69,
+          "rule": "comma",
+          "before": "'Tension', gas, sleeplessness — and the renewing prescription",
+          "after": "'Tension', gas, sleeplessness, and the renewing prescription"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/hallucinogen-use-disorders.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 64,
+          "rule": "comma",
+          "before": "Environment, person, script — then medicine",
+          "after": "Environment, person, script, then medicine"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/homicide-infanticide.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 63,
+          "rule": "colon",
+          "before": "Mass, spree, serial — the cooling-off criterion",
+          "after": "Mass, spree, serial: the cooling-off criterion"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/huntingtons-neuropsychiatry.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 58,
+          "rule": "quoted",
+          "before": "Striatal (caudate) atrophy — 'boxcar ventricles'",
+          "after": "Striatal (caudate) atrophy: 'boxcar ventricles'"
+        },
+        {
+          "line": 55,
+          "rule": "comma",
+          "before": "Longer repeat, earlier onset — especially paternal",
+          "after": "Longer repeat, earlier onset, especially paternal"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/paediatric-ocd-tics.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 64,
+          "rule": "colon",
+          "before": "Higher and slower — weeks 6–10",
+          "after": "Higher and slower: weeks 6–10"
+        },
+        {
+          "line": 61,
+          "rule": "sentence",
+          "before": "USS — Urge, Suppressible, Suggestible",
+          "after": "USS. Urge, Suppressible, Suggestible"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/therapeutic-communities.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 58,
+          "rule": "comma",
+          "before": "Residents, clients or members — never patients",
+          "after": "Residents, clients or members, never patients"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/transcultural-stigma.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 71,
+          "rule": "colon",
+          "before": "Stizein — the prick",
+          "after": "Stizein: the prick"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/amitriptyline.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 355,
+          "rule": "in-paren",
+          "before": "Cardiac arrhythmia (signature — potentially fatal, especially in overdose)",
+          "after": "Cardiac arrhythmia (signature, potentially fatal, especially in overdose)"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/clomipramine.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 365,
+          "rule": "in-paren",
+          "before": "Cardiac arrhythmia (signature — potentially fatal, especially in overdose)",
+          "after": "Cardiac arrhythmia (signature, potentially fatal, especially in overdose)"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/clonazepam.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 641,
+          "rule": "colon",
+          "before": "Seizure disorders — akinetic, myoclonic, absence seizures; Lennox-Gastaut",
+          "after": "Seizure disorders: akinetic, myoclonic, absence seizures; Lennox-Gastaut"
+        },
+        {
+          "line": 125,
+          "rule": "colon",
+          "before": "Seizure disorders — akinetic, myoclonic, absence seizures; Lennox-Gastaut",
+          "after": "Seizure disorders: akinetic, myoclonic, absence seizures; Lennox-Gastaut"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/escitalopram.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 174,
+          "rule": "comma",
+          "before": "CYP2C19 poor metabolisers / coadministration with strong CYP2C19 inhibitors (e.g. omeprazole) — at doses >10 mg/day",
+          "after": "CYP2C19 poor metabolisers / coadministration with strong CYP2C19 inhibitors (e.g. omeprazole), at doses >10 mg/day"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/thioridazine.ts",
+      "editCount": 2,
+      "edits": [
+        {
+          "line": 628,
+          "rule": "colon",
+          "before": "Schizophrenia — second-line (when other antipsychotics fail or are intolerable)",
+          "after": "Schizophrenia: second-line (when other antipsychotics fail or are intolerable)"
+        },
+        {
+          "line": 126,
+          "rule": "colon",
+          "before": "Schizophrenia — second-line (when other antipsychotics fail or are intolerable)",
+          "after": "Schizophrenia: second-line (when other antipsychotics fail or are intolerable)"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/venlafaxine.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 173,
+          "rule": "colon",
+          "before": "Vasomotor symptoms (hot flushes) — menopause and breast-cancer survivors",
+          "after": "Vasomotor symptoms (hot flushes): menopause and breast-cancer survivors"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/diseases/major-depressive-disorder.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 478,
+          "rule": "colon",
+          "before": "Tricyclic antidepressants (TCAs) — amitriptyline, clomipramine, nortriptyline",
+          "after": "Tricyclic antidepressants (TCAs): amitriptyline, clomipramine, nortriptyline"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/alcohol-use-disorders.ts",
+      "editCount": 3,
+      "edits": [
+        {
+          "line": 280,
+          "rule": "sentence",
+          "before": "Floor 4 — The three relapse-prevention medicines (the under-used treasure)",
+          "after": "Floor 4. The three relapse-prevention medicines (the under-used treasure)"
+        },
+        {
+          "line": 279,
+          "rule": "sentence",
+          "before": "Floor 3 — Safe withdrawal: the symptom-triggered benzodiazepine protocol",
+          "after": "Floor 3. Safe withdrawal: the symptom-triggered benzodiazepine protocol"
+        },
+        {
+          "line": 277,
+          "rule": "sentence",
+          "before": "Floor 1 — The ten-minute brief intervention (hazardous and harmful use)",
+          "after": "Floor 1. The ten-minute brief intervention (hazardous and harmful use)"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/child-trauma-abuse.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 243,
+          "rule": "colon",
+          "before": "TF-CBT — trauma-focused CBT, child-and-caregiver edition (the first-line)",
+          "after": "TF-CBT: trauma-focused CBT, child-and-caregiver edition (the first-line)"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/conduct-disorder.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 257,
+          "rule": "colon",
+          "before": "Multisystemic and family approaches — the evidence core for moderate-to-severe CD",
+          "after": "Multisystemic and family approaches: the evidence core for moderate-to-severe CD"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/gender-identity-adults.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 238,
+          "rule": "colon",
+          "before": "Hormone therapy (the partly-irreversible rung) — the monitoring discipline",
+          "after": "Hormone therapy (the partly-irreversible rung): the monitoring discipline"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/late-life-psychosis.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 268,
+          "rule": "colon",
+          "before": "Antipsychotic pharmacotherapy — the fraction-dose law with the lethality-ordered cautions",
+          "after": "Antipsychotic pharmacotherapy: the fraction-dose law with the lethality-ordered cautions"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/mental-health-law.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 253,
+          "rule": "comma",
+          "before": "In treatment refusals: capacity, statutory provisions, advance statement — in that order",
+          "after": "In treatment refusals: capacity, statutory provisions, advance statement, in that order"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/neuroendocrinology.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 285,
+          "rule": "colon",
+          "before": "The systemic-disease consultation — depression as internal-medicine risk state",
+          "after": "The systemic-disease consultation: depression as internal-medicine risk state"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/ocd.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 246,
+          "rule": "colon",
+          "before": "Exposure and Response Prevention (ERP) — the specific psychotherapy (FIRST-LINE)",
+          "after": "Exposure and Response Prevention (ERP): the specific psychotherapy (FIRST-LINE)"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/psychiatric-assessment.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 246,
+          "rule": "colon",
+          "before": "The multi-disciplinary architecture — leadership, key workers, reserved domains",
+          "after": "The multi-disciplinary architecture: leadership, key workers, reserved domains"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/sexual-dysfunctions.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 231,
+          "rule": "colon",
+          "before": "Sex therapy — the three-part behavioural programme (~12 sessions, 4–5 months)",
+          "after": "Sex therapy: the three-part behavioural programme (~12 sessions, 4–5 months)"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/substance-use-overview.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 272,
+          "rule": "sentence",
+          "before": "Step 1 — Match the response to the stage: brief intervention for hazardous use",
+          "after": "Step 1. Match the response to the stage: brief intervention for hazardous use"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/transcultural-stigma.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 245,
+          "rule": "colon",
+          "before": "The behaviour focus — advocacy and certification as anti-discrimination practice",
+          "after": "The behaviour focus: advocacy and certification as anti-discrimination practice"
+        }
+      ]
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/voluntary-sector.ts",
+      "editCount": 1,
+      "edits": [
+        {
+          "line": 243,
+          "rule": "colon",
+          "before": "Accept the critical friend — the second opinion, the complaint, the inquest",
+          "after": "Accept the critical friend: the second opinion, the complaint, the inquest"
         }
       ]
     }

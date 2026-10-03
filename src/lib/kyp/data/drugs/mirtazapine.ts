@@ -625,18 +625,18 @@ export const mirtazapine: Drug = {
           attribute: "Mechanism: reuptake blockade?",
           primaryValue: "NO. ZERO transporter blockade. Pure receptor antagonist (α2, 5-HT2A/2C/3, H1, α1).",
           comparisons: [
-            { drug: "Sertraline", value: "YES — SERT blockade" },
-            { drug: "Bupropion", value: "YES — NET + DAT blockade" },
-            { drug: "Venlafaxine", value: "YES — SERT + NET (dose-dependent), weak DAT" },
+            { drug: "Sertraline", value: "YES. SERT blockade" },
+            { drug: "Bupropion", value: "YES. NET + DAT blockade" },
+            { drug: "Venlafaxine", value: "YES. SERT + NET (dose-dependent), weak DAT" },
           ],
         },
         {
           attribute: "Sedation",
           primaryValue: "MARKED: signature effect (H1 blockade). Take at night. Inverse dose-response: 15 mg > 30 mg for sedation.",
           comparisons: [
-            { drug: "Sertraline", value: "Mildly activating — take in morning" },
-            { drug: "Bupropion", value: "Activating — take in morning. Insomnia common." },
-            { drug: "Venlafaxine", value: "Mildly activating — take in morning" },
+            { drug: "Sertraline", value: "Mildly activating: take in morning" },
+            { drug: "Bupropion", value: "Activating: take in morning. Insomnia common." },
+            { drug: "Venlafaxine", value: "Mildly activating: take in morning" },
           ],
         },
         {
@@ -644,7 +644,7 @@ export const mirtazapine: Drug = {
           primaryValue: "SIGNATURE: 2–5 kg in 3 months (H1 blockade). Therapeutically useful in anorexia/cachexia.",
           comparisons: [
             { drug: "Sertraline", value: "Mild / weight-neutral" },
-            { drug: "Bupropion", value: "Weight-neutral or mild weight LOSS — preferred in obesity" },
+            { drug: "Bupropion", value: "Weight-neutral or mild weight LOSS: preferred in obesity" },
             { drug: "Venlafaxine", value: "Weight-neutral long-term" },
           ],
         },
@@ -652,18 +652,18 @@ export const mirtazapine: Drug = {
           attribute: "Sexual dysfunction",
           primaryValue: "NONE: 5-HT2C blockade avoids the SSRI mechanism. Can AUGMENT SSRIs to reverse SSRI sexual SE.",
           comparisons: [
-            { drug: "Sertraline", value: "Common (30–40%) — SERT-mediated" },
-            { drug: "Bupropion", value: "NONE — also no sexual SE; first-line augment for SSRI sexual SE" },
-            { drug: "Venlafaxine", value: "Common (30–40%) — SERT-mediated" },
+            { drug: "Sertraline", value: "Common (30–40%). SERT-mediated" },
+            { drug: "Bupropion", value: "NONE, also no sexual SE; first-line augment for SSRI sexual SE" },
+            { drug: "Venlafaxine", value: "Common (30–40%). SERT-mediated" },
           ],
         },
         {
           attribute: "Nausea / GI upset",
           primaryValue: "NONE: 5-HT3 blockade is antiemetic (like ondansetron). Advantage over SSRIs.",
           comparisons: [
-            { drug: "Sertraline", value: "Common — 5-HT3 activation in gut" },
+            { drug: "Sertraline", value: "Common: 5-HT3 activation in gut" },
             { drug: "Bupropion", value: "Mild nausea common" },
-            { drug: "Venlafaxine", value: "Common — worse at initiation" },
+            { drug: "Venlafaxine", value: "Common: worse at initiation" },
           ],
         },
         {
@@ -681,7 +681,7 @@ export const mirtazapine: Drug = {
           comparisons: [
             { drug: "Sertraline", value: "Mild–moderate (FINISH mnemonic)" },
             { drug: "Bupropion", value: "Mild" },
-            { drug: "Venlafaxine", value: "WORST — severe withdrawal within hours of missed dose" },
+            { drug: "Venlafaxine", value: "WORST: severe withdrawal within hours of missed dose" },
           ],
         },
         {
@@ -689,7 +689,7 @@ export const mirtazapine: Drug = {
           primaryValue: "AGRANULOCYTOSIS (~1 in 1000): counsel re fever/sore throat. Also orthostatic hypotension (α1 blockade).",
           comparisons: [
             { drug: "Sertraline", value: "SIADH (elderly), serotonin syndrome, bleeding" },
-            { drug: "Bupropion", value: "Seizures (dose-dependent — avoid >450 mg, in eating disorders, seizure disorders)" },
+            { drug: "Bupropion", value: "Seizures (dose-dependent, avoid >450 mg, in eating disorders, seizure disorders)" },
             { drug: "Venlafaxine", value: "Dose-dependent hypertension, severe withdrawal, serotonin syndrome" },
           ],
         },
@@ -707,8 +707,8 @@ export const mirtazapine: Drug = {
           primaryValue: "20–40 hours (mean ~30 h), once daily at night",
           comparisons: [
             { drug: "Sertraline", value: "26 hours" },
-            { drug: "Bupropion", value: "21 hours (parent) — needs XL formulation for once-daily" },
-            { drug: "Venlafaxine", value: "5 h parent / 11 h active metabolite — short, hence severe withdrawal" },
+            { drug: "Bupropion", value: "21 hours (parent): needs XL formulation for once-daily" },
+            { drug: "Venlafaxine", value: "5 h parent / 11 h active metabolite: short, hence severe withdrawal" },
           ],
         },
         {

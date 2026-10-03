@@ -432,19 +432,19 @@ export const alprazolam: Drug = {
           comparisons: [
             {
               drug: "Clonazepam",
-              value: "High — the dose-limiting effect.",
+              value: "High: the dose-limiting effect.",
             },
             {
               drug: "Diazepam",
-              value: "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+              value: "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
             },
             {
               drug: "Lorazepam",
-              value: "Moderate — intermediate duration limits hangover vs diazepam.",
+              value: "Moderate: intermediate duration limits hangover vs diazepam.",
             },
             {
               drug: "Chlordiazepoxide",
-              value: "High — useful in withdrawal.",
+              value: "High: useful in withdrawal.",
             },
           ],
         },
@@ -454,19 +454,19 @@ export const alprazolam: Drug = {
           comparisons: [
             {
               drug: "Clonazepam",
-              value: "The long-acting anticonvulsant benzo — seizures and panic",
+              value: "The long-acting anticonvulsant benzo: seizures and panic",
             },
             {
               drug: "Diazepam",
-              value: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+              value: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
             },
             {
               drug: "Lorazepam",
-              value: "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo",
+              value: "Glucuronidation-only metabolism: the liver/elderly/interactions-safe benzo",
             },
             {
               drug: "Chlordiazepoxide",
-              value: "Alcohol withdrawal tablet — the founding benzo",
+              value: "Alcohol withdrawal tablet: the founding benzo",
             },
           ],
         },

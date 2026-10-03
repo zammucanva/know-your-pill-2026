@@ -154,7 +154,7 @@ export function SelfTestClient({
                     <option value="all">All domains ({questions.length} questions)</option>
                     {groups.map((g) => (
                       <option key={g.letter} value={g.letter}>
-                        {g.letter} — {g.name} ({g.count})
+                        {g.letter} · {g.name} ({g.count})
                       </option>
                     ))}
                   </select>

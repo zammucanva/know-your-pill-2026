@@ -329,7 +329,7 @@ export const flibanserin: Drug = {
           comparisons: [
             {
               drug: "Flibanserin",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },

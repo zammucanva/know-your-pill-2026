@@ -334,7 +334,7 @@ export const prazosin: Drug = {
           comparisons: [
             {
               drug: "Prazosin",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },

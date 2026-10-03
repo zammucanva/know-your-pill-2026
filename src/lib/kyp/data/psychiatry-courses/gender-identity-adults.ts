@@ -235,7 +235,7 @@ export const genderIdentityAdultsCourse: PsychiatryCourse = {
     },
     {
       category: "pharmacotherapy",
-      name: "Hormone therapy (the partly-irreversible rung) — the monitoring discipline",
+      name: "Hormone therapy (the partly-irreversible rung): the monitoring discipline",
       description: "Trans women: oestrogen (oral/patch/injectable) plus an anti-androgen (the cyproterone-and-spironolactone tiers), watching VTE risk, lipids, liver, prolactin, with SMOKING CESSATION absolute. Trans men: testosterone (injectable/gel), watching haematocrit (polycythaemia), lipids, glucose-and-BP. Both: bone health on the monitoring schedule, the endocrine-comanagement discipline throughout, and THE FERTILITY DISCIPLINE BEFORE the first tablet (the gamete-banking offer, and the decline, both documented).",
       whenToUse: "After the assessment confirmation, the fertility conversation and the informed consent: each rung consented, each deliberate.",
       indianContext: "The de-facto national route is pharmacy-self-access, unsupervised: the harm-minimisation discipline (the monitoring offered even when the patient declines the slower official pathway: the VTE-and-haematocrit-and-lipid checks, the smoking-cessation absolute) saves more lives than the insistence-on-permission the system cannot enforce; costs approx 2026: oestrogen-plus-anti-androgen ₹200–800 monthly; testosterone ₹300–1,200; the monitoring bloods ₹500–2,000 per cycle.",

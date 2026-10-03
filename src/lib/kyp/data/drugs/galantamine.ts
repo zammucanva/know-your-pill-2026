@@ -366,11 +366,11 @@ export const galantamine: Drug = {
           comparisons: [
             {
               drug: "Donepezil",
-              value: "The once-daily AChE inhibitor — Alzheimer's first-line",
+              value: "The once-daily AChE inhibitor. Alzheimer's first-line",
             },
             {
               drug: "Rivastigmine",
-              value: "The dual-inhibitor with the patch — and the DLB/PDD approval",
+              value: "The dual-inhibitor with the patch, and the DLB/PDD approval",
             },
           ],
         },

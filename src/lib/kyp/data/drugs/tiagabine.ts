@@ -394,15 +394,15 @@ export const tiagabine: Drug = {
           comparisons: [
             {
               drug: "Gabapentin",
-              value: "The interaction-clean pain-augmentation agent — anxiety and craving off-label",
+              value: "The interaction-clean pain-augmentation agent: anxiety and craving off-label",
             },
             {
               drug: "Pregabalin",
-              value: "The GAD-approved gabapentinoid — pain, fibromyalgia, anxiety",
+              value: "The GAD-approved gabapentinoid: pain, fibromyalgia, anxiety",
             },
             {
               drug: "Topiramate",
-              value: "The weight-losing multi-mechanism stabiliser — craving and appetite",
+              value: "The weight-losing multi-mechanism stabiliser: craving and appetite",
             },
             {
               drug: "Levetiracetam",

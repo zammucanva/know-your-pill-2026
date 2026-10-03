@@ -456,11 +456,11 @@ export const zolpidem: Drug = {
             },
             {
               drug: "Zaleplon",
-              value: "Middle-of-the-night dosing — cleared before morning",
+              value: "Middle-of-the-night dosing: cleared before morning",
             },
             {
               drug: "Zopiclone",
-              value: "The Commonwealth Z-drug — 5-hour cover with taste signature",
+              value: "The Commonwealth Z-drug: 5-hour cover with taste signature",
             },
           ],
         },

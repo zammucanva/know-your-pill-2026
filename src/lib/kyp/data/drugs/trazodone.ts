@@ -484,7 +484,7 @@ export const trazodone: Drug = {
             },
             {
               drug: "Nefazodone",
-              value: "The expert-only SARI — withdrawn for hepatotoxicity",
+              value: "The expert-only SARI: withdrawn for hepatotoxicity",
             },
             {
               drug: "Tianeptine",

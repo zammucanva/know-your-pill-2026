@@ -455,7 +455,7 @@ export const temazepam: Drug = {
           comparisons: [
             {
               drug: "Triazolam",
-              value: "The benzodiazepine zolpidem — onset-only, amnesia-prone",
+              value: "The benzodiazepine zolpidem: onset-only, amnesia-prone",
             },
             {
               drug: "Estazolam",
@@ -463,7 +463,7 @@ export const temazepam: Drug = {
             },
             {
               drug: "Flunitrazepam",
-              value: "The strictly-controlled potent hypnotic — pharmacology's misuse lesson",
+              value: "The strictly-controlled potent hypnotic: pharmacology's misuse lesson",
             },
             {
               drug: "Flurazepam",

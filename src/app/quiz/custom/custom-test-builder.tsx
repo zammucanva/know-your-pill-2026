@@ -663,7 +663,7 @@ export function CustomTestBuilder() {
                 </h1>
                 <p className="mt-6 max-w-xl text-body-lg text-muted-foreground leading-relaxed">
                   Choose exactly what you want to be tested on. Every question
-                  is drawn from the same reviewed KYP content you study —
+                  is drawn from the same reviewed KYP content you study:
                   nothing invented, nothing outside the library.
                 </p>
               </Reveal>
@@ -1023,7 +1023,7 @@ export function CustomTestBuilder() {
                           className="h-4 w-4 rounded border-border accent-[var(--brand)] disabled:opacity-40"
                         />
                         <BookMarked className="h-4 w-4 text-muted-foreground" aria-hidden />
-                        Stahl's Prescriber's Guide — {stahlBankStats().total} clinical MCQs
+                        Stahl's Prescriber's Guide: {stahlBankStats().total} clinical MCQs
                       </label>
                       <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
                         Adds the Stahl's Prescriber-Guide clinical MCQ bank for the
@@ -1305,7 +1305,7 @@ export function CustomTestBuilder() {
                   role="status"
                   className="mb-6 rounded-lg border border-brand/40 bg-brand-soft/20 p-3 text-xs text-foreground/80"
                 >
-                  Retest — {attempt.retestOf.label}. The same questions,
+                  Retest of {attempt.retestOf.label}. The same questions,
                   re-presented in a fresh order.
                 </div>
               )}

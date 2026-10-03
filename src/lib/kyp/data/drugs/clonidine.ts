@@ -382,7 +382,7 @@ export const clonidine: Drug = {
           comparisons: [
             {
               drug: "Guanfacine",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
           ],
         },
@@ -402,7 +402,7 @@ export const clonidine: Drug = {
           comparisons: [
             {
               drug: "Guanfacine",
-              value: "The refined alpha-2 agonist — ER-approved for ADHD",
+              value: "The refined alpha-2 agonist. ER-approved for ADHD",
             },
           ],
         },

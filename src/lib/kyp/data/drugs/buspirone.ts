@@ -336,7 +336,7 @@ export const buspirone: Drug = {
           comparisons: [
             {
               drug: "Buspirone",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },

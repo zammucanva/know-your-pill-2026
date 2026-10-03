@@ -459,15 +459,15 @@ export const disulfiram: Drug = {
           comparisons: [
             {
               drug: "Acamprosate",
-              value: "The abstinence-protector — for the already-abstinent patient",
+              value: "The abstinence-protector, for the already-abstinent patient",
             },
             {
               drug: "Buprenorphine",
-              value: "The safety-ceiling maintenance agonist — office-based opioid treatment",
+              value: "The safety-ceiling maintenance agonist: office-based opioid treatment",
             },
             {
               drug: "Naltrexone",
-              value: "The pure antagonist — alcohol relapse and opioid blockade",
+              value: "The pure antagonist: alcohol relapse and opioid blockade",
             },
             {
               drug: "Varenicline",

@@ -407,11 +407,11 @@ export const levomilnacipran: Drug = {
           comparisons: [
             {
               drug: "Desvenlafaxine",
-              value: "The simplified SNRI — venlafaxine's metabolite packaged",
+              value: "The simplified SNRI: venlafaxine's metabolite packaged",
             },
             {
               drug: "Milnacipran",
-              value: "The fibromyalgia SNRI — pain + fatigue coverage",
+              value: "The fibromyalgia SNRI: pain + fatigue coverage",
             },
           ],
         },

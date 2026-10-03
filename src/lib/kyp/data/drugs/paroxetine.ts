@@ -54,7 +54,7 @@ export const paroxetine: Drug = {
     summary:
       "Paroxetine selectively blocks the serotonin transporter (SERT), increasing synaptic serotonin concentration. Unique among SSRIs, it also has clinically relevant mild anticholinergic (muscarinic M1) activity, which contributes to its sedating, weight-gaining, and anticholinergic side-effect profile.",
     molecularTarget:
-      "SERT (SLC6A4, serotonin transporter); also weak antagonist at muscarinic M1 receptors (unique among SSRIs)",
+      "SERT (SLC6A4 — serotonin transporter); also weak antagonist at muscarinic M1 receptors (unique among SSRIs)",
     effect:
       "Acute: increased synaptic serotonin plus mild anticholinergic effects (sedation, dry mouth, constipation). Chronic (2–6 weeks): desensitisation of 5-HT1A somatodendritic autoreceptors in the raphe nuclei, increased serotonergic throughput to the prefrontal cortex, and upregulation of BDNF in the hippocampus; producing the antidepressant and anxiolytic effects shared with other SSRIs.",
     steps: [
@@ -630,7 +630,7 @@ export const paroxetine: Drug = {
           primaryValue: "~21 hours (SHORTEST of all SSRIs)",
           comparisons: [
             { drug: "Sertraline", value: "26 hours" },
-            { drug: "Fluoxetine", value: "1–4 days (with norfluoxetine — LONGEST)" },
+            { drug: "Fluoxetine", value: "1–4 days (with norfluoxetine. LONGEST)" },
             { drug: "Escitalopram", value: "27–32 hours" },
           ],
         },
@@ -647,9 +647,9 @@ export const paroxetine: Drug = {
           attribute: "Discontinuation syndrome",
           primaryValue: "WORST of any SSRI: taper over MONTHS",
           comparisons: [
-            { drug: "Sertraline", value: "Mild–moderate — taper over 4+ weeks" },
-            { drug: "Fluoxetine", value: "MILDEST — self-tapers due to long half-life" },
-            { drug: "Escitalopram", value: "Mild–moderate — taper over 4+ weeks" },
+            { drug: "Sertraline", value: "Mild–moderate: taper over 4+ weeks" },
+            { drug: "Fluoxetine", value: "MILDEST: self-tapers due to long half-life" },
+            { drug: "Escitalopram", value: "Mild–moderate: taper over 4+ weeks" },
           ],
         },
         {
@@ -658,24 +658,24 @@ export const paroxetine: Drug = {
           comparisons: [
             { drug: "Sertraline", value: "Mild (only at ≥200 mg/day)" },
             { drug: "Fluoxetine", value: "Strong (tied with paroxetine)" },
-            { drug: "Escitalopram", value: "Minimal — lowest interaction profile" },
+            { drug: "Escitalopram", value: "Minimal: lowest interaction profile" },
           ],
         },
         {
           attribute: "Tamoxifen co-prescription",
           primaryValue: "ABSOLUTE CONTRAINDICATION (reduces endoxifen)",
           comparisons: [
-            { drug: "Sertraline", value: "Caution (mild CYP2D6 inhibitor — generally acceptable)" },
+            { drug: "Sertraline", value: "Caution (mild CYP2D6 inhibitor, generally acceptable)" },
             { drug: "Fluoxetine", value: "Avoid (strong CYP2D6 inhibitor, like paroxetine)" },
-            { drug: "Escitalopram", value: "Safe (minimal CYP2D6 effect — preferred alternative)" },
+            { drug: "Escitalopram", value: "Safe (minimal CYP2D6 effect, preferred alternative)" },
           ],
         },
         {
           attribute: "Sedation",
           primaryValue: "MOST sedating SSRI: give at night",
           comparisons: [
-            { drug: "Sertraline", value: "Mildly activating — usually morning" },
-            { drug: "Fluoxetine", value: "MOST activating SSRI — morning dosing" },
+            { drug: "Sertraline", value: "Mildly activating: usually morning" },
+            { drug: "Fluoxetine", value: "MOST activating SSRI: morning dosing" },
             { drug: "Escitalopram", value: "Neutral" },
           ],
         },

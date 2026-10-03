@@ -391,7 +391,7 @@ export const ketamine: Drug = {
           comparisons: [
             {
               drug: "Ketamine",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },

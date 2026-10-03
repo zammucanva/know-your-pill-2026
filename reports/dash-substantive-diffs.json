@@ -1,0 +1,1487 @@
+[
+  {
+    "where": "drugs[5].examLens.neetPg.pyqConcepts[1]",
+    "old": "NEET PG 2021: A patient on clozapine 300mg/day is started on fluvoxamine. What dose adjustment is required? (Answer: Reduce clozapine to 1/3 of the original dose — ~100mg/day. CYP1A2 inhibition raises",
+    "new": "NEET PG 2021: A patient on clozapine 300mg/day is started on fluvoxamine. What dose adjustment is required? (Answer: Reduce clozapine to 1/3 of the original dose (about 100mg/day). CYP1A2 inhibition r"
+  },
+  {
+    "where": "drugs[12].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[12].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[13].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[13].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[13].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[14].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[14].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[15].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[15].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[16].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[16].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[17].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[17].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[18].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[18].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[19].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[19].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[19].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[20].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[20].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[21].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[21].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[22].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[22].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[22].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[23].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[23].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[23].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[24].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[24].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[25].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[25].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[26].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[26].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[26].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[27].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[27].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[27].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[28].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[28].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[28].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[29].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[29].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[30].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[30].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[30].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[31].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[31].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[31].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[32].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[32].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[33].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[33].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[33].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[34].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[34].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[35].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[35].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[35].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[36].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[36].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[36].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[37].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[37].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[37].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[38].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[38].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[39].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[39].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[39].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[40].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[40].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[40].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[41].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[41].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[42].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[42].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[42].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[43].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[43].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[43].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[44].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[45].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[45].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[45].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[46].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[46].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[46].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[47].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[48].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[48].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[48].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[49].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[49].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[49].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[50].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[50].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[50].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[51].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[52].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[53].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[53].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[53].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[54].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[54].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[55].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[55].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[55].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[56].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[56].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[56].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[57].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[58].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[58].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[58].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[59].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[59].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[59].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[60].clinicalCases[0].title",
+    "old": "First presentation — schizophrenia — psychotic manifestations",
+    "new": "First presentation: schizophrenia with psychotic manifestations"
+  },
+  {
+    "where": "drugs[60].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[61].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[62].clinicalCases[0].title",
+    "old": "First presentation — schizophrenia — psychotic manifestations",
+    "new": "First presentation: schizophrenia with psychotic manifestations"
+  },
+  {
+    "where": "drugs[62].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[63].clinicalCases[0].title",
+    "old": "First presentation — schizophrenia — psychotic manifestations",
+    "new": "First presentation: schizophrenia with psychotic manifestations"
+  },
+  {
+    "where": "drugs[63].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[64].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[65].clinicalCases[0].title",
+    "old": "First presentation — schizophrenia — psychotic manifestations",
+    "new": "First presentation: schizophrenia with psychotic manifestations"
+  },
+  {
+    "where": "drugs[65].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[66].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[67].clinicalCases[0].title",
+    "old": "First presentation — schizophrenia — psychotic manifestations",
+    "new": "First presentation: schizophrenia with psychotic manifestations"
+  },
+  {
+    "where": "drugs[67].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[68].clinicalCases[0].title",
+    "old": "First presentation — schizophrenia — psychotic manifestations",
+    "new": "First presentation: schizophrenia with psychotic manifestations"
+  },
+  {
+    "where": "drugs[68].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[69].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[70].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[71].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[72].clinicalCases[0].title",
+    "old": "First presentation — schizophrenia — psychotic manifestations",
+    "new": "First presentation: schizophrenia with psychotic manifestations"
+  },
+  {
+    "where": "drugs[72].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[73].clinicalCases[0].title",
+    "old": "First presentation — schizophrenia — psychotic manifestations",
+    "new": "First presentation: schizophrenia with psychotic manifestations"
+  },
+  {
+    "where": "drugs[73].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[74].clinicalCases[0].title",
+    "old": "First presentation — schizophrenia — psychotic manifestations",
+    "new": "First presentation: schizophrenia with psychotic manifestations"
+  },
+  {
+    "where": "drugs[74].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[75].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[75].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[76].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[76].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[77].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[77].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[78].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[78].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[78].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[79].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[79].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[80].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[80].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[80].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[81].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[81].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[82].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[82].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[83].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[84].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[84].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[84].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[85].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[85].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[86].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[86].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[87].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[87].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[88].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[88].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[89].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[89].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[90].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[91].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[92].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[93].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[93].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[94].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[95].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[95].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[96].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[97].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[98].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[98].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[99].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[99].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[100].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[100].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[101].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[101].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[102].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[102].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[103].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[103].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[104].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[104].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[105].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[105].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[106].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[106].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[107].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[107].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[107].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[108].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[108].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[108].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[109].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[109].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[109].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[110].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[110].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[111].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[111].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[112].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[113].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[113].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[114].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[114].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[115].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[115].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[115].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[116].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[116].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[117].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[117].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[118].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[118].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[119].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[119].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[120].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[120].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[121].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[122].patientMode.tagline",
+    "old": "The hepatotoxic last-resort stimulant — ADHD's liver-monitoring lesson in a tablet.",
+    "new": "A hepatotoxic last-resort stimulant: an ADHD lesson in liver monitoring."
+  },
+  {
+    "where": "drugs[122].tagline",
+    "old": "The hepatotoxic last-resort stimulant — ADHD's liver-monitoring lesson in a tablet.",
+    "new": "A hepatotoxic last-resort stimulant: an ADHD lesson in liver monitoring."
+  },
+  {
+    "where": "drugs[123].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[123].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[123].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[124].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[124].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[125].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[125].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[126].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[126].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[127].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[127].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[129].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[129].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[129].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[130].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[130].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[131].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[131].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[131].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[132].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[132].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[133].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[133].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[134].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[134].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[134].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[135].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[135].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[136].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[136].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[136].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[137].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[137].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[138].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[138].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[139].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[139].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[140].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[140].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[140].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[141].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[141].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[142].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[142].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[143].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[143].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[143].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "drugs[144].indianPractice.monitoring",
+    "old": "As per international guidance — see Monitoring section.",
+    "new": "As per international guidance; see the Monitoring section."
+  },
+  {
+    "where": "drugs[144].patientEducationPoints[0]",
+    "old": "Take exactly as prescribed — same time each day.",
+    "new": "Take it exactly as prescribed, at the same time each day."
+  },
+  {
+    "where": "drugs[144].reviewers[0]",
+    "old": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced.",
+    "new": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017); facts are paraphrased, not reproduced."
+  },
+  {
+    "where": "searchIndex[1].description",
+    "old": "15 classes · 43 medication guides — SSRIs, SNRIs, NDRIs, NaSSAs, TCAs, Atypical Antidepressants, MAOIs, Augmentation Agents, Melatonergic Antidepressants, Atypical Antidepressants, NMDA Antagonists, N",
+    "new": "15 classes · 43 medication guides across these classes: SSRIs, SNRIs, NDRIs, NaSSAs, TCAs, Atypical Antidepressants, MAOIs, Augmentation Agents, Melatonergic Antidepressants, Atypical Antidepressants,"
+  },
+  {
+    "where": "searchIndex[2].description",
+    "old": "3 classes · 34 medication guides — Atypical Antipsychotics, Atypical Antipsychotics, Typical Antipsychotics.",
+    "new": "3 classes · 34 medication guides across these classes: Atypical Antipsychotics, Atypical Antipsychotics, Typical Antipsychotics."
+  },
+  {
+    "where": "searchIndex[3].description",
+    "old": "2 classes · 11 medication guides — Anticonvulsants, Mood Stabilisers.",
+    "new": "2 classes · 11 medication guides across these classes: Anticonvulsants, Mood Stabilisers."
+  },
+  {
+    "where": "searchIndex[4].description",
+    "old": "6 classes · 15 medication guides — Alpha-1 Blockers, Antihistamines, Azapirones, Benzodiazepines, Benzodiazepine Antagonists, Beta-Blockers.",
+    "new": "6 classes · 15 medication guides across these classes: Alpha-1 Blockers, Antihistamines, Azapirones, Benzodiazepines, Benzodiazepine Antagonists, Beta-Blockers."
+  },
+  {
+    "where": "searchIndex[5].description",
+    "old": "4 classes · 13 medication guides — Benzodiazepine Hypnotics, Orexin Antagonists, Melatonin Agonists, Non-Benzodiazepine Hypnotics.",
+    "new": "4 classes · 13 medication guides across these classes: Benzodiazepine Hypnotics, Orexin Antagonists, Melatonin Agonists, Non-Benzodiazepine Hypnotics."
+  },
+  {
+    "where": "searchIndex[6].description",
+    "old": "4 classes · 12 medication guides — Alpha-2 Agonists, NRIs, Stimulants, Wake-Promoting Agents.",
+    "new": "4 classes · 12 medication guides across these classes: Alpha-2 Agonists, NRIs, Stimulants, Wake-Promoting Agents."
+  },
+  {
+    "where": "searchIndex[7].description",
+    "old": "3 classes · 8 medication guides — Cholinesterase Inhibitors, Augmentation Agents, NMDA Antagonists.",
+    "new": "3 classes · 8 medication guides across these classes: Cholinesterase Inhibitors, Augmentation Agents, NMDA Antagonists."
+  },
+  {
+    "where": "searchIndex[8].description",
+    "old": "1 classes · 7 medication guides — Alcohol Dependence Treatments.",
+    "new": "1 classes · 7 medication guides across these classes: Alcohol Dependence Treatments."
+  },
+  {
+    "where": "searchIndex[9].description",
+    "old": "5 classes · 8 medication guides — Anticholinergics, Libido Enhancers, NMDA Antagonists, Narcolepsy Agents, Weight Management Agents.",
+    "new": "5 classes · 8 medication guides across these classes: Anticholinergics, Libido Enhancers, NMDA Antagonists, Narcolepsy Agents, Weight Management Agents."
+  },
+  {
+    "where": "searchIndex[172].description",
+    "old": "The hepatotoxic last-resort stimulant — ADHD's liver-monitoring lesson in a tablet.",
+    "new": "A hepatotoxic last-resort stimulant: an ADHD lesson in liver monitoring."
+  }
+]

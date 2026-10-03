@@ -628,7 +628,7 @@ export const quetiapine: Drug = {
             },
             {
               drug: "Aripiprazole",
-              value: "Low — activating",
+              value: "Low: activating",
             },
             {
               drug: "Lurasidone",

@@ -228,7 +228,7 @@ export const sexualDysfunctionsCourse: PsychiatryCourse = {
   management: [
     {
       category: "psychotherapy",
-      name: "Sex therapy — the three-part behavioural programme (~12 sessions, 4–5 months)",
+      name: "Sex therapy: the three-part behavioural programme (~12 sessions, 4–5 months)",
       description: "Part 1: non-genital touch with intercourse banned; surfaces relationship material (distrust, resentment, the stereotyped assumptions). Part 2: genital-plus-non-genital touch, intercourse still banned; surfaces the intrapersonal material (old attitudes, abuse sequelae). Part 3: gradual approach to penetration; surfaces performance anxiety and pain-fear. Weekly initially with a SET number of sessions agreed at the outset; the goals are comfort, trust and intimacy, not direct symptom reversal, with the specific-technique exceptions of PE and vaginismus where behavioural method cures directly.",
       whenToUse: "The first-line architecture, and the diagnostic sequencing law: if window-1/2 factors are evident, do NOT start drugs; the programme's first two stages are themselves the assessment.",
       indianContext: "Cultural negotiation, not imposition: much of sex therapy 'gives permission' for interaction patterns drawn from Western middle-class values; with Indian couples (arranged or love marriages, joint-family thin-privacy, religious frames) the discipline is to surface and negotiate differing values, never impose the therapist's.",

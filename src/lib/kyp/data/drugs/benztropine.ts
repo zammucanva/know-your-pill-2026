@@ -409,7 +409,7 @@ export const benztropine: Drug = {
           comparisons: [
             {
               drug: "Trihexyphenidyl",
-              value: "The Indian classic — anticholinergic EPS cover for typical antipsychotics",
+              value: "The Indian classic: anticholinergic EPS cover for typical antipsychotics",
             },
           ],
         },

@@ -34,7 +34,7 @@ export function PsychiatrySection() {
               className="font-serif font-semibold tracking-[-0.03em] text-foreground leading-[1.05] max-w-4xl"
               style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
             >
-              The complete psychiatry curriculum —{" "}
+              The complete psychiatry curriculum:{" "}
               {psychiatryStats.lessons} lessons, taught like medicine
             </h2>
             <p className="mt-5 max-w-2xl text-body text-muted-foreground leading-relaxed">

@@ -84,7 +84,7 @@ describe("exam mode — composition pins", () => {
     const src = read(PAGE);
     expect(src).toMatch(/\[exam,\s*setExam\]\s*=\s*React\.useState\(false\)/);
     expect(src).toContain('id="exam-toggle"');
-    expect(src).toContain("Exam — feedback after submission");
+    expect(src).toContain("Exam: feedback after submission");
     expect(src).toContain("Off by");
   });
 
@@ -107,7 +107,7 @@ describe("exam mode — composition pins", () => {
 
   test("8. the only post-answer UI is a neutral acknowledgement", () => {
     const src = read(PAGE);
-    expect(src).toContain("Answer recorded — feedback comes after you submit.");
+    expect(src).toContain("Answer recorded: feedback comes after you submit.");
     expect(src).toContain("Submit exam");
     expect(src).toContain("{answered && withhold && (");
   });

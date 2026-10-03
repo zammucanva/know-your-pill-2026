@@ -52,7 +52,7 @@ export const fluvoxamine: Drug = {
     summary:
       "Fluvoxamine selectively blocks the serotonin transporter (SERT), increasing synaptic serotonin concentration. Uniquely among SSRIs (with sertraline), it is also a potent σ1 receptor agonist, contributing an anxiolytic and possibly anti-inflammatory effect.",
     molecularTarget:
-      "SERT (SLC6A4, serotonin transporter) AND σ1 (sigma-1) receptor (agonist).",
+      "SERT (SLC6A4 — serotonin transporter) AND σ1 (sigma-1) receptor (agonist).",
     effect:
       "Acute: increased synaptic serotonin + σ1 receptor activation. Chronic (2–6 weeks): desensitisation of 5-HT1A somatodendritic autoreceptors in the raphe nuclei, increased serotonergic throughput to the prefrontal cortex and cortico-striatal-thalamo-cortical (CSTC) loops (relevant to OCD), and upregulation of BDNF in the hippocampus. σ1 agonism modulates intracellular calcium signalling and may contribute to fluvoxamine's efficacy in anxiety with somatic symptoms.",
     steps: [
@@ -659,7 +659,7 @@ export const fluvoxamine: Drug = {
           primaryValue: "15.6 hours (short, between paroxetine and sertraline)",
           comparisons: [
             { drug: "Sertraline", value: "26 hours" },
-            { drug: "Fluoxetine", value: "1–4 days (parent) + 4–9 days (norfluoxetine) — LONGEST" },
+            { drug: "Fluoxetine", value: "1–4 days (parent) + 4–9 days (norfluoxetine). LONGEST" },
             { drug: "Escitalopram", value: "27–32 hours" },
           ],
         },
@@ -687,15 +687,15 @@ export const fluvoxamine: Drug = {
           comparisons: [
             { drug: "Sertraline", value: "Mild CYP2D6 inhibitor (less than fluoxetine/paroxetine)" },
             { drug: "Fluoxetine", value: "Strong CYP2D6 inhibitor (thioridazine, pimozide, codeine)" },
-            { drug: "Escitalopram", value: "Minimal — lowest interaction profile of any SSRI" },
+            { drug: "Escitalopram", value: "Minimal: lowest interaction profile of any SSRI" },
           ],
         },
         {
           attribute: "Sedation vs activation",
           primaryValue: "MOST SEDATING after paroxetine: give at night",
           comparisons: [
-            { drug: "Sertraline", value: "Mildly activating — morning dosing" },
-            { drug: "Fluoxetine", value: "MOST ACTIVATING — morning dosing" },
+            { drug: "Sertraline", value: "Mildly activating: morning dosing" },
+            { drug: "Fluoxetine", value: "MOST ACTIVATING: morning dosing" },
             { drug: "Escitalopram", value: "Neutral" },
           ],
         },
@@ -712,7 +712,7 @@ export const fluvoxamine: Drug = {
           attribute: "σ1 (sigma-1) receptor activity",
           primaryValue: "AGONIST (shared with sertraline): anxiolytic, possible anti-inflammatory",
           comparisons: [
-            { drug: "Sertraline", value: "AGONIST — only other SSRI with this property" },
+            { drug: "Sertraline", value: "AGONIST: only other SSRI with this property" },
             { drug: "Fluoxetine", value: "No σ1 activity" },
             { drug: "Escitalopram", value: "No σ1 activity" },
           ],
@@ -721,9 +721,9 @@ export const fluvoxamine: Drug = {
           attribute: "Pregnancy safety",
           primaryValue: "NOT SSRI of choice (sertraline preferred): limited database",
           comparisons: [
-            { drug: "Sertraline", value: "SSRI OF CHOICE — best safety database, lowest milk/plasma ratio" },
+            { drug: "Sertraline", value: "SSRI OF CHOICE: best safety database, lowest milk/plasma ratio" },
             { drug: "Fluoxetine", value: "Safe but long half-life → prolonged neonatal exposure" },
-            { drug: "Escitalopram", value: "Safe — reasonable second-line after sertraline" },
+            { drug: "Escitalopram", value: "Safe: reasonable second-line after sertraline" },
           ],
         },
         {

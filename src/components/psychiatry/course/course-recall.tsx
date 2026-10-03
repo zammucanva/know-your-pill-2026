@@ -232,7 +232,7 @@ export function CourseNextStep({
         </div>
         <p className="mt-6 text-caption text-muted-foreground">
           <Library className="mr-1 inline h-3 w-3" aria-hidden />
-          Order follows the KYP Psychiatry curriculum —{" "}
+          Order follows the KYP Psychiatry curriculum:{" "}
           <Link
             href={`/psychiatry/library#group-${course.groupLetter}`}
             className="text-brand-ink underline underline-offset-4 hover:opacity-80"

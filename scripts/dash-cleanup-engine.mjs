@@ -89,7 +89,7 @@ const C_KEYS = new Set(["name", "symbol"]); // clinical/technical labels (test-p
 const MACHINE_KEYS = new Set([
   "id", "slug", "href", "url", "sectionId", "afterSectionId", "anchor", "icon",
   "className", "keywords", "key", "type", "phase", "status", "grade", "sourceType",
-  "dateReviewed", "lastReviewed", "stroke", "fill", "d", "path", "color", "value",
+  "dateReviewed", "lastReviewed", "stroke", "fill", "d", "path", "color",
   "learningPath", "pathwayIds", "brainRegionIds", "drugClass", "drugClassLabel",
 ]);
 const G_PATTERNS = [/Suicidal Thoughts and Behaviou?rs\s+—/];
@@ -428,10 +428,14 @@ for (const file of files) {
     if (sp.kind !== "string") continue;
     if (inQuiz(sp.start)) continue;
     const key = keyBefore(src, sp.start);
-    if (key && (E_KEYS.has(key) || C_KEYS.has(key) || MACHINE_KEYS.has(key))) continue;
+    if (key && MACHINE_KEYS.has(key)) continue;
+    if (key && E_KEYS.has(key)) continue;
     const q = src[sp.start];
     if (q !== src[sp.end - 1]) continue; // unterminated — skip
     const content = src.slice(sp.start + 1, sp.end - 1);
+    // clinical labels: short terminology stays (established clinical
+    // shorthand, test-pinned); long elaborative labels get cleaned
+    if (key && C_KEYS.has(key) && content.length <= 70) continue;
     if (!content.includes(EM)) continue;
     if (content.trim() === EM) continue; // placeholder
     if (PROTECTED_STRINGS.has(content.trim())) continue; // brand/tagline

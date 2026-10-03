@@ -190,7 +190,7 @@ export function LibraryClient({ groups }: { groups: LibraryGroup[] }) {
                 The Psychiatry Library
               </h1>
               <p className="mt-3 max-w-2xl text-muted-foreground">
-                {totalNotes} lessons across {groups.length} clinical domains —
+                {totalNotes} lessons across {groups.length} clinical domains,
                 read as a curriculum, not a list. Foundations first, then the
                 clinical progression.
               </p>
@@ -423,7 +423,7 @@ export function LibraryClient({ groups }: { groups: LibraryGroup[] }) {
                                       )}
                                     />
                                     <span className="sr-only">
-                                      {note.kind === "disorder" ? "Disorder course" : "Concept course"} —{" "}
+                                      {note.kind === "disorder" ? "Disorder course" : "Concept course"}:{" "}
                                     </span>
 
                                     <div className="min-w-0 flex-1">

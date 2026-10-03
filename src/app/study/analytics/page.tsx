@@ -134,7 +134,7 @@ export default function AnalyticsPage() {
                 Your practice history
               </h1>
               <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground leading-relaxed">
-                Trends from your quiz and test history on this device —
+                Trends from your quiz and test history on this device:
                 accuracy by topic and class, durations, and where the same
                 mistakes come back. Numbers only appear once there is
                 enough history to make them meaningful.

@@ -182,7 +182,7 @@ export function DrugRelatedDrugs({ drug, builtDrugSlugs }: DrugRelatedDrugsProps
                     <li key={i} className="flex items-start gap-2">
                       <X className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emergency" strokeWidth={3} />
                       <span>
-                        <strong>{w.scenario}</strong> — {w.reason}{" "}
+                        <strong>{w.scenario}</strong>: {w.reason}{" "}
                         {composition.lead}
                         <span className="text-success">{composition.text}</span>
                         {composition.tail}

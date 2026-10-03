@@ -52,10 +52,10 @@ export const huntingtonsNeuropsychiatryCourse: PsychiatryCourse = {
   ],
   quickFacts: [
     { label: "The genetics", value: "CAG repeat, chromosome 4, autosomal dominant", detail: "One spelling error in huntingtin: expanded repeats (≥36–40, diagnostic thresholds around 40); one affected parent → 50% risk per child" },
-    { label: "The anticipation", value: "Longer repeat, earlier onset — especially paternal", detail: "The repeat lengthens when passed father-to-child: children can fall ill earlier than the parent; juvenile disease (before 20) is usually paternal with very long repeats" },
+    { label: "The anticipation", value: "Longer repeat, earlier onset, especially paternal", detail: "The repeat lengthens when passed father-to-child: children can fall ill earlier than the parent; juvenile disease (before 20) is usually paternal with very long repeats" },
     { label: "The triad", value: "Moves, Moods, Mind", detail: "Chorea → psychiatric prodrome → subcortical dementia; risk figures as '50-50, 36-and-up, 15-to-20'" },
     { label: "The prodrome", value: "Psychiatry first, a decade before chorea", detail: "Irritability with low frustration tolerance, depression, obsessive features: the missed-diagnosis window that arrives at the psychiatric OPD" },
-    { label: "The bedrock sign", value: "Striatal (caudate) atrophy — 'boxcar ventricles'", detail: "The deep gatehouse dies: chorea is movement RELEASED (like FTD's disinhibition), impulsivity the same failing for behaviour" },
+    { label: "The bedrock sign", value: "Striatal (caudate) atrophy: 'boxcar ventricles'", detail: "The deep gatehouse dies: chorea is movement RELEASED (like FTD's disinhibition), impulsivity the same failing for behaviour" },
     { label: "The suicide truth", value: "Elevated at EVERY stage", detail: "Prodrome, diagnosis disclosure, early symptomatic years: ask directly, every visit; the thought can be a symptom" },
     { label: "The prescribing trap", value: "Tetrabenazine flags depression and suicidality", detail: "The chorea-suppressor depletes dopamine: screen and stabilise mood first, re-ask about despair at every visit" },
     { label: "The test rule", value: "Counselling before, support during and after", detail: "The choice to know is the patient's alone: never test minors, never test for third parties (employer, prospective spouse's family), never disclose without consent" },

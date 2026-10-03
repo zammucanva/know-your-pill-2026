@@ -377,7 +377,7 @@ export const trihexyphenidyl: Drug = {
           comparisons: [
             {
               drug: "Benztropine",
-              value: "The EPS antidote — anticholinergic striatal rebalancing",
+              value: "The EPS antidote: anticholinergic striatal rebalancing",
             },
           ],
         },

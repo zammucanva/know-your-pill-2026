@@ -398,7 +398,7 @@ export const psychodynamicTheoriesCourse: PsychiatryCourse = {
       },
       {
         id: "crisis-gate",
-        question: "The borderline crisis: safety assessed first. Then —",
+        question: "The borderline crisis: safety assessed first, then what?",
         recommendation: "The mentalization response: attachment stress has collapsed the capacity to hold mind in mind, and impulse stands where thinking should be. The treatment is the calm, mind-minded reply: name states, slow the collapse, keep the conversation about minds; interpretation never, and only after safety. The zero-cost Indian clinical skill (the programme in its smallest unit) with the structured follow-up (MBT-informed services) routed through the personality-disorder courses.",
       },
       {

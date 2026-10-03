@@ -355,7 +355,7 @@ export const tasimelteon: Drug = {
           comparisons: [
             {
               drug: "Ramelteon",
-              value: "The dependence-free sleep-onset option — body-clock pharmacology",
+              value: "The dependence-free sleep-onset option: body-clock pharmacology",
             },
           ],
         },

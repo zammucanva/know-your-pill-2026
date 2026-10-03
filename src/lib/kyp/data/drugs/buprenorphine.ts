@@ -467,15 +467,15 @@ export const buprenorphine: Drug = {
           comparisons: [
             {
               drug: "Acamprosate",
-              value: "The abstinence-protector — for the already-abstinent patient",
+              value: "The abstinence-protector, for the already-abstinent patient",
             },
             {
               drug: "Disulfiram",
-              value: "The classical aversion deterrent — for the motivated, supervised patient",
+              value: "The classical aversion deterrent, for the motivated, supervised patient",
             },
             {
               drug: "Naltrexone",
-              value: "The pure antagonist — alcohol relapse and opioid blockade",
+              value: "The pure antagonist: alcohol relapse and opioid blockade",
             },
             {
               drug: "Varenicline",

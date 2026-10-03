@@ -371,7 +371,7 @@ export const sodiumOxybate: Drug = {
           comparisons: [
             {
               drug: "Sodium Oxybate",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },

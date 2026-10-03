@@ -339,7 +339,7 @@ export const suvorexant: Drug = {
           comparisons: [
             {
               drug: "Suvorexant",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },

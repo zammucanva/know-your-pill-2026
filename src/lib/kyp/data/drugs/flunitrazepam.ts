@@ -446,11 +446,11 @@ export const flunitrazepam: Drug = {
           comparisons: [
             {
               drug: "Temazepam",
-              value: "The classic benzodiazepine hypnotic — full power, full class risks",
+              value: "The classic benzodiazepine hypnotic: full power, full class risks",
             },
             {
               drug: "Triazolam",
-              value: "The benzodiazepine zolpidem — onset-only, amnesia-prone",
+              value: "The benzodiazepine zolpidem: onset-only, amnesia-prone",
             },
             {
               drug: "Estazolam",

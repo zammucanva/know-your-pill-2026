@@ -454,15 +454,15 @@ export const naltrexone: Drug = {
           comparisons: [
             {
               drug: "Acamprosate",
-              value: "The abstinence-protector — for the already-abstinent patient",
+              value: "The abstinence-protector, for the already-abstinent patient",
             },
             {
               drug: "Buprenorphine",
-              value: "The safety-ceiling maintenance agonist — office-based opioid treatment",
+              value: "The safety-ceiling maintenance agonist: office-based opioid treatment",
             },
             {
               drug: "Disulfiram",
-              value: "The classical aversion deterrent — for the motivated, supervised patient",
+              value: "The classical aversion deterrent, for the motivated, supervised patient",
             },
             {
               drug: "Varenicline",

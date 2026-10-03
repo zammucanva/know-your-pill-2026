@@ -420,11 +420,11 @@ export const milnacipran: Drug = {
           comparisons: [
             {
               drug: "Desvenlafaxine",
-              value: "The simplified SNRI — venlafaxine's metabolite packaged",
+              value: "The simplified SNRI: venlafaxine's metabolite packaged",
             },
             {
               drug: "Levomilnacipran",
-              value: "The NE-tilted SNRI — for the anergic depression phenotype",
+              value: "The NE-tilted SNRI, for the anergic depression phenotype",
             },
           ],
         },

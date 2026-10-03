@@ -474,19 +474,19 @@ export const amoxapine: Drug = {
           comparisons: [
             {
               drug: "Imipramine",
-              value: "Weight gain common — the tricyclic story.",
+              value: "Weight gain common: the tricyclic story.",
             },
             {
               drug: "Nortriptyline",
-              value: "Weight gain common — the tricyclic story.",
+              value: "Weight gain common: the tricyclic story.",
             },
             {
               drug: "Desipramine",
-              value: "Weight gain common — the tricyclic story.",
+              value: "Weight gain common: the tricyclic story.",
             },
             {
               drug: "Doxepin",
-              value: "Weight gain common — the tricyclic story.",
+              value: "Weight gain common: the tricyclic story.",
             },
           ],
         },
@@ -496,19 +496,19 @@ export const amoxapine: Drug = {
           comparisons: [
             {
               drug: "Imipramine",
-              value: "Common — exploited by bedtime dosing.",
+              value: "Common: exploited by bedtime dosing.",
             },
             {
               drug: "Nortriptyline",
-              value: "Common — exploited by bedtime dosing.",
+              value: "Common: exploited by bedtime dosing.",
             },
             {
               drug: "Desipramine",
-              value: "Common — exploited by bedtime dosing.",
+              value: "Common: exploited by bedtime dosing.",
             },
             {
               drug: "Doxepin",
-              value: "Common — exploited by bedtime dosing.",
+              value: "Common: exploited by bedtime dosing.",
             },
           ],
         },
@@ -518,19 +518,19 @@ export const amoxapine: Drug = {
           comparisons: [
             {
               drug: "Imipramine",
-              value: "The founding TCA — depression, enuresis, and panic history",
+              value: "The founding TCA: depression, enuresis, and panic history",
             },
             {
               drug: "Nortriptyline",
-              value: "The TCA survivor — level-guided, post-MI-safe, pain-effective",
+              value: "The TCA survivor: level-guided, post-MI-safe, pain-effective",
             },
             {
               drug: "Desipramine",
-              value: "The NET-pure TCA — energising, and the paediatric-cardiac caution",
+              value: "The NET-pure TCA: energising, and the paediatric-cardiac caution",
             },
             {
               drug: "Doxepin",
-              value: "The H1-pure micro-dose to the full TCA — three drugs in one",
+              value: "The H1-pure micro-dose to the full TCA: three drugs in one",
             },
           ],
         },

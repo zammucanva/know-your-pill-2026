@@ -658,7 +658,7 @@ export function MedicalKnowledgeChain({ drugSlug }: MedicalKnowledgeChainProps) 
             view.neurotransmitters.unresolved.length > 0) && (
             <p className="mt-3 text-body-sm text-muted-foreground">
               <span className="font-medium text-foreground/80">
-                Neurotransmitters modulated —{" "}
+                Neurotransmitters modulated:{" "}
               </span>
               {view.neurotransmitters.resolved
                 .map((nt) => `${nt.name} (${nt.abbreviation})`)
@@ -806,7 +806,7 @@ export function MedicalKnowledgeChain({ drugSlug }: MedicalKnowledgeChainProps) 
                   <span className="font-medium">{view.systemContext.substanceClass.name}</span>
                   <span className="text-muted-foreground">
                     {" "}
-                    — {view.systemContext.substanceClass.description}
+                    · {view.systemContext.substanceClass.description}
                   </span>
                 </dd>
               </div>

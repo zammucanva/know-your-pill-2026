@@ -46,7 +46,7 @@ export function PracticeStatsLine() {
       <History className="h-3.5 w-3.5" aria-hidden />
       <span className="tabular-nums">{parts.join("  ·  ")}</span>
       <span className="text-muted-foreground/50">
-        — kept on this device only.
+        (kept on this device only)
       </span>
     </p>
   );

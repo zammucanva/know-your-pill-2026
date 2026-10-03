@@ -86,7 +86,7 @@ describe("NOW quick wins — contract pins", () => {
     const custom = read(CUSTOM_PAGE);
     expect(custom).toContain("useState(false)"); // const [timed, setTimed] = React.useState(false)
     expect(custom).toMatch(/\[timed,\s*setTimed\]\s*=\s*React\.useState\(false\)/);
-    expect(custom).toContain("Timed — exam pacing");
+    expect(custom).toContain("Timed: exam pacing");
     expect(custom).toContain("Off by");
     // Pacing indicator + results timing
     expect(custom).toContain("On pace");

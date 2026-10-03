@@ -170,7 +170,7 @@ export const venlafaxine: Drug = {
         "Useful for diabetic peripheral neuropathy, post-herpetic neuralgia, and other neuropathic pain syndromes: the NET blockade enhances descending inhibitory pain pathways. Duloxetine is the preferred SNRI for neuropathic pain (FDA-approved), but venlafaxine is a reasonable alternative when comorbid depression/anxiety also need treatment.",
     },
     {
-      name: "Vasomotor symptoms (hot flushes) — menopause and breast-cancer survivors",
+      name: "Vasomotor symptoms (hot flushes): menopause and breast-cancer survivors",
       status: "off-label",
       description:
         "Effective for menopausal hot flushes and for hot flushes induced by tamoxifen or aromatase inhibitors in breast-cancer survivors (SSRIs (especially paroxetine) can inhibit CYP2D6 and reduce tamoxifen activation; venlafaxine is a weak CYP2D6 inhibitor and is preferred in this setting). Doses of 37.5–75 mg/day are typically sufficient.",
@@ -661,18 +661,18 @@ export const venlafaxine: Drug = {
           attribute: "Mechanism: dose-dependent?",
           primaryValue: "YES (signature): 75 mg = SERT only; 150–225 mg = SERT + NET; >300 mg = + weak DAT",
           comparisons: [
-            { drug: "Sertraline", value: "No — pure SERT blockade at all doses" },
-            { drug: "Duloxetine", value: "No — balanced SERT + NET at all doses" },
-            { drug: "Mirtazapine", value: "No — blockade of α2 and 5-HT2/3 receptors, dose-independent" },
+            { drug: "Sertraline", value: "No: pure SERT blockade at all doses" },
+            { drug: "Duloxetine", value: "No: balanced SERT + NET at all doses" },
+            { drug: "Mirtazapine", value: "No: blockade of α2 and 5-HT2/3 receptors, dose-independent" },
           ],
         },
         {
           attribute: "BP monitoring required",
           primaryValue: "YES: signature. Baseline, 2wk, 4wk, every dose change. Dose-dependent hypertension.",
           comparisons: [
-            { drug: "Sertraline", value: "No — minimal BP effect" },
-            { drug: "Duloxetine", value: "Yes — BP elevation reported but less pronounced than venlafaxine; check periodically" },
-            { drug: "Mirtazapine", value: "No — minimal BP effect (sedation can cause orthostasis)" },
+            { drug: "Sertraline", value: "No: minimal BP effect" },
+            { drug: "Duloxetine", value: "Yes. BP elevation reported but less pronounced than venlafaxine; check periodically" },
+            { drug: "Mirtazapine", value: "No: minimal BP effect (sedation can cause orthostasis)" },
           ],
         },
         {
@@ -717,7 +717,7 @@ export const venlafaxine: Drug = {
           comparisons: [
             { drug: "Sertraline", value: "Mildly activating" },
             { drug: "Duloxetine", value: "Mildly activating" },
-            { drug: "Mirtazapine", value: "Sedating — good for insomnia/weight loss" },
+            { drug: "Mirtazapine", value: "Sedating: good for insomnia/weight loss" },
           ],
         },
         {
@@ -734,7 +734,7 @@ export const venlafaxine: Drug = {
           primaryValue: "NOT drug of choice (sertraline preferred). Neonatal hypertension reported.",
           comparisons: [
             { drug: "Sertraline", value: "SSRI of choice in pregnancy & lactation" },
-            { drug: "Duloxetine", value: "Limited data — not first-line in pregnancy" },
+            { drug: "Duloxetine", value: "Limited data, not first-line in pregnancy" },
             { drug: "Mirtazapine", value: "Probably safe; less data than sertraline" },
           ],
         },

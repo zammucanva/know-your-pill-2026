@@ -457,11 +457,11 @@ export const desvenlafaxine: Drug = {
           comparisons: [
             {
               drug: "Levomilnacipran",
-              value: "The NE-tilted SNRI — for the anergic depression phenotype",
+              value: "The NE-tilted SNRI, for the anergic depression phenotype",
             },
             {
               drug: "Milnacipran",
-              value: "The fibromyalgia SNRI — pain + fatigue coverage",
+              value: "The fibromyalgia SNRI: pain + fatigue coverage",
             },
           ],
         },

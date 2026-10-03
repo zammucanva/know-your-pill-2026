@@ -581,7 +581,7 @@ export const aripiprazole: Drug = {
             },
             {
               drug: "Olanzapine",
-              value: "Highest tier — frequent and significant",
+              value: "Highest tier: frequent and significant",
             },
             {
               drug: "Quetiapine",
@@ -629,7 +629,7 @@ export const aripiprazole: Drug = {
             },
             {
               drug: "Quetiapine",
-              value: "High — used as a sedative",
+              value: "High: used as a sedative",
             },
             {
               drug: "Clozapine",
@@ -655,7 +655,7 @@ export const aripiprazole: Drug = {
             },
             {
               drug: "Clozapine",
-              value: "Lowest EPS — treats refractory cases",
+              value: "Lowest EPS: treats refractory cases",
             },
           ],
         },

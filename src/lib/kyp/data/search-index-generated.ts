@@ -21,7 +21,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-psychiatry",
     "title": "Psychiatry",
     "type": "collection",
-    "description": "The Psychiatry medication collection — 151 medication guides across 40 classes.",
+    "description": "The Psychiatry medication collection: 151 medication guides across 40 classes.",
     "href": "/drugs/#psychiatry",
     "keywords": [
       "Psychiatry",
@@ -77,7 +77,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-antidepressants",
     "title": "Antidepressants",
     "type": "collection",
-    "description": "15 classes · 43 medication guides — SSRIs, SNRIs, NDRIs, NaSSAs, TCAs, Atypical Antidepressants, MAOIs, Augmentation Agents, Melatonergic Antidepressants, Atypical Antidepressants, NMDA Antagonists, NRIs, Atypical Antidepressants, Atypical Antidepressants, Augmentation Agents.",
+    "description": "15 classes · 43 medication guides across these classes: SSRIs, SNRIs, NDRIs, NaSSAs, TCAs, Atypical Antidepressants, MAOIs, Augmentation Agents, Melatonergic Antidepressants, Atypical Antidepressants, NMDA Antagonists, NRIs, Atypical Antidepressants, Atypical Antidepressants, Augmentation Agents.",
     "href": "/drugs/#antidepressants",
     "keywords": [
       "Antidepressants",
@@ -176,7 +176,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-antipsychotics",
     "title": "Antipsychotics",
     "type": "collection",
-    "description": "3 classes · 34 medication guides — Atypical Antipsychotics, Atypical Antipsychotics, Typical Antipsychotics.",
+    "description": "3 classes · 34 medication guides across these classes: Atypical Antipsychotics, Atypical Antipsychotics, Typical Antipsychotics.",
     "href": "/drugs/#antidepressants",
     "keywords": [
       "Antipsychotics",
@@ -189,7 +189,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Dopamine-Serotonin Stabiliser (Atypical Antipsychotic)",
       "Typical Antipsychotics",
       "Typical Antipsychotic",
-      "Typical (Conventional) Antipsychotic — Phenothiazine",
+      "Typical (Conventional) Antipsychotic. Phenothiazine",
       "Amisulpride",
       "Asenapine",
       "Blonanserin",
@@ -230,7 +230,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-mood stabilisers & anticonvulsants",
     "title": "Mood Stabilisers & Anticonvulsants",
     "type": "collection",
-    "description": "2 classes · 11 medication guides — Anticonvulsants, Mood Stabilisers.",
+    "description": "2 classes · 11 medication guides across these classes: Anticonvulsants, Mood Stabilisers.",
     "href": "/drugs/#antidepressants",
     "keywords": [
       "Mood Stabilisers & Anticonvulsants",
@@ -240,7 +240,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Anticonvulsant (Calcium Channel α2δ Ligand)",
       "Mood Stabilisers",
       "Mood Stabiliser",
-      "Mood Stabiliser — Anticonvulsant",
+      "Mood Stabiliser. Anticonvulsant",
       "Gabapentin",
       "Levetiracetam",
       "Pregabalin",
@@ -258,7 +258,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-anxiolytics & sedatives",
     "title": "Anxiolytics & Sedatives",
     "type": "collection",
-    "description": "6 classes · 15 medication guides — Alpha-1 Blockers, Antihistamines, Azapirones, Benzodiazepines, Benzodiazepine Antagonists, Beta-Blockers.",
+    "description": "6 classes · 15 medication guides across these classes: Alpha-1 Blockers, Antihistamines, Azapirones, Benzodiazepines, Benzodiazepine Antagonists, Beta-Blockers.",
     "href": "/drugs/#antidepressants",
     "keywords": [
       "Anxiolytics & Sedatives",
@@ -302,7 +302,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-sleep medicines",
     "title": "Sleep Medicines",
     "type": "collection",
-    "description": "4 classes · 13 medication guides — Benzodiazepine Hypnotics, Orexin Antagonists, Melatonin Agonists, Non-Benzodiazepine Hypnotics.",
+    "description": "4 classes · 13 medication guides across these classes: Benzodiazepine Hypnotics, Orexin Antagonists, Melatonin Agonists, Non-Benzodiazepine Hypnotics.",
     "href": "/drugs/#antidepressants",
     "keywords": [
       "Sleep Medicines",
@@ -338,7 +338,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-adhd medications",
     "title": "ADHD Medications",
     "type": "collection",
-    "description": "4 classes · 12 medication guides — Alpha-2 Agonists, NRIs, Stimulants, Wake-Promoting Agents.",
+    "description": "4 classes · 12 medication guides across these classes: Alpha-2 Agonists, NRIs, Stimulants, Wake-Promoting Agents.",
     "href": "/drugs/#antidepressants",
     "keywords": [
       "ADHD Medications",
@@ -373,7 +373,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-cognitive enhancers",
     "title": "Cognitive Enhancers",
     "type": "collection",
-    "description": "3 classes · 8 medication guides — Cholinesterase Inhibitors, Augmentation Agents, NMDA Antagonists.",
+    "description": "3 classes · 8 medication guides across these classes: Cholinesterase Inhibitors, Augmentation Agents, NMDA Antagonists.",
     "href": "/drugs/#antidepressants",
     "keywords": [
       "Cognitive Enhancers",
@@ -401,7 +401,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-substance use treatments",
     "title": "Substance Use Treatments",
     "type": "collection",
-    "description": "1 classes · 7 medication guides — Alcohol Dependence Treatments.",
+    "description": "1 classes · 7 medication guides across these classes: Alcohol Dependence Treatments.",
     "href": "/drugs/#antidepressants",
     "keywords": [
       "Substance Use Treatments",
@@ -422,7 +422,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-specialised agents",
     "title": "Specialised Agents",
     "type": "collection",
-    "description": "5 classes · 8 medication guides — Anticholinergics, Libido Enhancers, NMDA Antagonists, Narcolepsy Agents, Weight Management Agents.",
+    "description": "5 classes · 8 medication guides across these classes: Anticholinergics, Libido Enhancers, NMDA Antagonists, Narcolepsy Agents, Weight Management Agents.",
     "href": "/drugs/#antidepressants",
     "keywords": [
       "Specialised Agents",
@@ -456,7 +456,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-ssri",
     "title": "SSRIs",
     "type": "collection",
-    "description": "Selective Serotonin Reuptake Inhibitor — 6 medication guides: Sertraline, Fluoxetine, Escitalopram, Paroxetine, Citalopram, Fluvoxamine.",
+    "description": "Selective Serotonin Reuptake Inhibitor: 6 medication guides: Sertraline, Fluoxetine, Escitalopram, Paroxetine, Citalopram, Fluvoxamine.",
     "href": "/drugs/class/ssri",
     "keywords": [
       "SSRIs",
@@ -487,7 +487,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-snri",
     "title": "SNRIs",
     "type": "collection",
-    "description": "Serotonin-Norepinephrine Reuptake Inhibitor — 5 medication guides: Venlafaxine, Duloxetine, Desvenlafaxine, Levomilnacipran, Milnacipran.",
+    "description": "Serotonin-Norepinephrine Reuptake Inhibitor: 5 medication guides: Venlafaxine, Duloxetine, Desvenlafaxine, Levomilnacipran, Milnacipran.",
     "href": "/drugs/class/snri",
     "keywords": [
       "SNRIs",
@@ -514,7 +514,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-ndri",
     "title": "NDRIs",
     "type": "collection",
-    "description": "Norepinephrine-Dopamine Reuptake Inhibitor — 1 medication guide: Bupropion.",
+    "description": "Norepinephrine-Dopamine Reuptake Inhibitor: 1 medication guide: Bupropion.",
     "href": "/drugs/class/ndri",
     "keywords": [
       "NDRIs",
@@ -530,7 +530,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-nassa",
     "title": "NaSSAs",
     "type": "collection",
-    "description": "Noradrenergic and Specific Serotonergic Antidepressant — 1 medication guide: Mirtazapine.",
+    "description": "Noradrenergic and Specific Serotonergic Antidepressant: 1 medication guide: Mirtazapine.",
     "href": "/drugs/class/nassa",
     "keywords": [
       "NaSSAs",
@@ -546,7 +546,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-tca",
     "title": "TCAs",
     "type": "collection",
-    "description": "Tricyclic Antidepressant — 13 medication guides: Amitriptyline, Clomipramine, Amoxapine, Desipramine, Dothiepin, Doxepin, Imipramine, Lofepramine, Maprotiline, Mianserin, Nortriptyline, Protriptyline, Trimipramine.",
+    "description": "Tricyclic Antidepressant: 13 medication guides: Amitriptyline, Clomipramine, Amoxapine, Desipramine, Dothiepin, Doxepin, Imipramine, Lofepramine, Maprotiline, Mianserin, Nortriptyline, Protriptyline, Trimipramine.",
     "href": "/drugs/class/tca",
     "keywords": [
       "TCAs",
@@ -596,7 +596,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-atypical-antidepressant",
     "title": "Atypical Antidepressants",
     "type": "collection",
-    "description": "Atypical (Modulating) Antidepressant — 1 medication guide: Tianeptine.",
+    "description": "Atypical (Modulating) Antidepressant: 1 medication guide: Tianeptine.",
     "href": "/drugs/class/atypical-antidepressant",
     "keywords": [
       "Atypical Antidepressants",
@@ -612,7 +612,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-maoi",
     "title": "MAOIs",
     "type": "collection",
-    "description": "Monoamine Oxidase Inhibitor — 5 medication guides: Isocarboxazid, Moclobemide, Phenelzine, Selegiline, Tranylcypromine.",
+    "description": "Monoamine Oxidase Inhibitor: 5 medication guides: Isocarboxazid, Moclobemide, Phenelzine, Selegiline, Tranylcypromine.",
     "href": "/drugs/class/maoi",
     "keywords": [
       "MAOIs",
@@ -637,7 +637,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-medical-food",
     "title": "Augmentation Agents",
     "type": "collection",
-    "description": "Medical Food (Folate Augmentation) — 2 medication guides: L-Methylfolate, Caprylidene.",
+    "description": "Medical Food (Folate Augmentation): 2 medication guides: L-Methylfolate, Caprylidene.",
     "href": "/drugs/class/medical-food",
     "keywords": [
       "Augmentation Agents",
@@ -654,7 +654,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-melatonergic-antidepressant",
     "title": "Melatonergic Antidepressants",
     "type": "collection",
-    "description": "Melatonin Receptor Agonist and 5-HT2C Antagonist — 1 medication guide: Agomelatine.",
+    "description": "Melatonin Receptor Agonist and 5-HT2C Antagonist: 1 medication guide: Agomelatine.",
     "href": "/drugs/class/melatonergic-antidepressant",
     "keywords": [
       "Melatonergic Antidepressants",
@@ -669,7 +669,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-multimodal-antidepressant",
     "title": "Atypical Antidepressants",
     "type": "collection",
-    "description": "Multimodal Serotonergic Antidepressant — 1 medication guide: Vortioxetine.",
+    "description": "Multimodal Serotonergic Antidepressant: 1 medication guide: Vortioxetine.",
     "href": "/drugs/class/multimodal-antidepressant",
     "keywords": [
       "Atypical Antidepressants",
@@ -685,7 +685,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-nmda-antidepressant",
     "title": "NMDA Antagonists",
     "type": "collection",
-    "description": "NMDA Receptor Antagonist — 1 medication guide: Ketamine.",
+    "description": "NMDA Receptor Antagonist: 1 medication guide: Ketamine.",
     "href": "/drugs/class/nmda-antidepressant",
     "keywords": [
       "NMDA Antagonists",
@@ -694,14 +694,14 @@ export const searchIndexGenerated: SearchableItem[] = [
       "NMDA Receptor Antagonists",
       "Ketamine",
       "Ketalar",
-      "Spravato (esketamine nasal — separate product)"
+      "Spravato (esketamine nasal, separate product)"
     ]
   },
   {
     "id": "collection-class-nri",
     "title": "NRIs",
     "type": "collection",
-    "description": "Norepinephrine Reuptake Inhibitor — 2 medication guides: Reboxetine, Atomoxetine.",
+    "description": "Norepinephrine Reuptake Inhibitor: 2 medication guides: Reboxetine, Atomoxetine.",
     "href": "/drugs/class/nri",
     "keywords": [
       "NRIs",
@@ -720,7 +720,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-sari",
     "title": "Atypical Antidepressants",
     "type": "collection",
-    "description": "Serotonin Antagonist and Reuptake Inhibitor — 2 medication guides: Nefazodone, Trazodone.",
+    "description": "Serotonin Antagonist and Reuptake Inhibitor: 2 medication guides: Nefazodone, Trazodone.",
     "href": "/drugs/class/sari",
     "keywords": [
       "Atypical Antidepressants",
@@ -738,7 +738,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-spari",
     "title": "Atypical Antidepressants",
     "type": "collection",
-    "description": "Serotonin Partial Agonist and Reuptake Inhibitor — 1 medication guide: Vilazodone.",
+    "description": "Serotonin Partial Agonist and Reuptake Inhibitor: 1 medication guide: Vilazodone.",
     "href": "/drugs/class/spari",
     "keywords": [
       "Atypical Antidepressants",
@@ -753,7 +753,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-t3-augmentation",
     "title": "Augmentation Agents",
     "type": "collection",
-    "description": "Thyroid Hormone Augmentation Agent — 1 medication guide: Triiodothyronine (T3).",
+    "description": "Thyroid Hormone Augmentation Agent: 1 medication guide: Triiodothyronine (T3).",
     "href": "/drugs/class/t3-augmentation",
     "keywords": [
       "Augmentation Agents",
@@ -769,7 +769,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-atypical-antipsychotic",
     "title": "Atypical Antipsychotics",
     "type": "collection",
-    "description": "Atypical Antipsychotic (Dopamine Partial Agonist) — 16 medication guides: Amisulpride, Asenapine, Blonanserin, Clozapine, Iloperidone, Lurasidone, Olanzapine, Paliperidone, Perospirone, Pimavanserin, Quetiapine, Risperidone, Sertindole, Sulpiride, Ziprasidone, Zotepine.",
+    "description": "Atypical Antipsychotic (Dopamine Partial Agonist): 16 medication guides: Amisulpride, Asenapine, Blonanserin, Clozapine, Iloperidone, Lurasidone, Olanzapine, Paliperidone, Perospirone, Pimavanserin, Quetiapine, Risperidone, Sertindole, Sulpiride, Ziprasidone, Zotepine.",
     "href": "/drugs/class/atypical-antipsychotic",
     "keywords": [
       "Atypical Antipsychotics",
@@ -824,7 +824,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-dopamine-stabiliser",
     "title": "Atypical Antipsychotics",
     "type": "collection",
-    "description": "Dopamine-Serotonin Stabiliser (Atypical Antipsychotic) — 3 medication guides: Aripiprazole, Brexpiprazole, Cariprazine.",
+    "description": "Dopamine-Serotonin Stabiliser (Atypical Antipsychotic): 3 medication guides: Aripiprazole, Brexpiprazole, Cariprazine.",
     "href": "/drugs/class/dopamine-stabiliser",
     "keywords": [
       "Atypical Antipsychotics",
@@ -845,13 +845,13 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-typical-antipsychotic",
     "title": "Typical Antipsychotics",
     "type": "collection",
-    "description": "Typical (Conventional) Antipsychotic — Phenothiazine — 15 medication guides: Chlorpromazine, Cyamemazine, Flupenthixol, Fluphenazine, Haloperidol, Loxapine, Mesoridazine, Molindone, Perphenazine, Pimozide, Pipothiazine, Thioridazine, Thiothixene, Trifluoperazine, Zuclopenthixol.",
+    "description": "Typical (Conventional) Antipsychotic. Phenothiazine: 15 medication guides: Chlorpromazine, Cyamemazine, Flupenthixol, Fluphenazine, Haloperidol, Loxapine, Mesoridazine, Molindone, Perphenazine, Pimozide, Pipothiazine, Thioridazine, Thiothixene, Trifluoperazine, Zuclopenthixol.",
     "href": "/drugs/class/typical-antipsychotic",
     "keywords": [
       "Typical Antipsychotics",
       "Typical Antipsychotic",
-      "Typical (Conventional) Antipsychotic — Phenothiazine",
-      "Typical (Conventional) Antipsychotic — Phenothiazines",
+      "Typical (Conventional) Antipsychotic. Phenothiazine",
+      "Typical (Conventional) Antipsychotic. Phenothiazines",
       "Chlorpromazine",
       "Cyamemazine",
       "Flupenthixol",
@@ -897,7 +897,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-anticonvulsant",
     "title": "Anticonvulsants",
     "type": "collection",
-    "description": "Anticonvulsant (Calcium Channel α2δ Ligand) — 6 medication guides: Gabapentin, Levetiracetam, Pregabalin, Tiagabine, Topiramate, Zonisamide.",
+    "description": "Anticonvulsant (Calcium Channel α2δ Ligand): 6 medication guides: Gabapentin, Levetiracetam, Pregabalin, Tiagabine, Topiramate, Zonisamide.",
     "href": "/drugs/class/anticonvulsant",
     "keywords": [
       "Anticonvulsants",
@@ -926,13 +926,13 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-mood-stabiliser",
     "title": "Mood Stabilisers",
     "type": "collection",
-    "description": "Mood Stabiliser — Anticonvulsant — 5 medication guides: Carbamazepine, Lamotrigine, Lithium, Oxcarbazepine, Valproate.",
+    "description": "Mood Stabiliser. Anticonvulsant: 5 medication guides: Carbamazepine, Lamotrigine, Lithium, Oxcarbazepine, Valproate.",
     "href": "/drugs/class/mood-stabiliser",
     "keywords": [
       "Mood Stabilisers",
       "Mood Stabiliser",
-      "Mood Stabiliser — Anticonvulsant",
-      "Mood Stabiliser — Anticonvulsants",
+      "Mood Stabiliser. Anticonvulsant",
+      "Mood Stabiliser. Anticonvulsants",
       "Carbamazepine",
       "Lamotrigine",
       "Lithium",
@@ -954,7 +954,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-alpha-1-blocker",
     "title": "Alpha-1 Blockers",
     "type": "collection",
-    "description": "Alpha-1 Adrenergic Blocker — 1 medication guide: Prazosin.",
+    "description": "Alpha-1 Adrenergic Blocker: 1 medication guide: Prazosin.",
     "href": "/drugs/class/alpha-1-blocker",
     "keywords": [
       "Alpha-1 Blockers",
@@ -970,7 +970,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-antihistamine",
     "title": "Antihistamines",
     "type": "collection",
-    "description": "Sedating Antihistamine — 2 medication guides: Diphenhydramine, Hydroxyzine.",
+    "description": "Sedating Antihistamine: 2 medication guides: Diphenhydramine, Hydroxyzine.",
     "href": "/drugs/class/antihistamine",
     "keywords": [
       "Antihistamines",
@@ -989,7 +989,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-azapirone",
     "title": "Azapirones",
     "type": "collection",
-    "description": "5-HT1A Partial Agonist Anxiolytic — 1 medication guide: Buspirone.",
+    "description": "5-HT1A Partial Agonist Anxiolytic: 1 medication guide: Buspirone.",
     "href": "/drugs/class/azapirone",
     "keywords": [
       "Azapirones",
@@ -1005,7 +1005,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-benzodiazepine",
     "title": "Benzodiazepines",
     "type": "collection",
-    "description": "Benzodiazepine (GABA-A PAM) — 9 medication guides: Alprazolam, Chlordiazepoxide, Clonazepam, Clorazepate, Diazepam, Loflazepate, Lorazepam, Midazolam, Oxazepam.",
+    "description": "Benzodiazepine (GABA-A PAM): 9 medication guides: Alprazolam, Chlordiazepoxide, Clonazepam, Clorazepate, Diazepam, Loflazepate, Lorazepam, Midazolam, Oxazepam.",
     "href": "/drugs/class/benzodiazepine",
     "keywords": [
       "Benzodiazepines",
@@ -1043,7 +1043,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-benzodiazepine-antidote",
     "title": "Benzodiazepine Antagonists",
     "type": "collection",
-    "description": "Benzodiazepine Receptor Antagonist — 1 medication guide: Flumazenil.",
+    "description": "Benzodiazepine Receptor Antagonist: 1 medication guide: Flumazenil.",
     "href": "/drugs/class/benzodiazepine-antidote",
     "keywords": [
       "Benzodiazepine Antagonists",
@@ -1059,7 +1059,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-beta-blocker",
     "title": "Beta-Blockers",
     "type": "collection",
-    "description": "Non-Selective Beta-Adrenergic Blocker — 1 medication guide: Propranolol.",
+    "description": "Non-Selective Beta-Adrenergic Blocker: 1 medication guide: Propranolol.",
     "href": "/drugs/class/beta-blocker",
     "keywords": [
       "Beta-Blockers",
@@ -1075,7 +1075,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-benzodiazepine-hypnotic",
     "title": "Benzodiazepine Hypnotics",
     "type": "collection",
-    "description": "Benzodiazepine Hypnotic (GABA-A PAM) — 6 medication guides: Estazolam, Flunitrazepam, Flurazepam, Quazepam, Temazepam, Triazolam.",
+    "description": "Benzodiazepine Hypnotic (GABA-A PAM): 6 medication guides: Estazolam, Flunitrazepam, Flurazepam, Quazepam, Temazepam, Triazolam.",
     "href": "/drugs/class/benzodiazepine-hypnotic",
     "keywords": [
       "Benzodiazepine Hypnotics",
@@ -1101,7 +1101,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-dora",
     "title": "Orexin Antagonists",
     "type": "collection",
-    "description": "Dual Orexin Receptor Antagonist — 1 medication guide: Suvorexant.",
+    "description": "Dual Orexin Receptor Antagonist: 1 medication guide: Suvorexant.",
     "href": "/drugs/class/dora",
     "keywords": [
       "Orexin Antagonists",
@@ -1116,7 +1116,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-melatonin-agonist",
     "title": "Melatonin Agonists",
     "type": "collection",
-    "description": "Melatonin MT1/MT2 Receptor Agonist — 2 medication guides: Ramelteon, Tasimelteon.",
+    "description": "Melatonin MT1/MT2 Receptor Agonist: 2 medication guides: Ramelteon, Tasimelteon.",
     "href": "/drugs/class/melatonin-agonist",
     "keywords": [
       "Melatonin Agonists",
@@ -1133,7 +1133,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-z-drug",
     "title": "Non-Benzodiazepine Hypnotics",
     "type": "collection",
-    "description": "Non-Benzodiazepine Hypnotic (Z-Drug) — 4 medication guides: Eszopiclone, Zaleplon, Zolpidem, Zopiclone.",
+    "description": "Non-Benzodiazepine Hypnotic (Z-Drug): 4 medication guides: Eszopiclone, Zaleplon, Zolpidem, Zopiclone.",
     "href": "/drugs/class/z-drug",
     "keywords": [
       "Non-Benzodiazepine Hypnotics",
@@ -1157,7 +1157,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-alpha-2-agonist",
     "title": "Alpha-2 Agonists",
     "type": "collection",
-    "description": "Alpha-2 Adrenergic Agonist — 2 medication guides: Clonidine, Guanfacine.",
+    "description": "Alpha-2 Adrenergic Agonist: 2 medication guides: Clonidine, Guanfacine.",
     "href": "/drugs/class/alpha-2-agonist",
     "keywords": [
       "Alpha-2 Agonists",
@@ -1176,7 +1176,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-stimulant",
     "title": "Stimulants",
     "type": "collection",
-    "description": "CNS Stimulant (Dopamine-Norepinephrine Releasing Agent) — 6 medication guides: Dextroamphetamine (d-Amphetamine), Amphetamine (d,l), Lisdexamfetamine, Dexmethylphenidate, Methylphenidate (d,l), Pemoline.",
+    "description": "CNS Stimulant (Dopamine-Norepinephrine Releasing Agent): 6 medication guides: Dextroamphetamine (d-Amphetamine), Amphetamine (d,l), Lisdexamfetamine, Dexmethylphenidate, Methylphenidate (d,l), Pemoline.",
     "href": "/drugs/class/stimulant",
     "keywords": [
       "Stimulants",
@@ -1205,7 +1205,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-wake-promoting-agent",
     "title": "Wake-Promoting Agents",
     "type": "collection",
-    "description": "Wake-Promoting Agent (Dopamine Transporter Inhibitor) — 2 medication guides: Armodafinil, Modafinil.",
+    "description": "Wake-Promoting Agent (Dopamine Transporter Inhibitor): 2 medication guides: Armodafinil, Modafinil.",
     "href": "/drugs/class/wake-promoting-agent",
     "keywords": [
       "Wake-Promoting Agents",
@@ -1223,7 +1223,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-ache-inhibitor",
     "title": "Cholinesterase Inhibitors",
     "type": "collection",
-    "description": "Acetylcholinesterase Inhibitor — 4 medication guides: Donepezil, Galantamine, Rivastigmine, Tacrine.",
+    "description": "Acetylcholinesterase Inhibitor: 4 medication guides: Donepezil, Galantamine, Rivastigmine, Tacrine.",
     "href": "/drugs/class/ache-inhibitor",
     "keywords": [
       "Cholinesterase Inhibitors",
@@ -1247,7 +1247,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-nmda-antagonist",
     "title": "NMDA Antagonists",
     "type": "collection",
-    "description": "NMDA Receptor Antagonist (Dementia) — 2 medication guides: Memantine, Dextromethorphan.",
+    "description": "NMDA Receptor Antagonist (Dementia): 2 medication guides: Memantine, Dextromethorphan.",
     "href": "/drugs/class/nmda-antagonist",
     "keywords": [
       "NMDA Antagonists",
@@ -1266,7 +1266,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-sud-treatment",
     "title": "Alcohol Dependence Treatments",
     "type": "collection",
-    "description": "Alcohol Dependence Treatment Agent — 7 medication guides: Acamprosate, Buprenorphine, Disulfiram, Nalmefene, Naltrexone, Naltrexone-Bupropion, Varenicline.",
+    "description": "Alcohol Dependence Treatment Agent: 7 medication guides: Acamprosate, Buprenorphine, Disulfiram, Nalmefene, Naltrexone, Naltrexone-Bupropion, Varenicline.",
     "href": "/drugs/class/sud-treatment",
     "keywords": [
       "Alcohol Dependence Treatments",
@@ -1297,7 +1297,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-anticholinergic",
     "title": "Anticholinergics",
     "type": "collection",
-    "description": "Anticholinergic Antiparkinsonian Agent — 2 medication guides: Benztropine, Trihexyphenidyl.",
+    "description": "Anticholinergic Antiparkinsonian Agent: 2 medication guides: Benztropine, Trihexyphenidyl.",
     "href": "/drugs/class/anticholinergic",
     "keywords": [
       "Anticholinergics",
@@ -1316,7 +1316,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-libido-enhancer",
     "title": "Libido Enhancers",
     "type": "collection",
-    "description": "Serotonin-Dopamine Modulator (HSDD) — 1 medication guide: Flibanserin.",
+    "description": "Serotonin-Dopamine Modulator (HSDD): 1 medication guide: Flibanserin.",
     "href": "/drugs/class/libido-enhancer",
     "keywords": [
       "Libido Enhancers",
@@ -1331,7 +1331,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-sodium-oxybate",
     "title": "Narcolepsy Agents",
     "type": "collection",
-    "description": "GHB (Cataplexy & Excessive Daytime Sleepiness) — 1 medication guide: Sodium Oxybate.",
+    "description": "GHB (Cataplexy & Excessive Daytime Sleepiness): 1 medication guide: Sodium Oxybate.",
     "href": "/drugs/class/sodium-oxybate",
     "keywords": [
       "Narcolepsy Agents",
@@ -1347,7 +1347,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "collection-class-weight-management",
     "title": "Weight Management Agents",
     "type": "collection",
-    "description": "5-HT2C Agonist (Weight Management) — 2 medication guides: Lorcaserin, Phentermine-Topiramate.",
+    "description": "5-HT2C Agonist (Weight Management): 2 medication guides: Lorcaserin, Phentermine-Topiramate.",
     "href": "/drugs/class/weight-management",
     "keywords": [
       "Weight Management Agents",
@@ -1415,7 +1415,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-fluoxetine",
     "title": "Fluoxetine",
     "type": "drug",
-    "description": "The longest-acting SSRI — FDA-approved for depression, OCD, bulimia, panic disorder, and PMDD, and the only SSRI approved for paediatric depression (≥8 yrs).",
+    "description": "The longest-acting SSRI. FDA-approved for depression, OCD, bulimia, panic disorder, and PMDD, and the only SSRI approved for paediatric depression (≥8 yrs).",
     "href": "/drugs/fluoxetine",
     "keywords": [
       "Fluoxetine",
@@ -1467,7 +1467,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-escitalopram",
     "title": "Escitalopram",
     "type": "drug",
-    "description": "The S-enantiomer of citalopram — the most selective SSRI, with the lowest CYP interaction profile and a dose-dependent QTc precaution.",
+    "description": "The S-enantiomer of citalopram: the most selective SSRI, with the lowest CYP interaction profile and a dose-dependent QTc precaution.",
     "href": "/drugs/escitalopram",
     "keywords": [
       "Escitalopram",
@@ -1484,7 +1484,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Post-Traumatic Stress Disorder (PTSD)",
       "Premenstrual Dysphoric Disorder (PMDD)",
       "Serotonin (5-HT)",
-      "SERT (serotonin transporter — high-affinity, high-selectivity blockade)",
+      "SERT (serotonin transporter, high-affinity, high-selectivity blockade)",
       "5-HT1A (autoreceptor, desensitises)",
       "5-HT2C",
       "5-HT7",
@@ -1518,7 +1518,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-paroxetine",
     "title": "Paroxetine",
     "type": "drug",
-    "description": "The SSRI with the shortest half-life, strongest CYP2D6 inhibition, and most sedating profile — generally avoided as first-line, but with a unique niche for vasomotor symptoms in breast-cancer survivors.",
+    "description": "The SSRI with the shortest half-life, strongest CYP2D6 inhibition, and most sedating profile: generally avoided as first-line, but with a unique niche for vasomotor symptoms in breast-cancer survivors.",
     "href": "/drugs/paroxetine",
     "keywords": [
       "Paroxetine",
@@ -1539,12 +1539,12 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Moderate-to-severe vasomotor symptoms (hot flushes) associated with menopause",
       "Premature ejaculation",
       "Serotonin (5-HT)",
-      "Acetylcholine (indirectly — via M1 antagonism)",
-      "SERT (serotonin transporter) — potent blockade",
+      "Acetylcholine (indirectly, via M1 antagonism)",
+      "SERT (serotonin transporter): potent blockade",
       "5-HT1A (autoreceptor, desensitises over 1–2 weeks)",
       "5-HT2C",
-      "Muscarinic M1 (weak antagonist — unique among SSRIs)",
-      "Nitric oxide synthase (weak inhibitor — may contribute to sexual dysfunction)",
+      "Muscarinic M1 (weak antagonist, unique among SSRIs)",
+      "Nitric oxide synthase (weak inhibitor, may contribute to sexual dysfunction)",
       "Major Depressive Disorder",
       "Obsessive-Compulsive Disorder",
       "Panic Disorder",
@@ -1574,7 +1574,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-citalopram",
     "title": "Citalopram",
     "type": "drug",
-    "description": "The racemic parent of escitalopram — an effective SSRI whose dose is capped by dose-dependent QTc prolongation driven by the inactive R-enantiomer.",
+    "description": "The racemic parent of escitalopram: an effective SSRI whose dose is capped by dose-dependent QTc prolongation driven by the inactive R-enantiomer.",
     "href": "/drugs/citalopram",
     "keywords": [
       "Citalopram",
@@ -1590,8 +1590,8 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Premenstrual Dysphoric Disorder (PMDD)",
       "Social Anxiety Disorder & PTSD",
       "Serotonin (5-HT)",
-      "SERT (serotonin transporter) — S-enantiomer",
-      "hERG / KCNH2 potassium channel — R-enantiomer",
+      "SERT (serotonin transporter). S-enantiomer",
+      "hERG / KCNH2 potassium channel. R-enantiomer",
       "5-HT1A (autoreceptor, desensitises)",
       "5-HT2C",
       "5-HT7",
@@ -1623,7 +1623,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-fluvoxamine",
     "title": "Fluvoxamine",
     "type": "drug",
-    "description": "The 'OCD SSRI' — the only SSRI FDA-approved for paediatric OCD (≥8 yrs), and the most potent CYP1A2 inhibitor in the class, making caffeine, theophylline, clozapine, and tizanidine signature interactions.",
+    "description": "The 'OCD SSRI': the only SSRI FDA-approved for paediatric OCD (≥8 yrs), and the most potent CYP1A2 inhibitor in the class, making caffeine, theophylline, clozapine, and tizanidine signature interactions.",
     "href": "/drugs/fluvoxamine",
     "keywords": [
       "Fluvoxamine",
@@ -1643,8 +1643,8 @@ export const searchIndexGenerated: SearchableItem[] = [
       "SERT (serotonin transporter)",
       "5-HT1A (autoreceptor, desensitises)",
       "5-HT2C",
-      "5-HT3 (gut — explains high GI side-effect rate)",
-      "σ1 (sigma-1) receptor — AGONIST (shared with sertraline)",
+      "5-HT3 (gut, explains high GI side-effect rate)",
+      "σ1 (sigma-1) receptor. AGONIST (shared with sertraline)",
       "Obsessive-Compulsive Disorder (adults)",
       "Obsessive-Compulsive Disorder (paediatric, ≥8 yrs)",
       "Social Anxiety Disorder",
@@ -1673,7 +1673,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-venlafaxine",
     "title": "Venlafaxine",
     "type": "drug",
-    "description": "An SNRI with a signature dose-dependent mechanism — pure serotonergic at low dose, dual SERT + NET blockade at moderate dose, weak DAT effect at high dose — and the worst discontinuation syndrome of any antidepressant.",
+    "description": "An SNRI with a signature dose-dependent mechanism (pure serotonergic at low dose, dual SERT + NET blockade at moderate dose, weak DAT effect at high dose) and the worst discontinuation syndrome of any antidepressant.",
     "href": "/drugs/venlafaxine",
     "keywords": [
       "Venlafaxine",
@@ -1687,16 +1687,16 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Social Anxiety Disorder (Social Phobia)",
       "Panic Disorder",
       "Neuropathic pain (off-label)",
-      "Vasomotor symptoms (hot flushes) — menopause and breast-cancer survivors",
+      "Vasomotor symptoms (hot flushes): menopause and breast-cancer survivors",
       "Fibromyalgia (off-label)",
       "Cataplexy in narcolepsy / ADHD adjunct (off-label)",
       "Serotonin (5-HT)",
       "Norepinephrine (NE)",
       "Dopamine (DA, weak/high-dose)",
-      "SERT (serotonin transporter) — high affinity, near-maximal at all doses",
-      "NET (norepinephrine transporter) — lower affinity, clinically relevant above ~150 mg/day",
-      "DAT (dopamine transporter) — weak, only above ~300 mg/day",
-      "5-HT1A (somatodendritic autoreceptor — desensitises over 1–2 weeks)",
+      "SERT (serotonin transporter): high affinity, near-maximal at all doses",
+      "NET (norepinephrine transporter): lower affinity, clinically relevant above ~150 mg/day",
+      "DAT (dopamine transporter): weak, only above ~300 mg/day",
+      "5-HT1A (somatodendritic autoreceptor, desensitises over 1–2 weeks)",
       "5-HT2A / 5-HT2C",
       "α2-adrenergic autoreceptor (downregulates with chronic NET blockade)",
       "Major Depressive Disorder",
@@ -1728,7 +1728,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-duloxetine",
     "title": "Duloxetine",
     "type": "drug",
-    "description": "A balanced SNRI from dose one — and the only antidepressant FDA-approved for three pain conditions (diabetic neuropathy, fibromyalgia, chronic musculoskeletal pain).",
+    "description": "A balanced SNRI from dose one, and the only antidepressant FDA-approved for three pain conditions (diabetic neuropathy, fibromyalgia, chronic musculoskeletal pain).",
     "href": "/drugs/duloxetine",
     "keywords": [
       "Duloxetine",
@@ -1783,7 +1783,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-bupropion",
     "title": "Bupropion",
     "type": "drug",
-    "description": "An NDRI that blocks NET and DAT (NOT SERT) — the only commonly used antidepressant with no sexual dysfunction, no weight gain, and no discontinuation syndrome. Also a nicotinic ACh antagonist used for smoking cessation (Zyban).",
+    "description": "An NDRI that blocks NET and DAT (NOT SERT): the only commonly used antidepressant with no sexual dysfunction, no weight gain, and no discontinuation syndrome. Also a nicotinic ACh antagonist used for smoking cessation (Zyban).",
     "href": "/drugs/bupropion",
     "keywords": [
       "Bupropion",
@@ -1802,13 +1802,13 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Bipolar Depression (adjunct)",
       "Norepinephrine (NE)",
       "Dopamine (DA)",
-      "Acetylcholine (nicotinic — antagonised)",
-      "NET (norepinephrine transporter) — clinically relevant blockade",
-      "DAT (dopamine transporter) — clinically relevant blockade",
-      "SERT (serotonin transporter) — negligible affinity (key differentiator from SSRIs/SNRIs)",
-      "α3β4 nicotinic acetylcholine receptor — non-competitive antagonist (smoking cessation mechanism)",
-      "α4β2 nicotinic acetylcholine receptor — antagonist (contributes to smoking cessation)",
-      "5-HT3A (weak antagonist — may contribute to antiemetic effect)",
+      "Acetylcholine (nicotinic, antagonised)",
+      "NET (norepinephrine transporter): clinically relevant blockade",
+      "DAT (dopamine transporter): clinically relevant blockade",
+      "SERT (serotonin transporter): negligible affinity (key differentiator from SSRIs/SNRIs)",
+      "α3β4 nicotinic acetylcholine receptor: non-competitive antagonist (smoking cessation mechanism)",
+      "α4β2 nicotinic acetylcholine receptor: antagonist (contributes to smoking cessation)",
+      "5-HT3A (weak antagonist, may contribute to antiemetic effect)",
       "Major Depressive Disorder",
       "Seasonal Affective Disorder",
       "Tobacco Use Disorder (smoking dependence)",
@@ -1838,7 +1838,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-mirtazapine",
     "title": "Mirtazapine",
     "type": "drug",
-    "description": "A NaSSA — the only antidepressant that works entirely through receptor antagonism (α2, 5-HT2A/2C/3, H1) with NO reuptake blockade. Signature: sedating, weight-gaining, no sexual dysfunction, rapid onset in days.",
+    "description": "A NaSSA: the only antidepressant that works entirely through receptor antagonism (α2, 5-HT2A/2C/3, H1) with NO reuptake blockade. Signature: sedating, weight-gaining, no sexual dysfunction, rapid onset in days.",
     "href": "/drugs/mirtazapine",
     "keywords": [
       "Mirtazapine",
@@ -1859,14 +1859,14 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Serotonin (5-HT)",
       "Histamine (H1, antagonised)",
       "Dopamine (indirectly ↑ via 5-HT2C blockade)",
-      "α2-adrenergic autoreceptor (antagonist — disinhibits NE release)",
-      "α2-adrenergic heteroreceptor (antagonist — disinhibits 5-HT release)",
-      "5-HT2A (antagonist — shunts signalling to 5-HT1A)",
-      "5-HT2C (antagonist — permits NE/DA release, no sexual SE)",
-      "5-HT3 (antagonist — antiemetic, like ondansetron)",
-      "H1 histamine (antagonist — sedation + weight gain)",
-      "α1-adrenergic (weak antagonist — orthostatic hypotension)",
-      "Muscarinic (very weak — minimal anticholinergic effect)",
+      "α2-adrenergic autoreceptor (antagonist, disinhibits NE release)",
+      "α2-adrenergic heteroreceptor (antagonist, disinhibits 5-HT release)",
+      "5-HT2A (antagonist, shunts signalling to 5-HT1A)",
+      "5-HT2C (antagonist, permits NE/DA release, no sexual SE)",
+      "5-HT3 (antagonist, antiemetic, like ondansetron)",
+      "H1 histamine (antagonist, sedation + weight gain)",
+      "α1-adrenergic (weak antagonist, orthostatic hypotension)",
+      "Muscarinic (very weak, minimal anticholinergic effect)",
       "Major Depressive Disorder",
       "Generalised Anxiety Disorder",
       "Panic Disorder",
@@ -1896,7 +1896,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-amitriptyline",
     "title": "Amitriptyline",
     "type": "drug",
-    "description": "A tricyclic antidepressant that blocks SERT and NET — but also α1, H1, M1 and cardiac Na+ channels, making it lethal in overdose and the archetypal pharmacology 'dirty drug'.",
+    "description": "A tricyclic antidepressant that blocks SERT and NET, but also α1, H1, M1 and cardiac Na+ channels, making it lethal in overdose and the archetypal pharmacology 'dirty drug'.",
     "href": "/drugs/amitriptyline",
     "keywords": [
       "Amitriptyline",
@@ -1952,7 +1952,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-clomipramine",
     "title": "Clomipramine",
     "type": "drug",
-    "description": "The most serotonergic tricyclic antidepressant — and the ONLY TCA effective for OCD. Still a 'dirty drug' with the same overdose lethality as amitriptyline.",
+    "description": "The most serotonergic tricyclic antidepressant, and the ONLY TCA effective for OCD. Still a 'dirty drug' with the same overdose lethality as amitriptyline.",
     "href": "/drugs/clomipramine",
     "keywords": [
       "Clomipramine",
@@ -1970,8 +1970,8 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Body dysmorphic disorder",
       "Serotonin (5-HT)",
       "Norepinephrine (NE)",
-      "SERT (serotonin transporter) — PRIMARY target, blocked >> NET",
-      "NET (norepinephrine transporter) — secondary target",
+      "SERT (serotonin transporter). PRIMARY target, blocked >> NET",
+      "NET (norepinephrine transporter): secondary target",
       "α1-adrenergic receptor (antagonist)",
       "H1 histamine receptor (antagonist)",
       "M1 muscarinic receptor (antagonist)",
@@ -2007,7 +2007,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-tianeptine",
     "title": "Tianeptine",
     "type": "drug",
-    "description": "The atypical antidepressant that modulates glutamate — anxiolytic mood lift with an unusual abuse footnote.",
+    "description": "The atypical antidepressant that modulates glutamate: anxiolytic mood lift with an unusual abuse footnote.",
     "href": "/drugs/tianeptine",
     "keywords": [
       "Tianeptine",
@@ -2028,7 +2028,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-isocarboxazid",
     "title": "Isocarboxazid",
     "type": "drug",
-    "description": "The quiet third hydrazine MAOI — TRD option preserved by continuity of care.",
+    "description": "The quiet third hydrazine MAOI. TRD option preserved by continuity of care.",
     "href": "/drugs/isocarboxazid",
     "keywords": [
       "Isocarboxazid",
@@ -2048,7 +2048,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-moclobemide",
     "title": "Moclobemide",
     "type": "drug",
-    "description": "The reversible MAO-A inhibitor — MAOI power with the diet relaxed (mostly).",
+    "description": "The reversible MAO-A inhibitor. MAOI power with the diet relaxed (mostly).",
     "href": "/drugs/moclobemide",
     "keywords": [
       "Moclobemide",
@@ -2073,7 +2073,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-phenelzine",
     "title": "Phenelzine",
     "type": "drug",
-    "description": "The hydrazine MAOI classic — the treatment-resistant and atypical-depression legend with the cheese rule.",
+    "description": "The hydrazine MAOI classic: the treatment-resistant and atypical-depression legend with the cheese rule.",
     "href": "/drugs/phenelzine",
     "keywords": [
       "Phenelzine",
@@ -2099,7 +2099,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-selegiline",
     "title": "Selegiline",
     "type": "drug",
-    "description": "The MAO-B-selective that became an antidepressant patch — Parkinson's drug by day, depression patch at dose.",
+    "description": "The MAO-B-selective that became an antidepressant patch. Parkinson's drug by day, depression patch at dose.",
     "href": "/drugs/selegiline",
     "keywords": [
       "Selegiline",
@@ -2126,7 +2126,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-tranylcypromine",
     "title": "Tranylcypromine",
     "type": "drug",
-    "description": "The amphetamine-flavoured MAOI — activating, non-hydrazine, and the energising TRD option.",
+    "description": "The amphetamine-flavoured MAOI: activating, non-hydrazine, and the energising TRD option.",
     "href": "/drugs/tranylcypromine",
     "keywords": [
       "Tranylcypromine",
@@ -2150,7 +2150,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-l-methylfolate",
     "title": "L-Methylfolate",
     "type": "drug",
-    "description": "The active folate augmentation — the B-vitamin that powers monoamine synthesis.",
+    "description": "The active folate augmentation: the B-vitamin that powers monoamine synthesis.",
     "href": "/drugs/l-methylfolate",
     "keywords": [
       "L-Methylfolate",
@@ -2175,7 +2175,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-agomelatine",
     "title": "Agomelatine",
     "type": "drug",
-    "description": "The melatonergic antidepressant — MT1/MT2 agonism plus 5-HT2C blockade for sleep-friendly mood lift.",
+    "description": "The melatonergic antidepressant. MT1/MT2 agonism plus 5-HT2C blockade for sleep-friendly mood lift.",
     "href": "/drugs/agomelatine",
     "keywords": [
       "Agomelatine",
@@ -2197,7 +2197,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-vortioxetine",
     "title": "Vortioxetine",
     "type": "drug",
-    "description": "The multimodal antidepressant — transporter blockade plus five receptor actions, with pro-cognitive evidence.",
+    "description": "The multimodal antidepressant: transporter blockade plus five receptor actions, with pro-cognitive evidence.",
     "href": "/drugs/vortioxetine",
     "keywords": [
       "Vortioxetine",
@@ -2223,12 +2223,12 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-ketamine",
     "title": "Ketamine",
     "type": "drug",
-    "description": "The dissociative revolution — NMDA blockade that can lift severe depression within hours.",
+    "description": "The dissociative revolution. NMDA blockade that can lift severe depression within hours.",
     "href": "/drugs/ketamine",
     "keywords": [
       "Ketamine",
       "Ketalar",
-      "Spravato (esketamine nasal — separate product)",
+      "Spravato (esketamine nasal, separate product)",
       "NMDA Antidepressant",
       "NMDA Receptor Antagonist",
       "Treatment-resistant depression (IV, off-label)",
@@ -2254,7 +2254,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-reboxetine",
     "title": "Reboxetine",
     "type": "drug",
-    "description": "The pure NRI — noradrenergic energy for the tired, apathetic depression.",
+    "description": "The pure NRI: noradrenergic energy for the tired, apathetic depression.",
     "href": "/drugs/reboxetine",
     "keywords": [
       "Reboxetine",
@@ -2273,7 +2273,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-nefazodone",
     "title": "Nefazodone",
     "type": "drug",
-    "description": "The hepatotoxic SARI — 5-HT2A blockade for anxiety-insomnia depression, withdrawn for the liver.",
+    "description": "The hepatotoxic SARI: 5-HT2A blockade for anxiety-insomnia depression, withdrawn for the liver.",
     "href": "/drugs/nefazodone",
     "keywords": [
       "Nefazodone",
@@ -2293,7 +2293,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-trazodone",
     "title": "Trazodone",
     "type": "drug",
-    "description": "The antidepressant that became a sleeping pill — SERT blockade by day, alpha-1 and 5-HT2A sedation by night.",
+    "description": "The antidepressant that became a sleeping pill. SERT blockade by day, alpha-1 and 5-HT2A sedation by night.",
     "href": "/drugs/trazodone",
     "keywords": [
       "Trazodone",
@@ -2322,7 +2322,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-desvenlafaxine",
     "title": "Desvenlafaxine",
     "type": "drug",
-    "description": "Venlafaxine's active metabolite, packaged — SNRI efficacy with simpler pharmacokinetics.",
+    "description": "Venlafaxine's active metabolite, packaged. SNRI efficacy with simpler pharmacokinetics.",
     "href": "/drugs/desvenlafaxine",
     "keywords": [
       "Desvenlafaxine",
@@ -2353,7 +2353,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-levomilnacipran",
     "title": "Levomilnacipran",
     "type": "drug",
-    "description": "The norepinephrine-preferring SNRI — milnacipran's active enantiomer with noradrenergic tilt.",
+    "description": "The norepinephrine-preferring SNRI: milnacipran's active enantiomer with noradrenergic tilt.",
     "href": "/drugs/levomilnacipran",
     "keywords": [
       "Levomilnacipran",
@@ -2376,7 +2376,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-milnacipran",
     "title": "Milnacipran",
     "type": "drug",
-    "description": "The fibromyalgia SNRI — pain and fatigue in one noradrenergic tilt.",
+    "description": "The fibromyalgia SNRI: pain and fatigue in one noradrenergic tilt.",
     "href": "/drugs/milnacipran",
     "keywords": [
       "Milnacipran",
@@ -2402,7 +2402,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-vilazodone",
     "title": "Vilazodone",
     "type": "drug",
-    "description": "The SPARI — SSRI reuptake blockade plus 5-HT1A partial agonism in one molecule.",
+    "description": "The SPARI. SSRI reuptake blockade plus 5-HT1A partial agonism in one molecule.",
     "href": "/drugs/vilazodone",
     "keywords": [
       "Vilazodone",
@@ -2421,7 +2421,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-triiodothyronine",
     "title": "Triiodothyronine (T3)",
     "type": "drug",
-    "description": "The T3 augmentation trick — thyroid hormone that boosts antidepressant response.",
+    "description": "The T3 augmentation trick: thyroid hormone that boosts antidepressant response.",
     "href": "/drugs/triiodothyronine",
     "keywords": [
       "Triiodothyronine (T3)",
@@ -2447,7 +2447,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-amoxapine",
     "title": "Amoxapine",
     "type": "drug",
-    "description": "The TCA that is secretly an antipsychotic — with the extrapyramidal warnings to prove it.",
+    "description": "The TCA that is secretly an antipsychotic, with the extrapyramidal warnings to prove it.",
     "href": "/drugs/amoxapine",
     "keywords": [
       "Amoxapine",
@@ -2476,7 +2476,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-desipramine",
     "title": "Desipramine",
     "type": "drug",
-    "description": "The noradrenergic purist — the most NET-selective TCA, least sedating, and a cautionary cardiotoxic tale.",
+    "description": "The noradrenergic purist: the most NET-selective TCA, least sedating, and a cautionary cardiotoxic tale.",
     "href": "/drugs/desipramine",
     "keywords": [
       "Desipramine",
@@ -2506,7 +2506,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-dothiepin",
     "title": "Dothiepin",
     "type": "drug",
-    "description": "The UK's dosulepin — the sedating TCA retired for overdose lethality.",
+    "description": "The UK's dosulepin: the sedating TCA retired for overdose lethality.",
     "href": "/drugs/dothiepin",
     "keywords": [
       "Dothiepin",
@@ -2533,7 +2533,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-doxepin",
     "title": "Doxepin",
     "type": "drug",
-    "description": "The three-dose-band TCA — 3 mg for itch, 6 mg for sleep, 300 mg for depression.",
+    "description": "The three-dose-band TCA: 3 mg for itch, 6 mg for sleep, 300 mg for depression.",
     "href": "/drugs/doxepin",
     "keywords": [
       "Doxepin",
@@ -2568,7 +2568,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-imipramine",
     "title": "Imipramine",
     "type": "drug",
-    "description": "The original tricyclic — 1950s antidepressant, enuresis drug, and the prototype of the whole class.",
+    "description": "The original tricyclic: 1950s antidepressant, enuresis drug, and the prototype of the whole class.",
     "href": "/drugs/imipramine",
     "keywords": [
       "Imipramine",
@@ -2603,7 +2603,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-lofepramine",
     "title": "Lofepramine",
     "type": "drug",
-    "description": "The UK's safer tricyclic — imipramine's lipophilic cousin with less cardiotoxicity.",
+    "description": "The UK's safer tricyclic: imipramine's lipophilic cousin with less cardiotoxicity.",
     "href": "/drugs/lofepramine",
     "keywords": [
       "Lofepramine",
@@ -2630,7 +2630,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-maprotiline",
     "title": "Maprotiline",
     "type": "drug",
-    "description": "The tetracyclic — potent NET blockade with a seizure warning attached.",
+    "description": "The tetracyclic: potent NET blockade with a seizure warning attached.",
     "href": "/drugs/maprotiline",
     "keywords": [
       "Maprotiline",
@@ -2659,7 +2659,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-mianserin",
     "title": "Mianserin",
     "type": "drug",
-    "description": "The 5-HT2A/5-HT2C-blocking tetracyclic — the agranulocytosis-monitored precursor of mirtazapine.",
+    "description": "The 5-HT2A/5-HT2C-blocking tetracyclic: the agranulocytosis-monitored precursor of mirtazapine.",
     "href": "/drugs/mianserin",
     "keywords": [
       "Mianserin",
@@ -2689,7 +2689,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-nortriptyline",
     "title": "Nortriptyline",
     "type": "drug",
-    "description": "The level-guided TCA — the best therapeutic window and the modern class survivor.",
+    "description": "The level-guided TCA: the best therapeutic window and the modern class survivor.",
     "href": "/drugs/nortriptyline",
     "keywords": [
       "Nortriptyline",
@@ -2726,7 +2726,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-protriptyline",
     "title": "Protriptyline",
     "type": "drug",
-    "description": "The energising TCA — the alerting, appetite-sparing, apnea-adjacent outlier.",
+    "description": "The energising TCA: the alerting, appetite-sparing, apnea-adjacent outlier.",
     "href": "/drugs/protriptyline",
     "keywords": [
       "Protriptyline",
@@ -2756,7 +2756,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-trimipramine",
     "title": "Trimipramine",
     "type": "drug",
-    "description": "The most sedating TCA — the anxiety-insomnia depression specialist with an unusual receptor map.",
+    "description": "The most sedating TCA: the anxiety-insomnia depression specialist with an unusual receptor map.",
     "href": "/drugs/trimipramine",
     "keywords": [
       "Trimipramine",
@@ -2786,7 +2786,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-amisulpride",
     "title": "Amisulpride",
     "type": "drug",
-    "description": "The dose-bands-in-one-drug benzamide — low-dose antidepressant, high-dose antipsychotic, and the sialorrhoea rescue.",
+    "description": "The dose-bands-in-one-drug benzamide: low-dose antidepressant, high-dose antipsychotic, and the sialorrhoea rescue.",
     "href": "/drugs/amisulpride",
     "keywords": [
       "Amisulpride",
@@ -2842,7 +2842,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-blonanserin",
     "title": "Blonanserin",
     "type": "drug",
-    "description": "Japan's dopamine-serotonin stabiliser — a regional atypical for completeness.",
+    "description": "Japan's dopamine-serotonin stabiliser: a regional atypical for completeness.",
     "href": "/drugs/blonanserin",
     "keywords": [
       "Blonanserin",
@@ -2862,7 +2862,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-clozapine",
     "title": "Clozapine",
     "type": "drug",
-    "description": "The last-line lifesaver — the only agent proven for treatment-resistant schizophrenia and suicidality, governed by mandatory blood monitoring.",
+    "description": "The last-line lifesaver: the only agent proven for treatment-resistant schizophrenia and suicidality, governed by mandatory blood monitoring.",
     "href": "/drugs/clozapine",
     "keywords": [
       "Clozapine",
@@ -2904,7 +2904,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-iloperidone",
     "title": "Iloperidone",
     "type": "drug",
-    "description": "The orthostasis-first atypical — slow titration as the price of alpha-1 blockade.",
+    "description": "The orthostasis-first atypical: slow titration as the price of alpha-1 blockade.",
     "href": "/drugs/iloperidone",
     "keywords": [
       "Iloperidone",
@@ -2926,7 +2926,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-lurasidone",
     "title": "Lurasidone",
     "type": "drug",
-    "description": "The metabolically clean bipolar-depression antipsychotic — 5-HT7-powered efficacy without the weight bill.",
+    "description": "The metabolically clean bipolar-depression antipsychotic: 5-HT7-powered efficacy without the weight bill.",
     "href": "/drugs/lurasidone",
     "keywords": [
       "Lurasidone",
@@ -2953,7 +2953,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-olanzapine",
     "title": "Olanzapine",
     "type": "drug",
-    "description": "The robust workhorse atypical — strong efficacy across psychosis and mania, with the class's heaviest metabolic price tag.",
+    "description": "The robust workhorse atypical: strong efficacy across psychosis and mania, with the class's heaviest metabolic price tag.",
     "href": "/drugs/olanzapine",
     "keywords": [
       "Olanzapine",
@@ -2995,7 +2995,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-paliperidone",
     "title": "Paliperidone",
     "type": "drug",
-    "description": "Risperidone's active metabolite, engineered for once-daily delivery — including the once-monthly and 3-monthly injections.",
+    "description": "Risperidone's active metabolite, engineered for once-daily delivery, including the once-monthly and 3-monthly injections.",
     "href": "/drugs/paliperidone",
     "keywords": [
       "Paliperidone",
@@ -3026,7 +3026,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-perospirone",
     "title": "Perospirone",
     "type": "drug",
-    "description": "Japan's 5-HT1A-flavoured atypical — another continuity entry.",
+    "description": "Japan's 5-HT1A-flavoured atypical: another continuity entry.",
     "href": "/drugs/perospirone",
     "keywords": [
       "Perospirone",
@@ -3047,7 +3047,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-pimavanserin",
     "title": "Pimavanserin",
     "type": "drug",
-    "description": "The non-dopaminergic antipsychotic — 5-HT2A inverse agonism for Parkinson's psychosis without motor cost.",
+    "description": "The non-dopaminergic antipsychotic: 5-HT2A inverse agonism for Parkinson's psychosis without motor cost.",
     "href": "/drugs/pimavanserin",
     "keywords": [
       "Pimavanserin",
@@ -3069,7 +3069,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-quetiapine",
     "title": "Quetiapine",
     "type": "drug",
-    "description": "The dose-bands-in-one-drug antipsychotic — a sleeping pill at 50 mg, an antidepressant at 300 mg, an antipsychotic at 600 mg.",
+    "description": "The dose-bands-in-one-drug antipsychotic: a sleeping pill at 50 mg, an antidepressant at 300 mg, an antipsychotic at 600 mg.",
     "href": "/drugs/quetiapine",
     "keywords": [
       "Quetiapine",
@@ -3111,7 +3111,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-risperidone",
     "title": "Risperidone",
     "type": "drug",
-    "description": "The potent serotonin-dopamine antagonist — strong D2 binding gives robust anti-manic and antipsychotic power at the price of prolactin.",
+    "description": "The potent serotonin-dopamine antagonist: strong D2 binding gives robust anti-manic and antipsychotic power at the price of prolactin.",
     "href": "/drugs/risperidone",
     "keywords": [
       "Risperidone",
@@ -3153,7 +3153,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-sertindole",
     "title": "Sertindole",
     "type": "drug",
-    "description": "The QT-restricted atypical — suspended, reinstated with ECG monitoring, and forever an exam name.",
+    "description": "The QT-restricted atypical: suspended, reinstated with ECG monitoring, and forever an exam name.",
     "href": "/drugs/sertindole",
     "keywords": [
       "Sertindole",
@@ -3174,7 +3174,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-sulpiride",
     "title": "Sulpiride",
     "type": "drug",
-    "description": "The parent benzamide — amisulpride's ancestor with the same dose-band logic.",
+    "description": "The parent benzamide: amisulpride's ancestor with the same dose-band logic.",
     "href": "/drugs/sulpiride",
     "keywords": [
       "Sulpiride",
@@ -3197,7 +3197,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-ziprasidone",
     "title": "Ziprasidone",
     "type": "drug",
-    "description": "The metabolically clean, QT-watched atypical — modest weight gain plus a signature ECG precaution.",
+    "description": "The metabolically clean, QT-watched atypical: modest weight gain plus a signature ECG precaution.",
     "href": "/drugs/ziprasidone",
     "keywords": [
       "Ziprasidone",
@@ -3226,7 +3226,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-zotepine",
     "title": "Zotepine",
     "type": "drug",
-    "description": "The Japanese tricyclic atypical — serotonin-noradrenaline-dopamine antagonist with seizure caution.",
+    "description": "The Japanese tricyclic atypical: serotonin-noradrenaline-dopamine antagonist with seizure caution.",
     "href": "/drugs/zotepine",
     "keywords": [
       "Zotepine",
@@ -3248,7 +3248,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-aripiprazole",
     "title": "Aripiprazole",
     "type": "drug",
-    "description": "A dopamine system stabiliser — the 'thermostat' antipsychotic that tunes dopamine up where it is too low and down where it is too high.",
+    "description": "A dopamine system stabiliser: the 'thermostat' antipsychotic that tunes dopamine up where it is too low and down where it is too high.",
     "href": "/drugs/aripiprazole",
     "keywords": [
       "Aripiprazole",
@@ -3292,7 +3292,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-brexpiprazole",
     "title": "Brexpiprazole",
     "type": "drug",
-    "description": "Aripiprazole's gentler sibling — the same dopamine-stabiliser mechanism with less akathisia.",
+    "description": "Aripiprazole's gentler sibling: the same dopamine-stabiliser mechanism with less akathisia.",
     "href": "/drugs/brexpiprazole",
     "keywords": [
       "Brexpiprazole",
@@ -3318,7 +3318,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-cariprazine",
     "title": "Cariprazine",
     "type": "drug",
-    "description": "The D3-preferring stabiliser — the bipolar-depression and negative-symptom specialist.",
+    "description": "The D3-preferring stabiliser: the bipolar-depression and negative-symptom specialist.",
     "href": "/drugs/cariprazine",
     "keywords": [
       "Cariprazine",
@@ -3347,14 +3347,14 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-chlorpromazine",
     "title": "Chlorpromazine",
     "type": "drug",
-    "description": "The original antipsychotic — a low-potency phenothiazine that started psychiatric pharmacotherapy in 1952.",
+    "description": "The original antipsychotic: a low-potency phenothiazine that started psychiatric pharmacotherapy in 1952.",
     "href": "/drugs/chlorpromazine",
     "keywords": [
       "Chlorpromazine",
       "Largactil",
       "Thorazine",
       "Typical Antipsychotic",
-      "Typical (Conventional) Antipsychotic — Phenothiazine",
+      "Typical (Conventional) Antipsychotic. Phenothiazine",
       "Schizophrenia — psychotic manifestations",
       "Severe anxiety/tension (short-term)",
       "Intractable hiccups",
@@ -3371,13 +3371,13 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-cyamemazine",
     "title": "Cyamemazine",
     "type": "drug",
-    "description": "France's anxiolytic phenothiazine — a cyanide-bearing tricycle with surprising 5-HT profile.",
+    "description": "France's anxiolytic phenothiazine: a cyanide-bearing tricycle with surprising 5-HT profile.",
     "href": "/drugs/cyamemazine",
     "keywords": [
       "Cyamemazine",
       "Tercian",
       "Typical Antipsychotic",
-      "Typical (Conventional) Antipsychotic — Phenothiazine",
+      "Typical (Conventional) Antipsychotic. Phenothiazine",
       "Anxiety-depression states (France)",
       "Psychosis and agitation",
       "Central monoaminergic systems (see mechanism)",
@@ -3397,7 +3397,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Fluanxol",
       "Fluanxol Depot",
       "Typical Antipsychotic",
-      "Typical (Conventional) Antipsychotic — Thioxanthene",
+      "Typical (Conventional) Antipsychotic. Thioxanthene",
       "Schizophrenia — psychotic manifestations",
       "Depression with apathy/retardation (historic, low dose)",
       "Central monoaminergic systems (see mechanism)",
@@ -3410,14 +3410,14 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-fluphenazine",
     "title": "Fluphenazine",
     "type": "drug",
-    "description": "The piperazine phenothiazine that became a depot legend — the 2–5 week decanoate injection.",
+    "description": "The piperazine phenothiazine that became a depot legend: the 2–5 week decanoate injection.",
     "href": "/drugs/fluphenazine",
     "keywords": [
       "Fluphenazine",
       "Prolixin",
       "Modecate (decanoate)",
       "Typical Antipsychotic",
-      "Typical (Conventional) Antipsychotic — Phenothiazine",
+      "Typical (Conventional) Antipsychotic. Phenothiazine",
       "Schizophrenia — psychotic manifestations",
       "Maintenance via decanoate",
       "Central monoaminergic systems (see mechanism)",
@@ -3430,7 +3430,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-haloperidol",
     "title": "Haloperidol",
     "type": "drug",
-    "description": "The prototype high-potency D2 blocker — gold-standard potency for psychosis and agitation, at the price of EPS.",
+    "description": "The prototype high-potency D2 blocker: gold-standard potency for psychosis and agitation, at the price of EPS.",
     "href": "/drugs/haloperidol",
     "keywords": [
       "Haloperidol",
@@ -3438,7 +3438,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Haldol Decanoate",
       "Serenace",
       "Typical Antipsychotic",
-      "Typical (Conventional) Antipsychotic — Butyrophenone",
+      "Typical (Conventional) Antipsychotic. Butyrophenone",
       "Schizophrenia — psychotic manifestations",
       "Acute agitation / psychotic excitement",
       "Tourette's disorder — tics and vocal utterances",
@@ -3461,14 +3461,14 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-loxapine",
     "title": "Loxapine",
     "type": "drug",
-    "description": "The dibenzoxazepine typical with an inhaled rapid-onset form — a niche between classes.",
+    "description": "The dibenzoxazepine typical with an inhaled rapid-onset form: a niche between classes.",
     "href": "/drugs/loxapine",
     "keywords": [
       "Loxapine",
       "Loxitane",
       "Adasuve (inhaled)",
       "Typical Antipsychotic",
-      "Typical (Conventional) Antipsychotic — Dibenzoxazepine",
+      "Typical (Conventional) Antipsychotic. Dibenzoxazepine",
       "Schizophrenia — psychotic manifestations",
       "Acute agitation associated with schizophrenia/bipolar mania (inhaled)",
       "Central monoaminergic systems (see mechanism)",
@@ -3481,13 +3481,13 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-mesoridazine",
     "title": "Mesoridazine",
     "type": "drug",
-    "description": "Thioridazine's active metabolite — inherited the QT restriction, lost the market.",
+    "description": "Thioridazine's active metabolite: inherited the QT restriction, lost the market.",
     "href": "/drugs/mesoridazine",
     "keywords": [
       "Mesoridazine",
       "Serentil",
       "Typical Antipsychotic",
-      "Typical (Conventional) Antipsychotic — Phenothiazine",
+      "Typical (Conventional) Antipsychotic. Phenothiazine",
       "Schizophrenia (historical)",
       "Central monoaminergic systems (see mechanism)",
       "D2 (low-mid potency antagonist); M1; alpha-1; cardiac potassium channel (inherited)",
@@ -3498,13 +3498,13 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-molindone",
     "title": "Molindone",
     "type": "drug",
-    "description": "The dihydroindolone oddity — an old typical famous for causing weight LOSS.",
+    "description": "The dihydroindolone oddity: an old typical famous for causing weight LOSS.",
     "href": "/drugs/molindone",
     "keywords": [
       "Molindone",
       "Moban",
       "Typical Antipsychotic",
-      "Typical (Conventional) Antipsychotic — Dihydroindolone",
+      "Typical (Conventional) Antipsychotic. Dihydroindolone",
       "Schizophrenia — psychotic manifestations",
       "Central monoaminergic systems (see mechanism)",
       "D2 (moderate-high potency antagonist); dihydroindolone structure; anorectic effect (mechanism unclear)",
@@ -3515,14 +3515,14 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-perphenazine",
     "title": "Perphenazine",
     "type": "drug",
-    "description": "The mid-potency phenothiazine that matched atypicals in CATIE — the quiet evidence-based typical.",
+    "description": "The mid-potency phenothiazine that matched atypicals in CATIE: the quiet evidence-based typical.",
     "href": "/drugs/perphenazine",
     "keywords": [
       "Perphenazine",
       "Trilafon",
       "Perphenazine (generic)",
       "Typical Antipsychotic",
-      "Typical (Conventional) Antipsychotic — Phenothiazine",
+      "Typical (Conventional) Antipsychotic. Phenothiazine",
       "Schizophrenia — psychotic manifestations",
       "Severe nausea and vomiting",
       "Central monoaminergic systems (see mechanism)",
@@ -3535,13 +3535,13 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-pimozide",
     "title": "Pimozide",
     "type": "drug",
-    "description": "The diphenylbutylpiperidine built for Tourette's and monosymptomatic delusions — under permanent ECG watch.",
+    "description": "The diphenylbutylpiperidine built for Tourette's and monosymptomatic delusions: under permanent ECG watch.",
     "href": "/drugs/pimozide",
     "keywords": [
       "Pimozide",
       "Orap",
       "Typical Antipsychotic",
-      "Typical (Conventional) Antipsychotic — Diphenylbutylpiperidine",
+      "Typical (Conventional) Antipsychotic. Diphenylbutylpiperidine",
       "Tourette's disorder — suppresses tics and vocal utterances",
       "Monosymptomatic hypochondriacal psychosis (delusional parasitosis)",
       "Central monoaminergic systems (see mechanism)",
@@ -3560,7 +3560,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Pipothiazine",
       "Piportil (palmitate depot)",
       "Typical Antipsychotic",
-      "Typical (Conventional) Antipsychotic — Phenothiazine",
+      "Typical (Conventional) Antipsychotic. Phenothiazine",
       "Schizophrenia — maintenance via depot",
       "Central monoaminergic systems (see mechanism)",
       "D2 (moderate potency antagonist); piperazine phenothiazine",
@@ -3571,19 +3571,19 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-thioridazine",
     "title": "Thioridazine",
     "type": "drug",
-    "description": "The pigment-retinopathy, QT-restricted last-line phenothiazine — reserved when others fail.",
+    "description": "The pigment-retinopathy, QT-restricted last-line phenothiazine: reserved when others fail.",
     "href": "/drugs/thioridazine",
     "keywords": [
       "Thioridazine",
       "Melleril",
       "Mellerette",
       "Typical Antipsychotic",
-      "Typical (Conventional) Antipsychotic — Phenothiazine",
-      "Schizophrenia — second-line (when other antipsychotics fail or are intolerable)",
+      "Typical (Conventional) Antipsychotic. Phenothiazine",
+      "Schizophrenia: second-line (when other antipsychotics fail or are intolerable)",
       "Severe anxiety/behavioural disturbance (historic)",
       "Central monoaminergic systems (see mechanism)",
       "D2 (low-potency antagonist); M1 (moderate); alpha-1 (moderate); H1; potent cardiac ion-channel effects",
-      "Schizophrenia — second-line (when other antipsychotics fail or are intolerable)",
+      "Schizophrenia: second-line (when other antipsychotics fail or are intolerable)",
       "Severe anxiety/behavioural disturbance (historic)"
     ]
   },
@@ -3591,13 +3591,13 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-thiothixene",
     "title": "Thiothixene",
     "type": "drug",
-    "description": "A high-potency thioxanthene for psychosis — haloperidol's texture in a different ring system.",
+    "description": "A high-potency thioxanthene for psychosis: haloperidol's texture in a different ring system.",
     "href": "/drugs/thiothixene",
     "keywords": [
       "Thiothixene",
       "Navane",
       "Typical Antipsychotic",
-      "Typical (Conventional) Antipsychotic — Thioxanthene",
+      "Typical (Conventional) Antipsychotic. Thioxanthene",
       "Schizophrenia — psychotic manifestations",
       "Central monoaminergic systems (see mechanism)",
       "D2 (high-potency antagonist); thioxanthene class",
@@ -3608,7 +3608,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-trifluoperazine",
     "title": "Trifluoperazine",
     "type": "drug",
-    "description": "A high-potency piperazine phenothiazine — haloperidol-class motor discipline in an Indian formulary staple.",
+    "description": "A high-potency piperazine phenothiazine: haloperidol-class motor discipline in an Indian formulary staple.",
     "href": "/drugs/trifluoperazine",
     "keywords": [
       "Trifluoperazine",
@@ -3616,7 +3616,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Trinicalm (India)",
       "Trifluoperazine (generic)",
       "Typical Antipsychotic",
-      "Typical (Conventional) Antipsychotic — Phenothiazine",
+      "Typical (Conventional) Antipsychotic. Phenothiazine",
       "Schizophrenia — psychotic manifestations",
       "Generalised anxiety (non-psychotic) — short-term",
       "Central monoaminergic systems (see mechanism)",
@@ -3629,14 +3629,14 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-zuclopenthixol",
     "title": "Zuclopenthixol",
     "type": "drug",
-    "description": "The cis-thioxanthene partner — an acute IM '48-hour' loading option plus 2–4-weekly depot.",
+    "description": "The cis-thioxanthene partner: an acute IM '48-hour' loading option plus 2–4-weekly depot.",
     "href": "/drugs/zuclopenthixol",
     "keywords": [
       "Zuclopenthixol",
       "Cisordinol",
       "Clopixol (acetate + decanoate)",
       "Typical Antipsychotic",
-      "Typical (Conventional) Antipsychotic — Thioxanthene",
+      "Typical (Conventional) Antipsychotic. Thioxanthene",
       "Schizophrenia — psychotic manifestations",
       "Acute psychosis/agitation refusing oral medication",
       "Central monoaminergic systems (see mechanism)",
@@ -3649,7 +3649,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-gabapentin",
     "title": "Gabapentin",
     "type": "drug",
-    "description": "The alpha-2-delta calcium-channel ligand — pain, anxiety-augmentation, and alcohol-craving off-label life.",
+    "description": "The alpha-2-delta calcium-channel ligand: pain, anxiety-augmentation, and alcohol-craving off-label life.",
     "href": "/drugs/gabapentin",
     "keywords": [
       "Gabapentin",
@@ -3681,7 +3681,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-levetiracetam",
     "title": "Levetiracetam",
     "type": "drug",
-    "description": "The SV2A-ligand oddity — clean anticonvulsant pharmacology with a psychiatric behavioural footnote.",
+    "description": "The SV2A-ligand oddity: clean anticonvulsant pharmacology with a psychiatric behavioural footnote.",
     "href": "/drugs/levetiracetam",
     "keywords": [
       "Levetiracetam",
@@ -3711,7 +3711,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-pregabalin",
     "title": "Pregabalin",
     "type": "drug",
-    "description": "The alpha-2-delta ligand perfected — linear pharmacokinetics, GAD approval, and the fibromyalgia-pain-anxiety span.",
+    "description": "The alpha-2-delta ligand perfected: linear pharmacokinetics, GAD approval, and the fibromyalgia-pain-anxiety span.",
     "href": "/drugs/pregabalin",
     "keywords": [
       "Pregabalin",
@@ -3741,7 +3741,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-tiagabine",
     "title": "Tiagabine",
     "type": "drug",
-    "description": "The GAT-1 reuptake blocker — GABA-ergic precision that never found its psychiatric niche.",
+    "description": "The GAT-1 reuptake blocker. GABA-ergic precision that never found its psychiatric niche.",
     "href": "/drugs/tiagabine",
     "keywords": [
       "Tiagabine",
@@ -3763,7 +3763,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-topiramate",
     "title": "Topiramate",
     "type": "drug",
-    "description": "The multi-mechanism weight-losing anticonvulsant — appetite suppression as a mood-stabiliser side-effect.",
+    "description": "The multi-mechanism weight-losing anticonvulsant: appetite suppression as a mood-stabiliser side-effect.",
     "href": "/drugs/topiramate",
     "keywords": [
       "Topiramate",
@@ -3797,7 +3797,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-zonisamide",
     "title": "Zonisamide",
     "type": "drug",
-    "description": "The second weight-losing anticonvulsant — topiramate's cousin with the same stone-and-sweat cautions.",
+    "description": "The second weight-losing anticonvulsant: topiramate's cousin with the same stone-and-sweat cautions.",
     "href": "/drugs/zonisamide",
     "keywords": [
       "Zonisamide",
@@ -3824,7 +3824,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-carbamazepine",
     "title": "Carbamazepine",
     "type": "drug",
-    "description": "The auto-inducing anticonvulsant — potent, interacting, and still indispensable for mania and trigeminal neuralgia.",
+    "description": "The auto-inducing anticonvulsant: potent, interacting, and still indispensable for mania and trigeminal neuralgia.",
     "href": "/drugs/carbamazepine",
     "keywords": [
       "Carbamazepine",
@@ -3832,7 +3832,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Tegretol Retard",
       "Mazetol (India)",
       "Mood Stabiliser",
-      "Mood Stabiliser — Anticonvulsant",
+      "Mood Stabiliser. Anticonvulsant",
       "Acute manic / mixed episodes of bipolar disorder",
       "Bipolar maintenance",
       "Trigeminal neuralgia",
@@ -3855,14 +3855,14 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-lamotrigine",
     "title": "Lamotrigine",
     "type": "drug",
-    "description": "The depression-side mood stabiliser — the one that prevents the bottom of bipolar without triggering the top.",
+    "description": "The depression-side mood stabiliser: the one that prevents the bottom of bipolar without triggering the top.",
     "href": "/drugs/lamotrigine",
     "keywords": [
       "Lamotrigine",
       "Lamictal",
       "Lametec (India)",
       "Mood Stabiliser",
-      "Mood Stabiliser — Anticonvulsant",
+      "Mood Stabiliser. Anticonvulsant",
       "Bipolar I maintenance — depressive-pole protection",
       "Bipolar depression (acute, off-label mono/adjunct)",
       "Epilepsy — focal and generalised seizures",
@@ -3885,7 +3885,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-lithium",
     "title": "Lithium",
     "type": "drug",
-    "description": "The original and still gold-standard mood stabiliser — the only drug that prevents both poles and reduces suicide.",
+    "description": "The original and still gold-standard mood stabiliser: the only drug that prevents both poles and reduces suicide.",
     "href": "/drugs/lithium",
     "keywords": [
       "Lithium",
@@ -3893,7 +3893,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Eskalith",
       "Lithium carbonate (generic)",
       "Mood Stabiliser",
-      "Mood Stabiliser — Lithium Salt",
+      "Mood Stabiliser. Lithium Salt",
       "Acute mania / manic episodes of bipolar disorder",
       "Bipolar maintenance",
       "Acute bipolar depression (adjunct)",
@@ -3921,14 +3921,14 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-oxcarbazepine",
     "title": "Oxcarbazepine",
     "type": "drug",
-    "description": "Carbamazepine's kinder descendant — less interaction, less marrow risk, more hyponatraemia.",
+    "description": "Carbamazepine's kinder descendant: less interaction, less marrow risk, more hyponatraemia.",
     "href": "/drugs/oxcarbazepine",
     "keywords": [
       "Oxcarbazepine",
       "Trileptal",
       "Oxcarb (India)",
       "Mood Stabiliser",
-      "Mood Stabiliser — Anticonvulsant",
+      "Mood Stabiliser. Anticonvulsant",
       "Epilepsy — focal seizures",
       "Bipolar maintenance (off-label)",
       "Aggression / impulsivity (off-label)",
@@ -3948,7 +3948,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-valproate",
     "title": "Valproate",
     "type": "drug",
-    "description": "The broad-spectrum anticonvulsant mood stabiliser — the mania workhorse, now pregnancy-governed.",
+    "description": "The broad-spectrum anticonvulsant mood stabiliser: the mania workhorse, now pregnancy-governed.",
     "href": "/drugs/valproate",
     "keywords": [
       "Valproate",
@@ -3956,7 +3956,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Depakene (valproic acid)",
       "Valparin (India)",
       "Mood Stabiliser",
-      "Mood Stabiliser — Anticonvulsant",
+      "Mood Stabiliser. Anticonvulsant",
       "Acute manic / mixed episodes of bipolar disorder",
       "Bipolar maintenance",
       "Epilepsy — multiple seizure types",
@@ -3982,7 +3982,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-prazosin",
     "title": "Prazosin",
     "type": "drug",
-    "description": "The alpha-1 blocker that quiets nightmares — PTSD's noradrenergic night-time drug.",
+    "description": "The alpha-1 blocker that quiets nightmares. PTSD's noradrenergic night-time drug.",
     "href": "/drugs/prazosin",
     "keywords": [
       "Prazosin",
@@ -4008,7 +4008,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-diphenhydramine",
     "title": "Diphenhydramine",
     "type": "drug",
-    "description": "The ubiquitous sedating antihistamine — OTC sleep aid, EPS rescue, and anticholinergic cautionary tale.",
+    "description": "The ubiquitous sedating antihistamine. OTC sleep aid, EPS rescue, and anticholinergic cautionary tale.",
     "href": "/drugs/diphenhydramine",
     "keywords": [
       "Diphenhydramine",
@@ -4025,7 +4025,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Histamine",
       "Acetylcholine (ACh)",
       "H1 receptor (antagonist)",
-      "Muscarinic receptors (antagonism — adverse and therapeutic)",
+      "Muscarinic receptors (antagonism, adverse and therapeutic)",
       "Allergic rhinitis, urticaria, allergic reactions",
       "Acute dystonic reactions and drug-induced parkinsonism (adjunct)",
       "Insomnia (short-term, OTC)",
@@ -4039,7 +4039,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-hydroxyzine",
     "title": "Hydroxyzine",
     "type": "drug",
-    "description": "The antihistamine anxiolytic — sedating calm without benzodiazepine dependence.",
+    "description": "The antihistamine anxiolytic: sedating calm without benzodiazepine dependence.",
     "href": "/drugs/hydroxyzine",
     "keywords": [
       "Hydroxyzine",
@@ -4068,7 +4068,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-buspirone",
     "title": "Buspirone",
     "type": "drug",
-    "description": "The non-sedating anxiolytic — 5-HT1A partial agonism that takes weeks but spares dependence.",
+    "description": "The non-sedating anxiolytic: 5-HT1A partial agonism that takes weeks but spares dependence.",
     "href": "/drugs/buspirone",
     "keywords": [
       "Buspirone",
@@ -4096,7 +4096,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-alprazolam",
     "title": "Alprazolam",
     "type": "drug",
-    "description": "The panic specialist with the hardest withdrawal — the most prescribed and most dependence-prone benzodiazepine.",
+    "description": "The panic specialist with the hardest withdrawal: the most prescribed and most dependence-prone benzodiazepine.",
     "href": "/drugs/alprazolam",
     "keywords": [
       "Alprazolam",
@@ -4108,7 +4108,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Generalised anxiety disorder (short-term)",
       "Panic disorder",
       "GABA",
-      "GABA-A receptor (benzodiazepine site — high-potency PAM)",
+      "GABA-A receptor (benzodiazepine site, high-potency PAM)",
       "Generalised anxiety disorder (short-term)",
       "Panic disorder",
       "Restyl",
@@ -4120,7 +4120,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-chlordiazepoxide",
     "title": "Chlordiazepoxide",
     "type": "drug",
-    "description": "The first benzodiazepine ever — now the alcohol-withdrawal tablet of record.",
+    "description": "The first benzodiazepine ever: now the alcohol-withdrawal tablet of record.",
     "href": "/drugs/chlordiazepoxide",
     "keywords": [
       "Chlordiazepoxide",
@@ -4132,7 +4132,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Anxiety (short-term, historic)",
       "Preoperative anxiety (historic)",
       "GABA",
-      "GABA-A receptor (benzodiazepine site — PAM)",
+      "GABA-A receptor (benzodiazepine site. PAM)",
       "Alcohol withdrawal — mild to moderate, uncomplicated",
       "Anxiety (short-term, historic)",
       "Preoperative anxiety (historic)",
@@ -4144,7 +4144,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-clonazepam",
     "title": "Clonazepam",
     "type": "drug",
-    "description": "The anticonvulsant benzodiazepine — long-acting, high-potency, and the chronic-benzo trap in psychiatric clothing.",
+    "description": "The anticonvulsant benzodiazepine: long-acting, high-potency, and the chronic-benzo trap in psychiatric clothing.",
     "href": "/drugs/clonazepam",
     "keywords": [
       "Clonazepam",
@@ -4152,7 +4152,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Rivotril / Clonotril (India)",
       "Benzodiazepine",
       "Benzodiazepine (GABA-A PAM)",
-      "Seizure disorders — akinetic, myoclonic, absence seizures; Lennox-Gastaut",
+      "Seizure disorders: akinetic, myoclonic, absence seizures; Lennox-Gastaut",
       "Panic disorder",
       "Acute mania / agitation (adjunct, historic)",
       "Restless legs syndrome (severe)",
@@ -4160,8 +4160,8 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Acute seizures (IV/IM acute contexts)",
       "GABA",
       "Serotonin (5-HT)",
-      "GABA-A receptor (benzodiazepine site — PAM)",
-      "Seizure disorders — akinetic, myoclonic, absence seizures; Lennox-Gastaut",
+      "GABA-A receptor (benzodiazepine site. PAM)",
+      "Seizure disorders: akinetic, myoclonic, absence seizures; Lennox-Gastaut",
       "Panic disorder",
       "Acute mania / agitation (adjunct, historic)",
       "Restless legs syndrome (severe)",
@@ -4174,7 +4174,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-clorazepate",
     "title": "Clorazepate",
     "type": "drug",
-    "description": "The prodrug that becomes nordiazepam — anxiety, withdrawal, and a metabolic trick.",
+    "description": "The prodrug that becomes nordiazepam: anxiety, withdrawal, and a metabolic trick.",
     "href": "/drugs/clorazepate",
     "keywords": [
       "Clorazepate",
@@ -4194,7 +4194,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-diazepam",
     "title": "Diazepam",
     "type": "drug",
-    "description": "The original benzodiazepine — muscle-relaxing, seizure-stopping, alcohol-withdrawing, and the textbook of benzodiazepine pharmacokinetics.",
+    "description": "The original benzodiazepine: muscle-relaxing, seizure-stopping, alcohol-withdrawing, and the textbook of benzodiazepine pharmacokinetics.",
     "href": "/drugs/diazepam",
     "keywords": [
       "Diazepam",
@@ -4209,7 +4209,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Pre-procedural sedation and amnesia",
       "Panic disorder (adjunct)",
       "GABA",
-      "GABA-A receptor (benzodiazepine site — PAM)",
+      "GABA-A receptor (benzodiazepine site. PAM)",
       "Anxiety disorders / short-term anxiety relief",
       "Alcohol withdrawal syndrome",
       "Muscle spasm and spasticity",
@@ -4223,7 +4223,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-loflazepate",
     "title": "Loflazepate",
     "type": "drug",
-    "description": "Japan's long-acting anxiolytic benzo — a regional monograph for completeness.",
+    "description": "Japan's long-acting anxiolytic benzo: a regional monograph for completeness.",
     "href": "/drugs/loflazepate",
     "keywords": [
       "Loflazepate",
@@ -4243,7 +4243,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-lorazepam",
     "title": "Lorazepam",
     "type": "drug",
-    "description": "The no-metabolite benzodiazepine — the elder-safe, liver-safe, status-epilepticus first line.",
+    "description": "The no-metabolite benzodiazepine: the elder-safe, liver-safe, status-epilepticus first line.",
     "href": "/drugs/lorazepam",
     "keywords": [
       "Lorazepam",
@@ -4260,7 +4260,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Insomnia (short-term)",
       "Chemotherapy-induced nausea/vomitis (adjunct)",
       "GABA",
-      "GABA-A receptor (benzodiazepine site — PAM)",
+      "GABA-A receptor (benzodiazepine site. PAM)",
       "Anxiety disorders / short-term anxiety",
       "Status epilepticus — first-line",
       "Acute agitation (IM)",
@@ -4274,7 +4274,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-midazolam",
     "title": "Midazolam",
     "type": "drug",
-    "description": "The shortest-acting benzodiazepine — procedural sedation and status epilepticus in one syringe.",
+    "description": "The shortest-acting benzodiazepine: procedural sedation and status epilepticus in one syringe.",
     "href": "/drugs/midazolam",
     "keywords": [
       "Midazolam",
@@ -4302,7 +4302,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-oxazepam",
     "title": "Oxazepam",
     "type": "drug",
-    "description": "The final common metabolite — glucuronidated, mild, and the elder-and-liver-friendly anxiolytic.",
+    "description": "The final common metabolite: glucuronidated, mild, and the elder-and-liver-friendly anxiolytic.",
     "href": "/drugs/oxazepam",
     "keywords": [
       "Oxazepam",
@@ -4323,7 +4323,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-flumazenil",
     "title": "Flumazenil",
     "type": "drug",
-    "description": "The benzodiazepine antidote — pure antagonist with a seizure warning attached.",
+    "description": "The benzodiazepine antidote: pure antagonist with a seizure warning attached.",
     "href": "/drugs/flumazenil",
     "keywords": [
       "Flumazenil",
@@ -4335,7 +4335,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Benzodiazepine overdose (pure, known)",
       "Diagnosis of benzodiazepine contribution to coma (controversial)",
       "GABA",
-      "GABA-A receptor (benzodiazepine site — antagonist)",
+      "GABA-A receptor (benzodiazepine site, antagonist)",
       "Reversal of benzodiazepine sedation (procedural, known-agent)",
       "Benzodiazepine overdose (pure, known)",
       "Diagnosis of benzodiazepine contribution to coma (controversial)",
@@ -4346,7 +4346,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-propranolol",
     "title": "Propranolol",
     "type": "drug",
-    "description": "The beta-blocker for the body's anxiety — tremor, pounding heart, and stage fright, without touching the worry.",
+    "description": "The beta-blocker for the body's anxiety: tremor, pounding heart, and stage fright, without touching the worry.",
     "href": "/drugs/propranolol",
     "keywords": [
       "Propranolol",
@@ -4377,7 +4377,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-estazolam",
     "title": "Estazolam",
     "type": "drug",
-    "description": "The intermediate hypnotic benzo — triazolam's longer-acting, quieter cousin.",
+    "description": "The intermediate hypnotic benzo: triazolam's longer-acting, quieter cousin.",
     "href": "/drugs/estazolam",
     "keywords": [
       "Estazolam",
@@ -4386,7 +4386,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Benzodiazepine Hypnotic (GABA-A PAM)",
       "Insomnia — short-term (onset and maintenance)",
       "Central monoaminergic systems (see mechanism)",
-      "GABA-A benzodiazepine site (PAM) — intermediate-acting triazolobenzodiazepine",
+      "GABA-A benzodiazepine site (PAM): intermediate-acting triazolobenzodiazepine",
       "Insomnia — short-term (onset and maintenance)",
       "Estazolam (rare availability)"
     ]
@@ -4395,7 +4395,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-flunitrazepam",
     "title": "Flunitrazepam",
     "type": "drug",
-    "description": "The infamous one — Rohypnol: potent hypnotic benzo, strict controls, and a pharmacology lesson in misuse.",
+    "description": "The infamous one. Rohypnol: potent hypnotic benzo, strict controls, and a pharmacology lesson in misuse.",
     "href": "/drugs/flunitrazepam",
     "keywords": [
       "Flunitrazepam",
@@ -4405,7 +4405,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Severe insomnia (where legally available)",
       "Pre-anaesthetic sedation (historic)",
       "Central monoaminergic systems (see mechanism)",
-      "GABA-A benzodiazepine site (ultra-high-potency PAM) — long-acting",
+      "GABA-A benzodiazepine site (ultra-high-potency PAM): long-acting",
       "Severe insomnia (where legally available)",
       "Pre-anaesthetic sedation (historic)",
       "Rohypnol (heavily restricted)"
@@ -4415,7 +4415,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-flurazepam",
     "title": "Flurazepam",
     "type": "drug",
-    "description": "The longest-tail hypnotic benzo — active metabolites to 100+ hours make it the accumulation cautionary tale.",
+    "description": "The longest-tail hypnotic benzo: active metabolites to 100+ hours make it the accumulation cautionary tale.",
     "href": "/drugs/flurazepam",
     "keywords": [
       "Flurazepam",
@@ -4424,7 +4424,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Benzodiazepine Hypnotic (GABA-A PAM)",
       "Insomnia — short-term (maintenance)",
       "Central monoaminergic systems (see mechanism)",
-      "GABA-A benzodiazepine site (PAM) — long-acting with very long metabolites",
+      "GABA-A benzodiazepine site (PAM): long-acting with very long metabolites",
       "Insomnia — short-term (maintenance)",
       "Flurazepam (rare availability)"
     ]
@@ -4433,7 +4433,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-quazepam",
     "title": "Quazepam",
     "type": "drug",
-    "description": "The alpha-1-preferring benzodiazepine hypnotic — the bridge between benzos and Z-drugs.",
+    "description": "The alpha-1-preferring benzodiazepine hypnotic: the bridge between benzos and Z-drugs.",
     "href": "/drugs/quazepam",
     "keywords": [
       "Quazepam",
@@ -4442,7 +4442,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Benzodiazepine Hypnotic (GABA-A PAM)",
       "Insomnia — short-term (onset and maintenance)",
       "Central monoaminergic systems (see mechanism)",
-      "GABA-A benzodiazepine site — alpha-1-preferring PAM; long-acting metabolites",
+      "GABA-A benzodiazepine site: alpha-1-preferring PAM; long-acting metabolites",
       "Insomnia — short-term (onset and maintenance)",
       "Quazepam (not marketed in India)"
     ]
@@ -4451,7 +4451,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-temazepam",
     "title": "Temazepam",
     "type": "drug",
-    "description": "The classic hypnotic benzodiazepine — 8–10 hour cover from a diazepam descendant.",
+    "description": "The classic hypnotic benzodiazepine: 8–10 hour cover from a diazepam descendant.",
     "href": "/drugs/temazepam",
     "keywords": [
       "Temazepam",
@@ -4461,7 +4461,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Benzodiazepine Hypnotic (GABA-A PAM)",
       "Insomnia — short-term (onset and maintenance)",
       "Central monoaminergic systems (see mechanism)",
-      "GABA-A benzodiazepine site (PAM) — intermediate-acting",
+      "GABA-A benzodiazepine site (PAM): intermediate-acting",
       "Insomnia — short-term (onset and maintenance)",
       "Restoril / generic temazepam"
     ]
@@ -4470,7 +4470,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-triazolam",
     "title": "Triazolam",
     "type": "drug",
-    "description": "The ultra-short hypnotic benzo — the benzodiazepine's answer to sleep-onset-only dosing.",
+    "description": "The ultra-short hypnotic benzo: the benzodiazepine's answer to sleep-onset-only dosing.",
     "href": "/drugs/triazolam",
     "keywords": [
       "Triazolam",
@@ -4479,7 +4479,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Benzodiazepine Hypnotic (GABA-A PAM)",
       "Insomnia — sleep onset (short-term)",
       "Central monoaminergic systems (see mechanism)",
-      "GABA-A benzodiazepine site (high-potency PAM) — ultrashort-acting",
+      "GABA-A benzodiazepine site (high-potency PAM): ultrashort-acting",
       "Insomnia — sleep onset (short-term)",
       "Halcion / limited generic)"
     ]
@@ -4488,7 +4488,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-suvorexant",
     "title": "Suvorexant",
     "type": "drug",
-    "description": "The orexin-blocker — sleep by turning down the brain's wake switch rather than forcing sedation.",
+    "description": "The orexin-blocker: sleep by turning down the brain's wake switch rather than forcing sedation.",
     "href": "/drugs/suvorexant",
     "keywords": [
       "Suvorexant",
@@ -4497,7 +4497,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Dual Orexin Receptor Antagonist",
       "Insomnia — sleep onset and maintenance",
       "Central monoaminergic systems (see mechanism)",
-      "Orexin OX1 and OX2 receptors (dual antagonist) — the wake-promoting neuropeptide system",
+      "Orexin OX1 and OX2 receptors (dual antagonist): the wake-promoting neuropeptide system",
       "Insomnia — sleep onset and maintenance",
       "Suvorexant (limited availability)"
     ]
@@ -4506,7 +4506,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-ramelteon",
     "title": "Ramelteon",
     "type": "drug",
-    "description": "The melatonin MT1/MT2 agonist — sleep-onset targeting with zero dependence potential.",
+    "description": "The melatonin MT1/MT2 agonist: sleep-onset targeting with zero dependence potential.",
     "href": "/drugs/ramelteon",
     "keywords": [
       "Ramelteon",
@@ -4517,7 +4517,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Circadian rhythm disorders (delayed sleep phase)",
       "Insomnia in substance-use populations",
       "Central monoaminergic systems (see mechanism)",
-      "Melatonin MT1 and MT2 receptors (agonist) — suprachiasmatic nucleus",
+      "Melatonin MT1 and MT2 receptors (agonist): suprachiasmatic nucleus",
       "Insomnia — sleep-onset difficulty (chronic use permitted)",
       "Circadian rhythm disorders (delayed sleep phase)",
       "Insomnia in substance-use populations",
@@ -4528,7 +4528,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-tasimelteon",
     "title": "Tasimelteon",
     "type": "drug",
-    "description": "The Non-24-Hour Sleep-Wake Disorder drug — circadian entrainment for the blind.",
+    "description": "The Non-24-Hour Sleep-Wake Disorder drug: circadian entrainment for the blind.",
     "href": "/drugs/tasimelteon",
     "keywords": [
       "Tasimelteon",
@@ -4539,7 +4539,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Smith-Magenis syndrome (circadian disruption)",
       "Non-24 in sighted individuals",
       "Central monoaminergic systems (see mechanism)",
-      "Melatonin MT1/MT2 receptors (agonist) — circadian entrainment",
+      "Melatonin MT1/MT2 receptors (agonist): circadian entrainment",
       "Non-24-Hour Sleep-Wake Rhythm Disorder (Non-24) in blind individuals",
       "Smith-Magenis syndrome (circadian disruption)",
       "Non-24 in sighted individuals",
@@ -4550,7 +4550,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-eszopiclone",
     "title": "Eszopiclone",
     "type": "drug",
-    "description": "The Z-drug licensed for long-term use — sleep onset AND maintenance with a 6-hour half-life.",
+    "description": "The Z-drug licensed for long-term use: sleep onset AND maintenance with a 6-hour half-life.",
     "href": "/drugs/eszopiclone",
     "keywords": [
       "Eszopiclone",
@@ -4559,7 +4559,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Non-Benzodiazepine Hypnotic (Z-Drug)",
       "Insomnia — sleep onset and maintenance",
       "Central monoaminergic systems (see mechanism)",
-      "GABA-A alpha-1-containing receptors (selective PAM) — cyclopyrrolone class",
+      "GABA-A alpha-1-containing receptors (selective PAM): cyclopyrrolone class",
       "Insomnia — sleep onset and maintenance",
       "Zopifresh / Eszopiclone (generic)"
     ]
@@ -4568,7 +4568,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-zaleplon",
     "title": "Zaleplon",
     "type": "drug",
-    "description": "The ultrashort Z-drug — a middle-of-the-night option that clears before morning.",
+    "description": "The ultrashort Z-drug: a middle-of-the-night option that clears before morning.",
     "href": "/drugs/zaleplon",
     "keywords": [
       "Zaleplon",
@@ -4579,7 +4579,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Insomnia — sleep onset",
       "Middle-of-the-night awakening (4+ h before wake time)",
       "Central monoaminergic systems (see mechanism)",
-      "GABA-A alpha-1 receptors (selective PAM) — pyrazolopyrimidine class",
+      "GABA-A alpha-1 receptors (selective PAM): pyrazolopyrimidine class",
       "Insomnia — sleep onset",
       "Middle-of-the-night awakening (4+ h before wake time)",
       "Zaleplon (limited availability)"
@@ -4589,7 +4589,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-zolpidem",
     "title": "Zolpidem",
     "type": "drug",
-    "description": "The world's default sleeping pill — alpha-1-selective GABA modulation for sleep onset without full benzodiazepine breadth.",
+    "description": "The world's default sleeping pill: alpha-1-selective GABA modulation for sleep onset without full benzodiazepine breadth.",
     "href": "/drugs/zolpidem",
     "keywords": [
       "Zolpidem",
@@ -4613,7 +4613,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-zopiclone",
     "title": "Zopiclone",
     "type": "drug",
-    "description": "The cyclopyrrolone with the metallic-taste signature — the Commonwealth world's Z-drug.",
+    "description": "The cyclopyrrolone with the metallic-taste signature: the Commonwealth world's Z-drug.",
     "href": "/drugs/zopiclone",
     "keywords": [
       "Zopiclone",
@@ -4623,7 +4623,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Non-Benzodiazepine Hypnotic (Z-Drug)",
       "Insomnia — short-term (onset and maintenance)",
       "Central monoaminergic systems (see mechanism)",
-      "GABA-A alpha-1 receptors (selective PAM) — cyclopyrrolone (racemic)",
+      "GABA-A alpha-1 receptors (selective PAM): cyclopyrrolone (racemic)",
       "Insomnia — short-term (onset and maintenance)",
       "Zopicon / Zopiclone generic"
     ]
@@ -4632,7 +4632,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-clonidine",
     "title": "Clonidine",
     "type": "drug",
-    "description": "The alpha-2 agonist — blood-pressure medicine turned 24-hour ADHD and tic helper.",
+    "description": "The alpha-2 agonist: blood-pressure medicine turned 24-hour ADHD and tic helper.",
     "href": "/drugs/clonidine",
     "keywords": [
       "Clonidine",
@@ -4662,7 +4662,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-guanfacine",
     "title": "Guanfacine",
     "type": "drug",
-    "description": "Clonidine's refined cousin — longer-acting alpha-2A selectivity with less sedation.",
+    "description": "Clonidine's refined cousin: longer-acting alpha-2A selectivity with less sedation.",
     "href": "/drugs/guanfacine",
     "keywords": [
       "Guanfacine",
@@ -4685,7 +4685,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-atomoxetine",
     "title": "Atomoxetine",
     "type": "drug",
-    "description": "The non-stimulant first-line — selective norepinephrine reuptake inhibition for 24-hour ADHD cover without abuse potential.",
+    "description": "The non-stimulant first-line: selective norepinephrine reuptake inhibition for 24-hour ADHD cover without abuse potential.",
     "href": "/drugs/atomoxetine",
     "keywords": [
       "Atomoxetine",
@@ -4697,7 +4697,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "ADHD with comorbid anxiety",
       "ADHD in substance-use populations",
       "Central monoaminergic systems (see mechanism)",
-      "NET (norepinephrine transporter — selective blockade)",
+      "NET (norepinephrine transporter, selective blockade)",
       "ADHD — ages 6 and above through adulthood",
       "ADHD with comorbid anxiety",
       "ADHD in substance-use populations",
@@ -4709,7 +4709,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-dexamphetamine",
     "title": "Dextroamphetamine (d-Amphetamine)",
     "type": "drug",
-    "description": "Pure dextroamphetamine — the classic d-isomer stimulant with less peripheral load than the racemate.",
+    "description": "Pure dextroamphetamine: the classic d-isomer stimulant with less peripheral load than the racemate.",
     "href": "/drugs/dexamphetamine",
     "keywords": [
       "Dextroamphetamine (d-Amphetamine)",
@@ -4720,7 +4720,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "ADHD — ages 3 and above (USA label)",
       "Narcolepsy",
       "Central monoaminergic systems (see mechanism)",
-      "DAT/NET substrate (release) + VMAT2 — d-isomer",
+      "DAT/NET substrate (release) + VMAT2: d-isomer",
       "ADHD — ages 3 and above (USA label)",
       "Narcolepsy",
       "Dexamphetamine (rare in India)"
@@ -4730,7 +4730,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-amphetamine",
     "title": "Amphetamine (d,l)",
     "type": "drug",
-    "description": "The racemic mixed amphetamine salts — Adderall chemistry.",
+    "description": "The racemic mixed amphetamine salts. Adderall chemistry.",
     "href": "/drugs/amphetamine",
     "keywords": [
       "Amphetamine (d,l)",
@@ -4752,7 +4752,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-lisdexamfetamine",
     "title": "Lisdexamfetamine",
     "type": "drug",
-    "description": "The prodrug stimulant — amphetamine in a slow-release chemical disguise that resists misuse.",
+    "description": "The prodrug stimulant: amphetamine in a slow-release chemical disguise that resists misuse.",
     "href": "/drugs/lisdexamfetamine",
     "keywords": [
       "Lisdexamfetamine",
@@ -4772,7 +4772,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-dexmethylphenidate",
     "title": "Dexmethylphenidate",
     "type": "drug",
-    "description": "Methylphenidate's active half — the d-isomer at half the milligrams.",
+    "description": "Methylphenidate's active half: the d-isomer at half the milligrams.",
     "href": "/drugs/dexmethylphenidate",
     "keywords": [
       "Dexmethylphenidate",
@@ -4782,7 +4782,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "CNS Stimulant (Dopamine-Norepinephrine Reuptake Inhibitor)",
       "ADHD — ages 6 and above",
       "Central monoaminergic systems (see mechanism)",
-      "DAT and NET (blockade) — d-threo enantiomer",
+      "DAT and NET (blockade): d-threo enantiomer",
       "ADHD — ages 6 and above",
       "Atx / dexmethylphenidate (limited)"
     ]
@@ -4791,7 +4791,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-methylphenidate",
     "title": "Methylphenidate (d,l)",
     "type": "drug",
-    "description": "The first-line stimulant — dopamine-norepinephrine reuptake inhibition that sharpens the prefrontal signal-to-noise ratio.",
+    "description": "The first-line stimulant: dopamine-norepinephrine reuptake inhibition that sharpens the prefrontal signal-to-noise ratio.",
     "href": "/drugs/methylphenidate",
     "keywords": [
       "Methylphenidate (d,l)",
@@ -4807,8 +4807,8 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Treatment-resistant depression (augmentation)",
       "Dopamine (DA)",
       "Norepinephrine (NE)",
-      "DAT (dopamine transporter — blocked)",
-      "NET (norepinephrine transporter — blocked)",
+      "DAT (dopamine transporter, blocked)",
+      "NET (norepinephrine transporter, blocked)",
       "ADHD — ages 6 and above",
       "Narcolepsy (adjunct/historic)",
       "Apathy and cognitive symptoms in neurological disorders",
@@ -4822,7 +4822,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-pemoline",
     "title": "Pemoline",
     "type": "drug",
-    "description": "The hepatotoxic last-resort stimulant — ADHD's liver-monitoring lesson in a tablet.",
+    "description": "A hepatotoxic last-resort stimulant: an ADHD lesson in liver monitoring.",
     "href": "/drugs/pemoline",
     "keywords": [
       "Pemoline",
@@ -4840,7 +4840,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-armodafinil",
     "title": "Armodafinil",
     "type": "drug",
-    "description": "Modafinil's R-enantiomer — the same wake chemistry with later-day coverage.",
+    "description": "Modafinil's R-enantiomer: the same wake chemistry with later-day coverage.",
     "href": "/drugs/armodafinil",
     "keywords": [
       "Armodafinil",
@@ -4851,7 +4851,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Shift-work sleep disorder",
       "OSA residual sleepiness (adjunct to CPAP)",
       "Central monoaminergic systems (see mechanism)",
-      "DAT (weak inhibition) + orexin/histamine wake systems — R-enantiomer",
+      "DAT (weak inhibition) + orexin/histamine wake systems. R-enantiomer",
       "Narcolepsy — excessive daytime sleepiness",
       "Shift-work sleep disorder",
       "OSA residual sleepiness (adjunct to CPAP)",
@@ -4862,7 +4862,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-modafinil",
     "title": "Modafinil",
     "type": "drug",
-    "description": "The wake-promoting agent — DAT-inhibiting alertness for narcolepsy without classic stimulant pharmacology.",
+    "description": "The wake-promoting agent. DAT-inhibiting alertness for narcolepsy without classic stimulant pharmacology.",
     "href": "/drugs/modafinil",
     "keywords": [
       "Modafinil",
@@ -4890,7 +4890,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-donepezil",
     "title": "Donepezil",
     "type": "drug",
-    "description": "The once-daily cholinesterase inhibitor — the dementia first-line.",
+    "description": "The once-daily cholinesterase inhibitor: the dementia first-line.",
     "href": "/drugs/donepezil",
     "keywords": [
       "Donepezil",
@@ -4916,7 +4916,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-galantamine",
     "title": "Galantamine",
     "type": "drug",
-    "description": "The cholinesterase inhibitor with nicotinic modulation — the allosteric third member.",
+    "description": "The cholinesterase inhibitor with nicotinic modulation: the allosteric third member.",
     "href": "/drugs/galantamine",
     "keywords": [
       "Galantamine",
@@ -4937,7 +4937,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-rivastigmine",
     "title": "Rivastigmine",
     "type": "drug",
-    "description": "The dual-cholinesterase inhibitor with a patch — stronger inhibition, GI warnings, DLB approval.",
+    "description": "The dual-cholinesterase inhibitor with a patch: stronger inhibition, GI warnings, DLB approval.",
     "href": "/drugs/rivastigmine",
     "keywords": [
       "Rivastigmine",
@@ -4962,13 +4962,13 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-tacrine",
     "title": "Tacrine",
     "type": "drug",
-    "description": "The first Alzheimer's cholinesterase inhibitor — the hepatotoxic proof of concept its successors outlived.",
+    "description": "The first Alzheimer's cholinesterase inhibitor: the hepatotoxic proof of concept its successors outlived.",
     "href": "/drugs/tacrine",
     "keywords": [
       "Tacrine",
       "Cognex (discontinued)",
       "AChE Inhibitor",
-      "Acetylcholinesterase Inhibitor (Central, Reversible — also inhibits BuChE)",
+      "Acetylcholinesterase Inhibitor (Central, Reversible, also inhibits BuChE)",
       "Alzheimer disease",
       "Memory disorders in other conditions",
       "Dementia (behavioural and cognitive symptoms)",
@@ -4985,7 +4985,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-caprylidene",
     "title": "Caprylidene",
     "type": "drug",
-    "description": "The medical-food oddity — ketogenic metabolism support for Alzheimer's.",
+    "description": "The medical-food oddity: ketogenic metabolism support for Alzheimer's.",
     "href": "/drugs/caprylidene",
     "keywords": [
       "Caprylidene",
@@ -5003,7 +5003,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-memantine",
     "title": "Memantine",
     "type": "drug",
-    "description": "The NMDA modulator — glutamate noise-reduction for moderate-to-severe Alzheimer's.",
+    "description": "The NMDA modulator: glutamate noise-reduction for moderate-to-severe Alzheimer's.",
     "href": "/drugs/memantine",
     "keywords": [
       "Memantine",
@@ -5030,7 +5030,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-acamprosate",
     "title": "Acamprosate",
     "type": "drug",
-    "description": "The abstinence-protecting alcohol medicine — glutamate-GABA rebalancing without dependence.",
+    "description": "The abstinence-protecting alcohol medicine: glutamate-GABA rebalancing without dependence.",
     "href": "/drugs/acamprosate",
     "keywords": [
       "Acamprosate",
@@ -5050,7 +5050,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-buprenorphine",
     "title": "Buprenorphine",
     "type": "drug",
-    "description": "The ceiling-protected partial agonist — opioid substitution that cannot easily kill.",
+    "description": "The ceiling-protected partial agonist: opioid substitution that cannot easily kill.",
     "href": "/drugs/buprenorphine",
     "keywords": [
       "Buprenorphine",
@@ -5063,7 +5063,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Chronic pain (analgesic use)",
       "Neonatal opioid withdrawal syndrome (maternal treatment)",
       "Endogenous opioids",
-      "Mu-opioid receptor (PARTIAL agonist — high affinity); kappa receptor (antagonist)",
+      "Mu-opioid receptor (PARTIAL agonist, high affinity); kappa receptor (antagonist)",
       "Opioid use disorder — maintenance and medically supervised withdrawal",
       "Chronic pain (analgesic use)",
       "Neonatal opioid withdrawal syndrome (maternal treatment)",
@@ -5075,7 +5075,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-disulfiram",
     "title": "Disulfiram",
     "type": "drug",
-    "description": "The deterrence drug — drink and become violently ill: classical aversion pharmacology.",
+    "description": "The deterrence drug: drink and become violently ill: classical aversion pharmacology.",
     "href": "/drugs/disulfiram",
     "keywords": [
       "Disulfiram",
@@ -5086,7 +5086,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Supervised disulfiram programmes",
       "Glutamate",
       "Dopamine (DA)",
-      "Aldehyde dehydrogenase (ALDH — irreversible inhibition)",
+      "Aldehyde dehydrogenase (ALDH, irreversible inhibition)",
       "Alcohol dependence — deterrence in selected patients",
       "Supervised disulfiram programmes",
       "Disulfiram (generic)"
@@ -5096,7 +5096,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-nalmefene",
     "title": "Nalmefene",
     "type": "drug",
-    "description": "Europe's as-needed antagonist — opioid blockade taken only on drinking days.",
+    "description": "Europe's as-needed antagonist: opioid blockade taken only on drinking days.",
     "href": "/drugs/nalmefene",
     "keywords": [
       "Nalmefene",
@@ -5105,7 +5105,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Opioid Antagonist (Alcohol Dependence)",
       "Alcohol dependence — reduction of consumption (as-needed)",
       "Endogenous opioids",
-      "Mu-opioid receptor (antagonist) — kappa-antagonist activity adds mood-relevant pharmacology",
+      "Mu-opioid receptor (antagonist): kappa-antagonist activity adds mood-relevant pharmacology",
       "Alcohol dependence — reduction of consumption (as-needed)",
       "Not marketed in India)"
     ]
@@ -5114,7 +5114,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-naltrexone",
     "title": "Naltrexone",
     "type": "drug",
-    "description": "The opioid-blocker that treats addiction — blunting alcohol's reward and opioid relapse.",
+    "description": "The opioid-blocker that treats addiction, blunting alcohol's reward and opioid relapse.",
     "href": "/drugs/naltrexone",
     "keywords": [
       "Naltrexone",
@@ -5127,7 +5127,7 @@ export const searchIndexGenerated: SearchableItem[] = [
       "Opioid use disorder — relapse prevention after detoxification",
       "Monthly injectable (both indications)",
       "Endogenous opioids",
-      "Mu-opioid receptor (antagonist — long-acting blockade)",
+      "Mu-opioid receptor (antagonist, long-acting blockade)",
       "Alcohol use disorder — reduction of relapse to heavy drinking",
       "Opioid use disorder — relapse prevention after detoxification",
       "Monthly injectable (both indications)",
@@ -5139,7 +5139,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-naltrexone-bupropion",
     "title": "Naltrexone-Bupropion",
     "type": "drug",
-    "description": "The reward-blocker + NDRI combination — appetite and addiction circuitry in two tablets.",
+    "description": "The reward-blocker + NDRI combination: appetite and addiction circuitry in two tablets.",
     "href": "/drugs/naltrexone-bupropion",
     "keywords": [
       "Naltrexone-Bupropion",
@@ -5158,7 +5158,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-varenicline",
     "title": "Varenicline",
     "type": "drug",
-    "description": "The partial agonist that doubled quit rates — alpha-4 beta-2 nicotinic partial agonism.",
+    "description": "The partial agonist that doubled quit rates: alpha-4 beta-2 nicotinic partial agonism.",
     "href": "/drugs/varenicline",
     "keywords": [
       "Varenicline",
@@ -5178,7 +5178,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-benztropine",
     "title": "Benztropine",
     "type": "drug",
-    "description": "The EPS antidote — anticholinergic blockade of the striatum to undo dopamine-blockade side effects.",
+    "description": "The EPS antidote: anticholinergic blockade of the striatum to undo dopamine-blockade side effects.",
     "href": "/drugs/benztropine",
     "keywords": [
       "Benztropine",
@@ -5205,7 +5205,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-trihexyphenidyl",
     "title": "Trihexyphenidyl",
     "type": "drug",
-    "description": "India's classic anticholinergic — the trihexyphenidyl half of the trifluoperazine pairing.",
+    "description": "India's classic anticholinergic: the trihexyphenidyl half of the trifluoperazine pairing.",
     "href": "/drugs/trihexyphenidyl",
     "keywords": [
       "Trihexyphenidyl",
@@ -5230,7 +5230,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-flibanserin",
     "title": "Flibanserin",
     "type": "drug",
-    "description": "The HSDD drug — serotonin-dopamine rebalancing for desire, at bedtime with alcohol rules.",
+    "description": "The HSDD drug: serotonin-dopamine rebalancing for desire, at bedtime with alcohol rules.",
     "href": "/drugs/flibanserin",
     "keywords": [
       "Flibanserin",
@@ -5251,7 +5251,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-dextromethorphan",
     "title": "Dextromethorphan",
     "type": "drug",
-    "description": "The cough suppressant with three secret lives — NMDA blocker, sigma agonist, and the newest antidepressant mechanism.",
+    "description": "The cough suppressant with three secret lives. NMDA blocker, sigma agonist, and the newest antidepressant mechanism.",
     "href": "/drugs/dextromethorphan",
     "keywords": [
       "Dextromethorphan",
@@ -5279,7 +5279,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-sodium-oxybate",
     "title": "Sodium Oxybate",
     "type": "drug",
-    "description": "The narcolepsy wonder and the controlled-substance paradox — GHB medicine for cataplexy.",
+    "description": "The narcolepsy wonder and the controlled-substance paradox. GHB medicine for cataplexy.",
     "href": "/drugs/sodium-oxybate",
     "keywords": [
       "Sodium Oxybate",
@@ -5307,7 +5307,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-lorcaserin",
     "title": "Lorcaserin",
     "type": "drug",
-    "description": "The withdrawn 5-HT2C agonist — weight pharmacology's serotonergic chapter, closed by cancer-signal analysis.",
+    "description": "The withdrawn 5-HT2C agonist: weight pharmacology's serotonergic chapter, closed by cancer-signal analysis.",
     "href": "/drugs/lorcaserin",
     "keywords": [
       "Lorcaserin",
@@ -5325,7 +5325,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "medication-phentermine-topiramate",
     "title": "Phentermine-Topiramate",
     "type": "drug",
-    "description": "The stimulant-anticonvulsant weight combination — appetite from two directions.",
+    "description": "The stimulant-anticonvulsant weight combination: appetite from two directions.",
     "href": "/drugs/phentermine-topiramate",
     "keywords": [
       "Phentermine-Topiramate",
@@ -5412,7 +5412,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "disease-major-depressive-disorder",
     "title": "Major Depressive Disorder",
     "type": "disease",
-    "description": "A common, disabling mood disorder defined by persistent low mood and anhedonia — eminently treatable, but under-recognised in Indian primary care.",
+    "description": "A common, disabling mood disorder defined by persistent low mood and anhedonia: eminently treatable, but under-recognised in Indian primary care.",
     "href": "/diseases/major-depressive-disorder",
     "keywords": [
       "Major Depressive Disorder",
@@ -5433,7 +5433,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "class-depressant",
     "title": "CNS Depressant",
     "type": "class",
-    "description": "Enhances GABA inhibition — producing sedation, anxiolysis, and at high doses respiratory depression.",
+    "description": "Enhances GABA inhibition: producing sedation, anxiolysis, and at high doses respiratory depression.",
     "href": "/#categories",
     "keywords": [
       "CNS Depressant",
@@ -5445,7 +5445,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "class-stimulant",
     "title": "Stimulant",
     "type": "class",
-    "description": "Increases catecholamine activity — producing alertness, euphoria, tachycardia, and crash.",
+    "description": "Increases catecholamine activity: producing alertness, euphoria, tachycardia, and crash.",
     "href": "/#categories",
     "keywords": [
       "Stimulant",
@@ -5457,7 +5457,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "class-hallucinogen",
     "title": "Hallucinogen",
     "type": "class",
-    "description": "5-HT2A receptor agonists — producing profound alterations in perception, mood, and sense of self.",
+    "description": "5-HT2A receptor agonists: producing profound alterations in perception, mood, and sense of self.",
     "href": "/#categories",
     "keywords": [
       "Hallucinogen",
@@ -5469,7 +5469,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "class-opioid",
     "title": "Opioid Agonist",
     "type": "class",
-    "description": "μ-opioid receptor agonists — producing analgesia, euphoria, and respiratory depression.",
+    "description": "μ-opioid receptor agonists: producing analgesia, euphoria, and respiratory depression.",
     "href": "/#categories",
     "keywords": [
       "Opioid Agonist",
@@ -5481,7 +5481,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "class-cannabinoid",
     "title": "Cannabinoid",
     "type": "class",
-    "description": "CB1 receptor agonists — altering perception, mood, memory, and appetite.",
+    "description": "CB1 receptor agonists: altering perception, mood, memory, and appetite.",
     "href": "/#categories",
     "keywords": [
       "Cannabinoid",
@@ -5493,7 +5493,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "class-dissociative",
     "title": "Dissociative",
     "type": "class",
-    "description": "NMDA receptor antagonists — producing dissociation, analgesia, and hallucinations.",
+    "description": "NMDA receptor antagonists: producing dissociation, analgesia, and hallucinations.",
     "href": "/#categories",
     "keywords": [
       "Dissociative",
@@ -5505,7 +5505,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "class-inhalant",
     "title": "Volatile Solvent",
     "type": "class",
-    "description": "Lipophilic solvents that rapidly cross the blood-brain barrier — brief intoxication, severe neurotoxicity.",
+    "description": "Lipophilic solvents that rapidly cross the blood-brain barrier: brief intoxication, severe neurotoxicity.",
     "href": "/#categories",
     "keywords": [
       "Volatile Solvent",
@@ -5517,7 +5517,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "class-ssri",
     "title": "SSRI",
     "type": "class",
-    "description": "Selective serotonin reuptake inhibitors — first-line antidepressants with wide safety margin.",
+    "description": "Selective serotonin reuptake inhibitors: first-line antidepressants with wide safety margin.",
     "href": "/#categories",
     "keywords": [
       "SSRI",
@@ -5632,7 +5632,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "pathway-mesolimbic",
     "title": "Mesolimbic Pathway",
     "type": "pathway",
-    "description": "Reward, motivation, and reinforcement learning — the brain's primary reward circuit.",
+    "description": "Reward, motivation, and reinforcement learning: the brain's primary reward circuit.",
     "href": "/#knowledge-graph",
     "keywords": [
       "Mesolimbic Pathway",
@@ -5695,7 +5695,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "side-effect-akathisia",
     "title": "Akathisia",
     "type": "side-effect",
-    "description": "Inner restlessness and irresistible urge to move — one of the most distressing antipsychotic side effects.",
+    "description": "Inner restlessness and irresistible urge to move, one of the most distressing antipsychotic side effects.",
     "href": "/#side-effects",
     "keywords": [
       "Akathisia",
@@ -5757,7 +5757,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "side-effect-sexual-dysfunction",
     "title": "Sexual Dysfunction",
     "type": "side-effect",
-    "description": "Decreased libido, delayed orgasm, erectile dysfunction — common with serotonergic antidepressants.",
+    "description": "Decreased libido, delayed orgasm, erectile dysfunction: common with serotonergic antidepressants.",
     "href": "/#side-effects",
     "keywords": [
       "Sexual Dysfunction",
@@ -5772,7 +5772,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "side-effect-weight-gain",
     "title": "Weight Gain",
     "type": "side-effect",
-    "description": "Significant metabolic burden — increased appetite, insulin resistance, dyslipidaemia.",
+    "description": "Significant metabolic burden: increased appetite, insulin resistance, dyslipidaemia.",
     "href": "/#side-effects",
     "keywords": [
       "Weight Gain",
@@ -5866,7 +5866,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "guide-emergency",
     "title": "When to Call Emergency",
     "type": "patient-guide",
-    "description": "Red flags that require immediate medical attention — overdose, serotonin syndrome, severe withdrawal.",
+    "description": "Red flags that require immediate medical attention: overdose, serotonin syndrome, severe withdrawal.",
     "href": "/#emergency",
     "keywords": [
       "emergency",
@@ -5884,7 +5884,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-hub",
     "title": "KYP Psychiatry",
     "type": "psychiatry-note",
-    "description": "The KYP Psychiatry curriculum — 109 structured lessons across 18 clinical domains, 719 self-test questions.",
+    "description": "The KYP Psychiatry curriculum: 109 structured lessons across 18 clinical domains, 719 self-test questions.",
     "href": "/psychiatry",
     "keywords": [
       "psychiatry",
@@ -5900,7 +5900,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-library",
     "title": "Psychiatry Library",
     "type": "psychiatry-note",
-    "description": "Browse all 109 psychiatry lessons — 74 disorder courses and 35 concept lessons, filterable by domain, tier and progress.",
+    "description": "Browse all 109 psychiatry lessons: 74 disorder courses and 35 concept lessons, filterable by domain, tier and progress.",
     "href": "/psychiatry/library",
     "keywords": [
       "psychiatry library",
@@ -5915,7 +5915,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-acute-stress-reaction",
     "title": "Acute Stress Reactions",
     "type": "psychiatry-note",
-    "description": "A normal response to an abnormal event — and how to tell recovery from the road to PTSD ~22 min read · 7 questions · Stress, trauma & dissociation-spectrum (6)",
+    "description": "A normal response to an abnormal event, and how to tell recovery from the road to PTSD ~22 min read · 7 questions · Stress, trauma & dissociation-spectrum (6)",
     "href": "/psychiatry/acute-stress-reaction",
     "keywords": [
       "acute stress reactions",
@@ -5934,7 +5934,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-acute-transient-psychosis",
     "title": "Acute & Transient Psychotic Disorders",
     "type": "psychiatry-note",
-    "description": "Psychosis that erupts within days and clears completely — the Indian OPD classic ~20 min read · 6 questions · Psychotic disorders (4)",
+    "description": "Psychosis that erupts within days and clears completely: the Indian OPD classic ~20 min read · 6 questions · Psychotic disorders (4)",
     "href": "/psychiatry/acute-transient-psychosis",
     "keywords": [
       "acute & transient psychotic disorders",
@@ -5953,7 +5953,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-adhd",
     "title": "ADHD",
     "type": "psychiatry-note",
-    "description": "The brakes and the engine — a treatable condition of attention, impulse and activity ~29 min read · 8 questions · Child & adolescent psychiatry (14)",
+    "description": "The brakes and the engine: a treatable condition of attention, impulse and activity ~29 min read · 8 questions · Child & adolescent psychiatry (14)",
     "href": "/psychiatry/adhd",
     "keywords": [
       "adhd",
@@ -5972,7 +5972,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-adjustment-disorder",
     "title": "Adjustment Disorders",
     "type": "psychiatry-note",
-    "description": "Sub-syndromal distress after an identifiable life change — never safe to ignore ~19 min read · 7 questions · Stress, trauma & dissociation-spectrum (6)",
+    "description": "Sub-syndromal distress after an identifiable life change, never safe to ignore ~19 min read · 7 questions · Stress, trauma & dissociation-spectrum (6)",
     "href": "/psychiatry/adjustment-disorder",
     "keywords": [
       "adjustment disorders",
@@ -5991,7 +5991,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-alcohol-related-dementia",
     "title": "Alcohol-Related Dementia",
     "type": "psychiatry-note",
-    "description": "The dementia with an engine you can switch off — some of the lost mind can return ~19 min read · 6 questions · Neurocognitive disorders (14)",
+    "description": "The dementia with an engine you can switch off, some of the lost mind can return ~19 min read · 6 questions · Neurocognitive disorders (14)",
     "href": "/psychiatry/alcohol-related-dementia",
     "keywords": [
       "alcohol-related dementia",
@@ -6010,7 +6010,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-alcohol-use-disorders",
     "title": "Alcohol Use Disorders",
     "type": "psychiatry-note",
-    "description": "The disease of more: more than intended, more often, with more damage — and treatable ~16 min read · 6 questions · Substance use disorders (10)",
+    "description": "The disease of more: more than intended, more often, with more damage, and treatable ~16 min read · 6 questions · Substance use disorders (10)",
     "href": "/psychiatry/alcohol-use-disorders",
     "keywords": [
       "alcohol use disorders",
@@ -6029,7 +6029,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-alzheimers-dementia",
     "title": "Alzheimer's Disease & Dementia",
     "type": "psychiatry-note",
-    "description": "The gradual erasure — six in ten dementias, incurable but very much treatable ~17 min read · 6 questions · Neurocognitive disorders (14)",
+    "description": "The gradual erasure: six in ten dementias, incurable but very much treatable ~17 min read · 6 questions · Neurocognitive disorders (14)",
     "href": "/psychiatry/alzheimers-dementia",
     "keywords": [
       "alzheimer's disease & dementia",
@@ -6048,7 +6048,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-amnesic-syndromes",
     "title": "Amnesic Syndromes",
     "type": "psychiatry-note",
-    "description": "The punched-out hole in new memory — and the thiamine injection that largely prevents it ~11 min read · 6 questions · Neurocognitive disorders (14)",
+    "description": "The punched-out hole in new memory, and the thiamine injection that largely prevents it ~11 min read · 6 questions · Neurocognitive disorders (14)",
     "href": "/psychiatry/amnesic-syndromes",
     "keywords": [
       "amnesic syndromes",
@@ -6067,7 +6067,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-anorexia-nervosa",
     "title": "Anorexia Nervosa",
     "type": "psychiatry-note",
-    "description": "When discipline becomes starvation — restriction fused with a fear of weight gain ~24 min read · 8 questions · Eating disorders (2)",
+    "description": "When discipline becomes starvation: restriction fused with a fear of weight gain ~24 min read · 8 questions · Eating disorders (2)",
     "href": "/psychiatry/anorexia-nervosa",
     "keywords": [
       "anorexia nervosa",
@@ -6086,7 +6086,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-autism",
     "title": "Autism Spectrum Disorder",
     "type": "psychiatry-note",
-    "description": "The prediction engine — sameness as self-built scaffolding against an unfiltered world ~31 min read · 8 questions · Child & adolescent psychiatry (14)",
+    "description": "The prediction engine: sameness as self-built scaffolding against an unfiltered world ~31 min read · 8 questions · Child & adolescent psychiatry (14)",
     "href": "/psychiatry/autism",
     "keywords": [
       "autism spectrum disorder",
@@ -6105,7 +6105,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-benzodiazepine-misuse",
     "title": "Benzodiazepine Misuse",
     "type": "psychiatry-note",
-    "description": "The borrowed calm — a withdrawal that can seize and kill, and the taper that exits it ~12 min read · 6 questions · Substance use disorders (10)",
+    "description": "The borrowed calm: a withdrawal that can seize and kill, and the taper that exits it ~12 min read · 6 questions · Substance use disorders (10)",
     "href": "/psychiatry/benzodiazepine-misuse",
     "keywords": [
       "benzodiazepine misuse",
@@ -6124,7 +6124,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-bereavement",
     "title": "Bereavement & Complicated Grief",
     "type": "psychiatry-note",
-    "description": "Waves, not stages — and the prolonged grief that stays frozen at first-day intensity ~24 min read · 8 questions · Stress, trauma & dissociation-spectrum (6)",
+    "description": "Waves, not stages, and the prolonged grief that stays frozen at first-day intensity ~24 min read · 8 questions · Stress, trauma & dissociation-spectrum (6)",
     "href": "/psychiatry/bereavement",
     "keywords": [
       "bereavement & complicated grief",
@@ -6143,7 +6143,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-bipolar-disorders",
     "title": "Bipolar Disorders",
     "type": "psychiatry-note",
-    "description": "Mania and depression with normal stretches between — treatable, but a long-term condition ~25 min read · 6 questions · Mood disorders (4)",
+    "description": "Mania and depression with normal stretches between: treatable, but a long-term condition ~25 min read · 6 questions · Mood disorders (4)",
     "href": "/psychiatry/bipolar-disorders",
     "keywords": [
       "bipolar disorders",
@@ -6181,7 +6181,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-cannabis-mental-health",
     "title": "Cannabis & Mental Health",
     "type": "psychiatry-note",
-    "description": "Occasional adult use is low-risk — daily, high-potency, adolescent-onset use is not ~12 min read · 6 questions · Substance use disorders (10)",
+    "description": "Occasional adult use is low-risk: daily, high-potency, adolescent-onset use is not ~12 min read · 6 questions · Substance use disorders (10)",
     "href": "/psychiatry/cannabis-mental-health",
     "keywords": [
       "cannabis & mental health",
@@ -6200,7 +6200,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-child-adversity-contexts",
     "title": "Child Adversity Contexts",
     "type": "psychiatry-note",
-    "description": "Bereavement, adoption and parental illness — contexts that raise risk, not disorders ~22 min read · 6 questions · Child & adolescent psychiatry (14)",
+    "description": "Bereavement, adoption and parental illness: contexts that raise risk, not disorders ~22 min read · 6 questions · Child & adolescent psychiatry (14)",
     "href": "/psychiatry/child-adversity-contexts",
     "keywords": [
       "child adversity contexts",
@@ -6219,7 +6219,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-child-anxiety",
     "title": "Child Anxiety",
     "type": "psychiatry-note",
-    "description": "The school-refusal engines — Sunday stomach aches, gate tantrums and frozen speech ~30 min read · 8 questions · Child & adolescent psychiatry (14)",
+    "description": "The school-refusal engines. Sunday stomach aches, gate tantrums and frozen speech ~30 min read · 8 questions · Child & adolescent psychiatry (14)",
     "href": "/psychiatry/child-anxiety",
     "keywords": [
       "child anxiety",
@@ -6238,7 +6238,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-child-assessment-epidemiology",
     "title": "Child Assessment & Epidemiology",
     "type": "psychiatry-note",
-    "description": "The prevalence movers — why estimates differ, and how to find the one child in ten ~15 min read · 6 questions · Child & adolescent psychiatry (14)",
+    "description": "The prevalence movers: why estimates differ, and how to find the one child in ten ~15 min read · 6 questions · Child & adolescent psychiatry (14)",
     "href": "/psychiatry/child-assessment-epidemiology",
     "keywords": [
       "child assessment & epidemiology",
@@ -6257,7 +6257,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-child-neuropsychiatry",
     "title": "Child Neuropsychiatry",
     "type": "psychiatry-note",
-    "description": "Behavioural phenotypes — when the behaviour itself is the physical sign ~19 min read · 6 questions · Child & adolescent psychiatry (14)",
+    "description": "Behavioural phenotypes, when the behaviour itself is the physical sign ~19 min read · 6 questions · Child & adolescent psychiatry (14)",
     "href": "/psychiatry/child-neuropsychiatry",
     "keywords": [
       "child neuropsychiatry",
@@ -6276,7 +6276,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-child-sleep",
     "title": "Child Sleep",
     "type": "psychiatry-note",
-    "description": "The hyperactivity masquerade — sleepiness that slows adults down speeds children up ~21 min read · 6 questions · Child & adolescent psychiatry (14)",
+    "description": "The hyperactivity masquerade: sleepiness that slows adults down speeds children up ~21 min read · 6 questions · Child & adolescent psychiatry (14)",
     "href": "/psychiatry/child-sleep",
     "keywords": [
       "child sleep",
@@ -6295,7 +6295,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-child-trauma-abuse",
     "title": "Child Trauma & Abuse",
     "type": "psychiatry-note",
-    "description": "The disclosure discipline — believe the child, record verbatim once, protect first ~34 min read · 9 questions · Child & adolescent psychiatry (14)",
+    "description": "The disclosure discipline: believe the child, record verbatim once, protect first ~34 min read · 9 questions · Child & adolescent psychiatry (14)",
     "href": "/psychiatry/child-trauma-abuse",
     "keywords": [
       "child trauma & abuse",
@@ -6314,7 +6314,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-cognitive-assessment",
     "title": "Cognitive Assessment",
     "type": "psychiatry-note",
-    "description": "Psychometrics of mind measurement — intelligence, memory and neuropsychological testing ~17 min read · 6 questions · Foundations & sciences (12)",
+    "description": "Psychometrics of mind measurement: intelligence, memory and neuropsychological testing ~17 min read · 6 questions · Foundations & sciences (12)",
     "href": "/psychiatry/cognitive-assessment",
     "keywords": [
       "cognitive assessment",
@@ -6333,7 +6333,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-conduct-disorder",
     "title": "Conduct Disorders",
     "type": "psychiatry-note",
-    "description": "ODD defies, CD violates — the empathy specifier that changes the plan ~30 min read · 8 questions · Child & adolescent psychiatry (14)",
+    "description": "ODD defies, CD violates: the empathy specifier that changes the plan ~30 min read · 8 questions · Child & adolescent psychiatry (14)",
     "href": "/psychiatry/conduct-disorder",
     "keywords": [
       "conduct disorders",
@@ -6352,7 +6352,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-couples-therapy",
     "title": "Couples Therapy",
     "type": "psychiatry-note",
-    "description": "The decentred dialogue — the relationship is the patient, not the individuals in it ~16 min read · 6 questions · Treatment methods (7)",
+    "description": "The decentred dialogue: the relationship is the patient, not the individuals in it ~16 min read · 6 questions · Treatment methods (7)",
     "href": "/psychiatry/couples-therapy",
     "keywords": [
       "couples therapy",
@@ -6371,7 +6371,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-delirium",
     "title": "Delirium",
     "type": "psychiatry-note",
-    "description": "Acute brain failure — sudden confusion signalling a treatable physical cause ~15 min read · 6 questions · Neurocognitive disorders (14)",
+    "description": "Acute brain failure: sudden confusion signalling a treatable physical cause ~15 min read · 6 questions · Neurocognitive disorders (14)",
     "href": "/psychiatry/delirium",
     "keywords": [
       "delirium",
@@ -6447,7 +6447,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-depressive-disorders",
     "title": "Depressive Disorders",
     "type": "psychiatry-note",
-    "description": "The world's most burdensome psychiatric condition — highly treatable when recognised ~14 min read · 6 questions · Mood disorders (4)",
+    "description": "The world's most burdensome psychiatric condition: highly treatable when recognised ~14 min read · 6 questions · Mood disorders (4)",
     "href": "/psychiatry/depressive-disorders",
     "keywords": [
       "depressive disorders",
@@ -6599,7 +6599,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-elderly-suicide",
     "title": "Suicide in the Elderly",
     "type": "psychiatry-note",
-    "description": "The old attempt less and die more — planned, lethal, driven by an engine that treats ~31 min read · 9 questions · Psychiatry of old age (8)",
+    "description": "The old attempt less and die more: planned, lethal, driven by an engine that treats ~31 min read · 9 questions · Psychiatry of old age (8)",
     "href": "/psychiatry/elderly-suicide",
     "keywords": [
       "suicide in the elderly",
@@ -6618,7 +6618,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-family-therapy",
     "title": "Family Therapy",
     "type": "psychiatry-note",
-    "description": "The relationship system around the patient — circular causality, not family blame ~21 min read · 6 questions · Treatment methods (7)",
+    "description": "The relationship system around the patient: circular causality, not family blame ~21 min read · 6 questions · Treatment methods (7)",
     "href": "/psychiatry/family-therapy",
     "keywords": [
       "family therapy",
@@ -6637,7 +6637,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-frontotemporal-dementia",
     "title": "Frontotemporal Dementia",
     "type": "psychiatry-note",
-    "description": "When personality changes first — the younger-onset dementia of frontal and temporal lobes ~14 min read · 6 questions · Neurocognitive disorders (14)",
+    "description": "When personality changes first: the younger-onset dementia of frontal and temporal lobes ~14 min read · 6 questions · Neurocognitive disorders (14)",
     "href": "/psychiatry/frontotemporal-dementia",
     "keywords": [
       "frontotemporal dementia",
@@ -6675,7 +6675,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-gambling-disorder",
     "title": "Gambling Disorder",
     "type": "psychiatry-note",
-    "description": "The addiction without a drug — craving, loss-chasing and relapse, no molecule required ~19 min read · 6 questions · OCD, impulse & habit disorders (3)",
+    "description": "The addiction without a drug: craving, loss-chasing and relapse, no molecule required ~19 min read · 6 questions · OCD, impulse & habit disorders (3)",
     "href": "/psychiatry/gambling-disorder",
     "keywords": [
       "gambling disorder",
@@ -6694,7 +6694,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-gender-identity-adults",
     "title": "Gender Identity in Adults",
     "type": "psychiatry-note",
-    "description": "Incongruence, dysphoria and affirmative care — walked with person and family ~20 min read · 6 questions · Sexuality & gender (3)",
+    "description": "Incongruence, dysphoria and affirmative care: walked with person and family ~20 min read · 6 questions · Sexuality & gender (3)",
     "href": "/psychiatry/gender-identity-adults",
     "keywords": [
       "gender identity in adults",
@@ -6732,7 +6732,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-hallucinogen-use-disorders",
     "title": "Hallucinogen Use Disorders",
     "type": "psychiatry-note",
-    "description": "The great exception — no reward hijack, no withdrawal, but the bad trip and HPPD ~21 min read · 6 questions · Substance use disorders (10)",
+    "description": "The great exception: no reward hijack, no withdrawal, but the bad trip and HPPD ~21 min read · 6 questions · Substance use disorders (10)",
     "href": "/psychiatry/hallucinogen-use-disorders",
     "keywords": [
       "hallucinogen use disorders",
@@ -6770,7 +6770,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-homicide-infanticide",
     "title": "Homicide, Mass Murder & Infanticide",
     "type": "psychiatry-note",
-    "description": "The rare truth — unpredictable, yet largely preventable through better care ~18 min read · 6 questions · Forensic psychiatry (4)",
+    "description": "The rare truth: unpredictable, yet largely preventable through better care ~18 min read · 6 questions · Forensic psychiatry (4)",
     "href": "/psychiatry/homicide-infanticide",
     "keywords": [
       "homicide, mass murder & infanticide",
@@ -6789,7 +6789,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-huntingtons-neuropsychiatry",
     "title": "Huntington's Disease Psychiatry",
     "type": "psychiatry-note",
-    "description": "The family disease — chorea, mood change and dementia on one autosomal dominant gene ~13 min read · 6 questions · Neurocognitive disorders (14)",
+    "description": "The family disease: chorea, mood change and dementia on one autosomal dominant gene ~13 min read · 6 questions · Neurocognitive disorders (14)",
     "href": "/psychiatry/huntingtons-neuropsychiatry",
     "keywords": [
       "huntington's disease psychiatry",
@@ -6808,7 +6808,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-hypersomnia",
     "title": "Excessive Sleepiness & Hypersomnias",
     "type": "psychiatry-note",
-    "description": "The four engines behind the sleepy patient — each demands a different treatment ~24 min read · 8 questions · Sleep–wake disorders (4)",
+    "description": "The four engines behind the sleepy patient: each demands a different treatment ~24 min read · 8 questions · Sleep–wake disorders (4)",
     "href": "/psychiatry/hypersomnia",
     "keywords": [
       "excessive sleepiness & hypersomnias",
@@ -6827,7 +6827,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-id-dual-diagnosis",
     "title": "Dual Diagnosis in ID",
     "type": "psychiatry-note",
-    "description": "Beyond diagnostic overshadowing — mental illness in ID speaks through behaviour ~18 min read · 9 questions · Intellectual disability (4)",
+    "description": "Beyond diagnostic overshadowing: mental illness in ID speaks through behaviour ~18 min read · 9 questions · Intellectual disability (4)",
     "href": "/psychiatry/id-dual-diagnosis",
     "keywords": [
       "dual diagnosis in id",
@@ -6884,7 +6884,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-impulse-control-disorders",
     "title": "Impulse Control Disorders",
     "type": "psychiatry-note",
-    "description": "One engine, five faces — kleptomania, pyromania, IED, trichotillomania and skin-picking ~20 min read · 6 questions · OCD, impulse & habit disorders (3)",
+    "description": "One engine, five faces: kleptomania, pyromania, IED, trichotillomania and skin-picking ~20 min read · 6 questions · OCD, impulse & habit disorders (3)",
     "href": "/psychiatry/impulse-control-disorders",
     "keywords": [
       "impulse control disorders",
@@ -6922,7 +6922,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-insomnia",
     "title": "Insomnia",
     "type": "psychiatry-note",
-    "description": "Chronic insomnia disorder — CBT-I is the first line, not a sleeping tablet ~24 min read · 8 questions · Sleep–wake disorders (4)",
+    "description": "Chronic insomnia disorder. CBT-I is the first line, not a sleeping tablet ~24 min read · 8 questions · Sleep–wake disorders (4)",
     "href": "/psychiatry/insomnia",
     "keywords": [
       "insomnia",
@@ -6941,7 +6941,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-intellectual-disability-overview",
     "title": "Intellectual Disability",
     "type": "psychiatry-note",
-    "description": "Supports, not just scores — severity graded by adaptive support needs, not the IQ decimal ~32 min read · 9 questions · Intellectual disability (4)",
+    "description": "Supports, not just scores: severity graded by adaptive support needs, not the IQ decimal ~32 min read · 9 questions · Intellectual disability (4)",
     "href": "/psychiatry/intellectual-disability-overview",
     "keywords": [
       "intellectual disability",
@@ -6979,7 +6979,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-late-life-psychosis",
     "title": "Late-Life Psychosis",
     "type": "psychiatry-note",
-    "description": "The ridden-upon illness — deafness, dementia, depression or drugs may lie underneath ~29 min read · 9 questions · Psychiatry of old age (8)",
+    "description": "The ridden-upon illness: deafness, dementia, depression or drugs may lie underneath ~29 min read · 9 questions · Psychiatry of old age (8)",
     "href": "/psychiatry/late-life-psychosis",
     "keywords": [
       "late-life psychosis",
@@ -6998,7 +6998,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-lewy-body-dementia",
     "title": "Dementia with Lewy Bodies",
     "type": "psychiatry-note",
-    "description": "The fluctuating dementia — hallucinations, parkinsonism and dream-acting sleep ~14 min read · 6 questions · Neurocognitive disorders (14)",
+    "description": "The fluctuating dementia: hallucinations, parkinsonism and dream-acting sleep ~14 min read · 6 questions · Neurocognitive disorders (14)",
     "href": "/psychiatry/lewy-body-dementia",
     "keywords": [
       "dementia with lewy bodies",
@@ -7017,7 +7017,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-mci",
     "title": "Mild Cognitive Impairment",
     "type": "psychiatry-note",
-    "description": "The crossroads between normal ageing and dementia — objective decline, function preserved ~23 min read · 8 questions · Psychiatry of old age (8)",
+    "description": "The crossroads between normal ageing and dementia: objective decline, function preserved ~23 min read · 8 questions · Psychiatry of old age (8)",
     "href": "/psychiatry/mci",
     "keywords": [
       "mild cognitive impairment",
@@ -7036,7 +7036,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-memory-emotion-science",
     "title": "Memory & Emotion",
     "type": "psychiatry-note",
-    "description": "The psychological science — memory systems, emotion circuits, psychiatric relevance ~15 min read · 6 questions · Foundations & sciences (12)",
+    "description": "The psychological science: memory systems, emotion circuits, psychiatric relevance ~15 min read · 6 questions · Foundations & sciences (12)",
     "href": "/psychiatry/memory-emotion-science",
     "keywords": [
       "memory & emotion",
@@ -7055,7 +7055,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-memory-rehabilitation",
     "title": "Memory Rehabilitation",
     "type": "psychiatry-note",
-    "description": "The engineering discipline — compensation, not restoration, for the memory that remains ~16 min read · 6 questions · Neurocognitive disorders (14)",
+    "description": "The engineering discipline: compensation, not restoration, for the memory that remains ~16 min read · 6 questions · Neurocognitive disorders (14)",
     "href": "/psychiatry/memory-rehabilitation",
     "keywords": [
       "memory rehabilitation",
@@ -7074,7 +7074,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-mental-health-law",
     "title": "Mental Health Law",
     "type": "psychiatry-note",
-    "description": "Capacity, liability and duty — answered functionally, case by case, never by status ~18 min read · 6 questions · Forensic psychiatry (4)",
+    "description": "Capacity, liability and duty: answered functionally, case by case, never by status ~18 min read · 6 questions · Forensic psychiatry (4)",
     "href": "/psychiatry/mental-health-law",
     "keywords": [
       "mental health law",
@@ -7093,7 +7093,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-mh-services",
     "title": "Community Mental Health Services",
     "type": "psychiatry-note",
-    "description": "The architecture of care — beds, teams, tiers and the planning discipline behind them ~15 min read · 6 questions · Social psychiatry & services (4)",
+    "description": "The architecture of care: beds, teams, tiers and the planning discipline behind them ~15 min read · 6 questions · Social psychiatry & services (4)",
     "href": "/psychiatry/mh-services",
     "keywords": [
       "community mental health services",
@@ -7112,7 +7112,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-neuroendocrinology",
     "title": "Neuroendocrinology in Psychiatry",
     "type": "psychiatry-note",
-    "description": "The hypothalamic-pituitary axes — hormones as the brain's messengers and markers ~18 min read · 7 questions · Foundations & sciences (12)",
+    "description": "The hypothalamic-pituitary axes: hormones as the brain's messengers and markers ~18 min read · 7 questions · Foundations & sciences (12)",
     "href": "/psychiatry/neuroendocrinology",
     "keywords": [
       "neuroendocrinology in psychiatry",
@@ -7131,7 +7131,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-neuroimaging",
     "title": "Brain Imaging in Psychiatry",
     "type": "psychiatry-note",
-    "description": "PET, SPET and MRI windows on the living brain — what scans show and what they cost ~14 min read · 6 questions · Foundations & sciences (12)",
+    "description": "PET, SPET and MRI windows on the living brain: what scans show and what they cost ~14 min read · 6 questions · Foundations & sciences (12)",
     "href": "/psychiatry/neuroimaging",
     "keywords": [
       "brain imaging in psychiatry",
@@ -7150,7 +7150,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-neurotransmitters",
     "title": "Neurotransmitters & Signalling",
     "type": "psychiatry-note",
-    "description": "The shared language of the brain — and the grammar of every drug you prescribe ~16 min read · 6 questions · Foundations & sciences (12)",
+    "description": "The shared language of the brain, and the grammar of every drug you prescribe ~16 min read · 6 questions · Foundations & sciences (12)",
     "href": "/psychiatry/neurotransmitters",
     "keywords": [
       "neurotransmitters & signalling",
@@ -7169,7 +7169,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-nicotine-dependence",
     "title": "Nicotine Dependence",
     "type": "psychiatry-note",
-    "description": "India's largest preventable cause of death — and its most quit-able addiction ~11 min read · 6 questions · Substance use disorders (10)",
+    "description": "India's largest preventable cause of death, and its most quit-able addiction ~11 min read · 6 questions · Substance use disorders (10)",
     "href": "/psychiatry/nicotine-dependence",
     "keywords": [
       "nicotine dependence",
@@ -7359,7 +7359,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-persistent-mood-disorders",
     "title": "Dysthymia, Cyclothymia & Hyperthymia",
     "type": "psychiatry-note",
-    "description": "Mood disorders below the episode threshold — too mild to hospitalise, too long to ignore ~22 min read · 6 questions · Mood disorders (4)",
+    "description": "Mood disorders below the episode threshold: too mild to hospitalise, too long to ignore ~22 min read · 6 questions · Mood disorders (4)",
     "href": "/psychiatry/persistent-mood-disorders",
     "keywords": [
       "dysthymia, cyclothymia & hyperthymia",
@@ -7378,7 +7378,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-personality-assessment",
     "title": "Personality Assessment",
     "type": "psychiatry-note",
-    "description": "Temperament, character and the clinical read — inventories, interviews and formulation ~13 min read · 6 questions · Foundations & sciences (12)",
+    "description": "Temperament, character and the clinical read: inventories, interviews and formulation ~13 min read · 6 questions · Foundations & sciences (12)",
     "href": "/psychiatry/personality-assessment",
     "keywords": [
       "personality assessment",
@@ -7454,7 +7454,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-primary-care-psychiatry",
     "title": "Psychiatry in Primary Care",
     "type": "psychiatry-note",
-    "description": "Closing India's treatment gap — detection, first-line care, the five-minute consultation ~22 min read · 6 questions · Social psychiatry & services (4)",
+    "description": "Closing India's treatment gap: detection, first-line care, the five-minute consultation ~22 min read · 6 questions · Social psychiatry & services (4)",
     "href": "/psychiatry/primary-care-psychiatry",
     "keywords": [
       "psychiatry in primary care",
@@ -7492,7 +7492,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-psychiatric-assessment",
     "title": "Psychiatric Assessment",
     "type": "psychiatry-note",
-    "description": "History, examination, risk, formulation — the plan, not the label, is the product ~17 min read · 6 questions · Foundations & sciences (12)",
+    "description": "History, examination, risk, formulation: the plan, not the label, is the product ~17 min read · 6 questions · Foundations & sciences (12)",
     "href": "/psychiatry/psychiatric-assessment",
     "keywords": [
       "psychiatric assessment",
@@ -7511,7 +7511,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-psychiatric-classification",
     "title": "Diagnosis & Classification",
     "type": "psychiatry-note",
-    "description": "DSM/ICD logic — categories, criteria, the operational revolution and its limits. ~17 min read · 6 questions · Foundations & sciences (12)",
+    "description": "DSM/ICD logic: categories, criteria, the operational revolution and its limits. ~17 min read · 6 questions · Foundations & sciences (12)",
     "href": "/psychiatry/psychiatric-classification",
     "keywords": [
       "diagnosis & classification",
@@ -7530,7 +7530,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-psychiatric-genetics",
     "title": "Genetics in Psychiatry",
     "type": "psychiatry-note",
-    "description": "From Mendel to the molecular maze — heritability, twin studies, linkage, the new genetics ~17 min read · 6 questions · Foundations & sciences (12)",
+    "description": "From Mendel to the molecular maze: heritability, twin studies, linkage, the new genetics ~17 min read · 6 questions · Foundations & sciences (12)",
     "href": "/psychiatry/psychiatric-genetics",
     "keywords": [
       "genetics in psychiatry",
@@ -7606,7 +7606,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-psychodynamic-theories",
     "title": "Psychodynamic Theories",
     "type": "psychiatry-note",
-    "description": "Core ideas from Freud to the present — the unconscious, defence, development ~13 min read · 6 questions · Foundations & sciences (12)",
+    "description": "Core ideas from Freud to the present: the unconscious, defence, development ~13 min read · 6 questions · Foundations & sciences (12)",
     "href": "/psychiatry/psychodynamic-theories",
     "keywords": [
       "psychodynamic theories",
@@ -7663,7 +7663,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-refugee-mental-health",
     "title": "Refugees & Mental Health",
     "type": "psychiatry-note",
-    "description": "Trauma, displacement and the long recovery — law, burden, screening and care. ~15 min read · 6 questions · Social psychiatry & services (4)",
+    "description": "Trauma, displacement and the long recovery: law, burden, screening and care. ~15 min read · 6 questions · Social psychiatry & services (4)",
     "href": "/psychiatry/refugee-mental-health",
     "keywords": [
       "refugees & mental health",
@@ -7758,7 +7758,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-social-anxiety-phobias",
     "title": "Social Anxiety Disorder & Specific Phobias",
     "type": "psychiatry-note",
-    "description": "Scrutiny fears in social anxiety, single-object fears in phobias — both highly treatable ~22 min read · 8 questions · Anxiety disorders (3)",
+    "description": "Scrutiny fears in social anxiety, single-object fears in phobias, both highly treatable ~22 min read · 8 questions · Anxiety disorders (3)",
     "href": "/psychiatry/social-anxiety-phobias",
     "keywords": [
       "social anxiety disorder & specific phobias",
@@ -7777,7 +7777,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-speech-language-disorders",
     "title": "Speech & Language Disorders",
     "type": "psychiatry-note",
-    "description": "Speech and language difficulties hide behind behaviour — treat what persists past age 5 ~18 min read · 6 questions · Child & adolescent psychiatry (14)",
+    "description": "Speech and language difficulties hide behind behaviour: treat what persists past age 5 ~18 min read · 6 questions · Child & adolescent psychiatry (14)",
     "href": "/psychiatry/speech-language-disorders",
     "keywords": [
       "speech & language disorders",
@@ -7796,7 +7796,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-stimulant-use-disorders",
     "title": "Stimulant Use Disorders",
     "type": "psychiatry-note",
-    "description": "Run, crash, crave — borrowed energy where the crash, not the high, drives relapse ~12 min read · 6 questions · Substance use disorders (10)",
+    "description": "Run, crash, crave: borrowed energy where the crash, not the high, drives relapse ~12 min read · 6 questions · Substance use disorders (10)",
     "href": "/psychiatry/stimulant-use-disorders",
     "keywords": [
       "stimulant use disorders",
@@ -7834,7 +7834,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-suicide-self-harm",
     "title": "Suicide & Deliberate Self-Harm",
     "type": "psychiatry-note",
-    "description": "Not a diagnosis but an emergency state — ask directly, remove the means, connect to care ~25 min read · 7 questions · Mood disorders (4)",
+    "description": "Not a diagnosis but an emergency state: ask directly, remove the means, connect to care ~25 min read · 7 questions · Mood disorders (4)",
     "href": "/psychiatry/suicide-self-harm",
     "keywords": [
       "suicide & deliberate self-harm",
@@ -7853,7 +7853,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-tbi-neuropsychiatry",
     "title": "Traumatic Brain Injury Neuropsychiatry",
     "type": "psychiatry-note",
-    "description": "Slowed thinking, changed mood, released temper — the invisible triad after head injury ~12 min read · 6 questions · Neurocognitive disorders (14)",
+    "description": "Slowed thinking, changed mood, released temper: the invisible triad after head injury ~12 min read · 6 questions · Neurocognitive disorders (14)",
     "href": "/psychiatry/tbi-neuropsychiatry",
     "keywords": [
       "traumatic brain injury neuropsychiatry",
@@ -7872,7 +7872,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-therapeutic-communities",
     "title": "Therapeutic Communities",
     "type": "psychiatry-note",
-    "description": "The institution is the treatment — daily life itself run on the four Henderson principles ~15 min read · 6 questions · Treatment methods (7)",
+    "description": "The institution is the treatment: daily life itself run on the four Henderson principles ~15 min read · 6 questions · Treatment methods (7)",
     "href": "/psychiatry/therapeutic-communities",
     "keywords": [
       "therapeutic communities",
@@ -7891,7 +7891,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-transcultural-stigma",
     "title": "Transcultural Psychiatry & Stigma",
     "type": "psychiatry-note",
-    "description": "Culture's shaping hand and the mark of mental illness — idioms, pathways and stigma. ~15 min read · 6 questions · Foundations & sciences (12)",
+    "description": "Culture's shaping hand and the mark of mental illness: idioms, pathways and stigma. ~15 min read · 6 questions · Foundations & sciences (12)",
     "href": "/psychiatry/transcultural-stigma",
     "keywords": [
       "transcultural psychiatry & stigma",
@@ -7910,7 +7910,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-vascular-dementia",
     "title": "Vascular Dementia",
     "type": "psychiatry-note",
-    "description": "The staircase decline — thinking loss from damaged blood supply, largely preventable ~14 min read · 6 questions · Neurocognitive disorders (14)",
+    "description": "The staircase decline: thinking loss from damaged blood supply, largely preventable ~14 min read · 6 questions · Neurocognitive disorders (14)",
     "href": "/psychiatry/vascular-dementia",
     "keywords": [
       "vascular dementia",
@@ -7929,7 +7929,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-volatile-substance-misuse",
     "title": "Volatile Substance Misuse",
     "type": "psychiatry-note",
-    "description": "The stationery-shop drug — legal, cheap, child-accessible, and suddenly lethal ~22 min read · 6 questions · Substance use disorders (10)",
+    "description": "The stationery-shop drug: legal, cheap, child-accessible, and suddenly lethal ~22 min read · 6 questions · Substance use disorders (10)",
     "href": "/psychiatry/volatile-substance-misuse",
     "keywords": [
       "volatile substance misuse",
@@ -7948,7 +7948,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-voluntary-sector",
     "title": "The Voluntary Sector",
     "type": "psychiatry-note",
-    "description": "Experts by experience — services, campaigns and critical friendship for psychiatry ~15 min read · 6 questions · Social psychiatry & services (4)",
+    "description": "Experts by experience: services, campaigns and critical friendship for psychiatry ~15 min read · 6 questions · Social psychiatry & services (4)",
     "href": "/psychiatry/voluntary-sector",
     "keywords": [
       "the voluntary sector",
@@ -7967,7 +7967,7 @@ export const searchIndexGenerated: SearchableItem[] = [
     "id": "psychiatry-youth-suicide",
     "title": "Youth Suicide & Self-Harm",
     "type": "psychiatry-note",
-    "description": "Impulsive, means-dependent — ask directly, remove the means, build the safety-first card ~34 min read · 9 questions · Child & adolescent psychiatry (14)",
+    "description": "Impulsive, means-dependent. Ask directly, remove the means, build the safety-first card ~34 min read · 9 questions · Child & adolescent psychiatry (14)",
     "href": "/psychiatry/youth-suicide",
     "keywords": [
       "youth suicide & self-harm",

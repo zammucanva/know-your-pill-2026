@@ -403,7 +403,7 @@ export const rivastigmine: Drug = {
           comparisons: [
             {
               drug: "Donepezil",
-              value: "The once-daily AChE inhibitor — Alzheimer's first-line",
+              value: "The once-daily AChE inhibitor. Alzheimer's first-line",
             },
             {
               drug: "Galantamine",

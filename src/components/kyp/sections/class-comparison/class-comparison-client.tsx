@@ -131,7 +131,7 @@ function ClassComparisonBody() {
           </div>
           {rawClass !== "" && !classExists && (
             <p className="mt-3 text-xs text-warning" role="alert">
-              Unknown class &ldquo;{rawClass}&rdquo; — pick one from the list above.
+              Unknown class &ldquo;{rawClass}&rdquo;; pick one from the list above.
             </p>
           )}
           <p className="mt-3 text-xs leading-relaxed text-muted-foreground/60">
@@ -226,7 +226,7 @@ function ClassComparisonBody() {
             {isSingleDrugClass && (
               <div className="mb-5 rounded-xl border border-warning/30 bg-warning-soft/20 p-4">
                 <p className="text-sm leading-relaxed text-foreground/90">
-                  This class has <strong>one medication</strong> in the library —{" "}
+                  This class has <strong>one medication</strong> in the library:{" "}
                   {cls.medications[0].genericName}. A comparison needs at least two
                   medications, so below is its concern profile on its own. Every
                   other class with 2+ medications shows a true comparison.
@@ -270,7 +270,7 @@ function ClassComparisonBody() {
                 1st ed. 2005 for the original twelve) where present. Frequency
                 bands and severity labels are the documented values, verbatim;
                 concern matching is by documented effect names only. Cells with no
-                matching entry show &ldquo;Data not available&rdquo; — absence of
+                matching entry show &ldquo;Data not available&rdquo;; absence of
                 documentation is never read as absence of effect.
               </p>
             </div>
@@ -320,7 +320,7 @@ function ClassComparisonBody() {
               </li>
             </ol>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground/80">
-              The matrix shows <strong>how medications differ</strong> — never
+              The matrix shows <strong>how medications differ</strong>, never
               which is &ldquo;best&rdquo;. Every value traces back to a
               medication page; nothing is scored, ranked or invented.
             </p>

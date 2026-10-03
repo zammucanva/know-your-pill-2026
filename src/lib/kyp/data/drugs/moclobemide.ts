@@ -399,19 +399,19 @@ export const moclobemide: Drug = {
           comparisons: [
             {
               drug: "Phenelzine",
-              value: "Weight gain common — the MAOI story.",
+              value: "Weight gain common: the MAOI story.",
             },
             {
               drug: "Isocarboxazid",
-              value: "Weight gain common — the MAOI story.",
+              value: "Weight gain common: the MAOI story.",
             },
             {
               drug: "Selegiline",
-              value: "Weight gain common — the MAOI story.",
+              value: "Weight gain common: the MAOI story.",
             },
             {
               drug: "Tranylcypromine",
-              value: "Weight gain common — the MAOI story.",
+              value: "Weight gain common: the MAOI story.",
             },
           ],
         },
@@ -443,11 +443,11 @@ export const moclobemide: Drug = {
           comparisons: [
             {
               drug: "Phenelzine",
-              value: "The atypical-depression legend — MAOI pharmacology's flagship",
+              value: "The atypical-depression legend. MAOI pharmacology's flagship",
             },
             {
               drug: "Isocarboxazid",
-              value: "The quiet hydrazine — legacy MAOI continuity",
+              value: "The quiet hydrazine: legacy MAOI continuity",
             },
             {
               drug: "Selegiline",
@@ -455,7 +455,7 @@ export const moclobemide: Drug = {
             },
             {
               drug: "Tranylcypromine",
-              value: "The activating MAOI — anergic treatment-resistant depression",
+              value: "The activating MAOI: anergic treatment-resistant depression",
             },
           ],
         },

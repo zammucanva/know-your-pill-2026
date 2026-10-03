@@ -606,7 +606,7 @@ export function ConceptHighYield({ course }: { course: PsychiatryCourse }) {
         {/* The print revision sheet: the full unmodified paragraphs,
             rendered in the compact print layout (1–2 A4 pages). */}
         <div data-revision-full className="sr-only">
-          <h4>{course.title} — one-page revision</h4>
+          <h4>{course.title}: one-page revision</h4>
           {course.highYieldSummary.map((para, i) => (
             <p key={i}>{para}</p>
           ))}

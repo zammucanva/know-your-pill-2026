@@ -337,7 +337,7 @@ export const flumazenil: Drug = {
           comparisons: [
             {
               drug: "Flumazenil",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },

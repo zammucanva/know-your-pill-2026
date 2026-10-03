@@ -96,7 +96,7 @@ export default function ClassComparisonPage() {
                     aria-hidden
                   />
                   <span>
-                    This is an <strong>educational comparison</strong> — it shows
+                    This is an <strong>educational comparison</strong>: it shows
                     how medications <em>differ</em> across selected concerns so
                     you can inspect the differences yourself. It is not a
                     prescribing algorithm and never names a &ldquo;best&rdquo;

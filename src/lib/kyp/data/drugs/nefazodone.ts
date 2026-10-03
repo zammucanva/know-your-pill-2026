@@ -433,7 +433,7 @@ export const nefazodone: Drug = {
           comparisons: [
             {
               drug: "Trazodone",
-              value: "The antidepressant sleeping pill — insomnia at 50 mg, depression at 300 mg",
+              value: "The antidepressant sleeping pill: insomnia at 50 mg, depression at 300 mg",
             },
             {
               drug: "Vilazodone",

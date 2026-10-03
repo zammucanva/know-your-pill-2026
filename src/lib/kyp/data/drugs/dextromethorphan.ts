@@ -335,7 +335,7 @@ export const dextromethorphan: Drug = {
           comparisons: [
             {
               drug: "Ketamine",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },

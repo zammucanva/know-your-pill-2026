@@ -362,7 +362,7 @@ export const clomipramine: Drug = {
 
   seriousSideEffects: [
     {
-      name: "Cardiac arrhythmia (signature — potentially fatal, especially in overdose)",
+      name: "Cardiac arrhythmia (signature, potentially fatal, especially in overdose)",
       frequency: "rare",
       severity: "life-threatening",
       description:
@@ -771,7 +771,7 @@ export const clomipramine: Drug = {
           primaryValue: "SERT >> NET: the MOST serotonergic TCA. Plus α1, H1, M1, Na+ channel blockade ('dirty drug').",
           comparisons: [
             { drug: "Amitriptyline", value: "SERT ≈ NET (balanced). Same dirty off-target profile (α1, H1, M1, Na+ channel)." },
-            { drug: "Sertraline", value: "Selective SERT blockade only (clean — no off-targets)" },
+            { drug: "Sertraline", value: "Selective SERT blockade only (clean, no off-targets)" },
             { drug: "Fluvoxamine", value: "Selective SERT blockade (clean). Strong CYP1A2 inhibitor." },
           ],
         },
@@ -779,7 +779,7 @@ export const clomipramine: Drug = {
           attribute: "OCD efficacy (the signature row)",
           primaryValue: "EFFECTIVE. ONLY TCA effective for OCD (because most serotonergic). Often more effective than SSRIs for severe OCD.",
           comparisons: [
-            { drug: "Amitriptyline", value: "NOT effective for OCD (less serotonergic). Off-label for pain, migraine, insomnia — not OCD." },
+            { drug: "Amitriptyline", value: "NOT effective for OCD (less serotonergic). Off-label for pain, migraine, insomnia, not OCD." },
             { drug: "Sertraline", value: "Effective for OCD (FDA-approved). First-line. Often less effective than clomipramine for severe OCD." },
             { drug: "Fluvoxamine", value: "Effective for OCD (FDA-approved). Preferred SSRI for paediatric OCD. CANNOT be combined with clomipramine (CYP1A2)." },
           ],
@@ -788,9 +788,9 @@ export const clomipramine: Drug = {
           attribute: "Overdose lethality (the safety row)",
           primaryValue: "LETHAL: 10× dose can kill. Same as amitriptyline. Class effect of TCAs.",
           comparisons: [
-            { drug: "Amitriptyline", value: "LETHAL — same as clomipramine. #1 antidepressant overdose killer class." },
-            { drug: "Sertraline", value: "Safe in overdose — reason SSRIs are first-line" },
-            { drug: "Fluvoxamine", value: "Safe in overdose — reason SSRIs are first-line" },
+            { drug: "Amitriptyline", value: "LETHAL: same as clomipramine. #1 antidepressant overdose killer class." },
+            { drug: "Sertraline", value: "Safe in overdose: reason SSRIs are first-line" },
+            { drug: "Fluvoxamine", value: "Safe in overdose: reason SSRIs are first-line" },
           ],
         },
         {
@@ -807,15 +807,15 @@ export const clomipramine: Drug = {
           primaryValue: "MORE than amitriptyline (serotonergic). Used off-label for premature ejaculation.",
           comparisons: [
             { drug: "Amitriptyline", value: "Less than clomipramine (less serotonergic). Multifactorial." },
-            { drug: "Sertraline", value: "Common (30–40%) — serotonergic class effect" },
-            { drug: "Fluvoxamine", value: "Common (30–40%) — serotonergic class effect" },
+            { drug: "Sertraline", value: "Common (30–40%): serotonergic class effect" },
+            { drug: "Fluvoxamine", value: "Common (30–40%): serotonergic class effect" },
           ],
         },
         {
           attribute: "Anticholinergic burden",
           primaryValue: "HIGH: dry mouth, constipation, urinary retention, blurred vision, cognitive impairment",
           comparisons: [
-            { drug: "Amitriptyline", value: "HIGH — same as clomipramine (tertiary amine)" },
+            { drug: "Amitriptyline", value: "HIGH: same as clomipramine (tertiary amine)" },
             { drug: "Sertraline", value: "Minimal" },
             { drug: "Fluvoxamine", value: "Minimal" },
           ],
@@ -824,7 +824,7 @@ export const clomipramine: Drug = {
           attribute: "Active metabolite",
           primaryValue: "Desmethylclomipramine (NET > SERT, noradrenergic). Clomipramine effectively becomes an SNRI over weeks.",
           comparisons: [
-            { drug: "Amitriptyline", value: "Nortriptyline (NET > SERT — defined therapeutic window 50–150 ng/mL)" },
+            { drug: "Amitriptyline", value: "Nortriptyline (NET > SERT, defined therapeutic window 50–150 ng/mL)" },
             { drug: "Sertraline", value: "N-desmethylsertraline (weak SERT activity, minimal clinical contribution)" },
             { drug: "Fluvoxamine", value: "No clinically significant active metabolite" },
           ],
@@ -842,7 +842,7 @@ export const clomipramine: Drug = {
           attribute: "Pregnancy/lactation",
           primaryValue: "Avoid, not drug of choice. Sertraline preferred for OCD in pregnancy.",
           comparisons: [
-            { drug: "Amitriptyline", value: "Avoid — not drug of choice. Sertraline preferred." },
+            { drug: "Amitriptyline", value: "Avoid, not drug of choice. Sertraline preferred." },
             { drug: "Sertraline", value: "SSRI of choice in pregnancy/lactation" },
             { drug: "Fluvoxamine", value: "Limited data; sertraline preferred in pregnancy" },
           ],

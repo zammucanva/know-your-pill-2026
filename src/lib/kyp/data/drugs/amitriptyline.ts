@@ -352,7 +352,7 @@ export const amitriptyline: Drug = {
 
   seriousSideEffects: [
     {
-      name: "Cardiac arrhythmia (signature — potentially fatal, especially in overdose)",
+      name: "Cardiac arrhythmia (signature, potentially fatal, especially in overdose)",
       frequency: "rare",
       severity: "life-threatening",
       description:
@@ -754,7 +754,7 @@ export const amitriptyline: Drug = {
           primaryValue: "SERT + NET + α1 + H1 + M1 + Na+ channel blockade ('dirty drug')",
           comparisons: [
             { drug: "Sertraline", value: "Selective SERT blockade only (clean)" },
-            { drug: "Venlafaxine", value: "SERT + NET blockade (clean — like an SNRI)" },
+            { drug: "Venlafaxine", value: "SERT + NET blockade (clean, like an SNRI)" },
             { drug: "Nortriptyline", value: "NET > SERT + weak α1/H1/M1 (less 'dirty' than amitriptyline)" },
           ],
         },
@@ -762,8 +762,8 @@ export const amitriptyline: Drug = {
           attribute: "Overdose lethality (the safety row)",
           primaryValue: "LETHAL: 10× dose can kill. #1 antidepressant overdose killer.",
           comparisons: [
-            { drug: "Sertraline", value: "Safe in overdose — safer than TCAs (the reason SSRIs are first-line)" },
-            { drug: "Venlafaxine", value: "Moderate — more toxic than SSRIs but less than TCAs" },
+            { drug: "Sertraline", value: "Safe in overdose: safer than TCAs (the reason SSRIs are first-line)" },
+            { drug: "Venlafaxine", value: "Moderate: more toxic than SSRIs but less than TCAs" },
             { drug: "Nortriptyline", value: "Lethal in overdose (TCA class effect) but less than amitriptyline" },
           ],
         },
@@ -780,9 +780,9 @@ export const amitriptyline: Drug = {
           attribute: "Therapeutic drug monitoring (the therapeutic window row)",
           primaryValue: "Yes: nortriptyline (metabolite) target 50–150 ng/mL",
           comparisons: [
-            { drug: "Sertraline", value: "No — no established therapeutic window" },
-            { drug: "Venlafaxine", value: "No — no established therapeutic window" },
-            { drug: "Nortriptyline", value: "Yes — UNIQUE among antidepressants: 50–150 ng/mL" },
+            { drug: "Sertraline", value: "No: no established therapeutic window" },
+            { drug: "Venlafaxine", value: "No: no established therapeutic window" },
+            { drug: "Nortriptyline", value: "Yes. UNIQUE among antidepressants: 50–150 ng/mL" },
           ],
         },
         {
@@ -791,7 +791,7 @@ export const amitriptyline: Drug = {
           comparisons: [
             { drug: "Sertraline", value: "Not used for pain" },
             { drug: "Venlafaxine", value: "Some neuropathic pain benefit" },
-            { drug: "Nortriptyline", value: "Same pain indications as amitriptyline — fewer side effects" },
+            { drug: "Nortriptyline", value: "Same pain indications as amitriptyline: fewer side effects" },
           ],
         },
         {
@@ -826,7 +826,7 @@ export const amitriptyline: Drug = {
           primaryValue: "Avoid, not drug of choice. Sertraline preferred.",
           comparisons: [
             { drug: "Sertraline", value: "SSRI of choice in pregnancy/lactation" },
-            { drug: "Venlafaxine", value: "Generally avoided — limited data" },
+            { drug: "Venlafaxine", value: "Generally avoided: limited data" },
             { drug: "Nortriptyline", value: "If TCA essential, nortriptyline preferred (more data)" },
           ],
         },

@@ -49,7 +49,7 @@ export const sertraline: Drug = {
   mechanism: {
     summary:
       "Sertraline selectively blocks the serotonin transporter (SERT), increasing serotonin concentration in the synaptic cleft and enhancing serotonergic neurotransmission.",
-    molecularTarget: "SERT (SLC6A4, serotonin transporter)",
+    molecularTarget: "SERT (SLC6A4 — serotonin transporter)",
     effect:
       "Acute: increased synaptic serotonin. Chronic (2–6 weeks): desensitisation of 5-HT1A somatodendritic autoreceptors in the raphe nuclei, increased serotonergic throughput to the prefrontal cortex, and upregulation of BDNF in the hippocampus.",
     steps: [

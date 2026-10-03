@@ -108,7 +108,7 @@ export default function StudyPage() {
               <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground leading-relaxed">
                 Learn. Practice. Continue where you left off. Choose a
                 medication and work through it like a course: learning
-                objectives, guided lessons, checkpoints, and active recall —
+                objectives, guided lessons, checkpoints, and active recall,
                 then test yourself and pick up exactly where you left off
                 next time.
               </p>

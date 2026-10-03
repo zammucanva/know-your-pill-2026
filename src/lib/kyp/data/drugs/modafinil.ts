@@ -393,7 +393,7 @@ export const modafinil: Drug = {
           comparisons: [
             {
               drug: "Armodafinil",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
           ],
         },

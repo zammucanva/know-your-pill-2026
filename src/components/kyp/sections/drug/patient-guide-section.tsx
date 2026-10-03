@@ -136,7 +136,7 @@ export function PatientGuideSection({ drug, guide }: PatientGuideSectionProps) {
                   {MEDICAL_DETAIL_LABEL}
                   <span className="font-normal text-muted-foreground">
                     {" "}
-                    — optional, more technical
+                    (optional, more technical)
                   </span>
                 </span>
                 <ChevronDown

@@ -131,7 +131,7 @@ export default function MedicinePage() {
                     Weighing options within a class? Compare them by concern
                   </span>
                   <span className="mt-1.5 block text-sm leading-relaxed text-muted-foreground">
-                    Choose a medication class and the concerns that matter —
+                    Choose a medication class and the concerns that matter:
                     weight, sedation, prolactin, EPS and more, and see how
                     each medicine&apos;s own documented profile differs. An
                     educational comparison, never a ranking.

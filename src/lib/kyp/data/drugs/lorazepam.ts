@@ -475,19 +475,19 @@ export const lorazepam: Drug = {
           comparisons: [
             {
               drug: "Alprazolam",
-              value: "High — potency-driven.",
+              value: "High: potency-driven.",
             },
             {
               drug: "Clonazepam",
-              value: "High — the dose-limiting effect.",
+              value: "High: the dose-limiting effect.",
             },
             {
               drug: "Diazepam",
-              value: "High — the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
+              value: "High: the dose-limiting effect; tolerance develops to sedation faster than to anxiolysis.",
             },
             {
               drug: "Chlordiazepoxide",
-              value: "High — useful in withdrawal.",
+              value: "High: useful in withdrawal.",
             },
           ],
         },
@@ -501,15 +501,15 @@ export const lorazepam: Drug = {
             },
             {
               drug: "Clonazepam",
-              value: "The long-acting anticonvulsant benzo — seizures and panic",
+              value: "The long-acting anticonvulsant benzo: seizures and panic",
             },
             {
               drug: "Diazepam",
-              value: "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse",
+              value: "The fast-into-brain, long-in-body benzo: withdrawal and spasm workhorse",
             },
             {
               drug: "Chlordiazepoxide",
-              value: "Alcohol withdrawal tablet — the founding benzo",
+              value: "Alcohol withdrawal tablet: the founding benzo",
             },
           ],
         },

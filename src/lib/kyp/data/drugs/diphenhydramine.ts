@@ -401,7 +401,7 @@ export const diphenhydramine: Drug = {
           comparisons: [
             {
               drug: "Hydroxyzine",
-              value: "The antihistamine anxiolytic — benzo-sparing sedation",
+              value: "The antihistamine anxiolytic: benzo-sparing sedation",
             },
           ],
         },

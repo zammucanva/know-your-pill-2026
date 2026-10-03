@@ -632,7 +632,7 @@ export const duloxetine: Drug = {
           attribute: "Mechanism",
           primaryValue: "BALANCED SERT + NET blockade from dose 1",
           comparisons: [
-            { drug: "Venlafaxine", value: "DOSE-DEPENDENT ladder — SERT first, NET only >150 mg/day" },
+            { drug: "Venlafaxine", value: "DOSE-DEPENDENT ladder. SERT first, NET only >150 mg/day" },
             { drug: "Sertraline", value: "SERT only (SSRI)" },
             { drug: "Mirtazapine", value: "α2 antagonist + 5-HT2/5-HT3 blockade (NaSSA)" },
           ],
@@ -650,18 +650,18 @@ export const duloxetine: Drug = {
           attribute: "Hepatotoxicity risk",
           primaryValue: "SIGNATURE: avoid in hepatic impairment, cirrhosis, heavy alcohol use",
           comparisons: [
-            { drug: "Venlafaxine", value: "Lower — dose reduction in hepatic impairment, not contraindicated" },
-            { drug: "Sertraline", value: "Rare — reduce dose in hepatic impairment" },
-            { drug: "Mirtazapine", value: "Rare — but monitor LFTs" },
+            { drug: "Venlafaxine", value: "Lower: dose reduction in hepatic impairment, not contraindicated" },
+            { drug: "Sertraline", value: "Rare: reduce dose in hepatic impairment" },
+            { drug: "Mirtazapine", value: "Rare, but monitor LFTs" },
           ],
         },
         {
           attribute: "Effect on blood pressure",
           primaryValue: "Minimal supine BP effect; orthostatic hypotension (NET)",
           comparisons: [
-            { drug: "Venlafaxine", value: "DOSE-DEPENDENT HYPERTENSION — monitor BP, especially >225 mg/day" },
+            { drug: "Venlafaxine", value: "DOSE-DEPENDENT HYPERTENSION: monitor BP, especially >225 mg/day" },
             { drug: "Sertraline", value: "Minimal" },
-            { drug: "Mirtazapine", value: "Minimal — occasional orthostatic" },
+            { drug: "Mirtazapine", value: "Minimal: occasional orthostatic" },
           ],
         },
         {
@@ -677,7 +677,7 @@ export const duloxetine: Drug = {
           attribute: "Discontinuation syndrome",
           primaryValue: "Moderate (12h half-life): less severe than venlafaxine",
           comparisons: [
-            { drug: "Venlafaxine", value: "WORST of all antidepressants — severe even with short missed doses" },
+            { drug: "Venlafaxine", value: "WORST of all antidepressants: severe even with short missed doses" },
             { drug: "Sertraline", value: "Mild–moderate" },
             { drug: "Mirtazapine", value: "Mild" },
           ],
@@ -706,7 +706,7 @@ export const duloxetine: Drug = {
           comparisons: [
             { drug: "Venlafaxine", value: "Often activating" },
             { drug: "Sertraline", value: "Mildly activating" },
-            { drug: "Mirtazapine", value: "SEDATING — give at night; useful for insomnia" },
+            { drug: "Mirtazapine", value: "SEDATING: give at night; useful for insomnia" },
           ],
         },
         {

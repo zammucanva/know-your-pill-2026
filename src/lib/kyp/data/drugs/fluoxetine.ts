@@ -51,7 +51,7 @@ export const fluoxetine: Drug = {
   mechanism: {
     summary:
       "Fluoxetine selectively blocks the serotonin transporter (SERT), increasing serotonin concentration in the synaptic cleft and enhancing serotonergic neurotransmission. Its active metabolite norfluoxetine extends the pharmacodynamic effect for 1–2 weeks after the last dose.",
-    molecularTarget: "SERT (SLC6A4, serotonin transporter)",
+    molecularTarget: "SERT (SLC6A4 — serotonin transporter)",
     effect:
       "Acute: increased synaptic serotonin. Chronic (2–6 weeks): desensitisation of 5-HT1A somatodendritic autoreceptors in the raphe nuclei, increased serotonergic throughput to the prefrontal cortex, and upregulation of BDNF in the hippocampus. Norfluoxetine extends the duration of SERT blockade well beyond the parent drug's half-life.",
     steps: [
@@ -744,7 +744,7 @@ export const fluoxetine: Drug = {
           comparisons: [
             { drug: "Sertraline", value: "All-rounder, pregnancy, anxiety disorders" },
             { drug: "Escitalopram", value: "Patients on complex regimens (lowest CYP interactions)" },
-            { drug: "Paroxetine", value: "Generally avoid — worst discontinuation, most weight gain, contraindicated in pregnancy" },
+            { drug: "Paroxetine", value: "Generally avoid: worst discontinuation, most weight gain, contraindicated in pregnancy" },
           ],
         },
       ],

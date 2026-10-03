@@ -71,7 +71,7 @@ export function HeroCopy({ drug, guide }: HeroCopyProps) {
             <div>
               <p className="text-body-sm font-semibold text-foreground">Black Box Warning</p>
               <p className="mt-0.5 text-caption text-muted-foreground">
-                {drug.blackBoxWarnings[0].title} — tap to read full warning.
+                {drug.blackBoxWarnings[0].title}. Tap to read full warning.
               </p>
             </div>
           </a>
@@ -119,7 +119,7 @@ export function HeroCopy({ drug, guide }: HeroCopyProps) {
           <div>
             <p className="text-body-sm font-semibold text-foreground">Important safety warning</p>
             <p className="mt-0.5 text-caption text-muted-foreground">
-              {drug.blackBoxWarnings[0].title} — tap to read the warning in the guide below.
+              {drug.blackBoxWarnings[0].title}. Tap to read the warning in the guide below.
             </p>
           </div>
         </a>

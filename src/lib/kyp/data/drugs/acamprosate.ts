@@ -406,15 +406,15 @@ export const acamprosate: Drug = {
           comparisons: [
             {
               drug: "Buprenorphine",
-              value: "The safety-ceiling maintenance agonist — office-based opioid treatment",
+              value: "The safety-ceiling maintenance agonist: office-based opioid treatment",
             },
             {
               drug: "Disulfiram",
-              value: "The classical aversion deterrent — for the motivated, supervised patient",
+              value: "The classical aversion deterrent, for the motivated, supervised patient",
             },
             {
               drug: "Naltrexone",
-              value: "The pure antagonist — alcohol relapse and opioid blockade",
+              value: "The pure antagonist: alcohol relapse and opioid blockade",
             },
             {
               drug: "Varenicline",

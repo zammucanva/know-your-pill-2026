@@ -443,11 +443,11 @@ export const tacrine: Drug = {
           comparisons: [
             {
               drug: "Donepezil",
-              value: "CYP2D6 / 3A4 — modest interaction burden",
+              value: "CYP2D6 / 3A4: modest interaction burden",
             },
             {
               drug: "Rivastigmine",
-              value: "Not hepatically metabolised — few interactions",
+              value: "Not hepatically metabolised, few interactions",
             },
             {
               drug: "Galantamine",

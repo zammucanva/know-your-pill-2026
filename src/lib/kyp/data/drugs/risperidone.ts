@@ -589,7 +589,7 @@ export const risperidone: Drug = {
             },
             {
               drug: "Clozapine",
-              value: "Lowest — treats refractory cases",
+              value: "Lowest: treats refractory cases",
             },
           ],
         },

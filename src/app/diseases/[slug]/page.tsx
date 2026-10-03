@@ -575,7 +575,7 @@ export default async function DiseasePage({ params }: PageProps) {
                     {disease.evidenceSources.international.map((ref, i) => (
                       <li key={i} className="text-sm text-foreground/90">
                         <span className="font-medium">{ref.source}</span>
-                        {ref.section && <span className="text-muted-foreground"> — {ref.section}</span>}
+                        {ref.section && <span className="text-muted-foreground"> · {ref.section}</span>}
                       </li>
                     ))}
                   </ul>
@@ -590,7 +590,7 @@ export default async function DiseasePage({ params }: PageProps) {
                     {disease.evidenceSources.indian.map((ref, i) => (
                       <li key={i} className="text-sm text-foreground/90">
                         <span className="font-medium">{ref.source}</span>
-                        {ref.section && <span className="text-muted-foreground"> — {ref.section}</span>}
+                        {ref.section && <span className="text-muted-foreground"> · {ref.section}</span>}
                       </li>
                     ))}
                   </ul>

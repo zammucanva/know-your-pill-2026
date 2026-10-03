@@ -448,7 +448,7 @@ export const triazolam: Drug = {
           comparisons: [
             {
               drug: "Temazepam",
-              value: "The classic benzodiazepine hypnotic — full power, full class risks",
+              value: "The classic benzodiazepine hypnotic: full power, full class risks",
             },
             {
               drug: "Estazolam",
@@ -456,7 +456,7 @@ export const triazolam: Drug = {
             },
             {
               drug: "Flunitrazepam",
-              value: "The strictly-controlled potent hypnotic — pharmacology's misuse lesson",
+              value: "The strictly-controlled potent hypnotic: pharmacology's misuse lesson",
             },
             {
               drug: "Flurazepam",

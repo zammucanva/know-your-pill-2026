@@ -423,7 +423,7 @@ export const donepezil: Drug = {
             },
             {
               drug: "Rivastigmine",
-              value: "The dual-inhibitor with the patch — and the DLB/PDD approval",
+              value: "The dual-inhibitor with the patch, and the DLB/PDD approval",
             },
           ],
         },

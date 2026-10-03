@@ -343,7 +343,7 @@ export const guanfacine: Drug = {
           comparisons: [
             {
               drug: "Clonidine",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
           ],
         },
@@ -363,7 +363,7 @@ export const guanfacine: Drug = {
           comparisons: [
             {
               drug: "Clonidine",
-              value: "The 24-hour ADHD/tic adjunct — sedating but non-stimulant",
+              value: "The 24-hour ADHD/tic adjunct: sedating but non-stimulant",
             },
           ],
         },

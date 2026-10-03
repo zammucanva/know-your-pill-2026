@@ -244,7 +244,7 @@ export function IndianClinicalModule({ drug }: IndianClinicalModuleProps) {
               <div className="border-l-2 border-brand/30 pl-4">
                 <div className="flex items-center gap-1.5 mb-3">
                   <FileText className="h-4 w-4 text-brand" />
-                  <span className="text-sm font-semibold text-foreground">Rx — {rx.scenario}</span>
+                  <span className="text-sm font-semibold text-foreground">Rx: {rx.scenario}</span>
                 </div>
                 <div className="space-y-0.5">
                   {rx.lines.map((line, i) => (

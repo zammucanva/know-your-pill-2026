@@ -213,7 +213,7 @@ export default function ComparePage() {
                 Compare medications
               </h1>
               <p className="mt-6 max-w-2xl text-body-lg text-muted-foreground leading-relaxed">
-                Pick two or three medications and see them side by side —
+                Pick two or three medications and see them side by side:
                 mechanism, side-effect profile, interactions, monitoring and
                 clinical use: ending in a choosing takeaway. Every value is
                 taken verbatim from the medication pages; nothing is invented.
@@ -289,7 +289,7 @@ export default function ComparePage() {
                   <div className="overflow-x-auto rounded-xl border border-border/60">
                     <table className="w-full min-w-[640px] border-collapse text-sm">
                       <caption className="sr-only">
-                        Comparison of {selectedDrugs.map((d) => d.genericName).join(", ")} — values verbatim from their medication pages.
+                        Comparison of {selectedDrugs.map((d) => d.genericName).join(", ")}; values are taken verbatim from their medication pages.
                       </caption>
                       <thead>
                         <tr className="border-b border-border/60 bg-muted/40">
@@ -368,7 +368,7 @@ export default function ComparePage() {
                           {takeaway.text}
                         </p>
                         <p className="mt-3 text-xs text-muted-foreground/70">
-                          Verbatim from {takeaway.source} — the library&apos;s own
+                          Verbatim from {takeaway.source}, the library&apos;s own
                           choosing guidance for this combination.
                         </p>
                       </>

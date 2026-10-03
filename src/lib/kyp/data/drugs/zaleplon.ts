@@ -383,7 +383,7 @@ export const zaleplon: Drug = {
           comparisons: [
             {
               drug: "Zolpidem",
-              value: "High for 2–3 hours — the intended effect; morning residue is the adverse effect.",
+              value: "High for 2–3 hours: the intended effect; morning residue is the adverse effect.",
             },
             {
               drug: "Eszopiclone",
@@ -401,7 +401,7 @@ export const zaleplon: Drug = {
           comparisons: [
             {
               drug: "Zolpidem",
-              value: "Sleep onset in a non-benzodiazepine molecule — the default Z-drug",
+              value: "Sleep onset in a non-benzodiazepine molecule: the default Z-drug",
             },
             {
               drug: "Eszopiclone",
@@ -409,7 +409,7 @@ export const zaleplon: Drug = {
             },
             {
               drug: "Zopiclone",
-              value: "The Commonwealth Z-drug — 5-hour cover with taste signature",
+              value: "The Commonwealth Z-drug: 5-hour cover with taste signature",
             },
           ],
         },

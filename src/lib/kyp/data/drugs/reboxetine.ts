@@ -351,7 +351,7 @@ export const reboxetine: Drug = {
           comparisons: [
             {
               drug: "Atomoxetine",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },

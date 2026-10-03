@@ -241,7 +241,7 @@ describe("concept template — declutter mission (phases 4–15)", () => {
     // the exact recovered-memories resolution (judgment #1 evidence)
     const rm = concept.find((c) => c.slug === "recovered-memories")!;
     expect(mechanismInShort(rm.mechanism.summary)).toBe(
-      "The reconciliation runs through ordinary memory science. First, inhibition is normal machinery: ordinary memory relies as much on the ability to suppress unwanted material as on the ability to access it"
+      "The reconciliation runs through ordinary memory science. First, inhibition is normal machinery: ordinary memory relies as much on the ability to suppress unwanted material as on the ability to access it;"
     );
   });
 

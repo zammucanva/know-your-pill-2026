@@ -419,7 +419,7 @@ export const pemoline: Drug = {
             },
             {
               drug: "Dextroamphetamine (d-Amphetamine)",
-              value: "Schedule II (US) / Schedule X (India) — higher abuse potential",
+              value: "Schedule II (US) / Schedule X (India): higher abuse potential",
             },
           ],
         },
@@ -429,7 +429,7 @@ export const pemoline: Drug = {
           comparisons: [
             {
               drug: "Methylphenidate (d,l)",
-              value: "The default first-line stimulant — decades of ADHD evidence",
+              value: "The default first-line stimulant: decades of ADHD evidence",
             },
             {
               drug: "Dextroamphetamine (d-Amphetamine)",

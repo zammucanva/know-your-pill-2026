@@ -361,7 +361,7 @@ export const ramelteon: Drug = {
           comparisons: [
             {
               drug: "Tasimelteon",
-              value: "Non-24-Hour disorder in the blind — the orphan clock drug",
+              value: "Non-24-Hour disorder in the blind: the orphan clock drug",
             },
           ],
         },

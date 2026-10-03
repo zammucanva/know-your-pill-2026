@@ -435,19 +435,19 @@ export const methylphenidate: Drug = {
           comparisons: [
             {
               drug: "Lisdexamfetamine",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
             {
               drug: "Dextroamphetamine (d-Amphetamine)",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
             {
               drug: "Amphetamine (d,l)",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
             {
               drug: "Dexmethylphenidate",
-              value: "Weight neutral to reducing — appetite effects common.",
+              value: "Weight neutral to reducing: appetite effects common.",
             },
           ],
         },
@@ -483,15 +483,15 @@ export const methylphenidate: Drug = {
             },
             {
               drug: "Dextroamphetamine (d-Amphetamine)",
-              value: "The pure d-isomer — stronger central, softer peripheral",
+              value: "The pure d-isomer: stronger central, softer peripheral",
             },
             {
               drug: "Amphetamine (d,l)",
-              value: "The Adderall mixture — d for focus, l for wake",
+              value: "The Adderall mixture: d for focus, l for wake",
             },
             {
               drug: "Dexmethylphenidate",
-              value: "The active isomer — methylphenidate distilled",
+              value: "The active isomer: methylphenidate distilled",
             },
           ],
         },

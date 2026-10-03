@@ -339,7 +339,7 @@ export const agomelatine: Drug = {
           comparisons: [
             {
               drug: "Mirtazapine",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },

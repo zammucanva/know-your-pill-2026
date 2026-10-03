@@ -496,15 +496,15 @@ export const carbamazepine: Drug = {
           comparisons: [
             {
               drug: "Lamotrigine",
-              value: "Not sedating — mildly activating (morning dosing suits most).",
+              value: "Not sedating: mildly activating (morning dosing suits most).",
             },
             {
               drug: "Lithium",
-              value: "Not typically sedating — neutral; occasionally described as 'slowing'.",
+              value: "Not typically sedating: neutral; occasionally described as 'slowing'.",
             },
             {
               drug: "Valproate",
-              value: "Common, dose-related — often useful in acute mania.",
+              value: "Common, dose-related: often useful in acute mania.",
             },
             {
               drug: "Oxcarbazepine",
@@ -522,15 +522,15 @@ export const carbamazepine: Drug = {
             },
             {
               drug: "Lithium",
-              value: "Anti-suicide + both-pole prophylaxis — the irreplaceable classic",
+              value: "Anti-suicide + both-pole prophylaxis: the irreplaceable classic",
             },
             {
               drug: "Valproate",
-              value: "Mania workhorse — especially mixed states and rapid cycling; now pregnancy-governed",
+              value: "Mania workhorse, especially mixed states and rapid cycling; now pregnancy-governed",
             },
             {
               drug: "Oxcarbazepine",
-              value: "The cleaner carbamazepine — off-label mood use with fewer interactions",
+              value: "The cleaner carbamazepine: off-label mood use with fewer interactions",
             },
           ],
         },

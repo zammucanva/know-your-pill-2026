@@ -474,11 +474,11 @@ export const topiramate: Drug = {
           comparisons: [
             {
               drug: "Gabapentin",
-              value: "The interaction-clean pain-augmentation agent — anxiety and craving off-label",
+              value: "The interaction-clean pain-augmentation agent: anxiety and craving off-label",
             },
             {
               drug: "Pregabalin",
-              value: "The GAD-approved gabapentinoid — pain, fibromyalgia, anxiety",
+              value: "The GAD-approved gabapentinoid: pain, fibromyalgia, anxiety",
             },
             {
               drug: "Levetiracetam",
@@ -486,7 +486,7 @@ export const topiramate: Drug = {
             },
             {
               drug: "Tiagabine",
-              value: "The GABA-reuptake blocker — mechanism elegance, clinical footnote",
+              value: "The GABA-reuptake blocker: mechanism elegance, clinical footnote",
             },
           ],
         },

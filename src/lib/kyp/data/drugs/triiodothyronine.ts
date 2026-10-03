@@ -352,7 +352,7 @@ export const triiodothyronine: Drug = {
           comparisons: [
             {
               drug: "Triiodothyronine (T3)",
-              value: "Different mechanism — see its guide",
+              value: "Different mechanism: see its guide",
             },
           ],
         },
