@@ -1,0 +1,1253 @@
+{
+  "meta": {
+    "generatedAt": "2026-10-03T10:25:16.830Z",
+    "occurrences": 52901
+  },
+  "totals": {
+    "learnerFaceOccurrences": 52901,
+    "A": 35828,
+    "B": 11970,
+    "C": 304,
+    "D": 7,
+    "E": 4231,
+    "F": 549,
+    "G": 12,
+    "derivedGeneratedEm": 721,
+    "derivedGeneratedFiles": 2,
+    "mcqProtected": 4292,
+    "comments": 2913,
+    "excluded": 291,
+    "enRangePreserved": 9584,
+    "enOtherPreserved": 1043
+  },
+  "filesPerBucket": {
+    "A": 383,
+    "B": 270,
+    "C": 128,
+    "D": 7,
+    "E": 255,
+    "F": 128,
+    "G": 12
+  },
+  "bFamilies": [
+    {
+      "count": 133,
+      "files": 133,
+      "key": "description",
+      "cat": "04-drug-pages",
+      "sample": "Everything — advanced reasoning, full prescriber guide, evidence, and references."
+    },
+    {
+      "count": 131,
+      "files": 131,
+      "key": null,
+      "cat": "04-drug-pages",
+      "sample": "Content reviewed against Stahl's Essential Psychopharmacology: The Prescriber's Guide, 6th ed. (2017) — facts paraphrased, not reproduced."
+    },
+    {
+      "count": 124,
+      "files": 124,
+      "key": "answer",
+      "cat": "04-drug-pages",
+      "sample": "No — taper gradually under medical supervision rather than stopping abruptly. Abrupt discontinuation can cause withdrawal-like symptoms and risk symptom relapse. Always discuss the"
+    },
+    {
+      "count": 124,
+      "files": 124,
+      "key": "answer",
+      "cat": "04-drug-pages",
+      "sample": "Take it as soon as you remember unless it is nearly time for your next dose — in that case, skip the missed dose. Never take a double dose to make up for a missed one."
+    },
+    {
+      "count": 102,
+      "files": 102,
+      "key": "checkpoint",
+      "cat": "05-psychiatry",
+      "sample": "You can answer the recall questions cold — if not, you know which lesson to revisit."
+    },
+    {
+      "count": 86,
+      "files": 86,
+      "key": null,
+      "cat": "04-drug-pages",
+      "sample": "Take exactly as prescribed — same time each day."
+    },
+    {
+      "count": 74,
+      "files": 15,
+      "key": "primaryValue",
+      "cat": "04-drug-pages",
+      "sample": "Low — weight gain not expected."
+    },
+    {
+      "count": 66,
+      "files": 11,
+      "key": "primaryValue",
+      "cat": "04-drug-pages",
+      "sample": "Weight gain common — the tricyclic story."
+    },
+    {
+      "count": 66,
+      "files": 11,
+      "key": "primaryValue",
+      "cat": "04-drug-pages",
+      "sample": "Common — exploited by bedtime dosing."
+    },
+    {
+      "count": 58,
+      "files": 58,
+      "key": "monitoring",
+      "cat": "04-drug-pages",
+      "sample": "As per international guidance — see Monitoring section."
+    },
+    {
+      "count": 38,
+      "files": 10,
+      "key": "primaryValue",
+      "cat": "04-drug-pages",
+      "sample": "Weight neutral to reducing — appetite effects common."
+    },
+    {
+      "count": 33,
+      "files": 19,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "Least metabolic burden among atypicals — the activating 'thermostat' antipsychotic"
+    },
+    {
+      "count": 33,
+      "files": 19,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "Treatment-resistant schizophrenia + anti-suicide efficacy — the drug that rescues the failures"
+    },
+    {
+      "count": 33,
+      "files": 19,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "Bipolar depression + metabolic safety — the 'clean' lurasidone/ziprasidone/aripiprazole trio"
+    },
+    {
+      "count": 33,
+      "files": 19,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "Most robust broad-spectrum atypical — heaviest metabolic burden"
+    },
+    {
+      "count": 32,
+      "files": 9,
+      "key": "distinguishing",
+      "cat": "04-drug-pages",
+      "sample": "Benzodiazepine — see full guide"
+    },
+    {
+      "count": 30,
+      "files": 15,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "Highest-potency D2 blockade with minimal sedation/hypotension — the agitation and delirium tool"
+    },
+    {
+      "count": 30,
+      "files": 5,
+      "key": "primaryValue",
+      "cat": "04-drug-pages",
+      "sample": "Weight gain common — the MAOI story."
+    },
+    {
+      "count": 26,
+      "files": 13,
+      "key": null,
+      "cat": "04-drug-pages",
+      "sample": "Class mechanism: D2 receptor blockade — efficacy equivalent across typicals; adverse effects differ by potency."
+    },
+    {
+      "count": 25,
+      "files": 25,
+      "key": "habitForming",
+      "cat": "04-drug-pages",
+      "sample": "Dependence or misuse potential exists — see the warnings in this guide."
+    },
+    {
+      "count": 24,
+      "files": 12,
+      "key": "intro",
+      "cat": "08-patient-education",
+      "sample": "Get urgent medical help — do not wait to see if it passes — if any of these happen:"
+    },
+    {
+      "count": 23,
+      "files": 11,
+      "key": "primaryValue",
+      "cat": "04-drug-pages",
+      "sample": "The TCA-neuroleptic hybrid — EPS warnings included"
+    },
+    {
+      "count": 23,
+      "files": 11,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "The founding TCA — depression, enuresis, and panic history"
+    },
+    {
+      "count": 23,
+      "files": 11,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "The TCA survivor — level-guided, post-MI-safe, pain-effective"
+    },
+    {
+      "count": 23,
+      "files": 11,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "The NET-pure TCA — energising, and the paediatric-cardiac caution"
+    },
+    {
+      "count": 22,
+      "files": 11,
+      "key": "rationale",
+      "cat": "04-drug-pages",
+      "sample": "Hypertensive crisis and serotonin syndrome — the classic combination prohibition."
+    },
+    {
+      "count": 22,
+      "files": 11,
+      "key": "patientExplanation",
+      "cat": "04-drug-pages",
+      "sample": "This is a tricyclic antidepressant — one of the oldest and most studied families. It raises two brain chemicals (serotonin and noradrenaline) by slowing their recycling, and also a"
+    },
+    {
+      "count": 21,
+      "files": 19,
+      "key": "distinguishing",
+      "cat": "04-drug-pages",
+      "sample": "The LAI platform king — monthly to 6-monthly injections for schizophrenia"
+    },
+    {
+      "count": 20,
+      "files": 19,
+      "key": "distinguishing",
+      "cat": "04-drug-pages",
+      "sample": "Weight-neutral oral + the least hypotensive IM antipsychotic — with QT vigilance"
+    },
+    {
+      "count": 20,
+      "files": 5,
+      "key": "patientExplanation",
+      "cat": "04-drug-pages",
+      "sample": "This is a monoamine oxidase inhibitor — the oldest and one of the most powerful families of antidepressants, used especially when other medicines have failed. It permanently switch"
+    },
+    {
+      "count": 20,
+      "files": 10,
+      "key": "whatToDo",
+      "cat": "08-patient-education",
+      "sample": "Contact your doctor immediately — do not wait — if you feel more agitated, irritable, anxious, or have any new thoughts of harming yourself."
+    },
+    {
+      "count": 19,
+      "files": 19,
+      "key": "distinguishing",
+      "cat": "04-drug-pages",
+      "sample": "Bipolar depression approval + virtually zero EPS/prolactin — the sedating antidepressant-antipsychotic"
+    },
+    {
+      "count": 19,
+      "files": 19,
+      "key": "distinguishing",
+      "cat": "04-drug-pages",
+      "sample": "Most potent D2 blockade among atypicals — highest prolactin, best-studied LAI"
+    },
+    {
+      "count": 18,
+      "files": 9,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "The long-acting anticonvulsant benzo — seizures and panic"
+    },
+    {
+      "count": 18,
+      "files": 9,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "The fast-into-brain, long-in-body benzo — withdrawal and spasm workhorse"
+    },
+    {
+      "count": 18,
+      "files": 9,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "Glucuronidation-only metabolism — the liver/elderly/interactions-safe benzo"
+    },
+    {
+      "count": 18,
+      "files": 18,
+      "key": "caption",
+      "cat": "04-drug-pages",
+      "sample": "5-HT2A antagonism 'releases the brake' on dopamine firing, while moderate D2 occupancy treats positive symptoms — the serotonin-dopamine hypothesis of atypical antipsychotics."
+    },
+    {
+      "count": 18,
+      "files": 9,
+      "key": null,
+      "cat": "04-drug-pages",
+      "sample": "Mechanism: GABA-A positive allosteric modulation — amplified natural inhibition."
+    },
+    {
+      "count": 18,
+      "files": 9,
+      "key": "title",
+      "cat": "04-drug-pages",
+      "sample": "First presentation — schizophrenia — psychotic manifestations"
+    },
+    {
+      "count": 18,
+      "files": 9,
+      "key": "rationale",
+      "cat": "04-drug-pages",
+      "sample": "Concurrent use causes profound sedation, respiratory depression, and death — the strongest boxed warning combination in medicine."
+    },
+    {
+      "count": 18,
+      "files": 3,
+      "key": null,
+      "cat": "04-drug-pages",
+      "sample": "Typical antipsychotics all share one mechanism — D2 blockade — so efficacy is similar across the class; the choice is really about potency, sedation, and route."
+    },
+    {
+      "count": 17,
+      "files": 17,
+      "key": "caption",
+      "cat": "04-drug-pages",
+      "sample": "Acute reuptake blockade within hours; clinical response after weeks of downstream adaptation — the central paradox of antidepressant pharmacology."
+    },
+    {
+      "count": 17,
+      "files": 17,
+      "key": "caption",
+      "cat": "04-drug-pages",
+      "sample": "Benzodiazepines amplify the brain's own inhibitory signal (GABA) rather than activating the receptor directly — which is why their effect is powerful but limited by dependence risk"
+    },
+    {
+      "count": 17,
+      "files": 11,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "The H1-pure micro-dose to the full TCA — three drugs in one"
+    },
+    {
+      "count": 16,
+      "files": 16,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "Different mechanism — see its guide"
+    },
+    {
+      "count": 16,
+      "files": 8,
+      "key": "drugClassFullName",
+      "cat": "04-drug-pages",
+      "sample": "Typical (Conventional) Antipsychotic — Phenothiazine"
+    },
+    {
+      "count": 16,
+      "files": 15,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "Mild — among the least sedating antipsychotics; alerting more than calming at low doses."
+    },
+    {
+      "count": 16,
+      "files": 15,
+      "key": "distinguishing",
+      "cat": "04-drug-pages",
+      "sample": "The restricted QT-retinopathy phenothiazine — last-line"
+    },
+    {
+      "count": 15,
+      "files": 15,
+      "key": null,
+      "cat": "04-drug-pages",
+      "sample": "This medicine is for short-term or carefully planned use — it can cause dependence within weeks of regular use."
+    },
+    {
+      "count": 15,
+      "files": 15,
+      "key": null,
+      "cat": "04-drug-pages",
+      "sample": "Never mix it with opioid painkillers or alcohol — the combination can stop breathing."
+    },
+    {
+      "count": 15,
+      "files": 15,
+      "key": null,
+      "cat": "04-drug-pages",
+      "sample": "Stopping must be gradual — never stop suddenly after regular use."
+    },
+    {
+      "count": 15,
+      "files": 15,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "Low; can be activating — insomnia is more common than somnolence."
+    },
+    {
+      "count": 15,
+      "files": 14,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "Low — may be mildly activating."
+    },
+    {
+      "count": 15,
+      "files": 15,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "Moderate to high — usually transient at a given dose but dose-limiting for many patients."
+    },
+    {
+      "count": 15,
+      "files": 15,
+      "key": "caption",
+      "cat": "04-drug-pages",
+      "sample": "Potent D2 blockade treats positive symptoms but the same mechanism in motor and pituitary pathways drives EPS and hyperprolactinaemia — efficacy and motor risk are two sides of one"
+    },
+    {
+      "count": 15,
+      "files": 15,
+      "key": null,
+      "cat": "04-drug-pages",
+      "sample": "Report stiffness, shakiness, restlessness, or unusual tongue/mouth movements early — these are treatable."
+    },
+    {
+      "count": 15,
+      "files": 15,
+      "key": null,
+      "cat": "04-drug-pages",
+      "sample": "Do not stop suddenly — discuss any change with your doctor."
+    },
+    {
+      "count": 15,
+      "files": 15,
+      "key": "title",
+      "cat": "04-drug-pages",
+      "sample": "Typical Antipsychotic comparison — choosing within the class"
+    },
+    {
+      "count": 15,
+      "files": 15,
+      "key": "takeaway",
+      "cat": "04-drug-pages",
+      "sample": "All typical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile "
+    },
+    {
+      "count": 14,
+      "files": 7,
+      "key": "primaryValue",
+      "cat": "04-drug-pages",
+      "sample": "The abstinence-protector — for the already-abstinent patient"
+    },
+    {
+      "count": 14,
+      "files": 7,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "The safety-ceiling maintenance agonist — office-based opioid treatment"
+    },
+    {
+      "count": 14,
+      "files": 7,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "The classical aversion deterrent — for the motivated, supervised patient"
+    },
+    {
+      "count": 14,
+      "files": 7,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "The pure antagonist — alcohol relapse and opioid blockade"
+    },
+    {
+      "count": 14,
+      "files": 9,
+      "key": "value",
+      "cat": "04-drug-pages",
+      "sample": "Alcohol withdrawal tablet — the founding benzo"
+    },
+    {
+      "count": 14,
+      "files": 14,
+      "key": "takeaway",
+      "cat": "04-drug-pages",
+      "sample": "All atypical antipsychotics share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient profile"
+    },
+    {
+      "count": 14,
+      "files": 7,
+      "key": "caption",
+      "cat": "04-drug-pages",
+      "sample": "Catecholamine enhancement in the prefrontal cortex — the brain's attention control centre — corrects the signal-to-noise deficit that defines ADHD."
+    },
+    {
+      "count": 14,
+      "files": 14,
+      "key": null,
+      "cat": "04-drug-pages",
+      "sample": "Blocks D2 receptors — therapeutic antipsychotic effect at 65–75% occupancy."
+    },
+    {
+      "count": 14,
+      "files": 14,
+      "key": "description",
+      "cat": "04-drug-pages",
+      "sample": "Rigidity, bradykinesia, tremor — dose-dependent D2 signature."
+    },
+    {
+      "count": 14,
+      "files": 14,
+      "key": "description",
+      "cat": "04-drug-pages",
+      "sample": "Restlessness — frequently mistaken for worsening psychosis."
+    },
+    {
+      "count": 14,
+      "files": 14,
+      "key": "description",
+      "cat": "04-drug-pages",
+      "sample": "Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency."
+    },
+    {
+      "count": 14,
+      "files": 14,
+      "key": "description",
+      "cat": "04-drug-pages",
+      "sample": "Potentially irreversible involuntary movements; risk rises with age, duration, and female sex — a defining risk of chronic typical antipsychotics."
+    },
+    {
+      "count": 14,
+      "files": 14,
+      "key": "summary",
+      "cat": "04-drug-pages",
+      "sample": "Available data have not shown a major malformation signal for low-potency phenothiazines or butyrophenones, but third-trimester exposure can cause neonatal EPS and withdrawal. Rela"
+    },
+    {
+      "count": 14,
+      "files": 14,
+      "key": "answer",
+      "cat": "04-drug-pages",
+      "sample": "Neuroleptic malignant syndrome: Rigidity, hyperthermia, autonomic instability, raised creatine kinase, altered consciousness — the class medical emergency. Management: Stop immedia"
+    },
+    {
+      "count": 13,
+      "files": 11,
+      "key": "distinguishing",
+      "cat": "04-drug-pages",
+      "sample": "The retired UK sedative TCA — overdose-toxicity caution"
+    },
+    {
+      "count": 13,
+      "files": 11,
+      "key": "distinguishing",
+      "cat": "04-drug-pages",
+      "sample": "The UK kinder TCA — imipramine's safer cousin"
+    },
+    {
+      "count": 13,
+      "files": 11,
+      "key": "distinguishing",
+      "cat": "04-drug-pages",
+      "sample": "The tetracyclic — NET potency with the seizure ceiling"
+    },
+    {
+      "count": 12,
+      "files": 12,
+      "key": "title",
+      "cat": "04-drug-pages",
+      "sample": "Atypical Antipsychotic comparison — choosing within the class"
+    },
+    {
+      "count": 12,
+      "files": 12,
+      "key": "mechanism",
+      "cat": "04-drug-pages",
+      "sample": "Additive QT prolongation — torsades risk."
+    },
+    {
+      "count": 12,
+      "files": 12,
+      "key": "mechanism",
+      "cat": "04-drug-pages",
+      "sample": "Additive anticholinergic burden — cognition, ileus, tachycardia."
+    },
+    {
+      "count": 12,
+      "files": 12,
+      "key": "monitoring",
+      "cat": "04-drug-pages",
+      "sample": "Your doctor will monitor: weight and bmi (baseline, then periodically); aims examination (baseline, then every 6 months); eps screen (parkinsonism, akathisia, dystonia) (every revi"
+    }
+  ],
+  "bFamilyTotal": 2390,
+  "eFamilies": [
+    {
+      "count": 133,
+      "files": 133,
+      "sample": "NIMH — Mental Health Medications"
+    },
+    {
+      "count": 132,
+      "files": 132,
+      "sample": "8th ed. — drugs acting on CNS"
+    },
+    {
+      "count": 131,
+      "files": 131,
+      "sample": "16th ed. — autonomic, CNS, and psychiatric drug chapters"
+    },
+    {
+      "count": 26,
+      "files": 13,
+      "sample": "KD Tripathi — Essentials of Medical Pharmacology, 8th edition"
+    },
+    {
+      "count": 25,
+      "files": 13,
+      "sample": "NMC CBME Curriculum — Pharmacology (Second Professional)"
+    },
+    {
+      "count": 25,
+      "files": 13,
+      "sample": "Tele-MANAS (National Tele-Mental Health Helpline) — 14416"
+    },
+    {
+      "count": 24,
+      "files": 12,
+      "sample": "NMC CBME Curriculum — Psychiatry (Final Professional)"
+    },
+    {
+      "count": 23,
+      "files": 13,
+      "sample": "CDSCO — Central Drugs Standard Control Organisation"
+    },
+    {
+      "count": 20,
+      "files": 10,
+      "sample": "Indian Psychiatric Society — Clinical Practice Guidelines for Management of Depression"
+    },
+    {
+      "count": 17,
+      "files": 11,
+      "sample": "Section V — Pharmacotherapy of Mood Disorders"
+    },
+    {
+      "count": 14,
+      "files": 14,
+      "sample": "Tele-MANAS — India's national tele-mental-health helpline (14416)"
+    },
+    {
+      "count": 11,
+      "files": 11,
+      "sample": "NICE Clinical Guideline CG91 — Depression in adults: recognition and management"
+    },
+    {
+      "count": 11,
+      "files": 6,
+      "sample": "Chapter 33 — Antidepressant Drugs"
+    },
+    {
+      "count": 11,
+      "files": 11,
+      "sample": "Tele-MANAS — India's national tele-mental-health helpline (14416; 1-800-891-4416)"
+    },
+    {
+      "count": 10,
+      "files": 10,
+      "sample": "NIMH (National Institute of Mental Health) — Depression brochure"
+    },
+    {
+      "count": 10,
+      "files": 5,
+      "sample": "Topic: Drugs acting on CNS — Antidepressants"
+    },
+    {
+      "count": 10,
+      "files": 5,
+      "sample": "Topic: Psychopharmacology — Mood disorders"
+    },
+    {
+      "count": 9,
+      "files": 6,
+      "sample": "Chapter 30 — Antidepressant Agents"
+    },
+    {
+      "count": 9,
+      "files": 9,
+      "sample": "NICE Clinical Guideline CG91 — Depression in adults"
+    },
+    {
+      "count": 9,
+      "files": 9,
+      "sample": "Tele-MANAS (National Mental Health Helpline, India) — 14416"
+    },
+    {
+      "count": 8,
+      "files": 4,
+      "sample": "Section on pharmacotherapy — SSRIs"
+    },
+    {
+      "count": 7,
+      "files": 7,
+      "sample": "Cipriani A et al. Lancet 2018 — Comparative efficacy of 21 antidepressants"
+    },
+    {
+      "count": 6,
+      "files": 6,
+      "sample": "Chapter 36 — Psychopharmacology"
+    },
+    {
+      "count": 6,
+      "files": 6,
+      "sample": "Royal College of Psychiatrists — Patient information on SSRIs"
+    },
+    {
+      "count": 5,
+      "files": 5,
+      "sample": "Chapter 7 — Antidepressants"
+    },
+    {
+      "count": 4,
+      "files": 4,
+      "sample": "Royal College of Psychiatrists — Patient information on antidepressants"
+    },
+    {
+      "count": 4,
+      "files": 4,
+      "sample": "Essential medicines for mental health — SSRIs included"
+    },
+    {
+      "count": 4,
+      "files": 4,
+      "sample": "Essential medicines for mental health — SSRIs"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Zwaigenbaum L et al. — early identification of autism (the red-flag evidence); Ozonoff S et al. — the sibling-recurrence work"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Worden JW — tasks of mourning; Klass D, Silverman PR & Nickman SL — continuing bonds"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Reuter J, Raedler T et al. — functional imaging of pathological gamblers; Goudriaan A et al. — the cognitive-and-neuro profile"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Hodgins D — brief-intervention-and-relapse-prevention; Toneatto T — the cognitive-treatment line"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Meyer I — the minority-stress model; Hendricks M & Testa R — the transgender application"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Scammell TE — the orexin/hypocretin biology of narcolepsy (the review lineage); Mignot E — the genetics (HLA-DQB1*06:02) and the Pandemrix epidemiological chapter"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Johns MW — the Epworth Sleepiness Scale (named; not reproduced); Chung F et al. — the STOP-BANG screening literature (named)"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Wise MS et al. / Maski K — paediatric narcolepsy and school accommodations; Billiard M / Arnulf I — Kleine-Levin reviews and the lithium series"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Milner B et al. — the H.M. long-term follow-ups; Knowlton BJ et al. — the striatal procedural-learning double dissociations"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Hopper T, Bayles K et al. — errorless methods and environmental cueing in dementia communication; Gitlin L et al. — environmental interventions and caregiver-outcome dyads"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Weinberger DR et al. — the early hypofrontality observations and the Wisconsin-card-sort activation tradition; Weinberger D & Berman K — the cortical-inefficiency and distributed-n"
+    },
+    {
+      "count": 4,
+      "files": 1,
+      "sample": "Weisz JR et al. — youth-depression psychotherapy meta-analyses; Mufson L et al. — the IPT-A trials (the equal-grade psychotherapy evidence)"
+    }
+  ],
+  "gItems": [
+    {
+      "file": "src/lib/kyp/data/drugs/amitriptyline.ts",
+      "line": 262,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults (and OVERDOSE LETHALITY)"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/bupropion.ts",
+      "line": 234,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/citalopram.ts",
+      "line": 199,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/clomipramine.ts",
+      "line": 264,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults (and OVERDOSE LETHALITY)"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/duloxetine.ts",
+      "line": 217,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/escitalopram.ts",
+      "line": 183,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/fluoxetine.ts",
+      "line": 209,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/fluvoxamine.ts",
+      "line": 212,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/mirtazapine.ts",
+      "line": 234,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/paroxetine.ts",
+      "line": 217,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/sertraline.ts",
+      "line": 173,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/venlafaxine.ts",
+      "line": 220,
+      "str": "Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults"
+    }
+  ],
+  "topAFiles": [
+    {
+      "file": "src/lib/kyp/data/drugs/clomipramine.ts",
+      "aCount": 352
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/mirtazapine.ts",
+      "aCount": 350
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/psychodynamic-theories.ts",
+      "aCount": 338
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/paroxetine.ts",
+      "aCount": 333
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/bupropion.ts",
+      "aCount": 331
+    },
+    {
+      "file": "src/lib/kyp/data/diseases/major-depressive-disorder.ts",
+      "aCount": 326
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/youth-suicide.ts",
+      "aCount": 316
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/psychiatric-phenomenology.ts",
+      "aCount": 314
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/neuroendocrinology.ts",
+      "aCount": 313
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/alcohol-use-disorders.ts",
+      "aCount": 311
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/substance-use-overview.ts",
+      "aCount": 308
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/id-dual-diagnosis.ts",
+      "aCount": 305
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/transcultural-stigma.ts",
+      "aCount": 303
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/mh-services.ts",
+      "aCount": 301
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/child-trauma-abuse.ts",
+      "aCount": 300
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/opioid-use-disorders.ts",
+      "aCount": 300
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/amitriptyline.ts",
+      "aCount": 299
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/elderly-suicide.ts",
+      "aCount": 295
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/psychiatric-rehabilitation.ts",
+      "aCount": 295
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/benzodiazepine-misuse.ts",
+      "aCount": 293
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/homicide-infanticide.ts",
+      "aCount": 293
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/mental-health-law.ts",
+      "aCount": 292
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/nicotine-dependence.ts",
+      "aCount": 292
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/autism.ts",
+      "aCount": 290
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/conduct-disorder.ts",
+      "aCount": 289
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/paediatric-ocd-tics.ts",
+      "aCount": 288
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/stimulant-use-disorders.ts",
+      "aCount": 287
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/voluntary-sector.ts",
+      "aCount": 286
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/cannabis-mental-health.ts",
+      "aCount": 285
+    },
+    {
+      "file": "src/lib/kyp/data/psychiatry-courses/neuroimaging.ts",
+      "aCount": 285
+    }
+  ],
+  "aSamples": [
+    {
+      "file": "src/app/compare/classes/page.tsx",
+      "line": 33,
+      "key": "description",
+      "str": "Compare medications within a class across clinical concerns — weight and metabolic effects, sedation, prolactin, EPS, QT and more. Every value is documented data from the"
+    },
+    {
+      "file": "src/app/psychiatry/self-test/self-test-client.tsx",
+      "line": 157,
+      "key": null,
+      "str": "{g.letter} — {g.name} ({g.count})"
+    },
+    {
+      "file": "src/components/kyp/sections/drug/drug-brain-regions.tsx",
+      "line": 31,
+      "key": null,
+      "str": "${drug.genericName}'s effects are not localised to one region — serotonin neurons project from the raphe nuclei throughout the brain. The regions below are those most cli"
+    },
+    {
+      "file": "src/components/psychiatry/course/concept/concept-sections.tsx",
+      "line": 601,
+      "key": null,
+      "str": "{course.title} — differentials with the distinguishing features and the key"
+    },
+    {
+      "file": "src/lib/kyp/data/diseases/major-depressive-disorder.ts",
+      "line": 168,
+      "key": null,
+      "str": "Mesocortical pathway (VTA → prefrontal cortex) — cognition/executive dysfunction"
+    },
+    {
+      "file": "src/lib/kyp/data/diseases/major-depressive-disorder.ts",
+      "line": 631,
+      "key": null,
+      "str": "Daily routine — get up, dress, eat meals, and sleep at the same times each day. Structure anchors mood."
+    },
+    {
+      "file": "src/lib/kyp/data/diseases/major-depressive-disorder.ts",
+      "line": 1093,
+      "key": "why",
+      "str": "Sudden cessation after ≥4 weeks of use causes discontinuation syndrome — dizziness, 'brain zaps', nausea, irritability, insomnia. Can start within 24 hours of missed dose"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs.ts",
+      "line": 54,
+      "key": "artworkAlt",
+      "str": "Cocaine molecule — illustrating its blockade of monoamine transporters and dopaminergic reward pathway activation"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/alprazolam.ts",
+      "line": 154,
+      "key": "text",
+      "str": "Alprazolam's short half-life produces inter-dose withdrawal and the most severe discontinuation syndrome of the benzodiazepines — taper with particular care; abuse liabil"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/amitriptyline.ts",
+      "line": 70,
+      "key": "pharmacokinetics",
+      "str": "Well absorbed orally (bioavailability ~50% due to first-pass metabolism). Peak plasma at 2–12 hours. Highly protein-bound (~95%). Volume of distribution ~15 L/kg — widely"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/amitriptyline.ts",
+      "line": 724,
+      "key": "management",
+      "str": "Baseline ECG performed (QRS 90 ms, QTc 430 ms — both within normal limits, safe to proceed). Started amitriptyline 10 mg PO at night. Counseled: take 1 hour before bed; e"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/amitriptyline.ts",
+      "line": 1261,
+      "key": "indianRecommendation",
+      "str": "IPS concurs — SSRIs first-line. TCAs are second-line for severe depression with melancholic features, insomnia, or weight loss. Amitriptyline still used in resource-limit"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/amoxapine.ts",
+      "line": 344,
+      "key": null,
+      "str": "Mechanism of Amoxapine: Amoxapine inhibits monoamine reuptake while its 7-hydroxy metabolite blocks D2 receptors — an antidepressant with built-in antipsychotic action."
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/aripiprazole.ts",
+      "line": 505,
+      "key": "trick",
+      "str": "Turns DA down when too hot (mesolimbic), up when too cold (tuberoinfundibular) — a thermostat, not a switch."
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/armodafinil.ts",
+      "line": 372,
+      "key": "takeaway",
+      "str": "All wake-promoting agents share a core mechanism, but they differ in half-life, weight gain, sedation, and drug interactions. Choice within the class is driven by patient"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/atomoxetine.ts",
+      "line": 610,
+      "key": "interactions",
+      "str": "Tell your doctor and pharmacist about everything you take — including over-the-counter and herbal products. Common interacting agents include: Fluoxetine and paroxetine ("
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/brexpiprazole.ts",
+      "line": 289,
+      "key": null,
+      "str": "The 91-hour half-life means changes take days to manifest — patience at every dose move."
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/buprenorphine.ts",
+      "line": 1243,
+      "key": null,
+      "str": "Half-life: 28-44 hours (long — once-daily dosing; depot forms longer).."
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/bupropion.ts",
+      "line": 548,
+      "key": null,
+      "str": "If you are under 25, your doctor will want to see you more often in the first month. Like all antidepressants, bupropion can rarely increase suicidal thoughts in young ad"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/bupropion.ts",
+      "line": 1028,
+      "key": "label",
+      "str": "Patient Guide — Starting bupropion (or switching from an SSRI)"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/bupropion.ts",
+      "line": 1597,
+      "key": "reason",
+      "str": "Bupropion lowers seizure threshold — highest seizure risk of any modern antidepressant (~0.4% at 450mg/day, >10% at >600mg/day). Even well-controlled epilepsy is an absol"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/caprylidene.ts",
+      "line": 267,
+      "key": "title",
+      "str": "First presentation — metabolic imbalances associated with mild-to-moderate alzheimer's (dietary management)"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/cariprazine.ts",
+      "line": 323,
+      "key": null,
+      "str": "Cariprazine: mechanism, indications, adverse effects, contraindications, and dosing — structured answer framework."
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/chlorpromazine.ts",
+      "line": 218,
+      "key": "description",
+      "str": "H1/5-HT2C effects — notable for a typical."
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/citalopram.ts",
+      "line": 774,
+      "key": "answer",
+      "str": "Citalopram is a racemic mixture — it contains two mirror-image molecules, the S-enantiomer and the R-enantiomer, in equal amounts. Only the S-enantiomer blocks the seroto"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/citalopram.ts",
+      "line": 1546,
+      "key": "reason",
+      "str": "SSRI monotherapy can trigger a manic switch — potentially dangerous. Same risk as all antidepressants."
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/clomipramine.ts",
+      "line": 509,
+      "key": "rationale",
+      "str": "Like SSRIs, TCAs can cause SIADH — risk highest in elderly females in first 2 weeks. Presents as headache, confusion, seizures."
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/clomipramine.ts",
+      "line": 903,
+      "key": "description",
+      "str": "For OCD, the full therapeutic effect typically takes 8–12 weeks — significantly slower than for depression. The mechanism involves normalisation of hyperactive cortico-st"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/clomipramine.ts",
+      "line": 1437,
+      "key": null,
+      "str": "Week 2-4: titrate dose upward. OCD requires higher doses than depression — target 100-150mg/day in divided doses."
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/clonazepam.ts",
+      "line": 290,
+      "key": null,
+      "str": "Historic Indian inpatient practice: IM clonazepam for mania — now a pharmacological footnote."
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/clorazepate.ts",
+      "line": 679,
+      "key": "summary",
+      "str": "Clorazepate is a prescription medicine used to treat anxiety disorders / alcohol withdrawal (adjunct). It belongs to a well-studied class of medicines and works gradually"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/clozapine.ts",
+      "line": 991,
+      "key": "monitoring",
+      "str": "Your doctor will monitor: anc (absolute neutrophil count) (weekly × 26 weeks, then every 2 weeks × 26 weeks, then monthly — indefinitely); fever / infection symptoms (imm"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/desvenlafaxine.ts",
+      "line": 27,
+      "key": "summary",
+      "str": "Desvenlafaxine is the active metabolite of venlafaxine (O-desmethylvenlafaxine) marketed directly: the same SNRI mechanism — SERT and NET inhibition — with predictable re"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/dexmethylphenidate.ts",
+      "line": 653,
+      "key": "label",
+      "str": "Patient Guide — Dexmethylphenidate"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/diazepam.ts",
+      "line": 390,
+      "key": "title",
+      "str": "First presentation — anxiety disorders / short-term anxiety relief"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/disulfiram.ts",
+      "line": 283,
+      "key": null,
+      "str": "Uses of Disulfiram: Alcohol dependence — deterrence in selected patients; Supervised disulfiram programmes"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/dothiepin.ts",
+      "line": 738,
+      "key": "label",
+      "str": "Patient Guide — Dothiepin"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/duloxetine.ts",
+      "line": 506,
+      "key": null,
+      "str": "Do NOT crush, chew, or open the capsule. The capsule has a special coating (enteric-coated beads) that must stay intact — breaking it releases the medicine too fast and c"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/duloxetine.ts",
+      "line": 1047,
+      "key": "topic",
+      "str": "Drugs acting on Central Nervous System — Antidepressants (SNRIs) and Neuropathic Pain Pharmacology"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/duloxetine.ts",
+      "line": 2156,
+      "key": null,
+      "str": "Only somewhat more potent at serotonin than norepinephrine reuptake blockade — unclear clinical significance as a differentiator from other SNRIs"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/escitalopram.ts",
+      "line": 934,
+      "key": "summary",
+      "str": "Escitalopram is a widely prescribed antidepressant belonging to a class called SSRIs. It is a 'cleaner' version of an older medicine called citalopram — only the active c"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/estazolam.ts",
+      "line": 338,
+      "key": null,
+      "str": "Estazolam takes weeks for full effect — early follow-up is about tolerability, not efficacy."
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/flumazenil.ts",
+      "line": 41,
+      "key": "summary",
+      "str": "Flumazenil is a competitive benzodiazepine-site ANTAGONIST — the class's own antidote, displacing agonists from GABA-A."
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/fluoxetine.ts",
+      "line": 211,
+      "key": "text",
+      "str": "Antidepressants increased the risk of suicidal thinking and behaviour (suicidality) in short-term studies in children, adolescents, and young adults with Major Depressive"
+    },
+    {
+      "file": "src/lib/kyp/data/drugs/fluoxetine.ts",
+      "line": 1069,
+      "key": "monitoring",
+      "str": "In Indian government hospitals, monitoring is primarily clinical (symptom-based) due to resource constraints. PHQ-9 is used in tertiary centres and DMHP clinics. Special "
+    }
+  ]
+}

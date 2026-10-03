@@ -154,3 +154,125 @@ Phase 2 classification of every occurrence (editorial / technical / range / code
 - A regex literal containing an unbalanced quote could, in rare cases, misattribute a span; spot-verified against `git grep` totals (62,837 = exact file-total sum).
 - Markdown code fences are counted as prose; only affects dev docs (category 14), not learner-facing routes.
 - The census counts `—` characters only; it does not judge grammar. Phase 2 classification is the judgment layer, as the mission requires.
+
+---
+
+# Phase 2 — Classification + Phase 3 — Shared-Source Verification (2026-10-03)
+
+- **Tooling**: `scripts/dash-classify.mjs` → `reports/dash-classification-data.json` (machine-readable, reproducible)
+- **Rule**: every LEARNER-FACING rendered em-dash occurrence is classified into A–G. No prose was changed in this phase.
+- **Method**: tokenizer (string / JSX-text / comment / MCQ-span) + field-context detection (which object key owns each string) + exact-repeat detection (normalized string occurring ≥3 times) + explicit preserve patterns. All counts below are exact script output, not estimates; samples from every bucket were manually reviewed.
+
+## 2.1 Classified counts (A–G)
+
+Universe: learner-facing rendered em dashes = **52,901 occurrences** (census 53,644 minus 721 derived-generated occurrences that are only ever regenerated, minus 22 edge cases in machine/dev text files).
+
+| Bucket | Definition | Occurrences | Files | Disposition |
+|---|---|---|---|---|
+| **A** Clearly excessive editorial | unique prose em dashes | **35,828** | 383 | rewrite in Phase 4 (35,509 in data files + 319 in 93 app/component files — each component file is its own single source) |
+| **B** Repeated template prose | identical normalized string ≥3× | **11,970** | 270 | fix once per template, apply deterministically (279 families span ≥3 files; 2,390 total families ≥3 copies) |
+| **C** Legitimate medical/scientific | short clinical/technical labels (`indications[].name`, tier labels, `symbol:`) | **304** | 128 | preserve |
+| **D** Numeric range (em) | digit—digit | **7** | 7 | preserve |
+| **E** Source/citation title | `source:` / `section:` / reference fields | **4,231** | 255 | preserve |
+| **F** Empty/UI placeholder | exact `"—"` marker strings | **549** | 128 | preserve |
+| **G** Needs clinical review | boxed-warning titles (FDA terminology adjacency) | **12** | 12 | leave unchanged, flag |
+| derived (generated files) | regenerate only, never hand-edit | 721 | 2 | regenerate via `npm run gen:client-data` / `bun scripts/generate-psychiatry-search-records.ts` |
+
+Reconciliation: 35,828 + 11,970 + 304 + 7 + 4,231 + 549 + 12 = **52,901** ✓
+
+Also preserved outside the learner-facing universe: MCQ-protected spans/files 4,292; dev comments 2,490 (lint scope); en-dash numeric ranges 9,584 in learner-facing src (11,036 repo-wide per census); en-dash scientific compounds (e.g. serotonin–norepinephrine) ~1,043; canonical notes 291 (excluded); `public/robots.txt` dev comments 2; PWA manifest brand name 1 ("Know Your Pill — Medication Education Made Visual", machine file, preserved).
+
+## 2.2 G — NEEDS CLINICAL REVIEW items (12, all the same family)
+
+`Suicidal Thoughts and Behaviours — Children, Adolescents, and Young Adults` boxed-warning section titles in: amitriptyline.ts:262 (+ OVERDOSE LETHALITY variant), clomipramine.ts:264 (variant), bupropion.ts:234, citalopram.ts:199, duloxetine.ts:217, escitalopram.ts:183, fluoxetine.ts:209, fluvoxamine.ts:212, mirtazapine.ts:234, paroxetine.ts:217, sertraline.ts:173, venlafaxine.ts:220.
+
+Reason: mirrors FDA antidepressant boxed-warning heading terminology; the population qualifier is regulatory wording. A colon rewrite is *probably* safe, but the risk/benefit of touching 12 warning titles is negative — recommend leaving unchanged. Phase 4 may surface additional G items sentence-by-sentence; the firewall rule stands: if meaning cannot be preserved by punctuation alone, mark G and stop.
+
+## 2.3 Phase 3 — shared-source verification (origin of every repeated pattern)
+
+**True single-source fixes (ONE edit → many routes):**
+
+| # | Source file | String | Reach |
+|---|---|---|---|
+| 1 | `src/app/drugs/class/[classId]/page.tsx:191` | "Each guide below follows the same structure — mechanism of action, …" (mission example) | renders on all **40** class routes (`getAllTaxonomyClassIds()` = 40) |
+| 2 | `src/app/drugs/class/[classId]/page.tsx:67` | `` `${cls.fullName} — ${n} medication guide(s): …` `` metadata description | SEO for 40 class routes |
+| 3 | `src/lib/kyp/data/search-index.ts:41,59,73,251` | collection/search descriptions with ` — ` joiners | Spotlight search modal (340 entries, pinned deep-equal) — fix source, then regenerate `search-index-generated.ts` |
+| 4 | `src/app/medicine/page.tsx:28` | metadata description "Plain-language medicine information — …" | /medicine SEO |
+| 5 | `src/components/kyp/sections/drug/drug-side-effect-causal.tsx:113` | `` `The side effect, as documented — ${effect.name}` `` | every drug page side-effect causal section |
+| 6 | `src/components/kyp/ui/guided-learning-toggle.tsx:139` | `` `${shortLabel} — ${time}` `` | drug/course guided-learning toggle |
+| 7 | `src/components/psychiatry/course/concept/concept-ui.tsx:45` | `` `${label} — ${description}` `` evidence-grade chips | psychiatry course pages |
+| 8 | `src/components/psychiatry/course/concept/concept-sections.tsx:601` | `` `${course.title} — differentials…` `` | concept course differentials sections |
+| 9 | `src/components/kyp/sections/drug/drug-brain-regions.tsx:31` | intro template literal | every drug page brain-regions section |
+| 10 | `src/app/study/analytics/page.tsx:260` | `` `${date} — correct/incorrect` `` | /study/analytics |
+| 11 | `src/app/quiz/custom/custom-test-builder.tsx:265` + 11 JSX-text dashes | class selection notices + on-screen copy | /quiz/custom |
+| 12 | `src/app/psychiatry/self-test/self-test-client.tsx:157` | `` `{letter} — {name}` `` | /psychiatry/self-test |
+| 13 | `src/app/compare/classes/page.tsx:33,44,46,83` | hero title/description + metadata | /compare/classes |
+| 14 | `src/app/psychiatry/library/page.tsx:36`, `src/app/learn/page.tsx:358`, `src/app/learn/continue-learning.tsx:89` | card/lede descriptions | psychiatry library, learn hub |
+| 15 | Remaining component/page files | — | 93 app/component files hold 319 A occurrences total; each file is its own single source (fix once per file) |
+
+**Data-generator verification:** `scripts/gen-client-data.ts` EXISTS and is wired as `npm run gen:client-data` (regenerates `search-index-generated.ts` + `study/course-stats-generated.ts`); `scripts/generate-psychiatry-search-records.ts` regenerates `psychiatry-search-records.generated.ts`. Both are pinned by `tests/platform-hardening.test.ts` (deep-equal, 340 entries / 145 courses / 40 classes) — so the cleanup workflow is: fix sources → regenerate → the drift test enforces consistency. (Earlier suspicion of a missing generator was an artifact of a mid-session sandbox reset that briefly reverted the working tree to a stale clone; no defect exists.)
+
+**Repeated authored-content templates (fix once per template family, apply across copies):** 279 families span ≥3 files (11,970 occurrences). Top families with origin:
+
+| Family | Copies | Origin field | Nature |
+|---|---|---|---|
+| "Everything — advanced reasoning, …" (audience-mode descriptions + siblings) | 133 | `audienceModes[].description` in 146 drug files | authored template |
+| "Content reviewed against Stahl's … (2017) — facts paraphrased, not reproduced." | 131 | review boilerplate | authored template (dash is KYP joiner, title ends at "(2017)") |
+| "No — taper gradually under medical supervision …" | 124 | patient FAQ `answer:` | authored template |
+| "Take it as soon as you remember … — in that case, skip …" | 124 | patient FAQ `answer:` | authored template |
+| "You can answer the recall questions cold — if not, …" | 102 | `lessonGroups[].checkpoint` (drugs + courses) | authored template |
+| "Take exactly as prescribed — same time each day." | 86 | patient quick-facts | authored template |
+| "Low — weight gain not expected." / "Weight gain common — the tricyclic story." / "Common — exploited by bedtime dosing." | 74 / 66 / 66 | `primaryValue:` class-comparison matrices | authored template |
+| "As per international guidance — see Monitoring section." | 58 | `monitoring:` | authored template |
+| Class-comparison `value:` labels ("Least metabolic burden among atypicals — …" etc.) | 30–38 each | comparison matrices in drug data | authored template |
+| "Benzodiazepine — see full guide" | 32 | `distinguishing:` | authored template |
+| "Class mechanism: D2 receptor blockade — …" | 26 | class-page data | authored template |
+| "Dependence or misuse potential exists — see the warnings in this guide." | 25 | `habitForming:` | authored template |
+| "First presentation — schizophrenia" and per-diagnosis variants | ~125 total | `clinicalCases[].title` | authored template (per-diagnosis variants) |
+| "Patient Guide — Starting an SSRI" resource labels | 144 | `patientResources[].label`-style arrays | authored template |
+
+**Genuinely independent medical prose:** the 35,828 A occurrences — summary/tagline/monitoring/section prose unique per drug or course (top files: clomipramine 352, mirtazapine 350, psychodynamic-theories 338, paroxetine 333, bupropion 331, major-depressive-disorder 326 …). These need per-sentence editorial judgment in Phase 4, scripted where the pattern is uniform (e.g. paired parenthetical dashes → parentheses/commas) and hand-reviewed otherwise.
+
+**Preserved citation families (E, exact strings):** "NIMH — Mental Health Medications" (133), "8th ed. — drugs acting on CNS" (132), "16th ed. — autonomic, CNS, and psychiatric drug chapters" (131), "KD Tripathi — Essentials of Medical Pharmacology, 8th edition" (26), "NMC CBME Curriculum — Pharmacology (Second Professional)" (25), "Tele-MANAS … — 14416" (25), "NMC CBME Curriculum — Psychiatry (Final Professional)" (24), "CDSCO — Central Drugs Standard Control Organisation" (23), "Indian Psychiatric Society — Clinical Practice Guidelines…" (20), "Section V — Pharmacotherapy of Mood Disorders" (17), plus ~700 further citation strings.
+
+## 2.4 Proposed transformations (10 before/after examples — NOT yet applied)
+
+1. Class lede (shared source #1): "Each guide below follows the same structure — mechanism of action, receptor pharmacology, clinical indications, side effects with management, monitoring parameters, drug interactions, and a real clinical case." → **"Each guide below follows the same structure: mechanism of action, receptor pharmacology, clinical indications, side effects with management, monitoring parameters, drug interactions, and a real clinical case."**
+2. Pemoline tagline: "The hepatotoxic last-resort stimulant — ADHD's liver-monitoring lesson in a tablet." → **"A hepatotoxic last-resort stimulant: an ADHD lesson in liver monitoring."** (mission-suggested)
+3. Pemoline summary: "…never first-line, because of hepatotoxicity: drug-induced liver failure made pemoline the textbook example … Its legacy is the every-2-weeks ALT (SGPT) monitoring ritual and the written informed consent that surrounded its use — pharmacovigilance history every prescriber should know." → split at the em dash: **"… that surrounded its use. Pharmacovigilance history every prescriber should know."** (meaning untouched; facts identical)
+4. Sertraline summary (paired parenthetical dashes): "…downstream neuroadaptive changes — including 5-HT1A autoreceptor desensitisation and increased BDNF expression in the hippocampus — produce the clinical antidepressant and anxiolytic effects." → **"…downstream neuroadaptive changes (including 5-HT1A autoreceptor desensitisation and increased BDNF expression in the hippocampus) produce the clinical antidepressant and anxiolytic effects."**
+5. Audience-mode description (133 files): "Everything — advanced reasoning, ward pearls, guideline comparison, full evidence." → **"Everything: advanced reasoning, ward pearls, guideline comparison, full evidence."**
+6. Patient FAQ (124 files): "No — taper gradually under medical supervision rather than stopping abruptly. …" → **"No. Taper gradually under medical supervision rather than stopping abruptly. …"**
+7. Patient quick-fact (86 files): "Take exactly as prescribed — same time each day." → **"Take exactly as prescribed, at the same time each day."**
+8. Recall CTA (102 files): "You can answer the recall questions cold — if not, you know which lesson to revisit." → **"You can answer the recall questions cold. If not, you know which lesson to revisit."**
+9. Monitoring pointer (58 files): "As per international guidance — see Monitoring section." → **"As per international guidance; see the Monitoring section."**
+10. Resource label (144 copies): "Patient Guide — Starting an SSRI" → **"Patient Guide: Starting an SSRI"** (and siblings: "Patient Guide: Stopping Safely", etc.)
+
+Each transformation is punctuation/structure only; no dose, drug name, mechanism, or clinical claim changes. All Phase 4 rewrites will follow this standard, with the medical-content firewall enforced by diff review (Phase 9) against these rules.
+
+## 2.5 Estimated final state (post-Phase 4)
+
+| Metric | Before | Estimated after |
+|---|---|---|
+| Learner-facing editorial em dashes (A+B) | 47,798 | **0** (allowlist exceptions possible, documented) |
+| Preserved: citations (E) | 4,231 | 4,231 |
+| Preserved: clinical labels (C) | 304 | 304 |
+| Preserved: placeholders (F) | 549 | 549 |
+| Preserved: numeric em ranges (D) | 7 | 7 |
+| Preserved: NEEDS CLINICAL REVIEW (G) | 12 | 12 |
+| Derived-generated (regenerated from fixed sources; psychiatry records mirror excluded canonical notes) | 721 | ~140 (psychiatry search records ~135 derive from untouched canonical notes; search index ≈ 0–5 after source fixes) |
+| **Total learner-facing em dashes** | **53,644** | **≈ 5,240** |
+
+Reduction: ≈ 48,400 editorial occurrences removed (~90% of learner-facing em dashes), with every remaining dash individually justified by category.
+
+## 2.6 lint:dashes (Phase 7, created in this phase)
+
+`npm run lint:dashes` (gate mode, exit 1 on findings) and `npm run lint:dashes -- --report` (summary mode) via `scripts/lint-dashes.mjs`, following the repo's lint architecture (`scripts/concept-content-lint.ts` / `lint:content` precedent). Deliberate keeps belong in `reports/dash-allowlist.json` (currently empty).
+
+Current baseline (expected FAIL — this is the gate the Phase 4 cleanup must close): editorial occurrences 47,798 in 383 files; 279 repeated families (≥3 files); 492 "structure/list —" constructions; 260 cluster files (>25). Preserved categories are exempt by design (placeholder 549, citation 4,231, clinical-label 304, numeric 7, review 12, MCQ 3,396, comments 2,490, derived 721).
+
+## 2.7 Integrity status of this phase
+
+- Working tree changes: three new scripts, one JSON data file, this report, `reports/dash-allowlist.json`, and one npm script line in `package.json`. **Zero content/data files touched; zero MCQ files touched; zero generated files touched.**
+- ESLint passes on all new scripts. `npm test`, `typecheck`, `content-lock`, and medical-data checks are unaffected by additive tooling and will run as full gates in Phases 10–11.
+- Incident log: the sandbox reverted to a stale clone mid-session; recovered via `git fetch` + `reset --hard origin/fix/site-wide-dash-cleanup` (census commit `748885e` was already pushed — no work lost).
